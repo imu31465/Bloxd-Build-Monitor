@@ -1,30 +1,30 @@
 export const id = 20;
 export const ids = [20];
 export const modules = {
-  35017: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => jM
+  35300: (VV, eV, xV) => {
+    xV.d(eV, {
+      c: () => UV
     });
-    var OM = iM(4919),
-      SM = iM(4923);
+    var JV = xV(5015),
+      YV = xV(5020);
 
-    function jM(MM) {
+    function UV(VV) {
       let {
-        children: rM,
-        showing: iM,
-        globallyUniqueKey: jM,
-        alwaysMountChildren: aM = !1,
-        doGameplayStartStopOnShow: PM = !0,
-        keepsMovement: nM = !1
-      } = MM;
-      return (0, SM.c)(!0, iM, jM, nM), (0, OM.c)(PM, iM), iM || aM ? rM : null
+        children: eV,
+        showing: xV,
+        globallyUniqueKey: UV,
+        alwaysMountChildren: yV = !1,
+        doGameplayStartStopOnShow: pV = !0,
+        keepsMovement: QV = !1
+      } = VV;
+      return (0, YV.b)(!0, xV, UV, QV), (0, JV.c)(pV, xV), xV || yV ? eV : null
     }
   },
-  37624: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => SM
+  37849: (VV, eV, xV) => {
+    xV.d(eV, {
+      e: () => YV
     });
-    const OM = [{
+    const JV = [{
       maxDist: 30,
       timeBetweenSoftChecks: 1e3,
       softUpdateDist: 2,
@@ -41,58 +41,58 @@ export const modules = {
       hardUpdateDist: 100
     }];
 
-    function SM(MM, rM, iM) {
-      const SM = Math.abs(MM - rM),
-        jM = Date.now() - iM;
-      for (const aM of OM)
-        if (MM < aM.maxDist) return SM >= aM.hardUpdateDist || jM > aM.timeBetweenSoftChecks && SM >= aM.softUpdateDist;
+    function YV(VV, eV, xV) {
+      const YV = Math.abs(VV - eV),
+        UV = Date.now() - xV;
+      for (const yV of JV)
+        if (VV < yV.maxDist) return YV >= yV.hardUpdateDist || UV > yV.timeBetweenSoftChecks && YV >= yV.softUpdateDist;
       return !1
     }
   },
-  39485: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => aM,
-      e: () => PM
+  39645: (VV, eV, xV) => {
+    xV.d(eV, {
+      c: () => yV,
+      e: () => pV
     });
-    var OM = iM(332),
-      SM = iM(35037),
-      jM = iM(3693);
+    var JV = xV(375),
+      YV = xV(35319),
+      UV = xV(3719);
 
-    function aM(MM) {
-      const rM = (0, jM.d)(MM);
-      return (0, OM.Qb)(MM, void 0 === rM ? void 0 : (0, SM.displayNameOf)(rM))
+    function yV(VV) {
+      const eV = (0, UV.d)(VV);
+      return (0, JV.Sb)(VV, void 0 === eV ? void 0 : (0, YV.displayNameOf)(eV))
     }
 
-    function PM(MM, rM) {
-      return MM(aM(rM))
+    function pV(VV, eV) {
+      return VV(yV(eV))
     }
   },
-  39491: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => aM,
-      e: () => jM
+  39648: (VV, eV, xV) => {
+    xV.d(eV, {
+      b: () => yV,
+      f: () => UV
     });
-    const OM = new WeakMap;
+    const JV = new WeakMap;
 
-    function SM(MM) {
-      let rM = OM.get(MM);
-      return rM || (rM = {
-        hidden: MM.hidden,
+    function YV(VV) {
+      let eV = JV.get(VV);
+      return eV || (eV = {
+        hidden: VV.hidden,
         x: NaN,
         y: NaN
-      }, OM.set(MM, rM)), rM
+      }, JV.set(VV, eV)), eV
     }
 
-    function jM(MM, rM) {
-      const iM = SM(MM);
-      iM.hidden !== rM && (iM.hidden = rM, MM.hidden = rM)
+    function UV(VV, eV) {
+      const xV = YV(VV);
+      xV.hidden !== eV && (xV.hidden = eV, VV.hidden = eV)
     }
 
-    function aM(MM, rM, iM) {
-      const OM = SM(MM);
-      OM.x === rM && OM.y === iM || (OM.x = rM, OM.y = iM, MM.style.translate = `${rM}vw ${iM}vh`)
+    function yV(VV, eV, xV) {
+      const JV = YV(VV);
+      JV.x === eV && JV.y === xV || (JV.x = eV, JV.y = xV, VV.style.translate = `${eV}vw ${xV}vh`)
     }
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const VV in modules) Object.freeze(modules[VV]);

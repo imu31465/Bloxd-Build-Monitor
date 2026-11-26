@@ -1,539 +1,539 @@
 export const id = 271;
 export const ids = [271];
 export const modules = {
-  42188: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      openMobLineupPreview: () => NM,
-      openMobPreview: () => YM,
-      openPetPreview: () => AM
+  42411: (VV, eV, xV) => {
+    xV.r(eV), xV.d(eV, {
+      openMobLineupPreview: () => hV,
+      openMobPreview: () => cV,
+      openPetPreview: () => lV
     });
-    var OM = iM(40931),
-      SM = iM(41190),
-      jM = iM(42190),
-      aM = iM(38167),
-      PM = iM(38034),
-      nM = iM(41358),
-      QM = iM(42212),
-      zM = iM(39471),
-      LM = iM(38122),
-      mM = iM(38097),
-      HM = iM(38025),
-      hM = iM(39363),
-      JM = iM(39354),
-      dM = iM(39083),
-      yM = iM(39139),
-      lM = iM(39109),
-      EM = iM(38764),
-      UM = iM(3063),
-      GM = iM(38585);
-    iM(42220), iM(41564), iM(42227);
-    const CM = 22,
-      eM = 13,
-      bM = Math.PI - Math.PI / 16,
-      wM = 6,
-      tM = Math.PI / 4;
-    let gM = null;
-    const uM = {},
-      RM = new Map;
+    var JV = xV(41071),
+      YV = xV(41331),
+      UV = xV(42419),
+      yV = xV(38387),
+      pV = xV(38263),
+      QV = xV(41510),
+      nV = xV(42439),
+      wV = xV(39624),
+      ZV = xV(38358),
+      vV = xV(38328),
+      rV = xV(38256),
+      kV = xV(39518),
+      bV = xV(39516),
+      EV = xV(39243),
+      BV = xV(39289),
+      jV = xV(39266),
+      qV = xV(38938),
+      tV = xV(3093),
+      FV = xV(38770);
+    xV(42445), xV(41744), xV(42450);
+    const TV = 22,
+      PV = 13,
+      AV = Math.PI - Math.PI / 16,
+      NV = 6,
+      XV = Math.PI / 4;
+    let MV = null;
+    const zV = {},
+      GV = new Map;
 
-    function pM() {
-      if (null !== gM) return gM;
-      const MM = document.createElement("canvas");
-      MM.classList.add("MobPreviewCanvas");
-      const rM = new OM.e(MM, !0, {
+    function WV() {
+      if (null !== MV) return MV;
+      const VV = document.createElement("canvas");
+      VV.classList.add("MobPreviewCanvas");
+      const eV = new JV.c(VV, !0, {
         preserveDrawingBuffer: !0
       });
-      rM.LOM = (0, UM.f)().CL.engine.LOM;
-      const iM = new SM.b(rM);
-      iM.clearColor = new aM.d(0, 0, 0, 0), iM.ambientColor = new aM.Color3(1, 1, 1);
-      const QM = new jM.c("Td", Math.PI / 2, Math.PI / 2, CM, PM.sh.Zero(), iM),
-        zM = new nM.e("light", new PM.sh(-.1, 1, -.3), iM);
-      return zM.diffuse = new aM.Color3(1, 1, 1), zM.specular = new aM.Color3(1, 1, 1), zM.groundColor = new aM.Color3(.5, .5, .5), gM = {
-        engine: rM,
-        YJ: iM,
-        canvas: MM,
-        camera: QM
-      }, gM
+      eV.zYV = (0, tV.d)().gZ.engine.zYV;
+      const xV = new YV.c(eV);
+      xV.clearColor = new yV.c(0, 0, 0, 0), xV.ambientColor = new yV.Color3(1, 1, 1);
+      const nV = new UV.c("JB", Math.PI / 2, Math.PI / 2, TV, pV.Ik.Zero(), xV),
+        wV = new QV.d("light", new pV.Ik(-.1, 1, -.3), xV);
+      return wV.diffuse = new yV.Color3(1, 1, 1), wV.specular = new yV.Color3(1, 1, 1), wV.groundColor = new yV.Color3(.5, .5, .5), MV = {
+        engine: eV,
+        yE: xV,
+        canvas: VV,
+        camera: nV
+      }, MV
     }
 
-    function WM(MM) {
-      return uM[MM] ??= (0, dM.u)(MM, pM().YJ, !0).catch((rM => {
-        throw delete uM[MM], rM
-      })), uM[MM]
+    function RV(VV) {
+      return zV[VV] ??= (0, EV.u)(VV, WV().yE, !0).catch((eV => {
+        throw delete zV[VV], eV
+      })), zV[VV]
     }
 
-    function sM(MM) {
-      let rM = RM.get(MM);
-      return rM || (rM = EM.A[MM].loadModel(pM().YJ, !1).then((MM => (MM.kR(!1), MM)), (rM => {
-        throw RM.delete(MM), rM
-      })), RM.set(MM, rM)), rM
+    function gV(VV) {
+      let eV = GV.get(VV);
+      return eV || (eV = qV.E[VV].loadModel(WV().yE, !1).then((VV => (VV.pW(!1), VV)), (eV => {
+        throw GV.delete(VV), eV
+      })), GV.set(VV, eV)), eV
     }
 
-    function DM(MM) {
-      var rM, iM, OM;
+    function DV(VV) {
+      var eV, xV, JV;
       let {
-        mobType: SM,
-        variation: jM,
-        animation: aM
-      } = MM, nM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null, CM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-      const wM = null !== (rM = null === nM || void 0 === nM ? void 0 : nM.size) && void 0 !== rM ? rM : 1,
-        tM = null !== (iM = null === nM || void 0 === nM ? void 0 : nM.cosmetics) && void 0 !== iM ? iM : [],
-        gM = null !== (OM = null === nM || void 0 === nM ? void 0 : nM.QG) && void 0 !== OM ? OM : null;
-      let uM = !1,
-        RM = null,
-        DM = null;
+        mobType: YV,
+        variation: UV,
+        animation: yV
+      } = VV, QV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null, TV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+      const NV = null !== (eV = null === QV || void 0 === QV ? void 0 : QV.size) && void 0 !== eV ? eV : 1,
+        XV = null !== (xV = null === QV || void 0 === QV ? void 0 : QV.cosmetics) && void 0 !== xV ? xV : [],
+        MV = null !== (JV = null === QV || void 0 === QV ? void 0 : QV.JA) && void 0 !== JV ? JV : null;
+      let zV = !1,
+        GV = null,
+        DV = null;
       const {
-        engine: kM,
-        YJ: ZM
-      } = pM(), oM = ZM.onBeforeRenderObservable.add((() => {
-        var MM;
-        null === (MM = DM) || void 0 === MM || MM.render(kM.getDeltaTime())
-      })), fM = null === gM ? null : sM(gM).catch((MM => (console.error(`Mob preview: could not load ${gM}`, MM), null)));
-      return Promise.all([WM(SM), fM]).then((MM => {
-        var rM, iM, OM;
-        let [nM, WM] = MM;
-        if (uM) return;
-        const sM = (0, UM.f)().CL.Dk,
+        engine: iV,
+        yE: CV
+      } = WV(), aV = CV.onBeforeRenderObservable.add((() => {
+        var VV;
+        null === (VV = DV) || void 0 === VV || VV.render(iV.getDeltaTime())
+      })), oV = null === MV ? null : gV(MV).catch((VV => (console.error(`Mob preview: could not load ${MV}`, VV), null)));
+      return Promise.all([RV(YV), oV]).then((VV => {
+        var eV, xV, JV;
+        let [QV, RV] = VV;
+        if (zV) return;
+        const gV = (0, tV.d)().gZ.YC,
           {
-            hitBoxDimensions: kM
-          } = (0, zM.d)(SM),
-          ZM = eM / Math.max(kM.height, kM.width);
-        if (RM = (0, dM.i)(SM, ZM * wM, !0, !0), sM.setPosition(RM, CM, -kM.height * ZM / 2, 0), sM.setRotationEulerY(RM, bM), nM.meshApi instanceof lM.e && tM.length > 0)
-          for (const [SM, jM] of tM) nM.meshApi.updatePlayerCosmetic(null, RM, SM, jM, !0);
-        else nM.meshApi.updateVariation(RM, SM, null !== jM && void 0 !== jM ? jM : "default");
-        null !== gM && null !== WM && function(MM, rM, iM, OM) {
-          var SM;
-          const jM = EM.A[MM],
-            aM = (0, hM.i)();
-          (0, hM.f)(jM, null === (SM = (0, yM.b)(iM).meshMetadata.heldItemPositionParams) || void 0 === SM ? void 0 : SM.itemOffset, aM);
-          const nM = GM.e * aM.UL.y,
-            zM = aM.usesQuaternion ? aM.quaternion : PM.Quaternion.FromEulerVector(aM.rotation),
-            LM = new QM.e(`${rM.name}Hand`, pM().YJ);
-          LM.position.jR((0, JM.c)(aM.position, zM, nM, jM.heldModelOffsetY())), LM.rotationQuaternion = zM, LM.UL.set(aM.UL.x, nM, aM.UL.z), rM.clone(`${rM.name}Held`, LM).kR(!0);
-          const mM = (0, UM.f)().CL.Dk;
-          mM.attachTransformNode(LM, OM, mM.getNamedNode(OM, "ArmRightMesh"))
-        }(gM, WM, SM, RM), sM.set(RM, "aOpacity", 1);
-        const oM = null !== (rM = (0, yM.b)(SM).meshMetadata.lifeformTypeForModelOverride) && void 0 !== rM ? rM : SM;
-        DM = new HM.AnimatorState, DM.thinInstMgr = sM, DM.Zk = RM, DM.kiM = sM.lD(RM, 0), DM.modelLifeformType = oM, DM.nodeNameAliases = null !== (iM = null === (OM = (0, LM.e)(oM)) || void 0 === OM ? void 0 : OM.nodeNameAliases) && void 0 !== iM ? iM : null, DM.startAnimation(aM, mM.e.Movement)
-      })).catch((MM => {
-        console.error(`Mob preview: could not load ${SM}`, MM)
+            hitBoxDimensions: iV
+          } = (0, wV.d)(YV),
+          CV = PV / Math.max(iV.height, iV.width);
+        if (GV = (0, EV.n)(YV, CV * NV, !0, !0), gV.setPosition(GV, TV, -iV.height * CV / 2, 0), gV.setRotationEulerY(GV, AV), QV.meshApi instanceof jV.e && XV.length > 0)
+          for (const [YV, UV] of XV) QV.meshApi.updatePlayerCosmetic(null, GV, YV, UV, !0);
+        else QV.meshApi.updateVariation(GV, YV, null !== UV && void 0 !== UV ? UV : "default");
+        null !== MV && null !== RV && function(VV, eV, xV, JV) {
+          var YV;
+          const UV = qV.E[VV],
+            yV = (0, kV.k)();
+          (0, kV.f)(UV, null === (YV = (0, BV.b)(xV).meshMetadata.heldItemPositionParams) || void 0 === YV ? void 0 : YV.itemOffset, yV);
+          const QV = FV.d * yV.WZ.y,
+            wV = yV.usesQuaternion ? yV.quaternion : pV.Quaternion.FromEulerVector(yV.rotation),
+            ZV = new nV.d(`${eV.name}Hand`, WV().yE);
+          ZV.position.iG((0, bV.d)(yV.position, wV, QV, UV.heldModelOffsetY())), ZV.rotationQuaternion = wV, ZV.WZ.set(yV.WZ.x, QV, yV.WZ.z), eV.clone(`${eV.name}Held`, ZV).pW(!0);
+          const vV = (0, tV.d)().gZ.YC;
+          vV.attachTransformNode(ZV, JV, vV.getNamedNode(JV, "ArmRightMesh"))
+        }(MV, RV, YV, GV), gV.set(GV, "aOpacity", 1);
+        const aV = null !== (eV = (0, BV.b)(YV).meshMetadata.lifeformTypeForModelOverride) && void 0 !== eV ? eV : YV;
+        DV = new rV.AnimatorState, DV.thinInstMgr = gV, DV.pC = GV, DV.VYV = gV.rD(GV, 0), DV.modelLifeformType = aV, DV.nodeNameAliases = null !== (xV = null === (JV = (0, ZV.b)(aV)) || void 0 === JV ? void 0 : JV.nodeNameAliases) && void 0 !== xV ? xV : null, DV.startAnimation(yV, vV.h.Movement)
+      })).catch((VV => {
+        console.error(`Mob preview: could not load ${YV}`, VV)
       })), () => {
-        uM = !0, ZM.onBeforeRenderObservable.remove(oM), null !== RM && (0, UM.f)().CL.Dk.delete(RM)
+        zV = !0, CV.onBeforeRenderObservable.remove(aV), null !== GV && (0, tV.d)().gZ.YC.delete(GV)
       }
     }
 
-    function kM(MM, rM) {
-      return DM({
+    function iV(VV, eV) {
+      return DV({
         mobType: "NPC",
         variation: null,
-        animation: MM.animation
-      }, MM, rM)
+        animation: VV.animation
+      }, VV, eV)
     }
 
-    function ZM(MM) {
+    function CV(VV) {
       let {
-        mobType: rM,
-        variation: iM,
-        metaInfo: OM,
-        tamed: SM
-      } = MM, jM = !1, aM = null, PM = 0;
-      const nM = (0, UM.f)(),
-        QM = nM.CL.Dk,
-        zM = MM => {
-          PM += tM * (MM / 1e3) % (2 * Math.PI), QM.setRotationEulerY(aM, PM)
+        mobType: eV,
+        variation: xV,
+        metaInfo: JV,
+        tamed: YV
+      } = VV, UV = !1, yV = null, pV = 0;
+      const QV = (0, tV.d)(),
+        nV = QV.gZ.YC,
+        wV = VV => {
+          pV += XV * (VV / 1e3) % (2 * Math.PI), nV.setRotationEulerY(yV, pV)
         };
-      return WM(rM).then((MM => {
-        if (jM) return;
-        aM = (0, dM.i)(rM, wM, !0, !0), QM.setPosition(aM, 0, -wM, 0), MM.meshApi.updateVariation(aM, rM, iM);
-        const PM = {
-          wool: "Sheared" !== OM,
-          saddle: "Saddled" === OM,
-          antlers: "Antlers" === OM,
-          collar: SM
+      return RV(eV).then((VV => {
+        if (UV) return;
+        yV = (0, EV.n)(eV, NV, !0, !0), nV.setPosition(yV, 0, -NV, 0), VV.meshApi.updateVariation(yV, eV, xV);
+        const pV = {
+          wool: "Sheared" !== JV,
+          saddle: "Saddled" === JV,
+          antlers: "Antlers" === JV,
+          collar: YV
         };
-        for (const [rM, iM] of Object.entries(PM)) QM.hasGroup(aM, rM) && MM.meshApi.setMeshGroupVisibility(aM, rM, iM);
-        QM.set(aM, "aOpacity", 1), nM.on("renderTickBegin", zM)
-      })).catch((MM => {
-        console.error(`Pet preview: could not load ${rM}`, MM)
+        for (const [eV, xV] of Object.entries(pV)) nV.hasGroup(yV, eV) && VV.meshApi.setMeshGroupVisibility(yV, eV, xV);
+        nV.set(yV, "aOpacity", 1), QV.on("renderTickBegin", wV)
+      })).catch((VV => {
+        console.error(`Pet preview: could not load ${eV}`, VV)
       })), () => {
-        jM = !0, nM.off("renderTickBegin", zM), null !== aM && QM.delete(aM)
+        UV = !0, QV.off("renderTickBegin", wV), null !== yV && nV.delete(yV)
       }
     }
-    class oM {
-      constructor(MM, rM) {
-        this.place = rM, this.remove = null;
+    class aV {
+      constructor(VV, eV) {
+        this.place = eV, this.remove = null;
         const {
-          engine: iM,
-          YJ: OM,
-          canvas: SM
-        } = pM();
-        MM.appendChild(SM), iM.resize(), iM.runRenderLoop((() => {
-          OM.render()
+          engine: xV,
+          yE: JV,
+          canvas: YV
+        } = WV();
+        VV.appendChild(YV), xV.resize(), xV.runRenderLoop((() => {
+          JV.render()
         }))
       }
-      show(MM) {
-        var rM;
-        null === (rM = this.remove) || void 0 === rM || rM.call(this), this.remove = this.place(MM)
+      show(VV) {
+        var eV;
+        null === (eV = this.remove) || void 0 === eV || eV.call(this), this.remove = this.place(VV)
       }
-      resize(MM, rM) {
+      resize(VV, eV) {
         const {
-          engine: iM,
-          canvas: OM
-        } = pM();
-        OM.width = MM, OM.height = rM, iM.resize()
+          engine: xV,
+          canvas: JV
+        } = WV();
+        JV.width = VV, JV.height = eV, xV.resize()
       }
       close() {
-        var MM;
-        pM().engine.stopRenderLoop(), null === (MM = this.remove) || void 0 === MM || MM.call(this), this.remove = null
+        var VV;
+        WV().engine.stopRenderLoop(), null === (VV = this.remove) || void 0 === VV || VV.call(this), this.remove = null
       }
     }
-    class fM {
-      constructor(MM) {
+    class oV {
+      constructor(VV) {
         this.preview = void 0, this.view = {
           figures: [],
           shown: []
-        }, this.aspect = 1, this.placed = [], this.preview = new oM(MM, (() => () => {}))
+        }, this.aspect = 1, this.placed = [], this.preview = new aV(VV, (() => () => {}))
       }
-      show(MM) {
-        MM.figures !== this.view.figures && this.preload(MM.figures), this.view = MM, this.place()
+      show(VV) {
+        VV.figures !== this.view.figures && this.preload(VV.figures), this.view = VV, this.place()
       }
-      resize(MM, rM) {
-        this.preview.resize(MM, rM), this.aspect = MM / rM, this.place()
+      resize(VV, eV) {
+        this.preview.resize(VV, eV), this.aspect = VV / eV, this.place()
       }
       close() {
         this.preview.close();
-        for (const MM of this.placed) null === MM || void 0 === MM || MM.remove();
+        for (const VV of this.placed) null === VV || void 0 === VV || VV.remove();
         this.placed = []
       }
-      preload(MM) {
-        const rM = () => {};
-        WM("NPC").catch(rM);
+      preload(VV) {
+        const eV = () => {};
+        RV("NPC").catch(eV);
         for (const {
-            QG: iM
+            JA: xV
           }
-          of MM) null !== iM && sM(iM).catch(rM)
+          of VV) null !== xV && gV(xV).catch(eV)
       }
       place() {
         const {
-          figures: MM,
-          shown: rM
-        } = this.view, iM = MM.map(((iM, OM) => {
-          var SM;
-          const jM = null !== (SM = this.placed[OM]) && void 0 !== SM ? SM : null;
-          if (!rM[OM]) return null === jM || void 0 === jM || jM.remove(), null;
-          const aM = (PM = (OM + .5) / MM.length, nM = this.aspect, (.5 - PM) * (2 * CM * Math.tan(pM().camera.fov / 2)) * nM);
-          var PM, nM;
-          return null !== jM && jM.figure === iM && jM.x === aM ? jM : (null === jM || void 0 === jM || jM.remove(), {
-            figure: iM,
-            x: aM,
-            remove: kM(iM, aM)
+          figures: VV,
+          shown: eV
+        } = this.view, xV = VV.map(((xV, JV) => {
+          var YV;
+          const UV = null !== (YV = this.placed[JV]) && void 0 !== YV ? YV : null;
+          if (!eV[JV]) return null === UV || void 0 === UV || UV.remove(), null;
+          const yV = (pV = (JV + .5) / VV.length, QV = this.aspect, (.5 - pV) * (2 * TV * Math.tan(WV().camera.fov / 2)) * QV);
+          var pV, QV;
+          return null !== UV && UV.figure === xV && UV.x === yV ? UV : (null === UV || void 0 === UV || UV.remove(), {
+            figure: xV,
+            x: yV,
+            remove: iV(xV, yV)
           })
         }));
-        for (const OM of this.placed.slice(MM.length)) null === OM || void 0 === OM || OM.remove();
-        this.placed = iM
+        for (const JV of this.placed.slice(VV.length)) null === JV || void 0 === JV || JV.remove();
+        this.placed = xV
       }
     }
 
-    function YM(MM) {
-      return new oM(MM, DM)
+    function cV(VV) {
+      return new aV(VV, DV)
     }
 
-    function NM(MM) {
-      return new fM(MM)
+    function hV(VV) {
+      return new oV(VV)
     }
 
-    function AM(MM) {
-      return new oM(MM, ZM)
+    function lV(VV) {
+      return new aV(VV, CV)
     }
   },
-  39852: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => mM
+  39984: (VV, eV, xV) => {
+    xV.d(eV, {
+      b: () => vV
     });
-    var OM = iM(38181),
-      SM = iM(38278),
-      jM = iM(38310),
-      aM = iM(38198),
-      PM = iM(38188);
+    var JV = xV(38397),
+      YV = xV(38484),
+      UV = xV(38517),
+      yV = xV(38408),
+      pV = xV(38399);
 
-    function nM(MM) {
-      return `\n\t\t\t\t${(0,PM.w)(MM,"mat2","rotate",[{name:"ang",type:"float"}],`\
+    function QV(VV) {
+      return `\n\t\t\t\t${(0,pV.z)(VV,"mat2","rotate",[{name:"ang",type:"float"}],`\
       n\ t\ t\ t\ t\ t$ {
-        (0, PM.B)(MM, "float", "s", "sin(ang)")
+        (0, pV.F)(VV, "float", "s", "sin(ang)")
       }\
       n\ t\ t\ t\ t\ t$ {
-        (0, PM.B)(MM, "float", "c", "cos(ang)")
+        (0, pV.F)(VV, "float", "c", "cos(ang)")
       }\
       n\ t\ t\ t\ t\ treturn $ {
-        (0, PM.n)(MM, "mat2", "c", "s", "-s", "c")
+        (0, pV.p)(VV, "mat2", "c", "s", "-s", "c")
       };\
       n\ t\ t\ t\ t`)}\n\t\t\t`
     }
 
-    function QM(MM, rM) {
-      let iM = (0, PM.Db)(MM, "skele" + (rM - 1));
-      for (let SM = rM - 2; SM >= 0; SM--) iM = (0, PM.sb)(MM, `boneIdx == ${SM}`, (0, PM.Db)(MM, `skele${SM}`), iM);
-      const OM = "bone.yz + rotate(bone.x) * pivot - pivot";
-      return `\n\t\t\t\t${(0,PM.B)(MM,"int","boneIdx",(0,PM.wb)(MM,"BLOXD_CAPE_MAX_Y - positionUpdated.y"))}\n\t\t\t\t${(0,PM.B)(MM,"vec3","bone",iM)}\n\t\t\t\t${(0,PM.B)(MM,"vec2","pivot",(0,PM.n)(MM,"vec2","0.0",`${(0,PM.Hb)(MM,"position")}.z`))}\n\t\t\t\t${(0,PM.Y)(MM)?`positionUpdated = vec3f(positionUpdated.x, positionUpdated.yz + (${OM}));`:`positionUpdated.yz += ${OM};`}\n\t\t`
+    function nV(VV, eV) {
+      let xV = (0, pV.Gb)(VV, "skele" + (eV - 1));
+      for (let YV = eV - 2; YV >= 0; YV--) xV = (0, pV.sb)(VV, `boneIdx == ${YV}`, (0, pV.Gb)(VV, `skele${YV}`), xV);
+      const JV = "bone.yz + rotate(bone.x) * pivot - pivot";
+      return `\n\t\t\t\t${(0,pV.F)(VV,"int","boneIdx",(0,pV.Ab)(VV,"BLOXD_CAPE_MAX_Y - positionUpdated.y"))}\n\t\t\t\t${(0,pV.F)(VV,"vec3","bone",xV)}\n\t\t\t\t${(0,pV.F)(VV,"vec2","pivot",(0,pV.p)(VV,"vec2","0.0",`${(0,pV.Kb)(VV,"position")}.z`))}\n\t\t\t\t${(0,pV.db)(VV)?`positionUpdated = vec3f(positionUpdated.x, positionUpdated.yz + (${JV}));`:`positionUpdated.yz += ${JV};`}\n\t\t`
     }
 
-    function zM(MM) {
-      return `\n\t\t\t\t#ifdef NORMAL\n\t\t\t\tnormalUpdated = ${(0,PM.n)(MM,"vec3","normalUpdated.x","rotate(bone.x) * normalUpdated.yz")};\n\t\t\t\t#endif\n\t\t`
+    function wV(VV) {
+      return `\n\t\t\t\t#ifdef NORMAL\n\t\t\t\tnormalUpdated = ${(0,pV.p)(VV,"vec3","normalUpdated.x","rotate(bone.x) * normalUpdated.yz")};\n\t\t\t\t#endif\n\t\t`
     }
-    const LM = {
+    const ZV = {
         x: 0,
         y: 0,
         z: 0,
-        cz(MM, rM) {
-          return this.x = MM[rM], this.y = MM[rM + 1], this.z = MM[rM + 2], this
+        wZ(VV, eV) {
+          return this.x = VV[eV], this.y = VV[eV + 1], this.z = VV[eV + 2], this
         }
       },
-      mM = {
+      vV = {
         name: "Cape",
         className: "CapeMaterialPlugin",
         priority: 200,
-        defines: (MM, rM) => ({
-          ...(0, OM.b)("CAPE"),
-          BLOXD_CAPE_BONES: `${MM}`,
-          BLOXD_CAPE_MAX_Y: (0, SM.xb)(rM)
+        defines: (VV, eV) => ({
+          ...(0, JV.d)("CAPE"),
+          BLOXD_CAPE_BONES: `${VV}`,
+          BLOXD_CAPE_MAX_Y: (0, YV.ob)(eV)
         }),
-        getUniforms(MM) {
-          return (0, jM.d)(function(MM) {
-            const rM = [];
-            for (let iM = 0; iM < MM; iM++) rM.push({
-              name: `skele${iM}`,
+        getUniforms(VV) {
+          return (0, UV.d)(function(VV) {
+            const eV = [];
+            for (let xV = 0; xV < VV; xV++) eV.push({
+              name: `skele${xV}`,
               type: "highp vec3"
             });
-            return rM
-          }(this.skeleLen), "vertex", MM)
+            return eV
+          }(this.skeleLen), "vertex", VV)
         },
-        bind(MM) {
-          for (let rM = 0; rM < this.skeleLen; rM++) MM.updateVector3(`skele${rM}`, LM.cz(this.skele, 3 * rM))
+        bind(VV) {
+          for (let eV = 0; eV < this.skeleLen; eV++) VV.updateVector3(`skele${eV}`, ZV.wZ(this.skele, 3 * eV))
         },
         uniformsVersion() {
           return this.bonesVersion
         },
-        getCustomCode(MM, rM) {
-          return "vertex" !== MM ? null : {
-            CUSTOM_VERTEX_DEFINITIONS: nM(rM),
-            CUSTOM_VERTEX_UPDATE_POSITION: QM(rM, this.skeleLen),
-            CUSTOM_VERTEX_UPDATE_NORMAL: zM(rM)
+        getCustomCode(VV, eV) {
+          return "vertex" !== VV ? null : {
+            CUSTOM_VERTEX_DEFINITIONS: QV(eV),
+            CUSTOM_VERTEX_UPDATE_POSITION: nV(eV, this.skeleLen),
+            CUSTOM_VERTEX_UPDATE_NORMAL: wV(eV)
           }
         }
       };
-    (0, aM.l)(mM)
+    (0, yV.m)(vV)
   },
-  39720: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => zM,
-      d: () => LM
+  39880: (VV, eV, xV) => {
+    xV.d(eV, {
+      e: () => wV,
+      g: () => ZV
     });
-    var OM = iM(38181),
-      SM = iM(38310),
-      jM = iM(38188),
-      aM = iM(38198);
-    const PM = "bloxdTextLodBias",
-      nM = [{
-        name: PM,
+    var JV = xV(38397),
+      YV = xV(38517),
+      UV = xV(38399),
+      yV = xV(38408);
+    const pV = "bloxdTextLodBias",
+      QV = [{
+        name: pV,
         type: "float"
       }],
-      QM = "bloxdTextSample",
-      zM = {
+      nV = "bloxdTextSample",
+      wV = {
         planes: -.5,
         boards: -.5
       },
-      LM = {
+      ZV = {
         name: "TextSampler",
         className: "TextSamplerMaterialPlugin",
         priority: 60,
-        defines: () => (0, OM.b)("TEXT_SAMPLER"),
-        getUniforms: MM => (0, SM.d)(nM, "fragment", MM),
-        bind(MM) {
-          MM.updateFloat(PM, this.lodBias)
+        defines: () => (0, JV.d)("TEXT_SAMPLER"),
+        getUniforms: VV => (0, YV.d)(QV, "fragment", VV),
+        bind(VV) {
+          VV.updateFloat(pV, this.lodBias)
         },
         uniformsVersion: () => 0,
-        getCustomCode(MM, rM) {
-          if ("fragment" !== MM) return null;
-          const iM = (0, jM.K)(rM, `vec4 ${QM}(sampler2D s, vec2 uv, float bias)`, `fn ${QM}(t: texture_2d<f32>, ts: sampler, uv: vec2f, bias: f32) -> vec4f`),
-            OM = (0, jM.K)(rM, "texture2D(s, uv, bias)", "textureSampleBias(t, ts, uv, bias)"),
-            SM = `${(0,jM.U)(rM,"vDiffuseUV")} + uvOffset`,
-            aM = (0, jM.K)(rM, `${QM}(diffuseSampler, ${SM}, ${(0,jM.Db)(rM,PM)})`, `${QM}(diffuseSampler, diffuseSamplerSampler, ${SM}, ${(0,jM.Db)(rM,PM)})`);
+        getCustomCode(VV, eV) {
+          if ("fragment" !== VV) return null;
+          const xV = (0, UV.P)(eV, `vec4 ${nV}(sampler2D s, vec2 uv, float bias)`, `fn ${nV}(t: texture_2d<f32>, ts: sampler, uv: vec2f, bias: f32) -> vec4f`),
+            JV = (0, UV.P)(eV, "texture2D(s, uv, bias)", "textureSampleBias(t, ts, uv, bias)"),
+            YV = `${(0,UV.X)(eV,"vDiffuseUV")} + uvOffset`,
+            yV = (0, UV.P)(eV, `${nV}(diffuseSampler, ${YV}, ${(0,UV.Gb)(eV,pV)})`, `${nV}(diffuseSampler, diffuseSamplerSampler, ${YV}, ${(0,UV.Gb)(eV,pV)})`);
           return {
-            CUSTOM_FRAGMENT_DEFINITIONS: `\n\t\t\t\t${iM} {\n\t\t\t\t\t${(0,jM.B)(rM,"vec4","texel",OM)}\n\t\t\t\t\t// 8-bit premultiplied rounding can put the quotient just over 1; only alpha 0 hits the floor,\n\t\t\t\t\t// where the colour is 0 anyway.\n\t\t\t\t\treturn ${(0,jM.n)(rM,"vec4",`clamp(texel.rgb / max(texel.a, 1.0 / 255.0), ${(0,jM.n)(rM,"vec3","0.0")}, ${(0,jM.n)(rM,"vec3","1.0")})`,"texel.a")};\n\t\t\t\t}\n\t\t\t`,
-            [(0, jM.E)(rM)]: `baseColor = ${aM};`
+            CUSTOM_FRAGMENT_DEFINITIONS: `\n\t\t\t\t${xV} {\n\t\t\t\t\t${(0,UV.F)(eV,"vec4","texel",JV)}\n\t\t\t\t\t// 8-bit premultiplied rounding can put the quotient just over 1; only alpha 0 hits the floor,\n\t\t\t\t\t// where the colour is 0 anyway.\n\t\t\t\t\treturn ${(0,UV.p)(eV,"vec4",`clamp(texel.rgb / max(texel.a, 1.0 / 255.0), ${(0,UV.p)(eV,"vec3","0.0")}, ${(0,UV.p)(eV,"vec3","1.0")})`,"texel.a")};\n\t\t\t\t}\n\t\t\t`,
+            [(0, UV.J)(eV)]: `baseColor = ${yV};`
           }
         }
       };
-    (0, aM.l)(LM)
+    (0, yV.m)(ZV)
   },
-  42227: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      CapeMaterialPlugin: () => UM,
-      HueTintMaterialPlugin: () => GM,
-      LifeformMaterialPlugin: () => CM,
-      OverlayMaterialPlugin: () => eM
+  42450: (VV, eV, xV) => {
+    xV.r(eV), xV.d(eV, {
+      CapeMaterialPlugin: () => tV,
+      HueTintMaterialPlugin: () => FV,
+      LifeformMaterialPlugin: () => TV,
+      OverlayMaterialPlugin: () => PV
     });
-    var OM = iM(42233),
-      SM = iM(38984);
-    class jM extends((0, OM.i)(SM.d)) {}(0, OM.m)(SM.d, jM);
-    var aM = iM(38275);
-    class PM extends((0, OM.i)(aM.c)) {}(0, OM.m)(aM.c, PM);
-    var nM = iM(38832);
-    class QM extends((0, OM.i)(nM.e)) {}(0, OM.m)(nM.e, QM);
-    var zM = iM(38298),
-      LM = iM(41374),
-      mM = iM(38294);
-    class HM extends((0, OM.i)(mM.e)) {
-      constructor(MM, rM, iM) {
-        super(MM, rM, iM), (0, zM.k)(MM)
+    var JV = xV(42457),
+      YV = xV(39173);
+    class UV extends((0, JV.h)(YV.b)) {}(0, JV.l)(YV.b, UV);
+    var yV = xV(38479);
+    class pV extends((0, JV.h)(yV.d)) {}(0, JV.l)(yV.d, pV);
+    var QV = xV(39003);
+    class nV extends((0, JV.h)(QV.g)) {}(0, JV.l)(QV.g, nV);
+    var wV = xV(38502),
+      ZV = xV(41524),
+      vV = xV(38497);
+    class rV extends((0, JV.h)(vV.g)) {
+      constructor(VV, eV, xV) {
+        super(VV, eV, xV), (0, wV.g)(VV)
       }
-      dispose(MM) {
-        (0, zM.m)(this._material), super.dispose(MM)
+      dispose(VV) {
+        (0, wV.h)(this._material), super.dispose(VV)
       }
-    }(0, OM.m)(mM.e, HM), (0, mM.f)({
-      disableUnusedSpecularTerm: OM.e,
-      isLightingDisabled: MM => MM instanceof LM.StandardMaterial && MM.disableLighting
+    }(0, JV.l)(vV.g, rV), (0, vV.k)({
+      disableUnusedSpecularTerm: JV.e,
+      isLightingDisabled: VV => VV instanceof ZV.StandardMaterial && VV.disableLighting
     });
-    var hM = iM(39720);
-    class JM extends((0, OM.i)(hM.d)) {}(0, OM.m)(hM.d, JM);
-    var dM = iM(39852),
-      yM = iM(38178),
-      lM = iM(39126),
-      EM = iM(38287);
-    class UM extends((0, OM.i)(dM.c)) {}(0, OM.m)(dM.c, UM);
-    class GM extends((0, OM.i)(yM.b)) {}(0, OM.m)(yM.b, GM);
-    class CM extends((0, OM.i)(lM.i)) {}(0, OM.m)(lM.i, CM);
-    class eM extends((0, OM.i)(EM.c)) {}(0, OM.m)(EM.c, eM)
+    var kV = xV(39880);
+    class bV extends((0, JV.h)(kV.g)) {}(0, JV.l)(kV.g, bV);
+    var EV = xV(39984),
+      BV = xV(38395),
+      jV = xV(39277),
+      qV = xV(38493);
+    class tV extends((0, JV.h)(EV.b)) {}(0, JV.l)(EV.b, tV);
+    class FV extends((0, JV.h)(BV.e)) {}(0, JV.l)(BV.e, FV);
+    class TV extends((0, JV.h)(jV.q)) {}(0, JV.l)(jV.q, TV);
+    class PV extends((0, JV.h)(qV.e)) {}(0, JV.l)(qV.e, PV)
   },
-  42233: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => AM,
-      i: () => lM,
-      m: () => IM
+  42457: (VV, eV, xV) => {
+    xV.d(eV, {
+      e: () => lV,
+      h: () => jV,
+      l: () => uV
     });
-    var OM = iM(41374),
-      SM = iM(42241),
-      jM = iM(42283),
-      aM = iM(42248),
-      PM = iM(38797),
-      nM = iM(38809),
-      QM = iM(38815),
-      zM = iM(38822),
-      LM = iM(38227),
-      mM = iM(38233),
-      HM = iM(42256),
-      hM = iM(38198),
-      JM = iM(38217),
-      dM = iM(38188);
+    var JV = xV(41524),
+      YV = xV(42463),
+      UV = xV(42509),
+      yV = xV(42471),
+      pV = xV(38977),
+      QV = xV(38985),
+      nV = xV(38987),
+      wV = xV(38991),
+      ZV = xV(38433),
+      vV = xV(38437),
+      rV = xV(42479),
+      kV = xV(38408),
+      bV = xV(38421),
+      EV = xV(38399);
 
-    function yM(MM, rM) {
-      return Object.assign((function(MM, iM, OM, SM) {
-        return rM(this.featureState, MM, iM, OM, SM)
+    function BV(VV, eV) {
+      return Object.assign((function(VV, xV, JV, YV) {
+        return eV(this.featureState, VV, xV, JV, YV)
       }), {
-        jL: MM
+        bZ: VV
       })
     }
 
-    function lM(MM) {
-      const rM = class extends HM.d {
-          constructor(rM, iM) {
-            const OM = (0, JM.Y)(rM),
-              SM = OM && (0, JM.v)(OM, MM.name);
-            for (var jM = arguments.length, aM = new Array(jM > 2 ? jM - 2 : 0), PM = 2; PM < jM; PM++) aM[PM - 2] = arguments[PM];
-            super(rM, MM.name, MM.priority, SM ? SM.defines : MM.defines(...aM), !1), this.featureState = void 0, this.featureState = iM, this._pluginManager._addPlugin(this), this._enable(!0), (0, JM.x)(this._material, MM, this.featureState, this._pluginDefineNames)
+    function jV(VV) {
+      const eV = class extends rV.c {
+          constructor(eV, xV) {
+            const JV = (0, bV.eb)(eV),
+              YV = JV && (0, bV.v)(JV, VV.name);
+            for (var UV = arguments.length, yV = new Array(UV > 2 ? UV - 2 : 0), pV = 2; pV < UV; pV++) yV[pV - 2] = arguments[pV];
+            super(eV, VV.name, VV.priority, YV ? YV.defines : VV.defines(...yV), !1), this.featureState = void 0, this.featureState = xV, this._pluginManager._addPlugin(this), this._enable(!0), (0, bV.z)(this._material, VV, this.featureState, this._pluginDefineNames)
           }
           getClassName() {
-            return MM.className
+            return VV.className
           }
-          isCompatible(MM) {
-            return MM === dM.b.GLSL || MM === dM.b.WGSL
+          isCompatible(VV) {
+            return VV === EV.d.GLSL || VV === EV.d.WGSL
           }
         },
-        iM = (0, hM.i)(MM);
-      for (const [OM, SM] of Object.entries(hM.d)) {
-        const jM = MM[OM];
-        if (jM) {
-          const MM = iM[OM];
-          Object.defineProperty(rM.prototype, SM, {
-            value: yM(jM, MM),
+        xV = (0, kV.j)(VV);
+      for (const [JV, YV] of Object.entries(kV.c)) {
+        const UV = VV[JV];
+        if (UV) {
+          const VV = xV[JV];
+          Object.defineProperty(eV.prototype, YV, {
+            value: BV(UV, VV),
             writable: !0,
             configurable: !0
           })
         }
       }
-      return rM
+      return eV
     }
-    class EM extends(lM(PM.b)) {}
-    var UM = iM(40931),
-      GM = iM(42260),
-      CM = iM(42265);
+    class qV extends(jV(pV.b)) {}
+    var tV = xV(41071),
+      FV = xV(42487),
+      TV = xV(42490);
 
-    function eM(MM, rM, iM) {
-      return (0, CM.f)(iM, rM.urls, (() => async function(MM, rM, iM) {
+    function PV(VV, eV, xV) {
+      return (0, TV.g)(xV, eV.urls, (() => async function(VV, eV, xV) {
         const {
-          width: OM
-        } = MM[0].getSize(), SM = MM.map(((MM, iM) => {
-          var SM;
-          const jM = Math.round(MM.getSize().height / OM),
-            aM = null === rM || void 0 === rM ? void 0 : rM[iM];
+          width: JV
+        } = VV[0].getSize(), YV = VV.map(((VV, xV) => {
+          var YV;
+          const UV = Math.round(VV.getSize().height / JV),
+            yV = null === eV || void 0 === eV ? void 0 : eV[xV];
           return {
-            pixels: aM && aM.byteLength === OM * OM * jM * 4 ? aM : null !== (SM = bM.get(MM.getInternalTexture())) && void 0 !== SM ? SM : MM._readPixelsSync(),
-            layers: jM
+            pixels: yV && yV.byteLength === JV * JV * UV * 4 ? yV : null !== (YV = AV.get(VV.getInternalTexture())) && void 0 !== YV ? YV : VV._readPixelsSync(),
+            layers: UV
           }
-        })), jM = iM.ph().getCaps().texture2DArrayMaxLayerCount, PM = (0, CM.c)(SM, OM, jM).map((MM => {
+        })), UV = xV.sk().getCaps().texture2DArrayMaxLayerCount, pV = (0, TV.e)(YV, JV, UV).map((VV => {
           let {
-            pixels: rM,
-            layers: SM
-          } = MM;
+            pixels: eV,
+            layers: YV
+          } = VV;
           return {
-            atlas: new GM.e(rM, OM, OM, SM, UM.e.TEXTUREFORMAT_RGBA, iM, !0, !1, aM.c.NEAREST_NEAREST_MIPLINEAR),
-            layers: SM
+            atlas: new FV.d(eV, JV, JV, YV, tV.c.TEXTUREFORMAT_RGBA, xV, !0, !1, yV.b.NEAREST_NEAREST_MIPLINEAR),
+            layers: YV
           }
         }));
-        return MM.forEach(((MM, rM) => {
-          const OM = MM.getInternalTexture();
-          bM.has(OM) || (! function(MM, rM) {
-            const iM = rM.createRawTexture(new Uint8Array(4), 1, 1, UM.e.TEXTUREFORMAT_RGBA, !1, !1, aM.c.NEAREST_SAMPLINGMODE);
-            MM._hardwareTexture.release(), rM.unbindAllTextures(), iM._swapAndDie(MM, !1)
-          }(OM, iM.ph()), bM.set(OM, SM[rM].pixels))
-        })), PM
-      }(MM, rM.pixels, iM)))
+        return VV.forEach(((VV, eV) => {
+          const JV = VV.getInternalTexture();
+          AV.has(JV) || (! function(VV, eV) {
+            const xV = eV.createRawTexture(new Uint8Array(4), 1, 1, tV.c.TEXTUREFORMAT_RGBA, !1, !1, yV.b.NEAREST_SAMPLINGMODE);
+            VV._hardwareTexture.release(), eV.unbindAllTextures(), xV._swapAndDie(VV, !1)
+          }(JV, xV.sk()), AV.set(JV, YV[eV].pixels))
+        })), pV
+      }(VV, eV.pixels, xV)))
     }
-    const bM = new WeakMap;
-    var wM = iM(38829);
-    class tM extends(lM(nM.g)) {
-      constructor(MM, rM) {
-        super(MM, rM), this.loaded = new Set, this.mirrors = void 0, this.mirrors = rM.textures.map((MM => MM.mirror)), this.mirrors.forEach(((MM, rM) => {
-          MM.onLoadObservable.add((MM => {
-            this.setTextureArrayData(MM, rM).catch((MM => {
-              console.error(`Failed to build the texture arrays, at atlas ${rM}`, MM)
+    const AV = new WeakMap;
+    var NV = xV(38994);
+    class XV extends(jV(QV.h)) {
+      constructor(VV, eV) {
+        super(VV, eV), this.loaded = new Set, this.mirrors = void 0, this.mirrors = eV.textures.map((VV => VV.mirror)), this.mirrors.forEach(((VV, eV) => {
+          VV.onLoadObservable.add((VV => {
+            this.setTextureArrayData(VV, eV).catch((VV => {
+              console.error(`Failed to build the texture arrays, at atlas ${eV}`, VV)
             }))
           }))
-        })), (0, wM.j)(rM, MM.shaderLanguage)
+        })), (0, NV.f)(eV, VV.shaderLanguage)
       }
-      async setTextureArrayData(MM, rM) {
-        const iM = this.featureState,
+      async setTextureArrayData(VV, eV) {
+        const xV = this.featureState,
           {
-            width: OM,
-            height: SM
-          } = MM.getSize(),
-          jM = this._material.shaderLanguage;
-        if (!iM.useWebGL2) return void(0, wM.e)(this._material, iM, rM, OM, Math.round(SM / OM), jM);
-        if (this.loaded.add(rM), this.loaded.size < this.mirrors.length) return;
-        const aM = await eM(this.mirrors, iM.sources, this._material.Hk());
-        (0, wM.c)(this._material, iM, aM, OM, jM)
+            width: JV,
+            height: YV
+          } = VV.getSize(),
+          UV = this._material.shaderLanguage;
+        if (!xV.useWebGL2) return void(0, NV.c)(this._material, xV, eV, JV, Math.round(YV / JV), UV);
+        if (this.loaded.add(eV), this.loaded.size < this.mirrors.length) return;
+        const yV = await PV(this.mirrors, xV.sources, this._material.dD());
+        (0, NV.b)(this._material, xV, yV, JV, UV)
       }
     }
-    var gM = iM(42269),
-      uM = iM(41410),
-      RM = iM(38034),
-      pM = iM(42278),
-      WM = iM(41508),
-      sM = iM(41400),
-      DM = iM(42212),
-      kM = iM(38457),
-      ZM = iM(42280);
-    class oM extends gM.b {
+    var MV = xV(42496),
+      zV = xV(41566),
+      GV = xV(38263),
+      WV = xV(42498),
+      RV = xV(41674),
+      gV = xV(41559),
+      DV = xV(42439),
+      iV = xV(38662),
+      CV = xV(42506);
+    class aV extends MV.b {
       getData() {
         return null
       }
@@ -542,368 +542,368 @@ export const modules = {
         super._rebuild()
       }
     }
-    const fM = {
-      Mesh: pM.d,
-      TransformNode: DM.e,
-      Vz: gM.b,
-      VertexBuffer: gM.e,
-      BoundingInfo: uM.d,
-      sh: RM.sh,
-      ArenaBuffer: oM,
-      SubMesh: sM.e,
-      VertexData: WM.d,
-      MirroredGeometry: ZM.d,
-      meshFromArrays: ZM.h,
-      plainMeshFromArrays: ZM.k
+    const oV = {
+      Mesh: WV.e,
+      TransformNode: DV.d,
+      nZ: MV.b,
+      VertexBuffer: MV.c,
+      BoundingInfo: zV.b,
+      Ik: GV.Ik,
+      ArenaBuffer: aV,
+      SubMesh: gV.c,
+      VertexData: RV.c,
+      MirroredGeometry: CV.b,
+      meshFromArrays: CV.c,
+      plainMeshFromArrays: CV.d
     };
-    (0, kM.g)(fM);
-    var YM = iM(38298);
-    class NM extends(lM(zM.j)) {
-      constructor(MM, rM) {
-        if (super(MM, rM), MM instanceof OM.StandardMaterial && rM.dirLightCount > 0) {
-          const rM = MM,
-            iM = rM._blockDirtyMechanism;
-          rM._blockDirtyMechanism = !0, MM.disableLighting = !0, rM._blockDirtyMechanism = iM;
-          const OM = (0, JM.Y)(MM);
-          OM && (OM.disableLighting = !0, (0, JM.W)(OM))
-        }(0, YM.k)(MM)
+    (0, iV.h)(oV);
+    var cV = xV(38502);
+    class hV extends(jV(wV.j)) {
+      constructor(VV, eV) {
+        if (super(VV, eV), VV instanceof JV.StandardMaterial && eV.dirLightCount > 0) {
+          const eV = VV,
+            xV = eV._blockDirtyMechanism;
+          eV._blockDirtyMechanism = !0, VV.disableLighting = !0, eV._blockDirtyMechanism = xV;
+          const JV = (0, bV.eb)(VV);
+          JV && (JV.disableLighting = !0, (0, bV.bb)(JV))
+        }(0, cV.g)(VV)
       }
-      dispose(MM) {
-        (0, YM.m)(this._material), super.dispose(MM)
+      dispose(VV) {
+        (0, cV.h)(this._material), super.dispose(VV)
       }
     }
 
-    function AM(MM, rM) {
-      if (!(rM instanceof OM.StandardMaterial) || rM.specularTexture) return;
+    function lV(VV, eV) {
+      if (!(eV instanceof JV.StandardMaterial) || eV.specularTexture) return;
       const {
-        r: iM,
-        g: SM,
-        b: jM
-      } = rM.specularColor;
-      0 === iM && 0 === SM && 0 === jM && (MM.SPECULARTERM = !1)
-    }(0, zM.f)({
-      disableUnusedSpecularTerm: AM
+        r: xV,
+        g: YV,
+        b: UV
+      } = eV.specularColor;
+      0 === xV && 0 === YV && 0 === UV && (VV.SPECULARTERM = !1)
+    }(0, wV.g)({
+      disableUnusedSpecularTerm: lV
     });
-    var xM = iM(38235),
-      vM = iM(38467);
-    const FM = new RegExp(`^#define ${QM.b}\\s*$`, "m");
-    class BM extends(lM(QM.g)) {
-      constructor(MM, rM) {
-        super(MM, rM), this.dh = !1, rM.ditherOnlyWhileFading && (vM.f.add(MM), this.prewarmDitherTwins(MM))
+    var LV = xV(38445),
+      fV = xV(38673);
+    const mV = new RegExp(`^#define ${nV.e}\\s*$`, "m");
+    class KV extends(jV(nV.l)) {
+      constructor(VV, eV) {
+        super(VV, eV), this.ik = !1, eV.ditherOnlyWhileFading && (fV.e.add(VV), this.prewarmDitherTwins(VV))
       }
-      prewarmDitherTwins(MM) {
-        const rM = new WeakSet;
-        MM.onEffectCreatedObservable.add((iM => {
+      prewarmDitherTwins(VV) {
+        const eV = new WeakSet;
+        VV.onEffectCreatedObservable.add((xV => {
           let {
-            effect: OM,
-            subMesh: SM
-          } = iM;
-          if (this.featureState.prewarmingDither || rM.has(OM)) return;
-          rM.add(OM);
-          const jM = null === SM || void 0 === SM ? void 0 : SM.getMesh();
-          jM && !FM.test(OM.defines) && MM.Hk().onAfterRenderObservable.addOnce((() => {
-            this.prewarmDither(jM) || rM.delete(OM)
+            effect: JV,
+            subMesh: YV
+          } = xV;
+          if (this.featureState.prewarmingDither || eV.has(JV)) return;
+          eV.add(JV);
+          const UV = null === YV || void 0 === YV ? void 0 : YV.getMesh();
+          UV && !mV.test(JV.defines) && VV.dD().onAfterRenderObservable.addOnce((() => {
+            this.prewarmDither(UV) || eV.delete(JV)
           }))
         }))
       }
-      prewarmDither(MM) {
-        if (this.dh || MM.xG()) return !1;
-        const rM = new sM.e(0, 0, 0, 0, 0, MM, void 0, !1, !1);
+      prewarmDither(VV) {
+        if (this.ik || VV.iN()) return !1;
+        const eV = new gV.c(0, 0, 0, 0, 0, VV, void 0, !1, !1);
         this.featureState.prewarmingDither = !0;
         try {
-          this._material.isReadyForSubMesh(MM, rM)
+          this._material.isReadyForSubMesh(VV, eV)
         } finally {
           this.featureState.prewarmingDither = !1
         }
-        return null !== rM.effect
+        return null !== eV.effect
       }
-      dispose(MM) {
-        this.dh = !0, super.dispose(MM)
+      dispose(VV) {
+        this.ik = !0, super.dispose(VV)
       }
     }
-    const XM = new Map;
+    const HV = new Map;
 
-    function IM(MM, rM) {
-      XM.set(MM, rM)
+    function uV(VV, eV) {
+      HV.set(VV, eV)
     }
-    IM(PM.b, EM), IM(nM.g, tM), IM(QM.g, BM), IM(zM.j, NM), (0, LM.e)({
-      create: (MM, rM) => {
-        const iM = new OM.StandardMaterial(MM.name, rM);
-        return (0, xM.s)(MM, iM), iM.detailMap._pluginDefineNames
+    uV(pV.b, qV), uV(QV.h, XV), uV(nV.l, KV), uV(wV.j, hV), (0, ZV.e)({
+      create: (VV, eV) => {
+        const xV = new JV.StandardMaterial(VV.name, eV);
+        return (0, LV.m)(VV, xV), xV.detailMap._pluginDefineNames
       },
-      write: (MM, rM, iM) => {
-        (0, xM.U)(MM.mirror, rM, iM)
+      write: (VV, eV, xV) => {
+        (0, LV.I)(VV.mirror, eV, xV)
       },
-      addFeature: (MM, rM, iM) => {
-        const OM = XM.get(rM.feature);
-        if (!OM) throw new Error(`${rM.feature.name} has no plugin class (registerPluginClass)`);
-        new OM(MM.mirror, rM.state, ...iM)
+      addFeature: (VV, eV, xV) => {
+        const JV = HV.get(eV.feature);
+        if (!JV) throw new Error(`${eV.feature.name} has no plugin class (registerPluginClass)`);
+        new JV(VV.mirror, eV.state, ...xV)
       },
-      texture: (MM, rM, iM) => {
+      texture: (VV, eV, xV) => {
         let {
-          url: OM,
-          noMipmap: SM,
-          invertY: jM,
-          samplingMode: PM,
-          data: nM,
-          sets: QM
-        } = iM;
-        if (!nM) {
-          const iM = new aM.c(OM, rM, SM, jM, PM);
-          return Object.assign(iM, QM), void(0, mM.F)(MM, iM)
+          url: JV,
+          noMipmap: YV,
+          invertY: UV,
+          samplingMode: pV,
+          data: QV,
+          sets: nV
+        } = xV;
+        if (!QV) {
+          const xV = new yV.b(JV, eV, YV, UV, pV);
+          return Object.assign(xV, nV), void(0, vV.J)(VV, xV)
         }
-        const zM = {},
-          LM = new Promise(((MM, rM) => {
-            zM.onLoad = MM, zM.onError = (MM, iM) => {
-              rM(new Error(`${nM.context}: ${(null===iM||void 0===iM?void 0:iM.message)||MM||"Failed to load texture"}`))
+        const wV = {},
+          ZV = new Promise(((VV, eV) => {
+            wV.onLoad = VV, wV.onError = (VV, xV) => {
+              eV(new Error(`${QV.context}: ${(null===xV||void 0===xV?void 0:xV.message)||VV||"Failed to load texture"}`))
             }
           })),
           {
-            mimeType: HM,
-            bytes: hM,
-            label: JM
-          } = nM,
-          dM = {
-            noMipmap: SM,
+            mimeType: rV,
+            bytes: kV,
+            label: bV
+          } = QV,
+          EV = {
+            noMipmap: YV,
             invertY: !1,
-            samplingMode: PM,
-            ...zM,
-            mimeType: HM,
+            samplingMode: pV,
+            ...wV,
+            mimeType: rV,
             loaderOptions: void 0,
             useSRGBBuffer: !1
           },
-          yM = new aM.c(null, rM, dM);
-        xM.w.set(yM, LM), Object.assign(yM, QM), yM.updateURL(OM, hM);
-        const lM = yM.getInternalTexture();
-        lM && (lM.label = JM), MM.uvSet = yM.coordinatesIndex, MM.matrix.set((0, xM.O)(yM)), (0, mM.F)(MM, yM)
+          BV = new yV.b(null, eV, EV);
+        LV.q.set(BV, ZV), Object.assign(BV, nV), BV.updateURL(JV, kV);
+        const jV = BV.getInternalTexture();
+        jV && (jV.label = bV), VV.uvSet = BV.coordinatesIndex, VV.matrix.set((0, LV.B)(BV)), (0, vV.J)(VV, BV)
       },
-      cube: (MM, rM, iM) => {
+      cube: (VV, eV, xV) => {
         let {
-          rootUrl: OM,
-          files: jM,
-          noMipmap: PM,
-          luminance: nM
-        } = iM;
+          rootUrl: JV,
+          files: UV,
+          noMipmap: pV,
+          luminance: QV
+        } = xV;
         const {
-          samplingMode: QM
-        } = MM.sampler, zM = QM === (0, mM.y)(PM) ? null : () => {
-          (0, xM.M)(LM, QM)
-        }, LM = new SM.d(OM, rM, null, PM, jM, zM, null, (0, mM.v)(nM));
-        LM.coordinatesMode = aM.c.SKYBOX_MODE, (0, mM.F)(MM, LM)
+          samplingMode: nV
+        } = VV.sampler, wV = nV === (0, vV.z)(pV) ? null : () => {
+          (0, LV.A)(ZV, nV)
+        }, ZV = new YV.c(JV, eV, null, pV, UV, wV, null, (0, vV.w)(QV));
+        ZV.coordinatesMode = yV.b.SKYBOX_MODE, (0, vV.J)(VV, ZV)
       },
-      canvas: (MM, rM, iM) => {
+      canvas: (VV, eV, xV) => {
         let {
-          width: OM,
-          height: SM,
-          mipmaps: PM,
-          samplingMode: nM,
-          hasAlpha: QM = !1,
-          wrap: zM = aM.c.CLAMP_ADDRESSMODE
-        } = iM;
-        const LM = new jM.b(rM, {
-          width: OM,
-          height: SM
-        }, MM, PM, nM);
-        LM.hasAlpha = QM, LM.wrapU = zM, LM.wrapV = zM;
-        const mM = (0, xM.C)(LM);
-        return (0, xM.F)(mM, LM), mM
+          width: JV,
+          height: YV,
+          mipmaps: pV,
+          samplingMode: QV,
+          hasAlpha: nV = !1,
+          wrap: wV = yV.b.CLAMP_ADDRESSMODE
+        } = xV;
+        const ZV = new UV.c(eV, {
+          width: JV,
+          height: YV
+        }, VV, pV, QV);
+        ZV.hasAlpha = nV, ZV.wrapU = wV, ZV.wrapV = wV;
+        const vV = (0, LV.v)(ZV);
+        return (0, LV.w)(vV, ZV), vV
       }
     })
   },
-  42280: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => zM,
-      h: () => LM,
-      k: () => mM
+  42506: (VV, eV, xV) => {
+    xV.d(eV, {
+      b: () => wV,
+      c: () => ZV,
+      d: () => vV
     });
-    var OM = iM(42269),
-      SM = iM(41167),
-      jM = iM(41410),
-      aM = iM(41512),
-      PM = iM(42278),
-      nM = iM(41508),
-      QM = iM(38347);
-    class zM extends aM.e {
+    var JV = xV(42496),
+      YV = xV(41318),
+      UV = xV(41566),
+      yV = xV(41677),
+      pV = xV(42498),
+      QV = xV(41674),
+      nV = xV(38547);
+    class wV extends yV.c {
       constructor() {
-        super(...arguments), this.model = null, this.onGeometryUpdated = (MM, rM) => {
-          this.releaseUnlessInstanced(rM)
+        super(...arguments), this.model = null, this.onGeometryUpdated = (VV, eV) => {
+          this.releaseUnlessInstanced(eV)
         }, this.onLinked = null
       }
-      link(MM) {
-        var rM;
-        (0, QM.j)(MM), this.model = MM, null === (rM = this.onLinked) || void 0 === rM || rM.call(this, MM)
+      link(VV) {
+        var eV;
+        (0, nV.m)(VV), this.model = VV, null === (eV = this.onLinked) || void 0 === eV || eV.call(this, VV)
       }
       relink() {
         this.release();
-        const MM = [];
-        for (const SM of Object.values(this._vertexBuffers))
-          if (!SM.getIsInstanced()) {
+        const VV = [];
+        for (const YV of Object.values(this._vertexBuffers))
+          if (!YV.getIsInstanced()) {
             const {
-              byteOffset: rM,
-              byteStride: iM,
-              type: OM,
-              normalized: jM
-            } = SM;
-            MM.push({
-              kind: SM.getKind(),
-              data: SM.getData(),
-              offset: rM,
-              stride: iM,
-              components: SM.getSize(),
-              glType: OM,
-              isNormalized: jM
+              byteOffset: eV,
+              byteStride: xV,
+              type: JV,
+              normalized: UV
+            } = YV;
+            VV.push({
+              kind: YV.getKind(),
+              data: YV.getData(),
+              offset: eV,
+              stride: xV,
+              components: YV.getSize(),
+              glType: JV,
+              isNormalized: UV
             })
-          } const rM = this._indices.length ? this._indices : null,
+          } const eV = this._indices.length ? this._indices : null,
           {
-            minimum: iM,
-            maximum: OM
+            minimum: xV,
+            maximum: JV
           } = this.extend;
-        this.link(new QM.e(MM, rM, this.getTotalVertices(), new Float64Array(iM.HOM()), new Float64Array(OM.HOM())))
+        this.link(new nV.e(VV, eV, this.getTotalVertices(), new Float64Array(xV.WYV()), new Float64Array(JV.WYV())))
       }
-      copy(MM) {
-        if (!this.model) return super.copy(MM);
-        const rM = new zM(MM, this.Hk()),
-          iM = this.hOM(void 0, !0);
-        iM && rM.setIndices(iM);
-        let aM = !1;
-        for (const jM in this._vertexBuffers) {
-          const MM = this._vertexBuffers[jM],
-            iM = MM.getData();
-          if (!iM) continue;
-          const PM = MM.getSize(),
+      copy(VV) {
+        if (!this.model) return super.copy(VV);
+        const eV = new wV(VV, this.dD()),
+          xV = this.RYV(void 0, !0);
+        xV && eV.setIndices(xV);
+        let yV = !1;
+        for (const UV in this._vertexBuffers) {
+          const VV = this._vertexBuffers[UV],
+            xV = VV.getData();
+          if (!xV) continue;
+          const pV = VV.getSize(),
             {
-              type: nM,
-              byteOffset: QM,
-              byteStride: zM,
-              normalized: LM
-            } = MM;
-          aM ||= MM.isUpdatable();
-          const mM = MM.getIsInstanced() ? (iM instanceof Array ? 4 * iM.length : iM.byteLength) / zM : this.getTotalVertices(),
-            HM = (0, SM.r)(iM, PM, nM, QM, zM, mM, !0),
-            hM = {
-              updatable: MM.isUpdatable(),
-              stride: PM,
-              type: nM,
-              normalized: LM,
+              type: QV,
+              byteOffset: nV,
+              byteStride: wV,
+              normalized: ZV
+            } = VV;
+          yV ||= VV.isUpdatable();
+          const vV = VV.getIsInstanced() ? (xV instanceof Array ? 4 * xV.length : xV.byteLength) / wV : this.getTotalVertices(),
+            rV = (0, YV.q)(xV, pV, QV, nV, wV, vV, !0),
+            kV = {
+              updatable: VV.isUpdatable(),
+              stride: pV,
+              type: QV,
+              normalized: ZV,
               takeBufferOwnership: !0,
-              instanced: MM.getIsInstanced()
+              instanced: VV.getIsInstanced()
             };
-          rM.setVerticesBuffer(new OM.e(this.ph(), HM, jM, hM), mM)
+          eV.setVerticesBuffer(new JV.c(this.sk(), rV, UV, kV), vV)
         }
-        return rM._updatable = aM, rM._boundingInfo = new jM.d(this.extend.minimum, this.extend.maximum), rM.relink(), rM
+        return eV._updatable = yV, eV._boundingInfo = new UV.b(this.extend.minimum, this.extend.maximum), eV.relink(), eV
       }
-      static mergeMeshes(MM, rM, iM, OM, SM, jM) {
-        const nM = MM[0].Hk(),
-          QM = new PM.d(MM[0].name + "_merged", nM),
-          LM = new zM(aM.e.RandomId(), nM, void 0, !1, QM);
+      static mergeMeshes(VV, eV, xV, JV, YV, UV) {
+        const QV = VV[0].dD(),
+          nV = new pV.e(VV[0].name + "_merged", QV),
+          ZV = new wV(yV.c.RandomId(), QV, void 0, !1, nV);
         try {
-          if (!PM.d.MergeMeshes(MM, rM, iM, QM, SM, jM)) return QM.dispose(), null
-        } catch (mM) {
-          throw QM.dispose(), mM
+          if (!pV.e.MergeMeshes(VV, eV, xV, nV, YV, UV)) return nV.dispose(), null
+        } catch (vV) {
+          throw nV.dispose(), vV
         }
-        return LM.relink(), QM
+        return ZV.relink(), nV
       }
-      removeVerticesData(MM) {
-        this.releaseUnlessInstanced(MM), super.removeVerticesData(MM)
+      removeVerticesData(VV) {
+        this.releaseUnlessInstanced(VV), super.removeVerticesData(VV)
       }
       dispose() {
         this.release(), super.dispose()
       }
-      releaseUnlessInstanced(MM) {
-        var rM;
-        MM && null !== (rM = this.getVertexBuffer(MM)) && void 0 !== rM && rM.getIsInstanced() || this.release()
+      releaseUnlessInstanced(VV) {
+        var eV;
+        VV && null !== (eV = this.getVertexBuffer(VV)) && void 0 !== eV && eV.getIsInstanced() || this.release()
       }
       release() {
-        this.model && ((0, QM.p)(this.model), this.model = null)
+        this.model && ((0, nV.u)(this.model), this.model = null)
       }
     }
 
-    function LM(MM, rM, iM) {
-      let OM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new PM.d(MM, iM);
-      const SM = (0, QM.i)(rM),
+    function ZV(VV, eV, xV) {
+      let JV = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new pV.e(VV, xV);
+      const YV = (0, nV.i)(eV),
         {
-          positions: jM,
-          normals: LM,
-          uvs: mM,
-          indices: HM,
-          named: hM = {}
-        } = rM,
-        JM = new nM.d;
-      JM.positions = jM, JM.normals = null !== LM && void 0 !== LM ? LM : null, JM.uvs = null !== mM && void 0 !== mM ? mM : null, JM.indices = HM;
-      const dM = new zM(aM.e.RandomId(), iM, JM, !1, OM);
+          positions: UV,
+          normals: ZV,
+          uvs: vV,
+          indices: rV,
+          named: kV = {}
+        } = eV,
+        bV = new QV.c;
+      bV.positions = UV, bV.normals = null !== ZV && void 0 !== ZV ? ZV : null, bV.uvs = null !== vV && void 0 !== vV ? vV : null, bV.indices = rV;
+      const EV = new wV(yV.c.RandomId(), xV, bV, !1, JV);
       for (const {
-          kind: aM,
-          components: PM
+          kind: yV,
+          components: pV
         }
-        of SM.vertexAttributes) aM in hM && OM.setVerticesData(aM, hM[aM], !1, PM);
-      return dM.link(SM), OM
+        of YV.vertexAttributes) yV in kV && JV.setVerticesData(yV, kV[yV], !1, pV);
+      return EV.link(YV), JV
     }
 
-    function mM(MM, rM, iM) {
-      let OM = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-      const SM = new PM.d(MM, iM),
+    function vV(VV, eV, xV) {
+      let JV = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+      const YV = new pV.e(VV, xV),
         {
-          positions: jM,
-          normals: aM,
-          uvs: QM,
-          indices: zM
-        } = rM;
-      return Object.assign(new nM.d, {
-        positions: jM,
-        normals: aM,
-        uvs: QM,
-        indices: zM
-      }).applyToMesh(SM, OM), SM
+          positions: UV,
+          normals: yV,
+          uvs: nV,
+          indices: wV
+        } = eV;
+      return Object.assign(new QV.c, {
+        positions: UV,
+        normals: yV,
+        uvs: nV,
+        indices: wV
+      }).applyToMesh(YV, JV), YV
     }
   },
-  42265: (MM, rM, iM) => {
-    function OM(MM, rM, iM) {
-      const OM = rM * rM * 4,
-        SM = MM[0].layers,
-        jM = SM * (MM.length - 1) + MM[MM.length - 1].layers,
-        aM = new Uint8Array(jM * OM);
-      MM.forEach(((rM, iM) => {
-        const jM = iM + 1 < MM.length ? Math.min(rM.layers, SM) : rM.layers;
-        aM.set(new Uint8Array(rM.pixels.buffer, rM.pixels.byteOffset, jM * OM), iM * SM * OM)
+  42490: (VV, eV, xV) => {
+    function JV(VV, eV, xV) {
+      const JV = eV * eV * 4,
+        YV = VV[0].layers,
+        UV = YV * (VV.length - 1) + VV[VV.length - 1].layers,
+        yV = new Uint8Array(UV * JV);
+      VV.forEach(((eV, xV) => {
+        const UV = xV + 1 < VV.length ? Math.min(eV.layers, YV) : eV.layers;
+        yV.set(new Uint8Array(eV.pixels.buffer, eV.pixels.byteOffset, UV * JV), xV * YV * JV)
       }));
-      const PM = Math.max(1, Math.min(jM, iM || jM));
-      if (PM === jM) return [{
-        pixels: aM,
-        layers: jM
+      const pV = Math.max(1, Math.min(UV, xV || UV));
+      if (pV === UV) return [{
+        pixels: yV,
+        layers: UV
       }];
-      const nM = [];
-      for (let QM = 0; QM < jM; QM += PM) {
-        const MM = Math.min(jM, QM + PM);
-        nM.push({
-          pixels: aM.slice(QM * OM, MM * OM),
-          layers: MM - QM
+      const QV = [];
+      for (let nV = 0; nV < UV; nV += pV) {
+        const VV = Math.min(UV, nV + pV);
+        QV.push({
+          pixels: yV.slice(nV * JV, VV * JV),
+          layers: VV - nV
         })
       }
-      return nM
+      return QV
     }
-    iM.d(rM, {
-      c: () => OM,
-      f: () => jM
+    xV.d(eV, {
+      e: () => JV,
+      g: () => UV
     });
-    const SM = new WeakMap;
+    const YV = new WeakMap;
 
-    function jM(MM, rM, iM) {
-      var OM, jM;
-      const aM = null !== (OM = SM.get(MM)) && void 0 !== OM ? OM : new Map;
-      SM.set(MM, aM);
-      const PM = null !== (jM = aM.get(rM[0])) && void 0 !== jM ? jM : [];
-      aM.set(rM[0], PM);
-      const nM = PM.find((MM => MM.urls.length === rM.length && MM.urls.every(((MM, iM) => MM === rM[iM]))));
-      if (nM) return nM.built;
-      const QM = {
-        urls: [...rM],
-        built: iM()
+    function UV(VV, eV, xV) {
+      var JV, UV;
+      const yV = null !== (JV = YV.get(VV)) && void 0 !== JV ? JV : new Map;
+      YV.set(VV, yV);
+      const pV = null !== (UV = yV.get(eV[0])) && void 0 !== UV ? UV : [];
+      yV.set(eV[0], pV);
+      const QV = pV.find((VV => VV.urls.length === eV.length && VV.urls.every(((VV, xV) => VV === eV[xV]))));
+      if (QV) return QV.built;
+      const nV = {
+        urls: [...eV],
+        built: xV()
       };
-      return PM.push(QM), QM.built.catch((() => {
-        PM.splice(PM.indexOf(QM), 1)
-      })), QM.built
+      return pV.push(nV), nV.built.catch((() => {
+        pV.splice(pV.indexOf(nV), 1)
+      })), nV.built
     }
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const VV in modules) Object.freeze(modules[VV]);

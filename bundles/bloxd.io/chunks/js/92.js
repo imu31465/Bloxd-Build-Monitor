@@ -1,272 +1,272 @@
 export const id = 92;
 export const ids = [92, 108];
 export const modules = {
-    5233: (MM, rM, iM) => {
-      iM.d(rM, {
-        b: () => dM,
-        e: () => yM
+    5333: (VV, eV, xV) => {
+      xV.d(eV, {
+        e: () => EV,
+        i: () => BV
       });
-      var OM = iM(1116),
-        SM = iM.n(OM),
-        jM = iM(44),
-        aM = iM(1188),
-        PM = iM(5242),
-        nM = iM(2006),
-        QM = iM(2640),
-        zM = iM(5248),
-        LM = iM(1303);
-      const mM = new WeakMap;
-      let HM = 0;
+      var JV = xV(1146),
+        YV = xV.n(JV),
+        UV = xV(62),
+        yV = xV(1220),
+        pV = xV(5335),
+        QV = xV(2021),
+        nV = xV(2693),
+        wV = xV(5339),
+        ZV = xV(1321);
+      const vV = new WeakMap;
+      let rV = 0;
 
-      function hM(MM) {
-        let rM = mM.get(MM);
-        return void 0 === rM && (rM = HM++, mM.set(MM, rM)), rM
+      function kV(VV) {
+        let eV = vV.get(VV);
+        return void 0 === eV && (eV = rV++, vV.set(VV, eV)), eV
       }
 
-      function JM(MM) {
+      function bV(VV) {
         let {
-          piece: rM
-        } = MM;
-        return "space" === rM.kind ? (0, LM.jsx)(LM.Fragment, {
-          children: rM.text
-        }) : (0, LM.jsx)("span", {
+          piece: eV
+        } = VV;
+        return "space" === eV.kind ? (0, ZV.jsx)(ZV.Fragment, {
+          children: eV.text
+        }) : (0, ZV.jsx)("span", {
           className: "DialogueWord",
           style: {
-            "--word-delay": `${rM.delayMs}ms`
+            "--word-delay": `${eV.delayMs}ms`
           },
-          children: (0, LM.jsx)(PM.c, {
-            text: "icon" === rM.kind ? `[[${rM.icon}]]` : rM.text
+          children: (0, ZV.jsx)(pV.e, {
+            text: "icon" === eV.kind ? `[[${eV.icon}]]` : eV.text
           })
         })
       }
 
-      function dM(MM) {
+      function EV(VV) {
         let {
-          display: rM
-        } = MM;
+          display: eV
+        } = VV;
         const {
-          selectedLanguage: iM
-        } = (0, aM.A)(), OM = (0, jM.useMemo)((() => (0, zM.e)((0, zM.i)(rM).plan.pieces)), [rM, iM.code]);
-        return (0, LM.jsxs)("div", {
-          className: SM()("Dialogue", {
-            DialogueAnimateIn: !1 !== rM.animateIn
+          selectedLanguage: xV
+        } = (0, yV.A)(), JV = (0, UV.useMemo)((() => (0, wV.c)((0, wV.g)(eV).plan.pieces)), [eV, xV.code]);
+        return (0, ZV.jsxs)("div", {
+          className: YV()("Dialogue", {
+            DialogueAnimateIn: !1 !== eV.animateIn
           }),
-          children: [rM.speakerName && (0, LM.jsx)(nM.b, {
-            text: rM.speakerName,
+          children: [eV.speakerName && (0, ZV.jsx)(QV.b, {
+            text: eV.speakerName,
             className: "DialogueSpeaker"
-          }), (0, LM.jsx)("p", {
+          }), (0, ZV.jsx)("p", {
             className: "DialogueLine",
-            children: OM.map(((MM, rM) => 1 === MM.length && "space" === MM[0].kind ? MM[0].text : (0, LM.jsx)("span", {
+            children: JV.map(((VV, eV) => 1 === VV.length && "space" === VV[0].kind ? VV[0].text : (0, ZV.jsx)("span", {
               className: "DialogueGlue",
-              children: MM.map(((MM, rM) => (0, LM.jsx)(JM, {
-                piece: MM
-              }, rM)))
-            }, rM)))
+              children: VV.map(((VV, eV) => (0, ZV.jsx)(bV, {
+                piece: VV
+              }, eV)))
+            }, eV)))
           })]
         })
       }
-      const yM = (0, jM.memo)((function() {
-        const MM = (0, QM.f)("dialogue");
-        return (0, LM.jsx)("div", {
+      const BV = (0, UV.memo)((function() {
+        const VV = (0, nV.j)("dialogue");
+        return (0, ZV.jsx)("div", {
           className: "DialogueAnchor",
           "data-camera-keeper": "",
           role: "status",
           "aria-live": "polite",
           "aria-atomic": "true",
-          children: MM && (0, LM.jsx)(dM, {
-            display: MM
-          }, hM(MM))
+          children: VV && (0, ZV.jsx)(EV, {
+            display: VV
+          }, kV(VV))
         })
       }))
     },
-    5113: (MM, rM, iM) => {
-        iM.r(rM), iM.d(rM, {
-          default: () => ra
+    5222: (VV, eV, xV) => {
+        xV.r(eV), xV.d(eV, {
+          default: () => OU
         });
-        var OM = iM(44),
-          SM = iM(1116),
-          jM = iM.n(SM),
-          aM = iM(1600),
-          PM = iM(1608),
-          nM = iM(19),
-          QM = iM(65),
-          zM = iM(5115),
-          LM = iM(5125),
-          mM = iM(5134),
-          HM = iM(4718),
-          hM = iM(1303);
-        const JM = "/textures/docs/icons";
+        var JV = xV(62),
+          YV = xV(1146),
+          UV = xV.n(YV),
+          yV = xV(1616),
+          pV = xV(1625),
+          QV = xV(27),
+          nV = xV(78),
+          wV = xV(5226),
+          ZV = xV(5239),
+          vV = xV(5241),
+          rV = xV(4788),
+          kV = xV(1321);
+        const bV = "/textures/docs/icons";
 
-        function dM(MM) {
+        function EV(VV) {
           let {
-            name: rM,
-            isTinted: iM,
-            className: OM,
-            style: SM
-          } = MM;
-          const aM = `${JM}/${rM}.png`;
-          return iM ? (0, hM.jsxs)("span", {
-            className: jM()("DocsPixelIcon", "Tinted", OM),
+            name: eV,
+            isTinted: xV,
+            className: JV,
+            style: YV
+          } = VV;
+          const yV = `${bV}/${eV}.png`;
+          return xV ? (0, kV.jsxs)("span", {
+            className: UV()("DocsPixelIcon", "Tinted", JV),
             "aria-hidden": "true",
-            style: SM,
-            children: [(0, hM.jsx)("span", {
+            style: YV,
+            children: [(0, kV.jsx)("span", {
               className: "DocsPixelIconTint",
               style: {
-                maskImage: `url("${aM}")`,
-                WebkitMaskImage: `url("${aM}")`
+                maskImage: `url("${yV}")`,
+                WebkitMaskImage: `url("${yV}")`
               }
-            }), (0, hM.jsx)("img", {
-              src: aM,
+            }), (0, kV.jsx)("img", {
+              src: yV,
               alt: ""
             })]
-          }) : (0, hM.jsx)("img", {
-            className: jM()("DocsPixelIcon", OM),
-            src: aM,
+          }) : (0, kV.jsx)("img", {
+            className: UV()("DocsPixelIcon", JV),
+            src: yV,
             alt: "",
             "aria-hidden": "true",
-            style: SM
+            style: YV
           })
         }
-        const yM = 1500;
+        const BV = 1500;
 
-        function lM() {
-          const [MM, rM] = (0, OM.useState)(null);
-          (0, OM.useEffect)((() => {
-            if (null === MM) return;
-            const iM = setTimeout((() => {
-              rM(null)
-            }), yM);
+        function jV() {
+          const [VV, eV] = (0, JV.useState)(null);
+          (0, JV.useEffect)((() => {
+            if (null === VV) return;
+            const xV = setTimeout((() => {
+              eV(null)
+            }), BV);
             return () => {
-              clearTimeout(iM)
+              clearTimeout(xV)
             }
-          }), [MM]);
-          return [MM, MM => {
-            (0, HM.c)(MM).then((() => {
-              rM({
-                text: MM,
+          }), [VV]);
+          return [VV, VV => {
+            (0, rV.b)(VV).then((() => {
+              eV({
+                text: VV,
                 failed: !1
               })
-            }), (iM => {
-              console.error("Could not copy to the clipboard", iM), rM({
-                text: MM,
+            }), (xV => {
+              console.error("Could not copy to the clipboard", xV), eV({
+                text: VV,
                 failed: !0
               })
             }))
           }]
         }
 
-        function EM(MM) {
+        function qV(VV) {
           let {
-            text: rM,
-            label: iM,
-            className: OM
-          } = MM;
-          const [SM, aM] = lM(), PM = !1 === (null === SM || void 0 === SM ? void 0 : SM.failed);
-          return (0, hM.jsxs)("button", {
+            text: eV,
+            label: xV,
+            className: JV
+          } = VV;
+          const [YV, yV] = jV(), pV = !1 === (null === YV || void 0 === YV ? void 0 : YV.failed);
+          return (0, kV.jsxs)("button", {
             type: "button",
-            className: jM()("DocsCopyButton", OM, {
-              Copied: PM
+            className: UV()("DocsCopyButton", JV, {
+              Copied: pV
             }),
-            title: `Copy ${rM.length>40?"to clipboard":rM}`,
-            "aria-label": iM ? void 0 : `Copy ${rM}`,
-            onClick: MM => {
-              MM.stopPropagation(), aM(rM)
+            title: `Copy ${eV.length>40?"to clipboard":eV}`,
+            "aria-label": xV ? void 0 : `Copy ${eV}`,
+            onClick: VV => {
+              VV.stopPropagation(), yV(eV)
             },
-            children: [(0, hM.jsx)(dM, {
-              name: PM ? "check" : "copy"
-            }), iM && (0, hM.jsx)("span", {
-              children: PM ? "Copied" : null !== SM && void 0 !== SM && SM.failed ? "Copy failed" : iM
+            children: [(0, kV.jsx)(EV, {
+              name: pV ? "check" : "copy"
+            }), xV && (0, kV.jsx)("span", {
+              children: pV ? "Copied" : null !== YV && void 0 !== YV && YV.failed ? "Copy failed" : xV
             })]
           })
         }
-        zM.d.registerLanguage("javascript", LM.c), zM.d.registerLanguage("typescript", mM.d);
-        const UM = {
+        wV.c.registerLanguage("javascript", ZV.e), wV.c.registerLanguage("typescript", vV.b);
+        const tV = {
             js: "javascript",
             ts: "typescript",
             javascript: "javascript",
             typescript: "typescript"
           },
-          GM = {
+          FV = {
             javascript: "JavaScript",
             typescript: "TypeScript"
           },
-          CM = 24;
+          TV = 24;
 
-        function eM(MM) {
+        function PV(VV) {
           let {
-            code: rM,
-            lang: iM,
-            compact: SM = !1
-          } = MM;
-          const aM = (0, OM.useMemo)((() => function(MM, rM) {
-              const iM = UM[rM];
-              return iM ? zM.d.highlight(MM, {
-                language: iM
-              }).value : MM.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
-            }(rM, iM)), [rM, iM]),
-            PM = rM.split("\n").length,
-            nM = !SM && PM > CM + 6,
-            [QM, LM] = (0, OM.useState)(!1),
-            mM = UM[iM];
-          return (0, hM.jsxs)("div", {
-            className: jM()("DocsCodeBlock", {
-              Compact: SM,
-              Collapsed: nM && !QM
+            code: eV,
+            lang: xV,
+            compact: YV = !1
+          } = VV;
+          const yV = (0, JV.useMemo)((() => function(VV, eV) {
+              const xV = tV[eV];
+              return xV ? wV.c.highlight(VV, {
+                language: xV
+              }).value : VV.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+            }(eV, xV)), [eV, xV]),
+            pV = eV.split("\n").length,
+            QV = !YV && pV > TV + 6,
+            [nV, ZV] = (0, JV.useState)(!1),
+            vV = tV[xV];
+          return (0, kV.jsxs)("div", {
+            className: UV()("DocsCodeBlock", {
+              Compact: YV,
+              Collapsed: QV && !nV
             }),
-            children: [!SM && (0, hM.jsxs)("div", {
+            children: [!YV && (0, kV.jsxs)("div", {
               className: "DocsCodeBlockHeader",
-              children: [(0, hM.jsx)("span", {
+              children: [(0, kV.jsx)("span", {
                 className: "DocsCodeBlockLanguage",
-                children: mM ? GM[mM] : "Text"
-              }), (0, hM.jsx)(EM, {
-                text: rM,
+                children: vV ? FV[vV] : "Text"
+              }), (0, kV.jsx)(qV, {
+                text: eV,
                 label: "Copy"
               })]
-            }), (0, hM.jsx)("pre", {
-              children: (0, hM.jsx)("code", {
+            }), (0, kV.jsx)("pre", {
+              children: (0, kV.jsx)("code", {
                 className: "hljs",
                 dangerouslySetInnerHTML: {
-                  __html: aM
+                  __html: yV
                 }
               })
-            }), nM && (0, hM.jsxs)("button", {
+            }), QV && (0, kV.jsxs)("button", {
               type: "button",
               className: "DocsCodeBlockExpand",
-              "aria-expanded": QM,
+              "aria-expanded": nV,
               onClick: () => {
-                LM(!QM)
+                ZV(!nV)
               },
-              children: [(0, hM.jsx)(dM, {
-                name: QM ? "chevron-up" : "chevron-down"
-              }), QM ? "Show less" : `Show all ${PM} lines`]
+              children: [(0, kV.jsx)(EV, {
+                name: nV ? "chevron-up" : "chevron-down"
+              }), nV ? "Show less" : `Show all ${pV} lines`]
             })]
           })
         }
-        var bM = iM(5142);
-        var wM = iM(5150);
-        const tM = /^(?:export\s+)?(?:declare\s+)?(?:type|interface|enum|const enum)\s+([A-Za-z_$][\w$]*)/;
+        var AV = xV(5243);
+        var NV = xV(5246);
+        const XV = /^(?:export\s+)?(?:declare\s+)?(?:type|interface|enum|const enum)\s+([A-Za-z_$][\w$]*)/;
 
-        function gM(MM) {
-          const rM = new Map;
-          let iM, OM = [],
-            SM = !1;
-          const jM = () => {
-            iM && rM.set(iM.name, iM.lines.join("\n").trimEnd())
+        function MV(VV) {
+          const eV = new Map;
+          let xV, JV = [],
+            YV = !1;
+          const UV = () => {
+            xV && eV.set(xV.name, xV.lines.join("\n").trimEnd())
           };
-          for (const aM of MM.split("\n")) {
-            const MM = aM.match(tM);
-            SM || aM.startsWith("/*") ? (SM || (jM(), iM = void 0), OM.push(aM), SM = !aM.includes("*/")) : MM ? (jM(), iM = {
-              name: MM[1],
-              lines: [...OM, aM]
-            }, OM = []) : iM && (aM.startsWith(" ") || aM.startsWith("\t") || /^[}\])|]/.test(aM)) ? iM.lines.push(aM) : iM && "" !== aM.trim() && (jM(), iM = void 0)
+          for (const yV of VV.split("\n")) {
+            const VV = yV.match(XV);
+            YV || yV.startsWith("/*") ? (YV || (UV(), xV = void 0), JV.push(yV), YV = !yV.includes("*/")) : VV ? (UV(), xV = {
+              name: VV[1],
+              lines: [...JV, yV]
+            }, JV = []) : xV && (yV.startsWith(" ") || yV.startsWith("\t") || /^[}\])|]/.test(yV)) ? xV.lines.push(yV) : xV && "" !== yV.trim() && (UV(), xV = void 0)
           }
-          return jM(), rM
+          return UV(), eV
         }
 
-        function uM(MM) {
-          return "methods" === MM || "callbacks" === MM || "settings" === MM
+        function zV(VV) {
+          return "methods" === VV || "callbacks" === VV || "settings" === VV
         }
-        const RM = {
+        const GV = {
             readme: {
               icon: "code-block",
               summary: "Code blocks, boards and World Code, and the globals your code can use.",
@@ -302,25 +302,25 @@ export const modules = {
               icon: "player",
               summary: "Per-player options such as speed, health and camera.",
               layout: "settings",
-              setterSnippet: (MM, rM) => `api.setClientOption(playerId, "${MM}", ${rM})`
+              setterSnippet: (VV, eV) => `api.setClientOption(playerId, "${VV}", ${eV})`
             },
             entitySettings: {
               icon: "eye",
               summary: "How one player sees and interacts with another entity.",
               layout: "settings",
-              setterSnippet: (MM, rM) => `api.setOtherEntitySetting(playerId, targetedEntityId, "${MM}", ${rM})`
+              setterSnippet: (VV, eV) => `api.setOtherEntitySetting(playerId, targetedEntityId, "${VV}", ${eV})`
             },
             mobSettings: {
               icon: "mob",
               summary: "Health, movement, combat and AI settings for mobs.",
               layout: "settings",
-              setterSnippet: (MM, rM) => `api.setMobSetting(mobId, "${MM}", ${rM})`
+              setterSnippet: (VV, eV) => `api.setMobSetting(mobId, "${VV}", ${eV})`
             },
             vehicleSettings: {
               icon: "car",
               summary: "Movement, physics and camera settings for vehicles.",
               layout: "settings",
-              setterSnippet: (MM, rM) => `api.setVehicleSetting(vehicleId, "${MM}", ${rM})`
+              setterSnippet: (VV, eV) => `api.setVehicleSetting(vehicleId, "${VV}", ${eV})`
             },
             meshEntities: {
               icon: "mesh",
@@ -377,7 +377,7 @@ export const modules = {
               gallery: "items"
             }
           },
-          pM = {
+          WV = {
             Variations: {
               icon: "layers",
               summary: "Alternate versions of a custom game, and matchmaking players between them."
@@ -404,20 +404,20 @@ export const modules = {
             }
           };
 
-        function WM(MM) {
-          return MM.replace(/([a-z])([A-Z])/g, "$1-$2").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "")
+        function RV(VV) {
+          return VV.replace(/([a-z])([A-Z])/g, "$1-$2").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "")
         }
 
-        function sM(MM) {
-          let rM = !1;
-          return MM.split("\n").map((MM => (MM.startsWith("```") && (rM = !rM), !rM && /^#{3,} /.test(MM) ? MM.slice(1) : MM))).join("\n")
+        function gV(VV) {
+          let eV = !1;
+          return VV.split("\n").map((VV => (VV.startsWith("```") && (eV = !eV), !eV && /^#{3,} /.test(VV) ? VV.slice(1) : VV))).join("\n")
         }
 
-        function DM(MM) {
-          return "readme" === MM ? "getting-started" : WM(MM)
+        function DV(VV) {
+          return "readme" === VV ? "getting-started" : RV(VV)
         }
-        const kM = "## Glossary of Referenced Types";
-        const ZM = [{
+        const iV = "## Glossary of Referenced Types";
+        const CV = [{
             id: "welcome",
             slug: "",
             title: "Welcome",
@@ -425,28 +425,28 @@ export const modules = {
             summary: "Run JavaScript in Bloxd, from a single block to a whole custom game.",
             layout: "article",
             markdown: "# Welcome to the Bloxd Code API\n\nWrite JavaScript that runs inside Bloxd: make a block launch players into the sky, give your world its own shop, or build a whole custom game with rounds, teams and a winner.\n\n## New to coding in Bloxd?\n\nStart with [Getting started](#readme), which explains code blocks, boards and World Code, and where each one runs. Then copy something from [Snippets](#snippets) into a code block and change it to see what happens.\n\n## Building a game\n\n[Callbacks](#callbacks) let your World Code react to players joining, chatting, breaking blocks and more. The [How-Tos](#howTo) walk through bigger features step by step, from plugins to a complete team game.\n\n## Looking something up\n\nThe [API Reference](#apiReference) lists every method on `api`. Settings for players, entities, mobs and vehicles each have their own page, and the Assets pages list every block, item, sound, particle, icon and skin name you can use. Press Ctrl K, or \u2318 K on a Mac, to search all of it.\n\n## What's new\n\nThe [Changelog](#changelog) lists what has changed in the Code API, newest first.\n\n## Get help\n\nAsk questions, report problems and suggest features on [our Discord](https://discord.gg/playbloxd)."
-          }, ...wM.e.flatMap((MM => {
-            const rM = {
-              id: MM.id,
-              slug: DM(MM.id),
-              title: MM.title,
-              markdown: MM.content,
-              ...RM[MM.id]
+          }, ...NV.c.flatMap((VV => {
+            const eV = {
+              id: VV.id,
+              slug: DV(VV.id),
+              title: VV.title,
+              markdown: VV.content,
+              ...GV[VV.id]
             };
-            if ("readme" === MM.id) return function(MM) {
-              const rM = MM.markdown.indexOf(kM),
-                iM = MM.markdown.indexOf("\n```", rM),
-                OM = MM.markdown.indexOf("\n```", iM + 1);
-              if (-1 === rM || -1 === iM || -1 === OM) throw new Error(`Getting started has no "${kM}" section with a code block`);
-              const SM = MM.markdown.slice(rM + 31, iM).trim(),
-                jM = [...gM(MM.markdown.slice(MM.markdown.indexOf("\n", iM + 1) + 1, OM))].map((MM => {
-                  let [rM, iM] = MM;
-                  return `## ${rM}\n\n\`\`\`ts\n${iM}\n\`\`\`\n`
+            if ("readme" === VV.id) return function(VV) {
+              const eV = VV.markdown.indexOf(iV),
+                xV = VV.markdown.indexOf("\n```", eV),
+                JV = VV.markdown.indexOf("\n```", xV + 1);
+              if (-1 === eV || -1 === xV || -1 === JV) throw new Error(`Getting started has no "${iV}" section with a code block`);
+              const YV = VV.markdown.slice(eV + 31, xV).trim(),
+                UV = [...MV(VV.markdown.slice(VV.markdown.indexOf("\n", xV + 1) + 1, JV))].map((VV => {
+                  let [eV, xV] = VV;
+                  return `## ${eV}\n\n\`\`\`ts\n${xV}\n\`\`\`\n`
                 })),
-                aM = MM.markdown.slice(MM.markdown.indexOf("\n", OM + 1) + 1);
+                yV = VV.markdown.slice(VV.markdown.indexOf("\n", JV + 1) + 1);
               return [{
-                ...MM,
-                markdown: `${MM.markdown.slice(0,rM)}${aM}`
+                ...VV,
+                markdown: `${VV.markdown.slice(0,eV)}${yV}`
               }, {
                 id: "types",
                 slug: "types",
@@ -454,57 +454,57 @@ export const modules = {
                 icon: "tag",
                 summary: "The types the API Reference's parameters and return values refer to.",
                 layout: "article",
-                markdown: `# Types\n\n${SM}\n\n${jM.join("\n")}`
+                markdown: `# Types\n\n${YV}\n\n${UV.join("\n")}`
               }]
-            }(rM);
-            if ("howTo" === MM.id) {
+            }(eV);
+            if ("howTo" === VV.id) {
               const {
-                parent: MM,
-                guides: iM
-              } = function(MM) {
-                const [rM, ...iM] = MM.markdown.split(/^(?=## )/m), OM = [rM], SM = [];
-                for (const aM of iM) {
-                  var jM;
-                  const rM = aM.indexOf("\n"),
-                    iM = aM.slice(3, rM).trim(),
-                    PM = aM.slice(rM + 1);
-                  if (!PM.includes("```")) {
-                    OM.push(aM);
+                parent: VV,
+                guides: xV
+              } = function(VV) {
+                const [eV, ...xV] = VV.markdown.split(/^(?=## )/m), JV = [eV], YV = [];
+                for (const yV of xV) {
+                  var UV;
+                  const eV = yV.indexOf("\n"),
+                    xV = yV.slice(3, eV).trim(),
+                    pV = yV.slice(eV + 1);
+                  if (!pV.includes("```")) {
+                    JV.push(yV);
                     continue
                   }
-                  const nM = null !== (jM = pM[iM]) && void 0 !== jM ? jM : {
+                  const QV = null !== (UV = WV[xV]) && void 0 !== UV ? UV : {
                     icon: "lightbulb",
-                    summary: `How to use ${iM.toLowerCase()} in World Code.`
+                    summary: `How to use ${xV.toLowerCase()} in World Code.`
                   };
-                  SM.push({
-                    id: `${MM.id}${iM.split(/[^A-Za-z0-9]+/).map((MM=>MM.charAt(0).toUpperCase()+MM.slice(1))).join("")}`,
-                    slug: `${MM.slug}-${WM(iM)}`,
-                    title: iM,
+                  YV.push({
+                    id: `${VV.id}${xV.split(/[^A-Za-z0-9]+/).map((VV=>VV.charAt(0).toUpperCase()+VV.slice(1))).join("")}`,
+                    slug: `${VV.slug}-${RV(xV)}`,
+                    title: xV,
                     layout: "article",
-                    sourceAnchor: (0, bM.r)(iM),
-                    markdown: `# ${iM}\n\n${sM(PM)}`,
-                    ...nM
+                    sourceAnchor: (0, AV.w)(xV),
+                    markdown: `# ${xV}\n\n${gV(pV)}`,
+                    ...QV
                   })
                 }
                 return {
                   parent: {
-                    ...MM,
-                    markdown: OM.join(""),
-                    childPageIds: SM.map((MM => MM.id))
+                    ...VV,
+                    markdown: JV.join(""),
+                    childPageIds: YV.map((VV => VV.id))
                   },
-                  guides: SM
+                  guides: YV
                 }
-              }(rM);
-              return [MM, ...iM]
+              }(eV);
+              return [VV, ...xV]
             }
-            return [rM]
+            return [eV]
           }))],
-          oM = [{
+          aV = [{
             title: "Get started",
             pageIds: ["welcome", "readme", "snippets", "changelog"]
           }, {
             title: "How-Tos",
-            pageIds: ["howTo", ...ZM.filter((MM => void 0 !== MM.sourceAnchor)).map((MM => MM.id))]
+            pageIds: ["howTo", ...CV.filter((VV => void 0 !== VV.sourceAnchor)).map((VV => VV.id))]
           }, {
             title: "Reference",
             pageIds: ["apiReference", "callbacks", "clientOptions", "types"]
@@ -519,42 +519,42 @@ export const modules = {
             pageIds: ["particles", "sounds", "icons", "skins", "blockNames", "itemNames"]
           }];
 
-        function fM(MM) {
-          return ZM.find((rM => rM.id === MM))
+        function oV(VV) {
+          return CV.find((eV => eV.id === VV))
         }
-        const YM = new Map;
+        const cV = new Map;
 
-        function NM(MM) {
-          let rM = YM.get(MM.id);
-          return rM || (rM = (0, bM.z)(MM.markdown, "changelog" === MM.layout ? 3 : 2), YM.set(MM.id, rM)), rM
-        }
-
-        function AM(MM, rM) {
-          return NM(MM).sections.some((MM => MM.heading.anchor === rM || MM.blocks.some((MM => "heading" === MM.kind && MM.anchor === rM))))
+        function hV(VV) {
+          let eV = cV.get(VV.id);
+          return eV || (eV = (0, AV.E)(VV.markdown, "changelog" === VV.layout ? 3 : 2), cV.set(VV.id, eV)), eV
         }
 
-        function xM(MM) {
-          const [rM, ...iM] = MM.replace(/^#/, "").split("-"), OM = ZM.find((MM => MM.id === rM));
-          if (!OM) return null;
-          const SM = iM.length > 0 ? (0, bM.r)(iM.join("-")) : "";
-          for (const aM of null !== (jM = OM.childPageIds) && void 0 !== jM ? jM : []) {
-            var jM;
-            const MM = fM(aM);
-            if (MM.sourceAnchor === SM) return {
-              page: MM,
+        function lV(VV, eV) {
+          return hV(VV).sections.some((VV => VV.heading.anchor === eV || VV.blocks.some((VV => "heading" === VV.kind && VV.anchor === eV))))
+        }
+
+        function LV(VV) {
+          const [eV, ...xV] = VV.replace(/^#/, "").split("-"), JV = CV.find((VV => VV.id === eV));
+          if (!JV) return null;
+          const YV = xV.length > 0 ? (0, AV.w)(xV.join("-")) : "";
+          for (const yV of null !== (UV = JV.childPageIds) && void 0 !== UV ? UV : []) {
+            var UV;
+            const VV = oV(yV);
+            if (VV.sourceAnchor === YV) return {
+              page: VV,
               anchor: ""
             };
-            if (AM(MM, SM)) return {
-              page: MM,
-              anchor: SM
+            if (lV(VV, YV)) return {
+              page: VV,
+              anchor: YV
             }
           }
           return {
-            page: OM,
-            anchor: SM
+            page: JV,
+            anchor: YV
           }
         }
-        const vM = {
+        const fV = {
           Examples: {
             pageId: "snippets",
             anchor: ""
@@ -569,182 +569,182 @@ export const modules = {
           }
         };
 
-        function FM(MM, rM) {
-          let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
-          const OM = rM.slug ? `${MM}/${rM.slug}` : MM;
-          return iM ? `${OM}#${iM}` : OM
+        function mV(VV, eV) {
+          let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
+          const JV = eV.slug ? `${VV}/${eV.slug}` : VV;
+          return xV ? `${JV}#${xV}` : JV
         }
-        var BM = iM(5169);
-        const XM = /^export\s+(?:declare\s+)?(?:type|interface|enum|const enum|class)\s+([A-Za-z_$][\w$]*)/,
-          IM = new Set(["GameApi", "Console", "_TypeOf"]),
-          KM = 4;
+        var KV = xV(5259);
+        const HV = /^export\s+(?:declare\s+)?(?:type|interface|enum|const enum|class)\s+([A-Za-z_$][\w$]*)/,
+          uV = new Set(["GameApi", "Console", "_TypeOf"]),
+          sV = 4;
 
-        function qM(MM) {
-          let rM = MM.length;
-          for (; rM > 0 && "" === MM[rM - 1].trim();) rM--;
-          return MM.slice(0, rM)
+        function SV(VV) {
+          let eV = VV.length;
+          for (; eV > 0 && "" === VV[eV - 1].trim();) eV--;
+          return VV.slice(0, eV)
         }
 
-        function TM(MM) {
-          var rM;
-          const iM = qM(MM);
-          if (null === (rM = iM.at(-1)) || void 0 === rM || !rM.trimEnd().endsWith("*/")) return {
-            lines: iM,
+        function IV(VV) {
+          var eV;
+          const xV = SV(VV);
+          if (null === (eV = xV.at(-1)) || void 0 === eV || !eV.trimEnd().endsWith("*/")) return {
+            lines: xV,
             doc: ""
           };
-          const OM = iM.findLastIndex((MM => MM.startsWith("/**")));
-          return -1 === OM ? {
-            lines: iM,
+          const JV = xV.findLastIndex((VV => VV.startsWith("/**")));
+          return -1 === JV ? {
+            lines: xV,
             doc: ""
           } : {
-            lines: qM(iM.slice(0, OM)),
-            doc: iM.slice(OM).join("\n")
+            lines: SV(xV.slice(0, JV)),
+            doc: xV.slice(JV).join("\n")
           }
         }
 
-        function VM(MM) {
-          var rM;
-          const iM = MM.split("\n"),
-            OM = iM.flatMap(((MM, rM) => XM.test(MM) ? [rM] : []));
-          let SM = TM(iM.slice(0, null !== (rM = OM[0]) && void 0 !== rM ? rM : iM.length)).doc;
-          return OM.map(((MM, rM) => {
-            var jM;
-            const aM = TM(iM.slice(MM, null !== (jM = OM[rM + 1]) && void 0 !== jM ? jM : iM.length)),
-              PM = {
-                name: iM[MM].match(XM)[1],
-                doc: SM,
-                lines: aM.lines
+        function dV(VV) {
+          var eV;
+          const xV = VV.split("\n"),
+            JV = xV.flatMap(((VV, eV) => HV.test(VV) ? [eV] : []));
+          let YV = IV(xV.slice(0, null !== (eV = JV[0]) && void 0 !== eV ? eV : xV.length)).doc;
+          return JV.map(((VV, eV) => {
+            var UV;
+            const yV = IV(xV.slice(VV, null !== (UV = JV[eV + 1]) && void 0 !== UV ? UV : xV.length)),
+              pV = {
+                name: xV[VV].match(HV)[1],
+                doc: YV,
+                lines: yV.lines
               };
-            return SM = aM.doc, PM
+            return YV = yV.doc, pV
           }))
         }
 
-        function cM(MM) {
-          var rM;
-          const iM = MM.match(/^readonly \[([\s\S]*)\]$/);
-          return iM ? null !== (rM = iM[1].match(/"(?:[^"\\]|\\.)*"/g)) && void 0 !== rM ? rM : [] : null
+        function OV(VV) {
+          var eV;
+          const xV = VV.match(/^readonly \[([\s\S]*)\]$/);
+          return xV ? null !== (eV = xV[1].match(/"(?:[^"\\]|\\.)*"/g)) && void 0 !== eV ? eV : [] : null
         }
 
-        function Mr(MM) {
-          if (!MM.startsWith("{") || !MM.endsWith("}")) return null;
-          const rM = {
+        function Ve(VV) {
+          if (!VV.startsWith("{") || !VV.endsWith("}")) return null;
+          const eV = {
               keys: [],
               values: []
             },
-            iM = MM => {
-              const iM = MM.trim().match(/^(?:readonly\s+)?("[^"]*"|[\w$]+)\??:\s*([\s\S]*)$/);
-              iM && (rM.keys.push(iM[1].startsWith('"') ? iM[1] : `"${iM[1]}"`), rM.values.push(iM[2].trim()))
+            xV = VV => {
+              const xV = VV.trim().match(/^(?:readonly\s+)?("[^"]*"|[\w$]+)\??:\s*([\s\S]*)$/);
+              xV && (eV.keys.push(xV[1].startsWith('"') ? xV[1] : `"${xV[1]}"`), eV.values.push(xV[2].trim()))
             };
-          let OM = 0,
-            SM = "";
-          for (const jM of MM.slice(1, -1)) "{[(".includes(jM) ? OM++ : "}])".includes(jM) && OM--, ";" === jM && 0 === OM ? (iM(SM), SM = "") : SM += jM;
-          return iM(SM), rM
+          let JV = 0,
+            YV = "";
+          for (const UV of VV.slice(1, -1)) "{[(".includes(UV) ? JV++ : "}])".includes(UV) && JV--, ";" === UV && 0 === JV ? (xV(YV), YV = "") : YV += UV;
+          return xV(YV), eV
         }
 
-        function rr(MM) {
-          return MM.length > KM ? `\n\t| ${MM.join("\n\t| ")}` : MM.join(" | ")
+        function ee(VV) {
+          return VV.length > sV ? `\n\t| ${VV.join("\n\t| ")}` : VV.join(" | ")
         }
 
-        function ir(MM, rM) {
-          const iM = function(MM, rM) {
-            return MM.replace(/\(_TypeOf\["([\w$]+)"\]\)\[keyof _TypeOf\["\1"\]\]/g, ((MM, iM) => {
-              var OM;
-              const SM = null === (OM = rM.get(iM)) || void 0 === OM ? void 0 : OM.object;
-              return SM ? rr(SM.values) : MM
-            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[[A-Za-z_$][\w$]*\]\[number\]/g, ((MM, iM) => {
-              var OM, SM;
-              const jM = null === (OM = rM.get(iM)) || void 0 === OM || null === (SM = OM.object) || void 0 === SM ? void 0 : SM.values.map(cM);
-              return null !== jM && void 0 !== jM && jM.every((MM => null !== MM)) ? rr([...new Set(jM.flat())]) : MM
-            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[number\]/g, ((MM, iM) => {
-              var OM;
-              const SM = null === (OM = rM.get(iM)) || void 0 === OM ? void 0 : OM.members;
-              return SM ? rr(SM) : MM
-            })).replace(/keyof _TypeOf\["([\w$]+)"\]/g, ((MM, iM) => {
-              var OM;
-              const SM = null === (OM = rM.get(iM)) || void 0 === OM ? void 0 : OM.object;
-              return SM ? rr(SM.keys) : MM
-            })).replace(/_TypeOf\["([\w$]+)"\]/g, ((MM, iM) => {
-              var OM, SM;
-              return null !== (OM = null === (SM = rM.get(iM)) || void 0 === SM ? void 0 : SM.text) && void 0 !== OM ? OM : MM
+        function xe(VV, eV) {
+          const xV = function(VV, eV) {
+            return VV.replace(/\(_TypeOf\["([\w$]+)"\]\)\[keyof _TypeOf\["\1"\]\]/g, ((VV, xV) => {
+              var JV;
+              const YV = null === (JV = eV.get(xV)) || void 0 === JV ? void 0 : JV.object;
+              return YV ? ee(YV.values) : VV
+            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[[A-Za-z_$][\w$]*\]\[number\]/g, ((VV, xV) => {
+              var JV, YV;
+              const UV = null === (JV = eV.get(xV)) || void 0 === JV || null === (YV = JV.object) || void 0 === YV ? void 0 : YV.values.map(OV);
+              return null !== UV && void 0 !== UV && UV.every((VV => null !== VV)) ? ee([...new Set(UV.flat())]) : VV
+            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[number\]/g, ((VV, xV) => {
+              var JV;
+              const YV = null === (JV = eV.get(xV)) || void 0 === JV ? void 0 : JV.members;
+              return YV ? ee(YV) : VV
+            })).replace(/keyof _TypeOf\["([\w$]+)"\]/g, ((VV, xV) => {
+              var JV;
+              const YV = null === (JV = eV.get(xV)) || void 0 === JV ? void 0 : JV.object;
+              return YV ? ee(YV.keys) : VV
+            })).replace(/_TypeOf\["([\w$]+)"\]/g, ((VV, xV) => {
+              var JV, YV;
+              return null !== (JV = null === (YV = eV.get(xV)) || void 0 === YV ? void 0 : YV.text) && void 0 !== JV ? JV : VV
             }))
-          }(MM.lines.join("\n").replace(/^export\s+(?:declare\s+)?/, ""), rM);
-          return [MM.doc, iM].filter(Boolean).join("\n").replace(/\\(`|\$\{)/g, "$1").replace(/ +\n/g, "\n")
+          }(VV.lines.join("\n").replace(/^export\s+(?:declare\s+)?/, ""), eV);
+          return [VV.doc, xV].filter(Boolean).join("\n").replace(/\\(`|\$\{)/g, "$1").replace(/ +\n/g, "\n")
         }
 
-        function Or(MM) {
-          const rM = VM(MM),
-            iM = function(MM) {
-              const rM = new Map,
-                iM = MM.find((MM => "_TypeOf" === MM.name));
-              let OM = null;
-              const SM = () => {
-                if (OM) {
-                  const MM = OM.lines.join("\n");
-                  rM.set(OM.name, {
-                    text: MM,
-                    members: cM(MM),
-                    object: Mr(MM)
+        function Je(VV) {
+          const eV = dV(VV),
+            xV = function(VV) {
+              const eV = new Map,
+                xV = VV.find((VV => "_TypeOf" === VV.name));
+              let JV = null;
+              const YV = () => {
+                if (JV) {
+                  const VV = JV.lines.join("\n");
+                  eV.set(JV.name, {
+                    text: VV,
+                    members: OV(VV),
+                    object: Ve(VV)
                   })
                 }
               };
-              for (const jM of iM.lines.slice(1, -1)) {
-                const MM = jM.match(/^\t([\w$]+): (.+)$/);
-                MM ? (SM(), OM = {
-                  name: MM[1],
-                  lines: [MM[2]]
-                }) : OM && OM.lines.push(jM.replace(/^\t/, ""))
+              for (const UV of xV.lines.slice(1, -1)) {
+                const VV = UV.match(/^\t([\w$]+): (.+)$/);
+                VV ? (YV(), JV = {
+                  name: VV[1],
+                  lines: [VV[2]]
+                }) : JV && JV.lines.push(UV.replace(/^\t/, ""))
               }
-              return SM(), rM
-            }(rM),
-            OM = new Map;
-          for (const SM of rM) IM.has(SM.name) || OM.has(SM.name) || OM.set(SM.name, ir(SM, iM));
-          return OM
+              return YV(), eV
+            }(eV),
+            JV = new Map;
+          for (const YV of eV) uV.has(YV.name) || JV.has(YV.name) || JV.set(YV.name, xe(YV, xV));
+          return JV
         }
-        let Sr, jr, ar;
+        let Ye, Ue, ye;
 
-        function Pr() {
-          return jr ??= function(MM) {
-            const rM = VM(MM).find((MM => "GameApi" === MM.name)),
-              iM = new Map,
-              OM = rM.lines;
-            for (let jM = 0; jM < OM.length; jM++) {
-              var SM;
-              if (!OM[jM].trimStart().startsWith("/**")) continue;
-              const MM = jM;
-              for (; jM < OM.length && !OM[jM].includes("*/");) jM++;
-              const rM = null === (SM = OM[jM + 1]) || void 0 === SM ? void 0 : SM.match(/^\s*([A-Za-z_$][\w$]*)\s*[<(]/);
-              if (!rM) continue;
-              let aM = null;
-              const PM = [];
-              let nM = "description",
-                QM = !1;
-              for (const iM of OM.slice(MM, jM + 1).join("\n").split("\n").map((MM => MM.replace(/^\s*\/\*\*\s?/, "").replace(/\s*\*\/\s*$/, "").replace(/^\s*\*\s?/, "").replace(/\\(`|\$\{)/g, "$1")))) {
-                const MM = iM.match(/^@deprecated\s*(?:-\s*)?(.*)$/);
-                MM ? (aM = MM[1].trim(), nM = "deprecation") : iM.startsWith("@") ? (nM = "otherTag", QM = !0) : "" === iM.trim() ? QM || (nM = "description", PM.push(iM)) : "deprecation" !== nM || /^[A-Z]/.test(iM.trim()) ? "otherTag" !== nM && (nM = "description", PM.push(iM)) : aM = `${aM} ${iM.trim()}`.trim()
+        function pe() {
+          return Ue ??= function(VV) {
+            const eV = dV(VV).find((VV => "GameApi" === VV.name)),
+              xV = new Map,
+              JV = eV.lines;
+            for (let UV = 0; UV < JV.length; UV++) {
+              var YV;
+              if (!JV[UV].trimStart().startsWith("/**")) continue;
+              const VV = UV;
+              for (; UV < JV.length && !JV[UV].includes("*/");) UV++;
+              const eV = null === (YV = JV[UV + 1]) || void 0 === YV ? void 0 : YV.match(/^\s*([A-Za-z_$][\w$]*)\s*[<(]/);
+              if (!eV) continue;
+              let yV = null;
+              const pV = [];
+              let QV = "description",
+                nV = !1;
+              for (const xV of JV.slice(VV, UV + 1).join("\n").split("\n").map((VV => VV.replace(/^\s*\/\*\*\s?/, "").replace(/\s*\*\/\s*$/, "").replace(/^\s*\*\s?/, "").replace(/\\(`|\$\{)/g, "$1")))) {
+                const VV = xV.match(/^@deprecated\s*(?:-\s*)?(.*)$/);
+                VV ? (yV = VV[1].trim(), QV = "deprecation") : xV.startsWith("@") ? (QV = "otherTag", nV = !0) : "" === xV.trim() ? nV || (QV = "description", pV.push(xV)) : "deprecation" !== QV || /^[A-Z]/.test(xV.trim()) ? "otherTag" !== QV && (QV = "description", pV.push(xV)) : yV = `${yV} ${xV.trim()}`.trim()
               }
-              iM.set(rM[1], {
-                deprecation: aM,
-                description: PM.join("\n").trim()
+              xV.set(eV[1], {
+                deprecation: yV,
+                description: pV.join("\n").trim()
               })
             }
-            return iM
-          }(BM.default), jr
+            return xV
+          }(KV.default), Ue
         }
 
-        function nr() {
-          if (!ar) {
-            ar = new Map;
-            for (const MM of ZM) {
-              const rM = (0, bM.v)(NM(MM)).flatMap((MM => MM.blocks));
-              for (const MM of (0, bM.l)(rM))
-                if ("ts" === MM.lang || "typescript" === MM.lang)
-                  for (const [rM, iM] of gM(MM.code)) ar.set(rM, iM)
+        function Qe() {
+          if (!ye) {
+            ye = new Map;
+            for (const VV of CV) {
+              const eV = (0, AV.A)(hV(VV)).flatMap((VV => VV.blocks));
+              for (const VV of (0, AV.n)(eV))
+                if ("ts" === VV.lang || "typescript" === VV.lang)
+                  for (const [eV, xV] of MV(VV.code)) ye.set(eV, xV)
             }
-            for (const [MM, rM] of(Sr ??= Or(BM.default), Sr)) ar.has(MM) || ar.set(MM, rM)
+            for (const [VV, eV] of(Ye ??= Je(KV.default), Ye)) ye.has(VV) || ye.set(VV, eV)
           }
-          return ar
+          return ye
         }
-        const Qr = {
+        const ne = {
           BlockName: "blockNames",
           BlockNameOrId: "blockNames",
           ItemName: "itemNames",
@@ -761,332 +761,332 @@ export const modules = {
           VehicleSetting: "vehicleSettings",
           SettableVehicleSetting: "vehicleSettings"
         };
-        let zr;
+        let we;
 
-        function Lr() {
-          if (!zr) {
-            zr = new Map;
-            for (const MM of ZM)
-              if (uM(MM.layout))
-                for (const rM of NM(MM).sections) zr.has(rM.heading.text) || zr.set(rM.heading.text, {
-                  pageId: MM.id,
-                  anchor: rM.heading.anchor
+        function Ze() {
+          if (!we) {
+            we = new Map;
+            for (const VV of CV)
+              if (zV(VV.layout))
+                for (const eV of hV(VV).sections) we.has(eV.heading.text) || we.set(eV.heading.text, {
+                  pageId: VV.id,
+                  anchor: eV.heading.anchor
                 })
           }
-          return zr
+          return we
         }
 
-        function mr(MM) {
-          const rM = MM.trim().match(/^(?:api\.)?([A-Za-z_$][\w$]*)(?:\(.*\))?$/);
-          return rM ? Lr().get(rM[1]) : void 0
+        function ve(VV) {
+          const eV = VV.trim().match(/^(?:api\.)?([A-Za-z_$][\w$]*)(?:\(.*\))?$/);
+          return eV ? Ze().get(eV[1]) : void 0
         }
-        const Hr = (0, OM.createContext)("/docs"),
-          hr = (0, OM.createContext)(null),
-          Jr = (0, OM.createContext)(!1),
-          dr = /#(?=\d*[a-fA-F])[0-9a-fA-F]{6}\b/g;
+        const re = (0, JV.createContext)("/docs"),
+          ke = (0, JV.createContext)(null),
+          be = (0, JV.createContext)(!1),
+          Ee = /#(?=\d*[a-fA-F])[0-9a-fA-F]{6}\b/g;
 
-        function yr(MM) {
-          const rM = MM.match(/^["']?(#[0-9a-fA-F]{6})["']?$/);
-          return rM ? rM[1] : null
+        function Be(VV) {
+          const eV = VV.match(/^["']?(#[0-9a-fA-F]{6})["']?$/);
+          return eV ? eV[1] : null
         }
 
-        function lr(MM) {
+        function je(VV) {
           let {
-            colour: rM
-          } = MM;
-          return (0, hM.jsx)("span", {
+            colour: eV
+          } = VV;
+          return (0, kV.jsx)("span", {
             className: "DocsColourSwatch",
             style: {
-              background: rM
+              background: eV
             },
             "aria-hidden": "true"
           })
         }
 
-        function Er(MM) {
-          const rM = [];
-          let iM = 0;
-          for (const OM of MM.matchAll(dr)) rM.push(MM.slice(iM, OM.index), (0, hM.jsx)(lr, {
-            colour: OM[0]
-          }), OM[0]), iM = OM.index + OM[0].length;
-          return rM.push(MM.slice(iM)), rM
+        function qe(VV) {
+          const eV = [];
+          let xV = 0;
+          for (const JV of VV.matchAll(Ee)) eV.push(VV.slice(xV, JV.index), (0, kV.jsx)(je, {
+            colour: JV[0]
+          }), JV[0]), xV = JV.index + JV[0].length;
+          return eV.push(VV.slice(xV)), eV
         }
 
-        function Ur(MM) {
+        function te(VV) {
           let {
-            href: rM,
-            children: iM
-          } = MM;
-          const SM = (0, OM.useContext)(Hr);
-          if (rM.startsWith("#")) {
-            const MM = xM(rM);
-            if (MM) return (0, hM.jsx)(aM.b, {
-              to: FM(SM, MM.page, MM.anchor),
-              children: (0, hM.jsx)(Jr.Provider, {
+            href: eV,
+            children: xV
+          } = VV;
+          const YV = (0, JV.useContext)(re);
+          if (eV.startsWith("#")) {
+            const VV = LV(eV);
+            if (VV) return (0, kV.jsx)(yV.b, {
+              to: mV(YV, VV.page, VV.anchor),
+              children: (0, kV.jsx)(be.Provider, {
                 value: !0,
-                children: iM
+                children: xV
               })
             })
           }
-          return (0, hM.jsx)("a", {
-            href: rM,
+          return (0, kV.jsx)("a", {
+            href: eV,
             target: "_blank",
             rel: "noopener noreferrer",
-            children: (0, hM.jsx)(Jr.Provider, {
+            children: (0, kV.jsx)(be.Provider, {
               value: !0,
-              children: iM
+              children: xV
             })
           })
         }
 
-        function Gr(MM) {
+        function Fe(VV) {
           let {
-            code: rM
-          } = MM;
-          const iM = (0, OM.useContext)(Hr);
-          if ((0, OM.useContext)(Jr)) return (0, hM.jsx)("code", {
+            code: eV
+          } = VV;
+          const xV = (0, JV.useContext)(re);
+          if ((0, JV.useContext)(be)) return (0, kV.jsx)("code", {
             className: "DocsInlineCode",
-            children: rM
+            children: eV
           });
-          if (nr().has(rM)) return (0, hM.jsx)(wr, {
-            type: rM
+          if (Qe().has(eV)) return (0, kV.jsx)(Ne, {
+            type: eV
           });
-          const SM = mr(rM);
-          if (SM) return (0, hM.jsx)(aM.b, {
+          const YV = ve(eV);
+          if (YV) return (0, kV.jsx)(yV.b, {
             className: "DocsInlineCode DocsSymbolLink",
-            to: FM(iM, fM(SM.pageId), SM.anchor),
-            children: rM
+            to: mV(xV, oV(YV.pageId), YV.anchor),
+            children: eV
           });
-          const jM = yr(rM);
-          return (0, hM.jsxs)("code", {
+          const UV = Be(eV);
+          return (0, kV.jsxs)("code", {
             className: "DocsInlineCode",
-            children: [jM && (0, hM.jsx)(lr, {
-              colour: jM
-            }), rM]
+            children: [UV && (0, kV.jsx)(je, {
+              colour: UV
+            }), eV]
           })
         }
 
-        function Cr(MM) {
+        function Te(VV) {
           let {
-            text: rM
-          } = MM;
-          const iM = [];
-          let SM = 0;
-          for (const OM of rM.matchAll(bM.h)) {
-            OM.index > SM && iM.push(...Er(rM.slice(SM, OM.index)));
-            const [, MM, jM, aM, PM, nM] = OM;
-            MM ? iM.push((0, hM.jsx)(Gr, {
-              code: (0, bM.n)(MM, jM)
-            })) : aM ? iM.push((0, hM.jsx)("strong", {
-              children: (0, hM.jsx)(Cr, {
-                text: aM
+            text: eV
+          } = VV;
+          const xV = [];
+          let YV = 0;
+          for (const JV of eV.matchAll(AV.h)) {
+            JV.index > YV && xV.push(...qe(eV.slice(YV, JV.index)));
+            const [, VV, UV, yV, pV, QV] = JV;
+            VV ? xV.push((0, kV.jsx)(Fe, {
+              code: (0, AV.r)(VV, UV)
+            })) : yV ? xV.push((0, kV.jsx)("strong", {
+              children: (0, kV.jsx)(Te, {
+                text: yV
               })
-            })) : iM.push((0, hM.jsx)(Ur, {
-              href: nM,
-              children: (0, hM.jsx)(Cr, {
-                text: PM
+            })) : xV.push((0, kV.jsx)(te, {
+              href: QV,
+              children: (0, kV.jsx)(Te, {
+                text: pV
               })
-            })), SM = OM.index + OM[0].length
+            })), YV = JV.index + JV[0].length
           }
-          return SM < rM.length && iM.push(...Er(rM.slice(SM))), (0, hM.jsx)(hM.Fragment, {
-            children: iM.map(((MM, rM) => (0, hM.jsx)(OM.Fragment, {
-              children: MM
-            }, rM)))
+          return YV < eV.length && xV.push(...qe(eV.slice(YV))), (0, kV.jsx)(kV.Fragment, {
+            children: xV.map(((VV, eV) => (0, kV.jsx)(JV.Fragment, {
+              children: VV
+            }, eV)))
           })
         }
-        const er = /("[^"]*"|'[^']*'|`[^`]*`)|([A-Za-z_$][\w$]*)|(\d+(?:\.\d+)?)|(\s+)|([^\w\s"'`$]+)/g,
-          br = new Set(["string", "number", "boolean", "null", "undefined", "void", "any", "unknown", "never", "object", "true", "false", "keyof", "typeof", "in", "extends", "readonly"]);
+        const Pe = /("[^"]*"|'[^']*'|`[^`]*`)|([A-Za-z_$][\w$]*)|(\d+(?:\.\d+)?)|(\s+)|([^\w\s"'`$]+)/g,
+          Ae = new Set(["string", "number", "boolean", "null", "undefined", "void", "any", "unknown", "never", "object", "true", "false", "keyof", "typeof", "in", "extends", "readonly"]);
 
-        function wr(MM) {
+        function Ne(VV) {
           let {
-            type: rM
-          } = MM;
-          const iM = nr(),
-            SM = [];
-          for (const OM of rM.trim().matchAll(er)) {
-            const [MM, rM, jM, aM, PM] = OM;
-            rM ? SM.push((0, hM.jsx)("span", {
+            type: eV
+          } = VV;
+          const xV = Qe(),
+            YV = [];
+          for (const JV of eV.trim().matchAll(Pe)) {
+            const [VV, eV, UV, yV, pV] = JV;
+            eV ? YV.push((0, kV.jsx)("span", {
               className: "DocsTypeString",
-              children: MM
-            })) : jM && iM.has(jM) ? SM.push((0, hM.jsx)(pr, {
-              name: jM,
-              definition: iM.get(jM)
-            })) : jM ? SM.push((0, hM.jsx)("span", {
-              className: br.has(jM) ? "DocsTypeKeyword" : "DocsTypeName",
-              children: MM
-            })) : aM ? SM.push((0, hM.jsx)("span", {
+              children: VV
+            })) : UV && xV.has(UV) ? YV.push((0, kV.jsx)(We, {
+              name: UV,
+              definition: xV.get(UV)
+            })) : UV ? YV.push((0, kV.jsx)("span", {
+              className: Ae.has(UV) ? "DocsTypeKeyword" : "DocsTypeName",
+              children: VV
+            })) : yV ? YV.push((0, kV.jsx)("span", {
               className: "DocsTypeNumber",
-              children: MM
-            })) : PM ? SM.push(" ") : SM.push((0, hM.jsx)("span", {
+              children: VV
+            })) : pV ? YV.push(" ") : YV.push((0, kV.jsx)("span", {
               className: "DocsTypePunctuation",
-              children: MM
+              children: VV
             }))
           }
-          return (0, hM.jsx)("code", {
+          return (0, kV.jsx)("code", {
             className: "DocsInlineCode DocsTypeText",
-            children: SM.map(((MM, rM) => (0, hM.jsx)(OM.Fragment, {
-              children: MM
-            }, rM)))
+            children: YV.map(((VV, eV) => (0, kV.jsx)(JV.Fragment, {
+              children: VV
+            }, eV)))
           })
         }
-        const tr = 480,
-          gr = 6,
-          ur = "a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex='-1'])";
-        let Rr = 0;
+        const Xe = 480,
+          Me = 6,
+          ze = "a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex='-1'])";
+        let Ge = 0;
 
-        function pr(MM) {
+        function We(VV) {
           let {
-            name: rM,
-            definition: iM
-          } = MM;
-          const SM = (0, OM.useContext)(Hr),
-            jM = Qr[rM],
-            PM = (0, OM.useRef)(null),
-            nM = (0, OM.useRef)(null),
-            zM = (0, OM.useRef)(null),
-            [LM, mM] = (0, OM.useState)(!1),
-            [HM, JM] = (0, OM.useState)(null),
-            yM = (0, OM.useRef)(),
-            lM = (0, OM.useContext)(hr),
-            [EM] = (0, OM.useState)((() => "DocsTypePopover-" + Rr++)),
-            UM = () => {
-              clearTimeout(yM.current), mM(!0)
+            name: eV,
+            definition: xV
+          } = VV;
+          const YV = (0, JV.useContext)(re),
+            UV = ne[eV],
+            pV = (0, JV.useRef)(null),
+            QV = (0, JV.useRef)(null),
+            wV = (0, JV.useRef)(null),
+            [ZV, vV] = (0, JV.useState)(!1),
+            [rV, bV] = (0, JV.useState)(null),
+            BV = (0, JV.useRef)(),
+            jV = (0, JV.useContext)(ke),
+            [qV] = (0, JV.useState)((() => "DocsTypePopover-" + Ge++)),
+            tV = () => {
+              clearTimeout(BV.current), vV(!0)
             },
-            GM = () => {
-              clearTimeout(yM.current), yM.current = setTimeout((() => {
-                mM(!1)
+            FV = () => {
+              clearTimeout(BV.current), BV.current = setTimeout((() => {
+                vV(!1)
               }), 120)
             };
-          return (0, OM.useEffect)((() => {
-            if (!LM) return;
-            const MM = MM => {
-              if ("Escape" === MM.key) {
-                var rM, iM;
-                if (null !== (rM = nM.current) && void 0 !== rM && rM.contains(document.activeElement)) null === (iM = PM.current) || void 0 === iM || iM.focus();
-                mM(!1)
+          return (0, JV.useEffect)((() => {
+            if (!ZV) return;
+            const VV = VV => {
+              if ("Escape" === VV.key) {
+                var eV, xV;
+                if (null !== (eV = QV.current) && void 0 !== eV && eV.contains(document.activeElement)) null === (xV = pV.current) || void 0 === xV || xV.focus();
+                vV(!1)
               }
             };
-            return document.addEventListener("keydown", MM), () => {
-              document.removeEventListener("keydown", MM)
+            return document.addEventListener("keydown", VV), () => {
+              document.removeEventListener("keydown", VV)
             }
-          }), [LM]), (0, OM.useEffect)((() => () => {
-            clearTimeout(yM.current)
-          }), []), (0, OM.useLayoutEffect)((() => {
-            if (!LM || !PM.current || !nM.current) return void JM(null);
-            const MM = PM.current.getBoundingClientRect(),
-              rM = nM.current.offsetHeight,
-              iM = Math.min(tr, window.innerWidth - 32),
-              OM = Math.min(Math.max(16, MM.left), window.innerWidth - iM - 16),
-              SM = MM.bottom + gr + rM < window.innerHeight;
-            JM({
-              left: OM,
-              top: SM ? MM.bottom + gr : Math.max(16, MM.top - gr - rM)
+          }), [ZV]), (0, JV.useEffect)((() => () => {
+            clearTimeout(BV.current)
+          }), []), (0, JV.useLayoutEffect)((() => {
+            if (!ZV || !pV.current || !QV.current) return void bV(null);
+            const VV = pV.current.getBoundingClientRect(),
+              eV = QV.current.offsetHeight,
+              xV = Math.min(Xe, window.innerWidth - 32),
+              JV = Math.min(Math.max(16, VV.left), window.innerWidth - xV - 16),
+              YV = VV.bottom + Me + eV < window.innerHeight;
+            bV({
+              left: JV,
+              top: YV ? VV.bottom + Me : Math.max(16, VV.top - Me - eV)
             })
-          }), [LM]), (0, hM.jsxs)(hM.Fragment, {
-            children: [(0, hM.jsx)("button", {
+          }), [ZV]), (0, kV.jsxs)(kV.Fragment, {
+            children: [(0, kV.jsx)("button", {
               type: "button",
-              ref: PM,
+              ref: pV,
               className: "DocsTypeLink",
-              "aria-expanded": LM,
-              "aria-describedby": LM ? EM : void 0,
-              onMouseEnter: UM,
-              onMouseLeave: GM,
-              onFocus: UM,
-              onBlur: GM,
-              onKeyDown: MM => {
-                "Tab" === MM.key && !MM.shiftKey && zM.current && (MM.preventDefault(), zM.current.focus())
+              "aria-expanded": ZV,
+              "aria-describedby": ZV ? qV : void 0,
+              onMouseEnter: tV,
+              onMouseLeave: FV,
+              onFocus: tV,
+              onBlur: FV,
+              onKeyDown: VV => {
+                "Tab" === VV.key && !VV.shiftKey && wV.current && (VV.preventDefault(), wV.current.focus())
               },
-              onClick: UM,
-              children: rM
-            }), LM && (0, QM.createPortal)((0, hM.jsxs)("span", {
-              ref: nM,
-              id: EM,
+              onClick: tV,
+              children: eV
+            }), ZV && (0, nV.createPortal)((0, kV.jsxs)("span", {
+              ref: QV,
+              id: qV,
               className: "DocsTypePopover",
               role: "tooltip",
-              style: HM ? {
-                left: HM.left,
-                top: HM.top,
-                maxWidth: tr
+              style: rV ? {
+                left: rV.left,
+                top: rV.top,
+                maxWidth: Xe
               } : {
                 visibility: "hidden"
               },
-              onMouseEnter: UM,
-              onMouseLeave: GM,
-              onFocus: UM,
-              onBlur: GM,
-              children: [(0, hM.jsxs)("span", {
+              onMouseEnter: tV,
+              onMouseLeave: FV,
+              onFocus: tV,
+              onBlur: FV,
+              children: [(0, kV.jsxs)("span", {
                 className: "DocsTypePopoverHeader",
-                children: [(0, hM.jsx)("span", {
+                children: [(0, kV.jsx)("span", {
                   className: "DocsTypePopoverTitle",
-                  children: rM
-                }), jM && (0, hM.jsxs)(aM.b, {
-                  ref: zM,
+                  children: eV
+                }), UV && (0, kV.jsxs)(yV.b, {
+                  ref: wV,
                   className: "DocsTypePopoverLink",
-                  to: FM(SM, fM(jM)),
+                  to: mV(YV, oV(UV)),
                   onClick: () => {
-                    mM(!1)
+                    vV(!1)
                   },
-                  onKeyDown: MM => {
-                    if ("Tab" === MM.key) {
-                      var rM;
-                      if (MM.preventDefault(), MM.shiftKey || !PM.current || ! function(MM, rM) {
-                          const iM = [...document.querySelectorAll(ur)],
-                            OM = iM.slice(iM.indexOf(MM) + 1).find((MM => MM.getClientRects().length > 0 && !(null !== rM && void 0 !== rM && rM.contains(MM))));
-                          return null === OM || void 0 === OM || OM.focus(), void 0 !== OM
-                        }(PM.current, nM.current)) null === (rM = PM.current) || void 0 === rM || rM.focus();
-                      MM.shiftKey || mM(!1)
+                  onKeyDown: VV => {
+                    if ("Tab" === VV.key) {
+                      var eV;
+                      if (VV.preventDefault(), VV.shiftKey || !pV.current || ! function(VV, eV) {
+                          const xV = [...document.querySelectorAll(ze)],
+                            JV = xV.slice(xV.indexOf(VV) + 1).find((VV => VV.getClientRects().length > 0 && !(null !== eV && void 0 !== eV && eV.contains(VV))));
+                          return null === JV || void 0 === JV || JV.focus(), void 0 !== JV
+                        }(pV.current, QV.current)) null === (eV = pV.current) || void 0 === eV || eV.focus();
+                      VV.shiftKey || vV(!1)
                     }
                   },
-                  children: [fM(jM).title, (0, hM.jsx)(dM, {
+                  children: [oV(UV).title, (0, kV.jsx)(EV, {
                     name: "arrow-right"
                   })]
                 })]
-              }), (0, hM.jsx)(eM, {
+              }), (0, kV.jsx)(PV, {
                 lang: "ts",
-                code: iM,
+                code: xV,
                 compact: !0
               })]
-            }), null !== lM && void 0 !== lM ? lM : document.body)]
+            }), null !== jV && void 0 !== jV ? jV : document.body)]
           })
         }
-        var Wr = iM(181),
-          sr = iM(5173),
-          Dr = iM(5182),
-          kr = iM(5184);
-        const Zr = {
+        var Re = xV(206),
+          ge = xV(5261),
+          De = xV(5264),
+          ie = xV(5273);
+        const Ce = {
           progressBar: {
-            uO: 30,
-            RO: .075,
-            pO: 5,
-            WO: !1,
+            cJ: 30,
+            hJ: .075,
+            lJ: 5,
+            LJ: !1,
             description: [{
               str: "Click repeatedly to complete!"
             }],
-            sO: "fa-solid fa-computer-mouse",
+            fJ: "fa-solid fa-computer-mouse",
             scale: 3,
             rotation: 15
           },
           timedClick: {
-            kO: 3e3,
+            KJ: 3e3,
             icon: "fa-solid fa-computer-mouse",
             label: [{
               str: "Click to complete the QTE!"
             }],
-            ZO: !0,
+            HJ: !0,
             scale: 3,
             rotation: 15,
-            oO: !1
+            uJ: !1
           },
           gravityBar: {
-            uO: 30,
-            YO: .25,
-            AO: 3,
-            xO: .8,
+            cJ: 30,
+            SJ: .25,
+            IJ: 3,
+            dJ: .8,
             gravity: 1,
-            vO: 1.5,
-            FO: 8,
-            BO: 4,
-            WO: !1,
+            OJ: 1.5,
+            VY: 8,
+            eY: 4,
+            LJ: !1,
             description: [{
               str: "Hold to catch!"
             }],
@@ -1094,7 +1094,7 @@ export const modules = {
           },
           precisionBar: {
             speed: .5,
-            IO: .15,
+            JY: .15,
             label: [{
               str: "Click when the marker is within the green zone."
             }],
@@ -1103,30 +1103,30 @@ export const modules = {
             rotation: 0
           },
           rhythmClick: {
-            qO: 5,
-            VO: 1200,
-            cO: .15,
-            MS: 3,
+            UY: 5,
+            yY: 1200,
+            pY: .15,
+            QY: 3,
             label: [{
               str: "Click when the circles align!"
             }],
             icon: ""
           }
         };
-        var or = iM(313),
-          fr = iM(2099);
+        var ae = xV(364),
+          oe = xV(2130);
 
-        function Yr(MM) {
-          return MM.startsWith("fa-")
+        function ce(VV) {
+          return VV.startsWith("fa-")
         }
-        const Nr = {
+        const he = {
             text: "Text",
             icon: "Icon",
             progressBar: "Progress bar",
             keyBinding: "Key binding",
             other: "Other"
           },
-          Ar = {
+          le = {
             text: "Text",
             icon: {
               icon: "Pixelated Heart"
@@ -1141,10 +1141,10 @@ export const modules = {
             }
           };
 
-        function xr(MM) {
-          return "string" === typeof MM ? "text" : "entityName" in MM || "translationKey" in MM ? "other" : (0, or.rb)(MM) ? "progressBar" : (0, or.nb)(MM) ? "keyBinding" : "icon" in MM ? "icon" : "str" in MM && "string" === typeof MM.str ? "text" : "other"
+        function Le(VV) {
+          return "string" === typeof VV ? "text" : "entityName" in VV || "translationKey" in VV ? "other" : (0, ae.wb)(VV) ? "progressBar" : (0, ae.vb)(VV) ? "keyBinding" : "icon" in VV ? "icon" : "str" in VV && "string" === typeof VV.str ? "text" : "other"
         }
-        const vr = [{
+        const fe = [{
             path: ["style", "color"],
             label: "Colour",
             field: {
@@ -1182,7 +1182,7 @@ export const modules = {
             },
             defaultText: "1"
           }],
-          Fr = {
+          me = {
             text: [{
               path: ["str"],
               label: "Text",
@@ -1191,7 +1191,7 @@ export const modules = {
                 multiline: !0
               },
               isRequired: !0
-            }, ...vr],
+            }, ...fe],
             icon: [{
               path: ["icon"],
               label: "Icon",
@@ -1262,360 +1262,360 @@ export const modules = {
               label: "Action",
               field: {
                 kind: "choice",
-                options: fr.n
+                options: oe.i
               },
               isRequired: !0
-            }, ...vr],
+            }, ...fe],
             other: []
           };
 
-        function Br(MM) {
-          return "string" === typeof MM ? {
-            str: MM
-          } : MM
+        function Ke(VV) {
+          return "string" === typeof VV ? {
+            str: VV
+          } : VV
         }
 
-        function Xr(MM, rM) {
-          let iM = Br(MM);
-          for (const OM of rM) iM = iM && "object" === typeof iM ? iM[OM] : void 0;
-          return iM
+        function He(VV, eV) {
+          let xV = Ke(VV);
+          for (const JV of eV) xV = xV && "object" === typeof xV ? xV[JV] : void 0;
+          return xV
         }
 
-        function Ir(MM, rM, iM) {
-          const OM = (MM, SM) => {
-            var jM;
-            const aM = rM[SM],
-              PM = {
-                ...MM
+        function ue(VV, eV, xV) {
+          const JV = (VV, YV) => {
+            var UV;
+            const yV = eV[YV],
+              pV = {
+                ...VV
               };
-            if (SM === rM.length - 1) return void 0 === iM ? delete PM[aM] : PM[aM] = iM, PM;
-            const nM = OM(null !== (jM = MM[aM]) && void 0 !== jM ? jM : {}, SM + 1);
-            return 0 === Object.keys(nM).length ? delete PM[aM] : PM[aM] = nM, PM
+            if (YV === eV.length - 1) return void 0 === xV ? delete pV[yV] : pV[yV] = xV, pV;
+            const QV = JV(null !== (UV = VV[yV]) && void 0 !== UV ? UV : {}, YV + 1);
+            return 0 === Object.keys(QV).length ? delete pV[yV] : pV[yV] = QV, pV
           };
-          return function(MM) {
-            const rM = Object.keys(MM);
-            return "string" === typeof MM.str && 1 === rM.length ? MM.str : MM
-          }(OM(Br(MM), 0))
+          return function(VV) {
+            const eV = Object.keys(VV);
+            return "string" === typeof VV.str && 1 === eV.length ? VV.str : VV
+          }(JV(Ke(VV), 0))
         }
 
-        function Kr(MM, rM) {
-          const iM = xr(MM),
-            OM = Fr[iM].find((MM => MM.path.join(".") === rM.join("."))),
-            SM = null !== OM && void 0 !== OM && OM.isRequired && "other" !== iM ? Xr(Ar[iM], rM) : void 0;
-          return Ir(MM, rM, SM)
+        function se(VV, eV) {
+          const xV = Le(VV),
+            JV = me[xV].find((VV => VV.path.join(".") === eV.join("."))),
+            YV = null !== JV && void 0 !== JV && JV.isRequired && "other" !== xV ? He(le[xV], eV) : void 0;
+          return ue(VV, eV, YV)
         }
 
-        function qr(MM) {
-          switch (xr(MM)) {
+        function Se(VV) {
+          switch (Le(VV)) {
             case "text":
-              return String(Xr(MM, ["str"]));
+              return String(He(VV, ["str"]));
             case "icon":
-              return String(Xr(MM, ["icon"]));
+              return String(He(VV, ["icon"]));
             case "progressBar":
-              return `${Math.round(100*Number(Xr(MM,["progress"])))}%`;
+              return `${Math.round(100*Number(He(VV,["progress"])))}%`;
             case "keyBinding":
-              return String(Xr(MM, ["action"]));
+              return String(He(VV, ["action"]));
             case "other":
-              return JSON.stringify(MM)
+              return JSON.stringify(VV)
           }
         }
-        const Tr = /^[A-Za-z_$][\w$]*$/;
+        const Ie = /^[A-Za-z_$][\w$]*$/;
 
-        function Vr(MM) {
-          if (Array.isArray(MM)) return `[${MM.map(Vr).join(", ")}]`;
-          if (MM && "object" === typeof MM) {
-            const rM = Object.entries(MM).map((MM => {
-              let [rM, iM] = MM;
-              return `${Tr.test(rM)?rM:JSON.stringify(rM)}: ${Vr(iM)}`
+        function de(VV) {
+          if (Array.isArray(VV)) return `[${VV.map(de).join(", ")}]`;
+          if (VV && "object" === typeof VV) {
+            const eV = Object.entries(VV).map((VV => {
+              let [eV, xV] = VV;
+              return `${Ie.test(eV)?eV:JSON.stringify(eV)}: ${de(xV)}`
             }));
-            return 0 === rM.length ? "{}" : `{ ${rM.join(", ")} }`
+            return 0 === eV.length ? "{}" : `{ ${eV.join(", ")} }`
           }
-          return JSON.stringify(MM)
+          return JSON.stringify(VV)
         }
 
-        function cr(MM) {
-          const rM = MM.map(Vr),
-            iM = `[${rM.join(", ")}]`;
-          return iM.length <= 60 ? iM : `[\n${rM.map((MM=>`    ${MM},`)).join("\n")}\n]`
+        function Oe(VV) {
+          const eV = VV.map(de),
+            xV = `[${eV.join(", ")}]`;
+          return xV.length <= 60 ? xV : `[\n${eV.map((VV=>`    ${VV},`)).join("\n")}\n]`
         }
-        const Mi = {
+        const Vx = {
           "\n": "\\n",
           "\r": "\\r",
           "\t": "\\t"
         };
 
-        function ri(MM) {
-          let rM = "";
-          for (let SM = 0; SM < MM.length; SM++) {
-            const jM = MM[SM];
-            if ("\\" === jM) {
-              var iM;
-              const OM = null !== (iM = MM[SM + 1]) && void 0 !== iM ? iM : "";
-              rM += "'" === OM ? "'" : jM + OM, SM++
-            } else if ('"' === jM) rM += '\\"';
+        function ex(VV) {
+          let eV = "";
+          for (let YV = 0; YV < VV.length; YV++) {
+            const UV = VV[YV];
+            if ("\\" === UV) {
+              var xV;
+              const JV = null !== (xV = VV[YV + 1]) && void 0 !== xV ? xV : "";
+              eV += "'" === JV ? "'" : UV + JV, YV++
+            } else if ('"' === UV) eV += '\\"';
             else {
-              var OM;
-              rM += null !== (OM = Mi[jM]) && void 0 !== OM ? OM : jM
+              var JV;
+              eV += null !== (JV = Vx[UV]) && void 0 !== JV ? JV : UV
             }
           }
-          return `"${rM}"`
+          return `"${eV}"`
         }
 
-        function ii(MM) {
-          if ("string" === typeof MM) return !0;
-          if (!MM || "object" !== typeof MM || Array.isArray(MM)) return !1;
-          const rM = MM;
-          return "ProgressBar" === rM.type ? "number" === typeof rM.progress : "StyledKeyBinding" === rM.type ? fr.n.includes(rM.action) : "string" === typeof rM.icon || "string" === typeof rM.str || "string" === typeof rM.entityName || "string" === typeof rM.translationKey
+        function xx(VV) {
+          if ("string" === typeof VV) return !0;
+          if (!VV || "object" !== typeof VV || Array.isArray(VV)) return !1;
+          const eV = VV;
+          return "ProgressBar" === eV.type ? "number" === typeof eV.progress : "StyledKeyBinding" === eV.type ? oe.i.includes(eV.action) : "string" === typeof eV.icon || "string" === typeof eV.str || "string" === typeof eV.entityName || "string" === typeof eV.translationKey
         }
 
-        function Oi(MM) {
-          let rM;
+        function Jx(VV) {
+          let eV;
           try {
-            rM = function(MM) {
-              let rM = "",
-                iM = "",
-                OM = 0;
-              const SM = () => {
-                rM += iM.replace(/([A-Za-z_$][\w$]*)\s*:/g, '"$1":').replace(/,(\s*[\]}])/g, "$1"), iM = ""
+            eV = function(VV) {
+              let eV = "",
+                xV = "",
+                JV = 0;
+              const YV = () => {
+                eV += xV.replace(/([A-Za-z_$][\w$]*)\s*:/g, '"$1":').replace(/,(\s*[\]}])/g, "$1"), xV = ""
               };
-              for (; OM < MM.length;) {
-                const jM = MM.slice(OM).search(/["'`]|\/\//);
-                if (-1 === jM) {
-                  iM += MM.slice(OM);
+              for (; JV < VV.length;) {
+                const UV = VV.slice(JV).search(/["'`]|\/\//);
+                if (-1 === UV) {
+                  xV += VV.slice(JV);
                   break
                 }
-                iM += MM.slice(OM, OM + jM);
-                const aM = OM + jM,
-                  PM = MM[aM];
-                if ("/" === PM) {
-                  const rM = MM.indexOf("\n", aM);
-                  OM = -1 === rM ? MM.length : rM;
+                xV += VV.slice(JV, JV + UV);
+                const yV = JV + UV,
+                  pV = VV[yV];
+                if ("/" === pV) {
+                  const eV = VV.indexOf("\n", yV);
+                  JV = -1 === eV ? VV.length : eV;
                   continue
                 }
-                if (SM(), "`" === PM) throw new Error("Use quotes rather than template strings.");
-                let nM = aM + 1;
-                for (; nM < MM.length && MM[nM] !== PM;) nM += "\\" === MM[nM] ? 2 : 1;
-                if (nM >= MM.length) throw new Error("A string is missing its closing quote.");
-                const QM = MM.slice(aM + 1, nM);
-                rM += ri(QM), OM = nM + 1
+                if (YV(), "`" === pV) throw new Error("Use quotes rather than template strings.");
+                let QV = yV + 1;
+                for (; QV < VV.length && VV[QV] !== pV;) QV += "\\" === VV[QV] ? 2 : 1;
+                if (QV >= VV.length) throw new Error("A string is missing its closing quote.");
+                const nV = VV.slice(yV + 1, QV);
+                eV += ex(nV), JV = QV + 1
               }
-              return SM(), JSON.parse(rM)
-            }(MM.trim())
-          } catch (OM) {
+              return YV(), JSON.parse(eV)
+            }(VV.trim())
+          } catch (JV) {
             return {
               parts: null,
-              error: OM instanceof SyntaxError ? "This isn't a valid array yet." : OM.message
+              error: JV instanceof SyntaxError ? "This isn't a valid array yet." : JV.message
             }
           }
-          if (!Array.isArray(rM)) return {
+          if (!Array.isArray(eV)) return {
             parts: null,
             error: 'Styled text is an array, e.g. ["Hello ", { str: "world" }]'
           };
-          const iM = rM.findIndex((MM => !ii(MM)));
-          return -1 !== iM ? {
+          const xV = eV.findIndex((VV => !xx(VV)));
+          return -1 !== xV ? {
             parts: null,
-            error: `Part ${iM+1} isn't one Bloxd draws: use a string, { str }, { icon }, a ProgressBar or a StyledKeyBinding.`
+            error: `Part ${xV+1} isn't one Bloxd draws: use a string, { str }, { icon }, a ProgressBar or a StyledKeyBinding.`
           } : {
-            parts: rM,
+            parts: eV,
             error: null
           }
         }
-        const Si = 1 / Wr.f.clientTicksPerSecond,
-          ji = 700,
-          ai = {
+        const Yx = 1 / Re.f.clientTicksPerSecond,
+          Ux = 700,
+          yx = {
             type: null,
             parameters: null,
             state: null,
             isActive: !1
           },
-          Pi = {
-            progressBar: Zr.progressBar.sO,
-            timedClick: Zr.timedClick.icon,
-            gravityBar: Zr.gravityBar.icon,
-            precisionBar: Zr.precisionBar.icon,
-            rhythmClick: Zr.rhythmClick.icon
+          px = {
+            progressBar: Ce.progressBar.fJ,
+            timedClick: Ce.timedClick.icon,
+            gravityBar: Ce.gravityBar.icon,
+            precisionBar: Ce.precisionBar.icon,
+            rhythmClick: Ce.rhythmClick.icon
           };
 
-        function ni(MM) {
+        function Qx(VV) {
           let {
-            type: rM
-          } = MM;
-          const [iM, SM] = (0, OM.useState)("ready"), [aM, PM] = (0, OM.useState)(1), [nM, QM] = (0, OM.useState)(!0), zM = (0, OM.useRef)(null), LM = (0, OM.useRef)(null), mM = (0, OM.useRef)(null), HM = (0, OM.useRef)(new Set), JM = (0, OM.useRef)(!1), yM = Pi[rM], lM = (0, OM.useMemo)((() => ({
+            type: eV
+          } = VV;
+          const [xV, YV] = (0, JV.useState)("ready"), [yV, pV] = (0, JV.useState)(1), [QV, nV] = (0, JV.useState)(!0), wV = (0, JV.useRef)(null), ZV = (0, JV.useRef)(null), vV = (0, JV.useRef)(null), rV = (0, JV.useRef)(new Set), bV = (0, JV.useRef)(!1), BV = px[eV], jV = (0, JV.useMemo)((() => ({
             getState: () => {
-              var MM, rM;
-              return null !== (MM = null === (rM = mM.current) || void 0 === rM ? void 0 : rM.getState()) && void 0 !== MM ? MM : ai
+              var VV, eV;
+              return null !== (VV = null === (eV = vV.current) || void 0 === eV ? void 0 : eV.getState()) && void 0 !== VV ? VV : yx
             },
-            onFrame: MM => (HM.current.add(MM), () => {
-              HM.current.delete(MM)
+            onFrame: VV => (rV.current.add(VV), () => {
+              rV.current.delete(VV)
             })
           })), []);
-          (0, OM.useEffect)((() => {
-            const MM = zM.current,
-              rM = LM.current;
-            if (!MM || !rM) return;
-            const iM = new ResizeObserver((() => {
-              PM(MM.clientWidth / Math.max(1, rM.offsetWidth))
+          (0, JV.useEffect)((() => {
+            const VV = wV.current,
+              eV = ZV.current;
+            if (!VV || !eV) return;
+            const xV = new ResizeObserver((() => {
+              pV(VV.clientWidth / Math.max(1, eV.offsetWidth))
             }));
-            return iM.observe(MM), () => {
-              iM.disconnect()
+            return xV.observe(VV), () => {
+              xV.disconnect()
             }
-          }), []), (0, OM.useEffect)((() => {
-            var MM;
-            if ("playing" !== iM) return;
-            let OM = !1;
-            const jM = new kr.f[rM](Zr[rM], (MM => {
-              OM = !0, QM(!1), SM(MM ? "succeeded" : "failed")
+          }), []), (0, JV.useEffect)((() => {
+            var VV;
+            if ("playing" !== xV) return;
+            let JV = !1;
+            const UV = new ie.g[eV](Ce[eV], (VV => {
+              JV = !0, nV(!1), YV(VV ? "succeeded" : "failed")
             }), (() => {}));
-            mM.current = jM;
-            let aM = 0,
-              PM = performance.now(),
-              nM = requestAnimationFrame((function MM(rM) {
-                for (aM += Math.min(.25, (rM - PM) / 1e3), PM = rM; aM >= Si && !OM;) aM -= Si, jM.handleTick(Si);
-                for (const iM of HM.current) iM();
-                OM || (nM = requestAnimationFrame(MM))
+            vV.current = UV;
+            let yV = 0,
+              pV = performance.now(),
+              QV = requestAnimationFrame((function VV(eV) {
+                for (yV += Math.min(.25, (eV - pV) / 1e3), pV = eV; yV >= Yx && !JV;) yV -= Yx, UV.handleTick(Yx);
+                for (const xV of rV.current) xV();
+                JV || (QV = requestAnimationFrame(VV))
               }));
-            return null === (MM = zM.current) || void 0 === MM || MM.focus({
+            return null === (VV = wV.current) || void 0 === VV || VV.focus({
               preventScroll: !0
             }), () => {
-              cancelAnimationFrame(nM), jM.tearDown(), mM.current = null, JM.current = !1
+              cancelAnimationFrame(QV), UV.tearDown(), vV.current = null, bV.current = !1
             }
-          }), [iM, rM]), (0, OM.useEffect)((() => {
-            if (nM) return;
-            const MM = setTimeout((() => {
-              QM(!0)
-            }), ji);
+          }), [xV, eV]), (0, JV.useEffect)((() => {
+            if (QV) return;
+            const VV = setTimeout((() => {
+              nV(!0)
+            }), Ux);
             return () => {
-              clearTimeout(MM)
+              clearTimeout(VV)
             }
-          }), [nM]);
-          const EM = MM => {
-            var rM;
-            "playing" === iM && JM.current !== MM && (JM.current = MM, null === (rM = mM.current) || void 0 === rM || rM.handleMouseInput(MM))
+          }), [QV]);
+          const qV = VV => {
+            var eV;
+            "playing" === xV && bV.current !== VV && (bV.current = VV, null === (eV = vV.current) || void 0 === eV || eV.handleMouseInput(VV))
           };
-          return (0, hM.jsxs)("div", {
+          return (0, kV.jsxs)("div", {
             className: "DocsQteDemo",
-            children: [(0, hM.jsxs)("div", {
-              ref: zM,
-              className: jM()("DocsQteStage", {
-                Playing: "playing" === iM
+            children: [(0, kV.jsxs)("div", {
+              ref: wV,
+              className: UV()("DocsQteStage", {
+                Playing: "playing" === xV
               }),
-              tabIndex: "playing" === iM ? 0 : -1,
-              role: "playing" === iM ? "button" : void 0,
-              "aria-label": "playing" === iM ? `${rM} quick time event: click or press Space` : void 0,
-              onPointerDown: MM => {
-                0 === MM.button && EM(!0)
+              tabIndex: "playing" === xV ? 0 : -1,
+              role: "playing" === xV ? "button" : void 0,
+              "aria-label": "playing" === xV ? `${eV} quick time event: click or press Space` : void 0,
+              onPointerDown: VV => {
+                0 === VV.button && qV(!0)
               },
               onPointerUp: () => {
-                EM(!1)
+                qV(!1)
               },
               onPointerLeave: () => {
-                EM(!1)
+                qV(!1)
               },
               onPointerCancel: () => {
-                EM(!1)
+                qV(!1)
               },
-              onKeyDown: MM => {
-                "playing" !== iM || " " !== MM.key && "Enter" !== MM.key || (MM.preventDefault(), EM(!0))
+              onKeyDown: VV => {
+                "playing" !== xV || " " !== VV.key && "Enter" !== VV.key || (VV.preventDefault(), qV(!0))
               },
-              onKeyUp: MM => {
-                "playing" !== iM || " " !== MM.key && "Enter" !== MM.key || EM(!1)
+              onKeyUp: VV => {
+                "playing" !== xV || " " !== VV.key && "Enter" !== VV.key || qV(!1)
               },
-              children: [(0, hM.jsx)("div", {
-                ref: LM,
+              children: [(0, kV.jsx)("div", {
+                ref: ZV,
                 className: "DocsQteScreen",
                 style: {
-                  transform: `scale(${aM})`
+                  transform: `scale(${yV})`
                 },
-                children: "playing" === iM && (0, hM.jsx)(Dr.c.Provider, {
-                  value: lM,
-                  children: (0, hM.jsx)(sr.e, {
+                children: "playing" === xV && (0, kV.jsx)(De.d.Provider, {
+                  value: jV,
+                  children: (0, kV.jsx)(ge.b, {
                     qte: {
-                      type: rM,
-                      parameters: Zr[rM]
+                      type: eV,
+                      parameters: Ce[eV]
                     }
                   })
                 })
-              }), "playing" !== iM && (0, hM.jsxs)("div", {
+              }), "playing" !== xV && (0, kV.jsxs)("div", {
                 className: "DocsQteOverlay",
-                children: ["ready" !== iM && (0, hM.jsxs)("div", {
-                  className: jM()("DocsQteResult", "succeeded" === iM ? "Succeeded" : "Failed"),
-                  children: [(0, hM.jsx)(dM, {
-                    name: "succeeded" === iM ? "check" : "cross",
+                children: ["ready" !== xV && (0, kV.jsxs)("div", {
+                  className: UV()("DocsQteResult", "succeeded" === xV ? "Succeeded" : "Failed"),
+                  children: [(0, kV.jsx)(EV, {
+                    name: "succeeded" === xV ? "check" : "cross",
                     isTinted: !0
-                  }), (0, hM.jsx)("span", {
-                    children: "succeeded" === iM ? "Succeeded: onPlayerFinishQTE gets true" : "Failed: onPlayerFinishQTE gets false"
+                  }), (0, kV.jsx)("span", {
+                    children: "succeeded" === xV ? "Succeeded: onPlayerFinishQTE gets true" : "Failed: onPlayerFinishQTE gets false"
                   })]
-                }), (0, hM.jsxs)("button", {
+                }), (0, kV.jsxs)("button", {
                   type: "button",
                   className: "DocsQtePlay",
-                  disabled: !nM,
+                  disabled: !QV,
                   onClick: () => {
-                    SM("playing")
+                    YV("playing")
                   },
-                  children: [(0, hM.jsx)(dM, {
-                    name: "ready" === iM ? "play" : "replay"
-                  }), (0, hM.jsx)("span", {
-                    children: "ready" === iM ? `Try ${rM}` : "Play again"
+                  children: [(0, kV.jsx)(EV, {
+                    name: "ready" === xV ? "play" : "replay"
+                  }), (0, kV.jsx)("span", {
+                    children: "ready" === xV ? `Try ${eV}` : "Play again"
                   })]
                 })]
               })]
-            }), yM && !Yr(yM) && (0, hM.jsxs)("p", {
+            }), BV && !ce(BV) && (0, kV.jsxs)("p", {
               className: "DocsQteCaption",
-              children: ["The ", (0, hM.jsx)("code", {
-                children: yM
+              children: ["The ", (0, kV.jsx)("code", {
+                children: BV
               }), " icon is a Bloxd item, so it shows in game only."]
             })]
           })
         }
 
-        function Qi(MM) {
+        function nx(VV) {
           let {
-            level: rM,
-            text: iM,
-            anchor: OM,
-            className: SM
-          } = MM;
-          const aM = `h${Math.min(rM,6)}`;
-          return (0, hM.jsxs)(aM, {
-                id: OM,
-                className: jM()("DocsHeading", SM),
-                children: [(0, hM.jsx)(Cr, {
-                      text: iM
-                    }), (0, hM.jsx)("a", {
+            level: eV,
+            text: xV,
+            anchor: JV,
+            className: YV
+          } = VV;
+          const yV = `h${Math.min(eV,6)}`;
+          return (0, kV.jsxs)(yV, {
+                id: JV,
+                className: UV()("DocsHeading", YV),
+                children: [(0, kV.jsx)(Te, {
+                      text: xV
+                    }), (0, kV.jsx)("a", {
                         className: "DocsHeadingAnchor",
-                        href: `#${OM}`,
-                        "aria-label": `Link to ${iM.replace(/`/g,"")}`,children:"#"})]})}function zi(MM){let{items:rM,ordered:iM}=MM;const OM=iM?"ol":"ul";return(0,hM.jsx)(OM,{className:"DocsList",children:rM.map(((MM,rM)=>(0,hM.jsxs)("li",{children:[(0,hM.jsx)(Cr,{text:MM.text}),MM.children.length>0&&(0,hM.jsx)(zi,{items:MM.children,ordered:iM})]},rM)))})}function Li(MM){const rM=MM[0],iM="paragraph"===(null===rM||void 0===rM?void 0:rM.kind)?rM.text.toLowerCase():"";return/^\*\*(warning|important|caution)/.test(iM)?"warning":/^\*\*(tip|prefer)/.test(iM)?"tip":"note"}function mi(MM){let{block:rM}=MM;switch(rM.kind){case"heading":return(0,hM.jsx)(Qi,{level:rM.level,text:rM.text,anchor:rM.anchor});case"paragraph":return(0,hM.jsx)("p",{children:(0,hM.jsx)(Cr,{text:rM.text})});case"code":{const MM="ts"===rM.lang?function(MM){const rM=MM.match(/^api\.addQTE\(playerId, \{\s*type: "(\w+)"/);return rM&&Object.hasOwn(Zr,rM[1])?rM[1]:null}(rM.code):null;return(0,hM.jsxs)(hM.Fragment,{children:[(0,hM.jsx)(eM,{code:rM.code,lang:rM.lang}),MM&&(0,hM.jsx)(ni,{type:MM})]})}case"table":return(0,hM.jsx)("div",{className:"DocsTableScroll",children:(0,hM.jsxs)("table",{className:"DocsTable",children:[(0,hM.jsx)("thead",{children:(0,hM.jsx)("tr",{children:rM.header.map(((MM,rM)=>(0,hM.jsx)("th",{children:(0,hM.jsx)(Cr,{text:MM})},rM)))})}),(0,hM.jsx)("tbody",{children:rM.rows.map(((MM,rM)=>(0,hM.jsx)("tr",{children:MM.map(((MM,rM)=>(0,hM.jsx)("td",{children:(0,hM.jsx)(Cr,{text:MM})},rM)))},rM)))})]})});case"list":return(0,hM.jsx)(zi,{items:rM.items,ordered:rM.ordered});case"quote":return(0,hM.jsx)("aside",{className:jM()("DocsCallout",Li(rM.blocks)),children:(0,hM.jsx)(Hi,{blocks:rM.blocks})});case"rule":return(0,hM.jsx)("hr",{className:"DocsRule"})}}function Hi(MM){let{blocks:rM}=MM;return(0,hM.jsx)(hM.Fragment,{children:rM.map(((MM,rM)=>(0,hM.jsx)(mi,{block:MM},rM)))})}var Ji=iM(5158),di=iM(5162);function yi(MM){return"blocks"===MM||"items"===MM}const li=new Map;function Ei(MM){let rM=li.get(MM);return rM||(rM=function(MM){const rM={entries:[],legend:[],notes:[],examples:[]};let iM=!1;for(const jM of MM.split(/\r?\n/).slice(1)){if(jM.startsWith("#")){const MM=jM.replace(/^# ?/,""),OM=MM.match(/^\s+([A-Z]+)\s+=\s+(\w+)\s+->\s+(.+)$/);OM?rM.legend.push({code:OM[1],meaning:OM[2],usage:OM[3].trim()}):/^Examples:/.test(MM.trim())?iM=!0:iM&&MM.trim()?rM.examples.push(MM.trim()):MM.trim()&&!/^\s/.test(MM)&&rM.notes.push(MM.trim());continue}const MM=jM.trim().match(/^(.+?)(?:\s+\[([A-Z,]+)\])?$/);var OM,SM;MM&&rM.entries.push({name:MM[1],variants:null!==(OM=null===(SM=MM[2])||void 0===SM?void 0:SM.split(","))&&void 0!==OM?OM:[]})}return rM}("blocks"===MM?Ji:di),li.set(MM,rM)),rM}function Ui(MM){let{className:rM,value:iM,placeholder:OM,label:SM,onChange:jM,count:aM,children:PM}=MM;return(0,hM.jsxs)("div",{className:rM,children:[(0,hM.jsx)(dM,{name:"magnifying-glass"}),(0,hM.jsx)("input",{type:"search",value:iM,placeholder:OM,"aria-label":SM,onChange:MM=>{jM(MM.target.value)}}),PM,aM&&(0,hM.jsxs)("span",{className:"DocsFilterCount",children:[aM.visible," of ",aM.total]})]})}var Gi=iM(1398);function Ci(MM){const rM=MM.trim().match(/^(` {
+                        href: `#${JV}`,
+                        "aria-label": `Link to ${xV.replace(/`/g,"")}`,children:"#"})]})}function wx(VV){let{items:eV,ordered:xV}=VV;const JV=xV?"ol":"ul";return(0,kV.jsx)(JV,{className:"DocsList",children:eV.map(((VV,eV)=>(0,kV.jsxs)("li",{children:[(0,kV.jsx)(Te,{text:VV.text}),VV.children.length>0&&(0,kV.jsx)(wx,{items:VV.children,ordered:xV})]},eV)))})}function Zx(VV){const eV=VV[0],xV="paragraph"===(null===eV||void 0===eV?void 0:eV.kind)?eV.text.toLowerCase():"";return/^\*\*(warning|important|caution)/.test(xV)?"warning":/^\*\*(tip|prefer)/.test(xV)?"tip":"note"}function vx(VV){let{block:eV}=VV;switch(eV.kind){case"heading":return(0,kV.jsx)(nx,{level:eV.level,text:eV.text,anchor:eV.anchor});case"paragraph":return(0,kV.jsx)("p",{children:(0,kV.jsx)(Te,{text:eV.text})});case"code":{const VV="ts"===eV.lang?function(VV){const eV=VV.match(/^api\.addQTE\(playerId, \{\s*type: "(\w+)"/);return eV&&Object.hasOwn(Ce,eV[1])?eV[1]:null}(eV.code):null;return(0,kV.jsxs)(kV.Fragment,{children:[(0,kV.jsx)(PV,{code:eV.code,lang:eV.lang}),VV&&(0,kV.jsx)(Qx,{type:VV})]})}case"table":return(0,kV.jsx)("div",{className:"DocsTableScroll",children:(0,kV.jsxs)("table",{className:"DocsTable",children:[(0,kV.jsx)("thead",{children:(0,kV.jsx)("tr",{children:eV.header.map(((VV,eV)=>(0,kV.jsx)("th",{children:(0,kV.jsx)(Te,{text:VV})},eV)))})}),(0,kV.jsx)("tbody",{children:eV.rows.map(((VV,eV)=>(0,kV.jsx)("tr",{children:VV.map(((VV,eV)=>(0,kV.jsx)("td",{children:(0,kV.jsx)(Te,{text:VV})},eV)))},eV)))})]})});case"list":return(0,kV.jsx)(wx,{items:eV.items,ordered:eV.ordered});case"quote":return(0,kV.jsx)("aside",{className:UV()("DocsCallout",Zx(eV.blocks)),children:(0,kV.jsx)(rx,{blocks:eV.blocks})});case"rule":return(0,kV.jsx)("hr",{className:"DocsRule"})}}function rx(VV){let{blocks:eV}=VV;return(0,kV.jsx)(kV.Fragment,{children:eV.map(((VV,eV)=>(0,kV.jsx)(vx,{block:VV},eV)))})}var kx=xV(5252),bx=xV(5255);function Ex(VV){return"blocks"===VV||"items"===VV}const Bx=new Map;function jx(VV){let eV=Bx.get(VV);return eV||(eV=function(VV){const eV={entries:[],legend:[],notes:[],examples:[]};let xV=!1;for(const UV of VV.split(/\r?\n/).slice(1)){if(UV.startsWith("#")){const VV=UV.replace(/^# ?/,""),JV=VV.match(/^\s+([A-Z]+)\s+=\s+(\w+)\s+->\s+(.+)$/);JV?eV.legend.push({code:JV[1],meaning:JV[2],usage:JV[3].trim()}):/^Examples:/.test(VV.trim())?xV=!0:xV&&VV.trim()?eV.examples.push(VV.trim()):VV.trim()&&!/^\s/.test(VV)&&eV.notes.push(VV.trim());continue}const VV=UV.trim().match(/^(.+?)(?:\s+\[([A-Z,]+)\])?$/);var JV,YV;VV&&eV.entries.push({name:VV[1],variants:null!==(JV=null===(YV=VV[2])||void 0===YV?void 0:YV.split(","))&&void 0!==JV?JV:[]})}return eV}("blocks"===VV?kx:bx),Bx.set(VV,eV)),eV}function qx(VV){let{className:eV,value:xV,placeholder:JV,label:YV,onChange:UV,count:yV,children:pV}=VV;return(0,kV.jsxs)("div",{className:eV,children:[(0,kV.jsx)(EV,{name:"magnifying-glass"}),(0,kV.jsx)("input",{type:"search",value:xV,placeholder:JV,"aria-label":YV,onChange:VV=>{UV(VV.target.value)}}),pV,yV&&(0,kV.jsxs)("span",{className:"DocsFilterCount",children:[yV.visible," of ",yV.total]})]})}var tx=xV(1414);function Fx(VV){const eV=VV.trim().match(/^(` {
                           1,
                           2
-                        })\ s * ([ ^ `]+?)\s*\1$/);return rM?rM[2]:null}function ei(MM){return"paragraph"===MM.kind&&""===MM.text.trim()}function bi(MM){const rM={name:MM.heading.text,description:[],params:[],returns:null};let iM="description";for(const SM of MM.blocks)if(!ei(SM))if("heading"===SM.kind&&/^Parameters:?$/.test(SM.text))iM="params";else if("heading"===SM.kind&&/^Returns:?$/.test(SM.text))iM="returns",rM.returns={type:"",description:[]};else if("params"!==iM||"table"!==SM.kind){if("returns"===iM&&"paragraph"===SM.kind&&""===rM.returns.type){const MM=Ci(SM.text);if(null!==MM){rM.returns.type=MM.replaceAll("\\|","|");continue}}"returns"===iM?rM.returns.description.push(SM):rM.description.push(SM)}else for(const[MM,iM,jM]of SM.rows){var OM;rM.params.push({name:MM,type:null!==(OM=Ci(iM))&&void 0!==OM?OM:iM,description:null!==jM&&void 0!==jM?jM:""})}return rM}const wi=/^\*\*(Type|Default|Example):\*\*\s*(.*)$/;function ti(MM){return MM.filter((MM=>!ei(MM)))}const gi=/^[\w][\w .'&!:()-]*$/,ui=/^` [ ^ `]+`( ? : [\s, ] * `[^`] + `)*$/;function Ri(MM){var rM;if("code"===MM.kind&&"text"===MM.lang){const rM=MM.code.split("\n").map((MM=>MM.trim())).filter(Boolean);return rM.length>0&&rM.every((MM=>gi.test(MM)))?rM.map((MM=>({name:MM}))):null}return"paragraph"===MM.kind&&ui.test(MM.text.trim())?[...MM.text.matchAll(/`([ ^ `]+)` / g)].flatMap((MM => MM[1].split(/,\s*/).map((MM => ({
-                              name: MM.trim()
-                            }))))): "table" === MM.kind && null !== (rM = MM.header[0]) && void 0 !== rM && rM.startsWith("Song") ? MM.rows.map((MM => {
-                              let [rM, iM] = MM;
+                        })\ s * ([ ^ `]+?)\s*\1$/);return eV?eV[2]:null}function Tx(VV){return"paragraph"===VV.kind&&""===VV.text.trim()}function Px(VV){const eV={name:VV.heading.text,description:[],params:[],returns:null};let xV="description";for(const YV of VV.blocks)if(!Tx(YV))if("heading"===YV.kind&&/^Parameters:?$/.test(YV.text))xV="params";else if("heading"===YV.kind&&/^Returns:?$/.test(YV.text))xV="returns",eV.returns={type:"",description:[]};else if("params"!==xV||"table"!==YV.kind){if("returns"===xV&&"paragraph"===YV.kind&&""===eV.returns.type){const VV=Fx(YV.text);if(null!==VV){eV.returns.type=VV.replaceAll("\\|","|");continue}}"returns"===xV?eV.returns.description.push(YV):eV.description.push(YV)}else for(const[VV,xV,UV]of YV.rows){var JV;eV.params.push({name:VV,type:null!==(JV=Fx(xV))&&void 0!==JV?JV:xV,description:null!==UV&&void 0!==UV?UV:""})}return eV}const Ax=/^\*\*(Type|Default|Example):\*\*\s*(.*)$/;function Nx(VV){return VV.filter((VV=>!Tx(VV)))}const Xx=/^[\w][\w .'&!:()-]*$/,Mx=/^` [ ^ `]+`( ? : [\s, ] * `[^`] + `)*$/;function zx(VV){var eV;if("code"===VV.kind&&"text"===VV.lang){const eV=VV.code.split("\n").map((VV=>VV.trim())).filter(Boolean);return eV.length>0&&eV.every((VV=>Xx.test(VV)))?eV.map((VV=>({name:VV}))):null}return"paragraph"===VV.kind&&Mx.test(VV.text.trim())?[...VV.text.matchAll(/`([ ^ `]+)` / g)].flatMap((VV => VV[1].split(/,\s*/).map((VV => ({
+                              name: VV.trim()
+                            }))))): "table" === VV.kind && null !== (eV = VV.header[0]) && void 0 !== eV && eV.startsWith("Song") ? VV.rows.map((VV => {
+                              let [eV, xV] = VV;
                               return {
-                                name: rM.replace(/`/g, ""),
-                                caption: iM
+                                name: eV.replace(/`/g, ""),
+                                caption: xV
                               }
                             })) : null
                           }
 
-                          function Wi(MM) {
-                            const rM = [];
-                            for (const iM of MM) {
-                              const MM = Ri(iM),
-                                OM = rM.at(-1),
-                                SM = "table" === iM.kind;
-                              MM ? "names" === (null === OM || void 0 === OM ? void 0 : OM.kind) && OM.isSongs === SM ? OM.names.push(...MM) : rM.push({
+                          function Gx(VV) {
+                            const eV = [];
+                            for (const xV of VV) {
+                              const VV = zx(xV),
+                                JV = eV.at(-1),
+                                YV = "table" === xV.kind;
+                              VV ? "names" === (null === JV || void 0 === JV ? void 0 : JV.kind) && JV.isSongs === YV ? JV.names.push(...VV) : eV.push({
                                 kind: "names",
-                                names: MM,
-                                isSongs: SM
-                              }) : rM.push({
+                                names: VV,
+                                isSongs: YV
+                              }) : eV.push({
                                 kind: "block",
-                                block: iM
+                                block: xV
                               })
                             }
-                            return rM
+                            return eV
                           }
-                          const si = {
+                          const Wx = {
                             icons: "icon",
                             particles: "particle",
                             sounds: "sound",
@@ -1624,58 +1624,58 @@ export const modules = {
                             items: "item"
                           };
 
-                          function Di(MM, rM) {
-                            return `${si[MM]}-${(0,bM.r)(rM)}`
+                          function Rx(VV, eV) {
+                            return `${Wx[VV]}-${(0,AV.w)(eV)}`
                           }
-                          const ki = new WeakMap;
+                          const gx = new WeakMap;
 
-                          function Zi(MM, rM, iM) {
-                            let OM = ki.get(rM);
-                            if (!OM) {
-                              OM = new Map;
-                              const iM = new Set;
-                              for (const SM of (0, bM.v)(rM)) {
-                                const rM = Wi(ti(SM.blocks)).map((rM => {
-                                  if ("block" === rM.kind) return rM;
+                          function Dx(VV, eV, xV) {
+                            let JV = gx.get(eV);
+                            if (!JV) {
+                              JV = new Map;
+                              const xV = new Set;
+                              for (const YV of (0, AV.A)(eV)) {
+                                const eV = Gx(Nx(YV.blocks)).map((eV => {
+                                  if ("block" === eV.kind) return eV;
                                   return {
                                     kind: "names",
-                                    names: rM.names.map((rM => {
-                                      var OM, jM;
-                                      const aM = Di(MM, rM.name);
-                                      let PM = aM;
-                                      for (let MM = 2; iM.has(PM); MM++) PM = `${aM}-${MM}`;
-                                      return iM.add(PM), {
-                                        ...rM,
-                                        anchor: PM,
-                                        heading: null !== (OM = null === (jM = SM.heading) || void 0 === jM ? void 0 : jM.text) && void 0 !== OM ? OM : ""
+                                    names: eV.names.map((eV => {
+                                      var JV, UV;
+                                      const yV = Rx(VV, eV.name);
+                                      let pV = yV;
+                                      for (let VV = 2; xV.has(pV); VV++) pV = `${yV}-${VV}`;
+                                      return xV.add(pV), {
+                                        ...eV,
+                                        anchor: pV,
+                                        heading: null !== (JV = null === (UV = YV.heading) || void 0 === UV ? void 0 : UV.text) && void 0 !== JV ? JV : ""
                                       }
                                     })),
-                                    isSongs: rM.isSongs
+                                    isSongs: eV.isSongs
                                   }
                                 }));
-                                OM.set(SM.blocks, rM)
+                                JV.set(YV.blocks, eV)
                               }
-                              ki.set(rM, OM)
+                              gx.set(eV, JV)
                             }
-                            const SM = OM.get(iM);
-                            if (!SM) throw new Error("Gallery blocks must be the page's intro or one of its sections");
-                            return SM
+                            const YV = JV.get(xV);
+                            if (!YV) throw new Error("Gallery blocks must be the page's intro or one of its sections");
+                            return YV
                           }
-                          const oi = "/textures/docs/skinPreviews",
-                            fi = [{
+                          const ix = "/textures/docs/skinPreviews",
+                            Cx = [{
                               heading: "NPC Skins",
                               prefix: "npc"
                             }, {
                               heading: "Poses",
                               prefix: "pose"
                             }];
-                          var Yi = iM(4560),
-                            Ni = iM(4577);
+                          var ax = xV(4628),
+                            ox = xV(4642);
 
-                          function Ai(MM) {
-                            return Object.hasOwn(Yi.d, MM) ? Yi.d[MM] : null
+                          function cx(VV) {
+                            return Object.hasOwn(ax.e, VV) ? ax.e[VV] : null
                           }
-                          const xi = {
+                          const hx = {
                             dir1: [-1, -1, -1],
                             dir2: [1, 1, 1],
                             texture: "bubble",
@@ -1697,453 +1697,453 @@ export const modules = {
                               factor: 1,
                               factor2: 1
                             }],
-                            blendMode: Ni.d.Standard
+                            blendMode: ox.g.Standard
                           };
 
-                          function vi(MM, rM, iM) {
-                            return rM + (iM - rM) * MM()
+                          function lx(VV, eV, xV) {
+                            return eV + (xV - eV) * VV()
                           }
 
-                          function Fi(MM, rM, iM) {
-                            return MM + (rM - MM) * iM
+                          function Lx(VV, eV, xV) {
+                            return VV + (eV - VV) * xV
                           }
 
-                          function Bi(MM) {
-                            return MM.length > 0 && "timeFraction" in MM[0]
+                          function fx(VV) {
+                            return VV.length > 0 && "timeFraction" in VV[0]
                           }
 
-                          function Xi(MM, rM) {
-                            if (0 === MM.colorGradients.length) return [{
+                          function mx(VV, eV) {
+                            if (0 === VV.colorGradients.length) return [{
                               at: 0,
                               colour: [1, 1, 1, 1]
                             }];
-                            if (!Bi(MM.colorGradients)) {
-                              const iM = MM.colorGradients,
+                            if (!fx(VV.colorGradients)) {
+                              const xV = VV.colorGradients,
                                 {
-                                  color: OM
-                                } = iM[Math.floor(rM() * iM.length) % iM.length];
+                                  color: JV
+                                } = xV[Math.floor(eV() * xV.length) % xV.length];
                               return [{
                                 at: 0,
-                                colour: [OM[0] / 255, OM[1] / 255, OM[2] / 255, 1]
+                                colour: [JV[0] / 255, JV[1] / 255, JV[2] / 255, 1]
                               }]
                             }
-                            return [...MM.colorGradients].sort(((MM, rM) => MM.timeFraction - rM.timeFraction)).map((MM => {
-                              var iM, OM, SM;
-                              const jM = MM.minColor,
-                                aM = null !== (iM = MM.maxColor) && void 0 !== iM ? iM : jM,
-                                PM = rM(),
-                                nM = [Fi(jM[0], aM[0], PM) / 255, Fi(jM[1], aM[1], PM) / 255, Fi(jM[2], aM[2], PM) / 255, Fi(null !== (OM = jM[3]) && void 0 !== OM ? OM : 1, null !== (SM = aM[3]) && void 0 !== SM ? SM : 1, PM)];
+                            return [...VV.colorGradients].sort(((VV, eV) => VV.timeFraction - eV.timeFraction)).map((VV => {
+                              var xV, JV, YV;
+                              const UV = VV.minColor,
+                                yV = null !== (xV = VV.maxColor) && void 0 !== xV ? xV : UV,
+                                pV = eV(),
+                                QV = [Lx(UV[0], yV[0], pV) / 255, Lx(UV[1], yV[1], pV) / 255, Lx(UV[2], yV[2], pV) / 255, Lx(null !== (JV = UV[3]) && void 0 !== JV ? JV : 1, null !== (YV = yV[3]) && void 0 !== YV ? YV : 1, pV)];
                               return {
-                                at: MM.timeFraction,
-                                colour: nM
+                                at: VV.timeFraction,
+                                colour: QV
                               }
                             }))
                           }
 
-                          function Ii(MM, rM, iM, OM) {
-                            const SM = vi(OM, MM.minEmitPower, MM.maxEmitPower),
-                              jM = rM => vi(OM, Math.min(MM.dir1[rM], MM.dir2[rM]), Math.max(MM.dir1[rM], MM.dir2[rM])) * SM,
-                              aM = [...MM.velocityGradients].sort(((MM, rM) => MM.timeFraction - rM.timeFraction)).map((MM => ({
-                                at: MM.timeFraction,
-                                factor: vi(OM, MM.factor, MM.factor2)
+                          function Kx(VV, eV, xV, JV) {
+                            const YV = lx(JV, VV.minEmitPower, VV.maxEmitPower),
+                              UV = eV => lx(JV, Math.min(VV.dir1[eV], VV.dir2[eV]), Math.max(VV.dir1[eV], VV.dir2[eV])) * YV,
+                              yV = [...VV.velocityGradients].sort(((VV, eV) => VV.timeFraction - eV.timeFraction)).map((VV => ({
+                                at: VV.timeFraction,
+                                factor: lx(JV, VV.factor, VV.factor2)
                               })));
                             return {
-                              pos: [vi(OM, rM[0], iM[0]), vi(OM, rM[1], iM[1]), vi(OM, rM[2], iM[2])],
-                              dir: [jM(0), jM(1), jM(2)],
+                              pos: [lx(JV, eV[0], xV[0]), lx(JV, eV[1], xV[1]), lx(JV, eV[2], xV[2])],
+                              dir: [UV(0), UV(1), UV(2)],
                               age: 0,
-                              life: vi(OM, MM.minLifeTime, MM.maxLifeTime),
-                              size: vi(OM, MM.minSize, MM.maxSize),
-                              colours: Xi(MM, OM),
-                              velocityFactors: aM
+                              life: lx(JV, VV.minLifeTime, VV.maxLifeTime),
+                              size: lx(JV, VV.minSize, VV.maxSize),
+                              colours: mx(VV, JV),
+                              velocityFactors: yV
                             }
                           }
 
-                          function Ki(MM, rM, iM, OM) {
-                            if (rM < MM[0].at) return iM(Math.min(1, MM.length - 1));
-                            for (let SM = 0; SM < MM.length - 1; SM++)
-                              if (rM <= MM[SM + 1].at) {
-                                const jM = MM[SM + 1].at - MM[SM].at;
-                                return OM(iM(SM), iM(SM + 1), jM > 0 ? (rM - MM[SM].at) / jM : 1)
-                              } return iM(MM.length - 1)
+                          function Hx(VV, eV, xV, JV) {
+                            if (eV < VV[0].at) return xV(Math.min(1, VV.length - 1));
+                            for (let YV = 0; YV < VV.length - 1; YV++)
+                              if (eV <= VV[YV + 1].at) {
+                                const UV = VV[YV + 1].at - VV[YV].at;
+                                return JV(xV(YV), xV(YV + 1), UV > 0 ? (eV - VV[YV].at) / UV : 1)
+                              } return xV(VV.length - 1)
                           }
 
-                          function qi(MM) {
-                            return Ki(MM.colours, MM.age / MM.life, (rM => MM.colours[rM].colour), ((MM, rM, iM) => [Fi(MM[0], rM[0], iM), Fi(MM[1], rM[1], iM), Fi(MM[2], rM[2], iM), Fi(MM[3], rM[3], iM)]))
+                          function ux(VV) {
+                            return Hx(VV.colours, VV.age / VV.life, (eV => VV.colours[eV].colour), ((VV, eV, xV) => [Lx(VV[0], eV[0], xV), Lx(VV[1], eV[1], xV), Lx(VV[2], eV[2], xV), Lx(VV[3], eV[3], xV)]))
                           }
 
-                          function Ti(MM, rM, iM) {
-                            if (MM.age += iM, MM.age >= MM.life) return !1;
-                            const OM = function(MM) {
-                              return 0 === MM.velocityFactors.length ? 1 : Ki(MM.velocityFactors, MM.age / MM.life, (rM => MM.velocityFactors[rM].factor), Fi)
-                            }(MM) * iM;
-                            for (let jM = 0; jM < 3; jM++) {
-                              var SM;
-                              MM.pos[jM] += MM.dir[jM] * OM, MM.dir[jM] += (null !== (SM = rM[jM]) && void 0 !== SM ? SM : 0) * iM
+                          function sx(VV, eV, xV) {
+                            if (VV.age += xV, VV.age >= VV.life) return !1;
+                            const JV = function(VV) {
+                              return 0 === VV.velocityFactors.length ? 1 : Hx(VV.velocityFactors, VV.age / VV.life, (eV => VV.velocityFactors[eV].factor), Lx)
+                            }(VV) * xV;
+                            for (let UV = 0; UV < 3; UV++) {
+                              var YV;
+                              VV.pos[UV] += VV.dir[UV] * JV, VV.dir[UV] += (null !== (YV = eV[UV]) && void 0 !== YV ? YV : 0) * xV
                             }
                             return !0
                           }
 
-                          function Vi(MM) {
-                            return String(Math.round(1e6 * MM) / 1e6)
+                          function Sx(VV) {
+                            return String(Math.round(1e6 * VV) / 1e6)
                           }
 
-                          function ci(MM) {
-                            return `[${MM.map(Vi).join(", ")}]`
+                          function Ix(VV) {
+                            return `[${VV.map(Sx).join(", ")}]`
                           }
 
-                          function MO(MM, rM) {
-                            const iM = `${rM}    `;
-                            return `[\n${(Bi(MM)?MM.map((MM=>{const rM=[`${iM}    timeFraction: ${Vi(MM.timeFraction)},`,`${iM}    minColor: ${ci(MM.minColor)},`];return MM.maxColor&&rM.push(`${iM}    maxColor: ${ci(MM.maxColor)},`),`${iM}{\n${rM.join("\n")}\n${iM}},`})):MM.map((MM=>`
+                          function dx(VV, eV) {
+                            const xV = `${eV}    `;
+                            return `[\n${(fx(VV)?VV.map((VV=>{const eV=[`${xV}    timeFraction: ${Sx(VV.timeFraction)},`,`${xV}    minColor: ${Ix(VV.minColor)},`];return VV.maxColor&&eV.push(`${xV}    maxColor: ${Ix(VV.maxColor)},`),`${xV}{\n${eV.join("\n")}\n${xV}},`})):VV.map((VV=>`
                             $ {
-                              iM
+                              xV
                             } {
                               color: $ {
-                                ci(MM.color)
+                                Ix(VV.color)
                               }
-                            }, `))).join("\n")}\n${rM}]`
+                            }, `))).join("\n")}\n${eV}]`
                           }
-                          const rO = "let [x, y, z] = thisPos\ny += 1\napi.playParticleEffect({\n",
-                            iO = "    pos1: [x, y, z],\n    pos2: [x + 1, y + 1, z + 1],";
-                          const OO = .6;
+                          const Ox = "let [x, y, z] = thisPos\ny += 1\napi.playParticleEffect({\n",
+                            VJ = "    pos1: [x, y, z],\n    pos2: [x + 1, y + 1, z + 1],";
+                          const eJ = .6;
 
-                          function SO(MM, rM) {
-                            return `${rM?"song":"sound"}:${MM}`
+                          function xJ(VV, eV) {
+                            return `${eV?"song":"sound"}:${VV}`
                           }
-                          let jO = {
+                          let JJ = {
                               track: null,
-                              volume: OO
+                              volume: eJ
                             },
-                            aO = null,
-                            PO = 0,
-                            nO = 0;
-                          const QO = new Set;
+                            YJ = null,
+                            UJ = 0,
+                            yJ = 0;
+                          const pJ = new Set;
 
-                          function zO(MM) {
-                            jO = {
-                              ...jO,
-                              ...MM
-                            }, QO.forEach((MM => {
-                              MM()
+                          function QJ(VV) {
+                            JJ = {
+                              ...JJ,
+                              ...VV
+                            }, pJ.forEach((VV => {
+                              VV()
                             }))
                           }
 
-                          function LO(MM) {
-                            jO.track && zO({
+                          function nJ(VV) {
+                            JJ.track && QJ({
                               track: {
-                                ...jO.track,
-                                ...MM
+                                ...JJ.track,
+                                ...VV
                               }
                             })
                           }
 
-                          function mO(MM) {
-                            const [rM, iM] = (0, OM.useState)((() => MM(jO))), SM = (0, OM.useRef)(MM);
-                            return SM.current = MM, (0, OM.useEffect)((() => {
-                              const MM = () => {
-                                iM((() => SM.current(jO)))
+                          function wJ(VV) {
+                            const [eV, xV] = (0, JV.useState)((() => VV(JJ))), YV = (0, JV.useRef)(VV);
+                            return YV.current = VV, (0, JV.useEffect)((() => {
+                              const VV = () => {
+                                xV((() => YV.current(JJ)))
                               };
-                              return QO.add(MM), MM(), () => {
-                                QO.delete(MM)
+                              return pJ.add(VV), VV(), () => {
+                                pJ.delete(VV)
                               }
-                            }), []), rM
+                            }), []), eV
                           }
 
-                          function HO() {
-                            PO++;
-                            const MM = aO;
-                            aO = null, null === MM || void 0 === MM || MM.stop()
+                          function ZJ() {
+                            UJ++;
+                            const VV = YJ;
+                            YJ = null, null === VV || void 0 === VV || VV.stop()
                           }
 
-                          function hO(MM, rM) {
-                            let OM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-                            HO();
-                            const SM = PO,
+                          function vJ(VV, eV) {
+                            let JV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+                            ZJ();
+                            const YV = UJ,
                               {
-                                track: jM
-                              } = jO,
-                              aM = jM && jM.name === MM && jM.isSong === rM ? jM.duration : 0;
-                            nO = OM, zO({
+                                track: UV
+                              } = JJ,
+                              yV = UV && UV.name === VV && UV.isSong === eV ? UV.duration : 0;
+                            yJ = JV, QJ({
                               track: {
-                                name: MM,
-                                isSong: rM,
+                                name: VV,
+                                isSong: eV,
                                 status: "loading",
-                                duration: aM
+                                duration: yV
                               }
-                            }), Promise.all([iM.e(245), iM.e(274)]).then((() => iM(40915))).then((iM => {
+                            }), Promise.all([xV.e(245), xV.e(274)]).then((() => xV(41053))).then((xV => {
                               let {
-                                playDocsSound: jM
-                              } = iM;
-                              SM === PO && (aO = jM(MM, rM, jO.volume, OM, {
-                                onPlay: MM => {
-                                  SM === PO && LO({
+                                playDocsSound: UV
+                              } = xV;
+                              YV === UJ && (YJ = UV(VV, eV, JJ.volume, JV, {
+                                onPlay: VV => {
+                                  YV === UJ && nJ({
                                     status: "playing",
-                                    duration: MM
+                                    duration: VV
                                   })
                                 },
-                                onEnd: MM => {
-                                  var rM, iM;
-                                  SM === PO && (aO = null, MM ? zO({
+                                onEnd: VV => {
+                                  var eV, xV;
+                                  YV === UJ && (YJ = null, VV ? QJ({
                                     track: null
-                                  }) : (nO = null !== (rM = null === (iM = jO.track) || void 0 === iM ? void 0 : iM.duration) && void 0 !== rM ? rM : 0, LO({
+                                  }) : (yJ = null !== (eV = null === (xV = JJ.track) || void 0 === xV ? void 0 : xV.duration) && void 0 !== eV ? eV : 0, nJ({
                                     status: "paused"
                                   })))
                                 }
                               }))
-                            })).catch((rM => {
-                              console.error(`Could not play docs sound ${MM}`, rM), SM === PO && zO({
+                            })).catch((eV => {
+                              console.error(`Could not play docs sound ${VV}`, eV), YV === UJ && QJ({
                                 track: null
                               })
                             }))
                           }
 
-                          function JO() {
+                          function rJ() {
                             const {
-                              track: MM
-                            } = jO;
-                            if (!MM) return;
-                            if ("playing" === MM.status && aO) return nO = aO.XE(), aO.pause(), void LO({
+                              track: VV
+                            } = JJ;
+                            if (!VV) return;
+                            if ("playing" === VV.status && YJ) return yJ = YJ.YF(), YJ.pause(), void nJ({
                               status: "paused"
                             });
-                            if ("loading" === MM.status) return HO(), void LO({
+                            if ("loading" === VV.status) return ZJ(), void nJ({
                               status: "paused"
                             });
-                            if (aO) return void aO.resume();
-                            const rM = MM.duration > 0 && nO >= MM.duration - .05;
-                            hO(MM.name, MM.isSong, rM ? 0 : nO)
+                            if (YJ) return void YJ.resume();
+                            const eV = VV.duration > 0 && yJ >= VV.duration - .05;
+                            vJ(VV.name, VV.isSong, eV ? 0 : yJ)
                           }
 
-                          function dO() {
-                            var MM;
-                            return aO && "playing" === (null === (MM = jO.track) || void 0 === MM ? void 0 : MM.status) ? aO.XE() : nO
+                          function kJ() {
+                            var VV;
+                            return YJ && "playing" === (null === (VV = JJ.track) || void 0 === VV ? void 0 : VV.status) ? YJ.YF() : yJ
                           }
 
-                          function yO(MM) {
-                            var rM;
-                            null === (rM = aO) || void 0 === rM || rM.setVolume(MM), zO({
-                              volume: MM
+                          function bJ(VV) {
+                            var eV;
+                            null === (eV = YJ) || void 0 === eV || eV.setVolume(VV), QJ({
+                              volume: VV
                             })
                           }
 
-                          function lO() {
-                            HO(), nO = 0, zO({
+                          function EJ() {
+                            ZJ(), yJ = 0, QJ({
                               track: null
                             })
                           }
-                          const EO = (0, OM.createContext)(null);
-                          let UO = null;
+                          const BJ = (0, JV.createContext)(null);
+                          let jJ = null;
 
-                          function GO() {
-                            const [MM, rM] = (0, OM.useState)(null);
-                            return (0, OM.useEffect)((() => {
-                              let MM = !1;
-                              return UO ??= Promise.all([iM.e(84), iM.e(87), iM.e(85), iM.e(86), iM.e(202), iM.e(113), iM.e(249)]).then((() => iM(40906))), UO.then((iM => {
-                                MM || rM(iM)
-                              }), (MM => {
-                                console.error("Could not load the docs gallery's textures", MM), UO = null
+                          function qJ() {
+                            const [VV, eV] = (0, JV.useState)(null);
+                            return (0, JV.useEffect)((() => {
+                              let VV = !1;
+                              return jJ ??= Promise.all([xV.e(84), xV.e(87), xV.e(85), xV.e(86), xV.e(202), xV.e(113), xV.e(249)]).then((() => xV(41047))), jJ.then((xV => {
+                                VV || eV(xV)
+                              }), (VV => {
+                                console.error("Could not load the docs gallery's textures", VV), jJ = null
                               })), () => {
-                                MM = !0
+                                VV = !0
                               }
-                            }), []), MM
+                            }), []), VV
                           }
-                          const CO = 24,
-                            eO = /^[a-z]+_(\d+(_\d+)?|none)$/;
+                          const tJ = 24,
+                            FJ = /^[a-z]+_(\d+(_\d+)?|none)$/;
 
-                          function bO(MM, rM) {
-                            const iM = "skins" === MM ? function(MM, rM) {
-                              const iM = fi.find((rM => MM.startsWith(rM.heading)));
-                              return iM ? function(MM, rM) {
-                                return `${MM}-${rM}`
-                              }(iM.prefix, rM) : null
-                            }(rM.heading, rM.name) : null;
-                            return null === iM ? null : `${oi}/${iM}.webp`
+                          function TJ(VV, eV) {
+                            const xV = "skins" === VV ? function(VV, eV) {
+                              const xV = Cx.find((eV => VV.startsWith(eV.heading)));
+                              return xV ? function(VV, eV) {
+                                return `${VV}-${eV}`
+                              }(xV.prefix, eV) : null
+                            }(eV.heading, eV.name) : null;
+                            return null === xV ? null : `${ix}/${xV}.webp`
                           }
 
-                          function wO(MM) {
+                          function PJ(VV) {
                             let {
-                              kind: rM,
-                              entry: iM,
-                              assets: SM,
-                              renderedUrl: aM
-                            } = MM;
+                              kind: eV,
+                              entry: xV,
+                              assets: YV,
+                              renderedUrl: yV
+                            } = VV;
                             const {
-                              name: PM
-                            } = iM, [nM, QM] = (0, OM.useState)(!1);
-                            if ("icons" === rM && Yr(PM)) return (0, hM.jsx)(Gi.b, {
+                              name: pV
+                            } = xV, [QV, nV] = (0, JV.useState)(!1);
+                            if ("icons" === eV && ce(pV)) return (0, kV.jsx)(tx.b, {
                               className: "DocsTileIcon",
-                              name: PM
+                              name: pV
                             });
-                            let zM = null;
-                            var LM;
-                            if ("icons" === rM) zM = null !== (LM = null === SM || void 0 === SM ? void 0 : SM.getIngameIconUrl(PM)) && void 0 !== LM ? LM : null;
-                            else if ("particles" === rM) {
-                              var mM, HM, JM;
-                              zM = null !== (mM = null === SM || void 0 === SM ? void 0 : SM.getParticleTextureUrl(null !== (HM = null === (JM = Ai(PM)) || void 0 === JM ? void 0 : JM.texture) && void 0 !== HM ? HM : PM)) && void 0 !== mM ? mM : null
-                            } else "skins" === rM && (zM = null !== aM && void 0 !== aM ? aM : eO.test(PM) ? `/textures/charSkins/previews/${PM}_preview.png` : null);
-                            return !zM || nM ? (0, hM.jsx)(dM, {
+                            let wV = null;
+                            var ZV;
+                            if ("icons" === eV) wV = null !== (ZV = null === YV || void 0 === YV ? void 0 : YV.getIngameIconUrl(pV)) && void 0 !== ZV ? ZV : null;
+                            else if ("particles" === eV) {
+                              var vV, rV, bV;
+                              wV = null !== (vV = null === YV || void 0 === YV ? void 0 : YV.getParticleTextureUrl(null !== (rV = null === (bV = cx(pV)) || void 0 === bV ? void 0 : bV.texture) && void 0 !== rV ? rV : pV)) && void 0 !== vV ? vV : null
+                            } else "skins" === eV && (wV = null !== yV && void 0 !== yV ? yV : FJ.test(pV) ? `/textures/charSkins/previews/${pV}_preview.png` : null);
+                            return !wV || QV ? (0, kV.jsx)(EV, {
                               className: "DocsTileIcon Placeholder",
-                              name: "skins" === rM ? "person" : "image"
-                            }) : (0, hM.jsx)("img", {
-                              className: jM()("DocsTileImage", {
-                                Pixelated: "skins" !== rM
+                              name: "skins" === eV ? "person" : "image"
+                            }) : (0, kV.jsx)("img", {
+                              className: UV()("DocsTileImage", {
+                                Pixelated: "skins" !== eV
                               }),
-                              src: zM,
-                              srcSet: zM === aM ? `${zM} 2x` : void 0,
+                              src: wV,
+                              srcSet: wV === yV ? `${wV} 2x` : void 0,
                               alt: "",
                               loading: "lazy",
                               onError: () => {
-                                console.warn(`Docs gallery: could not load ${zM}`), QM(!0)
+                                console.warn(`Docs gallery: could not load ${wV}`), nV(!0)
                               }
                             })
                           }
 
-                          function tO(MM) {
+                          function AJ(VV) {
                             let {
-                              entry: rM,
-                              isSong: iM
-                            } = MM;
-                            const OM = mO((MM => {
+                              entry: eV,
+                              isSong: xV
+                            } = VV;
+                            const JV = wJ((VV => {
                                 let {
-                                  track: OM
-                                } = MM;
-                                return (null === OM || void 0 === OM ? void 0 : OM.name) === rM.name && OM.isSong === iM ? OM.status : null
+                                  track: JV
+                                } = VV;
+                                return (null === JV || void 0 === JV ? void 0 : JV.name) === eV.name && JV.isSong === xV ? JV.status : null
                               })),
-                              SM = null !== OM && "paused" !== OM;
-                            return (0, hM.jsxs)("button", {
+                              YV = null !== JV && "paused" !== JV;
+                            return (0, kV.jsxs)("button", {
                               type: "button",
-                              id: rM.anchor,
-                              className: jM()("DocsSoundTile", {
-                                Playing: SM
+                              id: eV.anchor,
+                              className: UV()("DocsSoundTile", {
+                                Playing: YV
                               }),
-                              "data-docs-track": SO(rM.name, iM),
-                              "aria-label": SM ? `Pause ${rM.name}` : `Play ${rM.name}`,
+                              "data-docs-track": xJ(eV.name, xV),
+                              "aria-label": YV ? `Pause ${eV.name}` : `Play ${eV.name}`,
                               onClick: () => {
-                                null !== OM ? JO() : hO(rM.name, iM)
+                                null !== JV ? rJ() : vJ(eV.name, xV)
                               },
-                              children: [(0, hM.jsx)("span", {
+                              children: [(0, kV.jsx)("span", {
                                 className: "DocsSoundPlay",
-                                children: (0, hM.jsx)(dM, {
-                                  name: SM ? "pause" : "play"
+                                children: (0, kV.jsx)(EV, {
+                                  name: YV ? "pause" : "play"
                                 })
-                              }), (0, hM.jsx)("code", {
+                              }), (0, kV.jsx)("code", {
                                 className: "DocsSoundName",
-                                children: rM.name
-                              }), rM.caption && (0, hM.jsx)("span", {
+                                children: eV.name
+                              }), eV.caption && (0, kV.jsx)("span", {
                                 className: "DocsSoundCaption",
-                                children: rM.caption
+                                children: eV.caption
                               })]
                             })
                           }
 
-                          function gO(MM) {
+                          function NJ(VV) {
                             let {
-                              kind: rM,
-                              names: iM,
-                              isSongs: SM
-                            } = MM;
-                            const aM = GO(),
-                              [PM, nM] = lM(),
-                              QM = !1 === (null === PM || void 0 === PM ? void 0 : PM.failed) ? PM.text : null,
-                              zM = (0, OM.useContext)(EO),
-                              [LM, mM] = (0, OM.useState)(""),
-                              HM = LM.trim().toLowerCase(),
-                              JM = HM ? iM.filter((MM => MM.name.toLowerCase().includes(HM))) : iM;
-                            return (0, hM.jsxs)("div", {
+                              kind: eV,
+                              names: xV,
+                              isSongs: YV
+                            } = VV;
+                            const yV = qJ(),
+                              [pV, QV] = jV(),
+                              nV = !1 === (null === pV || void 0 === pV ? void 0 : pV.failed) ? pV.text : null,
+                              wV = (0, JV.useContext)(BJ),
+                              [ZV, vV] = (0, JV.useState)(""),
+                              rV = ZV.trim().toLowerCase(),
+                              bV = rV ? xV.filter((VV => VV.name.toLowerCase().includes(rV))) : xV;
+                            return (0, kV.jsxs)("div", {
                               className: "DocsGallery",
-                              children: [iM.length > CO && (0, hM.jsx)(Ui, {
+                              children: [xV.length > tJ && (0, kV.jsx)(qx, {
                                 className: "DocsGalleryFilter",
-                                value: LM,
-                                placeholder: `Filter ${iM.length} names\u2026`,
+                                value: ZV,
+                                placeholder: `Filter ${xV.length} names\u2026`,
                                 label: "Filter names",
-                                onChange: mM,
-                                count: HM ? {
-                                  visible: JM.length,
-                                  total: iM.length
+                                onChange: vV,
+                                count: rV ? {
+                                  visible: bV.length,
+                                  total: xV.length
                                 } : null
-                              }), (0, hM.jsx)("div", {
-                                className: jM()("DocsGalleryGrid", `Kind-${rM}`, {
-                                  Songs: SM
+                              }), (0, kV.jsx)("div", {
+                                className: UV()("DocsGalleryGrid", `Kind-${eV}`, {
+                                  Songs: YV
                                 }),
-                                children: JM.map((MM => {
-                                  if ("sounds" === rM) return (0, hM.jsx)(tO, {
-                                    entry: MM,
-                                    isSong: SM
-                                  }, MM.anchor);
-                                  if (zM && "particles" === rM && Ai(MM.name)) return (0, hM.jsxs)("button", {
+                                children: bV.map((VV => {
+                                  if ("sounds" === eV) return (0, kV.jsx)(AJ, {
+                                    entry: VV,
+                                    isSong: YV
+                                  }, VV.anchor);
+                                  if (wV && "particles" === eV && cx(VV.name)) return (0, kV.jsxs)("button", {
                                     type: "button",
-                                    id: MM.anchor,
-                                    className: jM()("DocsTile Previewable", {
-                                      Copied: QM === MM.name
+                                    id: VV.anchor,
+                                    className: UV()("DocsTile Previewable", {
+                                      Copied: nV === VV.name
                                     }),
-                                    title: `Play "${MM.name}" in the playground and copy its name`,
+                                    title: `Play "${VV.name}" in the playground and copy its name`,
                                     onClick: () => {
-                                      zM(MM.name), nM(MM.name)
+                                      wV(VV.name), QV(VV.name)
                                     },
-                                    children: [(0, hM.jsxs)("span", {
+                                    children: [(0, kV.jsxs)("span", {
                                       className: "DocsTilePreview",
-                                      children: [(0, hM.jsx)(wO, {
-                                        kind: rM,
-                                        entry: MM,
-                                        assets: aM,
+                                      children: [(0, kV.jsx)(PJ, {
+                                        kind: eV,
+                                        entry: VV,
+                                        assets: yV,
                                         renderedUrl: null
-                                      }), (0, hM.jsx)("span", {
+                                      }), (0, kV.jsx)("span", {
                                         className: "DocsTilePlayBadge",
-                                        children: (0, hM.jsx)(dM, {
+                                        children: (0, kV.jsx)(EV, {
                                           name: "play"
                                         })
                                       })]
-                                    }), (0, hM.jsx)("span", {
+                                    }), (0, kV.jsx)("span", {
                                       className: "DocsTileName",
-                                      children: QM === MM.name ? "Copied!" : MM.name
+                                      children: nV === VV.name ? "Copied!" : VV.name
                                     })]
-                                  }, MM.anchor);
-                                  const iM = bO(rM, MM);
-                                  return (0, hM.jsxs)("button", {
+                                  }, VV.anchor);
+                                  const xV = TJ(eV, VV);
+                                  return (0, kV.jsxs)("button", {
                                     type: "button",
-                                    id: MM.anchor,
-                                    className: jM()("DocsTile", {
-                                      Copied: QM === MM.name
+                                    id: VV.anchor,
+                                    className: UV()("DocsTile", {
+                                      Copied: nV === VV.name
                                     }),
-                                    title: `Copy "${MM.name}"`,
+                                    title: `Copy "${VV.name}"`,
                                     onClick: () => {
-                                      nM(MM.name)
+                                      QV(VV.name)
                                     },
-                                    children: [(0, hM.jsx)("span", {
-                                      className: jM()("DocsTilePreview", {
-                                        Rendered: null !== iM
+                                    children: [(0, kV.jsx)("span", {
+                                      className: UV()("DocsTilePreview", {
+                                        Rendered: null !== xV
                                       }),
-                                      children: (0, hM.jsx)(wO, {
-                                        kind: rM,
-                                        entry: MM,
-                                        assets: aM,
-                                        renderedUrl: iM
+                                      children: (0, kV.jsx)(PJ, {
+                                        kind: eV,
+                                        entry: VV,
+                                        assets: yV,
+                                        renderedUrl: xV
                                       })
-                                    }), (0, hM.jsx)("span", {
+                                    }), (0, kV.jsx)("span", {
                                       className: "DocsTileName",
-                                      children: QM === MM.name ? "Copied!" : MM.name
+                                      children: nV === VV.name ? "Copied!" : VV.name
                                     })]
-                                  }, MM.anchor)
+                                  }, VV.anchor)
                                 }))
                               })]
                             })
                           }
 
-                          function uO(MM) {
+                          function XJ(VV) {
                             let {
-                              kind: rM,
-                              content: iM,
-                              blocks: OM
-                            } = MM;
-                            return (0, hM.jsx)(hM.Fragment, {
-                              children: Zi(rM, iM, OM).map(((MM, iM) => "block" === MM.kind ? (0, hM.jsx)(mi, {
-                                block: MM.block
-                              }, iM) : (0, hM.jsx)(gO, {
-                                kind: rM,
-                                names: MM.names,
-                                isSongs: MM.isSongs
-                              }, iM)))
+                              kind: eV,
+                              content: xV,
+                              blocks: JV
+                            } = VV;
+                            return (0, kV.jsx)(kV.Fragment, {
+                              children: Dx(eV, xV, JV).map(((VV, xV) => "block" === VV.kind ? (0, kV.jsx)(vx, {
+                                block: VV.block
+                              }, xV) : (0, kV.jsx)(NJ, {
+                                kind: eV,
+                                names: VV.names,
+                                isSongs: VV.isSongs
+                              }, xV)))
                             })
                           }
-                          const RO = [{
+                          const MJ = [{
                             pageId: "readme"
                           }, {
                             pageId: "snippets",
@@ -2161,789 +2161,789 @@ export const modules = {
                             countNoun: "options"
                           }];
 
-                          function pO(MM) {
+                          function zJ(VV) {
                             let {
-                              cards: rM = RO,
-                              label: iM = "Start here"
-                            } = MM;
-                            const SM = (0, OM.useContext)(Hr);
-                            return (0, hM.jsx)("nav", {
+                              cards: eV = MJ,
+                              label: xV = "Start here"
+                            } = VV;
+                            const YV = (0, JV.useContext)(re);
+                            return (0, kV.jsx)("nav", {
                               className: "DocsLandingCards",
-                              "aria-label": iM,
-                              children: rM.map((MM => {
+                              "aria-label": xV,
+                              children: eV.map((VV => {
                                 let {
-                                  pageId: rM,
-                                  countNoun: iM
-                                } = MM;
-                                const OM = fM(rM);
-                                return (0, hM.jsxs)(aM.b, {
-                                  to: FM(SM, OM),
+                                  pageId: eV,
+                                  countNoun: xV
+                                } = VV;
+                                const JV = oV(eV);
+                                return (0, kV.jsxs)(yV.b, {
+                                  to: mV(YV, JV),
                                   className: "DocsLandingCard",
-                                  children: [(0, hM.jsx)("span", {
+                                  children: [(0, kV.jsx)("span", {
                                     className: "DocsLandingCardIcon",
-                                    children: (0, hM.jsx)(dM, {
-                                      name: OM.icon
+                                    children: (0, kV.jsx)(EV, {
+                                      name: JV.icon
                                     })
-                                  }), (0, hM.jsx)("span", {
+                                  }), (0, kV.jsx)("span", {
                                     className: "DocsLandingCardTitle",
-                                    children: OM.title
-                                  }), (0, hM.jsx)("span", {
+                                    children: JV.title
+                                  }), (0, kV.jsx)("span", {
                                     className: "DocsLandingCardSummary",
-                                    children: OM.summary
-                                  }), iM && (0, hM.jsxs)("span", {
+                                    children: JV.summary
+                                  }), xV && (0, kV.jsxs)("span", {
                                     className: "DocsLandingCardCount",
-                                    children: [NM(OM).sections.length, " ", iM]
+                                    children: [hV(JV).sections.length, " ", xV]
                                   })]
-                                }, rM)
+                                }, eV)
                               }))
                             })
                           }
-                          const WO = 240;
+                          const GJ = 240;
 
-                          function sO(MM) {
+                          function WJ(VV) {
                             let {
-                              faces: rM
-                            } = MM;
-                            return (0, hM.jsxs)("span", {
+                              faces: eV
+                            } = VV;
+                            return (0, kV.jsxs)("span", {
                               className: "DocsCube",
                               "aria-hidden": "true",
-                              children: [(0, hM.jsx)("span", {
+                              children: [(0, kV.jsx)("span", {
                                 className: "DocsCubeFace Top",
                                 style: {
-                                  backgroundImage: `url("${rM.top}")`
+                                  backgroundImage: `url("${eV.top}")`
                                 }
-                              }), (0, hM.jsx)("span", {
+                              }), (0, kV.jsx)("span", {
                                 className: "DocsCubeFace Left",
                                 style: {
-                                  backgroundImage: `url("${rM.left}")`
+                                  backgroundImage: `url("${eV.left}")`
                                 }
-                              }), (0, hM.jsx)("span", {
+                              }), (0, kV.jsx)("span", {
                                 className: "DocsCubeFace Right",
                                 style: {
-                                  backgroundImage: `url("${rM.right}")`
+                                  backgroundImage: `url("${eV.right}")`
                                 }
                               })]
                             })
                           }
 
-                          function DO(MM) {
+                          function RJ(VV) {
                             let {
-                              src: rM
-                            } = MM;
-                            const [iM, SM] = (0, OM.useState)(!1);
-                            return iM ? null : (0, hM.jsx)("img", {
-                              src: rM,
+                              src: eV
+                            } = VV;
+                            const [xV, YV] = (0, JV.useState)(!1);
+                            return xV ? null : (0, kV.jsx)("img", {
+                              src: eV,
                               alt: "",
                               loading: "lazy",
                               onError: () => {
-                                console.warn(`Docs catalogue: could not load ${rM}`), SM(!0)
+                                console.warn(`Docs catalogue: could not load ${eV}`), YV(!0)
                               }
                             })
                           }
 
-                          function kO(MM) {
+                          function gJ(VV) {
                             let {
-                              kind: rM
-                            } = MM;
-                            const iM = Ei(rM),
-                              SM = GO(),
-                              aM = (0, PM.u)(),
-                              [nM, QM] = (0, OM.useState)(""),
-                              [zM, LM] = (0, OM.useState)(null),
-                              [mM, HM] = (0, OM.useState)(WO),
-                              [JM, yM] = (0, OM.useState)(null),
-                              lM = (0, OM.useRef)(null),
-                              UM = nM.trim().toLowerCase();
-                            (0, OM.useEffect)((() => {
-                              const MM = (0, bM.q)(aM.hash),
-                                OM = iM.entries.find((iM => Di(rM, iM.name) === MM));
-                              if (OM) lM.current = OM.name, QM(OM.name), LM(null), yM(OM.name);
-                              else if (null !== lM.current) {
-                                const MM = lM.current;
-                                lM.current = null, QM((rM => rM === MM ? "" : rM)), yM(null)
+                              kind: eV
+                            } = VV;
+                            const xV = jx(eV),
+                              YV = qJ(),
+                              yV = (0, pV.r)(),
+                              [QV, nV] = (0, JV.useState)(""),
+                              [wV, ZV] = (0, JV.useState)(null),
+                              [vV, rV] = (0, JV.useState)(GJ),
+                              [bV, BV] = (0, JV.useState)(null),
+                              jV = (0, JV.useRef)(null),
+                              tV = QV.trim().toLowerCase();
+                            (0, JV.useEffect)((() => {
+                              const VV = (0, AV.v)(yV.hash),
+                                JV = xV.entries.find((xV => Rx(eV, xV.name) === VV));
+                              if (JV) jV.current = JV.name, nV(JV.name), ZV(null), BV(JV.name);
+                              else if (null !== jV.current) {
+                                const VV = jV.current;
+                                jV.current = null, nV((eV => eV === VV ? "" : eV)), BV(null)
                               }
-                            }), [iM, rM, aM.hash, aM.key]), (0, OM.useEffect)((() => {
-                              var MM;
-                              null !== JM && (null === (MM = document.getElementById(Di(rM, JM))) || void 0 === MM || MM.scrollIntoView({
+                            }), [xV, eV, yV.hash, yV.key]), (0, JV.useEffect)((() => {
+                              var VV;
+                              null !== bV && (null === (VV = document.getElementById(Rx(eV, bV))) || void 0 === VV || VV.scrollIntoView({
                                 block: "center"
                               }))
-                            }), [rM, JM]);
-                            const GM = iM.entries.filter((MM => (!UM || MM.name.toLowerCase().includes(UM)) && (!zM || MM.variants.includes(zM))));
-                            return (0, hM.jsxs)("div", {
+                            }), [eV, bV]);
+                            const FV = xV.entries.filter((VV => (!tV || VV.name.toLowerCase().includes(tV)) && (!wV || VV.variants.includes(wV))));
+                            return (0, kV.jsxs)("div", {
                               className: "DocsCatalogue",
-                              children: [iM.notes.length > 0 && (0, hM.jsx)("div", {
+                              children: [xV.notes.length > 0 && (0, kV.jsx)("div", {
                                 className: "DocsProse",
-                                children: iM.notes.map((MM => (0, hM.jsx)("p", {
-                                  children: MM
-                                }, MM)))
-                              }), iM.legend.length > 0 && (0, hM.jsx)("div", {
+                                children: xV.notes.map((VV => (0, kV.jsx)("p", {
+                                  children: VV
+                                }, VV)))
+                              }), xV.legend.length > 0 && (0, kV.jsx)("div", {
                                 className: "DocsTableScroll",
-                                children: (0, hM.jsxs)("table", {
+                                children: (0, kV.jsxs)("table", {
                                   className: "DocsTable DocsVariantLegend",
-                                  children: [(0, hM.jsx)("thead", {
-                                    children: (0, hM.jsxs)("tr", {
-                                      children: [(0, hM.jsx)("th", {
+                                  children: [(0, kV.jsx)("thead", {
+                                    children: (0, kV.jsxs)("tr", {
+                                      children: [(0, kV.jsx)("th", {
                                         children: "Code"
-                                      }), (0, hM.jsx)("th", {
+                                      }), (0, kV.jsx)("th", {
                                         children: "Variant"
-                                      }), (0, hM.jsx)("th", {
+                                      }), (0, kV.jsx)("th", {
                                         children: "Name to use"
                                       })]
                                     })
-                                  }), (0, hM.jsx)("tbody", {
-                                    children: iM.legend.map((MM => (0, hM.jsxs)("tr", {
-                                      children: [(0, hM.jsx)("td", {
-                                        children: (0, hM.jsx)("button", {
+                                  }), (0, kV.jsx)("tbody", {
+                                    children: xV.legend.map((VV => (0, kV.jsxs)("tr", {
+                                      children: [(0, kV.jsx)("td", {
+                                        children: (0, kV.jsx)("button", {
                                           type: "button",
-                                          className: jM()("DocsVariantChip", {
-                                            Active: zM === MM.code
+                                          className: UV()("DocsVariantChip", {
+                                            Active: wV === VV.code
                                           }),
-                                          "aria-pressed": zM === MM.code,
-                                          title: `Show only ${rM} with ${MM.meaning} variants`,
+                                          "aria-pressed": wV === VV.code,
+                                          title: `Show only ${eV} with ${VV.meaning} variants`,
                                           onClick: () => {
-                                            LM(zM === MM.code ? null : MM.code)
+                                            ZV(wV === VV.code ? null : VV.code)
                                           },
-                                          children: MM.code
+                                          children: VV.code
                                         })
-                                      }), (0, hM.jsx)("td", {
-                                        children: MM.meaning
-                                      }), (0, hM.jsx)("td", {
-                                        children: (0, hM.jsx)("code", {
+                                      }), (0, kV.jsx)("td", {
+                                        children: VV.meaning
+                                      }), (0, kV.jsx)("td", {
+                                        children: (0, kV.jsx)("code", {
                                           className: "DocsInlineCode",
-                                          children: MM.usage
+                                          children: VV.usage
                                         })
                                       })]
-                                    }, MM.code)))
+                                    }, VV.code)))
                                   })]
                                 })
-                              }), iM.examples.length > 0 && (0, hM.jsx)(eM, {
+                              }), xV.examples.length > 0 && (0, kV.jsx)(PV, {
                                 lang: "text",
-                                code: iM.examples.join("\n")
-                              }), (0, hM.jsx)(Ui, {
+                                code: xV.examples.join("\n")
+                              }), (0, kV.jsx)(qx, {
                                 className: "DocsFilterBar",
-                                value: nM,
-                                placeholder: `Search ${iM.entries.length} ${rM}\u2026`,
-                                label: `Search ${rM}`,
-                                onChange: MM => {
-                                  QM(MM), HM(WO)
+                                value: QV,
+                                placeholder: `Search ${xV.entries.length} ${eV}\u2026`,
+                                label: `Search ${eV}`,
+                                onChange: VV => {
+                                  nV(VV), rV(GJ)
                                 },
-                                count: UM || zM ? {
-                                  visible: GM.length,
-                                  total: iM.entries.length
+                                count: tV || wV ? {
+                                  visible: FV.length,
+                                  total: xV.entries.length
                                 } : null,
-                                children: zM && (0, hM.jsxs)("button", {
+                                children: wV && (0, kV.jsxs)("button", {
                                   type: "button",
                                   className: "DocsVariantChip Active",
                                   onClick: () => {
-                                    LM(null)
+                                    ZV(null)
                                   },
-                                  children: [zM, " ", (0, hM.jsx)(dM, {
+                                  children: [wV, " ", (0, kV.jsx)(EV, {
                                     name: "cross"
                                   })]
                                 })
-                              }), (0, hM.jsx)("div", {
+                              }), (0, kV.jsx)("div", {
                                 className: "DocsCatalogueGrid",
-                                children: GM.slice(0, mM).map((MM => {
-                                  const iM = "blocks" === rM ? null === SM || void 0 === SM ? void 0 : SM.getBlockFaces(MM.name) : null,
-                                    OM = SM && !iM ? SM.getItemTextureUrl(MM.name) : null;
-                                  return (0, hM.jsxs)("div", {
-                                    id: Di(rM, MM.name),
-                                    className: jM()("DocsCatalogueTile", {
-                                      Linked: MM.name === JM
+                                children: FV.slice(0, vV).map((VV => {
+                                  const xV = "blocks" === eV ? null === YV || void 0 === YV ? void 0 : YV.getBlockFaces(VV.name) : null,
+                                    JV = YV && !xV ? YV.getItemTextureUrl(VV.name) : null;
+                                  return (0, kV.jsxs)("div", {
+                                    id: Rx(eV, VV.name),
+                                    className: UV()("DocsCatalogueTile", {
+                                      Linked: VV.name === bV
                                     }),
-                                    children: [(0, hM.jsxs)("span", {
+                                    children: [(0, kV.jsxs)("span", {
                                       className: "DocsCatalogueTexture",
-                                      children: [iM && (0, hM.jsx)(sO, {
-                                        faces: iM
-                                      }), OM && (0, hM.jsx)(DO, {
-                                        src: OM
+                                      children: [xV && (0, kV.jsx)(WJ, {
+                                        faces: xV
+                                      }), JV && (0, kV.jsx)(RJ, {
+                                        src: JV
                                       })]
-                                    }), (0, hM.jsx)("span", {
+                                    }), (0, kV.jsx)("span", {
                                       className: "DocsCatalogueName",
-                                      children: MM.name
-                                    }), MM.variants.length > 0 && (0, hM.jsx)("span", {
+                                      children: VV.name
+                                    }), VV.variants.length > 0 && (0, kV.jsx)("span", {
                                       className: "DocsCatalogueVariants",
-                                      children: MM.variants.map((MM => (0, hM.jsx)("span", {
-                                        children: MM
-                                      }, MM)))
-                                    }), (0, hM.jsx)(EM, {
-                                      text: MM.name,
+                                      children: VV.variants.map((VV => (0, kV.jsx)("span", {
+                                        children: VV
+                                      }, VV)))
+                                    }), (0, kV.jsx)(qV, {
+                                      text: VV.name,
                                       className: "DocsCatalogueCopy"
                                     })]
-                                  }, MM.name)
+                                  }, VV.name)
                                 }))
-                              }), GM.length > mM && (0, hM.jsxs)("button", {
+                              }), FV.length > vV && (0, kV.jsxs)("button", {
                                 type: "button",
                                 className: "DocsShowMore",
                                 onClick: () => {
-                                  HM(GM.length)
+                                  rV(FV.length)
                                 },
-                                children: ["Show all ", GM.length]
-                              }), 0 === GM.length && (0, hM.jsxs)("p", {
+                                children: ["Show all ", FV.length]
+                              }), 0 === FV.length && (0, kV.jsxs)("p", {
                                 className: "DocsEmpty",
-                                children: ["No ", rM, " match."]
+                                children: ["No ", eV, " match."]
                               })]
                             })
                           }
-                          var ZO = iM(5221),
-                            oO = iM(1663);
-                          const fO = .95 * ZO.e;
+                          var DJ = xV(5323),
+                            iJ = xV(1682);
+                          const CJ = .95 * DJ.b;
 
-                          function YO(MM) {
-                            return /^\s*```/.test(MM)
+                          function aJ(VV) {
+                            return /^\s*```/.test(VV)
                           }
 
-                          function NO(MM, rM) {
-                            const iM = [
+                          function oJ(VV, eV) {
+                            const xV = [
                               []
                             ];
-                            let OM = !1;
-                            for (const SM of MM.split("\n")) !OM && rM(SM) && iM.at(-1).length > 0 && iM.push([]), YO(SM) && (OM = !OM), iM.at(-1).push(SM);
-                            return iM.map((MM => MM.join("\n").trim())).filter(Boolean)
+                            let JV = !1;
+                            for (const YV of VV.split("\n")) !JV && eV(YV) && xV.at(-1).length > 0 && xV.push([]), aJ(YV) && (JV = !JV), xV.at(-1).push(YV);
+                            return xV.map((VV => VV.join("\n").trim())).filter(Boolean)
                           }
 
-                          function AO(MM, rM) {
-                            const iM = `${"#".repeat(rM)} `,
-                              OM = [];
-                            let SM = !1;
-                            for (const jM of MM.split("\n")) YO(jM) ? SM = !SM : !SM && jM.startsWith(iM) && OM.push(jM.slice(iM.length).trim());
-                            return OM
+                          function cJ(VV, eV) {
+                            const xV = `${"#".repeat(eV)} `,
+                              JV = [];
+                            let YV = !1;
+                            for (const UV of VV.split("\n")) aJ(UV) ? YV = !YV : !YV && UV.startsWith(xV) && JV.push(UV.slice(xV.length).trim());
+                            return JV
                           }
 
-                          function xO(MM) {
-                            return MM.markdown.replace(/^\s*# .*\n/, "").trim()
+                          function hJ(VV) {
+                            return VV.markdown.replace(/^\s*# .*\n/, "").trim()
                           }
-                          class vO {
-                            constructor(MM, rM) {
-                              this.origin = rM, this.pages = void 0, this.partPaths = new Map;
-                              const iM = MM.map((MM => {
-                                const rM = rM => this.resolveLinks(MM, rM).length,
-                                  iM = function(MM, rM) {
-                                    const iM = MM.map((MM => rM(MM.markdown) + 2)),
-                                      OM = iM.reduce(((MM, rM) => MM + rM), 0),
-                                      SM = OM / Math.ceil(OM / fO),
-                                      jM = [];
-                                    let aM = 0;
-                                    return MM.forEach(((MM, rM) => {
-                                      const OM = iM[rM];
-                                      (0 === jM.length || aM + OM > fO || aM + OM / 2 > SM) && (jM.push([]), aM = 0), jM.at(-1).push(MM), aM += OM
-                                    })), jM
-                                  }(function(MM, rM) {
-                                    return NO(MM, (MM => MM.startsWith("## "))).flatMap((MM => {
-                                      var iM;
-                                      const OM = null !== (iM = AO(MM, 2)[0]) && void 0 !== iM ? iM : "";
-                                      if (rM(MM) <= fO) return [{
-                                        markdown: MM,
-                                        section: OM
+                          class lJ {
+                            constructor(VV, eV) {
+                              this.origin = eV, this.pages = void 0, this.partPaths = new Map;
+                              const xV = VV.map((VV => {
+                                const eV = eV => this.resolveLinks(VV, eV).length,
+                                  xV = function(VV, eV) {
+                                    const xV = VV.map((VV => eV(VV.markdown) + 2)),
+                                      JV = xV.reduce(((VV, eV) => VV + eV), 0),
+                                      YV = JV / Math.ceil(JV / CJ),
+                                      UV = [];
+                                    let yV = 0;
+                                    return VV.forEach(((VV, eV) => {
+                                      const JV = xV[eV];
+                                      (0 === UV.length || yV + JV > CJ || yV + JV / 2 > YV) && (UV.push([]), yV = 0), UV.at(-1).push(VV), yV += JV
+                                    })), UV
+                                  }(function(VV, eV) {
+                                    return oJ(VV, (VV => VV.startsWith("## "))).flatMap((VV => {
+                                      var xV;
+                                      const JV = null !== (xV = cJ(VV, 2)[0]) && void 0 !== xV ? xV : "";
+                                      if (eV(VV) <= CJ) return [{
+                                        markdown: VV,
+                                        section: JV
                                       }];
-                                      let SM = !1,
-                                        jM = "";
-                                      return NO(MM, (MM => {
-                                        const rM = SM && "" !== MM.trim();
-                                        return SM = "" === MM.trim(), rM
-                                      })).map((MM => {
-                                        var rM;
-                                        const iM = AO(MM, 3),
-                                          SM = MM.startsWith("### ") ? iM[0] : jM;
-                                        return jM = null !== (rM = iM.at(-1)) && void 0 !== rM ? rM : jM, {
-                                          markdown: MM,
-                                          section: OM || SM
+                                      let YV = !1,
+                                        UV = "";
+                                      return oJ(VV, (VV => {
+                                        const eV = YV && "" !== VV.trim();
+                                        return YV = "" === VV.trim(), eV
+                                      })).map((VV => {
+                                        var eV;
+                                        const xV = cJ(VV, 3),
+                                          YV = VV.startsWith("### ") ? xV[0] : UV;
+                                        return UV = null !== (eV = xV.at(-1)) && void 0 !== eV ? eV : UV, {
+                                          markdown: VV,
+                                          section: JV || YV
                                         }
                                       }))
                                     }))
-                                  }(xO(MM), rM), rM);
+                                  }(hJ(VV), eV), eV);
                                 return {
-                                  page: MM,
-                                  groups: iM.length > 1 ? iM : []
+                                  page: VV,
+                                  groups: xV.length > 1 ? xV : []
                                 }
                               }));
                               for (const {
-                                  page: OM,
-                                  groups: SM
+                                  page: JV,
+                                  groups: YV
                                 }
-                                of iM) SM.forEach(((MM, rM) => {
-                                const iM = (0, ZO.u)(OM.slug, rM);
-                                for (const SM of MM.flatMap((MM => [...AO(MM.markdown, 2), ...AO(MM.markdown, 3)]))) {
-                                  const MM = `${OM.id}#${(0,bM.r)(SM)}`;
-                                  this.partPaths.has(MM) || this.partPaths.set(MM, iM)
+                                of xV) YV.forEach(((VV, eV) => {
+                                const xV = (0, DJ.w)(JV.slug, eV);
+                                for (const YV of VV.flatMap((VV => [...cJ(VV.markdown, 2), ...cJ(VV.markdown, 3)]))) {
+                                  const VV = `${JV.id}#${(0,AV.w)(YV)}`;
+                                  this.partPaths.has(VV) || this.partPaths.set(VV, xV)
                                 }
                               }));
-                              this.pages = iM.map((MM => {
+                              this.pages = xV.map((VV => {
                                 let {
-                                  page: rM,
-                                  groups: iM
-                                } = MM;
+                                  page: eV,
+                                  groups: xV
+                                } = VV;
                                 return {
-                                  page: rM,
-                                  path: (0, ZO.q)(rM.slug),
-                                  markdown: `# ${rM.title}\n\n${this.resolveLinks(rM,xO(rM))}\n`,
-                                  parts: iM.map(((MM, OM) => this.renderPart(rM, MM, OM, iM.length)))
+                                  page: eV,
+                                  path: (0, DJ.u)(eV.slug),
+                                  markdown: `# ${eV.title}\n\n${this.resolveLinks(eV,hJ(eV))}\n`,
+                                  parts: xV.map(((VV, JV) => this.renderPart(eV, VV, JV, xV.length)))
                                 }
                               }))
                             }
-                            url(MM) {
-                              return `${this.origin}${MM}`
+                            url(VV) {
+                              return `${this.origin}${VV}`
                             }
-                            getPage(MM) {
-                              return this.pages.find((rM => rM.page.id === MM))
+                            getPage(VV) {
+                              return this.pages.find((eV => eV.page.id === VV))
                             }
                             oversizedFiles() {
-                              return this.pages.flatMap((MM => (MM.parts.length > 0 ? MM.parts : [{
-                                path: MM.path,
+                              return this.pages.flatMap((VV => (VV.parts.length > 0 ? VV.parts : [{
+                                path: VV.path,
                                 label: "",
-                                markdown: MM.markdown
-                              }]).filter((MM => MM.markdown.length > ZO.e))))
+                                markdown: VV.markdown
+                              }]).filter((VV => VV.markdown.length > DJ.b))))
                             }
-                            markdownUrl(MM, rM) {
-                              const iM = rM && this.partPaths.get(`${MM.id}#${rM}`) || (0, ZO.q)(MM.slug);
-                              return this.url(rM ? `${iM}#${rM}` : iM)
+                            markdownUrl(VV, eV) {
+                              const xV = eV && this.partPaths.get(`${VV.id}#${eV}`) || (0, DJ.u)(VV.slug);
+                              return this.url(eV ? `${xV}#${eV}` : xV)
                             }
-                            resolveLinks(MM, rM) {
-                              return rM.replace(/\]\((#[^)]+)\)/g, ((rM, iM) => {
-                                var OM;
-                                const SM = null !== (OM = xM(iM)) && void 0 !== OM ? OM : this.samePageTarget(MM, iM);
-                                return SM ? `](${this.markdownUrl(SM.page,SM.anchor)})` : rM
+                            resolveLinks(VV, eV) {
+                              return eV.replace(/\]\((#[^)]+)\)/g, ((eV, xV) => {
+                                var JV;
+                                const YV = null !== (JV = LV(xV)) && void 0 !== JV ? JV : this.samePageTarget(VV, xV);
+                                return YV ? `](${this.markdownUrl(YV.page,YV.anchor)})` : eV
                               }))
                             }
-                            samePageTarget(MM, rM) {
-                              const iM = (0, bM.r)(rM.slice(1));
-                              return AM(MM, iM) ? {
-                                page: MM,
-                                anchor: iM
+                            samePageTarget(VV, eV) {
+                              const xV = (0, AV.w)(eV.slice(1));
+                              return lV(VV, xV) ? {
+                                page: VV,
+                                anchor: xV
                               } : null
                             }
-                            renderPart(MM, rM, iM, OM) {
-                              const SM = function(MM) {
-                                  const rM = MM.map((MM => MM.section)).filter(Boolean);
-                                  if (0 === rM.length) return "";
-                                  const iM = rM[0],
-                                    OM = rM.at(-1);
-                                  return iM === OM ? iM : `${iM} to ${OM}`
-                                }(rM),
-                                jM = rM.map((MM => MM.markdown)).join("\n\n"),
-                                aM = SM ? `It covers ${SM}. ` : "",
-                                PM = `Part ${iM+1} of ${OM} of [${MM.title}](${this.url((0,ZO.q)(MM.slug))}). ${aM}[llms.txt](${this.url(ZO.h)}) lists every part.`;
+                            renderPart(VV, eV, xV, JV) {
+                              const YV = function(VV) {
+                                  const eV = VV.map((VV => VV.section)).filter(Boolean);
+                                  if (0 === eV.length) return "";
+                                  const xV = eV[0],
+                                    JV = eV.at(-1);
+                                  return xV === JV ? xV : `${xV} to ${JV}`
+                                }(eV),
+                                UV = eV.map((VV => VV.markdown)).join("\n\n"),
+                                yV = YV ? `It covers ${YV}. ` : "",
+                                pV = `Part ${xV+1} of ${JV} of [${VV.title}](${this.url((0,DJ.u)(VV.slug))}). ${yV}[llms.txt](${this.url(DJ.i)}) lists every part.`;
                               return {
-                                path: (0, ZO.u)(MM.slug, iM),
-                                label: SM,
-                                markdown: `# ${MM.title}, part ${iM+1} of ${OM}\n\n${PM}\n\n${this.resolveLinks(MM,jM)}\n`
+                                path: (0, DJ.w)(VV.slug, xV),
+                                label: YV,
+                                markdown: `# ${VV.title}, part ${xV+1} of ${JV}\n\n${pV}\n\n${this.resolveLinks(VV,UV)}\n`
                               }
                             }
-                            llmsTxt(MM) {
-                              const rM = ["# Bloxd Code API", "", "> JavaScript that runs inside Bloxd, in code blocks, boards and World Code: from a block that launches players into the sky to a whole custom game. Code calls methods on the `api` object and defines callbacks that react to game events.", "", `Each link is a page of the docs as Markdown. A page longer than about ${FO(ZO.e)} tokens is also split into parts, listed under it, so that each fits a small context window. People read the same docs at ${this.url("/docs")}.`];
-                              for (const iM of oM) {
-                                rM.push("", `## ${iM.title}`, "");
-                                for (const MM of iM.pageIds) {
-                                  const iM = this.getPage(MM),
+                            llmsTxt(VV) {
+                              const eV = ["# Bloxd Code API", "", "> JavaScript that runs inside Bloxd, in code blocks, boards and World Code: from a block that launches players into the sky to a whole custom game. Code calls methods on the `api` object and defines callbacks that react to game events.", "", `Each link is a page of the docs as Markdown. A page longer than about ${LJ(DJ.b)} tokens is also split into parts, listed under it, so that each fits a small context window. People read the same docs at ${this.url("/docs")}.`];
+                              for (const xV of aV) {
+                                eV.push("", `## ${xV.title}`, "");
+                                for (const VV of xV.pageIds) {
+                                  const xV = this.getPage(VV),
                                     {
-                                      page: OM,
-                                      parts: SM
-                                    } = iM,
-                                    jM = `About ${FO(iM.markdown.length)} tokens${SM.length>0?`, in ${SM.length} parts:`:"."}`;
-                                  rM.push(`- [${OM.title}](${this.url(iM.path)}): ${OM.summary} ${jM}`), SM.forEach(((MM, iM) => {
-                                    rM.push(`  - [Part ${iM+1}${MM.label?`: ${MM.label}`:""}](${this.url(MM.path)})`)
+                                      page: JV,
+                                      parts: YV
+                                    } = xV,
+                                    UV = `About ${LJ(xV.markdown.length)} tokens${YV.length>0?`, in ${YV.length} parts:`:"."}`;
+                                  eV.push(`- [${JV.title}](${this.url(xV.path)}): ${JV.summary} ${UV}`), YV.forEach(((VV, xV) => {
+                                    eV.push(`  - [Part ${xV+1}${VV.label?`: ${VV.label}`:""}](${this.url(VV.path)})`)
                                   }))
                                 }
                               }
-                              return rM.push("", "## Optional", "", `- [Every page in one file](${this.url(ZO.f)}): About ${FO(MM.length)} tokens, for a model with a large context window.`, ""), rM.join("\n")
+                              return eV.push("", "## Optional", "", `- [Every page in one file](${this.url(DJ.e)}): About ${LJ(VV.length)} tokens, for a model with a large context window.`, ""), eV.join("\n")
                             }
                             llmsFullTxt() {
-                              return oM.flatMap((MM => MM.pageIds.map((MM => this.getPage(MM).markdown)))).join("\n---\n\n")
+                              return aV.flatMap((VV => VV.pageIds.map((VV => this.getPage(VV).markdown)))).join("\n---\n\n")
                             }
                             files() {
-                              const MM = this.llmsFullTxt(),
-                                rM = this.llmsTxt(MM),
-                                iM = new Map([
-                                  [ZO.m, rM],
-                                  [ZO.h, rM],
-                                  [ZO.f, MM]
+                              const VV = this.llmsFullTxt(),
+                                eV = this.llmsTxt(VV),
+                                xV = new Map([
+                                  [DJ.p, eV],
+                                  [DJ.i, eV],
+                                  [DJ.e, VV]
                                 ]);
-                              for (const OM of this.pages) {
-                                iM.set(OM.path, OM.markdown);
-                                for (const MM of OM.parts) iM.set(MM.path, MM.markdown)
+                              for (const JV of this.pages) {
+                                xV.set(JV.path, JV.markdown);
+                                for (const VV of JV.parts) xV.set(VV.path, VV.markdown)
                               }
-                              return iM
+                              return xV
                             }
                           }
 
-                          function FO(MM) {
-                            return `${Math.max(1,Math.round(MM/4e3))}K`
+                          function LJ(VV) {
+                            return `${Math.max(1,Math.round(VV/4e3))}K`
                           }
-                          let BO = null;
+                          let fJ = null;
 
-                          function XO() {
-                            return BO ??= new vO(ZM, oO.d), BO
+                          function mJ() {
+                            return fJ ??= new lJ(CV, iJ.d), fJ
                           }
-                          var IO = iM(5230);
-                          const KO = [IO.d, IO.m];
+                          var KJ = xV(5330);
+                          const HJ = [KJ.e, KJ.o];
 
-                          function qO(MM) {
-                            return XO().getPage(MM.id).parts.length > 0 ? `Read ${ZO.k}, then the parts of the Bloxd Code API's ${MM.title} page it lists, so I can ask questions about it.` : `Read ${oO.d}${(0,ZO.q)(MM.slug)} so I can ask questions about it. ${IO.i}`
+                          function uJ(VV) {
+                            return mJ().getPage(VV.id).parts.length > 0 ? `Read ${DJ.l}, then the parts of the Bloxd Code API's ${VV.title} page it lists, so I can ask questions about it.` : `Read ${iJ.d}${(0,DJ.u)(VV.slug)} so I can ask questions about it. ${KJ.k}`
                           }
 
-                          function TO(MM) {
+                          function sJ(VV) {
                             let {
-                              page: rM
-                            } = MM;
-                            const [iM, OM] = lM();
-                            return (0, hM.jsxs)("div", {
+                              page: eV
+                            } = VV;
+                            const [xV, JV] = jV();
+                            return (0, kV.jsxs)("div", {
                               className: "DocsPageAgentActions",
-                              children: [(0, hM.jsxs)("button", {
+                              children: [(0, kV.jsxs)("button", {
                                 type: "button",
                                 className: "DocsPageAgentAction",
                                 onClick: () => {
-                                  OM(XO().getPage(rM.id).markdown)
+                                  JV(mJ().getPage(eV.id).markdown)
                                 },
-                                children: [(0, hM.jsx)(dM, {
-                                  name: !1 === (null === iM || void 0 === iM ? void 0 : iM.failed) ? "check" : "copy"
-                                }), (0, hM.jsx)("span", {
-                                  children: iM ? iM.failed ? "Copy failed" : "Copied" : "Copy page"
+                                children: [(0, kV.jsx)(EV, {
+                                  name: !1 === (null === xV || void 0 === xV ? void 0 : xV.failed) ? "check" : "copy"
+                                }), (0, kV.jsx)("span", {
+                                  children: xV ? xV.failed ? "Copy failed" : "Copied" : "Copy page"
                                 })]
-                              }), KO.map((MM => (0, hM.jsxs)("a", {
+                              }), HJ.map((VV => (0, kV.jsxs)("a", {
                                 className: "DocsPageAgentAction",
-                                href: (0, IO.c)(MM, qO(rM)),
+                                href: (0, KJ.c)(VV, uJ(eV)),
                                 target: "_blank",
                                 rel: "noreferrer",
-                                children: [(0, hM.jsx)(dM, {
+                                children: [(0, kV.jsx)(EV, {
                                   name: "external-link"
-                                }), (0, hM.jsxs)("span", {
-                                  children: ["Open in ", MM.name]
+                                }), (0, kV.jsxs)("span", {
+                                  children: ["Open in ", VV.name]
                                 })]
-                              }, MM.name)))]
+                              }, VV.name)))]
                             })
                           }
 
-                          function VO(MM) {
-                            return `#${[0,1,2].map((rM=>Math.round(Math.min(255,Math.max(0,MM[rM]))).toString(16).padStart(2,"0"))).join("")}`
+                          function SJ(VV) {
+                            return `#${[0,1,2].map((eV=>Math.round(Math.min(255,Math.max(0,VV[eV]))).toString(16).padStart(2,"0"))).join("")}`
                           }
 
-                          function cO(MM) {
-                            return [parseInt(MM.slice(1, 3), 16), parseInt(MM.slice(3, 5), 16), parseInt(MM.slice(5, 7), 16)]
+                          function IJ(VV) {
+                            return [parseInt(VV.slice(1, 3), 16), parseInt(VV.slice(3, 5), 16), parseInt(VV.slice(5, 7), 16)]
                           }
 
-                          function MS(MM) {
+                          function dJ(VV) {
                             let {
-                              label: rM,
-                              min: iM,
-                              max: OM,
-                              step: SM,
-                              low: jM,
-                              high: aM,
-                              onChange: PM
-                            } = MM;
-                            return (0, hM.jsxs)("div", {
+                              label: eV,
+                              min: xV,
+                              max: JV,
+                              step: YV,
+                              low: UV,
+                              high: yV,
+                              onChange: pV
+                            } = VV;
+                            return (0, kV.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, hM.jsxs)("div", {
+                              children: [(0, kV.jsxs)("div", {
                                 className: "DocsControlLabel",
-                                children: [(0, hM.jsx)("span", {
-                                  children: rM
-                                }), (0, hM.jsx)("span", {
+                                children: [(0, kV.jsx)("span", {
+                                  children: eV
+                                }), (0, kV.jsx)("span", {
                                   className: "DocsControlValue",
-                                  children: jM === aM ? jM : `${jM}\u2013${aM}`
+                                  children: UV === yV ? UV : `${UV}\u2013${yV}`
                                 })]
-                              }), (0, hM.jsxs)("div", {
+                              }), (0, kV.jsxs)("div", {
                                 className: "DocsParticleRange",
-                                children: [(0, hM.jsx)("input", {
+                                children: [(0, kV.jsx)("input", {
                                   type: "range",
-                                  min: iM,
-                                  max: OM,
-                                  step: SM,
-                                  value: Math.min(OM, jM),
-                                  "aria-label": `Minimum ${rM.toLowerCase()}`,
-                                  onChange: MM => {
-                                    const rM = Number(MM.target.value);
-                                    PM(rM, Math.max(rM, aM))
+                                  min: xV,
+                                  max: JV,
+                                  step: YV,
+                                  value: Math.min(JV, UV),
+                                  "aria-label": `Minimum ${eV.toLowerCase()}`,
+                                  onChange: VV => {
+                                    const eV = Number(VV.target.value);
+                                    pV(eV, Math.max(eV, yV))
                                   }
-                                }), (0, hM.jsx)("input", {
+                                }), (0, kV.jsx)("input", {
                                   type: "range",
-                                  min: iM,
-                                  max: OM,
-                                  step: SM,
-                                  value: Math.min(OM, aM),
-                                  "aria-label": `Maximum ${rM.toLowerCase()}`,
-                                  onChange: MM => {
-                                    const rM = Number(MM.target.value);
-                                    PM(Math.min(rM, jM), rM)
+                                  min: xV,
+                                  max: JV,
+                                  step: YV,
+                                  value: Math.min(JV, yV),
+                                  "aria-label": `Maximum ${eV.toLowerCase()}`,
+                                  onChange: VV => {
+                                    const eV = Number(VV.target.value);
+                                    pV(Math.min(eV, UV), eV)
                                   }
                                 })]
                               })]
                             })
                           }
 
-                          function rS(MM) {
+                          function OJ(VV) {
                             let {
-                              label: rM,
-                              min: iM,
-                              max: OM,
-                              step: SM,
-                              value: jM,
-                              onChange: aM,
-                              format: PM = String
-                            } = MM;
-                            return (0, hM.jsxs)("div", {
+                              label: eV,
+                              min: xV,
+                              max: JV,
+                              step: YV,
+                              value: UV,
+                              onChange: yV,
+                              format: pV = String
+                            } = VV;
+                            return (0, kV.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, hM.jsxs)("div", {
+                              children: [(0, kV.jsxs)("div", {
                                 className: "DocsControlLabel",
-                                children: [(0, hM.jsx)("span", {
-                                  children: rM
-                                }), (0, hM.jsx)("span", {
+                                children: [(0, kV.jsx)("span", {
+                                  children: eV
+                                }), (0, kV.jsx)("span", {
                                   className: "DocsControlValue",
-                                  children: PM(jM)
+                                  children: pV(UV)
                                 })]
-                              }), (0, hM.jsx)("input", {
+                              }), (0, kV.jsx)("input", {
                                 type: "range",
-                                min: iM,
-                                max: OM,
-                                step: SM,
-                                value: Math.min(OM, Math.max(iM, jM)),
-                                "aria-label": rM,
-                                onChange: MM => {
-                                  aM(Number(MM.target.value))
+                                min: xV,
+                                max: JV,
+                                step: YV,
+                                value: Math.min(JV, Math.max(xV, UV)),
+                                "aria-label": eV,
+                                onChange: VV => {
+                                  yV(Number(VV.target.value))
                                 }
                               })]
                             })
                           }
 
-                          function iS(MM) {
+                          function VY(VV) {
                             let {
-                              opts: rM,
-                              onChange: iM
-                            } = MM;
-                            const OM = rM.colorGradients;
-                            if (!Bi(OM)) return (0, hM.jsxs)("div", {
+                              opts: eV,
+                              onChange: xV
+                            } = VV;
+                            const JV = eV.colorGradients;
+                            if (!fx(JV)) return (0, kV.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, hM.jsx)("div", {
+                              children: [(0, kV.jsx)("div", {
                                 className: "DocsControlLabel",
-                                children: (0, hM.jsx)("span", {
+                                children: (0, kV.jsx)("span", {
                                   children: "Colours, one per particle"
                                 })
-                              }), (0, hM.jsx)("div", {
+                              }), (0, kV.jsx)("div", {
                                 className: "DocsParticleSwatches",
-                                children: OM.map(((MM, rM) => (0, hM.jsx)("input", {
+                                children: JV.map(((VV, eV) => (0, kV.jsx)("input", {
                                   type: "color",
-                                  value: VO(MM.color),
-                                  "aria-label": `Colour ${rM+1}`,
-                                  onChange: MM => {
-                                    const SM = [...OM];
-                                    SM[rM] = {
-                                      color: cO(MM.target.value)
-                                    }, iM(SM)
+                                  value: SJ(VV.color),
+                                  "aria-label": `Colour ${eV+1}`,
+                                  onChange: VV => {
+                                    const YV = [...JV];
+                                    YV[eV] = {
+                                      color: IJ(VV.target.value)
+                                    }, xV(YV)
                                   }
-                                }, rM)))
+                                }, eV)))
                               })]
                             });
-                            const SM = (MM, rM) => {
-                              const SM = [...OM];
-                              SM[MM] = rM, iM(SM)
+                            const YV = (VV, eV) => {
+                              const YV = [...JV];
+                              YV[VV] = eV, xV(YV)
                             };
-                            return (0, hM.jsxs)("div", {
+                            return (0, kV.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, hM.jsxs)("div", {
+                              children: [(0, kV.jsxs)("div", {
                                 className: "DocsControlLabel",
-                                children: [(0, hM.jsx)("span", {
+                                children: [(0, kV.jsx)("span", {
                                   children: "Colour over lifetime"
-                                }), (0, hM.jsx)("span", {
+                                }), (0, kV.jsx)("span", {
                                   className: "DocsControlValue",
                                   children: "min \xb7 max"
                                 })]
-                              }), OM.map(((MM, rM) => {
-                                var iM;
-                                const OM = null !== (iM = MM.maxColor) && void 0 !== iM ? iM : MM.minColor;
-                                return (0, hM.jsxs)("div", {
+                              }), JV.map(((VV, eV) => {
+                                var xV;
+                                const JV = null !== (xV = VV.maxColor) && void 0 !== xV ? xV : VV.minColor;
+                                return (0, kV.jsxs)("div", {
                                   className: "DocsParticleStop",
-                                  children: [(0, hM.jsxs)("span", {
+                                  children: [(0, kV.jsxs)("span", {
                                     className: "DocsParticleStopTime",
-                                    children: [Math.round(100 * MM.timeFraction), "%"]
-                                  }), (0, hM.jsx)("span", {
+                                    children: [Math.round(100 * VV.timeFraction), "%"]
+                                  }), (0, kV.jsx)("span", {
                                     className: "DocsParticleStopBar",
                                     style: {
-                                      background: `linear-gradient(90deg, ${VO(MM.minColor)}, ${VO(OM)})`
+                                      background: `linear-gradient(90deg, ${SJ(VV.minColor)}, ${SJ(JV)})`
                                     }
-                                  }), (0, hM.jsx)("input", {
+                                  }), (0, kV.jsx)("input", {
                                     type: "color",
-                                    value: VO(MM.minColor),
-                                    "aria-label": `Minimum colour at ${Math.round(100*MM.timeFraction)}%`,
-                                    onChange: iM => {
-                                      SM(rM, {
-                                        ...MM,
-                                        minColor: [...cO(iM.target.value), MM.minColor[3]]
+                                    value: SJ(VV.minColor),
+                                    "aria-label": `Minimum colour at ${Math.round(100*VV.timeFraction)}%`,
+                                    onChange: xV => {
+                                      YV(eV, {
+                                        ...VV,
+                                        minColor: [...IJ(xV.target.value), VV.minColor[3]]
                                       })
                                     }
-                                  }), (0, hM.jsx)("input", {
+                                  }), (0, kV.jsx)("input", {
                                     type: "color",
-                                    value: VO(OM),
-                                    "aria-label": `Maximum colour at ${Math.round(100*MM.timeFraction)}%`,
-                                    onChange: iM => {
-                                      SM(rM, {
-                                        ...MM,
-                                        maxColor: [...cO(iM.target.value), OM[3]]
+                                    value: SJ(JV),
+                                    "aria-label": `Maximum colour at ${Math.round(100*VV.timeFraction)}%`,
+                                    onChange: xV => {
+                                      YV(eV, {
+                                        ...VV,
+                                        maxColor: [...IJ(xV.target.value), JV[3]]
                                       })
                                     }
                                   })]
-                                }, rM)
+                                }, eV)
                               }))]
                             })
                           }
-                          const OS = [-.5, -.5, -.5],
-                            SS = [.5, .5, .5],
-                            jS = [0, 1, 2, 3, 4, 5, 6, 7].map((MM => [1 & MM ? SS[0] : OS[0], 2 & MM ? SS[1] : OS[1], 4 & MM ? SS[2] : OS[2]]));class aS {
+                          const eY = [-.5, -.5, -.5],
+                            xY = [.5, .5, .5],
+                            JY = [0, 1, 2, 3, 4, 5, 6, 7].map((VV => [1 & VV ? xY[0] : eY[0], 2 & VV ? xY[1] : eY[1], 4 & VV ? xY[2] : eY[2]]));class YY {
                             constructor() {
                               this.tints = new WeakMap
                             }
-                            get(MM, rM, iM, OM) {
-                              const SM = Math.round(31 * rM),
-                                jM = Math.round(31 * iM),
-                                aM = Math.round(31 * OM),
-                                PM = `${SM}|${jM}|${aM}`;
-                              let nM = this.tints.get(MM);
-                              (!nM || nM.size > 2e3) && (nM = new Map, this.tints.set(MM, nM));
-                              let QM = nM.get(PM);
-                              if (QM) return QM;
-                              QM = document.createElement("canvas"), QM.width = MM.naturalWidth || 16, QM.height = MM.naturalHeight || 16;
-                              const zM = QM.getContext("2d");
-                              return zM ? (zM.imageSmoothingEnabled = !1, zM.drawImage(MM, 0, 0, QM.width, QM.height), zM.globalCompositeOperation = "multiply", zM.fillStyle = `rgb(${SM/31*255}, ${jM/31*255}, ${aM/31*255})`, zM.fillRect(0, 0, QM.width, QM.height), zM.globalCompositeOperation = "destination-in", zM.drawImage(MM, 0, 0, QM.width, QM.height)) : console.warn("Particle preview: no 2D canvas context to tint a texture with"), nM.set(PM, QM), QM
+                            get(VV, eV, xV, JV) {
+                              const YV = Math.round(31 * eV),
+                                UV = Math.round(31 * xV),
+                                yV = Math.round(31 * JV),
+                                pV = `${YV}|${UV}|${yV}`;
+                              let QV = this.tints.get(VV);
+                              (!QV || QV.size > 2e3) && (QV = new Map, this.tints.set(VV, QV));
+                              let nV = QV.get(pV);
+                              if (nV) return nV;
+                              nV = document.createElement("canvas"), nV.width = VV.naturalWidth || 16, nV.height = VV.naturalHeight || 16;
+                              const wV = nV.getContext("2d");
+                              return wV ? (wV.imageSmoothingEnabled = !1, wV.drawImage(VV, 0, 0, nV.width, nV.height), wV.globalCompositeOperation = "multiply", wV.fillStyle = `rgb(${YV/31*255}, ${UV/31*255}, ${yV/31*255})`, wV.fillRect(0, 0, nV.width, nV.height), wV.globalCompositeOperation = "destination-in", wV.drawImage(VV, 0, 0, nV.width, nV.height)) : console.warn("Particle preview: no 2D canvas context to tint a texture with"), QV.set(pV, nV), nV
                             }
                           }
 
-                          function PS(MM) {
+                          function UY(VV) {
                             let {
-                              opts: rM,
-                              textureUrl: iM,
-                              burst: SM,
-                              paused: jM
-                            } = MM;
-                            const aM = (0, OM.useRef)(null),
-                              PM = (0, OM.useRef)(rM);
-                            PM.current = rM;
-                            const nM = (0, OM.useRef)(jM);
-                            nM.current = jM;
-                            const QM = (0, OM.useRef)(null),
-                              zM = (0, OM.useRef)(null),
-                              LM = (0, OM.useMemo)((() => Math.min(16, Math.max(1.6, 1.05 * function(MM) {
-                                let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.random;
-                                const iM = [-.5, -.5, -.5],
-                                  OM = [.5, .5, .5];
-                                let SM = .5;
-                                for (let jM = 0; jM < 40; jM++) {
-                                  const jM = Ii(MM, iM, OM, rM),
-                                    aM = Math.max(jM.life / 30, .001);
-                                  for (; Ti(jM, MM.gravity, aM);) SM = Math.max(SM, Math.hypot(jM.pos[0], jM.pos[1], jM.pos[2]) + jM.size / 2)
+                              opts: eV,
+                              textureUrl: xV,
+                              burst: YV,
+                              paused: UV
+                            } = VV;
+                            const yV = (0, JV.useRef)(null),
+                              pV = (0, JV.useRef)(eV);
+                            pV.current = eV;
+                            const QV = (0, JV.useRef)(UV);
+                            QV.current = UV;
+                            const nV = (0, JV.useRef)(null),
+                              wV = (0, JV.useRef)(null),
+                              ZV = (0, JV.useMemo)((() => Math.min(16, Math.max(1.6, 1.05 * function(VV) {
+                                let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.random;
+                                const xV = [-.5, -.5, -.5],
+                                  JV = [.5, .5, .5];
+                                let YV = .5;
+                                for (let UV = 0; UV < 40; UV++) {
+                                  const UV = Kx(VV, xV, JV, eV),
+                                    yV = Math.max(UV.life / 30, .001);
+                                  for (; sx(UV, VV.gravity, yV);) YV = Math.max(YV, Math.hypot(UV.pos[0], UV.pos[1], UV.pos[2]) + UV.size / 2)
                                 }
-                                return SM
-                              }(rM)))), [rM]),
-                              mM = (0, OM.useRef)(LM);
-                            return mM.current = LM, (0, OM.useEffect)((() => {
-                              if (QM.current = null, !iM) return;
-                              const MM = new Image;
-                              let rM = !1;
-                              return MM.onload = () => {
-                                rM || (QM.current = MM)
-                              }, MM.onerror = () => {
-                                console.warn(`Particle preview: could not load the texture ${iM}`)
-                              }, MM.src = iM, () => {
-                                rM = !0
+                                return YV
+                              }(eV)))), [eV]),
+                              vV = (0, JV.useRef)(ZV);
+                            return vV.current = ZV, (0, JV.useEffect)((() => {
+                              if (nV.current = null, !xV) return;
+                              const VV = new Image;
+                              let eV = !1;
+                              return VV.onload = () => {
+                                eV || (nV.current = VV)
+                              }, VV.onerror = () => {
+                                console.warn(`Particle preview: could not load the texture ${xV}`)
+                              }, VV.src = xV, () => {
+                                eV = !0
                               }
-                            }), [iM]), (0, OM.useEffect)((() => {
-                              var MM;
-                              null === (MM = zM.current) || void 0 === MM || MM.call(zM)
-                            }), [rM, SM]), (0, OM.useEffect)((() => {
-                              const MM = aM.current,
-                                rM = null === MM || void 0 === MM ? void 0 : MM.getContext("2d");
-                              if (!MM || !rM) return void console.warn("Particle preview: no 2D canvas context to draw on");
-                              const iM = new aS;
-                              let OM = [],
-                                SM = 0,
-                                jM = -.7,
-                                LM = mM.current,
-                                HM = performance.now(),
-                                hM = 0,
-                                JM = !0,
-                                dM = null;
-                              const yM = () => {
-                                const MM = PM.current,
-                                  rM = Math.min(400, Math.max(0, Math.ceil(MM.manualEmitCount)));
-                                OM = [];
-                                for (let iM = 0; iM < rM; iM++) OM.push(Ii(MM, OS, SS, Math.random));
-                                SM = 0
+                            }), [xV]), (0, JV.useEffect)((() => {
+                              var VV;
+                              null === (VV = wV.current) || void 0 === VV || VV.call(wV)
+                            }), [eV, YV]), (0, JV.useEffect)((() => {
+                              const VV = yV.current,
+                                eV = null === VV || void 0 === VV ? void 0 : VV.getContext("2d");
+                              if (!VV || !eV) return void console.warn("Particle preview: no 2D canvas context to draw on");
+                              const xV = new YY;
+                              let JV = [],
+                                YV = 0,
+                                UV = -.7,
+                                ZV = vV.current,
+                                rV = performance.now(),
+                                kV = 0,
+                                bV = !0,
+                                EV = null;
+                              const BV = () => {
+                                const VV = pV.current,
+                                  eV = Math.min(400, Math.max(0, Math.ceil(VV.manualEmitCount)));
+                                JV = [];
+                                for (let xV = 0; xV < eV; xV++) JV.push(Kx(VV, eY, xY, Math.random));
+                                YV = 0
                               };
-                              zM.current = yM, yM();
-                              const lM = aM => {
-                                hM = requestAnimationFrame(lM);
-                                const zM = Math.min(.05, (aM - HM) / 1e3);
-                                if (HM = aM, !JM) return;
-                                const EM = window.devicePixelRatio || 1,
-                                  UM = Math.round(MM.clientWidth * EM),
-                                  GM = Math.round(MM.clientHeight * EM);
-                                if (0 === UM || 0 === GM) return;
-                                MM.width === UM && MM.height === GM || (MM.width = UM, MM.height = GM);
-                                const CM = PM.current;
-                                null === dM && (jM += .18 * zM), LM += (mM.current - LM) * Math.min(1, 4 * zM);
-                                const eM = .6 * zM;
-                                OM = OM.filter((MM => Ti(MM, CM.gravity, eM))), 0 !== OM.length || nM.current || (SM += zM, SM > .6 && yM());
-                                const bM = function(MM, rM, iM, OM) {
-                                  const SM = 3.2 * OM,
-                                    jM = .44 * Math.min(MM, rM) * SM / OM,
-                                    aM = Math.cos(iM),
-                                    PM = Math.sin(iM),
-                                    nM = Math.cos(.42),
-                                    QM = Math.sin(.42);
-                                  return (iM, OM, zM) => {
-                                    const LM = iM * PM + zM * aM,
-                                      mM = SM - (OM * QM + LM * nM);
-                                    if (mM < .05) return null;
-                                    const HM = jM / mM;
+                              wV.current = BV, BV();
+                              const jV = yV => {
+                                kV = requestAnimationFrame(jV);
+                                const wV = Math.min(.05, (yV - rV) / 1e3);
+                                if (rV = yV, !bV) return;
+                                const qV = window.devicePixelRatio || 1,
+                                  tV = Math.round(VV.clientWidth * qV),
+                                  FV = Math.round(VV.clientHeight * qV);
+                                if (0 === tV || 0 === FV) return;
+                                VV.width === tV && VV.height === FV || (VV.width = tV, VV.height = FV);
+                                const TV = pV.current;
+                                null === EV && (UV += .18 * wV), ZV += (vV.current - ZV) * Math.min(1, 4 * wV);
+                                const PV = .6 * wV;
+                                JV = JV.filter((VV => sx(VV, TV.gravity, PV))), 0 !== JV.length || QV.current || (YV += wV, YV > .6 && BV());
+                                const AV = function(VV, eV, xV, JV) {
+                                  const YV = 3.2 * JV,
+                                    UV = .44 * Math.min(VV, eV) * YV / JV,
+                                    yV = Math.cos(xV),
+                                    pV = Math.sin(xV),
+                                    QV = Math.cos(.42),
+                                    nV = Math.sin(.42);
+                                  return (xV, JV, wV) => {
+                                    const ZV = xV * pV + wV * yV,
+                                      vV = YV - (JV * nV + ZV * QV);
+                                    if (vV < .05) return null;
+                                    const rV = UV / vV;
                                     return {
-                                      x: MM / 2 + (iM * aM - zM * PM) * HM,
-                                      y: rM / 2 - (OM * nM - LM * QM) * HM,
-                                      scale: HM,
-                                      depth: mM
+                                      x: VV / 2 + (xV * yV - wV * pV) * rV,
+                                      y: eV / 2 - (JV * QV - ZV * nV) * rV,
+                                      scale: rV,
+                                      depth: vV
                                     }
                                   }
-                                }(UM, GM, jM, LM);
-                                ! function(MM, rM, iM, OM, SM) {
-                                  const jM = MM.createLinearGradient(0, 0, 0, iM);
-                                  jM.addColorStop(0, "#23262d"), jM.addColorStop(1, "#16181c"), MM.globalCompositeOperation = "source-over", MM.globalAlpha = 1, MM.fillStyle = jM, MM.fillRect(0, 0, rM, iM);
-                                  const aM = (rM, iM) => {
-                                      const SM = OM(rM[0], rM[1], rM[2]),
-                                        jM = OM(iM[0], iM[1], iM[2]);
-                                      SM && jM && (MM.beginPath(), MM.moveTo(SM.x, SM.y), MM.lineTo(jM.x, jM.y), MM.stroke())
+                                }(tV, FV, UV, ZV);
+                                ! function(VV, eV, xV, JV, YV) {
+                                  const UV = VV.createLinearGradient(0, 0, 0, xV);
+                                  UV.addColorStop(0, "#23262d"), UV.addColorStop(1, "#16181c"), VV.globalCompositeOperation = "source-over", VV.globalAlpha = 1, VV.fillStyle = UV, VV.fillRect(0, 0, eV, xV);
+                                  const yV = (eV, xV) => {
+                                      const YV = JV(eV[0], eV[1], eV[2]),
+                                        UV = JV(xV[0], xV[1], xV[2]);
+                                      YV && UV && (VV.beginPath(), VV.moveTo(YV.x, YV.y), VV.lineTo(UV.x, UV.y), VV.stroke())
                                     },
-                                    PM = Math.ceil(SM) + 1,
-                                    nM = OS[1];
-                                  MM.lineWidth = 1, MM.strokeStyle = "rgba(255, 255, 255, 0.07)";
-                                  for (let QM = -PM; QM <= PM; QM++) aM([QM + .5, nM, .5 - PM], [QM + .5, nM, PM + .5]), aM([.5 - PM, nM, QM + .5], [PM + .5, nM, QM + .5]);
-                                  MM.strokeStyle = "rgba(255, 255, 255, 0.28)", MM.setLineDash([4, 4]);
-                                  for (const QM of jS)
-                                    for (const MM of jS) {
-                                      const rM = [0, 1, 2].filter((rM => QM[rM] !== MM[rM]));
-                                      1 === rM.length && QM[rM[0]] < MM[rM[0]] && aM(QM, MM)
+                                    pV = Math.ceil(YV) + 1,
+                                    QV = eY[1];
+                                  VV.lineWidth = 1, VV.strokeStyle = "rgba(255, 255, 255, 0.07)";
+                                  for (let nV = -pV; nV <= pV; nV++) yV([nV + .5, QV, .5 - pV], [nV + .5, QV, pV + .5]), yV([.5 - pV, QV, nV + .5], [pV + .5, QV, nV + .5]);
+                                  VV.strokeStyle = "rgba(255, 255, 255, 0.28)", VV.setLineDash([4, 4]);
+                                  for (const nV of JY)
+                                    for (const VV of JY) {
+                                      const eV = [0, 1, 2].filter((eV => nV[eV] !== VV[eV]));
+                                      1 === eV.length && nV[eV[0]] < VV[eV[0]] && yV(nV, VV)
                                     }
-                                  MM.setLineDash([])
-                                }(rM, UM, GM, bM, LM);
-                                const wM = QM.current,
-                                  tM = OM.map((MM => ({
-                                    particle: MM,
-                                    at: bM(MM.pos[0], MM.pos[1], MM.pos[2])
-                                  }))).filter((MM => null !== MM.at)).sort(((MM, rM) => rM.at.depth - MM.at.depth));
-                                rM.imageSmoothingEnabled = !1;
-                                for (const MM of function(MM) {
-                                    switch (MM) {
-                                      case Ni.d.OneOne:
+                                  VV.setLineDash([])
+                                }(eV, tV, FV, AV, ZV);
+                                const NV = nV.current,
+                                  XV = JV.map((VV => ({
+                                    particle: VV,
+                                    at: AV(VV.pos[0], VV.pos[1], VV.pos[2])
+                                  }))).filter((VV => null !== VV.at)).sort(((VV, eV) => eV.at.depth - VV.at.depth));
+                                eV.imageSmoothingEnabled = !1;
+                                for (const VV of function(VV) {
+                                    switch (VV) {
+                                      case ox.g.OneOne:
                                         return [{
                                           operation: "lighter",
                                           usesAlpha: !1
                                         }];
-                                      case Ni.d.Add:
+                                      case ox.g.Add:
                                         return [{
                                           operation: "lighter",
                                           usesAlpha: !0
                                         }];
-                                      case Ni.d.Multiply:
+                                      case ox.g.Multiply:
                                         return [{
                                           operation: "multiply",
                                           usesAlpha: !0
                                         }];
-                                      case Ni.d.MultiplyAdd:
+                                      case ox.g.MultiplyAdd:
                                         return [{
                                           operation: "multiply",
                                           usesAlpha: !0
@@ -2957,665 +2957,665 @@ export const modules = {
                                           usesAlpha: !0
                                         }]
                                     }
-                                  }(CM.blendMode)) {
-                                  rM.globalCompositeOperation = MM.operation;
+                                  }(TV.blendMode)) {
+                                  eV.globalCompositeOperation = VV.operation;
                                   for (const {
-                                      particle: OM,
-                                      at: SM
+                                      particle: JV,
+                                      at: YV
                                     }
-                                    of tM) {
-                                    const [jM, aM, PM, nM] = qi(OM), QM = Math.max(1, OM.size * SM.scale);
-                                    rM.globalAlpha = MM.usesAlpha ? Math.min(1, Math.max(0, nM)) : 1, wM ? rM.drawImage(iM.get(wM, jM, aM, PM), SM.x - QM / 2, SM.y - QM / 2, QM, QM) : (rM.fillStyle = `rgb(${255*jM}, ${255*aM}, ${255*PM})`, rM.fillRect(SM.x - QM / 2, SM.y - QM / 2, QM, QM))
+                                    of XV) {
+                                    const [UV, yV, pV, QV] = ux(JV), nV = Math.max(1, JV.size * YV.scale);
+                                    eV.globalAlpha = VV.usesAlpha ? Math.min(1, Math.max(0, QV)) : 1, NV ? eV.drawImage(xV.get(NV, UV, yV, pV), YV.x - nV / 2, YV.y - nV / 2, nV, nV) : (eV.fillStyle = `rgb(${255*UV}, ${255*yV}, ${255*pV})`, eV.fillRect(YV.x - nV / 2, YV.y - nV / 2, nV, nV))
                                   }
                                 }
-                                rM.globalCompositeOperation = "source-over", rM.globalAlpha = 1
+                                eV.globalCompositeOperation = "source-over", eV.globalAlpha = 1
                               };
-                              hM = requestAnimationFrame(lM);
-                              const EM = new IntersectionObserver((MM => {
-                                let [rM] = MM;
-                                JM = rM.isIntersecting
+                              kV = requestAnimationFrame(jV);
+                              const qV = new IntersectionObserver((VV => {
+                                let [eV] = VV;
+                                bV = eV.isIntersecting
                               }));
-                              EM.observe(MM);
-                              const UM = rM => {
-                                  dM = rM.clientX, MM.setPointerCapture(rM.pointerId)
+                              qV.observe(VV);
+                              const tV = eV => {
+                                  EV = eV.clientX, VV.setPointerCapture(eV.pointerId)
                                 },
-                                GM = MM => {
-                                  null !== dM && (jM += .01 * (MM.clientX - dM), dM = MM.clientX)
+                                FV = VV => {
+                                  null !== EV && (UV += .01 * (VV.clientX - EV), EV = VV.clientX)
                                 },
-                                CM = () => {
-                                  dM = null
+                                TV = () => {
+                                  EV = null
                                 };
-                              return MM.addEventListener("pointerdown", UM), MM.addEventListener("pointermove", GM), MM.addEventListener("pointerup", CM), MM.addEventListener("pointercancel", CM), () => {
-                                cancelAnimationFrame(hM), EM.disconnect(), zM.current = null, MM.removeEventListener("pointerdown", UM), MM.removeEventListener("pointermove", GM), MM.removeEventListener("pointerup", CM), MM.removeEventListener("pointercancel", CM)
+                              return VV.addEventListener("pointerdown", tV), VV.addEventListener("pointermove", FV), VV.addEventListener("pointerup", TV), VV.addEventListener("pointercancel", TV), () => {
+                                cancelAnimationFrame(kV), qV.disconnect(), wV.current = null, VV.removeEventListener("pointerdown", tV), VV.removeEventListener("pointermove", FV), VV.removeEventListener("pointerup", TV), VV.removeEventListener("pointercancel", TV)
                               }
-                            }), []), (0, hM.jsx)("canvas", {
-                              ref: aM,
+                            }), []), (0, kV.jsx)("canvas", {
+                              ref: yV,
                               className: "DocsParticleCanvas",
                               role: "img",
-                              "aria-label": `Preview of a ${rM.texture} particle effect. Drag to turn the view.`
+                              "aria-label": `Preview of a ${eV.texture} particle effect. Drag to turn the view.`
                             })
                           }
-                          const nS = ["aura", "stomp", "brainRot", "mobTameSuccess", "mango", "redFirecrackerLarge"],
-                            QS = [{
-                              mode: Ni.d.OneOne,
+                          const yY = ["aura", "stomp", "brainRot", "mobTameSuccess", "mango", "redFirecrackerLarge"],
+                            pY = [{
+                              mode: ox.g.OneOne,
                               label: "0 \xb7 OneOne (glow)"
                             }, {
-                              mode: Ni.d.Standard,
+                              mode: ox.g.Standard,
                               label: "1 \xb7 Standard"
                             }, {
-                              mode: Ni.d.Add,
+                              mode: ox.g.Add,
                               label: "2 \xb7 Add"
                             }, {
-                              mode: Ni.d.Multiply,
+                              mode: ox.g.Multiply,
                               label: "3 \xb7 Multiply"
                             }, {
-                              mode: Ni.d.MultiplyAdd,
+                              mode: ox.g.MultiplyAdd,
                               label: "4 \xb7 MultiplyAdd"
                             }],
-                            zS = (0, OM.forwardRef)((function(MM, rM) {
-                              var iM, SM;
+                            QY = (0, JV.forwardRef)((function(VV, eV) {
+                              var xV, YV;
                               let {
-                                textures: aM
-                              } = MM;
-                              const PM = GO(),
-                                nM = (0, OM.useRef)(null),
-                                [QM, zM] = (0, OM.useState)(xi),
-                                [LM, mM] = (0, OM.useState)("example"),
-                                [HM, JM] = (0, OM.useState)(0),
-                                [yM, lM] = (0, OM.useState)(!1),
-                                UM = MM => {
-                                  const rM = "example" === MM ? xi : Ai(MM);
-                                  rM && (zM(rM), mM(MM))
+                                textures: yV
+                              } = VV;
+                              const pV = qJ(),
+                                QV = (0, JV.useRef)(null),
+                                [nV, wV] = (0, JV.useState)(hx),
+                                [ZV, vV] = (0, JV.useState)("example"),
+                                [rV, bV] = (0, JV.useState)(0),
+                                [BV, jV] = (0, JV.useState)(!1),
+                                tV = VV => {
+                                  const eV = "example" === VV ? hx : cx(VV);
+                                  eV && (wV(eV), vV(VV))
                                 };
-                              (0, OM.useImperativeHandle)(rM, (() => ({
-                                preview: MM => {
-                                  var rM;
-                                  UM(MM), null === (rM = nM.current) || void 0 === rM || rM.scrollIntoView({
+                              (0, JV.useImperativeHandle)(eV, (() => ({
+                                preview: VV => {
+                                  var eV;
+                                  tV(VV), null === (eV = QV.current) || void 0 === eV || eV.scrollIntoView({
                                     behavior: "smooth",
                                     block: "start"
                                   })
                                 }
                               })));
-                              const GM = MM => {
-                                  zM({
-                                    ...QM,
-                                    ...MM
-                                  }), mM(null)
+                              const FV = VV => {
+                                  wV({
+                                    ...nV,
+                                    ...VV
+                                  }), vV(null)
                                 },
-                                CM = function(MM, rM) {
-                                  if (null !== rM) return `${rO}    presetId: "${rM}",\n${iO}\n})`;
-                                  const iM = MM.velocityGradients.map((MM => `        {\n            timeFraction: ${Vi(MM.timeFraction)},\n            factor: ${Vi(MM.factor)},\n            factor2: ${Vi(MM.factor2)},\n        },`)),
-                                    OM = [`    dir1: ${ci(MM.dir1)},`, `    dir2: ${ci(MM.dir2)},`, iO, `    texture: "${MM.texture}",`, `    minLifeTime: ${Vi(MM.minLifeTime)},`, `    maxLifeTime: ${Vi(MM.maxLifeTime)},`, `    minEmitPower: ${Vi(MM.minEmitPower)},`, `    maxEmitPower: ${Vi(MM.maxEmitPower)},`, `    minSize: ${Vi(MM.minSize)},`, `    maxSize: ${Vi(MM.maxSize)},`, `    manualEmitCount: ${Vi(MM.manualEmitCount)},`, `    gravity: ${ci(MM.gravity)},`, `    colorGradients: ${MO(MM.colorGradients,"    ")},`, `    velocityGradients: ${iM.length>0?`[\n${iM.join("\n")}\n    ]`:"[]"},`, `    blendMode: ${Vi(MM.blendMode)},`];
-                                  return void 0 !== MM.hideDist && OM.push(`    hideDist: ${Vi(MM.hideDist)},`), `${rO}${OM.join("\n")}\n})`
-                                }(QM, null === LM || "example" === LM ? null : LM),
-                                bM = aM.includes(QM.texture) ? aM : [...aM, QM.texture];
-                              return (0, hM.jsxs)("section", {
-                                ref: nM,
+                                TV = function(VV, eV) {
+                                  if (null !== eV) return `${Ox}    presetId: "${eV}",\n${VJ}\n})`;
+                                  const xV = VV.velocityGradients.map((VV => `        {\n            timeFraction: ${Sx(VV.timeFraction)},\n            factor: ${Sx(VV.factor)},\n            factor2: ${Sx(VV.factor2)},\n        },`)),
+                                    JV = [`    dir1: ${Ix(VV.dir1)},`, `    dir2: ${Ix(VV.dir2)},`, VJ, `    texture: "${VV.texture}",`, `    minLifeTime: ${Sx(VV.minLifeTime)},`, `    maxLifeTime: ${Sx(VV.maxLifeTime)},`, `    minEmitPower: ${Sx(VV.minEmitPower)},`, `    maxEmitPower: ${Sx(VV.maxEmitPower)},`, `    minSize: ${Sx(VV.minSize)},`, `    maxSize: ${Sx(VV.maxSize)},`, `    manualEmitCount: ${Sx(VV.manualEmitCount)},`, `    gravity: ${Ix(VV.gravity)},`, `    colorGradients: ${dx(VV.colorGradients,"    ")},`, `    velocityGradients: ${xV.length>0?`[\n${xV.join("\n")}\n    ]`:"[]"},`, `    blendMode: ${Sx(VV.blendMode)},`];
+                                  return void 0 !== VV.hideDist && JV.push(`    hideDist: ${Sx(VV.hideDist)},`), `${Ox}${JV.join("\n")}\n})`
+                                }(nV, null === ZV || "example" === ZV ? null : ZV),
+                                AV = yV.includes(nV.texture) ? yV : [...yV, nV.texture];
+                              return (0, kV.jsxs)("section", {
+                                ref: QV,
                                 className: "DocsPlayground DocsParticlePlayground",
                                 "aria-label": "Particle effect playground",
-                                children: [(0, hM.jsxs)("header", {
+                                children: [(0, kV.jsxs)("header", {
                                   className: "DocsPlaygroundHeader",
-                                  children: [(0, hM.jsxs)("div", {
-                                    children: [(0, hM.jsx)("div", {
+                                  children: [(0, kV.jsxs)("div", {
+                                    children: [(0, kV.jsx)("div", {
                                       className: "DocsPlaygroundTitle",
                                       children: "Try it: particle effects"
-                                    }), (0, hM.jsx)("div", {
+                                    }), (0, kV.jsx)("div", {
                                       className: "DocsPlaygroundHint",
                                       children: "Pick a preset or change the settings, and the burst replays. Drag the preview to turn it."
                                     })]
-                                  }), (0, hM.jsx)(EM, {
-                                    text: CM,
+                                  }), (0, kV.jsx)(qV, {
+                                    text: TV,
                                     label: "Copy code"
                                   })]
-                                }), (0, hM.jsxs)("div", {
+                                }), (0, kV.jsxs)("div", {
                                   className: "DocsPlaygroundPresets",
-                                  children: [(0, hM.jsx)("button", {
+                                  children: [(0, kV.jsx)("button", {
                                     type: "button",
-                                    className: jM()("DocsVariantChip", {
-                                      Active: "example" === LM
+                                    className: UV()("DocsVariantChip", {
+                                      Active: "example" === ZV
                                     }),
                                     onClick: () => {
-                                      UM("example")
+                                      tV("example")
                                     },
                                     children: "Example"
-                                  }), nS.filter((MM => null !== Ai(MM))).map((MM => (0, hM.jsx)("button", {
+                                  }), yY.filter((VV => null !== cx(VV))).map((VV => (0, kV.jsx)("button", {
                                     type: "button",
-                                    className: jM()("DocsVariantChip", {
-                                      Active: LM === MM
+                                    className: UV()("DocsVariantChip", {
+                                      Active: ZV === VV
                                     }),
                                     onClick: () => {
-                                      UM(MM)
+                                      tV(VV)
                                     },
-                                    children: MM
-                                  }, MM))), (0, hM.jsxs)("select", {
+                                    children: VV
+                                  }, VV))), (0, kV.jsxs)("select", {
                                     className: "DocsParticleSelect",
-                                    value: null !== LM && void 0 !== LM ? LM : "custom",
+                                    value: null !== ZV && void 0 !== ZV ? ZV : "custom",
                                     "aria-label": "Preset",
-                                    onChange: MM => {
-                                      UM(MM.target.value)
+                                    onChange: VV => {
+                                      tV(VV.target.value)
                                     },
-                                    children: [(0, hM.jsx)("option", {
+                                    children: [(0, kV.jsx)("option", {
                                       value: "example",
                                       children: "Example effect"
-                                    }), null === LM && (0, hM.jsx)("option", {
+                                    }), null === ZV && (0, kV.jsx)("option", {
                                       value: "custom",
                                       children: "Custom"
-                                    }), Yi.b.map((MM => (0, hM.jsx)("option", {
-                                      value: MM,
-                                      children: MM
-                                    }, MM)))]
+                                    }), ax.d.map((VV => (0, kV.jsx)("option", {
+                                      value: VV,
+                                      children: VV
+                                    }, VV)))]
                                   })]
-                                }), (0, hM.jsxs)("div", {
+                                }), (0, kV.jsxs)("div", {
                                   className: "DocsParticleBody",
-                                  children: [(0, hM.jsxs)("div", {
+                                  children: [(0, kV.jsxs)("div", {
                                     className: "DocsParticleStageWrap",
-                                    children: [(0, hM.jsx)(PS, {
-                                      opts: QM,
-                                      textureUrl: null !== (iM = null === PM || void 0 === PM ? void 0 : PM.getParticleTextureUrl(QM.texture)) && void 0 !== iM ? iM : null,
-                                      burst: HM,
-                                      paused: yM
-                                    }), (0, hM.jsxs)("div", {
+                                    children: [(0, kV.jsx)(UY, {
+                                      opts: nV,
+                                      textureUrl: null !== (xV = null === pV || void 0 === pV ? void 0 : pV.getParticleTextureUrl(nV.texture)) && void 0 !== xV ? xV : null,
+                                      burst: rV,
+                                      paused: BV
+                                    }), (0, kV.jsxs)("div", {
                                       className: "DocsParticleStageButtons",
-                                      children: [(0, hM.jsxs)("button", {
+                                      children: [(0, kV.jsxs)("button", {
                                         type: "button",
                                         className: "DocsParticleStageButton",
                                         onClick: () => {
-                                          JM(HM + 1)
+                                          bV(rV + 1)
                                         },
-                                        children: [(0, hM.jsx)(dM, {
+                                        children: [(0, kV.jsx)(EV, {
                                           name: "replay"
-                                        }), (0, hM.jsx)("span", {
+                                        }), (0, kV.jsx)("span", {
                                           children: "Replay"
                                         })]
-                                      }), (0, hM.jsxs)("button", {
+                                      }), (0, kV.jsxs)("button", {
                                         type: "button",
                                         className: "DocsParticleStageButton",
-                                        "aria-pressed": yM,
+                                        "aria-pressed": BV,
                                         onClick: () => {
-                                          lM(!yM)
+                                          jV(!BV)
                                         },
-                                        children: [(0, hM.jsx)(dM, {
-                                          name: yM ? "play" : "pause"
-                                        }), (0, hM.jsx)("span", {
-                                          children: yM ? "Loop" : "Stop looping"
+                                        children: [(0, kV.jsx)(EV, {
+                                          name: BV ? "play" : "pause"
+                                        }), (0, kV.jsx)("span", {
+                                          children: BV ? "Loop" : "Stop looping"
                                         })]
                                       })]
                                     })]
-                                  }), (0, hM.jsxs)("div", {
+                                  }), (0, kV.jsxs)("div", {
                                     className: "DocsParticleControls",
-                                    children: [(0, hM.jsxs)("div", {
+                                    children: [(0, kV.jsxs)("div", {
                                       className: "DocsControl",
-                                      children: [(0, hM.jsxs)("div", {
+                                      children: [(0, kV.jsxs)("div", {
                                         className: "DocsControlLabel",
-                                        children: [(0, hM.jsx)("span", {
+                                        children: [(0, kV.jsx)("span", {
                                           children: "Texture"
-                                        }), (0, hM.jsx)("code", {
+                                        }), (0, kV.jsx)("code", {
                                           className: "DocsControlValue",
-                                          children: QM.texture
+                                          children: nV.texture
                                         })]
-                                      }), (0, hM.jsx)("div", {
+                                      }), (0, kV.jsx)("div", {
                                         className: "DocsParticleTextures",
-                                        children: bM.map((MM => {
-                                          var rM;
-                                          const iM = null !== (rM = null === PM || void 0 === PM ? void 0 : PM.getParticleTextureUrl(MM)) && void 0 !== rM ? rM : null;
-                                          return (0, hM.jsx)("button", {
+                                        children: AV.map((VV => {
+                                          var eV;
+                                          const xV = null !== (eV = null === pV || void 0 === pV ? void 0 : pV.getParticleTextureUrl(VV)) && void 0 !== eV ? eV : null;
+                                          return (0, kV.jsx)("button", {
                                             type: "button",
-                                            className: jM()("DocsParticleTexture", {
-                                              Active: QM.texture === MM
+                                            className: UV()("DocsParticleTexture", {
+                                              Active: nV.texture === VV
                                             }),
-                                            title: MM,
-                                            "aria-label": MM,
-                                            "aria-pressed": QM.texture === MM,
+                                            title: VV,
+                                            "aria-label": VV,
+                                            "aria-pressed": nV.texture === VV,
                                             onClick: () => {
-                                              GM({
-                                                texture: MM
+                                              FV({
+                                                texture: VV
                                               })
                                             },
-                                            children: iM ? (0, hM.jsx)("img", {
-                                              src: iM,
+                                            children: xV ? (0, kV.jsx)("img", {
+                                              src: xV,
                                               alt: ""
-                                            }) : (0, hM.jsx)(dM, {
+                                            }) : (0, kV.jsx)(EV, {
                                               name: "image"
                                             })
-                                          }, MM)
+                                          }, VV)
                                         }))
                                       })]
-                                    }), (0, hM.jsx)(rS, {
+                                    }), (0, kV.jsx)(OJ, {
                                       label: "Particles",
                                       min: 1,
                                       max: 400,
                                       step: 1,
-                                      value: QM.manualEmitCount,
-                                      onChange: MM => {
-                                        GM({
-                                          manualEmitCount: MM
+                                      value: nV.manualEmitCount,
+                                      onChange: VV => {
+                                        FV({
+                                          manualEmitCount: VV
                                         })
                                       }
-                                    }), (0, hM.jsx)(MS, {
+                                    }), (0, kV.jsx)(dJ, {
                                       label: "Lifetime",
                                       min: .05,
                                       max: 3,
                                       step: .05,
-                                      low: QM.minLifeTime,
-                                      high: QM.maxLifeTime,
-                                      onChange: (MM, rM) => {
-                                        GM({
-                                          minLifeTime: MM,
-                                          maxLifeTime: rM
+                                      low: nV.minLifeTime,
+                                      high: nV.maxLifeTime,
+                                      onChange: (VV, eV) => {
+                                        FV({
+                                          minLifeTime: VV,
+                                          maxLifeTime: eV
                                         })
                                       }
-                                    }), (0, hM.jsx)(MS, {
+                                    }), (0, kV.jsx)(dJ, {
                                       label: "Emit power",
                                       min: 0,
                                       max: 40,
                                       step: .5,
-                                      low: QM.minEmitPower,
-                                      high: QM.maxEmitPower,
-                                      onChange: (MM, rM) => {
-                                        GM({
-                                          minEmitPower: MM,
-                                          maxEmitPower: rM
+                                      low: nV.minEmitPower,
+                                      high: nV.maxEmitPower,
+                                      onChange: (VV, eV) => {
+                                        FV({
+                                          minEmitPower: VV,
+                                          maxEmitPower: eV
                                         })
                                       }
-                                    }), (0, hM.jsx)(MS, {
+                                    }), (0, kV.jsx)(dJ, {
                                       label: "Size",
                                       min: .05,
                                       max: 2,
                                       step: .05,
-                                      low: QM.minSize,
-                                      high: QM.maxSize,
-                                      onChange: (MM, rM) => {
-                                        GM({
-                                          minSize: MM,
-                                          maxSize: rM
+                                      low: nV.minSize,
+                                      high: nV.maxSize,
+                                      onChange: (VV, eV) => {
+                                        FV({
+                                          minSize: VV,
+                                          maxSize: eV
                                         })
                                       }
-                                    }), (0, hM.jsx)(rS, {
+                                    }), (0, kV.jsx)(OJ, {
                                       label: "Gravity (up)",
                                       min: -40,
                                       max: 40,
                                       step: 1,
-                                      value: null !== (SM = QM.gravity[1]) && void 0 !== SM ? SM : 0,
-                                      onChange: MM => {
-                                        var rM, iM;
-                                        GM({
-                                          gravity: [null !== (rM = QM.gravity[0]) && void 0 !== rM ? rM : 0, MM, null !== (iM = QM.gravity[2]) && void 0 !== iM ? iM : 0]
+                                      value: null !== (YV = nV.gravity[1]) && void 0 !== YV ? YV : 0,
+                                      onChange: VV => {
+                                        var eV, xV;
+                                        FV({
+                                          gravity: [null !== (eV = nV.gravity[0]) && void 0 !== eV ? eV : 0, VV, null !== (xV = nV.gravity[2]) && void 0 !== xV ? xV : 0]
                                         })
                                       }
-                                    }), (0, hM.jsxs)("div", {
+                                    }), (0, kV.jsxs)("div", {
                                       className: "DocsControl",
-                                      children: [(0, hM.jsx)("div", {
+                                      children: [(0, kV.jsx)("div", {
                                         className: "DocsControlLabel",
-                                        children: (0, hM.jsx)("span", {
+                                        children: (0, kV.jsx)("span", {
                                           children: "Blend mode"
                                         })
-                                      }), (0, hM.jsx)("select", {
+                                      }), (0, kV.jsx)("select", {
                                         className: "DocsParticleSelect",
-                                        value: QM.blendMode,
+                                        value: nV.blendMode,
                                         "aria-label": "Blend mode",
-                                        onChange: MM => {
-                                          GM({
-                                            blendMode: Number(MM.target.value)
+                                        onChange: VV => {
+                                          FV({
+                                            blendMode: Number(VV.target.value)
                                           })
                                         },
-                                        children: QS.map((MM => {
+                                        children: pY.map((VV => {
                                           let {
-                                            mode: rM,
-                                            label: iM
-                                          } = MM;
-                                          return (0, hM.jsx)("option", {
-                                            value: rM,
-                                            children: iM
-                                          }, rM)
+                                            mode: eV,
+                                            label: xV
+                                          } = VV;
+                                          return (0, kV.jsx)("option", {
+                                            value: eV,
+                                            children: xV
+                                          }, eV)
                                         }))
                                       })]
-                                    }), (0, hM.jsx)(iS, {
-                                      opts: QM,
-                                      onChange: MM => {
-                                        GM({
-                                          colorGradients: MM
+                                    }), (0, kV.jsx)(VY, {
+                                      opts: nV,
+                                      onChange: VV => {
+                                        FV({
+                                          colorGradients: VV
                                         })
                                       }
                                     })]
                                   })]
-                                }), (0, hM.jsx)(eM, {
-                                  code: CM,
+                                }), (0, kV.jsx)(PV, {
+                                  code: TV,
                                   lang: "ts"
                                 })]
                               })
                             }));
-                          var LS = iM(4848),
-                            mS = iM(2006);
+                          var nY = xV(4948),
+                            wY = xV(2021);
 
-                          function HS(MM, rM) {
-                            return MM ? LS.e.includes(rM) ? MM.getIngameIconUrl(rM) : MM.getItemIconUrl(rM) : null
+                          function ZY(VV, eV) {
+                            return VV ? nY.d.includes(eV) ? VV.getIngameIconUrl(eV) : VV.getItemIconUrl(eV) : null
                           }
 
-                          function hS(MM) {
-                            var rM, iM, OM;
+                          function vY(VV) {
+                            var eV, xV, JV;
                             let {
-                              part: SM,
-                              assets: aM
-                            } = MM;
-                            const PM = HS(aM, SM.icon),
-                              nM = null !== (rM = null === (iM = SM.style) || void 0 === iM ? void 0 : iM.fontSize) && void 0 !== rM ? rM : "1.8em",
-                              QM = (0, or.Ub)(SM.style);
-                            return (0, hM.jsxs)("span", {
-                              className: jM()("DocsBloxdTextIcon", {
-                                Missing: !PM
+                              part: YV,
+                              assets: yV
+                            } = VV;
+                            const pV = ZY(yV, YV.icon),
+                              QV = null !== (eV = null === (xV = YV.style) || void 0 === xV ? void 0 : xV.fontSize) && void 0 !== eV ? eV : "1.8em",
+                              nV = (0, ae.Yb)(YV.style);
+                            return (0, kV.jsxs)("span", {
+                              className: UV()("DocsBloxdTextIcon", {
+                                Missing: !pV
                               }),
                               style: {
-                                width: nM,
-                                height: nM,
-                                opacity: null === (OM = SM.style) || void 0 === OM ? void 0 : OM.opacity
+                                width: QV,
+                                height: QV,
+                                opacity: null === (JV = YV.style) || void 0 === JV ? void 0 : JV.opacity
                               },
-                              title: PM ? void 0 : `No Bloxd icon, item or block is called "${SM.icon}"`,
-                              children: [PM && QM && (0, hM.jsx)("span", {
+                              title: pV ? void 0 : `No Bloxd icon, item or block is called "${YV.icon}"`,
+                              children: [pV && nV && (0, kV.jsx)("span", {
                                 className: "DocsBloxdTextIconTint",
                                 style: {
-                                  background: QM,
-                                  maskImage: `url("${PM}")`,
-                                  WebkitMaskImage: `url("${PM}")`
+                                  background: nV,
+                                  maskImage: `url("${pV}")`,
+                                  WebkitMaskImage: `url("${pV}")`
                                 }
-                              }), PM ? (0, hM.jsx)("img", {
-                                src: PM,
+                              }), pV ? (0, kV.jsx)("img", {
+                                src: pV,
                                 alt: "",
-                                className: jM()({
-                                  Tinted: QM
+                                className: UV()({
+                                  Tinted: nV
                                 })
-                              }) : (0, hM.jsx)(dM, {
+                              }) : (0, kV.jsx)(EV, {
                                 name: "image"
                               })]
                             })
                           }
 
-                          function JS(MM) {
+                          function rY(VV) {
                             let {
-                              parts: rM,
-                              className: iM
-                            } = MM;
-                            const OM = GO(),
-                              SM = [];
-                            let aM = [];
-                            const PM = MM => {
-                              aM.length > 0 && (SM.push((0, hM.jsx)(mS.b, {
-                                text: aM
-                              }, `run-${MM}`)), aM = [])
+                              parts: eV,
+                              className: xV
+                            } = VV;
+                            const JV = qJ(),
+                              YV = [];
+                            let yV = [];
+                            const pV = VV => {
+                              yV.length > 0 && (YV.push((0, kV.jsx)(wY.b, {
+                                text: yV
+                              }, `run-${VV}`)), yV = [])
                             };
-                            return rM.forEach(((MM, rM) => {
-                              "icon" !== xr(MM) || Yr(MM.icon) ? aM.push(MM) : (PM(rM), SM.push((0, hM.jsx)(hS, {
-                                part: MM,
-                                assets: OM
-                              }, `icon-${rM}`)))
-                            })), PM(rM.length), (0, hM.jsx)("div", {
-                              className: jM()("DocsStyledTextPreview", iM),
-                              children: SM
+                            return eV.forEach(((VV, eV) => {
+                              "icon" !== Le(VV) || ce(VV.icon) ? yV.push(VV) : (pV(eV), YV.push((0, kV.jsx)(vY, {
+                                part: VV,
+                                assets: JV
+                              }, `icon-${eV}`)))
+                            })), pV(eV.length), (0, kV.jsx)("div", {
+                              className: UV()("DocsStyledTextPreview", xV),
+                              children: YV
                             })
                           }
-                          const dS = ["0.75em", "1em", "1.25em", "1.5em", "2em", "3em"];
-                          let yS = null;
+                          const kY = ["0.75em", "1em", "1.25em", "1.5em", "2em", "3em"];
+                          let bY = null;
 
-                          function lS(MM) {
-                            if (yS ??= document.createElement("canvas").getContext("2d"), !yS) return "#000000";
-                            yS.fillStyle = "#000000", yS.fillStyle = MM;
-                            const rM = yS.fillStyle;
-                            return rM.startsWith("#") ? rM : "#000000"
+                          function EY(VV) {
+                            if (bY ??= document.createElement("canvas").getContext("2d"), !bY) return "#000000";
+                            bY.fillStyle = "#000000", bY.fillStyle = VV;
+                            const eV = bY.fillStyle;
+                            return eV.startsWith("#") ? eV : "#000000"
                           }
 
-                          function ES(MM) {
+                          function BY(VV) {
                             let {
-                              value: rM,
-                              label: iM,
-                              onChange: OM
-                            } = MM;
-                            return (0, hM.jsxs)("span", {
+                              value: eV,
+                              label: xV,
+                              onChange: JV
+                            } = VV;
+                            return (0, kV.jsxs)("span", {
                               className: "DocsColourInput",
-                              children: [(0, hM.jsx)("input", {
+                              children: [(0, kV.jsx)("input", {
                                 type: "color",
-                                value: lS(rM),
-                                "aria-label": `${iM} picker`,
-                                onChange: MM => {
-                                  OM(MM.target.value)
+                                value: EY(eV),
+                                "aria-label": `${xV} picker`,
+                                onChange: VV => {
+                                  JV(VV.target.value)
                                 }
-                              }), (0, hM.jsx)("input", {
+                              }), (0, kV.jsx)("input", {
                                 type: "text",
-                                value: rM,
+                                value: eV,
                                 placeholder: "#ffb914 or gold",
-                                "aria-label": iM,
+                                "aria-label": xV,
                                 spellCheck: !1,
-                                onChange: MM => {
-                                  OM(MM.target.value)
+                                onChange: VV => {
+                                  JV(VV.target.value)
                                 }
                               })]
                             })
                           }
 
-                          function US(MM) {
+                          function jY(VV) {
                             let {
-                              value: rM,
-                              fontAwesomeIcons: iM,
-                              onChange: SM
-                            } = MM;
-                            const aM = GO(),
-                              [PM, nM] = (0, OM.useState)(Yr(rM) ? "fontAwesome" : "bloxd"),
-                              [QM, zM] = (0, OM.useState)(""),
-                              LM = QM.trim().toLowerCase(),
-                              mM = "bloxd" === PM ? LS.e : iM,
-                              HM = LM ? mM.filter((MM => MM.toLowerCase().includes(LM))) : mM;
-                            return (0, hM.jsxs)("div", {
+                              value: eV,
+                              fontAwesomeIcons: xV,
+                              onChange: YV
+                            } = VV;
+                            const yV = qJ(),
+                              [pV, QV] = (0, JV.useState)(ce(eV) ? "fontAwesome" : "bloxd"),
+                              [nV, wV] = (0, JV.useState)(""),
+                              ZV = nV.trim().toLowerCase(),
+                              vV = "bloxd" === pV ? nY.d : xV,
+                              rV = ZV ? vV.filter((VV => VV.toLowerCase().includes(ZV))) : vV;
+                            return (0, kV.jsxs)("div", {
                               className: "DocsIconPicker",
-                              children: [(0, hM.jsx)("input", {
+                              children: [(0, kV.jsx)("input", {
                                 type: "text",
-                                value: rM,
+                                value: eV,
                                 "aria-label": "Icon name",
                                 spellCheck: !1,
-                                onChange: MM => {
-                                  SM(MM.target.value)
+                                onChange: VV => {
+                                  YV(VV.target.value)
                                 }
-                              }), (0, hM.jsx)("p", {
+                              }), (0, kV.jsx)("p", {
                                 className: "DocsTextFieldHint",
                                 children: "Pick one below, or type any item or block name."
-                              }), (0, hM.jsxs)("div", {
+                              }), (0, kV.jsxs)("div", {
                                 className: "DocsIconPickerTabs",
                                 role: "tablist",
                                 children: [
-                                  ["bloxd", "fontAwesome"].map((MM => (0, hM.jsx)("button", {
+                                  ["bloxd", "fontAwesome"].map((VV => (0, kV.jsx)("button", {
                                     type: "button",
                                     role: "tab",
-                                    "aria-selected": PM === MM,
-                                    className: jM()("DocsVariantChip", {
-                                      Active: PM === MM
+                                    "aria-selected": pV === VV,
+                                    className: UV()("DocsVariantChip", {
+                                      Active: pV === VV
                                     }),
                                     onClick: () => {
-                                      nM(MM)
+                                      QV(VV)
                                     },
-                                    children: "bloxd" === MM ? `Bloxd icons (${LS.e.length})` : `Font Awesome (${iM.length})`
-                                  }, MM))), (0, hM.jsx)("input", {
+                                    children: "bloxd" === VV ? `Bloxd icons (${nY.d.length})` : `Font Awesome (${xV.length})`
+                                  }, VV))), (0, kV.jsx)("input", {
                                     type: "search",
-                                    value: QM,
+                                    value: nV,
                                     placeholder: "Filter\u2026",
                                     "aria-label": "Filter icons",
-                                    onChange: MM => {
-                                      zM(MM.target.value)
+                                    onChange: VV => {
+                                      wV(VV.target.value)
                                     }
                                   })
                                 ]
-                              }), (0, hM.jsxs)("div", {
+                              }), (0, kV.jsxs)("div", {
                                 className: "DocsIconPickerGrid",
                                 role: "tabpanel",
-                                children: [HM.map((MM => {
-                                  const iM = "bloxd" === PM ? HS(aM, MM) : null;
-                                  return (0, hM.jsx)("button", {
+                                children: [rV.map((VV => {
+                                  const xV = "bloxd" === pV ? ZY(yV, VV) : null;
+                                  return (0, kV.jsx)("button", {
                                     type: "button",
-                                    title: MM,
-                                    "aria-label": MM,
-                                    "aria-pressed": MM === rM,
-                                    className: jM()("DocsIconPickerOption", {
-                                      Active: MM === rM
+                                    title: VV,
+                                    "aria-label": VV,
+                                    "aria-pressed": VV === eV,
+                                    className: UV()("DocsIconPickerOption", {
+                                      Active: VV === eV
                                     }),
                                     onClick: () => {
-                                      SM(MM)
+                                      YV(VV)
                                     },
-                                    children: "fontAwesome" === PM ? (0, hM.jsx)(Gi.b, {
-                                      name: MM
-                                    }) : iM ? (0, hM.jsx)("img", {
-                                      src: iM,
+                                    children: "fontAwesome" === pV ? (0, kV.jsx)(tx.b, {
+                                      name: VV
+                                    }) : xV ? (0, kV.jsx)("img", {
+                                      src: xV,
                                       alt: ""
-                                    }) : (0, hM.jsx)(dM, {
+                                    }) : (0, kV.jsx)(EV, {
                                       name: "image"
                                     })
-                                  }, MM)
-                                })), 0 === HM.length && (0, hM.jsxs)("p", {
+                                  }, VV)
+                                })), 0 === rV.length && (0, kV.jsxs)("p", {
                                   className: "DocsTextFieldHint",
-                                  children: ["No icons match \u201c", QM, "\u201d."]
+                                  children: ["No icons match \u201c", nV, "\u201d."]
                                 })]
                               })]
                             })
                           }
 
-                          function GS(MM) {
+                          function qY(VV) {
                             let {
-                              property: rM,
-                              value: iM,
-                              fontAwesomeIcons: OM,
-                              onChange: SM
-                            } = MM;
+                              property: eV,
+                              value: xV,
+                              fontAwesomeIcons: JV,
+                              onChange: YV
+                            } = VV;
                             const {
-                              field: jM,
-                              label: aM
-                            } = rM, PM = MM => "" !== MM || rM.isRequired ? MM : void 0;
-                            switch (jM.kind) {
+                              field: UV,
+                              label: yV
+                            } = eV, pV = VV => "" !== VV || eV.isRequired ? VV : void 0;
+                            switch (UV.kind) {
                               case "text":
-                                return jM.multiline ? (0, hM.jsx)("textarea", {
-                                  value: String(null !== iM && void 0 !== iM ? iM : ""),
+                                return UV.multiline ? (0, kV.jsx)("textarea", {
+                                  value: String(null !== xV && void 0 !== xV ? xV : ""),
                                   rows: 2,
-                                  "aria-label": aM,
-                                  onChange: MM => {
-                                    SM(MM.target.value)
+                                  "aria-label": yV,
+                                  onChange: VV => {
+                                    YV(VV.target.value)
                                   }
-                                }) : (0, hM.jsx)("input", {
+                                }) : (0, kV.jsx)("input", {
                                   type: "text",
-                                  value: String(null !== iM && void 0 !== iM ? iM : ""),
-                                  "aria-label": aM,
-                                  onChange: MM => {
-                                    SM(PM(MM.target.value))
+                                  value: String(null !== xV && void 0 !== xV ? xV : ""),
+                                  "aria-label": yV,
+                                  onChange: VV => {
+                                    YV(pV(VV.target.value))
                                   }
                                 });
                               case "size":
-                                return (0, hM.jsx)("input", {
+                                return (0, kV.jsx)("input", {
                                   type: "text",
-                                  value: String(null !== iM && void 0 !== iM ? iM : ""),
-                                  placeholder: rM.defaultText,
+                                  value: String(null !== xV && void 0 !== xV ? xV : ""),
+                                  placeholder: eV.defaultText,
                                   list: "DocsTextSizeSuggestions",
-                                  "aria-label": aM,
+                                  "aria-label": yV,
                                   spellCheck: !1,
-                                  onChange: MM => {
-                                    SM(PM(MM.target.value.trim()))
+                                  onChange: VV => {
+                                    YV(pV(VV.target.value.trim()))
                                   }
                                 });
                               case "colour":
-                                return (0, hM.jsx)(ES, {
-                                  value: String(null !== iM && void 0 !== iM ? iM : ""),
-                                  label: aM,
-                                  onChange: MM => {
-                                    SM(PM(MM))
+                                return (0, kV.jsx)(BY, {
+                                  value: String(null !== xV && void 0 !== xV ? xV : ""),
+                                  label: yV,
+                                  onChange: VV => {
+                                    YV(pV(VV))
                                   }
                                 });
                               case "colours": {
-                                const MM = Array.isArray(iM) ? iM : [],
-                                  rM = MM => {
-                                    SM(MM.length > 0 ? MM : void 0)
+                                const VV = Array.isArray(xV) ? xV : [],
+                                  eV = VV => {
+                                    YV(VV.length > 0 ? VV : void 0)
                                   };
-                                return (0, hM.jsxs)("div", {
+                                return (0, kV.jsxs)("div", {
                                   className: "DocsColourList",
-                                  children: [MM.map(((iM, OM) => (0, hM.jsxs)("span", {
+                                  children: [VV.map(((xV, JV) => (0, kV.jsxs)("span", {
                                     className: "DocsColourListRow",
-                                    children: [(0, hM.jsx)(ES, {
-                                      value: iM,
-                                      label: `${aM} ${OM+1}`,
-                                      onChange: iM => {
-                                        rM(MM.map(((MM, rM) => rM === OM ? iM : MM)))
+                                    children: [(0, kV.jsx)(BY, {
+                                      value: xV,
+                                      label: `${yV} ${JV+1}`,
+                                      onChange: xV => {
+                                        eV(VV.map(((VV, eV) => eV === JV ? xV : VV)))
                                       }
-                                    }), (0, hM.jsx)("button", {
+                                    }), (0, kV.jsx)("button", {
                                       type: "button",
                                       className: "DocsTextIconButton",
-                                      "aria-label": `Remove colour ${OM+1}`,
+                                      "aria-label": `Remove colour ${JV+1}`,
                                       onClick: () => {
-                                        rM(MM.filter(((MM, rM) => rM !== OM)))
+                                        eV(VV.filter(((VV, eV) => eV !== JV)))
                                       },
-                                      children: (0, hM.jsx)(dM, {
+                                      children: (0, kV.jsx)(EV, {
                                         name: "cross"
                                       })
                                     })]
-                                  }, OM))), (0, hM.jsxs)("button", {
+                                  }, JV))), (0, kV.jsxs)("button", {
                                     type: "button",
                                     className: "DocsTextAddButton",
                                     onClick: () => {
-                                      var iM;
-                                      rM([...MM, null !== (iM = MM.at(-1)) && void 0 !== iM ? iM : "#ffffff"])
+                                      var xV;
+                                      eV([...VV, null !== (xV = VV.at(-1)) && void 0 !== xV ? xV : "#ffffff"])
                                     },
-                                    children: [(0, hM.jsx)(dM, {
+                                    children: [(0, kV.jsx)(EV, {
                                       name: "plus"
-                                    }), 0 === MM.length ? "Add a colour" : "Add a colour to the gradient"]
+                                    }), 0 === VV.length ? "Add a colour" : "Add a colour to the gradient"]
                                   })]
                                 })
                               }
                               case "fraction": {
-                                var nM;
-                                const MM = "number" === typeof iM ? iM : Number(null !== (nM = rM.defaultText) && void 0 !== nM ? nM : 0);
-                                return (0, hM.jsxs)("span", {
+                                var QV;
+                                const VV = "number" === typeof xV ? xV : Number(null !== (QV = eV.defaultText) && void 0 !== QV ? QV : 0);
+                                return (0, kV.jsxs)("span", {
                                   className: "DocsFractionInput",
-                                  children: [(0, hM.jsx)("input", {
+                                  children: [(0, kV.jsx)("input", {
                                     type: "range",
                                     min: 0,
                                     max: 1,
                                     step: .01,
-                                    value: MM,
-                                    "aria-label": aM,
-                                    onChange: MM => {
-                                      SM(Number(MM.target.value))
+                                    value: VV,
+                                    "aria-label": yV,
+                                    onChange: VV => {
+                                      YV(Number(VV.target.value))
                                     }
-                                  }), (0, hM.jsx)("output", {
-                                    children: MM.toFixed(2)
+                                  }), (0, kV.jsx)("output", {
+                                    children: VV.toFixed(2)
                                   })]
                                 })
                               }
                               case "choice":
-                                return (0, hM.jsxs)("select", {
-                                  value: String(null !== iM && void 0 !== iM ? iM : ""),
-                                  "aria-label": aM,
-                                  onChange: MM => {
-                                    SM(PM(MM.target.value))
+                                return (0, kV.jsxs)("select", {
+                                  value: String(null !== xV && void 0 !== xV ? xV : ""),
+                                  "aria-label": yV,
+                                  onChange: VV => {
+                                    YV(pV(VV.target.value))
                                   },
-                                  children: [!rM.isRequired && (0, hM.jsxs)("option", {
+                                  children: [!eV.isRequired && (0, kV.jsxs)("option", {
                                     value: "",
-                                    children: ["Default (", rM.defaultText, ")"]
-                                  }), jM.options.map((MM => (0, hM.jsx)("option", {
-                                    value: MM,
-                                    children: MM
-                                  }, MM)))]
+                                    children: ["Default (", eV.defaultText, ")"]
+                                  }), UV.options.map((VV => (0, kV.jsx)("option", {
+                                    value: VV,
+                                    children: VV
+                                  }, VV)))]
                                 });
                               case "icon":
-                                return (0, hM.jsx)(US, {
-                                  value: String(null !== iM && void 0 !== iM ? iM : ""),
-                                  fontAwesomeIcons: OM,
-                                  onChange: SM
+                                return (0, kV.jsx)(jY, {
+                                  value: String(null !== xV && void 0 !== xV ? xV : ""),
+                                  fontAwesomeIcons: JV,
+                                  onChange: YV
                                 })
                             }
                           }
 
-                          function CS(MM) {
-                            let rM;
+                          function tY(VV) {
+                            let eV;
                             try {
-                              rM = JSON.parse(MM)
-                            } catch (iM) {
+                              eV = JSON.parse(VV)
+                            } catch (xV) {
                               return {
                                 part: null,
-                                error: `Not valid JSON yet: ${iM.message}`
+                                error: `Not valid JSON yet: ${xV.message}`
                               }
                             }
-                            return ii(rM) ? {
-                              part: rM,
+                            return xx(eV) ? {
+                              part: eV,
                               error: null
                             } : {
                               part: null,
@@ -3623,150 +3623,150 @@ export const modules = {
                             }
                           }
 
-                          function eS(MM) {
+                          function FY(VV) {
                             let {
-                              parts: rM,
-                              index: iM,
-                              fontAwesomeIcons: SM,
-                              onChange: jM,
-                              vW: aM,
-                              onClose: PM
-                            } = MM;
-                            const nM = (0, OM.useContext)(hr),
-                              zM = (0, OM.useRef)(null),
-                              LM = rM[iM],
-                              mM = xr(LM),
-                              [HM, JM] = (0, OM.useState)((() => JSON.stringify(LM, null, 2))),
-                              yM = (0, OM.useMemo)((() => "other" === mM ? CS(HM).error : null), [mM, HM]);
-                            (0, OM.useEffect)((() => {
-                              var MM;
-                              null === (MM = zM.current) || void 0 === MM || MM.focus()
+                              parts: eV,
+                              index: xV,
+                              fontAwesomeIcons: YV,
+                              onChange: UV,
+                              bR: yV,
+                              onClose: pV
+                            } = VV;
+                            const QV = (0, JV.useContext)(ke),
+                              wV = (0, JV.useRef)(null),
+                              ZV = eV[xV],
+                              vV = Le(ZV),
+                              [rV, bV] = (0, JV.useState)((() => JSON.stringify(ZV, null, 2))),
+                              BV = (0, JV.useMemo)((() => "other" === vV ? tY(rV).error : null), [vV, rV]);
+                            (0, JV.useEffect)((() => {
+                              var VV;
+                              null === (VV = wV.current) || void 0 === VV || VV.focus()
                             }), []);
-                            const lM = (0, hM.jsx)("div", {
+                            const jV = (0, kV.jsx)("div", {
                               className: "DocsTextDialogOverlay",
-                              onMouseDown: MM => {
-                                MM.target === MM.currentTarget && PM()
+                              onMouseDown: VV => {
+                                VV.target === VV.currentTarget && pV()
                               },
-                              children: (0, hM.jsxs)("div", {
-                                ref: zM,
+                              children: (0, kV.jsxs)("div", {
+                                ref: wV,
                                 className: "DocsTextDialog",
                                 role: "dialog",
                                 "aria-modal": "true",
-                                "aria-label": `Edit part ${iM+1}: ${Nr[mM]}`,
+                                "aria-label": `Edit part ${xV+1}: ${he[vV]}`,
                                 tabIndex: -1,
-                                onKeyDown: MM => {
-                                  "Escape" === MM.key ? (MM.stopPropagation(), PM()) : "Tab" === MM.key && zM.current && function(MM, rM) {
-                                    const iM = Array.from(MM.querySelectorAll(ur)),
-                                      OM = iM[0],
-                                      SM = iM.at(-1);
-                                    if (!OM || !SM) return;
-                                    const jM = document.activeElement;
-                                    !rM.shiftKey || jM !== OM && jM !== MM ? rM.shiftKey || jM !== SM || (rM.preventDefault(), OM.focus()) : (rM.preventDefault(), SM.focus())
-                                  }(zM.current, MM)
+                                onKeyDown: VV => {
+                                  "Escape" === VV.key ? (VV.stopPropagation(), pV()) : "Tab" === VV.key && wV.current && function(VV, eV) {
+                                    const xV = Array.from(VV.querySelectorAll(ze)),
+                                      JV = xV[0],
+                                      YV = xV.at(-1);
+                                    if (!JV || !YV) return;
+                                    const UV = document.activeElement;
+                                    !eV.shiftKey || UV !== JV && UV !== VV ? eV.shiftKey || UV !== YV || (eV.preventDefault(), JV.focus()) : (eV.preventDefault(), YV.focus())
+                                  }(wV.current, VV)
                                 },
-                                children: [(0, hM.jsxs)("header", {
+                                children: [(0, kV.jsxs)("header", {
                                   className: "DocsTextDialogHeader",
-                                  children: [(0, hM.jsxs)("div", {
-                                    children: [(0, hM.jsxs)("div", {
+                                  children: [(0, kV.jsxs)("div", {
+                                    children: [(0, kV.jsxs)("div", {
                                       className: "DocsTextDialogKind",
-                                      children: ["Part ", iM + 1]
-                                    }), (0, hM.jsx)("div", {
+                                      children: ["Part ", xV + 1]
+                                    }), (0, kV.jsx)("div", {
                                       className: "DocsTextDialogTitle",
-                                      children: Nr[mM]
+                                      children: he[vV]
                                     })]
-                                  }), (0, hM.jsx)("button", {
+                                  }), (0, kV.jsx)("button", {
                                     type: "button",
                                     className: "DocsTextIconButton",
                                     "aria-label": "Close",
-                                    onClick: PM,
-                                    children: (0, hM.jsx)(dM, {
+                                    onClick: pV,
+                                    children: (0, kV.jsx)(EV, {
                                       name: "cross"
                                     })
                                   })]
-                                }), (0, hM.jsx)(JS, {
-                                  parts: rM,
+                                }), (0, kV.jsx)(rY, {
+                                  parts: eV,
                                   className: "DocsTextDialogPreview"
-                                }), (0, hM.jsx)("div", {
+                                }), (0, kV.jsx)("div", {
                                   className: "DocsTextDialogFields",
-                                  children: "other" === mM ? (0, hM.jsxs)("label", {
+                                  children: "other" === vV ? (0, kV.jsxs)("label", {
                                     className: "DocsTextField",
-                                    children: [(0, hM.jsx)("span", {
+                                    children: [(0, kV.jsx)("span", {
                                       className: "DocsTextFieldLabel",
                                       children: "JSON"
-                                    }), (0, hM.jsx)("textarea", {
+                                    }), (0, kV.jsx)("textarea", {
                                       className: "DocsTextJson",
-                                      value: HM,
+                                      value: rV,
                                       rows: 6,
                                       spellCheck: !1,
-                                      onChange: MM => {
-                                        JM(MM.target.value);
-                                        const rM = CS(MM.target.value);
-                                        null !== rM.part && jM(rM.part)
+                                      onChange: VV => {
+                                        bV(VV.target.value);
+                                        const eV = tY(VV.target.value);
+                                        null !== eV.part && UV(eV.part)
                                       }
-                                    }), yM && (0, hM.jsx)("span", {
+                                    }), BV && (0, kV.jsx)("span", {
                                       className: "DocsTextFieldError",
-                                      children: yM
+                                      children: BV
                                     })]
-                                  }) : Fr[mM].map((MM => {
-                                    const rM = Xr(LM, MM.path),
-                                      iM = MM.isRequired ? JSON.stringify(Kr(LM, MM.path)) === JSON.stringify(LM) : void 0 === rM;
-                                    return (0, hM.jsxs)("div", {
+                                  }) : me[vV].map((VV => {
+                                    const eV = He(ZV, VV.path),
+                                      xV = VV.isRequired ? JSON.stringify(se(ZV, VV.path)) === JSON.stringify(ZV) : void 0 === eV;
+                                    return (0, kV.jsxs)("div", {
                                       className: "DocsTextField",
-                                      children: [(0, hM.jsxs)("div", {
+                                      children: [(0, kV.jsxs)("div", {
                                         className: "DocsTextFieldLabel",
-                                        children: [(0, hM.jsx)("span", {
-                                          children: MM.label
-                                        }), (0, hM.jsxs)("button", {
+                                        children: [(0, kV.jsx)("span", {
+                                          children: VV.label
+                                        }), (0, kV.jsxs)("button", {
                                           type: "button",
                                           className: "DocsTextResetButton",
-                                          disabled: iM,
-                                          "aria-label": `Reset ${MM.label.toLowerCase()} to default`,
+                                          disabled: xV,
+                                          "aria-label": `Reset ${VV.label.toLowerCase()} to default`,
                                           onClick: () => {
-                                            jM(Kr(LM, MM.path))
+                                            UV(se(ZV, VV.path))
                                           },
-                                          children: [(0, hM.jsx)(dM, {
+                                          children: [(0, kV.jsx)(EV, {
                                             name: "replay"
                                           }), "Reset"]
                                         })]
-                                      }), (0, hM.jsx)(GS, {
-                                        property: MM,
-                                        value: rM,
-                                        fontAwesomeIcons: SM,
-                                        onChange: rM => {
-                                          jM(Ir(LM, MM.path, rM))
+                                      }), (0, kV.jsx)(qY, {
+                                        property: VV,
+                                        value: eV,
+                                        fontAwesomeIcons: YV,
+                                        onChange: eV => {
+                                          UV(ue(ZV, VV.path, eV))
                                         }
-                                      }), !MM.isRequired && (0, hM.jsxs)("span", {
+                                      }), !VV.isRequired && (0, kV.jsxs)("span", {
                                         className: "DocsTextFieldHint",
-                                        children: ["Default: ", MM.defaultText]
+                                        children: ["Default: ", VV.defaultText]
                                       })]
-                                    }, MM.path.join("."))
+                                    }, VV.path.join("."))
                                   }))
-                                }), (0, hM.jsxs)("footer", {
+                                }), (0, kV.jsxs)("footer", {
                                   className: "DocsTextDialogFooter",
-                                  children: [(0, hM.jsxs)("button", {
+                                  children: [(0, kV.jsxs)("button", {
                                     type: "button",
                                     className: "DocsTextRemoveButton",
-                                    onClick: aM,
-                                    children: [(0, hM.jsx)(dM, {
+                                    onClick: yV,
+                                    children: [(0, kV.jsx)(EV, {
                                       name: "trash"
                                     }), "Remove part"]
-                                  }), (0, hM.jsx)("button", {
+                                  }), (0, kV.jsx)("button", {
                                     type: "button",
                                     className: "DocsTextDoneButton",
-                                    onClick: PM,
+                                    onClick: pV,
                                     children: "Done"
                                   })]
-                                }), (0, hM.jsx)("datalist", {
+                                }), (0, kV.jsx)("datalist", {
                                   id: "DocsTextSizeSuggestions",
-                                  children: dS.map((MM => (0, hM.jsx)("option", {
-                                    value: MM
-                                  }, MM)))
+                                  children: kY.map((VV => (0, kV.jsx)("option", {
+                                    value: VV
+                                  }, VV)))
                                 })]
                               })
                             });
-                            return nM ? (0, QM.createPortal)(lM, nM) : lM
+                            return QV ? (0, nV.createPortal)(jV, QV) : jV
                           }
-                          const bS = [{
+                          const TY = [{
                               label: "Icon and text",
                               parts: [{
                                 icon: "Pixelated Heart"
@@ -3810,265 +3810,265 @@ export const modules = {
                                 action: "jump"
                               }]
                             }],
-                            wS = Object.keys(Ar);
+                            PY = Object.keys(le);
 
-                          function tS(MM) {
+                          function AY(VV) {
                             let {
-                              fontAwesomeIcons: rM
-                            } = MM;
-                            const [iM, SM] = (0, OM.useState)(bS[0].parts), [aM, PM] = (0, OM.useState)((() => cr(bS[0].parts))), [nM, QM] = (0, OM.useState)(null), [zM, LM] = (0, OM.useState)(!1), [mM, HM] = (0, OM.useState)(null), [JM, yM] = (0, OM.useState)(!1), [lM, EM] = (0, OM.useState)(null), UM = (0, OM.useRef)(null), GM = cr(iM);
-                            (0, OM.useLayoutEffect)((() => {
-                              var MM;
-                              if (!lM) return;
-                              const rM = MM => {
-                                  var rM;
-                                  return null === (rM = UM.current) || void 0 === rM ? void 0 : rM.querySelector(`[data-focus-key="${MM}"]`)
+                              fontAwesomeIcons: eV
+                            } = VV;
+                            const [xV, YV] = (0, JV.useState)(TY[0].parts), [yV, pV] = (0, JV.useState)((() => Oe(TY[0].parts))), [QV, nV] = (0, JV.useState)(null), [wV, ZV] = (0, JV.useState)(!1), [vV, rV] = (0, JV.useState)(null), [bV, BV] = (0, JV.useState)(!1), [jV, qV] = (0, JV.useState)(null), tV = (0, JV.useRef)(null), FV = Oe(xV);
+                            (0, JV.useLayoutEffect)((() => {
+                              var VV;
+                              if (!jV) return;
+                              const eV = VV => {
+                                  var eV;
+                                  return null === (eV = tV.current) || void 0 === eV ? void 0 : eV.querySelector(`[data-focus-key="${VV}"]`)
                                 },
-                                iM = rM(lM.key);
-                              null === (MM = iM && !iM.disabled ? iM : rM(lM.fallback)) || void 0 === MM || MM.focus(), EM(null)
-                            }), [lM]);
-                            const CM = MM => {
-                                SM(MM), PM(cr(MM)), QM(null)
+                                xV = eV(jV.key);
+                              null === (VV = xV && !xV.disabled ? xV : eV(jV.fallback)) || void 0 === VV || VV.focus(), qV(null)
+                            }), [jV]);
+                            const TV = VV => {
+                                YV(VV), pV(Oe(VV)), nV(null)
                               },
-                              bM = MM => {
-                                CM(iM.filter(((rM, iM) => iM !== MM))), EM({
-                                  key: `edit-${Math.min(MM,iM.length-2)}`,
+                              AV = VV => {
+                                TV(xV.filter(((eV, xV) => xV !== VV))), qV({
+                                  key: `edit-${Math.min(VV,xV.length-2)}`,
                                   fallback: "add"
                                 })
                               },
-                              wM = (MM, rM) => {
-                                const OM = [...iM],
-                                  [SM] = OM.splice(MM, 1);
-                                OM.splice(MM + rM, 0, SM), CM(OM);
-                                EM({
-                                  key: `${rM<0?"up":"down"}-${MM+rM}`,
-                                  fallback: `edit-${MM+rM}`
+                              NV = (VV, eV) => {
+                                const JV = [...xV],
+                                  [YV] = JV.splice(VV, 1);
+                                JV.splice(VV + eV, 0, YV), TV(JV);
+                                qV({
+                                  key: `${eV<0?"up":"down"}-${VV+eV}`,
+                                  fallback: `edit-${VV+eV}`
                                 })
                               };
-                            return (0, hM.jsxs)("section", {
-                              ref: UM,
+                            return (0, kV.jsxs)("section", {
+                              ref: tV,
                               className: "DocsPlayground DocsTextEditor",
                               "aria-label": "Styled text editor",
-                              children: [(0, hM.jsx)("header", {
+                              children: [(0, kV.jsx)("header", {
                                 className: "DocsPlaygroundHeader",
-                                children: (0, hM.jsxs)("div", {
-                                  children: [(0, hM.jsx)("div", {
+                                children: (0, kV.jsxs)("div", {
+                                  children: [(0, kV.jsx)("div", {
                                     className: "DocsPlaygroundTitle",
                                     children: "Styled text editor"
-                                  }), (0, hM.jsx)("div", {
+                                  }), (0, kV.jsx)("div", {
                                     className: "DocsPlaygroundHint",
                                     children: "Add parts, click one to style it, and copy the code. The preview draws it as the game does."
                                   })]
                                 })
-                              }), (0, hM.jsx)("div", {
+                              }), (0, kV.jsx)("div", {
                                 className: "DocsPlaygroundPresets",
-                                children: bS.map((MM => (0, hM.jsx)("button", {
+                                children: TY.map((VV => (0, kV.jsx)("button", {
                                   type: "button",
-                                  className: jM()("DocsVariantChip", {
-                                    Active: GM === cr(MM.parts)
+                                  className: UV()("DocsVariantChip", {
+                                    Active: FV === Oe(VV.parts)
                                   }),
                                   onClick: () => {
-                                    CM(MM.parts)
+                                    TV(VV.parts)
                                   },
-                                  children: MM.label
-                                }, MM.label)))
-                              }), (0, hM.jsx)(JS, {
-                                parts: iM,
+                                  children: VV.label
+                                }, VV.label)))
+                              }), (0, kV.jsx)(rY, {
+                                parts: xV,
                                 className: "DocsTextEditorPreview"
-                              }), (0, hM.jsxs)("div", {
+                              }), (0, kV.jsxs)("div", {
                                 className: "DocsTextEditorBody",
-                                children: [(0, hM.jsxs)("div", {
+                                children: [(0, kV.jsxs)("div", {
                                   className: "DocsTextEditorPanel",
-                                  children: [(0, hM.jsx)("div", {
+                                  children: [(0, kV.jsx)("div", {
                                     className: "DocsTextEditorPanelTitle",
                                     children: "Parts"
-                                  }), (0, hM.jsxs)("ol", {
+                                  }), (0, kV.jsxs)("ol", {
                                     className: "DocsTextParts",
-                                    children: [iM.map(((MM, rM) => {
-                                      const OM = xr(MM);
-                                      return (0, hM.jsxs)("li", {
+                                    children: [xV.map(((VV, eV) => {
+                                      const JV = Le(VV);
+                                      return (0, kV.jsxs)("li", {
                                         className: "DocsTextPart",
-                                        children: [(0, hM.jsxs)("button", {
+                                        children: [(0, kV.jsxs)("button", {
                                           type: "button",
                                           className: "DocsTextPartMain",
-                                          "data-focus-key": `edit-${rM}`,
-                                          "aria-label": `Edit part ${rM+1}, ${Nr[OM]}`,
+                                          "data-focus-key": `edit-${eV}`,
+                                          "aria-label": `Edit part ${eV+1}, ${he[JV]}`,
                                           onClick: () => {
-                                            HM(rM)
+                                            rV(eV)
                                           },
-                                          children: [(0, hM.jsx)("span", {
+                                          children: [(0, kV.jsx)("span", {
                                             className: "DocsTextPartKind",
-                                            children: Nr[OM]
-                                          }), (0, hM.jsx)(JS, {
-                                            parts: [MM],
+                                            children: he[JV]
+                                          }), (0, kV.jsx)(rY, {
+                                            parts: [VV],
                                             className: "DocsTextPartPreview"
-                                          }), "text" !== OM && (0, hM.jsx)("code", {
+                                          }), "text" !== JV && (0, kV.jsx)("code", {
                                             className: "DocsTextPartName",
-                                            children: qr(MM)
+                                            children: Se(VV)
                                           })]
-                                        }), (0, hM.jsxs)("span", {
+                                        }), (0, kV.jsxs)("span", {
                                           className: "DocsTextPartActions",
-                                          children: [(0, hM.jsx)("button", {
+                                          children: [(0, kV.jsx)("button", {
                                             type: "button",
                                             className: "DocsTextIconButton",
-                                            "aria-label": `Move part ${rM+1} up`,
-                                            "data-focus-key": `up-${rM}`,
-                                            disabled: 0 === rM,
+                                            "aria-label": `Move part ${eV+1} up`,
+                                            "data-focus-key": `up-${eV}`,
+                                            disabled: 0 === eV,
                                             onClick: () => {
-                                              wM(rM, -1)
+                                              NV(eV, -1)
                                             },
-                                            children: (0, hM.jsx)(dM, {
+                                            children: (0, kV.jsx)(EV, {
                                               name: "chevron-up"
                                             })
-                                          }), (0, hM.jsx)("button", {
+                                          }), (0, kV.jsx)("button", {
                                             type: "button",
                                             className: "DocsTextIconButton",
-                                            "aria-label": `Move part ${rM+1} down`,
-                                            "data-focus-key": `down-${rM}`,
-                                            disabled: rM === iM.length - 1,
+                                            "aria-label": `Move part ${eV+1} down`,
+                                            "data-focus-key": `down-${eV}`,
+                                            disabled: eV === xV.length - 1,
                                             onClick: () => {
-                                              wM(rM, 1)
+                                              NV(eV, 1)
                                             },
-                                            children: (0, hM.jsx)(dM, {
+                                            children: (0, kV.jsx)(EV, {
                                               name: "chevron-down"
                                             })
-                                          }), (0, hM.jsx)("button", {
+                                          }), (0, kV.jsx)("button", {
                                             type: "button",
                                             className: "DocsTextIconButton",
-                                            "aria-label": `Remove part ${rM+1}`,
+                                            "aria-label": `Remove part ${eV+1}`,
                                             onClick: () => {
-                                              bM(rM)
+                                              AV(eV)
                                             },
-                                            children: (0, hM.jsx)(dM, {
+                                            children: (0, kV.jsx)(EV, {
                                               name: "cross"
                                             })
                                           })]
                                         })]
-                                      }, rM)
-                                    })), 0 === iM.length && (0, hM.jsx)("li", {
+                                      }, eV)
+                                    })), 0 === xV.length && (0, kV.jsx)("li", {
                                       className: "DocsTextPartsEmpty",
                                       children: "No parts yet. Add one below."
                                     })]
-                                  }), (0, hM.jsxs)("div", {
+                                  }), (0, kV.jsxs)("div", {
                                     className: "DocsTextAddPart",
-                                    onKeyDown: MM => {
-                                      "Escape" === MM.key && JM && (MM.stopPropagation(), yM(!1), EM({
+                                    onKeyDown: VV => {
+                                      "Escape" === VV.key && bV && (VV.stopPropagation(), BV(!1), qV({
                                         key: "add",
                                         fallback: "add"
                                       }))
                                     },
-                                    children: [(0, hM.jsxs)("button", {
+                                    children: [(0, kV.jsxs)("button", {
                                       type: "button",
                                       className: "DocsTextAddPartButton",
                                       "data-focus-key": "add",
-                                      "aria-expanded": JM,
+                                      "aria-expanded": bV,
                                       "aria-controls": "DocsTextAddPartMenu",
                                       onClick: () => {
-                                        yM(!JM)
+                                        BV(!bV)
                                       },
-                                      children: [(0, hM.jsx)(dM, {
+                                      children: [(0, kV.jsx)(EV, {
                                         name: "plus"
-                                      }), "Add a part", (0, hM.jsx)(dM, {
-                                        name: JM ? "chevron-up" : "chevron-down"
+                                      }), "Add a part", (0, kV.jsx)(EV, {
+                                        name: bV ? "chevron-up" : "chevron-down"
                                       })]
-                                    }), JM && (0, hM.jsx)("ul", {
+                                    }), bV && (0, kV.jsx)("ul", {
                                       id: "DocsTextAddPartMenu",
                                       className: "DocsTextAddPartMenu",
-                                      children: wS.map((MM => (0, hM.jsx)("li", {
-                                        children: (0, hM.jsx)("button", {
+                                      children: PY.map((VV => (0, kV.jsx)("li", {
+                                        children: (0, kV.jsx)("button", {
                                           type: "button",
                                           onClick: () => {
-                                            (MM => {
-                                              CM([...iM, Ar[MM]]), yM(!1), HM(iM.length)
-                                            })(MM)
+                                            (VV => {
+                                              TV([...xV, le[VV]]), BV(!1), rV(xV.length)
+                                            })(VV)
                                           },
-                                          children: Nr[MM]
+                                          children: he[VV]
                                         })
-                                      }, MM)))
+                                      }, VV)))
                                     })]
                                   })]
-                                }), (0, hM.jsxs)("div", {
+                                }), (0, kV.jsxs)("div", {
                                   className: "DocsTextEditorPanel",
-                                  children: [(0, hM.jsxs)("div", {
+                                  children: [(0, kV.jsxs)("div", {
                                     className: "DocsTextEditorPanelTitle",
-                                    children: ["Code", (0, hM.jsxs)("button", {
+                                    children: ["Code", (0, kV.jsxs)("button", {
                                       type: "button",
                                       className: "DocsTextEditCodeButton",
-                                      "aria-pressed": zM,
+                                      "aria-pressed": wV,
                                       onClick: () => {
-                                        LM(!zM)
+                                        ZV(!wV)
                                       },
-                                      children: [(0, hM.jsx)(dM, {
-                                        name: zM ? "check" : "pencil"
-                                      }), zM ? "Done" : "Edit"]
+                                      children: [(0, kV.jsx)(EV, {
+                                        name: wV ? "check" : "pencil"
+                                      }), wV ? "Done" : "Edit"]
                                     })]
-                                  }), zM ? (0, hM.jsxs)(hM.Fragment, {
-                                    children: [(0, hM.jsx)("textarea", {
+                                  }), wV ? (0, kV.jsxs)(kV.Fragment, {
+                                    children: [(0, kV.jsx)("textarea", {
                                       className: "DocsPlaygroundInput",
-                                      value: aM,
+                                      value: yV,
                                       spellCheck: !1,
                                       "aria-label": "Styled text as code",
-                                      onChange: MM => {
-                                        PM(MM.target.value);
-                                        const rM = Oi(MM.target.value);
-                                        QM(rM.error), rM.parts && SM(rM.parts)
+                                      onChange: VV => {
+                                        pV(VV.target.value);
+                                        const eV = Jx(VV.target.value);
+                                        nV(eV.error), eV.parts && YV(eV.parts)
                                       }
-                                    }), nM && (0, hM.jsx)("p", {
+                                    }), QV && (0, kV.jsx)("p", {
                                       className: "DocsPlaygroundError",
-                                      children: nM
+                                      children: QV
                                     })]
-                                  }) : (0, hM.jsx)(eM, {
+                                  }) : (0, kV.jsx)(PV, {
                                     lang: "js",
-                                    code: `api.sendMessage(playerId, ${GM})`
+                                    code: `api.sendMessage(playerId, ${FV})`
                                   })]
                                 })]
-                              }), null !== mM && mM < iM.length && (0, hM.jsx)(eS, {
-                                parts: iM,
-                                index: mM,
-                                fontAwesomeIcons: rM,
-                                onChange: MM => {
-                                  ((MM, rM) => {
-                                    CM(iM.map(((iM, OM) => OM === MM ? rM : iM)))
-                                  })(mM, MM)
+                              }), null !== vV && vV < xV.length && (0, kV.jsx)(FY, {
+                                parts: xV,
+                                index: vV,
+                                fontAwesomeIcons: eV,
+                                onChange: VV => {
+                                  ((VV, eV) => {
+                                    TV(xV.map(((xV, JV) => JV === VV ? eV : xV)))
+                                  })(vV, VV)
                                 },
-                                vW: () => {
-                                  bM(mM), HM(null)
+                                bR: () => {
+                                  AV(vV), rV(null)
                                 },
                                 onClose: () => {
-                                  HM(null), EM({
-                                    key: `edit-${mM}`,
+                                  rV(null), qV({
+                                    key: `edit-${vV}`,
                                     fallback: "add"
                                   })
                                 }
                               })]
                             })
                           }
-                          var gS = iM(5251),
-                            uS = iM(5233),
-                            RS = iM(5248),
-                            pS = iM(5259);
-                          const WS = 40,
-                            sS = 800,
-                            DS = 150,
-                            kS = 8e3,
-                            ZS = 2e3;
+                          var NY = xV(5342),
+                            XY = xV(5333),
+                            MY = xV(5339),
+                            zY = xV(5351);
+                          const GY = 40,
+                            WY = 800,
+                            RY = 150,
+                            gY = 8e3,
+                            DY = 2e3;
 
-                          function oS(MM, rM) {
-                            return 12 * Math.log2(rM / MM)
+                          function iY(VV, eV) {
+                            return 12 * Math.log2(eV / VV)
                           }
 
-                          function fS(MM, rM) {
-                            return Math.round(MM * 2 ** (rM / 12) * 10) / 10
+                          function CY(VV, eV) {
+                            return Math.round(VV * 2 ** (eV / 12) * 10) / 10
                           }
 
-                          function YS(MM) {
-                            return `${MM} ms`
+                          function aY(VV) {
+                            return `${VV} ms`
                           }
 
-                          function NS(MM) {
-                            return `${MM} st`
+                          function oY(VV) {
+                            return `${VV} st`
                           }
-                          const AS = [{
+                          const cY = [{
                             key: "variationSemitones",
                             label: "Word variation",
                             max: 6
@@ -4086,769 +4086,769 @@ export const modules = {
                             max: 12
                           }];
 
-                          function xS(MM) {
+                          function hY(VV) {
                             let {
-                              synth: rM,
-                              onChange: iM
-                            } = MM;
-                            const OM = (0, gS.p)(rM);
-                            return (0, hM.jsxs)("div", {
+                              synth: eV,
+                              onChange: xV
+                            } = VV;
+                            const JV = (0, NY.j)(eV);
+                            return (0, kV.jsxs)("div", {
                               className: "DocsVoiceControls",
-                              children: [(0, hM.jsxs)("div", {
+                              children: [(0, kV.jsxs)("div", {
                                 className: "DocsVoiceGroup",
-                                children: [(0, hM.jsx)("div", {
+                                children: [(0, kV.jsx)("div", {
                                   className: "DocsVoiceGroupTitle",
                                   children: "Voice"
-                                }), (0, hM.jsxs)("div", {
+                                }), (0, kV.jsxs)("div", {
                                   className: "DocsControl",
-                                  children: [(0, hM.jsx)("div", {
+                                  children: [(0, kV.jsx)("div", {
                                     className: "DocsControlLabel",
-                                    children: (0, hM.jsx)("span", {
+                                    children: (0, kV.jsx)("span", {
                                       children: "Tone"
                                     })
-                                  }), (0, hM.jsx)("div", {
+                                  }), (0, kV.jsx)("div", {
                                     className: "DocsVoiceWaveforms",
-                                    children: gS.h.map((MM => (0, hM.jsx)("button", {
+                                    children: NY.g.map((VV => (0, kV.jsx)("button", {
                                       type: "button",
-                                      className: jM()("DocsVariantChip", {
-                                        Active: rM.waveform === MM
+                                      className: UV()("DocsVariantChip", {
+                                        Active: eV.waveform === VV
                                       }),
-                                      "aria-pressed": rM.waveform === MM,
+                                      "aria-pressed": eV.waveform === VV,
                                       onClick: () => {
-                                        iM({
-                                          waveform: MM
+                                        xV({
+                                          waveform: VV
                                         })
                                       },
-                                      children: MM
-                                    }, MM)))
+                                      children: VV
+                                    }, VV)))
                                   })]
-                                }), (0, hM.jsx)(rS, {
+                                }), (0, kV.jsx)(OJ, {
                                   label: "Pitch",
                                   min: 0,
-                                  max: oS(WS, sS),
+                                  max: iY(GY, WY),
                                   step: .1,
-                                  value: oS(WS, rM.pitchHz),
-                                  format: () => `${rM.pitchHz} Hz`,
-                                  onChange: MM => {
-                                    iM({
-                                      pitchHz: fS(WS, MM)
+                                  value: iY(GY, eV.pitchHz),
+                                  format: () => `${eV.pitchHz} Hz`,
+                                  onChange: VV => {
+                                    xV({
+                                      pitchHz: CY(GY, VV)
                                     })
                                   }
-                                }), (0, hM.jsx)(rS, {
+                                }), (0, kV.jsx)(OJ, {
                                   label: "Time per syllable",
                                   min: 25,
                                   max: 200,
                                   step: 1,
-                                  value: rM.syllableMs,
-                                  format: YS,
-                                  onChange: MM => {
-                                    iM({
-                                      syllableMs: MM
+                                  value: eV.syllableMs,
+                                  format: aY,
+                                  onChange: VV => {
+                                    xV({
+                                      syllableMs: VV
                                     })
                                   }
-                                }), (0, hM.jsx)(rS, {
+                                }), (0, kV.jsx)(OJ, {
                                   label: "Volume",
                                   min: 0,
                                   max: 2,
                                   step: .05,
-                                  value: rM.volume,
-                                  onChange: MM => {
-                                    iM({
-                                      volume: MM
+                                  value: eV.volume,
+                                  onChange: VV => {
+                                    xV({
+                                      volume: VV
                                     })
                                   }
                                 })]
-                              }), (0, hM.jsxs)("div", {
+                              }), (0, kV.jsxs)("div", {
                                 className: "DocsVoiceGroup",
-                                children: [(0, hM.jsx)("div", {
+                                children: [(0, kV.jsx)("div", {
                                   className: "DocsVoiceGroupTitle",
                                   children: "Each blip"
-                                }), (0, hM.jsx)(rS, {
+                                }), (0, kV.jsx)(OJ, {
                                   label: "Length",
                                   min: 10,
                                   max: 300,
                                   step: 1,
-                                  value: rM.durationMs,
-                                  format: YS,
-                                  onChange: MM => {
-                                    iM({
-                                      durationMs: MM
+                                  value: eV.durationMs,
+                                  format: aY,
+                                  onChange: VV => {
+                                    xV({
+                                      durationMs: VV
                                     })
                                   }
-                                }), (0, hM.jsx)(rS, {
+                                }), (0, kV.jsx)(OJ, {
                                   label: "Fade in",
                                   min: 0,
-                                  max: OM.durationMs,
+                                  max: JV.durationMs,
                                   step: 1,
-                                  value: OM.attackMs,
-                                  format: YS,
-                                  onChange: MM => {
-                                    iM({
-                                      attackMs: MM
+                                  value: JV.attackMs,
+                                  format: aY,
+                                  onChange: VV => {
+                                    xV({
+                                      attackMs: VV
                                     })
                                   }
-                                }), (0, hM.jsx)(rS, {
+                                }), (0, kV.jsx)(OJ, {
                                   label: "Fade out",
                                   min: 0,
-                                  max: OM.durationMs - OM.attackMs,
+                                  max: JV.durationMs - JV.attackMs,
                                   step: 1,
-                                  value: OM.releaseMs,
-                                  format: YS,
-                                  onChange: MM => {
-                                    iM({
-                                      releaseMs: MM
+                                  value: JV.releaseMs,
+                                  format: aY,
+                                  onChange: VV => {
+                                    xV({
+                                      releaseMs: VV
                                     })
                                   }
-                                }), (0, hM.jsx)(rS, {
+                                }), (0, kV.jsx)(OJ, {
                                   label: "Glide",
                                   min: -12,
                                   max: 12,
                                   step: .1,
-                                  value: rM.glideSemitones,
-                                  format: NS,
-                                  onChange: MM => {
-                                    iM({
-                                      glideSemitones: MM
+                                  value: eV.glideSemitones,
+                                  format: oY,
+                                  onChange: VV => {
+                                    xV({
+                                      glideSemitones: VV
                                     })
                                   }
-                                }), (0, hM.jsxs)("label", {
+                                }), (0, kV.jsxs)("label", {
                                   className: "DocsVoiceToggle",
-                                  children: [(0, hM.jsx)("input", {
+                                  children: [(0, kV.jsx)("input", {
                                     type: "checkbox",
-                                    checked: null !== rM.lowpassHz,
-                                    onChange: MM => {
-                                      iM({
-                                        lowpassHz: MM.target.checked ? ZS : null
+                                    checked: null !== eV.lowpassHz,
+                                    onChange: VV => {
+                                      xV({
+                                        lowpassHz: VV.target.checked ? DY : null
                                       })
                                     }
-                                  }), (0, hM.jsx)("span", {
+                                  }), (0, kV.jsx)("span", {
                                     children: "Muffle with a filter"
                                   })]
-                                }), null !== rM.lowpassHz && (0, hM.jsx)(rS, {
+                                }), null !== eV.lowpassHz && (0, kV.jsx)(OJ, {
                                   label: "Filter",
                                   min: 0,
-                                  max: oS(DS, kS),
+                                  max: iY(RY, gY),
                                   step: .1,
-                                  value: oS(DS, rM.lowpassHz),
-                                  format: () => `${rM.lowpassHz} Hz`,
-                                  onChange: MM => {
-                                    iM({
-                                      lowpassHz: fS(DS, MM)
+                                  value: iY(RY, eV.lowpassHz),
+                                  format: () => `${eV.lowpassHz} Hz`,
+                                  onChange: VV => {
+                                    xV({
+                                      lowpassHz: CY(RY, VV)
                                     })
                                   }
                                 })]
-                              }), (0, hM.jsxs)("div", {
+                              }), (0, kV.jsxs)("div", {
                                 className: "DocsVoiceGroup",
-                                children: [(0, hM.jsx)("div", {
+                                children: [(0, kV.jsx)("div", {
                                   className: "DocsVoiceGroupTitle",
                                   children: "Intonation"
-                                }), AS.map((MM => {
+                                }), cY.map((VV => {
                                   let {
-                                    key: OM,
-                                    label: SM,
-                                    max: jM
-                                  } = MM;
-                                  return (0, hM.jsx)(rS, {
-                                    label: SM,
+                                    key: JV,
+                                    label: YV,
+                                    max: UV
+                                  } = VV;
+                                  return (0, kV.jsx)(OJ, {
+                                    label: YV,
                                     min: 0,
-                                    max: jM,
+                                    max: UV,
                                     step: .1,
-                                    value: rM.intonation[OM],
-                                    format: NS,
-                                    onChange: MM => {
-                                      iM({
+                                    value: eV.intonation[JV],
+                                    format: oY,
+                                    onChange: VV => {
+                                      xV({
                                         intonation: {
-                                          ...rM.intonation,
-                                          [OM]: MM
+                                          ...eV.intonation,
+                                          [JV]: VV
                                         }
                                       })
                                     }
-                                  }, OM)
+                                  }, JV)
                                 }))]
                               })]
                             })
                           }
-                          const vS = Object.keys(gS.l),
-                            FS = ["Welcome, traveller. The road ahead is long.", "Have you seen my lost sheep anywhere?", "Watch out, the bridge is about to collapse!"];
+                          const lY = Object.keys(NY.i),
+                            LY = ["Welcome, traveller. The road ahead is long.", "Have you seen my lost sheep anywhere?", "Watch out, the bridge is about to collapse!"];
 
-                          function BS(MM) {
-                            var rM;
-                            const iM = JSON.stringify((0, gS.p)(MM));
-                            return null !== (rM = vS.find((MM => JSON.stringify((0, gS.p)(gS.l[MM])) === iM))) && void 0 !== rM ? rM : null
+                          function fY(VV) {
+                            var eV;
+                            const xV = JSON.stringify((0, NY.j)(VV));
+                            return null !== (eV = lY.find((VV => JSON.stringify((0, NY.j)(NY.i[VV])) === xV))) && void 0 !== eV ? eV : null
                           }
 
-                          function XS(MM) {
-                            let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
-                            if ("object" !== typeof MM || null === MM) return JSON.stringify(MM);
-                            return `{\n${Object.entries(MM).map((MM=>{let[iM,OM]=MM;return`${rM}    ${iM}: ${XS(OM,`${rM}    `)},`})).join("\n")}\n${rM}}`
+                          function mY(VV) {
+                            let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
+                            if ("object" !== typeof VV || null === VV) return JSON.stringify(VV);
+                            return `{\n${Object.entries(VV).map((VV=>{let[xV,JV]=VV;return`${eV}    ${xV}: ${mY(JV,`${eV}    `)},`})).join("\n")}\n${eV}}`
                           }
 
-                          function IS(MM, rM, iM) {
-                            const OM = BS(MM),
-                              SM = [`    line: ${JSON.stringify(rM)},`];
-                            return iM && SM.push(`    speakerName: ${JSON.stringify(iM)},`), SM.push("    voice,"), `const voice = ${OM?JSON.stringify(OM):XS((0,gS.p)(MM))}\n\napi.setClientOption(playerId, "dialogue", {\n${SM.join("\n")}\n})`
+                          function KY(VV, eV, xV) {
+                            const JV = fY(VV),
+                              YV = [`    line: ${JSON.stringify(eV)},`];
+                            return xV && YV.push(`    speakerName: ${JSON.stringify(xV)},`), YV.push("    voice,"), `const voice = ${JV?JSON.stringify(JV):mY((0,NY.j)(VV))}\n\napi.setClientOption(playerId, "dialogue", {\n${YV.join("\n")}\n})`
                           }
-                          const KS = 400,
-                            qS = 90;
-                          let TS = null;
+                          const HY = 400,
+                            uY = 90;
+                          let sY = null;
 
-                          function VS(MM, rM, iM) {
-                            return TS ??= new AudioContext, TS.resume(), (0, pS.d)(TS, TS.destination, MM, rM, iM, (() => {}))
+                          function SY(VV, eV, xV) {
+                            return sY ??= new AudioContext, sY.resume(), (0, zY.d)(sY, sY.destination, VV, eV, xV, (() => {}))
                           }
 
-                          function cS() {
-                            const [MM, rM] = (0, OM.useState)(gS.l.regular), [iM, SM] = (0, OM.useState)(FS[0]), [aM, PM] = (0, OM.useState)("Innkeeper"), [nM, QM] = (0, OM.useState)(0), zM = mO((MM => MM.volume)), LM = (0, OM.useRef)(null), mM = (0, OM.useRef)(0), HM = (0, OM.useRef)(0), JM = () => {
-                              var MM;
-                              null === (MM = LM.current) || void 0 === MM || MM.call(LM), LM.current = null
+                          function IY() {
+                            const [VV, eV] = (0, JV.useState)(NY.i.regular), [xV, YV] = (0, JV.useState)(LY[0]), [yV, pV] = (0, JV.useState)("Innkeeper"), [QV, nV] = (0, JV.useState)(0), wV = wJ((VV => VV.volume)), ZV = (0, JV.useRef)(null), vV = (0, JV.useRef)(0), rV = (0, JV.useRef)(0), bV = () => {
+                              var VV;
+                              null === (VV = ZV.current) || void 0 === VV || VV.call(ZV), ZV.current = null
                             };
-                            (0, OM.useEffect)((() => () => {
-                              var MM;
-                              null === (MM = LM.current) || void 0 === MM || MM.call(LM), window.clearTimeout(mM.current)
+                            (0, JV.useEffect)((() => () => {
+                              var VV;
+                              null === (VV = ZV.current) || void 0 === VV || VV.call(ZV), window.clearTimeout(vV.current)
                             }), []);
-                            const yM = (0, OM.useMemo)((() => ({
-                                line: iM,
-                                speakerName: aM || void 0,
-                                voice: MM
-                              })), [iM, aM, MM]),
-                              lM = (0, OM.useRef)(yM);
-                            lM.current = yM;
-                            const UM = BS(MM),
-                              GM = MM => {
-                                window.clearTimeout(mM.current), JM();
+                            const BV = (0, JV.useMemo)((() => ({
+                                line: xV,
+                                speakerName: yV || void 0,
+                                voice: VV
+                              })), [xV, yV, VV]),
+                              jV = (0, JV.useRef)(BV);
+                            jV.current = BV;
+                            const tV = fY(VV),
+                              FV = VV => {
+                                window.clearTimeout(vV.current), bV();
                                 const {
-                                  plan: rM,
-                                  synth: iM
-                                } = (0, RS.i)(MM);
-                                iM && (LM.current = VS(iM, rM.blips, zM)), QM((MM => MM + 1))
+                                  plan: eV,
+                                  synth: xV
+                                } = (0, MY.g)(VV);
+                                xV && (ZV.current = SY(xV, eV.blips, wV)), nV((VV => VV + 1))
                               },
-                              CM = IS(MM, iM, aM);
-                            return (0, hM.jsxs)("section", {
+                              TV = KY(VV, xV, yV);
+                            return (0, kV.jsxs)("section", {
                               className: "DocsPlayground DocsVoicePlayground",
                               "aria-label": "Voice playground",
-                              children: [(0, hM.jsxs)("header", {
+                              children: [(0, kV.jsxs)("header", {
                                 className: "DocsPlaygroundHeader",
-                                children: [(0, hM.jsxs)("div", {
-                                  children: [(0, hM.jsx)("div", {
+                                children: [(0, kV.jsxs)("div", {
+                                  children: [(0, kV.jsx)("div", {
                                     className: "DocsPlaygroundTitle",
                                     children: "Try it: voices"
-                                  }), (0, hM.jsx)("div", {
+                                  }), (0, kV.jsx)("div", {
                                     className: "DocsPlaygroundHint",
                                     children: "Start from a preset and change it to suit your character. The line replays as you go."
                                   })]
-                                }), (0, hM.jsx)(EM, {
-                                  text: CM,
+                                }), (0, kV.jsx)(qV, {
+                                  text: TV,
                                   label: "Copy code"
                                 })]
-                              }), (0, hM.jsxs)("div", {
+                              }), (0, kV.jsxs)("div", {
                                 className: "DocsPlaygroundPresets",
-                                children: [vS.map((MM => (0, hM.jsx)("button", {
+                                children: [lY.map((VV => (0, kV.jsx)("button", {
                                   type: "button",
-                                  className: jM()("DocsVariantChip", {
-                                    Active: UM === MM
+                                  className: UV()("DocsVariantChip", {
+                                    Active: tV === VV
                                   }),
-                                  "aria-pressed": UM === MM,
+                                  "aria-pressed": tV === VV,
                                   onClick: () => {
-                                    (MM => {
-                                      const iM = gS.l[MM];
-                                      rM(iM), GM({
-                                        ...yM,
-                                        voice: iM
+                                    (VV => {
+                                      const xV = NY.i[VV];
+                                      eV(xV), FV({
+                                        ...BV,
+                                        voice: xV
                                       })
-                                    })(MM)
+                                    })(VV)
                                   },
-                                  children: MM
-                                }, MM))), !UM && (0, hM.jsx)("span", {
+                                  children: VV
+                                }, VV))), !tV && (0, kV.jsx)("span", {
                                   className: "DocsVariantChip Active DocsVoiceCustomChip",
                                   children: "custom"
                                 })]
-                              }), (0, hM.jsxs)("div", {
+                              }), (0, kV.jsxs)("div", {
                                 className: "DocsVoiceBody",
-                                children: [(0, hM.jsxs)("div", {
+                                children: [(0, kV.jsxs)("div", {
                                   className: "DocsVoiceScene",
-                                  children: [(0, hM.jsx)("div", {
+                                  children: [(0, kV.jsx)("div", {
                                     className: "DocsVoiceStage",
-                                    children: (0, hM.jsx)(uS.b, {
-                                      display: yM
-                                    }, nM)
-                                  }), (0, hM.jsxs)("form", {
+                                    children: (0, kV.jsx)(XY.e, {
+                                      display: BV
+                                    }, QV)
+                                  }), (0, kV.jsxs)("form", {
                                     className: "DocsVoiceLineRow",
-                                    onSubmit: MM => {
-                                      MM.preventDefault(), GM(yM)
+                                    onSubmit: VV => {
+                                      VV.preventDefault(), FV(BV)
                                     },
-                                    children: [(0, hM.jsx)("input", {
-                                      value: iM,
+                                    children: [(0, kV.jsx)("input", {
+                                      value: xV,
                                       "aria-label": "Line",
                                       placeholder: "Type a line to hear it",
-                                      onChange: MM => {
-                                        SM(MM.target.value)
+                                      onChange: VV => {
+                                        YV(VV.target.value)
                                       }
-                                    }), (0, hM.jsxs)("button", {
+                                    }), (0, kV.jsxs)("button", {
                                       type: "submit",
                                       className: "DocsVoiceSpeakButton",
-                                      children: [(0, hM.jsx)(dM, {
+                                      children: [(0, kV.jsx)(EV, {
                                         name: "play"
-                                      }), (0, hM.jsx)("span", {
+                                      }), (0, kV.jsx)("span", {
                                         children: "Speak"
                                       })]
                                     })]
-                                  }), (0, hM.jsx)("div", {
+                                  }), (0, kV.jsx)("div", {
                                     className: "DocsVoiceSamples",
-                                    children: FS.map((MM => (0, hM.jsx)("button", {
+                                    children: LY.map((VV => (0, kV.jsx)("button", {
                                       type: "button",
-                                      className: jM()("DocsVariantChip", {
-                                        Active: iM === MM
+                                      className: UV()("DocsVariantChip", {
+                                        Active: xV === VV
                                       }),
                                       onClick: () => {
-                                        var rM;
-                                        SM(rM = MM), GM({
-                                          ...yM,
-                                          line: rM
+                                        var eV;
+                                        YV(eV = VV), FV({
+                                          ...BV,
+                                          line: eV
                                         })
                                       },
-                                      children: MM
-                                    }, MM)))
-                                  }), (0, hM.jsxs)("label", {
+                                      children: VV
+                                    }, VV)))
+                                  }), (0, kV.jsxs)("label", {
                                     className: "DocsVoiceSpeaker",
-                                    children: [(0, hM.jsx)("span", {
+                                    children: [(0, kV.jsx)("span", {
                                       children: "Speaker"
-                                    }), (0, hM.jsx)("input", {
-                                      value: aM,
+                                    }), (0, kV.jsx)("input", {
+                                      value: yV,
                                       placeholder: "No name",
-                                      onChange: MM => {
-                                        PM(MM.target.value)
+                                      onChange: VV => {
+                                        pV(VV.target.value)
                                       }
                                     })]
                                   })]
-                                }), (0, hM.jsx)(xS, {
-                                  synth: MM,
-                                  onChange: iM => {
-                                    const OM = {
-                                      ...MM,
-                                      ...iM
+                                }), (0, kV.jsx)(hY, {
+                                  synth: VV,
+                                  onChange: xV => {
+                                    const JV = {
+                                      ...VV,
+                                      ...xV
                                     };
-                                    rM(OM);
-                                    const SM = {
-                                        ...yM,
-                                        voice: OM
+                                    eV(JV);
+                                    const YV = {
+                                        ...BV,
+                                        voice: JV
                                       },
-                                      jM = performance.now();
-                                    if (jM - HM.current >= qS) {
-                                      HM.current = jM, JM();
-                                      const MM = (0, RS.i)(SM).plan.blips[0];
-                                      MM && (LM.current = VS((0, gS.p)(OM), [{
-                                        ...MM,
+                                      UV = performance.now();
+                                    if (UV - rV.current >= uY) {
+                                      rV.current = UV, bV();
+                                      const VV = (0, MY.g)(YV).plan.blips[0];
+                                      VV && (ZV.current = SY((0, NY.j)(JV), [{
+                                        ...VV,
                                         atMs: 0
-                                      }], zM))
+                                      }], wV))
                                     }
-                                    window.clearTimeout(mM.current), mM.current = window.setTimeout((() => {
-                                      GM(lM.current)
-                                    }), KS)
+                                    window.clearTimeout(vV.current), vV.current = window.setTimeout((() => {
+                                      FV(jV.current)
+                                    }), HY)
                                   }
                                 })]
-                              }), (0, hM.jsx)(eM, {
-                                code: CM,
+                              }), (0, kV.jsx)(PV, {
+                                code: TV,
                                 lang: "ts"
                               })]
                             })
                           }
-                          var Mj = iM(5273);
-                          const rj = /(`{1,2})\s*(.+?)\s*\1(?!`)/g,
-                            ij = String.raw`(?:async\s+)?(?:function\b|\(|[A-Za-z_$][\w$]*\s*=>)`,
-                            Oj = [
-                              [new RegExp(String.raw`([A-Za-z_$][\w$]*)\s*(?:=(?![=>])|:)\s*${ij}`, "g"), Mj.h],
+                          var dY = xV(5364);
+                          const OY = /(`{1,2})\s*(.+?)\s*\1(?!`)/g,
+                            VU = String.raw`(?:async\s+)?(?:function\b|\(|[A-Za-z_$][\w$]*\s*=>)`,
+                            eU = [
+                              [new RegExp(String.raw`([A-Za-z_$][\w$]*)\s*(?:=(?![=>])|:)\s*${VU}`, "g"), dY.o],
                               [/\bfunction\s+([A-Za-z_$][\w$]*)\s*\(/g],
-                              [/([A-Za-z_$][\w$]*)\s*\([^()]*\)\s*\{/g, Mj.h]
+                              [/([A-Za-z_$][\w$]*)\s*\([^()]*\)\s*\{/g, dY.o]
                             ];
 
-                          function Sj(MM) {
-                            return `${MM.pageId}#${MM.anchor}`
+                          function xU(VV) {
+                            return `${VV.pageId}#${VV.anchor}`
                           }
-                          let jj, aj, Pj;
+                          let JU, YU, UU;
 
-                          function nj(MM) {
-                            const rM = (0, bM.j)(MM),
-                              iM = new Set;
-                            for (const [, , OM] of rM.matchAll(bM.d)) {
-                              const MM = OM.startsWith("#") ? xM(OM) : null,
-                                rM = MM ? Sj({
-                                  pageId: MM.page.id,
-                                  anchor: MM.anchor
+                          function yU(VV) {
+                            const eV = (0, AV.l)(VV),
+                              xV = new Set;
+                            for (const [, , JV] of eV.matchAll(AV.d)) {
+                              const VV = JV.startsWith("#") ? LV(JV) : null,
+                                eV = VV ? xU({
+                                  pageId: VV.page.id,
+                                  anchor: VV.anchor
                                 }) : null;
-                              null !== rM && (jj || (jj = new Set(ZM.flatMap((MM => uM(MM.layout) ? NM(MM).sections.map((rM => Sj({
-                                pageId: MM.id,
-                                anchor: rM.heading.anchor
-                              }))) : [])))), jj).has(rM) && iM.add(rM)
+                              null !== eV && (JU || (JU = new Set(CV.flatMap((VV => zV(VV.layout) ? hV(VV).sections.map((eV => xU({
+                                pageId: VV.id,
+                                anchor: eV.heading.anchor
+                              }))) : [])))), JU).has(eV) && xV.add(eV)
                             }
-                            for (const [, , OM] of rM.matchAll(rj)) {
-                              const MM = mr(OM);
-                              MM && iM.add(Sj(MM))
+                            for (const [, , JV] of eV.matchAll(OY)) {
+                              const VV = ve(JV);
+                              VV && xV.add(xU(VV))
                             }
-                            return iM
+                            return xV
                           }
 
-                          function Qj(MM, rM) {
-                            const iM = new Set,
-                              OM = function(MM) {
-                                return MM.replace(/\/\*[\s\S]*?\*\//g, "").replace(/\/\/.*$/gm, "").replace(/"(?:[^"\\\n]|\\.)*"|'(?:[^'\\\n]|\\.)*'/g, '""')
-                              }(MM);
-                            for (const [, SM] of OM.matchAll(/\bapi\.([A-Za-z_$][\w$]*)/g)) iM.add(SM);
-                            for (const [SM, jM] of Oj)
-                              for (const [, MM] of(0, Mj.e)(OM, SM, jM)) rM.has(MM) && iM.add(MM);
-                            return iM
+                          function pU(VV, eV) {
+                            const xV = new Set,
+                              JV = function(VV) {
+                                return VV.replace(/\/\*[\s\S]*?\*\//g, "").replace(/\/\/.*$/gm, "").replace(/"(?:[^"\\\n]|\\.)*"|'(?:[^'\\\n]|\\.)*'/g, '""')
+                              }(VV);
+                            for (const [, YV] of JV.matchAll(/\bapi\.([A-Za-z_$][\w$]*)/g)) xV.add(YV);
+                            for (const [YV, UV] of eU)
+                              for (const [, VV] of(0, dY.h)(JV, YV, UV)) eV.has(VV) && xV.add(VV);
+                            return xV
                           }
 
-                          function zj(MM, rM, iM, OM) {
-                            const SM = MM.get(rM);
-                            SM ? !OM && SM.some((MM => MM.pageId === iM.pageId)) || SM.push(iM) : MM.set(rM, [iM])
+                          function QU(VV, eV, xV, JV) {
+                            const YV = VV.get(eV);
+                            YV ? !JV && YV.some((VV => VV.pageId === xV.pageId)) || YV.push(xV) : VV.set(eV, [xV])
                           }
-                          const Lj = /^[A-Za-z_$][\w$]*$/;
+                          const nU = /^[A-Za-z_$][\w$]*$/;
 
-                          function mj(MM) {
-                            return Lj.test(MM.name) ? MM.name : "options"
-                          }
-
-                          function Hj(MM, rM) {
-                            const iM = MM.params.map(mj).join(", ");
-                            return rM ? `${MM.name} = (${iM}) => {\n\t\n}` : `api.${MM.name}(${iM})`
+                          function wU(VV) {
+                            return nU.test(VV.name) ? VV.name : "options"
                           }
 
-                          function hj(MM) {
+                          function ZU(VV, eV) {
+                            const xV = VV.params.map(wU).join(", ");
+                            return eV ? `${VV.name} = (${xV}) => {\n\t\n}` : `api.${VV.name}(${xV})`
+                          }
+
+                          function vU(VV) {
                             let {
-                              method: rM,
-                              isCallback: iM
-                            } = MM;
-                            return (0, hM.jsxs)("div", {
+                              method: eV,
+                              isCallback: xV
+                            } = VV;
+                            return (0, kV.jsxs)("div", {
                               className: "DocsSignature",
-                              children: [(0, hM.jsxs)("span", {
+                              children: [(0, kV.jsxs)("span", {
                                 className: "DocsSignatureCode",
-                                children: [iM ? (0, hM.jsxs)(hM.Fragment, {
-                                  children: [(0, hM.jsx)("span", {
+                                children: [xV ? (0, kV.jsxs)(kV.Fragment, {
+                                  children: [(0, kV.jsx)("span", {
                                     className: "DocsSignatureName",
-                                    children: rM.name
-                                  }), (0, hM.jsx)("span", {
+                                    children: eV.name
+                                  }), (0, kV.jsx)("span", {
                                     className: "DocsTypePunctuation",
                                     children: " = ("
                                   })]
-                                }) : (0, hM.jsxs)(hM.Fragment, {
-                                  children: [(0, hM.jsx)("span", {
+                                }) : (0, kV.jsxs)(kV.Fragment, {
+                                  children: [(0, kV.jsx)("span", {
                                     className: "DocsSignatureObject",
                                     children: "api."
-                                  }), (0, hM.jsx)("span", {
+                                  }), (0, kV.jsx)("span", {
                                     className: "DocsSignatureName",
-                                    children: rM.name
-                                  }), (0, hM.jsx)("span", {
+                                    children: eV.name
+                                  }), (0, kV.jsx)("span", {
                                     className: "DocsTypePunctuation",
                                     children: "("
                                   })]
-                                }), rM.params.map(((MM, iM) => (0, hM.jsxs)(OM.Fragment, {
-                                  children: [iM > 0 && (0, hM.jsx)("span", {
+                                }), eV.params.map(((VV, xV) => (0, kV.jsxs)(JV.Fragment, {
+                                  children: [xV > 0 && (0, kV.jsx)("span", {
                                     className: "DocsTypePunctuation",
                                     children: ", "
-                                  }), (0, hM.jsx)("a", {
+                                  }), (0, kV.jsx)("a", {
                                     className: "DocsSignatureParam",
-                                    href: `#${rM.name}-${mj(MM)}`,
-                                    children: MM.name
+                                    href: `#${eV.name}-${wU(VV)}`,
+                                    children: VV.name
                                   })]
-                                }, MM.name))), (0, hM.jsx)("span", {
+                                }, VV.name))), (0, kV.jsx)("span", {
                                   className: "DocsTypePunctuation",
-                                  children: iM ? ") => " : ")"
-                                }), iM && !rM.returns && (0, hM.jsx)("span", {
+                                  children: xV ? ") => " : ")"
+                                }), xV && !eV.returns && (0, kV.jsx)("span", {
                                   className: "DocsTypeKeyword",
                                   children: "void"
                                 })]
-                              }), rM.returns && rM.returns.type && (0, hM.jsxs)("span", {
+                              }), eV.returns && eV.returns.type && (0, kV.jsxs)("span", {
                                 className: "DocsSignatureReturns",
-                                children: [!iM && (0, hM.jsx)("span", {
+                                children: [!xV && (0, kV.jsx)("span", {
                                   className: "DocsSignatureArrow",
                                   children: "\u2192"
-                                }), (0, hM.jsx)(wr, {
-                                  type: rM.returns.type
+                                }), (0, kV.jsx)(Ne, {
+                                  type: eV.returns.type
                                 })]
                               })]
                             })
                           }
 
-                          function Jj(MM) {
+                          function rU(VV) {
                             let {
-                              title: rM,
-                              references: iM
-                            } = MM;
-                            const SM = (0, OM.useContext)(Hr);
-                            return (0, hM.jsxs)("div", {
+                              title: eV,
+                              references: xV
+                            } = VV;
+                            const YV = (0, JV.useContext)(re);
+                            return (0, kV.jsxs)("div", {
                               className: "DocsCardReferences",
-                              children: [(0, hM.jsx)("span", {
+                              children: [(0, kV.jsx)("span", {
                                 className: "DocsCardReferencesTitle",
-                                children: rM
-                              }), iM.map((MM => (0, hM.jsx)(aM.b, {
-                                to: FM(SM, fM(MM.pageId), MM.anchor),
-                                children: MM.label
-                              }, `${MM.pageId}#${MM.anchor}`)))]
+                                children: eV
+                              }), xV.map((VV => (0, kV.jsx)(yV.b, {
+                                to: mV(YV, oV(VV.pageId), VV.anchor),
+                                children: VV.label
+                              }, `${VV.pageId}#${VV.anchor}`)))]
                             })
                           }
 
-                          function dj(MM) {
-                            var rM, iM;
+                          function kU(VV) {
+                            var eV, xV;
                             let {
-                              pageId: OM,
-                              anchor: SM
-                            } = MM;
-                            const jM = Sj({
-                                pageId: OM,
-                                anchor: SM
+                              pageId: JV,
+                              anchor: YV
+                            } = VV;
+                            const UV = xU({
+                                pageId: JV,
+                                anchor: YV
                               }),
-                              aM = null !== (rM = function() {
-                                if (!Pj) {
-                                  Pj = new Map;
-                                  const OM = new Set(ZM.filter((MM => "callbacks" === MM.layout)).flatMap((MM => NM(MM).sections.map((MM => MM.heading.text)))));
-                                  for (const SM of ZM)
-                                    if ("article" === SM.layout || "snippets" === SM.layout)
-                                      for (const jM of (0, bM.v)(NM(SM)))
+                              yV = null !== (eV = function() {
+                                if (!UU) {
+                                  UU = new Map;
+                                  const JV = new Set(CV.filter((VV => "callbacks" === VV.layout)).flatMap((VV => hV(VV).sections.map((VV => VV.heading.text)))));
+                                  for (const YV of CV)
+                                    if ("article" === YV.layout || "snippets" === YV.layout)
+                                      for (const UV of (0, AV.A)(hV(YV)))
                                         for (const {
-                                            code: aM
+                                            code: yV
                                           }
-                                          of(0, bM.l)(jM.blocks))
-                                          for (const PM of Qj(aM, OM)) {
-                                            const OM = Lr().get(PM);
-                                            if (OM) {
-                                              var MM, rM, iM;
-                                              const aM = {
-                                                pageId: SM.id,
-                                                anchor: null !== (MM = null === (rM = jM.heading) || void 0 === rM ? void 0 : rM.anchor) && void 0 !== MM ? MM : "",
-                                                label: null !== (iM = SM.navTitle) && void 0 !== iM ? iM : SM.title
+                                          of(0, AV.n)(UV.blocks))
+                                          for (const pV of pU(yV, JV)) {
+                                            const JV = Ze().get(pV);
+                                            if (JV) {
+                                              var VV, eV, xV;
+                                              const yV = {
+                                                pageId: YV.id,
+                                                anchor: null !== (VV = null === (eV = UV.heading) || void 0 === eV ? void 0 : eV.anchor) && void 0 !== VV ? VV : "",
+                                                label: null !== (xV = YV.navTitle) && void 0 !== xV ? xV : YV.title
                                               };
-                                              zj(Pj, Sj(OM), aM, !1)
+                                              QU(UU, xU(JV), yV, !1)
                                             }
                                           }
                                 }
-                                return Pj
-                              }().get(jM)) && void 0 !== rM ? rM : [],
-                              PM = null !== (iM = function() {
-                                if (!aj) {
-                                  aj = new Map;
-                                  const MM = fM("changelog");
-                                  for (const rM of NM(MM).sections) {
-                                    const iM = new Set(rM.blocks.flatMap((MM => [...nj(MM)])));
-                                    for (const OM of iM) {
-                                      const iM = {
-                                        pageId: MM.id,
-                                        anchor: rM.heading.anchor,
-                                        label: rM.heading.text
+                                return UU
+                              }().get(UV)) && void 0 !== eV ? eV : [],
+                              pV = null !== (xV = function() {
+                                if (!YU) {
+                                  YU = new Map;
+                                  const VV = oV("changelog");
+                                  for (const eV of hV(VV).sections) {
+                                    const xV = new Set(eV.blocks.flatMap((VV => [...yU(VV)])));
+                                    for (const JV of xV) {
+                                      const xV = {
+                                        pageId: VV.id,
+                                        anchor: eV.heading.anchor,
+                                        label: eV.heading.text
                                       };
-                                      zj(aj, OM, iM, !0)
+                                      QU(YU, JV, xV, !0)
                                     }
                                   }
                                 }
-                                return aj
-                              }().get(jM)) && void 0 !== iM ? iM : [];
-                            return 0 === aM.length && 0 === PM.length ? null : (0, hM.jsxs)("footer", {
+                                return YU
+                              }().get(UV)) && void 0 !== xV ? xV : [];
+                            return 0 === yV.length && 0 === pV.length ? null : (0, kV.jsxs)("footer", {
                               className: "DocsCardFooter",
-                              children: [aM.length > 0 && (0, hM.jsx)(Jj, {
+                              children: [yV.length > 0 && (0, kV.jsx)(rU, {
                                 title: "Used in",
-                                references: aM
-                              }), PM.length > 0 && (0, hM.jsx)(Jj, {
+                                references: yV
+                              }), pV.length > 0 && (0, kV.jsx)(rU, {
                                 title: "Changelog",
-                                references: PM
+                                references: pV
                               })]
                             })
                           }
 
-                          function yj(MM) {
+                          function bU(VV) {
                             let {
-                              method: rM,
-                              pageId: iM,
-                              anchor: OM,
-                              isCallback: SM
-                            } = MM;
-                            const jM = SM ? void 0 : Pr().get(rM.name),
-                              aM = rM.description.length > 0 || null === jM || void 0 === jM || !jM.description ? rM.description : (0, bM.C)(jM.description);
-                            return (0, hM.jsxs)("article", {
+                              method: eV,
+                              pageId: xV,
+                              anchor: JV,
+                              isCallback: YV
+                            } = VV;
+                            const UV = YV ? void 0 : pe().get(eV.name),
+                              yV = eV.description.length > 0 || null === UV || void 0 === UV || !UV.description ? eV.description : (0, AV.I)(UV.description);
+                            return (0, kV.jsxs)("article", {
                               className: "DocsCard DocsMethodCard",
-                              children: [(0, hM.jsxs)("header", {
+                              children: [(0, kV.jsxs)("header", {
                                 className: "DocsCardHeader",
-                                children: [(0, hM.jsx)(Qi, {
+                                children: [(0, kV.jsx)(nx, {
                                   level: 2,
-                                  text: rM.name,
-                                  anchor: OM,
+                                  text: eV.name,
+                                  anchor: JV,
                                   className: "DocsCardTitle"
-                                }), (0, hM.jsx)(EM, {
-                                  text: Hj(rM, SM),
-                                  label: SM ? "Copy handler" : "Copy call",
+                                }), (0, kV.jsx)(qV, {
+                                  text: ZU(eV, YV),
+                                  label: YV ? "Copy handler" : "Copy call",
                                   className: "DocsCardCopy"
                                 })]
-                              }), (0, hM.jsx)(hj, {
-                                method: rM,
-                                isCallback: SM
-                              }), jM && null !== jM.deprecation && (0, hM.jsxs)("aside", {
+                              }), (0, kV.jsx)(vU, {
+                                method: eV,
+                                isCallback: YV
+                              }), UV && null !== UV.deprecation && (0, kV.jsxs)("aside", {
                                 className: "DocsCallout warning DocsDeprecation",
-                                children: [(0, hM.jsx)("strong", {
+                                children: [(0, kV.jsx)("strong", {
                                   children: "Deprecated"
-                                }), jM.deprecation && (0, hM.jsxs)(hM.Fragment, {
-                                  children: [": ", (0, hM.jsx)(Cr, {
-                                    text: (PM = jM.deprecation, (0, Mj.p)(PM, /[a-z][\w$]*[A-Z][\w$]*\b/g, (0, Mj.g)("`\\w"), (MM => {
-                                      let [rM] = MM;
-                                      return Lr().has(rM) ? `\`${rM}\`` : rM
+                                }), UV.deprecation && (0, kV.jsxs)(kV.Fragment, {
+                                  children: [": ", (0, kV.jsx)(Te, {
+                                    text: (pV = UV.deprecation, (0, dY.z)(pV, /[a-z][\w$]*[A-Z][\w$]*\b/g, (0, dY.l)("`\\w"), (VV => {
+                                      let [eV] = VV;
+                                      return Ze().has(eV) ? `\`${eV}\`` : eV
                                     })))
                                   })]
                                 })]
-                              }), aM.length > 0 && (0, hM.jsx)("div", {
+                              }), yV.length > 0 && (0, kV.jsx)("div", {
                                 className: "DocsProse DocsCardBody",
-                                children: (0, hM.jsx)(Hi, {
-                                  blocks: aM
+                                children: (0, kV.jsx)(rx, {
+                                  blocks: yV
                                 })
-                              }), rM.params.length > 0 && (0, hM.jsxs)("section", {
+                              }), eV.params.length > 0 && (0, kV.jsxs)("section", {
                                 className: "DocsCardPart",
-                                children: [(0, hM.jsx)("h3", {
+                                children: [(0, kV.jsx)("h3", {
                                   className: "DocsCardPartTitle",
                                   children: "Parameters"
-                                }), (0, hM.jsx)("dl", {
+                                }), (0, kV.jsx)("dl", {
                                   className: "DocsParamList",
-                                  children: rM.params.map((MM => (0, hM.jsxs)("div", {
-                                    id: `${rM.name}-${mj(MM)}`,
+                                  children: eV.params.map((VV => (0, kV.jsxs)("div", {
+                                    id: `${eV.name}-${wU(VV)}`,
                                     className: "DocsParam",
-                                    children: [(0, hM.jsxs)("dt", {
-                                      children: [(0, hM.jsx)("code", {
+                                    children: [(0, kV.jsxs)("dt", {
+                                      children: [(0, kV.jsx)("code", {
                                         className: "DocsParamName",
-                                        children: MM.name
-                                      }), (0, hM.jsx)(wr, {
-                                        type: MM.type
+                                        children: VV.name
+                                      }), (0, kV.jsx)(Ne, {
+                                        type: VV.type
                                       })]
-                                    }), MM.description && (0, hM.jsx)("dd", {
-                                      children: (0, hM.jsx)(Cr, {
-                                        text: MM.description
+                                    }), VV.description && (0, kV.jsx)("dd", {
+                                      children: (0, kV.jsx)(Te, {
+                                        text: VV.description
                                       })
                                     })]
-                                  }, MM.name)))
+                                  }, VV.name)))
                                 })]
-                              }), rM.returns && (rM.returns.type || rM.returns.description.length > 0) && (0, hM.jsxs)("section", {
+                              }), eV.returns && (eV.returns.type || eV.returns.description.length > 0) && (0, kV.jsxs)("section", {
                                 className: "DocsCardPart",
-                                children: [(0, hM.jsx)("h3", {
+                                children: [(0, kV.jsx)("h3", {
                                   className: "DocsCardPartTitle",
                                   children: "Returns"
-                                }), (0, hM.jsxs)("div", {
+                                }), (0, kV.jsxs)("div", {
                                   className: "DocsReturns",
-                                  children: [rM.returns.type && (0, hM.jsx)(wr, {
-                                    type: rM.returns.type
-                                  }), rM.returns.description.length > 0 && (0, hM.jsx)("div", {
+                                  children: [eV.returns.type && (0, kV.jsx)(Ne, {
+                                    type: eV.returns.type
+                                  }), eV.returns.description.length > 0 && (0, kV.jsx)("div", {
                                     className: "DocsProse",
-                                    children: (0, hM.jsx)(Hi, {
-                                      blocks: rM.returns.description
+                                    children: (0, kV.jsx)(rx, {
+                                      blocks: eV.returns.description
                                     })
                                   })]
                                 })]
-                              }), (0, hM.jsx)(dj, {
-                                pageId: iM,
-                                anchor: OM
+                              }), (0, kV.jsx)(kU, {
+                                pageId: xV,
+                                anchor: JV
                               })]
                             });
-                            var PM
+                            var pV
                           }
 
-                          function lj(MM) {
-                            var rM;
-                            return null !== MM.defaultValue && "undefined" !== MM.defaultValue ? MM.defaultValue : null !== (rM = MM.example) && void 0 !== rM ? rM : "value"
+                          function EU(VV) {
+                            var eV;
+                            return null !== VV.defaultValue && "undefined" !== VV.defaultValue ? VV.defaultValue : null !== (eV = VV.example) && void 0 !== eV ? eV : "value"
                           }
 
-                          function Ej(MM) {
+                          function BU(VV) {
                             let {
-                              setting: rM,
-                              pageId: iM,
-                              anchor: OM,
-                              setterSnippet: SM
-                            } = MM;
-                            const jM = null === rM.defaultValue ? null : yr(rM.defaultValue);
-                            return (0, hM.jsxs)("article", {
+                              setting: eV,
+                              pageId: xV,
+                              anchor: JV,
+                              setterSnippet: YV
+                            } = VV;
+                            const UV = null === eV.defaultValue ? null : Be(eV.defaultValue);
+                            return (0, kV.jsxs)("article", {
                               className: "DocsCard DocsSettingCard",
-                              children: [(0, hM.jsxs)("header", {
+                              children: [(0, kV.jsxs)("header", {
                                 className: "DocsCardHeader",
-                                children: [(0, hM.jsx)(Qi, {
+                                children: [(0, kV.jsx)(nx, {
                                   level: 2,
-                                  text: rM.name,
-                                  anchor: OM,
+                                  text: eV.name,
+                                  anchor: JV,
                                   className: "DocsCardTitle"
-                                }), (0, hM.jsx)(EM, {
-                                  text: SM(rM.name, lj(rM)),
+                                }), (0, kV.jsx)(qV, {
+                                  text: YV(eV.name, EU(eV)),
                                   label: "Copy setter",
                                   className: "DocsCardCopy"
                                 })]
-                              }), (0, hM.jsxs)("dl", {
+                              }), (0, kV.jsxs)("dl", {
                                 className: "DocsSettingFacts",
-                                children: [(0, hM.jsxs)("div", {
-                                  children: [(0, hM.jsx)("dt", {
+                                children: [(0, kV.jsxs)("div", {
+                                  children: [(0, kV.jsx)("dt", {
                                     children: "Type"
-                                  }), (0, hM.jsx)("dd", {
-                                    children: (0, hM.jsx)(wr, {
-                                      type: rM.type
+                                  }), (0, kV.jsx)("dd", {
+                                    children: (0, kV.jsx)(Ne, {
+                                      type: eV.type
                                     })
                                   })]
-                                }), null !== rM.defaultValue && (0, hM.jsxs)("div", {
-                                  children: [(0, hM.jsx)("dt", {
+                                }), null !== eV.defaultValue && (0, kV.jsxs)("div", {
+                                  children: [(0, kV.jsx)("dt", {
                                     children: "Default"
-                                  }), (0, hM.jsx)("dd", {
-                                    children: (0, hM.jsxs)("code", {
+                                  }), (0, kV.jsx)("dd", {
+                                    children: (0, kV.jsxs)("code", {
                                       className: "DocsInlineCode DocsDefaultValue",
-                                      children: [jM && (0, hM.jsx)(lr, {
-                                        colour: jM
-                                      }), rM.defaultValue]
+                                      children: [UV && (0, kV.jsx)(je, {
+                                        colour: UV
+                                      }), eV.defaultValue]
                                     })
                                   })]
-                                }), null !== rM.example && (0, hM.jsxs)("div", {
-                                  children: [(0, hM.jsx)("dt", {
+                                }), null !== eV.example && (0, kV.jsxs)("div", {
+                                  children: [(0, kV.jsx)("dt", {
                                     children: "Example"
-                                  }), (0, hM.jsx)("dd", {
-                                    children: (0, hM.jsx)("code", {
+                                  }), (0, kV.jsx)("dd", {
+                                    children: (0, kV.jsx)("code", {
                                       className: "DocsInlineCode",
-                                      children: rM.example
+                                      children: eV.example
                                     })
                                   })]
                                 })]
-                              }), rM.description.length > 0 && (0, hM.jsx)("div", {
+                              }), eV.description.length > 0 && (0, kV.jsx)("div", {
                                 className: "DocsProse DocsCardBody",
-                                children: (0, hM.jsx)(Hi, {
-                                  blocks: rM.description
+                                children: (0, kV.jsx)(rx, {
+                                  blocks: eV.description
                                 })
-                              }), (0, hM.jsx)(dj, {
-                                pageId: iM,
-                                anchor: OM
+                              }), (0, kV.jsx)(kU, {
+                                pageId: xV,
+                                anchor: JV
                               })]
                             })
                           }
 
-                          function Uj(MM) {
+                          function jU(VV) {
                             let {
-                              section: rM
-                            } = MM;
-                            return (0, hM.jsxs)("article", {
+                              section: eV
+                            } = VV;
+                            return (0, kV.jsxs)("article", {
                               className: "DocsCard DocsSnippetCard",
-                              children: [(0, hM.jsx)(Qi, {
+                              children: [(0, kV.jsx)(nx, {
                                 level: 2,
-                                text: rM.heading.text,
-                                anchor: rM.heading.anchor,
+                                text: eV.heading.text,
+                                anchor: eV.heading.anchor,
                                 className: "DocsCardTitle"
-                              }), (0, hM.jsx)("div", {
+                              }), (0, kV.jsx)("div", {
                                 className: "DocsProse",
-                                children: (0, hM.jsx)(Hi, {
-                                  blocks: rM.blocks
+                                children: (0, kV.jsx)(rx, {
+                                  blocks: eV.blocks
                                 })
                               })]
                             })
                           }
 
-                          function Gj(MM) {
+                          function qU(VV) {
                             let {
-                              section: rM
-                            } = MM;
-                            return (0, hM.jsxs)("section", {
+                              section: eV
+                            } = VV;
+                            return (0, kV.jsxs)("section", {
                               className: "DocsProse DocsArticleSection",
-                              children: [(0, hM.jsx)(Qi, {
-                                level: rM.heading.level,
-                                text: rM.heading.text,
-                                anchor: rM.heading.anchor
-                              }), (0, hM.jsx)(Hi, {
-                                blocks: rM.blocks
+                              children: [(0, kV.jsx)(nx, {
+                                level: eV.heading.level,
+                                text: eV.heading.text,
+                                anchor: eV.heading.anchor
+                              }), (0, kV.jsx)(rx, {
+                                blocks: eV.blocks
                               })]
                             })
                           }
-                          const Cj = {
+                          const tU = {
                             methods: "methods",
                             callbacks: "callbacks",
                             settings: "settings",
@@ -4857,337 +4857,337 @@ export const modules = {
                             article: "sections"
                           };
 
-                          function ej(MM) {
+                          function FU(VV) {
                             let {
-                              page: rM,
-                              section: iM
-                            } = MM;
-                            if ("methods" === rM.layout || "callbacks" === rM.layout) return (0, hM.jsx)(yj, {
-                              method: bi(iM),
-                              pageId: rM.id,
-                              anchor: iM.heading.anchor,
-                              isCallback: "callbacks" === rM.layout
+                              page: eV,
+                              section: xV
+                            } = VV;
+                            if ("methods" === eV.layout || "callbacks" === eV.layout) return (0, kV.jsx)(bU, {
+                              method: Px(xV),
+                              pageId: eV.id,
+                              anchor: xV.heading.anchor,
+                              isCallback: "callbacks" === eV.layout
                             });
-                            if ("settings" === rM.layout) {
-                              const MM = function(MM) {
-                                const rM = {
-                                  name: MM.heading.text,
+                            if ("settings" === eV.layout) {
+                              const VV = function(VV) {
+                                const eV = {
+                                  name: VV.heading.text,
                                   type: "",
                                   defaultValue: null,
                                   example: null,
                                   description: []
                                 };
-                                for (const OM of MM.blocks) {
-                                  var iM;
-                                  if (ei(OM)) continue;
-                                  const MM = "paragraph" === OM.kind ? OM.text.match(wi) : null;
-                                  if (!MM) {
-                                    rM.description.push(OM);
+                                for (const JV of VV.blocks) {
+                                  var xV;
+                                  if (Tx(JV)) continue;
+                                  const VV = "paragraph" === JV.kind ? JV.text.match(Ax) : null;
+                                  if (!VV) {
+                                    eV.description.push(JV);
                                     continue
                                   }
-                                  const SM = null !== (iM = Ci(MM[2])) && void 0 !== iM ? iM : MM[2];
-                                  "Type" === MM[1] ? rM.type = SM : "Default" === MM[1] ? rM.defaultValue = SM : "" !== SM && (rM.example = SM)
+                                  const YV = null !== (xV = Fx(VV[2])) && void 0 !== xV ? xV : VV[2];
+                                  "Type" === VV[1] ? eV.type = YV : "Default" === VV[1] ? eV.defaultValue = YV : "" !== YV && (eV.example = YV)
                                 }
-                                return rM.type ? rM : null
-                              }(iM);
-                              if (MM) return (0, hM.jsx)(Ej, {
-                                setting: MM,
-                                pageId: rM.id,
-                                anchor: iM.heading.anchor,
-                                setterSnippet: rM.setterSnippet
+                                return eV.type ? eV : null
+                              }(xV);
+                              if (VV) return (0, kV.jsx)(BU, {
+                                setting: VV,
+                                pageId: eV.id,
+                                anchor: xV.heading.anchor,
+                                setterSnippet: eV.setterSnippet
                               })
                             }
-                            return "snippets" === rM.layout ? (0, hM.jsx)(Uj, {
-                              section: iM
-                            }) : "changelog" === rM.layout ? (0, hM.jsxs)("section", {
+                            return "snippets" === eV.layout ? (0, kV.jsx)(jU, {
+                              section: xV
+                            }) : "changelog" === eV.layout ? (0, kV.jsxs)("section", {
                               className: "DocsChangelogEntry",
-                              children: [(0, hM.jsx)("div", {
+                              children: [(0, kV.jsx)("div", {
                                 className: "DocsChangelogDate",
-                                children: (0, hM.jsx)(Qi, {
+                                children: (0, kV.jsx)(nx, {
                                   level: 2,
-                                  text: iM.heading.text,
-                                  anchor: iM.heading.anchor
+                                  text: xV.heading.text,
+                                  anchor: xV.heading.anchor
                                 })
-                              }), (0, hM.jsx)("div", {
+                              }), (0, kV.jsx)("div", {
                                 className: "DocsProse DocsChangelogBody",
-                                children: (0, hM.jsx)(Hi, {
-                                  blocks: ti(iM.blocks)
+                                children: (0, kV.jsx)(rx, {
+                                  blocks: Nx(xV.blocks)
                                 })
                               })]
-                            }) : rM.gallery ? (0, hM.jsxs)("section", {
+                            }) : eV.gallery ? (0, kV.jsxs)("section", {
                               className: "DocsProse DocsArticleSection",
-                              children: [(0, hM.jsx)(Qi, {
-                                level: iM.heading.level,
-                                text: iM.heading.text,
-                                anchor: iM.heading.anchor
-                              }), (0, hM.jsx)(uO, {
-                                kind: rM.gallery,
-                                content: NM(rM),
-                                blocks: iM.blocks
+                              children: [(0, kV.jsx)(nx, {
+                                level: xV.heading.level,
+                                text: xV.heading.text,
+                                anchor: xV.heading.anchor
+                              }), (0, kV.jsx)(XJ, {
+                                kind: eV.gallery,
+                                content: hV(eV),
+                                blocks: xV.blocks
                               })]
-                            }) : (0, hM.jsx)(Gj, {
-                              section: iM
+                            }) : (0, kV.jsx)(qU, {
+                              section: xV
                             })
                           }
 
-                          function bj(MM) {
+                          function TU(VV) {
                             let {
-                              page: rM,
-                              onTocChange: iM
-                            } = MM;
-                            const SM = NM(rM),
-                              [jM, aM] = (0, OM.useState)(""),
-                              PM = "article" !== rM.layout,
-                              nM = yi(rM.gallery) ? rM.gallery : null,
-                              QM = null !== nM,
-                              zM = jM.trim().toLowerCase(),
-                              LM = (0, OM.useRef)(null),
-                              mM = (0, OM.useCallback)((MM => {
-                                var rM;
-                                null === (rM = LM.current) || void 0 === rM || rM.preview(MM)
+                              page: eV,
+                              onTocChange: xV
+                            } = VV;
+                            const YV = hV(eV),
+                              [UV, yV] = (0, JV.useState)(""),
+                              pV = "article" !== eV.layout,
+                              QV = Ex(eV.gallery) ? eV.gallery : null,
+                              nV = null !== QV,
+                              wV = UV.trim().toLowerCase(),
+                              ZV = (0, JV.useRef)(null),
+                              vV = (0, JV.useCallback)((VV => {
+                                var eV;
+                                null === (eV = ZV.current) || void 0 === eV || eV.preview(VV)
                               }), []),
-                              HM = (0, OM.useMemo)((() => {
-                                if (!rM.hasParticlePlayground) return [];
-                                const MM = Wi(SM.intro).find((MM => "names" === MM.kind && !MM.names.some((MM => null !== Ai(MM.name)))));
-                                return "names" === (null === MM || void 0 === MM ? void 0 : MM.kind) ? MM.names.map((MM => MM.name)) : []
-                              }), [rM, SM]),
-                              JM = (0, OM.useMemo)((() => {
-                                if (!rM.hasTextPlayground) return [];
-                                const MM = SM.sections.flatMap((MM => MM.blocks.flatMap((MM => {
-                                  var rM;
-                                  return (null !== (rM = Ri(MM)) && void 0 !== rM ? rM : []).flatMap((MM => Yr(MM.name) ? [MM.name] : []))
+                              rV = (0, JV.useMemo)((() => {
+                                if (!eV.hasParticlePlayground) return [];
+                                const VV = Gx(YV.intro).find((VV => "names" === VV.kind && !VV.names.some((VV => null !== cx(VV.name)))));
+                                return "names" === (null === VV || void 0 === VV ? void 0 : VV.kind) ? VV.names.map((VV => VV.name)) : []
+                              }), [eV, YV]),
+                              bV = (0, JV.useMemo)((() => {
+                                if (!eV.hasTextPlayground) return [];
+                                const VV = YV.sections.flatMap((VV => VV.blocks.flatMap((VV => {
+                                  var eV;
+                                  return (null !== (eV = zx(VV)) && void 0 !== eV ? eV : []).flatMap((VV => ce(VV.name) ? [VV.name] : []))
                                 }))));
-                                return [...new Set(MM)]
-                              }), [rM, SM]),
-                              dM = (0, OM.useMemo)((() => zM ? SM.sections.filter((MM => function(MM, rM) {
-                                return !!MM.heading.text.toLowerCase().includes(rM) || MM.blocks.some((MM => (0, bM.j)(MM).toLowerCase().includes(rM)))
-                              }(MM, zM))) : SM.sections), [SM, zM]),
-                              yM = (0, OM.useMemo)((() => function(MM, rM) {
-                                return "article" !== MM.layout ? rM.map((MM => ({
-                                  anchor: MM.heading.anchor,
-                                  text: MM.heading.text,
+                                return [...new Set(VV)]
+                              }), [eV, YV]),
+                              EV = (0, JV.useMemo)((() => wV ? YV.sections.filter((VV => function(VV, eV) {
+                                return !!VV.heading.text.toLowerCase().includes(eV) || VV.blocks.some((VV => (0, AV.l)(VV).toLowerCase().includes(eV)))
+                              }(VV, wV))) : YV.sections), [YV, wV]),
+                              BV = (0, JV.useMemo)((() => function(VV, eV) {
+                                return "article" !== VV.layout ? eV.map((VV => ({
+                                  anchor: VV.heading.anchor,
+                                  text: VV.heading.text,
                                   level: 2
-                                }))) : rM.flatMap((MM => {
-                                  const rM = MM.blocks.flatMap((MM => "heading" === MM.kind && 3 === MM.level ? [{
-                                    anchor: MM.anchor,
-                                    text: MM.text,
+                                }))) : eV.flatMap((VV => {
+                                  const eV = VV.blocks.flatMap((VV => "heading" === VV.kind && 3 === VV.level ? [{
+                                    anchor: VV.anchor,
+                                    text: VV.text,
                                     level: 3
                                   }] : []));
                                   return [{
-                                    anchor: MM.heading.anchor,
-                                    text: MM.heading.text,
+                                    anchor: VV.heading.anchor,
+                                    text: VV.heading.text,
                                     level: 2
-                                  }, ...rM]
+                                  }, ...eV]
                                 }))
-                              }(rM, dM)), [rM, dM]);
-                            return (0, OM.useEffect)((() => {
-                              iM(yM)
-                            }), [yM, iM]), (0, hM.jsxs)("article", {
+                              }(eV, EV)), [eV, EV]);
+                            return (0, JV.useEffect)((() => {
+                              xV(BV)
+                            }), [BV, xV]), (0, kV.jsxs)("article", {
                               className: "DocsPage",
-                              children: [(0, hM.jsxs)("header", {
+                              children: [(0, kV.jsxs)("header", {
                                 className: "DocsPageHeader",
-                                children: [(0, hM.jsx)("h1", {
+                                children: [(0, kV.jsx)("h1", {
                                   className: "DocsPageTitle",
-                                  children: SM.title || rM.title
-                                }), (0, hM.jsx)("p", {
+                                  children: YV.title || eV.title
+                                }), (0, kV.jsx)("p", {
                                   className: "DocsPageSummary",
-                                  children: rM.summary
-                                }), (0, hM.jsx)(TO, {
-                                  page: rM
-                                }), PM && (0, hM.jsx)("div", {
+                                  children: eV.summary
+                                }), (0, kV.jsx)(sJ, {
+                                  page: eV
+                                }), pV && (0, kV.jsx)("div", {
                                   className: "DocsPageStats",
-                                  children: (0, hM.jsxs)("span", {
-                                    children: [(0, hM.jsx)("strong", {
-                                      children: SM.sections.length
-                                    }), " ", Cj[rM.layout]]
+                                  children: (0, kV.jsxs)("span", {
+                                    children: [(0, kV.jsx)("strong", {
+                                      children: YV.sections.length
+                                    }), " ", tU[eV.layout]]
                                   })
                                 })]
-                              }), "" === rM.slug && (0, hM.jsx)(pO, {}), nM && (0, hM.jsx)(kO, {
-                                kind: nM
-                              }, nM), rM.hasParticlePlayground && (0, hM.jsx)(zS, {
-                                ref: LM,
-                                textures: HM
-                              }), !QM && SM.intro.length > 0 && (0, hM.jsx)("div", {
+                              }), "" === eV.slug && (0, kV.jsx)(zJ, {}), QV && (0, kV.jsx)(gJ, {
+                                kind: QV
+                              }, QV), eV.hasParticlePlayground && (0, kV.jsx)(QY, {
+                                ref: ZV,
+                                textures: rV
+                              }), !nV && YV.intro.length > 0 && (0, kV.jsx)("div", {
                                 className: "DocsProse DocsPageIntro",
-                                children: rM.gallery ? (0, hM.jsx)(EO.Provider, {
-                                  value: rM.hasParticlePlayground ? mM : null,
-                                  children: (0, hM.jsx)(uO, {
-                                    kind: rM.gallery,
-                                    content: SM,
-                                    blocks: SM.intro
+                                children: eV.gallery ? (0, kV.jsx)(BJ.Provider, {
+                                  value: eV.hasParticlePlayground ? vV : null,
+                                  children: (0, kV.jsx)(XJ, {
+                                    kind: eV.gallery,
+                                    content: YV,
+                                    blocks: YV.intro
                                   })
-                                }) : (0, hM.jsx)(Hi, {
-                                  blocks: ti(SM.intro)
+                                }) : (0, kV.jsx)(rx, {
+                                  blocks: Nx(YV.intro)
                                 })
-                              }), rM.hasTextPlayground && (0, hM.jsx)(tS, {
-                                fontAwesomeIcons: JM
-                              }), rM.hasVoicePlayground && (0, hM.jsx)(cS, {}), rM.childPageIds && (0, hM.jsx)(pO, {
-                                cards: rM.childPageIds.map((MM => ({
-                                  pageId: MM
+                              }), eV.hasTextPlayground && (0, kV.jsx)(AY, {
+                                fontAwesomeIcons: bV
+                              }), eV.hasVoicePlayground && (0, kV.jsx)(IY, {}), eV.childPageIds && (0, kV.jsx)(zJ, {
+                                cards: eV.childPageIds.map((VV => ({
+                                  pageId: VV
                                 }))),
-                                label: rM.title
-                              }), PM && (0, hM.jsx)(Ui, {
+                                label: eV.title
+                              }), pV && (0, kV.jsx)(qx, {
                                 className: "DocsFilterBar",
-                                value: jM,
-                                placeholder: `Filter ${SM.sections.length} ${Cj[rM.layout]}\u2026`,
-                                label: `Filter ${Cj[rM.layout]}`,
-                                onChange: aM,
-                                count: zM ? {
-                                  visible: dM.length,
-                                  total: SM.sections.length
+                                value: UV,
+                                placeholder: `Filter ${YV.sections.length} ${tU[eV.layout]}\u2026`,
+                                label: `Filter ${tU[eV.layout]}`,
+                                onChange: yV,
+                                count: wV ? {
+                                  visible: EV.length,
+                                  total: YV.sections.length
                                 } : null
-                              }), !QM && (0, hM.jsxs)("div", {
-                                className: `DocsSections Layout-${rM.layout}`,
-                                children: [dM.map((MM => (0, hM.jsx)(ej, {
-                                  page: rM,
-                                  section: MM
-                                }, MM.heading.anchor))), 0 === dM.length && (0, hM.jsxs)("p", {
+                              }), !nV && (0, kV.jsxs)("div", {
+                                className: `DocsSections Layout-${eV.layout}`,
+                                children: [EV.map((VV => (0, kV.jsx)(FU, {
+                                  page: eV,
+                                  section: VV
+                                }, VV.heading.anchor))), 0 === EV.length && (0, kV.jsxs)("p", {
                                   className: "DocsEmpty",
-                                  children: ["No ", Cj[rM.layout], " match \u201c", jM, "\u201d."]
+                                  children: ["No ", tU[eV.layout], " match \u201c", UV, "\u201d."]
                                 })]
                               })]
                             })
                           }
-                          const wj = /^(\d+)(?:st|nd|rd|th)?\s+([A-Za-z]+)\s+(\d{4})$/;
+                          const PU = /^(\d+)(?:st|nd|rd|th)?\s+([A-Za-z]+)\s+(\d{4})$/;
 
-                          function tj(MM) {
+                          function AU(VV) {
                             let {
-                              entry: rM,
-                              isActive: iM,
-                              onNavigate: OM,
-                              label: SM,
-                              children: aM
-                            } = MM;
-                            return (0, hM.jsx)("a", {
-                              href: `#${rM.anchor}`,
-                              "aria-label": SM,
-                              className: jM()(`Level${rM.level}`, {
-                                Active: iM
+                              entry: eV,
+                              isActive: xV,
+                              onNavigate: JV,
+                              label: YV,
+                              children: yV
+                            } = VV;
+                            return (0, kV.jsx)("a", {
+                              href: `#${eV.anchor}`,
+                              "aria-label": YV,
+                              className: UV()(`Level${eV.level}`, {
+                                Active: xV
                               }),
-                              "aria-current": iM ? "location" : void 0,
-                              onClick: MM => {
-                                MM.preventDefault(), OM(rM.anchor)
+                              "aria-current": xV ? "location" : void 0,
+                              onClick: VV => {
+                                VV.preventDefault(), JV(eV.anchor)
                               },
-                              children: aM
+                              children: yV
                             })
                           }
 
-                          function gj(MM) {
+                          function NU(VV) {
                             let {
-                              toc: rM,
-                              activeAnchor: iM,
-                              onNavigate: SM
-                            } = MM;
-                            const aM = Math.max(0, rM.findIndex((MM => MM.anchor === iM))),
-                              PM = (0, OM.useRef)(null),
-                              nM = (0, OM.useRef)(!1);
-                            (0, OM.useEffect)((() => {
-                              var MM, iM;
-                              const OM = null === (MM = PM.current) || void 0 === MM ? void 0 : MM.closest(".DocsToc"),
-                                SM = null === (iM = PM.current) || void 0 === iM ? void 0 : iM.querySelector(".DocsTimelineNotch.Active");
-                              if (!OM || !SM) return;
-                              let jM = 0;
-                              if (aM === rM.length - 1) jM = OM.scrollHeight;
-                              else if (aM > 0) {
-                                const MM = OM.getBoundingClientRect(),
-                                  rM = SM.getBoundingClientRect();
-                                jM = OM.scrollTop + rM.top + rM.height / 2 - (MM.top + OM.clientHeight / 2)
+                              toc: eV,
+                              activeAnchor: xV,
+                              onNavigate: YV
+                            } = VV;
+                            const yV = Math.max(0, eV.findIndex((VV => VV.anchor === xV))),
+                              pV = (0, JV.useRef)(null),
+                              QV = (0, JV.useRef)(!1);
+                            (0, JV.useEffect)((() => {
+                              var VV, xV;
+                              const JV = null === (VV = pV.current) || void 0 === VV ? void 0 : VV.closest(".DocsToc"),
+                                YV = null === (xV = pV.current) || void 0 === xV ? void 0 : xV.querySelector(".DocsTimelineNotch.Active");
+                              if (!JV || !YV) return;
+                              let UV = 0;
+                              if (yV === eV.length - 1) UV = JV.scrollHeight;
+                              else if (yV > 0) {
+                                const VV = JV.getBoundingClientRect(),
+                                  eV = YV.getBoundingClientRect();
+                                UV = JV.scrollTop + eV.top + eV.height / 2 - (VV.top + JV.clientHeight / 2)
                               }
-                              OM.scrollTo({
-                                top: jM,
-                                behavior: nM.current ? "smooth" : "auto"
-                              }), nM.current = !0
-                            }), [aM, rM.length]);
-                            const QM = [];
-                            return rM.forEach(((MM, rM) => {
-                              var iM, OM, SM;
-                              const jM = function(MM) {
-                                  const rM = MM.trim().match(wj);
-                                  return rM ? {
-                                    day: rM[1],
-                                    month: `${rM[2]} ${rM[3]}`
+                              JV.scrollTo({
+                                top: UV,
+                                behavior: QV.current ? "smooth" : "auto"
+                              }), QV.current = !0
+                            }), [yV, eV.length]);
+                            const nV = [];
+                            return eV.forEach(((VV, eV) => {
+                              var xV, JV, YV;
+                              const UV = function(VV) {
+                                  const eV = VV.trim().match(PU);
+                                  return eV ? {
+                                    day: eV[1],
+                                    month: `${eV[2]} ${eV[3]}`
                                   } : null
-                                }(MM.text),
-                                aM = null !== (iM = null === jM || void 0 === jM ? void 0 : jM.month) && void 0 !== iM ? iM : null;
-                              null !== aM && (null === (OM = QM.at(-1)) || void 0 === OM ? void 0 : OM.month) === aM || QM.push({
-                                month: aM,
+                                }(VV.text),
+                                yV = null !== (xV = null === UV || void 0 === UV ? void 0 : UV.month) && void 0 !== xV ? xV : null;
+                              null !== yV && (null === (JV = nV.at(-1)) || void 0 === JV ? void 0 : JV.month) === yV || nV.push({
+                                month: yV,
                                 entries: []
-                              }), QM.at(-1).entries.push({
-                                entry: MM,
-                                day: null !== (SM = null === jM || void 0 === jM ? void 0 : jM.day) && void 0 !== SM ? SM : null,
-                                index: rM
+                              }), nV.at(-1).entries.push({
+                                entry: VV,
+                                day: null !== (YV = null === UV || void 0 === UV ? void 0 : UV.day) && void 0 !== YV ? YV : null,
+                                index: eV
                               })
-                            })), (0, hM.jsx)("ol", {
-                              ref: PM,
+                            })), (0, kV.jsx)("ol", {
+                              ref: pV,
                               className: "DocsTimeline",
-                              children: QM.map((MM => {
+                              children: nV.map((VV => {
                                 let {
-                                  month: rM,
-                                  entries: iM
-                                } = MM;
-                                return (0, hM.jsxs)("li", {
+                                  month: eV,
+                                  entries: xV
+                                } = VV;
+                                return (0, kV.jsxs)("li", {
                                   className: "DocsTimelineMonth",
-                                  children: [rM && (0, hM.jsx)("span", {
+                                  children: [eV && (0, kV.jsx)("span", {
                                     className: "DocsTimelineMonthName",
-                                    children: rM
-                                  }), (0, hM.jsx)("ol", {
-                                    children: iM.map((MM => {
+                                    children: eV
+                                  }), (0, kV.jsx)("ol", {
+                                    children: xV.map((VV => {
                                       let {
-                                        entry: rM,
-                                        day: iM,
-                                        index: OM
-                                      } = MM;
-                                      return (0, hM.jsx)("li", {
-                                        className: jM()("DocsTimelineNotch", {
-                                          Passed: OM < aM,
-                                          Active: OM === aM
+                                        entry: eV,
+                                        day: xV,
+                                        index: JV
+                                      } = VV;
+                                      return (0, kV.jsx)("li", {
+                                        className: UV()("DocsTimelineNotch", {
+                                          Passed: JV < yV,
+                                          Active: JV === yV
                                         }),
-                                        children: (0, hM.jsx)(tj, {
-                                          entry: rM,
-                                          isActive: OM === aM,
-                                          onNavigate: SM,
-                                          label: rM.text,
-                                          children: (0, hM.jsx)("span", {
+                                        children: (0, kV.jsx)(AU, {
+                                          entry: eV,
+                                          isActive: JV === yV,
+                                          onNavigate: YV,
+                                          label: eV.text,
+                                          children: (0, kV.jsx)("span", {
                                             className: "DocsTimelineDay",
-                                            children: null !== iM && void 0 !== iM ? iM : rM.text
+                                            children: null !== xV && void 0 !== xV ? xV : eV.text
                                           })
                                         })
-                                      }, rM.anchor)
+                                      }, eV.anchor)
                                     }))
                                   })]
-                                }, iM[0].entry.anchor)
+                                }, xV[0].entry.anchor)
                               }))
                             })
                           }
 
-                          function uj(MM) {
+                          function XU(VV) {
                             let {
-                              isChangelog: rM,
-                              toc: iM,
-                              activeAnchor: OM,
-                              onNavigate: SM
-                            } = MM;
-                            return 0 === iM.length ? null : (0, hM.jsxs)(hM.Fragment, {
-                              children: [(0, hM.jsx)("div", {
+                              isChangelog: eV,
+                              toc: xV,
+                              activeAnchor: JV,
+                              onNavigate: YV
+                            } = VV;
+                            return 0 === xV.length ? null : (0, kV.jsxs)(kV.Fragment, {
+                              children: [(0, kV.jsx)("div", {
                                 className: "DocsTocTitle",
-                                children: rM ? "Updates" : "On this page"
-                              }), rM ? (0, hM.jsx)(gj, {
-                                toc: iM,
-                                activeAnchor: OM,
-                                onNavigate: SM
-                              }) : (0, hM.jsx)("ul", {
-                                children: iM.map((MM => (0, hM.jsx)("li", {
-                                  children: (0, hM.jsx)(tj, {
-                                    entry: MM,
-                                    isActive: MM.anchor === OM,
-                                    onNavigate: SM,
-                                    children: MM.text.replace(/`/g, "")
+                                children: eV ? "Updates" : "On this page"
+                              }), eV ? (0, kV.jsx)(NU, {
+                                toc: xV,
+                                activeAnchor: JV,
+                                onNavigate: YV
+                              }) : (0, kV.jsx)("ul", {
+                                children: xV.map((VV => (0, kV.jsx)("li", {
+                                  children: (0, kV.jsx)(AU, {
+                                    entry: VV,
+                                    isActive: VV.anchor === JV,
+                                    onNavigate: YV,
+                                    children: VV.text.replace(/`/g, "")
                                   })
-                                }, MM.anchor)))
+                                }, VV.anchor)))
                               })]
                             })
                           }
-                          const Rj = {
+                          const MU = {
                               methods: "Method",
                               callbacks: "Callback",
                               settings: "Setting",
@@ -5195,7 +5195,7 @@ export const modules = {
                               snippets: "Snippet",
                               article: "Section"
                             },
-                            pj = {
+                            zU = {
                               icons: "Icon",
                               particles: "Particle",
                               sounds: "Sound",
@@ -5203,1086 +5203,1086 @@ export const modules = {
                               blocks: "Block",
                               items: "Item"
                             },
-                            Wj = 20,
-                            sj = 10,
-                            Dj = 40,
-                            kj = 120;
-                          let Zj;
+                            GU = 20,
+                            WU = 10,
+                            RU = 40,
+                            gU = 120;
+                          let DU;
 
-                          function oj(MM) {
-                            const rM = MM.gallery;
-                            if (!rM) return [];
-                            if (yi(rM)) return function(MM) {
-                              return Ei(MM).entries.map((MM => MM.name))
-                            }(rM).map((iM => ({
-                              page: MM,
-                              anchor: Di(rM, iM),
-                              title: iM,
-                              kind: pj[rM],
+                          function iU(VV) {
+                            const eV = VV.gallery;
+                            if (!eV) return [];
+                            if (Ex(eV)) return function(VV) {
+                              return jx(VV).entries.map((VV => VV.name))
+                            }(eV).map((xV => ({
+                              page: VV,
+                              anchor: Rx(eV, xV),
+                              title: xV,
+                              kind: zU[eV],
                               text: "",
-                              listedUnder: MM.title
+                              listedUnder: VV.title
                             })));
-                            const iM = NM(MM);
-                            return (0, bM.v)(iM).flatMap((OM => {
-                              const SM = OM.heading ? `${MM.title} \u203a ${OM.heading.text.replace(/\s*\(\d+[^)]*\)$/,"")}` : MM.title;
-                              return Zi(rM, iM, OM.blocks).flatMap((iM => "names" !== iM.kind ? [] : iM.names.map((OM => {
-                                const jM = iM.isSongs ? "Song" : pj[rM];
+                            const xV = hV(VV);
+                            return (0, AV.A)(xV).flatMap((JV => {
+                              const YV = JV.heading ? `${VV.title} \u203a ${JV.heading.text.replace(/\s*\(\d+[^)]*\)$/,"")}` : VV.title;
+                              return Dx(eV, xV, JV.blocks).flatMap((xV => "names" !== xV.kind ? [] : xV.names.map((JV => {
+                                const UV = xV.isSongs ? "Song" : zU[eV];
                                 return {
-                                  page: MM,
-                                  anchor: OM.anchor,
-                                  title: OM.name,
-                                  kind: jM,
+                                  page: VV,
+                                  anchor: JV.anchor,
+                                  title: JV.name,
+                                  kind: UV,
                                   text: "",
-                                  listedUnder: SM
+                                  listedUnder: YV
                                 }
                               }))))
                             }))
                           }
 
-                          function fj(MM, rM, iM) {
-                            const OM = MM.title.toLowerCase();
-                            let SM = 0;
-                            if (OM === rM) SM = 100;
-                            else if (OM.startsWith(rM)) SM = 80;
-                            else if (OM.includes(rM)) SM = 60;
-                            else if (iM.every((MM => OM.includes(MM)))) SM = 45;
+                          function CU(VV, eV, xV) {
+                            const JV = VV.title.toLowerCase();
+                            let YV = 0;
+                            if (JV === eV) YV = 100;
+                            else if (JV.startsWith(eV)) YV = 80;
+                            else if (JV.includes(eV)) YV = 60;
+                            else if (xV.every((VV => JV.includes(VV)))) YV = 45;
                             else {
-                              if (!MM.text.toLowerCase().includes(rM)) return 0;
-                              SM = 20
+                              if (!VV.text.toLowerCase().includes(eV)) return 0;
+                              YV = 20
                             }
-                            return SM - Math.min(OM.length / 10, 9) + ("Page" === MM.kind ? 8 : "Method" === MM.kind ? 3 : 0) - (MM.listedUnder ? Wj : 0)
+                            return YV - Math.min(JV.length / 10, 9) + ("Page" === VV.kind ? 8 : "Method" === VV.kind ? 3 : 0) - (VV.listedUnder ? GU : 0)
                           }
 
-                          function Yj(MM, rM) {
-                            const iM = MM.toLowerCase().indexOf(rM),
-                              OM = Math.max(0, iM - kj / 3);
-                            return `${OM>0?"\u2026":""}${MM.slice(OM,OM+kj)}${OM+kj<MM.length?"\u2026":""}`
+                          function aU(VV, eV) {
+                            const xV = VV.toLowerCase().indexOf(eV),
+                              JV = Math.max(0, xV - gU / 3);
+                            return `${JV>0?"\u2026":""}${VV.slice(JV,JV+gU)}${JV+gU<VV.length?"\u2026":""}`
                           }
 
-                          function Nj(MM) {
+                          function oU(VV) {
                             let {
-                              text: rM,
-                              query: iM
-                            } = MM;
-                            const OM = iM ? rM.toLowerCase().indexOf(iM) : -1;
-                            return -1 === OM ? (0, hM.jsx)(hM.Fragment, {
-                              children: rM
-                            }) : (0, hM.jsxs)(hM.Fragment, {
-                              children: [rM.slice(0, OM), (0, hM.jsx)("mark", {
-                                children: rM.slice(OM, OM + iM.length)
-                              }), rM.slice(OM + iM.length)]
+                              text: eV,
+                              query: xV
+                            } = VV;
+                            const JV = xV ? eV.toLowerCase().indexOf(xV) : -1;
+                            return -1 === JV ? (0, kV.jsx)(kV.Fragment, {
+                              children: eV
+                            }) : (0, kV.jsxs)(kV.Fragment, {
+                              children: [eV.slice(0, JV), (0, kV.jsx)("mark", {
+                                children: eV.slice(JV, JV + xV.length)
+                              }), eV.slice(JV + xV.length)]
                             })
                           }
 
-                          function Aj(MM) {
+                          function cU(VV) {
                             let {
-                              basePath: rM,
-                              onClose: iM
-                            } = MM;
-                            const SM = (0, PM.y)(),
-                              [aM, nM] = (0, OM.useState)(""),
-                              [QM, zM] = (0, OM.useState)(0),
-                              LM = (0, OM.useRef)(null),
-                              mM = (0, OM.useRef)(null),
-                              HM = aM.trim().toLowerCase(),
-                              JM = (0, OM.useMemo)((() => {
-                                const MM = (Zj || (Zj = ZM.flatMap((MM => {
-                                  const rM = NM(MM);
+                              basePath: eV,
+                              onClose: xV
+                            } = VV;
+                            const YV = (0, pV.v)(),
+                              [yV, QV] = (0, JV.useState)(""),
+                              [nV, wV] = (0, JV.useState)(0),
+                              ZV = (0, JV.useRef)(null),
+                              vV = (0, JV.useRef)(null),
+                              rV = yV.trim().toLowerCase(),
+                              bV = (0, JV.useMemo)((() => {
+                                const VV = (DU || (DU = CV.flatMap((VV => {
+                                  const eV = hV(VV);
                                   return [{
-                                    page: MM,
+                                    page: VV,
                                     anchor: "",
-                                    title: MM.title,
+                                    title: VV.title,
                                     kind: "Page",
-                                    text: MM.summary
-                                  }, ...rM.sections.flatMap((rM => {
-                                    const iM = rM.blocks.filter((MM => "paragraph" === MM.kind)).map(bM.j).join(" ").replace(/[`*]/g, ""),
-                                      OM = {
-                                        page: MM,
-                                        anchor: rM.heading.anchor,
-                                        title: rM.heading.text.replace(/`/g, ""),
-                                        kind: Rj[MM.layout],
-                                        text: iM
+                                    text: VV.summary
+                                  }, ...eV.sections.flatMap((eV => {
+                                    const xV = eV.blocks.filter((VV => "paragraph" === VV.kind)).map(AV.l).join(" ").replace(/[`*]/g, ""),
+                                      JV = {
+                                        page: VV,
+                                        anchor: eV.heading.anchor,
+                                        title: eV.heading.text.replace(/`/g, ""),
+                                        kind: MU[VV.layout],
+                                        text: xV
                                       },
-                                      SM = rM.blocks.flatMap((rM => "article" === MM.layout && "heading" === rM.kind && 3 === rM.level ? [{
-                                        page: MM,
-                                        anchor: rM.anchor,
-                                        title: rM.text.replace(/`/g, ""),
+                                      YV = eV.blocks.flatMap((eV => "article" === VV.layout && "heading" === eV.kind && 3 === eV.level ? [{
+                                        page: VV,
+                                        anchor: eV.anchor,
+                                        title: eV.text.replace(/`/g, ""),
                                         kind: "Section",
-                                        text: OM.title
+                                        text: JV.title
                                       }] : []));
-                                    return [OM, ...SM]
-                                  })), ...oj(MM)]
-                                }))), Zj);
-                                if (!HM) return MM.filter((MM => "Page" === MM.kind));
-                                const rM = HM.split(/\s+/);
-                                let iM = 0;
-                                return MM.map((MM => ({
-                                  entry: MM,
-                                  score: fj(MM, HM, rM)
-                                }))).filter((MM => MM.score > 0)).sort(((MM, rM) => rM.score - MM.score)).filter((MM => !MM.entry.listedUnder || (iM++, iM <= sj))).slice(0, Dj).map((MM => MM.entry))
-                              }), [HM]);
-                            (0, OM.useEffect)((() => {
-                              zM(0)
-                            }), [HM]), (0, OM.useEffect)((() => {
-                              const MM = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+                                    return [JV, ...YV]
+                                  })), ...iU(VV)]
+                                }))), DU);
+                                if (!rV) return VV.filter((VV => "Page" === VV.kind));
+                                const eV = rV.split(/\s+/);
+                                let xV = 0;
+                                return VV.map((VV => ({
+                                  entry: VV,
+                                  score: CU(VV, rV, eV)
+                                }))).filter((VV => VV.score > 0)).sort(((VV, eV) => eV.score - VV.score)).filter((VV => !VV.entry.listedUnder || (xV++, xV <= WU))).slice(0, RU).map((VV => VV.entry))
+                              }), [rV]);
+                            (0, JV.useEffect)((() => {
+                              wV(0)
+                            }), [rV]), (0, JV.useEffect)((() => {
+                              const VV = document.activeElement instanceof HTMLElement ? document.activeElement : null;
                               return () => {
-                                null === MM || void 0 === MM || MM.focus()
+                                null === VV || void 0 === VV || VV.focus()
                               }
-                            }), []), (0, OM.useEffect)((() => {
-                              var MM, rM;
-                              null === (MM = LM.current) || void 0 === MM || null === (rM = MM.querySelector(".Active")) || void 0 === rM || rM.scrollIntoView({
+                            }), []), (0, JV.useEffect)((() => {
+                              var VV, eV;
+                              null === (VV = ZV.current) || void 0 === VV || null === (eV = VV.querySelector(".Active")) || void 0 === eV || eV.scrollIntoView({
                                 block: "nearest"
                               })
-                            }), [QM]);
-                            const yM = MM => {
-                              SM(FM(rM, MM.page, MM.anchor)), iM()
+                            }), [nV]);
+                            const BV = VV => {
+                              YV(mV(eV, VV.page, VV.anchor)), xV()
                             };
-                            return (0, hM.jsx)("div", {
+                            return (0, kV.jsx)("div", {
                               className: "DocsSearchOverlay",
-                              onMouseDown: MM => {
-                                MM.target === MM.currentTarget && iM()
+                              onMouseDown: VV => {
+                                VV.target === VV.currentTarget && xV()
                               },
-                              children: (0, hM.jsxs)("div", {
+                              children: (0, kV.jsxs)("div", {
                                 className: "DocsSearchDialog",
                                 role: "dialog",
                                 "aria-modal": "true",
                                 "aria-label": "Search the docs",
-                                onMouseDown: MM => {
-                                  MM.target !== mM.current && MM.preventDefault()
+                                onMouseDown: VV => {
+                                  VV.target !== vV.current && VV.preventDefault()
                                 },
-                                onKeyDown: MM => {
-                                  if ("Escape" === MM.key) iM();
-                                  else if ("Tab" === MM.key) {
-                                    var rM;
-                                    MM.preventDefault(), null === (rM = mM.current) || void 0 === rM || rM.focus()
+                                onKeyDown: VV => {
+                                  if ("Escape" === VV.key) xV();
+                                  else if ("Tab" === VV.key) {
+                                    var eV;
+                                    VV.preventDefault(), null === (eV = vV.current) || void 0 === eV || eV.focus()
                                   }
                                 },
-                                children: [(0, hM.jsxs)("div", {
+                                children: [(0, kV.jsxs)("div", {
                                   className: "DocsSearchInputRow",
-                                  children: [(0, hM.jsx)(dM, {
+                                  children: [(0, kV.jsx)(EV, {
                                     name: "magnifying-glass"
-                                  }), (0, hM.jsx)("input", {
-                                    ref: mM,
+                                  }), (0, kV.jsx)("input", {
+                                    ref: vV,
                                     autoFocus: !0,
-                                    value: aM,
+                                    value: yV,
                                     placeholder: "Search methods, callbacks, settings and guides\u2026",
                                     "aria-label": "Search the docs",
                                     "aria-controls": "DocsSearchResults",
-                                    "aria-activedescendant": JM.length > 0 ? `DocsSearchResult-${QM}` : void 0,
-                                    onChange: MM => {
-                                      nM(MM.target.value)
+                                    "aria-activedescendant": bV.length > 0 ? `DocsSearchResult-${nV}` : void 0,
+                                    onChange: VV => {
+                                      QV(VV.target.value)
                                     },
-                                    onKeyDown: MM => {
-                                      if ("ArrowDown" === MM.key || "ArrowUp" === MM.key) {
-                                        MM.preventDefault();
-                                        const rM = "ArrowDown" === MM.key ? 1 : -1;
-                                        zM((QM + rM + JM.length) % Math.max(JM.length, 1))
-                                      } else "Enter" === MM.key && JM[QM] && yM(JM[QM])
+                                    onKeyDown: VV => {
+                                      if ("ArrowDown" === VV.key || "ArrowUp" === VV.key) {
+                                        VV.preventDefault();
+                                        const eV = "ArrowDown" === VV.key ? 1 : -1;
+                                        wV((nV + eV + bV.length) % Math.max(bV.length, 1))
+                                      } else "Enter" === VV.key && bV[nV] && BV(bV[nV])
                                     }
-                                  }), (0, hM.jsx)("kbd", {
+                                  }), (0, kV.jsx)("kbd", {
                                     children: "Esc"
                                   })]
-                                }), (0, hM.jsxs)("ul", {
+                                }), (0, kV.jsxs)("ul", {
                                   id: "DocsSearchResults",
-                                  ref: LM,
+                                  ref: ZV,
                                   className: "DocsSearchResults",
                                   role: "listbox",
-                                  children: [!HM && (0, hM.jsx)("li", {
+                                  children: [!rV && (0, kV.jsx)("li", {
                                     className: "DocsSearchHint",
                                     children: "Jump to a page"
-                                  }), JM.map(((MM, rM) => {
-                                    var iM;
-                                    return (0, hM.jsxs)("li", {
-                                      id: `DocsSearchResult-${rM}`,
+                                  }), bV.map(((VV, eV) => {
+                                    var xV;
+                                    return (0, kV.jsxs)("li", {
+                                      id: `DocsSearchResult-${eV}`,
                                       role: "option",
-                                      "aria-selected": rM === QM,
-                                      className: jM()("DocsSearchResult", {
-                                        Active: rM === QM
+                                      "aria-selected": eV === nV,
+                                      className: UV()("DocsSearchResult", {
+                                        Active: eV === nV
                                       }),
                                       onMouseMove: () => {
-                                        zM(rM)
+                                        wV(eV)
                                       },
                                       onClick: () => {
-                                        yM(MM)
+                                        BV(VV)
                                       },
-                                      children: [(0, hM.jsx)(dM, {
-                                        name: MM.page.icon
-                                      }), (0, hM.jsxs)("div", {
+                                      children: [(0, kV.jsx)(EV, {
+                                        name: VV.page.icon
+                                      }), (0, kV.jsxs)("div", {
                                         className: "DocsSearchResultText",
-                                        children: [(0, hM.jsx)("div", {
+                                        children: [(0, kV.jsx)("div", {
                                           className: "DocsSearchResultTitle",
-                                          children: (0, hM.jsx)(Nj, {
-                                            text: MM.title,
-                                            query: HM
+                                          children: (0, kV.jsx)(oU, {
+                                            text: VV.title,
+                                            query: rV
                                           })
-                                        }), MM.text && (0, hM.jsx)("div", {
+                                        }), VV.text && (0, kV.jsx)("div", {
                                           className: "DocsSearchResultSnippet",
-                                          children: (0, hM.jsx)(Nj, {
-                                            text: Yj(MM.text, HM),
-                                            query: HM
+                                          children: (0, kV.jsx)(oU, {
+                                            text: aU(VV.text, rV),
+                                            query: rV
                                           })
                                         })]
-                                      }), (0, hM.jsx)("span", {
+                                      }), (0, kV.jsx)("span", {
                                         className: "DocsSearchResultMeta",
-                                        children: "Page" === MM.kind ? "Page" : null !== (iM = MM.listedUnder) && void 0 !== iM ? iM : `${MM.kind} \xb7 ${MM.page.title}`
+                                        children: "Page" === VV.kind ? "Page" : null !== (xV = VV.listedUnder) && void 0 !== xV ? xV : `${VV.kind} \xb7 ${VV.page.title}`
                                       })]
-                                    }, `${MM.page.id}#${MM.anchor}`)
-                                  })), HM && 0 === JM.length && (0, hM.jsxs)("li", {
+                                    }, `${VV.page.id}#${VV.anchor}`)
+                                  })), rV && 0 === bV.length && (0, kV.jsxs)("li", {
                                     className: "DocsSearchHint",
-                                    children: ["Nothing matches \u201c", aM, "\u201d."]
+                                    children: ["Nothing matches \u201c", yV, "\u201d."]
                                   })]
                                 })]
                               })
                             })
                           }
 
-                          function xj(MM, rM) {
-                            if (rM < 10) return `${MM.toFixed(1)}s`;
-                            const iM = Math.floor(MM);
-                            return `${Math.floor(iM/60)}:${String(iM%60).padStart(2,"0")}`
+                          function hU(VV, eV) {
+                            if (eV < 10) return `${VV.toFixed(1)}s`;
+                            const xV = Math.floor(VV);
+                            return `${Math.floor(xV/60)}:${String(xV%60).padStart(2,"0")}`
                           }
 
-                          function vj() {
-                            const MM = mO((MM => MM.track)),
-                              rM = mO((MM => MM.volume)),
-                              [iM, SM] = (0, OM.useState)(0),
-                              aM = (0, OM.useRef)(OO);
-                            if ((0, OM.useEffect)((() => {
-                                if (!MM) return;
-                                if (SM(dO()), "playing" !== MM.status) return;
-                                let rM = 0;
-                                const iM = () => {
-                                  SM(dO()), rM = requestAnimationFrame(iM)
+                          function lU() {
+                            const VV = wJ((VV => VV.track)),
+                              eV = wJ((VV => VV.volume)),
+                              [xV, YV] = (0, JV.useState)(0),
+                              yV = (0, JV.useRef)(eJ);
+                            if ((0, JV.useEffect)((() => {
+                                if (!VV) return;
+                                if (YV(kJ()), "playing" !== VV.status) return;
+                                let eV = 0;
+                                const xV = () => {
+                                  YV(kJ()), eV = requestAnimationFrame(xV)
                                 };
-                                return rM = requestAnimationFrame(iM), () => {
-                                  cancelAnimationFrame(rM)
+                                return eV = requestAnimationFrame(xV), () => {
+                                  cancelAnimationFrame(eV)
                                 }
-                              }), [MM]), !MM) return null;
-                            const PM = "paused" !== MM.status,
-                              nM = Math.min(iM, MM.duration);
-                            return (0, hM.jsx)("div", {
+                              }), [VV]), !VV) return null;
+                            const pV = "paused" !== VV.status,
+                              QV = Math.min(xV, VV.duration);
+                            return (0, kV.jsx)("div", {
                               className: "DocsSoundPlayerDock",
-                              children: (0, hM.jsxs)("section", {
+                              children: (0, kV.jsxs)("section", {
                                 className: "DocsSoundPlayer",
                                 "aria-label": "Sound player",
-                                children: [(0, hM.jsx)("button", {
+                                children: [(0, kV.jsx)("button", {
                                   type: "button",
                                   className: "DocsSoundPlayerToggle",
-                                  "aria-label": PM ? `Pause ${MM.name}` : `Play ${MM.name}`,
-                                  onClick: JO,
-                                  children: (0, hM.jsx)(dM, {
-                                    name: PM ? "pause" : "play"
+                                  "aria-label": pV ? `Pause ${VV.name}` : `Play ${VV.name}`,
+                                  onClick: rJ,
+                                  children: (0, kV.jsx)(EV, {
+                                    name: pV ? "pause" : "play"
                                   })
-                                }), (0, hM.jsxs)("div", {
+                                }), (0, kV.jsxs)("div", {
                                   className: "DocsSoundPlayerTrack",
-                                  children: [(0, hM.jsxs)("div", {
+                                  children: [(0, kV.jsxs)("div", {
                                     className: "DocsSoundPlayerTitle",
-                                    children: [(0, hM.jsx)("code", {
-                                      children: MM.name
-                                    }), (0, hM.jsx)("span", {
-                                      children: MM.isSong ? "Song" : "Sound"
+                                    children: [(0, kV.jsx)("code", {
+                                      children: VV.name
+                                    }), (0, kV.jsx)("span", {
+                                      children: VV.isSong ? "Song" : "Sound"
                                     })]
-                                  }), (0, hM.jsxs)("div", {
+                                  }), (0, kV.jsxs)("div", {
                                     className: "DocsSoundPlayerScrubber",
-                                    children: [(0, hM.jsx)("span", {
-                                      children: xj(nM, MM.duration)
-                                    }), (0, hM.jsx)("input", {
+                                    children: [(0, kV.jsx)("span", {
+                                      children: hU(QV, VV.duration)
+                                    }), (0, kV.jsx)("input", {
                                       type: "range",
                                       min: 0,
-                                      max: MM.duration || 1,
+                                      max: VV.duration || 1,
                                       step: .01,
-                                      value: nM,
-                                      disabled: 0 === MM.duration,
+                                      value: QV,
+                                      disabled: 0 === VV.duration,
                                       "aria-label": "Position",
-                                      "aria-valuetext": `${xj(nM,MM.duration)} of ${xj(MM.duration,MM.duration)}`,
-                                      onChange: MM => {
-                                        const rM = Number(MM.target.value);
-                                        ! function(MM) {
-                                          var rM;
-                                          nO = MM, null === (rM = aO) || void 0 === rM || rM.seek(MM)
-                                        }(rM), SM(rM)
+                                      "aria-valuetext": `${hU(QV,VV.duration)} of ${hU(VV.duration,VV.duration)}`,
+                                      onChange: VV => {
+                                        const eV = Number(VV.target.value);
+                                        ! function(VV) {
+                                          var eV;
+                                          yJ = VV, null === (eV = YJ) || void 0 === eV || eV.seek(VV)
+                                        }(eV), YV(eV)
                                       }
-                                    }), (0, hM.jsx)("span", {
-                                      children: MM.duration > 0 ? xj(MM.duration, MM.duration) : "\u2013"
+                                    }), (0, kV.jsx)("span", {
+                                      children: VV.duration > 0 ? hU(VV.duration, VV.duration) : "\u2013"
                                     })]
                                   })]
-                                }), (0, hM.jsxs)("div", {
+                                }), (0, kV.jsxs)("div", {
                                   className: "DocsSoundPlayerVolume",
-                                  children: [(0, hM.jsx)("button", {
+                                  children: [(0, kV.jsx)("button", {
                                     type: "button",
-                                    "aria-label": 0 === rM ? "Unmute" : "Mute",
+                                    "aria-label": 0 === eV ? "Unmute" : "Mute",
                                     onClick: () => {
-                                      0 === rM ? yO(aM.current) : (aM.current = rM, yO(0))
+                                      0 === eV ? bJ(yV.current) : (yV.current = eV, bJ(0))
                                     },
-                                    children: (0, hM.jsx)(dM, {
+                                    children: (0, kV.jsx)(EV, {
                                       name: "volume",
-                                      className: jM()({
-                                        Muted: 0 === rM
+                                      className: UV()({
+                                        Muted: 0 === eV
                                       })
                                     })
-                                  }), (0, hM.jsx)("input", {
+                                  }), (0, kV.jsx)("input", {
                                     type: "range",
                                     min: 0,
                                     max: 1,
                                     step: .01,
-                                    value: rM,
+                                    value: eV,
                                     "aria-label": "Volume",
-                                    onChange: MM => {
-                                      yO(Number(MM.target.value))
+                                    onChange: VV => {
+                                      bJ(Number(VV.target.value))
                                     }
                                   })]
-                                }), (0, hM.jsx)("button", {
+                                }), (0, kV.jsx)("button", {
                                   type: "button",
                                   className: "DocsSoundPlayerClose",
                                   "aria-label": "Close the player",
                                   onClick: () => {
-                                    var rM;
-                                    null === (rM = document.querySelector(`[data-docs-track="${CSS.escape(SO(MM.name,MM.isSong))}"]`)) || void 0 === rM || rM.focus(), lO()
+                                    var eV;
+                                    null === (eV = document.querySelector(`[data-docs-track="${CSS.escape(xJ(VV.name,VV.isSong))}"]`)) || void 0 === eV || eV.focus(), EJ()
                                   },
-                                  children: (0, hM.jsx)(dM, {
+                                  children: (0, kV.jsx)(EV, {
                                     name: "cross"
                                   })
                                 })]
                               })
                             })
                           }
-                          var Fj = iM(30);
-                          const Bj = "docsTheme",
-                            Xj = window.matchMedia("(prefers-color-scheme: light)");
+                          var LU = xV(40);
+                          const fU = "docsTheme",
+                            mU = window.matchMedia("(prefers-color-scheme: light)");
 
-                          function Ij(MM) {
+                          function KU(VV) {
                             let {
-                              theme: rM,
-                              onChange: iM
-                            } = MM;
-                            const OM = "dark" === rM ? "light" : "dark";
-                            return (0, hM.jsx)("button", {
+                              theme: eV,
+                              onChange: xV
+                            } = VV;
+                            const JV = "dark" === eV ? "light" : "dark";
+                            return (0, kV.jsx)("button", {
                               type: "button",
                               className: "DocsIconButton DocsThemeToggle",
-                              "aria-label": `Switch to ${OM} theme`,
-                              title: `Switch to ${OM} theme`,
+                              "aria-label": `Switch to ${JV} theme`,
+                              title: `Switch to ${JV} theme`,
                               onClick: () => {
-                                iM(OM)
+                                xV(JV)
                               },
-                              children: (0, hM.jsx)(dM, {
-                                name: "dark" === rM ? "moon" : "sun"
+                              children: (0, kV.jsx)(EV, {
+                                name: "dark" === eV ? "moon" : "sun"
                               })
                             })
                           }
-                          const Kj = "https://github.com/Bloxdy/code-api",
-                            qj = "https://discord.gg/playbloxd",
-                            Tj = 180,
-                            Vj = /Mac|iPhone|iPad/.test(navigator.userAgent);
+                          const HU = "https://github.com/Bloxdy/code-api",
+                            uU = "https://discord.gg/playbloxd",
+                            sU = 180,
+                            SU = /Mac|iPhone|iPad/.test(navigator.userAgent);
 
-                          function cj(MM) {
+                          function IU(VV) {
                             let {
-                              basePath: rM,
-                              activePageId: iM,
-                              onNavigate: OM
-                            } = MM;
-                            return (0, hM.jsx)("nav", {
+                              basePath: eV,
+                              activePageId: xV,
+                              onNavigate: JV
+                            } = VV;
+                            return (0, kV.jsx)("nav", {
                               className: "DocsNav",
                               "aria-label": "Documentation",
-                              children: oM.map((MM => (0, hM.jsxs)("div", {
+                              children: aV.map((VV => (0, kV.jsxs)("div", {
                                 className: "DocsNavGroup",
-                                children: [(0, hM.jsx)("div", {
+                                children: [(0, kV.jsx)("div", {
                                   className: "DocsNavGroupTitle",
-                                  children: MM.title
-                                }), MM.pageIds.map((MM => {
-                                  var SM;
-                                  const PM = fM(MM);
-                                  return (0, hM.jsxs)(aM.b, {
-                                    to: FM(rM, PM),
-                                    className: jM()("DocsNavLink", {
-                                      Active: PM.id === iM
+                                  children: VV.title
+                                }), VV.pageIds.map((VV => {
+                                  var YV;
+                                  const pV = oV(VV);
+                                  return (0, kV.jsxs)(yV.b, {
+                                    to: mV(eV, pV),
+                                    className: UV()("DocsNavLink", {
+                                      Active: pV.id === xV
                                     }),
-                                    "aria-current": PM.id === iM ? "page" : void 0,
-                                    onClick: OM,
-                                    children: [(0, hM.jsx)(dM, {
-                                      name: PM.icon
-                                    }), (0, hM.jsx)("span", {
-                                      children: null !== (SM = PM.navTitle) && void 0 !== SM ? SM : PM.title
+                                    "aria-current": pV.id === xV ? "page" : void 0,
+                                    onClick: JV,
+                                    children: [(0, kV.jsx)(EV, {
+                                      name: pV.icon
+                                    }), (0, kV.jsx)("span", {
+                                      children: null !== (YV = pV.navTitle) && void 0 !== YV ? YV : pV.title
                                     })]
-                                  }, PM.id)
+                                  }, pV.id)
                                 }))]
-                              }, MM.title)))
+                              }, VV.title)))
                             })
                           }
 
-                          function Ma(MM) {
+                          function dU(VV) {
                             let {
-                              basePath: rM,
-                              pageId: iM
-                            } = MM;
-                            const OM = oM.flatMap((MM => MM.pageIds)),
-                              SM = OM.indexOf(iM),
-                              jM = SM > 0 ? fM(OM[SM - 1]) : null,
-                              PM = SM < OM.length - 1 ? fM(OM[SM + 1]) : null;
-                            return (0, hM.jsxs)("nav", {
+                              basePath: eV,
+                              pageId: xV
+                            } = VV;
+                            const JV = aV.flatMap((VV => VV.pageIds)),
+                              YV = JV.indexOf(xV),
+                              UV = YV > 0 ? oV(JV[YV - 1]) : null,
+                              pV = YV < JV.length - 1 ? oV(JV[YV + 1]) : null;
+                            return (0, kV.jsxs)("nav", {
                               className: "DocsPager",
                               "aria-label": "Pages",
-                              children: [jM ? (0, hM.jsxs)(aM.b, {
+                              children: [UV ? (0, kV.jsxs)(yV.b, {
                                 className: "DocsPagerLink Previous",
-                                to: FM(rM, jM),
-                                children: [(0, hM.jsx)("span", {
+                                to: mV(eV, UV),
+                                children: [(0, kV.jsx)("span", {
                                   className: "DocsPagerLabel",
                                   children: "Previous"
-                                }), (0, hM.jsx)("span", {
+                                }), (0, kV.jsx)("span", {
                                   className: "DocsPagerTitle",
-                                  children: jM.title
+                                  children: UV.title
                                 })]
-                              }) : (0, hM.jsx)("span", {}), PM && (0, hM.jsxs)(aM.b, {
+                              }) : (0, kV.jsx)("span", {}), pV && (0, kV.jsxs)(yV.b, {
                                 className: "DocsPagerLink Next",
-                                to: FM(rM, PM),
-                                children: [(0, hM.jsx)("span", {
+                                to: mV(eV, pV),
+                                children: [(0, kV.jsx)("span", {
                                   className: "DocsPagerLabel",
                                   children: "Next"
-                                }), (0, hM.jsx)("span", {
+                                }), (0, kV.jsx)("span", {
                                   className: "DocsPagerTitle",
-                                  children: PM.title
+                                  children: pV.title
                                 })]
                               })]
                             })
                           }
 
-                          function ra(MM) {
+                          function OU(VV) {
                             let {
-                              basePath: rM,
-                              embedded: iM = !1
-                            } = MM;
+                              basePath: eV,
+                              embedded: xV = !1
+                            } = VV;
                             const {
-                              pageSlug: SM = ""
-                            } = (0, PM.D)(), QM = (0, PM.u)(), zM = (0, PM.y)(), LM = (mM = SM, ZM.find((MM => MM.slug === mM)));
-                            var mM;
-                            const [HM, JM] = function() {
-                              const [MM, rM] = (0, OM.useState)((() => {
-                                const MM = Fj.g.getItem(Bj);
-                                return "dark" === MM || "light" === MM ? MM : null
-                              })), [iM, SM] = (0, OM.useState)(Xj.matches ? "light" : "dark");
-                              return (0, OM.useEffect)((() => {
-                                const MM = () => {
-                                  SM(Xj.matches ? "light" : "dark")
+                              pageSlug: YV = ""
+                            } = (0, pV.A)(), nV = (0, pV.r)(), wV = (0, pV.v)(), ZV = (vV = YV, CV.find((VV => VV.slug === vV)));
+                            var vV;
+                            const [rV, bV] = function() {
+                              const [VV, eV] = (0, JV.useState)((() => {
+                                const VV = LU.m.getItem(fU);
+                                return "dark" === VV || "light" === VV ? VV : null
+                              })), [xV, YV] = (0, JV.useState)(mU.matches ? "light" : "dark");
+                              return (0, JV.useEffect)((() => {
+                                const VV = () => {
+                                  YV(mU.matches ? "light" : "dark")
                                 };
-                                return Xj.addEventListener("change", MM), () => {
-                                  Xj.removeEventListener("change", MM)
+                                return mU.addEventListener("change", VV), () => {
+                                  mU.removeEventListener("change", VV)
                                 }
-                              }), []), [null !== MM && void 0 !== MM ? MM : iM, MM => {
-                                Fj.g.setItem(Bj, MM), rM(MM)
+                              }), []), [null !== VV && void 0 !== VV ? VV : xV, VV => {
+                                LU.m.setItem(fU, VV), eV(VV)
                               }]
-                            }(), [yM, lM] = (0, OM.useState)(null), [EM, UM] = (0, OM.useState)(!1), [GM, CM] = (0, OM.useState)(!1), [eM, wM] = (0, OM.useState)([]), tM = function(MM, rM) {
-                              const [iM, SM] = (0, OM.useState)("");
-                              return (0, OM.useEffect)((() => {
-                                if (!rM) return;
-                                let iM = 0;
-                                const OM = () => {
-                                    var OM, jM;
-                                    iM = 0;
-                                    const aM = rM.getBoundingClientRect().top + Tj;
-                                    let PM = null !== (OM = null === (jM = MM[0]) || void 0 === jM ? void 0 : jM.anchor) && void 0 !== OM ? OM : "";
-                                    for (const rM of MM) {
-                                      const MM = document.getElementById(rM.anchor);
-                                      MM && MM.getBoundingClientRect().top <= aM && (PM = rM.anchor)
+                            }(), [BV, jV] = (0, JV.useState)(null), [qV, tV] = (0, JV.useState)(!1), [FV, TV] = (0, JV.useState)(!1), [PV, NV] = (0, JV.useState)([]), XV = function(VV, eV) {
+                              const [xV, YV] = (0, JV.useState)("");
+                              return (0, JV.useEffect)((() => {
+                                if (!eV) return;
+                                let xV = 0;
+                                const JV = () => {
+                                    var JV, UV;
+                                    xV = 0;
+                                    const yV = eV.getBoundingClientRect().top + sU;
+                                    let pV = null !== (JV = null === (UV = VV[0]) || void 0 === UV ? void 0 : UV.anchor) && void 0 !== JV ? JV : "";
+                                    for (const eV of VV) {
+                                      const VV = document.getElementById(eV.anchor);
+                                      VV && VV.getBoundingClientRect().top <= yV && (pV = eV.anchor)
                                     }
-                                    rM.scrollTop + rM.clientHeight >= rM.scrollHeight - 2 && rM.scrollTop > 0 && MM.length > 0 && (PM = MM[MM.length - 1].anchor), SM(PM)
+                                    eV.scrollTop + eV.clientHeight >= eV.scrollHeight - 2 && eV.scrollTop > 0 && VV.length > 0 && (pV = VV[VV.length - 1].anchor), YV(pV)
                                   },
-                                  jM = () => {
-                                    iM || (iM = requestAnimationFrame(OM))
+                                  UV = () => {
+                                    xV || (xV = requestAnimationFrame(JV))
                                   };
-                                return OM(), rM.addEventListener("scroll", jM, {
+                                return JV(), eV.addEventListener("scroll", UV, {
                                   passive: !0
                                 }), () => {
-                                  cancelAnimationFrame(iM), rM.removeEventListener("scroll", jM)
+                                  cancelAnimationFrame(xV), eV.removeEventListener("scroll", UV)
                                 }
-                              }), [MM, rM]), iM
-                            }(eM, yM), gM = "" === SM && QM.hash ? function(MM) {
-                              const rM = (0, bM.q)(MM);
-                              if (AM(fM("welcome"), rM)) return null;
-                              const iM = Object.hasOwn(vM, rM) ? vM[rM] : null;
-                              if (iM) return {
-                                page: fM(iM.pageId),
-                                anchor: iM.anchor
+                              }), [VV, eV]), xV
+                            }(PV, BV), MV = "" === YV && nV.hash ? function(VV) {
+                              const eV = (0, AV.v)(VV);
+                              if (lV(oV("welcome"), eV)) return null;
+                              const xV = Object.hasOwn(fV, eV) ? fV[eV] : null;
+                              if (xV) return {
+                                page: oV(xV.pageId),
+                                anchor: xV.anchor
                               };
-                              const OM = fM("readme");
-                              return AM(OM, rM) ? {
-                                page: OM,
-                                anchor: rM
-                              } : xM(`#${rM}`)
-                            }(QM.hash) : null;
-                            (0, OM.useEffect)((() => (nM.d.set({
+                              const JV = oV("readme");
+                              return lV(JV, eV) ? {
+                                page: JV,
+                                anchor: eV
+                              } : LV(`#${eV}`)
+                            }(nV.hash) : null;
+                            (0, JV.useEffect)((() => (QV.b.set({
                               musicOnFromPage: !1
                             }), () => {
-                              nM.d.set({
+                              QV.b.set({
                                 musicOnFromPage: !0
-                              }), lO()
-                            })), []), (0, OM.useEffect)((() => {
-                              const MM = MM => {
-                                const rM = MM.target;
-                                if (rM.closest(".DocsTextDialog")) return;
-                                const iM = rM.isContentEditable || ["INPUT", "TEXTAREA", "SELECT"].includes(rM.tagName);
-                                "k" === MM.key && (MM.metaKey || MM.ctrlKey) || "/" === MM.key && !iM ? (MM.preventDefault(), CM(!0)) : "Escape" === MM.key && UM(!1)
+                              }), EJ()
+                            })), []), (0, JV.useEffect)((() => {
+                              const VV = VV => {
+                                const eV = VV.target;
+                                if (eV.closest(".DocsTextDialog")) return;
+                                const xV = eV.isContentEditable || ["INPUT", "TEXTAREA", "SELECT"].includes(eV.tagName);
+                                "k" === VV.key && (VV.metaKey || VV.ctrlKey) || "/" === VV.key && !xV ? (VV.preventDefault(), TV(!0)) : "Escape" === VV.key && tV(!1)
                               };
-                              return window.addEventListener("keydown", MM), () => {
-                                window.removeEventListener("keydown", MM)
+                              return window.addEventListener("keydown", VV), () => {
+                                window.removeEventListener("keydown", VV)
                               }
                             }), []);
-                            const uM = (0, OM.useRef)(null);
-                            (0, OM.useLayoutEffect)((() => {
-                              var MM, rM;
-                              if (!yM) return;
-                              const iM = uM.current === QM.pathname;
-                              uM.current = QM.pathname;
-                              const OM = (0, bM.q)(QM.hash),
-                                SM = OM ? document.getElementById(OM) : null;
-                              if (null === (MM = yM.querySelector(".DocsTargeted")) || void 0 === MM || MM.classList.remove("DocsTargeted"), null === SM || void 0 === SM || null === (rM = SM.closest(".DocsCard, .DocsParam, .DocsTile, .DocsSoundTile")) || void 0 === rM || rM.classList.add("DocsTargeted"), SM) {
-                                var jM;
-                                const MM = SM.matches(".DocsTile, .DocsSoundTile, .DocsCatalogueTile");
-                                (null !== (jM = SM.closest(".DocsChangelogEntry")) && void 0 !== jM ? jM : SM).scrollIntoView({
-                                  block: MM ? "center" : "start",
-                                  behavior: iM ? "smooth" : "auto"
+                            const zV = (0, JV.useRef)(null);
+                            (0, JV.useLayoutEffect)((() => {
+                              var VV, eV;
+                              if (!BV) return;
+                              const xV = zV.current === nV.pathname;
+                              zV.current = nV.pathname;
+                              const JV = (0, AV.v)(nV.hash),
+                                YV = JV ? document.getElementById(JV) : null;
+                              if (null === (VV = BV.querySelector(".DocsTargeted")) || void 0 === VV || VV.classList.remove("DocsTargeted"), null === YV || void 0 === YV || null === (eV = YV.closest(".DocsCard, .DocsParam, .DocsTile, .DocsSoundTile")) || void 0 === eV || eV.classList.add("DocsTargeted"), YV) {
+                                var UV;
+                                const VV = YV.matches(".DocsTile, .DocsSoundTile, .DocsCatalogueTile");
+                                (null !== (UV = YV.closest(".DocsChangelogEntry")) && void 0 !== UV ? UV : YV).scrollIntoView({
+                                  block: VV ? "center" : "start",
+                                  behavior: xV ? "smooth" : "auto"
                                 })
-                              } else iM || yM.scrollTo({
+                              } else xV || BV.scrollTo({
                                 top: 0
                               })
-                            }), [yM, QM.pathname, QM.hash, QM.key]);
-                            const RM = (0, OM.useCallback)((() => {
-                                UM(!1)
+                            }), [BV, nV.pathname, nV.hash, nV.key]);
+                            const GV = (0, JV.useCallback)((() => {
+                                tV(!1)
                               }), []),
-                              pM = (0, OM.useCallback)((MM => {
-                                zM({
-                                  hash: MM
+                              WV = (0, JV.useCallback)((VV => {
+                                wV({
+                                  hash: VV
                                 })
-                              }), [zM]);
-                            if (gM) return (0, hM.jsx)(PM.e, {
+                              }), [wV]);
+                            if (MV) return (0, kV.jsx)(pV.b, {
                               replace: !0,
-                              to: FM(rM, gM.page, gM.anchor)
+                              to: mV(eV, MV.page, MV.anchor)
                             });
-                            if (!LM) return (0, hM.jsx)(PM.e, {
+                            if (!ZV) return (0, kV.jsx)(pV.b, {
                               replace: !0,
-                              to: rM
+                              to: eV
                             });
-                            const WM = iM ? "div" : "main";
-                            return (0, hM.jsx)(Hr.Provider, {
-                              value: rM,
-                              children: (0, hM.jsx)(hr.Provider, {
-                                value: yM,
-                                children: (0, hM.jsxs)("div", {
-                                  ref: lM,
-                                  className: jM()("DocsSite", {
-                                    Embedded: iM,
-                                    NavOpen: EM
+                            const RV = xV ? "div" : "main";
+                            return (0, kV.jsx)(re.Provider, {
+                              value: eV,
+                              children: (0, kV.jsx)(ke.Provider, {
+                                value: BV,
+                                children: (0, kV.jsxs)("div", {
+                                  ref: jV,
+                                  className: UV()("DocsSite", {
+                                    Embedded: xV,
+                                    NavOpen: qV
                                   }),
-                                  "data-theme": HM,
-                                  children: [(0, hM.jsxs)("header", {
+                                  "data-theme": rV,
+                                  children: [(0, kV.jsxs)("header", {
                                     className: "DocsTopBar",
-                                    children: [(0, hM.jsx)("button", {
+                                    children: [(0, kV.jsx)("button", {
                                       type: "button",
                                       className: "DocsIconButton DocsMenuButton",
-                                      "aria-label": EM ? "Close menu" : "Open menu",
-                                      "aria-expanded": EM,
+                                      "aria-label": qV ? "Close menu" : "Open menu",
+                                      "aria-expanded": qV,
                                       onClick: () => {
-                                        UM(!EM)
+                                        tV(!qV)
                                       },
-                                      children: (0, hM.jsx)(dM, {
-                                        name: EM ? "cross" : "menu"
+                                      children: (0, kV.jsx)(EV, {
+                                        name: qV ? "cross" : "menu"
                                       })
-                                    }), (0, hM.jsxs)(aM.b, {
-                                      to: rM,
+                                    }), (0, kV.jsxs)(yV.b, {
+                                      to: eV,
                                       className: "DocsBrand",
-                                      children: [(0, hM.jsx)("img", {
+                                      children: [(0, kV.jsx)("img", {
                                         src: "/favicon.svg",
                                         alt: "",
                                         width: 28,
                                         height: 28
-                                      }), (0, hM.jsx)("span", {
+                                      }), (0, kV.jsx)("span", {
                                         className: "DocsBrandName",
                                         children: "Bloxd"
-                                      }), (0, hM.jsx)("span", {
+                                      }), (0, kV.jsx)("span", {
                                         className: "DocsBrandTag",
                                         children: "Code API"
                                       })]
-                                    }), (0, hM.jsxs)("button", {
+                                    }), (0, kV.jsxs)("button", {
                                       type: "button",
                                       className: "DocsSearchTrigger",
                                       onClick: () => {
-                                        CM(!0)
+                                        TV(!0)
                                       },
-                                      children: [(0, hM.jsx)(dM, {
+                                      children: [(0, kV.jsx)(EV, {
                                         name: "magnifying-glass"
-                                      }), (0, hM.jsx)("span", {
+                                      }), (0, kV.jsx)("span", {
                                         className: "DocsSearchTriggerLabel",
                                         children: "Search docs"
-                                      }), (0, hM.jsxs)("kbd", {
-                                        children: [Vj ? "\u2318" : "Ctrl", " K"]
+                                      }), (0, kV.jsxs)("kbd", {
+                                        children: [SU ? "\u2318" : "Ctrl", " K"]
                                       })]
-                                    }), (0, hM.jsxs)("div", {
+                                    }), (0, kV.jsxs)("div", {
                                       className: "DocsTopBarLinks",
-                                      children: [(0, hM.jsxs)("a", {
-                                        href: qj,
+                                      children: [(0, kV.jsxs)("a", {
+                                        href: uU,
                                         target: "_blank",
                                         rel: "noopener noreferrer",
                                         className: "DocsTopBarLink",
-                                        children: [(0, hM.jsx)(dM, {
+                                        children: [(0, kV.jsx)(EV, {
                                           name: "discord"
-                                        }), (0, hM.jsx)("span", {
+                                        }), (0, kV.jsx)("span", {
                                           children: "Discord"
                                         })]
-                                      }), (0, hM.jsxs)("a", {
-                                        href: Kj,
+                                      }), (0, kV.jsxs)("a", {
+                                        href: HU,
                                         target: "_blank",
                                         rel: "noopener noreferrer",
                                         className: "DocsTopBarLink",
-                                        children: [(0, hM.jsx)(dM, {
+                                        children: [(0, kV.jsx)(EV, {
                                           name: "external-link"
-                                        }), (0, hM.jsx)("span", {
+                                        }), (0, kV.jsx)("span", {
                                           children: "GitHub"
                                         })]
-                                      }), !iM && (0, hM.jsxs)(aM.b, {
+                                      }), !xV && (0, kV.jsxs)(yV.b, {
                                         to: "/",
                                         className: "DocsTopBarLink DocsPlayLink",
-                                        children: [(0, hM.jsx)(dM, {
+                                        children: [(0, kV.jsx)(EV, {
                                           name: "play"
-                                        }), (0, hM.jsx)("span", {
+                                        }), (0, kV.jsx)("span", {
                                           children: "Play Bloxd"
                                         })]
-                                      }), (0, hM.jsx)(Ij, {
-                                        theme: HM,
-                                        onChange: JM
+                                      }), (0, kV.jsx)(KU, {
+                                        theme: rV,
+                                        onChange: bV
                                       })]
                                     })]
-                                  }), (0, hM.jsxs)("div", {
+                                  }), (0, kV.jsxs)("div", {
                                     className: "DocsSiteBody",
-                                    children: [(0, hM.jsx)("aside", {
+                                    children: [(0, kV.jsx)("aside", {
                                       className: "DocsSidebar",
-                                      children: (0, hM.jsx)(cj, {
-                                        basePath: rM,
-                                        activePageId: LM.id,
-                                        onNavigate: RM
+                                      children: (0, kV.jsx)(IU, {
+                                        basePath: eV,
+                                        activePageId: ZV.id,
+                                        onNavigate: GV
                                       })
-                                    }), (0, hM.jsx)("div", {
+                                    }), (0, kV.jsx)("div", {
                                       className: "DocsNavScrim",
-                                      onClick: RM
-                                    }), (0, hM.jsxs)(WM, {
+                                      onClick: GV
+                                    }), (0, kV.jsxs)(RV, {
                                       className: "DocsMain",
-                                      children: [(0, hM.jsx)(bj, {
-                                        page: LM,
-                                        onTocChange: wM
-                                      }, LM.id), (0, hM.jsx)(Ma, {
-                                        basePath: rM,
-                                        pageId: LM.id
+                                      children: [(0, kV.jsx)(TU, {
+                                        page: ZV,
+                                        onTocChange: NV
+                                      }, ZV.id), (0, kV.jsx)(dU, {
+                                        basePath: eV,
+                                        pageId: ZV.id
                                       })]
-                                    }), (0, hM.jsx)("aside", {
-                                      className: jM()("DocsToc", {
-                                        Timeline: "changelog" === LM.layout
+                                    }), (0, kV.jsx)("aside", {
+                                      className: UV()("DocsToc", {
+                                        Timeline: "changelog" === ZV.layout
                                       }),
                                       "aria-label": "On this page",
-                                      children: (0, hM.jsx)(uj, {
-                                        isChangelog: "changelog" === LM.layout,
-                                        toc: eM,
-                                        activeAnchor: tM,
-                                        onNavigate: pM
+                                      children: (0, kV.jsx)(XU, {
+                                        isChangelog: "changelog" === ZV.layout,
+                                        toc: PV,
+                                        activeAnchor: XV,
+                                        onNavigate: WV
                                       })
                                     })]
-                                  }), (0, hM.jsx)(vj, {}), GM && (0, hM.jsx)(Aj, {
-                                    basePath: rM,
+                                  }), (0, kV.jsx)(lU, {}), FV && (0, kV.jsx)(cU, {
+                                    basePath: eV,
                                     onClose: () => {
-                                      CM(!1)
+                                      TV(!1)
                                     }
                                   })]
                                 })
                               })
                             })
                           }
-                        }, 5142: (MM, rM, iM) => {
-                          iM.d(rM, {
-                            C: () => mM,
-                            d: () => OM,
-                            h: () => aM,
-                            j: () => dM,
-                            l: () => JM,
-                            n: () => PM,
-                            q: () => SM,
-                            r: () => jM,
-                            v: () => hM,
-                            z: () => HM
+                        }, 5243: (VV, eV, xV) => {
+                          xV.d(eV, {
+                            A: () => kV,
+                            E: () => rV,
+                            I: () => vV,
+                            d: () => JV,
+                            h: () => yV,
+                            l: () => EV,
+                            n: () => bV,
+                            r: () => pV,
+                            v: () => YV,
+                            w: () => UV
                           });
-                          const OM = /\[([^\]]+)\]\((#[^)]+|[^)\s]+)\)/g;
+                          const JV = /\[([^\]]+)\]\((#[^)]+|[^)\s]+)\)/g;
 
-                          function SM(MM) {
+                          function YV(VV) {
                             try {
-                              return decodeURIComponent(MM.slice(1))
+                              return decodeURIComponent(VV.slice(1))
                             } catch {
-                              return MM.slice(1)
+                              return VV.slice(1)
                             }
                           }
 
-                          function jM(MM) {
-                            return MM.replace(/`/g, "").trim().replace(/[^\w{}$-]+/g, "-").replace(/^-+|-+$/g, "")
+                          function UV(VV) {
+                            return VV.replace(/`/g, "").trim().replace(/[^\w{}$-]+/g, "-").replace(/^-+|-+$/g, "")
                           }
-                          const aM = new RegExp(`${/(`{1,2})(.+?)\1(?!`)|\*\*(.+?)\*\*|/.source}${OM.source}`, "g");
+                          const yV = new RegExp(`${/(`{1,2})(.+?)\1(?!`)|\*\*(.+?)\*\*|/.source}${JV.source}`, "g");
 
-                          function PM(MM, rM) {
-                            return 2 === MM.length ? rM.replace(/^ (.*) $/, "$1") : rM
-                          }
-
-                          function nM(MM) {
-                            return "" === MM.trim()
+                          function pV(VV, eV) {
+                            return 2 === VV.length ? eV.replace(/^ (.*) $/, "$1") : eV
                           }
 
-                          function QM(MM) {
-                            const rM = [];
-                            for (const iM of MM.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")) rM.length > 0 && rM[rM.length - 1].endsWith("\\") ? rM[rM.length - 1] += `|${iM}` : rM.push(iM);
-                            return rM.map((MM => MM.trim().replaceAll("\\|", "|")))
+                          function QV(VV) {
+                            return "" === VV.trim()
                           }
-                          const zM = /^([ \t]*)([-*]|\d+\.)[ \t]+(.*)$/;
 
-                          function LM(MM) {
-                            const rM = [],
-                              iM = [{
+                          function nV(VV) {
+                            const eV = [];
+                            for (const xV of VV.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")) eV.length > 0 && eV[eV.length - 1].endsWith("\\") ? eV[eV.length - 1] += `|${xV}` : eV.push(xV);
+                            return eV.map((VV => VV.trim().replaceAll("\\|", "|")))
+                          }
+                          const wV = /^([ \t]*)([-*]|\d+\.)[ \t]+(.*)$/;
+
+                          function ZV(VV) {
+                            const eV = [],
+                              xV = [{
                                 indent: -1,
-                                items: rM
+                                items: eV
                               }];
-                            let OM = null;
-                            for (const SM of MM) {
-                              const MM = SM.match(zM);
-                              if (!MM) {
-                                OM && (OM.text += ` ${SM.trim()}`);
+                            let JV = null;
+                            for (const YV of VV) {
+                              const VV = YV.match(wV);
+                              if (!VV) {
+                                JV && (JV.text += ` ${YV.trim()}`);
                                 continue
                               }
-                              const rM = MM[1].replace(/\t/g, "  ").length;
-                              for (; rM <= iM[iM.length - 1].indent;) iM.pop();
-                              OM = {
-                                text: MM[3].trim(),
+                              const eV = VV[1].replace(/\t/g, "  ").length;
+                              for (; eV <= xV[xV.length - 1].indent;) xV.pop();
+                              JV = {
+                                text: VV[3].trim(),
                                 children: []
-                              }, iM[iM.length - 1].items.push(OM), iM.push({
-                                indent: rM,
-                                items: OM.children
+                              }, xV[xV.length - 1].items.push(JV), xV.push({
+                                indent: eV,
+                                items: JV.children
                               })
                             }
-                            return rM
+                            return eV
                           }
 
-                          function mM(MM) {
-                            const rM = MM.replace(/\r\n/g, "\n").split("\n"),
-                              iM = [];
-                            let OM = 0;
-                            for (; OM < rM.length;) {
-                              const MM = rM[OM];
-                              if (nM(MM)) {
-                                OM++;
+                          function vV(VV) {
+                            const eV = VV.replace(/\r\n/g, "\n").split("\n"),
+                              xV = [];
+                            let JV = 0;
+                            for (; JV < eV.length;) {
+                              const VV = eV[JV];
+                              if (QV(VV)) {
+                                JV++;
                                 continue
                               }
-                              const SM = MM.match(/^\s*```\s*(\w*)\s*$/);
-                              if (SM) {
-                                const MM = [];
-                                for (OM++; OM < rM.length && !/^\s*```\s*$/.test(rM[OM]);) MM.push(rM[OM]), OM++;
-                                OM++, iM.push({
+                              const YV = VV.match(/^\s*```\s*(\w*)\s*$/);
+                              if (YV) {
+                                const VV = [];
+                                for (JV++; JV < eV.length && !/^\s*```\s*$/.test(eV[JV]);) VV.push(eV[JV]), JV++;
+                                JV++, xV.push({
                                   kind: "code",
-                                  lang: SM[1] || "text",
-                                  code: MM.join("\n").replace(/\s+$/, "")
+                                  lang: YV[1] || "text",
+                                  code: VV.join("\n").replace(/\s+$/, "")
                                 });
                                 continue
                               }
-                              const aM = MM.match(/^(#{1,6})\s+(.+?)\s*#*$/);
-                              if (aM) {
-                                const MM = aM[2].trim();
-                                iM.push({
+                              const yV = VV.match(/^(#{1,6})\s+(.+?)\s*#*$/);
+                              if (yV) {
+                                const VV = yV[2].trim();
+                                xV.push({
                                   kind: "heading",
-                                  level: aM[1].length,
-                                  text: MM,
-                                  anchor: jM(MM)
-                                }), OM++;
+                                  level: yV[1].length,
+                                  text: VV,
+                                  anchor: UV(VV)
+                                }), JV++;
                                 continue
                               }
-                              if (/^\s*(-{3,}|\*{3,})\s*$/.test(MM)) {
-                                iM.push({
+                              if (/^\s*(-{3,}|\*{3,})\s*$/.test(VV)) {
+                                xV.push({
                                   kind: "rule"
-                                }), OM++;
+                                }), JV++;
                                 continue
                               }
-                              if (MM.trim().startsWith("|") && OM + 1 < rM.length && /^\s*\|[\s:|-]+\|\s*$/.test(rM[OM + 1])) {
-                                const SM = QM(MM),
-                                  jM = [];
-                                for (OM += 2; OM < rM.length && rM[OM].trim().startsWith("|");) jM.push(QM(rM[OM])), OM++;
-                                iM.push({
+                              if (VV.trim().startsWith("|") && JV + 1 < eV.length && /^\s*\|[\s:|-]+\|\s*$/.test(eV[JV + 1])) {
+                                const YV = nV(VV),
+                                  UV = [];
+                                for (JV += 2; JV < eV.length && eV[JV].trim().startsWith("|");) UV.push(nV(eV[JV])), JV++;
+                                xV.push({
                                   kind: "table",
-                                  header: SM,
-                                  rows: jM
+                                  header: YV,
+                                  rows: UV
                                 });
                                 continue
                               }
-                              if (MM.startsWith(">")) {
-                                const MM = [];
-                                for (; OM < rM.length && rM[OM].startsWith(">");) MM.push(rM[OM].replace(/^>\s?/, "")), OM++;
-                                iM.push({
+                              if (VV.startsWith(">")) {
+                                const VV = [];
+                                for (; JV < eV.length && eV[JV].startsWith(">");) VV.push(eV[JV].replace(/^>\s?/, "")), JV++;
+                                xV.push({
                                   kind: "quote",
-                                  blocks: mM(MM.join("\n"))
+                                  blocks: vV(VV.join("\n"))
                                 });
                                 continue
                               }
-                              if (zM.test(MM)) {
-                                const SM = [],
-                                  jM = /^\s*\d+\./.test(MM);
-                                for (; OM < rM.length && !nM(rM[OM]) && (zM.test(rM[OM]) || /^\s+\S/.test(rM[OM]));) SM.push(rM[OM]), OM++;
-                                iM.push({
+                              if (wV.test(VV)) {
+                                const YV = [],
+                                  UV = /^\s*\d+\./.test(VV);
+                                for (; JV < eV.length && !QV(eV[JV]) && (wV.test(eV[JV]) || /^\s+\S/.test(eV[JV]));) YV.push(eV[JV]), JV++;
+                                xV.push({
                                   kind: "list",
-                                  ordered: jM,
-                                  items: LM(SM)
+                                  ordered: UV,
+                                  items: ZV(YV)
                                 });
                                 continue
                               }
-                              const PM = [];
-                              for (; OM < rM.length && !nM(rM[OM]) && !/^\s*```/.test(rM[OM]) && !/^#{1,6}\s/.test(rM[OM]) && !rM[OM].startsWith(">") && !zM.test(rM[OM]) && (!rM[OM].trim().startsWith("|") || 0 !== PM.length);) PM.push(rM[OM].trim()), OM++;
-                              0 === PM.length && (PM.push(rM[OM].trim()), OM++), iM.push({
+                              const pV = [];
+                              for (; JV < eV.length && !QV(eV[JV]) && !/^\s*```/.test(eV[JV]) && !/^#{1,6}\s/.test(eV[JV]) && !eV[JV].startsWith(">") && !wV.test(eV[JV]) && (!eV[JV].trim().startsWith("|") || 0 !== pV.length);) pV.push(eV[JV].trim()), JV++;
+                              0 === pV.length && (pV.push(eV[JV].trim()), JV++), xV.push({
                                 kind: "paragraph",
-                                text: PM.join(" ")
+                                text: pV.join(" ")
                               })
                             }
-                            return iM
+                            return xV
                           }
 
-                          function HM(MM) {
-                            let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
-                            const iM = mM(MM);
-                            let OM = "";
-                            const SM = [],
-                              jM = [],
-                              aM = new Map;
-                            for (const QM of iM) {
-                              if ("heading" === QM.kind) {
-                                var PM;
-                                const MM = (null !== (PM = aM.get(QM.anchor)) && void 0 !== PM ? PM : 0) + 1;
-                                aM.set(QM.anchor, MM), MM > 1 && (QM.anchor = `${QM.anchor}-${MM}`)
+                          function rV(VV) {
+                            let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
+                            const xV = vV(VV);
+                            let JV = "";
+                            const YV = [],
+                              UV = [],
+                              yV = new Map;
+                            for (const nV of xV) {
+                              if ("heading" === nV.kind) {
+                                var pV;
+                                const VV = (null !== (pV = yV.get(nV.anchor)) && void 0 !== pV ? pV : 0) + 1;
+                                yV.set(nV.anchor, VV), VV > 1 && (nV.anchor = `${nV.anchor}-${VV}`)
                               }
-                              if ("heading" === QM.kind && 1 === QM.level && !OM) {
-                                OM = QM.text;
+                              if ("heading" === nV.kind && 1 === nV.level && !JV) {
+                                JV = nV.text;
                                 continue
                               }
-                              if ("heading" === QM.kind && QM.level <= rM) {
-                                jM.push({
-                                  heading: QM,
+                              if ("heading" === nV.kind && nV.level <= eV) {
+                                UV.push({
+                                  heading: nV,
                                   blocks: []
                                 });
                                 continue
                               }
-                              const MM = jM.at(-1);
-                              MM ? MM.blocks.push(QM) : SM.push(QM)
+                              const VV = UV.at(-1);
+                              VV ? VV.blocks.push(nV) : YV.push(nV)
                             }
-                            const nM = MM => {
+                            const QV = VV => {
                               for (;
-                                "rule" === (null === (rM = MM.at(-1)) || void 0 === rM ? void 0 : rM.kind);) {
-                                var rM;
-                                MM.pop()
+                                "rule" === (null === (eV = VV.at(-1)) || void 0 === eV ? void 0 : eV.kind);) {
+                                var eV;
+                                VV.pop()
                               }
                             };
-                            nM(SM);
-                            for (const QM of jM) nM(QM.blocks);
+                            QV(YV);
+                            for (const nV of UV) QV(nV.blocks);
                             return {
-                              title: OM,
-                              intro: SM,
-                              sections: jM
+                              title: JV,
+                              intro: YV,
+                              sections: UV
                             }
                           }
 
-                          function hM(MM) {
+                          function kV(VV) {
                             return [{
                               heading: null,
-                              blocks: MM.intro
-                            }, ...MM.sections.map((MM => ({
-                              heading: MM.heading,
-                              blocks: MM.blocks
+                              blocks: VV.intro
+                            }, ...VV.sections.map((VV => ({
+                              heading: VV.heading,
+                              blocks: VV.blocks
                             })))]
                           }
 
-                          function JM(MM) {
-                            return MM.flatMap((MM => "code" === MM.kind ? [MM] : "quote" === MM.kind ? JM(MM.blocks) : []))
+                          function bV(VV) {
+                            return VV.flatMap((VV => "code" === VV.kind ? [VV] : "quote" === VV.kind ? bV(VV.blocks) : []))
                           }
 
-                          function dM(MM) {
-                            switch (MM.kind) {
+                          function EV(VV) {
+                            switch (VV.kind) {
                               case "heading":
                               case "paragraph":
-                                return MM.text;
+                                return VV.text;
                               case "code":
-                                return MM.code;
+                                return VV.code;
                               case "table":
-                                return [MM.header, ...MM.rows].map((MM => MM.join(" "))).join(" ");
+                                return [VV.header, ...VV.rows].map((VV => VV.join(" "))).join(" ");
                               case "list": {
-                                const rM = MM => MM.map((MM => `${MM.text} ${rM(MM.children)}`)).join(" ");
-                                return rM(MM.items)
+                                const eV = VV => VV.map((VV => `${VV.text} ${eV(VV.children)}`)).join(" ");
+                                return eV(VV.items)
                               }
                               case "quote":
-                                return MM.blocks.map(dM).join(" ");
+                                return VV.blocks.map(EV).join(" ");
                               case "rule":
                                 return ""
                             }
                           }
-                        }, 5242: (MM, rM, iM) => {
-                          iM.d(rM, {
-                            c: () => PM
+                        }, 5335: (VV, eV, xV) => {
+                          xV.d(eV, {
+                            e: () => pV
                           });
-                          var OM = iM(44),
-                            SM = iM(313),
-                            jM = iM(2026),
-                            aM = iM(1303);
+                          var JV = xV(62),
+                            YV = xV(364),
+                            UV = xV(2039),
+                            yV = xV(1321);
 
-                          function PM(MM) {
+                          function pV(VV) {
                             let {
-                              text: rM
-                            } = MM;
-                            const iM = [];
-                            let PM = "";
-                            return (0, SM.bc)(rM).forEach(((MM, rM) => {
-                              if ("string" === typeof MM || !(0, jM.d)(MM.icon)) return void(PM += "string" === typeof MM ? MM : MM.icon);
-                              const SM = Math.max(0, PM.trimEnd().search(/\S{1,12}$/));
-                              iM.push((0, aM.jsxs)(OM.Fragment, {
-                                children: [PM.slice(0, SM), (0, aM.jsxs)("span", {
+                              text: eV
+                            } = VV;
+                            const xV = [];
+                            let pV = "";
+                            return (0, YV.dc)(eV).forEach(((VV, eV) => {
+                              if ("string" === typeof VV || !(0, UV.h)(VV.icon)) return void(pV += "string" === typeof VV ? VV : VV.icon);
+                              const YV = Math.max(0, pV.trimEnd().search(/\S{1,12}$/));
+                              xV.push((0, yV.jsxs)(JV.Fragment, {
+                                children: [pV.slice(0, YV), (0, yV.jsxs)("span", {
                                   className: "InlineIconTextGlue",
-                                  children: [PM.slice(SM), (0, aM.jsx)("span", {
+                                  children: [pV.slice(YV), (0, yV.jsx)("span", {
                                     className: "InlineIconTextIcon",
                                     role: "img",
-                                    "aria-label": MM.icon,
-                                    children: (0, aM.jsx)(jM.b, {
-                                      itemName: MM.icon,
+                                    "aria-label": VV.icon,
+                                    children: (0, yV.jsx)(UV.e, {
+                                      itemName: VV.icon,
                                       amount: 0
                                     })
                                   })]
                                 })]
-                              }, rM)), PM = ""
-                            })), iM.push(PM), (0, aM.jsx)(aM.Fragment, {
-                              children: iM
+                              }, eV)), pV = ""
+                            })), xV.push(pV), (0, yV.jsx)(yV.Fragment, {
+                              children: xV
                             })
                           }
-                        }, 5173: (MM, rM, iM) => {
-                          iM.d(rM, {
-                            h: () => lM,
-                            e: () => yM
+                        }, 5261: (VV, eV, xV) => {
+                          xV.d(eV, {
+                            e: () => jV,
+                            b: () => BV
                           });
-                          var OM = iM(44),
-                            SM = iM(1516),
-                            jM = iM(2006),
-                            aM = iM(5182),
-                            PM = iM(1303);
-                          const nM = (0, OM.memo)((function(MM) {
+                          var JV = xV(62),
+                            YV = xV(1542),
+                            UV = xV(2021),
+                            yV = xV(5264),
+                            pV = xV(1321);
+                          const QV = (0, JV.memo)((function(VV) {
                             let {
-                              initialParameters: rM
-                            } = MM;
-                            const iM = (0, OM.useRef)(null),
-                              SM = (0, OM.useRef)(null),
-                              nM = (0, OM.useRef)(0),
-                              QM = (0, OM.useRef)(null),
-                              zM = rM.description,
-                              LM = rM.sO,
+                              initialParameters: eV
+                            } = VV;
+                            const xV = (0, JV.useRef)(null),
+                              YV = (0, JV.useRef)(null),
+                              QV = (0, JV.useRef)(0),
+                              nV = (0, JV.useRef)(null),
+                              wV = eV.description,
+                              ZV = eV.fJ,
                               {
-                                scale: mM,
-                                rotation: HM
-                              } = null !== rM && void 0 !== rM ? rM : {},
-                              hM = (0, aM.g)();
-                            return (0, OM.useEffect)((() => {
-                              const MM = hM.onFrame((() => {
-                                const MM = hM.getState();
-                                if (!MM.isActive || !iM.current || !SM.current) return;
-                                const rM = MM.state;
-                                if (iM.current.value = rM.progress, rM.clickCount > nM.current) {
-                                  nM.current = rM.clickCount;
-                                  const MM = SM.current;
-                                  MM.classList.add("pulse"), QM.current = setTimeout((() => {
-                                    MM.classList.remove("pulse")
+                                scale: vV,
+                                rotation: rV
+                              } = null !== eV && void 0 !== eV ? eV : {},
+                              kV = (0, yV.f)();
+                            return (0, JV.useEffect)((() => {
+                              const VV = kV.onFrame((() => {
+                                const VV = kV.getState();
+                                if (!VV.isActive || !xV.current || !YV.current) return;
+                                const eV = VV.state;
+                                if (xV.current.value = eV.progress, eV.clickCount > QV.current) {
+                                  QV.current = eV.clickCount;
+                                  const VV = YV.current;
+                                  VV.classList.add("pulse"), nV.current = setTimeout((() => {
+                                    VV.classList.remove("pulse")
                                   }), 100)
                                 }
                               }));
                               return () => {
-                                clearTimeout(QM.current), MM()
+                                clearTimeout(nV.current), VV()
                               }
-                            }), [hM]), (0, PM.jsx)(PM.Fragment, {
-                              children: (0, PM.jsxs)("div", {
+                            }), [kV]), (0, pV.jsx)(pV.Fragment, {
+                              children: (0, pV.jsxs)("div", {
                                 className: "QTEProgressBarWrapper",
                                 style: {
-                                  ...null !== mM && {
-                                    "--scale": mM
+                                  ...null !== vV && {
+                                    "--scale": vV
                                   },
-                                  ...null !== HM && {
-                                    "--rotation": `${HM}deg`
+                                  ...null !== rV && {
+                                    "--rotation": `${rV}deg`
                                   }
                                 },
-                                children: [(0, PM.jsx)("progress", {
+                                children: [(0, pV.jsx)("progress", {
                                   id: "catch",
                                   max: 100,
                                   className: "QTEProgressBar",
-                                  ref: iM
-                                }), (0, PM.jsx)("span", {
+                                  ref: xV
+                                }), (0, pV.jsx)("span", {
                                   className: "QTEProgressBarInteractionIndicator",
-                                  ref: SM,
-                                  children: (0, PM.jsx)(jM.b, {
+                                  ref: YV,
+                                  children: (0, pV.jsx)(UV.b, {
                                     text: [{
-                                      icon: LM
+                                      icon: ZV
                                     }]
                                   })
-                                }), (0, PM.jsx)("div", {
+                                }), (0, pV.jsx)("div", {
                                   className: "QTEProgressBarDescription",
-                                  children: (0, PM.jsx)(jM.b, {
-                                    text: zM
+                                  children: (0, pV.jsx)(UV.b, {
+                                    text: wV
                                   })
                                 })]
                               })
                             })
                           }));
-                          var QM = iM(1116),
-                            zM = iM.n(QM);
-                          const LM = 2 * Math.PI * 90,
-                            mM = (0, OM.memo)((function(MM) {
+                          var nV = xV(1146),
+                            wV = xV.n(nV);
+                          const ZV = 2 * Math.PI * 90,
+                            vV = (0, JV.memo)((function(VV) {
                               let {
-                                initialParameters: rM
-                              } = MM;
-                              const iM = (0, OM.useRef)(null),
-                                SM = (0, OM.useRef)(null),
-                                nM = (0, OM.useRef)(null),
-                                QM = rM.label,
-                                mM = rM.icon,
-                                HM = rM.ZO,
+                                initialParameters: eV
+                              } = VV;
+                              const xV = (0, JV.useRef)(null),
+                                YV = (0, JV.useRef)(null),
+                                QV = (0, JV.useRef)(null),
+                                nV = eV.label,
+                                vV = eV.icon,
+                                rV = eV.HJ,
                                 {
-                                  scale: hM,
-                                  rotation: JM,
-                                  oO: dM
-                                } = null !== rM && void 0 !== rM ? rM : {},
-                                yM = (0, aM.g)();
-                              return (0, OM.useEffect)((() => {
-                                const MM = yM.onFrame((() => {
-                                  var MM, rM;
-                                  const OM = yM.getState();
-                                  if (!OM.isActive || !SM.current) return;
-                                  const jM = OM.state,
-                                    aM = null !== (MM = jM.timeRemaining) && void 0 !== MM ? MM : 0,
-                                    PM = null !== (rM = jM.kO) && void 0 !== rM ? rM : 1,
-                                    QM = LM * (1 - aM / PM);
-                                  SM.current.style.strokeDashoffset = `${QM}`, iM.current && (iM.current.style.opacity = aM > 0 ? "1" : "0"), nM.current && HM && (nM.current.textContent = `${(aM/1e3).toFixed(1)}s`)
+                                  scale: kV,
+                                  rotation: bV,
+                                  uJ: EV
+                                } = null !== eV && void 0 !== eV ? eV : {},
+                                BV = (0, yV.f)();
+                              return (0, JV.useEffect)((() => {
+                                const VV = BV.onFrame((() => {
+                                  var VV, eV;
+                                  const JV = BV.getState();
+                                  if (!JV.isActive || !YV.current) return;
+                                  const UV = JV.state,
+                                    yV = null !== (VV = UV.timeRemaining) && void 0 !== VV ? VV : 0,
+                                    pV = null !== (eV = UV.KJ) && void 0 !== eV ? eV : 1,
+                                    nV = ZV * (1 - yV / pV);
+                                  YV.current.style.strokeDashoffset = `${nV}`, xV.current && (xV.current.style.opacity = yV > 0 ? "1" : "0"), QV.current && rV && (QV.current.textContent = `${(yV/1e3).toFixed(1)}s`)
                                 }));
                                 return () => {
-                                  MM()
+                                  VV()
                                 }
-                              }), [yM, HM]), (0, PM.jsxs)("div", {
+                              }), [BV, rV]), (0, pV.jsxs)("div", {
                                 className: "QTETimedClick",
-                                ref: iM,
+                                ref: xV,
                                 style: {
-                                  ...null !== hM && {
-                                    "--scale": hM
+                                  ...null !== kV && {
+                                    "--scale": kV
                                   },
-                                  ...null !== JM && {
-                                    "--rotation": `${JM}deg`
+                                  ...null !== bV && {
+                                    "--rotation": `${bV}deg`
                                   }
                                 },
-                                children: [(0, PM.jsxs)("div", {
+                                children: [(0, pV.jsxs)("div", {
                                   className: "QTETimedClickCircleContainer",
-                                  children: [(0, PM.jsxs)("svg", {
+                                  children: [(0, pV.jsxs)("svg", {
                                     className: "QTETimedClickCircularProgress",
                                     viewBox: "0 0 200 200",
-                                    children: [(0, PM.jsx)("circle", {
+                                    children: [(0, pV.jsx)("circle", {
                                       className: "QTETimedClickProgressTrack",
                                       cx: "100",
                                       cy: "100",
                                       r: 90,
                                       fill: "none",
                                       strokeWidth: "12"
-                                    }), (0, PM.jsx)("circle", {
+                                    }), (0, pV.jsx)("circle", {
                                       className: "QTETimedClickProgressArc",
                                       cx: "100",
                                       cy: "100",
@@ -6290,80 +6290,80 @@ export const modules = {
                                       fill: "none",
                                       strokeWidth: "12",
                                       strokeLinecap: "square",
-                                      strokeDasharray: LM,
-                                      ref: SM
+                                      strokeDasharray: ZV,
+                                      ref: YV
                                     })]
-                                  }), (0, PM.jsx)("div", {
+                                  }), (0, pV.jsx)("div", {
                                     className: "QTETimedClickCenterContent",
-                                    children: (0, PM.jsx)(jM.b, {
+                                    children: (0, pV.jsx)(UV.b, {
                                       text: [{
-                                        icon: mM
+                                        icon: vV
                                       }],
-                                      className: zM()("QTETimedClickInnerText", {
-                                        QTETimedClickBreathe: dM
+                                      className: wV()("QTETimedClickInnerText", {
+                                        QTETimedClickBreathe: EV
                                       })
                                     })
                                   })]
-                                }), (0, PM.jsxs)("div", {
+                                }), (0, pV.jsxs)("div", {
                                   className: "QTETimedClickRightTextContainer",
-                                  children: [(0, PM.jsx)(jM.b, {
-                                    text: QM,
+                                  children: [(0, pV.jsx)(UV.b, {
+                                    text: nV,
                                     className: "QTETimedClickLabelText"
-                                  }), HM && (0, PM.jsx)("span", {
+                                  }), rV && (0, pV.jsx)("span", {
                                     className: "QTETimedClickTimeText",
-                                    ref: nM
+                                    ref: QV
                                   })]
                                 })]
                               })
                             })),
-                            HM = (0, OM.memo)((function(MM) {
+                            rV = (0, JV.memo)((function(VV) {
                               let {
-                                initialParameters: rM
-                              } = MM;
-                              const iM = (0, OM.useRef)(null),
-                                SM = (0, OM.useRef)(null),
-                                nM = (0, OM.useRef)(null),
-                                QM = (0, OM.useRef)(!1),
-                                zM = rM.description,
-                                LM = null === rM || void 0 === rM ? void 0 : rM.icon,
-                                mM = (0, aM.g)();
-                              return (0, OM.useEffect)((() => {
-                                const MM = mM.onFrame((() => {
-                                  const MM = mM.getState();
-                                  if (!MM.isActive) return;
-                                  const rM = MM.state;
-                                  if (iM.current) {
-                                    const MM = 100 * (rM.catchZonePosition - rM.YO / 2);
-                                    iM.current.style.left = `${MM}%`, iM.current.style.width = 100 * rM.YO + "%", rM.isCatching !== QM.current && (QM.current = rM.isCatching, rM.isCatching ? iM.current.classList.add("catching") : iM.current.classList.remove("catching"))
+                                initialParameters: eV
+                              } = VV;
+                              const xV = (0, JV.useRef)(null),
+                                YV = (0, JV.useRef)(null),
+                                QV = (0, JV.useRef)(null),
+                                nV = (0, JV.useRef)(!1),
+                                wV = eV.description,
+                                ZV = null === eV || void 0 === eV ? void 0 : eV.icon,
+                                vV = (0, yV.f)();
+                              return (0, JV.useEffect)((() => {
+                                const VV = vV.onFrame((() => {
+                                  const VV = vV.getState();
+                                  if (!VV.isActive) return;
+                                  const eV = VV.state;
+                                  if (xV.current) {
+                                    const VV = 100 * (eV.catchZonePosition - eV.SJ / 2);
+                                    xV.current.style.left = `${VV}%`, xV.current.style.width = 100 * eV.SJ + "%", eV.isCatching !== nV.current && (nV.current = eV.isCatching, eV.isCatching ? xV.current.classList.add("catching") : xV.current.classList.remove("catching"))
                                   }
-                                  SM.current && (SM.current.style.left = 100 * rM.moverPosition + "%"), nM.current && (nM.current.value = rM.progress)
+                                  YV.current && (YV.current.style.left = 100 * eV.moverPosition + "%"), QV.current && (QV.current.value = eV.progress)
                                 }));
                                 return () => {
-                                  MM()
+                                  VV()
                                 }
-                              }), [mM]), (0, PM.jsxs)("div", {
+                              }), [vV]), (0, pV.jsxs)("div", {
                                 className: "QTEGravityBar",
-                                children: [(0, PM.jsx)("div", {
+                                children: [(0, pV.jsx)("div", {
                                   className: "QTEGravityBarDescription",
-                                  children: (0, PM.jsx)(jM.b, {
-                                    text: zM
+                                  children: (0, pV.jsx)(UV.b, {
+                                    text: wV
                                   })
-                                }), (0, PM.jsx)("progress", {
+                                }), (0, pV.jsx)("progress", {
                                   max: 100,
                                   className: "QTEGravityBarProgress",
-                                  ref: nM
-                                }), (0, PM.jsxs)("div", {
+                                  ref: QV
+                                }), (0, pV.jsxs)("div", {
                                   className: "QTEGravityBarTrack",
-                                  children: [(0, PM.jsx)("div", {
+                                  children: [(0, pV.jsx)("div", {
                                     className: "QTEGravityBarCatchZone",
-                                    ref: iM
-                                  }), (0, PM.jsx)("div", {
+                                    ref: xV
+                                  }), (0, pV.jsx)("div", {
                                     className: "QTEGravityBarMover",
-                                    ref: SM,
-                                    children: (0, PM.jsx)("span", {
-                                      children: LM && (0, PM.jsx)(jM.b, {
+                                    ref: YV,
+                                    children: (0, pV.jsx)("span", {
+                                      children: ZV && (0, pV.jsx)(UV.b, {
                                         text: [{
-                                          icon: LM,
+                                          icon: ZV,
                                           style: {
                                             fontSize: "4rem"
                                           }
@@ -6374,782 +6374,782 @@ export const modules = {
                                 })]
                               })
                             }));
-                          var hM = iM(625);
-                          const JM = (0, OM.memo)((function(MM) {
+                          var kV = xV(657);
+                          const bV = (0, JV.memo)((function(VV) {
                               let {
-                                initialParameters: rM
-                              } = MM;
-                              const iM = (0, OM.useRef)(null),
-                                SM = rM.label,
-                                nM = rM.IO,
+                                initialParameters: eV
+                              } = VV;
+                              const xV = (0, JV.useRef)(null),
+                                YV = eV.label,
+                                QV = eV.JY,
                                 {
-                                  icon: QM,
-                                  scale: zM,
-                                  rotation: LM
-                                } = null !== rM && void 0 !== rM ? rM : {},
-                                mM = 100 * (.5 - nM / 2),
-                                HM = 100 * nM,
-                                JM = (0, aM.g)();
-                              return (0, OM.useEffect)((() => {
-                                const MM = JM.onFrame((() => {
-                                  const MM = JM.getState();
-                                  if (!MM.isActive || !iM.current) return;
-                                  const rM = MM.state;
-                                  iM.current.style.left = 100 * rM.markerPosition + "%"
+                                  icon: nV,
+                                  scale: wV,
+                                  rotation: ZV
+                                } = null !== eV && void 0 !== eV ? eV : {},
+                                vV = 100 * (.5 - QV / 2),
+                                rV = 100 * QV,
+                                bV = (0, yV.f)();
+                              return (0, JV.useEffect)((() => {
+                                const VV = bV.onFrame((() => {
+                                  const VV = bV.getState();
+                                  if (!VV.isActive || !xV.current) return;
+                                  const eV = VV.state;
+                                  xV.current.style.left = 100 * eV.markerPosition + "%"
                                 }));
                                 return () => {
-                                  MM()
+                                  VV()
                                 }
-                              }), [JM]), (0, PM.jsxs)("div", {
+                              }), [bV]), (0, pV.jsxs)("div", {
                                 className: "QTEPrecisionBarWrapper",
                                 style: {
-                                  ...!(0, hM.J)(zM) && {
-                                    "--scale": zM
+                                  ...!(0, kV.J)(wV) && {
+                                    "--scale": wV
                                   },
-                                  ...!(0, hM.J)(LM) && {
-                                    "--rotation": `${LM}deg`
+                                  ...!(0, kV.J)(ZV) && {
+                                    "--rotation": `${ZV}deg`
                                   }
                                 },
-                                children: [QM && (0, PM.jsx)(jM.b, {
+                                children: [nV && (0, pV.jsx)(UV.b, {
                                   text: [{
-                                    icon: QM
+                                    icon: nV
                                   }],
                                   className: "QTEPrecisionBarIcon"
-                                }), (0, PM.jsxs)("div", {
+                                }), (0, pV.jsxs)("div", {
                                   className: "QTEPrecisionBarTrack",
-                                  children: [(0, PM.jsx)("div", {
+                                  children: [(0, pV.jsx)("div", {
                                     className: "QTEPrecisionBarSuccessZone",
                                     style: {
-                                      left: `${mM}%`,
-                                      width: `${HM}%`
+                                      left: `${vV}%`,
+                                      width: `${rV}%`
                                     }
-                                  }), (0, PM.jsx)("div", {
+                                  }), (0, pV.jsx)("div", {
                                     className: "QTEPrecisionBarMarker",
-                                    ref: iM
+                                    ref: xV
                                   })]
-                                }), (0, PM.jsx)("div", {
+                                }), (0, pV.jsx)("div", {
                                   className: "QTEPrecisionBarLabel",
-                                  children: (0, PM.jsx)(jM.b, {
-                                    text: SM
+                                  children: (0, pV.jsx)(UV.b, {
+                                    text: YV
                                   })
                                 })]
                               })
                             })),
-                            dM = (0, OM.memo)((function(MM) {
+                            EV = (0, JV.memo)((function(VV) {
                               let {
-                                initialParameters: rM
-                              } = MM;
-                              const iM = (0, OM.useRef)(null),
-                                [SM, nM] = (0, OM.useState)((() => new Array(rM.qO).fill("pending"))),
-                                [QM, zM] = (0, OM.useState)((() => {
-                                  const MM = rM.MS;
-                                  return (0, hM.J)(MM) || MM <= 0 ? [] : new Array(MM).fill("pending")
+                                initialParameters: eV
+                              } = VV;
+                              const xV = (0, JV.useRef)(null),
+                                [YV, QV] = (0, JV.useState)((() => new Array(eV.UY).fill("pending"))),
+                                [nV, wV] = (0, JV.useState)((() => {
+                                  const VV = eV.QY;
+                                  return (0, kV.J)(VV) || VV <= 0 ? [] : new Array(VV).fill("pending")
                                 })),
-                                LM = rM.label,
+                                ZV = eV.label,
                                 {
-                                  icon: mM
-                                } = rM,
-                                HM = (0, OM.useRef)(0),
-                                JM = (0, OM.useRef)(0),
-                                dM = (0, OM.useRef)([]),
-                                yM = (0, aM.g)();
-                              return (0, OM.useEffect)((() => {
-                                const MM = yM.onFrame((() => {
-                                  const MM = yM.getState();
-                                  if (!MM.isActive || !iM.current) return;
-                                  const rM = MM.state,
-                                    OM = 30 + 60 * rM.outerCircleProgress;
-                                  if (iM.current.setAttribute("r", String(OM)), !0 === rM.lastClickResult && rM.successes > HM.current) {
-                                    iM.current.classList.remove("QTERhythmClickOuterCircle--miss"), iM.current.classList.add("QTERhythmClickOuterCircle--hit");
-                                    const MM = setTimeout((() => {
-                                      var MM;
-                                      null === (MM = iM.current) || void 0 === MM || MM.classList.remove("QTERhythmClickOuterCircle--hit")
+                                  icon: vV
+                                } = eV,
+                                rV = (0, JV.useRef)(0),
+                                bV = (0, JV.useRef)(0),
+                                EV = (0, JV.useRef)([]),
+                                BV = (0, yV.f)();
+                              return (0, JV.useEffect)((() => {
+                                const VV = BV.onFrame((() => {
+                                  const VV = BV.getState();
+                                  if (!VV.isActive || !xV.current) return;
+                                  const eV = VV.state,
+                                    JV = 30 + 60 * eV.outerCircleProgress;
+                                  if (xV.current.setAttribute("r", String(JV)), !0 === eV.lastClickResult && eV.successes > rV.current) {
+                                    xV.current.classList.remove("QTERhythmClickOuterCircle--miss"), xV.current.classList.add("QTERhythmClickOuterCircle--hit");
+                                    const VV = setTimeout((() => {
+                                      var VV;
+                                      null === (VV = xV.current) || void 0 === VV || VV.classList.remove("QTERhythmClickOuterCircle--hit")
                                     }), 200);
-                                    dM.current.push(MM)
-                                  } else if (!1 === rM.lastClickResult && rM.misses > JM.current) {
-                                    iM.current.classList.remove("QTERhythmClickOuterCircle--hit"), iM.current.classList.add("QTERhythmClickOuterCircle--miss");
-                                    const MM = setTimeout((() => {
-                                      var MM;
-                                      null === (MM = iM.current) || void 0 === MM || MM.classList.remove("QTERhythmClickOuterCircle--miss")
+                                    EV.current.push(VV)
+                                  } else if (!1 === eV.lastClickResult && eV.misses > bV.current) {
+                                    xV.current.classList.remove("QTERhythmClickOuterCircle--hit"), xV.current.classList.add("QTERhythmClickOuterCircle--miss");
+                                    const VV = setTimeout((() => {
+                                      var VV;
+                                      null === (VV = xV.current) || void 0 === VV || VV.classList.remove("QTERhythmClickOuterCircle--miss")
                                     }), 200);
-                                    dM.current.push(MM)
+                                    EV.current.push(VV)
                                   }
-                                  rM.successes === HM.current && rM.misses === JM.current || (HM.current = rM.successes, JM.current = rM.misses, nM((MM => {
-                                    const iM = [...MM];
-                                    for (let OM = 0; OM < rM.qO; OM++) iM[OM] = OM < rM.successes ? "success" : "pending";
-                                    return iM
-                                  })), zM((MM => {
-                                    if (0 === MM.length) return MM;
-                                    const iM = [...MM];
-                                    for (let OM = 0; OM < iM.length; OM++) iM[OM] = OM < rM.misses ? "miss" : "pending";
-                                    return iM
+                                  eV.successes === rV.current && eV.misses === bV.current || (rV.current = eV.successes, bV.current = eV.misses, QV((VV => {
+                                    const xV = [...VV];
+                                    for (let JV = 0; JV < eV.UY; JV++) xV[JV] = JV < eV.successes ? "success" : "pending";
+                                    return xV
+                                  })), wV((VV => {
+                                    if (0 === VV.length) return VV;
+                                    const xV = [...VV];
+                                    for (let JV = 0; JV < xV.length; JV++) xV[JV] = JV < eV.misses ? "miss" : "pending";
+                                    return xV
                                   })))
                                 }));
                                 return () => {
-                                  MM();
-                                  for (const MM of dM.current) clearTimeout(MM);
-                                  dM.current = []
+                                  VV();
+                                  for (const VV of EV.current) clearTimeout(VV);
+                                  EV.current = []
                                 }
-                              }), [yM]), (0, PM.jsxs)("div", {
+                              }), [BV]), (0, pV.jsxs)("div", {
                                 className: "QTERhythmClickWrapper",
-                                children: [(0, PM.jsx)("div", {
+                                children: [(0, pV.jsx)("div", {
                                   className: "QTERhythmClickProgress",
-                                  children: SM.map(((MM, rM) => (0, PM.jsx)("div", {
-                                    className: "QTERhythmClickDot" + ("success" === MM ? " QTERhythmClickDot--success" : " QTERhythmClickDot--pendingSuccess")
-                                  }, rM)))
-                                }), (0, PM.jsxs)("div", {
+                                  children: YV.map(((VV, eV) => (0, pV.jsx)("div", {
+                                    className: "QTERhythmClickDot" + ("success" === VV ? " QTERhythmClickDot--success" : " QTERhythmClickDot--pendingSuccess")
+                                  }, eV)))
+                                }), (0, pV.jsxs)("div", {
                                   className: "QTERhythmClickCircleContainer",
-                                  children: [(0, PM.jsxs)("svg", {
+                                  children: [(0, pV.jsxs)("svg", {
                                     className: "QTERhythmClickSvg",
                                     viewBox: "0 0 200 200",
-                                    children: [(0, PM.jsx)("circle", {
+                                    children: [(0, pV.jsx)("circle", {
                                       className: "QTERhythmClickInnerCircle",
                                       cx: "100",
                                       cy: "100",
                                       r: 30
-                                    }), (0, PM.jsx)("circle", {
+                                    }), (0, pV.jsx)("circle", {
                                       className: "QTERhythmClickOuterCircle",
                                       cx: "100",
                                       cy: "100",
                                       r: 90,
-                                      ref: iM
+                                      ref: xV
                                     })]
-                                  }), mM && (0, PM.jsx)("div", {
+                                  }), vV && (0, pV.jsx)("div", {
                                     className: "QTERhythmClickCenterContent",
-                                    children: (0, PM.jsx)(jM.b, {
+                                    children: (0, pV.jsx)(UV.b, {
                                       text: [{
-                                        icon: mM
+                                        icon: vV
                                       }],
                                       className: "QTERhythmClickIcon"
                                     })
                                   })]
-                                }), QM.length > 0 && (0, PM.jsx)("div", {
+                                }), nV.length > 0 && (0, pV.jsx)("div", {
                                   className: "QTERhythmClickProgress",
-                                  children: QM.map(((MM, rM) => (0, PM.jsx)("div", {
-                                    className: "QTERhythmClickDot" + ("miss" === MM ? " QTERhythmClickDot--miss" : " QTERhythmClickDot--pendingMiss")
-                                  }, rM)))
-                                }), (0, PM.jsx)("div", {
+                                  children: nV.map(((VV, eV) => (0, pV.jsx)("div", {
+                                    className: "QTERhythmClickDot" + ("miss" === VV ? " QTERhythmClickDot--miss" : " QTERhythmClickDot--pendingMiss")
+                                  }, eV)))
+                                }), (0, pV.jsx)("div", {
                                   className: "QTERhythmClickLabel",
-                                  children: (0, PM.jsx)(jM.b, {
-                                    text: LM
+                                  children: (0, pV.jsx)(UV.b, {
+                                    text: ZV
                                   })
                                 })]
                               })
                             }));
 
-                          function yM(MM) {
+                          function BV(VV) {
                             let {
-                              qte: rM
-                            } = MM;
-                            switch (rM.type) {
+                              qte: eV
+                            } = VV;
+                            switch (eV.type) {
                               case "progressBar":
-                                return (0, PM.jsx)(nM, {
-                                  initialParameters: rM.parameters
+                                return (0, pV.jsx)(QV, {
+                                  initialParameters: eV.parameters
                                 });
                               case "timedClick":
-                                return (0, PM.jsx)(mM, {
-                                  initialParameters: rM.parameters
+                                return (0, pV.jsx)(vV, {
+                                  initialParameters: eV.parameters
                                 });
                               case "gravityBar":
-                                return (0, PM.jsx)(HM, {
-                                  initialParameters: rM.parameters
+                                return (0, pV.jsx)(rV, {
+                                  initialParameters: eV.parameters
                                 });
                               case "precisionBar":
-                                return (0, PM.jsx)(JM, {
-                                  initialParameters: rM.parameters
+                                return (0, pV.jsx)(bV, {
+                                  initialParameters: eV.parameters
                                 });
                               case "rhythmClick":
-                                return (0, PM.jsx)(dM, {
-                                  initialParameters: rM.parameters
+                                return (0, pV.jsx)(EV, {
+                                  initialParameters: eV.parameters
                                 });
                               default:
                                 return console.warn("Unknown QTE type"), null
                             }
                           }
-                          const lM = (0, OM.memo)((function() {
-                            const [MM, rM] = (0, OM.useState)({
+                          const jV = (0, JV.memo)((function() {
+                            const [VV, eV] = (0, JV.useState)({
                               type: null,
                               parameters: null,
                               state: null,
                               isActive: !1
                             });
-                            return (0, SM.d)("qteStateUpdated", (MM => {
-                              rM(MM)
-                            })), MM.isActive && MM.type ? (0, PM.jsx)("div", {
+                            return (0, YV.g)("qteStateUpdated", (VV => {
+                              eV(VV)
+                            })), VV.isActive && VV.type ? (0, pV.jsx)("div", {
                               className: "QTE",
                               "data-camera-keeper": "",
-                              children: (0, PM.jsx)(yM, {
-                                qte: MM
+                              children: (0, pV.jsx)(BV, {
+                                qte: VV
                               })
                             }) : null
                           }))
-                        }, 5182: (MM, rM, iM) => {
-                          iM.d(rM, {
-                            c: () => PM,
-                            g: () => nM
+                        }, 5264: (VV, eV, xV) => {
+                          xV.d(eV, {
+                            d: () => pV,
+                            f: () => QV
                           });
-                          var OM = iM(44),
-                            SM = iM(1327),
-                            jM = iM(5184);
-                          const aM = {
-                              getState: () => jM.d.getCurrentState(),
-                              onFrame: SM.v
+                          var JV = xV(62),
+                            YV = xV(1348),
+                            UV = xV(5273);
+                          const yV = {
+                              getState: () => UV.d.getCurrentState(),
+                              onFrame: YV.v
                             },
-                            PM = (0, OM.createContext)(aM);
+                            pV = (0, JV.createContext)(yV);
 
-                          function nM() {
-                            return (0, OM.useContext)(PM)
+                          function QV() {
+                            return (0, JV.useContext)(pV)
                           }
-                        }, 5248: (MM, rM, iM) => {
-                          iM.d(rM, {
-                            e: () => DM,
-                            i: () => sM
+                        }, 5339: (VV, eV, xV) => {
+                          xV.d(eV, {
+                            c: () => DV,
+                            g: () => gV
                           });
-                          var OM = iM(5251),
-                            SM = iM(313);
-                          const jM = 120,
-                            aM = 260,
-                            PM = 1.15,
-                            nM = 1.2,
-                            QM = 2,
-                            zM = 1.08,
-                            LM = .8,
-                            mM = .95,
-                            HM = 8,
-                            hM = "[\"')\\]\u300d\u300f\uff09]*",
-                            JM = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${hM}$`),
-                            dM = new RegExp(`[?\uff1f]${hM}$`),
-                            yM = new RegExp(`[!\uff01]${hM}$`),
-                            lM = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
-                            EM = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
-                            UM = new RegExp(`[${EM}]`),
-                            GM = new RegExp(`[${EM}]|[^${EM}]+`, "g"),
-                            CM = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
+                          var JV = xV(5342),
+                            YV = xV(364);
+                          const UV = 120,
+                            yV = 260,
+                            pV = 1.15,
+                            QV = 1.2,
+                            nV = 2,
+                            wV = 1.08,
+                            ZV = .8,
+                            vV = .95,
+                            rV = 8,
+                            kV = "[\"')\\]\u300d\u300f\uff09]*",
+                            bV = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${kV}$`),
+                            EV = new RegExp(`[?\uff1f]${kV}$`),
+                            BV = new RegExp(`[!\uff01]${kV}$`),
+                            jV = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
+                            qV = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
+                            tV = new RegExp(`[${qV}]`),
+                            FV = new RegExp(`[${qV}]|[^${qV}]+`, "g"),
+                            TV = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
 
-                          function eM(MM) {
-                            let rM = 2166136261;
-                            for (let iM = 0; iM < MM.length; iM++) rM ^= MM.charCodeAt(iM), rM = Math.imul(rM, 16777619);
-                            return (rM >>> 0) / 4294967295 * 2 - 1
+                          function PV(VV) {
+                            let eV = 2166136261;
+                            for (let xV = 0; xV < VV.length; xV++) eV ^= VV.charCodeAt(xV), eV = Math.imul(eV, 16777619);
+                            return (eV >>> 0) / 4294967295 * 2 - 1
                           }
 
-                          function bM(MM) {
-                            var rM;
-                            if (UM.test(MM)) return 1;
-                            const iM = MM.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
-                              OM = iM.replace(/[^0-9]/g, "");
-                            if (OM.length > 0 && !/\p{L}/u.test(iM)) return Math.min(OM.length, 4);
-                            const SM = null !== (rM = iM.match(CM)) && void 0 !== rM ? rM : [];
-                            if (0 === SM.length) {
-                              var jM, aM;
-                              const MM = null !== (jM = null === (aM = iM.match(/\p{L}/gu)) || void 0 === aM ? void 0 : aM.length) && void 0 !== jM ? jM : 0;
-                              return 0 === MM ? 0 : Math.min(Math.max(1, Math.round(MM / 2.5)), HM)
+                          function AV(VV) {
+                            var eV;
+                            if (tV.test(VV)) return 1;
+                            const xV = VV.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
+                              JV = xV.replace(/[^0-9]/g, "");
+                            if (JV.length > 0 && !/\p{L}/u.test(xV)) return Math.min(JV.length, 4);
+                            const YV = null !== (eV = xV.match(TV)) && void 0 !== eV ? eV : [];
+                            if (0 === YV.length) {
+                              var UV, yV;
+                              const VV = null !== (UV = null === (yV = xV.match(/\p{L}/gu)) || void 0 === yV ? void 0 : yV.length) && void 0 !== UV ? UV : 0;
+                              return 0 === VV ? 0 : Math.min(Math.max(1, Math.round(VV / 2.5)), rV)
                             }
-                            const PM = iM.replace(/[^\p{L}]/gu, ""),
-                              nM = SM.length > 1 && "e" === SM.at(-1) && PM.endsWith("e") && !PM.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(MM.replace(/[^\p{L}]/gu, ""));
-                            return Math.min(SM.length - (nM ? 1 : 0), HM)
+                            const pV = xV.replace(/[^\p{L}]/gu, ""),
+                              QV = YV.length > 1 && "e" === YV.at(-1) && pV.endsWith("e") && !pV.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(VV.replace(/[^\p{L}]/gu, ""));
+                            return Math.min(YV.length - (QV ? 1 : 0), rV)
                           }
 
-                          function wM(MM) {
-                            return MM.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
+                          function NV(VV) {
+                            return VV.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
                           }
 
-                          function tM(MM) {
-                            const rM = MM.replace(/[^\p{L}]/gu, "");
-                            return rM.length >= 2 && rM === rM.toUpperCase() && rM !== rM.toLowerCase()
+                          function XV(VV) {
+                            const eV = VV.replace(/[^\p{L}]/gu, "");
+                            return eV.length >= 2 && eV === eV.toUpperCase() && eV !== eV.toLowerCase()
                           }
 
-                          function gM(MM, rM) {
-                            var iM;
-                            const HM = rM && (0, OM.p)(rM),
-                              hM = null !== (iM = null === HM || void 0 === HM ? void 0 : HM.syllableMs) && void 0 !== iM ? iM : OM.d,
-                              EM = function(MM) {
-                                const rM = [];
-                                for (const OM of (0, SM.bc)(MM))
-                                  if ("string" === typeof OM)
-                                    for (const MM of OM.split(/(\s+)/)) {
-                                      if ("" === MM) continue;
-                                      if (/^\s+$/.test(MM)) {
-                                        rM.push({
+                          function MV(VV, eV) {
+                            var xV;
+                            const rV = eV && (0, JV.j)(eV),
+                              kV = null !== (xV = null === rV || void 0 === rV ? void 0 : rV.syllableMs) && void 0 !== xV ? xV : JV.e,
+                              qV = function(VV) {
+                                const eV = [];
+                                for (const JV of (0, YV.dc)(VV))
+                                  if ("string" === typeof JV)
+                                    for (const VV of JV.split(/(\s+)/)) {
+                                      if ("" === VV) continue;
+                                      if (/^\s+$/.test(VV)) {
+                                        eV.push({
                                           kind: "space",
-                                          text: MM
+                                          text: VV
                                         });
                                         continue
                                       }
-                                      if (!UM.test(MM)) {
-                                        rM.push({
+                                      if (!tV.test(VV)) {
+                                        eV.push({
                                           kind: "word",
-                                          text: MM,
+                                          text: VV,
                                           delayMs: 0
                                         });
                                         continue
                                       }
-                                      let OM = !0;
-                                      for (const SM of null !== (iM = MM.match(GM)) && void 0 !== iM ? iM : []) {
-                                        var iM;
-                                        const MM = rM.at(-1);
-                                        OM || "word" !== (null === MM || void 0 === MM ? void 0 : MM.kind) || UM.test(SM) || /[\p{L}\p{N}]/u.test(SM) ? (OM || rM.push({
+                                      let JV = !0;
+                                      for (const YV of null !== (xV = VV.match(FV)) && void 0 !== xV ? xV : []) {
+                                        var xV;
+                                        const VV = eV.at(-1);
+                                        JV || "word" !== (null === VV || void 0 === VV ? void 0 : VV.kind) || tV.test(YV) || /[\p{L}\p{N}]/u.test(YV) ? (JV || eV.push({
                                           kind: "space",
                                           text: "\u200b"
-                                        }), rM.push({
+                                        }), eV.push({
                                           kind: "word",
-                                          text: SM,
+                                          text: YV,
                                           delayMs: 0
-                                        }), OM = !1) : MM.text += SM
+                                        }), JV = !1) : VV.text += YV
                                       }
-                                    } else rM.push({
+                                    } else eV.push({
                                       kind: "icon",
-                                      text: OM.icon,
+                                      text: JV.icon,
                                       delayMs: 0
                                     });
-                                return rM
-                              }(MM),
-                              CM = [];
-                            let gM = [];
-                            for (const OM of EM) "space" !== OM.kind && (gM.push(OM), JM.test(OM.text) && (CM.push(gM), gM = []));
-                            CM.push(gM);
-                            const uM = [];
-                            let RM = 0;
-                            for (const OM of CM) {
-                              var pM, WM;
-                              const MM = null !== (pM = null === (WM = OM.at(-1)) || void 0 === WM ? void 0 : WM.text) && void 0 !== pM ? pM : "",
-                                rM = dM.test(MM),
-                                iM = yM.test(MM),
-                                SM = OM.map((MM => "word" === MM.kind ? bM(MM.text) : 1)),
-                                EM = SM.findLastIndex((MM => MM > 0));
-                              for (const [dM, yM] of OM.entries()) {
-                                const MM = "word" === yM.kind,
-                                  OM = SM[dM];
-                                yM.delayMs = RM;
-                                for (let SM = 0; HM && SM < OM; SM++) {
+                                return eV
+                              }(VV),
+                              TV = [];
+                            let MV = [];
+                            for (const JV of qV) "space" !== JV.kind && (MV.push(JV), bV.test(JV.text) && (TV.push(MV), MV = []));
+                            TV.push(MV);
+                            const zV = [];
+                            let GV = 0;
+                            for (const JV of TV) {
+                              var WV, RV;
+                              const VV = null !== (WV = null === (RV = JV.at(-1)) || void 0 === RV ? void 0 : RV.text) && void 0 !== WV ? WV : "",
+                                eV = EV.test(VV),
+                                xV = BV.test(VV),
+                                YV = JV.map((VV => "word" === VV.kind ? AV(VV.text) : 1)),
+                                qV = YV.findLastIndex((VV => VV > 0));
+                              for (const [EV, BV] of JV.entries()) {
+                                const VV = "word" === BV.kind,
+                                  JV = YV[EV];
+                                BV.delayMs = GV;
+                                for (let YV = 0; rV && YV < JV; YV++) {
                                   const {
-                                    intonation: jM
-                                  } = HM;
-                                  let aM = EM > 0 ? -jM.declineSemitones * (dM / EM) : 0;
-                                  aM += eM(`${wM(yM.text)}|${SM}`) * jM.variationSemitones;
-                                  const JM = Math.min(1, jM.variationSemitones);
-                                  let lM = HM.glideSemitones,
-                                    UM = 1;
-                                  iM && (aM += jM.exclaimLiftSemitones, UM *= PM), rM && dM === EM && (aM += jM.questionRiseSemitones * (OM > 1 ? .5 + .5 * SM / (OM - 1) : 1), SM === OM - 1 && (lM = Math.abs(lM) + jM.questionRiseSemitones / 2)), MM && tM(yM.text) && (aM += QM * JM, UM *= nM), OM > 1 && 0 === SM && (aM += LM * JM, UM *= zM), uM.push({
-                                    atMs: RM + SM * hM,
-                                    semitones: aM,
-                                    glideSemitones: lM,
-                                    durationMs: SM < OM - 1 ? Math.min(HM.durationMs, hM * mM) : HM.durationMs,
-                                    level: UM
+                                    intonation: UV
+                                  } = rV;
+                                  let yV = qV > 0 ? -UV.declineSemitones * (EV / qV) : 0;
+                                  yV += PV(`${NV(BV.text)}|${YV}`) * UV.variationSemitones;
+                                  const bV = Math.min(1, UV.variationSemitones);
+                                  let jV = rV.glideSemitones,
+                                    tV = 1;
+                                  xV && (yV += UV.exclaimLiftSemitones, tV *= pV), eV && EV === qV && (yV += UV.questionRiseSemitones * (JV > 1 ? .5 + .5 * YV / (JV - 1) : 1), YV === JV - 1 && (jV = Math.abs(jV) + UV.questionRiseSemitones / 2)), VV && XV(BV.text) && (yV += nV * bV, tV *= QV), JV > 1 && 0 === YV && (yV += ZV * bV, tV *= wV), zV.push({
+                                    atMs: GV + YV * kV,
+                                    semitones: yV,
+                                    glideSemitones: jV,
+                                    durationMs: YV < JV - 1 ? Math.min(rV.durationMs, kV * vV) : rV.durationMs,
+                                    level: tV
                                   })
                                 }
-                                RM += OM * hM + (JM.test(yM.text) ? aM : lM.test(yM.text) ? jM : 0)
+                                GV += JV * kV + (bV.test(BV.text) ? yV : jV.test(BV.text) ? UV : 0)
                               }
                             }
                             return {
-                              pieces: EM.map((MM => "space" === MM.kind ? MM : "icon" === MM.kind ? {
+                              pieces: qV.map((VV => "space" === VV.kind ? VV : "icon" === VV.kind ? {
                                 kind: "icon",
-                                icon: MM.text,
-                                delayMs: MM.delayMs
+                                icon: VV.text,
+                                delayMs: VV.delayMs
                               } : {
                                 kind: "word",
-                                text: MM.text,
-                                delayMs: MM.delayMs
+                                text: VV.text,
+                                delayMs: VV.delayMs
                               })),
-                              blips: uM
+                              blips: zV
                             }
                           }
-                          var uM = iM(1188),
-                            RM = iM(1258),
-                            pM = iM(2045);
+                          var zV = xV(1220),
+                            GV = xV(1279),
+                            WV = xV(2059);
 
-                          function WM(MM) {
-                            if ("string" === typeof MM) return MM;
-                            const rM = RM.e.get().getCurrentLanguageCode();
-                            return (0, uM.r)(rM, MM.translationKey, (0, uM.o)(MM.params, pM.c.shown))
+                          function RV(VV) {
+                            if ("string" === typeof VV) return VV;
+                            const eV = GV.c.get().getCurrentLanguageCode();
+                            return (0, zV.r)(eV, VV.translationKey, (0, zV.p)(VV.params, WV.e.shown))
                           }
 
-                          function sM(MM) {
-                            const rM = void 0 === MM.voice ? null : (0, OM.r)(MM.voice),
-                              iM = rM && (0, OM.p)(rM);
+                          function gV(VV) {
+                            const eV = void 0 === VV.voice ? null : (0, JV.n)(VV.voice),
+                              xV = eV && (0, JV.j)(eV);
                             return {
-                              plan: gM(WM(MM.line), iM),
-                              synth: iM
+                              plan: MV(RV(VV.line), xV),
+                              synth: xV
                             }
                           }
 
-                          function DM(MM) {
-                            const rM = [];
-                            let iM = [];
-                            for (const [SM, jM] of MM.entries()) {
-                              var OM;
-                              "space" === jM.kind && (" " !== jM.text || "icon" !== (null === (OM = MM[SM + 1]) || void 0 === OM ? void 0 : OM.kind)) ? (iM.length > 0 && rM.push(iM), rM.push([jM]), iM = []) : iM.push(jM)
+                          function DV(VV) {
+                            const eV = [];
+                            let xV = [];
+                            for (const [YV, UV] of VV.entries()) {
+                              var JV;
+                              "space" === UV.kind && (" " !== UV.text || "icon" !== (null === (JV = VV[YV + 1]) || void 0 === JV ? void 0 : JV.kind)) ? (xV.length > 0 && eV.push(xV), eV.push([UV]), xV = []) : xV.push(UV)
                             }
-                            return iM.length > 0 && rM.push(iM), rM
+                            return xV.length > 0 && eV.push(xV), eV
                           }
-                        }, 5259: (MM, rM, iM) => {
-                          iM.d(rM, {
-                            d: () => zM,
-                            g: () => LM
+                        }, 5351: (VV, eV, xV) => {
+                          xV.d(eV, {
+                            d: () => wV,
+                            g: () => ZV
                           });
-                          var OM = iM(5265),
-                            SM = iM(19);
-                          const jM = .25,
-                            aM = .85,
-                            PM = .02,
-                            nM = .01;
+                          var JV = xV(5353),
+                            YV = xV(27);
+                          const UV = .25,
+                            yV = .85,
+                            pV = .02,
+                            QV = .01;
 
-                          function QM(MM, rM, iM, OM, SM, jM, PM) {
+                          function nV(VV, eV, xV, JV, YV, UV, pV) {
                             const {
-                              waveform: nM,
-                              pitchHz: QM,
-                              attackMs: zM,
-                              releaseMs: LM,
-                              lowpassHz: mM
-                            } = iM, HM = SM + OM.durationMs / 1e3, hM = QM * 2 ** (OM.semitones / 12), JM = MM.createOscillator();
-                            JM.type = nM, JM.frequency.setValueAtTime(hM, SM), JM.frequency.exponentialRampToValueAtTime(hM * 2 ** (OM.glideSemitones / 12), HM);
-                            const dM = SM + Math.min(zM, OM.durationMs) / 1e3,
-                              yM = MM.createGain();
-                            yM.gain.setValueAtTime(0, SM), yM.gain.linearRampToValueAtTime(jM, dM), yM.gain.linearRampToValueAtTime(jM * aM, Math.max(dM, HM - LM / 1e3)), yM.gain.linearRampToValueAtTime(0, HM);
-                            const lM = [JM];
-                            if (null !== mM) {
-                              const rM = MM.createBiquadFilter();
-                              rM.type = "lowpass", rM.frequency.value = mM, lM.push(rM)
+                              waveform: QV,
+                              pitchHz: nV,
+                              attackMs: wV,
+                              releaseMs: ZV,
+                              lowpassHz: vV
+                            } = xV, rV = YV + JV.durationMs / 1e3, kV = nV * 2 ** (JV.semitones / 12), bV = VV.createOscillator();
+                            bV.type = QV, bV.frequency.setValueAtTime(kV, YV), bV.frequency.exponentialRampToValueAtTime(kV * 2 ** (JV.glideSemitones / 12), rV);
+                            const EV = YV + Math.min(wV, JV.durationMs) / 1e3,
+                              BV = VV.createGain();
+                            BV.gain.setValueAtTime(0, YV), BV.gain.linearRampToValueAtTime(UV, EV), BV.gain.linearRampToValueAtTime(UV * yV, Math.max(EV, rV - ZV / 1e3)), BV.gain.linearRampToValueAtTime(0, rV);
+                            const jV = [bV];
+                            if (null !== vV) {
+                              const eV = VV.createBiquadFilter();
+                              eV.type = "lowpass", eV.frequency.value = vV, jV.push(eV)
                             }
-                            lM.push(yM, rM);
-                            for (let aM = 1; aM < lM.length; aM++) lM[aM - 1].connect(lM[aM]);
-                            return JM.onended = () => {
-                              for (const MM of lM.slice(0, -1)) MM.disconnect();
-                              PM()
-                            }, JM.start(SM), JM.stop(HM), JM
+                            jV.push(BV, eV);
+                            for (let yV = 1; yV < jV.length; yV++) jV[yV - 1].connect(jV[yV]);
+                            return bV.onended = () => {
+                              for (const VV of jV.slice(0, -1)) VV.disconnect();
+                              pV()
+                            }, bV.start(YV), bV.stop(rV), bV
                           }
 
-                          function zM(MM, rM, iM, OM, SM, aM) {
-                            if (0 === OM.length) return aM(), () => {};
-                            const zM = jM * iM.volume * SM,
-                              LM = MM.createGain();
-                            LM.connect(rM);
-                            const mM = MM.currentTime + PM,
-                              HM = new Set;
-                            for (const jM of OM) {
-                              const rM = QM(MM, LM, iM, jM, mM + jM.atMs / 1e3, zM * jM.level, (() => {
-                                HM.delete(rM), 0 === HM.size && (LM.disconnect(), aM())
+                          function wV(VV, eV, xV, JV, YV, yV) {
+                            if (0 === JV.length) return yV(), () => {};
+                            const wV = UV * xV.volume * YV,
+                              ZV = VV.createGain();
+                            ZV.connect(eV);
+                            const vV = VV.currentTime + pV,
+                              rV = new Set;
+                            for (const UV of JV) {
+                              const eV = nV(VV, ZV, xV, UV, vV + UV.atMs / 1e3, wV * UV.level, (() => {
+                                rV.delete(eV), 0 === rV.size && (ZV.disconnect(), yV())
                               }));
-                              HM.add(rM)
+                              rV.add(eV)
                             }
                             return () => {
-                              const rM = MM.currentTime;
-                              LM.gain.setTargetAtTime(0, rM, nM);
-                              for (const MM of HM) try {
-                                MM.stop(rM + 5 * nM)
+                              const eV = VV.currentTime;
+                              ZV.gain.setTargetAtTime(0, eV, QV);
+                              for (const VV of rV) try {
+                                VV.stop(eV + 5 * QV)
                               } catch {}
                             }
                           }
 
-                          function LM(MM, rM) {
-                            var iM;
-                            const jM = OM.Howler.ctx,
-                              aM = OM.Howler.masterGain;
-                            if (!jM || !aM || !SM.d.get("soundOnFromAd")) return () => {};
-                            const PM = OM.Howler;
-                            return null === (iM = PM._autoResume) || void 0 === iM || iM.call(PM), zM(jM, aM, MM, rM, SM.d.get("soundVolume"), (() => {
-                              var MM;
-                              null === (MM = PM._autoSuspend) || void 0 === MM || MM.call(PM)
+                          function ZV(VV, eV) {
+                            var xV;
+                            const UV = JV.Howler.ctx,
+                              yV = JV.Howler.masterGain;
+                            if (!UV || !yV || !YV.b.get("soundOnFromAd")) return () => {};
+                            const pV = JV.Howler;
+                            return null === (xV = pV._autoResume) || void 0 === xV || xV.call(pV), wV(UV, yV, VV, eV, YV.b.get("soundVolume"), (() => {
+                              var VV;
+                              null === (VV = pV._autoSuspend) || void 0 === VV || VV.call(pV)
                             }))
                           }
-                        }, 5230: (MM, rM, iM) => {
-                          iM.d(rM, {
-                            c: () => PM,
-                            d: () => SM,
-                            g: () => nM,
-                            i: () => aM,
-                            m: () => jM
+                        }, 5330: (VV, eV, xV) => {
+                          xV.d(eV, {
+                            c: () => pV,
+                            e: () => YV,
+                            g: () => QV,
+                            k: () => yV,
+                            o: () => UV
                           });
-                          var OM = iM(5221);
-                          const SM = {
+                          var JV = xV(5323);
+                          const YV = {
                               name: "ChatGPT",
                               url: "https://chatgpt.com/?hints=search&q="
                             },
-                            jM = {
+                            UV = {
                               name: "Claude",
                               url: "https://claude.ai/new?q="
                             },
-                            aM = `${OM.k} lists every page of the Bloxd Code API docs.`;
+                            yV = `${JV.l} lists every page of the Bloxd Code API docs.`;
 
-                          function PM(MM, rM) {
-                            return `${MM.url}${encodeURIComponent(rM.toWellFormed())}`
+                          function pV(VV, eV) {
+                            return `${VV.url}${encodeURIComponent(eV.toWellFormed())}`
                           }
 
-                          function nM(MM) {
-                            const rM = PM(SM, MM);
-                            return rM.length <= 3e4 ? {
-                              url: rM,
+                          function QV(VV) {
+                            const eV = pV(YV, VV);
+                            return eV.length <= 3e4 ? {
+                              url: eV,
                               sendsPrompt: !0
                             } : {
-                              url: new URL(SM.url).origin,
+                              url: new URL(YV.url).origin,
                               sendsPrompt: !1
                             }
                           }
-                        }, 5265: (MM, rM, iM) => {
-                          iM.r(rM), iM.d(rM, {
-                            Howl: () => SM.Howl,
-                            Howler: () => SM.Howler,
-                            musicOutput: () => dM,
-                            readyAudioContext: () => yM
+                        }, 5353: (VV, eV, xV) => {
+                          xV.r(eV), xV.d(eV, {
+                            Howl: () => YV.Howl,
+                            Howler: () => YV.Howler,
+                            musicOutput: () => EV,
+                            readyAudioContext: () => BV
                           });
-                          var OM, SM = iM(5269),
-                            jM = iM(3839),
-                            aM = iM(5026);
-                          const PM = SM.Howler;
+                          var JV, YV = xV(5357),
+                            UV = xV(3886),
+                            yV = xV(5137);
+                          const pV = YV.Howler;
 
-                          function nM() {
-                            var MM, rM;
-                            if (PM.ctx || !PM.usingWebAudio || "undefined" === typeof AudioContext || !(0, aM.k)()) return;
-                            const iM = navigator.audioSession;
-                            let OM;
-                            "auto" === (null === iM || void 0 === iM ? void 0 : iM.type) && (iM.type = "ambient");
+                          function QV() {
+                            var VV, eV;
+                            if (pV.ctx || !pV.usingWebAudio || "undefined" === typeof AudioContext || !(0, yV.i)()) return;
+                            const xV = navigator.audioSession;
+                            let JV;
+                            "auto" === (null === xV || void 0 === xV ? void 0 : xV.type) && (xV.type = "ambient");
                             try {
-                              OM = new AudioContext({
+                              JV = new AudioContext({
                                 sampleRate: 44100
                               })
                             } catch {
                               return
                             }
-                            const SM = OM.createGain();
-                            SM.gain.setValueAtTime(PM._muted ? 0 : null !== (MM = PM._volume) && void 0 !== MM ? MM : 1, OM.currentTime), SM.connect(OM.destination), PM.ctx = OM, PM.masterGain = SM, null === (rM = PM._setup) || void 0 === rM || rM.call(PM)
+                            const YV = JV.createGain();
+                            YV.gain.setValueAtTime(pV._muted ? 0 : null !== (VV = pV._volume) && void 0 !== VV ? VV : 1, JV.currentTime), YV.connect(JV.destination), pV.ctx = JV, pV.masterGain = YV, null === (eV = pV._setup) || void 0 === eV || eV.call(pV)
                           }
-                          PM._mobileUnloaded = !0;
-                          const QM = PM.volume.bind(SM.Howler);
-                          PM.volume = function() {
-                            return nM(), QM(...arguments)
+                          pV._mobileUnloaded = !0;
+                          const nV = pV.volume.bind(YV.Howler);
+                          pV.volume = function() {
+                            return QV(), nV(...arguments)
                           };
-                          const zM = PM.mute.bind(SM.Howler);
-                          PM.mute = MM => (nM(), zM(MM));
-                          const LM = SM.Howl.prototype,
-                            mM = LM.init;
+                          const wV = pV.mute.bind(YV.Howler);
+                          pV.mute = VV => (QV(), wV(VV));
+                          const ZV = YV.Howl.prototype,
+                            vV = ZV.init;
 
-                          function HM() {
-                            for (; PM._html5AudioPool.length < PM.html5PoolSize;) {
-                              const MM = new Audio;
-                              MM._unlocked = !0, PM._releaseHtml5Audio(MM)
+                          function rV() {
+                            for (; pV._html5AudioPool.length < pV.html5PoolSize;) {
+                              const VV = new Audio;
+                              VV._unlocked = !0, pV._releaseHtml5Audio(VV)
                             }
-                            for (const rM of PM._howls)
-                              if (!rM._webAudio)
-                                for (const iM of rM._getSoundIds()) {
-                                  var MM;
-                                  const OM = null === (MM = rM._soundById(iM)) || void 0 === MM ? void 0 : MM._node;
-                                  OM && !OM._unlocked && (OM._unlocked = !0, OM.load())
+                            for (const eV of pV._howls)
+                              if (!eV._webAudio)
+                                for (const xV of eV._getSoundIds()) {
+                                  var VV;
+                                  const JV = null === (VV = eV._soundById(xV)) || void 0 === VV ? void 0 : VV._node;
+                                  JV && !JV._unlocked && (JV._unlocked = !0, JV.load())
                                 }
                           }
-                          LM.init = function(MM) {
-                            return nM(), mM.call(this, MM)
-                          }, (0, aM.k)() && (PM._unlockAudio = () => {
-                            const MM = PM.ctx;
-                            if (PM._audioUnlocked || !MM) return;
-                            PM.autoUnlock = !1;
-                            const rM = MM.createBuffer(1, 1, 22050);
-                            PM._scratchBuffer = rM;
-                            const iM = new AbortController;
-                            let OM = "afterPaint";
-                            const SM = () => {
-                                var OM;
-                                if (PM._audioUnlocked) return;
-                                null === (OM = PM._autoResume) || void 0 === OM || OM.call(PM);
-                                const SM = MM.createBufferSource();
-                                SM.buffer = rM, SM.connect(MM.destination), SM.start(0), MM.resume().catch((() => {})), SM.onended = () => {
-                                  SM.disconnect(0), PM._audioUnlocked = !0, iM.abort();
-                                  for (const MM of PM._howls) MM._emit("unlock")
+                          ZV.init = function(VV) {
+                            return QV(), vV.call(this, VV)
+                          }, (0, yV.i)() && (pV._unlockAudio = () => {
+                            const VV = pV.ctx;
+                            if (pV._audioUnlocked || !VV) return;
+                            pV.autoUnlock = !1;
+                            const eV = VV.createBuffer(1, 1, 22050);
+                            pV._scratchBuffer = eV;
+                            const xV = new AbortController;
+                            let JV = "afterPaint";
+                            const YV = () => {
+                                var JV;
+                                if (pV._audioUnlocked) return;
+                                null === (JV = pV._autoResume) || void 0 === JV || JV.call(pV);
+                                const YV = VV.createBufferSource();
+                                YV.buffer = eV, YV.connect(VV.destination), YV.start(0), VV.resume().catch((() => {})), YV.onended = () => {
+                                  YV.disconnect(0), pV._audioUnlocked = !0, xV.abort();
+                                  for (const VV of pV._howls) VV._emit("unlock")
                                 }
                               },
-                              nM = () => {
-                                HM(), SM()
+                              QV = () => {
+                                rV(), YV()
                               },
-                              QM = rM => {
-                                if (HM(), "inTap" === OM) {
-                                  if ("running" === MM.state) return;
-                                  console.warn("A click's resume after its frame left Howler's context suspended, so this click resumes it"), SM()
-                                } else "afterPaint" === OM && (OM = "queued", (0, jM.d)(rM.timeStamp, (() => {
-                                  OM = "inTap", SM()
+                              nV = eV => {
+                                if (rV(), "inTap" === JV) {
+                                  if ("running" === VV.state) return;
+                                  console.warn("A click's resume after its frame left Howler's context suspended, so this click resumes it"), YV()
+                                } else "afterPaint" === JV && (JV = "queued", (0, UV.c)(eV.timeStamp, (() => {
+                                  JV = "inTap", YV()
                                 })))
                               };
-                            for (const jM of ["touchstart", "touchend"]) document.addEventListener(jM, nM, {
+                            for (const UV of ["touchstart", "touchend"]) document.addEventListener(UV, QV, {
                               capture: !0,
-                              signal: iM.signal
+                              signal: xV.signal
                             });
-                            for (const jM of aM.e) document.addEventListener(jM, QM, {
+                            for (const UV of yV.c) document.addEventListener(UV, nV, {
                               capture: !0,
-                              signal: iM.signal
+                              signal: xV.signal
                             })
                           });
-                          let hM = 0;
-                          const JM = null === (OM = PM._autoSuspend) || void 0 === OM ? void 0 : OM.bind(SM.Howler);
+                          let kV = 0;
+                          const bV = null === (JV = pV._autoSuspend) || void 0 === JV ? void 0 : JV.bind(YV.Howler);
 
-                          function dM() {
-                            yM();
+                          function EV() {
+                            BV();
                             const {
-                              ctx: MM,
-                              masterGain: rM
-                            } = PM;
-                            return MM && rM ? {
-                              ctx: MM,
-                              destination: rM,
-                              holdAwake: MM => {
-                                var rM, iM;
-                                (hM += MM ? 1 : -1, MM) ? null === (rM = PM._autoResume) || void 0 === rM || rM.call(PM): null === (iM = PM._autoSuspend) || void 0 === iM || iM.call(PM)
+                              ctx: VV,
+                              masterGain: eV
+                            } = pV;
+                            return VV && eV ? {
+                              ctx: VV,
+                              destination: eV,
+                              holdAwake: VV => {
+                                var eV, xV;
+                                (kV += VV ? 1 : -1, VV) ? null === (eV = pV._autoResume) || void 0 === eV || eV.call(pV): null === (xV = pV._autoSuspend) || void 0 === xV || xV.call(pV)
                               },
                               wake: () => {
-                                var rM;
-                                "running" !== MM.state && (null === (rM = PM._autoResume) || void 0 === rM || rM.call(PM), MM.resume().catch((() => {})))
+                                var eV;
+                                "running" !== VV.state && (null === (eV = pV._autoResume) || void 0 === eV || eV.call(pV), VV.resume().catch((() => {})))
                               }
                             } : null
                           }
 
-                          function yM() {
-                            var MM;
-                            (PM.volume(), PM.ctx && PM.autoUnlock) && (null === (MM = PM._unlockAudio) || void 0 === MM || MM.call(PM))
+                          function BV() {
+                            var VV;
+                            (pV.volume(), pV.ctx && pV.autoUnlock) && (null === (VV = pV._unlockAudio) || void 0 === VV || VV.call(pV))
                           }
-                          JM && (PM._autoSuspend = () => hM > 0 ? SM.Howler : JM())
-                        }, 5273: (MM, rM, iM) => {
-                          function OM(MM) {
+                          bV && (pV._autoSuspend = () => kV > 0 ? YV.Howler : bV())
+                        }, 5364: (VV, eV, xV) => {
+                          function JV(VV) {
                             return {
-                              notAfter: MM
+                              notAfter: VV
                             }
                           }
-                          iM.d(rM, {
-                            c: () => nM,
-                            e: () => QM,
-                            f: () => PM,
-                            g: () => OM,
-                            h: () => SM,
-                            j: () => jM,
-                            n: () => aM,
-                            p: () => zM,
-                            r: () => LM
+                          xV.d(eV, {
+                            B: () => ZV,
+                            e: () => QV,
+                            h: () => nV,
+                            k: () => pV,
+                            l: () => JV,
+                            o: () => YV,
+                            s: () => UV,
+                            w: () => yV,
+                            z: () => wV
                           });
-                          const SM = OM("\\w$."),
-                            jM = OM("\\w.,");
+                          const YV = JV("\\w$."),
+                            UV = JV("\\w.,");
 
-                          function aM(MM) {
-                            return rM => nM(rM, MM)
+                          function yV(VV) {
+                            return eV => QV(eV, VV)
                           }
 
-                          function PM(MM) {
-                            return rM => !MM.test(rM.input.slice(0, rM.index))
+                          function pV(VV) {
+                            return eV => !VV.test(eV.input.slice(0, eV.index))
                           }
 
-                          function nM(MM, rM) {
-                            return MM.index > 0 && new RegExp(`[${rM}]`).test(MM.input[MM.index - 1])
+                          function QV(VV, eV) {
+                            return VV.index > 0 && new RegExp(`[${eV}]`).test(VV.input[VV.index - 1])
                           }
 
-                          function QM(MM, rM, iM) {
-                            return function(MM) {
-                              return void 0 !== MM && "function" !== typeof MM
-                            }(iM) ? function(MM, rM, iM) {
-                              const OM = rM.flags.replace(/[gy]/g, ""),
-                                SM = new RegExp(`[^${iM}](?:${rM.source})`, `${OM}g`),
-                                jM = [],
-                                aM = iM => {
-                                  const OM = iM.index + iM[0].length;
-                                  return ("" === iM[0] ? mM(MM, rM, OM) : OM) - 1
+                          function nV(VV, eV, xV) {
+                            return function(VV) {
+                              return void 0 !== VV && "function" !== typeof VV
+                            }(xV) ? function(VV, eV, xV) {
+                              const JV = eV.flags.replace(/[gy]/g, ""),
+                                YV = new RegExp(`[^${xV}](?:${eV.source})`, `${JV}g`),
+                                UV = [],
+                                yV = xV => {
+                                  const JV = xV.index + xV[0].length;
+                                  return ("" === xV[0] ? vV(VV, eV, JV) : JV) - 1
                                 },
-                                PM = new RegExp(`(?:${rM.source})`, `${OM}y`).exec(MM);
-                              if (PM) {
-                                if (jM.push(PM), !rM.global) return jM;
-                                SM.lastIndex = aM(PM)
+                                pV = new RegExp(`(?:${eV.source})`, `${JV}y`).exec(VV);
+                              if (pV) {
+                                if (UV.push(pV), !eV.global) return UV;
+                                YV.lastIndex = yV(pV)
                               }
-                              for (let nM = SM.exec(MM); nM; nM = SM.exec(MM)) {
-                                const iM = mM(MM, rM, nM.index) - nM.index;
-                                if (nM[0] = nM[0].slice(iM), nM.index += iM, jM.push(nM), !rM.global) break;
-                                SM.lastIndex = aM(nM)
+                              for (let QV = YV.exec(VV); QV; QV = YV.exec(VV)) {
+                                const xV = vV(VV, eV, QV.index) - QV.index;
+                                if (QV[0] = QV[0].slice(xV), QV.index += xV, UV.push(QV), !eV.global) break;
+                                YV.lastIndex = yV(QV)
                               }
-                              return jM
-                            }(MM, rM, iM.notAfter) : function(MM, rM, iM) {
-                              const OM = new RegExp(rM.source, `${rM.flags.replace(/[gy]/g,"")}g`),
-                                SM = [];
-                              for (let jM = OM.exec(MM); jM; jM = OM.exec(MM))
-                                if (!iM || iM(jM)) {
-                                  if (SM.push(jM), !rM.global) break;
-                                  "" === jM[0] && (OM.lastIndex = mM(MM, rM, OM.lastIndex))
-                                } else OM.lastIndex = mM(MM, rM, jM.index);
-                              return SM
-                            }(MM, rM, iM)
+                              return UV
+                            }(VV, eV, xV.notAfter) : function(VV, eV, xV) {
+                              const JV = new RegExp(eV.source, `${eV.flags.replace(/[gy]/g,"")}g`),
+                                YV = [];
+                              for (let UV = JV.exec(VV); UV; UV = JV.exec(VV))
+                                if (!xV || xV(UV)) {
+                                  if (YV.push(UV), !eV.global) break;
+                                  "" === UV[0] && (JV.lastIndex = vV(VV, eV, JV.lastIndex))
+                                } else JV.lastIndex = vV(VV, eV, UV.index);
+                              return YV
+                            }(VV, eV, xV)
                           }
 
-                          function zM(MM, rM, iM, OM) {
-                            let SM = "",
-                              jM = 0;
-                            for (const aM of QM(MM, rM, iM)) SM += MM.slice(jM, aM.index) + OM(aM), jM = aM.index + aM[0].length;
-                            return SM + MM.slice(jM)
+                          function wV(VV, eV, xV, JV) {
+                            let YV = "",
+                              UV = 0;
+                            for (const yV of nV(VV, eV, xV)) YV += VV.slice(UV, yV.index) + JV(yV), UV = yV.index + yV[0].length;
+                            return YV + VV.slice(UV)
                           }
 
-                          function LM(MM, rM, iM) {
-                            const OM = [];
-                            let SM = 0;
-                            for (const jM of QM(MM, rM, iM)) OM.push(MM.slice(SM, jM.index)), SM = jM.index + jM[0].length;
-                            return [...OM, MM.slice(SM)]
+                          function ZV(VV, eV, xV) {
+                            const JV = [];
+                            let YV = 0;
+                            for (const UV of nV(VV, eV, xV)) JV.push(VV.slice(YV, UV.index)), YV = UV.index + UV[0].length;
+                            return [...JV, VV.slice(YV)]
                           }
 
-                          function mM(MM, rM, iM) {
-                            var OM;
-                            return iM + (rM.unicode && (null !== (OM = MM.codePointAt(iM)) && void 0 !== OM ? OM : 0) > 65535 ? 2 : 1)
+                          function vV(VV, eV, xV) {
+                            var JV;
+                            return xV + (eV.unicode && (null !== (JV = VV.codePointAt(xV)) && void 0 !== JV ? JV : 0) > 65535 ? 2 : 1)
                           }
-                        }, 5221: (MM, rM, iM) => {
-                          iM.d(rM, {
-                            e: () => SM,
-                            f: () => nM,
-                            h: () => jM,
-                            k: () => aM,
-                            m: () => PM,
-                            o: () => dM,
-                            q: () => zM,
-                            u: () => LM,
-                            w: () => JM,
-                            y: () => HM
+                        }, 5323: (VV, eV, xV) => {
+                          xV.d(eV, {
+                            C: () => rV,
+                            b: () => YV,
+                            e: () => QV,
+                            i: () => UV,
+                            l: () => yV,
+                            p: () => pV,
+                            t: () => EV,
+                            u: () => wV,
+                            w: () => ZV,
+                            z: () => bV
                           });
-                          var OM = iM(1663);
-                          const SM = 24e3,
-                            jM = "/docs/llms.txt",
-                            aM = `${OM.d}${jM}`,
-                            PM = "/llms.txt",
-                            nM = "/docs/llms-full.txt";
+                          var JV = xV(1682);
+                          const YV = 24e3,
+                            UV = "/docs/llms.txt",
+                            yV = `${JV.d}${UV}`,
+                            pV = "/llms.txt",
+                            QV = "/docs/llms-full.txt";
 
-                          function QM(MM) {
-                            return MM || "index"
+                          function nV(VV) {
+                            return VV || "index"
                           }
 
-                          function zM(MM) {
-                            return `/docs/${QM(MM)}.md`
+                          function wV(VV) {
+                            return `/docs/${nV(VV)}.md`
                           }
 
-                          function LM(MM, rM) {
-                            return `/docs/${QM(MM)}/${rM+1}.md`
+                          function ZV(VV, eV) {
+                            return `/docs/${nV(VV)}/${eV+1}.md`
                           }
-                          const mM = /^\/docs\/([a-z0-9-]+)(?:\/(\d+))?\.md$/;
+                          const vV = /^\/docs\/([a-z0-9-]+)(?:\/(\d+))?\.md$/;
 
-                          function HM(MM) {
-                            const rM = mM.exec(MM);
-                            return null === rM ? null : {
-                              name: rM[1],
-                              part: void 0 === rM[2] ? null : Number(rM[2])
+                          function rV(VV) {
+                            const eV = vV.exec(VV);
+                            return null === eV ? null : {
+                              name: eV[1],
+                              part: void 0 === eV[2] ? null : Number(eV[2])
                             }
                           }
-                          const hM = /^(?:\/studio)?\/docs(?:\/([a-z0-9-]+)(?:\/(\d+))?)?\/?$/;
+                          const kV = /^(?:\/studio)?\/docs(?:\/([a-z0-9-]+)(?:\/(\d+))?)?\/?$/;
 
-                          function JM(MM) {
-                            const rM = hM.exec(MM);
-                            if (null === rM) return null;
-                            const [, iM = "", OM] = rM;
-                            return void 0 === OM ? zM(iM) : LM(iM, Number(OM) - 1)
+                          function bV(VV) {
+                            const eV = kV.exec(VV);
+                            if (null === eV) return null;
+                            const [, xV = "", JV] = eV;
+                            return void 0 === JV ? wV(xV) : ZV(xV, Number(JV) - 1)
                           }
 
-                          function dM(MM) {
-                            return `/docsHtml/${QM(MM)}.html`
+                          function EV(VV) {
+                            return `/docsHtml/${nV(VV)}.html`
                           }
-                        }, 5251: (MM, rM, iM) => {
-                          iM.d(rM, {
-                            d: () => SM,
-                            h: () => OM,
-                            l: () => jM,
-                            p: () => nM,
-                            r: () => aM
+                        }, 5342: (VV, eV, xV) => {
+                          xV.d(eV, {
+                            e: () => YV,
+                            g: () => JV,
+                            i: () => UV,
+                            j: () => QV,
+                            n: () => yV
                           });
-                          const OM = ["sine", "triangle", "square", "sawtooth"],
-                            SM = 55,
-                            jM = {
+                          const JV = ["sine", "triangle", "square", "sawtooth"],
+                            YV = 55,
+                            UV = {
                               soft: {
                                 waveform: "sine",
                                 pitchHz: 300,
@@ -7288,38 +7288,38 @@ export const modules = {
                               }
                             };
 
-                          function aM(MM) {
-                            return "string" !== typeof MM ? MM : Object.hasOwn(jM, MM) ? jM[MM] : null
+                          function yV(VV) {
+                            return "string" !== typeof VV ? VV : Object.hasOwn(UV, VV) ? UV[VV] : null
                           }
 
-                          function PM(MM, rM, iM) {
-                            return Math.min(iM, Math.max(rM, MM))
+                          function pV(VV, eV, xV) {
+                            return Math.min(xV, Math.max(eV, VV))
                           }
 
-                          function nM(MM) {
-                            const rM = PM(MM.durationMs, 10, 500),
-                              iM = PM(MM.attackMs, 0, rM),
+                          function QV(VV) {
+                            const eV = pV(VV.durationMs, 10, 500),
+                              xV = pV(VV.attackMs, 0, eV),
                               {
-                                intonation: SM
-                              } = MM;
+                                intonation: YV
+                              } = VV;
                             return {
-                              waveform: OM.includes(MM.waveform) ? MM.waveform : "sine",
-                              pitchHz: PM(MM.pitchHz, 20, 4e3),
-                              glideSemitones: PM(MM.glideSemitones, -24, 24),
-                              durationMs: rM,
-                              attackMs: iM,
-                              releaseMs: PM(MM.releaseMs, 0, rM - iM),
-                              lowpassHz: null === MM.lowpassHz ? null : PM(MM.lowpassHz, 20, 2e4),
-                              volume: PM(MM.volume, 0, 2),
+                              waveform: JV.includes(VV.waveform) ? VV.waveform : "sine",
+                              pitchHz: pV(VV.pitchHz, 20, 4e3),
+                              glideSemitones: pV(VV.glideSemitones, -24, 24),
+                              durationMs: eV,
+                              attackMs: xV,
+                              releaseMs: pV(VV.releaseMs, 0, eV - xV),
+                              lowpassHz: null === VV.lowpassHz ? null : pV(VV.lowpassHz, 20, 2e4),
+                              volume: pV(VV.volume, 0, 2),
                               intonation: {
-                                variationSemitones: PM(SM.variationSemitones, 0, 6),
-                                declineSemitones: PM(SM.declineSemitones, 0, 12),
-                                questionRiseSemitones: PM(SM.questionRiseSemitones, 0, 12),
-                                exclaimLiftSemitones: PM(SM.exclaimLiftSemitones, 0, 12)
+                                variationSemitones: pV(YV.variationSemitones, 0, 6),
+                                declineSemitones: pV(YV.declineSemitones, 0, 12),
+                                questionRiseSemitones: pV(YV.questionRiseSemitones, 0, 12),
+                                exclaimLiftSemitones: pV(YV.exclaimLiftSemitones, 0, 12)
                               },
-                              syllableMs: PM(MM.syllableMs, 25, 200)
+                              syllableMs: pV(VV.syllableMs, 25, 200)
                             }
                           }
                         }
                       }; Object.freeze(modules);
-                      for (const MM in modules) Object.freeze(modules[MM]);
+                      for (const VV in modules) Object.freeze(modules[VV]);

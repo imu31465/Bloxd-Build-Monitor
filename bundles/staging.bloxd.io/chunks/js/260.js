@@ -1,584 +1,584 @@
 export const id = 260;
 export const ids = [260];
 export const modules = {
-  42174: (MM, rM, iM) => {
-    iM.d(rM, {
-      noaDevTools: () => LM
+  42389: (VV, eV, xV) => {
+    xV.d(eV, {
+      noaDevTools: () => ZV
     });
-    var OM = iM(38423),
-      SM = iM(38404),
-      jM = iM(3063),
-      aM = iM(1830),
-      PM = iM(42067);
+    var JV = xV(38630),
+      YV = xV(38604),
+      UV = xV(3093),
+      yV = xV(1838),
+      pV = xV(42290);
 
-    function nM(MM) {
+    function QV(VV) {
       const {
-        CL: rM
-      } = MM, iM = rM.engine, OM = {
-        width: iM.getRenderWidth(),
-        height: iM.getRenderHeight()
+        gZ: eV
+      } = VV, xV = eV.engine, JV = {
+        width: xV.getRenderWidth(),
+        height: xV.getRenderHeight()
       };
       return {
-        canvas: iM.getRenderingCanvas(),
-        maxTextureSize: iM.getCaps().maxTextureSize,
-        lL: () => !MM.eL,
-        resize: (MM, rM) => {
-          iM.setSize(MM, rM)
+        canvas: xV.getRenderingCanvas(),
+        maxTextureSize: xV.getCaps().maxTextureSize,
+        zZ: () => !VV.DZ,
+        resize: (VV, eV) => {
+          xV.setSize(VV, eV)
         },
         restoreSize: () => {
-          iM.setSize(OM.width, OM.height), rM.resize()
+          xV.setSize(JV.width, JV.height), eV.resize()
         },
-        onFrameDrawn: iM => {
-          const OM = () => {
-            rM.IU && iM()
+        onFrameDrawn: xV => {
+          const JV = () => {
+            eV.qT && xV()
           };
-          return MM.on("afterRender", OM), () => {
-            MM.off("afterRender", OM)
+          return VV.on("afterRender", JV), () => {
+            VV.off("afterRender", JV)
           }
         }
       }
     }
-    var QM = iM(34920);
+    var nV = xV(35189);
 
-    function zM(MM, rM) {
+    function wV(VV, eV) {
       let {
-        width: QM,
-        height: zM,
-        colouring: LM
-      } = rM;
-      const mM = "normals" === LM,
-        HM = "depth" === LM;
-      return new Promise((rM => {
+        width: nV,
+        height: wV,
+        colouring: ZV
+      } = eV;
+      const vV = "normals" === ZV,
+        rV = "depth" === ZV;
+      return new Promise((eV => {
         try {
-          const hM = (0, jM.f)();
-          if (hM.CL.MJ) return "screenshot" !== MM || null !== LM ? (console.warn("GLB downloads and coloured screenshots need WebGPU off in Graphics settings"), void rM()) : void(0, PM.h)(nM(hM), QM, zM).finally(rM);
-          const JM = hM.CL.engine,
-            dM = hM.CL.Hk(),
-            yM = QM,
-            lM = zM;
-          Promise.all([Promise.all([iM.e(279), iM.e(280), iM.e(256)]).then((() => iM(63884))), Promise.all([iM.e(255), iM.e(254), iM.e(279), iM.e(280), iM.e(277), iM.e(281), iM.e(284), iM.e(620), iM.e(261)]).then((() => iM(63893))), Promise.all([iM.e(255), iM.e(254), iM.e(279), iM.e(280), iM.e(277), iM.e(287), iM.e(281), iM.e(289), iM.e(263)]).then((() => iM(63896))), iM.e(661).then((() => iM(63903))), Promise.all([iM.e(254), iM.e(250)]).then((() => iM(38034))), iM.e(278).then((() => iM(63910))), iM.e(259).then((() => iM(63918)))]).then((jM => {
+          const kV = (0, UV.d)();
+          if (kV.gZ.jb) return "screenshot" !== VV || null !== ZV ? (console.warn("GLB downloads and coloured screenshots need WebGPU off in Graphics settings"), void eV()) : void(0, pV.e)(QV(kV), nV, wV).finally(eV);
+          const bV = kV.gZ.engine,
+            EV = kV.gZ.dD(),
+            BV = nV,
+            jV = wV;
+          Promise.all([Promise.all([xV.e(279), xV.e(280), xV.e(256)]).then((() => xV(64272))), Promise.all([xV.e(255), xV.e(254), xV.e(279), xV.e(280), xV.e(277), xV.e(281), xV.e(284), xV.e(620), xV.e(261)]).then((() => xV(64275))), Promise.all([xV.e(255), xV.e(254), xV.e(279), xV.e(280), xV.e(277), xV.e(287), xV.e(281), xV.e(289), xV.e(263)]).then((() => xV(64284))), xV.e(661).then((() => xV(64289))), Promise.all([xV.e(254), xV.e(250)]).then((() => xV(38263))), xV.e(278).then((() => xV(64298))), xV.e(259).then((() => xV(64307)))]).then((UV => {
             const {
-              CreateScreenshotUsingRenderTarget: PM
-            } = jM[1], {
-              ShaderMaterial: nM
-            } = jM[2], {
-              ShaderLanguage: QM
-            } = jM[3], {
-              sh: zM
-            } = jM[4], {
-              registerDevtoolsShader: LM
-            } = jM[6], hM = QM.GLSL, EM = new Map, UM = dM.meshes.filter((MM => MM.material));
-            let GM = !1,
-              CM = null;
+              CreateScreenshotUsingRenderTarget: pV
+            } = UV[1], {
+              ShaderMaterial: QV
+            } = UV[2], {
+              ShaderLanguage: nV
+            } = UV[3], {
+              Ik: wV
+            } = UV[4], {
+              registerDevtoolsShader: ZV
+            } = UV[6], kV = nV.GLSL, qV = new Map, tV = EV.meshes.filter((VV => VV.material));
+            let FV = !1,
+              TV = null;
 
-            function eM() {
-              var MM;
-              GM && (GM = !1, (0, OM.f)(dM.meshes, !1)), null === (MM = CM) || void 0 === MM || MM(), CM = null, UM.forEach((MM => {
-                const rM = EM.get(MM);
-                rM && (MM.material = rM)
+            function PV() {
+              var VV;
+              FV && (FV = !1, (0, JV.i)(EV.meshes, !1)), null === (VV = TV) || void 0 === VV || VV(), TV = null, tV.forEach((VV => {
+                const eV = qV.get(VV);
+                eV && (VV.material = eV)
               }))
             }
-            if (mM) {
-              const MM = [],
-                rM = [];
-              UM.forEach((iM => {
-                const OM = iM.name.toLowerCase(),
-                  SM = iM.aY().boundingBox.center,
-                  jM = dM.activeCamera.position.subtract(SM).length();
-                OM.includes("sky") || OM.includes("background") || OM.includes("environment") || jM > 1e3 ? rM.push(iM) : MM.push(iM)
-              })), LM("devtoolsNormal", hM);
-              const iM = new nM("normalMaterial", dM, "devtoolsNormal", {
+            if (vV) {
+              const VV = [],
+                eV = [];
+              tV.forEach((xV => {
+                const JV = xV.name.toLowerCase(),
+                  YV = xV.qL().boundingBox.center,
+                  UV = EV.activeCamera.position.subtract(YV).length();
+                JV.includes("sky") || JV.includes("background") || JV.includes("environment") || UV > 1e3 ? eV.push(xV) : VV.push(xV)
+              })), ZV("devtoolsNormal", kV);
+              const xV = new QV("normalMaterial", EV, "devtoolsNormal", {
                 attributes: ["position", "normal"],
                 uniforms: ["worldViewProjection", "world"],
-                shaderLanguage: hM
+                shaderLanguage: kV
               });
-              LM("devtoolsWhite", hM);
-              const OM = new nM("whiteMaterial", dM, "devtoolsWhite", {
+              ZV("devtoolsWhite", kV);
+              const JV = new QV("whiteMaterial", EV, "devtoolsWhite", {
                 attributes: ["position"],
                 uniforms: ["worldViewProjection"],
-                shaderLanguage: hM
+                shaderLanguage: kV
               });
-              MM.forEach((MM => {
-                EM.set(MM, MM.material), MM.material = iM
-              })), rM.forEach((MM => {
-                EM.set(MM, MM.material), MM.material = OM
+              VV.forEach((VV => {
+                qV.set(VV, VV.material), VV.material = xV
+              })), eV.forEach((VV => {
+                qV.set(VV, VV.material), VV.material = JV
               }))
-            } else if (HM) {
-              LM("devtoolsDepth", hM);
-              const MM = dM.activeCamera.position;
-              let rM = 0,
-                iM = 1 / 0;
-              UM.forEach((OM => {
-                const SM = OM.name.toLowerCase();
-                if (SM.includes("sky") || SM.includes("background") || SM.includes("environment")) return;
-                const jM = OM.aY().boundingBox.center,
-                  aM = zM.TransformCoordinates(jM, OM.getWorldMatrix()),
-                  PM = MM.subtract(aM).length();
-                PM > 1e3 || (rM = Math.max(rM, PM), iM = Math.min(iM, PM))
+            } else if (rV) {
+              ZV("devtoolsDepth", kV);
+              const VV = EV.activeCamera.position;
+              let eV = 0,
+                xV = 1 / 0;
+              tV.forEach((JV => {
+                const YV = JV.name.toLowerCase();
+                if (YV.includes("sky") || YV.includes("background") || YV.includes("environment")) return;
+                const UV = JV.qL().boundingBox.center,
+                  yV = wV.TransformCoordinates(UV, JV.getWorldMatrix()),
+                  pV = VV.subtract(yV).length();
+                pV > 1e3 || (eV = Math.max(eV, pV), xV = Math.min(xV, pV))
               }));
-              const OM = rM - iM;
-              rM += .1 * OM, iM = Math.max(0, iM - .1 * OM), console.log(`Depth range: min=${iM.toFixed(2)}, max=${rM.toFixed(2)}, range=${OM.toFixed(2)}`), OM < 1 && (rM = iM + 10);
-              const SM = new nM("depthMaterial", dM, "devtoolsDepth", {
+              const JV = eV - xV;
+              eV += .1 * JV, xV = Math.max(0, xV - .1 * JV), console.log(`Depth range: min=${xV.toFixed(2)}, max=${eV.toFixed(2)}, range=${JV.toFixed(2)}`), JV < 1 && (eV = xV + 10);
+              const YV = new QV("depthMaterial", EV, "devtoolsDepth", {
                 attributes: ["position"],
                 uniforms: ["worldViewProjection", "world", "cameraPosition", "maxDepth", "minDepth"],
-                shaderLanguage: hM
+                shaderLanguage: kV
               });
-              SM.setVector3("cameraPosition", MM), SM.setFloat("maxDepth", rM), SM.setFloat("minDepth", iM), UM.forEach((MM => {
-                EM.set(MM, MM.material), MM.material = SM
+              YV.setVector3("cameraPosition", VV), YV.setFloat("maxDepth", eV), YV.setFloat("minDepth", xV), tV.forEach((VV => {
+                qV.set(VV, VV.material), VV.material = YV
               }))
             }
-            if ((0, OM.f)(dM.meshes, !0), GM = !0, "glb" === MM && (CM = (0, SM.b)(dM.meshes)), "screenshot" === MM) {
-              let MM = `bloxd-screenshot-${yM}x${lM}-${Date.now()}.png`;
-              mM ? MM = `bloxd-screenshot-normals-${yM}x${lM}-${Date.now()}.png` : HM && (MM = `bloxd-screenshot-depth-${yM}x${lM}-${Date.now()}.png`), PM(JM, dM.activeCamera, {
-                width: yM,
-                height: lM
-              }, (function(iM) {
-                eM(), fetch(iM).then((function(MM) {
-                  return MM.blob()
-                })).then((function(iM) {
-                  (0, aM.downloadBlob)(iM, MM), rM()
-                })).catch((function(MM) {
-                  console.error("Error processing screenshot:", MM), rM()
+            if ((0, JV.i)(EV.meshes, !0), FV = !0, "glb" === VV && (TV = (0, YV.b)(EV.meshes)), "screenshot" === VV) {
+              let VV = `bloxd-screenshot-${BV}x${jV}-${Date.now()}.png`;
+              vV ? VV = `bloxd-screenshot-normals-${BV}x${jV}-${Date.now()}.png` : rV && (VV = `bloxd-screenshot-depth-${BV}x${jV}-${Date.now()}.png`), pV(bV, EV.activeCamera, {
+                width: BV,
+                height: jV
+              }, (function(xV) {
+                PV(), fetch(xV).then((function(VV) {
+                  return VV.blob()
+                })).then((function(xV) {
+                  (0, yV.downloadBlob)(xV, VV), eV()
+                })).catch((function(VV) {
+                  console.error("Error processing screenshot:", VV), eV()
                 }))
               }), "image/png", void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, (function() {
-                console.error("Screenshot timed out"), eM(), rM()
+                console.error("Screenshot timed out"), PV(), eV()
               }))
             } else {
-              let MM = "YJ";
-              mM ? MM = "scene-normals" : HM && (MM = "scene-depth"), mM || HM ? setTimeout((() => {
+              let VV = "yE";
+              vV ? VV = "scene-normals" : rV && (VV = "scene-depth"), vV || rV ? setTimeout((() => {
                 (async function() {
                   const {
-                    StandardMaterial: MM
-                  } = await Promise.all([iM.e(255), iM.e(254), iM.e(279), iM.e(280), iM.e(277), iM.e(287), iM.e(286), iM.e(262)]).then((() => iM(41374))), {
-                    Color3: rM
-                  } = await Promise.all([iM.e(255), iM.e(258)]).then((() => iM(38167))), OM = [], SM = [];
-                  if (UM.forEach((MM => {
-                      const rM = MM.name.toLowerCase(),
-                        iM = MM.aY().boundingBox.center,
-                        jM = dM.activeCamera.position.subtract(iM).length();
-                      rM.includes("sky") || rM.includes("background") || rM.includes("environment") || jM > 1e3 ? SM.push(MM) : OM.push(MM)
-                    })), mM) OM.forEach(((iM, OM) => {
-                    const SM = iM.getVerticesData("normal");
-                    if (SM) {
-                      const jM = [];
-                      for (let MM = 0; MM < SM.length; MM += 3) {
-                        const rM = Math.abs(SM[MM]),
-                          iM = Math.abs(SM[MM + 1]),
-                          OM = Math.abs(SM[MM + 2]);
-                        jM.push(rM, iM, OM, 1)
+                    StandardMaterial: VV
+                  } = await Promise.all([xV.e(255), xV.e(254), xV.e(279), xV.e(280), xV.e(277), xV.e(287), xV.e(286), xV.e(262)]).then((() => xV(41524))), {
+                    Color3: eV
+                  } = await Promise.all([xV.e(255), xV.e(258)]).then((() => xV(38387))), JV = [], YV = [];
+                  if (tV.forEach((VV => {
+                      const eV = VV.name.toLowerCase(),
+                        xV = VV.qL().boundingBox.center,
+                        UV = EV.activeCamera.position.subtract(xV).length();
+                      eV.includes("sky") || eV.includes("background") || eV.includes("environment") || UV > 1e3 ? YV.push(VV) : JV.push(VV)
+                    })), vV) JV.forEach(((xV, JV) => {
+                    const YV = xV.getVerticesData("normal");
+                    if (YV) {
+                      const UV = [];
+                      for (let VV = 0; VV < YV.length; VV += 3) {
+                        const eV = Math.abs(YV[VV]),
+                          xV = Math.abs(YV[VV + 1]),
+                          JV = Math.abs(YV[VV + 2]);
+                        UV.push(eV, xV, JV, 1)
                       }
-                      iM.setVerticesData("color", jM);
-                      const aM = new MM(`vertexColorMat_${OM}`, dM);
-                      aM.disableLighting = !0, aM.emissiveColor = new rM(1, 1, 1), aM.specularColor = new rM(0, 0, 0), iM.material = aM
+                      xV.setVerticesData("color", UV);
+                      const yV = new VV(`vertexColorMat_${JV}`, EV);
+                      yV.disableLighting = !0, yV.emissiveColor = new eV(1, 1, 1), yV.specularColor = new eV(0, 0, 0), xV.material = yV
                     }
-                  })), SM.forEach(((iM, OM) => {
-                    const SM = iM.getVerticesData("position");
-                    if (SM) {
-                      const jM = [],
-                        aM = SM.length / 3;
-                      for (let MM = 0; MM < aM; MM++) jM.push(1, 1, 1, 1);
-                      iM.setVerticesData("color", jM);
-                      const PM = new MM(`whiteMat_${OM}`, dM);
-                      PM.disableLighting = !0, PM.emissiveColor = new rM(1, 1, 1), PM.specularColor = new rM(0, 0, 0), iM.material = PM
+                  })), YV.forEach(((xV, JV) => {
+                    const YV = xV.getVerticesData("position");
+                    if (YV) {
+                      const UV = [],
+                        yV = YV.length / 3;
+                      for (let VV = 0; VV < yV; VV++) UV.push(1, 1, 1, 1);
+                      xV.setVerticesData("color", UV);
+                      const pV = new VV(`whiteMat_${JV}`, EV);
+                      pV.disableLighting = !0, pV.emissiveColor = new eV(1, 1, 1), pV.specularColor = new eV(0, 0, 0), xV.material = pV
                     }
                   }));
-                  else if (HM) {
-                    const iM = dM.activeCamera.position;
-                    let SM = 0,
-                      jM = 1 / 0;
-                    OM.forEach((MM => {
-                      const rM = MM.aY().boundingBox.center,
-                        OM = zM.TransformCoordinates(rM, MM.getWorldMatrix()),
-                        aM = iM.subtract(OM).length();
-                      SM = Math.max(SM, aM), jM = Math.min(jM, aM)
+                  else if (rV) {
+                    const xV = EV.activeCamera.position;
+                    let YV = 0,
+                      UV = 1 / 0;
+                    JV.forEach((VV => {
+                      const eV = VV.qL().boundingBox.center,
+                        JV = wV.TransformCoordinates(eV, VV.getWorldMatrix()),
+                        yV = xV.subtract(JV).length();
+                      YV = Math.max(YV, yV), UV = Math.min(UV, yV)
                     }));
-                    const aM = SM - jM;
-                    SM += .1 * aM, jM = Math.max(0, jM - .1 * aM), aM < 1 && (SM = jM + 10), UM.forEach(((OM, aM) => {
-                      const PM = OM.name.toLowerCase(),
-                        nM = OM.aY().boundingBox.center,
-                        QM = zM.TransformCoordinates(nM, OM.getWorldMatrix()),
-                        LM = iM.subtract(QM).length();
-                      if (!(PM.includes("sky") || PM.includes("background") || PM.includes("environment") || LM > 1e3)) {
-                        const iM = 1 - Math.min(Math.max((LM - jM) / (SM - jM), 0), 1),
-                          PM = new MM(`depthMat_${aM}`, dM);
-                        PM.diffuseColor = new rM(iM, iM, iM), PM.specularColor = new rM(0, 0, 0), OM.material = PM
+                    const yV = YV - UV;
+                    YV += .1 * yV, UV = Math.max(0, UV - .1 * yV), yV < 1 && (YV = UV + 10), tV.forEach(((JV, yV) => {
+                      const pV = JV.name.toLowerCase(),
+                        QV = JV.qL().boundingBox.center,
+                        nV = wV.TransformCoordinates(QV, JV.getWorldMatrix()),
+                        ZV = xV.subtract(nV).length();
+                      if (!(pV.includes("sky") || pV.includes("background") || pV.includes("environment") || ZV > 1e3)) {
+                        const xV = 1 - Math.min(Math.max((ZV - UV) / (YV - UV), 0), 1),
+                          pV = new VV(`depthMat_${yV}`, EV);
+                        pV.diffuseColor = new eV(xV, xV, xV), pV.specularColor = new eV(0, 0, 0), JV.material = pV
                       }
                     }))
                   }
-                })().then((() => Promise.all([iM.e(255), iM.e(254), iM.e(279), iM.e(280), iM.e(277), iM.e(287), iM.e(281), iM.e(286), iM.e(284), iM.e(276), iM.e(289), iM.e(302), iM.e(620), iM.e(269), iM.e(288), iM.e(253)]).then((() => iM(63927))))).then((rM => rM.GLTF2Export.GLBAsync(dM, MM))).then((MM => {
-                  eM(), MM.downloadFiles(), rM()
-                })).catch((MM => {
-                  console.error("Error exporting GLB:", MM), eM(), rM()
+                })().then((() => Promise.all([xV.e(255), xV.e(254), xV.e(279), xV.e(280), xV.e(277), xV.e(287), xV.e(281), xV.e(286), xV.e(284), xV.e(276), xV.e(289), xV.e(302), xV.e(620), xV.e(269), xV.e(288), xV.e(253)]).then((() => xV(64316))))).then((eV => eV.GLTF2Export.GLBAsync(EV, VV))).then((VV => {
+                  PV(), VV.downloadFiles(), eV()
+                })).catch((VV => {
+                  console.error("Error exporting GLB:", VV), PV(), eV()
                 }))
-              }), 100) : Promise.all([iM.e(255), iM.e(254), iM.e(279), iM.e(280), iM.e(277), iM.e(287), iM.e(281), iM.e(286), iM.e(284), iM.e(276), iM.e(289), iM.e(302), iM.e(620), iM.e(269), iM.e(288), iM.e(253)]).then((() => iM(63927))).then((iM => {
-                iM.GLTF2Export.GLBAsync(dM, MM).then((MM => {
-                  eM(), MM.downloadFiles(), rM()
-                })).catch((MM => {
-                  console.error("Error exporting GLB:", MM), eM(), rM()
+              }), 100) : Promise.all([xV.e(255), xV.e(254), xV.e(279), xV.e(280), xV.e(277), xV.e(287), xV.e(281), xV.e(286), xV.e(284), xV.e(276), xV.e(289), xV.e(302), xV.e(620), xV.e(269), xV.e(288), xV.e(253)]).then((() => xV(64316))).then((xV => {
+                xV.GLTF2Export.GLBAsync(EV, VV).then((VV => {
+                  PV(), VV.downloadFiles(), eV()
+                })).catch((VV => {
+                  console.error("Error exporting GLB:", VV), PV(), eV()
                 }))
-              })).catch((MM => {
-                console.error("Error importing serializers:", MM), eM(), rM()
+              })).catch((VV => {
+                console.error("Error importing serializers:", VV), PV(), eV()
               }))
             }
-          })).catch((MM => {
-            console.error("Error downloading the scene:", MM), rM()
+          })).catch((VV => {
+            console.error("Error downloading the scene:", VV), eV()
           }))
-        } catch (hM) {
-          console.error("Error taking screenshot:", hM), rM()
+        } catch (kV) {
+          console.error("Error taking screenshot:", kV), eV()
         }
       }))
     }
-    const LM = new class {
+    const ZV = new class {
       constructor() {
-        this.tools = QM.ALL_DEV_TOOLS
+        this.tools = nV.ALL_DEV_TOOLS
       }
-      downloadScene(MM, rM) {
-        return zM(MM, rM)
+      downloadScene(VV, eV) {
+        return wV(VV, eV)
       }
-      async setAmbientLightIntensity(MM) {
+      async setAmbientLightIntensity(VV) {
         const {
-          Color3: rM
-        } = await Promise.all([iM.e(255), iM.e(258)]).then((() => iM(38167)));
-        (0, jM.f)().CL.Hk().ambientColor = rM.FromArray([MM, MM, MM])
+          Color3: eV
+        } = await Promise.all([xV.e(255), xV.e(258)]).then((() => xV(38387)));
+        (0, UV.d)().gZ.dD().ambientColor = eV.FromArray([VV, VV, VV])
       }
-      capturePhoto(MM, rM, iM) {
-        return function(MM, rM, iM, OM) {
-          return (0, PM.d)(nM(MM), rM, iM, OM)
-        }((0, jM.f)(), MM, rM, iM)
+      capturePhoto(VV, eV, xV) {
+        return function(VV, eV, xV, JV) {
+          return (0, pV.c)(QV(VV), eV, xV, JV)
+        }((0, UV.d)(), VV, eV, xV)
       }
     }
   },
-  42067: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => PM,
-      h: () => nM
+  42290: (VV, eV, xV) => {
+    xV.d(eV, {
+      c: () => pV,
+      e: () => QV
     });
-    var OM = iM(1845);
-    const SM = 33177600,
-      jM = 3e4;
-    let aM = !1;
+    var JV = xV(1846);
+    const YV = 33177600,
+      UV = 3e4;
+    let yV = !1;
 
-    function PM(MM, rM, iM) {
-      let OM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+    function pV(VV, eV, xV) {
+      let JV = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
       const {
-        scale: PM = 1,
-        type: nM = "image/png",
-        quality: QM
-      } = OM;
-      return MM.lL() ? aM ? Promise.reject(new Error("A screenshot is already being taken")) : (aM = !0, new Promise(((OM, zM) => {
-        let LM, mM = 2,
-          HM = null;
-        const hM = () => {
-          var rM;
-          aM = !1, null === (rM = HM) || void 0 === rM || rM(), clearTimeout(LM);
+        scale: pV = 1,
+        type: QV = "image/png",
+        quality: nV
+      } = JV;
+      return VV.zZ() ? yV ? Promise.reject(new Error("A screenshot is already being taken")) : (yV = !0, new Promise(((JV, wV) => {
+        let ZV, vV = 2,
+          rV = null;
+        const kV = () => {
+          var eV;
+          yV = !1, null === (eV = rV) || void 0 === eV || eV(), clearTimeout(ZV);
           try {
-            MM.restoreSize()
-          } catch (iM) {
-            console.error("A screenshot couldn't size the canvas back", iM)
+            VV.restoreSize()
+          } catch (xV) {
+            console.error("A screenshot couldn't size the canvas back", xV)
           }
         };
-        LM = setTimeout((() => {
-          hM(), zM(new Error("No frame was drawn to capture"))
-        }), jM);
+        ZV = setTimeout((() => {
+          kV(), wV(new Error("No frame was drawn to capture"))
+        }), UV);
         try {
-          const OM = function(MM, rM, iM) {
-            const OM = Math.max(1, MM),
-              jM = Math.max(1, rM),
-              aM = Math.min(1, iM / Math.max(OM, jM), Math.sqrt(SM / (OM * jM)));
+          const JV = function(VV, eV, xV) {
+            const JV = Math.max(1, VV),
+              UV = Math.max(1, eV),
+              yV = Math.min(1, xV / Math.max(JV, UV), Math.sqrt(YV / (JV * UV)));
             return {
-              width: Math.max(1, Math.floor(OM * aM)),
-              height: Math.max(1, Math.floor(jM * aM))
+              width: Math.max(1, Math.floor(JV * yV)),
+              height: Math.max(1, Math.floor(UV * yV))
             }
-          }(rM, iM, MM.maxTextureSize);
-          MM.resize(OM.width, OM.height, PM * OM.width / Math.max(1, rM))
-        } catch (JM) {
-          return hM(), void zM(JM)
+          }(eV, xV, VV.maxTextureSize);
+          VV.resize(JV.width, JV.height, pV * JV.width / Math.max(1, eV))
+        } catch (bV) {
+          return kV(), void wV(bV)
         }
-        HM = MM.onFrameDrawn((() => {
-          if (mM--, mM > 0) return;
+        rV = VV.onFrameDrawn((() => {
+          if (vV--, vV > 0) return;
           const {
-            canvas: rM
-          } = MM, iM = {
-            width: rM.width,
-            height: rM.height
+            canvas: eV
+          } = VV, xV = {
+            width: eV.width,
+            height: eV.height
           };
           try {
-            rM.toBlob((MM => {
-              MM ? OM({
-                blob: MM,
-                ...iM
-              }) : zM(new Error("The canvas gave no image"))
-            }), nM, QM)
-          } catch (JM) {
-            zM(JM)
+            eV.toBlob((VV => {
+              VV ? JV({
+                blob: VV,
+                ...xV
+              }) : wV(new Error("The canvas gave no image"))
+            }), QV, nV)
+          } catch (bV) {
+            wV(bV)
           } finally {
-            hM()
+            kV()
           }
         }))
       }))) : Promise.reject(new Error("Screenshots need a game to be running"))
     }
-    async function nM(MM, rM, iM) {
+    async function QV(VV, eV, xV) {
       try {
-        const SM = await PM(MM, rM, iM);
-        (0, OM.c)(SM.blob, `bloxd-screenshot-${SM.width}x${SM.height}-${Date.now()}.png`)
-      } catch (SM) {
-        console.error("Error taking screenshot:", SM)
+        const YV = await pV(VV, eV, xV);
+        (0, JV.c)(YV.blob, `bloxd-screenshot-${YV.width}x${YV.height}-${Date.now()}.png`)
+      } catch (YV) {
+        console.error("Error taking screenshot:", YV)
       }
     }
   },
-  38423: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => QM,
-      f: () => PM,
-      j: () => aM
+  38630: (VV, eV, xV) => {
+    xV.d(eV, {
+      e: () => nV,
+      i: () => pV,
+      k: () => yV
     });
-    var OM = iM(38418),
-      SM = iM(38426);
-    let jM = 0;
+    var JV = xV(38621),
+      YV = xV(38633);
+    let UV = 0;
 
-    function aM(MM, rM) {
-      const iM = MM;
-      iM._noaFaceGroups = null !== rM && void 0 !== rM ? rM : null, iM._noaFaceEpoch = -1, iM._noaFaceMask = -1, iM._noaFaceCount = -1, iM._noaFaceMaterial = null;
-      const OM = MM.iG;
-      OM && 1 === OM.length && (OM[0].indexStart = 0, OM[0].indexCount = MM.getTotalIndices())
+    function yV(VV, eV) {
+      const xV = VV;
+      xV._noaFaceGroups = null !== eV && void 0 !== eV ? eV : null, xV._noaFaceEpoch = -1, xV._noaFaceMask = -1, xV._noaFaceCount = -1, xV._noaFaceMaterial = null;
+      const JV = VV.hT;
+      JV && 1 === JV.length && (JV[0].indexStart = 0, JV[0].indexCount = VV.getTotalIndices())
     }
 
-    function PM(MM, rM) {
-      if (rM) {
-        jM++;
-        for (const rM of MM) {
-          const MM = rM._noaFaceGroups;
-          MM && aM(rM, MM)
+    function pV(VV, eV) {
+      if (eV) {
+        UV++;
+        for (const eV of VV) {
+          const VV = eV._noaFaceGroups;
+          VV && yV(eV, VV)
         }
-      } else jM = Math.max(0, jM - 1)
+      } else UV = Math.max(0, UV - 1)
     }
 
-    function nM(MM, rM, iM) {
-      let SM = -1,
-        jM = 0;
-      for (let aM = 0; aM < OM.g; aM++) {
-        const iM = MM[aM],
-          PM = MM[aM + 1];
-        PM > iM && rM & 1 << OM.c[aM] && (SM < 0 && (SM = iM), jM = PM)
+    function QV(VV, eV, xV) {
+      let YV = -1,
+        UV = 0;
+      for (let yV = 0; yV < JV.e; yV++) {
+        const xV = VV[yV],
+          pV = VV[yV + 1];
+        pV > xV && eV & 1 << JV.c[yV] && (YV < 0 && (YV = xV), UV = pV)
       }
-      return SM < 0 ? (iM[0] = 0, iM[1] = 0, 0) : (iM[0] = SM, iM[1] = jM - SM, jM - SM)
+      return YV < 0 ? (xV[0] = 0, xV[1] = 0, 0) : (xV[0] = YV, xV[1] = UV - YV, UV - YV)
     }
-    class QM {
-      constructor(MM, rM) {
-        this.HL = MM, this.engine = rM, this.epoch = 0, this.eyeX = NaN, this.eyeY = NaN, this.eyeZ = NaN, this.focalPx = NaN, this.culling = !1, this.range = new Int32Array(2)
+    class nV {
+      constructor(VV, eV) {
+        this.PZ = VV, this.engine = eV, this.epoch = 0, this.eyeX = NaN, this.eyeY = NaN, this.eyeZ = NaN, this.focalPx = NaN, this.culling = !1, this.range = new Int32Array(2)
       }
-      apply(MM, rM) {
-        if (!rM) return;
-        const iM = rM.getProjectionMatrix().m,
-          aM = 0 === jM && 0 === iM[15],
-          PM = rM.globalPosition,
+      apply(VV, eV) {
+        if (!eV) return;
+        const xV = eV.getProjectionMatrix().m,
+          yV = 0 === UV && 0 === xV[15],
+          pV = eV.globalPosition,
           {
-            engine: QM
+            engine: nV
           } = this,
-          zM = aM ? (0, SM.c)(iM, QM.getRenderWidth(), QM.getRenderHeight()) : 0;
-        PM.x === this.eyeX && PM.y === this.eyeY && PM.z === this.eyeZ && zM === this.focalPx && aM === this.culling || (this.epoch++, this.eyeX = PM.x, this.eyeY = PM.y, this.eyeZ = PM.z, this.focalPx = zM, this.culling = aM);
+          wV = yV ? (0, YV.b)(xV, nV.getRenderWidth(), nV.getRenderHeight()) : 0;
+        pV.x === this.eyeX && pV.y === this.eyeY && pV.z === this.eyeZ && wV === this.focalPx && yV === this.culling || (this.epoch++, this.eyeX = pV.x, this.eyeY = pV.y, this.eyeZ = pV.z, this.focalPx = wV, this.culling = yV);
         const {
-          epoch: LM,
-          range: mM
-        } = this, HM = this.HL / 2, hM = HM * Math.sqrt(3), JM = MM.data, dM = MM.length;
-        let yM = 0;
-        for (let jM = 0; jM < dM; jM++) {
-          const MM = JM[jM],
-            rM = MM._noaFaceGroups;
-          if (rM && (MM._noaFaceEpoch !== LM || MM._noaFaceMaterial !== MM.material)) {
-            MM._noaFaceEpoch = LM, MM._noaFaceMaterial = MM.material;
-            const iM = MM.iG,
-              jM = iM && 1 === iM.length ? iM[0] : null;
-            let QM = -1;
-            if (aM && jM && (0, OM.t)(MM.material)) {
-              const iM = MM.position,
-                OM = PM.x - iM.x,
-                jM = PM.y - iM.y,
-                aM = PM.z - iM.z,
-                nM = OM - HM,
-                LM = jM - HM,
-                mM = aM - HM,
-                JM = Math.sqrt(nM * nM + LM * LM + mM * mM) + hM;
-              QM = (0, SM.k)(rM, OM, jM, aM, (0, SM.e)(JM, zM))
+          epoch: ZV,
+          range: vV
+        } = this, rV = this.PZ / 2, kV = rV * Math.sqrt(3), bV = VV.data, EV = VV.length;
+        let BV = 0;
+        for (let UV = 0; UV < EV; UV++) {
+          const VV = bV[UV],
+            eV = VV._noaFaceGroups;
+          if (eV && (VV._noaFaceEpoch !== ZV || VV._noaFaceMaterial !== VV.material)) {
+            VV._noaFaceEpoch = ZV, VV._noaFaceMaterial = VV.material;
+            const xV = VV.hT,
+              UV = xV && 1 === xV.length ? xV[0] : null;
+            let nV = -1;
+            if (yV && UV && (0, JV.p)(VV.material)) {
+              const xV = VV.position,
+                JV = pV.x - xV.x,
+                UV = pV.y - xV.y,
+                yV = pV.z - xV.z,
+                QV = JV - rV,
+                ZV = UV - rV,
+                vV = yV - rV,
+                bV = Math.sqrt(QV * QV + ZV * ZV + vV * vV) + kV;
+              nV = (0, YV.h)(eV, JV, UV, yV, (0, YV.c)(bV, wV))
             }
-            if (jM && QM !== MM._noaFaceMask) {
-              MM._noaFaceMask = QM;
-              let iM = 0,
-                SM = rM[OM.g]; - 1 !== QM && (SM = nM(rM, QM, mM), iM = mM[0]), MM._noaFaceCount = SM, jM.indexStart = 6 * iM, jM.indexCount = 6 * SM, jM.setBoundingInfo(MM.aY())
+            if (UV && nV !== VV._noaFaceMask) {
+              VV._noaFaceMask = nV;
+              let xV = 0,
+                YV = eV[JV.e]; - 1 !== nV && (YV = QV(eV, nV, vV), xV = vV[0]), VV._noaFaceCount = YV, UV.indexStart = 6 * xV, UV.indexCount = 6 * YV, UV.setBoundingInfo(VV.qL())
             }
           }
-          rM && 0 === MM._noaFaceCount || (JM[yM++] = MM)
+          eV && 0 === VV._noaFaceCount || (bV[BV++] = VV)
         }
-        MM.length = yM
+        VV.length = BV
       }
     }
   },
-  38404: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => nM,
-      e: () => PM
+  38604: (VV, eV, xV) => {
+    xV.d(eV, {
+      b: () => QV,
+      e: () => pV
     });
-    const OM = new WeakSet;
-    let SM = 0;
-    const jM = new Set;
+    const JV = new WeakSet;
+    let YV = 0;
+    const UV = new Set;
 
-    function aM(MM, rM) {
-      MM._data = rM
+    function yV(VV, eV) {
+      VV._data = eV
     }
 
-    function PM(MM) {
-      var rM, iM;
-      (null !== (rM = null === (iM = MM.getBuffer()) || void 0 === iM ? void 0 : iM.vL) && void 0 !== rM ? rM : 0) > 0 && (OM.add(MM), 0 === SM ? aM(MM, null) : jM.add(MM))
+    function pV(VV) {
+      var eV, xV;
+      (null !== (eV = null === (xV = VV.getBuffer()) || void 0 === xV ? void 0 : xV.Jv) && void 0 !== eV ? eV : 0) > 0 && (JV.add(VV), 0 === YV ? yV(VV, null) : UV.add(VV))
     }
 
-    function nM(MM) {
-      SM++;
-      for (const iM of function(MM) {
-          const rM = new Set;
-          for (const SM of MM) {
-            const MM = SM.geometry;
-            for (const SM of Object.values(null !== (iM = null === MM || void 0 === MM ? void 0 : MM.getVertexBuffers()) && void 0 !== iM ? iM : {})) {
-              var iM;
-              const MM = SM.getWrapperBuffer();
-              OM.has(MM) && rM.add(MM)
+    function QV(VV) {
+      YV++;
+      for (const xV of function(VV) {
+          const eV = new Set;
+          for (const YV of VV) {
+            const VV = YV.geometry;
+            for (const YV of Object.values(null !== (xV = null === VV || void 0 === VV ? void 0 : VV.getVertexBuffers()) && void 0 !== xV ? xV : {})) {
+              var xV;
+              const VV = YV.getWrapperBuffer();
+              JV.has(VV) && eV.add(VV)
             }
           }
-          return rM
-        }(MM)) iM.getData() || QM(iM), jM.add(iM);
-      let rM = !0;
+          return eV
+        }(VV)) xV.getData() || nV(xV), UV.add(xV);
+      let eV = !0;
       return () => {
-        if (rM && (rM = !1, SM--, 0 === SM)) {
-          for (const MM of jM) aM(MM, null);
-          jM.clear()
+        if (eV && (eV = !1, YV--, 0 === YV)) {
+          for (const VV of UV) yV(VV, null);
+          UV.clear()
         }
       }
     }
 
-    function QM(MM) {
-      const rM = MM.getBuffer();
-      if (!rM || !(rM.vL > 0)) return;
-      const iM = MM._engine,
-        OM = new Uint8Array(rM.vL);
-      iM.bindArrayBuffer(rM), iM._gl.getBufferSubData(iM._gl.ARRAY_BUFFER, 0, OM), iM._resetVertexBufferBinding(), aM(MM, OM)
+    function nV(VV) {
+      const eV = VV.getBuffer();
+      if (!eV || !(eV.Jv > 0)) return;
+      const xV = VV._engine,
+        JV = new Uint8Array(eV.Jv);
+      xV.bindArrayBuffer(eV), xV._gl.getBufferSubData(xV._gl.ARRAY_BUFFER, 0, JV), xV._resetVertexBufferBinding(), yV(VV, JV)
     }
   },
-  38418: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => aM,
-      g: () => jM,
-      k: () => nM,
-      l: () => OM,
-      n: () => PM,
-      r: () => SM,
-      t: () => QM
+  38621: (VV, eV, xV) => {
+    xV.d(eV, {
+      c: () => yV,
+      e: () => UV,
+      h: () => QV,
+      i: () => JV,
+      k: () => pV,
+      o: () => YV,
+      p: () => nV
     });
-    const OM = 6,
-      SM = [0, 2, 4, 1, 3, 5, 0, 2],
-      jM = 6,
-      aM = [1, 0, 3, 2, 5, 4];
-    for (let zM = jM; zM < SM.length; zM++)
-      if (SM[zM] !== SM[zM - jM]) throw new Error("FACE_LAYOUT must repeat a prefix of its base groups");
-    const PM = SM.length + 1,
-      nM = (() => {
-        const MM = [];
-        for (let rM = 0; rM < jM; rM++) MM[SM[rM]] = rM;
-        return MM
+    const JV = 6,
+      YV = [0, 2, 4, 1, 3, 5, 0, 2],
+      UV = 6,
+      yV = [1, 0, 3, 2, 5, 4];
+    for (let wV = UV; wV < YV.length; wV++)
+      if (YV[wV] !== YV[wV - UV]) throw new Error("FACE_LAYOUT must repeat a prefix of its base groups");
+    const pV = YV.length + 1,
+      QV = (() => {
+        const VV = [];
+        for (let eV = 0; eV < UV; eV++) VV[YV[eV]] = eV;
+        return VV
       })();
 
-    function QM(MM) {
-      return !!MM && MM.backFaceCulling && (0 === MM.transparencyMode || 1 === MM.transparencyMode)
+    function nV(VV) {
+      return !!VV && VV.backFaceCulling && (0 === VV.transparencyMode || 1 === VV.transparencyMode)
     }
   },
-  38426: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => PM,
-      e: () => nM,
-      h: () => zM,
-      k: () => QM,
-      l: () => hM
+  38633: (VV, eV, xV) => {
+    xV.d(eV, {
+      b: () => pV,
+      c: () => QV,
+      f: () => wV,
+      h: () => nV,
+      i: () => kV
     });
-    var OM = iM(38418);
-    const SM = 1 / 16,
-      jM = 1 / 64,
-      aM = 2048;
-    OM.l;
+    var JV = xV(38621);
+    const YV = 1 / 16,
+      UV = 1 / 64,
+      yV = 2048;
+    JV.i;
 
-    function PM(MM, rM, iM) {
-      return Math.min(Math.abs(MM[0] * rM), Math.abs(MM[5] * iM)) / 2
+    function pV(VV, eV, xV) {
+      return Math.min(Math.abs(VV[0] * eV), Math.abs(VV[5] * xV)) / 2
     }
 
-    function nM(MM, rM) {
-      return SM + jM * MM * MM / rM
+    function QV(VV, eV) {
+      return YV + UV * VV * VV / eV
     }
 
-    function QM(MM, rM, iM, SM, jM) {
-      const aM = OM.n;
-      return zM(MM[aM], MM[aM + 1], MM[aM + 2], MM[aM + 3], MM[aM + 4], MM[aM + 5], rM, iM, SM, jM)
+    function nV(VV, eV, xV, YV, UV) {
+      const yV = JV.k;
+      return wV(VV[yV], VV[yV + 1], VV[yV + 2], VV[yV + 3], VV[yV + 4], VV[yV + 5], eV, xV, YV, UV)
     }
 
-    function zM(MM, rM, iM, OM, SM, jM, aM, PM, nM, QM) {
-      return (aM <= MM - QM ? 0 : 1) | (aM >= rM + QM ? 0 : 2) | (PM <= iM - QM ? 0 : 4) | (PM >= OM + QM ? 0 : 8) | (nM <= SM - QM ? 0 : 16) | (nM >= jM + QM ? 0 : 32)
+    function wV(VV, eV, xV, JV, YV, UV, yV, pV, QV, nV) {
+      return (yV <= VV - nV ? 0 : 1) | (yV >= eV + nV ? 0 : 2) | (pV <= xV - nV ? 0 : 4) | (pV >= JV + nV ? 0 : 8) | (QV <= YV - nV ? 0 : 16) | (QV >= UV + nV ? 0 : 32)
     }
-    const LM = (() => {
-        const MM = [];
-        for (let rM = 0; rM < OM.r.length; rM++) {
-          let iM = 0;
-          for (let SM = rM + 1; SM <= OM.r.length; SM++) {
-            const jM = 1 << OM.r[SM - 1];
-            if (iM & jM) break;
-            iM |= jM, MM.push({
-              start: rM,
-              end: SM,
-              Nj: iM
+    const ZV = (() => {
+        const VV = [];
+        for (let eV = 0; eV < JV.o.length; eV++) {
+          let xV = 0;
+          for (let YV = eV + 1; YV <= JV.o.length; YV++) {
+            const UV = 1 << JV.o[YV - 1];
+            if (xV & UV) break;
+            xV |= UV, VV.push({
+              start: eV,
+              end: YV,
+              lU: xV
             })
           }
         }
-        return MM
+        return VV
       })(),
-      mM = [];
+      vV = [];
 
-    function HM(MM, rM) {
-      const iM = OM.k[rM];
-      return MM[iM + 1] - MM[iM]
+    function rV(VV, eV) {
+      const xV = JV.h[eV];
+      return VV[xV + 1] - VV[xV]
     }
 
-    function hM(MM, rM, iM) {
-      let SM = 0;
-      for (let aM = 0; aM < OM.l; aM++) HM(MM, aM) > 0 && (SM |= 1 << aM);
-      if (0 === (rM &= SM)) return 0;
-      if (rM === SM) return iM[0] = 0, iM[1] = MM[OM.g], 1;
-      let jM = null,
-        PM = 1 / 0;
-      for (const QM of function(MM) {
-          let rM = mM[MM];
-          if (rM) return rM;
-          const iM = new Map,
-            OM = (MM, rM) => {
-              const OM = 4 * MM + rM.length / 2;
-              iM.has(OM) || iM.set(OM, {
-                Nj: MM,
-                windows: rM
+    function kV(VV, eV, xV) {
+      let YV = 0;
+      for (let yV = 0; yV < JV.i; yV++) rV(VV, yV) > 0 && (YV |= 1 << yV);
+      if (0 === (eV &= YV)) return 0;
+      if (eV === YV) return xV[0] = 0, xV[1] = VV[JV.e], 1;
+      let UV = null,
+        pV = 1 / 0;
+      for (const nV of function(VV) {
+          let eV = vV[VV];
+          if (eV) return eV;
+          const xV = new Map,
+            JV = (VV, eV) => {
+              const JV = 4 * VV + eV.length / 2;
+              xV.has(JV) || xV.set(JV, {
+                lU: VV,
+                windows: eV
               })
             };
-          for (const jM of LM)
-            if ((jM.Nj & MM) === MM && OM(jM.Nj, [jM.start, jM.end]), 0 !== (jM.Nj & MM))
-              for (const rM of LM) rM.start < jM.end || 0 !== (jM.Nj & rM.Nj) || 0 === (rM.Nj & MM) || ((jM.Nj | rM.Nj) & MM) !== MM || OM(jM.Nj | rM.Nj, [jM.start, jM.end, rM.start, rM.end]);
-          const SM = [...iM.values()];
-          return rM = SM.filter((MM => !SM.some((rM => rM !== MM && (rM.Nj & MM.Nj) === rM.Nj && rM.windows.length <= MM.windows.length)))), mM[MM] = rM, rM
-        }(rM)) {
-        let iM = (QM.windows.length / 2 - 1) * aM;
-        const nM = QM.Nj & ~rM & SM;
-        for (let rM = 0; rM < OM.l; rM++) nM & 1 << rM && (iM += HM(MM, rM));
-        iM < PM && (jM = QM, PM = iM)
+          for (const UV of ZV)
+            if ((UV.lU & VV) === VV && JV(UV.lU, [UV.start, UV.end]), 0 !== (UV.lU & VV))
+              for (const eV of ZV) eV.start < UV.end || 0 !== (UV.lU & eV.lU) || 0 === (eV.lU & VV) || ((UV.lU | eV.lU) & VV) !== VV || JV(UV.lU | eV.lU, [UV.start, UV.end, eV.start, eV.end]);
+          const YV = [...xV.values()];
+          return eV = YV.filter((VV => !YV.some((eV => eV !== VV && (eV.lU & VV.lU) === eV.lU && eV.windows.length <= VV.windows.length)))), vV[VV] = eV, eV
+        }(eV)) {
+        let xV = (nV.windows.length / 2 - 1) * yV;
+        const QV = nV.lU & ~eV & YV;
+        for (let eV = 0; eV < JV.i; eV++) QV & 1 << eV && (xV += rV(VV, eV));
+        xV < pV && (UV = nV, pV = xV)
       }
-      const nM = jM.windows;
-      for (let OM = 0; OM < nM.length; OM += 2) {
-        const rM = MM[nM[OM]];
-        iM[OM] = rM, iM[OM + 1] = MM[nM[OM + 1]] - rM
+      const QV = UV.windows;
+      for (let JV = 0; JV < QV.length; JV += 2) {
+        const eV = VV[QV[JV]];
+        xV[JV] = eV, xV[JV + 1] = VV[QV[JV + 1]] - eV
       }
-      return nM.length / 2
+      return QV.length / 2
     }
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const VV in modules) Object.freeze(modules[VV]);

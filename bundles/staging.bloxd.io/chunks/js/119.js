@@ -1,184 +1,184 @@
 export const id = 119;
 export const ids = [119];
 export const modules = {
-  5343: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => LM,
-      d: () => zM,
-      f: () => mM
+  5428: (VV, eV, xV) => {
+    xV.d(eV, {
+      e: () => ZV,
+      i: () => wV,
+      k: () => vV
     });
-    iM(5348);
-    var OM = iM(1188),
-      SM = iM(1116),
-      jM = iM.n(SM),
-      aM = iM(1440),
-      PM = (iM(44), iM(4720)),
-      nM = iM(1398),
-      QM = iM(1303);
+    xV(5433);
+    var JV = xV(1220),
+      YV = xV(1146),
+      UV = xV.n(YV),
+      yV = xV(1446),
+      pV = (xV(62), xV(4795)),
+      QV = xV(1414),
+      nV = xV(1321);
 
-    function zM(MM) {
+    function wV(VV) {
       let {
-        children: rM,
-        label: iM,
-        className: SM,
-        circleInfoText: PM,
-        disabled: zM,
-        onLabelClick: LM
-      } = MM;
+        children: eV,
+        label: xV,
+        className: YV,
+        circleInfoText: pV,
+        disabled: wV,
+        onLabelClick: ZV
+      } = VV;
       const {
-        t: mM
-      } = (0, OM.A)(), HM = (0, QM.jsxs)("div", {
-        className: jM()("Label", {
-          ClickableLabel: void 0 !== LM
+        t: vV
+      } = (0, JV.A)(), rV = (0, nV.jsxs)("div", {
+        className: UV()("Label", {
+          ClickableLabel: void 0 !== ZV
         }),
-        onClick: LM,
-        children: [mM(iM), PM && (0, QM.jsx)(nM.b, {
+        onClick: ZV,
+        children: [vV(xV), pV && (0, nV.jsx)(QV.b, {
           name: "circle-info"
         })]
       });
-      return (0, QM.jsxs)("div", {
-        className: jM()("LabeledInput", {
-          [SM]: SM,
-          DisabledLabelInput: zM
+      return (0, nV.jsxs)("div", {
+        className: UV()("LabeledInput", {
+          [YV]: YV,
+          DisabledLabelInput: wV
         }),
-        children: [PM && (0, QM.jsx)(aM.i, {
-          tooltipInner: (0, QM.jsx)("div", {
+        children: [pV && (0, nV.jsx)(yV.d, {
+          tooltipInner: (0, nV.jsx)("div", {
             className: "LabeledInputTooltip",
-            children: mM(PM)
+            children: vV(pV)
           }),
-          children: HM
-        }), !PM && HM, rM]
+          children: rV
+        }), !pV && rV, eV]
       })
     }
 
-    function LM(MM) {
+    function ZV(VV) {
       let {
-        checked: rM,
-        setChecked: iM
-      } = MM;
-      return (0, QM.jsx)("div", {
+        checked: eV,
+        setChecked: xV
+      } = VV;
+      return (0, nV.jsx)("div", {
         className: "OtherInput ClickableOtherInput",
         "data-pad-focusable": !0,
-        onClick: MM => {
-          iM(!rM)
+        onClick: VV => {
+          xV(!eV)
         },
-        children: (0, QM.jsx)(PM.c, {
-          checked: rM,
-          onChange: MM => {
-            iM(MM.target.checked)
+        children: (0, nV.jsx)(pV.b, {
+          checked: eV,
+          onChange: VV => {
+            xV(VV.target.checked)
           },
           disabled: !1
         })
       })
     }
 
-    function mM(MM) {
+    function vV(VV) {
       let {
-        checked: rM,
-        setChecked: iM,
-        disabled: OM
-      } = MM;
-      return (0, QM.jsx)("div", {
-        className: jM()("SwitchContainer", {
-          SwitchContainerDisabled: OM
+        checked: eV,
+        setChecked: xV,
+        disabled: JV
+      } = VV;
+      return (0, nV.jsx)("div", {
+        className: UV()("SwitchContainer", {
+          SwitchContainerDisabled: JV
         }),
         onClick: () => {
-          OM || iM(!rM)
+          JV || xV(!eV)
         },
-        children: (0, QM.jsx)(PM.c, {
+        children: (0, nV.jsx)(pV.b, {
           className: "SwitchCheckbox",
-          checked: rM,
-          onChange: MM => {
-            iM(MM.target.checked)
+          checked: eV,
+          onChange: VV => {
+            xV(VV.target.checked)
           },
-          disabled: !!OM
+          disabled: !!JV
         })
       })
     }
   },
-  5356: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => QM
+  5442: (VV, eV, xV) => {
+    xV.d(eV, {
+      e: () => nV
     });
-    var OM = iM(1116),
-      SM = iM.n(OM),
-      jM = iM(5003),
-      aM = iM(1188),
-      PM = iM(1303);
-    const nM = [...jM.m, "tpRequests", "spawnProtection", "spawnReset", "smpMarketplace"];
+    var JV = xV(1146),
+      YV = xV.n(JV),
+      UV = xV(5103),
+      yV = xV(1220),
+      pV = xV(1321);
+    const QV = [...UV.i, "tpRequests", "spawnProtection", "spawnReset", "smpMarketplace"];
 
-    function QM(MM) {
+    function nV(VV) {
       const {
-        disabled: rM,
-        hideWrapper: iM
-      } = MM, {
-        t: OM
-      } = (0, aM.A)(), QM = MM.advancedMode ? nM.map((rM => [rM, MM.callbacks[rM]])) : jM.m.map((rM => [rM, MM.callbacks[rM]])), LM = (0, PM.jsx)("div", {
-        className: SM()("PluginsGrid", {
-          SectionBody: !iM
+        disabled: eV,
+        hideWrapper: xV
+      } = VV, {
+        t: JV
+      } = (0, yV.A)(), nV = VV.advancedMode ? QV.map((eV => [eV, VV.callbacks[eV]])) : UV.i.map((eV => [eV, VV.callbacks[eV]])), ZV = (0, pV.jsx)("div", {
+        className: YV()("PluginsGrid", {
+          SectionBody: !xV
         }),
-        children: QM.map((MM => {
-          let [iM, OM] = MM;
-          return (0, PM.jsx)(zM, {
-            plugin: iM,
-            callbacks: OM,
-            disabled: rM
-          }, iM)
+        children: nV.map((VV => {
+          let [xV, JV] = VV;
+          return (0, pV.jsx)(wV, {
+            plugin: xV,
+            callbacks: JV,
+            disabled: eV
+          }, xV)
         }))
       });
-      return iM ? LM : (0, PM.jsxs)("div", {
+      return xV ? ZV : (0, pV.jsxs)("div", {
         className: "BloxdForm",
-        children: [(0, PM.jsx)("div", {
+        children: [(0, pV.jsx)("div", {
           className: "SectionTitle",
-          children: OM("worldBuilder:pluginsSection")
-        }), LM]
+          children: JV("worldBuilder:pluginsSection")
+        }), ZV]
       })
     }
 
-    function zM(MM) {
+    function wV(VV) {
       let {
-        plugin: rM,
+        plugin: eV,
         callbacks: {
-          isEnabled: iM,
-          kR: OM
+          isEnabled: xV,
+          pW: JV
         },
-        disabled: jM
-      } = MM;
+        disabled: UV
+      } = VV;
       const {
-        t: nM
-      } = (0, aM.A)(), QM = iM();
-      return (0, PM.jsxs)("div", {
-        className: SM()("PluginCard", {
-          PluginCardEnabled: QM,
-          PluginCardDisabledForm: jM
+        t: QV
+      } = (0, yV.A)(), nV = xV();
+      return (0, pV.jsxs)("div", {
+        className: YV()("PluginCard", {
+          PluginCardEnabled: nV,
+          PluginCardDisabledForm: UV
         }),
         "data-pad-focusable": !0,
-        "aria-disabled": jM || void 0,
+        "aria-disabled": UV || void 0,
         onClick: () => {
-          jM || OM(!QM)
+          UV || JV(!nV)
         },
-        children: [(0, PM.jsx)("div", {
+        children: [(0, pV.jsx)("div", {
           className: "PluginCardIcon",
-          children: (0, PM.jsx)("img", {
-            src: `/textures/games/classic/customGames/${rM}.png`,
-            alt: rM
+          children: (0, pV.jsx)("img", {
+            src: `/textures/games/classic/customGames/${eV}.png`,
+            alt: eV
           })
-        }), (0, PM.jsxs)("div", {
+        }), (0, pV.jsxs)("div", {
           className: "PluginCardBody",
-          children: [(0, PM.jsx)("div", {
+          children: [(0, pV.jsx)("div", {
             className: "PluginCardTitle",
-            children: nM(LM[rM])
-          }), (0, PM.jsx)("div", {
+            children: QV(ZV[eV])
+          }), (0, pV.jsx)("div", {
             className: "PluginCardDescription",
-            children: nM(mM[rM])
+            children: QV(vV[eV])
           })]
-        }), (0, PM.jsx)("span", {
+        }), (0, pV.jsx)("span", {
           className: "PluginCardToggleLabel",
-          children: nM(QM ? "general:on" : "general:off")
+          children: QV(nV ? "general:on" : "general:off")
         })]
       })
     }
-    const LM = {
+    const ZV = {
         fallDamage: "classic:enableFallDamage",
         tpRequests: "classic:enableTpRequests",
         spawnProtection: "classic:enableSpawnProtection",
@@ -187,7 +187,7 @@ export const modules = {
         survivalGuns: "classic:enableSurvivalGuns",
         dayNight: "classic:enableDayNight"
       },
-      mM = {
+      vV = {
         fallDamage: "classic:enableFallDamageDescription",
         tpRequests: "classic:enableTpRequestsDescription",
         spawnProtection: "classic:enableSpawnProtectionDescription",
@@ -197,656 +197,656 @@ export const modules = {
         dayNight: "classic:enableDayNightDescription"
       }
   },
-  5335: (MM, rM, iM) => {
-    iM.d(rM, {
-      g: () => Sr,
-      d: () => Or,
-      f: () => ir,
-      j: () => jr
+  5425: (VV, eV, xV) => {
+    xV.d(eV, {
+      i: () => Ye,
+      c: () => Je,
+      f: () => xe,
+      k: () => Ue
     });
-    var OM = iM(44),
-      SM = iM(1429),
-      jM = iM(1520),
-      aM = iM(1763),
-      PM = iM(1188),
-      nM = iM(1396),
-      QM = iM(1440),
-      zM = iM(1398),
-      LM = iM(1229),
-      mM = iM(1116),
-      HM = iM.n(mM),
-      hM = iM(313),
-      JM = iM(5003),
-      dM = iM(1242),
-      yM = iM(5343),
-      lM = iM(3530),
-      EM = iM(5356),
-      UM = iM(1303);
+    var JV = xV(62),
+      YV = xV(1439),
+      UV = xV(1551),
+      yV = xV(1772),
+      pV = xV(1220),
+      QV = xV(1408),
+      nV = xV(1446),
+      wV = xV(1414),
+      ZV = xV(1252),
+      vV = xV(1146),
+      rV = xV.n(vV),
+      kV = xV(364),
+      bV = xV(5103),
+      EV = xV(1269),
+      BV = xV(5428),
+      jV = xV(3551),
+      qV = xV(5442),
+      tV = xV(1321);
 
-    function GM(MM) {
+    function FV(VV) {
       let {
-        icon: rM,
-        title: iM,
-        disabled: OM,
-        children: SM
-      } = MM;
-      return (0, UM.jsxs)("div", {
-        className: HM()("ManageCard", {
-          ManageCardDisabled: OM
+        icon: eV,
+        title: xV,
+        disabled: JV,
+        children: YV
+      } = VV;
+      return (0, tV.jsxs)("div", {
+        className: rV()("ManageCard", {
+          ManageCardDisabled: JV
         }),
-        children: [(0, UM.jsxs)("div", {
+        children: [(0, tV.jsxs)("div", {
           className: "ManageCardHead",
-          children: [(0, UM.jsx)("div", {
+          children: [(0, tV.jsx)("div", {
             className: "ManageCardIcon",
-            children: (0, UM.jsx)(zM.b, {
-              name: rM
+            children: (0, tV.jsx)(wV.b, {
+              name: eV
             })
-          }), (0, UM.jsx)("div", {
-            children: (0, UM.jsx)("h2", {
+          }), (0, tV.jsx)("div", {
+            children: (0, tV.jsx)("h2", {
               className: "ManageCardTitle",
-              children: iM
+              children: xV
             })
           })]
-        }), (0, UM.jsxs)("div", {
+        }), (0, tV.jsxs)("div", {
           className: "ManageCardBody",
-          children: [SM, OM && (0, UM.jsx)("div", {
+          children: [YV, JV && (0, tV.jsx)("div", {
             className: "ManageCardDisabledOverlay"
           })]
         })]
       })
     }
 
-    function CM(MM) {
+    function TV(VV) {
       let {
-        label: rM,
-        caption: iM,
-        children: OM
-      } = MM;
-      return (0, UM.jsxs)("div", {
+        label: eV,
+        caption: xV,
+        children: JV
+      } = VV;
+      return (0, tV.jsxs)("div", {
         className: "ManageStackedField",
-        children: [(0, UM.jsx)("div", {
+        children: [(0, tV.jsx)("div", {
           className: "ManageStackedFieldLabel",
-          children: rM
-        }), OM, iM && (0, UM.jsx)("div", {
+          children: eV
+        }), JV, xV && (0, tV.jsx)("div", {
           className: "ManageStackedFieldCaption",
-          children: iM
+          children: xV
         })]
       })
     }
 
-    function eM(MM) {
+    function PV(VV) {
       let {
-        label: rM,
-        caption: iM,
-        disabled: OM,
-        children: SM
-      } = MM;
-      return (0, UM.jsxs)("div", {
-        className: HM()("ManageField", {
-          ManageFieldDisabled: OM
+        label: eV,
+        caption: xV,
+        disabled: JV,
+        children: YV
+      } = VV;
+      return (0, tV.jsxs)("div", {
+        className: rV()("ManageField", {
+          ManageFieldDisabled: JV
         }),
-        children: [(0, UM.jsxs)("div", {
+        children: [(0, tV.jsxs)("div", {
           className: "ManageFieldText",
-          children: [(0, UM.jsx)("div", {
+          children: [(0, tV.jsx)("div", {
             className: "ManageFieldLabel",
-            children: rM
-          }), (0, UM.jsx)("div", {
+            children: eV
+          }), (0, tV.jsx)("div", {
             className: "ManageFieldCaption",
-            children: iM
+            children: xV
           })]
-        }), (0, UM.jsx)("div", {
+        }), (0, tV.jsx)("div", {
           className: "ManageFieldControl",
-          children: SM
+          children: YV
         })]
       })
     }
 
-    function bM(MM) {
-      var rM, iM;
+    function AV(VV) {
+      var eV, xV;
       let {
-        schematicData: OM,
-        updateSchematicData: SM,
-        publishFormEnabled: jM,
-        formEnabled: aM
-      } = MM;
+        schematicData: JV,
+        updateSchematicData: YV,
+        publishFormEnabled: UV,
+        formEnabled: yV
+      } = VV;
       const {
-        t: nM
-      } = (0, PM.A)(), QM = !jM, zM = {
+        t: QV
+      } = (0, pV.A)(), nV = !UV, wV = {
         tpRequests: {
-          isEnabled: () => !OM.disableTpRequests,
-          kR: MM => SM("disableTpRequests", !MM)
+          isEnabled: () => !JV.disableTpRequests,
+          pW: VV => YV("disableTpRequests", !VV)
         },
         spawnProtection: {
-          isEnabled: () => !OM.disableSpawnProtection,
-          kR: MM => SM("disableSpawnProtection", !MM)
+          isEnabled: () => !JV.disableSpawnProtection,
+          pW: VV => YV("disableSpawnProtection", !VV)
         },
         spawnReset: {
-          isEnabled: () => !!OM.enableSpawnReset,
-          kR: MM => SM("enableSpawnReset", MM)
+          isEnabled: () => !!JV.enableSpawnReset,
+          pW: VV => YV("enableSpawnReset", VV)
         },
         smpMarketplace: {
-          isEnabled: () => !!OM.enableSmpMarketplace,
-          kR: MM => SM("enableSmpMarketplace", MM)
+          isEnabled: () => !!JV.enableSmpMarketplace,
+          pW: VV => YV("enableSmpMarketplace", VV)
         },
         survivalGuns: {
-          isEnabled: () => !!OM.enableSurvivalGuns,
-          kR: MM => SM("enableSurvivalGuns", MM)
+          isEnabled: () => !!JV.enableSurvivalGuns,
+          pW: VV => YV("enableSurvivalGuns", VV)
         },
         fallDamage: {
-          isEnabled: () => !OM.disableFallDamage,
-          kR: MM => SM("disableFallDamage", !MM)
+          isEnabled: () => !JV.disableFallDamage,
+          pW: VV => YV("disableFallDamage", !VV)
         },
         dayNight: {
-          isEnabled: () => !!OM.enableDayNight,
-          kR: MM => SM("enableDayNight", MM)
+          isEnabled: () => !!JV.enableDayNight,
+          pW: VV => YV("enableDayNight", VV)
         }
       };
-      return (0, UM.jsxs)(UM.Fragment, {
-        children: [!1 === OM.schematicContainsSpawnBlock && (0, UM.jsx)("div", {
+      return (0, tV.jsxs)(tV.Fragment, {
+        children: [!1 === JV.schematicContainsSpawnBlock && (0, tV.jsx)("div", {
           className: "ManageWarningBanner",
-          children: nM("worldBuilder:mustContainSpawnBlock")
-        }), (0, UM.jsxs)("div", {
+          children: QV("worldBuilder:mustContainSpawnBlock")
+        }), (0, tV.jsxs)("div", {
           className: "ManageSettingsGrid",
-          children: [(0, UM.jsxs)(GM, {
+          children: [(0, tV.jsxs)(FV, {
             icon: "globe",
-            title: nM("worldBuilder:worldRulesSection"),
-            disabled: !aM,
-            children: [(0, UM.jsx)(eM, {
-              label: nM("classic:defaultGamemode"),
-              caption: nM("classic:defaultGamemodeDescription"),
-              disabled: QM,
-              children: (0, UM.jsx)(lM.e, {
+            title: QV("worldBuilder:worldRulesSection"),
+            disabled: !yV,
+            children: [(0, tV.jsx)(PV, {
+              label: QV("classic:defaultGamemode"),
+              caption: QV("classic:defaultGamemodeDescription"),
+              disabled: nV,
+              children: (0, tV.jsx)(jV.c, {
                 controlClassName: "ManageDropdown",
-                options: JM.C.map((MM => ({
-                  value: MM,
-                  label: hM.p[MM]
+                options: bV.A.map((VV => ({
+                  value: VV,
+                  label: kV.r[VV]
                 }))),
-                value: OM.defaultGamemode,
-                onChange: MM => SM("defaultGamemode", MM.value)
+                value: JV.defaultGamemode,
+                onChange: VV => YV("defaultGamemode", VV.value)
               })
-            }), (0, UM.jsx)(eM, {
-              label: nM("classic:voidDeathHeight"),
-              caption: nM("classic:voidDeathHeightDescription"),
-              disabled: QM,
-              children: (0, UM.jsxs)("div", {
+            }), (0, tV.jsx)(PV, {
+              label: QV("classic:voidDeathHeight"),
+              caption: QV("classic:voidDeathHeightDescription"),
+              disabled: nV,
+              children: (0, tV.jsxs)("div", {
                 className: "ManageNumberField",
-                children: [(0, UM.jsx)("input", {
+                children: [(0, tV.jsx)("input", {
                   type: "number",
-                  max: dM.E,
-                  value: null !== (rM = OM.voidDeathHeight) && void 0 !== rM ? rM : "",
-                  onChange: MM => {
-                    const rM = parseInt(MM.target.value);
-                    SM("voidDeathHeight", rM)
+                  max: EV.H,
+                  value: null !== (eV = JV.voidDeathHeight) && void 0 !== eV ? eV : "",
+                  onChange: VV => {
+                    const eV = parseInt(VV.target.value);
+                    YV("voidDeathHeight", eV)
                   }
-                }), (0, UM.jsx)("span", {
+                }), (0, tV.jsx)("span", {
                   className: "ManageFieldUnit",
-                  children: nM("worldBuilder:blocksUnit")
+                  children: QV("worldBuilder:blocksUnit")
                 })]
               })
-            }), (0, UM.jsx)(eM, {
-              label: nM("classic:worldBorder"),
-              caption: nM("classic:worldBorderDescription"),
-              disabled: QM,
-              children: (0, UM.jsxs)("div", {
+            }), (0, tV.jsx)(PV, {
+              label: QV("classic:worldBorder"),
+              caption: QV("classic:worldBorderDescription"),
+              disabled: nV,
+              children: (0, tV.jsxs)("div", {
                 className: "ManageNumberField",
-                children: [(0, UM.jsx)("input", {
+                children: [(0, tV.jsx)("input", {
                   type: "number",
-                  min: dM.M,
-                  max: dM.H,
-                  placeholder: nM("worldBuilder:noWorldBorderLimit"),
-                  value: null !== (iM = OM.worldBorder) && void 0 !== iM ? iM : "",
-                  onChange: MM => {
-                    const rM = parseInt(MM.target.value);
-                    SM("worldBorder", isNaN(rM) ? null : rM)
+                  min: EV.M,
+                  max: EV.J,
+                  placeholder: QV("worldBuilder:noWorldBorderLimit"),
+                  value: null !== (xV = JV.worldBorder) && void 0 !== xV ? xV : "",
+                  onChange: VV => {
+                    const eV = parseInt(VV.target.value);
+                    YV("worldBorder", isNaN(eV) ? null : eV)
                   }
-                }), (0, UM.jsx)("span", {
+                }), (0, tV.jsx)("span", {
                   className: "ManageFieldUnit",
-                  children: nM("worldBuilder:blocksUnit")
+                  children: QV("worldBuilder:blocksUnit")
                 })]
               })
-            }), (0, UM.jsx)(eM, {
-              label: nM("classic:disableMobs"),
-              caption: nM("classic:disableMobsDescription"),
-              disabled: QM,
-              children: (0, UM.jsx)(yM.f, {
-                checked: OM.disableMobs,
-                setChecked: MM => SM("disableMobs", MM),
-                disabled: QM
+            }), (0, tV.jsx)(PV, {
+              label: QV("classic:disableMobs"),
+              caption: QV("classic:disableMobsDescription"),
+              disabled: nV,
+              children: (0, tV.jsx)(BV.k, {
+                checked: JV.disableMobs,
+                setChecked: VV => YV("disableMobs", VV),
+                disabled: nV
               })
             })]
-          }), (0, UM.jsxs)(GM, {
+          }), (0, tV.jsxs)(FV, {
             icon: "user-group",
-            title: nM("worldBuilder:playerAndLobbySection"),
-            disabled: !aM,
-            children: [(0, UM.jsx)(eM, {
-              label: nM("classic:disableKeepInventory"),
-              caption: nM("classic:disableKeepInventoryDescription"),
-              disabled: QM,
-              children: (0, UM.jsx)(yM.f, {
-                checked: OM.disableKeepInventory,
-                setChecked: MM => SM("disableKeepInventory", MM),
-                disabled: QM
+            title: QV("worldBuilder:playerAndLobbySection"),
+            disabled: !yV,
+            children: [(0, tV.jsx)(PV, {
+              label: QV("classic:disableKeepInventory"),
+              caption: QV("classic:disableKeepInventoryDescription"),
+              disabled: nV,
+              children: (0, tV.jsx)(BV.k, {
+                checked: JV.disableKeepInventory,
+                setChecked: VV => YV("disableKeepInventory", VV),
+                disabled: nV
               })
-            }), (0, UM.jsx)(eM, {
-              label: nM("classic:persistInventory"),
-              caption: nM("classic:persistInventoryDescription"),
-              disabled: QM,
-              children: (0, UM.jsx)(lM.e, {
+            }), (0, tV.jsx)(PV, {
+              label: QV("classic:persistInventory"),
+              caption: QV("classic:persistInventoryDescription"),
+              disabled: nV,
+              children: (0, tV.jsx)(jV.c, {
                 controlClassName: "ManageDropdown",
-                options: JM.n.map((MM => ({
-                  value: MM,
-                  label: hM.h[MM]
+                options: bV.j.map((VV => ({
+                  value: VV,
+                  label: kV.f[VV]
                 }))),
-                value: OM.persistInventory,
-                onChange: MM => SM("persistInventory", MM.value)
+                value: JV.persistInventory,
+                onChange: VV => YV("persistInventory", VV.value)
               })
-            }), (0, UM.jsx)(eM, {
-              label: nM("classic:persistWorld"),
-              caption: nM("classic:persistWorldDescription"),
-              disabled: QM,
-              children: (0, UM.jsx)(yM.f, {
-                checked: OM.persistWorld,
-                setChecked: MM => SM("persistWorld", MM),
-                disabled: QM
+            }), (0, tV.jsx)(PV, {
+              label: QV("classic:persistWorld"),
+              caption: QV("classic:persistWorldDescription"),
+              disabled: nV,
+              children: (0, tV.jsx)(BV.k, {
+                checked: JV.persistWorld,
+                setChecked: VV => YV("persistWorld", VV),
+                disabled: nV
               })
-            }), (0, UM.jsx)(eM, {
-              label: nM("classic:disableLobbySpawn"),
-              caption: nM("classic:disableLobbySpawnDescription"),
-              disabled: QM,
-              children: (0, UM.jsx)(yM.f, {
-                checked: OM.disableLobbySpawn,
-                setChecked: MM => SM("disableLobbySpawn", MM),
-                disabled: QM
+            }), (0, tV.jsx)(PV, {
+              label: QV("classic:disableLobbySpawn"),
+              caption: QV("classic:disableLobbySpawnDescription"),
+              disabled: nV,
+              children: (0, tV.jsx)(BV.k, {
+                checked: JV.disableLobbySpawn,
+                setChecked: VV => YV("disableLobbySpawn", VV),
+                disabled: nV
               })
-            }), (0, UM.jsx)(eM, {
-              label: nM("classic:hideLobbyCode"),
-              caption: nM("classic:hideLobbyCodeDescription"),
-              disabled: QM,
-              children: (0, UM.jsx)(yM.f, {
-                checked: OM.hideLobbyCode,
-                setChecked: MM => SM("hideLobbyCode", MM),
-                disabled: QM
+            }), (0, tV.jsx)(PV, {
+              label: QV("classic:hideLobbyCode"),
+              caption: QV("classic:hideLobbyCodeDescription"),
+              disabled: nV,
+              children: (0, tV.jsx)(BV.k, {
+                checked: JV.hideLobbyCode,
+                setChecked: VV => YV("hideLobbyCode", VV),
+                disabled: nV
               })
             })]
           })]
-        }), (0, UM.jsx)(GM, {
+        }), (0, tV.jsx)(FV, {
           icon: "layer-group",
-          title: nM("worldBuilder:pluginsSection"),
-          disabled: !aM,
-          children: (0, UM.jsx)(EM.b, {
-            callbacks: zM,
-            disabled: QM,
+          title: QV("worldBuilder:pluginsSection"),
+          disabled: !yV,
+          children: (0, tV.jsx)(qV.e, {
+            callbacks: wV,
+            disabled: nV,
             advancedMode: !0,
             hideWrapper: !0
           })
         })]
       })
     }
-    var wM = iM(5362),
-      tM = iM(4720),
-      gM = iM(1573),
-      uM = iM(3881),
-      RM = iM(1142),
-      pM = iM(5306),
-      WM = iM(5364),
-      sM = iM(1522);
-    const DM = 50,
-      kM = .3;
-    async function ZM(MM) {
-      const rM = await
-      function(MM) {
-        return new Promise(((rM, iM) => {
-          const OM = new FileReader;
-          OM.onload = () => rM(OM.result), OM.onerror = iM, OM.readAsDataURL(MM)
+    var NV = xV(5446),
+      XV = xV(4795),
+      MV = xV(1603),
+      zV = xV(3931),
+      GV = xV(1168),
+      WV = xV(5404),
+      RV = xV(5448),
+      gV = xV(1557);
+    const DV = 50,
+      iV = .3;
+    async function CV(VV) {
+      const eV = await
+      function(VV) {
+        return new Promise(((eV, xV) => {
+          const JV = new FileReader;
+          JV.onload = () => eV(JV.result), JV.onerror = xV, JV.readAsDataURL(VV)
         }))
-      }(MM), iM = await
-      function(MM) {
-        return new Promise(((rM, iM) => {
-          const OM = new Image;
-          OM.onload = () => rM(OM), OM.onerror = () => iM(new Error("Failed to load image")), OM.src = MM
+      }(VV), xV = await
+      function(VV) {
+        return new Promise(((eV, xV) => {
+          const JV = new Image;
+          JV.onload = () => eV(JV), JV.onerror = () => xV(new Error("Failed to load image")), JV.src = VV
         }))
-      }(rM);
-      if (iM.naturalHeight > iM.naturalWidth) throw new oM;
-      const OM = 1024 * DM,
+      }(eV);
+      if (xV.naturalHeight > xV.naturalWidth) throw new aV;
+      const JV = 1024 * DV,
         {
-          dataUrl: SM,
-          finalQuality: jM
-        } = function(MM, rM) {
-          const iM = document.createElement("canvas");
-          iM.width = MM.naturalWidth, iM.height = MM.naturalHeight, iM.getContext("2d").drawImage(MM, 0, 0);
-          let OM = .92,
-            SM = iM.toDataURL("image/jpeg", OM);
-          for (; .75 * SM.length > rM && OM > .05;) OM -= .05, SM = iM.toDataURL("image/jpeg", OM);
+          dataUrl: YV,
+          finalQuality: UV
+        } = function(VV, eV) {
+          const xV = document.createElement("canvas");
+          xV.width = VV.naturalWidth, xV.height = VV.naturalHeight, xV.getContext("2d").drawImage(VV, 0, 0);
+          let JV = .92,
+            YV = xV.toDataURL("image/jpeg", JV);
+          for (; .75 * YV.length > eV && JV > .05;) JV -= .05, YV = xV.toDataURL("image/jpeg", JV);
           return {
-            dataUrl: SM,
-            finalQuality: OM
+            dataUrl: YV,
+            finalQuality: JV
           }
-        }(iM, OM);
-      if (Math.ceil(.75 * SM.length) > OM) throw new fM;
+        }(xV, JV);
+      if (Math.ceil(.75 * YV.length) > JV) throw new oV;
       return {
-        base64Jpg: SM,
-        heavilyCompressed: jM < kM
+        base64Jpg: YV,
+        heavilyCompressed: UV < iV
       }
     }
-    class oM extends Error {}
-    class fM extends Error {}
-    var YM = function(MM) {
-      return MM[MM.NOT_LOGGED_IN = 0] = "NOT_LOGGED_IN", MM[MM.THUMBNAIL_LIMIT_REACHED = 1] = "THUMBNAIL_LIMIT_REACHED", MM
-    }(YM || {});
+    class aV extends Error {}
+    class oV extends Error {}
+    var cV = function(VV) {
+      return VV[VV.NOT_LOGGED_IN = 0] = "NOT_LOGGED_IN", VV[VV.THUMBNAIL_LIMIT_REACHED = 1] = "THUMBNAIL_LIMIT_REACHED", VV
+    }(cV || {});
 
-    function NM(MM) {
-      var rM;
+    function hV(VV) {
+      var eV;
       let {
-        schematicId: iM,
-        hasReadUploadPolicy: SM,
-        onPolicyValidationError: nM,
-        onThumbnailReady: QM
-      } = MM;
+        schematicId: xV,
+        hasReadUploadPolicy: YV,
+        onPolicyValidationError: QV,
+        onThumbnailReady: nV
+      } = VV;
       const {
-        t: mM
-      } = (0, PM.A)(), [hM, JM] = (0, OM.useState)(null), [dM, yM] = (0, OM.useState)(""), [lM, EM] = (0, OM.useState)(""), [GM, CM] = (0, OM.useState)(!0), [eM, bM] = (0, OM.useState)(!1), wM = (0, OM.useRef)(!1), [tM, gM] = (0, OM.useState)(null), [uM, RM] = (0, OM.useState)(!1), [pM, sM] = (0, OM.useState)(!1), DM = (0, OM.useRef)(0), {
-        getRootProps: kM,
-        getInputProps: YM,
-        isDragActive: NM
-      } = (0, WM.e)({
+        t: vV
+      } = (0, pV.A)(), [kV, bV] = (0, JV.useState)(null), [EV, BV] = (0, JV.useState)(""), [jV, qV] = (0, JV.useState)(""), [FV, TV] = (0, JV.useState)(!0), [PV, AV] = (0, JV.useState)(!1), NV = (0, JV.useRef)(!1), [XV, MV] = (0, JV.useState)(null), [zV, GV] = (0, JV.useState)(!1), [WV, gV] = (0, JV.useState)(!1), DV = (0, JV.useRef)(0), {
+        getRootProps: iV,
+        getInputProps: cV,
+        isDragActive: hV
+      } = (0, RV.e)({
         accept: {
           "image/*": [".png", ".jpg", ".jpeg", ".webp", ".gif", ".bmp"]
         },
         multiple: !1,
-        onDrop: async MM => {
-          if (0 === MM.length) return;
-          const rM = MM[0],
-            iM = ++DM.current;
-          gM(null), RM(!1), JM(null), yM(rM.name);
+        onDrop: async VV => {
+          if (0 === VV.length) return;
+          const eV = VV[0],
+            xV = ++DV.current;
+          MV(null), GV(!1), bV(null), BV(eV.name);
           try {
-            const MM = await ZM(rM);
-            if (iM !== DM.current) return;
-            JM(MM), RM(MM.heavilyCompressed)
-          } catch (OM) {
-            if (iM !== DM.current) return;
-            gM(mM(OM instanceof oM ? "thumbnail:portraitImagesNotAllowed" : OM instanceof fM ? "thumbnail:couldNotCompressImage" : "thumbnail:failedToUploadImage"))
+            const VV = await CV(eV);
+            if (xV !== DV.current) return;
+            bV(VV), GV(VV.heavilyCompressed)
+          } catch (JV) {
+            if (xV !== DV.current) return;
+            MV(vV(JV instanceof aV ? "thumbnail:portraitImagesNotAllowed" : JV instanceof oV ? "thumbnail:couldNotCompressImage" : "thumbnail:failedToUploadImage"))
           }
         },
         useFsAccessApi: !1
-      }), AM = dM.length <= 30 ? dM : `${dM.slice(0,27)}...`, xM = null !== (rM = null === hM || void 0 === hM ? void 0 : hM.base64Jpg) && void 0 !== rM ? rM : null, vM = lM.trim(), FM = vM.length >= LM.q && vM.length <= LM.p, BM = pM && !hM && !tM, XM = pM && !FM;
-      return (0, UM.jsxs)("div", {
+      }), lV = EV.length <= 30 ? EV : `${EV.slice(0,27)}...`, LV = null !== (eV = null === kV || void 0 === kV ? void 0 : kV.base64Jpg) && void 0 !== eV ? eV : null, fV = jV.trim(), mV = fV.length >= ZV.k && fV.length <= ZV.j, KV = WV && !kV && !XV, HV = WV && !mV;
+      return (0, tV.jsxs)("div", {
         className: "ThumbnailUploadContainer",
-        children: [(0, UM.jsxs)("div", {
-          ...kM({
-            className: HM()("ThumbnailUploadDropzone", {
-              ActiveDrag: NM,
-              ValidationError: BM
+        children: [(0, tV.jsxs)("div", {
+          ...iV({
+            className: rV()("ThumbnailUploadDropzone", {
+              ActiveDrag: hV,
+              ValidationError: KV
             })
           }),
-          children: [(0, UM.jsx)("input", {
-            ...YM()
-          }), !NM && xM ? (0, UM.jsxs)(UM.Fragment, {
-            children: [(0, UM.jsxs)("div", {
+          children: [(0, tV.jsx)("input", {
+            ...cV()
+          }), !hV && LV ? (0, tV.jsxs)(tV.Fragment, {
+            children: [(0, tV.jsxs)("div", {
               className: "ThumbnailAspectPreviews",
-              children: [(0, UM.jsxs)("div", {
+              children: [(0, tV.jsxs)("div", {
                 className: "ThumbnailAspectPreview",
-                children: [(0, UM.jsx)("div", {
+                children: [(0, tV.jsx)("div", {
                   className: "ThumbnailAspectLabel",
                   children: "1:1"
-                }), (0, UM.jsx)("div", {
+                }), (0, tV.jsx)("div", {
                   className: "ThumbnailAspectFrame Square",
-                  children: (0, UM.jsx)("img", {
-                    src: xM,
+                  children: (0, tV.jsx)("img", {
+                    src: LV,
                     alt: "1:1 preview"
                   })
                 })]
-              }), (0, UM.jsxs)("div", {
+              }), (0, tV.jsxs)("div", {
                 className: "ThumbnailAspectPreview",
-                children: [(0, UM.jsx)("div", {
+                children: [(0, tV.jsx)("div", {
                   className: "ThumbnailAspectLabel",
                   children: "16:9"
-                }), (0, UM.jsx)("div", {
+                }), (0, tV.jsx)("div", {
                   className: "ThumbnailAspectFrame Wide",
-                  children: (0, UM.jsx)("img", {
-                    src: xM,
+                  children: (0, tV.jsx)("img", {
+                    src: LV,
                     alt: "16:9 preview"
                   })
                 })]
               })]
-            }), (0, UM.jsxs)("div", {
-              children: [(0, UM.jsx)("div", {
+            }), (0, tV.jsxs)("div", {
+              children: [(0, tV.jsx)("div", {
                 className: "ThumbnailUploadInstructions Active",
-                children: AM
-              }), (0, UM.jsx)("div", {
+                children: lV
+              }), (0, tV.jsx)("div", {
                 className: "ThumbnailUploadInstructions Preview",
-                children: mM("thumbnail:preview")
+                children: vV("thumbnail:preview")
               })]
             })]
-          }) : (0, UM.jsxs)(UM.Fragment, {
-            children: [(0, UM.jsx)("div", {
+          }) : (0, tV.jsxs)(tV.Fragment, {
+            children: [(0, tV.jsx)("div", {
               className: "ThumbnailUploadIcon",
-              children: (0, UM.jsx)(zM.b, {
+              children: (0, tV.jsx)(wV.b, {
                 name: "image"
               })
-            }), (0, UM.jsx)("div", {
+            }), (0, tV.jsx)("div", {
               className: "ThumbnailUploadInstructions",
-              children: mM("thumbnail:dragImageHere")
+              children: vV("thumbnail:dragImageHere")
             })]
           })]
-        }), BM && (0, UM.jsx)("div", {
+        }), KV && (0, tV.jsx)("div", {
           className: "ThumbnailUploadError",
-          children: mM("thumbnail:imageRequired")
-        }), (0, UM.jsx)(aM.b, {
-          className: HM()("ThumbnailUploadNameInput", {
-            ValidationError: XM
+          children: vV("thumbnail:imageRequired")
+        }), (0, tV.jsx)(yV.d, {
+          className: rV()("ThumbnailUploadNameInput", {
+            ValidationError: HV
           }),
-          placeholderText: mM("thumbnail:thumbnailName"),
-          defaultValue: lM,
-          onValueChange: MM => {
-            EM(MM)
+          placeholderText: vV("thumbnail:thumbnailName"),
+          defaultValue: jV,
+          onValueChange: VV => {
+            qV(VV)
           },
-          maxLength: LM.p
-        }), XM && (0, UM.jsx)("div", {
+          maxLength: ZV.j
+        }), HV && (0, tV.jsx)("div", {
           className: "ThumbnailUploadError",
-          children: mM("thumbnail:nameRequired", {
-            min: LM.q,
-            max: LM.p
+          children: vV("thumbnail:nameRequired", {
+            min: ZV.k,
+            max: ZV.j
           })
-        }), (0, UM.jsxs)("label", {
+        }), (0, tV.jsxs)("label", {
           className: "ThumbnailUploadCheckbox",
-          children: [(0, UM.jsx)("input", {
+          children: [(0, tV.jsx)("input", {
             type: "checkbox",
-            checked: GM,
-            onChange: MM => {
-              CM(MM.target.checked)
+            checked: FV,
+            onChange: VV => {
+              TV(VV.target.checked)
             }
-          }), mM("thumbnail:setAsThumbnailOnceApproved")]
-        }), uM && (0, UM.jsx)("div", {
+          }), vV("thumbnail:setAsThumbnailOnceApproved")]
+        }), zV && (0, tV.jsx)("div", {
           className: "ThumbnailUploadWarning",
-          children: mM("thumbnail:heavyCompressionWarning")
-        }), tM && (0, UM.jsx)("div", {
+          children: vV("thumbnail:heavyCompressionWarning")
+        }), XV && (0, tV.jsx)("div", {
           className: "ThumbnailUploadError",
-          children: tM
-        }), (0, UM.jsx)(jM.p, {
-          disabled: eM,
+          children: XV
+        }), (0, tV.jsx)(UV.m, {
+          disabled: PV,
           className: "ThumbnailUploadButton",
           onClick: async () => {
-            if (sM(!0), !wM.current && hM && FM && SM) {
-              wM.current = !0, bM(!0), gM(null);
+            if (gV(!0), !NV.current && kV && mV && YV) {
+              NV.current = !0, AV(!0), MV(null);
               try {
-                await QM(hM.base64Jpg, vM, GM ? iM : null)
-              } catch (MM) {
-                gM(MM.errorMessageForUser ? mM(MM.errorMessageForUser, MM.errorMessageTranslationParams) : mM("thumbnail:failedToUploadImage"))
+                await nV(kV.base64Jpg, fV, FV ? xV : null)
+              } catch (VV) {
+                MV(VV.errorMessageForUser ? vV(VV.errorMessageForUser, VV.errorMessageTranslationParams) : vV("thumbnail:failedToUploadImage"))
               } finally {
-                wM.current = !1, bM(!1)
+                NV.current = !1, AV(!1)
               }
-            } else SM || nM()
+            } else YV || QV()
           },
-          children: mM(eM ? "thumbnail:processing" : "thumbnail:uploadThumbnail")
+          children: vV(PV ? "thumbnail:processing" : "thumbnail:uploadThumbnail")
         })]
       })
     }
-    const AM = 2e3;
+    const lV = 2e3;
 
-    function xM(MM) {
+    function LV(VV) {
       let {
-        schematicId: rM,
-        ownedThumbnailCount: iM,
-        onClose: SM,
-        onThumbnailReady: jM
-      } = MM;
+        schematicId: eV,
+        ownedThumbnailCount: xV,
+        onClose: YV,
+        onThumbnailReady: UV
+      } = VV;
       const {
-        t: aM
-      } = (0, PM.A)(), {
-        userContext: nM
-      } = (0, RM.b)(), [QM, mM] = (0, OM.useState)(!1), [hM, JM] = (0, OM.useState)(!1), [dM, yM] = (0, OM.useState)(!1), lM = (0, OM.useRef)();
-      (0, OM.useEffect)((() => () => {
-        clearTimeout(lM.current)
+        t: yV
+      } = (0, pV.A)(), {
+        userContext: QV
+      } = (0, GV.d)(), [nV, vV] = (0, JV.useState)(!1), [kV, bV] = (0, JV.useState)(!1), [EV, BV] = (0, JV.useState)(!1), jV = (0, JV.useRef)();
+      (0, JV.useEffect)((() => () => {
+        clearTimeout(jV.current)
       }), []);
-      const EM = function(MM, rM) {
-        const iM = [];
-        return MM.isLoggedIn() || iM.push(YM.NOT_LOGGED_IN), rM >= LM.X && iM.push(YM.THUMBNAIL_LIMIT_REACHED), iM
-      }(nM, iM);
-      if (EM.length > 0) {
-        const MM = {
-          [YM.NOT_LOGGED_IN]: {
+      const qV = function(VV, eV) {
+        const xV = [];
+        return VV.isLoggedIn() || xV.push(cV.NOT_LOGGED_IN), eV >= ZV.Q && xV.push(cV.THUMBNAIL_LIMIT_REACHED), xV
+      }(QV, xV);
+      if (qV.length > 0) {
+        const VV = {
+          [cV.NOT_LOGGED_IN]: {
             key: "thumbnail:mustBeLoggedInToUpload"
           },
-          [YM.THUMBNAIL_LIMIT_REACHED]: {
+          [cV.THUMBNAIL_LIMIT_REACHED]: {
             key: "thumbnail:thumbnailLimitReachedPleaseDelete",
             params: {
-              max: LM.X
+              max: ZV.Q
             }
           }
         };
-        return (0, UM.jsxs)("div", {
+        return (0, tV.jsxs)("div", {
           className: "ThumbnailUploaderInner",
-          children: [(0, UM.jsx)("h1", {
+          children: [(0, tV.jsx)("h1", {
             className: "SchematicPopupTitle",
-            children: aM("thumbnail:cannotUploadThumbnail")
-          }), EM.map(((rM, iM) => {
-            const OM = MM[rM];
-            return (0, UM.jsxs)("div", {
+            children: yV("thumbnail:cannotUploadThumbnail")
+          }), qV.map(((eV, xV) => {
+            const JV = VV[eV];
+            return (0, tV.jsxs)("div", {
               className: "CannotUploadThumbnailItem",
-              children: [(0, UM.jsx)(zM.b, {
+              children: [(0, tV.jsx)(wV.b, {
                 name: "triangle-exclamation"
-              }), (0, UM.jsx)("span", {
-                children: aM(OM.key, OM.params)
+              }), (0, tV.jsx)("span", {
+                children: yV(JV.key, JV.params)
               })]
-            }, iM)
+            }, xV)
           }))]
         })
       }
-      return (0, UM.jsxs)("div", {
-        className: HM()("ThumbnailUploaderInner", {
-          ThumbnailUploaderSuccess: QM
+      return (0, tV.jsxs)("div", {
+        className: rV()("ThumbnailUploaderInner", {
+          ThumbnailUploaderSuccess: nV
         }),
-        children: [QM && (0, UM.jsxs)("div", {
+        children: [nV && (0, tV.jsxs)("div", {
           className: "ThumbnailUploadSuccessOverlay",
-          children: [(0, UM.jsxs)("div", {
+          children: [(0, tV.jsxs)("div", {
             className: "ThumbnailUploadSuccessIcon FullyFancyText AnimFadeInScaleUp",
-            children: [(0, UM.jsx)(zM.b, {
+            children: [(0, tV.jsx)(wV.b, {
               name: "check"
-            }), (0, UM.jsx)(sM.d, {})]
-          }), (0, UM.jsx)("div", {
+            }), (0, tV.jsx)(gV.b, {})]
+          }), (0, tV.jsx)("div", {
             className: "ThumbnailUploadSuccessText AnimFadeInScaleUp",
-            children: aM("thumbnail:thumbnailUploaded")
+            children: yV("thumbnail:thumbnailUploaded")
           })]
-        }), (0, UM.jsx)("h1", {
+        }), (0, tV.jsx)("h1", {
           className: "SchematicPopupTitle",
-          children: aM("thumbnail:uploadThumbnail")
-        }), (0, UM.jsxs)("div", {
+          children: yV("thumbnail:uploadThumbnail")
+        }), (0, tV.jsxs)("div", {
           className: "ThumbnailUploaderBody",
-          children: [(0, UM.jsxs)("div", {
+          children: [(0, tV.jsxs)("div", {
             className: "ThumbnailUploaderLeft",
-            children: [(0, UM.jsx)("h3", {
+            children: [(0, tV.jsx)("h3", {
               className: "SchematicPopupSubtitle",
-              children: aM("thumbnail:chooseImage", {
-                maxSizeKb: DM
+              children: yV("thumbnail:chooseImage", {
+                maxSizeKb: DV
               })
-            }), (0, UM.jsx)(NM, {
-              schematicId: rM,
-              hasReadUploadPolicy: hM,
+            }), (0, tV.jsx)(hV, {
+              schematicId: eV,
+              hasReadUploadPolicy: kV,
               onPolicyValidationError: () => {
-                yM(!0)
+                BV(!0)
               },
-              onThumbnailReady: async (MM, rM, iM) => {
-                await jM(MM, rM, iM), mM(!0), lM.current = setTimeout(SM, AM)
+              onThumbnailReady: async (VV, eV, xV) => {
+                await UV(VV, eV, xV), vV(!0), jV.current = setTimeout(YV, lV)
               }
             })]
-          }), (0, UM.jsxs)("div", {
+          }), (0, tV.jsxs)("div", {
             className: "ThumbnailUploadPolicy",
-            children: [(0, UM.jsx)("h3", {
+            children: [(0, tV.jsx)("h3", {
               className: "ThumbnailUploadPolicyTitle",
-              children: aM("thumbnail:uploadPolicy")
-            }), (0, UM.jsxs)("ul", {
+              children: yV("thumbnail:uploadPolicy")
+            }), (0, tV.jsxs)("ul", {
               className: "ThumbnailUploadPolicyList",
-              children: [(0, UM.jsxs)("li", {
+              children: [(0, tV.jsxs)("li", {
                 className: "ThumbnailUploadPolicyItem Allowed",
-                children: [(0, UM.jsx)(zM.b, {
+                children: [(0, tV.jsx)(wV.b, {
                   name: "check"
-                }), (0, UM.jsx)("span", {
-                  children: aM("thumbnail:policyFollowGuidelines")
+                }), (0, tV.jsx)("span", {
+                  children: yV("thumbnail:policyFollowGuidelines")
                 })]
-              }), (0, UM.jsxs)("li", {
+              }), (0, tV.jsxs)("li", {
                 className: "ThumbnailUploadPolicyItem Allowed",
-                children: [(0, UM.jsx)(zM.b, {
+                children: [(0, tV.jsx)(wV.b, {
                   name: "check"
-                }), (0, UM.jsx)("span", {
-                  children: aM("thumbnail:policyInGameAssets")
+                }), (0, tV.jsx)("span", {
+                  children: yV("thumbnail:policyInGameAssets")
                 })]
-              }), (0, UM.jsxs)("li", {
+              }), (0, tV.jsxs)("li", {
                 className: "ThumbnailUploadPolicyItem Allowed",
-                children: [(0, UM.jsx)(zM.b, {
+                children: [(0, tV.jsx)(wV.b, {
                   name: "check"
-                }), (0, UM.jsx)("span", {
-                  children: aM("thumbnail:policyLimitText")
+                }), (0, tV.jsx)("span", {
+                  children: yV("thumbnail:policyLimitText")
                 })]
-              }), (0, UM.jsxs)("li", {
+              }), (0, tV.jsxs)("li", {
                 className: "ThumbnailUploadPolicyItem NotAllowed",
-                children: [(0, UM.jsx)(zM.b, {
+                children: [(0, tV.jsx)(wV.b, {
                   name: "x"
-                }), (0, UM.jsx)("span", {
-                  children: aM("thumbnail:policyCopyrightContent")
+                }), (0, tV.jsx)("span", {
+                  children: yV("thumbnail:policyCopyrightContent")
                 })]
-              }), (0, UM.jsxs)("li", {
+              }), (0, tV.jsxs)("li", {
                 className: "ThumbnailUploadPolicyItem NotAllowed",
-                children: [(0, UM.jsx)(zM.b, {
+                children: [(0, tV.jsx)(wV.b, {
                   name: "x"
-                }), (0, UM.jsx)("span", {
-                  children: aM("thumbnail:policyOutOfGameAssets")
+                }), (0, tV.jsx)("span", {
+                  children: yV("thumbnail:policyOutOfGameAssets")
                 })]
-              }), (0, UM.jsxs)("li", {
+              }), (0, tV.jsxs)("li", {
                 className: "ThumbnailUploadPolicyItem NotAllowed",
-                children: [(0, UM.jsx)(zM.b, {
+                children: [(0, tV.jsx)(wV.b, {
                   name: "x"
-                }), (0, UM.jsx)("span", {
-                  children: aM("thumbnail:policyBloxdTags")
+                }), (0, tV.jsx)("span", {
+                  children: yV("thumbnail:policyBloxdTags")
                 })]
-              }), (0, UM.jsxs)("li", {
+              }), (0, tV.jsxs)("li", {
                 className: "ThumbnailUploadPolicyItem NotAllowed",
-                children: [(0, UM.jsx)(zM.b, {
+                children: [(0, tV.jsx)(wV.b, {
                   name: "x"
-                }), (0, UM.jsx)("span", {
-                  children: aM("thumbnail:policyMustReflectGame")
+                }), (0, tV.jsx)("span", {
+                  children: yV("thumbnail:policyMustReflectGame")
                 })]
               })]
-            }), (0, UM.jsxs)("label", {
-              className: HM()("ThumbnailUploadCheckbox Policy", {
-                ValidationError: dM && !hM
+            }), (0, tV.jsxs)("label", {
+              className: rV()("ThumbnailUploadCheckbox Policy", {
+                ValidationError: EV && !kV
               }),
-              children: [(0, UM.jsx)("input", {
+              children: [(0, tV.jsx)("input", {
                 type: "checkbox",
-                checked: hM,
-                onChange: MM => {
-                  JM(MM.target.checked)
+                checked: kV,
+                onChange: VV => {
+                  bV(VV.target.checked)
                 }
-              }), aM("thumbnail:agreeToUploadPolicy")]
-            }), dM && !hM && (0, UM.jsx)("div", {
+              }), yV("thumbnail:agreeToUploadPolicy")]
+            }), EV && !kV && (0, tV.jsx)("div", {
               className: "ThumbnailPolicyError",
-              children: aM("thumbnail:policyRequired")
+              children: yV("thumbnail:policyRequired")
             })]
           })]
         })]
       })
     }
-    var vM = iM(1202);
-    const FM = {
+    var fV = xV(1230);
+    const mV = {
       "custom-game-bad-thumbnail": {
         reason: "thumbnail:rejectionInappropriate",
         tips: ["thumbnail:rejectionInappropriateTip1", "thumbnail:rejectionInappropriateTip2", "thumbnail:rejectionInappropriateTip3"]
@@ -877,207 +877,207 @@ export const modules = {
       }
     };
 
-    function BM(MM) {
-      var rM, iM;
+    function KV(VV) {
+      var eV, xV;
       let {
-        schematicData: aM,
-        updateSchematicData: QM,
-        publishFormEnabled: LM,
-        onClose: mM
-      } = MM;
+        schematicData: yV,
+        updateSchematicData: nV,
+        publishFormEnabled: ZV,
+        onClose: vV
+      } = VV;
       const {
-        t: hM
-      } = (0, PM.A)(), {
-        userContext: JM,
-        isUserContextUpdating: dM
-      } = (0, RM.b)(), yM = (0, uM.b)(), [lM, EM] = (0, OM.useState)([]), [GM, CM] = (0, OM.useState)([]), [eM, bM] = (0, OM.useState)(!0), [wM, tM] = (0, OM.useState)(null !== (rM = aM.customThumbnailId) && void 0 !== rM ? rM : null), [WM, sM] = (0, OM.useState)(null), DM = (0, OM.useRef)(null !== (iM = aM.customThumbnailId) && void 0 !== iM ? iM : null), kM = (0, OM.useRef)(0), ZM = (0, OM.useRef)(null), oM = (0, OM.useRef)(null), fM = (0, OM.useRef)(null), YM = (0, OM.useRef)(!1);
+        t: kV
+      } = (0, pV.A)(), {
+        userContext: bV,
+        isUserContextUpdating: EV
+      } = (0, GV.d)(), BV = (0, zV.e)(), [jV, qV] = (0, JV.useState)([]), [FV, TV] = (0, JV.useState)([]), [PV, AV] = (0, JV.useState)(!0), [NV, XV] = (0, JV.useState)(null !== (eV = yV.customThumbnailId) && void 0 !== eV ? eV : null), [RV, gV] = (0, JV.useState)(null), DV = (0, JV.useRef)(null !== (xV = yV.customThumbnailId) && void 0 !== xV ? xV : null), iV = (0, JV.useRef)(0), CV = (0, JV.useRef)(null), aV = (0, JV.useRef)(null), oV = (0, JV.useRef)(null), cV = (0, JV.useRef)(!1);
 
-      function NM(MM, rM) {
-        fM.current && (clearTimeout(fM.current), fM.current = null), sM(MM), null !== MM && rM && (fM.current = setTimeout((() => {
-          sM(null), fM.current = null
+      function hV(VV, eV) {
+        oV.current && (clearTimeout(oV.current), oV.current = null), gV(VV), null !== VV && eV && (oV.current = setTimeout((() => {
+          gV(null), oV.current = null
         }), 5e3))
-      }(0, OM.useEffect)((() => () => {
-        clearTimeout(oM.current), clearTimeout(fM.current)
+      }(0, JV.useEffect)((() => () => {
+        clearTimeout(aV.current), clearTimeout(oV.current)
       }), []);
-      const AM = (0, OM.useCallback)((() => {
-        bM(!0), gM.c.getOwnedThumbnails(JM).then((MM => {
-          const rM = [],
-            iM = [];
-          for (const OM of MM.thumbnails) OM.rejectionPolicyId ? rM.push(OM) : iM.push(OM);
-          rM.sort(((MM, rM) => MM.lastUpdatedAt - rM.lastUpdatedAt)), iM.sort(((MM, rM) => {
-            const iM = MM.approved ? 1 : 0,
-              OM = (rM.approved ? 1 : 0) - iM;
-            return 0 !== OM ? OM : rM.lastUpdatedAt - MM.lastUpdatedAt
-          })), CM(rM), EM(iM)
-        })).catch((MM => {
-          console.error("Failed to fetch thumbnails:", MM)
+      const lV = (0, JV.useCallback)((() => {
+        AV(!0), MV.b.getOwnedThumbnails(bV).then((VV => {
+          const eV = [],
+            xV = [];
+          for (const JV of VV.thumbnails) JV.rejectionPolicyId ? eV.push(JV) : xV.push(JV);
+          eV.sort(((VV, eV) => VV.lastUpdatedAt - eV.lastUpdatedAt)), xV.sort(((VV, eV) => {
+            const xV = VV.approved ? 1 : 0,
+              JV = (eV.approved ? 1 : 0) - xV;
+            return 0 !== JV ? JV : eV.lastUpdatedAt - VV.lastUpdatedAt
+          })), TV(eV), qV(xV)
+        })).catch((VV => {
+          console.error("Failed to fetch thumbnails:", VV)
         })).finally((() => {
-          bM(!1)
+          AV(!1)
         }))
-      }), [JM]);
-      async function FM(MM, rM, iM) {
-        return gM.c.uploadSchematicThumbnail(JM, MM, rM, iM).then((() => {
-          NM({
-            text: hM("thumbnail:uploadedAwaitingModeration"),
+      }), [bV]);
+      async function mV(VV, eV, xV) {
+        return MV.b.uploadSchematicThumbnail(bV, VV, eV, xV).then((() => {
+          hV({
+            text: kV("thumbnail:uploadedAwaitingModeration"),
             type: "success"
-          }, !0), AM()
+          }, !0), lV()
         }))
       }
 
-      function BM() {
-        kM.current = Date.now(), oM.current = null;
-        const MM = ZM.current;
-        ZM.current = null, NM({
-          text: hM("thumbnail:settingThumbnail"),
+      function KV() {
+        iV.current = Date.now(), aV.current = null;
+        const VV = CV.current;
+        CV.current = null, hV({
+          text: kV("thumbnail:settingThumbnail"),
           type: "info"
-        }, !1), gM.c.setSchematicThumbnail(JM, aM.schematicId, MM).then((() => {
-          yM.current && (NM({
-            text: hM("thumbnail:thumbnailUpdated"),
+        }, !1), MV.b.setSchematicThumbnail(bV, yV.schematicId, VV).then((() => {
+          BV.current && (hV({
+            text: kV("thumbnail:thumbnailUpdated"),
             type: "success"
-          }, !0), DM.current = MM, QM("customThumbnailId", MM), QM("customThumbnailBlurhash", void 0), QM("customThumbnailVariants", void 0))
-        })).catch((MM => {
-          yM.current && (NM({
-            text: MM.errorMessageForUser ? hM(MM.errorMessageForUser, MM.errorMessageTranslationParams) : hM("thumbnail:failedToSetThumbnail"),
+          }, !0), DV.current = VV, nV("customThumbnailId", VV), nV("customThumbnailBlurhash", void 0), nV("customThumbnailVariants", void 0))
+        })).catch((VV => {
+          BV.current && (hV({
+            text: VV.errorMessageForUser ? kV(VV.errorMessageForUser, VV.errorMessageTranslationParams) : kV("thumbnail:failedToSetThumbnail"),
             type: "error"
-          }, !0), tM(DM.current))
+          }, !0), XV(DV.current))
         }))
       }
 
-      function KM(MM) {
-        tM(MM), ZM.current = MM;
-        const rM = Date.now() - kM.current;
-        rM >= 1e3 ? BM() : (NM({
-          text: hM("thumbnail:settingThumbnail"),
+      function sV(VV) {
+        XV(VV), CV.current = VV;
+        const eV = Date.now() - iV.current;
+        eV >= 1e3 ? KV() : (hV({
+          text: kV("thumbnail:settingThumbnail"),
           type: "info"
-        }, !1), oM.current || (oM.current = setTimeout((() => {
-          BM()
-        }), 1e3 - rM)))
+        }, !1), aV.current || (aV.current = setTimeout((() => {
+          KV()
+        }), 1e3 - eV)))
       }
-      return (0, OM.useEffect)((() => {
-        !1 === dM && AM()
-      }), [dM, AM]), GM.length > 0 ? (0, UM.jsx)(XM, {
-        rejectedThumbnails: GM,
-        userContext: JM,
-        isMountedRef: yM,
-        onAcknowledged: AM
-      }) : (0, UM.jsxs)("div", {
+      return (0, JV.useEffect)((() => {
+        !1 === EV && lV()
+      }), [EV, lV]), FV.length > 0 ? (0, tV.jsx)(HV, {
+        rejectedThumbnails: FV,
+        userContext: bV,
+        isMountedRef: BV,
+        onAcknowledged: lV
+      }) : (0, tV.jsxs)("div", {
         className: "BloxdForm ThumbnailSection",
-        children: [(0, UM.jsxs)("div", {
+        children: [(0, tV.jsxs)("div", {
           className: "SectionTitle",
-          children: [hM("thumbnail:gameThumbnail"), WM && (0, UM.jsx)("span", {
-            className: HM()("ThumbnailActionMsg", `ThumbnailActionMsg--${WM.type}`),
-            children: WM.text
+          children: [kV("thumbnail:gameThumbnail"), RV && (0, tV.jsx)("span", {
+            className: rV()("ThumbnailActionMsg", `ThumbnailActionMsg--${RV.type}`),
+            children: RV.text
           })]
-        }), (0, UM.jsx)("div", {
+        }), (0, tV.jsx)("div", {
           className: "SectionBody",
-          children: (0, UM.jsxs)("div", {
+          children: (0, tV.jsxs)("div", {
             className: "ThumbnailGrid",
-            children: [(0, UM.jsxs)("div", {
-              className: HM()("ThumbnailGridItem ThumbnailGridItemDefault", {
-                ThumbnailGridItemSelected: null === wM
+            children: [(0, tV.jsxs)("div", {
+              className: rV()("ThumbnailGridItem ThumbnailGridItemDefault", {
+                ThumbnailGridItemSelected: null === NV
               }),
-              onClick: () => KM(null),
-              children: [(0, UM.jsx)(pM.b, {
+              onClick: () => sV(null),
+              children: [(0, tV.jsx)(WV.d, {
                 game: {
-                  schematicId: aM.schematicId,
-                  imageBlurhash: aM.imageBlurhash
+                  schematicId: yV.schematicId,
+                  imageBlurhash: yV.imageBlurhash
                 }
-              }), (0, UM.jsx)("div", {
+              }), (0, tV.jsx)("div", {
                 className: "ThumbnailGridItemLabel ThumbnailDefaultLabel",
-                children: hM("general:default")
+                children: kV("general:default")
               })]
-            }), eM && (0, UM.jsx)(nM.d, {}), lM.map(((MM, rM) => (0, UM.jsxs)("div", {
-              className: HM()("ThumbnailGridItem", {
-                ThumbnailGridItemSelected: wM === MM.id,
-                ThumbnailGridItemPending: !MM.approved
+            }), PV && (0, tV.jsx)(QV.d, {}), jV.map(((VV, eV) => (0, tV.jsxs)("div", {
+              className: rV()("ThumbnailGridItem", {
+                ThumbnailGridItemSelected: NV === VV.id,
+                ThumbnailGridItemPending: !VV.approved
               }),
               onClick: () => {
-                MM.approved && KM(MM.id)
+                VV.approved && sV(VV.id)
               },
-              children: [MM.approved && (0, UM.jsx)("img", {
-                src: `${vM.clientSideServerUrls.s3Url}/customThumbnails/${MM.id}.jpg`,
+              children: [VV.approved && (0, tV.jsx)("img", {
+                src: `${fV.clientSideServerUrls.s3Url}/customThumbnails/${VV.id}.jpg`,
                 alt: "Thumbnail"
-              }), MM.approved && (0, UM.jsx)("div", {
+              }), VV.approved && (0, tV.jsx)("div", {
                 className: "ThumbnailGridItemLabel",
-                children: MM.name
-              }), MM.id && (0, UM.jsx)(jM.J, {
+                children: VV.name
+              }), VV.id && (0, tV.jsx)(UV.E, {
                 className: "ThumbnailDeleteButton",
-                onClick: rM => async function(MM, rM, iM) {
-                  MM.stopPropagation();
-                  const OM = await SM.NotificationProvider.showCustomPopup({
-                      body: MM => (0, UM.jsx)(IM, {
-                        thumbnailId: rM,
-                        thumbnailName: iM,
-                        onClose: rM => {
-                          rM && (YM.current = !0), MM()
+                onClick: eV => async function(VV, eV, xV) {
+                  VV.stopPropagation();
+                  const JV = await YV.NotificationProvider.showCustomPopup({
+                      body: VV => (0, tV.jsx)(uV, {
+                        thumbnailId: eV,
+                        thumbnailName: xV,
+                        onClose: eV => {
+                          eV && (cV.current = !0), VV()
                         }
                       }),
                       middleScreenPopupClassName: "ThumbnailDeleteConfirmPopup",
-                      onClose: mM
+                      onClose: vV
                     }).getResult(),
-                    jM = YM.current;
-                  YM.current = !1, jM && !0 === OM && (yM.current && NM({
-                    text: hM("thumbnail:deletingThumbnail"),
+                    UV = cV.current;
+                  cV.current = !1, UV && !0 === JV && (BV.current && hV({
+                    text: kV("thumbnail:deletingThumbnail"),
                     type: "info"
-                  }, !1), gM.c.deleteSchematicThumbnail(JM, rM).then((() => {
-                    yM.current && (NM({
-                      text: hM("thumbnail:thumbnailDeleted"),
+                  }, !1), MV.b.deleteSchematicThumbnail(bV, eV).then((() => {
+                    BV.current && (hV({
+                      text: kV("thumbnail:thumbnailDeleted"),
                       type: "success"
-                    }, !0), DM.current === rM && KM(null), AM())
-                  })).catch((MM => {
-                    yM.current && NM({
-                      text: MM.errorMessageForUser ? hM(MM.errorMessageForUser, MM.errorMessageTranslationParams) : hM("thumbnail:failedToDeleteThumbnail"),
+                    }, !0), DV.current === eV && sV(null), lV())
+                  })).catch((VV => {
+                    BV.current && hV({
+                      text: VV.errorMessageForUser ? kV(VV.errorMessageForUser, VV.errorMessageTranslationParams) : kV("thumbnail:failedToDeleteThumbnail"),
                       type: "error"
                     }, !0)
                   })))
-                }(rM, MM.id, MM.name),
-                children: (0, UM.jsx)(zM.b, {
+                }(eV, VV.id, VV.name),
+                children: (0, tV.jsx)(wV.b, {
                   name: "trash-can"
                 })
-              }), !MM.approved && (0, UM.jsx)("div", {
+              }), !VV.approved && (0, tV.jsx)("div", {
                 className: "ThumbnailUnapprovedIcon",
-                children: (0, UM.jsx)(zM.b, {
+                children: (0, tV.jsx)(wV.b, {
                   name: "hourglass-clock"
                 })
-              }), !MM.approved && (0, UM.jsxs)("div", {
+              }), !VV.approved && (0, tV.jsxs)("div", {
                 className: "ThumbnailGridItemLabel ThumbnailPendingLabel",
-                children: [MM.name, (0, UM.jsx)("br", {}), hM("thumbnail:pendingApproval")]
+                children: [VV.name, (0, tV.jsx)("br", {}), kV("thumbnail:pendingApproval")]
               })]
-            }, rM))), (0, UM.jsxs)("div", {
-              className: HM()("ThumbnailGridItem ThumbnailUploadTile", {
-                ThumbnailUploadTileDisabled: !LM
+            }, eV))), (0, tV.jsxs)("div", {
+              className: rV()("ThumbnailGridItem ThumbnailUploadTile", {
+                ThumbnailUploadTileDisabled: !ZV
               }),
               onClick: () => {
-                LM && function(MM) {
+                ZV && function(VV) {
                   let {
-                    schematicId: rM,
-                    ownedThumbnailCount: iM,
-                    onThumbnailReady: OM,
-                    onClose: jM
-                  } = MM;
-                  SM.NotificationProvider.showCustomPopup({
-                    body: MM => (0, UM.jsx)(xM, {
-                      schematicId: rM,
-                      ownedThumbnailCount: iM,
-                      onClose: MM,
-                      onThumbnailReady: OM
+                    schematicId: eV,
+                    ownedThumbnailCount: xV,
+                    onThumbnailReady: JV,
+                    onClose: UV
+                  } = VV;
+                  YV.NotificationProvider.showCustomPopup({
+                    body: VV => (0, tV.jsx)(LV, {
+                      schematicId: eV,
+                      ownedThumbnailCount: xV,
+                      onClose: VV,
+                      onThumbnailReady: JV
                     }),
                     middleScreenPopupClassName: "SchematicThumbnailPopup",
-                    onClose: jM,
+                    onClose: UV,
                     unlockPointerKey: "schematicThumbnailUploaderPopup"
                   })
                 }({
-                  schematicId: aM.schematicId,
-                  ownedThumbnailCount: lM.length,
-                  onThumbnailReady: FM,
-                  onClose: mM
+                  schematicId: yV.schematicId,
+                  ownedThumbnailCount: jV.length,
+                  onThumbnailReady: mV,
+                  onClose: vV
                 })
               },
-              children: [(0, UM.jsx)(zM.b, {
+              children: [(0, tV.jsx)(wV.b, {
                 name: "plus"
-              }), (0, UM.jsx)("div", {
+              }), (0, tV.jsx)("div", {
                 className: "ThumbnailGridItemLabel",
-                children: hM("thumbnail:uploadThumbnail")
+                children: kV("thumbnail:uploadThumbnail")
               })]
             })]
           })
@@ -1085,640 +1085,640 @@ export const modules = {
       })
     }
 
-    function XM(MM) {
+    function HV(VV) {
       let {
-        rejectedThumbnails: rM,
-        userContext: iM,
-        isMountedRef: SM,
-        onAcknowledged: aM
-      } = MM;
+        rejectedThumbnails: eV,
+        userContext: xV,
+        isMountedRef: YV,
+        onAcknowledged: yV
+      } = VV;
       const {
-        t: QM
-      } = (0, PM.A)(), [LM, mM] = (0, OM.useState)(!1), [HM, hM] = (0, OM.useState)(!1), JM = function(MM) {
-        const rM = new Map;
-        for (const iM of MM) {
-          const MM = iM.rejectionPolicyId,
-            OM = rM.get(MM);
-          OM ? OM.push(iM) : rM.set(MM, [iM])
+        t: nV
+      } = (0, pV.A)(), [ZV, vV] = (0, JV.useState)(!1), [rV, kV] = (0, JV.useState)(!1), bV = function(VV) {
+        const eV = new Map;
+        for (const xV of VV) {
+          const VV = xV.rejectionPolicyId,
+            JV = eV.get(VV);
+          JV ? JV.push(xV) : eV.set(VV, [xV])
         }
-        return rM
-      }(rM);
-      return (0, UM.jsxs)("div", {
+        return eV
+      }(eV);
+      return (0, tV.jsxs)("div", {
         className: "ThumbnailRejectionNotice",
-        children: [(0, UM.jsxs)("div", {
+        children: [(0, tV.jsxs)("div", {
           className: "ThumbnailRejectionNoticeTitle",
-          children: [(0, UM.jsx)(zM.b, {
+          children: [(0, tV.jsx)(wV.b, {
             name: "triangle-exclamation"
-          }), " ", QM("thumbnail:thumbnailsRejected"), " ", (0, UM.jsx)(zM.b, {
+          }), " ", nV("thumbnail:thumbnailsRejected"), " ", (0, tV.jsx)(wV.b, {
             name: "triangle-exclamation"
           })]
-        }), (0, UM.jsx)("div", {
+        }), (0, tV.jsx)("div", {
           className: "ThumbnailRejectionNoticeSubtitle",
-          children: QM("thumbnail:thumbnailsRejectedDescription")
-        }), (0, UM.jsx)("div", {
+          children: nV("thumbnail:thumbnailsRejectedDescription")
+        }), (0, tV.jsx)("div", {
           className: "ThumbnailRejectionNoticeList",
-          children: [...JM.entries()].map((MM => {
-            let [rM, iM] = MM;
-            const OM = FM[rM];
-            return (0, UM.jsxs)("div", {
+          children: [...bV.entries()].map((VV => {
+            let [eV, xV] = VV;
+            const JV = mV[eV];
+            return (0, tV.jsxs)("div", {
               className: "ThumbnailRejectionNoticeGroup",
-              children: [(0, UM.jsx)("div", {
+              children: [(0, tV.jsx)("div", {
                 className: "ThumbnailRejectionNoticeItems",
-                children: iM.map((MM => (0, UM.jsxs)("div", {
+                children: xV.map((VV => (0, tV.jsxs)("div", {
                   className: "ThumbnailRejectionNoticeItem",
-                  children: [(0, UM.jsx)("div", {
+                  children: [(0, tV.jsx)("div", {
                     className: "ThumbnailRejectionNoticeItemIcon",
-                    children: (0, UM.jsx)(zM.b, {
+                    children: (0, tV.jsx)(wV.b, {
                       name: "image-slash"
                     })
-                  }), (0, UM.jsx)("div", {
+                  }), (0, tV.jsx)("div", {
                     className: "ThumbnailRejectionNoticeItemDetails",
-                    children: (0, UM.jsx)("div", {
+                    children: (0, tV.jsx)("div", {
                       className: "ThumbnailRejectionNoticeItemName",
-                      children: MM.name
+                      children: VV.name
                     })
                   })]
-                }, MM.id)))
-              }), (0, UM.jsxs)("div", {
+                }, VV.id)))
+              }), (0, tV.jsxs)("div", {
                 className: "ThumbnailRejectionNoticeGroupReason",
-                children: [QM("thumbnail:rejectionReason"), " ", OM ? QM(OM.reason) : rM]
-              }), OM && (0, UM.jsx)("ul", {
+                children: [nV("thumbnail:rejectionReason"), " ", JV ? nV(JV.reason) : eV]
+              }), JV && (0, tV.jsx)("ul", {
                 className: "ThumbnailRejectionNoticeGroupTips",
-                children: OM.tips.map((MM => (0, UM.jsx)("li", {
-                  children: QM(MM)
-                }, MM)))
+                children: JV.tips.map((VV => (0, tV.jsx)("li", {
+                  children: nV(VV)
+                }, VV)))
               })]
-            }, rM)
+            }, eV)
           }))
-        }), (0, UM.jsxs)("label", {
+        }), (0, tV.jsxs)("label", {
           className: "ThumbnailRejectionNoticeCheckbox",
-          children: [(0, UM.jsx)(tM.c, {
-            checked: LM,
-            onChange: MM => mM(MM.target.checked),
-            disabled: HM
-          }), (0, UM.jsx)("span", {
-            children: QM("thumbnail:haveReadRejectionReasons")
+          children: [(0, tV.jsx)(XV.b, {
+            checked: ZV,
+            onChange: VV => vV(VV.target.checked),
+            disabled: rV
+          }), (0, tV.jsx)("span", {
+            children: nV("thumbnail:haveReadRejectionReasons")
           })]
-        }), (0, UM.jsx)(jM.p, {
+        }), (0, tV.jsx)(UV.m, {
           onClick: async function() {
-            hM(!0);
-            const MM = await Promise.allSettled(rM.map((MM => gM.c.deleteSchematicThumbnail(iM, MM.id))));
-            if (!SM.current) return;
-            const OM = MM.filter((MM => "rejected" === MM.status));
-            OM.length > 0 && console.error("Some rejected thumbnails failed to delete:", OM), aM()
+            kV(!0);
+            const VV = await Promise.allSettled(eV.map((VV => MV.b.deleteSchematicThumbnail(xV, VV.id))));
+            if (!YV.current) return;
+            const JV = VV.filter((VV => "rejected" === VV.status));
+            JV.length > 0 && console.error("Some rejected thumbnails failed to delete:", JV), yV()
           },
-          disabled: !LM || HM,
+          disabled: !ZV || rV,
           className: "ThumbnailRejectionNoticeAcceptButton",
-          children: HM ? (0, UM.jsx)(nM.d, {}) : QM("general:accept")
+          children: rV ? (0, tV.jsx)(QV.d, {}) : nV("general:accept")
         })]
       })
     }
 
-    function IM(MM) {
+    function uV(VV) {
       let {
-        thumbnailId: rM,
-        thumbnailName: iM,
-        onClose: OM
-      } = MM;
+        thumbnailId: eV,
+        thumbnailName: xV,
+        onClose: JV
+      } = VV;
       const {
-        t: SM
-      } = (0, PM.A)();
-      return (0, UM.jsxs)("div", {
+        t: YV
+      } = (0, pV.A)();
+      return (0, tV.jsxs)("div", {
         className: "ThumbnailDeleteConfirm",
-        children: [(0, UM.jsx)("div", {
+        children: [(0, tV.jsx)("div", {
           className: "ThumbnailDeleteConfirmTitle",
-          children: SM("thumbnail:deleteThumbnail")
-        }), (0, UM.jsxs)("div", {
+          children: YV("thumbnail:deleteThumbnail")
+        }), (0, tV.jsxs)("div", {
           className: "ThumbnailDeleteConfirmImageContainer",
-          children: [(0, UM.jsx)("img", {
+          children: [(0, tV.jsx)("img", {
             className: "ThumbnailDeleteConfirmImage",
-            src: `${vM.clientSideServerUrls.s3Url}/customThumbnails/${rM}.jpg`,
+            src: `${fV.clientSideServerUrls.s3Url}/customThumbnails/${eV}.jpg`,
             alt: "Thumbnail to delete"
-          }), (0, UM.jsx)("div", {
+          }), (0, tV.jsx)("div", {
             className: "ThumbnailGridItemLabel",
-            children: iM
+            children: xV
           })]
-        }), (0, UM.jsx)("div", {
+        }), (0, tV.jsx)("div", {
           className: "ThumbnailDeleteConfirmSubtitle",
-          children: SM("thumbnail:deleteThumbnailConfirmation")
-        }), (0, UM.jsxs)("div", {
+          children: YV("thumbnail:deleteThumbnailConfirmation")
+        }), (0, tV.jsxs)("div", {
           className: "ThumbnailDeleteConfirmButtons",
-          children: [(0, UM.jsxs)(jM.J, {
+          children: [(0, tV.jsxs)(UV.E, {
             className: "ThumbnailDeleteConfirmButton",
-            onClick: () => OM(!0),
-            children: [(0, UM.jsx)(zM.b, {
+            onClick: () => JV(!0),
+            children: [(0, tV.jsx)(wV.b, {
               name: "trash-can"
-            }), " ", SM("general:delete")]
-          }), (0, UM.jsx)(jM.i, {
+            }), " ", YV("general:delete")]
+          }), (0, tV.jsx)(UV.j, {
             className: "ThumbnailDeleteConfirmButton",
-            onClick: () => OM(!1),
-            children: SM("general:cancel")
+            onClick: () => JV(!1),
+            children: YV("general:cancel")
           })]
         })]
       })
     }
-    var KM = iM(2263),
-      qM = iM(5388),
-      TM = iM(5393),
-      VM = iM(5424);
+    var sV = xV(2277),
+      SV = xV(5486),
+      IV = xV(5494),
+      dV = xV(5542);
 
-    function cM(MM) {
+    function OV(VV) {
       let {
-        schematicData: rM,
-        setTexturePack: iM,
-        initializeTexturePack: SM,
-        publishFormEnabled: jM
-      } = MM;
+        schematicData: eV,
+        setTexturePack: xV,
+        initializeTexturePack: YV,
+        publishFormEnabled: UV
+      } = VV;
       const {
-        t: aM
-      } = (0, PM.A)(), [nM, QM] = (0, OM.useState)(null), [zM, LM] = (0, OM.useState)(null), [mM, hM] = (0, OM.useState)(!1), JM = (0, uM.b)(), dM = jM && !mM, yM = rM.customTexturePackKey;
+        t: yV
+      } = (0, pV.A)(), [QV, nV] = (0, JV.useState)(null), [wV, ZV] = (0, JV.useState)(null), [vV, kV] = (0, JV.useState)(!1), bV = (0, zV.e)(), EV = UV && !vV, BV = eV.customTexturePackKey;
 
-      function lM(MM) {
-        var rM;
-        QM(MM.metaData.id), LM(null !== (rM = MM.metaData.fromFolderName) && void 0 !== rM ? rM : null), (MM.metaData.id !== KM.o.CUSTOM || MM.metaData.fromFolderName) && iM(MM)
+      function jV(VV) {
+        var eV;
+        nV(VV.metaData.id), ZV(null !== (eV = VV.metaData.fromFolderName) && void 0 !== eV ? eV : null), (VV.metaData.id !== sV.r.CUSTOM || VV.metaData.fromFolderName) && xV(VV)
       }
-      return (0, OM.useEffect)((() => {
-        yM && (hM(!0), (0, qM.d)(yM).then((MM => {
-          var rM;
-          JM.current && (MM ? (QM(MM.metaData.id), LM(null !== (rM = MM.metaData.fromFolderName) && void 0 !== rM ? rM : null), SM(MM)) : console.error(`No texture pack at ${yM}`))
-        })).catch((MM => {
-          console.error("Error fetching texture pack: ", MM)
+      return (0, JV.useEffect)((() => {
+        BV && (kV(!0), (0, SV.d)(BV).then((VV => {
+          var eV;
+          bV.current && (VV ? (nV(VV.metaData.id), ZV(null !== (eV = VV.metaData.fromFolderName) && void 0 !== eV ? eV : null), YV(VV)) : console.error(`No texture pack at ${BV}`))
+        })).catch((VV => {
+          console.error("Error fetching texture pack: ", VV)
         })).finally((() => {
-          hM(!1)
+          kV(!1)
         })))
-      }), [yM, SM, JM]), (0, UM.jsxs)("div", {
+      }), [BV, YV, bV]), (0, tV.jsxs)("div", {
         className: "BloxdForm TexturePackSection",
-        children: [(0, UM.jsx)("div", {
+        children: [(0, tV.jsx)("div", {
           className: "SectionTitle",
-          children: aM("customTexturePack:customTexturePack")
-        }), (0, UM.jsxs)("div", {
+          children: yV("customTexturePack:customTexturePack")
+        }), (0, tV.jsxs)("div", {
           className: "TexturePackList",
-          children: [(0, UM.jsx)("div", {
-            className: HM()("TexturePack", {
-              Selected: null === nM && !mM,
-              Disabled: !dM
+          children: [(0, tV.jsx)("div", {
+            className: rV()("TexturePack", {
+              Selected: null === QV && !vV,
+              Disabled: !EV
             }),
             onClick: () => {
-              dM && (QM(null), iM(null), LM(null))
+              EV && (nV(null), xV(null), ZV(null))
             },
-            children: (0, UM.jsx)("div", {
+            children: (0, tV.jsx)("div", {
               className: "TexturePackName",
               children: "No Override"
             })
-          }), Object.values(KM.o).map((MM => (0, UM.jsx)(TM.e, {
-            id: MM,
-            isSelected: MM === nM,
-            setSelected: lM,
-            disabled: !dM
-          }, MM)))]
-        }), nM === KM.o.CUSTOM && (0, UM.jsx)(VM.e, {
-          folderName: zM,
-          onTexturePackUpdated: lM,
-          disabled: !dM,
+          }), Object.values(sV.r).map((VV => (0, tV.jsx)(IV.h, {
+            id: VV,
+            isSelected: VV === QV,
+            setSelected: jV,
+            disabled: !EV
+          }, VV)))]
+        }), QV === sV.r.CUSTOM && (0, tV.jsx)(dV.c, {
+          folderName: wV,
+          onTexturePackUpdated: jV,
+          disabled: !EV,
           maxFileSizeMb: 25,
           packOwner: "customGame"
         })]
       })
     }
-    var Mr = iM(5468);
+    var Ve = xV(5581);
 
-    function rr(MM) {
-      var rM;
+    function ee(VV) {
+      var eV;
       let {
-        gameCategory: iM,
-        setGameCategory: OM,
-        disabled: SM
-      } = MM;
-      const aM = null !== (rM = (0, hM._)(iM)) && void 0 !== rM ? rM : "other";
-      return (0, UM.jsxs)("div", {
+        gameCategory: xV,
+        setGameCategory: JV,
+        disabled: YV
+      } = VV;
+      const yV = null !== (eV = (0, kV.jb)(xV)) && void 0 !== eV ? eV : "other";
+      return (0, tV.jsxs)("div", {
         className: "GameCategoryPicker",
-        children: [(0, UM.jsx)(yM.d, {
+        children: [(0, tV.jsx)(BV.i, {
           label: "worldBuilder:gameCategoryGroup",
           className: "GameCategoryGroup",
-          disabled: SM,
-          children: (0, UM.jsx)(lM.e, {
-            options: hM.P.map((MM => ({
-              value: MM,
-              label: hM.O[MM]
+          disabled: YV,
+          children: (0, tV.jsx)(jV.c, {
+            options: kV.bb.map((VV => ({
+              value: VV,
+              label: kV.Z[VV]
             }))),
-            value: aM,
-            onChange: MM => {
-              MM.value !== aM && OM(hM.M[MM.value][0])
+            value: yV,
+            onChange: VV => {
+              VV.value !== yV && JV(kV.U[VV.value][0])
             }
           })
-        }), (0, UM.jsx)(yM.d, {
+        }), (0, tV.jsx)(BV.i, {
           label: "worldBuilder:gameCategory",
           className: "GameCategory",
-          disabled: SM,
-          children: (0, UM.jsx)("div", {
+          disabled: YV,
+          children: (0, tV.jsx)("div", {
             className: "GameCategoryOptions",
-            children: hM.M[aM].map((MM => (0, UM.jsx)(jM.V, {
-              active: MM === iM,
+            children: kV.U[yV].map((VV => (0, tV.jsx)(UV.M, {
+              active: VV === xV,
               onClick: () => {
-                OM(MM)
+                JV(VV)
               },
-              children: (0, hM.W)(MM)
-            }, MM)))
+              children: (0, kV.gb)(VV)
+            }, VV)))
           })
         })]
       })
     }
 
-    function ir(MM) {
+    function xe(VV) {
       let {
-        editor: rM,
-        onClose: iM
-      } = MM;
+        editor: eV,
+        onClose: xV
+      } = VV;
       const {
-        t: OM
-      } = (0, PM.A)(), {
-        schematicData: SM,
-        updateSchematicData: jM,
-        publishFormEnabled: nM,
-        formEnabled: QM
-      } = rM;
-      return (0, UM.jsxs)(UM.Fragment, {
-        children: [(0, UM.jsxs)(GM, {
+        t: JV
+      } = (0, pV.A)(), {
+        schematicData: YV,
+        updateSchematicData: UV,
+        publishFormEnabled: QV,
+        formEnabled: nV
+      } = eV;
+      return (0, tV.jsxs)(tV.Fragment, {
+        children: [(0, tV.jsxs)(FV, {
           icon: "pen-to-square",
-          title: OM("worldBuilder:basicsSection"),
-          disabled: !QM,
-          children: [(0, UM.jsx)(CM, {
-            label: OM("general:name"),
-            caption: OM("worldBuilder:schematicNameTagsHint"),
-            children: (0, UM.jsx)(aM.b, {
+          title: JV("worldBuilder:basicsSection"),
+          disabled: !nV,
+          children: [(0, tV.jsx)(TV, {
+            label: JV("general:name"),
+            caption: JV("worldBuilder:schematicNameTagsHint"),
+            children: (0, tV.jsx)(yV.d, {
               className: "SchematicPageName",
-              defaultValue: SM.name,
-              onValueChange: MM => jM("name", MM),
-              placeholderText: OM("worldBuilder:schematicNamePlaceholder"),
-              maxLength: LM.sb
+              defaultValue: YV.name,
+              onValueChange: VV => UV("name", VV),
+              placeholderText: JV("worldBuilder:schematicNamePlaceholder"),
+              maxLength: ZV.mb
             })
-          }), (0, UM.jsx)(CM, {
-            label: OM("general:description"),
-            children: (0, UM.jsx)(aM.b, {
+          }), (0, tV.jsx)(TV, {
+            label: JV("general:description"),
+            children: (0, tV.jsx)(yV.d, {
               className: "SchematicPageDescription",
               useTextarea: !0,
-              defaultValue: SM.description,
-              onValueChange: MM => jM("description", MM),
-              placeholderText: OM("worldBuilder:schematicDescriptionPlaceholder"),
-              maxLength: LM.pb
+              defaultValue: YV.description,
+              onValueChange: VV => UV("description", VV),
+              placeholderText: JV("worldBuilder:schematicDescriptionPlaceholder"),
+              maxLength: ZV.ib
             })
-          }), (0, UM.jsx)(rr, {
-            gameCategory: SM.gameCategory,
-            setGameCategory: MM => jM("gameCategory", MM),
-            disabled: !nM
-          }), !0 === SM.gamePublished && (0, UM.jsx)(BM, {
-            schematicData: SM,
-            updateSchematicData: jM,
-            publishFormEnabled: nM,
+          }), (0, tV.jsx)(ee, {
+            gameCategory: YV.gameCategory,
+            setGameCategory: VV => UV("gameCategory", VV),
+            disabled: !QV
+          }), !0 === YV.gamePublished && (0, tV.jsx)(KV, {
+            schematicData: YV,
+            updateSchematicData: UV,
+            publishFormEnabled: QV,
             onClose: function() {
-              null === iM || void 0 === iM || iM()
+              null === xV || void 0 === xV || xV()
             }
           })]
-        }), (0, UM.jsx)(bM, {
-          schematicData: SM,
-          updateSchematicData: jM,
-          publishFormEnabled: nM,
-          formEnabled: QM
-        }), !0 === SM.gamePublished && (0, UM.jsx)(GM, {
+        }), (0, tV.jsx)(AV, {
+          schematicData: YV,
+          updateSchematicData: UV,
+          publishFormEnabled: QV,
+          formEnabled: nV
+        }), !0 === YV.gamePublished && (0, tV.jsx)(FV, {
           icon: "palette",
-          title: OM("worldBuilder:texturePackSection"),
-          disabled: !QM,
-          children: (0, UM.jsx)(cM, {
-            schematicData: SM,
-            setTexturePack: rM.setTexturePack,
-            initializeTexturePack: rM.initializeTexturePack,
-            publishFormEnabled: nM
+          title: JV("worldBuilder:texturePackSection"),
+          disabled: !nV,
+          children: (0, tV.jsx)(OV, {
+            schematicData: YV,
+            setTexturePack: eV.setTexturePack,
+            initializeTexturePack: eV.initializeTexturePack,
+            publishFormEnabled: QV
           })
         })]
       })
     }
 
-    function Or(MM) {
+    function Je(VV) {
       let {
-        editor: rM
-      } = MM;
+        editor: eV
+      } = VV;
       const {
-        t: iM
-      } = (0, PM.A)(), {
-        schematicData: OM,
-        formEnabled: SM,
-        hasUnsavedChanges: aM
-      } = rM, LM = SM && aM;
-      return (0, UM.jsxs)("footer", {
+        t: xV
+      } = (0, pV.A)(), {
+        schematicData: JV,
+        formEnabled: YV,
+        hasUnsavedChanges: yV
+      } = eV, ZV = YV && yV;
+      return (0, tV.jsxs)("footer", {
         className: "SchematicPageFooter",
-        children: [SM && aM && (0, UM.jsxs)("div", {
+        children: [YV && yV && (0, tV.jsxs)("div", {
           className: "SchematicPageFooterStatus",
-          children: [(0, UM.jsx)("span", {
+          children: [(0, tV.jsx)("span", {
             className: "SchematicPageFooterStatusDot"
-          }), iM("worldBuilder:unsavedChanges")]
-        }), (0, UM.jsx)(QM.i, {
-          tooltipInner: (0, UM.jsx)("div", {
+          }), xV("worldBuilder:unsavedChanges")]
+        }), (0, tV.jsx)(nV.d, {
+          tooltipInner: (0, tV.jsx)("div", {
             className: "SaveButtonTooltip",
-            children: iM(SM && !aM ? "worldBuilder:saveChangesNoneDescription" : "worldBuilder:saveChangesDescription")
+            children: xV(YV && !yV ? "worldBuilder:saveChangesNoneDescription" : "worldBuilder:saveChangesDescription")
           }),
-          children: (0, UM.jsxs)(jM.e, {
+          children: (0, tV.jsxs)(UV.f, {
             className: "SaveChangesButton",
-            onClick: () => rM.saveSchematic(OM.gamePublished),
-            disabled: !LM,
-            children: [(0, UM.jsxs)("span", {
-              className: SM ? "" : "SaveChangesButtonBodyHidden",
-              children: [(0, UM.jsx)(zM.b, {
+            onClick: () => eV.saveSchematic(JV.gamePublished),
+            disabled: !ZV,
+            children: [(0, tV.jsxs)("span", {
+              className: YV ? "" : "SaveChangesButtonBodyHidden",
+              children: [(0, tV.jsx)(wV.b, {
                 name: "wrench"
-              }), " ", iM("worldBuilder:saveChanges")]
-            }), !SM && (0, UM.jsx)(nM.d, {})]
+              }), " ", xV("worldBuilder:saveChanges")]
+            }), !YV && (0, tV.jsx)(QV.d, {})]
           })
         })]
       })
     }
 
-    function Sr(MM) {
+    function Ye(VV) {
       let {
-        schematic: rM,
-        onSchematicUpdate: iM,
-        onClose: SM,
-        inSourceWorld: aM
-      } = MM;
+        schematic: eV,
+        onSchematicUpdate: xV,
+        onClose: YV,
+        inSourceWorld: yV
+      } = VV;
       const {
-        t: nM
-      } = (0, PM.A)();
+        t: QV
+      } = (0, pV.A)();
 
-      function QM() {
-        null === SM || void 0 === SM || SM()
+      function nV() {
+        null === YV || void 0 === YV || YV()
       }
-      const zM = (0, Mr.d)(rM, {
-        onNavigateAway: QM,
-        inSourceWorld: aM
+      const wV = (0, Ve.d)(eV, {
+        onNavigateAway: nV,
+        inSourceWorld: yV
       });
-      return (0, OM.useEffect)((() => {
-        null === iM || void 0 === iM || iM(zM.schematicData)
-      }), [zM.schematicData, iM]), (0, UM.jsxs)("div", {
+      return (0, JV.useEffect)((() => {
+        null === xV || void 0 === xV || xV(wV.schematicData)
+      }), [wV.schematicData, xV]), (0, tV.jsxs)("div", {
         className: "SchematicPage SchematicPagePopupVariant",
-        children: [(0, UM.jsxs)("div", {
+        children: [(0, tV.jsxs)("div", {
           className: "SchematicPageBody",
-          children: [(0, UM.jsx)(jM.c, {
-            onClick: QM,
-            children: nM("worldBuilder:back")
-          }), (0, UM.jsx)(GM, {
+          children: [(0, tV.jsx)(UV.b, {
+            onClick: nV,
+            children: QV("worldBuilder:back")
+          }), (0, tV.jsx)(FV, {
             icon: "rocket-launch",
-            title: nM("worldBuilder:actionsSection"),
-            disabled: !zM.formEnabled,
-            children: (0, UM.jsx)(wM.b, {
-              editor: zM
+            title: QV("worldBuilder:actionsSection"),
+            disabled: !wV.formEnabled,
+            children: (0, tV.jsx)(NV.b, {
+              editor: wV
             })
-          }), (0, UM.jsx)(ir, {
-            editor: zM,
-            onClose: QM
+          }), (0, tV.jsx)(xe, {
+            editor: wV,
+            onClose: nV
           })]
-        }), (0, UM.jsx)(Or, {
-          editor: zM
+        }), (0, tV.jsx)(Je, {
+          editor: wV
         })]
       })
     }
 
-    function jr(MM) {
+    function Ue(VV) {
       let {
-        schematic: rM,
-        onSchematicUpdate: iM,
-        onClose: OM,
-        inSourceWorld: jM
-      } = MM;
-      SM.NotificationProvider.showCustomPopup({
-        body: MM => (0, UM.jsx)(Sr, {
-          schematic: rM,
-          onSchematicUpdate: iM,
-          onClose: MM,
-          inSourceWorld: jM
+        schematic: eV,
+        onSchematicUpdate: xV,
+        onClose: JV,
+        inSourceWorld: UV
+      } = VV;
+      YV.NotificationProvider.showCustomPopup({
+        body: VV => (0, tV.jsx)(Ye, {
+          schematic: eV,
+          onSchematicUpdate: xV,
+          onClose: VV,
+          inSourceWorld: UV
         }),
         middleScreenPopupClassName: "SchematicPopup",
-        onClose: OM,
+        onClose: JV,
         unlockPointerKey: "schematicPagePopup"
       })
     }
   },
-  5362: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => LM
+  5446: (VV, eV, xV) => {
+    xV.d(eV, {
+      b: () => ZV
     });
-    var OM = iM(1116),
-      SM = iM.n(OM),
-      jM = iM(1188),
-      aM = iM(1398),
-      PM = iM(1520),
-      nM = iM(1440),
-      QM = iM(1396),
-      zM = iM(1303);
+    var JV = xV(1146),
+      YV = xV.n(JV),
+      UV = xV(1220),
+      yV = xV(1414),
+      pV = xV(1551),
+      QV = xV(1446),
+      nV = xV(1408),
+      wV = xV(1321);
 
-    function LM(MM) {
+    function ZV(VV) {
       let {
-        editor: rM,
-        className: iM
-      } = MM;
+        editor: eV,
+        className: xV
+      } = VV;
       const {
-        t: OM
-      } = (0, jM.A)(), {
-        schematicData: LM,
-        formEnabled: mM,
-        publishFormEnabled: HM
-      } = rM, hM = !mM || !HM;
-      return (0, zM.jsxs)("div", {
-        className: SM()("PublishButtonContainer", iM),
-        children: [rM.canEditSourceWorld && (0, zM.jsxs)(PM.e, {
-          onClick: rM.editSourceWorld,
-          disabled: hM,
-          children: [(0, zM.jsx)(aM.b, {
+        t: JV
+      } = (0, UV.A)(), {
+        schematicData: ZV,
+        formEnabled: vV,
+        publishFormEnabled: rV
+      } = eV, kV = !vV || !rV;
+      return (0, wV.jsxs)("div", {
+        className: YV()("PublishButtonContainer", xV),
+        children: [eV.canEditSourceWorld && (0, wV.jsxs)(pV.f, {
+          onClick: eV.editSourceWorld,
+          disabled: kV,
+          children: [(0, wV.jsx)(yV.b, {
             name: "edit"
-          }), " ", OM("worldBuilder:editSourceWorld")]
-        }), !LM.gamePublished && (0, zM.jsx)(nM.i, {
-          tooltipInner: (0, zM.jsx)("div", {
+          }), " ", JV("worldBuilder:editSourceWorld")]
+        }), !ZV.gamePublished && (0, wV.jsx)(QV.d, {
+          tooltipInner: (0, wV.jsx)("div", {
             className: "PublishButtonTooltip",
-            children: OM("worldBuilder:publishAsGameDescription")
+            children: JV("worldBuilder:publishAsGameDescription")
           }),
-          children: (0, zM.jsxs)(PM.p, {
-            onClick: () => rM.saveSchematic(!0),
-            disabled: hM,
-            children: [(0, zM.jsx)(aM.b, {
+          children: (0, wV.jsxs)(pV.m, {
+            onClick: () => eV.saveSchematic(!0),
+            disabled: kV,
+            children: [(0, wV.jsx)(yV.b, {
               name: "rocket-launch"
-            }), " ", OM("worldBuilder:publishAsGame"), " ", (0, zM.jsx)(aM.b, {
+            }), " ", JV("worldBuilder:publishAsGame"), " ", (0, wV.jsx)(yV.b, {
               name: "info-circle"
             })]
           })
-        }), !0 === LM.gamePublished && (0, zM.jsxs)(zM.Fragment, {
-          children: [(0, zM.jsx)(nM.i, {
-            tooltipInner: (0, zM.jsx)("div", {
+        }), !0 === ZV.gamePublished && (0, wV.jsxs)(wV.Fragment, {
+          children: [(0, wV.jsx)(QV.d, {
+            tooltipInner: (0, wV.jsx)("div", {
               className: "PublishButtonTooltip",
-              children: OM("worldBuilder:unpublishAsGameDescription")
+              children: JV("worldBuilder:unpublishAsGameDescription")
             }),
-            children: (0, zM.jsxs)(PM.J, {
-              onClick: rM.unpublishSchematic,
-              disabled: hM,
-              children: [(0, zM.jsx)(aM.b, {
+            children: (0, wV.jsxs)(pV.E, {
+              onClick: eV.unpublishSchematic,
+              disabled: kV,
+              children: [(0, wV.jsx)(yV.b, {
                 name: "rocket-launch"
-              }), " ", OM("worldBuilder:unpublishAsGame"), " ", (0, zM.jsx)(aM.b, {
+              }), " ", JV("worldBuilder:unpublishAsGame"), " ", (0, wV.jsx)(yV.b, {
                 name: "info-circle"
               })]
             })
-          }), (0, zM.jsxs)(PM.e, {
-            onClick: rM.playGame,
-            disabled: hM,
-            children: [(0, zM.jsx)(aM.b, {
+          }), (0, wV.jsxs)(pV.f, {
+            onClick: eV.playGame,
+            disabled: kV,
+            children: [(0, wV.jsx)(yV.b, {
               name: "joystick"
-            }), " ", OM("general:playGame")]
+            }), " ", JV("general:playGame")]
           })]
-        }), !mM && (0, zM.jsx)(QM.d, {
+        }), !vV && (0, wV.jsx)(nV.d, {
           loaderType: "Secondary"
         })]
       })
     }
   },
-  5388: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => SM
+  5486: (VV, eV, xV) => {
+    xV.d(eV, {
+      d: () => YV
     });
-    var OM = iM(1202);
-    async function SM(MM) {
-      const rM = await fetch(`${OM.clientSideServerUrls.s3Url}/${MM}`, {
+    var JV = xV(1230);
+    async function YV(VV) {
+      const eV = await fetch(`${JV.clientSideServerUrls.s3Url}/${VV}`, {
         headers: {
           Accept: "application/json"
         }
       });
-      if (404 === rM.status || 403 === rM.status) return null;
-      if (!rM.ok) throw new Error(`Failed to download the texture pack (${rM.status})`);
-      return await rM.json()
+      if (404 === eV.status || 403 === eV.status) return null;
+      if (!eV.ok) throw new Error(`Failed to download the texture pack (${eV.status})`);
+      return await eV.json()
     }
   },
-  5468: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => dM
+  5581: (VV, eV, xV) => {
+    xV.d(eV, {
+      d: () => EV
     });
-    var OM = iM(44),
-      SM = iM(1382),
-      jM = iM(1073),
-      aM = iM(143),
-      PM = iM(1630),
-      nM = iM(19),
-      QM = iM(2039),
-      zM = iM(1573),
-      LM = iM(4961),
-      mM = iM(1429),
-      HM = iM(1142),
-      hM = iM(1591);
+    var JV = xV(62),
+      YV = xV(1397),
+      UV = xV(1099),
+      yV = xV(165),
+      pV = xV(1643),
+      QV = xV(27),
+      nV = xV(2051),
+      wV = xV(1603),
+      ZV = xV(5056),
+      vV = xV(1439),
+      rV = xV(1168),
+      kV = xV(1612);
 
-    function JM(MM, rM) {
+    function bV(VV, eV) {
       return {
-        schematicId: MM.schematicId,
-        name: MM.name,
-        description: MM.description,
-        gamePublished: rM,
-        gameCategory: MM.gameCategory,
-        defaultGamemode: MM.defaultGamemode,
-        voidDeathHeight: MM.voidDeathHeight,
-        disableKeepInventory: MM.disableKeepInventory,
-        disableTpRequests: MM.disableTpRequests,
-        disableLobbySpawn: MM.disableLobbySpawn,
-        disableMobs: MM.disableMobs,
-        disableSpawnProtection: MM.disableSpawnProtection,
-        disableFallDamage: MM.disableFallDamage,
-        worldBorder: MM.worldBorder,
-        hideLobbyCode: MM.hideLobbyCode,
-        enableSmpMarketplace: MM.enableSmpMarketplace,
-        enableSurvivalGuns: MM.enableSurvivalGuns,
-        enableSpawnReset: MM.enableSpawnReset,
-        enableDayNight: MM.enableDayNight,
-        persistWorld: MM.persistWorld,
-        persistInventory: MM.persistInventory
+        schematicId: VV.schematicId,
+        name: VV.name,
+        description: VV.description,
+        gamePublished: eV,
+        gameCategory: VV.gameCategory,
+        defaultGamemode: VV.defaultGamemode,
+        voidDeathHeight: VV.voidDeathHeight,
+        disableKeepInventory: VV.disableKeepInventory,
+        disableTpRequests: VV.disableTpRequests,
+        disableLobbySpawn: VV.disableLobbySpawn,
+        disableMobs: VV.disableMobs,
+        disableSpawnProtection: VV.disableSpawnProtection,
+        disableFallDamage: VV.disableFallDamage,
+        worldBorder: VV.worldBorder,
+        hideLobbyCode: VV.hideLobbyCode,
+        enableSmpMarketplace: VV.enableSmpMarketplace,
+        enableSurvivalGuns: VV.enableSurvivalGuns,
+        enableSpawnReset: VV.enableSpawnReset,
+        enableDayNight: VV.enableDayNight,
+        persistWorld: VV.persistWorld,
+        persistInventory: VV.persistInventory
       }
     }
 
-    function dM(MM) {
+    function EV(VV) {
       let {
-        onNavigateAway: rM,
-        inSourceWorld: iM = !1
+        onNavigateAway: eV,
+        inSourceWorld: xV = !1
       } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
       const {
-        userContext: dM
-      } = (0, HM.b)(), yM = (0, hM.useNavigatePreserveSearch)(), [lM, EM] = (0, OM.useState)({
-        ...MM
-      }), [UM, GM] = (0, OM.useState)("Enter"), [CM, eM] = (0, OM.useState)(void 0), bM = (0, OM.useRef)(JM(MM, MM.gamePublished)), wM = (0, OM.useRef)(void 0), tM = "Enter" === UM, gM = dM.playerHasRank("developer") || dM.playerHasRank("admin") || "Enter" === UM && !1 !== lM.schematicContainsSpawnBlock, uM = void 0 !== CM && CM !== wM.current || JSON.stringify(JM(lM, lM.gamePublished)) !== JSON.stringify(bM.current);
+        userContext: EV
+      } = (0, rV.d)(), BV = (0, kV.useNavigatePreserveSearch)(), [jV, qV] = (0, JV.useState)({
+        ...VV
+      }), [tV, FV] = (0, JV.useState)("Enter"), [TV, PV] = (0, JV.useState)(void 0), AV = (0, JV.useRef)(bV(VV, VV.gamePublished)), NV = (0, JV.useRef)(void 0), XV = "Enter" === tV, MV = EV.playerHasRank("developer") || EV.playerHasRank("admin") || "Enter" === tV && !1 !== jV.schematicContainsSpawnBlock, zV = void 0 !== TV && TV !== NV.current || JSON.stringify(bV(jV, jV.gamePublished)) !== JSON.stringify(AV.current);
 
-      function RM(MM, rM) {
-        EM((iM => ({
-          ...iM,
-          [MM]: rM
+      function GV(VV, eV) {
+        qV((xV => ({
+          ...xV,
+          [VV]: eV
         })))
       }
-      const pM = (0, OM.useCallback)((MM => {
-        wM.current = MM, eM(MM)
+      const WV = (0, JV.useCallback)((VV => {
+        NV.current = VV, PV(VV)
       }), []);
 
-      function WM(MM) {
-        GM("Loading");
-        const rM = JM(lM, MM),
-          iM = CM !== wM.current ? CM : void 0;
-        zM.c.updateSchematic(dM, rM, iM).then((iM => {
+      function RV(VV) {
+        FV("Loading");
+        const eV = bV(jV, VV),
+          xV = TV !== NV.current ? TV : void 0;
+        wV.b.updateSchematic(EV, eV, xV).then((xV => {
           let {
-            customTexturePackKey: OM
-          } = iM;
-          GM("Success"), RM("customTexturePackKey", OM), bM.current = rM, wM.current = void 0, eM(void 0), setTimeout((() => {
-            RM("gamePublished", MM), GM("Enter")
+            customTexturePackKey: JV
+          } = xV;
+          FV("Success"), GV("customTexturePackKey", JV), AV.current = eV, NV.current = void 0, PV(void 0), setTimeout((() => {
+            GV("gamePublished", VV), FV("Enter")
           }), 1e3)
-        })).catch((MM => {
-          var rM;
-          (console.error("Failed to save schematic:", MM), GM("Error"), MM instanceof aM.e && MM.errorMessageForUser) && mM.NotificationProvider.showAlertPopup({
+        })).catch((VV => {
+          var eV;
+          (console.error("Failed to save schematic:", VV), FV("Error"), VV instanceof yV.b && VV.errorMessageForUser) && vV.NotificationProvider.showAlertPopup({
             title: "worldBuilder:changesNotSaved",
-            subtitle: MM.errorMessageForUser,
+            subtitle: VV.errorMessageForUser,
             textOpts: {
-              subtitle: null !== (rM = MM.errorMessageTranslationParams) && void 0 !== rM ? rM : void 0
+              subtitle: null !== (eV = VV.errorMessageTranslationParams) && void 0 !== eV ? eV : void 0
             },
             confirmText: "general:ok"
           });
           setTimeout((() => {
-            GM("Enter")
+            FV("Enter")
           }), 1e3)
         }))
       }
       return {
-        schematicData: lM,
-        updateSchematicData: RM,
-        setTexturePack: eM,
-        initializeTexturePack: pM,
-        updateState: UM,
-        formEnabled: tM,
-        publishFormEnabled: gM,
-        hasUnsavedChanges: uM,
-        canEditSourceWorld: !iM,
-        saveSchematic: WM,
+        schematicData: jV,
+        updateSchematicData: GV,
+        setTexturePack: PV,
+        initializeTexturePack: WV,
+        updateState: tV,
+        formEnabled: XV,
+        publishFormEnabled: MV,
+        hasUnsavedChanges: zV,
+        canEditSourceWorld: !xV,
+        saveSchematic: RV,
         unpublishSchematic: function() {
-          mM.NotificationProvider.showPromptPopup({
+          vV.NotificationProvider.showPromptPopup({
             icon: "rocket-launch",
             title: "worldBuilder:unpublishAsGameConfirmTitle",
             subtitle: "worldBuilder:unpublishAsGameConfirmSubtitle",
             confirmText: "worldBuilder:unpublishAsGame",
             cancelText: "general:cancel",
             unlockPointerKey: "unpublishGamePrompt"
-          }).getResult().then((MM => {
-            !0 === MM && WM(!1)
+          }).getResult().then((VV => {
+            !0 === VV && RV(!1)
           }))
         },
         editSourceWorld: function() {
-          GM("Loading"), LM.b.getSourceWorld(lM.schematicId).then((MM => {
-            QM.gameBridge.send("leaveGame", {
+          FV("Loading"), ZV.e.getSourceWorld(jV.schematicId).then((VV => {
+            nV.gameBridge.send("leaveGame", {
               reloadPath: "/"
-            }), (0, nM.j)("other"), yM((0, SM.b)("classic", MM)), null === rM || void 0 === rM || rM()
-          })).catch((MM => {
-            console.error("Failed to get source world:", MM), GM("Error"), setTimeout((() => {
-              GM("Enter")
+            }), (0, QV.h)("other"), BV((0, YV.c)("classic", VV)), null === eV || void 0 === eV || eV()
+          })).catch((VV => {
+            console.error("Failed to get source world:", VV), FV("Error"), setTimeout((() => {
+              FV("Enter")
             }), 1e3)
           }))
         },
         playGame: function() {
-          QM.gameBridge.send("leaveGame", {
+          nV.gameBridge.send("leaveGame", {
             reloadPath: "/"
-          }), yM((0, PM.x)((0, jM.w)(lM.schematicId), lM)), null === rM || void 0 === rM || rM()
+          }), BV((0, pV.x)((0, UV.t)(jV.schematicId), jV)), null === eV || void 0 === eV || eV()
         }
       }
     }
   },
-  5348: () => {}
+  5433: () => {}
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const VV in modules) Object.freeze(modules[VV]);

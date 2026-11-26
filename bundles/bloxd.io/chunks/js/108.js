@@ -1,126 +1,126 @@
 export const id = 108;
 export const ids = [108];
 export const modules = {
-  5265: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      Howl: () => SM.Howl,
-      Howler: () => SM.Howler,
-      musicOutput: () => dM,
-      readyAudioContext: () => yM
+  5353: (VV, eV, xV) => {
+    xV.r(eV), xV.d(eV, {
+      Howl: () => YV.Howl,
+      Howler: () => YV.Howler,
+      musicOutput: () => EV,
+      readyAudioContext: () => BV
     });
-    var OM, SM = iM(5269),
-      jM = iM(3839),
-      aM = iM(5026);
-    const PM = SM.Howler;
+    var JV, YV = xV(5357),
+      UV = xV(3886),
+      yV = xV(5137);
+    const pV = YV.Howler;
 
-    function nM() {
-      var MM, rM;
-      if (PM.ctx || !PM.usingWebAudio || "undefined" === typeof AudioContext || !(0, aM.k)()) return;
-      const iM = navigator.audioSession;
-      let OM;
-      "auto" === (null === iM || void 0 === iM ? void 0 : iM.type) && (iM.type = "ambient");
+    function QV() {
+      var VV, eV;
+      if (pV.ctx || !pV.usingWebAudio || "undefined" === typeof AudioContext || !(0, yV.i)()) return;
+      const xV = navigator.audioSession;
+      let JV;
+      "auto" === (null === xV || void 0 === xV ? void 0 : xV.type) && (xV.type = "ambient");
       try {
-        OM = new AudioContext({
+        JV = new AudioContext({
           sampleRate: 44100
         })
       } catch {
         return
       }
-      const SM = OM.createGain();
-      SM.gain.setValueAtTime(PM._muted ? 0 : null !== (MM = PM._volume) && void 0 !== MM ? MM : 1, OM.currentTime), SM.connect(OM.destination), PM.ctx = OM, PM.masterGain = SM, null === (rM = PM._setup) || void 0 === rM || rM.call(PM)
+      const YV = JV.createGain();
+      YV.gain.setValueAtTime(pV._muted ? 0 : null !== (VV = pV._volume) && void 0 !== VV ? VV : 1, JV.currentTime), YV.connect(JV.destination), pV.ctx = JV, pV.masterGain = YV, null === (eV = pV._setup) || void 0 === eV || eV.call(pV)
     }
-    PM._mobileUnloaded = !0;
-    const QM = PM.volume.bind(SM.Howler);
-    PM.volume = function() {
-      return nM(), QM(...arguments)
+    pV._mobileUnloaded = !0;
+    const nV = pV.volume.bind(YV.Howler);
+    pV.volume = function() {
+      return QV(), nV(...arguments)
     };
-    const zM = PM.mute.bind(SM.Howler);
-    PM.mute = MM => (nM(), zM(MM));
-    const LM = SM.Howl.prototype,
-      mM = LM.init;
+    const wV = pV.mute.bind(YV.Howler);
+    pV.mute = VV => (QV(), wV(VV));
+    const ZV = YV.Howl.prototype,
+      vV = ZV.init;
 
-    function HM() {
-      for (; PM._html5AudioPool.length < PM.html5PoolSize;) {
-        const MM = new Audio;
-        MM._unlocked = !0, PM._releaseHtml5Audio(MM)
+    function rV() {
+      for (; pV._html5AudioPool.length < pV.html5PoolSize;) {
+        const VV = new Audio;
+        VV._unlocked = !0, pV._releaseHtml5Audio(VV)
       }
-      for (const rM of PM._howls)
-        if (!rM._webAudio)
-          for (const iM of rM._getSoundIds()) {
-            var MM;
-            const OM = null === (MM = rM._soundById(iM)) || void 0 === MM ? void 0 : MM._node;
-            OM && !OM._unlocked && (OM._unlocked = !0, OM.load())
+      for (const eV of pV._howls)
+        if (!eV._webAudio)
+          for (const xV of eV._getSoundIds()) {
+            var VV;
+            const JV = null === (VV = eV._soundById(xV)) || void 0 === VV ? void 0 : VV._node;
+            JV && !JV._unlocked && (JV._unlocked = !0, JV.load())
           }
     }
-    LM.init = function(MM) {
-      return nM(), mM.call(this, MM)
-    }, (0, aM.k)() && (PM._unlockAudio = () => {
-      const MM = PM.ctx;
-      if (PM._audioUnlocked || !MM) return;
-      PM.autoUnlock = !1;
-      const rM = MM.createBuffer(1, 1, 22050);
-      PM._scratchBuffer = rM;
-      const iM = new AbortController;
-      let OM = "afterPaint";
-      const SM = () => {
-          var OM;
-          if (PM._audioUnlocked) return;
-          null === (OM = PM._autoResume) || void 0 === OM || OM.call(PM);
-          const SM = MM.createBufferSource();
-          SM.buffer = rM, SM.connect(MM.destination), SM.start(0), MM.resume().catch((() => {})), SM.onended = () => {
-            SM.disconnect(0), PM._audioUnlocked = !0, iM.abort();
-            for (const MM of PM._howls) MM._emit("unlock")
+    ZV.init = function(VV) {
+      return QV(), vV.call(this, VV)
+    }, (0, yV.i)() && (pV._unlockAudio = () => {
+      const VV = pV.ctx;
+      if (pV._audioUnlocked || !VV) return;
+      pV.autoUnlock = !1;
+      const eV = VV.createBuffer(1, 1, 22050);
+      pV._scratchBuffer = eV;
+      const xV = new AbortController;
+      let JV = "afterPaint";
+      const YV = () => {
+          var JV;
+          if (pV._audioUnlocked) return;
+          null === (JV = pV._autoResume) || void 0 === JV || JV.call(pV);
+          const YV = VV.createBufferSource();
+          YV.buffer = eV, YV.connect(VV.destination), YV.start(0), VV.resume().catch((() => {})), YV.onended = () => {
+            YV.disconnect(0), pV._audioUnlocked = !0, xV.abort();
+            for (const VV of pV._howls) VV._emit("unlock")
           }
         },
-        nM = () => {
-          HM(), SM()
+        QV = () => {
+          rV(), YV()
         },
-        QM = rM => {
-          if (HM(), "inTap" === OM) {
-            if ("running" === MM.state) return;
-            console.warn("A click's resume after its frame left Howler's context suspended, so this click resumes it"), SM()
-          } else "afterPaint" === OM && (OM = "queued", (0, jM.d)(rM.timeStamp, (() => {
-            OM = "inTap", SM()
+        nV = eV => {
+          if (rV(), "inTap" === JV) {
+            if ("running" === VV.state) return;
+            console.warn("A click's resume after its frame left Howler's context suspended, so this click resumes it"), YV()
+          } else "afterPaint" === JV && (JV = "queued", (0, UV.c)(eV.timeStamp, (() => {
+            JV = "inTap", YV()
           })))
         };
-      for (const jM of ["touchstart", "touchend"]) document.addEventListener(jM, nM, {
+      for (const UV of ["touchstart", "touchend"]) document.addEventListener(UV, QV, {
         capture: !0,
-        signal: iM.signal
+        signal: xV.signal
       });
-      for (const jM of aM.e) document.addEventListener(jM, QM, {
+      for (const UV of yV.c) document.addEventListener(UV, nV, {
         capture: !0,
-        signal: iM.signal
+        signal: xV.signal
       })
     });
-    let hM = 0;
-    const JM = null === (OM = PM._autoSuspend) || void 0 === OM ? void 0 : OM.bind(SM.Howler);
+    let kV = 0;
+    const bV = null === (JV = pV._autoSuspend) || void 0 === JV ? void 0 : JV.bind(YV.Howler);
 
-    function dM() {
-      yM();
+    function EV() {
+      BV();
       const {
-        ctx: MM,
-        masterGain: rM
-      } = PM;
-      return MM && rM ? {
-        ctx: MM,
-        destination: rM,
-        holdAwake: MM => {
-          var rM, iM;
-          (hM += MM ? 1 : -1, MM) ? null === (rM = PM._autoResume) || void 0 === rM || rM.call(PM): null === (iM = PM._autoSuspend) || void 0 === iM || iM.call(PM)
+        ctx: VV,
+        masterGain: eV
+      } = pV;
+      return VV && eV ? {
+        ctx: VV,
+        destination: eV,
+        holdAwake: VV => {
+          var eV, xV;
+          (kV += VV ? 1 : -1, VV) ? null === (eV = pV._autoResume) || void 0 === eV || eV.call(pV): null === (xV = pV._autoSuspend) || void 0 === xV || xV.call(pV)
         },
         wake: () => {
-          var rM;
-          "running" !== MM.state && (null === (rM = PM._autoResume) || void 0 === rM || rM.call(PM), MM.resume().catch((() => {})))
+          var eV;
+          "running" !== VV.state && (null === (eV = pV._autoResume) || void 0 === eV || eV.call(pV), VV.resume().catch((() => {})))
         }
       } : null
     }
 
-    function yM() {
-      var MM;
-      (PM.volume(), PM.ctx && PM.autoUnlock) && (null === (MM = PM._unlockAudio) || void 0 === MM || MM.call(PM))
+    function BV() {
+      var VV;
+      (pV.volume(), pV.ctx && pV.autoUnlock) && (null === (VV = pV._unlockAudio) || void 0 === VV || VV.call(pV))
     }
-    JM && (PM._autoSuspend = () => hM > 0 ? SM.Howler : JM())
+    bV && (pV._autoSuspend = () => kV > 0 ? YV.Howler : bV())
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const VV in modules) Object.freeze(modules[VV]);

@@ -1,174 +1,174 @@
 export const id = 136;
 export const ids = [136];
 export const modules = {
-  9349: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => aM,
-      d: () => jM
+  9363: (VV, eV, xV) => {
+    xV.d(eV, {
+      c: () => yV,
+      d: () => UV
     });
-    var OM = iM(2099);
-    const SM = /^(?:Key[A-Z]|Digit[0-9]|Arrow(?:Up|Down|Left|Right)|Space)$/,
-      jM = MM => "string" === typeof MM.icon && "" !== MM.icon && "string" === typeof MM.keycode && SM.test(MM.keycode),
-      aM = MM => "Space" === MM ? "_" : OM.k[MM]
+    var JV = xV(2130);
+    const YV = /^(?:Key[A-Z]|Digit[0-9]|Arrow(?:Up|Down|Left|Right)|Space)$/,
+      UV = VV => "string" === typeof VV.icon && "" !== VV.icon && "string" === typeof VV.keycode && YV.test(VV.keycode),
+      yV = VV => "Space" === VV ? "_" : JV.g[VV]
   },
-  34822: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => SM,
-      d: () => jM
+  35093: (VV, eV, xV) => {
+    xV.d(eV, {
+      e: () => YV,
+      g: () => UV
     });
-    let OM = !1;
+    let JV = !1;
 
-    function SM() {
-      return OM
+    function YV() {
+      return JV
     }
 
-    function jM(MM) {
-      return OM !== MM && (OM = MM, !0)
+    function UV(VV) {
+      return JV !== VV && (JV = VV, !0)
     }
   },
-  34833: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => OM
+  35103: (VV, eV, xV) => {
+    xV.d(eV, {
+      e: () => JV
     });
-    class OM {
-      constructor(MM) {
-        this.events = MM, this.recent = [], this.episode = null, this.sampleSum = 0, this.sampleCount = 0, this.minWindowAvg = null
+    class JV {
+      constructor(VV) {
+        this.events = VV, this.recent = [], this.episode = null, this.sampleSum = 0, this.sampleCount = 0, this.minWindowAvg = null
       }
-      addSample(MM, rM) {
-        if (null === MM) return this.recent.length = 0, void this.endEpisode(rM);
-        if (this.sampleSum += MM, this.sampleCount++, this.recent.push(MM), this.recent.length > 5 && this.recent.shift(), null !== this.episode && (this.episode.minFps = Math.min(this.episode.minFps, MM), this.episode.sum += MM, this.episode.count++), this.recent.length < 5) return;
-        const iM = function(MM) {
-          let rM = 0;
-          for (const iM of MM) rM += iM;
-          return rM / MM.length
+      addSample(VV, eV) {
+        if (null === VV) return this.recent.length = 0, void this.endEpisode(eV);
+        if (this.sampleSum += VV, this.sampleCount++, this.recent.push(VV), this.recent.length > 5 && this.recent.shift(), null !== this.episode && (this.episode.minFps = Math.min(this.episode.minFps, VV), this.episode.sum += VV, this.episode.count++), this.recent.length < 5) return;
+        const xV = function(VV) {
+          let eV = 0;
+          for (const xV of VV) eV += xV;
+          return eV / VV.length
         }(this.recent);
-        this.minWindowAvg = null === this.minWindowAvg ? iM : Math.min(this.minWindowAvg, iM), null === this.episode && iM < 20 ? (this.episode = {
-          startedAtMs: rM - 5e3,
+        this.minWindowAvg = null === this.minWindowAvg ? xV : Math.min(this.minWindowAvg, xV), null === this.episode && xV < 20 ? (this.episode = {
+          startedAtMs: eV - 5e3,
           minFps: Math.min(...this.recent),
-          sum: 5 * iM,
+          sum: 5 * xV,
           count: 5
-        }, this.events.onEpisodeStarted(iM)) : null !== this.episode && iM >= 25 && this.endEpisode(rM)
+        }, this.events.onEpisodeStarted(xV)) : null !== this.episode && xV >= 25 && this.endEpisode(eV)
       }
-      endEpisode(MM) {
+      endEpisode(VV) {
         if (null === this.episode) return;
         const {
-          startedAtMs: rM,
-          minFps: iM,
-          sum: OM,
-          count: SM
+          startedAtMs: eV,
+          minFps: xV,
+          sum: JV,
+          count: YV
         } = this.episode;
         this.episode = null, this.events.onEpisodeEnded({
-          startedAtMs: rM,
-          durationMs: MM - rM,
-          minFps: jM(iM),
-          avgFps: jM(OM / SM)
+          startedAtMs: eV,
+          durationMs: VV - eV,
+          minFps: UV(xV),
+          avgFps: UV(JV / YV)
         })
       }
       getTags() {
         return null === this.minWindowAvg ? null : {
-          fps_min_bucket: SM(this.minWindowAvg),
-          fps_avg_bucket: SM(this.sampleSum / this.sampleCount)
+          fps_min_bucket: YV(this.minWindowAvg),
+          fps_avg_bucket: YV(this.sampleSum / this.sampleCount)
         }
       }
     }
 
-    function SM(MM) {
-      return MM < 15 ? "<15" : MM < 30 ? "15-30" : MM < 50 ? "30-50" : "50+"
+    function YV(VV) {
+      return VV < 15 ? "<15" : VV < 30 ? "15-30" : VV < 50 ? "30-50" : "50+"
     }
 
-    function jM(MM) {
-      return Math.round(10 * MM) / 10
+    function UV(VV) {
+      return Math.round(10 * VV) / 10
     }
   },
-  34841: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => QM,
-      f: () => PM
+  35111: (VV, eV, xV) => {
+    xV.d(eV, {
+      c: () => nV,
+      e: () => pV
     });
-    var OM = iM(1073),
-      SM = iM(1573),
-      jM = iM(1144);
-    const aM = 5e3;
+    var JV = xV(1099),
+      YV = xV(1603),
+      UV = xV(1173);
+    const yV = 5e3;
 
-    function PM(MM) {
-      let rM;
-      const iM = jM.userContextManager.getCurrentUserContext().then((rM => SM.c.getGame(rM, MM))).then((MM => MM.name)).catch((rM => (console.warn(`Session replay: couldn't fetch the title of custom game ${MM}.`, rM), null))),
-        OM = new Promise((MM => {
-          rM = setTimeout((() => {
-            MM(null)
-          }), aM)
+    function pV(VV) {
+      let eV;
+      const xV = UV.userContextManager.getCurrentUserContext().then((eV => YV.b.getGame(eV, VV))).then((VV => VV.name)).catch((eV => (console.warn(`Session replay: couldn't fetch the title of custom game ${VV}.`, eV), null))),
+        JV = new Promise((VV => {
+          eV = setTimeout((() => {
+            VV(null)
+          }), yV)
         }));
-      return Promise.race([iM, OM]).finally((() => {
-        clearTimeout(rM)
+      return Promise.race([xV, JV]).finally((() => {
+        clearTimeout(eV)
       }))
     }
 
-    function nM(MM) {
-      var rM;
-      return !0 !== MM.is_custom_game ? String(MM.game_name) : `custom: ${String(null!==(rM=MM.game_display_name)&&void 0!==rM?rM:MM.game_analytics_id)}`
+    function QV(VV) {
+      var eV;
+      return !0 !== VV.is_custom_game ? String(VV.game_name) : `custom: ${String(null!==(eV=VV.game_display_name)&&void 0!==eV?eV:VV.game_analytics_id)}`
     }
-    class QM {
-      constructor(MM) {
-        this.replay = MM, this.pending = null
+    class nV {
+      constructor(VV) {
+        this.replay = VV, this.pending = null
       }
-      send(MM, rM, iM) {
-        if (this.flush(), !(0, OM.m)(MM)) return this.replay.capture("game_joined", rM), void this.replay.capture("$screen", {
-          $screen_name: nM(rM)
+      send(VV, eV, xV) {
+        if (this.flush(), !(0, JV.l)(VV)) return this.replay.capture("game_joined", eV), void this.replay.capture("$screen", {
+          $screen_name: QV(eV)
         });
-        const SM = {
-          properties: rM,
-          joinedAtMs: iM
+        const YV = {
+          properties: eV,
+          joinedAtMs: xV
         };
-        this.pending = SM, PM((0, OM.p)(MM)).then((MM => {
-          this.pending === SM && (null !== MM && (SM.properties = {
-            ...rM,
-            game_display_name: MM
+        this.pending = YV, pV((0, JV.p)(VV)).then((VV => {
+          this.pending === YV && (null !== VV && (YV.properties = {
+            ...eV,
+            game_display_name: VV
           }, this.replay.addGameContext({
-            game_display_name: MM
+            game_display_name: VV
           })), this.flush())
         }))
       }
       flush() {
-        let MM = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        let VV = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
         if (null === this.pending) return;
         const {
-          properties: rM,
-          joinedAtMs: iM
+          properties: eV,
+          joinedAtMs: xV
         } = this.pending;
         this.pending = null;
-        const OM = {
-          $screen_name: nM(rM)
+        const JV = {
+          $screen_name: QV(eV)
         };
-        MM ? (this.replay.captureOnExit("game_joined", rM, iM), this.replay.captureOnExit("$screen", OM, iM)) : (this.replay.captureAt("game_joined", rM, iM), this.replay.captureAt("$screen", OM, iM))
+        VV ? (this.replay.captureOnExit("game_joined", eV, xV), this.replay.captureOnExit("$screen", JV, xV)) : (this.replay.captureAt("game_joined", eV, xV), this.replay.captureAt("$screen", JV, xV))
       }
     }
   },
-  34820: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => tM
+  35090: (VV, eV, xV) => {
+    xV.d(eV, {
+      e: () => XV
     });
-    var OM = iM(19),
-      SM = iM(2067),
-      jM = iM(34822),
-      aM = iM(22),
-      PM = iM(1717),
-      nM = iM(34831),
-      QM = iM(9349),
-      zM = iM(1830),
-      LM = iM(2093),
-      mM = iM(30),
-      HM = iM(34785),
-      hM = iM(2096),
-      JM = iM(7006);
-    const dM = [...Object.values(hM.h).flat(), "ShiftLeft", "ShiftRight", "Enter", "KeyT", "Slash", "Escape", "Tab", "MetaLeft", "MetaRight", "ContextMenu", "PrintScreen", "ScrollLock", "Pause", "NumLock", "F1", "F5", "F6", "F7", "F11", "F12", "Mouse4", "Mouse5"],
-      yM = [
+    var JV = xV(27),
+      YV = xV(2080),
+      UV = xV(35093),
+      yV = xV(32),
+      pV = xV(1725),
+      QV = xV(35097),
+      nV = xV(9363),
+      wV = xV(1838),
+      ZV = xV(2116),
+      vV = xV(40),
+      rV = xV(35045),
+      kV = xV(2124),
+      bV = xV(7083);
+    const EV = [...Object.values(kV.f).flat(), "ShiftLeft", "ShiftRight", "Enter", "KeyT", "Slash", "Escape", "Tab", "MetaLeft", "MetaRight", "ContextMenu", "PrintScreen", "ScrollLock", "Pause", "NumLock", "F1", "F5", "F6", "F7", "F11", "F12", "Mouse4", "Mouse5"],
+      BV = [
         [1, "Mouse1"],
         [4, "Mouse2"],
         [2, "Mouse3"],
         [8, "Mouse4"],
         [16, "Mouse5"]
       ],
-      lM = {
+      jV = {
         forward: "forward",
         backward: "backward",
         left: "left",
@@ -180,225 +180,225 @@ export const modules = {
         "alt-fire": "secondary",
         "mid-fire": "middle"
       };
-    class EM {
-      constructor(MM) {
-        this.source = MM, this.keyListeners = [], this.actionsListeners = [], this.pointerLockListeners = [], this.sQ = new Uint8Array(JM.e.length), this.heldCount = 0, this.actionBits = 0, this.typing = !1, this.pointerLocked = !1, this.mouseButtons = 0, this.keyTable = null, MM.onBindingsChanged((() => {
+    class qV {
+      constructor(VV) {
+        this.source = VV, this.keyListeners = [], this.actionsListeners = [], this.pointerLockListeners = [], this.hn = new Uint8Array(bV.b.length), this.heldCount = 0, this.actionBits = 0, this.typing = !1, this.pointerLocked = !1, this.mouseButtons = 0, this.keyTable = null, VV.onBindingsChanged((() => {
           this.keyTable = null
         }))
       }
-      onKey(MM) {
-        return GM(this.keyListeners, MM)
+      onKey(VV) {
+        return FV(this.keyListeners, VV)
       }
-      onUnboundKey(MM) {
-        return this.onKey(((rM, iM, OM, SM, jM) => {
-          iM && SM && !OM && MM(rM, jM)
+      onUnboundKey(VV) {
+        return this.onKey(((eV, xV, JV, YV, UV) => {
+          xV && YV && !JV && VV(eV, UV)
         }))
       }
-      onActions(MM) {
-        return GM(this.actionsListeners, MM)
+      onActions(VV) {
+        return FV(this.actionsListeners, VV)
       }
-      onPointerLock(MM) {
-        return GM(this.pointerLockListeners, MM)
+      onPointerLock(VV) {
+        return FV(this.pointerLockListeners, VV)
       }
       getActionBits() {
         return this.actionBits
       }
-      listen(MM, rM) {
-        this.typing = this.source.isTyping(rM.activeElement), this.pointerLocked = null !== rM.pointerLockElement;
-        const iM = {
+      listen(VV, eV) {
+        this.typing = this.source.isTyping(eV.activeElement), this.pointerLocked = null !== eV.pointerLockElement;
+        const xV = {
           capture: !0,
           passive: !0
         };
-        MM.addEventListener("keydown", (MM => {
-          this.setTyping(this.source.isTyping(UM(MM))), MM.isComposing || this.typing || this.keyDown(MM.code, MM.altKey || MM.ctrlKey || MM.metaKey)
-        }), iM), MM.addEventListener("keyup", (MM => {
-          this.typing || ("MetaLeft" === MM.code || "MetaRight" === MM.code ? this.releaseAll() : this.keyUp((0, JM.f)(MM.code)))
-        }), iM);
-        const OM = MM => {
-          "mouse" === MM.pointerType && MM.isTrusted && this.setMouseButtons(MM.buttons, MM.altKey || MM.ctrlKey || MM.metaKey)
+        VV.addEventListener("keydown", (VV => {
+          this.setTyping(this.source.isTyping(tV(VV))), VV.isComposing || this.typing || this.keyDown(VV.code, VV.altKey || VV.ctrlKey || VV.metaKey)
+        }), xV), VV.addEventListener("keyup", (VV => {
+          this.typing || ("MetaLeft" === VV.code || "MetaRight" === VV.code ? this.releaseAll() : this.keyUp((0, bV.d)(VV.code)))
+        }), xV);
+        const JV = VV => {
+          "mouse" === VV.pointerType && VV.isTrusted && this.setMouseButtons(VV.buttons, VV.altKey || VV.ctrlKey || VV.metaKey)
         };
-        MM.addEventListener("pointerdown", OM, iM), MM.addEventListener("pointermove", OM, iM), MM.addEventListener("pointerup", OM, iM), MM.addEventListener("focusin", (MM => {
-          this.setTyping(this.source.isTyping(UM(MM)))
-        }), iM), MM.addEventListener("focusout", (MM => {
-          this.setTyping(this.source.isTyping(MM.relatedTarget))
-        }), iM), MM.addEventListener("blur", (rM => {
-          rM.target === MM && this.releaseAll()
-        }), iM), rM.addEventListener("visibilitychange", (() => {
-          rM.hidden && this.releaseAll()
-        })), rM.addEventListener("pointerlockchange", (() => {
-          const MM = null !== rM.pointerLockElement;
-          if (MM !== this.pointerLocked) {
-            this.pointerLocked = MM;
-            const rM = this.source.now();
-            for (const iM of this.pointerLockListeners) iM(MM, rM)
+        VV.addEventListener("pointerdown", JV, xV), VV.addEventListener("pointermove", JV, xV), VV.addEventListener("pointerup", JV, xV), VV.addEventListener("focusin", (VV => {
+          this.setTyping(this.source.isTyping(tV(VV)))
+        }), xV), VV.addEventListener("focusout", (VV => {
+          this.setTyping(this.source.isTyping(VV.relatedTarget))
+        }), xV), VV.addEventListener("blur", (eV => {
+          eV.target === VV && this.releaseAll()
+        }), xV), eV.addEventListener("visibilitychange", (() => {
+          eV.hidden && this.releaseAll()
+        })), eV.addEventListener("pointerlockchange", (() => {
+          const VV = null !== eV.pointerLockElement;
+          if (VV !== this.pointerLocked) {
+            this.pointerLocked = VV;
+            const eV = this.source.now();
+            for (const xV of this.pointerLockListeners) xV(VV, eV)
           }
         }))
       }
-      keyDown(MM, rM) {
-        const iM = (0, JM.f)(MM);
-        if (0 !== this.sQ[iM]) return;
-        const OM = this.source.isInPlay(),
-          SM = OM ? this.getKeyTable() : null,
-          jM = null === SM || rM || 1 === SM.bound[iM];
-        this.sQ[iM] = 1 + (jM ? 1 : 0) + (OM ? 2 : 0), this.heldCount++, this.emit(iM, !0, jM, OM), null !== SM && 0 !== SM.actionBits[iM] && this.updateActionBits()
+      keyDown(VV, eV) {
+        const xV = (0, bV.d)(VV);
+        if (0 !== this.hn[xV]) return;
+        const JV = this.source.isInPlay(),
+          YV = JV ? this.getKeyTable() : null,
+          UV = null === YV || eV || 1 === YV.bound[xV];
+        this.hn[xV] = 1 + (UV ? 1 : 0) + (JV ? 2 : 0), this.heldCount++, this.emit(xV, !0, UV, JV), null !== YV && 0 !== YV.actionBits[xV] && this.updateActionBits()
       }
-      keyUp(MM) {
-        this.release(MM) && this.updateActionBits()
+      keyUp(VV) {
+        this.release(VV) && this.updateActionBits()
       }
-      setMouseButtons(MM, rM) {
-        const iM = MM ^ this.mouseButtons;
-        if (0 !== iM) {
-          this.mouseButtons = MM;
-          for (const [OM, SM] of yM) 0 !== (iM & OM) && (0 === (MM & OM) ? this.keyUp((0, JM.f)(SM)) : !this.typing && this.source.isInPlay() && this.keyDown(SM, rM))
+      setMouseButtons(VV, eV) {
+        const xV = VV ^ this.mouseButtons;
+        if (0 !== xV) {
+          this.mouseButtons = VV;
+          for (const [JV, YV] of BV) 0 !== (xV & JV) && (0 === (VV & JV) ? this.keyUp((0, bV.d)(YV)) : !this.typing && this.source.isInPlay() && this.keyDown(YV, eV))
         }
       }
       releaseAll() {
-        let MM = !1;
-        for (let rM = 0; this.heldCount > 0 && rM < this.sQ.length; rM++) MM = this.release(rM) || MM;
-        this.mouseButtons = 0, MM && this.updateActionBits()
+        let VV = !1;
+        for (let eV = 0; this.heldCount > 0 && eV < this.hn.length; eV++) VV = this.release(eV) || VV;
+        this.mouseButtons = 0, VV && this.updateActionBits()
       }
-      release(MM) {
-        const rM = this.sQ[MM];
-        if (0 === rM) return !1;
-        this.sQ[MM] = 0, this.heldCount--;
-        const iM = 0 !== (rM - 1 & 2);
-        return this.emit(MM, !1, 0 !== (rM - 1 & 1), iM), iM
+      release(VV) {
+        const eV = this.hn[VV];
+        if (0 === eV) return !1;
+        this.hn[VV] = 0, this.heldCount--;
+        const xV = 0 !== (eV - 1 & 2);
+        return this.emit(VV, !1, 0 !== (eV - 1 & 1), xV), xV
       }
       updateActionBits() {
-        let MM = 0;
+        let VV = 0;
         if (this.heldCount > 0) {
-          const rM = this.getKeyTable().actionBits;
-          for (let iM = 0; iM < this.sQ.length; iM++) {
-            const OM = this.sQ[iM];
-            0 !== OM && 0 !== (OM - 1 & 2) && (MM |= rM[iM])
+          const eV = this.getKeyTable().actionBits;
+          for (let xV = 0; xV < this.hn.length; xV++) {
+            const JV = this.hn[xV];
+            0 !== JV && 0 !== (JV - 1 & 2) && (VV |= eV[xV])
           }
         }
-        if (MM === this.actionBits) return;
-        this.actionBits = MM;
-        const rM = this.source.now();
-        for (const iM of this.actionsListeners) iM(MM, rM)
+        if (VV === this.actionBits) return;
+        this.actionBits = VV;
+        const eV = this.source.now();
+        for (const xV of this.actionsListeners) xV(VV, eV)
       }
       getKeyTable() {
-        return this.keyTable ??= function(MM, rM) {
-          const iM = new Uint8Array(JM.e.length),
-            OM = new Uint16Array(JM.e.length);
-          iM[0] = 1;
-          for (const SM of dM) iM[(0, JM.f)(SM)] = 1;
-          for (const [SM, jM] of Object.entries(MM)) {
-            if (rM.has(SM)) continue;
-            const MM = lM[SM],
-              aM = void 0 === MM ? 0 : (0, JM.h)(MM);
-            for (const rM of jM) {
-              const MM = (0, JM.f)(rM);
-              iM[MM] = 1, 0 !== MM && (OM[MM] |= aM)
+        return this.keyTable ??= function(VV, eV) {
+          const xV = new Uint8Array(bV.b.length),
+            JV = new Uint16Array(bV.b.length);
+          xV[0] = 1;
+          for (const YV of EV) xV[(0, bV.d)(YV)] = 1;
+          for (const [YV, UV] of Object.entries(VV)) {
+            if (eV.has(YV)) continue;
+            const VV = jV[YV],
+              yV = void 0 === VV ? 0 : (0, bV.e)(VV);
+            for (const eV of UV) {
+              const VV = (0, bV.d)(eV);
+              xV[VV] = 1, 0 !== VV && (JV[VV] |= yV)
             }
           }
           return {
-            bound: iM,
-            actionBits: OM
+            bound: xV,
+            actionBits: JV
           }
         }(this.source.getBindings(), this.source.ignoredActions), this.keyTable
       }
-      setTyping(MM) {
-        MM && !this.typing && (this.typing = !0, this.releaseAll()), this.typing = MM
+      setTyping(VV) {
+        VV && !this.typing && (this.typing = !0, this.releaseAll()), this.typing = VV
       }
-      emit(MM, rM, iM, OM) {
-        const SM = JM.e[MM],
-          jM = this.source.now();
-        for (const aM of this.keyListeners) aM(SM, rM, iM, OM, jM)
-      }
-    }
-
-    function UM(MM) {
-      var rM;
-      return null !== (rM = MM.composedPath()[0]) && void 0 !== rM ? rM : MM.target
-    }
-
-    function GM(MM, rM) {
-      return MM.push(rM), () => {
-        const iM = MM.indexOf(rM); - 1 !== iM && MM.splice(iM, 1)
+      emit(VV, eV, xV, JV) {
+        const YV = bV.b[VV],
+          UV = this.source.now();
+        for (const yV of this.keyListeners) yV(YV, eV, xV, JV, UV)
       }
     }
-    const CM = "replayInput",
-      eM = new Set([...LM.A, ...LM.k].filter((MM => "replayViewerOpen" !== MM && "toggleFreeCam" !== MM)));
-    let bM = null;
 
-    function wM() {
-      var MM;
-      return (null !== (MM = SM.d.get("customButtons")) && void 0 !== MM ? MM : []).filter(QM.d).map((MM => MM.keycode))
+    function tV(VV) {
+      var eV;
+      return null !== (eV = VV.composedPath()[0]) && void 0 !== eV ? eV : VV.target
     }
 
-    function tM() {
-      return null === bM && "0" !== String(mM.g.getItem(CM)) && (bM = new EM({
-        isInPlay: () => "inGame" === OM.d.get("gameState") && !(0, PM.r)() && !(0, jM.b)(),
-        isTyping: zM.isTextEntry,
+    function FV(VV, eV) {
+      return VV.push(eV), () => {
+        const xV = VV.indexOf(eV); - 1 !== xV && VV.splice(xV, 1)
+      }
+    }
+    const TV = "replayInput",
+      PV = new Set([...ZV.z, ...ZV.k].filter((VV => "replayViewerOpen" !== VV && "toggleFreeCam" !== VV)));
+    let AV = null;
+
+    function NV() {
+      var VV;
+      return (null !== (VV = YV.c.get("customButtons")) && void 0 !== VV ? VV : []).filter(nV.d).map((VV => VV.keycode))
+    }
+
+    function XV() {
+      return null === AV && "0" !== String(vV.m.getItem(TV)) && (AV = new qV({
+        isInPlay: () => "inGame" === JV.b.get("gameState") && !(0, pV.n)() && !(0, UV.e)(),
+        isTyping: wV.isTextEntry,
         getBindings: () => ({
-          ...LM.v,
-          customButtons: wM(),
-          pageKeys: (0, nM.e)()
+          ...ZV.t,
+          customButtons: NV(),
+          pageKeys: (0, QV.f)()
         }),
-        ignoredActions: eM,
-        onBindingsChanged: MM => {
-          aM.i.subscribe("customBindingsChanged", MM), SM.d.subscribe("customButtons", MM), SM.d.subscribeReset(MM), (0, nM.f)(MM)
+        ignoredActions: PV,
+        onBindingsChanged: VV => {
+          yV.h.subscribe("customBindingsChanged", VV), YV.c.subscribe("customButtons", VV), YV.c.subscribeReset(VV), (0, QV.h)(VV)
         },
-        now: HM.e
-      }), bM.listen(window, document)), bM
+        now: rV.c
+      }), AV.listen(window, document)), AV
     }
   },
-  34831: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => aM,
-      e: () => PM,
-      f: () => nM
+  35097: (VV, eV, xV) => {
+    xV.d(eV, {
+      b: () => yV,
+      f: () => pV,
+      h: () => QV
     });
-    const OM = new Map,
-      SM = [];
+    const JV = new Map,
+      YV = [];
 
-    function jM() {
-      for (const MM of SM) MM()
+    function UV() {
+      for (const VV of YV) VV()
     }
 
-    function aM(MM) {
-      var rM;
-      return OM.set(MM, (null !== (rM = OM.get(MM)) && void 0 !== rM ? rM : 0) + 1), jM(), () => {
-        const rM = OM.get(MM) - 1;
-        0 === rM ? OM.delete(MM) : OM.set(MM, rM), jM()
+    function yV(VV) {
+      var eV;
+      return JV.set(VV, (null !== (eV = JV.get(VV)) && void 0 !== eV ? eV : 0) + 1), UV(), () => {
+        const eV = JV.get(VV) - 1;
+        0 === eV ? JV.delete(VV) : JV.set(VV, eV), UV()
       }
     }
 
-    function PM() {
-      return [...OM.keys()]
+    function pV() {
+      return [...JV.keys()]
     }
 
-    function nM(MM) {
-      SM.push(MM)
+    function QV(VV) {
+      YV.push(VV)
     }
   },
-  7006: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => OM,
-      f: () => jM,
-      h: () => PM
+  7083: (VV, eV, xV) => {
+    xV.d(eV, {
+      b: () => JV,
+      d: () => UV,
+      e: () => pV
     });
-    const OM = ["Unidentified", ...[..."ABCDEFGHIJKLMNOPQRSTUVWXYZ"].map((MM => `Key${MM}`)), ...Array.from({
+    const JV = ["Unidentified", ...[..."ABCDEFGHIJKLMNOPQRSTUVWXYZ"].map((VV => `Key${VV}`)), ...Array.from({
         length: 10
-      }, ((MM, rM) => `Digit${rM}`)), ...Array.from({
+      }, ((VV, eV) => `Digit${eV}`)), ...Array.from({
         length: 12
-      }, ((MM, rM) => `F${rM+1}`)), "Escape", "Tab", "CapsLock", "ShiftLeft", "ShiftRight", "ControlLeft", "ControlRight", "AltLeft", "AltRight", "MetaLeft", "MetaRight", "Space", "Enter", "Backspace", "Delete", "Insert", "Home", "End", "PageUp", "PageDown", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight", "Minus", "Equal", "BracketLeft", "BracketRight", "Backslash", "IntlBackslash", "Semicolon", "Quote", "Backquote", "Comma", "Period", "Slash", "ContextMenu", "PrintScreen", "ScrollLock", "Pause", "NumLock", ...Array.from({
+      }, ((VV, eV) => `F${eV+1}`)), "Escape", "Tab", "CapsLock", "ShiftLeft", "ShiftRight", "ControlLeft", "ControlRight", "AltLeft", "AltRight", "MetaLeft", "MetaRight", "Space", "Enter", "Backspace", "Delete", "Insert", "Home", "End", "PageUp", "PageDown", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight", "Minus", "Equal", "BracketLeft", "BracketRight", "Backslash", "IntlBackslash", "Semicolon", "Quote", "Backquote", "Comma", "Period", "Slash", "ContextMenu", "PrintScreen", "ScrollLock", "Pause", "NumLock", ...Array.from({
         length: 10
-      }, ((MM, rM) => `Numpad${rM}`)), "NumpadAdd", "NumpadSubtract", "NumpadMultiply", "NumpadDivide", "NumpadDecimal", "NumpadEnter", "Mouse1", "Mouse2", "Mouse3", "Mouse4", "Mouse5"],
-      SM = new Map(OM.map(((MM, rM) => [MM, rM])));
+      }, ((VV, eV) => `Numpad${eV}`)), "NumpadAdd", "NumpadSubtract", "NumpadMultiply", "NumpadDivide", "NumpadDecimal", "NumpadEnter", "Mouse1", "Mouse2", "Mouse3", "Mouse4", "Mouse5"],
+      YV = new Map(JV.map(((VV, eV) => [VV, eV])));
 
-    function jM(MM) {
-      var rM;
-      return null !== (rM = SM.get(MM)) && void 0 !== rM ? rM : 0
+    function UV(VV) {
+      var eV;
+      return null !== (eV = YV.get(VV)) && void 0 !== eV ? eV : 0
     }
-    const aM = ["forward", "backward", "left", "right", "jump", "sprint", "crouch", "primary", "secondary", "middle"];
+    const yV = ["forward", "backward", "left", "right", "jump", "sprint", "crouch", "primary", "secondary", "middle"];
 
-    function PM(MM) {
-      return 1 << aM.indexOf(MM)
+    function pV(VV) {
+      return 1 << yV.indexOf(VV)
     }
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const VV in modules) Object.freeze(modules[VV]);

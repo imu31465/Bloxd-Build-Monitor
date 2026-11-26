@@ -1,93 +1,93 @@
 export const id = 71;
 export const ids = [71];
 export const modules = {
-  40219: (MM, rM, iM) => {
-    function OM(MM) {
-      return void 0 === MM ? void 0 : [MM[0], MM[1], MM[2]]
+  40373: (VV, eV, xV) => {
+    function JV(VV) {
+      return void 0 === VV ? void 0 : [VV[0], VV[1], VV[2]]
     }
 
-    function SM(MM) {
-      const rM = MM.particles;
+    function YV(VV) {
+      const eV = VV.particles;
       return {
         opts: {
-          texture: rM.texture,
-          vL: rM.vL,
-          minLifeTime: rM.minLifeTime,
-          maxLifeTime: rM.maxLifeTime,
-          minSize: rM.minSize,
-          maxSize: rM.maxSize,
-          minEmitPower: rM.minEmitPower,
-          maxEmitPower: rM.maxEmitPower,
-          emitRate: rM.emitRate,
-          gravity: OM(rM.gravity),
-          dir1: OM(rM.dir1),
-          dir2: OM(rM.dir2),
-          colorGradients: rM.colorGradients,
-          blendMode: rM.blendMode
+          texture: eV.texture,
+          Jv: eV.Jv,
+          minLifeTime: eV.minLifeTime,
+          maxLifeTime: eV.maxLifeTime,
+          minSize: eV.minSize,
+          maxSize: eV.maxSize,
+          minEmitPower: eV.minEmitPower,
+          maxEmitPower: eV.maxEmitPower,
+          emitRate: eV.emitRate,
+          gravity: JV(eV.gravity),
+          dir1: JV(eV.dir1),
+          dir2: JV(eV.dir2),
+          colorGradients: eV.colorGradients,
+          blendMode: eV.blendMode
         },
-        half: [rM.width / 2, rM.height / 2, rM.depth / 2]
+        half: [eV.width / 2, eV.height / 2, eV.depth / 2]
       }
     }
-    iM.d(rM, {
-      b: () => SM
+    xV.d(eV, {
+      d: () => YV
     })
   },
-  40186: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => jM,
-      h: () => QM,
-      k: () => nM,
-      m: () => aM
+  40342: (VV, eV, xV) => {
+    xV.d(eV, {
+      c: () => UV,
+      f: () => nV,
+      h: () => QV,
+      k: () => yV
     });
-    var OM = iM(187);
-    const SM = JSON.parse('{"aura_snowfall":{"offset":[0,2.6,0],"ownInFirstPerson":true,"particles":{"blendMode":1,"capacity":64,"colorGradients":[{"minColor":[255,255,255,0.9],"timeFraction":0},{"minColor":[255,255,255,0],"timeFraction":1}],"depth":3,"dir1":[-0.2,-1,-0.2],"dir2":[0.2,-1,0.2],"emitRate":12,"gravity":[0,-1.5,0],"height":0.2,"maxEmitPower":0.6,"maxLifeTime":2.5,"maxSize":0.15,"minEmitPower":0.3,"minLifeTime":1.5,"minSize":0.08,"texture":"snowflake","width":3}}}'),
-      jM = "PetRoot";
-    let aM = JSON.parse('{"pet_reindeer":{"bobAmplitude":0.08,"bobHz":0.8,"clips":{"fly":"animation.cosmetic.pet_reindeer_fly","land":"animation.cosmetic.pet_reindeer_fly","perch":"animation.cosmetic.pet_reindeer_sit","takeOff":"animation.cosmetic.pet_reindeer_fly"},"followOffset":[0.9,1.7,-0.2],"followStiffness":8,"model":"pet_reindeer","nametagRaise":0.6,"perchOffset":[0,0.02,0],"scale":0.45,"yawOffset":0},"pet_reindeer2":{"bobAmplitude":0.08,"bobHz":0.8,"clips":{"fly":"animation.cosmetic.pet_reindeer_fly","land":"animation.cosmetic.pet_reindeer_fly","perch":"animation.cosmetic.pet_reindeer_sit","takeOff":"animation.cosmetic.pet_reindeer_fly"},"followOffset":[0.9,1.7,-0.2],"followStiffness":8,"model":"pet_reindeer","nametagRaise":0.6,"perchOffset":[0,0.02,0],"scale":0.45,"yawOffset":0}}'),
-      PM = SM;
+    var JV = xV(220);
+    const YV = JSON.parse('{"aura_snowfall":{"offset":[0,2.6,0],"ownInFirstPerson":true,"particles":{"blendMode":1,"capacity":64,"colorGradients":[{"minColor":[255,255,255,0.9],"timeFraction":0},{"minColor":[255,255,255,0],"timeFraction":1}],"depth":3,"dir1":[-0.2,-1,-0.2],"dir2":[0.2,-1,0.2],"emitRate":12,"gravity":[0,-1.5,0],"height":0.2,"maxEmitPower":0.6,"maxLifeTime":2.5,"maxSize":0.15,"minEmitPower":0.3,"minLifeTime":1.5,"minSize":0.08,"texture":"snowflake","width":3}}}'),
+      UV = "PetRoot";
+    let yV = JSON.parse('{"pet_reindeer":{"bobAmplitude":0.08,"bobHz":0.8,"clips":{"fly":"animation.cosmetic.pet_reindeer_fly","land":"animation.cosmetic.pet_reindeer_fly","perch":"animation.cosmetic.pet_reindeer_sit","takeOff":"animation.cosmetic.pet_reindeer_fly"},"followOffset":[0.9,1.7,-0.2],"followStiffness":8,"model":"pet_reindeer","nametagRaise":0.6,"perchOffset":[0,0.02,0],"scale":0.45,"yawOffset":0},"pet_reindeer2":{"bobAmplitude":0.08,"bobHz":0.8,"clips":{"fly":"animation.cosmetic.pet_reindeer_fly","land":"animation.cosmetic.pet_reindeer_fly","perch":"animation.cosmetic.pet_reindeer_sit","takeOff":"animation.cosmetic.pet_reindeer_fly"},"followOffset":[0.9,1.7,-0.2],"followStiffness":8,"model":"pet_reindeer","nametagRaise":0.6,"perchOffset":[0,0.02,0],"scale":0.45,"yawOffset":0}}'),
+      pV = YV;
     new Map, new Map;
 
-    function nM(MM) {
-      var rM;
-      return null !== (rM = (0, OM.d)(aM, MM)) && void 0 !== rM ? rM : null
+    function QV(VV) {
+      var eV;
+      return null !== (eV = (0, JV.b)(yV, VV)) && void 0 !== eV ? eV : null
     }
 
-    function QM(MM) {
-      var rM;
-      return null !== (rM = (0, OM.d)(PM, MM)) && void 0 !== rM ? rM : null
+    function nV(VV) {
+      var eV;
+      return null !== (eV = (0, JV.b)(pV, VV)) && void 0 !== eV ? eV : null
     }
   },
-  39673: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => SM,
-      g: () => jM
+  39828: (VV, eV, xV) => {
+    xV.d(eV, {
+      b: () => YV,
+      c: () => UV
     });
-    const OM = new WeakMap;
+    const JV = new WeakMap;
 
-    function SM(MM, rM) {
-      return OM.set(MM, rM), MM
+    function YV(VV, eV) {
+      return JV.set(VV, eV), VV
     }
 
-    function jM(MM) {
-      var rM;
-      return null !== (rM = OM.get(MM)) && void 0 !== rM ? rM : null
+    function UV(VV) {
+      var eV;
+      return null !== (eV = JV.get(VV)) && void 0 !== eV ? eV : null
     }
   },
-  39689: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => PM
+  39849: (VV, eV, xV) => {
+    xV.d(eV, {
+      c: () => pV
     });
-    var OM = iM(1229);
+    var JV = xV(1252);
 
-    function SM(MM) {
-      const rM = /(\d*\.?\d+)px/.exec(MM);
-      return rM ? Number(rM[1]) : null
+    function YV(VV) {
+      const eV = /(\d*\.?\d+)px/.exec(VV);
+      return eV ? Number(eV[1]) : null
     }
 
-    function jM(MM) {
-      return MM.split(/[\s,]+/).pop()
+    function UV(VV) {
+      return VV.split(/[\s,]+/).pop()
     }
-    let aM = !1;
-    const PM = {
+    let yV = !1;
+    const pV = {
       debug: !1,
       align: "center",
       vAlign: "middle",
@@ -98,612 +98,612 @@ export const modules = {
       font: "Arial",
       lineHeight: null,
       justify: !1,
-      drawText: function(MM, rM, OM, PM, nM, QM) {
-        if (nM <= 0 || QM <= 0 || this.fontSize <= 0) return {
+      drawText: function(VV, eV, JV, pV, QV, nV) {
+        if (QV <= 0 || nV <= 0 || this.fontSize <= 0) return {
           height: 0
         };
         const {
-          fontStyle: zM,
-          fontVariant: LM,
-          fontWeight: mM,
-          fontSize: HM,
-          font: hM
-        } = this, JM = [zM, LM, mM, `${HM}px`, hM].filter(Boolean).join(" "), dM = [
-          [mM, `${HM}px`, jM(hM)].filter(Boolean).join(" "), `${HM}px sans-serif`
-        ], yM = MM.font, lM = function(MM, rM, iM) {
-          for (const OM of rM) {
-            MM.font = OM;
-            const rM = SM(MM.font),
-              aM = jM(OM);
-            if (null !== rM && Math.abs(rM - iM) <= .5 && MM.font.toLowerCase().includes(aM.toLowerCase())) return OM
+          fontStyle: wV,
+          fontVariant: ZV,
+          fontWeight: vV,
+          fontSize: rV,
+          font: kV
+        } = this, bV = [wV, ZV, vV, `${rV}px`, kV].filter(Boolean).join(" "), EV = [
+          [vV, `${rV}px`, UV(kV)].filter(Boolean).join(" "), `${rV}px sans-serif`
+        ], BV = VV.font, jV = function(VV, eV, xV) {
+          for (const JV of eV) {
+            VV.font = JV;
+            const eV = YV(VV.font),
+              yV = UV(JV);
+            if (null !== eV && Math.abs(eV - xV) <= .5 && VV.font.toLowerCase().includes(yV.toLowerCase())) return JV
           }
           return null
-        }(MM, [JM, ...dM], HM);
-        lM !== JM && function(MM, rM, OM) {
-          aM || (aM = !0, Promise.resolve().then((() => iM(1329))).then((iM => {
+        }(VV, [bV, ...EV], rV);
+        jV !== bV && function(VV, eV, JV) {
+          yV || (yV = !0, Promise.resolve().then((() => xV(1353))).then((xV => {
             let {
-              CJ: SM
-            } = iM;
-            SM(new Error("A canvas didn't take canvasTxt's font"), {
-              font: MM,
-              ML: rM,
-              drawnWith: null !== OM && void 0 !== OM ? OM : "the kept font, scaled"
+              lb: YV
+            } = xV;
+            YV(new Error("A canvas didn't take canvasTxt's font"), {
+              font: VV,
+              ZZ: eV,
+              drawnWith: null !== JV && void 0 !== JV ? JV : "the kept font, scaled"
             })
           })).catch((() => {})))
-        }(JM, yM, lM);
-        const EM = SM(MM.font);
-        if (null === lM && null !== EM && EM > 0) {
-          const iM = HM / EM;
-          MM.save();
+        }(bV, BV, jV);
+        const qV = YV(VV.font);
+        if (null === jV && null !== qV && qV > 0) {
+          const xV = rV / qV;
+          VV.save();
           try {
-            return MM.scale(iM, iM), {
-              height: this.drawLines(MM, rM, OM / iM, PM / iM, nM / iM, QM / iM, EM).height * iM
+            return VV.scale(xV, xV), {
+              height: this.drawLines(VV, eV, JV / xV, pV / xV, QV / xV, nV / xV, qV).height * xV
             }
           } finally {
-            MM.restore()
+            VV.restore()
           }
         }
-        return this.drawLines(MM, rM, OM, PM, nM, QM, HM)
+        return this.drawLines(VV, eV, JV, pV, QV, nV, rV)
       },
-      drawLines: function(MM, rM, iM, SM, jM, aM, PM) {
-        const nM = iM + jM,
-          QM = SM + aM;
-        let zM, LM = SM + aM / 2 + PM / 2;
-        "right" === this.align ? (zM = nM, MM.textAlign = "right") : "left" === this.align ? (zM = iM, MM.textAlign = "left") : (zM = iM + jM / 2, MM.textAlign = "center");
-        for (const OM of rM) {
-          MM.measureText(OM).width >= jM && (rM = rM.replace(OM, ""))
+      drawLines: function(VV, eV, xV, YV, UV, yV, pV) {
+        const QV = xV + UV,
+          nV = YV + yV;
+        let wV, ZV = YV + yV / 2 + pV / 2;
+        "right" === this.align ? (wV = QV, VV.textAlign = "right") : "left" === this.align ? (wV = xV, VV.textAlign = "left") : (wV = xV + UV / 2, VV.textAlign = "center");
+        for (const JV of eV) {
+          VV.measureText(JV).width >= UV && (eV = eV.replace(JV, ""))
         }
-        rM = (0, OM.U)(rM);
-        const mM = [],
-          HM = rM.split("\n"),
-          hM = this.justify ? MM.measureText("\u200a").width : 0;
-        HM.forEach((rM => {
-          let iM = MM.measureText(rM).width;
-          if (iM <= jM) mM.push(rM);
+        eV = (0, JV.O)(eV);
+        const vV = [],
+          rV = eV.split("\n"),
+          kV = this.justify ? VV.measureText("\u200a").width : 0;
+        rV.forEach((eV => {
+          let xV = VV.measureText(eV).width;
+          if (xV <= UV) vV.push(eV);
           else {
-            let OM = rM;
-            const SM = jM;
-            let aM, PM, nM;
-            for (iM = MM.measureText(OM).width; iM > SM;) {
-              for (aM = 0, PM = 0, nM = ""; PM < SM;) aM++, nM = OM.substr(0, aM), PM = MM.measureText(nM).width;
-              aM--, nM = nM.substr(0, aM);
-              const rM = aM;
-              if (" " !== OM.substr(aM, 1)) {
+            let JV = eV;
+            const YV = UV;
+            let yV, pV, QV;
+            for (xV = VV.measureText(JV).width; xV > YV;) {
+              for (yV = 0, pV = 0, QV = ""; pV < YV;) yV++, QV = JV.substr(0, yV), pV = VV.measureText(QV).width;
+              yV--, QV = QV.substr(0, yV);
+              const eV = yV;
+              if (" " !== JV.substr(yV, 1)) {
                 for (;
-                  " " !== OM.substr(aM, 1) && 0 !== aM;) aM--;
-                0 === aM && (aM = rM), nM = OM.substr(0, aM)
+                  " " !== JV.substr(yV, 1) && 0 !== yV;) yV--;
+                0 === yV && (yV = eV), QV = JV.substr(0, yV)
               }
-              nM = this.justify ? this.justifyLine(MM, nM, hM, "\u200a", jM) : nM, OM = OM.substr(aM), iM = MM.measureText(OM).width, mM.push(nM)
+              QV = this.justify ? this.justifyLine(VV, QV, kV, "\u200a", UV) : QV, JV = JV.substr(yV), xV = VV.measureText(JV).width, vV.push(QV)
             }
-            iM > 0 && mM.push(OM)
+            xV > 0 && vV.push(JV)
           }
         }));
-        const JM = this.lineHeight ? this.lineHeight : this.getTextHeight(MM, rM),
-          dM = JM * (mM.length - 1),
-          yM = dM / 2;
-        let lM = SM;
-        "top" === this.vAlign ? LM = SM + PM : "bottom" === this.vAlign ? (LM = QM - dM, lM = QM) : (lM = SM + aM / 2, LM -= yM), mM.forEach((rM => {
-          rM = rM.trim(), MM.fillText(rM, zM, LM), LM += JM
-        })), this.debug && (MM.lineWidth = 3, MM.strokeStyle = "#00909e", MM.strokeRect(iM, SM, jM, aM), MM.lineWidth = 2, MM.strokeStyle = "#f6d743", MM.beginPath(), MM.moveTo(zM, SM), MM.lineTo(zM, QM), MM.stroke(), MM.strokeStyle = "#ff6363", MM.beginPath(), MM.moveTo(iM, lM), MM.lineTo(nM, lM), MM.stroke());
+        const bV = this.lineHeight ? this.lineHeight : this.getTextHeight(VV, eV),
+          EV = bV * (vV.length - 1),
+          BV = EV / 2;
+        let jV = YV;
+        "top" === this.vAlign ? ZV = YV + pV : "bottom" === this.vAlign ? (ZV = nV - EV, jV = nV) : (jV = YV + yV / 2, ZV -= BV), vV.forEach((eV => {
+          eV = eV.trim(), VV.fillText(eV, wV, ZV), ZV += bV
+        })), this.debug && (VV.lineWidth = 3, VV.strokeStyle = "#00909e", VV.strokeRect(xV, YV, UV, yV), VV.lineWidth = 2, VV.strokeStyle = "#f6d743", VV.beginPath(), VV.moveTo(wV, YV), VV.lineTo(wV, nV), VV.stroke(), VV.strokeStyle = "#ff6363", VV.beginPath(), VV.moveTo(xV, jV), VV.lineTo(QV, jV), VV.stroke());
         return {
-          height: dM + JM
+          height: EV + bV
         }
       },
-      getTextHeight: function(MM, rM) {
-        const iM = MM.textBaseline;
-        MM.textBaseline = "bottom";
+      getTextHeight: function(VV, eV) {
+        const xV = VV.textBaseline;
+        VV.textBaseline = "bottom";
         const {
-          actualBoundingBoxAscent: OM
-        } = MM.measureText(rM);
-        return MM.textBaseline = iM, OM
+          actualBoundingBoxAscent: JV
+        } = VV.measureText(eV);
+        return VV.textBaseline = xV, JV
       },
-      justifyLine: function(MM, rM, iM, OM, SM) {
-        const jM = rM.trim(),
-          aM = MM.measureText(jM).width,
-          PM = jM.split(/\s+/).length - 1,
-          nM = Math.floor((SM - aM) / iM);
-        if (PM <= 0 || nM <= 0) return jM;
-        const QM = Math.floor(nM / PM);
-        let zM = nM - PM * QM,
-          LM = [];
-        for (let mM = 0; mM < QM; mM++) LM.push(OM);
-        LM = LM.join("");
-        return jM.replace(/\s+/g, (MM => {
-          const rM = zM > 0 ? LM + OM : LM;
-          return zM--, MM + rM
+      justifyLine: function(VV, eV, xV, JV, YV) {
+        const UV = eV.trim(),
+          yV = VV.measureText(UV).width,
+          pV = UV.split(/\s+/).length - 1,
+          QV = Math.floor((YV - yV) / xV);
+        if (pV <= 0 || QV <= 0) return UV;
+        const nV = Math.floor(QV / pV);
+        let wV = QV - pV * nV,
+          ZV = [];
+        for (let vV = 0; vV < nV; vV++) ZV.push(JV);
+        ZV = ZV.join("");
+        return UV.replace(/\s+/g, (VV => {
+          const eV = wV > 0 ? ZV + JV : ZV;
+          return wV--, VV + eV
         }))
       }
     }
   },
-  39691: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => JM,
-      d: () => hM,
-      f: () => mM,
-      j: () => zM,
-      k: () => LM
+  39857: (VV, eV, xV) => {
+    xV.d(eV, {
+      d: () => bV,
+      f: () => kV,
+      i: () => vV,
+      m: () => wV,
+      n: () => ZV
     });
-    var OM = iM(4577),
-      SM = iM(332);
-    const jM = 1024,
-      aM = 1536,
-      PM = 2 * OM.j + 1,
-      nM = new Intl.NumberFormat("en", {
+    var JV = xV(4642),
+      YV = xV(375);
+    const UV = 1024,
+      yV = 1536,
+      pV = 2 * JV.j + 1,
+      QV = new Intl.NumberFormat("en", {
         maximumSignificantDigits: 15
       }),
-      QM = 1.5;
+      nV = 1.5;
 
-    function zM(MM, rM, iM) {
-      if ("string" !== typeof MM) return rM;
+    function wV(VV, eV, xV) {
+      if ("string" !== typeof VV) return eV;
       try {
-        const iM = JSON.parse(MM);
-        return iM && "object" === typeof iM ? iM : rM
-      } catch (OM) {
-        return void 0 !== iM && console.error(`Couldn't parse ${iM}`, OM), rM
+        const xV = JSON.parse(VV);
+        return xV && "object" === typeof xV ? xV : eV
+      } catch (JV) {
+        return void 0 !== xV && console.error(`Couldn't parse ${xV}`, JV), eV
       }
     }
 
-    function LM(MM) {
-      return zM(MM, null, "a leaderboard's rows")
+    function ZV(VV) {
+      return wV(VV, null, "a leaderboard's rows")
     }
 
-    function mM(MM, rM) {
-      var iM, OM;
-      return null !== rM && void 0 !== rM ? rM : {
-        status: null !== (iM = MM.status) && void 0 !== iM ? iM : "loading",
-        entries: null !== (OM = MM.entries) && void 0 !== OM ? OM : []
+    function vV(VV, eV) {
+      var xV, JV;
+      return null !== eV && void 0 !== eV ? eV : {
+        status: null !== (xV = VV.status) && void 0 !== xV ? xV : "loading",
+        entries: null !== (JV = VV.entries) && void 0 !== JV ? JV : []
       }
     }
 
-    function HM(MM, rM) {
-      return "number" === typeof MM && Number.isFinite(MM) && MM > 0 ? MM : rM
+    function rV(VV, eV) {
+      return "number" === typeof VV && Number.isFinite(VV) && VV > 0 ? VV : eV
     }
 
-    function hM(MM, rM) {
-      const iM = HM(MM.size, 1);
-      let OM = HM(MM.width, HM(2.5 * iM, 2.5)),
-        SM = HM(MM.height, HM(3.75 * iM, 3.75));
-      Number.isFinite(jM * SM / OM) && Number.isFinite(aM * OM / SM) || (OM = 2.5, SM = 3.75);
-      const PM = SM / OM,
-        nM = Math.max(1, Math.min(jM, rM / PM));
+    function kV(VV, eV) {
+      const xV = rV(VV.size, 1);
+      let JV = rV(VV.width, rV(2.5 * xV, 2.5)),
+        YV = rV(VV.height, rV(3.75 * xV, 3.75));
+      Number.isFinite(UV * YV / JV) && Number.isFinite(yV * JV / YV) || (JV = 2.5, YV = 3.75);
+      const pV = YV / JV,
+        QV = Math.max(1, Math.min(UV, eV / pV));
       return {
-        width: OM,
-        height: SM,
-        layoutWidth: Math.max(jM, aM / PM),
-        layoutHeight: Math.max(aM, jM * PM),
-        pixelWidth: Math.round(nM),
-        pixelHeight: Math.round(Math.max(1, Math.min(rM, nM * PM)))
+        width: JV,
+        height: YV,
+        layoutWidth: Math.max(UV, yV / pV),
+        layoutHeight: Math.max(yV, UV * pV),
+        pixelWidth: Math.round(QV),
+        pixelHeight: Math.round(Math.max(1, Math.min(eV, QV * pV)))
       }
     }
 
-    function JM(MM, rM, iM, aM, zM, LM) {
-      MM.setTransform(1, 0, 0, 1, 0, 0), MM.fillStyle = SM.L.defaultNameTagBackground, MM.fillRect(0, 0, rM, iM), MM.scale(rM / aM.layoutWidth, iM / aM.layoutHeight), MM.translate((aM.layoutWidth - jM) / 2, 0),
-        function(MM, rM, iM, jM) {
-          var aM, zM, LM, mM;
+    function bV(VV, eV, xV, yV, wV, ZV) {
+      VV.setTransform(1, 0, 0, 1, 0, 0), VV.fillStyle = YV.E.defaultNameTagBackground, VV.fillRect(0, 0, eV, xV), VV.scale(eV / yV.layoutWidth, xV / yV.layoutHeight), VV.translate((yV.layoutWidth - UV) / 2, 0),
+        function(VV, eV, xV, UV) {
+          var yV, wV, ZV, vV;
           const {
-            top: HM,
-            around: hM,
-            showPlayerText: JM,
-            localPlayerDbId: lM
-          } = iM, {
-            whiteUiText: EM,
-            grayUiText: UM,
-            yellowUiText: GM
-          } = SM.L;
-          MM.textBaseline = "middle";
-          const CM = function(rM, iM, OM, SM, jM, aM) {
-              let PM = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : "left";
-              MM.font = `bold ${SM}px 'Jetbrains Mono', monospace`, MM.fillStyle = jM, MM.textAlign = PM;
-              let nM = rM.replace(/[\r\n\t]/g, " ");
-              if (MM.measureText(nM).width > aM) {
-                for (; nM.length > 0 && MM.measureText(`${nM}\u2026`).width > aM;) nM = nM.slice(0, -1);
-                nM += "\u2026"
+            top: rV,
+            around: kV,
+            showPlayerText: bV,
+            localPlayerDbId: jV
+          } = xV, {
+            whiteUiText: qV,
+            grayUiText: tV,
+            yellowUiText: FV
+          } = YV.E;
+          VV.textBaseline = "middle";
+          const TV = function(eV, xV, JV, YV, UV, yV) {
+              let pV = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : "left";
+              VV.font = `bold ${YV}px 'Jetbrains Mono', monospace`, VV.fillStyle = UV, VV.textAlign = pV;
+              let QV = eV.replace(/[\r\n\t]/g, " ");
+              if (VV.measureText(QV).width > yV) {
+                for (; QV.length > 0 && VV.measureText(`${QV}\u2026`).width > yV;) QV = QV.slice(0, -1);
+                QV += "\u2026"
               }
-              MM.fillText(nM, iM, OM)
+              VV.fillText(QV, xV, JV)
             },
-            eM = rM => {
-              MM.fillStyle = EM, MM.globalAlpha = .15, MM.fillRect(24, rM, 976, 2), MM.globalAlpha = 1
+            PV = eV => {
+              VV.fillStyle = qV, VV.globalAlpha = .15, VV.fillRect(24, eV, 976, 2), VV.globalAlpha = 1
             },
-            bM = null === lM ? null : (0, SM.qc)(lM),
-            wM = MM => null !== bM && MM.playerHash === bM,
-            tM = dM(HM.entries, OM.l),
-            gM = "ready" === HM.status && tM.length > 0,
-            uM = null === hM ? [] : dM(hM.entries, PM),
-            RM = tM.some(wM),
-            pM = null === hM ? null : function(MM) {
-              const rM = MM;
-              if (!rM || !Number.isFinite(rM.rank) || !Number.isFinite(rM.tied) || !Number.isFinite(rM.total)) return null;
-              return rM
-            }(hM.standing),
-            WM = uM.find(wM),
-            sM = tM.find(wM),
-            DM = null === pM || void 0 === WM ? null : {
-              value: WM.value,
-              rank: pM.rank
+            AV = null === jV ? null : (0, YV.nc)(jV),
+            NV = VV => null !== AV && VV.playerHash === AV,
+            XV = EV(rV.entries, JV.k),
+            MV = "ready" === rV.status && XV.length > 0,
+            zV = null === kV ? [] : EV(kV.entries, pV),
+            GV = XV.some(NV),
+            WV = null === kV ? null : function(VV) {
+              const eV = VV;
+              if (!eV || !Number.isFinite(eV.rank) || !Number.isFinite(eV.tied) || !Number.isFinite(eV.total)) return null;
+              return eV
+            }(kV.standing),
+            RV = zV.find(NV),
+            gV = XV.find(NV),
+            DV = null === WV || void 0 === RV ? null : {
+              value: RV.value,
+              rank: WV.rank
             },
-            kM = yM(tM, void 0 === sM || sM.value === (null === DM || void 0 === DM ? void 0 : DM.value) ? DM : null),
-            ZM = yM(uM, DM),
-            oM = (MM, rM) => {
-              const iM = MM.findIndex(wM);
-              return iM >= 0 ? rM[iM] : null
+            iV = BV(XV, void 0 === gV || gV.value === (null === DV || void 0 === DV ? void 0 : DV.value) ? DV : null),
+            CV = BV(zV, DV),
+            aV = (VV, eV) => {
+              const xV = VV.findIndex(NV);
+              return xV >= 0 ? eV[xV] : null
             },
-            fM = null !== (aM = null !== (zM = null === pM || void 0 === pM ? void 0 : pM.rank) && void 0 !== zM ? zM : oM(uM, ZM)) && void 0 !== aM ? aM : oM(tM, kM);
-          MM.font = "bold 34px 'Jetbrains Mono', monospace";
-          const YM = [...gM ? kM : [], ...RM ? [] : ZM],
-            NM = Math.min(280, Math.max(0, ...YM.map((rM => MM.measureText(nM.format(rM)).width)))),
-            AM = NM <= 80,
-            xM = AM ? 80 : 32 + NM,
-            vM = AM ? 148 : xM + 28,
-            FM = 660 - vM;
-          CM(`TOP ${OM.l}  /  ALL TIME`, 24, 52, 28, UM, 976), CM(JM ? String(null !== (LM = rM.title) && void 0 !== LM ? LM : "Leaderboard").slice(0, 64) : "Leaderboard", 24, 108, 52, EM, 976), CM("RANK", 32, 174, 28, UM, vM - 40), CM("PLAYER", vM, 174, 28, UM, FM), CM(JM ? String(null !== (mM = rM.scoreLabel) && void 0 !== mM ? mM : "Score").slice(0, 24) : "Score", 992, 174, 28, UM, 304, "right"), eM(202);
-          const BM = (jM - 232) / (OM.l + QM + PM),
-            XM = 208 + OM.l * BM,
-            IM = XM + QM * BM,
-            KM = (rM, iM, OM, SM) => {
-              const jM = wM(rM);
-              MM.fillStyle = jM ? GM : EM, MM.globalAlpha = jM ? .15 : SM ? .035 : 0, MM.fillRect(24, OM - BM / 2 + 1, 976, BM - 2), MM.globalAlpha = 1;
-              const aM = jM ? GM : EM;
-              CM(nM.format(iM), xM, OM, 34, aM, AM ? 80 : NM, AM ? "center" : "right"), CM(JM ? String(rM.name).slice(0, 64) : "Player", vM, OM, 34, aM, FM);
-              const PM = nM.format(rM.value);
-              CM(MM.measureText(PM).width > 304 ? rM.value.toExponential(6) : PM, 992, OM, 34, aM, 304, "right")
+            oV = null !== (yV = null !== (wV = null === WV || void 0 === WV ? void 0 : WV.rank) && void 0 !== wV ? wV : aV(zV, CV)) && void 0 !== yV ? yV : aV(XV, iV);
+          VV.font = "bold 34px 'Jetbrains Mono', monospace";
+          const cV = [...MV ? iV : [], ...GV ? [] : CV],
+            hV = Math.min(280, Math.max(0, ...cV.map((eV => VV.measureText(QV.format(eV)).width)))),
+            lV = hV <= 80,
+            LV = lV ? 80 : 32 + hV,
+            fV = lV ? 148 : LV + 28,
+            mV = 660 - fV;
+          TV(`TOP ${JV.k}  /  ALL TIME`, 24, 52, 28, tV, 976), TV(bV ? String(null !== (ZV = eV.title) && void 0 !== ZV ? ZV : "Leaderboard").slice(0, 64) : "Leaderboard", 24, 108, 52, qV, 976), TV("RANK", 32, 174, 28, tV, fV - 40), TV("PLAYER", fV, 174, 28, tV, mV), TV(bV ? String(null !== (vV = eV.scoreLabel) && void 0 !== vV ? vV : "Score").slice(0, 24) : "Score", 992, 174, 28, tV, 304, "right"), PV(202);
+          const KV = (UV - 232) / (JV.k + nV + pV),
+            HV = 208 + JV.k * KV,
+            uV = HV + nV * KV,
+            sV = (eV, xV, JV, YV) => {
+              const UV = NV(eV);
+              VV.fillStyle = UV ? FV : qV, VV.globalAlpha = UV ? .15 : YV ? .035 : 0, VV.fillRect(24, JV - KV / 2 + 1, 976, KV - 2), VV.globalAlpha = 1;
+              const yV = UV ? FV : qV;
+              TV(QV.format(xV), LV, JV, 34, yV, lV ? 80 : hV, lV ? "center" : "right"), TV(bV ? String(eV.name).slice(0, 64) : "Player", fV, JV, 34, yV, mV);
+              const pV = QV.format(eV.value);
+              TV(VV.measureText(pV).width > 304 ? eV.value.toExponential(6) : pV, 992, JV, 34, yV, 304, "right")
             };
-          if (gM)
-            for (const [OM, SM] of tM.entries()) KM(SM, kM[OM], 208 + (OM + .5) * BM, OM % 2 === 0);
+          if (MV)
+            for (const [JV, YV] of XV.entries()) sV(YV, iV[JV], 208 + (JV + .5) * KV, JV % 2 === 0);
           else {
-            const MM = "error" === HM.status,
-              rM = MM ? "Couldn't load leaderboard" : "ready" === HM.status ? "No scores yet" : "Loading leaderboard\u2026",
-              iM = MM ? "Trying again shortly" : "ready" === HM.status ? "Be the first on the board!" : "Fetching the top players",
-              OM = (208 + XM) / 2;
-            CM(rM, 512, OM - 28, 40, MM ? SM.L.redUiText : EM, 960, "center"), CM(iM, 512, OM + 27, 30, UM, 960, "center")
+            const VV = "error" === rV.status,
+              eV = VV ? "Couldn't load leaderboard" : "ready" === rV.status ? "No scores yet" : "Loading leaderboard\u2026",
+              xV = VV ? "Trying again shortly" : "ready" === rV.status ? "Be the first on the board!" : "Fetching the top players",
+              JV = (208 + HV) / 2;
+            TV(eV, 512, JV - 28, 40, VV ? YV.E.redUiText : qV, 960, "center"), TV(xV, 512, JV + 27, 30, tV, 960, "center")
           }
-          const qM = XM + QM * BM / 2;
-          if (null === fM) eM(qM);
+          const SV = HV + nV * KV / 2;
+          if (null === oV) PV(SV);
           else {
-            const rM = null === pM ? 0 : pM.tied - 1,
-              iM = `YOUR RANK #${nM.format(fM)}${null===pM?"":` of ${nM.format(pM.total)}`}`;
-            MM.font = "bold 36px 'Jetbrains Mono', monospace";
-            const OM = Math.max(20, Math.min(36, Math.floor(34560 / MM.measureText(iM).width)));
-            CM(iM, 512, qM - (rM > 0 ? 15 : 0), OM, GM, 960, "center"), rM > 0 && CM(`Tied with ${nM.format(rM)} other${1===rM?"":"s"}`, 512, qM + 24, 24, UM, 960, "center")
+            const eV = null === WV ? 0 : WV.tied - 1,
+              xV = `YOUR RANK #${QV.format(oV)}${null===WV?"":` of ${QV.format(WV.total)}`}`;
+            VV.font = "bold 36px 'Jetbrains Mono', monospace";
+            const JV = Math.max(20, Math.min(36, Math.floor(34560 / VV.measureText(xV).width)));
+            TV(xV, 512, SV - (eV > 0 ? 15 : 0), JV, FV, 960, "center"), eV > 0 && TV(`Tied with ${QV.format(eV)} other${1===eV?"":"s"}`, 512, SV + 24, 24, tV, 960, "center")
           }
-          if (null === hM) return;
-          const TM = IM + PM * BM / 2;
-          if (RM) CM(`You're in the top ${OM.l}!`, 512, TM, 40, GM, 960, "center");
-          else if (0 === uM.length) CM("You're not on this board yet", 512, TM, 34, UM, 960, "center");
+          if (null === kV) return;
+          const IV = uV + pV * KV / 2;
+          if (GV) TV(`You're in the top ${JV.k}!`, 512, IV, 40, FV, 960, "center");
+          else if (0 === zV.length) TV("You're not on this board yet", 512, IV, 34, tV, 960, "center");
           else
-            for (const [OM, SM] of uM.entries()) KM(SM, ZM[OM], IM + (OM + .5) * BM, OM % 2 === 0)
-        }(MM, zM, LM, aM.layoutHeight)
+            for (const [JV, YV] of zV.entries()) sV(YV, CV[JV], uV + (JV + .5) * KV, JV % 2 === 0)
+        }(VV, wV, ZV, yV.layoutHeight)
     }
 
-    function dM(MM, rM) {
-      return Array.isArray(MM) ? MM.slice(0, rM).filter((MM => MM && Number.isFinite(MM.rank) && Number.isFinite(MM.value))) : []
+    function EV(VV, eV) {
+      return Array.isArray(VV) ? VV.slice(0, eV).filter((VV => VV && Number.isFinite(VV.rank) && Number.isFinite(VV.value))) : []
     }
 
-    function yM(MM, rM) {
-      const iM = [];
-      let OM = !1;
-      return MM.forEach(((SM, jM) => {
-        if (null !== rM && SM.value === rM.value) return void iM.push(rM.rank);
-        const aM = jM > 0 && SM.value === MM[jM - 1].value;
-        aM || (OM = 0 === jM && 1 !== SM.rank), iM.push(aM && !OM ? iM[jM - 1] : SM.rank)
-      })), iM
+    function BV(VV, eV) {
+      const xV = [];
+      let JV = !1;
+      return VV.forEach(((YV, UV) => {
+        if (null !== eV && YV.value === eV.value) return void xV.push(eV.rank);
+        const yV = UV > 0 && YV.value === VV[UV - 1].value;
+        yV || (JV = 0 === UV && 1 !== YV.rank), xV.push(yV && !JV ? xV[UV - 1] : YV.rank)
+      })), xV
     }
   },
-  39922: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => SM,
-      g: () => jM
+  40053: (VV, eV, xV) => {
+    xV.d(eV, {
+      c: () => YV,
+      f: () => UV
     });
-    const OM = 32;
+    const JV = 32;
 
-    function SM(MM) {
-      return Array.from(MM).length
+    function YV(VV) {
+      return Array.from(VV).length
     }
 
-    function jM(MM) {
-      const rM = [""];
-      let iM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-        SM = "";
-      const jM = () => {
-        rM.push(""), iM = 0, SM = ""
+    function UV(VV) {
+      const eV = [""];
+      let xV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+        YV = "";
+      const UV = () => {
+        eV.push(""), xV = 0, YV = ""
       };
-      for (const aM of MM.replace(/\\n/g, "\n").split(/(\r?\n|[^\S\r\n]+)/))
-        if (/^\r?\n$/.test(aM)) jM();
-        else if (/^\s+$/.test(aM)) SM += aM;
-      else if (aM.length > 0) {
-        const MM = Array.from(aM);
-        iM > 0 && iM + SM.length + MM.length > OM && jM(), rM[rM.length - 1] += SM, iM += SM.length, SM = "";
-        for (const SM of MM) iM >= OM && jM(), rM[rM.length - 1] += SM, iM++
+      for (const yV of VV.replace(/\\n/g, "\n").split(/(\r?\n|[^\S\r\n]+)/))
+        if (/^\r?\n$/.test(yV)) UV();
+        else if (/^\s+$/.test(yV)) YV += yV;
+      else if (yV.length > 0) {
+        const VV = Array.from(yV);
+        xV > 0 && xV + YV.length + VV.length > JV && UV(), eV[eV.length - 1] += YV, xV += YV.length, YV = "";
+        for (const YV of VV) xV >= JV && UV(), eV[eV.length - 1] += YV, xV++
       }
-      return rM[rM.length - 1] += SM, rM
+      return eV[eV.length - 1] += YV, eV
     }
   },
-  42291: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => jM
+  42527: (VV, eV, xV) => {
+    xV.d(eV, {
+      d: () => UV
     });
-    const OM = 4e5,
-      SM = 2;
+    const JV = 4e5,
+      YV = 2;
 
-    function jM(MM, rM, iM) {
-      let [jM, aM] = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : [MM, rM], PM = Math.min(Number.isFinite(iM) && iM > 0 ? iM : 1, SM);
-      const nM = Math.max(0, jM, MM) * Math.max(0, aM, rM) * PM * PM;
-      return nM > OM && (PM *= Math.sqrt(OM / nM)), [Math.max(1, Math.floor(Math.max(0, MM) * PM)), Math.max(1, Math.floor(Math.max(0, rM) * PM))]
+    function UV(VV, eV, xV) {
+      let [UV, yV] = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : [VV, eV], pV = Math.min(Number.isFinite(xV) && xV > 0 ? xV : 1, YV);
+      const QV = Math.max(0, UV, VV) * Math.max(0, yV, eV) * pV * pV;
+      return QV > JV && (pV *= Math.sqrt(JV / QV)), [Math.max(1, Math.floor(Math.max(0, VV) * pV)), Math.max(1, Math.floor(Math.max(0, eV) * pV))]
     }
   },
-  53732: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      WasmPreviewHost: () => sr,
-      pageBuiltInAnimationPack: () => mM,
-      pagePreviews: () => jr,
-      previewModule: () => TM
+  53932: (VV, eV, xV) => {
+    xV.r(eV), xV.d(eV, {
+      WasmPreviewHost: () => ge,
+      pageBuiltInAnimationPack: () => vV,
+      pagePreviews: () => Ue,
+      previewModule: () => IV
     });
-    var OM = iM(3188),
-      SM = iM(632);
-    const jM = "[bloxd-wasm-client]";
+    var JV = xV(3196),
+      YV = xV(660);
+    const UV = "[bloxd-wasm-client]";
 
-    function aM(MM) {
-      const rM = {
+    function yV(VV) {
+      const eV = {
         wasm: "unknown",
-        client: String(SM.c)
+        client: String(YV.e)
       };
       try {
-        var iM;
-        rM.wasm = null !== (iM = null === MM || void 0 === MM ? void 0 : MM.NL()) && void 0 !== iM ? iM : rM.wasm
+        var xV;
+        eV.wasm = null !== (xV = null === VV || void 0 === VV ? void 0 : VV.Vv()) && void 0 !== xV ? xV : eV.wasm
       } catch {}
-      return rM
+      return eV
     }
-    async function PM(MM) {
-      if (MM.length < 2 || 31 !== MM[0] || 139 !== MM[1]) return MM;
+    async function pV(VV) {
+      if (VV.length < 2 || 31 !== VV[0] || 139 !== VV[1]) return VV;
       if ("undefined" === typeof DecompressionStream) {
         const {
-          ungzip: rM
-        } = await Promise.resolve().then((() => iM(3139)));
-        return rM(MM)
+          ungzip: eV
+        } = await Promise.resolve().then((() => xV(3151)));
+        return eV(VV)
       }
-      const rM = new Blob([MM]).stream().pipeThrough(new DecompressionStream("gzip"));
-      return new Uint8Array(await new Response(rM).arrayBuffer())
+      const eV = new Blob([VV]).stream().pipeThrough(new DecompressionStream("gzip"));
+      return new Uint8Array(await new Response(eV).arrayBuffer())
     }
 
-    function nM(MM, rM, OM, SM) {
-      Promise.resolve().then((() => iM(41833))).then((iM => {
+    function QV(VV, eV, JV, YV) {
+      Promise.resolve().then((() => xV(42034))).then((xV => {
         let {
-          reportDataLoadFailure: jM
-        } = iM;
-        jM(MM, rM, OM, SM)
-      }), (rM => {
-        console.warn(`${jM} ${MM} didn't load, and the report couldn't be sent`, OM.error, rM)
+          reportDataLoadFailure: UV
+        } = xV;
+        UV(VV, eV, JV, YV)
+      }), (eV => {
+        console.warn(`${UV} ${VV} didn't load, and the report couldn't be sent`, JV.error, eV)
       }))
     }
-    const QM = [3e4, 12e4, 3e5];
-    class zM {
-      constructor(MM) {
-        this.deps = MM, this.loading = null, this.reported = !1, this.retries = 0, this.resolveSet = () => {}, this.set = new Promise((MM => {
-          this.resolveSet = MM
+    const nV = [3e4, 12e4, 3e5];
+    class wV {
+      constructor(VV) {
+        this.deps = VV, this.loading = null, this.reported = !1, this.retries = 0, this.resolveSet = () => {}, this.set = new Promise((VV => {
+          this.resolveSet = VV
         }))
       }
-      provide(MM) {
-        return this.loading ??= this.load(MM), this.loading
+      provide(VV) {
+        return this.loading ??= this.load(VV), this.loading
       }
       whenSet() {
         return this.set
       }
-      async load(MM) {
-        const rM = aM(MM),
-          iM = await async function(MM, rM) {
-            let iM;
+      async load(VV) {
+        const eV = yV(VV),
+          xV = await async function(VV, eV) {
+            let xV;
             try {
-              iM = await MM()
-            } catch (OM) {
+              xV = await VV()
+            } catch (JV) {
               return {
                 stage: "fetch",
-                error: OM
+                error: JV
               }
             }
             try {
-              return rM(iM) ? null : {
+              return eV(xV) ? null : {
                 stage: "decode",
                 error: null
               }
-            } catch (OM) {
+            } catch (JV) {
               return {
                 stage: "decode",
-                error: OM
+                error: JV
               }
             }
-          }((() => this.deps.fetch()), (rM => {
-            const iM = MM.bjM(rM);
-            return iM && this.resolveSet(rM), iM
+          }((() => this.deps.fetch()), (eV => {
+            const xV = VV.fyV(eV);
+            return xV && this.resolveSet(eV), xV
           }));
-        if (null !== iM) {
-          if ("fetch" === iM.stage) {
+        if (null !== xV) {
+          if ("fetch" === xV.stage) {
             this.loading = null;
-            const rM = QM[this.retries++];
-            void 0 !== rM && this.deps.later((() => {
-              this.provide(MM)
-            }), rM)
+            const eV = nV[this.retries++];
+            void 0 !== eV && this.deps.later((() => {
+              this.provide(VV)
+            }), eV)
           }
-          this.reported || (this.reported = !0, this.deps.onFailed(iM, rM))
+          this.reported || (this.reported = !0, this.deps.onFailed(xV, eV))
         }
       }
     }
-    let LM = null;
+    let ZV = null;
 
-    function mM() {
-      return LM ??= new zM({
-        fetch: async () => PM(await (0, OM.F)(HM(), {
+    function vV() {
+      return ZV ??= new wV({
+        fetch: async () => pV(await (0, JV.H)(rV(), {
           priority: "low"
         })),
-        onFailed: (MM, rM) => {
-          nM("builtInAnimations", HM(), MM, rM)
+        onFailed: (VV, eV) => {
+          QV("builtInAnimations", rV(), VV, eV)
         },
-        later: (MM, rM) => {
-          setTimeout(MM, rM)
+        later: (VV, eV) => {
+          setTimeout(VV, eV)
         }
-      }), LM
+      }), ZV
     }
 
-    function HM() {
-      return iM(53739)
+    function rV() {
+      return xV(53937)
     }
-    var hM = iM(3185),
-      JM = iM(1202),
-      dM = iM(310),
-      yM = iM(308),
-      lM = iM(656),
-      EM = iM(5198),
-      UM = iM(41798),
-      GM = iM(41819),
-      CM = iM(42039),
-      eM = (iM(41862), iM(41882)),
-      bM = iM(41884),
-      wM = iM(41888),
-      tM = iM(41809),
-      gM = iM(42055),
-      uM = iM(42061),
-      RM = iM(41793),
-      pM = iM(42076),
-      WM = iM(41932),
-      sM = iM(41922),
-      DM = iM(41984),
-      kM = iM(42045),
-      ZM = iM(53661),
-      oM = iM(37229),
-      fM = iM(4088),
-      YM = iM(42291);
-    const NM = "[bloxd-previews]",
-      AM = 0,
-      xM = 1,
-      vM = 2,
-      FM = 1,
-      BM = 2,
-      XM = 3,
-      IM = 0,
-      KM = 1,
-      qM = 2;
+    var kV = xV(3194),
+      bV = xV(1230),
+      EV = xV(355),
+      BV = xV(348),
+      jV = xV(686),
+      qV = xV(5297),
+      tV = xV(42001),
+      FV = xV(42024),
+      TV = xV(42234),
+      PV = (xV(42066), xV(42085)),
+      AV = xV(42091),
+      NV = xV(42096),
+      XV = xV(42011),
+      MV = xV(42266),
+      zV = xV(42275),
+      GV = xV(41994),
+      WV = xV(42295),
+      RV = xV(42132),
+      gV = xV(42125),
+      DV = xV(42177),
+      iV = xV(42252),
+      CV = xV(53872),
+      aV = xV(37437),
+      oV = xV(4122),
+      cV = xV(42527);
+    const hV = "[bloxd-previews]",
+      lV = 0,
+      LV = 1,
+      fV = 2,
+      mV = 1,
+      KV = 2,
+      HV = 3,
+      uV = 0,
+      sV = 1,
+      SV = 2;
 
-    function TM(MM) {
-      const rM = MM,
-        iM = (0, UM.P)(MM),
-        OM = (0, UM.k)(MM);
-      return null !== iM && null !== OM && "function" === typeof rM.GjM && "function" === typeof rM.CjM && "function" === typeof rM.ejM ? rM : null
+    function IV(VV) {
+      const eV = VV,
+        xV = (0, tV.P)(VV),
+        JV = (0, tV.n)(VV);
+      return null !== xV && null !== JV && "function" === typeof eV.hyV && "function" === typeof eV.lyV && "function" === typeof eV.LyV ? eV : null
     }
 
-    function VM() {
-      return iM(53745)
+    function dV() {
+      return xV(53941)
     }
-    async function cM(MM, rM, OM) {
-      var SM;
-      let jM = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-      "lost" === MM && (0, RM.y)();
-      const PM = await (0, RM.U)();
-      if (null === PM || (0, UM.l)(PM) || (0, RM.e)()) return;
-      const nM = "webgpu" === PM.backend;
-      if (!nM && "lost" !== MM) return;
-      const QM = nM && (0, yM.m)(PM.adapter, null !== OM && void 0 !== OM ? OM : null, "lost" === MM, jM),
-        zM = null !== (SM = "lost" === MM ? (0, GM.o)((0, hM.R)() ? (0, UM.P)((0, hM.E)()) : null) : void 0) && void 0 !== SM ? SM : rM,
-        LM = nM ? (0, UM.X)(MM, void 0, (0, GM.c)(zM)) : null;
-      if (null === LM) {
-        nM || (0, lM.C)(), (0, RM.s)();
+    async function OV(VV, eV, JV) {
+      var YV;
+      let UV = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+      "lost" === VV && (0, GV.z)();
+      const pV = await (0, GV.R)();
+      if (null === pV || (0, tV.q)(pV) || (0, GV.e)()) return;
+      const QV = "webgpu" === pV.backend;
+      if (!QV && "lost" !== VV) return;
+      const nV = QV && (0, BV.q)(pV.adapter, null !== JV && void 0 !== JV ? JV : null, "lost" === VV, UV),
+        wV = null !== (YV = "lost" === VV ? (0, FV.o)((0, kV.R)() ? (0, tV.P)((0, kV.D)()) : null) : void 0) && void 0 !== YV ? YV : eV,
+        ZV = QV ? (0, tV.Y)(VV, void 0, (0, FV.d)(wV)) : null;
+      if (null === ZV) {
+        QV || (0, jV.z)(), (0, GV.r)();
         try {
-          await async function(MM, rM, OM, SM, jM) {
+          await async function(VV, eV, JV, YV, UV) {
             let {
-              restoreLost: PM,
-              adapterRemembered: nM
-            } = jM;
-            const QM = (0, hM.R)(),
+              restoreLost: pV,
+              adapterRemembered: QV
+            } = UV;
+            const nV = (0, kV.R)(),
               {
-                flushCrashReports: zM,
-                reportRenderReload: LM
-              } = await Promise.resolve().then((() => iM(41833)));
-            LM(MM.backend, SM, aM(QM ? (0, hM.E)() : null), {
+                flushCrashReports: wV,
+                reportRenderReload: ZV
+              } = await Promise.resolve().then((() => xV(42034)));
+            ZV(VV.backend, YV, yV(nV ? (0, kV.D)() : null), {
               from: "home",
-              cause: rM,
-              restoreLost: PM,
-              adapterRemembered: nM,
-              ...Mr(MM, rM, OM)
-            }), await zM(WM.c)
-          }(PM, MM, zM, null !== OM && void 0 !== OM ? OM : "start_failed" === MM ? 0 : 1, {
-            restoreLost: jM,
-            adapterRemembered: QM
+              cause: eV,
+              restoreLost: pV,
+              adapterRemembered: QV,
+              ...Ve(VV, eV, JV)
+            }), await wV(RV.e)
+          }(pV, VV, wV, null !== JV && void 0 !== JV ? JV : "start_failed" === VV ? 0 : 1, {
+            restoreLost: UV,
+            adapterRemembered: nV
           })
-        } catch (HM) {
-          console.warn(`${NM} ${PM.backend} failed at home (${MM}), and its report couldn't be sent`, HM)
-        }(0, WM.k)()
+        } catch (rV) {
+          console.warn(`${hV} ${pV.backend} failed at home (${VV}), and its report couldn't be sent`, rV)
+        }(0, RV.l)()
       } else {
-        var mM;
-        const rM = Mr(PM, MM, zM),
-          OM = `WebGPU failed at home (${MM}${void 0===rM.error?"":`: ${rM.error instanceof Error?rM.error.message:(0,oM.k)(rM.error)}`}) and ${LM}`;
-        console.warn(`${NM} ${OM}: the previews stop`, null !== (mM = rM.error) && void 0 !== mM ? mM : ""), (0, RM.u)(OM);
+        var vV;
+        const eV = Ve(pV, VV, wV),
+          JV = `WebGPU failed at home (${VV}${void 0===eV.error?"":`: ${eV.error instanceof Error?eV.error.message:(0,aV.m)(eV.error)}`}) and ${ZV}`;
+        console.warn(`${hV} ${JV}: the previews stop`, null !== (vV = eV.error) && void 0 !== vV ? vV : ""), (0, GV.v)(JV);
         try {
           const {
-            countRenderLost: OM
-          } = await Promise.resolve().then((() => iM(41833)));
-          OM(MM, rM.error, rM.context)
-        } catch (JM) {
-          console.warn(`${NM} WebGPU failed at home (${MM}), and its count couldn't be sent`, JM)
+            countRenderLost: JV
+          } = await Promise.resolve().then((() => xV(42034)));
+          JV(VV, eV.error, eV.context)
+        } catch (bV) {
+          console.warn(`${hV} WebGPU failed at home (${VV}), and its count couldn't be sent`, bV)
         }
       }
     }
 
-    function Mr(MM, rM, iM) {
+    function Ve(VV, eV, xV) {
       let {
-        adapter: OM
-      } = MM;
+        adapter: JV
+      } = VV;
       return {
-        error: iM,
+        error: xV,
         context: {
-          adapter: OM,
-          boundAtMs: "start_failed" === rM ? null : (0, RM.O)(),
-          indirectHangs: (0, RM.C)(),
-          restoresSkipped: (0, RM.R)()
+          adapter: JV,
+          boundAtMs: "start_failed" === eV ? null : (0, GV.N)(),
+          indirectHangs: (0, GV.C)(),
+          restoresSkipped: (0, GV.O)()
         }
       }
     }
-    async function rr() {
-      if (!(0, hM.R)()) {
-        const MM = await (0, RM.U)();
-        if (null === MM || (0, UM.l)(MM)) return null;
-        if (await (0, pM.b)(await MM.load()), !(0, hM.R)()) return null
+    async function ee() {
+      if (!(0, kV.R)()) {
+        const VV = await (0, GV.R)();
+        if (null === VV || (0, tV.q)(VV)) return null;
+        if (await (0, WV.d)(await VV.load()), !(0, kV.R)()) return null
       }
-      return TM((0, hM.E)())
+      return IV((0, kV.D)())
     }
-    class ir {
-      constructor(MM, rM, iM, OM, SM, jM) {
-        this.page = MM, this.host = rM, this.id = iM, this.canvas = OM, this.size = SM, this.models = void 0, this.images = void 0, this.write = void 0, this.outcomes = [], this.closed = !1, this.quiet = 0, this.settled = [];
-        const aM = {
-            ...jM.images,
-            glbUrl: MM => {
-              var rM;
-              return null !== (rM = this.models.drawnUrl(MM)) && void 0 !== rM ? rM : jM.images.glbUrl(MM)
+    class xe {
+      constructor(VV, eV, xV, JV, YV, UV) {
+        this.page = VV, this.host = eV, this.id = xV, this.canvas = JV, this.size = YV, this.models = void 0, this.images = void 0, this.write = void 0, this.outcomes = [], this.closed = !1, this.quiet = 0, this.settled = [];
+        const yV = {
+            ...UV.images,
+            glbUrl: VV => {
+              var eV;
+              return null !== (eV = this.models.drawnUrl(VV)) && void 0 !== eV ? eV : UV.images.glbUrl(VV)
             }
           },
-          PM = rM => MM.modelFile(rM);
-        this.images = new CM.d(aM, (MM => {
-          console.warn(`${NM} image ${MM.key.kind}:${MM.key.index}:${MM.key.word} failed`, MM.error)
+          pV = eV => VV.modelFile(eV);
+        this.images = new TV.f(yV, (VV => {
+          console.warn(`${hV} image ${VV.key.kind}:${VV.key.index}:${VV.key.word} failed`, VV.error)
         }), {
-          fetchFile: PM,
-          fetchImage: rM => MM.imageFile(rM)
-        }), MM.startModels(), this.models = new eM.f(jM.files, ((rM, iM) => MM.buildModel(rM, iM)), (MM => {
-          console.warn(`${NM} model file ${MM.file} (${MM.url}) failed`, MM.error)
+          fetchFile: pV,
+          fetchImage: eV => VV.imageFile(eV)
+        }), VV.startModels(), this.models = new PV.h(UV.files, ((eV, xV) => VV.buildModel(eV, xV)), (VV => {
+          console.warn(`${hV} model file ${VV.file} (${VV.url}) failed`, VV.error)
         }), {
-          fetchFile: PM,
-          onWritten: (MM, rM) => {
-            this.images.glbWritten(MM, rM)
+          fetchFile: pV,
+          onWritten: (VV, eV) => {
+            this.images.glbWritten(VV, eV)
           },
-          onTaken: (MM, rM) => {
-            this.images.glbTaken(MM, rM)
+          onTaken: (VV, eV) => {
+            this.images.glbTaken(VV, eV)
           }
-        }), this.write = (MM, rM, iM) => {
+        }), this.write = (VV, eV, xV) => {
           if (this.closed) return !0;
-          if (MM === eM.d) {
-            const MM = new DataView(iM.buffer, iM.byteOffset, wM.b),
-              OM = MM.getUint32(0, !0),
-              SM = MM.getUint32(wM.d, !0),
-              jM = this.page.hostCall(qM, (() => this.host.uaM(this.id, OM, rM, iM.subarray(wM.b))));
-            return this.outcomes.push([SM, jM]), !0
+          if (VV === PV.d) {
+            const VV = new DataView(xV.buffer, xV.byteOffset, NV.c),
+              JV = VV.getUint32(0, !0),
+              YV = VV.getUint32(NV.e, !0),
+              UV = this.page.hostCall(SV, (() => this.host.SpV(this.id, JV, eV, xV.subarray(NV.c))));
+            return this.outcomes.push([YV, UV]), !0
           }
-          return MM === CM.b && (this.page.hostCall(void 0, (() => {
-            this.host.paM(this.id, iM)
+          return VV === TV.b && (this.page.hostCall(void 0, (() => {
+            this.host.dpV(this.id, xV)
           })), !0)
         }
       }
@@ -713,89 +713,89 @@ export const modules = {
       get isStopped() {
         return this.page.isStopped
       }
-      resize(MM, rM, iM) {
+      resize(VV, eV, xV) {
         if (this.closed) return;
-        const [OM, SM] = (0, YM.d)(MM, rM, this.page.dpr(), iM);
-        OM === this.size[0] && SM === this.size[1] || (this.size = [OM, SM], this.page.hostCall(void 0, (() => {
-          this.host.resize(this.id, OM, SM)
+        const [JV, YV] = (0, cV.d)(VV, eV, this.page.dpr(), xV);
+        JV === this.size[0] && YV === this.size[1] || (this.size = [JV, YV], this.page.hostCall(void 0, (() => {
+          this.host.resize(this.id, JV, YV)
         })))
       }
-      setMob(MM, rM, iM, OM) {
-        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.oaM(this.id, MM, rM, iM, OM))))
+      setMob(VV, eV, xV, JV) {
+        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.YQV(this.id, VV, eV, xV, JV))))
       }
-      setPet(MM, rM, iM, OM) {
-        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.NaM(this.id, MM, rM, iM, OM))))
+      setPet(VV, eV, xV, JV) {
+        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.yQV(this.id, VV, eV, xV, JV))))
       }
-      setPlayer(MM, rM, iM) {
-        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.DaM(this.id, MM, rM, iM))))
+      setPlayer(VV, eV, xV) {
+        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.eQV(this.id, VV, eV, xV))))
       }
-      setCompanions(MM) {
-        var rM;
+      setCompanions(VV) {
+        var eV;
         let {
-          pet: iM,
-          aura: OM
-        } = MM;
+          pet: xV,
+          aura: JV
+        } = VV;
         if (this.closed) return;
-        const SM = null !== (rM = null === iM || void 0 === iM ? void 0 : iM.model) && void 0 !== rM ? rM : -1,
-          jM = new Float64Array(iM ? [iM.scale, ...iM.offset, iM.yawOffset, iM.bobAmplitude, iM.bobHz] : []),
-          aM = new Float64Array(OM ? [...OM.offset, ...OM.half] : []);
+        const YV = null !== (eV = null === xV || void 0 === xV ? void 0 : xV.model) && void 0 !== eV ? eV : -1,
+          UV = new Float64Array(xV ? [xV.scale, ...xV.offset, xV.yawOffset, xV.bobAmplitude, xV.bobHz] : []),
+          yV = new Float64Array(JV ? [...JV.offset, ...JV.half] : []);
         this.page.hostCall(void 0, (() => {
-          var MM, rM;
-          this.host.saM(this.id, SM, jM, null !== (MM = null === iM || void 0 === iM ? void 0 : iM.flyClip) && void 0 !== MM ? MM : "", null !== (rM = null === OM || void 0 === OM ? void 0 : OM.opts) && void 0 !== rM ? rM : "", aM)
+          var VV, eV;
+          this.host.VQV(this.id, YV, UV, null !== (VV = null === xV || void 0 === xV ? void 0 : xV.flyClip) && void 0 !== VV ? VV : "", null !== (eV = null === JV || void 0 === JV ? void 0 : JV.opts) && void 0 !== eV ? eV : "", yV)
         }))
       }
-      setFigure(MM, rM, iM, OM) {
-        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.kaM(this.id, MM, rM, iM, OM))))
+      setFigure(VV, eV, xV, JV) {
+        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.xQV(this.id, VV, eV, xV, JV))))
       }
       replay() {
         return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.replay(this.id))))
       }
       get orbit() {
         if (this.closed) return null;
-        const MM = this.page.hostCall(null, (() => this.host.orbit(this.id)));
-        return null === MM || MM.length < 3 ? null : {
-          alpha: MM[0],
-          beta: MM[1],
-          radius: MM[2]
+        const VV = this.page.hostCall(null, (() => this.host.orbit(this.id)));
+        return null === VV || VV.length < 3 ? null : {
+          alpha: VV[0],
+          beta: VV[1],
+          radius: VV[2]
         }
       }
-      setOrbit(MM) {
+      setOrbit(VV) {
         let {
-          alpha: rM,
-          beta: iM,
-          radius: OM
-        } = MM;
+          alpha: eV,
+          beta: xV,
+          radius: JV
+        } = VV;
         this.closed || this.page.hostCall(void 0, (() => {
-          this.host.YaM(this.id, rM, iM, OM)
+          this.host.UQV(this.id, eV, xV, JV)
         }))
       }
       untilSettled() {
-        return this.closed || this.page.isStopped ? Promise.resolve() : (this.quiet = 0, new Promise((MM => {
-          this.settled.push(MM)
+        return this.closed || this.page.isStopped ? Promise.resolve() : (this.quiet = 0, new Promise((VV => {
+          this.settled.push(VV)
         })))
       }
       packChanged() {
-        this.quiet = 0, this.models.refresh(), (0, gM.j)(this.images)
+        this.quiet = 0, this.models.refresh(), (0, MV.k)(this.images)
       }
       feed() {
         this.models.drain(this.write);
-        for (const [MM, rM] of this.outcomes) {
-          const iM = rM === IM ? [] : [rM === KM ? MM : (MM | eM.e) >>> 0];
-          this.models.taken(MM, iM)
+        for (const [VV, eV] of this.outcomes) {
+          const xV = eV === uV ? [] : [eV === sV ? VV : (VV | PV.f) >>> 0];
+          this.models.taken(VV, xV)
         }
         this.outcomes.length = 0, this.images.drain(this.write)
       }
-      collect(MM) {
-        let rM = !1;
-        if (MM) {
-          const MM = this.host.vaM(this.id);
-          for (const rM of MM) this.models.request(rM);
-          const iM = this.host.xaM(this.id);
-          iM.length > 0 && this.images.onEvent(iM), rM = MM.length > 0 || iM.length > 0
+      collect(VV) {
+        let eV = !1;
+        if (VV) {
+          const VV = this.host.nQV(this.id);
+          for (const eV of VV) this.models.request(eV);
+          const xV = this.host.QQV(this.id);
+          xV.length > 0 && this.images.onEvent(xV), eV = VV.length > 0 || xV.length > 0
         }
-        const iM = this.page.modelsUnavailable ? 0 : this.models.asking + this.models.unanswered,
-          OM = rM || iM > 0 || this.images.waiting > 0 || this.images.inFlight > 0;
-        this.quiet = OM ? 0 : this.quiet + 1, this.quiet >= 3 && this.resolveSettled()
+        const xV = this.page.modelsUnavailable ? 0 : this.models.asking + this.models.unanswered,
+          JV = eV || xV > 0 || this.images.waiting > 0 || this.images.inFlight > 0;
+        this.quiet = JV ? 0 : this.quiet + 1, this.quiet >= 3 && this.resolveSettled()
       }
       close() {
         this.closed || (this.closed = !0, this.page.closePreview(this), this.resolveSettled())
@@ -803,314 +803,314 @@ export const modules = {
       abandon() {
         this.resolveSettled()
       }
-      dispose(MM) {
+      dispose(VV) {
         this.page.hostCall(void 0, (() => {
-          const rM = this.host.close(this.id);
-          rM.length > 0 && this.images.onEvent(rM), this.page.isTrapped || MM.ejM(this.id)
+          const eV = this.host.close(this.id);
+          eV.length > 0 && this.images.onEvent(eV), this.page.isTrapped || VV.LyV(this.id)
         })), this.images.dispose(), this.canvas.remove()
       }
       resolveSettled() {
-        const MM = this.settled;
+        const VV = this.settled;
         this.settled = [];
-        for (const rM of MM) rM()
+        for (const eV of VV) eV()
       }
     }
-    class Or {
-      constructor(MM) {
-        this.deps = MM, this.module = null, this.host = null, this.opening = null, this.pageCanvas = null, this.samples = 1, this.binding = null, this.sessionEnds = 0, this.lastEndReturned = !0, this.previews = new Map, this.nextId = 1, this.frameId = null, this.stopped = !1, this.loggedErrors = new Set, this.modelsListener = {
-          onUnavailable: MM => {
-            this.modelsFailed(MM)
+    class Je {
+      constructor(VV) {
+        this.deps = VV, this.module = null, this.host = null, this.opening = null, this.pageCanvas = null, this.samples = 1, this.binding = null, this.sessionEnds = 0, this.lastEndReturned = !0, this.previews = new Map, this.nextId = 1, this.frameId = null, this.stopped = !1, this.loggedErrors = new Set, this.modelsListener = {
+          onUnavailable: VV => {
+            this.modelsFailed(VV)
           },
-          onDecoderFailed: MM => {
-            this.loggedErrors.has("modelDecoder") || (this.loggedErrors.add("modelDecoder"), console.warn(`${NM} the Draco decoder didn't load: models waiting on it won't draw`, MM))
+          onDecoderFailed: VV => {
+            this.loggedErrors.has("modelDecoder") || (this.loggedErrors.add("modelDecoder"), console.warn(`${hV} the Draco decoder didn't load: models waiting on it won't draw`, VV))
           },
-          onWorkerLost: MM => {
-            this.loggedErrors.has("modelWorker") || (this.loggedErrors.add("modelWorker"), console.warn(`${NM} a model worker was lost: ${MM}`))
+          onWorkerLost: VV => {
+            this.loggedErrors.has("modelWorker") || (this.loggedErrors.add("modelWorker"), console.warn(`${hV} a model worker was lost: ${VV}`))
           },
           onModuleRetry: () => {}
-        }, this.modelsRestarted = !1, this.costs = [], this.models = null, this.unavailable = !1, this.animations = null, this.animationTable = null, this.moduleLoad = null, this.prefetched = !1, this.prefetchedFiles = new Map, this.shaderPackArgs = null, this.nh = {
-          setShaderPack: (MM, rM, iM, OM, SM) => (this.shaderPackArgs = [MM, rM, iM, OM, SM], this.handOverShaderPack(), !0)
-        }, this.frame = MM => {
+        }, this.modelsRestarted = !1, this.costs = [], this.models = null, this.unavailable = !1, this.animations = null, this.animationTable = null, this.moduleLoad = null, this.prefetched = !1, this.prefetchedFiles = new Map, this.shaderPackArgs = null, this.Xk = {
+          setShaderPack: (VV, eV, xV, JV, YV) => (this.shaderPackArgs = [VV, eV, xV, JV, YV], this.handOverShaderPack(), !0)
+        }, this.frame = VV => {
           this.frameId = null;
-          const rM = this.host;
-          if (null !== rM && 0 !== this.previews.size && !this.settleIfTrapped() && !this.stopped) try {
-            this.drawFrame(rM, MM)
-          } catch (iM) {
-            if (!this.stopIfTrapped(iM) && (this.stop(), (0, UM.p)(iM))) return void this.deps.onRenderFailed("frames_refused", iM);
-            console.warn(`${NM} the previews stopped: their frame threw`, iM)
+          const eV = this.host;
+          if (null !== eV && 0 !== this.previews.size && !this.settleIfTrapped() && !this.stopped) try {
+            this.drawFrame(eV, VV)
+          } catch (xV) {
+            if (!this.stopIfTrapped(xV) && (this.stop(), (0, tV.s)(xV))) return void this.deps.onRenderFailed("frames_refused", xV);
+            console.warn(`${hV} the previews stopped: their frame threw`, xV)
           }
-        }, MM.pack.onChange((() => {
+        }, VV.pack.onChange((() => {
           this.packChanged()
-        })), MM.game.onGameChange((() => {
+        })), VV.game.onGameChange((() => {
           this.tellInGame()
         }))
       }
       packChanged() {
         if (!this.stopped)
-          for (const MM of this.previews.values()) MM.packChanged()
+          for (const VV of this.previews.values()) VV.packChanged()
       }
       dpr() {
         return this.deps.dpr()
       }
       get sessionBound() {
-        var MM, rM;
-        return null !== (MM = null === (rM = this.host) || void 0 === rM ? void 0 : rM.attached()) && void 0 !== MM && MM
+        var VV, eV;
+        return null !== (VV = null === (eV = this.host) || void 0 === eV ? void 0 : eV.attached()) && void 0 !== VV && VV
       }
       get open() {
         return this.previews.size
       }
       get frameCostMs() {
-        return 0 === this.costs.length ? 0 : this.costs.reduce(((MM, rM) => MM + rM), 0) / this.costs.length
+        return 0 === this.costs.length ? 0 : this.costs.reduce(((VV, eV) => VV + eV), 0) / this.costs.length
       }
-      async bindSession(MM, rM, iM) {
-        const OM = this.binding,
-          SM = this.sessionEnds;
+      async bindSession(VV, eV, xV) {
+        const JV = this.binding,
+          YV = this.sessionEnds;
         try {
-          const jM = this.hostOf(MM);
-          if (!jM.RaM()) {
-            const rM = (0, DM.g)().sampleCount,
-              aM = await iM(rM);
-            if (this.sessionEnds !== SM) return this.keepRendererOfEndedSession(MM, jM, aM, rM, OM), rM;
-            if (!jM.HaM(aM)) throw new Error("the page has a renderer already");
-            (0, RM.v)(performance.now()), this.samples = rM, (0, kM.f)((0, UM.k)(MM))
+          const UV = this.hostOf(VV);
+          if (!UV.IpV()) {
+            const eV = (0, DV.d)().sampleCount,
+              yV = await xV(eV);
+            if (this.sessionEnds !== YV) return this.keepRendererOfEndedSession(VV, UV, yV, eV, JV), eV;
+            if (!UV.DpV(yV)) throw new Error("the page has a renderer already");
+            (0, GV.w)(performance.now()), this.samples = eV, (0, iV.h)((0, tV.n)(VV))
           }
-          if (!jM.attach(rM)) throw new Error("the page's renderer is lent to another session");
+          if (!UV.attach(eV)) throw new Error("the page's renderer is lent to another session");
           return this.samples
         } finally {
-          this.binding === OM && this.endBinding()
+          this.binding === JV && this.endBinding()
         }
       }
-      keepRendererOfEndedSession(MM, rM, iM, OM, SM) {
-        if (!this.lastEndReturned || null !== this.binding && this.binding !== SM) try {
-          iM.free()
-        } catch (jM) {
-          console.warn(`${NM} an ended session's renderer didn't free`, jM)
-        } else rM.HaM(iM) && ((0, RM.v)(performance.now()), this.samples = OM, (0, kM.f)(this.registryOf(MM)))
+      keepRendererOfEndedSession(VV, eV, xV, JV, YV) {
+        if (!this.lastEndReturned || null !== this.binding && this.binding !== YV) try {
+          xV.free()
+        } catch (UV) {
+          console.warn(`${hV} an ended session's renderer didn't free`, UV)
+        } else eV.DpV(xV) && ((0, GV.w)(performance.now()), this.samples = JV, (0, iV.h)(this.registryOf(VV)))
       }
       async beginSession() {
-        var MM;
-        let rM = () => {};
-        const iM = new Promise((MM => {
-          rM = MM
+        var VV;
+        let eV = () => {};
+        const xV = new Promise((VV => {
+          eV = VV
         }));
         this.binding = {
-          done: iM,
-          release: rM
-        }, await (null === (MM = this.opening) || void 0 === MM ? void 0 : MM.catch((() => null)));
-        const OM = this.pageCanvas;
-        return this.pageCanvas = null, OM
+          done: xV,
+          release: eV
+        }, await (null === (VV = this.opening) || void 0 === VV ? void 0 : VV.catch((() => null)));
+        const JV = this.pageCanvas;
+        return this.pageCanvas = null, JV
       }
-      endSession(MM) {
-        var rM, iM;
-        if (this.sessionEnds++, this.lastEndReturned = MM, this.endBinding(), MM) {
+      endSession(VV) {
+        var eV, xV;
+        if (this.sessionEnds++, this.lastEndReturned = VV, this.endBinding(), VV) {
           try {
-            var OM;
-            null === (OM = this.host) || void 0 === OM || OM.detach()
-          } catch (SM) {
-            return void console.warn(`${NM} the session's core kept the page's renderer`, SM)
-          }!0 === (null === (rM = this.host) || void 0 === rM ? void 0 : rM.attached()) && console.warn(`${NM} the session's core kept the page's renderer: it ended inside its frame`), null !== this.module && !0 === (null === (iM = this.host) || void 0 === iM ? void 0 : iM.RaM()) && (0, kM.f)(this.registryOf(this.module))
+            var JV;
+            null === (JV = this.host) || void 0 === JV || JV.detach()
+          } catch (YV) {
+            return void console.warn(`${hV} the session's core kept the page's renderer`, YV)
+          }!0 === (null === (eV = this.host) || void 0 === eV ? void 0 : eV.attached()) && console.warn(`${hV} the session's core kept the page's renderer: it ended inside its frame`), null !== this.module && !0 === (null === (xV = this.host) || void 0 === xV ? void 0 : xV.IpV()) && (0, iV.h)(this.registryOf(this.module))
         }
       }
       endBinding() {
-        var MM;
-        null === (MM = this.binding) || void 0 === MM || MM.release(), this.binding = null
+        var VV;
+        null === (VV = this.binding) || void 0 === VV || VV.release(), this.binding = null
       }
-      async openPreview(MM, rM, iM, OM) {
-        const SM = await this.renderingHost(),
-          jM = this.module;
-        if (null === SM || null === jM) throw new Error("this page can't draw previews: it has no renderer build");
-        if (this.animations ??= this.loadAnimations(SM), this.deps.pack.wanted(), this.isStopped) throw new Error("the previews stopped");
+      async openPreview(VV, eV, xV, JV) {
+        const YV = await this.renderingHost(),
+          UV = this.module;
+        if (null === YV || null === UV) throw new Error("this page can't draw previews: it has no renderer build");
+        if (this.animations ??= this.loadAnimations(YV), this.deps.pack.wanted(), this.isStopped) throw new Error("the previews stopped");
         this.guarded((() => {
-          this.deps.provideBuiltInAnimationPack(jM)
+          this.deps.provideBuiltInAnimationPack(UV)
         }));
-        const aM = this.nextId++,
-          PM = this.deps.createCanvas(),
-          [nM, QM] = (0, YM.d)(rM, iM, this.deps.dpr(), OM);
-        PM.width = nM, PM.height = QM;
-        if (!this.guarded((() => (jM.CjM(aM, PM), SM.open(aM, nM, QM, MM))))) throw this.hostCall(void 0, (() => {
-          jM.ejM(aM)
+        const yV = this.nextId++,
+          pV = this.deps.createCanvas(),
+          [QV, nV] = (0, cV.d)(eV, xV, this.deps.dpr(), JV);
+        pV.width = QV, pV.height = nV;
+        if (!this.guarded((() => (UV.lyV(yV, pV), YV.open(yV, QV, nV, VV))))) throw this.hostCall(void 0, (() => {
+          UV.LyV(yV)
         })), new Error("the page's renderer is lent to a session that is running");
         this.restartModelsIfFailed();
-        const zM = new ir(this, SM, aM, PM, [nM, QM], this.deps);
-        return this.previews.set(aM, zM), this.startFrames(), zM
+        const wV = new xe(this, YV, yV, pV, [QV, nV], this.deps);
+        return this.previews.set(yV, wV), this.startFrames(), wV
       }
       prefetch() {
-        if (this.prefetched || this.isStopped || (0, RM.e)() || null !== (0, RM.K)()) return;
+        if (this.prefetched || this.isStopped || (0, GV.e)() || null !== (0, GV.J)()) return;
         this.prefetched = !0;
-        (null === this.module ? this.loadModule() : Promise.resolve(this.module)).then((MM => {
-          null === MM || this.isStopped || (this.startModels(), this.fetchAnimationTable().catch((() => {})), this.prefetchPlayerFiles())
+        (null === this.module ? this.loadModule() : Promise.resolve(this.module)).then((VV => {
+          null === VV || this.isStopped || (this.startModels(), this.fetchAnimationTable().catch((() => {})), this.prefetchPlayerFiles())
         }), (() => {}))
       }
-      modelFile(MM) {
-        return this.prefetchedOr(MM, this.deps.fetchModel)
+      modelFile(VV) {
+        return this.prefetchedOr(VV, this.deps.fetchModel)
       }
-      imageFile(MM) {
-        return this.prefetchedOr(MM, OM.F)
+      imageFile(VV) {
+        return this.prefetchedOr(VV, JV.H)
       }
-      prefetchedOr(MM, rM) {
-        const iM = this.prefetchedFiles.get(MM);
-        return void 0 === iM ? rM(MM) : iM.catch((() => rM(MM)))
+      prefetchedOr(VV, eV) {
+        const xV = this.prefetchedFiles.get(VV);
+        return void 0 === xV ? eV(VV) : xV.catch((() => eV(VV)))
       }
       async prefetchPlayerFiles() {
-        const MM = this.deps.playerFile().then((MM => this.deps.files.url(MM))),
-          rM = await Promise.all([MM, this.deps.images.lifeformAtlasUrl(gM.c)]).catch((() => null));
-        if (null === rM) return;
-        const [iM, OM] = rM, SM = (MM, rM) => {
-          if (null === MM) return;
-          const iM = rM(MM);
-          this.prefetchedFiles.set(MM, iM), iM.catch((() => {
-            this.prefetchedFiles.delete(MM)
+        const VV = this.deps.playerFile().then((VV => this.deps.files.url(VV))),
+          eV = await Promise.all([VV, this.deps.images.lifeformAtlasUrl(MV.d)]).catch((() => null));
+        if (null === eV) return;
+        const [xV, JV] = eV, YV = (VV, eV) => {
+          if (null === VV) return;
+          const xV = eV(VV);
+          this.prefetchedFiles.set(VV, xV), xV.catch((() => {
+            this.prefetchedFiles.delete(VV)
           }))
         };
-        SM(iM, (MM => this.modelFile(MM))), SM(OM, (MM => this.imageFile(MM)))
+        YV(xV, (VV => this.modelFile(VV))), YV(JV, (VV => this.imageFile(VV)))
       }
       loadModule() {
-        return this.moduleLoad ??= this.deps.loadModule().then((MM => (null === MM && (this.moduleLoad = null), MM)), (MM => {
-          throw this.moduleLoad = null, MM
+        return this.moduleLoad ??= this.deps.loadModule().then((VV => (null === VV && (this.moduleLoad = null), VV)), (VV => {
+          throw this.moduleLoad = null, VV
         })), this.moduleLoad
       }
       fetchAnimationTable() {
-        return this.animationTable ??= this.deps.fetchAnimations().catch((MM => {
-          throw this.animationTable = null, MM
+        return this.animationTable ??= this.deps.fetchAnimations().catch((VV => {
+          throw this.animationTable = null, VV
         })), this.animationTable
       }
       get modelsUnavailable() {
         return this.unavailable
       }
       startModels() {
-        this.models ??= this.deps.startModels(this.modelsListener).catch((MM => (this.modelsFailed(MM), () => new Promise((() => {})))))
+        this.models ??= this.deps.startModels(this.modelsListener).catch((VV => (this.modelsFailed(VV), () => new Promise((() => {})))))
       }
-      buildModel(MM, rM) {
-        return this.startModels(), this.models.then((iM => iM(MM, rM))).then((MM => this.unavailable ? new Promise((() => {})) : MM))
+      buildModel(VV, eV) {
+        return this.startModels(), this.models.then((xV => xV(VV, eV))).then((VV => this.unavailable ? new Promise((() => {})) : VV))
       }
       restartModelsIfFailed() {
         this.unavailable && !this.modelsRestarted && 0 === this.previews.size && (this.modelsRestarted = !0, this.models = null, this.unavailable = !1, this.startModels())
       }
-      modelsFailed(MM) {
-        this.unavailable = !0, this.loggedErrors.has("models") || (this.loggedErrors.add("models"), console.warn(`${NM} the model workers didn't start: models won't draw in the previews`, MM))
+      modelsFailed(VV) {
+        this.unavailable = !0, this.loggedErrors.has("models") || (this.loggedErrors.add("models"), console.warn(`${hV} the model workers didn't start: models won't draw in the previews`, VV))
       }
-      called(MM) {
-        return 0 !== MM && this.logError(MM, 0), MM
+      called(VV) {
+        return 0 !== VV && this.logError(VV, 0), VV
       }
-      closePreview(MM) {
-        this.previews.delete(MM.id), null !== this.module && MM.dispose(this.module), 0 === this.previews.size && null !== this.frameId && (this.deps.cancelFrame(this.frameId), this.frameId = null)
+      closePreview(VV) {
+        this.previews.delete(VV.id), null !== this.module && VV.dispose(this.module), 0 === this.previews.size && null !== this.frameId && (this.deps.cancelFrame(this.frameId), this.frameId = null)
       }
-      hostOf(MM) {
-        if (null !== this.module && this.module !== MM) throw new Error("a second renderer module on one page");
-        return this.module = MM, null === this.host && (this.host = this.guarded((() => new MM.GjM)), this.tellInGame(), this.handOverShaderPack()), this.host
+      hostOf(VV) {
+        if (null !== this.module && this.module !== VV) throw new Error("a second renderer module on one page");
+        return this.module = VV, null === this.host && (this.host = this.guarded((() => new VV.hyV)), this.tellInGame(), this.handOverShaderPack()), this.host
       }
       tellInGame() {
         const {
-          host: MM
+          host: VV
         } = this;
-        null !== MM && this.outsideCall("the game's start or end", (() => {
-          MM.ZaM(this.deps.game.inGame())
+        null !== VV && this.outsideCall("the game's start or end", (() => {
+          VV.JQV(this.deps.game.inGame())
         }))
       }
       handOverShaderPack() {
         const {
-          host: MM,
-          shaderPackArgs: rM
+          host: VV,
+          shaderPackArgs: eV
         } = this;
-        null !== MM && null !== rM && this.outsideCall("the shader pack's hand-over", (() => {
-          MM.dOM(...rM) || console.warn(`${NM} the host refused the shader pack: previews draw without it at home`)
+        null !== VV && null !== eV && this.outsideCall("the shader pack's hand-over", (() => {
+          VV.DYV(...eV) || console.warn(`${hV} the host refused the shader pack: previews draw without it at home`)
         }))
       }
-      outsideCall(MM, rM) {
+      outsideCall(VV, eV) {
         try {
-          this.hostCall(void 0, rM)
-        } catch (iM) {
-          this.stop(), console.warn(`${NM} the previews stopped: ${MM} threw`, iM)
+          this.hostCall(void 0, eV)
+        } catch (xV) {
+          this.stop(), console.warn(`${hV} the previews stopped: ${VV} threw`, xV)
         }
       }
-      async loadAnimations(MM) {
-        const rM = aM(null),
-          iM = this.module;
+      async loadAnimations(VV) {
+        const eV = yV(null),
+          xV = this.module;
         try {
-          rM.wasm = null === iM ? rM.wasm : this.hostCall(rM.wasm, (() => iM.NL()))
+          eV.wasm = null === xV ? eV.wasm : this.hostCall(eV.wasm, (() => xV.Vv()))
         } catch {}
-        let OM, SM;
+        let JV, YV;
         try {
-          OM = await this.fetchAnimationTable()
-        } catch (jM) {
+          JV = await this.fetchAnimationTable()
+        } catch (UV) {
           return void this.deps.onAnimationsFailed({
             stage: "fetch",
-            error: jM
-          }, rM)
+            error: UV
+          }, eV)
         }
         if (!this.settleIfTrapped()) {
           try {
-            SM = MM.WaM(OM)
-          } catch (jM) {
-            if (this.stopIfTrapped(jM)) return;
+            YV = VV.OpV(JV)
+          } catch (UV) {
+            if (this.stopIfTrapped(UV)) return;
             return void this.deps.onAnimationsFailed({
               stage: "decode",
-              error: jM
-            }, rM)
+              error: UV
+            }, eV)
           }
-          SM || this.deps.onAnimationsFailed({
+          YV || this.deps.onAnimationsFailed({
             stage: "decode",
             error: null
-          }, rM)
+          }, eV)
         }
       }
       async renderingHost() {
         if (null !== this.binding && await this.binding.done, this.settleIfTrapped()) return null;
-        const MM = this.host;
-        return null !== MM && this.guarded((() => MM.RaM())) ? MM : (this.opening ??= this.openAtHome().finally((() => {
+        const VV = this.host;
+        return null !== VV && this.guarded((() => VV.IpV())) ? VV : (this.opening ??= this.openAtHome().finally((() => {
           this.opening = null
         })), this.opening)
       }
       async openAtHome() {
-        var MM;
-        const rM = null !== (MM = this.module) && void 0 !== MM ? MM : await this.loadModule();
-        if (null === rM) return null;
-        const iM = this.hostOf(rM),
-          OM = () => this.guarded((() => iM.RaM()));
-        if (OM()) return iM;
-        if (null !== (0, RM.K)() || (0, RM.e)()) return null;
-        const SM = this.deps.createCanvas();
-        SM.width = 1, SM.height = 1;
-        const jM = await this.deps.openExtras();
+        var VV;
+        const eV = null !== (VV = this.module) && void 0 !== VV ? VV : await this.loadModule();
+        if (null === eV) return null;
+        const xV = this.hostOf(eV),
+          JV = () => this.guarded((() => xV.IpV()));
+        if (JV()) return xV;
+        if (null !== (0, GV.J)() || (0, GV.e)()) return null;
+        const YV = this.deps.createCanvas();
+        YV.width = 1, YV.height = 1;
+        const UV = await this.deps.openExtras();
         if (this.settleIfTrapped()) return null;
-        const aM = (0, DM.g)().sampleCount;
-        let PM;
+        const yV = (0, DV.d)().sampleCount;
+        let pV;
         try {
-          PM = await (0, UM.w)(rM, "previewRenderer", SM, aM, ZM.e, jM)
-        } catch (nM) {
-          throw nM instanceof tM.e ? this.stopForTrap(nM) : (0, UM.t)(nM) && await this.deps.onRenderFailed("start_failed", nM), nM
+          pV = await (0, tV.x)(eV, "previewRenderer", YV, yV, CV.b, UV)
+        } catch (QV) {
+          throw QV instanceof XV.e ? this.stopForTrap(QV) : (0, tV.w)(QV) && await this.deps.onRenderFailed("start_failed", QV), QV
         }
-        return this.guarded((() => iM.HaM(PM))) ? ((0, RM.v)(performance.now()), this.samples = aM, this.pageCanvas = SM, (0, kM.f)(this.registryOf(rM)), iM) : OM() ? iM : null
+        return this.guarded((() => xV.DpV(pV))) ? ((0, GV.w)(performance.now()), this.samples = yV, this.pageCanvas = YV, (0, iV.h)(this.registryOf(eV)), xV) : JV() ? xV : null
       }
       startFrames() {
         null !== this.frameId || this.isStopped || (this.frameId = this.deps.requestFrame(this.frame))
       }
-      drawFrame(MM, rM) {
-        for (const aM of this.previews.values()) aM.feed();
+      drawFrame(VV, eV) {
+        for (const yV of this.previews.values()) yV.feed();
         if (this.stopped) return;
-        const iM = this.deps.now(),
-          OM = MM.frame(rM);
-        this.costs.push(this.deps.now() - iM), this.costs.length > 120 && this.costs.shift();
-        const SM = 0 !== (256 & OM),
-          jM = 255 & OM;
-        for (const aM of this.previews.values()) {
+        const xV = this.deps.now(),
+          JV = VV.frame(eV);
+        this.costs.push(this.deps.now() - xV), this.costs.length > 120 && this.costs.shift();
+        const YV = 0 !== (256 & JV),
+          UV = 255 & JV;
+        for (const yV of this.previews.values()) {
           if (this.stopped) return;
-          aM.collect(SM)
+          yV.collect(YV)
         }
         if (!this.stopped) {
-          if (0 !== (512 & OM) && this.deps.onDrew(), SM) {
-            const rM = MM.AaM();
-            for (let MM = 0; MM + 1 < rM.length; MM += 2) rM[MM] === EM.H.RenderDeviceLost && this.deps.onDeviceLost(), this.logError(rM[MM], rM[MM + 1])
+          if (0 !== (512 & JV) && this.deps.onDrew(), YV) {
+            const eV = VV.pQV();
+            for (let VV = 0; VV + 1 < eV.length; VV += 2) eV[VV] === qV.M.RenderDeviceLost && this.deps.onDeviceLost(), this.logError(eV[VV], eV[VV + 1])
           }
-          if (jM !== FM) {
-            if (jM === BM) return this.stop(), void this.deps.onFatal(MM.waM(), MM.taM());
-            if (jM === XM) return this.stop(), void console.warn(`${NM} the previews stopped: the page's renderer went with its session`);
-            (0, dM.d)(rM), this.startFrames()
+          if (UV !== mV) {
+            if (UV === KV) return this.stop(), void this.deps.onFatal(VV.HpV(), VV.upV());
+            if (UV === HV) return this.stop(), void console.warn(`${hV} the previews stopped: the page's renderer went with its session`);
+            (0, EV.d)(eV), this.startFrames()
           } else {
-            const rM = MM.gaM();
+            const eV = VV.spV();
             this.stop();
-            const iM = rM[2] === EM.Tc.PIPELINE_FAILED ? "pipeline_failed" : "lost";
-            this.deps.onRenderFailed(iM, void 0, rM[1], rM[2] === EM.Tc.RESTORE_LOST)
+            const xV = eV[2] === qV.bd.PIPELINE_FAILED ? "pipeline_failed" : "lost";
+            this.deps.onRenderFailed(xV, void 0, eV[1], eV[2] === qV.bd.RESTORE_LOST)
           }
         }
       }
@@ -1118,115 +1118,115 @@ export const modules = {
         return this.stopped || this.isTrapped
       }
       get isTrapped() {
-        return null !== this.module && ((0, tM.m)(this.module) || "failed" === (0, hM.B)())
+        return null !== this.module && ((0, XV.j)(this.module) || "failed" === (0, kV.C)())
       }
-      hostCall(MM, rM) {
-        if (this.settleIfTrapped()) return MM;
+      hostCall(VV, eV) {
+        if (this.settleIfTrapped()) return VV;
         try {
-          return rM()
-        } catch (iM) {
-          if (this.stopIfTrapped(iM)) return MM;
-          throw iM
+          return eV()
+        } catch (xV) {
+          if (this.stopIfTrapped(xV)) return VV;
+          throw xV
         }
       }
-      guarded(MM) {
+      guarded(VV) {
         if (this.settleIfTrapped()) throw new Error("the previews stopped: their module trapped");
         try {
-          return MM()
-        } catch (rM) {
-          throw this.stopIfTrapped(rM), rM
+          return VV()
+        } catch (eV) {
+          throw this.stopIfTrapped(eV), eV
         }
       }
-      registryOf(MM) {
+      registryOf(VV) {
         return {
-          iOM: (rM, iM) => {
+          tYV: (eV, xV) => {
             this.hostCall(void 0, (() => {
-              MM.iOM(rM, iM)
+              VV.tYV(eV, xV)
             }))
           },
-          SOM: rM => {
+          FYV: eV => {
             this.hostCall(void 0, (() => {
-              MM.SOM(rM)
+              VV.FYV(eV)
             }))
           }
         }
       }
       settleIfTrapped() {
-        return !!this.isTrapped && (this.stopped || (this.stop(), (0, kM.f)(null)), !0)
+        return !!this.isTrapped && (this.stopped || (this.stop(), (0, iV.h)(null)), !0)
       }
-      stopIfTrapped(MM) {
-        return !(null === this.module || !(0, tM.q)(this.module, MM)) && (this.stopForTrap(MM), !0)
+      stopIfTrapped(VV) {
+        return !(null === this.module || !(0, XV.n)(this.module, VV)) && (this.stopForTrap(VV), !0)
       }
-      stopForTrap(MM) {
-        this.stop(), (0, kM.f)(null), (0, fM.g)("previews", MM)
+      stopForTrap(VV) {
+        this.stop(), (0, iV.h)(null), (0, oV.f)("previews", VV)
       }
       stop() {
         this.stopped = !0;
-        for (const MM of this.previews.values()) MM.abandon()
+        for (const VV of this.previews.values()) VV.abandon()
       }
-      logError(MM, rM) {
-        const iM = `${MM}:${rM}`;
-        this.loggedErrors.has(iM) || (this.loggedErrors.add(iM), console.warn(`${NM} error ${MM} (detail ${rM})`))
+      logError(VV, eV) {
+        const xV = `${VV}:${eV}`;
+        this.loggedErrors.has(xV) || (this.loggedErrors.add(xV), console.warn(`${hV} error ${VV} (detail ${eV})`))
       }
     }
-    let Sr = null;
+    let Ye = null;
 
-    function jr() {
-      return Sr ??= new Or(function() {
-        const MM = (0, bM.r)(JM.clientSideServerUrls.staticUrl, {
-          packUrl: MM => {
-            var rM, iM;
-            return null !== (rM = null === (iM = gM.g.current) || void 0 === iM ? void 0 : iM.modelUrl(MM)) && void 0 !== rM ? rM : null
+    function Ue() {
+      return Ye ??= new Je(function() {
+        const VV = (0, AV.r)(bV.clientSideServerUrls.staticUrl, {
+          packUrl: VV => {
+            var eV, xV;
+            return null !== (eV = null === (xV = MV.g.current) || void 0 === xV ? void 0 : xV.modelUrl(VV)) && void 0 !== eV ? eV : null
           }
         });
         return {
-          loadModule: rr,
-          startModels: async MM => {
+          loadModule: ee,
+          startModels: async VV => {
             const {
-              pageModelPool: rM
-            } = await iM.e(49).then((() => iM(53807))), {
-              pool: OM
-            } = rM(MM);
-            return (MM, rM) => OM.build(MM, rM)
+              pageModelPool: eV
+            } = await xV.e(49).then((() => xV(54011))), {
+              pool: JV
+            } = eV(VV);
+            return (VV, eV) => JV.build(VV, eV)
           },
-          fetchAnimations: async () => PM(await (0, OM.F)(VM())),
-          playerFile: async () => (await (0, bM.o)()).PLAYER_FILE,
-          onAnimationsFailed: (MM, rM) => {
-            nM("previewAnimations", VM(), MM, rM)
+          fetchAnimations: async () => pV(await (0, JV.H)(dV())),
+          playerFile: async () => (await (0, AV.n)()).PLAYER_FILE,
+          onAnimationsFailed: (VV, eV) => {
+            QV("previewAnimations", dV(), VV, eV)
           },
-          provideBuiltInAnimationPack: MM => {
-            mM().provide(MM)
+          provideBuiltInAnimationPack: VV => {
+            vV().provide(VV)
           },
-          openExtras: RM.F,
-          files: MM,
-          images: (0, gM.n)((0, CM.m)(MM.url), (() => gM.g.current)),
-          pack: gM.g,
-          game: uM.e,
-          fetchModel: MM => (0, bM.j)(MM),
+          openExtras: GV.F,
+          files: VV,
+          images: (0, MV.n)((0, TV.l)(VV.url), (() => MV.g.current)),
+          pack: MV.g,
+          game: zV.e,
+          fetchModel: VV => (0, AV.i)(VV),
           createCanvas: () => document.createElement("canvas"),
           dpr: () => window.devicePixelRatio,
           now: () => performance.now(),
-          requestFrame: MM => requestAnimationFrame(MM),
-          cancelFrame: MM => {
-            cancelAnimationFrame(MM)
+          requestFrame: VV => requestAnimationFrame(VV),
+          cancelFrame: VV => {
+            cancelAnimationFrame(VV)
           },
-          onRenderFailed: cM,
-          onFatal: (MM, rM) => {
-            console.error(`${NM} the previews stopped: renderer error ${MM} (detail ${rM})`)
+          onRenderFailed: OV,
+          onFatal: (VV, eV) => {
+            console.error(`${hV} the previews stopped: renderer error ${VV} (detail ${eV})`)
           },
           onDeviceLost: () => {
-            (0, RM.G)() === sM.b.webgpu && ((0, GM.g)((0, hM.R)() ? (0, UM.P)((0, hM.E)()) : null), yM.B.lost())
+            (0, GV.G)() === gV.b.webgpu && ((0, FV.h)((0, kV.R)() ? (0, tV.P)((0, kV.D)()) : null), BV.E.lost())
           },
           onDrew: () => {
-            yM.B.drew()
+            BV.E.drew()
           }
         }
-      }()), Sr
+      }()), Ye
     }
-    var ar = iM(613),
-      Pr = iM(39673),
-      nr = iM(3693);
-    const Qr = {
+    var ye = xV(648),
+      pe = xV(39828),
+      Qe = xV(3719);
+    const ne = {
       wave: 0,
       clap: 1,
       point: 2,
@@ -1246,379 +1246,379 @@ export const modules = {
       gunReady: 16,
       gunAimed: 17
     };
-    var zr = iM(40219),
-      Lr = iM(40186),
-      mr = iM(45251);
-    class Hr {
+    var we = xV(40373),
+      Ze = xV(40342),
+      ve = xV(45462);
+    class re {
       constructor() {
         this.pet = null, this.aura = null, this.companions = {
           pet: null,
           aura: null
         }
       }
-      of(MM, rM) {
-        const iM = void 0 === MM ? null : (0, Lr.k)(MM),
-          OM = void 0 === rM ? null : (0, Lr.h)(rM);
-        return iM === this.pet && OM === this.aura || (this.pet = iM, this.aura = OM, this.companions = {
-          pet: iM && hr(iM),
-          aura: OM && Jr(OM)
+      of(VV, eV) {
+        const xV = void 0 === VV ? null : (0, Ze.h)(VV),
+          JV = void 0 === eV ? null : (0, Ze.f)(eV);
+        return xV === this.pet && JV === this.aura || (this.pet = xV, this.aura = JV, this.companions = {
+          pet: xV && ke(xV),
+          aura: JV && be(JV)
         }), this.companions
       }
     }
 
-    function hr(MM) {
-      var rM;
-      const iM = mr.COSMETIC_MODEL_KEYS.get(MM.model);
-      if (void 0 === iM) return console.warn(`[bloxd-previews] pet model ${MM.model} isn't a Player attachment model`), null;
+    function ke(VV) {
+      var eV;
+      const xV = ve.COSMETIC_MODEL_KEYS.get(VV.model);
+      if (void 0 === xV) return console.warn(`[bloxd-previews] pet model ${VV.model} isn't a Player attachment model`), null;
       const {
-        scale: OM,
-        followOffset: SM,
-        yawOffset: jM,
-        bobAmplitude: aM,
-        bobHz: PM,
-        clips: nM
-      } = MM;
+        scale: JV,
+        followOffset: YV,
+        yawOffset: UV,
+        bobAmplitude: yV,
+        bobHz: pV,
+        clips: QV
+      } = VV;
       return {
-        model: iM,
-        scale: OM,
-        offset: SM,
-        yawOffset: jM,
-        bobAmplitude: aM,
-        bobHz: PM,
-        flyClip: null !== (rM = null === nM || void 0 === nM ? void 0 : nM.fly) && void 0 !== rM ? rM : null
+        model: xV,
+        scale: JV,
+        offset: YV,
+        yawOffset: UV,
+        bobAmplitude: yV,
+        bobHz: pV,
+        flyClip: null !== (eV = null === QV || void 0 === QV ? void 0 : QV.fly) && void 0 !== eV ? eV : null
       }
     }
 
-    function Jr(MM) {
+    function be(VV) {
       const {
-        opts: rM,
-        half: iM
-      } = (0, zr.b)(MM);
+        opts: eV,
+        half: xV
+      } = (0, we.d)(VV);
       return {
-        opts: JSON.stringify(rM),
-        offset: MM.offset,
-        half: iM
+        opts: JSON.stringify(eV),
+        offset: VV.offset,
+        half: xV
       }
     }
-    const dr = "[bloxd-previews]",
-      yr = new Uint32Array(5);
+    const Ee = "[bloxd-previews]",
+      Be = new Uint32Array(5);
 
-    function lr(MM) {
-      return ar.j.indexOf(MM)
+    function je(VV) {
+      return ye.m.indexOf(VV)
     }
-    const Er = new WeakSet;
+    const qe = new WeakSet;
 
-    function Ur(MM) {
-      const rM = (0, Pr.g)(MM),
-        iM = null === rM ? -1 : Gr(rM);
-      return -1 !== iM ? iM : (Er.has(MM) || (Er.add(MM), console.warn(`${dr} an animation the previews' table lacks: the mob idles instead`)), -1)
-    }
-
-    function Gr(MM) {
-      var rM;
-      return null !== (rM = Qr[MM]) && void 0 !== rM ? rM : -1
+    function te(VV) {
+      const eV = (0, pe.c)(VV),
+        xV = null === eV ? -1 : Fe(eV);
+      return -1 !== xV ? xV : (qe.has(VV) || (qe.add(VV), console.warn(`${Ee} an animation the previews' table lacks: the mob idles instead`)), -1)
     }
 
-    function Cr(MM, rM) {
+    function Fe(VV) {
+      var eV;
+      return null !== (eV = ne[VV]) && void 0 !== eV ? eV : -1
+    }
+
+    function Te(VV, eV) {
       const {
-        canvas: iM
-      } = rM;
-      iM.style.width = "100%", iM.style.height = "100%", iM.style.display = "block", MM.appendChild(iM)
+        canvas: xV
+      } = eV;
+      xV.style.width = "100%", xV.style.height = "100%", xV.style.display = "block", VV.appendChild(xV)
     }
 
-    function er(MM) {
-      const rM = MM.getBoundingClientRect();
-      return [rM.width, rM.height]
+    function Pe(VV) {
+      const eV = VV.getBoundingClientRect();
+      return [eV.width, eV.height]
     }
-    class br {
-      constructor(MM, rM) {
-        this.preview = MM, this.showView = rM
+    class Ae {
+      constructor(VV, eV) {
+        this.preview = VV, this.showView = eV
       }
-      show(MM) {
-        this.showView(this.preview, MM)
+      show(VV) {
+        this.showView(this.preview, VV)
       }
-      resize(MM, rM) {
-        this.preview.resize(MM, rM)
+      resize(VV, eV) {
+        this.preview.resize(VV, eV)
       }
       close() {
         this.preview.close()
       }
     }
-    class wr {
-      constructor(MM) {
-        this.preview = MM, this.ready = void 0, this.dev = void 0, this.built = !1, this.cosmetics = {}, this.emote = null, this.tunings = new Hr, this.companions = null, this.detachControls = void 0, this.detachControls = function(MM) {
+    class Ne {
+      constructor(VV) {
+        this.preview = VV, this.ready = void 0, this.dev = void 0, this.built = !1, this.cosmetics = {}, this.emote = null, this.tunings = new re, this.companions = null, this.detachControls = void 0, this.detachControls = function(VV) {
           const {
-            canvas: rM
-          } = MM;
-          let iM = null;
-          const OM = MM => {
-              var OM;
-              iM = {
-                pointer: MM.pointerId,
-                x: MM.clientX,
-                y: MM.clientY
-              }, null === (OM = rM.setPointerCapture) || void 0 === OM || OM.call(rM, MM.pointerId)
+            canvas: eV
+          } = VV;
+          let xV = null;
+          const JV = VV => {
+              var JV;
+              xV = {
+                pointer: VV.pointerId,
+                x: VV.clientX,
+                y: VV.clientY
+              }, null === (JV = eV.setPointerCapture) || void 0 === JV || JV.call(eV, VV.pointerId)
             },
-            SM = rM => {
-              var OM;
-              const SM = MM.orbit;
-              if ((null === (OM = iM) || void 0 === OM ? void 0 : OM.pointer) !== rM.pointerId || null === SM) return;
-              const jM = rM.clientX - iM.x,
-                aM = rM.clientY - iM.y;
-              iM = {
-                ...iM,
-                x: rM.clientX,
-                y: rM.clientY
-              }, MM.setOrbit({
-                alpha: SM.alpha - .01 * jM,
-                beta: Math.min(Math.PI - .01, Math.max(.01, SM.beta - .01 * aM)),
-                radius: SM.radius
+            YV = eV => {
+              var JV;
+              const YV = VV.orbit;
+              if ((null === (JV = xV) || void 0 === JV ? void 0 : JV.pointer) !== eV.pointerId || null === YV) return;
+              const UV = eV.clientX - xV.x,
+                yV = eV.clientY - xV.y;
+              xV = {
+                ...xV,
+                x: eV.clientX,
+                y: eV.clientY
+              }, VV.setOrbit({
+                alpha: YV.alpha - .01 * UV,
+                beta: Math.min(Math.PI - .01, Math.max(.01, YV.beta - .01 * yV)),
+                radius: YV.radius
               })
             },
-            jM = MM => {
-              var rM;
-              (null === (rM = iM) || void 0 === rM ? void 0 : rM.pointer) === MM.pointerId && (iM = null)
+            UV = VV => {
+              var eV;
+              (null === (eV = xV) || void 0 === eV ? void 0 : eV.pointer) === VV.pointerId && (xV = null)
             },
-            aM = rM => {
-              const iM = MM.orbit;
-              if (null === iM) return;
-              rM.preventDefault();
-              const OM = rM.deltaY * (rM.deltaMode === WheelEvent.DOM_DELTA_LINE ? 40 : rM.deltaMode === WheelEvent.DOM_DELTA_PAGE ? 800 : 1),
-                SM = Math.min(100, Math.max(5, iM.radius + .08 * OM));
-              MM.setOrbit({
-                ...iM,
-                radius: SM
+            yV = eV => {
+              const xV = VV.orbit;
+              if (null === xV) return;
+              eV.preventDefault();
+              const JV = eV.deltaY * (eV.deltaMode === WheelEvent.DOM_DELTA_LINE ? 40 : eV.deltaMode === WheelEvent.DOM_DELTA_PAGE ? 800 : 1),
+                YV = Math.min(100, Math.max(5, xV.radius + .08 * JV));
+              VV.setOrbit({
+                ...xV,
+                radius: YV
               })
             };
-          return rM.style.touchAction = "none", rM.addEventListener("pointerdown", OM), rM.addEventListener("pointermove", SM), rM.addEventListener("pointerup", jM), rM.addEventListener("pointercancel", jM), rM.addEventListener("wheel", aM, {
+          return eV.style.touchAction = "none", eV.addEventListener("pointerdown", JV), eV.addEventListener("pointermove", YV), eV.addEventListener("pointerup", UV), eV.addEventListener("pointercancel", UV), eV.addEventListener("wheel", yV, {
             passive: !1
           }), () => {
-            rM.removeEventListener("pointerdown", OM), rM.removeEventListener("pointermove", SM), rM.removeEventListener("pointerup", jM), rM.removeEventListener("pointercancel", jM), rM.removeEventListener("wheel", aM)
+            eV.removeEventListener("pointerdown", JV), eV.removeEventListener("pointermove", YV), eV.removeEventListener("pointerup", UV), eV.removeEventListener("pointercancel", UV), eV.removeEventListener("wheel", yV)
           }
-        }(MM), this.dev = {
-          canvas: () => MM.canvas,
+        }(VV), this.dev = {
+          canvas: () => VV.canvas,
           isolateHead: () => {
-            console.warn(`${dr} isolateHead: noa's character preview only`)
+            console.warn(`${Ee} isolateHead: noa's character preview only`)
           },
           isolatePet: () => {
-            console.warn(`${dr} isolatePet: noa's character preview only`)
+            console.warn(`${Ee} isolatePet: noa's character preview only`)
           }
-        }, this.apply(), this.ready = MM.untilSettled().then((() => {
-          if (MM.isStopped) throw new Error(`${dr} the previews stopped before the character drew`);
+        }, this.apply(), this.ready = VV.untilSettled().then((() => {
+          if (VV.isStopped) throw new Error(`${Ee} the previews stopped before the character drew`);
           this.built = !0
         }))
       }
       isReady() {
         return this.built && !this.preview.isClosed
       }
-      setCosmetic(MM, rM) {
-        this.cosmetics[MM] = rM, this.apply()
+      setCosmetic(VV, eV) {
+        this.cosmetics[VV] = eV, this.apply()
       }
-      playEmote(MM) {
-        null === MM || MM !== this.emote ? (this.emote = MM, this.apply()) : this.preview.replay()
+      playEmote(VV) {
+        null === VV || VV !== this.emote ? (this.emote = VV, this.apply()) : this.preview.replay()
       }
-      untilDrawn(MM) {
+      untilDrawn(VV) {
         return this.preview.untilSettled()
       }
-      setOrbit(MM) {
+      setOrbit(VV) {
         let {
-          yaw: rM,
-          pitch: iM,
-          radius: OM
-        } = MM;
-        const SM = this.preview.orbit;
-        null !== SM && this.preview.setOrbit({
-          alpha: rM,
-          beta: iM,
-          radius: null !== OM && void 0 !== OM ? OM : SM.radius
+          yaw: eV,
+          pitch: xV,
+          radius: JV
+        } = VV;
+        const YV = this.preview.orbit;
+        null !== YV && this.preview.setOrbit({
+          alpha: eV,
+          beta: xV,
+          radius: null !== JV && void 0 !== JV ? JV : YV.radius
         })
       }
       resetCamera() {}
-      resize(MM, rM) {
-        this.preview.resize(MM, rM)
+      resize(VV, eV) {
+        this.preview.resize(VV, eV)
       }
       close() {
         this.detachControls(), this.preview.close()
       }
       apply() {
-        var MM;
-        this.preview.setPlayer(JSON.stringify(this.cosmetics), yr, null === (MM = this.emote) ? -1 : Gr(MM));
-        const rM = this.tunings.of(this.cosmetics.pet, this.cosmetics.aura);
-        rM !== this.companions && (this.companions = rM, this.preview.setCompanions(rM))
+        var VV;
+        this.preview.setPlayer(JSON.stringify(this.cosmetics), Be, null === (VV = this.emote) ? -1 : Fe(VV));
+        const eV = this.tunings.of(this.cosmetics.pet, this.cosmetics.aura);
+        eV !== this.companions && (this.companions = eV, this.preview.setCompanions(eV))
       }
     }
 
-    function tr(MM, rM) {
+    function Xe(VV, eV) {
       let {
-        mobType: iM,
-        variation: OM,
-        animation: SM
-      } = rM;
-      MM.setMob(lr(iM), null !== OM && void 0 !== OM ? OM : "", 1, Ur(SM))
+        mobType: xV,
+        variation: JV,
+        animation: YV
+      } = eV;
+      VV.setMob(je(xV), null !== JV && void 0 !== JV ? JV : "", 1, te(YV))
     }
 
-    function gr(MM, rM) {
+    function Me(VV, eV) {
       let {
-        mobType: iM,
-        variation: OM,
-        metaInfo: SM,
-        tamed: jM
-      } = rM;
-      MM.setPet(lr(iM), OM, SM, jM)
+        mobType: xV,
+        variation: JV,
+        metaInfo: YV,
+        tamed: UV
+      } = eV;
+      VV.setPet(je(xV), JV, YV, UV)
     }
-    const ur = {
+    const ze = {
       aimed: .533 / 1.15 * 1.1,
       ready: .16 / .85 * 1.1
     };
-    class Rr {
-      constructor(MM, rM, iM, OM) {
+    class Ge {
+      constructor(VV, eV, xV, JV) {
         this.preview = null, this.closed = !1, this.figure = null, this.shown = !1, this.order = "", this.span = {
           left: 0,
           width: 0
-        }, this.lineup = [0, 0], this.given = null, this.loaded = !1, MM(iM.width, OM[1], OM).then((MM => {
-          if (this.closed) return void MM.close();
+        }, this.lineup = [0, 0], this.given = null, this.loaded = !1, VV(xV.width, JV[1], JV).then((VV => {
+          if (this.closed) return void VV.close();
           const {
-            style: iM
-          } = MM.canvas;
-          iM.position = "absolute", iM.top = "0", iM.visibility = "hidden", Cr(rM, MM), this.preview = MM, this.apply()
-        })).catch((MM => {
-          console.error(`${dr} couldn't open a lineup figure`, MM)
+            style: xV
+          } = VV.canvas;
+          xV.position = "absolute", xV.top = "0", xV.visibility = "hidden", Te(eV, VV), this.preview = VV, this.apply()
+        })).catch((VV => {
+          console.error(`${Ee} couldn't open a lineup figure`, VV)
         }))
       }
-      update(MM, rM, iM, OM, SM) {
-        this.figure = MM, this.shown = rM, this.order = iM, this.span = OM, this.lineup = SM, this.apply()
+      update(VV, eV, xV, JV, YV) {
+        this.figure = VV, this.shown = eV, this.order = xV, this.span = JV, this.lineup = YV, this.apply()
       }
       close() {
-        var MM;
-        this.closed = !0, null === (MM = this.preview) || void 0 === MM || MM.close(), this.preview = null
+        var VV;
+        this.closed = !0, null === (VV = this.preview) || void 0 === VV || VV.close(), this.preview = null
       }
       apply() {
         const {
-          preview: MM,
-          figure: rM,
-          lineup: iM
+          preview: VV,
+          figure: eV,
+          lineup: xV
         } = this;
-        if (null === MM || null === rM) return;
-        if (this.given !== rM) {
-          var OM;
-          this.given = rM, this.loaded = !1;
-          const iM = null === rM.QG ? 0 : null !== (OM = (0, nr.d)(rM.QG)) && void 0 !== OM ? OM : 0;
-          MM.setFigure(function(MM) {
-            return JSON.stringify(Object.fromEntries(MM.cosmetics))
-          }(rM), iM, Ur(rM.animation), rM.size), MM.untilSettled().then((() => {
-            this.given === rM && (this.loaded = !0, this.apply())
+        if (null === VV || null === eV) return;
+        if (this.given !== eV) {
+          var JV;
+          this.given = eV, this.loaded = !1;
+          const xV = null === eV.JA ? 0 : null !== (JV = (0, Qe.d)(eV.JA)) && void 0 !== JV ? JV : 0;
+          VV.setFigure(function(VV) {
+            return JSON.stringify(Object.fromEntries(VV.cosmetics))
+          }(eV), xV, te(eV.animation), eV.size), VV.untilSettled().then((() => {
+            this.given === eV && (this.loaded = !0, this.apply())
           }))
         }
         const {
-          left: SM,
-          width: jM
+          left: YV,
+          width: UV
         } = this.span;
-        MM.resize(jM, iM[1], iM);
+        VV.resize(UV, xV[1], xV);
         const {
-          style: aM
-        } = MM.canvas;
-        aM.left = `${SM}px`, aM.width = `${jM}px`, aM.zIndex = this.order, aM.visibility = this.shown && this.loaded ? "visible" : "hidden"
+          style: yV
+        } = VV.canvas;
+        yV.left = `${YV}px`, yV.width = `${UV}px`, yV.zIndex = this.order, yV.visibility = this.shown && this.loaded ? "visible" : "hidden"
       }
     }
-    class pr {
-      constructor(MM, rM) {
-        this.open = rM, this.layer = void 0, this.figures = [], this.view = {
+    class We {
+      constructor(VV, eV) {
+        this.open = eV, this.layer = void 0, this.figures = [], this.view = {
           figures: [],
           shown: []
-        }, this.size = void 0, this.size = er(MM), this.layer = document.createElement("div");
+        }, this.size = void 0, this.size = Pe(VV), this.layer = document.createElement("div");
         const {
-          style: iM
+          style: xV
         } = this.layer;
-        iM.position = "relative", iM.isolation = "isolate", iM.overflow = "hidden", iM.width = "100%", iM.height = "100%", iM.pointerEvents = "none", MM.appendChild(this.layer)
+        xV.position = "relative", xV.isolation = "isolate", xV.overflow = "hidden", xV.width = "100%", xV.height = "100%", xV.pointerEvents = "none", VV.appendChild(this.layer)
       }
-      show(MM) {
-        this.view = MM, this.place()
+      show(VV) {
+        this.view = VV, this.place()
       }
-      resize(MM, rM) {
-        this.size = [MM, rM], this.place()
+      resize(VV, eV) {
+        this.size = [VV, eV], this.place()
       }
       close() {
-        for (const MM of this.figures) MM.close();
+        for (const VV of this.figures) VV.close();
         this.figures = [], this.layer.remove()
       }
       place() {
         const {
-          figures: MM,
-          shown: rM
+          figures: VV,
+          shown: eV
         } = this.view;
-        for (const OM of this.figures.splice(MM.length)) OM.close();
+        for (const JV of this.figures.splice(VV.length)) JV.close();
         const {
-          size: iM
+          size: xV
         } = this;
-        MM.forEach(((OM, SM) => {
-          var jM;
-          const aM = function(MM, rM, iM, OM) {
-            let [SM, jM] = OM;
-            const aM = (MM + .5) * SM / rM,
-              PM = Math.min(Math.max(SM / rM, 2 * iM * jM), 2 * Math.max(aM, SM - aM));
+        VV.forEach(((JV, YV) => {
+          var UV;
+          const yV = function(VV, eV, xV, JV) {
+            let [YV, UV] = JV;
+            const yV = (VV + .5) * YV / eV,
+              pV = Math.min(Math.max(YV / eV, 2 * xV * UV), 2 * Math.max(yV, YV - yV));
             return {
-              left: aM - PM / 2,
-              width: PM
+              left: yV - pV / 2,
+              width: pV
             }
-          }(SM, MM.length, function(MM) {
+          }(YV, VV.length, function(VV) {
             let {
-              animation: rM,
-              size: iM
-            } = MM;
+              animation: eV,
+              size: xV
+            } = VV;
             const {
-              aimed: OM,
-              ready: SM
-            } = ur;
-            return (Ur(rM) === Qr.gunAimed ? OM : SM) * iM
-          }(OM), iM);
-          this.figures[SM] ??= new Rr(this.open, this.layer, aM, iM), this.figures[SM].update(OM, null !== (jM = rM[SM]) && void 0 !== jM && jM, function(MM, rM) {
-            return String(Math.round(1e3 * MM) + rM)
-          }(OM.size, SM), aM, iM)
+              aimed: JV,
+              ready: YV
+            } = ze;
+            return (te(eV) === ne.gunAimed ? JV : YV) * xV
+          }(JV), xV);
+          this.figures[YV] ??= new Ge(this.open, this.layer, yV, xV), this.figures[YV].update(JV, null !== (UV = eV[YV]) && void 0 !== UV && UV, function(VV, eV) {
+            return String(Math.round(1e3 * VV) + eV)
+          }(JV.size, YV), yV, xV)
         }))
       }
     }
-    const Wr = {
-      player: xM,
-      store: vM
+    const Re = {
+      player: LV,
+      store: fV
     };
-    class sr {
-      constructor(MM) {
-        this.page = MM
+    class ge {
+      constructor(VV) {
+        this.page = VV
       }
-      async openMob(MM) {
-        return new br(await this.open(MM, AM), tr)
+      async openMob(VV) {
+        return new Ae(await this.open(VV, lV), Xe)
       }
-      async openPet(MM) {
-        return new br(await this.open(MM, AM), gr)
+      async openPet(VV) {
+        return new Ae(await this.open(VV, lV), Me)
       }
-      openMobLineup(MM) {
-        return new pr(MM, ((MM, rM, iM) => this.page.openPreview(AM, MM, rM, iM)))
+      openMobLineup(VV) {
+        return new We(VV, ((VV, eV, xV) => this.page.openPreview(lV, VV, eV, xV)))
       }
-      async openCharacter(MM, rM) {
-        return new wr(await this.open(MM, Wr[rM]))
+      async openCharacter(VV, eV) {
+        return new Ne(await this.open(VV, Re[eV]))
       }
-      async open(MM, rM) {
-        const [iM, OM] = er(MM), SM = await this.page.openPreview(rM, iM, OM);
-        return Cr(MM, SM), SM
+      async open(VV, eV) {
+        const [xV, JV] = Pe(VV), YV = await this.page.openPreview(eV, xV, JV);
+        return Te(VV, YV), YV
       }
     }
   },
-  37696: (MM, rM, iM) => {
-    iM.d(rM, {
-      C: () => yM,
-      e: () => OM,
-      g: () => SM,
-      h: () => mM,
-      j: () => dM,
-      l: () => zM,
-      o: () => lM,
-      p: () => nM,
-      r: () => QM,
-      s: () => HM,
-      u: () => hM,
-      y: () => JM
+  37916: (VV, eV, xV) => {
+    xV.d(eV, {
+      B: () => bV,
+      C: () => BV,
+      d: () => JV,
+      e: () => YV,
+      h: () => vV,
+      i: () => EV,
+      k: () => wV,
+      m: () => jV,
+      p: () => QV,
+      t: () => nV,
+      v: () => rV,
+      z: () => kV
     });
-    const OM = [{
+    const JV = [{
       numLines: 7,
       charsPerLine: 16,
       uiFontSize: 3.3,
@@ -1635,64 +1635,64 @@ export const modules = {
       ingameFontSize: 58
     }];
 
-    function SM(MM, rM) {
+    function YV(VV, eV) {
       const {
-        numLines: iM,
-        charsPerLine: SM
-      } = OM[rM];
-      return EM(MM, iM, SM, !1)
+        numLines: xV,
+        charsPerLine: YV
+      } = JV[eV];
+      return qV(VV, xV, YV, !1)
     }
-    const jM = 7 / 8,
-      aM = .25,
-      PM = 8;
+    const UV = 7 / 8,
+      yV = .25,
+      pV = 8;
 
-    function nM(MM, rM) {
+    function QV(VV, eV) {
       return {
-        width: Math.min(MM, PM) - 2 * aM,
-        height: Math.min(rM, PM) - 2 * aM
+        width: Math.min(VV, pV) - 2 * yV,
+        height: Math.min(eV, pV) - 2 * yV
       }
     }
 
-    function QM(MM, rM, iM) {
-      const SM = nM(MM, rM),
+    function nV(VV, eV, xV) {
+      const YV = QV(VV, eV),
         {
-          numLines: aM,
-          charsPerLine: PM
-        } = OM[iM];
+          numLines: yV,
+          charsPerLine: pV
+        } = JV[xV];
       return {
-        numLines: Math.max(1, Math.floor(aM / jM * SM.height)),
-        charsPerLine: Math.max(1, Math.floor(PM * SM.width))
+        numLines: Math.max(1, Math.floor(yV / UV * YV.height)),
+        charsPerLine: Math.max(1, Math.floor(pV * YV.width))
       }
     }
 
-    function zM(MM, rM, iM, OM) {
+    function wV(VV, eV, xV, JV) {
       const {
-        numLines: SM,
-        charsPerLine: jM
-      } = QM(iM, OM, rM);
-      return EM(MM, SM, jM, !1)
+        numLines: YV,
+        charsPerLine: UV
+      } = nV(xV, JV, eV);
+      return qV(VV, YV, UV, !1)
     }
-    const LM = 32e3;
+    const ZV = 32e3;
 
-    function mM(MM) {
-      return MM.slice(0, LM)
+    function vV(VV) {
+      return VV.slice(0, ZV)
     }
-    const HM = 512e3,
-      hM = 64,
-      JM = HM;
+    const rV = 512e3,
+      kV = 64,
+      bV = rV;
 
-    function dM(MM, rM) {
-      const iM = Math.max(0, JM - rM),
-        OM = Math.min(HM, iM);
-      return MM.slice(0, OM)
+    function EV(VV, eV) {
+      const xV = Math.max(0, bV - eV),
+        JV = Math.min(rV, xV);
+      return VV.slice(0, JV)
     }
-    const yM = {
+    const BV = {
       book: {
         numLines: 13,
         charsPerLine: 19,
         uiFontSize: 1.95
       },
-      nQ: {
+      vn: {
         numLines: 1,
         charsPerLine: 19,
         uiFontSize: 1.95
@@ -1704,31 +1704,31 @@ export const modules = {
       }
     };
 
-    function lM(MM, rM) {
+    function jV(VV, eV) {
       const {
-        numLines: iM,
-        charsPerLine: OM
-      } = yM[rM];
-      return EM(MM, iM, OM, !1)
+        numLines: xV,
+        charsPerLine: JV
+      } = BV[eV];
+      return qV(VV, xV, JV, !1)
     }
 
-    function EM(MM, rM, iM, OM, SM) {
-      (SM || OM) && (MM = MM.slice(0, null !== SM && void 0 !== SM ? SM : rM * iM));
-      const jM = MM.split("\n");
-      if (jM.length > rM && jM.splice(rM, jM.length - rM), !OM)
-        for (let aM = 0; aM < jM.length; aM++) {
-          const MM = jM[aM];
-          MM.length > iM && (jM[aM] = MM.substring(0, iM), jM.length < rM && jM.splice(aM + 1, 0, MM.substring(iM)))
+    function qV(VV, eV, xV, JV, YV) {
+      (YV || JV) && (VV = VV.slice(0, null !== YV && void 0 !== YV ? YV : eV * xV));
+      const UV = VV.split("\n");
+      if (UV.length > eV && UV.splice(eV, UV.length - eV), !JV)
+        for (let yV = 0; yV < UV.length; yV++) {
+          const VV = UV[yV];
+          VV.length > xV && (UV[yV] = VV.substring(0, xV), UV.length < eV && UV.splice(yV + 1, 0, VV.substring(xV)))
         }
-      return jM.join("\n")
+      return UV.join("\n")
     }
   },
-  53739: (MM, rM, iM) => {
-    MM.exports = iM.p + "static/media/builtInAnimations.anim.1876a593a8239b631bf1.gz"
+  53937: (VV, eV, xV) => {
+    VV.exports = xV.p + "static/media/builtInAnimations.anim.1876a593a8239b631bf1.gz"
   },
-  53745: (MM, rM, iM) => {
-    MM.exports = iM.p + "static/media/previewAnimations.dat.a9c06de838594e8096c6.gz"
+  53941: (VV, eV, xV) => {
+    VV.exports = xV.p + "static/media/previewAnimations.dat.a9c06de838594e8096c6.gz"
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const VV in modules) Object.freeze(modules[VV]);

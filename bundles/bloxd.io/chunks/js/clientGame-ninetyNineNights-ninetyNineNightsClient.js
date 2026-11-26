@@ -1,23 +1,23 @@
 export const id = 24;
 export const ids = [24];
 export const modules = {
-  40575: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      default: () => SM
+  40718: (VV, eV, xV) => {
+    xV.r(eV), xV.d(eV, {
+      default: () => YV
     });
-    var OM = iM(22);
-    const SM = function(MM, rM, iM) {
-      let SM;
+    var JV = xV(32);
+    const YV = function(VV, eV, xV) {
+      let YV;
       return {
-        onCreate: MM => {
-          SM = MM
+        onCreate: VV => {
+          YV = VV
         },
-        onPlayerClick: (MM, rM, iM, jM, aM, PM) => {
-          rM || "Workbench" !== SM.getMetaInfo(PM).rootName || OM.i.Tz("toggleMenu", "inventory|Workbench")
+        onPlayerClick: (VV, eV, xV, UV, yV, pV) => {
+          eV || "Workbench" !== YV.getMetaInfo(pV).rootName || JV.h.QZ("toggleMenu", "inventory|Workbench")
         }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const VV in modules) Object.freeze(modules[VV]);

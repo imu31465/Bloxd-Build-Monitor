@@ -1,181 +1,181 @@
 export const id = 604;
 export const ids = [604];
 export const modules = {
-  43972: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => lr,
-      f: () => WM,
-      ChangeSet: () => sM,
-      h: () => Rr,
-      l: () => AM,
-      p: () => Dr,
-      s: () => FM,
-      v: () => pM,
-      y: () => Sr,
-      A: () => Ar,
-      z: () => xr,
-      D: () => Zr,
-      G: () => Gr,
-      H: () => VM,
-      K: () => JM,
-      M: () => Cr,
-      Q: () => tM,
-      S: () => uM,
-      V: () => kr,
-      Y: () => Mi,
-      $: () => wM,
-      cb: () => ri,
-      eb: () => gM
+  44232: (VV, eV, xV) => {
+    xV.d(eV, {
+      e: () => je,
+      h: () => RV,
+      ChangeSet: () => gV,
+      k: () => Ge,
+      n: () => lV,
+      q: () => De,
+      r: () => mV,
+      t: () => WV,
+      u: () => Ye,
+      x: () => le,
+      w: () => Le,
+      A: () => Ce,
+      C: () => Fe,
+      E: () => dV,
+      H: () => bV,
+      J: () => Te,
+      N: () => XV,
+      R: () => zV,
+      T: () => ie,
+      W: () => Vx,
+      Z: () => NV,
+      $: () => ex,
+      db: () => MV
     });
-    let OM = [],
-      SM = [];
+    let JV = [],
+      YV = [];
 
-    function jM(MM) {
-      if (MM < 768) return !1;
-      for (let rM = 0, iM = OM.length;;) {
-        let jM = rM + iM >> 1;
-        if (MM < OM[jM]) iM = jM;
+    function UV(VV) {
+      if (VV < 768) return !1;
+      for (let eV = 0, xV = JV.length;;) {
+        let UV = eV + xV >> 1;
+        if (VV < JV[UV]) xV = UV;
         else {
-          if (!(MM >= SM[jM])) return !0;
-          rM = jM + 1
+          if (!(VV >= YV[UV])) return !0;
+          eV = UV + 1
         }
-        if (rM == iM) return !1
+        if (eV == xV) return !1
       }
     }
 
-    function aM(MM) {
-      return MM >= 127462 && MM <= 127487
+    function yV(VV) {
+      return VV >= 127462 && VV <= 127487
     }(() => {
-      let MM = "lc,34,7n,7,7b,19,,,,2,,2,,,20,b,1c,l,g,,2t,7,2,6,2,2,,4,z,,u,r,2j,b,1m,9,9,,o,4,,9,,3,,5,17,3,3b,f,,w,1j,,,,4,8,4,,3,7,a,2,t,,1m,,,,2,4,8,,9,,a,2,q,,2,2,1l,,4,2,4,2,2,3,3,,u,2,3,,b,2,1l,,4,5,,2,4,,k,2,m,6,,,1m,,,2,,4,8,,7,3,a,2,u,,1n,,,,c,,9,,14,,3,,1l,3,5,3,,4,7,2,b,2,t,,1m,,2,,2,,3,,5,2,7,2,b,2,s,2,1l,2,,,2,4,8,,9,,a,2,t,,20,,4,,2,3,,,8,,29,,2,7,c,8,2q,,2,9,b,6,22,2,r,,,,,,1j,e,,5,,2,5,b,,10,9,,2u,4,,6,,2,2,2,p,2,4,3,g,4,d,,2,2,6,,f,,jj,3,qa,3,t,3,t,2,u,2,1s,2,,7,8,,2,b,9,,19,3,3b,2,y,,3a,3,4,2,9,,6,3,63,2,2,,1m,,,7,,,,,2,8,6,a,2,,1c,h,1r,4,1c,7,,,5,,14,9,c,2,w,4,2,2,,3,1k,,,2,3,,,3,1m,8,2,2,48,3,,d,,7,4,,6,,3,2,5i,1m,,5,ek,,5f,x,2da,3,3x,,2o,w,fe,6,2x,2,n9w,4,,a,w,2,28,2,7k,,3,,4,,p,2,5,,47,2,q,i,d,,12,8,p,b,1a,3,1c,,2,4,2,2,13,,1v,6,2,2,2,2,c,,8,,1b,,1f,,,3,2,2,5,2,,,16,2,8,,6m,,2,,4,,fn4,,kh,g,g,g,a6,2,gt,,6a,,45,5,1ae,3,,2,5,4,14,3,4,,4l,2,fx,4,ar,2,49,b,4w,,1i,f,1k,3,1d,4,2,2,1x,3,10,5,,8,1q,,c,2,1g,9,a,4,2,,2n,3,2,,,2,6,,4g,,3,8,l,2,1l,2,,,,,m,,e,7,3,5,5f,8,2,3,,,n,,29,,2,6,,,2,,,2,,2,6j,,2,4,6,2,,2,r,2,2d,8,2,,,2,2y,,,,2,6,,,2t,3,2,4,,5,77,9,,2,6t,,a,2,,,4,,40,4,2,2,4,,w,a,14,6,2,4,8,,9,6,2,3,1a,d,,2,ba,7,,6,,,2a,m,2,7,,2,,2,3e,6,3,,,2,,7,,,20,2,3,,,,9n,2,f0b,5,1n,7,t4,,1r,4,29,,f5k,2,43q,,,3,4,5,8,8,2,7,u,4,44,3,1iz,1j,4,1e,8,,e,,m,5,,f,11s,7,,h,2,7,,2,,5,79,7,c5,4,15s,7,31,7,240,5,gx7k,2o,3k,6o".split(",").map((MM => MM ? parseInt(MM, 36) : 1));
-      for (let rM = 0, iM = 0; rM < MM.length; rM++)(rM % 2 ? SM : OM).push(iM += MM[rM])
+      let VV = "lc,34,7n,7,7b,19,,,,2,,2,,,20,b,1c,l,g,,2t,7,2,6,2,2,,4,z,,u,r,2j,b,1m,9,9,,o,4,,9,,3,,5,17,3,3b,f,,w,1j,,,,4,8,4,,3,7,a,2,t,,1m,,,,2,4,8,,9,,a,2,q,,2,2,1l,,4,2,4,2,2,3,3,,u,2,3,,b,2,1l,,4,5,,2,4,,k,2,m,6,,,1m,,,2,,4,8,,7,3,a,2,u,,1n,,,,c,,9,,14,,3,,1l,3,5,3,,4,7,2,b,2,t,,1m,,2,,2,,3,,5,2,7,2,b,2,s,2,1l,2,,,2,4,8,,9,,a,2,t,,20,,4,,2,3,,,8,,29,,2,7,c,8,2q,,2,9,b,6,22,2,r,,,,,,1j,e,,5,,2,5,b,,10,9,,2u,4,,6,,2,2,2,p,2,4,3,g,4,d,,2,2,6,,f,,jj,3,qa,3,t,3,t,2,u,2,1s,2,,7,8,,2,b,9,,19,3,3b,2,y,,3a,3,4,2,9,,6,3,63,2,2,,1m,,,7,,,,,2,8,6,a,2,,1c,h,1r,4,1c,7,,,5,,14,9,c,2,w,4,2,2,,3,1k,,,2,3,,,3,1m,8,2,2,48,3,,d,,7,4,,6,,3,2,5i,1m,,5,ek,,5f,x,2da,3,3x,,2o,w,fe,6,2x,2,n9w,4,,a,w,2,28,2,7k,,3,,4,,p,2,5,,47,2,q,i,d,,12,8,p,b,1a,3,1c,,2,4,2,2,13,,1v,6,2,2,2,2,c,,8,,1b,,1f,,,3,2,2,5,2,,,16,2,8,,6m,,2,,4,,fn4,,kh,g,g,g,a6,2,gt,,6a,,45,5,1ae,3,,2,5,4,14,3,4,,4l,2,fx,4,ar,2,49,b,4w,,1i,f,1k,3,1d,4,2,2,1x,3,10,5,,8,1q,,c,2,1g,9,a,4,2,,2n,3,2,,,2,6,,4g,,3,8,l,2,1l,2,,,,,m,,e,7,3,5,5f,8,2,3,,,n,,29,,2,6,,,2,,,2,,2,6j,,2,4,6,2,,2,r,2,2d,8,2,,,2,2y,,,,2,6,,,2t,3,2,4,,5,77,9,,2,6t,,a,2,,,4,,40,4,2,2,4,,w,a,14,6,2,4,8,,9,6,2,3,1a,d,,2,ba,7,,6,,,2a,m,2,7,,2,,2,3e,6,3,,,2,,7,,,20,2,3,,,,9n,2,f0b,5,1n,7,t4,,1r,4,29,,f5k,2,43q,,,3,4,5,8,8,2,7,u,4,44,3,1iz,1j,4,1e,8,,e,,m,5,,f,11s,7,,h,2,7,,2,,5,79,7,c5,4,15s,7,31,7,240,5,gx7k,2o,3k,6o".split(",").map((VV => VV ? parseInt(VV, 36) : 1));
+      for (let eV = 0, xV = 0; eV < VV.length; eV++)(eV % 2 ? YV : JV).push(xV += VV[eV])
     })();
-    const PM = 8205;
+    const pV = 8205;
 
-    function nM(MM, rM) {
-      return (!(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2] ? QM : zM)(MM, rM, !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3])
+    function QV(VV, eV) {
+      return (!(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2] ? nV : wV)(VV, eV, !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3])
     }
 
-    function QM(MM, rM, iM) {
-      if (rM == MM.length) return rM;
-      rM && mM(MM.charCodeAt(rM)) && HM(MM.charCodeAt(rM - 1)) && rM--;
-      let OM = LM(MM, rM);
-      for (rM += hM(OM); rM < MM.length;) {
-        let SM = LM(MM, rM);
-        if (OM == PM || SM == PM || iM && jM(SM)) rM += hM(SM), OM = SM;
+    function nV(VV, eV, xV) {
+      if (eV == VV.length) return eV;
+      eV && vV(VV.charCodeAt(eV)) && rV(VV.charCodeAt(eV - 1)) && eV--;
+      let JV = ZV(VV, eV);
+      for (eV += kV(JV); eV < VV.length;) {
+        let YV = ZV(VV, eV);
+        if (JV == pV || YV == pV || xV && UV(YV)) eV += kV(YV), JV = YV;
         else {
-          if (!aM(SM)) break;
+          if (!yV(YV)) break;
           {
-            let iM = 0,
-              OM = rM - 2;
-            for (; OM >= 0 && aM(LM(MM, OM));) iM++, OM -= 2;
-            if (iM % 2 == 0) break;
-            rM += 2
+            let xV = 0,
+              JV = eV - 2;
+            for (; JV >= 0 && yV(ZV(VV, JV));) xV++, JV -= 2;
+            if (xV % 2 == 0) break;
+            eV += 2
           }
         }
       }
-      return rM
+      return eV
     }
 
-    function zM(MM, rM, iM) {
-      for (; rM > 0;) {
-        let OM = QM(MM, rM - 2, iM);
-        if (OM < rM) return OM;
-        rM--
+    function wV(VV, eV, xV) {
+      for (; eV > 0;) {
+        let JV = nV(VV, eV - 2, xV);
+        if (JV < eV) return JV;
+        eV--
       }
       return 0
     }
 
-    function LM(MM, rM) {
-      let iM = MM.charCodeAt(rM);
-      if (!HM(iM) || rM + 1 == MM.length) return iM;
-      let OM = MM.charCodeAt(rM + 1);
-      return mM(OM) ? OM - 56320 + (iM - 55296 << 10) + 65536 : iM
+    function ZV(VV, eV) {
+      let xV = VV.charCodeAt(eV);
+      if (!rV(xV) || eV + 1 == VV.length) return xV;
+      let JV = VV.charCodeAt(eV + 1);
+      return vV(JV) ? JV - 56320 + (xV - 55296 << 10) + 65536 : xV
     }
 
-    function mM(MM) {
-      return MM >= 56320 && MM < 57344
+    function vV(VV) {
+      return VV >= 56320 && VV < 57344
     }
 
-    function HM(MM) {
-      return MM >= 55296 && MM < 56320
+    function rV(VV) {
+      return VV >= 55296 && VV < 56320
     }
 
-    function hM(MM) {
-      return MM < 65536 ? 1 : 2
+    function kV(VV) {
+      return VV < 65536 ? 1 : 2
     }
-    class JM {
-      lineAt(MM) {
-        if (MM < 0 || MM > this.length) throw new RangeError(`Invalid position ${MM} in document of length ${this.length}`);
-        return this.lineInner(MM, !1, 1, 0)
+    class bV {
+      lineAt(VV) {
+        if (VV < 0 || VV > this.length) throw new RangeError(`Invalid position ${VV} in document of length ${this.length}`);
+        return this.lineInner(VV, !1, 1, 0)
       }
-      line(MM) {
-        if (MM < 1 || MM > this.lines) throw new RangeError(`Invalid line number ${MM} in ${this.lines}-line document`);
-        return this.lineInner(MM, !0, 1, 0)
+      line(VV) {
+        if (VV < 1 || VV > this.lines) throw new RangeError(`Invalid line number ${VV} in ${this.lines}-line document`);
+        return this.lineInner(VV, !0, 1, 0)
       }
-      replace(MM, rM, iM) {
-        [MM, rM] = bM(this, MM, rM);
-        let OM = [];
-        return this.decompose(0, MM, OM, 2), iM.length && iM.decompose(0, iM.length, OM, 3), this.decompose(rM, this.length, OM, 1), yM.from(OM, this.length - (rM - MM) + iM.length)
+      replace(VV, eV, xV) {
+        [VV, eV] = AV(this, VV, eV);
+        let JV = [];
+        return this.decompose(0, VV, JV, 2), xV.length && xV.decompose(0, xV.length, JV, 3), this.decompose(eV, this.length, JV, 1), BV.from(JV, this.length - (eV - VV) + xV.length)
       }
-      append(MM) {
-        return this.replace(this.length, this.length, MM)
+      append(VV) {
+        return this.replace(this.length, this.length, VV)
       }
-      slice(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length;
-        [MM, rM] = bM(this, MM, rM);
-        let iM = [];
-        return this.decompose(MM, rM, iM, 0), yM.from(iM, rM - MM)
+      slice(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length;
+        [VV, eV] = AV(this, VV, eV);
+        let xV = [];
+        return this.decompose(VV, eV, xV, 0), BV.from(xV, eV - VV)
       }
-      eq(MM) {
-        if (MM == this) return !0;
-        if (MM.length != this.length || MM.lines != this.lines) return !1;
-        let rM = this.scanIdentical(MM, 1),
-          iM = this.length - this.scanIdentical(MM, -1),
-          OM = new UM(this),
-          SM = new UM(MM);
-        for (let jM = rM, aM = rM;;) {
-          if (OM.next(jM), SM.next(jM), jM = 0, OM.lineBreak != SM.lineBreak || OM.done != SM.done || OM.value != SM.value) return !1;
-          if (aM += OM.value.length, OM.done || aM >= iM) return !0
+      eq(VV) {
+        if (VV == this) return !0;
+        if (VV.length != this.length || VV.lines != this.lines) return !1;
+        let eV = this.scanIdentical(VV, 1),
+          xV = this.length - this.scanIdentical(VV, -1),
+          JV = new tV(this),
+          YV = new tV(VV);
+        for (let UV = eV, yV = eV;;) {
+          if (JV.next(UV), YV.next(UV), UV = 0, JV.lineBreak != YV.lineBreak || JV.done != YV.done || JV.value != YV.value) return !1;
+          if (yV += JV.value.length, JV.done || yV >= xV) return !0
         }
       }
       iter() {
-        return new UM(this, arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1)
+        return new tV(this, arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1)
       }
-      iterRange(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length;
-        return new GM(this, MM, rM)
+      iterRange(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length;
+        return new FV(this, VV, eV)
       }
-      iterLines(MM, rM) {
-        let iM;
-        if (null == MM) iM = this.iter();
+      iterLines(VV, eV) {
+        let xV;
+        if (null == VV) xV = this.iter();
         else {
-          null == rM && (rM = this.lines + 1);
-          let OM = this.line(MM).from;
-          iM = this.iterRange(OM, Math.max(OM, rM == this.lines + 1 ? this.length : rM <= 1 ? 0 : this.line(rM - 1).to))
+          null == eV && (eV = this.lines + 1);
+          let JV = this.line(VV).from;
+          xV = this.iterRange(JV, Math.max(JV, eV == this.lines + 1 ? this.length : eV <= 1 ? 0 : this.line(eV - 1).to))
         }
-        return new CM(iM)
+        return new TV(xV)
       }
       toString() {
         return this.sliceString(0)
       }
       toJSON() {
-        let MM = [];
-        return this.flatten(MM), MM
+        let VV = [];
+        return this.flatten(VV), VV
       }
       constructor() {}
-      static of (MM) {
-        if (0 == MM.length) throw new RangeError("A document must have at least one line");
-        return 1 != MM.length || MM[0] ? MM.length <= 32 ? new dM(MM) : yM.from(dM.split(MM, [])) : JM.empty
+      static of (VV) {
+        if (0 == VV.length) throw new RangeError("A document must have at least one line");
+        return 1 != VV.length || VV[0] ? VV.length <= 32 ? new EV(VV) : BV.from(EV.split(VV, [])) : bV.empty
       }
     }
-    class dM extends JM {
-      constructor(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : function(MM) {
-          let rM = -1;
-          for (let iM of MM) rM += iM.length + 1;
-          return rM
-        }(MM);
-        super(), this.text = MM, this.length = rM
+    class EV extends bV {
+      constructor(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : function(VV) {
+          let eV = -1;
+          for (let xV of VV) eV += xV.length + 1;
+          return eV
+        }(VV);
+        super(), this.text = VV, this.length = eV
       }
       get lines() {
         return this.text.length
@@ -183,629 +183,629 @@ export const modules = {
       get children() {
         return null
       }
-      lineInner(MM, rM, iM, OM) {
-        for (let SM = 0;; SM++) {
-          let jM = this.text[SM],
-            aM = OM + jM.length;
-          if ((rM ? iM : aM) >= MM) return new eM(OM, aM, iM, jM);
-          OM = aM + 1, iM++
+      lineInner(VV, eV, xV, JV) {
+        for (let YV = 0;; YV++) {
+          let UV = this.text[YV],
+            yV = JV + UV.length;
+          if ((eV ? xV : yV) >= VV) return new PV(JV, yV, xV, UV);
+          JV = yV + 1, xV++
         }
       }
-      decompose(MM, rM, iM, OM) {
-        let SM = MM <= 0 && rM >= this.length ? this : new dM(EM(this.text, MM, rM), Math.min(rM, this.length) - Math.max(0, MM));
-        if (1 & OM) {
-          let MM = iM.pop(),
-            rM = lM(SM.text, MM.text.slice(), 0, SM.length);
-          if (rM.length <= 32) iM.push(new dM(rM, MM.length + SM.length));
+      decompose(VV, eV, xV, JV) {
+        let YV = VV <= 0 && eV >= this.length ? this : new EV(qV(this.text, VV, eV), Math.min(eV, this.length) - Math.max(0, VV));
+        if (1 & JV) {
+          let VV = xV.pop(),
+            eV = jV(YV.text, VV.text.slice(), 0, YV.length);
+          if (eV.length <= 32) xV.push(new EV(eV, VV.length + YV.length));
           else {
-            let MM = rM.length >> 1;
-            iM.push(new dM(rM.slice(0, MM)), new dM(rM.slice(MM)))
+            let VV = eV.length >> 1;
+            xV.push(new EV(eV.slice(0, VV)), new EV(eV.slice(VV)))
           }
-        } else iM.push(SM)
+        } else xV.push(YV)
       }
-      replace(MM, rM, iM) {
-        if (!(iM instanceof dM)) return super.replace(MM, rM, iM);
-        [MM, rM] = bM(this, MM, rM);
-        let OM = lM(this.text, lM(iM.text, EM(this.text, 0, MM)), rM),
-          SM = this.length + iM.length - (rM - MM);
-        return OM.length <= 32 ? new dM(OM, SM) : yM.from(dM.split(OM, []), SM)
+      replace(VV, eV, xV) {
+        if (!(xV instanceof EV)) return super.replace(VV, eV, xV);
+        [VV, eV] = AV(this, VV, eV);
+        let JV = jV(this.text, jV(xV.text, qV(this.text, 0, VV)), eV),
+          YV = this.length + xV.length - (eV - VV);
+        return JV.length <= 32 ? new EV(JV, YV) : BV.from(EV.split(JV, []), YV)
       }
-      sliceString(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length,
-          iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "\n";
-        [MM, rM] = bM(this, MM, rM);
-        let OM = "";
-        for (let SM = 0, jM = 0; SM <= rM && jM < this.text.length; jM++) {
-          let aM = this.text[jM],
-            PM = SM + aM.length;
-          SM > MM && jM && (OM += iM), MM < PM && rM > SM && (OM += aM.slice(Math.max(0, MM - SM), rM - SM)), SM = PM + 1
+      sliceString(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length,
+          xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "\n";
+        [VV, eV] = AV(this, VV, eV);
+        let JV = "";
+        for (let YV = 0, UV = 0; YV <= eV && UV < this.text.length; UV++) {
+          let yV = this.text[UV],
+            pV = YV + yV.length;
+          YV > VV && UV && (JV += xV), VV < pV && eV > YV && (JV += yV.slice(Math.max(0, VV - YV), eV - YV)), YV = pV + 1
         }
-        return OM
+        return JV
       }
-      flatten(MM) {
-        for (let rM of this.text) MM.push(rM)
+      flatten(VV) {
+        for (let eV of this.text) VV.push(eV)
       }
       scanIdentical() {
         return 0
       }
-      static split(MM, rM) {
-        let iM = [],
-          OM = -1;
-        for (let SM of MM) iM.push(SM), OM += SM.length + 1, 32 == iM.length && (rM.push(new dM(iM, OM)), iM = [], OM = -1);
-        return OM > -1 && rM.push(new dM(iM, OM)), rM
+      static split(VV, eV) {
+        let xV = [],
+          JV = -1;
+        for (let YV of VV) xV.push(YV), JV += YV.length + 1, 32 == xV.length && (eV.push(new EV(xV, JV)), xV = [], JV = -1);
+        return JV > -1 && eV.push(new EV(xV, JV)), eV
       }
     }
-    class yM extends JM {
-      constructor(MM, rM) {
-        super(), this.children = MM, this.length = rM, this.lines = 0;
-        for (let iM of MM) this.lines += iM.lines
+    class BV extends bV {
+      constructor(VV, eV) {
+        super(), this.children = VV, this.length = eV, this.lines = 0;
+        for (let xV of VV) this.lines += xV.lines
       }
-      lineInner(MM, rM, iM, OM) {
-        for (let SM = 0;; SM++) {
-          let jM = this.children[SM],
-            aM = OM + jM.length,
-            PM = iM + jM.lines - 1;
-          if ((rM ? PM : aM) >= MM) return jM.lineInner(MM, rM, iM, OM);
-          OM = aM + 1, iM = PM + 1
+      lineInner(VV, eV, xV, JV) {
+        for (let YV = 0;; YV++) {
+          let UV = this.children[YV],
+            yV = JV + UV.length,
+            pV = xV + UV.lines - 1;
+          if ((eV ? pV : yV) >= VV) return UV.lineInner(VV, eV, xV, JV);
+          JV = yV + 1, xV = pV + 1
         }
       }
-      decompose(MM, rM, iM, OM) {
-        for (let SM = 0, jM = 0; jM <= rM && SM < this.children.length; SM++) {
-          let aM = this.children[SM],
-            PM = jM + aM.length;
-          if (MM <= PM && rM >= jM) {
-            let SM = OM & ((jM <= MM ? 1 : 0) | (PM >= rM ? 2 : 0));
-            jM >= MM && PM <= rM && !SM ? iM.push(aM) : aM.decompose(MM - jM, rM - jM, iM, SM)
+      decompose(VV, eV, xV, JV) {
+        for (let YV = 0, UV = 0; UV <= eV && YV < this.children.length; YV++) {
+          let yV = this.children[YV],
+            pV = UV + yV.length;
+          if (VV <= pV && eV >= UV) {
+            let YV = JV & ((UV <= VV ? 1 : 0) | (pV >= eV ? 2 : 0));
+            UV >= VV && pV <= eV && !YV ? xV.push(yV) : yV.decompose(VV - UV, eV - UV, xV, YV)
           }
-          jM = PM + 1
+          UV = pV + 1
         }
       }
-      replace(MM, rM, iM) {
-        if ([MM, rM] = bM(this, MM, rM), iM.lines < this.lines)
-          for (let OM = 0, SM = 0; OM < this.children.length; OM++) {
-            let jM = this.children[OM],
-              aM = SM + jM.length;
-            if (MM >= SM && rM <= aM) {
-              let PM = jM.replace(MM - SM, rM - SM, iM),
-                nM = this.lines - jM.lines + PM.lines;
-              if (PM.lines < nM >> 4 && PM.lines > nM >> 6) {
-                let SM = this.children.slice();
-                return SM[OM] = PM, new yM(SM, this.length - (rM - MM) + iM.length)
+      replace(VV, eV, xV) {
+        if ([VV, eV] = AV(this, VV, eV), xV.lines < this.lines)
+          for (let JV = 0, YV = 0; JV < this.children.length; JV++) {
+            let UV = this.children[JV],
+              yV = YV + UV.length;
+            if (VV >= YV && eV <= yV) {
+              let pV = UV.replace(VV - YV, eV - YV, xV),
+                QV = this.lines - UV.lines + pV.lines;
+              if (pV.lines < QV >> 4 && pV.lines > QV >> 6) {
+                let YV = this.children.slice();
+                return YV[JV] = pV, new BV(YV, this.length - (eV - VV) + xV.length)
               }
-              return super.replace(SM, aM, PM)
+              return super.replace(YV, yV, pV)
             }
-            SM = aM + 1
+            YV = yV + 1
           }
-        return super.replace(MM, rM, iM)
+        return super.replace(VV, eV, xV)
       }
-      sliceString(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length,
-          iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "\n";
-        [MM, rM] = bM(this, MM, rM);
-        let OM = "";
-        for (let SM = 0, jM = 0; SM < this.children.length && jM <= rM; SM++) {
-          let aM = this.children[SM],
-            PM = jM + aM.length;
-          jM > MM && SM && (OM += iM), MM < PM && rM > jM && (OM += aM.sliceString(MM - jM, rM - jM, iM)), jM = PM + 1
+      sliceString(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length,
+          xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "\n";
+        [VV, eV] = AV(this, VV, eV);
+        let JV = "";
+        for (let YV = 0, UV = 0; YV < this.children.length && UV <= eV; YV++) {
+          let yV = this.children[YV],
+            pV = UV + yV.length;
+          UV > VV && YV && (JV += xV), VV < pV && eV > UV && (JV += yV.sliceString(VV - UV, eV - UV, xV)), UV = pV + 1
         }
-        return OM
+        return JV
       }
-      flatten(MM) {
-        for (let rM of this.children) rM.flatten(MM)
+      flatten(VV) {
+        for (let eV of this.children) eV.flatten(VV)
       }
-      scanIdentical(MM, rM) {
-        if (!(MM instanceof yM)) return 0;
-        let iM = 0,
-          [OM, SM, jM, aM] = rM > 0 ? [0, 0, this.children.length, MM.children.length] : [this.children.length - 1, MM.children.length - 1, -1, -1];
-        for (;; OM += rM, SM += rM) {
-          if (OM == jM || SM == aM) return iM;
-          let PM = this.children[OM],
-            nM = MM.children[SM];
-          if (PM != nM) return iM + PM.scanIdentical(nM, rM);
-          iM += PM.length + 1
+      scanIdentical(VV, eV) {
+        if (!(VV instanceof BV)) return 0;
+        let xV = 0,
+          [JV, YV, UV, yV] = eV > 0 ? [0, 0, this.children.length, VV.children.length] : [this.children.length - 1, VV.children.length - 1, -1, -1];
+        for (;; JV += eV, YV += eV) {
+          if (JV == UV || YV == yV) return xV;
+          let pV = this.children[JV],
+            QV = VV.children[YV];
+          if (pV != QV) return xV + pV.scanIdentical(QV, eV);
+          xV += pV.length + 1
         }
       }
-      static from(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : MM.reduce(((MM, rM) => MM + rM.length + 1), -1),
-          iM = 0;
-        for (let mM of MM) iM += mM.lines;
-        if (iM < 32) {
-          let iM = [];
-          for (let rM of MM) rM.flatten(iM);
-          return new dM(iM, rM)
+      static from(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : VV.reduce(((VV, eV) => VV + eV.length + 1), -1),
+          xV = 0;
+        for (let vV of VV) xV += vV.lines;
+        if (xV < 32) {
+          let xV = [];
+          for (let eV of VV) eV.flatten(xV);
+          return new EV(xV, eV)
         }
-        let OM = Math.max(32, iM >> 5),
-          SM = OM << 1,
-          jM = OM >> 1,
-          aM = [],
-          PM = 0,
-          nM = -1,
-          QM = [];
+        let JV = Math.max(32, xV >> 5),
+          YV = JV << 1,
+          UV = JV >> 1,
+          yV = [],
+          pV = 0,
+          QV = -1,
+          nV = [];
 
-        function zM(MM) {
-          let rM;
-          if (MM.lines > SM && MM instanceof yM)
-            for (let iM of MM.children) zM(iM);
-          else MM.lines > jM && (PM > jM || !PM) ? (LM(), aM.push(MM)) : MM instanceof dM && PM && (rM = QM[QM.length - 1]) instanceof dM && MM.lines + rM.lines <= 32 ? (PM += MM.lines, nM += MM.length + 1, QM[QM.length - 1] = new dM(rM.text.concat(MM.text), rM.length + 1 + MM.length)) : (PM + MM.lines > OM && LM(), PM += MM.lines, nM += MM.length + 1, QM.push(MM))
+        function wV(VV) {
+          let eV;
+          if (VV.lines > YV && VV instanceof BV)
+            for (let xV of VV.children) wV(xV);
+          else VV.lines > UV && (pV > UV || !pV) ? (ZV(), yV.push(VV)) : VV instanceof EV && pV && (eV = nV[nV.length - 1]) instanceof EV && VV.lines + eV.lines <= 32 ? (pV += VV.lines, QV += VV.length + 1, nV[nV.length - 1] = new EV(eV.text.concat(VV.text), eV.length + 1 + VV.length)) : (pV + VV.lines > JV && ZV(), pV += VV.lines, QV += VV.length + 1, nV.push(VV))
         }
 
-        function LM() {
-          0 != PM && (aM.push(1 == QM.length ? QM[0] : yM.from(QM, nM)), nM = -1, PM = QM.length = 0)
+        function ZV() {
+          0 != pV && (yV.push(1 == nV.length ? nV[0] : BV.from(nV, QV)), QV = -1, pV = nV.length = 0)
         }
-        for (let mM of MM) zM(mM);
-        return LM(), 1 == aM.length ? aM[0] : new yM(aM, rM)
+        for (let vV of VV) wV(vV);
+        return ZV(), 1 == yV.length ? yV[0] : new BV(yV, eV)
       }
     }
 
-    function lM(MM, rM) {
-      let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-        OM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1e9;
-      for (let SM = 0, jM = 0, aM = !0; jM < MM.length && SM <= OM; jM++) {
-        let PM = MM[jM],
-          nM = SM + PM.length;
-        nM >= iM && (nM > OM && (PM = PM.slice(0, OM - SM)), SM < iM && (PM = PM.slice(iM - SM)), aM ? (rM[rM.length - 1] += PM, aM = !1) : rM.push(PM)), SM = nM + 1
+    function jV(VV, eV) {
+      let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+        JV = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1e9;
+      for (let YV = 0, UV = 0, yV = !0; UV < VV.length && YV <= JV; UV++) {
+        let pV = VV[UV],
+          QV = YV + pV.length;
+        QV >= xV && (QV > JV && (pV = pV.slice(0, JV - YV)), YV < xV && (pV = pV.slice(xV - YV)), yV ? (eV[eV.length - 1] += pV, yV = !1) : eV.push(pV)), YV = QV + 1
       }
-      return rM
+      return eV
     }
 
-    function EM(MM, rM, iM) {
-      return lM(MM, [""], rM, iM)
+    function qV(VV, eV, xV) {
+      return jV(VV, [""], eV, xV)
     }
-    JM.empty = new dM([""], 0);
-    class UM {
-      constructor(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        this.dir = rM, this.done = !1, this.lineBreak = !1, this.value = "", this.nodes = [MM], this.offsets = [rM > 0 ? 1 : (MM instanceof dM ? MM.text.length : MM.children.length) << 1]
+    bV.empty = new EV([""], 0);
+    class tV {
+      constructor(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        this.dir = eV, this.done = !1, this.lineBreak = !1, this.value = "", this.nodes = [VV], this.offsets = [eV > 0 ? 1 : (VV instanceof EV ? VV.text.length : VV.children.length) << 1]
       }
-      nextInner(MM, rM) {
+      nextInner(VV, eV) {
         for (this.done = this.lineBreak = !1;;) {
-          let iM = this.nodes.length - 1,
-            OM = this.nodes[iM],
-            SM = this.offsets[iM],
-            jM = SM >> 1,
-            aM = OM instanceof dM ? OM.text.length : OM.children.length;
-          if (jM == (rM > 0 ? aM : 0)) {
-            if (0 == iM) return this.done = !0, this.value = "", this;
-            rM > 0 && this.offsets[iM - 1]++, this.nodes.pop(), this.offsets.pop()
-          } else if ((1 & SM) == (rM > 0 ? 0 : 1)) {
-            if (this.offsets[iM] += rM, 0 == MM) return this.lineBreak = !0, this.value = "\n", this;
-            MM--
-          } else if (OM instanceof dM) {
-            let SM = OM.text[jM + (rM < 0 ? -1 : 0)];
-            if (this.offsets[iM] += rM, SM.length > Math.max(0, MM)) return this.value = 0 == MM ? SM : rM > 0 ? SM.slice(MM) : SM.slice(0, SM.length - MM), this;
-            MM -= SM.length
+          let xV = this.nodes.length - 1,
+            JV = this.nodes[xV],
+            YV = this.offsets[xV],
+            UV = YV >> 1,
+            yV = JV instanceof EV ? JV.text.length : JV.children.length;
+          if (UV == (eV > 0 ? yV : 0)) {
+            if (0 == xV) return this.done = !0, this.value = "", this;
+            eV > 0 && this.offsets[xV - 1]++, this.nodes.pop(), this.offsets.pop()
+          } else if ((1 & YV) == (eV > 0 ? 0 : 1)) {
+            if (this.offsets[xV] += eV, 0 == VV) return this.lineBreak = !0, this.value = "\n", this;
+            VV--
+          } else if (JV instanceof EV) {
+            let YV = JV.text[UV + (eV < 0 ? -1 : 0)];
+            if (this.offsets[xV] += eV, YV.length > Math.max(0, VV)) return this.value = 0 == VV ? YV : eV > 0 ? YV.slice(VV) : YV.slice(0, YV.length - VV), this;
+            VV -= YV.length
           } else {
-            let SM = OM.children[jM + (rM < 0 ? -1 : 0)];
-            MM > SM.length ? (MM -= SM.length, this.offsets[iM] += rM) : (rM < 0 && this.offsets[iM]--, this.nodes.push(SM), this.offsets.push(rM > 0 ? 1 : (SM instanceof dM ? SM.text.length : SM.children.length) << 1))
+            let YV = JV.children[UV + (eV < 0 ? -1 : 0)];
+            VV > YV.length ? (VV -= YV.length, this.offsets[xV] += eV) : (eV < 0 && this.offsets[xV]--, this.nodes.push(YV), this.offsets.push(eV > 0 ? 1 : (YV instanceof EV ? YV.text.length : YV.children.length) << 1))
           }
         }
       }
       next() {
-        let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-        return MM < 0 && (this.nextInner(-MM, -this.dir), MM = this.value.length), this.nextInner(MM, this.dir)
+        let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
+        return VV < 0 && (this.nextInner(-VV, -this.dir), VV = this.value.length), this.nextInner(VV, this.dir)
       }
     }
-    class GM {
-      constructor(MM, rM, iM) {
-        this.value = "", this.done = !1, this.cursor = new UM(MM, rM > iM ? -1 : 1), this.pos = rM > iM ? MM.length : 0, this.from = Math.min(rM, iM), this.to = Math.max(rM, iM)
+    class FV {
+      constructor(VV, eV, xV) {
+        this.value = "", this.done = !1, this.cursor = new tV(VV, eV > xV ? -1 : 1), this.pos = eV > xV ? VV.length : 0, this.from = Math.min(eV, xV), this.to = Math.max(eV, xV)
       }
-      nextInner(MM, rM) {
-        if (rM < 0 ? this.pos <= this.from : this.pos >= this.to) return this.value = "", this.done = !0, this;
-        MM += Math.max(0, rM < 0 ? this.pos - this.to : this.from - this.pos);
-        let iM = rM < 0 ? this.pos - this.from : this.to - this.pos;
-        MM > iM && (MM = iM), iM -= MM;
+      nextInner(VV, eV) {
+        if (eV < 0 ? this.pos <= this.from : this.pos >= this.to) return this.value = "", this.done = !0, this;
+        VV += Math.max(0, eV < 0 ? this.pos - this.to : this.from - this.pos);
+        let xV = eV < 0 ? this.pos - this.from : this.to - this.pos;
+        VV > xV && (VV = xV), xV -= VV;
         let {
-          value: OM
-        } = this.cursor.next(MM);
-        return this.pos += (OM.length + MM) * rM, this.value = OM.length <= iM ? OM : rM < 0 ? OM.slice(OM.length - iM) : OM.slice(0, iM), this.done = !this.value, this
+          value: JV
+        } = this.cursor.next(VV);
+        return this.pos += (JV.length + VV) * eV, this.value = JV.length <= xV ? JV : eV < 0 ? JV.slice(JV.length - xV) : JV.slice(0, xV), this.done = !this.value, this
       }
       next() {
-        let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-        return MM < 0 ? MM = Math.max(MM, this.from - this.pos) : MM > 0 && (MM = Math.min(MM, this.to - this.pos)), this.nextInner(MM, this.cursor.dir)
+        let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
+        return VV < 0 ? VV = Math.max(VV, this.from - this.pos) : VV > 0 && (VV = Math.min(VV, this.to - this.pos)), this.nextInner(VV, this.cursor.dir)
       }
       get lineBreak() {
         return this.cursor.lineBreak && "" != this.value
       }
     }
-    class CM {
-      constructor(MM) {
-        this.inner = MM, this.afterBreak = !0, this.value = "", this.done = !1
+    class TV {
+      constructor(VV) {
+        this.inner = VV, this.afterBreak = !0, this.value = "", this.done = !1
       }
       next() {
-        let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+        let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
           {
-            done: rM,
-            lineBreak: iM,
-            value: OM
-          } = this.inner.next(MM);
-        return rM && this.afterBreak ? (this.value = "", this.afterBreak = !1) : rM ? (this.done = !0, this.value = "") : iM ? this.afterBreak ? this.value = "" : (this.afterBreak = !0, this.next()) : (this.value = OM, this.afterBreak = !1), this
+            done: eV,
+            lineBreak: xV,
+            value: JV
+          } = this.inner.next(VV);
+        return eV && this.afterBreak ? (this.value = "", this.afterBreak = !1) : eV ? (this.done = !0, this.value = "") : xV ? this.afterBreak ? this.value = "" : (this.afterBreak = !0, this.next()) : (this.value = JV, this.afterBreak = !1), this
       }
       get lineBreak() {
         return !1
       }
     }
-    "undefined" != typeof Symbol && (JM.prototype[Symbol.iterator] = function() {
+    "undefined" != typeof Symbol && (bV.prototype[Symbol.iterator] = function() {
       return this.iter()
-    }, UM.prototype[Symbol.iterator] = GM.prototype[Symbol.iterator] = CM.prototype[Symbol.iterator] = function() {
+    }, tV.prototype[Symbol.iterator] = FV.prototype[Symbol.iterator] = TV.prototype[Symbol.iterator] = function() {
       return this
     });
-    class eM {
-      constructor(MM, rM, iM, OM) {
-        this.from = MM, this.to = rM, this.number = iM, this.text = OM
+    class PV {
+      constructor(VV, eV, xV, JV) {
+        this.from = VV, this.to = eV, this.number = xV, this.text = JV
       }
       get length() {
         return this.to - this.from
       }
     }
 
-    function bM(MM, rM, iM) {
-      return [rM = Math.max(0, Math.min(MM.length, rM)), Math.max(rM, Math.min(MM.length, iM))]
+    function AV(VV, eV, xV) {
+      return [eV = Math.max(0, Math.min(VV.length, eV)), Math.max(eV, Math.min(VV.length, xV))]
     }
 
-    function wM(MM, rM) {
-      return nM(MM, rM, !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2], !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3])
+    function NV(VV, eV) {
+      return QV(VV, eV, !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2], !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3])
     }
 
-    function tM(MM, rM) {
-      let iM = MM.charCodeAt(rM);
-      if (!((OM = iM) >= 55296 && OM < 56320) || rM + 1 == MM.length) return iM;
-      var OM;
-      let SM = MM.charCodeAt(rM + 1);
-      return function(MM) {
-        return MM >= 56320 && MM < 57344
-      }(SM) ? SM - 56320 + (iM - 55296 << 10) + 65536 : iM
+    function XV(VV, eV) {
+      let xV = VV.charCodeAt(eV);
+      if (!((JV = xV) >= 55296 && JV < 56320) || eV + 1 == VV.length) return xV;
+      var JV;
+      let YV = VV.charCodeAt(eV + 1);
+      return function(VV) {
+        return VV >= 56320 && VV < 57344
+      }(YV) ? YV - 56320 + (xV - 55296 << 10) + 65536 : xV
     }
 
-    function gM(MM) {
-      return MM <= 65535 ? String.fromCharCode(MM) : (MM -= 65536, String.fromCharCode(55296 + (MM >> 10), 56320 + (1023 & MM)))
+    function MV(VV) {
+      return VV <= 65535 ? String.fromCharCode(VV) : (VV -= 65536, String.fromCharCode(55296 + (VV >> 10), 56320 + (1023 & VV)))
     }
 
-    function uM(MM) {
-      return MM < 65536 ? 1 : 2
+    function zV(VV) {
+      return VV < 65536 ? 1 : 2
     }
-    const RM = /\r\n?|\n/;
-    var pM = function(MM) {
-      return MM[MM.Simple = 0] = "Simple", MM[MM.TrackDel = 1] = "TrackDel", MM[MM.TrackBefore = 2] = "TrackBefore", MM[MM.TrackAfter = 3] = "TrackAfter", MM
-    }(pM || (pM = {}));
-    class WM {
-      constructor(MM) {
-        this.sections = MM
+    const GV = /\r\n?|\n/;
+    var WV = function(VV) {
+      return VV[VV.Simple = 0] = "Simple", VV[VV.TrackDel = 1] = "TrackDel", VV[VV.TrackBefore = 2] = "TrackBefore", VV[VV.TrackAfter = 3] = "TrackAfter", VV
+    }(WV || (WV = {}));
+    class RV {
+      constructor(VV) {
+        this.sections = VV
       }
       get length() {
-        let MM = 0;
-        for (let rM = 0; rM < this.sections.length; rM += 2) MM += this.sections[rM];
-        return MM
+        let VV = 0;
+        for (let eV = 0; eV < this.sections.length; eV += 2) VV += this.sections[eV];
+        return VV
       }
       get newLength() {
-        let MM = 0;
-        for (let rM = 0; rM < this.sections.length; rM += 2) {
-          let iM = this.sections[rM + 1];
-          MM += iM < 0 ? this.sections[rM] : iM
+        let VV = 0;
+        for (let eV = 0; eV < this.sections.length; eV += 2) {
+          let xV = this.sections[eV + 1];
+          VV += xV < 0 ? this.sections[eV] : xV
         }
-        return MM
+        return VV
       }
       get empty() {
         return 0 == this.sections.length || 2 == this.sections.length && this.sections[1] < 0
       }
-      iterGaps(MM) {
-        for (let rM = 0, iM = 0, OM = 0; rM < this.sections.length;) {
-          let SM = this.sections[rM++],
-            jM = this.sections[rM++];
-          jM < 0 ? (MM(iM, OM, SM), OM += SM) : OM += jM, iM += SM
+      iterGaps(VV) {
+        for (let eV = 0, xV = 0, JV = 0; eV < this.sections.length;) {
+          let YV = this.sections[eV++],
+            UV = this.sections[eV++];
+          UV < 0 ? (VV(xV, JV, YV), JV += YV) : JV += UV, xV += YV
         }
       }
-      iterChangedRanges(MM) {
-        ZM(this, MM, arguments.length > 1 && void 0 !== arguments[1] && arguments[1])
+      iterChangedRanges(VV) {
+        CV(this, VV, arguments.length > 1 && void 0 !== arguments[1] && arguments[1])
       }
       get invertedDesc() {
-        let MM = [];
-        for (let rM = 0; rM < this.sections.length;) {
-          let iM = this.sections[rM++],
-            OM = this.sections[rM++];
-          OM < 0 ? MM.push(iM, OM) : MM.push(OM, iM)
+        let VV = [];
+        for (let eV = 0; eV < this.sections.length;) {
+          let xV = this.sections[eV++],
+            JV = this.sections[eV++];
+          JV < 0 ? VV.push(xV, JV) : VV.push(JV, xV)
         }
-        return new WM(MM)
+        return new RV(VV)
       }
-      composeDesc(MM) {
-        return this.empty ? MM : MM.empty ? this : fM(this, MM)
+      composeDesc(VV) {
+        return this.empty ? VV : VV.empty ? this : oV(this, VV)
       }
-      mapDesc(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return MM.empty ? this : oM(this, MM, rM)
+      mapDesc(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return VV.empty ? this : aV(this, VV, eV)
       }
-      mapPos(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
-          iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : pM.Simple,
-          OM = 0,
-          SM = 0;
-        for (let jM = 0; jM < this.sections.length;) {
-          let aM = this.sections[jM++],
-            PM = this.sections[jM++],
-            nM = OM + aM;
-          if (PM < 0) {
-            if (nM > MM) return SM + (MM - OM);
-            SM += aM
+      mapPos(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
+          xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : WV.Simple,
+          JV = 0,
+          YV = 0;
+        for (let UV = 0; UV < this.sections.length;) {
+          let yV = this.sections[UV++],
+            pV = this.sections[UV++],
+            QV = JV + yV;
+          if (pV < 0) {
+            if (QV > VV) return YV + (VV - JV);
+            YV += yV
           } else {
-            if (iM != pM.Simple && nM >= MM && (iM == pM.TrackDel && OM < MM && nM > MM || iM == pM.TrackBefore && OM < MM || iM == pM.TrackAfter && nM > MM)) return null;
-            if (nM > MM || nM == MM && rM < 0 && !aM) return MM == OM || rM < 0 ? SM : SM + PM;
-            SM += PM
+            if (xV != WV.Simple && QV >= VV && (xV == WV.TrackDel && JV < VV && QV > VV || xV == WV.TrackBefore && JV < VV || xV == WV.TrackAfter && QV > VV)) return null;
+            if (QV > VV || QV == VV && eV < 0 && !yV) return VV == JV || eV < 0 ? YV : YV + pV;
+            YV += pV
           }
-          OM = nM
+          JV = QV
         }
-        if (MM > OM) throw new RangeError(`Position ${MM} is out of range for changeset of length ${OM}`);
-        return SM
+        if (VV > JV) throw new RangeError(`Position ${VV} is out of range for changeset of length ${JV}`);
+        return YV
       }
-      touchesRange(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : MM;
-        for (let iM = 0, OM = 0; iM < this.sections.length && OM <= rM;) {
-          let SM = OM + this.sections[iM++];
-          if (this.sections[iM++] >= 0 && OM <= rM && SM >= MM) return !(OM < MM && SM > rM) || "cover";
-          OM = SM
+      touchesRange(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : VV;
+        for (let xV = 0, JV = 0; xV < this.sections.length && JV <= eV;) {
+          let YV = JV + this.sections[xV++];
+          if (this.sections[xV++] >= 0 && JV <= eV && YV >= VV) return !(JV < VV && YV > eV) || "cover";
+          JV = YV
         }
         return !1
       }
       toString() {
-        let MM = "";
-        for (let rM = 0; rM < this.sections.length;) {
-          let iM = this.sections[rM++],
-            OM = this.sections[rM++];
-          MM += (MM ? " " : "") + iM + (OM >= 0 ? ":" + OM : "")
+        let VV = "";
+        for (let eV = 0; eV < this.sections.length;) {
+          let xV = this.sections[eV++],
+            JV = this.sections[eV++];
+          VV += (VV ? " " : "") + xV + (JV >= 0 ? ":" + JV : "")
         }
-        return MM
+        return VV
       }
       toJSON() {
         return this.sections
       }
-      static fromJSON(MM) {
-        if (!Array.isArray(MM) || MM.length % 2 || MM.some((MM => "number" != typeof MM))) throw new RangeError("Invalid JSON representation of ChangeDesc");
-        return new WM(MM)
+      static fromJSON(VV) {
+        if (!Array.isArray(VV) || VV.length % 2 || VV.some((VV => "number" != typeof VV))) throw new RangeError("Invalid JSON representation of ChangeDesc");
+        return new RV(VV)
       }
-      static create(MM) {
-        return new WM(MM)
+      static create(VV) {
+        return new RV(VV)
       }
     }
-    class sM extends WM {
-      constructor(MM, rM) {
-        super(MM), this.inserted = rM
+    class gV extends RV {
+      constructor(VV, eV) {
+        super(VV), this.inserted = eV
       }
-      apply(MM) {
-        if (this.length != MM.length) throw new RangeError("Applying change set to a document with the wrong length");
-        return ZM(this, ((rM, iM, OM, SM, jM) => MM = MM.replace(OM, OM + (iM - rM), jM)), !1), MM
+      apply(VV) {
+        if (this.length != VV.length) throw new RangeError("Applying change set to a document with the wrong length");
+        return CV(this, ((eV, xV, JV, YV, UV) => VV = VV.replace(JV, JV + (xV - eV), UV)), !1), VV
       }
-      mapDesc(MM) {
-        return oM(this, MM, arguments.length > 1 && void 0 !== arguments[1] && arguments[1], !0)
+      mapDesc(VV) {
+        return aV(this, VV, arguments.length > 1 && void 0 !== arguments[1] && arguments[1], !0)
       }
-      invert(MM) {
-        let rM = this.sections.slice(),
-          iM = [];
-        for (let OM = 0, SM = 0; OM < rM.length; OM += 2) {
-          let jM = rM[OM],
-            aM = rM[OM + 1];
-          if (aM >= 0) {
-            rM[OM] = aM, rM[OM + 1] = jM;
-            let PM = OM >> 1;
-            for (; iM.length < PM;) iM.push(JM.empty);
-            iM.push(jM ? MM.slice(SM, SM + jM) : JM.empty)
+      invert(VV) {
+        let eV = this.sections.slice(),
+          xV = [];
+        for (let JV = 0, YV = 0; JV < eV.length; JV += 2) {
+          let UV = eV[JV],
+            yV = eV[JV + 1];
+          if (yV >= 0) {
+            eV[JV] = yV, eV[JV + 1] = UV;
+            let pV = JV >> 1;
+            for (; xV.length < pV;) xV.push(bV.empty);
+            xV.push(UV ? VV.slice(YV, YV + UV) : bV.empty)
           }
-          SM += jM
+          YV += UV
         }
-        return new sM(rM, iM)
+        return new gV(eV, xV)
       }
-      compose(MM) {
-        return this.empty ? MM : MM.empty ? this : fM(this, MM, !0)
+      compose(VV) {
+        return this.empty ? VV : VV.empty ? this : oV(this, VV, !0)
       }
-      map(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return MM.empty ? this : oM(this, MM, rM, !0)
+      map(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return VV.empty ? this : aV(this, VV, eV, !0)
       }
-      iterChanges(MM) {
-        ZM(this, MM, arguments.length > 1 && void 0 !== arguments[1] && arguments[1])
+      iterChanges(VV) {
+        CV(this, VV, arguments.length > 1 && void 0 !== arguments[1] && arguments[1])
       }
       get desc() {
-        return WM.create(this.sections)
+        return RV.create(this.sections)
       }
-      filter(MM) {
-        let rM = [],
-          iM = [],
-          OM = [],
-          SM = new YM(this);
-        MM: for (let jM = 0, aM = 0;;) {
-          let PM = jM == MM.length ? 1e9 : MM[jM++];
-          for (; aM < PM || aM == PM && 0 == SM.len;) {
-            if (SM.done) break MM;
-            let MM = Math.min(SM.len, PM - aM);
-            DM(OM, MM, -1);
-            let jM = -1 == SM.ins ? -1 : 0 == SM.off ? SM.ins : 0;
-            DM(rM, MM, jM), jM > 0 && kM(iM, rM, SM.text), SM.forward(MM), aM += MM
+      filter(VV) {
+        let eV = [],
+          xV = [],
+          JV = [],
+          YV = new cV(this);
+        VV: for (let UV = 0, yV = 0;;) {
+          let pV = UV == VV.length ? 1e9 : VV[UV++];
+          for (; yV < pV || yV == pV && 0 == YV.len;) {
+            if (YV.done) break VV;
+            let VV = Math.min(YV.len, pV - yV);
+            DV(JV, VV, -1);
+            let UV = -1 == YV.ins ? -1 : 0 == YV.off ? YV.ins : 0;
+            DV(eV, VV, UV), UV > 0 && iV(xV, eV, YV.text), YV.forward(VV), yV += VV
           }
-          let nM = MM[jM++];
-          for (; aM < nM;) {
-            if (SM.done) break MM;
-            let MM = Math.min(SM.len, nM - aM);
-            DM(rM, MM, -1), DM(OM, MM, -1 == SM.ins ? -1 : 0 == SM.off ? SM.ins : 0), SM.forward(MM), aM += MM
+          let QV = VV[UV++];
+          for (; yV < QV;) {
+            if (YV.done) break VV;
+            let VV = Math.min(YV.len, QV - yV);
+            DV(eV, VV, -1), DV(JV, VV, -1 == YV.ins ? -1 : 0 == YV.off ? YV.ins : 0), YV.forward(VV), yV += VV
           }
         }
         return {
-          changes: new sM(rM, iM),
-          filtered: WM.create(OM)
+          changes: new gV(eV, xV),
+          filtered: RV.create(JV)
         }
       }
       toJSON() {
-        let MM = [];
-        for (let rM = 0; rM < this.sections.length; rM += 2) {
-          let iM = this.sections[rM],
-            OM = this.sections[rM + 1];
-          OM < 0 ? MM.push(iM) : 0 == OM ? MM.push([iM]) : MM.push([iM].concat(this.inserted[rM >> 1].toJSON()))
+        let VV = [];
+        for (let eV = 0; eV < this.sections.length; eV += 2) {
+          let xV = this.sections[eV],
+            JV = this.sections[eV + 1];
+          JV < 0 ? VV.push(xV) : 0 == JV ? VV.push([xV]) : VV.push([xV].concat(this.inserted[eV >> 1].toJSON()))
         }
-        return MM
+        return VV
       }
-      static of (MM, rM, iM) {
-        let OM = [],
-          SM = [],
-          jM = 0,
-          aM = null;
+      static of (VV, eV, xV) {
+        let JV = [],
+          YV = [],
+          UV = 0,
+          yV = null;
 
-        function PM() {
-          if (!(arguments.length > 0 && void 0 !== arguments[0] && arguments[0]) && !OM.length) return;
-          jM < rM && DM(OM, rM - jM, -1);
-          let MM = new sM(OM, SM);
-          aM = aM ? aM.compose(MM.map(aM)) : MM, OM = [], SM = [], jM = 0
+        function pV() {
+          if (!(arguments.length > 0 && void 0 !== arguments[0] && arguments[0]) && !JV.length) return;
+          UV < eV && DV(JV, eV - UV, -1);
+          let VV = new gV(JV, YV);
+          yV = yV ? yV.compose(VV.map(yV)) : VV, JV = [], YV = [], UV = 0
         }
-        return function MM(nM) {
-          if (Array.isArray(nM))
-            for (let rM of nM) MM(rM);
-          else if (nM instanceof sM) {
-            if (nM.length != rM) throw new RangeError(`Mismatched change set length (got ${nM.length}, expected ${rM})`);
-            PM(), aM = aM ? aM.compose(nM.map(aM)) : nM
+        return function VV(QV) {
+          if (Array.isArray(QV))
+            for (let eV of QV) VV(eV);
+          else if (QV instanceof gV) {
+            if (QV.length != eV) throw new RangeError(`Mismatched change set length (got ${QV.length}, expected ${eV})`);
+            pV(), yV = yV ? yV.compose(QV.map(yV)) : QV
           } else {
             let {
-              from: MM,
-              to: aM = MM,
-              insert: QM
-            } = nM;
-            if (MM > aM || MM < 0 || aM > rM) throw new RangeError(`Invalid change range ${MM} to ${aM} (in doc of length ${rM})`);
-            let zM = QM ? "string" == typeof QM ? JM.of(QM.split(iM || RM)) : QM : JM.empty,
-              LM = zM.length;
-            if (MM == aM && 0 == LM) return;
-            MM < jM && PM(), MM > jM && DM(OM, MM - jM, -1), DM(OM, aM - MM, LM), kM(SM, OM, zM), jM = aM
+              from: VV,
+              to: yV = VV,
+              insert: nV
+            } = QV;
+            if (VV > yV || VV < 0 || yV > eV) throw new RangeError(`Invalid change range ${VV} to ${yV} (in doc of length ${eV})`);
+            let wV = nV ? "string" == typeof nV ? bV.of(nV.split(xV || GV)) : nV : bV.empty,
+              ZV = wV.length;
+            if (VV == yV && 0 == ZV) return;
+            VV < UV && pV(), VV > UV && DV(JV, VV - UV, -1), DV(JV, yV - VV, ZV), iV(YV, JV, wV), UV = yV
           }
-        }(MM), PM(!aM), aM
+        }(VV), pV(!yV), yV
       }
-      static empty(MM) {
-        return new sM(MM ? [MM, -1] : [], [])
+      static empty(VV) {
+        return new gV(VV ? [VV, -1] : [], [])
       }
-      static fromJSON(MM) {
-        if (!Array.isArray(MM)) throw new RangeError("Invalid JSON representation of ChangeSet");
-        let rM = [],
-          iM = [];
-        for (let OM = 0; OM < MM.length; OM++) {
-          let SM = MM[OM];
-          if ("number" == typeof SM) rM.push(SM, -1);
+      static fromJSON(VV) {
+        if (!Array.isArray(VV)) throw new RangeError("Invalid JSON representation of ChangeSet");
+        let eV = [],
+          xV = [];
+        for (let JV = 0; JV < VV.length; JV++) {
+          let YV = VV[JV];
+          if ("number" == typeof YV) eV.push(YV, -1);
           else {
-            if (!Array.isArray(SM) || "number" != typeof SM[0] || SM.some(((MM, rM) => rM && "string" != typeof MM))) throw new RangeError("Invalid JSON representation of ChangeSet");
-            if (1 == SM.length) rM.push(SM[0], 0);
+            if (!Array.isArray(YV) || "number" != typeof YV[0] || YV.some(((VV, eV) => eV && "string" != typeof VV))) throw new RangeError("Invalid JSON representation of ChangeSet");
+            if (1 == YV.length) eV.push(YV[0], 0);
             else {
-              for (; iM.length < OM;) iM.push(JM.empty);
-              iM[OM] = JM.of(SM.slice(1)), rM.push(SM[0], iM[OM].length)
+              for (; xV.length < JV;) xV.push(bV.empty);
+              xV[JV] = bV.of(YV.slice(1)), eV.push(YV[0], xV[JV].length)
             }
           }
         }
-        return new sM(rM, iM)
+        return new gV(eV, xV)
       }
-      static createSet(MM, rM) {
-        return new sM(MM, rM)
+      static createSet(VV, eV) {
+        return new gV(VV, eV)
       }
     }
 
-    function DM(MM, rM, iM) {
-      let OM = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-      if (0 == rM && iM <= 0) return;
-      let SM = MM.length - 2;
-      SM >= 0 && iM <= 0 && iM == MM[SM + 1] ? MM[SM] += rM : SM >= 0 && 0 == rM && 0 == MM[SM] ? MM[SM + 1] += iM : OM ? (MM[SM] += rM, MM[SM + 1] += iM) : MM.push(rM, iM)
+    function DV(VV, eV, xV) {
+      let JV = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+      if (0 == eV && xV <= 0) return;
+      let YV = VV.length - 2;
+      YV >= 0 && xV <= 0 && xV == VV[YV + 1] ? VV[YV] += eV : YV >= 0 && 0 == eV && 0 == VV[YV] ? VV[YV + 1] += xV : JV ? (VV[YV] += eV, VV[YV + 1] += xV) : VV.push(eV, xV)
     }
 
-    function kM(MM, rM, iM) {
-      if (0 == iM.length) return;
-      let OM = rM.length - 2 >> 1;
-      if (OM < MM.length) MM[MM.length - 1] = MM[MM.length - 1].append(iM);
+    function iV(VV, eV, xV) {
+      if (0 == xV.length) return;
+      let JV = eV.length - 2 >> 1;
+      if (JV < VV.length) VV[VV.length - 1] = VV[VV.length - 1].append(xV);
       else {
-        for (; MM.length < OM;) MM.push(JM.empty);
-        MM.push(iM)
+        for (; VV.length < JV;) VV.push(bV.empty);
+        VV.push(xV)
       }
     }
 
-    function ZM(MM, rM, iM) {
-      let OM = MM.inserted;
-      for (let SM = 0, jM = 0, aM = 0; aM < MM.sections.length;) {
-        let PM = MM.sections[aM++],
-          nM = MM.sections[aM++];
-        if (nM < 0) SM += PM, jM += PM;
+    function CV(VV, eV, xV) {
+      let JV = VV.inserted;
+      for (let YV = 0, UV = 0, yV = 0; yV < VV.sections.length;) {
+        let pV = VV.sections[yV++],
+          QV = VV.sections[yV++];
+        if (QV < 0) YV += pV, UV += pV;
         else {
-          let QM = SM,
-            zM = jM,
-            LM = JM.empty;
-          for (; QM += PM, zM += nM, nM && OM && (LM = LM.append(OM[aM - 2 >> 1])), !(iM || aM == MM.sections.length || MM.sections[aM + 1] < 0);) PM = MM.sections[aM++], nM = MM.sections[aM++];
-          rM(SM, QM, jM, zM, LM), SM = QM, jM = zM
+          let nV = YV,
+            wV = UV,
+            ZV = bV.empty;
+          for (; nV += pV, wV += QV, QV && JV && (ZV = ZV.append(JV[yV - 2 >> 1])), !(xV || yV == VV.sections.length || VV.sections[yV + 1] < 0);) pV = VV.sections[yV++], QV = VV.sections[yV++];
+          eV(YV, nV, UV, wV, ZV), YV = nV, UV = wV
         }
       }
     }
 
-    function oM(MM, rM, iM) {
-      let OM = [],
-        SM = arguments.length > 3 && void 0 !== arguments[3] && arguments[3] ? [] : null,
-        jM = new YM(MM),
-        aM = new YM(rM),
-        PM = 0;
-      for (let nM = -1;;) {
-        if (++PM > 2e6) throw new Error("BLOXD CODEMIRROR: mapSet exceeded max iterations - likely malformed ChangeSet");
-        if (jM.done && aM.len || aM.done && jM.len) throw new Error("Mismatched change set lengths");
-        if (-1 == jM.ins && -1 == aM.ins) {
-          let MM = Math.min(jM.len, aM.len);
-          DM(OM, MM, -1), jM.forward(MM), aM.forward(MM)
-        } else if (aM.ins >= 0 && (jM.ins < 0 || nM == jM.i || 0 == jM.off && (aM.len < jM.len || aM.len == jM.len && !iM))) {
-          let MM = aM.len;
-          for (DM(OM, aM.ins, -1); MM;) {
-            if (++PM > 2e6) throw new Error("BLOXD CODEMIRROR: mapSet exceeded max iterations - inner while-b");
-            let rM = Math.min(jM.len, MM);
-            jM.ins >= 0 && nM < jM.i && jM.len <= rM && (DM(OM, 0, jM.ins), SM && kM(SM, OM, jM.text), nM = jM.i), jM.forward(rM), MM -= rM
+    function aV(VV, eV, xV) {
+      let JV = [],
+        YV = arguments.length > 3 && void 0 !== arguments[3] && arguments[3] ? [] : null,
+        UV = new cV(VV),
+        yV = new cV(eV),
+        pV = 0;
+      for (let QV = -1;;) {
+        if (++pV > 2e6) throw new Error("BLOXD CODEMIRROR: mapSet exceeded max iterations - likely malformed ChangeSet");
+        if (UV.done && yV.len || yV.done && UV.len) throw new Error("Mismatched change set lengths");
+        if (-1 == UV.ins && -1 == yV.ins) {
+          let VV = Math.min(UV.len, yV.len);
+          DV(JV, VV, -1), UV.forward(VV), yV.forward(VV)
+        } else if (yV.ins >= 0 && (UV.ins < 0 || QV == UV.i || 0 == UV.off && (yV.len < UV.len || yV.len == UV.len && !xV))) {
+          let VV = yV.len;
+          for (DV(JV, yV.ins, -1); VV;) {
+            if (++pV > 2e6) throw new Error("BLOXD CODEMIRROR: mapSet exceeded max iterations - inner while-b");
+            let eV = Math.min(UV.len, VV);
+            UV.ins >= 0 && QV < UV.i && UV.len <= eV && (DV(JV, 0, UV.ins), YV && iV(YV, JV, UV.text), QV = UV.i), UV.forward(eV), VV -= eV
           }
-          aM.next()
+          yV.next()
         } else {
-          if (!(jM.ins >= 0)) {
-            if (jM.done && aM.done) return SM ? sM.createSet(OM, SM) : WM.create(OM);
+          if (!(UV.ins >= 0)) {
+            if (UV.done && yV.done) return YV ? gV.createSet(JV, YV) : RV.create(JV);
             throw new Error("Mismatched change set lengths")
           } {
-            let MM = 0,
-              rM = jM.len;
-            for (; rM;) {
-              if (++PM > 2e6) throw new Error("BLOXD CODEMIRROR: mapSet exceeded max iterations - inner while-a");
-              if (-1 == aM.ins) {
-                let iM = Math.min(rM, aM.len);
-                MM += iM, rM -= iM, aM.forward(iM)
+            let VV = 0,
+              eV = UV.len;
+            for (; eV;) {
+              if (++pV > 2e6) throw new Error("BLOXD CODEMIRROR: mapSet exceeded max iterations - inner while-a");
+              if (-1 == yV.ins) {
+                let xV = Math.min(eV, yV.len);
+                VV += xV, eV -= xV, yV.forward(xV)
               } else {
-                if (!(0 == aM.ins && aM.len < rM)) break;
-                rM -= aM.len, aM.next()
+                if (!(0 == yV.ins && yV.len < eV)) break;
+                eV -= yV.len, yV.next()
               }
             }
-            DM(OM, MM, nM < jM.i ? jM.ins : 0), SM && nM < jM.i && kM(SM, OM, jM.text), nM = jM.i, jM.forward(jM.len - rM)
+            DV(JV, VV, QV < UV.i ? UV.ins : 0), YV && QV < UV.i && iV(YV, JV, UV.text), QV = UV.i, UV.forward(UV.len - eV)
           }
         }
       }
     }
 
-    function fM(MM, rM) {
-      let iM = [],
-        OM = arguments.length > 2 && void 0 !== arguments[2] && arguments[2] ? [] : null,
-        SM = new YM(MM),
-        jM = new YM(rM),
-        aM = 0;
-      for (let PM = !1;;) {
-        if (++aM > 2e6) throw new Error("BLOXD CODEMIRROR: composeSets exceeded max iterations - likely malformed ChangeSet");
-        if (SM.done && jM.done) return OM ? sM.createSet(iM, OM) : WM.create(iM);
-        if (0 == SM.ins) DM(iM, SM.len, 0, PM), SM.next();
-        else if (0 != jM.len || jM.done) {
-          if (SM.done || jM.done) throw new Error("Mismatched change set lengths");
+    function oV(VV, eV) {
+      let xV = [],
+        JV = arguments.length > 2 && void 0 !== arguments[2] && arguments[2] ? [] : null,
+        YV = new cV(VV),
+        UV = new cV(eV),
+        yV = 0;
+      for (let pV = !1;;) {
+        if (++yV > 2e6) throw new Error("BLOXD CODEMIRROR: composeSets exceeded max iterations - likely malformed ChangeSet");
+        if (YV.done && UV.done) return JV ? gV.createSet(xV, JV) : RV.create(xV);
+        if (0 == YV.ins) DV(xV, YV.len, 0, pV), YV.next();
+        else if (0 != UV.len || UV.done) {
+          if (YV.done || UV.done) throw new Error("Mismatched change set lengths");
           {
-            let MM = Math.min(SM.len2, jM.len),
-              rM = iM.length;
-            if (-1 == SM.ins) {
-              let rM = -1 == jM.ins ? -1 : jM.off ? 0 : jM.ins;
-              DM(iM, MM, rM, PM), OM && rM && kM(OM, iM, jM.text)
-            } else - 1 == jM.ins ? (DM(iM, SM.off ? 0 : SM.len, MM, PM), OM && kM(OM, iM, SM.textBit(MM))) : (DM(iM, SM.off ? 0 : SM.len, jM.off ? 0 : jM.ins, PM), OM && !jM.off && kM(OM, iM, jM.text));
-            PM = (SM.ins > MM || jM.ins >= 0 && jM.len > MM) && (PM || iM.length > rM), SM.forward2(MM), jM.forward(MM)
+            let VV = Math.min(YV.len2, UV.len),
+              eV = xV.length;
+            if (-1 == YV.ins) {
+              let eV = -1 == UV.ins ? -1 : UV.off ? 0 : UV.ins;
+              DV(xV, VV, eV, pV), JV && eV && iV(JV, xV, UV.text)
+            } else - 1 == UV.ins ? (DV(xV, YV.off ? 0 : YV.len, VV, pV), JV && iV(JV, xV, YV.textBit(VV))) : (DV(xV, YV.off ? 0 : YV.len, UV.off ? 0 : UV.ins, pV), JV && !UV.off && iV(JV, xV, UV.text));
+            pV = (YV.ins > VV || UV.ins >= 0 && UV.len > VV) && (pV || xV.length > eV), YV.forward2(VV), UV.forward(VV)
           }
-        } else DM(iM, 0, jM.ins, PM), OM && kM(OM, iM, jM.text), jM.next()
+        } else DV(xV, 0, UV.ins, pV), JV && iV(JV, xV, UV.text), UV.next()
       }
     }
-    class YM {
-      constructor(MM) {
-        this.set = MM, this.i = 0, this.next()
+    class cV {
+      constructor(VV) {
+        this.set = VV, this.i = 0, this.next()
       }
       next() {
         let {
-          sections: MM
+          sections: VV
         } = this.set;
-        this.i < MM.length ? (this.len = MM[this.i++], this.ins = MM[this.i++]) : (this.len = 0, this.ins = -2), this.off = 0
+        this.i < VV.length ? (this.len = VV[this.i++], this.ins = VV[this.i++]) : (this.len = 0, this.ins = -2), this.off = 0
       }
       get done() {
         return -2 == this.ins
@@ -815,26 +815,26 @@ export const modules = {
       }
       get text() {
         let {
-          inserted: MM
-        } = this.set, rM = this.i - 2 >> 1;
-        return rM >= MM.length ? JM.empty : MM[rM]
+          inserted: VV
+        } = this.set, eV = this.i - 2 >> 1;
+        return eV >= VV.length ? bV.empty : VV[eV]
       }
-      textBit(MM) {
+      textBit(VV) {
         let {
-          inserted: rM
-        } = this.set, iM = this.i - 2 >> 1;
-        return iM >= rM.length && !MM ? JM.empty : rM[iM].slice(this.off, null == MM ? void 0 : this.off + MM)
+          inserted: eV
+        } = this.set, xV = this.i - 2 >> 1;
+        return xV >= eV.length && !VV ? bV.empty : eV[xV].slice(this.off, null == VV ? void 0 : this.off + VV)
       }
-      forward(MM) {
-        MM == this.len ? this.next() : (this.len -= MM, this.off += MM)
+      forward(VV) {
+        VV == this.len ? this.next() : (this.len -= VV, this.off += VV)
       }
-      forward2(MM) {
-        -1 == this.ins ? this.forward(MM) : MM == this.ins ? this.next() : (this.ins -= MM, this.off += MM)
+      forward2(VV) {
+        -1 == this.ins ? this.forward(VV) : VV == this.ins ? this.next() : (this.ins -= VV, this.off += VV)
       }
     }
-    class NM {
-      constructor(MM, rM, iM) {
-        this.from = MM, this.to = rM, this.flags = iM
+    class hV {
+      constructor(VV, eV, xV) {
+        this.from = VV, this.to = eV, this.flags = xV
       }
       get anchor() {
         return 32 & this.flags ? this.to : this.from
@@ -849,27 +849,27 @@ export const modules = {
         return 8 & this.flags ? -1 : 16 & this.flags ? 1 : 0
       }
       get bidiLevel() {
-        let MM = 7 & this.flags;
-        return 7 == MM ? null : MM
+        let VV = 7 & this.flags;
+        return 7 == VV ? null : VV
       }
       get goalColumn() {
-        let MM = this.flags >> 6;
-        return 16777215 == MM ? void 0 : MM
+        let VV = this.flags >> 6;
+        return 16777215 == VV ? void 0 : VV
       }
-      map(MM) {
-        let rM, iM, OM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1;
-        return this.empty ? rM = iM = MM.mapPos(this.from, OM) : (rM = MM.mapPos(this.from, 1), iM = MM.mapPos(this.to, -1)), rM == this.from && iM == this.to ? this : new NM(rM, iM, this.flags)
+      map(VV) {
+        let eV, xV, JV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1;
+        return this.empty ? eV = xV = VV.mapPos(this.from, JV) : (eV = VV.mapPos(this.from, 1), xV = VV.mapPos(this.to, -1)), eV == this.from && xV == this.to ? this : new hV(eV, xV, this.flags)
       }
-      extend(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : MM,
-          iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        if (MM <= this.anchor && rM >= this.anchor) return AM.range(MM, rM, void 0, void 0, iM);
-        let OM = Math.abs(MM - this.anchor) > Math.abs(rM - this.anchor) ? MM : rM;
-        return AM.range(this.anchor, OM, void 0, void 0, iM)
+      extend(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : VV,
+          xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        if (VV <= this.anchor && eV >= this.anchor) return lV.range(VV, eV, void 0, void 0, xV);
+        let JV = Math.abs(VV - this.anchor) > Math.abs(eV - this.anchor) ? VV : eV;
+        return lV.range(this.anchor, JV, void 0, void 0, xV)
       }
-      eq(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return this.anchor == MM.anchor && this.head == MM.head && this.goalColumn == MM.goalColumn && (!rM || !this.empty || this.assoc == MM.assoc)
+      eq(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return this.anchor == VV.anchor && this.head == VV.head && this.goalColumn == VV.goalColumn && (!eV || !this.empty || this.assoc == VV.assoc)
       }
       toJSON() {
         return {
@@ -877,447 +877,447 @@ export const modules = {
           head: this.head
         }
       }
-      static fromJSON(MM) {
-        if (!MM || "number" != typeof MM.anchor || "number" != typeof MM.head) throw new RangeError("Invalid JSON representation for SelectionRange");
-        return AM.range(MM.anchor, MM.head)
+      static fromJSON(VV) {
+        if (!VV || "number" != typeof VV.anchor || "number" != typeof VV.head) throw new RangeError("Invalid JSON representation for SelectionRange");
+        return lV.range(VV.anchor, VV.head)
       }
-      static create(MM, rM, iM) {
-        return new NM(MM, rM, iM)
+      static create(VV, eV, xV) {
+        return new hV(VV, eV, xV)
       }
     }
-    class AM {
-      constructor(MM, rM) {
-        this.Ld = MM, this.mainIndex = rM
+    class lV {
+      constructor(VV, eV) {
+        this.TE = VV, this.mainIndex = eV
       }
-      map(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1;
-        return MM.empty ? this : AM.create(this.Ld.map((iM => iM.map(MM, rM))), this.mainIndex)
+      map(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1;
+        return VV.empty ? this : lV.create(this.TE.map((xV => xV.map(VV, eV))), this.mainIndex)
       }
-      eq(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        if (this.Ld.length != MM.Ld.length || this.mainIndex != MM.mainIndex) return !1;
-        for (let iM = 0; iM < this.Ld.length; iM++)
-          if (!this.Ld[iM].eq(MM.Ld[iM], rM)) return !1;
+      eq(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        if (this.TE.length != VV.TE.length || this.mainIndex != VV.mainIndex) return !1;
+        for (let xV = 0; xV < this.TE.length; xV++)
+          if (!this.TE[xV].eq(VV.TE[xV], eV)) return !1;
         return !0
       }
       get main() {
-        return this.Ld[this.mainIndex]
+        return this.TE[this.mainIndex]
       }
       asSingle() {
-        return 1 == this.Ld.length ? this : new AM([this.main], 0)
+        return 1 == this.TE.length ? this : new lV([this.main], 0)
       }
-      addRange(MM) {
-        let rM = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        return AM.create([MM].concat(this.Ld), rM ? 0 : this.mainIndex + 1)
+      addRange(VV) {
+        let eV = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        return lV.create([VV].concat(this.TE), eV ? 0 : this.mainIndex + 1)
       }
-      replaceRange(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.mainIndex,
-          iM = this.Ld.slice();
-        return iM[rM] = MM, AM.create(iM, this.mainIndex)
+      replaceRange(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.mainIndex,
+          xV = this.TE.slice();
+        return xV[eV] = VV, lV.create(xV, this.mainIndex)
       }
       toJSON() {
         return {
-          Ld: this.Ld.map((MM => MM.toJSON())),
+          TE: this.TE.map((VV => VV.toJSON())),
           main: this.mainIndex
         }
       }
-      static fromJSON(MM) {
-        if (!MM || !Array.isArray(MM.Ld) || "number" != typeof MM.main || MM.main >= MM.Ld.length) throw new RangeError("Invalid JSON representation for EditorSelection");
-        return new AM(MM.Ld.map((MM => NM.fromJSON(MM))), MM.main)
+      static fromJSON(VV) {
+        if (!VV || !Array.isArray(VV.TE) || "number" != typeof VV.main || VV.main >= VV.TE.length) throw new RangeError("Invalid JSON representation for EditorSelection");
+        return new lV(VV.TE.map((VV => hV.fromJSON(VV))), VV.main)
       }
-      static single(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : MM;
-        return new AM([AM.range(MM, rM)], 0)
+      static single(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : VV;
+        return new lV([lV.range(VV, eV)], 0)
       }
-      static create(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        if (0 == MM.length) throw new RangeError("A selection needs at least one range");
-        for (let iM = 0, OM = 0; OM < MM.length; OM++) {
-          let SM = MM[OM];
-          if (SM.empty ? SM.from <= iM : SM.from < iM) return AM.normalized(MM.slice(), rM);
-          iM = SM.to
+      static create(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        if (0 == VV.length) throw new RangeError("A selection needs at least one range");
+        for (let xV = 0, JV = 0; JV < VV.length; JV++) {
+          let YV = VV[JV];
+          if (YV.empty ? YV.from <= xV : YV.from < xV) return lV.normalized(VV.slice(), eV);
+          xV = YV.to
         }
-        return new AM(MM, rM)
+        return new lV(VV, eV)
       }
-      static cursor(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          iM = arguments.length > 2 ? arguments[2] : void 0,
-          OM = arguments.length > 3 ? arguments[3] : void 0;
-        return NM.create(MM, MM, (0 == rM ? 0 : rM < 0 ? 8 : 16) | (null == iM ? 7 : Math.min(6, iM)) | (null !== OM && void 0 !== OM ? OM : 16777215) << 6)
+      static cursor(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          xV = arguments.length > 2 ? arguments[2] : void 0,
+          JV = arguments.length > 3 ? arguments[3] : void 0;
+        return hV.create(VV, VV, (0 == eV ? 0 : eV < 0 ? 8 : 16) | (null == xV ? 7 : Math.min(6, xV)) | (null !== JV && void 0 !== JV ? JV : 16777215) << 6)
       }
-      static range(MM, rM, iM, OM, SM) {
-        let jM = (null !== iM && void 0 !== iM ? iM : 16777215) << 6 | (null == OM ? 7 : Math.min(6, OM));
-        return SM || MM == rM || (SM = rM < MM ? 1 : -1), rM < MM ? NM.create(rM, MM, 48 | jM) : NM.create(MM, rM, (SM ? SM < 0 ? 8 : 16 : 0) | jM)
+      static range(VV, eV, xV, JV, YV) {
+        let UV = (null !== xV && void 0 !== xV ? xV : 16777215) << 6 | (null == JV ? 7 : Math.min(6, JV));
+        return YV || VV == eV || (YV = eV < VV ? 1 : -1), eV < VV ? hV.create(eV, VV, 48 | UV) : hV.create(VV, eV, (YV ? YV < 0 ? 8 : 16 : 0) | UV)
       }
-      static normalized(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          iM = MM[rM];
-        MM.sort(((MM, rM) => MM.from - rM.from)), rM = MM.indexOf(iM);
-        for (let OM = 1; OM < MM.length; OM++) {
-          let iM = MM[OM],
-            SM = MM[OM - 1];
-          if (iM.empty ? iM.from <= SM.to : iM.from < SM.to) {
-            let jM = SM.from,
-              aM = Math.max(iM.to, SM.to);
-            OM <= rM && rM--, MM.splice(--OM, 2, iM.anchor > iM.head ? AM.range(aM, jM) : AM.range(jM, aM))
+      static normalized(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          xV = VV[eV];
+        VV.sort(((VV, eV) => VV.from - eV.from)), eV = VV.indexOf(xV);
+        for (let JV = 1; JV < VV.length; JV++) {
+          let xV = VV[JV],
+            YV = VV[JV - 1];
+          if (xV.empty ? xV.from <= YV.to : xV.from < YV.to) {
+            let UV = YV.from,
+              yV = Math.max(xV.to, YV.to);
+            JV <= eV && eV--, VV.splice(--JV, 2, xV.anchor > xV.head ? lV.range(yV, UV) : lV.range(UV, yV))
           }
         }
-        return new AM(MM, rM)
+        return new lV(VV, eV)
       }
     }
 
-    function xM(MM, rM) {
-      for (let iM of MM.Ld)
-        if (iM.to > rM) throw new RangeError("Selection points outside of document")
+    function LV(VV, eV) {
+      for (let xV of VV.TE)
+        if (xV.to > eV) throw new RangeError("Selection points outside of document")
     }
-    let vM = 0;
-    class FM {
-      constructor(MM, rM, iM, OM, SM) {
-        this.combine = MM, this.compareInput = rM, this.compare = iM, this.isStatic = OM, this.id = vM++, this.default = MM([]), this.extensions = "function" == typeof SM ? SM(this) : SM
+    let fV = 0;
+    class mV {
+      constructor(VV, eV, xV, JV, YV) {
+        this.combine = VV, this.compareInput = eV, this.compare = xV, this.isStatic = JV, this.id = fV++, this.default = VV([]), this.extensions = "function" == typeof YV ? YV(this) : YV
       }
       get reader() {
         return this
       }
       static define() {
-        let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        return new FM(MM.combine || (MM => MM), MM.compareInput || ((MM, rM) => MM === rM), MM.compare || (MM.combine ? (MM, rM) => MM === rM : BM), !!MM.static, MM.enables)
+        let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+        return new mV(VV.combine || (VV => VV), VV.compareInput || ((VV, eV) => VV === eV), VV.compare || (VV.combine ? (VV, eV) => VV === eV : KV), !!VV.static, VV.enables)
       }
-      of(MM) {
-        return new XM([], this, 0, MM)
+      of(VV) {
+        return new HV([], this, 0, VV)
       }
-      compute(MM, rM) {
+      compute(VV, eV) {
         if (this.isStatic) throw new Error("Can't compute a static facet");
-        return new XM(MM, this, 1, rM)
+        return new HV(VV, this, 1, eV)
       }
-      computeN(MM, rM) {
+      computeN(VV, eV) {
         if (this.isStatic) throw new Error("Can't compute a static facet");
-        return new XM(MM, this, 2, rM)
+        return new HV(VV, this, 2, eV)
       }
-      from(MM, rM) {
-        return rM || (rM = MM => MM), this.compute([MM], (iM => rM(iM.field(MM))))
+      from(VV, eV) {
+        return eV || (eV = VV => VV), this.compute([VV], (xV => eV(xV.field(VV))))
       }
     }
 
-    function BM(MM, rM) {
-      return MM == rM || MM.length == rM.length && MM.every(((MM, iM) => MM === rM[iM]))
+    function KV(VV, eV) {
+      return VV == eV || VV.length == eV.length && VV.every(((VV, xV) => VV === eV[xV]))
     }
-    class XM {
-      constructor(MM, rM, iM, OM) {
-        this.dependencies = MM, this.facet = rM, this.type = iM, this.value = OM, this.id = vM++
+    class HV {
+      constructor(VV, eV, xV, JV) {
+        this.dependencies = VV, this.facet = eV, this.type = xV, this.value = JV, this.id = fV++
       }
-      dynamicSlot(MM) {
-        var rM;
-        let iM = this.value,
-          OM = this.facet.compareInput,
-          SM = this.id,
-          jM = MM[SM] >> 1,
-          aM = 2 == this.type,
-          PM = !1,
-          nM = !1,
-          QM = [];
-        for (let zM of this.dependencies) "doc" == zM ? PM = !0 : "selection" == zM ? nM = !0 : 0 == (1 & (null !== (rM = MM[zM.id]) && void 0 !== rM ? rM : 1)) && QM.push(MM[zM.id]);
+      dynamicSlot(VV) {
+        var eV;
+        let xV = this.value,
+          JV = this.facet.compareInput,
+          YV = this.id,
+          UV = VV[YV] >> 1,
+          yV = 2 == this.type,
+          pV = !1,
+          QV = !1,
+          nV = [];
+        for (let wV of this.dependencies) "doc" == wV ? pV = !0 : "selection" == wV ? QV = !0 : 0 == (1 & (null !== (eV = VV[wV.id]) && void 0 !== eV ? eV : 1)) && nV.push(VV[wV.id]);
         return {
-          create: MM => (MM.values[jM] = iM(MM), 1),
-          update(MM, rM) {
-            if (PM && rM.docChanged || nM && (rM.docChanged || rM.selection) || KM(MM, QM)) {
-              let rM = iM(MM);
-              if (aM ? !IM(rM, MM.values[jM], OM) : !OM(rM, MM.values[jM])) return MM.values[jM] = rM, 1
+          create: VV => (VV.values[UV] = xV(VV), 1),
+          update(VV, eV) {
+            if (pV && eV.docChanged || QV && (eV.docChanged || eV.selection) || sV(VV, nV)) {
+              let eV = xV(VV);
+              if (yV ? !uV(eV, VV.values[UV], JV) : !JV(eV, VV.values[UV])) return VV.values[UV] = eV, 1
             }
             return 0
           },
-          reconfigure: (MM, rM) => {
-            let PM, nM = rM.config.address[SM];
-            if (null != nM) {
-              let SM = zr(rM, nM);
-              if (this.dependencies.every((iM => iM instanceof FM ? rM.facet(iM) === MM.facet(iM) : !(iM instanceof VM) || rM.field(iM, !1) == MM.field(iM, !1))) || (aM ? IM(PM = iM(MM), SM, OM) : OM(PM = iM(MM), SM))) return MM.values[jM] = SM, 0
-            } else PM = iM(MM);
-            return MM.values[jM] = PM, 1
+          reconfigure: (VV, eV) => {
+            let pV, QV = eV.config.address[YV];
+            if (null != QV) {
+              let YV = we(eV, QV);
+              if (this.dependencies.every((xV => xV instanceof mV ? eV.facet(xV) === VV.facet(xV) : !(xV instanceof dV) || eV.field(xV, !1) == VV.field(xV, !1))) || (yV ? uV(pV = xV(VV), YV, JV) : JV(pV = xV(VV), YV))) return VV.values[UV] = YV, 0
+            } else pV = xV(VV);
+            return VV.values[UV] = pV, 1
           }
         }
       }
     }
 
-    function IM(MM, rM, iM) {
-      if (MM.length != rM.length) return !1;
-      for (let OM = 0; OM < MM.length; OM++)
-        if (!iM(MM[OM], rM[OM])) return !1;
+    function uV(VV, eV, xV) {
+      if (VV.length != eV.length) return !1;
+      for (let JV = 0; JV < VV.length; JV++)
+        if (!xV(VV[JV], eV[JV])) return !1;
       return !0
     }
 
-    function KM(MM, rM) {
-      let iM = !1;
-      for (let OM of rM) 1 & Qr(MM, OM) && (iM = !0);
-      return iM
+    function sV(VV, eV) {
+      let xV = !1;
+      for (let JV of eV) 1 & ne(VV, JV) && (xV = !0);
+      return xV
     }
 
-    function qM(MM, rM, iM) {
-      let OM = iM.map((rM => MM[rM.id])),
-        SM = iM.map((MM => MM.type)),
-        jM = OM.filter((MM => !(1 & MM))),
-        aM = MM[rM.id] >> 1;
+    function SV(VV, eV, xV) {
+      let JV = xV.map((eV => VV[eV.id])),
+        YV = xV.map((VV => VV.type)),
+        UV = JV.filter((VV => !(1 & VV))),
+        yV = VV[eV.id] >> 1;
 
-      function PM(MM) {
-        let iM = [];
-        for (let rM = 0; rM < OM.length; rM++) {
-          let jM = zr(MM, OM[rM]);
-          if (2 == SM[rM])
-            for (let MM of jM) iM.push(MM);
-          else iM.push(jM)
+      function pV(VV) {
+        let xV = [];
+        for (let eV = 0; eV < JV.length; eV++) {
+          let UV = we(VV, JV[eV]);
+          if (2 == YV[eV])
+            for (let VV of UV) xV.push(VV);
+          else xV.push(UV)
         }
-        return rM.combine(iM)
+        return eV.combine(xV)
       }
       return {
-        create(MM) {
-          for (let rM of OM) Qr(MM, rM);
-          return MM.values[aM] = PM(MM), 1
+        create(VV) {
+          for (let eV of JV) ne(VV, eV);
+          return VV.values[yV] = pV(VV), 1
         },
-        update(MM, iM) {
-          if (!KM(MM, jM)) return 0;
-          let OM = PM(MM);
-          return rM.compare(OM, MM.values[aM]) ? 0 : (MM.values[aM] = OM, 1)
+        update(VV, xV) {
+          if (!sV(VV, UV)) return 0;
+          let JV = pV(VV);
+          return eV.compare(JV, VV.values[yV]) ? 0 : (VV.values[yV] = JV, 1)
         },
-        reconfigure(MM, SM) {
-          let jM = KM(MM, OM),
-            nM = SM.config.facets[rM.id],
-            QM = SM.facet(rM);
-          if (nM && !jM && BM(iM, nM)) return MM.values[aM] = QM, 0;
-          let zM = PM(MM);
-          return rM.compare(zM, QM) ? (MM.values[aM] = QM, 0) : (MM.values[aM] = zM, 1)
+        reconfigure(VV, YV) {
+          let UV = sV(VV, JV),
+            QV = YV.config.facets[eV.id],
+            nV = YV.facet(eV);
+          if (QV && !UV && KV(xV, QV)) return VV.values[yV] = nV, 0;
+          let wV = pV(VV);
+          return eV.compare(wV, nV) ? (VV.values[yV] = nV, 0) : (VV.values[yV] = wV, 1)
         }
       }
     }
-    const TM = FM.define({
+    const IV = mV.define({
       static: !0
     });
-    class VM {
-      constructor(MM, rM, iM, OM, SM) {
-        this.id = MM, this.createF = rM, this.updateF = iM, this.compareF = OM, this.spec = SM, this.provides = void 0
+    class dV {
+      constructor(VV, eV, xV, JV, YV) {
+        this.id = VV, this.createF = eV, this.updateF = xV, this.compareF = JV, this.spec = YV, this.provides = void 0
       }
-      static define(MM) {
-        let rM = new VM(vM++, MM.create, MM.update, MM.compare || ((MM, rM) => MM === rM), MM);
-        return MM.provide && (rM.provides = MM.provide(rM)), rM
+      static define(VV) {
+        let eV = new dV(fV++, VV.create, VV.update, VV.compare || ((VV, eV) => VV === eV), VV);
+        return VV.provide && (eV.provides = VV.provide(eV)), eV
       }
-      create(MM) {
-        let rM = MM.facet(TM).find((MM => MM.field == this));
-        return ((null === rM || void 0 === rM ? void 0 : rM.create) || this.createF)(MM)
+      create(VV) {
+        let eV = VV.facet(IV).find((VV => VV.field == this));
+        return ((null === eV || void 0 === eV ? void 0 : eV.create) || this.createF)(VV)
       }
-      slot(MM) {
-        let rM = MM[this.id] >> 1;
+      slot(VV) {
+        let eV = VV[this.id] >> 1;
         return {
-          create: MM => (MM.values[rM] = this.create(MM), 1),
-          update: (MM, iM) => {
-            let OM = MM.values[rM],
-              SM = this.updateF(OM, iM);
-            return this.compareF(OM, SM) ? 0 : (MM.values[rM] = SM, 1)
+          create: VV => (VV.values[eV] = this.create(VV), 1),
+          update: (VV, xV) => {
+            let JV = VV.values[eV],
+              YV = this.updateF(JV, xV);
+            return this.compareF(JV, YV) ? 0 : (VV.values[eV] = YV, 1)
           },
-          reconfigure: (MM, iM) => {
-            let OM, SM = MM.facet(TM),
-              jM = iM.facet(TM);
-            return (OM = SM.find((MM => MM.field == this))) && OM != jM.find((MM => MM.field == this)) ? (MM.values[rM] = OM.create(MM), 1) : null != iM.config.address[this.id] ? (MM.values[rM] = iM.field(this), 0) : (MM.values[rM] = this.create(MM), 1)
+          reconfigure: (VV, xV) => {
+            let JV, YV = VV.facet(IV),
+              UV = xV.facet(IV);
+            return (JV = YV.find((VV => VV.field == this))) && JV != UV.find((VV => VV.field == this)) ? (VV.values[eV] = JV.create(VV), 1) : null != xV.config.address[this.id] ? (VV.values[eV] = xV.field(this), 0) : (VV.values[eV] = this.create(VV), 1)
           }
         }
       }
-      init(MM) {
-        return [this, TM.of({
+      init(VV) {
+        return [this, IV.of({
           field: this,
-          create: MM
+          create: VV
         })]
       }
       get extension() {
         return this
       }
     }
-    const cM = 4,
-      Mr = 3,
-      rr = 2,
-      ir = 1;
+    const OV = 4,
+      Ve = 3,
+      ee = 2,
+      xe = 1;
 
-    function Or(MM) {
-      return rM => new jr(rM, MM)
+    function Je(VV) {
+      return eV => new Ue(eV, VV)
     }
-    const Sr = {
-      highest: Or(0),
-      high: Or(ir),
-      default: Or(rr),
-      low: Or(Mr),
-      lowest: Or(cM)
+    const Ye = {
+      highest: Je(0),
+      high: Je(xe),
+      default: Je(ee),
+      low: Je(Ve),
+      lowest: Je(OV)
     };
-    class jr {
-      constructor(MM, rM) {
-        this.inner = MM, this.prec = rM
+    class Ue {
+      constructor(VV, eV) {
+        this.inner = VV, this.prec = eV
       }
     }
-    class ar {
-      of(MM) {
-        return new Pr(this, MM)
+    class ye {
+      of(VV) {
+        return new pe(this, VV)
       }
-      reconfigure(MM) {
-        return ar.reconfigure.of({
+      reconfigure(VV) {
+        return ye.reconfigure.of({
           compartment: this,
-          extension: MM
+          extension: VV
         })
       }
-      get(MM) {
-        return MM.config.compartments.get(this)
+      get(VV) {
+        return VV.config.compartments.get(this)
       }
     }
-    class Pr {
-      constructor(MM, rM) {
-        this.compartment = MM, this.inner = rM
+    class pe {
+      constructor(VV, eV) {
+        this.compartment = VV, this.inner = eV
       }
     }
-    class nr {
-      constructor(MM, rM, iM, OM, SM, jM) {
-        for (this.base = MM, this.compartments = rM, this.dynamicSlots = iM, this.address = OM, this.staticValues = SM, this.facets = jM, this.statusTemplate = []; this.statusTemplate.length < iM.length;) this.statusTemplate.push(0)
+    class Qe {
+      constructor(VV, eV, xV, JV, YV, UV) {
+        for (this.base = VV, this.compartments = eV, this.dynamicSlots = xV, this.address = JV, this.staticValues = YV, this.facets = UV, this.statusTemplate = []; this.statusTemplate.length < xV.length;) this.statusTemplate.push(0)
       }
-      staticFacet(MM) {
-        let rM = this.address[MM.id];
-        return null == rM ? MM.default : this.staticValues[rM >> 1]
+      staticFacet(VV) {
+        let eV = this.address[VV.id];
+        return null == eV ? VV.default : this.staticValues[eV >> 1]
       }
-      static resolve(MM, rM, iM) {
-        let OM = [],
-          SM = Object.create(null),
-          jM = new Map;
-        for (let LM of function(MM, rM, iM) {
-            let OM = [
+      static resolve(VV, eV, xV) {
+        let JV = [],
+          YV = Object.create(null),
+          UV = new Map;
+        for (let ZV of function(VV, eV, xV) {
+            let JV = [
                 [],
                 [],
                 [],
                 [],
                 []
               ],
-              SM = new Map;
+              YV = new Map;
 
-            function jM(MM, aM) {
-              let PM = SM.get(MM);
-              if (null != PM) {
-                if (PM <= aM) return;
-                let rM = OM[PM].indexOf(MM);
-                rM > -1 && OM[PM].splice(rM, 1), MM instanceof Pr && iM.delete(MM.compartment)
+            function UV(VV, yV) {
+              let pV = YV.get(VV);
+              if (null != pV) {
+                if (pV <= yV) return;
+                let eV = JV[pV].indexOf(VV);
+                eV > -1 && JV[pV].splice(eV, 1), VV instanceof pe && xV.delete(VV.compartment)
               }
-              if (SM.set(MM, aM), Array.isArray(MM))
-                for (let rM of MM) jM(rM, aM);
-              else if (MM instanceof Pr) {
-                if (iM.has(MM.compartment)) throw new RangeError("Duplicate use of compartment in extensions");
-                let OM = rM.get(MM.compartment) || MM.inner;
-                iM.set(MM.compartment, OM), jM(OM, aM)
-              } else if (MM instanceof jr) jM(MM.inner, MM.prec);
-              else if (MM instanceof VM) OM[aM].push(MM), MM.provides && jM(MM.provides, aM);
-              else if (MM instanceof XM) OM[aM].push(MM), MM.facet.extensions && jM(MM.facet.extensions, rr);
+              if (YV.set(VV, yV), Array.isArray(VV))
+                for (let eV of VV) UV(eV, yV);
+              else if (VV instanceof pe) {
+                if (xV.has(VV.compartment)) throw new RangeError("Duplicate use of compartment in extensions");
+                let JV = eV.get(VV.compartment) || VV.inner;
+                xV.set(VV.compartment, JV), UV(JV, yV)
+              } else if (VV instanceof Ue) UV(VV.inner, VV.prec);
+              else if (VV instanceof dV) JV[yV].push(VV), VV.provides && UV(VV.provides, yV);
+              else if (VV instanceof HV) JV[yV].push(VV), VV.facet.extensions && UV(VV.facet.extensions, ee);
               else {
-                let rM = MM.extension;
-                if (!rM) throw new Error(`Unrecognized extension value in extension set (${MM}). This sometimes happens because multiple instances of @codemirror/state are loaded, breaking instanceof checks.`);
-                jM(rM, aM)
+                let eV = VV.extension;
+                if (!eV) throw new Error(`Unrecognized extension value in extension set (${VV}). This sometimes happens because multiple instances of @codemirror/state are loaded, breaking instanceof checks.`);
+                UV(eV, yV)
               }
             }
-            return jM(MM, rr), OM.reduce(((MM, rM) => MM.concat(rM)))
-          }(MM, rM, jM)) LM instanceof VM ? OM.push(LM) : (SM[LM.facet.id] || (SM[LM.facet.id] = [])).push(LM);
-        let aM = Object.create(null),
-          PM = [],
-          nM = [];
-        for (let LM of OM) aM[LM.id] = nM.length << 1, nM.push((MM => LM.slot(MM)));
-        let QM = null === iM || void 0 === iM ? void 0 : iM.config.facets;
-        for (let LM in SM) {
-          let MM = SM[LM],
-            rM = MM[0].facet,
-            OM = QM && QM[LM] || [];
-          if (MM.every((MM => 0 == MM.type)))
-            if (aM[rM.id] = PM.length << 1 | 1, BM(OM, MM)) PM.push(iM.facet(rM));
+            return UV(VV, ee), JV.reduce(((VV, eV) => VV.concat(eV)))
+          }(VV, eV, UV)) ZV instanceof dV ? JV.push(ZV) : (YV[ZV.facet.id] || (YV[ZV.facet.id] = [])).push(ZV);
+        let yV = Object.create(null),
+          pV = [],
+          QV = [];
+        for (let ZV of JV) yV[ZV.id] = QV.length << 1, QV.push((VV => ZV.slot(VV)));
+        let nV = null === xV || void 0 === xV ? void 0 : xV.config.facets;
+        for (let ZV in YV) {
+          let VV = YV[ZV],
+            eV = VV[0].facet,
+            JV = nV && nV[ZV] || [];
+          if (VV.every((VV => 0 == VV.type)))
+            if (yV[eV.id] = pV.length << 1 | 1, KV(JV, VV)) pV.push(xV.facet(eV));
             else {
-              let OM = rM.combine(MM.map((MM => MM.value)));
-              PM.push(iM && rM.compare(OM, iM.facet(rM)) ? iM.facet(rM) : OM)
+              let JV = eV.combine(VV.map((VV => VV.value)));
+              pV.push(xV && eV.compare(JV, xV.facet(eV)) ? xV.facet(eV) : JV)
             }
           else {
-            for (let rM of MM) 0 == rM.type ? (aM[rM.id] = PM.length << 1 | 1, PM.push(rM.value)) : (aM[rM.id] = nM.length << 1, nM.push((MM => rM.dynamicSlot(MM))));
-            aM[rM.id] = nM.length << 1, nM.push((iM => qM(iM, rM, MM)))
+            for (let eV of VV) 0 == eV.type ? (yV[eV.id] = pV.length << 1 | 1, pV.push(eV.value)) : (yV[eV.id] = QV.length << 1, QV.push((VV => eV.dynamicSlot(VV))));
+            yV[eV.id] = QV.length << 1, QV.push((xV => SV(xV, eV, VV)))
           }
         }
-        let zM = nM.map((MM => MM(aM)));
-        return new nr(MM, jM, zM, aM, PM, SM)
+        let wV = QV.map((VV => VV(yV)));
+        return new Qe(VV, UV, wV, yV, pV, YV)
       }
     }
 
-    function Qr(MM, rM) {
-      if (1 & rM) return 2;
-      let iM = rM >> 1,
-        OM = MM.status[iM];
-      if (4 == OM) throw new Error("Cyclic dependency between fields and/or facets");
-      if (2 & OM) return OM;
-      MM.status[iM] = 4;
-      let SM = MM.computeSlot(MM, MM.config.dynamicSlots[iM]);
-      return MM.status[iM] = 2 | SM
+    function ne(VV, eV) {
+      if (1 & eV) return 2;
+      let xV = eV >> 1,
+        JV = VV.status[xV];
+      if (4 == JV) throw new Error("Cyclic dependency between fields and/or facets");
+      if (2 & JV) return JV;
+      VV.status[xV] = 4;
+      let YV = VV.computeSlot(VV, VV.config.dynamicSlots[xV]);
+      return VV.status[xV] = 2 | YV
     }
 
-    function zr(MM, rM) {
-      return 1 & rM ? MM.config.staticValues[rM >> 1] : MM.values[rM >> 1]
+    function we(VV, eV) {
+      return 1 & eV ? VV.config.staticValues[eV >> 1] : VV.values[eV >> 1]
     }
-    const Lr = FM.define(),
-      mr = FM.define({
-        combine: MM => MM.some((MM => MM)),
+    const Ze = mV.define(),
+      ve = mV.define({
+        combine: VV => VV.some((VV => VV)),
         static: !0
       }),
-      Hr = FM.define({
-        combine: MM => MM.length ? MM[0] : void 0,
+      re = mV.define({
+        combine: VV => VV.length ? VV[0] : void 0,
         static: !0
       }),
-      hr = FM.define(),
-      Jr = FM.define(),
-      dr = FM.define(),
-      yr = FM.define({
-        combine: MM => !!MM.length && MM[0]
+      ke = mV.define(),
+      be = mV.define(),
+      Ee = mV.define(),
+      Be = mV.define({
+        combine: VV => !!VV.length && VV[0]
       });
-    class lr {
-      constructor(MM, rM) {
-        this.type = MM, this.value = rM
+    class je {
+      constructor(VV, eV) {
+        this.type = VV, this.value = eV
       }
       static define() {
-        return new Er
+        return new qe
       }
     }
-    class Er {
-      of(MM) {
-        return new lr(this, MM)
+    class qe {
+      of(VV) {
+        return new je(this, VV)
       }
     }
-    class Ur {
-      constructor(MM) {
-        this.map = MM
+    class te {
+      constructor(VV) {
+        this.map = VV
       }
-      of(MM) {
-        return new Gr(this, MM)
+      of(VV) {
+        return new Fe(this, VV)
       }
     }
-    class Gr {
-      constructor(MM, rM) {
-        this.type = MM, this.value = rM
+    class Fe {
+      constructor(VV, eV) {
+        this.type = VV, this.value = eV
       }
-      map(MM) {
-        let rM = this.type.map(this.value, MM);
-        return void 0 === rM ? void 0 : rM == this.value ? this : new Gr(this.type, rM)
+      map(VV) {
+        let eV = this.type.map(this.value, VV);
+        return void 0 === eV ? void 0 : eV == this.value ? this : new Fe(this.type, eV)
       }
-      is(MM) {
-        return this.type == MM
+      is(VV) {
+        return this.type == VV
       }
       static define() {
-        return new Ur((arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}).map || (MM => MM))
+        return new te((arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}).map || (VV => VV))
       }
-      static mapEffects(MM, rM) {
-        if (!MM.length) return MM;
-        let iM = [];
-        for (let OM of MM) {
-          let MM = OM.map(rM);
-          MM && iM.push(MM)
+      static mapEffects(VV, eV) {
+        if (!VV.length) return VV;
+        let xV = [];
+        for (let JV of VV) {
+          let VV = JV.map(eV);
+          VV && xV.push(VV)
         }
-        return iM
+        return xV
       }
     }
-    Gr.reconfigure = Gr.define(), Gr.appendConfig = Gr.define();
-    class Cr {
-      constructor(MM, rM, iM, OM, SM, jM) {
-        this.startState = MM, this.changes = rM, this.selection = iM, this.effects = OM, this.annotations = SM, this.scrollIntoView = jM, this._doc = null, this._state = null, iM && xM(iM, rM.newLength), SM.some((MM => MM.type == Cr.time)) || (this.annotations = SM.concat(Cr.time.of(Date.now())))
+    Fe.reconfigure = Fe.define(), Fe.appendConfig = Fe.define();
+    class Te {
+      constructor(VV, eV, xV, JV, YV, UV) {
+        this.startState = VV, this.changes = eV, this.selection = xV, this.effects = JV, this.annotations = YV, this.scrollIntoView = UV, this._doc = null, this._state = null, xV && LV(xV, eV.newLength), YV.some((VV => VV.type == Te.time)) || (this.annotations = YV.concat(Te.time.of(Date.now())))
       }
-      static create(MM, rM, iM, OM, SM, jM) {
-        return new Cr(MM, rM, iM, OM, SM, jM)
+      static create(VV, eV, xV, JV, YV, UV) {
+        return new Te(VV, eV, xV, JV, YV, UV)
       }
       get newDoc() {
         return this._doc || (this._doc = this.changes.apply(this.startState.doc))
@@ -1328,9 +1328,9 @@ export const modules = {
       get state() {
         return this._state || this.startState.applyTransaction(this), this._state
       }
-      annotation(MM) {
-        for (let rM of this.annotations)
-          if (rM.type == MM) return rM.value
+      annotation(VV) {
+        for (let eV of this.annotations)
+          if (eV.type == VV) return eV.value
       }
       get docChanged() {
         return !this.changes.empty
@@ -1338,584 +1338,584 @@ export const modules = {
       get reconfigured() {
         return this.startState.config != this.state.config
       }
-      isUserEvent(MM) {
-        let rM = this.annotation(Cr.userEvent);
-        return !(!rM || !(rM == MM || rM.length > MM.length && rM.slice(0, MM.length) == MM && "." == rM[MM.length]))
+      isUserEvent(VV) {
+        let eV = this.annotation(Te.userEvent);
+        return !(!eV || !(eV == VV || eV.length > VV.length && eV.slice(0, VV.length) == VV && "." == eV[VV.length]))
       }
     }
 
-    function er(MM, rM) {
-      let iM = [];
-      for (let OM = 0, SM = 0;;) {
-        let jM, aM;
-        if (OM < MM.length && (SM == rM.length || rM[SM] >= MM[OM])) jM = MM[OM++], aM = MM[OM++];
+    function Pe(VV, eV) {
+      let xV = [];
+      for (let JV = 0, YV = 0;;) {
+        let UV, yV;
+        if (JV < VV.length && (YV == eV.length || eV[YV] >= VV[JV])) UV = VV[JV++], yV = VV[JV++];
         else {
-          if (!(SM < rM.length)) return iM;
-          jM = rM[SM++], aM = rM[SM++]
-        }!iM.length || iM[iM.length - 1] < jM ? iM.push(jM, aM) : iM[iM.length - 1] < aM && (iM[iM.length - 1] = aM)
+          if (!(YV < eV.length)) return xV;
+          UV = eV[YV++], yV = eV[YV++]
+        }!xV.length || xV[xV.length - 1] < UV ? xV.push(UV, yV) : xV[xV.length - 1] < yV && (xV[xV.length - 1] = yV)
       }
     }
 
-    function br(MM, rM, iM) {
-      var OM;
-      let SM, jM, aM;
-      return iM ? (SM = rM.changes, jM = sM.empty(rM.changes.length), aM = MM.changes.compose(rM.changes)) : (SM = rM.changes.map(MM.changes), jM = MM.changes.mapDesc(rM.changes, !0), aM = MM.changes.compose(SM)), {
-        changes: aM,
-        selection: rM.selection ? rM.selection.map(jM) : null === (OM = MM.selection) || void 0 === OM ? void 0 : OM.map(SM),
-        effects: Gr.mapEffects(MM.effects, SM).concat(Gr.mapEffects(rM.effects, jM)),
-        annotations: MM.annotations.length ? MM.annotations.concat(rM.annotations) : rM.annotations,
-        scrollIntoView: MM.scrollIntoView || rM.scrollIntoView
+    function Ae(VV, eV, xV) {
+      var JV;
+      let YV, UV, yV;
+      return xV ? (YV = eV.changes, UV = gV.empty(eV.changes.length), yV = VV.changes.compose(eV.changes)) : (YV = eV.changes.map(VV.changes), UV = VV.changes.mapDesc(eV.changes, !0), yV = VV.changes.compose(YV)), {
+        changes: yV,
+        selection: eV.selection ? eV.selection.map(UV) : null === (JV = VV.selection) || void 0 === JV ? void 0 : JV.map(YV),
+        effects: Fe.mapEffects(VV.effects, YV).concat(Fe.mapEffects(eV.effects, UV)),
+        annotations: VV.annotations.length ? VV.annotations.concat(eV.annotations) : eV.annotations,
+        scrollIntoView: VV.scrollIntoView || eV.scrollIntoView
       }
     }
 
-    function wr(MM, rM, iM) {
-      let OM = rM.selection,
-        SM = ur(rM.annotations);
-      return rM.userEvent && (SM = SM.concat(Cr.userEvent.of(rM.userEvent))), {
-        changes: rM.changes instanceof sM ? rM.changes : sM.of(rM.changes || [], iM, MM.facet(Hr)),
-        selection: OM && (OM instanceof AM ? OM : AM.single(OM.anchor, OM.head)),
-        effects: ur(rM.effects),
-        annotations: SM,
-        scrollIntoView: !!rM.scrollIntoView
+    function Ne(VV, eV, xV) {
+      let JV = eV.selection,
+        YV = ze(eV.annotations);
+      return eV.userEvent && (YV = YV.concat(Te.userEvent.of(eV.userEvent))), {
+        changes: eV.changes instanceof gV ? eV.changes : gV.of(eV.changes || [], xV, VV.facet(re)),
+        selection: JV && (JV instanceof lV ? JV : lV.single(JV.anchor, JV.head)),
+        effects: ze(eV.effects),
+        annotations: YV,
+        scrollIntoView: !!eV.scrollIntoView
       }
     }
 
-    function tr(MM, rM, iM) {
-      let OM = wr(MM, rM.length ? rM[0] : {}, MM.doc.length);
-      rM.length && !1 === rM[0].filter && (iM = !1);
-      for (let jM = 1; jM < rM.length; jM++) {
-        !1 === rM[jM].filter && (iM = !1);
-        let SM = !!rM[jM].sequential;
-        OM = br(OM, wr(MM, rM[jM], SM ? OM.changes.newLength : MM.doc.length), SM)
+    function Xe(VV, eV, xV) {
+      let JV = Ne(VV, eV.length ? eV[0] : {}, VV.doc.length);
+      eV.length && !1 === eV[0].filter && (xV = !1);
+      for (let UV = 1; UV < eV.length; UV++) {
+        !1 === eV[UV].filter && (xV = !1);
+        let YV = !!eV[UV].sequential;
+        JV = Ae(JV, Ne(VV, eV[UV], YV ? JV.changes.newLength : VV.doc.length), YV)
       }
-      let SM = Cr.create(MM, OM.changes, OM.selection, OM.effects, OM.annotations, OM.scrollIntoView);
-      return function(MM) {
-        let rM = MM.startState,
-          iM = rM.facet(dr),
-          OM = MM;
-        for (let SM = iM.length - 1; SM >= 0; SM--) {
-          let jM = iM[SM](MM);
-          jM && Object.keys(jM).length && (OM = br(OM, wr(rM, jM, MM.changes.newLength), !0))
+      let YV = Te.create(VV, JV.changes, JV.selection, JV.effects, JV.annotations, JV.scrollIntoView);
+      return function(VV) {
+        let eV = VV.startState,
+          xV = eV.facet(Ee),
+          JV = VV;
+        for (let YV = xV.length - 1; YV >= 0; YV--) {
+          let UV = xV[YV](VV);
+          UV && Object.keys(UV).length && (JV = Ae(JV, Ne(eV, UV, VV.changes.newLength), !0))
         }
-        return OM == MM ? MM : Cr.create(rM, MM.changes, MM.selection, OM.effects, OM.annotations, OM.scrollIntoView)
-      }(iM ? function(MM) {
-        let rM = MM.startState,
-          iM = !0;
-        for (let SM of rM.facet(hr)) {
-          let rM = SM(MM);
-          if (!1 === rM) {
-            iM = !1;
+        return JV == VV ? VV : Te.create(eV, VV.changes, VV.selection, JV.effects, JV.annotations, JV.scrollIntoView)
+      }(xV ? function(VV) {
+        let eV = VV.startState,
+          xV = !0;
+        for (let YV of eV.facet(ke)) {
+          let eV = YV(VV);
+          if (!1 === eV) {
+            xV = !1;
             break
           }
-          Array.isArray(rM) && (iM = !0 === iM ? rM : er(iM, rM))
+          Array.isArray(eV) && (xV = !0 === xV ? eV : Pe(xV, eV))
         }
-        if (!0 !== iM) {
-          let OM, SM;
-          if (!1 === iM) SM = MM.changes.invertedDesc, OM = sM.empty(rM.doc.length);
+        if (!0 !== xV) {
+          let JV, YV;
+          if (!1 === xV) YV = VV.changes.invertedDesc, JV = gV.empty(eV.doc.length);
           else {
-            let rM = MM.changes.filter(iM);
-            OM = rM.changes, SM = rM.filtered.mapDesc(rM.changes).invertedDesc
+            let eV = VV.changes.filter(xV);
+            JV = eV.changes, YV = eV.filtered.mapDesc(eV.changes).invertedDesc
           }
-          MM = Cr.create(rM, OM, MM.selection && MM.selection.map(SM), Gr.mapEffects(MM.effects, SM), MM.annotations, MM.scrollIntoView)
+          VV = Te.create(eV, JV, VV.selection && VV.selection.map(YV), Fe.mapEffects(VV.effects, YV), VV.annotations, VV.scrollIntoView)
         }
-        let OM = rM.facet(Jr);
-        for (let SM = OM.length - 1; SM >= 0; SM--) {
-          let iM = OM[SM](MM);
-          MM = iM instanceof Cr ? iM : Array.isArray(iM) && 1 == iM.length && iM[0] instanceof Cr ? iM[0] : tr(rM, ur(iM), !1)
+        let JV = eV.facet(be);
+        for (let YV = JV.length - 1; YV >= 0; YV--) {
+          let xV = JV[YV](VV);
+          VV = xV instanceof Te ? xV : Array.isArray(xV) && 1 == xV.length && xV[0] instanceof Te ? xV[0] : Xe(eV, ze(xV), !1)
         }
-        return MM
-      }(SM) : SM)
+        return VV
+      }(YV) : YV)
     }
-    Cr.time = lr.define(), Cr.userEvent = lr.define(), Cr.addToHistory = lr.define(), Cr.remote = lr.define();
-    const gr = [];
+    Te.time = je.define(), Te.userEvent = je.define(), Te.addToHistory = je.define(), Te.remote = je.define();
+    const Me = [];
 
-    function ur(MM) {
-      return null == MM ? gr : Array.isArray(MM) ? MM : [MM]
+    function ze(VV) {
+      return null == VV ? Me : Array.isArray(VV) ? VV : [VV]
     }
-    var Rr = function(MM) {
-      return MM[MM.Word = 0] = "Word", MM[MM.Space = 1] = "Space", MM[MM.Other = 2] = "Other", MM
-    }(Rr || (Rr = {}));
-    const pr = /[\u00df\u0587\u0590-\u05f4\u0600-\u06ff\u3040-\u309f\u30a0-\u30ff\u3400-\u4db5\u4e00-\u9fcc\uac00-\ud7af]/;
-    let Wr;
+    var Ge = function(VV) {
+      return VV[VV.Word = 0] = "Word", VV[VV.Space = 1] = "Space", VV[VV.Other = 2] = "Other", VV
+    }(Ge || (Ge = {}));
+    const We = /[\u00df\u0587\u0590-\u05f4\u0600-\u06ff\u3040-\u309f\u30a0-\u30ff\u3400-\u4db5\u4e00-\u9fcc\uac00-\ud7af]/;
+    let Re;
     try {
-      Wr = new RegExp("[\\p{Alphabetic}\\p{Number}_]", "u")
-    } catch (ii) {}
+      Re = new RegExp("[\\p{Alphabetic}\\p{Number}_]", "u")
+    } catch (xx) {}
 
-    function sr(MM) {
-      return rM => {
-        if (!/\S/.test(rM)) return Rr.Space;
-        if (function(MM) {
-            if (Wr) return Wr.test(MM);
-            for (let rM = 0; rM < MM.length; rM++) {
-              let iM = MM[rM];
-              if (/\w/.test(iM) || iM > "\x80" && (iM.toUpperCase() != iM.toLowerCase() || pr.test(iM))) return !0
+    function ge(VV) {
+      return eV => {
+        if (!/\S/.test(eV)) return Ge.Space;
+        if (function(VV) {
+            if (Re) return Re.test(VV);
+            for (let eV = 0; eV < VV.length; eV++) {
+              let xV = VV[eV];
+              if (/\w/.test(xV) || xV > "\x80" && (xV.toUpperCase() != xV.toLowerCase() || We.test(xV))) return !0
             }
             return !1
-          }(rM)) return Rr.Word;
-        for (let iM = 0; iM < MM.length; iM++)
-          if (rM.indexOf(MM[iM]) > -1) return Rr.Word;
-        return Rr.Other
+          }(eV)) return Ge.Word;
+        for (let xV = 0; xV < VV.length; xV++)
+          if (eV.indexOf(VV[xV]) > -1) return Ge.Word;
+        return Ge.Other
       }
     }
-    class Dr {
-      constructor(MM, rM, iM, OM, SM, jM) {
-        this.config = MM, this.doc = rM, this.selection = iM, this.values = OM, this.status = MM.statusTemplate.slice(), this.computeSlot = SM, jM && (jM._state = this);
-        for (let aM = 0; aM < this.config.dynamicSlots.length; aM++) Qr(this, aM << 1);
+    class De {
+      constructor(VV, eV, xV, JV, YV, UV) {
+        this.config = VV, this.doc = eV, this.selection = xV, this.values = JV, this.status = VV.statusTemplate.slice(), this.computeSlot = YV, UV && (UV._state = this);
+        for (let yV = 0; yV < this.config.dynamicSlots.length; yV++) ne(this, yV << 1);
         this.computeSlot = null
       }
-      field(MM) {
-        let rM = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
-          iM = this.config.address[MM.id];
-        if (null != iM) return Qr(this, iM), zr(this, iM);
-        if (rM) throw new RangeError("Field is not present in this state")
+      field(VV) {
+        let eV = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
+          xV = this.config.address[VV.id];
+        if (null != xV) return ne(this, xV), we(this, xV);
+        if (eV) throw new RangeError("Field is not present in this state")
       }
       update() {
-        for (var MM = arguments.length, rM = new Array(MM), iM = 0; iM < MM; iM++) rM[iM] = arguments[iM];
-        return tr(this, rM, !0)
+        for (var VV = arguments.length, eV = new Array(VV), xV = 0; xV < VV; xV++) eV[xV] = arguments[xV];
+        return Xe(this, eV, !0)
       }
-      applyTransaction(MM) {
-        let rM, iM = this.config,
+      applyTransaction(VV) {
+        let eV, xV = this.config,
           {
-            base: OM,
-            compartments: SM
-          } = iM;
-        for (let aM of MM.effects) aM.is(ar.reconfigure) ? (iM && (SM = new Map, iM.compartments.forEach(((MM, rM) => SM.set(rM, MM))), iM = null), SM.set(aM.value.compartment, aM.value.extension)) : aM.is(Gr.reconfigure) ? (iM = null, OM = aM.value) : aM.is(Gr.appendConfig) && (iM = null, OM = ur(OM).concat(aM.value));
-        if (iM) rM = MM.startState.values.slice();
+            base: JV,
+            compartments: YV
+          } = xV;
+        for (let yV of VV.effects) yV.is(ye.reconfigure) ? (xV && (YV = new Map, xV.compartments.forEach(((VV, eV) => YV.set(eV, VV))), xV = null), YV.set(yV.value.compartment, yV.value.extension)) : yV.is(Fe.reconfigure) ? (xV = null, JV = yV.value) : yV.is(Fe.appendConfig) && (xV = null, JV = ze(JV).concat(yV.value));
+        if (xV) eV = VV.startState.values.slice();
         else {
-          iM = nr.resolve(OM, SM, this), rM = new Dr(iM, this.doc, this.selection, iM.dynamicSlots.map((() => null)), ((MM, rM) => rM.reconfigure(MM, this)), null).values
+          xV = Qe.resolve(JV, YV, this), eV = new De(xV, this.doc, this.selection, xV.dynamicSlots.map((() => null)), ((VV, eV) => eV.reconfigure(VV, this)), null).values
         }
-        let jM = MM.startState.facet(mr) ? MM.newSelection : MM.newSelection.asSingle();
-        new Dr(iM, MM.newDoc, jM, rM, ((rM, iM) => iM.update(rM, MM)), MM)
+        let UV = VV.startState.facet(ve) ? VV.newSelection : VV.newSelection.asSingle();
+        new De(xV, VV.newDoc, UV, eV, ((eV, xV) => xV.update(eV, VV)), VV)
       }
-      replaceSelection(MM) {
-        return "string" == typeof MM && (MM = this.toText(MM)), this.changeByRange((rM => ({
+      replaceSelection(VV) {
+        return "string" == typeof VV && (VV = this.toText(VV)), this.changeByRange((eV => ({
           changes: {
-            from: rM.from,
-            to: rM.to,
-            insert: MM
+            from: eV.from,
+            to: eV.to,
+            insert: VV
           },
-          range: AM.cursor(rM.from + MM.length)
+          range: lV.cursor(eV.from + VV.length)
         })))
       }
-      changeByRange(MM) {
-        let rM = this.selection,
-          iM = MM(rM.Ld[0]),
-          OM = this.changes(iM.changes),
-          SM = [iM.range],
-          jM = ur(iM.effects);
-        for (let aM = 1; aM < rM.Ld.length; aM++) {
-          let iM = MM(rM.Ld[aM]),
-            PM = this.changes(iM.changes),
-            nM = PM.map(OM);
-          for (let MM = 0; MM < aM; MM++) SM[MM] = SM[MM].map(nM);
-          let QM = OM.mapDesc(PM, !0);
-          SM.push(iM.range.map(QM)), OM = OM.compose(nM), jM = Gr.mapEffects(jM, nM).concat(Gr.mapEffects(ur(iM.effects), QM))
+      changeByRange(VV) {
+        let eV = this.selection,
+          xV = VV(eV.TE[0]),
+          JV = this.changes(xV.changes),
+          YV = [xV.range],
+          UV = ze(xV.effects);
+        for (let yV = 1; yV < eV.TE.length; yV++) {
+          let xV = VV(eV.TE[yV]),
+            pV = this.changes(xV.changes),
+            QV = pV.map(JV);
+          for (let VV = 0; VV < yV; VV++) YV[VV] = YV[VV].map(QV);
+          let nV = JV.mapDesc(pV, !0);
+          YV.push(xV.range.map(nV)), JV = JV.compose(QV), UV = Fe.mapEffects(UV, QV).concat(Fe.mapEffects(ze(xV.effects), nV))
         }
         return {
-          changes: OM,
-          selection: AM.create(SM, rM.mainIndex),
-          effects: jM
+          changes: JV,
+          selection: lV.create(YV, eV.mainIndex),
+          effects: UV
         }
       }
       changes() {
-        let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
-        return MM instanceof sM ? MM : sM.of(MM, this.doc.length, this.facet(Dr.lineSeparator))
+        let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
+        return VV instanceof gV ? VV : gV.of(VV, this.doc.length, this.facet(De.lineSeparator))
       }
-      toText(MM) {
-        return JM.of(MM.split(this.facet(Dr.lineSeparator) || RM))
+      toText(VV) {
+        return bV.of(VV.split(this.facet(De.lineSeparator) || GV))
       }
       sliceDoc() {
-        let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.doc.length;
-        return this.doc.sliceString(MM, rM, this.lineBreak)
+        let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.doc.length;
+        return this.doc.sliceString(VV, eV, this.lineBreak)
       }
-      facet(MM) {
-        let rM = this.config.address[MM.id];
-        return null == rM ? MM.default : (Qr(this, rM), zr(this, rM))
+      facet(VV) {
+        let eV = this.config.address[VV.id];
+        return null == eV ? VV.default : (ne(this, eV), we(this, eV))
       }
-      toJSON(MM) {
-        let rM = {
+      toJSON(VV) {
+        let eV = {
           doc: this.sliceDoc(),
           selection: this.selection.toJSON()
         };
-        if (MM)
-          for (let iM in MM) {
-            let OM = MM[iM];
-            OM instanceof VM && null != this.config.address[OM.id] && (rM[iM] = OM.spec.toJSON(this.field(MM[iM]), this))
+        if (VV)
+          for (let xV in VV) {
+            let JV = VV[xV];
+            JV instanceof dV && null != this.config.address[JV.id] && (eV[xV] = JV.spec.toJSON(this.field(VV[xV]), this))
           }
-        return rM
+        return eV
       }
-      static fromJSON(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-          iM = arguments.length > 2 ? arguments[2] : void 0;
-        if (!MM || "string" != typeof MM.doc) throw new RangeError("Invalid JSON representation for EditorState");
-        let OM = [];
-        if (iM)
-          for (let SM in iM)
-            if (Object.prototype.hasOwnProperty.call(MM, SM)) {
-              let rM = iM[SM],
-                jM = MM[SM];
-              OM.push(rM.init((MM => rM.spec.fromJSON(jM, MM))))
-            } return Dr.create({
-          doc: MM.doc,
-          selection: AM.fromJSON(MM.selection),
-          extensions: rM.extensions ? OM.concat([rM.extensions]) : OM
+      static fromJSON(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+          xV = arguments.length > 2 ? arguments[2] : void 0;
+        if (!VV || "string" != typeof VV.doc) throw new RangeError("Invalid JSON representation for EditorState");
+        let JV = [];
+        if (xV)
+          for (let YV in xV)
+            if (Object.prototype.hasOwnProperty.call(VV, YV)) {
+              let eV = xV[YV],
+                UV = VV[YV];
+              JV.push(eV.init((VV => eV.spec.fromJSON(UV, VV))))
+            } return De.create({
+          doc: VV.doc,
+          selection: lV.fromJSON(VV.selection),
+          extensions: eV.extensions ? JV.concat([eV.extensions]) : JV
         })
       }
       static create() {
-        let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-          rM = nr.resolve(MM.extensions || [], new Map),
-          iM = MM.doc instanceof JM ? MM.doc : JM.of((MM.doc || "").split(rM.staticFacet(Dr.lineSeparator) || RM)),
-          OM = MM.selection ? MM.selection instanceof AM ? MM.selection : AM.single(MM.selection.anchor, MM.selection.head) : AM.single(0);
-        return xM(OM, iM.length), rM.staticFacet(mr) || (OM = OM.asSingle()), new Dr(rM, iM, OM, rM.dynamicSlots.map((() => null)), ((MM, rM) => rM.create(MM)), null)
+        let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
+          eV = Qe.resolve(VV.extensions || [], new Map),
+          xV = VV.doc instanceof bV ? VV.doc : bV.of((VV.doc || "").split(eV.staticFacet(De.lineSeparator) || GV)),
+          JV = VV.selection ? VV.selection instanceof lV ? VV.selection : lV.single(VV.selection.anchor, VV.selection.head) : lV.single(0);
+        return LV(JV, xV.length), eV.staticFacet(ve) || (JV = JV.asSingle()), new De(eV, xV, JV, eV.dynamicSlots.map((() => null)), ((VV, eV) => eV.create(VV)), null)
       }
       get tabSize() {
-        return this.facet(Dr.tabSize)
+        return this.facet(De.tabSize)
       }
       get lineBreak() {
-        return this.facet(Dr.lineSeparator) || "\n"
+        return this.facet(De.lineSeparator) || "\n"
       }
       get readOnly() {
-        return this.facet(yr)
+        return this.facet(Be)
       }
-      phrase(MM) {
-        for (var rM = arguments.length, iM = new Array(rM > 1 ? rM - 1 : 0), OM = 1; OM < rM; OM++) iM[OM - 1] = arguments[OM];
-        for (let SM of this.facet(Dr.phrases))
-          if (Object.prototype.hasOwnProperty.call(SM, MM)) {
-            MM = SM[MM];
+      phrase(VV) {
+        for (var eV = arguments.length, xV = new Array(eV > 1 ? eV - 1 : 0), JV = 1; JV < eV; JV++) xV[JV - 1] = arguments[JV];
+        for (let YV of this.facet(De.phrases))
+          if (Object.prototype.hasOwnProperty.call(YV, VV)) {
+            VV = YV[VV];
             break
-          } return iM.length && (MM = MM.replace(/\$(\$|\d*)/g, ((MM, rM) => {
-          if ("$" == rM) return "$";
-          let OM = +(rM || 1);
-          return !OM || OM > iM.length ? MM : iM[OM - 1]
-        }))), MM
+          } return xV.length && (VV = VV.replace(/\$(\$|\d*)/g, ((VV, eV) => {
+          if ("$" == eV) return "$";
+          let JV = +(eV || 1);
+          return !JV || JV > xV.length ? VV : xV[JV - 1]
+        }))), VV
       }
-      languageDataAt(MM, rM) {
-        let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1,
-          OM = [];
-        for (let SM of this.facet(Lr))
-          for (let jM of SM(this, rM, iM)) Object.prototype.hasOwnProperty.call(jM, MM) && OM.push(jM[MM]);
-        return OM
+      languageDataAt(VV, eV) {
+        let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1,
+          JV = [];
+        for (let YV of this.facet(Ze))
+          for (let UV of YV(this, eV, xV)) Object.prototype.hasOwnProperty.call(UV, VV) && JV.push(UV[VV]);
+        return JV
       }
-      charCategorizer(MM) {
-        let rM = this.languageDataAt("wordChars", MM);
-        return sr(rM.length ? rM[0] : "")
+      charCategorizer(VV) {
+        let eV = this.languageDataAt("wordChars", VV);
+        return ge(eV.length ? eV[0] : "")
       }
-      wordAt(MM) {
+      wordAt(VV) {
         let {
-          text: rM,
-          from: iM,
-          length: OM
-        } = this.doc.lineAt(MM), SM = this.charCategorizer(MM), jM = MM - iM, aM = MM - iM;
-        for (; jM > 0;) {
-          let MM = wM(rM, jM, !1);
-          if (SM(rM.slice(MM, jM)) != Rr.Word) break;
-          jM = MM
+          text: eV,
+          from: xV,
+          length: JV
+        } = this.doc.lineAt(VV), YV = this.charCategorizer(VV), UV = VV - xV, yV = VV - xV;
+        for (; UV > 0;) {
+          let VV = NV(eV, UV, !1);
+          if (YV(eV.slice(VV, UV)) != Ge.Word) break;
+          UV = VV
         }
-        for (; aM < OM;) {
-          let MM = wM(rM, aM);
-          if (SM(rM.slice(aM, MM)) != Rr.Word) break;
-          aM = MM
+        for (; yV < JV;) {
+          let VV = NV(eV, yV);
+          if (YV(eV.slice(yV, VV)) != Ge.Word) break;
+          yV = VV
         }
-        return jM == aM ? null : AM.range(jM + iM, aM + iM)
+        return UV == yV ? null : lV.range(UV + xV, yV + xV)
       }
     }
 
-    function kr(MM, rM) {
-      let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        OM = {};
-      for (let SM of MM)
-        for (let MM of Object.keys(SM)) {
-          let rM = SM[MM],
-            jM = OM[MM];
-          if (void 0 === jM) OM[MM] = rM;
-          else if (jM === rM || void 0 === rM);
+    function ie(VV, eV) {
+      let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+        JV = {};
+      for (let YV of VV)
+        for (let VV of Object.keys(YV)) {
+          let eV = YV[VV],
+            UV = JV[VV];
+          if (void 0 === UV) JV[VV] = eV;
+          else if (UV === eV || void 0 === eV);
           else {
-            if (!Object.hasOwnProperty.call(iM, MM)) throw new Error("Config merge conflict for field " + MM);
-            OM[MM] = iM[MM](jM, rM)
+            if (!Object.hasOwnProperty.call(xV, VV)) throw new Error("Config merge conflict for field " + VV);
+            JV[VV] = xV[VV](UV, eV)
           }
         }
-      for (let SM in rM) void 0 === OM[SM] && (OM[SM] = rM[SM]);
-      return OM
+      for (let YV in eV) void 0 === JV[YV] && (JV[YV] = eV[YV]);
+      return JV
     }
-    Dr.allowMultipleSelections = mr, Dr.tabSize = FM.define({
-      combine: MM => MM.length ? MM[0] : 4
-    }), Dr.lineSeparator = Hr, Dr.readOnly = yr, Dr.phrases = FM.define({
-      compare(MM, rM) {
-        let iM = Object.keys(MM),
-          OM = Object.keys(rM);
-        return iM.length == OM.length && iM.every((iM => MM[iM] == rM[iM]))
+    De.allowMultipleSelections = ve, De.tabSize = mV.define({
+      combine: VV => VV.length ? VV[0] : 4
+    }), De.lineSeparator = re, De.readOnly = Be, De.phrases = mV.define({
+      compare(VV, eV) {
+        let xV = Object.keys(VV),
+          JV = Object.keys(eV);
+        return xV.length == JV.length && xV.every((xV => VV[xV] == eV[xV]))
       }
-    }), Dr.languageData = Lr, Dr.changeFilter = hr, Dr.transactionFilter = Jr, Dr.transactionExtender = dr, ar.reconfigure = Gr.define();
-    class Zr {
-      eq(MM) {
-        return this == MM
+    }), De.languageData = Ze, De.changeFilter = ke, De.transactionFilter = be, De.transactionExtender = Ee, ye.reconfigure = Fe.define();
+    class Ce {
+      eq(VV) {
+        return this == VV
       }
-      range(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : MM;
-        return fr.create(MM, rM, this)
-      }
-    }
-
-    function or(MM, rM) {
-      return MM == rM || MM.constructor == rM.constructor && MM.eq(rM)
-    }
-    Zr.prototype.startSide = Zr.prototype.endSide = 0, Zr.prototype.point = !1, Zr.prototype.mapMode = pM.TrackDel;
-    class fr {
-      constructor(MM, rM, iM) {
-        this.from = MM, this.to = rM, this.value = iM
-      }
-      static create(MM, rM, iM) {
-        return new fr(MM, rM, iM)
+      range(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : VV;
+        return oe.create(VV, eV, this)
       }
     }
 
-    function Yr(MM, rM) {
-      return MM.from - rM.from || MM.value.startSide - rM.value.startSide
+    function ae(VV, eV) {
+      return VV == eV || VV.constructor == eV.constructor && VV.eq(eV)
     }
-    class Nr {
-      constructor(MM, rM, iM, OM) {
-        this.from = MM, this.to = rM, this.value = iM, this.EOM = OM
+    Ce.prototype.startSide = Ce.prototype.endSide = 0, Ce.prototype.point = !1, Ce.prototype.mapMode = WV.TrackDel;
+    class oe {
+      constructor(VV, eV, xV) {
+        this.from = VV, this.to = eV, this.value = xV
+      }
+      static create(VV, eV, xV) {
+        return new oe(VV, eV, xV)
+      }
+    }
+
+    function ce(VV, eV) {
+      return VV.from - eV.from || VV.value.startSide - eV.value.startSide
+    }
+    class he {
+      constructor(VV, eV, xV, JV) {
+        this.from = VV, this.to = eV, this.value = xV, this.aYV = JV
       }
       get length() {
         return this.to[this.to.length - 1]
       }
-      findIndex(MM, rM, iM) {
-        let OM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-          SM = iM ? this.to : this.from;
-        for (let jM = OM, aM = SM.length;;) {
-          if (jM == aM) return jM;
-          let OM = jM + aM >> 1,
-            PM = SM[OM] - MM || (iM ? this.value[OM].endSide : this.value[OM].startSide) - rM;
-          if (OM == jM) return PM >= 0 ? jM : aM;
-          PM >= 0 ? aM = OM : jM = OM + 1
+      findIndex(VV, eV, xV) {
+        let JV = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
+          YV = xV ? this.to : this.from;
+        for (let UV = JV, yV = YV.length;;) {
+          if (UV == yV) return UV;
+          let JV = UV + yV >> 1,
+            pV = YV[JV] - VV || (xV ? this.value[JV].endSide : this.value[JV].startSide) - eV;
+          if (JV == UV) return pV >= 0 ? UV : yV;
+          pV >= 0 ? yV = JV : UV = JV + 1
         }
       }
-      between(MM, rM, iM, OM) {
-        for (let SM = this.findIndex(rM, -1e9, !0), jM = this.findIndex(iM, 1e9, !1, SM); SM < jM; SM++)
-          if (!1 === OM(this.from[SM] + MM, this.to[SM] + MM, this.value[SM])) return !1
+      between(VV, eV, xV, JV) {
+        for (let YV = this.findIndex(eV, -1e9, !0), UV = this.findIndex(xV, 1e9, !1, YV); YV < UV; YV++)
+          if (!1 === JV(this.from[YV] + VV, this.to[YV] + VV, this.value[YV])) return !1
       }
-      map(MM, rM) {
-        let iM = [],
-          OM = [],
-          SM = [],
-          jM = -1,
-          aM = -1;
-        for (let PM = 0; PM < this.value.length; PM++) {
-          let nM, QM, zM = this.value[PM],
-            LM = this.from[PM] + MM,
-            mM = this.to[PM] + MM;
-          if (LM == mM) {
-            let MM = rM.mapPos(LM, zM.startSide, zM.mapMode);
-            if (null == MM) continue;
-            if (nM = QM = MM, zM.startSide != zM.endSide && (QM = rM.mapPos(LM, zM.endSide), QM < nM)) continue
-          } else if (nM = rM.mapPos(LM, zM.startSide), QM = rM.mapPos(mM, zM.endSide), nM > QM || nM == QM && zM.startSide > 0 && zM.endSide <= 0) continue;
-          (QM - nM || zM.endSide - zM.startSide) < 0 || (jM < 0 && (jM = nM), zM.point && (aM = Math.max(aM, QM - nM)), iM.push(zM), OM.push(nM - jM), SM.push(QM - jM))
+      map(VV, eV) {
+        let xV = [],
+          JV = [],
+          YV = [],
+          UV = -1,
+          yV = -1;
+        for (let pV = 0; pV < this.value.length; pV++) {
+          let QV, nV, wV = this.value[pV],
+            ZV = this.from[pV] + VV,
+            vV = this.to[pV] + VV;
+          if (ZV == vV) {
+            let VV = eV.mapPos(ZV, wV.startSide, wV.mapMode);
+            if (null == VV) continue;
+            if (QV = nV = VV, wV.startSide != wV.endSide && (nV = eV.mapPos(ZV, wV.endSide), nV < QV)) continue
+          } else if (QV = eV.mapPos(ZV, wV.startSide), nV = eV.mapPos(vV, wV.endSide), QV > nV || QV == nV && wV.startSide > 0 && wV.endSide <= 0) continue;
+          (nV - QV || wV.endSide - wV.startSide) < 0 || (UV < 0 && (UV = QV), wV.point && (yV = Math.max(yV, nV - QV)), xV.push(wV), JV.push(QV - UV), YV.push(nV - UV))
         }
         return {
-          mapped: iM.length ? new Nr(OM, SM, iM, aM) : null,
-          pos: jM
+          mapped: xV.length ? new he(JV, YV, xV, yV) : null,
+          pos: UV
         }
       }
     }
-    class Ar {
-      constructor(MM, rM, iM, OM) {
-        this.chunkPos = MM, this.chunk = rM, this.nextLayer = iM, this.EOM = OM
+    class le {
+      constructor(VV, eV, xV, JV) {
+        this.chunkPos = VV, this.chunk = eV, this.nextLayer = xV, this.aYV = JV
       }
-      static create(MM, rM, iM, OM) {
-        return new Ar(MM, rM, iM, OM)
+      static create(VV, eV, xV, JV) {
+        return new le(VV, eV, xV, JV)
       }
       get length() {
-        let MM = this.chunk.length - 1;
-        return MM < 0 ? 0 : Math.max(this.chunkEnd(MM), this.nextLayer.length)
+        let VV = this.chunk.length - 1;
+        return VV < 0 ? 0 : Math.max(this.chunkEnd(VV), this.nextLayer.length)
       }
       get size() {
-        if (this.dL) return 0;
-        let MM = this.nextLayer.size;
-        for (let rM of this.chunk) MM += rM.value.length;
-        return MM
+        if (this.XZ) return 0;
+        let VV = this.nextLayer.size;
+        for (let eV of this.chunk) VV += eV.value.length;
+        return VV
       }
-      chunkEnd(MM) {
-        return this.chunkPos[MM] + this.chunk[MM].length
+      chunkEnd(VV) {
+        return this.chunkPos[VV] + this.chunk[VV].length
       }
-      update(MM) {
+      update(VV) {
         let {
-          add: rM = [],
-          sort: iM = !1,
-          filterFrom: OM = 0,
-          filterTo: SM = this.length
-        } = MM, jM = MM.filter;
-        if (0 == rM.length && !jM) return this;
-        if (iM && (rM = rM.slice().sort(Yr)), this.dL) return rM.length ? Ar.of(rM) : this;
-        let aM = new Fr(this, null, -1).goto(0),
-          PM = 0,
-          nM = [],
-          QM = new xr;
-        for (; aM.value || PM < rM.length;)
-          if (PM < rM.length && (aM.from - rM[PM].from || aM.startSide - rM[PM].value.startSide) >= 0) {
-            let MM = rM[PM++];
-            QM.addInner(MM.from, MM.to, MM.value) || nM.push(MM)
-          } else 1 == aM.rangeIndex && aM.chunkIndex < this.chunk.length && (PM == rM.length || this.chunkEnd(aM.chunkIndex) < rM[PM].from) && (!jM || OM > this.chunkEnd(aM.chunkIndex) || SM < this.chunkPos[aM.chunkIndex]) && QM.addChunk(this.chunkPos[aM.chunkIndex], this.chunk[aM.chunkIndex]) ? aM.nextChunk() : ((!jM || OM > aM.to || SM < aM.from || jM(aM.from, aM.to, aM.value)) && (QM.addInner(aM.from, aM.to, aM.value) || nM.push(fr.create(aM.from, aM.to, aM.value))), aM.next());
-        return QM.finishInner(this.nextLayer.dL && !nM.length ? Ar.empty : this.nextLayer.update({
-          add: nM,
-          filter: jM,
-          filterFrom: OM,
-          filterTo: SM
+          add: eV = [],
+          sort: xV = !1,
+          filterFrom: JV = 0,
+          filterTo: YV = this.length
+        } = VV, UV = VV.filter;
+        if (0 == eV.length && !UV) return this;
+        if (xV && (eV = eV.slice().sort(ce)), this.XZ) return eV.length ? le.of(eV) : this;
+        let yV = new me(this, null, -1).goto(0),
+          pV = 0,
+          QV = [],
+          nV = new Le;
+        for (; yV.value || pV < eV.length;)
+          if (pV < eV.length && (yV.from - eV[pV].from || yV.startSide - eV[pV].value.startSide) >= 0) {
+            let VV = eV[pV++];
+            nV.addInner(VV.from, VV.to, VV.value) || QV.push(VV)
+          } else 1 == yV.rangeIndex && yV.chunkIndex < this.chunk.length && (pV == eV.length || this.chunkEnd(yV.chunkIndex) < eV[pV].from) && (!UV || JV > this.chunkEnd(yV.chunkIndex) || YV < this.chunkPos[yV.chunkIndex]) && nV.addChunk(this.chunkPos[yV.chunkIndex], this.chunk[yV.chunkIndex]) ? yV.nextChunk() : ((!UV || JV > yV.to || YV < yV.from || UV(yV.from, yV.to, yV.value)) && (nV.addInner(yV.from, yV.to, yV.value) || QV.push(oe.create(yV.from, yV.to, yV.value))), yV.next());
+        return nV.finishInner(this.nextLayer.XZ && !QV.length ? le.empty : this.nextLayer.update({
+          add: QV,
+          filter: UV,
+          filterFrom: JV,
+          filterTo: YV
         }))
       }
-      map(MM) {
-        if (MM.empty || this.dL) return this;
-        let rM = [],
-          iM = [],
-          OM = -1;
-        for (let jM = 0; jM < this.chunk.length; jM++) {
-          let SM = this.chunkPos[jM],
-            aM = this.chunk[jM],
-            PM = MM.touchesRange(SM, SM + aM.length);
-          if (!1 === PM) OM = Math.max(OM, aM.EOM), rM.push(aM), iM.push(MM.mapPos(SM));
-          else if (!0 === PM) {
+      map(VV) {
+        if (VV.empty || this.XZ) return this;
+        let eV = [],
+          xV = [],
+          JV = -1;
+        for (let UV = 0; UV < this.chunk.length; UV++) {
+          let YV = this.chunkPos[UV],
+            yV = this.chunk[UV],
+            pV = VV.touchesRange(YV, YV + yV.length);
+          if (!1 === pV) JV = Math.max(JV, yV.aYV), eV.push(yV), xV.push(VV.mapPos(YV));
+          else if (!0 === pV) {
             let {
-              mapped: jM,
-              pos: PM
-            } = aM.map(SM, MM);
-            jM && (OM = Math.max(OM, jM.EOM), rM.push(jM), iM.push(PM))
+              mapped: UV,
+              pos: pV
+            } = yV.map(YV, VV);
+            UV && (JV = Math.max(JV, UV.aYV), eV.push(UV), xV.push(pV))
           }
         }
-        let SM = this.nextLayer.map(MM);
-        return 0 == rM.length ? SM : new Ar(iM, rM, SM || Ar.empty, OM)
+        let YV = this.nextLayer.map(VV);
+        return 0 == eV.length ? YV : new le(xV, eV, YV || le.empty, JV)
       }
-      between(MM, rM, iM) {
-        if (!this.dL) {
-          for (let OM = 0; OM < this.chunk.length; OM++) {
-            let SM = this.chunkPos[OM],
-              jM = this.chunk[OM];
-            if (rM >= SM && MM <= SM + jM.length && !1 === jM.between(SM, MM - SM, rM - SM, iM)) return
+      between(VV, eV, xV) {
+        if (!this.XZ) {
+          for (let JV = 0; JV < this.chunk.length; JV++) {
+            let YV = this.chunkPos[JV],
+              UV = this.chunk[JV];
+            if (eV >= YV && VV <= YV + UV.length && !1 === UV.between(YV, VV - YV, eV - YV, xV)) return
           }
-          this.nextLayer.between(MM, rM, iM)
+          this.nextLayer.between(VV, eV, xV)
         }
       }
       iter() {
-        let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-        return Br.from([this]).goto(MM)
+        let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
+        return Ke.from([this]).goto(VV)
       }
-      get dL() {
+      get XZ() {
         return this.nextLayer == this
       }
-      static iter(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return Br.from(MM).goto(rM)
+      static iter(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return Ke.from(VV).goto(eV)
       }
-      static compare(MM, rM, iM, OM) {
-        let SM = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : -1,
-          jM = MM.filter((MM => MM.EOM > 0 || !MM.dL && MM.EOM >= SM)),
-          aM = rM.filter((MM => MM.EOM > 0 || !MM.dL && MM.EOM >= SM)),
-          PM = vr(jM, aM, iM),
-          nM = new Ir(jM, PM, SM),
-          QM = new Ir(aM, PM, SM);
-        iM.iterGaps(((MM, rM, iM) => Kr(nM, MM, QM, rM, iM, OM))), iM.empty && 0 == iM.length && Kr(nM, 0, QM, 0, 0, OM)
+      static compare(VV, eV, xV, JV) {
+        let YV = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : -1,
+          UV = VV.filter((VV => VV.aYV > 0 || !VV.XZ && VV.aYV >= YV)),
+          yV = eV.filter((VV => VV.aYV > 0 || !VV.XZ && VV.aYV >= YV)),
+          pV = fe(UV, yV, xV),
+          QV = new ue(UV, pV, YV),
+          nV = new ue(yV, pV, YV);
+        xV.iterGaps(((VV, eV, xV) => se(QV, VV, nV, eV, xV, JV))), xV.empty && 0 == xV.length && se(QV, 0, nV, 0, 0, JV)
       }
-      static eq(MM, rM) {
-        let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          OM = arguments.length > 3 ? arguments[3] : void 0;
-        null == OM && (OM = 999999999);
-        let SM = MM.filter((MM => !MM.dL && rM.indexOf(MM) < 0)),
-          jM = rM.filter((rM => !rM.dL && MM.indexOf(rM) < 0));
-        if (SM.length != jM.length) return !1;
-        if (!SM.length) return !0;
-        let aM = vr(SM, jM),
-          PM = new Ir(SM, aM, 0).goto(iM),
-          nM = new Ir(jM, aM, 0).goto(iM);
+      static eq(VV, eV) {
+        let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          JV = arguments.length > 3 ? arguments[3] : void 0;
+        null == JV && (JV = 999999999);
+        let YV = VV.filter((VV => !VV.XZ && eV.indexOf(VV) < 0)),
+          UV = eV.filter((eV => !eV.XZ && VV.indexOf(eV) < 0));
+        if (YV.length != UV.length) return !1;
+        if (!YV.length) return !0;
+        let yV = fe(YV, UV),
+          pV = new ue(YV, yV, 0).goto(xV),
+          QV = new ue(UV, yV, 0).goto(xV);
         for (;;) {
-          if (PM.to != nM.to || !qr(PM.active, nM.active) || PM.point && (!nM.point || !or(PM.point, nM.point))) return !1;
-          if (PM.to > OM) return !0;
-          PM.next(), nM.next()
+          if (pV.to != QV.to || !Se(pV.active, QV.active) || pV.point && (!QV.point || !ae(pV.point, QV.point))) return !1;
+          if (pV.to > JV) return !0;
+          pV.next(), QV.next()
         }
       }
-      static spans(MM, rM, iM, OM) {
-        let SM = new Ir(MM, null, arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : -1).goto(rM),
-          jM = rM,
-          aM = SM.openStart;
+      static spans(VV, eV, xV, JV) {
+        let YV = new ue(VV, null, arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : -1).goto(eV),
+          UV = eV,
+          yV = YV.openStart;
         for (;;) {
-          let MM = Math.min(SM.to, iM);
-          if (SM.point) {
-            let iM = SM.activeForPoint(SM.to),
-              PM = SM.pointFrom < rM ? iM.length + 1 : SM.point.startSide < 0 ? iM.length : Math.min(iM.length, aM);
-            OM.point(jM, MM, SM.point, iM, PM, SM.pointRank), aM = Math.min(SM.openEnd(MM), iM.length)
-          } else MM > jM && (OM.span(jM, MM, SM.active, aM), aM = SM.openEnd(MM));
-          if (SM.to > iM) return aM + (SM.point && SM.to > iM ? 1 : 0);
-          jM = SM.to, SM.next()
+          let VV = Math.min(YV.to, xV);
+          if (YV.point) {
+            let xV = YV.activeForPoint(YV.to),
+              pV = YV.pointFrom < eV ? xV.length + 1 : YV.point.startSide < 0 ? xV.length : Math.min(xV.length, yV);
+            JV.point(UV, VV, YV.point, xV, pV, YV.pointRank), yV = Math.min(YV.openEnd(VV), xV.length)
+          } else VV > UV && (JV.span(UV, VV, YV.active, yV), yV = YV.openEnd(VV));
+          if (YV.to > xV) return yV + (YV.point && YV.to > xV ? 1 : 0);
+          UV = YV.to, YV.next()
         }
       }
-      static of (MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          iM = new xr;
-        for (let OM of MM instanceof fr ? [MM] : rM ? function(MM) {
-            if (MM.length > 1)
-              for (let rM = MM[0], iM = 1; iM < MM.length; iM++) {
-                let OM = MM[iM];
-                if (Yr(rM, OM) > 0) return MM.slice().sort(Yr);
-                rM = OM
+      static of (VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          xV = new Le;
+        for (let JV of VV instanceof oe ? [VV] : eV ? function(VV) {
+            if (VV.length > 1)
+              for (let eV = VV[0], xV = 1; xV < VV.length; xV++) {
+                let JV = VV[xV];
+                if (ce(eV, JV) > 0) return VV.slice().sort(ce);
+                eV = JV
               }
-            return MM
-          }(MM) : MM) iM.add(OM.from, OM.to, OM.value);
-        return iM.finish()
+            return VV
+          }(VV) : VV) xV.add(JV.from, JV.to, JV.value);
+        return xV.finish()
       }
-      static join(MM) {
-        if (!MM.length) return Ar.empty;
-        let rM = MM[MM.length - 1];
-        for (let iM = MM.length - 2; iM >= 0; iM--)
-          for (let OM = MM[iM]; OM != Ar.empty; OM = OM.nextLayer) rM = new Ar(OM.chunkPos, OM.chunk, rM, Math.max(OM.EOM, rM.EOM));
-        return rM
+      static join(VV) {
+        if (!VV.length) return le.empty;
+        let eV = VV[VV.length - 1];
+        for (let xV = VV.length - 2; xV >= 0; xV--)
+          for (let JV = VV[xV]; JV != le.empty; JV = JV.nextLayer) eV = new le(JV.chunkPos, JV.chunk, eV, Math.max(JV.aYV, eV.aYV));
+        return eV
       }
     }
-    Ar.empty = new Ar([], [], null, -1), Ar.empty.nextLayer = Ar.empty;
-    class xr {
-      finishChunk(MM) {
-        this.chunks.push(new Nr(this.from, this.to, this.value, this.EOM)), this.chunkPos.push(this.chunkStart), this.chunkStart = -1, this.setMaxPoint = Math.max(this.setMaxPoint, this.EOM), this.EOM = -1, MM && (this.from = [], this.to = [], this.value = [])
+    le.empty = new le([], [], null, -1), le.empty.nextLayer = le.empty;
+    class Le {
+      finishChunk(VV) {
+        this.chunks.push(new he(this.from, this.to, this.value, this.aYV)), this.chunkPos.push(this.chunkStart), this.chunkStart = -1, this.setMaxPoint = Math.max(this.setMaxPoint, this.aYV), this.aYV = -1, VV && (this.from = [], this.to = [], this.value = [])
       }
       constructor() {
-        this.chunks = [], this.chunkPos = [], this.chunkStart = -1, this.last = null, this.lastFrom = -1e9, this.lastTo = -1e9, this.from = [], this.to = [], this.value = [], this.EOM = -1, this.setMaxPoint = -1, this.nextLayer = null
+        this.chunks = [], this.chunkPos = [], this.chunkStart = -1, this.last = null, this.lastFrom = -1e9, this.lastTo = -1e9, this.from = [], this.to = [], this.value = [], this.aYV = -1, this.setMaxPoint = -1, this.nextLayer = null
       }
-      add(MM, rM, iM) {
-        this.addInner(MM, rM, iM) || (this.nextLayer || (this.nextLayer = new xr)).add(MM, rM, iM)
+      add(VV, eV, xV) {
+        this.addInner(VV, eV, xV) || (this.nextLayer || (this.nextLayer = new Le)).add(VV, eV, xV)
       }
-      addInner(MM, rM, iM) {
-        let OM = MM - this.lastTo || iM.startSide - this.last.endSide;
-        if (OM <= 0 && (MM - this.lastFrom || iM.startSide - this.last.startSide) < 0) throw new Error("Ranges must be added sorted by `from` position and `startSide`");
-        return !(OM < 0) && (250 == this.from.length && this.finishChunk(!0), this.chunkStart < 0 && (this.chunkStart = MM), this.from.push(MM - this.chunkStart), this.to.push(rM - this.chunkStart), this.last = iM, this.lastFrom = MM, this.lastTo = rM, this.value.push(iM), iM.point && (this.EOM = Math.max(this.EOM, rM - MM)), !0)
+      addInner(VV, eV, xV) {
+        let JV = VV - this.lastTo || xV.startSide - this.last.endSide;
+        if (JV <= 0 && (VV - this.lastFrom || xV.startSide - this.last.startSide) < 0) throw new Error("Ranges must be added sorted by `from` position and `startSide`");
+        return !(JV < 0) && (250 == this.from.length && this.finishChunk(!0), this.chunkStart < 0 && (this.chunkStart = VV), this.from.push(VV - this.chunkStart), this.to.push(eV - this.chunkStart), this.last = xV, this.lastFrom = VV, this.lastTo = eV, this.value.push(xV), xV.point && (this.aYV = Math.max(this.aYV, eV - VV)), !0)
       }
-      addChunk(MM, rM) {
-        if ((MM - this.lastTo || rM.value[0].startSide - this.last.endSide) < 0) return !1;
-        this.from.length && this.finishChunk(!0), this.setMaxPoint = Math.max(this.setMaxPoint, rM.EOM), this.chunks.push(rM), this.chunkPos.push(MM);
-        let iM = rM.value.length - 1;
-        return this.last = rM.value[iM], this.lastFrom = rM.from[iM] + MM, this.lastTo = rM.to[iM] + MM, !0
+      addChunk(VV, eV) {
+        if ((VV - this.lastTo || eV.value[0].startSide - this.last.endSide) < 0) return !1;
+        this.from.length && this.finishChunk(!0), this.setMaxPoint = Math.max(this.setMaxPoint, eV.aYV), this.chunks.push(eV), this.chunkPos.push(VV);
+        let xV = eV.value.length - 1;
+        return this.last = eV.value[xV], this.lastFrom = eV.from[xV] + VV, this.lastTo = eV.to[xV] + VV, !0
       }
       finish() {
-        return this.finishInner(Ar.empty)
+        return this.finishInner(le.empty)
       }
-      finishInner(MM) {
-        if (this.from.length && this.finishChunk(!1), 0 == this.chunks.length) return MM;
-        let rM = Ar.create(this.chunkPos, this.chunks, this.nextLayer ? this.nextLayer.finishInner(MM) : MM, this.setMaxPoint);
-        return this.from = null, rM
+      finishInner(VV) {
+        if (this.from.length && this.finishChunk(!1), 0 == this.chunks.length) return VV;
+        let eV = le.create(this.chunkPos, this.chunks, this.nextLayer ? this.nextLayer.finishInner(VV) : VV, this.setMaxPoint);
+        return this.from = null, eV
       }
     }
 
-    function vr(MM, rM, iM) {
-      let OM = new Map;
-      for (let jM of MM)
-        for (let MM = 0; MM < jM.chunk.length; MM++) jM.chunk[MM].EOM <= 0 && OM.set(jM.chunk[MM], jM.chunkPos[MM]);
-      let SM = new Set;
-      for (let jM of rM)
-        for (let MM = 0; MM < jM.chunk.length; MM++) {
-          let rM = OM.get(jM.chunk[MM]);
-          null == rM || (iM ? iM.mapPos(rM) : rM) != jM.chunkPos[MM] || (null === iM || void 0 === iM ? void 0 : iM.touchesRange(rM, rM + jM.chunk[MM].length)) || SM.add(jM.chunk[MM])
+    function fe(VV, eV, xV) {
+      let JV = new Map;
+      for (let UV of VV)
+        for (let VV = 0; VV < UV.chunk.length; VV++) UV.chunk[VV].aYV <= 0 && JV.set(UV.chunk[VV], UV.chunkPos[VV]);
+      let YV = new Set;
+      for (let UV of eV)
+        for (let VV = 0; VV < UV.chunk.length; VV++) {
+          let eV = JV.get(UV.chunk[VV]);
+          null == eV || (xV ? xV.mapPos(eV) : eV) != UV.chunkPos[VV] || (null === xV || void 0 === xV ? void 0 : xV.touchesRange(eV, eV + UV.chunk[VV].length)) || YV.add(UV.chunk[VV])
         }
-      return SM
+      return YV
     }
-    class Fr {
-      constructor(MM, rM, iM) {
-        let OM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-        this.layer = MM, this.skip = rM, this.UOM = iM, this.rank = OM
+    class me {
+      constructor(VV, eV, xV) {
+        let JV = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+        this.layer = VV, this.skip = eV, this.oYV = xV, this.rank = JV
       }
       get startSide() {
         return this.value ? this.value.startSide : 0
@@ -1923,24 +1923,24 @@ export const modules = {
       get endSide() {
         return this.value ? this.value.endSide : 0
       }
-      goto(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1e9;
-        return this.chunkIndex = this.rangeIndex = 0, this.gotoInner(MM, rM, !1), this
+      goto(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1e9;
+        return this.chunkIndex = this.rangeIndex = 0, this.gotoInner(VV, eV, !1), this
       }
-      gotoInner(MM, rM, iM) {
+      gotoInner(VV, eV, xV) {
         for (; this.chunkIndex < this.layer.chunk.length;) {
-          let rM = this.layer.chunk[this.chunkIndex];
-          if (!(this.skip && this.skip.has(rM) || this.layer.chunkEnd(this.chunkIndex) < MM || rM.EOM < this.UOM)) break;
-          this.chunkIndex++, iM = !1
+          let eV = this.layer.chunk[this.chunkIndex];
+          if (!(this.skip && this.skip.has(eV) || this.layer.chunkEnd(this.chunkIndex) < VV || eV.aYV < this.oYV)) break;
+          this.chunkIndex++, xV = !1
         }
         if (this.chunkIndex < this.layer.chunk.length) {
-          let OM = this.layer.chunk[this.chunkIndex].findIndex(MM - this.layer.chunkPos[this.chunkIndex], rM, !0);
-          (!iM || this.rangeIndex < OM) && this.setRangeIndex(OM)
+          let JV = this.layer.chunk[this.chunkIndex].findIndex(VV - this.layer.chunkPos[this.chunkIndex], eV, !0);
+          (!xV || this.rangeIndex < JV) && this.setRangeIndex(JV)
         }
         this.next()
       }
-      forward(MM, rM) {
-        (this.to - MM || this.endSide - rM) < 0 && this.gotoInner(MM, rM, !0)
+      forward(VV, eV) {
+        (this.to - VV || this.endSide - eV) < 0 && this.gotoInner(VV, eV, !0)
       }
       next() {
         for (;;) {
@@ -1948,203 +1948,203 @@ export const modules = {
             this.from = this.to = 1e9, this.value = null;
             break
           } {
-            let MM = this.layer.chunkPos[this.chunkIndex],
-              rM = this.layer.chunk[this.chunkIndex],
-              iM = MM + rM.from[this.rangeIndex];
-            if (this.from = iM, this.to = MM + rM.to[this.rangeIndex], this.value = rM.value[this.rangeIndex], this.setRangeIndex(this.rangeIndex + 1), this.UOM < 0 || this.value.point && this.to - this.from >= this.UOM) break
+            let VV = this.layer.chunkPos[this.chunkIndex],
+              eV = this.layer.chunk[this.chunkIndex],
+              xV = VV + eV.from[this.rangeIndex];
+            if (this.from = xV, this.to = VV + eV.to[this.rangeIndex], this.value = eV.value[this.rangeIndex], this.setRangeIndex(this.rangeIndex + 1), this.oYV < 0 || this.value.point && this.to - this.from >= this.oYV) break
           }
         }
       }
-      setRangeIndex(MM) {
-        if (MM == this.layer.chunk[this.chunkIndex].value.length) {
+      setRangeIndex(VV) {
+        if (VV == this.layer.chunk[this.chunkIndex].value.length) {
           if (this.chunkIndex++, this.skip)
             for (; this.chunkIndex < this.layer.chunk.length && this.skip.has(this.layer.chunk[this.chunkIndex]);) this.chunkIndex++;
           this.rangeIndex = 0
-        } else this.rangeIndex = MM
+        } else this.rangeIndex = VV
       }
       nextChunk() {
         this.chunkIndex++, this.rangeIndex = 0, this.next()
       }
-      compare(MM) {
-        return this.from - MM.from || this.startSide - MM.startSide || this.rank - MM.rank || this.to - MM.to || this.endSide - MM.endSide
+      compare(VV) {
+        return this.from - VV.from || this.startSide - VV.startSide || this.rank - VV.rank || this.to - VV.to || this.endSide - VV.endSide
       }
     }
-    class Br {
-      constructor(MM) {
-        this.heap = MM
+    class Ke {
+      constructor(VV) {
+        this.heap = VV
       }
-      static from(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1,
-          OM = [];
-        for (let SM = 0; SM < MM.length; SM++)
-          for (let jM = MM[SM]; !jM.dL; jM = jM.nextLayer) jM.EOM >= iM && OM.push(new Fr(jM, rM, iM, SM));
-        return 1 == OM.length ? OM[0] : new Br(OM)
+      static from(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1,
+          JV = [];
+        for (let YV = 0; YV < VV.length; YV++)
+          for (let UV = VV[YV]; !UV.XZ; UV = UV.nextLayer) UV.aYV >= xV && JV.push(new me(UV, eV, xV, YV));
+        return 1 == JV.length ? JV[0] : new Ke(JV)
       }
       get startSide() {
         return this.value ? this.value.startSide : 0
       }
-      goto(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1e9;
-        for (let iM of this.heap) iM.goto(MM, rM);
-        for (let iM = this.heap.length >> 1; iM >= 0; iM--) Xr(this.heap, iM);
+      goto(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1e9;
+        for (let xV of this.heap) xV.goto(VV, eV);
+        for (let xV = this.heap.length >> 1; xV >= 0; xV--) He(this.heap, xV);
         return this.next(), this
       }
-      forward(MM, rM) {
-        for (let iM of this.heap) iM.forward(MM, rM);
-        for (let iM = this.heap.length >> 1; iM >= 0; iM--) Xr(this.heap, iM);
-        (this.to - MM || this.value.endSide - rM) < 0 && this.next()
+      forward(VV, eV) {
+        for (let xV of this.heap) xV.forward(VV, eV);
+        for (let xV = this.heap.length >> 1; xV >= 0; xV--) He(this.heap, xV);
+        (this.to - VV || this.value.endSide - eV) < 0 && this.next()
       }
       next() {
         if (0 == this.heap.length) this.from = this.to = 1e9, this.value = null, this.rank = -1;
         else {
-          let MM = this.heap[0];
-          this.from = MM.from, this.to = MM.to, this.value = MM.value, this.rank = MM.rank, MM.value && MM.next(), Xr(this.heap, 0)
+          let VV = this.heap[0];
+          this.from = VV.from, this.to = VV.to, this.value = VV.value, this.rank = VV.rank, VV.value && VV.next(), He(this.heap, 0)
         }
       }
     }
 
-    function Xr(MM, rM) {
-      for (let iM = MM[rM];;) {
-        let OM = 1 + (rM << 1);
-        if (OM >= MM.length) break;
-        let SM = MM[OM];
-        if (OM + 1 < MM.length && SM.compare(MM[OM + 1]) >= 0 && (SM = MM[OM + 1], OM++), iM.compare(SM) < 0) break;
-        MM[OM] = iM, MM[rM] = SM, rM = OM
+    function He(VV, eV) {
+      for (let xV = VV[eV];;) {
+        let JV = 1 + (eV << 1);
+        if (JV >= VV.length) break;
+        let YV = VV[JV];
+        if (JV + 1 < VV.length && YV.compare(VV[JV + 1]) >= 0 && (YV = VV[JV + 1], JV++), xV.compare(YV) < 0) break;
+        VV[JV] = xV, VV[eV] = YV, eV = JV
       }
     }
-    class Ir {
-      constructor(MM, rM, iM) {
-        this.UOM = iM, this.active = [], this.activeTo = [], this.activeRank = [], this.minActive = -1, this.point = null, this.pointFrom = 0, this.pointRank = 0, this.to = -1e9, this.endSide = 0, this.openStart = -1, this.cursor = Br.from(MM, rM, iM)
+    class ue {
+      constructor(VV, eV, xV) {
+        this.oYV = xV, this.active = [], this.activeTo = [], this.activeRank = [], this.minActive = -1, this.point = null, this.pointFrom = 0, this.pointRank = 0, this.to = -1e9, this.endSide = 0, this.openStart = -1, this.cursor = Ke.from(VV, eV, xV)
       }
-      goto(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1e9;
-        return this.cursor.goto(MM, rM), this.active.length = this.activeTo.length = this.activeRank.length = 0, this.minActive = -1, this.to = MM, this.endSide = rM, this.openStart = -1, this.next(), this
+      goto(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1e9;
+        return this.cursor.goto(VV, eV), this.active.length = this.activeTo.length = this.activeRank.length = 0, this.minActive = -1, this.to = VV, this.endSide = eV, this.openStart = -1, this.next(), this
       }
-      forward(MM, rM) {
-        for (; this.minActive > -1 && (this.activeTo[this.minActive] - MM || this.active[this.minActive].endSide - rM) < 0;) this.removeActive(this.minActive);
-        this.cursor.forward(MM, rM)
+      forward(VV, eV) {
+        for (; this.minActive > -1 && (this.activeTo[this.minActive] - VV || this.active[this.minActive].endSide - eV) < 0;) this.removeActive(this.minActive);
+        this.cursor.forward(VV, eV)
       }
-      removeActive(MM) {
-        Tr(this.active, MM), Tr(this.activeTo, MM), Tr(this.activeRank, MM), this.minActive = cr(this.active, this.activeTo)
+      removeActive(VV) {
+        Ie(this.active, VV), Ie(this.activeTo, VV), Ie(this.activeRank, VV), this.minActive = Oe(this.active, this.activeTo)
       }
-      addActive(MM) {
-        let rM = 0,
+      addActive(VV) {
+        let eV = 0,
           {
-            value: iM,
-            to: OM,
-            rank: SM
+            value: xV,
+            to: JV,
+            rank: YV
           } = this.cursor;
-        for (; rM < this.activeRank.length && (SM - this.activeRank[rM] || OM - this.activeTo[rM]) > 0;) rM++;
-        Vr(this.active, rM, iM), Vr(this.activeTo, rM, OM), Vr(this.activeRank, rM, SM), MM && Vr(MM, rM, this.cursor.from), this.minActive = cr(this.active, this.activeTo)
+        for (; eV < this.activeRank.length && (YV - this.activeRank[eV] || JV - this.activeTo[eV]) > 0;) eV++;
+        de(this.active, eV, xV), de(this.activeTo, eV, JV), de(this.activeRank, eV, YV), VV && de(VV, eV, this.cursor.from), this.minActive = Oe(this.active, this.activeTo)
       }
       next() {
-        let MM = this.to,
-          rM = this.point;
+        let VV = this.to,
+          eV = this.point;
         this.point = null;
-        let iM = this.openStart < 0 ? [] : null;
+        let xV = this.openStart < 0 ? [] : null;
         for (;;) {
-          let OM = this.minActive;
-          if (OM > -1 && (this.activeTo[OM] - this.cursor.from || this.active[OM].endSide - this.cursor.startSide) < 0) {
-            if (this.activeTo[OM] > MM) {
-              this.to = this.activeTo[OM], this.endSide = this.active[OM].endSide;
+          let JV = this.minActive;
+          if (JV > -1 && (this.activeTo[JV] - this.cursor.from || this.active[JV].endSide - this.cursor.startSide) < 0) {
+            if (this.activeTo[JV] > VV) {
+              this.to = this.activeTo[JV], this.endSide = this.active[JV].endSide;
               break
             }
-            this.removeActive(OM), iM && Tr(iM, OM)
+            this.removeActive(JV), xV && Ie(xV, JV)
           } else {
             if (!this.cursor.value) {
               this.to = this.endSide = 1e9;
               break
             }
-            if (this.cursor.from > MM) {
+            if (this.cursor.from > VV) {
               this.to = this.cursor.from, this.endSide = this.cursor.startSide;
               break
             } {
-              let MM = this.cursor.value;
-              if (MM.point) {
-                if (!(rM && this.cursor.to == this.to && this.cursor.from < this.cursor.to)) {
-                  this.point = MM, this.pointFrom = this.cursor.from, this.pointRank = this.cursor.rank, this.to = this.cursor.to, this.endSide = MM.endSide, this.cursor.next(), this.forward(this.to, this.endSide);
+              let VV = this.cursor.value;
+              if (VV.point) {
+                if (!(eV && this.cursor.to == this.to && this.cursor.from < this.cursor.to)) {
+                  this.point = VV, this.pointFrom = this.cursor.from, this.pointRank = this.cursor.rank, this.to = this.cursor.to, this.endSide = VV.endSide, this.cursor.next(), this.forward(this.to, this.endSide);
                   break
                 }
                 this.cursor.next()
-              } else this.addActive(iM), this.cursor.next()
+              } else this.addActive(xV), this.cursor.next()
             }
           }
         }
-        if (iM) {
+        if (xV) {
           this.openStart = 0;
-          for (let rM = iM.length - 1; rM >= 0 && iM[rM] < MM; rM--) this.openStart++
+          for (let eV = xV.length - 1; eV >= 0 && xV[eV] < VV; eV--) this.openStart++
         }
       }
-      activeForPoint(MM) {
+      activeForPoint(VV) {
         if (!this.active.length) return this.active;
-        let rM = [];
-        for (let iM = this.active.length - 1; iM >= 0 && !(this.activeRank[iM] < this.pointRank); iM--)(this.activeTo[iM] > MM || this.activeTo[iM] == MM && this.active[iM].endSide >= this.point.endSide) && rM.push(this.active[iM]);
-        return rM.reverse()
+        let eV = [];
+        for (let xV = this.active.length - 1; xV >= 0 && !(this.activeRank[xV] < this.pointRank); xV--)(this.activeTo[xV] > VV || this.activeTo[xV] == VV && this.active[xV].endSide >= this.point.endSide) && eV.push(this.active[xV]);
+        return eV.reverse()
       }
-      openEnd(MM) {
-        let rM = 0;
-        for (let iM = this.activeTo.length - 1; iM >= 0 && this.activeTo[iM] > MM; iM--) rM++;
-        return rM
-      }
-    }
-
-    function Kr(MM, rM, iM, OM, SM, jM) {
-      MM.goto(rM), iM.goto(OM);
-      let aM = OM + SM,
-        PM = OM,
-        nM = OM - rM,
-        QM = !!jM.boundChange;
-      for (let zM = !1;;) {
-        let rM = MM.to + nM - iM.to,
-          OM = rM || MM.endSide - iM.endSide,
-          SM = OM < 0 ? MM.to + nM : iM.to,
-          LM = Math.min(SM, aM);
-        if (MM.point || iM.point ? (MM.point && iM.point && or(MM.point, iM.point) && qr(MM.activeForPoint(MM.to), iM.activeForPoint(iM.to)) || jM.comparePoint(PM, LM, MM.point, iM.point), zM = !1) : (zM && jM.boundChange(PM), LM > PM && !qr(MM.active, iM.active) && jM.compareRange(PM, LM, MM.active, iM.active), QM && LM < aM && (rM || MM.openEnd(SM) != iM.openEnd(SM)) && (zM = !0)), SM > aM) break;
-        PM = SM, OM <= 0 && MM.next(), OM >= 0 && iM.next()
+      openEnd(VV) {
+        let eV = 0;
+        for (let xV = this.activeTo.length - 1; xV >= 0 && this.activeTo[xV] > VV; xV--) eV++;
+        return eV
       }
     }
 
-    function qr(MM, rM) {
-      if (MM.length != rM.length) return !1;
-      for (let iM = 0; iM < MM.length; iM++)
-        if (MM[iM] != rM[iM] && !or(MM[iM], rM[iM])) return !1;
+    function se(VV, eV, xV, JV, YV, UV) {
+      VV.goto(eV), xV.goto(JV);
+      let yV = JV + YV,
+        pV = JV,
+        QV = JV - eV,
+        nV = !!UV.boundChange;
+      for (let wV = !1;;) {
+        let eV = VV.to + QV - xV.to,
+          JV = eV || VV.endSide - xV.endSide,
+          YV = JV < 0 ? VV.to + QV : xV.to,
+          ZV = Math.min(YV, yV);
+        if (VV.point || xV.point ? (VV.point && xV.point && ae(VV.point, xV.point) && Se(VV.activeForPoint(VV.to), xV.activeForPoint(xV.to)) || UV.comparePoint(pV, ZV, VV.point, xV.point), wV = !1) : (wV && UV.boundChange(pV), ZV > pV && !Se(VV.active, xV.active) && UV.compareRange(pV, ZV, VV.active, xV.active), nV && ZV < yV && (eV || VV.openEnd(YV) != xV.openEnd(YV)) && (wV = !0)), YV > yV) break;
+        pV = YV, JV <= 0 && VV.next(), JV >= 0 && xV.next()
+      }
+    }
+
+    function Se(VV, eV) {
+      if (VV.length != eV.length) return !1;
+      for (let xV = 0; xV < VV.length; xV++)
+        if (VV[xV] != eV[xV] && !ae(VV[xV], eV[xV])) return !1;
       return !0
     }
 
-    function Tr(MM, rM) {
-      for (let iM = rM, OM = MM.length - 1; iM < OM; iM++) MM[iM] = MM[iM + 1];
-      MM.pop()
+    function Ie(VV, eV) {
+      for (let xV = eV, JV = VV.length - 1; xV < JV; xV++) VV[xV] = VV[xV + 1];
+      VV.pop()
     }
 
-    function Vr(MM, rM, iM) {
-      for (let OM = MM.length - 1; OM >= rM; OM--) MM[OM + 1] = MM[OM];
-      MM[rM] = iM
+    function de(VV, eV, xV) {
+      for (let JV = VV.length - 1; JV >= eV; JV--) VV[JV + 1] = VV[JV];
+      VV[eV] = xV
     }
 
-    function cr(MM, rM) {
-      let iM = -1,
-        OM = 1e9;
-      for (let SM = 0; SM < rM.length; SM++)(rM[SM] - OM || MM[SM].endSide - MM[iM].endSide) < 0 && (iM = SM, OM = rM[SM]);
-      return iM
+    function Oe(VV, eV) {
+      let xV = -1,
+        JV = 1e9;
+      for (let YV = 0; YV < eV.length; YV++)(eV[YV] - JV || VV[YV].endSide - VV[xV].endSide) < 0 && (xV = YV, JV = eV[YV]);
+      return xV
     }
 
-    function Mi(MM, rM) {
-      let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : MM.length,
-        OM = 0;
-      for (let SM = 0; SM < iM && SM < MM.length;) 9 == MM.charCodeAt(SM) ? (OM += rM - OM % rM, SM++) : (OM++, SM = wM(MM, SM));
-      return OM
+    function Vx(VV, eV) {
+      let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : VV.length,
+        JV = 0;
+      for (let YV = 0; YV < xV && YV < VV.length;) 9 == VV.charCodeAt(YV) ? (JV += eV - JV % eV, YV++) : (JV++, YV = NV(VV, YV));
+      return JV
     }
 
-    function ri(MM, rM, iM, OM) {
-      for (let SM = 0, jM = 0;;) {
-        if (jM >= rM) return SM;
-        if (SM == MM.length) break;
-        jM += 9 == MM.charCodeAt(SM) ? iM - jM % iM : 1, SM = wM(MM, SM)
+    function ex(VV, eV, xV, JV) {
+      for (let YV = 0, UV = 0;;) {
+        if (UV >= eV) return YV;
+        if (YV == VV.length) break;
+        UV += 9 == VV.charCodeAt(YV) ? xV - UV % xV : 1, YV = NV(VV, YV)
       }
-      return !0 === OM ? -1 : MM.length
+      return !0 === JV ? -1 : VV.length
     }
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const VV in modules) Object.freeze(modules[VV]);

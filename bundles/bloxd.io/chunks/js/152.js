@@ -1,94 +1,94 @@
 export const id = 152;
 export const ids = [151, 152];
 export const modules = {
-  7142: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      forgetShaderPackActiveHint: () => uM,
-      isOtherApiVersion: () => bM,
-      isShaderPackActive: () => UM,
-      isShaderPackChangePending: () => eM,
-      markShaderPackChangePending: () => CM,
-      pageShaderPackValidationVersion: () => wM,
-      reconcileStoredShaderPackHint: () => gM,
-      removeShaderPack: () => EM,
-      replaceShaderPack: () => dM,
-      saveShaderPack: () => JM,
-      shaderPackNeedsCheck: () => tM,
-      storedPackOutcome: () => GM,
-      storedShaderPackFiles: () => mM,
-      toStoredShaderPack: () => LM
+  7212: (VV, eV, xV) => {
+    xV.r(eV), xV.d(eV, {
+      forgetShaderPackActiveHint: () => zV,
+      isOtherApiVersion: () => AV,
+      isShaderPackActive: () => tV,
+      isShaderPackChangePending: () => PV,
+      markShaderPackChangePending: () => TV,
+      pageShaderPackValidationVersion: () => NV,
+      reconcileStoredShaderPackHint: () => MV,
+      removeShaderPack: () => qV,
+      replaceShaderPack: () => EV,
+      saveShaderPack: () => bV,
+      shaderPackNeedsCheck: () => XV,
+      storedPackOutcome: () => FV,
+      storedShaderPackFiles: () => vV,
+      toStoredShaderPack: () => ZV
     });
-    var OM = iM(5442),
-      SM = iM(5435),
-      jM = iM(30),
-      aM = iM(3855),
-      PM = iM(7148),
-      nM = iM(7120);
-    const QM = "shaderPackChangePending";
-    let zM = null;
+    var JV = xV(5561),
+      YV = xV(5556),
+      UV = xV(40),
+      yV = xV(3907),
+      pV = xV(7216),
+      QV = xV(7191);
+    const nV = "shaderPackChangePending";
+    let wV = null;
 
-    function LM(MM, rM, iM) {
+    function ZV(VV, eV, xV) {
       return {
-        manifest: MM.manifest,
-        files: (0, OM.w)(MM.files),
-        validation: rM,
-        ...iM && {
-          listing: iM
+        manifest: VV.manifest,
+        files: (0, JV.t)(VV.files),
+        validation: eV,
+        ...xV && {
+          listing: xV
         }
       }
     }
 
-    function mM(MM) {
-      return Object.keys(MM.files).map((rM => ({
-        path: rM,
-        source: MM.files[rM]
+    function vV(VV) {
+      return Object.keys(VV.files).map((eV => ({
+        path: eV,
+        source: VV.files[eV]
       })))
     }
-    let HM = Promise.resolve();
+    let rV = Promise.resolve();
 
-    function hM(MM) {
-      const rM = HM.then(MM);
-      return HM = rM.catch((() => {})), rM
-    }
-
-    function JM(MM, rM) {
-      return hM((() => yM(MM, rM)))
+    function kV(VV) {
+      const eV = rV.then(VV);
+      return rV = eV.catch((() => {})), eV
     }
 
-    function dM(MM, rM, iM) {
-      return hM((async () => JSON.stringify(await (0, PM.d)()) === JSON.stringify(MM) && (null === rM ? (await lM(), !0) : yM(rM, iM))))
-    }
-    async function yM(MM, rM) {
-      const iM = await jM.f.setItem(PM.b, MM);
-      return iM && RM(MM, rM), iM
-    }
-    async function lM() {
-      await jM.f.removeItem(PM.b), jM.g.removeItem(aM.c)
+    function bV(VV, eV) {
+      return kV((() => BV(VV, eV)))
     }
 
-    function EM() {
-      return hM(lM)
+    function EV(VV, eV, xV) {
+      return kV((async () => JSON.stringify(await (0, pV.f)()) === JSON.stringify(VV) && (null === eV ? (await jV(), !0) : BV(eV, xV))))
+    }
+    async function BV(VV, eV) {
+      const xV = await UV.i.setItem(pV.d, VV);
+      return xV && GV(VV, eV), xV
+    }
+    async function jV() {
+      await UV.i.removeItem(pV.d), UV.m.removeItem(yV.d)
     }
 
-    function UM(MM, rM) {
-      return "active" === GM(MM, rM).kind
+    function qV() {
+      return kV(jV)
     }
 
-    function GM(MM, rM) {
-      var iM;
-      return null === MM ? {
+    function tV(VV, eV) {
+      return "active" === FV(VV, eV).kind
+    }
+
+    function FV(VV, eV) {
+      var xV;
+      return null === VV ? {
         kind: "none",
         reason: "nothingStored"
-      } : bM(MM) ? {
+      } : AV(VV) ? {
         kind: "none",
         reason: "otherApiVersion"
-      } : !1 !== (null === (iM = MM.validation) || void 0 === iM ? void 0 : iM.ok) || MM.validation.fromRecheck ? null === rM ? {
+      } : !1 !== (null === (xV = VV.validation) || void 0 === xV ? void 0 : xV.ok) || VV.validation.fromRecheck ? null === eV ? {
         kind: "none",
         reason: "noCompiler"
-      } : tM(MM, rM) ? {
+      } : XV(VV, eV) ? {
         kind: "blocked",
         messageKey: "shaderPack:failedUnchecked"
-      } : MM.validation.ok ? {
+      } : VV.validation.ok ? {
         kind: "active"
       } : {
         kind: "blocked",
@@ -99,68 +99,68 @@ export const modules = {
       }
     }
 
-    function CM() {
-      jM.k.setItem(QM, performance.timeOrigin)
+    function TV() {
+      UV.q.setItem(nV, performance.timeOrigin)
     }
 
-    function eM() {
-      return jM.k.getItem(QM) === performance.timeOrigin
+    function PV() {
+      return UV.q.getItem(nV) === performance.timeOrigin
     }
 
-    function bM(MM) {
-      return !(0, SM.k)(MM.manifest.apiVersion)
+    function AV(VV) {
+      return !(0, YV.j)(VV.manifest.apiVersion)
     }
 
-    function wM(MM) {
-      return zM ??= MM.KD((0, nM.shaderPackTextures)()), zM
+    function NV(VV) {
+      return wV ??= VV.lD((0, QV.shaderPackTextures)()), wV
     }
 
-    function tM(MM, rM) {
-      var iM;
-      return (null === (iM = MM.validation) || void 0 === iM ? void 0 : iM.headerVersion) !== wM(rM)
+    function XV(VV, eV) {
+      var xV;
+      return (null === (xV = VV.validation) || void 0 === xV ? void 0 : xV.headerVersion) !== NV(eV)
     }
 
-    function gM(MM) {
-      return hM((async () => {
-        RM(await (0, PM.d)(!0), MM)
+    function MV(VV) {
+      return kV((async () => {
+        GV(await (0, pV.f)(!0), VV)
       }))
     }
 
-    function uM() {
-      return hM((async () => {
-        jM.g.removeItem(aM.c)
+    function zV() {
+      return kV((async () => {
+        UV.m.removeItem(yV.d)
       }))
     }
 
-    function RM(MM, rM) {
-      UM(MM, rM) ? jM.g.setItem(aM.c, !0) : jM.g.removeItem(aM.c)
+    function GV(VV, eV) {
+      tV(VV, eV) ? UV.m.setItem(yV.d, !0) : UV.m.removeItem(yV.d)
     }
   },
-  7120: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      loadShaderPackTextures: () => aM,
-      shaderPackTextures: () => PM
+  7191: (VV, eV, xV) => {
+    xV.r(eV), xV.d(eV, {
+      loadShaderPackTextures: () => yV,
+      shaderPackTextures: () => pV
     });
-    var OM = iM(5442);
-    let SM = null,
-      jM = null;
+    var JV = xV(5561);
+    let YV = null,
+      UV = null;
 
-    function aM() {
-      return jM ??= Promise.all([iM.e(84), iM.e(204)]).then((() => iM(41585))).then((MM => {
+    function yV() {
+      return UV ??= Promise.all([xV.e(84), xV.e(204)]).then((() => xV(41764))).then((VV => {
         let {
-          FORMER_BLOCK_IMAGE_NAMES: rM,
-          textureNameToIndex: iM,
-          textureAnimationData: jM
-        } = MM;
-        return SM ??= (0, OM.j)(iM, jM, rM), SM
-      })), jM
+          FORMER_BLOCK_IMAGE_NAMES: eV,
+          textureNameToIndex: xV,
+          textureAnimationData: UV
+        } = VV;
+        return YV ??= (0, JV.j)(xV, UV, eV), YV
+      })), UV
     }
 
-    function PM() {
-      if (null === SM) throw new Error("Shader pack textures read before loadShaderPackTextures");
-      return SM
+    function pV() {
+      if (null === YV) throw new Error("Shader pack textures read before loadShaderPackTextures");
+      return YV
     }
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const VV in modules) Object.freeze(modules[VV]);

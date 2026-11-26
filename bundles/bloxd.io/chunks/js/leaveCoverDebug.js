@@ -1,167 +1,167 @@
 export const id = 44;
 export const ids = [44];
 export const modules = {
-  5087: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      LEAVE_POINTER_MARGIN_PX: () => aM,
-      RECHECK_MS: () => jM,
-      iframeHost: () => zM,
-      isNear: () => JM,
-      leaveCoverLine: () => mM,
-      overlaps: () => hM,
-      resetLeaveCoverDebugForTest: () => lM,
-      startLeaveCoverDebug: () => UM,
-      startLeaveCoverProbe: () => EM,
-      whereIs: () => LM
+  5200: (VV, eV, xV) => {
+    xV.r(eV), xV.d(eV, {
+      LEAVE_POINTER_MARGIN_PX: () => yV,
+      RECHECK_MS: () => UV,
+      iframeHost: () => wV,
+      isNear: () => bV,
+      leaveCoverLine: () => vV,
+      overlaps: () => kV,
+      resetLeaveCoverDebugForTest: () => jV,
+      startLeaveCoverDebug: () => tV,
+      startLeaveCoverProbe: () => qV,
+      whereIs: () => ZV
     });
-    var OM = iM(5096),
-      SM = iM(3122);
-    const jM = 2e3,
-      aM = 32,
-      PM = 80,
-      nM = ".EverythingMenuBannerDiv";
+    var JV = xV(5204),
+      YV = xV(3142);
+    const UV = 2e3,
+      yV = 32,
+      pV = 80,
+      QV = ".EverythingMenuBannerDiv";
 
-    function QM(MM) {
-      const rM = MM.trim().replace(/[\s=]+/g, ".").slice(0, PM);
-      return "" === rM ? "-" : rM
+    function nV(VV) {
+      const eV = VV.trim().replace(/[\s=]+/g, ".").slice(0, pV);
+      return "" === eV ? "-" : eV
     }
 
-    function zM(MM, rM) {
-      const iM = MM.getAttribute("src");
-      if (null === iM || "" === iM.trim()) return "none";
+    function wV(VV, eV) {
+      const xV = VV.getAttribute("src");
+      if (null === xV || "" === xV.trim()) return "none";
       try {
-        const MM = new URL(iM, rM);
-        return "http:" === MM.protocol || "https:" === MM.protocol ? MM.hostname : MM.protocol.replace(":", "")
+        const VV = new URL(xV, eV);
+        return "http:" === VV.protocol || "https:" === VV.protocol ? VV.hostname : VV.protocol.replace(":", "")
       } catch {
         return "invalid"
       }
     }
 
-    function LM(MM, rM) {
-      return null !== MM.closest(nM) ? "banner" : null !== rM && rM.contains(MM) ? "app" : "body"
+    function ZV(VV, eV) {
+      return null !== VV.closest(QV) ? "banner" : null !== eV && eV.contains(VV) ? "app" : "body"
     }
 
-    function mM(MM, rM, iM, OM) {
-      var SM, jM, aM, PM;
-      if (null === MM || MM === rM || rM.contains(MM)) return null;
-      const nM = null === (SM = MM.ownerDocument.defaultView) || void 0 === SM ? void 0 : SM.getComputedStyle(MM),
-        mM = MM.getBoundingClientRect();
-      return `leave covered ${[["trigger",OM],["where",LM(MM,iM)],["tag",MM.tagName.toLowerCase()],["id",QM(MM.id)],["class",QM(null!==(jM=MM.getAttribute("class"))&&void 0!==jM?jM:"")],["z",QM(null!==(aM=null===nM||void 0===nM?void 0:nM.zIndex)&&void 0!==aM?aM:"")],["position",QM(null!==(PM=null===nM||void 0===nM?void 0:nM.position)&&void 0!==PM?PM:"")],["size",`${Math.round(mM.width)}x${Math.round(mM.height)}`],["iframe","IFRAME"===MM.tagName?QM(zM(MM,MM.ownerDocument.baseURI)):"-"]].map((MM=>{let[rM,iM]=MM;return`${rM}=${iM}`})).join(" ")}`
+    function vV(VV, eV, xV, JV) {
+      var YV, UV, yV, pV;
+      if (null === VV || VV === eV || eV.contains(VV)) return null;
+      const QV = null === (YV = VV.ownerDocument.defaultView) || void 0 === YV ? void 0 : YV.getComputedStyle(VV),
+        vV = VV.getBoundingClientRect();
+      return `leave covered ${[["trigger",JV],["where",ZV(VV,xV)],["tag",VV.tagName.toLowerCase()],["id",nV(VV.id)],["class",nV(null!==(UV=VV.getAttribute("class"))&&void 0!==UV?UV:"")],["z",nV(null!==(yV=null===QV||void 0===QV?void 0:QV.zIndex)&&void 0!==yV?yV:"")],["position",nV(null!==(pV=null===QV||void 0===QV?void 0:QV.position)&&void 0!==pV?pV:"")],["size",`${Math.round(vV.width)}x${Math.round(vV.height)}`],["iframe","IFRAME"===VV.tagName?nV(wV(VV,VV.ownerDocument.baseURI)):"-"]].map((VV=>{let[eV,xV]=VV;return`${eV}=${xV}`})).join(" ")}`
     }
 
-    function HM(MM) {
-      const rM = MM.getBoundingClientRect();
-      return 0 === rM.width || 0 === rM.height ? null : {
-        x: rM.left + rM.width / 2,
-        y: rM.top + rM.height / 2
+    function rV(VV) {
+      const eV = VV.getBoundingClientRect();
+      return 0 === eV.width || 0 === eV.height ? null : {
+        x: eV.left + eV.width / 2,
+        y: eV.top + eV.height / 2
       }
     }
 
-    function hM(MM, rM) {
-      const iM = MM.getBoundingClientRect(),
-        OM = rM.getBoundingClientRect();
-      return Math.max(iM.left, OM.left) < Math.min(iM.right, OM.right) && Math.max(iM.top, OM.top) < Math.min(iM.bottom, OM.bottom)
+    function kV(VV, eV) {
+      const xV = VV.getBoundingClientRect(),
+        JV = eV.getBoundingClientRect();
+      return Math.max(xV.left, JV.left) < Math.min(xV.right, JV.right) && Math.max(xV.top, JV.top) < Math.min(xV.bottom, JV.bottom)
     }
 
-    function JM(MM, rM, iM, OM) {
-      const SM = MM.getBoundingClientRect();
-      return rM >= SM.left - OM && rM <= SM.right + OM && iM >= SM.top - OM && iM <= SM.bottom + OM
+    function bV(VV, eV, xV, JV) {
+      const YV = VV.getBoundingClientRect();
+      return eV >= YV.left - JV && eV <= YV.right + JV && xV >= YV.top - JV && xV <= YV.bottom + JV
     }
 
-    function dM(MM) {
-      (0, SM.k)("leavecover", MM)
+    function EV(VV) {
+      (0, YV.i)("leavecover", VV)
     }
-    const yM = new Set;
+    const BV = new Set;
 
-    function lM() {
-      yM.clear()
+    function jV() {
+      BV.clear()
     }
 
-    function EM(MM) {
-      let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : dM;
-      const iM = MM.ownerDocument,
-        OM = iM.defaultView;
-      if (null === OM) return () => {};
-      const SM = (MM, iM) => {
-          null === MM || yM.has(iM) || (yM.add(iM), rM(MM))
+    function qV(VV) {
+      let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : EV;
+      const xV = VV.ownerDocument,
+        JV = xV.defaultView;
+      if (null === JV) return () => {};
+      const YV = (VV, xV) => {
+          null === VV || BV.has(xV) || (BV.add(xV), eV(VV))
         },
-        PM = rM => {
-          const OM = MM.isConnected ? HM(MM) : null;
-          if (null === OM) return;
-          const jM = iM.elementFromPoint(OM.x, OM.y);
-          if (null !== jM) {
-            const OM = iM.getElementById("root");
-            SM(mM(jM, MM, OM, rM), LM(jM, OM))
+        pV = eV => {
+          const JV = VV.isConnected ? rV(VV) : null;
+          if (null === JV) return;
+          const UV = xV.elementFromPoint(JV.x, JV.y);
+          if (null !== UV) {
+            const JV = xV.getElementById("root");
+            YV(vV(UV, VV, JV, eV), ZV(UV, JV))
           }
         };
-      let nM = null;
-      const QM = MM => {
-        nM = {
-          x: MM.clientX,
-          y: MM.clientY
+      let QV = null;
+      const nV = VV => {
+        QV = {
+          x: VV.clientX,
+          y: VV.clientY
         }
       };
-      let zM = null;
-      const lM = () => {
-          zM = setTimeout((() => {
-            zM = null;
-            const rM = iM.activeElement;
-            if ("IFRAME" !== (null === rM || void 0 === rM ? void 0 : rM.tagName) || !MM.isConnected) return;
-            const OM = HM(MM),
-              jM = null !== OM && JM(rM, OM.x, OM.y, 0),
-              PM = nM,
-              QM = null !== PM && JM(MM, PM.x, PM.y, aM);
-            if (hM(rM, MM) && (jM || QM)) {
-              const OM = iM.getElementById("root");
-              SM(mM(rM, MM, OM, "blurIframe"), LM(rM, OM))
+      let wV = null;
+      const jV = () => {
+          wV = setTimeout((() => {
+            wV = null;
+            const eV = xV.activeElement;
+            if ("IFRAME" !== (null === eV || void 0 === eV ? void 0 : eV.tagName) || !VV.isConnected) return;
+            const JV = rV(VV),
+              UV = null !== JV && bV(eV, JV.x, JV.y, 0),
+              pV = QV,
+              nV = null !== pV && bV(VV, pV.x, pV.y, yV);
+            if (kV(eV, VV) && (UV || nV)) {
+              const JV = xV.getElementById("root");
+              YV(vV(eV, VV, JV, "blurIframe"), ZV(eV, JV))
             }
           }), 0)
         },
-        EM = OM.requestAnimationFrame((() => {
-          PM("open")
+        qV = JV.requestAnimationFrame((() => {
+          pV("open")
         })),
-        UM = setTimeout((() => {
-          PM("recheck")
-        }), jM);
-      return OM.addEventListener("pointermove", QM, {
+        tV = setTimeout((() => {
+          pV("recheck")
+        }), UV);
+      return JV.addEventListener("pointermove", nV, {
         capture: !0,
         passive: !0
-      }), OM.addEventListener("pointerdown", QM, {
+      }), JV.addEventListener("pointerdown", nV, {
         capture: !0,
         passive: !0
-      }), OM.addEventListener("blur", lM), () => {
-        OM.cancelAnimationFrame(EM), clearTimeout(UM), null !== zM && clearTimeout(zM), OM.removeEventListener("pointermove", QM, {
+      }), JV.addEventListener("blur", jV), () => {
+        JV.cancelAnimationFrame(qV), clearTimeout(tV), null !== wV && clearTimeout(wV), JV.removeEventListener("pointermove", nV, {
           capture: !0
-        }), OM.removeEventListener("pointerdown", QM, {
+        }), JV.removeEventListener("pointerdown", nV, {
           capture: !0
-        }), OM.removeEventListener("blur", lM)
+        }), JV.removeEventListener("blur", jV)
       }
     }
 
-    function UM() {
-      (0, OM.i)(EM)
+    function tV() {
+      (0, JV.j)(qV)
     }
   },
-  5096: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => aM,
-      e: () => jM,
-      i: () => SM
+  5204: (VV, eV, xV) => {
+    xV.d(eV, {
+      c: () => yV,
+      f: () => UV,
+      j: () => YV
     });
-    let OM = null;
+    let JV = null;
 
-    function SM(MM) {
-      OM = MM
+    function YV(VV) {
+      JV = VV
     }
 
-    function jM() {
-      return OM
+    function UV() {
+      return JV
     }
 
-    function aM(MM) {
-      return "bloxd" === MM.site && !MM.isMobileApp && !MM.isTouchScreen
+    function yV(VV) {
+      return "bloxd" === VV.site && !VV.isMobileApp && !VV.isTouchScreen
     }
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const VV in modules) Object.freeze(modules[VV]);

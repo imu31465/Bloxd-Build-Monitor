@@ -1,78 +1,78 @@
 export const id = 274;
 export const ids = [274];
 export const modules = {
-  40915: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      playDocsSound: () => nM
+  41053: (VV, eV, xV) => {
+    xV.r(eV), xV.d(eV, {
+      playDocsSound: () => QV
     });
-    var OM = iM(5265),
-      SM = iM(37705),
-      jM = iM(1202),
-      aM = iM(37713);
-    const PM = new Map;
+    var JV = xV(5353),
+      YV = xV(37930),
+      UV = xV(1230),
+      yV = xV(37935);
+    const pV = new Map;
 
-    function nM(MM, rM, iM, nM, QM) {
-      let zM, LM = 0;
-      if (rM) zM = new OM.Howl({
-        src: [`${jM.clientSideServerUrls.staticUrl}/sounds/music/${MM}.mp3`],
+    function QV(VV, eV, xV, QV, nV) {
+      let wV, ZV = 0;
+      if (eV) wV = new JV.Howl({
+        src: [`${UV.clientSideServerUrls.staticUrl}/sounds/music/${VV}.mp3`],
         html5: !0,
-        volume: iM
+        volume: xV
       });
       else {
-        const rM = (0, SM.r)(MM);
-        LM = rM.ms / 1e3, zM = PM.get(MM), zM || (zM = new OM.Howl({
-          src: [...rM.src],
+        const eV = (0, YV.w)(VV);
+        ZV = eV.ms / 1e3, wV = pV.get(VV), wV || (wV = new JV.Howl({
+          src: [...eV.src],
           volume: 1
-        }), PM.set(MM, zM))
+        }), pV.set(VV, wV))
       }
-      const mM = rM ? zM.play() : zM.play(aM.e);
-      zM.volume(iM, mM), nM > 0 && zM.seek(nM, mM);
-      const HM = () => {
-        const MM = zM.duration();
-        return rM || MM > 0 ? MM : LM
+      const vV = eV ? wV.play() : wV.play(yV.e);
+      wV.volume(xV, vV), QV > 0 && wV.seek(QV, vV);
+      const rV = () => {
+        const VV = wV.duration();
+        return eV || VV > 0 ? VV : ZV
       };
-      let hM = !1;
-      const JM = MM => {
-          hM || (hM = !0, zM.off("play", dM, mM), zM.off("end", yM, mM), zM.off("loaderror", EM), zM.off("playerror", lM, mM), rM && zM.unload(), QM.onEnd(MM))
+      let kV = !1;
+      const bV = VV => {
+          kV || (kV = !0, wV.off("play", EV, vV), wV.off("end", BV, vV), wV.off("loaderror", qV), wV.off("playerror", jV, vV), eV && wV.unload(), nV.onEnd(VV))
         },
-        dM = () => {
-          QM.onPlay(HM())
+        EV = () => {
+          nV.onPlay(rV())
         },
-        yM = () => {
-          JM(!1)
+        BV = () => {
+          bV(!1)
         },
-        lM = (rM, iM) => {
-          console.error(`Could not play docs sound ${MM}`, iM), JM(!0)
+        jV = (eV, xV) => {
+          console.error(`Could not play docs sound ${VV}`, xV), bV(!0)
         },
-        EM = (iM, OM) => {
-          rM || PM.get(MM) !== zM || (PM.delete(MM), zM.unload()), lM(iM, OM)
+        qV = (xV, JV) => {
+          eV || pV.get(VV) !== wV || (pV.delete(VV), wV.unload()), jV(xV, JV)
         };
-      return zM.on("play", dM, mM), zM.once("end", yM, mM), zM.once("loaderror", EM), zM.once("playerror", lM, mM), {
+      return wV.on("play", EV, vV), wV.once("end", BV, vV), wV.once("loaderror", qV), wV.once("playerror", jV, vV), {
         pause: () => {
-          zM.pause(mM)
+          wV.pause(vV)
         },
         resume: () => {
-          zM.play(mM)
+          wV.play(vV)
         },
-        seek: MM => {
-          const rM = HM(),
-            iM = Math.max(MM, 0);
-          zM.seek(rM > 0 ? Math.min(iM, rM) : iM, mM)
+        seek: VV => {
+          const eV = rV(),
+            xV = Math.max(VV, 0);
+          wV.seek(eV > 0 ? Math.min(xV, eV) : xV, vV)
         },
-        XE: () => {
-          const MM = zM.seek(mM);
-          return "number" === typeof MM ? Math.max(0, MM) : 0
+        YF: () => {
+          const VV = wV.seek(vV);
+          return "number" === typeof VV ? Math.max(0, VV) : 0
         },
-        getDuration: HM,
-        setVolume: MM => {
-          zM.volume(MM, mM)
+        getDuration: rV,
+        setVolume: VV => {
+          wV.volume(VV, vV)
         },
         stop: () => {
-          hM || (zM.stop(mM), JM(!1))
+          kV || (wV.stop(vV), bV(!1))
         }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const VV in modules) Object.freeze(modules[VV]);

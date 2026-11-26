@@ -1,34 +1,34 @@
 export const id = 290;
 export const ids = [290];
 export const modules = {
-  41573: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      default: () => yi
+  41753: (VV, eV, xV) => {
+    xV.r(eV), xV.d(eV, {
+      default: () => Ex
     });
-    var OM = iM(44),
-      SM = iM(1116),
-      jM = iM.n(SM);
-    const aM = ["forward", "backward", "left", "right", "jump", "sprint", "crouch", "primary", "secondary", "middle"],
-      PM = 3e3;
+    var JV = xV(62),
+      YV = xV(1146),
+      UV = xV.n(YV);
+    const yV = ["forward", "backward", "left", "right", "jump", "sprint", "crouch", "primary", "secondary", "middle"],
+      pV = 3e3;
 
-    function nM(MM) {
-      return MM.down && MM.inPlay && !MM.bound
+    function QV(VV) {
+      return VV.down && VV.inPlay && !VV.bound
     }
 
-    function QM(MM, rM) {
-      let iM = 0,
-        OM = MM.length;
-      for (; iM < OM;) {
-        const SM = iM + OM >> 1;
-        MM[SM].atMs <= rM ? iM = SM + 1 : OM = SM
+    function nV(VV, eV) {
+      let xV = 0,
+        JV = VV.length;
+      for (; xV < JV;) {
+        const YV = xV + JV >> 1;
+        VV[YV].atMs <= eV ? xV = YV + 1 : JV = YV
       }
-      return iM - 1
+      return xV - 1
     }
 
-    function zM(MM, rM) {
-      return rM[1] - MM[1] || (MM[0] < rM[0] ? -1 : 1)
+    function wV(VV, eV) {
+      return eV[1] - VV[1] || (VV[0] < eV[0] ? -1 : 1)
     }
-    const LM = {
+    const ZV = {
       Mouse1: "Left click",
       Mouse2: "Middle click",
       Mouse3: "Right click",
@@ -63,370 +63,370 @@ export const modules = {
       Unidentified: "Another key"
     };
 
-    function mM(MM) {
-      var rM;
-      const iM = LM[MM];
-      if (void 0 !== iM) return iM;
-      const OM = null !== (rM = /^(?:Key|Digit)(.)$/.exec(MM)) && void 0 !== rM ? rM : /^Numpad(.+)$/.exec(MM);
-      return null !== OM ? MM.startsWith("Numpad") ? `Num ${OM[1]}` : OM[1] : MM
+    function vV(VV) {
+      var eV;
+      const xV = ZV[VV];
+      if (void 0 !== xV) return xV;
+      const JV = null !== (eV = /^(?:Key|Digit)(.)$/.exec(VV)) && void 0 !== eV ? eV : /^Numpad(.+)$/.exec(VV);
+      return null !== JV ? VV.startsWith("Numpad") ? `Num ${JV[1]}` : JV[1] : VV
     }
-    const HM = 250,
-      hM = 60;
-    var JM = iM(1303);
-    const dM = 6;
+    const rV = 250,
+      kV = 60;
+    var bV = xV(1321);
+    const EV = 6;
 
-    function yM(MM) {
-      const rM = Math.max(0, Math.floor(MM / 1e3)),
-        iM = Math.floor(rM / 3600),
-        OM = Math.floor(rM % 3600 / 60),
-        SM = String(rM % 60).padStart(2, "0");
-      return iM > 0 ? `${iM}:${String(OM).padStart(2,"0")}:${SM}` : `${OM}:${SM}`
-    }
-
-    function lM(MM, rM) {
-      return getComputedStyle(MM).getPropertyValue(rM).trim()
+    function BV(VV) {
+      const eV = Math.max(0, Math.floor(VV / 1e3)),
+        xV = Math.floor(eV / 3600),
+        JV = Math.floor(eV % 3600 / 60),
+        YV = String(eV % 60).padStart(2, "0");
+      return xV > 0 ? `${xV}:${String(JV).padStart(2,"0")}:${YV}` : `${JV}:${YV}`
     }
 
-    function EM(MM, rM) {
-      switch (MM.kind) {
+    function jV(VV, eV) {
+      return getComputedStyle(VV).getPropertyValue(eV).trim()
+    }
+
+    function qV(VV, eV) {
+      switch (VV.kind) {
         case "note":
-          return MM.label;
+          return VV.label;
         case "hidden":
-          return rM.tabHidden;
+          return eV.tabHidden;
         default:
-          return rM[MM.kind]
+          return eV[VV.kind]
       }
     }
 
-    function UM(MM) {
+    function tV(VV) {
       let {
-        draw: rM,
-        className: iM
-      } = MM;
-      const SM = (0, OM.useRef)(null);
-      return (0, OM.useEffect)((() => {
-        const MM = SM.current,
-          iM = MM.getContext("2d");
-        if (null === rM || null === iM) return;
+        draw: eV,
+        className: xV
+      } = VV;
+      const YV = (0, JV.useRef)(null);
+      return (0, JV.useEffect)((() => {
+        const VV = YV.current,
+          xV = VV.getContext("2d");
+        if (null === eV || null === xV) return;
         const {
-          clientWidth: OM,
-          clientHeight: jM
-        } = MM, aM = window.devicePixelRatio;
-        MM.width = Math.round(OM * aM), MM.height = Math.round(jM * aM), iM.setTransform(aM, 0, 0, aM, 0, 0), rM(iM, OM, jM, MM)
-      }), [rM]), (0, JM.jsx)("canvas", {
-        ref: SM,
-        className: iM
+          clientWidth: JV,
+          clientHeight: UV
+        } = VV, yV = window.devicePixelRatio;
+        VV.width = Math.round(JV * yV), VV.height = Math.round(UV * yV), xV.setTransform(yV, 0, 0, yV, 0, 0), eV(xV, JV, UV, VV)
+      }), [eV]), (0, bV.jsx)("canvas", {
+        ref: YV,
+        className: xV
       })
     }
 
-    function GM(MM) {
+    function FV(VV) {
       let {
-        controller: rM,
-        frames: iM,
-        input: SM,
-        markers: jM,
-        inactiveRanges: aM,
-        videoGaps: QM,
-        labels: LM
-      } = MM;
+        controller: eV,
+        frames: xV,
+        input: YV,
+        markers: UV,
+        inactiveRanges: yV,
+        videoGaps: nV,
+        labels: ZV
+      } = VV;
       const {
-        timeline: GM
-      } = rM, CM = (0, OM.useRef)(null), [eM, bM] = (0, OM.useState)(0), [wM, tM] = (0, OM.useState)(null), gM = (0, OM.useRef)(null), uM = Math.max(1, GM.durationMs);
-      ! function(MM, rM, iM) {
-        (0, OM.useEffect)((() => {
-          let OM = 0,
-            SM = NaN;
-          const jM = () => {
-            var aM;
-            OM = requestAnimationFrame(jM);
-            const PM = (null !== (aM = rM.current) && void 0 !== aM ? aM : MM.getPositionMs()) / Math.max(1, MM.timeline.durationMs) * 100;
-            PM !== SM && (SM = PM, iM.current.style.setProperty("--brv-position", `${PM}%`))
+        timeline: FV
+      } = eV, TV = (0, JV.useRef)(null), [PV, AV] = (0, JV.useState)(0), [NV, XV] = (0, JV.useState)(null), MV = (0, JV.useRef)(null), zV = Math.max(1, FV.durationMs);
+      ! function(VV, eV, xV) {
+        (0, JV.useEffect)((() => {
+          let JV = 0,
+            YV = NaN;
+          const UV = () => {
+            var yV;
+            JV = requestAnimationFrame(UV);
+            const pV = (null !== (yV = eV.current) && void 0 !== yV ? yV : VV.getPositionMs()) / Math.max(1, VV.timeline.durationMs) * 100;
+            pV !== YV && (YV = pV, xV.current.style.setProperty("--brv-position", `${pV}%`))
           };
-          return jM(), () => {
-            cancelAnimationFrame(OM)
+          return UV(), () => {
+            cancelAnimationFrame(JV)
           }
-        }), [MM])
-      }(rM, gM, CM), (0, OM.useEffect)((() => {
-        const MM = CM.current,
-          rM = new ResizeObserver((() => {
-            bM(MM.clientWidth)
+        }), [VV])
+      }(eV, MV, TV), (0, JV.useEffect)((() => {
+        const VV = TV.current,
+          eV = new ResizeObserver((() => {
+            AV(VV.clientWidth)
           }));
-        return rM.observe(MM), () => {
-          rM.disconnect()
+        return eV.observe(VV), () => {
+          eV.disconnect()
         }
       }), []);
-      const RM = (0, OM.useMemo)((() => 0 === eM ? null : function(MM, rM, iM) {
-          const OM = Math.max(1, Math.min(iM, Math.floor(rM.durationMs / HM))),
-            SM = rM.durationMs / OM,
-            jM = new Array(OM).fill(0);
-          for (const aM of MM) rM.contains(aM.atMs) && jM[Math.min(OM - 1, Math.floor(rM.toPosition(aM.atMs) / SM))]++;
+      const GV = (0, JV.useMemo)((() => 0 === PV ? null : function(VV, eV, xV) {
+          const JV = Math.max(1, Math.min(xV, Math.floor(eV.durationMs / rV))),
+            YV = eV.durationMs / JV,
+            UV = new Array(JV).fill(0);
+          for (const yV of VV) eV.contains(yV.atMs) && UV[Math.min(JV - 1, Math.floor(eV.toPosition(yV.atMs) / YV))]++;
           return {
-            bucketMs: SM,
-            fps: jM.map((MM => 0 === MM ? null : 1e3 * MM / SM))
+            bucketMs: YV,
+            fps: UV.map((VV => 0 === VV ? null : 1e3 * VV / YV))
           }
-        }(iM, GM, Math.round(eM))), [iM, GM, eM]),
-        pM = rM.lowFps,
-        WM = (0, OM.useMemo)((() => null === RM ? null : (MM, rM, iM, OM) => {
-          ! function(MM, rM, iM, OM, SM, jM) {
-            MM.clearRect(0, 0, iM, OM);
-            const aM = iM / rM.fps.length;
-            rM.fps.forEach(((rM, iM) => {
-              if (null === rM) return;
-              const PM = Math.max(1, Math.min(rM, hM) / hM * OM);
-              MM.fillStyle = rM < SM ? jM.lowFps : jM.fps, MM.fillRect(iM * aM, OM - PM, Math.max(1, aM), PM)
+        }(xV, FV, Math.round(PV))), [xV, FV, PV]),
+        WV = eV.lowFps,
+        RV = (0, JV.useMemo)((() => null === GV ? null : (VV, eV, xV, JV) => {
+          ! function(VV, eV, xV, JV, YV, UV) {
+            VV.clearRect(0, 0, xV, JV);
+            const yV = xV / eV.fps.length;
+            eV.fps.forEach(((eV, xV) => {
+              if (null === eV) return;
+              const pV = Math.max(1, Math.min(eV, kV) / kV * JV);
+              VV.fillStyle = eV < YV ? UV.lowFps : UV.fps, VV.fillRect(xV * yV, JV - pV, Math.max(1, yV), pV)
             }))
-          }(MM, RM, rM, iM, pM, {
-            fps: lM(OM, "--brv-fps"),
-            lowFps: lM(OM, "--brv-low-fps")
+          }(VV, GV, eV, xV, WV, {
+            fps: jV(JV, "--brv-fps"),
+            lowFps: jV(JV, "--brv-low-fps")
           })
-        }), [RM, pM]),
-        sM = (0, OM.useMemo)((() => {
-          if (0 === eM || !SM.inputRecorded) return null;
-          const MM = function(MM, rM, iM) {
-            const OM = Math.max(1, rM.durationMs) / iM,
-              SM = new Array(iM).fill(0),
-              jM = new Array(iM).fill(0);
-            for (const aM of MM) {
-              if (!aM.down || !rM.contains(aM.atMs)) continue;
-              const MM = Math.min(iM - 1, Math.floor(rM.toPosition(aM.atMs) / OM));
-              SM[MM]++, nM(aM) && jM[MM]++
+        }), [GV, WV]),
+        gV = (0, JV.useMemo)((() => {
+          if (0 === PV || !YV.inputRecorded) return null;
+          const VV = function(VV, eV, xV) {
+            const JV = Math.max(1, eV.durationMs) / xV,
+              YV = new Array(xV).fill(0),
+              UV = new Array(xV).fill(0);
+            for (const yV of VV) {
+              if (!yV.down || !eV.contains(yV.atMs)) continue;
+              const VV = Math.min(xV - 1, Math.floor(eV.toPosition(yV.atMs) / JV));
+              YV[VV]++, QV(yV) && UV[VV]++
             }
             return {
-              presses: SM,
-              unbound: jM
+              presses: YV,
+              unbound: UV
             }
-          }(SM.keys, GM, Math.max(1, Math.round(eM)));
-          return (rM, iM, OM, SM) => {
-            ! function(MM, rM, iM, OM, SM) {
-              MM.clearRect(0, 0, iM, OM);
-              const jM = iM / rM.presses.length;
-              rM.presses.forEach(((iM, aM) => {
-                if (0 === iM) return;
-                const PM = rM.unbound[aM] > 0;
-                MM.globalAlpha = PM ? 1 : Math.min(1, .35 + .15 * iM), MM.fillStyle = PM ? SM.unbound : SM.presses, MM.fillRect(aM * jM, 0, Math.max(PM ? 2 : 1, jM), OM)
-              })), MM.globalAlpha = 1
-            }(rM, MM, iM, OM, {
-              presses: lM(SM, "--brv-key-press"),
-              unbound: lM(SM, "--brv-key-unbound")
+          }(YV.keys, FV, Math.max(1, Math.round(PV)));
+          return (eV, xV, JV, YV) => {
+            ! function(VV, eV, xV, JV, YV) {
+              VV.clearRect(0, 0, xV, JV);
+              const UV = xV / eV.presses.length;
+              eV.presses.forEach(((xV, yV) => {
+                if (0 === xV) return;
+                const pV = eV.unbound[yV] > 0;
+                VV.globalAlpha = pV ? 1 : Math.min(1, .35 + .15 * xV), VV.fillStyle = pV ? YV.unbound : YV.presses, VV.fillRect(yV * UV, 0, Math.max(pV ? 2 : 1, UV), JV)
+              })), VV.globalAlpha = 1
+            }(eV, VV, xV, JV, {
+              presses: jV(YV, "--brv-key-press"),
+              unbound: jV(YV, "--brv-key-unbound")
             })
           }
-        }), [SM, GM, eM]),
-        DM = (0, OM.useMemo)((() => function(MM) {
-          const rM = [];
-          for (const OM of MM) {
-            var iM;
-            if (!nM(OM)) continue;
-            let MM = rM.at(-1);
-            (void 0 === MM || OM.atMs - MM.endMs > PM) && (MM = {
-              startMs: OM.atMs,
-              endMs: OM.atMs,
+        }), [YV, FV, PV]),
+        DV = (0, JV.useMemo)((() => function(VV) {
+          const eV = [];
+          for (const JV of VV) {
+            var xV;
+            if (!QV(JV)) continue;
+            let VV = eV.at(-1);
+            (void 0 === VV || JV.atMs - VV.endMs > pV) && (VV = {
+              startMs: JV.atMs,
+              endMs: JV.atMs,
               counts: new Map
-            }, rM.push(MM)), MM.endMs = OM.atMs, MM.counts.set(OM.code, (null !== (iM = MM.counts.get(OM.code)) && void 0 !== iM ? iM : 0) + 1)
+            }, eV.push(VV)), VV.endMs = JV.atMs, VV.counts.set(JV.code, (null !== (xV = VV.counts.get(JV.code)) && void 0 !== xV ? xV : 0) + 1)
           }
-          return rM.map((MM => {
+          return eV.map((VV => {
             let {
-              startMs: rM,
-              endMs: iM,
-              counts: OM
-            } = MM;
+              startMs: eV,
+              endMs: xV,
+              counts: JV
+            } = VV;
             return {
-              startMs: rM,
-              endMs: iM,
-              keys: [...OM].sort(zM)
+              startMs: eV,
+              endMs: xV,
+              keys: [...JV].sort(wV)
             }
           }))
-        }(SM.keys.filter((MM => GM.contains(MM.atMs))))), [SM.keys, GM]),
-        kM = MM => GM.toPosition(MM) / uM * 100,
-        ZM = MM => kM(MM) / 100 * eM,
-        oM = MM => {
-          const rM = CM.current.getBoundingClientRect();
+        }(YV.keys.filter((VV => FV.contains(VV.atMs))))), [YV.keys, FV]),
+        iV = VV => FV.toPosition(VV) / zV * 100,
+        CV = VV => iV(VV) / 100 * PV,
+        aV = VV => {
+          const eV = TV.current.getBoundingClientRect();
           return {
-            px: MM - rM.left,
-            positionMs: Math.max(0, Math.min(rM.width, MM - rM.left)) / rM.width * uM
+            px: VV - eV.left,
+            positionMs: Math.max(0, Math.min(eV.width, VV - eV.left)) / eV.width * zV
           }
         },
-        fM = null === wM || 0 === eM ? null : {
-          px: wM,
-          positionMs: Math.max(0, Math.min(eM, wM)) / eM * uM
+        oV = null === NV || 0 === PV ? null : {
+          px: NV,
+          positionMs: Math.max(0, Math.min(PV, NV)) / PV * zV
         },
-        YM = null === fM || null === RM ? null : function(MM, rM) {
-          const iM = Math.max(0, Math.min(MM.fps.length - 1, Math.floor(rM / MM.bucketMs))),
-            OM = MM.fps[iM];
-          return null === OM ? null : Math.round(OM)
-        }(RM, fM.positionMs),
-        NM = null !== fM && QM.some((MM => fM.px >= ZM(MM.startMs) && fM.px < ZM(MM.endMs))),
-        AM = null === fM ? void 0 : jM.find((MM => {
-          var rM;
-          return fM.px >= ZM(MM.atMs) - dM && fM.px <= ZM(null !== (rM = MM.endMs) && void 0 !== rM ? rM : MM.atMs) + dM
+        cV = null === oV || null === GV ? null : function(VV, eV) {
+          const xV = Math.max(0, Math.min(VV.fps.length - 1, Math.floor(eV / VV.bucketMs))),
+            JV = VV.fps[xV];
+          return null === JV ? null : Math.round(JV)
+        }(GV, oV.positionMs),
+        hV = null !== oV && nV.some((VV => oV.px >= CV(VV.startMs) && oV.px < CV(VV.endMs))),
+        lV = null === oV ? void 0 : UV.find((VV => {
+          var eV;
+          return oV.px >= CV(VV.atMs) - EV && oV.px <= CV(null !== (eV = VV.endMs) && void 0 !== eV ? eV : VV.atMs) + EV
         })),
-        xM = null === fM ? void 0 : DM.find((MM => fM.px >= ZM(MM.startMs) - dM && fM.px <= ZM(MM.endMs) + dM));
-      return (0, JM.jsxs)("div", {
-        ref: CM,
-        className: SM.inputRecorded ? "brv-seekbar brv-seekbar-with-input" : "brv-seekbar",
-        onPointerDown: MM => {
-          MM.currentTarget.setPointerCapture(MM.pointerId);
-          const rM = oM(MM.clientX);
-          tM(rM.px), gM.current = rM.positionMs
+        LV = null === oV ? void 0 : DV.find((VV => oV.px >= CV(VV.startMs) - EV && oV.px <= CV(VV.endMs) + EV));
+      return (0, bV.jsxs)("div", {
+        ref: TV,
+        className: YV.inputRecorded ? "brv-seekbar brv-seekbar-with-input" : "brv-seekbar",
+        onPointerDown: VV => {
+          VV.currentTarget.setPointerCapture(VV.pointerId);
+          const eV = aV(VV.clientX);
+          XV(eV.px), MV.current = eV.positionMs
         },
-        onPointerMove: MM => {
-          const rM = oM(MM.clientX);
-          tM(rM.px), null !== gM.current && (gM.current = rM.positionMs)
+        onPointerMove: VV => {
+          const eV = aV(VV.clientX);
+          XV(eV.px), null !== MV.current && (MV.current = eV.positionMs)
         },
-        onPointerUp: MM => {
-          null !== gM.current && (rM.seekToPosition(oM(MM.clientX).positionMs), gM.current = null)
+        onPointerUp: VV => {
+          null !== MV.current && (eV.seekToPosition(aV(VV.clientX).positionMs), MV.current = null)
         },
         onPointerCancel: () => {
-          gM.current = null, tM(null)
+          MV.current = null, XV(null)
         },
         onPointerLeave: () => {
-          tM(null)
+          XV(null)
         },
-        children: [(0, JM.jsxs)("div", {
+        children: [(0, bV.jsxs)("div", {
           className: "brv-seekbar-track",
-          children: [(0, JM.jsx)(UM, {
-            draw: WM,
+          children: [(0, bV.jsx)(tV, {
+            draw: RV,
             className: "brv-seekbar-canvas"
-          }), aM.map((MM => {
-            const rM = kM(MM.startMs);
-            return (0, JM.jsx)("div", {
+          }), yV.map((VV => {
+            const eV = iV(VV.startMs);
+            return (0, bV.jsx)("div", {
               className: "brv-seekbar-inactive",
               style: {
-                left: `${rM}%`,
-                width: kM(MM.endMs) - rM + "%"
+                left: `${eV}%`,
+                width: iV(VV.endMs) - eV + "%"
               }
-            }, MM.startMs)
-          })), QM.map((MM => {
-            const rM = kM(MM.startMs);
-            return (0, JM.jsx)("div", {
+            }, VV.startMs)
+          })), nV.map((VV => {
+            const eV = iV(VV.startMs);
+            return (0, bV.jsx)("div", {
               className: "brv-seekbar-video-gap",
               style: {
-                left: `${rM}%`,
-                width: kM(MM.endMs) - rM + "%"
+                left: `${eV}%`,
+                width: iV(VV.endMs) - eV + "%"
               }
-            }, MM.startMs)
-          })), (0, JM.jsx)("div", {
+            }, VV.startMs)
+          })), (0, bV.jsx)("div", {
             className: "brv-seekbar-progress"
-          }), null !== fM && (0, JM.jsx)("div", {
+          }), null !== oV && (0, bV.jsx)("div", {
             className: "brv-seekbar-hover",
             style: {
-              left: fM.px
+              left: oV.px
             }
           })]
-        }), SM.inputRecorded && (0, JM.jsx)(UM, {
-          draw: sM,
+        }), YV.inputRecorded && (0, bV.jsx)(tV, {
+          draw: gV,
           className: "brv-seekbar-input"
-        }), (0, JM.jsx)("div", {
+        }), (0, bV.jsx)("div", {
           className: "brv-seekbar-markers",
-          children: jM.map(((MM, rM) => {
-            var iM;
-            const OM = kM(MM.atMs),
-              SM = void 0 !== MM.endMs;
-            return (0, JM.jsx)("div", {
-              className: `brv-marker brv-marker-${MM.kind}${SM?" brv-marker-range":""}`,
+          children: UV.map(((VV, eV) => {
+            var xV;
+            const JV = iV(VV.atMs),
+              YV = void 0 !== VV.endMs;
+            return (0, bV.jsx)("div", {
+              className: `brv-marker brv-marker-${VV.kind}${YV?" brv-marker-range":""}`,
               style: {
-                left: `${OM}%`,
-                width: SM ? kM(null !== (iM = MM.endMs) && void 0 !== iM ? iM : MM.atMs) - OM + "%" : void 0
+                left: `${JV}%`,
+                width: YV ? iV(null !== (xV = VV.endMs) && void 0 !== xV ? xV : VV.atMs) - JV + "%" : void 0
               }
-            }, rM)
+            }, eV)
           }))
-        }), (0, JM.jsx)("div", {
+        }), (0, bV.jsx)("div", {
           className: "brv-seekbar-playhead"
-        }), null !== fM && (0, JM.jsxs)("div", {
+        }), null !== oV && (0, bV.jsxs)("div", {
           className: "brv-tooltip",
           style: {
-            left: fM.px
+            left: oV.px
           },
-          children: [yM(fM.positionMs), null !== YM && ` \xb7 ${LM.fps(YM)}`, void 0 !== AM && ` \xb7 ${EM(AM,LM)}`, NM && ` \xb7 ${LM.videoGap}`, void 0 !== xM && ` \xb7 ${LM.unboundKeys((vM=xM.keys,vM.map((MM=>{let[rM,iM]=MM;return iM>1?`${mM(rM)} \xd7${iM}`:mM(rM)})).join(", ")))}`]
+          children: [BV(oV.positionMs), null !== cV && ` \xb7 ${ZV.fps(cV)}`, void 0 !== lV && ` \xb7 ${qV(lV,ZV)}`, hV && ` \xb7 ${ZV.videoGap}`, void 0 !== LV && ` \xb7 ${ZV.unboundKeys((fV=LV.keys,fV.map((VV=>{let[eV,xV]=VV;return xV>1?`${vV(eV)} \xd7${xV}`:vV(eV)})).join(", ")))}`]
         })]
       });
-      var vM
+      var fV
     }
-    var CM = iM(2546),
-      eM = iM(1188),
-      bM = iM(4937),
-      wM = iM(1396),
-      tM = iM(1520),
-      gM = iM(1398),
-      uM = iM(6989),
-      RM = iM(5481),
-      pM = iM(5479);
-    const WM = [.5, 1, 2, 4, 8, 16];
-    var sM = iM(41580);
+    var TV = xV(2596),
+      PV = xV(1220),
+      AV = xV(5037),
+      NV = xV(1408),
+      XV = xV(1551),
+      MV = xV(1414),
+      zV = xV(7072),
+      GV = xV(5598),
+      WV = xV(5589);
+    const RV = [.5, 1, 2, 4, 8, 16];
+    var gV = xV(41756);
 
-    function DM(MM) {
-      const rM = MM.filter((MM => MM.endMs > MM.startMs)).sort(((MM, rM) => MM.startMs - rM.startMs)),
-        iM = [];
-      for (const OM of rM) {
-        const MM = iM.at(-1);
-        void 0 !== MM && OM.startMs <= MM.endMs ? MM.endMs = Math.max(MM.endMs, OM.endMs) : iM.push({
-          ...OM
+    function DV(VV) {
+      const eV = VV.filter((VV => VV.endMs > VV.startMs)).sort(((VV, eV) => VV.startMs - eV.startMs)),
+        xV = [];
+      for (const JV of eV) {
+        const VV = xV.at(-1);
+        void 0 !== VV && JV.startMs <= VV.endMs ? VV.endMs = Math.max(VV.endMs, JV.endMs) : xV.push({
+          ...JV
         })
       }
-      return iM
+      return xV
     }
-    class kM {
-      constructor(MM) {
-        this.Ld = void 0, this.durationMs = void 0, this.positionStarts = void 0, this.Ld = DM(MM), this.positionStarts = [];
-        let rM = 0;
-        for (const iM of this.Ld) this.positionStarts.push(rM), rM += iM.endMs - iM.startMs;
-        this.durationMs = rM
+    class iV {
+      constructor(VV) {
+        this.TE = void 0, this.durationMs = void 0, this.positionStarts = void 0, this.TE = DV(VV), this.positionStarts = [];
+        let eV = 0;
+        for (const xV of this.TE) this.positionStarts.push(eV), eV += xV.endMs - xV.startMs;
+        this.durationMs = eV
       }
       get startMs() {
-        var MM, rM;
-        return null !== (MM = null === (rM = this.Ld[0]) || void 0 === rM ? void 0 : rM.startMs) && void 0 !== MM ? MM : 0
+        var VV, eV;
+        return null !== (VV = null === (eV = this.TE[0]) || void 0 === eV ? void 0 : eV.startMs) && void 0 !== VV ? VV : 0
       }
       get endMs() {
-        var MM, rM;
-        return null !== (MM = null === (rM = this.Ld.at(-1)) || void 0 === rM ? void 0 : rM.endMs) && void 0 !== MM ? MM : 0
+        var VV, eV;
+        return null !== (VV = null === (eV = this.TE.at(-1)) || void 0 === eV ? void 0 : eV.endMs) && void 0 !== VV ? VV : 0
       }
-      toPosition(MM) {
-        for (let rM = 0; rM < this.Ld.length; rM++) {
-          const iM = this.Ld[rM];
-          if (MM < iM.endMs) return this.positionStarts[rM] + Math.max(0, MM - iM.startMs)
+      toPosition(VV) {
+        for (let eV = 0; eV < this.TE.length; eV++) {
+          const xV = this.TE[eV];
+          if (VV < xV.endMs) return this.positionStarts[eV] + Math.max(0, VV - xV.startMs)
         }
         return this.durationMs
       }
-      toTime(MM) {
-        const rM = Math.max(0, Math.min(this.durationMs, MM));
-        for (let iM = this.Ld.length - 1; iM >= 0; iM--)
-          if (rM >= this.positionStarts[iM]) return this.Ld[iM].startMs + (rM - this.positionStarts[iM]);
+      toTime(VV) {
+        const eV = Math.max(0, Math.min(this.durationMs, VV));
+        for (let xV = this.TE.length - 1; xV >= 0; xV--)
+          if (eV >= this.positionStarts[xV]) return this.TE[xV].startMs + (eV - this.positionStarts[xV]);
         return this.startMs
       }
-      contains(MM) {
-        return this.Ld.some((rM => MM >= rM.startMs && MM < rM.endMs))
+      contains(VV) {
+        return this.TE.some((eV => VV >= eV.startMs && VV < eV.endMs))
       }
-      nextPlayableTime(MM) {
-        for (const rM of this.Ld) {
-          if (MM < rM.startMs) return rM.startMs;
-          if (MM < rM.endMs) return MM
+      nextPlayableTime(VV) {
+        for (const eV of this.TE) {
+          if (VV < eV.startMs) return eV.startMs;
+          if (VV < eV.endMs) return VV
         }
         return null
       }
     }
 
-    function ZM(MM) {
-      return [...MM].sort(((MM, rM) => MM.startMs - rM.startMs))
+    function CV(VV) {
+      return [...VV].sort(((VV, eV) => VV.startMs - eV.startMs))
     }
 
-    function oM(MM, rM) {
-      let iM = 1 / 0,
-        OM = -1 / 0;
-      const SM = MM => {
-        iM = Math.min(iM, MM), OM = Math.max(OM, MM)
+    function aV(VV, eV) {
+      let xV = 1 / 0,
+        JV = -1 / 0;
+      const YV = VV => {
+        xV = Math.min(xV, VV), JV = Math.max(JV, VV)
       };
-      for (const jM of [...MM.videoSegments, ...MM.telemetryChunks]) SM(jM.startMs), SM(jM.endMs);
-      for (const jM of MM.domEvents) SM(rM.toEpoch(jM.timestamp));
-      return iM < OM ? {
-        startMs: iM,
-        endMs: OM
+      for (const UV of [...VV.videoSegments, ...VV.telemetryChunks]) YV(UV.startMs), YV(UV.endMs);
+      for (const UV of VV.domEvents) YV(eV.toEpoch(UV.timestamp));
+      return xV < JV ? {
+        startMs: xV,
+        endMs: JV
       } : {
         startMs: 0,
         endMs: 0
       }
     }
-    class fM {
-      constructor(MM, rM) {
-        this.wallNowMs = rM, this.anchorTimeMs = void 0, this.anchorWallMs = void 0, this.playingState = !1, this.speedState = 1, this.anchorTimeMs = MM, this.anchorWallMs = rM()
+    class oV {
+      constructor(VV, eV) {
+        this.wallNowMs = eV, this.anchorTimeMs = void 0, this.anchorWallMs = void 0, this.playingState = !1, this.speedState = 1, this.anchorTimeMs = VV, this.anchorWallMs = eV()
       }
       get playing() {
         return this.playingState
@@ -437,8 +437,8 @@ export const modules = {
       timeMs() {
         return this.timeAtWall(this.wallNowMs())
       }
-      timeAtWall(MM) {
-        return this.playingState ? this.anchorTimeMs + (MM - this.anchorWallMs) * this.speedState : this.anchorTimeMs
+      timeAtWall(VV) {
+        return this.playingState ? this.anchorTimeMs + (VV - this.anchorWallMs) * this.speedState : this.anchorTimeMs
       }
       play() {
         this.reanchor(), this.playingState = !0
@@ -446,119 +446,119 @@ export const modules = {
       pause() {
         this.reanchor(), this.playingState = !1
       }
-      seek(MM) {
-        this.anchorTimeMs = MM, this.anchorWallMs = this.wallNowMs()
+      seek(VV) {
+        this.anchorTimeMs = VV, this.anchorWallMs = this.wallNowMs()
       }
-      setSpeed(MM) {
-        this.reanchor(), this.speedState = MM
+      setSpeed(VV) {
+        this.reanchor(), this.speedState = VV
       }
       reanchor() {
-        const MM = this.wallNowMs();
-        this.anchorTimeMs = this.timeAtWall(MM), this.anchorWallMs = MM
+        const VV = this.wallNowMs();
+        this.anchorTimeMs = this.timeAtWall(VV), this.anchorWallMs = VV
       }
     }
-    const YM = "bloxd-clock";
-    class NM {
-      constructor(MM) {
+    const cV = "bloxd-clock";
+    class hV {
+      constructor(VV) {
         this.samples = void 0, this.samples = [];
-        for (const iM of MM) {
-          var rM;
-          const MM = iM.data;
-          iM.type === sM.e.Custom && (null === MM || void 0 === MM ? void 0 : MM.tag) === YM && "number" === typeof(null === (rM = MM.payload) || void 0 === rM ? void 0 : rM.epochMs) && this.samples.push({
-            domMs: iM.timestamp,
-            offsetMs: MM.payload.epochMs - iM.timestamp
+        for (const xV of VV) {
+          var eV;
+          const VV = xV.data;
+          xV.type === gV.d.Custom && (null === VV || void 0 === VV ? void 0 : VV.tag) === cV && "number" === typeof(null === (eV = VV.payload) || void 0 === eV ? void 0 : eV.epochMs) && this.samples.push({
+            domMs: xV.timestamp,
+            offsetMs: VV.payload.epochMs - xV.timestamp
           })
         }
-        this.samples.sort(((MM, rM) => MM.domMs - rM.domMs))
+        this.samples.sort(((VV, eV) => VV.domMs - eV.domMs))
       }
-      toEpoch(MM) {
-        return MM + this.offsetAtDom(MM)
+      toEpoch(VV) {
+        return VV + this.offsetAtDom(VV)
       }
-      toDom(MM) {
-        return MM - this.offsetAtDom(MM)
+      toDom(VV) {
+        return VV - this.offsetAtDom(VV)
       }
-      offsetAtDom(MM) {
-        var rM, iM;
-        let OM = 0,
-          SM = this.samples.length - 1;
-        for (; OM < SM;) {
-          const rM = Math.ceil((OM + SM) / 2);
-          this.samples[rM].domMs <= MM ? OM = rM : SM = rM - 1
+      offsetAtDom(VV) {
+        var eV, xV;
+        let JV = 0,
+          YV = this.samples.length - 1;
+        for (; JV < YV;) {
+          const eV = Math.ceil((JV + YV) / 2);
+          this.samples[eV].domMs <= VV ? JV = eV : YV = eV - 1
         }
-        return null !== (rM = null === (iM = this.samples[OM]) || void 0 === iM ? void 0 : iM.offsetMs) && void 0 !== rM ? rM : 0
+        return null !== (eV = null === (xV = this.samples[JV]) || void 0 === xV ? void 0 : xV.offsetMs) && void 0 !== eV ? eV : 0
       }
     }
-    const AM = new Set([sM.g.MouseMove, sM.g.MouseInteraction, sM.g.Scroll, sM.g.Input, sM.g.TouchMove, sM.g.Drag]),
-      xM = "bloxd-active",
-      vM = "player_death",
-      FM = "error",
-      BM = {
+    const lV = new Set([gV.e.MouseMove, gV.e.MouseInteraction, gV.e.Scroll, gV.e.Input, gV.e.TouchMove, gV.e.Drag]),
+      LV = "bloxd-active",
+      fV = "player_death",
+      mV = "error",
+      KV = {
         $exception: "error",
-        [FM]: "error",
+        [mV]: "error",
         death: "death",
-        [vM]: "death"
+        [fV]: "death"
       };
 
-    function XM(MM, rM, iM) {
-      return function(MM, rM) {
-        const iM = [];
-        for (const OM of MM) {
-          let MM = OM.startMs;
-          for (const SM of rM) SM.endMs <= MM || SM.startMs >= OM.endMs || (SM.startMs > MM && iM.push({
-            startMs: MM,
-            endMs: SM.startMs
-          }), MM = Math.max(MM, SM.endMs));
-          MM < OM.endMs && iM.push({
-            startMs: MM,
-            endMs: OM.endMs
+    function HV(VV, eV, xV) {
+      return function(VV, eV) {
+        const xV = [];
+        for (const JV of VV) {
+          let VV = JV.startMs;
+          for (const YV of eV) YV.endMs <= VV || YV.startMs >= JV.endMs || (YV.startMs > VV && xV.push({
+            startMs: VV,
+            endMs: YV.startMs
+          }), VV = Math.max(VV, YV.endMs));
+          VV < JV.endMs && xV.push({
+            startMs: VV,
+            endMs: JV.endMs
           })
         }
-        return iM
-      }(function(MM) {
-        const rM = [];
-        for (const iM of MM) {
-          const MM = rM.at(-1);
-          void 0 !== MM && iM.atMs - MM.endMs <= 5e3 ? MM.endMs = iM.atMs : rM.push({
-            startMs: iM.atMs,
-            endMs: iM.atMs
+        return xV
+      }(function(VV) {
+        const eV = [];
+        for (const xV of VV) {
+          const VV = eV.at(-1);
+          void 0 !== VV && xV.atMs - VV.endMs <= 5e3 ? VV.endMs = xV.atMs : eV.push({
+            startMs: xV.atMs,
+            endMs: xV.atMs
           })
         }
-        return rM
-      }(MM), DM([...rM, ...iM])).filter((MM => MM.endMs - MM.startMs >= 1e3))
+        return eV
+      }(VV), DV([...eV, ...xV])).filter((VV => VV.endMs - VV.startMs >= 1e3))
     }
 
-    function IM(MM) {
-      var rM, iM, OM;
-      return MM.type === sM.e.IncrementalSnapshot ? AM.has(null !== (iM = null === (OM = MM.data) || void 0 === OM ? void 0 : OM.source) && void 0 !== iM ? iM : -1) : MM.type === sM.e.Custom && (null === (rM = MM.data) || void 0 === rM ? void 0 : rM.tag) === xM
+    function uV(VV) {
+      var eV, xV, JV;
+      return VV.type === gV.d.IncrementalSnapshot ? lV.has(null !== (xV = null === (JV = VV.data) || void 0 === JV ? void 0 : JV.source) && void 0 !== xV ? xV : -1) : VV.type === gV.d.Custom && (null === (eV = VV.data) || void 0 === eV ? void 0 : eV.tag) === LV
     }
 
-    function KM(MM, rM) {
-      const iM = [];
-      for (const aM of MM)
-        if (aM.type === sM.e.Custom) {
-          var OM;
-          const MM = null === (OM = aM.data) || void 0 === OM ? void 0 : OM.tag,
-            SM = void 0 === MM ? void 0 : BM[MM];
-          void 0 !== SM && iM.push({
-            kind: SM,
-            atMs: rM.toEpoch(aM.timestamp)
+    function sV(VV, eV) {
+      const xV = [];
+      for (const yV of VV)
+        if (yV.type === gV.d.Custom) {
+          var JV;
+          const VV = null === (JV = yV.data) || void 0 === JV ? void 0 : JV.tag,
+            YV = void 0 === VV ? void 0 : KV[VV];
+          void 0 !== YV && xV.push({
+            kind: YV,
+            atMs: eV.toEpoch(yV.timestamp)
           })
-        } else if (aM.type === sM.e.Plugin) {
-        var SM, jM;
-        const MM = aM.data;
-        "rrweb/console@1" !== (null === MM || void 0 === MM ? void 0 : MM.plugin) || "error" !== (null === (SM = MM.payload) || void 0 === SM ? void 0 : SM.level) && "assert" !== (null === (jM = MM.payload) || void 0 === jM ? void 0 : jM.level) || iM.push({
+        } else if (yV.type === gV.d.Plugin) {
+        var YV, UV;
+        const VV = yV.data;
+        "rrweb/console@1" !== (null === VV || void 0 === VV ? void 0 : VV.plugin) || "error" !== (null === (YV = VV.payload) || void 0 === YV ? void 0 : YV.level) && "assert" !== (null === (UV = VV.payload) || void 0 === UV ? void 0 : UV.level) || xV.push({
           kind: "error",
-          atMs: rM.toEpoch(aM.timestamp)
+          atMs: eV.toEpoch(yV.timestamp)
         })
       }
-      return iM
+      return xV
     }
-    const qM = 3e6;
-    class TM {
-      constructor(MM, rM) {
-        let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Date.now,
-          OM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : qM;
-        this.fetchUrls = MM, this.onUrls = rM, this.wallNowMs = iM, this.refreshableAfterMs = OM, this.lastRefreshWallMs = -1 / 0, this.urlsFetchedAtWallMs = void 0, this.inFlight = !1, this.timer = null, this.destroyed = !1, this.urlsFetchedAtWallMs = iM()
+    const SV = 3e6;
+    class IV {
+      constructor(VV, eV) {
+        let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Date.now,
+          JV = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : SV;
+        this.fetchUrls = VV, this.onUrls = eV, this.wallNowMs = xV, this.refreshableAfterMs = JV, this.lastRefreshWallMs = -1 / 0, this.urlsFetchedAtWallMs = void 0, this.inFlight = !1, this.timer = null, this.destroyed = !1, this.urlsFetchedAtWallMs = xV()
       }
       get refreshing() {
         return this.inFlight
@@ -566,91 +566,91 @@ export const modules = {
       request() {
         if (null === this.fetchUrls || this.destroyed || null !== this.timer || this.inFlight) return;
         if (this.wallNowMs() - this.urlsFetchedAtWallMs < this.refreshableAfterMs) return;
-        const MM = this.lastRefreshWallMs + 6e4 - this.wallNowMs();
-        MM > 0 ? this.timer = setTimeout((() => {
+        const VV = this.lastRefreshWallMs + 6e4 - this.wallNowMs();
+        VV > 0 ? this.timer = setTimeout((() => {
           this.timer = null, this.request()
-        }), MM) : this.start(this.fetchUrls)
+        }), VV) : this.start(this.fetchUrls)
       }
       destroy() {
         this.destroyed = !0, null !== this.timer && clearTimeout(this.timer)
       }
-      start(MM) {
+      start(VV) {
         this.inFlight = !0;
-        const rM = this.wallNowMs();
-        this.lastRefreshWallMs = rM;
-        let iM = !1;
-        MM().then((MM => {
-          this.destroyed || (this.urlsFetchedAtWallMs = rM, this.onUrls(MM))
-        })).catch((MM => {
-          console.error("Failed to refresh the replay's URLs.", MM), iM = !0
+        const eV = this.wallNowMs();
+        this.lastRefreshWallMs = eV;
+        let xV = !1;
+        VV().then((VV => {
+          this.destroyed || (this.urlsFetchedAtWallMs = eV, this.onUrls(VV))
+        })).catch((VV => {
+          console.error("Failed to refresh the replay's URLs.", VV), xV = !0
         })).finally((() => {
-          this.inFlight = !1, iM && this.request()
+          this.inFlight = !1, xV && this.request()
         }))
       }
     }
-    class VM {
-      constructor(MM, rM) {
-        let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Date.now,
-          OM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : qM;
-        this.source = MM, this.description = rM, this.wallNowMs = iM, this.refreshableAfterMs = OM, this.entries = new Map, this.unavailable = new Set, this.inFlight = !1, this.failedFetches = 0, this.retryAtWallMs = -1 / 0, this.destroyed = !1
+    class dV {
+      constructor(VV, eV) {
+        let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Date.now,
+          JV = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : SV;
+        this.source = VV, this.description = eV, this.wallNowMs = xV, this.refreshableAfterMs = JV, this.entries = new Map, this.unavailable = new Set, this.inFlight = !1, this.failedFetches = 0, this.retryAtWallMs = -1 / 0, this.destroyed = !1
       }
-      reset(MM) {
+      reset(VV) {
         this.entries.clear(), this.unavailable.clear(), this.failedFetches = 0, this.retryAtWallMs = -1 / 0;
-        const rM = this.wallNowMs();
-        for (const iM of MM) this.entries.set(iM.sequence, {
-          urls: iM,
-          fetchedAtWallMs: rM
+        const eV = this.wallNowMs();
+        for (const xV of VV) this.entries.set(xV.sequence, {
+          urls: xV,
+          fetchedAtWallMs: eV
         })
       }
-      get(MM) {
-        const rM = this.getFresh(MM);
-        return null !== rM ? rM : null === this.source || this.unavailable.has(MM) || this.failedFetches > 0 ? "failed" : "pending"
+      get(VV) {
+        const eV = this.getFresh(VV);
+        return null !== eV ? eV : null === this.source || this.unavailable.has(VV) || this.failedFetches > 0 ? "failed" : "pending"
       }
-      needs(MM) {
-        return null === this.getFresh(MM) && !this.unavailable.has(MM)
+      needs(VV) {
+        return null === this.getFresh(VV) && !this.unavailable.has(VV)
       }
-      request(MM) {
+      request(VV) {
         if (null === this.source || this.inFlight || this.failedFetches >= 3 || this.wallNowMs() < this.retryAtWallMs) return;
-        const rM = MM.filter((MM => this.needs(MM)));
-        rM.length > 0 && this.fetch(this.source, rM.slice(0, this.source.maxSequences))
+        const eV = VV.filter((VV => this.needs(VV)));
+        eV.length > 0 && this.fetch(this.source, eV.slice(0, this.source.maxSequences))
       }
       destroy() {
         this.destroyed = !0
       }
-      getFresh(MM) {
-        const rM = this.entries.get(MM);
-        return void 0 === rM ? null : null === this.source || this.wallNowMs() - rM.fetchedAtWallMs < this.refreshableAfterMs ? rM.urls : null
+      getFresh(VV) {
+        const eV = this.entries.get(VV);
+        return void 0 === eV ? null : null === this.source || this.wallNowMs() - eV.fetchedAtWallMs < this.refreshableAfterMs ? eV.urls : null
       }
-      fetch(MM, rM) {
+      fetch(VV, eV) {
         this.inFlight = !0;
-        const iM = this.wallNowMs();
-        MM.load(rM).then((MM => {
+        const xV = this.wallNowMs();
+        VV.load(eV).then((VV => {
           if (this.destroyed) return;
           this.failedFetches = 0;
-          const OM = new Set;
-          for (const rM of MM) this.entries.set(rM.sequence, {
-            urls: rM,
-            fetchedAtWallMs: iM
-          }), OM.add(rM.sequence);
-          for (const iM of rM) OM.has(iM) || (console.warn(`Replay sequence ${iM} has no ${this.description}.`), this.unavailable.add(iM))
-        })).catch((MM => {
-          console.error(`Failed to fetch the replay's ${this.description}.`, MM), this.failedFetches++, this.retryAtWallMs = this.wallNowMs() + 6e4
+          const JV = new Set;
+          for (const eV of VV) this.entries.set(eV.sequence, {
+            urls: eV,
+            fetchedAtWallMs: xV
+          }), JV.add(eV.sequence);
+          for (const xV of eV) JV.has(xV) || (console.warn(`Replay sequence ${xV} has no ${this.description}.`), this.unavailable.add(xV))
+        })).catch((VV => {
+          console.error(`Failed to fetch the replay's ${this.description}.`, VV), this.failedFetches++, this.retryAtWallMs = this.wallNowMs() + 6e4
         })).finally((() => {
           this.inFlight = !1
         }))
       }
     }
-    class cM {
-      constructor(MM, rM, iM, OM) {
-        let SM = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
-          jM = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : Date.now,
-          aM = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : qM;
-        this.load = rM, this.onLoaded = iM, this.onFailed = OM, this.chunks = void 0, this.urls = void 0, this.loading = 0, this.merged = Mr([]), this.hidden = [], this.destroyed = !1, this.chunks = [...MM].sort(((MM, rM) => MM.startMs - rM.startMs)).map((MM => ({
-          chunk: MM,
+    class OV {
+      constructor(VV, eV, xV, JV) {
+        let YV = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
+          UV = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : Date.now,
+          yV = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : SV;
+        this.load = eV, this.onLoaded = xV, this.onFailed = JV, this.chunks = void 0, this.urls = void 0, this.loading = 0, this.merged = Ve([]), this.hidden = [], this.destroyed = !1, this.chunks = [...VV].sort(((VV, eV) => VV.startMs - eV.startMs)).map((VV => ({
+          chunk: VV,
           status: "idle",
           attempts: 0,
           telemetry: null
-        }))), this.urls = new VM(SM, "telemetry URLs", jM, aM), this.urls.reset(ir(MM))
+        }))), this.urls = new dV(YV, "telemetry URLs", UV, yV), this.urls.reset(xe(VV))
       }
       get telemetry() {
         return this.merged
@@ -659,145 +659,145 @@ export const modules = {
         return this.hidden
       }
       get loadedCount() {
-        return this.chunks.filter((MM => "loaded" === MM.status)).length
+        return this.chunks.filter((VV => "loaded" === VV.status)).length
       }
-      update(MM, rM, iM) {
+      update(VV, eV, xV) {
         if (null === this.load || this.destroyed) return;
-        const OM = rM.toPosition(MM),
-          SM = rM.toTime(OM - 1e4),
-          jM = rM.toTime(OM + 6e4 * Math.max(1, iM)),
-          aM = rM.toTime(OM + 12e4 * Math.max(1, iM)),
-          PM = this.chunks.filter((MM => "idle" === MM.status && MM.chunk.endMs >= SM && MM.chunk.startMs <= aM)).sort(((rM, iM) => Or(MM, rM.chunk) - Or(MM, iM.chunk)));
-        this.urls.request(PM.flatMap((MM => {
-          var rM;
+        const JV = eV.toPosition(VV),
+          YV = eV.toTime(JV - 1e4),
+          UV = eV.toTime(JV + 6e4 * Math.max(1, xV)),
+          yV = eV.toTime(JV + 12e4 * Math.max(1, xV)),
+          pV = this.chunks.filter((VV => "idle" === VV.status && VV.chunk.endMs >= YV && VV.chunk.startMs <= yV)).sort(((eV, xV) => Je(VV, eV.chunk) - Je(VV, xV.chunk)));
+        this.urls.request(pV.flatMap((VV => {
+          var eV;
           let {
-            chunk: iM
-          } = MM;
-          return null !== (rM = iM.sequence) && void 0 !== rM ? rM : []
+            chunk: xV
+          } = VV;
+          return null !== (eV = xV.sequence) && void 0 !== eV ? eV : []
         })));
-        for (const nM of PM) {
+        for (const QV of pV) {
           if (this.loading >= 3) return;
-          const MM = nM.chunk.startMs <= jM ? this.getUrl(nM.chunk) : null;
-          null !== MM && this.startLoad(nM, MM, this.load)
+          const VV = QV.chunk.startMs <= UV ? this.getUrl(QV.chunk) : null;
+          null !== VV && this.startLoad(QV, VV, this.load)
         }
       }
-      replaceUrls(MM) {
-        this.urls.reset(ir(MM));
-        for (const rM of this.chunks) {
-          const iM = MM.find((MM => MM.startMs === rM.chunk.startMs && MM.endMs === rM.chunk.endMs));
-          void 0 !== iM && (rM.chunk = iM, "failed" === rM.status && (rM.status = "idle"))
+      replaceUrls(VV) {
+        this.urls.reset(xe(VV));
+        for (const eV of this.chunks) {
+          const xV = VV.find((VV => VV.startMs === eV.chunk.startMs && VV.endMs === eV.chunk.endMs));
+          void 0 !== xV && (eV.chunk = xV, "failed" === eV.status && (eV.status = "idle"))
         }
       }
       destroy() {
         this.destroyed = !0, this.urls.destroy()
       }
-      getUrl(MM) {
-        var rM;
-        if (void 0 === MM.sequence) return null !== (rM = MM.url) && void 0 !== rM ? rM : null;
-        const iM = this.urls.get(MM.sequence);
-        return "string" === typeof iM ? null : iM.url
+      getUrl(VV) {
+        var eV;
+        if (void 0 === VV.sequence) return null !== (eV = VV.url) && void 0 !== eV ? eV : null;
+        const xV = this.urls.get(VV.sequence);
+        return "string" === typeof xV ? null : xV.url
       }
-      startLoad(MM, rM, iM) {
-        MM.status = "loading", MM.attempts++, this.loading++, iM(rM).then((rM => {
-          this.destroyed || (MM.status = "loaded", MM.telemetry = rM, this.merge(), this.onLoaded())
-        })).catch((rM => {
-          this.destroyed || (console.error(`Failed to load replay telemetry for ${MM.chunk.startMs}-${MM.chunk.endMs}.`, rM), MM.status = MM.attempts < 2 ? "idle" : "failed", this.onFailed())
+      startLoad(VV, eV, xV) {
+        VV.status = "loading", VV.attempts++, this.loading++, xV(eV).then((eV => {
+          this.destroyed || (VV.status = "loaded", VV.telemetry = eV, this.merge(), this.onLoaded())
+        })).catch((eV => {
+          this.destroyed || (console.error(`Failed to load replay telemetry for ${VV.chunk.startMs}-${VV.chunk.endMs}.`, eV), VV.status = VV.attempts < 2 ? "idle" : "failed", this.onFailed())
         })).finally((() => {
           this.loading--
         }))
       }
       merge() {
-        const MM = [];
-        let rM = !1;
-        for (const OM of this.chunks) {
-          const iM = MM.at(-1);
-          if (null === OM.telemetry) {
-            rM = !1;
+        const VV = [];
+        let eV = !1;
+        for (const JV of this.chunks) {
+          const xV = VV.at(-1);
+          if (null === JV.telemetry) {
+            eV = !1;
             continue
           }
-          const SM = rr(OM.telemetry, OM.chunk);
-          void 0 !== iM && rM && OM.chunk.startMs <= iM.endMs + 1e3 ? (iM.telemetry.push(SM), iM.endMs = OM.chunk.endMs) : (MM.push({
-            telemetry: [SM],
-            endMs: OM.chunk.endMs
-          }), rM = !0)
+          const YV = ee(JV.telemetry, JV.chunk);
+          void 0 !== xV && eV && JV.chunk.startMs <= xV.endMs + 1e3 ? (xV.telemetry.push(YV), xV.endMs = JV.chunk.endMs) : (VV.push({
+            telemetry: [YV],
+            endMs: JV.chunk.endMs
+          }), eV = !0)
         }
-        const iM = MM.map((MM => function(MM, rM) {
-          const iM = MM.actions.at(-1);
-          if (void 0 === iM || 0 === iM.bits) return MM;
+        const xV = VV.map((VV => function(VV, eV) {
+          const xV = VV.actions.at(-1);
+          if (void 0 === xV || 0 === xV.bits) return VV;
           return {
-            ...MM,
-            actions: [...MM.actions, {
-              atMs: rM,
+            ...VV,
+            actions: [...VV.actions, {
+              atMs: eV,
               bits: 0
             }]
           }
-        }(Mr(MM.telemetry), MM.endMs)));
-        this.merged = Mr(iM), this.hidden = iM.flatMap(((rM, iM) => function(MM, rM) {
-          const iM = [];
-          let OM = null;
+        }(Ve(VV.telemetry), VV.endMs)));
+        this.merged = Ve(xV), this.hidden = xV.flatMap(((eV, xV) => function(VV, eV) {
+          const xV = [];
+          let JV = null;
           for (const {
-              atMs: SM,
-              event: jM
+              atMs: YV,
+              event: UV
             }
-            of MM.events) "hidden" === jM && null === OM ? OM = SM : "visible" === jM && null !== OM && (iM.push({
-            startMs: OM,
-            endMs: SM
-          }), OM = null);
-          return null !== OM && iM.push({
-            startMs: OM,
-            endMs: rM
-          }), DM(iM)
-        }(rM, MM[iM].endMs)))
+            of VV.events) "hidden" === UV && null === JV ? JV = YV : "visible" === UV && null !== JV && (xV.push({
+            startMs: JV,
+            endMs: YV
+          }), JV = null);
+          return null !== JV && xV.push({
+            startMs: JV,
+            endMs: eV
+          }), DV(xV)
+        }(eV, VV[xV].endMs)))
       }
     }
 
-    function Mr(MM) {
+    function Ve(VV) {
       return {
-        inputRecorded: MM.some((MM => MM.keys.length > 0)),
-        frames: MM.flatMap((MM => MM.frames)),
-        states: MM.flatMap((MM => MM.states)),
-        events: MM.flatMap((MM => MM.events)),
-        actions: MM.flatMap((MM => MM.actions)),
-        keys: MM.flatMap((MM => MM.keys))
+        inputRecorded: VV.some((VV => VV.keys.length > 0)),
+        frames: VV.flatMap((VV => VV.frames)),
+        states: VV.flatMap((VV => VV.states)),
+        events: VV.flatMap((VV => VV.events)),
+        actions: VV.flatMap((VV => VV.actions)),
+        keys: VV.flatMap((VV => VV.keys))
       }
     }
 
-    function rr(MM, rM) {
+    function ee(VV, eV) {
       const {
-        actions: iM
-      } = MM;
-      return !MM.inputRecorded || iM.length > 0 && iM[0].atMs <= rM.startMs + 1 ? MM : {
-        ...MM,
+        actions: xV
+      } = VV;
+      return !VV.inputRecorded || xV.length > 0 && xV[0].atMs <= eV.startMs + 1 ? VV : {
+        ...VV,
         actions: [{
-          atMs: rM.startMs,
+          atMs: eV.startMs,
           bits: 0
-        }, ...iM]
+        }, ...xV]
       }
     }
 
-    function ir(MM) {
-      return MM.flatMap((MM => {
+    function xe(VV) {
+      return VV.flatMap((VV => {
         let {
-          sequence: rM,
-          url: iM
-        } = MM;
-        return void 0 === rM || void 0 === iM ? [] : [{
-          sequence: rM,
-          url: iM
+          sequence: eV,
+          url: xV
+        } = VV;
+        return void 0 === eV || void 0 === xV ? [] : [{
+          sequence: eV,
+          url: xV
         }]
       }))
     }
 
-    function Or(MM, rM) {
-      return MM < rM.startMs ? rM.startMs - MM : MM > rM.endMs ? 2 * (MM - rM.endMs) : 0
+    function Je(VV, eV) {
+      return VV < eV.startMs ? eV.startMs - VV : VV > eV.endMs ? 2 * (VV - eV.endMs) : 0
     }
-    class Sr {
-      constructor(MM, rM, iM, OM) {
-        this.data = MM, this.domClock = rM, this.timeline = iM, this.options = OM, this.telemetry = void 0, this.activityTimes = void 0, this.markerList = [], this.inactiveRangeList = [], this.videoGapRanges = [], this.activityTimes = function(MM, rM) {
-          return MM.filter(IM).map((MM => rM.toEpoch(MM.timestamp)))
-        }(MM.domEvents, rM), this.telemetry = new cM(MM.telemetryChunks, OM.loadTelemetryChunk, (() => {
+    class Ye {
+      constructor(VV, eV, xV, JV) {
+        this.data = VV, this.domClock = eV, this.timeline = xV, this.options = JV, this.telemetry = void 0, this.activityTimes = void 0, this.markerList = [], this.inactiveRangeList = [], this.videoGapRanges = [], this.activityTimes = function(VV, eV) {
+          return VV.filter(uV).map((VV => eV.toEpoch(VV.timestamp)))
+        }(VV.domEvents, eV), this.telemetry = new OV(VV.telemetryChunks, JV.loadTelemetryChunk, (() => {
           this.rebuild()
-        }), OM.onTelemetryFailed, OM.telemetryUrls), this.rebuild()
+        }), JV.onTelemetryFailed, JV.telemetryUrls), this.rebuild()
       }
       get markers() {
         return this.markerList
@@ -817,259 +817,259 @@ export const modules = {
       get telemetryChunksLoaded() {
         return this.telemetry.loadedCount
       }
-      update(MM, rM) {
-        this.telemetry.update(MM, this.timeline, rM)
+      update(VV, eV) {
+        this.telemetry.update(VV, this.timeline, eV)
       }
-      replaceTelemetryUrls(MM) {
-        this.telemetry.replaceUrls(MM)
+      replaceTelemetryUrls(VV) {
+        this.telemetry.replaceUrls(VV)
       }
       destroy() {
         this.telemetry.destroy()
       }
-      isHiddenAt(MM) {
-        return this.telemetry.hiddenRanges.some(jr(MM))
+      isHiddenAt(VV) {
+        return this.telemetry.hiddenRanges.some(Ue(VV))
       }
-      isVideoGapAt(MM) {
-        return this.videoGapRanges.some(jr(MM))
+      isVideoGapAt(VV) {
+        return this.videoGapRanges.some(Ue(VV))
       }
       rebuild() {
-        const MM = this.telemetry.telemetry,
-          rM = this.telemetry.hiddenRanges;
-        this.videoGapRanges = XM(MM.frames, this.data.videoSegments, rM), this.inactiveRangeList = function(MM, rM, iM, OM) {
-          const SM = [...rM];
-          if (MM.length > 0) {
-            const rM = [iM.startMs, ...MM, iM.endMs];
-            for (let MM = 1; MM < rM.length; MM++) {
-              const iM = rM[MM - 1],
-                jM = rM[MM] - 1e3;
-              jM - iM >= OM && SM.push({
-                startMs: iM,
-                endMs: jM
+        const VV = this.telemetry.telemetry,
+          eV = this.telemetry.hiddenRanges;
+        this.videoGapRanges = HV(VV.frames, this.data.videoSegments, eV), this.inactiveRangeList = function(VV, eV, xV, JV) {
+          const YV = [...eV];
+          if (VV.length > 0) {
+            const eV = [xV.startMs, ...VV, xV.endMs];
+            for (let VV = 1; VV < eV.length; VV++) {
+              const xV = eV[VV - 1],
+                UV = eV[VV] - 1e3;
+              UV - xV >= JV && YV.push({
+                startMs: xV,
+                endMs: UV
               })
             }
           }
-          return DM(SM).filter((MM => MM.endMs - MM.startMs >= OM))
-        }(this.activityTimes, rM, this.timeline, this.options.inactivityThresholdMs), this.markerList = function(MM) {
+          return DV(YV).filter((VV => VV.endMs - VV.startMs >= JV))
+        }(this.activityTimes, eV, this.timeline, this.options.inactivityThresholdMs), this.markerList = function(VV) {
           const {
-            timeline: rM
-          } = MM;
-          return [...KM(MM.domEvents, MM.domClock), ...MM.telemetry.events.filter((MM => {
+            timeline: eV
+          } = VV;
+          return [...sV(VV.domEvents, VV.domClock), ...VV.telemetry.events.filter((VV => {
             let {
-              event: rM
-            } = MM;
-            return "contextLost" === rM
-          })).map((MM => {
+              event: eV
+            } = VV;
+            return "contextLost" === eV
+          })).map((VV => {
             let {
-              atMs: rM
-            } = MM;
+              atMs: eV
+            } = VV;
             return {
               kind: "graphicsCrash",
-              atMs: rM
+              atMs: eV
             }
-          })), ...MM.hidden.map((MM => ({
+          })), ...VV.hidden.map((VV => ({
             kind: "hidden",
-            atMs: MM.startMs,
-            endMs: MM.endMs
-          }))), ...MM.extraMarkers].filter((MM => MM.atMs >= rM.startMs && MM.atMs <= rM.endMs && (rM.contains(MM.atMs) || rM.contains(MM.atMs - 1)))).sort(((MM, rM) => MM.atMs - rM.atMs))
+            atMs: VV.startMs,
+            endMs: VV.endMs
+          }))), ...VV.extraMarkers].filter((VV => VV.atMs >= eV.startMs && VV.atMs <= eV.endMs && (eV.contains(VV.atMs) || eV.contains(VV.atMs - 1)))).sort(((VV, eV) => VV.atMs - eV.atMs))
         }({
           domEvents: this.data.domEvents,
           domClock: this.domClock,
-          telemetry: MM,
+          telemetry: VV,
           extraMarkers: this.data.markers,
-          hidden: rM,
+          hidden: eV,
           timeline: this.timeline
         })
       }
     }
 
-    function jr(MM) {
-      return rM => MM >= rM.startMs && MM < rM.endMs
+    function Ue(VV) {
+      return eV => VV >= eV.startMs && VV < eV.endMs
     }
-    const ar = new Set(["src", "href", "xlink:href", "poster", "data", "background", "lowsrc", "dynsrc", "manifest", "icon", "action", "formaction", "ping", "codebase", "archive", "longdesc", "rr_src", "rr_dataurl"]),
-      Pr = new Set(["srcset", "imagesrcset"]),
-      nr = new Set(["to", "from", "by", "values"]),
-      Qr = new Set(["srcdoc", "http-equiv", "attributionsrc"]),
-      zr = /url\(\s*(?:"([^"]*)"|'([^']*)'|([^"')\s]*))\s*\)|@import\s*(?:"([^"]*)"|'([^']*)')|"\s*((?:[a-z][a-z\d+.-]*:|\/\/)[^"]*)"|'\s*((?:[a-z][a-z\d+.-]*:|\/\/)[^']*)'/gi,
-      Lr = /url\(|@import|image-set|\\|["']\s*(?:[a-z][a-z\d+.-]*:|\/\/)/i,
-      mr = /\\(?:([\da-f]{1,6})\s?|(.))/gis,
-      Hr = /url\(|@import(?!\s*"")|\/\\|\\[/\\]/i,
-      hr = /^(?:[a-z][a-z\d+.-]*:|\/\/|\\\\)/i,
-      Jr = /^data:image\/(?!svg)/i,
-      dr = "about:invalid";
+    const ye = new Set(["src", "href", "xlink:href", "poster", "data", "background", "lowsrc", "dynsrc", "manifest", "icon", "action", "formaction", "ping", "codebase", "archive", "longdesc", "rr_src", "rr_dataurl"]),
+      pe = new Set(["srcset", "imagesrcset"]),
+      Qe = new Set(["to", "from", "by", "values"]),
+      ne = new Set(["srcdoc", "http-equiv", "attributionsrc"]),
+      we = /url\(\s*(?:"([^"]*)"|'([^']*)'|([^"')\s]*))\s*\)|@import\s*(?:"([^"]*)"|'([^']*)')|"\s*((?:[a-z][a-z\d+.-]*:|\/\/)[^"]*)"|'\s*((?:[a-z][a-z\d+.-]*:|\/\/)[^']*)'/gi,
+      Ze = /url\(|@import|image-set|\\|["']\s*(?:[a-z][a-z\d+.-]*:|\/\/)/i,
+      ve = /\\(?:([\da-f]{1,6})\s?|(.))/gis,
+      re = /url\(|@import(?!\s*"")|\/\\|\\[/\\]/i,
+      ke = /^(?:[a-z][a-z\d+.-]*:|\/\/|\\\\)/i,
+      be = /^data:image\/(?!svg)/i,
+      Ee = "about:invalid";
 
-    function yr(MM, rM) {
+    function Be(VV, eV) {
       let {
-        hosts: iM
-      } = rM, OM = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-      const SM = MM.trim();
-      if (/[\\\u0000-\u001f]/.test(SM)) return !1;
-      if (!hr.test(SM)) return !0;
-      let jM;
+        hosts: xV
+      } = eV, JV = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      const YV = VV.trim();
+      if (/[\\\u0000-\u001f]/.test(YV)) return !1;
+      if (!ke.test(YV)) return !0;
+      let UV;
       try {
-        jM = new URL(SM.startsWith("//") ? `https:${SM}` : SM)
+        UV = new URL(YV.startsWith("//") ? `https:${YV}` : YV)
       } catch {
         return !1
       }
-      return "data:" === jM.protocol ? OM ? "text/css" !== SM.slice(5).split(/[,;]/)[0].trim().toLowerCase() : Jr.test(SM) : "blob:" === jM.protocol || ("http:" === jM.protocol || "https:" === jM.protocol) && iM.some((MM => jM.hostname === MM || jM.hostname.endsWith(`.${MM}`)))
+      return "data:" === UV.protocol ? JV ? "text/css" !== YV.slice(5).split(/[,;]/)[0].trim().toLowerCase() : be.test(YV) : "blob:" === UV.protocol || ("http:" === UV.protocol || "https:" === UV.protocol) && xV.some((VV => UV.hostname === VV || UV.hostname.endsWith(`.${VV}`)))
     }
 
-    function lr(MM, rM) {
-      return MM.replace(zr, (function(MM) {
-        for (var iM = arguments.length, OM = new Array(iM > 1 ? iM - 1 : 0), SM = 1; SM < iM; SM++) OM[SM - 1] = arguments[SM];
-        if (yr(OM.slice(0, 7).find((MM => "string" === typeof MM)), rM, !0)) return MM;
-        const jM = MM.slice(0, 4).toLowerCase();
-        return "url(" === jM ? `url("${dr}")` : "@imp" === jM ? `@import "${dr}"` : `"${dr}"`
+    function je(VV, eV) {
+      return VV.replace(we, (function(VV) {
+        for (var xV = arguments.length, JV = new Array(xV > 1 ? xV - 1 : 0), YV = 1; YV < xV; YV++) JV[YV - 1] = arguments[YV];
+        if (Be(JV.slice(0, 7).find((VV => "string" === typeof VV)), eV, !0)) return VV;
+        const UV = VV.slice(0, 4).toLowerCase();
+        return "url(" === UV ? `url("${Ee}")` : "@imp" === UV ? `@import "${Ee}"` : `"${Ee}"`
       }))
     }
 
-    function Er(MM) {
-      return Hr.test(MM.replace(zr, '""'))
+    function qe(VV) {
+      return re.test(VV.replace(we, '""'))
     }
 
-    function Ur(MM) {
-      let rM = "between";
-      for (let iM = 0; iM < MM.length; iM++) {
-        const OM = MM[iM];
-        if ("/" === OM && "*" === MM[iM + 1]) {
-          if (iM = MM.indexOf("*/", iM + 2), -1 === iM) return "open";
-          iM++, rM = "between"
-        } else if ('"' === OM || "'" === OM) {
-          for (iM++; iM < MM.length && MM[iM] !== OM && !/[\n\r\f]/.test(MM[iM]); iM++) "\\" === MM[iM] && iM++;
-          if (iM >= MM.length) return "open";
-          rM = "token"
-        } else "\\" === OM ? (iM++, rM = "token") : ";" === OM || "{" === OM || "}" === OM ? rM = "between" : /\s/.test(OM) || (rM = "token")
+    function te(VV) {
+      let eV = "between";
+      for (let xV = 0; xV < VV.length; xV++) {
+        const JV = VV[xV];
+        if ("/" === JV && "*" === VV[xV + 1]) {
+          if (xV = VV.indexOf("*/", xV + 2), -1 === xV) return "open";
+          xV++, eV = "between"
+        } else if ('"' === JV || "'" === JV) {
+          for (xV++; xV < VV.length && VV[xV] !== JV && !/[\n\r\f]/.test(VV[xV]); xV++) "\\" === VV[xV] && xV++;
+          if (xV >= VV.length) return "open";
+          eV = "token"
+        } else "\\" === JV ? (xV++, eV = "token") : ";" === JV || "{" === JV || "}" === JV ? eV = "between" : /\s/.test(JV) || (eV = "token")
       }
-      return rM
+      return eV
     }
 
-    function Gr(MM, rM) {
-      const iM = lr(MM, rM);
-      if (Er(iM) || "open" === Ur(iM)) return "";
-      if (!iM.includes("\\")) return iM;
-      const OM = function(MM) {
-        return MM.replace(mr, ((MM, rM, iM) => void 0 !== rM ? String.fromCodePoint(Math.min(parseInt(rM, 16), 1114111)) : null !== iM && void 0 !== iM ? iM : ""))
-      }(iM);
-      return lr(OM, rM) !== OM || Er(OM) ? "" : iM
+    function Fe(VV, eV) {
+      const xV = je(VV, eV);
+      if (qe(xV) || "open" === te(xV)) return "";
+      if (!xV.includes("\\")) return xV;
+      const JV = function(VV) {
+        return VV.replace(ve, ((VV, eV, xV) => void 0 !== eV ? String.fromCodePoint(Math.min(parseInt(eV, 16), 1114111)) : null !== xV && void 0 !== xV ? xV : ""))
+      }(xV);
+      return je(JV, eV) !== JV || qe(JV) ? "" : xV
     }
 
-    function Cr(MM, rM) {
-      const iM = Lr.test(MM) ? Gr(MM, rM) : MM;
-      return iM.split("/* rr_split */").every((MM => "between" === Ur(MM))) ? iM : ""
+    function Te(VV, eV) {
+      const xV = Ze.test(VV) ? Fe(VV, eV) : VV;
+      return xV.split("/* rr_split */").every((VV => "between" === te(VV))) ? xV : ""
     }
 
-    function er(MM, rM, iM) {
-      if ("string" === typeof rM) {
-        const OM = MM.toLowerCase();
-        if (Qr.has(OM)) return null;
-        if (Pr.has(OM)) return function(MM, rM) {
-          return MM.split(",").every((MM => {
-            const iM = MM.trim().split(/\s+/)[0];
-            return void 0 === iM || "" === iM || yr(iM, rM)
+    function Pe(VV, eV, xV) {
+      if ("string" === typeof eV) {
+        const JV = VV.toLowerCase();
+        if (ne.has(JV)) return null;
+        if (pe.has(JV)) return function(VV, eV) {
+          return VV.split(",").every((VV => {
+            const xV = VV.trim().split(/\s+/)[0];
+            return void 0 === xV || "" === xV || Be(xV, eV)
           }))
-        }(rM, iM) ? rM : null;
-        if (nr.has(OM)) {
-          return rM.split(";").every((MM => yr(MM, iM))) ? er("", rM, iM) : null
+        }(eV, xV) ? eV : null;
+        if (Qe.has(JV)) {
+          return eV.split(";").every((VV => Be(VV, xV))) ? Pe("", eV, xV) : null
         }
-        return ar.has(OM) ? yr(rM, iM) ? rM : null : "_csstext" === OM ? Cr(rM, iM) : Lr.test(rM) ? Gr(rM, iM) : rM
+        return ye.has(JV) ? Be(eV, xV) ? eV : null : "_csstext" === JV ? Te(eV, xV) : Ze.test(eV) ? Fe(eV, xV) : eV
       }
-      if (Array.isArray(rM)) return rM.map((MM => er("", MM, iM)));
-      if (null !== rM && "object" === typeof rM) {
-        const OM = "style" === MM.toLowerCase(),
-          SM = {};
-        for (const [MM, aM] of Object.entries(rM)) SM[MM] = er(OM ? "" : MM, aM, iM);
+      if (Array.isArray(eV)) return eV.map((VV => Pe("", VV, xV)));
+      if (null !== eV && "object" === typeof eV) {
+        const JV = "style" === VV.toLowerCase(),
+          YV = {};
+        for (const [VV, yV] of Object.entries(eV)) YV[VV] = Pe(JV ? "" : VV, yV, xV);
         const {
-          id: jM
-        } = SM;
-        if ("number" === typeof jM && iM.styleTextIds.has(jM))
-          for (const MM of ["textContent", "value"]) {
-            const rM = SM[MM];
-            "string" === typeof rM && (SM[MM] = Cr(rM, iM))
+          id: UV
+        } = YV;
+        if ("number" === typeof UV && xV.styleTextIds.has(UV))
+          for (const VV of ["textContent", "value"]) {
+            const eV = YV[VV];
+            "string" === typeof eV && (YV[VV] = Te(eV, xV))
           }
-        return SM
+        return YV
       }
-      return rM
+      return eV
     }
 
-    function br(MM) {
-      const rM = new Set,
-        iM = [],
-        OM = (MM, SM) => {
-          if (null === MM || "object" !== typeof MM) return;
+    function Ae(VV) {
+      const eV = new Set,
+        xV = [],
+        JV = (VV, YV) => {
+          if (null === VV || "object" !== typeof VV) return;
           const {
-            id: jM,
-            tagName: aM,
-            childNodes: PM
-          } = MM;
-          if ("number" === typeof jM && ("string" === typeof aM && "style" === aM.toLowerCase() && rM.add(jM), iM.push({
-              id: jM,
-              parentId: SM
-            }), Array.isArray(PM)))
-            for (const rM of PM) OM(rM, jM)
+            id: UV,
+            tagName: yV,
+            childNodes: pV
+          } = VV;
+          if ("number" === typeof UV && ("string" === typeof yV && "style" === yV.toLowerCase() && eV.add(UV), xV.push({
+              id: UV,
+              parentId: YV
+            }), Array.isArray(pV)))
+            for (const eV of pV) JV(eV, UV)
         };
-      for (const jM of MM) {
-        const MM = jM.data;
-        if (jM.type === sM.e.FullSnapshot) OM(null === MM || void 0 === MM ? void 0 : MM.node, null);
-        else if (jM.type === sM.e.IncrementalSnapshot && Array.isArray(null === MM || void 0 === MM ? void 0 : MM.adds))
-          for (const rM of MM.adds) OM(null === rM || void 0 === rM ? void 0 : rM.node, null === rM || void 0 === rM ? void 0 : rM.parentId)
+      for (const UV of VV) {
+        const VV = UV.data;
+        if (UV.type === gV.d.FullSnapshot) JV(null === VV || void 0 === VV ? void 0 : VV.node, null);
+        else if (UV.type === gV.d.IncrementalSnapshot && Array.isArray(null === VV || void 0 === VV ? void 0 : VV.adds))
+          for (const eV of VV.adds) JV(null === eV || void 0 === eV ? void 0 : eV.node, null === eV || void 0 === eV ? void 0 : eV.parentId)
       }
-      const SM = new Set;
+      const YV = new Set;
       for (const {
-          id: jM,
-          parentId: aM
+          id: UV,
+          parentId: yV
         }
-        of iM) "number" === typeof aM && rM.has(aM) && SM.add(jM);
-      return SM
+        of xV) "number" === typeof yV && eV.has(yV) && YV.add(UV);
+      return YV
     }
-    const wr = "brv-styles",
-      tr = [".brv-video-layer { position: absolute !important; margin: 0 !important; padding: 0 !important; border: 0 !important; }", ".brv-video-layer { overflow: hidden !important; pointer-events: none !important; background: none !important; transform: none !important; }", ".brv-video { position: absolute !important; inset: 0 !important; width: 100% !important; height: 100% !important; margin: 0 !important; }", ".brv-video { object-fit: fill !important; visibility: hidden !important; }", ".brv-video.brv-video-shown { visibility: visible !important; }", ".brv-still { position: absolute !important; inset: 0 !important; width: 100% !important; height: 100% !important; margin: 0 !important; }", ".brv-still { object-fit: fill !important; visibility: hidden !important; max-width: none !important; }", ".brv-still.brv-still-shown { visibility: visible !important; }"],
-      gr = `\n.brv-player {\n\t--brv-bg: #22283b;\n\t--brv-panel: #2b3249;\n\t--brv-text: #f2f2f2;\n\t--brv-muted: #a4a4a4;\n\t--brv-accent: #ffb914;\n\t--brv-track: #3c4b68;\n\t--brv-fps: #1dd06d;\n\t--brv-low-fps: #e34f4f;\n\t--brv-inactive: rgba(164, 164, 164, 0.18);\n\t--brv-video-gap: rgba(10, 12, 20, 0.62);\n\t--brv-marker-error: #fc6464;\n\t--brv-marker-death: #6ec1ff;\n\t--brv-marker-note: #fcd373;\n\t--brv-key-press: #a4a4a4;\n\t--brv-key-unbound: #ff5a5a;\n\tdisplay: flex;\n\tflex-direction: column;\n\tmin-height: 0;\n\tbackground: var(--brv-bg);\n\tcolor: var(--brv-text);\n\tfont: inherit;\n\toutline: none;\n\tuser-select: none;\n}\n.brv-player:focus-visible { box-shadow: inset 0 0 0 2px var(--brv-accent); }\n.brv-player:fullscreen { width: 100%; height: 100%; }\n.brv-viewport { position: relative; flex: 1 1 auto; min-height: 12rem; overflow: hidden; background: #000; cursor: pointer; }\n.brv-stage { position: absolute; left: 0; top: 0; transform-origin: 0 0; }\n.brv-stage .replayer-wrapper { position: relative; }\n.brv-stage .replayer-wrapper > iframe { position: relative; z-index: 1; display: block; border: 0; background: transparent; color-scheme: normal; pointer-events: none; }\n.brv-stage .replayer-mouse { position: absolute; z-index: 2; width: 20px; height: 20px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M4 2l15 11-7 1 4 8-3 1-4-8-5 5z' fill='%23fff' stroke='%23000' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat center / contain; transition: left 0.05s linear, top 0.05s linear; }\n.brv-stage .replayer-mouse.touch-device { width: 48px; height: 48px; margin: -24px 0 0 -24px; background: none; border: 3px solid transparent; border-radius: 50%; }\n.brv-stage .replayer-mouse.touch-device.touch-active { border-color: color-mix(in srgb, var(--brv-accent) 90%, transparent); }\n.brv-stage .replayer-mouse-tail { position: absolute; pointer-events: none; }\n${tr.join("\n")}\n.brv-video-layer { z-index: 0; }\n.brv-stage-video-only .brv-video-layer { inset: 0; }\n.brv-overlay { position: absolute; inset: 0; z-index: 3; display: flex; align-items: center; justify-content: center; padding: 1rem; text-align: center; color: var(--brv-text); background: rgba(0, 0, 0, 0.55); pointer-events: none; }\n.brv-seekbar { position: relative; height: 2.75rem; margin: 0.5rem 0.75rem 0; cursor: pointer; touch-action: none; }\n.brv-seekbar-track { position: absolute; left: 0; right: 0; top: 0; height: 1.75rem; background: var(--brv-track); overflow: hidden; }\n.brv-seekbar-canvas { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0.85; }\n.brv-seekbar-video-gap { position: absolute; top: 0; bottom: 0; background: var(--brv-video-gap); box-shadow: inset 0 -2px 0 var(--brv-muted); }\n.brv-seekbar-inactive { position: absolute; top: 0; bottom: 0; background: repeating-linear-gradient(135deg, var(--brv-inactive) 0 4px, transparent 4px 8px); }\n.brv-seekbar-progress { position: absolute; left: 0; top: 0; bottom: 0; width: var(--brv-position, 0); background: color-mix(in srgb, var(--brv-accent) 18%, transparent); pointer-events: none; }\n.brv-seekbar-hover { position: absolute; top: 0; bottom: 0; width: 1px; background: rgba(255, 255, 255, 0.6); pointer-events: none; }\n.brv-seekbar-playhead { position: absolute; left: var(--brv-position, 0); top: -3px; bottom: -3px; width: 3px; margin-left: -1px; background: var(--brv-accent); pointer-events: none; }\n.brv-seekbar-markers { position: absolute; left: 0; right: 0; top: 1.75rem; height: 1rem; }\n.brv-seekbar-with-input { height: 3.25rem; }\n.brv-seekbar-input { position: absolute; left: 0; top: calc(1.75rem + 2px); width: 100%; height: 0.4rem; background: color-mix(in srgb, var(--brv-track) 55%, transparent); }\n.brv-seekbar-with-input .brv-seekbar-markers { top: calc(2.15rem + 4px); }\n.brv-input { position: absolute; right: 0.75rem; bottom: 0.75rem; z-index: 3; display: flex; flex-direction: column; align-items: flex-end; gap: 0.4rem; pointer-events: none; font-size: 0.8rem; }\n.brv-input-slot { display: flex; flex-direction: column; align-items: flex-end; gap: 0.2rem; }\n.brv-input-press { padding: 0.15rem 0.5rem; color: var(--brv-text); background: rgba(0, 0, 0, 0.7); white-space: nowrap; }\n.brv-input-press-unbound { background: color-mix(in srgb, var(--brv-key-unbound) 85%, black); font-weight: bold; }\n.brv-input-devices { display: flex; align-items: flex-end; gap: 0.5rem; padding: 0.4rem; background: rgba(0, 0, 0, 0.7); }\n.brv-keys { display: flex; flex-direction: column; align-items: center; gap: 0.2rem; }\n.brv-keys-row { display: flex; gap: 0.2rem; }\n.brv-key { min-width: 1.6rem; height: 1.6rem; padding: 0 0.3rem; display: inline-flex; align-items: center; justify-content: center; box-sizing: border-box; color: var(--brv-muted); border: 1px solid var(--brv-muted); font-size: 0.7rem; }\n.brv-key-wide { min-width: 4.5rem; }\n.brv-key-held { color: #000; background: var(--brv-accent); border-color: var(--brv-accent); }\n.brv-mouse { position: relative; width: 2.4rem; height: 3.4rem; border: 1px solid var(--brv-muted); border-radius: 1.05rem 1.05rem 0.9rem 0.9rem; overflow: hidden; } /* round by design: the mouse's body */\n.brv-mouse-left, .brv-mouse-right { position: absolute; top: 0; width: 50%; height: 45%; box-sizing: border-box; border-bottom: 1px solid var(--brv-muted); }\n.brv-mouse-left { left: 0; border-right: 1px solid var(--brv-muted); }\n.brv-mouse-right { right: 0; }\n.brv-mouse-middle { position: absolute; left: calc(50% - 0.2rem); top: 0.35rem; z-index: 1; width: 0.4rem; height: 0.7rem; box-sizing: border-box; border: 1px solid var(--brv-muted); border-radius: 0.2rem; background: var(--brv-bg); } /* round by design: the scroll wheel */\n.brv-mouse .brv-key-held { background: var(--brv-accent); }\n.brv-marker { position: absolute; top: 2px; width: 8px; height: 8px; margin-left: -4px; border-radius: 50%; background: var(--brv-marker-note); }\n.brv-marker-range { margin-left: 0; height: 4px; top: 4px; min-width: 3px; }\n.brv-marker-error, .brv-marker-graphicsCrash { background: var(--brv-marker-error); }\n.brv-marker-death { background: var(--brv-marker-death); }\n.brv-marker-hidden { background: var(--brv-muted); }\n.brv-tooltip { position: absolute; bottom: calc(100% + 6px); transform: translateX(-50%); padding: 0.2rem 0.45rem; white-space: nowrap; font-size: 0.75rem; background: rgba(0, 0, 0, 0.85); pointer-events: none; z-index: 4; }\n.brv-chapters { display: flex; gap: 0.35rem; flex-wrap: wrap; margin: 0.25rem 0.75rem 0; }\n.brv-chapter { padding: 0.15rem 0.5rem; font: inherit; font-size: 0.75rem; color: var(--brv-text); background: var(--brv-panel); border: 1px solid transparent; cursor: pointer; }\n.brv-chapter.brv-chapter-current { border-color: var(--brv-accent); }\n.brv-controls { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; padding: 0.5rem 0.75rem 0.75rem; }\n.brv-button { display: inline-flex; align-items: center; justify-content: center; gap: 0.3rem; min-width: 2.25rem; height: 2.25rem; padding: 0 0.55rem; font: inherit; font-size: 0.85rem; color: var(--brv-text); background: var(--brv-panel); border: 0; cursor: pointer; }\n.brv-button:hover { filter: brightness(1.2); }\n.brv-button svg { width: 1.1rem; height: 1.1rem; fill: currentColor; }\n.brv-time { font-variant-numeric: tabular-nums; font-size: 0.85rem; color: var(--brv-muted); margin-right: auto; }\n.brv-speed { height: 2.25rem; padding: 0 0.4rem; font: inherit; font-size: 0.85rem; font-variant-numeric: tabular-nums; color: var(--brv-text); background: var(--brv-panel); border: 0; cursor: pointer; }\n.brv-speed:hover { filter: brightness(1.2); }\n.brv-speed option { color: var(--brv-text); background: var(--brv-bg); }\n.brv-switch { display: inline-flex; align-items: center; gap: 0.45rem; height: 2.25rem; padding: 0 0.6rem; font: inherit; font-size: 0.85rem; color: var(--brv-muted); background: transparent; border: 0; cursor: pointer; }\n.brv-switch:hover { color: var(--brv-text); }\n.brv-switch[aria-checked="true"] { color: var(--brv-text); }\n.brv-switch-track { position: relative; width: 1.9rem; height: 1.05rem; background: var(--brv-track); transition: background 0.15s; }\n.brv-switch-track::after { content: ""; position: absolute; top: 2px; left: 2px; width: calc(1.05rem - 4px); height: calc(1.05rem - 4px); background: var(--brv-text); transition: transform 0.15s; }\n.brv-switch[aria-checked="true"] .brv-switch-track { background: var(--brv-accent); }\n.brv-switch[aria-checked="true"] .brv-switch-track::after { transform: translateX(0.85rem); }\n.brv-player button:focus-visible, .brv-speed:focus-visible { outline: 2px solid var(--brv-accent); outline-offset: 1px; }\n`;
-    class ur {
-      static create(MM, rM, iM, OM, SM, jM, aM) {
-        return rM.some((MM => MM.type === sM.e.FullSnapshot)) ? new ur(MM, function(MM, rM) {
-          const iM = {
-            hosts: rM,
-            styleTextIds: br(MM)
+    const Ne = "brv-styles",
+      Xe = [".brv-video-layer { position: absolute !important; margin: 0 !important; padding: 0 !important; border: 0 !important; }", ".brv-video-layer { overflow: hidden !important; pointer-events: none !important; background: none !important; transform: none !important; }", ".brv-video { position: absolute !important; inset: 0 !important; width: 100% !important; height: 100% !important; margin: 0 !important; }", ".brv-video { object-fit: fill !important; visibility: hidden !important; }", ".brv-video.brv-video-shown { visibility: visible !important; }", ".brv-still { position: absolute !important; inset: 0 !important; width: 100% !important; height: 100% !important; margin: 0 !important; }", ".brv-still { object-fit: fill !important; visibility: hidden !important; max-width: none !important; }", ".brv-still.brv-still-shown { visibility: visible !important; }"],
+      Me = `\n.brv-player {\n\t--brv-bg: #22283b;\n\t--brv-panel: #2b3249;\n\t--brv-text: #f2f2f2;\n\t--brv-muted: #a4a4a4;\n\t--brv-accent: #ffb914;\n\t--brv-track: #3c4b68;\n\t--brv-fps: #1dd06d;\n\t--brv-low-fps: #e34f4f;\n\t--brv-inactive: rgba(164, 164, 164, 0.18);\n\t--brv-video-gap: rgba(10, 12, 20, 0.62);\n\t--brv-marker-error: #fc6464;\n\t--brv-marker-death: #6ec1ff;\n\t--brv-marker-note: #fcd373;\n\t--brv-key-press: #a4a4a4;\n\t--brv-key-unbound: #ff5a5a;\n\tdisplay: flex;\n\tflex-direction: column;\n\tmin-height: 0;\n\tbackground: var(--brv-bg);\n\tcolor: var(--brv-text);\n\tfont: inherit;\n\toutline: none;\n\tuser-select: none;\n}\n.brv-player:focus-visible { box-shadow: inset 0 0 0 2px var(--brv-accent); }\n.brv-player:fullscreen { width: 100%; height: 100%; }\n.brv-viewport { position: relative; flex: 1 1 auto; min-height: 12rem; overflow: hidden; background: #000; cursor: pointer; }\n.brv-stage { position: absolute; left: 0; top: 0; transform-origin: 0 0; }\n.brv-stage .replayer-wrapper { position: relative; }\n.brv-stage .replayer-wrapper > iframe { position: relative; z-index: 1; display: block; border: 0; background: transparent; color-scheme: normal; pointer-events: none; }\n.brv-stage .replayer-mouse { position: absolute; z-index: 2; width: 20px; height: 20px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M4 2l15 11-7 1 4 8-3 1-4-8-5 5z' fill='%23fff' stroke='%23000' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat center / contain; transition: left 0.05s linear, top 0.05s linear; }\n.brv-stage .replayer-mouse.touch-device { width: 48px; height: 48px; margin: -24px 0 0 -24px; background: none; border: 3px solid transparent; border-radius: 50%; }\n.brv-stage .replayer-mouse.touch-device.touch-active { border-color: color-mix(in srgb, var(--brv-accent) 90%, transparent); }\n.brv-stage .replayer-mouse-tail { position: absolute; pointer-events: none; }\n${Xe.join("\n")}\n.brv-video-layer { z-index: 0; }\n.brv-stage-video-only .brv-video-layer { inset: 0; }\n.brv-overlay { position: absolute; inset: 0; z-index: 3; display: flex; align-items: center; justify-content: center; padding: 1rem; text-align: center; color: var(--brv-text); background: rgba(0, 0, 0, 0.55); pointer-events: none; }\n.brv-seekbar { position: relative; height: 2.75rem; margin: 0.5rem 0.75rem 0; cursor: pointer; touch-action: none; }\n.brv-seekbar-track { position: absolute; left: 0; right: 0; top: 0; height: 1.75rem; background: var(--brv-track); overflow: hidden; }\n.brv-seekbar-canvas { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0.85; }\n.brv-seekbar-video-gap { position: absolute; top: 0; bottom: 0; background: var(--brv-video-gap); box-shadow: inset 0 -2px 0 var(--brv-muted); }\n.brv-seekbar-inactive { position: absolute; top: 0; bottom: 0; background: repeating-linear-gradient(135deg, var(--brv-inactive) 0 4px, transparent 4px 8px); }\n.brv-seekbar-progress { position: absolute; left: 0; top: 0; bottom: 0; width: var(--brv-position, 0); background: color-mix(in srgb, var(--brv-accent) 18%, transparent); pointer-events: none; }\n.brv-seekbar-hover { position: absolute; top: 0; bottom: 0; width: 1px; background: rgba(255, 255, 255, 0.6); pointer-events: none; }\n.brv-seekbar-playhead { position: absolute; left: var(--brv-position, 0); top: -3px; bottom: -3px; width: 3px; margin-left: -1px; background: var(--brv-accent); pointer-events: none; }\n.brv-seekbar-markers { position: absolute; left: 0; right: 0; top: 1.75rem; height: 1rem; }\n.brv-seekbar-with-input { height: 3.25rem; }\n.brv-seekbar-input { position: absolute; left: 0; top: calc(1.75rem + 2px); width: 100%; height: 0.4rem; background: color-mix(in srgb, var(--brv-track) 55%, transparent); }\n.brv-seekbar-with-input .brv-seekbar-markers { top: calc(2.15rem + 4px); }\n.brv-input { position: absolute; right: 0.75rem; bottom: 0.75rem; z-index: 3; display: flex; flex-direction: column; align-items: flex-end; gap: 0.4rem; pointer-events: none; font-size: 0.8rem; }\n.brv-input-slot { display: flex; flex-direction: column; align-items: flex-end; gap: 0.2rem; }\n.brv-input-press { padding: 0.15rem 0.5rem; color: var(--brv-text); background: rgba(0, 0, 0, 0.7); white-space: nowrap; }\n.brv-input-press-unbound { background: color-mix(in srgb, var(--brv-key-unbound) 85%, black); font-weight: bold; }\n.brv-input-devices { display: flex; align-items: flex-end; gap: 0.5rem; padding: 0.4rem; background: rgba(0, 0, 0, 0.7); }\n.brv-keys { display: flex; flex-direction: column; align-items: center; gap: 0.2rem; }\n.brv-keys-row { display: flex; gap: 0.2rem; }\n.brv-key { min-width: 1.6rem; height: 1.6rem; padding: 0 0.3rem; display: inline-flex; align-items: center; justify-content: center; box-sizing: border-box; color: var(--brv-muted); border: 1px solid var(--brv-muted); font-size: 0.7rem; }\n.brv-key-wide { min-width: 4.5rem; }\n.brv-key-held { color: #000; background: var(--brv-accent); border-color: var(--brv-accent); }\n.brv-mouse { position: relative; width: 2.4rem; height: 3.4rem; border: 1px solid var(--brv-muted); border-radius: 1.05rem 1.05rem 0.9rem 0.9rem; overflow: hidden; } /* round by design: the mouse's body */\n.brv-mouse-left, .brv-mouse-right { position: absolute; top: 0; width: 50%; height: 45%; box-sizing: border-box; border-bottom: 1px solid var(--brv-muted); }\n.brv-mouse-left { left: 0; border-right: 1px solid var(--brv-muted); }\n.brv-mouse-right { right: 0; }\n.brv-mouse-middle { position: absolute; left: calc(50% - 0.2rem); top: 0.35rem; z-index: 1; width: 0.4rem; height: 0.7rem; box-sizing: border-box; border: 1px solid var(--brv-muted); border-radius: 0.2rem; background: var(--brv-bg); } /* round by design: the scroll wheel */\n.brv-mouse .brv-key-held { background: var(--brv-accent); }\n.brv-marker { position: absolute; top: 2px; width: 8px; height: 8px; margin-left: -4px; border-radius: 50%; background: var(--brv-marker-note); }\n.brv-marker-range { margin-left: 0; height: 4px; top: 4px; min-width: 3px; }\n.brv-marker-error, .brv-marker-graphicsCrash { background: var(--brv-marker-error); }\n.brv-marker-death { background: var(--brv-marker-death); }\n.brv-marker-hidden { background: var(--brv-muted); }\n.brv-tooltip { position: absolute; bottom: calc(100% + 6px); transform: translateX(-50%); padding: 0.2rem 0.45rem; white-space: nowrap; font-size: 0.75rem; background: rgba(0, 0, 0, 0.85); pointer-events: none; z-index: 4; }\n.brv-chapters { display: flex; gap: 0.35rem; flex-wrap: wrap; margin: 0.25rem 0.75rem 0; }\n.brv-chapter { padding: 0.15rem 0.5rem; font: inherit; font-size: 0.75rem; color: var(--brv-text); background: var(--brv-panel); border: 1px solid transparent; cursor: pointer; }\n.brv-chapter.brv-chapter-current { border-color: var(--brv-accent); }\n.brv-controls { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; padding: 0.5rem 0.75rem 0.75rem; }\n.brv-button { display: inline-flex; align-items: center; justify-content: center; gap: 0.3rem; min-width: 2.25rem; height: 2.25rem; padding: 0 0.55rem; font: inherit; font-size: 0.85rem; color: var(--brv-text); background: var(--brv-panel); border: 0; cursor: pointer; }\n.brv-button:hover { filter: brightness(1.2); }\n.brv-button svg { width: 1.1rem; height: 1.1rem; fill: currentColor; }\n.brv-time { font-variant-numeric: tabular-nums; font-size: 0.85rem; color: var(--brv-muted); margin-right: auto; }\n.brv-speed { height: 2.25rem; padding: 0 0.4rem; font: inherit; font-size: 0.85rem; font-variant-numeric: tabular-nums; color: var(--brv-text); background: var(--brv-panel); border: 0; cursor: pointer; }\n.brv-speed:hover { filter: brightness(1.2); }\n.brv-speed option { color: var(--brv-text); background: var(--brv-bg); }\n.brv-switch { display: inline-flex; align-items: center; gap: 0.45rem; height: 2.25rem; padding: 0 0.6rem; font: inherit; font-size: 0.85rem; color: var(--brv-muted); background: transparent; border: 0; cursor: pointer; }\n.brv-switch:hover { color: var(--brv-text); }\n.brv-switch[aria-checked="true"] { color: var(--brv-text); }\n.brv-switch-track { position: relative; width: 1.9rem; height: 1.05rem; background: var(--brv-track); transition: background 0.15s; }\n.brv-switch-track::after { content: ""; position: absolute; top: 2px; left: 2px; width: calc(1.05rem - 4px); height: calc(1.05rem - 4px); background: var(--brv-text); transition: transform 0.15s; }\n.brv-switch[aria-checked="true"] .brv-switch-track { background: var(--brv-accent); }\n.brv-switch[aria-checked="true"] .brv-switch-track::after { transform: translateX(0.85rem); }\n.brv-player button:focus-visible, .brv-speed:focus-visible { outline: 2px solid var(--brv-accent); outline-offset: 1px; }\n`;
+    class ze {
+      static create(VV, eV, xV, JV, YV, UV, yV) {
+        return eV.some((VV => VV.type === gV.d.FullSnapshot)) ? new ze(VV, function(VV, eV) {
+          const xV = {
+            hosts: eV,
+            styleTextIds: Ae(VV)
           };
-          return MM.map((MM => MM.type === sM.e.Meta ? MM : {
-            ...MM,
-            data: er("data", MM.data, iM)
+          return VV.map((VV => VV.type === gV.d.Meta ? VV : {
+            ...VV,
+            data: Pe("data", VV.data, xV)
           }))
-        }(rM, SM), iM, OM, jM, aM) : null
+        }(eV, YV), xV, JV, UV, yV) : null
       }
-      constructor(MM, rM, iM, OM, SM, jM) {
-        var aM, PM, nM, QM;
-        this.domClock = iM, this.canvasSelectors = OM, this.videoLayer = SM, this.replayer = void 0, this.firstDomMs = void 0, this.lastDomMs = void 0, this.lastCanvasRectMs = -1 / 0, this.lastDomCheckMs = -1 / 0, this.firstDomMs = null !== (aM = null === (PM = rM[0]) || void 0 === PM ? void 0 : PM.timestamp) && void 0 !== aM ? aM : 0, this.lastDomMs = null !== (nM = null === (QM = rM.at(-1)) || void 0 === QM ? void 0 : QM.timestamp) && void 0 !== nM ? nM : 0, this.replayer = new sM.i(rM, {
-          root: MM,
+      constructor(VV, eV, xV, JV, YV, UV) {
+        var yV, pV, QV, nV;
+        this.domClock = xV, this.canvasSelectors = JV, this.videoLayer = YV, this.replayer = void 0, this.firstDomMs = void 0, this.lastDomMs = void 0, this.lastCanvasRectMs = -1 / 0, this.lastDomCheckMs = -1 / 0, this.firstDomMs = null !== (yV = null === (pV = eV[0]) || void 0 === pV ? void 0 : pV.timestamp) && void 0 !== yV ? yV : 0, this.lastDomMs = null !== (QV = null === (nV = eV.at(-1)) || void 0 === nV ? void 0 : nV.timestamp) && void 0 !== QV ? QV : 0, this.replayer = new gV.g(eV, {
+          root: VV,
           speed: 1,
           skipInactive: !1,
           mouseTail: !1,
           showWarning: !1,
           triggerFocus: !1,
           pauseAnimation: !0,
-          insertStyleRules: tr
-        }), this.replayer.on("resize", (MM => {
+          insertStyleRules: Xe
+        }), this.replayer.on("resize", (VV => {
           const {
-            width: rM,
-            height: iM
-          } = MM;
-          jM({
-            width: rM,
-            height: iM
+            width: eV,
+            height: xV
+          } = VV;
+          UV({
+            width: eV,
+            height: xV
           })
         })), this.replayer.on("fullsnapshot-rebuilded", (() => {
           this.invalidateCanvasRect()
         }))
       }
-      sync(MM, rM) {
-        const iM = this.domOffsetAt(MM);
-        rM ? this.replayer.play(iM) : this.replayer.pause(iM), this.lastDomCheckMs = performance.now()
+      sync(VV, eV) {
+        const xV = this.domOffsetAt(VV);
+        eV ? this.replayer.play(xV) : this.replayer.pause(xV), this.lastDomCheckMs = performance.now()
       }
-      update(MM, rM, iM) {
-        iM - this.lastCanvasRectMs >= 250 && (this.lastCanvasRectMs = iM, this.placeVideoOverCanvas()), rM && iM - this.lastDomCheckMs >= 500 && (this.lastDomCheckMs = iM, this.checkDrift(MM))
+      update(VV, eV, xV) {
+        xV - this.lastCanvasRectMs >= 250 && (this.lastCanvasRectMs = xV, this.placeVideoOverCanvas()), eV && xV - this.lastDomCheckMs >= 500 && (this.lastDomCheckMs = xV, this.checkDrift(VV))
       }
-      setSpeed(MM) {
+      setSpeed(VV) {
         this.replayer.setConfig({
-          speed: MM
+          speed: VV
         })
       }
       invalidateCanvasRect() {
@@ -1078,283 +1078,283 @@ export const modules = {
       destroy() {
         this.replayer.destroy()
       }
-      domOffsetAt(MM) {
-        return Math.max(0, Math.min(this.lastDomMs + 1, this.domClock.toDom(MM)) - this.firstDomMs)
+      domOffsetAt(VV) {
+        return Math.max(0, Math.min(this.lastDomMs + 1, this.domClock.toDom(VV)) - this.firstDomMs)
       }
-      checkDrift(MM) {
-        const rM = this.domOffsetAt(MM);
-        rM >= this.lastDomMs - this.firstDomMs || Math.abs(this.replayer.getCurrentTime() - rM) > 400 && this.replayer.play(rM)
+      checkDrift(VV) {
+        const eV = this.domOffsetAt(VV);
+        eV >= this.lastDomMs - this.firstDomMs || Math.abs(this.replayer.getCurrentTime() - eV) > 400 && this.replayer.play(eV)
       }
       placeVideoOverCanvas() {
-        const MM = this.replayer.iframe.contentDocument,
-          rM = null === MM ? null : function(MM, rM) {
-            for (const iM of rM) {
-              const rM = MM.querySelector(iM);
-              if (null !== rM) return rM
+        const VV = this.replayer.iframe.contentDocument,
+          eV = null === VV ? null : function(VV, eV) {
+            for (const xV of eV) {
+              const eV = VV.querySelector(xV);
+              if (null !== eV) return eV
             }
             return null
-          }(MM, this.canvasSelectors),
-          iM = this.videoLayer.element;
-        null !== rM ? (iM.previousSibling !== rM && rM.after(iM), iM.style.display = "", iM.style.left = `${rM.offsetLeft}px`, iM.style.top = `${rM.offsetTop}px`, iM.style.width = `${rM.offsetWidth}px`, iM.style.height = `${rM.offsetHeight}px`) : iM.style.display = "none"
+          }(VV, this.canvasSelectors),
+          xV = this.videoLayer.element;
+        null !== eV ? (xV.previousSibling !== eV && eV.after(xV), xV.style.display = "", xV.style.left = `${eV.offsetLeft}px`, xV.style.top = `${eV.offsetTop}px`, xV.style.width = `${eV.offsetWidth}px`, xV.style.height = `${eV.offsetHeight}px`) : xV.style.display = "none"
       }
     }
-    const Rr = {
+    const Ge = {
       width: 1280,
       height: 720
     };
-    class pr {
-      constructor(MM, rM) {
-        this.root = MM, this.onViewportChanged = rM, this.element = void 0, this.viewport = null, this.resizeObserver = void 0, this.element = document.createElement("div"), this.element.className = "brv-stage", MM.appendChild(this.element), this.resizeObserver = new ResizeObserver((() => {
+    class We {
+      constructor(VV, eV) {
+        this.root = VV, this.onViewportChanged = eV, this.element = void 0, this.viewport = null, this.resizeObserver = void 0, this.element = document.createElement("div"), this.element.className = "brv-stage", VV.appendChild(this.element), this.resizeObserver = new ResizeObserver((() => {
           this.fit()
-        })), this.resizeObserver.observe(MM)
+        })), this.resizeObserver.observe(VV)
       }
-      setViewport(MM) {
-        var rM;
-        null === MM || MM.width <= 0 || MM.height <= 0 || MM.width === (null === (rM = this.viewport) || void 0 === rM ? void 0 : rM.width) && MM.height === this.viewport.height || (this.viewport = MM, this.element.style.width = `${MM.width}px`, this.element.style.height = `${MM.height}px`, this.onViewportChanged(), this.fit())
+      setViewport(VV) {
+        var eV;
+        null === VV || VV.width <= 0 || VV.height <= 0 || VV.width === (null === (eV = this.viewport) || void 0 === eV ? void 0 : eV.width) && VV.height === this.viewport.height || (this.viewport = VV, this.element.style.width = `${VV.width}px`, this.element.style.height = `${VV.height}px`, this.onViewportChanged(), this.fit())
       }
       destroy() {
         this.resizeObserver.disconnect(), this.element.remove()
       }
       fit() {
-        var MM;
-        const rM = null !== (MM = this.viewport) && void 0 !== MM ? MM : Rr,
-          iM = this.root.getBoundingClientRect(),
-          OM = Math.min(iM.width / rM.width, iM.height / rM.height),
-          SM = (iM.width - rM.width * OM) / 2,
-          jM = (iM.height - rM.height * OM) / 2;
-        this.element.style.transform = `translate(${SM}px, ${jM}px) scale(${OM})`
+        var VV;
+        const eV = null !== (VV = this.viewport) && void 0 !== VV ? VV : Ge,
+          xV = this.root.getBoundingClientRect(),
+          JV = Math.min(xV.width / eV.width, xV.height / eV.height),
+          YV = (xV.width - eV.width * JV) / 2,
+          UV = (xV.height - eV.height * JV) / 2;
+        this.element.style.transform = `translate(${YV}px, ${UV}px) scale(${JV})`
       }
     }
-    class Wr {
-      constructor(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now,
-          iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : qM;
-        this.urls = void 0, this.urls = new VM(MM, "video URLs", rM, iM)
+    class Re {
+      constructor(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now,
+          xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : SV;
+        this.urls = void 0, this.urls = new dV(VV, "video URLs", eV, xV)
       }
-      reset(MM) {
-        this.urls.reset(MM.flatMap((MM => {
-          var rM;
-          return null !== (rM = function(MM) {
-            return "url" in MM ? null === MM.url ? null : {
-              sequence: MM.sequence,
-              url: MM.url
-            } : void 0 === MM.partUrls ? null : {
-              sequence: MM.sequence,
-              partUrls: MM.partUrls
+      reset(VV) {
+        this.urls.reset(VV.flatMap((VV => {
+          var eV;
+          return null !== (eV = function(VV) {
+            return "url" in VV ? null === VV.url ? null : {
+              sequence: VV.sequence,
+              url: VV.url
+            } : void 0 === VV.partUrls ? null : {
+              sequence: VV.sequence,
+              partUrls: VV.partUrls
             }
-          }(MM)) && void 0 !== rM ? rM : []
+          }(VV)) && void 0 !== eV ? eV : []
         })))
       }
-      get(MM) {
-        return this.urls.get(MM)
+      get(VV) {
+        return this.urls.get(VV)
       }
-      update(MM, rM, iM) {
-        this.urls.request(function(MM, rM, iM, OM) {
-          return MM.filter((MM => MM.endMs > rM && MM.startMs < rM + iM && OM(MM.sequence))).map((MM => MM.sequence))
-        }(MM, rM, 12e4 * Math.max(1, iM), (MM => this.urls.needs(MM))))
+      update(VV, eV, xV) {
+        this.urls.request(function(VV, eV, xV, JV) {
+          return VV.filter((VV => VV.endMs > eV && VV.startMs < eV + xV && JV(VV.sequence))).map((VV => VV.sequence))
+        }(VV, eV, 12e4 * Math.max(1, xV), (VV => this.urls.needs(VV))))
       }
       destroy() {
         this.urls.destroy()
       }
     }
-    async function sr(MM, rM, iM) {
-      const OM = [];
-      let SM = MM.length,
-        jM = 0;
+    async function ge(VV, eV, xV) {
+      const JV = [];
+      let YV = VV.length,
+        UV = 0;
       return await Promise.all(Array.from({
-        length: Math.min(3, MM.length)
+        length: Math.min(3, VV.length)
       }, (() => (async () => {
-        for (; jM < SM;) {
-          const PM = jM++;
+        for (; UV < YV;) {
+          const pV = UV++;
           try {
-            OM[PM] = await rM(MM[PM], iM)
-          } catch (aM) {
-            if (iM.aborted) throw aM;
-            console.warn(`Replay video part ${PM} failed to load; playing the parts before it.`, aM), SM = Math.min(SM, PM)
+            JV[pV] = await eV(VV[pV], xV)
+          } catch (yV) {
+            if (xV.aborted) throw yV;
+            console.warn(`Replay video part ${pV} failed to load; playing the parts before it.`, yV), YV = Math.min(YV, pV)
           }
         }
-      })()))), OM.slice(0, SM)
+      })()))), JV.slice(0, YV)
     }
 
-    function Dr(MM) {
-      const rM = [];
-      let iM = 0;
-      for (const zM of MM) rM.push(iM), iM += zM.byteLength;
-      let OM = 0;
-      const SM = iM => {
-          for (; rM[OM] > iM;) OM--;
-          for (; OM + 1 < rM.length && rM[OM + 1] <= iM;) OM++;
-          return MM[OM][iM - rM[OM]]
+    function De(VV) {
+      const eV = [];
+      let xV = 0;
+      for (const wV of VV) eV.push(xV), xV += wV.byteLength;
+      let JV = 0;
+      const YV = xV => {
+          for (; eV[JV] > xV;) JV--;
+          for (; JV + 1 < eV.length && eV[JV + 1] <= xV;) JV++;
+          return VV[JV][xV - eV[JV]]
         },
-        jM = MM => SM(MM) * 2 ** 24 + 65536 * SM(MM + 1) + 256 * SM(MM + 2) + SM(MM + 3);
-      let aM = 0,
-        PM = !1,
-        nM = !1,
-        QM = 0;
-      for (; aM + 8 <= iM;) {
-        const MM = String.fromCharCode(SM(aM + 4), SM(aM + 5), SM(aM + 6), SM(aM + 7));
-        let rM = jM(aM);
-        if (1 === rM) {
-          if (aM + 16 > iM) break;
-          rM = jM(aM + 8) * 2 ** 32 + jM(aM + 12)
-        } else 0 === rM && (rM = iM - aM);
-        if (rM < 8 || aM + rM > iM) break;
-        aM += rM, "moov" === MM ? PM = !0 : "moof" === MM ? nM = !0 : "mdat" === MM && nM ? (nM = !1, QM = aM) : !nM && QM > 0 && (QM = aM)
+        UV = VV => YV(VV) * 2 ** 24 + 65536 * YV(VV + 1) + 256 * YV(VV + 2) + YV(VV + 3);
+      let yV = 0,
+        pV = !1,
+        QV = !1,
+        nV = 0;
+      for (; yV + 8 <= xV;) {
+        const VV = String.fromCharCode(YV(yV + 4), YV(yV + 5), YV(yV + 6), YV(yV + 7));
+        let eV = UV(yV);
+        if (1 === eV) {
+          if (yV + 16 > xV) break;
+          eV = UV(yV + 8) * 2 ** 32 + UV(yV + 12)
+        } else 0 === eV && (eV = xV - yV);
+        if (eV < 8 || yV + eV > xV) break;
+        yV += eV, "moov" === VV ? pV = !0 : "moof" === VV ? QV = !0 : "mdat" === VV && QV ? (QV = !1, nV = yV) : !QV && nV > 0 && (nV = yV)
       }
-      return PM && QM > 0 ? QM : null
+      return pV && nV > 0 ? nV : null
     }
-    async function kr(MM, rM) {
-      const iM = await fetch(MM, {
-        signal: rM
+    async function ie(VV, eV) {
+      const xV = await fetch(VV, {
+        signal: eV
       });
-      if (!iM.ok) throw new Error(`HTTP ${iM.status}`);
-      return iM.arrayBuffer()
+      if (!xV.ok) throw new Error(`HTTP ${xV.status}`);
+      return xV.arrayBuffer()
     }
-    class Zr {
+    class Ce {
       constructor() {
-        let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : kr,
-          rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
-        this.fetchPart = MM, this.vL = rM, this.blobs = new Map
+        let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : ie,
+          eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
+        this.fetchPart = VV, this.Jv = eV, this.blobs = new Map
       }
-      get(MM, rM) {
-        const iM = or(MM, rM),
-          OM = this.blobs.get(iM);
-        return void 0 === OM ? null : (this.remember(iM, OM), OM)
+      get(VV, eV) {
+        const xV = ae(VV, eV),
+          JV = this.blobs.get(xV);
+        return void 0 === JV ? null : (this.remember(xV, JV), JV)
       }
-      async load(MM, rM, iM) {
-        const OM = await sr(rM, this.fetchPart, iM),
-          SM = function(MM) {
-            const rM = MM.map((MM => new Uint8Array(MM))),
-              iM = Dr(rM);
-            return null === iM ? null : new Blob(function(MM, rM) {
-              const iM = [];
-              let OM = rM;
-              for (const SM of MM) {
-                if (OM <= 0) break;
-                iM.push(SM.byteLength <= OM ? SM : SM.subarray(0, OM)), OM -= SM.byteLength
+      async load(VV, eV, xV) {
+        const JV = await ge(eV, this.fetchPart, xV),
+          YV = function(VV) {
+            const eV = VV.map((VV => new Uint8Array(VV))),
+              xV = De(eV);
+            return null === xV ? null : new Blob(function(VV, eV) {
+              const xV = [];
+              let JV = eV;
+              for (const YV of VV) {
+                if (JV <= 0) break;
+                xV.push(YV.byteLength <= JV ? YV : YV.subarray(0, JV)), JV -= YV.byteLength
               }
-              return iM
-            }(rM, iM), {
+              return xV
+            }(eV, xV), {
               type: "video/mp4"
             })
-          }(OM);
-        return null !== SM && OM.length === rM.length && this.remember(or(MM, rM.length), SM), SM
+          }(JV);
+        return null !== YV && JV.length === eV.length && this.remember(ae(VV, eV.length), YV), YV
       }
-      remember(MM, rM) {
-        this.blobs.delete(MM), this.blobs.set(MM, rM), this.blobs.size > this.vL && this.blobs.delete(this.blobs.keys().next().value)
+      remember(VV, eV) {
+        this.blobs.delete(VV), this.blobs.set(VV, eV), this.blobs.size > this.Jv && this.blobs.delete(this.blobs.keys().next().value)
       }
     }
 
-    function or(MM, rM) {
-      return `${MM}/${rM}`
+    function ae(VV, eV) {
+      return `${VV}/${eV}`
     }
 
-    function fr(MM) {
-      const rM = function(MM) {
-        return MM.map(((rM, iM) => {
-          const OM = MM[iM + 1];
-          return void 0 === OM ? rM.endMs : Math.min(rM.endMs, OM.startMs)
+    function oe(VV) {
+      const eV = function(VV) {
+        return VV.map(((eV, xV) => {
+          const JV = VV[xV + 1];
+          return void 0 === JV ? eV.endMs : Math.min(eV.endMs, JV.startMs)
         }))
-      }(MM);
-      return MM.map(((MM, iM) => ({
-        ...MM,
-        endMs: rM[iM]
-      }))).filter((MM => MM.endMs > MM.startMs))
+      }(VV);
+      return VV.map(((VV, xV) => ({
+        ...VV,
+        endMs: eV[xV]
+      }))).filter((VV => VV.endMs > VV.startMs))
     }
 
-    function Yr(MM, rM) {
-      let iM = 0,
-        OM = MM.length - 1;
-      for (; iM <= OM;) {
-        const SM = iM + OM >> 1,
-          jM = MM[SM];
-        if (rM < jM.startMs) OM = SM - 1;
+    function ce(VV, eV) {
+      let xV = 0,
+        JV = VV.length - 1;
+      for (; xV <= JV;) {
+        const YV = xV + JV >> 1,
+          UV = VV[YV];
+        if (eV < UV.startMs) JV = YV - 1;
         else {
-          if (!(rM >= jM.endMs)) return jM;
-          iM = SM + 1
+          if (!(eV >= UV.endMs)) return UV;
+          xV = YV + 1
         }
       }
       return null
     }
 
-    function Nr(MM, rM) {
-      return (rM - MM.startMs) / 1e3
+    function he(VV, eV) {
+      return (eV - VV.startMs) / 1e3
     }
 
-    function Ar(MM) {
-      return Math.max(.4, .1 * MM)
+    function le(VV) {
+      return Math.max(.4, .1 * VV)
     }
 
-    function xr(MM) {
-      return Math.max(.0625, Math.min(16, MM))
+    function Le(VV) {
+      return Math.max(.0625, Math.min(16, VV))
     }
-    class vr {
-      constructor(MM, rM, iM, OM, SM, jM, aM) {
-        this.still = rM, this.clock = iM, this.frameDurationS = OM, this.wallNowMs = SM, this.onLoadFailed = aM, this.element = void 0, this.slots = new Map, this.shown = null, this.seekLatencyS = .15, this.lastSeekWallMs = -1 / 0, this.lastPresented = null, this.stats = {
+    class fe {
+      constructor(VV, eV, xV, JV, YV, UV, yV) {
+        this.still = eV, this.clock = xV, this.frameDurationS = JV, this.wallNowMs = YV, this.onLoadFailed = yV, this.element = void 0, this.slots = new Map, this.shown = null, this.seekLatencyS = .15, this.lastSeekWallMs = -1 / 0, this.lastPresented = null, this.stats = {
           frames: 0,
           sumAbsDriftMs: 0,
           maxAbsDriftMs: 0,
           withinOneFrame: 0,
           seeks: 0
-        }, this.failed = new Set, this.segments = void 0, this.segmentUrls = void 0, this.blobs = new Zr, this.stillImage = void 0, this.stillShown = !1, this.failedStillUrl = null, this.segments = fr(MM), this.segmentUrls = new Wr(jM), this.segmentUrls.reset(this.segments), this.element = document.createElement("div"), this.element.className = "brv-video-layer", this.stillImage = document.createElement("img"), this.stillImage.className = "brv-still", this.stillImage.alt = "", this.stillImage.addEventListener("error", (() => {
+        }, this.failed = new Set, this.segments = void 0, this.segmentUrls = void 0, this.blobs = new Ce, this.stillImage = void 0, this.stillShown = !1, this.failedStillUrl = null, this.segments = oe(VV), this.segmentUrls = new Re(UV), this.segmentUrls.reset(this.segments), this.element = document.createElement("div"), this.element.className = "brv-video-layer", this.stillImage = document.createElement("img"), this.stillImage.className = "brv-still", this.stillImage.alt = "", this.stillImage.addEventListener("error", (() => {
           console.warn("Replay still failed to load."), this.failedStillUrl = this.stillImage.getAttribute("src"), this.stillImage.removeAttribute("src"), this.onLoadFailed()
         })), this.element.appendChild(this.stillImage)
       }
       get visible() {
         return null !== this.shown || this.stillShown
       }
-      getVideoSizeAt(MM) {
-        var rM, iM;
-        const OM = null !== (rM = null !== (iM = Yr(this.segments, MM)) && void 0 !== iM ? iM : this.segments.find((rM => rM.startMs > MM))) && void 0 !== rM ? rM : this.segments.at(-1);
-        return void 0 === OM ? null : {
-          width: OM.width,
-          height: OM.height
+      getVideoSizeAt(VV) {
+        var eV, xV;
+        const JV = null !== (eV = null !== (xV = ce(this.segments, VV)) && void 0 !== xV ? xV : this.segments.find((eV => eV.startMs > VV))) && void 0 !== eV ? eV : this.segments.at(-1);
+        return void 0 === JV ? null : {
+          width: JV.width,
+          height: JV.height
         }
       }
-      failedAt(MM) {
-        const rM = Yr(this.segments, MM);
-        return null !== rM && this.failed.has(rM.sequence)
+      failedAt(VV) {
+        const eV = ce(this.segments, VV);
+        return null !== eV && this.failed.has(eV.sequence)
       }
-      replaceSegments(MM, rM) {
-        for (const iM of this.slots.values()) this.release(iM);
-        this.slots.clear(), this.failed.clear(), this.segments = fr(MM), this.segmentUrls.reset(this.segments), this.still = rM
+      replaceSegments(VV, eV) {
+        for (const xV of this.slots.values()) this.release(xV);
+        this.slots.clear(), this.failed.clear(), this.segments = oe(VV), this.segmentUrls.reset(this.segments), this.still = eV
       }
-      update(MM) {
-        var rM, iM;
-        this.segmentUrls.update(this.segments, MM, this.clock.speed);
-        const OM = Yr(this.segments, MM),
-          SM = function(MM, rM) {
-            const iM = MM.find((MM => MM.startMs > rM));
-            return void 0 === iM ? null : iM.startMs - rM <= ("parts" in iM ? 15e3 : 8e3) ? iM : null
-          }(this.segments, MM);
-        this.evictExcept([OM, SM, null !== (rM = null === (iM = this.shown) || void 0 === iM ? void 0 : iM.segment) && void 0 !== rM ? rM : null]), null !== SM && this.getSlot(SM), this.showStill(null === OM ? function(MM, rM, iM) {
-          if (null === rM) return null;
-          const OM = MM.at(-1);
-          return void 0 === OM ? iM >= rM.atMs - 1e4 ? rM : null : iM >= OM.endMs && Math.abs(rM.atMs - OM.endMs) <= 1e4 ? rM : null
-        }(this.segments, this.still, MM) : null);
-        const jM = null === OM ? null : this.getSlot(OM);
-        if (null !== jM) {
-          this.sync(jM, Nr(jM.segment, MM)), jM.video.readyState >= HTMLMediaElement.HAVE_CURRENT_DATA && !jM.video.seeking && this.show(jM);
-          for (const MM of this.slots.values()) MM === jM || MM.video.paused || MM.video.pause()
+      update(VV) {
+        var eV, xV;
+        this.segmentUrls.update(this.segments, VV, this.clock.speed);
+        const JV = ce(this.segments, VV),
+          YV = function(VV, eV) {
+            const xV = VV.find((VV => VV.startMs > eV));
+            return void 0 === xV ? null : xV.startMs - eV <= ("parts" in xV ? 15e3 : 8e3) ? xV : null
+          }(this.segments, VV);
+        this.evictExcept([JV, YV, null !== (eV = null === (xV = this.shown) || void 0 === xV ? void 0 : xV.segment) && void 0 !== eV ? eV : null]), null !== YV && this.getSlot(YV), this.showStill(null === JV ? function(VV, eV, xV) {
+          if (null === eV) return null;
+          const JV = VV.at(-1);
+          return void 0 === JV ? xV >= eV.atMs - 1e4 ? eV : null : xV >= JV.endMs && Math.abs(eV.atMs - JV.endMs) <= 1e4 ? eV : null
+        }(this.segments, this.still, VV) : null);
+        const UV = null === JV ? null : this.getSlot(JV);
+        if (null !== UV) {
+          this.sync(UV, he(UV.segment, VV)), UV.video.readyState >= HTMLMediaElement.HAVE_CURRENT_DATA && !UV.video.seeking && this.show(UV);
+          for (const VV of this.slots.values()) VV === UV || VV.video.paused || VV.video.pause()
         } else {
-          null === OM && this.show(null);
-          for (const MM of this.slots.values()) MM.video.pause()
+          null === JV && this.show(null);
+          for (const VV of this.slots.values()) VV.video.pause()
         }
       }
       getSyncStats() {
         const {
-          frames: MM,
-          sumAbsDriftMs: rM,
-          maxAbsDriftMs: iM,
-          withinOneFrame: OM,
-          seeks: SM
+          frames: VV,
+          sumAbsDriftMs: eV,
+          maxAbsDriftMs: xV,
+          withinOneFrame: JV,
+          seeks: YV
         } = this.stats;
         return {
-          frames: MM,
-          meanAbsDriftMs: 0 === MM ? 0 : rM / MM,
-          maxAbsDriftMs: iM,
-          withinOneFrame: 0 === MM ? 1 : OM / MM,
-          seeks: SM
+          frames: VV,
+          meanAbsDriftMs: 0 === VV ? 0 : eV / VV,
+          maxAbsDriftMs: xV,
+          withinOneFrame: 0 === VV ? 1 : JV / VV,
+          seeks: YV
         }
       }
       resetSyncStats() {
@@ -1370,181 +1370,181 @@ export const modules = {
         this.lastSeekWallMs = this.wallNowMs(), this.lastPresented = null
       }
       destroy() {
-        for (const MM of this.slots.values()) this.release(MM);
+        for (const VV of this.slots.values()) this.release(VV);
         this.slots.clear(), this.segmentUrls.destroy(), this.element.remove()
       }
-      sync(MM, rM) {
+      sync(VV, eV) {
         const {
-          video: iM
-        } = MM;
-        if (iM.seeking) return;
+          video: xV
+        } = VV;
+        if (xV.seeking) return;
         const {
-          playing: OM,
-          speed: SM
-        } = this.clock, jM = OM && SM < 16, aM = function(MM) {
+          playing: JV,
+          speed: YV
+        } = this.clock, UV = JV && YV < 16, yV = function(VV) {
           let {
-            targetS: rM,
-            currentS: iM,
-            playing: OM,
-            speed: SM,
-            frameDurationS: jM
-          } = MM;
-          const aM = iM - rM;
-          if (!OM) return Math.abs(aM) > jM / 2 ? {
+            targetS: eV,
+            currentS: xV,
+            playing: JV,
+            speed: YV,
+            frameDurationS: UV
+          } = VV;
+          const yV = xV - eV;
+          if (!JV) return Math.abs(yV) > UV / 2 ? {
             kind: "seek",
-            mediaTimeS: rM
+            mediaTimeS: eV
           } : {
             kind: "none"
           };
-          if (Math.abs(aM) > Ar(SM)) return {
+          if (Math.abs(yV) > le(YV)) return {
             kind: "seek",
-            mediaTimeS: rM
+            mediaTimeS: eV
           };
-          if (Math.abs(aM) < jM / 4) return {
+          if (Math.abs(yV) < UV / 4) return {
             kind: "rate",
-            playbackRate: xr(SM)
+            playbackRate: Le(YV)
           };
-          const PM = SM - aM / .5;
+          const pV = YV - yV / .5;
           return {
             kind: "rate",
-            playbackRate: xr(Math.max(.5 * SM, Math.min(1.5 * SM, PM)))
+            playbackRate: Le(Math.max(.5 * YV, Math.min(1.5 * YV, pV)))
           }
         }({
-          targetS: rM,
-          currentS: iM.currentTime,
-          playing: jM,
-          speed: SM,
+          targetS: eV,
+          currentS: xV.currentTime,
+          playing: UV,
+          speed: YV,
           frameDurationS: this.frameDurationS
         });
-        if ("seek" === aM.kind) {
-          const rM = this.seekLatencyS * SM,
-            PM = OM ? jM ? Math.min(rM, Ar(SM) / 2) : rM : 0;
-          MM.seekStartedWallMs = this.wallNowMs(), this.stats.seeks++, jM && (this.lastSeekWallMs = this.wallNowMs(), this.lastPresented = null), iM.currentTime = Math.max(0, aM.mediaTimeS + PM)
-        } else "rate" === aM.kind && Math.abs(iM.playbackRate - aM.playbackRate) > .001 && (iM.playbackRate = aM.playbackRate);
-        jM && iM.paused && iM.currentTime < iM.duration ? (iM.playbackRate = xr(SM), iM.play().catch((MM => {
-          console.warn("Replay video refused to play.", MM)
-        }))) : jM || iM.paused || iM.pause()
+        if ("seek" === yV.kind) {
+          const eV = this.seekLatencyS * YV,
+            pV = JV ? UV ? Math.min(eV, le(YV) / 2) : eV : 0;
+          VV.seekStartedWallMs = this.wallNowMs(), this.stats.seeks++, UV && (this.lastSeekWallMs = this.wallNowMs(), this.lastPresented = null), xV.currentTime = Math.max(0, yV.mediaTimeS + pV)
+        } else "rate" === yV.kind && Math.abs(xV.playbackRate - yV.playbackRate) > .001 && (xV.playbackRate = yV.playbackRate);
+        UV && xV.paused && xV.currentTime < xV.duration ? (xV.playbackRate = Le(YV), xV.play().catch((VV => {
+          console.warn("Replay video refused to play.", VV)
+        }))) : UV || xV.paused || xV.pause()
       }
-      getSlot(MM) {
-        const rM = this.slots.get(MM.sequence);
-        if (void 0 !== rM) return rM;
-        const iM = "parts" in MM ? this.blobs.get(MM.sequence, MM.parts) : null,
-          OM = null === iM ? this.segmentUrls.get(MM.sequence) : null;
-        if ("pending" === OM) return null;
-        if ("failed" === OM) return this.failed.has(MM.sequence) || (console.error(`Replay video segment ${MM.sequence} has no URLs to load.`), this.markFailed(MM)), null;
-        const SM = document.createElement("video");
-        SM.className = "brv-video", SM.muted = !0, SM.playsInline = !0, SM.preload = "auto", SM.disablePictureInPicture = !0;
-        const jM = {
-          segment: MM,
-          video: SM,
+      getSlot(VV) {
+        const eV = this.slots.get(VV.sequence);
+        if (void 0 !== eV) return eV;
+        const xV = "parts" in VV ? this.blobs.get(VV.sequence, VV.parts) : null,
+          JV = null === xV ? this.segmentUrls.get(VV.sequence) : null;
+        if ("pending" === JV) return null;
+        if ("failed" === JV) return this.failed.has(VV.sequence) || (console.error(`Replay video segment ${VV.sequence} has no URLs to load.`), this.markFailed(VV)), null;
+        const YV = document.createElement("video");
+        YV.className = "brv-video", YV.muted = !0, YV.playsInline = !0, YV.preload = "auto", YV.disablePictureInPicture = !0;
+        const UV = {
+          segment: VV,
+          video: YV,
           seekStartedWallMs: null,
           objectUrl: null,
           abort: new AbortController
         };
-        return null !== iM ? this.playBlob(jM, iM) : null !== OM && ("url" in OM ? SM.src = OM.url : this.loadParts(jM, OM.partUrls)), SM.addEventListener("seeked", (() => {
-          if (null !== jM.seekStartedWallMs) {
-            const MM = (this.wallNowMs() - jM.seekStartedWallMs) / 1e3;
-            this.seekLatencyS = .7 * this.seekLatencyS + .3 * Math.min(1, MM), jM.seekStartedWallMs = null
+        return null !== xV ? this.playBlob(UV, xV) : null !== JV && ("url" in JV ? YV.src = JV.url : this.loadParts(UV, JV.partUrls)), YV.addEventListener("seeked", (() => {
+          if (null !== UV.seekStartedWallMs) {
+            const VV = (this.wallNowMs() - UV.seekStartedWallMs) / 1e3;
+            this.seekLatencyS = .7 * this.seekLatencyS + .3 * Math.min(1, VV), UV.seekStartedWallMs = null
           }
-        })), SM.addEventListener("loadeddata", (() => {
-          this.slots.get(MM.sequence) === jM && this.failed.delete(MM.sequence)
-        })), SM.addEventListener("error", (() => {
-          this.slots.get(MM.sequence) === jM && (console.error(`Replay video segment ${MM.sequence} failed to load.`, SM.error), this.markFailed(MM))
-        })), this.watchFrames(jM), this.element.appendChild(SM), this.slots.set(MM.sequence, jM), jM
+        })), YV.addEventListener("loadeddata", (() => {
+          this.slots.get(VV.sequence) === UV && this.failed.delete(VV.sequence)
+        })), YV.addEventListener("error", (() => {
+          this.slots.get(VV.sequence) === UV && (console.error(`Replay video segment ${VV.sequence} failed to load.`, YV.error), this.markFailed(VV))
+        })), this.watchFrames(UV), this.element.appendChild(YV), this.slots.set(VV.sequence, UV), UV
       }
-      loadParts(MM, rM) {
-        this.blobs.load(MM.segment.sequence, rM, MM.abort.signal).then((rM => {
-          if (this.slots.get(MM.segment.sequence) === MM) return null === rM ? (console.error(`Replay video segment ${MM.segment.sequence} has no playable parts.`), void this.markFailed(MM.segment)) : void this.playBlob(MM, rM)
-        }), (rM => {
-          this.slots.get(MM.segment.sequence) === MM && (console.error(`Replay video segment ${MM.segment.sequence} failed to load.`, rM), this.markFailed(MM.segment))
+      loadParts(VV, eV) {
+        this.blobs.load(VV.segment.sequence, eV, VV.abort.signal).then((eV => {
+          if (this.slots.get(VV.segment.sequence) === VV) return null === eV ? (console.error(`Replay video segment ${VV.segment.sequence} has no playable parts.`), void this.markFailed(VV.segment)) : void this.playBlob(VV, eV)
+        }), (eV => {
+          this.slots.get(VV.segment.sequence) === VV && (console.error(`Replay video segment ${VV.segment.sequence} failed to load.`, eV), this.markFailed(VV.segment))
         }))
       }
-      playBlob(MM, rM) {
-        MM.objectUrl = URL.createObjectURL(rM), MM.video.src = MM.objectUrl
+      playBlob(VV, eV) {
+        VV.objectUrl = URL.createObjectURL(eV), VV.video.src = VV.objectUrl
       }
-      markFailed(MM) {
-        this.failed.add(MM.sequence), this.onLoadFailed()
+      markFailed(VV) {
+        this.failed.add(VV.sequence), this.onLoadFailed()
       }
-      showStill(MM) {
-        const rM = null !== MM && MM.url !== this.failedStillUrl ? MM : null;
-        null !== rM && this.stillImage.getAttribute("src") !== rM.url && (this.stillImage.src = rM.url);
-        const iM = null !== rM && this.stillImage.complete && this.stillImage.naturalWidth > 0;
-        iM !== this.stillShown && (this.stillImage.classList.toggle("brv-still-shown", iM), this.stillShown = iM)
+      showStill(VV) {
+        const eV = null !== VV && VV.url !== this.failedStillUrl ? VV : null;
+        null !== eV && this.stillImage.getAttribute("src") !== eV.url && (this.stillImage.src = eV.url);
+        const xV = null !== eV && this.stillImage.complete && this.stillImage.naturalWidth > 0;
+        xV !== this.stillShown && (this.stillImage.classList.toggle("brv-still-shown", xV), this.stillShown = xV)
       }
-      show(MM) {
-        var rM;
-        this.shown !== MM && (null === (rM = this.shown) || void 0 === rM || rM.video.classList.remove("brv-video-shown"), null === MM || void 0 === MM || MM.video.classList.add("brv-video-shown"), this.shown = MM)
+      show(VV) {
+        var eV;
+        this.shown !== VV && (null === (eV = this.shown) || void 0 === eV || eV.video.classList.remove("brv-video-shown"), null === VV || void 0 === VV || VV.video.classList.add("brv-video-shown"), this.shown = VV)
       }
-      evictExcept(MM) {
-        for (const [rM, iM] of this.slots) MM.includes(iM.segment) || (this.release(iM), this.slots.delete(rM))
+      evictExcept(VV) {
+        for (const [eV, xV] of this.slots) VV.includes(xV.segment) || (this.release(xV), this.slots.delete(eV))
       }
-      release(MM) {
-        this.shown === MM && (this.shown = null), MM.abort.abort(), MM.video.pause(), MM.video.removeAttribute("src"), MM.video.load(), MM.video.remove(), null !== MM.objectUrl && URL.revokeObjectURL(MM.objectUrl)
+      release(VV) {
+        this.shown === VV && (this.shown = null), VV.abort.abort(), VV.video.pause(), VV.video.removeAttribute("src"), VV.video.load(), VV.video.remove(), null !== VV.objectUrl && URL.revokeObjectURL(VV.objectUrl)
       }
-      watchFrames(MM) {
+      watchFrames(VV) {
         const {
-          video: rM
-        } = MM;
-        if ("function" !== typeof rM.requestVideoFrameCallback) return;
-        const iM = (OM, SM) => {
-          if (!this.slots.has(MM.segment.sequence)) return;
-          const jM = rM.ownerDocument.defaultView,
-            aM = null === jM ? 0 : jM.performance.timeOrigin - performance.timeOrigin,
-            PM = Nr(MM.segment, this.clock.timeAtWall(SM.expectedDisplayTime + aM)),
-            nM = this.lastPresented,
-            QM = this.wallNowMs() - this.lastSeekWallMs > 1e3;
-          if (null !== nM && nM.slot === MM && QM && this.clock.playing && SM.mediaTime > nM.mediaTimeS) {
-            const MM = Math.abs(function(MM, rM, iM) {
-              return iM < MM ? 1e3 * (iM - MM) : 1e3 * Math.max(0, iM - rM)
-            }(nM.mediaTimeS, SM.mediaTime, nM.clockMediaTimeS));
-            this.stats.frames++, this.stats.sumAbsDriftMs += MM, this.stats.maxAbsDriftMs = Math.max(this.stats.maxAbsDriftMs, MM), MM <= 1e3 * this.frameDurationS && this.stats.withinOneFrame++
+          video: eV
+        } = VV;
+        if ("function" !== typeof eV.requestVideoFrameCallback) return;
+        const xV = (JV, YV) => {
+          if (!this.slots.has(VV.segment.sequence)) return;
+          const UV = eV.ownerDocument.defaultView,
+            yV = null === UV ? 0 : UV.performance.timeOrigin - performance.timeOrigin,
+            pV = he(VV.segment, this.clock.timeAtWall(YV.expectedDisplayTime + yV)),
+            QV = this.lastPresented,
+            nV = this.wallNowMs() - this.lastSeekWallMs > 1e3;
+          if (null !== QV && QV.slot === VV && nV && this.clock.playing && YV.mediaTime > QV.mediaTimeS) {
+            const VV = Math.abs(function(VV, eV, xV) {
+              return xV < VV ? 1e3 * (xV - VV) : 1e3 * Math.max(0, xV - eV)
+            }(QV.mediaTimeS, YV.mediaTime, QV.clockMediaTimeS));
+            this.stats.frames++, this.stats.sumAbsDriftMs += VV, this.stats.maxAbsDriftMs = Math.max(this.stats.maxAbsDriftMs, VV), VV <= 1e3 * this.frameDurationS && this.stats.withinOneFrame++
           }
           this.lastPresented = {
-            slot: MM,
-            mediaTimeS: SM.mediaTime,
-            clockMediaTimeS: PM
-          }, rM.requestVideoFrameCallback(iM)
+            slot: VV,
+            mediaTimeS: YV.mediaTime,
+            clockMediaTimeS: pV
+          }, eV.requestVideoFrameCallback(xV)
         };
-        rM.requestVideoFrameCallback(iM)
+        eV.requestVideoFrameCallback(xV)
       }
     }
-    const Fr = 1 / 30,
-      Br = ["#noa-canvas", "#noa-container"];
-    class Xr {
-      constructor(MM, rM) {
-        var iM, OM, SM, jM, aM, PM, nM, QM;
-        let zM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        this.timeline = void 0, this.chapters = void 0, this.lowFps = void 0, this.stage = void 0, this.clock = void 0, this.annotations = void 0, this.videoLayer = void 0, this.domLayer = void 0, this.listeners = new Set, this.skipInactive = !0, this.ended = !1, this.frame = 0, this.lastState = null, this.urlRefresher = void 0, this.bL = () => {
-          this.frame = requestAnimationFrame(this.bL);
-          const MM = performance.now();
+    const me = 1 / 30,
+      Ke = ["#noa-canvas", "#noa-container"];
+    class He {
+      constructor(VV, eV) {
+        var xV, JV, YV, UV, yV, pV, QV, nV;
+        let wV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        this.timeline = void 0, this.chapters = void 0, this.lowFps = void 0, this.stage = void 0, this.clock = void 0, this.annotations = void 0, this.videoLayer = void 0, this.domLayer = void 0, this.listeners = new Set, this.skipInactive = !0, this.ended = !1, this.frame = 0, this.lastState = null, this.urlRefresher = void 0, this.iZ = () => {
+          this.frame = requestAnimationFrame(this.iZ);
+          const VV = performance.now();
           this.applySkips();
-          const rM = this.clock.timeMs();
-          this.annotations.update(rM, this.clock.speed), this.videoLayer.update(rM), null === this.domLayer ? this.stage.setViewport(this.videoLayer.getVideoSizeAt(rM)) : this.domLayer.update(rM, this.clock.playing, MM);
-          const iM = this.getState();
-          (null === this.lastState || function(MM, rM) {
-            return Object.keys(MM).some((iM => "positionMs" === iM ? Math.floor(MM.positionMs / 1e3) !== Math.floor(rM.positionMs / 1e3) : MM[iM] !== rM[iM]))
-          }(iM, this.lastState)) && this.emitState(iM)
+          const eV = this.clock.timeMs();
+          this.annotations.update(eV, this.clock.speed), this.videoLayer.update(eV), null === this.domLayer ? this.stage.setViewport(this.videoLayer.getVideoSizeAt(eV)) : this.domLayer.update(eV, this.clock.playing, VV);
+          const xV = this.getState();
+          (null === this.lastState || function(VV, eV) {
+            return Object.keys(VV).some((xV => "positionMs" === xV ? Math.floor(VV.positionMs / 1e3) !== Math.floor(eV.positionMs / 1e3) : VV[xV] !== eV[xV]))
+          }(xV, this.lastState)) && this.emitState(xV)
         };
-        const LM = () => performance.now();
-        this.lowFps = null !== (iM = zM.lowFps) && void 0 !== iM ? iM : 25;
-        const mM = new NM(rM.domEvents);
-        this.timeline = new kM(rM.windows.length > 0 ? rM.windows : [oM(rM, mM)]), this.chapters = [...rM.chapters].sort(((MM, rM) => MM.startMs - rM.startMs)), this.annotations = new Sr(rM, mM, this.timeline, {
-          inactivityThresholdMs: null !== (OM = zM.inactivityThresholdMs) && void 0 !== OM ? OM : 1e4,
-          loadTelemetryChunk: null !== (SM = zM.loadTelemetryChunk) && void 0 !== SM ? SM : null,
-          telemetryUrls: null !== (jM = zM.telemetryUrls) && void 0 !== jM ? jM : null,
+        const ZV = () => performance.now();
+        this.lowFps = null !== (xV = wV.lowFps) && void 0 !== xV ? xV : 25;
+        const vV = new hV(eV.domEvents);
+        this.timeline = new iV(eV.windows.length > 0 ? eV.windows : [aV(eV, vV)]), this.chapters = [...eV.chapters].sort(((VV, eV) => VV.startMs - eV.startMs)), this.annotations = new Ye(eV, vV, this.timeline, {
+          inactivityThresholdMs: null !== (JV = wV.inactivityThresholdMs) && void 0 !== JV ? JV : 1e4,
+          loadTelemetryChunk: null !== (YV = wV.loadTelemetryChunk) && void 0 !== YV ? YV : null,
+          telemetryUrls: null !== (UV = wV.telemetryUrls) && void 0 !== UV ? UV : null,
           onTelemetryFailed: () => {
             this.urlRefresher.request()
           }
-        }), this.urlRefresher = new TM(null !== (aM = zM.refreshUrls) && void 0 !== aM ? aM : null, (MM => {
-          this.videoLayer.replaceSegments(ZM(MM.videoSegments), MM.still), this.videoLayer.noteClockJump(), this.annotations.replaceTelemetryUrls(MM.telemetryChunks)
-        })), this.clock = new fM(this.timeline.startMs, LM), this.stage = new pr(MM, (() => {
-          var MM;
-          null === (MM = this.domLayer) || void 0 === MM || MM.invalidateCanvasRect()
-        })), this.videoLayer = new vr(ZM(rM.videoSegments), rM.still, this.clock, Fr, LM, null !== (PM = zM.segmentUrls) && void 0 !== PM ? PM : null, (() => {
+        }), this.urlRefresher = new IV(null !== (yV = wV.refreshUrls) && void 0 !== yV ? yV : null, (VV => {
+          this.videoLayer.replaceSegments(CV(VV.videoSegments), VV.still), this.videoLayer.noteClockJump(), this.annotations.replaceTelemetryUrls(VV.telemetryChunks)
+        })), this.clock = new oV(this.timeline.startMs, ZV), this.stage = new We(VV, (() => {
+          var VV;
+          null === (VV = this.domLayer) || void 0 === VV || VV.invalidateCanvasRect()
+        })), this.videoLayer = new fe(CV(eV.videoSegments), eV.still, this.clock, me, ZV, null !== (pV = wV.segmentUrls) && void 0 !== pV ? pV : null, (() => {
           this.urlRefresher.request()
-        })), this.domLayer = ur.create(this.stage.element, rM.domEvents, mM, null !== (nM = zM.canvasSelectors) && void 0 !== nM ? nM : Br, null !== (QM = zM.resourceHosts) && void 0 !== QM ? QM : [], this.videoLayer, (MM => {
-          this.stage.setViewport(MM)
-        })), null === this.domLayer && (this.stage.element.classList.add("brv-stage-video-only"), this.stage.element.appendChild(this.videoLayer.element)), this.syncDom(), this.bL()
+        })), this.domLayer = ze.create(this.stage.element, eV.domEvents, vV, null !== (QV = wV.canvasSelectors) && void 0 !== QV ? QV : Ke, null !== (nV = wV.resourceHosts) && void 0 !== nV ? nV : [], this.videoLayer, (VV => {
+          this.stage.setViewport(VV)
+        })), null === this.domLayer && (this.stage.element.classList.add("brv-stage-video-only"), this.stage.element.appendChild(this.videoLayer.element)), this.syncDom(), this.iZ()
       }
       get markers() {
         return this.annotations.markers
@@ -1561,21 +1561,21 @@ export const modules = {
       get input() {
         return this.annotations.input
       }
-      subscribe(MM) {
-        return this.listeners.add(MM), MM(this.getState()), () => {
-          this.listeners.delete(MM)
+      subscribe(VV) {
+        return this.listeners.add(VV), VV(this.getState()), () => {
+          this.listeners.delete(VV)
         }
       }
       getState() {
-        const MM = this.clock.timeMs();
+        const VV = this.clock.timeMs();
         return {
-          positionMs: this.timeline.toPosition(MM),
+          positionMs: this.timeline.toPosition(VV),
           durationMs: this.timeline.durationMs,
           playing: this.clock.playing,
           speed: this.clock.speed,
           skipInactive: this.skipInactive,
           ended: this.ended,
-          notice: this.getNotice(MM),
+          notice: this.getNotice(VV),
           telemetryChunksLoaded: this.annotations.telemetryChunksLoaded
         }
       }
@@ -1597,74 +1597,74 @@ export const modules = {
       togglePlay() {
         this.clock.playing ? this.pause() : this.play()
       }
-      seekToPosition(MM) {
-        this.seekToTime(this.timeline.toTime(MM))
+      seekToPosition(VV) {
+        this.seekToTime(this.timeline.toTime(VV))
       }
-      seekBy(MM) {
-        this.seekToPosition(this.timeline.toPosition(this.clock.timeMs()) + MM)
+      seekBy(VV) {
+        this.seekToPosition(this.timeline.toPosition(this.clock.timeMs()) + VV)
       }
-      stepFrame(MM) {
-        this.clock.pause(), this.seekBy(MM * Fr * 1e3)
+      stepFrame(VV) {
+        this.clock.pause(), this.seekBy(VV * me * 1e3)
       }
-      setSpeed(MM) {
-        var rM;
-        this.clock.setSpeed(MM), null === (rM = this.domLayer) || void 0 === rM || rM.setSpeed(MM), this.emit()
+      setSpeed(VV) {
+        var eV;
+        this.clock.setSpeed(VV), null === (eV = this.domLayer) || void 0 === eV || eV.setSpeed(VV), this.emit()
       }
-      setSkipInactive(MM) {
-        this.skipInactive = MM, this.emit()
+      setSkipInactive(VV) {
+        this.skipInactive = VV, this.emit()
       }
-      goToChapter(MM) {
-        const rM = this.clock.timeMs(),
-          iM = 1 === MM ? this.chapters.find((MM => MM.startMs > rM + 500)) : this.chapters.findLast((MM => MM.startMs < rM - 2e3));
-        void 0 !== iM && this.seekToTime(iM.startMs)
+      goToChapter(VV) {
+        const eV = this.clock.timeMs(),
+          xV = 1 === VV ? this.chapters.find((VV => VV.startMs > eV + 500)) : this.chapters.findLast((VV => VV.startMs < eV - 2e3));
+        void 0 !== xV && this.seekToTime(xV.startMs)
       }
       destroy() {
-        var MM;
-        cancelAnimationFrame(this.frame), this.urlRefresher.destroy(), this.annotations.destroy(), null === (MM = this.domLayer) || void 0 === MM || MM.destroy(), this.videoLayer.destroy(), this.stage.destroy(), this.listeners.clear()
+        var VV;
+        cancelAnimationFrame(this.frame), this.urlRefresher.destroy(), this.annotations.destroy(), null === (VV = this.domLayer) || void 0 === VV || VV.destroy(), this.videoLayer.destroy(), this.stage.destroy(), this.listeners.clear()
       }
-      getNotice(MM) {
-        return this.annotations.isHiddenAt(MM) ? "tabHidden" : this.videoLayer.failedAt(MM) && !this.urlRefresher.refreshing ? "videoFailed" : null !== this.domLayer || this.videoLayer.visible ? this.annotations.isVideoGapAt(MM) ? "videoGap" : null : "nothingToShow"
+      getNotice(VV) {
+        return this.annotations.isHiddenAt(VV) ? "tabHidden" : this.videoLayer.failedAt(VV) && !this.urlRefresher.refreshing ? "videoFailed" : null !== this.domLayer || this.videoLayer.visible ? this.annotations.isVideoGapAt(VV) ? "videoGap" : null : "nothingToShow"
       }
       applySkips() {
-        var MM;
+        var VV;
         if (!this.clock.playing) return;
-        const rM = this.clock.timeMs(),
-          iM = this.timeline.nextPlayableTime(rM);
-        if (null === iM) return this.clock.pause(), this.clock.seek(this.timeline.endMs), this.ended = !0, this.syncDom(), void this.emit();
-        const OM = this.skipInactive ? this.annotations.inactiveRanges.find((MM => iM >= MM.startMs && iM < MM.endMs - 500)) : void 0,
-          SM = null !== (MM = null === OM || void 0 === OM ? void 0 : OM.endMs) && void 0 !== MM ? MM : iM;
-        SM !== rM && this.seekToTime(SM)
+        const eV = this.clock.timeMs(),
+          xV = this.timeline.nextPlayableTime(eV);
+        if (null === xV) return this.clock.pause(), this.clock.seek(this.timeline.endMs), this.ended = !0, this.syncDom(), void this.emit();
+        const JV = this.skipInactive ? this.annotations.inactiveRanges.find((VV => xV >= VV.startMs && xV < VV.endMs - 500)) : void 0,
+          YV = null !== (VV = null === JV || void 0 === JV ? void 0 : JV.endMs) && void 0 !== VV ? VV : xV;
+        YV !== eV && this.seekToTime(YV)
       }
-      seekToTime(MM) {
-        this.ended = !1, this.clock.seek(Math.max(this.timeline.startMs, Math.min(this.timeline.endMs, MM))), this.videoLayer.noteClockJump(), this.syncDom(), this.emit()
+      seekToTime(VV) {
+        this.ended = !1, this.clock.seek(Math.max(this.timeline.startMs, Math.min(this.timeline.endMs, VV))), this.videoLayer.noteClockJump(), this.syncDom(), this.emit()
       }
       syncDom() {
-        var MM;
-        null === (MM = this.domLayer) || void 0 === MM || MM.sync(this.clock.timeMs(), this.clock.playing)
+        var VV;
+        null === (VV = this.domLayer) || void 0 === VV || VV.sync(this.clock.timeMs(), this.clock.playing)
       }
       emit() {
         this.emitState(this.getState())
       }
-      emitState(MM) {
-        this.lastState = MM;
-        for (const rM of this.listeners) rM(MM)
+      emitState(VV) {
+        this.lastState = VV;
+        for (const eV of this.listeners) eV(VV)
       }
     }
-    const Ir = 2500,
-      Kr = 5;
+    const ue = 2500,
+      se = 5;
 
-    function qr(MM) {
+    function Se(VV) {
       let {
-        label: rM,
-        sQ: iM,
-        wide: OM = !1
-      } = MM;
-      return (0, JM.jsx)("span", {
-        className: `brv-key${iM?" brv-key-held":""}${OM?" brv-key-wide":""}`,
-        children: rM
+        label: eV,
+        hn: xV,
+        wide: JV = !1
+      } = VV;
+      return (0, bV.jsx)("span", {
+        className: `brv-key${xV?" brv-key-held":""}${JV?" brv-key-wide":""}`,
+        children: eV
       })
     }
-    const Tr = [{
+    const Ie = [{
       action: "primary",
       className: "brv-mouse-left"
     }, {
@@ -1675,129 +1675,129 @@ export const modules = {
       className: "brv-mouse-right"
     }];
 
-    function Vr(MM) {
-      const [rM, iM] = (0, OM.useState)({
+    function de(VV) {
+      const [eV, xV] = (0, JV.useState)({
         bits: 0,
         presses: []
       });
-      return (0, OM.useEffect)((() => {
-        let rM = 0,
-          OM = "";
-        const SM = () => {
-          rM = requestAnimationFrame(SM);
-          const jM = MM.timeline.toTime(MM.getPositionMs()),
+      return (0, JV.useEffect)((() => {
+        let eV = 0,
+          JV = "";
+        const YV = () => {
+          eV = requestAnimationFrame(YV);
+          const UV = VV.timeline.toTime(VV.getPositionMs()),
             {
-              actions: aM,
-              keys: PM
-            } = MM.input,
-            LM = function(MM, rM) {
-              const iM = QM(MM, rM);
-              return iM < 0 ? 0 : MM[iM].bits
-            }(aM, jM),
-            mM = function(MM, rM, iM, OM) {
-              const SM = Math.floor(rM / iM) * iM,
-                jM = new Map,
-                aM = new Set;
-              for (let zM = QM(MM, SM + iM); zM >= 0 && MM[zM].atMs >= SM; zM--) {
-                var PM;
-                const rM = MM[zM];
-                rM.down && rM.inPlay && rM.atMs !== SM + iM && (jM.set(rM.code, (null !== (PM = jM.get(rM.code)) && void 0 !== PM ? PM : 0) + 1), nM(rM) && aM.add(rM.code))
+              actions: yV,
+              keys: pV
+            } = VV.input,
+            ZV = function(VV, eV) {
+              const xV = nV(VV, eV);
+              return xV < 0 ? 0 : VV[xV].bits
+            }(yV, UV),
+            vV = function(VV, eV, xV, JV) {
+              const YV = Math.floor(eV / xV) * xV,
+                UV = new Map,
+                yV = new Set;
+              for (let wV = nV(VV, YV + xV); wV >= 0 && VV[wV].atMs >= YV; wV--) {
+                var pV;
+                const eV = VV[wV];
+                eV.down && eV.inPlay && eV.atMs !== YV + xV && (UV.set(eV.code, (null !== (pV = UV.get(eV.code)) && void 0 !== pV ? pV : 0) + 1), QV(eV) && yV.add(eV.code))
               }
-              return [...jM].sort(zM).slice(0, OM).map((MM => {
-                let [rM] = MM;
+              return [...UV].sort(wV).slice(0, JV).map((VV => {
+                let [eV] = VV;
                 return {
-                  code: rM,
-                  unbound: aM.has(rM)
+                  code: eV,
+                  unbound: yV.has(eV)
                 }
               }))
-            }(PM, jM, Ir, Kr),
-            HM = `${LM};${mM.map((MM=>`${MM.code}:${MM.unbound}`)).join(",")}`;
-          HM !== OM && (OM = HM, iM({
-            bits: LM,
-            presses: mM
+            }(pV, UV, ue, se),
+            rV = `${ZV};${vV.map((VV=>`${VV.code}:${VV.unbound}`)).join(",")}`;
+          rV !== JV && (JV = rV, xV({
+            bits: ZV,
+            presses: vV
           }))
         };
-        return SM(), () => {
-          cancelAnimationFrame(rM)
+        return YV(), () => {
+          cancelAnimationFrame(eV)
         }
-      }), [MM]), rM
+      }), [VV]), eV
     }
 
-    function cr(MM) {
+    function Oe(VV) {
       let {
-        controller: rM,
-        labels: iM
-      } = MM;
+        controller: eV,
+        labels: xV
+      } = VV;
       const {
-        bits: OM,
-        presses: SM
-      } = Vr(rM), jM = MM => function(MM, rM) {
-        return 0 !== (MM & 1 << aM.indexOf(rM))
-      }(OM, MM);
-      return (0, JM.jsxs)("div", {
+        bits: JV,
+        presses: YV
+      } = de(eV), UV = VV => function(VV, eV) {
+        return 0 !== (VV & 1 << yV.indexOf(eV))
+      }(JV, VV);
+      return (0, bV.jsxs)("div", {
         className: "brv-input",
         "aria-hidden": !0,
-        children: [(0, JM.jsx)("div", {
+        children: [(0, bV.jsx)("div", {
           className: "brv-input-slot",
-          children: SM.map((MM => {
-            const rM = mM(MM.code);
-            return (0, JM.jsx)("span", {
-              className: MM.unbound ? "brv-input-press brv-input-press-unbound" : "brv-input-press",
-              children: MM.unbound ? iM.unboundKey(rM) : rM
-            }, MM.code)
+          children: YV.map((VV => {
+            const eV = vV(VV.code);
+            return (0, bV.jsx)("span", {
+              className: VV.unbound ? "brv-input-press brv-input-press-unbound" : "brv-input-press",
+              children: VV.unbound ? xV.unboundKey(eV) : eV
+            }, VV.code)
           }))
-        }), (0, JM.jsxs)("div", {
+        }), (0, bV.jsxs)("div", {
           className: "brv-input-devices",
-          children: [(0, JM.jsxs)("div", {
+          children: [(0, bV.jsxs)("div", {
             className: "brv-keys",
-            children: [(0, JM.jsx)("div", {
+            children: [(0, bV.jsx)("div", {
               className: "brv-keys-row",
-              children: (0, JM.jsx)(qr, {
+              children: (0, bV.jsx)(Se, {
                 label: "W",
-                sQ: jM("forward")
+                hn: UV("forward")
               })
-            }), (0, JM.jsxs)("div", {
+            }), (0, bV.jsxs)("div", {
               className: "brv-keys-row",
-              children: [(0, JM.jsx)(qr, {
+              children: [(0, bV.jsx)(Se, {
                 label: "A",
-                sQ: jM("left")
-              }), (0, JM.jsx)(qr, {
+                hn: UV("left")
+              }), (0, bV.jsx)(Se, {
                 label: "S",
-                sQ: jM("backward")
-              }), (0, JM.jsx)(qr, {
+                hn: UV("backward")
+              }), (0, bV.jsx)(Se, {
                 label: "D",
-                sQ: jM("right")
+                hn: UV("right")
               })]
-            }), (0, JM.jsxs)("div", {
+            }), (0, bV.jsxs)("div", {
               className: "brv-keys-row",
-              children: [(0, JM.jsx)(qr, {
+              children: [(0, bV.jsx)(Se, {
                 label: "Shift",
-                sQ: jM("sprint")
-              }), (0, JM.jsx)(qr, {
+                hn: UV("sprint")
+              }), (0, bV.jsx)(Se, {
                 label: "Ctrl",
-                sQ: jM("crouch")
-              }), (0, JM.jsx)(qr, {
+                hn: UV("crouch")
+              }), (0, bV.jsx)(Se, {
                 label: "Space",
-                sQ: jM("jump"),
+                hn: UV("jump"),
                 wide: !0
               })]
             })]
-          }), (0, JM.jsx)("div", {
+          }), (0, bV.jsx)("div", {
             className: "brv-mouse",
-            children: Tr.map((MM => {
+            children: Ie.map((VV => {
               let {
-                action: rM,
-                className: iM
-              } = MM;
-              return (0, JM.jsx)("span", {
-                className: `${iM}${jM(rM)?" brv-key-held":""}`
-              }, rM)
+                action: eV,
+                className: xV
+              } = VV;
+              return (0, bV.jsx)("span", {
+                className: `${xV}${UV(eV)?" brv-key-held":""}`
+              }, eV)
             }))
           })]
         })]
       })
     }
-    const Mi = {
+    const Vx = {
       play: "Play (space)",
       pause: "Pause (space)",
       speed: "Playback speed",
@@ -1810,113 +1810,113 @@ export const modules = {
       error: "Error",
       graphicsCrash: "The game's graphics crashed",
       death: "Died",
-      fps: MM => `${MM} FPS`,
+      fps: VV => `${VV} FPS`,
       keys: "Keys",
-      unboundKey: MM => `${MM} does nothing here`,
-      unboundKeys: MM => `${MM} did nothing`
+      unboundKey: VV => `${VV} does nothing here`,
+      unboundKeys: VV => `${VV} did nothing`
     };
 
-    function ri(MM) {
+    function ex(VV) {
       let {
-        path: rM
-      } = MM;
-      return (0, JM.jsx)("svg", {
+        path: eV
+      } = VV;
+      return (0, bV.jsx)("svg", {
         viewBox: "0 0 24 24",
         "aria-hidden": !0,
-        children: (0, JM.jsx)("path", {
-          d: rM
+        children: (0, bV.jsx)("path", {
+          d: eV
         })
       })
     }
-    const ii = {
+    const xx = {
       play: "M7 4v16l13-8z",
       pause: "M6 4h4v16H6zm8 0h4v16h-4z",
       fullscreen: "M4 4h6v2H6v4H4zm10 0h6v6h-2V6h-4zM4 14h2v4h4v2H4zm14 0h2v6h-6v-2h4z"
     };
 
-    function Oi(MM) {
+    function Jx(VV) {
       let {
-        label: rM,
-        onClick: iM,
-        children: OM
-      } = MM;
-      return (0, JM.jsx)("button", {
+        label: eV,
+        onClick: xV,
+        children: JV
+      } = VV;
+      return (0, bV.jsx)("button", {
         type: "button",
         className: "brv-button",
-        title: rM,
-        "aria-label": rM,
-        onClick: iM,
-        children: OM
+        title: eV,
+        "aria-label": eV,
+        onClick: xV,
+        children: JV
       })
     }
 
-    function Si(MM) {
+    function Yx(VV) {
       if (!document.fullscreenEnabled) return;
-      (document.fullscreenElement === MM ? document.exitFullscreen() : MM.requestFullscreen()).catch((MM => {
-        console.warn("Couldn't toggle fullscreen.", MM)
+      (document.fullscreenElement === VV ? document.exitFullscreen() : VV.requestFullscreen()).catch((VV => {
+        console.warn("Couldn't toggle fullscreen.", VV)
       }))
     }
 
-    function ji(MM) {
+    function Ux(VV) {
       let {
-        data: rM,
-        className: iM,
-        autoPlay: SM = !1,
-        options: jM,
-        labels: aM = Mi,
-        onController: PM
-      } = MM;
-      const nM = (0, OM.useRef)(null),
-        QM = (0, OM.useRef)(null),
-        zM = (0, OM.useRef)(jM);
-      zM.current = jM;
-      const LM = (0, OM.useRef)(SM);
-      LM.current = SM;
-      const mM = (0, OM.useRef)(PM);
-      mM.current = PM;
-      const [HM, hM] = (0, OM.useState)(null), [dM, lM] = (0, OM.useState)(null), [EM, UM] = (0, OM.useState)(!0), CM = () => {
-        UM((MM => !MM))
+        data: eV,
+        className: xV,
+        autoPlay: YV = !1,
+        options: UV,
+        labels: yV = Vx,
+        onController: pV
+      } = VV;
+      const QV = (0, JV.useRef)(null),
+        nV = (0, JV.useRef)(null),
+        wV = (0, JV.useRef)(UV);
+      wV.current = UV;
+      const ZV = (0, JV.useRef)(YV);
+      ZV.current = YV;
+      const vV = (0, JV.useRef)(pV);
+      vV.current = pV;
+      const [rV, kV] = (0, JV.useState)(null), [EV, jV] = (0, JV.useState)(null), [qV, tV] = (0, JV.useState)(!0), TV = () => {
+        tV((VV => !VV))
       };
-      (0, OM.useEffect)((() => {
-        var MM;
-        ! function(MM) {
-          if (null !== MM.getElementById(wr)) return;
-          const rM = MM.createElement("style");
-          rM.id = wr, rM.textContent = gr, MM.head.appendChild(rM)
+      (0, JV.useEffect)((() => {
+        var VV;
+        ! function(VV) {
+          if (null !== VV.getElementById(Ne)) return;
+          const eV = VV.createElement("style");
+          eV.id = Ne, eV.textContent = Me, VV.head.appendChild(eV)
         }(document);
-        const iM = new Xr(nM.current, rM, zM.current),
-          OM = iM.subscribe(lM);
-        return hM(iM), null === (MM = mM.current) || void 0 === MM || MM.call(mM, iM), LM.current && iM.play(), QM.current.focus({
+        const xV = new He(QV.current, eV, wV.current),
+          JV = xV.subscribe(jV);
+        return kV(xV), null === (VV = vV.current) || void 0 === VV || VV.call(vV, xV), ZV.current && xV.play(), nV.current.focus({
           preventScroll: !0
         }), () => {
-          var MM;
-          OM(), iM.destroy(), null === (MM = mM.current) || void 0 === MM || MM.call(mM, null)
+          var VV;
+          JV(), xV.destroy(), null === (VV = vV.current) || void 0 === VV || VV.call(vV, null)
         }
-      }), [rM]);
-      const eM = null !== HM && HM.input.inputRecorded,
-        bM = null === HM || null === dM ? void 0 : HM.chapters.findLast((MM => HM.timeline.toPosition(MM.startMs) <= dM.positionMs));
-      return (0, JM.jsxs)("div", {
-        ref: QM,
-        className: void 0 === iM ? "brv-player" : `brv-player ${iM}`,
+      }), [eV]);
+      const PV = null !== rV && rV.input.inputRecorded,
+        AV = null === rV || null === EV ? void 0 : rV.chapters.findLast((VV => rV.timeline.toPosition(VV.startMs) <= EV.positionMs));
+      return (0, bV.jsxs)("div", {
+        ref: nV,
+        className: void 0 === xV ? "brv-player" : `brv-player ${xV}`,
         tabIndex: 0,
-        onKeyDown: MM => {
-          if (MM.target instanceof HTMLSelectElement) return;
-          if (" " === MM.key && MM.target !== MM.currentTarget && MM.target instanceof HTMLButtonElement) return;
-          const rM = function(MM) {
+        onKeyDown: VV => {
+          if (VV.target instanceof HTMLSelectElement) return;
+          if (" " === VV.key && VV.target !== VV.currentTarget && VV.target instanceof HTMLButtonElement) return;
+          const eV = function(VV) {
             let {
-              key: rM,
-              shiftKey: iM,
-              ctrlKey: OM,
-              metaKey: SM,
-              altKey: jM
-            } = MM;
-            if (OM || SM || jM) return null;
-            const aM = Number(rM) - 1;
-            if (/^[1-9]$/.test(rM) && aM < WM.length) return {
+              key: eV,
+              shiftKey: xV,
+              ctrlKey: JV,
+              metaKey: YV,
+              altKey: UV
+            } = VV;
+            if (JV || YV || UV) return null;
+            const yV = Number(eV) - 1;
+            if (/^[1-9]$/.test(eV) && yV < RV.length) return {
               type: "setSpeed",
-              speed: WM[aM]
+              speed: RV[yV]
             };
-            switch (rM.toLowerCase()) {
+            switch (eV.toLowerCase()) {
               case " ":
               case "k":
                 return {
@@ -1924,11 +1924,11 @@ export const modules = {
                 };
               case "arrowleft":
                 return {
-                  type: "seekBy", deltaMs: iM ? -1e3 : -5e3
+                  type: "seekBy", deltaMs: xV ? -1e3 : -5e3
                 };
               case "arrowright":
                 return {
-                  type: "seekBy", deltaMs: iM ? 1e3 : 5e3
+                  type: "seekBy", deltaMs: xV ? 1e3 : 5e3
                 };
               case "j":
                 return {
@@ -1948,7 +1948,7 @@ export const modules = {
                 };
               case "n":
                 return {
-                  type: "chapter", direction: iM ? -1 : 1
+                  type: "chapter", direction: xV ? -1 : 1
                 };
               case "s":
                 return {
@@ -1965,265 +1965,265 @@ export const modules = {
               default:
                 return null
             }
-          }(MM);
-          null !== rM && null !== HM && null !== dM && (MM.preventDefault(), function(MM, rM, iM, OM) {
-            switch (rM.type) {
+          }(VV);
+          null !== eV && null !== rV && null !== EV && (VV.preventDefault(), function(VV, eV, xV, JV) {
+            switch (eV.type) {
               case "togglePlay":
-                MM.togglePlay();
+                VV.togglePlay();
                 break;
               case "seekBy":
-                MM.seekBy(rM.deltaMs);
+                VV.seekBy(eV.deltaMs);
                 break;
               case "stepFrame":
-                MM.stepFrame(rM.direction);
+                VV.stepFrame(eV.direction);
                 break;
               case "setSpeed":
-                MM.setSpeed(rM.speed);
+                VV.setSpeed(eV.speed);
                 break;
               case "chapter":
-                MM.goToChapter(rM.direction);
+                VV.goToChapter(eV.direction);
                 break;
               case "toggleSkipInactive":
-                MM.setSkipInactive(!iM.skipInactive);
+                VV.setSkipInactive(!xV.skipInactive);
                 break;
               case "toggleFullscreen":
-                Si(OM.root);
+                Yx(JV.root);
                 break;
               case "toggleKeys":
-                OM.toggleKeys()
+                JV.toggleKeys()
             }
-          }(HM, rM, dM, {
-            root: MM.currentTarget,
-            toggleKeys: CM
+          }(rV, eV, EV, {
+            root: VV.currentTarget,
+            toggleKeys: TV
           }))
         },
-        children: [(0, JM.jsxs)("div", {
-          ref: nM,
+        children: [(0, bV.jsxs)("div", {
+          ref: QV,
           className: "brv-viewport",
           onClick: () => {
-            null === HM || void 0 === HM || HM.togglePlay()
+            null === rV || void 0 === rV || rV.togglePlay()
           },
-          children: [null !== dM && null !== dM.notice && (0, JM.jsx)("div", {
+          children: [null !== EV && null !== EV.notice && (0, bV.jsx)("div", {
             className: "brv-overlay",
-            children: aM[dM.notice]
-          }), null !== HM && EM && eM && (0, JM.jsx)(cr, {
-            controller: HM,
-            labels: aM
+            children: yV[EV.notice]
+          }), null !== rV && qV && PV && (0, bV.jsx)(Oe, {
+            controller: rV,
+            labels: yV
           })]
-        }), null !== HM && null !== dM && (0, JM.jsxs)(JM.Fragment, {
-          children: [(0, JM.jsx)(GM, {
-            controller: HM,
-            frames: HM.frames,
-            input: HM.input,
-            markers: HM.markers,
-            inactiveRanges: HM.inactiveRanges,
-            videoGaps: HM.videoGaps,
-            labels: aM
-          }), HM.chapters.length > 1 && (0, JM.jsx)("div", {
+        }), null !== rV && null !== EV && (0, bV.jsxs)(bV.Fragment, {
+          children: [(0, bV.jsx)(FV, {
+            controller: rV,
+            frames: rV.frames,
+            input: rV.input,
+            markers: rV.markers,
+            inactiveRanges: rV.inactiveRanges,
+            videoGaps: rV.videoGaps,
+            labels: yV
+          }), rV.chapters.length > 1 && (0, bV.jsx)("div", {
             className: "brv-chapters",
-            children: HM.chapters.map((MM => (0, JM.jsxs)("button", {
+            children: rV.chapters.map((VV => (0, bV.jsxs)("button", {
               type: "button",
-              className: MM === bM ? "brv-chapter brv-chapter-current" : "brv-chapter",
+              className: VV === AV ? "brv-chapter brv-chapter-current" : "brv-chapter",
               onClick: () => {
-                HM.seekToPosition(HM.timeline.toPosition(MM.startMs))
+                rV.seekToPosition(rV.timeline.toPosition(VV.startMs))
               },
-              children: [MM.label, " \xb7 ", yM(MM.endMs - MM.startMs)]
-            }, MM.startMs)))
-          }), (0, JM.jsxs)("div", {
+              children: [VV.label, " \xb7 ", BV(VV.endMs - VV.startMs)]
+            }, VV.startMs)))
+          }), (0, bV.jsxs)("div", {
             className: "brv-controls",
-            children: [(0, JM.jsx)(Oi, {
-              label: dM.playing ? aM.pause : aM.play,
+            children: [(0, bV.jsx)(Jx, {
+              label: EV.playing ? yV.pause : yV.play,
               onClick: () => {
-                HM.togglePlay()
+                rV.togglePlay()
               },
-              children: (0, JM.jsx)(ri, {
-                path: dM.playing ? ii.pause : ii.play
+              children: (0, bV.jsx)(ex, {
+                path: EV.playing ? xx.pause : xx.play
               })
-            }), (0, JM.jsxs)("span", {
+            }), (0, bV.jsxs)("span", {
               className: "brv-time",
-              children: [yM(dM.positionMs), " / ", yM(dM.durationMs)]
-            }), (0, JM.jsx)("select", {
+              children: [BV(EV.positionMs), " / ", BV(EV.durationMs)]
+            }), (0, bV.jsx)("select", {
               className: "brv-speed",
-              value: dM.speed,
-              title: `${aM.speed} (1-${WM.length})`,
-              "aria-label": aM.speed,
-              onChange: MM => {
-                HM.setSpeed(Number(MM.target.value))
+              value: EV.speed,
+              title: `${yV.speed} (1-${RV.length})`,
+              "aria-label": yV.speed,
+              onChange: VV => {
+                rV.setSpeed(Number(VV.target.value))
               },
-              children: WM.map((MM => (0, JM.jsxs)("option", {
-                value: MM,
-                children: [MM, "x"]
-              }, MM)))
-            }), (0, JM.jsxs)("button", {
+              children: RV.map((VV => (0, bV.jsxs)("option", {
+                value: VV,
+                children: [VV, "x"]
+              }, VV)))
+            }), (0, bV.jsxs)("button", {
               type: "button",
               role: "switch",
               className: "brv-switch",
-              "aria-checked": dM.skipInactive,
-              title: `${aM.skipInactive} (S)`,
+              "aria-checked": EV.skipInactive,
+              title: `${yV.skipInactive} (S)`,
               onClick: () => {
-                HM.setSkipInactive(!dM.skipInactive)
+                rV.setSkipInactive(!EV.skipInactive)
               },
-              children: [(0, JM.jsx)("span", {
+              children: [(0, bV.jsx)("span", {
                 className: "brv-switch-track",
                 "aria-hidden": !0
-              }), aM.skipInactive]
-            }), eM && (0, JM.jsxs)("button", {
+              }), yV.skipInactive]
+            }), PV && (0, bV.jsxs)("button", {
               type: "button",
               role: "switch",
               className: "brv-switch",
-              "aria-checked": EM,
-              title: `${aM.keys} (I)`,
-              onClick: CM,
-              children: [(0, JM.jsx)("span", {
+              "aria-checked": qV,
+              title: `${yV.keys} (I)`,
+              onClick: TV,
+              children: [(0, bV.jsx)("span", {
                 className: "brv-switch-track",
                 "aria-hidden": !0
-              }), aM.keys]
-            }), document.fullscreenEnabled && (0, JM.jsx)(Oi, {
-              label: aM.fullscreen,
+              }), yV.keys]
+            }), document.fullscreenEnabled && (0, bV.jsx)(Jx, {
+              label: yV.fullscreen,
               onClick: () => {
-                Si(QM.current)
+                Yx(nV.current)
               },
-              children: (0, JM.jsx)(ri, {
-                path: ii.fullscreen
+              children: (0, bV.jsx)(ex, {
+                path: xx.fullscreen
               })
             })]
           })]
         })]
       })
     }
-    var ai = iM(5476);
-    const Pi = ["bloxd.io", window.location.hostname];
+    var yx = xV(5586);
+    const px = ["bloxd.io", window.location.hostname];
 
-    function ni(MM) {
+    function Qx(VV) {
       let {
-        gameAnalyticsId: rM,
-        recordingId: iM,
-        userContext: SM,
-        autoPlay: jM
-      } = MM;
+        gameAnalyticsId: eV,
+        recordingId: xV,
+        userContext: YV,
+        autoPlay: UV
+      } = VV;
       const {
-        t: aM
-      } = (0, eM.A)(), [PM, nM] = (0, OM.useState)({
+        t: yV
+      } = (0, PV.A)(), [pV, QV] = (0, JV.useState)({
         status: "loading"
-      }), [QM, zM] = (0, OM.useState)(0), LM = (0, OM.useMemo)((() => function(MM) {
+      }), [nV, wV] = (0, JV.useState)(0), ZV = (0, JV.useMemo)((() => function(VV) {
         return {
-          play: MM("studio:replayPlay"),
-          pause: MM("studio:replayPause"),
-          speed: MM("studio:replaySpeed"),
-          skipInactive: MM("studio:replaySkipIdle"),
-          fullscreen: MM("studio:replayFullscreen"),
-          tabHidden: MM("studio:replayTabHidden"),
-          videoFailed: MM("studio:replayVideoFailed"),
-          nothingToShow: MM("studio:replayNothingToShow"),
-          videoGap: MM("studio:replayVideoGap"),
-          error: MM("general:error"),
-          graphicsCrash: MM("studio:replayMarkerGraphicsCrash"),
-          death: MM("studio:replayMarkerDeath"),
-          fps: rM => MM("studio:replayFps", {
-            fps: rM
+          play: VV("studio:replayPlay"),
+          pause: VV("studio:replayPause"),
+          speed: VV("studio:replaySpeed"),
+          skipInactive: VV("studio:replaySkipIdle"),
+          fullscreen: VV("studio:replayFullscreen"),
+          tabHidden: VV("studio:replayTabHidden"),
+          videoFailed: VV("studio:replayVideoFailed"),
+          nothingToShow: VV("studio:replayNothingToShow"),
+          videoGap: VV("studio:replayVideoGap"),
+          error: VV("general:error"),
+          graphicsCrash: VV("studio:replayMarkerGraphicsCrash"),
+          death: VV("studio:replayMarkerDeath"),
+          fps: eV => VV("studio:replayFps", {
+            fps: eV
           }),
-          keys: MM("studio:replayKeys"),
-          unboundKey: rM => MM("studio:replayUnboundKey", {
-            key: rM
+          keys: VV("studio:replayKeys"),
+          unboundKey: eV => VV("studio:replayUnboundKey", {
+            key: eV
           }),
-          unboundKeys: rM => MM("studio:replayUnboundKeys", {
-            keys: rM
+          unboundKeys: eV => VV("studio:replayUnboundKeys", {
+            keys: eV
           })
         }
-      }(aM)), [aM]), mM = (0, OM.useMemo)((() => ({
-        resourceHosts: Pi,
-        loadTelemetryChunk: uM.A,
-        refreshUrls: async () => (0, uM.u)(await ai.c.getReplay(SM, rM, iM)),
+      }(yV)), [yV]), vV = (0, JV.useMemo)((() => ({
+        resourceHosts: px,
+        loadTelemetryChunk: zV.A,
+        refreshUrls: async () => (0, zV.r)(await yx.b.getReplay(YV, eV, xV)),
         segmentUrls: {
-          load: async MM => (await ai.c.getReplaySegmentUrls(SM, rM, iM, MM, [])).videoSegments,
-          maxSequences: pM.x
+          load: async VV => (await yx.b.getReplaySegmentUrls(YV, eV, xV, VV, [])).videoSegments,
+          maxSequences: WV.D
         },
         telemetryUrls: {
-          load: async MM => (await ai.c.getReplaySegmentUrls(SM, rM, iM, [], MM)).telemetrySegments,
-          maxSequences: pM.E
+          load: async VV => (await yx.b.getReplaySegmentUrls(YV, eV, xV, [], VV)).telemetrySegments,
+          maxSequences: WV.I
         }
-      })), [rM, iM]);
-      return (0, OM.useEffect)((() => {
-        let MM = !1;
-        return nM({
+      })), [eV, xV]);
+      return (0, JV.useEffect)((() => {
+        let VV = !1;
+        return QV({
           status: "loading"
-        }), (0, uM.B)({
-          getReplay: () => ai.c.getReplay(SM, rM, iM),
-          loadDomEvents: uM.z,
+        }), (0, zV.D)({
+          getReplay: () => yx.b.getReplay(YV, eV, xV),
+          loadDomEvents: zV.w,
           onPreparing: () => {
-            nM({
+            QV({
               status: "preparing"
             })
           },
-          wait: MM => new Promise((rM => {
-            setTimeout(rM, MM)
+          wait: VV => new Promise((eV => {
+            setTimeout(eV, VV)
           })),
-          isCancelled: () => MM
-        }).then((rM => {
-          if (!MM && null !== rM) {
-            const MM = (0, uM.y)(rM.replay, rM.domEvents, (MM => aM("studio:replayVisit", {
-              number: MM
+          isCancelled: () => VV
+        }).then((eV => {
+          if (!VV && null !== eV) {
+            const VV = (0, zV.t)(eV.replay, eV.domEvents, (VV => yV("studio:replayVisit", {
+              number: VV
             })));
-            nM({
+            QV({
               status: "loaded",
-              value: MM
+              value: VV
             })
           }
-        })).catch((rM => {
-          console.error("Failed to load studio replay", rM), MM || nM({
+        })).catch((eV => {
+          console.error("Failed to load studio replay", eV), VV || QV({
             status: "error",
-            message: (0, uM.o)(rM, aM("studio:replayLoadFailed"))
+            message: (0, zV.l)(eV, yV("studio:replayLoadFailed"))
           })
         })), () => {
-          MM = !0
+          VV = !0
         }
-      }), [rM, iM, QM]), "loading" === PM.status ? (0, JM.jsx)("div", {
+      }), [eV, xV, nV]), "loading" === pV.status ? (0, bV.jsx)("div", {
         className: "StudioReplaysMessage",
-        children: (0, JM.jsx)(wM.d, {})
-      }) : "preparing" === PM.status ? (0, JM.jsxs)("div", {
+        children: (0, bV.jsx)(NV.d, {})
+      }) : "preparing" === pV.status ? (0, bV.jsxs)("div", {
         className: "StudioReplaysMessage",
-        children: [(0, JM.jsx)(wM.d, {}), aM("studio:replayPreparing")]
-      }) : "error" === PM.status ? (0, JM.jsxs)("div", {
+        children: [(0, bV.jsx)(NV.d, {}), yV("studio:replayPreparing")]
+      }) : "error" === pV.status ? (0, bV.jsxs)("div", {
         className: "StudioReplaysMessage",
-        children: [PM.message, (0, JM.jsx)(tM.V, {
+        children: [pV.message, (0, bV.jsx)(XV.M, {
           onClick: () => {
-            zM((MM => MM + 1))
+            wV((VV => VV + 1))
           },
-          children: aM("general:tryAgain")
+          children: yV("general:tryAgain")
         })]
-      }) : (0, JM.jsx)(ji, {
+      }) : (0, bV.jsx)(Ux, {
         className: "StudioReplayPlayer",
-        data: PM.value,
-        labels: LM,
-        options: mM,
-        autoPlay: jM || QM > 0
+        data: pV.value,
+        labels: ZV,
+        options: vV,
+        autoPlay: UV || nV > 0
       })
     }
 
-    function Qi(MM) {
+    function nx(VV) {
       let {
-        onPlay: rM
-      } = MM;
+        onPlay: eV
+      } = VV;
       const {
-        t: iM
-      } = (0, eM.A)();
-      return (0, JM.jsx)("button", {
+        t: xV
+      } = (0, PV.A)();
+      return (0, bV.jsx)("button", {
         type: "button",
         className: "StudioReplayPlaceholder",
-        "aria-label": iM("general:play"),
-        onClick: rM,
-        children: (0, JM.jsx)("span", {
+        "aria-label": xV("general:play"),
+        onClick: eV,
+        children: (0, bV.jsx)("span", {
           className: "StudioReplayPlaceholderPlay",
-          children: (0, JM.jsx)(gM.b, {
+          children: (0, bV.jsx)(MV.b, {
             name: "play"
           })
         })
       })
     }
-    const zi = uM.O.replay,
-      Li = uM.O.filters,
-      mi = uM.O.endedAt,
-      Hi = {
+    const wx = zV.S.replay,
+      Zx = zV.S.filters,
+      vx = zV.S.endedAt,
+      rx = {
         newPlayers: "studio:replaysFilterNewPlayers",
         quickQuits: "studio:replaysFilterQuickQuits",
         leftAfterDying: "studio:replaysFilterLeftAfterDying",
@@ -2231,7 +2231,7 @@ export const modules = {
         mobile: "studio:replaysFilterMobile",
         errors: "studio:replaysFilterErrors"
       },
-      Ji = {
+      kx = {
         mobile: "studio:replayTagMobile",
         tablet: "studio:replayTagTablet",
         newPlayer: "studio:replayTagNewPlayer",
@@ -2240,204 +2240,204 @@ export const modules = {
         error: "studio:replayTagError"
       };
 
-    function di(MM) {
+    function bx(VV) {
       let {
-        item: rM,
-        selected: iM,
-        onSelect: OM
-      } = MM;
+        item: eV,
+        selected: xV,
+        onSelect: JV
+      } = VV;
       const {
-        t: SM
-      } = (0, eM.A)(), aM = (0, uM.s)(rM);
-      return (0, JM.jsxs)("button", {
+        t: YV
+      } = (0, PV.A)(), yV = (0, zV.o)(eV);
+      return (0, bV.jsxs)("button", {
         type: "button",
-        className: jM()("StudioReplayListItem", {
-          StudioReplayListItemSelected: iM
+        className: UV()("StudioReplayListItem", {
+          StudioReplayListItemSelected: xV
         }),
-        onClick: OM,
-        children: [(0, JM.jsxs)("div", {
+        onClick: JV,
+        children: [(0, bV.jsxs)("div", {
           className: "StudioReplayListItemTop",
-          children: [(0, JM.jsx)("span", {
-            children: (0, uM.l)(rM.startedAtMs)
-          }), (0, JM.jsx)("span", {
+          children: [(0, bV.jsx)("span", {
+            children: (0, zV.k)(eV.startedAtMs)
+          }), (0, bV.jsx)("span", {
             className: "StudioReplayListItemDuration",
-            children: yM(rM.inGameDurationMs)
+            children: BV(eV.inGameDurationMs)
           })]
-        }), aM.length > 0 && (0, JM.jsx)("div", {
+        }), yV.length > 0 && (0, bV.jsx)("div", {
           className: "StudioReplayListItemTags",
-          children: aM.map((MM => (0, JM.jsx)("span", {
-            className: jM()("StudioReplayTag", `StudioReplayTag-${MM}`),
-            children: SM(Ji[MM])
-          }, MM)))
+          children: yV.map((VV => (0, bV.jsx)("span", {
+            className: UV()("StudioReplayTag", `StudioReplayTag-${VV}`),
+            children: YV(kx[VV])
+          }, VV)))
         })]
       })
     }
 
-    function yi(MM) {
+    function Ex(VV) {
       let {
-        gameAnalyticsId: rM,
-        userContext: iM,
-        availability: OM
-      } = MM;
+        gameAnalyticsId: eV,
+        userContext: xV,
+        availability: JV
+      } = VV;
       const {
-        t: SM
-      } = (0, eM.A)();
-      return "on" === OM ? (0, JM.jsx)(li, {
-        gameAnalyticsId: rM,
-        userContext: iM
-      }) : "failed" === OM ? (0, JM.jsxs)("div", {
+        t: YV
+      } = (0, PV.A)();
+      return "on" === JV ? (0, bV.jsx)(Bx, {
+        gameAnalyticsId: eV,
+        userContext: xV
+      }) : "failed" === JV ? (0, bV.jsxs)("div", {
         className: "StudioReplaysTab StudioReplaysMessage",
-        children: [(0, JM.jsx)(gM.b, {
+        children: [(0, bV.jsx)(MV.b, {
           name: "face-dizzy"
-        }), SM("studio:replaysStartFailed"), (0, JM.jsx)(tM.V, {
+        }), YV("studio:replaysStartFailed"), (0, bV.jsx)(XV.M, {
           onClick: () => {
-            CM.f.startNow()
+            TV.e.startNow()
           },
-          children: SM("general:tryAgain")
+          children: YV("general:tryAgain")
         })]
-      }) : (0, JM.jsx)("div", {
+      }) : (0, bV.jsx)("div", {
         className: "StudioReplaysTab StudioReplaysMessage",
-        children: (0, JM.jsx)(wM.d, {})
+        children: (0, bV.jsx)(NV.d, {})
       })
     }
 
-    function li(MM) {
-      var rM, iM;
+    function Bx(VV) {
+      var eV, xV;
       let {
-        gameAnalyticsId: SM,
-        userContext: aM
-      } = MM;
+        gameAnalyticsId: YV,
+        userContext: yV
+      } = VV;
       const {
-        t: PM
-      } = (0, eM.A)(), nM = function(MM, rM) {
+        t: pV
+      } = (0, PV.A)(), QV = function(VV, eV) {
         const {
-          t: iM
-        } = (0, eM.A)(), [SM, jM] = (0, OM.useState)({
+          t: xV
+        } = (0, PV.A)(), [YV, UV] = (0, JV.useState)({
           status: "loading"
         });
-        return (0, OM.useEffect)((() => {
-          let OM = !1;
-          return jM({
+        return (0, JV.useEffect)((() => {
+          let JV = !1;
+          return UV({
             status: "loading"
-          }), ai.c.listReplays(rM, MM).then((MM => {
-            OM || jM({
+          }), yx.b.listReplays(eV, VV).then((VV => {
+            JV || UV({
               status: "loaded",
-              value: MM
+              value: VV
             })
-          })).catch((MM => {
-            console.error("Failed to list studio replays", MM), OM || jM({
+          })).catch((VV => {
+            console.error("Failed to list studio replays", VV), JV || UV({
               status: "error",
-              message: (0, uM.o)(MM, iM("studio:replaysLoadFailed"))
+              message: (0, zV.l)(VV, xV("studio:replaysLoadFailed"))
             })
           })), () => {
-            OM = !0
+            JV = !0
           }
-        }), [MM]), SM
-      }(SM, aM), [QM, zM] = (0, bM.k)(), LM = (0, uM.I)(QM.get(Li)), mM = (0, uM.H)(QM.get(mi)), HM = QM.get(zi), hM = "loaded" === nM.status ? (0, uM.d)(nM.value.recordings, LM, mM) : [], dM = "loaded" === nM.status ? (0, uM.R)(nM.value.recordings, hM, HM) : [], yM = null !== (rM = null !== HM && void 0 !== HM ? HM : null === (iM = dM[0]) || void 0 === iM ? void 0 : iM.recordingId) && void 0 !== rM ? rM : null, [lM, EM] = (0, OM.useState)(HM), [UM, GM] = (0, OM.useState)(!1), CM = (0, OM.useRef)(null), pM = (0, OM.useRef)(null !== HM), WM = (0, OM.useRef)(null);
+        }), [VV]), YV
+      }(YV, yV), [nV, wV] = (0, AV.n)(), ZV = (0, zV.L)(nV.get(Zx)), vV = (0, zV.K)(nV.get(vx)), rV = nV.get(wx), kV = "loaded" === QV.status ? (0, zV.c)(QV.value.recordings, ZV, vV) : [], EV = "loaded" === QV.status ? (0, zV.V)(QV.value.recordings, kV, rV) : [], BV = null !== (eV = null !== rV && void 0 !== rV ? rV : null === (xV = EV[0]) || void 0 === xV ? void 0 : xV.recordingId) && void 0 !== eV ? eV : null, [jV, qV] = (0, JV.useState)(rV), [tV, FV] = (0, JV.useState)(!1), TV = (0, JV.useRef)(null), WV = (0, JV.useRef)(null !== rV), RV = (0, JV.useRef)(null);
 
-      function sM(MM) {
-        MM === lM && MM === yM || (WM.current = null, pM.current = !0, GM(!0), EM(MM), zM((rM => {
-          (0, bM.f)(rM, zi, MM)
+      function gV(VV) {
+        VV === jV && VV === BV || (RV.current = null, WV.current = !0, FV(!0), qV(VV), wV((eV => {
+          (0, AV.k)(eV, wx, VV)
         }), {
           push: !0
         }))
       }
 
-      function DM(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        yM !== lM && (WM.current = yM), zM((iM => {
-          (0, bM.f)(iM, zi, yM), (0, bM.f)(iM, Li, (0, uM.h)(MM)), rM && (0, bM.f)(iM, mi, null)
+      function DV(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        BV !== jV && (RV.current = BV), wV((xV => {
+          (0, AV.k)(xV, wx, BV), (0, AV.k)(xV, Zx, (0, zV.g)(VV)), eV && (0, AV.k)(xV, vx, null)
         }))
       }
-      if ((0, OM.useEffect)((() => {
-          null !== HM && HM !== WM.current && EM(HM)
-        }), [HM]), (0, OM.useEffect)((() => {
-          pM.current && null !== CM.current && (pM.current = !1, CM.current.scrollIntoView({
+      if ((0, JV.useEffect)((() => {
+          null !== rV && rV !== RV.current && qV(rV)
+        }), [rV]), (0, JV.useEffect)((() => {
+          WV.current && null !== TV.current && (WV.current = !1, TV.current.scrollIntoView({
             block: "nearest",
             behavior: "smooth"
           }))
-        }), [lM, nM.status]), "loading" === nM.status) return (0, JM.jsx)("div", {
+        }), [jV, QV.status]), "loading" === QV.status) return (0, bV.jsx)("div", {
         className: "StudioReplaysTab StudioReplaysMessage",
-        children: (0, JM.jsx)(wM.d, {})
+        children: (0, bV.jsx)(NV.d, {})
       });
-      if ("error" === nM.status) return (0, JM.jsxs)("div", {
+      if ("error" === QV.status) return (0, bV.jsxs)("div", {
         className: "StudioReplaysTab StudioReplaysMessage",
-        children: [(0, JM.jsx)(gM.b, {
+        children: [(0, bV.jsx)(MV.b, {
           name: "face-dizzy"
-        }), nM.message]
+        }), QV.message]
       });
       const {
-        recordings: kM,
-        dailyQuota: ZM
-      } = nM.value;
-      if (0 === kM.length) return (0, JM.jsxs)("div", {
+        recordings: iV,
+        dailyQuota: CV
+      } = QV.value;
+      if (0 === iV.length) return (0, bV.jsxs)("div", {
         className: "StudioReplaysTab StudioReplaysMessage",
-        children: [(0, JM.jsx)(gM.b, {
+        children: [(0, bV.jsx)(MV.b, {
           name: "video"
-        }), PM(0 === ZM ? "studio:replaysOff" : "studio:replaysEmpty")]
+        }), pV(0 === CV ? "studio:replaysOff" : "studio:replaysEmpty")]
       });
-      const oM = uM.K.filter((MM => kM.some((rM => (0, uM.D)(rM, MM))))),
-        fM = yM !== lM;
-      return (0, JM.jsxs)("div", {
+      const aV = zV.P.filter((VV => iV.some((eV => (0, zV.G)(eV, VV))))),
+        oV = BV !== jV;
+      return (0, bV.jsxs)("div", {
         className: "StudioReplaysTab",
-        children: [(0, JM.jsxs)("div", {
+        children: [(0, bV.jsxs)("div", {
           className: "StudioReplaysToolbar",
-          children: [null !== mM && (0, JM.jsxs)(tM.V, {
+          children: [null !== vV && (0, bV.jsxs)(XV.M, {
             active: !0,
             onClick: () => {
-              DM(LM, !0)
+              DV(ZV, !0)
             },
-            children: [PM("studio:replaysFilterEndedAt", {
-              minutes: (0, RM.u)(mM.minute, mM.orLonger ? mM.minute : 1 / 0)
-            }), (0, JM.jsx)(gM.b, {
+            children: [pV("studio:replaysFilterEndedAt", {
+              minutes: (0, GV.D)(vV.minute, vV.orLonger ? vV.minute : 1 / 0)
+            }), (0, bV.jsx)(MV.b, {
               name: "xmark"
             })]
-          }), oM.map((MM => (0, JM.jsx)(tM.V, {
-            active: LM.includes(MM),
+          }), aV.map((VV => (0, bV.jsx)(XV.M, {
+            active: ZV.includes(VV),
             onClick: () => {
-              ! function(MM) {
-                DM(LM.includes(MM) ? LM.filter((rM => rM !== MM)) : [...LM, MM])
-              }(MM)
+              ! function(VV) {
+                DV(ZV.includes(VV) ? ZV.filter((eV => eV !== VV)) : [...ZV, VV])
+              }(VV)
             },
-            children: PM(Hi[MM])
-          }, MM))), ZM > 0 && (0, JM.jsx)("span", {
+            children: pV(rx[VV])
+          }, VV))), CV > 0 && (0, bV.jsx)("span", {
             className: "StudioReplaysQuota",
-            children: PM("studio:replaysQuota", {
-              count: ZM
+            children: pV("studio:replaysQuota", {
+              count: CV
             })
           })]
-        }), (0, JM.jsxs)("div", {
+        }), (0, bV.jsxs)("div", {
           className: "StudioReplaysBody",
-          children: [(0, JM.jsxs)("div", {
+          children: [(0, bV.jsxs)("div", {
             className: "StudioReplaysList",
-            children: [0 === hM.length && (0, JM.jsxs)("div", {
+            children: [0 === kV.length && (0, bV.jsxs)("div", {
               className: "StudioReplaysListEmpty",
-              children: [PM("studio:replaysNoMatch"), (0, JM.jsx)(tM.V, {
+              children: [pV("studio:replaysNoMatch"), (0, bV.jsx)(XV.M, {
                 onClick: () => {
-                  DM([], !0)
+                  DV([], !0)
                 },
-                children: PM("studio:replaysClearFilters")
+                children: pV("studio:replaysClearFilters")
               })]
-            }), dM.map((MM => (0, JM.jsx)(di, {
-              item: MM,
-              selected: MM.recordingId === yM,
+            }), EV.map((VV => (0, bV.jsx)(bx, {
+              item: VV,
+              selected: VV.recordingId === BV,
               onSelect: () => {
-                sM(MM.recordingId)
+                gV(VV.recordingId)
               }
-            }, MM.recordingId)))]
-          }), null !== yM && (0, JM.jsxs)("div", {
-            ref: CM,
-            className: jM()("StudioReplayViewer", {
-              StudioReplayViewerWaiting: fM
+            }, VV.recordingId)))]
+          }), null !== BV && (0, bV.jsxs)("div", {
+            ref: TV,
+            className: UV()("StudioReplayViewer", {
+              StudioReplayViewerWaiting: oV
             }),
-            children: [!fM && (0, JM.jsx)(ni, {
-              gameAnalyticsId: SM,
-              recordingId: yM,
-              userContext: aM,
-              autoPlay: UM
-            }, yM), fM && (0, JM.jsx)(Qi, {
+            children: [!oV && (0, bV.jsx)(Qx, {
+              gameAnalyticsId: YV,
+              recordingId: BV,
+              userContext: yV,
+              autoPlay: tV
+            }, BV), oV && (0, bV.jsx)(nx, {
               onPlay: () => {
-                sM(yM)
+                gV(BV)
               }
             })]
           })]
@@ -2447,4 +2447,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const VV in modules) Object.freeze(modules[VV]);

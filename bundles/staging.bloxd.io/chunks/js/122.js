@@ -1,173 +1,173 @@
 export const id = 122;
 export const ids = [122];
 export const modules = {
-  5405: (MM, rM, iM) => {
-    function OM(MM) {
-      return OM = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(MM) {
-        return typeof MM
-      } : function(MM) {
-        return MM && "function" == typeof Symbol && MM.constructor === Symbol && MM !== Symbol.prototype ? "symbol" : typeof MM
-      }, OM(MM)
+  5517: (VV, eV, xV) => {
+    function JV(VV) {
+      return JV = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(VV) {
+        return typeof VV
+      } : function(VV) {
+        return VV && "function" == typeof Symbol && VV.constructor === Symbol && VV !== Symbol.prototype ? "symbol" : typeof VV
+      }, JV(VV)
     }
-    Object.defineProperty(rM, "__esModule", {
+    Object.defineProperty(eV, "__esModule", {
       value: !0
-    }), rM.default = void 0;
-    var SM = LM(iM(1116)),
-      jM = function(MM, rM) {
-        if (!rM && MM && MM.__esModule) return MM;
-        if (null === MM || "object" !== OM(MM) && "function" !== typeof MM) return {
-          default: MM
+    }), eV.default = void 0;
+    var YV = ZV(xV(1146)),
+      UV = function(VV, eV) {
+        if (!eV && VV && VV.__esModule) return VV;
+        if (null === VV || "object" !== JV(VV) && "function" !== typeof VV) return {
+          default: VV
         };
-        var iM = zM(rM);
-        if (iM && iM.has(MM)) return iM.get(MM);
-        var SM = {},
-          jM = Object.defineProperty && Object.getOwnPropertyDescriptor;
-        for (var aM in MM)
-          if ("default" !== aM && Object.prototype.hasOwnProperty.call(MM, aM)) {
-            var PM = jM ? Object.getOwnPropertyDescriptor(MM, aM) : null;
-            PM && (PM.get || PM.set) ? Object.defineProperty(SM, aM, PM) : SM[aM] = MM[aM]
-          } SM.default = MM, iM && iM.set(MM, SM);
-        return SM
-      }(iM(44)),
-      aM = LM(iM(5368)),
-      PM = LM(iM(5409)),
-      nM = iM(5413),
-      QM = iM(1303);
+        var xV = wV(eV);
+        if (xV && xV.has(VV)) return xV.get(VV);
+        var YV = {},
+          UV = Object.defineProperty && Object.getOwnPropertyDescriptor;
+        for (var yV in VV)
+          if ("default" !== yV && Object.prototype.hasOwnProperty.call(VV, yV)) {
+            var pV = UV ? Object.getOwnPropertyDescriptor(VV, yV) : null;
+            pV && (pV.get || pV.set) ? Object.defineProperty(YV, yV, pV) : YV[yV] = VV[yV]
+          } YV.default = VV, xV && xV.set(VV, YV);
+        return YV
+      }(xV(62)),
+      yV = ZV(xV(5453)),
+      pV = ZV(xV(5520)),
+      QV = xV(5526),
+      nV = xV(1321);
 
-    function zM(MM) {
+    function wV(VV) {
       if ("function" !== typeof WeakMap) return null;
-      var rM = new WeakMap,
-        iM = new WeakMap;
-      return (zM = function(MM) {
-        return MM ? iM : rM
-      })(MM)
+      var eV = new WeakMap,
+        xV = new WeakMap;
+      return (wV = function(VV) {
+        return VV ? xV : eV
+      })(VV)
     }
 
-    function LM(MM) {
-      return MM && MM.__esModule ? MM : {
-        default: MM
+    function ZV(VV) {
+      return VV && VV.__esModule ? VV : {
+        default: VV
       }
     }
 
-    function mM(MM, rM) {
-      var iM = "undefined" !== typeof Symbol && MM[Symbol.iterator] || MM["@@iterator"];
-      if (!iM) {
-        if (Array.isArray(MM) || (iM = function(MM, rM) {
-            if (!MM) return;
-            if ("string" === typeof MM) return HM(MM, rM);
-            var iM = Object.prototype.toString.call(MM).slice(8, -1);
-            "Object" === iM && MM.constructor && (iM = MM.constructor.name);
-            if ("Map" === iM || "Set" === iM) return Array.from(MM);
-            if ("Arguments" === iM || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(iM)) return HM(MM, rM)
-          }(MM)) || rM && MM && "number" === typeof MM.length) {
-          iM && (MM = iM);
-          var OM = 0,
-            SM = function() {};
+    function vV(VV, eV) {
+      var xV = "undefined" !== typeof Symbol && VV[Symbol.iterator] || VV["@@iterator"];
+      if (!xV) {
+        if (Array.isArray(VV) || (xV = function(VV, eV) {
+            if (!VV) return;
+            if ("string" === typeof VV) return rV(VV, eV);
+            var xV = Object.prototype.toString.call(VV).slice(8, -1);
+            "Object" === xV && VV.constructor && (xV = VV.constructor.name);
+            if ("Map" === xV || "Set" === xV) return Array.from(VV);
+            if ("Arguments" === xV || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(xV)) return rV(VV, eV)
+          }(VV)) || eV && VV && "number" === typeof VV.length) {
+          xV && (VV = xV);
+          var JV = 0,
+            YV = function() {};
           return {
-            s: SM,
+            s: YV,
             n: function() {
-              return OM >= MM.length ? {
+              return JV >= VV.length ? {
                 done: !0
               } : {
                 done: !1,
-                value: MM[OM++]
+                value: VV[JV++]
               }
             },
-            e: function(MM) {
-              throw MM
+            e: function(VV) {
+              throw VV
             },
-            f: SM
+            f: YV
           }
         }
         throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")
       }
-      var jM, aM = !0,
-        PM = !1;
+      var UV, yV = !0,
+        pV = !1;
       return {
         s: function() {
-          iM = iM.call(MM)
+          xV = xV.call(VV)
         },
         n: function() {
-          var MM = iM.next();
-          return aM = MM.done, MM
+          var VV = xV.next();
+          return yV = VV.done, VV
         },
-        e: function(MM) {
-          PM = !0, jM = MM
+        e: function(VV) {
+          pV = !0, UV = VV
         },
         f: function() {
           try {
-            aM || null == iM.return || iM.return()
+            yV || null == xV.return || xV.return()
           } finally {
-            if (PM) throw jM
+            if (pV) throw UV
           }
         }
       }
     }
 
-    function HM(MM, rM) {
-      (null == rM || rM > MM.length) && (rM = MM.length);
-      for (var iM = 0, OM = new Array(rM); iM < rM; iM++) OM[iM] = MM[iM];
-      return OM
+    function rV(VV, eV) {
+      (null == eV || eV > VV.length) && (eV = VV.length);
+      for (var xV = 0, JV = new Array(eV); xV < eV; xV++) JV[xV] = VV[xV];
+      return JV
     }
 
-    function hM(MM, rM) {
-      for (var iM = 0; iM < rM.length; iM++) {
-        var OM = rM[iM];
-        OM.enumerable = OM.enumerable || !1, OM.configurable = !0, "value" in OM && (OM.writable = !0), Object.defineProperty(MM, OM.key, OM)
+    function kV(VV, eV) {
+      for (var xV = 0; xV < eV.length; xV++) {
+        var JV = eV[xV];
+        JV.enumerable = JV.enumerable || !1, JV.configurable = !0, "value" in JV && (JV.writable = !0), Object.defineProperty(VV, JV.key, JV)
       }
     }
 
-    function JM(MM, rM) {
-      return JM = Object.setPrototypeOf || function(MM, rM) {
-        return MM.__proto__ = rM, MM
-      }, JM(MM, rM)
+    function bV(VV, eV) {
+      return bV = Object.setPrototypeOf || function(VV, eV) {
+        return VV.__proto__ = eV, VV
+      }, bV(VV, eV)
     }
 
-    function dM(MM) {
-      var rM = function() {
+    function EV(VV) {
+      var eV = function() {
         if ("undefined" === typeof Reflect || !Reflect.construct) return !1;
         if (Reflect.construct.sham) return !1;
         if ("function" === typeof Proxy) return !0;
         try {
           return Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], (function() {}))), !0
-        } catch (MM) {
+        } catch (VV) {
           return !1
         }
       }();
       return function() {
-        var iM, SM = lM(MM);
-        if (rM) {
-          var jM = lM(this).constructor;
-          iM = Reflect.construct(SM, arguments, jM)
-        } else iM = SM.apply(this, arguments);
-        return function(MM, rM) {
-          if (rM && ("object" === OM(rM) || "function" === typeof rM)) return rM;
-          if (void 0 !== rM) throw new TypeError("Derived constructors may only return object or undefined");
-          return yM(MM)
-        }(this, iM)
+        var xV, YV = jV(VV);
+        if (eV) {
+          var UV = jV(this).constructor;
+          xV = Reflect.construct(YV, arguments, UV)
+        } else xV = YV.apply(this, arguments);
+        return function(VV, eV) {
+          if (eV && ("object" === JV(eV) || "function" === typeof eV)) return eV;
+          if (void 0 !== eV) throw new TypeError("Derived constructors may only return object or undefined");
+          return BV(VV)
+        }(this, xV)
       }
     }
 
-    function yM(MM) {
-      if (void 0 === MM) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-      return MM
+    function BV(VV) {
+      if (void 0 === VV) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+      return VV
     }
 
-    function lM(MM) {
-      return lM = Object.setPrototypeOf ? Object.getPrototypeOf : function(MM) {
-        return MM.__proto__ || Object.getPrototypeOf(MM)
-      }, lM(MM)
+    function jV(VV) {
+      return jV = Object.setPrototypeOf ? Object.getPrototypeOf : function(VV) {
+        return VV.__proto__ || Object.getPrototypeOf(VV)
+      }, jV(VV)
     }
 
-    function EM(MM, rM, iM) {
-      return rM in MM ? Object.defineProperty(MM, rM, {
-        value: iM,
+    function qV(VV, eV, xV) {
+      return eV in VV ? Object.defineProperty(VV, eV, {
+        value: xV,
         enumerable: !0,
         configurable: !0,
         writable: !0
-      }) : MM[rM] = iM, MM
+      }) : VV[eV] = xV, VV
     }
-    var UM = {
+    var tV = {
         orientation: {
           horizontal: {
             dimension: "width",
@@ -183,258 +183,258 @@ export const modules = {
           }
         }
       },
-      GM = function(MM) {
-        ! function(MM, rM) {
-          if ("function" !== typeof rM && null !== rM) throw new TypeError("Super expression must either be null or a function");
-          Object.defineProperty(MM, "prototype", {
-            value: Object.create(rM && rM.prototype, {
+      FV = function(VV) {
+        ! function(VV, eV) {
+          if ("function" !== typeof eV && null !== eV) throw new TypeError("Super expression must either be null or a function");
+          Object.defineProperty(VV, "prototype", {
+            value: Object.create(eV && eV.prototype, {
               constructor: {
-                value: MM,
+                value: VV,
                 writable: !0,
                 configurable: !0
               }
             }),
             writable: !1
-          }), rM && JM(MM, rM)
-        }(aM, MM);
-        var rM, iM, OM, jM = dM(aM);
+          }), eV && bV(VV, eV)
+        }(yV, VV);
+        var eV, xV, JV, UV = EV(yV);
 
-        function aM(MM, rM) {
-          var iM;
-          return function(MM, rM) {
-            if (!(MM instanceof rM)) throw new TypeError("Cannot call a class as a function")
-          }(this, aM), EM(yM(iM = jM.call(this, MM, rM)), "handleFormat", (function(MM) {
-            var rM = iM.props.format;
-            return rM ? rM(MM) : MM
-          })), EM(yM(iM), "handleUpdate", (function() {
-            if (iM.slider) {
-              var MM = iM.props.orientation,
-                rM = (0, nM.capitalize)(UM.orientation[MM].dimension),
-                OM = iM.slider["offset".concat(rM)],
-                SM = iM.handle["offset".concat(rM)];
-              iM.setState({
-                limit: OM - SM,
-                grab: SM / 2
+        function yV(VV, eV) {
+          var xV;
+          return function(VV, eV) {
+            if (!(VV instanceof eV)) throw new TypeError("Cannot call a class as a function")
+          }(this, yV), qV(BV(xV = UV.call(this, VV, eV)), "handleFormat", (function(VV) {
+            var eV = xV.props.format;
+            return eV ? eV(VV) : VV
+          })), qV(BV(xV), "handleUpdate", (function() {
+            if (xV.slider) {
+              var VV = xV.props.orientation,
+                eV = (0, QV.capitalize)(tV.orientation[VV].dimension),
+                JV = xV.slider["offset".concat(eV)],
+                YV = xV.handle["offset".concat(eV)];
+              xV.setState({
+                limit: JV - YV,
+                grab: YV / 2
               })
             }
-          })), EM(yM(iM), "handleStart", (function(MM) {
-            var rM = iM.props.onChangeStart;
-            document.addEventListener("mousemove", iM.handleDrag), document.addEventListener("mouseup", iM.handleEnd), iM.setState({
+          })), qV(BV(xV), "handleStart", (function(VV) {
+            var eV = xV.props.onChangeStart;
+            document.addEventListener("mousemove", xV.handleDrag), document.addEventListener("mouseup", xV.handleEnd), xV.setState({
               active: !0
             }, (function() {
-              rM && rM(MM)
+              eV && eV(VV)
             }))
-          })), EM(yM(iM), "handleDrag", (function(MM) {
-            MM.stopPropagation();
-            var rM = iM.props.onChange,
-              OM = MM.target,
-              SM = OM.className,
-              jM = OM.classList,
-              aM = OM.dataset;
-            if (rM && "rangeslider__labels" !== SM) {
-              var PM = iM.position(MM);
-              jM && jM.contains("rangeslider__label-item") && aM.value && (PM = parseFloat(aM.value)), rM && rM(PM, MM)
+          })), qV(BV(xV), "handleDrag", (function(VV) {
+            VV.stopPropagation();
+            var eV = xV.props.onChange,
+              JV = VV.target,
+              YV = JV.className,
+              UV = JV.classList,
+              yV = JV.dataset;
+            if (eV && "rangeslider__labels" !== YV) {
+              var pV = xV.position(VV);
+              UV && UV.contains("rangeslider__label-item") && yV.value && (pV = parseFloat(yV.value)), eV && eV(pV, VV)
             }
-          })), EM(yM(iM), "handleEnd", (function(MM) {
-            var rM = iM.props.onChangeComplete;
-            iM.setState({
+          })), qV(BV(xV), "handleEnd", (function(VV) {
+            var eV = xV.props.onChangeComplete;
+            xV.setState({
               active: !1
             }, (function() {
-              rM && rM(MM)
-            })), document.removeEventListener("mousemove", iM.handleDrag), document.removeEventListener("mouseup", iM.handleEnd)
-          })), EM(yM(iM), "handleKeyDown", (function(MM) {
-            MM.preventDefault();
-            var rM, OM = MM.keyCode,
-              SM = iM.props,
-              jM = SM.value,
-              aM = SM.min,
-              PM = SM.max,
-              nM = SM.step,
-              QM = SM.onChange;
-            switch (OM) {
+              eV && eV(VV)
+            })), document.removeEventListener("mousemove", xV.handleDrag), document.removeEventListener("mouseup", xV.handleEnd)
+          })), qV(BV(xV), "handleKeyDown", (function(VV) {
+            VV.preventDefault();
+            var eV, JV = VV.keyCode,
+              YV = xV.props,
+              UV = YV.value,
+              yV = YV.min,
+              pV = YV.max,
+              QV = YV.step,
+              nV = YV.onChange;
+            switch (JV) {
               case 38:
               case 39:
-                rM = jM + nM > PM ? PM : jM + nM, QM && QM(rM, MM);
+                eV = UV + QV > pV ? pV : UV + QV, nV && nV(eV, VV);
                 break;
               case 37:
               case 40:
-                rM = jM - nM < aM ? aM : jM - nM, QM && QM(rM, MM)
+                eV = UV - QV < yV ? yV : UV - QV, nV && nV(eV, VV)
             }
-          })), EM(yM(iM), "getPositionFromValue", (function(MM) {
-            var rM = iM.state.limit,
-              OM = iM.props,
-              SM = OM.min,
-              jM = (MM - SM) / (OM.max - SM);
-            return Math.round(jM * rM)
-          })), EM(yM(iM), "getValueFromPosition", (function(MM) {
-            var rM = iM.state.limit,
-              OM = iM.props,
-              SM = OM.orientation,
-              jM = OM.min,
-              aM = OM.max,
-              PM = OM.step,
-              QM = (0, nM.clamp)(MM, 0, rM) / (rM || 1),
-              zM = PM * Math.round(QM * (aM - jM) / PM),
-              LM = "horizontal" === SM ? zM + jM : aM - zM;
-            return (0, nM.clamp)(LM, jM, aM)
-          })), EM(yM(iM), "position", (function(MM) {
-            var rM = iM.state.grab,
-              OM = iM.props,
-              SM = OM.orientation,
-              jM = OM.reverse,
-              aM = iM.slider,
-              PM = UM.orientation[SM].coordinate,
-              QM = jM ? UM.orientation[SM].reverseDirection : UM.orientation[SM].direction,
-              zM = "client".concat((0, nM.capitalize)(PM)),
-              LM = MM.touches ? MM.touches[0][zM] : MM[zM],
-              mM = aM.getBoundingClientRect()[QM],
-              HM = jM ? mM - LM - rM : LM - mM - rM;
-            return iM.getValueFromPosition(HM)
-          })), EM(yM(iM), "coordinates", (function(MM) {
-            var rM = iM.state,
-              OM = rM.limit,
-              SM = rM.grab,
-              jM = iM.props.orientation,
-              aM = iM.getValueFromPosition(MM),
-              PM = iM.getPositionFromValue(aM),
-              nM = "horizontal" === jM ? PM + SM : PM;
+          })), qV(BV(xV), "getPositionFromValue", (function(VV) {
+            var eV = xV.state.limit,
+              JV = xV.props,
+              YV = JV.min,
+              UV = (VV - YV) / (JV.max - YV);
+            return Math.round(UV * eV)
+          })), qV(BV(xV), "getValueFromPosition", (function(VV) {
+            var eV = xV.state.limit,
+              JV = xV.props,
+              YV = JV.orientation,
+              UV = JV.min,
+              yV = JV.max,
+              pV = JV.step,
+              nV = (0, QV.clamp)(VV, 0, eV) / (eV || 1),
+              wV = pV * Math.round(nV * (yV - UV) / pV),
+              ZV = "horizontal" === YV ? wV + UV : yV - wV;
+            return (0, QV.clamp)(ZV, UV, yV)
+          })), qV(BV(xV), "position", (function(VV) {
+            var eV = xV.state.grab,
+              JV = xV.props,
+              YV = JV.orientation,
+              UV = JV.reverse,
+              yV = xV.slider,
+              pV = tV.orientation[YV].coordinate,
+              nV = UV ? tV.orientation[YV].reverseDirection : tV.orientation[YV].direction,
+              wV = "client".concat((0, QV.capitalize)(pV)),
+              ZV = VV.touches ? VV.touches[0][wV] : VV[wV],
+              vV = yV.getBoundingClientRect()[nV],
+              rV = UV ? vV - ZV - eV : ZV - vV - eV;
+            return xV.getValueFromPosition(rV)
+          })), qV(BV(xV), "coordinates", (function(VV) {
+            var eV = xV.state,
+              JV = eV.limit,
+              YV = eV.grab,
+              UV = xV.props.orientation,
+              yV = xV.getValueFromPosition(VV),
+              pV = xV.getPositionFromValue(yV),
+              QV = "horizontal" === UV ? pV + YV : pV;
             return {
-              fill: "horizontal" === jM ? nM : OM - nM,
-              handle: nM,
-              label: nM
+              fill: "horizontal" === UV ? QV : JV - QV,
+              handle: QV,
+              label: QV
             }
-          })), EM(yM(iM), "renderLabels", (function(MM) {
-            return (0, QM.jsx)("ul", {
-              ref: function(MM) {
-                iM.labels = MM
+          })), qV(BV(xV), "renderLabels", (function(VV) {
+            return (0, nV.jsx)("ul", {
+              ref: function(VV) {
+                xV.labels = VV
               },
-              className: (0, SM.default)("rangeslider__labels"),
-              children: MM
+              className: (0, YV.default)("rangeslider__labels"),
+              children: VV
             })
-          })), iM.state = {
+          })), xV.state = {
             active: !1,
             limit: 0,
             grab: 0
-          }, iM
+          }, xV
         }
-        return rM = aM, (iM = [{
+        return eV = yV, (xV = [{
           key: "componentDidMount",
           value: function() {
-            this.handleUpdate(), new PM.default(this.handleUpdate).observe(this.slider)
+            this.handleUpdate(), new pV.default(this.handleUpdate).observe(this.slider)
           }
         }, {
           key: "render",
           value: function() {
-            var MM = this,
-              rM = this.props,
-              iM = rM.value,
-              OM = rM.orientation,
-              jM = rM.className,
-              aM = rM.tooltip,
-              PM = rM.reverse,
-              nM = rM.labels,
-              zM = rM.min,
-              LM = rM.max,
-              HM = rM.handleLabel,
-              hM = this.state.active,
-              JM = UM.orientation[OM].dimension,
-              dM = PM ? UM.orientation[OM].reverseDirection : UM.orientation[OM].direction,
-              yM = this.getPositionFromValue(iM),
-              lM = this.coordinates(yM),
-              GM = EM({}, JM, "".concat(lM.fill, "px")),
-              CM = EM({}, dM, "".concat(lM.handle, "px")),
-              eM = aM && hM,
-              bM = [],
-              wM = Object.keys(nM);
-            if (wM.length > 0) {
-              var tM, gM = mM(wM = wM.sort((function(MM, rM) {
-                return PM ? MM - rM : rM - MM
+            var VV = this,
+              eV = this.props,
+              xV = eV.value,
+              JV = eV.orientation,
+              UV = eV.className,
+              yV = eV.tooltip,
+              pV = eV.reverse,
+              QV = eV.labels,
+              wV = eV.min,
+              ZV = eV.max,
+              rV = eV.handleLabel,
+              kV = this.state.active,
+              bV = tV.orientation[JV].dimension,
+              EV = pV ? tV.orientation[JV].reverseDirection : tV.orientation[JV].direction,
+              BV = this.getPositionFromValue(xV),
+              jV = this.coordinates(BV),
+              FV = qV({}, bV, "".concat(jV.fill, "px")),
+              TV = qV({}, EV, "".concat(jV.handle, "px")),
+              PV = yV && kV,
+              AV = [],
+              NV = Object.keys(QV);
+            if (NV.length > 0) {
+              var XV, MV = vV(NV = NV.sort((function(VV, eV) {
+                return pV ? VV - eV : eV - VV
               })));
               try {
-                for (gM.s(); !(tM = gM.n()).done;) {
-                  var uM = tM.value,
-                    RM = this.getPositionFromValue(uM),
-                    pM = this.coordinates(RM),
-                    WM = EM({}, dM, "".concat(pM.label, "px"));
-                  bM.push((0, QM.jsx)("li", {
-                    className: (0, SM.default)("rangeslider__label-item"),
-                    "data-value": uM,
+                for (MV.s(); !(XV = MV.n()).done;) {
+                  var zV = XV.value,
+                    GV = this.getPositionFromValue(zV),
+                    WV = this.coordinates(GV),
+                    RV = qV({}, EV, "".concat(WV.label, "px"));
+                  AV.push((0, nV.jsx)("li", {
+                    className: (0, YV.default)("rangeslider__label-item"),
+                    "data-value": zV,
                     onMouseDown: this.handleDrag,
                     onTouchStart: this.handleStart,
                     onTouchEnd: this.handleEnd,
-                    style: WM,
-                    children: this.props.labels[uM]
-                  }, uM))
+                    style: RV,
+                    children: this.props.labels[zV]
+                  }, zV))
                 }
-              } catch (sM) {
-                gM.e(sM)
+              } catch (gV) {
+                MV.e(gV)
               } finally {
-                gM.f()
+                MV.f()
               }
             }
-            return (0, QM.jsxs)("div", {
-              ref: function(rM) {
-                MM.slider = rM
+            return (0, nV.jsxs)("div", {
+              ref: function(eV) {
+                VV.slider = eV
               },
-              className: (0, SM.default)("rangeslider", "rangeslider-".concat(OM), {
-                "rangeslider-reverse": PM
-              }, jM),
+              className: (0, YV.default)("rangeslider", "rangeslider-".concat(JV), {
+                "rangeslider-reverse": pV
+              }, UV),
               onMouseDown: this.handleDrag,
               onMouseUp: this.handleEnd,
               onTouchStart: this.handleStart,
               onTouchEnd: this.handleEnd,
-              "aria-valuemin": zM,
-              "aria-valuemax": LM,
-              "aria-valuenow": iM,
-              "aria-orientation": OM,
-              children: [(0, QM.jsx)("div", {
+              "aria-valuemin": wV,
+              "aria-valuemax": ZV,
+              "aria-valuenow": xV,
+              "aria-orientation": JV,
+              children: [(0, nV.jsx)("div", {
                 className: "rangeslider__fill",
-                style: GM
-              }), (0, QM.jsxs)("div", {
-                ref: function(rM) {
-                  MM.handle = rM
+                style: FV
+              }), (0, nV.jsxs)("div", {
+                ref: function(eV) {
+                  VV.handle = eV
                 },
                 className: "rangeslider__handle",
                 onMouseDown: this.handleStart,
                 onTouchMove: this.handleDrag,
                 onTouchEnd: this.handleEnd,
                 onKeyDown: this.handleKeyDown,
-                style: CM,
+                style: TV,
                 tabIndex: 0,
-                children: [eM && (0, QM.jsx)("div", {
-                  ref: function(rM) {
-                    MM.tooltip = rM
+                children: [PV && (0, nV.jsx)("div", {
+                  ref: function(eV) {
+                    VV.tooltip = eV
                   },
                   className: "rangeslider__handle-tooltip",
-                  children: (0, QM.jsx)("span", {
-                    children: this.handleFormat(iM)
+                  children: (0, nV.jsx)("span", {
+                    children: this.handleFormat(xV)
                   })
-                }), (0, QM.jsx)("div", {
+                }), (0, nV.jsx)("div", {
                   className: "rangeslider__handle-label",
-                  children: HM
+                  children: rV
                 })]
-              }), nM && this.renderLabels(bM)]
+              }), QV && this.renderLabels(AV)]
             })
           }
-        }]) && hM(rM.prototype, iM), OM && hM(rM, OM), Object.defineProperty(rM, "prototype", {
+        }]) && kV(eV.prototype, xV), JV && kV(eV, JV), Object.defineProperty(eV, "prototype", {
           writable: !1
-        }), aM
-      }(jM.Component);
-    EM(GM, "propTypes", {
-      min: aM.default.number,
-      max: aM.default.number,
-      step: aM.default.number,
-      value: aM.default.number,
-      orientation: aM.default.string,
-      tooltip: aM.default.bool,
-      reverse: aM.default.bool,
-      labels: aM.default.object,
-      handleLabel: aM.default.string,
-      format: aM.default.func,
-      onChangeStart: aM.default.func,
-      onChange: aM.default.func,
-      onChangeComplete: aM.default.func
-    }), EM(GM, "defaultProps", {
+        }), yV
+      }(UV.Component);
+    qV(FV, "propTypes", {
+      min: yV.default.number,
+      max: yV.default.number,
+      step: yV.default.number,
+      value: yV.default.number,
+      orientation: yV.default.string,
+      tooltip: yV.default.bool,
+      reverse: yV.default.bool,
+      labels: yV.default.object,
+      handleLabel: yV.default.string,
+      format: yV.default.func,
+      onChangeStart: yV.default.func,
+      onChange: yV.default.func,
+      onChangeComplete: yV.default.func
+    }), qV(FV, "defaultProps", {
       min: 0,
       max: 100,
       step: 1,
@@ -445,359 +445,359 @@ export const modules = {
       labels: {},
       handleLabel: ""
     });
-    var CM = GM;
-    rM.default = CM
+    var TV = FV;
+    eV.default = TV
   },
-  5403: (MM, rM, iM) => {
-    var OM;
-    rM.d = void 0;
-    var SM = ((OM = iM(5405)) && OM.__esModule ? OM : {
-      default: OM
+  5508: (VV, eV, xV) => {
+    var JV;
+    eV.e = void 0;
+    var YV = ((JV = xV(5517)) && JV.__esModule ? JV : {
+      default: JV
     }).default;
-    rM.d = SM
+    eV.e = YV
   },
-  5413: (MM, rM) => {
-    Object.defineProperty(rM, "__esModule", {
+  5526: (VV, eV) => {
+    Object.defineProperty(eV, "__esModule", {
       value: !0
-    }), rM.capitalize = function(MM) {
-      return MM.charAt(0).toUpperCase() + MM.substr(1)
-    }, rM.clamp = function(MM, rM, iM) {
-      return Math.min(Math.max(MM, rM), iM)
+    }), eV.capitalize = function(VV) {
+      return VV.charAt(0).toUpperCase() + VV.substr(1)
+    }, eV.clamp = function(VV, eV, xV) {
+      return Math.min(Math.max(VV, eV), xV)
     }
   },
-  5372: (MM, rM, iM) => {
-    var OM = iM(5376);
+  5461: (VV, eV, xV) => {
+    var JV = xV(5469);
 
-    function SM() {}
+    function YV() {}
 
-    function jM() {}
-    jM.resetWarningCache = SM, MM.exports = function() {
-      function MM(MM, rM, iM, SM, jM, aM) {
-        if (aM !== OM) {
-          var PM = new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");
-          throw PM.name = "Invariant Violation", PM
+    function UV() {}
+    UV.resetWarningCache = YV, VV.exports = function() {
+      function VV(VV, eV, xV, YV, UV, yV) {
+        if (yV !== JV) {
+          var pV = new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");
+          throw pV.name = "Invariant Violation", pV
         }
       }
 
-      function rM() {
-        return MM
+      function eV() {
+        return VV
       }
-      MM.isRequired = MM;
-      var iM = {
-        array: MM,
-        bigint: MM,
-        bool: MM,
-        func: MM,
-        number: MM,
-        object: MM,
-        string: MM,
-        symbol: MM,
-        any: MM,
-        arrayOf: rM,
-        element: MM,
-        elementType: MM,
-        instanceOf: rM,
-        node: MM,
-        objectOf: rM,
-        oneOf: rM,
-        oneOfType: rM,
-        shape: rM,
-        exact: rM,
-        checkPropTypes: jM,
-        resetWarningCache: SM
+      VV.isRequired = VV;
+      var xV = {
+        array: VV,
+        bigint: VV,
+        bool: VV,
+        func: VV,
+        number: VV,
+        object: VV,
+        string: VV,
+        symbol: VV,
+        any: VV,
+        arrayOf: eV,
+        element: VV,
+        elementType: VV,
+        instanceOf: eV,
+        node: VV,
+        objectOf: eV,
+        oneOf: eV,
+        oneOfType: eV,
+        shape: eV,
+        exact: eV,
+        checkPropTypes: UV,
+        resetWarningCache: YV
       };
-      return iM.PropTypes = iM, iM
+      return xV.PropTypes = xV, xV
     }
   },
-  5368: (MM, rM, iM) => {
-    MM.exports = iM(5372)()
+  5453: (VV, eV, xV) => {
+    VV.exports = xV(5461)()
   },
-  5376: MM => {
-    MM.exports = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED"
+  5469: VV => {
+    VV.exports = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED"
   },
-  5409: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      default: () => bM
+  5520: (VV, eV, xV) => {
+    xV.r(eV), xV.d(eV, {
+      default: () => AV
     });
-    var OM = function() {
+    var JV = function() {
         if ("undefined" !== typeof Map) return Map;
 
-        function MM(MM, rM) {
-          var iM = -1;
-          return MM.some((function(MM, OM) {
-            return MM[0] === rM && (iM = OM, !0)
-          })), iM
+        function VV(VV, eV) {
+          var xV = -1;
+          return VV.some((function(VV, JV) {
+            return VV[0] === eV && (xV = JV, !0)
+          })), xV
         }
         return function() {
-          function rM() {
+          function eV() {
             this.__entries__ = []
           }
-          return Object.defineProperty(rM.prototype, "size", {
+          return Object.defineProperty(eV.prototype, "size", {
             get: function() {
               return this.__entries__.length
             },
             enumerable: !0,
             configurable: !0
-          }), rM.prototype.get = function(rM) {
-            var iM = MM(this.__entries__, rM),
-              OM = this.__entries__[iM];
-            return OM && OM[1]
-          }, rM.prototype.set = function(rM, iM) {
-            var OM = MM(this.__entries__, rM);
-            ~OM ? this.__entries__[OM][1] = iM : this.__entries__.push([rM, iM])
-          }, rM.prototype.delete = function(rM) {
-            var iM = this.__entries__,
-              OM = MM(iM, rM);
-            ~OM && iM.splice(OM, 1)
-          }, rM.prototype.has = function(rM) {
-            return !!~MM(this.__entries__, rM)
-          }, rM.prototype.clear = function() {
+          }), eV.prototype.get = function(eV) {
+            var xV = VV(this.__entries__, eV),
+              JV = this.__entries__[xV];
+            return JV && JV[1]
+          }, eV.prototype.set = function(eV, xV) {
+            var JV = VV(this.__entries__, eV);
+            ~JV ? this.__entries__[JV][1] = xV : this.__entries__.push([eV, xV])
+          }, eV.prototype.delete = function(eV) {
+            var xV = this.__entries__,
+              JV = VV(xV, eV);
+            ~JV && xV.splice(JV, 1)
+          }, eV.prototype.has = function(eV) {
+            return !!~VV(this.__entries__, eV)
+          }, eV.prototype.clear = function() {
             this.__entries__.splice(0)
-          }, rM.prototype.forEach = function(MM, rM) {
-            void 0 === rM && (rM = null);
-            for (var iM = 0, OM = this.__entries__; iM < OM.length; iM++) {
-              var SM = OM[iM];
-              MM.call(rM, SM[1], SM[0])
+          }, eV.prototype.forEach = function(VV, eV) {
+            void 0 === eV && (eV = null);
+            for (var xV = 0, JV = this.__entries__; xV < JV.length; xV++) {
+              var YV = JV[xV];
+              VV.call(eV, YV[1], YV[0])
             }
-          }, rM
+          }, eV
         }()
       }(),
-      SM = "undefined" !== typeof window && "undefined" !== typeof document && window.document === document,
-      jM = "undefined" !== typeof iM.g && iM.g.Math === Math ? iM.g : "undefined" !== typeof self && self.Math === Math ? self : "undefined" !== typeof window && window.Math === Math ? window : Function("return this")(),
-      aM = "function" === typeof requestAnimationFrame ? requestAnimationFrame.bind(jM) : function(MM) {
+      YV = "undefined" !== typeof window && "undefined" !== typeof document && window.document === document,
+      UV = "undefined" !== typeof xV.g && xV.g.Math === Math ? xV.g : "undefined" !== typeof self && self.Math === Math ? self : "undefined" !== typeof window && window.Math === Math ? window : Function("return this")(),
+      yV = "function" === typeof requestAnimationFrame ? requestAnimationFrame.bind(UV) : function(VV) {
         return setTimeout((function() {
-          return MM(Date.now())
+          return VV(Date.now())
         }), 1e3 / 60)
       };
-    var PM = ["top", "right", "bottom", "left", "width", "height", "size", "weight"],
-      nM = "undefined" !== typeof MutationObserver,
-      QM = function() {
-        function MM() {
-          this.connected_ = !1, this.mutationEventsAdded_ = !1, this.mutationsObserver_ = null, this.observers_ = [], this.onTransitionEnd_ = this.onTransitionEnd_.bind(this), this.refresh = function(MM, rM) {
-            var iM = !1,
-              OM = !1,
-              SM = 0;
+    var pV = ["top", "right", "bottom", "left", "width", "height", "size", "weight"],
+      QV = "undefined" !== typeof MutationObserver,
+      nV = function() {
+        function VV() {
+          this.connected_ = !1, this.mutationEventsAdded_ = !1, this.mutationsObserver_ = null, this.observers_ = [], this.onTransitionEnd_ = this.onTransitionEnd_.bind(this), this.refresh = function(VV, eV) {
+            var xV = !1,
+              JV = !1,
+              YV = 0;
 
-            function jM() {
-              iM && (iM = !1, MM()), OM && nM()
+            function UV() {
+              xV && (xV = !1, VV()), JV && QV()
             }
 
-            function PM() {
-              aM(jM)
+            function pV() {
+              yV(UV)
             }
 
-            function nM() {
-              var MM = Date.now();
-              if (iM) {
-                if (MM - SM < 2) return;
-                OM = !0
-              } else iM = !0, OM = !1, setTimeout(PM, rM);
-              SM = MM
+            function QV() {
+              var VV = Date.now();
+              if (xV) {
+                if (VV - YV < 2) return;
+                JV = !0
+              } else xV = !0, JV = !1, setTimeout(pV, eV);
+              YV = VV
             }
-            return nM
+            return QV
           }(this.refresh.bind(this), 20)
         }
-        return MM.prototype.addObserver = function(MM) {
-          ~this.observers_.indexOf(MM) || this.observers_.push(MM), this.connected_ || this.connect_()
-        }, MM.prototype.removeObserver = function(MM) {
-          var rM = this.observers_,
-            iM = rM.indexOf(MM);
-          ~iM && rM.splice(iM, 1), !rM.length && this.connected_ && this.disconnect_()
-        }, MM.prototype.refresh = function() {
+        return VV.prototype.addObserver = function(VV) {
+          ~this.observers_.indexOf(VV) || this.observers_.push(VV), this.connected_ || this.connect_()
+        }, VV.prototype.removeObserver = function(VV) {
+          var eV = this.observers_,
+            xV = eV.indexOf(VV);
+          ~xV && eV.splice(xV, 1), !eV.length && this.connected_ && this.disconnect_()
+        }, VV.prototype.refresh = function() {
           this.updateObservers_() && this.refresh()
-        }, MM.prototype.updateObservers_ = function() {
-          var MM = this.observers_.filter((function(MM) {
-            return MM.gatherActive(), MM.hasActive()
+        }, VV.prototype.updateObservers_ = function() {
+          var VV = this.observers_.filter((function(VV) {
+            return VV.gatherActive(), VV.hasActive()
           }));
-          return MM.forEach((function(MM) {
-            return MM.broadcastActive()
-          })), MM.length > 0
-        }, MM.prototype.connect_ = function() {
-          SM && !this.connected_ && (document.addEventListener("transitionend", this.onTransitionEnd_), window.addEventListener("resize", this.refresh), nM ? (this.mutationsObserver_ = new MutationObserver(this.refresh), this.mutationsObserver_.observe(document, {
+          return VV.forEach((function(VV) {
+            return VV.broadcastActive()
+          })), VV.length > 0
+        }, VV.prototype.connect_ = function() {
+          YV && !this.connected_ && (document.addEventListener("transitionend", this.onTransitionEnd_), window.addEventListener("resize", this.refresh), QV ? (this.mutationsObserver_ = new MutationObserver(this.refresh), this.mutationsObserver_.observe(document, {
             attributes: !0,
             childList: !0,
             characterData: !0,
             subtree: !0
           })) : (document.addEventListener("DOMSubtreeModified", this.refresh), this.mutationEventsAdded_ = !0), this.connected_ = !0)
-        }, MM.prototype.disconnect_ = function() {
-          SM && this.connected_ && (document.removeEventListener("transitionend", this.onTransitionEnd_), window.removeEventListener("resize", this.refresh), this.mutationsObserver_ && this.mutationsObserver_.disconnect(), this.mutationEventsAdded_ && document.removeEventListener("DOMSubtreeModified", this.refresh), this.mutationsObserver_ = null, this.mutationEventsAdded_ = !1, this.connected_ = !1)
-        }, MM.prototype.onTransitionEnd_ = function(MM) {
-          var rM = MM.propertyName,
-            iM = void 0 === rM ? "" : rM;
-          PM.some((function(MM) {
-            return !!~iM.indexOf(MM)
+        }, VV.prototype.disconnect_ = function() {
+          YV && this.connected_ && (document.removeEventListener("transitionend", this.onTransitionEnd_), window.removeEventListener("resize", this.refresh), this.mutationsObserver_ && this.mutationsObserver_.disconnect(), this.mutationEventsAdded_ && document.removeEventListener("DOMSubtreeModified", this.refresh), this.mutationsObserver_ = null, this.mutationEventsAdded_ = !1, this.connected_ = !1)
+        }, VV.prototype.onTransitionEnd_ = function(VV) {
+          var eV = VV.propertyName,
+            xV = void 0 === eV ? "" : eV;
+          pV.some((function(VV) {
+            return !!~xV.indexOf(VV)
           })) && this.refresh()
-        }, MM.getInstance = function() {
-          return this.instance_ || (this.instance_ = new MM), this.instance_
-        }, MM.instance_ = null, MM
+        }, VV.getInstance = function() {
+          return this.instance_ || (this.instance_ = new VV), this.instance_
+        }, VV.instance_ = null, VV
       }(),
-      zM = function(MM, rM) {
-        for (var iM = 0, OM = Object.keys(rM); iM < OM.length; iM++) {
-          var SM = OM[iM];
-          Object.defineProperty(MM, SM, {
-            value: rM[SM],
+      wV = function(VV, eV) {
+        for (var xV = 0, JV = Object.keys(eV); xV < JV.length; xV++) {
+          var YV = JV[xV];
+          Object.defineProperty(VV, YV, {
+            value: eV[YV],
             enumerable: !1,
             writable: !1,
             configurable: !0
           })
         }
-        return MM
+        return VV
       },
-      LM = function(MM) {
-        return MM && MM.ownerDocument && MM.ownerDocument.defaultView || jM
+      ZV = function(VV) {
+        return VV && VV.ownerDocument && VV.ownerDocument.defaultView || UV
       },
-      mM = lM(0, 0, 0, 0);
+      vV = jV(0, 0, 0, 0);
 
-    function HM(MM) {
-      return parseFloat(MM) || 0
+    function rV(VV) {
+      return parseFloat(VV) || 0
     }
 
-    function hM(MM) {
-      for (var rM = [], iM = 1; iM < arguments.length; iM++) rM[iM - 1] = arguments[iM];
-      return rM.reduce((function(rM, iM) {
-        return rM + HM(MM["border-" + iM + "-width"])
+    function kV(VV) {
+      for (var eV = [], xV = 1; xV < arguments.length; xV++) eV[xV - 1] = arguments[xV];
+      return eV.reduce((function(eV, xV) {
+        return eV + rV(VV["border-" + xV + "-width"])
       }), 0)
     }
 
-    function JM(MM) {
-      var rM = MM.clientWidth,
-        iM = MM.clientHeight;
-      if (!rM && !iM) return mM;
-      var OM = LM(MM).getComputedStyle(MM),
-        SM = function(MM) {
-          for (var rM = {}, iM = 0, OM = ["top", "right", "bottom", "left"]; iM < OM.length; iM++) {
-            var SM = OM[iM],
-              jM = MM["padding-" + SM];
-            rM[SM] = HM(jM)
+    function bV(VV) {
+      var eV = VV.clientWidth,
+        xV = VV.clientHeight;
+      if (!eV && !xV) return vV;
+      var JV = ZV(VV).getComputedStyle(VV),
+        YV = function(VV) {
+          for (var eV = {}, xV = 0, JV = ["top", "right", "bottom", "left"]; xV < JV.length; xV++) {
+            var YV = JV[xV],
+              UV = VV["padding-" + YV];
+            eV[YV] = rV(UV)
           }
-          return rM
-        }(OM),
-        jM = SM.left + SM.right,
-        aM = SM.top + SM.bottom,
-        PM = HM(OM.width),
-        nM = HM(OM.height);
-      if ("border-box" === OM.boxSizing && (Math.round(PM + jM) !== rM && (PM -= hM(OM, "left", "right") + jM), Math.round(nM + aM) !== iM && (nM -= hM(OM, "top", "bottom") + aM)), ! function(MM) {
-          return MM === LM(MM).document.documentElement
-        }(MM)) {
-        var QM = Math.round(PM + jM) - rM,
-          zM = Math.round(nM + aM) - iM;
-        1 !== Math.abs(QM) && (PM -= QM), 1 !== Math.abs(zM) && (nM -= zM)
+          return eV
+        }(JV),
+        UV = YV.left + YV.right,
+        yV = YV.top + YV.bottom,
+        pV = rV(JV.width),
+        QV = rV(JV.height);
+      if ("border-box" === JV.boxSizing && (Math.round(pV + UV) !== eV && (pV -= kV(JV, "left", "right") + UV), Math.round(QV + yV) !== xV && (QV -= kV(JV, "top", "bottom") + yV)), ! function(VV) {
+          return VV === ZV(VV).document.documentElement
+        }(VV)) {
+        var nV = Math.round(pV + UV) - eV,
+          wV = Math.round(QV + yV) - xV;
+        1 !== Math.abs(nV) && (pV -= nV), 1 !== Math.abs(wV) && (QV -= wV)
       }
-      return lM(SM.left, SM.top, PM, nM)
+      return jV(YV.left, YV.top, pV, QV)
     }
-    var dM = "undefined" !== typeof SVGGraphicsElement ? function(MM) {
-      return MM instanceof LM(MM).SVGGraphicsElement
-    } : function(MM) {
-      return MM instanceof LM(MM).SVGElement && "function" === typeof MM.getBBox
+    var EV = "undefined" !== typeof SVGGraphicsElement ? function(VV) {
+      return VV instanceof ZV(VV).SVGGraphicsElement
+    } : function(VV) {
+      return VV instanceof ZV(VV).SVGElement && "function" === typeof VV.getBBox
     };
 
-    function yM(MM) {
-      return SM ? dM(MM) ? function(MM) {
-        var rM = MM.getBBox();
-        return lM(0, 0, rM.width, rM.height)
-      }(MM) : JM(MM) : mM
+    function BV(VV) {
+      return YV ? EV(VV) ? function(VV) {
+        var eV = VV.getBBox();
+        return jV(0, 0, eV.width, eV.height)
+      }(VV) : bV(VV) : vV
     }
 
-    function lM(MM, rM, iM, OM) {
+    function jV(VV, eV, xV, JV) {
       return {
-        x: MM,
-        y: rM,
-        width: iM,
-        height: OM
+        x: VV,
+        y: eV,
+        width: xV,
+        height: JV
       }
     }
-    var EM = function() {
-        function MM(MM) {
-          this.broadcastWidth = 0, this.broadcastHeight = 0, this.contentRect_ = lM(0, 0, 0, 0), this.target = MM
+    var qV = function() {
+        function VV(VV) {
+          this.broadcastWidth = 0, this.broadcastHeight = 0, this.contentRect_ = jV(0, 0, 0, 0), this.target = VV
         }
-        return MM.prototype.isActive = function() {
-          var MM = yM(this.target);
-          return this.contentRect_ = MM, MM.width !== this.broadcastWidth || MM.height !== this.broadcastHeight
-        }, MM.prototype.broadcastRect = function() {
-          var MM = this.contentRect_;
-          return this.broadcastWidth = MM.width, this.broadcastHeight = MM.height, MM
-        }, MM
+        return VV.prototype.isActive = function() {
+          var VV = BV(this.target);
+          return this.contentRect_ = VV, VV.width !== this.broadcastWidth || VV.height !== this.broadcastHeight
+        }, VV.prototype.broadcastRect = function() {
+          var VV = this.contentRect_;
+          return this.broadcastWidth = VV.width, this.broadcastHeight = VV.height, VV
+        }, VV
       }(),
-      UM = function(MM, rM) {
-        var iM = function(MM) {
-          var rM = MM.x,
-            iM = MM.y,
-            OM = MM.width,
-            SM = MM.height,
-            jM = "undefined" !== typeof DOMRectReadOnly ? DOMRectReadOnly : Object,
-            aM = Object.create(jM.prototype);
-          return zM(aM, {
-            x: rM,
-            y: iM,
-            width: OM,
-            height: SM,
-            top: iM,
-            right: rM + OM,
-            bottom: SM + iM,
-            left: rM
-          }), aM
-        }(rM);
-        zM(this, {
-          target: MM,
-          contentRect: iM
+      tV = function(VV, eV) {
+        var xV = function(VV) {
+          var eV = VV.x,
+            xV = VV.y,
+            JV = VV.width,
+            YV = VV.height,
+            UV = "undefined" !== typeof DOMRectReadOnly ? DOMRectReadOnly : Object,
+            yV = Object.create(UV.prototype);
+          return wV(yV, {
+            x: eV,
+            y: xV,
+            width: JV,
+            height: YV,
+            top: xV,
+            right: eV + JV,
+            bottom: YV + xV,
+            left: eV
+          }), yV
+        }(eV);
+        wV(this, {
+          target: VV,
+          contentRect: xV
         })
       },
-      GM = function() {
-        function MM(MM, rM, iM) {
-          if (this.activeObservations_ = [], this.observations_ = new OM, "function" !== typeof MM) throw new TypeError("The callback provided as parameter 1 is not a function.");
-          this.callback_ = MM, this.controller_ = rM, this.callbackCtx_ = iM
+      FV = function() {
+        function VV(VV, eV, xV) {
+          if (this.activeObservations_ = [], this.observations_ = new JV, "function" !== typeof VV) throw new TypeError("The callback provided as parameter 1 is not a function.");
+          this.callback_ = VV, this.controller_ = eV, this.callbackCtx_ = xV
         }
-        return MM.prototype.observe = function(MM) {
+        return VV.prototype.observe = function(VV) {
           if (!arguments.length) throw new TypeError("1 argument required, but only 0 present.");
           if ("undefined" !== typeof Element && Element instanceof Object) {
-            if (!(MM instanceof LM(MM).Element)) throw new TypeError('parameter 1 is not of type "Element".');
-            var rM = this.observations_;
-            rM.has(MM) || (rM.set(MM, new EM(MM)), this.controller_.addObserver(this), this.controller_.refresh())
+            if (!(VV instanceof ZV(VV).Element)) throw new TypeError('parameter 1 is not of type "Element".');
+            var eV = this.observations_;
+            eV.has(VV) || (eV.set(VV, new qV(VV)), this.controller_.addObserver(this), this.controller_.refresh())
           }
-        }, MM.prototype.unobserve = function(MM) {
+        }, VV.prototype.unobserve = function(VV) {
           if (!arguments.length) throw new TypeError("1 argument required, but only 0 present.");
           if ("undefined" !== typeof Element && Element instanceof Object) {
-            if (!(MM instanceof LM(MM).Element)) throw new TypeError('parameter 1 is not of type "Element".');
-            var rM = this.observations_;
-            rM.has(MM) && (rM.delete(MM), rM.size || this.controller_.removeObserver(this))
+            if (!(VV instanceof ZV(VV).Element)) throw new TypeError('parameter 1 is not of type "Element".');
+            var eV = this.observations_;
+            eV.has(VV) && (eV.delete(VV), eV.size || this.controller_.removeObserver(this))
           }
-        }, MM.prototype.disconnect = function() {
+        }, VV.prototype.disconnect = function() {
           this.clearActive(), this.observations_.clear(), this.controller_.removeObserver(this)
-        }, MM.prototype.gatherActive = function() {
-          var MM = this;
-          this.clearActive(), this.observations_.forEach((function(rM) {
-            rM.isActive() && MM.activeObservations_.push(rM)
+        }, VV.prototype.gatherActive = function() {
+          var VV = this;
+          this.clearActive(), this.observations_.forEach((function(eV) {
+            eV.isActive() && VV.activeObservations_.push(eV)
           }))
-        }, MM.prototype.broadcastActive = function() {
+        }, VV.prototype.broadcastActive = function() {
           if (this.hasActive()) {
-            var MM = this.callbackCtx_,
-              rM = this.activeObservations_.map((function(MM) {
-                return new UM(MM.target, MM.broadcastRect())
+            var VV = this.callbackCtx_,
+              eV = this.activeObservations_.map((function(VV) {
+                return new tV(VV.target, VV.broadcastRect())
               }));
-            this.callback_.call(MM, rM, MM), this.clearActive()
+            this.callback_.call(VV, eV, VV), this.clearActive()
           }
-        }, MM.prototype.clearActive = function() {
+        }, VV.prototype.clearActive = function() {
           this.activeObservations_.splice(0)
-        }, MM.prototype.hasActive = function() {
+        }, VV.prototype.hasActive = function() {
           return this.activeObservations_.length > 0
-        }, MM
+        }, VV
       }(),
-      CM = "undefined" !== typeof WeakMap ? new WeakMap : new OM,
-      eM = function MM(rM) {
-        if (!(this instanceof MM)) throw new TypeError("Cannot call a class as a function.");
+      TV = "undefined" !== typeof WeakMap ? new WeakMap : new JV,
+      PV = function VV(eV) {
+        if (!(this instanceof VV)) throw new TypeError("Cannot call a class as a function.");
         if (!arguments.length) throw new TypeError("1 argument required, but only 0 present.");
-        var iM = QM.getInstance(),
-          OM = new GM(rM, iM, this);
-        CM.set(this, OM)
+        var xV = nV.getInstance(),
+          JV = new FV(eV, xV, this);
+        TV.set(this, JV)
       };
-    ["observe", "unobserve", "disconnect"].forEach((function(MM) {
-      eM.prototype[MM] = function() {
-        var rM;
-        return (rM = CM.get(this))[MM].apply(rM, arguments)
+    ["observe", "unobserve", "disconnect"].forEach((function(VV) {
+      PV.prototype[VV] = function() {
+        var eV;
+        return (eV = TV.get(this))[VV].apply(eV, arguments)
       }
     }));
-    const bM = "undefined" !== typeof jM.ResizeObserver ? jM.ResizeObserver : eM
+    const AV = "undefined" !== typeof UV.ResizeObserver ? UV.ResizeObserver : PV
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const VV in modules) Object.freeze(modules[VV]);

@@ -1,104 +1,104 @@
 export const id = 140;
 export const ids = [140];
 export const modules = {
-  7042: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      default: () => JM
+  7111: (VV, eV, xV) => {
+    xV.r(eV), xV.d(eV, {
+      default: () => bV
     });
-    var OM = iM(1608),
-      SM = iM(1641),
-      jM = iM(3358),
-      aM = iM(2412),
-      PM = iM(1520),
-      nM = iM(1591),
-      QM = iM(1142),
-      zM = iM(44),
-      LM = iM(1398),
-      mM = iM(1303);
+    var JV = xV(1625),
+      YV = xV(1649),
+      UV = xV(3364),
+      yV = xV(2437),
+      pV = xV(1551),
+      QV = xV(1612),
+      nV = xV(1168),
+      wV = xV(62),
+      ZV = xV(1414),
+      vV = xV(1321);
 
-    function HM(MM) {
+    function rV(VV) {
       let {
-        iconName: rM,
-        iconCountPerGroup: iM,
-        animation: OM,
-        midShowerStart: SM = !1,
-        customClass: jM
-      } = MM;
-      const [aM, PM] = (0, zM.useState)({});
-      return (0, zM.useEffect)((() => {
-        const MM = {};
-        for (const rM of Array.from(Array(3).keys())) {
-          MM[rM] = [];
-          for (let OM = 0; OM < iM; OM++) MM[rM].push({
+        iconName: eV,
+        iconCountPerGroup: xV,
+        animation: JV,
+        midShowerStart: YV = !1,
+        customClass: UV
+      } = VV;
+      const [yV, pV] = (0, wV.useState)({});
+      return (0, wV.useEffect)((() => {
+        const VV = {};
+        for (const eV of Array.from(Array(3).keys())) {
+          VV[eV] = [];
+          for (let JV = 0; JV < xV; JV++) VV[eV].push({
             left: 100 * Math.random() + "%",
-            animationDelay: 20 * Math.random() * (SM ? -1 : 1) + "s"
+            animationDelay: 20 * Math.random() * (YV ? -1 : 1) + "s"
           })
         }
-        PM(MM)
-      }), [iM, SM]), (0, mM.jsx)("div", {
-        className: `IconShower IconShowerAnimation${OM} ${null!==jM&&void 0!==jM?jM:""}`,
-        children: Object.keys(aM).map((MM => aM[MM].map((iM => (0, mM.jsx)("div", {
-          className: `Icon IconGroup${MM}`,
+        pV(VV)
+      }), [xV, YV]), (0, vV.jsx)("div", {
+        className: `IconShower IconShowerAnimation${JV} ${null!==UV&&void 0!==UV?UV:""}`,
+        children: Object.keys(yV).map((VV => yV[VV].map((xV => (0, vV.jsx)("div", {
+          className: `Icon IconGroup${VV}`,
           style: {
-            left: iM.left,
-            animationDelay: iM.animationDelay
+            left: xV.left,
+            animationDelay: xV.animationDelay
           },
-          children: (0, mM.jsx)(LM.b, {
-            name: rM
+          children: (0, vV.jsx)(ZV.b, {
+            name: eV
           })
-        }, iM.left)))))
+        }, xV.left)))))
       })
     }
-    var hM = iM(1188);
+    var kV = xV(1220);
 
-    function JM() {
-      var MM;
+    function bV() {
+      var VV;
       const {
-        t: rM
-      } = (0, hM.A)(), {
-        pack: iM
-      } = (0, OM.D)(), {
-        userContext: zM
-      } = (0, QM.b)();
-      if (iM) {
-        const MM = SM.d[iM];
-        if (null === MM || void 0 === MM || !MM.purchasable) return (0, mM.jsx)(nM.NavigatePreserveSearch, {
+        t: eV
+      } = (0, kV.A)(), {
+        pack: xV
+      } = (0, JV.A)(), {
+        userContext: wV
+      } = (0, nV.d)();
+      if (xV) {
+        const VV = YV.d[xV];
+        if (null === VV || void 0 === VV || !VV.purchasable) return (0, vV.jsx)(QV.NavigatePreserveSearch, {
           to: "/"
         })
       }
-      const JM = iM ? SM.d[iM] : null,
-        dM = iM ? jM.k[(0, aM.j)(iM)] : null,
-        yM = void 0 !== (null === JM || void 0 === JM ? void 0 : JM.characterSet) || null !== JM && void 0 !== JM && JM.singleItem ? JM.displayName : `${null!==(MM=null===JM||void 0===JM?void 0:JM.displayName)&&void 0!==MM?MM:iM} Pack`,
-        lM = JM ? `Your ${yM} is Ready!` : "Welcome To Super Rank!",
-        EM = JM ? "Equip your new cosmetics in the character customisation menu!" : "You can change you name color and cape in the customization menu in game!",
-        UM = JM ? !zM.getOwnedCosmeticPacks().includes(iM) : !zM.playerHasRank("super"),
-        GM = JM ? "You should get your cosmetics instantly, but it could take up to an hour to apply. If you don't have them after an hour, contact help@bloxd.io." : "You should get Super Rank instantly, but it could take up to an hour to apply. If you don't have Super Rank after an hour, contact help@bloxd.io.";
-      return (0, mM.jsxs)("div", {
+      const bV = xV ? YV.d[xV] : null,
+        EV = xV ? UV.k[(0, yV.m)(xV)] : null,
+        BV = void 0 !== (null === bV || void 0 === bV ? void 0 : bV.characterSet) || null !== bV && void 0 !== bV && bV.singleItem ? bV.displayName : `${null!==(VV=null===bV||void 0===bV?void 0:bV.displayName)&&void 0!==VV?VV:xV} Pack`,
+        jV = bV ? `Your ${BV} is Ready!` : "Welcome To Super Rank!",
+        qV = bV ? "Equip your new cosmetics in the character customisation menu!" : "You can change you name color and cape in the customization menu in game!",
+        tV = bV ? !wV.getOwnedCosmeticPacks().includes(xV) : !wV.playerHasRank("super"),
+        FV = bV ? "You should get your cosmetics instantly, but it could take up to an hour to apply. If you don't have them after an hour, contact help@bloxd.io." : "You should get Super Rank instantly, but it could take up to an hour to apply. If you don't have Super Rank after an hour, contact help@bloxd.io.";
+      return (0, vV.jsxs)("div", {
         className: "PurchaseWelcome AnimFadeInScaleUp",
-        children: [dM && (0, mM.jsx)(dM, {}), !JM && (0, mM.jsx)(HM, {
+        children: [EV && (0, vV.jsx)(EV, {}), !bV && (0, vV.jsx)(rV, {
           iconName: "bolt",
           iconCountPerGroup: 10,
           animation: "Fall",
           midShowerStart: !0,
           customClass: "SuperRankWelcomeIconShower"
-        }), (0, mM.jsx)("div", {
+        }), (0, vV.jsx)("div", {
           className: "PurchaseWelcomeTitle FullyFancyText",
-          children: lM
-        }), (0, mM.jsx)("div", {
+          children: jV
+        }), (0, vV.jsx)("div", {
           className: "PurchaseWelcomeText",
-          children: EM
-        }), UM && (0, mM.jsxs)("div", {
+          children: qV
+        }), tV && (0, vV.jsxs)("div", {
           className: "PurchaseWelcomeWarning",
-          children: [(0, mM.jsx)(LM.b, {
+          children: [(0, vV.jsx)(ZV.b, {
             name: "circle-info"
-          }), (0, mM.jsx)("div", {
-            children: GM
+          }), (0, vV.jsx)("div", {
+            children: FV
           })]
-        }), (0, mM.jsx)(nM.LinkPreserveSearch, {
+        }), (0, vV.jsx)(QV.LinkPreserveSearch, {
           to: "/",
-          children: (0, mM.jsx)(PM.p, {
+          children: (0, vV.jsx)(pV.m, {
             className: "PurchaseWelcomeContinue",
-            children: rM("general:continue")
+            children: eV("general:continue")
           })
         })]
       })
@@ -106,4 +106,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const VV in modules) Object.freeze(modules[VV]);

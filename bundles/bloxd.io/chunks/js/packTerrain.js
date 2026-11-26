@@ -1,239 +1,239 @@
 export const id = 52;
 export const ids = [52];
 export const modules = {
-  53772: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      MAX_LAYER_WIDTH: () => QM,
-      PackTextures: () => lM,
-      deviceMaxLayerWidth: () => zM,
-      layerWidthFor: () => HM,
-      packFileUrl: () => hM,
-      packFilesOf: () => yM,
-      packTerrainSources: () => JM,
-      webgl1GridColumns: () => LM,
-      webgl1LayerWidth: () => mM
+  53974: (VV, eV, xV) => {
+    xV.r(eV), xV.d(eV, {
+      MAX_LAYER_WIDTH: () => nV,
+      PackTextures: () => jV,
+      deviceMaxLayerWidth: () => wV,
+      layerWidthFor: () => rV,
+      packFileUrl: () => kV,
+      packFilesOf: () => BV,
+      packTerrainSources: () => bV,
+      webgl1GridColumns: () => ZV,
+      webgl1LayerWidth: () => vV
     });
-    var OM = iM(3511),
-      SM = iM(41800),
-      jM = iM(41913),
-      aM = iM(53774),
-      PM = iM(41900),
-      nM = iM(53778);
-    const QM = {
+    var JV = xV(3535),
+      YV = xV(42007),
+      UV = xV(42123),
+      yV = xV(53977),
+      pV = xV(42109),
+      QV = xV(53983);
+    const nV = {
       webgpu: 128,
       webgl: 128,
       webgl1: 64
     };
 
-    function zM(MM) {
-      return (0, OM.c)() ? Math.min(QM[MM], 64) : QM[MM]
+    function wV(VV) {
+      return (0, JV.d)() ? Math.min(nV[VV], 64) : nV[VV]
     }
 
-    function LM(MM) {
-      const rM = Math.ceil(Math.log2(Math.max(1, MM)));
-      return 2 ** Math.ceil(rM / 2)
+    function ZV(VV) {
+      const eV = Math.ceil(Math.log2(Math.max(1, VV)));
+      return 2 ** Math.ceil(eV / 2)
     }
 
-    function mM(MM, rM, iM) {
-      const OM = null !== iM && iM > 0 ? iM : SM.b.limits.MAX_TEXTURE_SIZE;
-      return HM(Math.max(1, Math.floor(OM / LM(rM))), MM)
+    function vV(VV, eV, xV) {
+      const JV = null !== xV && xV > 0 ? xV : YV.c.limits.MAX_TEXTURE_SIZE;
+      return rV(Math.max(1, Math.floor(JV / ZV(eV))), VV)
     }
 
-    function HM(MM, rM) {
-      let iM = 1;
-      for (; 2 * iM <= Math.min(MM, rM);) iM *= 2;
-      return iM
+    function rV(VV, eV) {
+      let xV = 1;
+      for (; 2 * xV <= Math.min(VV, eV);) xV *= 2;
+      return xV
     }
 
-    function hM(MM, rM) {
-      return "string" !== typeof MM || "" === MM ? null : "player" === rM || (0, aM.c)(MM) ? MM : null
+    function kV(VV, eV) {
+      return "string" !== typeof VV || "" === VV ? null : "player" === eV || (0, yV.b)(VV) ? VV : null
     }
-    async function JM(MM, rM, OM) {
-      const SM = await iM.e(231).then((() => iM(35131))),
+    async function bV(VV, eV, JV) {
+      const YV = await xV.e(231).then((() => xV(35423))),
         {
-          sheetLayout: aM,
-          sheetWidth: nM
-        } = MM;
-      if (nM > rM) throw new Error(`the pack's atlas is ${nM} px wide, not within ${rM} px`);
-      if (!(aM.length === SM.imagesPerAtlas.length && aM.every(((MM, rM) => MM === SM.imagesPerAtlas[rM])))) {
-        const MM = `the pack's atlas is sheets of ${aM.join(", ")} layers, the built atlas's ${SM.imagesPerAtlas.join(", ")}: run npm run buildAtlas`;
-        if (aM.length < SM.imagesPerAtlas.length) throw new Error(MM);
-        console.warn(MM)
+          sheetLayout: yV,
+          sheetWidth: QV
+        } = VV;
+      if (QV > eV) throw new Error(`the pack's atlas is ${QV} px wide, not within ${eV} px`);
+      if (!(yV.length === YV.imagesPerAtlas.length && yV.every(((VV, eV) => VV === YV.imagesPerAtlas[eV])))) {
+        const VV = `the pack's atlas is sheets of ${yV.join(", ")} layers, the built atlas's ${YV.imagesPerAtlas.join(", ")}: run npm run buildAtlas`;
+        if (yV.length < YV.imagesPerAtlas.length) throw new Error(VV);
+        console.warn(VV)
       }
       return {
         atlasSheets: [],
-        heldUntil: MM.heldUntil,
-        texture: rM => {
-          var iM, aM, PM;
-          return null !== (iM = null !== (aM = null !== (PM = hM(MM.terrain.texture(rM), OM)) && void 0 !== PM ? PM : SM.animatedBlockTextures[rM]) && void 0 !== aM ? aM : SM.rotatedBlockTextures[rM]) && void 0 !== iM ? iM : function(MM, rM, iM) {
-            var OM, SM;
-            const aM = null !== (OM = jM.c[MM]) && void 0 !== OM ? OM : null;
-            return null === aM ? null : null !== (SM = hM(rM.texture(MM), iM)) && void 0 !== SM ? SM : aM
-          }(rM, MM, OM)
+        heldUntil: VV.heldUntil,
+        texture: eV => {
+          var xV, yV, pV;
+          return null !== (xV = null !== (yV = null !== (pV = kV(VV.terrain.texture(eV), JV)) && void 0 !== pV ? pV : YV.animatedBlockTextures[eV]) && void 0 !== yV ? yV : YV.rotatedBlockTextures[eV]) && void 0 !== xV ? xV : function(VV, eV, xV) {
+            var JV, YV;
+            const yV = null !== (JV = UV.d[VV]) && void 0 !== JV ? JV : null;
+            return null === yV ? null : null !== (YV = kV(eV.texture(VV), xV)) && void 0 !== YV ? YV : yV
+          }(eV, VV, JV)
         },
-        decoded: rM => {
-          const iM = (0, PM.i)(rM);
-          return null === iM ? null : (async rM => {
-            const iM = MM.sheetPixels.at(rM);
-            if (iM) {
-              MM.sheetPixels[rM] = null;
-              const OM = nM > 0 ? iM.byteLength / (4 * nM) : 0;
+        decoded: eV => {
+          const xV = (0, pV.f)(eV);
+          return null === xV ? null : (async eV => {
+            const xV = VV.sheetPixels.at(eV);
+            if (xV) {
+              VV.sheetPixels[eV] = null;
+              const JV = QV > 0 ? xV.byteLength / (4 * QV) : 0;
               return {
-                width: nM,
-                height: OM,
-                pixels: new Uint8Array(iM.buffer, iM.byteOffset, iM.byteLength)
+                width: QV,
+                height: JV,
+                pixels: new Uint8Array(xV.buffer, xV.byteOffset, xV.byteLength)
               }
             }
-            const SM = MM.terrain.atlasSheets.at(rM);
-            if (void 0 === SM) throw new Error(`the pack has no atlas sheet ${rM}`);
-            const jM = hM(SM, OM);
-            if (null === jM) throw new Error(`the pack's atlas sheet ${rM} isn't a pack file`);
-            return (0, PM.o)(jM)
-          })(iM)
+            const YV = VV.terrain.atlasSheets.at(eV);
+            if (void 0 === YV) throw new Error(`the pack has no atlas sheet ${eV}`);
+            const UV = kV(YV, JV);
+            if (null === UV) throw new Error(`the pack's atlas sheet ${eV} isn't a pack file`);
+            return (0, pV.j)(UV)
+          })(xV)
         }
       }
     }
-    const dM = new WeakMap;
+    const EV = new WeakMap;
 
-    function yM(MM, rM) {
-      if (null === MM) return null;
-      let iM = dM.get(MM);
-      void 0 === iM && (iM = {}, dM.set(MM, iM));
-      const OM = iM[rM];
-      if (void 0 !== OM) return OM;
+    function BV(VV, eV) {
+      if (null === VV) return null;
+      let xV = EV.get(VV);
+      void 0 === xV && (xV = {}, EV.set(VV, xV));
+      const JV = xV[eV];
+      if (void 0 !== JV) return JV;
       const {
-        armourAtlasUrl: SM,
-        texture: jM,
-        model: aM
-      } = MM, PM = {
-        armourAtlasUrl: () => hM(SM, rM),
-        textureUrl: MM => hM(jM(MM), rM),
-        modelUrl: MM => hM(aM(MM), rM)
+        armourAtlasUrl: YV,
+        texture: UV,
+        model: yV
+      } = VV, pV = {
+        armourAtlasUrl: () => kV(YV, eV),
+        textureUrl: VV => kV(UV(VV), eV),
+        modelUrl: VV => kV(yV(VV), eV)
       };
-      return iM[rM] = PM, PM
+      return xV[eV] = pV, pV
     }
-    class lM {
-      constructor(MM) {
-        this.host = MM, this.assets = null, this.owner = "player", this.latest = 0, this.swapping = 0, this.ended = !1, this.maxWidth = null
+    class jV {
+      constructor(VV) {
+        this.host = VV, this.assets = null, this.owner = "player", this.latest = 0, this.swapping = 0, this.ended = !1, this.maxWidth = null
       }
       maxLayerWidth() {
-        return this.maxWidth ??= (async (MM, rM, OM) => {
+        return this.maxWidth ??= (async (VV, eV, JV) => {
           const {
-            backend: SM
-          } = this.host, jM = zM(SM);
-          if ("webgl1" !== SM) return jM;
-          const [aM, PM] = await Promise.all([iM.e(231).then((() => iM(35131))), null !== (MM = null === (rM = (OM = this.host).maxTextureSize) || void 0 === rM ? void 0 : rM.call(OM)) && void 0 !== MM ? MM : null]);
-          return mM(jM, aM.imagesPerAtlas.length * Math.max(0, ...aM.imagesPerAtlas), PM)
-        })().catch((MM => {
-          throw this.maxWidth = null, MM
+            backend: YV
+          } = this.host, UV = wV(YV);
+          if ("webgl1" !== YV) return UV;
+          const [yV, pV] = await Promise.all([xV.e(231).then((() => xV(35423))), null !== (VV = null === (eV = (JV = this.host).maxTextureSize) || void 0 === eV ? void 0 : eV.call(JV)) && void 0 !== VV ? VV : null]);
+          return vV(UV, yV.imagesPerAtlas.length * Math.max(0, ...yV.imagesPerAtlas), pV)
+        })().catch((VV => {
+          throw this.maxWidth = null, VV
         })), this.maxWidth
       }
       files() {
-        return yM(this.assets, this.owner)
+        return BV(this.assets, this.owner)
       }
       start() {
-        let MM = null;
-        const rM = this.host.feed.subscribe((rM => {
-          const iM = ++this.latest,
-            OM = null !== rM.gameSource ? "game" : null !== MM && null !== MM.gameSource ? "join" : "page";
-          MM = rM, this.host.settling(), this.assetsFor(rM).then((MM => this.apply(iM, MM, rM, OM).catch((MM => {
-            this.host.warn("the texture pack landed, but reloading what it overrides failed", MM)
-          }))), (MM => {
-            this.host.warn("the texture pack's atlas couldn't be generated: the textures in stay", MM), this.settled(iM, rM, null, {
-              error: MM,
-              source: OM
+        let VV = null;
+        const eV = this.host.feed.subscribe((eV => {
+          const xV = ++this.latest,
+            JV = null !== eV.gameSource ? "game" : null !== VV && null !== VV.gameSource ? "join" : "page";
+          VV = eV, this.host.settling(), this.assetsFor(eV).then((VV => this.apply(xV, VV, eV, JV).catch((VV => {
+            this.host.warn("the texture pack landed, but reloading what it overrides failed", VV)
+          }))), (VV => {
+            this.host.warn("the texture pack's atlas couldn't be generated: the textures in stay", VV), this.settled(xV, eV, null, {
+              error: VV,
+              source: JV
             })
           }))
         }));
         return () => {
-          rM(), this.latest++, this.ended = !0
+          eV(), this.latest++, this.ended = !0
         }
       }
-      async apply(MM, rM, iM, OM) {
+      async apply(VV, eV, xV, JV) {
         const {
-          host: SM
+          host: YV
         } = this;
-        if (MM !== this.latest || SM.stopped()) return;
-        const jM = (0, aM.j)(iM);
-        if (this.texturesIn(rM, jM) && 0 === this.swapping) return void this.settled(MM, iM, yM(rM, jM));
-        let nM;
+        if (VV !== this.latest || YV.stopped()) return;
+        const UV = (0, yV.i)(xV);
+        if (this.texturesIn(eV, UV) && 0 === this.swapping) return void this.settled(VV, xV, BV(eV, UV));
+        let QV;
         this.swapping++;
-        let QM = null;
+        let nV = null;
         try {
-          nM = await SM.terrain.swap((MM => {
-            var rM;
-            SM.warn(`texture pack texture ${null!==(rM=MM.name)&&void 0!==rM?rM:"(all)"} failed`, MM.error), null !== MM.name && null === (0, PM.i)(MM.name) || (QM = MM.error)
-          }), (async () => SM.sourcesOf ? SM.sourcesOf(rM) : null === rM ? (0, PM.k)() : JM(rM, await this.maxLayerWidth(), jM)), {
-            wholeAtlas: null !== rM,
-            wanted: () => MM === this.latest
+          QV = await YV.terrain.swap((VV => {
+            var eV;
+            YV.warn(`texture pack texture ${null!==(eV=VV.name)&&void 0!==eV?eV:"(all)"} failed`, VV.error), null !== VV.name && null === (0, pV.f)(VV.name) || (nV = VV.error)
+          }), (async () => YV.sourcesOf ? YV.sourcesOf(eV) : null === eV ? (0, pV.i)() : bV(eV, await this.maxLayerWidth(), UV)), {
+            wholeAtlas: null !== eV,
+            wanted: () => VV === this.latest
           })
-        } catch (zM) {
-          return SM.warn("the texture pack's swap failed: the textures in stay", zM), void this.settled(MM, iM, null, {
-            error: zM,
-            source: OM
+        } catch (wV) {
+          return YV.warn("the texture pack's swap failed: the textures in stay", wV), void this.settled(VV, xV, null, {
+            error: wV,
+            source: JV
           })
         } finally {
           this.swapping--
         }
-        if (!0 !== nM || this.ended) this.settled(MM, iM, null, {
-          error: QM,
-          source: OM
+        if (!0 !== QV || this.ended) this.settled(VV, xV, null, {
+          error: nV,
+          source: JV
         });
         else {
-          SM.landed(), this.assets = rM, this.owner = jM;
+          YV.landed(), this.assets = eV, this.owner = UV;
           try {
-            SM.packSwapped()
+            YV.packSwapped()
           } finally {
-            this.settled(MM, iM, this.files())
+            this.settled(VV, xV, this.files())
           }
         }
       }
-      async assetsFor(MM) {
-        var rM;
-        return (null !== (rM = this.host.assetsOf) && void 0 !== rM ? rM : nM.i)(MM, await this.maxLayerWidth())
+      async assetsFor(VV) {
+        var eV;
+        return (null !== (eV = this.host.assetsOf) && void 0 !== eV ? eV : QV.j)(VV, await this.maxLayerWidth())
       }
-      texturesIn(MM, rM) {
-        return MM === this.assets && (null === MM || rM === this.owner)
+      texturesIn(VV, eV) {
+        return VV === this.assets && (null === VV || eV === this.owner)
       }
-      settled(MM, rM, iM) {
-        let OM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-        MM !== this.latest || this.ended || this.host.stopped() || this.host.settled(rM, iM, OM)
+      settled(VV, eV, xV) {
+        let JV = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+        VV !== this.latest || this.ended || this.host.stopped() || this.host.settled(eV, xV, JV)
       }
     }
   },
-  53784: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      followPagePackFiles: () => jM
+  53989: (VV, eV, xV) => {
+    xV.r(eV), xV.d(eV, {
+      followPagePackFiles: () => UV
     });
-    var OM = iM(53772),
-      SM = iM(53778);
+    var JV = xV(53974),
+      YV = xV(53983);
 
-    function jM(MM, rM, iM, jM, aM) {
-      let PM, nM = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : MM => (0, SM.i)(MM, (0, OM.deviceMaxLayerWidth)(iM)),
-        QM = 0,
-        zM = null;
-      const LM = () => {
-          if (null === zM || null !== zM.gameSource && !rM.showsPage()) return;
-          const iM = null === zM.gameSource ? zM : MM.playerState();
-          if (iM.pack === PM) return;
-          PM = iM.pack;
-          const SM = ++QM;
-          nM(iM).then((MM => {
-            SM === QM && jM((0, OM.packFilesOf)(MM, "player"))
-          }), (MM => {
-            SM === QM && (PM = void 0), aM("the texture pack's files couldn't be had for the previews: the files in stay", MM)
+    function UV(VV, eV, xV, UV, yV) {
+      let pV, QV = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : VV => (0, YV.j)(VV, (0, JV.deviceMaxLayerWidth)(xV)),
+        nV = 0,
+        wV = null;
+      const ZV = () => {
+          if (null === wV || null !== wV.gameSource && !eV.showsPage()) return;
+          const xV = null === wV.gameSource ? wV : VV.playerState();
+          if (xV.pack === pV) return;
+          pV = xV.pack;
+          const YV = ++nV;
+          QV(xV).then((VV => {
+            YV === nV && UV((0, JV.packFilesOf)(VV, "player"))
+          }), (VV => {
+            YV === nV && (pV = void 0), yV("the texture pack's files couldn't be had for the previews: the files in stay", VV)
           }))
         },
-        mM = MM.subscribe((MM => {
-          zM = MM, LM()
+        vV = VV.subscribe((VV => {
+          wV = VV, ZV()
         })),
-        HM = MM.onPlayerPackChange(LM),
-        hM = rM.onPageShown(LM);
+        rV = VV.onPlayerPackChange(ZV),
+        kV = eV.onPageShown(ZV);
       return () => {
-        mM(), HM(), hM(), QM++
+        vV(), rV(), kV(), nV++
       }
     }
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const VV in modules) Object.freeze(modules[VV]);

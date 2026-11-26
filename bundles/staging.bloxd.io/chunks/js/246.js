@@ -1,327 +1,327 @@
 export const id = 246;
 export const ids = [246];
 export const modules = {
-  40765: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => OM,
-      f: () => SM
+  40916: (VV, eV, xV) => {
+    xV.d(eV, {
+      e: () => JV,
+      f: () => YV
     });
-    const OM = "The world isn't loaded, so no blocks can be seen.",
-      SM = "The world isn't loaded, so nothing in it can be seen."
+    const JV = "The world isn't loaded, so no blocks can be seen.",
+      YV = "The world isn't loaded, so nothing in it can be seen."
   },
-  40140: (MM, rM, iM) => {
-    function OM(MM) {
-      return !(!MM.lobbyLeaderboardInfo && !MM.lobbyManage)
+  40310: (VV, eV, xV) => {
+    function JV(VV) {
+      return !(!VV.lobbyLeaderboardInfo && !VV.lobbyManage)
     }
-    iM.d(rM, {
-      d: () => OM
+    xV.d(eV, {
+      c: () => JV
     })
   },
-  37767: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => jM,
-      f: () => SM
+  38003: (VV, eV, xV) => {
+    xV.d(eV, {
+      e: () => UV,
+      g: () => YV
     });
-    let OM = () => null;
+    let JV = () => null;
 
-    function SM(MM) {
-      OM = MM
+    function YV(VV) {
+      JV = VV
     }
 
-    function jM(MM, rM) {
-      return OM(MM, rM)
+    function UV(VV, eV) {
+      return JV(VV, eV)
     }
   },
-  41691: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => JM,
-      d: () => EM,
-      e: () => lM,
-      i: () => dM
+  41872: (VV, eV, xV) => {
+    xV.d(eV, {
+      e: () => bV,
+      h: () => qV,
+      l: () => jV,
+      n: () => EV
     });
-    var OM = iM(22),
-      SM = iM(41695),
-      jM = iM(41677),
-      aM = iM(41697),
-      PM = iM(41682),
-      nM = iM(41704),
-      QM = iM(41712);
+    var JV = xV(32),
+      YV = xV(41876),
+      UV = xV(41861),
+      yV = xV(41880),
+      pV = xV(41867),
+      QV = xV(41885),
+      nV = xV(41909);
 
-    function zM(MM) {
-      var rM, iM;
-      const OM = (0, jM.e)();
-      return OM ? null === (rM = (0, SM.e)(OM.api, MM[0], MM[1], MM[2])) || void 0 === rM || null === (iM = rM.persisted) || void 0 === iM ? void 0 : iM.shared : void 0
+    function wV(VV) {
+      var eV, xV;
+      const JV = (0, UV.k)();
+      return JV ? null === (eV = (0, YV.c)(JV.api, VV[0], VV[1], VV[2])) || void 0 === eV || null === (xV = eV.persisted) || void 0 === xV ? void 0 : xV.shared : void 0
     }
 
-    function LM(MM) {
-      return `${MM[0]},${MM[1]},${MM[2]}`
+    function ZV(VV) {
+      return `${VV[0]},${VV[1]},${VV[2]}`
     }
-    const mM = new Map;
-    let HM = null,
-      hM = 0;
+    const vV = new Map;
+    let rV = null,
+      kV = 0;
 
-    function JM() {
-      return hM
+    function bV() {
+      return kV
     }
 
-    function dM(MM) {
-      const rM = null !== HM && HM.key === LM(MM.pos) ? HM.type : null;
-      if (null === rM) return MM;
-      let iM = null;
-      if ("Iron" === rM) {
+    function EV(VV) {
+      const eV = null !== rV && rV.key === ZV(VV.pos) ? rV.type : null;
+      if (null === eV) return VV;
+      let xV = null;
+      if ("Iron" === eV) {
         const {
-          cachedPasskey: rM,
-          ...OM
-        } = yM(MM.pos);
-        iM = {
-          oa: null !== rM && void 0 !== rM ? rM : [0, 0, 0, 0],
-          ...OM
+          cachedPasskey: eV,
+          ...JV
+        } = BV(VV.pos);
+        xV = {
+          ly: null !== eV && void 0 !== eV ? eV : [0, 0, 0, 0],
+          ...JV
         }
       }
       return {
-        ...MM,
-        type: rM,
-        ironChest: iM
+        ...VV,
+        type: eV,
+        ironChest: xV
       }
     }
 
-    function yM(MM) {
-      const rM = zM(MM),
-        iM = null === rM || void 0 === rM ? void 0 : rM.ownerDbId,
-        OM = function(MM) {
-          var rM;
-          let iM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : zM(MM);
-          const OM = LM(MM),
-            SM = mM.get(OM);
-          return SM ? SM.lastOpened < (null !== (rM = null === iM || void 0 === iM ? void 0 : iM.passkeyLastUpdated) && void 0 !== rM ? rM : 0) ? (mM.delete(OM), null) : [...SM.oa] : null
-        }(MM, rM);
-      return void 0 === iM ? {
-        cachedPasskey: OM
+    function BV(VV) {
+      const eV = wV(VV),
+        xV = null === eV || void 0 === eV ? void 0 : eV.ownerDbId,
+        JV = function(VV) {
+          var eV;
+          let xV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : wV(VV);
+          const JV = ZV(VV),
+            YV = vV.get(JV);
+          return YV ? YV.lastOpened < (null !== (eV = null === xV || void 0 === xV ? void 0 : xV.passkeyLastUpdated) && void 0 !== eV ? eV : 0) ? (vV.delete(JV), null) : [...YV.ly] : null
+        }(VV, eV);
+      return void 0 === xV ? {
+        cachedPasskey: JV
       } : {
-        ownerDbId: iM,
-        cachedPasskey: OM
+        ownerDbId: xV,
+        cachedPasskey: JV
       }
-    }(0, QM.h)(aM.b, (MM => {
-      const rM = (0, nM.d)(aM.b, MM);
-      if (!(0, nM.c)(rM) || rM.ui) return;
-      if (hM++, !rM.ei || null === rM.ti) return void(HM = null);
-      const iM = LM(rM.ti);
-      HM = {
-        key: iM,
-        type: rM.wi
-      }, null !== rM.gi && mM.set(iM, {
-        oa: [...rM.gi],
+    }(0, nV.l)(yV.c, (VV => {
+      const eV = (0, QV.i)(yV.c, VV);
+      if (!(0, QV.e)(eV) || eV.ox) return;
+      if (kV++, !eV.Rx || null === eV.ix) return void(rV = null);
+      const xV = ZV(eV.ix);
+      rV = {
+        key: xV,
+        type: eV.Dx
+      }, null !== eV.Cx && vV.set(xV, {
+        ly: [...eV.Cx],
         lastOpened: Date.now()
       })
-    })), (0, QM.c)((() => {
-      mM.clear(), HM = null, hM++
-    })), (0, QM.e)((() => {
-      null !== HM && (HM = null, hM++, OM.i.Tz("chestToggleFromServer", !1, !0))
+    })), (0, nV.f)((() => {
+      vV.clear(), rV = null, kV++
+    })), (0, nV.h)((() => {
+      null !== rV && (rV = null, kV++, JV.h.QZ("chestToggleFromServer", !1, !0))
     }));
-    const lM = {
+    const jV = {
         boardEditRequested: {
-          watch: MM => (0, OM.j)("EditBoard", (rM => {
+          watch: VV => (0, JV.i)("EditBoard", (eV => {
             let {
-              pos: iM
-            } = rM;
-            if (null === iM) return void MM(null);
-            const OM = (0, jM.e)(),
-              SM = (0, jM.p)();
-            OM && SM && MM(SM.readBoardToEdit(OM.api, OM.chunks, iM))
+              pos: xV
+            } = eV;
+            if (null === xV) return void VV(null);
+            const JV = (0, UV.k)(),
+              YV = (0, UV.v)();
+            JV && YV && VV(YV.readBoardToEdit(JV.api, JV.chunks, xV))
           }))
         },
         ironChestOpenRequested: {
-          watch: MM => (0, OM.j)("OpenIronChest", (rM => {
+          watch: VV => (0, JV.i)("OpenIronChest", (eV => {
             let {
-              pos: iM
-            } = rM;
-            MM(function(MM) {
+              pos: xV
+            } = eV;
+            VV(function(VV) {
               return {
-                pos: MM,
-                ...yM(MM)
+                pos: VV,
+                ...BV(VV)
               }
-            }(iM))
+            }(xV))
           }))
         }
       },
-      EM = {
-        writeOnBoard(MM) {
-          var rM;
+      qV = {
+        writeOnBoard(VV) {
+          var eV;
           let {
-            pos: iM,
-            text: OM,
-            textSize: SM
-          } = MM;
-          null === (rM = (0, jM.e)()) || void 0 === rM || rM.send(PM.d.UpdateBoard, (0, PM.U)({
-            mQ: iM,
-            hQ: OM,
-            JQ: SM
+            pos: xV,
+            text: JV,
+            textSize: YV
+          } = VV;
+          null === (eV = (0, UV.k)()) || void 0 === eV || eV.send(pV.d.UpdateBoard, (0, pV.W)({
+            En: xV,
+            Bn: JV,
+            jn: YV
           }))
         },
-        writeBook(MM) {
-          var rM;
+        writeBook(VV) {
+          var eV;
           let {
-            pages: iM,
-            title: OM,
-            published: SM
-          } = MM;
-          null === (rM = (0, jM.e)()) || void 0 === rM || rM.send(PM.d.UpdateBook, (0, PM.X)({
-            aQ: iM,
-            nQ: OM,
-            QQ: SM
+            pages: xV,
+            title: JV,
+            published: YV
+          } = VV;
+          null === (eV = (0, UV.k)()) || void 0 === eV || eV.send(pV.d.UpdateBook, (0, pV.Y)({
+            Zn: xV,
+            vn: JV,
+            rn: YV
           }))
         },
-        writeNameTag(MM) {
-          var rM;
-          null === (rM = (0, jM.e)()) || void 0 === rM || rM.send(PM.d.UpdateNameTag, MM)
+        writeNameTag(VV) {
+          var eV;
+          null === (eV = (0, UV.k)()) || void 0 === eV || eV.send(pV.d.UpdateNameTag, VV)
         },
-        setCustomLobbyBlock(MM) {
+        setCustomLobbyBlock(VV) {
           let {
-            pos: rM,
-            blockName: iM
-          } = MM;
-          const OM = (0, jM.p)(),
-            SM = (0, jM.e)();
-          OM && SM && SM.send(PM.d.SetCustomLobbyBlock, (0, PM.K)({
-            jP: OM.blockIdOf(iM),
-            SP: rM
+            pos: eV,
+            blockName: xV
+          } = VV;
+          const JV = (0, UV.v)(),
+            YV = (0, UV.k)();
+          JV && YV && YV.send(pV.d.SetCustomLobbyBlock, (0, pV.J)({
+            vp: JV.blockIdOf(xV),
+            Zp: eV
           }))
         }
       }
   },
-  41728: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => nM,
-      f: () => aM,
-      h: () => PM
+  41932: (VV, eV, xV) => {
+    xV.d(eV, {
+      d: () => QV,
+      f: () => yV,
+      i: () => pV
     });
-    var OM = iM(41669),
-      SM = iM(5188),
-      jM = iM(41677);
+    var JV = xV(41852),
+      YV = xV(5281),
+      UV = xV(41861);
 
-    function aM() {
-      var MM;
-      const rM = null === (MM = (0, jM.e)()) || void 0 === MM ? void 0 : MM.api.localId;
-      return void 0 === rM || rM === OM.Nc ? null : String(rM)
+    function yV() {
+      var VV;
+      const eV = null === (VV = (0, UV.k)()) || void 0 === VV ? void 0 : VV.api.localId;
+      return void 0 === eV || eV === JV.Uc ? null : String(eV)
     }
 
-    function PM(MM) {
-      const rM = (0, jM.e)();
-      if (null !== rM) return MM(rM);
-      let iM = null;
-      const OM = (0, SM.x)((() => {
-        const rM = (0, jM.e)();
-        null !== rM && null === iM && (OM(), iM = MM(rM))
+    function pV(VV) {
+      const eV = (0, UV.k)();
+      if (null !== eV) return VV(eV);
+      let xV = null;
+      const JV = (0, YV.s)((() => {
+        const eV = (0, UV.k)();
+        null !== eV && null === xV && (JV(), xV = VV(eV))
       }));
       return () => {
-        var MM;
-        OM(), null === (MM = iM) || void 0 === MM || MM()
+        var VV;
+        JV(), null === (VV = xV) || void 0 === VV || VV()
       }
     }
 
-    function nM(MM, rM, iM) {
+    function QV(VV, eV, xV) {
       return {
         current: () => {
-          const iM = (0, jM.e)();
-          return null === iM ? rM : MM(iM)()
+          const xV = (0, UV.k)();
+          return null === xV ? eV : VV(xV)()
         },
-        watch: rM => PM((OM => {
-          const SM = MM(OM);
-          let jM = SM();
-          return rM(jM), iM((() => {
-            const MM = SM();
-            MM !== jM && (jM = MM, rM(MM))
+        watch: eV => pV((JV => {
+          const YV = VV(JV);
+          let UV = YV();
+          return eV(UV), xV((() => {
+            const VV = YV();
+            VV !== UV && (UV = VV, eV(VV))
           }))
         }))
       }
     }
   },
-  41723: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => QM
+  41923: (VV, eV, xV) => {
+    xV.d(eV, {
+      b: () => nV
     });
-    var OM = iM(41677),
-      SM = iM(41728),
-      jM = iM(41734);
+    var JV = xV(41861),
+      YV = xV(41932),
+      UV = xV(41936);
 
-    function aM() {
-      var MM, rM;
-      return null !== (MM = null === (rM = (0, OM.e)()) || void 0 === rM ? void 0 : rM.itemBridgeSources) && void 0 !== MM ? MM : jM.c
+    function yV() {
+      var VV, eV;
+      return null !== (VV = null === (eV = (0, JV.k)()) || void 0 === eV ? void 0 : eV.itemBridgeSources) && void 0 !== VV ? VV : UV.e
     }
 
-    function PM(MM) {
+    function pV(VV) {
       return {
-        current: () => aM().states[MM].current(),
-        watch: rM => (0, SM.h)((iM => {
-          const OM = iM.itemBridgeSources.states[MM];
-          return rM(OM.current()), OM.watch(rM)
+        current: () => yV().states[VV].current(),
+        watch: eV => (0, YV.i)((xV => {
+          const JV = xV.itemBridgeSources.states[VV];
+          return eV(JV.current()), JV.watch(eV)
         }))
       }
     }
 
-    function nM(MM) {
+    function QV(VV) {
       return {
-        watch: rM => (0, SM.h)((iM => iM.itemBridgeSources.events[MM].watch(rM)))
+        watch: eV => (0, YV.i)((xV => xV.itemBridgeSources.events[VV].watch(eV)))
       }
     }
-    const QM = {
+    const nV = {
       states: {
-        inventory: PM("inventory"),
-        hotbar: PM("hotbar"),
-        crafting: PM("crafting"),
-        heldItemAim: PM("heldItemAim")
+        inventory: pV("inventory"),
+        hotbar: pV("hotbar"),
+        crafting: pV("crafting"),
+        heldItemAim: pV("heldItemAim")
       },
       events: {
-        hotbarSlotRequested: nM("hotbarSlotRequested"),
-        hotbarScrolled: nM("hotbarScrolled"),
-        numberKeyPressed: nM("numberKeyPressed"),
-        inventoryDropRequested: nM("inventoryDropRequested"),
-        chestToggled: nM("chestToggled"),
-        chestRefreshed: nM("chestRefreshed"),
-        inventorySynced: nM("inventorySynced"),
-        enchantingTableOpened: nM("enchantingTableOpened")
+        hotbarSlotRequested: QV("hotbarSlotRequested"),
+        hotbarScrolled: QV("hotbarScrolled"),
+        numberKeyPressed: QV("numberKeyPressed"),
+        inventoryDropRequested: QV("inventoryDropRequested"),
+        chestToggled: QV("chestToggled"),
+        chestRefreshed: QV("chestRefreshed"),
+        inventorySynced: QV("inventorySynced"),
+        enchantingTableOpened: QV("enchantingTableOpened")
       },
       commands: {
-        selectHotbarSlot: MM => aM().commands.selectHotbarSlot(MM),
-        removeInventoryItem: MM => aM().commands.removeInventoryItem(MM),
-        swapInventorySlots: MM => aM().commands.swapInventorySlots(MM),
-        moveInventoryItem: MM => aM().commands.moveInventoryItem(MM),
-        quickMoveInventoryItem: MM => aM().commands.quickMoveInventoryItem(MM),
-        closeChest: MM => aM().commands.closeChest(MM),
-        focusCrafting: MM => aM().commands.focusCrafting(MM),
-        craftRecipe: MM => aM().commands.craftRecipe(MM),
-        salvageItem: MM => aM().commands.salvageItem(MM),
-        enchantItem: MM => aM().commands.enchantItem(MM)
+        selectHotbarSlot: VV => yV().commands.selectHotbarSlot(VV),
+        removeInventoryItem: VV => yV().commands.removeInventoryItem(VV),
+        swapInventorySlots: VV => yV().commands.swapInventorySlots(VV),
+        moveInventoryItem: VV => yV().commands.moveInventoryItem(VV),
+        quickMoveInventoryItem: VV => yV().commands.quickMoveInventoryItem(VV),
+        closeChest: VV => yV().commands.closeChest(VV),
+        focusCrafting: VV => yV().commands.focusCrafting(VV),
+        craftRecipe: VV => yV().commands.craftRecipe(VV),
+        salvageItem: VV => yV().commands.salvageItem(VV),
+        enchantItem: VV => yV().commands.enchantItem(VV)
       },
       queries: {
-        enchantingOffer: MM => aM().queries.enchantingOffer(MM)
+        enchantingOffer: VV => yV().queries.enchantingOffer(VV)
       }
     }
   },
-  41734: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => PM
+  41936: (VV, eV, xV) => {
+    xV.d(eV, {
+      e: () => pV
     });
-    var OM = iM(40765);
+    var JV = xV(40916);
 
-    function SM(MM) {
+    function YV(VV) {
       return {
-        current: () => MM,
+        current: () => VV,
         watch: () => () => {}
       }
     }
 
-    function jM() {}
-    const aM = Object.freeze([0, 0, 0]),
-      PM = {
+    function UV() {}
+    const yV = Object.freeze([0, 0, 0]),
+      pV = {
         states: {
-          health: SM({
+          health: YV({
             health: null,
             maxHealth: null,
             shield: null,
             maxShield: null
           }),
-          inventory: SM({
+          inventory: YV({
             player: [],
             chestOrCreative: [],
             chest: null,
@@ -329,63 +329,63 @@ export const modules = {
             selectedSlot: 0,
             freeSlots: 0
           }),
-          hotbar: SM({
+          hotbar: YV({
             items: [],
             ammo: 0,
             selectedSlot: null
           }),
-          stationItems: SM({
+          stationItems: YV({
             enchantable: {},
             salvageable: {}
           }),
-          itemInfo: SM({}),
-          creativeVisibility: SM({
+          itemInfo: YV({}),
+          creativeVisibility: YV({
             publicLobby: !1,
             shownInGame: {}
           }),
-          aura: SM(null),
-          heldItemAim: SM({
+          aura: YV(null),
+          heldItemAim: YV({
             gun: !1,
             aimable: !1,
             chargeName: null
           }),
-          crouching: SM(!1),
-          gliderBoostFuel: SM(0),
-          flight: SM({
+          crouching: YV(!1),
+          gliderBoostFuel: YV(0),
+          flight: YV({
             canFly: !1,
             flying: !1
           }),
-          crafting: SM({
+          crafting: YV({
             focus: null,
             recipes: [],
             detail: null
           }),
-          players: SM({
+          players: YV({
             ids: [],
             byId: {},
             localId: null
           }),
-          lobbyLeaderboardRows: SM({}),
-          fullInventory: SM(!1),
-          crosshairTarget: SM({
+          lobbyLeaderboardRows: YV({}),
+          fullInventory: YV(!1),
+          crosshairTarget: YV({
             interactPrompt: null,
             blockText: null,
             neededTool: null
           }),
-          localPlayerAlive: SM(!0),
-          freeCamera: SM({
+          localPlayerAlive: YV(!0),
+          freeCamera: YV({
             allowed: !1,
             movesFly: !1
           }),
-          replay: SM(null),
-          replayEdits: SM(null),
-          replayRecorder: SM({
+          replay: YV(null),
+          replayEdits: YV(null),
+          replayRecorder: YV({
             recording: !1,
             clipping: !1,
             hasClipBuffer: !1,
             seconds: 0
           }),
-          replayVideoExporting: SM(!1)
+          replayVideoExporting: YV(!1)
         },
         events: {
           hotbarSlotRequested: {
@@ -447,87 +447,87 @@ export const modules = {
           }
         },
         commands: {
-          selectHotbarSlot: jM,
+          selectHotbarSlot: UV,
           removeInventoryItem: () => !1,
           swapInventorySlots: () => !1,
           moveInventoryItem: () => !1,
           quickMoveInventoryItem: () => null,
-          closeChest: jM,
-          setInventoryOpen: jM,
-          changeIronChestPasskey: jM,
-          dragReplayCamera: jM,
-          applyTemporaryThirdPerson: jM,
-          holdEmoteWheel: jM,
-          recordFlyingMiddleText: jM,
-          focusCrafting: jM,
+          closeChest: UV,
+          setInventoryOpen: UV,
+          changeIronChestPasskey: UV,
+          dragReplayCamera: UV,
+          applyTemporaryThirdPerson: UV,
+          holdEmoteWheel: UV,
+          recordFlyingMiddleText: UV,
+          focusCrafting: UV,
           craftRecipe: () => ({
-            Ha: 0,
-            Pz: null,
+            Ey: 0,
+            Bw: null,
             amountAddedToSlot: 0
           }),
           salvageItem: () => !1,
-          enchantItem: jM,
-          setShopOpen: jM,
-          buyShopItem: jM,
-          lobbyManage: jM,
-          sendChatMessage: jM,
-          ignorePlayer: jM,
-          reportPlayer: jM,
-          reportWorldCodeChat: jM,
-          requestDiscordReportKey: jM,
-          reportLobbyOrGame: jM,
-          playEmote: jM,
-          updateMyCosmetic: jM,
-          writeOnBoard: jM,
-          writeBook: jM,
-          writeNameTag: jM,
-          setCustomLobbyBlock: jM,
-          openIronChest: jM,
-          sendCodeCollab: jM,
-          clickCodeBlock: jM,
-          bindCustomButtonKeys: jM,
-          pressCustomButton: jM,
-          moveReplayFreecam: jM,
-          holdReplayFreecamVertical: jM,
-          respawn: jM,
-          wakeUp: jM,
-          requestLeaderboard: jM,
-          completeTask: jM,
-          setServerCookie: jM,
-          answerUiRequest: jM,
-          chooseRewardedAd: jM,
-          setCameraZoom: jM,
-          setFreeCameraMovesFly: jM,
-          setBlockHighlight: jM,
-          setCrosshairInteractPrompt: jM,
-          setLookSensitivity: jM,
-          replayAction: jM,
-          setReplayPlaying: jM,
-          seekReplay: jM,
-          setReplayCameraMode: jM,
-          syncReplayCameraMode: jM,
-          setReplayCameraKeyframe: jM,
-          moveReplayCameraKeyframe: jM,
-          deleteReplayCameraKeyframes: jM,
-          setReplayPlaybackMark: jM,
+          enchantItem: UV,
+          setShopOpen: UV,
+          buyShopItem: UV,
+          lobbyManage: UV,
+          sendChatMessage: UV,
+          ignorePlayer: UV,
+          reportPlayer: UV,
+          reportWorldCodeChat: UV,
+          requestDiscordReportKey: UV,
+          reportLobbyOrGame: UV,
+          playEmote: UV,
+          updateMyCosmetic: UV,
+          writeOnBoard: UV,
+          writeBook: UV,
+          writeNameTag: UV,
+          setCustomLobbyBlock: UV,
+          openIronChest: UV,
+          sendCodeCollab: UV,
+          clickCodeBlock: UV,
+          bindCustomButtonKeys: UV,
+          pressCustomButton: UV,
+          moveReplayFreecam: UV,
+          holdReplayFreecamVertical: UV,
+          respawn: UV,
+          wakeUp: UV,
+          requestLeaderboard: UV,
+          completeTask: UV,
+          setServerCookie: UV,
+          answerUiRequest: UV,
+          chooseRewardedAd: UV,
+          setCameraZoom: UV,
+          setFreeCameraMovesFly: UV,
+          setBlockHighlight: UV,
+          setCrosshairInteractPrompt: UV,
+          setLookSensitivity: UV,
+          replayAction: UV,
+          setReplayPlaying: UV,
+          seekReplay: UV,
+          setReplayCameraMode: UV,
+          syncReplayCameraMode: UV,
+          setReplayCameraKeyframe: UV,
+          moveReplayCameraKeyframe: UV,
+          deleteReplayCameraKeyframes: UV,
+          setReplayPlaybackMark: UV,
           cropReplay: () => !1,
-          holdReplayForShaderPackFailure: jM,
-          exportReplayVideo: jM,
-          toggleRecording: jM,
-          saveClip: jM,
-          setRecorderPrefs: jM,
-          setReplayViewerOpen: jM
+          holdReplayForShaderPackFailure: UV,
+          exportReplayVideo: UV,
+          toggleRecording: UV,
+          saveClip: UV,
+          setRecorderPrefs: UV,
+          setReplayViewerOpen: UV
         },
         queries: {
           enchantingOffer: () => ({
             perks: [],
             options: []
           }),
-          worldCodeAiChunk: () => OM.c,
-          worldCodeAiGameState: () => OM.f
+          worldCodeAiChunk: () => JV.e,
+          worldCodeAiGameState: () => JV.f
         },
         lookups: {
-          localPos: () => aM,
+          localPos: () => yV,
           targetedBlockPos: () => null,
           blockAtViewPoint: () => null,
           momentumFrac: () => 0,
@@ -545,316 +545,316 @@ export const modules = {
         }
       }
   },
-  41674: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => wM,
-      f: () => bM,
-      g: () => tM,
-      k: () => eM,
-      m: () => GM
+  41856: (VV, eV, xV) => {
+    xV.d(eV, {
+      d: () => NV,
+      e: () => AV,
+      f: () => XV,
+      i: () => PV,
+      j: () => FV
     });
-    var OM = iM(40325),
-      SM = iM(1229),
-      jM = iM(2067),
-      aM = iM(2078),
-      PM = iM(3693),
-      nM = iM(37767),
-      QM = iM(1373),
-      zM = iM(41677),
-      LM = iM(5214),
-      mM = iM(2619),
-      HM = iM(41682),
-      hM = iM(41691),
-      JM = iM(41723);
-    let dM = null;
+    var JV = xV(40472),
+      YV = xV(1252),
+      UV = xV(2080),
+      yV = xV(2094),
+      pV = xV(3719),
+      QV = xV(38003),
+      nV = xV(1391),
+      wV = xV(41861),
+      ZV = xV(5319),
+      vV = xV(2660),
+      rV = xV(41867),
+      kV = xV(41872),
+      bV = xV(41923);
+    let EV = null;
 
-    function yM(MM) {
-      const rM = new Map,
-        iM = iM => {
-          if ("string" !== typeof iM) return;
-          let OM = rM.get(iM);
-          return void 0 === OM && (OM = MM(iM), void 0 !== OM && rM.set(iM, OM)), OM
+    function BV(VV) {
+      const eV = new Map,
+        xV = xV => {
+          if ("string" !== typeof xV) return;
+          let JV = eV.get(xV);
+          return void 0 === JV && (JV = VV(xV), void 0 !== JV && eV.set(xV, JV)), JV
         };
       return new Proxy({}, {
-        get: (MM, rM) => iM(rM),
-        has: (MM, rM) => void 0 !== iM(rM)
+        get: (VV, eV) => xV(eV),
+        has: (VV, eV) => void 0 !== xV(eV)
       })
     }
 
-    function lM(MM) {
-      const rM = (0, PM.d)(MM);
-      return void 0 !== rM && (0, PM.g)(rM) === MM
+    function jV(VV) {
+      const eV = (0, pV.d)(VV);
+      return void 0 !== eV && (0, pV.g)(eV) === VV
     }
 
-    function EM(MM) {
-      var rM;
-      const iM = null === (rM = (0, zM.e)()) || void 0 === rM ? void 0 : rM.tables;
-      if (void 0 === iM || !lM(MM)) return;
-      const OM = {
-          displayName: iM.getDisplayName(MM)
+    function qV(VV) {
+      var eV;
+      const xV = null === (eV = (0, wV.k)()) || void 0 === eV ? void 0 : eV.tables;
+      if (void 0 === xV || !jV(VV)) return;
+      const JV = {
+          displayName: xV.getDisplayName(VV)
         },
-        SM = iM.getItemStat(MM, "description");
-      void 0 !== SM && null !== SM && (OM.description = SM);
+        YV = xV.getItemStat(VV, "description");
+      void 0 !== YV && null !== YV && (JV.description = YV);
       const {
-        rootName: jM
-      } = iM.getMetaInfo(MM);
-      jM !== MM && (OM.rootName = jM);
-      const aM = iM.getItemStat(MM, "armourReduction");
-      return void 0 !== aM && null !== aM && (OM.armourReduction = aM), OM
-    }(0, zM.r)((MM => {
-      dM = MM
+        rootName: UV
+      } = xV.getMetaInfo(VV);
+      UV !== VV && (JV.rootName = UV);
+      const yV = xV.getItemStat(VV, "armourReduction");
+      return void 0 !== yV && null !== yV && (JV.armourReduction = yV), JV
+    }(0, wV.z)((VV => {
+      EV = VV
     }));
-    const UM = (0, aM.l)("DisplayName", "Description");
+    const tV = (0, yV.h)("DisplayName", "Description");
 
-    function GM() {
-      return Boolean(jM.d.get("useInventory") && jM.d.get("useFullInventory"))
+    function FV() {
+      return Boolean(UV.c.get("useInventory") && UV.c.get("useFullInventory"))
     }
-    let CM = null;
-    const eM = {
+    let TV = null;
+    const PV = {
         inventory: function() {
-          const MM = JM.d.states.inventory;
-          let rM = null;
-          const iM = MM => {
-            var iM;
-            return null === MM.chest ? MM : ((null === (iM = rM) || void 0 === iM ? void 0 : iM.from) === MM && rM.chestVersion === (0, hM.b)() || (rM = {
-              from: MM,
-              chestVersion: (0, hM.b)(),
+          const VV = bV.b.states.inventory;
+          let eV = null;
+          const xV = VV => {
+            var xV;
+            return null === VV.chest ? VV : ((null === (xV = eV) || void 0 === xV ? void 0 : xV.from) === VV && eV.chestVersion === (0, kV.e)() || (eV = {
+              from: VV,
+              chestVersion: (0, kV.e)(),
               view: {
-                ...MM,
-                chest: (0, hM.i)(MM.chest)
+                ...VV,
+                chest: (0, kV.n)(VV.chest)
               }
-            }), rM.view)
+            }), eV.view)
           };
           return {
-            current: () => iM(MM.current()),
-            watch: rM => MM.watch((MM => {
-              rM(iM(MM))
+            current: () => xV(VV.current()),
+            watch: eV => VV.watch((VV => {
+              eV(xV(VV))
             }))
           }
         }(),
-        crafting: JM.d.states.crafting,
+        crafting: bV.b.states.crafting,
         stationItems: {
           current() {
-            var MM;
-            return (null === (MM = CM) || void 0 === MM ? void 0 : MM.namesVersion) !== (0, PM.h)() && (CM = {
-              namesVersion: (0, PM.h)(),
+            var VV;
+            return (null === (VV = TV) || void 0 === VV ? void 0 : VV.namesVersion) !== (0, pV.k)() && (TV = {
+              namesVersion: (0, pV.k)(),
               items: {
-                enchantable: yM((MM => {
-                  const rM = (0, PM.d)(MM);
-                  return void 0 !== rM && null !== dM && dM.enchantmentPerksOf(rM).length > 0 || void 0
+                enchantable: BV((VV => {
+                  const eV = (0, pV.d)(VV);
+                  return void 0 !== eV && null !== EV && EV.enchantmentPerksOf(eV).length > 0 || void 0
                 })),
-                salvageable: yM((MM => !(!lM(MM) || null === (0, nM.d)(MM)) || void 0))
+                salvageable: BV((VV => !(!jV(VV) || null === (0, QV.e)(VV)) || void 0))
               }
-            }), CM.items
+            }), TV.items
           },
           watch: () => () => {}
         },
         itemInfo: function() {
-          let MM = null;
-          const rM = () => {
-            var rM;
-            return (null === (rM = MM) || void 0 === rM ? void 0 : rM.namesVersion) !== (0, PM.h)() && (MM = {
-              namesVersion: (0, PM.h)(),
-              infos: yM(EM)
-            }), MM.infos
+          let VV = null;
+          const eV = () => {
+            var eV;
+            return (null === (eV = VV) || void 0 === eV ? void 0 : eV.namesVersion) !== (0, pV.k)() && (VV = {
+              namesVersion: (0, pV.k)(),
+              infos: BV(qV)
+            }), VV.infos
           };
           return {
-            current: rM,
-            watch: iM => (0, aM.u)((OM => {
-              OM.some(UM) && (MM = null, iM(rM()))
+            current: eV,
+            watch: xV => (0, yV.q)((JV => {
+              JV.some(tV) && (VV = null, xV(eV()))
             }))
           }
         }(),
-        creativeVisibility: (0, aM.q)((function() {
-          const MM = {};
-          for (const SM of null !== (rM = null === (iM = dM) || void 0 === iM ? void 0 : iM.creativeItemIds()) && void 0 !== rM ? rM : []) {
-            var rM, iM, aM, nM;
-            const QM = (0, PM.g)(SM);
-            if (void 0 === QM) continue;
-            const zM = null !== (aM = jM.d.get((0, OM.g)(QM, "showInCreativeInven"))) && void 0 !== aM ? aM : null === (nM = dM) || void 0 === nM ? void 0 : nM.showInCreativeInvenOf(SM);
-            "boolean" === typeof zM && (MM[QM] = zM)
+        creativeVisibility: (0, yV.l)((function() {
+          const VV = {};
+          for (const YV of null !== (eV = null === (xV = EV) || void 0 === xV ? void 0 : xV.creativeItemIds()) && void 0 !== eV ? eV : []) {
+            var eV, xV, yV, QV;
+            const nV = (0, pV.g)(YV);
+            if (void 0 === nV) continue;
+            const wV = null !== (yV = UV.c.get((0, JV.h)(nV, "showInCreativeInven"))) && void 0 !== yV ? yV : null === (QV = EV) || void 0 === QV ? void 0 : QV.showInCreativeInvenOf(YV);
+            "boolean" === typeof wV && (VV[nV] = wV)
           }
           return {
-            publicLobby: (0, SM.P)((0, QM.e)().lobbyName),
-            shownInGame: MM
+            publicLobby: (0, YV.I)((0, nV.e)().lobbyName),
+            shownInGame: VV
           }
-        }), ["connectedGameChanged"], (0, aM.l)("ShowInCreativeInven")),
-        fullInventory: (0, aM.q)(GM, [], (0, aM.p)("useInventory", "useFullInventory"))
+        }), ["connectedGameChanged"], (0, yV.h)("ShowInCreativeInven")),
+        fullInventory: (0, yV.l)(FV, [], (0, yV.i)("useInventory", "useFullInventory"))
       },
-      bM = {
-        inventoryDropRequested: JM.d.events.inventoryDropRequested,
-        chestToggled: JM.d.events.chestToggled,
-        chestRefreshed: JM.d.events.chestRefreshed,
-        inventorySynced: JM.d.events.inventorySynced,
-        enchantingTableOpened: JM.d.events.enchantingTableOpened
+      AV = {
+        inventoryDropRequested: bV.b.events.inventoryDropRequested,
+        chestToggled: bV.b.events.chestToggled,
+        chestRefreshed: bV.b.events.chestRefreshed,
+        inventorySynced: bV.b.events.inventorySynced,
+        enchantingTableOpened: bV.b.events.enchantingTableOpened
       },
-      wM = {
-        removeInventoryItem: JM.d.commands.removeInventoryItem,
-        swapInventorySlots: JM.d.commands.swapInventorySlots,
-        moveInventoryItem: JM.d.commands.moveInventoryItem,
-        quickMoveInventoryItem: JM.d.commands.quickMoveInventoryItem,
-        closeChest: JM.d.commands.closeChest,
-        setInventoryOpen(MM) {
-          (0, LM.k)(mM.C.InventoryOpen, MM ? mM.C.InventoryOpen : 0)
+      NV = {
+        removeInventoryItem: bV.b.commands.removeInventoryItem,
+        swapInventorySlots: bV.b.commands.swapInventorySlots,
+        moveInventoryItem: bV.b.commands.moveInventoryItem,
+        quickMoveInventoryItem: bV.b.commands.quickMoveInventoryItem,
+        closeChest: bV.b.commands.closeChest,
+        setInventoryOpen(VV) {
+          (0, ZV.h)(vV.y.InventoryOpen, VV ? vV.y.InventoryOpen : 0)
         },
-        focusCrafting: JM.d.commands.focusCrafting,
-        craftRecipe: JM.d.commands.craftRecipe,
-        salvageItem: JM.d.commands.salvageItem,
-        enchantItem: JM.d.commands.enchantItem,
-        changeIronChestPasskey(MM) {
-          var rM;
+        focusCrafting: bV.b.commands.focusCrafting,
+        craftRecipe: bV.b.commands.craftRecipe,
+        salvageItem: bV.b.commands.salvageItem,
+        enchantItem: bV.b.commands.enchantItem,
+        changeIronChestPasskey(VV) {
+          var eV;
           let {
-            pos: iM,
-            oa: OM
-          } = MM;
-          null === (rM = (0, zM.e)()) || void 0 === rM || rM.send(HM.d.ChangeIronChestPasskey, (0, HM.j)({
-            ti: iM,
-            oa: OM
+            pos: xV,
+            ly: JV
+          } = VV;
+          null === (eV = (0, wV.k)()) || void 0 === eV || eV.send(rV.d.ChangeIronChestPasskey, (0, rV.k)({
+            ix: xV,
+            ly: JV
           }))
         },
-        openIronChest(MM) {
-          var rM;
+        openIronChest(VV) {
+          var eV;
           let {
-            pos: iM,
-            oa: OM
-          } = MM;
-          null === (rM = (0, zM.e)()) || void 0 === rM || rM.send(HM.d.OpenIronChest, (0, HM.B)({
-            ti: iM,
-            oa: OM
+            pos: xV,
+            ly: JV
+          } = VV;
+          null === (eV = (0, wV.k)()) || void 0 === eV || eV.send(rV.d.OpenIronChest, (0, rV.C)({
+            ix: xV,
+            ly: JV
           }))
         }
       },
-      tM = {
-        enchantingOffer: JM.d.queries.enchantingOffer
+      XV = {
+        enchantingOffer: bV.b.queries.enchantingOffer
       }
   },
-  41714: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => OM,
-      g: () => zM,
-      h: () => aM,
-      i: () => SM,
-      k: () => PM,
-      l: () => QM
+  41914: (VV, eV, xV) => {
+    xV.d(eV, {
+      d: () => JV,
+      g: () => wV,
+      j: () => yV,
+      k: () => YV,
+      o: () => pV,
+      r: () => nV
     });
-    class OM extends Error {
+    class JV extends Error {
       constructor() {
         super(...arguments), this.name = "CoreCorruption"
       }
     }
 
-    function SM(MM) {
-      return MM instanceof RangeError && /call stack/i.test(MM.message) || MM instanceof Error && "InternalError" === MM.name && /recursion/i.test(MM.message)
+    function YV(VV) {
+      return VV instanceof RangeError && /call stack/i.test(VV.message) || VV instanceof Error && "InternalError" === VV.name && /recursion/i.test(VV.message)
     }
-    const jM = /wasm:\/\/|wasm-function\[|\[wasm code\]/;
+    const UV = /wasm:\/\/|wasm-function\[|\[wasm code\]/;
 
-    function aM(MM) {
-      var rM;
-      return MM instanceof WebAssembly.RuntimeError || MM instanceof OM || SM(MM) && jM.test(null !== (rM = MM.stack) && void 0 !== rM ? rM : "")
-    }
-
-    function PM(MM, rM) {
-      if (aM(MM)) throw MM;
-      console.error(rM, MM)
+    function yV(VV) {
+      var eV;
+      return VV instanceof WebAssembly.RuntimeError || VV instanceof JV || YV(VV) && UV.test(null !== (eV = VV.stack) && void 0 !== eV ? eV : "")
     }
 
-    function nM(MM, rM, iM, SM, jM) {
-      if (rM % SM !== 0 || rM + iM > MM.byteLength) throw new OM(`${jM}: ${iM} bytes at ${rM}, ${SM}-aligned, outside ${MM.byteLength} bytes of memory`)
+    function pV(VV, eV) {
+      if (yV(VV)) throw VV;
+      console.error(eV, VV)
     }
 
-    function QM(MM, rM, iM, OM, SM) {
-      return 0 === iM ? null : (nM(rM, iM, OM * MM.BYTES_PER_ELEMENT, MM.BYTES_PER_ELEMENT, SM), new MM(rM, iM, OM))
+    function QV(VV, eV, xV, YV, UV) {
+      if (eV % YV !== 0 || eV + xV > VV.byteLength) throw new JV(`${UV}: ${xV} bytes at ${eV}, ${YV}-aligned, outside ${VV.byteLength} bytes of memory`)
     }
 
-    function zM(MM, rM, iM, OM, SM) {
-      return 0 === rM ? null : (nM(MM, rM, iM, OM, SM), new DataView(MM, rM, iM))
+    function nV(VV, eV, xV, JV, YV) {
+      return 0 === xV ? null : (QV(eV, xV, JV * VV.BYTES_PER_ELEMENT, VV.BYTES_PER_ELEMENT, YV), new VV(eV, xV, JV))
+    }
+
+    function wV(VV, eV, xV, JV, YV) {
+      return 0 === eV ? null : (QV(VV, eV, xV, JV, YV), new DataView(VV, eV, xV))
     }
   },
-  41677: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => OM,
-      c: () => yM,
-      e: () => JM,
-      h: () => dM,
-      i: () => mM,
-      m: () => HM,
-      p: () => zM,
-      r: () => LM,
-      t: () => hM
+  41861: (VV, eV, xV) => {
+    xV.d(eV, {
+      B: () => kV,
+      e: () => JV,
+      i: () => BV,
+      k: () => bV,
+      n: () => EV,
+      p: () => vV,
+      t: () => rV,
+      v: () => wV,
+      z: () => ZV
     });
-    class OM extends Error {
-      constructor(MM) {
-        super(`the join's code did not load: ${MM instanceof Error?MM.message:String(MM)}`, {
-          cause: MM
-        }), this.request = void 0, this.name = "GameCodeLoadError", this.request = null === MM || void 0 === MM ? void 0 : MM.request
+    class JV extends Error {
+      constructor(VV) {
+        super(`the join's code did not load: ${VV instanceof Error?VV.message:String(VV)}`, {
+          cause: VV
+        }), this.request = void 0, this.name = "GameCodeLoadError", this.request = null === VV || void 0 === VV ? void 0 : VV.request
       }
     }
-    let SM = null,
-      jM = null,
-      aM = null;
-    const PM = [];
-    let nM = null;
+    let YV = null,
+      UV = null,
+      yV = null;
+    const pV = [];
+    let QV = null;
 
-    function QM(MM, rM) {
+    function nV(VV, eV) {
       try {
-        MM(rM)
-      } catch (iM) {
-        console.error("[bloxd-wasm-client] the game chunk's listener failed", iM)
+        VV(eV)
+      } catch (xV) {
+        console.error("[bloxd-wasm-client] the game chunk's listener failed", xV)
       }
     }
 
-    function zM() {
-      return nM
+    function wV() {
+      return QV
     }
 
-    function LM(MM) {
-      PM.push(MM), null !== nM && QM(MM, nM)
+    function ZV(VV) {
+      pV.push(VV), null !== QV && nV(VV, QV)
     }
 
-    function mM(MM) {
-      return SM ??= Promise.all([iM.e(84), iM.e(111), iM.e(86), iM.e(244), iM.e(89), iM.e(245), iM.e(224), iM.e(109), iM.e(264), iM.e(296), iM.e(48), iM.e(213), iM.e(232), iM.e(222), iM.e(205), iM.e(206), iM.e(170), iM.e(101), iM.e(134), iM.e(272), iM.e(68)]).then((() => iM(45248))).then((rM => {
-        rM.loadAudio(MM), nM = rM;
-        for (const MM of PM) QM(MM, rM);
-        return rM
-      })).catch((MM => {
-        throw SM = null, MM
-      })), SM
+    function vV(VV) {
+      return YV ??= Promise.all([xV.e(84), xV.e(111), xV.e(86), xV.e(244), xV.e(89), xV.e(245), xV.e(224), xV.e(109), xV.e(264), xV.e(296), xV.e(48), xV.e(213), xV.e(232), xV.e(222), xV.e(205), xV.e(206), xV.e(170), xV.e(101), xV.e(134), xV.e(272), xV.e(68)]).then((() => xV(45460))).then((eV => {
+        eV.loadAudio(VV), QV = eV;
+        for (const VV of pV) nV(VV, eV);
+        return eV
+      })).catch((VV => {
+        throw YV = null, VV
+      })), YV
     }
-    async function HM(MM, rM) {
+    async function rV(VV, eV) {
       try {
-        const iM = await mM(MM);
-        await iM.loadClientGame(rM)
-      } catch (iM) {
-        throw new OM(iM)
+        const xV = await vV(VV);
+        await xV.loadClientGame(eV)
+      } catch (xV) {
+        throw new JV(xV)
       }
     }
 
-    function hM(MM, rM) {
-      jM = {
-        running: MM,
-        shell: rM
+    function kV(VV, eV) {
+      UV = {
+        running: VV,
+        shell: eV
       }
     }
 
-    function JM() {
-      return aM
+    function bV() {
+      return yV
     }
-    async function dM(MM) {
-      const rM = jM;
-      if ((null === rM || void 0 === rM ? void 0 : rM.running) !== MM) throw new Error("the core's session has ended");
-      const iM = await mM(rM.shell.audio).catch((MM => {
-        throw new OM(MM)
+    async function EV(VV) {
+      const eV = UV;
+      if ((null === eV || void 0 === eV ? void 0 : eV.running) !== VV) throw new Error("the core's session has ended");
+      const xV = await vV(eV.shell.audio).catch((VV => {
+        throw new JV(VV)
       }));
-      if (null !== aM) return aM;
-      if (jM !== rM || MM.isStopped) throw new Error("the core stopped while the game code loaded");
-      if (aM = iM.startGameHost(MM, rM.shell), null === aM) throw new Error("the core's shared tables didn't read, so the game can't start");
-      return aM
+      if (null !== yV) return yV;
+      if (UV !== eV || VV.isStopped) throw new Error("the core stopped while the game code loaded");
+      if (yV = xV.startGameHost(VV, eV.shell), null === yV) throw new Error("the core's shared tables didn't read, so the game can't start");
+      return yV
     }
 
-    function yM() {
-      null !== aM && (null !== nM ? nM.endGameHost(aM) : aM.closeGame()), aM = null, jM = null
+    function BV() {
+      null !== yV && (null !== QV ? QV.endGameHost(yV) : yV.closeGame()), yV = null, UV = null
     }
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const VV in modules) Object.freeze(modules[VV]);

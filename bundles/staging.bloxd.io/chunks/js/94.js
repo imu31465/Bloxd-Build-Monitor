@@ -1,377 +1,377 @@
 export const id = 94;
 export const ids = [94];
 export const modules = {
-  5142: (MM, rM, iM) => {
-    iM.d(rM, {
-      C: () => mM,
-      d: () => OM,
-      h: () => aM,
-      j: () => dM,
-      l: () => JM,
-      n: () => PM,
-      q: () => SM,
-      r: () => jM,
-      v: () => hM,
-      z: () => HM
+  5243: (VV, eV, xV) => {
+    xV.d(eV, {
+      A: () => kV,
+      E: () => rV,
+      I: () => vV,
+      d: () => JV,
+      h: () => yV,
+      l: () => EV,
+      n: () => bV,
+      r: () => pV,
+      v: () => YV,
+      w: () => UV
     });
-    const OM = /\[([^\]]+)\]\((#[^)]+|[^)\s]+)\)/g;
+    const JV = /\[([^\]]+)\]\((#[^)]+|[^)\s]+)\)/g;
 
-    function SM(MM) {
+    function YV(VV) {
       try {
-        return decodeURIComponent(MM.slice(1))
+        return decodeURIComponent(VV.slice(1))
       } catch {
-        return MM.slice(1)
+        return VV.slice(1)
       }
     }
 
-    function jM(MM) {
-      return MM.replace(/`/g, "").trim().replace(/[^\w{}$-]+/g, "-").replace(/^-+|-+$/g, "")
+    function UV(VV) {
+      return VV.replace(/`/g, "").trim().replace(/[^\w{}$-]+/g, "-").replace(/^-+|-+$/g, "")
     }
-    const aM = new RegExp(`${/(`{1,2})(.+?)\1(?!`)|\*\*(.+?)\*\*|/.source}${OM.source}`, "g");
+    const yV = new RegExp(`${/(`{1,2})(.+?)\1(?!`)|\*\*(.+?)\*\*|/.source}${JV.source}`, "g");
 
-    function PM(MM, rM) {
-      return 2 === MM.length ? rM.replace(/^ (.*) $/, "$1") : rM
-    }
-
-    function nM(MM) {
-      return "" === MM.trim()
+    function pV(VV, eV) {
+      return 2 === VV.length ? eV.replace(/^ (.*) $/, "$1") : eV
     }
 
-    function QM(MM) {
-      const rM = [];
-      for (const iM of MM.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")) rM.length > 0 && rM[rM.length - 1].endsWith("\\") ? rM[rM.length - 1] += `|${iM}` : rM.push(iM);
-      return rM.map((MM => MM.trim().replaceAll("\\|", "|")))
+    function QV(VV) {
+      return "" === VV.trim()
     }
-    const zM = /^([ \t]*)([-*]|\d+\.)[ \t]+(.*)$/;
 
-    function LM(MM) {
-      const rM = [],
-        iM = [{
+    function nV(VV) {
+      const eV = [];
+      for (const xV of VV.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")) eV.length > 0 && eV[eV.length - 1].endsWith("\\") ? eV[eV.length - 1] += `|${xV}` : eV.push(xV);
+      return eV.map((VV => VV.trim().replaceAll("\\|", "|")))
+    }
+    const wV = /^([ \t]*)([-*]|\d+\.)[ \t]+(.*)$/;
+
+    function ZV(VV) {
+      const eV = [],
+        xV = [{
           indent: -1,
-          items: rM
+          items: eV
         }];
-      let OM = null;
-      for (const SM of MM) {
-        const MM = SM.match(zM);
-        if (!MM) {
-          OM && (OM.text += ` ${SM.trim()}`);
+      let JV = null;
+      for (const YV of VV) {
+        const VV = YV.match(wV);
+        if (!VV) {
+          JV && (JV.text += ` ${YV.trim()}`);
           continue
         }
-        const rM = MM[1].replace(/\t/g, "  ").length;
-        for (; rM <= iM[iM.length - 1].indent;) iM.pop();
-        OM = {
-          text: MM[3].trim(),
+        const eV = VV[1].replace(/\t/g, "  ").length;
+        for (; eV <= xV[xV.length - 1].indent;) xV.pop();
+        JV = {
+          text: VV[3].trim(),
           children: []
-        }, iM[iM.length - 1].items.push(OM), iM.push({
-          indent: rM,
-          items: OM.children
+        }, xV[xV.length - 1].items.push(JV), xV.push({
+          indent: eV,
+          items: JV.children
         })
       }
-      return rM
+      return eV
     }
 
-    function mM(MM) {
-      const rM = MM.replace(/\r\n/g, "\n").split("\n"),
-        iM = [];
-      let OM = 0;
-      for (; OM < rM.length;) {
-        const MM = rM[OM];
-        if (nM(MM)) {
-          OM++;
+    function vV(VV) {
+      const eV = VV.replace(/\r\n/g, "\n").split("\n"),
+        xV = [];
+      let JV = 0;
+      for (; JV < eV.length;) {
+        const VV = eV[JV];
+        if (QV(VV)) {
+          JV++;
           continue
         }
-        const SM = MM.match(/^\s*```\s*(\w*)\s*$/);
-        if (SM) {
-          const MM = [];
-          for (OM++; OM < rM.length && !/^\s*```\s*$/.test(rM[OM]);) MM.push(rM[OM]), OM++;
-          OM++, iM.push({
+        const YV = VV.match(/^\s*```\s*(\w*)\s*$/);
+        if (YV) {
+          const VV = [];
+          for (JV++; JV < eV.length && !/^\s*```\s*$/.test(eV[JV]);) VV.push(eV[JV]), JV++;
+          JV++, xV.push({
             kind: "code",
-            lang: SM[1] || "text",
-            code: MM.join("\n").replace(/\s+$/, "")
+            lang: YV[1] || "text",
+            code: VV.join("\n").replace(/\s+$/, "")
           });
           continue
         }
-        const aM = MM.match(/^(#{1,6})\s+(.+?)\s*#*$/);
-        if (aM) {
-          const MM = aM[2].trim();
-          iM.push({
+        const yV = VV.match(/^(#{1,6})\s+(.+?)\s*#*$/);
+        if (yV) {
+          const VV = yV[2].trim();
+          xV.push({
             kind: "heading",
-            level: aM[1].length,
-            text: MM,
-            anchor: jM(MM)
-          }), OM++;
+            level: yV[1].length,
+            text: VV,
+            anchor: UV(VV)
+          }), JV++;
           continue
         }
-        if (/^\s*(-{3,}|\*{3,})\s*$/.test(MM)) {
-          iM.push({
+        if (/^\s*(-{3,}|\*{3,})\s*$/.test(VV)) {
+          xV.push({
             kind: "rule"
-          }), OM++;
+          }), JV++;
           continue
         }
-        if (MM.trim().startsWith("|") && OM + 1 < rM.length && /^\s*\|[\s:|-]+\|\s*$/.test(rM[OM + 1])) {
-          const SM = QM(MM),
-            jM = [];
-          for (OM += 2; OM < rM.length && rM[OM].trim().startsWith("|");) jM.push(QM(rM[OM])), OM++;
-          iM.push({
+        if (VV.trim().startsWith("|") && JV + 1 < eV.length && /^\s*\|[\s:|-]+\|\s*$/.test(eV[JV + 1])) {
+          const YV = nV(VV),
+            UV = [];
+          for (JV += 2; JV < eV.length && eV[JV].trim().startsWith("|");) UV.push(nV(eV[JV])), JV++;
+          xV.push({
             kind: "table",
-            header: SM,
-            rows: jM
+            header: YV,
+            rows: UV
           });
           continue
         }
-        if (MM.startsWith(">")) {
-          const MM = [];
-          for (; OM < rM.length && rM[OM].startsWith(">");) MM.push(rM[OM].replace(/^>\s?/, "")), OM++;
-          iM.push({
+        if (VV.startsWith(">")) {
+          const VV = [];
+          for (; JV < eV.length && eV[JV].startsWith(">");) VV.push(eV[JV].replace(/^>\s?/, "")), JV++;
+          xV.push({
             kind: "quote",
-            blocks: mM(MM.join("\n"))
+            blocks: vV(VV.join("\n"))
           });
           continue
         }
-        if (zM.test(MM)) {
-          const SM = [],
-            jM = /^\s*\d+\./.test(MM);
-          for (; OM < rM.length && !nM(rM[OM]) && (zM.test(rM[OM]) || /^\s+\S/.test(rM[OM]));) SM.push(rM[OM]), OM++;
-          iM.push({
+        if (wV.test(VV)) {
+          const YV = [],
+            UV = /^\s*\d+\./.test(VV);
+          for (; JV < eV.length && !QV(eV[JV]) && (wV.test(eV[JV]) || /^\s+\S/.test(eV[JV]));) YV.push(eV[JV]), JV++;
+          xV.push({
             kind: "list",
-            ordered: jM,
-            items: LM(SM)
+            ordered: UV,
+            items: ZV(YV)
           });
           continue
         }
-        const PM = [];
-        for (; OM < rM.length && !nM(rM[OM]) && !/^\s*```/.test(rM[OM]) && !/^#{1,6}\s/.test(rM[OM]) && !rM[OM].startsWith(">") && !zM.test(rM[OM]) && (!rM[OM].trim().startsWith("|") || 0 !== PM.length);) PM.push(rM[OM].trim()), OM++;
-        0 === PM.length && (PM.push(rM[OM].trim()), OM++), iM.push({
+        const pV = [];
+        for (; JV < eV.length && !QV(eV[JV]) && !/^\s*```/.test(eV[JV]) && !/^#{1,6}\s/.test(eV[JV]) && !eV[JV].startsWith(">") && !wV.test(eV[JV]) && (!eV[JV].trim().startsWith("|") || 0 !== pV.length);) pV.push(eV[JV].trim()), JV++;
+        0 === pV.length && (pV.push(eV[JV].trim()), JV++), xV.push({
           kind: "paragraph",
-          text: PM.join(" ")
+          text: pV.join(" ")
         })
       }
-      return iM
+      return xV
     }
 
-    function HM(MM) {
-      let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
-      const iM = mM(MM);
-      let OM = "";
-      const SM = [],
-        jM = [],
-        aM = new Map;
-      for (const QM of iM) {
-        if ("heading" === QM.kind) {
-          var PM;
-          const MM = (null !== (PM = aM.get(QM.anchor)) && void 0 !== PM ? PM : 0) + 1;
-          aM.set(QM.anchor, MM), MM > 1 && (QM.anchor = `${QM.anchor}-${MM}`)
+    function rV(VV) {
+      let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
+      const xV = vV(VV);
+      let JV = "";
+      const YV = [],
+        UV = [],
+        yV = new Map;
+      for (const nV of xV) {
+        if ("heading" === nV.kind) {
+          var pV;
+          const VV = (null !== (pV = yV.get(nV.anchor)) && void 0 !== pV ? pV : 0) + 1;
+          yV.set(nV.anchor, VV), VV > 1 && (nV.anchor = `${nV.anchor}-${VV}`)
         }
-        if ("heading" === QM.kind && 1 === QM.level && !OM) {
-          OM = QM.text;
+        if ("heading" === nV.kind && 1 === nV.level && !JV) {
+          JV = nV.text;
           continue
         }
-        if ("heading" === QM.kind && QM.level <= rM) {
-          jM.push({
-            heading: QM,
+        if ("heading" === nV.kind && nV.level <= eV) {
+          UV.push({
+            heading: nV,
             blocks: []
           });
           continue
         }
-        const MM = jM.at(-1);
-        MM ? MM.blocks.push(QM) : SM.push(QM)
+        const VV = UV.at(-1);
+        VV ? VV.blocks.push(nV) : YV.push(nV)
       }
-      const nM = MM => {
+      const QV = VV => {
         for (;
-          "rule" === (null === (rM = MM.at(-1)) || void 0 === rM ? void 0 : rM.kind);) {
-          var rM;
-          MM.pop()
+          "rule" === (null === (eV = VV.at(-1)) || void 0 === eV ? void 0 : eV.kind);) {
+          var eV;
+          VV.pop()
         }
       };
-      nM(SM);
-      for (const QM of jM) nM(QM.blocks);
+      QV(YV);
+      for (const nV of UV) QV(nV.blocks);
       return {
-        title: OM,
-        intro: SM,
-        sections: jM
+        title: JV,
+        intro: YV,
+        sections: UV
       }
     }
 
-    function hM(MM) {
+    function kV(VV) {
       return [{
         heading: null,
-        blocks: MM.intro
-      }, ...MM.sections.map((MM => ({
-        heading: MM.heading,
-        blocks: MM.blocks
+        blocks: VV.intro
+      }, ...VV.sections.map((VV => ({
+        heading: VV.heading,
+        blocks: VV.blocks
       })))]
     }
 
-    function JM(MM) {
-      return MM.flatMap((MM => "code" === MM.kind ? [MM] : "quote" === MM.kind ? JM(MM.blocks) : []))
+    function bV(VV) {
+      return VV.flatMap((VV => "code" === VV.kind ? [VV] : "quote" === VV.kind ? bV(VV.blocks) : []))
     }
 
-    function dM(MM) {
-      switch (MM.kind) {
+    function EV(VV) {
+      switch (VV.kind) {
         case "heading":
         case "paragraph":
-          return MM.text;
+          return VV.text;
         case "code":
-          return MM.code;
+          return VV.code;
         case "table":
-          return [MM.header, ...MM.rows].map((MM => MM.join(" "))).join(" ");
+          return [VV.header, ...VV.rows].map((VV => VV.join(" "))).join(" ");
         case "list": {
-          const rM = MM => MM.map((MM => `${MM.text} ${rM(MM.children)}`)).join(" ");
-          return rM(MM.items)
+          const eV = VV => VV.map((VV => `${VV.text} ${eV(VV.children)}`)).join(" ");
+          return eV(VV.items)
         }
         case "quote":
-          return MM.blocks.map(dM).join(" ");
+          return VV.blocks.map(EV).join(" ");
         case "rule":
           return ""
       }
     }
   },
-  6966: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => LM,
-      f: () => aM,
-      h: () => PM
+  7054: (VV, eV, xV) => {
+    xV.d(eV, {
+      c: () => ZV,
+      g: () => yV,
+      k: () => pV
     });
-    iM(6963);
-    var OM = iM(44),
-      SM = iM(5142),
-      jM = iM(1303);
-    const aM = /\[([^\][\n]{1,200})\]\(([^)\s]{1,500})\)|\*\*([^*]+)\*\*|__([^_]+)__|\*([^*\s][^*]*)\*|`([^`]+)`/g;
+    xV(7046);
+    var JV = xV(62),
+      YV = xV(5243),
+      UV = xV(1321);
+    const yV = /\[([^\][\n]{1,200})\]\(([^)\s]{1,500})\)|\*\*([^*]+)\*\*|__([^_]+)__|\*([^*\s][^*]*)\*|`([^`]+)`/g;
 
-    function PM(MM, rM) {
-      return MM === rM ? MM : `${MM} (${rM})`
+    function pV(VV, eV) {
+      return VV === eV ? VV : `${VV} (${eV})`
     }
 
-    function nM(MM) {
-      const rM = [];
-      let iM = 0;
-      for (const OM of MM.matchAll(aM)) {
-        OM.index > iM && rM.push(MM.slice(iM, OM.index));
-        const [, SM, aM, nM, QM, zM, LM] = OM;
-        void 0 !== SM ? rM.push(PM(SM, aM)) : void 0 !== nM || void 0 !== QM ? rM.push((0, jM.jsx)("strong", {
-          children: null !== nM && void 0 !== nM ? nM : QM
-        }, OM.index)) : void 0 !== zM ? rM.push((0, jM.jsx)("em", {
-          children: zM
-        }, OM.index)) : rM.push((0, jM.jsx)("code", {
-          children: LM
-        }, OM.index)), iM = OM.index + OM[0].length
+    function QV(VV) {
+      const eV = [];
+      let xV = 0;
+      for (const JV of VV.matchAll(yV)) {
+        JV.index > xV && eV.push(VV.slice(xV, JV.index));
+        const [, YV, yV, QV, nV, wV, ZV] = JV;
+        void 0 !== YV ? eV.push(pV(YV, yV)) : void 0 !== QV || void 0 !== nV ? eV.push((0, UV.jsx)("strong", {
+          children: null !== QV && void 0 !== QV ? QV : nV
+        }, JV.index)) : void 0 !== wV ? eV.push((0, UV.jsx)("em", {
+          children: wV
+        }, JV.index)) : eV.push((0, UV.jsx)("code", {
+          children: ZV
+        }, JV.index)), xV = JV.index + JV[0].length
       }
-      return iM < MM.length && rM.push(MM.slice(iM)), rM
+      return xV < VV.length && eV.push(VV.slice(xV)), eV
     }
 
-    function QM(MM, rM) {
-      let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
-      const OM = MM.map(((MM, rM) => (0, jM.jsxs)("li", {
-        children: [nM(MM.text), MM.children.length > 0 && QM(MM.children, !1)]
-      }, rM)));
-      return rM ? (0, jM.jsx)("ol", {
-        start: iM,
-        children: OM
-      }) : (0, jM.jsx)("ul", {
-        children: OM
+    function nV(VV, eV) {
+      let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
+      const JV = VV.map(((VV, eV) => (0, UV.jsxs)("li", {
+        children: [QV(VV.text), VV.children.length > 0 && nV(VV.children, !1)]
+      }, eV)));
+      return eV ? (0, UV.jsx)("ol", {
+        start: xV,
+        children: JV
+      }) : (0, UV.jsx)("ul", {
+        children: JV
       })
     }
 
-    function zM(MM, rM) {
-      switch (MM.kind) {
+    function wV(VV, eV) {
+      switch (VV.kind) {
         case "heading":
-          return MM.level <= 2 ? (0, jM.jsx)("h3", {
-            children: nM(MM.text)
-          }, rM) : (0, jM.jsx)("h4", {
-            children: nM(MM.text)
-          }, rM);
+          return VV.level <= 2 ? (0, UV.jsx)("h3", {
+            children: QV(VV.text)
+          }, eV) : (0, UV.jsx)("h4", {
+            children: QV(VV.text)
+          }, eV);
         case "paragraph":
-          return (0, jM.jsx)("p", {
-            children: nM(MM.text)
-          }, rM);
+          return (0, UV.jsx)("p", {
+            children: QV(VV.text)
+          }, eV);
         case "list":
-          return (0, jM.jsx)(OM.Fragment, {
-            children: QM(MM.items, MM.ordered)
-          }, rM);
+          return (0, UV.jsx)(JV.Fragment, {
+            children: nV(VV.items, VV.ordered)
+          }, eV);
         case "quote":
-          return (0, jM.jsx)("blockquote", {
-            children: MM.blocks.map(((MM, rM) => zM(MM, rM)))
-          }, rM);
+          return (0, UV.jsx)("blockquote", {
+            children: VV.blocks.map(((VV, eV) => wV(VV, eV)))
+          }, eV);
         case "code":
-          return (0, jM.jsx)("pre", {
-            children: (0, jM.jsx)("code", {
-              children: MM.code
+          return (0, UV.jsx)("pre", {
+            children: (0, UV.jsx)("code", {
+              children: VV.code
             })
-          }, rM);
+          }, eV);
         case "table":
-          return (0, jM.jsxs)("table", {
-            children: [(0, jM.jsx)("thead", {
-              children: (0, jM.jsx)("tr", {
-                children: MM.header.map(((MM, rM) => (0, jM.jsx)("th", {
-                  children: nM(MM)
-                }, rM)))
+          return (0, UV.jsxs)("table", {
+            children: [(0, UV.jsx)("thead", {
+              children: (0, UV.jsx)("tr", {
+                children: VV.header.map(((VV, eV) => (0, UV.jsx)("th", {
+                  children: QV(VV)
+                }, eV)))
               })
-            }), (0, jM.jsx)("tbody", {
-              children: MM.rows.map(((MM, rM) => (0, jM.jsx)("tr", {
-                children: MM.map(((MM, rM) => (0, jM.jsx)("td", {
-                  children: nM(MM)
-                }, rM)))
-              }, rM)))
+            }), (0, UV.jsx)("tbody", {
+              children: VV.rows.map(((VV, eV) => (0, UV.jsx)("tr", {
+                children: VV.map(((VV, eV) => (0, UV.jsx)("td", {
+                  children: QV(VV)
+                }, eV)))
+              }, eV)))
             })]
-          }, rM);
+          }, eV);
         case "rule":
-          return (0, jM.jsx)("hr", {}, rM)
+          return (0, UV.jsx)("hr", {}, eV)
       }
     }
 
-    function LM(MM) {
+    function ZV(VV) {
       let {
-        markdown: rM
-      } = MM, iM = 0;
-      return (0, jM.jsx)("div", {
+        markdown: eV
+      } = VV, xV = 0;
+      return (0, UV.jsx)("div", {
         className: "StudioAiAnswerText",
-        children: (0, SM.C)(rM).map(((MM, rM) => {
-          if ("list" !== MM.kind || !MM.ordered) return iM = 0, zM(MM, rM);
-          const SM = iM + 1;
-          return iM += MM.items.length, (0, jM.jsx)(OM.Fragment, {
-            children: QM(MM.items, !0, SM)
-          }, rM)
+        children: (0, YV.I)(eV).map(((VV, eV) => {
+          if ("list" !== VV.kind || !VV.ordered) return xV = 0, wV(VV, eV);
+          const YV = xV + 1;
+          return xV += VV.items.length, (0, UV.jsx)(JV.Fragment, {
+            children: nV(VV.items, !0, YV)
+          }, eV)
         }))
       })
     }
   },
-  6956: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => lM,
-      g: () => EM,
-      c: () => GM,
-      k: () => hM
+  7039: (VV, eV, xV) => {
+    xV.d(eV, {
+      d: () => jV,
+      i: () => qV,
+      e: () => FV,
+      l: () => kV
     });
-    var OM = iM(1215),
-      SM = iM(6905),
-      jM = iM(5273);
-    const aM = /\b(the prompt (says|asks|wants|tells)|the user (wants|asks|said)|my instructions(?! (?:below|above|here|in step))|the instructions (say|ask)|as instructed(?! (?:below|above|here|in step|by (?!the (?:prompt|user|system)\b))))\b/i;
+    var JV = xV(1241),
+      YV = xV(7003),
+      UV = xV(5364);
+    const yV = /\b(the prompt (says|asks|wants|tells)|the user (wants|asks|said)|my instructions(?! (?:below|above|here|in step))|the instructions (say|ask)|as instructed(?! (?:below|above|here|in step|by (?!the (?:prompt|user|system)\b))))\b/i;
 
-    function PM(MM) {
-      return (0, jM.e)(MM, aM, (rM => !/^my/i.test(rM[0]) || !/follow $/i.test(MM.slice(0, rM.index)))).length > 0
+    function pV(VV) {
+      return (0, UV.h)(VV, yV, (eV => !/^my/i.test(eV[0]) || !/follow $/i.test(VV.slice(0, eV.index)))).length > 0
     }
-    const nM = /\byou(?:r|'re|'ll)?\b/i,
-      QM = /^(?:[-*]\s+|\d+\.\s+)?(actually,|wait[,.!]|hmm\b|let me (think|re-?read|re-?check|reconsider)\b|let's (assume|think|re-?read|reconsider|go with)\b|i will\b|i'll (suggest|go with|pick)\b|i need to\b|i should\b|i don't have\b|since i (can|cannot|can't|don't)\b|okay,? so\b)/i,
-      zM = 2;
+    const QV = /\byou(?:r|'re|'ll)?\b/i,
+      nV = /^(?:[-*]\s+|\d+\.\s+)?(actually,|wait[,.!]|hmm\b|let me (think|re-?read|re-?check|reconsider)\b|let's (assume|think|re-?read|reconsider|go with)\b|i will\b|i'll (suggest|go with|pick)\b|i need to\b|i should\b|i don't have\b|since i (can|cannot|can't|don't)\b|okay,? so\b)/i,
+      wV = 2;
 
-    function LM(MM) {
-      return function(MM) {
-        const rM = [];
-        let iM = !1;
-        for (const OM of MM.split("\n")) {
-          if (/^\s*(```|~~~)/.test(OM)) {
-            iM = !iM;
+    function ZV(VV) {
+      return function(VV) {
+        const eV = [];
+        let xV = !1;
+        for (const JV of VV.split("\n")) {
+          if (/^\s*(```|~~~)/.test(JV)) {
+            xV = !xV;
             continue
           }
-          if (iM || /^\s*>/.test(OM)) continue;
-          const MM = OM.replace(/`[^`]*`/g, "code").replace(/"[^"]*"|\u201c[^\u201d]*\u201d/g, '"quote"').trim();
-          rM.push(...(0, SM.u)(MM))
+          if (xV || /^\s*>/.test(JV)) continue;
+          const VV = JV.replace(/`[^`]*`/g, "code").replace(/"[^"]*"|\u201c[^\u201d]*\u201d/g, '"quote"').trim();
+          eV.push(...(0, YV.s)(VV))
         }
-        return rM
-      }(MM).filter((MM => PM(MM) || QM.test(MM) && !nM.test(MM)))
+        return eV
+      }(VV).filter((VV => pV(VV) || nV.test(VV) && !QV.test(VV)))
     }
-    const mM = "https://oai.endpoints.kepler.ai.cloud.ovh.net/v1/chat/completions",
-      HM = [{
+    const vV = "https://oai.endpoints.kepler.ai.cloud.ovh.net/v1/chat/completions",
+      rV = [{
         name: "Qwen3.6-27B",
         temperature: .7,
         reasoningEffort: "none"
@@ -384,317 +384,317 @@ export const modules = {
         temperature: .15
       }];
 
-    function hM(MM) {
-      const rM = HM.findIndex((rM => rM.name === MM));
-      return -1 === rM ? HM.length : rM
+    function kV(VV) {
+      const eV = rV.findIndex((eV => eV.name === VV));
+      return -1 === eV ? rV.length : eV
     }
-    const JM = 2500,
-      dM = 12e4;
-    class yM extends Error {
-      constructor(MM) {
-        super(`Studio AI chat ${MM}`), this.reason = MM
+    const bV = 2500,
+      EV = 12e4;
+    class BV extends Error {
+      constructor(VV) {
+        super(`Studio AI chat ${VV}`), this.reason = VV
       }
     }
 
-    function lM(MM, rM) {
-      const iM = new AbortController,
-        OM = () => {
-          iM.abort()
+    function jV(VV, eV) {
+      const xV = new AbortController,
+        JV = () => {
+          xV.abort()
         },
-        SM = setTimeout(OM, MM);
-      return null !== rM && void 0 !== rM && rM.aborted && OM(), null === rM || void 0 === rM || rM.addEventListener("abort", OM, {
+        YV = setTimeout(JV, VV);
+      return null !== eV && void 0 !== eV && eV.aborted && JV(), null === eV || void 0 === eV || eV.addEventListener("abort", JV, {
         once: !0
       }), {
-        signal: iM.signal,
+        signal: xV.signal,
         clear: () => {
-          clearTimeout(SM), null === rM || void 0 === rM || rM.removeEventListener("abort", OM)
+          clearTimeout(YV), null === eV || void 0 === eV || eV.removeEventListener("abort", JV)
         }
       }
     }
 
-    function EM(MM, rM, iM) {
-      return new Promise(((SM, jM) => {
-        const aM = new AbortController,
-          PM = () => {
-            aM.abort(), jM((0, OM.f)(iM))
+    function qV(VV, eV, xV) {
+      return new Promise(((YV, UV) => {
+        const yV = new AbortController,
+          pV = () => {
+            yV.abort(), UV((0, JV.g)(xV))
           };
-        if (null !== iM && void 0 !== iM && iM.aborted) return void PM();
-        null === iM || void 0 === iM || iM.addEventListener("abort", PM, {
+        if (null !== xV && void 0 !== xV && xV.aborted) return void pV();
+        null === xV || void 0 === xV || xV.addEventListener("abort", pV, {
           once: !0
         });
-        const nM = HM.map((() => !1));
-        let QM = null;
-        const zM = HM.map((() => !1)),
-          LM = HM.map((() => !1));
-        HM.forEach(((OM, mM) => {
-          const hM = lM(dM, aM.signal);
-          CM(OM, [{
+        const QV = rV.map((() => !1));
+        let nV = null;
+        const wV = rV.map((() => !1)),
+          ZV = rV.map((() => !1));
+        rV.forEach(((JV, vV) => {
+          const kV = jV(EV, yV.signal);
+          TV(JV, [{
             role: "user",
-            content: MM
-          }], hM.signal).then((MM => {
-            aM.signal.aborted || ("busy" === MM || "failed" === MM ? (zM[mM] = "busy" === MM, LM[mM] = !0) : null !== MM && (null === QM || mM < QM.rank) && (QM = {
-              rank: mM,
+            content: VV
+          }], kV.signal).then((VV => {
+            yV.signal.aborted || ("busy" === VV || "failed" === VV ? (wV[vV] = "busy" === VV, ZV[vV] = !0) : null !== VV && (null === nV || vV < nV.rank) && (nV = {
+              rank: vV,
               answer: {
-                text: MM.text,
-                model: OM.name
+                text: VV.text,
+                model: JV.name
               }
-            }, rM(QM.answer)))
-          }), (MM => {
-            aM.signal.aborted || (LM[mM] = !0, console.warn(`Studio AI: ${OM.name} couldn't be reached`, MM))
+            }, eV(nV.answer)))
+          }), (VV => {
+            yV.signal.aborted || (ZV[vV] = !0, console.warn(`Studio AI: ${JV.name} couldn't be reached`, VV))
           })).finally((() => {
-            hM.clear(), nM[mM] = !0, aM.signal.aborted || (() => {
-              var MM, rM;
-              const OM = null !== (MM = null === (rM = QM) || void 0 === rM ? void 0 : rM.rank) && void 0 !== MM ? MM : HM.length;
-              nM.slice(0, OM).includes(!1) || (null === iM || void 0 === iM || iM.removeEventListener("abort", PM), aM.abort(), null !== QM ? SM({
-                ...QM.answer,
-                isFinal: !LM.slice(0, QM.rank).includes(!0)
-              }) : jM(new yM(zM.includes(!0) ? "busy" : "failed")))
+            kV.clear(), QV[vV] = !0, yV.signal.aborted || (() => {
+              var VV, eV;
+              const JV = null !== (VV = null === (eV = nV) || void 0 === eV ? void 0 : eV.rank) && void 0 !== VV ? VV : rV.length;
+              QV.slice(0, JV).includes(!1) || (null === xV || void 0 === xV || xV.removeEventListener("abort", pV), yV.abort(), null !== nV ? YV({
+                ...nV.answer,
+                isFinal: !ZV.slice(0, nV.rank).includes(!0)
+              }) : UV(new BV(wV.includes(!0) ? "busy" : "failed")))
             })()
-          })).catch((MM => {
-            console.error("Studio AI: showing an answer failed", MM)
+          })).catch((VV => {
+            console.error("Studio AI: showing an answer failed", VV)
           }))
         }))
       }))
     }
 
-    function UM(MM) {
-      var rM, iM;
-      return "length" === (null === MM || void 0 === MM || null === (rM = MM.choices) || void 0 === rM || null === (iM = rM[0]) || void 0 === iM ? void 0 : iM.finish_reason)
+    function tV(VV) {
+      var eV, xV;
+      return "length" === (null === VV || void 0 === VV || null === (eV = VV.choices) || void 0 === eV || null === (xV = eV[0]) || void 0 === xV ? void 0 : xV.finish_reason)
     }
-    async function GM(MM, rM, iM) {
-      const OM = HM.find((rM => rM.name === MM));
-      if (void 0 === OM) return "failed";
-      const SM = lM(dM, iM);
+    async function FV(VV, eV, xV) {
+      const JV = rV.find((eV => eV.name === VV));
+      if (void 0 === JV) return "failed";
+      const YV = jV(EV, xV);
       try {
-        const MM = await CM(OM, rM, SM.signal);
-        return null !== MM && "object" === typeof MM ? MM.isCutOff ? (console.warn(`Studio AI: ${OM.name}'s answer was cut off at the token limit`), null) : {
-          text: MM.text
-        } : MM
+        const VV = await TV(JV, eV, YV.signal);
+        return null !== VV && "object" === typeof VV ? VV.isCutOff ? (console.warn(`Studio AI: ${JV.name}'s answer was cut off at the token limit`), null) : {
+          text: VV.text
+        } : VV
       } finally {
-        SM.clear()
+        YV.clear()
       }
     }
-    async function CM(MM, rM, iM) {
-      const OM = await fetch(mM, {
+    async function TV(VV, eV, xV) {
+      const JV = await fetch(vV, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
         },
         body: JSON.stringify({
-          model: MM.name,
-          messages: rM,
-          max_tokens: JM,
-          temperature: MM.temperature,
-          reasoning_effort: MM.reasoningEffort
+          model: VV.name,
+          messages: eV,
+          max_tokens: bV,
+          temperature: VV.temperature,
+          reasoning_effort: VV.reasoningEffort
         }),
         credentials: "omit",
         referrerPolicy: "no-referrer",
-        signal: iM
+        signal: xV
       });
-      if (429 === OM.status) return "busy";
-      if (!OM.ok) return console.warn(`Studio AI: ${MM.name} answered ${OM.status}`), "failed";
-      const SM = await OM.json().catch((() => null)),
-        jM = function(MM) {
-          var rM, iM, OM;
-          const SM = null === MM || void 0 === MM || null === (rM = MM.choices) || void 0 === rM || null === (iM = rM[0]) || void 0 === iM || null === (OM = iM.message) || void 0 === OM ? void 0 : OM.content;
-          if ("string" !== typeof SM) return null;
-          const jM = SM.replace(/<think>[\s\S]*?<\/think>/g, "").trim();
-          return "" === jM ? null : jM
-        }(SM);
-      return null !== jM && function(MM) {
-        const rM = LM(MM);
-        return rM.length >= zM || rM.some((MM => PM(MM)))
-      }(jM) ? (console.warn(`Studio AI: ${MM.name} thought out loud instead of answering`), "failed") : null === jM ? null : {
-        text: jM,
-        isCutOff: UM(SM)
+      if (429 === JV.status) return "busy";
+      if (!JV.ok) return console.warn(`Studio AI: ${VV.name} answered ${JV.status}`), "failed";
+      const YV = await JV.json().catch((() => null)),
+        UV = function(VV) {
+          var eV, xV, JV;
+          const YV = null === VV || void 0 === VV || null === (eV = VV.choices) || void 0 === eV || null === (xV = eV[0]) || void 0 === xV || null === (JV = xV.message) || void 0 === JV ? void 0 : JV.content;
+          if ("string" !== typeof YV) return null;
+          const UV = YV.replace(/<think>[\s\S]*?<\/think>/g, "").trim();
+          return "" === UV ? null : UV
+        }(YV);
+      return null !== UV && function(VV) {
+        const eV = ZV(VV);
+        return eV.length >= wV || eV.some((VV => pV(VV)))
+      }(UV) ? (console.warn(`Studio AI: ${VV.name} thought out loud instead of answering`), "failed") : null === UV ? null : {
+        text: UV,
+        isCutOff: tV(YV)
       }
     }
   },
-  6905: (MM, rM, iM) => {
-    iM.d(rM, {
-      B: () => UM,
-      E: () => CM,
-      H: () => dM,
-      I: () => EM,
-      M: () => GM,
-      Q: () => lM,
-      S: () => LM,
-      U: () => QM,
-      W: () => HM,
-      e: () => hM,
-      i: () => PM,
-      l: () => aM,
-      p: () => JM,
-      t: () => mM,
-      u: () => zM,
-      x: () => jM,
-      z: () => SM
+  7003: (VV, eV, xV) => {
+    xV.d(eV, {
+      C: () => tV,
+      G: () => TV,
+      H: () => EV,
+      J: () => qV,
+      K: () => FV,
+      M: () => jV,
+      N: () => ZV,
+      R: () => nV,
+      V: () => rV,
+      e: () => kV,
+      g: () => pV,
+      i: () => yV,
+      m: () => bV,
+      o: () => vV,
+      s: () => wV,
+      v: () => UV,
+      z: () => YV
     });
-    var OM = iM(5273);
-    const SM = 2e3,
-      jM = 2e4;
+    var JV = xV(5364);
+    const YV = 2e3,
+      UV = 2e4;
 
-    function aM(MM) {
-      return MM.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+    function yV(VV) {
+      return VV.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
     }
 
-    function PM(MM) {
-      return MM.replace(/\$/g, "\\$")
+    function pV(VV) {
+      return VV.replace(/\$/g, "\\$")
     }
-    const nM = /[.!?](?=\s|\*|_|$)|\n|$/g;
+    const QV = /[.!?](?=\s|\*|_|$)|\n|$/g;
 
-    function QM(MM, rM) {
-      nM.lastIndex = rM;
-      const iM = nM.exec(MM);
-      return iM.index + iM[0].length
-    }
-
-    function zM(MM) {
-      return (0, OM.r)(MM, /\s+/g, (0, OM.n)(".!?")).flatMap((MM => MM.split("\n")))
+    function nV(VV, eV) {
+      QV.lastIndex = eV;
+      const xV = QV.exec(VV);
+      return xV.index + xV[0].length
     }
 
-    function LM(MM, rM) {
-      let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : rM;
-      const OM = [...MM.matchAll(/[.!?](?!\d)(?=\s|$)/g)].map((MM => MM.index)),
-        SM = OM.filter((MM => MM < rM)),
-        jM = OM.find((MM => MM >= iM));
-      return [0 === SM.length ? 0 : SM.at(-1) + 1, void 0 === jM ? MM.length : jM + 1]
+    function wV(VV) {
+      return (0, JV.B)(VV, /\s+/g, (0, JV.w)(".!?")).flatMap((VV => VV.split("\n")))
     }
 
-    function mM(MM, rM) {
-      const iM = MM.charCodeAt(rM - 1);
-      return MM.slice(0, rM > 0 && rM < MM.length && iM >= 55296 && iM <= 56319 ? rM - 1 : rM)
+    function ZV(VV, eV) {
+      let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : eV;
+      const JV = [...VV.matchAll(/[.!?](?!\d)(?=\s|$)/g)].map((VV => VV.index)),
+        YV = JV.filter((VV => VV < eV)),
+        UV = JV.find((VV => VV >= xV));
+      return [0 === YV.length ? 0 : YV.at(-1) + 1, void 0 === UV ? VV.length : UV + 1]
     }
 
-    function HM(MM, rM) {
-      return `${rM}${MM.replace(/\\/g,"\\\\").split(rM).join(`\\${rM}`)}${rM}`
+    function vV(VV, eV) {
+      const xV = VV.charCodeAt(eV - 1);
+      return VV.slice(0, eV > 0 && eV < VV.length && xV >= 55296 && xV <= 56319 ? eV - 1 : eV)
     }
 
-    function hM(MM) {
-      return MM.charAt(0).toUpperCase() + MM.slice(1)
+    function rV(VV, eV) {
+      return `${eV}${VV.replace(/\\/g,"\\\\").split(eV).join(`\\${eV}`)}${eV}`
     }
 
-    function JM(MM) {
-      return Math.round(MM).toLocaleString("en-US")
+    function kV(VV) {
+      return VV.charAt(0).toUpperCase() + VV.slice(1)
     }
 
-    function dM(MM) {
-      return MM.replace(/([a-z\d])([A-Z])/g, "$1 $2").toLowerCase().split(/[^a-z\d]+/).filter((MM => "" !== MM))
-    }
-    const yM = 3;
-
-    function lM(MM, rM) {
-      return dM(MM).filter((MM => MM.length >= yM && !/\d/.test(MM))).map((MM => `${MM} ${rM}`))
+    function bV(VV) {
+      return Math.round(VV).toLocaleString("en-US")
     }
 
-    function EM(MM) {
-      return MM.split(/[\s:_]+/).filter((MM => "" !== MM)).map(aM).join("[`:_\\s]+")
+    function EV(VV) {
+      return VV.replace(/([a-z\d])([A-Z])/g, "$1 $2").toLowerCase().split(/[^a-z\d]+/).filter((VV => "" !== VV))
+    }
+    const BV = 3;
+
+    function jV(VV, eV) {
+      return EV(VV).filter((VV => VV.length >= BV && !/\d/.test(VV))).map((VV => `${VV} ${eV}`))
     }
 
-    function UM(MM) {
-      return dM(MM.split(".").pop())
+    function qV(VV) {
+      return VV.split(/[\s:_]+/).filter((VV => "" !== VV)).map(yV).join("[`:_\\s]+")
     }
 
-    function GM(MM) {
-      return MM.replace(/([a-z0-9])([A-Z])/g, "$1 $2").toLowerCase().replace(/[^\p{L}\p{N}]+/gu, " ").trim()
+    function tV(VV) {
+      return EV(VV.split(".").pop())
     }
 
-    function CM(MM) {
-      let rM = null;
+    function FV(VV) {
+      return VV.replace(/([a-z0-9])([A-Z])/g, "$1 $2").toLowerCase().replace(/[^\p{L}\p{N}]+/gu, " ").trim()
+    }
+
+    function TV(VV) {
+      let eV = null;
       return () => {
-        const iM = rM ??= MM();
-        return iM.catch((() => {
-          rM === iM && (rM = null)
-        })), iM
+        const xV = eV ??= VV();
+        return xV.catch((() => {
+          eV === xV && (eV = null)
+        })), xV
       }
     }
   },
-  5273: (MM, rM, iM) => {
-    function OM(MM) {
+  5364: (VV, eV, xV) => {
+    function JV(VV) {
       return {
-        notAfter: MM
+        notAfter: VV
       }
     }
-    iM.d(rM, {
-      c: () => nM,
-      e: () => QM,
-      f: () => PM,
-      g: () => OM,
-      h: () => SM,
-      j: () => jM,
-      n: () => aM,
-      p: () => zM,
-      r: () => LM
+    xV.d(eV, {
+      B: () => ZV,
+      e: () => QV,
+      h: () => nV,
+      k: () => pV,
+      l: () => JV,
+      o: () => YV,
+      s: () => UV,
+      w: () => yV,
+      z: () => wV
     });
-    const SM = OM("\\w$."),
-      jM = OM("\\w.,");
+    const YV = JV("\\w$."),
+      UV = JV("\\w.,");
 
-    function aM(MM) {
-      return rM => nM(rM, MM)
+    function yV(VV) {
+      return eV => QV(eV, VV)
     }
 
-    function PM(MM) {
-      return rM => !MM.test(rM.input.slice(0, rM.index))
+    function pV(VV) {
+      return eV => !VV.test(eV.input.slice(0, eV.index))
     }
 
-    function nM(MM, rM) {
-      return MM.index > 0 && new RegExp(`[${rM}]`).test(MM.input[MM.index - 1])
+    function QV(VV, eV) {
+      return VV.index > 0 && new RegExp(`[${eV}]`).test(VV.input[VV.index - 1])
     }
 
-    function QM(MM, rM, iM) {
-      return function(MM) {
-        return void 0 !== MM && "function" !== typeof MM
-      }(iM) ? function(MM, rM, iM) {
-        const OM = rM.flags.replace(/[gy]/g, ""),
-          SM = new RegExp(`[^${iM}](?:${rM.source})`, `${OM}g`),
-          jM = [],
-          aM = iM => {
-            const OM = iM.index + iM[0].length;
-            return ("" === iM[0] ? mM(MM, rM, OM) : OM) - 1
+    function nV(VV, eV, xV) {
+      return function(VV) {
+        return void 0 !== VV && "function" !== typeof VV
+      }(xV) ? function(VV, eV, xV) {
+        const JV = eV.flags.replace(/[gy]/g, ""),
+          YV = new RegExp(`[^${xV}](?:${eV.source})`, `${JV}g`),
+          UV = [],
+          yV = xV => {
+            const JV = xV.index + xV[0].length;
+            return ("" === xV[0] ? vV(VV, eV, JV) : JV) - 1
           },
-          PM = new RegExp(`(?:${rM.source})`, `${OM}y`).exec(MM);
-        if (PM) {
-          if (jM.push(PM), !rM.global) return jM;
-          SM.lastIndex = aM(PM)
+          pV = new RegExp(`(?:${eV.source})`, `${JV}y`).exec(VV);
+        if (pV) {
+          if (UV.push(pV), !eV.global) return UV;
+          YV.lastIndex = yV(pV)
         }
-        for (let nM = SM.exec(MM); nM; nM = SM.exec(MM)) {
-          const iM = mM(MM, rM, nM.index) - nM.index;
-          if (nM[0] = nM[0].slice(iM), nM.index += iM, jM.push(nM), !rM.global) break;
-          SM.lastIndex = aM(nM)
+        for (let QV = YV.exec(VV); QV; QV = YV.exec(VV)) {
+          const xV = vV(VV, eV, QV.index) - QV.index;
+          if (QV[0] = QV[0].slice(xV), QV.index += xV, UV.push(QV), !eV.global) break;
+          YV.lastIndex = yV(QV)
         }
-        return jM
-      }(MM, rM, iM.notAfter) : function(MM, rM, iM) {
-        const OM = new RegExp(rM.source, `${rM.flags.replace(/[gy]/g,"")}g`),
-          SM = [];
-        for (let jM = OM.exec(MM); jM; jM = OM.exec(MM))
-          if (!iM || iM(jM)) {
-            if (SM.push(jM), !rM.global) break;
-            "" === jM[0] && (OM.lastIndex = mM(MM, rM, OM.lastIndex))
-          } else OM.lastIndex = mM(MM, rM, jM.index);
-        return SM
-      }(MM, rM, iM)
+        return UV
+      }(VV, eV, xV.notAfter) : function(VV, eV, xV) {
+        const JV = new RegExp(eV.source, `${eV.flags.replace(/[gy]/g,"")}g`),
+          YV = [];
+        for (let UV = JV.exec(VV); UV; UV = JV.exec(VV))
+          if (!xV || xV(UV)) {
+            if (YV.push(UV), !eV.global) break;
+            "" === UV[0] && (JV.lastIndex = vV(VV, eV, JV.lastIndex))
+          } else JV.lastIndex = vV(VV, eV, UV.index);
+        return YV
+      }(VV, eV, xV)
     }
 
-    function zM(MM, rM, iM, OM) {
-      let SM = "",
-        jM = 0;
-      for (const aM of QM(MM, rM, iM)) SM += MM.slice(jM, aM.index) + OM(aM), jM = aM.index + aM[0].length;
-      return SM + MM.slice(jM)
+    function wV(VV, eV, xV, JV) {
+      let YV = "",
+        UV = 0;
+      for (const yV of nV(VV, eV, xV)) YV += VV.slice(UV, yV.index) + JV(yV), UV = yV.index + yV[0].length;
+      return YV + VV.slice(UV)
     }
 
-    function LM(MM, rM, iM) {
-      const OM = [];
-      let SM = 0;
-      for (const jM of QM(MM, rM, iM)) OM.push(MM.slice(SM, jM.index)), SM = jM.index + jM[0].length;
-      return [...OM, MM.slice(SM)]
+    function ZV(VV, eV, xV) {
+      const JV = [];
+      let YV = 0;
+      for (const UV of nV(VV, eV, xV)) JV.push(VV.slice(YV, UV.index)), YV = UV.index + UV[0].length;
+      return [...JV, VV.slice(YV)]
     }
 
-    function mM(MM, rM, iM) {
-      var OM;
-      return iM + (rM.unicode && (null !== (OM = MM.codePointAt(iM)) && void 0 !== OM ? OM : 0) > 65535 ? 2 : 1)
+    function vV(VV, eV, xV) {
+      var JV;
+      return xV + (eV.unicode && (null !== (JV = VV.codePointAt(xV)) && void 0 !== JV ? JV : 0) > 65535 ? 2 : 1)
     }
   },
-  6963: () => {}
+  7046: () => {}
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const VV in modules) Object.freeze(modules[VV]);

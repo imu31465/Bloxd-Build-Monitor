@@ -1,52 +1,52 @@
 export const id = 620;
 export const ids = [620];
 export const modules = {
-  44465: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => yM
+  44717: (VV, eV, xV) => {
+    xV.d(eV, {
+      b: () => BV
     });
-    var OM = iM(38068),
-      SM = iM(38040),
-      jM = iM(41560),
-      aM = iM(41258),
-      PM = iM(41034),
-      nM = iM(39711),
-      QM = iM(41240),
-      zM = iM(41269),
-      LM = iM(38048),
-      mM = iM(41003),
-      HM = iM(41213),
-      hM = iM(41309);
-    class JM {
+    var JV = xV(38296),
+      YV = xV(38269),
+      UV = xV(41738),
+      yV = xV(41398),
+      pV = xV(41190),
+      QV = xV(39870),
+      nV = xV(41383),
+      wV = xV(41413),
+      ZV = xV(38278),
+      vV = xV(41145),
+      rV = xV(41353),
+      kV = xV(41458);
+    class bV {
       get renderList() {
         return this._renderList
       }
-      set renderList(MM) {
-        this._renderList !== MM && (this._unObserveRenderList && (this._unObserveRenderList(), this._unObserveRenderList = null), MM && (this._unObserveRenderList = (0, LM.j)(MM, this._renderListHasChanged)), this._renderList = MM)
+      set renderList(VV) {
+        this._renderList !== VV && (this._unObserveRenderList && (this._unObserveRenderList(), this._unObserveRenderList = null), VV && (this._unObserveRenderList = (0, ZV.i)(VV, this._renderListHasChanged)), this._renderList = VV)
       }
       get disableImageProcessing() {
         return this._disableImageProcessing
       }
-      set disableImageProcessing(MM) {
-        MM !== this._disableImageProcessing && (this._disableImageProcessing = MM, this._scene.markAllMaterialsAsDirty(64))
+      set disableImageProcessing(VV) {
+        VV !== this._disableImageProcessing && (this._disableImageProcessing = VV, this._scene.markAllMaterialsAsDirty(64))
       }
       get disableDepthPrePass() {
         return this._disableDepthPrePass
       }
-      set disableDepthPrePass(MM) {
-        this._disableDepthPrePass = MM, this._renderingManager.disableDepthPrePass = MM
+      set disableDepthPrePass(VV) {
+        this._disableDepthPrePass = VV, this._renderingManager.disableDepthPrePass = VV
       }
       get name() {
         return this._name
       }
-      set name(MM) {
-        if (this._name !== MM) {
-          if (this._name = MM, this._sceneUBOs)
-            for (let MM = 0; MM < this._sceneUBOs.length; ++MM) this._sceneUBOs[MM].name = `Scene ubo #${MM} for ${this.name}`;
+      set name(VV) {
+        if (this._name !== VV) {
+          if (this._name = VV, this._sceneUBOs)
+            for (let VV = 0; VV < this._sceneUBOs.length; ++VV) this._sceneUBOs[VV].name = `Scene ubo #${VV} for ${this.name}`;
           if (this._scene)
-            for (let MM = 0; MM < this._renderPassIds.length; ++MM) {
-              const rM = this._renderPassIds[MM];
-              this._engine._renderPassNames[rM] = `${this._name}#${MM}`
+            for (let VV = 0; VV < this._renderPassIds.length; ++VV) {
+              const eV = this._renderPassIds[VV];
+              this._engine._renderPassNames[eV] = `${this._name}#${VV}`
             }
         }
       }
@@ -59,66 +59,66 @@ export const modules = {
       getActiveMeshes() {
         return this._activeMeshes
       }
-      setMaterialForRendering(MM, rM) {
-        let iM;
-        iM = Array.isArray(MM) ? MM : [MM];
-        for (let OM = 0; OM < iM.length; ++OM)
-          for (let MM = 0; MM < this.options.numPasses; ++MM) {
-            let SM = iM[OM];
-            iM[OM].Wk && (SM = iM[OM].QSM), SM.setMaterialForRenderPass(this._renderPassIds[MM], void 0 !== rM ? Array.isArray(rM) ? rM[MM] : rM : void 0)
+      setMaterialForRendering(VV, eV) {
+        let xV;
+        xV = Array.isArray(VV) ? VV : [VV];
+        for (let JV = 0; JV < xV.length; ++JV)
+          for (let VV = 0; VV < this.options.numPasses; ++VV) {
+            let YV = xV[JV];
+            xV[JV].JC && (YV = xV[JV].XUV), YV.setMaterialForRenderPass(this._renderPassIds[VV], void 0 !== eV ? Array.isArray(eV) ? eV[VV] : eV : void 0)
           }
       }
-      _freezeActiveMeshes(MM) {
-        this._freezeActiveMeshesCancel = (0, mM.d)((() => this._checkReadiness()), (() => {
-          if (this._freezeActiveMeshesCancel = null, MM)
-            for (let MM = 0; MM < this._activeMeshes.length; MM++) this._activeMeshes.data[MM]._freeze();
+      _freezeActiveMeshes(VV) {
+        this._freezeActiveMeshesCancel = (0, vV.f)((() => this._checkReadiness()), (() => {
+          if (this._freezeActiveMeshesCancel = null, VV)
+            for (let VV = 0; VV < this._activeMeshes.length; VV++) this._activeMeshes.data[VV]._freeze();
           this._prepareRenderingManager(0, !0), this._isFrozen = !0
-        }), ((MM, rM) => {
-          this._freezeActiveMeshesCancel = null, rM ? (nM.e.Error("ObjectRenderer: Timeout while waiting for the renderer to be ready."), MM && nM.e.Error(MM)) : (nM.e.Error("ObjectRenderer: An unexpected error occurred while waiting for the renderer to be ready."), MM && (nM.e.Error(MM), MM.stack && nM.e.Error(MM.stack)))
+        }), ((VV, eV) => {
+          this._freezeActiveMeshesCancel = null, eV ? (QV.b.Error("ObjectRenderer: Timeout while waiting for the renderer to be ready."), VV && QV.b.Error(VV)) : (QV.b.Error("ObjectRenderer: An unexpected error occurred while waiting for the renderer to be ready."), VV && (QV.b.Error(VV), VV.stack && QV.b.Error(VV.stack)))
         }))
       }
       _unfreezeActiveMeshes() {
         this._freezeActiveMeshesCancel?.(), this._freezeActiveMeshesCancel = null;
-        for (let MM = 0; MM < this._activeMeshes.length; MM++) this._activeMeshes.data[MM]._unFreeze();
+        for (let VV = 0; VV < this._activeMeshes.length; VV++) this._activeMeshes.data[VV]._unFreeze();
         this._isFrozen = !1
       }
-      constructor(MM, rM, iM) {
-        this._unObserveRenderList = null, this._renderListHasChanged = (MM, rM) => {
-          const iM = this._renderList ? this._renderList.length : 0;
-          if (0 === rM && iM > 0 || 0 === iM)
-            for (const OM of this._scene.meshes) OM._markSubMeshesAsLightDirty()
-        }, this.particleSystemList = null, this.spriteManagerList = null, this.getCustomRenderList = null, this.renderMeshes = !0, this.renderDepthOnlyMeshes = !0, this.renderOpaqueMeshes = !0, this.renderAlphaTestMeshes = !0, this.renderTransparentMeshes = !0, this.renderParticles = !0, this.renderSprites = !1, this.forceLayerMaskCheck = !1, this.enableBoundingBoxRendering = !1, this.enableOutlineRendering = !0, this._disableImageProcessing = !1, this.dontSetTransformationMatrix = !1, this._disableDepthPrePass = !1, this.onBeforeRenderObservable = new OM.d, this.onAfterRenderObservable = new OM.d, this.onBeforeRenderingManagerRenderObservable = new OM.d, this.onAfterRenderingManagerRenderObservable = new OM.d, this.onInitRenderingObservable = new OM.d, this.onFinishRenderingObservable = new OM.d, this.onFastPathRenderObservable = new OM.d, this._currentRefreshId = -1, this._refreshRate = 1, this._currentApplyByPostProcessSetting = !1, this._activeMeshes = new HM.e(256), this._activeBoundingBoxes = new HM.e(32), this._currentFrameId = -1, this._currentSceneUBOIndex = 0, this._isFrozen = !1, this._freezeActiveMeshesCancel = null, this._currentSceneCamera = null, this.name = MM, this._scene = rM, this._engine = this._scene.ph(), this._useUBO = this._engine.supportsUniformBuffers, this.renderList = [], this._renderPassIds = [], this.options = {
+      constructor(VV, eV, xV) {
+        this._unObserveRenderList = null, this._renderListHasChanged = (VV, eV) => {
+          const xV = this._renderList ? this._renderList.length : 0;
+          if (0 === eV && xV > 0 || 0 === xV)
+            for (const JV of this._scene.meshes) JV._markSubMeshesAsLightDirty()
+        }, this.particleSystemList = null, this.spriteManagerList = null, this.getCustomRenderList = null, this.renderMeshes = !0, this.renderDepthOnlyMeshes = !0, this.renderOpaqueMeshes = !0, this.renderAlphaTestMeshes = !0, this.renderTransparentMeshes = !0, this.renderParticles = !0, this.renderSprites = !1, this.forceLayerMaskCheck = !1, this.enableBoundingBoxRendering = !1, this.enableOutlineRendering = !0, this._disableImageProcessing = !1, this.dontSetTransformationMatrix = !1, this._disableDepthPrePass = !1, this.onBeforeRenderObservable = new JV.c, this.onAfterRenderObservable = new JV.c, this.onBeforeRenderingManagerRenderObservable = new JV.c, this.onAfterRenderingManagerRenderObservable = new JV.c, this.onInitRenderingObservable = new JV.c, this.onFinishRenderingObservable = new JV.c, this.onFastPathRenderObservable = new JV.c, this._currentRefreshId = -1, this._refreshRate = 1, this._currentApplyByPostProcessSetting = !1, this._activeMeshes = new rV.f(256), this._activeBoundingBoxes = new rV.f(32), this._currentFrameId = -1, this._currentSceneUBOIndex = 0, this._isFrozen = !1, this._freezeActiveMeshesCancel = null, this._currentSceneCamera = null, this.name = VV, this._scene = eV, this._engine = this._scene.sk(), this._useUBO = this._engine.supportsUniformBuffers, this.renderList = [], this._renderPassIds = [], this.options = {
           numPasses: 1,
           doNotChangeAspectRatio: !0,
           enableClusteredLights: !1,
-          ...iM
-        }, this._createRenderPassId(), this.renderPassId = this._renderPassIds[0], this._renderingManager = new zM.b(rM), this._renderingManager._useSceneAutoClearSetup = !0, this.options.enableClusteredLights && this.onInitRenderingObservable.add((() => {
-          for (const MM of this._scene.lights) MM.getTypeID() === hM.b.LIGHTTYPEID_CLUSTERED_CONTAINER && MM.isSupported && MM._updateBatches(this.activeCamera).render()
+          ...xV
+        }, this._createRenderPassId(), this.renderPassId = this._renderPassIds[0], this._renderingManager = new wV.b(eV), this._renderingManager._useSceneAutoClearSetup = !0, this.options.enableClusteredLights && this.onInitRenderingObservable.add((() => {
+          for (const VV of this._scene.lights) VV.getTypeID() === kV.b.LIGHTTYPEID_CLUSTERED_CONTAINER && VV.isSupported && VV._updateBatches(this.activeCamera).render()
         })), this._scene.addObjectRenderer(this)
       }
       _releaseRenderPassId() {
-        for (let MM = 0; MM < this.options.numPasses; ++MM) this._engine.releaseRenderPassId(this._renderPassIds[MM]);
+        for (let VV = 0; VV < this.options.numPasses; ++VV) this._engine.releaseRenderPassId(this._renderPassIds[VV]);
         this._renderPassIds.length = 0
       }
       _createRenderPassId() {
         this._releaseRenderPassId();
-        for (let MM = 0; MM < this.options.numPasses; ++MM) this._renderPassIds[MM] = this._engine.createRenderPassId(`${this.name}#${MM}`)
+        for (let VV = 0; VV < this.options.numPasses; ++VV) this._renderPassIds[VV] = this._engine.createRenderPassId(`${this.name}#${VV}`)
       }
-      _createSceneUBO(MM, rM) {
-        const iM = this._scene.ph(),
-          OM = new QM.b(iM, void 0, rM, MM, void 0, !1);
-        return OM.addUniform("viewProjection", 16), rM && OM.addUniform("viewProjectionR", 16), OM.addUniform("view", 16), OM.addUniform("projection", 16), OM.addUniform("vEyePosition", 4), OM.addUniform("inverseProjection", 16), OM
+      _createSceneUBO(VV, eV) {
+        const xV = this._scene.sk(),
+          JV = new nV.b(xV, void 0, eV, VV, void 0, !1);
+        return JV.addUniform("viewProjection", 16), eV && JV.addUniform("viewProjectionR", 16), JV.addUniform("view", 16), JV.addUniform("projection", 16), JV.addUniform("vEyePosition", 4), JV.addUniform("inverseProjection", 16), JV
       }
       _getSceneUBO() {
         this._currentFrameId !== this._engine.frameId && (this._currentSceneUBOIndex = 0, this._currentFrameId = this._engine.frameId), this._sceneUBOs || (this._sceneUBOs = [], this._sceneUBOIsMultiview = []);
-        const MM = this._engine._currentRenderTarget,
-          rM = !(!MM || !MM.texture?.isMultiview) || !!this._scene._multiviewSceneUboIsActive;
+        const VV = this._engine._currentRenderTarget,
+          eV = !(!VV || !VV.texture?.isMultiview) || !!this._scene._multiviewSceneUboIsActive;
         if (this._currentSceneUBOIndex >= this._sceneUBOs.length) {
-          const MM = this._sceneUBOs.length;
-          this._sceneUBOs.push(this._createSceneUBO(`Scene ubo #${MM} for ${this.name}`, rM)), this._sceneUBOIsMultiview.push(rM)
-        } else this._sceneUBOIsMultiview[this._currentSceneUBOIndex] !== rM && (this._sceneUBOs[this._currentSceneUBOIndex].dispose(), this._sceneUBOs[this._currentSceneUBOIndex] = this._createSceneUBO(`Scene ubo #${this._currentSceneUBOIndex} for ${this.name}`, rM), this._sceneUBOIsMultiview[this._currentSceneUBOIndex] = rM);
-        const iM = this._sceneUBOs[this._currentSceneUBOIndex++];
-        return iM.unbindEffect(), iM
+          const VV = this._sceneUBOs.length;
+          this._sceneUBOs.push(this._createSceneUBO(`Scene ubo #${VV} for ${this.name}`, eV)), this._sceneUBOIsMultiview.push(eV)
+        } else this._sceneUBOIsMultiview[this._currentSceneUBOIndex] !== eV && (this._sceneUBOs[this._currentSceneUBOIndex].dispose(), this._sceneUBOs[this._currentSceneUBOIndex] = this._createSceneUBO(`Scene ubo #${this._currentSceneUBOIndex} for ${this.name}`, eV), this._sceneUBOIsMultiview[this._currentSceneUBOIndex] = eV);
+        const xV = this._sceneUBOs[this._currentSceneUBOIndex++];
+        return xV.unbindEffect(), xV
       }
       resetRefreshCounter() {
         this._currentRefreshId = -1
@@ -126,306 +126,306 @@ export const modules = {
       get refreshRate() {
         return this._refreshRate
       }
-      set refreshRate(MM) {
-        this._refreshRate = MM, this.resetRefreshCounter()
+      set refreshRate(VV) {
+        this._refreshRate = VV, this.resetRefreshCounter()
       }
       shouldRender() {
         return !!this._engine.snapshotRendering || (-1 === this._currentRefreshId || this.refreshRate === this._currentRefreshId ? (this._currentRefreshId = 1, !0) : (this._currentRefreshId++, !1))
       }
-      isReadyForRendering(MM, rM) {
-        this.prepareRenderList(), this.initRender(MM, rM);
-        const iM = this._checkReadiness();
-        return this.finishRender(), iM
+      isReadyForRendering(VV, eV) {
+        this.prepareRenderList(), this.initRender(VV, eV);
+        const xV = this._checkReadiness();
+        return this.finishRender(), xV
       }
       prepareRenderList() {
-        const MM = this._scene;
+        const VV = this._scene;
         if (this._waitingRenderList) {
           if (!this.renderListPredicate) {
             this.renderList = [];
-            for (let rM = 0; rM < this._waitingRenderList.length; rM++) {
-              const iM = this._waitingRenderList[rM],
-                OM = MM.getMeshById(iM);
-              OM && this.renderList.push(OM)
+            for (let eV = 0; eV < this._waitingRenderList.length; eV++) {
+              const xV = this._waitingRenderList[eV],
+                JV = VV.getMeshById(xV);
+              JV && this.renderList.push(JV)
             }
           }
           this._waitingRenderList = void 0
         }
         if (this.renderListPredicate) {
           this.renderList ? this.renderList.length = 0 : this.renderList = [];
-          const MM = this._scene.meshes;
-          for (let rM = 0; rM < MM.length; rM++) {
-            const iM = MM[rM];
-            this.renderListPredicate(iM) && this.renderList.push(iM)
+          const VV = this._scene.meshes;
+          for (let eV = 0; eV < VV.length; eV++) {
+            const xV = VV[eV];
+            this.renderListPredicate(xV) && this.renderList.push(xV)
           }
         }
         this._currentApplyByPostProcessSetting = this._scene.imageProcessingConfiguration.applyByPostProcess, this._disableImageProcessing && (this._scene.imageProcessingConfiguration._applyByPostProcess = this._disableImageProcessing)
       }
-      initRender(MM, rM) {
-        const iM = this.activeCamera ?? this._scene.activeCamera;
-        this._currentSceneCamera = this._scene.activeCamera, this._useUBO && (this._currentSceneUBO = this._scene.getSceneUniformBuffer(), this._currentSceneUBO.unbindEffect(), this._scene.setSceneUniformBuffer(this._getSceneUBO())), this.onInitRenderingObservable.notifyObservers(this), iM && (this.dontSetTransformationMatrix || this._scene.setTransformMatrix(iM.getViewMatrix(), iM.getProjectionMatrix(!0)), this._scene._activeCamera = iM, this._engine.setViewport(iM.rigParent ? iM.rigParent.viewport : iM.viewport, MM, rM)), this._useUBO && this._scene.finalizeSceneUbo(), this._defaultRenderListPrepared = !1
+      initRender(VV, eV) {
+        const xV = this.activeCamera ?? this._scene.activeCamera;
+        this._currentSceneCamera = this._scene.activeCamera, this._useUBO && (this._currentSceneUBO = this._scene.getSceneUniformBuffer(), this._currentSceneUBO.unbindEffect(), this._scene.setSceneUniformBuffer(this._getSceneUBO())), this.onInitRenderingObservable.notifyObservers(this), xV && (this.dontSetTransformationMatrix || this._scene.setTransformMatrix(xV.getViewMatrix(), xV.getProjectionMatrix(!0)), this._scene._activeCamera = xV, this._engine.setViewport(xV.rigParent ? xV.rigParent.viewport : xV.viewport, VV, eV)), this._useUBO && this._scene.finalizeSceneUbo(), this._defaultRenderListPrepared = !1
       }
       finishRender() {
-        const MM = this._scene;
-        this._useUBO && this._scene.setSceneUniformBuffer(this._currentSceneUBO), this._disableImageProcessing && (MM.imageProcessingConfiguration._applyByPostProcess = this._currentApplyByPostProcessSetting), MM._activeCamera = this._currentSceneCamera, this._currentSceneCamera && (this.activeCamera && this.activeCamera !== MM.activeCamera && MM.setTransformMatrix(this._currentSceneCamera.getViewMatrix(), this._currentSceneCamera.getProjectionMatrix(!0)), this._engine.setViewport(this._currentSceneCamera.viewport)), MM.resetCachedMaterial(), this.onFinishRenderingObservable.notifyObservers(this)
+        const VV = this._scene;
+        this._useUBO && this._scene.setSceneUniformBuffer(this._currentSceneUBO), this._disableImageProcessing && (VV.imageProcessingConfiguration._applyByPostProcess = this._currentApplyByPostProcessSetting), VV._activeCamera = this._currentSceneCamera, this._currentSceneCamera && (this.activeCamera && this.activeCamera !== VV.activeCamera && VV.setTransformMatrix(this._currentSceneCamera.getViewMatrix(), this._currentSceneCamera.getProjectionMatrix(!0)), this._engine.setViewport(this._currentSceneCamera.viewport)), VV.resetCachedMaterial(), this.onFinishRenderingObservable.notifyObservers(this)
       }
       render() {
-        let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          rM = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        const iM = this._engine.currentRenderPassId;
-        this._engine.currentRenderPassId = this._renderPassIds[MM], this.onBeforeRenderObservable.notifyObservers(MM);
-        if (this._engine.snapshotRendering && 1 === this._engine.snapshotRenderingMode) this.onFastPathRenderObservable.notifyObservers(MM);
+        let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          eV = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        const xV = this._engine.currentRenderPassId;
+        this._engine.currentRenderPassId = this._renderPassIds[VV], this.onBeforeRenderObservable.notifyObservers(VV);
+        if (this._engine.snapshotRendering && 1 === this._engine.snapshotRenderingMode) this.onFastPathRenderObservable.notifyObservers(VV);
         else {
-          const rM = this._prepareRenderingManager(MM),
-            iM = this._scene.getOutlineRenderer?.(),
-            OM = iM?.enabled;
-          iM && (iM.enabled = this.enableOutlineRendering), this.onBeforeRenderingManagerRenderObservable.notifyObservers(MM), this._renderingManager.render(this.customRenderFunction, rM, this.renderParticles, this.renderSprites, this.renderDepthOnlyMeshes, this.renderOpaqueMeshes, this.renderAlphaTestMeshes, this.renderTransparentMeshes, this.customRenderTransparentSubMeshes, this.spriteManagerList), this.onAfterRenderingManagerRenderObservable.notifyObservers(MM), iM && (iM.enabled = OM)
+          const eV = this._prepareRenderingManager(VV),
+            xV = this._scene.getOutlineRenderer?.(),
+            JV = xV?.enabled;
+          xV && (xV.enabled = this.enableOutlineRendering), this.onBeforeRenderingManagerRenderObservable.notifyObservers(VV), this._renderingManager.render(this.customRenderFunction, eV, this.renderParticles, this.renderSprites, this.renderDepthOnlyMeshes, this.renderOpaqueMeshes, this.renderAlphaTestMeshes, this.renderTransparentMeshes, this.customRenderTransparentSubMeshes, this.spriteManagerList), this.onAfterRenderingManagerRenderObservable.notifyObservers(VV), xV && (xV.enabled = JV)
         }
-        rM || this.onAfterRenderObservable.notifyObservers(MM), this._engine.currentRenderPassId = iM
+        eV || this.onAfterRenderObservable.notifyObservers(VV), this._engine.currentRenderPassId = xV
       }
       _checkReadiness() {
-        const MM = this._scene,
-          rM = this._engine.currentRenderPassId;
-        let iM = !0;
-        MM.getViewMatrix() || MM.updateTransformMatrix();
-        const OM = this.options.numPasses;
-        for (let SM = 0; SM < OM && iM; SM++) {
-          const rM = this.renderList ? this.renderList : MM.frameGraph ? MM.meshes : MM.getActiveMeshes().data,
-            jM = this.renderList || MM.frameGraph ? rM.length : MM.getActiveMeshes().length;
-          this._engine.currentRenderPassId = this._renderPassIds[SM], this.onBeforeRenderObservable.notifyObservers(SM);
-          let aM = null,
-            PM = jM;
-          this.getCustomRenderList && (aM = this.getCustomRenderList(SM, rM, jM), aM && (PM = aM.length)), aM || (aM = rM), this.options.doNotChangeAspectRatio || MM.updateTransformMatrix(!0);
-          for (let MM = 0; MM < PM && iM; ++MM) {
-            const rM = aM[MM];
-            if (!rM.isEnabled() || rM.isBlocked || !rM.isVisible || !rM.iG) continue;
+        const VV = this._scene,
+          eV = this._engine.currentRenderPassId;
+        let xV = !0;
+        VV.getViewMatrix() || VV.updateTransformMatrix();
+        const JV = this.options.numPasses;
+        for (let YV = 0; YV < JV && xV; YV++) {
+          const eV = this.renderList ? this.renderList : VV.frameGraph ? VV.meshes : VV.getActiveMeshes().data,
+            UV = this.renderList || VV.frameGraph ? eV.length : VV.getActiveMeshes().length;
+          this._engine.currentRenderPassId = this._renderPassIds[YV], this.onBeforeRenderObservable.notifyObservers(YV);
+          let yV = null,
+            pV = UV;
+          this.getCustomRenderList && (yV = this.getCustomRenderList(YV, eV, UV), yV && (pV = yV.length)), yV || (yV = eV), this.options.doNotChangeAspectRatio || VV.updateTransformMatrix(!0);
+          for (let VV = 0; VV < pV && xV; ++VV) {
+            const eV = yV[VV];
+            if (!eV.isEnabled() || eV.isBlocked || !eV.isVisible || !eV.hT) continue;
             if (this.customIsReadyFunction) {
-              if (!this.customIsReadyFunction(rM, this.refreshRate, !0)) {
-                iM = !1;
+              if (!this.customIsReadyFunction(eV, this.refreshRate, !0)) {
+                xV = !1;
                 continue
               }
-            } else if (!rM.isReady(!0)) {
-              iM = !1;
+            } else if (!eV.isReady(!0)) {
+              xV = !1;
               continue
             }
-            let OM = rM._edgesRenderer,
-              SM = rM.hasThinInstances;
-            if (rM.Wk) {
-              const MM = rM.QSM;
-              MM.edgesShareWithInstances && MM._edgesRenderer?.isEnabled && (OM = MM._edgesRenderer, SM = !0)
-            } else rM.nSM && rM.edgesShareWithInstances && (SM = !0);
-            !this.customRenderFunction && this.renderOpaqueMeshes && OM?.isEnabled && (OM.isReady(SM) || (iM = !1))
+            let JV = eV._edgesRenderer,
+              YV = eV.hasThinInstances;
+            if (eV.JC) {
+              const VV = eV.XUV;
+              VV.edgesShareWithInstances && VV._edgesRenderer?.isEnabled && (JV = VV._edgesRenderer, YV = !0)
+            } else eV.NUV && eV.edgesShareWithInstances && (YV = !0);
+            !this.customRenderFunction && this.renderOpaqueMeshes && JV?.isEnabled && (JV.isReady(YV) || (xV = !1))
           }
-          if (this.renderParticles && MM.particlesEnabled) {
-            const rM = this.particleSystemList || MM.aG;
-            for (const MM of rM) MM.isReady() || (iM = !1)
+          if (this.renderParticles && VV.particlesEnabled) {
+            const eV = this.particleSystemList || VV.lT;
+            for (const VV of eV) VV.isReady() || (xV = !1)
           }
-          if (this.renderSprites && MM.spritesEnabled) {
-            const rM = this.spriteManagerList || MM.spriteManagers;
-            if (rM)
-              for (const OM of rM) MM.activeCamera && 0 === (OM.layerMask & MM.activeCamera.layerMask) || OM.isReady && !OM.isReady() && (iM = !1)
+          if (this.renderSprites && VV.spritesEnabled) {
+            const eV = this.spriteManagerList || VV.spriteManagers;
+            if (eV)
+              for (const JV of eV) VV.activeCamera && 0 === (JV.layerMask & VV.activeCamera.layerMask) || JV.isReady && !JV.isReady() && (xV = !1)
           }
-          this.onAfterRenderObservable.notifyObservers(SM), OM > 1 && (MM.incrementRenderId(), MM.resetCachedMaterial())
+          this.onAfterRenderObservable.notifyObservers(YV), JV > 1 && (VV.incrementRenderId(), VV.resetCachedMaterial())
         }
-        return this._engine.currentRenderPassId = rM, iM
+        return this._engine.currentRenderPassId = eV, xV
       }
       _prepareRenderingManager() {
-        let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          rM = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        const iM = this._scene;
-        let OM, SM, jM = null;
-        const aM = this.renderList ? this.renderList : iM.frameGraph ? iM.meshes : iM.getActiveMeshes().data,
-          PM = this.renderList || iM.frameGraph ? aM.length : iM.getActiveMeshes().length;
-        if (this.getCustomRenderList && (jM = this.getCustomRenderList(MM, aM, PM)), jM) OM = jM.length, SM = this.forceLayerMaskCheck;
+        let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          eV = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        const xV = this._scene;
+        let JV, YV, UV = null;
+        const yV = this.renderList ? this.renderList : xV.frameGraph ? xV.meshes : xV.getActiveMeshes().data,
+          pV = this.renderList || xV.frameGraph ? yV.length : xV.getActiveMeshes().length;
+        if (this.getCustomRenderList && (UV = this.getCustomRenderList(VV, yV, pV)), UV) JV = UV.length, YV = this.forceLayerMaskCheck;
         else {
-          if (this._defaultRenderListPrepared && !rM && !this._engine.isWebGPU) return aM;
-          this._defaultRenderListPrepared = !0, jM = aM, OM = PM, SM = !this.renderList || this.forceLayerMaskCheck
+          if (this._defaultRenderListPrepared && !eV && !this._engine.isWebGPU) return yV;
+          this._defaultRenderListPrepared = !0, UV = yV, JV = pV, YV = !this.renderList || this.forceLayerMaskCheck
         }
-        const nM = iM.activeCamera,
-          QM = this.cameraForLOD ?? nM,
-          zM = iM.getBoundingBoxRenderer?.();
-        if (iM._activeMeshesFrozen && this._isFrozen) {
-          if (this._renderingManager.resetSprites(), this.enableBoundingBoxRendering && zM) {
-            zM.reset();
-            for (let MM = 0; MM < this._activeBoundingBoxes.length; MM++) {
-              const rM = this._activeBoundingBoxes.data[MM];
-              zM.renderList.push(rM)
+        const QV = xV.activeCamera,
+          nV = this.cameraForLOD ?? QV,
+          wV = xV.getBoundingBoxRenderer?.();
+        if (xV._activeMeshesFrozen && this._isFrozen) {
+          if (this._renderingManager.resetSprites(), this.enableBoundingBoxRendering && wV) {
+            wV.reset();
+            for (let VV = 0; VV < this._activeBoundingBoxes.length; VV++) {
+              const eV = this._activeBoundingBoxes.data[VV];
+              wV.renderList.push(eV)
             }
           }
-          return jM
+          return UV
         }
-        if (this._renderingManager.reset(), this._activeMeshes.reset(), this._activeBoundingBoxes.reset(), zM && zM.reset(), this.renderMeshes) {
-          const MM = iM.getRenderId(),
-            rM = iM.getFrameId();
-          for (let aM = 0; aM < OM; aM++) {
-            const OM = jM[aM];
-            if (OM && !OM.isBlocked) {
+        if (this._renderingManager.reset(), this._activeMeshes.reset(), this._activeBoundingBoxes.reset(), wV && wV.reset(), this.renderMeshes) {
+          const VV = xV.getRenderId(),
+            eV = xV.getFrameId();
+          for (let yV = 0; yV < JV; yV++) {
+            const JV = UV[yV];
+            if (JV && !JV.isBlocked) {
               if (this.customIsReadyFunction) {
-                if (!this.customIsReadyFunction(OM, this.refreshRate, !1)) {
+                if (!this.customIsReadyFunction(JV, this.refreshRate, !1)) {
                   this.resetRefreshCounter();
                   continue
                 }
-              } else if (!OM.isReady(0 === this.refreshRate)) {
+              } else if (!JV.isReady(0 === this.refreshRate)) {
                 this.resetRefreshCounter();
                 continue
               }
-              let jM, aM;
-              if (QM) {
-                const MM = OM._internalAbstractMeshDataInfo._currentLOD.get(QM);
-                MM && MM[1] === rM ? jM = MM[0] : (jM = iM.customLODSelector ? iM.customLODSelector(OM, QM) : OM.getLOD(QM), MM ? (MM[0] = jM, MM[1] = rM) : OM._internalAbstractMeshDataInfo._currentLOD.set(QM, [jM, rM]))
-              } else jM = OM;
-              if (!jM) continue;
-              if (jM !== OM && 0 !== jM.billboardMode && jM.computeWorldMatrix(), jM._preActivateForIntermediateRendering(MM), aM = !(!SM || !nM) && 0 === (OM.layerMask & nM.layerMask), OM.isEnabled() && OM.isVisible && OM.iG && !aM) {
-                if (this._activeMeshes.push(OM), jM._internalAbstractMeshDataInfo._wasActiveLastFrame = !0, jM !== OM && jM._activate(MM, !0), this.enableBoundingBoxRendering && zM && zM._preActiveMesh(OM), OM._activate(MM, !0) && OM.iG.length) {
-                  OM.Wk ? OM._internalAbstractMeshDataInfo._actAsRegularMesh && (jM = OM) : jM._internalAbstractMeshDataInfo._onlyForInstancesIntermediate = !1, jM._internalAbstractMeshDataInfo._isActiveIntermediate = !0, iM._prepareSkeleton(jM);
-                  for (let MM = 0; MM < jM.iG.length; MM++) {
-                    const rM = jM.iG[MM];
-                    this.enableBoundingBoxRendering && zM && zM._evaluateSubMesh(OM, rM), this._renderingManager.dispatch(rM, jM)
+              let UV, yV;
+              if (nV) {
+                const VV = JV._internalAbstractMeshDataInfo._currentLOD.get(nV);
+                VV && VV[1] === eV ? UV = VV[0] : (UV = xV.customLODSelector ? xV.customLODSelector(JV, nV) : JV.getLOD(nV), VV ? (VV[0] = UV, VV[1] = eV) : JV._internalAbstractMeshDataInfo._currentLOD.set(nV, [UV, eV]))
+              } else UV = JV;
+              if (!UV) continue;
+              if (UV !== JV && 0 !== UV.billboardMode && UV.computeWorldMatrix(), UV._preActivateForIntermediateRendering(VV), yV = !(!YV || !QV) && 0 === (JV.layerMask & QV.layerMask), JV.isEnabled() && JV.isVisible && JV.hT && !yV) {
+                if (this._activeMeshes.push(JV), UV._internalAbstractMeshDataInfo._wasActiveLastFrame = !0, UV !== JV && UV._activate(VV, !0), this.enableBoundingBoxRendering && wV && wV._preActiveMesh(JV), JV._activate(VV, !0) && JV.hT.length) {
+                  JV.JC ? JV._internalAbstractMeshDataInfo._actAsRegularMesh && (UV = JV) : UV._internalAbstractMeshDataInfo._onlyForInstancesIntermediate = !1, UV._internalAbstractMeshDataInfo._isActiveIntermediate = !0, xV._prepareSkeleton(UV);
+                  for (let VV = 0; VV < UV.hT.length; VV++) {
+                    const eV = UV.hT[VV];
+                    this.enableBoundingBoxRendering && wV && wV._evaluateSubMesh(JV, eV), this._renderingManager.dispatch(eV, UV)
                   }
                 }
-                OM._postActivate()
+                JV._postActivate()
               }
             }
           }
         }
-        if (this.enableBoundingBoxRendering && zM && rM)
-          for (let LM = 0; LM < zM.renderList.length; LM++) {
-            const MM = zM.renderList.data[LM];
-            this._activeBoundingBoxes.push(MM)
+        if (this.enableBoundingBoxRendering && wV && eV)
+          for (let ZV = 0; ZV < wV.renderList.length; ZV++) {
+            const VV = wV.renderList.data[ZV];
+            this._activeBoundingBoxes.push(VV)
           }
         if (this._scene.particlesEnabled && this.renderParticles) {
           this._scene.onBeforeParticlesRenderingObservable.notifyObservers(this._scene);
-          const MM = this.particleSystemList || iM.aG;
-          for (let rM = 0; rM < MM.length; rM++) {
-            const iM = MM[rM],
-              OM = iM.emitter;
-            iM.isStarted() && OM && (!OM.position || OM.isEnabled()) && this._renderingManager.dispatchParticles(iM)
+          const VV = this.particleSystemList || xV.lT;
+          for (let eV = 0; eV < VV.length; eV++) {
+            const xV = VV[eV],
+              JV = xV.emitter;
+            xV.isStarted() && JV && (!JV.position || JV.isEnabled()) && this._renderingManager.dispatchParticles(xV)
           }
           this._scene.onAfterParticlesRenderingObservable.notifyObservers(this._scene)
         }
-        return jM
+        return UV
       }
       get renderingManager() {
         return this._renderingManager
       }
-      setRenderingOrder(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-          OM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-        this._renderingManager.setRenderingOrder(MM, rM, iM, OM)
+      setRenderingOrder(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+          JV = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+        this._renderingManager.setRenderingOrder(VV, eV, xV, JV)
       }
-      setRenderingAutoClearDepthStencil(MM, rM) {
-        let iM = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2],
-          OM = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-        this._renderingManager.setRenderingAutoClearDepthStencil(MM, rM, iM, OM), this._renderingManager._useSceneAutoClearSetup = !1
+      setRenderingAutoClearDepthStencil(VV, eV) {
+        let xV = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2],
+          JV = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+        this._renderingManager.setRenderingAutoClearDepthStencil(VV, eV, xV, JV), this._renderingManager._useSceneAutoClearSetup = !1
       }
       clone() {
-        const MM = new JM(this.name, this._scene, this.options);
-        return this.renderList && (MM.renderList = this.renderList.slice(0)), MM
+        const VV = new bV(this.name, this._scene, this.options);
+        return this.renderList && (VV.renderList = this.renderList.slice(0)), VV
       }
       dispose() {
-        const MM = this.renderList ? this.renderList : this._scene.getActiveMeshes().data,
-          rM = this.renderList ? this.renderList.length : this._scene.getActiveMeshes().length;
-        for (let iM = 0; iM < rM; iM++) {
-          const rM = MM[iM];
-          rM && void 0 !== rM.getMaterialForRenderPass(this.renderPassId) && rM.setMaterialForRenderPass(this.renderPassId, void 0)
+        const VV = this.renderList ? this.renderList : this._scene.getActiveMeshes().data,
+          eV = this.renderList ? this.renderList.length : this._scene.getActiveMeshes().length;
+        for (let xV = 0; xV < eV; xV++) {
+          const eV = VV[xV];
+          eV && void 0 !== eV.getMaterialForRenderPass(this.renderPassId) && eV.setMaterialForRenderPass(this.renderPassId, void 0)
         }
         if (this.onInitRenderingObservable.clear(), this.onFinishRenderingObservable.clear(), this.onBeforeRenderObservable.clear(), this.onAfterRenderObservable.clear(), this.onBeforeRenderingManagerRenderObservable.clear(), this.onAfterRenderingManagerRenderObservable.clear(), this.onFastPathRenderObservable.clear(), this._releaseRenderPassId(), this.renderList = null, this._sceneUBOs)
-          for (const iM of this._sceneUBOs) iM.dispose();
+          for (const xV of this._sceneUBOs) xV.dispose();
         this._sceneUBOs = void 0, this._scene.removeObjectRenderer(this)
       }
       _rebuild() {
-        this.refreshRate === JM.REFRESHRATE_RENDER_ONCE && (this.refreshRate = JM.REFRESHRATE_RENDER_ONCE)
+        this.refreshRate === bV.REFRESHRATE_RENDER_ONCE && (this.refreshRate = bV.REFRESHRATE_RENDER_ONCE)
       }
       freeRenderingGroups() {
         this._renderingManager && this._renderingManager.freeRenderingGroups()
       }
     }
-    JM.REFRESHRATE_RENDER_ONCE = 0, JM.REFRESHRATE_RENDER_ONEVERYFRAME = 1, JM.REFRESHRATE_RENDER_ONEVERYTWOFRAMES = 2;
-    var dM = iM(40990);
-    class yM extends jM.h {
+    bV.REFRESHRATE_RENDER_ONCE = 0, bV.REFRESHRATE_RENDER_ONEVERYFRAME = 1, bV.REFRESHRATE_RENDER_ONEVERYTWOFRAMES = 2;
+    var EV = xV(41138);
+    class BV extends UV.f {
       get renderListPredicate() {
         return this._objectRenderer.renderListPredicate
       }
-      set renderListPredicate(MM) {
-        this._objectRenderer.renderListPredicate = MM
+      set renderListPredicate(VV) {
+        this._objectRenderer.renderListPredicate = VV
       }
       get renderList() {
         return this._objectRenderer.renderList
       }
-      set renderList(MM) {
-        this._objectRenderer.renderList = MM
+      set renderList(VV) {
+        this._objectRenderer.renderList = VV
       }
       get particleSystemList() {
         return this._objectRenderer.particleSystemList
       }
-      set particleSystemList(MM) {
-        this._objectRenderer.particleSystemList = MM
+      set particleSystemList(VV) {
+        this._objectRenderer.particleSystemList = VV
       }
       get getCustomRenderList() {
         return this._objectRenderer.getCustomRenderList
       }
-      set getCustomRenderList(MM) {
-        this._objectRenderer.getCustomRenderList = MM
+      set getCustomRenderList(VV) {
+        this._objectRenderer.getCustomRenderList = VV
       }
       get renderParticles() {
         return this._objectRenderer.renderParticles
       }
-      set renderParticles(MM) {
-        this._objectRenderer.renderParticles = MM
+      set renderParticles(VV) {
+        this._objectRenderer.renderParticles = VV
       }
       get renderSprites() {
         return this._objectRenderer.renderSprites
       }
-      set renderSprites(MM) {
-        this._objectRenderer.renderSprites = MM
+      set renderSprites(VV) {
+        this._objectRenderer.renderSprites = VV
       }
       get enableBoundingBoxRendering() {
         return this._objectRenderer.enableBoundingBoxRendering
       }
-      set enableBoundingBoxRendering(MM) {
-        this._objectRenderer.enableBoundingBoxRendering = MM
+      set enableBoundingBoxRendering(VV) {
+        this._objectRenderer.enableBoundingBoxRendering = VV
       }
       get enableOutlineRendering() {
         return this._objectRenderer.enableOutlineRendering
       }
-      set enableOutlineRendering(MM) {
-        this._objectRenderer.enableOutlineRendering = MM
+      set enableOutlineRendering(VV) {
+        this._objectRenderer.enableOutlineRendering = VV
       }
       get forceLayerMaskCheck() {
         return this._objectRenderer.forceLayerMaskCheck
       }
-      set forceLayerMaskCheck(MM) {
-        this._objectRenderer.forceLayerMaskCheck = MM
+      set forceLayerMaskCheck(VV) {
+        this._objectRenderer.forceLayerMaskCheck = VV
       }
       get activeCamera() {
         return this._objectRenderer.activeCamera
       }
-      set activeCamera(MM) {
-        this._objectRenderer.activeCamera = MM
+      set activeCamera(VV) {
+        this._objectRenderer.activeCamera = VV
       }
       get cameraForLOD() {
         return this._objectRenderer.cameraForLOD
       }
-      set cameraForLOD(MM) {
-        this._objectRenderer.cameraForLOD = MM
+      set cameraForLOD(VV) {
+        this._objectRenderer.cameraForLOD = VV
       }
       get disableImageProcessing() {
         return this._objectRenderer.disableImageProcessing
       }
-      set disableImageProcessing(MM) {
-        this._objectRenderer.disableImageProcessing = MM
+      set disableImageProcessing(VV) {
+        this._objectRenderer.disableImageProcessing = VV
       }
       get customIsReadyFunction() {
         return this._objectRenderer.customIsReadyFunction
       }
-      set customIsReadyFunction(MM) {
-        this._objectRenderer.customIsReadyFunction = MM
+      set customIsReadyFunction(VV) {
+        this._objectRenderer.customIsReadyFunction = VV
       }
       get customRenderFunction() {
         return this._objectRenderer.customRenderFunction
       }
-      set customRenderFunction(MM) {
-        this._objectRenderer.customRenderFunction = MM
+      set customRenderFunction(VV) {
+        this._objectRenderer.customRenderFunction = VV
       }
       get postProcesses() {
         return this._postProcesses
@@ -433,29 +433,29 @@ export const modules = {
       get _prePassEnabled() {
         return !!this._prePassRenderTarget && this._prePassRenderTarget.enabled
       }
-      set onAfterUnbind(MM) {
-        this._onAfterUnbindObserver && this.onAfterUnbindObservable.remove(this._onAfterUnbindObserver), this._onAfterUnbindObserver = this.onAfterUnbindObservable.add(MM)
+      set onAfterUnbind(VV) {
+        this._onAfterUnbindObserver && this.onAfterUnbindObservable.remove(this._onAfterUnbindObserver), this._onAfterUnbindObserver = this.onAfterUnbindObservable.add(VV)
       }
       get onBeforeRenderObservable() {
         return this._objectRenderer.onBeforeRenderObservable
       }
-      set onBeforeRender(MM) {
-        this._onBeforeRenderObserver && this.onBeforeRenderObservable.remove(this._onBeforeRenderObserver), this._onBeforeRenderObserver = this.onBeforeRenderObservable.add(MM)
+      set onBeforeRender(VV) {
+        this._onBeforeRenderObserver && this.onBeforeRenderObservable.remove(this._onBeforeRenderObserver), this._onBeforeRenderObserver = this.onBeforeRenderObservable.add(VV)
       }
       get onAfterRenderObservable() {
         return this._objectRenderer.onAfterRenderObservable
       }
-      set onAfterRender(MM) {
-        this._onAfterRenderObserver && this.onAfterRenderObservable.remove(this._onAfterRenderObserver), this._onAfterRenderObserver = this.onAfterRenderObservable.add(MM)
+      set onAfterRender(VV) {
+        this._onAfterRenderObserver && this.onAfterRenderObservable.remove(this._onAfterRenderObserver), this._onAfterRenderObserver = this.onAfterRenderObservable.add(VV)
       }
-      set onClear(MM) {
-        this._onClearObserver && this.onClearObservable.remove(this._onClearObserver), this._onClearObserver = this.onClearObservable.add(MM)
+      set onClear(VV) {
+        this._onClearObserver && this.onClearObservable.remove(this._onClearObserver), this._onClearObserver = this.onClearObservable.add(VV)
       }
       get _waitingRenderList() {
         return this._objectRenderer._waitingRenderList
       }
-      set _waitingRenderList(MM) {
-        this._objectRenderer._waitingRenderList = MM
+      set _waitingRenderList(VV) {
+        this._objectRenderer._waitingRenderList = VV
       }
       get renderPassId() {
         return this._objectRenderer.renderPassId
@@ -466,8 +466,8 @@ export const modules = {
       get currentRefreshId() {
         return this._objectRenderer.currentRefreshId
       }
-      setMaterialForRendering(MM, rM) {
-        this._objectRenderer.setMaterialForRendering(MM, rM)
+      setMaterialForRendering(VV, eV) {
+        this._objectRenderer.setMaterialForRendering(VV, eV)
       }
       get isMulti() {
         return this._renderTarget?.isMulti ?? !1
@@ -481,11 +481,11 @@ export const modules = {
       _onRatioRescale() {
         this._sizeRatio && this.resize(this._initialSizeParameter)
       }
-      set boundingBoxSize(MM) {
-        if (this._boundingBoxSize && this._boundingBoxSize.equals(MM)) return;
-        this._boundingBoxSize = MM;
-        const rM = this.Hk();
-        rM && rM.markAllMaterialsAsDirty(1)
+      set boundingBoxSize(VV) {
+        if (this._boundingBoxSize && this._boundingBoxSize.equals(VV)) return;
+        this._boundingBoxSize = VV;
+        const eV = this.dD();
+        eV && eV.markAllMaterialsAsDirty(1)
       }
       get boundingBoxSize() {
         return this._boundingBoxSize
@@ -493,108 +493,108 @@ export const modules = {
       get depthStencilTexture() {
         return this._renderTarget?._depthStencilTexture ?? null
       }
-      constructor(MM, rM, iM) {
-        let aM, PM, QM = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-          zM = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
-          LM = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0,
-          mM = arguments.length > 6 && void 0 !== arguments[6] && arguments[6],
-          HM = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : jM.h.TRILINEAR_SAMPLINGMODE,
-          hM = !(arguments.length > 8 && void 0 !== arguments[8]) || arguments[8],
-          dM = arguments.length > 9 && void 0 !== arguments[9] && arguments[9],
-          yM = arguments.length > 10 && void 0 !== arguments[10] && arguments[10],
-          lM = arguments.length > 11 && void 0 !== arguments[11] ? arguments[11] : 5,
-          EM = arguments.length > 12 && void 0 !== arguments[12] && arguments[12],
-          UM = arguments.length > 13 ? arguments[13] : void 0,
-          GM = arguments.length > 14 ? arguments[14] : void 0,
-          CM = arguments.length > 15 && void 0 !== arguments[15] && arguments[15],
-          eM = arguments.length > 16 && void 0 !== arguments[16] && arguments[16],
-          bM = !0,
-          wM = !1;
-        if ("object" === typeof QM) {
-          const MM = QM;
-          QM = !!MM.generateMipMaps, zM = MM.doNotChangeAspectRatio ?? !0, LM = MM.type ?? 0, mM = !!MM.isCube, HM = MM.samplingMode ?? jM.h.TRILINEAR_SAMPLINGMODE, hM = MM.generateDepthBuffer ?? !0, dM = !!MM.generateStencilBuffer, yM = !!MM.isMulti, lM = MM.format ?? 5, EM = !!MM.delayAllocation, UM = MM.samples, GM = MM.creationFlags, CM = !!MM.noColorAttachment, eM = !!MM.useSRGBBuffer, aM = MM.colorAttachment, bM = MM.gammaSpace ?? bM, PM = MM.existingObjectRenderer, wM = !!MM.enableClusteredLights
+      constructor(VV, eV, xV) {
+        let yV, pV, nV = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+          wV = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
+          ZV = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0,
+          vV = arguments.length > 6 && void 0 !== arguments[6] && arguments[6],
+          rV = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : UV.f.TRILINEAR_SAMPLINGMODE,
+          kV = !(arguments.length > 8 && void 0 !== arguments[8]) || arguments[8],
+          EV = arguments.length > 9 && void 0 !== arguments[9] && arguments[9],
+          BV = arguments.length > 10 && void 0 !== arguments[10] && arguments[10],
+          jV = arguments.length > 11 && void 0 !== arguments[11] ? arguments[11] : 5,
+          qV = arguments.length > 12 && void 0 !== arguments[12] && arguments[12],
+          tV = arguments.length > 13 ? arguments[13] : void 0,
+          FV = arguments.length > 14 ? arguments[14] : void 0,
+          TV = arguments.length > 15 && void 0 !== arguments[15] && arguments[15],
+          PV = arguments.length > 16 && void 0 !== arguments[16] && arguments[16],
+          AV = !0,
+          NV = !1;
+        if ("object" === typeof nV) {
+          const VV = nV;
+          nV = !!VV.generateMipMaps, wV = VV.doNotChangeAspectRatio ?? !0, ZV = VV.type ?? 0, vV = !!VV.isCube, rV = VV.samplingMode ?? UV.f.TRILINEAR_SAMPLINGMODE, kV = VV.generateDepthBuffer ?? !0, EV = !!VV.generateStencilBuffer, BV = !!VV.isMulti, jV = VV.format ?? 5, qV = !!VV.delayAllocation, tV = VV.samples, FV = VV.creationFlags, TV = !!VV.noColorAttachment, PV = !!VV.useSRGBBuffer, yV = VV.colorAttachment, AV = VV.gammaSpace ?? AV, pV = VV.existingObjectRenderer, NV = !!VV.enableClusteredLights
         }
-        if (super(null, iM, !QM, void 0, HM, void 0, void 0, void 0, void 0, lM), this.ignoreCameraViewport = !1, this.onBeforeBindObservable = new OM.d, this.onAfterUnbindObservable = new OM.d, this.onClearObservable = new OM.d, this.onResizeObservable = new OM.d, this._cleared = !1, this.skipInitialClear = !1, this._samples = 1, this._canRescale = !0, this._renderTarget = null, this._dontDisposeObjectRenderer = !1, this.boundingBoxPosition = SM.q.Zero(), this._disableEngineStages = !1, this._dumpToolsLoading = !1, !(iM = this.Hk())) return;
-        const tM = this.Hk().ph();
-        this._gammaSpace = bM, this._coordinatesMode = jM.h.PROJECTION_MODE, this.name = MM, this.isRenderTarget = !0, this._initialSizeParameter = rM, this._dontDisposeObjectRenderer = !!PM, this._processSizeParameter(rM), this._objectRenderer = PM ?? new JM(MM, iM, {
-          numPasses: mM ? 6 : this.getRenderLayers() || 1,
-          doNotChangeAspectRatio: zM,
-          enableClusteredLights: wM
+        if (super(null, xV, !nV, void 0, rV, void 0, void 0, void 0, void 0, jV), this.ignoreCameraViewport = !1, this.onBeforeBindObservable = new JV.c, this.onAfterUnbindObservable = new JV.c, this.onClearObservable = new JV.c, this.onResizeObservable = new JV.c, this._cleared = !1, this.skipInitialClear = !1, this._samples = 1, this._canRescale = !0, this._renderTarget = null, this._dontDisposeObjectRenderer = !1, this.boundingBoxPosition = YV.o.Zero(), this._disableEngineStages = !1, this._dumpToolsLoading = !1, !(xV = this.dD())) return;
+        const XV = this.dD().sk();
+        this._gammaSpace = AV, this._coordinatesMode = UV.f.PROJECTION_MODE, this.name = VV, this.isRenderTarget = !0, this._initialSizeParameter = eV, this._dontDisposeObjectRenderer = !!pV, this._processSizeParameter(eV), this._objectRenderer = pV ?? new bV(VV, xV, {
+          numPasses: vV ? 6 : this.getRenderLayers() || 1,
+          doNotChangeAspectRatio: wV,
+          enableClusteredLights: NV
         }), this._onBeforeRenderingManagerRenderObserver = this._objectRenderer.onBeforeRenderingManagerRenderObservable.add((() => {
-          const MM = this._scene;
+          const VV = this._scene;
           if (!this._disableEngineStages)
-            for (const rM of MM._beforeRenderTargetClearStage) rM.action(this, this._currentFaceIndex, this._currentLayer);
-          if (this.onClearObservable.hasObservers() ? this.onClearObservable.notifyObservers(tM) : this.skipInitialClear || tM.clear(this.clearColor ?? MM.clearColor, !0, !0, !0), this._doNotChangeAspectRatio || MM.updateTransformMatrix(!0), !this._disableEngineStages)
-            for (const rM of MM._beforeRenderTargetDrawStage) rM.action(this, this._currentFaceIndex, this._currentLayer);
-          tM._debugPushGroup && tM._debugPushGroup(`Render to ${this.name} (face #${this._currentFaceIndex} layer #${this._currentLayer})`)
+            for (const eV of VV._beforeRenderTargetClearStage) eV.action(this, this._currentFaceIndex, this._currentLayer);
+          if (this.onClearObservable.hasObservers() ? this.onClearObservable.notifyObservers(XV) : this.skipInitialClear || XV.clear(this.clearColor ?? VV.clearColor, !0, !0, !0), this._doNotChangeAspectRatio || VV.updateTransformMatrix(!0), !this._disableEngineStages)
+            for (const eV of VV._beforeRenderTargetDrawStage) eV.action(this, this._currentFaceIndex, this._currentLayer);
+          XV._debugPushGroup && XV._debugPushGroup(`Render to ${this.name} (face #${this._currentFaceIndex} layer #${this._currentLayer})`)
         })), this._onAfterRenderingManagerRenderObserver = this._objectRenderer.onAfterRenderingManagerRenderObservable.add((() => {
-          if (tM._debugPopGroup && tM._debugPopGroup(), !this._disableEngineStages)
-            for (const rM of this._scene._afterRenderTargetDrawStage) rM.action(this, this._currentFaceIndex, this._currentLayer);
-          const MM = this._texture?.generateMipMaps ?? !1;
+          if (XV._debugPopGroup && XV._debugPopGroup(), !this._disableEngineStages)
+            for (const eV of this._scene._afterRenderTargetDrawStage) eV.action(this, this._currentFaceIndex, this._currentLayer);
+          const VV = this._texture?.generateMipMaps ?? !1;
           if (this._texture && (this._texture.generateMipMaps = !1), this._postProcessManager ? this._postProcessManager._finalizeFrame(!1, this._renderTarget ?? void 0, this._currentFaceIndex, this._postProcesses, this.ignoreCameraViewport) : this._currentUseCameraPostProcess && this._scene.postProcessManager._finalizeFrame(!1, this._renderTarget ?? void 0, this._currentFaceIndex), !this._disableEngineStages)
-            for (const rM of this._scene._afterRenderTargetPostProcessStage) rM.action(this, this._currentFaceIndex, this._currentLayer);
-          this._texture && (this._texture.generateMipMaps = MM), this._doNotChangeAspectRatio || this._scene.updateTransformMatrix(!0), this._currentDumpForDebug && (this._dumpTools ? this._dumpTools.DumpFramebuffer(this.getRenderWidth(), this.getRenderHeight(), tM) : nM.e.Error("dumpTools module is still being loaded. To speed up the process import dump tools directly in your project"))
+            for (const eV of this._scene._afterRenderTargetPostProcessStage) eV.action(this, this._currentFaceIndex, this._currentLayer);
+          this._texture && (this._texture.generateMipMaps = VV), this._doNotChangeAspectRatio || this._scene.updateTransformMatrix(!0), this._currentDumpForDebug && (this._dumpTools ? this._dumpTools.DumpFramebuffer(this.getRenderWidth(), this.getRenderHeight(), XV) : QV.b.Error("dumpTools module is still being loaded. To speed up the process import dump tools directly in your project"))
         })), this._onFastPathRenderObserver = this._objectRenderer.onFastPathRenderObservable.add((() => {
-          this.onClearObservable.hasObservers() ? this.onClearObservable.notifyObservers(tM) : this.skipInitialClear || tM.clear(this.clearColor || this._scene.clearColor, !0, !0, !0)
-        })), this._resizeObserver = tM.onResizeObservable.add((() => {})), this._generateMipMaps = !!QM, this._doNotChangeAspectRatio = zM, yM || (this._renderTargetOptions = {
-          generateMipMaps: QM,
-          type: LM,
+          this.onClearObservable.hasObservers() ? this.onClearObservable.notifyObservers(XV) : this.skipInitialClear || XV.clear(this.clearColor || this._scene.clearColor, !0, !0, !0)
+        })), this._resizeObserver = XV.onResizeObservable.add((() => {})), this._generateMipMaps = !!nV, this._doNotChangeAspectRatio = wV, BV || (this._renderTargetOptions = {
+          generateMipMaps: nV,
+          type: ZV,
           format: this._format ?? void 0,
           samplingMode: this.samplingMode,
-          generateDepthBuffer: hM,
-          generateStencilBuffer: dM,
-          samples: UM,
-          creationFlags: GM,
-          noColorAttachment: CM,
-          useSRGBBuffer: eM,
-          colorAttachment: aM,
+          generateDepthBuffer: kV,
+          generateStencilBuffer: EV,
+          samples: tV,
+          creationFlags: FV,
+          noColorAttachment: TV,
+          useSRGBBuffer: PV,
+          colorAttachment: yV,
           label: this.name
-        }, this.samplingMode === jM.h.NEAREST_SAMPLINGMODE && (this.wrapU = jM.h.CLAMP_ADDRESSMODE, this.wrapV = jM.h.CLAMP_ADDRESSMODE), EM || (mM ? (this._renderTarget = iM.ph().createRenderTargetCubeTexture(this.getRenderSize(), this._renderTargetOptions), this.coordinatesMode = jM.h.INVCUBIC_MODE, this._textureMatrix = SM.d.Identity()) : this._renderTarget = iM.ph().createRenderTargetTexture(this._size, this._renderTargetOptions), this._texture = this._renderTarget.texture, void 0 !== UM && (this.samples = UM)))
+        }, this.samplingMode === UV.f.NEAREST_SAMPLINGMODE && (this.wrapU = UV.f.CLAMP_ADDRESSMODE, this.wrapV = UV.f.CLAMP_ADDRESSMODE), qV || (vV ? (this._renderTarget = xV.sk().createRenderTargetCubeTexture(this.getRenderSize(), this._renderTargetOptions), this.coordinatesMode = UV.f.INVCUBIC_MODE, this._textureMatrix = YV.d.Identity()) : this._renderTarget = xV.sk().createRenderTargetTexture(this._size, this._renderTargetOptions), this._texture = this._renderTarget.texture, void 0 !== tV && (this.samples = tV)))
       }
       createDepthStencilTexture() {
-        let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          rM = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
-          iM = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-          OM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1,
-          SM = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 14,
-          jM = arguments.length > 5 ? arguments[5] : void 0;
-        this._renderTarget?.createDepthStencilTexture(MM, rM, iM, OM, SM, jM)
+        let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          eV = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
+          xV = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+          JV = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1,
+          YV = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 14,
+          UV = arguments.length > 5 ? arguments[5] : void 0;
+        this._renderTarget?.createDepthStencilTexture(VV, eV, xV, JV, YV, UV)
       }
-      _processSizeParameter(MM) {
-        if (MM.ratio) {
-          this._sizeRatio = MM.ratio;
-          const rM = this._getEngine();
+      _processSizeParameter(VV) {
+        if (VV.ratio) {
+          this._sizeRatio = VV.ratio;
+          const eV = this._getEngine();
           this._size = {
-            width: this._bestReflectionRenderTargetDimension(rM.getRenderWidth(), this._sizeRatio),
-            height: this._bestReflectionRenderTargetDimension(rM.getRenderHeight(), this._sizeRatio)
+            width: this._bestReflectionRenderTargetDimension(eV.getRenderWidth(), this._sizeRatio),
+            height: this._bestReflectionRenderTargetDimension(eV.getRenderHeight(), this._sizeRatio)
           }
-        } else this._size = MM
+        } else this._size = VV
       }
       get samples() {
         return this._renderTarget?.samples ?? this._samples
       }
-      set samples(MM) {
-        this._renderTarget && (this._samples = this._renderTarget.setSamples(MM))
+      set samples(VV) {
+        this._renderTarget && (this._samples = this._renderTarget.setSamples(VV))
       }
-      addPostProcess(MM) {
+      addPostProcess(VV) {
         if (!this._postProcessManager) {
-          const MM = this.Hk();
-          if (!MM) return;
-          this._postProcessManager = new aM.b(MM), this._postProcesses = new Array
+          const VV = this.dD();
+          if (!VV) return;
+          this._postProcessManager = new yV.d(VV), this._postProcesses = new Array
         }
-        this._postProcesses.push(MM), this._postProcesses[0].autoClear = !1
+        this._postProcesses.push(VV), this._postProcesses[0].autoClear = !1
       }
       clearPostProcesses() {
-        let MM = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        let VV = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
         if (this._postProcesses) {
-          if (MM)
-            for (const MM of this._postProcesses) MM.dispose();
+          if (VV)
+            for (const VV of this._postProcesses) VV.dispose();
           this._postProcesses = []
         }
       }
-      removePostProcess(MM) {
+      removePostProcess(VV) {
         if (!this._postProcesses) return;
-        const rM = this._postProcesses.indexOf(MM); - 1 !== rM && (this._postProcesses.splice(rM, 1), this._postProcesses.length > 0 && (this._postProcesses[0].autoClear = !1))
+        const eV = this._postProcesses.indexOf(VV); - 1 !== eV && (this._postProcesses.splice(eV, 1), this._postProcesses.length > 0 && (this._postProcesses[0].autoClear = !1))
       }
       resetRefreshCounter() {
         this._objectRenderer.resetRefreshCounter()
@@ -602,8 +602,8 @@ export const modules = {
       get refreshRate() {
         return this._objectRenderer.refreshRate
       }
-      set refreshRate(MM) {
-        this._objectRenderer.refreshRate = MM
+      set refreshRate(VV) {
+        this._objectRenderer.refreshRate = VV
       }
       _shouldRender() {
         return this._objectRenderer.shouldRender()
@@ -618,10 +618,10 @@ export const modules = {
         return this._size.width ? this._size.height : this._size
       }
       getRenderLayers() {
-        const MM = this._size.layers;
-        if (MM) return MM;
-        const rM = this._size.depth;
-        return rM || 0
+        const VV = this._size.layers;
+        if (VV) return VV;
+        const eV = this._size.depth;
+        return eV || 0
       }
       disableRescaling() {
         this._canRescale = !1
@@ -629,92 +629,92 @@ export const modules = {
       get canRescale() {
         return this._canRescale
       }
-      scale(MM) {
-        const rM = Math.max(1, this.getRenderSize() * MM);
-        this.resize(rM)
+      scale(VV) {
+        const eV = Math.max(1, this.getRenderSize() * VV);
+        this.resize(eV)
       }
       getReflectionTextureMatrix() {
         return this.isCube ? this._textureMatrix : super.getReflectionTextureMatrix()
       }
-      resize(MM) {
-        const rM = this.isCube;
+      resize(VV) {
+        const eV = this.isCube;
         this._renderTarget?.dispose(), this._renderTarget = null;
-        const iM = this.Hk();
-        iM && (this._processSizeParameter(MM), this._renderTarget = rM ? iM.ph().createRenderTargetCubeTexture(this.getRenderSize(), this._renderTargetOptions) : iM.ph().createRenderTargetTexture(this._size, this._renderTargetOptions), this._texture = this._renderTarget.texture, void 0 !== this._renderTargetOptions.samples && (this.samples = this._renderTargetOptions.samples), this.onResizeObservable.hasObservers() && this.onResizeObservable.notifyObservers(this))
+        const xV = this.dD();
+        xV && (this._processSizeParameter(VV), this._renderTarget = eV ? xV.sk().createRenderTargetCubeTexture(this.getRenderSize(), this._renderTargetOptions) : xV.sk().createRenderTargetTexture(this._size, this._renderTargetOptions), this._texture = this._renderTarget.texture, void 0 !== this._renderTargetOptions.samples && (this.samples = this._renderTargetOptions.samples), this.onResizeObservable.hasObservers() && this.onResizeObservable.notifyObservers(this))
       }
       render() {
-        let MM = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-          rM = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        this._render(MM, rM)
+        let VV = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
+          eV = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        this._render(VV, eV)
       }
       isReadyForRendering() {
-        this._dumpToolsLoading || (this._dumpToolsLoading = !0, Promise.resolve().then((() => iM(44478))).then((MM => this._dumpTools = MM))), this._objectRenderer.prepareRenderList(), this.onBeforeBindObservable.notifyObservers(this), this._objectRenderer.initRender(this.getRenderWidth(), this.getRenderHeight());
-        const MM = this._objectRenderer._checkReadiness();
-        return this.onAfterUnbindObservable.notifyObservers(this), this._objectRenderer.finishRender(), MM
+        this._dumpToolsLoading || (this._dumpToolsLoading = !0, Promise.resolve().then((() => xV(44723))).then((VV => this._dumpTools = VV))), this._objectRenderer.prepareRenderList(), this.onBeforeBindObservable.notifyObservers(this), this._objectRenderer.initRender(this.getRenderWidth(), this.getRenderHeight());
+        const VV = this._objectRenderer._checkReadiness();
+        return this.onAfterUnbindObservable.notifyObservers(this), this._objectRenderer.finishRender(), VV
       }
       _render() {
-        let MM = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-          rM = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        const iM = this.Hk();
-        if (!iM) return;
-        void 0 !== this.useCameraPostProcesses && (MM = this.useCameraPostProcesses);
-        const OM = iM.ph();
-        if (OM._debugPushGroup && OM._debugPushGroup(`Render to ${this.name}`), this._objectRenderer.prepareRenderList(), this.onBeforeBindObservable.notifyObservers(this), this._objectRenderer.initRender(this.getRenderWidth(), this.getRenderHeight()), !this.is2DArray && !this.is3D || this.isMulti)
+        let VV = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
+          eV = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        const xV = this.dD();
+        if (!xV) return;
+        void 0 !== this.useCameraPostProcesses && (VV = this.useCameraPostProcesses);
+        const JV = xV.sk();
+        if (JV._debugPushGroup && JV._debugPushGroup(`Render to ${this.name}`), this._objectRenderer.prepareRenderList(), this.onBeforeBindObservable.notifyObservers(this), this._objectRenderer.initRender(this.getRenderWidth(), this.getRenderHeight()), !this.is2DArray && !this.is3D || this.isMulti)
           if (this.isCube && !this.isMulti)
-            for (let SM = 0; SM < 6; SM++) this._renderToTarget(SM, MM, rM), iM.incrementRenderId(), iM.resetCachedMaterial();
-          else this._renderToTarget(0, MM, rM);
+            for (let YV = 0; YV < 6; YV++) this._renderToTarget(YV, VV, eV), xV.incrementRenderId(), xV.resetCachedMaterial();
+          else this._renderToTarget(0, VV, eV);
         else
-          for (let SM = 0; SM < this.getRenderLayers(); SM++) this._renderToTarget(0, MM, rM, SM), iM.incrementRenderId(), iM.resetCachedMaterial();
-        this.onAfterUnbindObservable.notifyObservers(this), this._objectRenderer.finishRender(), OM._debugPopGroup && OM._debugPopGroup()
+          for (let YV = 0; YV < this.getRenderLayers(); YV++) this._renderToTarget(0, VV, eV, YV), xV.incrementRenderId(), xV.resetCachedMaterial();
+        this.onAfterUnbindObservable.notifyObservers(this), this._objectRenderer.finishRender(), JV._debugPopGroup && JV._debugPopGroup()
       }
-      _bestReflectionRenderTargetDimension(MM, rM) {
-        const iM = MM * rM,
-          OM = (0, PM.m)(iM + 16384 / (128 + iM));
-        return Math.min((0, PM.c)(MM), OM)
+      _bestReflectionRenderTargetDimension(VV, eV) {
+        const xV = VV * eV,
+          JV = (0, pV.o)(xV + 16384 / (128 + xV));
+        return Math.min((0, pV.e)(VV), JV)
       }
       _bindFrameBuffer() {
-        let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        const iM = this.Hk();
-        if (!iM) return;
-        const OM = iM.ph();
-        this._renderTarget && OM.bindFramebuffer(this._renderTarget, this.isCube ? MM : void 0, void 0, void 0, this.ignoreCameraViewport, 0, rM)
+        let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        const xV = this.dD();
+        if (!xV) return;
+        const JV = xV.sk();
+        this._renderTarget && JV.bindFramebuffer(this._renderTarget, this.isCube ? VV : void 0, void 0, void 0, this.ignoreCameraViewport, 0, eV)
       }
-      _unbindFrameBuffer(MM, rM) {
-        this._renderTarget && MM.unBindFramebuffer(this._renderTarget, this.isCube, (() => {
-          this.onAfterRenderObservable.notifyObservers(rM)
+      _unbindFrameBuffer(VV, eV) {
+        this._renderTarget && VV.unBindFramebuffer(this._renderTarget, this.isCube, (() => {
+          this.onAfterRenderObservable.notifyObservers(eV)
         }))
       }
-      _prepareFrame(MM, rM, iM, OM) {
-        this._postProcessManager ? this._prePassEnabled || this._postProcessManager._prepareFrame(this._texture, this._postProcesses) || this._bindFrameBuffer(rM, iM) : OM && MM.postProcessManager._prepareFrame(this._texture) || this._bindFrameBuffer(rM, iM)
+      _prepareFrame(VV, eV, xV, JV) {
+        this._postProcessManager ? this._prePassEnabled || this._postProcessManager._prepareFrame(this._texture, this._postProcesses) || this._bindFrameBuffer(eV, xV) : JV && VV.postProcessManager._prepareFrame(this._texture) || this._bindFrameBuffer(eV, xV)
       }
-      _renderToTarget(MM, rM, iM) {
-        let OM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-        const SM = this.Hk();
-        if (!SM) return;
-        const jM = SM.ph();
-        this._currentFaceIndex = MM, this._currentLayer = OM, this._currentUseCameraPostProcess = rM, this._currentDumpForDebug = iM, this._prepareFrame(SM, MM, OM, rM), this._objectRenderer.render(MM + OM, !0), this._unbindFrameBuffer(jM, MM), this._texture && this.isCube && 5 === MM && jM.generateMipMapsForCubemap(this._texture, !0)
+      _renderToTarget(VV, eV, xV) {
+        let JV = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+        const YV = this.dD();
+        if (!YV) return;
+        const UV = YV.sk();
+        this._currentFaceIndex = VV, this._currentLayer = JV, this._currentUseCameraPostProcess = eV, this._currentDumpForDebug = xV, this._prepareFrame(YV, VV, JV, eV), this._objectRenderer.render(VV + JV, !0), this._unbindFrameBuffer(UV, VV), this._texture && this.isCube && 5 === VV && UV.generateMipMapsForCubemap(this._texture, !0)
       }
-      setRenderingOrder(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-          OM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-        this._objectRenderer.setRenderingOrder(MM, rM, iM, OM)
+      setRenderingOrder(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+          JV = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+        this._objectRenderer.setRenderingOrder(VV, eV, xV, JV)
       }
-      setRenderingAutoClearDepthStencil(MM, rM) {
-        this._objectRenderer.setRenderingAutoClearDepthStencil(MM, rM)
+      setRenderingAutoClearDepthStencil(VV, eV) {
+        this._objectRenderer.setRenderingAutoClearDepthStencil(VV, eV)
       }
       clone() {
-        const MM = this.getSize(),
-          rM = new yM(this.name, MM, this.Hk(), this._renderTargetOptions.generateMipMaps, this._doNotChangeAspectRatio, this._renderTargetOptions.type, this.isCube, this._renderTargetOptions.samplingMode, this._renderTargetOptions.generateDepthBuffer, this._renderTargetOptions.generateStencilBuffer, void 0, this._renderTargetOptions.format, void 0, this._renderTargetOptions.samples);
-        return rM.hasAlpha = this.hasAlpha, rM.level = this.level, rM.coordinatesMode = this.coordinatesMode, this.renderList && (rM.renderList = this.renderList.slice(0)), rM
+        const VV = this.getSize(),
+          eV = new BV(this.name, VV, this.dD(), this._renderTargetOptions.generateMipMaps, this._doNotChangeAspectRatio, this._renderTargetOptions.type, this.isCube, this._renderTargetOptions.samplingMode, this._renderTargetOptions.generateDepthBuffer, this._renderTargetOptions.generateStencilBuffer, void 0, this._renderTargetOptions.format, void 0, this._renderTargetOptions.samples);
+        return eV.hasAlpha = this.hasAlpha, eV.level = this.level, eV.coordinatesMode = this.coordinatesMode, this.renderList && (eV.renderList = this.renderList.slice(0)), eV
       }
       serialize() {
         if (!this.name) return null;
-        const MM = super.serialize();
-        if (MM.renderTargetSize = this.getRenderSize(), MM.renderList = [], this.renderList)
-          for (let rM = 0; rM < this.renderList.length; rM++) MM.renderList.push(this.renderList[rM].id);
-        return MM
+        const VV = super.serialize();
+        if (VV.renderTargetSize = this.getRenderSize(), VV.renderList = [], this.renderList)
+          for (let eV = 0; eV < this.renderList.length; eV++) VV.renderList.push(this.renderList[eV].id);
+        return VV
       }
       disposeFramebufferObjects() {
         this._renderTarget?.dispose(!0)
@@ -723,12 +723,12 @@ export const modules = {
         this._renderTarget?.releaseTextures(), this._texture = null
       }
       dispose() {
-        this.onResizeObservable.clear(), this.onClearObservable.clear(), this.onAfterUnbindObservable.clear(), this.onBeforeBindObservable.clear(), this._postProcessManager && (this._postProcessManager.dispose(), this._postProcessManager = null), this._prePassRenderTarget && this._prePassRenderTarget.dispose(), this._objectRenderer.onBeforeRenderingManagerRenderObservable.remove(this._onBeforeRenderingManagerRenderObserver), this._objectRenderer.onAfterRenderingManagerRenderObservable.remove(this._onAfterRenderingManagerRenderObserver), this._objectRenderer.onFastPathRenderObservable.remove(this._onFastPathRenderObserver), this._dontDisposeObjectRenderer || this._objectRenderer.dispose(), this.clearPostProcesses(!0), this._resizeObserver && (this.Hk().ph().onResizeObservable.remove(this._resizeObserver), this._resizeObserver = null);
-        const MM = this.Hk();
-        if (!MM) return;
-        let rM = MM.customRenderTargets.indexOf(this);
-        rM >= 0 && MM.customRenderTargets.splice(rM, 1);
-        for (const iM of MM.cameras) rM = iM.customRenderTargets.indexOf(this), rM >= 0 && iM.customRenderTargets.splice(rM, 1);
+        this.onResizeObservable.clear(), this.onClearObservable.clear(), this.onAfterUnbindObservable.clear(), this.onBeforeBindObservable.clear(), this._postProcessManager && (this._postProcessManager.dispose(), this._postProcessManager = null), this._prePassRenderTarget && this._prePassRenderTarget.dispose(), this._objectRenderer.onBeforeRenderingManagerRenderObservable.remove(this._onBeforeRenderingManagerRenderObserver), this._objectRenderer.onAfterRenderingManagerRenderObservable.remove(this._onAfterRenderingManagerRenderObserver), this._objectRenderer.onFastPathRenderObservable.remove(this._onFastPathRenderObserver), this._dontDisposeObjectRenderer || this._objectRenderer.dispose(), this.clearPostProcesses(!0), this._resizeObserver && (this.dD().sk().onResizeObservable.remove(this._resizeObserver), this._resizeObserver = null);
+        const VV = this.dD();
+        if (!VV) return;
+        let eV = VV.customRenderTargets.indexOf(this);
+        eV >= 0 && VV.customRenderTargets.splice(eV, 1);
+        for (const xV of VV.cameras) eV = xV.customRenderTargets.indexOf(this), eV >= 0 && xV.customRenderTargets.splice(eV, 1);
         this._renderTarget?.dispose(), this._renderTarget = null, this._texture = null, super.dispose()
       }
       _rebuild() {
@@ -741,49 +741,49 @@ export const modules = {
         return 1
       }
     }
-    yM.REFRESHRATE_RENDER_ONCE = JM.REFRESHRATE_RENDER_ONCE, yM.REFRESHRATE_RENDER_ONEVERYFRAME = JM.REFRESHRATE_RENDER_ONEVERYFRAME, yM.REFRESHRATE_RENDER_ONEVERYTWOFRAMES = JM.REFRESHRATE_RENDER_ONEVERYTWOFRAMES;
-    Object.getOwnPropertyDescriptor(yM.prototype, "noPrePassRenderer") || Object.defineProperty(yM.prototype, "noPrePassRenderer", (0, dM.g)("RenderTargetTexture", "noPrePassRenderer"))
+    BV.REFRESHRATE_RENDER_ONCE = bV.REFRESHRATE_RENDER_ONCE, BV.REFRESHRATE_RENDER_ONEVERYFRAME = bV.REFRESHRATE_RENDER_ONEVERYFRAME, BV.REFRESHRATE_RENDER_ONEVERYTWOFRAMES = bV.REFRESHRATE_RENDER_ONEVERYTWOFRAMES;
+    Object.getOwnPropertyDescriptor(BV.prototype, "noPrePassRenderer") || Object.defineProperty(BV.prototype, "noPrePassRenderer", (0, EV.g)("RenderTargetTexture", "noPrePassRenderer"))
   },
-  44445: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => QM,
-      c: () => zM
+  44699: (VV, eV, xV) => {
+    xV.d(eV, {
+      c: () => nV,
+      d: () => wV
     });
-    var OM = iM(41250),
-      SM = iM(39078),
-      jM = iM(38068),
-      aM = iM(40957),
-      PM = iM(41424);
-    const nM = {
+    var JV = xV(41394),
+      YV = xV(39240),
+      UV = xV(38296),
+      yV = xV(41101),
+      pV = xV(41577);
+    const QV = {
       positions: [1, 1, -1, 1, -1, -1, 1, -1],
       indices: [0, 1, 2, 0, 2, 3]
     };
-    class QM {
-      constructor(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : nM;
-        this._fullscreenViewport = new SM.e(0, 0, 1, 1);
-        const iM = rM.positions ?? nM.positions,
-          jM = rM.indices ?? nM.indices;
-        this.engine = MM, this._vertexBuffers = {
-          [OM.j.PositionKind]: new OM.j(MM, iM, OM.j.PositionKind, !1, !1, 2)
-        }, this._indexBuffer = MM.createIndexBuffer(jM), this._indexBufferLength = jM.length, this._onContextRestoredObserver = MM.Rh.add((() => {
-          this._indexBuffer = MM.createIndexBuffer(jM);
-          for (const MM in this._vertexBuffers) {
-            this._vertexBuffers[MM]._rebuild()
+    class nV {
+      constructor(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : QV;
+        this._fullscreenViewport = new YV.c(0, 0, 1, 1);
+        const xV = eV.positions ?? QV.positions,
+          UV = eV.indices ?? QV.indices;
+        this.engine = VV, this._vertexBuffers = {
+          [JV.j.PositionKind]: new JV.j(VV, xV, JV.j.PositionKind, !1, !1, 2)
+        }, this._indexBuffer = VV.createIndexBuffer(UV), this._indexBufferLength = UV.length, this._onContextRestoredObserver = VV.uk.add((() => {
+          this._indexBuffer = VV.createIndexBuffer(UV);
+          for (const VV in this._vertexBuffers) {
+            this._vertexBuffers[VV]._rebuild()
           }
         }))
       }
       setViewport() {
-        let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this._fullscreenViewport;
-        this.engine.setViewport(MM)
+        let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this._fullscreenViewport;
+        this.engine.setViewport(VV)
       }
-      bindBuffers(MM) {
-        this.engine.bindBuffers(this._vertexBuffers, this._indexBuffer, MM)
+      bindBuffers(VV) {
+        this.engine.bindBuffers(this._vertexBuffers, this._indexBuffer, VV)
       }
-      applyEffectWrapper(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          iM = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        this.engine.setState(!0), this.engine.depthCullingState.depthTest = rM, this.engine.stencilState.stencilTest = iM, this.engine.enableEffect(MM.drawWrapper), this.bindBuffers(MM.effect), MM.onApplyObservable.notifyObservers({})
+      applyEffectWrapper(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          xV = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        this.engine.setState(!0), this.engine.depthCullingState.depthTest = eV, this.engine.stencilState.stencilTest = xV, this.engine.enableEffect(VV.drawWrapper), this.bindBuffers(VV.effect), VV.onApplyObservable.notifyObservers({})
       }
       saveStates() {
         this._savedStateDepthTest = this.engine.depthCullingState.depthTest, this._savedStateStencilTest = this.engine.stencilState.stencilTest
@@ -794,33 +794,33 @@ export const modules = {
       draw() {
         this.engine.drawElementsType(0, 0, this._indexBufferLength)
       }
-      _isRenderTargetTexture(MM) {
-        return void 0 !== MM.renderTarget
+      _isRenderTargetTexture(VV) {
+        return void 0 !== VV.renderTarget
       }
-      render(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        if (!MM.effect.isReady()) return;
+      render(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+        if (!VV.effect.isReady()) return;
         this.saveStates(), this.setViewport();
-        const iM = null === rM ? null : this._isRenderTargetTexture(rM) ? rM.renderTarget : rM;
-        iM && this.engine.bindFramebuffer(iM), this.applyEffectWrapper(MM), this.draw(), iM && this.engine.unBindFramebuffer(iM), this.restoreStates()
+        const xV = null === eV ? null : this._isRenderTargetTexture(eV) ? eV.renderTarget : eV;
+        xV && this.engine.bindFramebuffer(xV), this.applyEffectWrapper(VV), this.draw(), xV && this.engine.unBindFramebuffer(xV), this.restoreStates()
       }
       dispose() {
-        const MM = this._vertexBuffers[OM.j.PositionKind];
-        MM && (MM.dispose(), delete this._vertexBuffers[OM.j.PositionKind]), this._indexBuffer && this.engine._releaseBuffer(this._indexBuffer), this._onContextRestoredObserver && (this.engine.Rh.remove(this._onContextRestoredObserver), this._onContextRestoredObserver = null)
+        const VV = this._vertexBuffers[JV.j.PositionKind];
+        VV && (VV.dispose(), delete this._vertexBuffers[JV.j.PositionKind]), this._indexBuffer && this.engine._releaseBuffer(this._indexBuffer), this._onContextRestoredObserver && (this.engine.uk.remove(this._onContextRestoredObserver), this._onContextRestoredObserver = null)
       }
     }
-    class zM {
-      static RegisterShaderCodeProcessing(MM, rM) {
-        rM ? zM._CustomShaderCodeProcessing[MM ?? ""] = rM : delete zM._CustomShaderCodeProcessing[MM ?? ""]
+    class wV {
+      static RegisterShaderCodeProcessing(VV, eV) {
+        eV ? wV._CustomShaderCodeProcessing[VV ?? ""] = eV : delete wV._CustomShaderCodeProcessing[VV ?? ""]
       }
-      static _GetShaderCodeProcessing(MM) {
-        return zM._CustomShaderCodeProcessing[MM] ?? zM._CustomShaderCodeProcessing[""]
+      static _GetShaderCodeProcessing(VV) {
+        return wV._CustomShaderCodeProcessing[VV] ?? wV._CustomShaderCodeProcessing[""]
       }
       get name() {
         return this.options.name
       }
-      set name(MM) {
-        this.options.name = MM
+      set name(VV) {
+        this.options.name = VV
       }
       isReady() {
         return this._drawWrapper.effect?.isReady() ?? !1
@@ -831,34 +831,34 @@ export const modules = {
       get effect() {
         return this._drawWrapper.effect
       }
-      set effect(MM) {
-        this._drawWrapper.effect = MM
+      set effect(VV) {
+        this._drawWrapper.effect = VV
       }
-      constructor(MM) {
-        this.alphaMode = 0, this.onEffectCreatedObservable = new jM.d(void 0, !0), this.onApplyObservable = new jM.d, this._shadersLoaded = !1, this._webGPUReady = !1, this._importPromises = [], this.options = {
-          ...MM,
-          name: MM.name || "effectWrapper",
-          engine: MM.engine,
-          uniforms: MM.uniforms || MM.uniformNames || [],
+      constructor(VV) {
+        this.alphaMode = 0, this.onEffectCreatedObservable = new UV.c(void 0, !0), this.onApplyObservable = new UV.c, this._shadersLoaded = !1, this._webGPUReady = !1, this._importPromises = [], this.options = {
+          ...VV,
+          name: VV.name || "effectWrapper",
+          engine: VV.engine,
+          uniforms: VV.uniforms || VV.uniformNames || [],
           uniformNames: void 0,
-          samplers: MM.samplers || MM.samplerNames || [],
+          samplers: VV.samplers || VV.samplerNames || [],
           samplerNames: void 0,
-          attributeNames: MM.attributeNames || ["position"],
-          uniformBuffers: MM.uniformBuffers || [],
-          defines: MM.defines || "",
-          useShaderStore: MM.useShaderStore || !1,
-          vertexUrl: MM.vertexUrl || MM.vertexShader || "postprocess",
+          attributeNames: VV.attributeNames || ["position"],
+          uniformBuffers: VV.uniformBuffers || [],
+          defines: VV.defines || "",
+          useShaderStore: VV.useShaderStore || !1,
+          vertexUrl: VV.vertexUrl || VV.vertexShader || "postprocess",
           vertexShader: void 0,
-          fragmentShader: MM.fragmentShader || "pass",
-          indexParameters: MM.indexParameters,
-          blockCompilation: MM.blockCompilation || !1,
-          shaderLanguage: MM.shaderLanguage || 0,
-          onCompiled: MM.onCompiled || void 0,
-          extraInitializations: MM.extraInitializations || void 0,
-          extraInitializationsAsync: MM.extraInitializationsAsync || void 0,
-          useAsPostProcess: MM.useAsPostProcess ?? !1,
-          allowEmptySourceTexture: MM.allowEmptySourceTexture ?? !1
-        }, this.options.uniformNames = this.options.uniforms, this.options.samplerNames = this.options.samplers, this.options.vertexShader = this.options.vertexUrl, this.options.useAsPostProcess && (this.options.allowEmptySourceTexture || -1 !== this.options.samplers.indexOf("textureSampler") || this.options.samplers.push("textureSampler"), -1 === this.options.uniforms.indexOf("scale") && this.options.uniforms.push("scale")), MM.vertexUrl || MM.vertexShader ? this._shaderPath = {
+          fragmentShader: VV.fragmentShader || "pass",
+          indexParameters: VV.indexParameters,
+          blockCompilation: VV.blockCompilation || !1,
+          shaderLanguage: VV.shaderLanguage || 0,
+          onCompiled: VV.onCompiled || void 0,
+          extraInitializations: VV.extraInitializations || void 0,
+          extraInitializationsAsync: VV.extraInitializationsAsync || void 0,
+          useAsPostProcess: VV.useAsPostProcess ?? !1,
+          allowEmptySourceTexture: VV.allowEmptySourceTexture ?? !1
+        }, this.options.uniformNames = this.options.uniforms, this.options.samplerNames = this.options.samplers, this.options.vertexShader = this.options.vertexUrl, this.options.useAsPostProcess && (this.options.allowEmptySourceTexture || -1 !== this.options.samplers.indexOf("textureSampler") || this.options.samplers.push("textureSampler"), -1 === this.options.uniforms.indexOf("scale") && this.options.uniforms.push("scale")), VV.vertexUrl || VV.vertexShader ? this._shaderPath = {
           vertexSource: this.options.vertexShader
         } : (this.options.useAsPostProcess || (this.options.uniforms.push("scale"), this.onApplyObservable.add((() => {
           this.effect.setFloat2("scale", 1, 1)
@@ -866,101 +866,101 @@ export const modules = {
           vertex: this.options.vertexShader
         }), this._shaderPath.fragmentSource = this.options.fragmentShader, this._shaderPath.spectorName = this.options.name, this.options.useShaderStore && (this._shaderPath.fragment = this._shaderPath.fragmentSource, this._shaderPath.vertex || (this._shaderPath.vertex = this._shaderPath.vertexSource), delete this._shaderPath.fragmentSource, delete this._shaderPath.vertexSource), this.onApplyObservable.add((() => {
           this.bind()
-        })), this.options.useShaderStore || (this._onContextRestoredObserver = this.options.engine.Rh.add((() => {
+        })), this.options.useShaderStore || (this._onContextRestoredObserver = this.options.engine.uk.add((() => {
           this.effect._pipelineContext = null, this.effect._prepareEffect()
-        }))), this._drawWrapper = new PM.c(this.options.engine), this._webGPUReady = 1 === this.options.shaderLanguage;
-        const rM = Array.isArray(this.options.defines) ? this.options.defines.join("\n") : this.options.defines;
-        this._postConstructor(this.options.blockCompilation, rM, this.options.extraInitializations)
+        }))), this._drawWrapper = new pV.d(this.options.engine), this._webGPUReady = 1 === this.options.shaderLanguage;
+        const eV = Array.isArray(this.options.defines) ? this.options.defines.join("\n") : this.options.defines;
+        this._postConstructor(this.options.blockCompilation, eV, this.options.extraInitializations)
       }
       _gatherImports() {}
-      _postConstructor(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          OM = arguments.length > 2 ? arguments[2] : void 0,
-          SM = arguments.length > 3 ? arguments[3] : void 0;
-        this._importPromises.length = 0, SM && this._importPromises.push(...SM);
-        const jM = this.options.engine.isWebGPU && !zM.ForceGLSL;
-        this._gatherImports(jM, this._importPromises), this.options.useShaderStore && "postprocess" === this._shaderPath.vertex && this._importPromises.push(jM && this._webGPUReady ? iM.e(672).then((() => iM(64036))) : iM.e(662).then((() => iM(63910)))), void 0 !== OM && OM(jM, this._importPromises), jM && this._webGPUReady && (this.options.shaderLanguage = 1), MM || this.updateEffect(rM)
+      _postConstructor(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          JV = arguments.length > 2 ? arguments[2] : void 0,
+          YV = arguments.length > 3 ? arguments[3] : void 0;
+        this._importPromises.length = 0, YV && this._importPromises.push(...YV);
+        const UV = this.options.engine.isWebGPU && !wV.ForceGLSL;
+        this._gatherImports(UV, this._importPromises), this.options.useShaderStore && "postprocess" === this._shaderPath.vertex && this._importPromises.push(UV && this._webGPUReady ? xV.e(672).then((() => xV(64421))) : xV.e(662).then((() => xV(64298)))), void 0 !== JV && JV(UV, this._importPromises), UV && this._webGPUReady && (this.options.shaderLanguage = 1), VV || this.updateEffect(eV)
       }
       updateEffect() {
-        let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
-          rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-          OM = arguments.length > 3 ? arguments[3] : void 0,
-          SM = arguments.length > 4 ? arguments[4] : void 0,
-          jM = arguments.length > 5 ? arguments[5] : void 0,
-          PM = arguments.length > 6 ? arguments[6] : void 0,
-          nM = arguments.length > 7 ? arguments[7] : void 0;
-        const QM = zM._GetShaderCodeProcessing(this.name);
-        if (QM?.defineCustomBindings) {
-          const OM = rM?.slice() ?? [];
-          OM.push(...this.options.uniforms);
-          const SM = iM?.slice() ?? [];
-          SM.push(...this.options.samplers), MM = QM.defineCustomBindings(this.name, MM, OM, SM), rM = OM, iM = SM
+        let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
+          eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+          JV = arguments.length > 3 ? arguments[3] : void 0,
+          YV = arguments.length > 4 ? arguments[4] : void 0,
+          UV = arguments.length > 5 ? arguments[5] : void 0,
+          pV = arguments.length > 6 ? arguments[6] : void 0,
+          QV = arguments.length > 7 ? arguments[7] : void 0;
+        const nV = wV._GetShaderCodeProcessing(this.name);
+        if (nV?.defineCustomBindings) {
+          const JV = eV?.slice() ?? [];
+          JV.push(...this.options.uniforms);
+          const YV = xV?.slice() ?? [];
+          YV.push(...this.options.samplers), VV = nV.defineCustomBindings(this.name, VV, JV, YV), eV = JV, xV = YV
         }
-        this.options.defines = MM || "";
-        const LM = this._shadersLoaded || 0 === this._importPromises.length ? void 0 : async () => {
+        this.options.defines = VV || "";
+        const ZV = this._shadersLoaded || 0 === this._importPromises.length ? void 0 : async () => {
           await Promise.all(this._importPromises), this._shadersLoaded = !0
         };
-        let mM;
-        mM = this.options.extraInitializationsAsync ? async () => {
-          await (LM?.()), await this.options.extraInitializationsAsync()
-        }: LM, this.options.useShaderStore ? this._drawWrapper.effect = this.options.engine.createEffect({
-          vertex: PM ?? this._shaderPath.vertex,
-          fragment: nM ?? this._shaderPath.fragment
+        let vV;
+        vV = this.options.extraInitializationsAsync ? async () => {
+          await (ZV?.()), await this.options.extraInitializationsAsync()
+        }: ZV, this.options.useShaderStore ? this._drawWrapper.effect = this.options.engine.createEffect({
+          vertex: pV ?? this._shaderPath.vertex,
+          fragment: QV ?? this._shaderPath.fragment
         }, {
           attributes: this.options.attributeNames,
-          uniformsNames: rM || this.options.uniforms,
+          uniformsNames: eV || this.options.uniforms,
           uniformBuffersNames: this.options.uniformBuffers,
-          samplers: iM || this.options.samplers,
-          defines: null !== MM ? MM : "",
+          samplers: xV || this.options.samplers,
+          defines: null !== VV ? VV : "",
           fallbacks: null,
-          onCompiled: SM ?? this.options.onCompiled,
-          onError: jM ?? null,
-          indexParameters: OM || this.options.indexParameters,
-          processCodeAfterIncludes: QM?.processCodeAfterIncludes ? (MM, rM) => QM.processCodeAfterIncludes(this.name, MM, rM) : null,
-          processFinalCode: QM?.processFinalCode ? (MM, rM) => QM.processFinalCode(this.name, MM, rM) : null,
+          onCompiled: YV ?? this.options.onCompiled,
+          onError: UV ?? null,
+          indexParameters: JV || this.options.indexParameters,
+          processCodeAfterIncludes: nV?.processCodeAfterIncludes ? (VV, eV) => nV.processCodeAfterIncludes(this.name, VV, eV) : null,
+          processFinalCode: nV?.processFinalCode ? (VV, eV) => nV.processFinalCode(this.name, VV, eV) : null,
           shaderLanguage: this.options.shaderLanguage,
-          extraInitializationsAsync: mM
-        }, this.options.engine) : this._drawWrapper.effect = new aM.c(this._shaderPath, this.options.attributeNames, rM || this.options.uniforms, iM || this.options.samplerNames, this.options.engine, MM, void 0, SM || this.options.onCompiled, void 0, void 0, void 0, this.options.shaderLanguage, mM), this.onEffectCreatedObservable.notifyObservers(this._drawWrapper.effect)
+          extraInitializationsAsync: vV
+        }, this.options.engine) : this._drawWrapper.effect = new yV.c(this._shaderPath, this.options.attributeNames, eV || this.options.uniforms, xV || this.options.samplerNames, this.options.engine, VV, void 0, YV || this.options.onCompiled, void 0, void 0, void 0, this.options.shaderLanguage, vV), this.onEffectCreatedObservable.notifyObservers(this._drawWrapper.effect)
       }
       bind() {
-        let MM = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        this.options.useAsPostProcess && !MM && (this.options.engine.setAlphaMode(this.alphaMode), this.drawWrapper.effect.setFloat2("scale", 1, 1)), zM._GetShaderCodeProcessing(this.name)?.bindCustomBindings?.(this.name, this._drawWrapper.effect)
+        let VV = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        this.options.useAsPostProcess && !VV && (this.options.engine.setAlphaMode(this.alphaMode), this.drawWrapper.effect.setFloat2("scale", 1, 1)), wV._GetShaderCodeProcessing(this.name)?.bindCustomBindings?.(this.name, this._drawWrapper.effect)
       }
       dispose() {
-        this._onContextRestoredObserver && (this.effect.ph().Rh.remove(this._onContextRestoredObserver), this._onContextRestoredObserver = null), this.onEffectCreatedObservable.clear(), this._drawWrapper.dispose(!0)
+        this._onContextRestoredObserver && (this.effect.sk().uk.remove(this._onContextRestoredObserver), this._onContextRestoredObserver = null), this.onEffectCreatedObservable.clear(), this._drawWrapper.dispose(!0)
       }
     }
-    zM.ForceGLSL = !1, zM._CustomShaderCodeProcessing = {}
+    wV.ForceGLSL = !1, wV._CustomShaderCodeProcessing = {}
   },
-  44478: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      Dispose: () => lM,
-      DumpData: () => yM,
-      DumpDataAsync: () => dM,
-      DumpFramebuffer: () => JM,
-      DumpTools: () => EM,
-      EncodeImageAsync: () => hM,
-      RegisterDumpTools: () => GM
+  44723: (VV, eV, xV) => {
+    xV.r(eV), xV.d(eV, {
+      Dispose: () => jV,
+      DumpData: () => BV,
+      DumpDataAsync: () => EV,
+      DumpFramebuffer: () => bV,
+      DumpTools: () => qV,
+      EncodeImageAsync: () => kV,
+      RegisterDumpTools: () => FV
     });
-    var OM = iM(41099),
-      SM = iM(44445),
-      jM = iM(41205),
-      aM = iM(38074),
-      PM = iM(38064),
-      nM = iM(39711),
-      QM = iM(41160),
-      zM = iM(41105);
-    let LM = null;
-    async function mM() {
-      return LM || (LM = async function() {
-        const MM = PM.c.LastCreatedEngine?.createCanvas(100, 100) ?? new OffscreenCanvas(100, 100);
-        MM instanceof OffscreenCanvas && nM.e.Warn("DumpData: OffscreenCanvas will be used for dumping data. This may result in lossy alpha values.");
+    var JV = xV(41257),
+      YV = xV(44699),
+      UV = xV(41341),
+      yV = xV(38303),
+      pV = xV(38287),
+      QV = xV(39870),
+      nV = xV(41315),
+      wV = xV(41263);
+    let ZV = null;
+    async function vV() {
+      return ZV || (ZV = async function() {
+        const VV = pV.d.LastCreatedEngine?.createCanvas(100, 100) ?? new OffscreenCanvas(100, 100);
+        VV instanceof OffscreenCanvas && QV.b.Warn("DumpData: OffscreenCanvas will be used for dumping data. This may result in lossy alpha values.");
         const {
-          ThinEngine: rM
-        } = await Promise.resolve().then((() => iM(40949)));
-        if (!rM.IsSupported) throw new Error("DumpData: No WebGL context available. Cannot dump data.");
-        const OM = new rM(MM, !1, {
+          ThinEngine: eV
+        } = await Promise.resolve().then((() => xV(41095)));
+        if (!eV.IsSupported) throw new Error("DumpData: No WebGL context available. Cannot dump data.");
+        const JV = new eV(VV, !1, {
           preserveDrawingBuffer: !0,
           depth: !1,
           stencil: !1,
@@ -969,262 +969,262 @@ export const modules = {
           antialias: !1,
           failIfMajorPerformanceCaveat: !1
         });
-        PM.c.Instances.pop(), PM.c.OnEnginesDisposedObservable.add((MM => {
-          OM && MM !== OM && !OM.xG && 0 === PM.c.Instances.length && lM()
-        })), OM.getCaps().parallelShaderCompile = void 0;
-        const jM = new SM.b(OM),
+        pV.d.Instances.pop(), pV.d.OnEnginesDisposedObservable.add((VV => {
+          JV && VV !== JV && !JV.iN && 0 === pV.d.Instances.length && jV()
+        })), JV.getCaps().parallelShaderCompile = void 0;
+        const UV = new YV.c(JV),
           {
-            passPixelShader: aM
-          } = await iM.e(680).then((() => iM(64089))),
-          QM = new SM.c({
-            engine: OM,
-            name: aM.name,
-            fragmentShader: aM.shader,
+            passPixelShader: yV
+          } = await xV.e(680).then((() => xV(64476))),
+          nV = new YV.d({
+            engine: JV,
+            name: yV.name,
+            fragmentShader: yV.shader,
             samplerNames: ["textureSampler"]
           });
         return {
-          canvas: MM,
+          canvas: VV,
           dumpEngine: {
-            engine: OM,
-            renderer: jM,
-            wrapper: QM
+            engine: JV,
+            renderer: UV,
+            wrapper: nV
           }
         }
-      }()), await LM
+      }()), await ZV
     }
-    let HM = (() => {
-      var MM;
-      let rM, iM = [];
-      return MM = class {
-        static async EncodeImageAsync(MM, rM, iM, OM, SM, aM) {
-          const PM = await mM(),
-            nM = PM.dumpEngine;
-          nM.engine.setSize(rM, iM, !0);
-          const QM = nM.engine.createRawTexture(MM, rM, iM, 5, !1, !SM, 1);
-          return nM.renderer.setViewport(), nM.renderer.applyEffectWrapper(nM.wrapper), nM.wrapper.effect._bindTexture("textureSampler", QM), nM.renderer.draw(), QM.dispose(), await new Promise(((MM, rM) => {
-            jM.e.ToBlob(PM.canvas, (iM => {
-              iM ? MM(iM) : rM(new Error("EncodeImageAsync: Failed to convert canvas to blob."))
-            }), OM, aM)
+    let rV = (() => {
+      var VV;
+      let eV, xV = [];
+      return VV = class {
+        static async EncodeImageAsync(VV, eV, xV, JV, YV, yV) {
+          const pV = await vV(),
+            QV = pV.dumpEngine;
+          QV.engine.setSize(eV, xV, !0);
+          const nV = QV.engine.createRawTexture(VV, eV, xV, 5, !1, !YV, 1);
+          return QV.renderer.setViewport(), QV.renderer.applyEffectWrapper(QV.wrapper), QV.wrapper.effect._bindTexture("textureSampler", nV), QV.renderer.draw(), nV.dispose(), await new Promise(((VV, eV) => {
+            UV.j.ToBlob(pV.canvas, (xV => {
+              xV ? VV(xV) : eV(new Error("EncodeImageAsync: Failed to convert canvas to blob."))
+            }), JV, yV)
           }))
         }
       }, (() => {
-        const SM = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
-        rM = [zM.k], (0, OM.i)(MM, null, rM, {
+        const YV = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
+        eV = [wV.j], (0, JV.i)(VV, null, eV, {
           kind: "method",
           name: "EncodeImageAsync",
           static: !0,
           private: !1,
           access: {
-            has: MM => "EncodeImageAsync" in MM,
-            get: MM => MM.EncodeImageAsync
+            has: VV => "EncodeImageAsync" in VV,
+            get: VV => VV.EncodeImageAsync
           },
-          metadata: SM
-        }, null, iM), SM && Object.defineProperty(MM, Symbol.metadata, {
+          metadata: YV
+        }, null, xV), YV && Object.defineProperty(VV, Symbol.metadata, {
           enumerable: !0,
           configurable: !0,
           writable: !0,
-          value: SM
-        }), (0, OM.m)(MM, iM)
-      })(), MM
+          value: YV
+        }), (0, JV.l)(VV, xV)
+      })(), VV
     })();
-    const hM = HM.EncodeImageAsync;
-    async function JM(MM, rM, iM, OM) {
-      let SM = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "image/png",
-        jM = arguments.length > 5 ? arguments[5] : void 0,
-        aM = arguments.length > 6 ? arguments[6] : void 0;
-      const PM = await iM.readPixels(0, 0, MM, rM);
-      yM(MM, rM, new Uint8Array(PM.buffer), OM, SM, jM, !0, void 0, aM)
+    const kV = rV.EncodeImageAsync;
+    async function bV(VV, eV, xV, JV) {
+      let YV = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "image/png",
+        UV = arguments.length > 5 ? arguments[5] : void 0,
+        yV = arguments.length > 6 ? arguments[6] : void 0;
+      const pV = await xV.readPixels(0, 0, VV, eV);
+      BV(VV, eV, new Uint8Array(pV.buffer), JV, YV, UV, !0, void 0, yV)
     }
-    async function dM(MM, rM, iM) {
-      let OM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "image/png",
-        SM = arguments.length > 4 ? arguments[4] : void 0,
-        PM = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
-        zM = arguments.length > 6 && void 0 !== arguments[6] && arguments[6],
-        LM = arguments.length > 7 ? arguments[7] : void 0;
-      if (iM instanceof Float32Array) {
-        const MM = new Uint8Array(iM.length);
-        let rM = iM.length;
-        for (; rM--;) {
-          const OM = iM[rM];
-          MM[rM] = Math.round(255 * (0, aM.Clamp)(OM))
+    async function EV(VV, eV, xV) {
+      let JV = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "image/png",
+        YV = arguments.length > 4 ? arguments[4] : void 0,
+        pV = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
+        wV = arguments.length > 6 && void 0 !== arguments[6] && arguments[6],
+        ZV = arguments.length > 7 ? arguments[7] : void 0;
+      if (xV instanceof Float32Array) {
+        const VV = new Uint8Array(xV.length);
+        let eV = xV.length;
+        for (; eV--;) {
+          const JV = xV[eV];
+          VV[eV] = Math.round(255 * (0, yV.Clamp)(JV))
         }
-        iM = MM
+        xV = VV
       }
-      const mM = await HM.EncodeImageAsync(iM, MM, rM, OM, PM, LM);
-      void 0 !== SM && jM.e.DownloadBlob(mM, SM), mM.type !== OM && nM.e.Warn(`DumpData: The requested mimeType '${OM}' is not supported. The result has mimeType '${mM.type}' instead.`);
-      const hM = await mM.arrayBuffer();
-      return zM ? hM : `data:${OM};base64,${(0,QM.j)(hM)}`
+      const vV = await rV.EncodeImageAsync(xV, VV, eV, JV, pV, ZV);
+      void 0 !== YV && UV.j.DownloadBlob(vV, YV), vV.type !== JV && QV.b.Warn(`DumpData: The requested mimeType '${JV}' is not supported. The result has mimeType '${vV.type}' instead.`);
+      const kV = await vV.arrayBuffer();
+      return wV ? kV : `data:${JV};base64,${(0,nV.h)(kV)}`
     }
 
-    function yM(MM, rM, iM, OM) {
-      let SM = arguments.length > 5 ? arguments[5] : void 0;
-      void 0 !== SM || OM || (SM = ""), dM(MM, rM, iM, arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "image/png", SM, arguments.length > 6 && void 0 !== arguments[6] && arguments[6], arguments.length > 7 && void 0 !== arguments[7] && arguments[7], arguments.length > 8 ? arguments[8] : void 0).then((MM => {
-        OM && OM(MM)
+    function BV(VV, eV, xV, JV) {
+      let YV = arguments.length > 5 ? arguments[5] : void 0;
+      void 0 !== YV || JV || (YV = ""), EV(VV, eV, xV, arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "image/png", YV, arguments.length > 6 && void 0 !== arguments[6] && arguments[6], arguments.length > 7 && void 0 !== arguments[7] && arguments[7], arguments.length > 8 ? arguments[8] : void 0).then((VV => {
+        JV && JV(VV)
       }))
     }
 
-    function lM() {
-      LM && (LM?.then((MM => {
-        MM.canvas instanceof HTMLCanvasElement && MM.canvas.remove(), MM.dumpEngine && (MM.dumpEngine.engine.dispose(), MM.dumpEngine.renderer.dispose(), MM.dumpEngine.wrapper.dispose())
-      })), LM = null)
+    function jV() {
+      ZV && (ZV?.then((VV => {
+        VV.canvas instanceof HTMLCanvasElement && VV.canvas.remove(), VV.dumpEngine && (VV.dumpEngine.engine.dispose(), VV.dumpEngine.renderer.dispose(), VV.dumpEngine.wrapper.dispose())
+      })), ZV = null)
     }
-    const EM = {
-      DumpData: yM,
-      DumpDataAsync: dM,
-      DumpFramebuffer: JM,
-      Dispose: lM
+    const qV = {
+      DumpData: BV,
+      DumpDataAsync: EV,
+      DumpFramebuffer: bV,
+      Dispose: jV
     };
-    let UM = !1;
+    let tV = !1;
 
-    function GM() {
-      if (UM) return;
-      UM = !0;
-      jM.e.DumpData = yM, jM.e.DumpDataAsync = dM, jM.e.DumpFramebuffer = JM
+    function FV() {
+      if (tV) return;
+      tV = !0;
+      UV.j.DumpData = BV, UV.j.DumpDataAsync = EV, UV.j.DumpFramebuffer = bV
     }
   },
-  44458: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => HM,
-      g: () => hM,
-      j: () => JM
+  44714: (VV, eV, xV) => {
+    xV.d(eV, {
+      d: () => rV,
+      e: () => kV,
+      g: () => bV
     });
-    var OM = iM(41560),
-      SM = iM(44465),
-      jM = iM(41099),
-      aM = iM(44439),
-      PM = iM(41121),
-      nM = iM(44469),
-      QM = iM(41105);
-    class zM extends aM.b {
+    var JV = xV(41738),
+      YV = xV(44717),
+      UV = xV(41257),
+      yV = xV(44697),
+      pV = xV(41279),
+      QV = xV(44719),
+      nV = xV(41263);
+    class wV extends yV.d {
       getClassName() {
         return "PassPostProcess"
       }
-      constructor(MM, rM) {
-        let iM = arguments.length > 4 ? arguments[4] : void 0;
-        const OM = {
-          size: "number" === typeof rM ? rM : void 0,
+      constructor(VV, eV) {
+        let xV = arguments.length > 4 ? arguments[4] : void 0;
+        const JV = {
+          size: "number" === typeof eV ? eV : void 0,
           camera: arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
           samplingMode: arguments.length > 3 ? arguments[3] : void 0,
-          engine: iM,
+          engine: xV,
           reusable: arguments.length > 5 ? arguments[5] : void 0,
           textureType: arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 0,
           blockCompilation: arguments.length > 7 && void 0 !== arguments[7] && arguments[7],
-          ...rM
+          ...eV
         };
-        super(MM, nM.f.FragmentUrl, {
-          effectWrapper: "number" !== typeof rM && rM.effectWrapper ? void 0 : new nM.f(MM, iM, OM),
-          ...OM
+        super(VV, QV.e.FragmentUrl, {
+          effectWrapper: "number" !== typeof eV && eV.effectWrapper ? void 0 : new QV.e(VV, xV, JV),
+          ...JV
         })
       }
-      static _Parse(MM, rM, iM, OM) {
-        return PM.b.Parse((() => new zM(MM.name, MM.options, rM, MM.renderTargetSamplingMode, MM._engine, MM.reusable)), MM, iM, OM)
+      static _Parse(VV, eV, xV, JV) {
+        return pV.b.Parse((() => new wV(VV.name, VV.options, eV, VV.renderTargetSamplingMode, VV._engine, VV.reusable)), VV, xV, JV)
       }
     }(() => {
-      var MM;
-      let rM, iM = aM.b,
-        OM = [];
-      MM = class extends iM {
+      var VV;
+      let eV, xV = yV.d,
+        JV = [];
+      VV = class extends xV {
         get face() {
           return this._effectWrapper.face
         }
-        set face(MM) {
-          this._effectWrapper.face = MM
+        set face(VV) {
+          this._effectWrapper.face = VV
         }
         getClassName() {
           return "PassCubePostProcess"
         }
-        constructor(MM, rM) {
-          let iM = arguments.length > 4 ? arguments[4] : void 0;
-          const SM = {
-            size: "number" === typeof rM ? rM : void 0,
+        constructor(VV, eV) {
+          let xV = arguments.length > 4 ? arguments[4] : void 0;
+          const YV = {
+            size: "number" === typeof eV ? eV : void 0,
             camera: arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
             samplingMode: arguments.length > 3 ? arguments[3] : void 0,
-            engine: iM,
+            engine: xV,
             reusable: arguments.length > 5 ? arguments[5] : void 0,
             textureType: arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 0,
             blockCompilation: arguments.length > 7 && void 0 !== arguments[7] && arguments[7],
-            ...rM
+            ...eV
           };
-          super(MM, nM.f.FragmentUrl, {
-            effectWrapper: "number" !== typeof rM && rM.effectWrapper ? void 0 : new nM.d(MM, iM, SM),
-            ...SM
-          }), (0, jM.m)(this, OM)
+          super(VV, QV.e.FragmentUrl, {
+            effectWrapper: "number" !== typeof eV && eV.effectWrapper ? void 0 : new QV.c(VV, xV, YV),
+            ...YV
+          }), (0, UV.l)(this, JV)
         }
-        static _Parse(rM, iM, OM, SM) {
-          return PM.b.Parse((() => new MM(rM.name, rM.options, iM, rM.renderTargetSamplingMode, rM._engine, rM.reusable)), rM, OM, SM)
+        static _Parse(eV, xV, JV, YV) {
+          return pV.b.Parse((() => new VV(eV.name, eV.options, xV, eV.renderTargetSamplingMode, eV._engine, eV.reusable)), eV, JV, YV)
         }
       }, (() => {
-        const SM = "function" === typeof Symbol && Symbol.metadata ? Object.create(iM[Symbol.metadata] ?? null) : void 0;
-        rM = [(0, QM.L)()], (0, jM.i)(MM, null, rM, {
+        const YV = "function" === typeof Symbol && Symbol.metadata ? Object.create(xV[Symbol.metadata] ?? null) : void 0;
+        eV = [(0, nV.J)()], (0, UV.i)(VV, null, eV, {
           kind: "getter",
           name: "face",
           static: !1,
           private: !1,
           access: {
-            has: MM => "face" in MM,
-            get: MM => MM.face
+            has: VV => "face" in VV,
+            get: VV => VV.face
           },
-          metadata: SM
-        }, null, OM), SM && Object.defineProperty(MM, Symbol.metadata, {
+          metadata: YV
+        }, null, JV), YV && Object.defineProperty(VV, Symbol.metadata, {
           enumerable: !0,
           configurable: !0,
           writable: !0,
-          value: SM
+          value: YV
         })
       })()
     })();
-    var LM = iM(38074),
-      mM = iM(41176);
+    var ZV = xV(38303),
+      vV = xV(41323);
 
-    function HM(MM, rM, iM, OM, SM, jM, PM, nM) {
-      const QM = rM.ph();
-      return rM.isReady = !1, SM = SM ?? rM.samplingMode, OM = OM ?? rM.type, jM = jM ?? rM.format, PM = PM ?? rM.width, nM = nM ?? rM.height, -1 === OM && (OM = 0), new Promise((zM => {
-        const LM = new aM.b("postprocess", MM, null, null, 1, null, SM, QM, !1, void 0, OM, void 0, null, !1, jM);
-        LM.externalTextureSamplerBinding = !0;
-        const mM = QM.createRenderTargetTexture({
-          width: PM,
-          height: nM
+    function rV(VV, eV, xV, JV, YV, UV, pV, QV) {
+      const nV = eV.sk();
+      return eV.isReady = !1, YV = YV ?? eV.samplingMode, JV = JV ?? eV.type, UV = UV ?? eV.format, pV = pV ?? eV.width, QV = QV ?? eV.height, -1 === JV && (JV = 0), new Promise((wV => {
+        const ZV = new yV.d("postprocess", VV, null, null, 1, null, YV, nV, !1, void 0, JV, void 0, null, !1, UV);
+        ZV.externalTextureSamplerBinding = !0;
+        const vV = nV.createRenderTargetTexture({
+          width: pV,
+          height: QV
         }, {
           generateDepthBuffer: !1,
           generateMipMaps: !1,
           generateStencilBuffer: !1,
-          samplingMode: SM,
-          type: OM,
-          format: jM
+          samplingMode: YV,
+          type: JV,
+          format: UV
         });
-        LM.onEffectCreatedObservable.addOnce((MM => {
-          MM.executeWhenCompiled((() => {
-            LM.onApply = MM => {
-              MM._bindTexture("textureSampler", rM), MM.setFloat2("scale", 1, 1)
-            }, iM.postProcessManager.directRender([LM], mM, !0), QM.restoreDefaultFramebuffer(), QM._releaseTexture(rM), LM && LM.dispose(), mM._swapAndDie(rM), rM.type = OM, rM.format = 5, rM.isReady = !0, zM(rM)
+        ZV.onEffectCreatedObservable.addOnce((VV => {
+          VV.executeWhenCompiled((() => {
+            ZV.onApply = VV => {
+              VV._bindTexture("textureSampler", eV), VV.setFloat2("scale", 1, 1)
+            }, xV.postProcessManager.directRender([ZV], vV, !0), nV.restoreDefaultFramebuffer(), nV._releaseTexture(eV), ZV && ZV.dispose(), vV._swapAndDie(eV), eV.type = JV, eV.format = 5, eV.isReady = !0, wV(eV)
           }))
         }))
       }))
     }
-    async function hM(MM, rM, jM) {
-      let PM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-        nM = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0,
-        QM = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
-        zM = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 0;
-      await async function(MM) {
-        if (MM.isReady()) return;
-        if (MM.loadingError) throw new Error(MM.errorObject?.message || `Texture ${MM.name} errored while loading.`);
-        const rM = MM.onLoadObservable;
-        if (rM) return await new Promise((MM => rM.addOnce((() => MM()))));
-        const iM = MM._texture?.onLoadedObservable;
-        if (iM) return await new Promise((MM => iM.addOnce((() => MM()))));
-        throw new Error(`Cannot determine readiness of texture ${MM.name}.`)
-      }(MM);
-      const mM = MM.getInternalTexture(),
-        HM = MM.is3D || !!mM?.is3D,
+    async function kV(VV, eV, UV) {
+      let pV = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
+        QV = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0,
+        nV = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
+        wV = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 0;
+      await async function(VV) {
+        if (VV.isReady()) return;
+        if (VV.loadingError) throw new Error(VV.errorObject?.message || `Texture ${VV.name} errored while loading.`);
+        const eV = VV.onLoadObservable;
+        if (eV) return await new Promise((VV => eV.addOnce((() => VV()))));
+        const xV = VV._texture?.onLoadedObservable;
+        if (xV) return await new Promise((VV => xV.addOnce((() => VV()))));
+        throw new Error(`Cannot determine readiness of texture ${VV.name}.`)
+      }(VV);
+      const vV = VV.getInternalTexture(),
+        rV = VV.is3D || !!vV?.is3D,
         {
-          width: hM,
-          height: JM
-        } = MM.getSize(),
-        dM = rM ?? hM,
-        yM = jM ?? JM;
-      if (QM || HM || function(MM) {
-          switch (MM) {
+          width: kV,
+          height: bV
+        } = VV.getSize(),
+        EV = eV ?? kV,
+        BV = UV ?? bV;
+      if (nV || rV || function(VV) {
+          switch (VV) {
             case 36492:
             case 36493:
             case 36495:
@@ -1276,196 +1276,196 @@ export const modules = {
             default:
               return !1
           }
-        }(MM.textureFormat) || dM !== hM || yM !== JM) {
-        if (MM.is2DArray) throw new Error(`Reading pixels from 2D array textures with ${QM?"RTT":"compression"} is not supported.`);
-        return await async function(MM, rM, jM, PM, nM) {
-          let QM = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0;
-          const zM = MM.Hk(),
-            LM = zM.ph(),
-            mM = MM.getInternalTexture(),
-            HM = MM.is3D || !!mM?.is3D;
-          let hM;
-          if (LM.isWebGPU ? HM ? await iM.e(676).then((() => iM(64066))) : MM.isCube ? await iM.e(677).then((() => iM(64072))) : await iM.e(678).then((() => iM(64075))) : HM ? await iM.e(673).then((() => iM(64051))) : MM.isCube ? await iM.e(674).then((() => iM(64055))) : await iM.e(675).then((() => iM(64060))), HM) hM = new aM.b("lod3D", "lod3D", {
+        }(VV.textureFormat) || EV !== kV || BV !== bV) {
+        if (VV.is2DArray) throw new Error(`Reading pixels from 2D array textures with ${nV?"RTT":"compression"} is not supported.`);
+        return await async function(VV, eV, UV, pV, QV) {
+          let nV = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0;
+          const wV = VV.dD(),
+            ZV = wV.sk(),
+            vV = VV.getInternalTexture(),
+            rV = VV.is3D || !!vV?.is3D;
+          let kV;
+          if (ZV.isWebGPU ? rV ? await xV.e(676).then((() => xV(64452))) : VV.isCube ? await xV.e(677).then((() => xV(64461))) : await xV.e(678).then((() => xV(64467))) : rV ? await xV.e(673).then((() => xV(64438))) : VV.isCube ? await xV.e(674).then((() => xV(64441))) : await xV.e(675).then((() => xV(64450))), rV) kV = new yV.d("lod3D", "lod3D", {
             uniforms: ["lod", "gamma", "slice"],
-            samplingMode: OM.h.NEAREST_NEAREST_MIPNEAREST,
-            engine: LM,
-            shaderLanguage: LM.isWebGPU ? 1 : 0
+            samplingMode: JV.f.NEAREST_NEAREST_MIPNEAREST,
+            engine: ZV,
+            shaderLanguage: ZV.isWebGPU ? 1 : 0
           });
-          else if (MM.isCube) {
-            const MM = ["#define POSITIVEX", "#define NEGATIVEX", "#define POSITIVEY", "#define NEGATIVEY", "#define POSITIVEZ", "#define NEGATIVEZ"];
-            hM = new aM.b("lodCube", "lodCube", {
+          else if (VV.isCube) {
+            const VV = ["#define POSITIVEX", "#define NEGATIVEX", "#define POSITIVEY", "#define NEGATIVEY", "#define POSITIVEZ", "#define NEGATIVEZ"];
+            kV = new yV.d("lodCube", "lodCube", {
               uniforms: ["lod", "gamma"],
-              samplingMode: OM.h.NEAREST_NEAREST_MIPNEAREST,
-              engine: LM,
-              defines: MM[PM],
-              shaderLanguage: LM.isWebGPU ? 1 : 0
+              samplingMode: JV.f.NEAREST_NEAREST_MIPNEAREST,
+              engine: ZV,
+              defines: VV[pV],
+              shaderLanguage: ZV.isWebGPU ? 1 : 0
             })
-          } else hM = new aM.b("lod", "lod", {
+          } else kV = new yV.d("lod", "lod", {
             uniforms: ["lod", "gamma"],
-            samplingMode: OM.h.NEAREST_NEAREST_MIPNEAREST,
-            engine: LM,
-            shaderLanguage: LM.isWebGPU ? 1 : 0
+            samplingMode: JV.f.NEAREST_NEAREST_MIPNEAREST,
+            engine: ZV,
+            shaderLanguage: ZV.isWebGPU ? 1 : 0
           });
-          await new Promise((MM => {
-            hM.onEffectCreatedObservable.addOnce((rM => {
-              rM.executeWhenCompiled((() => {
-                MM(0)
+          await new Promise((VV => {
+            kV.onEffectCreatedObservable.addOnce((eV => {
+              eV.executeWhenCompiled((() => {
+                VV(0)
               }))
             }))
           }));
-          const JM = new SM.c("temp", {
-            width: rM,
-            height: jM
-          }, zM, !1);
-          hM.onApply = function(rM) {
-            rM.setTexture("textureSampler", MM), rM.setFloat("lod", nM), rM.setInt("gamma", MM.gammaSpace ? 1 : 0), HM && rM.setFloat("slice", QM)
+          const bV = new YV.b("temp", {
+            width: eV,
+            height: UV
+          }, wV, !1);
+          kV.onApply = function(eV) {
+            eV.setTexture("textureSampler", VV), eV.setFloat("lod", QV), eV.setInt("gamma", VV.gammaSpace ? 1 : 0), rV && eV.setFloat("slice", nV)
           };
           try {
-            if (JM.renderTarget && mM) {
-              const iM = mM.samplingMode;
-              0 !== nM ? MM.updateSamplingMode(OM.h.NEAREST_NEAREST_MIPNEAREST) : MM.updateSamplingMode(OM.h.NEAREST_NEAREST), zM.postProcessManager.directRender([hM], JM.renderTarget, !0), MM.updateSamplingMode(iM);
-              const SM = await LM.readPixels(0, 0, rM, jM),
-                aM = new Uint8Array(SM.buffer, SM.byteOffset, SM.byteLength);
-              return LM.unBindFramebuffer(JM.renderTarget), aM
+            if (bV.renderTarget && vV) {
+              const xV = vV.samplingMode;
+              0 !== QV ? VV.updateSamplingMode(JV.f.NEAREST_NEAREST_MIPNEAREST) : VV.updateSamplingMode(JV.f.NEAREST_NEAREST), wV.postProcessManager.directRender([kV], bV.renderTarget, !0), VV.updateSamplingMode(xV);
+              const YV = await ZV.readPixels(0, 0, eV, UV),
+                yV = new Uint8Array(YV.buffer, YV.byteOffset, YV.byteLength);
+              return ZV.unBindFramebuffer(bV.renderTarget), yV
             }
             throw Error("Render to texture failed.")
           } finally {
-            JM.dispose(), hM.dispose()
+            bV.dispose(), kV.dispose()
           }
-        }(MM, dM, yM, PM, nM, zM)
+        }(VV, EV, BV, pV, QV, wV)
       }
-      let lM = await MM.readPixels(PM, nM);
-      if (!lM) throw new Error(`Failed to read pixels from texture ${MM.name}.`);
-      if (lM instanceof Float32Array) {
-        const MM = new Uint8Array(lM.length);
-        let rM = lM.length;
-        for (; rM--;) {
-          const iM = lM[rM];
-          MM[rM] = Math.round(255 * (0, LM.Clamp)(iM))
+      let jV = await VV.readPixels(pV, QV);
+      if (!jV) throw new Error(`Failed to read pixels from texture ${VV.name}.`);
+      if (jV instanceof Float32Array) {
+        const VV = new Uint8Array(jV.length);
+        let eV = jV.length;
+        for (; eV--;) {
+          const xV = jV[eV];
+          VV[eV] = Math.round(255 * (0, ZV.Clamp)(xV))
         }
-        lM = MM
+        jV = VV
       }
-      const EM = dM * yM,
-        UM = 4 * EM;
-      if (lM.length !== UM) {
-        const MM = 0 === EM ? 0 : lM.length / EM;
-        if (1 === MM || 2 === MM || 3 === MM) {
-          const rM = new Uint8Array(UM);
-          for (let iM = 0, OM = 0, SM = 0; iM < EM; iM++, SM += 4) {
-            const iM = lM[OM++];
-            if (1 === MM) {
-              rM[SM] = iM, rM[SM + 1] = iM, rM[SM + 2] = iM, rM[SM + 3] = 255;
+      const qV = EV * BV,
+        tV = 4 * qV;
+      if (jV.length !== tV) {
+        const VV = 0 === qV ? 0 : jV.length / qV;
+        if (1 === VV || 2 === VV || 3 === VV) {
+          const eV = new Uint8Array(tV);
+          for (let xV = 0, JV = 0, YV = 0; xV < qV; xV++, YV += 4) {
+            const xV = jV[JV++];
+            if (1 === VV) {
+              eV[YV] = xV, eV[YV + 1] = xV, eV[YV + 2] = xV, eV[YV + 3] = 255;
               continue
             }
-            const jM = lM[OM++];
-            2 !== MM ? (rM[SM] = iM, rM[SM + 1] = jM, rM[SM + 2] = lM[OM++], rM[SM + 3] = 255) : (rM[SM] = iM, rM[SM + 1] = jM, rM[SM + 2] = 0, rM[SM + 3] = 255)
+            const UV = jV[JV++];
+            2 !== VV ? (eV[YV] = xV, eV[YV + 1] = UV, eV[YV + 2] = jV[JV++], eV[YV + 3] = 255) : (eV[YV] = xV, eV[YV + 1] = UV, eV[YV + 2] = 0, eV[YV + 3] = 255)
           }
-          return rM
+          return eV
         }
       }
-      return lM
+      return jV
     }
-    const JM = {
-      CreateResizedCopy: function(MM, rM, iM) {
-        let jM = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-        const aM = MM.Hk(),
-          PM = aM.ph(),
-          nM = new SM.c("resized" + MM.name, {
-            width: rM,
-            height: iM
-          }, aM, !MM.noMipmap, !0, MM._texture.type, !1, MM.samplingMode, !1);
-        nM.wrapU = MM.wrapU, nM.wrapV = MM.wrapV, nM.uOffset = MM.uOffset, nM.vOffset = MM.vOffset, nM.uScale = MM.uScale, nM.vScale = MM.vScale, nM.uAng = MM.uAng, nM.vAng = MM.vAng, nM.wAng = MM.wAng, nM.coordinatesIndex = MM.coordinatesIndex, nM.level = MM.level, nM.anisotropicFilteringLevel = MM.anisotropicFilteringLevel, nM._texture.isReady = !1, MM.wrapU = OM.h.CLAMP_ADDRESSMODE, MM.wrapV = OM.h.CLAMP_ADDRESSMODE;
-        const QM = new zM("pass", 1, null, jM ? OM.h.BILINEAR_SAMPLINGMODE : OM.h.NEAREST_SAMPLINGMODE, PM, !1, 0);
-        return QM.externalTextureSamplerBinding = !0, QM.onEffectCreatedObservable.addOnce((rM => {
-          rM.executeWhenCompiled((() => {
-            QM.onApply = function(rM) {
-              rM.setTexture("textureSampler", MM)
+    const bV = {
+      CreateResizedCopy: function(VV, eV, xV) {
+        let UV = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+        const yV = VV.dD(),
+          pV = yV.sk(),
+          QV = new YV.b("resized" + VV.name, {
+            width: eV,
+            height: xV
+          }, yV, !VV.noMipmap, !0, VV._texture.type, !1, VV.samplingMode, !1);
+        QV.wrapU = VV.wrapU, QV.wrapV = VV.wrapV, QV.uOffset = VV.uOffset, QV.vOffset = VV.vOffset, QV.uScale = VV.uScale, QV.vScale = VV.vScale, QV.uAng = VV.uAng, QV.vAng = VV.vAng, QV.wAng = VV.wAng, QV.coordinatesIndex = VV.coordinatesIndex, QV.level = VV.level, QV.anisotropicFilteringLevel = VV.anisotropicFilteringLevel, QV._texture.isReady = !1, VV.wrapU = JV.f.CLAMP_ADDRESSMODE, VV.wrapV = JV.f.CLAMP_ADDRESSMODE;
+        const nV = new wV("pass", 1, null, UV ? JV.f.BILINEAR_SAMPLINGMODE : JV.f.NEAREST_SAMPLINGMODE, pV, !1, 0);
+        return nV.externalTextureSamplerBinding = !0, nV.onEffectCreatedObservable.addOnce((eV => {
+          eV.executeWhenCompiled((() => {
+            nV.onApply = function(eV) {
+              eV.setTexture("textureSampler", VV)
             };
-            const rM = nM.renderTarget;
-            rM && (aM.postProcessManager.directRender([QM], rM), PM.unBindFramebuffer(rM), nM.disposeFramebufferObjects(), QM.dispose(), nM.getInternalTexture().isReady = !0)
+            const eV = QV.renderTarget;
+            eV && (yV.postProcessManager.directRender([nV], eV), pV.unBindFramebuffer(eV), QV.disposeFramebufferObjects(), nV.dispose(), QV.getInternalTexture().isReady = !0)
           }))
-        })), nM
+        })), QV
       },
-      ApplyPostProcess: HM,
-      ToHalfFloat: mM.g,
-      FromHalfFloat: mM.c,
-      GetTextureDataAsync: hM
+      ApplyPostProcess: rV,
+      ToHalfFloat: vV.j,
+      FromHalfFloat: vV.c,
+      GetTextureDataAsync: kV
     }
   },
-  44439: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => hM
+  44697: (VV, eV, xV) => {
+    xV.d(eV, {
+      d: () => kV
     });
-    var OM = iM(41099),
-      SM = iM(41213),
-      jM = iM(38068),
-      aM = iM(38040),
-      PM = iM(40957),
-      nM = iM(41105),
-      QM = iM(41121),
-      zM = iM(38085),
-      LM = iM(41005),
-      mM = iM(41034),
-      HM = iM(44445);
-    let hM = (() => {
-        var MM;
-        let rM, PM, LM, hM, JM, yM, lM, EM, UM, GM, CM, eM, bM, wM, tM, gM, uM = [],
-          RM = [],
-          pM = [],
-          WM = [],
-          sM = [],
-          DM = [],
-          kM = [],
-          ZM = [],
-          oM = [],
-          fM = [],
-          YM = [],
-          NM = [],
-          AM = [],
-          xM = [],
-          vM = [],
-          FM = [],
-          BM = [],
-          XM = [],
-          IM = [],
-          KM = [],
-          qM = [],
-          TM = [],
-          VM = [],
-          cM = [],
-          Mr = [],
-          rr = [],
-          ir = [],
-          Or = [],
-          Sr = [];
-        return MM = class {
+    var JV = xV(41257),
+      YV = xV(41353),
+      UV = xV(38296),
+      yV = xV(38269),
+      pV = xV(41101),
+      QV = xV(41263),
+      nV = xV(41279),
+      wV = xV(38318),
+      ZV = xV(41150),
+      vV = xV(41190),
+      rV = xV(44699);
+    let kV = (() => {
+        var VV;
+        let eV, pV, ZV, kV, bV, BV, jV, qV, tV, FV, TV, PV, AV, NV, XV, MV, zV = [],
+          GV = [],
+          WV = [],
+          RV = [],
+          gV = [],
+          DV = [],
+          iV = [],
+          CV = [],
+          aV = [],
+          oV = [],
+          cV = [],
+          hV = [],
+          lV = [],
+          LV = [],
+          fV = [],
+          mV = [],
+          KV = [],
+          HV = [],
+          uV = [],
+          sV = [],
+          SV = [],
+          IV = [],
+          dV = [],
+          OV = [],
+          Ve = [],
+          ee = [],
+          xe = [],
+          Je = [],
+          Ye = [];
+        return VV = class {
           static get ForceGLSL() {
-            return HM.c.ForceGLSL
+            return rV.d.ForceGLSL
           }
-          static set ForceGLSL(MM) {
-            HM.c.ForceGLSL = MM
+          static set ForceGLSL(VV) {
+            rV.d.ForceGLSL = VV
           }
-          static RegisterShaderCodeProcessing(MM, rM) {
-            HM.c.RegisterShaderCodeProcessing(MM, rM)
+          static RegisterShaderCodeProcessing(VV, eV) {
+            rV.d.RegisterShaderCodeProcessing(VV, eV)
           }
           get name() {
             return this._effectWrapper.name
           }
-          set name(MM) {
-            this._effectWrapper.name = MM
+          set name(VV) {
+            this._effectWrapper.name = VV
           }
           get alphaMode() {
             return this._effectWrapper.alphaMode
           }
-          set alphaMode(MM) {
-            this._effectWrapper.alphaMode = MM
+          set alphaMode(VV) {
+            this._effectWrapper.alphaMode = VV
           }
           get samples() {
             return this._samples
           }
-          set samples(MM) {
-            this._samples = Math.min(MM, this._engine.getCaps().maxMSAASamples), this._textures.forEach((MM => {
-              MM.setSamples(this._samples)
+          set samples(VV) {
+            this._samples = Math.min(VV, this._engine.getCaps().maxMSAASamples), this._textures.forEach((VV => {
+              VV.setSamples(this._samples)
             }))
           }
           get shaderLanguage() {
@@ -1474,108 +1474,108 @@ export const modules = {
           getEffectName() {
             return this._fragmentUrl
           }
-          set onActivate(MM) {
-            this._onActivateObserver && this.onActivateObservable.remove(this._onActivateObserver), MM && (this._onActivateObserver = this.onActivateObservable.add(MM))
+          set onActivate(VV) {
+            this._onActivateObserver && this.onActivateObservable.remove(this._onActivateObserver), VV && (this._onActivateObserver = this.onActivateObservable.add(VV))
           }
-          set onSizeChanged(MM) {
-            this._onSizeChangedObserver && this.onSizeChangedObservable.remove(this._onSizeChangedObserver), this._onSizeChangedObserver = this.onSizeChangedObservable.add(MM)
+          set onSizeChanged(VV) {
+            this._onSizeChangedObserver && this.onSizeChangedObservable.remove(this._onSizeChangedObserver), this._onSizeChangedObserver = this.onSizeChangedObservable.add(VV)
           }
-          set onApply(MM) {
-            this._onApplyObserver && this.onApplyObservable.remove(this._onApplyObserver), this._onApplyObserver = this.onApplyObservable.add(MM)
+          set onApply(VV) {
+            this._onApplyObserver && this.onApplyObservable.remove(this._onApplyObserver), this._onApplyObserver = this.onApplyObservable.add(VV)
           }
-          set onBeforeRender(MM) {
-            this._onBeforeRenderObserver && this.onBeforeRenderObservable.remove(this._onBeforeRenderObserver), this._onBeforeRenderObserver = this.onBeforeRenderObservable.add(MM)
+          set onBeforeRender(VV) {
+            this._onBeforeRenderObserver && this.onBeforeRenderObservable.remove(this._onBeforeRenderObserver), this._onBeforeRenderObserver = this.onBeforeRenderObservable.add(VV)
           }
-          set onAfterRender(MM) {
-            this._onAfterRenderObserver && this.onAfterRenderObservable.remove(this._onAfterRenderObserver), this._onAfterRenderObserver = this.onAfterRenderObservable.add(MM)
+          set onAfterRender(VV) {
+            this._onAfterRenderObserver && this.onAfterRenderObservable.remove(this._onAfterRenderObserver), this._onAfterRenderObserver = this.onAfterRenderObservable.add(VV)
           }
           get inputTexture() {
             return this._textures.data[this._currentRenderTextureInd]
           }
-          set inputTexture(MM) {
-            this._forcedOutputTexture = MM
+          set inputTexture(VV) {
+            this._forcedOutputTexture = VV
           }
           restoreDefaultInputTexture() {
             this._forcedOutputTexture && (this._forcedOutputTexture = null, this.markTextureDirty())
           }
           getCamera() {
-            return this.lV
+            return this.U1
           }
           get texelSize() {
-            return this._shareOutputWithPostProcess ? this._shareOutputWithPostProcess.texelSize : (this._forcedOutputTexture && this._texelSize.iMM(1 / this._forcedOutputTexture.width, 1 / this._forcedOutputTexture.height), this._texelSize)
+            return this._shareOutputWithPostProcess ? this._shareOutputWithPostProcess.texelSize : (this._forcedOutputTexture && this._texelSize.FeV(1 / this._forcedOutputTexture.width, 1 / this._forcedOutputTexture.height), this._texelSize)
           }
-          constructor(rM, iM, PM, nM, QM, zM) {
-            let LM = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 1,
-              mM = arguments.length > 7 ? arguments[7] : void 0,
-              hM = arguments.length > 8 ? arguments[8] : void 0,
-              JM = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : null,
-              yM = arguments.length > 10 && void 0 !== arguments[10] ? arguments[10] : 0,
-              lM = arguments.length > 11 && void 0 !== arguments[11] ? arguments[11] : "postprocess",
-              EM = arguments.length > 12 ? arguments[12] : void 0,
-              UM = arguments.length > 13 && void 0 !== arguments[13] && arguments[13],
-              GM = arguments.length > 14 && void 0 !== arguments[14] ? arguments[14] : 5,
-              CM = arguments.length > 15 ? arguments[15] : void 0,
-              eM = arguments.length > 16 ? arguments[16] : void 0;
-            this._parentContainer = ((0, OM.m)(this, uM), null), this.uniqueId = (0, OM.m)(this, RM, void 0), this.width = ((0, OM.m)(this, pM), (0, OM.m)(this, WM, -1)), this.height = ((0, OM.m)(this, sM), (0, OM.m)(this, DM, -1)), this.nodeMaterialSource = ((0, OM.m)(this, kM), null), this._outputTexture = null, this.renderTargetSamplingMode = (0, OM.m)(this, ZM, void 0), this.clearColor = ((0, OM.m)(this, oM), (0, OM.m)(this, fM, void 0)), this.autoClear = ((0, OM.m)(this, YM), (0, OM.m)(this, NM, !0)), this.forceAutoClearInAlphaMode = ((0, OM.m)(this, AM), (0, OM.m)(this, xM, !1)), this.alphaConstants = ((0, OM.m)(this, vM), (0, OM.m)(this, FM, void 0)), this.animations = ((0, OM.m)(this, BM), []), this.enablePixelPerfectMode = (0, OM.m)(this, XM, !1), this.forceFullscreenViewport = ((0, OM.m)(this, IM), (0, OM.m)(this, KM, !0)), this.inspectableCustomProperties = (0, OM.m)(this, qM), this.scaleMode = (0, OM.m)(this, TM, 1), this.alwaysForcePOT = ((0, OM.m)(this, VM), (0, OM.m)(this, cM, !1)), this._samples = ((0, OM.m)(this, Mr), (0, OM.m)(this, rr, 1)), this.adaptScaleToCurrentViewport = ((0, OM.m)(this, ir), (0, OM.m)(this, Or, !1)), this.doNotSerialize = ((0, OM.m)(this, Sr), !1), this._webGPUReady = !1, this._reusable = !1, this._renderId = 0, this.externalTextureSamplerBinding = !1, this._textures = new SM.e(2), this._textureCache = [], this._currentRenderTextureInd = 0, this._scaleRatio = new aM.o(1, 1), this._texelSize = aM.o.Zero(), this.onActivateObservable = new jM.d, this.onSizeChangedObservable = new jM.d, this.onApplyObservable = new jM.d, this.onBeforeRenderObservable = new jM.d, this.onAfterRenderObservable = new jM.d, this.Rk = new jM.d, dM();
-            let bM, wM = 1,
-              tM = null;
-            if (PM && !Array.isArray(PM)) {
-              const MM = PM;
-              PM = MM.uniforms ?? null, nM = MM.samplers ?? null, wM = MM.size ?? 1, zM = MM.camera ?? null, LM = MM.samplingMode ?? 1, mM = MM.engine, hM = MM.reusable, JM = Array.isArray(MM.defines) ? MM.defines.join("\n") : MM.defines ?? null, yM = MM.textureType ?? 0, lM = MM.vertexUrl ?? "postprocess", EM = MM.indexParameters, UM = MM.blockCompilation ?? !1, GM = MM.textureFormat ?? 5, CM = MM.shaderLanguage ?? 0, tM = MM.uniformBuffers ?? null, eM = MM.extraInitializations, bM = MM.effectWrapper
-            } else QM && (wM = "number" === typeof QM ? QM : {
-              width: QM.width,
-              height: QM.height
+          constructor(eV, xV, pV, QV, nV, wV) {
+            let ZV = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 1,
+              vV = arguments.length > 7 ? arguments[7] : void 0,
+              kV = arguments.length > 8 ? arguments[8] : void 0,
+              bV = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : null,
+              BV = arguments.length > 10 && void 0 !== arguments[10] ? arguments[10] : 0,
+              jV = arguments.length > 11 && void 0 !== arguments[11] ? arguments[11] : "postprocess",
+              qV = arguments.length > 12 ? arguments[12] : void 0,
+              tV = arguments.length > 13 && void 0 !== arguments[13] && arguments[13],
+              FV = arguments.length > 14 && void 0 !== arguments[14] ? arguments[14] : 5,
+              TV = arguments.length > 15 ? arguments[15] : void 0,
+              PV = arguments.length > 16 ? arguments[16] : void 0;
+            this._parentContainer = ((0, JV.l)(this, zV), null), this.uniqueId = (0, JV.l)(this, GV, void 0), this.width = ((0, JV.l)(this, WV), (0, JV.l)(this, RV, -1)), this.height = ((0, JV.l)(this, gV), (0, JV.l)(this, DV, -1)), this.nodeMaterialSource = ((0, JV.l)(this, iV), null), this._outputTexture = null, this.renderTargetSamplingMode = (0, JV.l)(this, CV, void 0), this.clearColor = ((0, JV.l)(this, aV), (0, JV.l)(this, oV, void 0)), this.autoClear = ((0, JV.l)(this, cV), (0, JV.l)(this, hV, !0)), this.forceAutoClearInAlphaMode = ((0, JV.l)(this, lV), (0, JV.l)(this, LV, !1)), this.alphaConstants = ((0, JV.l)(this, fV), (0, JV.l)(this, mV, void 0)), this.animations = ((0, JV.l)(this, KV), []), this.enablePixelPerfectMode = (0, JV.l)(this, HV, !1), this.forceFullscreenViewport = ((0, JV.l)(this, uV), (0, JV.l)(this, sV, !0)), this.inspectableCustomProperties = (0, JV.l)(this, SV), this.scaleMode = (0, JV.l)(this, IV, 1), this.alwaysForcePOT = ((0, JV.l)(this, dV), (0, JV.l)(this, OV, !1)), this._samples = ((0, JV.l)(this, Ve), (0, JV.l)(this, ee, 1)), this.adaptScaleToCurrentViewport = ((0, JV.l)(this, xe), (0, JV.l)(this, Je, !1)), this.doNotSerialize = ((0, JV.l)(this, Ye), !1), this._webGPUReady = !1, this._reusable = !1, this._renderId = 0, this.externalTextureSamplerBinding = !1, this._textures = new YV.f(2), this._textureCache = [], this._currentRenderTextureInd = 0, this._scaleRatio = new yV.n(1, 1), this._texelSize = yV.n.Zero(), this.onActivateObservable = new UV.c, this.onSizeChangedObservable = new UV.c, this.onApplyObservable = new UV.c, this.onBeforeRenderObservable = new UV.c, this.onAfterRenderObservable = new UV.c, this.eC = new UV.c, EV();
+            let AV, NV = 1,
+              XV = null;
+            if (pV && !Array.isArray(pV)) {
+              const VV = pV;
+              pV = VV.uniforms ?? null, QV = VV.samplers ?? null, NV = VV.size ?? 1, wV = VV.camera ?? null, ZV = VV.samplingMode ?? 1, vV = VV.engine, kV = VV.reusable, bV = Array.isArray(VV.defines) ? VV.defines.join("\n") : VV.defines ?? null, BV = VV.textureType ?? 0, jV = VV.vertexUrl ?? "postprocess", qV = VV.indexParameters, tV = VV.blockCompilation ?? !1, FV = VV.textureFormat ?? 5, TV = VV.shaderLanguage ?? 0, XV = VV.uniformBuffers ?? null, PV = VV.extraInitializations, AV = VV.effectWrapper
+            } else nV && (NV = "number" === typeof nV ? nV : {
+              width: nV.width,
+              height: nV.height
             });
-            if (this._useExistingThinPostProcess = !!bM, this._effectWrapper = bM ?? new HM.c({
-                name: rM,
+            if (this._useExistingThinPostProcess = !!AV, this._effectWrapper = AV ?? new rV.d({
+                name: eV,
                 useShaderStore: !0,
                 useAsPostProcess: !0,
-                fragmentShader: iM,
-                engine: mM || zM?.Hk().ph(),
-                uniforms: PM,
-                samplers: nM,
-                uniformBuffers: tM,
-                defines: JM,
-                vertexUrl: lM,
-                indexParameters: EM,
+                fragmentShader: xV,
+                engine: vV || wV?.dD().sk(),
+                uniforms: pV,
+                samplers: QV,
+                uniformBuffers: XV,
+                defines: bV,
+                vertexUrl: jV,
+                indexParameters: qV,
                 blockCompilation: !0,
-                shaderLanguage: CM,
+                shaderLanguage: TV,
                 extraInitializations: void 0
-              }), this.name = rM, this.onEffectCreatedObservable = this._effectWrapper.onEffectCreatedObservable, null != zM ? (this.lV = zM, this._scene = zM.Hk(), zM.attachPostProcess(this), this._engine = this._scene.ph(), this._scene.addPostProcess(this), this.uniqueId = this._scene.getUniqueId()) : mM && (this._engine = mM, this._engine.postProcesses.push(this)), this._options = wM, this.renderTargetSamplingMode = LM || 1, this._reusable = hM || !1, this._textureType = yM, this._textureFormat = GM, this._shaderLanguage = CM || 0, this._samplers = nM || [], -1 === this._samplers.indexOf("textureSampler") && this._samplers.push("textureSampler"), this._fragmentUrl = iM, this._vertexUrl = lM, this._parameters = PM || [], -1 === this._parameters.indexOf("scale") && this._parameters.push("scale"), this._uniformBuffers = tM || [], this._indexParameters = EM, !this._useExistingThinPostProcess) {
+              }), this.name = eV, this.onEffectCreatedObservable = this._effectWrapper.onEffectCreatedObservable, null != wV ? (this.U1 = wV, this._scene = wV.dD(), wV.attachPostProcess(this), this._engine = this._scene.sk(), this._scene.addPostProcess(this), this.uniqueId = this._scene.getUniqueId()) : vV && (this._engine = vV, this._engine.postProcesses.push(this)), this._options = NV, this.renderTargetSamplingMode = ZV || 1, this._reusable = kV || !1, this._textureType = BV, this._textureFormat = FV, this._shaderLanguage = TV || 0, this._samplers = QV || [], -1 === this._samplers.indexOf("textureSampler") && this._samplers.push("textureSampler"), this._fragmentUrl = xV, this._vertexUrl = jV, this._parameters = pV || [], -1 === this._parameters.indexOf("scale") && this._parameters.push("scale"), this._uniformBuffers = XV || [], this._indexParameters = qV, !this._useExistingThinPostProcess) {
               this._webGPUReady = 1 === this._shaderLanguage;
-              const rM = [];
-              this._gatherImports(this._engine.isWebGPU && !MM.ForceGLSL, rM), this._effectWrapper._webGPUReady = this._webGPUReady, this._effectWrapper._postConstructor(UM, JM, eM, rM)
+              const eV = [];
+              this._gatherImports(this._engine.isWebGPU && !VV.ForceGLSL, eV), this._effectWrapper._webGPUReady = this._webGPUReady, this._effectWrapper._postConstructor(tV, bV, PV, eV)
             }
           }
           _gatherImports() {
-            let MM = arguments.length > 1 ? arguments[1] : void 0;
-            arguments.length > 0 && void 0 !== arguments[0] && arguments[0] && this._webGPUReady ? MM.push(Promise.all([iM.e(672).then((() => iM(64036)))])) : MM.push(Promise.all([iM.e(662).then((() => iM(63910)))]))
+            let VV = arguments.length > 1 ? arguments[1] : void 0;
+            arguments.length > 0 && void 0 !== arguments[0] && arguments[0] && this._webGPUReady ? VV.push(Promise.all([xV.e(672).then((() => xV(64421)))])) : VV.push(Promise.all([xV.e(662).then((() => xV(64298)))]))
           }
           getClassName() {
             return "PostProcess"
           }
-          ph() {
+          sk() {
             return this._engine
           }
           getEffect() {
             return this._effectWrapper.drawWrapper.effect
           }
-          shareOutputWith(MM) {
-            return this._disposeTextures(), this._shareOutputWithPostProcess = MM, this
+          shareOutputWith(VV) {
+            return this._disposeTextures(), this._shareOutputWithPostProcess = VV, this
           }
           useOwnOutput() {
-            0 == this._textures.length && (this._textures = new SM.e(2)), this._shareOutputWithPostProcess = null
+            0 == this._textures.length && (this._textures = new YV.f(2)), this._shareOutputWithPostProcess = null
           }
           updateEffect() {
-            let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
-              rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-              iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-              OM = arguments.length > 3 ? arguments[3] : void 0,
-              SM = arguments.length > 4 ? arguments[4] : void 0,
-              jM = arguments.length > 5 ? arguments[5] : void 0,
-              aM = arguments.length > 6 ? arguments[6] : void 0,
-              PM = arguments.length > 7 ? arguments[7] : void 0;
-            this._effectWrapper.updateEffect(MM, rM, iM, OM, SM, jM, aM, PM), this._postProcessDefines = Array.isArray(this._effectWrapper.options.defines) ? this._effectWrapper.options.defines.join("\n") : this._effectWrapper.options.defines
+            let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
+              eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+              xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+              JV = arguments.length > 3 ? arguments[3] : void 0,
+              YV = arguments.length > 4 ? arguments[4] : void 0,
+              UV = arguments.length > 5 ? arguments[5] : void 0,
+              yV = arguments.length > 6 ? arguments[6] : void 0,
+              pV = arguments.length > 7 ? arguments[7] : void 0;
+            this._effectWrapper.updateEffect(VV, eV, xV, JV, YV, UV, yV, pV), this._postProcessDefines = Array.isArray(this._effectWrapper.options.defines) ? this._effectWrapper.options.defines.join("\n") : this._effectWrapper.options.defines
           }
           isReusable() {
             return this._reusable
@@ -1583,93 +1583,93 @@ export const modules = {
           markTextureDirty() {
             this.width = -1
           }
-          _createRenderTargetTexture(MM, rM) {
-            let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-            for (let SM = 0; SM < this._textureCache.length; SM++)
-              if (this._textureCache[SM].texture.width === MM.width && this._textureCache[SM].texture.height === MM.height && this._textureCache[SM].postProcessChannel === iM && this._textureCache[SM].texture._generateDepthBuffer === rM.generateDepthBuffer && this._textureCache[SM].texture.samples === rM.samples) return this._textureCache[SM].texture;
-            const OM = this._engine.createRenderTargetTexture(MM, rM);
+          _createRenderTargetTexture(VV, eV) {
+            let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+            for (let YV = 0; YV < this._textureCache.length; YV++)
+              if (this._textureCache[YV].texture.width === VV.width && this._textureCache[YV].texture.height === VV.height && this._textureCache[YV].postProcessChannel === xV && this._textureCache[YV].texture._generateDepthBuffer === eV.generateDepthBuffer && this._textureCache[YV].texture.samples === eV.samples) return this._textureCache[YV].texture;
+            const JV = this._engine.createRenderTargetTexture(VV, eV);
             return this._textureCache.push({
-              texture: OM,
-              postProcessChannel: iM,
+              texture: JV,
+              postProcessChannel: xV,
               lastUsedRenderId: -1
-            }), OM
+            }), JV
           }
           _flushTextureCache() {
-            const MM = this._renderId;
-            for (let rM = this._textureCache.length - 1; rM >= 0; rM--)
-              if (MM - this._textureCache[rM].lastUsedRenderId > 100) {
-                let MM = !1;
-                for (let iM = 0; iM < this._textures.length; iM++)
-                  if (this._textures.data[iM] === this._textureCache[rM].texture) {
-                    MM = !0;
+            const VV = this._renderId;
+            for (let eV = this._textureCache.length - 1; eV >= 0; eV--)
+              if (VV - this._textureCache[eV].lastUsedRenderId > 100) {
+                let VV = !1;
+                for (let xV = 0; xV < this._textures.length; xV++)
+                  if (this._textures.data[xV] === this._textureCache[eV].texture) {
+                    VV = !0;
                     break
-                  } MM || (this._textureCache[rM].texture.dispose(), this._textureCache.splice(rM, 1))
+                  } VV || (this._textureCache[eV].texture.dispose(), this._textureCache.splice(eV, 1))
               }
           }
-          resize(MM, rM) {
-            let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-              OM = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-              SM = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-            this._textures.length > 0 && this._textures.reset(), this.width = MM, this.height = rM;
-            let jM = null;
-            if (iM)
-              for (let nM = 0; nM < iM._postProcesses.length; nM++)
-                if (null !== iM._postProcesses[nM]) {
-                  jM = iM._postProcesses[nM];
+          resize(VV, eV) {
+            let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+              JV = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+              YV = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+            this._textures.length > 0 && this._textures.reset(), this.width = VV, this.height = eV;
+            let UV = null;
+            if (xV)
+              for (let QV = 0; QV < xV._postProcesses.length; QV++)
+                if (null !== xV._postProcesses[QV]) {
+                  UV = xV._postProcesses[QV];
                   break
-                } const aM = {
+                } const yV = {
                 width: this.width,
                 height: this.height
               },
-              PM = {
-                generateMipMaps: OM,
-                generateDepthBuffer: SM || jM === this,
-                generateStencilBuffer: (SM || jM === this) && this._engine.isStencilEnable,
+              pV = {
+                generateMipMaps: JV,
+                generateDepthBuffer: YV || UV === this,
+                generateStencilBuffer: (YV || UV === this) && this._engine.isStencilEnable,
                 samplingMode: this.renderTargetSamplingMode,
                 type: this._textureType,
                 format: this._textureFormat,
                 samples: this._samples,
                 label: "PostProcessRTT-" + this.name
               };
-            this._textures.push(this._createRenderTargetTexture(aM, PM, 0)), this._reusable && this._textures.push(this._createRenderTargetTexture(aM, PM, 1)), this._texelSize.iMM(1 / this.width, 1 / this.height), this.onSizeChangedObservable.notifyObservers(this)
+            this._textures.push(this._createRenderTargetTexture(yV, pV, 0)), this._reusable && this._textures.push(this._createRenderTargetTexture(yV, pV, 1)), this._texelSize.FeV(1 / this.width, 1 / this.height), this.onSizeChangedObservable.notifyObservers(this)
           }
           _getTarget() {
-            let MM;
-            if (this._shareOutputWithPostProcess) MM = this._shareOutputWithPostProcess.inputTexture;
-            else if (this._forcedOutputTexture) MM = this._forcedOutputTexture, this.width = this._forcedOutputTexture.width, this.height = this._forcedOutputTexture.height;
+            let VV;
+            if (this._shareOutputWithPostProcess) VV = this._shareOutputWithPostProcess.inputTexture;
+            else if (this._forcedOutputTexture) VV = this._forcedOutputTexture, this.width = this._forcedOutputTexture.width, this.height = this._forcedOutputTexture.height;
             else {
-              let rM;
-              MM = this.inputTexture;
-              for (let iM = 0; iM < this._textureCache.length; iM++)
-                if (this._textureCache[iM].texture === MM) {
-                  rM = this._textureCache[iM];
+              let eV;
+              VV = this.inputTexture;
+              for (let xV = 0; xV < this._textureCache.length; xV++)
+                if (this._textureCache[xV].texture === VV) {
+                  eV = this._textureCache[xV];
                   break
-                } rM && (rM.lastUsedRenderId = this._renderId)
+                } eV && (eV.lastUsedRenderId = this._renderId)
             }
-            return MM
+            return VV
           }
-          activate(MM) {
-            let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-              iM = arguments.length > 2 ? arguments[2] : void 0;
-            const OM = null === MM || void 0 !== MM.cameraRigMode ? MM || this.lV : null,
-              SM = OM?.Hk() ?? MM,
-              jM = SM.ph(),
-              aM = jM.getCaps().maxTextureSize,
-              PM = (rM ? rM.width : this._engine.getRenderWidth(!0)) * this._options | 0,
-              nM = (rM ? rM.height : this._engine.getRenderHeight(!0)) * this._options | 0;
-            let QM = this._options.width || PM,
-              zM = this._options.height || nM;
-            const LM = 7 !== this.renderTargetSamplingMode && 1 !== this.renderTargetSamplingMode && 2 !== this.renderTargetSamplingMode;
-            let HM = null;
+          activate(VV) {
+            let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+              xV = arguments.length > 2 ? arguments[2] : void 0;
+            const JV = null === VV || void 0 !== VV.cameraRigMode ? VV || this.U1 : null,
+              YV = JV?.dD() ?? VV,
+              UV = YV.sk(),
+              yV = UV.getCaps().maxTextureSize,
+              pV = (eV ? eV.width : this._engine.getRenderWidth(!0)) * this._options | 0,
+              QV = (eV ? eV.height : this._engine.getRenderHeight(!0)) * this._options | 0;
+            let nV = this._options.width || pV,
+              wV = this._options.height || QV;
+            const ZV = 7 !== this.renderTargetSamplingMode && 1 !== this.renderTargetSamplingMode && 2 !== this.renderTargetSamplingMode;
+            let rV = null;
             if (!this._shareOutputWithPostProcess && !this._forcedOutputTexture) {
               if (this.adaptScaleToCurrentViewport) {
-                const MM = jM.currentViewport;
-                MM && (QM *= MM.width, zM *= MM.height)
-              }(LM || this.alwaysForcePOT) && (this._options.width || (QM = jM.needPOTTextures ? (0, mM.e)(QM, aM, this.scaleMode) : QM), this._options.height || (zM = jM.needPOTTextures ? (0, mM.e)(zM, aM, this.scaleMode) : zM)), this.width === QM && this.height === zM && (HM = this._getTarget()) || this.resize(QM, zM, OM, LM, iM), this._textures.forEach((MM => {
-                MM.samples !== this.samples && this._engine.updateRenderTargetTextureSampleCount(MM, this.samples)
+                const VV = UV.currentViewport;
+                VV && (nV *= VV.width, wV *= VV.height)
+              }(ZV || this.alwaysForcePOT) && (this._options.width || (nV = UV.needPOTTextures ? (0, vV.i)(nV, yV, this.scaleMode) : nV), this._options.height || (wV = UV.needPOTTextures ? (0, vV.i)(wV, yV, this.scaleMode) : wV)), this.width === nV && this.height === wV && (rV = this._getTarget()) || this.resize(nV, wV, JV, ZV, xV), this._textures.forEach((VV => {
+                VV.samples !== this.samples && this._engine.updateRenderTargetTextureSampleCount(VV, this.samples)
               })), this._flushTextureCache(), this._renderId++
             }
-            return HM || (HM = this._getTarget()), this.enablePixelPerfectMode ? (this._scaleRatio.iMM(PM / QM, nM / zM), this._engine.bindFramebuffer(HM, 0, PM, nM, this.forceFullscreenViewport)) : (this._scaleRatio.iMM(1, 1), this._engine.bindFramebuffer(HM, 0, void 0, void 0, this.forceFullscreenViewport)), this._engine._debugInsertMarker?.(`post process ${this.name} input`), this.onActivateObservable.notifyObservers(OM), this.autoClear && (0 === this.alphaMode || this.forceAutoClearInAlphaMode) && this._engine.clear(this.clearColor ? this.clearColor : SM.clearColor, SM._allowPostProcessClearColor, !0, !0), this._reusable && (this._currentRenderTextureInd = (this._currentRenderTextureInd + 1) % 2), HM
+            return rV || (rV = this._getTarget()), this.enablePixelPerfectMode ? (this._scaleRatio.FeV(pV / nV, QV / wV), this._engine.bindFramebuffer(rV, 0, pV, QV, this.forceFullscreenViewport)) : (this._scaleRatio.FeV(1, 1), this._engine.bindFramebuffer(rV, 0, void 0, void 0, this.forceFullscreenViewport)), this._engine._debugInsertMarker?.(`post process ${this.name} input`), this.onActivateObservable.notifyObservers(JV), this.autoClear && (0 === this.alphaMode || this.forceAutoClearInAlphaMode) && this._engine.clear(this.clearColor ? this.clearColor : YV.clearColor, YV._allowPostProcessClearColor, !0, !0), this._reusable && (this._currentRenderTextureInd = (this._currentRenderTextureInd + 1) % 2), rV
           }
           get isSupported() {
             return this._effectWrapper.drawWrapper.effect.isSupported
@@ -1682,321 +1682,321 @@ export const modules = {
           }
           apply() {
             if (!this._effectWrapper.isReady()) return null;
-            let MM;
-            return this._engine.enableEffect(this._effectWrapper.drawWrapper), this._engine.setState(!1), this._engine.setDepthBuffer(!1), this._engine.setDepthWrite(!1), this.alphaConstants && this.ph().setAlphaConstants(this.alphaConstants.r, this.alphaConstants.g, this.alphaConstants.b, this.alphaConstants.a), this._engine.setAlphaMode(this.alphaMode), MM = this._shareOutputWithPostProcess ? this._shareOutputWithPostProcess.inputTexture : this._forcedOutputTexture ? this._forcedOutputTexture : this.inputTexture, this.externalTextureSamplerBinding || this._effectWrapper.drawWrapper.effect._bindTexture("textureSampler", MM?.texture), this._effectWrapper.drawWrapper.effect.setVector2("scale", this._scaleRatio), this.onApplyObservable.notifyObservers(this._effectWrapper.drawWrapper.effect), this._effectWrapper.bind(!0), this._effectWrapper.drawWrapper.effect
+            let VV;
+            return this._engine.enableEffect(this._effectWrapper.drawWrapper), this._engine.setState(!1), this._engine.setDepthBuffer(!1), this._engine.setDepthWrite(!1), this.alphaConstants && this.sk().setAlphaConstants(this.alphaConstants.r, this.alphaConstants.g, this.alphaConstants.b, this.alphaConstants.a), this._engine.setAlphaMode(this.alphaMode), VV = this._shareOutputWithPostProcess ? this._shareOutputWithPostProcess.inputTexture : this._forcedOutputTexture ? this._forcedOutputTexture : this.inputTexture, this.externalTextureSamplerBinding || this._effectWrapper.drawWrapper.effect._bindTexture("textureSampler", VV?.texture), this._effectWrapper.drawWrapper.effect.setVector2("scale", this._scaleRatio), this.onApplyObservable.notifyObservers(this._effectWrapper.drawWrapper.effect), this._effectWrapper.bind(!0), this._effectWrapper.drawWrapper.effect
           }
           _disposeTextures() {
             this._shareOutputWithPostProcess || this._forcedOutputTexture ? this._disposeTextureCache() : (this._disposeTextureCache(), this._textures.dispose())
           }
           _disposeTextureCache() {
-            for (let MM = this._textureCache.length - 1; MM >= 0; MM--) this._textureCache[MM].texture.dispose();
+            for (let VV = this._textureCache.length - 1; VV >= 0; VV--) this._textureCache[VV].texture.dispose();
             this._textureCache.length = 0
           }
-          setPrePassRenderer(MM) {
-            return !!this._prePassEffectConfiguration && (this._prePassEffectConfiguration = MM.addEffectConfiguration(this._prePassEffectConfiguration), this._prePassEffectConfiguration.enabled = !0, !0)
+          setPrePassRenderer(VV) {
+            return !!this._prePassEffectConfiguration && (this._prePassEffectConfiguration = VV.addEffectConfiguration(this._prePassEffectConfiguration), this._prePassEffectConfiguration.enabled = !0, !0)
           }
-          dispose(MM) {
-            let rM;
-            if (MM = MM || this.lV, this._useExistingThinPostProcess || this._effectWrapper.dispose(), this._disposeTextures(), this._scene && this._scene.removePostProcess(this), this._parentContainer && (rM = this._parentContainer.postProcesses.indexOf(this), rM > -1 && this._parentContainer.postProcesses.splice(rM, 1), this._parentContainer = null), rM = this._engine.postProcesses.indexOf(this), -1 !== rM && this._engine.postProcesses.splice(rM, 1), this.Rk.notifyObservers(), MM) {
-              if (MM.detachPostProcess(this), rM = MM._postProcesses.indexOf(this), 0 === rM && MM._postProcesses.length > 0) {
-                const MM = this.lV._getFirstPostProcess();
-                MM && MM.markTextureDirty()
+          dispose(VV) {
+            let eV;
+            if (VV = VV || this.U1, this._useExistingThinPostProcess || this._effectWrapper.dispose(), this._disposeTextures(), this._scene && this._scene.removePostProcess(this), this._parentContainer && (eV = this._parentContainer.postProcesses.indexOf(this), eV > -1 && this._parentContainer.postProcesses.splice(eV, 1), this._parentContainer = null), eV = this._engine.postProcesses.indexOf(this), -1 !== eV && this._engine.postProcesses.splice(eV, 1), this.eC.notifyObservers(), VV) {
+              if (VV.detachPostProcess(this), eV = VV._postProcesses.indexOf(this), 0 === eV && VV._postProcesses.length > 0) {
+                const VV = this.U1._getFirstPostProcess();
+                VV && VV.markTextureDirty()
               }
               this.onActivateObservable.clear(), this.onAfterRenderObservable.clear(), this.onApplyObservable.clear(), this.onBeforeRenderObservable.clear(), this.onSizeChangedObservable.clear(), this.onEffectCreatedObservable.clear()
             }
           }
           serialize() {
-            const MM = QM.b.Serialize(this),
-              rM = this.getCamera() || this._scene && this._scene.activeCamera;
-            return MM.customType = "BABYLON." + this.getClassName(), MM.cameraId = rM ? rM.id : null, MM.reusable = this._reusable, MM.textureType = this._textureType, MM.fragmentUrl = this._fragmentUrl, MM.parameters = this._parameters, MM.samplers = this._samplers, MM.uniformBuffers = this._uniformBuffers, MM.options = this._options, MM.defines = this._postProcessDefines, MM.textureFormat = this._textureFormat, MM.vertexUrl = this._vertexUrl, MM.indexParameters = this._indexParameters, MM
+            const VV = nV.b.Serialize(this),
+              eV = this.getCamera() || this._scene && this._scene.activeCamera;
+            return VV.customType = "BABYLON." + this.getClassName(), VV.cameraId = eV ? eV.id : null, VV.reusable = this._reusable, VV.textureType = this._textureType, VV.fragmentUrl = this._fragmentUrl, VV.parameters = this._parameters, VV.samplers = this._samplers, VV.uniformBuffers = this._uniformBuffers, VV.options = this._options, VV.defines = this._postProcessDefines, VV.textureFormat = this._textureFormat, VV.vertexUrl = this._vertexUrl, VV.indexParameters = this._indexParameters, VV
           }
           clone() {
-            const rM = this.serialize();
-            rM._engine = this._engine, rM.cameraId = null;
-            const iM = MM.Parse(rM, this._scene, "");
-            return iM ? (iM.onActivateObservable = this.onActivateObservable.clone(), iM.onSizeChangedObservable = this.onSizeChangedObservable.clone(), iM.onApplyObservable = this.onApplyObservable.clone(), iM.onBeforeRenderObservable = this.onBeforeRenderObservable.clone(), iM.onAfterRenderObservable = this.onAfterRenderObservable.clone(), iM._prePassEffectConfiguration = this._prePassEffectConfiguration, iM) : null
+            const eV = this.serialize();
+            eV._engine = this._engine, eV.cameraId = null;
+            const xV = VV.Parse(eV, this._scene, "");
+            return xV ? (xV.onActivateObservable = this.onActivateObservable.clone(), xV.onSizeChangedObservable = this.onSizeChangedObservable.clone(), xV.onApplyObservable = this.onApplyObservable.clone(), xV.onBeforeRenderObservable = this.onBeforeRenderObservable.clone(), xV.onAfterRenderObservable = this.onAfterRenderObservable.clone(), xV._prePassEffectConfiguration = this._prePassEffectConfiguration, xV) : null
           }
-          static Parse(MM, rM, iM) {
-            const OM = (0, zM.b)(MM.customType);
-            if (!OM || !OM._Parse) return null;
-            const SM = rM ? rM.getCameraById(MM.cameraId) : null;
-            return OM._Parse(MM, SM, rM, iM)
+          static Parse(VV, eV, xV) {
+            const JV = (0, wV.c)(VV.customType);
+            if (!JV || !JV._Parse) return null;
+            const YV = eV ? eV.getCameraById(VV.cameraId) : null;
+            return JV._Parse(VV, YV, eV, xV)
           }
-          static _Parse(rM, iM, OM, SM) {
-            return QM.b.Parse((() => new MM(rM.name, rM.fragmentUrl, rM.parameters, rM.samplers, rM.options, iM, rM.renderTargetSamplingMode, rM._engine, rM.reusable, rM.defines, rM.textureType, rM.vertexUrl, rM.indexParameters, !1, rM.textureFormat)), rM, OM, SM)
+          static _Parse(eV, xV, JV, YV) {
+            return nV.b.Parse((() => new VV(eV.name, eV.fragmentUrl, eV.parameters, eV.samplers, eV.options, xV, eV.renderTargetSamplingMode, eV._engine, eV.reusable, eV.defines, eV.textureType, eV.vertexUrl, eV.indexParameters, !1, eV.textureFormat)), eV, JV, YV)
           }
         }, (() => {
-          const iM = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
-          rM = [(0, nM.L)()], PM = [(0, nM.L)()], LM = [(0, nM.L)()], hM = [(0, nM.L)()], JM = [(0, nM.L)()], yM = [(0, nM.s)()], lM = [(0, nM.L)()], EM = [(0, nM.L)()], UM = [(0, nM.L)()], GM = [(0, nM.L)()], CM = [(0, nM.L)()], eM = [(0, nM.L)()], bM = [(0, nM.L)()], wM = [(0, nM.L)()], tM = [(0, nM.L)("samples")], gM = [(0, nM.L)()], (0, OM.i)(MM, null, PM, {
+          const xV = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
+          eV = [(0, QV.J)()], pV = [(0, QV.J)()], ZV = [(0, QV.J)()], kV = [(0, QV.J)()], bV = [(0, QV.J)()], BV = [(0, QV.s)()], jV = [(0, QV.J)()], qV = [(0, QV.J)()], tV = [(0, QV.J)()], FV = [(0, QV.J)()], TV = [(0, QV.J)()], PV = [(0, QV.J)()], AV = [(0, QV.J)()], NV = [(0, QV.J)()], XV = [(0, QV.J)("samples")], MV = [(0, QV.J)()], (0, JV.i)(VV, null, pV, {
             kind: "getter",
             name: "name",
             static: !1,
             private: !1,
             access: {
-              has: MM => "name" in MM,
-              get: MM => MM.name
+              has: VV => "name" in VV,
+              get: VV => VV.name
             },
-            metadata: iM
-          }, null, uM), (0, OM.i)(MM, null, UM, {
+            metadata: xV
+          }, null, zV), (0, JV.i)(VV, null, tV, {
             kind: "getter",
             name: "alphaMode",
             static: !1,
             private: !1,
             access: {
-              has: MM => "alphaMode" in MM,
-              get: MM => MM.alphaMode
+              has: VV => "alphaMode" in VV,
+              get: VV => VV.alphaMode
             },
-            metadata: iM
-          }, null, uM), (0, OM.i)(null, null, rM, {
+            metadata: xV
+          }, null, zV), (0, JV.i)(null, null, eV, {
             kind: "field",
             name: "uniqueId",
             static: !1,
             private: !1,
             access: {
-              has: MM => "uniqueId" in MM,
-              get: MM => MM.uniqueId,
-              set: (MM, rM) => {
-                MM.uniqueId = rM
+              has: VV => "uniqueId" in VV,
+              get: VV => VV.uniqueId,
+              set: (VV, eV) => {
+                VV.uniqueId = eV
               }
             },
-            metadata: iM
-          }, RM, pM), (0, OM.i)(null, null, LM, {
+            metadata: xV
+          }, GV, WV), (0, JV.i)(null, null, ZV, {
             kind: "field",
             name: "width",
             static: !1,
             private: !1,
             access: {
-              has: MM => "width" in MM,
-              get: MM => MM.width,
-              set: (MM, rM) => {
-                MM.width = rM
+              has: VV => "width" in VV,
+              get: VV => VV.width,
+              set: (VV, eV) => {
+                VV.width = eV
               }
             },
-            metadata: iM
-          }, WM, sM), (0, OM.i)(null, null, hM, {
+            metadata: xV
+          }, RV, gV), (0, JV.i)(null, null, kV, {
             kind: "field",
             name: "height",
             static: !1,
             private: !1,
             access: {
-              has: MM => "height" in MM,
-              get: MM => MM.height,
-              set: (MM, rM) => {
-                MM.height = rM
+              has: VV => "height" in VV,
+              get: VV => VV.height,
+              set: (VV, eV) => {
+                VV.height = eV
               }
             },
-            metadata: iM
-          }, DM, kM), (0, OM.i)(null, null, JM, {
+            metadata: xV
+          }, DV, iV), (0, JV.i)(null, null, bV, {
             kind: "field",
             name: "renderTargetSamplingMode",
             static: !1,
             private: !1,
             access: {
-              has: MM => "renderTargetSamplingMode" in MM,
-              get: MM => MM.renderTargetSamplingMode,
-              set: (MM, rM) => {
-                MM.renderTargetSamplingMode = rM
+              has: VV => "renderTargetSamplingMode" in VV,
+              get: VV => VV.renderTargetSamplingMode,
+              set: (VV, eV) => {
+                VV.renderTargetSamplingMode = eV
               }
             },
-            metadata: iM
-          }, ZM, oM), (0, OM.i)(null, null, yM, {
+            metadata: xV
+          }, CV, aV), (0, JV.i)(null, null, BV, {
             kind: "field",
             name: "clearColor",
             static: !1,
             private: !1,
             access: {
-              has: MM => "clearColor" in MM,
-              get: MM => MM.clearColor,
-              set: (MM, rM) => {
-                MM.clearColor = rM
+              has: VV => "clearColor" in VV,
+              get: VV => VV.clearColor,
+              set: (VV, eV) => {
+                VV.clearColor = eV
               }
             },
-            metadata: iM
-          }, fM, YM), (0, OM.i)(null, null, lM, {
+            metadata: xV
+          }, oV, cV), (0, JV.i)(null, null, jV, {
             kind: "field",
             name: "autoClear",
             static: !1,
             private: !1,
             access: {
-              has: MM => "autoClear" in MM,
-              get: MM => MM.autoClear,
-              set: (MM, rM) => {
-                MM.autoClear = rM
+              has: VV => "autoClear" in VV,
+              get: VV => VV.autoClear,
+              set: (VV, eV) => {
+                VV.autoClear = eV
               }
             },
-            metadata: iM
-          }, NM, AM), (0, OM.i)(null, null, EM, {
+            metadata: xV
+          }, hV, lV), (0, JV.i)(null, null, qV, {
             kind: "field",
             name: "forceAutoClearInAlphaMode",
             static: !1,
             private: !1,
             access: {
-              has: MM => "forceAutoClearInAlphaMode" in MM,
-              get: MM => MM.forceAutoClearInAlphaMode,
-              set: (MM, rM) => {
-                MM.forceAutoClearInAlphaMode = rM
+              has: VV => "forceAutoClearInAlphaMode" in VV,
+              get: VV => VV.forceAutoClearInAlphaMode,
+              set: (VV, eV) => {
+                VV.forceAutoClearInAlphaMode = eV
               }
             },
-            metadata: iM
-          }, xM, vM), (0, OM.i)(null, null, GM, {
+            metadata: xV
+          }, LV, fV), (0, JV.i)(null, null, FV, {
             kind: "field",
             name: "alphaConstants",
             static: !1,
             private: !1,
             access: {
-              has: MM => "alphaConstants" in MM,
-              get: MM => MM.alphaConstants,
-              set: (MM, rM) => {
-                MM.alphaConstants = rM
+              has: VV => "alphaConstants" in VV,
+              get: VV => VV.alphaConstants,
+              set: (VV, eV) => {
+                VV.alphaConstants = eV
               }
             },
-            metadata: iM
-          }, FM, BM), (0, OM.i)(null, null, CM, {
+            metadata: xV
+          }, mV, KV), (0, JV.i)(null, null, TV, {
             kind: "field",
             name: "enablePixelPerfectMode",
             static: !1,
             private: !1,
             access: {
-              has: MM => "enablePixelPerfectMode" in MM,
-              get: MM => MM.enablePixelPerfectMode,
-              set: (MM, rM) => {
-                MM.enablePixelPerfectMode = rM
+              has: VV => "enablePixelPerfectMode" in VV,
+              get: VV => VV.enablePixelPerfectMode,
+              set: (VV, eV) => {
+                VV.enablePixelPerfectMode = eV
               }
             },
-            metadata: iM
-          }, XM, IM), (0, OM.i)(null, null, eM, {
+            metadata: xV
+          }, HV, uV), (0, JV.i)(null, null, PV, {
             kind: "field",
             name: "forceFullscreenViewport",
             static: !1,
             private: !1,
             access: {
-              has: MM => "forceFullscreenViewport" in MM,
-              get: MM => MM.forceFullscreenViewport,
-              set: (MM, rM) => {
-                MM.forceFullscreenViewport = rM
+              has: VV => "forceFullscreenViewport" in VV,
+              get: VV => VV.forceFullscreenViewport,
+              set: (VV, eV) => {
+                VV.forceFullscreenViewport = eV
               }
             },
-            metadata: iM
-          }, KM, qM), (0, OM.i)(null, null, bM, {
+            metadata: xV
+          }, sV, SV), (0, JV.i)(null, null, AV, {
             kind: "field",
             name: "scaleMode",
             static: !1,
             private: !1,
             access: {
-              has: MM => "scaleMode" in MM,
-              get: MM => MM.scaleMode,
-              set: (MM, rM) => {
-                MM.scaleMode = rM
+              has: VV => "scaleMode" in VV,
+              get: VV => VV.scaleMode,
+              set: (VV, eV) => {
+                VV.scaleMode = eV
               }
             },
-            metadata: iM
-          }, TM, VM), (0, OM.i)(null, null, wM, {
+            metadata: xV
+          }, IV, dV), (0, JV.i)(null, null, NV, {
             kind: "field",
             name: "alwaysForcePOT",
             static: !1,
             private: !1,
             access: {
-              has: MM => "alwaysForcePOT" in MM,
-              get: MM => MM.alwaysForcePOT,
-              set: (MM, rM) => {
-                MM.alwaysForcePOT = rM
+              has: VV => "alwaysForcePOT" in VV,
+              get: VV => VV.alwaysForcePOT,
+              set: (VV, eV) => {
+                VV.alwaysForcePOT = eV
               }
             },
-            metadata: iM
-          }, cM, Mr), (0, OM.i)(null, null, tM, {
+            metadata: xV
+          }, OV, Ve), (0, JV.i)(null, null, XV, {
             kind: "field",
             name: "_samples",
             static: !1,
             private: !1,
             access: {
-              has: MM => "_samples" in MM,
-              get: MM => MM._samples,
-              set: (MM, rM) => {
-                MM._samples = rM
+              has: VV => "_samples" in VV,
+              get: VV => VV._samples,
+              set: (VV, eV) => {
+                VV._samples = eV
               }
             },
-            metadata: iM
-          }, rr, ir), (0, OM.i)(null, null, gM, {
+            metadata: xV
+          }, ee, xe), (0, JV.i)(null, null, MV, {
             kind: "field",
             name: "adaptScaleToCurrentViewport",
             static: !1,
             private: !1,
             access: {
-              has: MM => "adaptScaleToCurrentViewport" in MM,
-              get: MM => MM.adaptScaleToCurrentViewport,
-              set: (MM, rM) => {
-                MM.adaptScaleToCurrentViewport = rM
+              has: VV => "adaptScaleToCurrentViewport" in VV,
+              get: VV => VV.adaptScaleToCurrentViewport,
+              set: (VV, eV) => {
+                VV.adaptScaleToCurrentViewport = eV
               }
             },
-            metadata: iM
-          }, Or, Sr), iM && Object.defineProperty(MM, Symbol.metadata, {
+            metadata: xV
+          }, Je, Ye), xV && Object.defineProperty(VV, Symbol.metadata, {
             enumerable: !0,
             configurable: !0,
             writable: !0,
-            value: iM
+            value: xV
           })
-        })(), MM
+        })(), VV
       })(),
-      JM = !1;
+      bV = !1;
 
-    function dM() {
-      JM || (JM = !0, LM.d.prototype.setTextureFromPostProcess = function(MM, rM, iM) {
-        let OM = null;
-        rM && (rM._forcedOutputTexture ? OM = rM._forcedOutputTexture : rM._textures.data[rM._currentRenderTextureInd] && (OM = rM._textures.data[rM._currentRenderTextureInd])), this._bindTexture(MM, OM?.texture ?? null, iM)
-      }, LM.d.prototype.setTextureFromPostProcessOutput = function(MM, rM, iM) {
-        this._bindTexture(MM, rM?._outputTexture?.texture ?? null, iM)
-      }, PM.c.prototype.setTextureFromPostProcess = function(MM, rM) {
-        this._engine.setTextureFromPostProcess(this._samplers[MM], rM, MM)
-      }, PM.c.prototype.setTextureFromPostProcessOutput = function(MM, rM) {
-        this._engine.setTextureFromPostProcessOutput(this._samplers[MM], rM, MM)
-      }, (0, zM.e)("BABYLON.PostProcess", hM))
+    function EV() {
+      bV || (bV = !0, ZV.d.prototype.setTextureFromPostProcess = function(VV, eV, xV) {
+        let JV = null;
+        eV && (eV._forcedOutputTexture ? JV = eV._forcedOutputTexture : eV._textures.data[eV._currentRenderTextureInd] && (JV = eV._textures.data[eV._currentRenderTextureInd])), this._bindTexture(VV, JV?.texture ?? null, xV)
+      }, ZV.d.prototype.setTextureFromPostProcessOutput = function(VV, eV, xV) {
+        this._bindTexture(VV, eV?._outputTexture?.texture ?? null, xV)
+      }, pV.c.prototype.setTextureFromPostProcess = function(VV, eV) {
+        this._engine.setTextureFromPostProcess(this._samplers[VV], eV, VV)
+      }, pV.c.prototype.setTextureFromPostProcessOutput = function(VV, eV) {
+        this._engine.setTextureFromPostProcessOutput(this._samplers[VV], eV, VV)
+      }, (0, wV.d)("BABYLON.PostProcess", kV))
     }
   },
-  44469: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => aM,
-      f: () => jM
+  44719: (VV, eV, xV) => {
+    xV.d(eV, {
+      c: () => yV,
+      e: () => UV
     });
-    var OM = iM(44445),
-      SM = iM(38064);
-    class jM extends OM.c {
-      _gatherImports(MM, rM) {
-        MM ? (this._webGPUReady = !0, rM.push(Promise.all([iM.e(679).then((() => iM(64081)))]))) : rM.push(Promise.all([iM.e(680).then((() => iM(64089)))])), super._gatherImports(MM, rM)
+    var JV = xV(44699),
+      YV = xV(38287);
+    class UV extends JV.d {
+      _gatherImports(VV, eV) {
+        VV ? (this._webGPUReady = !0, eV.push(Promise.all([xV.e(679).then((() => xV(64473)))]))) : eV.push(Promise.all([xV.e(680).then((() => xV(64476)))])), super._gatherImports(VV, eV)
       }
-      constructor(MM) {
-        let rM = arguments.length > 2 ? arguments[2] : void 0;
-        const iM = {
-          name: MM,
-          engine: (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null) || SM.c.LastCreatedEngine,
+      constructor(VV) {
+        let eV = arguments.length > 2 ? arguments[2] : void 0;
+        const xV = {
+          name: VV,
+          engine: (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null) || YV.d.LastCreatedEngine,
           useShaderStore: !0,
           useAsPostProcess: !0,
-          fragmentShader: jM.FragmentUrl,
-          ...rM
+          fragmentShader: UV.FragmentUrl,
+          ...eV
         };
-        iM.engine || (iM.engine = SM.c.LastCreatedEngine), super(iM)
+        xV.engine || (xV.engine = YV.d.LastCreatedEngine), super(xV)
       }
     }
-    jM.FragmentUrl = "pass";
-    class aM extends OM.c {
-      _gatherImports(MM, rM) {
-        MM ? (this._webGPUReady = !0, rM.push(Promise.all([iM.e(681).then((() => iM(64097)))]))) : rM.push(Promise.all([iM.e(682).then((() => iM(64101)))])), super._gatherImports(MM, rM)
+    UV.FragmentUrl = "pass";
+    class yV extends JV.d {
+      _gatherImports(VV, eV) {
+        VV ? (this._webGPUReady = !0, eV.push(Promise.all([xV.e(681).then((() => xV(64482)))]))) : eV.push(Promise.all([xV.e(682).then((() => xV(64487)))])), super._gatherImports(VV, eV)
       }
-      constructor(MM) {
+      constructor(VV) {
         super({
           ...arguments.length > 2 ? arguments[2] : void 0,
-          name: MM,
-          engine: (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null) || SM.c.LastCreatedEngine,
+          name: VV,
+          engine: (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null) || YV.d.LastCreatedEngine,
           useShaderStore: !0,
           useAsPostProcess: !0,
-          fragmentShader: aM.FragmentUrl,
+          fragmentShader: yV.FragmentUrl,
           defines: "#define POSITIVEX"
         }), this._face = 0
       }
       get face() {
         return this._face
       }
-      set face(MM) {
-        if (!(MM < 0 || MM > 5)) switch (this._face = MM, this._face) {
+      set face(VV) {
+        if (!(VV < 0 || VV > 5)) switch (this._face = VV, this._face) {
           case 0:
             this.updateEffect("#define POSITIVEX");
             break;
@@ -2017,8 +2017,8 @@ export const modules = {
         }
       }
     }
-    aM.FragmentUrl = "passCube"
+    yV.FragmentUrl = "passCube"
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const VV in modules) Object.freeze(modules[VV]);

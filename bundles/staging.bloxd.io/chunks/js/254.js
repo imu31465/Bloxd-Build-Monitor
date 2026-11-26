@@ -1,12 +1,12 @@
 export const id = 254;
 export const ids = [254];
 export const modules = {
-  38064: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => SM
+  38287: (VV, eV, xV) => {
+    xV.d(eV, {
+      d: () => YV
     });
-    var OM = iM(38068);
-    class SM {
+    var JV = xV(38296);
+    class YV {
       static get LastCreatedEngine() {
         return 0 === this.Instances.length ? null : this.Instances[this.Instances.length - 1]
       }
@@ -14,178 +14,178 @@ export const modules = {
         return this._LastCreatedScene
       }
     }
-    SM.Instances = [], SM.OnEnginesDisposedObservable = new OM.d, SM._LastCreatedScene = null, SM.UseFallbackTexture = !0, SM.FallbackTexture = ""
+    YV.Instances = [], YV.OnEnginesDisposedObservable = new JV.c, YV._LastCreatedScene = null, YV.UseFallbackTexture = !0, YV.FallbackTexture = ""
   },
-  38056: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => OM
+  38280: (VV, eV, xV) => {
+    xV.d(eV, {
+      c: () => JV
     });
-    class OM {
-      static SetMatrixPrecision(MM) {
-        if (OM.MatrixTrackPrecisionChange = !1, MM && !OM.MatrixUse64Bits && OM.MatrixTrackedMatrices)
-          for (let rM = 0; rM < OM.MatrixTrackedMatrices.length; ++rM) {
-            const MM = OM.MatrixTrackedMatrices[rM],
-              iM = MM._m;
-            MM._m = new Array(16);
-            for (let rM = 0; rM < 16; ++rM) MM._m[rM] = iM[rM]
+    class JV {
+      static SetMatrixPrecision(VV) {
+        if (JV.MatrixTrackPrecisionChange = !1, VV && !JV.MatrixUse64Bits && JV.MatrixTrackedMatrices)
+          for (let eV = 0; eV < JV.MatrixTrackedMatrices.length; ++eV) {
+            const VV = JV.MatrixTrackedMatrices[eV],
+              xV = VV._m;
+            VV._m = new Array(16);
+            for (let eV = 0; eV < 16; ++eV) VV._m[eV] = xV[eV]
           }
-        OM.MatrixUse64Bits = MM, OM.MatrixCurrentType = OM.MatrixUse64Bits ? Array : Float32Array, OM.MatrixTrackedMatrices = null
+        JV.MatrixUse64Bits = VV, JV.MatrixCurrentType = JV.MatrixUse64Bits ? Array : Float32Array, JV.MatrixTrackedMatrices = null
       }
     }
-    OM.MatrixUse64Bits = !1, OM.MatrixTrackPrecisionChange = !0, OM.MatrixCurrentType = Float32Array, OM.MatrixTrackedMatrices = []
+    JV.MatrixUse64Bits = !1, JV.MatrixTrackPrecisionChange = !0, JV.MatrixCurrentType = Float32Array, JV.MatrixTrackedMatrices = []
   },
-  38083: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => PM,
-      e: () => QM,
-      f: () => nM,
-      h: () => OM,
-      l: () => jM,
-      p: () => aM
+  38311: (VV, eV, xV) => {
+    xV.d(eV, {
+      d: () => pV,
+      f: () => nV,
+      g: () => QV,
+      h: () => JV,
+      j: () => UV,
+      m: () => yV
     });
-    class OM {}
+    class JV {}
 
-    function SM(MM) {
-      MM.updateFlag = OM._UpdateFlagSeed++
+    function YV(VV) {
+      VV.updateFlag = JV._UpdateFlagSeed++
     }
 
-    function jM(MM, rM, iM) {
-      let OM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-      const SM = MM.HOM(),
-        jM = rM.HOM(),
-        aM = SM[0],
-        PM = SM[1],
-        nM = SM[2],
-        QM = SM[3],
-        zM = SM[4],
-        LM = SM[5],
-        mM = SM[6],
-        HM = SM[7],
-        hM = SM[8],
-        JM = SM[9],
-        dM = SM[10],
-        yM = SM[11],
-        lM = SM[12],
-        EM = SM[13],
-        UM = SM[14],
-        GM = SM[15],
-        CM = jM[0],
-        eM = jM[1],
-        bM = jM[2],
-        wM = jM[3],
-        tM = jM[4],
-        gM = jM[5],
-        uM = jM[6],
-        RM = jM[7],
-        pM = jM[8],
-        WM = jM[9],
-        sM = jM[10],
-        DM = jM[11],
-        kM = jM[12],
-        ZM = jM[13],
-        oM = jM[14],
-        fM = jM[15];
-      iM[OM] = aM * CM + PM * tM + nM * pM + QM * kM, iM[OM + 1] = aM * eM + PM * gM + nM * WM + QM * ZM, iM[OM + 2] = aM * bM + PM * uM + nM * sM + QM * oM, iM[OM + 3] = aM * wM + PM * RM + nM * DM + QM * fM, iM[OM + 4] = zM * CM + LM * tM + mM * pM + HM * kM, iM[OM + 5] = zM * eM + LM * gM + mM * WM + HM * ZM, iM[OM + 6] = zM * bM + LM * uM + mM * sM + HM * oM, iM[OM + 7] = zM * wM + LM * RM + mM * DM + HM * fM, iM[OM + 8] = hM * CM + JM * tM + dM * pM + yM * kM, iM[OM + 9] = hM * eM + JM * gM + dM * WM + yM * ZM, iM[OM + 10] = hM * bM + JM * uM + dM * sM + yM * oM, iM[OM + 11] = hM * wM + JM * RM + dM * DM + yM * fM, iM[OM + 12] = lM * CM + EM * tM + UM * pM + GM * kM, iM[OM + 13] = lM * eM + EM * gM + UM * WM + GM * ZM, iM[OM + 14] = lM * bM + EM * uM + UM * sM + GM * oM, iM[OM + 15] = lM * wM + EM * RM + UM * DM + GM * fM
+    function UV(VV, eV, xV) {
+      let JV = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+      const YV = VV.WYV(),
+        UV = eV.WYV(),
+        yV = YV[0],
+        pV = YV[1],
+        QV = YV[2],
+        nV = YV[3],
+        wV = YV[4],
+        ZV = YV[5],
+        vV = YV[6],
+        rV = YV[7],
+        kV = YV[8],
+        bV = YV[9],
+        EV = YV[10],
+        BV = YV[11],
+        jV = YV[12],
+        qV = YV[13],
+        tV = YV[14],
+        FV = YV[15],
+        TV = UV[0],
+        PV = UV[1],
+        AV = UV[2],
+        NV = UV[3],
+        XV = UV[4],
+        MV = UV[5],
+        zV = UV[6],
+        GV = UV[7],
+        WV = UV[8],
+        RV = UV[9],
+        gV = UV[10],
+        DV = UV[11],
+        iV = UV[12],
+        CV = UV[13],
+        aV = UV[14],
+        oV = UV[15];
+      xV[JV] = yV * TV + pV * XV + QV * WV + nV * iV, xV[JV + 1] = yV * PV + pV * MV + QV * RV + nV * CV, xV[JV + 2] = yV * AV + pV * zV + QV * gV + nV * aV, xV[JV + 3] = yV * NV + pV * GV + QV * DV + nV * oV, xV[JV + 4] = wV * TV + ZV * XV + vV * WV + rV * iV, xV[JV + 5] = wV * PV + ZV * MV + vV * RV + rV * CV, xV[JV + 6] = wV * AV + ZV * zV + vV * gV + rV * aV, xV[JV + 7] = wV * NV + ZV * GV + vV * DV + rV * oV, xV[JV + 8] = kV * TV + bV * XV + EV * WV + BV * iV, xV[JV + 9] = kV * PV + bV * MV + EV * RV + BV * CV, xV[JV + 10] = kV * AV + bV * zV + EV * gV + BV * aV, xV[JV + 11] = kV * NV + bV * GV + EV * DV + BV * oV, xV[JV + 12] = jV * TV + qV * XV + tV * WV + FV * iV, xV[JV + 13] = jV * PV + qV * MV + tV * RV + FV * CV, xV[JV + 14] = jV * AV + qV * zV + tV * gV + FV * aV, xV[JV + 15] = jV * NV + qV * GV + tV * DV + FV * oV
     }
 
-    function aM(MM, rM, iM) {
-      let OM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-      jM(MM, rM, iM.HOM(), OM), SM(iM)
+    function yV(VV, eV, xV) {
+      let JV = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+      UV(VV, eV, xV.WYV(), JV), YV(xV)
     }
 
-    function PM(MM, rM) {
-      let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-      const OM = MM.HOM();
-      rM[iM] = OM[0], rM[iM + 1] = OM[1], rM[iM + 2] = OM[2], rM[iM + 3] = OM[3], rM[iM + 4] = OM[4], rM[iM + 5] = OM[5], rM[iM + 6] = OM[6], rM[iM + 7] = OM[7], rM[iM + 8] = OM[8], rM[iM + 9] = OM[9], rM[iM + 10] = OM[10], rM[iM + 11] = OM[11], rM[iM + 12] = OM[12], rM[iM + 13] = OM[13], rM[iM + 14] = OM[14], rM[iM + 15] = OM[15]
+    function pV(VV, eV) {
+      let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+      const JV = VV.WYV();
+      eV[xV] = JV[0], eV[xV + 1] = JV[1], eV[xV + 2] = JV[2], eV[xV + 3] = JV[3], eV[xV + 4] = JV[4], eV[xV + 5] = JV[5], eV[xV + 6] = JV[6], eV[xV + 7] = JV[7], eV[xV + 8] = JV[8], eV[xV + 9] = JV[9], eV[xV + 10] = JV[10], eV[xV + 11] = JV[11], eV[xV + 12] = JV[12], eV[xV + 13] = JV[13], eV[xV + 14] = JV[14], eV[xV + 15] = JV[15]
     }
 
-    function nM(MM, rM) {
-      const iM = QM(MM, rM.HOM());
-      return iM && SM(rM), iM
+    function QV(VV, eV) {
+      const xV = nV(VV, eV.WYV());
+      return xV && YV(eV), xV
     }
 
-    function QM(MM, rM) {
-      const iM = MM.HOM(),
-        OM = iM[0],
-        SM = iM[1],
-        jM = iM[2],
-        aM = iM[3],
-        PM = iM[4],
-        nM = iM[5],
-        QM = iM[6],
-        zM = iM[7],
-        LM = iM[8],
-        mM = iM[9],
-        HM = iM[10],
-        hM = iM[11],
-        JM = iM[12],
-        dM = iM[13],
-        yM = iM[14],
-        lM = iM[15],
-        EM = HM * lM - yM * hM,
-        UM = mM * lM - dM * hM,
-        GM = mM * yM - dM * HM,
-        CM = LM * lM - JM * hM,
-        eM = LM * yM - HM * JM,
-        bM = LM * dM - JM * mM,
-        wM = +(nM * EM - QM * UM + zM * GM),
-        tM = -(PM * EM - QM * CM + zM * eM),
-        gM = +(PM * UM - nM * CM + zM * bM),
-        uM = -(PM * GM - nM * eM + QM * bM),
-        RM = OM * wM + SM * tM + jM * gM + aM * uM;
-      if (0 === RM) return !1;
-      const pM = 1 / RM,
-        WM = QM * lM - yM * zM,
-        sM = nM * lM - dM * zM,
-        DM = nM * yM - dM * QM,
-        kM = PM * lM - JM * zM,
-        ZM = PM * yM - JM * QM,
-        oM = PM * dM - JM * nM,
-        fM = QM * hM - HM * zM,
-        YM = nM * hM - mM * zM,
-        NM = nM * HM - mM * QM,
-        AM = PM * hM - LM * zM,
-        xM = PM * HM - LM * QM,
-        vM = PM * mM - LM * nM,
-        FM = -(SM * EM - jM * UM + aM * GM),
-        BM = +(OM * EM - jM * CM + aM * eM),
-        XM = -(OM * UM - SM * CM + aM * bM),
-        IM = +(OM * GM - SM * eM + jM * bM),
-        KM = +(SM * WM - jM * sM + aM * DM),
-        qM = -(OM * WM - jM * kM + aM * ZM),
-        TM = +(OM * sM - SM * kM + aM * oM),
-        VM = -(OM * DM - SM * ZM + jM * oM),
-        cM = -(SM * fM - jM * YM + aM * NM),
-        Mr = +(OM * fM - jM * AM + aM * xM),
-        rr = -(OM * YM - SM * AM + aM * vM),
-        ir = +(OM * NM - SM * xM + jM * vM);
-      return rM[0] = wM * pM, rM[1] = FM * pM, rM[2] = KM * pM, rM[3] = cM * pM, rM[4] = tM * pM, rM[5] = BM * pM, rM[6] = qM * pM, rM[7] = Mr * pM, rM[8] = gM * pM, rM[9] = XM * pM, rM[10] = TM * pM, rM[11] = rr * pM, rM[12] = uM * pM, rM[13] = IM * pM, rM[14] = VM * pM, rM[15] = ir * pM, !0
+    function nV(VV, eV) {
+      const xV = VV.WYV(),
+        JV = xV[0],
+        YV = xV[1],
+        UV = xV[2],
+        yV = xV[3],
+        pV = xV[4],
+        QV = xV[5],
+        nV = xV[6],
+        wV = xV[7],
+        ZV = xV[8],
+        vV = xV[9],
+        rV = xV[10],
+        kV = xV[11],
+        bV = xV[12],
+        EV = xV[13],
+        BV = xV[14],
+        jV = xV[15],
+        qV = rV * jV - BV * kV,
+        tV = vV * jV - EV * kV,
+        FV = vV * BV - EV * rV,
+        TV = ZV * jV - bV * kV,
+        PV = ZV * BV - rV * bV,
+        AV = ZV * EV - bV * vV,
+        NV = +(QV * qV - nV * tV + wV * FV),
+        XV = -(pV * qV - nV * TV + wV * PV),
+        MV = +(pV * tV - QV * TV + wV * AV),
+        zV = -(pV * FV - QV * PV + nV * AV),
+        GV = JV * NV + YV * XV + UV * MV + yV * zV;
+      if (0 === GV) return !1;
+      const WV = 1 / GV,
+        RV = nV * jV - BV * wV,
+        gV = QV * jV - EV * wV,
+        DV = QV * BV - EV * nV,
+        iV = pV * jV - bV * wV,
+        CV = pV * BV - bV * nV,
+        aV = pV * EV - bV * QV,
+        oV = nV * kV - rV * wV,
+        cV = QV * kV - vV * wV,
+        hV = QV * rV - vV * nV,
+        lV = pV * kV - ZV * wV,
+        LV = pV * rV - ZV * nV,
+        fV = pV * vV - ZV * QV,
+        mV = -(YV * qV - UV * tV + yV * FV),
+        KV = +(JV * qV - UV * TV + yV * PV),
+        HV = -(JV * tV - YV * TV + yV * AV),
+        uV = +(JV * FV - YV * PV + UV * AV),
+        sV = +(YV * RV - UV * gV + yV * DV),
+        SV = -(JV * RV - UV * iV + yV * CV),
+        IV = +(JV * gV - YV * iV + yV * aV),
+        dV = -(JV * DV - YV * CV + UV * aV),
+        OV = -(YV * oV - UV * cV + yV * hV),
+        Ve = +(JV * oV - UV * lV + yV * LV),
+        ee = -(JV * cV - YV * lV + yV * fV),
+        xe = +(JV * hV - YV * LV + UV * fV);
+      return eV[0] = NV * WV, eV[1] = mV * WV, eV[2] = sV * WV, eV[3] = OV * WV, eV[4] = XV * WV, eV[5] = KV * WV, eV[6] = SV * WV, eV[7] = Ve * WV, eV[8] = MV * WV, eV[9] = HV * WV, eV[10] = IV * WV, eV[11] = ee * WV, eV[12] = zV * WV, eV[13] = uV * WV, eV[14] = dV * WV, eV[15] = xe * WV, !0
     }
-    OM._UpdateFlagSeed = 0
+    JV._UpdateFlagSeed = 0
   },
-  38040: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => JM,
-      h: () => hM,
-      i: () => UM,
-      l: () => yM,
-      o: () => LM,
-      q: () => mM,
-      u: () => HM
+  38269: (VV, eV, xV) => {
+    xV.d(eV, {
+      d: () => bV,
+      h: () => kV,
+      j: () => tV,
+      l: () => BV,
+      n: () => ZV,
+      o: () => vV,
+      q: () => rV
     });
-    var OM = iM(38044),
-      SM = iM(38048),
-      jM = iM(38056),
-      aM = iM(38064),
-      PM = iM(38074),
-      nM = iM(38083),
-      QM = iM(38085);
-    const zM = MM => parseInt(MM.toString().replace(/\W/g, ""));
-    class LM {
+    var JV = xV(38272),
+      YV = xV(38278),
+      UV = xV(38280),
+      yV = xV(38287),
+      pV = xV(38303),
+      QV = xV(38311),
+      nV = xV(38318);
+    const wV = VV => parseInt(VV.toString().replace(/\W/g, ""));
+    class ZV {
       constructor() {
-        let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        this.x = MM, this.y = rM
+        let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        this.x = VV, this.y = eV
       }
       toString() {
         return `{X: ${this.x} Y: ${this.y}}`
@@ -194,145 +194,145 @@ export const modules = {
         return "Vector2"
       }
       getHashCode() {
-        let MM = zM(this.x);
-        return MM = 397 * MM ^ zM(this.y), MM
+        let VV = wV(this.x);
+        return VV = 397 * VV ^ wV(this.y), VV
       }
-      toArray(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return MM[rM] = this.x, MM[rM + 1] = this.y, this
+      toArray(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return VV[eV] = this.x, VV[eV + 1] = this.y, this
       }
-      cz(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return LM.FromArrayToRef(MM, rM, this), this
+      wZ(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return ZV.FromArrayToRef(VV, eV, this), this
       }
-      HOM() {
+      WYV() {
         return [this.x, this.y]
       }
-      jR(MM) {
-        return this.x = MM.x, this.y = MM.y, this
+      iG(VV) {
+        return this.x = VV.x, this.y = VV.y, this
       }
-      iMM(MM, rM) {
-        return this.x = MM, this.y = rM, this
+      FeV(VV, eV) {
+        return this.x = VV, this.y = eV, this
       }
-      set(MM, rM) {
-        return this.iMM(MM, rM)
+      set(VV, eV) {
+        return this.FeV(VV, eV)
       }
-      P_(MM) {
-        return this.iMM(MM, MM)
+      HVV(VV) {
+        return this.FeV(VV, VV)
       }
-      add(MM) {
-        return new LM(this.x + MM.x, this.y + MM.y)
+      add(VV) {
+        return new ZV(this.x + VV.x, this.y + VV.y)
       }
-      addToRef(MM, rM) {
-        return rM.x = this.x + MM.x, rM.y = this.y + MM.y, rM
+      addToRef(VV, eV) {
+        return eV.x = this.x + VV.x, eV.y = this.y + VV.y, eV
       }
-      addInPlace(MM) {
-        return this.x += MM.x, this.y += MM.y, this
+      addInPlace(VV) {
+        return this.x += VV.x, this.y += VV.y, this
       }
-      addInPlaceFromFloats(MM, rM) {
-        return this.x += MM, this.y += rM, this
+      addInPlaceFromFloats(VV, eV) {
+        return this.x += VV, this.y += eV, this
       }
-      addVector3(MM) {
-        return new LM(this.x + MM.x, this.y + MM.y)
+      addVector3(VV) {
+        return new ZV(this.x + VV.x, this.y + VV.y)
       }
-      subtract(MM) {
-        return new LM(this.x - MM.x, this.y - MM.y)
+      subtract(VV) {
+        return new ZV(this.x - VV.x, this.y - VV.y)
       }
-      subtractToRef(MM, rM) {
-        return rM.x = this.x - MM.x, rM.y = this.y - MM.y, rM
+      subtractToRef(VV, eV) {
+        return eV.x = this.x - VV.x, eV.y = this.y - VV.y, eV
       }
-      kOM(MM) {
-        return this.x -= MM.x, this.y -= MM.y, this
+      IYV(VV) {
+        return this.x -= VV.x, this.y -= VV.y, this
       }
-      multiplyInPlace(MM) {
-        return this.x *= MM.x, this.y *= MM.y, this
+      multiplyInPlace(VV) {
+        return this.x *= VV.x, this.y *= VV.y, this
       }
-      multiply(MM) {
-        return new LM(this.x * MM.x, this.y * MM.y)
+      multiply(VV) {
+        return new ZV(this.x * VV.x, this.y * VV.y)
       }
-      multiplyToRef(MM, rM) {
-        return rM.x = this.x * MM.x, rM.y = this.y * MM.y, rM
+      multiplyToRef(VV, eV) {
+        return eV.x = this.x * VV.x, eV.y = this.y * VV.y, eV
       }
-      multiplyByFloats(MM, rM) {
-        return new LM(this.x * MM, this.y * rM)
+      multiplyByFloats(VV, eV) {
+        return new ZV(this.x * VV, this.y * eV)
       }
-      divide(MM) {
-        return new LM(this.x / MM.x, this.y / MM.y)
+      divide(VV) {
+        return new ZV(this.x / VV.x, this.y / VV.y)
       }
-      divideToRef(MM, rM) {
-        return rM.x = this.x / MM.x, rM.y = this.y / MM.y, rM
+      divideToRef(VV, eV) {
+        return eV.x = this.x / VV.x, eV.y = this.y / VV.y, eV
       }
-      divideInPlace(MM) {
-        return this.x = this.x / MM.x, this.y = this.y / MM.y, this
+      divideInPlace(VV) {
+        return this.x = this.x / VV.x, this.y = this.y / VV.y, this
       }
-      minimizeInPlace(MM) {
-        return this.minimizeInPlaceFromFloats(MM.x, MM.y)
+      minimizeInPlace(VV) {
+        return this.minimizeInPlaceFromFloats(VV.x, VV.y)
       }
-      maximizeInPlace(MM) {
-        return this.maximizeInPlaceFromFloats(MM.x, MM.y)
+      maximizeInPlace(VV) {
+        return this.maximizeInPlaceFromFloats(VV.x, VV.y)
       }
-      minimizeInPlaceFromFloats(MM, rM) {
-        return this.x = Math.min(MM, this.x), this.y = Math.min(rM, this.y), this
+      minimizeInPlaceFromFloats(VV, eV) {
+        return this.x = Math.min(VV, this.x), this.y = Math.min(eV, this.y), this
       }
-      maximizeInPlaceFromFloats(MM, rM) {
-        return this.x = Math.max(MM, this.x), this.y = Math.max(rM, this.y), this
+      maximizeInPlaceFromFloats(VV, eV) {
+        return this.x = Math.max(VV, this.x), this.y = Math.max(eV, this.y), this
       }
-      subtractFromFloats(MM, rM) {
-        return new LM(this.x - MM, this.y - rM)
+      subtractFromFloats(VV, eV) {
+        return new ZV(this.x - VV, this.y - eV)
       }
-      subtractFromFloatsToRef(MM, rM, iM) {
-        return iM.x = this.x - MM, iM.y = this.y - rM, iM
+      subtractFromFloatsToRef(VV, eV, xV) {
+        return xV.x = this.x - VV, xV.y = this.y - eV, xV
       }
-      VJ() {
-        return new LM(-this.x, -this.y)
+      gr() {
+        return new ZV(-this.x, -this.y)
       }
       negateInPlace() {
         return this.x *= -1, this.y *= -1, this
       }
-      negateToRef(MM) {
-        return MM.x = -this.x, MM.y = -this.y, MM
+      negateToRef(VV) {
+        return VV.x = -this.x, VV.y = -this.y, VV
       }
-      scaleInPlace(MM) {
-        return this.x *= MM, this.y *= MM, this
+      scaleInPlace(VV) {
+        return this.x *= VV, this.y *= VV, this
       }
-      scale(MM) {
-        return new LM(this.x * MM, this.y * MM)
+      scale(VV) {
+        return new ZV(this.x * VV, this.y * VV)
       }
-      scaleToRef(MM, rM) {
-        return rM.x = this.x * MM, rM.y = this.y * MM, rM
+      scaleToRef(VV, eV) {
+        return eV.x = this.x * VV, eV.y = this.y * VV, eV
       }
-      scaleAndAddToRef(MM, rM) {
-        return rM.x += this.x * MM, rM.y += this.y * MM, rM
+      scaleAndAddToRef(VV, eV) {
+        return eV.x += this.x * VV, eV.y += this.y * VV, eV
       }
-      equals(MM) {
-        return MM && this.x === MM.x && this.y === MM.y
+      equals(VV) {
+        return VV && this.x === VV.x && this.y === VV.y
       }
-      equalsWithEpsilon(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : OM.d;
-        return MM && (0, PM.WithinEpsilon)(this.x, MM.x, rM) && (0, PM.WithinEpsilon)(this.y, MM.y, rM)
+      equalsWithEpsilon(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : JV.b;
+        return VV && (0, pV.WithinEpsilon)(this.x, VV.x, eV) && (0, pV.WithinEpsilon)(this.y, VV.y, eV)
       }
-      IaM(MM, rM) {
-        return this.x === MM && this.y === rM
+      rQV(VV, eV) {
+        return this.x === VV && this.y === eV
       }
       floor() {
-        return new LM(Math.floor(this.x), Math.floor(this.y))
+        return new ZV(Math.floor(this.x), Math.floor(this.y))
       }
-      floorToRef(MM) {
-        return MM.x = Math.floor(this.x), MM.y = Math.floor(this.y), MM
+      floorToRef(VV) {
+        return VV.x = Math.floor(this.x), VV.y = Math.floor(this.y), VV
       }
       fract() {
-        return new LM(this.x - Math.floor(this.x), this.y - Math.floor(this.y))
+        return new ZV(this.x - Math.floor(this.x), this.y - Math.floor(this.y))
       }
-      fractToRef(MM) {
-        return MM.x = this.x - Math.floor(this.x), MM.y = this.y - Math.floor(this.y), MM
+      fractToRef(VV) {
+        return VV.x = this.x - Math.floor(this.x), VV.y = this.y - Math.floor(this.y), VV
       }
-      rotate(MM) {
-        return this.rotateToRef(MM, new LM)
+      rotate(VV) {
+        return this.rotateToRef(VV, new ZV)
       }
-      rotateToRef(MM, rM) {
-        const iM = Math.cos(MM),
-          OM = Math.sin(MM);
-        return rM.x = iM * this.x - OM * this.y, rM.y = OM * this.x + iM * this.y, rM
+      rotateToRef(VV, eV) {
+        const xV = Math.cos(VV),
+          JV = Math.sin(VV);
+        return eV.x = xV * this.x - JV * this.y, eV.y = JV * this.x + xV * this.y, eV
       }
       length() {
         return Math.sqrt(this.x * this.x + this.y * this.y)
@@ -343,359 +343,359 @@ export const modules = {
       normalize() {
         return this.normalizeFromLength(this.length())
       }
-      normalizeFromLength(MM) {
-        return 0 === MM || 1 === MM ? this : this.scaleInPlace(1 / MM)
+      normalizeFromLength(VV) {
+        return 0 === VV || 1 === VV ? this : this.scaleInPlace(1 / VV)
       }
       normalizeToNew() {
-        const MM = new LM;
-        return this.normalizeToRef(MM), MM
+        const VV = new ZV;
+        return this.normalizeToRef(VV), VV
       }
-      normalizeToRef(MM) {
-        const rM = this.length();
-        return 0 === rM || 1 === rM ? (MM.x = this.x, MM.y = this.y, MM) : this.scaleToRef(1 / rM, MM)
+      normalizeToRef(VV) {
+        const eV = this.length();
+        return 0 === eV || 1 === eV ? (VV.x = this.x, VV.y = this.y, VV) : this.scaleToRef(1 / eV, VV)
       }
       clone() {
-        return new LM(this.x, this.y)
+        return new ZV(this.x, this.y)
       }
-      dot(MM) {
-        return this.x * MM.x + this.y * MM.y
+      dot(VV) {
+        return this.x * VV.x + this.y * VV.y
       }
       static Zero() {
-        return new LM(0, 0)
+        return new ZV(0, 0)
       }
       static One() {
-        return new LM(1, 1)
+        return new ZV(1, 1)
       }
       static Random() {
-        let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        return new LM((0, PM.RandomRange)(MM, rM), (0, PM.RandomRange)(MM, rM))
+        let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        return new ZV((0, pV.RandomRange)(VV, eV), (0, pV.RandomRange)(VV, eV))
       }
       static RandomToRef() {
-        let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        return (arguments.length > 2 ? arguments[2] : void 0).iMM((0, PM.RandomRange)(MM, rM), (0, PM.RandomRange)(MM, rM))
+        let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        return (arguments.length > 2 ? arguments[2] : void 0).FeV((0, pV.RandomRange)(VV, eV), (0, pV.RandomRange)(VV, eV))
       }
       static get ZeroReadOnly() {
-        return LM._ZeroReadOnly
+        return ZV._ZeroReadOnly
       }
-      static FromArray(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return new LM(MM[rM], MM[rM + 1])
+      static FromArray(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return new ZV(VV[eV], VV[eV + 1])
       }
-      static FromArrayToRef(MM, rM, iM) {
-        return iM.x = MM[rM], iM.y = MM[rM + 1], iM
+      static FromArrayToRef(VV, eV, xV) {
+        return xV.x = VV[eV], xV.y = VV[eV + 1], xV
       }
-      static FromFloatsToRef(MM, rM, iM) {
-        return iM.iMM(MM, rM), iM
+      static FromFloatsToRef(VV, eV, xV) {
+        return xV.FeV(VV, eV), xV
       }
-      static CatmullRom(MM, rM, iM, OM, SM) {
-        const jM = SM * SM,
-          aM = SM * jM,
-          PM = .5 * (2 * rM.x + (-MM.x + iM.x) * SM + (2 * MM.x - 5 * rM.x + 4 * iM.x - OM.x) * jM + (-MM.x + 3 * rM.x - 3 * iM.x + OM.x) * aM),
-          nM = .5 * (2 * rM.y + (-MM.y + iM.y) * SM + (2 * MM.y - 5 * rM.y + 4 * iM.y - OM.y) * jM + (-MM.y + 3 * rM.y - 3 * iM.y + OM.y) * aM);
-        return new LM(PM, nM)
+      static CatmullRom(VV, eV, xV, JV, YV) {
+        const UV = YV * YV,
+          yV = YV * UV,
+          pV = .5 * (2 * eV.x + (-VV.x + xV.x) * YV + (2 * VV.x - 5 * eV.x + 4 * xV.x - JV.x) * UV + (-VV.x + 3 * eV.x - 3 * xV.x + JV.x) * yV),
+          QV = .5 * (2 * eV.y + (-VV.y + xV.y) * YV + (2 * VV.y - 5 * eV.y + 4 * xV.y - JV.y) * UV + (-VV.y + 3 * eV.y - 3 * xV.y + JV.y) * yV);
+        return new ZV(pV, QV)
       }
-      static ClampToRef(MM, rM, iM, OM) {
-        return OM.x = (0, PM.Clamp)(MM.x, rM.x, iM.x), OM.y = (0, PM.Clamp)(MM.y, rM.y, iM.y), OM
+      static ClampToRef(VV, eV, xV, JV) {
+        return JV.x = (0, pV.Clamp)(VV.x, eV.x, xV.x), JV.y = (0, pV.Clamp)(VV.y, eV.y, xV.y), JV
       }
-      static Clamp(MM, rM, iM) {
-        const OM = (0, PM.Clamp)(MM.x, rM.x, iM.x),
-          SM = (0, PM.Clamp)(MM.y, rM.y, iM.y);
-        return new LM(OM, SM)
+      static Clamp(VV, eV, xV) {
+        const JV = (0, pV.Clamp)(VV.x, eV.x, xV.x),
+          YV = (0, pV.Clamp)(VV.y, eV.y, xV.y);
+        return new ZV(JV, YV)
       }
-      static Hermite(MM, rM, iM, OM, SM) {
-        const jM = SM * SM,
-          aM = SM * jM,
-          PM = 2 * aM - 3 * jM + 1,
-          nM = -2 * aM + 3 * jM,
-          QM = aM - 2 * jM + SM,
-          zM = aM - jM,
-          mM = MM.x * PM + iM.x * nM + rM.x * QM + OM.x * zM,
-          HM = MM.y * PM + iM.y * nM + rM.y * QM + OM.y * zM;
-        return new LM(mM, HM)
+      static Hermite(VV, eV, xV, JV, YV) {
+        const UV = YV * YV,
+          yV = YV * UV,
+          pV = 2 * yV - 3 * UV + 1,
+          QV = -2 * yV + 3 * UV,
+          nV = yV - 2 * UV + YV,
+          wV = yV - UV,
+          vV = VV.x * pV + xV.x * QV + eV.x * nV + JV.x * wV,
+          rV = VV.y * pV + xV.y * QV + eV.y * nV + JV.y * wV;
+        return new ZV(vV, rV)
       }
-      static Hermite1stDerivative(MM, rM, iM, OM, SM) {
-        return this.Hermite1stDerivativeToRef(MM, rM, iM, OM, SM, new LM)
+      static Hermite1stDerivative(VV, eV, xV, JV, YV) {
+        return this.Hermite1stDerivativeToRef(VV, eV, xV, JV, YV, new ZV)
       }
-      static Hermite1stDerivativeToRef(MM, rM, iM, OM, SM, jM) {
-        const aM = SM * SM;
-        return jM.x = 6 * (aM - SM) * MM.x + (3 * aM - 4 * SM + 1) * rM.x + 6 * (-aM + SM) * iM.x + (3 * aM - 2 * SM) * OM.x, jM.y = 6 * (aM - SM) * MM.y + (3 * aM - 4 * SM + 1) * rM.y + 6 * (-aM + SM) * iM.y + (3 * aM - 2 * SM) * OM.y, jM
+      static Hermite1stDerivativeToRef(VV, eV, xV, JV, YV, UV) {
+        const yV = YV * YV;
+        return UV.x = 6 * (yV - YV) * VV.x + (3 * yV - 4 * YV + 1) * eV.x + 6 * (-yV + YV) * xV.x + (3 * yV - 2 * YV) * JV.x, UV.y = 6 * (yV - YV) * VV.y + (3 * yV - 4 * YV + 1) * eV.y + 6 * (-yV + YV) * xV.y + (3 * yV - 2 * YV) * JV.y, UV
       }
-      static Lerp(MM, rM, iM) {
-        return LM.LerpToRef(MM, rM, iM, new LM)
+      static Lerp(VV, eV, xV) {
+        return ZV.LerpToRef(VV, eV, xV, new ZV)
       }
-      static LerpToRef(MM, rM, iM, OM) {
-        return OM.x = MM.x + (rM.x - MM.x) * iM, OM.y = MM.y + (rM.y - MM.y) * iM, OM
+      static LerpToRef(VV, eV, xV, JV) {
+        return JV.x = VV.x + (eV.x - VV.x) * xV, JV.y = VV.y + (eV.y - VV.y) * xV, JV
       }
-      static Dot(MM, rM) {
-        return MM.x * rM.x + MM.y * rM.y
+      static Dot(VV, eV) {
+        return VV.x * eV.x + VV.y * eV.y
       }
-      static Normalize(MM) {
-        return LM.NormalizeToRef(MM, new LM)
+      static Normalize(VV) {
+        return ZV.NormalizeToRef(VV, new ZV)
       }
-      static NormalizeToRef(MM, rM) {
-        return MM.normalizeToRef(rM), rM
+      static NormalizeToRef(VV, eV) {
+        return VV.normalizeToRef(eV), eV
       }
-      static Minimize(MM, rM) {
-        const iM = MM.x < rM.x ? MM.x : rM.x,
-          OM = MM.y < rM.y ? MM.y : rM.y;
-        return new LM(iM, OM)
+      static Minimize(VV, eV) {
+        const xV = VV.x < eV.x ? VV.x : eV.x,
+          JV = VV.y < eV.y ? VV.y : eV.y;
+        return new ZV(xV, JV)
       }
-      static Maximize(MM, rM) {
-        const iM = MM.x > rM.x ? MM.x : rM.x,
-          OM = MM.y > rM.y ? MM.y : rM.y;
-        return new LM(iM, OM)
+      static Maximize(VV, eV) {
+        const xV = VV.x > eV.x ? VV.x : eV.x,
+          JV = VV.y > eV.y ? VV.y : eV.y;
+        return new ZV(xV, JV)
       }
-      static Transform(MM, rM) {
-        return LM.TransformToRef(MM, rM, new LM)
+      static Transform(VV, eV) {
+        return ZV.TransformToRef(VV, eV, new ZV)
       }
-      static TransformToRef(MM, rM, iM) {
-        const OM = rM.m,
-          SM = MM.x * OM[0] + MM.y * OM[4] + OM[12],
-          jM = MM.x * OM[1] + MM.y * OM[5] + OM[13];
-        return iM.x = SM, iM.y = jM, iM
+      static TransformToRef(VV, eV, xV) {
+        const JV = eV.m,
+          YV = VV.x * JV[0] + VV.y * JV[4] + JV[12],
+          UV = VV.x * JV[1] + VV.y * JV[5] + JV[13];
+        return xV.x = YV, xV.y = UV, xV
       }
-      static PointInTriangle(MM, rM, iM, OM) {
-        const SM = .5 * (-iM.y * OM.x + rM.y * (-iM.x + OM.x) + rM.x * (iM.y - OM.y) + iM.x * OM.y),
-          jM = SM < 0 ? -1 : 1,
-          aM = (rM.y * OM.x - rM.x * OM.y + (OM.y - rM.y) * MM.x + (rM.x - OM.x) * MM.y) * jM,
-          PM = (rM.x * iM.y - rM.y * iM.x + (rM.y - iM.y) * MM.x + (iM.x - rM.x) * MM.y) * jM;
-        return aM > 0 && PM > 0 && aM + PM < 2 * SM * jM
+      static PointInTriangle(VV, eV, xV, JV) {
+        const YV = .5 * (-xV.y * JV.x + eV.y * (-xV.x + JV.x) + eV.x * (xV.y - JV.y) + xV.x * JV.y),
+          UV = YV < 0 ? -1 : 1,
+          yV = (eV.y * JV.x - eV.x * JV.y + (JV.y - eV.y) * VV.x + (eV.x - JV.x) * VV.y) * UV,
+          pV = (eV.x * xV.y - eV.y * xV.x + (eV.y - xV.y) * VV.x + (xV.x - eV.x) * VV.y) * UV;
+        return yV > 0 && pV > 0 && yV + pV < 2 * YV * UV
       }
-      static Distance(MM, rM) {
-        return Math.sqrt(LM.DistanceSquared(MM, rM))
+      static Distance(VV, eV) {
+        return Math.sqrt(ZV.DistanceSquared(VV, eV))
       }
-      static DistanceSquared(MM, rM) {
-        const iM = MM.x - rM.x,
-          OM = MM.y - rM.y;
-        return iM * iM + OM * OM
+      static DistanceSquared(VV, eV) {
+        const xV = VV.x - eV.x,
+          JV = VV.y - eV.y;
+        return xV * xV + JV * JV
       }
-      static Center(MM, rM) {
-        return LM.CenterToRef(MM, rM, new LM)
+      static Center(VV, eV) {
+        return ZV.CenterToRef(VV, eV, new ZV)
       }
-      static CenterToRef(MM, rM, iM) {
-        return iM.iMM((MM.x + rM.x) / 2, (MM.y + rM.y) / 2)
+      static CenterToRef(VV, eV, xV) {
+        return xV.FeV((VV.x + eV.x) / 2, (VV.y + eV.y) / 2)
       }
-      static DistanceOfPointFromSegment(MM, rM, iM) {
-        const OM = LM.DistanceSquared(rM, iM);
-        if (0 === OM) return LM.Distance(MM, rM);
-        const SM = iM.subtract(rM),
-          jM = Math.max(0, Math.min(1, LM.Dot(MM.subtract(rM), SM) / OM)),
-          aM = rM.add(SM.multiplyByFloats(jM, jM));
-        return LM.Distance(MM, aM)
+      static DistanceOfPointFromSegment(VV, eV, xV) {
+        const JV = ZV.DistanceSquared(eV, xV);
+        if (0 === JV) return ZV.Distance(VV, eV);
+        const YV = xV.subtract(eV),
+          UV = Math.max(0, Math.min(1, ZV.Dot(VV.subtract(eV), YV) / JV)),
+          yV = eV.add(YV.multiplyByFloats(UV, UV));
+        return ZV.Distance(VV, yV)
       }
     }
-    LM._V8PerformanceHack = new LM(.5, .5), LM._ZeroReadOnly = LM.Zero();
-    class mM {
+    ZV._V8PerformanceHack = new ZV(.5, .5), ZV._ZeroReadOnly = ZV.Zero();
+    class vV {
       get x() {
         return this._x
       }
-      set x(MM) {
-        this._x = MM, this._isDirty = !0
+      set x(VV) {
+        this._x = VV, this._isDirty = !0
       }
       get y() {
         return this._y
       }
-      set y(MM) {
-        this._y = MM, this._isDirty = !0
+      set y(VV) {
+        this._y = VV, this._isDirty = !0
       }
       get z() {
         return this._z
       }
-      set z(MM) {
-        this._z = MM, this._isDirty = !0
+      set z(VV) {
+        this._z = VV, this._isDirty = !0
       }
       constructor() {
-        let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        this._isDirty = !0, this._x = MM, this._y = rM, this._z = iM
+        let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        this._isDirty = !0, this._x = VV, this._y = eV, this._z = xV
       }
       toString() {
         return `{X: ${this._x} Y: ${this._y} Z: ${this._z}}`
       }
       getClassName() {
-        return "sh"
+        return "Ik"
       }
       getHashCode() {
-        let MM = zM(this._x);
-        return MM = 397 * MM ^ zM(this._y), MM = 397 * MM ^ zM(this._z), MM
+        let VV = wV(this._x);
+        return VV = 397 * VV ^ wV(this._y), VV = 397 * VV ^ wV(this._z), VV
       }
-      HOM() {
+      WYV() {
         return [this._x, this._y, this._z]
       }
-      toArray(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return MM[rM] = this._x, MM[rM + 1] = this._y, MM[rM + 2] = this._z, this
+      toArray(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return VV[eV] = this._x, VV[eV + 1] = this._y, VV[eV + 2] = this._z, this
       }
-      cz(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return mM.FromArrayToRef(MM, rM, this), this
+      wZ(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return vV.FromArrayToRef(VV, eV, this), this
       }
       toQuaternion() {
-        return hM.RotationYawPitchRoll(this._y, this._x, this._z)
+        return kV.RotationYawPitchRoll(this._y, this._x, this._z)
       }
-      addInPlace(MM) {
-        return this._x += MM._x, this._y += MM._y, this._z += MM._z, this._isDirty = !0, this
+      addInPlace(VV) {
+        return this._x += VV._x, this._y += VV._y, this._z += VV._z, this._isDirty = !0, this
       }
-      addInPlaceFromFloats(MM, rM, iM) {
-        return this._x += MM, this._y += rM, this._z += iM, this._isDirty = !0, this
+      addInPlaceFromFloats(VV, eV, xV) {
+        return this._x += VV, this._y += eV, this._z += xV, this._isDirty = !0, this
       }
-      add(MM) {
-        return new mM(this._x + MM._x, this._y + MM._y, this._z + MM._z)
+      add(VV) {
+        return new vV(this._x + VV._x, this._y + VV._y, this._z + VV._z)
       }
-      addToRef(MM, rM) {
-        return rM._x = this._x + MM._x, rM._y = this._y + MM._y, rM._z = this._z + MM._z, rM._isDirty = !0, rM
+      addToRef(VV, eV) {
+        return eV._x = this._x + VV._x, eV._y = this._y + VV._y, eV._z = this._z + VV._z, eV._isDirty = !0, eV
       }
-      kOM(MM) {
-        return this._x -= MM._x, this._y -= MM._y, this._z -= MM._z, this._isDirty = !0, this
+      IYV(VV) {
+        return this._x -= VV._x, this._y -= VV._y, this._z -= VV._z, this._isDirty = !0, this
       }
-      subtract(MM) {
-        return new mM(this._x - MM._x, this._y - MM._y, this._z - MM._z)
+      subtract(VV) {
+        return new vV(this._x - VV._x, this._y - VV._y, this._z - VV._z)
       }
-      subtractToRef(MM, rM) {
-        return this.subtractFromFloatsToRef(MM._x, MM._y, MM._z, rM)
+      subtractToRef(VV, eV) {
+        return this.subtractFromFloatsToRef(VV._x, VV._y, VV._z, eV)
       }
-      subtractFromFloats(MM, rM, iM) {
-        return new mM(this._x - MM, this._y - rM, this._z - iM)
+      subtractFromFloats(VV, eV, xV) {
+        return new vV(this._x - VV, this._y - eV, this._z - xV)
       }
-      subtractFromFloatsToRef(MM, rM, iM, OM) {
-        return OM._x = this._x - MM, OM._y = this._y - rM, OM._z = this._z - iM, OM._isDirty = !0, OM
+      subtractFromFloatsToRef(VV, eV, xV, JV) {
+        return JV._x = this._x - VV, JV._y = this._y - eV, JV._z = this._z - xV, JV._isDirty = !0, JV
       }
-      VJ() {
-        return new mM(-this._x, -this._y, -this._z)
+      gr() {
+        return new vV(-this._x, -this._y, -this._z)
       }
       negateInPlace() {
         return this._x *= -1, this._y *= -1, this._z *= -1, this._isDirty = !0, this
       }
-      negateToRef(MM) {
-        return MM._x = -1 * this._x, MM._y = -1 * this._y, MM._z = -1 * this._z, MM._isDirty = !0, MM
+      negateToRef(VV) {
+        return VV._x = -1 * this._x, VV._y = -1 * this._y, VV._z = -1 * this._z, VV._isDirty = !0, VV
       }
-      scaleInPlace(MM) {
-        return this._x *= MM, this._y *= MM, this._z *= MM, this._isDirty = !0, this
+      scaleInPlace(VV) {
+        return this._x *= VV, this._y *= VV, this._z *= VV, this._isDirty = !0, this
       }
-      scale(MM) {
-        return new mM(this._x * MM, this._y * MM, this._z * MM)
+      scale(VV) {
+        return new vV(this._x * VV, this._y * VV, this._z * VV)
       }
-      scaleToRef(MM, rM) {
-        return rM._x = this._x * MM, rM._y = this._y * MM, rM._z = this._z * MM, rM._isDirty = !0, rM
+      scaleToRef(VV, eV) {
+        return eV._x = this._x * VV, eV._y = this._y * VV, eV._z = this._z * VV, eV._isDirty = !0, eV
       }
-      getNormalToRef(MM) {
-        const rM = this.length();
-        let iM = Math.acos(this._y / rM);
-        const OM = Math.atan2(this._z, this._x);
-        iM > Math.PI / 2 ? iM -= Math.PI / 2 : iM += Math.PI / 2;
-        const SM = rM * Math.sin(iM) * Math.cos(OM),
-          jM = rM * Math.cos(iM),
-          aM = rM * Math.sin(iM) * Math.sin(OM);
-        return MM.set(SM, jM, aM), MM
+      getNormalToRef(VV) {
+        const eV = this.length();
+        let xV = Math.acos(this._y / eV);
+        const JV = Math.atan2(this._z, this._x);
+        xV > Math.PI / 2 ? xV -= Math.PI / 2 : xV += Math.PI / 2;
+        const YV = eV * Math.sin(xV) * Math.cos(JV),
+          UV = eV * Math.cos(xV),
+          yV = eV * Math.sin(xV) * Math.sin(JV);
+        return VV.set(YV, UV, yV), VV
       }
-      applyRotationQuaternionToRef(MM, rM) {
-        const iM = this._x,
-          OM = this._y,
-          SM = this._z,
-          jM = MM._x,
-          aM = MM._y,
-          PM = MM._z,
-          nM = MM._w,
-          QM = 2 * (aM * SM - PM * OM),
-          zM = 2 * (PM * iM - jM * SM),
-          LM = 2 * (jM * OM - aM * iM);
-        return rM._x = iM + nM * QM + aM * LM - PM * zM, rM._y = OM + nM * zM + PM * QM - jM * LM, rM._z = SM + nM * LM + jM * zM - aM * QM, rM._isDirty = !0, rM
+      applyRotationQuaternionToRef(VV, eV) {
+        const xV = this._x,
+          JV = this._y,
+          YV = this._z,
+          UV = VV._x,
+          yV = VV._y,
+          pV = VV._z,
+          QV = VV._w,
+          nV = 2 * (yV * YV - pV * JV),
+          wV = 2 * (pV * xV - UV * YV),
+          ZV = 2 * (UV * JV - yV * xV);
+        return eV._x = xV + QV * nV + yV * ZV - pV * wV, eV._y = JV + QV * wV + pV * nV - UV * ZV, eV._z = YV + QV * ZV + UV * wV - yV * nV, eV._isDirty = !0, eV
       }
-      applyRotationQuaternionInPlace(MM) {
-        return this.applyRotationQuaternionToRef(MM, this)
+      applyRotationQuaternionInPlace(VV) {
+        return this.applyRotationQuaternionToRef(VV, this)
       }
-      applyRotationQuaternion(MM) {
-        return this.applyRotationQuaternionToRef(MM, new mM)
+      applyRotationQuaternion(VV) {
+        return this.applyRotationQuaternionToRef(VV, new vV)
       }
-      scaleAndAddToRef(MM, rM) {
-        return rM._x += this._x * MM, rM._y += this._y * MM, rM._z += this._z * MM, rM._isDirty = !0, rM
+      scaleAndAddToRef(VV, eV) {
+        return eV._x += this._x * VV, eV._y += this._y * VV, eV._z += this._z * VV, eV._isDirty = !0, eV
       }
-      projectOnPlane(MM, rM) {
-        return this.projectOnPlaneToRef(MM, rM, new mM)
+      projectOnPlane(VV, eV) {
+        return this.projectOnPlaneToRef(VV, eV, new vV)
       }
-      projectOnPlaneToRef(MM, rM, iM) {
-        const OM = MM.normal,
-          SM = MM.d,
-          jM = dM.sh[0];
-        this.subtractToRef(rM, jM), jM.normalize();
-        const aM = mM.Dot(jM, OM);
-        if (Math.abs(aM) < 1e-10) iM.P_(1 / 0);
+      projectOnPlaneToRef(VV, eV, xV) {
+        const JV = VV.normal,
+          YV = VV.d,
+          UV = EV.Ik[0];
+        this.subtractToRef(eV, UV), UV.normalize();
+        const yV = vV.Dot(UV, JV);
+        if (Math.abs(yV) < 1e-10) xV.HVV(1 / 0);
         else {
-          const MM = -(mM.Dot(rM, OM) + SM) / aM,
-            PM = jM.scaleInPlace(MM);
-          rM.addToRef(PM, iM)
+          const VV = -(vV.Dot(eV, JV) + YV) / yV,
+            pV = UV.scaleInPlace(VV);
+          eV.addToRef(pV, xV)
         }
-        return iM
+        return xV
       }
-      equals(MM) {
-        return MM && this._x === MM._x && this._y === MM._y && this._z === MM._z
+      equals(VV) {
+        return VV && this._x === VV._x && this._y === VV._y && this._z === VV._z
       }
-      equalsWithEpsilon(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : OM.d;
-        return MM && (0, PM.WithinEpsilon)(this._x, MM._x, rM) && (0, PM.WithinEpsilon)(this._y, MM._y, rM) && (0, PM.WithinEpsilon)(this._z, MM._z, rM)
+      equalsWithEpsilon(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : JV.b;
+        return VV && (0, pV.WithinEpsilon)(this._x, VV._x, eV) && (0, pV.WithinEpsilon)(this._y, VV._y, eV) && (0, pV.WithinEpsilon)(this._z, VV._z, eV)
       }
-      IaM(MM, rM, iM) {
-        return this._x === MM && this._y === rM && this._z === iM
+      rQV(VV, eV, xV) {
+        return this._x === VV && this._y === eV && this._z === xV
       }
-      multiplyInPlace(MM) {
-        return this._x *= MM._x, this._y *= MM._y, this._z *= MM._z, this._isDirty = !0, this
+      multiplyInPlace(VV) {
+        return this._x *= VV._x, this._y *= VV._y, this._z *= VV._z, this._isDirty = !0, this
       }
-      multiply(MM) {
-        return this.multiplyByFloats(MM._x, MM._y, MM._z)
+      multiply(VV) {
+        return this.multiplyByFloats(VV._x, VV._y, VV._z)
       }
-      multiplyToRef(MM, rM) {
-        return rM._x = this._x * MM._x, rM._y = this._y * MM._y, rM._z = this._z * MM._z, rM._isDirty = !0, rM
+      multiplyToRef(VV, eV) {
+        return eV._x = this._x * VV._x, eV._y = this._y * VV._y, eV._z = this._z * VV._z, eV._isDirty = !0, eV
       }
-      multiplyByFloats(MM, rM, iM) {
-        return new mM(this._x * MM, this._y * rM, this._z * iM)
+      multiplyByFloats(VV, eV, xV) {
+        return new vV(this._x * VV, this._y * eV, this._z * xV)
       }
-      divide(MM) {
-        return new mM(this._x / MM._x, this._y / MM._y, this._z / MM._z)
+      divide(VV) {
+        return new vV(this._x / VV._x, this._y / VV._y, this._z / VV._z)
       }
-      divideToRef(MM, rM) {
-        return rM._x = this._x / MM._x, rM._y = this._y / MM._y, rM._z = this._z / MM._z, rM._isDirty = !0, rM
+      divideToRef(VV, eV) {
+        return eV._x = this._x / VV._x, eV._y = this._y / VV._y, eV._z = this._z / VV._z, eV._isDirty = !0, eV
       }
-      divideInPlace(MM) {
-        return this._x = this._x / MM._x, this._y = this._y / MM._y, this._z = this._z / MM._z, this._isDirty = !0, this
+      divideInPlace(VV) {
+        return this._x = this._x / VV._x, this._y = this._y / VV._y, this._z = this._z / VV._z, this._isDirty = !0, this
       }
-      minimizeInPlace(MM) {
-        return this.minimizeInPlaceFromFloats(MM._x, MM._y, MM._z)
+      minimizeInPlace(VV) {
+        return this.minimizeInPlaceFromFloats(VV._x, VV._y, VV._z)
       }
-      maximizeInPlace(MM) {
-        return this.maximizeInPlaceFromFloats(MM._x, MM._y, MM._z)
+      maximizeInPlace(VV) {
+        return this.maximizeInPlaceFromFloats(VV._x, VV._y, VV._z)
       }
-      minimizeInPlaceFromFloats(MM, rM, iM) {
-        return MM < this._x && (this.x = MM), rM < this._y && (this.y = rM), iM < this._z && (this.z = iM), this
+      minimizeInPlaceFromFloats(VV, eV, xV) {
+        return VV < this._x && (this.x = VV), eV < this._y && (this.y = eV), xV < this._z && (this.z = xV), this
       }
-      maximizeInPlaceFromFloats(MM, rM, iM) {
-        return MM > this._x && (this.x = MM), rM > this._y && (this.y = rM), iM > this._z && (this.z = iM), this
+      maximizeInPlaceFromFloats(VV, eV, xV) {
+        return VV > this._x && (this.x = VV), eV > this._y && (this.y = eV), xV > this._z && (this.z = xV), this
       }
-      isNonUniformWithinEpsilon(MM) {
-        const rM = Math.abs(this._x),
-          iM = Math.abs(this._y);
-        if (!(0, PM.WithinEpsilon)(rM, iM, MM)) return !0;
-        const OM = Math.abs(this._z);
-        return !(0, PM.WithinEpsilon)(rM, OM, MM) || !(0, PM.WithinEpsilon)(iM, OM, MM)
+      isNonUniformWithinEpsilon(VV) {
+        const eV = Math.abs(this._x),
+          xV = Math.abs(this._y);
+        if (!(0, pV.WithinEpsilon)(eV, xV, VV)) return !0;
+        const JV = Math.abs(this._z);
+        return !(0, pV.WithinEpsilon)(eV, JV, VV) || !(0, pV.WithinEpsilon)(xV, JV, VV)
       }
       get isNonUniform() {
-        const MM = Math.abs(this._x);
-        if (MM !== Math.abs(this._y)) return !0;
-        return MM !== Math.abs(this._z)
+        const VV = Math.abs(this._x);
+        if (VV !== Math.abs(this._y)) return !0;
+        return VV !== Math.abs(this._z)
       }
-      floorToRef(MM) {
-        return MM._x = Math.floor(this._x), MM._y = Math.floor(this._y), MM._z = Math.floor(this._z), MM._isDirty = !0, MM
+      floorToRef(VV) {
+        return VV._x = Math.floor(this._x), VV._y = Math.floor(this._y), VV._z = Math.floor(this._z), VV._isDirty = !0, VV
       }
       floor() {
-        return new mM(Math.floor(this._x), Math.floor(this._y), Math.floor(this._z))
+        return new vV(Math.floor(this._x), Math.floor(this._y), Math.floor(this._z))
       }
-      fractToRef(MM) {
-        return MM._x = this._x - Math.floor(this._x), MM._y = this._y - Math.floor(this._y), MM._z = this._z - Math.floor(this._z), MM._isDirty = !0, MM
+      fractToRef(VV) {
+        return VV._x = this._x - Math.floor(this._x), VV._y = this._y - Math.floor(this._y), VV._z = this._z - Math.floor(this._z), VV._isDirty = !0, VV
       }
       fract() {
-        return new mM(this._x - Math.floor(this._x), this._y - Math.floor(this._y), this._z - Math.floor(this._z))
+        return new vV(this._x - Math.floor(this._x), this._y - Math.floor(this._y), this._z - Math.floor(this._z))
       }
       length() {
         return Math.sqrt(this.lengthSquared())
@@ -709,438 +709,438 @@ export const modules = {
       normalize() {
         return this.normalizeFromLength(this.length())
       }
-      reorderInPlace(MM) {
-        if ("xyz" === (MM = MM.toLowerCase())) return this;
-        const rM = dM.sh[0].jR(this);
-        return this.x = rM[MM[0]], this.y = rM[MM[1]], this.z = rM[MM[2]], this
+      reorderInPlace(VV) {
+        if ("xyz" === (VV = VV.toLowerCase())) return this;
+        const eV = EV.Ik[0].iG(this);
+        return this.x = eV[VV[0]], this.y = eV[VV[1]], this.z = eV[VV[2]], this
       }
-      rotateByQuaternionToRef(MM, rM) {
-        return MM.toRotationMatrix(dM.Matrix[0]), mM.TransformCoordinatesToRef(this, dM.Matrix[0], rM), rM
+      rotateByQuaternionToRef(VV, eV) {
+        return VV.toRotationMatrix(EV.Matrix[0]), vV.TransformCoordinatesToRef(this, EV.Matrix[0], eV), eV
       }
-      rotateByQuaternionAroundPointToRef(MM, rM, iM) {
-        return this.subtractToRef(rM, dM.sh[0]), dM.sh[0].rotateByQuaternionToRef(MM, dM.sh[0]), rM.addToRef(dM.sh[0], iM), iM
+      rotateByQuaternionAroundPointToRef(VV, eV, xV) {
+        return this.subtractToRef(eV, EV.Ik[0]), EV.Ik[0].rotateByQuaternionToRef(VV, EV.Ik[0]), eV.addToRef(EV.Ik[0], xV), xV
       }
-      cross(MM) {
-        return mM.CrossToRef(this, MM, new mM)
+      cross(VV) {
+        return vV.CrossToRef(this, VV, new vV)
       }
-      normalizeFromLength(MM) {
-        return 0 === MM || 1 === MM ? this : this.scaleInPlace(1 / MM)
+      normalizeFromLength(VV) {
+        return 0 === VV || 1 === VV ? this : this.scaleInPlace(1 / VV)
       }
       normalizeToNew() {
-        return this.normalizeToRef(new mM)
+        return this.normalizeToRef(new vV)
       }
-      normalizeToRef(MM) {
-        const rM = this.length();
-        return 0 === rM || 1 === rM ? (MM._x = this._x, MM._y = this._y, MM._z = this._z, MM._isDirty = !0, MM) : this.scaleToRef(1 / rM, MM)
+      normalizeToRef(VV) {
+        const eV = this.length();
+        return 0 === eV || 1 === eV ? (VV._x = this._x, VV._y = this._y, VV._z = this._z, VV._isDirty = !0, VV) : this.scaleToRef(1 / eV, VV)
       }
       clone() {
-        return new mM(this._x, this._y, this._z)
+        return new vV(this._x, this._y, this._z)
       }
-      jR(MM) {
-        return this.iMM(MM._x, MM._y, MM._z)
+      iG(VV) {
+        return this.FeV(VV._x, VV._y, VV._z)
       }
-      iMM(MM, rM, iM) {
-        return this._x = MM, this._y = rM, this._z = iM, this._isDirty = !0, this
+      FeV(VV, eV, xV) {
+        return this._x = VV, this._y = eV, this._z = xV, this._isDirty = !0, this
       }
-      set(MM, rM, iM) {
-        return this.iMM(MM, rM, iM)
+      set(VV, eV, xV) {
+        return this.FeV(VV, eV, xV)
       }
-      P_(MM) {
-        return this._x = this._y = this._z = MM, this._isDirty = !0, this
+      HVV(VV) {
+        return this._x = this._y = this._z = VV, this._isDirty = !0, this
       }
-      static GetClipFactor(MM, rM, iM, OM) {
-        const SM = mM.Dot(MM, iM);
-        return (SM - OM) / (SM - mM.Dot(rM, iM))
+      static GetClipFactor(VV, eV, xV, JV) {
+        const YV = vV.Dot(VV, xV);
+        return (YV - JV) / (YV - vV.Dot(eV, xV))
       }
-      static GetAngleBetweenVectors(MM, rM, iM) {
-        const OM = MM.normalizeToRef(dM.sh[1]),
-          SM = rM.normalizeToRef(dM.sh[2]);
-        let jM = mM.Dot(OM, SM);
-        jM = (0, PM.Clamp)(jM, -1, 1);
-        const aM = Math.acos(jM),
-          nM = dM.sh[3];
-        return mM.CrossToRef(OM, SM, nM), mM.Dot(nM, iM) > 0 ? isNaN(aM) ? 0 : aM : isNaN(aM) ? -Math.PI : -Math.acos(jM)
+      static GetAngleBetweenVectors(VV, eV, xV) {
+        const JV = VV.normalizeToRef(EV.Ik[1]),
+          YV = eV.normalizeToRef(EV.Ik[2]);
+        let UV = vV.Dot(JV, YV);
+        UV = (0, pV.Clamp)(UV, -1, 1);
+        const yV = Math.acos(UV),
+          QV = EV.Ik[3];
+        return vV.CrossToRef(JV, YV, QV), vV.Dot(QV, xV) > 0 ? isNaN(yV) ? 0 : yV : isNaN(yV) ? -Math.PI : -Math.acos(UV)
       }
-      static GetAngleBetweenVectorsOnPlane(MM, rM, iM) {
-        dM.sh[0].jR(MM);
-        const OM = dM.sh[0];
-        dM.sh[1].jR(rM);
-        const SM = dM.sh[1];
-        dM.sh[2].jR(iM);
-        const jM = dM.sh[2],
-          aM = dM.sh[3],
-          nM = dM.sh[4];
-        OM.normalize(), SM.normalize(), jM.normalize(), mM.CrossToRef(jM, OM, aM), mM.CrossToRef(aM, jM, nM);
-        const QM = Math.atan2(mM.Dot(SM, aM), mM.Dot(SM, nM));
-        return (0, PM.NormalizeRadians)(QM)
+      static GetAngleBetweenVectorsOnPlane(VV, eV, xV) {
+        EV.Ik[0].iG(VV);
+        const JV = EV.Ik[0];
+        EV.Ik[1].iG(eV);
+        const YV = EV.Ik[1];
+        EV.Ik[2].iG(xV);
+        const UV = EV.Ik[2],
+          yV = EV.Ik[3],
+          QV = EV.Ik[4];
+        JV.normalize(), YV.normalize(), UV.normalize(), vV.CrossToRef(UV, JV, yV), vV.CrossToRef(yV, UV, QV);
+        const nV = Math.atan2(vV.Dot(YV, yV), vV.Dot(YV, QV));
+        return (0, pV.NormalizeRadians)(nV)
       }
-      static PitchYawRollToMoveBetweenPointsToRef(MM, rM, iM) {
-        const OM = yM.sh[0];
-        return rM.subtractToRef(MM, OM), iM._y = Math.atan2(OM.x, OM.z) || 0, iM._x = Math.atan2(Math.sqrt(OM.x ** 2 + OM.z ** 2), OM.y) || 0, iM._z = 0, iM._isDirty = !0, iM
+      static PitchYawRollToMoveBetweenPointsToRef(VV, eV, xV) {
+        const JV = BV.Ik[0];
+        return eV.subtractToRef(VV, JV), xV._y = Math.atan2(JV.x, JV.z) || 0, xV._x = Math.atan2(Math.sqrt(JV.x ** 2 + JV.z ** 2), JV.y) || 0, xV._z = 0, xV._isDirty = !0, xV
       }
-      static PitchYawRollToMoveBetweenPoints(MM, rM) {
-        const iM = mM.Zero();
-        return mM.PitchYawRollToMoveBetweenPointsToRef(MM, rM, iM)
+      static PitchYawRollToMoveBetweenPoints(VV, eV) {
+        const xV = vV.Zero();
+        return vV.PitchYawRollToMoveBetweenPointsToRef(VV, eV, xV)
       }
-      static SlerpToRef(MM, rM, iM, SM) {
-        iM = (0, PM.Clamp)(iM, 0, 1);
-        const jM = dM.sh[0],
-          aM = dM.sh[1];
-        jM.jR(MM);
-        const nM = jM.length();
-        jM.normalizeFromLength(nM), aM.jR(rM);
-        const QM = aM.length();
-        aM.normalizeFromLength(QM);
-        const zM = mM.Dot(jM, aM);
-        let LM, HM;
-        if (zM < 1 - OM.d) {
-          const MM = Math.acos(zM),
-            rM = 1 / Math.sin(MM);
-          LM = Math.sin((1 - iM) * MM) * rM, HM = Math.sin(iM * MM) * rM
-        } else LM = 1 - iM, HM = iM;
-        return jM.scaleInPlace(LM), aM.scaleInPlace(HM), SM.jR(jM).addInPlace(aM), SM.scaleInPlace((0, PM.Lerp)(nM, QM, iM)), SM
+      static SlerpToRef(VV, eV, xV, YV) {
+        xV = (0, pV.Clamp)(xV, 0, 1);
+        const UV = EV.Ik[0],
+          yV = EV.Ik[1];
+        UV.iG(VV);
+        const QV = UV.length();
+        UV.normalizeFromLength(QV), yV.iG(eV);
+        const nV = yV.length();
+        yV.normalizeFromLength(nV);
+        const wV = vV.Dot(UV, yV);
+        let ZV, rV;
+        if (wV < 1 - JV.b) {
+          const VV = Math.acos(wV),
+            eV = 1 / Math.sin(VV);
+          ZV = Math.sin((1 - xV) * VV) * eV, rV = Math.sin(xV * VV) * eV
+        } else ZV = 1 - xV, rV = xV;
+        return UV.scaleInPlace(ZV), yV.scaleInPlace(rV), YV.iG(UV).addInPlace(yV), YV.scaleInPlace((0, pV.Lerp)(QV, nV, xV)), YV
       }
-      static SmoothToRef(MM, rM, iM, OM, SM) {
-        return mM.SlerpToRef(MM, rM, 0 === OM ? 1 : iM / OM, SM), SM
+      static SmoothToRef(VV, eV, xV, JV, YV) {
+        return vV.SlerpToRef(VV, eV, 0 === JV ? 1 : xV / JV, YV), YV
       }
-      static FromArray(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return new mM(MM[rM], MM[rM + 1], MM[rM + 2])
+      static FromArray(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return new vV(VV[eV], VV[eV + 1], VV[eV + 2])
       }
-      static FromFloatArray(MM, rM) {
-        return mM.FromArray(MM, rM)
+      static FromFloatArray(VV, eV) {
+        return vV.FromArray(VV, eV)
       }
-      static FromArrayToRef(MM, rM, iM) {
-        return iM._x = MM[rM], iM._y = MM[rM + 1], iM._z = MM[rM + 2], iM._isDirty = !0, iM
+      static FromArrayToRef(VV, eV, xV) {
+        return xV._x = VV[eV], xV._y = VV[eV + 1], xV._z = VV[eV + 2], xV._isDirty = !0, xV
       }
-      static FromFloatArrayToRef(MM, rM, iM) {
-        return mM.FromArrayToRef(MM, rM, iM)
+      static FromFloatArrayToRef(VV, eV, xV) {
+        return vV.FromArrayToRef(VV, eV, xV)
       }
-      static FromFloatsToRef(MM, rM, iM, OM) {
-        return OM.iMM(MM, rM, iM), OM
+      static FromFloatsToRef(VV, eV, xV, JV) {
+        return JV.FeV(VV, eV, xV), JV
       }
       static Zero() {
-        return new mM(0, 0, 0)
+        return new vV(0, 0, 0)
       }
       static One() {
-        return new mM(1, 1, 1)
+        return new vV(1, 1, 1)
       }
       static Up() {
-        return new mM(0, 1, 0)
+        return new vV(0, 1, 0)
       }
       static get UpReadOnly() {
-        return mM._UpReadOnly
+        return vV._UpReadOnly
       }
       static get DownReadOnly() {
-        return mM._DownReadOnly
+        return vV._DownReadOnly
       }
       static get RightReadOnly() {
-        return mM._RightReadOnly
+        return vV._RightReadOnly
       }
       static get LeftReadOnly() {
-        return mM._LeftReadOnly
+        return vV._LeftReadOnly
       }
       static get LeftHandedForwardReadOnly() {
-        return mM._LeftHandedForwardReadOnly
+        return vV._LeftHandedForwardReadOnly
       }
       static get RightHandedForwardReadOnly() {
-        return mM._RightHandedForwardReadOnly
+        return vV._RightHandedForwardReadOnly
       }
       static get LeftHandedBackwardReadOnly() {
-        return mM._LeftHandedBackwardReadOnly
+        return vV._LeftHandedBackwardReadOnly
       }
       static get RightHandedBackwardReadOnly() {
-        return mM._RightHandedBackwardReadOnly
+        return vV._RightHandedBackwardReadOnly
       }
       static get ZeroReadOnly() {
-        return mM._ZeroReadOnly
+        return vV._ZeroReadOnly
       }
       static get OneReadOnly() {
-        return mM._OneReadOnly
+        return vV._OneReadOnly
       }
       static Down() {
-        return new mM(0, -1, 0)
+        return new vV(0, -1, 0)
       }
       static Forward() {
-        return new mM(0, 0, arguments.length > 0 && void 0 !== arguments[0] && arguments[0] ? -1 : 1)
+        return new vV(0, 0, arguments.length > 0 && void 0 !== arguments[0] && arguments[0] ? -1 : 1)
       }
       static Backward() {
-        return new mM(0, 0, arguments.length > 0 && void 0 !== arguments[0] && arguments[0] ? 1 : -1)
+        return new vV(0, 0, arguments.length > 0 && void 0 !== arguments[0] && arguments[0] ? 1 : -1)
       }
       static Right() {
-        return new mM(1, 0, 0)
+        return new vV(1, 0, 0)
       }
       static Left() {
-        return new mM(-1, 0, 0)
+        return new vV(-1, 0, 0)
       }
       static Random() {
-        let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        return new mM((0, PM.RandomRange)(MM, rM), (0, PM.RandomRange)(MM, rM), (0, PM.RandomRange)(MM, rM))
+        let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        return new vV((0, pV.RandomRange)(VV, eV), (0, pV.RandomRange)(VV, eV), (0, pV.RandomRange)(VV, eV))
       }
       static RandomToRef() {
-        let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        return (arguments.length > 2 ? arguments[2] : void 0).iMM((0, PM.RandomRange)(MM, rM), (0, PM.RandomRange)(MM, rM), (0, PM.RandomRange)(MM, rM))
+        let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        return (arguments.length > 2 ? arguments[2] : void 0).FeV((0, pV.RandomRange)(VV, eV), (0, pV.RandomRange)(VV, eV), (0, pV.RandomRange)(VV, eV))
       }
-      static TransformCoordinates(MM, rM) {
-        const iM = mM.Zero();
-        return mM.TransformCoordinatesToRef(MM, rM, iM), iM
+      static TransformCoordinates(VV, eV) {
+        const xV = vV.Zero();
+        return vV.TransformCoordinatesToRef(VV, eV, xV), xV
       }
-      static TransformCoordinatesToRef(MM, rM, iM) {
-        return mM.TransformCoordinatesFromFloatsToRef(MM._x, MM._y, MM._z, rM, iM), iM
+      static TransformCoordinatesToRef(VV, eV, xV) {
+        return vV.TransformCoordinatesFromFloatsToRef(VV._x, VV._y, VV._z, eV, xV), xV
       }
-      static TransformCoordinatesFromFloatsToRef(MM, rM, iM, OM, SM) {
-        const jM = OM.m,
-          aM = MM * jM[0] + rM * jM[4] + iM * jM[8] + jM[12],
-          PM = MM * jM[1] + rM * jM[5] + iM * jM[9] + jM[13],
-          nM = MM * jM[2] + rM * jM[6] + iM * jM[10] + jM[14],
-          QM = 1 / (MM * jM[3] + rM * jM[7] + iM * jM[11] + jM[15]);
-        return SM._x = aM * QM, SM._y = PM * QM, SM._z = nM * QM, SM._isDirty = !0, SM
+      static TransformCoordinatesFromFloatsToRef(VV, eV, xV, JV, YV) {
+        const UV = JV.m,
+          yV = VV * UV[0] + eV * UV[4] + xV * UV[8] + UV[12],
+          pV = VV * UV[1] + eV * UV[5] + xV * UV[9] + UV[13],
+          QV = VV * UV[2] + eV * UV[6] + xV * UV[10] + UV[14],
+          nV = 1 / (VV * UV[3] + eV * UV[7] + xV * UV[11] + UV[15]);
+        return YV._x = yV * nV, YV._y = pV * nV, YV._z = QV * nV, YV._isDirty = !0, YV
       }
-      static TransformNormal(MM, rM) {
-        const iM = mM.Zero();
-        return mM.TransformNormalToRef(MM, rM, iM), iM
+      static TransformNormal(VV, eV) {
+        const xV = vV.Zero();
+        return vV.TransformNormalToRef(VV, eV, xV), xV
       }
-      static TransformNormalToRef(MM, rM, iM) {
-        return this.TransformNormalFromFloatsToRef(MM._x, MM._y, MM._z, rM, iM), iM
+      static TransformNormalToRef(VV, eV, xV) {
+        return this.TransformNormalFromFloatsToRef(VV._x, VV._y, VV._z, eV, xV), xV
       }
-      static TransformNormalFromFloatsToRef(MM, rM, iM, OM, SM) {
-        const jM = OM.m;
-        return SM._x = MM * jM[0] + rM * jM[4] + iM * jM[8], SM._y = MM * jM[1] + rM * jM[5] + iM * jM[9], SM._z = MM * jM[2] + rM * jM[6] + iM * jM[10], SM._isDirty = !0, SM
+      static TransformNormalFromFloatsToRef(VV, eV, xV, JV, YV) {
+        const UV = JV.m;
+        return YV._x = VV * UV[0] + eV * UV[4] + xV * UV[8], YV._y = VV * UV[1] + eV * UV[5] + xV * UV[9], YV._z = VV * UV[2] + eV * UV[6] + xV * UV[10], YV._isDirty = !0, YV
       }
-      static CatmullRom(MM, rM, iM, OM, SM) {
-        const jM = SM * SM,
-          aM = SM * jM,
-          PM = .5 * (2 * rM._x + (-MM._x + iM._x) * SM + (2 * MM._x - 5 * rM._x + 4 * iM._x - OM._x) * jM + (-MM._x + 3 * rM._x - 3 * iM._x + OM._x) * aM),
-          nM = .5 * (2 * rM._y + (-MM._y + iM._y) * SM + (2 * MM._y - 5 * rM._y + 4 * iM._y - OM._y) * jM + (-MM._y + 3 * rM._y - 3 * iM._y + OM._y) * aM),
-          QM = .5 * (2 * rM._z + (-MM._z + iM._z) * SM + (2 * MM._z - 5 * rM._z + 4 * iM._z - OM._z) * jM + (-MM._z + 3 * rM._z - 3 * iM._z + OM._z) * aM);
-        return new mM(PM, nM, QM)
+      static CatmullRom(VV, eV, xV, JV, YV) {
+        const UV = YV * YV,
+          yV = YV * UV,
+          pV = .5 * (2 * eV._x + (-VV._x + xV._x) * YV + (2 * VV._x - 5 * eV._x + 4 * xV._x - JV._x) * UV + (-VV._x + 3 * eV._x - 3 * xV._x + JV._x) * yV),
+          QV = .5 * (2 * eV._y + (-VV._y + xV._y) * YV + (2 * VV._y - 5 * eV._y + 4 * xV._y - JV._y) * UV + (-VV._y + 3 * eV._y - 3 * xV._y + JV._y) * yV),
+          nV = .5 * (2 * eV._z + (-VV._z + xV._z) * YV + (2 * VV._z - 5 * eV._z + 4 * xV._z - JV._z) * UV + (-VV._z + 3 * eV._z - 3 * xV._z + JV._z) * yV);
+        return new vV(pV, QV, nV)
       }
-      static Clamp(MM, rM, iM) {
-        const OM = new mM;
-        return mM.ClampToRef(MM, rM, iM, OM), OM
+      static Clamp(VV, eV, xV) {
+        const JV = new vV;
+        return vV.ClampToRef(VV, eV, xV, JV), JV
       }
-      static ClampToRef(MM, rM, iM, OM) {
-        let SM = MM._x;
-        SM = SM > iM._x ? iM._x : SM, SM = SM < rM._x ? rM._x : SM;
-        let jM = MM._y;
-        jM = jM > iM._y ? iM._y : jM, jM = jM < rM._y ? rM._y : jM;
-        let aM = MM._z;
-        return aM = aM > iM._z ? iM._z : aM, aM = aM < rM._z ? rM._z : aM, OM.iMM(SM, jM, aM), OM
+      static ClampToRef(VV, eV, xV, JV) {
+        let YV = VV._x;
+        YV = YV > xV._x ? xV._x : YV, YV = YV < eV._x ? eV._x : YV;
+        let UV = VV._y;
+        UV = UV > xV._y ? xV._y : UV, UV = UV < eV._y ? eV._y : UV;
+        let yV = VV._z;
+        return yV = yV > xV._z ? xV._z : yV, yV = yV < eV._z ? eV._z : yV, JV.FeV(YV, UV, yV), JV
       }
-      static CheckExtends(MM, rM, iM) {
-        rM.minimizeInPlace(MM), iM.maximizeInPlace(MM)
+      static CheckExtends(VV, eV, xV) {
+        eV.minimizeInPlace(VV), xV.maximizeInPlace(VV)
       }
-      static Hermite(MM, rM, iM, OM, SM) {
-        const jM = SM * SM,
-          aM = SM * jM,
-          PM = 2 * aM - 3 * jM + 1,
-          nM = -2 * aM + 3 * jM,
-          QM = aM - 2 * jM + SM,
-          zM = aM - jM,
-          LM = MM._x * PM + iM._x * nM + rM._x * QM + OM._x * zM,
-          HM = MM._y * PM + iM._y * nM + rM._y * QM + OM._y * zM,
-          hM = MM._z * PM + iM._z * nM + rM._z * QM + OM._z * zM;
-        return new mM(LM, HM, hM)
+      static Hermite(VV, eV, xV, JV, YV) {
+        const UV = YV * YV,
+          yV = YV * UV,
+          pV = 2 * yV - 3 * UV + 1,
+          QV = -2 * yV + 3 * UV,
+          nV = yV - 2 * UV + YV,
+          wV = yV - UV,
+          ZV = VV._x * pV + xV._x * QV + eV._x * nV + JV._x * wV,
+          rV = VV._y * pV + xV._y * QV + eV._y * nV + JV._y * wV,
+          kV = VV._z * pV + xV._z * QV + eV._z * nV + JV._z * wV;
+        return new vV(ZV, rV, kV)
       }
-      static Hermite1stDerivative(MM, rM, iM, OM, SM) {
-        const jM = new mM;
-        return this.Hermite1stDerivativeToRef(MM, rM, iM, OM, SM, jM), jM
+      static Hermite1stDerivative(VV, eV, xV, JV, YV) {
+        const UV = new vV;
+        return this.Hermite1stDerivativeToRef(VV, eV, xV, JV, YV, UV), UV
       }
-      static Hermite1stDerivativeToRef(MM, rM, iM, OM, SM, jM) {
-        const aM = SM * SM;
-        return jM._x = 6 * (aM - SM) * MM._x + (3 * aM - 4 * SM + 1) * rM._x + 6 * (-aM + SM) * iM._x + (3 * aM - 2 * SM) * OM._x, jM._y = 6 * (aM - SM) * MM._y + (3 * aM - 4 * SM + 1) * rM._y + 6 * (-aM + SM) * iM._y + (3 * aM - 2 * SM) * OM._y, jM._z = 6 * (aM - SM) * MM._z + (3 * aM - 4 * SM + 1) * rM._z + 6 * (-aM + SM) * iM._z + (3 * aM - 2 * SM) * OM._z, jM._isDirty = !0, jM
+      static Hermite1stDerivativeToRef(VV, eV, xV, JV, YV, UV) {
+        const yV = YV * YV;
+        return UV._x = 6 * (yV - YV) * VV._x + (3 * yV - 4 * YV + 1) * eV._x + 6 * (-yV + YV) * xV._x + (3 * yV - 2 * YV) * JV._x, UV._y = 6 * (yV - YV) * VV._y + (3 * yV - 4 * YV + 1) * eV._y + 6 * (-yV + YV) * xV._y + (3 * yV - 2 * YV) * JV._y, UV._z = 6 * (yV - YV) * VV._z + (3 * yV - 4 * YV + 1) * eV._z + 6 * (-yV + YV) * xV._z + (3 * yV - 2 * YV) * JV._z, UV._isDirty = !0, UV
       }
-      static Lerp(MM, rM, iM) {
-        const OM = new mM(0, 0, 0);
-        return mM.LerpToRef(MM, rM, iM, OM), OM
+      static Lerp(VV, eV, xV) {
+        const JV = new vV(0, 0, 0);
+        return vV.LerpToRef(VV, eV, xV, JV), JV
       }
-      static LerpToRef(MM, rM, iM, OM) {
-        return OM._x = MM._x + (rM._x - MM._x) * iM, OM._y = MM._y + (rM._y - MM._y) * iM, OM._z = MM._z + (rM._z - MM._z) * iM, OM._isDirty = !0, OM
+      static LerpToRef(VV, eV, xV, JV) {
+        return JV._x = VV._x + (eV._x - VV._x) * xV, JV._y = VV._y + (eV._y - VV._y) * xV, JV._z = VV._z + (eV._z - VV._z) * xV, JV._isDirty = !0, JV
       }
-      static Dot(MM, rM) {
-        return MM._x * rM._x + MM._y * rM._y + MM._z * rM._z
+      static Dot(VV, eV) {
+        return VV._x * eV._x + VV._y * eV._y + VV._z * eV._z
       }
-      dot(MM) {
-        return this._x * MM._x + this._y * MM._y + this._z * MM._z
+      dot(VV) {
+        return this._x * VV._x + this._y * VV._y + this._z * VV._z
       }
-      static Cross(MM, rM) {
-        const iM = new mM;
-        return mM.CrossToRef(MM, rM, iM), iM
+      static Cross(VV, eV) {
+        const xV = new vV;
+        return vV.CrossToRef(VV, eV, xV), xV
       }
-      static CrossToRef(MM, rM, iM) {
-        const OM = MM._y * rM._z - MM._z * rM._y,
-          SM = MM._z * rM._x - MM._x * rM._z,
-          jM = MM._x * rM._y - MM._y * rM._x;
-        return iM.iMM(OM, SM, jM), iM
+      static CrossToRef(VV, eV, xV) {
+        const JV = VV._y * eV._z - VV._z * eV._y,
+          YV = VV._z * eV._x - VV._x * eV._z,
+          UV = VV._x * eV._y - VV._y * eV._x;
+        return xV.FeV(JV, YV, UV), xV
       }
-      static Normalize(MM) {
-        const rM = mM.Zero();
-        return mM.NormalizeToRef(MM, rM), rM
+      static Normalize(VV) {
+        const eV = vV.Zero();
+        return vV.NormalizeToRef(VV, eV), eV
       }
-      static NormalizeToRef(MM, rM) {
-        return MM.normalizeToRef(rM), rM
+      static NormalizeToRef(VV, eV) {
+        return VV.normalizeToRef(eV), eV
       }
-      static Project(MM, rM, iM, OM) {
-        const SM = new mM;
-        return mM.ProjectToRef(MM, rM, iM, OM, SM), SM
+      static Project(VV, eV, xV, JV) {
+        const YV = new vV;
+        return vV.ProjectToRef(VV, eV, xV, JV, YV), YV
       }
-      static ProjectToRef(MM, rM, iM, OM, SM) {
-        const jM = OM.width,
-          PM = OM.height,
-          nM = OM.x,
-          QM = OM.y,
-          zM = dM.Matrix[1],
-          LM = aM.c.LastCreatedEngine?.isNDCHalfZRange,
-          HM = LM ? 1 : .5,
-          hM = LM ? 0 : .5;
-        JM.FromValuesToRef(jM / 2, 0, 0, 0, 0, -PM / 2, 0, 0, 0, 0, HM, 0, nM + jM / 2, PM / 2 + QM, hM, 1, zM);
-        const yM = dM.Matrix[0];
-        return rM.multiplyToRef(iM, yM), yM.multiplyToRef(zM, yM), mM.TransformCoordinatesToRef(MM, yM, SM), SM
+      static ProjectToRef(VV, eV, xV, JV, YV) {
+        const UV = JV.width,
+          pV = JV.height,
+          QV = JV.x,
+          nV = JV.y,
+          wV = EV.Matrix[1],
+          ZV = yV.d.LastCreatedEngine?.isNDCHalfZRange,
+          rV = ZV ? 1 : .5,
+          kV = ZV ? 0 : .5;
+        bV.FromValuesToRef(UV / 2, 0, 0, 0, 0, -pV / 2, 0, 0, 0, 0, rV, 0, QV + UV / 2, pV / 2 + nV, kV, 1, wV);
+        const BV = EV.Matrix[0];
+        return eV.multiplyToRef(xV, BV), BV.multiplyToRef(wV, BV), vV.TransformCoordinatesToRef(VV, BV, YV), YV
       }
-      static Reflect(MM, rM) {
-        return this.ReflectToRef(MM, rM, new mM)
+      static Reflect(VV, eV) {
+        return this.ReflectToRef(VV, eV, new vV)
       }
-      static ReflectToRef(MM, rM, iM) {
-        const OM = yM.sh[0];
-        return OM.jR(rM).scaleInPlace(2 * mM.Dot(MM, rM)), iM.jR(MM).kOM(OM)
+      static ReflectToRef(VV, eV, xV) {
+        const JV = BV.Ik[0];
+        return JV.iG(eV).scaleInPlace(2 * vV.Dot(VV, eV)), xV.iG(VV).IYV(JV)
       }
-      static UnprojectFromTransform(MM, rM, iM, OM, SM) {
-        return this.Unproject(MM, rM, iM, OM, SM, JM.IdentityReadOnly)
+      static UnprojectFromTransform(VV, eV, xV, JV, YV) {
+        return this.Unproject(VV, eV, xV, JV, YV, bV.IdentityReadOnly)
       }
-      static Unproject(MM, rM, iM, OM, SM, jM) {
-        const aM = new mM;
-        return mM.UnprojectToRef(MM, rM, iM, OM, SM, jM, aM), aM
+      static Unproject(VV, eV, xV, JV, YV, UV) {
+        const yV = new vV;
+        return vV.UnprojectToRef(VV, eV, xV, JV, YV, UV, yV), yV
       }
-      static UnprojectToRef(MM, rM, iM, OM, SM, jM, aM) {
-        return mM.UnprojectFloatsToRef(MM._x, MM._y, MM._z, rM, iM, OM, SM, jM, aM), aM
+      static UnprojectToRef(VV, eV, xV, JV, YV, UV, yV) {
+        return vV.UnprojectFloatsToRef(VV._x, VV._y, VV._z, eV, xV, JV, YV, UV, yV), yV
       }
-      static UnprojectFloatsToRef(MM, rM, iM, OM, SM, jM, PM, nM, QM) {
-        const zM = dM.Matrix[0];
-        jM.multiplyToRef(PM, zM), zM.multiplyToRef(nM, zM), zM.invert();
-        const LM = dM.sh[0];
-        return LM.x = MM / OM * 2 - 1, LM.y = -(rM / SM * 2 - 1), aM.c.LastCreatedEngine?.isNDCHalfZRange ? LM.z = iM : LM.z = 2 * iM - 1, mM.TransformCoordinatesToRef(LM, zM, QM), QM
+      static UnprojectFloatsToRef(VV, eV, xV, JV, YV, UV, pV, QV, nV) {
+        const wV = EV.Matrix[0];
+        UV.multiplyToRef(pV, wV), wV.multiplyToRef(QV, wV), wV.invert();
+        const ZV = EV.Ik[0];
+        return ZV.x = VV / JV * 2 - 1, ZV.y = -(eV / YV * 2 - 1), yV.d.LastCreatedEngine?.isNDCHalfZRange ? ZV.z = xV : ZV.z = 2 * xV - 1, vV.TransformCoordinatesToRef(ZV, wV, nV), nV
       }
-      static Minimize(MM, rM) {
-        const iM = new mM;
-        return iM.jR(MM), iM.minimizeInPlace(rM), iM
+      static Minimize(VV, eV) {
+        const xV = new vV;
+        return xV.iG(VV), xV.minimizeInPlace(eV), xV
       }
-      static Maximize(MM, rM) {
-        const iM = new mM;
-        return iM.jR(MM), iM.maximizeInPlace(rM), iM
+      static Maximize(VV, eV) {
+        const xV = new vV;
+        return xV.iG(VV), xV.maximizeInPlace(eV), xV
       }
-      static Distance(MM, rM) {
-        return Math.sqrt(mM.DistanceSquared(MM, rM))
+      static Distance(VV, eV) {
+        return Math.sqrt(vV.DistanceSquared(VV, eV))
       }
-      static DistanceSquared(MM, rM) {
-        const iM = MM._x - rM._x,
-          OM = MM._y - rM._y,
-          SM = MM._z - rM._z;
-        return iM * iM + OM * OM + SM * SM
+      static DistanceSquared(VV, eV) {
+        const xV = VV._x - eV._x,
+          JV = VV._y - eV._y,
+          YV = VV._z - eV._z;
+        return xV * xV + JV * JV + YV * YV
       }
-      static ProjectOnTriangleToRef(MM, rM, iM, SM, jM) {
-        const aM = dM.sh[0],
-          nM = dM.sh[1],
-          QM = dM.sh[2],
-          zM = dM.sh[3],
-          LM = dM.sh[4];
-        iM.subtractToRef(rM, aM), SM.subtractToRef(rM, nM), SM.subtractToRef(iM, QM);
-        const HM = aM.length(),
-          hM = nM.length(),
-          JM = QM.length();
-        if (HM < OM.d || hM < OM.d || JM < OM.d) return jM.jR(rM), mM.Distance(MM, rM);
-        MM.subtractToRef(rM, LM), mM.CrossToRef(aM, nM, zM);
-        const yM = zM.length();
-        if (yM < OM.d) return jM.jR(rM), mM.Distance(MM, rM);
-        zM.normalizeFromLength(yM);
-        let lM = LM.length();
-        if (lM < OM.d) return jM.jR(rM), 0;
-        LM.normalizeFromLength(lM);
-        const EM = mM.Dot(zM, LM),
-          UM = dM.sh[5],
-          GM = dM.sh[6];
-        UM.jR(zM).scaleInPlace(-lM * EM), GM.jR(MM).addInPlace(UM);
-        const CM = dM.sh[4],
-          eM = dM.sh[5],
-          bM = dM.sh[7],
-          wM = dM.sh[8];
-        CM.jR(aM).scaleInPlace(1 / HM), wM.jR(nM).scaleInPlace(1 / hM), CM.addInPlace(wM).scaleInPlace(-1), eM.jR(aM).scaleInPlace(-1 / HM), wM.jR(QM).scaleInPlace(1 / JM), eM.addInPlace(wM).scaleInPlace(-1), bM.jR(QM).scaleInPlace(-1 / JM), wM.jR(nM).scaleInPlace(-1 / hM), bM.addInPlace(wM).scaleInPlace(-1);
-        const tM = dM.sh[9];
-        let gM;
-        tM.jR(GM).kOM(rM), mM.CrossToRef(CM, tM, wM), gM = mM.Dot(wM, zM);
-        const uM = gM;
-        tM.jR(GM).kOM(iM), mM.CrossToRef(eM, tM, wM), gM = mM.Dot(wM, zM);
-        const RM = gM;
-        tM.jR(GM).kOM(SM), mM.CrossToRef(bM, tM, wM), gM = mM.Dot(wM, zM);
-        const pM = gM,
-          WM = dM.sh[10];
-        let sM, DM;
-        uM > 0 && RM < 0 ? (WM.jR(aM), sM = rM, DM = iM) : RM > 0 && pM < 0 ? (WM.jR(QM), sM = iM, DM = SM) : (WM.jR(nM).scaleInPlace(-1), sM = SM, DM = rM);
-        const kM = dM.sh[9],
-          ZM = dM.sh[4];
-        sM.subtractToRef(GM, wM), DM.subtractToRef(GM, kM), mM.CrossToRef(wM, kM, ZM);
-        if (!(mM.Dot(ZM, zM) < 0)) return jM.jR(GM), Math.abs(lM * EM);
-        const oM = dM.sh[5];
-        mM.CrossToRef(WM, ZM, oM), oM.normalize();
-        const fM = dM.sh[9];
-        fM.jR(sM).kOM(GM);
-        const YM = fM.length();
-        if (YM < OM.d) return jM.jR(sM), mM.Distance(MM, sM);
-        fM.normalizeFromLength(YM);
-        const NM = mM.Dot(oM, fM),
-          AM = dM.sh[7];
-        AM.jR(GM).addInPlace(oM.scaleInPlace(YM * NM)), wM.jR(AM).kOM(sM), lM = WM.length(), WM.normalizeFromLength(lM);
-        let xM = mM.Dot(wM, WM) / Math.max(lM, OM.d);
-        return xM = (0, PM.Clamp)(xM, 0, 1), AM.jR(sM).addInPlace(WM.scaleInPlace(xM * lM)), jM.jR(AM), mM.Distance(MM, AM)
+      static ProjectOnTriangleToRef(VV, eV, xV, YV, UV) {
+        const yV = EV.Ik[0],
+          QV = EV.Ik[1],
+          nV = EV.Ik[2],
+          wV = EV.Ik[3],
+          ZV = EV.Ik[4];
+        xV.subtractToRef(eV, yV), YV.subtractToRef(eV, QV), YV.subtractToRef(xV, nV);
+        const rV = yV.length(),
+          kV = QV.length(),
+          bV = nV.length();
+        if (rV < JV.b || kV < JV.b || bV < JV.b) return UV.iG(eV), vV.Distance(VV, eV);
+        VV.subtractToRef(eV, ZV), vV.CrossToRef(yV, QV, wV);
+        const BV = wV.length();
+        if (BV < JV.b) return UV.iG(eV), vV.Distance(VV, eV);
+        wV.normalizeFromLength(BV);
+        let jV = ZV.length();
+        if (jV < JV.b) return UV.iG(eV), 0;
+        ZV.normalizeFromLength(jV);
+        const qV = vV.Dot(wV, ZV),
+          tV = EV.Ik[5],
+          FV = EV.Ik[6];
+        tV.iG(wV).scaleInPlace(-jV * qV), FV.iG(VV).addInPlace(tV);
+        const TV = EV.Ik[4],
+          PV = EV.Ik[5],
+          AV = EV.Ik[7],
+          NV = EV.Ik[8];
+        TV.iG(yV).scaleInPlace(1 / rV), NV.iG(QV).scaleInPlace(1 / kV), TV.addInPlace(NV).scaleInPlace(-1), PV.iG(yV).scaleInPlace(-1 / rV), NV.iG(nV).scaleInPlace(1 / bV), PV.addInPlace(NV).scaleInPlace(-1), AV.iG(nV).scaleInPlace(-1 / bV), NV.iG(QV).scaleInPlace(-1 / kV), AV.addInPlace(NV).scaleInPlace(-1);
+        const XV = EV.Ik[9];
+        let MV;
+        XV.iG(FV).IYV(eV), vV.CrossToRef(TV, XV, NV), MV = vV.Dot(NV, wV);
+        const zV = MV;
+        XV.iG(FV).IYV(xV), vV.CrossToRef(PV, XV, NV), MV = vV.Dot(NV, wV);
+        const GV = MV;
+        XV.iG(FV).IYV(YV), vV.CrossToRef(AV, XV, NV), MV = vV.Dot(NV, wV);
+        const WV = MV,
+          RV = EV.Ik[10];
+        let gV, DV;
+        zV > 0 && GV < 0 ? (RV.iG(yV), gV = eV, DV = xV) : GV > 0 && WV < 0 ? (RV.iG(nV), gV = xV, DV = YV) : (RV.iG(QV).scaleInPlace(-1), gV = YV, DV = eV);
+        const iV = EV.Ik[9],
+          CV = EV.Ik[4];
+        gV.subtractToRef(FV, NV), DV.subtractToRef(FV, iV), vV.CrossToRef(NV, iV, CV);
+        if (!(vV.Dot(CV, wV) < 0)) return UV.iG(FV), Math.abs(jV * qV);
+        const aV = EV.Ik[5];
+        vV.CrossToRef(RV, CV, aV), aV.normalize();
+        const oV = EV.Ik[9];
+        oV.iG(gV).IYV(FV);
+        const cV = oV.length();
+        if (cV < JV.b) return UV.iG(gV), vV.Distance(VV, gV);
+        oV.normalizeFromLength(cV);
+        const hV = vV.Dot(aV, oV),
+          lV = EV.Ik[7];
+        lV.iG(FV).addInPlace(aV.scaleInPlace(cV * hV)), NV.iG(lV).IYV(gV), jV = RV.length(), RV.normalizeFromLength(jV);
+        let LV = vV.Dot(NV, RV) / Math.max(jV, JV.b);
+        return LV = (0, pV.Clamp)(LV, 0, 1), lV.iG(gV).addInPlace(RV.scaleInPlace(LV * jV)), UV.iG(lV), vV.Distance(VV, lV)
       }
-      static Center(MM, rM) {
-        return mM.CenterToRef(MM, rM, mM.Zero())
+      static Center(VV, eV) {
+        return vV.CenterToRef(VV, eV, vV.Zero())
       }
-      static CenterToRef(MM, rM, iM) {
-        return iM.iMM((MM._x + rM._x) / 2, (MM._y + rM._y) / 2, (MM._z + rM._z) / 2)
+      static CenterToRef(VV, eV, xV) {
+        return xV.FeV((VV._x + eV._x) / 2, (VV._y + eV._y) / 2, (VV._z + eV._z) / 2)
       }
-      static RotationFromAxis(MM, rM, iM) {
-        const OM = new mM;
-        return mM.RotationFromAxisToRef(MM, rM, iM, OM), OM
+      static RotationFromAxis(VV, eV, xV) {
+        const JV = new vV;
+        return vV.RotationFromAxisToRef(VV, eV, xV, JV), JV
       }
-      static RotationFromAxisToRef(MM, rM, iM, OM) {
-        const SM = dM.Quaternion[0];
-        return hM.RotationQuaternionFromAxisToRef(MM, rM, iM, SM), SM.toEulerAnglesToRef(OM), OM
+      static RotationFromAxisToRef(VV, eV, xV, JV) {
+        const YV = EV.Quaternion[0];
+        return kV.RotationQuaternionFromAxisToRef(VV, eV, xV, YV), YV.toEulerAnglesToRef(JV), JV
       }
     }
-    mM._V8PerformanceHack = new mM(.5, .5, .5), mM._UpReadOnly = mM.Up(), mM._DownReadOnly = mM.Down(), mM._LeftHandedForwardReadOnly = mM.Forward(!1), mM._RightHandedForwardReadOnly = mM.Forward(!0), mM._LeftHandedBackwardReadOnly = mM.Backward(!1), mM._RightHandedBackwardReadOnly = mM.Backward(!0), mM._RightReadOnly = mM.Right(), mM._LeftReadOnly = mM.Left(), mM._ZeroReadOnly = mM.Zero(), mM._OneReadOnly = mM.One();
-    class HM {
+    vV._V8PerformanceHack = new vV(.5, .5, .5), vV._UpReadOnly = vV.Up(), vV._DownReadOnly = vV.Down(), vV._LeftHandedForwardReadOnly = vV.Forward(!1), vV._RightHandedForwardReadOnly = vV.Forward(!0), vV._LeftHandedBackwardReadOnly = vV.Backward(!1), vV._RightHandedBackwardReadOnly = vV.Backward(!0), vV._RightReadOnly = vV.Right(), vV._LeftReadOnly = vV.Left(), vV._ZeroReadOnly = vV.Zero(), vV._OneReadOnly = vV.One();
+    class rV {
       get x() {
         return this._x
       }
-      set x(MM) {
-        this._x = MM, this._isDirty = !0
+      set x(VV) {
+        this._x = VV, this._isDirty = !0
       }
       get y() {
         return this._y
       }
-      set y(MM) {
-        this._y = MM, this._isDirty = !0
+      set y(VV) {
+        this._y = VV, this._isDirty = !0
       }
       get z() {
         return this._z
       }
-      set z(MM) {
-        this._z = MM, this._isDirty = !0
+      set z(VV) {
+        this._z = VV, this._isDirty = !0
       }
       get w() {
         return this._w
       }
-      set w(MM) {
-        this._w = MM, this._isDirty = !0
+      set w(VV) {
+        this._w = VV, this._isDirty = !0
       }
       constructor() {
-        let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          OM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-        this._isDirty = !0, this._x = MM, this._y = rM, this._z = iM, this._w = OM
+        let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          JV = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+        this._isDirty = !0, this._x = VV, this._y = eV, this._z = xV, this._w = JV
       }
       toString() {
         return `{X: ${this._x} Y: ${this._y} Z: ${this._z} W: ${this._w}}`
@@ -1149,121 +1149,121 @@ export const modules = {
         return "Vector4"
       }
       getHashCode() {
-        let MM = zM(this._x);
-        return MM = 397 * MM ^ zM(this._y), MM = 397 * MM ^ zM(this._z), MM = 397 * MM ^ zM(this._w), MM
+        let VV = wV(this._x);
+        return VV = 397 * VV ^ wV(this._y), VV = 397 * VV ^ wV(this._z), VV = 397 * VV ^ wV(this._w), VV
       }
-      HOM() {
+      WYV() {
         return [this._x, this._y, this._z, this._w]
       }
-      toArray(MM, rM) {
-        return void 0 === rM && (rM = 0), MM[rM] = this._x, MM[rM + 1] = this._y, MM[rM + 2] = this._z, MM[rM + 3] = this._w, this
+      toArray(VV, eV) {
+        return void 0 === eV && (eV = 0), VV[eV] = this._x, VV[eV + 1] = this._y, VV[eV + 2] = this._z, VV[eV + 3] = this._w, this
       }
-      cz(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return HM.FromArrayToRef(MM, rM, this), this
+      wZ(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return rV.FromArrayToRef(VV, eV, this), this
       }
-      addInPlace(MM) {
-        return this.x += MM._x, this.y += MM._y, this.z += MM._z, this.w += MM._w, this
+      addInPlace(VV) {
+        return this.x += VV._x, this.y += VV._y, this.z += VV._z, this.w += VV._w, this
       }
-      addInPlaceFromFloats(MM, rM, iM, OM) {
-        return this.x += MM, this.y += rM, this.z += iM, this.w += OM, this
+      addInPlaceFromFloats(VV, eV, xV, JV) {
+        return this.x += VV, this.y += eV, this.z += xV, this.w += JV, this
       }
-      add(MM) {
-        return new HM(this._x + MM.x, this._y + MM.y, this._z + MM.z, this._w + MM.w)
+      add(VV) {
+        return new rV(this._x + VV.x, this._y + VV.y, this._z + VV.z, this._w + VV.w)
       }
-      addToRef(MM, rM) {
-        return rM.x = this._x + MM.x, rM.y = this._y + MM.y, rM.z = this._z + MM.z, rM.w = this._w + MM.w, rM
+      addToRef(VV, eV) {
+        return eV.x = this._x + VV.x, eV.y = this._y + VV.y, eV.z = this._z + VV.z, eV.w = this._w + VV.w, eV
       }
-      kOM(MM) {
-        return this.x -= MM.x, this.y -= MM.y, this.z -= MM.z, this.w -= MM.w, this
+      IYV(VV) {
+        return this.x -= VV.x, this.y -= VV.y, this.z -= VV.z, this.w -= VV.w, this
       }
-      subtract(MM) {
-        return new HM(this._x - MM.x, this._y - MM.y, this._z - MM.z, this._w - MM.w)
+      subtract(VV) {
+        return new rV(this._x - VV.x, this._y - VV.y, this._z - VV.z, this._w - VV.w)
       }
-      subtractToRef(MM, rM) {
-        return rM.x = this._x - MM.x, rM.y = this._y - MM.y, rM.z = this._z - MM.z, rM.w = this._w - MM.w, rM
+      subtractToRef(VV, eV) {
+        return eV.x = this._x - VV.x, eV.y = this._y - VV.y, eV.z = this._z - VV.z, eV.w = this._w - VV.w, eV
       }
-      subtractFromFloats(MM, rM, iM, OM) {
-        return new HM(this._x - MM, this._y - rM, this._z - iM, this._w - OM)
+      subtractFromFloats(VV, eV, xV, JV) {
+        return new rV(this._x - VV, this._y - eV, this._z - xV, this._w - JV)
       }
-      subtractFromFloatsToRef(MM, rM, iM, OM, SM) {
-        return SM.x = this._x - MM, SM.y = this._y - rM, SM.z = this._z - iM, SM.w = this._w - OM, SM
+      subtractFromFloatsToRef(VV, eV, xV, JV, YV) {
+        return YV.x = this._x - VV, YV.y = this._y - eV, YV.z = this._z - xV, YV.w = this._w - JV, YV
       }
-      VJ() {
-        return new HM(-this._x, -this._y, -this._z, -this._w)
+      gr() {
+        return new rV(-this._x, -this._y, -this._z, -this._w)
       }
       negateInPlace() {
         return this.x *= -1, this.y *= -1, this.z *= -1, this.w *= -1, this
       }
-      negateToRef(MM) {
-        return MM.x = -this._x, MM.y = -this._y, MM.z = -this._z, MM.w = -this._w, MM
+      negateToRef(VV) {
+        return VV.x = -this._x, VV.y = -this._y, VV.z = -this._z, VV.w = -this._w, VV
       }
-      scaleInPlace(MM) {
-        return this.x *= MM, this.y *= MM, this.z *= MM, this.w *= MM, this
+      scaleInPlace(VV) {
+        return this.x *= VV, this.y *= VV, this.z *= VV, this.w *= VV, this
       }
-      scale(MM) {
-        return new HM(this._x * MM, this._y * MM, this._z * MM, this._w * MM)
+      scale(VV) {
+        return new rV(this._x * VV, this._y * VV, this._z * VV, this._w * VV)
       }
-      scaleToRef(MM, rM) {
-        return rM.x = this._x * MM, rM.y = this._y * MM, rM.z = this._z * MM, rM.w = this._w * MM, rM
+      scaleToRef(VV, eV) {
+        return eV.x = this._x * VV, eV.y = this._y * VV, eV.z = this._z * VV, eV.w = this._w * VV, eV
       }
-      scaleAndAddToRef(MM, rM) {
-        return rM.x += this._x * MM, rM.y += this._y * MM, rM.z += this._z * MM, rM.w += this._w * MM, rM
+      scaleAndAddToRef(VV, eV) {
+        return eV.x += this._x * VV, eV.y += this._y * VV, eV.z += this._z * VV, eV.w += this._w * VV, eV
       }
-      equals(MM) {
-        return MM && this._x === MM.x && this._y === MM.y && this._z === MM.z && this._w === MM.w
+      equals(VV) {
+        return VV && this._x === VV.x && this._y === VV.y && this._z === VV.z && this._w === VV.w
       }
-      equalsWithEpsilon(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : OM.d;
-        return MM && (0, PM.WithinEpsilon)(this._x, MM.x, rM) && (0, PM.WithinEpsilon)(this._y, MM.y, rM) && (0, PM.WithinEpsilon)(this._z, MM.z, rM) && (0, PM.WithinEpsilon)(this._w, MM.w, rM)
+      equalsWithEpsilon(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : JV.b;
+        return VV && (0, pV.WithinEpsilon)(this._x, VV.x, eV) && (0, pV.WithinEpsilon)(this._y, VV.y, eV) && (0, pV.WithinEpsilon)(this._z, VV.z, eV) && (0, pV.WithinEpsilon)(this._w, VV.w, eV)
       }
-      IaM(MM, rM, iM, OM) {
-        return this._x === MM && this._y === rM && this._z === iM && this._w === OM
+      rQV(VV, eV, xV, JV) {
+        return this._x === VV && this._y === eV && this._z === xV && this._w === JV
       }
-      multiplyInPlace(MM) {
-        return this.x *= MM.x, this.y *= MM.y, this.z *= MM.z, this.w *= MM.w, this
+      multiplyInPlace(VV) {
+        return this.x *= VV.x, this.y *= VV.y, this.z *= VV.z, this.w *= VV.w, this
       }
-      multiply(MM) {
-        return new HM(this._x * MM.x, this._y * MM.y, this._z * MM.z, this._w * MM.w)
+      multiply(VV) {
+        return new rV(this._x * VV.x, this._y * VV.y, this._z * VV.z, this._w * VV.w)
       }
-      multiplyToRef(MM, rM) {
-        return rM.x = this._x * MM.x, rM.y = this._y * MM.y, rM.z = this._z * MM.z, rM.w = this._w * MM.w, rM
+      multiplyToRef(VV, eV) {
+        return eV.x = this._x * VV.x, eV.y = this._y * VV.y, eV.z = this._z * VV.z, eV.w = this._w * VV.w, eV
       }
-      multiplyByFloats(MM, rM, iM, OM) {
-        return new HM(this._x * MM, this._y * rM, this._z * iM, this._w * OM)
+      multiplyByFloats(VV, eV, xV, JV) {
+        return new rV(this._x * VV, this._y * eV, this._z * xV, this._w * JV)
       }
-      divide(MM) {
-        return new HM(this._x / MM.x, this._y / MM.y, this._z / MM.z, this._w / MM.w)
+      divide(VV) {
+        return new rV(this._x / VV.x, this._y / VV.y, this._z / VV.z, this._w / VV.w)
       }
-      divideToRef(MM, rM) {
-        return rM.x = this._x / MM.x, rM.y = this._y / MM.y, rM.z = this._z / MM.z, rM.w = this._w / MM.w, rM
+      divideToRef(VV, eV) {
+        return eV.x = this._x / VV.x, eV.y = this._y / VV.y, eV.z = this._z / VV.z, eV.w = this._w / VV.w, eV
       }
-      divideInPlace(MM) {
-        return this.divideToRef(MM, this)
+      divideInPlace(VV) {
+        return this.divideToRef(VV, this)
       }
-      minimizeInPlace(MM) {
-        return MM.x < this._x && (this.x = MM.x), MM.y < this._y && (this.y = MM.y), MM.z < this._z && (this.z = MM.z), MM.w < this._w && (this.w = MM.w), this
+      minimizeInPlace(VV) {
+        return VV.x < this._x && (this.x = VV.x), VV.y < this._y && (this.y = VV.y), VV.z < this._z && (this.z = VV.z), VV.w < this._w && (this.w = VV.w), this
       }
-      maximizeInPlace(MM) {
-        return MM.x > this._x && (this.x = MM.x), MM.y > this._y && (this.y = MM.y), MM.z > this._z && (this.z = MM.z), MM.w > this._w && (this.w = MM.w), this
+      maximizeInPlace(VV) {
+        return VV.x > this._x && (this.x = VV.x), VV.y > this._y && (this.y = VV.y), VV.z > this._z && (this.z = VV.z), VV.w > this._w && (this.w = VV.w), this
       }
-      minimizeInPlaceFromFloats(MM, rM, iM, OM) {
-        return this.x = Math.min(MM, this._x), this.y = Math.min(rM, this._y), this.z = Math.min(iM, this._z), this.w = Math.min(OM, this._w), this
+      minimizeInPlaceFromFloats(VV, eV, xV, JV) {
+        return this.x = Math.min(VV, this._x), this.y = Math.min(eV, this._y), this.z = Math.min(xV, this._z), this.w = Math.min(JV, this._w), this
       }
-      maximizeInPlaceFromFloats(MM, rM, iM, OM) {
-        return this.x = Math.max(MM, this._x), this.y = Math.max(rM, this._y), this.z = Math.max(iM, this._z), this.w = Math.max(OM, this._w), this
+      maximizeInPlaceFromFloats(VV, eV, xV, JV) {
+        return this.x = Math.max(VV, this._x), this.y = Math.max(eV, this._y), this.z = Math.max(xV, this._z), this.w = Math.max(JV, this._w), this
       }
-      floorToRef(MM) {
-        return MM.x = Math.floor(this._x), MM.y = Math.floor(this._y), MM.z = Math.floor(this._z), MM.w = Math.floor(this._w), MM
+      floorToRef(VV) {
+        return VV.x = Math.floor(this._x), VV.y = Math.floor(this._y), VV.z = Math.floor(this._z), VV.w = Math.floor(this._w), VV
       }
       floor() {
-        return new HM(Math.floor(this._x), Math.floor(this._y), Math.floor(this._z), Math.floor(this._w))
+        return new rV(Math.floor(this._x), Math.floor(this._y), Math.floor(this._z), Math.floor(this._w))
       }
-      fractToRef(MM) {
-        return MM.x = this._x - Math.floor(this._x), MM.y = this._y - Math.floor(this._y), MM.z = this._z - Math.floor(this._z), MM.w = this._w - Math.floor(this._w), MM
+      fractToRef(VV) {
+        return VV.x = this._x - Math.floor(this._x), VV.y = this._y - Math.floor(this._y), VV.z = this._z - Math.floor(this._z), VV.w = this._w - Math.floor(this._w), VV
       }
       fract() {
-        return new HM(this._x - Math.floor(this._x), this._y - Math.floor(this._y), this._z - Math.floor(this._z), this._w - Math.floor(this._w))
+        return new rV(this._x - Math.floor(this._x), this._y - Math.floor(this._y), this._z - Math.floor(this._z), this._w - Math.floor(this._w))
       }
       length() {
         return Math.sqrt(this._x * this._x + this._y * this._y + this._z * this._z + this._w * this._w)
@@ -1274,176 +1274,176 @@ export const modules = {
       normalize() {
         return this.normalizeFromLength(this.length())
       }
-      normalizeFromLength(MM) {
-        return 0 === MM || 1 === MM ? this : this.scaleInPlace(1 / MM)
+      normalizeFromLength(VV) {
+        return 0 === VV || 1 === VV ? this : this.scaleInPlace(1 / VV)
       }
       normalizeToNew() {
-        return this.normalizeToRef(new HM)
+        return this.normalizeToRef(new rV)
       }
-      normalizeToRef(MM) {
-        const rM = this.length();
-        return 0 === rM || 1 === rM ? (MM.x = this._x, MM.y = this._y, MM.z = this._z, MM.w = this._w, MM) : this.scaleToRef(1 / rM, MM)
+      normalizeToRef(VV) {
+        const eV = this.length();
+        return 0 === eV || 1 === eV ? (VV.x = this._x, VV.y = this._y, VV.z = this._z, VV.w = this._w, VV) : this.scaleToRef(1 / eV, VV)
       }
       toVector3() {
-        return new mM(this._x, this._y, this._z)
+        return new vV(this._x, this._y, this._z)
       }
       clone() {
-        return new HM(this._x, this._y, this._z, this._w)
+        return new rV(this._x, this._y, this._z, this._w)
       }
-      jR(MM) {
-        return this.x = MM.x, this.y = MM.y, this.z = MM.z, this.w = MM.w, this
+      iG(VV) {
+        return this.x = VV.x, this.y = VV.y, this.z = VV.z, this.w = VV.w, this
       }
-      iMM(MM, rM, iM, OM) {
-        return this.x = MM, this.y = rM, this.z = iM, this.w = OM, this
+      FeV(VV, eV, xV, JV) {
+        return this.x = VV, this.y = eV, this.z = xV, this.w = JV, this
       }
-      set(MM, rM, iM, OM) {
-        return this.iMM(MM, rM, iM, OM)
+      set(VV, eV, xV, JV) {
+        return this.FeV(VV, eV, xV, JV)
       }
-      P_(MM) {
-        return this.x = this.y = this.z = this.w = MM, this
+      HVV(VV) {
+        return this.x = this.y = this.z = this.w = VV, this
       }
-      dot(MM) {
-        return this._x * MM.x + this._y * MM.y + this._z * MM.z + this._w * MM.w
+      dot(VV) {
+        return this._x * VV.x + this._y * VV.y + this._z * VV.z + this._w * VV.w
       }
-      static FromArray(MM, rM) {
-        return rM || (rM = 0), new HM(MM[rM], MM[rM + 1], MM[rM + 2], MM[rM + 3])
+      static FromArray(VV, eV) {
+        return eV || (eV = 0), new rV(VV[eV], VV[eV + 1], VV[eV + 2], VV[eV + 3])
       }
-      static FromArrayToRef(MM, rM, iM) {
-        return iM.x = MM[rM], iM.y = MM[rM + 1], iM.z = MM[rM + 2], iM.w = MM[rM + 3], iM
+      static FromArrayToRef(VV, eV, xV) {
+        return xV.x = VV[eV], xV.y = VV[eV + 1], xV.z = VV[eV + 2], xV.w = VV[eV + 3], xV
       }
-      static FromFloatArrayToRef(MM, rM, iM) {
-        return HM.FromArrayToRef(MM, rM, iM), iM
+      static FromFloatArrayToRef(VV, eV, xV) {
+        return rV.FromArrayToRef(VV, eV, xV), xV
       }
-      static FromFloatsToRef(MM, rM, iM, OM, SM) {
-        return SM.x = MM, SM.y = rM, SM.z = iM, SM.w = OM, SM
+      static FromFloatsToRef(VV, eV, xV, JV, YV) {
+        return YV.x = VV, YV.y = eV, YV.z = xV, YV.w = JV, YV
       }
       static Zero() {
-        return new HM(0, 0, 0, 0)
+        return new rV(0, 0, 0, 0)
       }
       static One() {
-        return new HM(1, 1, 1, 1)
+        return new rV(1, 1, 1, 1)
       }
       static Random() {
-        let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        return new HM((0, PM.RandomRange)(MM, rM), (0, PM.RandomRange)(MM, rM), (0, PM.RandomRange)(MM, rM), (0, PM.RandomRange)(MM, rM))
+        let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        return new rV((0, pV.RandomRange)(VV, eV), (0, pV.RandomRange)(VV, eV), (0, pV.RandomRange)(VV, eV), (0, pV.RandomRange)(VV, eV))
       }
       static RandomToRef() {
-        let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-          iM = arguments.length > 2 ? arguments[2] : void 0;
-        return iM.x = (0, PM.RandomRange)(MM, rM), iM.y = (0, PM.RandomRange)(MM, rM), iM.z = (0, PM.RandomRange)(MM, rM), iM.w = (0, PM.RandomRange)(MM, rM), iM
+        let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+          xV = arguments.length > 2 ? arguments[2] : void 0;
+        return xV.x = (0, pV.RandomRange)(VV, eV), xV.y = (0, pV.RandomRange)(VV, eV), xV.z = (0, pV.RandomRange)(VV, eV), xV.w = (0, pV.RandomRange)(VV, eV), xV
       }
-      static Clamp(MM, rM, iM) {
-        return HM.ClampToRef(MM, rM, iM, new HM)
+      static Clamp(VV, eV, xV) {
+        return rV.ClampToRef(VV, eV, xV, new rV)
       }
-      static ClampToRef(MM, rM, iM, OM) {
-        return OM.x = (0, PM.Clamp)(MM.x, rM.x, iM.x), OM.y = (0, PM.Clamp)(MM.y, rM.y, iM.y), OM.z = (0, PM.Clamp)(MM.z, rM.z, iM.z), OM.w = (0, PM.Clamp)(MM.w, rM.w, iM.w), OM
+      static ClampToRef(VV, eV, xV, JV) {
+        return JV.x = (0, pV.Clamp)(VV.x, eV.x, xV.x), JV.y = (0, pV.Clamp)(VV.y, eV.y, xV.y), JV.z = (0, pV.Clamp)(VV.z, eV.z, xV.z), JV.w = (0, pV.Clamp)(VV.w, eV.w, xV.w), JV
       }
-      static CheckExtends(MM, rM, iM) {
-        rM.minimizeInPlace(MM), iM.maximizeInPlace(MM)
+      static CheckExtends(VV, eV, xV) {
+        eV.minimizeInPlace(VV), xV.maximizeInPlace(VV)
       }
       static get ZeroReadOnly() {
-        return HM._ZeroReadOnly
+        return rV._ZeroReadOnly
       }
-      static Normalize(MM) {
-        return HM.NormalizeToRef(MM, new HM)
+      static Normalize(VV) {
+        return rV.NormalizeToRef(VV, new rV)
       }
-      static NormalizeToRef(MM, rM) {
-        return MM.normalizeToRef(rM), rM
+      static NormalizeToRef(VV, eV) {
+        return VV.normalizeToRef(eV), eV
       }
-      static Minimize(MM, rM) {
-        const iM = new HM;
-        return iM.jR(MM), iM.minimizeInPlace(rM), iM
+      static Minimize(VV, eV) {
+        const xV = new rV;
+        return xV.iG(VV), xV.minimizeInPlace(eV), xV
       }
-      static Maximize(MM, rM) {
-        const iM = new HM;
-        return iM.jR(MM), iM.maximizeInPlace(rM), iM
+      static Maximize(VV, eV) {
+        const xV = new rV;
+        return xV.iG(VV), xV.maximizeInPlace(eV), xV
       }
-      static Distance(MM, rM) {
-        return Math.sqrt(HM.DistanceSquared(MM, rM))
+      static Distance(VV, eV) {
+        return Math.sqrt(rV.DistanceSquared(VV, eV))
       }
-      static DistanceSquared(MM, rM) {
-        const iM = MM.x - rM.x,
-          OM = MM.y - rM.y,
-          SM = MM.z - rM.z,
-          jM = MM.w - rM.w;
-        return iM * iM + OM * OM + SM * SM + jM * jM
+      static DistanceSquared(VV, eV) {
+        const xV = VV.x - eV.x,
+          JV = VV.y - eV.y,
+          YV = VV.z - eV.z,
+          UV = VV.w - eV.w;
+        return xV * xV + JV * JV + YV * YV + UV * UV
       }
-      static Center(MM, rM) {
-        return HM.CenterToRef(MM, rM, new HM)
+      static Center(VV, eV) {
+        return rV.CenterToRef(VV, eV, new rV)
       }
-      static CenterToRef(MM, rM, iM) {
-        return iM.x = (MM.x + rM.x) / 2, iM.y = (MM.y + rM.y) / 2, iM.z = (MM.z + rM.z) / 2, iM.w = (MM.w + rM.w) / 2, iM
+      static CenterToRef(VV, eV, xV) {
+        return xV.x = (VV.x + eV.x) / 2, xV.y = (VV.y + eV.y) / 2, xV.z = (VV.z + eV.z) / 2, xV.w = (VV.w + eV.w) / 2, xV
       }
-      static TransformCoordinates(MM, rM) {
-        return HM.TransformCoordinatesToRef(MM, rM, new HM)
+      static TransformCoordinates(VV, eV) {
+        return rV.TransformCoordinatesToRef(VV, eV, new rV)
       }
-      static TransformCoordinatesToRef(MM, rM, iM) {
-        return HM.TransformCoordinatesFromFloatsToRef(MM._x, MM._y, MM._z, rM, iM), iM
+      static TransformCoordinatesToRef(VV, eV, xV) {
+        return rV.TransformCoordinatesFromFloatsToRef(VV._x, VV._y, VV._z, eV, xV), xV
       }
-      static TransformCoordinatesFromFloatsToRef(MM, rM, iM, OM, SM) {
-        const jM = OM.m,
-          aM = MM * jM[0] + rM * jM[4] + iM * jM[8] + jM[12],
-          PM = MM * jM[1] + rM * jM[5] + iM * jM[9] + jM[13],
-          nM = MM * jM[2] + rM * jM[6] + iM * jM[10] + jM[14],
-          QM = MM * jM[3] + rM * jM[7] + iM * jM[11] + jM[15];
-        return SM.x = aM, SM.y = PM, SM.z = nM, SM.w = QM, SM
+      static TransformCoordinatesFromFloatsToRef(VV, eV, xV, JV, YV) {
+        const UV = JV.m,
+          yV = VV * UV[0] + eV * UV[4] + xV * UV[8] + UV[12],
+          pV = VV * UV[1] + eV * UV[5] + xV * UV[9] + UV[13],
+          QV = VV * UV[2] + eV * UV[6] + xV * UV[10] + UV[14],
+          nV = VV * UV[3] + eV * UV[7] + xV * UV[11] + UV[15];
+        return YV.x = yV, YV.y = pV, YV.z = QV, YV.w = nV, YV
       }
-      static TransformNormal(MM, rM) {
-        return HM.TransformNormalToRef(MM, rM, new HM)
+      static TransformNormal(VV, eV) {
+        return rV.TransformNormalToRef(VV, eV, new rV)
       }
-      static TransformNormalToRef(MM, rM, iM) {
-        const OM = rM.m,
-          SM = MM.x * OM[0] + MM.y * OM[4] + MM.z * OM[8],
-          jM = MM.x * OM[1] + MM.y * OM[5] + MM.z * OM[9],
-          aM = MM.x * OM[2] + MM.y * OM[6] + MM.z * OM[10];
-        return iM.x = SM, iM.y = jM, iM.z = aM, iM.w = MM.w, iM
+      static TransformNormalToRef(VV, eV, xV) {
+        const JV = eV.m,
+          YV = VV.x * JV[0] + VV.y * JV[4] + VV.z * JV[8],
+          UV = VV.x * JV[1] + VV.y * JV[5] + VV.z * JV[9],
+          yV = VV.x * JV[2] + VV.y * JV[6] + VV.z * JV[10];
+        return xV.x = YV, xV.y = UV, xV.z = yV, xV.w = VV.w, xV
       }
-      static TransformNormalFromFloatsToRef(MM, rM, iM, OM, SM, jM) {
-        const aM = SM.m;
-        return jM.x = MM * aM[0] + rM * aM[4] + iM * aM[8], jM.y = MM * aM[1] + rM * aM[5] + iM * aM[9], jM.z = MM * aM[2] + rM * aM[6] + iM * aM[10], jM.w = OM, jM
+      static TransformNormalFromFloatsToRef(VV, eV, xV, JV, YV, UV) {
+        const yV = YV.m;
+        return UV.x = VV * yV[0] + eV * yV[4] + xV * yV[8], UV.y = VV * yV[1] + eV * yV[5] + xV * yV[9], UV.z = VV * yV[2] + eV * yV[6] + xV * yV[10], UV.w = JV, UV
       }
-      static FromVector3(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return new HM(MM._x, MM._y, MM._z, rM)
+      static FromVector3(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return new rV(VV._x, VV._y, VV._z, eV)
       }
-      static Dot(MM, rM) {
-        return MM.x * rM.x + MM.y * rM.y + MM.z * rM.z + MM.w * rM.w
+      static Dot(VV, eV) {
+        return VV.x * eV.x + VV.y * eV.y + VV.z * eV.z + VV.w * eV.w
       }
     }
-    HM._V8PerformanceHack = new HM(.5, .5, .5, .5), HM._ZeroReadOnly = HM.Zero();
-    class hM {
+    rV._V8PerformanceHack = new rV(.5, .5, .5, .5), rV._ZeroReadOnly = rV.Zero();
+    class kV {
       get x() {
         return this._x
       }
-      set x(MM) {
-        this._x = MM, this._isDirty = !0
+      set x(VV) {
+        this._x = VV, this._isDirty = !0
       }
       get y() {
         return this._y
       }
-      set y(MM) {
-        this._y = MM, this._isDirty = !0
+      set y(VV) {
+        this._y = VV, this._isDirty = !0
       }
       get z() {
         return this._z
       }
-      set z(MM) {
-        this._z = MM, this._isDirty = !0
+      set z(VV) {
+        this._z = VV, this._isDirty = !0
       }
       get w() {
         return this._w
       }
-      set w(MM) {
-        this._w = MM, this._isDirty = !0
+      set w(VV) {
+        this._w = VV, this._isDirty = !0
       }
       constructor() {
-        let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          OM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1;
-        this._isDirty = !0, this._x = MM, this._y = rM, this._z = iM, this._w = OM
+        let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          JV = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1;
+        this._isDirty = !0, this._x = VV, this._y = eV, this._z = xV, this._w = JV
       }
       toString() {
         return `{X: ${this._x} Y: ${this._y} Z: ${this._z} W: ${this._w}}`
@@ -1452,109 +1452,109 @@ export const modules = {
         return "Quaternion"
       }
       getHashCode() {
-        let MM = zM(this._x);
-        return MM = 397 * MM ^ zM(this._y), MM = 397 * MM ^ zM(this._z), MM = 397 * MM ^ zM(this._w), MM
+        let VV = wV(this._x);
+        return VV = 397 * VV ^ wV(this._y), VV = 397 * VV ^ wV(this._z), VV = 397 * VV ^ wV(this._w), VV
       }
-      HOM() {
+      WYV() {
         return [this._x, this._y, this._z, this._w]
       }
-      toArray(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return MM[rM] = this._x, MM[rM + 1] = this._y, MM[rM + 2] = this._z, MM[rM + 3] = this._w, this
+      toArray(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return VV[eV] = this._x, VV[eV + 1] = this._y, VV[eV + 2] = this._z, VV[eV + 3] = this._w, this
       }
-      cz(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return hM.FromArrayToRef(MM, rM, this)
+      wZ(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return kV.FromArrayToRef(VV, eV, this)
       }
-      equals(MM) {
-        return MM && this._x === MM._x && this._y === MM._y && this._z === MM._z && this._w === MM._w
+      equals(VV) {
+        return VV && this._x === VV._x && this._y === VV._y && this._z === VV._z && this._w === VV._w
       }
-      equalsWithEpsilon(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : OM.d;
-        return MM && (0, PM.WithinEpsilon)(this._x, MM._x, rM) && (0, PM.WithinEpsilon)(this._y, MM._y, rM) && (0, PM.WithinEpsilon)(this._z, MM._z, rM) && (0, PM.WithinEpsilon)(this._w, MM._w, rM)
+      equalsWithEpsilon(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : JV.b;
+        return VV && (0, pV.WithinEpsilon)(this._x, VV._x, eV) && (0, pV.WithinEpsilon)(this._y, VV._y, eV) && (0, pV.WithinEpsilon)(this._z, VV._z, eV) && (0, pV.WithinEpsilon)(this._w, VV._w, eV)
       }
-      isApprox(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : OM.d;
-        return MM && ((0, PM.WithinEpsilon)(this._x, MM._x, rM) && (0, PM.WithinEpsilon)(this._y, MM._y, rM) && (0, PM.WithinEpsilon)(this._z, MM._z, rM) && (0, PM.WithinEpsilon)(this._w, MM._w, rM) || (0, PM.WithinEpsilon)(this._x, -MM._x, rM) && (0, PM.WithinEpsilon)(this._y, -MM._y, rM) && (0, PM.WithinEpsilon)(this._z, -MM._z, rM) && (0, PM.WithinEpsilon)(this._w, -MM._w, rM))
+      isApprox(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : JV.b;
+        return VV && ((0, pV.WithinEpsilon)(this._x, VV._x, eV) && (0, pV.WithinEpsilon)(this._y, VV._y, eV) && (0, pV.WithinEpsilon)(this._z, VV._z, eV) && (0, pV.WithinEpsilon)(this._w, VV._w, eV) || (0, pV.WithinEpsilon)(this._x, -VV._x, eV) && (0, pV.WithinEpsilon)(this._y, -VV._y, eV) && (0, pV.WithinEpsilon)(this._z, -VV._z, eV) && (0, pV.WithinEpsilon)(this._w, -VV._w, eV))
       }
       clone() {
-        return new hM(this._x, this._y, this._z, this._w)
+        return new kV(this._x, this._y, this._z, this._w)
       }
-      jR(MM) {
-        return this._x = MM._x, this._y = MM._y, this._z = MM._z, this._w = MM._w, this._isDirty = !0, this
+      iG(VV) {
+        return this._x = VV._x, this._y = VV._y, this._z = VV._z, this._w = VV._w, this._isDirty = !0, this
       }
-      iMM(MM, rM, iM, OM) {
-        return this._x = MM, this._y = rM, this._z = iM, this._w = OM, this._isDirty = !0, this
+      FeV(VV, eV, xV, JV) {
+        return this._x = VV, this._y = eV, this._z = xV, this._w = JV, this._isDirty = !0, this
       }
-      set(MM, rM, iM, OM) {
-        return this.iMM(MM, rM, iM, OM)
+      set(VV, eV, xV, JV) {
+        return this.FeV(VV, eV, xV, JV)
       }
-      P_(MM) {
-        return this.iMM(MM, MM, MM, MM)
+      HVV(VV) {
+        return this.FeV(VV, VV, VV, VV)
       }
-      add(MM) {
-        return new hM(this._x + MM._x, this._y + MM._y, this._z + MM._z, this._w + MM._w)
+      add(VV) {
+        return new kV(this._x + VV._x, this._y + VV._y, this._z + VV._z, this._w + VV._w)
       }
-      addInPlace(MM) {
-        return this._x += MM._x, this._y += MM._y, this._z += MM._z, this._w += MM._w, this._isDirty = !0, this
+      addInPlace(VV) {
+        return this._x += VV._x, this._y += VV._y, this._z += VV._z, this._w += VV._w, this._isDirty = !0, this
       }
-      addToRef(MM, rM) {
-        return rM._x = this._x + MM._x, rM._y = this._y + MM._y, rM._z = this._z + MM._z, rM._w = this._w + MM._w, rM._isDirty = !0, rM
+      addToRef(VV, eV) {
+        return eV._x = this._x + VV._x, eV._y = this._y + VV._y, eV._z = this._z + VV._z, eV._w = this._w + VV._w, eV._isDirty = !0, eV
       }
-      addInPlaceFromFloats(MM, rM, iM, OM) {
-        return this._x += MM, this._y += rM, this._z += iM, this._w += OM, this._isDirty = !0, this
+      addInPlaceFromFloats(VV, eV, xV, JV) {
+        return this._x += VV, this._y += eV, this._z += xV, this._w += JV, this._isDirty = !0, this
       }
-      subtractToRef(MM, rM) {
-        return rM._x = this._x - MM._x, rM._y = this._y - MM._y, rM._z = this._z - MM._z, rM._w = this._w - MM._w, rM._isDirty = !0, rM
+      subtractToRef(VV, eV) {
+        return eV._x = this._x - VV._x, eV._y = this._y - VV._y, eV._z = this._z - VV._z, eV._w = this._w - VV._w, eV._isDirty = !0, eV
       }
-      subtractFromFloats(MM, rM, iM, OM) {
-        return this.subtractFromFloatsToRef(MM, rM, iM, OM, new hM)
+      subtractFromFloats(VV, eV, xV, JV) {
+        return this.subtractFromFloatsToRef(VV, eV, xV, JV, new kV)
       }
-      subtractFromFloatsToRef(MM, rM, iM, OM, SM) {
-        return SM._x = this._x - MM, SM._y = this._y - rM, SM._z = this._z - iM, SM._w = this._w - OM, SM._isDirty = !0, SM
+      subtractFromFloatsToRef(VV, eV, xV, JV, YV) {
+        return YV._x = this._x - VV, YV._y = this._y - eV, YV._z = this._z - xV, YV._w = this._w - JV, YV._isDirty = !0, YV
       }
-      subtract(MM) {
-        return new hM(this._x - MM._x, this._y - MM._y, this._z - MM._z, this._w - MM._w)
+      subtract(VV) {
+        return new kV(this._x - VV._x, this._y - VV._y, this._z - VV._z, this._w - VV._w)
       }
-      kOM(MM) {
-        return this._x -= MM._x, this._y -= MM._y, this._z -= MM._z, this._w -= MM._w, this._isDirty = !0, this
+      IYV(VV) {
+        return this._x -= VV._x, this._y -= VV._y, this._z -= VV._z, this._w -= VV._w, this._isDirty = !0, this
       }
-      scale(MM) {
-        return new hM(this._x * MM, this._y * MM, this._z * MM, this._w * MM)
+      scale(VV) {
+        return new kV(this._x * VV, this._y * VV, this._z * VV, this._w * VV)
       }
-      scaleToRef(MM, rM) {
-        return rM._x = this._x * MM, rM._y = this._y * MM, rM._z = this._z * MM, rM._w = this._w * MM, rM._isDirty = !0, rM
+      scaleToRef(VV, eV) {
+        return eV._x = this._x * VV, eV._y = this._y * VV, eV._z = this._z * VV, eV._w = this._w * VV, eV._isDirty = !0, eV
       }
-      scaleInPlace(MM) {
-        return this._x *= MM, this._y *= MM, this._z *= MM, this._w *= MM, this._isDirty = !0, this
+      scaleInPlace(VV) {
+        return this._x *= VV, this._y *= VV, this._z *= VV, this._w *= VV, this._isDirty = !0, this
       }
-      scaleAndAddToRef(MM, rM) {
-        return rM._x += this._x * MM, rM._y += this._y * MM, rM._z += this._z * MM, rM._w += this._w * MM, rM._isDirty = !0, rM
+      scaleAndAddToRef(VV, eV) {
+        return eV._x += this._x * VV, eV._y += this._y * VV, eV._z += this._z * VV, eV._w += this._w * VV, eV._isDirty = !0, eV
       }
-      multiply(MM) {
-        const rM = new hM(0, 0, 0, 1);
-        return this.multiplyToRef(MM, rM), rM
+      multiply(VV) {
+        const eV = new kV(0, 0, 0, 1);
+        return this.multiplyToRef(VV, eV), eV
       }
-      multiplyToRef(MM, rM) {
-        const iM = this._x * MM._w + this._y * MM._z - this._z * MM._y + this._w * MM._x,
-          OM = -this._x * MM._z + this._y * MM._w + this._z * MM._x + this._w * MM._y,
-          SM = this._x * MM._y - this._y * MM._x + this._z * MM._w + this._w * MM._z,
-          jM = -this._x * MM._x - this._y * MM._y - this._z * MM._z + this._w * MM._w;
-        return rM.iMM(iM, OM, SM, jM), rM
+      multiplyToRef(VV, eV) {
+        const xV = this._x * VV._w + this._y * VV._z - this._z * VV._y + this._w * VV._x,
+          JV = -this._x * VV._z + this._y * VV._w + this._z * VV._x + this._w * VV._y,
+          YV = this._x * VV._y - this._y * VV._x + this._z * VV._w + this._w * VV._z,
+          UV = -this._x * VV._x - this._y * VV._y - this._z * VV._z + this._w * VV._w;
+        return eV.FeV(xV, JV, YV, UV), eV
       }
-      multiplyInPlace(MM) {
-        return this.multiplyToRef(MM, this)
+      multiplyInPlace(VV) {
+        return this.multiplyToRef(VV, this)
       }
-      multiplyByFloats(MM, rM, iM, OM) {
-        return this._x *= MM, this._y *= rM, this._z *= iM, this._w *= OM, this._isDirty = !0, this
+      multiplyByFloats(VV, eV, xV, JV) {
+        return this._x *= VV, this._y *= eV, this._z *= xV, this._w *= JV, this._isDirty = !0, this
       }
-      divide(MM) {
+      divide(VV) {
         throw new ReferenceError("Can not divide a quaternion")
       }
-      divideToRef(MM, rM) {
+      divideToRef(VV, eV) {
         throw new ReferenceError("Can not divide a quaternion")
       }
-      divideInPlace(MM) {
+      divideInPlace(VV) {
         throw new ReferenceError("Can not divide a quaternion")
       }
       minimizeInPlace() {
@@ -1569,48 +1569,48 @@ export const modules = {
       maximizeInPlaceFromFloats() {
         throw new ReferenceError("Can not maximize a quaternion")
       }
-      VJ() {
-        return this.negateToRef(new hM)
+      gr() {
+        return this.negateToRef(new kV)
       }
       negateInPlace() {
         return this._x = -this._x, this._y = -this._y, this._z = -this._z, this._w = -this._w, this._isDirty = !0, this
       }
-      negateToRef(MM) {
-        return MM._x = -this._x, MM._y = -this._y, MM._z = -this._z, MM._w = -this._w, MM._isDirty = !0, MM
+      negateToRef(VV) {
+        return VV._x = -this._x, VV._y = -this._y, VV._z = -this._z, VV._w = -this._w, VV._isDirty = !0, VV
       }
-      IaM(MM, rM, iM, OM) {
-        return this._x === MM && this._y === rM && this._z === iM && this._w === OM
+      rQV(VV, eV, xV, JV) {
+        return this._x === VV && this._y === eV && this._z === xV && this._w === JV
       }
-      floorToRef(MM) {
+      floorToRef(VV) {
         throw new ReferenceError("Can not floor a quaternion")
       }
       floor() {
         throw new ReferenceError("Can not floor a quaternion")
       }
-      fractToRef(MM) {
+      fractToRef(VV) {
         throw new ReferenceError("Can not fract a quaternion")
       }
       fract() {
         throw new ReferenceError("Can not fract a quaternion")
       }
-      conjugateToRef(MM) {
-        return MM.iMM(-this._x, -this._y, -this._z, this._w), MM
+      conjugateToRef(VV) {
+        return VV.FeV(-this._x, -this._y, -this._z, this._w), VV
       }
       conjugateInPlace() {
         return this._x *= -1, this._y *= -1, this._z *= -1, this._isDirty = !0, this
       }
       conjugate() {
-        return new hM(-this._x, -this._y, -this._z, this._w)
+        return new kV(-this._x, -this._y, -this._z, this._w)
       }
       invert() {
-        const MM = this.conjugate(),
-          rM = this.lengthSquared();
-        return 0 == rM || 1 == rM || MM.scaleInPlace(1 / rM), MM
+        const VV = this.conjugate(),
+          eV = this.lengthSquared();
+        return 0 == eV || 1 == eV || VV.scaleInPlace(1 / eV), VV
       }
       invertInPlace() {
         this.conjugateInPlace();
-        const MM = this.lengthSquared();
-        return 0 == MM || 1 == MM || this.scaleInPlace(1 / MM), this
+        const VV = this.lengthSquared();
+        return 0 == VV || 1 == VV || this.scaleInPlace(1 / VV), this
       }
       lengthSquared() {
         return this._x * this._x + this._y * this._y + this._z * this._z + this._w * this._w
@@ -1621,266 +1621,266 @@ export const modules = {
       normalize() {
         return this.normalizeFromLength(this.length())
       }
-      normalizeFromLength(MM) {
-        return 0 === MM || 1 === MM ? this : this.scaleInPlace(1 / MM)
+      normalizeFromLength(VV) {
+        return 0 === VV || 1 === VV ? this : this.scaleInPlace(1 / VV)
       }
       normalizeToNew() {
-        const MM = new hM(0, 0, 0, 1);
-        return this.normalizeToRef(MM), MM
+        const VV = new kV(0, 0, 0, 1);
+        return this.normalizeToRef(VV), VV
       }
-      normalizeToRef(MM) {
-        const rM = this.length();
-        return 0 === rM || 1 === rM ? MM.iMM(this._x, this._y, this._z, this._w) : this.scaleToRef(1 / rM, MM)
+      normalizeToRef(VV) {
+        const eV = this.length();
+        return 0 === eV || 1 === eV ? VV.FeV(this._x, this._y, this._z, this._w) : this.scaleToRef(1 / eV, VV)
       }
       toEulerAngles() {
-        const MM = mM.Zero();
-        return this.toEulerAnglesToRef(MM), MM
+        const VV = vV.Zero();
+        return this.toEulerAnglesToRef(VV), VV
       }
-      toEulerAnglesToRef(MM) {
-        const rM = this._z,
-          iM = this._x,
-          OM = this._y,
-          SM = this._w,
-          jM = OM * rM - iM * SM,
-          aM = .4999999;
-        if (jM < -aM) MM._y = 2 * Math.atan2(OM, SM), MM._x = Math.PI / 2, MM._z = 0, MM._isDirty = !0;
-        else if (jM > aM) MM._y = 2 * Math.atan2(OM, SM), MM._x = -Math.PI / 2, MM._z = 0, MM._isDirty = !0;
+      toEulerAnglesToRef(VV) {
+        const eV = this._z,
+          xV = this._x,
+          JV = this._y,
+          YV = this._w,
+          UV = JV * eV - xV * YV,
+          yV = .4999999;
+        if (UV < -yV) VV._y = 2 * Math.atan2(JV, YV), VV._x = Math.PI / 2, VV._z = 0, VV._isDirty = !0;
+        else if (UV > yV) VV._y = 2 * Math.atan2(JV, YV), VV._x = -Math.PI / 2, VV._z = 0, VV._isDirty = !0;
         else {
-          const aM = SM * SM,
-            PM = rM * rM,
-            nM = iM * iM,
-            QM = OM * OM;
-          MM._z = Math.atan2(2 * (iM * OM + rM * SM), -PM - nM + QM + aM), MM._x = Math.asin(-2 * jM), MM._y = Math.atan2(2 * (rM * iM + OM * SM), PM - nM - QM + aM), MM._isDirty = !0
+          const yV = YV * YV,
+            pV = eV * eV,
+            QV = xV * xV,
+            nV = JV * JV;
+          VV._z = Math.atan2(2 * (xV * JV + eV * YV), -pV - QV + nV + yV), VV._x = Math.asin(-2 * UV), VV._y = Math.atan2(2 * (eV * xV + JV * YV), pV - QV - nV + yV), VV._isDirty = !0
         }
-        return MM
+        return VV
       }
-      toAlphaBetaGammaToRef(MM) {
-        const rM = this._z,
-          iM = this._x,
-          OM = this._y,
-          SM = this._w,
-          jM = Math.sqrt(iM * iM + OM * OM),
-          aM = Math.sqrt(rM * rM + SM * SM),
-          PM = 2 * Math.atan2(jM, aM),
-          nM = 2 * Math.atan2(rM, SM),
-          QM = 2 * Math.atan2(OM, iM),
-          zM = (nM + QM) / 2,
-          LM = (nM - QM) / 2;
-        return MM.set(LM, PM, zM), MM
+      toAlphaBetaGammaToRef(VV) {
+        const eV = this._z,
+          xV = this._x,
+          JV = this._y,
+          YV = this._w,
+          UV = Math.sqrt(xV * xV + JV * JV),
+          yV = Math.sqrt(eV * eV + YV * YV),
+          pV = 2 * Math.atan2(UV, yV),
+          QV = 2 * Math.atan2(eV, YV),
+          nV = 2 * Math.atan2(JV, xV),
+          wV = (QV + nV) / 2,
+          ZV = (QV - nV) / 2;
+        return VV.set(ZV, pV, wV), VV
       }
-      toRotationMatrix(MM) {
-        return JM.FromQuaternionToRef(this, MM), MM
+      toRotationMatrix(VV) {
+        return bV.FromQuaternionToRef(this, VV), VV
       }
-      fromRotationMatrix(MM) {
-        return hM.FromRotationMatrixToRef(MM, this), this
+      fromRotationMatrix(VV) {
+        return kV.FromRotationMatrixToRef(VV, this), this
       }
-      dot(MM) {
-        return this._x * MM._x + this._y * MM._y + this._z * MM._z + this._w * MM._w
+      dot(VV) {
+        return this._x * VV._x + this._y * VV._y + this._z * VV._z + this._w * VV._w
       }
       toAxisAngle() {
-        const MM = mM.Zero();
+        const VV = vV.Zero();
         return {
-          axis: MM,
-          angle: this.toAxisAngleToRef(MM)
+          axis: VV,
+          angle: this.toAxisAngleToRef(VV)
         }
       }
-      toAxisAngleToRef(MM) {
-        let rM;
-        const iM = Math.sqrt(this._x * this._x + this._y * this._y + this._z * this._z),
-          OM = this._w;
-        return iM > 0 ? (rM = 2 * Math.atan2(iM, OM), MM.set(this._x / iM, this._y / iM, this._z / iM)) : (rM = 0, MM.set(1, 0, 0)), rM
+      toAxisAngleToRef(VV) {
+        let eV;
+        const xV = Math.sqrt(this._x * this._x + this._y * this._y + this._z * this._z),
+          JV = this._w;
+        return xV > 0 ? (eV = 2 * Math.atan2(xV, JV), VV.set(this._x / xV, this._y / xV, this._z / xV)) : (eV = 0, VV.set(1, 0, 0)), eV
       }
-      static FromRotationMatrix(MM) {
-        const rM = new hM;
-        return hM.FromRotationMatrixToRef(MM, rM), rM
+      static FromRotationMatrix(VV) {
+        const eV = new kV;
+        return kV.FromRotationMatrixToRef(VV, eV), eV
       }
-      static FromRotationMatrixToRef(MM, rM) {
-        const iM = MM.m,
-          OM = iM[0],
-          SM = iM[4],
-          jM = iM[8],
-          aM = iM[1],
-          PM = iM[5],
-          nM = iM[9],
-          QM = iM[2],
-          zM = iM[6],
-          LM = iM[10],
-          mM = OM + PM + LM;
-        let HM;
-        return mM > 0 ? (HM = .5 / Math.sqrt(mM + 1), rM._w = .25 / HM, rM._x = (zM - nM) * HM, rM._y = (jM - QM) * HM, rM._z = (aM - SM) * HM, rM._isDirty = !0) : OM > PM && OM > LM ? (HM = 2 * Math.sqrt(1 + OM - PM - LM), rM._w = (zM - nM) / HM, rM._x = .25 * HM, rM._y = (SM + aM) / HM, rM._z = (jM + QM) / HM, rM._isDirty = !0) : PM > LM ? (HM = 2 * Math.sqrt(1 + PM - OM - LM), rM._w = (jM - QM) / HM, rM._x = (SM + aM) / HM, rM._y = .25 * HM, rM._z = (nM + zM) / HM, rM._isDirty = !0) : (HM = 2 * Math.sqrt(1 + LM - OM - PM), rM._w = (aM - SM) / HM, rM._x = (jM + QM) / HM, rM._y = (nM + zM) / HM, rM._z = .25 * HM, rM._isDirty = !0), rM
+      static FromRotationMatrixToRef(VV, eV) {
+        const xV = VV.m,
+          JV = xV[0],
+          YV = xV[4],
+          UV = xV[8],
+          yV = xV[1],
+          pV = xV[5],
+          QV = xV[9],
+          nV = xV[2],
+          wV = xV[6],
+          ZV = xV[10],
+          vV = JV + pV + ZV;
+        let rV;
+        return vV > 0 ? (rV = .5 / Math.sqrt(vV + 1), eV._w = .25 / rV, eV._x = (wV - QV) * rV, eV._y = (UV - nV) * rV, eV._z = (yV - YV) * rV, eV._isDirty = !0) : JV > pV && JV > ZV ? (rV = 2 * Math.sqrt(1 + JV - pV - ZV), eV._w = (wV - QV) / rV, eV._x = .25 * rV, eV._y = (YV + yV) / rV, eV._z = (UV + nV) / rV, eV._isDirty = !0) : pV > ZV ? (rV = 2 * Math.sqrt(1 + pV - JV - ZV), eV._w = (UV - nV) / rV, eV._x = (YV + yV) / rV, eV._y = .25 * rV, eV._z = (QV + wV) / rV, eV._isDirty = !0) : (rV = 2 * Math.sqrt(1 + ZV - JV - pV), eV._w = (yV - YV) / rV, eV._x = (UV + nV) / rV, eV._y = (QV + wV) / rV, eV._z = .25 * rV, eV._isDirty = !0), eV
       }
-      static Dot(MM, rM) {
-        return MM._x * rM._x + MM._y * rM._y + MM._z * rM._z + MM._w * rM._w
+      static Dot(VV, eV) {
+        return VV._x * eV._x + VV._y * eV._y + VV._z * eV._z + VV._w * eV._w
       }
-      static AreClose(MM, rM) {
-        let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : .1;
-        const OM = hM.Dot(MM, rM);
-        return 1 - OM * OM <= iM
+      static AreClose(VV, eV) {
+        let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : .1;
+        const JV = kV.Dot(VV, eV);
+        return 1 - JV * JV <= xV
       }
-      static SmoothToRef(MM, rM, iM, OM, SM) {
-        let jM = 0 === OM ? 1 : iM / OM;
-        return jM = (0, PM.Clamp)(jM, 0, 1), hM.SlerpToRef(MM, rM, jM, SM), SM
+      static SmoothToRef(VV, eV, xV, JV, YV) {
+        let UV = 0 === JV ? 1 : xV / JV;
+        return UV = (0, pV.Clamp)(UV, 0, 1), kV.SlerpToRef(VV, eV, UV, YV), YV
       }
       static Zero() {
-        return new hM(0, 0, 0, 0)
+        return new kV(0, 0, 0, 0)
       }
-      static Inverse(MM) {
-        return new hM(-MM._x, -MM._y, -MM._z, MM._w)
+      static Inverse(VV) {
+        return new kV(-VV._x, -VV._y, -VV._z, VV._w)
       }
-      static InverseToRef(MM, rM) {
-        return rM.set(-MM._x, -MM._y, -MM._z, MM._w), rM
+      static InverseToRef(VV, eV) {
+        return eV.set(-VV._x, -VV._y, -VV._z, VV._w), eV
       }
       static Identity() {
-        return new hM(0, 0, 0, 1)
+        return new kV(0, 0, 0, 1)
       }
-      static IsIdentity(MM) {
-        return MM && 0 === MM._x && 0 === MM._y && 0 === MM._z && 1 === MM._w
+      static IsIdentity(VV) {
+        return VV && 0 === VV._x && 0 === VV._y && 0 === VV._z && 1 === VV._w
       }
-      static RotationAxis(MM, rM) {
-        return hM.RotationAxisToRef(MM, rM, new hM)
+      static RotationAxis(VV, eV) {
+        return kV.RotationAxisToRef(VV, eV, new kV)
       }
-      static RotationAxisToRef(MM, rM, iM) {
-        iM._w = Math.cos(rM / 2);
-        const OM = Math.sin(rM / 2) / MM.length();
-        return iM._x = MM._x * OM, iM._y = MM._y * OM, iM._z = MM._z * OM, iM._isDirty = !0, iM
+      static RotationAxisToRef(VV, eV, xV) {
+        xV._w = Math.cos(eV / 2);
+        const JV = Math.sin(eV / 2) / VV.length();
+        return xV._x = VV._x * JV, xV._y = VV._y * JV, xV._z = VV._z * JV, xV._isDirty = !0, xV
       }
-      static FromArray(MM, rM) {
-        return rM || (rM = 0), new hM(MM[rM], MM[rM + 1], MM[rM + 2], MM[rM + 3])
+      static FromArray(VV, eV) {
+        return eV || (eV = 0), new kV(VV[eV], VV[eV + 1], VV[eV + 2], VV[eV + 3])
       }
-      static FromArrayToRef(MM, rM, iM) {
-        return iM._x = MM[rM], iM._y = MM[rM + 1], iM._z = MM[rM + 2], iM._w = MM[rM + 3], iM._isDirty = !0, iM
+      static FromArrayToRef(VV, eV, xV) {
+        return xV._x = VV[eV], xV._y = VV[eV + 1], xV._z = VV[eV + 2], xV._w = VV[eV + 3], xV._isDirty = !0, xV
       }
-      static FromFloatsToRef(MM, rM, iM, OM, SM) {
-        return SM.iMM(MM, rM, iM, OM), SM
+      static FromFloatsToRef(VV, eV, xV, JV, YV) {
+        return YV.FeV(VV, eV, xV, JV), YV
       }
-      static FromEulerAngles(MM, rM, iM) {
-        const OM = new hM;
-        return hM.RotationYawPitchRollToRef(rM, MM, iM, OM), OM
+      static FromEulerAngles(VV, eV, xV) {
+        const JV = new kV;
+        return kV.RotationYawPitchRollToRef(eV, VV, xV, JV), JV
       }
-      static FromEulerAnglesToRef(MM, rM, iM, OM) {
-        return hM.RotationYawPitchRollToRef(rM, MM, iM, OM), OM
+      static FromEulerAnglesToRef(VV, eV, xV, JV) {
+        return kV.RotationYawPitchRollToRef(eV, VV, xV, JV), JV
       }
-      static FromEulerVector(MM) {
-        const rM = new hM;
-        return hM.RotationYawPitchRollToRef(MM._y, MM._x, MM._z, rM), rM
+      static FromEulerVector(VV) {
+        const eV = new kV;
+        return kV.RotationYawPitchRollToRef(VV._y, VV._x, VV._z, eV), eV
       }
-      static FromEulerVectorToRef(MM, rM) {
-        return hM.RotationYawPitchRollToRef(MM._y, MM._x, MM._z, rM), rM
+      static FromEulerVectorToRef(VV, eV) {
+        return kV.RotationYawPitchRollToRef(VV._y, VV._x, VV._z, eV), eV
       }
-      static FromUnitVectorsToRef(MM, rM, iM) {
-        let SM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : OM.d;
-        const jM = mM.Dot(MM, rM) + 1;
-        return jM < SM ? Math.abs(MM.x) > Math.abs(MM.z) ? iM.set(-MM.y, MM.x, 0, 0) : iM.set(0, -MM.z, MM.y, 0) : (mM.CrossToRef(MM, rM, yM.sh[0]), iM.set(yM.sh[0].x, yM.sh[0].y, yM.sh[0].z, jM)), iM.normalize()
+      static FromUnitVectorsToRef(VV, eV, xV) {
+        let YV = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : JV.b;
+        const UV = vV.Dot(VV, eV) + 1;
+        return UV < YV ? Math.abs(VV.x) > Math.abs(VV.z) ? xV.set(-VV.y, VV.x, 0, 0) : xV.set(0, -VV.z, VV.y, 0) : (vV.CrossToRef(VV, eV, BV.Ik[0]), xV.set(BV.Ik[0].x, BV.Ik[0].y, BV.Ik[0].z, UV)), xV.normalize()
       }
-      static RotationYawPitchRoll(MM, rM, iM) {
-        const OM = new hM;
-        return hM.RotationYawPitchRollToRef(MM, rM, iM, OM), OM
+      static RotationYawPitchRoll(VV, eV, xV) {
+        const JV = new kV;
+        return kV.RotationYawPitchRollToRef(VV, eV, xV, JV), JV
       }
-      static RotationYawPitchRollToRef(MM, rM, iM, OM) {
-        const SM = .5 * iM,
-          jM = .5 * rM,
-          aM = .5 * MM,
-          PM = Math.sin(SM),
-          nM = Math.cos(SM),
-          QM = Math.sin(jM),
-          zM = Math.cos(jM),
-          LM = Math.sin(aM),
-          mM = Math.cos(aM);
-        return OM._x = mM * QM * nM + LM * zM * PM, OM._y = LM * zM * nM - mM * QM * PM, OM._z = mM * zM * PM - LM * QM * nM, OM._w = mM * zM * nM + LM * QM * PM, OM._isDirty = !0, OM
+      static RotationYawPitchRollToRef(VV, eV, xV, JV) {
+        const YV = .5 * xV,
+          UV = .5 * eV,
+          yV = .5 * VV,
+          pV = Math.sin(YV),
+          QV = Math.cos(YV),
+          nV = Math.sin(UV),
+          wV = Math.cos(UV),
+          ZV = Math.sin(yV),
+          vV = Math.cos(yV);
+        return JV._x = vV * nV * QV + ZV * wV * pV, JV._y = ZV * wV * QV - vV * nV * pV, JV._z = vV * wV * pV - ZV * nV * QV, JV._w = vV * wV * QV + ZV * nV * pV, JV._isDirty = !0, JV
       }
-      static RotationAlphaBetaGamma(MM, rM, iM) {
-        const OM = new hM;
-        return hM.RotationAlphaBetaGammaToRef(MM, rM, iM, OM), OM
+      static RotationAlphaBetaGamma(VV, eV, xV) {
+        const JV = new kV;
+        return kV.RotationAlphaBetaGammaToRef(VV, eV, xV, JV), JV
       }
-      static RotationAlphaBetaGammaToRef(MM, rM, iM, OM) {
-        const SM = .5 * (iM + MM),
-          jM = .5 * (iM - MM),
-          aM = .5 * rM;
-        return OM._x = Math.cos(jM) * Math.sin(aM), OM._y = Math.sin(jM) * Math.sin(aM), OM._z = Math.sin(SM) * Math.cos(aM), OM._w = Math.cos(SM) * Math.cos(aM), OM._isDirty = !0, OM
+      static RotationAlphaBetaGammaToRef(VV, eV, xV, JV) {
+        const YV = .5 * (xV + VV),
+          UV = .5 * (xV - VV),
+          yV = .5 * eV;
+        return JV._x = Math.cos(UV) * Math.sin(yV), JV._y = Math.sin(UV) * Math.sin(yV), JV._z = Math.sin(YV) * Math.cos(yV), JV._w = Math.cos(YV) * Math.cos(yV), JV._isDirty = !0, JV
       }
-      static RotationQuaternionFromAxis(MM, rM, iM) {
-        const OM = new hM(0, 0, 0, 0);
-        return hM.RotationQuaternionFromAxisToRef(MM, rM, iM, OM), OM
+      static RotationQuaternionFromAxis(VV, eV, xV) {
+        const JV = new kV(0, 0, 0, 0);
+        return kV.RotationQuaternionFromAxisToRef(VV, eV, xV, JV), JV
       }
-      static RotationQuaternionFromAxisToRef(MM, rM, iM, OM) {
-        const SM = dM.Matrix[0];
-        return MM = MM.normalizeToRef(dM.sh[0]), rM = rM.normalizeToRef(dM.sh[1]), iM = iM.normalizeToRef(dM.sh[2]), JM.FromXYZAxesToRef(MM, rM, iM, SM), hM.FromRotationMatrixToRef(SM, OM), OM
+      static RotationQuaternionFromAxisToRef(VV, eV, xV, JV) {
+        const YV = EV.Matrix[0];
+        return VV = VV.normalizeToRef(EV.Ik[0]), eV = eV.normalizeToRef(EV.Ik[1]), xV = xV.normalizeToRef(EV.Ik[2]), bV.FromXYZAxesToRef(VV, eV, xV, YV), kV.FromRotationMatrixToRef(YV, JV), JV
       }
-      static FromLookDirectionLH(MM, rM) {
-        const iM = new hM;
-        return hM.FromLookDirectionLHToRef(MM, rM, iM), iM
+      static FromLookDirectionLH(VV, eV) {
+        const xV = new kV;
+        return kV.FromLookDirectionLHToRef(VV, eV, xV), xV
       }
-      static FromLookDirectionLHToRef(MM, rM, iM) {
-        const OM = dM.Matrix[0];
-        return JM.LookDirectionLHToRef(MM, rM, OM), hM.FromRotationMatrixToRef(OM, iM), iM
+      static FromLookDirectionLHToRef(VV, eV, xV) {
+        const JV = EV.Matrix[0];
+        return bV.LookDirectionLHToRef(VV, eV, JV), kV.FromRotationMatrixToRef(JV, xV), xV
       }
-      static FromLookDirectionRH(MM, rM) {
-        const iM = new hM;
-        return hM.FromLookDirectionRHToRef(MM, rM, iM), iM
+      static FromLookDirectionRH(VV, eV) {
+        const xV = new kV;
+        return kV.FromLookDirectionRHToRef(VV, eV, xV), xV
       }
-      static FromLookDirectionRHToRef(MM, rM, iM) {
-        const OM = dM.Matrix[0];
-        return JM.LookDirectionRHToRef(MM, rM, OM), hM.FromRotationMatrixToRef(OM, iM)
+      static FromLookDirectionRHToRef(VV, eV, xV) {
+        const JV = EV.Matrix[0];
+        return bV.LookDirectionRHToRef(VV, eV, JV), kV.FromRotationMatrixToRef(JV, xV)
       }
-      static Slerp(MM, rM, iM) {
-        const OM = hM.Identity();
-        return hM.SlerpToRef(MM, rM, iM, OM), OM
+      static Slerp(VV, eV, xV) {
+        const JV = kV.Identity();
+        return kV.SlerpToRef(VV, eV, xV, JV), JV
       }
-      static SlerpToRef(MM, rM, iM, OM) {
-        let SM, jM, aM = MM._x * rM._x + MM._y * rM._y + MM._z * rM._z + MM._w * rM._w,
-          PM = !1;
-        if (aM < 0 && (PM = !0, aM = -aM), aM > .999999) jM = 1 - iM, SM = PM ? -iM : iM;
+      static SlerpToRef(VV, eV, xV, JV) {
+        let YV, UV, yV = VV._x * eV._x + VV._y * eV._y + VV._z * eV._z + VV._w * eV._w,
+          pV = !1;
+        if (yV < 0 && (pV = !0, yV = -yV), yV > .999999) UV = 1 - xV, YV = pV ? -xV : xV;
         else {
-          const MM = Math.acos(aM),
-            rM = 1 / Math.sin(MM);
-          jM = Math.sin((1 - iM) * MM) * rM, SM = PM ? -Math.sin(iM * MM) * rM : Math.sin(iM * MM) * rM
+          const VV = Math.acos(yV),
+            eV = 1 / Math.sin(VV);
+          UV = Math.sin((1 - xV) * VV) * eV, YV = pV ? -Math.sin(xV * VV) * eV : Math.sin(xV * VV) * eV
         }
-        return OM._x = jM * MM._x + SM * rM._x, OM._y = jM * MM._y + SM * rM._y, OM._z = jM * MM._z + SM * rM._z, OM._w = jM * MM._w + SM * rM._w, OM._isDirty = !0, OM
+        return JV._x = UV * VV._x + YV * eV._x, JV._y = UV * VV._y + YV * eV._y, JV._z = UV * VV._z + YV * eV._z, JV._w = UV * VV._w + YV * eV._w, JV._isDirty = !0, JV
       }
-      static Hermite(MM, rM, iM, OM, SM) {
-        const jM = SM * SM,
-          aM = SM * jM,
-          PM = 2 * aM - 3 * jM + 1,
-          nM = -2 * aM + 3 * jM,
-          QM = aM - 2 * jM + SM,
-          zM = aM - jM,
-          LM = MM._x * PM + iM._x * nM + rM._x * QM + OM._x * zM,
-          mM = MM._y * PM + iM._y * nM + rM._y * QM + OM._y * zM,
-          HM = MM._z * PM + iM._z * nM + rM._z * QM + OM._z * zM,
-          JM = MM._w * PM + iM._w * nM + rM._w * QM + OM._w * zM;
-        return new hM(LM, mM, HM, JM)
+      static Hermite(VV, eV, xV, JV, YV) {
+        const UV = YV * YV,
+          yV = YV * UV,
+          pV = 2 * yV - 3 * UV + 1,
+          QV = -2 * yV + 3 * UV,
+          nV = yV - 2 * UV + YV,
+          wV = yV - UV,
+          ZV = VV._x * pV + xV._x * QV + eV._x * nV + JV._x * wV,
+          vV = VV._y * pV + xV._y * QV + eV._y * nV + JV._y * wV,
+          rV = VV._z * pV + xV._z * QV + eV._z * nV + JV._z * wV,
+          bV = VV._w * pV + xV._w * QV + eV._w * nV + JV._w * wV;
+        return new kV(ZV, vV, rV, bV)
       }
-      static Hermite1stDerivative(MM, rM, iM, OM, SM) {
-        const jM = new hM;
-        return this.Hermite1stDerivativeToRef(MM, rM, iM, OM, SM, jM), jM
+      static Hermite1stDerivative(VV, eV, xV, JV, YV) {
+        const UV = new kV;
+        return this.Hermite1stDerivativeToRef(VV, eV, xV, JV, YV, UV), UV
       }
-      static Hermite1stDerivativeToRef(MM, rM, iM, OM, SM, jM) {
-        const aM = SM * SM;
-        return jM._x = 6 * (aM - SM) * MM._x + (3 * aM - 4 * SM + 1) * rM._x + 6 * (-aM + SM) * iM._x + (3 * aM - 2 * SM) * OM._x, jM._y = 6 * (aM - SM) * MM._y + (3 * aM - 4 * SM + 1) * rM._y + 6 * (-aM + SM) * iM._y + (3 * aM - 2 * SM) * OM._y, jM._z = 6 * (aM - SM) * MM._z + (3 * aM - 4 * SM + 1) * rM._z + 6 * (-aM + SM) * iM._z + (3 * aM - 2 * SM) * OM._z, jM._w = 6 * (aM - SM) * MM._w + (3 * aM - 4 * SM + 1) * rM._w + 6 * (-aM + SM) * iM._w + (3 * aM - 2 * SM) * OM._w, jM._isDirty = !0, jM
+      static Hermite1stDerivativeToRef(VV, eV, xV, JV, YV, UV) {
+        const yV = YV * YV;
+        return UV._x = 6 * (yV - YV) * VV._x + (3 * yV - 4 * YV + 1) * eV._x + 6 * (-yV + YV) * xV._x + (3 * yV - 2 * YV) * JV._x, UV._y = 6 * (yV - YV) * VV._y + (3 * yV - 4 * YV + 1) * eV._y + 6 * (-yV + YV) * xV._y + (3 * yV - 2 * YV) * JV._y, UV._z = 6 * (yV - YV) * VV._z + (3 * yV - 4 * YV + 1) * eV._z + 6 * (-yV + YV) * xV._z + (3 * yV - 2 * YV) * JV._z, UV._w = 6 * (yV - YV) * VV._w + (3 * yV - 4 * YV + 1) * eV._w + 6 * (-yV + YV) * xV._w + (3 * yV - 2 * YV) * JV._w, UV._isDirty = !0, UV
       }
-      static Normalize(MM) {
-        const rM = hM.Zero();
-        return hM.NormalizeToRef(MM, rM), rM
+      static Normalize(VV) {
+        const eV = kV.Zero();
+        return kV.NormalizeToRef(VV, eV), eV
       }
-      static NormalizeToRef(MM, rM) {
-        return MM.normalizeToRef(rM), rM
+      static NormalizeToRef(VV, eV) {
+        return VV.normalizeToRef(eV), eV
       }
-      static Clamp(MM, rM, iM) {
-        const OM = new hM;
-        return hM.ClampToRef(MM, rM, iM, OM), OM
+      static Clamp(VV, eV, xV) {
+        const JV = new kV;
+        return kV.ClampToRef(VV, eV, xV, JV), JV
       }
-      static ClampToRef(MM, rM, iM, OM) {
-        return OM.iMM((0, PM.Clamp)(MM.x, rM.x, iM.x), (0, PM.Clamp)(MM.y, rM.y, iM.y), (0, PM.Clamp)(MM.z, rM.z, iM.z), (0, PM.Clamp)(MM.w, rM.w, iM.w))
+      static ClampToRef(VV, eV, xV, JV) {
+        return JV.FeV((0, pV.Clamp)(VV.x, eV.x, xV.x), (0, pV.Clamp)(VV.y, eV.y, xV.y), (0, pV.Clamp)(VV.z, eV.z, xV.z), (0, pV.Clamp)(VV.w, eV.w, xV.w))
       }
       static Random() {
-        let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        return new hM((0, PM.RandomRange)(MM, rM), (0, PM.RandomRange)(MM, rM), (0, PM.RandomRange)(MM, rM), (0, PM.RandomRange)(MM, rM))
+        let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        return new kV((0, pV.RandomRange)(VV, eV), (0, pV.RandomRange)(VV, eV), (0, pV.RandomRange)(VV, eV), (0, pV.RandomRange)(VV, eV))
       }
       static RandomToRef() {
-        let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        return (arguments.length > 2 ? arguments[2] : void 0).iMM((0, PM.RandomRange)(MM, rM), (0, PM.RandomRange)(MM, rM), (0, PM.RandomRange)(MM, rM), (0, PM.RandomRange)(MM, rM))
+        let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        return (arguments.length > 2 ? arguments[2] : void 0).FeV((0, pV.RandomRange)(VV, eV), (0, pV.RandomRange)(VV, eV), (0, pV.RandomRange)(VV, eV), (0, pV.RandomRange)(VV, eV))
       }
       static Minimize() {
         throw new ReferenceError("Quaternion.Minimize does not make sense")
@@ -1888,48 +1888,48 @@ export const modules = {
       static Maximize() {
         throw new ReferenceError("Quaternion.Maximize does not make sense")
       }
-      static Distance(MM, rM) {
-        return Math.sqrt(hM.DistanceSquared(MM, rM))
+      static Distance(VV, eV) {
+        return Math.sqrt(kV.DistanceSquared(VV, eV))
       }
-      static DistanceSquared(MM, rM) {
-        const iM = MM.x - rM.x,
-          OM = MM.y - rM.y,
-          SM = MM.z - rM.z,
-          jM = MM.w - rM.w;
-        return iM * iM + OM * OM + SM * SM + jM * jM
+      static DistanceSquared(VV, eV) {
+        const xV = VV.x - eV.x,
+          JV = VV.y - eV.y,
+          YV = VV.z - eV.z,
+          UV = VV.w - eV.w;
+        return xV * xV + JV * JV + YV * YV + UV * UV
       }
-      static Center(MM, rM) {
-        return hM.CenterToRef(MM, rM, hM.Zero())
+      static Center(VV, eV) {
+        return kV.CenterToRef(VV, eV, kV.Zero())
       }
-      static CenterToRef(MM, rM, iM) {
-        return iM.iMM((MM.x + rM.x) / 2, (MM.y + rM.y) / 2, (MM.z + rM.z) / 2, (MM.w + rM.w) / 2)
+      static CenterToRef(VV, eV, xV) {
+        return xV.FeV((VV.x + eV.x) / 2, (VV.y + eV.y) / 2, (VV.z + eV.z) / 2, (VV.w + eV.w) / 2)
       }
     }
-    hM._V8PerformanceHack = new hM(.5, .5, .5, .5);
-    class JM {
+    kV._V8PerformanceHack = new kV(.5, .5, .5, .5);
+    class bV {
       static get Use64Bits() {
-        return jM.b.MatrixUse64Bits
+        return UV.c.MatrixUse64Bits
       }
       get m() {
         return this._m
       }
       markAsUpdated() {
-        this.updateFlag = nM.h._UpdateFlagSeed++, this._isIdentity = !1, this._isIdentity3x2 = !1, this._isIdentityDirty = !0, this._isIdentity3x2Dirty = !0
+        this.updateFlag = QV.h._UpdateFlagSeed++, this._isIdentity = !1, this._isIdentity3x2 = !1, this._isIdentityDirty = !0, this._isIdentity3x2Dirty = !0
       }
-      _updateIdentityStatus(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          iM = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-          OM = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-        this._isIdentity = MM, this._isIdentity3x2 = MM || iM, this._isIdentityDirty = !this._isIdentity && rM, this._isIdentity3x2Dirty = !this._isIdentity3x2 && OM
+      _updateIdentityStatus(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          xV = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+          JV = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+        this._isIdentity = VV, this._isIdentity3x2 = VV || xV, this._isIdentityDirty = !this._isIdentity && eV, this._isIdentity3x2Dirty = !this._isIdentity3x2 && JV
       }
       constructor() {
-        this._isIdentity = !1, this._isIdentityDirty = !0, this._isIdentity3x2 = !0, this._isIdentity3x2Dirty = !0, this.updateFlag = -1, jM.b.MatrixTrackPrecisionChange && jM.b.MatrixTrackedMatrices.push(this), this._m = new jM.b.MatrixCurrentType(16), this.markAsUpdated()
+        this._isIdentity = !1, this._isIdentityDirty = !0, this._isIdentity3x2 = !0, this._isIdentity3x2Dirty = !0, this.updateFlag = -1, UV.c.MatrixTrackPrecisionChange && UV.c.MatrixTrackedMatrices.push(this), this._m = new UV.c.MatrixCurrentType(16), this.markAsUpdated()
       }
       isIdentity() {
         if (this._isIdentityDirty) {
           this._isIdentityDirty = !1;
-          const MM = this._m;
-          this._isIdentity = 1 === MM[0] && 0 === MM[1] && 0 === MM[2] && 0 === MM[3] && 0 === MM[4] && 1 === MM[5] && 0 === MM[6] && 0 === MM[7] && 0 === MM[8] && 0 === MM[9] && 1 === MM[10] && 0 === MM[11] && 0 === MM[12] && 0 === MM[13] && 0 === MM[14] && 1 === MM[15]
+          const VV = this._m;
+          this._isIdentity = 1 === VV[0] && 0 === VV[1] && 0 === VV[2] && 0 === VV[3] && 0 === VV[4] && 1 === VV[5] && 0 === VV[6] && 0 === VV[7] && 0 === VV[8] && 0 === VV[9] && 1 === VV[10] && 0 === VV[11] && 0 === VV[12] && 0 === VV[13] && 0 === VV[14] && 1 === VV[15]
         }
         return this._isIdentity
       }
@@ -1938,966 +1938,966 @@ export const modules = {
       }
       determinant() {
         if (!0 === this._isIdentity) return 1;
-        const MM = this._m,
-          rM = MM[0],
-          iM = MM[1],
-          OM = MM[2],
-          SM = MM[3],
-          jM = MM[4],
-          aM = MM[5],
-          PM = MM[6],
-          nM = MM[7],
-          QM = MM[8],
-          zM = MM[9],
-          LM = MM[10],
-          mM = MM[11],
-          HM = MM[12],
-          hM = MM[13],
-          JM = MM[14],
-          dM = MM[15],
-          yM = LM * dM - JM * mM,
-          lM = zM * dM - hM * mM,
-          EM = zM * JM - hM * LM,
-          UM = QM * dM - HM * mM,
-          GM = QM * JM - LM * HM,
-          CM = QM * hM - HM * zM;
-        return rM * +(aM * yM - PM * lM + nM * EM) + iM * -(jM * yM - PM * UM + nM * GM) + OM * +(jM * lM - aM * UM + nM * CM) + SM * -(jM * EM - aM * GM + PM * CM)
+        const VV = this._m,
+          eV = VV[0],
+          xV = VV[1],
+          JV = VV[2],
+          YV = VV[3],
+          UV = VV[4],
+          yV = VV[5],
+          pV = VV[6],
+          QV = VV[7],
+          nV = VV[8],
+          wV = VV[9],
+          ZV = VV[10],
+          vV = VV[11],
+          rV = VV[12],
+          kV = VV[13],
+          bV = VV[14],
+          EV = VV[15],
+          BV = ZV * EV - bV * vV,
+          jV = wV * EV - kV * vV,
+          qV = wV * bV - kV * ZV,
+          tV = nV * EV - rV * vV,
+          FV = nV * bV - ZV * rV,
+          TV = nV * kV - rV * wV;
+        return eV * +(yV * BV - pV * jV + QV * qV) + xV * -(UV * BV - pV * tV + QV * FV) + JV * +(UV * jV - yV * tV + QV * TV) + YV * -(UV * qV - yV * FV + pV * TV)
       }
       toString() {
         return `{${this.m[0]}, ${this.m[1]}, ${this.m[2]}, ${this.m[3]}\n${this.m[4]}, ${this.m[5]}, ${this.m[6]}, ${this.m[7]}\n${this.m[8]}, ${this.m[9]}, ${this.m[10]}, ${this.m[11]}\n${this.m[12]}, ${this.m[13]}, ${this.m[14]}, ${this.m[15]}}`
       }
       toArray() {
-        let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
-          rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        if (!MM) return this._m;
-        const iM = this._m;
-        for (let OM = 0; OM < 16; OM++) MM[rM + OM] = iM[OM];
+        let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
+          eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        if (!VV) return this._m;
+        const xV = this._m;
+        for (let JV = 0; JV < 16; JV++) VV[eV + JV] = xV[JV];
         return this
       }
-      HOM() {
+      WYV() {
         return this._m
       }
-      cz(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return JM.FromArrayToRef(MM, rM, this)
+      wZ(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return bV.FromArrayToRef(VV, eV, this)
       }
-      iMM() {
-        for (var MM = arguments.length, rM = new Array(MM), iM = 0; iM < MM; iM++) rM[iM] = arguments[iM];
-        return JM.FromArrayToRef(rM, 0, this)
+      FeV() {
+        for (var VV = arguments.length, eV = new Array(VV), xV = 0; xV < VV; xV++) eV[xV] = arguments[xV];
+        return bV.FromArrayToRef(eV, 0, this)
       }
       set() {
-        const MM = this._m;
-        for (let rM = 0; rM < 16; rM++) MM[rM] = rM < 0 || arguments.length <= rM ? void 0 : arguments[rM];
+        const VV = this._m;
+        for (let eV = 0; eV < 16; eV++) VV[eV] = eV < 0 || arguments.length <= eV ? void 0 : arguments[eV];
         return this.markAsUpdated(), this
       }
-      P_(MM) {
-        const rM = this._m;
-        for (let iM = 0; iM < 16; iM++) rM[iM] = MM;
+      HVV(VV) {
+        const eV = this._m;
+        for (let xV = 0; xV < 16; xV++) eV[xV] = VV;
         return this.markAsUpdated(), this
       }
       invert() {
         return this.invertToRef(this), this
       }
       reset() {
-        return JM.FromValuesToRef(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, this), this._updateIdentityStatus(!1), this
+        return bV.FromValuesToRef(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, this), this._updateIdentityStatus(!1), this
       }
-      add(MM) {
-        const rM = new JM;
-        return this.addToRef(MM, rM), rM
+      add(VV) {
+        const eV = new bV;
+        return this.addToRef(VV, eV), eV
       }
-      addToRef(MM, rM) {
-        const iM = this._m,
-          OM = rM._m,
-          SM = MM.m;
-        for (let jM = 0; jM < 16; jM++) OM[jM] = iM[jM] + SM[jM];
-        return rM.markAsUpdated(), rM
+      addToRef(VV, eV) {
+        const xV = this._m,
+          JV = eV._m,
+          YV = VV.m;
+        for (let UV = 0; UV < 16; UV++) JV[UV] = xV[UV] + YV[UV];
+        return eV.markAsUpdated(), eV
       }
-      addToSelf(MM) {
-        const rM = this._m,
-          iM = MM.m;
-        return rM[0] += iM[0], rM[1] += iM[1], rM[2] += iM[2], rM[3] += iM[3], rM[4] += iM[4], rM[5] += iM[5], rM[6] += iM[6], rM[7] += iM[7], rM[8] += iM[8], rM[9] += iM[9], rM[10] += iM[10], rM[11] += iM[11], rM[12] += iM[12], rM[13] += iM[13], rM[14] += iM[14], rM[15] += iM[15], this.markAsUpdated(), this
+      addToSelf(VV) {
+        const eV = this._m,
+          xV = VV.m;
+        return eV[0] += xV[0], eV[1] += xV[1], eV[2] += xV[2], eV[3] += xV[3], eV[4] += xV[4], eV[5] += xV[5], eV[6] += xV[6], eV[7] += xV[7], eV[8] += xV[8], eV[9] += xV[9], eV[10] += xV[10], eV[11] += xV[11], eV[12] += xV[12], eV[13] += xV[13], eV[14] += xV[14], eV[15] += xV[15], this.markAsUpdated(), this
       }
-      addInPlace(MM) {
-        const rM = this._m,
-          iM = MM.m;
-        for (let OM = 0; OM < 16; OM++) rM[OM] += iM[OM];
+      addInPlace(VV) {
+        const eV = this._m,
+          xV = VV.m;
+        for (let JV = 0; JV < 16; JV++) eV[JV] += xV[JV];
         return this.markAsUpdated(), this
       }
       addInPlaceFromFloats() {
-        const MM = this._m;
-        for (let rM = 0; rM < 16; rM++) MM[rM] += rM < 0 || arguments.length <= rM ? void 0 : arguments[rM];
+        const VV = this._m;
+        for (let eV = 0; eV < 16; eV++) VV[eV] += eV < 0 || arguments.length <= eV ? void 0 : arguments[eV];
         return this.markAsUpdated(), this
       }
-      subtract(MM) {
-        const rM = this._m,
-          iM = MM.m;
-        for (let OM = 0; OM < 16; OM++) rM[OM] -= iM[OM];
+      subtract(VV) {
+        const eV = this._m,
+          xV = VV.m;
+        for (let JV = 0; JV < 16; JV++) eV[JV] -= xV[JV];
         return this.markAsUpdated(), this
       }
-      subtractToRef(MM, rM) {
-        const iM = this._m,
-          OM = MM.m,
-          SM = rM._m;
-        for (let jM = 0; jM < 16; jM++) SM[jM] = iM[jM] - OM[jM];
-        return rM.markAsUpdated(), rM
+      subtractToRef(VV, eV) {
+        const xV = this._m,
+          JV = VV.m,
+          YV = eV._m;
+        for (let UV = 0; UV < 16; UV++) YV[UV] = xV[UV] - JV[UV];
+        return eV.markAsUpdated(), eV
       }
-      kOM(MM) {
-        const rM = this._m,
-          iM = MM.m;
-        for (let OM = 0; OM < 16; OM++) rM[OM] -= iM[OM];
+      IYV(VV) {
+        const eV = this._m,
+          xV = VV.m;
+        for (let JV = 0; JV < 16; JV++) eV[JV] -= xV[JV];
         return this.markAsUpdated(), this
       }
       subtractFromFloats() {
-        for (var MM = arguments.length, rM = new Array(MM), iM = 0; iM < MM; iM++) rM[iM] = arguments[iM];
-        return this.subtractFromFloatsToRef(...rM, new JM)
+        for (var VV = arguments.length, eV = new Array(VV), xV = 0; xV < VV; xV++) eV[xV] = arguments[xV];
+        return this.subtractFromFloatsToRef(...eV, new bV)
       }
       subtractFromFloatsToRef() {
-        for (var MM = arguments.length, rM = new Array(MM), iM = 0; iM < MM; iM++) rM[iM] = arguments[iM];
-        const OM = rM.pop(),
-          SM = this._m,
-          jM = OM._m,
-          aM = rM;
-        for (let PM = 0; PM < 16; PM++) jM[PM] = SM[PM] - aM[PM];
-        return OM.markAsUpdated(), OM
+        for (var VV = arguments.length, eV = new Array(VV), xV = 0; xV < VV; xV++) eV[xV] = arguments[xV];
+        const JV = eV.pop(),
+          YV = this._m,
+          UV = JV._m,
+          yV = eV;
+        for (let pV = 0; pV < 16; pV++) UV[pV] = YV[pV] - yV[pV];
+        return JV.markAsUpdated(), JV
       }
-      invertToRef(MM) {
-        return !0 === this._isIdentity ? (JM.IdentityToRef(MM), MM) : ((0, nM.e)(this, MM.HOM()) ? MM.markAsUpdated() : MM.jR(this), MM)
+      invertToRef(VV) {
+        return !0 === this._isIdentity ? (bV.IdentityToRef(VV), VV) : ((0, QV.f)(this, VV.WYV()) ? VV.markAsUpdated() : VV.iG(this), VV)
       }
-      addAtIndex(MM, rM) {
-        return this._m[MM] += rM, this.markAsUpdated(), this
+      addAtIndex(VV, eV) {
+        return this._m[VV] += eV, this.markAsUpdated(), this
       }
-      multiplyAtIndex(MM, rM) {
-        return this._m[MM] *= rM, this.markAsUpdated(), this
+      multiplyAtIndex(VV, eV) {
+        return this._m[VV] *= eV, this.markAsUpdated(), this
       }
-      setTranslationFromFloats(MM, rM, iM) {
-        return this._m[12] = MM, this._m[13] = rM, this._m[14] = iM, this.markAsUpdated(), this
+      setTranslationFromFloats(VV, eV, xV) {
+        return this._m[12] = VV, this._m[13] = eV, this._m[14] = xV, this.markAsUpdated(), this
       }
-      addTranslationFromFloats(MM, rM, iM) {
-        return this._m[12] += MM, this._m[13] += rM, this._m[14] += iM, this.markAsUpdated(), this
+      addTranslationFromFloats(VV, eV, xV) {
+        return this._m[12] += VV, this._m[13] += eV, this._m[14] += xV, this.markAsUpdated(), this
       }
-      setTranslation(MM) {
-        return this.setTranslationFromFloats(MM._x, MM._y, MM._z)
+      setTranslation(VV) {
+        return this.setTranslationFromFloats(VV._x, VV._y, VV._z)
       }
       getTranslation() {
-        return new mM(this._m[12], this._m[13], this._m[14])
+        return new vV(this._m[12], this._m[13], this._m[14])
       }
-      getTranslationToRef(MM) {
-        return MM.x = this._m[12], MM.y = this._m[13], MM.z = this._m[14], MM
+      getTranslationToRef(VV) {
+        return VV.x = this._m[12], VV.y = this._m[13], VV.z = this._m[14], VV
       }
       removeRotationAndScaling() {
-        const MM = this.m;
-        return JM.FromValuesToRef(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, MM[12], MM[13], MM[14], MM[15], this), this._updateIdentityStatus(0 === MM[12] && 0 === MM[13] && 0 === MM[14] && 1 === MM[15]), this
+        const VV = this.m;
+        return bV.FromValuesToRef(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, VV[12], VV[13], VV[14], VV[15], this), this._updateIdentityStatus(0 === VV[12] && 0 === VV[13] && 0 === VV[14] && 1 === VV[15]), this
       }
-      jR(MM) {
-        MM.copyToArray(this._m);
-        const rM = MM;
-        return this.updateFlag = rM.updateFlag, this._updateIdentityStatus(rM._isIdentity, rM._isIdentityDirty, rM._isIdentity3x2, rM._isIdentity3x2Dirty), this
+      iG(VV) {
+        VV.copyToArray(this._m);
+        const eV = VV;
+        return this.updateFlag = eV.updateFlag, this._updateIdentityStatus(eV._isIdentity, eV._isIdentityDirty, eV._isIdentity3x2, eV._isIdentity3x2Dirty), this
       }
-      copyToArray(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return (0, nM.d)(this, MM, rM), this
+      copyToArray(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return (0, QV.d)(this, VV, eV), this
       }
-      multiply(MM) {
-        const rM = new JM;
-        return this.multiplyToRef(MM, rM), rM
+      multiply(VV) {
+        const eV = new bV;
+        return this.multiplyToRef(VV, eV), eV
       }
-      multiplyInPlace(MM) {
-        const rM = this._m,
-          iM = MM.m;
-        for (let OM = 0; OM < 16; OM++) rM[OM] *= iM[OM];
+      multiplyInPlace(VV) {
+        const eV = this._m,
+          xV = VV.m;
+        for (let JV = 0; JV < 16; JV++) eV[JV] *= xV[JV];
         return this.markAsUpdated(), this
       }
       multiplyByFloats() {
-        const MM = this._m;
-        for (let rM = 0; rM < 16; rM++) MM[rM] *= rM < 0 || arguments.length <= rM ? void 0 : arguments[rM];
+        const VV = this._m;
+        for (let eV = 0; eV < 16; eV++) VV[eV] *= eV < 0 || arguments.length <= eV ? void 0 : arguments[eV];
         return this.markAsUpdated(), this
       }
       multiplyByFloatsToRef() {
-        for (var MM = arguments.length, rM = new Array(MM), iM = 0; iM < MM; iM++) rM[iM] = arguments[iM];
-        const OM = rM.pop(),
-          SM = this._m,
-          jM = OM._m,
-          aM = rM;
-        for (let PM = 0; PM < 16; PM++) jM[PM] = SM[PM] * aM[PM];
-        return OM.markAsUpdated(), OM
+        for (var VV = arguments.length, eV = new Array(VV), xV = 0; xV < VV; xV++) eV[xV] = arguments[xV];
+        const JV = eV.pop(),
+          YV = this._m,
+          UV = JV._m,
+          yV = eV;
+        for (let pV = 0; pV < 16; pV++) UV[pV] = YV[pV] * yV[pV];
+        return JV.markAsUpdated(), JV
       }
-      multiplyToRef(MM, rM) {
-        return this._isIdentity ? (rM.jR(MM), rM) : MM._isIdentity ? (rM.jR(this), rM) : (this.multiplyToArray(MM, rM._m, 0), rM.markAsUpdated(), rM)
+      multiplyToRef(VV, eV) {
+        return this._isIdentity ? (eV.iG(VV), eV) : VV._isIdentity ? (eV.iG(this), eV) : (this.multiplyToArray(VV, eV._m, 0), eV.markAsUpdated(), eV)
       }
-      multiplyToArray(MM, rM, iM) {
-        return (0, nM.l)(this, MM, rM, iM), this
+      multiplyToArray(VV, eV, xV) {
+        return (0, QV.j)(this, VV, eV, xV), this
       }
-      divide(MM) {
-        return this.divideToRef(MM, new JM)
+      divide(VV) {
+        return this.divideToRef(VV, new bV)
       }
-      divideToRef(MM, rM) {
-        const iM = this._m,
-          OM = MM.m,
-          SM = rM._m;
-        for (let jM = 0; jM < 16; jM++) SM[jM] = iM[jM] / OM[jM];
-        return rM.markAsUpdated(), rM
+      divideToRef(VV, eV) {
+        const xV = this._m,
+          JV = VV.m,
+          YV = eV._m;
+        for (let UV = 0; UV < 16; UV++) YV[UV] = xV[UV] / JV[UV];
+        return eV.markAsUpdated(), eV
       }
-      divideInPlace(MM) {
-        const rM = this._m,
-          iM = MM.m;
-        for (let OM = 0; OM < 16; OM++) rM[OM] /= iM[OM];
+      divideInPlace(VV) {
+        const eV = this._m,
+          xV = VV.m;
+        for (let JV = 0; JV < 16; JV++) eV[JV] /= xV[JV];
         return this.markAsUpdated(), this
       }
-      minimizeInPlace(MM) {
-        const rM = this._m,
-          iM = MM.m;
-        for (let OM = 0; OM < 16; OM++) rM[OM] = Math.min(rM[OM], iM[OM]);
+      minimizeInPlace(VV) {
+        const eV = this._m,
+          xV = VV.m;
+        for (let JV = 0; JV < 16; JV++) eV[JV] = Math.min(eV[JV], xV[JV]);
         return this.markAsUpdated(), this
       }
       minimizeInPlaceFromFloats() {
-        const MM = this._m;
-        for (let rM = 0; rM < 16; rM++) MM[rM] = Math.min(MM[rM], rM < 0 || arguments.length <= rM ? void 0 : arguments[rM]);
+        const VV = this._m;
+        for (let eV = 0; eV < 16; eV++) VV[eV] = Math.min(VV[eV], eV < 0 || arguments.length <= eV ? void 0 : arguments[eV]);
         return this.markAsUpdated(), this
       }
-      maximizeInPlace(MM) {
-        const rM = this._m,
-          iM = MM.m;
-        for (let OM = 0; OM < 16; OM++) rM[OM] = Math.max(rM[OM], iM[OM]);
+      maximizeInPlace(VV) {
+        const eV = this._m,
+          xV = VV.m;
+        for (let JV = 0; JV < 16; JV++) eV[JV] = Math.max(eV[JV], xV[JV]);
         return this.markAsUpdated(), this
       }
       maximizeInPlaceFromFloats() {
-        const MM = this._m;
-        for (let rM = 0; rM < 16; rM++) MM[rM] = Math.max(MM[rM], rM < 0 || arguments.length <= rM ? void 0 : arguments[rM]);
+        const VV = this._m;
+        for (let eV = 0; eV < 16; eV++) VV[eV] = Math.max(VV[eV], eV < 0 || arguments.length <= eV ? void 0 : arguments[eV]);
         return this.markAsUpdated(), this
       }
-      VJ() {
-        return this.negateToRef(new JM)
+      gr() {
+        return this.negateToRef(new bV)
       }
       negateInPlace() {
-        const MM = this._m;
-        for (let rM = 0; rM < 16; rM++) MM[rM] = -MM[rM];
+        const VV = this._m;
+        for (let eV = 0; eV < 16; eV++) VV[eV] = -VV[eV];
         return this.markAsUpdated(), this
       }
-      negateToRef(MM) {
-        const rM = this._m,
-          iM = MM._m;
-        for (let OM = 0; OM < 16; OM++) iM[OM] = -rM[OM];
-        return MM.markAsUpdated(), MM
+      negateToRef(VV) {
+        const eV = this._m,
+          xV = VV._m;
+        for (let JV = 0; JV < 16; JV++) xV[JV] = -eV[JV];
+        return VV.markAsUpdated(), VV
       }
-      equals(MM) {
-        const rM = MM;
-        if (!rM) return !1;
-        if ((this._isIdentity || rM._isIdentity) && !this._isIdentityDirty && !rM._isIdentityDirty) return this._isIdentity && rM._isIdentity;
-        const iM = this.m,
-          OM = rM.m;
-        return iM[0] === OM[0] && iM[1] === OM[1] && iM[2] === OM[2] && iM[3] === OM[3] && iM[4] === OM[4] && iM[5] === OM[5] && iM[6] === OM[6] && iM[7] === OM[7] && iM[8] === OM[8] && iM[9] === OM[9] && iM[10] === OM[10] && iM[11] === OM[11] && iM[12] === OM[12] && iM[13] === OM[13] && iM[14] === OM[14] && iM[15] === OM[15]
+      equals(VV) {
+        const eV = VV;
+        if (!eV) return !1;
+        if ((this._isIdentity || eV._isIdentity) && !this._isIdentityDirty && !eV._isIdentityDirty) return this._isIdentity && eV._isIdentity;
+        const xV = this.m,
+          JV = eV.m;
+        return xV[0] === JV[0] && xV[1] === JV[1] && xV[2] === JV[2] && xV[3] === JV[3] && xV[4] === JV[4] && xV[5] === JV[5] && xV[6] === JV[6] && xV[7] === JV[7] && xV[8] === JV[8] && xV[9] === JV[9] && xV[10] === JV[10] && xV[11] === JV[11] && xV[12] === JV[12] && xV[13] === JV[13] && xV[14] === JV[14] && xV[15] === JV[15]
       }
-      equalsWithEpsilon(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        const iM = this._m,
-          OM = MM.m;
-        for (let SM = 0; SM < 16; SM++)
-          if (!(0, PM.WithinEpsilon)(iM[SM], OM[SM], rM)) return !1;
+      equalsWithEpsilon(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        const xV = this._m,
+          JV = VV.m;
+        for (let YV = 0; YV < 16; YV++)
+          if (!(0, pV.WithinEpsilon)(xV[YV], JV[YV], eV)) return !1;
         return !0
       }
-      IaM() {
-        const MM = this._m;
-        for (let rM = 0; rM < 16; rM++)
-          if (MM[rM] != (rM < 0 || arguments.length <= rM ? void 0 : arguments[rM])) return !1;
+      rQV() {
+        const VV = this._m;
+        for (let eV = 0; eV < 16; eV++)
+          if (VV[eV] != (eV < 0 || arguments.length <= eV ? void 0 : arguments[eV])) return !1;
         return !0
       }
       floor() {
-        return this.floorToRef(new JM)
+        return this.floorToRef(new bV)
       }
-      floorToRef(MM) {
-        const rM = this._m,
-          iM = MM._m;
-        for (let OM = 0; OM < 16; OM++) iM[OM] = Math.floor(rM[OM]);
-        return MM.markAsUpdated(), MM
+      floorToRef(VV) {
+        const eV = this._m,
+          xV = VV._m;
+        for (let JV = 0; JV < 16; JV++) xV[JV] = Math.floor(eV[JV]);
+        return VV.markAsUpdated(), VV
       }
       fract() {
-        return this.fractToRef(new JM)
+        return this.fractToRef(new bV)
       }
-      fractToRef(MM) {
-        const rM = this._m,
-          iM = MM._m;
-        for (let OM = 0; OM < 16; OM++) iM[OM] = rM[OM] - Math.floor(rM[OM]);
-        return MM.markAsUpdated(), MM
+      fractToRef(VV) {
+        const eV = this._m,
+          xV = VV._m;
+        for (let JV = 0; JV < 16; JV++) xV[JV] = eV[JV] - Math.floor(eV[JV]);
+        return VV.markAsUpdated(), VV
       }
       clone() {
-        const MM = new JM;
-        return MM.jR(this), MM
+        const VV = new bV;
+        return VV.iG(this), VV
       }
       getClassName() {
         return "Matrix"
       }
       getHashCode() {
-        let MM = zM(this._m[0]);
-        for (let rM = 1; rM < 16; rM++) MM = 397 * MM ^ zM(this._m[rM]);
-        return MM
+        let VV = wV(this._m[0]);
+        for (let eV = 1; eV < 16; eV++) VV = 397 * VV ^ wV(this._m[eV]);
+        return VV
       }
-      decomposeToTransformNode(MM) {
-        return MM.rotationQuaternion = MM.rotationQuaternion || new hM, this.decompose(MM.UL, MM.rotationQuaternion, MM.position)
+      decomposeToTransformNode(VV) {
+        return VV.rotationQuaternion = VV.rotationQuaternion || new kV, this.decompose(VV.WZ, VV.rotationQuaternion, VV.position)
       }
-      decompose(MM, rM, iM, OM) {
-        let SM = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4];
-        if (this._isIdentity) return iM && iM.P_(0), MM && MM.P_(1), rM && rM.iMM(0, 0, 0, 1), !0;
-        const jM = this._m;
-        if (iM && iM.iMM(jM[12], jM[13], jM[14]), (MM = MM || dM.sh[0]).x = Math.sqrt(jM[0] * jM[0] + jM[1] * jM[1] + jM[2] * jM[2]), MM.y = Math.sqrt(jM[4] * jM[4] + jM[5] * jM[5] + jM[6] * jM[6]), MM.z = Math.sqrt(jM[8] * jM[8] + jM[9] * jM[9] + jM[10] * jM[10]), OM) {
-          const rM = (SM ? OM.absoluteScaling.x : OM.UL.x) < 0 ? -1 : 1,
-            iM = (SM ? OM.absoluteScaling.y : OM.UL.y) < 0 ? -1 : 1,
-            jM = (SM ? OM.absoluteScaling.z : OM.UL.z) < 0 ? -1 : 1;
-          MM.x *= rM, MM.y *= iM, MM.z *= jM
-        } else this.determinant() <= 0 && (MM.y *= -1);
-        if (0 === MM._x || 0 === MM._y || 0 === MM._z) return rM && rM.iMM(0, 0, 0, 1), !1;
-        if (rM) {
-          const iM = 1 / MM._x,
-            OM = 1 / MM._y,
-            SM = 1 / MM._z;
-          JM.FromValuesToRef(jM[0] * iM, jM[1] * iM, jM[2] * iM, 0, jM[4] * OM, jM[5] * OM, jM[6] * OM, 0, jM[8] * SM, jM[9] * SM, jM[10] * SM, 0, 0, 0, 0, 1, dM.Matrix[0]), hM.FromRotationMatrixToRef(dM.Matrix[0], rM)
+      decompose(VV, eV, xV, JV) {
+        let YV = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4];
+        if (this._isIdentity) return xV && xV.HVV(0), VV && VV.HVV(1), eV && eV.FeV(0, 0, 0, 1), !0;
+        const UV = this._m;
+        if (xV && xV.FeV(UV[12], UV[13], UV[14]), (VV = VV || EV.Ik[0]).x = Math.sqrt(UV[0] * UV[0] + UV[1] * UV[1] + UV[2] * UV[2]), VV.y = Math.sqrt(UV[4] * UV[4] + UV[5] * UV[5] + UV[6] * UV[6]), VV.z = Math.sqrt(UV[8] * UV[8] + UV[9] * UV[9] + UV[10] * UV[10]), JV) {
+          const eV = (YV ? JV.absoluteScaling.x : JV.WZ.x) < 0 ? -1 : 1,
+            xV = (YV ? JV.absoluteScaling.y : JV.WZ.y) < 0 ? -1 : 1,
+            UV = (YV ? JV.absoluteScaling.z : JV.WZ.z) < 0 ? -1 : 1;
+          VV.x *= eV, VV.y *= xV, VV.z *= UV
+        } else this.determinant() <= 0 && (VV.y *= -1);
+        if (0 === VV._x || 0 === VV._y || 0 === VV._z) return eV && eV.FeV(0, 0, 0, 1), !1;
+        if (eV) {
+          const xV = 1 / VV._x,
+            JV = 1 / VV._y,
+            YV = 1 / VV._z;
+          bV.FromValuesToRef(UV[0] * xV, UV[1] * xV, UV[2] * xV, 0, UV[4] * JV, UV[5] * JV, UV[6] * JV, 0, UV[8] * YV, UV[9] * YV, UV[10] * YV, 0, 0, 0, 0, 1, EV.Matrix[0]), kV.FromRotationMatrixToRef(EV.Matrix[0], eV)
         }
         return !0
       }
-      getRow(MM) {
-        if (MM < 0 || MM > 3) return null;
-        const rM = 4 * MM;
-        return new HM(this._m[rM + 0], this._m[rM + 1], this._m[rM + 2], this._m[rM + 3])
+      getRow(VV) {
+        if (VV < 0 || VV > 3) return null;
+        const eV = 4 * VV;
+        return new rV(this._m[eV + 0], this._m[eV + 1], this._m[eV + 2], this._m[eV + 3])
       }
-      getRowToRef(MM, rM) {
-        if (MM >= 0 && MM <= 3) {
-          const iM = 4 * MM;
-          rM.x = this._m[iM + 0], rM.y = this._m[iM + 1], rM.z = this._m[iM + 2], rM.w = this._m[iM + 3]
+      getRowToRef(VV, eV) {
+        if (VV >= 0 && VV <= 3) {
+          const xV = 4 * VV;
+          eV.x = this._m[xV + 0], eV.y = this._m[xV + 1], eV.z = this._m[xV + 2], eV.w = this._m[xV + 3]
         }
-        return rM
+        return eV
       }
-      setRow(MM, rM) {
-        return this.setRowFromFloats(MM, rM.x, rM.y, rM.z, rM.w)
+      setRow(VV, eV) {
+        return this.setRowFromFloats(VV, eV.x, eV.y, eV.z, eV.w)
       }
       transpose() {
-        const MM = new JM;
-        return JM.TransposeToRef(this, MM), MM
+        const VV = new bV;
+        return bV.TransposeToRef(this, VV), VV
       }
-      transposeToRef(MM) {
-        return JM.TransposeToRef(this, MM), MM
+      transposeToRef(VV) {
+        return bV.TransposeToRef(this, VV), VV
       }
-      setRowFromFloats(MM, rM, iM, OM, SM) {
-        if (MM < 0 || MM > 3) return this;
-        const jM = 4 * MM;
-        return this._m[jM + 0] = rM, this._m[jM + 1] = iM, this._m[jM + 2] = OM, this._m[jM + 3] = SM, this.markAsUpdated(), this
+      setRowFromFloats(VV, eV, xV, JV, YV) {
+        if (VV < 0 || VV > 3) return this;
+        const UV = 4 * VV;
+        return this._m[UV + 0] = eV, this._m[UV + 1] = xV, this._m[UV + 2] = JV, this._m[UV + 3] = YV, this.markAsUpdated(), this
       }
-      scale(MM) {
-        const rM = new JM;
-        return this.scaleToRef(MM, rM), rM
+      scale(VV) {
+        const eV = new bV;
+        return this.scaleToRef(VV, eV), eV
       }
-      scaleToRef(MM, rM) {
-        for (let iM = 0; iM < 16; iM++) rM._m[iM] = this._m[iM] * MM;
-        return rM.markAsUpdated(), rM
+      scaleToRef(VV, eV) {
+        for (let xV = 0; xV < 16; xV++) eV._m[xV] = this._m[xV] * VV;
+        return eV.markAsUpdated(), eV
       }
-      scaleAndAddToRef(MM, rM) {
-        for (let iM = 0; iM < 16; iM++) rM._m[iM] += this._m[iM] * MM;
-        return rM.markAsUpdated(), rM
+      scaleAndAddToRef(VV, eV) {
+        for (let xV = 0; xV < 16; xV++) eV._m[xV] += this._m[xV] * VV;
+        return eV.markAsUpdated(), eV
       }
-      scaleInPlace(MM) {
-        const rM = this._m;
-        for (let iM = 0; iM < 16; iM++) rM[iM] *= MM;
+      scaleInPlace(VV) {
+        const eV = this._m;
+        for (let xV = 0; xV < 16; xV++) eV[xV] *= VV;
         return this.markAsUpdated(), this
       }
-      toNormalMatrix(MM) {
-        const rM = dM.Matrix[0];
-        this.invertToRef(rM), rM.transposeToRef(MM);
-        const iM = MM._m;
-        return JM.FromValuesToRef(iM[0], iM[1], iM[2], 0, iM[4], iM[5], iM[6], 0, iM[8], iM[9], iM[10], 0, 0, 0, 0, 1, MM), MM
+      toNormalMatrix(VV) {
+        const eV = EV.Matrix[0];
+        this.invertToRef(eV), eV.transposeToRef(VV);
+        const xV = VV._m;
+        return bV.FromValuesToRef(xV[0], xV[1], xV[2], 0, xV[4], xV[5], xV[6], 0, xV[8], xV[9], xV[10], 0, 0, 0, 0, 1, VV), VV
       }
       getRotationMatrix() {
-        const MM = new JM;
-        return this.getRotationMatrixToRef(MM), MM
+        const VV = new bV;
+        return this.getRotationMatrixToRef(VV), VV
       }
-      getRotationMatrixToRef(MM) {
-        const rM = dM.sh[0];
-        if (!this.decompose(rM)) return JM.IdentityToRef(MM), MM;
-        const iM = this._m,
-          OM = 1 / rM._x,
-          SM = 1 / rM._y,
-          jM = 1 / rM._z;
-        return JM.FromValuesToRef(iM[0] * OM, iM[1] * OM, iM[2] * OM, 0, iM[4] * SM, iM[5] * SM, iM[6] * SM, 0, iM[8] * jM, iM[9] * jM, iM[10] * jM, 0, 0, 0, 0, 1, MM), MM
+      getRotationMatrixToRef(VV) {
+        const eV = EV.Ik[0];
+        if (!this.decompose(eV)) return bV.IdentityToRef(VV), VV;
+        const xV = this._m,
+          JV = 1 / eV._x,
+          YV = 1 / eV._y,
+          UV = 1 / eV._z;
+        return bV.FromValuesToRef(xV[0] * JV, xV[1] * JV, xV[2] * JV, 0, xV[4] * YV, xV[5] * YV, xV[6] * YV, 0, xV[8] * UV, xV[9] * UV, xV[10] * UV, 0, 0, 0, 0, 1, VV), VV
       }
       toggleModelMatrixHandInPlace() {
-        const MM = this._m;
-        return MM[2] *= -1, MM[6] *= -1, MM[8] *= -1, MM[9] *= -1, MM[14] *= -1, this.markAsUpdated(), this
+        const VV = this._m;
+        return VV[2] *= -1, VV[6] *= -1, VV[8] *= -1, VV[9] *= -1, VV[14] *= -1, this.markAsUpdated(), this
       }
       toggleProjectionMatrixHandInPlace() {
-        const MM = this._m;
-        return MM[8] *= -1, MM[9] *= -1, MM[10] *= -1, MM[11] *= -1, this.markAsUpdated(), this
+        const VV = this._m;
+        return VV[8] *= -1, VV[9] *= -1, VV[10] *= -1, VV[11] *= -1, this.markAsUpdated(), this
       }
       _convertProjectionToHalfZRangeInPlace() {
-        return this.multiplyToRef(lM, this), this
+        return this.multiplyToRef(jV, this), this
       }
-      static FromArray(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        const iM = new JM;
-        return JM.FromArrayToRef(MM, rM, iM), iM
+      static FromArray(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        const xV = new bV;
+        return bV.FromArrayToRef(VV, eV, xV), xV
       }
-      static FromArrayToRef(MM, rM, iM) {
-        for (let OM = 0; OM < 16; OM++) iM._m[OM] = MM[OM + rM];
-        return iM.markAsUpdated(), iM
+      static FromArrayToRef(VV, eV, xV) {
+        for (let JV = 0; JV < 16; JV++) xV._m[JV] = VV[JV + eV];
+        return xV.markAsUpdated(), xV
       }
-      static FromFloat32ArrayToRefScaled(MM, rM, iM, OM) {
-        return OM._m[0] = MM[0 + rM] * iM, OM._m[1] = MM[1 + rM] * iM, OM._m[2] = MM[2 + rM] * iM, OM._m[3] = MM[3 + rM] * iM, OM._m[4] = MM[4 + rM] * iM, OM._m[5] = MM[5 + rM] * iM, OM._m[6] = MM[6 + rM] * iM, OM._m[7] = MM[7 + rM] * iM, OM._m[8] = MM[8 + rM] * iM, OM._m[9] = MM[9 + rM] * iM, OM._m[10] = MM[10 + rM] * iM, OM._m[11] = MM[11 + rM] * iM, OM._m[12] = MM[12 + rM] * iM, OM._m[13] = MM[13 + rM] * iM, OM._m[14] = MM[14 + rM] * iM, OM._m[15] = MM[15 + rM] * iM, OM.markAsUpdated(), OM
+      static FromFloat32ArrayToRefScaled(VV, eV, xV, JV) {
+        return JV._m[0] = VV[0 + eV] * xV, JV._m[1] = VV[1 + eV] * xV, JV._m[2] = VV[2 + eV] * xV, JV._m[3] = VV[3 + eV] * xV, JV._m[4] = VV[4 + eV] * xV, JV._m[5] = VV[5 + eV] * xV, JV._m[6] = VV[6 + eV] * xV, JV._m[7] = VV[7 + eV] * xV, JV._m[8] = VV[8 + eV] * xV, JV._m[9] = VV[9 + eV] * xV, JV._m[10] = VV[10 + eV] * xV, JV._m[11] = VV[11 + eV] * xV, JV._m[12] = VV[12 + eV] * xV, JV._m[13] = VV[13 + eV] * xV, JV._m[14] = VV[14 + eV] * xV, JV._m[15] = VV[15 + eV] * xV, JV.markAsUpdated(), JV
       }
       static get IdentityReadOnly() {
-        return JM._IdentityReadOnly
+        return bV._IdentityReadOnly
       }
-      static FromValuesToRef(MM, rM, iM, OM, SM, jM, aM, PM, nM, QM, zM, LM, mM, HM, hM, JM, dM) {
-        const yM = dM._m;
-        yM[0] = MM, yM[1] = rM, yM[2] = iM, yM[3] = OM, yM[4] = SM, yM[5] = jM, yM[6] = aM, yM[7] = PM, yM[8] = nM, yM[9] = QM, yM[10] = zM, yM[11] = LM, yM[12] = mM, yM[13] = HM, yM[14] = hM, yM[15] = JM, dM.markAsUpdated()
+      static FromValuesToRef(VV, eV, xV, JV, YV, UV, yV, pV, QV, nV, wV, ZV, vV, rV, kV, bV, EV) {
+        const BV = EV._m;
+        BV[0] = VV, BV[1] = eV, BV[2] = xV, BV[3] = JV, BV[4] = YV, BV[5] = UV, BV[6] = yV, BV[7] = pV, BV[8] = QV, BV[9] = nV, BV[10] = wV, BV[11] = ZV, BV[12] = vV, BV[13] = rV, BV[14] = kV, BV[15] = bV, EV.markAsUpdated()
       }
-      static FromValues(MM, rM, iM, OM, SM, jM, aM, PM, nM, QM, zM, LM, mM, HM, hM, dM) {
-        const yM = new JM,
-          lM = yM._m;
-        return lM[0] = MM, lM[1] = rM, lM[2] = iM, lM[3] = OM, lM[4] = SM, lM[5] = jM, lM[6] = aM, lM[7] = PM, lM[8] = nM, lM[9] = QM, lM[10] = zM, lM[11] = LM, lM[12] = mM, lM[13] = HM, lM[14] = hM, lM[15] = dM, yM.markAsUpdated(), yM
+      static FromValues(VV, eV, xV, JV, YV, UV, yV, pV, QV, nV, wV, ZV, vV, rV, kV, EV) {
+        const BV = new bV,
+          jV = BV._m;
+        return jV[0] = VV, jV[1] = eV, jV[2] = xV, jV[3] = JV, jV[4] = YV, jV[5] = UV, jV[6] = yV, jV[7] = pV, jV[8] = QV, jV[9] = nV, jV[10] = wV, jV[11] = ZV, jV[12] = vV, jV[13] = rV, jV[14] = kV, jV[15] = EV, BV.markAsUpdated(), BV
       }
-      static Compose(MM, rM, iM) {
-        const OM = new JM;
-        return JM.ComposeToRef(MM, rM, iM, OM), OM
+      static Compose(VV, eV, xV) {
+        const JV = new bV;
+        return bV.ComposeToRef(VV, eV, xV, JV), JV
       }
-      static ComposeToRef(MM, rM, iM, OM) {
-        const SM = OM._m,
-          jM = rM._x,
-          aM = rM._y,
-          PM = rM._z,
-          nM = rM._w,
-          QM = jM + jM,
-          zM = aM + aM,
-          LM = PM + PM,
-          mM = jM * QM,
-          HM = jM * zM,
-          hM = jM * LM,
-          JM = aM * zM,
-          dM = aM * LM,
-          yM = PM * LM,
-          lM = nM * QM,
-          EM = nM * zM,
-          UM = nM * LM,
-          GM = MM._x,
-          CM = MM._y,
-          eM = MM._z;
-        return SM[0] = (1 - (JM + yM)) * GM, SM[1] = (HM + UM) * GM, SM[2] = (hM - EM) * GM, SM[3] = 0, SM[4] = (HM - UM) * CM, SM[5] = (1 - (mM + yM)) * CM, SM[6] = (dM + lM) * CM, SM[7] = 0, SM[8] = (hM + EM) * eM, SM[9] = (dM - lM) * eM, SM[10] = (1 - (mM + JM)) * eM, SM[11] = 0, SM[12] = iM._x, SM[13] = iM._y, SM[14] = iM._z, SM[15] = 1, OM.markAsUpdated(), OM
+      static ComposeToRef(VV, eV, xV, JV) {
+        const YV = JV._m,
+          UV = eV._x,
+          yV = eV._y,
+          pV = eV._z,
+          QV = eV._w,
+          nV = UV + UV,
+          wV = yV + yV,
+          ZV = pV + pV,
+          vV = UV * nV,
+          rV = UV * wV,
+          kV = UV * ZV,
+          bV = yV * wV,
+          EV = yV * ZV,
+          BV = pV * ZV,
+          jV = QV * nV,
+          qV = QV * wV,
+          tV = QV * ZV,
+          FV = VV._x,
+          TV = VV._y,
+          PV = VV._z;
+        return YV[0] = (1 - (bV + BV)) * FV, YV[1] = (rV + tV) * FV, YV[2] = (kV - qV) * FV, YV[3] = 0, YV[4] = (rV - tV) * TV, YV[5] = (1 - (vV + BV)) * TV, YV[6] = (EV + jV) * TV, YV[7] = 0, YV[8] = (kV + qV) * PV, YV[9] = (EV - jV) * PV, YV[10] = (1 - (vV + bV)) * PV, YV[11] = 0, YV[12] = xV._x, YV[13] = xV._y, YV[14] = xV._z, YV[15] = 1, JV.markAsUpdated(), JV
       }
       static Identity() {
-        const MM = JM.FromValues(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
-        return MM._updateIdentityStatus(!0), MM
+        const VV = bV.FromValues(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        return VV._updateIdentityStatus(!0), VV
       }
-      static IdentityToRef(MM) {
-        return JM.FromValuesToRef(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, MM), MM._updateIdentityStatus(!0), MM
+      static IdentityToRef(VV) {
+        return bV.FromValuesToRef(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, VV), VV._updateIdentityStatus(!0), VV
       }
       static Zero() {
-        const MM = JM.FromValues(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-        return MM._updateIdentityStatus(!1), MM
+        const VV = bV.FromValues(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+        return VV._updateIdentityStatus(!1), VV
       }
-      static RotationX(MM) {
-        const rM = new JM;
-        return JM.RotationXToRef(MM, rM), rM
+      static RotationX(VV) {
+        const eV = new bV;
+        return bV.RotationXToRef(VV, eV), eV
       }
-      static Invert(MM) {
-        const rM = new JM;
-        return MM.invertToRef(rM), rM
+      static Invert(VV) {
+        const eV = new bV;
+        return VV.invertToRef(eV), eV
       }
-      static RotationXToRef(MM, rM) {
-        const iM = Math.sin(MM),
-          OM = Math.cos(MM);
-        return JM.FromValuesToRef(1, 0, 0, 0, 0, OM, iM, 0, 0, -iM, OM, 0, 0, 0, 0, 1, rM), rM._updateIdentityStatus(1 === OM && 0 === iM), rM
+      static RotationXToRef(VV, eV) {
+        const xV = Math.sin(VV),
+          JV = Math.cos(VV);
+        return bV.FromValuesToRef(1, 0, 0, 0, 0, JV, xV, 0, 0, -xV, JV, 0, 0, 0, 0, 1, eV), eV._updateIdentityStatus(1 === JV && 0 === xV), eV
       }
-      static RotationY(MM) {
-        const rM = new JM;
-        return JM.RotationYToRef(MM, rM), rM
+      static RotationY(VV) {
+        const eV = new bV;
+        return bV.RotationYToRef(VV, eV), eV
       }
-      static RotationYToRef(MM, rM) {
-        const iM = Math.sin(MM),
-          OM = Math.cos(MM);
-        return JM.FromValuesToRef(OM, 0, -iM, 0, 0, 1, 0, 0, iM, 0, OM, 0, 0, 0, 0, 1, rM), rM._updateIdentityStatus(1 === OM && 0 === iM), rM
+      static RotationYToRef(VV, eV) {
+        const xV = Math.sin(VV),
+          JV = Math.cos(VV);
+        return bV.FromValuesToRef(JV, 0, -xV, 0, 0, 1, 0, 0, xV, 0, JV, 0, 0, 0, 0, 1, eV), eV._updateIdentityStatus(1 === JV && 0 === xV), eV
       }
-      static RotationZ(MM) {
-        const rM = new JM;
-        return JM.RotationZToRef(MM, rM), rM
+      static RotationZ(VV) {
+        const eV = new bV;
+        return bV.RotationZToRef(VV, eV), eV
       }
-      static RotationZToRef(MM, rM) {
-        const iM = Math.sin(MM),
-          OM = Math.cos(MM);
-        return JM.FromValuesToRef(OM, iM, 0, 0, -iM, OM, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, rM), rM._updateIdentityStatus(1 === OM && 0 === iM), rM
+      static RotationZToRef(VV, eV) {
+        const xV = Math.sin(VV),
+          JV = Math.cos(VV);
+        return bV.FromValuesToRef(JV, xV, 0, 0, -xV, JV, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, eV), eV._updateIdentityStatus(1 === JV && 0 === xV), eV
       }
-      static RotationAxis(MM, rM) {
-        const iM = new JM;
-        return JM.RotationAxisToRef(MM, rM, iM), iM
+      static RotationAxis(VV, eV) {
+        const xV = new bV;
+        return bV.RotationAxisToRef(VV, eV, xV), xV
       }
-      static RotationAxisToRef(MM, rM, iM) {
-        const OM = Math.sin(-rM),
-          SM = Math.cos(-rM),
-          jM = 1 - SM;
-        MM = MM.normalizeToRef(dM.sh[0]);
-        const aM = iM._m;
-        return aM[0] = MM._x * MM._x * jM + SM, aM[1] = MM._x * MM._y * jM - MM._z * OM, aM[2] = MM._x * MM._z * jM + MM._y * OM, aM[3] = 0, aM[4] = MM._y * MM._x * jM + MM._z * OM, aM[5] = MM._y * MM._y * jM + SM, aM[6] = MM._y * MM._z * jM - MM._x * OM, aM[7] = 0, aM[8] = MM._z * MM._x * jM - MM._y * OM, aM[9] = MM._z * MM._y * jM + MM._x * OM, aM[10] = MM._z * MM._z * jM + SM, aM[11] = 0, aM[12] = 0, aM[13] = 0, aM[14] = 0, aM[15] = 1, iM.markAsUpdated(), iM
+      static RotationAxisToRef(VV, eV, xV) {
+        const JV = Math.sin(-eV),
+          YV = Math.cos(-eV),
+          UV = 1 - YV;
+        VV = VV.normalizeToRef(EV.Ik[0]);
+        const yV = xV._m;
+        return yV[0] = VV._x * VV._x * UV + YV, yV[1] = VV._x * VV._y * UV - VV._z * JV, yV[2] = VV._x * VV._z * UV + VV._y * JV, yV[3] = 0, yV[4] = VV._y * VV._x * UV + VV._z * JV, yV[5] = VV._y * VV._y * UV + YV, yV[6] = VV._y * VV._z * UV - VV._x * JV, yV[7] = 0, yV[8] = VV._z * VV._x * UV - VV._y * JV, yV[9] = VV._z * VV._y * UV + VV._x * JV, yV[10] = VV._z * VV._z * UV + YV, yV[11] = 0, yV[12] = 0, yV[13] = 0, yV[14] = 0, yV[15] = 1, xV.markAsUpdated(), xV
       }
-      static RotationAlignToRef(MM, rM, iM) {
-        let SM = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-        const jM = mM.Dot(rM, MM),
-          aM = iM._m;
-        if (jM < -1 + OM.d) aM[0] = -1, aM[1] = 0, aM[2] = 0, aM[3] = 0, aM[4] = 0, aM[5] = SM ? 1 : -1, aM[6] = 0, aM[7] = 0, aM[8] = 0, aM[9] = 0, aM[10] = SM ? -1 : 1, aM[11] = 0;
+      static RotationAlignToRef(VV, eV, xV) {
+        let YV = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+        const UV = vV.Dot(eV, VV),
+          yV = xV._m;
+        if (UV < -1 + JV.b) yV[0] = -1, yV[1] = 0, yV[2] = 0, yV[3] = 0, yV[4] = 0, yV[5] = YV ? 1 : -1, yV[6] = 0, yV[7] = 0, yV[8] = 0, yV[9] = 0, yV[10] = YV ? -1 : 1, yV[11] = 0;
         else {
-          const iM = mM.Cross(rM, MM),
-            OM = 1 / (1 + jM);
-          aM[0] = iM._x * iM._x * OM + jM, aM[1] = iM._y * iM._x * OM - iM._z, aM[2] = iM._z * iM._x * OM + iM._y, aM[3] = 0, aM[4] = iM._x * iM._y * OM + iM._z, aM[5] = iM._y * iM._y * OM + jM, aM[6] = iM._z * iM._y * OM - iM._x, aM[7] = 0, aM[8] = iM._x * iM._z * OM - iM._y, aM[9] = iM._y * iM._z * OM + iM._x, aM[10] = iM._z * iM._z * OM + jM, aM[11] = 0
+          const xV = vV.Cross(eV, VV),
+            JV = 1 / (1 + UV);
+          yV[0] = xV._x * xV._x * JV + UV, yV[1] = xV._y * xV._x * JV - xV._z, yV[2] = xV._z * xV._x * JV + xV._y, yV[3] = 0, yV[4] = xV._x * xV._y * JV + xV._z, yV[5] = xV._y * xV._y * JV + UV, yV[6] = xV._z * xV._y * JV - xV._x, yV[7] = 0, yV[8] = xV._x * xV._z * JV - xV._y, yV[9] = xV._y * xV._z * JV + xV._x, yV[10] = xV._z * xV._z * JV + UV, yV[11] = 0
         }
-        return aM[12] = 0, aM[13] = 0, aM[14] = 0, aM[15] = 1, iM.markAsUpdated(), iM
+        return yV[12] = 0, yV[13] = 0, yV[14] = 0, yV[15] = 1, xV.markAsUpdated(), xV
       }
-      static RotationYawPitchRoll(MM, rM, iM) {
-        const OM = new JM;
-        return JM.RotationYawPitchRollToRef(MM, rM, iM, OM), OM
+      static RotationYawPitchRoll(VV, eV, xV) {
+        const JV = new bV;
+        return bV.RotationYawPitchRollToRef(VV, eV, xV, JV), JV
       }
-      static RotationYawPitchRollToRef(MM, rM, iM, OM) {
-        return hM.RotationYawPitchRollToRef(MM, rM, iM, dM.Quaternion[0]), dM.Quaternion[0].toRotationMatrix(OM), OM
+      static RotationYawPitchRollToRef(VV, eV, xV, JV) {
+        return kV.RotationYawPitchRollToRef(VV, eV, xV, EV.Quaternion[0]), EV.Quaternion[0].toRotationMatrix(JV), JV
       }
-      static Scaling(MM, rM, iM) {
-        const OM = new JM;
-        return JM.ScalingToRef(MM, rM, iM, OM), OM
+      static Scaling(VV, eV, xV) {
+        const JV = new bV;
+        return bV.ScalingToRef(VV, eV, xV, JV), JV
       }
-      static ScalingToRef(MM, rM, iM, OM) {
-        return JM.FromValuesToRef(MM, 0, 0, 0, 0, rM, 0, 0, 0, 0, iM, 0, 0, 0, 0, 1, OM), OM._updateIdentityStatus(1 === MM && 1 === rM && 1 === iM), OM
+      static ScalingToRef(VV, eV, xV, JV) {
+        return bV.FromValuesToRef(VV, 0, 0, 0, 0, eV, 0, 0, 0, 0, xV, 0, 0, 0, 0, 1, JV), JV._updateIdentityStatus(1 === VV && 1 === eV && 1 === xV), JV
       }
-      static Translation(MM, rM, iM) {
-        const OM = new JM;
-        return JM.TranslationToRef(MM, rM, iM, OM), OM
+      static Translation(VV, eV, xV) {
+        const JV = new bV;
+        return bV.TranslationToRef(VV, eV, xV, JV), JV
       }
-      static TranslationToRef(MM, rM, iM, OM) {
-        return JM.FromValuesToRef(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, MM, rM, iM, 1, OM), OM._updateIdentityStatus(0 === MM && 0 === rM && 0 === iM), OM
+      static TranslationToRef(VV, eV, xV, JV) {
+        return bV.FromValuesToRef(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, VV, eV, xV, 1, JV), JV._updateIdentityStatus(0 === VV && 0 === eV && 0 === xV), JV
       }
-      static Lerp(MM, rM, iM) {
-        const OM = new JM;
-        return JM.LerpToRef(MM, rM, iM, OM), OM
+      static Lerp(VV, eV, xV) {
+        const JV = new bV;
+        return bV.LerpToRef(VV, eV, xV, JV), JV
       }
-      static LerpToRef(MM, rM, iM, OM) {
-        const SM = OM._m,
-          jM = MM.m,
-          aM = rM.m;
-        for (let PM = 0; PM < 16; PM++) SM[PM] = jM[PM] * (1 - iM) + aM[PM] * iM;
-        return OM.markAsUpdated(), OM
+      static LerpToRef(VV, eV, xV, JV) {
+        const YV = JV._m,
+          UV = VV.m,
+          yV = eV.m;
+        for (let pV = 0; pV < 16; pV++) YV[pV] = UV[pV] * (1 - xV) + yV[pV] * xV;
+        return JV.markAsUpdated(), JV
       }
-      static DecomposeLerp(MM, rM, iM) {
-        const OM = new JM;
-        return JM.DecomposeLerpToRef(MM, rM, iM, OM), OM
+      static DecomposeLerp(VV, eV, xV) {
+        const JV = new bV;
+        return bV.DecomposeLerpToRef(VV, eV, xV, JV), JV
       }
-      static DecomposeLerpToRef(MM, rM, iM, OM) {
-        const SM = dM.sh[0],
-          jM = dM.Quaternion[0],
-          aM = dM.sh[1];
-        MM.decompose(SM, jM, aM);
-        const PM = dM.sh[2],
-          nM = dM.Quaternion[1],
-          QM = dM.sh[3];
-        rM.decompose(PM, nM, QM);
-        const zM = dM.sh[4];
-        mM.LerpToRef(SM, PM, iM, zM);
-        const LM = dM.Quaternion[2];
-        hM.SlerpToRef(jM, nM, iM, LM);
-        const HM = dM.sh[5];
-        return mM.LerpToRef(aM, QM, iM, HM), JM.ComposeToRef(zM, LM, HM, OM), OM
+      static DecomposeLerpToRef(VV, eV, xV, JV) {
+        const YV = EV.Ik[0],
+          UV = EV.Quaternion[0],
+          yV = EV.Ik[1];
+        VV.decompose(YV, UV, yV);
+        const pV = EV.Ik[2],
+          QV = EV.Quaternion[1],
+          nV = EV.Ik[3];
+        eV.decompose(pV, QV, nV);
+        const wV = EV.Ik[4];
+        vV.LerpToRef(YV, pV, xV, wV);
+        const ZV = EV.Quaternion[2];
+        kV.SlerpToRef(UV, QV, xV, ZV);
+        const rV = EV.Ik[5];
+        return vV.LerpToRef(yV, nV, xV, rV), bV.ComposeToRef(wV, ZV, rV, JV), JV
       }
-      static LookAtLH(MM, rM, iM) {
-        const OM = new JM;
-        return JM.LookAtLHToRef(MM, rM, iM, OM), OM
+      static LookAtLH(VV, eV, xV) {
+        const JV = new bV;
+        return bV.LookAtLHToRef(VV, eV, xV, JV), JV
       }
-      static LookAtLHToRef(MM, rM, iM, OM) {
-        const SM = dM.sh[0],
-          jM = dM.sh[1],
-          aM = dM.sh[2];
-        rM.subtractToRef(MM, aM), aM.normalize(), mM.CrossToRef(iM, aM, SM);
-        const PM = SM.lengthSquared();
-        0 === PM ? SM.x = 1 : SM.normalizeFromLength(Math.sqrt(PM)), mM.CrossToRef(aM, SM, jM), jM.normalize();
-        const nM = -mM.Dot(SM, MM),
-          QM = -mM.Dot(jM, MM),
-          zM = -mM.Dot(aM, MM);
-        return JM.FromValuesToRef(SM._x, jM._x, aM._x, 0, SM._y, jM._y, aM._y, 0, SM._z, jM._z, aM._z, 0, nM, QM, zM, 1, OM), OM
+      static LookAtLHToRef(VV, eV, xV, JV) {
+        const YV = EV.Ik[0],
+          UV = EV.Ik[1],
+          yV = EV.Ik[2];
+        eV.subtractToRef(VV, yV), yV.normalize(), vV.CrossToRef(xV, yV, YV);
+        const pV = YV.lengthSquared();
+        0 === pV ? YV.x = 1 : YV.normalizeFromLength(Math.sqrt(pV)), vV.CrossToRef(yV, YV, UV), UV.normalize();
+        const QV = -vV.Dot(YV, VV),
+          nV = -vV.Dot(UV, VV),
+          wV = -vV.Dot(yV, VV);
+        return bV.FromValuesToRef(YV._x, UV._x, yV._x, 0, YV._y, UV._y, yV._y, 0, YV._z, UV._z, yV._z, 0, QV, nV, wV, 1, JV), JV
       }
-      static LookAtRH(MM, rM, iM) {
-        const OM = new JM;
-        return JM.LookAtRHToRef(MM, rM, iM, OM), OM
+      static LookAtRH(VV, eV, xV) {
+        const JV = new bV;
+        return bV.LookAtRHToRef(VV, eV, xV, JV), JV
       }
-      static LookAtRHToRef(MM, rM, iM, OM) {
-        const SM = dM.sh[0],
-          jM = dM.sh[1],
-          aM = dM.sh[2];
-        MM.subtractToRef(rM, aM), aM.normalize(), mM.CrossToRef(iM, aM, SM);
-        const PM = SM.lengthSquared();
-        0 === PM ? SM.x = 1 : SM.normalizeFromLength(Math.sqrt(PM)), mM.CrossToRef(aM, SM, jM), jM.normalize();
-        const nM = -mM.Dot(SM, MM),
-          QM = -mM.Dot(jM, MM),
-          zM = -mM.Dot(aM, MM);
-        return JM.FromValuesToRef(SM._x, jM._x, aM._x, 0, SM._y, jM._y, aM._y, 0, SM._z, jM._z, aM._z, 0, nM, QM, zM, 1, OM), OM
+      static LookAtRHToRef(VV, eV, xV, JV) {
+        const YV = EV.Ik[0],
+          UV = EV.Ik[1],
+          yV = EV.Ik[2];
+        VV.subtractToRef(eV, yV), yV.normalize(), vV.CrossToRef(xV, yV, YV);
+        const pV = YV.lengthSquared();
+        0 === pV ? YV.x = 1 : YV.normalizeFromLength(Math.sqrt(pV)), vV.CrossToRef(yV, YV, UV), UV.normalize();
+        const QV = -vV.Dot(YV, VV),
+          nV = -vV.Dot(UV, VV),
+          wV = -vV.Dot(yV, VV);
+        return bV.FromValuesToRef(YV._x, UV._x, yV._x, 0, YV._y, UV._y, yV._y, 0, YV._z, UV._z, yV._z, 0, QV, nV, wV, 1, JV), JV
       }
-      static LookDirectionLH(MM, rM) {
-        const iM = new JM;
-        return JM.LookDirectionLHToRef(MM, rM, iM), iM
+      static LookDirectionLH(VV, eV) {
+        const xV = new bV;
+        return bV.LookDirectionLHToRef(VV, eV, xV), xV
       }
-      static LookDirectionLHToRef(MM, rM, iM) {
-        const OM = dM.sh[0];
-        OM.jR(MM), OM.scaleInPlace(-1);
-        const SM = dM.sh[1];
-        return mM.CrossToRef(rM, OM, SM), JM.FromValuesToRef(SM._x, SM._y, SM._z, 0, rM._x, rM._y, rM._z, 0, OM._x, OM._y, OM._z, 0, 0, 0, 0, 1, iM), iM
+      static LookDirectionLHToRef(VV, eV, xV) {
+        const JV = EV.Ik[0];
+        JV.iG(VV), JV.scaleInPlace(-1);
+        const YV = EV.Ik[1];
+        return vV.CrossToRef(eV, JV, YV), bV.FromValuesToRef(YV._x, YV._y, YV._z, 0, eV._x, eV._y, eV._z, 0, JV._x, JV._y, JV._z, 0, 0, 0, 0, 1, xV), xV
       }
-      static LookDirectionRH(MM, rM) {
-        const iM = new JM;
-        return JM.LookDirectionRHToRef(MM, rM, iM), iM
+      static LookDirectionRH(VV, eV) {
+        const xV = new bV;
+        return bV.LookDirectionRHToRef(VV, eV, xV), xV
       }
-      static LookDirectionRHToRef(MM, rM, iM) {
-        const OM = dM.sh[2];
-        return mM.CrossToRef(rM, MM, OM), JM.FromValuesToRef(OM._x, OM._y, OM._z, 0, rM._x, rM._y, rM._z, 0, MM._x, MM._y, MM._z, 0, 0, 0, 0, 1, iM), iM
+      static LookDirectionRHToRef(VV, eV, xV) {
+        const JV = EV.Ik[2];
+        return vV.CrossToRef(eV, VV, JV), bV.FromValuesToRef(JV._x, JV._y, JV._z, 0, eV._x, eV._y, eV._z, 0, VV._x, VV._y, VV._z, 0, 0, 0, 0, 1, xV), xV
       }
-      static OrthoLH(MM, rM, iM, OM, SM) {
-        const jM = new JM;
-        return JM.OrthoLHToRef(MM, rM, iM, OM, jM, SM), jM
+      static OrthoLH(VV, eV, xV, JV, YV) {
+        const UV = new bV;
+        return bV.OrthoLHToRef(VV, eV, xV, JV, UV, YV), UV
       }
-      static OrthoLHToRef(MM, rM, iM, OM, SM, jM) {
-        const aM = 2 / MM,
-          PM = 2 / rM,
-          nM = 2 / (OM - iM),
-          QM = -(OM + iM) / (OM - iM);
-        return JM.FromValuesToRef(aM, 0, 0, 0, 0, PM, 0, 0, 0, 0, nM, 0, 0, 0, QM, 1, SM), jM && SM.multiplyToRef(lM, SM), SM._updateIdentityStatus(1 === aM && 1 === PM && 1 === nM && 0 === QM), SM
+      static OrthoLHToRef(VV, eV, xV, JV, YV, UV) {
+        const yV = 2 / VV,
+          pV = 2 / eV,
+          QV = 2 / (JV - xV),
+          nV = -(JV + xV) / (JV - xV);
+        return bV.FromValuesToRef(yV, 0, 0, 0, 0, pV, 0, 0, 0, 0, QV, 0, 0, 0, nV, 1, YV), UV && YV.multiplyToRef(jV, YV), YV._updateIdentityStatus(1 === yV && 1 === pV && 1 === QV && 0 === nV), YV
       }
-      static OrthoOffCenterLH(MM, rM, iM, OM, SM, jM, aM) {
-        const PM = new JM;
-        return JM.OrthoOffCenterLHToRef(MM, rM, iM, OM, SM, jM, PM, aM), PM
+      static OrthoOffCenterLH(VV, eV, xV, JV, YV, UV, yV) {
+        const pV = new bV;
+        return bV.OrthoOffCenterLHToRef(VV, eV, xV, JV, YV, UV, pV, yV), pV
       }
-      static OrthoOffCenterLHToRef(MM, rM, iM, OM, SM, jM, aM, PM) {
-        const nM = 2 / (rM - MM),
-          QM = 2 / (OM - iM),
-          zM = 2 / (jM - SM),
-          LM = -(jM + SM) / (jM - SM),
-          mM = (MM + rM) / (MM - rM),
-          HM = (OM + iM) / (iM - OM);
-        return JM.FromValuesToRef(nM, 0, 0, 0, 0, QM, 0, 0, 0, 0, zM, 0, mM, HM, LM, 1, aM), PM && aM.multiplyToRef(lM, aM), aM.markAsUpdated(), aM
+      static OrthoOffCenterLHToRef(VV, eV, xV, JV, YV, UV, yV, pV) {
+        const QV = 2 / (eV - VV),
+          nV = 2 / (JV - xV),
+          wV = 2 / (UV - YV),
+          ZV = -(UV + YV) / (UV - YV),
+          vV = (VV + eV) / (VV - eV),
+          rV = (JV + xV) / (xV - JV);
+        return bV.FromValuesToRef(QV, 0, 0, 0, 0, nV, 0, 0, 0, 0, wV, 0, vV, rV, ZV, 1, yV), pV && yV.multiplyToRef(jV, yV), yV.markAsUpdated(), yV
       }
-      static ObliqueOffCenterLHToRef(MM, rM, iM, OM, SM, jM, aM, PM, nM, QM, zM) {
-        const LM = -aM * Math.cos(PM),
-          mM = -aM * Math.sin(PM);
-        return JM.TranslationToRef(0, 0, -nM, dM.Matrix[1]), JM.FromValuesToRef(1, 0, 0, 0, 0, 1, 0, 0, LM, mM, 1, 0, 0, 0, 0, 1, dM.Matrix[0]), dM.Matrix[1].multiplyToRef(dM.Matrix[0], dM.Matrix[0]), JM.TranslationToRef(0, 0, nM, dM.Matrix[1]), dM.Matrix[0].multiplyToRef(dM.Matrix[1], dM.Matrix[0]), JM.OrthoOffCenterLHToRef(MM, rM, iM, OM, SM, jM, QM, zM), dM.Matrix[0].multiplyToRef(QM, QM), QM
+      static ObliqueOffCenterLHToRef(VV, eV, xV, JV, YV, UV, yV, pV, QV, nV, wV) {
+        const ZV = -yV * Math.cos(pV),
+          vV = -yV * Math.sin(pV);
+        return bV.TranslationToRef(0, 0, -QV, EV.Matrix[1]), bV.FromValuesToRef(1, 0, 0, 0, 0, 1, 0, 0, ZV, vV, 1, 0, 0, 0, 0, 1, EV.Matrix[0]), EV.Matrix[1].multiplyToRef(EV.Matrix[0], EV.Matrix[0]), bV.TranslationToRef(0, 0, QV, EV.Matrix[1]), EV.Matrix[0].multiplyToRef(EV.Matrix[1], EV.Matrix[0]), bV.OrthoOffCenterLHToRef(VV, eV, xV, JV, YV, UV, nV, wV), EV.Matrix[0].multiplyToRef(nV, nV), nV
       }
-      static OrthoOffCenterRH(MM, rM, iM, OM, SM, jM, aM) {
-        const PM = new JM;
-        return JM.OrthoOffCenterRHToRef(MM, rM, iM, OM, SM, jM, PM, aM), PM
+      static OrthoOffCenterRH(VV, eV, xV, JV, YV, UV, yV) {
+        const pV = new bV;
+        return bV.OrthoOffCenterRHToRef(VV, eV, xV, JV, YV, UV, pV, yV), pV
       }
-      static OrthoOffCenterRHToRef(MM, rM, iM, OM, SM, jM, aM, PM) {
-        return JM.OrthoOffCenterLHToRef(MM, rM, iM, OM, SM, jM, aM, PM), aM._m[10] *= -1, aM
+      static OrthoOffCenterRHToRef(VV, eV, xV, JV, YV, UV, yV, pV) {
+        return bV.OrthoOffCenterLHToRef(VV, eV, xV, JV, YV, UV, yV, pV), yV._m[10] *= -1, yV
       }
-      static ObliqueOffCenterRHToRef(MM, rM, iM, OM, SM, jM, aM, PM, nM, QM, zM) {
-        const LM = aM * Math.cos(PM),
-          mM = aM * Math.sin(PM);
-        return JM.TranslationToRef(0, 0, nM, dM.Matrix[1]), JM.FromValuesToRef(1, 0, 0, 0, 0, 1, 0, 0, LM, mM, 1, 0, 0, 0, 0, 1, dM.Matrix[0]), dM.Matrix[1].multiplyToRef(dM.Matrix[0], dM.Matrix[0]), JM.TranslationToRef(0, 0, -nM, dM.Matrix[1]), dM.Matrix[0].multiplyToRef(dM.Matrix[1], dM.Matrix[0]), JM.OrthoOffCenterRHToRef(MM, rM, iM, OM, SM, jM, QM, zM), dM.Matrix[0].multiplyToRef(QM, QM), QM
+      static ObliqueOffCenterRHToRef(VV, eV, xV, JV, YV, UV, yV, pV, QV, nV, wV) {
+        const ZV = yV * Math.cos(pV),
+          vV = yV * Math.sin(pV);
+        return bV.TranslationToRef(0, 0, QV, EV.Matrix[1]), bV.FromValuesToRef(1, 0, 0, 0, 0, 1, 0, 0, ZV, vV, 1, 0, 0, 0, 0, 1, EV.Matrix[0]), EV.Matrix[1].multiplyToRef(EV.Matrix[0], EV.Matrix[0]), bV.TranslationToRef(0, 0, -QV, EV.Matrix[1]), EV.Matrix[0].multiplyToRef(EV.Matrix[1], EV.Matrix[0]), bV.OrthoOffCenterRHToRef(VV, eV, xV, JV, YV, UV, nV, wV), EV.Matrix[0].multiplyToRef(nV, nV), nV
       }
-      static PerspectiveLH(MM, rM, iM, OM, SM) {
-        let jM = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0;
-        const aM = new JM,
-          PM = 2 * iM / MM,
-          nM = 2 * iM / rM,
-          QM = (OM + iM) / (OM - iM),
-          zM = -2 * OM * iM / (OM - iM),
-          LM = Math.tan(jM);
-        return JM.FromValuesToRef(PM, 0, 0, 0, 0, nM, 0, LM, 0, 0, QM, 1, 0, 0, zM, 0, aM), SM && aM.multiplyToRef(lM, aM), aM._updateIdentityStatus(!1), aM
+      static PerspectiveLH(VV, eV, xV, JV, YV) {
+        let UV = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0;
+        const yV = new bV,
+          pV = 2 * xV / VV,
+          QV = 2 * xV / eV,
+          nV = (JV + xV) / (JV - xV),
+          wV = -2 * JV * xV / (JV - xV),
+          ZV = Math.tan(UV);
+        return bV.FromValuesToRef(pV, 0, 0, 0, 0, QV, 0, ZV, 0, 0, nV, 1, 0, 0, wV, 0, yV), YV && yV.multiplyToRef(jV, yV), yV._updateIdentityStatus(!1), yV
       }
-      static PerspectiveFovLH(MM, rM, iM, OM, SM) {
-        let jM = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0,
-          aM = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
-        const PM = new JM;
-        return JM.PerspectiveFovLHToRef(MM, rM, iM, OM, PM, !0, SM, jM, aM), PM
+      static PerspectiveFovLH(VV, eV, xV, JV, YV) {
+        let UV = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0,
+          yV = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
+        const pV = new bV;
+        return bV.PerspectiveFovLHToRef(VV, eV, xV, JV, pV, !0, YV, UV, yV), pV
       }
-      static PerspectiveFovLHToRef(MM, rM, iM, OM, SM) {
-        let jM = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
-          aM = arguments.length > 6 ? arguments[6] : void 0,
-          PM = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 0,
-          nM = arguments.length > 8 && void 0 !== arguments[8] && arguments[8];
-        const QM = iM,
-          zM = OM,
-          LM = 1 / Math.tan(.5 * MM),
-          mM = jM ? LM / rM : LM,
-          HM = jM ? LM : LM * rM,
-          hM = nM && 0 === QM ? -1 : 0 !== zM ? (zM + QM) / (zM - QM) : 1,
-          dM = nM && 0 === QM ? 2 * zM : 0 !== zM ? -2 * zM * QM / (zM - QM) : -2 * QM,
-          yM = Math.tan(PM);
-        return JM.FromValuesToRef(mM, 0, 0, 0, 0, HM, 0, yM, 0, 0, hM, 1, 0, 0, dM, 0, SM), aM && SM.multiplyToRef(lM, SM), SM._updateIdentityStatus(!1), SM
+      static PerspectiveFovLHToRef(VV, eV, xV, JV, YV) {
+        let UV = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
+          yV = arguments.length > 6 ? arguments[6] : void 0,
+          pV = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 0,
+          QV = arguments.length > 8 && void 0 !== arguments[8] && arguments[8];
+        const nV = xV,
+          wV = JV,
+          ZV = 1 / Math.tan(.5 * VV),
+          vV = UV ? ZV / eV : ZV,
+          rV = UV ? ZV : ZV * eV,
+          kV = QV && 0 === nV ? -1 : 0 !== wV ? (wV + nV) / (wV - nV) : 1,
+          EV = QV && 0 === nV ? 2 * wV : 0 !== wV ? -2 * wV * nV / (wV - nV) : -2 * nV,
+          BV = Math.tan(pV);
+        return bV.FromValuesToRef(vV, 0, 0, 0, 0, rV, 0, BV, 0, 0, kV, 1, 0, 0, EV, 0, YV), yV && YV.multiplyToRef(jV, YV), YV._updateIdentityStatus(!1), YV
       }
-      static PerspectiveFovReverseLHToRef(MM, rM, iM, OM, SM) {
-        let jM = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
-          aM = arguments.length > 6 ? arguments[6] : void 0,
-          PM = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 0;
-        const nM = 1 / Math.tan(.5 * MM),
-          QM = jM ? nM / rM : nM,
-          zM = jM ? nM : nM * rM,
-          LM = Math.tan(PM);
-        return JM.FromValuesToRef(QM, 0, 0, 0, 0, zM, 0, LM, 0, 0, -iM, 1, 0, 0, 1, 0, SM), aM && SM.multiplyToRef(lM, SM), SM._updateIdentityStatus(!1), SM
+      static PerspectiveFovReverseLHToRef(VV, eV, xV, JV, YV) {
+        let UV = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
+          yV = arguments.length > 6 ? arguments[6] : void 0,
+          pV = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 0;
+        const QV = 1 / Math.tan(.5 * VV),
+          nV = UV ? QV / eV : QV,
+          wV = UV ? QV : QV * eV,
+          ZV = Math.tan(pV);
+        return bV.FromValuesToRef(nV, 0, 0, 0, 0, wV, 0, ZV, 0, 0, -xV, 1, 0, 0, 1, 0, YV), yV && YV.multiplyToRef(jV, YV), YV._updateIdentityStatus(!1), YV
       }
-      static PerspectiveFovRH(MM, rM, iM, OM, SM) {
-        let jM = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0,
-          aM = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
-        const PM = new JM;
-        return JM.PerspectiveFovRHToRef(MM, rM, iM, OM, PM, !0, SM, jM, aM), PM
+      static PerspectiveFovRH(VV, eV, xV, JV, YV) {
+        let UV = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0,
+          yV = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
+        const pV = new bV;
+        return bV.PerspectiveFovRHToRef(VV, eV, xV, JV, pV, !0, YV, UV, yV), pV
       }
-      static PerspectiveFovRHToRef(MM, rM, iM, OM, SM) {
-        let jM = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
-          aM = arguments.length > 6 ? arguments[6] : void 0,
-          PM = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 0,
-          nM = arguments.length > 8 && void 0 !== arguments[8] && arguments[8];
-        const QM = iM,
-          zM = OM,
-          LM = 1 / Math.tan(.5 * MM),
-          mM = jM ? LM / rM : LM,
-          HM = jM ? LM : LM * rM,
-          hM = nM && 0 === QM ? 1 : 0 !== zM ? -(zM + QM) / (zM - QM) : -1,
-          dM = nM && 0 === QM ? 2 * zM : 0 !== zM ? -2 * zM * QM / (zM - QM) : -2 * QM,
-          yM = Math.tan(PM);
-        return JM.FromValuesToRef(mM, 0, 0, 0, 0, HM, 0, yM, 0, 0, hM, -1, 0, 0, dM, 0, SM), aM && SM.multiplyToRef(lM, SM), SM._updateIdentityStatus(!1), SM
+      static PerspectiveFovRHToRef(VV, eV, xV, JV, YV) {
+        let UV = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
+          yV = arguments.length > 6 ? arguments[6] : void 0,
+          pV = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 0,
+          QV = arguments.length > 8 && void 0 !== arguments[8] && arguments[8];
+        const nV = xV,
+          wV = JV,
+          ZV = 1 / Math.tan(.5 * VV),
+          vV = UV ? ZV / eV : ZV,
+          rV = UV ? ZV : ZV * eV,
+          kV = QV && 0 === nV ? 1 : 0 !== wV ? -(wV + nV) / (wV - nV) : -1,
+          EV = QV && 0 === nV ? 2 * wV : 0 !== wV ? -2 * wV * nV / (wV - nV) : -2 * nV,
+          BV = Math.tan(pV);
+        return bV.FromValuesToRef(vV, 0, 0, 0, 0, rV, 0, BV, 0, 0, kV, -1, 0, 0, EV, 0, YV), yV && YV.multiplyToRef(jV, YV), YV._updateIdentityStatus(!1), YV
       }
-      static PerspectiveFovReverseRHToRef(MM, rM, iM, OM, SM) {
-        let jM = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
-          aM = arguments.length > 6 ? arguments[6] : void 0,
-          PM = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 0;
-        const nM = 1 / Math.tan(.5 * MM),
-          QM = jM ? nM / rM : nM,
-          zM = jM ? nM : nM * rM,
-          LM = Math.tan(PM);
-        return JM.FromValuesToRef(QM, 0, 0, 0, 0, zM, 0, LM, 0, 0, -iM, -1, 0, 0, -1, 0, SM), aM && SM.multiplyToRef(lM, SM), SM._updateIdentityStatus(!1), SM
+      static PerspectiveFovReverseRHToRef(VV, eV, xV, JV, YV) {
+        let UV = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
+          yV = arguments.length > 6 ? arguments[6] : void 0,
+          pV = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 0;
+        const QV = 1 / Math.tan(.5 * VV),
+          nV = UV ? QV / eV : QV,
+          wV = UV ? QV : QV * eV,
+          ZV = Math.tan(pV);
+        return bV.FromValuesToRef(nV, 0, 0, 0, 0, wV, 0, ZV, 0, 0, -xV, -1, 0, 0, -1, 0, YV), yV && YV.multiplyToRef(jV, YV), YV._updateIdentityStatus(!1), YV
       }
-      static GetFinalMatrix(MM, rM, iM, OM, SM, jM) {
-        const aM = MM.width,
-          PM = MM.height,
-          nM = MM.x,
-          QM = MM.y,
-          zM = JM.FromValues(aM / 2, 0, 0, 0, 0, -PM / 2, 0, 0, 0, 0, jM - SM, 0, nM + aM / 2, PM / 2 + QM, SM, 1),
-          LM = new JM;
-        return rM.multiplyToRef(iM, LM), LM.multiplyToRef(OM, LM), LM.multiplyToRef(zM, LM)
+      static GetFinalMatrix(VV, eV, xV, JV, YV, UV) {
+        const yV = VV.width,
+          pV = VV.height,
+          QV = VV.x,
+          nV = VV.y,
+          wV = bV.FromValues(yV / 2, 0, 0, 0, 0, -pV / 2, 0, 0, 0, 0, UV - YV, 0, QV + yV / 2, pV / 2 + nV, YV, 1),
+          ZV = new bV;
+        return eV.multiplyToRef(xV, ZV), ZV.multiplyToRef(JV, ZV), ZV.multiplyToRef(wV, ZV)
       }
-      static GetAsMatrix2x2(MM) {
-        const rM = MM.m,
-          iM = [rM[0], rM[1], rM[4], rM[5]];
-        return jM.b.MatrixUse64Bits ? iM : new Float32Array(iM)
+      static GetAsMatrix2x2(VV) {
+        const eV = VV.m,
+          xV = [eV[0], eV[1], eV[4], eV[5]];
+        return UV.c.MatrixUse64Bits ? xV : new Float32Array(xV)
       }
-      static GetAsMatrix3x3(MM) {
-        const rM = MM.m,
-          iM = [rM[0], rM[1], rM[2], rM[4], rM[5], rM[6], rM[8], rM[9], rM[10]];
-        return jM.b.MatrixUse64Bits ? iM : new Float32Array(iM)
+      static GetAsMatrix3x3(VV) {
+        const eV = VV.m,
+          xV = [eV[0], eV[1], eV[2], eV[4], eV[5], eV[6], eV[8], eV[9], eV[10]];
+        return UV.c.MatrixUse64Bits ? xV : new Float32Array(xV)
       }
-      static Transpose(MM) {
-        const rM = new JM;
-        return JM.TransposeToRef(MM, rM), rM
+      static Transpose(VV) {
+        const eV = new bV;
+        return bV.TransposeToRef(VV, eV), eV
       }
-      static TransposeToRef(MM, rM) {
-        const iM = MM.m,
-          OM = iM[0],
-          SM = iM[4],
-          jM = iM[8],
-          aM = iM[12],
-          PM = iM[1],
-          nM = iM[5],
-          QM = iM[9],
-          zM = iM[13],
-          LM = iM[2],
-          mM = iM[6],
-          HM = iM[10],
-          hM = iM[14],
-          JM = iM[3],
-          dM = iM[7],
-          yM = iM[11],
-          lM = iM[15],
-          EM = rM._m;
-        return EM[0] = OM, EM[1] = SM, EM[2] = jM, EM[3] = aM, EM[4] = PM, EM[5] = nM, EM[6] = QM, EM[7] = zM, EM[8] = LM, EM[9] = mM, EM[10] = HM, EM[11] = hM, EM[12] = JM, EM[13] = dM, EM[14] = yM, EM[15] = lM, rM.markAsUpdated(), rM._updateIdentityStatus(MM._isIdentity, MM._isIdentityDirty), rM
+      static TransposeToRef(VV, eV) {
+        const xV = VV.m,
+          JV = xV[0],
+          YV = xV[4],
+          UV = xV[8],
+          yV = xV[12],
+          pV = xV[1],
+          QV = xV[5],
+          nV = xV[9],
+          wV = xV[13],
+          ZV = xV[2],
+          vV = xV[6],
+          rV = xV[10],
+          kV = xV[14],
+          bV = xV[3],
+          EV = xV[7],
+          BV = xV[11],
+          jV = xV[15],
+          qV = eV._m;
+        return qV[0] = JV, qV[1] = YV, qV[2] = UV, qV[3] = yV, qV[4] = pV, qV[5] = QV, qV[6] = nV, qV[7] = wV, qV[8] = ZV, qV[9] = vV, qV[10] = rV, qV[11] = kV, qV[12] = bV, qV[13] = EV, qV[14] = BV, qV[15] = jV, eV.markAsUpdated(), eV._updateIdentityStatus(VV._isIdentity, VV._isIdentityDirty), eV
       }
-      static Reflection(MM) {
-        const rM = new JM;
-        return JM.ReflectionToRef(MM, rM), rM
+      static Reflection(VV) {
+        const eV = new bV;
+        return bV.ReflectionToRef(VV, eV), eV
       }
-      static ReflectionToRef(MM, rM) {
-        MM.normalize();
-        const iM = MM.normal.x,
-          OM = MM.normal.y,
-          SM = MM.normal.z,
-          jM = -2 * iM,
-          aM = -2 * OM,
-          PM = -2 * SM;
-        return JM.FromValuesToRef(jM * iM + 1, aM * iM, PM * iM, 0, jM * OM, aM * OM + 1, PM * OM, 0, jM * SM, aM * SM, PM * SM + 1, 0, jM * MM.d, aM * MM.d, PM * MM.d, 1, rM), rM
+      static ReflectionToRef(VV, eV) {
+        VV.normalize();
+        const xV = VV.normal.x,
+          JV = VV.normal.y,
+          YV = VV.normal.z,
+          UV = -2 * xV,
+          yV = -2 * JV,
+          pV = -2 * YV;
+        return bV.FromValuesToRef(UV * xV + 1, yV * xV, pV * xV, 0, UV * JV, yV * JV + 1, pV * JV, 0, UV * YV, yV * YV, pV * YV + 1, 0, UV * VV.d, yV * VV.d, pV * VV.d, 1, eV), eV
       }
-      static FromXYZAxesToRef(MM, rM, iM, OM) {
-        return JM.FromValuesToRef(MM._x, MM._y, MM._z, 0, rM._x, rM._y, rM._z, 0, iM._x, iM._y, iM._z, 0, 0, 0, 0, 1, OM), OM
+      static FromXYZAxesToRef(VV, eV, xV, JV) {
+        return bV.FromValuesToRef(VV._x, VV._y, VV._z, 0, eV._x, eV._y, eV._z, 0, xV._x, xV._y, xV._z, 0, 0, 0, 0, 1, JV), JV
       }
-      static FromQuaternionToRef(MM, rM) {
-        const iM = MM._x * MM._x,
-          OM = MM._y * MM._y,
-          SM = MM._z * MM._z,
-          jM = MM._x * MM._y,
-          aM = MM._z * MM._w,
-          PM = MM._z * MM._x,
-          nM = MM._y * MM._w,
-          QM = MM._y * MM._z,
-          zM = MM._x * MM._w;
-        return rM._m[0] = 1 - 2 * (OM + SM), rM._m[1] = 2 * (jM + aM), rM._m[2] = 2 * (PM - nM), rM._m[3] = 0, rM._m[4] = 2 * (jM - aM), rM._m[5] = 1 - 2 * (SM + iM), rM._m[6] = 2 * (QM + zM), rM._m[7] = 0, rM._m[8] = 2 * (PM + nM), rM._m[9] = 2 * (QM - zM), rM._m[10] = 1 - 2 * (OM + iM), rM._m[11] = 0, rM._m[12] = 0, rM._m[13] = 0, rM._m[14] = 0, rM._m[15] = 1, rM.markAsUpdated(), rM
+      static FromQuaternionToRef(VV, eV) {
+        const xV = VV._x * VV._x,
+          JV = VV._y * VV._y,
+          YV = VV._z * VV._z,
+          UV = VV._x * VV._y,
+          yV = VV._z * VV._w,
+          pV = VV._z * VV._x,
+          QV = VV._y * VV._w,
+          nV = VV._y * VV._z,
+          wV = VV._x * VV._w;
+        return eV._m[0] = 1 - 2 * (JV + YV), eV._m[1] = 2 * (UV + yV), eV._m[2] = 2 * (pV - QV), eV._m[3] = 0, eV._m[4] = 2 * (UV - yV), eV._m[5] = 1 - 2 * (YV + xV), eV._m[6] = 2 * (nV + wV), eV._m[7] = 0, eV._m[8] = 2 * (pV + QV), eV._m[9] = 2 * (nV - wV), eV._m[10] = 1 - 2 * (JV + xV), eV._m[11] = 0, eV._m[12] = 0, eV._m[13] = 0, eV._m[14] = 0, eV._m[15] = 1, eV.markAsUpdated(), eV
       }
     }
-    JM._IdentityReadOnly = JM.Identity();
-    class dM {}
-    dM.sh = (0, SM.g)(11, mM.Zero), dM.Matrix = (0, SM.g)(2, JM.Identity), dM.Quaternion = (0, SM.g)(3, hM.Zero);
-    class yM {}
-    yM.Vector2 = (0, SM.g)(3, LM.Zero), yM.sh = (0, SM.g)(13, mM.Zero), yM.Vector4 = (0, SM.g)(3, HM.Zero), yM.Quaternion = (0, SM.g)(3, hM.Zero), yM.Matrix = (0, SM.g)(8, JM.Identity);
-    const lM = JM.FromValues(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, .5, 0, 0, 0, .5, 1);
-    let EM = !1;
+    bV._IdentityReadOnly = bV.Identity();
+    class EV {}
+    EV.Ik = (0, YV.h)(11, vV.Zero), EV.Matrix = (0, YV.h)(2, bV.Identity), EV.Quaternion = (0, YV.h)(3, kV.Zero);
+    class BV {}
+    BV.Vector2 = (0, YV.h)(3, ZV.Zero), BV.Ik = (0, YV.h)(13, vV.Zero), BV.Vector4 = (0, YV.h)(3, rV.Zero), BV.Quaternion = (0, YV.h)(3, kV.Zero), BV.Matrix = (0, YV.h)(8, bV.Identity);
+    const jV = bV.FromValues(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, .5, 0, 0, 0, .5, 1);
+    let qV = !1;
 
-    function UM() {
-      EM || (EM = !0, Object.defineProperties(LM.prototype, {
+    function tV() {
+      qV || (qV = !0, Object.defineProperties(ZV.prototype, {
         dimension: {
           value: [2]
         },
         rank: {
           value: 1
         }
-      }), Object.defineProperties(mM.prototype, {
+      }), Object.defineProperties(vV.prototype, {
         dimension: {
           value: [3]
         },
         rank: {
           value: 1
         }
-      }), Object.defineProperties(HM.prototype, {
+      }), Object.defineProperties(rV.prototype, {
         dimension: {
           value: [4]
         },
         rank: {
           value: 1
         }
-      }), Object.defineProperties(hM.prototype, {
+      }), Object.defineProperties(kV.prototype, {
         dimension: {
           value: [4]
         },
         rank: {
           value: 1
         }
-      }), Object.defineProperties(JM.prototype, {
+      }), Object.defineProperties(bV.prototype, {
         dimension: {
           value: [4, 4]
         },
         rank: {
           value: 2
         }
-      }), (0, QM.e)("BABYLON.Vector2", LM), (0, QM.e)("BABYLON.Vector3", mM), (0, QM.e)("BABYLON.Vector4", HM), (0, QM.e)("BABYLON.Matrix", JM))
+      }), (0, nV.d)("BABYLON.Vector2", ZV), (0, nV.d)("BABYLON.Vector3", vV), (0, nV.d)("BABYLON.Vector4", rV), (0, nV.d)("BABYLON.Matrix", bV))
     }
   },
-  38068: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => aM
+  38296: (VV, eV, xV) => {
+    xV.d(eV, {
+      c: () => yV
     });
-    const OM = "undefined" !== typeof WeakRef;
-    class SM {
-      constructor(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          iM = arguments.length > 2 ? arguments[2] : void 0,
-          OM = arguments.length > 3 ? arguments[3] : void 0;
-        this.initialize(MM, rM, iM, OM)
+    const JV = "undefined" !== typeof WeakRef;
+    class YV {
+      constructor(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          xV = arguments.length > 2 ? arguments[2] : void 0,
+          JV = arguments.length > 3 ? arguments[3] : void 0;
+        this.initialize(VV, eV, xV, JV)
       }
-      initialize(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          iM = arguments.length > 2 ? arguments[2] : void 0,
-          OM = arguments.length > 3 ? arguments[3] : void 0;
-        return this.mask = MM, this.skipNextObservers = rM, this.target = iM, this.currentTarget = OM, this
+      initialize(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          xV = arguments.length > 2 ? arguments[2] : void 0,
+          JV = arguments.length > 3 ? arguments[3] : void 0;
+        return this.mask = VV, this.skipNextObservers = eV, this.target = xV, this.currentTarget = JV, this
       }
     }
-    class jM {
-      constructor(MM, rM) {
-        let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        this.callback = MM, this.mask = rM, this.scope = iM, this._willBeUnregistered = !1, this.unregisterOnNextCall = !1, this._remove = null
+    class UV {
+      constructor(VV, eV) {
+        let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+        this.callback = VV, this.mask = eV, this.scope = xV, this._willBeUnregistered = !1, this.unregisterOnNextCall = !1, this._remove = null
       }
       remove() {
-        let MM = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        this._remove && this._remove(MM)
+        let VV = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        this._remove && this._remove(VV)
       }
     }
-    class aM {
-      static FromPromise(MM, rM) {
-        const iM = new aM;
-        return MM.then((MM => {
-          iM.notifyObservers(MM)
-        })).catch((MM => {
-          if (!rM) throw MM;
-          rM.notifyObservers(MM)
-        })), iM
+    class yV {
+      static FromPromise(VV, eV) {
+        const xV = new yV;
+        return VV.then((VV => {
+          xV.notifyObservers(VV)
+        })).catch((VV => {
+          if (!eV) throw VV;
+          eV.notifyObservers(VV)
+        })), xV
       }
       get observers() {
         return this._observers
       }
-      constructor(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        this.notifyIfTriggered = rM, this._observers = new Array, this._numObserversMarkedAsDeleted = 0, this._hasNotified = !1, this._eventState = new SM(0), MM && (this._onObserverAdded = MM)
+      constructor(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        this.notifyIfTriggered = eV, this._observers = new Array, this._numObserversMarkedAsDeleted = 0, this._hasNotified = !1, this._eventState = new YV(0), VV && (this._onObserverAdded = VV)
       }
-      add(MM) {
-        let rM = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-          iM = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        if (!MM) return null;
-        const SM = new jM(MM, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null);
-        SM.unregisterOnNextCall = iM, rM ? this._observers.unshift(SM) : this._observers.push(SM), this._onObserverAdded && this._onObserverAdded(SM), this._hasNotified && this.notifyIfTriggered && this.notifyObserver(SM, this._lastNotifiedValue);
-        const aM = OM ? new WeakRef(this) : {
+      add(VV) {
+        let eV = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+          xV = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        if (!VV) return null;
+        const YV = new UV(VV, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null);
+        YV.unregisterOnNextCall = xV, eV ? this._observers.unshift(YV) : this._observers.push(YV), this._onObserverAdded && this._onObserverAdded(YV), this._hasNotified && this.notifyIfTriggered && this.notifyObserver(YV, this._lastNotifiedValue);
+        const yV = JV ? new WeakRef(this) : {
           deref: () => this
         };
-        return SM._remove = function() {
-          let MM = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-          const rM = aM.deref();
-          rM && (MM ? rM.remove(SM) : rM._remove(SM))
-        }, SM
+        return YV._remove = function() {
+          let VV = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+          const eV = yV.deref();
+          eV && (VV ? eV.remove(YV) : eV._remove(YV))
+        }, YV
       }
-      addOnce(MM) {
-        return this.add(MM, void 0, void 0, void 0, !0)
+      addOnce(VV) {
+        return this.add(VV, void 0, void 0, void 0, !0)
       }
-      remove(MM) {
-        if (!MM) return !1;
-        MM._remove = null;
-        return -1 !== this._observers.indexOf(MM) && (this._deferUnregister(MM), !0)
+      remove(VV) {
+        if (!VV) return !1;
+        VV._remove = null;
+        return -1 !== this._observers.indexOf(VV) && (this._deferUnregister(VV), !0)
       }
-      removeCallback(MM, rM) {
-        for (let iM = 0; iM < this._observers.length; iM++) {
-          const OM = this._observers[iM];
-          if (!OM._willBeUnregistered && (OM.callback === MM && (!rM || rM === OM.scope))) return this._deferUnregister(OM), !0
+      removeCallback(VV, eV) {
+        for (let xV = 0; xV < this._observers.length; xV++) {
+          const JV = this._observers[xV];
+          if (!JV._willBeUnregistered && (JV.callback === VV && (!eV || eV === JV.scope))) return this._deferUnregister(JV), !0
         }
         return !1
       }
-      _deferUnregister(MM) {
-        MM._willBeUnregistered || (this._numObserversMarkedAsDeleted++, MM.unregisterOnNextCall = !1, MM._willBeUnregistered = !0, setTimeout((() => {
-          this._remove(MM)
+      _deferUnregister(VV) {
+        VV._willBeUnregistered || (this._numObserversMarkedAsDeleted++, VV.unregisterOnNextCall = !1, VV._willBeUnregistered = !0, setTimeout((() => {
+          this._remove(VV)
         }), 0))
       }
-      _remove(MM) {
-        let rM = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        if (!MM) return !1;
-        const iM = this._observers.indexOf(MM);
-        return -1 !== iM && (rM && this._numObserversMarkedAsDeleted--, this._observers.splice(iM, 1), !0)
+      _remove(VV) {
+        let eV = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        if (!VV) return !1;
+        const xV = this._observers.indexOf(VV);
+        return -1 !== xV && (eV && this._numObserversMarkedAsDeleted--, this._observers.splice(xV, 1), !0)
       }
-      makeObserverTopPriority(MM) {
-        this._remove(MM, !1), this._observers.unshift(MM)
+      makeObserverTopPriority(VV) {
+        this._remove(VV, !1), this._observers.unshift(VV)
       }
-      makeObserverBottomPriority(MM) {
-        this._remove(MM, !1), this._observers.push(MM)
+      makeObserverBottomPriority(VV) {
+        this._remove(VV, !1), this._observers.push(VV)
       }
-      notifyObservers(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
-          iM = arguments.length > 2 ? arguments[2] : void 0,
-          OM = arguments.length > 3 ? arguments[3] : void 0,
-          SM = arguments.length > 4 ? arguments[4] : void 0;
-        if (this.notifyIfTriggered && (this._hasNotified = !0, this._lastNotifiedValue = MM), !this._observers.length) return !0;
-        const jM = this._eventState;
-        jM.mask = rM, jM.target = iM, jM.currentTarget = OM, jM.skipNextObservers = !1, jM.lastReturnValue = MM, jM.userInfo = SM;
-        for (const aM of this._observers)
-          if (!aM._willBeUnregistered && (aM.mask & rM && (aM.unregisterOnNextCall && this._deferUnregister(aM), aM.scope ? jM.lastReturnValue = aM.callback.apply(aM.scope, [MM, jM]) : jM.lastReturnValue = aM.callback(MM, jM)), jM.skipNextObservers)) return !1;
+      notifyObservers(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
+          xV = arguments.length > 2 ? arguments[2] : void 0,
+          JV = arguments.length > 3 ? arguments[3] : void 0,
+          YV = arguments.length > 4 ? arguments[4] : void 0;
+        if (this.notifyIfTriggered && (this._hasNotified = !0, this._lastNotifiedValue = VV), !this._observers.length) return !0;
+        const UV = this._eventState;
+        UV.mask = eV, UV.target = xV, UV.currentTarget = JV, UV.skipNextObservers = !1, UV.lastReturnValue = VV, UV.userInfo = YV;
+        for (const yV of this._observers)
+          if (!yV._willBeUnregistered && (yV.mask & eV && (yV.unregisterOnNextCall && this._deferUnregister(yV), yV.scope ? UV.lastReturnValue = yV.callback.apply(yV.scope, [VV, UV]) : UV.lastReturnValue = yV.callback(VV, UV)), UV.skipNextObservers)) return !1;
         return !0
       }
-      notifyObserver(MM, rM) {
-        let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1;
-        if (this.notifyIfTriggered && (this._hasNotified = !0, this._lastNotifiedValue = rM), MM._willBeUnregistered) return;
-        const OM = this._eventState;
-        OM.mask = iM, OM.skipNextObservers = !1, MM.unregisterOnNextCall && this._deferUnregister(MM), MM.callback(rM, OM)
+      notifyObserver(VV, eV) {
+        let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1;
+        if (this.notifyIfTriggered && (this._hasNotified = !0, this._lastNotifiedValue = eV), VV._willBeUnregistered) return;
+        const JV = this._eventState;
+        JV.mask = xV, JV.skipNextObservers = !1, VV.unregisterOnNextCall && this._deferUnregister(VV), VV.callback(eV, JV)
       }
       hasObservers() {
         return this._observers.length - this._numObserversMarkedAsDeleted > 0
       }
       clear() {
         for (; this._observers.length;) {
-          const MM = this._observers.pop();
-          MM && (MM._remove = null)
+          const VV = this._observers.pop();
+          VV && (VV._remove = null)
         }
         this._onObserverAdded = null, this._numObserversMarkedAsDeleted = 0, this.cleanLastNotifiedState()
       }
@@ -2905,17 +2905,17 @@ export const modules = {
         this._hasNotified = !1, this._lastNotifiedValue = void 0
       }
       clone() {
-        const MM = new aM;
-        return MM._observers = this._observers.slice(0), MM
+        const VV = new yV;
+        return VV._observers = this._observers.slice(0), VV
       }
       hasSpecificMask() {
-        let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : -1;
-        for (const rM of this._observers)
-          if (rM.mask & MM || rM.mask === MM) return !0;
+        let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : -1;
+        for (const eV of this._observers)
+          if (eV.mask & VV || eV.mask === VV) return !0;
         return !1
       }
     }
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const VV in modules) Object.freeze(modules[VV]);

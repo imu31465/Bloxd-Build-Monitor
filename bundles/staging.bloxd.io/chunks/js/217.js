@@ -1,84 +1,84 @@
 export const id = 217;
 export const ids = [217, 218];
 export const modules = {
-  34868: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      reportJsMainStall: () => PM,
-      resetJsMainStallReport: () => nM
+  35136: (VV, eV, xV) => {
+    xV.r(eV), xV.d(eV, {
+      reportJsMainStall: () => pV,
+      resetJsMainStallReport: () => QV
     });
-    var OM = iM(34877),
-      SM = iM(3258),
-      jM = iM(34880);
-    let aM = !1;
+    var JV = xV(35139),
+      YV = xV(3268),
+      UV = xV(35146);
+    let yV = !1;
 
-    function PM(MM, rM, iM, PM) {
-      aM || (aM = !0, (0, SM.reportClientError)("wasm_load", (0, jM.d)(MM, rM, iM, PM, (0, jM.e)()), "JS-mainStall", !0, OM.CAPPED_COUNTS_VISIT_CAP))
+    function pV(VV, eV, xV, pV) {
+      yV || (yV = !0, (0, YV.reportClientError)("wasm_load", (0, UV.d)(VV, eV, xV, pV, (0, UV.f)()), "JS-mainStall", !0, JV.CAPPED_COUNTS_VISIT_CAP))
     }
 
-    function nM() {
-      aM = !1
+    function QV() {
+      yV = !1
     }
   },
-  34880: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => PM,
-      e: () => aM
+  35146: (VV, eV, xV) => {
+    xV.d(eV, {
+      d: () => pV,
+      f: () => yV
     });
-    var OM = iM(243),
-      SM = iM(114),
-      jM = iM(34885);
+    var JV = xV(296),
+      YV = xV(134),
+      UV = xV(35148);
 
-    function aM() {
-      var MM, rM, iM;
-      return null !== (MM = (0, OM.p)(null !== (rM = null === (iM = (0, SM.o)()) || void 0 === iM ? void 0 : iM.renderer) && void 0 !== rM ? rM : null, (0, SM.k)())) && void 0 !== MM ? MM : "unknown"
+    function yV() {
+      var VV, eV, xV;
+      return null !== (VV = (0, JV.k)(null !== (eV = null === (xV = (0, YV.o)()) || void 0 === xV ? void 0 : xV.renderer) && void 0 !== eV ? eV : null, (0, YV.k)())) && void 0 !== VV ? VV : "unknown"
     }
 
-    function PM(MM, rM, iM, OM, SM) {
-      const aM = null === rM ? "untimed" : `${Math.round(rM)} ms`;
-      return `frames stalled, ${iM}, gpu ${(0,jM.b)(SM)}, blocking ${aM}, drawn ${Math.round(MM)} ms apart, timers ${OM.timers}, timer gap ${Math.round(OM.longestGapMs)} ms`
+    function pV(VV, eV, xV, JV, YV) {
+      const yV = null === eV ? "untimed" : `${Math.round(eV)} ms`;
+      return `frames stalled, ${xV}, gpu ${(0,UV.b)(YV)}, blocking ${yV}, drawn ${Math.round(VV)} ms apart, timers ${JV.timers}, timer gap ${Math.round(JV.longestGapMs)} ms`
     }
   },
-  34877: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      CAPPED_COUNTS_VISIT_CAP: () => jM,
-      reportCappedWasmFailure: () => nM,
-      reportUncappedWasmFailure: () => PM,
-      reportWasmCrash: () => SM,
-      reportWasmFailure: () => aM
+  35139: (VV, eV, xV) => {
+    xV.r(eV), xV.d(eV, {
+      CAPPED_COUNTS_VISIT_CAP: () => UV,
+      reportCappedWasmFailure: () => QV,
+      reportUncappedWasmFailure: () => pV,
+      reportWasmCrash: () => YV,
+      reportWasmFailure: () => yV
     });
-    var OM = iM(3258);
+    var JV = xV(3268);
 
-    function SM(MM) {
-      (0, OM.reportClientError)("wasm_load", MM.message, MM.code)
+    function YV(VV) {
+      (0, JV.reportClientError)("wasm_load", VV.message, VV.code)
     }
-    const jM = OM.MAX_ERRORS_PER_VISIT - 4;
+    const UV = JV.MAX_ERRORS_PER_VISIT - 4;
 
-    function aM(MM, rM, iM, SM) {
-      (0, OM.reportClientError)(MM, rM, iM, !1, OM.MAX_ERRORS_PER_VISIT, {
-        context: SM
+    function yV(VV, eV, xV, YV) {
+      (0, JV.reportClientError)(VV, eV, xV, !1, JV.MAX_ERRORS_PER_VISIT, {
+        context: YV
       })
     }
 
-    function PM(MM, rM, iM, SM) {
-      (0, OM.reportClientError)(MM, rM, iM, !1, 1 / 0, {
-        context: SM
+    function pV(VV, eV, xV, YV) {
+      (0, JV.reportClientError)(VV, eV, xV, !1, 1 / 0, {
+        context: YV
       })
     }
 
-    function nM(MM, rM, iM, SM) {
-      (0, OM.reportClientError)(MM, rM, iM, !1, jM, {
-        context: SM
+    function QV(VV, eV, xV, YV) {
+      (0, JV.reportClientError)(VV, eV, xV, !1, UV, {
+        context: YV
       })
     }
   },
-  34885: (MM, rM, iM) => {
-    function OM(MM) {
-      return String(MM).replace(/\d/g, (MM => String.fromCharCode(97 + Number(MM))))
+  35148: (VV, eV, xV) => {
+    function JV(VV) {
+      return String(VV).replace(/\d/g, (VV => String.fromCharCode(97 + Number(VV))))
     }
-    iM.d(rM, {
-      b: () => OM
+    xV.d(eV, {
+      b: () => JV
     })
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const VV in modules) Object.freeze(modules[VV]);

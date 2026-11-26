@@ -1,318 +1,318 @@
 export const id = 129;
 export const ids = [129, 130, 151];
 export const modules = {
-  5435: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => OM.g,
-      g: () => SM,
-      k: () => OM.o
+  5556: (VV, eV, xV) => {
+    xV.d(eV, {
+      d: () => JV.f,
+      g: () => YV,
+      j: () => JV.o
     });
-    var OM = iM(5442);
-    const SM = [!1, !0].flatMap((MM => ["terrain", "liquid", "model"].map((rM => ({
-      strict: MM,
-      program: rM
+    var JV = xV(5561);
+    const YV = [!1, !0].flatMap((VV => ["terrain", "liquid", "model"].map((eV => ({
+      strict: VV,
+      program: eV
     })))))
   },
-  40300: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      ShaderPackPage: () => nM,
-      harnessShaderPackMode: () => mM,
-      setHarnessUrlShaderPack: () => LM,
-      shaderPackPage: () => zM
+  40443: (VV, eV, xV) => {
+    xV.r(eV), xV.d(eV, {
+      ShaderPackPage: () => QV,
+      harnessShaderPackMode: () => vV,
+      setHarnessUrlShaderPack: () => ZV,
+      shaderPackPage: () => wV
     });
-    var OM = iM(83),
-      SM = iM(30),
-      jM = (iM(3860), iM(5435), iM(3855)),
-      aM = iM(7148);
-    iM(7120);
-    const PM = {
+    var JV = xV(99),
+      YV = xV(40),
+      UV = (xV(3911), xV(5556), xV(3907)),
+      yV = xV(7216);
+    xV(7191);
+    const pV = {
       status: "none"
     };
-    class nM {
+    class QV {
       constructor() {
         this.stored = null, this.compiling = null, this.pagePack = null, this.resolved = null
       }
       preload() {
         if (null === this.stored) {
-          if ((0, jM.f)(OM.featureFlags.settings.canUseShaderPacks)) return this.stored = Promise.resolve(null), QM().then((MM => {
-            MM && SM.g.removeItem(jM.c)
+          if ((0, UV.f)(JV.featureFlags.settings.canUseShaderPacks)) return this.stored = Promise.resolve(null), nV().then((VV => {
+            VV && YV.m.removeItem(UV.d)
           })), this.stored;
           this.prefetchHint() && this.compiler().catch((() => {})), this.stored = this.readStored()
         }
         return this.stored
       }
       prefetchHint() {
-        return (0, jM.d)(OM.featureFlags.settings.canUseShaderPacks)
+        return (0, UV.e)(JV.featureFlags.settings.canUseShaderPacks)
       }
       async loadActive() {
-        const MM = await this.load();
-        return "active" === MM.status ? MM.pack : null
+        const VV = await this.load();
+        return "active" === VV.status ? VV.pack : null
       }
       load() {
-        return this.pagePack ??= this.read().catch((MM => (console.error("Failed to load the shader pack", MM), PM))).then((MM => (this.resolved ??= MM, MM))), this.pagePack
+        return this.pagePack ??= this.read().catch((VV => (console.error("Failed to load the shader pack", VV), pV))).then((VV => (this.resolved ??= VV, VV))), this.pagePack
       }
       hasNone() {
-        var MM;
-        return "none" === (null === (MM = this.resolved) || void 0 === MM ? void 0 : MM.status)
+        var VV;
+        return "none" === (null === (VV = this.resolved) || void 0 === VV ? void 0 : VV.status)
       }
-      block(MM) {
+      block(VV) {
         this.resolved = {
           status: "blocked",
-          messageKey: MM,
+          messageKey: VV,
           variants: null
         }, this.pagePack = Promise.resolve(this.resolved)
       }
       compiler() {
-        return this.compiling ??= Promise.all([iM.e(89), iM.e(149), iM.e(155)]).then((() => iM(44389))).then((MM => (MM.prefetchCompiler(), MM))), this.compiling
+        return this.compiling ??= Promise.all([xV.e(89), xV.e(149), xV.e(155)]).then((() => xV(44634))).then((VV => (VV.prefetchCompiler(), VV))), this.compiling
       }
       async readStored() {
-        const MM = await QM();
-        return MM && this.compiler().then((MM => MM.reconcileHint())).catch((MM => {
-          console.error("Failed to correct the shader pack hint", MM)
-        })), MM
+        const VV = await nV();
+        return VV && this.compiler().then((VV => VV.reconcileHint())).catch((VV => {
+          console.error("Failed to correct the shader pack hint", VV)
+        })), VV
       }
       async read() {
-        const MM = await this.preload();
-        return MM ? (await this.compiler()).compilePagePack(MM) : PM
+        const VV = await this.preload();
+        return VV ? (await this.compiler()).compilePagePack(VV) : pV
       }
     }
-    async function QM() {
-      if (!(0, jM.i)(OM.featureFlags.settings.canUseShaderPacks)) return null;
+    async function nV() {
+      if (!(0, UV.h)(JV.featureFlags.settings.canUseShaderPacks)) return null;
       try {
-        const MM = await (0, aM.d)(!0);
-        return MM || SM.g.setItem(jM.c, !1), MM
-      } catch (MM) {
-        return console.error("Failed to read the stored shader pack", MM), SM.g.removeItem(jM.c), null
+        const VV = await (0, yV.f)(!0);
+        return VV || YV.m.setItem(UV.d, !1), VV
+      } catch (VV) {
+        return console.error("Failed to read the stored shader pack", VV), YV.m.removeItem(UV.d), null
       }
     }
-    const zM = new nM;
+    const wV = new QV;
 
-    function LM(MM, rM) {}
+    function ZV(VV, eV) {}
 
-    function mM() {
+    function vV() {
       return null
     }
   },
-  7148: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => SM,
-      d: () => jM
+  7216: (VV, eV, xV) => {
+    xV.d(eV, {
+      d: () => YV,
+      f: () => UV
     });
-    var OM = iM(30);
-    const SM = "shaderPack";
-    async function jM() {
-      var MM;
-      let rM = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      return null !== (MM = await OM.f.getItem(SM, rM)) && void 0 !== MM ? MM : null
+    var JV = xV(40);
+    const YV = "shaderPack";
+    async function UV() {
+      var VV;
+      let eV = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+      return null !== (VV = await JV.i.getItem(YV, eV)) && void 0 !== VV ? VV : null
     }
   },
-  7120: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      loadShaderPackTextures: () => aM,
-      shaderPackTextures: () => PM
+  7191: (VV, eV, xV) => {
+    xV.r(eV), xV.d(eV, {
+      loadShaderPackTextures: () => yV,
+      shaderPackTextures: () => pV
     });
-    var OM = iM(5442);
-    let SM = null,
-      jM = null;
+    var JV = xV(5561);
+    let YV = null,
+      UV = null;
 
-    function aM() {
-      return jM ??= Promise.all([iM.e(84), iM.e(204)]).then((() => iM(41585))).then((MM => {
+    function yV() {
+      return UV ??= Promise.all([xV.e(84), xV.e(204)]).then((() => xV(41764))).then((VV => {
         let {
-          FORMER_BLOCK_IMAGE_NAMES: rM,
-          textureNameToIndex: iM,
-          textureAnimationData: jM
-        } = MM;
-        return SM ??= (0, OM.j)(iM, jM, rM), SM
-      })), jM
+          FORMER_BLOCK_IMAGE_NAMES: eV,
+          textureNameToIndex: xV,
+          textureAnimationData: UV
+        } = VV;
+        return YV ??= (0, JV.j)(xV, UV, eV), YV
+      })), UV
     }
 
-    function PM() {
-      if (null === SM) throw new Error("Shader pack textures read before loadShaderPackTextures");
-      return SM
+    function pV() {
+      if (null === YV) throw new Error("Shader pack textures read before loadShaderPackTextures");
+      return YV
     }
   },
-  5442: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => PM,
-      f: () => aM,
-      g: () => OM,
-      j: () => JM,
-      k: () => LM,
-      o: () => SM,
-      q: () => jM,
-      t: () => QM,
-      w: () => zM,
-      z: () => mM
+  5561: (VV, eV, xV) => {
+    xV.d(eV, {
+      c: () => pV,
+      d: () => yV,
+      f: () => JV,
+      j: () => bV,
+      n: () => ZV,
+      o: () => YV,
+      p: () => UV,
+      s: () => nV,
+      t: () => wV,
+      x: () => vV
     });
-    const OM = 5;
+    const JV = 5;
 
-    function SM(MM) {
-      return MM === OM
+    function YV(VV) {
+      return VV === JV
     }
 
-    function jM(MM) {
-      return [...MM.features]
+    function UV(VV) {
+      return [...VV.features]
     }
-    const aM = 262144,
-      PM = 256,
-      nM = 256;
+    const yV = 262144,
+      pV = 256,
+      QV = 256;
 
-    function QM(MM) {
-      if ("object" !== typeof MM || null === MM || Array.isArray(MM)) return "The pack has no files.";
-      const rM = [];
-      for (const [iM, OM] of Object.entries(MM)) {
-        if ("string" !== typeof OM) return `${iM} isn't text.`;
-        rM.push({
-          path: iM,
-          source: OM
+    function nV(VV) {
+      if ("object" !== typeof VV || null === VV || Array.isArray(VV)) return "The pack has no files.";
+      const eV = [];
+      for (const [xV, JV] of Object.entries(VV)) {
+        if ("string" !== typeof JV) return `${xV} isn't text.`;
+        eV.push({
+          path: xV,
+          source: JV
         })
       }
-      return rM.sort(((MM, rM) => LM(MM.path, rM.path))),
-        function(MM) {
-          if (0 === MM.length) return "The pack has no .wgsl files.";
-          if (MM.length > PM) return `The pack has more than ${PM} .wgsl files.`;
-          const rM = new Set;
+      return eV.sort(((VV, eV) => ZV(VV.path, eV.path))),
+        function(VV) {
+          if (0 === VV.length) return "The pack has no .wgsl files.";
+          if (VV.length > pV) return `The pack has more than ${pV} .wgsl files.`;
+          const eV = new Set;
           for (const {
-              path: iM
+              path: xV
             }
-            of MM) {
-            const MM = HM(iM);
-            if (null !== MM) return MM;
-            if (rM.has(iM)) return `The pack has two files at ${iM}.`;
-            rM.add(iM)
+            of VV) {
+            const VV = rV(xV);
+            if (null !== VV) return VV;
+            if (eV.has(xV)) return `The pack has two files at ${xV}.`;
+            eV.add(xV)
           }
-          return mM(MM) > aM ? `The pack's .wgsl files are over ${aM/1024} KB in total.` : null
-        }(rM) ?? rM
+          return vV(VV) > yV ? `The pack's .wgsl files are over ${yV/1024} KB in total.` : null
+        }(eV) ?? eV
     }
 
-    function zM(MM) {
-      const rM = {};
-      for (const iM of MM) rM[iM.path] = iM.source;
-      return rM
+    function wV(VV) {
+      const eV = {};
+      for (const xV of VV) eV[xV.path] = xV.source;
+      return eV
     }
 
-    function LM(MM, rM) {
-      return MM < rM ? -1 : MM > rM ? 1 : 0
+    function ZV(VV, eV) {
+      return VV < eV ? -1 : VV > eV ? 1 : 0
     }
 
-    function mM(MM) {
-      const rM = new TextEncoder;
-      let iM = 0;
+    function vV(VV) {
+      const eV = new TextEncoder;
+      let xV = 0;
       for (const {
-          source: OM
+          source: JV
         }
-        of MM) iM += rM.encode(OM).byteLength;
-      return iM
+        of VV) xV += eV.encode(JV).byteLength;
+      return xV
     }
 
-    function HM(MM) {
-      if (!MM.toLowerCase().endsWith(".wgsl")) return `${MM} isn't a .wgsl file.`;
-      if (MM.length > nM) return `A file path is over ${nM} characters.`;
-      if (MM.includes("\\") || /[\u0000-\u001f]/.test(MM)) return `${MM} isn't a valid file path.`;
-      return MM.split("/").some((MM => "" === MM || "." === MM || ".." === MM)) ? `${MM} isn't a valid file path.` : null
+    function rV(VV) {
+      if (!VV.toLowerCase().endsWith(".wgsl")) return `${VV} isn't a .wgsl file.`;
+      if (VV.length > QV) return `A file path is over ${QV} characters.`;
+      if (VV.includes("\\") || /[\u0000-\u001f]/.test(VV)) return `${VV} isn't a valid file path.`;
+      return VV.split("/").some((VV => "" === VV || "." === VV || ".." === VV)) ? `${VV} isn't a valid file path.` : null
     }
-    const hM = /^(.*)\[rot\[([1-4])$/;
+    const kV = /^(.*)\[rot\[([1-4])$/;
 
-    function JM(MM, rM) {
-      let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
-      const OM = new Map;
-      rM.forEach(((MM, rM) => {
+    function bV(VV, eV) {
+      let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
+      const JV = new Map;
+      eV.forEach(((VV, eV) => {
         let {
-          numAnimStates: iM,
-          animStartIdx: SM
-        } = MM;
-        for (let jM = 1; jM < iM; jM++) OM.set(SM + jM - 1, rM)
+          numAnimStates: xV,
+          animStartIdx: YV
+        } = VV;
+        for (let UV = 1; UV < xV; UV++) JV.set(YV + UV - 1, eV)
       }));
-      const SM = Object.entries(MM),
-        jM = new Map;
-      for (const [JM, dM] of SM) {
-        const MM = hM.exec(JM);
-        "1" === MM?.[2] && jM.set(MM[1], dM + 1)
+      const YV = Object.entries(VV),
+        UV = new Map;
+      for (const [bV, EV] of YV) {
+        const VV = kV.exec(bV);
+        "1" === VV?.[2] && UV.set(VV[1], EV + 1)
       }
-      const aM = MM => {
-          const rM = hM.exec(MM);
-          return rM && jM.has(rM[1]) ? {
-            root: rM[1],
-            rotation: Number(rM[2]) - 1
+      const yV = VV => {
+          const eV = kV.exec(VV);
+          return eV && UV.has(eV[1]) ? {
+            root: eV[1],
+            rotation: Number(eV[2]) - 1
           } : null
         },
-        PM = new Set(SM.map((MM => {
-          let [rM] = MM;
-          return aM(rM)?.root ?? rM
+        pV = new Set(YV.map((VV => {
+          let [eV] = VV;
+          return yV(eV)?.root ?? eV
         }))),
-        nM = (MM, iM) => {
-          const OM = MM.replace(/_?0$/, "");
-          return (rM[iM]?.numAnimStates ?? 0) > 1 && !PM.has(OM) ? OM : MM
+        QV = (VV, xV) => {
+          const JV = VV.replace(/_?0$/, "");
+          return (eV[xV]?.numAnimStates ?? 0) > 1 && !pV.has(JV) ? JV : VV
         },
-        QM = new Map;
-      for (const [hM, JM] of SM) QM.set(JM, nM(aM(hM)?.root ?? hM, JM));
-      const zM = SM.reduce(((MM, rM) => {
-          let [, iM] = rM;
-          return Math.max(MM, iM + 1)
+        nV = new Map;
+      for (const [kV, bV] of YV) nV.set(bV, QV(yV(kV)?.root ?? kV, bV));
+      const wV = YV.reduce(((VV, eV) => {
+          let [, xV] = eV;
+          return Math.max(VV, xV + 1)
         }), 0),
-        LM = Array.from({
-          length: zM
-        }, ((MM, rM) => ({
-          id: rM + 1,
+        ZV = Array.from({
+          length: wV
+        }, ((VV, eV) => ({
+          id: eV + 1,
           rotation: 0
         }))),
-        mM = new Map,
-        HM = new Map;
-      for (const [hM, JM] of SM) {
-        const MM = aM(hM),
-          rM = OM.get(JM);
-        if (void 0 !== rM) {
-          const iM = QM.get(rM);
-          HM.set(hM, {
-            name: hM,
-            texture: iM,
+        vV = new Map,
+        rV = new Map;
+      for (const [kV, bV] of YV) {
+        const VV = yV(kV),
+          eV = JV.get(bV);
+        if (void 0 !== eV) {
+          const xV = nV.get(eV);
+          rV.set(kV, {
+            name: kV,
+            texture: xV,
             kind: "frame"
-          }), MM && !HM.has(MM.root) && HM.set(MM.root, {
-            name: MM.root,
-            texture: iM,
+          }), VV && !rV.has(VV.root) && rV.set(VV.root, {
+            name: VV.root,
+            texture: xV,
             kind: "frame"
           });
           continue
         }
-        const iM = QM.get(JM),
-          SM = MM?.root ?? hM;
-        if (iM !== SM && HM.set(SM, {
-            name: SM,
-            texture: iM,
+        const xV = nV.get(bV),
+          YV = VV?.root ?? kV;
+        if (xV !== YV && rV.set(YV, {
+            name: YV,
+            texture: xV,
             kind: "frame"
-          }), MM) {
-          const rM = jM.get(MM.root);
-          LM[JM] = {
-            id: rM,
-            rotation: MM.rotation
-          }, mM.set(iM, rM), HM.set(hM, {
-            name: hM,
-            texture: iM,
+          }), VV) {
+          const eV = UV.get(VV.root);
+          ZV[bV] = {
+            id: eV,
+            rotation: VV.rotation
+          }, vV.set(xV, eV), rV.set(kV, {
+            name: kV,
+            texture: xV,
             kind: "rotation"
           })
-        } else mM.set(iM, JM + 1)
+        } else vV.set(xV, bV + 1)
       }
-      for (const hM of mM.keys()) HM.delete(hM);
-      for (const [hM, JM] of iM) {
-        const MM = mM.get(JM);
-        void 0 === MM || mM.has(hM) || (mM.set(hM, MM), HM.delete(hM))
+      for (const kV of vV.keys()) rV.delete(kV);
+      for (const [kV, bV] of xV) {
+        const VV = vV.get(bV);
+        void 0 === VV || vV.has(kV) || (vV.set(kV, VV), rV.delete(kV))
       }
       return {
-        named: [...mM].sort(((MM, rM) => {
-          let [iM] = MM, [OM] = rM;
-          return iM < OM ? -1 : iM > OM ? 1 : 0
-        })).map((MM => {
-          let [rM, iM] = MM;
+        named: [...vV].sort(((VV, eV) => {
+          let [xV] = VV, [JV] = eV;
+          return xV < JV ? -1 : xV > JV ? 1 : 0
+        })).map((VV => {
+          let [eV, xV] = VV;
           return {
-            name: rM,
-            id: iM
+            name: eV,
+            id: xV
           }
         })),
-        aliases: [...HM.values()],
-        layers: LM
+        aliases: [...rV.values()],
+        layers: ZV
       }
     }
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const VV in modules) Object.freeze(modules[VV]);

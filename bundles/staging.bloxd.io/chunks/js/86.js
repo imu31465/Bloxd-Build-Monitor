@@ -1,14 +1,14 @@
 export const id = 86;
 export const ids = [86];
 export const modules = {
-  37988: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => OM,
-      g: () => SM
+  38237: (VV, eV, xV) => {
+    xV.d(eV, {
+      e: () => JV,
+      g: () => YV
     });
-    const OM = ["Boat", "Obsidian Boat", "Hovercraft", "Yellow Kart", "White Kart", "Red Kart", "Purple Kart", "Pink Kart", "Orange Kart", "Magenta Kart", "Lime Kart", "Light Gray Kart", "Light Blue Kart", "Green Kart", "Gray Kart", "Cyan Kart", "Brown Kart", "Blue Kart", "Black Kart", "Off Roader", "Gold Mining Drill", "Iron Mining Drill", "Diamond Mining Drill", "Moonstone Mining Drill", "Armored Car", "Light Blue Car", "Speedboat"],
-      SM = 45 == iM.j ? ["canAutoStep", "speedMultiplier"] : null
+    const JV = ["Boat", "Obsidian Boat", "Hovercraft", "Yellow Kart", "White Kart", "Red Kart", "Purple Kart", "Pink Kart", "Orange Kart", "Magenta Kart", "Lime Kart", "Light Gray Kart", "Light Blue Kart", "Green Kart", "Gray Kart", "Cyan Kart", "Brown Kart", "Blue Kart", "Black Kart", "Off Roader", "Gold Mining Drill", "Iron Mining Drill", "Diamond Mining Drill", "Moonstone Mining Drill", "Armored Car", "Light Blue Car", "Speedboat"],
+      YV = 45 == xV.j ? ["canAutoStep", "speedMultiplier"] : null
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const VV in modules) Object.freeze(modules[VV]);

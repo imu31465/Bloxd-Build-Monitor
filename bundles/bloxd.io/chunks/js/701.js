@@ -1,197 +1,197 @@
 export const id = 701;
 export const ids = [701];
 export const modules = {
-  64517: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      rebuildScenePbrPipelines: () => PM,
-      rebuildSceneRenderables: () => nM
+  64900: (VV, eV, xV) => {
+    xV.r(eV), xV.d(eV, {
+      rebuildScenePbrPipelines: () => pV,
+      rebuildSceneRenderables: () => QV
     });
-    var OM = iM(44368),
-      SM = (MM, rM) => MM.order - rM.order,
-      jM = 8,
-      aM = MM => nM(MM);
-    async function PM(MM) {
-      let rM = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-      await QM(MM, "pbr", rM)
+    var JV = xV(44615),
+      YV = (VV, eV) => VV.order - eV.order,
+      UV = 8,
+      yV = VV => QV(VV);
+    async function pV(VV) {
+      let eV = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+      await nV(VV, "pbr", eV)
     }
-    async function nM(MM) {
-      await QM(MM, void 0, !1)
+    async function QV(VV) {
+      await nV(VV, void 0, !1)
     }
-    async function QM(MM, rM, PM) {
-      const nM = MM;
-      if (!nM._built && !PM) return;
-      const QM = nM._lightListVersion ?? 0,
-        zM = nM.surface.engine,
-        LM = MM => {
-          nM._z ? MM.forEach((MM => MM())) : (0, OM.g)(zM, (() => MM.forEach((MM => MM()))))
+    async function nV(VV, eV, pV) {
+      const QV = VV;
+      if (!QV._built && !pV) return;
+      const nV = QV._lightListVersion ?? 0,
+        wV = QV.surface.engine,
+        ZV = VV => {
+          QV._z ? VV.forEach((VV => VV())) : (0, JV.e)(wV, (() => VV.forEach((VV => VV()))))
         };
-      let mM = !1,
-        HM = !1,
-        hM = !1,
-        JM = !1;
+      let vV = !1,
+        rV = !1,
+        kV = !1,
+        bV = !1;
       try {
-        for (let MM = 1;; MM++) {
-          if (void 0 !== rM) {
-            await dM();
+        for (let VV = 1;; VV++) {
+          if (void 0 !== eV) {
+            await EV();
             break
           }
-          if (lM(nM), await dM(), !yM(nM)) break;
-          if (MM >= jM) {
-            nM._rebuildHook = aM, JM = !0, HM = !0;
+          if (jV(QV), await EV(), !BV(QV)) break;
+          if (VV >= UV) {
+            QV._rebuildHook = yV, bV = !0, rV = !0;
             break
           }
         }
-        hM = !0
+        kV = !0
       } finally {
-        if (mM && (nM._renderables.sort(SM), nM._renderableVersion++, nM._materialEpoch++, nM._built && nM._frameGraph.build()), void 0 === rM && hM && !HM && (nM._lightListVersion ?? 0) === QM) {
-          const MM = nM._pendingTopologyRetirements?.splice(0);
-          MM?.length && LM(MM), JM || (nM._rebuildHook = void 0)
+        if (vV && (QV._renderables.sort(YV), QV._renderableVersion++, QV._materialEpoch++, QV._built && QV._frameGraph.build()), void 0 === eV && kV && !rV && (QV._lightListVersion ?? 0) === nV) {
+          const VV = QV._pendingTopologyRetirements?.splice(0);
+          VV?.length && ZV(VV), bV || (QV._rebuildHook = void 0)
         }
       }
-      async function dM() {
-        for (const [MM, OM] of nM._groups) {
-          if (void 0 !== rM && MM._materialFamily !== rM) continue;
-          if (0 === OM.length) {
-            (OM.o || OM.r) && (EM(MM, OM), mM = !0);
+      async function EV() {
+        for (const [VV, JV] of QV._groups) {
+          if (void 0 !== eV && VV._materialFamily !== eV) continue;
+          if (0 === JV.length) {
+            (JV.o || JV.r) && (qV(VV, JV), vV = !0);
             continue
           }
-          const SM = nM._runtimeBuilds;
-          await (SM?.wait(OM));
-          let jM = !1;
-          const PM = async () => {
-            const rM = nM._runtimeBuilds,
-              iM = [...OM].filter((rM => nM.meshes.includes(rM) && rM.material?._buildGroup === MM));
-            if (0 === iM.length) return void EM(MM, OM);
-            const aM = !!OM.r,
-              PM = nM._disposables.length,
-              QM = new Map,
-              zM = new Map(iM.map((MM => [MM, MM.material])));
-            for (const MM of iM) {
-              const iM = nM._meshDisposables.get(MM);
-              iM && (QM.set(MM, iM), nM._meshDisposables.delete(MM), rM?.holdPendingDisposers(MM, iM))
+          const YV = QV._runtimeBuilds;
+          await (YV?.wait(JV));
+          let UV = !1;
+          const pV = async () => {
+            const eV = QV._runtimeBuilds,
+              xV = [...JV].filter((eV => QV.meshes.includes(eV) && eV.material?._buildGroup === VV));
+            if (0 === xV.length) return void qV(VV, JV);
+            const yV = !!JV.r,
+              pV = QV._disposables.length,
+              nV = new Map,
+              wV = new Map(xV.map((VV => [VV, VV.material])));
+            for (const VV of xV) {
+              const xV = QV._meshDisposables.get(VV);
+              xV && (nV.set(VV, xV), QV._meshDisposables.delete(VV), eV?.holdPendingDisposers(VV, xV))
             }
-            let mM, HM;
-            nM._p = MM => (HM = MM, !0);
+            let vV, rV;
+            QV._p = VV => (rV = VV, !0);
             try {
-              mM = await MM(nM, iM)
-            } catch (CM) {
-              HM?.[1]();
-              for (const SM of iM) {
-                const iM = QM.get(SM),
-                  jM = nM._meshDisposables.get(SM);
-                if (jM && jM !== iM)
-                  for (const MM of jM) MM();
-                const aM = nM.meshes.includes(SM) && SM.material === zM.get(SM) && SM.material?._buildGroup === MM && OM.includes(SM);
-                iM && aM ? nM._meshDisposables.set(SM, iM) : (nM._meshDisposables.delete(SM), iM && LM(iM)), iM && rM?.releasePendingDisposers(SM, iM)
+              vV = await VV(QV, xV)
+            } catch (TV) {
+              rV?.[1]();
+              for (const YV of xV) {
+                const xV = nV.get(YV),
+                  UV = QV._meshDisposables.get(YV);
+                if (UV && UV !== xV)
+                  for (const VV of UV) VV();
+                const yV = QV.meshes.includes(YV) && YV.material === wV.get(YV) && YV.material?._buildGroup === VV && JV.includes(YV);
+                xV && yV ? QV._meshDisposables.set(YV, xV) : (QV._meshDisposables.delete(YV), xV && ZV(xV)), xV && eV?.releasePendingDisposers(YV, xV)
               }
-              throw CM
+              throw TV
             } finally {
-              delete nM._p
+              delete QV._p
             }
-            if (nM._z || SM?._d()) {
-              HM?.[1]();
-              for (const rM of iM) {
-                const MM = nM._meshDisposables.get(rM),
-                  iM = QM.get(rM);
-                if (MM && MM !== iM)
-                  for (const rM of MM) rM();
-                nM._meshDisposables.delete(rM)
+            if (QV._z || YV?._d()) {
+              rV?.[1]();
+              for (const eV of xV) {
+                const VV = QV._meshDisposables.get(eV),
+                  xV = nV.get(eV);
+                if (VV && VV !== xV)
+                  for (const eV of VV) eV();
+                QV._meshDisposables.delete(eV)
               }
-              for (const rM of nM._disposables.splice(0)) rM();
-              const MM = [...QM.values()].flat();
-              LM(MM);
-              for (const [iM, OM] of QM) rM?.releasePendingDisposers(iM, OM);
+              for (const eV of QV._disposables.splice(0)) eV();
+              const VV = [...nV.values()].flat();
+              ZV(VV);
+              for (const [xV, JV] of nV) eV?.releasePendingDisposers(xV, JV);
               return
             }
-            HM?.[0](), MM._rebuildSingle = mM.rebuildSingle, OM.r = nM._runtimeBuilds?.base(MM, mM.rebuildSingle) ?? mM.rebuildSingle, "pbr" === MM._materialFamily && mM._G && (OM._w = null), aM && UM(nM, PM);
-            const hM = new Set(iM.filter((rM => nM.meshes.includes(rM) && rM.material === zM.get(rM) && rM.material?._buildGroup === MM && OM.includes(rM))));
-            if (hM.size !== iM.length && mM.renderables.some((MM => !MM.mesh))) {
-              for (const MM of iM) {
-                const iM = nM._meshDisposables.get(MM),
-                  OM = QM.get(MM);
-                if (iM && iM !== OM)
-                  for (const MM of iM) MM();
-                OM && nM.meshes.includes(MM) ? nM._meshDisposables.set(MM, OM) : (nM._meshDisposables.delete(MM), OM && LM(OM)), OM && rM?.releasePendingDisposers(MM, OM)
+            rV?.[0](), VV._rebuildSingle = vV.rebuildSingle, JV.r = QV._runtimeBuilds?.base(VV, vV.rebuildSingle) ?? vV.rebuildSingle, "pbr" === VV._materialFamily && vV._G && (JV._w = null), yV && tV(QV, pV);
+            const kV = new Set(xV.filter((eV => QV.meshes.includes(eV) && eV.material === wV.get(eV) && eV.material?._buildGroup === VV && JV.includes(eV))));
+            if (kV.size !== xV.length && vV.renderables.some((VV => !VV.mesh))) {
+              for (const VV of xV) {
+                const xV = QV._meshDisposables.get(VV),
+                  JV = nV.get(VV);
+                if (xV && xV !== JV)
+                  for (const VV of xV) VV();
+                JV && QV.meshes.includes(VV) ? QV._meshDisposables.set(VV, JV) : (QV._meshDisposables.delete(VV), JV && ZV(JV)), JV && eV?.releasePendingDisposers(VV, JV)
               }
-              return void(jM = !0)
+              return void(UV = !0)
             }
-            const JM = new Set;
-            for (const MM of iM)
-              if (hM.has(MM)) JM.add(MM.material), nM._runtimeBuilds?.reset(MM);
+            const bV = new Set;
+            for (const VV of xV)
+              if (kV.has(VV)) bV.add(VV.material), QV._runtimeBuilds?.reset(VV);
               else {
-                const iM = QM.get(MM),
-                  OM = nM._meshDisposables.get(MM);
-                if (OM && OM !== iM)
-                  for (const MM of OM) MM();
-                iM && nM.meshes.includes(MM) ? (nM._meshDisposables.set(MM, iM), QM.delete(MM), rM?.releasePendingDisposers(MM, iM)) : nM._meshDisposables.delete(MM)
-              } for (const MM of JM) MM._csmGen = (MM._csmGen ?? 0) + 1;
-            const dM = OM.o,
-              yM = dM?.length ? new Set(dM) : null;
-            for (let MM = nM._renderables.length - 1; MM >= 0; MM--) {
-              const rM = nM._renderables[MM];
-              (hM.has(rM.mesh) || yM?.has(rM)) && nM._renderables.splice(MM, 1)
+                const xV = nV.get(VV),
+                  JV = QV._meshDisposables.get(VV);
+                if (JV && JV !== xV)
+                  for (const VV of JV) VV();
+                xV && QV.meshes.includes(VV) ? (QV._meshDisposables.set(VV, xV), nV.delete(VV), eV?.releasePendingDisposers(VV, xV)) : QV._meshDisposables.delete(VV)
+              } for (const VV of bV) VV._csmGen = (VV._csmGen ?? 0) + 1;
+            const EV = JV.o,
+              BV = EV?.length ? new Set(EV) : null;
+            for (let VV = QV._renderables.length - 1; VV >= 0; VV--) {
+              const eV = QV._renderables[VV];
+              (kV.has(eV.mesh) || BV?.has(eV)) && QV._renderables.splice(VV, 1)
             }
-            const lM = mM.renderables.filter((MM => !MM.mesh || hM.has(MM.mesh)));
-            nM._renderables.push(...lM), OM.o = lM;
-            const GM = [...QM.values()].flat();
-            LM(GM);
-            for (const [MM, OM] of QM) rM?.releasePendingDisposers(MM, OM)
+            const jV = vV.renderables.filter((VV => !VV.mesh || kV.has(VV.mesh)));
+            QV._renderables.push(...jV), JV.o = jV;
+            const FV = [...nV.values()].flat();
+            ZV(FV);
+            for (const [VV, JV] of nV) eV?.releasePendingDisposers(VV, JV)
           }, {
-            X: QM
-          } = await Promise.resolve().then((() => iM(64015))), zM = 3;
-          for (let rM = 1;; rM++) {
-            if (jM = !1, await QM(nM, MM, PM), nM._z || SM?._d()) return void(HM = !0);
-            if (!jM) break;
-            if (rM >= zM) {
-              EM(MM, OM), nM._rebuildHook = aM, JM = !0, HM = !0;
+            X: nV
+          } = await Promise.resolve().then((() => xV(64396))), wV = 3;
+          for (let eV = 1;; eV++) {
+            if (UV = !1, await nV(QV, VV, pV), QV._z || YV?._d()) return void(rV = !0);
+            if (!UV) break;
+            if (eV >= wV) {
+              qV(VV, JV), QV._rebuildHook = yV, bV = !0, rV = !0;
               break
             }
           }
-          jM ? mM = !0 : mM = !0
+          UV ? vV = !0 : vV = !0
         }
       }
 
-      function yM(MM) {
-        for (const rM of MM.meshes) {
-          const iM = rM.material?._buildGroup;
-          if (iM && !MM._groups.get(iM)?.includes(rM)) return !0
+      function BV(VV) {
+        for (const eV of VV.meshes) {
+          const xV = eV.material?._buildGroup;
+          if (xV && !VV._groups.get(xV)?.includes(eV)) return !0
         }
         return !1
       }
 
-      function lM(MM) {
-        const rM = new Map;
-        for (const iM of MM.meshes) {
-          const MM = iM.material?._buildGroup;
-          if (!MM) continue;
-          const OM = rM.get(MM);
-          OM ? OM.push(iM) : rM.set(MM, [iM])
+      function jV(VV) {
+        const eV = new Map;
+        for (const xV of VV.meshes) {
+          const VV = xV.material?._buildGroup;
+          if (!VV) continue;
+          const JV = eV.get(VV);
+          JV ? JV.push(xV) : eV.set(VV, [xV])
         }
-        for (const [iM, OM] of MM._groups) {
-          const MM = rM.get(iM) ?? [];
-          (OM.length !== MM.length || MM.some(((MM, rM) => OM[rM] !== MM))) && (OM.length = 0, OM.push(...MM)), rM.delete(iM)
+        for (const [xV, JV] of VV._groups) {
+          const VV = eV.get(xV) ?? [];
+          (JV.length !== VV.length || VV.some(((VV, eV) => JV[eV] !== VV))) && (JV.length = 0, JV.push(...VV)), eV.delete(xV)
         }
-        for (const [iM, OM] of rM) {
-          const rM = OM;
-          MM._groups.set(iM, rM)
+        for (const [xV, JV] of eV) {
+          const eV = JV;
+          VV._groups.set(xV, eV)
         }
       }
 
-      function EM(MM, rM) {
-        const iM = rM.o;
-        if (iM?.length) {
-          const MM = new Set(iM);
-          for (let rM = nM._renderables.length - 1; rM >= 0; rM--) MM.has(nM._renderables[rM]) && nM._renderables.splice(rM, 1)
+      function qV(VV, eV) {
+        const xV = eV.o;
+        if (xV?.length) {
+          const VV = new Set(xV);
+          for (let eV = QV._renderables.length - 1; eV >= 0; eV--) VV.has(QV._renderables[eV]) && QV._renderables.splice(eV, 1)
         }
-        rM.o = void 0, rM.r = void 0, nM._runtimeBuilds?.dropBase(MM), nM._rebuildHook = aM, JM = !0
+        eV.o = void 0, eV.r = void 0, QV._runtimeBuilds?.dropBase(VV), QV._rebuildHook = yV, bV = !0
       }
 
-      function UM(MM, rM) {
-        const iM = new Set(MM._disposables.slice(0, rM));
-        for (let OM = MM._disposables.length - 1; OM >= rM; OM--) iM.has(MM._disposables[OM]) && MM._disposables.splice(OM, 1)
+      function tV(VV, eV) {
+        const xV = new Set(VV._disposables.slice(0, eV));
+        for (let JV = VV._disposables.length - 1; JV >= eV; JV--) xV.has(VV._disposables[JV]) && VV._disposables.splice(JV, 1)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const VV in modules) Object.freeze(modules[VV]);

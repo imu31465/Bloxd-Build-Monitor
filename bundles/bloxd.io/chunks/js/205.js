@@ -1,156 +1,156 @@
 export const id = 205;
 export const ids = [205];
 export const modules = {
-  41704: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => nM,
-      d: () => PM,
-      f: () => aM
+  41885: (VV, eV, xV) => {
+    xV.d(eV, {
+      e: () => QV,
+      i: () => pV,
+      j: () => yV
     });
-    var OM = iM(41706),
-      SM = iM(5198),
-      jM = iM(41710);
+    var JV = xV(41893),
+      YV = xV(5297),
+      UV = xV(41900);
 
-    function aM(MM) {
-      return MM.payloadKind === SM.hc.Msgpack ? (0, OM.c)(MM.payload) : void 0
+    function yV(VV) {
+      return VV.payloadKind === YV.sc.Msgpack ? (0, JV.e)(VV.payload) : void 0
     }
 
-    function PM(MM, rM) {
-      if (rM.payloadKind === SM.hc.Bytes || rM.payloadKind === SM.hc.MsgpackBin) return (0, jM.d)(MM, rM.payload)
+    function pV(VV, eV) {
+      if (eV.payloadKind === YV.sc.Bytes || eV.payloadKind === YV.sc.MsgpackBin) return (0, UV.b)(VV, eV.payload)
     }
 
-    function nM(MM) {
-      return null !== MM && "object" === typeof MM
+    function QV(VV) {
+      return null !== VV && "object" === typeof VV
     }
   },
-  41712: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => LM,
-      c: () => mM,
-      e: () => HM,
-      h: () => zM,
-      i: () => dM
+  41909: (VV, eV, xV) => {
+    xV.d(eV, {
+      e: () => ZV,
+      f: () => vV,
+      h: () => rV,
+      l: () => wV,
+      m: () => EV
     });
-    var OM = iM(5198),
-      SM = iM(41714);
-    const jM = new Map,
-      aM = new Set,
-      PM = new Set;
-    let nM = 0,
-      QM = 0;
+    var JV = xV(5297),
+      YV = xV(41914);
+    const UV = new Map,
+      yV = new Set,
+      pV = new Set;
+    let QV = 0,
+      nV = 0;
 
-    function zM(MM, rM) {
-      let iM = jM.get(MM);
-      return iM || (iM = new Set, jM.set(MM, iM)), iM.add(rM), () => {
-        iM.delete(rM)
+    function wV(VV, eV) {
+      let xV = UV.get(VV);
+      return xV || (xV = new Set, UV.set(VV, xV)), xV.add(eV), () => {
+        xV.delete(eV)
       }
     }
 
-    function LM() {
-      return 0 !== nM
+    function ZV() {
+      return 0 !== QV
     }
 
-    function mM(MM) {
-      return aM.add(MM), () => {
-        aM.delete(MM)
+    function vV(VV) {
+      return yV.add(VV), () => {
+        yV.delete(VV)
       }
     }
 
-    function HM(MM) {
-      return PM.add(MM), () => {
-        PM.delete(MM)
+    function rV(VV) {
+      return pV.add(VV), () => {
+        pV.delete(VV)
       }
     }
-    const hM = "A raw message listener threw";
+    const kV = "A raw message listener threw";
 
-    function JM(MM) {
-      let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : aM;
-      for (const OM of rM) try {
-        OM()
-      } catch (iM) {
-        MM ? (0, SM.k)(iM, hM) : console.error(hM, iM)
+    function bV(VV) {
+      let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : yV;
+      for (const JV of eV) try {
+        JV()
+      } catch (xV) {
+        VV ? (0, YV.o)(xV, kV) : console.error(kV, xV)
       }
     }
-    const dM = {
-      fire: function(MM) {
-        if ("connection" === MM.type) {
-          const rM = MM.phase === OM.F.Activated && MM.conn !== nM && MM.conn > QM,
-            iM = (MM.phase === OM.F.Left || MM.phase === OM.F.Closed) && MM.conn === nM;
-          return void(rM || iM ? (nM = rM ? MM.conn : 0, JM(!0)) : MM.phase === OM.F.Resumed && 0 !== nM && MM.conn > QM && (nM = MM.conn, JM(!0, PM)))
+    const EV = {
+      fire: function(VV) {
+        if ("connection" === VV.type) {
+          const eV = VV.phase === JV.H.Activated && VV.conn !== QV && VV.conn > nV,
+            xV = (VV.phase === JV.H.Left || VV.phase === JV.H.Closed) && VV.conn === QV;
+          return void(eV || xV ? (QV = eV ? VV.conn : 0, bV(!0)) : VV.phase === JV.H.Resumed && 0 !== QV && VV.conn > nV && (QV = VV.conn, bV(!0, pV)))
         }
-        const rM = jM.get(MM.Kz);
-        if (rM && MM.conn === nM && 0 !== nM)
-          for (const OM of rM) try {
-            OM(MM)
-          } catch (iM) {
-            (0, SM.k)(iM, hM)
+        const eV = UV.get(VV.yZ);
+        if (eV && VV.conn === QV && 0 !== QV)
+          for (const JV of eV) try {
+            JV(VV)
+          } catch (xV) {
+            (0, YV.o)(xV, kV)
           }
       },
-      close: function(MM) {
-        QM = Math.max(QM, MM, nM), 0 !== nM && (nM = 0, JM(!1))
+      close: function(VV) {
+        nV = Math.max(nV, VV, QV), 0 !== QV && (QV = 0, bV(!1))
       }
     }
   },
-  41695: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => QM,
-      i: () => nM,
-      j: () => PM
+  41876: (VV, eV, xV) => {
+    xV.d(eV, {
+      c: () => nV,
+      g: () => QV,
+      k: () => pV
     });
-    var OM = iM(1279),
-      SM = iM(41669);
-    const jM = new TextDecoder,
-      aM = new TextEncoder;
+    var JV = xV(1293),
+      YV = xV(41852);
+    const UV = new TextDecoder,
+      yV = new TextEncoder;
 
-    function PM(MM, rM) {
-      const iM = MM.queries.entityName(rM);
-      if (iM === SM.xc) return;
-      const aM = MM.memoryData(MM.scratch(), 4 + iM, 4, "entity_name's answer");
-      if (!aM) return;
-      const PM = aM.getUint32(0, !0),
-        nM = jM.decode(new Uint8Array(aM.buffer, aM.byteOffset + 4, iM));
-      return (0, OM.e)(nM, !1, PM === SM.Ld ? null : PM)
+    function pV(VV, eV) {
+      const xV = VV.queries.entityName(eV);
+      if (xV === YV.Bc) return;
+      const yV = VV.memoryData(VV.scratch(), 4 + xV, 4, "entity_name's answer");
+      if (!yV) return;
+      const pV = yV.getUint32(0, !0),
+        QV = UV.decode(new Uint8Array(yV.buffer, yV.byteOffset + 4, xV));
+      return (0, JV.b)(QV, !1, pV === YV.Yd ? null : pV)
     }
 
-    function nM(MM, rM, iM) {
-      const OM = aM.encode(iM);
-      if (OM.length > SM.zb) return !1;
-      const jM = MM.memoryView(Uint8Array, MM.scratch(), OM.length, "has_effect's name");
-      return !!jM && (jM.set(OM), 1 === MM.queries.hasEffect(rM, OM.length))
+    function QV(VV, eV, xV) {
+      const JV = yV.encode(xV);
+      if (JV.length > YV.yb) return !1;
+      const UV = VV.memoryView(Uint8Array, VV.scratch(), JV.length, "has_effect's name");
+      return !!UV && (UV.set(JV), 1 === VV.queries.hasEffect(eV, JV.length))
     }
 
-    function QM(MM, rM, iM, OM) {
-      const aM = MM.queries.blockData(rM, iM, OM);
-      if (aM === SM.xc) return;
-      const PM = MM.memoryView(Uint8Array, MM.scratch(), aM, "block_data's answer");
-      return PM ? JSON.parse(jM.decode(PM)) : void 0
+    function nV(VV, eV, xV, JV) {
+      const yV = VV.queries.blockData(eV, xV, JV);
+      if (yV === YV.Bc) return;
+      const pV = VV.memoryView(Uint8Array, VV.scratch(), yV, "block_data's answer");
+      return pV ? JSON.parse(UV.decode(pV)) : void 0
     }
   },
-  41706: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => SM,
-      f: () => zM
+  41893: (VV, eV, xV) => {
+    xV.d(eV, {
+      e: () => YV,
+      g: () => wV
     });
-    const OM = new TextDecoder;
+    const JV = new TextDecoder;
 
-    function SM(MM) {
-      const rM = new jM(MM),
-        iM = rM.value();
-      if (rM.at !== MM.length) throw new Error(`msgpack: ${MM.length-rM.at} bytes after the value`);
-      return iM
+    function YV(VV) {
+      const eV = new UV(VV),
+        xV = eV.value();
+      if (eV.at !== VV.length) throw new Error(`msgpack: ${VV.length-eV.at} bytes after the value`);
+      return xV
     }
-    class jM {
-      constructor(MM) {
-        this.bytes = MM, this.at = 0, this.depth = 0, this.view = void 0, this.view = new DataView(MM.buffer, MM.byteOffset, MM.byteLength)
+    class UV {
+      constructor(VV) {
+        this.bytes = VV, this.at = 0, this.depth = 0, this.view = void 0, this.view = new DataView(VV.buffer, VV.byteOffset, VV.byteLength)
       }
       value() {
-        const MM = this.u8();
-        if (MM <= 127) return MM;
-        if (MM >= 224) return MM - 256;
-        if (MM >= 128 && MM <= 143) return this.map(15 & MM);
-        if (MM >= 144 && MM <= 159) return this.array(15 & MM);
-        if (MM >= 160 && MM <= 191) return this.str(31 & MM);
-        switch (MM) {
+        const VV = this.u8();
+        if (VV <= 127) return VV;
+        if (VV >= 224) return VV - 256;
+        if (VV >= 128 && VV <= 143) return this.map(15 & VV);
+        if (VV >= 144 && VV <= 159) return this.array(15 & VV);
+        if (VV >= 160 && VV <= 191) return this.str(31 & VV);
+        switch (VV) {
           case 192:
             return null;
           case 194:
@@ -214,13 +214,13 @@ export const modules = {
           case 223:
             return this.map(this.u32());
           default:
-            throw new Error(`msgpack: unknown byte 0x${MM.toString(16)} at ${this.at-1}`)
+            throw new Error(`msgpack: unknown byte 0x${VV.toString(16)} at ${this.at-1}`)
         }
       }
-      take(MM) {
-        const rM = this.at;
-        if (rM + MM > this.bytes.length) throw new Error(`msgpack: ${MM} bytes past the end at ${rM}`);
-        return this.at = rM + MM, rM
+      take(VV) {
+        const eV = this.at;
+        if (eV + VV > this.bytes.length) throw new Error(`msgpack: ${VV} bytes past the end at ${eV}`);
+        return this.at = eV + VV, eV
       }
       u8() {
         return this.view.getUint8(this.take(1))
@@ -231,958 +231,958 @@ export const modules = {
       u32() {
         return this.view.getUint32(this.take(4), !1)
       }
-      int64(MM) {
-        const rM = this.take(8);
-        return MM ? this.view.getBigInt64(rM, !1) : this.view.getBigUint64(rM, !1)
+      int64(VV) {
+        const eV = this.take(8);
+        return VV ? this.view.getBigInt64(eV, !1) : this.view.getBigUint64(eV, !1)
       }
-      str(MM) {
-        const rM = this.take(MM),
-          iM = this.bytes;
-        if (MM < 16) {
-          let SM = "";
-          for (let jM = rM; jM < rM + MM; jM++) {
-            const aM = iM[jM];
-            if (aM >= 128) return OM.decode(iM.subarray(rM, rM + MM));
-            SM += String.fromCharCode(aM)
+      str(VV) {
+        const eV = this.take(VV),
+          xV = this.bytes;
+        if (VV < 16) {
+          let YV = "";
+          for (let UV = eV; UV < eV + VV; UV++) {
+            const yV = xV[UV];
+            if (yV >= 128) return JV.decode(xV.subarray(eV, eV + VV));
+            YV += String.fromCharCode(yV)
           }
-          return SM
+          return YV
         }
-        return OM.decode(iM.subarray(rM, rM + MM))
+        return JV.decode(xV.subarray(eV, eV + VV))
       }
-      bin(MM) {
-        const rM = this.take(MM);
-        return this.bytes.subarray(rM, rM + MM)
+      bin(VV) {
+        const eV = this.take(VV);
+        return this.bytes.subarray(eV, eV + VV)
       }
       enter() {
         if (++this.depth > 512) throw new Error("msgpack: nested too deep")
       }
-      array(MM) {
+      array(VV) {
         this.enter();
-        const rM = [];
-        for (let iM = 0; iM < MM; iM++) rM.push(this.value());
-        return this.depth--, rM
+        const eV = [];
+        for (let xV = 0; xV < VV; xV++) eV.push(this.value());
+        return this.depth--, eV
       }
-      map(MM) {
+      map(VV) {
         this.enter();
-        const rM = {};
-        for (let iM = 0; iM < MM; iM++) {
-          const MM = this.value(),
-            iM = this.value();
-          rM["__proto__" === MM ? "__proto_" : String(MM)] = iM
+        const eV = {};
+        for (let xV = 0; xV < VV; xV++) {
+          const VV = this.value(),
+            xV = this.value();
+          eV["__proto__" === VV ? "__proto_" : String(VV)] = xV
         }
-        return this.depth--, rM
+        return this.depth--, eV
       }
-      ext(MM) {
-        const rM = this.view.getInt8(this.take(1)),
-          iM = this.take(MM);
-        if (0 !== rM) {
-          if (-1 === rM) {
-            if (1 === MM) return new Date(NaN);
-            if (4 === MM) return new Date(1e3 * this.view.getUint32(iM, !1));
-            if (8 === MM) {
-              const MM = this.view.getUint32(iM, !1),
-                rM = MM >>> 2,
-                OM = 4294967296 * (3 & MM) + this.view.getUint32(iM + 4, !1);
-              return new Date(1e3 * OM + rM / 1e6)
+      ext(VV) {
+        const eV = this.view.getInt8(this.take(1)),
+          xV = this.take(VV);
+        if (0 !== eV) {
+          if (-1 === eV) {
+            if (1 === VV) return new Date(NaN);
+            if (4 === VV) return new Date(1e3 * this.view.getUint32(xV, !1));
+            if (8 === VV) {
+              const VV = this.view.getUint32(xV, !1),
+                eV = VV >>> 2,
+                JV = 4294967296 * (3 & VV) + this.view.getUint32(xV + 4, !1);
+              return new Date(1e3 * JV + eV / 1e6)
             }
-            if (12 === MM) {
-              const MM = this.view.getUint32(iM, !1),
-                rM = 4294967296 * this.view.getInt32(iM + 4, !1) + this.view.getUint32(iM + 8, !1);
-              return new Date(1e3 * rM + MM / 1e6)
+            if (12 === VV) {
+              const VV = this.view.getUint32(xV, !1),
+                eV = 4294967296 * this.view.getInt32(xV + 4, !1) + this.view.getUint32(xV + 8, !1);
+              return new Date(1e3 * eV + VV / 1e6)
             }
           }
-          throw new Error(`msgpack: ext type ${rM} of ${MM} bytes`)
+          throw new Error(`msgpack: ext type ${eV} of ${VV} bytes`)
         }
       }
     }
-    const aM = new TextEncoder,
-      PM = -(2n ** 63n),
-      nM = 2n ** 63n - 1n,
-      QM = 2n ** 64n - 1n;
+    const yV = new TextEncoder,
+      pV = -(2n ** 63n),
+      QV = 2n ** 63n - 1n,
+      nV = 2n ** 64n - 1n;
 
-    function zM(MM) {
-      const rM = new LM;
-      return rM.value(MM, 0), rM.bytes()
+    function wV(VV) {
+      const eV = new ZV;
+      return eV.value(VV, 0), eV.bytes()
     }
-    class LM {
+    class ZV {
       constructor() {
         this.buf = new Uint8Array(64), this.view = new DataView(this.buf.buffer), this.at = 0
       }
       bytes() {
         return this.buf.subarray(0, this.at)
       }
-      value(MM, rM) {
-        if (rM > 512) throw new Error("msgpack: nested too deep");
-        switch (typeof MM) {
+      value(VV, eV) {
+        if (eV > 512) throw new Error("msgpack: nested too deep");
+        switch (typeof VV) {
           case "undefined":
             return this.u8(212), this.u8(0), void this.u8(0);
           case "boolean":
-            return void this.u8(MM ? 195 : 194);
+            return void this.u8(VV ? 195 : 194);
           case "number":
-            return void this.number(MM);
+            return void this.number(VV);
           case "bigint":
-            return void this.bigint(MM);
+            return void this.bigint(VV);
           case "string":
-            return void this.string(MM);
+            return void this.string(VV);
           case "object":
-            if (null === MM) this.u8(192);
-            else if (MM instanceof Uint8Array) this.head(MM.length, 196, -1, 197, 198), this.room(MM.length), this.buf.set(MM, this.at), this.at += MM.length;
-            else if (Array.isArray(MM)) {
-              this.head(MM.length, 220, 144, 220, 221);
-              for (const iM of MM) this.value(iM, rM + 1)
+            if (null === VV) this.u8(192);
+            else if (VV instanceof Uint8Array) this.head(VV.length, 196, -1, 197, 198), this.room(VV.length), this.buf.set(VV, this.at), this.at += VV.length;
+            else if (Array.isArray(VV)) {
+              this.head(VV.length, 220, 144, 220, 221);
+              for (const xV of VV) this.value(xV, eV + 1)
             } else {
-              var iM, OM;
-              if (Object.getPrototypeOf(MM) !== Object.prototype && null !== Object.getPrototypeOf(MM)) throw new Error(`msgpack: can't encode a ${null!==(iM=null===(OM=MM.constructor)||void 0===OM?void 0:OM.name)&&void 0!==iM?iM:"object"}`);
+              var xV, JV;
+              if (Object.getPrototypeOf(VV) !== Object.prototype && null !== Object.getPrototypeOf(VV)) throw new Error(`msgpack: can't encode a ${null!==(xV=null===(JV=VV.constructor)||void 0===JV?void 0:JV.name)&&void 0!==xV?xV:"object"}`);
               {
-                const iM = Object.keys(MM);
-                this.head(iM.length, 222, 128, 222, 223);
-                for (const OM of iM) this.string(OM), this.value(MM[OM], rM + 1)
+                const xV = Object.keys(VV);
+                this.head(xV.length, 222, 128, 222, 223);
+                for (const JV of xV) this.string(JV), this.value(VV[JV], eV + 1)
               }
             }
             return;
           default:
-            throw new Error("msgpack: can't encode a " + typeof MM)
+            throw new Error("msgpack: can't encode a " + typeof VV)
         }
       }
-      number(MM) {
-        Number.isInteger(MM) && MM >= -2147483648 && MM <= 4294967295 ? MM >= 0 ? MM < 128 ? this.u8(MM) : MM < 256 ? (this.u8(204), this.u8(MM)) : MM < 65536 ? (this.u8(205), this.u16(MM)) : (this.u8(206), this.u32(MM)) : MM >= -32 ? this.u8(MM + 256) : MM >= -128 ? (this.u8(208), this.u8(MM + 256)) : MM >= -32768 ? (this.u8(209), this.u16(MM + 65536)) : (this.u8(210), this.u32(MM >>> 0)) : (this.u8(203), this.room(8), this.view.setFloat64(this.at, MM, !1), this.at += 8)
+      number(VV) {
+        Number.isInteger(VV) && VV >= -2147483648 && VV <= 4294967295 ? VV >= 0 ? VV < 128 ? this.u8(VV) : VV < 256 ? (this.u8(204), this.u8(VV)) : VV < 65536 ? (this.u8(205), this.u16(VV)) : (this.u8(206), this.u32(VV)) : VV >= -32 ? this.u8(VV + 256) : VV >= -128 ? (this.u8(208), this.u8(VV + 256)) : VV >= -32768 ? (this.u8(209), this.u16(VV + 65536)) : (this.u8(210), this.u32(VV >>> 0)) : (this.u8(203), this.room(8), this.view.setFloat64(this.at, VV, !1), this.at += 8)
       }
-      bigint(MM) {
-        const rM = MM >= PM && MM <= nM;
-        if (!rM && (MM < 0n || MM > QM)) throw new Error("msgpack: a BigInt past 64 bits");
-        this.u8(rM ? 211 : 207), this.room(8), rM ? this.view.setBigInt64(this.at, MM, !1) : this.view.setBigUint64(this.at, MM, !1), this.at += 8
+      bigint(VV) {
+        const eV = VV >= pV && VV <= QV;
+        if (!eV && (VV < 0n || VV > nV)) throw new Error("msgpack: a BigInt past 64 bits");
+        this.u8(eV ? 211 : 207), this.room(8), eV ? this.view.setBigInt64(this.at, VV, !1) : this.view.setBigUint64(this.at, VV, !1), this.at += 8
       }
-      string(MM) {
-        const rM = aM.encode(MM);
-        this.head(rM.length, 217, 160, 218, 219), this.room(rM.length), this.buf.set(rM, this.at), this.at += rM.length
+      string(VV) {
+        const eV = yV.encode(VV);
+        this.head(eV.length, 217, 160, 218, 219), this.room(eV.length), this.buf.set(eV, this.at), this.at += eV.length
       }
-      head(MM, rM, iM, OM, SM) {
-        iM >= 0 && MM < (160 === iM ? 32 : 16) ? this.u8(iM | MM) : rM !== OM && MM < 256 ? (this.u8(rM), this.u8(MM)) : MM < 65536 ? (this.u8(OM), this.u16(MM)) : (this.u8(SM), this.u32(MM))
+      head(VV, eV, xV, JV, YV) {
+        xV >= 0 && VV < (160 === xV ? 32 : 16) ? this.u8(xV | VV) : eV !== JV && VV < 256 ? (this.u8(eV), this.u8(VV)) : VV < 65536 ? (this.u8(JV), this.u16(VV)) : (this.u8(YV), this.u32(VV))
       }
-      room(MM) {
-        if (this.at + MM <= this.buf.length) return;
-        let rM = 2 * this.buf.length;
-        for (; rM < this.at + MM;) rM *= 2;
-        const iM = new Uint8Array(rM);
-        iM.set(this.buf.subarray(0, this.at)), this.buf = iM, this.view = new DataView(iM.buffer)
+      room(VV) {
+        if (this.at + VV <= this.buf.length) return;
+        let eV = 2 * this.buf.length;
+        for (; eV < this.at + VV;) eV *= 2;
+        const xV = new Uint8Array(eV);
+        xV.set(this.buf.subarray(0, this.at)), this.buf = xV, this.view = new DataView(xV.buffer)
       }
-      u8(MM) {
-        this.room(1), this.buf[this.at++] = MM
+      u8(VV) {
+        this.room(1), this.buf[this.at++] = VV
       }
-      u16(MM) {
-        this.room(2), this.view.setUint16(this.at, MM, !1), this.at += 2
+      u16(VV) {
+        this.room(2), this.view.setUint16(this.at, VV, !1), this.at += 2
       }
-      u32(MM) {
-        this.room(4), this.view.setUint32(this.at, MM, !1), this.at += 4
+      u32(VV) {
+        this.room(4), this.view.setUint32(this.at, VV, !1), this.at += 4
       }
     }
   },
-  41710: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => aM
+  41900: (VV, eV, xV) => {
+    xV.d(eV, {
+      b: () => yV
     });
-    var OM = iM(41697);
-    const SM = new TextDecoder("utf-8", {
+    var JV = xV(41880);
+    const YV = new TextDecoder("utf-8", {
       ignoreBOM: !0
     });
-    class jM {
-      constructor(MM) {
-        this.buf = MM, this.at = 0, this.view = null
+    class UV {
+      constructor(VV) {
+        this.buf = VV, this.at = 0, this.view = null
       }
       bool() {
         return 0 !== this.u8()
       }
       long() {
-        let MM = this.u8(),
-          rM = 127 & MM,
-          iM = 128;
-        for (; 128 & MM;) {
-          if (iM > 2 ** 63) throw new RangeError("avro: varint too long");
-          MM = this.u8(), rM += (127 & MM) * iM, iM *= 128
+        let VV = this.u8(),
+          eV = 127 & VV,
+          xV = 128;
+        for (; 128 & VV;) {
+          if (xV > 2 ** 63) throw new RangeError("avro: varint too long");
+          VV = this.u8(), eV += (127 & VV) * xV, xV *= 128
         }
-        return rM % 2 === 1 ? -(rM + 1) / 2 : rM / 2
+        return eV % 2 === 1 ? -(eV + 1) / 2 : eV / 2
       }
       float() {
-        const MM = this.take(4);
-        return this.floats().getFloat32(MM, !0)
+        const VV = this.take(4);
+        return this.floats().getFloat32(VV, !0)
       }
       double() {
-        const MM = this.take(8);
-        return this.floats().getFloat64(MM, !0)
+        const VV = this.take(8);
+        return this.floats().getFloat64(VV, !0)
       }
       str() {
-        const MM = this.size(),
-          rM = this.take(MM),
-          iM = rM + MM;
-        if (MM <= 32) {
-          let MM = "";
-          for (let OM = rM; OM < iM; OM++) {
-            const jM = this.buf[OM];
-            if (jM >= 128) return SM.decode(this.buf.subarray(rM, iM));
-            MM += String.fromCharCode(jM)
+        const VV = this.size(),
+          eV = this.take(VV),
+          xV = eV + VV;
+        if (VV <= 32) {
+          let VV = "";
+          for (let JV = eV; JV < xV; JV++) {
+            const UV = this.buf[JV];
+            if (UV >= 128) return YV.decode(this.buf.subarray(eV, xV));
+            VV += String.fromCharCode(UV)
           }
-          return MM
+          return VV
         }
-        return SM.decode(this.buf.subarray(rM, iM))
+        return YV.decode(this.buf.subarray(eV, xV))
       }
       bytes() {
         return this.fixed(this.size())
       }
-      fixed(MM) {
-        const rM = this.take(MM);
-        return this.buf.slice(rM, rM + MM)
+      fixed(VV) {
+        const eV = this.take(VV);
+        return this.buf.slice(eV, eV + VV)
       }
-      index(MM) {
-        const rM = this.long();
-        if (!(rM >= 0 && rM < MM)) throw new RangeError(`avro: index ${rM} of ${MM}`);
-        return rM
+      index(VV) {
+        const eV = this.long();
+        if (!(eV >= 0 && eV < VV)) throw new RangeError(`avro: index ${eV} of ${VV}`);
+        return eV
       }
-      OL(MM) {
-        const rM = [];
-        for (let iM = this.long(); 0 !== iM; iM = this.long()) {
-          iM = this.block(iM);
-          for (let OM = 0; OM < iM; OM++) rM.push(MM(this))
+      kZ(VV) {
+        const eV = [];
+        for (let xV = this.long(); 0 !== xV; xV = this.long()) {
+          xV = this.block(xV);
+          for (let JV = 0; JV < xV; JV++) eV.push(VV(this))
         }
-        return rM
+        return eV
       }
-      map(MM) {
-        const rM = {};
-        for (let iM = this.long(); 0 !== iM; iM = this.long()) {
-          iM = this.block(iM);
-          for (let OM = 0; OM < iM; OM++) {
-            rM[this.str()] = MM(this)
+      map(VV) {
+        const eV = {};
+        for (let xV = this.long(); 0 !== xV; xV = this.long()) {
+          xV = this.block(xV);
+          for (let JV = 0; JV < xV; JV++) {
+            eV[this.str()] = VV(this)
           }
         }
-        return rM
+        return eV
       }
       end() {
         if (this.at !== this.buf.length) throw new RangeError(`avro: ${this.buf.length-this.at} bytes after the value`)
       }
-      block(MM) {
-        let rM = MM;
-        if (rM < 0 && (rM = -rM, this.long()), rM > this.buf.length - this.at) throw new RangeError(`avro: block of ${rM} items in ${this.buf.length-this.at} bytes`);
-        return rM
+      block(VV) {
+        let eV = VV;
+        if (eV < 0 && (eV = -eV, this.long()), eV > this.buf.length - this.at) throw new RangeError(`avro: block of ${eV} items in ${this.buf.length-this.at} bytes`);
+        return eV
       }
       floats() {
         return this.view ??= new DataView(this.buf.buffer, this.buf.byteOffset, this.buf.byteLength), this.view
       }
       size() {
-        const MM = this.long();
-        if (MM < 0) throw new RangeError(`avro: length ${MM}`);
-        return MM
+        const VV = this.long();
+        if (VV < 0) throw new RangeError(`avro: length ${VV}`);
+        return VV
       }
       u8() {
-        const MM = this.buf[this.at];
-        if (void 0 === MM) throw new RangeError("avro: truncated");
-        return this.at++, MM
+        const VV = this.buf[this.at];
+        if (void 0 === VV) throw new RangeError("avro: truncated");
+        return this.at++, VV
       }
-      take(MM) {
-        const rM = this.at;
-        if (MM > this.buf.length - rM) throw new RangeError("avro: truncated");
-        return this.at = rM + MM, rM
+      take(VV) {
+        const eV = this.at;
+        if (VV > this.buf.length - eV) throw new RangeError("avro: truncated");
+        return this.at = eV + VV, eV
       }
     }
 
-    function aM(MM, rM) {
-      const iM = new jM(rM),
-        SM = (0, OM.kb)(MM, iM);
-      return iM.end(), SM
+    function yV(VV, eV) {
+      const xV = new UV(eV),
+        YV = (0, JV.gb)(VV, xV);
+      return xV.end(), YV
     }
   },
-  41697: (MM, rM, iM) => {
-    iM.d(rM, {
-      C: () => aM,
-      D: () => gM,
-      F: () => SM,
-      J: () => PM,
-      M: () => HM,
-      O: () => wM,
-      P: () => bM,
-      R: () => CM,
-      U: () => zM,
-      V: () => LM,
-      W: () => tM,
-      _: () => hM,
-      b: () => GM,
-      bb: () => EM,
-      f: () => dM,
-      fb: () => JM,
-      gb: () => nM,
-      h: () => yM,
-      i: () => lM,
-      k: () => eM,
-      kb: () => uM,
-      n: () => OM,
-      q: () => jM,
-      u: () => UM,
-      w: () => mM,
-      z: () => QM
+  41880: (VV, eV, xV) => {
+    xV.d(eV, {
+      $: () => qV,
+      B: () => yV,
+      F: () => MV,
+      G: () => YV,
+      J: () => pV,
+      M: () => rV,
+      O: () => NV,
+      P: () => AV,
+      Q: () => TV,
+      T: () => wV,
+      U: () => ZV,
+      Y: () => XV,
+      Z: () => kV,
+      c: () => FV,
+      d: () => EV,
+      db: () => bV,
+      eb: () => QV,
+      g: () => BV,
+      gb: () => zV,
+      k: () => jV,
+      o: () => PV,
+      s: () => JV,
+      t: () => UV,
+      v: () => tV,
+      w: () => vV,
+      y: () => nV
     });
-    const OM = 2,
-      SM = 12,
-      jM = 27,
-      aM = 40,
-      PM = 52,
-      nM = 59,
-      QM = 63,
-      zM = 83,
-      LM = 84,
-      mM = 89,
-      HM = 91,
-      hM = 93,
-      JM = 94,
-      dM = 95,
-      yM = 97,
-      lM = 101,
-      EM = 102,
-      UM = 73,
-      GM = 16,
-      CM = 86,
-      eM = 60,
-      bM = 17,
-      wM = 56,
-      tM = 100,
-      gM = 81;
+    const JV = 2,
+      YV = 12,
+      UV = 27,
+      yV = 40,
+      pV = 52,
+      QV = 59,
+      nV = 63,
+      wV = 83,
+      ZV = 84,
+      vV = 89,
+      rV = 91,
+      kV = 93,
+      bV = 94,
+      EV = 95,
+      BV = 97,
+      jV = 101,
+      qV = 102,
+      tV = 73,
+      FV = 16,
+      TV = 86,
+      PV = 60,
+      AV = 17,
+      NV = 56,
+      XV = 100,
+      MV = 81;
 
-    function uM(MM, rM) {
-      switch (MM) {
-        case OM:
-          return function(MM) {
+    function zV(VV, eV) {
+      switch (VV) {
+        case JV:
+          return function(VV) {
             return {
-              Di: KM(MM),
-              oi: MM.float(),
-              Yi: MM.long()
+              mx: sV(VV),
+              ux: VV.float(),
+              Sx: VV.long()
             }
-          }(rM);
-        case SM:
-          return function(MM) {
+          }(eV);
+        case YV:
+          return function(VV) {
             return {
-              Wr: DM(MM),
-              sr: DM(MM)
+              ae: DV(VV),
+              oe: DV(VV)
             }
-          }(rM);
-        case jM:
-          return function(MM) {
+          }(eV);
+        case UV:
+          return function(VV) {
             return {
-              OS: MM.bool(),
-              SS: DM(MM)
+              ZY: VV.bool(),
+              vY: DV(VV)
             }
-          }(rM);
-        case aM:
-          return rM.str();
-        case PM:
-          return function(MM) {
+          }(eV);
+        case yV:
+          return eV.str();
+        case pV:
+          return function(VV) {
             return {
-              id: MM.long(),
-              bO: ar(MM)
+              id: VV.long(),
+              iJ: ye(VV)
             }
-          }(rM);
-        case nM:
-          return function(MM) {
+          }(eV);
+        case QV:
+          return function(VV) {
             return {
-              LM: DM(MM),
-              mM: nr(MM)
+              vV: DV(VV),
+              rV: Qe(VV)
             }
-          }(rM);
-        case QM:
-          return rM.str();
-        case zM:
-        case LM:
-          return rM.long();
-        case mM:
-          return function(MM) {
+          }(eV);
+        case nV:
+          return eV.str();
+        case wV:
+        case ZV:
+          return eV.long();
+        case vV:
+          return function(VV) {
             return {
-              QO: MM.long(),
-              zO: MM.bool(),
-              LO: MM.float()
+              qJ: VV.long(),
+              tJ: VV.bool(),
+              FJ: VV.float()
             }
-          }(rM);
-        case HM:
-          return rM.long();
-        case hM:
-          return function(MM) {
+          }(eV);
+        case rV:
+          return eV.long();
+        case kV:
+          return function(VV) {
             return {
-              mO: MM.bool(),
-              HO: Lr(MM)
+              TJ: VV.bool(),
+              PJ: Ze(VV)
             }
-          }(rM);
-        case JM:
-          return function(MM) {
+          }(eV);
+        case bV:
+          return function(VV) {
             return {
-              id: MM.str(),
-              position: zr(MM),
-              hO: mr(MM),
-              style: NM(MM),
-              dO: MM.bool()
+              id: VV.str(),
+              position: we(VV),
+              AJ: ve(VV),
+              style: hV(VV),
+              XJ: VV.bool()
             }
-          }(rM);
-        case dM:
-          return function(MM) {
+          }(eV);
+        case EV:
+          return function(VV) {
             return {
-              id: DM(MM)
+              id: DV(VV)
             }
-          }(rM);
-        case yM:
-          return function(MM) {
+          }(eV);
+        case BV:
+          return function(VV) {
             return {
-              hM: MM.long(),
-              JM: MM.str(),
-              dM: Sr(MM),
-              yM: Sr(MM),
-              lM: DM(MM),
-              EM: DM(MM),
-              UM: DM(MM),
-              GM: DM(MM),
-              CM: DM(MM),
-              eM: Sr(MM),
-              bM: Sr(MM),
-              wM: DM(MM),
-              tM: DM(MM),
-              gM: DM(MM)
+              bV: VV.long(),
+              EV: VV.str(),
+              BV: Ye(VV),
+              jV: Ye(VV),
+              qV: DV(VV),
+              tV: DV(VV),
+              FV: DV(VV),
+              TV: DV(VV),
+              PV: DV(VV),
+              AV: Ye(VV),
+              NV: Ye(VV),
+              XV: DV(VV),
+              MV: DV(VV),
+              zV: DV(VV)
             }
-          }(rM);
-        case lM:
-          return rM.str();
-        case EM:
-          return rM.long();
-        case UM:
-          return function(MM) {
+          }(eV);
+        case jV:
+          return eV.str();
+        case qV:
+          return eV.long();
+        case tV:
+          return function(VV) {
             return {
-              Aj: MM.long(),
-              xj: MM.str(),
-              vj: MM.float()
+              LU: VV.long(),
+              fU: VV.str(),
+              mU: VV.float()
             }
-          }(rM);
-        case GM:
-          return function(MM) {
+          }(eV);
+        case FV:
+          return function(VV) {
             return {
-              ei: MM.bool(),
-              bi: DM(MM),
-              wi: MM.str(),
-              ti: hr(MM),
-              gi: hr(MM),
-              ui: MM.bool(),
-              Ri: MM.long(),
-              Wi: Jr(MM)
+              Rx: VV.bool(),
+              gx: DV(VV),
+              Dx: VV.str(),
+              ix: ke(VV),
+              Cx: ke(VV),
+              ox: VV.bool(),
+              hx: VV.long(),
+              lx: be(VV)
             }
-          }(rM);
-        case CM:
-          return function(MM) {
+          }(eV);
+        case TV:
+          return function(VV) {
             return {
-              nS: DM(MM)
+              bY: DV(VV)
             }
-          }(rM);
-        case eM:
-          return function(MM) {
+          }(eV);
+        case PV:
+          return function(VV) {
             return {
-              Pi: MM.str(),
-              ni: MM.str(),
-              Qi: dr(MM),
-              Ui: MM.str(),
-              Gi: VM(MM),
-              Ci: MM.float()
+              bx: VV.str(),
+              Ex: VV.str(),
+              Bx: Ee(VV),
+              zx: VV.str(),
+              Gx: dV(VV),
+              Wx: VV.float()
             }
-          }(rM);
-        case bM:
-          return function(MM) {
+          }(eV);
+        case AV:
+          return function(VV) {
             return {
-              Pi: MM.str(),
-              ni: MM.str(),
-              Qi: dr(MM)
+              bx: VV.str(),
+              Ex: VV.str(),
+              Bx: Ee(VV)
             }
-          }(rM);
-        case wM:
-          return function(MM) {
-            return MM.OL(yr)
-          }(rM);
-        case tM:
-          return function(MM) {
+          }(eV);
+        case NV:
+          return function(VV) {
+            return VV.kZ(Be)
+          }(eV);
+        case XV:
+          return function(VV) {
             return {
-              MM: Er(MM),
-              jM: vM(MM)
+              VV: qe(VV),
+              yV: fV(VV)
             }
-          }(rM);
-        case gM:
-          return function(MM) {
+          }(eV);
+        case MV:
+          return function(VV) {
             return {
-              fS: MM.bool(),
-              YS: DM(MM),
-              NS: Gr(MM),
-              vS: or(MM)
+              LY: VV.bool(),
+              fY: DV(VV),
+              mY: Fe(VV),
+              HY: ae(VV)
             }
-          }(rM);
+          }(eV);
         default:
-          throw new Error(`no reader for to-client message ${MM}`)
+          throw new Error(`no reader for to-client message ${VV}`)
       }
     }
 
-    function RM(MM) {
+    function GV(VV) {
       return {
-        entityName: MM.str()
+        entityName: VV.str()
       }
     }
 
-    function pM(MM) {
-      const rM = MM.index(4);
-      return 0 === rM ? MM.str() : 1 === rM ? MM.long() : 2 === rM ? MM.bool() : RM(MM)
+    function WV(VV) {
+      const eV = VV.index(4);
+      return 0 === eV ? VV.str() : 1 === eV ? VV.long() : 2 === eV ? VV.bool() : GV(VV)
     }
 
-    function WM(MM) {
-      return 0 === MM.index(2) ? null : function(MM) {
-        return MM.map(pM)
-      }(MM)
+    function RV(VV) {
+      return 0 === VV.index(2) ? null : function(VV) {
+        return VV.map(WV)
+      }(VV)
     }
 
-    function sM(MM) {
+    function gV(VV) {
       return {
-        translationKey: MM.str(),
-        params: WM(MM)
+        translationKey: VV.str(),
+        params: RV(VV)
       }
     }
 
-    function DM(MM) {
-      return 0 === MM.index(2) ? null : MM.str()
+    function DV(VV) {
+      return 0 === VV.index(2) ? null : VV.str()
     }
 
-    function kM(MM) {
-      return 0 === MM.index(2) ? null : function(MM) {
+    function iV(VV) {
+      return 0 === VV.index(2) ? null : function(VV) {
         return {
-          color: DM(MM),
-          colour: DM(MM),
-          fontSize: DM(MM)
+          color: DV(VV),
+          colour: DV(VV),
+          fontSize: DV(VV)
         }
-      }(MM)
+      }(VV)
     }
 
-    function ZM(MM) {
+    function CV(VV) {
       return {
-        icon: MM.str(),
-        style: kM(MM)
+        icon: VV.str(),
+        style: iV(VV)
       }
     }
 
-    function oM(MM) {
-      const rM = MM.index(3);
-      return 0 === rM ? {
-        string: MM.str()
-      } : 1 === rM ? {
-        styledEntityName: RM(MM)
+    function aV(VV) {
+      const eV = VV.index(3);
+      return 0 === eV ? {
+        string: VV.str()
+      } : 1 === eV ? {
+        styledEntityName: GV(VV)
       } : {
-        styledTranslatedText: sM(MM)
+        styledTranslatedText: gV(VV)
       }
     }
 
-    function fM(MM) {
-      const rM = MM.index(3);
-      return 0 === rM ? null : 1 === rM ? MM.str() : MM.long()
+    function oV(VV) {
+      const eV = VV.index(3);
+      return 0 === eV ? null : 1 === eV ? VV.str() : VV.long()
     }
 
-    function YM(MM) {
-      return 0 === MM.index(2) ? null : MM.float()
+    function cV(VV) {
+      return 0 === VV.index(2) ? null : VV.float()
     }
 
-    function NM(MM) {
-      return 0 === MM.index(2) ? null : function(MM) {
+    function hV(VV) {
+      return 0 === VV.index(2) ? null : function(VV) {
         return {
-          color: DM(MM),
-          colour: DM(MM),
-          fontWeight: fM(MM),
-          fontStyle: DM(MM),
-          fontSize: DM(MM),
-          opacity: YM(MM)
+          color: DV(VV),
+          colour: DV(VV),
+          fontWeight: oV(VV),
+          fontStyle: DV(VV),
+          fontSize: DV(VV),
+          opacity: cV(VV)
         }
-      }(MM)
+      }(VV)
     }
 
-    function AM(MM) {
+    function lV(VV) {
       return {
-        str: oM(MM),
-        style: NM(MM),
-        clickableUrl: DM(MM)
+        str: aV(VV),
+        style: hV(VV),
+        clickableUrl: DV(VV)
       }
     }
 
-    function xM(MM) {
-      return MM.str()
+    function LV(VV) {
+      return VV.str()
     }
 
-    function vM(MM) {
-      return MM.OL(xM)
+    function fV(VV) {
+      return VV.kZ(LV)
     }
 
-    function FM(MM) {
-      return 0 === MM.index(2) ? null : vM(MM)
+    function mV(VV) {
+      return 0 === VV.index(2) ? null : fV(VV)
     }
 
-    function BM(MM) {
+    function KV(VV) {
       return {
-        type: MM.str(),
-        progress: MM.float(),
-        width: DM(MM),
-        height: DM(MM),
-        colours: FM(MM),
-        backgroundColour: DM(MM)
+        type: VV.str(),
+        progress: VV.float(),
+        width: DV(VV),
+        height: DV(VV),
+        colours: mV(VV),
+        backgroundColour: DV(VV)
       }
     }
 
-    function XM(MM) {
+    function HV(VV) {
       return {
-        type: MM.str(),
-        action: MM.str(),
-        style: NM(MM)
+        type: VV.str(),
+        action: VV.str(),
+        style: hV(VV)
       }
     }
 
-    function IM(MM) {
-      const rM = MM.index(7);
-      return 0 === rM ? {
-        string: MM.str()
-      } : 1 === rM ? {
-        entityName: RM(MM)
-      } : 2 === rM ? {
-        translatedText: sM(MM)
-      } : 3 === rM ? {
-        styledIcon: ZM(MM)
-      } : 4 === rM ? {
-        ki: AM(MM)
-      } : 5 === rM ? {
-        styledProgressBar: BM(MM)
+    function uV(VV) {
+      const eV = VV.index(7);
+      return 0 === eV ? {
+        string: VV.str()
+      } : 1 === eV ? {
+        entityName: GV(VV)
+      } : 2 === eV ? {
+        translatedText: gV(VV)
+      } : 3 === eV ? {
+        styledIcon: CV(VV)
+      } : 4 === eV ? {
+        Kx: lV(VV)
+      } : 5 === eV ? {
+        styledProgressBar: KV(VV)
       } : {
-        styledKeyBinding: XM(MM)
+        styledKeyBinding: HV(VV)
       }
     }
 
-    function KM(MM) {
-      return MM.OL(IM)
+    function sV(VV) {
+      return VV.kZ(uV)
     }
-    const qM = ["progressBar", "timedClick", "gravityBar", "precisionBar", "rhythmClick"];
+    const SV = ["progressBar", "timedClick", "gravityBar", "precisionBar", "rhythmClick"];
 
-    function TM(MM) {
-      return qM[MM.index(5)]
-    }
-
-    function VM(MM) {
-      return 0 === MM.index(2) ? null : MM.double()
+    function IV(VV) {
+      return SV[VV.index(5)]
     }
 
-    function cM(MM) {
-      return 0 === MM.index(2) ? null : function(MM) {
+    function dV(VV) {
+      return 0 === VV.index(2) ? null : VV.double()
+    }
+
+    function OV(VV) {
+      return 0 === VV.index(2) ? null : function(VV) {
         return {
-          uO: VM(MM),
-          RO: MM.double(),
-          pO: MM.double(),
-          WO: MM.bool(),
-          description: KM(MM),
-          sO: MM.str(),
-          scale: VM(MM),
-          rotation: VM(MM)
+          cJ: dV(VV),
+          hJ: VV.double(),
+          lJ: VV.double(),
+          LJ: VV.bool(),
+          description: sV(VV),
+          fJ: VV.str(),
+          scale: dV(VV),
+          rotation: dV(VV)
         }
-      }(MM)
+      }(VV)
     }
 
-    function Mr(MM) {
-      return 0 === MM.index(2) ? null : MM.bool()
+    function Ve(VV) {
+      return 0 === VV.index(2) ? null : VV.bool()
     }
 
-    function rr(MM) {
-      return 0 === MM.index(2) ? null : function(MM) {
+    function ee(VV) {
+      return 0 === VV.index(2) ? null : function(VV) {
         return {
-          kO: MM.double(),
-          icon: MM.str(),
-          label: KM(MM),
-          ZO: MM.bool(),
-          scale: VM(MM),
-          rotation: VM(MM),
-          oO: Mr(MM)
+          KJ: VV.double(),
+          icon: VV.str(),
+          label: sV(VV),
+          HJ: VV.bool(),
+          scale: dV(VV),
+          rotation: dV(VV),
+          uJ: Ve(VV)
         }
-      }(MM)
+      }(VV)
     }
 
-    function ir(MM) {
-      return 0 === MM.index(2) ? null : function(MM) {
+    function xe(VV) {
+      return 0 === VV.index(2) ? null : function(VV) {
         return {
-          uO: VM(MM),
-          YO: MM.double(),
-          AO: MM.double(),
-          xO: MM.double(),
-          gravity: MM.double(),
-          vO: MM.double(),
-          FO: MM.double(),
-          BO: MM.double(),
-          WO: MM.bool(),
-          description: KM(MM),
-          icon: DM(MM)
+          cJ: dV(VV),
+          SJ: VV.double(),
+          IJ: VV.double(),
+          dJ: VV.double(),
+          gravity: VV.double(),
+          OJ: VV.double(),
+          VY: VV.double(),
+          eY: VV.double(),
+          LJ: VV.bool(),
+          description: sV(VV),
+          icon: DV(VV)
         }
-      }(MM)
+      }(VV)
     }
 
-    function Or(MM) {
-      return 0 === MM.index(2) ? null : function(MM) {
+    function Je(VV) {
+      return 0 === VV.index(2) ? null : function(VV) {
         return {
-          speed: MM.double(),
-          IO: MM.double(),
-          label: KM(MM),
-          icon: DM(MM),
-          scale: VM(MM),
-          rotation: VM(MM)
+          speed: VV.double(),
+          JY: VV.double(),
+          label: sV(VV),
+          icon: DV(VV),
+          scale: dV(VV),
+          rotation: dV(VV)
         }
-      }(MM)
+      }(VV)
     }
 
-    function Sr(MM) {
-      return 0 === MM.index(2) ? null : MM.long()
+    function Ye(VV) {
+      return 0 === VV.index(2) ? null : VV.long()
     }
 
-    function jr(MM) {
-      return 0 === MM.index(2) ? null : function(MM) {
+    function Ue(VV) {
+      return 0 === VV.index(2) ? null : function(VV) {
         return {
-          qO: MM.long(),
-          VO: MM.double(),
-          cO: MM.double(),
-          MS: Sr(MM),
-          label: KM(MM),
-          icon: DM(MM)
+          UY: VV.long(),
+          yY: VV.double(),
+          pY: VV.double(),
+          QY: Ye(VV),
+          label: sV(VV),
+          icon: DV(VV)
         }
-      }(MM)
+      }(VV)
     }
 
-    function ar(MM) {
+    function ye(VV) {
       return {
-        type: TM(MM),
-        progressBar: cM(MM),
-        timedClick: rr(MM),
-        gravityBar: ir(MM),
-        precisionBar: Or(MM),
-        rhythmClick: jr(MM)
+        type: IV(VV),
+        progressBar: OV(VV),
+        timedClick: ee(VV),
+        gravityBar: xe(VV),
+        precisionBar: Je(VV),
+        rhythmClick: Ue(VV)
       }
     }
-    const Pr = ["playerGone", "rateLimited"];
+    const pe = ["playerGone", "rateLimited"];
 
-    function nr(MM) {
-      return 0 === MM.index(2) ? null : function(MM) {
-        return Pr[MM.index(2)]
-      }(MM)
+    function Qe(VV) {
+      return 0 === VV.index(2) ? null : function(VV) {
+        return pe[VV.index(2)]
+      }(VV)
     }
 
-    function Qr(MM) {
-      return MM.float()
+    function ne(VV) {
+      return VV.float()
     }
 
-    function zr(MM) {
-      return MM.OL(Qr)
+    function we(VV) {
+      return VV.kZ(ne)
     }
 
-    function Lr(MM) {
-      return 0 === MM.index(2) ? null : zr(MM)
+    function Ze(VV) {
+      return 0 === VV.index(2) ? null : we(VV)
     }
 
-    function mr(MM) {
-      return 0 === MM.index(2) ? null : KM(MM)
+    function ve(VV) {
+      return 0 === VV.index(2) ? null : sV(VV)
     }
 
-    function Hr(MM) {
-      return MM.long()
+    function re(VV) {
+      return VV.long()
     }
 
-    function hr(MM) {
-      return 0 === MM.index(2) ? null : function(MM) {
-        return MM.OL(Hr)
-      }(MM)
+    function ke(VV) {
+      return 0 === VV.index(2) ? null : function(VV) {
+        return VV.kZ(re)
+      }(VV)
     }
 
-    function Jr(MM) {
-      return 0 === MM.index(2) ? null : function(MM) {
+    function be(VV) {
+      return 0 === VV.index(2) ? null : function(VV) {
         return {
-          br: MM.str(),
-          pr: MM.long()
+          ze: VV.str(),
+          Ce: VV.long()
         }
-      }(MM)
+      }(VV)
     }
 
-    function dr(MM) {
-      const rM = MM.index(3);
-      return 0 === rM ? null : 1 === rM ? MM.str() : sM(MM)
+    function Ee(VV) {
+      const eV = VV.index(3);
+      return 0 === eV ? null : 1 === eV ? VV.str() : gV(VV)
     }
 
-    function yr(MM) {
+    function Be(VV) {
       return {
-        Xi: MM.str(),
-        Ii: MM.str(),
-        Ki: MM.str()
+        JJ: VV.str(),
+        YJ: VV.str(),
+        UJ: VV.str()
       }
     }
 
-    function lr(MM) {
+    function je(VV) {
       return {
-        rM: MM.str(),
-        iM: DM(MM),
-        OM: DM(MM),
-        SM: vM(MM)
+        eV: VV.str(),
+        xV: DV(VV),
+        JV: DV(VV),
+        YV: fV(VV)
       }
     }
 
-    function Er(MM) {
-      return MM.OL(lr)
+    function qe(VV) {
+      return VV.kZ(je)
     }
 
-    function Ur(MM) {
+    function te(VV) {
       return {
-        xS: MM.str(),
-        x: MM.long(),
-        y: MM.long(),
-        z: MM.long()
+        KY: VV.str(),
+        x: VV.long(),
+        y: VV.long(),
+        z: VV.long()
       }
     }
 
-    function Gr(MM) {
-      return MM.OL(Ur)
+    function Fe(VV) {
+      return VV.kZ(te)
     }
 
-    function Cr(MM) {
-      return 0 === MM.index(2) ? null : function(MM) {
+    function Te(VV) {
+      return 0 === VV.index(2) ? null : function(VV) {
         return {
-          mj: MM.float(),
-          Hj: MM.long(),
-          hj: MM.long()
+          rU: VV.float(),
+          kU: VV.long(),
+          bU: VV.long()
         }
-      }(MM)
+      }(VV)
     }
 
-    function er(MM) {
+    function Pe(VV) {
       return {
-        blockName: MM.str(),
-        Sj: MM.bool(),
-        jj: MM.bool(),
-        aj: MM.bool(),
-        Pj: MM.float(),
-        nj: MM.float(),
-        Qj: MM.long(),
-        zj: Cr(MM)
+        blockName: VV.str(),
+        UU: VV.bool(),
+        yU: VV.bool(),
+        pU: VV.bool(),
+        QU: VV.float(),
+        nU: VV.float(),
+        wU: VV.long(),
+        ZU: Te(VV)
       }
     }
 
-    function br(MM) {
-      return 0 === MM.index(2) ? null : function(MM) {
-        return MM.OL(er)
-      }(MM)
+    function Ae(VV) {
+      return 0 === VV.index(2) ? null : function(VV) {
+        return VV.kZ(Pe)
+      }(VV)
     }
 
-    function wr(MM) {
+    function Ne(VV) {
       return {
-        rj: MM.str(),
-        ij: br(MM)
+        xU: VV.str(),
+        JU: Ae(VV)
       }
     }
 
-    function tr(MM) {
+    function Xe(VV) {
       return {
-        blockName: MM.str(),
-        frequency: MM.float()
+        blockName: VV.str(),
+        frequency: VV.float()
       }
     }
 
-    function gr(MM) {
-      return MM.OL(tr)
+    function Me(VV) {
+      return VV.kZ(Xe)
     }
 
-    function ur(MM) {
+    function ze(VV) {
       return {
-        yj: MM.str(),
-        lj: MM.str(),
-        frequency: MM.float(),
-        Ej: gr(MM)
+        jU: VV.str(),
+        qU: VV.str(),
+        frequency: VV.float(),
+        tU: Me(VV)
       }
     }
 
-    function Rr(MM) {
-      return MM.OL(ur)
+    function Ge(VV) {
+      return VV.kZ(ze)
     }
 
-    function pr(MM) {
+    function We(VV) {
       return {
-        blockName: MM.str(),
-        radius: MM.long(),
-        ej: MM.long(),
-        XS: MM.long(),
-        KS: MM.long(),
-        bj: MM.float()
+        blockName: VV.str(),
+        radius: VV.long(),
+        AU: VV.long(),
+        SY: VV.long(),
+        IY: VV.long(),
+        NU: VV.float()
       }
     }
 
-    function Wr(MM) {
-      return MM.OL(pr)
+    function Re(VV) {
+      return VV.kZ(We)
     }
 
-    function sr(MM) {
+    function ge(VV) {
       return {
-        XS: MM.long(),
-        KS: MM.long(),
-        qS: MM.long(),
-        VS: MM.bool(),
-        cS: wr(MM),
-        Jj: Rr(MM),
-        Gj: Wr(MM)
+        SY: VV.long(),
+        IY: VV.long(),
+        dY: VV.long(),
+        OY: VV.bool(),
+        VU: Ne(VV),
+        EU: Ge(VV),
+        TU: Re(VV)
       }
     }
 
-    function Dr(MM) {
-      return MM.OL(sr)
+    function De(VV) {
+      return VV.kZ(ge)
     }
 
-    function kr(MM) {
-      return 0 === MM.index(2) ? null : function(MM) {
+    function ie(VV) {
+      return 0 === VV.index(2) ? null : function(VV) {
         return {
-          name: MM.str(),
-          uj: DM(MM)
+          name: VV.str(),
+          GU: DV(VV)
         }
-      }(MM)
+      }(VV)
     }
 
-    function Zr(MM) {
-      return 0 === MM.index(2) ? null : function(MM) {
+    function Ce(VV) {
+      return 0 === VV.index(2) ? null : function(VV) {
         return {
-          terrain: kr(MM),
-          Rj: Wr(MM)
+          terrain: ie(VV),
+          WU: Re(VV)
         }
-      }(MM)
+      }(VV)
     }
 
-    function or(MM) {
-      return 0 === MM.index(2) ? null : function(MM) {
+    function ae(VV) {
+      return 0 === VV.index(2) ? null : function(VV) {
         return {
-          layers: Dr(MM),
-          wj: Zr(MM)
+          layers: De(VV),
+          XU: Ce(VV)
         }
-      }(MM)
+      }(VV)
     }
   },
-  41682: (MM, rM, iM) => {
-    iM.d(rM, {
-      A: () => eM,
-      B: () => RM,
-      D: () => UM,
-      H: () => GM,
-      K: () => dM,
-      N: () => tM,
-      O: () => WM,
-      P: () => hM,
-      S: () => DM,
-      U: () => lM,
-      X: () => yM,
-      _: () => EM,
-      ab: () => CM,
-      d: () => SM,
-      h: () => sM,
-      j: () => pM,
-      k: () => HM,
-      l: () => JM,
-      n: () => uM,
-      p: () => bM,
-      s: () => gM,
-      w: () => wM
+  41867: (VV, eV, xV) => {
+    xV.d(eV, {
+      $: () => qV,
+      A: () => PV,
+      C: () => GV,
+      E: () => tV,
+      G: () => FV,
+      J: () => EV,
+      K: () => XV,
+      O: () => RV,
+      Q: () => kV,
+      U: () => DV,
+      W: () => jV,
+      Y: () => BV,
+      d: () => YV,
+      db: () => TV,
+      h: () => gV,
+      k: () => WV,
+      m: () => rV,
+      o: () => bV,
+      p: () => zV,
+      s: () => AV,
+      v: () => MV,
+      y: () => NV
     });
-    var OM = iM(3349);
-    const SM = {
+    var JV = xV(3348);
+    const YV = {
       Chat: 49,
       UiRequestResponded: 91,
       CodeCollab: 89,
@@ -1211,160 +1211,160 @@ export const modules = {
       LobbyManage: 96
     };
 
-    function jM(MM, rM) {
-      return !ArrayBuffer.isView(MM) || MM instanceof DataView ? Array.isArray(MM) ? MM.map((MM => rM(MM))) : MM : Array.from(MM, (MM => rM(MM)))
+    function UV(VV, eV) {
+      return !ArrayBuffer.isView(VV) || VV instanceof DataView ? Array.isArray(VV) ? VV.map((VV => eV(VV))) : VV : Array.from(VV, (VV => eV(VV)))
     }
 
-    function aM(MM) {
-      if ("string" !== typeof MM) return MM;
-      for (let rM = 0; rM < MM.length; rM++) {
-        const iM = MM.charCodeAt(rM);
-        if (iM >= 55296 && iM <= 57343) return nM.decode(PM.encode(MM))
+    function yV(VV) {
+      if ("string" !== typeof VV) return VV;
+      for (let eV = 0; eV < VV.length; eV++) {
+        const xV = VV.charCodeAt(eV);
+        if (xV >= 55296 && xV <= 57343) return QV.decode(pV.encode(VV))
       }
-      return MM
+      return VV
     }
-    const PM = new TextEncoder,
-      nM = new TextDecoder;
+    const pV = new TextEncoder,
+      QV = new TextDecoder;
 
-    function QM(MM) {
-      return MM
+    function nV(VV) {
+      return VV
     }
-    let zM;
+    let wV;
 
-    function LM(MM) {
-      return null === MM || "object" !== typeof MM ? MM : [aM(MM.lQ), aM(MM.EQ)]
-    }
-
-    function mM(MM) {
-      return null === MM || "object" !== typeof MM ? MM : [jM(MM.ti, QM), jM(MM.oa, QM)]
+    function ZV(VV) {
+      return null === VV || "object" !== typeof VV ? VV : [yV(VV.Fn), yV(VV.Tn)]
     }
 
-    function HM(MM) {
-      return null === (rM = MM) || "object" !== typeof rM ? rM : [aM(rM.Kz), aM(rM.qz)];
-      var rM
+    function vV(VV) {
+      return null === VV || "object" !== typeof VV ? VV : [UV(VV.ix, nV), UV(VV.ly, nV)]
     }
 
-    function hM(MM) {
-      return null === (rM = MM) || "object" !== typeof rM ? rM : [rM.id, rM.IQ];
-      var rM
+    function rV(VV) {
+      return null === (eV = VV) || "object" !== typeof eV ? eV : [yV(eV.yZ), yV(eV.pZ)];
+      var eV
     }
 
-    function JM(MM) {
-      return null === (rM = MM) || "object" !== typeof rM ? rM : [rM.hM, aM(rM.JM), rM.dM, aM(rM.EM), rM.eM, rM.bM, rM.cn, aM(rM.MQ), aM(rM.rQ)];
-      var rM
+    function kV(VV) {
+      return null === (eV = VV) || "object" !== typeof eV ? eV : [eV.id, eV.Jw];
+      var eV
     }
 
-    function dM(MM) {
-      return null === (rM = MM) || "object" !== typeof rM ? rM : [jM(rM.SP, QM), rM.jP];
-      var rM
+    function bV(VV) {
+      return null === (eV = VV) || "object" !== typeof eV ? eV : [eV.bV, yV(eV.EV), eV.BV, yV(eV.tV), eV.AV, eV.NV, eV.Yn, yV(eV.Un), yV(eV.yn)];
+      var eV
     }
 
-    function yM(MM) {
-      return null === (rM = MM) || "object" !== typeof rM ? rM : [jM(rM.aQ, (MM => aM(MM))), aM(rM.nQ), rM.QQ];
-      var rM
+    function EV(VV) {
+      return null === (eV = VV) || "object" !== typeof eV ? eV : [UV(eV.Zp, nV), eV.vp];
+      var eV
     }
 
-    function lM(MM) {
-      return null === (rM = MM) || "object" !== typeof rM ? rM : [jM(rM.mQ, QM), aM(rM.hQ), rM.JQ];
-      var rM
+    function BV(VV) {
+      return null === (eV = VV) || "object" !== typeof eV ? eV : [UV(eV.Zn, (VV => yV(VV))), yV(eV.vn), eV.rn];
+      var eV
     }
 
-    function EM(MM) {
-      return null === (rM = MM) || "object" !== typeof rM ? rM : [aM(rM.Ii), aM(rM.Ki)];
-      var rM
+    function jV(VV) {
+      return null === (eV = VV) || "object" !== typeof eV ? eV : [UV(eV.En, nV), yV(eV.Bn), eV.jn];
+      var eV
     }
 
-    function UM(MM) {
-      return null === (rM = MM) || "object" !== typeof rM ? rM : [aM(rM.Ua)];
-      var rM
+    function qV(VV) {
+      return null === (eV = VV) || "object" !== typeof eV ? eV : [yV(eV.YJ), yV(eV.UJ)];
+      var eV
     }
 
-    function GM(MM) {
-      return aM(MM)
+    function tV(VV) {
+      return null === (eV = VV) || "object" !== typeof eV ? eV : [yV(eV.Py)];
+      var eV
     }
 
-    function CM(MM) {
-      return null === (rM = MM) || "object" !== typeof rM ? rM : [aM(rM.dQ), aM(rM.yQ), aM(rM.lQ), aM(rM.EQ)];
-      var rM
+    function FV(VV) {
+      return yV(VV)
     }
 
-    function eM(MM) {
-      return LM(MM)
+    function TV(VV) {
+      return null === (eV = VV) || "object" !== typeof eV ? eV : [yV(eV.qn), yV(eV.tn), yV(eV.Fn), yV(eV.Tn)];
+      var eV
     }
 
-    function bM(MM) {
-      return LM(MM)
+    function PV(VV) {
+      return ZV(VV)
     }
 
-    function wM(MM) {
-      return null === (rM = MM) || "object" !== typeof rM ? rM : [aM(rM.KQ)];
-      var rM
+    function AV(VV) {
+      return ZV(VV)
     }
 
-    function tM(MM) {
-      return MM
+    function NV(VV) {
+      return null === (eV = VV) || "object" !== typeof eV ? eV : [yV(eV.Yw)];
+      var eV
     }
 
-    function gM(MM) {
-      return null === (rM = MM) || "object" !== typeof rM ? rM : [aM(rM.Ja), aM(rM.da)];
-      var rM
+    function XV(VV) {
+      return VV
     }
 
-    function uM(MM) {
-      return aM(MM)
+    function MV(VV) {
+      return null === (eV = VV) || "object" !== typeof eV ? eV : [yV(eV.jy), yV(eV.qy)];
+      var eV
     }
 
-    function RM(MM) {
-      return mM(MM)
+    function zV(VV) {
+      return yV(VV)
     }
 
-    function pM(MM) {
-      return mM(MM)
+    function GV(VV) {
+      return vV(VV)
     }
 
-    function WM(MM) {
-      return null === (rM = MM) || "object" !== typeof rM ? rM : [aM(rM.vQ)];
-      var rM
+    function WV(VV) {
+      return vV(VV)
     }
 
-    function sM(MM) {
-      return (zM ??= (0, OM.f)().map((MM => MM.name)), zM).map((rM => {
-        return "string" === typeof(iM = MM[rM]) ? aM(iM) : jM(iM, QM);
-        var iM
+    function RV(VV) {
+      return null === (eV = VV) || "object" !== typeof eV ? eV : [yV(eV.Vw)];
+      var eV
+    }
+
+    function gV(VV) {
+      return (wV ??= (0, JV.c)().map((VV => VV.name)), wV).map((eV => {
+        return "string" === typeof(xV = VV[eV]) ? yV(xV) : UV(xV, nV);
+        var xV
       }))
     }
 
-    function DM(MM) {
-      return null === (rM = MM) || "object" !== typeof rM ? rM : [rM.fa, rM.Ya, rM.Na];
-      var rM
+    function DV(VV) {
+      return null === (eV = VV) || "object" !== typeof eV ? eV : [eV.Ly, eV.my, eV.Ky];
+      var eV
     }
   },
-  9918: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => SM,
-      e: () => jM
+  9922: (VV, eV, xV) => {
+    xV.d(eV, {
+      d: () => YV,
+      f: () => UV
     });
-    var OM = iM(9863);
-    const SM = "Air",
-      jM = Object.freeze(new OM.c(SM, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
+    var JV = xV(9861);
+    const YV = "Air",
+      UV = Object.freeze(new JV.g(YV, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
   },
-  40325: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => jM,
-      g: () => PM
+  40472: (VV, eV, xV) => {
+    xV.d(eV, {
+      d: () => UV,
+      h: () => pV
     });
-    var OM = iM(332),
-      SM = iM(4843);
-    const jM = new Set(SM.n),
-      aM = new Map;
+    var JV = xV(375),
+      YV = xV(4940);
+    const UV = new Set(YV.q),
+      yV = new Map;
 
-    function PM(MM, rM) {
-      let iM = aM.get(rM);
-      void 0 === iM && (iM = new Map, aM.set(rM, iM));
-      let SM = iM.get(MM);
-      return void 0 === SM && (SM = `${MM}${(0,OM.A)(rM)}`, iM.set(MM, SM)), SM
+    function pV(VV, eV) {
+      let xV = yV.get(eV);
+      void 0 === xV && (xV = new Map, yV.set(eV, xV));
+      let YV = xV.get(VV);
+      return void 0 === YV && (YV = `${VV}${(0,JV.v)(eV)}`, xV.set(VV, YV)), YV
     }
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const VV in modules) Object.freeze(modules[VV]);

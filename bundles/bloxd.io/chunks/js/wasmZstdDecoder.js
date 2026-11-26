@@ -1,477 +1,477 @@
 (() => {
   (() => {
     if ("undefined" !== typeof __webpack_require__) {
-      var MM = __webpack_require__.u,
-        rM = __webpack_require__.e,
-        iM = {},
-        OM = {};
-      __webpack_require__.u = function(rM) {
-        return MM(rM) + (iM.hasOwnProperty(rM) ? "?" + iM[rM] : "")
-      }, __webpack_require__.e = function(SM) {
-        return rM(SM).catch((function(rM) {
-          var jM = OM.hasOwnProperty(SM) ? OM[SM] : 4;
-          if (jM < 1) {
-            var aM = MM(SM);
-            if (rM.message = "Loading chunk " + SM + " failed after 4 retries.\n(" + aM + ")", rM.request = aM, iM[SM] = "cache-bust=" + Date.now(), setTimeout((function() {
-                delete OM[SM]
-              }), 0), "CSS_CHUNK_LOAD_FAILED" === rM.code) {
-              var PM = __webpack_require__.miniCssF(SM);
-              rM.message = rM.message.replace("Loading chunk", "Loading CSS chunk").replace(aM, PM), rM.request = PM
+      var VV = __webpack_require__.u,
+        eV = __webpack_require__.e,
+        xV = {},
+        JV = {};
+      __webpack_require__.u = function(eV) {
+        return VV(eV) + (xV.hasOwnProperty(eV) ? "?" + xV[eV] : "")
+      }, __webpack_require__.e = function(YV) {
+        return eV(YV).catch((function(eV) {
+          var UV = JV.hasOwnProperty(YV) ? JV[YV] : 4;
+          if (UV < 1) {
+            var yV = VV(YV);
+            if (eV.message = "Loading chunk " + YV + " failed after 4 retries.\n(" + yV + ")", eV.request = yV, xV[YV] = "cache-bust=" + Date.now(), setTimeout((function() {
+                delete JV[YV]
+              }), 0), "CSS_CHUNK_LOAD_FAILED" === eV.code) {
+              var pV = __webpack_require__.miniCssF(YV);
+              eV.message = eV.message.replace("Loading chunk", "Loading CSS chunk").replace(yV, pV), eV.request = pV
             }
-            throw rM
+            throw eV
           }
-          return new Promise((function(MM) {
-            var rM = 4 - jM + 1;
+          return new Promise((function(VV) {
+            var eV = 4 - UV + 1;
             setTimeout((function() {
-              var rM = "cache-bust=" + Date.now();
-              iM[SM] = rM, OM[SM] = jM - 1, MM(__webpack_require__.e(SM))
-            }), function(MM) {
-              return 500 * Math.pow(2, MM)
-            }(rM))
+              var eV = "cache-bust=" + Date.now();
+              xV[YV] = eV, JV[YV] = UV - 1, VV(__webpack_require__.e(YV))
+            }), function(VV) {
+              return 500 * Math.pow(2, VV)
+            }(eV))
           }))
         }))
       }
     }
   })();
 
-  function MM(MM) {
-    return MM instanceof Error ? MM.message : String(MM)
+  function VV(VV) {
+    return VV instanceof Error ? VV.message : String(VV)
   }
-  const rM = ArrayBuffer,
-    iM = Uint8Array,
-    OM = Uint16Array,
-    SM = Int16Array,
-    jM = Int32Array,
-    aM = (MM, rM, OM) => {
-      if (iM.prototype.slice) return iM.prototype.slice.call(MM, rM, OM);
-      (null == rM || rM < 0) && (rM = 0), (null == OM || OM > MM.length) && (OM = MM.length);
-      const SM = new iM(OM - rM);
-      return SM.set(MM.subarray(rM, OM)), SM
+  const eV = ArrayBuffer,
+    xV = Uint8Array,
+    JV = Uint16Array,
+    YV = Int16Array,
+    UV = Int32Array,
+    yV = (VV, eV, JV) => {
+      if (xV.prototype.slice) return xV.prototype.slice.call(VV, eV, JV);
+      (null == eV || eV < 0) && (eV = 0), (null == JV || JV > VV.length) && (JV = VV.length);
+      const YV = new xV(JV - eV);
+      return YV.set(VV.subarray(eV, JV)), YV
     },
-    PM = (MM, rM, OM, SM) => {
-      if (iM.prototype.fill) return iM.prototype.fill.call(MM, rM, OM, SM);
-      for ((null == OM || OM < 0) && (OM = 0), (null == SM || SM > MM.length) && (SM = MM.length); OM < SM; ++OM) MM[OM] = rM;
-      return MM
+    pV = (VV, eV, JV, YV) => {
+      if (xV.prototype.fill) return xV.prototype.fill.call(VV, eV, JV, YV);
+      for ((null == JV || JV < 0) && (JV = 0), (null == YV || YV > VV.length) && (YV = VV.length); JV < YV; ++JV) VV[JV] = eV;
+      return VV
     },
-    nM = ["invalid zstd data", "window size too large (>2046MB)", "invalid block type", "FSE accuracy too high", "match distance too far back", "unexpected EOF"],
-    QM = (MM, rM, iM) => {
-      const OM = new Error(rM || nM[MM]);
-      if (OM.code = MM, Error.captureStackTrace && Error.captureStackTrace(OM, QM), !iM) throw OM;
-      return OM
+    QV = ["invalid zstd data", "window size too large (>2046MB)", "invalid block type", "FSE accuracy too high", "match distance too far back", "unexpected EOF"],
+    nV = (VV, eV, xV) => {
+      const JV = new Error(eV || QV[VV]);
+      if (JV.code = VV, Error.captureStackTrace && Error.captureStackTrace(JV, nV), !xV) throw JV;
+      return JV
     },
-    zM = (MM, rM, iM) => {
-      let OM = 0,
-        SM = 0;
-      for (; OM < iM; ++OM) SM |= MM[rM++] << (OM << 3);
-      return SM
+    wV = (VV, eV, xV) => {
+      let JV = 0,
+        YV = 0;
+      for (; JV < xV; ++JV) YV |= VV[eV++] << (JV << 3);
+      return YV
     },
-    LM = (MM, rM) => {
-      const OM = MM[0] | MM[1] << 8 | MM[2] << 16;
-      if (3126568 == OM && 253 == MM[3]) {
-        const OM = MM[4],
-          SM = OM >> 5 & 1,
-          aM = OM >> 2 & 1,
-          PM = 3 & OM,
-          nM = OM >> 6;
-        8 & OM && QM(0);
-        let LM = 6 - SM;
-        const mM = 3 == PM ? 4 : PM,
-          HM = zM(MM, LM, mM);
-        LM += mM;
-        const hM = nM ? 1 << nM : SM,
-          JM = zM(MM, LM, hM) + (1 == nM && 256);
-        let dM = JM;
-        if (!SM) {
-          const rM = 1 << 10 + (MM[5] >> 3);
-          dM = rM + (rM >> 3) * (7 & MM[5])
+    ZV = (VV, eV) => {
+      const JV = VV[0] | VV[1] << 8 | VV[2] << 16;
+      if (3126568 == JV && 253 == VV[3]) {
+        const JV = VV[4],
+          YV = JV >> 5 & 1,
+          yV = JV >> 2 & 1,
+          pV = 3 & JV,
+          QV = JV >> 6;
+        8 & JV && nV(0);
+        let ZV = 6 - YV;
+        const vV = 3 == pV ? 4 : pV,
+          rV = wV(VV, ZV, vV);
+        ZV += vV;
+        const kV = QV ? 1 << QV : YV,
+          bV = wV(VV, ZV, kV) + (1 == QV && 256);
+        let EV = bV;
+        if (!YV) {
+          const eV = 1 << 10 + (VV[5] >> 3);
+          EV = eV + (eV >> 3) * (7 & VV[5])
         }
-        dM > 2145386496 && QM(1);
-        const yM = new iM((1 == rM ? JM || dM : rM ? 0 : dM) + 12);
-        return yM[0] = 1, yM[4] = 4, yM[8] = 8, {
-          b: LM + hM,
+        EV > 2145386496 && nV(1);
+        const BV = new xV((1 == eV ? bV || EV : eV ? 0 : EV) + 12);
+        return BV[0] = 1, BV[4] = 4, BV[8] = 8, {
+          b: ZV + kV,
           y: 0,
           l: 0,
-          d: HM,
-          w: rM && 1 != rM ? rM : yM.subarray(12),
-          e: dM,
-          o: new jM(yM.buffer, 0, 3),
-          u: JM,
-          c: aM,
-          m: Math.min(131072, dM)
+          d: rV,
+          w: eV && 1 != eV ? eV : BV.subarray(12),
+          e: EV,
+          o: new UV(BV.buffer, 0, 3),
+          u: bV,
+          c: yV,
+          m: Math.min(131072, EV)
         }
       }
-      if (25481893 == (OM >> 4 | MM[3] << 20)) return 8 + (((SM = MM)[aM = 4] | SM[aM + 1] << 8 | SM[aM + 2] << 16 | SM[aM + 3] << 24) >>> 0);
-      var SM, aM;
-      QM(0)
+      if (25481893 == (JV >> 4 | VV[3] << 20)) return 8 + (((YV = VV)[yV = 4] | YV[yV + 1] << 8 | YV[yV + 2] << 16 | YV[yV + 3] << 24) >>> 0);
+      var YV, yV;
+      nV(0)
     },
-    mM = MM => {
-      let rM = 0;
-      for (; 1 << rM <= MM; ++rM);
-      return rM - 1
+    vV = VV => {
+      let eV = 0;
+      for (; 1 << eV <= VV; ++eV);
+      return eV - 1
     },
-    HM = (MM, jM, aM) => {
-      let PM = 4 + (jM << 3);
-      const nM = 5 + (15 & MM[jM]);
-      nM > aM && QM(3);
-      const zM = 1 << nM;
-      let LM = zM,
-        HM = -1,
-        hM = -1,
-        JM = -1,
-        dM = zM;
-      const yM = new rM(512 + (zM << 2)),
-        lM = new SM(yM, 0, 256),
-        EM = new OM(yM, 0, 256),
-        UM = new OM(yM, 512, zM),
-        GM = 512 + (zM << 1),
-        CM = new iM(yM, GM, zM),
-        eM = new iM(yM, GM + zM);
-      for (; HM < 255 && LM > 0;) {
-        const rM = mM(LM + 1),
-          iM = PM >> 3,
-          OM = (1 << rM + 1) - 1;
-        let SM = (MM[iM] | MM[iM + 1] << 8 | MM[iM + 2] << 16) >> (7 & PM) & OM;
-        const jM = (1 << rM) - 1,
-          aM = OM - LM - 1,
-          nM = SM & jM;
-        if (nM < aM ? (PM += rM, SM = nM) : (PM += rM + 1, SM > jM && (SM -= aM)), lM[++HM] = --SM, -1 == SM ? (LM += SM, CM[--dM] = HM) : LM -= SM, !SM)
+    rV = (VV, UV, yV) => {
+      let pV = 4 + (UV << 3);
+      const QV = 5 + (15 & VV[UV]);
+      QV > yV && nV(3);
+      const wV = 1 << QV;
+      let ZV = wV,
+        rV = -1,
+        kV = -1,
+        bV = -1,
+        EV = wV;
+      const BV = new eV(512 + (wV << 2)),
+        jV = new YV(BV, 0, 256),
+        qV = new JV(BV, 0, 256),
+        tV = new JV(BV, 512, wV),
+        FV = 512 + (wV << 1),
+        TV = new xV(BV, FV, wV),
+        PV = new xV(BV, FV + wV);
+      for (; rV < 255 && ZV > 0;) {
+        const eV = vV(ZV + 1),
+          xV = pV >> 3,
+          JV = (1 << eV + 1) - 1;
+        let YV = (VV[xV] | VV[xV + 1] << 8 | VV[xV + 2] << 16) >> (7 & pV) & JV;
+        const UV = (1 << eV) - 1,
+          yV = JV - ZV - 1,
+          QV = YV & UV;
+        if (QV < yV ? (pV += eV, YV = QV) : (pV += eV + 1, YV > UV && (YV -= yV)), jV[++rV] = --YV, -1 == YV ? (ZV += YV, TV[--EV] = rV) : ZV -= YV, !YV)
           do {
-            const rM = PM >> 3;
-            hM = (MM[rM] | MM[rM + 1] << 8) >> (7 & PM) & 3, PM += 2, HM += hM
-          } while (3 == hM)
-      }(HM > 255 || LM) && QM(0);
-      let bM = 0;
-      const wM = (zM >> 1) + (zM >> 3) + 3,
-        tM = zM - 1;
-      for (let rM = 0; rM <= HM; ++rM) {
-        const MM = lM[rM];
-        if (MM < 1) EM[rM] = -MM;
+            const eV = pV >> 3;
+            kV = (VV[eV] | VV[eV + 1] << 8) >> (7 & pV) & 3, pV += 2, rV += kV
+          } while (3 == kV)
+      }(rV > 255 || ZV) && nV(0);
+      let AV = 0;
+      const NV = (wV >> 1) + (wV >> 3) + 3,
+        XV = wV - 1;
+      for (let eV = 0; eV <= rV; ++eV) {
+        const VV = jV[eV];
+        if (VV < 1) qV[eV] = -VV;
         else
-          for (JM = 0; JM < MM; ++JM) {
-            CM[bM] = rM;
+          for (bV = 0; bV < VV; ++bV) {
+            TV[AV] = eV;
             do {
-              bM = bM + wM & tM
-            } while (bM >= dM)
+              AV = AV + NV & XV
+            } while (AV >= EV)
           }
       }
-      for (bM && QM(0), JM = 0; JM < zM; ++JM) {
-        const MM = EM[CM[JM]]++,
-          rM = eM[JM] = nM - mM(MM);
-        UM[JM] = (MM << rM) - zM
+      for (AV && nV(0), bV = 0; bV < wV; ++bV) {
+        const VV = qV[TV[bV]]++,
+          eV = PV[bV] = QV - vV(VV);
+        tV[bV] = (VV << eV) - wV
       }
-      return [PM + 7 >> 3, {
-        b: nM,
-        s: CM,
-        n: eM,
-        t: UM
+      return [pV + 7 >> 3, {
+        b: QV,
+        s: TV,
+        n: PV,
+        t: tV
       }]
     },
-    hM = HM(new iM([81, 16, 99, 140, 49, 198, 24, 99, 12, 33, 196, 24, 99, 102, 102, 134, 70, 146, 4]), 0, 6)[1],
-    JM = HM(new iM([33, 20, 196, 24, 99, 140, 33, 132, 16, 66, 8, 33, 132, 16, 66, 8, 33, 68, 68, 68, 68, 68, 68, 68, 68, 36, 9]), 0, 6)[1],
-    dM = HM(new iM([32, 132, 16, 66, 102, 70, 68, 68, 68, 68, 36, 73, 2]), 0, 5)[1],
-    yM = (MM, rM) => {
-      const iM = MM.length,
-        OM = new jM(iM);
-      for (let SM = 0; SM < iM; ++SM) OM[SM] = rM, rM += 1 << MM[SM];
-      return OM
+    kV = rV(new xV([81, 16, 99, 140, 49, 198, 24, 99, 12, 33, 196, 24, 99, 102, 102, 134, 70, 146, 4]), 0, 6)[1],
+    bV = rV(new xV([33, 20, 196, 24, 99, 140, 33, 132, 16, 66, 8, 33, 132, 16, 66, 8, 33, 68, 68, 68, 68, 68, 68, 68, 68, 36, 9]), 0, 6)[1],
+    EV = rV(new xV([32, 132, 16, 66, 102, 70, 68, 68, 68, 68, 36, 73, 2]), 0, 5)[1],
+    BV = (VV, eV) => {
+      const xV = VV.length,
+        JV = new UV(xV);
+      for (let YV = 0; YV < xV; ++YV) JV[YV] = eV, eV += 1 << VV[YV];
+      return JV
     },
-    lM = new iM(new jM([0, 0, 0, 0, 16843009, 50528770, 134678020, 202050057, 269422093]).buffer, 0, 36),
-    EM = yM(lM, 0),
-    UM = new iM(new jM([0, 0, 0, 0, 0, 0, 0, 0, 16843009, 50528770, 117769220, 185207048, 252579084, 16]).buffer, 0, 53),
-    GM = yM(UM, 3),
-    CM = (MM, rM, iM) => {
-      const OM = MM.length,
-        SM = rM.length,
-        jM = MM[OM - 1],
-        aM = (1 << iM.b) - 1,
-        PM = -iM.b;
-      jM || QM(0);
-      let nM = 0,
-        zM = iM.b,
-        LM = (OM << 3) - 8 + mM(jM) - zM,
-        HM = -1;
-      for (; LM > PM && HM < SM;) {
-        const OM = LM >> 3;
-        nM = (nM << zM | (MM[OM] | MM[OM + 1] << 8 | MM[OM + 2] << 16) >> (7 & LM)) & aM, rM[++HM] = iM.s[nM], LM -= zM = iM.n[nM]
+    jV = new xV(new UV([0, 0, 0, 0, 16843009, 50528770, 134678020, 202050057, 269422093]).buffer, 0, 36),
+    qV = BV(jV, 0),
+    tV = new xV(new UV([0, 0, 0, 0, 0, 0, 0, 0, 16843009, 50528770, 117769220, 185207048, 252579084, 16]).buffer, 0, 53),
+    FV = BV(tV, 3),
+    TV = (VV, eV, xV) => {
+      const JV = VV.length,
+        YV = eV.length,
+        UV = VV[JV - 1],
+        yV = (1 << xV.b) - 1,
+        pV = -xV.b;
+      UV || nV(0);
+      let QV = 0,
+        wV = xV.b,
+        ZV = (JV << 3) - 8 + vV(UV) - wV,
+        rV = -1;
+      for (; ZV > pV && rV < YV;) {
+        const JV = ZV >> 3;
+        QV = (QV << wV | (VV[JV] | VV[JV + 1] << 8 | VV[JV + 2] << 16) >> (7 & ZV)) & yV, eV[++rV] = xV.s[QV], ZV -= wV = xV.n[QV]
       }
-      LM == PM && HM + 1 == SM || QM(0)
+      ZV == pV && rV + 1 == YV || nV(0)
     },
-    eM = (MM, rM, iM) => {
-      let OM = 6;
-      const SM = rM.length + 3 >> 2,
-        jM = SM << 1,
-        aM = SM + jM;
-      CM(MM.subarray(OM, OM += MM[0] | MM[1] << 8), rM.subarray(0, SM), iM), CM(MM.subarray(OM, OM += MM[2] | MM[3] << 8), rM.subarray(SM, jM), iM), CM(MM.subarray(OM, OM += MM[4] | MM[5] << 8), rM.subarray(jM, aM), iM), CM(MM.subarray(OM), rM.subarray(aM), iM)
+    PV = (VV, eV, xV) => {
+      let JV = 6;
+      const YV = eV.length + 3 >> 2,
+        UV = YV << 1,
+        yV = YV + UV;
+      TV(VV.subarray(JV, JV += VV[0] | VV[1] << 8), eV.subarray(0, YV), xV), TV(VV.subarray(JV, JV += VV[2] | VV[3] << 8), eV.subarray(YV, UV), xV), TV(VV.subarray(JV, JV += VV[4] | VV[5] << 8), eV.subarray(UV, yV), xV), TV(VV.subarray(JV), eV.subarray(yV), xV)
     },
-    bM = (MM, rM, SM) => {
-      let jM = rM.b;
-      const nM = MM[jM],
-        zM = nM >> 1 & 3;
-      rM.l = 1 & nM;
-      const LM = nM >> 3 | MM[jM + 1] << 5 | MM[jM + 2] << 13,
-        yM = (jM += 3) + LM;
-      if (1 == zM) {
-        if (jM >= MM.length) return;
-        return rM.b = jM + 1, SM ? (PM(SM, MM[jM], rM.y, rM.y += LM), SM) : PM(new iM(LM), MM[jM])
+    AV = (VV, eV, YV) => {
+      let UV = eV.b;
+      const QV = VV[UV],
+        wV = QV >> 1 & 3;
+      eV.l = 1 & QV;
+      const ZV = QV >> 3 | VV[UV + 1] << 5 | VV[UV + 2] << 13,
+        BV = (UV += 3) + ZV;
+      if (1 == wV) {
+        if (UV >= VV.length) return;
+        return eV.b = UV + 1, YV ? (pV(YV, VV[UV], eV.y, eV.y += ZV), YV) : pV(new xV(ZV), VV[UV])
       }
-      if (!(yM > MM.length)) {
-        if (0 == zM) return rM.b = yM, SM ? (SM.set(MM.subarray(jM, yM), rM.y), rM.y += LM, SM) : aM(MM, jM, yM);
-        if (2 == zM) {
-          const nM = MM[jM],
-            zM = 3 & nM,
-            LM = nM >> 2 & 3;
-          let bM = nM >> 4,
-            wM = 0,
-            tM = 0;
-          zM < 2 ? 1 & LM ? bM |= MM[++jM] << 4 | (2 & LM && MM[++jM] << 12) : bM = nM >> 3 : (tM = LM, LM < 2 ? (bM |= (63 & MM[++jM]) << 4, wM = MM[jM] >> 6 | MM[++jM] << 2) : 2 == LM ? (bM |= MM[++jM] << 4 | (3 & MM[++jM]) << 12, wM = MM[jM] >> 2 | MM[++jM] << 6) : (bM |= MM[++jM] << 4 | (63 & MM[++jM]) << 12, wM = MM[jM] >> 6 | MM[++jM] << 2 | MM[++jM] << 10)), ++jM;
-          let gM = SM ? SM.subarray(rM.y, rM.y + rM.m) : new iM(rM.m),
-            uM = gM.length - bM;
-          if (uM < 0 && QM(0), 0 == zM) gM.set(MM.subarray(jM, jM += bM), uM);
-          else if (1 == zM) PM(gM, MM[jM++], uM);
+      if (!(BV > VV.length)) {
+        if (0 == wV) return eV.b = BV, YV ? (YV.set(VV.subarray(UV, BV), eV.y), eV.y += ZV, YV) : yV(VV, UV, BV);
+        if (2 == wV) {
+          const QV = VV[UV],
+            wV = 3 & QV,
+            ZV = QV >> 2 & 3;
+          let AV = QV >> 4,
+            NV = 0,
+            XV = 0;
+          wV < 2 ? 1 & ZV ? AV |= VV[++UV] << 4 | (2 & ZV && VV[++UV] << 12) : AV = QV >> 3 : (XV = ZV, ZV < 2 ? (AV |= (63 & VV[++UV]) << 4, NV = VV[UV] >> 6 | VV[++UV] << 2) : 2 == ZV ? (AV |= VV[++UV] << 4 | (3 & VV[++UV]) << 12, NV = VV[UV] >> 2 | VV[++UV] << 6) : (AV |= VV[++UV] << 4 | (63 & VV[++UV]) << 12, NV = VV[UV] >> 6 | VV[++UV] << 2 | VV[++UV] << 10)), ++UV;
+          let MV = YV ? YV.subarray(eV.y, eV.y + eV.m) : new xV(eV.m),
+            zV = MV.length - AV;
+          if (zV < 0 && nV(0), 0 == wV) MV.set(VV.subarray(UV, UV += AV), zV);
+          else if (1 == wV) pV(MV, VV[UV++], zV);
           else {
-            let SM = rM.h;
-            if (2 == zM) {
-              const aM = ((MM, rM) => {
-                let SM = 0,
-                  jM = -1;
-                const aM = new iM(292),
-                  nM = MM[rM],
-                  zM = aM.subarray(0, 256),
-                  LM = aM.subarray(256, 268),
-                  hM = new OM(aM.buffer, 268);
-                if (nM < 128) {
-                  const [iM, OM] = HM(MM, rM + 1, 6), SM = iM << 3, aM = MM[rM += nM];
-                  aM || QM(0);
-                  let PM = 0,
-                    LM = 0,
-                    hM = OM.b,
-                    JM = hM,
-                    dM = (++rM << 3) - 8 + mM(aM);
-                  for (; jM > 254 && QM(0), dM -= hM, !(dM < SM);) {
-                    let rM = dM >> 3;
-                    if (PM += (MM[rM] | MM[rM + 1] << 8) >> (7 & dM) & (1 << hM) - 1, zM[++jM] = OM.s[PM], dM -= JM, dM < SM) break;
-                    rM = dM >> 3, LM += (MM[rM] | MM[rM + 1] << 8) >> (7 & dM) & (1 << JM) - 1, zM[++jM] = OM.s[LM], hM = OM.n[PM], PM = OM.t[PM], JM = OM.n[LM], LM = OM.t[LM]
-                  }++jM > 255 && QM(0)
+            let YV = eV.h;
+            if (2 == wV) {
+              const yV = ((VV, eV) => {
+                let YV = 0,
+                  UV = -1;
+                const yV = new xV(292),
+                  QV = VV[eV],
+                  wV = yV.subarray(0, 256),
+                  ZV = yV.subarray(256, 268),
+                  kV = new JV(yV.buffer, 268);
+                if (QV < 128) {
+                  const [xV, JV] = rV(VV, eV + 1, 6), YV = xV << 3, yV = VV[eV += QV];
+                  yV || nV(0);
+                  let pV = 0,
+                    ZV = 0,
+                    kV = JV.b,
+                    bV = kV,
+                    EV = (++eV << 3) - 8 + vV(yV);
+                  for (; UV > 254 && nV(0), EV -= kV, !(EV < YV);) {
+                    let eV = EV >> 3;
+                    if (pV += (VV[eV] | VV[eV + 1] << 8) >> (7 & EV) & (1 << kV) - 1, wV[++UV] = JV.s[pV], EV -= bV, EV < YV) break;
+                    eV = EV >> 3, ZV += (VV[eV] | VV[eV + 1] << 8) >> (7 & EV) & (1 << bV) - 1, wV[++UV] = JV.s[ZV], kV = JV.n[pV], pV = JV.t[pV], bV = JV.n[ZV], ZV = JV.t[ZV]
+                  }++UV > 255 && nV(0)
                 } else {
-                  for (jM = nM - 127; SM < jM; SM += 2) {
-                    const iM = MM[++rM];
-                    zM[SM] = iM >> 4, zM[SM + 1] = 15 & iM
-                  }++rM
+                  for (UV = QV - 127; YV < UV; YV += 2) {
+                    const xV = VV[++eV];
+                    wV[YV] = xV >> 4, wV[YV + 1] = 15 & xV
+                  }++eV
                 }
-                let JM = 0;
-                for (SM = 0; SM < jM; ++SM) {
-                  const MM = zM[SM];
-                  MM > 11 && QM(0), JM += MM && 1 << MM - 1
+                let bV = 0;
+                for (YV = 0; YV < UV; ++YV) {
+                  const VV = wV[YV];
+                  VV > 11 && nV(0), bV += VV && 1 << VV - 1
                 }
-                const dM = mM(JM) + 1,
-                  yM = 1 << dM,
-                  lM = yM - JM;
-                for (lM & lM - 1 && QM(0), zM[jM++] = mM(lM) + 1, SM = 0; SM < jM; ++SM) {
-                  const MM = zM[SM];
-                  ++LM[zM[SM] = MM && dM + 1 - MM]
+                const EV = vV(bV) + 1,
+                  BV = 1 << EV,
+                  jV = BV - bV;
+                for (jV & jV - 1 && nV(0), wV[UV++] = vV(jV) + 1, YV = 0; YV < UV; ++YV) {
+                  const VV = wV[YV];
+                  ++ZV[wV[YV] = VV && EV + 1 - VV]
                 }
-                const EM = new iM(yM << 1),
-                  UM = EM.subarray(0, yM),
-                  GM = EM.subarray(yM);
-                for (hM[dM] = 0, SM = dM; SM > 0; --SM) {
-                  const MM = hM[SM];
-                  PM(GM, SM, MM, hM[SM - 1] = MM + LM[SM] * (1 << dM - SM))
+                const qV = new xV(BV << 1),
+                  tV = qV.subarray(0, BV),
+                  FV = qV.subarray(BV);
+                for (kV[EV] = 0, YV = EV; YV > 0; --YV) {
+                  const VV = kV[YV];
+                  pV(FV, YV, VV, kV[YV - 1] = VV + ZV[YV] * (1 << EV - YV))
                 }
-                for (hM[0] != yM && QM(0), SM = 0; SM < jM; ++SM) {
-                  const MM = zM[SM];
-                  if (MM) {
-                    const rM = hM[MM];
-                    PM(UM, SM, rM, hM[MM] = rM + (1 << dM - MM))
+                for (kV[0] != BV && nV(0), YV = 0; YV < UV; ++YV) {
+                  const VV = wV[YV];
+                  if (VV) {
+                    const eV = kV[VV];
+                    pV(tV, YV, eV, kV[VV] = eV + (1 << EV - VV))
                   }
                 }
-                return [rM, {
-                  n: GM,
-                  b: dM,
-                  s: UM
+                return [eV, {
+                  n: FV,
+                  b: EV,
+                  s: tV
                 }]
-              })(MM, jM);
-              wM += jM - (jM = aM[0]), rM.h = SM = aM[1]
-            } else SM || QM(0);
-            (tM ? eM : CM)(MM.subarray(jM, jM += wM), gM.subarray(uM), SM)
+              })(VV, UV);
+              NV += UV - (UV = yV[0]), eV.h = YV = yV[1]
+            } else YV || nV(0);
+            (XV ? PV : TV)(VV.subarray(UV, UV += NV), MV.subarray(zV), YV)
           }
-          let RM = MM[jM++];
-          if (RM) {
-            255 == RM ? RM = 32512 + (MM[jM++] | MM[jM++] << 8) : RM > 127 && (RM = RM - 128 << 8 | MM[jM++]);
-            const PM = MM[jM++];
-            3 & PM && QM(0);
-            const nM = [JM, dM, hM];
-            for (let SM = 2; SM > -1; --SM) {
-              const aM = PM >> 2 + (SM << 1) & 3;
-              if (1 == aM) {
-                const rM = new iM([0, 0, MM[jM++]]);
-                nM[SM] = {
-                  s: rM.subarray(2, 3),
-                  n: rM.subarray(0, 1),
-                  t: new OM(rM.buffer, 0, 1),
+          let GV = VV[UV++];
+          if (GV) {
+            255 == GV ? GV = 32512 + (VV[UV++] | VV[UV++] << 8) : GV > 127 && (GV = GV - 128 << 8 | VV[UV++]);
+            const pV = VV[UV++];
+            3 & pV && nV(0);
+            const QV = [bV, EV, kV];
+            for (let YV = 2; YV > -1; --YV) {
+              const yV = pV >> 2 + (YV << 1) & 3;
+              if (1 == yV) {
+                const eV = new xV([0, 0, VV[UV++]]);
+                QV[YV] = {
+                  s: eV.subarray(2, 3),
+                  n: eV.subarray(0, 1),
+                  t: new JV(eV.buffer, 0, 1),
                   b: 0
                 }
-              } else 2 == aM ? [jM, nM[SM]] = HM(MM, jM, 9 - (1 & SM)) : 3 == aM && (rM.t || QM(0), nM[SM] = rM.t[SM])
+              } else 2 == yV ? [UV, QV[YV]] = rV(VV, UV, 9 - (1 & YV)) : 3 == yV && (eV.t || nV(0), QV[YV] = eV.t[YV])
             }
-            const [zM, LM, CM] = rM.t = nM, eM = MM[yM - 1];
-            eM || QM(0);
-            let bM = (yM << 3) - 8 + mM(eM) - CM.b,
-              wM = bM >> 3,
-              tM = 0,
-              pM = (MM[wM] | MM[wM + 1] << 8) >> (7 & bM) & (1 << CM.b) - 1;
-            wM = (bM -= LM.b) >> 3;
-            let WM = (MM[wM] | MM[wM + 1] << 8) >> (7 & bM) & (1 << LM.b) - 1;
-            wM = (bM -= zM.b) >> 3;
-            let sM = (MM[wM] | MM[wM + 1] << 8) >> (7 & bM) & (1 << zM.b) - 1;
-            for (++RM; --RM;) {
-              const iM = CM.s[pM],
-                OM = CM.n[pM],
-                SM = zM.s[sM],
-                jM = zM.n[sM],
-                aM = LM.s[WM],
-                PM = LM.n[WM];
-              wM = (bM -= aM) >> 3;
-              const nM = 1 << aM;
-              let mM = nM + ((MM[wM] | MM[wM + 1] << 8 | MM[wM + 2] << 16 | MM[wM + 3] << 24) >>> (7 & bM) & nM - 1);
-              wM = (bM -= UM[SM]) >> 3;
-              let HM = GM[SM] + ((MM[wM] | MM[wM + 1] << 8 | MM[wM + 2] << 16) >> (7 & bM) & (1 << UM[SM]) - 1);
-              wM = (bM -= lM[iM]) >> 3;
-              const hM = EM[iM] + ((MM[wM] | MM[wM + 1] << 8 | MM[wM + 2] << 16) >> (7 & bM) & (1 << lM[iM]) - 1);
-              if ((bM < 0 || uM + hM > gM.length || tM + hM + HM > gM.length) && QM(0), wM = (bM -= OM) >> 3, pM = CM.t[pM] + ((MM[wM] | MM[wM + 1] << 8) >> (7 & bM) & (1 << OM) - 1), wM = (bM -= jM) >> 3, sM = zM.t[sM] + ((MM[wM] | MM[wM + 1] << 8) >> (7 & bM) & (1 << jM) - 1), wM = (bM -= PM) >> 3, WM = LM.t[WM] + ((MM[wM] | MM[wM + 1] << 8) >> (7 & bM) & (1 << PM) - 1), mM > 3) rM.o[2] = rM.o[1], rM.o[1] = rM.o[0], rM.o[0] = mM -= 3;
+            const [wV, ZV, TV] = eV.t = QV, PV = VV[BV - 1];
+            PV || nV(0);
+            let AV = (BV << 3) - 8 + vV(PV) - TV.b,
+              NV = AV >> 3,
+              XV = 0,
+              WV = (VV[NV] | VV[NV + 1] << 8) >> (7 & AV) & (1 << TV.b) - 1;
+            NV = (AV -= ZV.b) >> 3;
+            let RV = (VV[NV] | VV[NV + 1] << 8) >> (7 & AV) & (1 << ZV.b) - 1;
+            NV = (AV -= wV.b) >> 3;
+            let gV = (VV[NV] | VV[NV + 1] << 8) >> (7 & AV) & (1 << wV.b) - 1;
+            for (++GV; --GV;) {
+              const xV = TV.s[WV],
+                JV = TV.n[WV],
+                YV = wV.s[gV],
+                UV = wV.n[gV],
+                yV = ZV.s[RV],
+                pV = ZV.n[RV];
+              NV = (AV -= yV) >> 3;
+              const QV = 1 << yV;
+              let vV = QV + ((VV[NV] | VV[NV + 1] << 8 | VV[NV + 2] << 16 | VV[NV + 3] << 24) >>> (7 & AV) & QV - 1);
+              NV = (AV -= tV[YV]) >> 3;
+              let rV = FV[YV] + ((VV[NV] | VV[NV + 1] << 8 | VV[NV + 2] << 16) >> (7 & AV) & (1 << tV[YV]) - 1);
+              NV = (AV -= jV[xV]) >> 3;
+              const kV = qV[xV] + ((VV[NV] | VV[NV + 1] << 8 | VV[NV + 2] << 16) >> (7 & AV) & (1 << jV[xV]) - 1);
+              if ((AV < 0 || zV + kV > MV.length || XV + kV + rV > MV.length) && nV(0), NV = (AV -= JV) >> 3, WV = TV.t[WV] + ((VV[NV] | VV[NV + 1] << 8) >> (7 & AV) & (1 << JV) - 1), NV = (AV -= UV) >> 3, gV = wV.t[gV] + ((VV[NV] | VV[NV + 1] << 8) >> (7 & AV) & (1 << UV) - 1), NV = (AV -= pV) >> 3, RV = ZV.t[RV] + ((VV[NV] | VV[NV + 1] << 8) >> (7 & AV) & (1 << pV) - 1), vV > 3) eV.o[2] = eV.o[1], eV.o[1] = eV.o[0], eV.o[0] = vV -= 3;
               else {
-                const MM = mM - (0 != hM);
-                MM ? (mM = 3 == MM ? rM.o[0] - 1 : rM.o[MM], MM > 1 && (rM.o[2] = rM.o[1]), rM.o[1] = rM.o[0], rM.o[0] = mM) : mM = rM.o[0]
+                const VV = vV - (0 != kV);
+                VV ? (vV = 3 == VV ? eV.o[0] - 1 : eV.o[VV], VV > 1 && (eV.o[2] = eV.o[1]), eV.o[1] = eV.o[0], eV.o[0] = vV) : vV = eV.o[0]
               }
-              for (let MM = 0; MM < hM; ++MM) gM[tM + MM] = gM[uM + MM];
-              tM += hM, uM += hM;
-              let JM = tM - mM;
-              if (JM < 0) {
-                let MM = -JM;
-                const iM = rM.e + JM;
-                iM < 0 && QM(4), MM > HM && (MM = HM);
-                for (let OM = 0; OM < MM; ++OM) gM[tM + OM] = rM.w[iM + OM];
-                tM += MM, HM -= MM, JM = 0
+              for (let VV = 0; VV < kV; ++VV) MV[XV + VV] = MV[zV + VV];
+              XV += kV, zV += kV;
+              let bV = XV - vV;
+              if (bV < 0) {
+                let VV = -bV;
+                const xV = eV.e + bV;
+                xV < 0 && nV(4), VV > rV && (VV = rV);
+                for (let JV = 0; JV < VV; ++JV) MV[XV + JV] = eV.w[xV + JV];
+                XV += VV, rV -= VV, bV = 0
               }
-              for (let MM = 0; MM < HM; ++MM) gM[tM + MM] = gM[JM + MM];
-              tM += HM
+              for (let VV = 0; VV < rV; ++VV) MV[XV + VV] = MV[bV + VV];
+              XV += rV
             }
-            if (tM != uM)
-              for (; uM < gM.length;) gM[tM++] = gM[uM++];
-            else tM = gM.length;
-            SM ? rM.y += tM : gM = aM(gM, 0, tM)
-          } else if (SM) {
-            if (rM.y += bM, uM)
-              for (let MM = 0; MM < bM; ++MM) gM[MM] = gM[uM + MM]
-          } else uM && (gM = aM(gM, uM));
-          return rM.b = yM, gM
+            if (XV != zV)
+              for (; zV < MV.length;) MV[XV++] = MV[zV++];
+            else XV = MV.length;
+            YV ? eV.y += XV : MV = yV(MV, 0, XV)
+          } else if (YV) {
+            if (eV.y += AV, zV)
+              for (let VV = 0; VV < AV; ++VV) MV[VV] = MV[zV + VV]
+          } else zV && (MV = yV(MV, zV));
+          return eV.b = BV, MV
         }
-        QM(2)
+        nV(2)
       }
     };
-  class wM {
+  class NV {
     output = null;
     decoded = 0;
     done = !1;
     st = null;
     parts = [];
-    sQ = 0;
+    hn = 0;
     needed = 18;
     size;
-    constructor(MM) {
-      this.size = MM
+    constructor(VV) {
+      this.size = VV
     }
-    push(MM) {
+    push(VV) {
       if (this.done) return;
-      if (this.parts.push(MM), this.sQ += MM.length, this.sQ < this.needed) return;
-      const rM = ((MM, rM) => {
-        if (1 == MM.length) return MM[0];
-        const OM = new iM(rM);
-        for (let iM = 0, SM = 0; iM < MM.length; ++iM) {
-          const rM = MM[iM];
-          OM.set(rM, SM), SM += rM.length
+      if (this.parts.push(VV), this.hn += VV.length, this.hn < this.needed) return;
+      const eV = ((VV, eV) => {
+        if (1 == VV.length) return VV[0];
+        const JV = new xV(eV);
+        for (let xV = 0, YV = 0; xV < VV.length; ++xV) {
+          const eV = VV[xV];
+          JV.set(eV, YV), YV += eV.length
         }
-        return OM
-      })(this.parts, this.sQ);
-      let OM = this.st;
-      if (!OM) {
-        const MM = LM(rM, new iM(0));
-        "number" != typeof MM && MM.u === this.size || QM(0, `not a zstd frame of ${this.size} bytes`), OM = this.st = LM(rM, 1), OM.e = 0, this.output = OM.w
+        return JV
+      })(this.parts, this.hn);
+      let JV = this.st;
+      if (!JV) {
+        const VV = ZV(eV, new xV(0));
+        "number" != typeof VV && VV.u === this.size || nV(0, `not a zstd frame of ${this.size} bytes`), JV = this.st = ZV(eV, 1), JV.e = 0, this.output = JV.w
       }
       for (;;) {
-        const MM = rM.length - OM.b;
-        if (MM < 3) {
+        const VV = eV.length - JV.b;
+        if (VV < 3) {
           this.needed = 3;
           break
         }
-        const iM = rM[OM.b],
-          SM = iM >> 1 & 3;
-        3 == SM && QM(2);
-        const jM = iM >> 3 | rM[OM.b + 1] << 5 | rM[OM.b + 2] << 13;
-        jM > OM.m && QM(0), 0 == SM && OM.y + jM > OM.u && QM(0);
-        const aM = 1 == SM ? 4 : 3 + jM;
-        if (MM < aM) {
-          this.needed = aM;
+        const xV = eV[JV.b],
+          YV = xV >> 1 & 3;
+        3 == YV && nV(2);
+        const UV = xV >> 3 | eV[JV.b + 1] << 5 | eV[JV.b + 2] << 13;
+        UV > JV.m && nV(0), 0 == YV && JV.y + UV > JV.u && nV(0);
+        const yV = 1 == YV ? 4 : 3 + UV;
+        if (VV < yV) {
+          this.needed = yV;
           break
         }
-        if (bM(rM, OM, OM.w) || QM(5), OM.e = OM.y, (OM.y > OM.u || OM.l && OM.y != OM.u) && QM(0), OM.l) {
+        if (AV(eV, JV, JV.w) || nV(5), JV.e = JV.y, (JV.y > JV.u || JV.l && JV.y != JV.u) && nV(0), JV.l) {
           this.done = !0;
           break
         }
       }
-      this.decoded = OM.y;
-      const SM = rM.subarray(OM.b);
-      this.parts = SM.length ? [SM] : [], this.sQ = SM.length, OM.b = 0
+      this.decoded = JV.y;
+      const YV = eV.subarray(JV.b);
+      this.parts = YV.length ? [YV] : [], this.hn = YV.length, JV.b = 0
     }
   }
-  class tM {
+  class XV {
     post;
     href = "";
-    PL = null;
+    BZ = null;
     given = 0;
     stopped = !1;
-    constructor(MM) {
-      this.post = MM
+    constructor(VV) {
+      this.post = VV
     }
-    take(rM) {
+    take(eV) {
       if (!this.stopped) try {
-        this.answer(rM)
-      } catch (iM) {
-        this.stop(iM instanceof RangeError ? `out of memory decoding ${this.href}: ${MM(iM)}` : `${this.href} did not decode: ${MM(iM)}`)
+        this.answer(eV)
+      } catch (xV) {
+        this.stop(xV instanceof RangeError ? `out of memory decoding ${this.href}: ${VV(xV)}` : `${this.href} did not decode: ${VV(xV)}`)
       }
     }
-    answer(MM) {
-      if (null === this.PL) {
-        const [rM, iM] = MM;
-        return this.href = rM, void(this.PL = new wM(iM))
+    answer(VV) {
+      if (null === this.BZ) {
+        const [eV, xV] = VV;
+        return this.href = eV, void(this.BZ = new NV(xV))
       }
-      if (null === MM) return void this.stop(`${this.href} ended before its module did`);
-      const rM = this.PL;
-      rM.push(MM);
+      if (null === VV) return void this.stop(`${this.href} ended before its module did`);
+      const eV = this.BZ;
+      eV.push(VV);
       const {
-        output: iM,
-        decoded: OM
-      } = rM;
-      if (null !== iM && OM > this.given) {
-        const MM = iM.slice(this.given, OM).buffer;
-        this.given = OM, this.post(MM, [MM])
+        output: xV,
+        decoded: JV
+      } = eV;
+      if (null !== xV && JV > this.given) {
+        const VV = xV.slice(this.given, JV).buffer;
+        this.given = JV, this.post(VV, [VV])
       }
-      rM.done && this.stop(!0)
+      eV.done && this.stop(!0)
     }
-    stop(MM) {
-      this.stopped = !0, this.post(MM)
+    stop(VV) {
+      this.stopped = !0, this.post(VV)
     }
   }
-  const gM = globalThis.WorkerGlobalScope;
-  if (void 0 !== gM && globalThis instanceof gM) {
-    const MM = globalThis,
-      rM = new tM((function(rM) {
-        let iM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
-        MM.postMessage(rM, iM)
+  const MV = globalThis.WorkerGlobalScope;
+  if (void 0 !== MV && globalThis instanceof MV) {
+    const VV = globalThis,
+      eV = new XV((function(eV) {
+        let xV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
+        VV.postMessage(eV, xV)
       }));
-    MM.addEventListener("message", (MM => {
+    VV.addEventListener("message", (VV => {
       let {
-        data: iM
-      } = MM;
-      rM.take(iM)
+        data: xV
+      } = VV;
+      eV.take(xV)
     }))
   }
 })();

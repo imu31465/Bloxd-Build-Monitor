@@ -1,17 +1,17 @@
 export const id = 57;
 export const ids = [57];
 export const modules = {
-  53764: (MM, rM, iM) => {
-    iM.d(rM, {
-      startRenderProbe: () => LM
+  53966: (VV, eV, xV) => {
+    xV.d(eV, {
+      startRenderProbe: () => ZV
     });
-    var OM = iM(632),
-      SM = iM(4754),
-      jM = iM(3122),
-      aM = iM(4895);
-    const PM = 1e3,
-      nM = 36e5,
-      QM = [{
+    var JV = xV(660),
+      YV = xV(4831),
+      UV = xV(3142),
+      yV = xV(4981);
+    const pV = 1e3,
+      QV = 36e5,
+      nV = [{
         field: "decodeProbe",
         name: "decode probe"
       }, {
@@ -19,32 +19,32 @@ export const modules = {
         name: "particle probe"
       }];
 
-    function zM(MM, rM, iM) {
-      var SM, jM;
-      return `${MM}; ${iM?`os ${iM.os}, gpu ${null!==(SM=iM.gpuFamily)&&void 0!==SM?SM:"unknown"} ${null!==(jM=iM.gpuModel)&&void 0!==jM?jM:"unknown"}`:"device unknown"}, version ${OM.c}; ${rM}`
+    function wV(VV, eV, xV) {
+      var YV, UV;
+      return `${VV}; ${xV?`os ${xV.os}, gpu ${null!==(YV=xV.gpuFamily)&&void 0!==YV?YV:"unknown"} ${null!==(UV=xV.gpuModel)&&void 0!==UV?UV:"unknown"}`:"device unknown"}, version ${JV.e}; ${eV}`
     }
 
-    function LM(MM) {
-      var rM;
-      const iM = null !== (rM = null === MM || void 0 === MM ? void 0 : MM.backend) && void 0 !== rM ? rM : "none";
-      if ("webgl" !== iM) {
-        const MM = (0, aM.d)();
+    function ZV(VV) {
+      var eV;
+      const xV = null !== (eV = null === VV || void 0 === VV ? void 0 : VV.backend) && void 0 !== eV ? eV : "none";
+      if ("webgl" !== xV) {
+        const VV = (0, yV.f)();
         for (const {
-            field: rM
+            field: eV
           }
-          of QM) delete MM[rM];
-        return void(0, jM.k)("renderprobe", `decode and particle probes not run: the renderer is ${iM}, and they read WebGL2's draws`)
+          of nV) delete VV[eV];
+        return void(0, UV.i)("renderprobe", `decode and particle probes not run: the renderer is ${xV}, and they read WebGL2's draws`)
       }
-      const OM = (0, aM.d)();
+      const JV = (0, yV.f)();
       for (const {
-          field: LM,
-          name: mM
+          field: ZV,
+          name: vV
         }
-        of QM)(0, aM.e)(OM, LM, ["1", "pending"], nM, PM).then((MM => {
-        void 0 !== MM && (0, jM.k)("renderprobe", zM(mM, MM, (0, SM.d)(!1)))
+        of nV)(0, yV.g)(JV, ZV, ["1", "pending"], QV, pV).then((VV => {
+        void 0 !== VV && (0, UV.i)("renderprobe", wV(vV, VV, (0, YV.c)(!1)))
       }))
     }
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const VV in modules) Object.freeze(modules[VV]);

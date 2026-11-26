@@ -1,373 +1,373 @@
 export const id = 102;
 export const ids = [102];
 export const modules = {
-  41634: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      startWasmPadGameplay: () => fM
+  41821: (VV, eV, xV) => {
+    xV.r(eV), xV.d(eV, {
+      startWasmPadGameplay: () => oV
     });
-    iM(41640);
-    var OM = iM(41642),
-      SM = iM(41656),
-      jM = iM(2067),
-      aM = iM(41669),
-      PM = iM(5200),
-      nM = iM(5188),
-      QM = iM(41674),
-      zM = iM(41677),
-      LM = iM(5207),
-      mM = iM(41739),
-      HM = iM(2622),
-      hM = iM(9451),
-      JM = iM(41650),
-      dM = iM(9425),
-      yM = iM(40140);
-    const lM = MM => {
-        const rM = LM.c.indexOf(MM);
-        if (rM < 0) throw new Error(`No core action "${MM}"`);
-        return rM
+    xV(41825);
+    var JV = xV(41827),
+      YV = xV(41841),
+      UV = xV(2080),
+      yV = xV(41852),
+      pV = xV(5301),
+      QV = xV(5281),
+      nV = xV(41856),
+      wV = xV(41861),
+      ZV = xV(5310),
+      vV = xV(41942),
+      rV = xV(2663),
+      kV = xV(9462),
+      bV = xV(41831),
+      EV = xV(9435),
+      BV = xV(40310);
+    const jV = VV => {
+        const eV = ZV.e.indexOf(VV);
+        if (eV < 0) throw new Error(`No core action "${VV}"`);
+        return eV
       },
-      EM = lM("primary-fire"),
-      UM = lM("alt-fire"),
-      GM = lM("mid-fire"),
-      CM = lM("jump"),
-      eM = lM("ReloadGun"),
-      bM = lM("SwapCameraZoom"),
-      wM = lM("TouchAction1"),
-      tM = {
-        SpecialAction1: lM("SpecialAction1"),
-        SpecialAction2: lM("SpecialAction2")
+      qV = jV("primary-fire"),
+      tV = jV("alt-fire"),
+      FV = jV("mid-fire"),
+      TV = jV("jump"),
+      PV = jV("ReloadGun"),
+      AV = jV("SwapCameraZoom"),
+      NV = jV("TouchAction1"),
+      XV = {
+        SpecialAction1: jV("SpecialAction1"),
+        SpecialAction2: jV("SpecialAction2")
       },
-      gM = (MM, rM) => {
-        (0, HM.y)(PM.L.PadAction, MM, 0, 0, (0, HM.u)(rM, performance.now()))
+      MV = (VV, eV) => {
+        (0, rV.v)(pV.T.PadAction, VV, 0, 0, (0, rV.s)(eV, performance.now()))
       },
-      uM = MM => {
-        gM(MM, aM.kd.Down)
+      zV = VV => {
+        MV(VV, yV.td.Down)
       },
-      RM = MM => {
-        gM(MM, 0)
+      GV = VV => {
+        MV(VV, 0)
       },
-      pM = MM => {
-        uM(MM), RM(MM)
+      WV = VV => {
+        zV(VV), GV(VV)
       },
-      WM = () => {
-        const MM = (0, zM.e)();
-        return null !== MM && void 0 !== MM && MM.isCoreRunning ? MM : null
+      RV = () => {
+        const VV = (0, wV.k)();
+        return null !== VV && void 0 !== VV && VV.isCoreRunning ? VV : null
       },
-      sM = MM => aM.v.playerFlags(MM.api.apiView, 0),
-      DM = MM => null !== MM && aM.v.targetBlockId(MM.api.apiView, 0) !== aM.Pc,
-      kM = () => {
-        const MM = (0, hM.b)(),
-          rM = new JM.e;
-        let iM = !1;
-        const OM = (MM, rM) => {
-            (0, HM.y)(PM.L.PadLook, aM.rd.Rate, MM, rM, 0)
+      gV = VV => yV.s.playerFlags(VV.api.apiView, 0),
+      DV = VV => null !== VV && yV.s.targetBlockId(VV.api.apiView, 0) !== yV.Yc,
+      iV = () => {
+        const VV = (0, kV.c)(),
+          eV = new bV.e;
+        let xV = !1;
+        const JV = (VV, eV) => {
+            (0, rV.v)(pV.T.PadLook, yV.Dd.Rate, VV, eV, 0)
           },
-          SM = () => {
-            iM = !1, rM.reset(), OM(0, 0)
+          YV = () => {
+            xV = !1, eV.reset(), JV(0, 0)
           };
         return {
-          update: (SM, jM, nM) => {
-            iM || (MM.discardPending(), iM = !0);
-            const QM = (0, JM.n)(rM, SM, jM, nM, performance.now());
-            OM(QM.yawRadPerSec, QM.pitchRadPerSec);
-            const zM = MM.drainLookDelta();
-            0 === zM.PD && 0 === zM.nD || (0, HM.y)(PM.L.PadLook, aM.rd.Gyro, zM.PD, zM.nD, 0)
+          update: (YV, UV, QV) => {
+            xV || (VV.discardPending(), xV = !0);
+            const nV = (0, bV.q)(eV, YV, UV, QV, performance.now());
+            JV(nV.yawRadPerSec, nV.pitchRadPerSec);
+            const wV = VV.drainLookDelta();
+            0 === wV.uR && 0 === wV.eD || (0, rV.v)(pV.T.PadLook, yV.Dd.Gyro, wV.uR, wV.eD, 0)
           },
-          release: SM,
-          uninstall: SM
+          release: YV,
+          uninstall: YV
         }
       },
-      ZM = () => {
-        const MM = WM();
-        return null !== MM && 0 !== (sM(MM) & aM.yd.PadSneakToggled)
+      CV = () => {
+        const VV = RV();
+        return null !== VV && 0 !== (gV(VV) & yV.Ld.PadSneakToggled)
       },
-      oM = () => {
-        const MM = (MM => {
-          const rM = MM => function() {
-            return (0, mM.b)(), MM(...arguments)
+      aV = () => {
+        const VV = (VV => {
+          const eV = VV => function() {
+            return (0, vV.c)(), VV(...arguments)
           };
           return {
-            primaryFireDown: rM((MM => (gM(EM, aM.kd.Down | (MM ? aM.kd.Repeat : 0)), 0))),
-            primaryFireUp: rM((() => {
-              RM(EM)
+            primaryFireDown: eV((VV => (MV(qV, yV.td.Down | (VV ? yV.td.Repeat : 0)), 0))),
+            primaryFireUp: eV((() => {
+              GV(qV)
             })),
-            altFireDown: rM((() => (uM(UM), 0))),
-            altFireUp: rM((() => {
-              RM(UM)
+            altFireDown: eV((() => (zV(tV), 0))),
+            altFireUp: eV((() => {
+              GV(tV)
             })),
-            jumpDown: rM((() => {
-              pM(CM)
+            jumpDown: eV((() => {
+              WV(TV)
             })),
-            specialActionDown: rM((MM => {
-              uM(tM[MM])
+            specialActionDown: eV((VV => {
+              zV(XV[VV])
             })),
-            specialActionUp: rM((MM => {
-              RM(tM[MM])
+            specialActionUp: eV((VV => {
+              GV(XV[VV])
             })),
-            reloadGun: rM((() => {
-              pM(eM)
+            reloadGun: eV((() => {
+              WV(PV)
             })),
-            dropItem: rM((MM => {
-              gM(aM.od.Drop, aM.kd.Down | (MM ? aM.kd.Stack : 0))
+            dropItem: eV((VV => {
+              MV(yV.vd.Drop, yV.td.Down | (VV ? yV.td.Stack : 0))
             })),
-            swapCameraZoom: rM((() => {
-              pM(bM)
+            swapCameraZoom: eV((() => {
+              WV(AV)
             })),
-            pickBlock: rM((() => (pM(GM), DM(MM()))))
+            pickBlock: eV((() => (WV(FV), DV(VV()))))
           }
-        })(WM);
-        let rM = !1,
-          iM = null;
-        const OM = () => {
-          var MM;
-          null === (MM = iM) || void 0 === MM || MM(), iM = null
+        })(RV);
+        let eV = !1,
+          xV = null;
+        const JV = () => {
+          var VV;
+          null === (VV = xV) || void 0 === VV || VV(), xV = null
         };
         return {
-          bodies: () => MM,
-          look: kM(),
-          move: (MM, iM) => {
-            var SM;
-            OM();
+          bodies: () => VV,
+          look: iV(),
+          move: (VV, xV) => {
+            var YV;
+            JV();
             const {
-              bits: jM,
-              flips: PM
-            } = (MM => {
-              if (null === MM) return {
-                bits: aM.qd.Peek,
+              bits: UV,
+              flips: pV
+            } = (VV => {
+              if (null === VV) return {
+                bits: yV.zd.Peek,
                 flips: 0
               };
-              const rM = MM.sneakHeld ? aM.qd.SneakHeld : 0;
-              return "hold" === MM.mode ? {
-                bits: rM | aM.qd.SneakHoldMode,
-                flips: MM.sneakTogglePressed ? 1 : 0
+              const eV = VV.sneakHeld ? yV.zd.SneakHeld : 0;
+              return "hold" === VV.mode ? {
+                bits: eV | yV.zd.SneakHoldMode,
+                flips: VV.sneakTogglePressed ? 1 : 0
               } : {
-                bits: rM,
-                flips: MM.sneakPressed || MM.sneakTogglePressed ? 1 : 0
+                bits: eV,
+                flips: VV.sneakPressed || VV.sneakTogglePressed ? 1 : 0
               }
-            })(iM);
-            null !== (SM = WM()) && void 0 !== SM && SM.padMove(MM.x, MM.y, MM.magnitude, MM.headingOffset, (MM => aM.qd.Active | (MM.jumpHeld ? aM.qd.JumpHeld : 0) | (MM.jumpPressed ? aM.qd.JumpPressed : 0) | (MM.running ? aM.qd.Running : 0) | (MM.sprintHeld ? aM.qd.SprintHeld : 0))(MM) | jM, PM) && (rM = !0), (0, dM.g)(ZM())
+            })(xV);
+            null !== (YV = RV()) && void 0 !== YV && YV.padMove(VV.x, VV.y, VV.magnitude, VV.headingOffset, (VV => yV.zd.Active | (VV.jumpHeld ? yV.zd.JumpHeld : 0) | (VV.jumpPressed ? yV.zd.JumpPressed : 0) | (VV.running ? yV.zd.Running : 0) | (VV.sprintHeld ? yV.zd.SprintHeld : 0))(VV) | UV, pV) && (eV = !0), (0, EV.h)(CV())
           },
           stopMoving: () => {
-            var MM;
-            rM && (rM = !(null !== (MM = WM()) && void 0 !== MM && MM.padMove(0, 0, 0, 0, 0, 0)), OM(), iM = (0, nM.y)((() => {
-              OM(), (0, dM.g)(ZM())
+            var VV;
+            eV && (eV = !(null !== (VV = RV()) && void 0 !== VV && VV.padMove(0, 0, 0, 0, 0, 0)), JV(), xV = (0, QV.u)((() => {
+              JV(), (0, EV.h)(CV())
             })))
           },
-          uninstall: OM,
-          deviceChanged: MM => {
-            var iM;
-            "touch" === MM ? ((0, dM.g)(!1), null !== (iM = WM()) && void 0 !== iM && iM.padMove(0, 0, 0, 0, aM.qd.EndToggle, 0) && (rM = !1)) : "gamepad" === MM && (0, dM.g)(ZM())
+          uninstall: JV,
+          deviceChanged: VV => {
+            var xV;
+            "touch" === VV ? ((0, EV.h)(!1), null !== (xV = RV()) && void 0 !== xV && xV.padMove(0, 0, 0, 0, yV.zd.EndToggle, 0) && (eV = !1)) : "gamepad" === VV && (0, EV.h)(CV())
           },
-          hasPlayer: () => null !== WM(),
+          hasPlayer: () => null !== RV(),
           isPlayerDead: () => {
-            var MM;
-            return !1 === (null === (MM = WM()) || void 0 === MM ? void 0 : MM.localPlayerAlive())
+            var VV;
+            return !1 === (null === (VV = RV()) || void 0 === VV ? void 0 : VV.localPlayerAlive())
           },
           isReplayMode: () => {
-            const MM = WM();
-            return null !== MM && 0 !== (sM(MM) & aM.yd.Replay)
+            const VV = RV();
+            return null !== VV && 0 !== (gV(VV) & yV.Ld.Replay)
           },
           isFreeCameraOn: () => {
-            const MM = WM();
-            return null !== MM && 0 !== (sM(MM) & aM.yd.FreeCam)
+            const VV = RV();
+            return null !== VV && 0 !== (gV(VV) & yV.Ld.FreeCam)
           },
-          targetsBlock: () => DM(WM()),
+          targetsBlock: () => DV(RV()),
           selectedSlotEmpty: () => {
-            var MM;
-            return !(null !== (MM = WM()) && void 0 !== MM && MM.items.sQ())
+            var VV;
+            return !(null !== (VV = RV()) && void 0 !== VV && VV.items.hn())
           },
-          pickBlockAllowed: () => !!jM.d.get("creative") && !!jM.d.get("canPickBlocks"),
-          scrollHotbar: MM => {
-            gM(aM.od.Hotbar, aM.kd.Down | (MM > 0 ? aM.kd.Next : 0))
+          pickBlockAllowed: () => !!UV.c.get("creative") && !!UV.c.get("canPickBlocks"),
+          scrollHotbar: VV => {
+            MV(yV.vd.Hotbar, yV.td.Down | (VV > 0 ? yV.td.Next : 0))
           },
-          hasFullInventory: QM.m,
-          hasLobbyTab: () => (0, yM.d)({
-            lobbyLeaderboardInfo: jM.d.get("lobbyLeaderboardInfo"),
-            lobbyManage: jM.d.get("lobbyManage")
+          hasFullInventory: nV.j,
+          hasLobbyTab: () => (0, BV.c)({
+            lobbyLeaderboardInfo: UV.c.get("lobbyLeaderboardInfo"),
+            lobbyManage: UV.c.get("lobbyManage")
           }),
           contextActionInputs: () => {
-            var MM, rM, iM, OM;
-            const SM = WM();
+            var VV, eV, xV, JV;
+            const YV = RV();
             return {
-              holdingGun: !1 !== (null === SM || void 0 === SM ? void 0 : SM.localPlayerAlive()) && "Gun" === (null === SM || void 0 === SM || null === (MM = SM.items.sQ()) || void 0 === MM || null === (rM = MM.typeObj) || void 0 === rM ? void 0 : rM.type),
-              customButtons: null !== (iM = jM.d.get("customButtons")) && void 0 !== iM ? iM : null,
-              touchscreenActionButton: null !== (OM = jM.d.get("touchscreenActionButton")) && void 0 !== OM ? OM : null
+              holdingGun: !1 !== (null === YV || void 0 === YV ? void 0 : YV.localPlayerAlive()) && "Gun" === (null === YV || void 0 === YV || null === (VV = YV.items.hn()) || void 0 === VV || null === (eV = VV.typeObj) || void 0 === eV ? void 0 : eV.type),
+              customButtons: null !== (xV = UV.c.get("customButtons")) && void 0 !== xV ? xV : null,
+              touchscreenActionButton: null !== (JV = UV.c.get("touchscreenActionButton")) && void 0 !== JV ? JV : null
             }
           },
-          pressTouchButton: MM => {
-            MM ? uM(wM) : RM(wM)
+          pressTouchButton: VV => {
+            VV ? zV(NV) : GV(NV)
           }
         }
       },
-      fM = () => {
-        const MM = (0, SM.d)(oM()),
-          rM = (0, OM.c)(),
-          iM = null;
+      oV = () => {
+        const VV = (0, YV.b)(aV()),
+          eV = (0, JV.b)(),
+          xV = null;
         return () => {
-          MM(), rM(), null === iM || void 0 === iM || iM()
+          VV(), eV(), null === xV || void 0 === xV || xV()
         }
       }
   },
-  5188: (MM, rM, iM) => {
-    iM.d(rM, {
-      A: () => gM,
-      B: () => uM,
-      F: () => lM,
-      H: () => aM,
-      I: () => PM,
-      K: () => wM,
-      e: () => bM,
-      g: () => UM,
-      i: () => pM,
-      k: () => RM,
-      n: () => yM,
-      r: () => CM,
-      v: () => EM,
-      x: () => GM,
-      y: () => tM
+  5281: (VV, eV, xV) => {
+    xV.d(eV, {
+      A: () => zV,
+      C: () => jV,
+      E: () => yV,
+      G: () => pV,
+      J: () => NV,
+      b: () => AV,
+      d: () => tV,
+      g: () => WV,
+      h: () => GV,
+      l: () => BV,
+      m: () => TV,
+      o: () => qV,
+      s: () => FV,
+      u: () => XV,
+      w: () => MV
     });
-    var OM = iM(5196);
-    const SM = {
+    var JV = xV(5288);
+    const YV = {
       lockPointer: () => !1,
       unlockPointer: () => {},
       leaveGame: () => {}
     };
-    let jM = SM;
+    let UV = YV;
 
-    function aM(MM) {
-      jM = null !== MM && void 0 !== MM ? MM : SM
+    function yV(VV) {
+      UV = null !== VV && void 0 !== VV ? VV : YV
     }
 
-    function PM() {
-      return jM
+    function pV() {
+      return UV
     }
-    const nM = new Set,
-      QM = new Set;
-    let zM = -1;
-    const LM = new Set,
-      mM = new Set;
-    let HM = 0,
-      hM = 0;
-    const JM = new Set,
-      dM = new Set;
+    const QV = new Set,
+      nV = new Set;
+    let wV = -1;
+    const ZV = new Set,
+      vV = new Set;
+    let rV = 0,
+      kV = 0;
+    const bV = new Set,
+      EV = new Set;
 
-    function yM(MM) {
-      return nM.add(MM), () => {
-        nM.delete(MM)
+    function BV(VV) {
+      return QV.add(VV), () => {
+        QV.delete(VV)
       }
     }
 
-    function lM(MM, rM) {
-      for (const OM of nM) try {
-        OM(MM)
-      } catch (iM) {
-        rM(iM)
+    function jV(VV, eV) {
+      for (const JV of QV) try {
+        JV(VV)
+      } catch (xV) {
+        eV(xV)
       }
     }
 
-    function EM(MM) {
-      return QM.add(MM), () => {
-        QM.delete(MM)
+    function qV(VV) {
+      return nV.add(VV), () => {
+        nV.delete(VV)
       }
     }
 
-    function UM(MM, rM) {
-      const iM = zM < 0 ? 0 : MM - zM;
-      zM = MM;
-      for (const SM of QM) try {
-        SM(iM)
-      } catch (OM) {
-        rM(OM)
+    function tV(VV, eV) {
+      const xV = wV < 0 ? 0 : VV - wV;
+      wV = VV;
+      for (const YV of nV) try {
+        YV(xV)
+      } catch (JV) {
+        eV(JV)
       }
     }
 
-    function GM(MM) {
-      return LM.add(MM), () => {
-        LM.delete(MM)
+    function FV(VV) {
+      return ZV.add(VV), () => {
+        ZV.delete(VV)
       }
     }
 
-    function CM(MM) {
-      return mM.add(MM), () => {
-        mM.delete(MM)
+    function TV(VV) {
+      return vV.add(VV), () => {
+        vV.delete(VV)
       }
     }
-    let eM = 0;
+    let PV = 0;
 
-    function bM(MM) {
-      eM += MM
+    function AV(VV) {
+      PV += VV
     }
 
-    function wM() {
-      const MM = eM;
-      return eM = 0, MM
+    function NV() {
+      const VV = PV;
+      return PV = 0, VV
     }
 
-    function tM(MM) {
-      return JM.add(MM), () => {
-        JM.delete(MM)
-      }
-    }
-
-    function gM(MM) {
-      return dM.add(MM), () => {
-        dM.delete(MM)
+    function XV(VV) {
+      return bV.add(VV), () => {
+        bV.delete(VV)
       }
     }
 
-    function uM() {
-      HM = 0, hM = 0, zM = -1
+    function MV(VV) {
+      return EV.add(VV), () => {
+        EV.delete(VV)
+      }
     }
 
-    function RM(MM, rM) {
-      if ("paced" === MM) return hM += rM, null;
-      if ("drawn" !== MM && "skipped" !== MM) return null;
-      const iM = rM + hM;
-      return hM = 0, iM
+    function zV() {
+      rV = 0, kV = 0, wV = -1
     }
 
-    function pM(MM, rM, iM, SM) {
-      const jM = (0, OM.l)(rM),
-        aM = MM > 0 ? performance.now() : 0;
-      for (let OM = 0; OM < MM; OM++)
-        for (const MM of JM) try {
-          MM()
-        } catch (PM) {
-          SM(PM)
+    function GV(VV, eV) {
+      if ("paced" === VV) return kV += eV, null;
+      if ("drawn" !== VV && "skipped" !== VV) return null;
+      const xV = eV + kV;
+      return kV = 0, xV
+    }
+
+    function WV(VV, eV, xV, YV) {
+      const UV = (0, JV.e)(eV),
+        yV = VV > 0 ? performance.now() : 0;
+      for (let JV = 0; JV < VV; JV++)
+        for (const VV of bV) try {
+          VV()
+        } catch (pV) {
+          YV(pV)
         }
-      if (MM > 0 && bM(performance.now() - aM), null !== iM) {
-        for (const MM of LM) try {
-          MM(iM)
-        } catch (PM) {
-          SM(PM)
+      if (VV > 0 && AV(performance.now() - yV), null !== xV) {
+        for (const VV of ZV) try {
+          VV(xV)
+        } catch (pV) {
+          YV(pV)
         }
-        HM += iM
+        rV += xV
       }
-      if ("drawn" === rM) {
-        const MM = HM;
-        HM = 0;
-        for (const rM of mM) try {
-          rM(MM)
-        } catch (PM) {
-          SM(PM)
+      if ("drawn" === eV) {
+        const VV = rV;
+        rV = 0;
+        for (const eV of vV) try {
+          eV(VV)
+        } catch (pV) {
+          YV(pV)
         }
       }
-      for (const OM of dM) try {
-        OM(MM, jM)
-      } catch (PM) {
-        SM(PM)
+      for (const JV of EV) try {
+        JV(VV, UV)
+      } catch (pV) {
+        YV(pV)
       }
     }
   },
-  5207: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => SM,
-      g: () => jM,
-      j: () => aM,
-      n: () => OM,
-      o: () => PM
+  5310: (VV, eV, xV) => {
+    xV.d(eV, {
+      e: () => YV,
+      h: () => UV,
+      l: () => yV,
+      p: () => JV,
+      q: () => pV
     });
-    const OM = {
+    const JV = {
         Mouse1: 1,
         Mouse2: 2,
         Mouse3: 3,
@@ -564,8 +564,8 @@ export const modules = {
         TouchAttack: 194,
         TouchUse: 195
       },
-      SM = ["forward", "backward", "left", "right", "sprint", "jump", "crouch", "primary-fire", "alt-fire", "SpecialAction1", "SpecialAction2", "ReloadGun", "DropItem", "mid-fire", "Zoom", "SwapCameraZoom", "OpenInventory", "OpenLobbyLeaderboard", "OpenShop", "OpenCharacterCustomization", "OpenSettings", "OpenInviteLink", "OpenTasksAndLeaderboard", "OpenCodeEditor", "OpenEmoteWheel", "HideUi", "ShowDebugOverlay", "HotBarSlot1", "HotBarSlot2", "HotBarSlot3", "HotBarSlot4", "HotBarSlot5", "HotBarSlot6", "HotBarSlot7", "HotBarSlot8", "HotBarSlot9", "HotBarSlot10", "toggleFreeCam", "freeCamForward", "freeCamBackward", "freeCamLeft", "freeCamRight", "freeCamUp", "freeCamDown", "recordGame", "recordClip", "replayViewerOpen", "replayPlayPause", "replaySkipBack", "replaySkipForward", "replayChangeCameraMode", "replayLoad", "replaySave", "replaySaveAs", "replayExit", "replaySpeedUp", "replaySpeedDown", "replayTimelineZoomIn", "replayTimelineZoomOut", "replayRecordKeyframe", "replayExportVideo", "AltHeld", "CtrlCrouch", "KeyYPressed", "KeyXPressed", "ToggleFullCoordinateOverlay", "TouchAction1", "TouchAction2", "TouchAction3", "TouchDig", "TouchHold", "TouchTap", "TouchInteract", "TouchBoost", "Custom0", "Custom1", "Custom2", "Custom3", "Custom4", "Custom5", "Custom6", "Custom7", "Custom8", "Custom9", "Custom10", "Custom11", "Custom12", "Custom13", "Custom14", "Custom15"],
-      jM = {
+      YV = ["forward", "backward", "left", "right", "sprint", "jump", "crouch", "primary-fire", "alt-fire", "SpecialAction1", "SpecialAction2", "ReloadGun", "DropItem", "mid-fire", "Zoom", "SwapCameraZoom", "OpenInventory", "OpenLobbyLeaderboard", "OpenShop", "OpenCharacterCustomization", "OpenSettings", "OpenInviteLink", "OpenTasksAndLeaderboard", "OpenCodeEditor", "OpenEmoteWheel", "HideUi", "ShowDebugOverlay", "HotBarSlot1", "HotBarSlot2", "HotBarSlot3", "HotBarSlot4", "HotBarSlot5", "HotBarSlot6", "HotBarSlot7", "HotBarSlot8", "HotBarSlot9", "HotBarSlot10", "toggleFreeCam", "freeCamForward", "freeCamBackward", "freeCamLeft", "freeCamRight", "freeCamUp", "freeCamDown", "recordGame", "recordClip", "replayViewerOpen", "replayPlayPause", "replaySkipBack", "replaySkipForward", "replayChangeCameraMode", "replayLoad", "replaySave", "replaySaveAs", "replayExit", "replaySpeedUp", "replaySpeedDown", "replayTimelineZoomIn", "replayTimelineZoomOut", "replayRecordKeyframe", "replayExportVideo", "AltHeld", "CtrlCrouch", "KeyYPressed", "KeyXPressed", "ToggleFullCoordinateOverlay", "TouchAction1", "TouchAction2", "TouchAction3", "TouchDig", "TouchHold", "TouchTap", "TouchInteract", "TouchBoost", "Custom0", "Custom1", "Custom2", "Custom3", "Custom4", "Custom5", "Custom6", "Custom7", "Custom8", "Custom9", "Custom10", "Custom11", "Custom12", "Custom13", "Custom14", "Custom15"],
+      UV = {
         forward: [21, 46],
         backward: [31, 49],
         left: [30, 47],
@@ -628,160 +628,160 @@ export const modules = {
         replayRecordKeyframe: [24],
         replayExportVideo: [40]
       },
-      aM = {
+      yV = {
         jump: [188],
         crouch: [189],
         SwapCameraZoom: [190],
         "primary-fire": [194],
         "alt-fire": [195]
       },
-      PM = [16]
+      pV = [16]
   },
-  41739: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => aM,
-      c: () => jM,
-      e: () => SM
+  41942: (VV, eV, xV) => {
+    xV.d(eV, {
+      c: () => yV,
+      g: () => UV,
+      h: () => YV
     });
-    let OM = null;
+    let JV = null;
 
-    function SM(MM) {
-      OM = MM
+    function YV(VV) {
+      JV = VV
     }
 
-    function jM(MM) {
-      OM === MM && (OM = null)
+    function UV(VV) {
+      JV === VV && (JV = null)
     }
 
-    function aM() {
-      var MM;
-      null === (MM = OM) || void 0 === MM || MM()
+    function yV() {
+      var VV;
+      null === (VV = JV) || void 0 === VV || VV()
     }
   },
-  5214: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => PM,
-      h: () => aM,
-      k: () => QM
+  5319: (VV, eV, xV) => {
+    xV.d(eV, {
+      c: () => pV,
+      f: () => yV,
+      h: () => nV
     });
-    var OM = iM(2619),
-      SM = iM(2622);
-    const jM = new Set(["button", "checkbox", "color", "file", "image", "radio", "range", "reset", "submit"]);
+    var JV = xV(2660),
+      YV = xV(2663);
+    const UV = new Set(["button", "checkbox", "color", "file", "image", "radio", "range", "reset", "submit"]);
 
-    function aM(MM) {
-      return MM instanceof HTMLElement && (!!(MM.isContentEditable || MM instanceof HTMLTextAreaElement || MM instanceof HTMLSelectElement) || MM instanceof HTMLInputElement && !jM.has(MM.type))
+    function yV(VV) {
+      return VV instanceof HTMLElement && (!!(VV.isContentEditable || VV instanceof HTMLTextAreaElement || VV instanceof HTMLSelectElement) || VV instanceof HTMLInputElement && !UV.has(VV.type))
     }
 
-    function PM(MM) {
-      let rM = null;
-      const iM = iM => {
-          const SM = aM(iM);
-          SM !== rM && (rM = SM, MM(OM.l.UiCapture, OM.C.Keyboard, 0, 0, SM ? OM.C.Keyboard : 0))
+    function pV(VV) {
+      let eV = null;
+      const xV = xV => {
+          const YV = yV(xV);
+          YV !== eV && (eV = YV, VV(JV.i.UiCapture, JV.y.Keyboard, 0, 0, YV ? JV.y.Keyboard : 0))
         },
-        SM = MM => {
-          iM(MM.target)
+        YV = VV => {
+          xV(VV.target)
         },
-        jM = MM => {
-          iM(MM.relatedTarget)
+        UV = VV => {
+          xV(VV.relatedTarget)
         },
-        PM = () => {
-          iM(document.activeElement)
+        pV = () => {
+          xV(document.activeElement)
         },
-        nM = {
+        QV = {
           capture: !0,
           passive: !0
         };
-      return document.addEventListener("focusin", SM, nM), document.addEventListener("focusout", jM, nM), document.addEventListener("keydown", PM, nM), iM(document.activeElement), () => {
-        document.removeEventListener("focusin", SM, nM), document.removeEventListener("focusout", jM, nM), document.removeEventListener("keydown", PM, nM)
+      return document.addEventListener("focusin", YV, QV), document.addEventListener("focusout", UV, QV), document.addEventListener("keydown", pV, QV), xV(document.activeElement), () => {
+        document.removeEventListener("focusin", YV, QV), document.removeEventListener("focusout", UV, QV), document.removeEventListener("keydown", pV, QV)
       }
     }
-    const nM = new Map;
+    const QV = new Map;
 
-    function QM(MM, rM) {
-      var iM;
-      let OM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ui";
-      nM.set(OM, (null !== (iM = nM.get(OM)) && void 0 !== iM ? iM : 0) & ~MM | rM & MM);
-      let jM = 0;
-      for (const SM of nM.values()) jM |= SM;
-      return (0, SM.B)(MM, jM & MM)
+    function nV(VV, eV) {
+      var xV;
+      let JV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ui";
+      QV.set(JV, (null !== (xV = QV.get(JV)) && void 0 !== xV ? xV : 0) & ~VV | eV & VV);
+      let UV = 0;
+      for (const YV of QV.values()) UV |= YV;
+      return (0, YV.D)(VV, UV & VV)
     }
   },
-  37858: (MM, rM, iM) => {
-    function OM(MM) {
-      return MM.includes("Leaf Bed")
+  38114: (VV, eV, xV) => {
+    function JV(VV) {
+      return VV.includes("Leaf Bed")
     }
 
-    function SM(MM) {
-      return / Bed(?: Head)?(?:\||$)/.test(MM) && !OM(MM)
+    function YV(VV) {
+      return / Bed(?: Head)?(?:\||$)/.test(VV) && !JV(VV)
     }
 
-    function jM(MM) {
-      return MM.includes(" Strongbed")
+    function UV(VV) {
+      return VV.includes(" Strongbed")
     }
 
-    function aM(MM) {
-      return OM(MM) || SM(MM) || jM(MM)
+    function yV(VV) {
+      return JV(VV) || YV(VV) || UV(VV)
     }
-    iM.d(rM, {
-      e: () => aM,
-      g: () => OM,
-      h: () => jM,
-      l: () => SM
+    xV.d(eV, {
+      d: () => yV,
+      e: () => JV,
+      f: () => UV,
+      j: () => YV
     })
   },
-  37855: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => QM
+  38112: (VV, eV, xV) => {
+    xV.d(eV, {
+      b: () => nV
     });
-    var OM = iM(37858),
-      SM = iM(9816);
-    const jM = [],
-      aM = [],
-      PM = [],
-      nM = [];
-    for (const zM of Object.keys(SM.p))(0, OM.g)(zM) ? jM.push(zM) : (0, OM.l)(zM) && aM.push(zM), (0, OM.h)(zM) && PM.push(zM), (zM.includes(" Bed Head") || zM.includes(" Strongbed Head")) && nM.push(zM);
-    const QM = {
-      leafBeds: jM,
-      woolBeds: aM,
-      strongBeds: PM,
-      beds: [...jM, ...aM, ...PM],
-      bedHeads: nM,
+    var JV = xV(38114),
+      YV = xV(9820);
+    const UV = [],
+      yV = [],
+      pV = [],
+      QV = [];
+    for (const wV of Object.keys(YV.p))(0, JV.e)(wV) ? UV.push(wV) : (0, JV.j)(wV) && yV.push(wV), (0, JV.f)(wV) && pV.push(wV), (wV.includes(" Bed Head") || wV.includes(" Strongbed Head")) && QV.push(wV);
+    const nV = {
+      leafBeds: UV,
+      woolBeds: yV,
+      strongBeds: pV,
+      beds: [...UV, ...yV, ...pV],
+      bedHeads: QV,
       blockRemoveActionRoots: ["Chest", "Loot Chest", "Iron Chest", "Mailbox", "Bookshelf", "Empty Bookshelf"]
     }
   },
-  6944: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => aM,
-      d: () => SM,
-      e: () => nM,
-      h: () => jM,
-      l: () => QM,
-      n: () => OM,
-      o: () => PM
+  7024: (VV, eV, xV) => {
+    xV.d(eV, {
+      e: () => yV,
+      i: () => YV,
+      j: () => QV,
+      n: () => UV,
+      o: () => nV,
+      q: () => JV,
+      s: () => pV
     });
-    let OM = function(MM) {
-        return MM[MM.DEFAULT = 0] = "DEFAULT", MM[MM.BOAT = 1] = "BOAT", MM[MM.GLIDER = 2] = "GLIDER", MM[MM.BALLOON = 3] = "BALLOON", MM[MM.SLEEPING = 4] = "SLEEPING", MM[MM.RIDING_MOB = 5] = "RIDING_MOB", MM[MM.CAR = 6] = "CAR", MM[MM.HOVERCRAFT = 7] = "HOVERCRAFT", MM
+    let JV = function(VV) {
+        return VV[VV.DEFAULT = 0] = "DEFAULT", VV[VV.BOAT = 1] = "BOAT", VV[VV.GLIDER = 2] = "GLIDER", VV[VV.BALLOON = 3] = "BALLOON", VV[VV.SLEEPING = 4] = "SLEEPING", VV[VV.RIDING_MOB = 5] = "RIDING_MOB", VV[VV.CAR = 6] = "CAR", VV[VV.HOVERCRAFT = 7] = "HOVERCRAFT", VV
       }({}),
-      SM = function(MM) {
-        return MM[MM.WOOD = 0] = "WOOD", MM[MM.OBSIDIAN = 1] = "OBSIDIAN", MM[MM.SPEED = 2] = "SPEED", MM
+      YV = function(VV) {
+        return VV[VV.WOOD = 0] = "WOOD", VV[VV.OBSIDIAN = 1] = "OBSIDIAN", VV[VV.SPEED = 2] = "SPEED", VV
       }({}),
-      jM = function(MM) {
-        return MM[MM.WOOD = 0] = "WOOD", MM[MM.IRON = 1] = "IRON", MM[MM.GOLD = 2] = "GOLD", MM[MM.DIAMOND = 3] = "DIAMOND", MM
+      UV = function(VV) {
+        return VV[VV.WOOD = 0] = "WOOD", VV[VV.IRON = 1] = "IRON", VV[VV.GOLD = 2] = "GOLD", VV[VV.DIAMOND = 3] = "DIAMOND", VV
       }({}),
-      aM = function(MM) {
-        return MM[MM.YELLOW = 0] = "YELLOW", MM[MM.WHITE = 1] = "WHITE", MM[MM.RED = 2] = "RED", MM[MM.PURPLE = 3] = "PURPLE", MM[MM.PINK = 4] = "PINK", MM[MM.ORANGE = 5] = "ORANGE", MM[MM.MAGENTA = 6] = "MAGENTA", MM[MM.LIME = 7] = "LIME", MM[MM.LIGHT_GRAY = 8] = "LIGHT_GRAY", MM[MM.LIGHT_BLUE = 9] = "LIGHT_BLUE", MM[MM.GREEN = 10] = "GREEN", MM[MM.GRAY = 11] = "GRAY", MM[MM.CYAN = 12] = "CYAN", MM[MM.BROWN = 13] = "BROWN", MM[MM.BLUE = 14] = "BLUE", MM[MM.BLACK = 15] = "BLACK", MM
+      yV = function(VV) {
+        return VV[VV.YELLOW = 0] = "YELLOW", VV[VV.WHITE = 1] = "WHITE", VV[VV.RED = 2] = "RED", VV[VV.PURPLE = 3] = "PURPLE", VV[VV.PINK = 4] = "PINK", VV[VV.ORANGE = 5] = "ORANGE", VV[VV.MAGENTA = 6] = "MAGENTA", VV[VV.LIME = 7] = "LIME", VV[VV.LIGHT_GRAY = 8] = "LIGHT_GRAY", VV[VV.LIGHT_BLUE = 9] = "LIGHT_BLUE", VV[VV.GREEN = 10] = "GREEN", VV[VV.GRAY = 11] = "GRAY", VV[VV.CYAN = 12] = "CYAN", VV[VV.BROWN = 13] = "BROWN", VV[VV.BLUE = 14] = "BLUE", VV[VV.BLACK = 15] = "BLACK", VV
       }({}),
-      PM = function(MM) {
-        return MM[MM.ROTATION_1 = 0] = "ROTATION_1", MM[MM.ROTATION_2 = 1] = "ROTATION_2", MM[MM.ROTATION_3 = 2] = "ROTATION_3", MM[MM.ROTATION_4 = 3] = "ROTATION_4", MM
+      pV = function(VV) {
+        return VV[VV.ROTATION_1 = 0] = "ROTATION_1", VV[VV.ROTATION_2 = 1] = "ROTATION_2", VV[VV.ROTATION_3 = 2] = "ROTATION_3", VV[VV.ROTATION_4 = 3] = "ROTATION_4", VV
       }({}),
-      nM = function(MM) {
-        return MM[MM.KART = 0] = "KART", MM[MM.OFF_ROADER = 1] = "OFF_ROADER", MM[MM.CAR = 2] = "CAR", MM[MM.GOLD_MINING_DRILL = 3] = "GOLD_MINING_DRILL", MM[MM.ARMORED_CAR = 4] = "ARMORED_CAR", MM[MM.IRON_MINING_DRILL = 5] = "IRON_MINING_DRILL", MM[MM.DIAMOND_MINING_DRILL = 6] = "DIAMOND_MINING_DRILL", MM[MM.MOONSTONE_MINING_DRILL = 7] = "MOONSTONE_MINING_DRILL", MM
+      QV = function(VV) {
+        return VV[VV.KART = 0] = "KART", VV[VV.OFF_ROADER = 1] = "OFF_ROADER", VV[VV.CAR = 2] = "CAR", VV[VV.GOLD_MINING_DRILL = 3] = "GOLD_MINING_DRILL", VV[VV.ARMORED_CAR = 4] = "ARMORED_CAR", VV[VV.IRON_MINING_DRILL = 5] = "IRON_MINING_DRILL", VV[VV.DIAMOND_MINING_DRILL = 6] = "DIAMOND_MINING_DRILL", VV[VV.MOONSTONE_MINING_DRILL = 7] = "MOONSTONE_MINING_DRILL", VV
       }({});
-    OM.DEFAULT, OM.BOAT, SM.SPEED, OM.GLIDER, jM.DIAMOND, OM.BALLOON, aM.BLACK, OM.SLEEPING, PM.ROTATION_4, OM.RIDING_MOB, OM.CAR, nM.MOONSTONE_MINING_DRILL, OM.HOVERCRAFT;
-    let QM = function(MM) {
-      return MM[MM.NORMAL = 0] = "NORMAL", MM[MM.GLIDING = 1] = "GLIDING", MM[MM.FLOATING = 2] = "FLOATING", MM
+    JV.DEFAULT, JV.BOAT, YV.SPEED, JV.GLIDER, UV.DIAMOND, JV.BALLOON, yV.BLACK, JV.SLEEPING, pV.ROTATION_4, JV.RIDING_MOB, JV.CAR, QV.MOONSTONE_MINING_DRILL, JV.HOVERCRAFT;
+    let nV = function(VV) {
+      return VV[VV.NORMAL = 0] = "NORMAL", VV[VV.GLIDING = 1] = "GLIDING", VV[VV.FLOATING = 2] = "FLOATING", VV
     }({})
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const VV in modules) Object.freeze(modules[VV]);

@@ -1,411 +1,411 @@
 export const id = 90;
 export const ids = [90];
 export const modules = {
-  34915: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      EverythingMenu: () => MQ
+  35180: (VV, eV, xV) => {
+    xV.r(eV), xV.d(eV, {
+      EverythingMenu: () => SQ
     });
-    var OM = iM(44),
-      SM = iM(1116),
-      jM = iM.n(SM),
-      aM = iM(1188),
-      PM = iM(1398),
-      nM = iM(2190),
-      QM = iM(1520),
-      zM = iM(1130),
-      LM = iM(1303);
+    var JV = xV(62),
+      YV = xV(1146),
+      UV = xV.n(YV),
+      yV = xV(1220),
+      pV = xV(1414),
+      QV = xV(2202),
+      nV = xV(1551),
+      wV = xV(1157),
+      ZV = xV(1321);
 
-    function mM(MM) {
+    function vV(VV) {
       let {
-        items: rM,
-        link: iM,
-        onClick: OM,
-        selectedItemId: SM,
-        className: mM,
-        padStartsOnTab: HM = !0
-      } = MM;
+        items: eV,
+        link: xV,
+        onClick: JV,
+        selectedItemId: YV,
+        className: vV,
+        padStartsOnTab: rV = !0
+      } = VV;
       const {
-        t: hM
-      } = (0, aM.A)(), JM = (0, zM.i)(), dM = [];
-      for (const jM of rM) {
-        var yM;
-        const MM = dM[dM.length - 1];
-        var lM;
-        if (MM && MM.title === (null !== (yM = jM.section) && void 0 !== yM ? yM : null)) MM.items.push(jM);
-        else dM.push({
-          title: null !== (lM = jM.section) && void 0 !== lM ? lM : null,
-          items: [jM]
+        t: kV
+      } = (0, yV.A)(), bV = (0, wV.j)(), EV = [];
+      for (const UV of eV) {
+        var BV;
+        const VV = EV[EV.length - 1];
+        var jV;
+        if (VV && VV.title === (null !== (BV = UV.section) && void 0 !== BV ? BV : null)) VV.items.push(UV);
+        else EV.push({
+          title: null !== (jV = UV.section) && void 0 !== jV ? jV : null,
+          items: [UV]
         })
       }
-      return (0, LM.jsxs)("div", {
-        className: jM()("MenuSideBarBody", mM),
+      return (0, ZV.jsxs)("div", {
+        className: UV()("MenuSideBarBody", vV),
         "data-pad-tabs": "2",
-        children: [dM.map(((MM, rM) => {
-          var iM;
-          return (0, LM.jsxs)("div", {
+        children: [EV.map(((VV, eV) => {
+          var xV;
+          return (0, ZV.jsxs)("div", {
             className: "MenuSideBarSection",
-            children: [MM.title && (0, LM.jsx)("div", {
+            children: [VV.title && (0, ZV.jsx)("div", {
               className: "MenuSideBarSectionTitle",
-              children: hM(MM.title)
-            }), MM.items.map((MM => {
-              var rM;
-              const iM = !!MM.iconElement || !!MM.faIcon;
-              return (0, LM.jsxs)("div", {
+              children: kV(VV.title)
+            }), VV.items.map((VV => {
+              var eV;
+              const xV = !!VV.iconElement || !!VV.faIcon;
+              return (0, ZV.jsxs)("div", {
                 "data-pad-tab": !0,
-                "data-pad-selected": SM === MM.id ? "true" : void 0,
-                "data-pad-default-focus": HM && SM === MM.id || void 0,
-                className: jM()("MenuSideBarBodyTab", {
-                  ActiveMenuSideBarBodyTab: SM === MM.id
+                "data-pad-selected": YV === VV.id ? "true" : void 0,
+                "data-pad-default-focus": rV && YV === VV.id || void 0,
+                className: UV()("MenuSideBarBodyTab", {
+                  ActiveMenuSideBarBodyTab: YV === VV.id
                 }),
                 onClick: () => {
-                  OM(MM.id)
+                  JV(VV.id)
                 },
-                children: [iM && (0, LM.jsx)("div", {
+                children: [xV && (0, ZV.jsx)("div", {
                   className: "MenuSideBarBodyTabIcon",
-                  children: null !== (rM = MM.iconElement) && void 0 !== rM ? rM : (0, LM.jsx)(PM.b, {
-                    name: MM.faIcon
+                  children: null !== (eV = VV.iconElement) && void 0 !== eV ? eV : (0, ZV.jsx)(pV.b, {
+                    name: VV.faIcon
                   })
-                }), (!JM || !iM) && (0, LM.jsx)("div", {
-                  children: hM(MM.title)
-                }), MM.redDot && (0, LM.jsx)(nM.d, {
+                }), (!bV || !xV) && (0, ZV.jsx)("div", {
+                  children: kV(VV.title)
+                }), VV.redDot && (0, ZV.jsx)(QV.c, {
                   top: "-0.2rem",
                   right: "-1rem"
                 })]
-              }, MM.id)
+              }, VV.id)
             }))]
-          }, null !== (iM = MM.title) && void 0 !== iM ? iM : rM)
-        })), iM && (0, LM.jsxs)("div", {
-          ...(0, QM.fb)(),
+          }, null !== (xV = VV.title) && void 0 !== xV ? xV : eV)
+        })), xV && (0, ZV.jsxs)("div", {
+          ...(0, nV.V)(),
           "data-pad-destructive": !0,
           className: "MenuSideBarBodyTab MenuSideBarLink",
-          onClick: iM.onClick,
-          children: [(0, LM.jsx)("div", {
+          onClick: xV.onClick,
+          children: [(0, ZV.jsx)("div", {
             className: "MenuSideBarBodyTabIcon",
-            children: (0, LM.jsx)(PM.b, {
-              name: iM.faIcon
+            children: (0, ZV.jsx)(pV.b, {
+              name: xV.faIcon
             })
-          }), (0, LM.jsx)("div", {
-            children: hM(iM.title)
-          }), (0, LM.jsx)(PM.b, {
+          }), (0, ZV.jsx)("div", {
+            children: kV(xV.title)
+          }), (0, ZV.jsx)(pV.b, {
             name: "arrow-right",
             className: "MenuSideBarLinkArrow"
           })]
         })]
       })
     }
-    var HM = iM(2798),
-      hM = iM(1142),
-      JM = iM(2640),
-      dM = iM(3508),
-      yM = iM(83),
-      lM = iM(2039),
-      EM = iM(2385),
-      UM = iM(2389),
-      GM = iM(1763),
-      CM = iM(1396),
-      eM = iM(5401),
-      bM = iM(19),
-      wM = iM(34920);
+    var rV = xV(2871),
+      kV = xV(1168),
+      bV = xV(2693),
+      EV = xV(3528),
+      BV = xV(99),
+      jV = xV(2051),
+      qV = xV(2410),
+      tV = xV(2419),
+      FV = xV(1772),
+      TV = xV(1408),
+      PV = xV(5500),
+      AV = xV(27),
+      NV = xV(35189);
 
-    function tM(MM) {
+    function XV(VV) {
       let {
-        setApplySettingsCallback: rM
-      } = MM;
+        setApplySettingsCallback: eV
+      } = VV;
       const {
-        clientEscMenuOptions: iM
-      } = (0, bM.m)(["clientEscMenuOptions"]), [SM, jM] = (0, OM.useState)(!1), [aM, PM] = (0, OM.useState)(!1), [nM, zM] = (0, OM.useState)(6400), [mM, HM] = (0, OM.useState)(3600), [hM, JM] = (0, OM.useState)(!1), [dM, yM] = (0, OM.useState)(!1);
+        clientEscMenuOptions: xV
+      } = (0, AV.l)(["clientEscMenuOptions"]), [YV, UV] = (0, JV.useState)(!1), [yV, pV] = (0, JV.useState)(!1), [QV, wV] = (0, JV.useState)(6400), [vV, rV] = (0, JV.useState)(3600), [kV, bV] = (0, JV.useState)(!1), [EV, BV] = (0, JV.useState)(!1);
 
-      function lM(MM) {
-        const rM = "screenshot" === MM ? PM : jM;
-        rM(!0);
-        const iM = hM ? "normals" : dM ? "depth" : null;
-        wM.devTools.downloadScene(MM, {
-          width: nM,
-          height: mM,
-          colouring: iM
-        }).catch((MM => {
-          console.error("Couldn't download the scene", MM)
+      function jV(VV) {
+        const eV = "screenshot" === VV ? pV : UV;
+        eV(!0);
+        const xV = kV ? "normals" : EV ? "depth" : null;
+        NV.devTools.downloadScene(VV, {
+          width: QV,
+          height: vV,
+          colouring: xV
+        }).catch((VV => {
+          console.error("Couldn't download the scene", VV)
         })).finally((() => {
-          rM(!1)
+          eV(!1)
         }))
       }
-      return (0, LM.jsxs)("div", {
+      return (0, ZV.jsxs)("div", {
         className: "DeveloperToolsCategory",
-        children: [(0, LM.jsx)(eM.c, {
+        children: [(0, ZV.jsx)(PV.e, {
           label: "Disable Ambient Occlusion",
-          checked: iM.disableAmbientOcclusion,
-          onClick: MM => {
-            bM.d.setClientEscMenuOptions({
-              disableAmbientOcclusion: MM
-            }), rM((() => eM.j))
+          checked: xV.disableAmbientOcclusion,
+          onClick: VV => {
+            AV.b.setClientEscMenuOptions({
+              disableAmbientOcclusion: VV
+            }), eV((() => PV.q))
           },
           circleInfoText: "Disables ambient occlusion which is the shadow effect that makes corners and crevices darker."
-        }), wM.devTools.supports("ambientLight") && (0, LM.jsx)(eM.h, {
+        }), NV.devTools.supports("ambientLight") && (0, ZV.jsx)(PV.m, {
           name: "Ambient Lighting Intensity",
           min: 0,
           max: 1,
           step: .01,
-          initValue: iM.ambientLightIntensity,
-          onChange: MM => {
-            wM.devTools.setAmbientLightIntensity(MM).then((() => {
-              bM.d.setClientEscMenuOptions({
-                ambientLightIntensity: MM
+          initValue: xV.ambientLightIntensity,
+          onChange: VV => {
+            NV.devTools.setAmbientLightIntensity(VV).then((() => {
+              AV.b.setClientEscMenuOptions({
+                ambientLightIntensity: VV
               })
-            })).catch((MM => {
-              console.error("Couldn't set the ambient light", MM)
+            })).catch((VV => {
+              console.error("Couldn't set the ambient light", VV)
             }))
           },
           circleInfoText: "Sets the intensity of the white ambient light in the scene. The default is 0.5."
-        }), wM.devTools.supports("weaponRaycasts") && (0, LM.jsx)(eM.c, {
+        }), NV.devTools.supports("weaponRaycasts") && (0, ZV.jsx)(PV.e, {
           label: "Show Weapon Raycasts",
-          checked: iM.showWeaponRaycasts,
-          onClick: MM => {
-            bM.d.setClientEscMenuOptions({
-              showWeaponRaycasts: MM
+          checked: xV.showWeaponRaycasts,
+          onClick: VV => {
+            AV.b.setClientEscMenuOptions({
+              showWeaponRaycasts: VV
             })
           },
           circleInfoText: "Draws debug lines for the raw raycasts used by locally fired weapons."
-        }), wM.devTools.supports("sceneDownload") && (0, LM.jsxs)("div", {
+        }), NV.devTools.supports("sceneDownload") && (0, ZV.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [(0, LM.jsxs)("div", {
+          children: [(0, ZV.jsxs)("div", {
             className: "SettingBox WarningBorder",
-            children: [(0, LM.jsx)(eM.c, {
+            children: [(0, ZV.jsx)(PV.e, {
               label: "Apply normal-based coloring",
-              checked: hM,
-              onClick: MM => {
-                JM(MM), MM && yM(!1)
+              checked: kV,
+              onClick: VV => {
+                bV(VV), VV && BV(!1)
               },
               circleInfoText: "Colors faces based on their normal direction (red=X, green=Y, blue=Z)."
-            }), (0, LM.jsx)(eM.c, {
+            }), (0, ZV.jsx)(PV.e, {
               label: "Apply depth-based coloring",
-              checked: dM,
-              onClick: MM => {
-                yM(MM), MM && JM(!1)
+              checked: EV,
+              onClick: VV => {
+                BV(VV), VV && bV(!1)
               },
               circleInfoText: "Colors from white (near) to black (far) based on distance from camera. Only works for screenshot export."
-            }), (0, LM.jsxs)("div", {
+            }), (0, ZV.jsxs)("div", {
               className: "SettingBox DeveloperToolsCategoryScreenshotSettings",
-              children: [(0, LM.jsx)("div", {
+              children: [(0, ZV.jsx)("div", {
                 className: "SettingLabel",
                 children: "Screenshot size in pixels (width x height)"
-              }), (0, LM.jsx)(GM.b, {
+              }), (0, ZV.jsx)(FV.d, {
                 className: "SettingsTextInput SmallTextLight",
-                onValueChange: (MM, rM) => {
-                  const iM = parseInt(MM) || 6400;
-                  zM(iM)
+                onValueChange: (VV, eV) => {
+                  const xV = parseInt(VV) || 6400;
+                  wV(xV)
                 },
                 placeholderText: "width",
                 maxLength: 10,
-                defaultValue: nM.toString()
-              }), (0, LM.jsx)("span", {
+                defaultValue: QV.toString()
+              }), (0, ZV.jsx)("span", {
                 children: "X"
-              }), (0, LM.jsx)(GM.b, {
+              }), (0, ZV.jsx)(FV.d, {
                 className: "SettingsTextInput SmallTextLight",
-                onValueChange: (MM, rM) => {
-                  const iM = parseInt(MM) || 3600;
-                  HM(iM)
+                onValueChange: (VV, eV) => {
+                  const xV = parseInt(VV) || 3600;
+                  rV(xV)
                 },
                 placeholderText: "height",
                 maxLength: 10,
-                defaultValue: mM.toString()
+                defaultValue: vV.toString()
               })]
-            }), (0, LM.jsxs)("div", {
+            }), (0, ZV.jsxs)("div", {
               className: "DeveloperToolsCategoryExportButtons",
-              children: [(0, LM.jsxs)(QM.e, {
+              children: [(0, ZV.jsxs)(nV.f, {
                 onClick: () => {
-                  lM("screenshot")
+                  jV("screenshot")
                 },
-                disabled: aM,
-                children: [aM && (0, LM.jsx)(CM.d, {}), "Download Screenshot"]
-              }), (0, LM.jsxs)(QM.e, {
+                disabled: yV,
+                children: [yV && (0, ZV.jsx)(TV.d, {}), "Download Screenshot"]
+              }), (0, ZV.jsxs)(nV.f, {
                 onClick: () => {
-                  lM("glb")
+                  jV("glb")
                 },
-                disabled: SM,
-                children: [SM && (0, LM.jsx)(CM.d, {}), "Download GLB"]
+                disabled: YV,
+                children: [YV && (0, ZV.jsx)(TV.d, {}), "Download GLB"]
               })]
             })]
-          }), (0, LM.jsx)("div", {
+          }), (0, ZV.jsx)("div", {
             className: "SettingBox SettingsBoxWarning",
             children: 'To download GLB of scene with textures you need to "Disable Block Texture Atlas" in graphic settings first (you will need to reload the page to apply the setting).'
           })]
         })]
       })
     }
-    var gM = iM(119),
-      uM = iM(1144),
-      RM = iM(34929),
-      pM = iM(3366),
-      WM = iM(1591),
-      sM = iM(1279),
-      DM = iM(1240),
-      kM = iM(3461),
-      ZM = iM(2150),
-      oM = iM(1573),
-      fM = iM(332),
-      YM = iM(2397),
-      NM = iM(2401),
-      AM = iM(3394),
-      xM = iM(2919),
-      vM = iM(1722),
-      FM = iM(3427),
-      BM = iM(3463),
-      XM = iM(187);
-    var IM = iM(1899),
-      KM = iM(3385);
-    async function qM() {
+    var MV = xV(138),
+      zV = xV(1173),
+      GV = xV(35205),
+      WV = xV(3371),
+      RV = xV(1612),
+      gV = xV(1293),
+      DV = xV(1267),
+      iV = xV(3482),
+      CV = xV(2180),
+      aV = xV(1603),
+      oV = xV(375),
+      cV = xV(2428),
+      hV = xV(2430),
+      lV = xV(3401),
+      LV = xV(2973),
+      fV = xV(1734),
+      mV = xV(3424),
+      KV = xV(3490),
+      HV = xV(220);
+    var uV = xV(1900),
+      sV = xV(3398);
+    async function SV() {
       try {
-        return function(MM) {
-          const rM = new Map;
+        return function(VV) {
+          const eV = new Map;
           for (const {
-              store: iM,
-              status: OM,
-              autoRenewStatus: SM,
-              managementUrl: jM
+              store: xV,
+              status: JV,
+              autoRenewStatus: YV,
+              managementUrl: UV
             }
-            of Object.values(MM.subscriptions)) !(0, AM.k)(iM) || (0, AM.o)(OM) || "willNotRenew" === SM || rM.has(iM) || rM.set(iM, null !== jM && void 0 !== jM ? jM : AM.r[iM]);
-          return Array.from(rM, (MM => {
-            let [rM, iM] = MM;
+            of Object.values(VV.subscriptions)) !(0, lV.h)(xV) || (0, lV.j)(JV) || "willNotRenew" === YV || eV.has(xV) || eV.set(xV, null !== UV && void 0 !== UV ? UV : lV.m[xV]);
+          return Array.from(eV, (VV => {
+            let [eV, xV] = VV;
             return {
-              store: rM,
-              managementUrl: iM
+              store: eV,
+              managementUrl: xV
             }
           }))
-        }(await (0, IM.n)((0, KM.getBillingClient)().getCustomerInfo(), 5e3, "CustomerInfo got no answer in 5 s"))
-      } catch (MM) {
-        return console.error("Billing: loading CustomerInfo for the player's store subscriptions failed:", MM), null
+        }(await (0, uV.m)((0, sV.getBillingClient)().getCustomerInfo(), 5e3, "CustomerInfo got no answer in 5 s"))
+      } catch (VV) {
+        return console.error("Billing: loading CustomerInfo for the player's store subscriptions failed:", VV), null
       }
     }
 
-    function TM(MM) {
+    function IV(VV) {
       const {
-        t: rM,
-        selectedLanguage: iM
-      } = (0, aM.A)(), {
-        userContext: SM
-      } = (0, hM.b)(), {
-        superRankInfo: jM
-      } = SM, PM = (0, NM.usePurchasesAllowed)(), nM = MM && ((0, fM.zc)(jM) || SM.ranksMayChange) && PM, {
-        accountId: QM,
-        data: zM
-      } = (0, xM.g)(FM.d, nM);
-      if ((0, OM.useEffect)((() => {
-          if (nM) return FM.d.watchAccount(), vM.e.addRefetchListener("billing", (MM => {
-            "reconnected" === MM ? FM.d.refreshAfterReconnect() : FM.d.refresh()
+        t: eV,
+        selectedLanguage: xV
+      } = (0, yV.A)(), {
+        userContext: YV
+      } = (0, kV.d)(), {
+        superRankInfo: UV
+      } = YV, pV = (0, hV.usePurchasesAllowed)(), QV = VV && ((0, oV.Bc)(UV) || YV.ranksMayChange) && pV, {
+        accountId: nV,
+        data: wV
+      } = (0, LV.h)(mV.b, QV);
+      if ((0, JV.useEffect)((() => {
+          if (QV) return mV.b.watchAccount(), fV.c.addRefetchListener("billing", (VV => {
+            "reconnected" === VV ? mV.b.refreshAfterReconnect() : mV.b.refresh()
           }))
-        }), [nM]), !nM || !(0, fM.zc)(jM) || null === zM || QM !== SM.whamm) return null;
-      const LM = function(MM, rM, iM) {
-        const OM = BM.i[(0, BM.d)(BM.i, rM)],
-          SM = void 0 === OM ? void 0 : (0, XM.d)(MM.entitlements, OM.entitlementId);
-        return void 0 === SM || null === SM.expiresAt || (0, AM.g)(SM) <= iM ? null : SM.willRenew && null === SM.billingIssueDetectedAt ? {
+        }), [QV]), !QV || !(0, oV.Bc)(UV) || null === wV || nV !== YV.whamm) return null;
+      const ZV = function(VV, eV, xV) {
+        const JV = KV.j[(0, KV.e)(KV.j, eV)],
+          YV = void 0 === JV ? void 0 : (0, HV.b)(VV.entitlements, JV.entitlementId);
+        return void 0 === YV || null === YV.expiresAt || (0, lV.d)(YV) <= xV ? null : YV.willRenew && null === YV.billingIssueDetectedAt ? {
           renews: !0,
-          at: Math.max(SM.expiresAt, iM)
+          at: Math.max(YV.expiresAt, xV)
         } : {
           renews: !1,
-          at: (0, AM.g)(SM)
+          at: (0, lV.d)(YV)
         }
-      }(zM, jM.tier, Date.now());
-      if (null === LM) return null;
-      const mM = LM.renews ? "store:renewsOn" : "store:endsOn",
-        HM = new Date(LM.at).toLocaleDateString((0, aM.n)(iM.code, mM), {
+      }(wV, UV.tier, Date.now());
+      if (null === ZV) return null;
+      const vV = ZV.renews ? "store:renewsOn" : "store:endsOn",
+        rV = new Date(ZV.at).toLocaleDateString((0, yV.m)(xV.code, vV), {
           year: "numeric",
           month: "short",
           day: "numeric"
         }),
-        JM = (0, NM.getBillingStore)(),
-        dM = null !== JM && (0, AM.k)(JM) ? function(MM, rM) {
-          var iM;
-          const OM = Object.values(MM.subscriptions).find((MM => MM.store === rM && !(0, AM.o)(MM.status)));
-          return void 0 === OM ? null : null !== (iM = OM.managementUrl) && void 0 !== iM ? iM : AM.r[rM]
-        }(zM, JM) : null;
+        bV = (0, hV.getBillingStore)(),
+        EV = null !== bV && (0, lV.h)(bV) ? function(VV, eV) {
+          var xV;
+          const JV = Object.values(VV.subscriptions).find((VV => VV.store === eV && !(0, lV.j)(VV.status)));
+          return void 0 === JV ? null : null !== (xV = JV.managementUrl) && void 0 !== xV ? xV : lV.m[eV]
+        }(wV, bV) : null;
       return {
-        text: rM(mM, {
-          date: HM
+        text: eV(vV, {
+          date: rV
         }),
-        manageUrl: dM
+        manageUrl: EV
       }
     }
-    var VM = iM(2616),
-      cM = iM(2546);
+    var dV = xV(2658),
+      OV = xV(2596);
 
-    function Mr(MM) {
+    function Ve(VV) {
       let {
-        loggedIn: rM,
-        playerDbId: iM
-      } = MM;
+        loggedIn: eV,
+        playerDbId: xV
+      } = VV;
       const {
-        t: OM
-      } = (0, aM.A)(), SM = (0, VM.e)(), jM = (0, VM.c)(SM, iM);
-      return cM.f.isAvailable && (rM || jM) && "notEligible" !== (null === SM || void 0 === SM ? void 0 : SM.answer) ? (0, LM.jsx)(eM.c, {
-        label: OM("sessionReplayConsent:setting"),
-        note: OM("sessionReplayConsent:settingNote"),
-        checked: jM,
-        onClick: MM => {
-          MM ? cM.f.askConsent(!1) : cM.f.withdrawConsent()
+        t: JV
+      } = (0, yV.A)(), YV = (0, dV.g)(), UV = (0, dV.d)(YV, xV);
+      return OV.e.isAvailable && (eV || UV) && "notEligible" !== (null === YV || void 0 === YV ? void 0 : YV.answer) ? (0, ZV.jsx)(PV.e, {
+        label: JV("sessionReplayConsent:setting"),
+        note: JV("sessionReplayConsent:settingNote"),
+        checked: UV,
+        onClick: VV => {
+          VV ? OV.e.askConsent(!1) : OV.e.withdrawConsent()
         }
       }) : null
     }
-    var rr = iM(1440),
-      ir = iM(1217),
-      Or = iM(5282),
-      Sr = iM(1548),
-      jr = iM(4052),
-      ar = iM(2378);
+    var ee = xV(1446),
+      xe = xV(1245),
+      Je = xV(5385),
+      Ye = xV(1586),
+      Ue = xV(4081),
+      ye = xV(2400);
 
-    function Pr(MM) {
+    function pe(VV) {
       let {
-        showing: rM
-      } = MM;
+        showing: eV
+      } = VV;
       const {
-        t: iM
-      } = (0, aM.A)(), {
-        data: OM,
-        failed: SM
-      } = (0, xM.g)(jr.d, rM);
-      return 0 === (null === OM || void 0 === OM ? void 0 : OM.length) || null === OM && !SM ? null : (0, LM.jsxs)("div", {
+        t: xV
+      } = (0, yV.A)(), {
+        data: JV,
+        failed: YV
+      } = (0, LV.h)(Ue.d, eV);
+      return 0 === (null === JV || void 0 === JV ? void 0 : JV.length) || null === JV && !YV ? null : (0, ZV.jsxs)("div", {
         className: "SettingBox AccountSettingsPaymentHistory",
-        children: [(0, LM.jsx)("div", {
+        children: [(0, ZV.jsx)("div", {
           className: "AccountSettingsLabel",
-          children: iM("paymentHistory:title")
-        }), null === OM && SM && (0, LM.jsx)("div", {
+          children: xV("paymentHistory:title")
+        }), null === JV && YV && (0, ZV.jsx)("div", {
           className: "AccountSettingsPaymentHistoryError",
-          children: iM("paymentHistory:loadFailed")
-        }), null !== OM && (0, LM.jsx)("ul", {
+          children: xV("paymentHistory:loadFailed")
+        }), null !== JV && (0, ZV.jsx)("ul", {
           className: "PaymentHistoryList",
-          children: OM.map((MM => (0, LM.jsxs)("li", {
+          children: JV.map((VV => (0, ZV.jsxs)("li", {
             className: "PaymentHistoryEntry",
-            children: [(0, LM.jsx)(ar.c, {
-              entry: MM
-            }), (0, LM.jsxs)("div", {
+            children: [(0, ZV.jsx)(ye.c, {
+              entry: VV
+            }), (0, ZV.jsxs)("div", {
               className: "PaymentHistoryEntryText",
-              children: [(0, LM.jsx)("div", {
-                children: (0, ar.h)(iM, MM)
-              }), (0, LM.jsxs)("div", {
+              children: [(0, ZV.jsx)("div", {
+                children: (0, ye.g)(xV, VV)
+              }), (0, ZV.jsxs)("div", {
                 className: "PaymentHistoryEntryDate",
-                children: [new Date(MM.at).toLocaleDateString(), "number" === typeof MM.orderId && ` \xb7 ${iM("paymentHistory:order",{orderId:MM.orderId})}`]
+                children: [new Date(VV.at).toLocaleDateString(), "number" === typeof VV.orderId && ` \xb7 ${xV("paymentHistory:order",{orderId:VV.orderId})}`]
               })]
             })]
-          }, (0, jr.b)(MM))))
+          }, (0, Ue.c)(VV))))
         })]
       })
     }
-    var nr = iM(3403),
-      Qr = iM(2408),
-      zr = iM(2248);
+    var Qe = xV(3408),
+      ne = xV(2434),
+      we = xV(2256);
 
-    function Lr() {
-      (0, zr.d)({
+    function Ze() {
+      (0, we.b)({
         titleKey: "payments:logInToRestore"
       })
     }
 
-    function mr(MM) {
+    function ve(VV) {
       let {
-        status: rM
-      } = MM;
-      switch (rM) {
+        status: eV
+      } = VV;
+      switch (eV) {
         case "restored":
-          return (0, FM.g)(), {
+          return (0, mV.e)(), {
             key: "payments:purchasesRestored",
             failed: !1
           };
@@ -418,914 +418,914 @@ export const modules = {
       }
     }
 
-    function Hr() {
-      const MM = (0, KM.usePageBillingClient)(),
+    function re() {
+      const VV = (0, sV.usePageBillingClient)(),
         {
-          userContext: rM
-        } = (0, hM.b)(),
-        [iM, SM] = (0, OM.useState)(!1),
-        [jM, aM] = (0, OM.useState)(null);
+          userContext: eV
+        } = (0, kV.d)(),
+        [xV, YV] = (0, JV.useState)(!1),
+        [UV, yV] = (0, JV.useState)(null);
       return {
-        restoring: iM,
-        notice: jM,
+        restoring: xV,
+        notice: UV,
         restore: () => {
-          rM.isLoggedIn() ? (SM(!0), aM(null), MM.restorePurchases().then(mr, (MM => MM instanceof nr.c && "loginRequired" === MM.code ? (Lr(), null) : function(MM) {
-            return MM instanceof nr.c && "storeBusy" === MM.code ? {
+          eV.isLoggedIn() ? (YV(!0), yV(null), VV.restorePurchases().then(ve, (VV => VV instanceof Qe.b && "loginRequired" === VV.code ? (Ze(), null) : function(VV) {
+            return VV instanceof Qe.b && "storeBusy" === VV.code ? {
               key: "payments:storeBusy",
               failed: !0
-            } : (console.error("Billing: restoring purchases failed:", MM), (0, FM.g)(), {
+            } : (console.error("Billing: restoring purchases failed:", VV), (0, mV.e)(), {
               key: "payments:restoreFailed",
               failed: !0
             })
-          }(MM))).then(aM).finally((() => {
-            SM(!1)
-          }))) : Lr()
+          }(VV))).then(yV).finally((() => {
+            YV(!1)
+          }))) : Ze()
         }
       }
     }
 
-    function hr(MM) {
+    function ke(VV) {
       let {
-        restoring: rM,
-        notice: iM,
-        restore: SM
-      } = MM;
+        restoring: eV,
+        notice: xV,
+        restore: YV
+      } = VV;
       const {
-        t: PM
-      } = (0, aM.A)(), nM = (0, NM.usePurchasesAllowed)(), zM = (0, NM.getBillingStore)(), mM = (0, OM.useRef)(null);
-      return (0, OM.useEffect)((() => {
-        var MM;
-        null === (MM = mM.current) || void 0 === MM || MM.scrollIntoView({
+        t: pV
+      } = (0, yV.A)(), QV = (0, hV.usePurchasesAllowed)(), wV = (0, hV.getBillingStore)(), vV = (0, JV.useRef)(null);
+      return (0, JV.useEffect)((() => {
+        var VV;
+        null === (VV = vV.current) || void 0 === VV || VV.scrollIntoView({
           block: "nearest"
         })
-      }), [iM]), nM && (0, Qr.e)(zM) ? (0, LM.jsxs)("div", {
+      }), [xV]), QV && (0, ne.b)(wV) ? (0, ZV.jsxs)("div", {
         className: "AccountSettingsRestorePurchases",
-        children: [(0, LM.jsx)(QM.i, {
+        children: [(0, ZV.jsx)(nV.j, {
           className: "AccountSettingsRestorePurchasesButton",
-          loading: rM,
-          onClick: SM,
-          children: PM("payments:restorePurchases")
-        }), null !== iM && (0, LM.jsx)("div", {
-          ref: mM,
-          className: jM()("AccountSettingsRestorePurchasesNotice SmallTextBold", {
-            AccountSettingsRestorePurchasesFailed: iM.failed
+          loading: eV,
+          onClick: YV,
+          children: pV("payments:restorePurchases")
+        }), null !== xV && (0, ZV.jsx)("div", {
+          ref: vV,
+          className: UV()("AccountSettingsRestorePurchasesNotice SmallTextBold", {
+            AccountSettingsRestorePurchasesFailed: xV.failed
           }),
-          children: PM(iM.key)
+          children: pV(xV.key)
         })]
       }) : null
     }
-    var Jr = iM(1996),
-      dr = iM(1251),
-      yr = iM(1429),
-      lr = iM(1202),
-      Er = iM(1360),
-      Ur = iM(313),
-      Gr = iM(2702);
-    const Cr = {
+    var be = xV(2010),
+      Ee = xV(1276),
+      Be = xV(1439),
+      je = xV(1230),
+      qe = xV(1382),
+      te = xV(364),
+      Fe = xV(2762);
+    const Te = {
       appStore: {
         name: "App Store",
-        ...Ur.Sb.appStore
+        ...te.Wb.appStore
       },
       googlePlay: {
         name: "Google Play",
-        ...Ur.Sb.googlePlay
+        ...te.Wb.googlePlay
       },
       discord: {
         name: "Discord",
-        ...Ur.Sb.discord
+        ...te.Wb.discord
       }
     };
 
-    function er(MM) {
+    function Pe(VV) {
       let {
-        warning: rM,
-        subscriptions: iM
-      } = MM;
+        warning: eV,
+        subscriptions: xV
+      } = VV;
       const {
-        t: OM
-      } = (0, aM.A)();
-      return null !== iM && 0 === iM.length ? (0, LM.jsx)(LM.Fragment, {
-        children: OM(rM)
-      }) : (0, LM.jsxs)("div", {
+        t: JV
+      } = (0, yV.A)();
+      return null !== xV && 0 === xV.length ? (0, ZV.jsx)(ZV.Fragment, {
+        children: JV(eV)
+      }) : (0, ZV.jsxs)("div", {
         className: "DeleteAccountSubtitle",
-        children: [OM(rM), null === iM && (0, LM.jsx)("div", {
+        children: [JV(eV), null === xV && (0, ZV.jsx)("div", {
           className: "DeleteAccountSubtitleNote",
-          children: OM("auth:deleteAccountSubscriptionsLoadFailed")
-        }), null !== iM && (0, LM.jsxs)(LM.Fragment, {
-          children: [(0, LM.jsx)("div", {
+          children: JV("auth:deleteAccountSubscriptionsLoadFailed")
+        }), null !== xV && (0, ZV.jsxs)(ZV.Fragment, {
+          children: [(0, ZV.jsx)("div", {
             className: "DeleteAccountSubtitleNote",
-            children: OM("auth:deleteAccountStoreSubscriptions")
-          }), (0, LM.jsx)(Gr.c, {
+            children: JV("auth:deleteAccountStoreSubscriptions")
+          }), (0, ZV.jsx)(Fe.c, {
             className: "DeleteAccountSubtitleLinks",
-            links: iM.map((MM => {
+            links: xV.map((VV => {
               let {
-                store: rM,
-                managementUrl: iM
-              } = MM;
+                store: eV,
+                managementUrl: xV
+              } = VV;
               return {
-                ...Cr[rM],
-                url: iM
+                ...Te[eV],
+                url: xV
               }
             }))
           })]
         })]
       })
     }
-    var br = iM(2548);
+    var Ae = xV(2603);
 
-    function wr(MM) {
+    function Ne(VV) {
       let {
-        showing: rM
-      } = MM;
+        showing: eV
+      } = VV;
       const {
-        userContext: iM,
-        isUserContextUpdating: SM
-      } = (0, hM.b)(), {
-        t: jM
-      } = (0, aM.A)(), [PM, nM] = (0, OM.useState)(!1), [zM, mM] = (0, OM.useState)(null), HM = (0, OM.useRef)(rM);
-      (0, OM.useEffect)((() => (HM.current = rM, () => {
-        HM.current = !1
-      })), [rM]);
-      const JM = SM || PM;
-      return (0, LM.jsxs)("div", {
+        userContext: xV,
+        isUserContextUpdating: YV
+      } = (0, kV.d)(), {
+        t: UV
+      } = (0, yV.A)(), [pV, QV] = (0, JV.useState)(!1), [wV, vV] = (0, JV.useState)(null), rV = (0, JV.useRef)(eV);
+      (0, JV.useEffect)((() => (rV.current = eV, () => {
+        rV.current = !1
+      })), [eV]);
+      const bV = YV || pV;
+      return (0, ZV.jsxs)("div", {
         className: "AccountSettingsDeleteAccountButtonContainer",
-        children: [(0, LM.jsxs)(QM.J, {
+        children: [(0, ZV.jsxs)(nV.E, {
           onClick: async function() {
-            if (!PM) {
-              nM(!0);
+            if (!pV) {
+              QV(!0);
               try {
-                const MM = await async function() {
-                  const [MM, rM] = await Promise.all([(0, Jr.e)(iM.availableUserContextTypes) ? qM() : [], gr(iM)]);
-                  if (!HM.current) return dr.b.ok();
-                  const OM = (0, sM.e)(iM.getPlayerName(), !yM.featureFlags.canSeeRealPlayerNames);
-                  if (!0 !== await yr.NotificationProvider.showPromptPopup({
+                const VV = await async function() {
+                  const [VV, eV] = await Promise.all([(0, be.c)(xV.availableUserContextTypes) ? SV() : [], Me(xV)]);
+                  if (!rV.current) return Ee.e.ok();
+                  const JV = (0, gV.b)(xV.getPlayerName(), !BV.featureFlags.canSeeRealPlayerNames);
+                  if (!0 !== await Be.NotificationProvider.showPromptPopup({
                       title: "auth:deleteAccountPopupTitleNamed",
                       textOpts: {
                         title: {
-                          playerName: OM
+                          playerName: JV
                         }
                       },
-                      subtitle: (0, LM.jsx)(er, {
-                        warning: tr(iM.isLoggedIn(), rM),
-                        subscriptions: MM
+                      subtitle: (0, ZV.jsx)(Pe, {
+                        warning: Xe(xV.isLoggedIn(), eV),
+                        subscriptions: VV
                       }),
                       confirmText: "auth:deleteAccount",
                       destructive: !0,
-                      typedConfirm: rM ? jM("auth:deleteAccountTypedConfirm", {
-                        playerName: OM
+                      typedConfirm: eV ? UV("auth:deleteAccountTypedConfirm", {
+                        playerName: JV
                       }) : void 0,
                       confirmTooltip: "auth:deleteAccountPopupConfirmTooltip",
                       cancelText: "general:cancel",
                       cancelTooltip: "auth:deleteAccountPopupCancelTooltip"
-                    }).getResult()) return dr.b.ok();
-                  const SM = await (0, uM.postJsonWithMetricsCookiesAndJsonResponse)(`${lr.clientSideServerUrls.indexUrl}/index/metrics/revoke-cookies`, {
-                    gameState: bM.d.get("gameState")
+                    }).getResult()) return Ee.e.ok();
+                  const YV = await (0, zV.postJsonWithMetricsCookiesAndJsonResponse)(`${je.clientSideServerUrls.indexUrl}/index/metrics/revoke-cookies`, {
+                    gameState: AV.b.get("gameState")
                   }, {
                     retries: 3
-                  }, iM.getMetricsCookies());
-                  if (SM.error) return dr.b.error(SM.error);
-                  (0, gM.isDiscordClient)() && (await Er.l.discordActivity()).exit("User deleted their account");
-                  return null !== (0, br.b)() && await cM.f.withdrawConsent(), (0, uM.forgetStoredGuestAccount)(iM.whamm), (0, uM.forceGlobalSignOut)(!0), dr.b.ok()
-                }(), rM = MM.isError() ? MM.asError().message : null;
-                mM(rM)
-              } catch (MM) {
-                console.error("Failed to delete account:", MM), mM(jM("auth:genericDeleteAccountError"))
+                  }, xV.getMetricsCookies());
+                  if (YV.error) return Ee.e.error(YV.error);
+                  (0, MV.isDiscordClient)() && (await qe.h.discordActivity()).exit("User deleted their account");
+                  return null !== (0, Ae.c)() && await OV.e.withdrawConsent(), (0, zV.forgetStoredGuestAccount)(xV.whamm), (0, zV.forceGlobalSignOut)(!0), Ee.e.ok()
+                }(), eV = VV.isError() ? VV.asError().message : null;
+                vV(eV)
+              } catch (VV) {
+                console.error("Failed to delete account:", VV), vV(UV("auth:genericDeleteAccountError"))
               }
-              nM(!1)
+              QV(!1)
             }
           },
           className: "AccountSettingsDeleteAccountButton",
-          disabled: JM,
-          children: [JM && (0, LM.jsx)("div", {
+          disabled: bV,
+          children: [bV && (0, ZV.jsx)("div", {
             className: "DeletingAccountLoader",
-            children: (0, LM.jsx)(CM.d, {})
-          }), jM("auth:deleteAccount")]
-        }), zM && (0, LM.jsx)("div", {
+            children: (0, ZV.jsx)(TV.d, {})
+          }), UV("auth:deleteAccount")]
+        }), wV && (0, ZV.jsx)("div", {
           className: "DeleteAccountError",
-          children: zM
+          children: wV
         })]
       })
     }
 
-    function tr(MM, rM) {
-      return (0, gM.isDiscordClient)() ? "auth:discordActivityDeleteAccountLossWarning" : MM ? "auth:deleteAccountLossWarning" : rM ? "auth:deleteGuestAccountLossWarning" : "auth:deleteGuestAccountWarning"
+    function Xe(VV, eV) {
+      return (0, MV.isDiscordClient)() ? "auth:discordActivityDeleteAccountLossWarning" : VV ? "auth:deleteAccountLossWarning" : eV ? "auth:deleteGuestAccountLossWarning" : "auth:deleteGuestAccountWarning"
     }
-    async function gr(MM) {
+    async function Me(VV) {
       try {
         const {
-          accountCreatedAt: rM
-        } = await (0, IM.n)(oM.c.getPlayerProfile(MM, {
-          lowerCaseName: MM.getPlayerName().toLowerCase()
+          accountCreatedAt: eV
+        } = await (0, uV.m)(aV.b.getPlayerProfile(VV, {
+          lowerCaseName: VV.getPlayerName().toLowerCase()
         }), 5e3, "The player's profile got no answer in 5 s");
-        return null !== rM && Date.now() - rM >= 7 * fM.i
-      } catch (rM) {
-        return console.error("Delete Account: loading the account's age failed, so the prompt asks for its name:", rM), !0
+        return null !== eV && Date.now() - eV >= 7 * oV.e
+      } catch (eV) {
+        return console.error("Delete Account: loading the account's age failed, so the prompt asks for its name:", eV), !0
       }
     }
-    var ur = iM(3977),
-      Rr = iM(3989),
-      pr = iM(3983);
+    var ze = xV(4004),
+      Ge = xV(4020),
+      We = xV(4011);
 
-    function Wr(MM) {
+    function Re(VV) {
       let {
-        showing: rM
-      } = MM;
+        showing: eV
+      } = VV;
       const {
-        t: iM
-      } = (0, aM.A)(), {
-        data: OM,
-        failed: SM
-      } = (0, xM.g)(ur.c, rM), jM = null === OM ? null : (0, ur.d)(OM);
-      return (0, LM.jsxs)("div", {
+        t: xV
+      } = (0, yV.A)(), {
+        data: JV,
+        failed: YV
+      } = (0, LV.h)(ze.d, eV), UV = null === JV ? null : (0, ze.h)(JV);
+      return (0, ZV.jsxs)("div", {
         className: "SettingBox BlockedAndIgnoredPlayers",
-        children: [(0, LM.jsx)("div", {
+        children: [(0, ZV.jsx)("div", {
           className: "AccountSettingsLabel",
-          children: iM("settingsMenu:blockedAndIgnoredPlayers")
-        }), null === jM && !SM && (0, LM.jsx)(CM.d, {}), null === jM && SM && (0, LM.jsxs)("div", {
+          children: xV("settingsMenu:blockedAndIgnoredPlayers")
+        }), null === UV && !YV && (0, ZV.jsx)(TV.d, {}), null === UV && YV && (0, ZV.jsxs)("div", {
           className: "BlockedAndIgnoredPlayersError",
-          children: [iM("settingsMenu:blockedAndIgnoredPlayersLoadFailed"), (0, LM.jsx)(QM.e, {
+          children: [xV("settingsMenu:blockedAndIgnoredPlayersLoadFailed"), (0, ZV.jsx)(nV.f, {
             className: "SmallTextLight",
             onClick: () => {
-              ur.c.refresh()
+              ze.d.refresh()
             },
-            children: iM("general:tryAgain")
+            children: xV("general:tryAgain")
           })]
-        }), 0 === (null === jM || void 0 === jM ? void 0 : jM.length) && (0, LM.jsx)("div", {
+        }), 0 === (null === UV || void 0 === UV ? void 0 : UV.length) && (0, ZV.jsx)("div", {
           className: "BlockedAndIgnoredPlayersEmpty",
-          children: iM("settingsMenu:noBlockedOrIgnoredPlayers")
-        }), null !== jM && jM.length > 0 && (0, LM.jsx)("ul", {
+          children: xV("settingsMenu:noBlockedOrIgnoredPlayers")
+        }), null !== UV && UV.length > 0 && (0, ZV.jsx)("ul", {
           className: "BlockedAndIgnoredPlayersList",
-          children: jM.map((MM => {
+          children: UV.map((VV => {
             let {
-              name: rM,
-              exclusion: OM
-            } = MM;
-            const SM = pr.h[OM];
-            return (0, LM.jsxs)("li", {
+              name: eV,
+              exclusion: JV
+            } = VV;
+            const YV = We.h[JV];
+            return (0, ZV.jsxs)("li", {
               className: "BlockedAndIgnoredPlayer",
-              children: [(0, LM.jsx)("div", {
+              children: [(0, ZV.jsx)("div", {
                 className: "BlockedAndIgnoredPlayerName",
-                children: rM
-              }), (0, LM.jsx)(QM.i, {
+                children: eV
+              }), (0, ZV.jsx)(nV.j, {
                 className: "SmallTextLight",
                 onClick: () => {
-                  (0, Rr.d)(SM, rM, {
+                  (0, Ge.d)(YV, eV, {
                     chatMessage: null
                   })
                 },
-                children: iM(pr.l[SM].text)
+                children: xV(We.l[YV].text)
               })]
-            }, rM)
+            }, eV)
           }))
         })]
       })
     }
-    var sr = iM(1963);
+    var ge = xV(1976);
 
-    function Dr(MM) {
+    function De(VV) {
       let {
-        userContext: rM
-      } = MM;
+        userContext: eV
+      } = VV;
       const {
-        t: iM
-      } = (0, aM.A)(), {
-        replayChatObjectedAtMs: SM
-      } = (0, bM.m)(["replayChatObjectedAtMs"]), [jM, PM] = (0, OM.useState)(!1);
-      return cM.h ? (0, LM.jsx)(eM.c, {
-        label: iM("sessionReplayChatObjection:setting"),
-        note: iM("sessionReplayChatObjection:settingNote"),
-        checked: null !== SM,
-        disabled: jM,
-        onClick: MM => {
-          PM(!0), oM.c.setReplayChatObjection(rM, MM).then((MM => {
+        t: xV
+      } = (0, yV.A)(), {
+        replayChatObjectedAtMs: YV
+      } = (0, AV.l)(["replayChatObjectedAtMs"]), [UV, pV] = (0, JV.useState)(!1);
+      return OV.i ? (0, ZV.jsx)(PV.e, {
+        label: xV("sessionReplayChatObjection:setting"),
+        note: xV("sessionReplayChatObjection:settingNote"),
+        checked: null !== YV,
+        disabled: UV,
+        onClick: VV => {
+          pV(!0), aV.b.setReplayChatObjection(eV, VV).then((VV => {
             let {
-              replayChatObjectedAtMs: rM
-            } = MM;
-            bM.d.set({
-              replayChatObjectedAtMs: rM
+              replayChatObjectedAtMs: eV
+            } = VV;
+            AV.b.set({
+              replayChatObjectedAtMs: eV
             })
-          })).catch((MM => {
-            console.error("Couldn't save the session replay chat objection", MM), sr.k.showMessage({
+          })).catch((VV => {
+            console.error("Couldn't save the session replay chat objection", VV), ge.e.showMessage({
               translationKey: "sessionReplayChatObjection:failed"
             })
           })).finally((() => {
-            PM(!1)
+            pV(!1)
           }))
         }
       }) : null
     }
-    const kr = (0, OM.memo)((function(MM) {
-      var rM, iM;
+    const ie = (0, JV.memo)((function(VV) {
+      var eV, xV;
       let {
-        showing: SM,
-        inGame: nM
-      } = MM;
+        showing: YV,
+        inGame: QV
+      } = VV;
       const {
-        t: zM,
-        selectedLanguage: mM
-      } = (0, aM.A)(), {
-        hideSocialLocationFrom: JM
-      } = (0, bM.m)(["hideSocialLocationFrom"]), dM = (0, NM.usePurchasesAllowed)(), lM = Hr(), EM = (0, HM.b)(), {
-        userContext: UM,
-        isUserContextUpdating: wM
-      } = (0, hM.b)(), [tM, AM] = (0, OM.useState)(null !== (rM = UM.getPlayerName()) && void 0 !== rM ? rM : ""), [xM, vM] = (0, OM.useState)(null), {
-        purchasing: FM,
-        outcome: BM,
-        purchase: XM
-      } = (0, pM.e)("/super-rank-welcome"), IM = (0, fM.hc)((0, aM.n)(mM.code, "general:timeLeft"), UM.superRankInfo), KM = null === (iM = TM(SM)) || void 0 === iM ? void 0 : iM.text, qM = IM ? zM("general:timeLeft", {
-        time: IM
-      }) : KM, [VM, cM] = (0, OM.useState)(!1), [jr, ar] = (0, OM.useState)(!1), nr = (0, OM.useRef)(null), Qr = (0, OM.useRef)(null), zr = (0, ZM.g)({
+        t: wV,
+        selectedLanguage: vV
+      } = (0, yV.A)(), {
+        hideSocialLocationFrom: bV
+      } = (0, AV.l)(["hideSocialLocationFrom"]), EV = (0, hV.usePurchasesAllowed)(), jV = re(), qV = (0, rV.c)(), {
+        userContext: tV,
+        isUserContextUpdating: NV
+      } = (0, kV.d)(), [XV, lV] = (0, JV.useState)(null !== (eV = tV.getPlayerName()) && void 0 !== eV ? eV : ""), [LV, fV] = (0, JV.useState)(null), {
+        purchasing: mV,
+        outcome: KV,
+        purchase: HV
+      } = (0, WV.d)("/super-rank-welcome"), uV = (0, oV.ec)((0, yV.m)(vV.code, "general:timeLeft"), tV.superRankInfo), sV = null === (xV = IV(YV)) || void 0 === xV ? void 0 : xV.text, SV = uV ? wV("general:timeLeft", {
+        time: uV
+      }) : sV, [dV, OV] = (0, JV.useState)(!1), [Ue, ye] = (0, JV.useState)(!1), Qe = (0, JV.useRef)(null), ne = (0, JV.useRef)(null), we = (0, CV.f)({
         showProgressUpdateMessage: !0,
         enabled: !0
-      }), Lr = null === zr, mr = null !== zr && void 0 !== zr ? zr : [], Jr = UM !== uM.NULL_USER_CONTEXT && !UM.isLoggedIn(), dr = Jr && 0 !== (null === zr || void 0 === zr ? void 0 : zr.length), [yr, lr] = (0, OM.useState)([]), [Er, Ur] = (0, OM.useState)(!1), Gr = UM.playerHasRank("youtuber"), Cr = (0, OM.useCallback)((() => oM.c.getPlayerProfile(UM, {
-        lowerCaseName: UM.getPlayerName().toLowerCase()
-      }).then((MM => {
-        lr(MM.socialLinks)
-      })).catch((MM => {
-        console.error("Failed to refresh social links", MM)
-      }))), [UM]);
+      }), Ze = null === we, ve = null !== we && void 0 !== we ? we : [], be = tV !== zV.NULL_USER_CONTEXT && !tV.isLoggedIn(), Ee = be && 0 !== (null === we || void 0 === we ? void 0 : we.length), [Be, je] = (0, JV.useState)([]), [qe, te] = (0, JV.useState)(!1), Fe = tV.playerHasRank("youtuber"), Te = (0, JV.useCallback)((() => aV.b.getPlayerProfile(tV, {
+        lowerCaseName: tV.getPlayerName().toLowerCase()
+      }).then((VV => {
+        je(VV.socialLinks)
+      })).catch((VV => {
+        console.error("Failed to refresh social links", VV)
+      }))), [tV]);
 
-      function er(MM) {
-        MM !== tM && ((0, sM.j)(MM) ? (MM = (0, sM.l)(MM), vM(zM("homePage:nameCharacters"))) : vM(null), nr.current && (nr.current.value = MM), AM(MM))
+      function Pe(VV) {
+        VV !== XV && ((0, gV.k)(VV) ? (VV = (0, gV.o)(VV), fV(wV("homePage:nameCharacters"))) : fV(null), Qe.current && (Qe.current.value = VV), lV(VV))
       }
-      return (0, OM.useEffect)((() => (!0 === SM ? (clearInterval(Qr.current), Qr.current = setInterval(EM, 1e3)) : clearInterval(Qr.current), () => {
-        clearInterval(Qr.current)
-      })), [SM, EM]), (0, OM.useEffect)((() => {
-        var MM;
-        AM(null !== (MM = UM.getPlayerName()) && void 0 !== MM ? MM : "")
-      }), [UM]), (0, OM.useEffect)((() => {
-        if (!SM || !Gr || wM) return;
-        let MM = !1;
-        return Ur(!0), lr([]), oM.c.getPlayerProfile(UM, {
-          lowerCaseName: UM.getPlayerName().toLowerCase()
-        }).then((rM => {
-          MM || lr(rM.socialLinks)
-        })).catch((MM => {
-          console.error("Failed to load social links", MM)
+      return (0, JV.useEffect)((() => (!0 === YV ? (clearInterval(ne.current), ne.current = setInterval(qV, 1e3)) : clearInterval(ne.current), () => {
+        clearInterval(ne.current)
+      })), [YV, qV]), (0, JV.useEffect)((() => {
+        var VV;
+        lV(null !== (VV = tV.getPlayerName()) && void 0 !== VV ? VV : "")
+      }), [tV]), (0, JV.useEffect)((() => {
+        if (!YV || !Fe || NV) return;
+        let VV = !1;
+        return te(!0), je([]), aV.b.getPlayerProfile(tV, {
+          lowerCaseName: tV.getPlayerName().toLowerCase()
+        }).then((eV => {
+          VV || je(eV.socialLinks)
+        })).catch((VV => {
+          console.error("Failed to load social links", VV)
         })).finally((() => {
-          MM || Ur(!1)
+          VV || te(!1)
         })), () => {
-          MM = !0
+          VV = !0
         }
-      }), [SM, Gr, wM, UM]), (0, LM.jsxs)("div", {
-        className: jM()("SettingsMenuRightInner AccountSettings", {
-          AccountSettingsLocked: nM
+      }), [YV, Fe, NV, tV]), (0, ZV.jsxs)("div", {
+        className: UV()("SettingsMenuRightInner AccountSettings", {
+          AccountSettingsLocked: QV
         }),
-        children: [nM && (0, LM.jsx)("div", {
+        children: [QV && (0, ZV.jsx)("div", {
           className: "AccountSettingsInGameWarning",
-          children: zM("settingsMenu:accountSettingsInGameWarning")
-        }), (0, LM.jsxs)("div", {
+          children: wV("settingsMenu:accountSettingsInGameWarning")
+        }), (0, ZV.jsxs)("div", {
           className: "SettingBox SetAccountNameDiv SmallTextLight",
-          children: [(0, LM.jsxs)("div", {
+          children: [(0, ZV.jsxs)("div", {
             className: "AccountSettingsLabel AccountSettingsNameLabel",
-            children: [zM("homePage:discordNamePopupTitle"), (0, LM.jsxs)(WM.LinkPreserveSearch, {
+            children: [wV("homePage:discordNamePopupTitle"), (0, ZV.jsxs)(RV.LinkPreserveSearch, {
               className: "AccountSettingsViewProfile",
-              to: (0, DM.f)({
-                name: UM.getPlayerName()
+              to: (0, DV.l)({
+                name: tV.getPlayerName()
               }),
               onClick: () => {
-                bM.d.set({
+                AV.b.set({
                   openEverythingMenuName: null
                 })
               },
-              children: [(0, LM.jsx)(PM.b, {
+              children: [(0, ZV.jsx)(pV.b, {
                 name: "arrow-up-right-from-square"
-              }), " ", zM("profileCard:viewProfile")]
+              }), " ", wV("profileCard:viewProfile")]
             })]
-          }), (0, LM.jsxs)("div", {
+          }), (0, ZV.jsxs)("div", {
             className: "EnterAccNameDivWrapper",
             "data-pad-initial-area": !0,
-            children: [(0, LM.jsxs)("div", {
+            children: [(0, ZV.jsxs)("div", {
               className: "EnterAccNameInputRow",
-              children: [yM.featureFlags.canChangeName && (0, LM.jsx)(GM.b, {
+              children: [BV.featureFlags.canChangeName && (0, ZV.jsx)(FV.d, {
                 className: "EnterName",
-                placeholderText: zM("homePage:enterName"),
-                maxLength: sM.g,
-                defaultValue: tM,
-                onValueChange: MM => {
-                  er(MM)
+                placeholderText: wV("homePage:enterName"),
+                maxLength: gV.f,
+                defaultValue: XV,
+                onValueChange: VV => {
+                  Pe(VV)
                 },
-                forcedText: VM || !yM.featureFlags.canChangeName ? tM : null,
+                forcedText: dV || !BV.featureFlags.canChangeName ? XV : null,
                 blurOnEnter: !0,
-                domRef: nr
-              }), (0, LM.jsx)(QM.e, {
+                domRef: Qe
+              }), (0, ZV.jsx)(nV.f, {
                 className: "ChooseRandomNameButton",
                 onClick: () => {
-                  er((0, sM.f)())
+                  Pe((0, gV.d)())
                 },
-                children: (0, LM.jsx)(PM.b, {
+                children: (0, ZV.jsx)(pV.b, {
                   name: "dice",
                   className: "ChooseRandomNameIcon"
                 })
-              }), !yM.featureFlags.canChangeName && (0, LM.jsx)("div", {
+              }), !BV.featureFlags.canChangeName && (0, ZV.jsx)("div", {
                 className: "EnterName NoInput",
-                children: (0, sM.e)(tM, !yM.featureFlags.canSeeRealPlayerNames)
+                children: (0, gV.b)(XV, !BV.featureFlags.canSeeRealPlayerNames)
               })]
-            }), (0, LM.jsx)(QM.e, {
+            }), (0, ZV.jsx)(nV.f, {
               className: "ChooseNameButton",
-              disabled: VM || tM === UM.getPlayerName(),
+              disabled: dV || XV === tV.getPlayerName(),
               onClick: () => {
-                tM.length < sM.i ? vM(zM("homePage:changeNameMinLengthError", {
-                  length: sM.i
-                })) : tM.length > sM.g ? vM(zM("homePage:changeNameMaxLengthError", {
-                  length: sM.g
-                })) : (cM(!0), vM(null), (0, RM.j)(UM, tM).then((MM => {
-                  cM(!1), "taken" === MM.outcome ? vM(zM("homePage:nameTaken")) : "refused" === MM.outcome ? vM(MM.message) : "failed" === MM.outcome && vM(zM((0, RM.i)(MM.failure)))
+                XV.length < gV.h ? fV(wV("homePage:changeNameMinLengthError", {
+                  length: gV.h
+                })) : XV.length > gV.f ? fV(wV("homePage:changeNameMaxLengthError", {
+                  length: gV.f
+                })) : (OV(!0), fV(null), (0, GV.g)(tV, XV).then((VV => {
+                  OV(!1), "taken" === VV.outcome ? fV(wV("homePage:nameTaken")) : "refused" === VV.outcome ? fV(VV.message) : "failed" === VV.outcome && fV(wV((0, GV.e)(VV.failure)))
                 })))
               },
-              children: zM("general:choose")
+              children: wV("general:choose")
             })]
-          }), xM && (0, LM.jsx)("div", {
+          }), LV && (0, ZV.jsx)("div", {
             className: "ChooseAccNameError",
-            children: xM
+            children: LV
           })]
-        }), (0, LM.jsx)(Dr, {
-          userContext: UM
-        }), (0, LM.jsx)(eM.c, {
+        }), (0, ZV.jsx)(De, {
+          userContext: tV
+        }), (0, ZV.jsx)(PV.e, {
           label: (() => {
-            if ((0, ir.m)(JM)) {
-              const MM = (0, aM.n)(mM.code, "general:timeLeft"),
-                rM = (0, fM.db)(MM, Date.now(), JM + ir.i);
-              return `${zM("settingsMenu:hideSocialLocation")} (${zM("general:timeLeft",{time:rM})})`
+            if ((0, xe.l)(bV)) {
+              const VV = (0, yV.m)(vV.code, "general:timeLeft"),
+                eV = (0, oV.bb)(VV, Date.now(), bV + xe.k);
+              return `${wV("settingsMenu:hideSocialLocation")} (${wV("general:timeLeft",{time:eV})})`
             }
-            return zM("settingsMenu:hideSocialLocation")
+            return wV("settingsMenu:hideSocialLocation")
           })(),
           onClick: () => {
-            const MM = !(0, ir.m)(JM);
-            (0, Sr.reportAnalyticsClick)({
+            const VV = !(0, xe.l)(bV);
+            (0, Ye.reportAnalyticsClick)({
               id: "social.hide_location",
-              value: MM ? "on" : "off"
-            }), ar(!0), oM.c.setHideSocialLocation(UM, MM).then((() => {
-              bM.d.set({
-                hideSocialLocationFrom: MM ? Date.now() : null
+              value: VV ? "on" : "off"
+            }), ye(!0), aV.b.setHideSocialLocation(tV, VV).then((() => {
+              AV.b.set({
+                hideSocialLocationFrom: VV ? Date.now() : null
               })
             })).finally((() => {
-              ar(!1)
+              ye(!1)
             }))
           },
-          checked: (0, ir.m)(JM),
-          disabled: jr
-        }), (0, LM.jsx)(Mr, {
-          loggedIn: UM.isLoggedIn(),
-          playerDbId: UM.whamm
-        }), Gr && (0, LM.jsxs)("div", {
+          checked: (0, xe.l)(bV),
+          disabled: Ue
+        }), (0, ZV.jsx)(Ve, {
+          loggedIn: tV.isLoggedIn(),
+          playerDbId: tV.whamm
+        }), Fe && (0, ZV.jsxs)("div", {
           className: "SettingBox AccountSettingsSocialLinks",
-          children: [(0, LM.jsx)("div", {
+          children: [(0, ZV.jsx)("div", {
             className: "AccountSettingsLabel",
-            children: zM("settingsMenu:socialLinks")
-          }), Er && (0, LM.jsx)(CM.d, {}), !Er && (0, LM.jsx)(Or.b, {
-            socialLinks: yr,
+            children: wV("settingsMenu:socialLinks")
+          }), qe && (0, ZV.jsx)(TV.d, {}), !qe && (0, ZV.jsx)(Je.c, {
+            socialLinks: Be,
             editable: !0,
-            userContext: UM,
-            onLinksUpdated: Cr
+            userContext: tV,
+            onLinksUpdated: Te
           })]
-        }), (0, LM.jsxs)("div", {
+        }), (0, ZV.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, LM.jsx)("div", {
+          children: [(0, ZV.jsx)("div", {
             className: "AccountSettingsLabel",
-            children: zM(dr ? "auth:loginOrSwitchAccount" : "auth:login")
-          }), Lr && (0, LM.jsx)(CM.d, {}), !Lr && 0 === mr.length && (0, LM.jsx)("div", {
+            children: wV(Ee ? "auth:loginOrSwitchAccount" : "auth:login")
+          }), Ze && (0, ZV.jsx)(TV.d, {}), !Ze && 0 === ve.length && (0, ZV.jsx)("div", {
             className: "NoLoginOptions",
-            children: zM("auth:noLoginOptions")
-          }), !Lr && mr.length > 0 && "crazygames" !== gM.siteUsed && (0, LM.jsx)("div", {
+            children: wV("auth:noLoginOptions")
+          }), !Ze && ve.length > 0 && "crazygames" !== MV.siteUsed && (0, ZV.jsx)("div", {
             className: "AccountSettingsLoginButtons",
-            children: mr
-          }), !Lr && mr.length > 0 && "crazygames" === gM.siteUsed && (0, LM.jsxs)("div", {
+            children: ve
+          }), !Ze && ve.length > 0 && "crazygames" === MV.siteUsed && (0, ZV.jsxs)("div", {
             className: "AccountSettingsLoginButtons",
-            children: [mr[0], mr.length > 1 && (0, LM.jsxs)(LM.Fragment, {
-              children: [(0, LM.jsxs)("div", {
+            children: [ve[0], ve.length > 1 && (0, ZV.jsxs)(ZV.Fragment, {
+              children: [(0, ZV.jsxs)("div", {
                 className: "LegacyLoginOptionsHeader",
-                children: [(0, LM.jsx)("span", {
+                children: [(0, ZV.jsx)("span", {
                   className: "LegacyLoginOptionsTitle",
-                  children: zM("auth:legacyLoginOptions")
-                }), (0, LM.jsx)(rr.e, {
+                  children: wV("auth:legacyLoginOptions")
+                }), (0, ZV.jsx)(ee.c, {
                   className: "LegacyLoginOptionsInfoIcon",
-                  hoverInfo: zM("auth:legacyLoginOptionsInfo")
+                  hoverInfo: wV("auth:legacyLoginOptionsInfo")
                 })]
-              }), (0, LM.jsx)("div", {
+              }), (0, ZV.jsx)("div", {
                 className: "LegacyAccountSettingsLoginButtons",
-                children: mr.slice(1)
+                children: ve.slice(1)
               })]
             })]
-          }), yM.featureFlags.useLogin && (null !== UM.loggedInInfo || UM.isLoggedIn()) && (0, LM.jsxs)(LM.Fragment, {
-            children: [(0, LM.jsx)("div", {
+          }), BV.featureFlags.useLogin && (null !== tV.loggedInInfo || tV.isLoggedIn()) && (0, ZV.jsxs)(ZV.Fragment, {
+            children: [(0, ZV.jsx)("div", {
               className: "AccountSettingsLoginDivider"
-            }), (0, LM.jsxs)(QM.J, {
+            }), (0, ZV.jsxs)(nV.E, {
               onClick: () => {
-                (0, uM.forceGlobalSignOut)()
+                (0, zV.forceGlobalSignOut)()
               },
               className: "AccountSettingsSignedInButton",
-              children: [(0, LM.jsx)(PM.b, {
+              children: [(0, ZV.jsx)(pV.b, {
                 name: "right-from-bracket"
-              }), zM("auth:signOut")]
+              }), wV("auth:signOut")]
             })]
           })]
-        }), !UM.playerHasRank("super") && dM && (0, LM.jsxs)("div", {
+        }), !tV.playerHasRank("super") && EV && (0, ZV.jsxs)("div", {
           className: "SettingBox AccountSettingsSuperRank",
-          children: [(0, LM.jsxs)("div", {
+          children: [(0, ZV.jsxs)("div", {
             className: "AccountSettingsLabel AccountSettingsLabelSuperRank",
-            children: [(0, LM.jsx)(PM.b, {
+            children: [(0, ZV.jsx)(pV.b, {
               name: "bolt"
-            }), zM("homePage:superRank")]
-          }), (0, LM.jsxs)("div", {
+            }), wV("homePage:superRank")]
+          }), (0, ZV.jsxs)("div", {
             className: "AccountSettingsSuperRankProlongContainer",
-            children: [(0, LM.jsxs)(QM.p, {
+            children: [(0, ZV.jsxs)(nV.m, {
               className: "AccountSettingsSuperRankProlong",
               onClick: () => {
-                (0, YM.n)({
+                (0, cV.o)({
                   mode: "self",
                   source: "accountSettings",
                   openItem: "superRank"
                 })
               },
-              children: [(0, LM.jsx)(PM.b, {
+              children: [(0, ZV.jsx)(pV.b, {
                 name: "bolt"
-              }), zM("homePage:getSuperRank")]
-            }), (0, LM.jsxs)(QM.p, {
+              }), wV("homePage:getSuperRank")]
+            }), (0, ZV.jsxs)(nV.m, {
               className: "AccountSettingsSuperRankProlong",
               onClick: () => {
-                (0, YM.n)({
+                (0, cV.o)({
                   mode: "gift",
                   source: "accountSettings",
                   openItem: "superRank"
                 })
               },
-              children: [(0, LM.jsx)(PM.b, {
+              children: [(0, ZV.jsx)(pV.b, {
                 name: "bolt"
-              }), zM("homePage:giftSuperRank")]
+              }), wV("homePage:giftSuperRank")]
             })]
-          }), (0, LM.jsx)(hr, {
-            ...lM
+          }), (0, ZV.jsx)(ke, {
+            ...jV
           })]
-        }), UM.playerHasRank("super") && (0, LM.jsxs)("div", {
+        }), tV.playerHasRank("super") && (0, ZV.jsxs)("div", {
           className: "SettingBox AccountSettingsSuperRank",
-          children: [(0, LM.jsxs)("div", {
+          children: [(0, ZV.jsxs)("div", {
             className: "AccountSettingsLabel AccountSettingsLabelSuperRank",
-            children: [(0, LM.jsx)(PM.b, {
+            children: [(0, ZV.jsx)(pV.b, {
               name: "bolt"
-            }), zM("homePage:superRank"), qM && (0, LM.jsxs)("div", {
+            }), wV("homePage:superRank"), SV && (0, ZV.jsxs)("div", {
               className: "AccountSettingsSuperRankTimeLeft",
-              children: ["(", qM, ")"]
+              children: ["(", SV, ")"]
             })]
-          }), dM && (0, LM.jsxs)("div", {
+          }), EV && (0, ZV.jsxs)("div", {
             className: "AccountSettingsSuperRankProlongContainer",
-            children: [!(0, fM.zc)(UM.superRankInfo) && (0, LM.jsxs)(QM.p, {
+            children: [!(0, oV.Bc)(tV.superRankInfo) && (0, ZV.jsxs)(nV.m, {
               className: "AccountSettingsSuperRankProlong",
-              loading: FM,
+              loading: mV,
               onClick: () => {
-                XM(kM.k.id, null)
+                HV(iV.k.id, null)
               },
-              children: [(0, LM.jsx)(PM.b, {
+              children: [(0, ZV.jsx)(pV.b, {
                 name: "bolt"
-              }), zM("settingsMenu:getSuperRankAdditionalDaysPremiumCurrency", {
-                days: kM.k.product.days,
-                price: kM.k.price
+              }), wV("settingsMenu:getSuperRankAdditionalDaysPremiumCurrency", {
+                days: iV.k.product.days,
+                price: iV.k.price
               })]
-            }), (0, LM.jsxs)(QM.p, {
+            }), (0, ZV.jsxs)(nV.m, {
               className: "AccountSettingsSuperRankProlong",
               onClick: () => {
-                (0, YM.n)({
+                (0, cV.o)({
                   mode: "gift",
                   source: "accountSettings",
                   openItem: "superRank"
                 })
               },
-              children: [(0, LM.jsx)(PM.b, {
+              children: [(0, ZV.jsx)(pV.b, {
                 name: "bolt"
-              }), zM("homePage:giftSuperRank")]
+              }), wV("homePage:giftSuperRank")]
             })]
-          }), BM && (0, LM.jsx)("div", {
+          }), KV && (0, ZV.jsx)("div", {
             className: "AccountSettingsSuperRankProlongError SmallTextBold",
-            children: zM(BM.translationKey)
-          }), (0, LM.jsx)(hr, {
-            ...lM
+            children: wV(KV.translationKey)
+          }), (0, ZV.jsx)(ke, {
+            ...jV
           })]
-        }), (0, LM.jsx)(Pr, {
-          showing: SM
-        }), yM.featureFlags.useSocialFeatures && (0, LM.jsx)(Wr, {
-          showing: SM
-        }), (0, LM.jsxs)("div", {
+        }), (0, ZV.jsx)(pe, {
+          showing: YV
+        }), BV.featureFlags.useSocialFeatures && (0, ZV.jsx)(Re, {
+          showing: YV
+        }), (0, ZV.jsxs)("div", {
           className: "SettingBoxGroup AccountSettingsDeleteAccountGroup",
-          children: [(0, LM.jsxs)("div", {
+          children: [(0, ZV.jsxs)("div", {
             className: "SettingBox AccountSettingsDeleteAccount SettingBoxWarning",
-            children: [(0, LM.jsx)("div", {
+            children: [(0, ZV.jsx)("div", {
               className: "AccountSettingsDeleteAccountButtonTitle",
-              children: zM(Zr(Jr, dr))
-            }), (0, gM.isDiscordClient)() && (0, LM.jsx)("div", {
+              children: wV(Ce(be, Ee))
+            }), (0, MV.isDiscordClient)() && (0, ZV.jsx)("div", {
               className: "AccountSettingsDeleteAccountButtonTitle",
-              children: zM("auth:discordActivityKickWarning")
-            }), (0, LM.jsx)(wr, {
-              showing: SM
+              children: wV("auth:discordActivityKickWarning")
+            }), (0, ZV.jsx)(Ne, {
+              showing: YV
             })]
-          }), (0, LM.jsx)("div", {
+          }), (0, ZV.jsx)("div", {
             className: "SettingBox SettingsBoxWarning",
-            children: zM(Jr ? "auth:deleteGuestAccountWarning" : "auth:deleteAccountLossWarning")
+            children: wV(be ? "auth:deleteGuestAccountWarning" : "auth:deleteAccountLossWarning")
           })]
         })]
       })
     }));
 
-    function Zr(MM, rM) {
-      return MM ? rM ? "auth:deleteGuestAccountButtonTitle" : "auth:deleteGuestAccountWarning" : "auth:deleteAccountButtonTitle"
+    function Ce(VV, eV) {
+      return VV ? eV ? "auth:deleteGuestAccountButtonTitle" : "auth:deleteGuestAccountWarning" : "auth:deleteAccountButtonTitle"
     }
-    var or = iM(34938),
-      fr = iM(3530),
-      Yr = iM(1258),
-      Nr = iM(1503),
-      Ar = iM(2084),
-      xr = iM(9472),
-      vr = iM(34940);
+    var ae = xV(35213),
+      oe = xV(3551),
+      ce = xV(1279),
+      he = xV(1530),
+      le = xV(2100),
+      Le = xV(9482),
+      fe = xV(35218);
 
-    function Fr() {
+    function me() {
       const {
-        t: MM
-      } = (0, aM.A)();
-      return (0, Ar.j)("localPlayerAlive") ? (0, LM.jsx)(xr.c, {
+        t: VV
+      } = (0, yV.A)();
+      return (0, le.h)("localPlayerAlive") ? (0, ZV.jsx)(Le.c, {
         icon: "camera-alt",
-        title: MM("screenshotMode:title"),
-        sub: MM("screenshotMode:entrySub"),
-        onClick: vr.b
+        title: VV("screenshotMode:title"),
+        sub: VV("screenshotMode:entrySub"),
+        onClick: fe.d
       }) : null
     }
-    var Br = iM(34952);
-    const Xr = (0, OM.memo)((function(MM) {
+    var Ke = xV(35232);
+    const He = (0, JV.memo)((function(VV) {
         let {
-          inGame: rM
-        } = MM;
+          inGame: eV
+        } = VV;
         const {
-          t: iM,
-          selectedLanguage: OM
-        } = (0, aM.A)(), {
-          clientEscMenuOptions: SM,
-          showDebugOverlay: jM,
-          isTouchScreen: PM
-        } = (0, bM.m)(["clientEscMenuOptions", "showDebugOverlay", "isTouchScreen"]), nM = (0, JM.f)("hideCoordinates");
-        let QM = "settingsMenu:showCoordinates",
-          zM = "settingsMenu:showChunkCoordinates";
+          t: xV,
+          selectedLanguage: JV
+        } = (0, yV.A)(), {
+          clientEscMenuOptions: YV,
+          showDebugOverlay: UV,
+          isTouchScreen: pV
+        } = (0, AV.l)(["clientEscMenuOptions", "showDebugOverlay", "isTouchScreen"]), QV = (0, bV.j)("hideCoordinates");
+        let nV = "settingsMenu:showCoordinates",
+          wV = "settingsMenu:showChunkCoordinates";
 
-        function mM(MM) {
-          const rM = new Intl.DisplayNames([MM], {
+        function vV(VV) {
+          const eV = new Intl.DisplayNames([VV], {
             type: "language"
-          }).of(MM);
-          return rM.charAt(0).toUpperCase() + rM.slice(1)
+          }).of(VV);
+          return eV.charAt(0).toUpperCase() + eV.slice(1)
         }
-        return nM && (QM = "settingsMenu:showCoordinatesHidden", zM = "settingsMenu:showChunkCoordinatesHidden"), (0, LM.jsxs)("div", {
+        return QV && (nV = "settingsMenu:showCoordinatesHidden", wV = "settingsMenu:showChunkCoordinatesHidden"), (0, ZV.jsxs)("div", {
           className: "SettingsMenuRightInner",
-          children: [rM && yM.featureFlags.canUseInviteLinks && (0, LM.jsxs)("div", {
+          children: [eV && BV.featureFlags.canUseInviteLinks && (0, ZV.jsxs)("div", {
             className: "SettingBox",
-            children: [(0, LM.jsx)("div", {
+            children: [(0, ZV.jsx)("div", {
               className: "SettingsMenuInviteHeader",
-              children: iM("settingsMenu:inviteLink")
-            }), (0, LM.jsx)(or.e, {})]
-          }), (0, LM.jsxs)("div", {
+              children: xV("settingsMenu:inviteLink")
+            }), (0, ZV.jsx)(ae.g, {})]
+          }), (0, ZV.jsxs)("div", {
             className: "SettingBox",
-            children: [(0, LM.jsx)("div", {
+            children: [(0, ZV.jsx)("div", {
               className: "SliderText",
               style: {
                 marginBottom: "10px"
               },
-              children: iM("settingsMenu:language")
-            }), (0, LM.jsx)(fr.e, {
-              options: Object.entries(aM.g).map((MM => {
-                let [rM, iM] = MM;
+              children: xV("settingsMenu:language")
+            }), (0, ZV.jsx)(oe.c, {
+              options: Object.entries(yV.g).map((VV => {
+                let [eV, xV] = VV;
                 return {
-                  label: (0, LM.jsxs)("div", {
+                  label: (0, ZV.jsxs)("div", {
                     className: "SettingsMenuLanguageOption",
-                    children: [(0, LM.jsx)("img", {
-                      src: iM.flagImg,
+                    children: [(0, ZV.jsx)("img", {
+                      src: xV.flagImg,
                       alt: "flag"
-                    }), (0, LM.jsxs)("span", {
-                      children: [mM(rM), " ", (0, LM.jsxs)("span", {
+                    }), (0, ZV.jsxs)("span", {
+                      children: [vV(eV), " ", (0, ZV.jsxs)("span", {
                         className: "SettingsMenuLanguageOptionCode",
-                        children: ["(", rM, ")"]
+                        children: ["(", eV, ")"]
                       })]
                     })]
                   }),
-                  value: rM
+                  value: eV
                 }
               })),
-              value: OM.code,
-              onChange: MM => {
-                Yr.e.get().setCurrentLanguage(MM.value)
+              value: JV.code,
+              onChange: VV => {
+                ce.c.get().setCurrentLanguage(VV.value)
               }
             })]
-          }), rM && PM && (0, Br.e)() && (0, LM.jsx)(Fr, {}), !(0, yM.isMobileApp)() && (0, Nr.j)() && yM.featureFlags.useForceRotateForceFullscreenOverlay && (0, LM.jsx)(eM.c, {
-            label: iM("settingsMenu:disableFullscreenMode"),
-            checked: SM.disableFullscreen,
-            onClick: MM => {
-              bM.d.setClientEscMenuOptions({
-                disableFullscreen: MM
+          }), eV && pV && (0, Ke.b)() && (0, ZV.jsx)(me, {}), !(0, BV.isMobileApp)() && (0, he.k)() && BV.featureFlags.useForceRotateForceFullscreenOverlay && (0, ZV.jsx)(PV.e, {
+            label: xV("settingsMenu:disableFullscreenMode"),
+            checked: YV.disableFullscreen,
+            onClick: VV => {
+              AV.b.setClientEscMenuOptions({
+                disableFullscreen: VV
               })
             }
-          }), (0, LM.jsx)(eM.c, {
-            label: iM(QM),
-            checked: SM.showCoordinates,
-            onClick: MM => {
-              bM.d.setClientEscMenuOptions({
-                showCoordinates: MM
+          }), (0, ZV.jsx)(PV.e, {
+            label: xV(nV),
+            checked: YV.showCoordinates,
+            onClick: VV => {
+              AV.b.setClientEscMenuOptions({
+                showCoordinates: VV
               })
             },
-            disabled: nM
-          }), (0, LM.jsx)(eM.c, {
-            label: iM(zM),
-            checked: SM.showChunkCoordinates,
-            onClick: MM => {
-              bM.d.setClientEscMenuOptions({
-                showChunkCoordinates: MM
+            disabled: QV
+          }), (0, ZV.jsx)(PV.e, {
+            label: xV(wV),
+            checked: YV.showChunkCoordinates,
+            onClick: VV => {
+              AV.b.setClientEscMenuOptions({
+                showChunkCoordinates: VV
               })
             },
-            disabled: nM
-          }), (0, LM.jsx)(eM.c, {
-            label: iM("settingsMenu:showFps"),
-            checked: SM.showFPS,
-            onClick: MM => {
-              bM.d.setClientEscMenuOptions({
-                showFPS: MM
+            disabled: QV
+          }), (0, ZV.jsx)(PV.e, {
+            label: xV("settingsMenu:showFps"),
+            checked: YV.showFPS,
+            onClick: VV => {
+              AV.b.setClientEscMenuOptions({
+                showFPS: VV
               })
             }
-          }), (0, LM.jsx)(eM.c, {
-            label: iM("settingsMenu:disableBunnyHopping"),
-            checked: SM.disableBunnyHopping,
-            onClick: MM => {
-              bM.d.setClientEscMenuOptions({
-                disableBunnyHopping: MM
+          }), (0, ZV.jsx)(PV.e, {
+            label: xV("settingsMenu:disableBunnyHopping"),
+            checked: YV.disableBunnyHopping,
+            onClick: VV => {
+              AV.b.setClientEscMenuOptions({
+                disableBunnyHopping: VV
               })
             }
-          }), (0, Er.u)() && (0, LM.jsx)(eM.c, {
-            label: iM("settingsMenu:showChat"),
-            checked: SM.showChat,
-            onClick: MM => {
-              bM.d.setClientEscMenuOptions({
-                showChat: MM
+          }), (0, qe.s)() && (0, ZV.jsx)(PV.e, {
+            label: xV("settingsMenu:showChat"),
+            checked: YV.showChat,
+            onClick: VV => {
+              AV.b.setClientEscMenuOptions({
+                showChat: VV
               })
             }
-          }), (0, LM.jsx)(eM.c, {
-            label: iM("settingsMenu:showDebugOverlay"),
-            checked: jM,
-            onClick: MM => {
-              bM.d.set({
-                showDebugOverlay: MM
+          }), (0, ZV.jsx)(PV.e, {
+            label: xV("settingsMenu:showDebugOverlay"),
+            checked: UV,
+            onClick: VV => {
+              AV.b.set({
+                showDebugOverlay: VV
               })
             }
-          }), yM.featureFlags.useSocialFeatures && (0, LM.jsx)(eM.c, {
-            label: iM("settingsMenu:showFriendOnlineToasts"),
-            checked: SM.showFriendOnlineToasts,
-            onClick: MM => {
-              bM.d.setClientEscMenuOptions({
-                showFriendOnlineToasts: MM
+          }), BV.featureFlags.useSocialFeatures && (0, ZV.jsx)(PV.e, {
+            label: xV("settingsMenu:showFriendOnlineToasts"),
+            checked: YV.showFriendOnlineToasts,
+            onClick: VV => {
+              AV.b.setClientEscMenuOptions({
+                showFriendOnlineToasts: VV
               })
             }
-          }), (0, LM.jsx)(eM.c, {
-            label: iM("settingsMenu:showNewItemIndicator"),
-            checked: SM.showNewItemIndicator,
-            onClick: MM => {
-              bM.d.setClientEscMenuOptions({
-                showNewItemIndicator: MM
+          }), (0, ZV.jsx)(PV.e, {
+            label: xV("settingsMenu:showNewItemIndicator"),
+            checked: YV.showNewItemIndicator,
+            onClick: VV => {
+              AV.b.setClientEscMenuOptions({
+                showNewItemIndicator: VV
               })
             }
           })]
         })
       })),
-      Ir = (0, OM.memo)((function() {
+      ue = (0, JV.memo)((function() {
         const {
-          t: MM
-        } = (0, aM.A)(), {
-          soundVolume: rM,
-          musicVolume: iM
-        } = (0, bM.m)(["soundVolume", "musicVolume"]);
-        return (0, LM.jsxs)("div", {
+          t: VV
+        } = (0, yV.A)(), {
+          soundVolume: eV,
+          musicVolume: xV
+        } = (0, AV.l)(["soundVolume", "musicVolume"]);
+        return (0, ZV.jsxs)("div", {
           className: "SettingsMenuRightInner",
-          children: [(0, LM.jsx)(eM.h, {
-            name: MM("settingsMenu:musicVolume"),
+          children: [(0, ZV.jsx)(PV.m, {
+            name: VV("settingsMenu:musicVolume"),
             min: 0,
             max: 1,
             step: .01,
-            initValue: iM,
-            onChange: MM => {
-              bM.d.set({
-                musicVolume: Math.round(100 * MM) / 100
+            initValue: xV,
+            onChange: VV => {
+              AV.b.set({
+                musicVolume: Math.round(100 * VV) / 100
               })
             },
-            format: MM => MM.toFixed(2)
-          }), (0, LM.jsx)(eM.h, {
-            name: MM("settingsMenu:soundEffectsVolume"),
+            format: VV => VV.toFixed(2)
+          }), (0, ZV.jsx)(PV.m, {
+            name: VV("settingsMenu:soundEffectsVolume"),
             min: 0,
             max: 1,
             step: .01,
-            initValue: rM,
-            onChange: MM => {
-              bM.d.set({
-                soundVolume: Math.round(100 * MM) / 100
+            initValue: eV,
+            onChange: VV => {
+              AV.b.set({
+                soundVolume: Math.round(100 * VV) / 100
               })
             },
-            format: MM => MM.toFixed(2)
+            format: VV => VV.toFixed(2)
           })]
         })
       }));
-    var Kr = iM(730),
-      qr = iM(1516),
-      Tr = iM(2531),
-      Vr = iM(2516),
-      cr = iM(3881);
-    const Mi = {
+    var se = xV(742),
+      Se = xV(1542),
+      Ie = xV(2564),
+      de = xV(2555),
+      Oe = xV(3931);
+    const Vx = {
       app: "notificationSettings:pushTargetsApp",
       browser: "notificationSettings:pushTargetsBrowser",
       msnPlay: "notificationSettings:pushTargetsMsnPlay"
     };
 
-    function ri() {
+    function ex() {
       const {
-        t: MM
-      } = (0, aM.A)(), rM = (0, cr.b)(), {
-        mobilePushNotificationsCanAsk: iM
-      } = (0, bM.m)(["mobilePushNotificationsCanAsk"]), [SM, jM] = (0, OM.useState)(null), [PM, nM] = (0, OM.useState)(!1), [zM, mM] = (0, OM.useState)(null), [HM, hM] = (0, OM.useState)(!1), JM = (0, OM.useCallback)((() => {
-        (0, Tr.d)().then((MM => {
-          rM.current && (jM(MM), nM(!1))
-        })).catch((MM => {
-          console.error("Failed to load push notification targets:", MM), rM.current && nM(!0)
+        t: VV
+      } = (0, yV.A)(), eV = (0, Oe.e)(), {
+        mobilePushNotificationsCanAsk: xV
+      } = (0, AV.l)(["mobilePushNotificationsCanAsk"]), [YV, UV] = (0, JV.useState)(null), [pV, QV] = (0, JV.useState)(!1), [wV, vV] = (0, JV.useState)(null), [rV, kV] = (0, JV.useState)(!1), bV = (0, JV.useCallback)((() => {
+        (0, Ie.d)().then((VV => {
+          eV.current && (UV(VV), QV(!1))
+        })).catch((VV => {
+          console.error("Failed to load push notification targets:", VV), eV.current && QV(!0)
         }))
-      }), [rM]), dM = (0, OM.useCallback)((() => {
-        (0, Vr.g)().then((MM => {
-          rM.current && mM((() => MM))
+      }), [eV]), EV = (0, JV.useCallback)((() => {
+        (0, de.h)().then((VV => {
+          eV.current && vV((() => VV))
         }))
-      }), [rM]);
-      (0, OM.useEffect)((() => {
-        JM()
-      }), [JM]), (0, OM.useEffect)((() => {
-        dM()
-      }), [dM, iM]), (0, qr.d)(Tr.i, JM);
-      const yM = null === SM ? [] : Object.keys(Mi).filter((MM => SM[MM] > 0));
-      return (0, LM.jsxs)("div", {
+      }), [eV]);
+      (0, JV.useEffect)((() => {
+        bV()
+      }), [bV]), (0, JV.useEffect)((() => {
+        EV()
+      }), [EV, xV]), (0, Se.g)(Ie.i, bV);
+      const BV = null === YV ? [] : Object.keys(Vx).filter((VV => YV[VV] > 0));
+      return (0, ZV.jsxs)("div", {
         className: "SettingBox PushNotificationSettings",
-        children: [(0, LM.jsx)("div", {
+        children: [(0, ZV.jsx)("div", {
           className: "SliderText",
-          children: MM("notificationSettings:pushNotifications")
-        }), null === SM && PM && (0, LM.jsx)("div", {
+          children: VV("notificationSettings:pushNotifications")
+        }), null === YV && pV && (0, ZV.jsx)("div", {
           className: "PushNotificationSettingsText",
-          children: MM("notificationSettings:pushTargetsLoadFailed")
-        }), null !== SM && 0 === yM.length && (0, LM.jsx)("div", {
+          children: VV("notificationSettings:pushTargetsLoadFailed")
+        }), null !== YV && 0 === BV.length && (0, ZV.jsx)("div", {
           className: "PushNotificationSettingsText",
-          children: MM("notificationSettings:pushTargetsNone")
-        }), yM.length > 0 && (0, LM.jsx)("ul", {
+          children: VV("notificationSettings:pushTargetsNone")
+        }), BV.length > 0 && (0, ZV.jsx)("ul", {
           className: "PushNotificationSettingsTargets",
-          children: yM.map((rM => {
-            var iM;
-            return (0, LM.jsx)("li", {
-              children: MM(Mi[rM], {
-                count: null !== (iM = null === SM || void 0 === SM ? void 0 : SM[rM]) && void 0 !== iM ? iM : 0
+          children: BV.map((eV => {
+            var xV;
+            return (0, ZV.jsx)("li", {
+              children: VV(Vx[eV], {
+                count: null !== (xV = null === YV || void 0 === YV ? void 0 : YV[eV]) && void 0 !== xV ? xV : 0
               })
-            }, rM)
+            }, eV)
           }))
-        }), null !== zM && (0, LM.jsx)(QM.e, {
+        }), null !== wV && (0, ZV.jsx)(nV.f, {
           className: "PushNotificationSettingsButton",
-          loading: HM,
+          loading: rV,
           onClick: () => {
-            hM(!0), zM().catch((MM => {
-              console.error("Failed to turn on push notifications:", MM)
+            kV(!0), wV().catch((VV => {
+              console.error("Failed to turn on push notifications:", VV)
             })).finally((() => {
-              rM.current && (hM(!1), dM())
+              eV.current && (kV(!1), EV())
             }))
           },
-          children: MM("notificationSettings:pushTurnOn")
+          children: VV("notificationSettings:pushTurnOn")
         })]
       })
     }
-    var ii = iM(2746),
-      Oi = iM(2500),
-      Si = iM(30);
-    async function ji() {
-      return "dailyDropReminderAsked_" + (await uM.userContextManager.getCurrentUserContext()).whamm
+    var xx = xV(2808),
+      Jx = xV(2546),
+      Yx = xV(40);
+    async function Ux() {
+      return "dailyDropReminderAsked_" + (await zV.userContextManager.getCurrentUserContext()).whamm
     }
 
-    function ai(MM) {
-      return async function(MM) {
-        if (MM.remindersOn || (0, bM.h)(bM.d.get("gameState"))) return null;
-        const rM = await ji();
-        if (null !== Si.g.getItem(rM)) return null;
-        const [iM, OM] = await Promise.all([(0, Vr.g)().catch((MM => (console.error("Couldn't tell whether this device can take push notifications:", MM), null))), Pi()]);
-        if (null === iM && !OM) return null;
-        if (null !== iM && ((0, Oi.c)() || (0, Vr.k)())) return null;
+    function yx(VV) {
+      return async function(VV) {
+        if (VV.remindersOn || (0, AV.d)(AV.b.get("gameState"))) return null;
+        const eV = await Ux();
+        if (null !== Yx.m.getItem(eV)) return null;
+        const [xV, JV] = await Promise.all([(0, de.h)().catch((VV => (console.error("Couldn't tell whether this device can take push notifications:", VV), null))), px()]);
+        if (null === xV && !JV) return null;
+        if (null !== xV && ((0, Jx.e)() || (0, de.k)())) return null;
         return {
-          askedKey: rM,
-          requester: iM
+          askedKey: eV,
+          requester: xV
         }
-      }(MM).catch((MM => (console.error("Failed to tell whether to ask about Lucky Skin Block reminders:", MM), null)))
+      }(VV).catch((VV => (console.error("Failed to tell whether to ask about Lucky Skin Block reminders:", VV), null)))
     }
 
-    function Pi() {
-      return (0, Tr.d)().then((MM => MM.app + MM.browser + MM.msnPlay > 0), (MM => (console.error("Couldn't tell where push notifications reach this account:", MM), !0)))
+    function px() {
+      return (0, Ie.d)().then((VV => VV.app + VV.browser + VV.msnPlay > 0), (VV => (console.error("Couldn't tell where push notifications reach this account:", VV), !0)))
     }
-    async function ni(MM) {
-      const rM = (0, ii.A)({
+    async function Qx(VV) {
+      const eV = (0, xx.u)({
           remindersOn: !0
         }),
-        iM = null === MM ? Promise.resolve() : MM(),
-        [OM, SM] = await Promise.allSettled([rM, iM]);
-      "rejected" === OM.status && console.error("Failed to turn on Lucky Skin Block reminders:", OM.reason), "rejected" === SM.status && console.error("Failed to ask for push notifications for Lucky Skin Block reminders:", SM.reason), "rejected" !== OM.status && "rejected" !== SM.status || sr.k.showMessage({
+        xV = null === VV ? Promise.resolve() : VV(),
+        [JV, YV] = await Promise.allSettled([eV, xV]);
+      "rejected" === JV.status && console.error("Failed to turn on Lucky Skin Block reminders:", JV.reason), "rejected" === YV.status && console.error("Failed to ask for push notifications for Lucky Skin Block reminders:", YV.reason), "rejected" !== JV.status && "rejected" !== YV.status || ge.e.showMessage({
         translationKey: "dailyDrop:remindFailed"
       })
     }
-    const Qi = {
+    const nx = {
         toastAndTray: {
           label: "notificationSettings:friendRequestsAll",
           info: "notificationSettings:friendRequestsAllInfo"
@@ -1339,7 +1339,7 @@ export const modules = {
           info: "notificationSettings:friendRequestsOffInfo"
         }
       },
-      zi = {
+      wx = {
         remindersOn: {
           label: "dailyDrop:settingReminders",
           reportAs: "reminders"
@@ -1350,390 +1350,390 @@ export const modules = {
         }
       };
 
-    function Li(MM) {
+    function Zx(VV) {
       let {
-        setting: rM,
-        value: iM
-      } = MM;
+        setting: eV,
+        value: xV
+      } = VV;
       const {
-        t: SM
-      } = (0, aM.A)(), PM = (0, cr.b)(), [nM, QM] = (0, OM.useState)(null), [zM, mM] = (0, OM.useState)(!1), [HM, hM] = (0, OM.useState)(null);
-      return (0, OM.useEffect)((() => {
-        "remindersOn" === rM && (0, Vr.g)().then((MM => {
-          PM.current && hM((() => MM))
-        }), (MM => {
-          console.error("Couldn't tell whether this device can take push notifications:", MM)
+        t: YV
+      } = (0, yV.A)(), pV = (0, Oe.e)(), [QV, nV] = (0, JV.useState)(null), [wV, vV] = (0, JV.useState)(!1), [rV, kV] = (0, JV.useState)(null);
+      return (0, JV.useEffect)((() => {
+        "remindersOn" === eV && (0, de.h)().then((VV => {
+          pV.current && kV((() => VV))
+        }), (VV => {
+          console.error("Couldn't tell whether this device can take push notifications:", VV)
         }))
-      }), [rM, PM]), (0, LM.jsx)(eM.c, {
-        className: jM()({
-          DailyDropSettingFailed: zM
+      }), [eV, pV]), (0, ZV.jsx)(PV.e, {
+        className: UV()({
+          DailyDropSettingFailed: wV
         }),
-        label: SM(zi[rM].label),
-        checked: null !== nM && void 0 !== nM ? nM : iM,
-        note: zM ? SM("dailyDrop:settingFailed") : void 0,
-        onClick: MM => {
-          null === nM && (QM(MM), mM(!1), MM && null !== HM && HM().catch((MM => {
-            console.error("Failed to ask for push notifications for Lucky Skin Block reminders:", MM)
-          })), (0, ii.w)("daily_drop.setting", `${zi[rM].reportAs}_${MM?"on":"off"}`), "remindersOn" === rM && ji().then((MM => {
-            Si.g.setItem(MM, !0)
-          }), (MM => {
-            console.error("Failed to keep the Lucky Skin Block reminders choice:", MM)
-          })), (0, ii.A)("hidden" === rM ? {
-            hidden: MM
+        label: YV(wx[eV].label),
+        checked: null !== QV && void 0 !== QV ? QV : xV,
+        note: wV ? YV("dailyDrop:settingFailed") : void 0,
+        onClick: VV => {
+          null === QV && (nV(VV), vV(!1), VV && null !== rV && rV().catch((VV => {
+            console.error("Failed to ask for push notifications for Lucky Skin Block reminders:", VV)
+          })), (0, xx.s)("daily_drop.setting", `${wx[eV].reportAs}_${VV?"on":"off"}`), "remindersOn" === eV && Ux().then((VV => {
+            Yx.m.setItem(VV, !0)
+          }), (VV => {
+            console.error("Failed to keep the Lucky Skin Block reminders choice:", VV)
+          })), (0, xx.u)("hidden" === eV ? {
+            hidden: VV
           } : {
-            remindersOn: MM
-          }).catch((MM => {
-            console.error(`Failed to save the Lucky Skin Block's ${rM} setting:`, MM), PM.current && mM(!0)
+            remindersOn: VV
+          }).catch((VV => {
+            console.error(`Failed to save the Lucky Skin Block's ${eV} setting:`, VV), pV.current && vV(!0)
           })).finally((() => {
-            PM.current && QM(null)
+            pV.current && nV(null)
           })))
         }
       })
     }
-    const mi = (0, OM.memo)((function() {
+    const vx = (0, JV.memo)((function() {
       const {
-        t: MM
-      } = (0, aM.A)(), {
-        clientEscMenuOptions: rM
-      } = (0, bM.m)(["clientEscMenuOptions"]), {
-        userContext: iM
-      } = (0, hM.b)(), OM = iM.dailyDrop;
-      return (0, LM.jsxs)("div", {
+        t: VV
+      } = (0, yV.A)(), {
+        clientEscMenuOptions: eV
+      } = (0, AV.l)(["clientEscMenuOptions"]), {
+        userContext: xV
+      } = (0, kV.d)(), JV = xV.dailyDrop;
+      return (0, ZV.jsxs)("div", {
         className: "SettingsMenuRightInner",
-        children: [yM.featureFlags.useSocialFeatures && (0, LM.jsx)(eM.f, {
-          label: MM("notificationSettings:friendRequests"),
-          options: Kr.c.map((rM => ({
-            value: rM,
-            label: MM(Qi[rM].label)
+        children: [BV.featureFlags.useSocialFeatures && (0, ZV.jsx)(PV.i, {
+          label: VV("notificationSettings:friendRequests"),
+          options: se.c.map((eV => ({
+            value: eV,
+            label: VV(nx[eV].label)
           }))),
-          value: rM.friendRequestNotifications,
-          onChange: MM => {
-            bM.d.setClientEscMenuOptions({
-              friendRequestNotifications: MM
+          value: eV.friendRequestNotifications,
+          onChange: VV => {
+            AV.b.setClientEscMenuOptions({
+              friendRequestNotifications: VV
             })
           },
-          circleInfoText: (0, LM.jsx)("div", {
+          circleInfoText: (0, ZV.jsx)("div", {
             className: "NotificationSettingLevelsInfo",
-            children: Kr.c.map((rM => (0, LM.jsxs)("div", {
-              children: [(0, LM.jsx)("b", {
-                children: MM(Qi[rM].label)
-              }), ": ", MM(Qi[rM].info)]
-            }, rM)))
+            children: se.c.map((eV => (0, ZV.jsxs)("div", {
+              children: [(0, ZV.jsx)("b", {
+                children: VV(nx[eV].label)
+              }), ": ", VV(nx[eV].info)]
+            }, eV)))
           })
-        }), null !== OM && (0, LM.jsxs)(LM.Fragment, {
-          children: [(0, LM.jsx)(Li, {
+        }), null !== JV && (0, ZV.jsxs)(ZV.Fragment, {
+          children: [(0, ZV.jsx)(Zx, {
             setting: "remindersOn",
-            value: OM.remindersOn
-          }), (0, LM.jsx)(Li, {
+            value: JV.remindersOn
+          }), (0, ZV.jsx)(Zx, {
             setting: "hidden",
-            value: OM.hidden
+            value: JV.hidden
           })]
-        }), (0, LM.jsx)(ri, {})]
+        }), (0, ZV.jsx)(ex, {})]
       })
     }));
-    var Hi = iM(4887),
-      Ji = iM(181),
-      di = iM(308),
-      yi = iM(7148),
-      li = iM(3855),
-      Ei = iM(34954),
-      Ui = iM(625),
-      Gi = iM(22);
-    var Ci = iM(656),
-      ei = iM(4727);
-    const bi = new Map([
+    var rx = xV(4975),
+      kx = xV(206),
+      bx = xV(348),
+      Ex = xV(7216),
+      Bx = xV(3907),
+      jx = xV(35238),
+      qx = xV(657),
+      tx = xV(32);
+    var Fx = xV(686),
+      Tx = xV(4798);
+    const Px = new Map([
       ["chunkHorizAddDist", "horizontal"],
       ["chunkVertAddDist", "vertical"]
     ]);
 
-    function wi(MM) {
-      return bi.has(MM) ? lM.gameBridge.lookup("jU", null) : null
+    function Ax(VV) {
+      return Px.has(VV) ? jV.gameBridge.lookup("lF", null) : null
     }
 
-    function ti(MM) {
-      if (!(0, Ui.J)(bM.d.get("clientEscMenuOptions")[MM])) return bM.d.get("clientEscMenuOptions")[MM];
-      const rM = wi(MM);
-      return null !== rM ? rM[bi.get(MM)] : Si.g.getItem(MM)
+    function Nx(VV) {
+      if (!(0, qx.J)(AV.b.get("clientEscMenuOptions")[VV])) return AV.b.get("clientEscMenuOptions")[VV];
+      const eV = Ax(VV);
+      return null !== eV ? eV[Px.get(VV)] : Yx.m.getItem(VV)
     }
 
-    function gi(MM, rM) {
-      if ("useTouchControls" === MM) return void(0, ei.d)(rM);
-      MM in bM.d.get("clientEscMenuOptions") && bM.d.setClientEscMenuOptions({
-        [MM]: rM
+    function Xx(VV, eV) {
+      if ("useTouchControls" === VV) return void(0, Tx.c)(eV);
+      VV in AV.b.get("clientEscMenuOptions") && AV.b.setClientEscMenuOptions({
+        [VV]: eV
       });
-      const iM = wi(MM);
-      null !== iM && lM.gameBridge.send("setChunkAddDistance", {
-        ...iM,
-        [bi.get(MM)]: rM
-      }), Si.g.setItem(MM, rM)
+      const xV = Ax(VV);
+      null !== xV && jV.gameBridge.send("setChunkAddDistance", {
+        ...xV,
+        [Px.get(VV)]: eV
+      }), Yx.m.setItem(VV, eV)
     }
-    var ui = iM(4809),
-      Ri = iM(34956),
-      Wi = iM(34959),
-      si = iM(4882),
-      Di = iM(34980);
+    var Mx = xV(4895),
+      zx = xV(35240),
+      Gx = xV(35247),
+      Wx = xV(4973),
+      Rx = xV(35259);
 
-    function ki(MM) {
-      var rM, SM, PM, nM;
+    function gx(VV) {
+      var eV, YV, pV, QV;
       let {
-        minChunkAddDist: QM,
-        getValue: zM,
-        onChange: mM,
-        setApplySettingsCallback: HM
-      } = MM;
+        minChunkAddDist: nV,
+        getValue: wV,
+        onChange: vV,
+        setApplySettingsCallback: rV
+      } = VV;
       const {
-        t: hM
-      } = (0, aM.A)(), {
-        clientEscMenuOptions: dM
-      } = (0, bM.m)(["clientEscMenuOptions", "showDistantNametags"]), lM = (0, OM.useRef)(zM("showFog")), EM = (0, OM.useRef)(dM.antiAliasing), UM = (0, OM.useRef)(dM.useWebGpu), [GM, CM] = (0, OM.useState)(null), [tM, gM] = (0, OM.useState)(!1), [uM, RM] = (0, OM.useState)((() => (0, li.d)(yM.featureFlags.settings.canUseShaderPacks))), [pM] = (0, OM.useState)((() => bM.d.isWebGpuDefaultOff())), [WM] = (0, OM.useState)(di.k), [sM] = (0, OM.useState)((() => !0 === Si.g.getItem(Ur.fc))), [DM] = (0, OM.useState)((() => bM.d.isWebGpuOnStored()));
-      (0, OM.useEffect)((() => {
-        let MM = !1;
-        return (0, yM.hasUsableWebGpuAdapter)().then((async rM => {
-          const iM = sM || DM,
-            OM = !rM && Ci.H && await (0, Di.d)(iM);
-          MM || (CM(rM || OM), gM(OM))
-        })), (0, li.i)(yM.featureFlags.settings.canUseShaderPacks) && (0, yi.d)().then((async rM => {
-          const OM = null !== rM && await async function(MM) {
+        t: kV
+      } = (0, yV.A)(), {
+        clientEscMenuOptions: EV
+      } = (0, AV.l)(["clientEscMenuOptions", "showDistantNametags"]), jV = (0, JV.useRef)(wV("showFog")), qV = (0, JV.useRef)(EV.antiAliasing), tV = (0, JV.useRef)(EV.useWebGpu), [FV, TV] = (0, JV.useState)(null), [XV, MV] = (0, JV.useState)(!1), [zV, GV] = (0, JV.useState)((() => (0, Bx.e)(BV.featureFlags.settings.canUseShaderPacks))), [WV] = (0, JV.useState)((() => AV.b.isWebGpuDefaultOff())), [RV] = (0, JV.useState)(bx.l), [gV] = (0, JV.useState)((() => !0 === Yx.m.getItem(te.jc))), [DV] = (0, JV.useState)((() => AV.b.isWebGpuOnStored()));
+      (0, JV.useEffect)((() => {
+        let VV = !1;
+        return (0, BV.hasUsableWebGpuAdapter)().then((async eV => {
+          const xV = gV || DV,
+            JV = !eV && Fx.I && await (0, Rx.f)(xV);
+          VV || (TV(eV || JV), MV(JV))
+        })), (0, Bx.h)(BV.featureFlags.settings.canUseShaderPacks) && (0, Ex.f)().then((async eV => {
+          const JV = null !== eV && await async function(VV) {
             const [{
-              isShaderPackActive: rM
+              isShaderPackActive: eV
             }, {
-              loadPageShaderPackCompiler: OM
-            }] = await Promise.all([iM.e(152).then((() => iM(7142))), Promise.all([iM.e(89), iM.e(149), iM.e(151)]).then((() => iM(7111)))]);
-            return rM(MM, await OM())
-          }(rM);
-          MM || RM(OM)
+              loadPageShaderPackCompiler: JV
+            }] = await Promise.all([xV.e(152).then((() => xV(7212))), Promise.all([xV.e(89), xV.e(149), xV.e(151)]).then((() => xV(7176)))]);
+            return eV(VV, await JV())
+          }(eV);
+          VV || GV(JV)
         })), () => {
-          MM = !0
+          VV = !0
         }
-      }), [sM, DM]);
-      const kM = (!(uM && !sM) || !tM) && GM,
-        ZM = function(MM, rM, iM, OM, SM) {
-          return (0, Ei.e)(iM, OM) && !0 === rM ? {
+      }), [gV, DV]);
+      const iV = (!(zV && !gV) || !XV) && FV,
+        CV = function(VV, eV, xV, JV, YV) {
+          return (0, jx.e)(xV, JV) && !0 === eV ? {
             translationKey: "settingsMenu:newWebGpuForcedOnByShaderPack",
             checked: !0,
             disabled: !0
           } : {
-            translationKey: !1 !== rM ? "settingsMenu:newWebGpu" : SM ? "settingsMenu:newWebGpuDisabledUntilRestart" : "settingsMenu:newWebGpuUnsupported",
-            checked: MM && !1 !== rM,
-            disabled: !0 !== rM
+            translationKey: !1 !== eV ? "settingsMenu:newWebGpu" : YV ? "settingsMenu:newWebGpuDisabledUntilRestart" : "settingsMenu:newWebGpuUnsupported",
+            checked: VV && !1 !== eV,
+            disabled: !0 !== eV
           }
-        }(dM.useWebGpu, kM, uM, pM, WM),
-        oM = (dM.useWebGpu || (0, Ei.e)(uM, pM)) && uM && !0 === kM,
-        fM = (0, JM.f)("lightingOverride"),
-        YM = !(0, Ui.J)(fM);
-      let NM = "settingsMenu:enableLighting";
-      YM && (NM = fM ? "settingsMenu:enableLightingForcedOn" : "settingsMenu:enableLightingForcedOff");
-      const AM = MM => {
-          var rM, iM, OM;
-          const SM = null !== (rM = MM.showFog) && void 0 !== rM ? rM : zM("showFog"),
-            jM = null !== (iM = MM.antiAliasing) && void 0 !== iM ? iM : dM.antiAliasing,
-            aM = null !== (OM = MM.useWebGpu) && void 0 !== OM ? OM : dM.useWebGpu,
-            PM = !Ci.H && SM !== lM.current || jM !== EM.current || aM !== UM.current;
-          HM(PM ? () => eM.j : null)
+        }(EV.useWebGpu, iV, zV, WV, RV),
+        aV = (EV.useWebGpu || (0, jx.e)(zV, WV)) && zV && !0 === iV,
+        oV = (0, bV.j)("lightingOverride"),
+        cV = !(0, qx.J)(oV);
+      let hV = "settingsMenu:enableLighting";
+      cV && (hV = oV ? "settingsMenu:enableLightingForcedOn" : "settingsMenu:enableLightingForcedOff");
+      const lV = VV => {
+          var eV, xV, JV;
+          const YV = null !== (eV = VV.showFog) && void 0 !== eV ? eV : wV("showFog"),
+            UV = null !== (xV = VV.antiAliasing) && void 0 !== xV ? xV : EV.antiAliasing,
+            yV = null !== (JV = VV.useWebGpu) && void 0 !== JV ? JV : EV.useWebGpu,
+            pV = !Fx.I && YV !== jV.current || UV !== qV.current || yV !== tV.current;
+          rV(pV ? () => PV.q : null)
         },
-        xM = (0, JM.f)("fogChunkDistanceOverride"),
-        vM = (0, JM.f)("fogBlockDistanceOverride"),
-        FM = !(0, Ui.J)(xM) || !(0, Ui.J)(vM),
-        BM = FM ? "settingsMenu:showFogForcedOn" : "settingsMenu:showFog",
-        [XM, IM] = (0, Hi.h)(QM),
-        [KM, qM] = (0, si.e)(QM),
-        TM = hM("settingsMenu:chunkLoadDistanceDeviceLimit"),
-        VM = KM < XM,
-        cM = Math.min(null !== (rM = zM("chunkHorizAddDist")) && void 0 !== rM ? rM : QM[0], KM),
-        Mr = !FM && function(MM, rM) {
-          return !0 === MM.showFog && MM.fogChunkDistance > rM
-        }(dM, cM);
-      return (0, LM.jsxs)("div", {
+        LV = (0, bV.j)("fogChunkDistanceOverride"),
+        fV = (0, bV.j)("fogBlockDistanceOverride"),
+        mV = !(0, qx.J)(LV) || !(0, qx.J)(fV),
+        KV = mV ? "settingsMenu:showFogForcedOn" : "settingsMenu:showFog",
+        [HV, uV] = (0, rx.g)(nV),
+        [sV, SV] = (0, Wx.g)(nV),
+        IV = kV("settingsMenu:chunkLoadDistanceDeviceLimit"),
+        dV = sV < HV,
+        OV = Math.min(null !== (eV = wV("chunkHorizAddDist")) && void 0 !== eV ? eV : nV[0], sV),
+        Ve = !mV && function(VV, eV) {
+          return !0 === VV.showFog && VV.fogChunkDistance > eV
+        }(EV, OV);
+      return (0, ZV.jsxs)("div", {
         className: "SettingsMenuRightInner",
-        children: [(0, LM.jsx)(eM.h, {
-          name: hM("settingsMenu:horizontalChunkLoadDistance"),
-          min: QM[0],
-          max: XM,
-          selectableMax: KM,
-          cappedNote: TM,
+        children: [(0, ZV.jsx)(PV.m, {
+          name: kV("settingsMenu:horizontalChunkLoadDistance"),
+          min: nV[0],
+          max: HV,
+          selectableMax: sV,
+          cappedNote: IV,
           step: 1,
-          initValue: cM,
-          onChange: MM => {
-            !0 === zM("showFog") && MM < zM("fogChunkDistance") && mM("fogChunkDistance", MM), mM("chunkHorizAddDist", MM), Gi.i.Tz("updatedChunkLoadDist")
+          initValue: OV,
+          onChange: VV => {
+            !0 === wV("showFog") && VV < wV("fogChunkDistance") && vV("fogChunkDistance", VV), vV("chunkHorizAddDist", VV), tx.h.QZ("updatedChunkLoadDist")
           },
-          circleInfoText: hM("settingsMenu:chunkLoadDistanceInfo")
-        }), (0, LM.jsx)(eM.h, {
-          name: hM("settingsMenu:verticalChunkLoadDistance"),
-          min: QM[1],
-          max: IM,
-          selectableMax: qM,
-          cappedNote: VM ? void 0 : TM,
+          circleInfoText: kV("settingsMenu:chunkLoadDistanceInfo")
+        }), (0, ZV.jsx)(PV.m, {
+          name: kV("settingsMenu:verticalChunkLoadDistance"),
+          min: nV[1],
+          max: uV,
+          selectableMax: SV,
+          cappedNote: dV ? void 0 : IV,
           step: 1,
-          initValue: Math.min(null !== (SM = zM("chunkVertAddDist")) && void 0 !== SM ? SM : QM[1], qM),
-          onChange: MM => {
-            mM("chunkVertAddDist", MM), Gi.i.Tz("updatedChunkLoadDist")
+          initValue: Math.min(null !== (YV = wV("chunkVertAddDist")) && void 0 !== YV ? YV : nV[1], SV),
+          onChange: VV => {
+            vV("chunkVertAddDist", VV), tx.h.QZ("updatedChunkLoadDist")
           },
-          circleInfoText: hM("settingsMenu:chunkLoadDistanceInfo"),
+          circleInfoText: kV("settingsMenu:chunkLoadDistanceInfo"),
           className: "VerticalChunkLoadSlider"
-        }), (0, LM.jsx)(eM.c, {
-          label: hM("settingsMenu:chunkFadeIn"),
-          checked: dM.chunkFadeIn,
-          onClick: MM => {
-            bM.d.setClientEscMenuOptions({
-              chunkFadeIn: MM
+        }), (0, ZV.jsx)(PV.e, {
+          label: kV("settingsMenu:chunkFadeIn"),
+          checked: EV.chunkFadeIn,
+          onClick: VV => {
+            AV.b.setClientEscMenuOptions({
+              chunkFadeIn: VV
             })
           },
-          circleInfoText: hM("settingsMenu:chunkFadeInInfo")
-        }), wM.devTools.supports("chunkBorders") && (0, LM.jsx)(eM.c, {
-          label: hM("settingsMenu:showChunkBorders"),
-          checked: dM.showChunkBorders,
-          onClick: MM => {
-            bM.d.setClientEscMenuOptions({
-              showChunkBorders: MM
+          circleInfoText: kV("settingsMenu:chunkFadeInInfo")
+        }), NV.devTools.supports("chunkBorders") && (0, ZV.jsx)(PV.e, {
+          label: kV("settingsMenu:showChunkBorders"),
+          checked: EV.showChunkBorders,
+          onClick: VV => {
+            AV.b.setClientEscMenuOptions({
+              showChunkBorders: VV
             })
           },
-          circleInfoText: hM("settingsMenu:showChunkBordersInfo")
-        }), (0, LM.jsx)(eM.c, {
-          label: hM(NM),
-          checked: dM.enableLighting,
-          onClick: MM => {
-            bM.d.setClientEscMenuOptions({
-              enableLighting: MM
+          circleInfoText: kV("settingsMenu:showChunkBordersInfo")
+        }), (0, ZV.jsx)(PV.e, {
+          label: kV(hV),
+          checked: EV.enableLighting,
+          onClick: VV => {
+            AV.b.setClientEscMenuOptions({
+              enableLighting: VV
             })
           },
-          disabled: YM
-        }), (0, LM.jsxs)("div", {
+          disabled: cV
+        }), (0, ZV.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [(0, LM.jsx)(eM.c, {
-            label: hM(BM),
-            checked: dM.showFog,
-            onClick: MM => {
-              AM({
-                showFog: MM
-              }), bM.d.setClientEscMenuOptions({
-                showFog: MM
+          children: [(0, ZV.jsx)(PV.e, {
+            label: kV(KV),
+            checked: EV.showFog,
+            onClick: VV => {
+              lV({
+                showFog: VV
+              }), AV.b.setClientEscMenuOptions({
+                showFog: VV
               })
             },
-            disabled: FM,
-            className: jM()({
-              SettingBoxWarning: Mr
+            disabled: mV,
+            className: UV()({
+              SettingBoxWarning: Ve
             })
-          }), (0, LM.jsx)(eM.h, {
-            name: hM("settingsMenu:fogChunkDistance"),
-            min: QM[0],
-            max: Ji.f.maxChunkHorizAddDistance,
+          }), (0, ZV.jsx)(PV.m, {
+            name: kV("settingsMenu:fogChunkDistance"),
+            min: nV[0],
+            max: kx.f.maxChunkHorizAddDistance,
             step: 1,
-            initValue: null !== (PM = dM.fogChunkDistance) && void 0 !== PM ? PM : QM[0],
-            onChange: MM => {
-              bM.d.setClientEscMenuOptions({
-                fogChunkDistance: MM
-              }), Gi.i.Tz("fogChunkDistanceChanged", MM)
+            initValue: null !== (pV = EV.fogChunkDistance) && void 0 !== pV ? pV : nV[0],
+            onChange: VV => {
+              AV.b.setClientEscMenuOptions({
+                fogChunkDistance: VV
+              }), tx.h.QZ("fogChunkDistanceChanged", VV)
             },
-            circleInfoText: hM("settingsMenu:fogChunkDistanceInfo"),
-            disabled: FM || !1 === zM("showFog"),
-            className: jM()({
-              SettingBoxWarning: Mr
+            circleInfoText: kV("settingsMenu:fogChunkDistanceInfo"),
+            disabled: mV || !1 === wV("showFog"),
+            className: UV()({
+              SettingBoxWarning: Ve
             })
-          }), Mr && (0, LM.jsx)("div", {
+          }), Ve && (0, ZV.jsx)("div", {
             className: "SettingBox SettingsBoxWarning",
-            children: hM("settingsMenu:fogChunkDistanceInfo")
+            children: kV("settingsMenu:fogChunkDistanceInfo")
           })]
-        }), !Ci.H && (0, LM.jsx)(eM.c, {
-          label: hM(oM ? "settingsMenu:disableBlockTextureAtlasUnavailableWithShaderPack" : "settingsMenu:disableBlockTextureAtlas"),
-          checked: !oM && dM.disableTexAtlas,
-          onClick: MM => {
-            bM.d.setClientEscMenuOptions({
-              disableTexAtlas: MM
+        }), !Fx.I && (0, ZV.jsx)(PV.e, {
+          label: kV(aV ? "settingsMenu:disableBlockTextureAtlasUnavailableWithShaderPack" : "settingsMenu:disableBlockTextureAtlas"),
+          checked: !aV && EV.disableTexAtlas,
+          onClick: VV => {
+            AV.b.setClientEscMenuOptions({
+              disableTexAtlas: VV
             })
           },
-          circleInfoText: hM("settingsMenu:disableBlockTextureAtlasInfo"),
-          disabled: oM
-        }), (0, LM.jsx)(eM.h, {
-          name: hM("settingsMenu:fieldOfView"),
+          circleInfoText: kV("settingsMenu:disableBlockTextureAtlasInfo"),
+          disabled: aV
+        }), (0, ZV.jsx)(PV.m, {
+          name: kV("settingsMenu:fieldOfView"),
           min: 50,
           max: 160,
           step: 1,
-          initValue: dM.cameraFOV,
-          onChange: MM => {
-            bM.d.setClientEscMenuOptions({
-              cameraFOV: MM
+          initValue: EV.cameraFOV,
+          onChange: VV => {
+            AV.b.setClientEscMenuOptions({
+              cameraFOV: VV
             })
           }
-        }), (0, LM.jsx)(eM.c, {
-          label: hM("settingsMenu:disableViewBobbing"),
-          checked: dM.disableBobbing,
-          onClick: MM => {
-            bM.d.setClientEscMenuOptions({
-              disableBobbing: MM
+        }), (0, ZV.jsx)(PV.e, {
+          label: kV("settingsMenu:disableViewBobbing"),
+          checked: EV.disableBobbing,
+          onClick: VV => {
+            AV.b.setClientEscMenuOptions({
+              disableBobbing: VV
             })
           },
-          circleInfoText: hM("settingsMenu:disableViewBobbingInfo")
-        }), (0, LM.jsx)(eM.c, {
-          label: hM("settingsMenu:antiAliasing"),
-          checked: dM.antiAliasing,
-          onClick: MM => {
-            AM({
-              antiAliasing: MM
-            }), (0, ui.g)("antiAliasing"), bM.d.setClientEscMenuOptions({
-              antiAliasing: MM
+          circleInfoText: kV("settingsMenu:disableViewBobbingInfo")
+        }), (0, ZV.jsx)(PV.e, {
+          label: kV("settingsMenu:antiAliasing"),
+          checked: EV.antiAliasing,
+          onClick: VV => {
+            lV({
+              antiAliasing: VV
+            }), (0, Mx.g)("antiAliasing"), AV.b.setClientEscMenuOptions({
+              antiAliasing: VV
             })
           },
-          circleInfoText: hM("settingsMenu:antiAliasingInfo")
-        }), (0, LM.jsx)(eM.h, {
-          name: hM("settingsMenu:pixelScale"),
+          circleInfoText: kV("settingsMenu:antiAliasingInfo")
+        }), (0, ZV.jsx)(PV.m, {
+          name: kV("settingsMenu:pixelScale"),
           min: 1,
           max: 8,
           step: 1,
-          initValue: null !== (nM = dM.pixelScale) && void 0 !== nM ? nM : 1,
-          onChange: MM => {
-            (MM !== bM.d.get("clientEscMenuOptions").pixelScale || (0, Wi.q)()) && (0, ui.g)("pixelScale"), bM.d.setClientEscMenuOptions({
-              pixelScale: MM
+          initValue: null !== (QV = EV.pixelScale) && void 0 !== QV ? QV : 1,
+          onChange: VV => {
+            (VV !== AV.b.get("clientEscMenuOptions").pixelScale || (0, Gx.n)()) && (0, Mx.g)("pixelScale"), AV.b.setClientEscMenuOptions({
+              pixelScale: VV
             })
           },
-          circleInfoText: hM("settingsMenu:pixelScaleInfo"),
-          format: MM => `${MM}x`
-        }), (0, LM.jsx)(eM.c, {
-          label: hM("settingsMenu:pixelSmoothing"),
-          checked: dM.pixelSmoothing,
-          onClick: MM => {
-            bM.d.setClientEscMenuOptions({
-              pixelSmoothing: MM
+          circleInfoText: kV("settingsMenu:pixelScaleInfo"),
+          format: VV => `${VV}x`
+        }), (0, ZV.jsx)(PV.e, {
+          label: kV("settingsMenu:pixelSmoothing"),
+          checked: EV.pixelSmoothing,
+          onClick: VV => {
+            AV.b.setClientEscMenuOptions({
+              pixelSmoothing: VV
             })
           },
-          circleInfoText: hM("settingsMenu:pixelSmoothingInfo")
-        }), Ci.H && (0, LM.jsx)(eM.c, {
-          label: hM("settingsMenu:distantNametags"),
-          checked: (0, Ri.d)(),
-          onClick: MM => {
-            bM.d.set({
-              showDistantNametags: MM
+          circleInfoText: kV("settingsMenu:pixelSmoothingInfo")
+        }), Fx.I && (0, ZV.jsx)(PV.e, {
+          label: kV("settingsMenu:distantNametags"),
+          checked: (0, zx.d)(),
+          onClick: VV => {
+            AV.b.set({
+              showDistantNametags: VV
             })
           },
-          circleInfoText: hM("settingsMenu:distantNametagsInfo")
-        }), (0, LM.jsx)(eM.c, {
-          label: hM(ZM.translationKey),
-          checked: ZM.checked,
-          onClick: MM => {
-            AM({
-              useWebGpu: MM
-            }), bM.d.setClientEscMenuOptions({
-              useWebGpu: MM
+          circleInfoText: kV("settingsMenu:distantNametagsInfo")
+        }), (0, ZV.jsx)(PV.e, {
+          label: kV(CV.translationKey),
+          checked: CV.checked,
+          onClick: VV => {
+            lV({
+              useWebGpu: VV
+            }), AV.b.setClientEscMenuOptions({
+              useWebGpu: VV
             })
           },
-          circleInfoText: hM("settingsMenu:newWebGpuInfo"),
-          disabled: ZM.disabled
+          circleInfoText: kV("settingsMenu:newWebGpuInfo"),
+          disabled: CV.disabled
         })]
       })
     }
-    var Zi = iM(4801),
-      oi = iM(9459),
-      fi = iM(34985),
-      Yi = iM(9463),
-      Ni = iM(34989);
-    const Ai = {
+    var Dx = xV(4887),
+      ix = xV(9469),
+      Cx = xV(35268),
+      ax = xV(9475),
+      ox = xV(35272);
+    const cx = {
         color: 16777215,
         name: "white"
       },
-      xi = {
+      hx = {
         color: 0,
         name: "black"
       },
-      vi = [Ai, {
+      lx = [cx, {
         color: 5046092,
         name: "green"
       }, {
@@ -1748,73 +1748,73 @@ export const modules = {
       }, {
         color: 16726843,
         name: "red"
-      }, xi],
-      Fi = [xi, Ai];
+      }, hx],
+      Lx = [hx, cx];
 
-    function Bi(MM) {
-      return `${MM} px`
+    function fx(VV) {
+      return `${VV} px`
     }
 
-    function Xi(MM) {
-      return `${MM}%`
+    function mx(VV) {
+      return `${VV}%`
     }
 
-    function Ii(MM) {
+    function Kx(VV) {
       let {
-        label: rM,
-        value: iM,
-        swatches: OM,
-        onChange: SM
-      } = MM;
+        label: eV,
+        value: xV,
+        swatches: JV,
+        onChange: YV
+      } = VV;
       const {
-        t: PM
-      } = (0, aM.A)(), nM = !OM.some((MM => MM.color === iM));
-      return (0, LM.jsxs)("div", {
+        t: pV
+      } = (0, yV.A)(), QV = !JV.some((VV => VV.color === xV));
+      return (0, ZV.jsxs)("div", {
         className: "SettingBox CrosshairColorRow",
-        children: [(0, LM.jsx)("div", {
+        children: [(0, ZV.jsx)("div", {
           className: "SliderText",
-          children: rM
-        }), (0, LM.jsxs)("div", {
+          children: eV
+        }), (0, ZV.jsxs)("div", {
           className: "CrosshairSwatches",
           role: "radiogroup",
-          "aria-label": rM,
-          children: [OM.map((MM => {
+          "aria-label": eV,
+          children: [JV.map((VV => {
             let {
-              color: rM,
-              name: OM
-            } = MM;
-            return (0, LM.jsx)("button", {
+              color: eV,
+              name: JV
+            } = VV;
+            return (0, ZV.jsx)("button", {
               type: "button",
               role: "radio",
-              "aria-checked": rM === iM,
-              "aria-label": PM(`crosshairSettings:color_${OM}`),
+              "aria-checked": eV === xV,
+              "aria-label": pV(`crosshairSettings:color_${JV}`),
               "data-pad-focusable": !0,
-              className: jM()("CrosshairSwatch", {
-                Selected: rM === iM
+              className: UV()("CrosshairSwatch", {
+                Selected: eV === xV
               }),
               style: {
-                background: (0, Ni.i)(rM)
+                background: (0, ox.l)(eV)
               },
               onClick: () => {
-                SM(rM)
+                YV(eV)
               }
-            }, rM)
-          })), (0, LM.jsx)("label", {
-            className: jM()("CrosshairSwatch CrosshairSwatchCustom", {
-              Selected: nM
+            }, eV)
+          })), (0, ZV.jsx)("label", {
+            className: UV()("CrosshairSwatch CrosshairSwatchCustom", {
+              Selected: QV
             }),
-            style: nM ? {
-              background: (0, Ni.i)(iM)
+            style: QV ? {
+              background: (0, ox.l)(xV)
             } : void 0,
-            title: PM("crosshairSettings:customColor"),
+            title: pV("crosshairSettings:customColor"),
             "data-pad-focusable": !0,
-            children: (0, LM.jsx)("input", {
+            children: (0, ZV.jsx)("input", {
               type: "color",
-              "aria-label": PM("crosshairSettings:customColor"),
-              value: (0, Ni.i)(iM),
-              onChange: MM => {
-                const rM = (0, Ni.m)(MM.target.value);
-                null !== rM && SM(rM)
+              "aria-label": pV("crosshairSettings:customColor"),
+              value: (0, ox.l)(xV),
+              onChange: VV => {
+                const eV = (0, ox.q)(VV.target.value);
+                null !== eV && YV(eV)
               }
             })
           })]
@@ -1822,119 +1822,119 @@ export const modules = {
       })
     }
 
-    function Ki(MM) {
+    function Hx(VV) {
       let {
-        settings: rM,
-        onChange: iM
-      } = MM;
+        settings: eV,
+        onChange: xV
+      } = VV;
       const {
-        t: OM
-      } = (0, aM.A)(), SM = (MM, OM) => {
-        iM((0, Ni.t)(rM, MM, OM))
-      }, jM = function(MM, iM) {
-        let OM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Bi;
+        t: JV
+      } = (0, yV.A)(), YV = (VV, JV) => {
+        xV((0, ox.w)(eV, VV, JV))
+      }, UV = function(VV, xV) {
+        let JV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : fx;
         const {
-          min: jM,
-          max: aM,
-          step: PM
-        } = Ni.d[MM];
-        return (0, LM.jsx)(eM.h, {
-          name: iM,
-          min: jM,
-          max: aM,
-          step: PM,
-          initValue: rM[MM],
-          format: OM,
-          onChange: rM => {
-            SM(MM, rM)
+          min: UV,
+          max: yV,
+          step: pV
+        } = ox.b[VV];
+        return (0, ZV.jsx)(PV.m, {
+          name: xV,
+          min: UV,
+          max: yV,
+          step: pV,
+          initValue: eV[VV],
+          format: JV,
+          onChange: eV => {
+            YV(VV, eV)
           }
-        }, MM)
-      }, PM = ["lines", "dot", "circle"].filter((MM => rM[MM])), nM = (MM, iM, OM) => (0, LM.jsx)(eM.c, {
-        label: iM,
-        checked: rM[MM],
-        disabled: 1 === PM.length && PM[0] === MM,
-        circleInfoText: OM,
-        onClick: rM => {
-          SM(MM, rM)
+        }, VV)
+      }, pV = ["lines", "dot", "circle"].filter((VV => eV[VV])), QV = (VV, xV, JV) => (0, ZV.jsx)(PV.e, {
+        label: xV,
+        checked: eV[VV],
+        disabled: 1 === pV.length && pV[0] === VV,
+        circleInfoText: JV,
+        onClick: eV => {
+          YV(VV, eV)
         }
-      }, MM), QM = "shapes" === rM.style;
-      return (0, LM.jsxs)(LM.Fragment, {
-        children: [(0, LM.jsx)(eM.f, {
-          label: OM("crosshairSettings:style"),
+      }, VV), nV = "shapes" === eV.style;
+      return (0, ZV.jsxs)(ZV.Fragment, {
+        children: [(0, ZV.jsx)(PV.i, {
+          label: JV("crosshairSettings:style"),
           options: [{
             value: "classic",
-            label: OM("crosshairSettings:styleClassic")
+            label: JV("crosshairSettings:styleClassic")
           }, {
             value: "shapes",
-            label: OM("crosshairSettings:styleShapes")
+            label: JV("crosshairSettings:styleShapes")
           }],
-          value: rM.style,
-          onChange: MM => {
-            SM("style", MM)
+          value: eV.style,
+          onChange: VV => {
+            YV("style", VV)
           }
-        }), (0, LM.jsx)(Ii, {
-          label: OM("crosshairSettings:color"),
-          value: rM.color,
-          swatches: vi,
-          onChange: MM => {
-            SM("color", MM)
+        }), (0, ZV.jsx)(Kx, {
+          label: JV("crosshairSettings:color"),
+          value: eV.color,
+          swatches: lx,
+          onChange: VV => {
+            YV("color", VV)
           }
-        }), jM("opacity", OM("crosshairSettings:opacity"), Xi), !QM && jM("size", OM("crosshairSettings:size"), Xi), QM && (0, LM.jsxs)("div", {
+        }), UV("opacity", JV("crosshairSettings:opacity"), mx), !nV && UV("size", JV("crosshairSettings:size"), mx), nV && (0, ZV.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [nM("lines", OM("crosshairSettings:lines")), rM.lines && jM("lineLength", OM("crosshairSettings:lineLength")), rM.lines && jM("lineThickness", OM("crosshairSettings:lineThickness")), rM.lines && jM("gap", OM("crosshairSettings:gap")), rM.lines && nM("tStyle", OM("crosshairSettings:tStyle"))]
-        }), QM && (0, LM.jsxs)("div", {
+          children: [QV("lines", JV("crosshairSettings:lines")), eV.lines && UV("lineLength", JV("crosshairSettings:lineLength")), eV.lines && UV("lineThickness", JV("crosshairSettings:lineThickness")), eV.lines && UV("gap", JV("crosshairSettings:gap")), eV.lines && QV("tStyle", JV("crosshairSettings:tStyle"))]
+        }), nV && (0, ZV.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [nM("dot", OM("crosshairSettings:dot")), rM.dot && jM("dotSize", OM("crosshairSettings:dotSize"))]
-        }), QM && (0, LM.jsxs)("div", {
+          children: [QV("dot", JV("crosshairSettings:dot")), eV.dot && UV("dotSize", JV("crosshairSettings:dotSize"))]
+        }), nV && (0, ZV.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [nM("circle", OM("crosshairSettings:circle")), rM.circle && jM("circleRadius", OM("crosshairSettings:circleRadius")), rM.circle && jM("circleThickness", OM("crosshairSettings:circleThickness"))]
-        }), (0, LM.jsxs)("div", {
+          children: [QV("circle", JV("crosshairSettings:circle")), eV.circle && UV("circleRadius", JV("crosshairSettings:circleRadius")), eV.circle && UV("circleThickness", JV("crosshairSettings:circleThickness"))]
+        }), (0, ZV.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [jM("outline", OM("crosshairSettings:outline"), (MM => MM > 0 ? Bi(MM) : OM("crosshairSettings:off"))), rM.outline > 0 && (0, LM.jsx)(Ii, {
-            label: OM("crosshairSettings:outlineColor"),
-            value: rM.outlineColor,
-            swatches: Fi,
-            onChange: MM => {
-              SM("outlineColor", MM)
+          children: [UV("outline", JV("crosshairSettings:outline"), (VV => VV > 0 ? fx(VV) : JV("crosshairSettings:off"))), eV.outline > 0 && (0, ZV.jsx)(Kx, {
+            label: JV("crosshairSettings:outlineColor"),
+            value: eV.outlineColor,
+            swatches: Lx,
+            onChange: VV => {
+              YV("outlineColor", VV)
             }
           })]
-        }), nM("growOnClick", OM("crosshairSettings:growOnClick")), QM && nM("forGuns", OM("crosshairSettings:forGuns"), OM("crosshairSettings:forGunsInfo"))]
+        }), QV("growOnClick", JV("crosshairSettings:growOnClick")), nV && QV("forGuns", JV("crosshairSettings:forGuns"), JV("crosshairSettings:forGunsInfo"))]
       })
     }
-    var qi = iM(65),
-      Ti = iM(1287),
-      Vi = iM(13457),
-      ci = iM(14650),
-      MO = iM(16014),
-      rO = iM(16502);
-    const iO = ["sky", "grass", "stone", "sand", "snow", "night"],
-      OO = "4rem";
+    var ux = xV(78),
+      sx = xV(1309),
+      Sx = xV(13474),
+      Ix = xV(14627),
+      dx = xV(16087),
+      Ox = xV(16618);
+    const VJ = ["sky", "grass", "stone", "sand", "snow", "night"],
+      eJ = "4rem";
 
-    function SO(MM) {
+    function xJ(VV) {
       return {
-        backgroundImage: `url(${MM})`,
-        backgroundSize: `${OO} ${OO}`,
+        backgroundImage: `url(${VV})`,
+        backgroundSize: `${eJ} ${eJ}`,
         backgroundRepeat: "repeat",
         imageRendering: "pixelated"
       }
     }
 
-    function jO(MM) {
+    function JJ(VV) {
       return {
         ...(() => {
-          switch (MM) {
+          switch (VV) {
             case "sky":
               return {
                 backgroundImage: "linear-gradient(#3d8fe0 0%, #8cc8f5 45%, #d6eefc 58%, #6fae4a 58.01%, #4f8a33 100%)", backgroundSize: "100vw 100vh", backgroundRepeat: "no-repeat"
               };
             case "grass":
-              return SO(Vi);
+              return xJ(Sx);
             case "stone":
-              return SO(ci);
+              return xJ(Ix);
             case "sand":
-              return SO(MO);
+              return xJ(dx);
             case "snow":
-              return SO(rO);
+              return xJ(Ox);
             case "night":
               return {
                 backgroundImage: "radial-gradient(circle at 50% 50%, #1e2a4a 0%, #070b16 100vmax)", backgroundSize: "100vw 100vh", backgroundRepeat: "no-repeat"
@@ -1945,21 +1945,21 @@ export const modules = {
       }
     }
 
-    function aO(MM) {
+    function YJ(VV) {
       return Object.freeze({
-        ...Ni.e,
+        ...ox.f,
         style: "shapes",
         outline: 1,
         lines: !1,
-        ...MM
+        ...VV
       })
     }
-    const PO = [{
+    const UJ = [{
         id: "default",
-        settings: Ni.e
+        settings: ox.f
       }, {
         id: "cross",
-        settings: aO({
+        settings: YJ({
           color: 5046092,
           lines: !0,
           lineLength: 7,
@@ -1968,7 +1968,7 @@ export const modules = {
         })
       }, {
         id: "crossDot",
-        settings: aO({
+        settings: YJ({
           color: 65535,
           lines: !0,
           lineLength: 6,
@@ -1979,13 +1979,13 @@ export const modules = {
         })
       }, {
         id: "dot",
-        settings: aO({
+        settings: YJ({
           dot: !0,
           dotSize: 4
         })
       }, {
         id: "circle",
-        settings: aO({
+        settings: YJ({
           circle: !0,
           circleRadius: 12,
           circleThickness: 1.5,
@@ -1994,7 +1994,7 @@ export const modules = {
         })
       }, {
         id: "tShape",
-        settings: aO({
+        settings: YJ({
           color: 16731391,
           lines: !0,
           lineLength: 7,
@@ -2004,7 +2004,7 @@ export const modules = {
         })
       }, {
         id: "tiny",
-        settings: aO({
+        settings: YJ({
           color: 16776960,
           lines: !0,
           lineLength: 3,
@@ -2013,7 +2013,7 @@ export const modules = {
         })
       }, {
         id: "bold",
-        settings: aO({
+        settings: YJ({
           lines: !0,
           lineLength: 10,
           lineThickness: 3,
@@ -2021,570 +2021,570 @@ export const modules = {
           outline: 1.5
         })
       }],
-      nO = ["growOnClick", "forGuns"];
-    var QO = iM(34997);
+      yJ = ["growOnClick", "forGuns"];
+    var pJ = xV(35275);
 
-    function zO(MM) {
+    function QJ(VV) {
       let {
-        label: rM,
-        selected: iM,
-        onClick: OM,
-        className: SM,
-        style: aM,
-        children: PM
-      } = MM;
-      return (0, LM.jsx)("button", {
+        label: eV,
+        selected: xV,
+        onClick: JV,
+        className: YV,
+        style: yV,
+        children: pV
+      } = VV;
+      return (0, ZV.jsx)("button", {
         type: "button",
         role: "radio",
-        "aria-checked": iM,
-        title: rM,
-        "aria-label": rM,
+        "aria-checked": xV,
+        title: eV,
+        "aria-label": eV,
         "data-pad-focusable": !0,
-        className: jM()("CrosshairBackdropSwatch", SM, {
-          Selected: iM
+        className: UV()("CrosshairBackdropSwatch", YV, {
+          Selected: xV
         }),
-        style: aM,
-        onClick: OM,
-        children: PM
+        style: yV,
+        onClick: JV,
+        children: pV
       })
     }
 
-    function LO(MM) {
+    function nJ(VV) {
       let {
-        backdrop: rM,
-        onChange: iM,
-        game: OM
-      } = MM;
+        backdrop: eV,
+        onChange: xV,
+        game: JV
+      } = VV;
       const {
-        t: SM
-      } = (0, aM.A)();
-      return (0, LM.jsxs)("div", {
+        t: YV
+      } = (0, yV.A)();
+      return (0, ZV.jsxs)("div", {
         className: "CrosshairBackdrops",
         role: "radiogroup",
-        "aria-label": SM("crosshairSettings:background"),
-        children: [OM && (0, LM.jsx)(zO, {
-          label: SM("crosshairSettings:bg_game"),
-          selected: OM.selected,
-          onClick: OM.onSelect,
+        "aria-label": YV("crosshairSettings:background"),
+        children: [JV && (0, ZV.jsx)(QJ, {
+          label: YV("crosshairSettings:bg_game"),
+          selected: JV.selected,
+          onClick: JV.onSelect,
           className: "CrosshairGameSwatch",
-          children: (0, LM.jsx)(PM.b, {
+          children: (0, ZV.jsx)(pV.b, {
             name: "cube"
           })
-        }), iO.map((MM => (0, LM.jsx)(zO, {
-          label: SM(`crosshairSettings:bg_${MM}`),
-          selected: !(null !== OM && void 0 !== OM && OM.selected) && MM === rM,
-          style: jO(MM),
+        }), VJ.map((VV => (0, ZV.jsx)(QJ, {
+          label: YV(`crosshairSettings:bg_${VV}`),
+          selected: !(null !== JV && void 0 !== JV && JV.selected) && VV === eV,
+          style: JJ(VV),
           onClick: () => {
-            iM(MM)
+            xV(VV)
           }
-        }, MM)))]
+        }, VV)))]
       })
     }
 
-    function mO(MM) {
+    function wJ(VV) {
       let {
-        settings: rM,
-        touch: iM,
-        backdrop: OM,
-        onChange: SM
-      } = MM;
+        settings: eV,
+        touch: xV,
+        backdrop: JV,
+        onChange: YV
+      } = VV;
       const {
-        t: PM
-      } = (0, aM.A)(), nM = function(MM) {
-        var rM;
-        return null !== (rM = PO.find((rM => (0, Ni.p)(rM.settings, MM, nO)))) && void 0 !== rM ? rM : null
-      }(rM);
-      return (0, LM.jsx)("div", {
+        t: pV
+      } = (0, yV.A)(), QV = function(VV) {
+        var eV;
+        return null !== (eV = UJ.find((eV => (0, ox.u)(eV.settings, VV, yJ)))) && void 0 !== eV ? eV : null
+      }(eV);
+      return (0, ZV.jsx)("div", {
         className: "CrosshairPresets",
         role: "radiogroup",
-        "aria-label": PM("crosshairSettings:presets"),
-        children: PO.map((MM => {
-          const aM = (null === nM || void 0 === nM ? void 0 : nM.id) === MM.id;
-          return (0, LM.jsxs)("button", {
+        "aria-label": pV("crosshairSettings:presets"),
+        children: UJ.map((VV => {
+          const yV = (null === QV || void 0 === QV ? void 0 : QV.id) === VV.id;
+          return (0, ZV.jsxs)("button", {
             type: "button",
             role: "radio",
-            "aria-checked": aM,
+            "aria-checked": yV,
             "data-pad-focusable": !0,
-            className: jM()("CrosshairPreset", {
-              Selected: aM
+            className: UV()("CrosshairPreset", {
+              Selected: yV
             }),
             onClick: () => {
-              SM(function(MM, rM) {
+              YV(function(VV, eV) {
                 return {
-                  ...rM.settings,
-                  growOnClick: MM.growOnClick,
-                  forGuns: MM.forGuns
+                  ...eV.settings,
+                  growOnClick: VV.growOnClick,
+                  forGuns: VV.forGuns
                 }
-              }(rM, MM))
+              }(eV, VV))
             },
-            children: [(0, LM.jsx)("div", {
+            children: [(0, ZV.jsx)("div", {
               className: "CrosshairPresetStage",
-              style: jO(OM),
-              children: (0, LM.jsx)(QO.c, {
-                settings: MM.settings,
-                touch: iM,
+              style: JJ(JV),
+              children: (0, ZV.jsx)(pJ.c, {
+                settings: VV.settings,
+                touch: xV,
                 inPreview: !0
               })
-            }), (0, LM.jsx)("div", {
+            }), (0, ZV.jsx)("div", {
               className: "CrosshairPresetName",
-              children: PM(`crosshairSettings:preset_${MM.id}`)
+              children: pV(`crosshairSettings:preset_${VV.id}`)
             })]
-          }, MM.id)
+          }, VV.id)
         }))
       })
     }
-    var HO = iM(1754);
+    var ZJ = xV(1767);
 
-    function hO(MM, rM) {
-      const [iM, SM] = (0, OM.useState)(!1), jM = () => {
-        SM(!1)
-      }, [aM, PM] = (0, OM.useState)(!1), nM = (0, OM.useRef)({
-        growOnClick: MM.growOnClick,
-        forGuns: MM.forGuns
+    function vJ(VV, eV) {
+      const [xV, YV] = (0, JV.useState)(!1), UV = () => {
+        YV(!1)
+      }, [yV, pV] = (0, JV.useState)(!1), QV = (0, JV.useRef)({
+        growOnClick: VV.growOnClick,
+        forGuns: VV.forGuns
       });
-      (0, OM.useEffect)((() => {
-        const rM = nM.current;
-        nM.current = {
-          growOnClick: MM.growOnClick,
-          forGuns: MM.forGuns
-        }, (MM.growOnClick && !rM.growOnClick || MM.forGuns && !rM.forGuns) && PM(!0)
-      }), [MM.growOnClick, MM.forGuns]), (0, OM.useEffect)((() => {
-        if (!aM) return;
-        const MM = setTimeout((() => {
-          PM(!1)
+      (0, JV.useEffect)((() => {
+        const eV = QV.current;
+        QV.current = {
+          growOnClick: VV.growOnClick,
+          forGuns: VV.forGuns
+        }, (VV.growOnClick && !eV.growOnClick || VV.forGuns && !eV.forGuns) && pV(!0)
+      }), [VV.growOnClick, VV.forGuns]), (0, JV.useEffect)((() => {
+        if (!yV) return;
+        const VV = setTimeout((() => {
+          pV(!1)
         }), 600);
         return () => {
-          clearTimeout(MM)
+          clearTimeout(VV)
         }
-      }), [aM]);
-      const QM = iM || aM;
+      }), [yV]);
+      const nV = xV || yV;
       return {
         view: {
-          pressed: QM,
-          spread: QM && MM.forGuns && !MM.growOnClick ? 6 : 0
+          pressed: nV,
+          spread: nV && VV.forGuns && !VV.growOnClick ? 6 : 0
         },
         handlers: {
-          onPointerDown: MM => {
-            !MM.target.closest(rM) && (0, HO.c)(MM.currentTarget, MM.pointerId) && SM(!0)
+          onPointerDown: VV => {
+            !VV.target.closest(eV) && (0, ZJ.c)(VV.currentTarget, VV.pointerId) && YV(!0)
           },
-          onPointerUp: jM,
-          onPointerCancel: jM,
-          onLostPointerCapture: jM
+          onPointerUp: UV,
+          onPointerCancel: UV,
+          onLostPointerCapture: UV
         }
       }
     }
 
-    function JO(MM) {
+    function rJ(VV) {
       let {
-        settings: rM,
-        touch: iM,
-        backdrop: OM,
-        className: SM,
-        children: aM,
-        label: PM
-      } = MM;
-      const nM = hO(rM, ".CrosshairStageControls");
-      return (0, LM.jsxs)("div", {
-        className: jM()("CrosshairStage", SM),
-        style: jO(OM),
-        ...nM.handlers,
-        children: [(0, LM.jsx)("div", {
+        settings: eV,
+        touch: xV,
+        backdrop: JV,
+        className: YV,
+        children: yV,
+        label: pV
+      } = VV;
+      const QV = vJ(eV, ".CrosshairStageControls");
+      return (0, ZV.jsxs)("div", {
+        className: UV()("CrosshairStage", YV),
+        style: JJ(JV),
+        ...QV.handlers,
+        children: [(0, ZV.jsx)("div", {
           className: "CrosshairStageHold",
           role: "img",
-          "aria-label": PM,
-          children: (0, LM.jsx)(QO.c, {
-            settings: rM,
-            touch: iM,
+          "aria-label": pV,
+          children: (0, ZV.jsx)(pJ.c, {
+            settings: eV,
+            touch: xV,
             inPreview: !0,
-            ...nM.view
+            ...QV.view
           })
-        }), aM]
+        }), yV]
       })
     }
-    const dO = "crosshairFullScreen";
+    const kJ = "crosshairFullScreen";
 
-    function yO(MM) {
+    function bJ(VV) {
       let {
-        settings: rM,
-        touch: iM,
-        backdrop: SM,
-        onBackdrop: nM,
-        inGame: zM,
-        onChange: mM,
-        onClose: HM
-      } = MM;
+        settings: eV,
+        touch: xV,
+        backdrop: YV,
+        onBackdrop: QV,
+        inGame: wV,
+        onChange: vV,
+        onClose: rV
+      } = VV;
       const {
-        t: hM
-      } = (0, aM.A)(), JM = (0, OM.useRef)(null);
-      (0, Ti.v)("popup", JM, HM),
-      function(MM) {
-        const rM = (0, OM.useRef)(MM);
-        rM.current = MM, (0, OM.useEffect)((() => {
+        t: kV
+      } = (0, yV.A)(), bV = (0, JV.useRef)(null);
+      (0, sx.s)("popup", bV, rV),
+      function(VV) {
+        const eV = (0, JV.useRef)(VV);
+        eV.current = VV, (0, JV.useEffect)((() => {
           window.history.pushState({
             ...window.history.state,
-            [dO]: !0
+            [kJ]: !0
           }, "");
-          let MM = !1;
-          const iM = () => {
-            MM = !0, rM.current()
+          let VV = !1;
+          const xV = () => {
+            VV = !0, eV.current()
           };
-          return window.addEventListener("popstate", iM), () => {
-            var rM;
-            window.removeEventListener("popstate", iM), !MM && null !== (rM = window.history.state) && void 0 !== rM && rM[dO] && window.history.back()
+          return window.addEventListener("popstate", xV), () => {
+            var eV;
+            window.removeEventListener("popstate", xV), !VV && null !== (eV = window.history.state) && void 0 !== eV && eV[kJ] && window.history.back()
           }
         }), [])
-      }(HM);
-      const dM = (0, OM.useRef)(HM);
-      dM.current = HM, (0, OM.useEffect)((() => {
-        function MM(MM) {
-          "Escape" === MM.key && (MM.stopPropagation(), dM.current())
+      }(rV);
+      const EV = (0, JV.useRef)(rV);
+      EV.current = rV, (0, JV.useEffect)((() => {
+        function VV(VV) {
+          "Escape" === VV.key && (VV.stopPropagation(), EV.current())
         }
-        return window.addEventListener("keydown", MM, !0), () => {
-          window.removeEventListener("keydown", MM, !0)
+        return window.addEventListener("keydown", VV, !0), () => {
+          window.removeEventListener("keydown", VV, !0)
         }
       }), []);
-      const yM = hO(rM, ".CrosshairFullScreenPanel"),
-        [lM, EM] = (0, OM.useState)(!0),
-        UM = lM && zM;
-      (0, OM.useEffect)((() => {
-        if (UM) return bM.d.set({
+      const BV = vJ(eV, ".CrosshairFullScreenPanel"),
+        [jV, qV] = (0, JV.useState)(!0),
+        tV = jV && wV;
+      (0, JV.useEffect)((() => {
+        if (tV) return AV.b.set({
           crosshairGameView: !0
         }), () => {
-          bM.d.set({
+          AV.b.set({
             crosshairGameView: !1
           })
         }
-      }), [UM]);
-      const [GM, CM] = (0, OM.useState)(!0);
-      return (0, qi.createPortal)((0, LM.jsxs)("div", {
-        ref: JM,
+      }), [tV]);
+      const [FV, TV] = (0, JV.useState)(!0);
+      return (0, ux.createPortal)((0, ZV.jsxs)("div", {
+        ref: bV,
         className: "CrosshairFullScreen",
-        style: UM ? void 0 : jO(SM),
-        ...yM.handlers,
-        children: [(0, LM.jsx)(QO.c, {
-          settings: rM,
-          touch: iM,
+        style: tV ? void 0 : JJ(YV),
+        ...BV.handlers,
+        children: [(0, ZV.jsx)(pJ.c, {
+          settings: eV,
+          touch: xV,
           inEditor: !0,
-          ...yM.view
-        }), (0, LM.jsxs)("div", {
-          className: jM()("CrosshairFullScreenPanel", {
-            Collapsed: !GM
+          ...BV.view
+        }), (0, ZV.jsxs)("div", {
+          className: UV()("CrosshairFullScreenPanel", {
+            Collapsed: !FV
           }),
-          children: [(0, LM.jsxs)("div", {
+          children: [(0, ZV.jsxs)("div", {
             className: "CrosshairFullScreenBar",
-            children: [(0, LM.jsx)(LO, {
-              backdrop: SM,
-              onChange: MM => {
-                EM(!1), nM(MM)
+            children: [(0, ZV.jsx)(nJ, {
+              backdrop: YV,
+              onChange: VV => {
+                qV(!1), QV(VV)
               },
-              game: zM ? {
-                selected: UM,
+              game: wV ? {
+                selected: tV,
                 onSelect: () => {
-                  EM(!0)
+                  qV(!0)
                 }
               } : void 0
-            }), (0, LM.jsx)(QM.V, {
+            }), (0, ZV.jsx)(nV.M, {
               className: "CrosshairPanelToggle",
-              ariaLabel: hM(GM ? "crosshairSettings:hideEditor" : "crosshairSettings:showEditor"),
+              ariaLabel: kV(FV ? "crosshairSettings:hideEditor" : "crosshairSettings:showEditor"),
               onClick: () => {
-                CM(!GM)
+                TV(!FV)
               },
-              children: (0, LM.jsx)(PM.b, {
-                name: GM ? "caret-up" : "pen"
+              children: (0, ZV.jsx)(pV.b, {
+                name: FV ? "caret-up" : "pen"
               })
-            }), (0, LM.jsx)(QM.e, {
+            }), (0, ZV.jsx)(nV.f, {
               className: "CrosshairFullScreenDone",
-              onClick: HM,
+              onClick: rV,
               padDefaultFocus: !0,
-              children: hM("crosshairSettings:done")
+              children: kV("crosshairSettings:done")
             })]
-          }), GM && (0, LM.jsxs)("div", {
+          }), FV && (0, ZV.jsxs)("div", {
             className: "CrosshairFullScreenFields",
-            children: [(0, LM.jsx)(mO, {
-              settings: rM,
-              touch: iM,
-              backdrop: SM,
-              onChange: mM
-            }), (0, LM.jsx)(Ki, {
-              settings: rM,
-              onChange: mM
+            children: [(0, ZV.jsx)(wJ, {
+              settings: eV,
+              touch: xV,
+              backdrop: YV,
+              onChange: vV
+            }), (0, ZV.jsx)(Hx, {
+              settings: eV,
+              onChange: vV
             })]
           })]
         })]
       }), document.body)
     }
-    var lO = iM(2901),
-      EO = iM(35003);
+    var EJ = xV(2966),
+      BJ = xV(35285);
 
-    function UO(MM) {
+    function jJ(VV) {
       let {
-        settings: rM,
-        onChange: iM
-      } = MM;
+        settings: eV,
+        onChange: xV
+      } = VV;
       const {
-        t: SM
-      } = (0, aM.A)(), nM = (0, EO.i)(rM), [zM, mM] = (0, lO.g)(), [HM, hM] = (0, OM.useState)(!1), JM = (0, OM.useRef)(null), [dM, yM] = (0, lO.g)(), [lM, EM] = (0, OM.useState)(!1);
-      return (0, LM.jsxs)("div", {
+        t: YV
+      } = (0, yV.A)(), QV = (0, BJ.j)(eV), [wV, vV] = (0, EJ.d)(), [rV, kV] = (0, JV.useState)(!1), bV = (0, JV.useRef)(null), [EV, BV] = (0, EJ.d)(), [jV, qV] = (0, JV.useState)(!1);
+      return (0, ZV.jsxs)("div", {
         className: "SettingBox CrosshairShare",
-        children: [(0, LM.jsxs)("div", {
+        children: [(0, ZV.jsxs)("div", {
           className: "CrosshairShareRow",
-          children: [(0, LM.jsxs)(QM.V, {
-            className: jM()("CrosshairCopy", {
-              ActiveSecondaryButton: zM
+          children: [(0, ZV.jsxs)(nV.M, {
+            className: UV()("CrosshairCopy", {
+              ActiveSecondaryButton: wV
             }),
             onClick: () => {
-              (0, lO.f)(nM, {
+              (0, EJ.c)(QV, {
                 useShareSheet: !1,
-                onOutcome: MM => {
-                  hM("failed" === MM), "copied" === MM && mM()
+                onOutcome: VV => {
+                  kV("failed" === VV), "copied" === VV && vV()
                 }
               })
             },
-            children: [(0, LM.jsx)(PM.b, {
-              name: zM ? "check" : "copy"
-            }), " ", SM(zM ? "general:copied" : "crosshairSettings:copy")]
-          }), (0, LM.jsx)(GM.b, {
+            children: [(0, ZV.jsx)(pV.b, {
+              name: wV ? "check" : "copy"
+            }), " ", YV(wV ? "general:copied" : "crosshairSettings:copy")]
+          }), (0, ZV.jsx)(FV.d, {
             className: "CrosshairPaste",
-            domRef: JM,
-            ariaLabel: SM("crosshairSettings:paste"),
-            placeholderText: SM("crosshairSettings:paste"),
-            onValueChange: MM => {
-              const rM = (0, EO.f)(MM);
-              EM(!rM && MM.trim().length >= EO.b), rM && (iM(rM), JM.current.value = "", yM())
+            domRef: bV,
+            ariaLabel: YV("crosshairSettings:paste"),
+            placeholderText: YV("crosshairSettings:paste"),
+            onValueChange: VV => {
+              const eV = (0, BJ.h)(VV);
+              qV(!eV && VV.trim().length >= BJ.d), eV && (xV(eV), bV.current.value = "", BV())
             }
           })]
-        }), HM && (0, LM.jsx)("input", {
+        }), rV && (0, ZV.jsx)("input", {
           className: "CrosshairCode",
           readOnly: !0,
-          value: nM,
-          "aria-label": SM("crosshairSettings:copy"),
-          onFocus: MM => {
-            MM.currentTarget.select()
+          value: QV,
+          "aria-label": YV("crosshairSettings:copy"),
+          onFocus: VV => {
+            VV.currentTarget.select()
           }
-        }), (0, LM.jsxs)("div", {
+        }), (0, ZV.jsxs)("div", {
           "aria-live": "polite",
-          children: [lM && (0, LM.jsx)("div", {
+          children: [jV && (0, ZV.jsx)("div", {
             className: "CrosshairShareNote Error",
-            children: SM("crosshairSettings:pasteInvalid")
-          }), dM && !lM && (0, LM.jsx)("div", {
+            children: YV("crosshairSettings:pasteInvalid")
+          }), EV && !jV && (0, ZV.jsx)("div", {
             className: "CrosshairShareNote",
-            children: SM("crosshairSettings:applied")
+            children: YV("crosshairSettings:applied")
           })]
         })]
       })
     }
-    var GO = iM(35006);
-    let CO = "sky";
+    var qJ = xV(35292);
+    let tJ = "sky";
 
-    function eO(MM) {
+    function FJ(VV) {
       let {
-        showing: rM
-      } = MM;
+        showing: eV
+      } = VV;
       const {
-        t: iM
-      } = (0, aM.A)(), {
-        isTouchScreen: SM,
-        gameState: jM,
-        clientEscMenuOptions: nM
-      } = (0, bM.m)(["isTouchScreen", "gameState", "clientEscMenuOptions"]), zM = (0, GO.f)(), [mM, HM] = (0, OM.useState)(CO), hM = MM => {
-        CO = MM, HM(MM)
-      }, [JM, dM] = (0, OM.useState)(!1);
-      return (0, OM.useEffect)((() => {
-        rM || dM(!1)
-      }), [rM]), (0, LM.jsxs)("div", {
+        t: xV
+      } = (0, yV.A)(), {
+        isTouchScreen: YV,
+        gameState: UV,
+        clientEscMenuOptions: QV
+      } = (0, AV.l)(["isTouchScreen", "gameState", "clientEscMenuOptions"]), wV = (0, qJ.h)(), [vV, rV] = (0, JV.useState)(tJ), kV = VV => {
+        tJ = VV, rV(VV)
+      }, [bV, EV] = (0, JV.useState)(!1);
+      return (0, JV.useEffect)((() => {
+        eV || EV(!1)
+      }), [eV]), (0, ZV.jsxs)("div", {
         className: "SettingsMenuRightInner CrosshairCategory",
-        children: [(0, LM.jsx)("div", {
+        children: [(0, ZV.jsx)("div", {
           className: "CrosshairPreviewSticky",
-          children: (0, LM.jsx)(JO, {
+          children: (0, ZV.jsx)(rJ, {
             className: "CrosshairPreviewStage",
-            settings: zM,
-            touch: SM,
-            backdrop: mM,
-            label: iM("crosshairSettings:preview"),
-            children: (0, LM.jsxs)("div", {
+            settings: wV,
+            touch: YV,
+            backdrop: vV,
+            label: xV("crosshairSettings:preview"),
+            children: (0, ZV.jsxs)("div", {
               className: "CrosshairPreviewBar CrosshairStageControls",
-              children: [(0, LM.jsx)(LO, {
-                backdrop: mM,
-                onChange: hM
-              }), (0, LM.jsxs)(QM.V, {
+              children: [(0, ZV.jsx)(nJ, {
+                backdrop: vV,
+                onChange: kV
+              }), (0, ZV.jsxs)(nV.M, {
                 className: "CrosshairFullScreenButton",
                 onClick: () => {
-                  dM(!0)
+                  EV(!0)
                 },
-                children: [(0, LM.jsx)(PM.b, {
+                children: [(0, ZV.jsx)(pV.b, {
                   name: "expand"
-                }), " ", iM("crosshairSettings:fullScreen")]
+                }), " ", xV("crosshairSettings:fullScreen")]
               })]
             })
           })
-        }), (0, LM.jsx)("div", {
+        }), (0, ZV.jsx)("div", {
           className: "SettingBox",
-          children: (0, LM.jsx)(mO, {
-            settings: zM,
-            touch: SM,
-            backdrop: mM,
-            onChange: GO.b
+          children: (0, ZV.jsx)(wJ, {
+            settings: wV,
+            touch: YV,
+            backdrop: vV,
+            onChange: qJ.e
           })
-        }), (0, LM.jsx)(UO, {
-          settings: zM,
-          onChange: GO.b
-        }), SM && (0, LM.jsx)(Yi.c, {
-          note: (0, fi.c)(SM, nM.touchActionButtons) ? iM("crosshairSettings:touchNote") : void 0
-        }), (0, LM.jsx)(Ki, {
-          settings: zM,
-          onChange: GO.b
-        }), JM && (0, LM.jsx)(yO, {
-          settings: zM,
-          touch: SM,
-          backdrop: mM,
-          onBackdrop: hM,
-          inGame: "inGame" === jM,
-          onChange: GO.b,
+        }), (0, ZV.jsx)(jJ, {
+          settings: wV,
+          onChange: qJ.e
+        }), YV && (0, ZV.jsx)(ax.b, {
+          note: (0, Cx.e)(YV, QV.touchActionButtons) ? xV("crosshairSettings:touchNote") : void 0
+        }), (0, ZV.jsx)(Hx, {
+          settings: wV,
+          onChange: qJ.e
+        }), bV && (0, ZV.jsx)(bJ, {
+          settings: wV,
+          touch: YV,
+          backdrop: vV,
+          onBackdrop: kV,
+          inGame: "inGame" === UV,
+          onChange: qJ.e,
           onClose: () => {
-            dM(!1)
+            EV(!1)
           }
         })]
       })
     }
-    var bO = iM(9461),
-      wO = iM(1472),
-      tO = iM(5393),
-      gO = iM(35014),
-      uO = iM(4613),
-      RO = iM(2088),
-      pO = iM(738);
-    const WO = (0, OM.memo)((function() {
+    var TJ = xV(9471),
+      PJ = xV(1488),
+      AJ = xV(5494),
+      NJ = xV(35296),
+      XJ = xV(4674),
+      MJ = xV(2109),
+      zJ = xV(749);
+    const GJ = (0, JV.memo)((function() {
       const {
-        clientEscMenuOptions: MM
-      } = (0, bM.m)(["clientEscMenuOptions"]), {
-        recording: rM,
-        clipping: iM,
-        hasClipBuffer: SM
-      } = (0, Ar.j)("replayRecorder"), aM = (0, Ar.f)("connectedGame", (MM => MM.replay)), PM = (0, uO.m)(), nM = !1 === (0, JM.f)("canRecordReplays");
-      (0, OM.useEffect)((() => {
-        lM.gameBridge.send("setRecorderPrefs", {
-          clipping: MM.enableClipping,
-          clipSeconds: MM.clipDurationSeconds
+        clientEscMenuOptions: VV
+      } = (0, AV.l)(["clientEscMenuOptions"]), {
+        recording: eV,
+        clipping: xV,
+        hasClipBuffer: YV
+      } = (0, le.h)("replayRecorder"), yV = (0, le.e)("connectedGame", (VV => VV.replay)), pV = (0, XJ.n)(), QV = !1 === (0, bV.j)("canRecordReplays");
+      (0, JV.useEffect)((() => {
+        jV.gameBridge.send("setRecorderPrefs", {
+          clipping: VV.enableClipping,
+          clipSeconds: VV.clipDurationSeconds
         })
-      }), [MM.enableClipping, MM.clipDurationSeconds]);
-      const zM = PM || aM,
-        mM = !zM && !nM,
-        HM = rM || mM,
-        hM = mM,
-        dM = hM && iM && !rM;
+      }), [VV.enableClipping, VV.clipDurationSeconds]);
+      const wV = pV || yV,
+        vV = !wV && !QV,
+        rV = eV || vV,
+        kV = vV,
+        EV = kV && xV && !eV;
 
-      function yM() {
-        HM && lM.gameBridge.send("toggleRecording", null)
+      function BV() {
+        rV && jV.gameBridge.send("toggleRecording", null)
       }
-      return (0, LM.jsxs)("div", {
+      return (0, ZV.jsxs)("div", {
         className: "SettingsMenuRightInner ReplayViewerCategory",
-        children: [(0, LM.jsxs)("div", {
+        children: [(0, ZV.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, LM.jsx)("div", {
+          children: [(0, ZV.jsx)("div", {
             className: "ReplayViewerCategoryRecordingRow",
-            children: rM ? (0, LM.jsxs)(LM.Fragment, {
-              children: [(0, LM.jsxs)(QM.J, {
+            children: eV ? (0, ZV.jsxs)(ZV.Fragment, {
+              children: [(0, ZV.jsxs)(nV.E, {
                 className: "ReplayViewerCategoryButton",
-                onClick: yM,
-                disabled: !HM,
-                children: [(0, LM.jsx)("span", {
+                onClick: BV,
+                disabled: !rV,
+                children: [(0, ZV.jsx)("span", {
                   children: "Stop Recording"
-                }), (0, LM.jsx)(RO.d, {
+                }), (0, ZV.jsx)(MJ.d, {
                   noaAction: "recordGame"
                 })]
-              }), (0, LM.jsx)(gO.e, {
+              }), (0, ZV.jsx)(NJ.c, {
                 className: "ReplayViewerCategoryRecordingIndicator"
               })]
-            }) : (0, LM.jsxs)(QM.e, {
+            }) : (0, ZV.jsxs)(nV.f, {
               className: "ReplayViewerCategoryButton",
-              onClick: yM,
-              disabled: !HM,
-              children: [(0, LM.jsx)("span", {
+              onClick: BV,
+              disabled: !rV,
+              children: [(0, ZV.jsx)("span", {
                 children: "Start Recording"
-              }), (0, LM.jsx)(RO.d, {
+              }), (0, ZV.jsx)(MJ.d, {
                 noaAction: "recordGame"
               })]
             })
-          }), nM && (0, LM.jsx)("div", {
+          }), QV && (0, ZV.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Recording is turned off in this game."
-          }), zM && !rM && (0, LM.jsx)("div", {
+          }), wV && !eV && (0, ZV.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Close Replay Mode to start recording."
           })]
-        }), (0, LM.jsxs)("div", {
+        }), (0, ZV.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [(0, LM.jsx)(eM.c, {
+          children: [(0, ZV.jsx)(PV.e, {
             label: "Enable clipping",
-            checked: MM.enableClipping,
-            disabled: !hM,
-            onClick: function(MM) {
-              hM && bM.d.setClientEscMenuOptions({
-                enableClipping: MM
+            checked: VV.enableClipping,
+            disabled: !kV,
+            onClick: function(VV) {
+              kV && AV.b.setClientEscMenuOptions({
+                enableClipping: VV
               })
             },
-            className: jM()({
-              SettingBoxDisabled: !hM
+            className: UV()({
+              SettingBoxDisabled: !kV
             })
-          }), (0, LM.jsx)(eM.h, {
+          }), (0, ZV.jsx)(PV.m, {
             name: "Clip duration (seconds)",
-            min: pO.k,
-            max: pO.g,
-            step: pO.c,
-            initValue: MM.clipDurationSeconds,
-            onChange: function(MM) {
-              bM.d.setClientEscMenuOptions({
-                clipDurationSeconds: MM
+            min: zJ.l,
+            max: zJ.h,
+            step: zJ.d,
+            initValue: VV.clipDurationSeconds,
+            onChange: function(VV) {
+              AV.b.setClientEscMenuOptions({
+                clipDurationSeconds: VV
               })
             },
             circleInfoText: "Longer clip durations use more memory and may affect performance.",
-            disabled: !hM || !MM.enableClipping
+            disabled: !kV || !VV.enableClipping
           })]
-        }), (0, LM.jsxs)("div", {
+        }), (0, ZV.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, LM.jsxs)(QM.e, {
+          children: [(0, ZV.jsxs)(nV.f, {
             className: "ReplayViewerCategoryButton",
             onClick: function() {
-              dM && lM.gameBridge.send("saveClip", null)
+              EV && jV.gameBridge.send("saveClip", null)
             },
-            disabled: !dM,
-            children: [(0, LM.jsx)("span", {
+            disabled: !EV,
+            children: [(0, ZV.jsx)("span", {
               children: "Record clip"
-            }), (0, LM.jsx)(RO.d, {
+            }), (0, ZV.jsx)(MJ.d, {
               noaAction: "recordClip"
             })]
-          }), MM.enableClipping && !SM && hM && !rM && (0, LM.jsx)("div", {
+          }), VV.enableClipping && !YV && kV && !eV && (0, ZV.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Clip buffer is filling \u2014 play for a moment, then save."
-          }), rM && (0, LM.jsx)("div", {
+          }), eV && (0, ZV.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Clipping pauses while a full recording is active."
           })]
-        }), (0, LM.jsxs)("div", {
+        }), (0, ZV.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, LM.jsxs)(QM.e, {
+          children: [(0, ZV.jsxs)(nV.f, {
             className: "ReplayViewerCategoryButton",
             onClick: function() {
-              (0, uO.i)(!0), bM.d.set({
+              (0, XJ.k)(!0), AV.b.set({
                 openEverythingMenuName: null
               })
             },
-            disabled: PM,
-            children: [(0, LM.jsx)("span", {
+            disabled: pV,
+            children: [(0, ZV.jsx)("span", {
               children: "Open Replay Mode"
-            }), (0, LM.jsx)(RO.d, {
+            }), (0, ZV.jsx)(MJ.d, {
               noaAction: "replayViewerOpen"
             })]
-          }), PM && (0, LM.jsx)("div", {
+          }), pV && (0, ZV.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Replay Mode is already open."
           })]
-        }), (0, LM.jsxs)("div", {
+        }), (0, ZV.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, LM.jsx)("div", {
+          children: [(0, ZV.jsx)("div", {
             className: "ReplayViewerCategoryTutorialTitle",
             children: "How to use Replay Mode"
-          }), (0, LM.jsx)("iframe", {
+          }), (0, ZV.jsx)("iframe", {
             className: "ReplayViewerCategoryTutorial",
             src: "https://www.youtube.com/embed/-FsT0rNSuYA?playsinline=1&rel=0",
             title: "How to use Replay Mode",
@@ -2595,8 +2595,8 @@ export const modules = {
         })]
       })
     }));
-    var sO = iM(2e3);
-    const DO = {
+    var WJ = xV(2014);
+    const RJ = {
       account: {
         icon: "fa-solid fa-user",
         displayName: "homePage:account"
@@ -2618,11 +2618,11 @@ export const modules = {
         displayName: "settingsMenu:graphics"
       },
       controls: {
-        icon: () => (0, LM.jsx)("svg", {
+        icon: () => (0, ZV.jsx)("svg", {
           className: "svg-inline--fa",
           viewBox: "0 0 640 512",
           "aria-hidden": "true",
-          children: (0, LM.jsx)("path", {
+          children: (0, ZV.jsx)("path", {
             fill: "currentColor",
             d: "M256 20H384A36 36 0 0 1 420 56V208A36 36 0 0 1 384 244H256A36 36 0 0 1 220 208V56A36 36 0 0 1 256 20ZM262 166L378 166L320 90ZM36 268H164A36 36 0 0 1 200 304V456A36 36 0 0 1 164 492H36A36 36 0 0 1 0 456V304A36 36 0 0 1 36 268ZM134 438L134 322L58 380ZM256 268H384A36 36 0 0 1 420 304V456A36 36 0 0 1 384 492H256A36 36 0 0 1 220 456V304A36 36 0 0 1 256 268ZM378 346L262 346L320 422ZM476 268H604A36 36 0 0 1 640 304V456A36 36 0 0 1 604 492H476A36 36 0 0 1 440 456V304A36 36 0 0 1 476 268ZM506 322L506 438L582 380Z"
           })
@@ -2641,7 +2641,7 @@ export const modules = {
         icon: "fa-solid fa-folder-image",
         displayName: "settingsMenu:texturePack"
       },
-      nh: {
+      Xk: {
         icon: "fa-solid fa-sparkle",
         displayName: "settingsMenu:shaderPack"
       },
@@ -2667,371 +2667,371 @@ export const modules = {
       }
     };
 
-    function kO() {
-      return Promise.all([iM.e(89), iM.e(149), iM.e(148), iM.e(144)]).then((() => iM(42177))).then((MM => ({
-        default: MM.ShaderPackCategory
-      })), (MM => (console.error("Failed to load the shader pack settings", MM), {
-        default: ZO
+    function gJ() {
+      return Promise.all([xV.e(89), xV.e(149), xV.e(148), xV.e(144)]).then((() => xV(42398))).then((VV => ({
+        default: VV.ShaderPackCategory
+      })), (VV => (console.error("Failed to load the shader pack settings", VV), {
+        default: DJ
       })))
     }
 
-    function ZO() {
+    function DJ() {
       const {
-        t: MM
-      } = (0, aM.A)();
-      return (0, LM.jsx)("div", {
+        t: VV
+      } = (0, yV.A)();
+      return (0, ZV.jsx)("div", {
         className: "SettingsMenuRightInner",
-        children: MM("shaderPack:tabLoadFailed")
+        children: VV("shaderPack:tabLoadFailed")
       })
     }
-    var oO = iM(1464),
-      fO = iM(170);
-    const YO = /party\s*voice/i;
-    let NO = !1;
+    var iJ = xV(1473),
+      CJ = xV(193);
+    const aJ = /party\s*voice/i;
+    let oJ = !1;
 
-    function AO(MM) {
-      return Object.keys(MM).some((MM => MM.startsWith("__reactFiber$")))
+    function cJ(VV) {
+      return Object.keys(VV).some((VV => VV.startsWith("__reactFiber$")))
     }
-    const xO = ".MenuSideBarBody, .MenuSideBarSection";
+    const hJ = ".MenuSideBarBody, .MenuSideBarSection";
 
-    function vO(MM) {
-      var rM;
-      return (null !== (rM = MM.textContent) && void 0 !== rM ? rM : "").replace(/\s+/g, " ").trim()
+    function lJ(VV) {
+      var eV;
+      return (null !== (eV = VV.textContent) && void 0 !== eV ? eV : "").replace(/\s+/g, " ").trim()
     }
 
-    function FO(MM) {
-      for (const rM of function(MM) {
-          const rM = new Set;
-          for (const iM of MM.querySelectorAll(".MenuSideBarBodyTab, [data-pad-tab]")) rM.add(iM);
-          for (const iM of [MM, ...MM.querySelectorAll(xO)])
-            for (const MM of iM.children) rM.add(MM);
-          return [...rM]
-        }(MM))
-        if (!AO(rM) || !rM.matches(xO) && YO.test(vO(rM))) return rM;
+    function LJ(VV) {
+      for (const eV of function(VV) {
+          const eV = new Set;
+          for (const xV of VV.querySelectorAll(".MenuSideBarBodyTab, [data-pad-tab]")) eV.add(xV);
+          for (const xV of [VV, ...VV.querySelectorAll(hJ)])
+            for (const VV of xV.children) eV.add(VV);
+          return [...eV]
+        }(VV))
+        if (!cJ(eV) || !eV.matches(hJ) && aJ.test(lJ(eV))) return eV;
       return null
     }
 
-    function BO(MM) {
-      return MM.replace(/[^A-Za-z0-9_.-]+/g, "_").replace(/^_+|_+$/g, "")
+    function fJ(VV) {
+      return VV.replace(/[^A-Za-z0-9_.-]+/g, "_").replace(/^_+|_+$/g, "")
     }
-    const XO = new Set(["STYLE", "SCRIPT", "TITLE"]);
+    const mJ = new Set(["STYLE", "SCRIPT", "TITLE"]);
 
-    function IO(MM) {
-      const rM = document.createTreeWalker(MM, NodeFilter.SHOW_TEXT, {
-        acceptNode: MM => {
-          var rM, iM;
-          return XO.has(null !== (rM = null === (iM = MM.parentElement) || void 0 === iM ? void 0 : iM.tagName.toUpperCase()) && void 0 !== rM ? rM : "") ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT
+    function KJ(VV) {
+      const eV = document.createTreeWalker(VV, NodeFilter.SHOW_TEXT, {
+        acceptNode: VV => {
+          var eV, xV;
+          return mJ.has(null !== (eV = null === (xV = VV.parentElement) || void 0 === xV ? void 0 : xV.tagName.toUpperCase()) && void 0 !== eV ? eV : "") ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT
         }
       });
-      for (let jM = rM.nextNode(); null !== jM; jM = rM.nextNode()) {
-        var iM;
-        const MM = (null !== (iM = jM.textContent) && void 0 !== iM ? iM : "").normalize("NFC").replace(/^[^\p{L}]+/u, "");
-        if ("" !== MM) {
-          var OM, SM;
-          return (null !== (OM = null === (SM = MM.match(/^[\p{L}\p{M}\s]*/u)) || void 0 === SM ? void 0 : SM[0]) && void 0 !== OM ? OM : "").split(/\s+/).filter(Boolean).slice(0, 2).join(" ")
+      for (let UV = eV.nextNode(); null !== UV; UV = eV.nextNode()) {
+        var xV;
+        const VV = (null !== (xV = UV.textContent) && void 0 !== xV ? xV : "").normalize("NFC").replace(/^[^\p{L}]+/u, "");
+        if ("" !== VV) {
+          var JV, YV;
+          return (null !== (JV = null === (YV = VV.match(/^[\p{L}\p{M}\s]*/u)) || void 0 === YV ? void 0 : YV[0]) && void 0 !== JV ? JV : "").split(/\s+/).filter(Boolean).slice(0, 2).join(" ")
         }
       }
       return ""
     }
 
-    function KO(MM, rM) {
-      const iM = BO(rM).slice(0, 40) || "blank";
-      return `${(BO(MM.toLowerCase())||"none").slice(0,Math.max(23,fO.R-1-iM.length))}:${iM}`.slice(0, fO.R)
+    function HJ(VV, eV) {
+      const xV = fJ(eV).slice(0, 40) || "blank";
+      return `${(fJ(VV.toLowerCase())||"none").slice(0,Math.max(23,CJ.S-1-xV.length))}:${xV}`.slice(0, CJ.S)
     }
-    const qO = (0, OM.lazy)((() => iM.e(301).then((() => iM(42170))).then((MM => ({
-        default: MM.BloxdInformation
+    const uJ = (0, JV.lazy)((() => xV.e(301).then((() => xV(42380))).then((VV => ({
+        default: VV.BloxdInformation
       }))))),
-      TO = (0, OM.lazy)(kO);
+      sJ = (0, JV.lazy)(gJ);
 
-    function VO(MM) {
-      return MM ? "general" : "account"
+    function SJ(VV) {
+      return VV ? "general" : "account"
     }
-    const cO = new Map,
-      MS = (0, OM.memo)((function(MM) {
+    const IJ = new Map,
+      dJ = (0, JV.memo)((function(VV) {
         let {
-          show: rM,
-          setBeforeResumeCallback: iM
-        } = MM;
-        (0, dM.d)();
+          show: eV,
+          setBeforeResumeCallback: xV
+        } = VV;
+        (0, EV.e)();
         const {
-          gameState: SM,
-          openSettingsCategory: jM
-        } = (0, bM.m)(["gameState", "openSettingsCategory"]), {
-          userContext: nM
-        } = (0, hM.b)(), {
-          t: zM
-        } = (0, aM.A)(), GM = (0, HM.b)(), CM = (0, JM.f)("minChunkAddDist"), eM = "inGame" === SM, [wM, uM] = (0, OM.useState)(VO(eM)), [RM, pM] = (0, OM.useState)(null), [WM, sM] = (0, OM.useState)([]), DM = (0, OM.useRef)(function() {
-          const MM = new Date,
-            rM = 6 * (MM.getMonth() + MM.getDate()) % Ur.t.length;
-          return [...Ur.t, ...Ur.t].slice(rM, rM + 6)
-        }()), kM = (0, OM.useRef)(null), ZM = (0, OM.useRef)(null), oM = (0, qr.e)(wO.h, (0, wO.d)()), fM = Object.keys(DO).filter((MM => {
-          switch (MM) {
+          gameState: YV,
+          openSettingsCategory: UV
+        } = (0, AV.l)(["gameState", "openSettingsCategory"]), {
+          userContext: QV
+        } = (0, kV.d)(), {
+          t: wV
+        } = (0, yV.A)(), FV = (0, rV.c)(), TV = (0, bV.j)("minChunkAddDist"), PV = "inGame" === YV, [NV, zV] = (0, JV.useState)(SJ(PV)), [GV, WV] = (0, JV.useState)(null), [RV, gV] = (0, JV.useState)([]), DV = (0, JV.useRef)(function() {
+          const VV = new Date,
+            eV = 6 * (VV.getMonth() + VV.getDate()) % te.w.length;
+          return [...te.w, ...te.w].slice(eV, eV + 6)
+        }()), iV = (0, JV.useRef)(null), CV = (0, JV.useRef)(null), aV = (0, Se.j)(PJ.i, (0, PJ.c)()), oV = Object.keys(RJ).filter((VV => {
+          switch (VV) {
             case "replayViewer":
-              return eM;
+              return PV;
             case "developerTools":
-              return nM.playerHasRank("developer") || !1;
+              return QV.playerHasRank("developer") || !1;
             case "texturePack":
-              return yM.featureFlags.settings.canChangeTexturePack;
-            case "nh":
-              return yM.featureFlags.settings.canUseShaderPacks;
+              return BV.featureFlags.settings.canChangeTexturePack;
+            case "Xk":
+              return BV.featureFlags.settings.canUseShaderPacks;
             case "notifications":
-              return yM.featureFlags.useSocialFeatures || null !== nM.dailyDrop;
+              return BV.featureFlags.useSocialFeatures || null !== QV.dailyDrop;
             case "alternativeDomains":
-              return "crazygames" !== gM.siteUsed;
+              return "crazygames" !== MV.siteUsed;
             case "controller":
-              return yM.featureFlags.useControllerSupport && (oM || "controller" === wM);
+              return BV.featureFlags.useControllerSupport && (aV || "controller" === NV);
             default:
               return !0
           }
         }));
-        (0, qr.d)("toggleFullCoordinateOverlay", (() => {
-          const MM = ti("showCoordinates") && ti("showChunkCoordinates") && ti("showFPS");
-          gi("showCoordinates", !MM), gi("showChunkCoordinates", !MM), gi("showFPS", !MM), GM()
-        })), (0, qr.d)("updatedChunkLoadDist", (() => {
-          GM()
-        })), (0, OM.useEffect)((() => {
-          if (pM(null), null === bM.d.get("openSettingsCategory")) {
-            const MM = (0, oO.l)() ? cO.get(eM) : void 0;
-            uM(MM && fM.includes(MM) ? MM : VO(eM))
+        (0, Se.g)("toggleFullCoordinateOverlay", (() => {
+          const VV = Nx("showCoordinates") && Nx("showChunkCoordinates") && Nx("showFPS");
+          Xx("showCoordinates", !VV), Xx("showChunkCoordinates", !VV), Xx("showFPS", !VV), FV()
+        })), (0, Se.g)("updatedChunkLoadDist", (() => {
+          FV()
+        })), (0, JV.useEffect)((() => {
+          if (WV(null), null === AV.b.get("openSettingsCategory")) {
+            const VV = (0, iJ.m)() ? IJ.get(PV) : void 0;
+            zV(VV && oV.includes(VV) ? VV : SJ(PV))
           }
-        }), [rM]), (0, OM.useEffect)((() => {
-          if (rM && ZM.current) return function(MM) {
-            if (NO) return () => {};
-            let rM = null,
-              iM = null;
-            const OM = () => {
-                var MM;
-                null !== iM && (clearTimeout(iM), iM = null), null === (MM = rM) || void 0 === MM || MM.disconnect(), rM = null
+        }), [eV]), (0, JV.useEffect)((() => {
+          if (eV && CV.current) return function(VV) {
+            if (oJ) return () => {};
+            let eV = null,
+              xV = null;
+            const JV = () => {
+                var VV;
+                null !== xV && (clearTimeout(xV), xV = null), null === (VV = eV) || void 0 === VV || VV.disconnect(), eV = null
               },
-              SM = () => {
-                const rM = FO(MM);
-                null !== rM && (NO = !0, OM(), (0, Sr.reportAnalyticsClick)({
+              YV = () => {
+                const eV = LJ(VV);
+                null !== eV && (oJ = !0, JV(), (0, Ye.reportAnalyticsClick)({
                   id: "settings.unknown_tab_seen",
-                  value: KO(window.location.hostname, IO(rM))
+                  value: HJ(window.location.hostname, KJ(eV))
                 }))
               };
-            return iM = setTimeout((() => {
-              iM = null, SM(), NO || (rM = new MutationObserver(SM), rM.observe(MM, {
+            return xV = setTimeout((() => {
+              xV = null, YV(), oJ || (eV = new MutationObserver(YV), eV.observe(VV, {
                 childList: !0,
                 subtree: !0
               }))
-            }), 2e3), OM
-          }(ZM.current)
-        }), [rM]), (0, OM.useEffect)((() => {
-          null !== jM && (uM(jM), cO.set(eM, jM), bM.d.set({
+            }), 2e3), JV
+          }(CV.current)
+        }), [eV]), (0, JV.useEffect)((() => {
+          null !== UV && (zV(UV), IJ.set(PV, UV), AV.b.set({
             openSettingsCategory: null
           }))
-        }), [jM, eM]), (0, OM.useLayoutEffect)((() => {
-          kM.current && (kM.current.scrollTop = 0)
-        }), [wM, rM]), (0, OM.useEffect)((() => {
-          "updateLog" === wM && (0, UM.e)().then(sM)
-        }), [wM]), (0, OM.useEffect)((() => {
-          if ((0, Ui.J)(CM)) return;
-          const [MM, rM] = (0, Zi.e)(), [iM, OM] = (0, Hi.h)(CM), SM = (0, sO.f)(CM[0], MM, iM), jM = (0, sO.f)(CM[1], rM, OM);
-          lM.gameBridge.send("setChunkAddDistance", {
-            horizontal: SM,
-            vertical: jM
+        }), [UV, PV]), (0, JV.useLayoutEffect)((() => {
+          iV.current && (iV.current.scrollTop = 0)
+        }), [NV, eV]), (0, JV.useEffect)((() => {
+          "updateLog" === NV && (0, tV.c)().then(gV)
+        }), [NV]), (0, JV.useEffect)((() => {
+          if ((0, qx.J)(TV)) return;
+          const [VV, eV] = (0, Dx.e)(), [xV, JV] = (0, rx.g)(TV), YV = (0, WJ.d)(TV[0], VV, xV), UV = (0, WJ.d)(TV[1], eV, JV);
+          jV.gameBridge.send("setChunkAddDistance", {
+            horizontal: YV,
+            vertical: UV
           })
-        }), [CM]);
-        const YM = (0, OM.useCallback)((async () => {
-          RM && (await RM(), pM(null))
-        }), [RM]);
+        }), [TV]);
+        const cV = (0, JV.useCallback)((async () => {
+          GV && (await GV(), WV(null))
+        }), [GV]);
 
-        function NM() {
-          bM.d.set({
+        function hV() {
+          AV.b.set({
             openEverythingMenuName: null
           })
         }
-        return (0, OM.useEffect)((() => {
-          iM((() => YM))
-        }), [YM, iM]), (0, LM.jsxs)("div", {
+        return (0, JV.useEffect)((() => {
+          xV((() => cV))
+        }), [cV, xV]), (0, ZV.jsxs)("div", {
           className: "SettingsMenu Menu",
-          style: rM ? {} : {
+          style: eV ? {} : {
             display: "none"
           },
-          children: [(0, LM.jsx)("div", {
-            ref: ZM,
+          children: [(0, ZV.jsx)("div", {
+            ref: CV,
             className: "MenuSideBar",
-            children: (0, LM.jsx)("div", {
+            children: (0, ZV.jsx)("div", {
               className: "MenuSideBarBody",
-              children: (0, LM.jsx)(mM, {
-                items: fM.map((MM => {
-                  const rM = DO[MM].icon;
+              children: (0, ZV.jsx)(vV, {
+                items: oV.map((VV => {
+                  const eV = RJ[VV].icon;
                   return {
-                    id: MM,
-                    faIcon: "string" === typeof rM ? rM : void 0,
-                    iconElement: "string" === typeof rM ? void 0 : (0, LM.jsx)(rM, {}),
-                    title: zM(DO[MM].displayName),
+                    id: VV,
+                    faIcon: "string" === typeof eV ? eV : void 0,
+                    iconElement: "string" === typeof eV ? void 0 : (0, ZV.jsx)(eV, {}),
+                    title: wV(RJ[VV].displayName),
                     redDot: !1
                   }
                 })),
-                selectedItemId: wM,
-                onClick: MM => {
-                  !async function(MM) {
-                    await YM(), uM(MM), cO.set(eM, MM)
-                  }(MM)
+                selectedItemId: NV,
+                onClick: VV => {
+                  !async function(VV) {
+                    await cV(), zV(VV), IJ.set(PV, VV)
+                  }(VV)
                 }
               })
             })
-          }), (0, LM.jsxs)("div", {
-            ref: kM,
+          }), (0, ZV.jsxs)("div", {
+            ref: iV,
             className: "MenuBody SettingsMenuRight",
-            children: ["account" === wM && (0, LM.jsx)(kr, {
-              showing: rM,
-              inGame: eM
-            }), "general" === wM && (0, LM.jsx)(Xr, {
-              inGame: eM
-            }), "audio" === wM && (0, LM.jsx)(Ir, {}), "notifications" === wM && (0, LM.jsx)(mi, {}), "graphics" === wM && (0, LM.jsx)(ki, {
-              minChunkAddDist: null !== CM && void 0 !== CM ? CM : [2, 2],
-              getValue: ti,
-              onChange: gi,
-              setApplySettingsCallback: pM
-            }), "controls" === wM && (0, LM.jsx)(oi.f, {}), "crosshair" === wM && (0, LM.jsx)(eO, {
-              showing: rM
-            }), "controller" === wM && yM.featureFlags.useControllerSupport && (0, LM.jsx)(bO.d, {}), yM.featureFlags.settings.canChangeTexturePack && "texturePack" === wM && (0, LM.jsx)(tO.c, {
-              setApplySettingsCallback: pM
-            }), yM.featureFlags.settings.canUseShaderPacks && "nh" === wM && (0, LM.jsx)(OM.Suspense, {
+            children: ["account" === NV && (0, ZV.jsx)(ie, {
+              showing: eV,
+              inGame: PV
+            }), "general" === NV && (0, ZV.jsx)(He, {
+              inGame: PV
+            }), "audio" === NV && (0, ZV.jsx)(ue, {}), "notifications" === NV && (0, ZV.jsx)(vx, {}), "graphics" === NV && (0, ZV.jsx)(gx, {
+              minChunkAddDist: null !== TV && void 0 !== TV ? TV : [2, 2],
+              getValue: Nx,
+              onChange: Xx,
+              setApplySettingsCallback: WV
+            }), "controls" === NV && (0, ZV.jsx)(ix.e, {}), "crosshair" === NV && (0, ZV.jsx)(FJ, {
+              showing: eV
+            }), "controller" === NV && BV.featureFlags.useControllerSupport && (0, ZV.jsx)(TJ.e, {}), BV.featureFlags.settings.canChangeTexturePack && "texturePack" === NV && (0, ZV.jsx)(AJ.d, {
+              setApplySettingsCallback: WV
+            }), BV.featureFlags.settings.canUseShaderPacks && "Xk" === NV && (0, ZV.jsx)(JV.Suspense, {
               fallback: null,
-              children: (0, LM.jsx)(TO, {
-                setApplySettingsCallback: pM
+              children: (0, ZV.jsx)(sJ, {
+                setApplySettingsCallback: WV
               })
-            }), "updateLog" === wM && (0, LM.jsx)("div", {
+            }), "updateLog" === NV && (0, ZV.jsx)("div", {
               className: "SettingsMenuRightInner",
-              children: (0, LM.jsx)("div", {
+              children: (0, ZV.jsx)("div", {
                 className: "UpdateLogsContainer",
-                children: WM.map(((MM, rM) => (0, LM.jsx)(EM.d, {
-                  updateLog: MM,
-                  index: rM,
-                  close: NM
-                }, rM)))
+                children: RV.map(((VV, eV) => (0, ZV.jsx)(qV.d, {
+                  updateLog: VV,
+                  index: eV,
+                  close: hV
+                }, eV)))
               })
-            }), "information" === wM && (0, LM.jsx)("div", {
+            }), "information" === NV && (0, ZV.jsx)("div", {
               className: "SettingsMenuRightInner",
-              children: (0, LM.jsx)(OM.Suspense, {
+              children: (0, ZV.jsx)(JV.Suspense, {
                 fallback: null,
-                children: (0, LM.jsx)(qO, {})
+                children: (0, ZV.jsx)(uJ, {})
               })
-            }), "alternativeDomains" === wM && (0, LM.jsxs)("div", {
+            }), "alternativeDomains" === NV && (0, ZV.jsxs)("div", {
               className: "SettingsMenuRightInner",
-              children: [(0, LM.jsx)("div", {
+              children: [(0, ZV.jsx)("div", {
                 className: "AlternativeDomainsTitle",
-                children: zM("settingsMenu:unblockedDomainsDescription")
-              }), (0, LM.jsx)("div", {
+                children: wV("settingsMenu:unblockedDomainsDescription")
+              }), (0, ZV.jsx)("div", {
                 className: "AlternativeDomainsList",
-                children: DM.current.map((MM => (0, LM.jsxs)(QM.e, {
+                children: DV.current.map((VV => (0, ZV.jsxs)(nV.f, {
                   onClick: () => {
-                    window.open(`https://${MM}`)
+                    window.open(`https://${VV}`)
                   },
-                  children: [(0, LM.jsx)(PM.b, {
+                  children: [(0, ZV.jsx)(pV.b, {
                     name: "arrow-up-right-from-square"
-                  }), " ", MM]
-                }, MM)))
+                  }), " ", VV]
+                }, VV)))
               })]
-            }), "replayViewer" === wM && (0, LM.jsx)(WO, {}), "developerTools" === wM && (0, LM.jsx)("div", {
+            }), "replayViewer" === NV && (0, ZV.jsx)(GJ, {}), "developerTools" === NV && (0, ZV.jsx)("div", {
               className: "SettingsMenuRightInner",
-              children: (0, LM.jsx)(tM, {
-                setApplySettingsCallback: pM
+              children: (0, ZV.jsx)(XV, {
+                setApplySettingsCallback: WV
               })
-            }), null !== RM && (0, LM.jsx)("div", {
+            }), null !== GV && (0, ZV.jsx)("div", {
               className: "SettingsMenuRightFooter",
-              children: (0, LM.jsx)(QM.e, {
+              children: (0, ZV.jsx)(nV.f, {
                 className: "SettingsMenuRightFooterButton",
-                onClick: YM,
-                children: zM("general:apply")
+                onClick: cV,
+                children: wV("general:apply")
               })
             })]
           })]
         })
       }));
-    var rS = iM(2843),
-      iS = iM(4035),
-      OS = iM(2446);
-    const SS = (0, OM.lazy)((() => Promise.resolve().then((() => iM(5035))).then((MM => {
-        MM.needGameClientAfterPaint();
-        const rM = MM.matchmakingLibrariesPromise.then((MM => (0, rS.e)(MM.loadCharacterCustomisationUI(), (MM => MM.CharacterCustomisationUI))));
-        return Promise.all([MM.ensureGameSetup(), rM]).then((MM => {
-          let [, rM] = MM;
-          return rM
+    var OJ = xV(2919),
+      VY = xV(4058),
+      eY = xV(2473);
+    const xY = (0, JV.lazy)((() => Promise.resolve().then((() => xV(5145))).then((VV => {
+        VV.needGameClientAfterPaint();
+        const eV = VV.matchmakingLibrariesPromise.then((VV => (0, OJ.c)(VV.loadCharacterCustomisationUI(), (VV => VV.CharacterCustomisationUI))));
+        return Promise.all([VV.ensureGameSetup(), eV]).then((VV => {
+          let [, eV] = VV;
+          return eV
         }))
       })))),
-      jS = "openCustomisationTab";
+      JY = "openCustomisationTab";
 
-    function aS(MM) {
-      var rM, iM, SM;
+    function YY(VV) {
+      var eV, xV, YV;
       let {
-        show: jM
-      } = MM;
+        show: UV
+      } = VV;
       const {
-        userContext: aM
-      } = (0, hM.b)(), PM = (0, NM.usePurchasesAllowed)(), nM = (0, OM.useRef)(null);
-      var QM, zM;
-      aM !== uM.NULL_USER_CONTEXT && (null === (rM = nM.current) || void 0 === rM ? void 0 : rM.whamm) !== aM.whamm && (nM.current = {
-        whamm: aM.whamm,
-        mountKey: (null !== (QM = null === (zM = nM.current) || void 0 === zM ? void 0 : zM.mountKey) && void 0 !== QM ? QM : -1) + 1
+        userContext: yV
+      } = (0, kV.d)(), pV = (0, hV.usePurchasesAllowed)(), QV = (0, JV.useRef)(null);
+      var nV, wV;
+      yV !== zV.NULL_USER_CONTEXT && (null === (eV = QV.current) || void 0 === eV ? void 0 : eV.whamm) !== yV.whamm && (QV.current = {
+        whamm: yV.whamm,
+        mountKey: (null !== (nV = null === (wV = QV.current) || void 0 === wV ? void 0 : wV.mountKey) && void 0 !== nV ? nV : -1) + 1
       });
-      const [HM, JM] = (0, OM.useState)("characters");
-      if ((0, qr.d)(jS, JM), !jM) return null;
-      const dM = null !== (0, iS.k)(Date.now()),
-        yM = aM.getOwnedCosmeticPacks(),
-        lM = Ur.Lb.filter((MM => "pet" === MM || "aura" === MM ? dM || (0, OS.o)(MM).some((rM => rM !== `${MM}_none` && (0, OS.z)(MM, rM, yM))) : "cape" !== MM && "nameColour" !== MM || aM.getPlayerRanks().includes("super") || PM)).map((MM => ({
-          id: MM,
-          faIcon: Ur.C[MM],
-          title: Ur.F[MM],
+      const [rV, bV] = (0, JV.useState)("characters");
+      if ((0, Se.g)(JY, bV), !UV) return null;
+      const EV = null !== (0, VY.k)(Date.now()),
+        BV = yV.getOwnedCosmeticPacks(),
+        jV = te.Pb.filter((VV => "pet" === VV || "aura" === VV ? EV || (0, eY.o)(VV).some((eV => eV !== `${VV}_none` && (0, eY.x)(VV, eV, BV))) : "cape" !== VV && "nameColour" !== VV || yV.getPlayerRanks().includes("super") || pV)).map((VV => ({
+          id: VV,
+          faIcon: te.F[VV],
+          title: te.G[VV],
           redDot: !1
         })));
-      return (0, LM.jsxs)("div", {
+      return (0, ZV.jsxs)("div", {
         className: "Menu CharCustomisation",
-        children: [(0, LM.jsx)("div", {
+        children: [(0, ZV.jsx)("div", {
           className: "MenuSideBar",
-          children: (0, LM.jsx)(mM, {
-            items: lM,
-            selectedItemId: HM,
-            onClick: MM => {
-              JM(MM)
+          children: (0, ZV.jsx)(vV, {
+            items: jV,
+            selectedItemId: rV,
+            onClick: VV => {
+              bV(VV)
             }
           })
-        }), (0, LM.jsx)("div", {
+        }), (0, ZV.jsx)("div", {
           className: "MenuBody",
-          children: (0, LM.jsx)(OM.Suspense, {
-            fallback: (0, LM.jsx)("div", {
+          children: (0, ZV.jsx)(JV.Suspense, {
+            fallback: (0, ZV.jsx)("div", {
               className: "CharacterCustomisationLoading",
-              children: (0, LM.jsx)(CM.d, {})
+              children: (0, ZV.jsx)(TV.d, {})
             }),
-            children: (0, LM.jsx)(SS, {
-              selectedTab: HM
-            }, null !== (iM = null === (SM = nM.current) || void 0 === SM ? void 0 : SM.mountKey) && void 0 !== iM ? iM : 0)
+            children: (0, ZV.jsx)(xY, {
+              selectedTab: rV
+            }, null !== (xV = null === (YV = QV.current) || void 0 === YV ? void 0 : YV.mountKey) && void 0 !== xV ? xV : 0)
           })
         })]
       })
     }
-    var PS = iM(1533),
-      nS = iM(1541),
-      QS = iM(35017),
-      zS = iM(4917),
-      LS = iM(3827),
-      mS = iM(3868),
-      HS = iM(35040),
-      hS = iM(9374),
-      JS = iM(35026),
-      dS = iM(35035),
-      yS = iM(2026),
-      lS = iM(2006),
-      ES = iM(5306),
-      US = iM(1270),
-      GS = iM(1229),
-      CS = iM(1750),
-      eS = iM(9442),
-      bS = iM(2647),
-      wS = iM(2653);
+    var UY = xV(1569),
+      yY = xV(1578),
+      pY = xV(35300),
+      QY = xV(5011),
+      nY = xV(3862),
+      wY = xV(3919),
+      ZY = xV(35325),
+      vY = xV(9403),
+      rY = xV(35308),
+      kY = xV(35317),
+      bY = xV(2039),
+      EY = xV(2021),
+      BY = xV(5404),
+      jY = xV(1290),
+      qY = xV(1252),
+      tY = xV(1764),
+      FY = xV(9453),
+      TY = xV(2703),
+      PY = xV(2712);
 
-    function tS(MM) {
-      return MM ? Object.keys(MM).sort(((rM, iM) => {
-        var OM, SM, jM, aM;
-        const PM = (null !== (OM = null === (SM = MM[iM]) || void 0 === SM ? void 0 : SM.sortPriority) && void 0 !== OM ? OM : 0) - (null !== (jM = null === (aM = MM[rM]) || void 0 === aM ? void 0 : aM.sortPriority) && void 0 !== jM ? jM : 0);
-        return 0 !== PM ? PM : rM.localeCompare(iM)
+    function AY(VV) {
+      return VV ? Object.keys(VV).sort(((eV, xV) => {
+        var JV, YV, UV, yV;
+        const pV = (null !== (JV = null === (YV = VV[xV]) || void 0 === YV ? void 0 : YV.sortPriority) && void 0 !== JV ? JV : 0) - (null !== (UV = null === (yV = VV[eV]) || void 0 === yV ? void 0 : yV.sortPriority) && void 0 !== UV ? UV : 0);
+        return 0 !== pV ? pV : eV.localeCompare(xV)
       })) : []
     }
-    const gS = [{
+    const NY = [{
       threshold: 1e12,
       suffix: "T"
     }, {
@@ -3045,241 +3045,241 @@ export const modules = {
       suffix: "K"
     }];
 
-    function uS(MM) {
+    function XY(VV) {
       for (const {
-          threshold: rM,
-          suffix: iM
+          threshold: eV,
+          suffix: xV
         }
-        of gS)
-        if (MM >= rM) {
-          const OM = MM / rM;
-          return OM >= 100 ? `${Math.floor(OM)}${iM}` : OM >= 10 ? `${OM.toFixed(1).replace(/\.0$/,"")}${iM}` : `${OM.toFixed(2).replace(/\.?0+$/,"")}${iM}`
-        } return String(MM)
+        of NY)
+        if (VV >= eV) {
+          const JV = VV / eV;
+          return JV >= 100 ? `${Math.floor(JV)}${xV}` : JV >= 10 ? `${JV.toFixed(1).replace(/\.0$/,"")}${xV}` : `${JV.toFixed(2).replace(/\.?0+$/,"")}${xV}`
+        } return String(VV)
     }
-    var RS = iM(5417);
-    const pS = {
+    var MY = xV(5529);
+    const zY = {
         normal: "0.8em",
         big: "1em"
       },
-      WS = (0, OM.memo)((function(MM) {
+      GY = (0, JV.memo)((function(VV) {
         let {
-          item: rM,
-          amount: iM = 0,
-          size: OM = "normal",
-          tier: SM = null
-        } = MM;
-        return (0, LM.jsx)("div", {
-          className: jM()("SmpSlot", `SmpSlot-${OM}`),
-          children: rM && (0, LM.jsx)(yS.b, {
-            itemName: rM,
-            amount: iM > 1 ? iM : 0,
-            amountFontSize: pS[OM],
-            enchantmentTier: SM
+          item: eV,
+          amount: xV = 0,
+          size: JV = "normal",
+          tier: YV = null
+        } = VV;
+        return (0, ZV.jsx)("div", {
+          className: UV()("SmpSlot", `SmpSlot-${JV}`),
+          children: eV && (0, ZV.jsx)(bY.e, {
+            itemName: eV,
+            amount: xV > 1 ? xV : 0,
+            amountFontSize: zY[JV],
+            enchantmentTier: YV
           })
         })
       }));
 
-    function sS(MM) {
+    function WY(VV) {
       let {
-        amount: rM,
-        exact: iM = !1,
-        className: OM
-      } = MM;
-      return (0, LM.jsxs)("span", {
-        className: jM()("SmpGold", OM),
-        children: [(0, LM.jsx)("span", {
+        amount: eV,
+        exact: xV = !1,
+        className: JV
+      } = VV;
+      return (0, ZV.jsxs)("span", {
+        className: UV()("SmpGold", JV),
+        children: [(0, ZV.jsx)("span", {
           className: "SmpCoin",
-          children: (0, LM.jsx)(yS.b, {
+          children: (0, ZV.jsx)(bY.e, {
             itemName: "Gold Coin",
             amount: 0
           })
-        }), iM ? rM.toLocaleString("en-US") : uS(rM)]
+        }), xV ? eV.toLocaleString("en-US") : XY(eV)]
       })
     }
 
-    function DS(MM) {
+    function RY(VV) {
       let {
-        count: rM = 5,
-        grid: iM = !1
-      } = MM;
-      return (0, LM.jsx)("div", {
-        className: iM ? "SmpCardGrid" : "SmpList",
+        count: eV = 5,
+        grid: xV = !1
+      } = VV;
+      return (0, ZV.jsx)("div", {
+        className: xV ? "SmpCardGrid" : "SmpList",
         "aria-hidden": "true",
         children: Array.from({
-          length: rM
-        }, ((MM, rM) => (0, LM.jsxs)("div", {
-          className: jM()(iM ? "SmpListingCard" : "SmpRow", "SmpSkeleton"),
-          children: [(0, LM.jsx)("div", {
-            className: jM()("SmpSlot", iM ? "SmpSlot-big" : "SmpSlot-normal")
-          }), (0, LM.jsxs)("div", {
+          length: eV
+        }, ((VV, eV) => (0, ZV.jsxs)("div", {
+          className: UV()(xV ? "SmpListingCard" : "SmpRow", "SmpSkeleton"),
+          children: [(0, ZV.jsx)("div", {
+            className: UV()("SmpSlot", xV ? "SmpSlot-big" : "SmpSlot-normal")
+          }), (0, ZV.jsxs)("div", {
             className: "SmpRowText",
-            children: [(0, LM.jsx)("b", {}), (0, LM.jsx)("small", {})]
-          }), (0, LM.jsx)("div", {
+            children: [(0, ZV.jsx)("b", {}), (0, ZV.jsx)("small", {})]
+          }), (0, ZV.jsx)("div", {
             className: "SmpSkeletonButton"
           })]
-        }, rM)))
+        }, eV)))
       })
     }
 
-    function kS(MM) {
+    function gY(VV) {
       let {
-        title: rM,
-        children: iM
-      } = MM;
-      return (0, LM.jsxs)("div", {
+        title: eV,
+        children: xV
+      } = VV;
+      return (0, ZV.jsxs)("div", {
         className: "SmpEmpty",
-        children: [(0, LM.jsx)("b", {
-          children: rM
-        }), iM && (0, LM.jsx)("small", {
-          children: iM
+        children: [(0, ZV.jsx)("b", {
+          children: eV
+        }), xV && (0, ZV.jsx)("small", {
+          children: xV
         })]
       })
     }
 
-    function ZS(MM) {
+    function DY(VV) {
       let {
-        entry: rM
-      } = MM;
-      return (0, LM.jsx)(kS, {
-        title: (0, LM.jsx)(lS.b, {
-          text: rM.item.customTitle
+        entry: eV
+      } = VV;
+      return (0, ZV.jsx)(gY, {
+        title: (0, ZV.jsx)(EY.b, {
+          text: eV.item.customTitle
         }),
-        children: (0, LM.jsx)(lS.b, {
-          text: rM.item.description
+        children: (0, ZV.jsx)(EY.b, {
+          text: eV.item.description
         })
       })
     }
 
-    function oS(MM) {
-      return (0, LM.jsx)(RS.e, {
-        ...MM,
-        className: jM()("SmpChoice", MM.className),
+    function iY(VV) {
+      return (0, ZV.jsx)(MY.b, {
+        ...VV,
+        className: UV()("SmpChoice", VV.className),
         reselectable: !0
       })
     }
 
-    function fS() {
-      return (0, LM.jsx)("span", {
+    function CY() {
+      return (0, ZV.jsx)("span", {
         className: "SmpLoader",
-        children: (0, LM.jsx)(CM.d, {})
+        children: (0, ZV.jsx)(TV.d, {})
       })
     }
 
-    function YS(MM) {
+    function aY(VV) {
       let {
-        value: rM,
-        onChange: iM,
-        min: SM = 1,
-        max: jM,
-        step: aM = 1,
-        label: PM
-      } = MM;
-      const nM = (0, OM.useRef)(null),
-        QM = (0, OM.useRef)(rM);
-      QM.current = rM;
-      const [zM, mM] = (0, OM.useState)(null), HM = MM => Math.max(SM, Math.min(jM, Math.floor(MM))), hM = MM => {
-        const rM = QM.current,
-          OM = "function" === typeof aM ? aM(rM, MM) : aM,
-          SM = HM(rM + OM * MM);
-        QM.current = SM, iM(SM)
+        value: eV,
+        onChange: xV,
+        min: YV = 1,
+        max: UV,
+        step: yV = 1,
+        label: pV
+      } = VV;
+      const QV = (0, JV.useRef)(null),
+        nV = (0, JV.useRef)(eV);
+      nV.current = eV;
+      const [wV, vV] = (0, JV.useState)(null), rV = VV => Math.max(YV, Math.min(UV, Math.floor(VV))), kV = VV => {
+        const eV = nV.current,
+          JV = "function" === typeof yV ? yV(eV, VV) : yV,
+          YV = rV(eV + JV * VV);
+        nV.current = YV, xV(YV)
       };
-      (0, OM.useEffect)((() => {
-        if (null === zM) return;
-        let MM;
-        const rM = () => {
-            mM(null)
+      (0, JV.useEffect)((() => {
+        if (null === wV) return;
+        let VV;
+        const eV = () => {
+            vV(null)
           },
-          iM = setTimeout((() => {
-            MM = setInterval((() => {
-              hM(zM);
-              const MM = QM.current;
-              (zM > 0 ? MM >= jM : MM <= SM) && rM()
+          xV = setTimeout((() => {
+            VV = setInterval((() => {
+              kV(wV);
+              const VV = nV.current;
+              (wV > 0 ? VV >= UV : VV <= YV) && eV()
             }), 70)
           }), 380);
-        return window.addEventListener("pointerup", rM), window.addEventListener("pointercancel", rM), window.addEventListener("blur", rM), () => {
-          clearTimeout(iM), clearInterval(MM), window.removeEventListener("pointerup", rM), window.removeEventListener("pointercancel", rM), window.removeEventListener("blur", rM)
+        return window.addEventListener("pointerup", eV), window.addEventListener("pointercancel", eV), window.addEventListener("blur", eV), () => {
+          clearTimeout(xV), clearInterval(VV), window.removeEventListener("pointerup", eV), window.removeEventListener("pointercancel", eV), window.removeEventListener("blur", eV)
         }
-      }), [zM]), (0, OM.useEffect)((() => {
-        const MM = nM.current;
-        MM && document.activeElement !== MM && MM.value !== String(rM) && (MM.value = String(rM))
-      }), [rM]), (0, OM.useEffect)((() => {
-        const MM = nM.current;
-        if (!MM) return;
-        const rM = () => {
-          MM.value = String(QM.current)
+      }), [wV]), (0, JV.useEffect)((() => {
+        const VV = QV.current;
+        VV && document.activeElement !== VV && VV.value !== String(eV) && (VV.value = String(eV))
+      }), [eV]), (0, JV.useEffect)((() => {
+        const VV = QV.current;
+        if (!VV) return;
+        const eV = () => {
+          VV.value = String(nV.current)
         };
-        return MM.addEventListener("blur", rM), () => {
-          MM.removeEventListener("blur", rM)
+        return VV.addEventListener("blur", eV), () => {
+          VV.removeEventListener("blur", eV)
         }
       }), []);
-      const JM = MM => (0, LM.jsx)("button", {
+      const bV = VV => (0, ZV.jsx)("button", {
         type: "button",
         className: "SmpStepButton",
-        "aria-label": `${MM>0?"More":"Less"} ${PM}`,
-        disabled: MM > 0 ? rM >= jM : rM <= SM,
-        onPointerDown: rM => {
-          0 === rM.button && (hM(MM), mM(MM))
+        "aria-label": `${VV>0?"More":"Less"} ${pV}`,
+        disabled: VV > 0 ? eV >= UV : eV <= YV,
+        onPointerDown: eV => {
+          0 === eV.button && (kV(VV), vV(VV))
         },
-        onKeyDown: rM => {
-          "Enter" !== rM.key && " " !== rM.key || hM(MM)
+        onKeyDown: eV => {
+          "Enter" !== eV.key && " " !== eV.key || kV(VV)
         },
-        onContextMenu: MM => {
-          MM.preventDefault()
+        onContextMenu: VV => {
+          VV.preventDefault()
         },
-        children: MM > 0 ? "+" : "\u2212"
+        children: VV > 0 ? "+" : "\u2212"
       });
-      return (0, LM.jsxs)("div", {
+      return (0, ZV.jsxs)("div", {
         className: "SmpStepper",
-        children: [JM(-1), (0, LM.jsx)(GM.b, {
+        children: [bV(-1), (0, ZV.jsx)(FV.d, {
           className: "SmpStepperInput",
-          domRef: nM,
-          defaultValue: String(rM),
-          ariaLabel: PM,
+          domRef: QV,
+          defaultValue: String(eV),
+          ariaLabel: pV,
           type: "text",
           blurOnEnter: !0,
-          onValueChange: MM => {
-            const rM = MM.replace(/[^\d]/g, "");
-            nM.current && rM !== MM && (nM.current.value = rM), "" !== rM && iM(HM(Number(rM)))
+          onValueChange: VV => {
+            const eV = VV.replace(/[^\d]/g, "");
+            QV.current && eV !== VV && (QV.current.value = eV), "" !== eV && xV(rV(Number(eV)))
           }
-        }), JM(1)]
+        }), bV(1)]
       })
     }
 
-    function NS(MM) {
-      return Math.max(1, 10 ** Math.max(0, Math.floor(Math.log10(Math.max(1, MM))) - 1))
+    function oY(VV) {
+      return Math.max(1, 10 ** Math.max(0, Math.floor(Math.log10(Math.max(1, VV))) - 1))
     }
-    var AS = iM(35037),
-      xS = iM(1242);
-    const vS = ["building", "colours", "nature", "decoration", "utility", "tools", "combat", "food", "mobs", "materials", "worldTools"];
-    xS.v, fM.Ec.length;
+    var cY = xV(35319),
+      hY = xV(1269);
+    const lY = ["building", "colours", "nature", "decoration", "utility", "tools", "combat", "food", "mobs", "materials", "worldTools"];
+    hY.A, oV.Lc.length;
     new Map;
-    var FS = iM(3693);
+    var LY = xV(3719);
 
-    function BS(MM, rM) {
-      var iM;
-      return rM && (null === (iM = MM[rM]) || void 0 === iM ? void 0 : iM.smp) || null
+    function fY(VV, eV) {
+      var xV;
+      return eV && (null === (xV = VV[eV]) || void 0 === xV ? void 0 : xV.smp) || null
     }
 
-    function XS(MM, rM) {
-      const iM = [];
-      for (const SM of tS(MM)) {
-        var OM;
-        const jM = MM[SM];
-        (null === (OM = jM.smp) || void 0 === OM ? void 0 : OM.kind) === rM && iM.push({
-          key: SM,
-          item: jM,
-          meta: jM.smp
+    function mY(VV, eV) {
+      const xV = [];
+      for (const YV of AY(VV)) {
+        var JV;
+        const UV = VV[YV];
+        (null === (JV = UV.smp) || void 0 === JV ? void 0 : JV.kind) === eV && xV.push({
+          key: YV,
+          item: UV,
+          meta: UV.smp
         })
       }
-      return iM
+      return xV
     }
 
-    function IS(MM, rM) {
-      var iM;
-      return null !== (iM = XS(MM, rM)[0]) && void 0 !== iM ? iM : null
+    function KY(VV, eV) {
+      var xV;
+      return null !== (xV = mY(VV, eV)[0]) && void 0 !== xV ? xV : null
     }
-    const KS = "50% 0% 50% 0%",
-      qS = [{
+    const HY = "50% 0% 50% 0%",
+      uY = [{
         divisor: 864e5,
         suffix: "d"
       }, {
@@ -3293,746 +3293,746 @@ export const modules = {
         suffix: "s"
       }];
 
-    function TS(MM) {
-      const rM = MM - (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now());
+    function sY(VV) {
+      const eV = VV - (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now());
       for (const {
-          divisor: iM,
-          suffix: OM
+          divisor: xV,
+          suffix: JV
         }
-        of qS)
-        if (rM >= iM) return `${Math.floor(rM/iM)}${OM}`;
+        of uY)
+        if (eV >= xV) return `${Math.floor(eV/xV)}${JV}`;
       return "<1s"
     }
 
-    function VS(MM) {
-      const rM = MM.map(hS.d),
-        iM = [];
-      return rM.forEach(((MM, OM) => {
-        const SM = function(MM) {
-            const rM = MM.match(/\d+/);
-            return rM ? Number(rM[0]) : 0
-          }(MM),
-          jM = OM === rM.length - 1;
-        (jM || 1 === SM || 10 === SM || 100 === SM) && iM.push({
-          label: MM,
-          quantity: SM,
-          isAll: jM
+    function SY(VV) {
+      const eV = VV.map(vY.h),
+        xV = [];
+      return eV.forEach(((VV, JV) => {
+        const YV = function(VV) {
+            const eV = VV.match(/\d+/);
+            return eV ? Number(eV[0]) : 0
+          }(VV),
+          UV = JV === eV.length - 1;
+        (UV || 1 === YV || 10 === YV || 100 === YV) && xV.push({
+          label: VV,
+          quantity: YV,
+          isAll: UV
         })
-      })), iM
+      })), xV
     }
-    let cS = null;
+    let IY = null;
 
-    function Mj(MM, rM) {
-      const iM = rM.trim().toLowerCase();
-      if (!iM) return [];
-      const OM = MM => {
-          if (MM === iM) return 0;
-          if (MM.startsWith(iM)) return 1;
-          const rM = MM.indexOf(iM);
-          return -1 === rM ? -1 : 2 + rM
+    function dY(VV, eV) {
+      const xV = eV.trim().toLowerCase();
+      if (!xV) return [];
+      const JV = VV => {
+          if (VV === xV) return 0;
+          if (VV.startsWith(xV)) return 1;
+          const eV = VV.indexOf(xV);
+          return -1 === eV ? -1 : 2 + eV
         },
-        SM = [];
-      for (const PM of MM) {
-        const MM = [OM(PM.lowerLabel), OM(PM.lowerName)].filter((MM => -1 !== MM));
-        MM.length && SM.push({
-          item: PM,
-          rank: Math.min(...MM)
+        YV = [];
+      for (const pV of VV) {
+        const VV = [JV(pV.lowerLabel), JV(pV.lowerName)].filter((VV => -1 !== VV));
+        VV.length && YV.push({
+          item: pV,
+          rank: Math.min(...VV)
         })
       }
-      if (SM.length > 0) return SM.sort(((MM, rM) => MM.rank - rM.rank)).map((MM => MM.item));
-      const jM = [...iM],
-        aM = MM => {
-          let rM = 0;
-          for (const iM of jM) {
-            if (rM = MM.indexOf(iM, rM), -1 === rM) return !1;
-            rM++
+      if (YV.length > 0) return YV.sort(((VV, eV) => VV.rank - eV.rank)).map((VV => VV.item));
+      const UV = [...xV],
+        yV = VV => {
+          let eV = 0;
+          for (const xV of UV) {
+            if (eV = VV.indexOf(xV, eV), -1 === eV) return !1;
+            eV++
           }
           return !0
         };
-      return MM.filter((MM => aM(MM.lowerLabel) || aM(MM.lowerName)))
+      return VV.filter((VV => yV(VV.lowerLabel) || yV(VV.lowerName)))
     }
 
-    function rj(MM, rM) {
-      var iM;
-      return null !== (iM = null === MM || void 0 === MM ? void 0 : MM[rM]) && void 0 !== iM ? iM : rM
+    function OY(VV, eV) {
+      var xV;
+      return null !== (xV = null === VV || void 0 === VV ? void 0 : VV[eV]) && void 0 !== xV ? xV : eV
     }
 
-    function ij(MM, rM) {
-      const iM = MM.userInput;
-      return void 0 !== rM && "dropdown" === (null === iM || void 0 === iM ? void 0 : iM.type) && iM.dropdownOptions.map(hS.d).includes(rM) ? rM : function(MM) {
-        const rM = MM.userInput;
-        if ("dropdown" !== (null === rM || void 0 === rM ? void 0 : rM.type) || 0 === rM.dropdownOptions.length) return null;
-        const iM = rM.dropdownOptions.map(hS.d);
-        return rM.initialValue && iM.includes(rM.initialValue) ? rM.initialValue : iM[iM.length - 1]
-      }(MM)
+    function VU(VV, eV) {
+      const xV = VV.userInput;
+      return void 0 !== eV && "dropdown" === (null === xV || void 0 === xV ? void 0 : xV.type) && xV.dropdownOptions.map(vY.h).includes(eV) ? eV : function(VV) {
+        const eV = VV.userInput;
+        if ("dropdown" !== (null === eV || void 0 === eV ? void 0 : eV.type) || 0 === eV.dropdownOptions.length) return null;
+        const xV = eV.dropdownOptions.map(vY.h);
+        return eV.initialValue && xV.includes(eV.initialValue) ? eV.initialValue : xV[xV.length - 1]
+      }(VV)
     }
 
-    function Oj(MM) {
-      return void 0 === MM ? "" : JSON.stringify(MM)
+    function eU(VV) {
+      return void 0 === VV ? "" : JSON.stringify(VV)
     }
-    const Sj = (0, OM.createContext)(null);
+    const xU = (0, JV.createContext)(null);
 
-    function jj() {
-      return (0, OM.useContext)(Sj)
+    function JU() {
+      return (0, JV.useContext)(xU)
     }
-    var aj = iM(2932);
-    const Pj = (0, OM.memo)((function(MM) {
+    var YU = xV(2985);
+    const UU = (0, JV.memo)((function(VV) {
         let {
-          name: rM,
-          label: iM,
-          onPick: OM
-        } = MM;
-        return (0, LM.jsxs)("button", {
+          name: eV,
+          label: xV,
+          onPick: JV
+        } = VV;
+        return (0, ZV.jsxs)("button", {
           type: "button",
           className: "SmpCatalogueTile",
-          title: iM,
+          title: xV,
           onClick: () => {
-            OM(rM)
+            JV(eV)
           },
-          children: [(0, LM.jsx)(WS, {
-            item: rM,
+          children: [(0, ZV.jsx)(GY, {
+            item: eV,
             size: "big"
-          }), (0, LM.jsx)("span", {
-            children: iM
+          }), (0, ZV.jsx)("span", {
+            children: xV
           })]
         })
       })),
-      nj = (0, OM.memo)((function(MM) {
+      yU = (0, JV.memo)((function(VV) {
         let {
-          items: rM,
-          query: iM,
-          onPick: SM
-        } = MM;
+          items: eV,
+          query: xV,
+          onPick: YV
+        } = VV;
         const {
-          t: jM
-        } = (0, aM.A)(), [PM, nM] = (0, OM.useState)(new Set), QM = (0, OM.useMemo)((() => function(MM) {
-          const rM = new Map;
-          for (const iM of MM) {
-            let MM = rM.get(iM.category);
-            MM || (MM = [], rM.set(iM.category, MM)), MM.push(iM)
+          t: UV
+        } = (0, yV.A)(), [pV, QV] = (0, JV.useState)(new Set), nV = (0, JV.useMemo)((() => function(VV) {
+          const eV = new Map;
+          for (const xV of VV) {
+            let VV = eV.get(xV.category);
+            VV || (VV = [], eV.set(xV.category, VV)), VV.push(xV)
           }
-          return [...vS, "other"].filter((MM => rM.has(MM))).map((MM => ({
-            category: MM,
-            items: rM.get(MM)
+          return [...lY, "other"].filter((VV => eV.has(VV))).map((VV => ({
+            category: VV,
+            items: eV.get(VV)
           })))
-        }(rM)), [rM]), zM = (0, OM.useMemo)((() => Mj(rM, iM).slice(0, 60)), [rM, iM]);
-        return iM.trim() ? 0 === zM.length ? (0, LM.jsx)(kS, {
-          title: jM("smpShop:noItemsFound", {
-            query: iM.trim()
+        }(eV)), [eV]), wV = (0, JV.useMemo)((() => dY(eV, xV).slice(0, 60)), [eV, xV]);
+        return xV.trim() ? 0 === wV.length ? (0, ZV.jsx)(gY, {
+          title: UV("smpShop:noItemsFound", {
+            query: xV.trim()
           }),
-          children: jM("smpShop:tryShorterName")
-        }) : (0, LM.jsx)(aj.e, {
+          children: UV("smpShop:tryShorterName")
+        }) : (0, ZV.jsx)(YU.d, {
           lazyLoadedClassName: "SmpCatalogueGrid",
           observerRoot: "SmpBody",
-          rootMargin: KS,
-          observerUpdateDeps: [iM],
-          children: zM.map((MM => (0, LM.jsx)(Pj, {
-            name: MM.name,
-            label: MM.label,
-            onPick: SM
-          }, MM.name)))
-        }) : (0, LM.jsx)(LM.Fragment, {
-          children: QM.map((MM => {
+          rootMargin: HY,
+          observerUpdateDeps: [xV],
+          children: wV.map((VV => (0, ZV.jsx)(UU, {
+            name: VV.name,
+            label: VV.label,
+            onPick: YV
+          }, VV.name)))
+        }) : (0, ZV.jsx)(ZV.Fragment, {
+          children: nV.map((VV => {
             let {
-              category: rM,
-              items: iM
-            } = MM;
-            const OM = PM.has(rM) || iM.length <= 48,
-              aM = OM ? iM : iM.slice(0, 48);
-            return (0, LM.jsxs)("section", {
+              category: eV,
+              items: xV
+            } = VV;
+            const JV = pV.has(eV) || xV.length <= 48,
+              yV = JV ? xV : xV.slice(0, 48);
+            return (0, ZV.jsxs)("section", {
               className: "SmpCatalogueSection",
-              children: [(0, LM.jsxs)("h4", {
-                children: [jM("other" === rM ? "smpShop:otherItems" : `creativeInventory:${rM}`), !OM && (0, LM.jsx)("button", {
+              children: [(0, ZV.jsxs)("h4", {
+                children: [UV("other" === eV ? "smpShop:otherItems" : `creativeInventory:${eV}`), !JV && (0, ZV.jsx)("button", {
                   type: "button",
                   className: "SmpLink",
                   onClick: () => {
-                    nM(new Set([...PM, rM]))
+                    QV(new Set([...pV, eV]))
                   },
-                  children: jM("smpShop:showAll", {
-                    count: iM.length
+                  children: UV("smpShop:showAll", {
+                    count: xV.length
                   })
                 })]
-              }), (0, LM.jsx)(aj.e, {
+              }), (0, ZV.jsx)(YU.d, {
                 lazyLoadedClassName: "SmpCatalogueGrid",
                 observerRoot: "SmpBody",
-                rootMargin: KS,
-                observerUpdateDeps: [OM],
-                children: aM.map((MM => (0, LM.jsx)(Pj, {
-                  name: MM.name,
-                  label: MM.label,
-                  onPick: SM
-                }, MM.name)))
+                rootMargin: HY,
+                observerUpdateDeps: [JV],
+                children: yV.map((VV => (0, ZV.jsx)(UU, {
+                  name: VV.name,
+                  label: VV.label,
+                  onPick: YV
+                }, VV.name)))
               })]
-            }, rM)
+            }, eV)
           }))
         })
       }));
 
-    function Qj(MM, rM) {
+    function pU(VV, eV) {
       const {
-        searched: iM,
-        shown: SM,
-        searchFor: jM,
-        loading: aM
-      } = function(MM, rM) {
-        var iM;
-        const SM = jj(),
-          [jM, aM] = (0, OM.useState)(void 0),
-          PM = (0, OM.useRef)(void 0),
-          nM = (0, OM.useRef)(0),
-          QM = (0, OM.useRef)(void 0),
-          zM = null !== (iM = null === MM || void 0 === MM ? void 0 : MM.meta.item) && void 0 !== iM ? iM : null,
-          LM = !!MM && SM.isPending(MM.key);
-        (0, OM.useEffect)((() => {
-          if (!MM || LM || !rM || void 0 === jM || jM === zM) return;
-          const iM = jM === PM.current && SM.gaveUpAt(MM.key) > nM.current && QM.current !== jM;
-          (jM !== PM.current || iM) && SM.act(MM.key, null !== jM && void 0 !== jM ? jM : "*", iM) && (iM && (QM.current = jM), PM.current = jM, nM.current = Date.now())
-        }), [MM, LM, rM, jM, zM, SM]);
-        const mM = (0, OM.useCallback)((MM => {
-            PM.current = void 0, QM.current = void 0, aM(MM)
+        searched: xV,
+        shown: YV,
+        searchFor: UV,
+        loading: yV
+      } = function(VV, eV) {
+        var xV;
+        const YV = JU(),
+          [UV, yV] = (0, JV.useState)(void 0),
+          pV = (0, JV.useRef)(void 0),
+          QV = (0, JV.useRef)(0),
+          nV = (0, JV.useRef)(void 0),
+          wV = null !== (xV = null === VV || void 0 === VV ? void 0 : VV.meta.item) && void 0 !== xV ? xV : null,
+          ZV = !!VV && YV.isPending(VV.key);
+        (0, JV.useEffect)((() => {
+          if (!VV || ZV || !eV || void 0 === UV || UV === wV) return;
+          const xV = UV === pV.current && YV.gaveUpAt(VV.key) > QV.current && nV.current !== UV;
+          (UV !== pV.current || xV) && YV.act(VV.key, null !== UV && void 0 !== UV ? UV : "*", xV) && (xV && (nV.current = UV), pV.current = UV, QV.current = Date.now())
+        }), [VV, ZV, eV, UV, wV, YV]);
+        const vV = (0, JV.useCallback)((VV => {
+            pV.current = void 0, nV.current = void 0, yV(VV)
           }), []),
-          HM = void 0 !== jM && jM !== zM && (LM || PM.current !== jM);
+          rV = void 0 !== UV && UV !== wV && (ZV || pV.current !== UV);
         return {
-          searched: zM,
-          shown: HM ? jM : zM,
-          searchFor: mM,
-          loading: HM || LM || null !== zM && !rM
+          searched: wV,
+          shown: rV ? UV : wV,
+          searchFor: vV,
+          loading: rV || ZV || null !== wV && !eV
         }
-      }(MM, rM), PM = (0, OM.useMemo)((() => function() {
-        var MM;
-        let rM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
-          iM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
-          OM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        const SM = `${(0,FS.h)()}\x1f${rM.join("\x1e")}\x1f${iM.join("\x1e")}\x1f${JSON.stringify(OM)}`;
-        if ((null === (MM = cS) || void 0 === MM ? void 0 : MM.key) === SM) return cS.items;
-        const jM = new Set(iM),
-          aM = new Set,
-          PM = [],
-          nM = (MM, rM) => {
-            var iM;
-            if (!MM || aM.has(MM) || jM.has(MM)) return;
-            aM.add(MM);
-            const SM = null !== (iM = OM[MM]) && void 0 !== iM ? iM : MM;
-            PM.push({
-              name: MM,
-              label: SM,
-              lowerLabel: SM.toLowerCase(),
-              lowerName: MM.toLowerCase(),
-              category: rM
+      }(VV, eV), pV = (0, JV.useMemo)((() => function() {
+        var VV;
+        let eV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
+          xV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
+          JV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        const YV = `${(0,LY.k)()}\x1f${eV.join("\x1e")}\x1f${xV.join("\x1e")}\x1f${JSON.stringify(JV)}`;
+        if ((null === (VV = IY) || void 0 === VV ? void 0 : VV.key) === YV) return IY.items;
+        const UV = new Set(xV),
+          yV = new Set,
+          pV = [],
+          QV = (VV, eV) => {
+            var xV;
+            if (!VV || yV.has(VV) || UV.has(VV)) return;
+            yV.add(VV);
+            const YV = null !== (xV = JV[VV]) && void 0 !== xV ? xV : VV;
+            pV.push({
+              name: VV,
+              label: YV,
+              lowerLabel: YV.toLowerCase(),
+              lowerName: VV.toLowerCase(),
+              category: eV
             })
           };
-        for (const zM of (0, AS.creativeItemIds)()) {
-          var QM;
-          (0, AS.itemIsDisabled)(zM, !0, !0, !1) || (0, AS.showOnlyInCreativeSearch)(zM) || nM((0, FS.g)(zM), null !== (QM = (0, AS.creativeCategoryOf)(zM)) && void 0 !== QM ? QM : "other")
+        for (const wV of (0, cY.creativeItemIds)()) {
+          var nV;
+          (0, cY.itemIsDisabled)(wV, !0, !0, !1) || (0, cY.showOnlyInCreativeSearch)(wV) || QV((0, LY.g)(wV), null !== (nV = (0, cY.creativeCategoryOf)(wV)) && void 0 !== nV ? nV : "other")
         }
-        for (const zM of rM) nM(zM, "other");
-        return cS = {
-          key: SM,
-          items: PM
-        }, PM
-      }(null === MM || void 0 === MM ? void 0 : MM.meta.extra, null === MM || void 0 === MM ? void 0 : MM.meta.excluded, null === MM || void 0 === MM ? void 0 : MM.meta.names)), [null === MM || void 0 === MM ? void 0 : MM.meta.extra, null === MM || void 0 === MM ? void 0 : MM.meta.excluded, null === MM || void 0 === MM ? void 0 : MM.meta.names]), [nM, QM] = (0, OM.useState)(""), [zM, LM] = (0, OM.useState)(0), [mM, HM] = (0, OM.useState)("recent"), hM = (0, OM.useCallback)((MM => {
-        QM(""), LM((MM => MM + 1)), jM(MM)
-      }), [jM]), JM = "browse" === mM || "" !== nM.trim();
+        for (const wV of eV) QV(wV, "other");
+        return IY = {
+          key: YV,
+          items: pV
+        }, pV
+      }(null === VV || void 0 === VV ? void 0 : VV.meta.extra, null === VV || void 0 === VV ? void 0 : VV.meta.excluded, null === VV || void 0 === VV ? void 0 : VV.meta.names)), [null === VV || void 0 === VV ? void 0 : VV.meta.extra, null === VV || void 0 === VV ? void 0 : VV.meta.excluded, null === VV || void 0 === VV ? void 0 : VV.meta.names]), [QV, nV] = (0, JV.useState)(""), [wV, ZV] = (0, JV.useState)(0), [vV, rV] = (0, JV.useState)("recent"), kV = (0, JV.useCallback)((VV => {
+        nV(""), ZV((VV => VV + 1)), UV(VV)
+      }), [UV]), bV = "browse" === vV || "" !== QV.trim();
       return {
-        searched: iM,
-        shown: SM,
-        searchFor: jM,
-        loading: aM,
-        catalogue: PM,
-        names: null === MM || void 0 === MM ? void 0 : MM.meta.names,
-        query: nM,
-        setQuery: QM,
-        searchBoxKey: zM,
-        pickItem: hM,
-        setView: HM,
-        browsing: JM
+        searched: xV,
+        shown: YV,
+        searchFor: UV,
+        loading: yV,
+        catalogue: pV,
+        names: null === VV || void 0 === VV ? void 0 : VV.meta.names,
+        query: QV,
+        setQuery: nV,
+        searchBoxKey: wV,
+        pickItem: kV,
+        setView: rV,
+        browsing: bV
       }
     }
 
-    function zj(MM) {
+    function QU(VV) {
       let {
-        browser: rM,
-        children: iM
-      } = MM;
+        browser: eV,
+        children: xV
+      } = VV;
       const {
-        t: OM
-      } = (0, aM.A)(), SM = jj();
-      return (0, LM.jsxs)("div", {
+        t: JV
+      } = (0, yV.A)(), YV = JU();
+      return (0, ZV.jsxs)("div", {
         className: "SmpTopBar",
-        children: [(0, LM.jsx)("div", {
+        children: [(0, ZV.jsx)("div", {
           className: "SmpSearch",
-          children: (0, LM.jsx)(GM.b, {
+          children: (0, ZV.jsx)(FV.d, {
             className: "SmpSearchInput",
-            placeholderText: OM("smpShop:searchPlaceholder"),
-            defaultValue: rM.query,
-            onValueChange: MM => {
-              rM.setQuery(MM), rM.searched && MM.trim() && rM.searchFor(null)
+            placeholderText: JV("smpShop:searchPlaceholder"),
+            defaultValue: eV.query,
+            onValueChange: VV => {
+              eV.setQuery(VV), eV.searched && VV.trim() && eV.searchFor(null)
             },
             blurOnEnter: !0,
             onEnter: () => {
-              const MM = Mj(rM.catalogue, rM.query)[0];
-              MM ? rM.pickItem(MM.name) : rM.query.trim() && SM.notify(OM("smpShop:noItemsFound", {
-                query: rM.query.trim()
+              const VV = dY(eV.catalogue, eV.query)[0];
+              VV ? eV.pickItem(VV.name) : eV.query.trim() && YV.notify(JV("smpShop:noItemsFound", {
+                query: eV.query.trim()
               }))
             }
-          }, rM.searchBoxKey)
-        }), iM]
+          }, eV.searchBoxKey)
+        }), xV]
       })
     }
 
-    function Lj(MM) {
+    function nU(VV) {
       let {
-        browser: rM,
-        recentLabel: iM,
-        children: OM
-      } = MM;
+        browser: eV,
+        recentLabel: xV,
+        children: JV
+      } = VV;
       const {
-        t: SM
-      } = (0, aM.A)();
-      return (0, LM.jsxs)("div", {
+        t: YV
+      } = (0, yV.A)();
+      return (0, ZV.jsxs)("div", {
         className: "SmpViewBar",
-        children: [(0, LM.jsx)(oS, {
+        children: [(0, ZV.jsx)(iY, {
           options: [{
             value: "recent",
-            label: iM
+            label: xV
           }, {
             value: "browse",
-            label: SM("smpShop:browseItems")
+            label: YV("smpShop:browseItems")
           }],
-          value: rM.browsing ? "browse" : "recent",
-          onChange: rM.setView,
-          ariaLabel: SM("smpShop:show")
-        }), !rM.browsing && OM]
+          value: eV.browsing ? "browse" : "recent",
+          onChange: eV.setView,
+          ariaLabel: YV("smpShop:show")
+        }), !eV.browsing && JV]
       })
     }
 
-    function mj(MM) {
+    function wU(VV) {
       let {
-        item: rM,
-        names: iM,
-        summary: OM,
-        onBack: SM,
-        children: jM
-      } = MM;
+        item: eV,
+        names: xV,
+        summary: JV,
+        onBack: YV,
+        children: UV
+      } = VV;
       const {
-        t: PM
-      } = (0, aM.A)();
-      return (0, LM.jsxs)("div", {
+        t: pV
+      } = (0, yV.A)();
+      return (0, ZV.jsxs)("div", {
         className: "SmpItemHeader",
-        children: [(0, LM.jsx)(QM.c, {
+        children: [(0, ZV.jsx)(nV.b, {
           className: "SmpBackButton",
-          onClick: SM,
-          children: PM("general:back")
-        }), (0, LM.jsx)(WS, {
-          item: rM,
+          onClick: YV,
+          children: pV("general:back")
+        }), (0, ZV.jsx)(GY, {
+          item: eV,
           size: "big"
-        }), (0, LM.jsxs)("div", {
+        }), (0, ZV.jsxs)("div", {
           className: "SmpItemHeaderText",
-          children: [(0, LM.jsx)("b", {
-            children: rj(iM, rM)
-          }), OM && (0, LM.jsx)("small", {
-            children: OM
+          children: [(0, ZV.jsx)("b", {
+            children: OY(xV, eV)
+          }), JV && (0, ZV.jsx)("small", {
+            children: JV
           })]
-        }), jM]
+        }), UV]
       })
     }
 
-    function Hj(MM) {
+    function ZU(VV) {
       let {
-        browser: rM,
-        className: iM,
-        action: OM,
-        above: SM,
-        list: aM,
-        summary: PM,
-        recentLabel: nM,
-        listControls: QM,
-        onBack: zM
-      } = MM;
-      return (0, LM.jsxs)("div", {
-        className: jM()("SmpScreen", iM),
-        children: [(0, LM.jsx)(zj, {
-          browser: rM,
-          children: OM
-        }), rM.shown && (0, LM.jsx)(mj, {
-          item: rM.shown,
-          names: rM.names,
-          summary: !rM.loading && PM,
+        browser: eV,
+        className: xV,
+        action: JV,
+        above: YV,
+        list: yV,
+        summary: pV,
+        recentLabel: QV,
+        listControls: nV,
+        onBack: wV
+      } = VV;
+      return (0, ZV.jsxs)("div", {
+        className: UV()("SmpScreen", xV),
+        children: [(0, ZV.jsx)(QU, {
+          browser: eV,
+          children: JV
+        }), eV.shown && (0, ZV.jsx)(wU, {
+          item: eV.shown,
+          names: eV.names,
+          summary: !eV.loading && pV,
           onBack: () => {
-            null === zM || void 0 === zM || zM(), rM.searchFor(null)
+            null === wV || void 0 === wV || wV(), eV.searchFor(null)
           },
-          children: QM
-        }), SM, rM.shown ? aM : (0, LM.jsxs)(LM.Fragment, {
-          children: [(0, LM.jsx)(Lj, {
-            browser: rM,
-            recentLabel: nM,
-            children: QM
-          }), rM.browsing ? (0, LM.jsx)(nj, {
-            items: rM.catalogue,
-            query: rM.query,
-            onPick: rM.pickItem
-          }) : aM]
+          children: nV
+        }), YV, eV.shown ? yV : (0, ZV.jsxs)(ZV.Fragment, {
+          children: [(0, ZV.jsx)(nU, {
+            browser: eV,
+            recentLabel: QV,
+            children: nV
+          }), eV.browsing ? (0, ZV.jsx)(yU, {
+            items: eV.catalogue,
+            query: eV.query,
+            onPick: eV.pickItem
+          }) : yV]
         })]
       })
     }
 
-    function hj(MM, rM) {
-      const iM = MM.map((MM => {
+    function vU(VV, eV) {
+      const xV = VV.map((VV => {
         let {
-          meta: rM
-        } = MM;
-        return rM.pricePerItem
+          meta: eV
+        } = VV;
+        return eV.pricePerItem
       }));
-      return "min" === rM ? Math.min(...iM) : Math.max(...iM)
+      return "min" === eV ? Math.min(...xV) : Math.max(...xV)
     }
-    var Jj = iM(7077);
-    const dj = (0, OM.memo)((function(MM) {
-      var rM;
+    var rU = xV(7147);
+    const kU = (0, JV.memo)((function(VV) {
+      var eV;
       const {
-        t: iM
-      } = (0, aM.A)(), OM = null === MM.seller, SM = MM.quantity * MM.pricePerItem;
-      return (0, LM.jsxs)("div", {
-        className: MM.grid ? "SmpListingCard" : "SmpRow SmpListingRow",
-        children: [(0, LM.jsx)(WS, {
-          item: MM.item,
-          amount: MM.quantity,
-          size: MM.grid ? "big" : "normal",
-          tier: MM.tier
-        }), (0, LM.jsxs)("div", {
+        t: xV
+      } = (0, yV.A)(), JV = null === VV.seller, YV = VV.quantity * VV.pricePerItem;
+      return (0, ZV.jsxs)("div", {
+        className: VV.grid ? "SmpListingCard" : "SmpRow SmpListingRow",
+        children: [(0, ZV.jsx)(GY, {
+          item: VV.item,
+          amount: VV.quantity,
+          size: VV.grid ? "big" : "normal",
+          tier: VV.tier
+        }), (0, ZV.jsxs)("div", {
           className: "SmpRowText",
-          children: [(0, LM.jsx)("b", {
-            children: (0, LM.jsx)(lS.b, {
-              text: null !== (rM = MM.title) && void 0 !== rM ? rM : `${MM.quantity}x ${MM.item}`
+          children: [(0, ZV.jsx)("b", {
+            children: (0, ZV.jsx)(EY.b, {
+              text: null !== (eV = VV.title) && void 0 !== eV ? eV : `${VV.quantity}x ${VV.item}`
             })
-          }), (0, LM.jsxs)("small", {
+          }), (0, ZV.jsxs)("small", {
             className: "SmpListingFacts",
-            children: [(0, LM.jsx)("span", {
-              children: OM ? iM("smpShop:you") : (0, LM.jsx)(lS.b, {
+            children: [(0, ZV.jsx)("span", {
+              children: JV ? xV("smpShop:you") : (0, ZV.jsx)(EY.b, {
                 text: [{
-                  entityName: MM.seller
+                  entityName: VV.seller
                 }]
               })
-            }), (0, LM.jsx)("span", {
-              children: iM("smpShop:timeLeft", {
-                time: TS(MM.expiresAt)
+            }), (0, ZV.jsx)("span", {
+              children: xV("smpShop:timeLeft", {
+                time: sY(VV.expiresAt)
               })
             })]
           })]
-        }), (0, LM.jsxs)("div", {
+        }), (0, ZV.jsxs)("div", {
           className: "SmpRowPrice",
-          children: [(0, LM.jsx)(sS, {
-            amount: MM.pricePerItem
-          }), (0, LM.jsx)("small", {
-            children: iM("smpShop:each")
+          children: [(0, ZV.jsx)(WY, {
+            amount: VV.pricePerItem
+          }), (0, ZV.jsx)("small", {
+            children: xV("smpShop:each")
           })]
-        }), (0, LM.jsx)(QM.e, {
+        }), (0, ZV.jsx)(nV.f, {
           className: "SmpBuyButton",
-          disabled: OM || !MM.canAfford && !MM.busy,
-          loading: MM.busy,
+          disabled: JV || !VV.canAfford && !VV.busy,
+          loading: VV.busy,
           onClick: () => {
-            MM.onBuy(MM.itemKey)
+            VV.onBuy(VV.itemKey)
           },
-          children: OM ? iM("smpShop:yours") : (0, LM.jsx)(sS, {
-            amount: SM
+          children: JV ? xV("smpShop:yours") : (0, ZV.jsx)(WY, {
+            amount: YV
           })
         })]
       })
     }));
 
-    function yj(MM) {
+    function bU(VV) {
       let {
-        view: rM,
-        onChange: iM
-      } = MM;
+        view: eV,
+        onChange: xV
+      } = VV;
       const {
-        t: OM
-      } = (0, aM.A)();
-      return (0, LM.jsx)(RS.e, {
+        t: JV
+      } = (0, yV.A)();
+      return (0, ZV.jsx)(MY.b, {
         className: "SmpChoice SmpViewToggle",
-        ariaLabel: OM("smpShop:layout"),
+        ariaLabel: JV("smpShop:layout"),
         options: [{
           value: "list",
-          label: (0, LM.jsx)(PM.b, {
+          label: (0, ZV.jsx)(pV.b, {
             name: "list"
           }),
-          ariaLabel: OM("smpShop:listView")
+          ariaLabel: JV("smpShop:listView")
         }, {
           value: "grid",
-          label: (0, LM.jsx)(PM.b, {
+          label: (0, ZV.jsx)(pV.b, {
             name: "grid-2"
           }),
-          ariaLabel: OM("smpShop:gridView")
+          ariaLabel: JV("smpShop:gridView")
         }],
-        value: rM,
-        onChange: iM
+        value: eV,
+        onChange: xV
       })
     }
 
-    function lj(MM) {
+    function EU(VV) {
       let {
-        entries: rM,
-        view: iM
-      } = MM;
+        entries: eV,
+        view: xV
+      } = VV;
       const {
-        t: OM
-      } = (0, aM.A)(), SM = jj(), jM = "grid" === iM;
-      return (0, LM.jsxs)(LM.Fragment, {
-        children: [!jM && (0, LM.jsxs)("div", {
+        t: JV
+      } = (0, yV.A)(), YV = JU(), UV = "grid" === xV;
+      return (0, ZV.jsxs)(ZV.Fragment, {
+        children: [!UV && (0, ZV.jsxs)("div", {
           className: "SmpColumns",
           "aria-hidden": "true",
-          children: [(0, LM.jsx)("span", {}), (0, LM.jsx)("span", {
-            children: OM("smpShop:columnItem")
-          }), (0, LM.jsx)("span", {
-            children: OM("smpShop:columnPriceEach")
-          }), (0, LM.jsx)("span", {
-            children: OM("smpShop:columnTotal")
+          children: [(0, ZV.jsx)("span", {}), (0, ZV.jsx)("span", {
+            children: JV("smpShop:columnItem")
+          }), (0, ZV.jsx)("span", {
+            children: JV("smpShop:columnPriceEach")
+          }), (0, ZV.jsx)("span", {
+            children: JV("smpShop:columnTotal")
           })]
-        }), (0, LM.jsx)(aj.e, {
-          lazyLoadedClassName: jM ? "SmpCardGrid" : "SmpList",
+        }), (0, ZV.jsx)(YU.d, {
+          lazyLoadedClassName: UV ? "SmpCardGrid" : "SmpList",
           observerRoot: "SmpBody",
-          rootMargin: KS,
-          observerUpdateDeps: [rM.length],
-          children: rM.map((MM => {
-            var rM, iM;
+          rootMargin: HY,
+          observerUpdateDeps: [eV.length],
+          children: eV.map((VV => {
+            var eV, xV;
             let {
-              key: OM,
-              item: aM,
-              meta: PM
-            } = MM;
-            const nM = PM.quantity * PM.pricePerItem;
-            return (0, LM.jsx)(dj, {
-              itemKey: OM,
-              item: PM.item,
-              title: aM.customTitle,
-              quantity: PM.quantity,
-              pricePerItem: PM.pricePerItem,
-              seller: PM.seller,
-              expiresAt: PM.expiresAt,
-              tier: null !== (rM = null === (iM = aM.enchant) || void 0 === iM ? void 0 : iM.tier) && void 0 !== rM ? rM : null,
-              busy: SM.isPending(OM) || null !== PM.seller && !1 === aM.canBuy,
-              canAfford: SM.canAfford(aM, nM),
-              grid: jM,
-              onBuy: SM.act
-            }, OM)
+              key: JV,
+              item: yV,
+              meta: pV
+            } = VV;
+            const QV = pV.quantity * pV.pricePerItem;
+            return (0, ZV.jsx)(kU, {
+              itemKey: JV,
+              item: pV.item,
+              title: yV.customTitle,
+              quantity: pV.quantity,
+              pricePerItem: pV.pricePerItem,
+              seller: pV.seller,
+              expiresAt: pV.expiresAt,
+              tier: null !== (eV = null === (xV = yV.enchant) || void 0 === xV ? void 0 : xV.tier) && void 0 !== eV ? eV : null,
+              busy: YV.isPending(JV) || null !== pV.seller && !1 === yV.canBuy,
+              canAfford: YV.canAfford(yV, QV),
+              grid: UV,
+              onBuy: YV.act
+            }, JV)
           }))
-        }, iM)]
+        }, xV)]
       })
     }
-    const Ej = [1, 10, 100],
-      Uj = [1, 10, 100, 999];
+    const BU = [1, 10, 100],
+      jU = [1, 10, 100, 999];
 
-    function Gj(MM) {
-      var rM, iM, SM, nM, zM, mM, HM, hM, JM, dM;
+    function qU(VV) {
+      var eV, xV, YV, QV, wV, vV, rV, kV, bV, EV;
       const {
-        t: yM
-      } = (0, aM.A)(), lM = jj(), {
-        creator: EM,
-        mode: UM
-      } = MM, [CM, eM] = (0, OM.useState)(null !== (rM = null === EM || void 0 === EM ? void 0 : EM.meta.item) && void 0 !== rM ? rM : null), [bM, wM] = (0, OM.useState)(1), [tM, gM] = (0, OM.useState)(0), [uM, RM] = (0, OM.useState)(""), [pM, WM] = (0, OM.useState)(0), sM = (0, OM.useRef)(CM), DM = (0, OM.useRef)(!1), [kM, ZM] = (0, OM.useState)(!1), oM = null !== (iM = null === EM || void 0 === EM ? void 0 : EM.meta.item) && void 0 !== iM ? iM : null, fM = null !== (SM = null === EM || void 0 === EM ? void 0 : EM.meta.owned) && void 0 !== SM ? SM : 0;
-      (0, OM.useEffect)((() => {
-        MM.searching || null === oM || oM === sM.current || (sM.current = oM, DM.current = !1, eM(oM), gM(0), wM("list" === UM ? Math.max(1, fM) : 1))
-      }), [oM, MM.searching]);
-      const YM = !!EM && !!CM && EM.meta.item === CM,
-        NM = YM ? EM.meta.owned : null !== (nM = null === (zM = MM.inventory) || void 0 === zM || null === (mM = zM.find((MM => MM.item === CM))) || void 0 === mM ? void 0 : mM.quantity) && void 0 !== nM ? nM : 0,
-        AM = "list" === UM ? Math.max(1, NM) : 45954,
-        xM = null !== (HM = MM.prices[0]) && void 0 !== HM ? HM : null,
-        vM = MM.prices.length ? Math.round(MM.prices.reduce(((MM, rM) => MM + rM), 0) / MM.prices.length) : null,
-        FM = null === (hM = MM.inventory) || void 0 === hM || null === (JM = hM.find((MM => MM.item === CM))) || void 0 === JM ? void 0 : JM.sellPrice;
-      (0, OM.useEffect)((() => {
-        var MM;
-        YM && (wM((MM => "list" === UM ? Math.min(Math.max(1, MM), Math.max(1, NM)) : MM)), DM.current || gM(null !== (MM = null !== xM && void 0 !== xM ? xM : vM) && void 0 !== MM ? MM : Math.max(1, null !== FM && void 0 !== FM ? FM : 1)))
-      }), [YM, NM, CM, xM, vM]);
-      const BM = MM => {
-          DM.current = !0, gM(MM)
+        t: BV
+      } = (0, yV.A)(), jV = JU(), {
+        creator: qV,
+        mode: tV
+      } = VV, [TV, PV] = (0, JV.useState)(null !== (eV = null === qV || void 0 === qV ? void 0 : qV.meta.item) && void 0 !== eV ? eV : null), [AV, NV] = (0, JV.useState)(1), [XV, MV] = (0, JV.useState)(0), [zV, GV] = (0, JV.useState)(""), [WV, RV] = (0, JV.useState)(0), gV = (0, JV.useRef)(TV), DV = (0, JV.useRef)(!1), [iV, CV] = (0, JV.useState)(!1), aV = null !== (xV = null === qV || void 0 === qV ? void 0 : qV.meta.item) && void 0 !== xV ? xV : null, oV = null !== (YV = null === qV || void 0 === qV ? void 0 : qV.meta.owned) && void 0 !== YV ? YV : 0;
+      (0, JV.useEffect)((() => {
+        VV.searching || null === aV || aV === gV.current || (gV.current = aV, DV.current = !1, PV(aV), MV(0), NV("list" === tV ? Math.max(1, oV) : 1))
+      }), [aV, VV.searching]);
+      const cV = !!qV && !!TV && qV.meta.item === TV,
+        hV = cV ? qV.meta.owned : null !== (QV = null === (wV = VV.inventory) || void 0 === wV || null === (vV = wV.find((VV => VV.item === TV))) || void 0 === vV ? void 0 : vV.quantity) && void 0 !== QV ? QV : 0,
+        lV = "list" === tV ? Math.max(1, hV) : 45954,
+        LV = null !== (rV = VV.prices[0]) && void 0 !== rV ? rV : null,
+        fV = VV.prices.length ? Math.round(VV.prices.reduce(((VV, eV) => VV + eV), 0) / VV.prices.length) : null,
+        mV = null === (kV = VV.inventory) || void 0 === kV || null === (bV = kV.find((VV => VV.item === TV))) || void 0 === bV ? void 0 : bV.sellPrice;
+      (0, JV.useEffect)((() => {
+        var VV;
+        cV && (NV((VV => "list" === tV ? Math.min(Math.max(1, VV), Math.max(1, hV)) : VV)), DV.current || MV(null !== (VV = null !== LV && void 0 !== LV ? LV : fV) && void 0 !== VV ? VV : Math.max(1, null !== mV && void 0 !== mV ? mV : 1)))
+      }), [cV, hV, TV, LV, fV]);
+      const KV = VV => {
+          DV.current = !0, MV(VV)
         },
-        XM = rM => {
-          var iM, OM, SM;
-          sM.current = rM, DM.current = !1, ZM(!1), RM(""), WM((MM => MM + 1)), eM(rM), gM(0), wM("list" === UM && null !== (iM = null === (OM = MM.inventory) || void 0 === OM || null === (SM = OM.find((MM => MM.item === rM))) || void 0 === SM ? void 0 : SM.quantity) && void 0 !== iM ? iM : 1), (null === EM || void 0 === EM ? void 0 : EM.meta.item) !== rM && MM.onPickItem(rM)
+        HV = eV => {
+          var xV, JV, YV;
+          gV.current = eV, DV.current = !1, CV(!1), GV(""), RV((VV => VV + 1)), PV(eV), MV(0), NV("list" === tV && null !== (xV = null === (JV = VV.inventory) || void 0 === JV || null === (YV = JV.find((VV => VV.item === eV))) || void 0 === YV ? void 0 : YV.quantity) && void 0 !== xV ? xV : 1), (null === qV || void 0 === qV ? void 0 : qV.meta.item) !== eV && VV.onPickItem(eV)
         },
-        IM = bM * tM,
-        KM = "list" === UM && null !== EM && void 0 !== EM && EM.meta.fee ? function(MM, rM) {
-          const iM = Math.max(0, rM - MM.taxFreeAllowance);
-          return Math.ceil(Math.round(iM * MM.rate * 1e6) / 1e6)
-        }(EM.meta.fee, IM) : 0,
-        qM = !!EM && lM.isPending(EM.key),
-        TM = YM && !MM.searching && bM >= 1 && tM >= 1 && ("order" === UM || NM >= bM) && !qM,
-        VM = !!CM && !YM && !MM.searching && bM >= 1 && tM >= 1,
-        cM = () => {
-          TM ? lM.act(EM.key, `${bM}|${tM}`) : VM && (MM.onPickItem(CM), ZM(!0))
+        uV = AV * XV,
+        sV = "list" === tV && null !== qV && void 0 !== qV && qV.meta.fee ? function(VV, eV) {
+          const xV = Math.max(0, eV - VV.taxFreeAllowance);
+          return Math.ceil(Math.round(xV * VV.rate * 1e6) / 1e6)
+        }(qV.meta.fee, uV) : 0,
+        SV = !!qV && jV.isPending(qV.key),
+        IV = cV && !VV.searching && AV >= 1 && XV >= 1 && ("order" === tV || hV >= AV) && !SV,
+        dV = !!TV && !cV && !VV.searching && AV >= 1 && XV >= 1,
+        OV = () => {
+          IV ? jV.act(qV.key, `${AV}|${XV}`) : dV && (VV.onPickItem(TV), CV(!0))
         };
-      (0, OM.useEffect)((() => {
-        kM && YM && !MM.searching && (ZM(!1), cM())
-      }), [kM, YM, MM.searching]);
-      const Mr = !!CM && !YM && (MM.searching || kM),
-        rr = CM ? rj(MM.names, CM) : "",
-        ir = (0, OM.useMemo)((() => Mj(MM.catalogue, uM).slice(0, 8)), [MM.catalogue, uM]),
-        Or = ("list" === UM ? Ej.filter((MM => MM < NM)) : Uj).map((MM => ({
-          value: MM,
-          label: String(MM)
+      (0, JV.useEffect)((() => {
+        iV && cV && !VV.searching && (CV(!1), OV())
+      }), [iV, cV, VV.searching]);
+      const Ve = !!TV && !cV && (VV.searching || iV),
+        ee = TV ? OY(VV.names, TV) : "",
+        xe = (0, JV.useMemo)((() => dY(VV.catalogue, zV).slice(0, 8)), [VV.catalogue, zV]),
+        Je = ("list" === tV ? BU.filter((VV => VV < hV)) : jU).map((VV => ({
+          value: VV,
+          label: String(VV)
         })));
-      "list" === UM && NM > 0 && Or.push({
-        value: NM,
-        label: yM("smpShop:all", {
-          count: NM
+      "list" === tV && hV > 0 && Je.push({
+        value: hV,
+        label: BV("smpShop:all", {
+          count: hV
         })
       });
-      const Sr = [];
-      return null !== xM && (xM > 1 && Sr.push({
-        value: xM - 1,
-        label: yM("smpShop:undercut", {
-          price: uS(xM - 1)
+      const Ye = [];
+      return null !== LV && (LV > 1 && Ye.push({
+        value: LV - 1,
+        label: BV("smpShop:undercut", {
+          price: XY(LV - 1)
         })
-      }), Sr.push({
-        value: xM,
-        label: yM("smpShop:lowest", {
-          price: uS(xM)
+      }), Ye.push({
+        value: LV,
+        label: BV("smpShop:lowest", {
+          price: XY(LV)
         })
-      })), null !== vM && vM !== xM && Sr.push({
-        value: vM,
-        label: yM("smpShop:average", {
-          price: uS(vM)
+      })), null !== fV && fV !== LV && Ye.push({
+        value: fV,
+        label: BV("smpShop:average", {
+          price: XY(fV)
         })
-      }), (0, LM.jsxs)("div", {
+      }), (0, ZV.jsxs)("div", {
         className: "SmpTradeForm",
-        children: [(0, LM.jsxs)("div", {
+        children: [(0, ZV.jsxs)("div", {
           className: "SmpTradeFormHead",
-          children: [(0, LM.jsx)("b", {
-            children: yM("list" === UM ? "smpShop:sellOnMarket" : "smpShop:createOrder")
-          }), (0, LM.jsx)("button", {
+          children: [(0, ZV.jsx)("b", {
+            children: BV("list" === tV ? "smpShop:sellOnMarket" : "smpShop:createOrder")
+          }), (0, ZV.jsx)("button", {
             type: "button",
             className: "SmpIconButton",
-            "aria-label": yM("smpShop:close"),
-            onClick: MM.onClose,
-            children: (0, LM.jsx)(PM.b, {
+            "aria-label": BV("smpShop:close"),
+            onClick: VV.onClose,
+            children: (0, ZV.jsx)(pV.b, {
               name: "xmark"
             })
           })]
-        }), "list" === UM && (0, LM.jsx)("div", {
+        }), "list" === tV && (0, ZV.jsx)("div", {
           className: "SmpPicker",
           role: "listbox",
-          children: null !== (dM = MM.inventory) && void 0 !== dM && dM.length ? MM.inventory.map((MM => {
+          children: null !== (EV = VV.inventory) && void 0 !== EV && EV.length ? VV.inventory.map((VV => {
             let {
-              item: rM,
-              quantity: iM
-            } = MM;
-            return (0, LM.jsx)("button", {
+              item: eV,
+              quantity: xV
+            } = VV;
+            return (0, ZV.jsx)("button", {
               type: "button",
-              title: rM,
-              className: jM()("SmpPickerSlot", {
-                SmpPickerSlotOn: rM === CM
+              title: eV,
+              className: UV()("SmpPickerSlot", {
+                SmpPickerSlotOn: eV === TV
               }),
               onClick: () => {
-                XM(rM)
+                HV(eV)
               },
-              children: (0, LM.jsx)(WS, {
-                item: rM,
-                amount: iM
+              children: (0, ZV.jsx)(GY, {
+                item: eV,
+                amount: xV
               })
-            }, rM)
-          })) : (0, LM.jsx)("span", {
+            }, eV)
+          })) : (0, ZV.jsx)("span", {
             className: "SmpMuted",
-            children: yM("smpShop:nothingToList")
+            children: BV("smpShop:nothingToList")
           })
-        }), ("list" === UM || !CM) && (0, LM.jsxs)("div", {
+        }), ("list" === tV || !TV) && (0, ZV.jsxs)("div", {
           className: "SmpItemSearch",
-          children: [(0, LM.jsx)(GM.b, {
+          children: [(0, ZV.jsx)(FV.d, {
             className: "SmpSearchInput",
-            placeholderText: yM("list" === UM ? "smpShop:listSearchPlaceholder" : "smpShop:orderSearchPlaceholder"),
-            defaultValue: uM,
-            onValueChange: RM,
+            placeholderText: BV("list" === tV ? "smpShop:listSearchPlaceholder" : "smpShop:orderSearchPlaceholder"),
+            defaultValue: zV,
+            onValueChange: GV,
             blurOnEnter: !0,
             onEnter: () => {
-              ir[0] && XM(ir[0].name)
+              xe[0] && HV(xe[0].name)
             }
-          }, pM), ir.length > 0 && (0, LM.jsx)("div", {
+          }, WV), xe.length > 0 && (0, ZV.jsx)("div", {
             className: "SmpPicker",
-            children: ir.map((MM => {
+            children: xe.map((VV => {
               let {
-                name: rM
-              } = MM;
-              return (0, LM.jsx)("button", {
+                name: eV
+              } = VV;
+              return (0, ZV.jsx)("button", {
                 type: "button",
-                title: rM,
-                className: jM()("SmpPickerSlot", {
-                  SmpPickerSlotOn: rM === CM
+                title: eV,
+                className: UV()("SmpPickerSlot", {
+                  SmpPickerSlotOn: eV === TV
                 }),
                 onClick: () => {
-                  XM(rM)
+                  HV(eV)
                 },
-                children: (0, LM.jsx)(WS, {
-                  item: rM
+                children: (0, ZV.jsx)(GY, {
+                  item: eV
                 })
-              }, rM)
+              }, eV)
             }))
           })]
-        }), CM && (0, LM.jsxs)(LM.Fragment, {
-          children: [(0, LM.jsxs)("div", {
+        }), TV && (0, ZV.jsxs)(ZV.Fragment, {
+          children: [(0, ZV.jsxs)("div", {
             className: "SmpPickedName",
-            children: [rr, Mr && (0, LM.jsx)(fS, {})]
-          }), (0, LM.jsxs)("div", {
+            children: [ee, Ve && (0, ZV.jsx)(CY, {})]
+          }), (0, ZV.jsxs)("div", {
             className: "SmpFormGrid",
-            children: [(0, LM.jsxs)("div", {
+            children: [(0, ZV.jsxs)("div", {
               className: "SmpField",
-              children: [(0, LM.jsxs)("span", {
-                children: [yM("smpShop:quantity"), "list" === UM && YM && (0, LM.jsx)("small", {
-                  children: yM("smpShop:youHave", {
-                    count: NM
+              children: [(0, ZV.jsxs)("span", {
+                children: [BV("smpShop:quantity"), "list" === tV && cV && (0, ZV.jsx)("small", {
+                  children: BV("smpShop:youHave", {
+                    count: hV
                   })
                 })]
-              }), (0, LM.jsx)(YS, {
-                value: bM,
-                onChange: wM,
-                max: AM,
-                label: yM("smpShop:quantity")
-              }), (0, LM.jsx)(oS, {
-                options: Or,
-                value: bM,
-                onChange: wM,
-                ariaLabel: yM("smpShop:quantity")
+              }), (0, ZV.jsx)(aY, {
+                value: AV,
+                onChange: NV,
+                max: lV,
+                label: BV("smpShop:quantity")
+              }), (0, ZV.jsx)(iY, {
+                options: Je,
+                value: AV,
+                onChange: NV,
+                ariaLabel: BV("smpShop:quantity")
               })]
-            }), (0, LM.jsxs)("div", {
+            }), (0, ZV.jsxs)("div", {
               className: "SmpField",
-              children: [(0, LM.jsx)("span", {
-                children: yM("smpShop:pricePerItem")
-              }), (0, LM.jsx)(YS, {
-                value: Math.max(1, tM),
-                onChange: BM,
+              children: [(0, ZV.jsx)("span", {
+                children: BV("smpShop:pricePerItem")
+              }), (0, ZV.jsx)(aY, {
+                value: Math.max(1, XV),
+                onChange: KV,
                 max: 9999999,
-                step: NS,
-                label: yM("smpShop:pricePerItem")
-              }), (0, LM.jsx)(oS, {
-                options: Sr,
-                value: tM,
-                onChange: BM,
-                ariaLabel: yM("smpShop:pricePerItem")
+                step: oY,
+                label: BV("smpShop:pricePerItem")
+              }), (0, ZV.jsx)(iY, {
+                options: Ye,
+                value: XV,
+                onChange: KV,
+                ariaLabel: BV("smpShop:pricePerItem")
               })]
             })]
-          }), "list" === UM && (0, LM.jsxs)("div", {
+          }), "list" === tV && (0, ZV.jsxs)("div", {
             className: "SmpTradeSummary",
-            children: [(0, LM.jsxs)("span", {
-              children: [yM("smpShop:youGet"), " ", (0, LM.jsx)(sS, {
-                amount: Math.max(0, IM - KM),
+            children: [(0, ZV.jsxs)("span", {
+              children: [BV("smpShop:youGet"), " ", (0, ZV.jsx)(WY, {
+                amount: Math.max(0, uV - sV),
                 exact: !0
               })]
-            }), (0, LM.jsx)("small", {
-              children: KM > 0 ? yM("smpShop:listingFee", {
-                fee: KM.toLocaleString("en-US")
-              }) : yM("smpShop:listingRules")
+            }), (0, ZV.jsx)("small", {
+              children: sV > 0 ? BV("smpShop:listingFee", {
+                fee: sV.toLocaleString("en-US")
+              }) : BV("smpShop:listingRules")
             })]
-          }), (0, LM.jsx)(QM.u, {
+          }), (0, ZV.jsx)(nV.q, {
             className: "SmpSubmit",
-            disabled: !TM && !VM && !qM,
-            loading: qM || Mr || YM && MM.searching,
-            onClick: cM,
-            children: "list" === UM ? yM("smpShop:listButton", {
-              count: bM,
-              item: rr
-            }) : (0, LM.jsxs)(LM.Fragment, {
-              children: [yM("smpShop:orderButton", {
-                count: bM,
-                item: rr
-              }), " ", tM >= 1 && (0, LM.jsx)(sS, {
-                amount: IM
+            disabled: !IV && !dV && !SV,
+            loading: SV || Ve || cV && VV.searching,
+            onClick: OV,
+            children: "list" === tV ? BV("smpShop:listButton", {
+              count: AV,
+              item: ee
+            }) : (0, ZV.jsxs)(ZV.Fragment, {
+              children: [BV("smpShop:orderButton", {
+                count: AV,
+                item: ee
+              }), " ", XV >= 1 && (0, ZV.jsx)(WY, {
+                amount: uV
               })]
             })
           })]
@@ -4040,627 +4040,627 @@ export const modules = {
       })
     }
 
-    function Cj() {
-      var MM;
+    function tU() {
+      var VV;
       const {
-        t: rM
-      } = (0, aM.A)(), iM = jj(), SM = null === (MM = iM.shopInfo[iM.categoryKey]) || void 0 === MM ? void 0 : MM.items, jM = IS(SM, "search"), PM = IS(SM, "creator"), nM = XS(SM, "enchantedCreator"), zM = XS(SM, "listing"), mM = IS(SM, "empty"), HM = Qj(jM, zM.length > 0 || null !== mM), {
-        searched: hM,
-        shown: JM,
-        loading: dM
-      } = HM, [yM, lM] = (0, OM.useState)(!1), [EM, UM] = function() {
-        const [MM, rM] = (0, Jj.e)("smpMarketView", "list");
-        return ["grid" === MM ? "grid" : "list", rM]
-      }(), GM = "grid" === EM, CM = (0, OM.useMemo)((() => zM.filter((MM => {
+        t: eV
+      } = (0, yV.A)(), xV = JU(), YV = null === (VV = xV.shopInfo[xV.categoryKey]) || void 0 === VV ? void 0 : VV.items, UV = KY(YV, "search"), pV = KY(YV, "creator"), QV = mY(YV, "enchantedCreator"), wV = mY(YV, "listing"), vV = KY(YV, "empty"), rV = pU(UV, wV.length > 0 || null !== vV), {
+        searched: kV,
+        shown: bV,
+        loading: EV
+      } = rV, [BV, jV] = (0, JV.useState)(!1), [qV, tV] = function() {
+        const [VV, eV] = (0, rU.c)("smpMarketView", "list");
+        return ["grid" === VV ? "grid" : "list", eV]
+      }(), FV = "grid" === qV, TV = (0, JV.useMemo)((() => wV.filter((VV => {
         let {
-          meta: rM
-        } = MM;
-        return null !== rM.seller && rM.item === hM
-      })).map((MM => {
+          meta: eV
+        } = VV;
+        return null !== eV.seller && eV.item === kV
+      })).map((VV => {
         let {
-          meta: rM
-        } = MM;
-        return rM.pricePerItem
-      })).sort(((MM, rM) => MM - rM))), [zM, hM]), eM = (0, OM.useMemo)((() => {
-        const MM = new Set(HM.catalogue.map((MM => {
+          meta: eV
+        } = VV;
+        return eV.pricePerItem
+      })).sort(((VV, eV) => VV - eV))), [wV, kV]), PV = (0, JV.useMemo)((() => {
+        const VV = new Set(rV.catalogue.map((VV => {
           let {
-            name: rM
-          } = MM;
-          return rM
+            name: eV
+          } = VV;
+          return eV
         })));
-        return function(MM) {
-          for (const rM in MM)
-            if ("sell" === MM[rM].smp) return XS(MM[rM].items, "sell").filter((MM => {
+        return function(VV) {
+          for (const eV in VV)
+            if ("sell" === VV[eV].smp) return mY(VV[eV].items, "sell").filter((VV => {
               let {
-                item: rM
-              } = MM;
-              return !rM.enchant
-            })).map((MM => {
+                item: eV
+              } = VV;
+              return !eV.enchant
+            })).map((VV => {
               let {
-                meta: rM
-              } = MM;
+                meta: eV
+              } = VV;
               return {
-                item: rM.item,
-                quantity: rM.quantity,
-                sellPrice: rM.pricePerItem
+                item: eV.item,
+                quantity: eV.quantity,
+                sellPrice: eV.pricePerItem
               }
             }));
           return []
-        }(iM.shopInfo).filter((rM => {
+        }(xV.shopInfo).filter((eV => {
           let {
-            item: iM
-          } = rM;
-          return MM.has(iM)
+            item: xV
+          } = eV;
+          return VV.has(xV)
         }))
-      }), [iM.shopInfo, HM.catalogue]);
-      return (0, LM.jsx)(Hj, {
-        browser: HM,
+      }), [xV.shopInfo, rV.catalogue]);
+      return (0, ZV.jsx)(ZU, {
+        browser: rV,
         className: "SmpMarketTab",
-        recentLabel: rM("smpShop:recentlyListed"),
-        action: (0, LM.jsx)(QM.u, {
+        recentLabel: eV("smpShop:recentlyListed"),
+        action: (0, ZV.jsx)(nV.q, {
           className: "SmpSellButton",
           onClick: () => {
-            lM((MM => !MM))
+            jV((VV => !VV))
           },
-          children: rM("smpShop:sell")
+          children: eV("smpShop:sell")
         }),
-        above: yM && (0, LM.jsxs)(LM.Fragment, {
-          children: [(0, LM.jsx)(Gj, {
+        above: BV && (0, ZV.jsxs)(ZV.Fragment, {
+          children: [(0, ZV.jsx)(qU, {
             mode: "list",
-            creator: PM,
-            inventory: eM,
-            catalogue: HM.catalogue,
-            names: HM.names,
-            searching: dM,
-            prices: CM,
-            onPickItem: HM.searchFor,
+            creator: pV,
+            inventory: PV,
+            catalogue: rV.catalogue,
+            names: rV.names,
+            searching: EV,
+            prices: TV,
+            onPickItem: rV.searchFor,
             onClose: () => {
-              lM(!1)
+              jV(!1)
             }
-          }), nM.length > 0 && (0, LM.jsx)(ej, {
-            entries: nM
+          }), QV.length > 0 && (0, ZV.jsx)(FU, {
+            entries: QV
           })]
         }),
-        listControls: (0, LM.jsx)(yj, {
-          view: EM,
-          onChange: UM
+        listControls: (0, ZV.jsx)(bU, {
+          view: qV,
+          onChange: tV
         }),
-        summary: JM && (zM.length > 0 ? rM(1 === zM.length ? "smpShop:listingSummaryOne" : "smpShop:listingSummary", {
-          count: zM.length,
-          price: uS(hj(zM, "min"))
-        }) : rM("smpShop:noOneSelling", {
-          item: rj(HM.names, JM)
+        summary: bV && (wV.length > 0 ? eV(1 === wV.length ? "smpShop:listingSummaryOne" : "smpShop:listingSummary", {
+          count: wV.length,
+          price: XY(vU(wV, "min"))
+        }) : eV("smpShop:noOneSelling", {
+          item: OY(rV.names, bV)
         })),
-        list: dM ? (0, LM.jsx)(DS, {
-          grid: GM
-        }) : zM.length > 0 ? (0, LM.jsx)(lj, {
-          entries: zM,
-          view: EM
-        }) : mM ? (0, LM.jsx)(ZS, {
-          entry: mM
-        }) : (0, LM.jsx)(DS, {
+        list: EV ? (0, ZV.jsx)(RY, {
+          grid: FV
+        }) : wV.length > 0 ? (0, ZV.jsx)(EU, {
+          entries: wV,
+          view: qV
+        }) : vV ? (0, ZV.jsx)(DY, {
+          entry: vV
+        }) : (0, ZV.jsx)(RY, {
           count: 3,
-          grid: GM
+          grid: FV
         })
       })
     }
 
-    function ej(MM) {
+    function FU(VV) {
       let {
-        entries: rM
-      } = MM;
+        entries: eV
+      } = VV;
       const {
-        t: iM
-      } = (0, aM.A)(), SM = jj(), [jM, PM] = (0, OM.useState)({});
-      return (0, LM.jsx)("div", {
+        t: xV
+      } = (0, yV.A)(), YV = JU(), [UV, pV] = (0, JV.useState)({});
+      return (0, ZV.jsx)("div", {
         className: "SmpList",
-        children: rM.map((MM => {
-          var rM, OM, aM;
+        children: eV.map((VV => {
+          var eV, JV, yV;
           let {
-            key: nM,
-            item: zM,
-            meta: mM
-          } = MM;
-          const HM = null !== (rM = jM[nM]) && void 0 !== rM ? rM : 1;
-          return (0, LM.jsxs)("div", {
+            key: QV,
+            item: wV,
+            meta: vV
+          } = VV;
+          const rV = null !== (eV = UV[QV]) && void 0 !== eV ? eV : 1;
+          return (0, ZV.jsxs)("div", {
             className: "SmpRow",
-            children: [(0, LM.jsx)(WS, {
-              item: mM.item,
-              amount: mM.quantity,
-              tier: null !== (OM = null === (aM = zM.enchant) || void 0 === aM ? void 0 : aM.tier) && void 0 !== OM ? OM : null
-            }), (0, LM.jsxs)("div", {
+            children: [(0, ZV.jsx)(GY, {
+              item: vV.item,
+              amount: vV.quantity,
+              tier: null !== (JV = null === (yV = wV.enchant) || void 0 === yV ? void 0 : yV.tier) && void 0 !== JV ? JV : null
+            }), (0, ZV.jsxs)("div", {
               className: "SmpRowText",
-              children: [(0, LM.jsx)("b", {
-                children: (0, LM.jsx)(lS.b, {
-                  text: zM.customTitle
+              children: [(0, ZV.jsx)("b", {
+                children: (0, ZV.jsx)(EY.b, {
+                  text: wV.customTitle
                 })
-              }), (0, LM.jsx)("small", {
-                children: iM("smpShop:enchantedListing")
+              }), (0, ZV.jsx)("small", {
+                children: xV("smpShop:enchantedListing")
               })]
-            }), (0, LM.jsx)(YS, {
-              value: HM,
-              onChange: MM => {
-                PM({
-                  ...jM,
-                  [nM]: MM
+            }), (0, ZV.jsx)(aY, {
+              value: rV,
+              onChange: VV => {
+                pV({
+                  ...UV,
+                  [QV]: VV
                 })
               },
               max: 9999999,
-              step: NS,
-              label: iM("smpShop:pricePerItem")
-            }), (0, LM.jsxs)(QM.u, {
-              loading: SM.isPending(nM),
+              step: oY,
+              label: xV("smpShop:pricePerItem")
+            }), (0, ZV.jsxs)(nV.q, {
+              loading: YV.isPending(QV),
               onClick: () => {
-                SM.act(nM, String(HM))
+                YV.act(QV, String(rV))
               },
-              children: [iM("smpShop:list"), " ", (0, LM.jsx)(sS, {
-                amount: HM
+              children: [xV("smpShop:list"), " ", (0, ZV.jsx)(WY, {
+                amount: rV
               })]
             })]
-          }, nM)
+          }, QV)
         }))
       })
     }
-    const bj = (0, OM.memo)((function(MM) {
+    const TU = (0, JV.memo)((function(VV) {
       let {
-        itemKey: rM,
-        item: iM,
-        quantity: OM,
-        pricePerItem: SM,
-        tier: aM,
-        selected: PM,
-        onSelect: nM
-      } = MM;
-      return (0, LM.jsxs)("button", {
+        itemKey: eV,
+        item: xV,
+        quantity: JV,
+        pricePerItem: YV,
+        tier: yV,
+        selected: pV,
+        onSelect: QV
+      } = VV;
+      return (0, ZV.jsxs)("button", {
         type: "button",
-        className: jM()("SmpInventorySlot", {
-          SmpInventorySlotOn: PM
+        className: UV()("SmpInventorySlot", {
+          SmpInventorySlotOn: pV
         }),
-        title: iM,
+        title: xV,
         onClick: () => {
-          nM(rM)
+          QV(eV)
         },
-        children: [(0, LM.jsx)(WS, {
-          item: iM,
-          amount: OM,
-          tier: aM
-        }), (0, LM.jsx)(sS, {
-          amount: SM
+        children: [(0, ZV.jsx)(GY, {
+          item: xV,
+          amount: JV,
+          tier: yV
+        }), (0, ZV.jsx)(WY, {
+          amount: YV
         })]
       })
     }));
 
-    function wj() {
-      var MM;
+    function PU() {
+      var VV;
       const {
-        t: rM
-      } = (0, aM.A)(), iM = jj(), SM = null === (MM = iM.shopInfo[iM.categoryKey]) || void 0 === MM ? void 0 : MM.items, PM = XS(SM, "sell"), nM = IS(SM, "empty"), [QM, zM] = (0, OM.useState)(null), [mM, HM] = (0, OM.useState)({}), hM = PM.find((MM => {
+        t: eV
+      } = (0, yV.A)(), xV = JU(), YV = null === (VV = xV.shopInfo[xV.categoryKey]) || void 0 === VV ? void 0 : VV.items, pV = mY(YV, "sell"), QV = KY(YV, "empty"), [nV, wV] = (0, JV.useState)(null), [vV, rV] = (0, JV.useState)({}), kV = pV.find((VV => {
         let {
-          key: rM
-        } = MM;
-        return rM === QM
+          key: eV
+        } = VV;
+        return eV === nV
       }));
-      return 0 === PM.length ? (0, LM.jsx)("div", {
+      return 0 === pV.length ? (0, ZV.jsx)("div", {
         className: "SmpScreen",
-        children: (0, LM.jsx)(kS, {
-          title: nM ? (0, LM.jsx)(lS.b, {
-            text: nM.item.customTitle
-          }) : rM("smpShop:nothingToSell"),
-          children: nM && (0, LM.jsx)(lS.b, {
-            text: nM.item.description
+        children: (0, ZV.jsx)(gY, {
+          title: QV ? (0, ZV.jsx)(EY.b, {
+            text: QV.item.customTitle
+          }) : eV("smpShop:nothingToSell"),
+          children: QV && (0, ZV.jsx)(EY.b, {
+            text: QV.item.description
           })
         })
-      }) : (0, LM.jsxs)("div", {
+      }) : (0, ZV.jsxs)("div", {
         className: "SmpScreen SmpInstantSellTab",
-        children: [(0, LM.jsx)("div", {
+        children: [(0, ZV.jsx)("div", {
           className: "SmpInventoryGrid",
-          children: PM.map((MM => {
-            var rM, iM;
+          children: pV.map((VV => {
+            var eV, xV;
             let {
-              key: OM,
-              item: SM,
-              meta: jM
-            } = MM;
-            return (0, LM.jsx)(bj, {
-              itemKey: OM,
-              item: jM.item,
-              quantity: jM.quantity,
-              pricePerItem: jM.pricePerItem,
-              tier: null !== (rM = null === (iM = SM.enchant) || void 0 === iM ? void 0 : iM.tier) && void 0 !== rM ? rM : null,
-              selected: OM === QM,
-              onSelect: zM
-            }, OM)
+              key: JV,
+              item: YV,
+              meta: UV
+            } = VV;
+            return (0, ZV.jsx)(TU, {
+              itemKey: JV,
+              item: UV.item,
+              quantity: UV.quantity,
+              pricePerItem: UV.pricePerItem,
+              tier: null !== (eV = null === (xV = YV.enchant) || void 0 === xV ? void 0 : xV.tier) && void 0 !== eV ? eV : null,
+              selected: JV === nV,
+              onSelect: wV
+            }, JV)
           }))
-        }), (0, LM.jsx)("div", {
-          className: jM()("SmpSellBar", {
-            SmpSellBarIdle: !hM
+        }), (0, ZV.jsx)("div", {
+          className: UV()("SmpSellBar", {
+            SmpSellBarIdle: !kV
           }),
-          children: hM ? (0, LM.jsx)(tj, {
-            entry: hM,
-            choice: ij(hM.item, mM[hM.key]),
-            onChoose: MM => {
-              HM({
-                ...mM,
-                [hM.key]: MM
+          children: kV ? (0, ZV.jsx)(AU, {
+            entry: kV,
+            choice: VU(kV.item, vV[kV.key]),
+            onChoose: VV => {
+              rV({
+                ...vV,
+                [kV.key]: VV
               })
             }
-          }) : (0, LM.jsx)("span", {
+          }) : (0, ZV.jsx)("span", {
             className: "SmpMuted",
-            children: rM("smpShop:tapToSell")
+            children: eV("smpShop:tapToSell")
           })
         })]
       })
     }
 
-    function tj(MM) {
-      var rM, iM, OM, SM;
+    function AU(VV) {
+      var eV, xV, JV, YV;
       let {
-        entry: jM,
-        choice: PM,
-        onChoose: nM
-      } = MM;
+        entry: UV,
+        choice: pV,
+        onChoose: QV
+      } = VV;
       const {
-        t: zM
-      } = (0, aM.A)(), mM = jj(), {
-        key: HM,
-        item: hM,
-        meta: JM
-      } = jM, dM = VS("dropdown" === (null === (rM = hM.userInput) || void 0 === rM ? void 0 : rM.type) ? hM.userInput.dropdownOptions : []), yM = null === PM ? 0 : -(0, hS.c)(hM, PM);
-      return (0, LM.jsxs)(LM.Fragment, {
-        children: [(0, LM.jsx)(WS, {
-          item: JM.item,
-          amount: JM.quantity,
-          tier: null !== (iM = null === (OM = hM.enchant) || void 0 === OM ? void 0 : OM.tier) && void 0 !== iM ? iM : null
-        }), (0, LM.jsxs)("div", {
+        t: wV
+      } = (0, yV.A)(), vV = JU(), {
+        key: rV,
+        item: kV,
+        meta: bV
+      } = UV, EV = SY("dropdown" === (null === (eV = kV.userInput) || void 0 === eV ? void 0 : eV.type) ? kV.userInput.dropdownOptions : []), BV = null === pV ? 0 : -(0, vY.e)(kV, pV);
+      return (0, ZV.jsxs)(ZV.Fragment, {
+        children: [(0, ZV.jsx)(GY, {
+          item: bV.item,
+          amount: bV.quantity,
+          tier: null !== (xV = null === (JV = kV.enchant) || void 0 === JV ? void 0 : JV.tier) && void 0 !== xV ? xV : null
+        }), (0, ZV.jsxs)("div", {
           className: "SmpRowText",
-          children: [(0, LM.jsx)("b", {
-            children: (0, LM.jsx)(lS.b, {
-              text: null !== (SM = hM.customTitle) && void 0 !== SM ? SM : JM.item
+          children: [(0, ZV.jsx)("b", {
+            children: (0, ZV.jsx)(EY.b, {
+              text: null !== (YV = kV.customTitle) && void 0 !== YV ? YV : bV.item
             })
-          }), (0, LM.jsx)("small", {
-            children: zM("smpShop:sellEach", {
-              count: JM.quantity
+          }), (0, ZV.jsx)("small", {
+            children: wV("smpShop:sellEach", {
+              count: bV.quantity
             })
           })]
-        }), (0, LM.jsx)(oS, {
-          options: dM.map((MM => {
+        }), (0, ZV.jsx)(iY, {
+          options: EV.map((VV => {
             let {
-              label: rM,
-              quantity: iM,
-              isAll: OM
-            } = MM;
+              label: eV,
+              quantity: xV,
+              isAll: JV
+            } = VV;
             return {
-              value: rM,
-              label: OM ? zM("smpShop:all", {
-                count: iM
-              }) : String(iM)
+              value: eV,
+              label: JV ? wV("smpShop:all", {
+                count: xV
+              }) : String(xV)
             }
           })),
-          value: PM,
-          onChange: nM,
-          ariaLabel: zM("smpShop:quantity")
-        }), (0, LM.jsxs)(QM.u, {
-          loading: mM.isPending(HM),
-          disabled: null === PM,
+          value: pV,
+          onChange: QV,
+          ariaLabel: wV("smpShop:quantity")
+        }), (0, ZV.jsxs)(nV.q, {
+          loading: vV.isPending(rV),
+          disabled: null === pV,
           onClick: () => {
-            mM.act(HM, PM)
+            vV.act(rV, pV)
           },
-          children: [zM("smpShop:sellButton"), " ", (0, LM.jsx)(sS, {
-            amount: yM
+          children: [wV("smpShop:sellButton"), " ", (0, ZV.jsx)(WY, {
+            amount: BV
           })]
         })]
       })
     }
 
-    function gj() {
-      var MM;
+    function NU() {
+      var VV;
       const {
-        t: rM
-      } = (0, aM.A)(), iM = jj(), OM = null === (MM = iM.shopInfo[iM.categoryKey]) || void 0 === MM ? void 0 : MM.items, SM = XS(OM, "collect"), jM = XS(OM, "myListing"), PM = (MM, rM) => iM.isPending(MM) || !1 === rM.canBuy;
-      return (0, LM.jsxs)("div", {
+        t: eV
+      } = (0, yV.A)(), xV = JU(), JV = null === (VV = xV.shopInfo[xV.categoryKey]) || void 0 === VV ? void 0 : VV.items, YV = mY(JV, "collect"), UV = mY(JV, "myListing"), pV = (VV, eV) => xV.isPending(VV) || !1 === eV.canBuy;
+      return (0, ZV.jsxs)("div", {
         className: "SmpScreen",
-        children: [(0, LM.jsx)("h3", {
+        children: [(0, ZV.jsx)("h3", {
           className: "SmpSectionTitle",
-          children: rM("smpShop:readyToCollect")
-        }), SM.length > 0 ? (0, LM.jsx)("div", {
+          children: eV("smpShop:readyToCollect")
+        }), YV.length > 0 ? (0, ZV.jsx)("div", {
           className: "SmpList",
-          children: SM.map((MM => {
-            var OM, SM;
+          children: YV.map((VV => {
+            var JV, YV;
             let {
-              key: jM,
-              item: aM,
-              meta: nM
-            } = MM;
-            return (0, LM.jsxs)("div", {
+              key: UV,
+              item: yV,
+              meta: QV
+            } = VV;
+            return (0, ZV.jsxs)("div", {
               className: "SmpRow",
-              children: [(0, LM.jsx)(WS, {
-                item: "sold" === nM.type ? "Gold Coin" : nM.item,
-                amount: "sold" === nM.type ? 0 : nM.quantity,
-                tier: null !== (OM = null === (SM = aM.enchant) || void 0 === SM ? void 0 : SM.tier) && void 0 !== OM ? OM : null
-              }), (0, LM.jsxs)("div", {
+              children: [(0, ZV.jsx)(GY, {
+                item: "sold" === QV.type ? "Gold Coin" : QV.item,
+                amount: "sold" === QV.type ? 0 : QV.quantity,
+                tier: null !== (JV = null === (YV = yV.enchant) || void 0 === YV ? void 0 : YV.tier) && void 0 !== JV ? JV : null
+              }), (0, ZV.jsxs)("div", {
                 className: "SmpRowText",
-                children: [(0, LM.jsx)("b", {
-                  children: (0, LM.jsx)(lS.b, {
-                    text: aM.customTitle
+                children: [(0, ZV.jsx)("b", {
+                  children: (0, ZV.jsx)(EY.b, {
+                    text: yV.customTitle
                   })
-                }), (0, LM.jsx)("small", {
-                  children: (0, LM.jsx)(lS.b, {
-                    text: aM.description
+                }), (0, ZV.jsx)("small", {
+                  children: (0, ZV.jsx)(EY.b, {
+                    text: yV.description
                   })
                 })]
-              }), (0, LM.jsx)(QM.p, {
-                loading: PM(jM, aM),
+              }), (0, ZV.jsx)(nV.m, {
+                loading: pV(UV, yV),
                 onClick: () => {
-                  iM.act(jM)
+                  xV.act(UV)
                 },
-                children: rM("smpShop:collect")
+                children: eV("smpShop:collect")
               })]
-            }, jM)
+            }, UV)
           }))
-        }) : (0, LM.jsx)(kS, {
-          title: rM("smpShop:nothingToCollect"),
-          children: rM("smpShop:nothingToCollectHint")
-        }), (0, LM.jsx)("h3", {
+        }) : (0, ZV.jsx)(gY, {
+          title: eV("smpShop:nothingToCollect"),
+          children: eV("smpShop:nothingToCollectHint")
+        }), (0, ZV.jsx)("h3", {
           className: "SmpSectionTitle",
-          children: rM("smpShop:activeListings", {
-            count: jM.length
+          children: eV("smpShop:activeListings", {
+            count: UV.length
           })
-        }), jM.length > 0 ? (0, LM.jsx)("div", {
+        }), UV.length > 0 ? (0, ZV.jsx)("div", {
           className: "SmpList",
-          children: jM.map((MM => {
-            var OM, SM;
+          children: UV.map((VV => {
+            var JV, YV;
             let {
-              key: jM,
-              item: aM,
-              meta: nM
-            } = MM;
-            return (0, LM.jsxs)("div", {
+              key: UV,
+              item: yV,
+              meta: QV
+            } = VV;
+            return (0, ZV.jsxs)("div", {
               className: "SmpRow",
-              children: [(0, LM.jsx)(WS, {
-                item: nM.item,
-                amount: nM.quantity,
-                tier: null !== (OM = null === (SM = aM.enchant) || void 0 === SM ? void 0 : SM.tier) && void 0 !== OM ? OM : null
-              }), (0, LM.jsxs)("div", {
+              children: [(0, ZV.jsx)(GY, {
+                item: QV.item,
+                amount: QV.quantity,
+                tier: null !== (JV = null === (YV = yV.enchant) || void 0 === YV ? void 0 : YV.tier) && void 0 !== JV ? JV : null
+              }), (0, ZV.jsxs)("div", {
                 className: "SmpRowText",
-                children: [(0, LM.jsx)("b", {
-                  children: (0, LM.jsx)(lS.b, {
-                    text: aM.customTitle
+                children: [(0, ZV.jsx)("b", {
+                  children: (0, ZV.jsx)(EY.b, {
+                    text: yV.customTitle
                   })
-                }), (0, LM.jsx)("small", {
-                  children: rM("smpShop:timeLeft", {
-                    time: TS(nM.expiresAt)
+                }), (0, ZV.jsx)("small", {
+                  children: eV("smpShop:timeLeft", {
+                    time: sY(QV.expiresAt)
                   })
                 })]
-              }), (0, LM.jsxs)("div", {
+              }), (0, ZV.jsxs)("div", {
                 className: "SmpRowPrice",
-                children: [(0, LM.jsx)(sS, {
-                  amount: nM.pricePerItem
-                }), (0, LM.jsx)("small", {
-                  children: rM("smpShop:each")
+                children: [(0, ZV.jsx)(WY, {
+                  amount: QV.pricePerItem
+                }), (0, ZV.jsx)("small", {
+                  children: eV("smpShop:each")
                 })]
-              }), (0, LM.jsx)(QM.J, {
-                loading: PM(jM, aM),
+              }), (0, ZV.jsx)(nV.E, {
+                loading: pV(UV, yV),
                 onClick: () => {
-                  iM.act(jM)
+                  xV.act(UV)
                 },
-                children: rM("smpShop:cancel")
+                children: eV("smpShop:cancel")
               })]
-            }, jM)
+            }, UV)
           }))
-        }) : (0, LM.jsx)(kS, {
-          title: rM("smpShop:noActiveListings"),
-          children: rM("smpShop:noActiveListingsHint")
+        }) : (0, ZV.jsx)(gY, {
+          title: eV("smpShop:noActiveListings"),
+          children: eV("smpShop:noActiveListingsHint")
         })]
       })
     }
 
-    function uj(MM) {
+    function XU(VV) {
       let {
-        done: rM,
-        of: iM
-      } = MM;
-      return (0, LM.jsx)("span", {
+        done: eV,
+        of: xV
+      } = VV;
+      return (0, ZV.jsx)("span", {
         className: "SmpProgress",
-        children: (0, LM.jsx)("i", {
+        children: (0, ZV.jsx)("i", {
           style: {
-            width: `${Math.min(100,rM/Math.max(1,iM)*100)}%`
+            width: `${Math.min(100,eV/Math.max(1,xV)*100)}%`
           }
         })
       })
     }
 
-    function Rj(MM) {
-      var rM, iM, OM;
+    function MU(VV) {
+      var eV, xV, JV;
       let {
-        entry: SM,
-        choice: jM,
-        onChoose: PM
-      } = MM;
+        entry: YV,
+        choice: UV,
+        onChoose: pV
+      } = VV;
       const {
-        t: nM
-      } = (0, aM.A)(), zM = jj(), {
-        key: mM,
-        item: HM,
-        meta: hM
-      } = SM, JM = "dropdown" === (null === (rM = HM.userInput) || void 0 === rM ? void 0 : rM.type) ? HM.userInput.dropdownOptions : [], dM = !0 === hM.processing, yM = null !== hM.creator && (hM.owned > 0 || dM), lM = yM && hM.owned > 0 ? VS(JM) : [], EM = null === jM ? 0 : null !== (iM = null === (OM = lM.find((MM => MM.label === jM))) || void 0 === OM ? void 0 : OM.quantity) && void 0 !== iM ? iM : 0;
-      return (0, LM.jsxs)("div", {
+        t: QV
+      } = (0, yV.A)(), wV = JU(), {
+        key: vV,
+        item: rV,
+        meta: kV
+      } = YV, bV = "dropdown" === (null === (eV = rV.userInput) || void 0 === eV ? void 0 : eV.type) ? rV.userInput.dropdownOptions : [], EV = !0 === kV.processing, BV = null !== kV.creator && (kV.owned > 0 || EV), jV = BV && kV.owned > 0 ? SY(bV) : [], qV = null === UV ? 0 : null !== (xV = null === (JV = jV.find((VV => VV.label === UV))) || void 0 === JV ? void 0 : JV.quantity) && void 0 !== xV ? xV : 0;
+      return (0, ZV.jsxs)("div", {
         className: "SmpRow SmpOrderRow",
-        children: [(0, LM.jsx)(WS, {
-          item: hM.item
-        }), (0, LM.jsxs)("div", {
+        children: [(0, ZV.jsx)(GY, {
+          item: kV.item
+        }), (0, ZV.jsxs)("div", {
           className: "SmpRowText",
-          children: [(0, LM.jsx)("b", {
-            children: (0, LM.jsx)(lS.b, {
-              text: HM.customTitle
+          children: [(0, ZV.jsx)("b", {
+            children: (0, ZV.jsx)(EY.b, {
+              text: rV.customTitle
             })
-          }), (0, LM.jsxs)("small", {
-            children: [(0, LM.jsx)(sS, {
-              amount: hM.pricePerItem
-            }), " ", nM("smpShop:each"), " \xb7", " ", null === hM.creator ? nM("smpShop:you") : (0, LM.jsx)(lS.b, {
+          }), (0, ZV.jsxs)("small", {
+            children: [(0, ZV.jsx)(WY, {
+              amount: kV.pricePerItem
+            }), " ", QV("smpShop:each"), " \xb7", " ", null === kV.creator ? QV("smpShop:you") : (0, ZV.jsx)(EY.b, {
               text: [{
-                entityName: hM.creator
+                entityName: kV.creator
               }]
             })]
-          }), (0, LM.jsx)(uj, {
-            done: hM.delivered,
-            of: hM.wanted
+          }), (0, ZV.jsx)(XU, {
+            done: kV.delivered,
+            of: kV.wanted
           })]
-        }), yM ? (0, LM.jsxs)(LM.Fragment, {
-          children: [(0, LM.jsx)(oS, {
-            options: lM.map((MM => {
+        }), BV ? (0, ZV.jsxs)(ZV.Fragment, {
+          children: [(0, ZV.jsx)(iY, {
+            options: jV.map((VV => {
               let {
-                label: rM,
-                quantity: iM,
-                isAll: OM
-              } = MM;
+                label: eV,
+                quantity: xV,
+                isAll: JV
+              } = VV;
               return {
-                value: rM,
-                label: OM ? nM("smpShop:max", {
-                  count: iM
-                }) : String(iM)
+                value: eV,
+                label: JV ? QV("smpShop:max", {
+                  count: xV
+                }) : String(xV)
               }
             })),
-            value: jM,
-            onChange: PM,
-            ariaLabel: nM("smpShop:quantity")
-          }), (0, LM.jsxs)(QM.u, {
-            loading: zM.isPending(mM) || dM,
-            disabled: null === jM,
+            value: UV,
+            onChange: pV,
+            ariaLabel: QV("smpShop:quantity")
+          }), (0, ZV.jsxs)(nV.q, {
+            loading: wV.isPending(vV) || EV,
+            disabled: null === UV,
             onClick: () => {
-              zM.act(mM, jM)
+              wV.act(vV, UV)
             },
-            children: [nM("smpShop:deliver"), " ", (0, LM.jsx)(sS, {
-              amount: EM * hM.pricePerItem
+            children: [QV("smpShop:deliver"), " ", (0, ZV.jsx)(WY, {
+              amount: qV * kV.pricePerItem
             })]
           })]
-        }) : (0, LM.jsx)("span", {
+        }) : (0, ZV.jsx)("span", {
           className: "SmpMuted SmpRowNote",
-          children: null === hM.creator ? nM("smpShop:yourOrder") : nM("smpShop:youHave", {
+          children: null === kV.creator ? QV("smpShop:yourOrder") : QV("smpShop:youHave", {
             count: 0
           })
         })]
       })
     }
 
-    function pj() {
-      var MM;
+    function zU() {
+      var VV;
       const {
-        t: rM
-      } = (0, aM.A)(), iM = jj(), SM = null === (MM = iM.shopInfo[iM.categoryKey]) || void 0 === MM ? void 0 : MM.items, jM = IS(SM, "search"), PM = IS(SM, "creator"), nM = XS(SM, "order"), zM = IS(SM, "empty"), mM = Qj(jM, nM.length > 0 || null !== zM), [HM, hM] = (0, OM.useState)(!1), [JM, dM] = (0, OM.useState)({});
-      return (0, LM.jsx)(Hj, {
-        browser: mM,
-        recentLabel: rM("smpShop:recentOrders"),
-        action: (0, LM.jsx)(QM.u, {
+        t: eV
+      } = (0, yV.A)(), xV = JU(), YV = null === (VV = xV.shopInfo[xV.categoryKey]) || void 0 === VV ? void 0 : VV.items, UV = KY(YV, "search"), pV = KY(YV, "creator"), QV = mY(YV, "order"), wV = KY(YV, "empty"), vV = pU(UV, QV.length > 0 || null !== wV), [rV, kV] = (0, JV.useState)(!1), [bV, EV] = (0, JV.useState)({});
+      return (0, ZV.jsx)(ZU, {
+        browser: vV,
+        recentLabel: eV("smpShop:recentOrders"),
+        action: (0, ZV.jsx)(nV.q, {
           onClick: () => {
-            hM((MM => !MM))
+            kV((VV => !VV))
           },
-          children: rM("smpShop:createOrder")
+          children: eV("smpShop:createOrder")
         }),
-        above: HM && (0, LM.jsx)(Gj, {
+        above: rV && (0, ZV.jsx)(qU, {
           mode: "order",
-          creator: PM,
-          catalogue: mM.catalogue,
-          names: mM.names,
-          searching: mM.loading,
+          creator: pV,
+          catalogue: vV.catalogue,
+          names: vV.names,
+          searching: vV.loading,
           prices: [],
-          onPickItem: mM.searchFor,
+          onPickItem: vV.searchFor,
           onClose: () => {
-            hM(!1)
+            kV(!1)
           }
         }),
         onBack: () => {
-          hM(!1)
+          kV(!1)
         },
-        summary: nM.length > 0 && rM(1 === nM.length ? "smpShop:orderSummaryOne" : "smpShop:orderSummary", {
-          count: nM.length,
-          price: uS(hj(nM, "max"))
+        summary: QV.length > 0 && eV(1 === QV.length ? "smpShop:orderSummaryOne" : "smpShop:orderSummary", {
+          count: QV.length,
+          price: XY(vU(QV, "max"))
         }),
-        list: mM.loading ? (0, LM.jsx)(DS, {}) : nM.length > 0 ? (0, LM.jsx)(aj.e, {
+        list: vV.loading ? (0, ZV.jsx)(RY, {}) : QV.length > 0 ? (0, ZV.jsx)(YU.d, {
           lazyLoadedClassName: "SmpList",
           observerRoot: "SmpBody",
-          rootMargin: KS,
-          observerUpdateDeps: [nM.length],
-          children: nM.map((MM => (0, LM.jsx)(Rj, {
-            entry: MM,
-            choice: ij(MM.item, JM[MM.key]),
-            onChoose: rM => {
-              dM({
-                ...JM,
-                [MM.key]: rM
+          rootMargin: HY,
+          observerUpdateDeps: [QV.length],
+          children: QV.map((VV => (0, ZV.jsx)(MU, {
+            entry: VV,
+            choice: VU(VV.item, bV[VV.key]),
+            onChoose: eV => {
+              EV({
+                ...bV,
+                [VV.key]: eV
               })
             }
-          }, MM.key)))
-        }) : zM ? (0, LM.jsx)(ZS, {
-          entry: zM
-        }) : (0, LM.jsx)(DS, {
+          }, VV.key)))
+        }) : wV ? (0, ZV.jsx)(DY, {
+          entry: wV
+        }) : (0, ZV.jsx)(RY, {
           count: 3
         })
       })
     }
 
-    function Wj() {
-      var MM;
+    function GU() {
+      var VV;
       const {
-        t: rM
-      } = (0, aM.A)(), iM = jj(), OM = XS(null === (MM = iM.shopInfo[iM.categoryKey]) || void 0 === MM ? void 0 : MM.items, "myOrder");
-      return 0 === OM.length ? (0, LM.jsx)("div", {
+        t: eV
+      } = (0, yV.A)(), xV = JU(), JV = mY(null === (VV = xV.shopInfo[xV.categoryKey]) || void 0 === VV ? void 0 : VV.items, "myOrder");
+      return 0 === JV.length ? (0, ZV.jsx)("div", {
         className: "SmpScreen",
-        children: (0, LM.jsx)(kS, {
-          title: rM("smpShop:noOrders"),
-          children: rM("smpShop:noOrdersHint")
+        children: (0, ZV.jsx)(gY, {
+          title: eV("smpShop:noOrders"),
+          children: eV("smpShop:noOrdersHint")
         })
-      }) : (0, LM.jsx)("div", {
+      }) : (0, ZV.jsx)("div", {
         className: "SmpScreen",
-        children: (0, LM.jsx)("div", {
+        children: (0, ZV.jsx)("div", {
           className: "SmpList",
-          children: OM.map((MM => {
+          children: JV.map((VV => {
             let {
-              key: OM,
-              item: SM,
-              meta: jM
-            } = MM;
-            const aM = iM.isPending(OM) || !1 === SM.canBuy;
-            return (0, LM.jsxs)("div", {
+              key: JV,
+              item: YV,
+              meta: UV
+            } = VV;
+            const yV = xV.isPending(JV) || !1 === YV.canBuy;
+            return (0, ZV.jsxs)("div", {
               className: "SmpRow",
-              children: [(0, LM.jsx)(WS, {
-                item: jM.item,
-                amount: jM.collectable
-              }), (0, LM.jsxs)("div", {
+              children: [(0, ZV.jsx)(GY, {
+                item: UV.item,
+                amount: UV.collectable
+              }), (0, ZV.jsxs)("div", {
                 className: "SmpRowText",
-                children: [(0, LM.jsx)("b", {
-                  children: (0, LM.jsx)(lS.b, {
-                    text: SM.customTitle
+                children: [(0, ZV.jsx)("b", {
+                  children: (0, ZV.jsx)(EY.b, {
+                    text: YV.customTitle
                   })
-                }), (0, LM.jsxs)("small", {
-                  children: [(0, LM.jsx)(sS, {
-                    amount: jM.pricePerItem
-                  }), " ", rM("smpShop:each"), jM.collectable > 0 && ` \xb7 ${rM("smpShop:readyCount",{count:jM.collectable})}`]
-                }), (0, LM.jsx)(uj, {
-                  done: jM.delivered,
-                  of: jM.wanted
+                }), (0, ZV.jsxs)("small", {
+                  children: [(0, ZV.jsx)(WY, {
+                    amount: UV.pricePerItem
+                  }), " ", eV("smpShop:each"), UV.collectable > 0 && ` \xb7 ${eV("smpShop:readyCount",{count:UV.collectable})}`]
+                }), (0, ZV.jsx)(XU, {
+                  done: UV.delivered,
+                  of: UV.wanted
                 })]
-              }), jM.collectable > 0 ? (0, LM.jsx)(QM.p, {
-                loading: aM,
+              }), UV.collectable > 0 ? (0, ZV.jsx)(nV.m, {
+                loading: yV,
                 onClick: () => {
-                  iM.act(OM)
+                  xV.act(JV)
                 },
-                children: rM("smpShop:collectCount", {
-                  count: jM.collectable
+                children: eV("smpShop:collectCount", {
+                  count: UV.collectable
                 })
-              }) : (0, LM.jsx)(QM.J, {
-                loading: aM,
+              }) : (0, ZV.jsx)(nV.E, {
+                loading: yV,
                 onClick: () => {
-                  iM.act(OM)
+                  xV.act(JV)
                 },
-                children: rM("smpShop:cancel")
+                children: eV("smpShop:cancel")
               })]
-            }, OM)
+            }, JV)
           }))
         })
       })
     }
-    const sj = new Set(["search", "creator", "enchantedCreator", "collect", "myOrder", "order"]),
-      Dj = {
+    const WU = new Set(["search", "creator", "enchantedCreator", "collect", "myOrder", "order"]),
+      RU = {
         sell: "coins",
         market: "store",
         collect: "backpack",
@@ -4668,775 +4668,775 @@ export const modules = {
         myOrders: "location-check"
       };
 
-    function kj(MM, rM) {
-      let iM = !1;
-      const OM = {};
-      for (const SM in MM) rM(SM, MM[SM]) ? OM[SM] = MM[SM] : iM = !0;
-      return iM ? OM : MM
+    function gU(VV, eV) {
+      let xV = !1;
+      const JV = {};
+      for (const YV in VV) eV(YV, VV[YV]) ? JV[YV] = VV[YV] : xV = !0;
+      return xV ? JV : VV
     }
 
-    function Zj(MM) {
-      var rM, iM, SM, nM;
+    function DU(VV) {
+      var eV, xV, YV, QV;
       const {
-        show: QM,
-        shopInfo: zM,
-        selectedCategoryKey: mM
-      } = MM, {
-        t: HM
-      } = (0, aM.A)(), hM = null !== mM && void 0 !== mM ? mM : "", JM = BS(zM, hM), dM = null === (rM = zM[hM]) || void 0 === rM ? void 0 : rM.items, yM = null !== JM, [lM, EM] = (0, OM.useState)({}), [UM, GM] = (0, OM.useState)([]), [CM, eM] = (0, OM.useState)(!1), [bM, wM] = (0, OM.useState)(null), [, tM] = (0, OM.useState)(0), gM = (0, OM.useRef)(0), uM = (0, OM.useRef)({}), RM = (0, OM.useRef)({
-        items: dM,
-        pending: lM,
-        shopInfo: zM,
-        active: yM,
-        canAfford: MM.canAfford,
-        buy: MM.buy
+        show: nV,
+        shopInfo: wV,
+        selectedCategoryKey: vV
+      } = VV, {
+        t: rV
+      } = (0, yV.A)(), kV = null !== vV && void 0 !== vV ? vV : "", bV = fY(wV, kV), EV = null === (eV = wV[kV]) || void 0 === eV ? void 0 : eV.items, BV = null !== bV, [jV, qV] = (0, JV.useState)({}), [tV, FV] = (0, JV.useState)([]), [TV, PV] = (0, JV.useState)(!1), [AV, NV] = (0, JV.useState)(null), [, XV] = (0, JV.useState)(0), MV = (0, JV.useRef)(0), zV = (0, JV.useRef)({}), GV = (0, JV.useRef)({
+        items: EV,
+        pending: jV,
+        shopInfo: wV,
+        active: BV,
+        canAfford: VV.canAfford,
+        buy: VV.buy
       });
-      RM.current = {
-        items: dM,
-        pending: lM,
-        shopInfo: zM,
-        active: yM,
-        canAfford: MM.canAfford,
-        buy: MM.buy
+      GV.current = {
+        items: EV,
+        pending: jV,
+        shopInfo: wV,
+        active: BV,
+        canAfford: VV.canAfford,
+        buy: VV.buy
       };
-      const pM = (0, OM.useCallback)((MM => {
-        gM.current++;
-        const rM = gM.current;
-        GM((iM => [{
-          id: rM,
-          text: MM
-        }, ...iM].slice(0, 8))), wM(rM)
+      const WV = (0, JV.useCallback)((VV => {
+        MV.current++;
+        const eV = MV.current;
+        FV((xV => [{
+          id: eV,
+          text: VV
+        }, ...xV].slice(0, 8))), NV(eV)
       }), []);
-      (0, OM.useEffect)((() => {
-        if (null === bM) return;
-        const MM = setTimeout((() => {
-          wM(null)
+      (0, JV.useEffect)((() => {
+        if (null === AV) return;
+        const VV = setTimeout((() => {
+          NV(null)
         }), 3e3);
         return () => {
-          clearTimeout(MM)
+          clearTimeout(VV)
         }
-      }), [bM]), (0, OM.useEffect)((() => {
-        const rM = MM.message;
-        if (!rM) return;
+      }), [AV]), (0, JV.useEffect)((() => {
+        const eV = VV.message;
+        if (!eV) return;
         const {
-          shopInfo: iM,
-          active: OM,
-          items: SM
-        } = RM.current, jM = null !== rM.categoryKey ? null !== BS(iM, rM.categoryKey) : OM;
-        (jM || OM) && pM(rM.text), jM && EM((MM => kj(MM, (MM => {
-          var rM, iM;
-          return !sj.has(null === SM || void 0 === SM || null === (rM = SM[MM]) || void 0 === rM || null === (iM = rM.smp) || void 0 === iM ? void 0 : iM.kind)
+          shopInfo: xV,
+          active: JV,
+          items: YV
+        } = GV.current, UV = null !== eV.categoryKey ? null !== fY(xV, eV.categoryKey) : JV;
+        (UV || JV) && WV(eV.text), UV && qV((VV => gU(VV, (VV => {
+          var eV, xV;
+          return !WU.has(null === YV || void 0 === YV || null === (eV = YV[VV]) || void 0 === eV || null === (xV = eV.smp) || void 0 === xV ? void 0 : xV.kind)
         }))))
-      }), [MM.message, pM]), (0, OM.useEffect)((() => {
-        EM((MM => kj(MM, ((MM, rM) => Oj(null === dM || void 0 === dM ? void 0 : dM[MM]) === rM.snapshot))))
-      }), [zM, dM]);
-      const WM = Object.keys(lM).length > 0;
-      (0, OM.useEffect)((() => {
-        if (!WM) return;
-        const MM = setInterval((() => {
-          tM((MM => MM + 1));
-          const MM = Date.now(),
+      }), [VV.message, WV]), (0, JV.useEffect)((() => {
+        qV((VV => gU(VV, ((VV, eV) => eU(null === EV || void 0 === EV ? void 0 : EV[VV]) === eV.snapshot))))
+      }), [wV, EV]);
+      const RV = Object.keys(jV).length > 0;
+      (0, JV.useEffect)((() => {
+        if (!RV) return;
+        const VV = setInterval((() => {
+          XV((VV => VV + 1));
+          const VV = Date.now(),
             {
-              pending: rM,
-              items: iM
-            } = RM.current,
-            OM = Object.keys(rM).filter((iM => MM - rM[iM].at >= 12e3));
-          if (0 === OM.length) return;
-          const SM = OM.some((MM => {
-            var OM, SM;
-            return "search" !== (null === iM || void 0 === iM || null === (OM = iM[MM]) || void 0 === OM || null === (SM = OM.smp) || void 0 === SM ? void 0 : SM.kind) || rM[MM].resend
+              pending: eV,
+              items: xV
+            } = GV.current,
+            JV = Object.keys(eV).filter((xV => VV - eV[xV].at >= 12e3));
+          if (0 === JV.length) return;
+          const YV = JV.some((VV => {
+            var JV, YV;
+            return "search" !== (null === xV || void 0 === xV || null === (JV = xV[VV]) || void 0 === JV || null === (YV = JV.smp) || void 0 === YV ? void 0 : YV.kind) || eV[VV].resend
           }));
-          for (const jM of OM) uM.current[jM] = MM;
-          EM((MM => kj(MM, (MM => !OM.includes(MM))))), SM && pM(HM("smpShop:noAnswer"))
+          for (const UV of JV) zV.current[UV] = VV;
+          qV((VV => gU(VV, (VV => !JV.includes(VV))))), YV && WV(rV("smpShop:noAnswer"))
         }), 500);
         return () => {
-          clearInterval(MM)
+          clearInterval(VV)
         }
-      }), [WM]), (0, OM.useEffect)((() => {
-        EM({})
-      }), [hM]), (0, OM.useEffect)((() => {
-        QM || eM(!1)
-      }), [QM]);
-      const sM = (0, OM.useCallback)((function(MM, rM) {
-          let iM = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      }), [RV]), (0, JV.useEffect)((() => {
+        qV({})
+      }), [kV]), (0, JV.useEffect)((() => {
+        nV || PV(!1)
+      }), [nV]);
+      const gV = (0, JV.useCallback)((function(VV, eV) {
+          let xV = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
           const {
-            items: OM,
-            pending: SM,
-            canAfford: jM,
-            buy: aM
-          } = RM.current, PM = null === OM || void 0 === OM ? void 0 : OM[MM];
-          if (!PM || MM in SM || !1 === PM.canBuy) return !1;
-          if (!jM(PM, (0, hS.c)(PM, rM))) return !1;
-          aM(MM, PM, rM);
-          const nM = {
-            snapshot: Oj(PM),
+            items: JV,
+            pending: YV,
+            canAfford: UV,
+            buy: yV
+          } = GV.current, pV = null === JV || void 0 === JV ? void 0 : JV[VV];
+          if (!pV || VV in YV || !1 === pV.canBuy) return !1;
+          if (!UV(pV, (0, vY.e)(pV, eV))) return !1;
+          yV(VV, pV, eV);
+          const QV = {
+            snapshot: eU(pV),
             at: Date.now(),
-            resend: iM
+            resend: xV
           };
-          return RM.current.pending = {
-            ...RM.current.pending,
-            [MM]: nM
-          }, EM((rM => ({
-            ...rM,
-            [MM]: nM
+          return GV.current.pending = {
+            ...GV.current.pending,
+            [VV]: QV
+          }, qV((eV => ({
+            ...eV,
+            [VV]: QV
           }))), !0
         }), []),
-        DM = (0, OM.useMemo)((() => ({
-          shopInfo: zM,
-          categoryKey: hM,
-          canAfford: MM.canAfford,
-          isPending: MM => MM in lM,
-          gaveUpAt: MM => {
-            var rM;
-            return null !== (rM = uM.current[MM]) && void 0 !== rM ? rM : 0
+        DV = (0, JV.useMemo)((() => ({
+          shopInfo: wV,
+          categoryKey: kV,
+          canAfford: VV.canAfford,
+          isPending: VV => VV in jV,
+          gaveUpAt: VV => {
+            var eV;
+            return null !== (eV = zV.current[VV]) && void 0 !== eV ? eV : 0
           },
-          act: sM,
-          notify: pM
-        })), [zM, hM, MM.canAfford, lM, sM, pM]),
-        kM = Math.min(...Object.values(lM).map((MM => MM.at))),
-        ZM = WM && Date.now() - kM > 1500,
-        oM = UM.length > 1,
-        fM = null !== (iM = null === (SM = zM[hM]) || void 0 === SM ? void 0 : SM.customTitle) && void 0 !== iM ? iM : hM,
-        YM = null === (nM = zM[hM]) || void 0 === nM ? void 0 : nM.description;
-      let NM = null;
-      return "market" === JM ? NM = (0, LM.jsx)(Cj, {}) : "sell" === JM ? NM = (0, LM.jsx)(wj, {}) : "collect" === JM ? NM = (0, LM.jsx)(gj, {}) : "orders" === JM ? NM = (0, LM.jsx)(pj, {}) : "myOrders" === JM && (NM = (0, LM.jsx)(Wj, {})), (0, LM.jsx)(Sj.Provider, {
-        value: DM,
-        children: (0, LM.jsx)("div", {
+          act: gV,
+          notify: WV
+        })), [wV, kV, VV.canAfford, jV, gV, WV]),
+        iV = Math.min(...Object.values(jV).map((VV => VV.at))),
+        CV = RV && Date.now() - iV > 1500,
+        aV = tV.length > 1,
+        oV = null !== (xV = null === (YV = wV[kV]) || void 0 === YV ? void 0 : YV.customTitle) && void 0 !== xV ? xV : kV,
+        cV = null === (QV = wV[kV]) || void 0 === QV ? void 0 : QV.description;
+      let hV = null;
+      return "market" === bV ? hV = (0, ZV.jsx)(tU, {}) : "sell" === bV ? hV = (0, ZV.jsx)(PU, {}) : "collect" === bV ? hV = (0, ZV.jsx)(NU, {}) : "orders" === bV ? hV = (0, ZV.jsx)(zU, {}) : "myOrders" === bV && (hV = (0, ZV.jsx)(GU, {})), (0, ZV.jsx)(xU.Provider, {
+        value: DV,
+        children: (0, ZV.jsx)("div", {
           className: "SmpShopHost",
-          hidden: !yM,
-          children: (0, LM.jsxs)("div", {
+          hidden: !BV,
+          children: (0, ZV.jsxs)("div", {
             className: "SmpShop",
-            children: [(0, LM.jsx)("header", {
+            children: [(0, ZV.jsx)("header", {
               className: "SmpHeader",
-              children: (0, LM.jsxs)("div", {
+              children: (0, ZV.jsxs)("div", {
                 className: "SmpHeaderTitle",
-                children: [(0, LM.jsxs)("h2", {
-                  children: [JM && (0, LM.jsx)(PM.b, {
-                    name: Dj[JM]
-                  }), HM(fM)]
-                }), YM && (0, LM.jsx)("p", {
-                  children: (0, LM.jsx)(lS.b, {
-                    text: YM
+                children: [(0, ZV.jsxs)("h2", {
+                  children: [bV && (0, ZV.jsx)(pV.b, {
+                    name: RU[bV]
+                  }), rV(oV)]
+                }), cV && (0, ZV.jsx)("p", {
+                  children: (0, ZV.jsx)(EY.b, {
+                    text: cV
                   })
                 })]
               })
-            }), (0, LM.jsx)("main", {
+            }), (0, ZV.jsx)("main", {
               className: "SmpBody",
               "data-pad-initial-area": !0,
-              children: QM && NM
-            }), (0, LM.jsxs)("button", {
+              children: nV && hV
+            }), (0, ZV.jsxs)("button", {
               type: "button",
-              className: jM()("SmpStatus", {
-                SmpStatusWaiting: WM,
-                SmpStatusFresh: !WM && null !== bM,
-                SmpStatusHasHistory: oM
+              className: UV()("SmpStatus", {
+                SmpStatusWaiting: RV,
+                SmpStatusFresh: !RV && null !== AV,
+                SmpStatusHasHistory: aV
               }),
               "aria-live": "polite",
-              "aria-expanded": oM ? CM : void 0,
+              "aria-expanded": aV ? TV : void 0,
               onClick: () => {
-                oM && eM((MM => !MM))
+                aV && PV((VV => !VV))
               },
-              children: [WM ? (0, LM.jsxs)("span", {
+              children: [RV ? (0, ZV.jsxs)("span", {
                 className: "SmpStatusText",
-                children: [(0, LM.jsx)(fS, {}), HM(ZM ? "smpShop:slowConnection" : "smpShop:waiting")]
-              }) : UM[0] ? (0, LM.jsx)("span", {
+                children: [(0, ZV.jsx)(CY, {}), rV(CV ? "smpShop:slowConnection" : "smpShop:waiting")]
+              }) : tV[0] ? (0, ZV.jsx)("span", {
                 className: "SmpStatusText",
-                children: (0, LM.jsx)(lS.b, {
-                  text: UM[0].text
+                children: (0, ZV.jsx)(EY.b, {
+                  text: tV[0].text
                 })
-              }, UM[0].id) : (0, LM.jsx)("span", {
+              }, tV[0].id) : (0, ZV.jsx)("span", {
                 className: "SmpStatusText SmpMuted",
-                children: HM("smpShop:ready")
-              }), oM && (0, LM.jsx)("small", {
-                children: HM("smpShop:recentMessages", {
-                  count: UM.length
+                children: rV("smpShop:ready")
+              }), aV && (0, ZV.jsx)("small", {
+                children: rV("smpShop:recentMessages", {
+                  count: tV.length
                 })
               })]
-            }), CM && oM && (0, LM.jsx)("div", {
+            }), TV && aV && (0, ZV.jsx)("div", {
               className: "SmpStatusHistory",
-              children: UM.map((MM => (0, LM.jsx)("div", {
-                children: (0, LM.jsx)(lS.b, {
-                  text: MM.text
+              children: tV.map((VV => (0, ZV.jsx)("div", {
+                children: (0, ZV.jsx)(EY.b, {
+                  text: VV.text
                 })
-              }, MM.id)))
+              }, VV.id)))
             })]
           })
         })
       })
     }
-    class oj {
-      constructor(MM) {
-        this.info = MM
+    class iU {
+      constructor(VV) {
+        this.info = VV
       }
-      static fromShopInfo(MM) {
-        const rM = {};
-        for (const iM in MM) {
-          const OM = !0 === MM[iM].redDot && !0 !== MM[iM].forceRemoveRedDot;
-          rM[iM] = {
-            redDot: OM,
+      static fromShopInfo(VV) {
+        const eV = {};
+        for (const xV in VV) {
+          const JV = !0 === VV[xV].redDot && !0 !== VV[xV].forceRemoveRedDot;
+          eV[xV] = {
+            redDot: JV,
             items: {}
           };
-          for (const SM in MM[iM].items) {
-            const OM = MM[iM].items[SM],
-              jM = !0 === OM.redDot && !0 !== OM.forceRemoveRedDot;
-            rM[iM].items[SM] = {
-              redDot: jM
+          for (const YV in VV[xV].items) {
+            const JV = VV[xV].items[YV],
+              UV = !0 === JV.redDot && !0 !== JV.forceRemoveRedDot;
+            eV[xV].items[YV] = {
+              redDot: UV
             }
           }
         }
-        return new oj(rM)
+        return new iU(eV)
       }
       anyCategoryHasRedDots() {
-        for (const MM in this.info)
-          if (this.categoryHasRedDot(MM)) return !0;
+        for (const VV in this.info)
+          if (this.categoryHasRedDot(VV)) return !0;
         return !1
       }
-      doesCategoryExist(MM) {
-        return !(0, Ui.J)(this.info[MM])
+      doesCategoryExist(VV) {
+        return !(0, qx.J)(this.info[VV])
       }
-      categoryHasRedDot(MM) {
-        return !0 === this.info[MM].redDot
+      categoryHasRedDot(VV) {
+        return !0 === this.info[VV].redDot
       }
-      updateCategoryRedDot(MM, rM) {
-        this.info[MM].redDot = rM
+      updateCategoryRedDot(VV, eV) {
+        this.info[VV].redDot = eV
       }
-      doesItemExist(MM, rM) {
-        return this.doesCategoryExist(MM) && !(0, Ui.J)(this.info[MM].items[rM])
+      doesItemExist(VV, eV) {
+        return this.doesCategoryExist(VV) && !(0, qx.J)(this.info[VV].items[eV])
       }
-      itemHasRedDot(MM, rM) {
-        return !0 === this.info[MM].items[rM].redDot
+      itemHasRedDot(VV, eV) {
+        return !0 === this.info[VV].items[eV].redDot
       }
-      updateItemRedDot(MM, rM, iM) {
-        this.info[MM].items[rM].redDot = iM
+      updateItemRedDot(VV, eV, xV) {
+        this.info[VV].items[eV].redDot = xV
       }
       shallowCopy() {
-        return new oj(this.info)
+        return new iU(this.info)
       }
     }
 
-    function fj(MM, rM) {
-      return `${MM}\x1f${rM}`
+    function CU(VV, eV) {
+      return `${VV}\x1f${eV}`
     }
 
-    function Yj(MM, rM) {
-      return !(0, Ui.J)(rM) && !(0, Ui.J)(MM) && rM in MM
+    function aU(VV, eV) {
+      return !(0, qx.J)(eV) && !(0, qx.J)(VV) && eV in VV
     }
-    const Nj = (0, OM.memo)((function(MM) {
-      var rM, iM;
+    const oU = (0, JV.memo)((function(VV) {
+      var eV, xV;
       let {
-        show: SM
-      } = MM;
-      const aM = (0, Ar.f)("players", Xj),
-        PM = (0, Ar.f)("players", Ij),
-        zM = (0, bS.d)(),
-        [HM, hM] = (0, OM.useState)({
+        show: YV
+      } = VV;
+      const yV = (0, le.e)("players", mU),
+        pV = (0, le.e)("players", KU),
+        wV = (0, TY.c)(),
+        [rV, kV] = (0, JV.useState)({
           shopInfo: {},
           userInputsPerItem: {},
-          redDotInfo: oj.fromShopInfo({}),
+          redDotInfo: iU.fromShopInfo({}),
           currencyAmounts: {},
           selectedCategoryKey: null,
           onBoughtInfo: null,
           awaitingPurchase: !1
         }),
-        dM = (0, OM.useRef)(""),
-        yM = (0, OM.useRef)(null),
-        EM = (0, OM.useRef)(null),
-        UM = (0, OM.useRef)(0),
-        GM = (0, OM.useRef)(void 0),
-        CM = (0, OM.useRef)(null),
-        eM = (0, OM.useRef)(HM),
-        wM = HM.redDotInfo.anyCategoryHasRedDots(),
-        [tM, uM] = (0, OM.useState)(null),
-        RM = (0, OM.useRef)(!1);
-      let pM = !1,
-        WM = 0,
-        sM = 0;
-      if (HM.currencyAmounts) {
-        for (const MM in HM.currencyAmounts) {
-          var DM;
-          const rM = HM.currencyAmounts[MM];
-          rM.hidden || (WM++, (null === (DM = rM.subtext) || void 0 === DM ? void 0 : DM.length) > 0 && sM++)
+        EV = (0, JV.useRef)(""),
+        BV = (0, JV.useRef)(null),
+        qV = (0, JV.useRef)(null),
+        tV = (0, JV.useRef)(0),
+        FV = (0, JV.useRef)(void 0),
+        TV = (0, JV.useRef)(null),
+        PV = (0, JV.useRef)(rV),
+        NV = rV.redDotInfo.anyCategoryHasRedDots(),
+        [XV, zV] = (0, JV.useState)(null),
+        GV = (0, JV.useRef)(!1);
+      let WV = !1,
+        RV = 0,
+        gV = 0;
+      if (rV.currencyAmounts) {
+        for (const VV in rV.currencyAmounts) {
+          var DV;
+          const eV = rV.currencyAmounts[VV];
+          eV.hidden || (RV++, (null === (DV = eV.subtext) || void 0 === DV ? void 0 : DV.length) > 0 && gV++)
         }
-        pM = WM + sM > 4
-      }(0, OM.useEffect)((() => {
-        Gi.i.Tz("showShopIconRedDot", wM, !0)
-      }), [wM]), (0, OM.useEffect)((() => {
-        lM.gameBridge.send("setShopOpen", SM), SM || (clearTimeout(GM.current), hM((MM => MM.awaitingPurchase ? {
-          ...MM,
+        WV = RV + gV > 4
+      }(0, JV.useEffect)((() => {
+        tx.h.QZ("showShopIconRedDot", NV, !0)
+      }), [NV]), (0, JV.useEffect)((() => {
+        jV.gameBridge.send("setShopOpen", YV), YV || (clearTimeout(FV.current), kV((VV => VV.awaitingPurchase ? {
+          ...VV,
           awaitingPurchase: !1
-        } : MM)))
-      }), [SM]), (0, OM.useEffect)((() => () => {
-        lM.gameBridge.send("setShopOpen", !1), clearTimeout(GM.current)
-      }), []), (0, OM.useEffect)((() => {
-        eM.current = HM
-      }), [HM]), (0, OM.useEffect)((() => {
-        if (null === tM) return;
-        return (0, CS.b)("pointerdown", (MM => {
-          const rM = MM.target;
-          null !== rM && void 0 !== rM && rM.closest(".ShopItem") || uM(null)
+        } : VV)))
+      }), [YV]), (0, JV.useEffect)((() => () => {
+        jV.gameBridge.send("setShopOpen", !1), clearTimeout(FV.current)
+      }), []), (0, JV.useEffect)((() => {
+        PV.current = rV
+      }), [rV]), (0, JV.useEffect)((() => {
+        if (null === XV) return;
+        return (0, tY.d)("pointerdown", (VV => {
+          const eV = VV.target;
+          null !== eV && void 0 !== eV && eV.closest(".ShopItem") || zV(null)
         }))
-      }), [tM]);
-      const kM = MM => {
-          hM((rM => ({
-            ...rM,
-            ...MM
+      }), [XV]);
+      const iV = VV => {
+          kV((eV => ({
+            ...eV,
+            ...VV
           })))
         },
-        ZM = MM => {
-          var rM;
-          clearTimeout(null === (rM = HM.onBoughtInfo) || void 0 === rM ? void 0 : rM.timeout);
-          const iM = setTimeout((() => {
-            kM({
+        CV = VV => {
+          var eV;
+          clearTimeout(null === (eV = rV.onBoughtInfo) || void 0 === eV ? void 0 : eV.timeout);
+          const xV = setTimeout((() => {
+            iV({
               onBoughtInfo: null
             })
           }), 3e3);
-          dM.current = MM, kM({
+          EV.current = VV, iV({
             onBoughtInfo: {
-              text: MM,
-              timeout: iM,
-              categoryKey: yM.current
+              text: VV,
+              timeout: xV,
+              categoryKey: BV.current
             }
           })
         },
-        oM = MM => {
+        aV = VV => {
           const {
-            shopInfo: rM,
-            userInputsPerItem: iM,
-            redDotInfo: OM,
-            autoSelectCategory: jM
-          } = function(MM, rM, iM, OM, SM, jM) {
-            if ((0, Ui.J)(MM) || 0 === Object.keys(MM).length) return {
+            shopInfo: eV,
+            userInputsPerItem: xV,
+            redDotInfo: JV,
+            autoSelectCategory: UV
+          } = function(VV, eV, xV, JV, YV, UV) {
+            if ((0, qx.J)(VV) || 0 === Object.keys(VV).length) return {
               shopInfo: {},
               userInputsPerItem: {},
-              redDotInfo: oj.fromShopInfo({}),
+              redDotInfo: iU.fromShopInfo({}),
               autoSelectCategory: null
             };
-            const aM = gM.siteUsedData[gM.siteUsed].adConfig.showRewardedAds,
-              PM = {};
-            let nM = null;
-            for (const dM in MM) {
-              const rM = MM[dM],
-                iM = {};
-              let OM = !1;
-              for (const MM in rM.items) {
-                const SM = rM.items[MM];
-                (0, hS.i)(SM, aM) && (iM[MM] = SM, OM = !0)
+            const yV = MV.siteUsedData[MV.siteUsed].adConfig.showRewardedAds,
+              pV = {};
+            let QV = null;
+            for (const EV in VV) {
+              const eV = VV[EV],
+                xV = {};
+              let JV = !1;
+              for (const VV in eV.items) {
+                const YV = eV.items[VV];
+                (0, vY.p)(YV, yV) && (xV[VV] = YV, JV = !0)
               }
-              OM && (PM[dM] = {
-                ...rM,
-                items: iM
-              }, !0 === rM.autoSelectCategory && (nM = dM))
+              JV && (pV[EV] = {
+                ...eV,
+                items: xV
+              }, !0 === eV.autoSelectCategory && (QV = EV))
             }
-            const QM = {},
-              zM = (MM, rM, OM, aM) => {
-                var PM, nM;
-                const zM = fj(MM, rM),
-                  LM = null !== (PM = iM[zM]) && void 0 !== PM ? PM : iM[rM];
-                if (null !== (nM = aM.userInput) && void 0 !== nM && nM.type) switch (aM.userInput.type) {
+            const nV = {},
+              wV = (VV, eV, JV, yV) => {
+                var pV, QV;
+                const wV = CU(VV, eV),
+                  ZV = null !== (pV = xV[wV]) && void 0 !== pV ? pV : xV[eV];
+                if (null !== (QV = yV.userInput) && void 0 !== QV && QV.type) switch (yV.userInput.type) {
                   case "dropdown": {
-                    var mM;
-                    const MM = !LM || !aM.userInput.dropdownOptions.some((MM => (0, hS.d)(MM) === LM)),
-                      rM = aM.userInput.shouldResetSelectionOnOptionsChange && ("dropdown" !== (null === OM || void 0 === OM || null === (mM = OM.userInput) || void 0 === mM ? void 0 : mM.type) || JSON.stringify(OM.userInput.dropdownOptions) !== JSON.stringify(aM.userInput.dropdownOptions)),
-                      iM = aM.userInput,
-                      SM = !(0, Ui.J)(iM.initialValue) && iM.dropdownOptions.some((MM => (0, hS.d)(MM) === iM.initialValue));
-                    var HM;
-                    return void(MM || rM ? SM ? QM[zM] = null !== (HM = aM.userInput.initialValue) && void 0 !== HM ? HM : null : aM.userInput.dropdownOptions.length > 0 ? QM[zM] = (0, hS.d)(aM.userInput.dropdownOptions[0]) : QM[zM] = null : QM[zM] = LM)
+                    var vV;
+                    const VV = !ZV || !yV.userInput.dropdownOptions.some((VV => (0, vY.h)(VV) === ZV)),
+                      eV = yV.userInput.shouldResetSelectionOnOptionsChange && ("dropdown" !== (null === JV || void 0 === JV || null === (vV = JV.userInput) || void 0 === vV ? void 0 : vV.type) || JSON.stringify(JV.userInput.dropdownOptions) !== JSON.stringify(yV.userInput.dropdownOptions)),
+                      xV = yV.userInput,
+                      YV = !(0, qx.J)(xV.initialValue) && xV.dropdownOptions.some((VV => (0, vY.h)(VV) === xV.initialValue));
+                    var rV;
+                    return void(VV || eV ? YV ? nV[wV] = null !== (rV = yV.userInput.initialValue) && void 0 !== rV ? rV : null : yV.userInput.dropdownOptions.length > 0 ? nV[wV] = (0, vY.h)(yV.userInput.dropdownOptions[0]) : nV[wV] = null : nV[wV] = ZV)
                   }
                   case "text":
                   case "number":
-                    var hM, JM, dM;
-                    return void((null === OM || void 0 === OM ? void 0 : OM.userInput) !== aM.userInput ? QM[zM] = null !== (hM = null !== (JM = aM.userInput.initialValue) && void 0 !== JM ? JM : LM) && void 0 !== hM ? hM : "" : QM[zM] = null !== (dM = null !== LM && void 0 !== LM ? LM : aM.userInput.initialValue) && void 0 !== dM ? dM : "");
+                    var kV, bV, EV;
+                    return void((null === JV || void 0 === JV ? void 0 : JV.userInput) !== yV.userInput ? nV[wV] = null !== (kV = null !== (bV = yV.userInput.initialValue) && void 0 !== bV ? bV : ZV) && void 0 !== kV ? kV : "" : nV[wV] = null !== (EV = null !== ZV && void 0 !== ZV ? ZV : yV.userInput.initialValue) && void 0 !== EV ? EV : "");
                   case "color":
-                    var yM, lM, EM;
-                    return void((null === OM || void 0 === OM ? void 0 : OM.userInput) !== aM.userInput ? QM[zM] = null !== (yM = null !== (lM = aM.userInput.initialValue) && void 0 !== lM ? lM : LM) && void 0 !== yM ? yM : "#000000" : QM[zM] = null !== (EM = null !== LM && void 0 !== LM ? LM : aM.userInput.initialValue) && void 0 !== EM ? EM : "#000000");
+                    var BV, jV, qV;
+                    return void((null === JV || void 0 === JV ? void 0 : JV.userInput) !== yV.userInput ? nV[wV] = null !== (BV = null !== (jV = yV.userInput.initialValue) && void 0 !== jV ? jV : ZV) && void 0 !== BV ? BV : "#000000" : nV[wV] = null !== (qV = null !== ZV && void 0 !== ZV ? ZV : yV.userInput.initialValue) && void 0 !== qV ? qV : "#000000");
                   case "player": {
-                    const MM = (0, hS.g)(SM, jM, aM.userInput);
-                    return void(LM && MM.includes(LM) ? QM[zM] = LM : QM[zM] = MM.length > 0 ? MM[0] : null)
+                    const VV = (0, vY.l)(YV, UV, yV.userInput);
+                    return void(ZV && VV.includes(ZV) ? nV[wV] = ZV : nV[wV] = VV.length > 0 ? VV[0] : null)
                   }
                 }
               };
-            for (const dM in PM)
-              for (const MM in PM[dM].items) {
-                var LM;
-                const iM = PM[dM].items[MM];
-                zM(dM, MM, null === (LM = rM[dM]) || void 0 === LM ? void 0 : LM.items[MM], iM)
+            for (const EV in pV)
+              for (const VV in pV[EV].items) {
+                var ZV;
+                const xV = pV[EV].items[VV];
+                wV(EV, VV, null === (ZV = eV[EV]) || void 0 === ZV ? void 0 : ZV.items[VV], xV)
               }
-            const mM = oj.fromShopInfo(PM);
-            for (const dM in PM) {
-              var HM;
-              if (OM.doesCategoryExist(dM)) {
-                (null === (HM = rM[dM]) || void 0 === HM ? void 0 : HM.redDot) === PM[dM].redDot && mM.updateCategoryRedDot(dM, OM.categoryHasRedDot(dM));
-                for (const MM in PM[dM].items) {
-                  var hM, JM;
-                  OM.doesItemExist(dM, MM) && (null === (hM = rM[dM]) || void 0 === hM || null === (JM = hM.items[MM]) || void 0 === JM ? void 0 : JM.redDot) === PM[dM].items[MM].redDot && mM.updateItemRedDot(dM, MM, OM.itemHasRedDot(dM, MM))
+            const vV = iU.fromShopInfo(pV);
+            for (const EV in pV) {
+              var rV;
+              if (JV.doesCategoryExist(EV)) {
+                (null === (rV = eV[EV]) || void 0 === rV ? void 0 : rV.redDot) === pV[EV].redDot && vV.updateCategoryRedDot(EV, JV.categoryHasRedDot(EV));
+                for (const VV in pV[EV].items) {
+                  var kV, bV;
+                  JV.doesItemExist(EV, VV) && (null === (kV = eV[EV]) || void 0 === kV || null === (bV = kV.items[VV]) || void 0 === bV ? void 0 : bV.redDot) === pV[EV].items[VV].redDot && vV.updateItemRedDot(EV, VV, JV.itemHasRedDot(EV, VV))
                 }
               }
             }
             return {
-              shopInfo: PM,
-              userInputsPerItem: QM,
-              redDotInfo: mM,
-              autoSelectCategory: nM
+              shopInfo: pV,
+              userInputsPerItem: nV,
+              redDotInfo: vV,
+              autoSelectCategory: QV
             }
-          }(MM, HM.shopInfo, HM.userInputsPerItem, HM.redDotInfo, aM, PM), nM = {
-            shopInfo: rM,
-            userInputsPerItem: iM,
-            redDotInfo: OM
+          }(VV, rV.shopInfo, rV.userInputsPerItem, rV.redDotInfo, yV, pV), QV = {
+            shopInfo: eV,
+            userInputsPerItem: xV,
+            redDotInfo: JV
           };
-          if (null === jM || SM)
-            if (rM[HM.selectedCategoryKey]) nM.selectedCategoryKey = HM.selectedCategoryKey;
+          if (null === UV || YV)
+            if (eV[rV.selectedCategoryKey]) QV.selectedCategoryKey = rV.selectedCategoryKey;
             else {
-              const MM = tS(rM);
-              nM.selectedCategoryKey = MM.length > 0 ? MM[0] : null
+              const VV = AY(eV);
+              QV.selectedCategoryKey = VV.length > 0 ? VV[0] : null
             }
-          else nM.selectedCategoryKey = jM;
-          return 0 === Object.keys(rM).length && SM && bM.d.set({
+          else QV.selectedCategoryKey = UV;
+          return 0 === Object.keys(eV).length && YV && AV.b.set({
             openEverythingMenuName: null
-          }), nM
+          }), QV
         },
-        YM = (MM, rM, iM) => {
-          const OM = HM.selectedCategoryKey,
-            SM = fj(OM, MM),
-            jM = null !== iM && void 0 !== iM ? iM : HM.userInputsPerItem[SM],
-            aM = {
-              categoryKey: OM,
-              itemKey: MM,
-              userInput: jM
+        cV = (VV, eV, xV) => {
+          const JV = rV.selectedCategoryKey,
+            YV = CU(JV, VV),
+            UV = null !== xV && void 0 !== xV ? xV : rV.userInputsPerItem[YV],
+            yV = {
+              categoryKey: JV,
+              itemKey: VV,
+              userInput: UV
             };
-          if (yM.current = OM, rM.isRewardedAd) {
-            if (Date.now() - UM.current < 5e3) return;
-            (0, Er.Z)((() => {
-              var iM, OM, jM;
+          if (BV.current = JV, eV.isRewardedAd) {
+            if (Date.now() - tV.current < 5e3) return;
+            (0, qe.$)((() => {
+              var xV, JV, UV;
               console.log("bought rewarded ad");
-              const PM = aM.categoryKey ? null === (iM = eM.current.shopInfo[aM.categoryKey]) || void 0 === iM ? void 0 : iM.items[MM] : null;
-              if (!PM || !PM.isRewardedAd) return void console.warn("Shop item no longer valid or a rewarded ad, early out");
-              (null === (OM = rM.userInput) || void 0 === OM ? void 0 : OM.type) === (null === PM || void 0 === PM || null === (jM = PM.userInput) || void 0 === jM ? void 0 : jM.type) ? (aM.userInput = eM.current.userInputsPerItem[SM], lM.gameBridge.send("buyShopItem", aM), rM.onBoughtMessage && ZM(rM.onBoughtMessage)) : console.warn("Shop item input type changed, early out")
-            })), UM.current = Date.now()
+              const pV = yV.categoryKey ? null === (xV = PV.current.shopInfo[yV.categoryKey]) || void 0 === xV ? void 0 : xV.items[VV] : null;
+              if (!pV || !pV.isRewardedAd) return void console.warn("Shop item no longer valid or a rewarded ad, early out");
+              (null === (JV = eV.userInput) || void 0 === JV ? void 0 : JV.type) === (null === pV || void 0 === pV || null === (UV = pV.userInput) || void 0 === UV ? void 0 : UV.type) ? (yV.userInput = PV.current.userInputsPerItem[YV], jV.gameBridge.send("buyShopItem", yV), eV.onBoughtMessage && CV(eV.onBoughtMessage)) : console.warn("Shop item input type changed, early out")
+            })), tV.current = Date.now()
           } else {
-            lM.gameBridge.send("buyShopItem", aM), kM({
+            jV.gameBridge.send("buyShopItem", yV), iV({
               awaitingPurchase: !0
-            }), clearTimeout(GM.current), GM.current = setTimeout((() => {
-              CM.current = null, kM({
+            }), clearTimeout(FV.current), FV.current = setTimeout((() => {
+              TV.current = null, iV({
                 awaitingPurchase: !1
               })
             }), 1e3);
-            const MM = (0, hS.c)(rM, jM);
-            if (CM.current = null, !isNaN(MM) && Yj(HM.currencyAmounts, rM.currency)) {
-              0 !== MM && (CM.current = {
-                currency: rM.currency,
-                amountBefore: HM.currencyAmounts[rM.currency].amount
+            const VV = (0, vY.e)(eV, UV);
+            if (TV.current = null, !isNaN(VV) && aU(rV.currencyAmounts, eV.currency)) {
+              0 !== VV && (TV.current = {
+                currency: eV.currency,
+                amountBefore: rV.currencyAmounts[eV.currency].amount
               });
-              const iM = {
-                ...HM.currencyAmounts
+              const xV = {
+                ...rV.currencyAmounts
               };
-              iM[rM.currency].amount -= MM, kM({
-                currencyAmounts: iM
+              xV[eV.currency].amount -= VV, iV({
+                currencyAmounts: xV
               })
             }
-            rM.onBoughtMessage && ZM(rM.onBoughtMessage)
+            eV.onBoughtMessage && CV(eV.onBoughtMessage)
           }
         },
-        NM = (MM, rM) => {
-          if (null === rM || !MM.shopInfo[rM]) return MM;
-          let iM = MM.redDotInfo;
-          return iM.categoryHasRedDot(rM) && (iM.updateCategoryRedDot(rM, !1), iM = iM.shallowCopy()), {
-            ...MM,
-            selectedCategoryKey: rM,
-            redDotInfo: iM
+        hV = (VV, eV) => {
+          if (null === eV || !VV.shopInfo[eV]) return VV;
+          let xV = VV.redDotInfo;
+          return xV.categoryHasRedDot(eV) && (xV.updateCategoryRedDot(eV, !1), xV = xV.shallowCopy()), {
+            ...VV,
+            selectedCategoryKey: eV,
+            redDotInfo: xV
           }
         },
-        AM = MM => {
-          hM((rM => NM(rM, MM)))
+        lV = VV => {
+          kV((eV => hV(eV, VV)))
         };
-      (0, qr.d)(eS.n, (() => {
-        hM((MM => {
-          const rM = (0, eS.p)(tS(MM.shopInfo), MM.selectedCategoryKey, (rM => (0, eS.k)(MM.shopInfo[rM].items)));
-          return rM === MM.selectedCategoryKey ? MM : NM(MM, rM)
+      (0, Se.g)(FY.h, (() => {
+        kV((VV => {
+          const eV = (0, FY.i)(AY(VV.shopInfo), VV.selectedCategoryKey, (eV => (0, FY.f)(VV.shopInfo[eV].items)));
+          return eV === VV.selectedCategoryKey ? VV : hV(VV, eV)
         }))
-      })), (0, qr.d)("showShopFromServer", (MM => {
+      })), (0, Se.g)("showShopFromServer", (VV => {
         let {
-          toggle: rM,
-          SS: iM
-        } = MM;
-        iM && AM(iM), 0 === Object.keys(HM.shopInfo).length || rM && SM ? bM.d.set({
+          toggle: eV,
+          vY: xV
+        } = VV;
+        xV && lV(xV), 0 === Object.keys(rV.shopInfo).length || eV && YV ? AV.b.set({
           openEverythingMenuName: null
-        }) : bM.d.set({
-          openEverythingMenuName: Ur.m.SHOP
+        }) : AV.b.set({
+          openEverythingMenuName: te.q.SHOP
         })
-      })), (0, qr.d)("closeShopOnDamaged", (() => {
-        SM && bM.d.set({
+      })), (0, Se.g)("closeShopOnDamaged", (() => {
+        YV && AV.b.set({
           openEverythingMenuName: null
         })
-      })), (0, qr.d)("overShopInfo", (MM => {
-        ZM(MM)
-      })), (0, JM.c)("currencyAmounts", (MM => {
-        var rM;
-        const iM = CM.current;
-        iM && (null === MM || void 0 === MM || null === (rM = MM[iM.currency]) || void 0 === rM ? void 0 : rM.amount) === iM.amountBefore ? kM({
-          currencyAmounts: MM
-        }) : (CM.current = null, kM({
-          currencyAmounts: MM,
+      })), (0, Se.g)("overShopInfo", (VV => {
+        CV(VV)
+      })), (0, bV.g)("currencyAmounts", (VV => {
+        var eV;
+        const xV = TV.current;
+        xV && (null === VV || void 0 === VV || null === (eV = VV[xV.currency]) || void 0 === eV ? void 0 : eV.amount) === xV.amountBefore ? iV({
+          currencyAmounts: VV
+        }) : (TV.current = null, iV({
+          currencyAmounts: VV,
           awaitingPurchase: !1
         }))
-      })), (0, JM.c)("shopInfo", (MM => {
-        kM({
-          ...oM(MM),
+      })), (0, bV.g)("shopInfo", (VV => {
+        iV({
+          ...aV(VV),
           awaitingPurchase: !1
         })
       }));
-      const xM = (0, OM.useRef)({
-        playerIds: aM,
-        localPlayerId: PM
+      const LV = (0, JV.useRef)({
+        playerIds: yV,
+        localPlayerId: pV
       });
-      (0, OM.useEffect)((() => {
-        xM.current.playerIds === aM && xM.current.localPlayerId === PM || (xM.current = {
-          playerIds: aM,
-          localPlayerId: PM
-        }, hM((MM => {
-          const rM = oM(MM.shopInfo);
+      (0, JV.useEffect)((() => {
+        LV.current.playerIds === yV && LV.current.localPlayerId === pV || (LV.current = {
+          playerIds: yV,
+          localPlayerId: pV
+        }, kV((VV => {
+          const eV = aV(VV.shopInfo);
           return {
-            ...MM,
-            ...rM
+            ...VV,
+            ...eV
           }
         })))
-      }), [aM, PM]);
-      const vM = HM.selectedCategoryKey,
-        FM = (MM, rM) => {
-          var iM, OM;
-          return (isNaN(rM) || (0, Ui.J)(MM.currency) || Yj(HM.currencyAmounts, MM.currency) && rM <= HM.currencyAmounts[MM.currency].amount) && (null === (iM = MM.canBuy) || void 0 === iM || iM) && !(null !== (OM = MM.hidden) && void 0 !== OM && OM)
+      }), [yV, pV]);
+      const fV = rV.selectedCategoryKey,
+        mV = (VV, eV) => {
+          var xV, JV;
+          return (isNaN(eV) || (0, qx.J)(VV.currency) || aU(rV.currencyAmounts, VV.currency) && eV <= rV.currencyAmounts[VV.currency].amount) && (null === (xV = VV.canBuy) || void 0 === xV || xV) && !(null !== (JV = VV.hidden) && void 0 !== JV && JV)
         },
-        BM = (MM, rM) => {
-          var iM, OM, SM;
-          const aM = fj(vM, MM),
-            PM = HM.shopInfo[vM].items[MM],
-            zM = HM.userInputsPerItem[aM],
-            mM = (0, hS.c)(PM, zM),
-            hM = FM(PM, mM),
-            JM = PM.enchant,
-            dM = JM ? (0, fM.ob)(null !== (iM = PM.customTitle) && void 0 !== iM ? iM : MM, {
-              colour: fM.kb[JM.tier]
-            }) : null !== (OM = PM.customTitle) && void 0 !== OM ? OM : MM,
-            yM = rM => {
-              const iM = null !== rM && void 0 !== rM ? rM : zM,
-                OM = void 0 !== rM ? (0, hS.c)(PM, rM) : mM;
-              FM(PM, OM) && null !== iM && YM(MM, PM, rM);
-              let SM = HM.redDotInfo;
-              SM.itemHasRedDot(vM, MM) && (SM.updateItemRedDot(vM, MM, !1), SM = SM.shallowCopy()), kM({
-                redDotInfo: SM
+        KV = (VV, eV) => {
+          var xV, JV, YV;
+          const yV = CU(fV, VV),
+            pV = rV.shopInfo[fV].items[VV],
+            wV = rV.userInputsPerItem[yV],
+            vV = (0, vY.e)(pV, wV),
+            kV = mV(pV, vV),
+            bV = pV.enchant,
+            EV = bV ? (0, oV.qb)(null !== (xV = pV.customTitle) && void 0 !== xV ? xV : VV, {
+              colour: oV.kb[bV.tier]
+            }) : null !== (JV = pV.customTitle) && void 0 !== JV ? JV : VV,
+            BV = eV => {
+              const xV = null !== eV && void 0 !== eV ? eV : wV,
+                JV = void 0 !== eV ? (0, vY.e)(pV, eV) : vV;
+              mV(pV, JV) && null !== xV && cV(VV, pV, eV);
+              let YV = rV.redDotInfo;
+              YV.itemHasRedDot(fV, VV) && (YV.updateItemRedDot(fV, VV, !1), YV = YV.shallowCopy()), iV({
+                redDotInfo: YV
               })
             };
-          return (0, LM.jsxs)("div", {
-            className: jM()("ShopItem", {
-              ShopItemNoInput: !PM.userInput,
-              ShopItemNoInputCanBuy: !PM.userInput && hM,
-              ShopItemNoInputSelected: PM.isSelected,
-              ShopItemEnchant: !!JM
+          return (0, ZV.jsxs)("div", {
+            className: UV()("ShopItem", {
+              ShopItemNoInput: !pV.userInput,
+              ShopItemNoInputCanBuy: !pV.userInput && kV,
+              ShopItemNoInputSelected: pV.isSelected,
+              ShopItemEnchant: !!bV
             }),
-            "data-pad-focusable": !PM.userInput || void 0,
-            "data-pad-unavailable": !PM.userInput && !hM || void 0,
-            "data-pad-repeat": null !== (SM = (0, eS.c)(PM)) && void 0 !== SM ? SM : void 0,
-            "data-pad-repeat-wait": HM.awaitingPurchase || void 0,
+            "data-pad-focusable": !pV.userInput || void 0,
+            "data-pad-unavailable": !pV.userInput && !kV || void 0,
+            "data-pad-repeat": null !== (YV = (0, FY.d)(pV)) && void 0 !== YV ? YV : void 0,
+            "data-pad-repeat-wait": rV.awaitingPurchase || void 0,
             onClick: () => {
-              if (JM && RM.current) {
-                if (tM !== aM) return void uM(aM);
-                uM(null)
+              if (bV && GV.current) {
+                if (XV !== yV) return void zV(yV);
+                zV(null)
               }
-              PM.userInput || yM()
+              pV.userInput || BV()
             },
-            onPointerDown: MM => {
-              JM && (RM.current = (0, dS.q)(MM))
+            onPointerDown: VV => {
+              bV && (GV.current = (0, kY.u)(VV))
             },
-            onPointerEnter: MM => {
-              JM && !(0, dS.q)(MM) && uM(aM)
+            onPointerEnter: VV => {
+              bV && !(0, kY.u)(VV) && zV(yV)
             },
-            onPointerLeave: MM => {
-              JM && !(0, dS.q)(MM) && uM((MM => MM === aM ? null : MM))
+            onPointerLeave: VV => {
+              bV && !(0, kY.u)(VV) && zV((VV => VV === yV ? null : VV))
             },
             style: {
-              zIndex: Object.keys(HM.shopInfo[vM].items).length - rM
+              zIndex: Object.keys(rV.shopInfo[fV].items).length - eV
             },
-            children: [HM.redDotInfo.itemHasRedDot(vM, MM) && (0, LM.jsx)(nM.d, {
+            children: [rV.redDotInfo.itemHasRedDot(fV, VV) && (0, ZV.jsx)(QV.c, {
               top: "-6px",
               right: "-6px"
-            }), PM.badge && (0, LM.jsx)("div", {
+            }), pV.badge && (0, ZV.jsx)("div", {
               className: "ShopBadgeContainer",
-              children: (0, LM.jsx)("div", {
-                className: jM()("ShopBadgeMain", PM.badge.type),
-                children: (0, LM.jsx)(lS.b, {
-                  text: PM.badge.text
+              children: (0, ZV.jsx)("div", {
+                className: UV()("ShopBadgeMain", pV.badge.type),
+                children: (0, ZV.jsx)(EY.b, {
+                  text: pV.badge.text
                 })
               })
-            }), (0, LM.jsx)("div", {
+            }), (0, ZV.jsx)("div", {
               className: "ShopItemLeft",
-              children: PM.image && (0, LM.jsx)(Aj, {
-                item: PM,
+              children: pV.image && (0, ZV.jsx)(cU, {
+                item: pV,
                 minWidth: 5,
                 minHeight: 4.8
               })
-            }), (0, LM.jsxs)("div", {
+            }), (0, ZV.jsxs)("div", {
               className: "ShopItemRight",
-              children: [(0, LM.jsxs)("div", {
+              children: [(0, ZV.jsxs)("div", {
                 className: "ShopItemHeader",
-                children: [(0, LM.jsx)("div", {
+                children: [(0, ZV.jsx)("div", {
                   className: "ShopItemHeaderTitle",
-                  children: (0, LM.jsx)(lS.b, {
-                    text: dM
+                  children: (0, ZV.jsx)(EY.b, {
+                    text: EV
                   })
-                }), (0, LM.jsx)("div", {
+                }), (0, ZV.jsx)("div", {
                   className: "ShopItemHeaderDescription",
-                  children: (0, LM.jsx)(lS.b, {
-                    text: PM.description
+                  children: (0, ZV.jsx)(EY.b, {
+                    text: pV.description
                   })
                 })]
-              }), PM.userInput && (0, LM.jsxs)("div", {
+              }), pV.userInput && (0, ZV.jsxs)("div", {
                 className: "ShopItemInputsContainer",
-                onClick: MM => {
-                  MM.stopPropagation()
+                onClick: VV => {
+                  VV.stopPropagation()
                 },
-                children: [(0, LM.jsx)(Fj, {
-                  item: PM,
-                  currInput: zM,
-                  updateInput: rM => {
-                    ((MM, rM, iM) => {
-                      const OM = fj(MM, rM),
-                        SM = {
-                          ...HM.userInputsPerItem
+                children: [(0, ZV.jsx)(LU, {
+                  item: pV,
+                  currInput: wV,
+                  updateInput: eV => {
+                    ((VV, eV, xV) => {
+                      const JV = CU(VV, eV),
+                        YV = {
+                          ...rV.userInputsPerItem
                         };
-                      SM[OM] = iM, kM({
-                        userInputsPerItem: SM
+                      YV[JV] = xV, iV({
+                        userInputsPerItem: YV
                       })
-                    })(vM, MM, rM)
+                    })(fV, VV, eV)
                   },
-                  onSubmit: MM => {
-                    yM(MM)
+                  onSubmit: VV => {
+                    BV(VV)
                   }
-                }), ("dropdown" !== PM.userInput.type || !PM.userInput.autoSubmit) && (0, LM.jsx)(QM.e, {
+                }), ("dropdown" !== pV.userInput.type || !pV.userInput.autoSubmit) && (0, ZV.jsx)(nV.f, {
                   className: "ItemCostButton",
-                  disabled: !hM && null !== zM,
+                  disabled: !kV && null !== wV,
                   onClick: () => {
-                    yM()
+                    BV()
                   },
-                  children: (0, LM.jsx)(vj, {
-                    item: PM,
-                    cost: mM,
-                    currencyAmounts: HM.currencyAmounts
+                  children: (0, ZV.jsx)(lU, {
+                    item: pV,
+                    cost: vV,
+                    currencyAmounts: rV.currencyAmounts
                   })
                 })]
               })]
-            }), !PM.userInput && (0, LM.jsx)("div", {
+            }), !pV.userInput && (0, ZV.jsx)("div", {
               className: "ShopItemNoInputCost",
-              children: (0, LM.jsx)(vj, {
-                item: PM,
-                cost: mM,
-                currencyAmounts: HM.currencyAmounts
+              children: (0, ZV.jsx)(lU, {
+                item: pV,
+                cost: vV,
+                currencyAmounts: rV.currencyAmounts
               })
-            }), JM && tM === aM && (0, LM.jsxs)("div", {
+            }), bV && XV === yV && (0, ZV.jsxs)("div", {
               className: "ShopItemEnchantInfo SmallTextBold",
-              children: [(0, LM.jsx)(lS.b, {
-                text: dM
-              }), (0, LM.jsx)("div", {
+              children: [(0, ZV.jsx)(EY.b, {
+                text: EV
+              }), (0, ZV.jsx)("div", {
                 className: "ShopItemEnchantInfoDescription",
-                children: (0, LM.jsx)(lS.b, {
-                  text: (0, JS.e)("", JM.enchantments, JM.enchantmentData)
+                children: (0, ZV.jsx)(EY.b, {
+                  text: (0, rY.d)("", bV.enchantments, bV.enchantmentData)
                 })
               })]
             })]
-          }, aM)
+          }, yV)
         },
-        XM = function(MM) {
-          for (const rM in MM)
-            if (MM[rM].smp) return !0;
+        HV = function(VV) {
+          for (const eV in VV)
+            if (VV[eV].smp) return !0;
           return !1
-        }(HM.shopInfo),
-        IM = BS(HM.shopInfo, vM);
-      return (0, LM.jsx)(LS.d, {
+        }(rV.shopInfo),
+        uV = fY(rV.shopInfo, fV);
+      return (0, ZV.jsx)(nY.d, {
         className: "Menu ShopBody",
-        show: SM,
-        children: 0 !== Object.keys(HM.shopInfo).length && (0, LM.jsxs)(LM.Fragment, {
-          children: [(0, LM.jsxs)("div", {
+        show: YV,
+        children: 0 !== Object.keys(rV.shopInfo).length && (0, ZV.jsxs)(ZV.Fragment, {
+          children: [(0, ZV.jsxs)("div", {
             className: "MenuSideBar",
-            children: [(0, LM.jsx)(mM, {
-              items: tS(HM.shopInfo).map((MM => {
-                var rM;
+            children: [(0, ZV.jsx)(vV, {
+              items: AY(rV.shopInfo).map((VV => {
+                var eV;
                 return {
-                  id: MM,
-                  title: null !== (rM = HM.shopInfo[MM].customTitle) && void 0 !== rM ? rM : MM,
-                  redDot: HM.redDotInfo.categoryHasRedDot(MM)
+                  id: VV,
+                  title: null !== (eV = rV.shopInfo[VV].customTitle) && void 0 !== eV ? eV : VV,
+                  redDot: rV.redDotInfo.categoryHasRedDot(VV)
                 }
               })),
-              link: zM ? {
+              link: wV ? {
                 faIcon: "users-gear",
                 title: "lobbyManageEntry:manageLobby",
                 onClick: () => {
-                  (0, wS.h)({
-                    page: (0, wS.d)(),
+                  (0, PY.e)({
+                    page: (0, PY.b)(),
                     source: "shop"
                   })
                 }
               } : void 0,
-              selectedItemId: vM,
-              onClick: AM,
-              padStartsOnTab: (0, eS.g)(vM)
-            }), (0, LM.jsx)("div", {
+              selectedItemId: fV,
+              onClick: lV,
+              padStartsOnTab: (0, FY.e)(fV)
+            }), (0, ZV.jsx)("div", {
               className: "MenuSideBarFooter",
-              children: HM.currencyAmounts && Object.keys(HM.currencyAmounts).map((MM => {
-                var rM;
-                const iM = HM.currencyAmounts[MM];
-                return iM.hidden ? null : (0, LM.jsxs)("div", {
-                  className: "ShopCurrencyDiv " + (pM ? "SmallText" : ""),
-                  children: [(0, LM.jsxs)("div", {
+              children: rV.currencyAmounts && Object.keys(rV.currencyAmounts).map((VV => {
+                var eV;
+                const xV = rV.currencyAmounts[VV];
+                return xV.hidden ? null : (0, ZV.jsxs)("div", {
+                  className: "ShopCurrencyDiv " + (WV ? "SmallText" : ""),
+                  children: [(0, ZV.jsxs)("div", {
                     className: "ShopCurrencyDetails",
-                    children: [(0, LM.jsx)("div", {
+                    children: [(0, ZV.jsx)("div", {
                       className: "ShopCurrencyAmtIcon",
                       style: {
-                        color: iM.iconColour
+                        color: xV.iconColour
                       },
-                      children: (0, LM.jsx)(Kj, {
-                        iconName: iM.icon
+                      children: (0, ZV.jsx)(HU, {
+                        iconName: xV.icon
                       })
-                    }), "\xa0", (0, HS.e)(iM.amount, 6)]
-                  }), (null === (rM = iM.subtext) || void 0 === rM ? void 0 : rM.length) > 0 && (0, LM.jsx)("div", {
+                    }), "\xa0", (0, ZY.c)(xV.amount, 6)]
+                  }), (null === (eV = xV.subtext) || void 0 === eV ? void 0 : eV.length) > 0 && (0, ZV.jsx)("div", {
                     className: "ShopCurrencySubtext",
-                    children: (0, LM.jsx)(lS.b, {
-                      text: iM.subtext
+                    children: (0, ZV.jsx)(EY.b, {
+                      text: xV.subtext
                     })
                   })]
-                }, MM)
+                }, VV)
               }))
             })]
-          }), (0, LM.jsxs)("div", {
+          }), (0, ZV.jsxs)("div", {
             className: "MenuBody ShopMenuBody",
-            children: [XM && (0, LM.jsx)(Zj, {
-              show: SM,
-              shopInfo: HM.shopInfo,
-              selectedCategoryKey: vM,
-              buy: (MM, rM, iM) => {
-                YM(MM, rM, iM)
+            children: [HV && (0, ZV.jsx)(DU, {
+              show: YV,
+              shopInfo: rV.shopInfo,
+              selectedCategoryKey: fV,
+              buy: (VV, eV, xV) => {
+                cV(VV, eV, xV)
               },
-              canAfford: FM,
-              message: HM.onBoughtInfo
-            }), null === IM && (0, LM.jsxs)(LM.Fragment, {
-              children: [(0, LM.jsx)("div", {
-                className: jM()("ShopOnBoughtInfo", {
-                  ShopOnBoughtInfoShow: null !== HM.onBoughtInfo
+              canAfford: mV,
+              message: rV.onBoughtInfo
+            }), null === uV && (0, ZV.jsxs)(ZV.Fragment, {
+              children: [(0, ZV.jsx)("div", {
+                className: UV()("ShopOnBoughtInfo", {
+                  ShopOnBoughtInfoShow: null !== rV.onBoughtInfo
                 }),
-                children: (0, LM.jsx)(lS.b, {
-                  text: dM.current
+                children: (0, ZV.jsx)(EY.b, {
+                  text: EV.current
                 })
-              }), (0, LM.jsx)("div", {
+              }), (0, ZV.jsx)("div", {
                 className: "ShopItemsWrapper",
-                children: (0, LM.jsxs)("div", {
+                children: (0, ZV.jsxs)("div", {
                   className: "ShopItemsInner",
-                  children: [(null === (rM = HM.shopInfo[vM]) || void 0 === rM ? void 0 : rM.description) && (0, LM.jsx)("div", {
+                  children: [(null === (eV = rV.shopInfo[fV]) || void 0 === eV ? void 0 : eV.description) && (0, ZV.jsx)("div", {
                     className: "ShopCategoryDescription",
-                    children: (0, LM.jsx)(lS.b, {
-                      text: HM.shopInfo[vM].description
+                    children: (0, ZV.jsx)(EY.b, {
+                      text: rV.shopInfo[fV].description
                     })
-                  }), SM && (0, LM.jsx)("div", {
+                  }), YV && (0, ZV.jsx)("div", {
                     className: "ShopItems",
-                    ref: EM,
+                    ref: qV,
                     "data-pad-initial-area": !0,
-                    children: tS(null === (iM = HM.shopInfo[vM]) || void 0 === iM ? void 0 : iM.items).map(((MM, rM) => BM(MM, rM)))
+                    children: AY(null === (xV = rV.shopInfo[fV]) || void 0 === xV ? void 0 : xV.items).map(((VV, eV) => KV(VV, eV)))
                   })]
                 })
               })]
@@ -5446,788 +5446,788 @@ export const modules = {
       })
     }));
 
-    function Aj(MM) {
+    function cU(VV) {
       let {
-        item: rM,
-        minWidth: iM,
-        minHeight: OM
-      } = MM;
+        item: eV,
+        minWidth: xV,
+        minHeight: JV
+      } = VV;
       const {
-        image: SM,
-        schematicId: jM,
-        imageColour: aM
-      } = rM;
-      if (jM) return (0, LM.jsx)("div", {
+        image: YV,
+        schematicId: UV,
+        imageColour: yV
+      } = eV;
+      if (UV) return (0, ZV.jsx)("div", {
         className: "ShopSchematic",
         style: {
-          width: `${iM}rem`,
-          height: `${OM}rem`
+          width: `${xV}rem`,
+          height: `${JV}rem`
         },
-        children: (0, LM.jsx)(ES.b, {
+        children: (0, ZV.jsx)(BY.d, {
           game: {
-            schematicId: jM
+            schematicId: UV
           }
         })
       });
-      var nM, QM;
-      if ((0, yS.d)(SM)) return (0, LM.jsx)("div", {
+      var QV, nV;
+      if ((0, bY.h)(YV)) return (0, ZV.jsx)("div", {
         className: "ShopBlock",
         style: {
-          minWidth: `${iM}rem`,
+          minWidth: `${xV}rem`,
           height: "0",
-          minHeight: `${OM}rem`
+          minHeight: `${JV}rem`
         },
-        children: (0, LM.jsx)(yS.b, {
-          itemName: SM,
-          amount: null !== (nM = rM.amount) && void 0 !== nM ? nM : 0,
-          amountFontSize: OM / 4 + "rem",
-          enchantmentTier: null === (QM = rM.enchant) || void 0 === QM ? void 0 : QM.tier
+        children: (0, ZV.jsx)(bY.e, {
+          itemName: YV,
+          amount: null !== (QV = eV.amount) && void 0 !== QV ? QV : 0,
+          amountFontSize: JV / 4 + "rem",
+          enchantmentTier: null === (nV = eV.enchant) || void 0 === nV ? void 0 : nV.tier
         })
       });
-      const zM = SM.slice(-4);
-      return ".jpg" === zM || ".png" === zM ? (0, LM.jsx)(xj, {
-        image: SM,
-        minWidth: iM
-      }) : (0, LM.jsx)(PM.b, {
-        name: SM,
+      const wV = YV.slice(-4);
+      return ".jpg" === wV || ".png" === wV ? (0, ZV.jsx)(hU, {
+        image: YV,
+        minWidth: xV
+      }) : (0, ZV.jsx)(pV.b, {
+        name: YV,
         className: "SelectedItemImage",
         style: {
-          color: aM
+          color: yV
         }
       })
     }
 
-    function xj(MM) {
+    function hU(VV) {
       let {
-        image: rM,
-        minWidth: iM
-      } = MM;
+        image: eV,
+        minWidth: xV
+      } = VV;
       const {
-        gameNameWithVariation: OM
-      } = (0, Ar.j)("connectedGame"), SM = rM.endsWith(".jpg");
-      return (0, LM.jsx)("img", {
-        className: jM()({
-          ShopPixelImage: !SM
+        gameNameWithVariation: JV
+      } = (0, le.h)("connectedGame"), YV = eV.endsWith(".jpg");
+      return (0, ZV.jsx)("img", {
+        className: UV()({
+          ShopPixelImage: !YV
         }),
         style: {
-          width: `${SM?1.6*iM:iM}rem`,
+          width: `${YV?1.6*xV:xV}rem`,
           height: "auto",
           fontSize: "1.25rem"
         },
-        src: `/textures/games/${(0,fM.Mb)(OM)}/${rM}`,
-        alt: rM,
+        src: `/textures/games/${(0,oV.Pb)(JV)}/${eV}`,
+        alt: eV,
         draggable: !1
       })
     }
 
-    function vj(MM) {
+    function lU(VV) {
       let {
-        item: rM,
-        cost: iM,
-        currencyAmounts: OM
-      } = MM;
-      const SM = !isNaN(iM) && 0 !== iM && Yj(OM, rM.currency);
-      let jM = null;
-      return rM.buyButtonText ? jM = rM.buyButtonText : SM ? (jM = iM, rM.sell && (jM = -1 * iM), jM = jM.toString()) : 0 === iM ? jM = "Free" : rM.isRewardedAd && (jM = "Watch ad"), (0, Ui.J)(jM) || " " === jM ? null : (0, LM.jsxs)("div", {
+        item: eV,
+        cost: xV,
+        currencyAmounts: JV
+      } = VV;
+      const YV = !isNaN(xV) && 0 !== xV && aU(JV, eV.currency);
+      let UV = null;
+      return eV.buyButtonText ? UV = eV.buyButtonText : YV ? (UV = xV, eV.sell && (UV = -1 * xV), UV = UV.toString()) : 0 === xV ? UV = "Free" : eV.isRewardedAd && (UV = "Watch ad"), (0, qx.J)(UV) || " " === UV ? null : (0, ZV.jsxs)("div", {
         className: "BuyItemCostAndIcon",
-        children: [SM && (0, LM.jsx)("div", {
+        children: [YV && (0, ZV.jsx)("div", {
           style: {
-            color: OM[rM.currency].iconColour
+            color: JV[eV.currency].iconColour
           },
           className: "BuyItemIcon",
-          children: (0, LM.jsx)(Kj, {
-            iconName: OM[rM.currency].icon
+          children: (0, ZV.jsx)(HU, {
+            iconName: JV[eV.currency].icon
           })
-        }), (0, LM.jsx)("div", {
+        }), (0, ZV.jsx)("div", {
           className: "BuyItemCost",
-          children: (0, LM.jsx)(lS.b, {
-            text: jM
+          children: (0, ZV.jsx)(EY.b, {
+            text: UV
           })
         })]
       })
     }
 
-    function Fj(MM) {
+    function LU(VV) {
       let {
-        item: rM,
-        currInput: iM,
-        updateInput: SM,
-        onSubmit: jM
-      } = MM;
+        item: eV,
+        currInput: xV,
+        updateInput: YV,
+        onSubmit: UV
+      } = VV;
       const {
-        t: PM
-      } = (0, aM.A)(), nM = (0, OM.useRef)(null);
-      if ((0, OM.useEffect)((() => {
-          const MM = nM.current;
-          MM && MM.value !== iM && document.activeElement !== MM && (MM.value = null !== iM && void 0 !== iM ? iM : "")
-        }), [iM]), !rM.userInput) return null;
-      let QM = rM.userInput;
-      if (yM.featureFlags.sanitizeShopInput && "text" === rM.userInput.type && (QM = {
+        t: pV
+      } = (0, yV.A)(), QV = (0, JV.useRef)(null);
+      if ((0, JV.useEffect)((() => {
+          const VV = QV.current;
+          VV && VV.value !== xV && document.activeElement !== VV && (VV.value = null !== xV && void 0 !== xV ? xV : "")
+        }), [xV]), !eV.userInput) return null;
+      let nV = eV.userInput;
+      if (BV.featureFlags.sanitizeShopInput && "text" === eV.userInput.type && (nV = {
           type: "number",
           placeholderText: "Numbers Only"
-        }), "text" === QM.type || "number" === QM.type) {
-        var zM, mM;
-        console.assert(void 0 !== iM, `Rendered ItemUserInput but currInput is undefined. Item: ${JSON.stringify(rM)}`);
-        const MM = "text" === QM.type && QM.wordCharsOnly;
-        return (0, LM.jsx)("div", {
+        }), "text" === nV.type || "number" === nV.type) {
+        var wV, vV;
+        console.assert(void 0 !== xV, `Rendered ItemUserInput but currInput is undefined. Item: ${JSON.stringify(eV)}`);
+        const VV = "text" === nV.type && nV.wordCharsOnly;
+        return (0, ZV.jsx)("div", {
           className: "ShopItemUserInput ShopItemUserInputTextWrapper",
-          children: (0, LM.jsx)(GM.b, {
+          children: (0, ZV.jsx)(FV.d, {
             className: "ShopItemUserInputText",
-            placeholderText: PM(QM.placeholderText),
-            defaultValue: iM,
-            domRef: nM,
-            onValueChange: (rM, iM) => {
-              !0 === MM && (rM = (0, GS.lb)(rM)), nM.current.value = rM, SM(rM)
+            placeholderText: pV(nV.placeholderText),
+            defaultValue: xV,
+            domRef: QV,
+            onValueChange: (eV, xV) => {
+              !0 === VV && (eV = (0, qY.db)(eV)), QV.current.value = eV, YV(eV)
             },
-            onEnter: jM,
-            type: QM.type
-          }, (null !== (zM = QM.initialValue) && void 0 !== zM ? zM : "") + (null !== (mM = QM.placeholderText) && void 0 !== mM ? mM : ""))
+            onEnter: UV,
+            type: nV.type
+          }, (null !== (wV = nV.initialValue) && void 0 !== wV ? wV : "") + (null !== (vV = nV.placeholderText) && void 0 !== vV ? vV : ""))
         })
       }
-      if ("dropdown" === QM.type) {
-        console.assert(void 0 !== iM, `Rendered ItemUserInput but currInput is undefined. Item: ${JSON.stringify(rM)}`);
-        const MM = QM.autoSubmit;
-        return (0, LM.jsx)("div", {
+      if ("dropdown" === nV.type) {
+        console.assert(void 0 !== xV, `Rendered ItemUserInput but currInput is undefined. Item: ${JSON.stringify(eV)}`);
+        const VV = nV.autoSubmit;
+        return (0, ZV.jsx)("div", {
           className: "ShopItemUserInput ShopItemUserInputDropdown",
-          children: (0, LM.jsx)(fr.e, {
-            options: QM.dropdownOptions.map((MM => (0, hS.d)(MM))),
-            value: iM,
-            onChange: rM => {
+          children: (0, ZV.jsx)(oe.c, {
+            options: nV.dropdownOptions.map((VV => (0, vY.h)(VV))),
+            value: xV,
+            onChange: eV => {
               let {
-                value: iM
-              } = rM;
-              SM(iM), MM && jM(iM)
+                value: xV
+              } = eV;
+              YV(xV), VV && UV(xV)
             }
           })
         })
       }
-      return "player" === QM.type ? (0, LM.jsx)(Bj, {
-        userInput: QM,
-        currInput: iM,
-        updateInput: SM
-      }) : "color" === QM.type ? (0, LM.jsx)("div", {
+      return "player" === nV.type ? (0, ZV.jsx)(fU, {
+        userInput: nV,
+        currInput: xV,
+        updateInput: YV
+      }) : "color" === nV.type ? (0, ZV.jsx)("div", {
         className: "ShopItemUserInput ShopItemUserInputColor",
-        children: (0, LM.jsx)("input", {
+        children: (0, ZV.jsx)("input", {
           type: "color",
-          value: iM,
-          onChange: MM => {
-            SM(MM.target.value)
+          value: xV,
+          onChange: VV => {
+            YV(VV.target.value)
           }
         })
       }) : null
     }
 
-    function Bj(MM) {
+    function fU(VV) {
       let {
-        userInput: rM,
-        currInput: iM,
-        updateInput: OM
-      } = MM;
-      const SM = (0, Ar.j)("players"),
-        jM = (0, Ar.j)("hiddenPlayerNames"),
-        aM = (0, hS.g)(SM.ids, SM.localId, rM);
-      return (0, LM.jsx)("div", {
+        userInput: eV,
+        currInput: xV,
+        updateInput: JV
+      } = VV;
+      const YV = (0, le.h)("players"),
+        UV = (0, le.h)("hiddenPlayerNames"),
+        yV = (0, vY.l)(YV.ids, YV.localId, eV);
+      return (0, ZV.jsx)("div", {
         className: "ShopItemUserInput ShopItemUserInputDropdown",
-        children: (0, LM.jsx)(fr.e, {
-          options: aM.map((MM => {
+        children: (0, ZV.jsx)(oe.c, {
+          options: yV.map((VV => {
             const {
-              name: rM
-            } = SM.byId[MM];
+              name: eV
+            } = YV.byId[VV];
             return {
-              value: MM,
-              label: null === rM ? "" : (0, US.d)(rM, jM)
+              value: VV,
+              label: null === eV ? "" : (0, jY.g)(eV, UV)
             }
           })),
-          value: iM,
-          onChange: MM => {
+          value: xV,
+          onChange: VV => {
             let {
-              value: rM
-            } = MM;
-            OM(rM)
+              value: eV
+            } = VV;
+            JV(eV)
           }
         })
       })
     }
 
-    function Xj(MM) {
+    function mU(VV) {
       let {
-        ids: rM
-      } = MM;
-      return rM
+        ids: eV
+      } = VV;
+      return eV
     }
 
-    function Ij(MM) {
+    function KU(VV) {
       let {
-        localId: rM
-      } = MM;
-      return rM
+        localId: eV
+      } = VV;
+      return eV
     }
 
-    function Kj(MM) {
+    function HU(VV) {
       let {
-        iconName: rM
-      } = MM;
-      return lM.gameBridge.lookup("isItemName", rM) ? (0, LM.jsx)(yS.b, {
-        itemName: rM,
+        iconName: eV
+      } = VV;
+      return jV.gameBridge.lookup("isItemName", eV) ? (0, ZV.jsx)(bY.e, {
+        itemName: eV,
         amount: 1
-      }) : (0, LM.jsx)(PM.b, {
-        name: rM,
+      }) : (0, ZV.jsx)(pV.b, {
+        name: eV,
         className: "2x"
       })
     }
-    var qj = iM(1717);
-    const Tj = (0, iM(1474).g)((MM => MM.PadLobbyShortcuts)),
-      Vj = (0, OM.lazy)((() => Promise.resolve().then((() => iM(5035))).then((MM => ({
-        default: MM.Lobbyleaderboard
+    var uU = xV(1725);
+    const sU = (0, xV(1493).i)((VV => VV.PadLobbyShortcuts)),
+      SU = (0, JV.lazy)((() => Promise.resolve().then((() => xV(5145))).then((VV => ({
+        default: VV.Lobbyleaderboard
       }))))),
-      cj = (0, OM.lazy)((() => iM.e(242).then((() => iM(42181))).then((MM => ({
-        default: MM.LobbyManageView
+      IU = (0, JV.lazy)((() => xV.e(242).then((() => xV(42402))).then((VV => ({
+        default: VV.LobbyManageView
       })))));
 
-    function Ma(MM) {
+    function dU(VV) {
       let {
-        show: rM
-      } = MM;
-      return rM ? (0, LM.jsx)(ra, {}) : null
+        show: eV
+      } = VV;
+      return eV ? (0, ZV.jsx)(OU, {}) : null
     }
 
-    function ra() {
-      const MM = (0, bS.d)();
-      return (0, LM.jsxs)(LM.Fragment, {
-        children: [(0, LM.jsx)(Tj, {}), (0, LM.jsxs)(OM.Suspense, {
-          fallback: (0, LM.jsx)("div", {
+    function OU() {
+      const VV = (0, TY.c)();
+      return (0, ZV.jsxs)(ZV.Fragment, {
+        children: [(0, ZV.jsx)(sU, {}), (0, ZV.jsxs)(JV.Suspense, {
+          fallback: (0, ZV.jsx)("div", {
             className: "CharacterCustomisationLoading",
-            children: (0, LM.jsx)(CM.d, {})
+            children: (0, ZV.jsx)(TV.d, {})
           }),
-          children: [MM && (0, LM.jsx)(cj, {
-            leaderboard: (0, LM.jsx)(Vj, {})
-          }), !MM && (0, LM.jsx)(Vj, {})]
+          children: [VV && (0, ZV.jsx)(IU, {
+            leaderboard: (0, ZV.jsx)(SU, {})
+          }), !VV && (0, ZV.jsx)(SU, {})]
         })]
       })
     }
-    var ia = iM(1641),
-      Oa = iM(3381),
-      Sa = iM(1830),
-      ja = iM(3432),
-      aa = iM(2910),
-      Pa = iM(1568),
-      na = iM(1522),
-      Qa = iM(3358),
-      za = iM(3370),
-      La = iM(2455);
-    const ma = "storeRecentGiftRecipients",
-      Ha = new Map;
+    var Vy = xV(1649),
+      ey = xV(3390),
+      xy = xV(1838),
+      Jy = xV(3437),
+      Yy = xV(2971),
+      Uy = xV(1601),
+      yy = xV(1557),
+      py = xV(3364),
+      Qy = xV(3377),
+      ny = xV(2483);
+    const wy = "storeRecentGiftRecipients",
+      Zy = new Map;
 
-    function ha() {
+    function vy() {
       try {
-        const MM = Si.g.getItem(ma);
-        return Array.isArray(MM) ? MM.filter((MM => "string" === typeof(null === MM || void 0 === MM ? void 0 : MM.name) && MM.name.length > 0)).map((MM => ({
-          name: MM.name,
-          cosmetics: MM.cosmetics && "object" === typeof MM.cosmetics ? MM.cosmetics : null
+        const VV = Yx.m.getItem(wy);
+        return Array.isArray(VV) ? VV.filter((VV => "string" === typeof(null === VV || void 0 === VV ? void 0 : VV.name) && VV.name.length > 0)).map((VV => ({
+          name: VV.name,
+          cosmetics: VV.cosmetics && "object" === typeof VV.cosmetics ? VV.cosmetics : null
         }))) : []
       } catch {
         return []
       }
     }
 
-    function Ja(MM, rM) {
-      var iM;
-      const [SM, jM] = (0, OM.useState)(""), [aM, PM] = (0, OM.useState)("search"), [nM, QM] = (0, OM.useState)(null), [zM, LM] = (0, OM.useState)(null), mM = (0, OM.useRef)(null), HM = (0, OM.useRef)(null);
-      (0, OM.useEffect)((() => () => {
-        mM.current && clearTimeout(mM.current)
-      }), []), (0, OM.useEffect)((() => {
-        rM || dM()
-      }), [rM]);
-      const hM = null !== (iM = null === nM || void 0 === nM ? void 0 : nM.name) && void 0 !== iM ? iM : null;
+    function ry(VV, eV) {
+      var xV;
+      const [YV, UV] = (0, JV.useState)(""), [yV, pV] = (0, JV.useState)("search"), [QV, nV] = (0, JV.useState)(null), [wV, ZV] = (0, JV.useState)(null), vV = (0, JV.useRef)(null), rV = (0, JV.useRef)(null);
+      (0, JV.useEffect)((() => () => {
+        vV.current && clearTimeout(vV.current)
+      }), []), (0, JV.useEffect)((() => {
+        eV || EV()
+      }), [eV]);
+      const kV = null !== (xV = null === QV || void 0 === QV ? void 0 : QV.name) && void 0 !== xV ? xV : null;
 
-      function JM() {
-        mM.current && (clearTimeout(mM.current), mM.current = null)
+      function bV() {
+        vV.current && (clearTimeout(vV.current), vV.current = null)
       }
 
-      function dM() {
-        JM(), jM(""), PM("search"), QM(null)
-      }(0, OM.useEffect)((() => {
-        if (null === hM || MM === uM.NULL_USER_CONTEXT) return;
-        const rM = hM.toLowerCase();
-        if (rM === MM.getPlayerName().toLowerCase()) return void LM({
-          name: hM,
+      function EV() {
+        bV(), UV(""), pV("search"), nV(null)
+      }(0, JV.useEffect)((() => {
+        if (null === kV || VV === zV.NULL_USER_CONTEXT) return;
+        const eV = kV.toLowerCase();
+        if (eV === VV.getPlayerName().toLowerCase()) return void ZV({
+          name: kV,
           result: {
             giftRecipientFound: !1,
             giftRecipientError: "store:giftRecipientIsYou"
           }
         });
-        const iM = Ha.get(rM);
-        if (iM) return void LM({
-          name: hM,
-          result: iM
+        const xV = Zy.get(eV);
+        if (xV) return void ZV({
+          name: kV,
+          result: xV
         });
-        let OM = !1;
-        return async function(MM, rM) {
+        let JV = !1;
+        return async function(VV, eV) {
           try {
-            const iM = await (0, uM.postJsonWithMetricsCookiesAndJsonResponse)(`${lr.clientSideServerUrls.indexUrl}/index/store/gift-recipient`, {
-              giftRecipientName: rM
+            const xV = await (0, zV.postJsonWithMetricsCookiesAndJsonResponse)(`${je.clientSideServerUrls.indexUrl}/index/store/gift-recipient`, {
+              giftRecipientName: eV
             }, {
               retries: 1
-            }, MM.getMetricsCookies());
-            if ("boolean" !== typeof(null === iM || void 0 === iM ? void 0 : iM.giftRecipientFound)) throw new Error(`Unexpected gift recipient lookup response: ${JSON.stringify(iM)}`);
-            return iM
-          } catch (iM) {
-            return console.error("Failed to look up gift recipient:", iM), {
+            }, VV.getMetricsCookies());
+            if ("boolean" !== typeof(null === xV || void 0 === xV ? void 0 : xV.giftRecipientFound)) throw new Error(`Unexpected gift recipient lookup response: ${JSON.stringify(xV)}`);
+            return xV
+          } catch (xV) {
+            return console.error("Failed to look up gift recipient:", xV), {
               giftRecipientFound: !1,
               giftRecipientError: "store:giftRecipientLookupFailed"
             }
           }
-        }(MM, hM).catch((MM => (console.error("Gift recipient lookup failed:", MM), {
+        }(VV, kV).catch((VV => (console.error("Gift recipient lookup failed:", VV), {
           giftRecipientFound: !1,
           giftRecipientError: "store:giftRecipientLookupFailed"
-        }))).then((MM => {
-          !0 !== MM.giftRecipientFound && "store:giftRecipientLookupFailed" === MM.giftRecipientError || Ha.set(rM, MM), OM || LM({
-            name: hM,
-            result: MM
+        }))).then((VV => {
+          !0 !== VV.giftRecipientFound && "store:giftRecipientLookupFailed" === VV.giftRecipientError || Zy.set(eV, VV), JV || ZV({
+            name: kV,
+            result: VV
           })
         })), () => {
-          OM = !0
+          JV = !0
         }
-      }), [hM, MM]);
-      const yM = (0, OM.useMemo)((() => {
-        const MM = SM.trim();
-        if (!MM) return {
+      }), [kV, VV]);
+      const BV = (0, JV.useMemo)((() => {
+        const VV = YV.trim();
+        if (!VV) return {
           status: "none"
         };
-        if (!nM || nM.name !== MM || (null === zM || void 0 === zM ? void 0 : zM.name) !== nM.name) return {
+        if (!QV || QV.name !== VV || (null === wV || void 0 === wV ? void 0 : wV.name) !== QV.name) return {
           status: "pending",
-          name: MM
+          name: VV
         };
-        const rM = zM.result;
-        return !1 === rM.giftRecipientFound ? {
+        const eV = wV.result;
+        return !1 === eV.giftRecipientFound ? {
           status: "error",
-          name: nM.name,
-          error: rM.giftRecipientError
+          name: QV.name,
+          error: eV.giftRecipientError
         } : {
           status: "found",
-          name: rM.giftRecipientName,
-          ownedPacks: rM.giftRecipientOwnedPacks,
-          hasSuperRank: rM.giftRecipientHasSuperRank,
-          isSubscriber: rM.giftRecipientIsSubscriber
+          name: eV.giftRecipientName,
+          ownedPacks: eV.giftRecipientOwnedPacks,
+          hasSuperRank: eV.giftRecipientHasSuperRank,
+          isSubscriber: eV.giftRecipientIsSubscriber
         }
-      }), [SM, nM, zM]);
-      (0, OM.useEffect)((() => {
-        "found" === yM.status && "typed" === (null === nM || void 0 === nM ? void 0 : nM.source) && HM.current !== yM.name && (HM.current = yM.name, (0, Sr.reportAnalyticsClick)({
+      }), [YV, QV, wV]);
+      (0, JV.useEffect)((() => {
+        "found" === BV.status && "typed" === (null === QV || void 0 === QV ? void 0 : QV.source) && rV.current !== BV.name && (rV.current = BV.name, (0, Ye.reportAnalyticsClick)({
           id: "store.gift_recipient",
           value: "typed"
         }))
-      }), [yM, nM]);
-      const lM = (null === zM || void 0 === zM ? void 0 : zM.name) === (null === nM || void 0 === nM ? void 0 : nM.name) ? null === zM || void 0 === zM ? void 0 : zM.result : null,
-        EM = !0 === (null === lM || void 0 === lM ? void 0 : lM.giftRecipientFound) ? lM.giftRecipientCosmetics : null;
+      }), [BV, QV]);
+      const jV = (null === wV || void 0 === wV ? void 0 : wV.name) === (null === QV || void 0 === QV ? void 0 : QV.name) ? null === wV || void 0 === wV ? void 0 : wV.result : null,
+        qV = !0 === (null === jV || void 0 === jV ? void 0 : jV.giftRecipientFound) ? jV.giftRecipientCosmetics : null;
       return {
-        query: SM,
-        via: aM,
-        recipient: yM,
-        recipientCosmetics: EM,
-        type: function(MM) {
-          jM(MM), PM("search"), JM();
-          const rM = MM.trim();
-          rM ? mM.current = setTimeout((() => {
-            QM({
-              name: rM,
+        query: YV,
+        via: yV,
+        recipient: BV,
+        recipientCosmetics: qV,
+        type: function(VV) {
+          UV(VV), pV("search"), bV();
+          const eV = VV.trim();
+          eV ? vV.current = setTimeout((() => {
+            nV({
+              name: eV,
               source: "typed"
             })
-          }), 400) : QM(null)
+          }), 400) : nV(null)
         },
-        choose: function(MM, rM) {
-          JM(), jM(MM), PM("typed" === rM ? "search" : "prefilled" === rM ? "prefilled" : "suggestion"), QM({
-            name: MM,
-            source: rM
-          }), "typed" !== rM && "prefilled" !== rM && (0, Sr.reportAnalyticsClick)({
+        choose: function(VV, eV) {
+          bV(), UV(VV), pV("typed" === eV ? "search" : "prefilled" === eV ? "prefilled" : "suggestion"), nV({
+            name: VV,
+            source: eV
+          }), "typed" !== eV && "prefilled" !== eV && (0, Ye.reportAnalyticsClick)({
             id: "store.gift_recipient",
-            value: rM
+            value: eV
           })
         },
-        clear: dM,
-        recordGift: function(MM, rM) {
-          ! function(MM) {
-            Ha.delete(MM.toLowerCase())
-          }(MM), LM((iM => {
-            if (!iM || iM.name.toLowerCase() !== MM.toLowerCase() || !0 !== iM.result.giftRecipientFound || "superRank" === rM) return iM;
-            const OM = iM.result.giftRecipientOwnedPacks;
+        clear: EV,
+        recordGift: function(VV, eV) {
+          ! function(VV) {
+            Zy.delete(VV.toLowerCase())
+          }(VV), ZV((xV => {
+            if (!xV || xV.name.toLowerCase() !== VV.toLowerCase() || !0 !== xV.result.giftRecipientFound || "superRank" === eV) return xV;
+            const JV = xV.result.giftRecipientOwnedPacks;
             return {
-              ...iM,
+              ...xV,
               result: {
-                ...iM.result,
-                giftRecipientOwnedPacks: OM.includes(rM) ? OM : [...OM, rM]
+                ...xV.result,
+                giftRecipientOwnedPacks: JV.includes(eV) ? JV : [...JV, eV]
               }
             }
           }))
         }
       }
     }
-    var da = iM(2449),
-      ya = iM(5041),
-      la = iM(222),
-      Ea = iM(3511);
-    const Ua = ["pointerdown", "pointermove", "keydown", "wheel", "touchstart", "scroll", "blur", "focus"];
-    var Ga = iM(2412),
-      Ca = iM(605),
-      ea = iM(2488),
-      ba = iM(2818);
+    var ky = xV(2475),
+      by = xV(5150),
+      Ey = xV(275),
+      By = xV(3535);
+    const jy = ["pointerdown", "pointermove", "keydown", "wheel", "touchstart", "scroll", "blur", "focus"];
+    var qy = xV(2437),
+      ty = xV(642),
+      Fy = xV(2524),
+      Ty = xV(2903);
 
-    function wa(MM) {
+    function Py(VV) {
       let {
-        cosmetics: rM
-      } = MM;
-      return (0, LM.jsx)("span", {
+        cosmetics: eV
+      } = VV;
+      return (0, ZV.jsx)("span", {
         className: "StoreRecipientAvatar",
-        children: (0, LM.jsx)(ea.c, {
-          cosmetics: rM
+        children: (0, ZV.jsx)(Fy.e, {
+          cosmetics: eV
         })
       })
     }
 
-    function ta(MM, rM) {
-      var iM, OM;
-      const SM = null !== (iM = MM.friend) && void 0 !== iM ? iM : {
+    function Ay(VV, eV) {
+      var xV, JV;
+      const YV = null !== (xV = VV.friend) && void 0 !== xV ? xV : {
         isError: !1,
-        name: MM.name,
+        name: VV.name,
         ranks: [],
-        cosmetics: null !== (OM = MM.cosmetics) && void 0 !== OM ? OM : {},
-        nameColour: Ca.d,
+        cosmetics: null !== (JV = VV.cosmetics) && void 0 !== JV ? JV : {},
+        nameColour: ty.e,
         location: {
           status: "noGamePlayed"
         }
       };
-      return rM ? {
-        ...SM,
-        cosmetics: rM
-      } : SM
+      return eV ? {
+        ...YV,
+        cosmetics: eV
+      } : YV
     }
 
-    function ga(MM) {
+    function Ny(VV) {
       let {
-        pending: rM
-      } = MM;
-      return (0, LM.jsx)("span", {
+        pending: eV
+      } = VV;
+      return (0, ZV.jsx)("span", {
         className: "StoreRecipientLoader",
-        children: rM && (0, LM.jsx)(CM.d, {})
+        children: eV && (0, ZV.jsx)(TV.d, {})
       })
     }
 
-    function ua(MM) {
-      var rM;
+    function Xy(VV) {
+      var eV;
       let {
-        selfName: iM,
-        giftRecipient: SM,
-        suggestionsVersion: nM,
-        pulseSignal: zM,
-        disabled: mM
-      } = MM;
+        selfName: xV,
+        giftRecipient: YV,
+        suggestionsVersion: QV,
+        pulseSignal: wV,
+        disabled: vV
+      } = VV;
       const {
-        t: HM
-      } = (0, aM.A)(), hM = (0, vM.m)(), JM = (0, OM.useRef)(null), dM = (0, OM.useRef)(null), {
-        query: lM,
-        via: EM,
-        recipient: UM,
-        recipientCosmetics: CM
-      } = SM, eM = (0, La.o)(lM), bM = (0, OM.useMemo)((() => {
-        const MM = yM.featureFlags.useSocialFeatures ? hM.friends.filter((MM => !MM.isError)) : [];
-        return (0, La.i)({
-          onlineFriends: (0, vM.h)(MM),
-          recentRecipients: ha(),
-          friends: MM,
-          selfName: iM,
+        t: rV
+      } = (0, yV.A)(), kV = (0, fV.m)(), bV = (0, JV.useRef)(null), EV = (0, JV.useRef)(null), {
+        query: jV,
+        via: qV,
+        recipient: tV,
+        recipientCosmetics: TV
+      } = YV, PV = (0, ny.l)(jV), AV = (0, JV.useMemo)((() => {
+        const VV = BV.featureFlags.useSocialFeatures ? kV.friends.filter((VV => !VV.isError)) : [];
+        return (0, ny.h)({
+          onlineFriends: (0, fV.f)(VV),
+          recentRecipients: vy(),
+          friends: VV,
+          selfName: xV,
           max: 8
         })
-      }), [hM.friends, iM, nM]), wM = lM.trim().toLowerCase(), tM = "search" !== EM && wM ? bM.find((MM => MM.name.toLowerCase() === wM)) : void 0, gM = tM && "prefilled" === EM ? [tM, ...bM.filter((MM => MM !== tM))] : bM, uM = "" !== wM && !tM, RM = uM ? lM : "", pM = gM.length > 0;
-      (0, OM.useEffect)((() => {
-        JM.current && JM.current.value !== RM && (JM.current.value = RM)
-      }), [RM]), (0, OM.useEffect)((() => {
-        JM.current && (JM.current.disabled = mM)
-      }), [mM, zM]);
-      const WM = (0, OM.useRef)(0);
+      }), [kV.friends, xV, QV]), NV = jV.trim().toLowerCase(), XV = "search" !== qV && NV ? AV.find((VV => VV.name.toLowerCase() === NV)) : void 0, MV = XV && "prefilled" === qV ? [XV, ...AV.filter((VV => VV !== XV))] : AV, zV = "" !== NV && !XV, GV = zV ? jV : "", WV = MV.length > 0;
+      (0, JV.useEffect)((() => {
+        bV.current && bV.current.value !== GV && (bV.current.value = GV)
+      }), [GV]), (0, JV.useEffect)((() => {
+        bV.current && (bV.current.disabled = vV)
+      }), [vV, wV]);
+      const RV = (0, JV.useRef)(0);
 
-      function DM() {
-        "self" !== eM && (0, Sr.reportAnalyticsClick)({
+      function DV() {
+        "self" !== PV && (0, Ye.reportAnalyticsClick)({
           id: "store.mode",
           value: "self"
-        }), SM.clear()
+        }), YV.clear()
       }
 
-      function kM(MM) {
-        var rM, iM;
-        if (mM) return;
-        if (" " === MM.key || "Enter" === MM.key) return MM.preventDefault(), void MM.currentTarget.click();
-        const OM = Array.from(null !== (rM = null === (iM = dM.current) || void 0 === iM ? void 0 : iM.querySelectorAll("[role=radio]")) && void 0 !== rM ? rM : []),
-          SM = OM.indexOf(MM.currentTarget);
-        let jM;
-        "ArrowRight" === MM.key || "ArrowDown" === MM.key ? jM = OM[(SM + 1) % OM.length] : "ArrowLeft" === MM.key || "ArrowUp" === MM.key ? jM = OM[(SM - 1 + OM.length) % OM.length] : "Home" === MM.key ? jM = OM[0] : "End" === MM.key && (jM = OM[OM.length - 1]), jM && (MM.preventDefault(), jM.focus(), jM.click())
-      }(0, OM.useEffect)((() => {
-        var MM;
-        zM > WM.current && !mM && (WM.current = zM, null === (MM = JM.current) || void 0 === MM || MM.focus())
-      }), [zM, mM]);
-      const ZM = "self" === eM,
-        oM = null !== (rM = null === tM || void 0 === tM ? void 0 : tM.name) && void 0 !== rM ? rM : null,
-        fM = "error" === UM.status ? UM.error : null,
-        YM = "store:giftRecipientLookupFailed" === fM;
-      return (0, LM.jsxs)("div", {
-        className: jM()("StoreRecipientStrip", {
-          StoreRecipientStripDisabled: mM,
-          StoreRecipientStripNoChips: !pM
+      function iV(VV) {
+        var eV, xV;
+        if (vV) return;
+        if (" " === VV.key || "Enter" === VV.key) return VV.preventDefault(), void VV.currentTarget.click();
+        const JV = Array.from(null !== (eV = null === (xV = EV.current) || void 0 === xV ? void 0 : xV.querySelectorAll("[role=radio]")) && void 0 !== eV ? eV : []),
+          YV = JV.indexOf(VV.currentTarget);
+        let UV;
+        "ArrowRight" === VV.key || "ArrowDown" === VV.key ? UV = JV[(YV + 1) % JV.length] : "ArrowLeft" === VV.key || "ArrowUp" === VV.key ? UV = JV[(YV - 1 + JV.length) % JV.length] : "Home" === VV.key ? UV = JV[0] : "End" === VV.key && (UV = JV[JV.length - 1]), UV && (VV.preventDefault(), UV.focus(), UV.click())
+      }(0, JV.useEffect)((() => {
+        var VV;
+        wV > RV.current && !vV && (RV.current = wV, null === (VV = bV.current) || void 0 === VV || VV.focus())
+      }), [wV, vV]);
+      const CV = "self" === PV,
+        aV = null !== (eV = null === XV || void 0 === XV ? void 0 : XV.name) && void 0 !== eV ? eV : null,
+        oV = "error" === tV.status ? tV.error : null,
+        cV = "store:giftRecipientLookupFailed" === oV;
+      return (0, ZV.jsxs)("div", {
+        className: UV()("StoreRecipientStrip", {
+          StoreRecipientStripDisabled: vV,
+          StoreRecipientStripNoChips: !WV
         }),
-        children: [(0, LM.jsx)("span", {
+        children: [(0, ZV.jsx)("span", {
           className: "StoreRecipientLabel",
           "aria-hidden": !0,
-          children: HM("store:buyingFor")
-        }), (0, LM.jsxs)("div", {
-          ref: dM,
+          children: rV("store:buyingFor")
+        }), (0, ZV.jsxs)("div", {
+          ref: EV,
           className: "StoreRecipientRadios",
           role: "radiogroup",
-          "aria-label": HM("store:whoIsItFor"),
-          children: [(0, LM.jsxs)("div", {
+          "aria-label": rV("store:whoIsItFor"),
+          children: [(0, ZV.jsxs)("div", {
             role: "radio",
             "data-pad-focusable": !0,
-            "aria-checked": ZM,
-            tabIndex: mM || !ZM && null !== oM ? -1 : 0,
-            className: jM()("StoreRecipientMe", {
-              StoreRecipientChecked: ZM
+            "aria-checked": CV,
+            tabIndex: vV || !CV && null !== aV ? -1 : 0,
+            className: UV()("StoreRecipientMe", {
+              StoreRecipientChecked: CV
             }),
             onClick: () => {
-              mM || DM()
+              vV || DV()
             },
-            onKeyDown: kM,
-            children: [(0, LM.jsx)(PM.b, {
+            onKeyDown: iV,
+            children: [(0, ZV.jsx)(pV.b, {
               name: "user"
-            }), " ", HM("store:me")]
-          }), pM && (0, LM.jsx)("div", {
+            }), " ", rV("store:me")]
+          }), WV && (0, ZV.jsx)("div", {
             className: "StoreRecipientChips",
-            children: gM.map((MM => {
-              const rM = MM === tM;
-              return (0, LM.jsx)("div", {
+            children: MV.map((VV => {
+              const eV = VV === XV;
+              return (0, ZV.jsx)("div", {
                 role: "radio",
                 "data-pad-focusable": !0,
-                "aria-checked": rM,
-                tabIndex: !mM && rM ? 0 : -1,
-                title: MM.name,
-                className: jM()("StoreRecipientChip", {
-                  StoreRecipientChecked: rM
+                "aria-checked": eV,
+                tabIndex: !vV && eV ? 0 : -1,
+                title: VV.name,
+                className: UV()("StoreRecipientChip", {
+                  StoreRecipientChecked: eV
                 }),
                 onClick: () => {
-                  mM || function(MM) {
-                    "gift" !== eM && (0, Sr.reportAnalyticsClick)({
+                  vV || function(VV) {
+                    "gift" !== PV && (0, Ye.reportAnalyticsClick)({
                       id: "store.mode",
                       value: "gift"
-                    }), SM.choose(MM.name, MM.kind)
-                  }(MM)
+                    }), YV.choose(VV.name, VV.kind)
+                  }(VV)
                 },
-                onKeyDown: kM,
-                children: (0, LM.jsx)(ba.f, {
-                  playerSocialPreview: ta(MM, rM ? CM : null),
+                onKeyDown: iV,
+                children: (0, ZV.jsx)(Ty.f, {
+                  playerSocialPreview: Ay(VV, eV ? TV : null),
                   opensProfileCard: !1,
-                  isFriend: null !== MM.friend,
+                  isFriend: null !== VV.friend,
                   hideFriendBadge: !0,
-                  showLocation: null !== MM.friend,
-                  status: null === MM.friend ? null : void 0,
-                  trailing: rM ? (0, LM.jsx)(ga, {
-                    pending: "pending" === UM.status
+                  showLocation: null !== VV.friend,
+                  status: null === VV.friend ? null : void 0,
+                  trailing: eV ? (0, ZV.jsx)(Ny, {
+                    pending: "pending" === tV.status
                   }) : void 0
                 })
-              }, MM.name)
+              }, VV.name)
             }))
           })]
-        }), (0, LM.jsxs)("div", {
-          className: jM()("StoreRecipientSearch", {
-            StoreRecipientChecked: uM,
-            StoreRecipientSearchPulse: zM > 0 && !uM,
-            StoreRecipientSearchError: null !== fM && !YM
+        }), (0, ZV.jsxs)("div", {
+          className: UV()("StoreRecipientSearch", {
+            StoreRecipientChecked: zV,
+            StoreRecipientSearchPulse: wV > 0 && !zV,
+            StoreRecipientSearchError: null !== oV && !cV
           }),
           onClick: () => {
-            var MM;
-            null === (MM = JM.current) || void 0 === MM || MM.focus()
+            var VV;
+            null === (VV = bV.current) || void 0 === VV || VV.focus()
           },
-          children: [uM && "found" === UM.status && CM && (0, LM.jsx)(wa, {
-            cosmetics: CM
-          }), !(uM && "found" === UM.status && CM) && (0, LM.jsx)(PM.b, {
+          children: [zV && "found" === tV.status && TV && (0, ZV.jsx)(Py, {
+            cosmetics: TV
+          }), !(zV && "found" === tV.status && TV) && (0, ZV.jsx)(pV.b, {
             name: "magnifying-glass",
             className: "StoreRecipientSearchIcon"
-          }), (0, LM.jsx)(GM.b, {
+          }), (0, ZV.jsx)(FV.d, {
             className: "StoreRecipientSearchInput",
-            domRef: JM,
-            placeholderText: HM("store:searchName"),
-            defaultValue: RM,
-            maxLength: sM.g,
-            onValueChange: function(MM) {
-              "gift" !== eM && MM.trim() && (0, Sr.reportAnalyticsClick)({
+            domRef: bV,
+            placeholderText: rV("store:searchName"),
+            defaultValue: GV,
+            maxLength: gV.f,
+            onValueChange: function(VV) {
+              "gift" !== PV && VV.trim() && (0, Ye.reportAnalyticsClick)({
                 id: "store.mode",
                 value: "gift"
-              }), SM.type(MM)
+              }), YV.type(VV)
             },
             onEnter: () => {
-              var MM;
-              const rM = null === (MM = JM.current) || void 0 === MM ? void 0 : MM.value.trim();
-              rM && SM.choose(rM, "typed")
+              var VV;
+              const eV = null === (VV = bV.current) || void 0 === VV ? void 0 : VV.value.trim();
+              eV && YV.choose(eV, "typed")
             },
             blurOnEnter: !0
-          }), uM && (0, LM.jsx)(ga, {
-            pending: "pending" === UM.status
-          }), uM && (0, LM.jsx)("div", {
-            ...(0, QM.fb)({
-              disabled: mM
+          }), zV && (0, ZV.jsx)(Ny, {
+            pending: "pending" === tV.status
+          }), zV && (0, ZV.jsx)("div", {
+            ...(0, nV.V)({
+              disabled: vV
             }),
-            "aria-label": HM("store:clearRecipient"),
-            title: HM("store:clearRecipient"),
+            "aria-label": rV("store:clearRecipient"),
+            title: rV("store:clearRecipient"),
             className: "StoreRecipientClear",
-            onClick: MM => {
-              MM.stopPropagation(), mM || DM()
+            onClick: VV => {
+              VV.stopPropagation(), vV || DV()
             },
-            children: (0, LM.jsx)(PM.b, {
+            children: (0, ZV.jsx)(pV.b, {
               name: "xmark"
             })
           })]
-        }, zM), fM && (0, LM.jsx)("div", {
-          className: jM()("StoreRecipientPopover", {
-            StoreRecipientPopoverSoft: YM
+        }, wV), oV && (0, ZV.jsx)("div", {
+          className: UV()("StoreRecipientPopover", {
+            StoreRecipientPopoverSoft: cV
           }),
           role: "status",
-          children: HM(fM)
+          children: rV(oV)
         })]
       })
     }
-    var Ra = iM(2382),
-      pa = iM(3972),
-      Wa = iM(3520),
-      sa = iM(2414);
-    const Da = iM.p + "static/media/superRankPreviewPoster.e64783181b692cc31e08.webp";
+    var My = xV(2404),
+      zy = xV(4e3),
+      Gy = xV(3541),
+      Wy = xV(2441);
+    const Ry = xV.p + "static/media/superRankPreviewPoster.e64783181b692cc31e08.webp";
 
-    function ka() {
-      (0, sa.g)(Da, {
+    function gy() {
+      (0, Wy.i)(Ry, {
         lowPriority: !1
       })
     }
 
-    function Za(MM) {
+    function Dy(VV) {
       let {
-        onBack: rM,
-        cta: iM,
-        recipient: SM,
-        afterCta: jM
-      } = MM;
+        onBack: eV,
+        cta: xV,
+        recipient: YV,
+        afterCta: UV
+      } = VV;
       const {
-        t: nM
-      } = (0, aM.A)(), [zM, mM] = (0, OM.useState)("starting"), HM = (0, OM.useRef)(null), hM = (0, cr.b)(), JM = (0, OM.useRef)(null), dM = (0, OM.useCallback)((() => {
-        const MM = HM.current;
-        null !== MM.error && MM.load();
-        const rM = MM.play();
-        JM.current = rM, rM.catch((MM => {
-          (0, pa.e)("Failed to play Super Rank video", MM), hM.current && JM.current === rM && mM("failed")
+        t: QV
+      } = (0, yV.A)(), [wV, vV] = (0, JV.useState)("starting"), rV = (0, JV.useRef)(null), kV = (0, Oe.e)(), bV = (0, JV.useRef)(null), EV = (0, JV.useCallback)((() => {
+        const VV = rV.current;
+        null !== VV.error && VV.load();
+        const eV = VV.play();
+        bV.current = eV, eV.catch((VV => {
+          (0, zy.e)("Failed to play Super Rank video", VV), kV.current && bV.current === eV && vV("failed")
         }))
-      }), [hM]);
-      return (0, OM.useEffect)((() => {
-        const MM = HM.current;
-        let rM;
+      }), [kV]);
+      return (0, JV.useEffect)((() => {
+        const VV = rV.current;
+        let eV;
 
-        function iM() {
-          clearTimeout(rM), rM = setTimeout(dM, 3e3)
+        function xV() {
+          clearTimeout(eV), eV = setTimeout(EV, 3e3)
         }
-        return dM(), MM.addEventListener("ended", iM), () => {
-          clearTimeout(rM), MM.removeEventListener("ended", iM)
+        return EV(), VV.addEventListener("ended", xV), () => {
+          clearTimeout(eV), VV.removeEventListener("ended", xV)
         }
-      }), [dM]), (0, LM.jsxs)("div", {
+      }), [EV]), (0, ZV.jsxs)("div", {
         className: "StoreSuperRankDetail",
-        children: [(0, LM.jsxs)("div", {
+        children: [(0, ZV.jsxs)("div", {
           className: "StoreDetailHeader",
-          children: [(0, LM.jsx)(QM.c, {
+          children: [(0, ZV.jsx)(nV.b, {
             className: "StoreDetailBackButton",
-            onClick: rM,
+            onClick: eV,
             padBack: !0,
-            children: nM("general:back")
-          }), (0, LM.jsxs)("div", {
+            children: QV("general:back")
+          }), (0, ZV.jsxs)("div", {
             className: "StoreTileTitle StoreSuperRankTitle",
-            children: [(0, LM.jsx)(PM.b, {
+            children: [(0, ZV.jsx)(pV.b, {
               name: "bolt"
-            }), " ", nM("homePage:superRank")]
-          }), SM]
-        }), (0, LM.jsxs)("div", {
+            }), " ", QV("homePage:superRank")]
+          }), YV]
+        }), (0, ZV.jsxs)("div", {
           className: "StoreSuperRankDetailBody",
-          children: [(0, LM.jsxs)("div", {
+          children: [(0, ZV.jsxs)("div", {
             className: "StoreSuperRankVideo",
-            children: [(0, LM.jsx)("video", {
-              ref: HM,
-              src: `${lr.clientSideServerUrls.staticUrl}/videos/SuperRankPreview.mp4`,
-              poster: Da,
+            children: [(0, ZV.jsx)("video", {
+              ref: rV,
+              src: `${je.clientSideServerUrls.staticUrl}/videos/SuperRankPreview.mp4`,
+              poster: Ry,
               muted: !0,
               playsInline: !0,
-              controls: "playing" === zM,
+              controls: "playing" === wV,
               onPlaying: () => {
-                mM("playing")
+                vV("playing")
               },
               onError: () => {
-                mM("failed")
+                vV("failed")
               }
-            }), ("failed" === zM || "loading" === zM) && (0, LM.jsx)("div", {
+            }), ("failed" === wV || "loading" === wV) && (0, ZV.jsx)("div", {
               className: "StoreSuperRankPlay",
-              children: (0, LM.jsx)(QM.e, {
-                ariaLabel: nM("general:play"),
-                loading: "loading" === zM,
+              children: (0, ZV.jsx)(nV.f, {
+                ariaLabel: QV("general:play"),
+                loading: "loading" === wV,
                 onClick: () => {
-                  mM("loading"), dM()
+                  vV("loading"), EV()
                 },
                 touchPressOn: "pointerup",
-                children: (0, LM.jsx)(PM.b, {
+                children: (0, ZV.jsx)(pV.b, {
                   name: "play"
                 })
               })
             })]
-          }), (0, LM.jsxs)("div", {
+          }), (0, ZV.jsxs)("div", {
             className: "StoreSuperRankDetailSide",
-            children: [(0, LM.jsx)("div", {
+            children: [(0, ZV.jsx)("div", {
               className: "StoreSuperRankDetailTable",
-              children: (0, LM.jsx)(Wa.d, {})
-            }), (0, LM.jsxs)("div", {
+              children: (0, ZV.jsx)(Gy.d, {})
+            }), (0, ZV.jsxs)("div", {
               className: "StoreTileActions",
-              children: [iM, jM]
+              children: [xV, UV]
             })]
           })]
         })]
       })
     }
-    var oa = iM(2834),
-      fa = iM(3938),
-      Ya = iM(3488),
-      Na = iM(3493),
-      Aa = iM(3459);
-    const xa = [Ca.x.yellow, Ca.x.green, Ca.x.aqua, Ca.x.blue, Ca.x.purple, Ca.x.red];
+    var iy = xV(2917),
+      Cy = xV(3971),
+      ay = xV(3503),
+      oy = xV(3507),
+      cy = xV(3474);
+    const hy = [ty.t.yellow, ty.t.green, ty.t.aqua, ty.t.blue, ty.t.purple, ty.t.red];
 
-    function va(MM) {
-      return "needsRecipient" === MM || "lookingUp" === MM || "gift" === MM || "recipientOwns" === MM || "recipientSharesOwned" === MM || "recipientSubscribed" === MM
+    function ly(VV) {
+      return "needsRecipient" === VV || "lookingUp" === VV || "gift" === VV || "recipientOwns" === VV || "recipientSharesOwned" === VV || "recipientSubscribed" === VV
     }
 
-    function Fa(MM) {
+    function Ly(VV) {
       const {
-        onKeyDown: rM,
-        ...iM
-      } = (0, QM.fb)();
+        onKeyDown: eV,
+        ...xV
+      } = (0, nV.V)();
       return {
-        ...iM,
-        "aria-label": MM,
-        onKeyDown: MM => {
-          MM.target === MM.currentTarget && (null === rM || void 0 === rM || rM(MM))
+        ...xV,
+        "aria-label": VV,
+        onKeyDown: VV => {
+          VV.target === VV.currentTarget && (null === eV || void 0 === eV || eV(VV))
         }
       }
     }
 
-    function Ba(MM) {
+    function fy(VV) {
       let {
-        text: rM
-      } = MM;
-      return (0, LM.jsx)("span", {
+        text: eV
+      } = VV;
+      return (0, ZV.jsx)("span", {
         className: "StoreRainbowText",
-        children: Array.from(rM).map(((MM, rM) => (0, LM.jsx)("span", {
+        children: Array.from(eV).map(((VV, eV) => (0, ZV.jsx)("span", {
           style: {
-            color: xa[rM % xa.length]
+            color: hy[eV % hy.length]
           },
-          children: MM
-        }, rM)))
+          children: VV
+        }, eV)))
       })
     }
-    const Xa = {
+    const my = {
       recipientOwns: "store:alreadyOwns",
       sharesOwned: "store:sharesOwned",
       recipientSharesOwned: "store:recipientSharesOwned",
@@ -6235,82 +6235,82 @@ export const modules = {
       recipientSubscribed: "store:recipientSubscribed"
     };
 
-    function Ia(MM) {
+    function Ky(VV) {
       let {
-        state: rM,
-        item: iM,
-        price: OM,
-        busy: SM,
-        highlight: nM = !1,
-        onAct: zM,
-        onNeedRecipient: mM,
-        onLogin: HM
-      } = MM;
+        state: eV,
+        item: xV,
+        price: JV,
+        busy: YV,
+        highlight: QV = !1,
+        onAct: wV,
+        onNeedRecipient: vV,
+        onLogin: rV
+      } = VV;
       const {
-        t: hM
-      } = (0, aM.A)(), JM = "superRank" === iM ? kM.k.product.days : null, dM = MM => null === JM ? hM(MM ? "general:gift" : "general:buy") : hM(MM ? "store:giftDays" : "store:buyDays", {
-        days: JM
-      }), yM = (MM, rM) => {
-        const iM = (0, LM.jsxs)(LM.Fragment, {
-          children: [null === MM && (0, LM.jsx)("span", {
+        t: kV
+      } = (0, yV.A)(), bV = "superRank" === xV ? iV.k.product.days : null, EV = VV => null === bV ? kV(VV ? "general:gift" : "general:buy") : kV(VV ? "store:giftDays" : "store:buyDays", {
+        days: bV
+      }), BV = (VV, eV) => {
+        const xV = (0, ZV.jsxs)(ZV.Fragment, {
+          children: [null === VV && (0, ZV.jsx)("span", {
             className: "StoreCtaLabel StoreCtaLabelPending"
-          }), null !== MM && (0, LM.jsx)("span", {
+          }), null !== VV && (0, ZV.jsx)("span", {
             className: "StoreCtaLabel",
-            title: MM,
-            children: MM
+            title: VV,
+            children: VV
           })]
         });
-        return null !== JM ? (0, LM.jsxs)(LM.Fragment, {
-          children: [rM && (0, LM.jsx)("span", {
+        return null !== bV ? (0, ZV.jsxs)(ZV.Fragment, {
+          children: [eV && (0, ZV.jsx)("span", {
             className: "StoreCtaIcon",
-            children: rM
-          }), iM, (0, LM.jsxs)("span", {
+            children: eV
+          }), xV, (0, ZV.jsxs)("span", {
             className: "StoreCtaPrice",
-            children: ["\xb7", (0, LM.jsx)(Ra.b, {
-              amount: OM
+            children: ["\xb7", (0, ZV.jsx)(My.e, {
+              amount: JV
             })]
           })]
-        }) : (0, LM.jsxs)(LM.Fragment, {
-          children: [(0, LM.jsxs)("span", {
+        }) : (0, ZV.jsxs)(ZV.Fragment, {
+          children: [(0, ZV.jsxs)("span", {
             className: "StoreCtaLead",
-            children: [iM, "\xb7"]
-          }), (0, LM.jsxs)("span", {
+            children: [xV, "\xb7"]
+          }), (0, ZV.jsxs)("span", {
             className: "StoreCtaPrice",
-            children: [rM, (0, LM.jsx)(Ra.b, {
-              amount: OM
+            children: [eV, (0, ZV.jsx)(My.e, {
+              amount: JV
             })]
           })]
         })
       };
-      let lM;
-      switch (rM) {
+      let jV;
+      switch (eV) {
         case "pending":
-          lM = (0, LM.jsx)(QM.p, {
+          jV = (0, ZV.jsx)(nV.m, {
             className: "StoreCtaButton",
             disabled: !0,
-            children: yM(null)
+            children: BV(null)
           });
           break;
         case "login":
-          lM = (0, LM.jsx)(QM.p, {
+          jV = (0, ZV.jsx)(nV.m, {
             className: "StoreCtaButton",
-            onClick: HM,
-            children: yM(dM(!1))
+            onClick: rV,
+            children: BV(EV(!1))
           });
           break;
         case "owned":
-          lM = (0, LM.jsx)(QM.i, {
+          jV = (0, ZV.jsx)(nV.j, {
             className: "StoreCtaButton",
             onClick: () => {
-              bM.d.set({
-                openEverythingMenuName: Ur.m.CUSTOMISATION
+              AV.b.set({
+                openEverythingMenuName: te.q.CUSTOMISATION
               })
             },
-            children: (0, LM.jsxs)("span", {
+            children: (0, ZV.jsxs)("span", {
               className: "StoreCtaLabel",
-              children: [(0, LM.jsx)(PM.b, {
+              children: [(0, ZV.jsx)(pV.b, {
                 name: "shirt"
-              }), " ", hM("store:equip")]
+              }), " ", kV("store:equip")]
             })
           });
           break;
@@ -6319,207 +6319,207 @@ export const modules = {
         case "recipientSharesOwned":
         case "subscribed":
         case "recipientSubscribed":
-          lM = (0, LM.jsx)(QM.p, {
+          jV = (0, ZV.jsx)(nV.m, {
             className: "StoreCtaButton",
             disabled: !0,
-            children: (0, LM.jsx)("span", {
+            children: (0, ZV.jsx)("span", {
               className: "StoreCtaLabel",
-              children: hM(Xa[rM])
+              children: kV(my[eV])
             })
           });
           break;
         case "needsRecipient":
         case "lookingUp":
         case "gift":
-          lM = (0, LM.jsx)(QM.p, {
+          jV = (0, ZV.jsx)(nV.m, {
             className: "StoreCtaButton",
-            disabled: "needsRecipient" === rM || null === OM,
-            loading: "lookingUp" === rM || SM,
-            onClick: zM,
+            disabled: "needsRecipient" === eV || null === JV,
+            loading: "lookingUp" === eV || YV,
+            onClick: wV,
             analyticsClick: {
               id: "store.gift",
-              value: iM
+              value: xV
             },
-            children: yM(dM(!0), La.e)
+            children: BV(EV(!0), ny.b)
           });
           break;
         case "buy":
         case "recharge":
-          lM = (0, LM.jsx)(QM.p, {
+          jV = (0, ZV.jsx)(nV.m, {
             className: "StoreCtaButton",
-            loading: SM,
-            disabled: null === OM,
-            onClick: zM,
+            loading: YV,
+            disabled: null === JV,
+            onClick: wV,
             analyticsClick: {
               id: "store.buy",
-              value: iM
+              value: xV
             },
-            children: yM(dM(!1))
+            children: BV(EV(!1))
           })
       }
-      return (0, LM.jsx)("div", {
-        className: jM()("StoreCta", {
-          StoreCtaHighlight: nM,
-          StoreCtaLabelFirst: null !== JM
+      return (0, ZV.jsx)("div", {
+        className: UV()("StoreCta", {
+          StoreCtaHighlight: QV,
+          StoreCtaLabelFirst: null !== bV
         }),
-        onClick: MM => {
-          MM.stopPropagation(), "needsRecipient" === rM && mM()
+        onClick: VV => {
+          VV.stopPropagation(), "needsRecipient" === eV && vV()
         },
-        children: lM
+        children: jV
       })
     }
 
-    function Ka() {
+    function Hy() {
       const {
-        t: MM
-      } = (0, aM.A)();
-      return (0, LM.jsxs)("ul", {
+        t: VV
+      } = (0, yV.A)();
+      return (0, ZV.jsxs)("ul", {
         className: "StorePerks",
-        children: [(0, LM.jsxs)("li", {
-          children: [(0, LM.jsx)(PM.b, {
+        children: [(0, ZV.jsxs)("li", {
+          children: [(0, ZV.jsx)(pV.b, {
             name: "check"
-          }), (0, LM.jsx)(Ba, {
-            text: MM("store:colourfulNames")
+          }), (0, ZV.jsx)(fy, {
+            text: VV("store:colourfulNames")
           })]
-        }), (0, LM.jsxs)("li", {
-          children: [(0, LM.jsx)(PM.b, {
+        }), (0, ZV.jsxs)("li", {
+          children: [(0, ZV.jsx)(pV.b, {
             name: "check"
-          }), MM("store:perkCapes")]
-        }), (0, LM.jsxs)("li", {
-          children: [(0, LM.jsx)(PM.b, {
+          }), VV("store:perkCapes")]
+        }), (0, ZV.jsxs)("li", {
+          children: [(0, ZV.jsx)(pV.b, {
             name: "check"
-          }), MM("store:perkNoAdverts")]
-        }), (0, LM.jsxs)("li", {
-          children: [(0, LM.jsx)(PM.b, {
+          }), VV("store:perkNoAdverts")]
+        }), (0, ZV.jsxs)("li", {
+          children: [(0, ZV.jsx)(pV.b, {
             name: "check"
-          }), MM("store:perkFriends", {
-            count: (0, ir.c)(["super"])
+          }), VV("store:perkFriends", {
+            count: (0, xe.b)(["super"])
           })]
         })]
       })
     }
 
-    function qa(MM) {
+    function uy(VV) {
       let {
-        daysLeft: rM,
-        totalDays: iM,
-        urgent: OM
-      } = MM;
+        daysLeft: eV,
+        totalDays: xV,
+        urgent: JV
+      } = VV;
       const {
-        t: SM
-      } = (0, aM.A)(), PM = iM > 0 ? Math.min(1, Math.max(.03, rM / iM)) : 1;
-      return (0, LM.jsxs)("div", {
-        className: jM()("StoreSuperRankMeterArea", {
-          StoreSuperRankMeterUrgent: OM
+        t: YV
+      } = (0, yV.A)(), pV = xV > 0 ? Math.min(1, Math.max(.03, eV / xV)) : 1;
+      return (0, ZV.jsxs)("div", {
+        className: UV()("StoreSuperRankMeterArea", {
+          StoreSuperRankMeterUrgent: JV
         }),
-        children: [(0, LM.jsx)("span", {
+        children: [(0, ZV.jsx)("span", {
           className: "StoreSuperRankDaysLeft",
-          children: 1 === rM ? SM("store:oneDayLeft") : SM("store:daysLeft", {
-            days: rM
+          children: 1 === eV ? YV("store:oneDayLeft") : YV("store:daysLeft", {
+            days: eV
           })
-        }), (0, LM.jsx)("div", {
+        }), (0, ZV.jsx)("div", {
           className: "StoreSuperRankMeter",
-          children: (0, LM.jsx)("i", {
+          children: (0, ZV.jsx)("i", {
             style: {
-              width: 100 * PM + "%"
+              width: 100 * pV + "%"
             }
           })
         })]
       })
     }
 
-    function Ta(MM) {
-      var rM;
+    function sy(VV) {
+      var eV;
       let {
-        state: iM,
-        urgent: OM,
-        daysLeft: SM,
-        totalDays: nM,
-        recipientHasSuperRank: QM,
-        busy: zM,
-        highlight: mM,
-        onOpen: HM,
-        onAct: hM,
-        onNeedRecipient: JM,
-        onLogin: dM
-      } = MM;
+        state: xV,
+        urgent: JV,
+        daysLeft: YV,
+        totalDays: QV,
+        recipientHasSuperRank: nV,
+        busy: wV,
+        highlight: vV,
+        onOpen: rV,
+        onAct: kV,
+        onNeedRecipient: bV,
+        onLogin: EV
+      } = VV;
       const {
-        t: yM
-      } = (0, aM.A)(), lM = va(iM), {
-        days: EM
-      } = kM.k.product, UM = yM("store:recipientHasSuperRank", {
-        giftDays: EM
-      }), GM = null === (rM = TM("subscribed" === iM)) || void 0 === rM ? void 0 : rM.text;
-      return (0, LM.jsxs)("div", {
-        className: jM()("StoreTile StoreSuperRankTile", {
-          StoreTileGift: lM,
-          StoreSuperRankTileUrgent: "recharge" === iM && OM,
-          StoreSuperRankTileWithChip: QM,
-          StoreSuperRankTileGiftReady: "gift" === iM
+        t: BV
+      } = (0, yV.A)(), jV = ly(xV), {
+        days: qV
+      } = iV.k.product, tV = BV("store:recipientHasSuperRank", {
+        giftDays: qV
+      }), FV = null === (eV = IV("subscribed" === xV)) || void 0 === eV ? void 0 : eV.text;
+      return (0, ZV.jsxs)("div", {
+        className: UV()("StoreTile StoreSuperRankTile", {
+          StoreTileGift: jV,
+          StoreSuperRankTileUrgent: "recharge" === xV && JV,
+          StoreSuperRankTileWithChip: nV,
+          StoreSuperRankTileGiftReady: "gift" === xV
         }),
-        ...Fa(yM("homePage:superRank")),
+        ...Ly(BV("homePage:superRank")),
         "data-store-item": "superRank",
-        onPointerEnter: ka,
-        onFocus: ka,
-        onClick: HM,
-        children: [(0, LM.jsx)("div", {
+        onPointerEnter: gy,
+        onFocus: gy,
+        onClick: rV,
+        children: [(0, ZV.jsx)("div", {
           className: "StoreSuperRankArt",
           style: {
-            backgroundImage: `url(${Ga.e})`
+            backgroundImage: `url(${qy.e})`
           }
-        }), lM && (0, LM.jsx)("div", {
+        }), jV && (0, ZV.jsx)("div", {
           className: "StoreGiftRibbon"
-        }), (0, LM.jsxs)("div", {
+        }), (0, ZV.jsxs)("div", {
           className: "StoreTileContent",
-          children: [QM && (0, LM.jsx)("span", {
+          children: [nV && (0, ZV.jsx)("span", {
             className: "StoreChip StoreChipGift",
-            title: UM,
-            children: UM
-          }), (0, LM.jsxs)("div", {
+            title: tV,
+            children: tV
+          }), (0, ZV.jsxs)("div", {
             className: "StoreTileTitle StoreSuperRankTitle",
-            children: [(0, LM.jsx)(PM.b, {
+            children: [(0, ZV.jsx)(pV.b, {
               name: "bolt"
-            }), " ", yM("homePage:superRank")]
-          }), lM && (0, LM.jsx)("div", {
+            }), " ", BV("homePage:superRank")]
+          }), jV && (0, ZV.jsx)("div", {
             className: "StoreTilePitch",
-            children: yM("store:giftPitch", {
-              days: EM
+            children: BV("store:giftPitch", {
+              days: qV
             })
-          }), "recharge" === iM && (0, LM.jsx)(qa, {
-            daysLeft: SM,
-            totalDays: nM,
-            urgent: OM
-          }), GM && (0, LM.jsx)("div", {
+          }), "recharge" === xV && (0, ZV.jsx)(uy, {
+            daysLeft: YV,
+            totalDays: QV,
+            urgent: JV
+          }), FV && (0, ZV.jsx)("div", {
             className: "StoreSuperRankMeterArea",
-            children: (0, LM.jsx)("span", {
+            children: (0, ZV.jsx)("span", {
               className: "StoreSuperRankDaysLeft",
-              children: GM
+              children: FV
             })
-          }), (0, LM.jsx)(Ka, {}), (0, LM.jsxs)("div", {
+          }), (0, ZV.jsx)(Hy, {}), (0, ZV.jsxs)("div", {
             className: "StoreTileActions",
-            children: [(0, LM.jsx)(Ia, {
-              state: iM,
+            children: [(0, ZV.jsx)(Ky, {
+              state: xV,
               item: "superRank",
-              price: kM.k.price,
-              busy: zM,
-              highlight: mM,
-              onAct: hM,
-              onNeedRecipient: JM,
-              onLogin: dM
-            }), "needsRecipient" === iM && (0, LM.jsx)("span", {
+              price: iV.k.price,
+              busy: wV,
+              highlight: vV,
+              onAct: kV,
+              onNeedRecipient: bV,
+              onLogin: EV
+            }), "needsRecipient" === xV && (0, ZV.jsx)("span", {
               className: "StoreTileNote StoreTileNoteGift",
-              children: yM("store:pickRecipientFirst")
-            }), "recharge" === iM && OM && (0, LM.jsx)("span", {
+              children: BV("store:pickRecipientFirst")
+            }), "recharge" === xV && JV && (0, ZV.jsx)("span", {
               className: "StoreTileNote StoreSuperRankEnding",
-              children: 1 === SM ? yM("store:endsInOneDay") : yM("store:endsInDays", {
-                days: SM
+              children: 1 === YV ? BV("store:endsInOneDay") : BV("store:endsInDays", {
+                days: YV
               })
             })]
           })]
         })]
       })
     }
-    const Va = {
+    const Sy = {
       common: "StorePackTileCommon",
       rare: "StorePackTileRare",
       epic: "StorePackTileEpic",
@@ -6527,418 +6527,418 @@ export const modules = {
       mythic: "StorePackTileMythic"
     };
 
-    function ca(MM) {
-      var rM;
+    function Iy(VV) {
+      var eV;
       let {
-        pack: iM,
-        state: SM,
-        busy: nM,
-        onOpen: QM,
-        onAct: zM,
-        onNeedRecipient: mM,
-        onLogin: HM
-      } = MM;
+        pack: xV,
+        state: YV,
+        busy: QV,
+        onOpen: nV,
+        onAct: wV,
+        onNeedRecipient: vV,
+        onLogin: rV
+      } = VV;
       const {
-        t: hM
-      } = (0, aM.A)(), JM = ia.d[iM], dM = Qa.k[iM], yM = (0, Ga.m)(iM), lM = (0, OM.useRef)(null);
-      (0, Ya.h)(iM, lM);
-      const EM = va(SM),
-        UM = null !== (rM = JM.displayName) && void 0 !== rM ? rM : iM,
-        GM = (0, fa.d)((() => {
-          (0, oa.e)();
-          const MM = (0, Ya.f)(iM);
-          void 0 !== MM && (0, sa.g)((0, Ya.e)(MM))
+        t: kV
+      } = (0, yV.A)(), bV = Vy.d[xV], EV = py.k[xV], BV = (0, qy.n)(xV), jV = (0, JV.useRef)(null);
+      (0, ay.k)(xV, jV);
+      const qV = ly(YV),
+        tV = null !== (eV = bV.displayName) && void 0 !== eV ? eV : xV,
+        FV = (0, Cy.e)((() => {
+          (0, iy.d)();
+          const VV = (0, ay.f)(xV);
+          void 0 !== VV && (0, Wy.i)((0, ay.e)(VV))
         })),
-        [CM] = (0, OM.useState)(Ea.f);
-      return (0, LM.jsxs)("div", {
-        className: jM()("StoreTile StorePackTile", Va[JM.tier], {
-          StorePackTileOwned: "owned" === SM,
-          StorePackTileRecipientOwns: "recipientOwns" === SM,
-          StoreTileGift: EM
+        [TV] = (0, JV.useState)(By.l);
+      return (0, ZV.jsxs)("div", {
+        className: UV()("StoreTile StorePackTile", Sy[bV.tier], {
+          StorePackTileOwned: "owned" === YV,
+          StorePackTileRecipientOwns: "recipientOwns" === YV,
+          StoreTileGift: qV
         }),
-        ...Fa(UM),
-        ref: lM,
-        "data-store-item": iM,
-        onClick: QM,
-        onPointerMove: MM => {
-          "mouse" !== MM.pointerType || 0 === MM.movementX && 0 === MM.movementY || CM || GM.start()
+        ...Ly(tV),
+        ref: jV,
+        "data-store-item": xV,
+        onClick: nV,
+        onPointerMove: VV => {
+          "mouse" !== VV.pointerType || 0 === VV.movementX && 0 === VV.movementY || TV || FV.start()
         },
-        onPointerLeave: GM.cancel,
-        children: [dM && (0, LM.jsx)(dM, {}), (0, LM.jsx)("div", {
+        onPointerLeave: FV.cancel,
+        children: [EV && (0, ZV.jsx)(EV, {}), (0, ZV.jsx)("div", {
           className: "StorePackCharacters",
-          children: yM.map((MM => (0, LM.jsx)("div", {
+          children: BV.map((VV => (0, ZV.jsx)("div", {
             className: "StorePackCharacter",
             style: {
-              backgroundImage: `url(${(0,Ga.g)(MM)})`
+              backgroundImage: `url(${(0,qy.i)(VV)})`
             }
-          }, MM)))
-        }), (0, LM.jsx)("div", {
+          }, VV)))
+        }), (0, ZV.jsx)("div", {
           className: "StoreTileScrim"
-        }), EM && (0, LM.jsx)("div", {
+        }), qV && (0, ZV.jsx)("div", {
           className: "StoreGiftRibbon"
-        }), (0, LM.jsx)(Aa.e, {
-          pack: iM,
-          className: jM()({
-            PackAnimatedBadgeBesideRibbon: EM
+        }), (0, ZV.jsx)(cy.d, {
+          pack: xV,
+          className: UV()({
+            PackAnimatedBadgeBesideRibbon: qV
           })
-        }), (0, LM.jsxs)("div", {
+        }), (0, ZV.jsxs)("div", {
           className: "StoreTileContent",
-          children: [(0, LM.jsx)("div", {
+          children: [(0, ZV.jsx)("div", {
             className: "StoreTileTitle",
-            children: UM
-          }), (0, LM.jsxs)("div", {
+            children: tV
+          }), (0, ZV.jsxs)("div", {
             className: "StoreTileMeta",
-            children: [(0, LM.jsx)(Na.d, {
-              tier: JM.tier
-            }), " \xb7 ", hM("store:itemCount", {
-              count: (0, OS.h)(iM)
-            }), "owned" === SM && (0, LM.jsxs)("span", {
+            children: [(0, ZV.jsx)(oy.e, {
+              tier: bV.tier
+            }), " \xb7 ", kV("store:itemCount", {
+              count: (0, eY.k)(xV)
+            }), "owned" === YV && (0, ZV.jsxs)("span", {
               className: "StoreTileOwned",
-              children: [" \xb7 ", (0, LM.jsx)(PM.b, {
+              children: [" \xb7 ", (0, ZV.jsx)(pV.b, {
                 name: "check"
-              }), " ", hM("general:owned")]
+              }), " ", kV("general:owned")]
             })]
-          }), (0, LM.jsx)(Ia, {
-            state: SM,
-            item: iM,
-            price: (0, kM.e)(iM),
-            busy: nM,
-            onAct: zM,
-            onNeedRecipient: mM,
-            onLogin: HM
+          }), (0, ZV.jsx)(Ky, {
+            state: YV,
+            item: xV,
+            price: (0, iV.e)(xV),
+            busy: QV,
+            onAct: wV,
+            onNeedRecipient: vV,
+            onLogin: rV
           })]
         })]
       })
     }
-    var MP = iM(3449),
-      rP = iM(1636),
-      iP = iM(1530),
-      OP = iM(3961);
+    var dy = xV(3454),
+      Oy = xV(1646),
+      Vp = xV(1565),
+      ep = xV(3992);
 
-    function SP() {
-      return (0, LM.jsx)("span", {
+    function xp() {
+      return (0, ZV.jsx)("span", {
         className: "NewBadge",
         children: "NEW"
       })
     }
-    var jP = iM(1424),
-      aP = iM(1645),
-      PP = iM(35051);
+    var Jp = xV(1435),
+      Yp = xV(1656),
+      Up = xV(35337);
 
-    function nP(MM) {
+    function yp(VV) {
       let {
-        character: rM,
-        drawn: iM,
-        onDrawn: SM
-      } = MM;
-      const aM = (0, OM.useRef)(null),
-        PM = (0, PP.h)(rM);
-      return (0, LM.jsx)("div", {
-        className: jM()("StoreCharacterLive", {
-          StoreCharacterLiveDrawn: iM
+        character: eV,
+        drawn: xV,
+        onDrawn: YV
+      } = VV;
+      const yV = (0, JV.useRef)(null),
+        pV = (0, Up.f)(eV);
+      return (0, ZV.jsx)("div", {
+        className: UV()("StoreCharacterLive", {
+          StoreCharacterLiveDrawn: xV
         }),
-        children: (0, LM.jsx)(OM.Suspense, {
+        children: (0, ZV.jsx)(JV.Suspense, {
           fallback: null,
-          children: (0, LM.jsx)(oa.c, {
-            ref: aM,
+          children: (0, ZV.jsx)(iy.c, {
+            ref: yV,
             framing: "store",
-            turntableFromYaw: iM ? PM.yaw : null,
+            turntableFromYaw: xV ? pV.yaw : null,
             onReady: () => {
-              var MM, iM;
-              null === (MM = aM.current) || void 0 === MM || MM.setOrbit(PM), null === (iM = aM.current) || void 0 === iM || iM.setAllCosmetics(aP.d[rM].cosmetics)
+              var VV, xV;
+              null === (VV = yV.current) || void 0 === VV || VV.setOrbit(pV), null === (xV = yV.current) || void 0 === xV || xV.setAllCosmetics(Yp.c[eV].cosmetics)
             },
-            onDrawn: SM
+            onDrawn: YV
           })
         })
       })
     }
-    const QP = {
+    const pp = {
         common: "StoreCharacterCardCommon",
         rare: "StoreCharacterCardRare",
         epic: "StoreCharacterCardEpic",
         legendary: "StoreCharacterCardLegendary",
         mythic: "StoreCharacterCardMythic"
       },
-      zP = new Set(["wildSpirits"]);
+      Qp = new Set(["wildSpirits"]);
 
-    function LP(MM) {
-      var rM;
+    function np(VV) {
+      var eV;
       let {
-        tile: iM,
-        design: SM,
-        canGoLive: nM,
-        live: QM,
-        busy: zM,
-        highlight: mM,
-        onLiveStart: HM,
-        onLiveEnd: hM,
-        onOpen: JM,
-        onAct: dM,
-        onNeedRecipient: yM,
-        onLogin: lM
-      } = MM;
+        tile: xV,
+        design: YV,
+        canGoLive: QV,
+        live: nV,
+        busy: wV,
+        highlight: vV,
+        onLiveStart: rV,
+        onLiveEnd: kV,
+        onOpen: bV,
+        onAct: EV,
+        onNeedRecipient: BV,
+        onLogin: jV
+      } = VV;
       const {
-        t: EM
-      } = (0, aM.A)(), {
-        pack: UM,
-        state: GM
-      } = iM, CM = ia.d[UM], eM = (0, ia.h)(UM), bM = (0, Ga.j)(UM), wM = Qa.k[bM], tM = zP.has(bM), {
-        tier: gM
-      } = CM, uM = "legendary" === gM || "mythic" === gM, RM = (0, OM.useRef)(null);
-      (0, jP.e)(RM, "epic" === gM || uM || tM);
-      const [pM, sM] = (0, OM.useState)(!1);
-      return !QM && pM && sM(!1), (0, LM.jsxs)("div", {
-        ref: RM,
-        className: jM()("StoreCharacterCard", `StoreCharacterCard${SM}`, QP[gM], {
-          StoreCharacterCardOwned: "owned" === GM || "recipientOwns" === GM,
-          StoreCharacterCardGift: va(GM),
-          StoreCharacterCardItem: void 0 === eM
+        t: qV
+      } = (0, yV.A)(), {
+        pack: tV,
+        state: FV
+      } = xV, TV = Vy.d[tV], PV = (0, Vy.f)(tV), AV = (0, qy.m)(tV), NV = py.k[AV], XV = Qp.has(AV), {
+        tier: MV
+      } = TV, zV = "legendary" === MV || "mythic" === MV, GV = (0, JV.useRef)(null);
+      (0, Jp.e)(GV, "epic" === MV || zV || XV);
+      const [WV, gV] = (0, JV.useState)(!1);
+      return !nV && WV && gV(!1), (0, ZV.jsxs)("div", {
+        ref: GV,
+        className: UV()("StoreCharacterCard", `StoreCharacterCard${YV}`, pp[MV], {
+          StoreCharacterCardOwned: "owned" === FV || "recipientOwns" === FV,
+          StoreCharacterCardGift: ly(FV),
+          StoreCharacterCardItem: void 0 === PV
         }),
-        onPointerMove: MM => {
-          "mouse" !== MM.pointerType || 0 === MM.movementX && 0 === MM.movementY || !nM || QM || void 0 === eM || HM()
+        onPointerMove: VV => {
+          "mouse" !== VV.pointerType || 0 === VV.movementX && 0 === VV.movementY || !QV || nV || void 0 === PV || rV()
         },
-        onPointerLeave: hM,
-        children: [(0, LM.jsx)("div", {
+        onPointerLeave: kV,
+        children: [(0, ZV.jsx)("div", {
           className: "StoreCharacterBackdrop",
-          children: wM && (0, LM.jsx)(wM, {
+          children: NV && (0, ZV.jsx)(NV, {
             simple: !0
           })
-        }), uM && (0, LM.jsx)("div", {
+        }), zV && (0, ZV.jsx)("div", {
           className: "StoreCharacterRays"
-        }), (0, LM.jsxs)(WM.LinkPreserveSearch, {
+        }), (0, ZV.jsxs)(RV.LinkPreserveSearch, {
           className: "StoreCharacterLink",
-          to: (0, rP.f)({
+          to: (0, Oy.d)({
             kind: "pack",
-            pack: UM
+            pack: tV
           }),
-          "data-store-item": UM,
-          onClick: MM => {
-            (0, iP.d)(MM) && (MM.preventDefault(), JM())
+          "data-store-item": tV,
+          onClick: VV => {
+            (0, Vp.e)(VV) && (VV.preventDefault(), bV())
           },
-          children: [(0, LM.jsxs)("div", {
+          children: [(0, ZV.jsxs)("div", {
             className: "StoreCharacterStage",
-            children: [(0, LM.jsx)("div", {
+            children: [(0, ZV.jsx)("div", {
               className: "StoreCharacterHalo"
-            }), (0, LM.jsx)("div", {
-              className: jM()("StoreCharacterFigure", {
-                StoreCharacterFigureCovered: pM
+            }), (0, ZV.jsx)("div", {
+              className: UV()("StoreCharacterFigure", {
+                StoreCharacterFigureCovered: WV
               }),
               style: {
-                backgroundImage: `url(${(0,Ga.q)(UM)})`
+                backgroundImage: `url(${(0,qy.v)(tV)})`
               }
-            }), QM && void 0 !== eM && (0, LM.jsx)(nP, {
-              character: eM,
-              drawn: pM,
+            }), nV && void 0 !== PV && (0, ZV.jsx)(yp, {
+              character: PV,
+              drawn: WV,
               onDrawn: () => {
-                sM(!0)
+                gV(!0)
               }
             })]
-          }), (0, LM.jsx)("div", {
+          }), (0, ZV.jsx)("div", {
             className: "StoreCharacterName",
-            children: null !== (rM = CM.displayName) && void 0 !== rM ? rM : UM
-          }), (0, LM.jsx)(Na.d, {
-            tier: gM,
+            children: null !== (eV = TV.displayName) && void 0 !== eV ? eV : tV
+          }), (0, ZV.jsx)(oy.e, {
+            tier: MV,
             className: "StoreCharacterTier"
           })]
-        }), (0, LM.jsx)("div", {
+        }), (0, ZV.jsx)("div", {
           className: "StoreCharacterScrim"
-        }), tM && (0, LM.jsx)("span", {
+        }), XV && (0, ZV.jsx)("span", {
           className: "StoreCharacterNew",
-          children: (0, LM.jsx)(SP, {})
-        }), (0, LM.jsx)(Aa.e, {
-          pack: UM,
+          children: (0, ZV.jsx)(xp, {})
+        }), (0, ZV.jsx)(cy.d, {
+          pack: tV,
           iconOnly: !0,
-          className: jM()({
-            PackAnimatedBadgeBelowOwned: "owned" === GM
+          className: UV()({
+            PackAnimatedBadgeBelowOwned: "owned" === FV
           })
-        }), "owned" === GM && (0, LM.jsx)("span", {
+        }), "owned" === FV && (0, ZV.jsx)("span", {
           className: "StoreCharacterOwned",
-          title: EM("general:owned"),
-          "aria-label": EM("general:owned"),
-          children: (0, LM.jsx)(PM.b, {
+          title: qV("general:owned"),
+          "aria-label": qV("general:owned"),
+          children: (0, ZV.jsx)(pV.b, {
             name: "check"
           })
-        }), (0, LM.jsx)("div", {
+        }), (0, ZV.jsx)("div", {
           className: "StoreCharacterPlate",
-          children: (0, LM.jsx)(Ia, {
-            state: GM,
-            item: UM,
-            price: (0, kM.e)(UM),
-            busy: zM,
-            highlight: mM,
-            onAct: dM,
-            onNeedRecipient: yM,
-            onLogin: lM
+          children: (0, ZV.jsx)(Ky, {
+            state: FV,
+            item: tV,
+            price: (0, iV.e)(tV),
+            busy: wV,
+            highlight: vV,
+            onAct: EV,
+            onNeedRecipient: BV,
+            onLogin: jV
           })
         })]
       })
     }
 
-    function mP(MM) {
+    function wp(VV) {
       let {
-        tiles: rM,
-        busy: iM,
-        highlightItem: SM,
-        onOpen: jM,
-        onAct: aM,
-        onNeedRecipient: PM,
-        onLogin: nM
-      } = MM;
-      const QM = (0, OP.n)("storeCharacterCardFoil"),
-        zM = (0, OP.n)("storeCharacterCardSpotlight"),
-        mM = QM ? "Foil" : zM ? "Spotlight" : "Showcase",
-        [HM] = (0, OM.useState)(Ea.f),
-        [hM, JM] = (0, OM.useState)(null);
-      return (0, LM.jsx)("div", {
+        tiles: eV,
+        busy: xV,
+        highlightItem: YV,
+        onOpen: UV,
+        onAct: yV,
+        onNeedRecipient: pV,
+        onLogin: QV
+      } = VV;
+      const nV = (0, ep.o)("storeCharacterCardFoil"),
+        wV = (0, ep.o)("storeCharacterCardSpotlight"),
+        vV = nV ? "Foil" : wV ? "Spotlight" : "Showcase",
+        [rV] = (0, JV.useState)(By.l),
+        [kV, bV] = (0, JV.useState)(null);
+      return (0, ZV.jsx)("div", {
         className: "StoreCharacterGrid",
-        children: rM.map((MM => (0, LM.jsx)(LP, {
-          tile: MM,
-          design: mM,
-          canGoLive: !HM,
-          live: hM === MM.pack,
-          busy: iM,
-          highlight: SM === MM.pack,
+        children: eV.map((VV => (0, ZV.jsx)(np, {
+          tile: VV,
+          design: vV,
+          canGoLive: !rV,
+          live: kV === VV.pack,
+          busy: xV,
+          highlight: YV === VV.pack,
           onLiveStart: () => {
-            JM(MM.pack)
+            bV(VV.pack)
           },
           onLiveEnd: () => {
-            JM((rM => rM === MM.pack ? null : rM))
+            bV((eV => eV === VV.pack ? null : eV))
           },
           onOpen: () => {
-            jM(MM.pack)
+            UV(VV.pack)
           },
           onAct: () => {
-            aM(MM.pack)
+            yV(VV.pack)
           },
-          onNeedRecipient: PM,
+          onNeedRecipient: pV,
           onLogin: () => {
-            nM(MM.pack)
+            QV(VV.pack)
           }
-        }, MM.pack)))
+        }, VV.pack)))
       })
     }
-    var HP = iM(35064);
+    var Zp = xV(35346);
 
-    function hP(MM) {
+    function vp(VV) {
       let {
-        title: rM
-      } = MM;
-      return (0, LM.jsx)("h2", {
+        title: eV
+      } = VV;
+      return (0, ZV.jsx)("h2", {
         className: "StoreSectionDivider",
-        children: (0, LM.jsx)("span", {
+        children: (0, ZV.jsx)("span", {
           className: "StoreSectionDividerTitle",
-          children: rM
+          children: eV
         })
       })
     }
 
-    function JP(MM) {
+    function rp(VV) {
       let {
-        mountAtOnce: rM,
-        children: iM
-      } = MM;
-      const SM = (0, OM.useRef)(null),
-        [jM, aM] = (0, OM.useState)(rM),
-        PM = (0, HP.d)();
-      return (0, OM.useLayoutEffect)((() => {
-        const MM = SM.current;
-        MM && MM.getBoundingClientRect().top < MM.parentElement.getBoundingClientRect().bottom && aM(!0)
-      }), []), jM || PM ? (0, LM.jsx)(LM.Fragment, {
-        children: iM
-      }) : (0, LM.jsx)("div", {
-        ref: SM
+        mountAtOnce: eV,
+        children: xV
+      } = VV;
+      const YV = (0, JV.useRef)(null),
+        [UV, yV] = (0, JV.useState)(eV),
+        pV = (0, Zp.e)();
+      return (0, JV.useLayoutEffect)((() => {
+        const VV = YV.current;
+        VV && VV.getBoundingClientRect().top < VV.parentElement.getBoundingClientRect().bottom && yV(!0)
+      }), []), UV || pV ? (0, ZV.jsx)(ZV.Fragment, {
+        children: xV
+      }) : (0, ZV.jsx)("div", {
+        ref: YV
       })
     }
 
-    function dP(MM) {
+    function kp(VV) {
       let {
-        layout: rM,
-        mountAtOnce: iM,
-        bundleGift: OM,
-        superRankTotalDays: SM,
-        busy: jM,
-        highlightItem: PM,
-        onOpen: nM,
-        onAct: QM,
-        onNeedRecipient: zM,
-        onLogin: mM,
-        dailyDropTile: HM,
-        dealBanner: hM
-      } = MM;
+        layout: eV,
+        mountAtOnce: xV,
+        bundleGift: JV,
+        superRankTotalDays: YV,
+        busy: UV,
+        highlightItem: pV,
+        onOpen: QV,
+        onAct: nV,
+        onNeedRecipient: wV,
+        onLogin: vV,
+        dailyDropTile: rV,
+        dealBanner: kV
+      } = VV;
       const {
-        t: JM
-      } = (0, aM.A)(), dM = rM.packs.filter((MM => void 0 === (0, ia.h)(MM.pack) && !(0, ia.p)(MM.pack))), yM = rM.packs.filter((MM => void 0 !== (0, ia.h)(MM.pack))), lM = rM.packs.filter((MM => (0, ia.p)(MM.pack)));
-      return (0, LM.jsxs)(LM.Fragment, {
-        children: [(0, LM.jsx)(MP.b, {
+        t: bV
+      } = (0, yV.A)(), EV = eV.packs.filter((VV => void 0 === (0, Vy.f)(VV.pack) && !(0, Vy.k)(VV.pack))), BV = eV.packs.filter((VV => void 0 !== (0, Vy.f)(VV.pack))), jV = eV.packs.filter((VV => (0, Vy.k)(VV.pack)));
+      return (0, ZV.jsxs)(ZV.Fragment, {
+        children: [(0, ZV.jsx)(dy.d, {
           className: "StoreSuperGems",
-          gift: OM,
-          highlightSku: PM,
-          leadingTile: HM,
-          afterLeadingTile: hM
-        }), (0, LM.jsx)(hP, {
-          title: JM("store:rank")
-        }), (0, LM.jsx)(Ta, {
-          state: rM.superRank.state,
-          urgent: rM.superRank.urgent,
-          daysLeft: rM.superRankDaysLeft,
-          totalDays: SM,
-          recipientHasSuperRank: rM.recipientHasSuperRank,
-          busy: jM,
-          highlight: "superRank" === PM,
+          gift: JV,
+          highlightSku: pV,
+          leadingTile: rV,
+          afterLeadingTile: kV
+        }), (0, ZV.jsx)(vp, {
+          title: bV("store:rank")
+        }), (0, ZV.jsx)(sy, {
+          state: eV.superRank.state,
+          urgent: eV.superRank.urgent,
+          daysLeft: eV.superRankDaysLeft,
+          totalDays: YV,
+          recipientHasSuperRank: eV.recipientHasSuperRank,
+          busy: UV,
+          highlight: "superRank" === pV,
           onOpen: () => {
-            nM("superRank")
+            QV("superRank")
           },
           onAct: () => {
-            QM("superRank")
+            nV("superRank")
           },
-          onNeedRecipient: zM,
+          onNeedRecipient: wV,
           onLogin: () => {
-            mM("superRank")
+            vV("superRank")
           }
-        }), (0, LM.jsxs)(JP, {
-          mountAtOnce: iM,
-          children: [(0, LM.jsx)(hP, {
-            title: JM("store:bundles")
-          }), (0, LM.jsx)("div", {
+        }), (0, ZV.jsxs)(rp, {
+          mountAtOnce: xV,
+          children: [(0, ZV.jsx)(vp, {
+            title: bV("store:bundles")
+          }), (0, ZV.jsx)("div", {
             className: "StorePackGrid",
-            children: dM.map((MM => (0, LM.jsx)(ca, {
-              pack: MM.pack,
-              state: MM.state,
-              busy: jM,
+            children: EV.map((VV => (0, ZV.jsx)(Iy, {
+              pack: VV.pack,
+              state: VV.state,
+              busy: UV,
               onOpen: () => {
-                nM(MM.pack)
+                QV(VV.pack)
               },
               onAct: () => {
-                QM(MM.pack)
+                nV(VV.pack)
               },
-              onNeedRecipient: zM,
+              onNeedRecipient: wV,
               onLogin: () => {
-                mM(MM.pack)
+                vV(VV.pack)
               }
-            }, MM.pack)))
-          }), (0, LM.jsxs)(JP, {
-            mountAtOnce: iM,
-            children: [(0, LM.jsx)(hP, {
-              title: JM("store:characters")
-            }), (0, LM.jsx)(mP, {
-              tiles: yM,
-              busy: jM,
-              highlightItem: PM,
-              onOpen: nM,
-              onAct: QM,
-              onNeedRecipient: zM,
-              onLogin: mM
-            }), lM.length > 0 && (0, LM.jsxs)(LM.Fragment, {
-              children: [(0, LM.jsx)(hP, {
-                title: JM("store:premiumItems")
-              }), (0, LM.jsx)(mP, {
-                tiles: lM,
-                busy: jM,
-                highlightItem: PM,
-                onOpen: nM,
-                onAct: QM,
-                onNeedRecipient: zM,
-                onLogin: mM
+            }, VV.pack)))
+          }), (0, ZV.jsxs)(rp, {
+            mountAtOnce: xV,
+            children: [(0, ZV.jsx)(vp, {
+              title: bV("store:characters")
+            }), (0, ZV.jsx)(wp, {
+              tiles: BV,
+              busy: UV,
+              highlightItem: pV,
+              onOpen: QV,
+              onAct: nV,
+              onNeedRecipient: wV,
+              onLogin: vV
+            }), jV.length > 0 && (0, ZV.jsxs)(ZV.Fragment, {
+              children: [(0, ZV.jsx)(vp, {
+                title: bV("store:premiumItems")
+              }), (0, ZV.jsx)(wp, {
+                tiles: jV,
+                busy: UV,
+                highlightItem: pV,
+                onOpen: QV,
+                onAct: nV,
+                onNeedRecipient: wV,
+                onLogin: vV
               })]
             })]
           })]
@@ -6946,512 +6946,512 @@ export const modules = {
       })
     }
 
-    function yP(MM) {
+    function bp(VV) {
       let {
-        state: rM,
-        mode: iM,
-        giftName: OM,
-        busy: SM,
-        highlight: jM,
-        purchaseError: PM,
-        onBack: nM,
-        onChooseRecipient: zM,
-        onAct: mM,
-        onLogin: HM
-      } = MM;
+        state: eV,
+        mode: xV,
+        giftName: JV,
+        busy: YV,
+        highlight: UV,
+        purchaseError: pV,
+        onBack: QV,
+        onChooseRecipient: wV,
+        onAct: vV,
+        onLogin: rV
+      } = VV;
       const {
-        t: hM
-      } = (0, aM.A)(), JM = TM("gift" !== iM);
-      return (0, LM.jsx)(Za, {
-        onBack: nM,
-        recipient: "gift" === iM && (0, LM.jsxs)(LM.Fragment, {
-          children: [OM && (0, LM.jsxs)("span", {
+        t: kV
+      } = (0, yV.A)(), bV = IV("gift" !== xV);
+      return (0, ZV.jsx)(Dy, {
+        onBack: QV,
+        recipient: "gift" === xV && (0, ZV.jsxs)(ZV.Fragment, {
+          children: [JV && (0, ZV.jsxs)("span", {
             className: "StoreDetailRecipient",
-            title: hM("store:giftFor", {
-              name: OM
+            title: kV("store:giftFor", {
+              name: JV
             }),
-            children: [La.e, " ", hM("store:giftFor", {
-              name: OM
+            children: [ny.b, " ", kV("store:giftFor", {
+              name: JV
             })]
-          }), !OM && (0, LM.jsxs)("div", {
-            ...(0, QM.fb)(),
+          }), !JV && (0, ZV.jsxs)("div", {
+            ...(0, nV.V)(),
             className: "StoreDetailRecipient StoreDetailRecipientChoose",
-            onClick: zM,
-            children: [La.e, " ", hM("store:chooseRecipient")]
+            onClick: wV,
+            children: [ny.b, " ", kV("store:chooseRecipient")]
           })]
         }),
-        cta: (0, LM.jsx)(Ia, {
-          state: rM,
+        cta: (0, ZV.jsx)(Ky, {
+          state: eV,
           item: "superRank",
-          price: kM.k.price,
-          busy: SM,
-          highlight: jM,
-          onAct: mM,
-          onNeedRecipient: zM,
-          onLogin: HM
+          price: iV.k.price,
+          busy: YV,
+          highlight: UV,
+          onAct: vV,
+          onNeedRecipient: wV,
+          onLogin: rV
         }),
-        afterCta: (0, LM.jsxs)(LM.Fragment, {
-          children: [JM && (0, LM.jsx)("span", {
+        afterCta: (0, ZV.jsxs)(ZV.Fragment, {
+          children: [bV && (0, ZV.jsx)("span", {
             className: "StoreTileNote",
-            children: JM.text
-          }), (null === JM || void 0 === JM ? void 0 : JM.manageUrl) && (0, LM.jsx)("a", {
+            children: bV.text
+          }), (null === bV || void 0 === bV ? void 0 : bV.manageUrl) && (0, ZV.jsx)("a", {
             className: "StoreTileNote StoreManageSubscription",
-            href: JM.manageUrl,
+            href: bV.manageUrl,
             target: "_blank",
             rel: "noreferrer",
-            children: hM("payments:manageSubscription")
-          }), PM && (0, LM.jsx)("span", {
+            children: kV("payments:manageSubscription")
+          }), pV && (0, ZV.jsx)("span", {
             className: "StoreTileNote StoreTileNoteError",
-            children: hM(PM)
+            children: kV(pV)
           })]
         })
       })
     }
-    var lP = iM(125);
-    const EP = lP.k("kind", [lP.F({
-      kind: lP.s("refused"),
-      heldTierId: lP._(),
-      until: lP.C()
-    }), lP.F({
-      kind: lP.s("refund"),
-      tierId: lP._(),
-      refundedMs: lP.C(),
-      forfeitedMs: lP.C(),
-      premiumCurrency: lP.C()
-    }), lP.F({
-      kind: lP.s("none")
+    var Ep = xV(146);
+    const Bp = Ep.n("kind", [Ep.L({
+      kind: Ep.u("refused"),
+      heldTierId: Ep.ib(),
+      until: Ep.I()
+    }), Ep.L({
+      kind: Ep.u("refund"),
+      tierId: Ep.ib(),
+      refundedMs: Ep.I(),
+      forfeitedMs: Ep.I(),
+      premiumCurrency: Ep.I()
+    }), Ep.L({
+      kind: Ep.u("none")
     })]);
-    async function UP(MM) {
-      const rM = await (0, uM.postJsonWithMetricsCookiesAndJsonResponse)(`${lr.clientSideServerUrls.indexUrl}/index/ranks/subscribe-preview`, {
-        productId: MM
+    async function jp(VV) {
+      const eV = await (0, zV.postJsonWithMetricsCookiesAndJsonResponse)(`${je.clientSideServerUrls.indexUrl}/index/ranks/subscribe-preview`, {
+        productId: VV
       }, {
         retries: 1
       });
-      return EP.parse(rM)
+      return Bp.parse(eV)
     }
-    var GP = iM(3411),
-      CP = iM(3452);
+    var qp = xV(3412),
+      tp = xV(3461);
 
-    function eP(MM, rM) {
-      const iM = Math.max(1, Math.round(rM / fM.i));
-      return [1 === iM ? `${MM}OneDay` : MM, {
-        days: iM.toLocaleString()
+    function Fp(VV, eV) {
+      const xV = Math.max(1, Math.round(eV / oV.e));
+      return [1 === xV ? `${VV}OneDay` : VV, {
+        days: xV.toLocaleString()
       }]
     }
 
-    function bP(MM) {
+    function Tp(VV) {
       let {
-        price: rM
-      } = MM;
+        price: eV
+      } = VV;
       const {
-        t: iM
-      } = (0, aM.A)();
-      return (0, LM.jsxs)("div", {
+        t: xV
+      } = (0, yV.A)();
+      return (0, ZV.jsxs)("div", {
         className: "StoreSubscriptionTerms",
-        children: [(0, LM.jsx)(Ka, {}), (0, LM.jsx)("div", {
+        children: [(0, ZV.jsx)(Hy, {}), (0, ZV.jsx)("div", {
           className: "SmallTextLight",
-          children: iM("payments:subscriptionRenewsMonthly", {
-            price: rM
+          children: xV("payments:subscriptionRenewsMonthly", {
+            price: eV
           })
-        }), (0, LM.jsxs)("div", {
+        }), (0, ZV.jsxs)("div", {
           className: "StoreSubscriptionTermsLinks SmallTextLight",
-          children: [(0, LM.jsx)("a", {
+          children: [(0, ZV.jsx)("a", {
             href: "/terms-of-service",
             target: "_blank",
             rel: "noreferrer",
-            children: iM("homePage:termsOfService")
-          }), (0, LM.jsx)("a", {
+            children: xV("homePage:termsOfService")
+          }), (0, ZV.jsx)("a", {
             href: "/privacy-policy",
             target: "_blank",
             rel: "noreferrer",
-            children: iM("homePage:privacyPolicy")
+            children: xV("homePage:privacyPolicy")
           })]
         })]
       })
     }
 
-    function wP() {
-      const MM = (0, NM.usePurchasesAllowed)();
-      return "true" === new URLSearchParams(window.location.search).get("tempSubscription") && MM && (0, NM.subscriptionsSold)() ? (0, LM.jsx)(tP, {}) : null
+    function Pp() {
+      const VV = (0, hV.usePurchasesAllowed)();
+      return "true" === new URLSearchParams(window.location.search).get("tempSubscription") && VV && (0, hV.subscriptionsSold)() ? (0, ZV.jsx)(Ap, {}) : null
     }
 
-    function tP() {
+    function Ap() {
       const {
-        t: MM
-      } = (0, aM.A)(), {
-        userContext: rM
-      } = (0, hM.b)(), {
-        purchaseUnderWay: iM,
-        notice: SM,
-        subscribe: jM
-      } = (0, GP.d)(), [PM, nM] = (0, OM.useState)(null), [zM, mM] = (0, OM.useState)(0), [HM, JM] = (0, OM.useState)(!1), dM = (0, OM.useRef)(!0), lM = rM !== uM.NULL_USER_CONTEXT, EM = null !== PM && PM.loadedFor === rM ? PM.offer : null, UM = null === SM || void 0 === SM ? void 0 : SM.pendingIntentId, GM = (0, OM.useRef)(UM);
+        t: VV
+      } = (0, yV.A)(), {
+        userContext: eV
+      } = (0, kV.d)(), {
+        purchaseUnderWay: xV,
+        notice: YV,
+        subscribe: UV
+      } = (0, qp.d)(), [pV, QV] = (0, JV.useState)(null), [wV, vV] = (0, JV.useState)(0), [rV, bV] = (0, JV.useState)(!1), EV = (0, JV.useRef)(!0), jV = eV !== zV.NULL_USER_CONTEXT, qV = null !== pV && pV.loadedFor === eV ? pV.offer : null, tV = null === YV || void 0 === YV ? void 0 : YV.pendingIntentId, FV = (0, JV.useRef)(tV);
 
-      function CM() {
-        mM((MM => MM + 1))
+      function TV() {
+        vV((VV => VV + 1))
       }
-      async function eM(MM) {
-        JM(!1), await jM(MM), dM.current && CM()
+      async function PV(VV) {
+        bV(!1), await UV(VV), EV.current && TV()
       }
-      if ((0, OM.useEffect)((() => (dM.current = !0, () => {
-          dM.current = !1
-        })), []), (0, OM.useEffect)((() => {
-          void 0 !== GM.current && void 0 === UM && CM(), GM.current = UM
-        }), [UM]), (0, OM.useEffect)((() => {
-          if (!lM) return;
-          let MM = !1;
-          return JM(!1), async function() {
+      if ((0, JV.useEffect)((() => (EV.current = !0, () => {
+          EV.current = !1
+        })), []), (0, JV.useEffect)((() => {
+          void 0 !== FV.current && void 0 === tV && TV(), FV.current = tV
+        }), [tV]), (0, JV.useEffect)((() => {
+          if (!jV) return;
+          let VV = !1;
+          return bV(!1), async function() {
             const {
-              offering: MM
-            } = await (0, KM.getBillingClient)().getOfferings("superRankPage"), rM = null === MM || void 0 === MM ? void 0 : MM.packages.find(Oa.isPricedPackage);
-            return void 0 === rM ? {
+              offering: VV
+            } = await (0, sV.getBillingClient)().getOfferings("superRankPage"), eV = null === VV || void 0 === VV ? void 0 : VV.packages.find(ey.isPricedPackage);
+            return void 0 === eV ? {
               kind: "unavailable"
             } : {
               kind: "loaded",
-              pkg: rM,
-              preview: await UP(rM.productId)
+              pkg: eV,
+              preview: await jp(eV.productId)
             }
-          }().catch((MM => (console.error("Billing: loading the Super Rank subscription or its preview failed:", MM), {
+          }().catch((VV => (console.error("Billing: loading the Super Rank subscription or its preview failed:", VV), {
             kind: "loadFailed"
-          }))).then((iM => {
-            MM || nM((MM => "loadFailed" === iM.kind && (null === MM || void 0 === MM ? void 0 : MM.loadedFor) === rM ? MM : {
-              loadedFor: rM,
-              offer: iM
+          }))).then((xV => {
+            VV || QV((VV => "loadFailed" === xV.kind && (null === VV || void 0 === VV ? void 0 : VV.loadedFor) === eV ? VV : {
+              loadedFor: eV,
+              offer: xV
             }))
           })), () => {
-            MM = !0
+            VV = !0
           }
-        }), [rM, lM, zM]), null === EM) return null;
-      if ("loaded" !== EM.kind) return (0, LM.jsx)(CP.i, {
+        }), [eV, jV, wV]), null === qV) return null;
+      if ("loaded" !== qV.kind) return (0, ZV.jsx)(tp.i, {
         notice: {
           kind: "error",
-          key: "unavailable" === EM.kind ? "payments:subscriptionUnavailable" : "payments:subscriptionLoadFailed"
+          key: "unavailable" === qV.kind ? "payments:subscriptionUnavailable" : "payments:subscriptionLoadFailed"
         },
         className: "StoreTempSubscribe SmallTextBold"
       });
       const {
-        pkg: bM,
-        preview: wM
-      } = EM;
-      if ("refused" === wM.kind) return (0, LM.jsx)(CP.i, {
+        pkg: AV,
+        preview: NV
+      } = qV;
+      if ("refused" === NV.kind) return (0, ZV.jsx)(tp.i, {
         notice: {
           kind: "error",
           key: "payments:subscribeRefusedGemRank",
           values: {
-            date: new Date(wM.until).toLocaleDateString()
+            date: new Date(NV.until).toLocaleDateString()
           }
         },
         className: "StoreTempSubscribe SmallTextBold"
       });
-      const tM = (0, MP.c)(bM),
-        gM = (0, yM.isMobileApp)() && (0, LM.jsx)(bP, {
-          price: tM
+      const XV = (0, dy.e)(AV),
+        MV = (0, BV.isMobileApp)() && (0, ZV.jsx)(Tp, {
+          price: XV
         });
-      if (HM && "refund" === wM.kind) {
+      if (rV && "refund" === NV.kind) {
         const {
-          refundedMs: rM,
-          forfeitedMs: OM,
-          premiumCurrency: SM
-        } = wM, jM = OM + (0 === SM ? rM : 0), [aM, PM] = eP("payments:subscribeRefundsGemRank", rM), [nM, zM] = eP("payments:subscribeForfeitsGemRank", jM);
-        return (0, LM.jsxs)("div", {
+          refundedMs: eV,
+          forfeitedMs: JV,
+          premiumCurrency: YV
+        } = NV, UV = JV + (0 === YV ? eV : 0), [yV, pV] = Fp("payments:subscribeRefundsGemRank", eV), [QV, wV] = Fp("payments:subscribeForfeitsGemRank", UV);
+        return (0, ZV.jsxs)("div", {
           className: "StoreTempSubscribe SmallTextBold",
-          children: [(0, LM.jsx)("div", {
-            children: MM("payments:subscribeEndsGemRank")
-          }), SM > 0 && (0, LM.jsx)("div", {
-            children: MM(aM, {
-              ...PM,
-              amount: SM.toLocaleString()
+          children: [(0, ZV.jsx)("div", {
+            children: VV("payments:subscribeEndsGemRank")
+          }), YV > 0 && (0, ZV.jsx)("div", {
+            children: VV(yV, {
+              ...pV,
+              amount: YV.toLocaleString()
             })
-          }), jM > 0 && (0, LM.jsx)("div", {
-            children: MM(nM, zM)
-          }), (0, LM.jsxs)("div", {
+          }), UV > 0 && (0, ZV.jsx)("div", {
+            children: VV(QV, wV)
+          }), (0, ZV.jsxs)("div", {
             className: "StoreTempSubscribeButtons",
-            children: [(0, LM.jsx)(QM.i, {
+            children: [(0, ZV.jsx)(nV.j, {
               onClick: () => {
-                JM(!1)
+                bV(!1)
               },
-              children: MM("general:cancel")
-            }), (0, LM.jsx)(QM.p, {
+              children: VV("general:cancel")
+            }), (0, ZV.jsx)(nV.m, {
               onClick: () => {
-                eM(bM)
+                PV(AV)
               },
-              loading: iM,
-              children: MM("payments:subscribeContinue", {
-                price: tM
+              loading: xV,
+              children: VV("payments:subscribeContinue", {
+                price: XV
               })
             })]
-          }), gM]
+          }), MV]
         })
       }
-      return (0, LM.jsxs)("div", {
+      return (0, ZV.jsxs)("div", {
         className: "StoreTempSubscribe",
-        children: [(0, LM.jsx)(CP.i, {
-          notice: SM,
+        children: [(0, ZV.jsx)(tp.i, {
+          notice: YV,
           className: "SmallTextBold"
-        }), (0, LM.jsx)(CP.b, {
+        }), (0, ZV.jsx)(tp.d, {
           className: "SmallTextBold"
-        }), (0, LM.jsx)(QM.p, {
+        }), (0, ZV.jsx)(nV.m, {
           onClick: () => {
-            "refund" === wM.kind ? JM(!0) : eM(bM)
+            "refund" === NV.kind ? bV(!0) : PV(AV)
           },
-          disabled: void 0 !== UM,
-          loading: iM,
-          children: MM("payments:subscribeToSuperRank", {
-            price: tM
+          disabled: void 0 !== tV,
+          loading: xV,
+          children: VV("payments:subscribeToSuperRank", {
+            price: XV
           })
-        }), gM]
+        }), MV]
       })
     }
-    var gP = iM(2768);
+    var Np = xV(2830);
 
-    function uP(MM) {
+    function Xp(VV) {
       let {
-        state: rM,
-        view: iM,
-        claiming: SM,
-        onOpen: PM
-      } = MM;
+        state: eV,
+        view: xV,
+        claiming: YV,
+        onOpen: pV
+      } = VV;
       const {
-        t: zM
-      } = (0, aM.A)(), mM = (0, OM.useRef)(null), HM = "ready" === iM.kind;
-      return (0, jP.e)(mM, HM), (0, LM.jsxs)("div", {
-        ref: mM,
-        className: jM()("DailyDropTile", {
-          DailyDropTileReady: HM
+        t: wV
+      } = (0, yV.A)(), vV = (0, JV.useRef)(null), rV = "ready" === xV.kind;
+      return (0, Jp.e)(vV, rV), (0, ZV.jsxs)("div", {
+        ref: vV,
+        className: UV()("DailyDropTile", {
+          DailyDropTileReady: rV
         }),
-        children: [HM && (0, LM.jsx)(nM.d, {
+        children: [rV && (0, ZV.jsx)(QV.c, {
           top: "0.25rem",
           right: "0.25rem"
-        }), (0, LM.jsx)("div", {
+        }), (0, ZV.jsx)("div", {
           className: "DailyDropTileTitle",
-          children: zM("dailyDrop:name")
-        }), (0, LM.jsxs)("div", {
+          children: wV("dailyDrop:name")
+        }), (0, ZV.jsxs)("div", {
           className: "DailyDropTileArt",
-          children: [(0, LM.jsx)(gP.c, {
+          children: [(0, ZV.jsx)(Np.b, {
             className: "DailyDropTileBlock"
-          }), (0, LM.jsx)("div", {
+          }), (0, ZV.jsx)("div", {
             className: "DailyDropTileInfo SmallTextLight",
-            children: zM("dailyDrop:collected", {
-              count: rM.collected.length,
-              total: rM.total
+            children: wV("dailyDrop:collected", {
+              count: eV.collected.length,
+              total: eV.total
             })
           })]
-        }), "ready" === iM.kind && (0, LM.jsx)(QM.p, {
+        }), "ready" === xV.kind && (0, ZV.jsx)(nV.m, {
           className: "DailyDropTileOpen",
-          onClick: PM,
-          loading: SM,
-          children: zM("dailyDrop:open")
-        }), "waiting" === iM.kind && (0, LM.jsx)("div", {
+          onClick: pV,
+          loading: YV,
+          children: wV("dailyDrop:open")
+        }), "waiting" === xV.kind && (0, ZV.jsx)("div", {
           className: "DailyDropTileWait SmallTextBold",
-          children: zM("dailyDrop:nextIn", {
-            count: iM.hours
+          children: wV("dailyDrop:nextIn", {
+            count: xV.hours
           })
         })]
       })
     }
-    var RP = iM(2362);
-    const pP = Math.PI / 180;
+    var Mp = xV(2385);
+    const zp = Math.PI / 180;
 
-    function WP(MM) {
-      return MM / (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 24) * 2 * Math.PI
+    function Gp(VV) {
+      return VV / (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 24) * 2 * Math.PI
     }
 
-    function sP(MM, rM) {
-      let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 24;
-      const OM = (MM / (2 * Math.PI / iM) % iM + iM) % iM;
-      let SM = null,
-        jM = 1 / 0;
-      for (let aM = 0; aM < iM; aM++) {
-        if (!rM[aM]) continue;
-        const MM = Math.abs(aM - OM),
-          PM = Math.min(MM, iM - MM);
-        PM < jM && (SM = aM, jM = PM)
+    function Wp(VV, eV) {
+      let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 24;
+      const JV = (VV / (2 * Math.PI / xV) % xV + xV) % xV;
+      let YV = null,
+        UV = 1 / 0;
+      for (let yV = 0; yV < xV; yV++) {
+        if (!eV[yV]) continue;
+        const VV = Math.abs(yV - JV),
+          pV = Math.min(VV, xV - VV);
+        pV < UV && (YV = yV, UV = pV)
       }
-      return SM
+      return YV
     }
 
-    function DP(MM, rM) {
-      let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 24;
-      const OM = sP(MM, rM, iM);
-      if (null === OM) return MM;
-      const SM = WP(OM, iM) - MM;
-      return MM + SM - 2 * Math.PI * Math.round(SM / (2 * Math.PI))
+    function Rp(VV, eV) {
+      let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 24;
+      const JV = Wp(VV, eV, xV);
+      if (null === JV) return VV;
+      const YV = Gp(JV, xV) - VV;
+      return VV + YV - 2 * Math.PI * Math.round(YV / (2 * Math.PI))
     }
-    const kP = 32;
+    const gp = 32;
 
-    function ZP(MM) {
-      if (0 === MM.width || 0 === MM.height) return !0;
-      const rM = document.createElement("canvas");
-      rM.width = kP, rM.height = kP;
-      const iM = rM.getContext("2d", {
+    function Dp(VV) {
+      if (0 === VV.width || 0 === VV.height) return !0;
+      const eV = document.createElement("canvas");
+      eV.width = gp, eV.height = gp;
+      const xV = eV.getContext("2d", {
         willReadFrequently: !0
       });
-      if (!iM) return !0;
-      iM.drawImage(MM, 0, 0, kP, kP);
+      if (!xV) return !0;
+      xV.drawImage(VV, 0, 0, gp, gp);
       const {
-        data: OM
-      } = iM.getImageData(0, 0, kP, kP);
-      for (let SM = 3; SM < OM.length; SM += 4)
-        if (OM[SM] > 0) return !1;
+        data: JV
+      } = xV.getImageData(0, 0, gp, gp);
+      for (let YV = 3; YV < JV.length; YV += 4)
+        if (JV[YV] > 0) return !1;
       return !0
     }
 
-    function oP(MM) {
-      const rM = document.createElement("canvas");
-      rM.width = MM.width, rM.height = MM.height;
-      const iM = rM.getContext("2d");
-      return iM ? (iM.drawImage(MM, 0, 0), rM) : null
+    function ip(VV) {
+      const eV = document.createElement("canvas");
+      eV.width = VV.width, eV.height = VV.height;
+      const xV = eV.getContext("2d");
+      return xV ? (xV.drawImage(VV, 0, 0), eV) : null
     }
 
-    function fP(MM) {
+    function Cp(VV) {
       let {
-        worn: rM,
-        Ii: iM,
-        Ki: SM,
-        prompting: nM,
-        className: QM
-      } = MM;
+        worn: eV,
+        YJ: xV,
+        UJ: YV,
+        prompting: QV,
+        className: nV
+      } = VV;
       const {
-        t: zM
-      } = (0, aM.A)(), mM = (0, OM.useRef)(null), [HM, hM] = (0, OM.useState)(null), [JM, dM] = (0, OM.useState)(!1), yM = (0, OM.useRef)([]), lM = (0, OM.useRef)(null), EM = (0, OM.useRef)(0), UM = (0, OM.useRef)(null), GM = (0, OM.useRef)(!0), eM = (0, OM.useCallback)((() => {
-        const MM = lM.current,
-          rM = yM.current,
-          iM = sP(EM.current, rM),
-          OM = null === iM ? null : rM[iM],
-          SM = null === MM || void 0 === MM ? void 0 : MM.getContext("2d");
-        MM && OM && SM && (MM.width === OM.width && MM.height === OM.height || (MM.width = OM.width, MM.height = OM.height), SM.clearRect(0, 0, MM.width, MM.height), SM.drawImage(OM, 0, 0))
+        t: wV
+      } = (0, yV.A)(), vV = (0, JV.useRef)(null), [rV, kV] = (0, JV.useState)(null), [bV, EV] = (0, JV.useState)(!1), BV = (0, JV.useRef)([]), jV = (0, JV.useRef)(null), qV = (0, JV.useRef)(0), tV = (0, JV.useRef)(null), FV = (0, JV.useRef)(!0), PV = (0, JV.useCallback)((() => {
+        const VV = jV.current,
+          eV = BV.current,
+          xV = Wp(qV.current, eV),
+          JV = null === xV ? null : eV[xV],
+          YV = null === VV || void 0 === VV ? void 0 : VV.getContext("2d");
+        VV && JV && YV && (VV.width === JV.width && VV.height === JV.height || (VV.width = JV.width, VV.height = JV.height), YV.clearRect(0, 0, VV.width, VV.height), YV.drawImage(JV, 0, 0))
       }), []);
-      async function bM(MM, rM) {
-        const iM = performance.now();
-        let OM = 0;
-        for (const SM of function() {
-            let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 24;
-            const rM = [],
-              iM = new Set;
-            for (let OM = MM / 2; OM >= 1 && Number.isInteger(OM); OM /= 2)
-              for (let SM = 0; SM < MM; SM += OM) iM.has(SM) || (iM.add(SM), rM.push(SM));
-            for (let OM = 0; OM < MM; OM++) iM.has(OM) || rM.push(OM);
-            return rM
+      async function AV(VV, eV) {
+        const xV = performance.now();
+        let JV = 0;
+        for (const YV of function() {
+            let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 24;
+            const eV = [],
+              xV = new Set;
+            for (let JV = VV / 2; JV >= 1 && Number.isInteger(JV); JV /= 2)
+              for (let YV = 0; YV < VV; YV += JV) xV.has(YV) || (xV.add(YV), eV.push(YV));
+            for (let JV = 0; JV < VV; JV++) xV.has(JV) || eV.push(JV);
+            return eV
           }()) {
-          if (mM.current !== MM) break;
-          if (0 !== SM && (MM.turnCamera(WP(SM)), await new Promise((MM => {
+          if (vV.current !== VV) break;
+          if (0 !== YV && (VV.turnCamera(Gp(YV)), await new Promise((VV => {
               requestAnimationFrame((() => {
                 requestAnimationFrame((() => {
-                  MM()
+                  VV()
                 }))
               }))
-            })), mM.current !== MM)) break;
-          const iM = ZP(rM) ? null : oP(rM);
-          if (null !== iM) yM.current[SM] = iM, OM++, 0 === SM && hM("stills");
-          else if (0 === SM) break
+            })), vV.current !== VV)) break;
+          const xV = Dp(eV) ? null : ip(eV);
+          if (null !== xV) BV.current[YV] = xV, JV++, 0 === YV && kV("stills");
+          else if (0 === YV) break
         }
-        OM > 0 && console.info(`Lucky Skin Block's Before: ${OM} stills in ${Math.round(performance.now()-iM)} ms`)
+        JV > 0 && console.info(`Lucky Skin Block's Before: ${JV} stills in ${Math.round(performance.now()-xV)} ms`)
       }
 
-      function wM(MM) {
-        var rM, iM;
-        (null === (rM = UM.current) || void 0 === rM ? void 0 : rM.pointerId) === MM.pointerId && (UM.current = null, GM.current || (EM.current = DP(EM.current, yM.current), eM(), null === (iM = mM.current) || void 0 === iM || iM.turnCamera(EM.current)))
-      }(0, OM.useEffect)((() => {
-        "stills" === HM && eM()
-      }), [HM, eM]), (0, OM.useEffect)((() => () => {
-        for (const MM of yM.current) MM && (MM.width = 0, MM.height = 0);
-        yM.current = []
+      function NV(VV) {
+        var eV, xV;
+        (null === (eV = tV.current) || void 0 === eV ? void 0 : eV.pointerId) === VV.pointerId && (tV.current = null, FV.current || (qV.current = Rp(qV.current, BV.current), PV(), null === (xV = vV.current) || void 0 === xV || xV.turnCamera(qV.current)))
+      }(0, JV.useEffect)((() => {
+        "stills" === rV && PV()
+      }), [rV, PV]), (0, JV.useEffect)((() => () => {
+        for (const VV of BV.current) VV && (VV.width = 0, VV.height = 0);
+        BV.current = []
       }), []);
-      const tM = nM ? {
-        onPointerDown: MM => {
-          null === UM.current && (MM.currentTarget.setPointerCapture(MM.pointerId), UM.current = {
-            pointerId: MM.pointerId,
-            startX: MM.clientX,
-            startTurn: EM.current
+      const XV = QV ? {
+        onPointerDown: VV => {
+          null === tV.current && (VV.currentTarget.setPointerCapture(VV.pointerId), tV.current = {
+            pointerId: VV.pointerId,
+            startX: VV.clientX,
+            startTurn: qV.current
           })
         },
-        onPointerMove: MM => {
-          const rM = UM.current;
-          var iM;
-          null !== rM && rM.pointerId === MM.pointerId && (EM.current = rM.startTurn - (MM.clientX - rM.startX) * pP, eM(), GM.current || null === (iM = mM.current) || void 0 === iM || iM.turnCamera(EM.current))
+        onPointerMove: VV => {
+          const eV = tV.current;
+          var xV;
+          null !== eV && eV.pointerId === VV.pointerId && (qV.current = eV.startTurn - (VV.clientX - eV.startX) * zp, PV(), FV.current || null === (xV = vV.current) || void 0 === xV || xV.turnCamera(qV.current))
         },
-        onPointerUp: wM,
-        onPointerCancel: wM
+        onPointerUp: NV,
+        onPointerCancel: NV
       } : {};
-      return (0, LM.jsxs)("div", {
-        className: jM()("DailyDropRevealFigures", {
-          DailyDropRevealFiguresTurnable: nM
-        }, QM),
-        children: [(0, LM.jsxs)("div", {
+      return (0, ZV.jsxs)("div", {
+        className: UV()("DailyDropRevealFigures", {
+          DailyDropRevealFiguresTurnable: QV
+        }, nV),
+        children: [(0, ZV.jsxs)("div", {
           className: "DailyDropRevealFigure",
-          children: [(0, LM.jsxs)("div", {
+          children: [(0, ZV.jsxs)("div", {
             className: "DailyDropRevealFigureArt",
-            ...tM,
-            children: ["stills" === HM && (0, LM.jsx)("canvas", {
-              ref: lM,
+            ...XV,
+            children: ["stills" === rV && (0, ZV.jsx)("canvas", {
+              ref: jV,
               className: "DailyDropRevealBeforeStill"
-            }), "head" === HM && (0, LM.jsx)("div", {
+            }), "head" === rV && (0, ZV.jsx)("div", {
               className: "DailyDropRevealBeforeHead",
-              children: (0, LM.jsx)(ea.c, {
-                cosmetics: rM
+              children: (0, ZV.jsx)(Fy.e, {
+                cosmetics: eV
               })
-            }), null === HM && (0, LM.jsx)(CM.d, {})]
-          }), (0, LM.jsx)("span", {
+            }), null === rV && (0, ZV.jsx)(TV.d, {})]
+          }), (0, ZV.jsx)("span", {
             className: "DailyDropRevealFigureLabel SmallTextBold",
-            children: zM("dailyDrop:before")
+            children: wV("dailyDrop:before")
           })]
-        }), (0, LM.jsx)(PM.b, {
+        }), (0, ZV.jsx)(pV.b, {
           name: "arrow-right",
           className: "DailyDropRevealArrow"
-        }), (0, LM.jsxs)("div", {
+        }), (0, ZV.jsxs)("div", {
           className: "DailyDropRevealFigure DailyDropRevealAfter",
-          children: [(0, LM.jsxs)("div", {
+          children: [(0, ZV.jsxs)("div", {
             className: "DailyDropRevealFigureArt",
-            children: [(0, LM.jsx)("div", {
-              className: jM()("DailyDropRevealLive", {
-                DailyDropRevealLiveDrawn: JM
+            children: [(0, ZV.jsx)("div", {
+              className: UV()("DailyDropRevealLive", {
+                DailyDropRevealLiveDrawn: bV
               }),
-              children: (0, LM.jsx)(OM.Suspense, {
+              children: (0, ZV.jsx)(JV.Suspense, {
                 fallback: null,
-                children: (0, LM.jsx)(oa.c, {
-                  ref: mM,
+                children: (0, ZV.jsx)(iy.c, {
+                  ref: vV,
                   onReady: () => {
-                    var MM, iM;
-                    null === (MM = mM.current) || void 0 === MM || MM.resetCamera(), null === (iM = mM.current) || void 0 === iM || iM.setAllCosmetics(rM)
+                    var VV, xV;
+                    null === (VV = vV.current) || void 0 === VV || VV.resetCamera(), null === (xV = vV.current) || void 0 === xV || xV.setAllCosmetics(eV)
                   },
                   onDrawn: () => {
                     requestAnimationFrame((() => {
                       !async function() {
-                        var MM;
-                        const rM = mM.current;
-                        if (!rM) return;
-                        const OM = null === (MM = rM.getDevTools()) || void 0 === MM ? void 0 : MM.canvas();
+                        var VV;
+                        const eV = vV.current;
+                        if (!eV) return;
+                        const JV = null === (VV = eV.getDevTools()) || void 0 === VV ? void 0 : VV.canvas();
                         try {
-                          OM && await bM(rM, OM)
-                        } catch (aM) {
-                          console.warn("Couldn't read the character preview for the Lucky Skin Block's Before", aM)
+                          JV && await AV(eV, JV)
+                        } catch (yV) {
+                          console.warn("Couldn't read the character preview for the Lucky Skin Block's Before", yV)
                         } finally {
-                          GM.current = !1
+                          FV.current = !1
                         }
-                        if (mM.current !== rM) return;
-                        yM.current[0] || (console.warn("The character preview gave no front still: the Lucky Skin Block's Before shows the head"), hM("head")), null === UM.current && (EM.current = DP(EM.current, yM.current)), rM.turnCamera(EM.current), eM(), rM.updateCosmetic(iM, SM);
-                        const jM = new Promise((MM => {
-                          setTimeout(MM, 1e4)
+                        if (vV.current !== eV) return;
+                        BV.current[0] || (console.warn("The character preview gave no front still: the Lucky Skin Block's Before shows the head"), kV("head")), null === tV.current && (qV.current = Rp(qV.current, BV.current)), eV.turnCamera(qV.current), PV(), eV.updateCosmetic(xV, YV);
+                        const UV = new Promise((VV => {
+                          setTimeout(VV, 1e4)
                         }));
-                        await Promise.race([rM.ensureReadyForCapture(iM), jM]).catch((MM => {
-                          console.error("Failed to draw the Lucky Skin Block's piece on the character preview", MM)
-                        })), mM.current === rM && dM(!0)
+                        await Promise.race([eV.ensureReadyForCapture(xV), UV]).catch((VV => {
+                          console.error("Failed to draw the Lucky Skin Block's piece on the character preview", VV)
+                        })), vV.current === eV && EV(!0)
                       }()
                     }))
                   }
                 })
               })
-            }), !JM && (0, LM.jsx)(CM.d, {}), (0, LM.jsx)("div", {
+            }), !bV && (0, ZV.jsx)(TV.d, {}), (0, ZV.jsx)("div", {
               className: "DailyDropRevealTurn",
-              ...tM
+              ...XV
             })]
-          }), (0, LM.jsx)("span", {
+          }), (0, ZV.jsx)("span", {
             className: "DailyDropRevealFigureLabel SmallTextBold",
-            children: zM("dailyDrop:after")
+            children: wV("dailyDrop:after")
           })]
         })]
       })
     }
-    const YP = {
+    const ap = {
         closed: "opening",
         opening: "revealed",
         revealed: "shrinking",
@@ -7459,209 +7459,209 @@ export const modules = {
         equip: "equip",
         remind: "remind"
       },
-      NP = {
+      op = {
         opening: 900,
         shrinking: 700
       };
 
-    function AP(MM) {
+    function cp(VV) {
       let {
-        drop: rM,
-        onClose: iM
-      } = MM;
+        drop: eV,
+        onClose: xV
+      } = VV;
       const {
-        t: SM
-      } = (0, aM.A)(), {
-        userContext: nM
-      } = (0, hM.b)(), {
-        state: zM,
-        view: mM
-      } = (0, ii.E)(), [HM, JM] = (0, OM.useState)("closed"), [dM] = (0, OM.useState)((() => ({
-        ...nM.getPlayerCosmetics()
-      }))), [yM] = (0, OM.useState)((() => (0, ii.l)(rM, dM))), [lM, EM] = (0, OM.useState)(!1), [UM, GM] = (0, OM.useState)(!1), [CM] = (0, OM.useState)((() => null === zM ? Promise.resolve(null) : ai(zM))), [eM, wM] = (0, OM.useState)(null), tM = (0, cr.b)(), {
-        gameState: gM
-      } = (0, bM.m)(["gameState"]);
-      async function uM() {
-        const MM = await CM;
-        tM.current && (null === MM ? (iM(), async function(MM) {
-          let rM = null;
+        t: YV
+      } = (0, yV.A)(), {
+        userContext: QV
+      } = (0, kV.d)(), {
+        state: wV,
+        view: vV
+      } = (0, xx.x)(), [rV, bV] = (0, JV.useState)("closed"), [EV] = (0, JV.useState)((() => ({
+        ...QV.getPlayerCosmetics()
+      }))), [BV] = (0, JV.useState)((() => (0, xx.i)(eV, EV))), [jV, qV] = (0, JV.useState)(!1), [tV, FV] = (0, JV.useState)(!1), [TV] = (0, JV.useState)((() => null === wV ? Promise.resolve(null) : yx(wV))), [PV, NV] = (0, JV.useState)(null), XV = (0, Oe.e)(), {
+        gameState: MV
+      } = (0, AV.l)(["gameState"]);
+      async function zV() {
+        const VV = await TV;
+        XV.current && (null === VV ? (xV(), async function(VV) {
+          let eV = null;
           try {
-            const iM = await ji();
-            null === MM || MM.remindersOn || null !== Si.g.getItem(iM) || (rM = iM)
-          } catch (OM) {
-            console.error("Failed to tell whether Lucky Skin Block reminders were ever chosen:", OM)
+            const xV = await Ux();
+            null === VV || VV.remindersOn || null !== Yx.m.getItem(xV) || (eV = xV)
+          } catch (JV) {
+            console.error("Failed to tell whether Lucky Skin Block reminders were ever chosen:", JV)
           }
-          if (null === rM) return void await (0, Oi.n)("dailyDrop");
-          const iM = rM;
-          await (0, Oi.n)("dailyDrop", {
+          if (null === eV) return void await (0, Jx.l)("dailyDrop");
+          const xV = eV;
+          await (0, Jx.l)("dailyDrop", {
             copy: {
               title: "mobilePushNotifications:optInTitle",
               subtitle: "mobilePushNotifications:offerSubtitleDailyDrop"
             },
             onAllow: () => {
-              Si.g.setItem(iM, !0), ni(null)
+              Yx.m.setItem(xV, !0), Qx(null)
             }
           })
-        }(zM)) : ((0, Oi.g)(), wM(MM), JM("remind")))
+        }(wV)) : ((0, Jx.g)(), NV(VV), bV("remind")))
       }
 
-      function RM(MM) {
-        null !== eM && function(MM, rM) {
-          Si.g.setItem(MM.askedKey, !0), (0, Vr.m)(), (0, ii.w)("daily_drop.remind", rM ? "yes" : "no"), rM && ni(MM.requester)
-        }(eM, MM), iM()
-      }(0, OM.useEffect)((() => {
-        const MM = NP[HM];
-        if (void 0 === MM) return;
-        const rM = setTimeout((() => {
-          JM(YP[HM])
-        }), MM);
+      function GV(VV) {
+        null !== PV && function(VV, eV) {
+          Yx.m.setItem(VV.askedKey, !0), (0, de.o)(), (0, xx.s)("daily_drop.remind", eV ? "yes" : "no"), eV && Qx(VV.requester)
+        }(PV, VV), xV()
+      }(0, JV.useEffect)((() => {
+        const VV = op[rV];
+        if (void 0 === VV) return;
+        const eV = setTimeout((() => {
+          bV(ap[rV])
+        }), VV);
         return () => {
-          clearTimeout(rM)
+          clearTimeout(eV)
         }
-      }), [HM]);
-      const pM = SM(`dailyDrop:kind_${yM.Ii}`),
-        WM = zM && SM("dailyDrop:collected", {
-          count: zM.collected.length,
-          total: zM.total
+      }), [rV]);
+      const WV = YV(`dailyDrop:kind_${BV.YJ}`),
+        RV = wV && YV("dailyDrop:collected", {
+          count: wV.collected.length,
+          total: wV.total
         }),
-        sM = "revealed" === HM || "shrinking" === HM,
-        DM = "equip" !== HM && "remind" !== HM;
-      return (0, LM.jsx)(zS.e, {
+        gV = "revealed" === rV || "shrinking" === rV,
+        DV = "equip" !== rV && "remind" !== rV;
+      return (0, ZV.jsx)(QY.e, {
         className: "DailyDropRevealScreen",
-        close: "remind" === HM ? () => {
-          RM(!1)
-        } : iM,
+        close: "remind" === rV ? () => {
+          GV(!1)
+        } : xV,
         togglePointerLock: !1,
         closeOnPressBackground: !1,
-        children: (0, LM.jsxs)("div", {
-          className: jM()("DailyDropReveal", {
-            DailyDropRevealOpening: "opening" === HM,
-            DailyDropRevealShrinking: "shrinking" === HM,
-            DailyDropRevealFiguresShown: "shrinking" === HM || "equip" === HM || "remind" === HM
+        children: (0, ZV.jsxs)("div", {
+          className: UV()("DailyDropReveal", {
+            DailyDropRevealOpening: "opening" === rV,
+            DailyDropRevealShrinking: "shrinking" === rV,
+            DailyDropRevealFiguresShown: "shrinking" === rV || "equip" === rV || "remind" === rV
           }),
-          children: [(0, LM.jsxs)("div", {
+          children: [(0, ZV.jsxs)("div", {
             className: "DailyDropRevealStage",
-            children: [(0, LM.jsx)(fP, {
+            children: [(0, ZV.jsx)(Cp, {
               className: "DailyDropRevealStageFigures",
-              worn: dM,
-              Ii: yM.Ii,
-              Ki: yM.Ki,
-              prompting: !DM
-            }), ("closed" === HM || "opening" === HM) && (0, LM.jsx)(gP.c, {
+              worn: EV,
+              YJ: BV.YJ,
+              UJ: BV.UJ,
+              prompting: !DV
+            }), ("closed" === rV || "opening" === rV) && (0, ZV.jsx)(Np.b, {
               className: "DailyDropRevealBlock",
-              open: "opening" === HM
-            }), sM && (0, LM.jsx)("div", {
+              open: "opening" === rV
+            }), gV && (0, ZV.jsx)("div", {
               className: "DailyDropRevealPiece",
-              children: (0, LM.jsx)("img", {
-                src: `/textures/charSkins/previews/${(0,RP.m)(yM.Ii,yM.Ki).previewTex}.png`,
-                alt: pM,
+              children: (0, ZV.jsx)("img", {
+                src: `/textures/charSkins/previews/${(0,Mp.h)(BV.YJ,BV.UJ).previewTex}.png`,
+                alt: WV,
                 draggable: !1
               })
             })]
-          }), DM && (0, LM.jsxs)(LM.Fragment, {
-            children: [(0, LM.jsxs)("div", {
+          }), DV && (0, ZV.jsxs)(ZV.Fragment, {
+            children: [(0, ZV.jsxs)("div", {
               className: "DailyDropRevealCaption",
-              children: [(0, LM.jsx)("div", {
+              children: [(0, ZV.jsx)("div", {
                 className: "DailyDropRevealTitle SmallTextBold",
-                children: sM ? pM : SM("dailyDrop:name")
-              }), "closed" === HM && (0, LM.jsx)("div", {
+                children: gV ? WV : YV("dailyDrop:name")
+              }), "closed" === rV && (0, ZV.jsx)("div", {
                 className: "DailyDropRevealHint SmallTextLight",
-                children: SM("dailyDrop:tapToOpen")
-              }), "revealed" === HM && (0, LM.jsx)("div", {
+                children: YV("dailyDrop:tapToOpen")
+              }), "revealed" === rV && (0, ZV.jsx)("div", {
                 className: "DailyDropRevealHint SmallTextLight",
-                children: SM("dailyDrop:tapToContinue")
+                children: YV("dailyDrop:tapToContinue")
               })]
-            }), (0, LM.jsx)("button", {
+            }), (0, ZV.jsx)("button", {
               type: "button",
               className: "DailyDropRevealTap",
               "data-pad-default-focus": !0,
-              "aria-label": SM("closed" === HM ? "dailyDrop:tapToOpen" : "dailyDrop:tapToContinue"),
+              "aria-label": YV("closed" === rV ? "dailyDrop:tapToOpen" : "dailyDrop:tapToContinue"),
               onClick: () => {
-                JM(YP[HM])
+                bV(ap[rV])
               }
             })]
-          }), "equip" === HM && (0, LM.jsxs)("div", {
+          }), "equip" === rV && (0, ZV.jsxs)("div", {
             className: "DailyDropRevealEquip",
-            children: [(0, LM.jsx)("div", {
+            children: [(0, ZV.jsx)("div", {
               className: "DailyDropRevealKind SmallTextLight",
-              children: pM
-            }), (0, LM.jsx)("div", {
+              children: WV
+            }), (0, ZV.jsx)("div", {
               className: "DailyDropRevealQuestion SmallTextBold",
-              children: SM("dailyDrop:equipQuestion")
-            }), (0, LM.jsxs)("div", {
+              children: YV("dailyDrop:equipQuestion")
+            }), (0, ZV.jsxs)("div", {
               className: "DailyDropRevealButtons",
-              children: [(0, LM.jsx)(QM.e, {
+              children: [(0, ZV.jsx)(nV.f, {
                 className: "DailyDropRevealButton",
-                disabled: lM,
+                disabled: jV,
                 touchPressOn: "pointerup",
                 onClick: () => {
-                  (0, ii.w)("daily_drop.not_now", rM), uM()
+                  (0, xx.s)("daily_drop.not_now", eV), zV()
                 },
-                children: SM("dailyDrop:notNow")
-              }), (0, LM.jsx)(QM.e, {
+                children: YV("dailyDrop:notNow")
+              }), (0, ZV.jsx)(nV.f, {
                 className: "DailyDropRevealButton",
-                loading: lM,
+                loading: jV,
                 padDefaultFocus: !0,
                 touchPressOn: "pointerup",
                 onClick: () => {
                   !async function() {
-                    (0, ii.w)("daily_drop.equip", rM), EM(!0), GM(!1);
+                    (0, xx.s)("daily_drop.equip", eV), qV(!0), FV(!1);
                     try {
-                      await (0, ii.h)(nM, yM.Ii, yM.Ki)
-                    } catch (MM) {
-                      return console.error("Failed to equip the Lucky Skin Block's piece", MM), EM(!1), void GM(!0)
+                      await (0, xx.e)(QV, BV.YJ, BV.UJ)
+                    } catch (VV) {
+                      return console.error("Failed to equip the Lucky Skin Block's piece", VV), qV(!1), void FV(!0)
                     }
-                    await uM()
+                    await zV()
                   }()
                 },
-                children: SM("dailyDrop:equip")
+                children: YV("dailyDrop:equip")
               })]
-            }), UM && (0, LM.jsx)("div", {
+            }), tV && (0, ZV.jsx)("div", {
               className: "DailyDropRevealError SmallTextBold",
-              children: SM("dailyDrop:equipFailed")
-            }), !(0, bM.h)(gM) && (0, LM.jsxs)("button", {
+              children: YV("dailyDrop:equipFailed")
+            }), !(0, AV.d)(MV) && (0, ZV.jsxs)("button", {
               type: "button",
               className: "DailyDropRevealCustomise",
-              disabled: lM,
+              disabled: jV,
               onClick: () => {
-                var MM;
-                (0, ii.w)("daily_drop.customise", rM), MM = yM.Ii, Gi.i.Tz(jS, MM), bM.d.set({
-                  openEverythingMenuName: Ur.m.CUSTOMISATION
-                }), iM()
+                var VV;
+                (0, xx.s)("daily_drop.customise", eV), VV = BV.YJ, tx.h.QZ(JY, VV), AV.b.set({
+                  openEverythingMenuName: te.q.CUSTOMISATION
+                }), xV()
               },
-              children: [SM("dailyDrop:customise"), " ", (0, LM.jsx)(PM.b, {
+              children: [YV("dailyDrop:customise"), " ", (0, ZV.jsx)(pV.b, {
                 name: "arrow-right",
                 className: "DailyDropRevealCustomiseArrow"
               })]
-            }), WM && (0, LM.jsxs)("div", {
+            }), RV && (0, ZV.jsxs)("div", {
               className: "DailyDropRevealProgress SmallTextLight",
-              children: [WM, "waiting" === (null === mM || void 0 === mM ? void 0 : mM.kind) && ` \xb7 ${SM("dailyDrop:nextInInline",{count:mM.hours})}`]
+              children: [RV, "waiting" === (null === vV || void 0 === vV ? void 0 : vV.kind) && ` \xb7 ${YV("dailyDrop:nextInInline",{count:vV.hours})}`]
             })]
-          }), "remind" === HM && (0, LM.jsxs)("div", {
+          }), "remind" === rV && (0, ZV.jsxs)("div", {
             className: "DailyDropRevealEquip",
-            children: [(0, LM.jsx)("div", {
+            children: [(0, ZV.jsx)("div", {
               className: "DailyDropRevealQuestion SmallTextBold",
-              children: SM("dailyDrop:remindTitle")
-            }), (0, LM.jsx)("div", {
+              children: YV("dailyDrop:remindTitle")
+            }), (0, ZV.jsx)("div", {
               className: "DailyDropRevealKind SmallTextLight",
-              children: SM("dailyDrop:remindSubtitle")
-            }), (0, LM.jsxs)("div", {
+              children: YV("dailyDrop:remindSubtitle")
+            }), (0, ZV.jsxs)("div", {
               className: "DailyDropRevealButtons",
-              children: [(0, LM.jsx)(QM.e, {
+              children: [(0, ZV.jsx)(nV.f, {
                 className: "DailyDropRevealButton",
                 padDefaultFocus: !0,
                 touchPressOn: "pointerup",
                 onClick: () => {
-                  RM(!1)
+                  GV(!1)
                 },
-                children: SM("dailyDrop:remindNo")
-              }), (0, LM.jsx)(QM.e, {
+                children: YV("dailyDrop:remindNo")
+              }), (0, ZV.jsx)(nV.f, {
                 className: "DailyDropRevealButton",
                 touchPressOn: "pointerup",
                 onClick: () => {
-                  RM(!0)
+                  GV(!0)
                 },
-                children: SM("dailyDrop:remindYes")
+                children: YV("dailyDrop:remindYes")
               })]
             })]
           })]
@@ -7669,791 +7669,791 @@ export const modules = {
       })
     }
 
-    function xP(MM, rM) {
+    function hp(VV, eV) {
       const {
-        t: iM
-      } = (0, aM.A)(), SM = function(MM, rM) {
+        t: xV
+      } = (0, yV.A)(), YV = function(VV, eV) {
         const {
-          state: iM,
-          view: SM
-        } = (0, ii.E)(), [jM, aM] = (0, OM.useState)(!1), [PM, nM] = (0, OM.useState)(!1), [QM, zM] = (0, OM.useState)(null), LM = (0, OM.useRef)(null), mM = (0, OM.useRef)(!1), HM = rM && "ready" === (null === SM || void 0 === SM ? void 0 : SM.kind);
-        (0, OM.useEffect)((() => {
-          MM ? HM && !mM.current && (mM.current = !0, (0, ii.w)("daily_drop.shown", "tile")) : mM.current = !1
-        }), [MM, HM]), (0, OM.useEffect)((() => {
-          MM || (yM(), nM(!1))
-        }), [MM]);
-        const hM = MM && null === QM && !(0, ii.u)(SM);
-        (0, OM.useEffect)((() => {
-          hM && bM.d.set({
-            openEverythingMenuName: Ur.m.CUSTOMISATION
+          state: xV,
+          view: YV
+        } = (0, xx.x)(), [UV, yV] = (0, JV.useState)(!1), [pV, QV] = (0, JV.useState)(!1), [nV, wV] = (0, JV.useState)(null), ZV = (0, JV.useRef)(null), vV = (0, JV.useRef)(!1), rV = eV && "ready" === (null === YV || void 0 === YV ? void 0 : YV.kind);
+        (0, JV.useEffect)((() => {
+          VV ? rV && !vV.current && (vV.current = !0, (0, xx.s)("daily_drop.shown", "tile")) : vV.current = !1
+        }), [VV, rV]), (0, JV.useEffect)((() => {
+          VV || (BV(), QV(!1))
+        }), [VV]);
+        const kV = VV && null === nV && !(0, xx.r)(YV);
+        (0, JV.useEffect)((() => {
+          kV && AV.b.set({
+            openEverythingMenuName: te.q.CUSTOMISATION
           })
-        }), [hM]);
-        const JM = (0, OM.useRef)(!1),
-          dM = (0, OM.useRef)(MM);
+        }), [kV]);
+        const bV = (0, JV.useRef)(!1),
+          EV = (0, JV.useRef)(VV);
 
-        function yM() {
-          null !== LM.current && (LM.current = null, zM(null))
+        function BV() {
+          null !== ZV.current && (ZV.current = null, wV(null))
         }
-        return dM.current = MM, {
-          state: iM,
-          view: SM,
-          claiming: jM,
-          claimFailed: PM,
-          reveal: QM,
+        return EV.current = VV, {
+          state: xV,
+          view: YV,
+          claiming: UV,
+          claimFailed: pV,
+          reveal: nV,
           open: async function() {
-            if (!JM.current) {
-              JM.current = !0, aM(!0), nM(!1);
+            if (!bV.current) {
+              bV.current = !0, yV(!0), QV(!1);
               try {
                 const {
-                  state: MM,
-                  drop: rM
-                } = await (0, ii.e)();
-                if (null === MM || null === rM) return;
-                if (!dM.current) return;
-                (0, ii.w)("daily_drop.open", rM), LM.current = {
-                  state: MM,
-                  drop: rM
-                }, zM(LM.current)
-              } catch (MM) {
-                console.error("Failed to claim the Lucky Skin Block", MM), dM.current && nM(!0)
+                  state: VV,
+                  drop: eV
+                } = await (0, xx.c)();
+                if (null === VV || null === eV) return;
+                if (!EV.current) return;
+                (0, xx.s)("daily_drop.open", eV), ZV.current = {
+                  state: VV,
+                  drop: eV
+                }, wV(ZV.current)
+              } catch (VV) {
+                console.error("Failed to claim the Lucky Skin Block", VV), EV.current && QV(!0)
               } finally {
-                JM.current = !1, aM(!1)
+                bV.current = !1, yV(!1)
               }
             }
           },
-          closeReveal: yM
+          closeReveal: BV
         }
-      }(MM, rM);
+      }(VV, eV);
       return {
-        shown: (0, ii.u)(SM.view) || null !== SM.reveal,
-        tile: SM.state && SM.view && (0, LM.jsx)(uP, {
-          state: SM.state,
-          view: SM.view,
-          claiming: SM.claiming,
-          onOpen: SM.open
+        shown: (0, xx.r)(YV.view) || null !== YV.reveal,
+        tile: YV.state && YV.view && (0, ZV.jsx)(Xp, {
+          state: YV.state,
+          view: YV.view,
+          claiming: YV.claiming,
+          onOpen: YV.open
         }),
-        claimFailed: SM.claimFailed && (0, LM.jsx)("div", {
+        claimFailed: YV.claimFailed && (0, ZV.jsx)("div", {
           className: "StoreNotice StoreNoticeError",
-          children: iM("dailyDrop:claimFailed")
+          children: xV("dailyDrop:claimFailed")
         }),
-        reveal: SM.reveal && (0, LM.jsx)(AP, {
-          drop: SM.reveal.drop,
-          onClose: SM.closeReveal
+        reveal: YV.reveal && (0, ZV.jsx)(cp, {
+          drop: YV.reveal.drop,
+          onClose: YV.closeReveal
         })
       }
     }
 
-    function vP(MM) {
+    function lp(VV) {
       let {
-        show: rM
-      } = MM;
-      const iM = xP(rM, rM);
-      return rM && iM.shown ? (0, LM.jsxs)("div", {
+        show: eV
+      } = VV;
+      const xV = hp(eV, eV);
+      return eV && xV.shown ? (0, ZV.jsxs)("div", {
         className: "Store StoreDailyDropOnly",
-        children: [iM.claimFailed, iM.tile && (0, LM.jsx)("div", {
+        children: [xV.claimFailed, xV.tile && (0, ZV.jsx)("div", {
           className: "StoreDailyDropOnlyTile",
-          children: iM.tile
-        }), iM.reveal]
+          children: xV.tile
+        }), xV.reveal]
       }) : null
     }
-    var FP = iM(2779),
-      BP = iM(35070),
-      XP = iM(35077);
+    var Lp = xV(2847),
+      fp = xV(35354),
+      mp = xV(35371);
 
-    function IP(MM) {
+    function Kp(VV) {
       let {
-        view: rM,
-        highlight: iM,
-        scrollSignal: SM,
-        onScrolledIntoView: jM
-      } = MM;
+        view: eV,
+        highlight: xV,
+        scrollSignal: YV,
+        onScrolledIntoView: UV
+      } = VV;
       const {
-        t: PM
-      } = (0, aM.A)(), {
-        purchaseUnderWay: nM,
-        notice: QM,
-        needsLogin: zM,
-        buyPack: mM
-      } = (0, XP.e)("banner");
-      (0, FP.U)(rM.arm, "banner");
-      const HM = (0, OM.useRef)(null);
-      return (0, OM.useEffect)((() => {
-        var MM;
-        SM > 0 && (null === (MM = HM.current) || void 0 === MM || MM.scrollIntoView({
+        t: pV
+      } = (0, yV.A)(), {
+        purchaseUnderWay: QV,
+        notice: nV,
+        needsLogin: wV,
+        buyPack: vV
+      } = (0, mp.g)("banner");
+      (0, Lp.X)(eV.arm, "banner");
+      const rV = (0, JV.useRef)(null);
+      return (0, JV.useEffect)((() => {
+        var VV;
+        YV > 0 && (null === (VV = rV.current) || void 0 === VV || VV.scrollIntoView({
           block: "nearest"
-        }), jM())
-      }), [SM]), (0, LM.jsxs)("div", {
-        ref: HM,
+        }), UV())
+      }), [YV]), (0, ZV.jsxs)("div", {
+        ref: rV,
         className: "NewPlayerDealBanner",
-        children: [(0, LM.jsxs)("div", {
+        children: [(0, ZV.jsxs)("div", {
           className: "NewPlayerDealBannerHead",
-          children: [(0, LM.jsx)("div", {
+          children: [(0, ZV.jsx)("div", {
             className: "NewPlayerDealBannerTitle",
-            children: PM("newPlayerDeal:title")
-          }), (0, LM.jsx)(BP.e, {
-            endsAt: rM.endsAt
+            children: pV("newPlayerDeal:title")
+          }), (0, ZV.jsx)(fp.b, {
+            endsAt: eV.endsAt
           })]
-        }), (0, LM.jsx)(BP.i, {
-          view: rM,
-          needsLogin: zM,
-          busy: nM,
-          highlight: iM,
-          onBuy: MM => {
-            mM(rM, MM)
+        }), (0, ZV.jsx)(fp.c, {
+          view: eV,
+          needsLogin: wV,
+          busy: QV,
+          highlight: xV,
+          onBuy: VV => {
+            vV(eV, VV)
           }
-        }), (0, LM.jsx)(CP.i, {
-          notice: QM,
+        }), (0, ZV.jsx)(tp.i, {
+          notice: nV,
           className: "SmallTextBold NewPlayerDealNotice"
         })]
       })
     }
-    iM(35072);
-    var KP = iM(2782);
+    xV(35362);
+    var Hp = xV(2849);
 
-    function qP(MM) {
+    function sp(VV) {
       let {
-        wallet: rM,
-        close: iM
-      } = MM;
+        wallet: eV,
+        close: xV
+      } = VV;
       const {
-        t: OM
-      } = (0, aM.A)();
-      return (0, LM.jsxs)("div", {
+        t: JV
+      } = (0, yV.A)();
+      return (0, ZV.jsxs)("div", {
         className: "NewPlayerDealGiftNotice",
-        children: [(0, LM.jsxs)("div", {
+        children: [(0, ZV.jsxs)("div", {
           className: "NewPlayerDealGiftNoticeRows",
-          children: [(0, LM.jsx)("span", {
-            children: OM("newPlayerDeal:giftable")
-          }), (0, LM.jsx)(Ra.b, {
-            amount: (0, aa.b)(rM)
-          }), (0, LM.jsx)("span", {
-            children: OM("newPlayerDeal:ungiftable")
-          }), (0, LM.jsx)(Ra.b, {
-            amount: rM.ungiftable
+          children: [(0, ZV.jsx)("span", {
+            children: JV("newPlayerDeal:giftable")
+          }), (0, ZV.jsx)(My.e, {
+            amount: (0, Yy.c)(eV)
+          }), (0, ZV.jsx)("span", {
+            children: JV("newPlayerDeal:ungiftable")
+          }), (0, ZV.jsx)(My.e, {
+            amount: eV.ungiftable
           })]
-        }), (0, LM.jsx)("div", {
+        }), (0, ZV.jsx)("div", {
           className: "NewPlayerDealGiftNoticeWhy",
-          children: OM("newPlayerDeal:ungiftableWhy")
-        }), (0, LM.jsx)(QM.p, {
+          children: JV("newPlayerDeal:ungiftableWhy")
+        }), (0, ZV.jsx)(nV.m, {
           className: "NewPlayerDealGiftNoticeOk",
-          onClick: iM,
-          children: OM("general:ok")
+          onClick: xV,
+          children: JV("general:ok")
         })]
       })
     }
 
-    function TP(MM) {
-      yr.NotificationProvider.showCustomPopup({
-        body: rM => (0, LM.jsx)(qP, {
-          wallet: MM,
-          close: rM
+    function Sp(VV) {
+      Be.NotificationProvider.showCustomPopup({
+        body: eV => (0, ZV.jsx)(sp, {
+          wallet: VV,
+          close: eV
         }),
         middleScreenPopupClassName: "NewPlayerDealGiftNoticePopup",
         disableExitButton: !0
       })
     }
-    const VP = {
+    const Ip = {
       kind: "board"
     };
-    let cP = !1;
+    let dp = !1;
 
-    function Mn(MM) {
-      return "found" === MM.status || "error" === MM.status && "store:giftRecipientLookupFailed" === MM.error ? MM.name : null
-    }(0, YM.r)(Oa.prefetchBillingOfferings);
-    const rn = (0, OM.memo)((function(MM) {
-      var rM;
+    function Op(VV) {
+      return "found" === VV.status || "error" === VV.status && "store:giftRecipientLookupFailed" === VV.error ? VV.name : null
+    }(0, cV.w)(ey.prefetchBillingOfferings);
+    const VQ = (0, JV.memo)((function(VV) {
+      var eV;
       let {
-        show: SM
-      } = MM;
+        show: YV
+      } = VV;
       const {
-        t: PM
-      } = (0, aM.A)(), {
-        userContext: nM
-      } = (0, hM.b)(), QM = (0, NM.usePurchasesAllowed)(), zM = nM !== uM.NULL_USER_CONTEXT, mM = Ja(nM, SM), [HM, JM] = (0, dM.d)(), {
-        page: yM,
-        urlMode: lM,
-        goTo: EM
-      } = (0, da.d)(), UM = function(MM) {
-        return "superRank" === MM.kind ? "superRank" : "pack" === MM.kind ? MM.pack : null
-      }(yM), {
-        openEverythingMenuName: GM,
-        gameState: CM
-      } = (0, bM.m)(["openEverythingMenuName", "gameState"]), eM = null !== GM;
-      ! function(MM, rM) {
-        const [SM] = (0, OM.useState)(Ea.f), [jM, aM] = (0, OM.useState)(!1);
-        SM && rM && !jM && aM(!0);
-        const PM = (0, oO.y)(),
-          nM = SM && jM && MM && !PM;
-        (0, OM.useEffect)((() => {
-          if (!nM) return;
-          let MM = null,
-            rM = null,
-            OM = null;
-          const SM = () => !document.hasFocus() || document.activeElement instanceof HTMLIFrameElement || (0, KM.getBillingClient)().purchaseUnderWay,
-            jM = () => {
-              var iM;
-              null === (iM = OM) || void 0 === iM || iM(), OM = null, null !== MM && (clearTimeout(MM), MM = null), null !== rM && (clearTimeout(rM), rM = null)
+        t: pV
+      } = (0, yV.A)(), {
+        userContext: QV
+      } = (0, kV.d)(), nV = (0, hV.usePurchasesAllowed)(), wV = QV !== zV.NULL_USER_CONTEXT, vV = ry(QV, YV), [rV, bV] = (0, EV.e)(), {
+        page: BV,
+        urlMode: jV,
+        goTo: qV
+      } = (0, ky.f)(), tV = function(VV) {
+        return "superRank" === VV.kind ? "superRank" : "pack" === VV.kind ? VV.pack : null
+      }(BV), {
+        openEverythingMenuName: FV,
+        gameState: TV
+      } = (0, AV.l)(["openEverythingMenuName", "gameState"]), PV = null !== FV;
+      ! function(VV, eV) {
+        const [YV] = (0, JV.useState)(By.l), [UV, yV] = (0, JV.useState)(!1);
+        YV && eV && !UV && yV(!0);
+        const pV = (0, iJ.E)(),
+          QV = YV && UV && VV && !pV;
+        (0, JV.useEffect)((() => {
+          if (!QV) return;
+          let VV = null,
+            eV = null,
+            JV = null;
+          const YV = () => !document.hasFocus() || document.activeElement instanceof HTMLIFrameElement || (0, sV.getBillingClient)().purchaseUnderWay,
+            UV = () => {
+              var xV;
+              null === (xV = JV) || void 0 === xV || xV(), JV = null, null !== VV && (clearTimeout(VV), VV = null), null !== eV && (clearTimeout(eV), eV = null)
             },
-            aM = () => {
-              (0, ya.s)(!1), (0, ya.p)(!1), jM(), MM = setTimeout((() => {
-                MM = null, OM = (0, la.d)((() => {
-                  OM = null, SM() ? aM() : ((0, ya.s)(!0), rM = setTimeout((() => {
-                    rM = null, OM = (0, la.d)((() => {
-                      OM = null, SM() ? aM() : (0, ya.p)(!0)
+            yV = () => {
+              (0, by.k)(!1), (0, by.i)(!1), UV(), VV = setTimeout((() => {
+                VV = null, JV = (0, Ey.e)((() => {
+                  JV = null, YV() ? yV() : ((0, by.k)(!0), eV = setTimeout((() => {
+                    eV = null, JV = (0, Ey.e)((() => {
+                      JV = null, YV() ? yV() : (0, by.i)(!0)
                     }))
-                  }), 3e3), Promise.resolve().then((() => iM(5035))).then((MM => {
-                    MM.startBackgroundGameSetup()
-                  }), (MM => {
-                    console.warn("Background game setup: its chunk failed to load", MM)
+                  }), 3e3), Promise.resolve().then((() => xV(5145))).then((VV => {
+                    VV.startBackgroundGameSetup()
+                  }), (VV => {
+                    console.warn("Background game setup: its chunk failed to load", VV)
                   })))
                 }))
               }), 2e3)
             };
-          for (const iM of Ua) window.addEventListener(iM, aM, {
+          for (const xV of jy) window.addEventListener(xV, yV, {
             capture: !0,
             passive: !0
           });
-          return aM(), () => {
-            for (const MM of Ua) window.removeEventListener(MM, aM, {
+          return yV(), () => {
+            for (const VV of jy) window.removeEventListener(VV, yV, {
               capture: !0
             });
-            jM(), (0, ya.s)(!1), (0, ya.p)(!1)
+            UV(), (0, by.k)(!1), (0, by.i)(!1)
           }
-        }), [nM])
-      }(SM && eM, "pack" === yM.kind);
-      const wM = "landingPage" === CM;
-      (0, OM.useEffect)((() => {
-        eM && (0, Oa.prefetchBillingOfferings)()
-      }), [eM]), (0, OM.useEffect)((() => {
-        eM && !SM && wM && (0, Ga.r)()
-      }), [eM, SM, wM]);
-      const [tM, gM] = (0, OM.useState)(0), [RM, pM] = (0, OM.useState)(null), [WM, sM] = (0, OM.useState)(null), [DM, ZM] = (0, OM.useState)(null), [oM, fM] = (0, OM.useState)(null), [AM, xM] = (0, OM.useState)(0), vM = (0, OM.useRef)(null), FM = (0, OM.useRef)(null), BM = (0, OM.useRef)(null), XM = (0, OM.useRef)(!1), IM = (0, YM.x)(), qM = (0, OM.useRef)(0), TM = (0, OM.useRef)(!1);
+        }), [QV])
+      }(YV && PV, "pack" === BV.kind);
+      const NV = "landingPage" === TV;
+      (0, JV.useEffect)((() => {
+        PV && (0, ey.prefetchBillingOfferings)()
+      }), [PV]), (0, JV.useEffect)((() => {
+        PV && !YV && NV && (0, qy.x)()
+      }), [PV, YV, NV]);
+      const [XV, MV] = (0, JV.useState)(0), [GV, WV] = (0, JV.useState)(null), [RV, gV] = (0, JV.useState)(null), [DV, CV] = (0, JV.useState)(null), [aV, oV] = (0, JV.useState)(null), [lV, LV] = (0, JV.useState)(0), fV = (0, JV.useRef)(null), mV = (0, JV.useRef)(null), KV = (0, JV.useRef)(null), HV = (0, JV.useRef)(!1), uV = (0, cV.F)(), SV = (0, JV.useRef)(0), IV = (0, JV.useRef)(!1);
 
-      function VM() {
-        gM((MM => MM + 1))
-      }(0, OM.useEffect)((() => {
-        if (!SM) return TM.current = !1, void xM(0);
-        if (cP = !0, (0, YM.k)(), IM && IM.seq !== qM.current) {
-          var MM;
-          qM.current = IM.seq, "loginResume" !== IM.source && (0, YM.u)();
-          const rM = (0, YM.b)(IM);
-          lM || EM(rM), fM(null !== (MM = IM.highlight) && void 0 !== MM ? MM : null);
-          const iM = "newPlayerDeal" === IM.source || "loginResume" === IM.source && void 0 !== IM.highlight && (0, FP.g)(nM).includes(IM.highlight);
-          xM((MM => iM ? MM + 1 : 0)), sM(null), "gift" === IM.mode && IM.giftRecipientName ? mM.choose(IM.giftRecipientName, "prefilled") : mM.clear(), "gift" !== IM.mode || IM.giftRecipientName || VM(), (0, Sr.reportAnalyticsClick)({
+      function dV() {
+        MV((VV => VV + 1))
+      }(0, JV.useEffect)((() => {
+        if (!YV) return IV.current = !1, void LV(0);
+        if (dp = !0, (0, cV.k)(), uV && uV.seq !== SV.current) {
+          var VV;
+          SV.current = uV.seq, "loginResume" !== uV.source && (0, cV.B)();
+          const eV = (0, cV.e)(uV);
+          jV || qV(eV), oV(null !== (VV = uV.highlight) && void 0 !== VV ? VV : null);
+          const xV = "newPlayerDeal" === uV.source || "loginResume" === uV.source && void 0 !== uV.highlight && (0, Lp.c)(QV).includes(uV.highlight);
+          LV((VV => xV ? VV + 1 : 0)), gV(null), "gift" === uV.mode && uV.giftRecipientName ? vV.choose(uV.giftRecipientName, "prefilled") : vV.clear(), "gift" !== uV.mode || uV.giftRecipientName || dV(), (0, Ye.reportAnalyticsClick)({
             id: "store.open",
-            value: IM.source
+            value: uV.source
           })
-        } else TM.current || (0, Sr.reportAnalyticsClick)({
+        } else IV.current || (0, Ye.reportAnalyticsClick)({
           id: "store.open",
           value: "menuTab"
         });
-        TM.current = !0
-      }), [SM, IM]);
-      const cM = (0, FP.S)(),
-        Mr = null !== oM && null === cM && null === (0, FP.j)((0, FP.d)(nM)) && (0, FP.g)(nM).includes(oM);
-      (0, OM.useEffect)((() => {
-        if (!oM) return;
-        const MM = setTimeout((() => {
-          fM(null)
-        }), Mr ? 15e3 : 4e3);
+        IV.current = !0
+      }), [YV, uV]);
+      const OV = (0, Lp.T)(),
+        Ve = null !== aV && null === OV && null === (0, Lp.g)((0, Lp.b)(QV)) && (0, Lp.c)(QV).includes(aV);
+      (0, JV.useEffect)((() => {
+        if (!aV) return;
+        const VV = setTimeout((() => {
+          oV(null)
+        }), Ve ? 15e3 : 4e3);
         return () => {
-          clearTimeout(MM)
+          clearTimeout(VV)
         }
-      }), [oM, Mr]), (0, OM.useLayoutEffect)((() => {
-        const MM = vM.current;
-        if (!SM || !MM) return FM.current = null, void(BM.current = null);
-        var rM;
-        if (UM) FM.current = UM, null === (rM = MM.querySelector(".StoreDetailBackButton, .CosmeticShopDetailBackButton")) || void 0 === rM || rM.focus();
-        else if (FM.current) {
-          const rM = BM.current;
-          null !== rM && (MM.scrollTop = rM);
-          const iM = MM.querySelector(`[data-store-item="${FM.current}"]`);
-          if (iM) {
-            const OM = iM.getBoundingClientRect(),
-              SM = MM.getBoundingClientRect();
-            iM.focus({
-              preventScroll: null !== rM && OM.bottom > SM.top && OM.top < SM.bottom
+      }), [aV, Ve]), (0, JV.useLayoutEffect)((() => {
+        const VV = fV.current;
+        if (!YV || !VV) return mV.current = null, void(KV.current = null);
+        var eV;
+        if (tV) mV.current = tV, null === (eV = VV.querySelector(".StoreDetailBackButton, .CosmeticShopDetailBackButton")) || void 0 === eV || eV.focus();
+        else if (mV.current) {
+          const eV = KV.current;
+          null !== eV && (VV.scrollTop = eV);
+          const xV = VV.querySelector(`[data-store-item="${mV.current}"]`);
+          if (xV) {
+            const JV = xV.getBoundingClientRect(),
+              YV = VV.getBoundingClientRect();
+            xV.focus({
+              preventScroll: null !== eV && JV.bottom > YV.top && JV.top < YV.bottom
             })
           }
-          FM.current = null
+          mV.current = null
         }
-      }), [UM, SM]), (0, OM.useEffect)((() => {
-        sM(null)
-      }), [mM.query]), (0, OM.useEffect)((() => {
-        if (!DM) return;
-        const MM = setTimeout((() => {
-          ZM(null)
+      }), [tV, YV]), (0, JV.useEffect)((() => {
+        gV(null)
+      }), [vV.query]), (0, JV.useEffect)((() => {
+        if (!DV) return;
+        const VV = setTimeout((() => {
+          CV(null)
         }), 8e3);
         return () => {
-          clearTimeout(MM)
+          clearTimeout(VV)
         }
-      }), [DM]);
-      const rr = nM.superRankInfo,
-        ir = nM.isLoggedIn() || (0, NM.guestsMayBuy)(),
-        Or = nM.getOwnedCosmeticPacks(),
-        jr = (0, La.o)(mM.query),
-        ar = (0, La.g)({
-          mode: jr,
-          loggedIn: zM ? ir : null,
-          superRankInfo: rr,
+      }), [DV]);
+      const ee = QV.superRankInfo,
+        xe = QV.isLoggedIn() || (0, hV.guestsMayBuy)(),
+        Je = QV.getOwnedCosmeticPacks(),
+        Ue = (0, ny.l)(vV.query),
+        ye = (0, ny.e)({
+          mode: Ue,
+          loggedIn: wV ? xe : null,
+          superRankInfo: ee,
           now: Date.now(),
-          ownedPacks: Or,
-          packs: ia.w,
-          recipient: mM.recipient
+          ownedPacks: Je,
+          packs: Vy.w,
+          recipient: vV.recipient
         });
-      (0, OM.useEffect)((() => {
-        if (!ir || !SM) return;
-        const MM = (0, FP.g)(nM),
-          rM = (0, YM.u)((rM => !MM.includes(rM.item))),
-          iM = rM && (0, La.m)(rM, ia.w);
-        rM && iM && ((0, Sr.reportAnalyticsClick)({
+      (0, JV.useEffect)((() => {
+        if (!xe || !YV) return;
+        const VV = (0, Lp.c)(QV),
+          eV = (0, cV.B)((eV => !VV.includes(eV.item))),
+          xV = eV && (0, ny.k)(eV, Vy.w);
+        eV && xV && ((0, Ye.reportAnalyticsClick)({
           id: "store.login_resume",
-          value: rM.item
-        }), (0, YM.n)(iM))
-      }), [ir, SM]);
-      const Pr = SM && "gift" === jr,
-        nr = (0, OM.useRef)(Pr);
-      nr.current = Pr;
-      const Qr = "none" !== mM.recipient.status,
-        zr = (0, OM.useRef)(!1);
-      (0, OM.useEffect)((() => {
-        Pr ? Qr && !zr.current && (zr.current = !0, async function(MM) {
-          var rM;
-          if ("gift" === (null === (rM = (0, KP.m)()) || void 0 === rM ? void 0 : rM.show)) return void TP(KP.e);
-          const iM = await (0, aa.e)();
-          null !== iM && iM.ungiftable > 0 && MM() && TP(iM)
-        }((() => nr.current))) : zr.current = !1
-      }), [Pr, Qr]);
-      const Lr = (0, La.s)({
-        superRankDaysLeft: ar.superRankDaysLeft,
-        openedThisSession: cP || SM,
-        seenNewItems: (0, YM.h)()
+          value: eV.item
+        }), (0, cV.o)(xV))
+      }), [xe, YV]);
+      const pe = YV && "gift" === Ue,
+        Qe = (0, JV.useRef)(pe);
+      Qe.current = pe;
+      const ne = "none" !== vV.recipient.status,
+        we = (0, JV.useRef)(!1);
+      (0, JV.useEffect)((() => {
+        pe ? ne && !we.current && (we.current = !0, async function(VV) {
+          var eV;
+          if ("gift" === (null === (eV = (0, Hp.i)()) || void 0 === eV ? void 0 : eV.show)) return void Sp(Hp.b);
+          const xV = await (0, Yy.f)();
+          null !== xV && xV.ungiftable > 0 && VV() && Sp(xV)
+        }((() => Qe.current))) : we.current = !1
+      }), [pe, ne]);
+      const Ze = (0, ny.o)({
+        superRankDaysLeft: ye.superRankDaysLeft,
+        openedThisSession: dp || YV,
+        seenNewItems: (0, cV.j)()
       });
-      (0, OM.useEffect)((() => {
-        (0, YM.t)(Lr)
-      }), [Lr]);
-      const mr = "self" === jr,
-        Hr = xP(SM, SM && mr && "board" === yM.kind);
-      if (!SM || !QM) return null;
-      const hr = JM > HM && HM <= 700,
-        Jr = !hr && JM <= 420,
-        dr = "gift" === jr ? Mn(mM.recipient) : null,
-        yr = null !== RM;
+      (0, JV.useEffect)((() => {
+        (0, cV.x)(Ze)
+      }), [Ze]);
+      const ve = "self" === Ue,
+        re = hp(YV, YV && ve && "board" === BV.kind);
+      if (!YV || !nV) return null;
+      const ke = bV > rV && rV <= 700,
+        be = !ke && bV <= 420,
+        Ee = "gift" === Ue ? Op(vV.recipient) : null,
+        Be = null !== GV;
 
-      function lr(MM) {
-        (0, ja.e)(MM, "gift" === jr ? mM.query.trim() : null)
+      function je(VV) {
+        (0, Jy.e)(VV, "gift" === Ue ? vV.query.trim() : null)
       }
 
-      function Er(MM, rM) {
-        (0, Sr.reportAnalyticsClick)({
+      function qe(VV, eV) {
+        (0, Ye.reportAnalyticsClick)({
           id: "store.purchase_done",
-          value: `${rM?"gift":"self"}:${MM}`
-        }), rM && (mM.recordGift(rM.name, MM), Ur(rM))
+          value: `${eV?"gift":"self"}:${VV}`
+        }), eV && (vV.recordGift(eV.name, VV), te(eV))
       }
 
-      function Ur(MM) {
-        ! function(MM) {
+      function te(VV) {
+        ! function(VV) {
           try {
-            Si.g.setItem(ma, (0, La.z)(ha(), MM))
+            Yx.m.setItem(wy, (0, ny.w)(vy(), VV))
           } catch {}
         }({
-          name: MM.name,
-          cosmetics: MM.cosmetics
-        }), EM(VP), ZM((rM => {
-          var iM;
+          name: VV.name,
+          cosmetics: VV.cosmetics
+        }), qV(Ip), CV((eV => {
+          var xV;
           return {
-            name: MM.name,
-            seq: (null !== (iM = null === rM || void 0 === rM ? void 0 : rM.seq) && void 0 !== iM ? iM : 0) + 1
+            name: VV.name,
+            seq: (null !== (xV = null === eV || void 0 === eV ? void 0 : eV.seq) && void 0 !== xV ? xV : 0) + 1
           }
         }))
       }
-      async function Gr(MM) {
-        var rM, iM;
-        if (XM.current) return;
-        if (!ir) return void lr(MM);
-        sM(null), fM(null);
-        const OM = "gift" === jr ? {
-          name: Mn(mM.recipient),
-          cosmetics: mM.recipientCosmetics
+      async function Fe(VV) {
+        var eV, xV;
+        if (HV.current) return;
+        if (!xe) return void je(VV);
+        gV(null), oV(null);
+        const JV = "gift" === Ue ? {
+          name: Op(vV.recipient),
+          cosmetics: vV.recipientCosmetics
         } : null;
-        if (OM && !OM.name) return void VM();
-        const SM = "superRank" === MM ? kM.k.id : (0, kM.c)(MM);
-        XM.current = !0;
-        const jM = await (0, za.d)(SM, null !== (rM = null === OM || void 0 === OM ? void 0 : OM.name) && void 0 !== rM ? rM : null);
-        if (XM.current = !1, !jM) return;
-        pM(MM);
-        const aM = await aa.i.purchase(SM, null !== (iM = null === OM || void 0 === OM ? void 0 : OM.name) && void 0 !== iM ? iM : null);
-        pM(null), aM ? sM(aM) : (Er(MM, OM), OM || (await (0, Pa.flushClientAnalyticsEvents)(), (0, Sa.refreshWithoutConfirmation)("superRank" === MM ? "/super-rank-welcome" : `/pack-welcome/${MM}`)))
+        if (JV && !JV.name) return void dV();
+        const YV = "superRank" === VV ? iV.k.id : (0, iV.d)(VV);
+        HV.current = !0;
+        const UV = await (0, Qy.e)(YV, null !== (eV = null === JV || void 0 === JV ? void 0 : JV.name) && void 0 !== eV ? eV : null);
+        if (HV.current = !1, !UV) return;
+        WV(VV);
+        const yV = await Yy.j.purchase(YV, null !== (xV = null === JV || void 0 === JV ? void 0 : JV.name) && void 0 !== xV ? xV : null);
+        WV(null), yV ? gV(yV) : (qe(VV, JV), JV || (await (0, Uy.flushClientAnalyticsEvents)(), (0, xy.refreshWithoutConfirmation)("superRank" === VV ? "/super-rank-welcome" : `/pack-welcome/${VV}`)))
       }
-      const Cr = jM()("Store", {
-        StoreGift: "gift" === jr,
-        StorePortrait: hr,
-        StoreCompact: Jr
+      const Te = UV()("Store", {
+        StoreGift: "gift" === Ue,
+        StorePortrait: ke,
+        StoreCompact: be
       });
-      if ("pack" === yM.kind) {
-        const MM = yM.pack,
-          rM = ar.packs.find((rM => rM.pack === MM));
-        return (0, LM.jsx)("div", {
-          ref: vM,
+      if ("pack" === BV.kind) {
+        const VV = BV.pack,
+          eV = ye.packs.find((eV => eV.pack === VV));
+        return (0, ZV.jsx)("div", {
+          ref: fV,
           className: "CosmeticShopContainer",
-          children: (0, LM.jsx)(Qa.e, {
-            pack: MM,
+          children: (0, ZV.jsx)(py.g, {
+            pack: VV,
             onBack: () => {
-              EM(VP)
+              qV(Ip)
             },
-            onPurchased: rM => {
-              Er(MM, rM ? {
-                name: rM,
+            onPurchased: eV => {
+              qe(VV, eV ? {
+                name: eV,
                 cosmetics: null
               } : null)
             },
-            giftCta: "gift" === jr && dr && rM && (0, LM.jsxs)(LM.Fragment, {
-              children: [(0, LM.jsx)(Ia, {
-                state: rM.state,
-                item: MM,
-                price: (er = MM, "superRank" === er ? kM.k.price : (0, kM.e)(er)),
-                busy: yr,
+            giftCta: "gift" === Ue && Ee && eV && (0, ZV.jsxs)(ZV.Fragment, {
+              children: [(0, ZV.jsx)(Ky, {
+                state: eV.state,
+                item: VV,
+                price: (Pe = VV, "superRank" === Pe ? iV.k.price : (0, iV.e)(Pe)),
+                busy: Be,
                 onAct: () => {
-                  Gr(MM)
+                  Fe(VV)
                 },
                 onNeedRecipient: () => {
-                  EM(VP), VM()
+                  qV(Ip), dV()
                 },
                 onLogin: () => {
-                  lr(MM)
+                  je(VV)
                 },
-                highlight: oM === MM
-              }), WM && (0, LM.jsx)("span", {
+                highlight: aV === VV
+              }), RV && (0, ZV.jsx)("span", {
                 className: "CosmeticShopGiftError SmallTextBold",
-                children: PM(WM)
+                children: pV(RV)
               })]
             }),
-            ownedPacks: Or,
-            startAsGift: "gift" === jr,
-            initialGiftRecipient: "gift" === jr ? null !== dr && void 0 !== dr ? dr : mM.query.trim() : "",
-            highlightCta: oM === MM
-          }, MM)
+            ownedPacks: Je,
+            startAsGift: "gift" === Ue,
+            initialGiftRecipient: "gift" === Ue ? null !== Ee && void 0 !== Ee ? Ee : vV.query.trim() : "",
+            highlightCta: aV === VV
+          }, VV)
         })
       }
-      var er;
-      return "superRank" === yM.kind ? (0, LM.jsx)("div", {
-        ref: vM,
-        className: jM()(Cr, "StoreDetailView"),
-        children: (0, LM.jsx)(yP, {
-          state: ar.superRank.state,
-          mode: jr,
-          giftName: dr,
-          busy: yr,
-          highlight: "superRank" === oM,
-          purchaseError: WM,
+      var Pe;
+      return "superRank" === BV.kind ? (0, ZV.jsx)("div", {
+        ref: fV,
+        className: UV()(Te, "StoreDetailView"),
+        children: (0, ZV.jsx)(bp, {
+          state: ye.superRank.state,
+          mode: Ue,
+          giftName: Ee,
+          busy: Be,
+          highlight: "superRank" === aV,
+          purchaseError: RV,
           onBack: () => {
-            EM(VP)
+            qV(Ip)
           },
           onChooseRecipient: () => {
-            EM(VP), VM()
+            qV(Ip), dV()
           },
           onAct: () => {
-            Gr("superRank")
+            Fe("superRank")
           },
           onLogin: () => {
-            lr("superRank")
+            je("superRank")
           }
         })
-      }) : (0, LM.jsxs)("div", {
-        ref: vM,
-        className: Cr,
-        onScroll: MM => {
-          BM.current = MM.currentTarget.scrollTop
+      }) : (0, ZV.jsxs)("div", {
+        ref: fV,
+        className: Te,
+        onScroll: VV => {
+          KV.current = VV.currentTarget.scrollTop
         },
-        children: [(0, LM.jsx)("div", {
+        children: [(0, ZV.jsx)("div", {
           className: "StoreTopRow",
-          children: (0, LM.jsx)(ua, {
-            selfName: zM ? nM.getPlayerName() : "",
-            giftRecipient: mM,
-            suggestionsVersion: null !== (rM = null === DM || void 0 === DM ? void 0 : DM.seq) && void 0 !== rM ? rM : 0,
-            pulseSignal: tM,
-            disabled: yr || !zM
+          children: (0, ZV.jsx)(Xy, {
+            selfName: wV ? QV.getPlayerName() : "",
+            giftRecipient: vV,
+            suggestionsVersion: null !== (eV = null === DV || void 0 === DV ? void 0 : DV.seq) && void 0 !== eV ? eV : 0,
+            pulseSignal: XV,
+            disabled: Be || !wV
           })
-        }), DM && (0, LM.jsxs)("div", {
+        }), DV && (0, ZV.jsxs)("div", {
           className: "StoreNotice StoreNoticeGiftSent",
           onClick: () => {
-            ZM(null)
+            CV(null)
           },
-          children: [(0, LM.jsx)(na.d, {
-            showSignal: DM.seq
-          }), La.e, " ", PM("store:giftSent", {
-            name: DM.name
+          children: [(0, ZV.jsx)(yy.b, {
+            showSignal: DV.seq
+          }), ny.b, " ", pV("store:giftSent", {
+            name: DV.name
           })]
-        }, DM.seq), !DM && WM && (0, LM.jsx)("div", {
+        }, DV.seq), !DV && RV && (0, ZV.jsx)("div", {
           className: "StoreNotice StoreNoticeError",
-          children: PM(WM)
-        }), mr && Hr.claimFailed, (0, LM.jsx)(dP, {
-          layout: ar,
-          mountAtOnce: null !== FM.current,
-          bundleGift: "gift" === jr ? {
-            recipientName: dr,
-            lookingUp: "pending" === mM.recipient.status,
-            busy: yr,
-            onNeedRecipient: VM,
-            onSent: MM => {
-              (0, Sr.reportAnalyticsClick)({
+          children: pV(RV)
+        }), ve && re.claimFailed, (0, ZV.jsx)(kp, {
+          layout: ye,
+          mountAtOnce: null !== mV.current,
+          bundleGift: "gift" === Ue ? {
+            recipientName: Ee,
+            lookingUp: "pending" === vV.recipient.status,
+            busy: Be,
+            onNeedRecipient: dV,
+            onSent: VV => {
+              (0, Ye.reportAnalyticsClick)({
                 id: "store.purchase_done",
                 value: "gift:superGems"
-              }), Ur({
-                name: MM,
-                cosmetics: mM.recipientCosmetics
+              }), te({
+                name: VV,
+                cosmetics: vV.recipientCosmetics
               })
             }
           } : null,
-          superRankTotalDays: (0, La.u)(rr),
-          busy: yr,
-          highlightItem: oM,
-          onOpen: function(MM) {
-            (0, Sr.reportAnalyticsClick)({
+          superRankTotalDays: (0, ny.s)(ee),
+          busy: Be,
+          highlightItem: aV,
+          onOpen: function(VV) {
+            (0, Ye.reportAnalyticsClick)({
               id: "store.item_open",
-              value: MM
-            }), EM((0, YM.f)(MM))
+              value: VV
+            }), qV((0, cV.f)(VV))
           },
-          onAct: Gr,
-          onNeedRecipient: VM,
-          onLogin: lr,
-          dailyDropTile: mr && Hr.tile,
-          dealBanner: "self" === jr && null !== cM && (0, LM.jsx)(IP, {
-            view: cM,
-            highlight: oM,
-            scrollSignal: AM,
+          onAct: Fe,
+          onNeedRecipient: dV,
+          onLogin: je,
+          dailyDropTile: ve && re.tile,
+          dealBanner: "self" === Ue && null !== OV && (0, ZV.jsx)(Kp, {
+            view: OV,
+            highlight: aV,
+            scrollSignal: lV,
             onScrolledIntoView: () => {
-              xM(0)
+              LV(0)
             }
           })
-        }), "gift" !== jr && (0, LM.jsx)(wP, {}), Hr.reveal]
+        }), "gift" !== Ue && (0, ZV.jsx)(Pp, {}), re.reveal]
       })
     }));
-    var On = iM(2905),
-      Sn = iM(9438),
-      jn = iM(9271),
-      an = iM(3038),
-      Pn = iM(2813),
-      nn = iM(2862),
-      Qn = iM(2875),
-      zn = iM(2880),
-      Ln = iM(2963),
-      mn = iM(2950),
-      Hn = iM(2470),
-      hn = iM(2533),
-      Jn = iM(2494),
-      dn = iM(2148),
-      yn = iM(2882),
-      En = iM(2540);
+    var eQ = xV(2968),
+      xQ = xV(9445),
+      JQ = xV(9284),
+      YQ = xV(3073),
+      UQ = xV(2887),
+      yQ = xV(2931),
+      pQ = xV(2942),
+      QQ = xV(2945),
+      nQ = xV(3013),
+      wQ = xV(2997),
+      ZQ = xV(2510),
+      vQ = xV(2573),
+      rQ = xV(2530),
+      kQ = xV(2171),
+      bQ = xV(2948),
+      EQ = xV(2582);
 
-    function Un(MM) {
+    function BQ(VV) {
       let {
-        show: rM
-      } = MM;
-      return rM ? (0, LM.jsx)(Gn, {}) : null
+        show: eV
+      } = VV;
+      return eV ? (0, ZV.jsx)(jQ, {}) : null
     }
 
-    function Gn() {
+    function jQ() {
       const {
-        t: MM
-      } = (0, aM.A)(), {
-        followsLeader: rM
-      } = (0, Pn.c)(), {
-        loading: iM,
-        friends: SM,
-        requests: nM,
-        invites: zM
-      } = (0, vM.m)(), {
-        userContext: mM
-      } = (0, hM.b)(), [HM, JM] = (0, OM.useState)(En.h);
-      (0, OM.useEffect)((() => {
-        (0, En.b)()
+        t: VV
+      } = (0, yV.A)(), {
+        followsLeader: eV
+      } = (0, UQ.f)(), {
+        loading: xV,
+        friends: YV,
+        requests: QV,
+        invites: wV
+      } = (0, fV.m)(), {
+        userContext: vV
+      } = (0, kV.d)(), [rV, bV] = (0, JV.useState)(EQ.l);
+      (0, JV.useEffect)((() => {
+        (0, EQ.d)()
       }), []);
-      const dM = nM.map((MM => MM.name)),
+      const EV = QV.map((VV => VV.name)),
         {
-          state: yM,
-          recentRequesters: lM
-        } = (0, mn.p)(),
-        EM = new Map([...("loaded" === yM.status ? yM.recentPlayers : []).map((MM => [MM.preview.name, MM])), ...lM.map((MM => [MM.name, MM]))]),
-        UM = (0, OM.useRef)(null),
-        [eM, bM] = (0, OM.useState)(""),
-        [wM, tM] = (0, OM.useState)("Enter"),
-        [gM, uM] = (0, OM.useState)(null);
+          state: BV,
+          recentRequesters: jV
+        } = (0, wQ.k)(),
+        qV = new Map([...("loaded" === BV.status ? BV.recentPlayers : []).map((VV => [VV.preview.name, VV])), ...jV.map((VV => [VV.name, VV]))]),
+        tV = (0, JV.useRef)(null),
+        [PV, AV] = (0, JV.useState)(""),
+        [NV, XV] = (0, JV.useState)("Enter"),
+        [MV, zV] = (0, JV.useState)(null);
 
-      function RM() {
-        eM && (tM("Loading"), (0, Jn.h)(eM, "social_menu").then((MM => {
-          if (UM.current) switch (MM.kind) {
+      function GV() {
+        PV && (XV("Loading"), (0, rQ.d)(PV, "social_menu").then((VV => {
+          if (tV.current) switch (VV.kind) {
             case "sent":
-              tM("Success");
+              XV("Success");
               break;
             case "becameFriends":
-              tM("BecameFriends");
+              XV("BecameFriends");
               break;
             case "failed":
-              uM(MM.message), tM("Error")
+              zV(VV.message), XV("Error")
           }
         })))
       }
-      return (0, OM.useEffect)((() => {
-        if ("Enter" === wM || "Loading" === wM) return;
-        const MM = setTimeout((() => {
-          UM.current.value = "", bM(""), tM("Enter")
-        }), "Success" === wM ? 1e3 : 4e3);
+      return (0, JV.useEffect)((() => {
+        if ("Enter" === NV || "Loading" === NV) return;
+        const VV = setTimeout((() => {
+          tV.current.value = "", AV(""), XV("Enter")
+        }), "Success" === NV ? 1e3 : 4e3);
         return () => {
-          clearTimeout(MM)
+          clearTimeout(VV)
         }
-      }), [wM]), (0, LM.jsx)("div", {
+      }), [NV]), (0, ZV.jsx)("div", {
         className: "SocialMenu",
-        children: (0, LM.jsxs)("div", {
+        children: (0, ZV.jsxs)("div", {
           className: "SocialMenuInner",
-          children: [(0, LM.jsxs)("div", {
+          children: [(0, ZV.jsxs)("div", {
             className: "SocialMenuColumn",
-            children: [(0, LM.jsxs)("div", {
+            children: [(0, ZV.jsxs)("div", {
               className: "SocialMenuBox SocialMenuAddFriend",
-              children: [(0, LM.jsx)(zn.d, {
-                label: MM("socialBar:addFriend")
-              }), (0, LM.jsxs)("div", {
+              children: [(0, ZV.jsx)(QQ.b, {
+                label: VV("socialBar:addFriend")
+              }), (0, ZV.jsxs)("div", {
                 className: "AddFriendBody",
-                children: [(0, LM.jsxs)("div", {
-                  className: jM()("AddFriendBodyOverlay", {
-                    [`AddFriendBodyOverlay${wM}`]: !0
+                children: [(0, ZV.jsxs)("div", {
+                  className: UV()("AddFriendBodyOverlay", {
+                    [`AddFriendBodyOverlay${NV}`]: !0
                   }),
-                  children: ["Loading" === wM && (0, LM.jsx)(CM.d, {}), "Success" === wM && (0, LM.jsx)(PM.b, {
+                  children: ["Loading" === NV && (0, ZV.jsx)(TV.d, {}), "Success" === NV && (0, ZV.jsx)(pV.b, {
                     name: "check"
-                  }), "BecameFriends" === wM && (0, LM.jsx)(LM.Fragment, {
-                    children: MM("socialBar:nowFriends", {
-                      playerName: eM
+                  }), "BecameFriends" === NV && (0, ZV.jsx)(ZV.Fragment, {
+                    children: VV("socialBar:nowFriends", {
+                      playerName: PV
                     })
-                  }), "Error" === wM && gM && (0, LM.jsx)(LM.Fragment, {
-                    children: MM(gM.translationKey, gM.params)
+                  }), "Error" === NV && MV && (0, ZV.jsx)(ZV.Fragment, {
+                    children: VV(MV.translationKey, MV.params)
                   })]
-                }), (0, LM.jsxs)("div", {
+                }), (0, ZV.jsxs)("div", {
                   className: "PlayerSearch",
-                  children: [(0, LM.jsx)(GM.b, {
+                  children: [(0, ZV.jsx)(FV.d, {
                     className: "PlayerSearchInput",
-                    placeholderText: MM("socialBar:enterPlayerName"),
-                    domRef: UM,
-                    onValueChange: MM => {
-                      bM((0, sM.l)(MM)), UM.current.value = (0, sM.l)(MM)
+                    placeholderText: VV("socialBar:enterPlayerName"),
+                    domRef: tV,
+                    onValueChange: VV => {
+                      AV((0, gV.o)(VV)), tV.current.value = (0, gV.o)(VV)
                     },
                     onEnter: () => {
-                      eM && (0, Sr.reportAnalyticsClick)({
+                      PV && (0, Ye.reportAnalyticsClick)({
                         id: "social.add_friend",
                         value: "social_menu"
-                      }), RM()
+                      }), GV()
                     }
-                  }), (0, LM.jsxs)(QM.e, {
+                  }), (0, ZV.jsxs)(nV.f, {
                     className: "PlayerSearchInputButton SmallTextLight",
                     onClick: () => {
-                      RM()
+                      GV()
                     },
                     analyticsClick: {
                       id: "social.add_friend",
                       value: "social_menu"
                     },
-                    children: [(0, LM.jsx)(PM.b, {
+                    children: [(0, ZV.jsx)(pV.b, {
                       name: "user-plus"
-                    }), " ", MM("socialBar:sendRequest")]
+                    }), " ", VV("socialBar:sendRequest")]
                   })]
                 })]
-              }), (0, LM.jsx)(yn.e, {
+              }), (0, ZV.jsx)(bQ.b, {
                 surface: "social_menu",
                 prefetchOnMount: !0
               })]
-            }), zM.length > 0 && (0, LM.jsxs)("div", {
+            }), wV.length > 0 && (0, ZV.jsxs)("div", {
               className: "SocialMenuBox SocialMenuInvites",
-              children: [(0, LM.jsx)(zn.d, {
-                label: MM("socialBar:invites"),
-                meta: zM.length
-              }), zM.map((rM => (0, LM.jsxs)("div", {
+              children: [(0, ZV.jsx)(QQ.b, {
+                label: VV("socialBar:invites"),
+                meta: wV.length
+              }), wV.map((eV => (0, ZV.jsxs)("div", {
                 className: "SocialMenuInvite",
-                children: [(0, LM.jsx)("div", {
+                children: [(0, ZV.jsx)("div", {
                   className: "SocialMenuInviteIcon",
-                  children: (0, LM.jsx)(Hn.d, {
-                    invite: rM
+                  children: (0, ZV.jsx)(ZQ.c, {
+                    invite: eV
                   })
-                }), (0, LM.jsx)("div", {
+                }), (0, ZV.jsx)("div", {
                   className: "SocialMenuInviteText",
-                  children: (0, LM.jsx)(Hn.e, {
-                    invite: rM
+                  children: (0, ZV.jsx)(ZQ.e, {
+                    invite: eV
                   })
-                }), (0, LM.jsx)(QM.p, {
+                }), (0, ZV.jsx)(nV.m, {
                   className: "SocialMenuInviteJoin SmallTextLight",
                   onClick: () => {
-                    (0, hn.e)(rM)
+                    (0, vQ.h)(eV)
                   },
                   analyticsClick: {
                     id: "social.accept_invite",
-                    value: `social_menu:${rM.destination.kind}`
+                    value: `social_menu:${eV.destination.kind}`
                   },
-                  children: MM("general:join")
-                }), (0, LM.jsx)(rr.i, {
-                  tooltipInner: (0, LM.jsx)(LM.Fragment, {
-                    children: MM("general:decline")
+                  children: VV("general:join")
+                }), (0, ZV.jsx)(ee.d, {
+                  tooltipInner: (0, ZV.jsx)(ZV.Fragment, {
+                    children: VV("general:decline")
                   }),
                   delayShow: 0,
-                  children: (0, LM.jsx)(QM.i, {
+                  children: (0, ZV.jsx)(nV.j, {
                     className: "SocialMenuInviteDecline",
-                    padDefaultFocus: "invite" === (null === HM || void 0 === HM ? void 0 : HM.kind) && HM.inviteId === rM.id,
+                    padDefaultFocus: "invite" === (null === rV || void 0 === rV ? void 0 : rV.kind) && rV.inviteId === eV.id,
                     onClick: () => {
-                      vM.e.declineInvite(rM.id)
+                      fV.c.declineInvite(eV.id)
                     },
                     analyticsClick: {
                       id: "social.decline_invite",
-                      value: `social_menu:${rM.destination.kind}`
+                      value: `social_menu:${eV.destination.kind}`
                     },
-                    children: (0, LM.jsx)(PM.b, {
+                    children: (0, ZV.jsx)(pV.b, {
                       name: "xmark"
                     })
                   })
                 })]
-              }, rM.id)))]
-            }), (0, LM.jsxs)("div", {
-              className: jM()("SocialMenuBox SocialMenuRequests", {
-                SocialMenuBoxEmpty: !iM && 0 === nM.length
+              }, eV.id)))]
+            }), (0, ZV.jsxs)("div", {
+              className: UV()("SocialMenuBox SocialMenuRequests", {
+                SocialMenuBoxEmpty: !xV && 0 === QV.length
               }),
-              children: [(0, LM.jsx)(zn.d, {
-                label: (0, LM.jsxs)(LM.Fragment, {
-                  children: [(0, LM.jsx)(PM.b, {
-                    name: dn.g
-                  }), " ", MM("socialBar:requests")]
+              children: [(0, ZV.jsx)(QQ.b, {
+                label: (0, ZV.jsxs)(ZV.Fragment, {
+                  children: [(0, ZV.jsx)(pV.b, {
+                    name: kQ.e
+                  }), " ", VV("socialBar:requests")]
                 }),
-                meta: (0, LM.jsxs)(LM.Fragment, {
-                  children: [nM.length, nM.length === ir.q && (0, LM.jsx)("span", {
+                meta: (0, ZV.jsxs)(ZV.Fragment, {
+                  children: [QV.length, QV.length === xe.n && (0, ZV.jsx)("span", {
                     className: "SocialSectionTitleLimit",
-                    children: MM("socialBar:limitReached")
+                    children: VV("socialBar:limitReached")
                   })]
                 })
-              }), iM && (0, LM.jsx)("div", {
+              }), xV && (0, ZV.jsx)("div", {
                 className: "SocialMenuLoading",
-                children: (0, LM.jsx)(CM.d, {})
-              }), !iM && 0 === nM.length && (0, LM.jsx)("div", {
+                children: (0, ZV.jsx)(TV.d, {})
+              }), !xV && 0 === QV.length && (0, ZV.jsx)("div", {
                 className: "SocialMenuEmpty",
-                children: MM("socialBar:noFriendRequests")
-              }), !iM && nM.length > 0 && (0, LM.jsx)("div", {
+                children: VV("socialBar:noFriendRequests")
+              }), !xV && QV.length > 0 && (0, ZV.jsx)("div", {
                 className: "PlayerRows",
-                children: (0, LM.jsx)(aj.e, {
+                children: (0, ZV.jsx)(YU.d, {
                   lazyLoadedClassName: "SocialMenuRequestsLazy",
-                  observerUpdateDeps: [nM],
-                  children: nM.map(((rM, iM) => {
-                    const OM = EM.get(rM.name);
-                    return (0, LM.jsxs)(Qn.h, {
-                      playerSocialPreview: rM,
-                      zIndex: nM.length - iM,
-                      padDefaultFocus: (0, En.f)(HM, rM.name, iM),
-                      status: OM && (0, LM.jsx)(Ln.d, {
-                        gameNameWithVariation: OM.gameNameWithVariation,
-                        isPrivateLobby: OM.isPrivateLobby
+                  observerUpdateDeps: [QV],
+                  children: QV.map(((eV, xV) => {
+                    const JV = qV.get(eV.name);
+                    return (0, ZV.jsxs)(pQ.e, {
+                      playerSocialPreview: eV,
+                      zIndex: QV.length - xV,
+                      padDefaultFocus: (0, EQ.h)(rV, eV.name, xV),
+                      status: JV && (0, ZV.jsx)(nQ.d, {
+                        gameNameWithVariation: JV.gameNameWithVariation,
+                        isPrivateLobby: JV.isPrivateLobby
                       }),
-                      children: [(0, LM.jsx)(rr.i, {
-                        tooltipInner: (0, LM.jsx)(LM.Fragment, {
-                          children: MM("general:accept")
+                      children: [(0, ZV.jsx)(ee.d, {
+                        tooltipInner: (0, ZV.jsx)(ZV.Fragment, {
+                          children: VV("general:accept")
                         }),
                         delayShow: 0,
-                        children: (0, LM.jsx)(QM.e, {
+                        children: (0, ZV.jsx)(nV.f, {
                           className: "FriendRequestButton",
                           onClick: () => {
-                            JM((0, En.c)(dM, iM)), (0, Jn.e)(rM.name, !0, {
+                            bV((0, EQ.f)(EV, xV)), (0, rQ.c)(eV.name, !0, {
                               source: "social_menu",
                               announceFriend: !1
                             })
@@ -8462,19 +8462,19 @@ export const modules = {
                             id: "social.accept_friend_request",
                             value: "social_menu"
                           },
-                          children: (0, LM.jsx)(PM.b, {
+                          children: (0, ZV.jsx)(pV.b, {
                             name: "check"
                           })
                         })
-                      }), (0, LM.jsx)(rr.i, {
-                        tooltipInner: (0, LM.jsx)(LM.Fragment, {
-                          children: MM("general:decline")
+                      }), (0, ZV.jsx)(ee.d, {
+                        tooltipInner: (0, ZV.jsx)(ZV.Fragment, {
+                          children: VV("general:decline")
                         }),
                         delayShow: 0,
-                        children: (0, LM.jsx)(QM.i, {
+                        children: (0, ZV.jsx)(nV.j, {
                           className: "FriendRequestButton",
                           onClick: () => {
-                            JM((0, En.c)(dM, iM)), (0, Jn.e)(rM.name, !1, {
+                            bV((0, EQ.f)(EV, xV)), (0, rQ.c)(eV.name, !1, {
                               source: "social_menu"
                             })
                           },
@@ -8482,62 +8482,62 @@ export const modules = {
                             id: "social.decline_friend_request",
                             value: "social_menu"
                           },
-                          children: (0, LM.jsx)(PM.b, {
+                          children: (0, ZV.jsx)(pV.b, {
                             name: "xmark"
                           })
                         })
                       })]
-                    }, `${rM.name}_${rM.isError}`)
+                    }, `${eV.name}_${eV.isError}`)
                   }))
                 })
               })]
-            }), (0, LM.jsx)(Ln.j, {})]
-          }), (0, LM.jsxs)("div", {
+            }), (0, ZV.jsx)(nQ.i, {})]
+          }), (0, ZV.jsxs)("div", {
             className: "SocialMenuColumn",
-            children: [(0, LM.jsxs)("div", {
+            children: [(0, ZV.jsxs)("div", {
               className: "SocialMenuBox SocialMenuParty",
-              children: [(0, LM.jsx)(zn.d, {
-                label: MM("socialBar:party")
-              }), (0, LM.jsx)(nn.e, {})]
-            }), (0, LM.jsxs)("div", {
+              children: [(0, ZV.jsx)(QQ.b, {
+                label: VV("socialBar:party")
+              }), (0, ZV.jsx)(yQ.c, {})]
+            }), (0, ZV.jsxs)("div", {
               className: "SocialMenuBox SocialMenuFriends",
-              children: [(0, LM.jsx)(zn.d, {
-                label: (0, LM.jsxs)(LM.Fragment, {
-                  children: [(0, LM.jsx)(PM.b, {
-                    name: dn.e
-                  }), " ", MM("socialBar:friends")]
+              children: [(0, ZV.jsx)(QQ.b, {
+                label: (0, ZV.jsxs)(ZV.Fragment, {
+                  children: [(0, ZV.jsx)(pV.b, {
+                    name: kQ.c
+                  }), " ", VV("socialBar:friends")]
                 }),
-                meta: (0, LM.jsxs)(LM.Fragment, {
-                  children: [SM.length, SM.length >= (0, ir.c)(mM.getPlayerRanks()) && (0, LM.jsx)("span", {
+                meta: (0, ZV.jsxs)(ZV.Fragment, {
+                  children: [YV.length, YV.length >= (0, xe.b)(vV.getPlayerRanks()) && (0, ZV.jsx)("span", {
                     className: "SocialSectionTitleLimit",
-                    children: MM("socialBar:limitReached")
+                    children: VV("socialBar:limitReached")
                   })]
                 })
-              }), iM && (0, LM.jsx)("div", {
+              }), xV && (0, ZV.jsx)("div", {
                 className: "SocialMenuLoading",
-                children: (0, LM.jsx)(CM.d, {})
-              }), !iM && 0 === SM.length && (0, LM.jsx)("div", {
+                children: (0, ZV.jsx)(TV.d, {})
+              }), !xV && 0 === YV.length && (0, ZV.jsx)("div", {
                 className: "SocialMenuEmpty",
-                children: MM("socialBar:noFriends")
-              }), !iM && SM.length > 0 && (0, LM.jsx)("div", {
+                children: VV("socialBar:noFriends")
+              }), !xV && YV.length > 0 && (0, ZV.jsx)("div", {
                 className: "PlayerRows",
-                children: (0, LM.jsx)(aj.e, {
+                children: (0, ZV.jsx)(YU.d, {
                   lazyLoadedClassName: "SocialMenuFriendsLazy",
-                  observerUpdateDeps: [SM],
-                  children: SM.map(((MM, iM) => (0, LM.jsx)(Qn.h, {
-                    playerSocialPreview: MM,
+                  observerUpdateDeps: [YV],
+                  children: YV.map(((VV, xV) => (0, ZV.jsx)(pQ.e, {
+                    playerSocialPreview: VV,
                     isFriend: !0,
                     hideFriendBadge: !0,
-                    onFriendRemoved: MM => {
-                      vM.e.removeFriendFromState(MM)
+                    onFriendRemoved: VV => {
+                      fV.c.removeFriendFromState(VV)
                     },
-                    zIndex: SM.length - iM,
-                    children: (0, LM.jsx)(Qn.e, {
-                      friend: MM,
-                      followsLeader: rM,
+                    zIndex: YV.length - xV,
+                    children: (0, ZV.jsx)(pQ.d, {
+                      friend: VV,
+                      followsLeader: eV,
                       analyticsSurface: "social_menu"
                     })
-                  }, `${MM.name}_${MM.isError}`)))
+                  }, `${VV.name}_${VV.isError}`)))
                 })
               })]
             })]
@@ -8545,793 +8545,793 @@ export const modules = {
         })
       })
     }
-    var Cn = iM(2735),
-      en = iM(4007),
-      bn = iM(4628),
-      wn = iM(1940),
-      tn = iM(4004),
-      gn = iM(4011);
+    var qQ = xV(2792),
+      tQ = xV(4032),
+      FQ = xV(4684),
+      TQ = xV(1952),
+      PQ = xV(4026),
+      AQ = xV(4035);
 
-    function un(MM) {
+    function NQ(VV) {
       let {
-        count: rM,
-        claiming: iM
-      } = MM;
+        count: eV,
+        claiming: xV
+      } = VV;
       const {
-        t: OM
-      } = (0, aM.A)();
-      return 0 === rM ? null : (0, LM.jsx)(QM.p, {
+        t: JV
+      } = (0, yV.A)();
+      return 0 === eV ? null : (0, ZV.jsx)(nV.m, {
         className: "SeasonPassClaimAllButton",
-        loading: iM,
+        loading: xV,
         onClick: () => {
-          en.e.claimAll().catch((MM => {
-            console.error("Failed to claim all season pass rewards", MM)
+          tQ.g.claimAll().catch((VV => {
+            console.error("Failed to claim all season pass rewards", VV)
           }))
         },
-        children: OM("seasonPass:claimAll", {
-          count: rM
+        children: JV("seasonPass:claimAll", {
+          count: eV
         })
       })
     }
 
-    function Rn(MM) {
+    function XQ(VV) {
       let {
-        view: rM,
-        claiming: iM
-      } = MM;
+        view: eV,
+        claiming: xV
+      } = VV;
       const {
-        t: OM
-      } = (0, aM.A)(), {
-        userContext: SM
-      } = (0, hM.b)(), {
-        config: jM,
-        state: nM,
-        tier: QM,
-        xpIntoTier: zM,
-        xpForNextTier: mM
-      } = rM, HM = Date.now(), JM = (0, gn.k)(rM, HM), dM = QM >= jM.tierCount, yM = JM && !dM && mM > 0, lM = mM > 0 && !dM ? Math.min(100, zM / mM * 100) : 100, EM = nM.xpToday >= jM.maxXpPerDay, UM = null !== rM.xpBoost && rM.xpBoost.endsAtMs > HM && !EM ? rM.xpBoost : null;
-      return (0, LM.jsxs)("header", {
+        t: JV
+      } = (0, yV.A)(), {
+        userContext: YV
+      } = (0, kV.d)(), {
+        config: UV,
+        state: QV,
+        tier: nV,
+        xpIntoTier: wV,
+        xpForNextTier: vV
+      } = eV, rV = Date.now(), bV = (0, AQ.i)(eV, rV), EV = nV >= UV.tierCount, BV = bV && !EV && vV > 0, jV = vV > 0 && !EV ? Math.min(100, wV / vV * 100) : 100, qV = QV.xpToday >= UV.maxXpPerDay, tV = null !== eV.xpBoost && eV.xpBoost.endsAtMs > rV && !qV ? eV.xpBoost : null;
+      return (0, ZV.jsxs)("header", {
         className: "SeasonPassHeader",
-        children: [(0, LM.jsx)("div", {
+        children: [(0, ZV.jsx)("div", {
           className: "SeasonPassHeaderTitleBlock",
-          children: (0, LM.jsx)("h1", {
+          children: (0, ZV.jsx)("h1", {
             className: "SeasonPassHeaderTitle",
-            children: OM("seasonPass:title", {
-              season: nM.seasonNumber
+            children: JV("seasonPass:title", {
+              season: QV.seasonNumber
             })
           })
-        }), (0, LM.jsxs)("div", {
+        }), (0, ZV.jsxs)("div", {
           className: "SeasonPassHeaderProgress",
-          children: [(0, LM.jsxs)("div", {
+          children: [(0, ZV.jsxs)("div", {
             className: "SeasonPassHeaderProgressRow",
-            children: [(0, LM.jsx)("span", {
+            children: [(0, ZV.jsx)("span", {
               className: "SeasonPassHeaderTierBadge",
-              title: OM("seasonPass:tier"),
-              "aria-label": `${OM("seasonPass:tier")} ${QM}`,
-              children: QM
-            }), (0, LM.jsxs)("div", {
+              title: JV("seasonPass:tier"),
+              "aria-label": `${JV("seasonPass:tier")} ${nV}`,
+              children: nV
+            }), (0, ZV.jsxs)("div", {
               className: "SeasonPassHeaderBar",
               role: "progressbar",
               "aria-valuemin": 0,
               "aria-valuemax": 100,
-              "aria-valuenow": Math.round(lM),
-              children: [(0, LM.jsx)("div", {
+              "aria-valuenow": Math.round(jV),
+              children: [(0, ZV.jsx)("div", {
                 className: "SeasonPassHeaderBarFill",
                 style: {
-                  width: `${lM}%`
+                  width: `${jV}%`
                 }
-              }), (0, LM.jsxs)("span", {
+              }), (0, ZV.jsxs)("span", {
                 className: "SeasonPassHeaderBarText SmallTextBold",
-                children: [dM && OM("seasonPass:passComplete"), yM && OM("seasonPass:xpProgress", {
-                  xp: zM,
-                  xpForNextTier: mM
+                children: [EV && JV("seasonPass:passComplete"), BV && JV("seasonPass:xpProgress", {
+                  xp: wV,
+                  xpForNextTier: vV
                 })]
               })]
-            }), yM && (0, LM.jsxs)(LM.Fragment, {
-              children: [(0, LM.jsx)(PM.b, {
+            }), BV && (0, ZV.jsxs)(ZV.Fragment, {
+              children: [(0, ZV.jsx)(pV.b, {
                 className: "SeasonPassHeaderNextArrow",
                 name: "caret-right"
-              }), (0, LM.jsx)("span", {
+              }), (0, ZV.jsx)("span", {
                 className: "SeasonPassHeaderNextTier",
-                children: QM + 1
+                children: nV + 1
               })]
             })]
-          }), (0, LM.jsxs)("div", {
+          }), (0, ZV.jsxs)("div", {
             className: "SeasonPassHeaderFootnotes",
-            children: [(0, LM.jsxs)("span", {
+            children: [(0, ZV.jsxs)("span", {
               className: "SeasonPassHeaderTimeLeft",
-              children: [(0, LM.jsx)(PM.b, {
+              children: [(0, ZV.jsx)(pV.b, {
                 name: "hourglass"
-              }), " ", JM ? OM("seasonPass:endsIn", {
-                time: (0, tn.b)((rM.endsAtMs - HM) / 6e4)
-              }) : (0, bn.c)(rM.claimEndsAtMs, OM, HM)]
-            }), JM && !dM && (0, LM.jsx)("span", {
-              className: EM ? "SeasonPassHeaderDailyCapped" : "SeasonPassHeaderDaily",
-              children: EM ? OM("seasonPass:dailyCapReached") : OM("seasonPass:dailyXp", {
-                xp: nM.xpToday,
-                cap: jM.maxXpPerDay
+              }), " ", bV ? JV("seasonPass:endsIn", {
+                time: (0, PQ.b)((eV.endsAtMs - rV) / 6e4)
+              }) : (0, FQ.c)(eV.claimEndsAtMs, JV, rV)]
+            }), bV && !EV && (0, ZV.jsx)("span", {
+              className: qV ? "SeasonPassHeaderDailyCapped" : "SeasonPassHeaderDaily",
+              children: qV ? JV("seasonPass:dailyCapReached") : JV("seasonPass:dailyXp", {
+                xp: QV.xpToday,
+                cap: UV.maxXpPerDay
               })
-            }), JM && !dM && UM && (0, LM.jsxs)("span", {
+            }), bV && !EV && tV && (0, ZV.jsxs)("span", {
               className: "SeasonPassHeaderBoost",
-              children: [(0, LM.jsx)(PM.b, {
+              children: [(0, ZV.jsx)(pV.b, {
                 name: "angles-up"
-              }), " ", OM("seasonPass:xpBoostActive", {
-                multiplier: UM.multiplier,
-                time: (0, tn.b)(Math.ceil((UM.endsAtMs - HM) / 6e4))
+              }), " ", JV("seasonPass:xpBoostActive", {
+                multiplier: tV.multiplier,
+                time: (0, PQ.b)(Math.ceil((tV.endsAtMs - rV) / 6e4))
               })]
-            }), JM && !dM && !EM && !UM && (0, LM.jsx)("span", {
+            }), bV && !EV && !qV && !tV && (0, ZV.jsx)("span", {
               className: "SeasonPassHeaderHint",
-              children: OM("seasonPass:playToEarn")
-            }), SM.type === wn.d.ANONYMOUS && (0, LM.jsx)("span", {
+              children: JV("seasonPass:playToEarn")
+            }), YV.type === TQ.d.ANONYMOUS && (0, ZV.jsx)("span", {
               className: "SeasonPassHeaderGuest",
-              children: OM("seasonPass:logInToKeep")
+              children: JV("seasonPass:logInToKeep")
             })]
           })]
-        }), (0, LM.jsx)(un, {
-          count: rM.claimable.length,
-          claiming: iM
+        }), (0, ZV.jsx)(NQ, {
+          count: eV.claimable.length,
+          claiming: xV
         })]
       })
     }
-    var pn = iM(4630),
-      Wn = iM(3471),
-      sn = iM(3479);
+    var MQ = xV(4686),
+      zQ = xV(3492),
+      GQ = xV(3496);
 
-    function Dn(MM) {
-      return null !== (0, bn.s)(MM) || null !== (0, bn.l)(MM)
+    function WQ(VV) {
+      return null !== (0, FQ.t)(VV) || null !== (0, FQ.m)(VV)
     }
-    let kn = null;
+    let RQ = null;
 
-    function Zn() {
-      var MM;
-      null === (MM = kn) || void 0 === MM || MM.tearDownNotification()
+    function gQ() {
+      var VV;
+      null === (VV = RQ) || void 0 === VV || VV.tearDownNotification()
     }
 
-    function fn(MM) {
+    function DQ(VV) {
       let {
-        reward: rM
-      } = MM;
+        reward: eV
+      } = VV;
       const {
-        t: iM
-      } = (0, aM.A)(), {
-        userContext: OM
-      } = (0, hM.b)(), SM = (0, bn.s)(rM);
-      return (0, LM.jsxs)("div", {
+        t: xV
+      } = (0, yV.A)(), {
+        userContext: JV
+      } = (0, kV.d)(), YV = (0, FQ.t)(eV);
+      return (0, ZV.jsxs)("div", {
         className: "PromptGenericPopup SeasonPassRewardPreview",
-        children: [(0, LM.jsx)("div", {
+        children: [(0, ZV.jsx)("div", {
           className: "PromptGenericPopupTitle SmallTextBold",
-          children: (0, bn.h)(rM, iM)
-        }), null !== SM && (0, LM.jsx)("div", {
+          children: (0, FQ.h)(eV, xV)
+        }), null !== YV && (0, ZV.jsx)("div", {
           className: "SeasonPassRewardPreviewProfileEffect",
-          children: (0, LM.jsx)(Wn.e, {
-            profileEffect: SM,
-            name: OM.getPlayerName(),
-            cosmetics: OM.getPlayerCosmetics()
+          children: (0, ZV.jsx)(zQ.b, {
+            profileEffect: YV,
+            name: JV.getPlayerName(),
+            cosmetics: JV.getPlayerCosmetics()
           })
-        }), null === SM && (0, LM.jsx)(Yn, {
-          reward: rM
+        }), null === YV && (0, ZV.jsx)(iQ, {
+          reward: eV
         })]
       })
     }
 
-    function Yn(MM) {
+    function iQ(VV) {
       let {
-        reward: rM
-      } = MM;
+        reward: eV
+      } = VV;
       const {
-        userContext: iM
-      } = (0, hM.b)(), SM = (0, OM.useRef)(null), {
-        previewEmote: jM,
-        playEmote: aM
-      } = (0, sn.e)(), PM = (0, OM.useMemo)((() => (0, bn.l)(rM)), [rM]), nM = PM.emote;
-      return (0, LM.jsx)("div", {
+        userContext: xV
+      } = (0, kV.d)(), YV = (0, JV.useRef)(null), {
+        previewEmote: UV,
+        playEmote: yV
+      } = (0, GQ.d)(), pV = (0, JV.useMemo)((() => (0, FQ.m)(eV)), [eV]), QV = pV.emote;
+      return (0, ZV.jsx)("div", {
         className: "SeasonPassRewardPreviewCharacter",
-        children: (0, LM.jsx)(OM.Suspense, {
-          fallback: (0, LM.jsx)(CM.d, {}),
-          children: (0, LM.jsx)(oa.c, {
-            ref: SM,
+        children: (0, ZV.jsx)(JV.Suspense, {
+          fallback: (0, ZV.jsx)(TV.d, {}),
+          children: (0, ZV.jsx)(iy.c, {
+            ref: YV,
             framing: "store",
-            forcedCosmetics: PM.cosmetics,
-            Ua: jM.id,
-            emotePlaySeq: jM.seq,
+            forcedCosmetics: pV.cosmetics,
+            Py: UV.id,
+            emotePlaySeq: UV.seq,
             onReady: () => {
-              var MM, rM;
-              null === (MM = SM.current) || void 0 === MM || MM.resetCamera(), null === (rM = SM.current) || void 0 === rM || rM.setAllCosmetics(iM.getPlayerCosmetics())
+              var VV, eV;
+              null === (VV = YV.current) || void 0 === VV || VV.resetCamera(), null === (eV = YV.current) || void 0 === eV || eV.setAllCosmetics(xV.getPlayerCosmetics())
             },
             onDrawn: () => {
-              null !== nM && aM(nM)
+              null !== QV && yV(QV)
             }
           })
         })
       })
     }
 
-    function Nn(MM) {
+    function CQ(VV) {
       let {
-        waitingCount: rM
-      } = MM;
+        waitingCount: eV
+      } = VV;
       const {
-        t: iM
-      } = (0, aM.A)();
-      return (0, NM.usePurchasesAllowed)() ? (0, LM.jsxs)("div", {
+        t: xV
+      } = (0, yV.A)();
+      return (0, hV.usePurchasesAllowed)() ? (0, ZV.jsxs)("div", {
         className: "SeasonPassSuperUpsell",
-        children: [rM > 0 && (0, LM.jsx)("span", {
+        children: [eV > 0 && (0, ZV.jsx)("span", {
           className: "SeasonPassSuperUpsellText",
-          children: 1 === rM ? iM("seasonPass:superRewardWaiting") : iM("seasonPass:superRewardsWaiting", {
-            count: rM
+          children: 1 === eV ? xV("seasonPass:superRewardWaiting") : xV("seasonPass:superRewardsWaiting", {
+            count: eV
           })
-        }), (0, LM.jsxs)("span", {
+        }), (0, ZV.jsxs)("span", {
           className: "SeasonPassSuperUpsellButtonWrapper",
-          children: [(0, LM.jsxs)(QM.p, {
+          children: [(0, ZV.jsxs)(nV.m, {
             className: "SeasonPassSuperUpsellButton",
             onClick: () => {
-              (0, YM.n)({
+              (0, cV.o)({
                 mode: "self",
                 source: "seasonPass",
                 openItem: "superRank"
               })
             },
-            children: [(0, LM.jsx)(PM.b, {
+            children: [(0, ZV.jsx)(pV.b, {
               name: "bolt"
-            }), " ", iM("homePage:getSuperRank")]
-          }), rM > 0 && (0, LM.jsx)("span", {
+            }), " ", xV("homePage:getSuperRank")]
+          }), eV > 0 && (0, ZV.jsx)("span", {
             className: "SeasonPassSuperUpsellCount",
-            children: rM
+            children: eV
           })]
         })]
       }) : null
     }
-    var An = iM(35086);
+    var aQ = xV(35378);
 
-    function xn(MM) {
-      var rM, iM;
+    function oQ(VV) {
+      var eV, xV;
       let {
-        view: SM,
-        claimingKeys: jM,
-        superWaitingCount: nM,
-        onClaim: QM
-      } = MM;
+        view: YV,
+        claimingKeys: UV,
+        superWaitingCount: QV,
+        onClaim: nV
+      } = VV;
       const {
-        t: zM
-      } = (0, aM.A)(), mM = (0, OM.useRef)(null), {
-        config: HM,
-        tier: hM,
-        xpIntoTier: JM,
-        xpForNextTier: dM,
-        state: yM
-      } = SM, lM = (0, gn.k)(SM), EM = (0, OM.useRef)(!1), UM = null !== (rM = null === (iM = SM.claimable[0]) || void 0 === iM ? void 0 : iM.tier) && void 0 !== rM ? rM : Math.min(hM + 1, HM.tierCount);
-      (0, OM.useLayoutEffect)((() => {
-        if (EM.current) return;
-        const MM = mM.current,
-          rM = MM.querySelector(`[data-tier="${UM}"]`).getBoundingClientRect(),
-          iM = MM.getBoundingClientRect();
-        MM.scrollLeft += rM.left - iM.left - .3 * MM.clientWidth, MM.scrollTop += rM.top - iM.top - .3 * MM.clientHeight
-      }), [UM]), (0, OM.useEffect)((() => {
-        const MM = mM.current;
+        t: wV
+      } = (0, yV.A)(), vV = (0, JV.useRef)(null), {
+        config: rV,
+        tier: kV,
+        xpIntoTier: bV,
+        xpForNextTier: EV,
+        state: BV
+      } = YV, jV = (0, AQ.i)(YV), qV = (0, JV.useRef)(!1), tV = null !== (eV = null === (xV = YV.claimable[0]) || void 0 === xV ? void 0 : xV.tier) && void 0 !== eV ? eV : Math.min(kV + 1, rV.tierCount);
+      (0, JV.useLayoutEffect)((() => {
+        if (qV.current) return;
+        const VV = vV.current,
+          eV = VV.querySelector(`[data-tier="${tV}"]`).getBoundingClientRect(),
+          xV = VV.getBoundingClientRect();
+        VV.scrollLeft += eV.left - xV.left - .3 * VV.clientWidth, VV.scrollTop += eV.top - xV.top - .3 * VV.clientHeight
+      }), [tV]), (0, JV.useEffect)((() => {
+        const VV = vV.current;
 
-        function rM(rM) {
-          EM.current = !0, Math.abs(rM.deltaY) <= Math.abs(rM.deltaX) || MM.scrollWidth <= MM.clientWidth || (rM.preventDefault(), MM.scrollLeft += rM.deltaY)
+        function eV(eV) {
+          qV.current = !0, Math.abs(eV.deltaY) <= Math.abs(eV.deltaX) || VV.scrollWidth <= VV.clientWidth || (eV.preventDefault(), VV.scrollLeft += eV.deltaY)
         }
-        return MM.addEventListener("wheel", rM, {
+        return VV.addEventListener("wheel", eV, {
           passive: !1
         }), () => {
-          MM.removeEventListener("wheel", rM)
+          VV.removeEventListener("wheel", eV)
         }
       }), []);
-      const GM = dM > 0 ? JM / dM : 1;
-      return (0, LM.jsxs)("div", {
+      const FV = EV > 0 ? bV / EV : 1;
+      return (0, ZV.jsxs)("div", {
         className: "SeasonPassTrack",
-        children: [(0, LM.jsxs)("div", {
+        children: [(0, ZV.jsxs)("div", {
           className: "SeasonPassTrackLabels",
-          children: [(0, LM.jsxs)("div", {
+          children: [(0, ZV.jsxs)("div", {
             className: "SeasonPassTrackLabel SeasonPassTrackLabelSuper",
-            children: [(0, LM.jsxs)("span", {
+            children: [(0, ZV.jsxs)("span", {
               className: "SeasonPassTrackLabelName",
-              children: [(0, LM.jsx)(PM.b, {
+              children: [(0, ZV.jsx)(pV.b, {
                 name: "bolt"
-              }), zM("seasonPass:superTrack")]
-            }), !yM.hasSuperRank && (0, LM.jsx)(Nn, {
-              waitingCount: nM
+              }), wV("seasonPass:superTrack")]
+            }), !BV.hasSuperRank && (0, ZV.jsx)(CQ, {
+              waitingCount: QV
             })]
-          }), (0, LM.jsxs)("div", {
+          }), (0, ZV.jsxs)("div", {
             className: "SeasonPassTrackLabel SeasonPassTrackLabelFree",
-            children: [(0, LM.jsx)("span", {
+            children: [(0, ZV.jsx)("span", {
               className: "SeasonPassTrackLabelName",
-              children: zM("seasonPass:freeTrack")
-            }), (0, LM.jsx)("span", {
+              children: wV("seasonPass:freeTrack")
+            }), (0, ZV.jsx)("span", {
               className: "SeasonPassTrackLabelHint",
-              children: zM("seasonPass:freeTrackHint")
+              children: wV("seasonPass:freeTrackHint")
             })]
           })]
-        }), (0, LM.jsx)("div", {
+        }), (0, ZV.jsx)("div", {
           className: "SeasonPassTrackScroller",
-          ref: mM,
+          ref: vV,
           onPointerDown: () => {
-            EM.current = !0
+            qV.current = !0
           },
-          children: (0, LM.jsx)("div", {
+          children: (0, ZV.jsx)("div", {
             className: "SeasonPassTrackRow",
-            children: HM.tiers.map((MM => {
-              const rM = MM.tier,
-                iM = function(MM, rM, iM) {
-                  if (MM <= rM) return "reached";
-                  return iM && MM === rM + 1 ? "earning" : "locked"
-                }(rM, hM, lM),
-                OM = "earning" === iM;
-              return (0, LM.jsx)(vn, {
-                tierRewards: MM,
-                nodeState: iM,
-                progress: OM ? GM : 0,
-                freeState: SM.tileState({
-                  tier: rM,
+            children: rV.tiers.map((VV => {
+              const eV = VV.tier,
+                xV = function(VV, eV, xV) {
+                  if (VV <= eV) return "reached";
+                  return xV && VV === eV + 1 ? "earning" : "locked"
+                }(eV, kV, jV),
+                JV = "earning" === xV;
+              return (0, ZV.jsx)(cQ, {
+                tierRewards: VV,
+                nodeState: xV,
+                progress: JV ? FV : 0,
+                freeState: YV.tileState({
+                  tier: eV,
                   track: "free"
                 }),
-                superState: SM.tileState({
-                  tier: rM,
+                superState: YV.tileState({
+                  tier: eV,
                   track: "super"
                 }),
-                freeClaiming: jM.has((0, gn.o)({
-                  tier: rM,
+                freeClaiming: UV.has((0, AQ.l)({
+                  tier: eV,
                   track: "free"
                 })),
-                superClaiming: jM.has((0, gn.o)({
-                  tier: rM,
+                superClaiming: UV.has((0, AQ.l)({
+                  tier: eV,
                   track: "super"
                 })),
-                hasSuperRank: yM.hasSuperRank,
-                onClaim: QM
-              }, rM)
+                hasSuperRank: BV.hasSuperRank,
+                onClaim: nV
+              }, eV)
             }))
           })
         })]
       })
     }
-    const vn = (0, OM.memo)((function(MM) {
+    const cQ = (0, JV.memo)((function(VV) {
       let {
-        tierRewards: rM,
-        nodeState: iM,
-        progress: OM,
-        freeState: SM,
-        superState: aM,
-        freeClaiming: PM,
-        superClaiming: nM,
-        hasSuperRank: QM,
-        onClaim: zM
-      } = MM;
+        tierRewards: eV,
+        nodeState: xV,
+        progress: JV,
+        freeState: YV,
+        superState: yV,
+        freeClaiming: pV,
+        superClaiming: QV,
+        hasSuperRank: nV,
+        onClaim: wV
+      } = VV;
       const {
-        tier: mM
-      } = rM;
-      return (0, LM.jsxs)("div", {
-        className: jM()("SeasonPassTrackColumn", {
-          SeasonPassTrackColumnLocked: "reached" !== iM
+        tier: vV
+      } = eV;
+      return (0, ZV.jsxs)("div", {
+        className: UV()("SeasonPassTrackColumn", {
+          SeasonPassTrackColumnLocked: "reached" !== xV
         }),
-        "data-tier": mM,
-        children: [(0, LM.jsx)(Fn, {
-          tier: mM,
+        "data-tier": vV,
+        children: [(0, ZV.jsx)(hQ, {
+          tier: vV,
           track: "super",
-          reward: rM.super,
-          tileState: aM,
-          claiming: nM,
-          padlock: !QM && "claimed" !== aM,
-          onClaim: zM
-        }), (0, LM.jsxs)("div", {
+          reward: eV.super,
+          tileState: yV,
+          claiming: QV,
+          padlock: !nV && "claimed" !== yV,
+          onClaim: wV
+        }), (0, ZV.jsxs)("div", {
           className: "SeasonPassTrackRoad",
-          children: [(0, LM.jsx)("span", {
-            className: jM()("SeasonPassTrackRoadHalf SeasonPassTrackRoadLeft", {
-              SeasonPassTrackRoadFilled: "reached" === iM
+          children: [(0, ZV.jsx)("span", {
+            className: UV()("SeasonPassTrackRoadHalf SeasonPassTrackRoadLeft", {
+              SeasonPassTrackRoadFilled: "reached" === xV
             }),
-            children: "earning" === iM && (0, LM.jsx)("span", {
+            children: "earning" === xV && (0, ZV.jsx)("span", {
               className: "SeasonPassTrackRoadProgress",
               style: {
-                "--seasonPassRoadProgress": 100 * OM + "%"
+                "--seasonPassRoadProgress": 100 * JV + "%"
               }
             })
-          }), (0, LM.jsx)("span", {
-            className: jM()("SeasonPassTrackRoadHalf SeasonPassTrackRoadRight", {
-              SeasonPassTrackRoadFilled: "reached" === iM
+          }), (0, ZV.jsx)("span", {
+            className: UV()("SeasonPassTrackRoadHalf SeasonPassTrackRoadRight", {
+              SeasonPassTrackRoadFilled: "reached" === xV
             })
-          }), (0, LM.jsx)(An.d, {
-            tier: mM,
-            state: iM,
-            progress: OM
+          }), (0, ZV.jsx)(aQ.c, {
+            tier: vV,
+            state: xV,
+            progress: JV
           })]
-        }), (0, LM.jsx)(Fn, {
-          tier: mM,
+        }), (0, ZV.jsx)(hQ, {
+          tier: vV,
           track: "free",
-          reward: rM.free,
-          tileState: SM,
-          claiming: PM,
+          reward: eV.free,
+          tileState: YV,
+          claiming: pV,
           padlock: !1,
-          onClaim: zM
+          onClaim: wV
         })]
       })
     }));
 
-    function Fn(MM) {
+    function hQ(VV) {
       let {
-        tier: rM,
-        track: iM,
-        reward: OM,
-        tileState: SM,
-        claiming: jM,
-        padlock: aM,
-        onClaim: PM
-      } = MM;
-      return OM ? (0, LM.jsx)("div", {
-        className: `SeasonPassTrackSlot SeasonPassTrackSlot-${iM}`,
-        children: (0, LM.jsx)(pn.d, {
-          reward: OM,
-          tileState: SM,
-          track: iM,
+        tier: eV,
+        track: xV,
+        reward: JV,
+        tileState: YV,
+        claiming: UV,
+        padlock: yV,
+        onClaim: pV
+      } = VV;
+      return JV ? (0, ZV.jsx)("div", {
+        className: `SeasonPassTrackSlot SeasonPassTrackSlot-${xV}`,
+        children: (0, ZV.jsx)(MQ.f, {
+          reward: JV,
+          tileState: YV,
+          track: xV,
           size: "large",
           onClaim: () => {
-            PM({
-              tier: rM,
-              track: iM
+            pV({
+              tier: eV,
+              track: xV
             })
           },
-          claiming: jM,
-          padlock: aM,
-          onPreview: Dn(OM) ? () => {
-            ! function(MM) {
-              const rM = yr.NotificationProvider.showCustomPopup({
-                body: (0, LM.jsx)(fn, {
-                  reward: MM
+          claiming: UV,
+          padlock: yV,
+          onPreview: WQ(JV) ? () => {
+            ! function(VV) {
+              const eV = Be.NotificationProvider.showCustomPopup({
+                body: (0, ZV.jsx)(DQ, {
+                  reward: VV
                 })
               });
-              kn = rM, rM.getResult().finally((() => {
-                kn === rM && (kn = null)
+              RQ = eV, eV.getResult().finally((() => {
+                RQ === eV && (RQ = null)
               }))
-            }(OM)
+            }(JV)
           } : void 0
         })
-      }) : (0, LM.jsx)("div", {
-        className: `SeasonPassTrackSlot SeasonPassTrackSlot-${iM}`
+      }) : (0, ZV.jsx)("div", {
+        className: `SeasonPassTrackSlot SeasonPassTrackSlot-${xV}`
       })
     }
-    var Bn = iM(5016);
+    var lQ = xV(5123);
 
-    function Xn(MM) {
+    function LQ(VV) {
       let {
-        show: rM
-      } = MM;
-      return rM ? (0, LM.jsx)(In, {}) : null
+        show: eV
+      } = VV;
+      return eV ? (0, ZV.jsx)(fQ, {}) : null
     }
 
-    function In() {
+    function fQ() {
       const {
-        t: MM
-      } = (0, aM.A)(), rM = (0, en.g)();
-      return (0, OM.useEffect)((() => Zn), []), (0, LM.jsxs)("div", {
+        t: VV
+      } = (0, yV.A)(), eV = (0, tQ.h)();
+      return (0, JV.useEffect)((() => gQ), []), (0, ZV.jsxs)("div", {
         className: "SeasonPassScreen",
-        children: ["loading" === rM.status && (0, LM.jsx)(CM.d, {}), "error" === rM.status && (0, LM.jsxs)("div", {
+        children: ["loading" === eV.status && (0, ZV.jsx)(TV.d, {}), "error" === eV.status && (0, ZV.jsxs)("div", {
           className: "SeasonPassScreenNotice",
-          children: [(0, LM.jsx)("p", {
+          children: [(0, ZV.jsx)("p", {
             className: "SeasonPassScreenMessage",
-            children: MM("seasonPass:errorLoad")
-          }), (0, LM.jsx)(QM.e, {
+            children: VV("seasonPass:errorLoad")
+          }), (0, ZV.jsx)(nV.f, {
             className: "SeasonPassScreenRetry",
             onClick: () => {
-              en.e.retry()
+              tQ.g.retry()
             },
-            children: MM("seasonPass:retry")
+            children: VV("seasonPass:retry")
           })]
-        }), "noSeason" === rM.status && (0, LM.jsx)("div", {
+        }), "noSeason" === eV.status && (0, ZV.jsx)("div", {
           className: "SeasonPassScreenNotice",
-          children: (0, LM.jsx)("p", {
+          children: (0, ZV.jsx)("p", {
             className: "SeasonPassScreenMessage",
-            children: (0, bn.g)(MM)
+            children: (0, FQ.g)(VV)
           })
-        }), "loaded" === rM.status && (0, LM.jsx)(Kn, {
-          view: rM.view,
-          claimingKeys: rM.claimingKeys
+        }), "loaded" === eV.status && (0, ZV.jsx)(mQ, {
+          view: eV.view,
+          claimingKeys: eV.claimingKeys
         })]
       })
     }
 
-    function Kn(MM) {
+    function mQ(VV) {
       let {
-        view: rM,
-        claimingKeys: iM
-      } = MM;
-      const OM = rM.config.tiers.filter((MM => "needsSuper" === rM.tileState({
-          tier: MM.tier,
+        view: eV,
+        claimingKeys: xV
+      } = VV;
+      const JV = eV.config.tiers.filter((VV => "needsSuper" === eV.tileState({
+          tier: VV.tier,
           track: "super"
         }))).length,
-        SM = iM.size > 0;
-      return (0, LM.jsxs)("div", {
+        YV = xV.size > 0;
+      return (0, ZV.jsxs)("div", {
         className: "SeasonPassScreenLoaded",
-        children: [(0, LM.jsx)(Bn.b, {}), (0, LM.jsx)(Rn, {
-          view: rM,
-          claiming: SM
-        }), (0, LM.jsx)(xn, {
-          view: rM,
-          claimingKeys: iM,
-          superWaitingCount: OM,
-          onClaim: qn
-        }), (0, LM.jsxs)("div", {
+        children: [(0, ZV.jsx)(lQ.c, {}), (0, ZV.jsx)(XQ, {
+          view: eV,
+          claiming: YV
+        }), (0, ZV.jsx)(oQ, {
+          view: eV,
+          claimingKeys: xV,
+          superWaitingCount: JV,
+          onClaim: KQ
+        }), (0, ZV.jsxs)("div", {
           className: "SeasonPassScreenActions",
-          children: [(0, LM.jsx)(un, {
-            count: rM.claimable.length,
-            claiming: SM
-          }), !rM.state.hasSuperRank && (0, LM.jsx)(Nn, {
-            waitingCount: OM
+          children: [(0, ZV.jsx)(NQ, {
+            count: eV.claimable.length,
+            claiming: YV
+          }), !eV.state.hasSuperRank && (0, ZV.jsx)(CQ, {
+            waitingCount: JV
           })]
         })]
       })
     }
 
-    function qn(MM) {
-      en.e.claim(MM).catch((MM => {
-        console.error("Failed to claim season pass reward", MM)
+    function KQ(VV) {
+      tQ.g.claim(VV).catch((VV => {
+        console.error("Failed to claim season pass reward", VV)
       }))
     }
-    var Tn = iM(2542),
-      Vn = iM(5096);
-    const cn = MM => {
+    var HQ = xV(2588),
+      uQ = xV(5204);
+    const sQ = VV => {
         let {
-          action: rM,
-          padAction: iM
-        } = MM;
+          action: eV,
+          padAction: xV
+        } = VV;
         const {
-          isTouchScreen: OM
-        } = (0, bM.m)(["isTouchScreen"]), SM = (0, oO.y)();
-        return OM && !SM ? null : (0, LM.jsx)(RO.d, {
+          isTouchScreen: JV
+        } = (0, AV.l)(["isTouchScreen"]), YV = (0, iJ.E)();
+        return JV && !YV ? null : (0, ZV.jsx)(MJ.d, {
           className: "EverythingMenuTabKey",
-          noaAction: rM,
+          noaAction: eV,
           padHidesKey: !0,
-          padMenuShortcut: iM
+          padMenuShortcut: xV
         })
       },
-      MQ = (0, OM.memo)((function() {
+      SQ = (0, JV.memo)((function() {
         const {
-          t: MM
-        } = (0, aM.A)(), {
-          gameState: rM,
-          openEverythingMenuName: iM,
-          crosshairGameView: SM
-        } = (0, bM.m)(["gameState", "openEverythingMenuName", "crosshairGameView"]), {
-          userContext: PM
-        } = (0, hM.b)(), nM = (0, iS.k)(Date.now()), zM = (0, NM.usePurchasesAllowed)(), mM = (0, YM.y)(), {
-          view: HM
-        } = (0, ii.E)(), JM = "dot" === mM || null === mM && "ready" === (null === HM || void 0 === HM ? void 0 : HM.kind), dM = (MM, rM) => (0, LM.jsx)(cn, {
-          action: MM,
-          padAction: rM
-        }), [lM, EM] = (0, OM.useState)(null), UM = (0, OM.useRef)(null), GM = (0, OM.useRef)(null);
-        (0, OM.useEffect)((() => {
-          var MM;
-          const rM = null === (MM = GM.current) || void 0 === MM ? void 0 : MM.querySelector(".EverythingMenuTabActive");
-          null === rM || void 0 === rM || rM.scrollIntoView({
+          t: VV
+        } = (0, yV.A)(), {
+          gameState: eV,
+          openEverythingMenuName: xV,
+          crosshairGameView: YV
+        } = (0, AV.l)(["gameState", "openEverythingMenuName", "crosshairGameView"]), {
+          userContext: pV
+        } = (0, kV.d)(), QV = (0, VY.k)(Date.now()), wV = (0, hV.usePurchasesAllowed)(), vV = (0, cV.G)(), {
+          view: rV
+        } = (0, xx.x)(), bV = "dot" === vV || null === vV && "ready" === (null === rV || void 0 === rV ? void 0 : rV.kind), EV = (VV, eV) => (0, ZV.jsx)(sQ, {
+          action: VV,
+          padAction: eV
+        }), [jV, qV] = (0, JV.useState)(null), tV = (0, JV.useRef)(null), FV = (0, JV.useRef)(null);
+        (0, JV.useEffect)((() => {
+          var VV;
+          const eV = null === (VV = FV.current) || void 0 === VV ? void 0 : VV.querySelector(".EverythingMenuTabActive");
+          null === eV || void 0 === eV || eV.scrollIntoView({
             block: "nearest",
             inline: "nearest"
           })
-        }), [iM]);
-        const CM = {
-            ..."inGame" === rM ? {} : (0, QM.fb)({
+        }), [xV]);
+        const TV = {
+            ..."inGame" === eV ? {} : (0, nV.V)({
               focusOnClick: !1
             }),
-            ...PS.c
+            ...UY.f
           },
-          eM = MM => {
-            const rM = (0, nS.g)((rM => {
-              (0, QM.db)(rM.currentTarget), bM.d.set({
-                openEverythingMenuName: MM
+          PV = VV => {
+            const eV = (0, yY.e)((eV => {
+              (0, nV.S)(eV.currentTarget), AV.b.set({
+                openEverythingMenuName: VV
               })
             }), "pointerup");
             return {
-              ...CM,
-              onPointerDown: MM => {
-                CM.onPointerDown(MM), rM.onPointerDown(MM)
+              ...TV,
+              onPointerDown: VV => {
+                TV.onPointerDown(VV), eV.onPointerDown(VV)
               },
-              onPointerUp: MM => {
-                CM.onPointerUp(MM), rM.onPointerUp(MM)
+              onPointerUp: VV => {
+                TV.onPointerUp(VV), eV.onPointerUp(VV)
               },
-              onClick: rM.onClick
+              onClick: eV.onClick
             }
           },
-          wM = null !== iM,
-          tM = iM !== Ur.m.COSMETIC_SHOP && !SM;
-        async function uM() {
+          NV = null !== xV,
+          XV = xV !== te.q.COSMETIC_SHOP && !YV;
+        async function zV() {
           await async function() {
-            if (!lM) return;
-            await lM(), EM(null)
-          }(), bM.d.set({
+            if (!jV) return;
+            await jV(), qV(null)
+          }(), AV.b.set({
             openEverythingMenuName: null
           })
         }
-        const RM = (0, OM.useRef)(null),
-          pM = (0, OM.useCallback)((() => null !== RM.current && (0, jn.g)(RM.current)), []);
+        const GV = (0, JV.useRef)(null),
+          WV = (0, JV.useCallback)((() => null !== GV.current && (0, JQ.g)(GV.current)), []);
 
-        function WM() {
-          pM() || uM()
-        }(0, OM.useEffect)((() => (0, qj.y)(pM)), [pM]);
-        const sM = (0, OM.useMemo)((() => "inGame" === rM ? {
-            text: MM("settingsMenu:exitGame"),
+        function RV() {
+          WV() || zV()
+        }(0, JV.useEffect)((() => (0, uU.r)(WV)), [WV]);
+        const gV = (0, JV.useMemo)((() => "inGame" === eV ? {
+            text: VV("settingsMenu:exitGame"),
             onClick: () => {
-              (0, Sn.e)()
+              (0, xQ.e)()
             }
-          } : (0, gM.isDiscordClient)() ? {
-            text: MM("settingsMenu:exitGame"),
+          } : (0, MV.isDiscordClient)() ? {
+            text: VV("settingsMenu:exitGame"),
             onClick: () => {
-              Er.l.discordActivity().then((MM => {
-                MM.exit("User exited the game")
+              qe.h.discordActivity().then((VV => {
+                VV.exit("User exited the game")
               }))
             }
-          } : null), [rM, MM]),
-          DM = wM && !SM,
-          kM = (0, OM.useRef)(null);
-        ! function(MM, rM) {
-          (0, OM.useEffect)((() => {
-            var iM;
-            const OM = (0, Vn.e)();
-            if (!rM || null === OM || !(0, Vn.c)({
-                site: gM.siteUsed,
-                isMobileApp: (0, yM.isMobileApp)(),
-                isTouchScreen: bM.d.get("isTouchScreen")
+          } : null), [eV, VV]),
+          DV = NV && !YV,
+          iV = (0, JV.useRef)(null);
+        ! function(VV, eV) {
+          (0, JV.useEffect)((() => {
+            var xV;
+            const JV = (0, uQ.f)();
+            if (!eV || null === JV || !(0, uQ.c)({
+                site: MV.siteUsed,
+                isMobileApp: (0, BV.isMobileApp)(),
+                isTouchScreen: AV.b.get("isTouchScreen")
               })) return;
-            const SM = null === (iM = MM.current) || void 0 === iM ? void 0 : iM.querySelector(".EverythingMenuBackButton");
-            return SM ? OM(SM) : void 0
-          }), [MM, rM])
-        }(kM, DM && !(0, qj.m)(iM) && "inGame" === rM);
-        const ZM = (0, LM.jsx)("div", {
+            const YV = null === (xV = VV.current) || void 0 === xV ? void 0 : xV.querySelector(".EverythingMenuBackButton");
+            return YV ? JV(YV) : void 0
+          }), [VV, eV])
+        }(iV, DV && !(0, uU.k)(xV) && "inGame" === eV);
+        const CV = (0, ZV.jsx)("div", {
           className: "EverythingMenuCloseButtonClickZone",
-          onClick: WM,
-          children: (0, LM.jsx)(QM.l, {
+          onClick: RV,
+          children: (0, ZV.jsx)(nV.k, {
             className: "EverythingMenuCloseButton"
           })
         });
-        return (0, LM.jsx)(QS.e, {
-          showing: wM,
+        return (0, ZV.jsx)(pY.c, {
+          showing: NV,
           globallyUniqueKey: "EverythingMenu",
           alwaysMountChildren: !0,
-          keepsMovement: iM === Ur.m.SHOP,
-          doGameplayStartStopOnShow: "inGame" === rM,
-          children: (0, LM.jsx)(LS.d, {
+          keepsMovement: xV === te.q.SHOP,
+          doGameplayStartStopOnShow: "inGame" === eV,
+          children: (0, ZV.jsx)(nY.d, {
             className: "EverythingMenuContainer",
-            show: DM,
-            children: (0, LM.jsx)(zS.e, {
-              close: WM,
+            show: DV,
+            children: (0, ZV.jsx)(QY.e, {
+              close: RV,
               togglePointerLock: !1,
-              children: (0, LM.jsxs)("div", {
+              children: (0, ZV.jsxs)("div", {
                 className: "EverythingMenu",
-                ref: kM,
-                children: [!(0, qj.m)(iM) && (0, LM.jsxs)("div", {
+                ref: iV,
+                children: [!(0, uU.k)(xV) && (0, ZV.jsxs)("div", {
                   className: "EverythingMenuTabList",
-                  children: [(0, LM.jsxs)("div", {
+                  children: [(0, ZV.jsxs)("div", {
                     className: "EverythingMenuTabListButtonContainer EverythingMenuTabListButtonContainerStart",
-                    children: [sM && (0, LM.jsx)(QM.c, {
+                    children: [gV && (0, ZV.jsx)(nV.b, {
                       className: "EverythingMenuBackButton",
                       padDestructive: !0,
                       onClick: () => {
-                        sM.onClick()
+                        gV.onClick()
                       },
-                      children: sM.text
-                    }), "inGame" === rM && (0, LM.jsx)(Tn.b, {
+                      children: gV.text
+                    }), "inGame" === eV && (0, ZV.jsx)(HQ.b, {
                       className: "EverythingMenuStopRecording"
-                    }), wM && zM && (0, LM.jsx)("div", {
-                      ...CM,
+                    }), NV && wV && (0, ZV.jsx)("div", {
+                      ...TV,
                       className: "EverythingMenuWallet",
-                      title: MM("homePage:getPremiumCurrency"),
+                      title: VV("homePage:getPremiumCurrency"),
                       onClick: () => {
-                        (0, YM.n)({
+                        (0, cV.o)({
                           mode: "self",
                           source: "menuWallet"
                         })
                       },
-                      children: (0, LM.jsx)(On.f, {})
+                      children: (0, ZV.jsx)(eQ.h, {})
                     })]
-                  }), (0, LM.jsxs)("div", {
+                  }), (0, ZV.jsxs)("div", {
                     className: "EverythingMenuTabListInner",
-                    ref: GM,
+                    ref: FV,
                     "data-pad-tabs": "1",
-                    children: [(0, LM.jsxs)("div", {
-                      ...eM(Ur.m.SETTINGS),
+                    children: [(0, ZV.jsxs)("div", {
+                      ...PV(te.q.SETTINGS),
                       "data-pad-tab": !0,
-                      "data-pad-selected": iM === Ur.m.SETTINGS ? "true" : void 0,
-                      className: jM()("EverythingMenuTab", {
-                        EverythingMenuTabActive: iM === Ur.m.SETTINGS
+                      "data-pad-selected": xV === te.q.SETTINGS ? "true" : void 0,
+                      className: UV()("EverythingMenuTab", {
+                        EverythingMenuTabActive: xV === te.q.SETTINGS
                       }),
-                      children: [MM("general:settings"), dM("OpenSettings", "pause")]
-                    }), (0, LM.jsxs)("div", {
-                      ...eM(Ur.m.CUSTOMISATION),
+                      children: [VV("general:settings"), EV("OpenSettings", "pause")]
+                    }), (0, ZV.jsxs)("div", {
+                      ...PV(te.q.CUSTOMISATION),
                       "data-pad-tab": !0,
-                      "data-pad-selected": iM === Ur.m.CUSTOMISATION ? "true" : void 0,
-                      className: jM()("EverythingMenuTab", {
-                        EverythingMenuTabActive: iM === Ur.m.CUSTOMISATION
+                      "data-pad-selected": xV === te.q.CUSTOMISATION ? "true" : void 0,
+                      className: UV()("EverythingMenuTab", {
+                        EverythingMenuTabActive: xV === te.q.CUSTOMISATION
                       }),
-                      children: [MM("general:player"), dM("OpenCharacterCustomization")]
-                    }), yM.featureFlags.useSocialFeatures && (0, LM.jsxs)("div", {
-                      ...eM(Ur.m.SOCIAL),
+                      children: [VV("general:player"), EV("OpenCharacterCustomization")]
+                    }), BV.featureFlags.useSocialFeatures && (0, ZV.jsxs)("div", {
+                      ...PV(te.q.SOCIAL),
                       "data-pad-tab": !0,
-                      "data-pad-selected": iM === Ur.m.SOCIAL ? "true" : void 0,
-                      className: jM()("EverythingMenuTab", {
-                        EverythingMenuTabActive: iM === Ur.m.SOCIAL
+                      "data-pad-selected": xV === te.q.SOCIAL ? "true" : void 0,
+                      className: UV()("EverythingMenuTab", {
+                        EverythingMenuTabActive: xV === te.q.SOCIAL
                       }),
-                      ...(0, Sr.getAnalyticsClickAttributes)({
+                      ...(0, Ye.getAnalyticsClickAttributes)({
                         id: "social.open_menu",
                         value: "menu_tab"
-                      }, iM === Ur.m.SOCIAL),
-                      children: [MM("socialBar:social"), (0, LM.jsx)(Cn.c, {})]
-                    }), nM && (0, LM.jsx)("div", {
-                      ...eM(Ur.m.SEASON_PASS),
+                      }, xV === te.q.SOCIAL),
+                      children: [VV("socialBar:social"), (0, ZV.jsx)(qQ.e, {})]
+                    }), QV && (0, ZV.jsx)("div", {
+                      ...PV(te.q.SEASON_PASS),
                       "data-pad-tab": !0,
-                      "data-pad-selected": iM === Ur.m.SEASON_PASS ? "true" : void 0,
-                      className: jM()("EverythingMenuTab", {
-                        EverythingMenuTabActive: iM === Ur.m.SEASON_PASS
+                      "data-pad-selected": xV === te.q.SEASON_PASS ? "true" : void 0,
+                      className: UV()("EverythingMenuTab", {
+                        EverythingMenuTabActive: xV === te.q.SEASON_PASS
                       }),
-                      children: MM("seasonPass:title", {
-                        season: nM.seasonNumber
+                      children: VV("seasonPass:title", {
+                        season: QV.seasonNumber
                       })
-                    }), (0, ii.u)(HM) && (0, LM.jsxs)("div", {
-                      ...eM(Ur.m.COSMETIC_SHOP),
+                    }), (0, xx.r)(rV) && (0, ZV.jsxs)("div", {
+                      ...PV(te.q.COSMETIC_SHOP),
                       "data-pad-tab": !0,
-                      "data-pad-selected": iM === Ur.m.COSMETIC_SHOP ? "true" : void 0,
-                      className: jM()("EverythingMenuTab EverythingMenuTabCosmeticShop", {
-                        EverythingMenuTabActive: iM === Ur.m.COSMETIC_SHOP
+                      "data-pad-selected": xV === te.q.COSMETIC_SHOP ? "true" : void 0,
+                      className: UV()("EverythingMenuTab EverythingMenuTabCosmeticShop", {
+                        EverythingMenuTabActive: xV === te.q.COSMETIC_SHOP
                       }),
-                      children: [(0, LM.jsx)("span", {
+                      children: [(0, ZV.jsx)("span", {
                         className: "EverythingMenuTabCosmeticShopText",
-                        children: MM("store:title")
-                      }), "new" === mM && (0, LM.jsx)(SP, {}), JM && (0, LM.jsx)("span", {
+                        children: VV("store:title")
+                      }), "new" === vV && (0, ZV.jsx)(xp, {}), bV && (0, ZV.jsx)("span", {
                         className: "EverythingMenuTabStoreBadge EverythingMenuTabStoreDot"
                       })]
-                    }), "inGame" === rM && (0, LM.jsxs)("div", {
-                      ...eM(Ur.m.LOBBY_LEADERBOARD),
+                    }), "inGame" === eV && (0, ZV.jsxs)("div", {
+                      ...PV(te.q.LOBBY_LEADERBOARD),
                       "data-pad-tab": !0,
-                      "data-pad-selected": iM === Ur.m.LOBBY_LEADERBOARD ? "true" : void 0,
-                      className: jM()("EverythingMenuTab", {
-                        EverythingMenuTabActive: iM === Ur.m.LOBBY_LEADERBOARD
+                      "data-pad-selected": xV === te.q.LOBBY_LEADERBOARD ? "true" : void 0,
+                      className: UV()("EverythingMenuTab", {
+                        EverythingMenuTabActive: xV === te.q.LOBBY_LEADERBOARD
                       }),
-                      children: [MM("general:lobby"), dM("OpenLobbyLeaderboard", "leaderboard")]
+                      children: [VV("general:lobby"), EV("OpenLobbyLeaderboard", "leaderboard")]
                     })]
-                  }), (0, LM.jsx)("div", {
+                  }), (0, ZV.jsx)("div", {
                     className: "EverythingMenuTabListButtonContainer EverythingMenuTabListButtonContainerEnd",
-                    children: ZM
+                    children: CV
                   })]
-                }), (0, qj.m)(iM) && ZM, (0, LM.jsxs)("div", {
-                  ref: RM,
+                }), (0, uU.k)(xV) && CV, (0, ZV.jsxs)("div", {
+                  ref: GV,
                   className: "EverythingMenuBody",
                   "data-pad-initial-area": !0,
                   style: {
-                    "--everythingMenuBodyBackgroundOpacity": "inGame" === rM ? "0.85" : "1"
+                    "--everythingMenuBodyBackgroundOpacity": "inGame" === eV ? "0.85" : "1"
                   },
-                  children: [(0, LM.jsx)(MS, {
-                    show: iM === Ur.m.SETTINGS,
-                    setBeforeResumeCallback: EM
-                  }), (0, LM.jsx)(aS, {
-                    show: iM === Ur.m.CUSTOMISATION
-                  }), (0, LM.jsx)(OM.Suspense, {
+                  children: [(0, ZV.jsx)(dJ, {
+                    show: xV === te.q.SETTINGS,
+                    setBeforeResumeCallback: qV
+                  }), (0, ZV.jsx)(YY, {
+                    show: xV === te.q.CUSTOMISATION
+                  }), (0, ZV.jsx)(JV.Suspense, {
                     fallback: null,
-                    children: (0, LM.jsx)(Nj, {
-                      show: iM === Ur.m.SHOP
+                    children: (0, ZV.jsx)(oU, {
+                      show: xV === te.q.SHOP
                     })
-                  }), (0, LM.jsx)(Ma, {
-                    show: iM === Ur.m.LOBBY_LEADERBOARD
-                  }), zM && (0, LM.jsx)(rn, {
-                    show: iM === Ur.m.COSMETIC_SHOP
-                  }), !zM && (0, LM.jsx)(vP, {
-                    show: iM === Ur.m.COSMETIC_SHOP
-                  }), (0, LM.jsx)(Un, {
-                    show: iM === Ur.m.SOCIAL
-                  }), (0, LM.jsx)(Xn, {
-                    show: iM === Ur.m.SEASON_PASS
+                  }), (0, ZV.jsx)(dU, {
+                    show: xV === te.q.LOBBY_LEADERBOARD
+                  }), wV && (0, ZV.jsx)(VQ, {
+                    show: xV === te.q.COSMETIC_SHOP
+                  }), !wV && (0, ZV.jsx)(lp, {
+                    show: xV === te.q.COSMETIC_SHOP
+                  }), (0, ZV.jsx)(BQ, {
+                    show: xV === te.q.SOCIAL
+                  }), (0, ZV.jsx)(LQ, {
+                    show: xV === te.q.SEASON_PASS
                   })]
-                }), !(0, yM.isMobileApp)() && (0, mS.f)(PM.getPlayerRanks()) && (0, LM.jsx)(LS.d, {
-                  ref: UM,
+                }), !(0, BV.isMobileApp)() && (0, wY.f)(pV.getPlayerRanks()) && (0, ZV.jsx)(nY.d, {
+                  ref: tV,
                   className: "EverythingMenuBannerDiv",
-                  show: tM,
+                  show: XV,
                   "data-pad-hint-bar-avoid": !0,
                   "data-pad-no-step-in": !0,
-                  children: (0, LM.jsx)(an.e, {
+                  children: (0, ZV.jsx)(YQ.e, {
                     info: {
                       adId: 2,
                       adType: "leaderboard",
                       adAlias: "banner_shop"
                     },
                     sizeInfo: {
-                      parentRef: UM
+                      parentRef: tV
                     },
-                    showing: wM && tM,
+                    showing: NV && XV,
                     verticalAlign: "center",
                     horizontalAlign: "center",
                     noFillShowBloxdAdProbability: 1
@@ -9343,262 +9343,262 @@ export const modules = {
         })
       }))
   },
-  35070: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => hM,
-      i: () => dM
+  35354: (VV, eV, xV) => {
+    xV.d(eV, {
+      b: () => kV,
+      c: () => EV
     });
-    iM(35072);
-    var OM = iM(44),
-      SM = iM(1116),
-      jM = iM.n(SM),
-      aM = iM(1188),
-      PM = iM(1520),
-      nM = iM(2796),
-      QM = iM(1398),
-      zM = iM(2382),
-      LM = iM(3449),
-      mM = iM(2412),
-      HM = iM(1303);
+    xV(35362);
+    var JV = xV(62),
+      YV = xV(1146),
+      UV = xV.n(YV),
+      yV = xV(1220),
+      pV = xV(1551),
+      QV = xV(2866),
+      nV = xV(1414),
+      wV = xV(2404),
+      ZV = xV(3454),
+      vV = xV(2437),
+      rV = xV(1321);
 
-    function hM(MM) {
+    function kV(VV) {
       let {
-        endsAt: rM,
-        className: iM
-      } = MM;
-      return (0, HM.jsxs)("span", {
-        className: jM()("NewPlayerDealClock", iM),
-        children: [(0, HM.jsx)(QM.b, {
+        endsAt: eV,
+        className: xV
+      } = VV;
+      return (0, rV.jsxs)("span", {
+        className: UV()("NewPlayerDealClock", xV),
+        children: [(0, rV.jsx)(nV.b, {
           name: "hourglass"
-        }), (0, HM.jsx)(nM.f, {
-          toTime: rM
+        }), (0, rV.jsx)(QV.e, {
+          toTime: eV
         })]
       })
     }
 
-    function JM(MM) {
+    function bV(VV) {
       let {
-        offered: rM,
-        needsLogin: iM,
-        busy: OM,
-        highlight: SM,
-        onBuy: nM
-      } = MM;
+        offered: eV,
+        needsLogin: xV,
+        busy: JV,
+        highlight: YV,
+        onBuy: QV
+      } = VV;
       const {
-        t: QM
-      } = (0, aM.A)(), {
-        pack: hM
-      } = rM, JM = (0, LM.c)(rM.package);
-      return (0, HM.jsxs)("div", {
-        className: jM()("NewPlayerDealPack", {
-          NewPlayerDealPackHighlight: SM
+        t: nV
+      } = (0, yV.A)(), {
+        pack: kV
+      } = eV, bV = (0, ZV.e)(eV.package);
+      return (0, rV.jsxs)("div", {
+        className: UV()("NewPlayerDealPack", {
+          NewPlayerDealPackHighlight: YV
         }),
-        children: [(0, HM.jsxs)("div", {
+        children: [(0, rV.jsxs)("div", {
           className: "NewPlayerDealPackArt",
-          children: [(0, HM.jsx)("img", {
-            src: mM.c[rM.tier],
+          children: [(0, rV.jsx)("img", {
+            src: vV.c[eV.tier],
             alt: "",
             draggable: !1
-          }), (0, HM.jsx)("span", {
+          }), (0, rV.jsx)("span", {
             className: "NewPlayerDealTag",
-            children: QM("newPlayerDeal:tag")
+            children: nV("newPlayerDeal:tag")
           })]
-        }), (0, HM.jsx)("div", {
+        }), (0, rV.jsx)("div", {
           className: "NewPlayerDealPackText",
-          children: (0, HM.jsx)(zM.b, {
+          children: (0, rV.jsx)(wV.e, {
             className: "NewPlayerDealPackAmount",
-            amount: hM.gems
+            amount: kV.gems
           })
-        }), (0, HM.jsx)(PM.p, {
+        }), (0, rV.jsx)(pV.m, {
           className: "NewPlayerDealBuy",
-          loading: OM,
-          onClick: nM,
-          ariaLabel: QM("newPlayerDeal:buyLabel", {
-            amount: hM.gems.toLocaleString(),
-            price: JM
+          loading: JV,
+          onClick: QV,
+          ariaLabel: nV("newPlayerDeal:buyLabel", {
+            amount: kV.gems.toLocaleString(),
+            price: bV
           }),
-          children: QM(iM ? "newPlayerDeal:logInToBuy" : "newPlayerDeal:buy", {
-            price: JM
+          children: nV(xV ? "newPlayerDeal:logInToBuy" : "newPlayerDeal:buy", {
+            price: bV
           })
         })]
       })
     }
 
-    function dM(MM) {
+    function EV(VV) {
       let {
-        view: rM,
-        needsLogin: iM,
-        busy: SM,
-        highlight: PM,
-        onBuy: nM
-      } = MM;
+        view: eV,
+        needsLogin: xV,
+        busy: YV,
+        highlight: pV,
+        onBuy: QV
+      } = VV;
       const {
-        t: QM
-      } = (0, aM.A)();
-      return (0, HM.jsxs)("div", {
-        className: jM()("NewPlayerDealPacks", rM.packs.length > 1 ? "NewPlayerDealPacksTwo" : "NewPlayerDealPacksOne"),
-        children: [rM.packs.map(((MM, rM) => (0, HM.jsxs)(OM.Fragment, {
-          children: [rM > 0 && (0, HM.jsx)("div", {
+        t: nV
+      } = (0, yV.A)();
+      return (0, rV.jsxs)("div", {
+        className: UV()("NewPlayerDealPacks", eV.packs.length > 1 ? "NewPlayerDealPacksTwo" : "NewPlayerDealPacksOne"),
+        children: [eV.packs.map(((VV, eV) => (0, rV.jsxs)(JV.Fragment, {
+          children: [eV > 0 && (0, rV.jsx)("div", {
             className: "NewPlayerDealDivider",
             "aria-hidden": !0,
-            children: (0, HM.jsx)("i", {})
-          }), (0, HM.jsx)(JM, {
-            offered: MM,
-            needsLogin: iM,
-            busy: SM,
-            highlight: PM === MM.pack.packageId,
+            children: (0, rV.jsx)("i", {})
+          }), (0, rV.jsx)(bV, {
+            offered: VV,
+            needsLogin: xV,
+            busy: YV,
+            highlight: pV === VV.pack.packageId,
             onBuy: () => {
-              nM(MM)
+              QV(VV)
             }
           })]
-        }, MM.pack.packageId))), (0, HM.jsx)("div", {
+        }, VV.pack.packageId))), (0, rV.jsx)("div", {
           className: "NewPlayerDealUnder",
-          children: (0, HM.jsx)("span", {
+          children: (0, rV.jsx)("span", {
             className: "NewPlayerDealLimit",
-            children: QM("newPlayerDeal:limit")
+            children: nV("newPlayerDeal:limit")
           })
         })]
       })
     }
   },
-  35077: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => wM,
-      e: () => gM
+  35371: (VV, eV, xV) => {
+    xV.d(eV, {
+      d: () => NV,
+      g: () => MV
     });
-    iM(35072);
-    var OM = iM(3442),
-      SM = iM(1548),
-      jM = iM(2401),
-      aM = iM(3432),
-      PM = iM(3411),
-      nM = iM(3439),
-      QM = iM(3385),
-      zM = iM(1188),
-      LM = iM(1429),
-      mM = iM(1142),
-      HM = iM(1520),
-      hM = iM(1398),
-      JM = iM(2382),
-      dM = iM(2910),
-      yM = iM(2779),
-      lM = iM(2782),
-      EM = iM(2787),
-      UM = iM(1303);
-    const GM = new nM.c(QM.getBillingClient, QM.addPurchaseRecordListener);
-    let CM = !1;
+    xV(35362);
+    var JV = xV(3450),
+      YV = xV(1586),
+      UV = xV(2430),
+      yV = xV(3437),
+      pV = xV(3412),
+      QV = xV(3446),
+      nV = xV(3398),
+      wV = xV(1220),
+      ZV = xV(1439),
+      vV = xV(1168),
+      rV = xV(1551),
+      kV = xV(1414),
+      bV = xV(2404),
+      EV = xV(2971),
+      BV = xV(2847),
+      jV = xV(2849),
+      qV = xV(2855),
+      tV = xV(1321);
+    const FV = new QV.d(nV.getBillingClient, nV.addPurchaseRecordListener);
+    let TV = !1;
 
-    function eM(MM, rM) {
-      null !== MM && (0, yM.u)(MM) || ((0, SM.reportAnalyticsClick)({
+    function PV(VV, eV) {
+      null !== VV && (0, BV.o)(VV) || ((0, YV.reportAnalyticsClick)({
         id: "store.purchase_done",
-        value: `self:${rM.pack.packageId}`
-      }), null !== MM && (0, yM.z)(MM), wM(rM.pack.gems))
+        value: `self:${eV.pack.packageId}`
+      }), null !== VV && (0, BV.v)(VV), NV(eV.pack.gems))
     }
 
-    function bM(MM, rM, iM) {
-      const SM = (0, yM.d)(rM);
-      switch (MM.kind) {
+    function AV(VV, eV, xV) {
+      const YV = (0, BV.b)(eV);
+      switch (VV.kind) {
         case "completed":
-          eM(SM, iM);
+          PV(YV, xV);
           break;
         case "pending":
-          jM = MM.intentId, aM = () => {
-            dM.i.refresh(), eM(SM, iM)
-          }, CM || (CM = !0, GM.listen()), GM.follow(jM, aM);
+          UV = VV.intentId, yV = () => {
+            EV.j.refresh(), PV(YV, xV)
+          }, TV || (TV = !0, FV.listen()), FV.follow(UV, yV);
           break;
         case "unknownPackage":
-          (0, yM.N)(rM, null);
+          (0, BV.O)(eV, null);
           break;
         case "failed":
-          MM.errorKey === OM.d.newPlayerDealUnavailable && (0, yM.N)(rM, null)
+          VV.errorKey === JV.d.newPlayerDealUnavailable && (0, BV.O)(eV, null)
       }
-      var jM, aM
+      var UV, yV
     }
 
-    function wM(MM) {
-      LM.NotificationProvider.showCustomPopup({
-        body: rM => (0, UM.jsx)(tM, {
-          gems: MM,
-          close: rM
+    function NV(VV) {
+      ZV.NotificationProvider.showCustomPopup({
+        body: eV => (0, tV.jsx)(XV, {
+          gems: VV,
+          close: eV
         }),
         middleScreenPopupClassName: "NewPlayerDealAddedPopup",
         disableExitButton: !0
       })
     }
 
-    function tM(MM) {
+    function XV(VV) {
       let {
-        gems: rM,
-        close: iM
-      } = MM;
+        gems: eV,
+        close: xV
+      } = VV;
       const {
-        t: OM
-      } = (0, zM.A)();
-      return (0, UM.jsxs)("div", {
+        t: JV
+      } = (0, wV.A)();
+      return (0, tV.jsxs)("div", {
         className: "NewPlayerDealAdded",
-        children: [(0, UM.jsxs)("div", {
+        children: [(0, tV.jsxs)("div", {
           className: "NewPlayerDealAddedHead",
-          children: [(0, UM.jsx)(hM.b, {
+          children: [(0, tV.jsx)(kV.b, {
             name: "circle-check"
-          }), (0, UM.jsx)(JM.b, {
-            amount: rM
-          }), (0, UM.jsx)("span", {
-            children: OM("newPlayerDeal:added")
+          }), (0, tV.jsx)(bV.e, {
+            amount: eV
+          }), (0, tV.jsx)("span", {
+            children: JV("newPlayerDeal:added")
           })]
-        }), (0, UM.jsx)(HM.p, {
+        }), (0, tV.jsx)(rV.m, {
           className: "NewPlayerDealAddedOk",
-          onClick: iM,
-          children: OM("general:ok")
+          onClick: xV,
+          children: JV("general:ok")
         })]
       })
     }
 
-    function gM(MM) {
-      let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : aM.e;
+    function MV(VV) {
+      let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : yV.e;
       const {
-        userContext: iM
-      } = (0, mM.b)(), {
-        purchaseUnderWay: OM,
-        notice: SM,
-        buy: nM
-      } = (0, PM.d)(rM), QM = (0, lM.m)(), zM = iM.mayBuy() || (0, jM.guestsMayBuy)(), LM = null === QM ? !zM : QM.guest && !iM.isLoggedIn();
+        userContext: xV
+      } = (0, vV.d)(), {
+        purchaseUnderWay: JV,
+        notice: YV,
+        buy: QV
+      } = (0, pV.d)(eV), nV = (0, jV.i)(), wV = xV.mayBuy() || (0, UV.guestsMayBuy)(), ZV = null === nV ? !wV : nV.guest && !xV.isLoggedIn();
       return {
-        purchaseUnderWay: OM,
-        notice: SM,
-        needsLogin: LM,
-        buyPack: function(OM, SM) {
-          (0, yM.G)("new_player_deal.buy", (0, EM.b)(OM.arm, MM, SM.pack.packageId)), null === QM ? nM(function(MM) {
+        purchaseUnderWay: JV,
+        notice: YV,
+        needsLogin: ZV,
+        buyPack: function(JV, YV) {
+          (0, BV.E)("new_player_deal.buy", (0, qV.c)(JV.arm, VV, YV.pack.packageId)), null === nV ? QV(function(VV) {
             return {
-              sku: MM.pack.packageId,
-              tier: MM.tier,
-              amount: MM.pack.gems,
+              sku: VV.pack.packageId,
+              tier: VV.tier,
+              amount: VV.pack.gems,
               bonusPercent: 0,
-              package: MM.package
+              package: VV.package
             }
-          }(SM), null, {
+          }(YV), null, {
             followPending: !1
-          }).then((MM => {
-            bM(MM, iM, SM)
-          })) : LM ? rM(SM.pack.packageId, null) : eM((0, yM.d)(iM), SM)
+          }).then((VV => {
+            AV(VV, xV, YV)
+          })) : ZV ? eV(YV.pack.packageId, null) : PV((0, BV.b)(xV), YV)
         }
       }
     }
   },
-  5282: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => dM
+  5385: (VV, eV, xV) => {
+    xV.d(eV, {
+      c: () => EV
     });
-    var OM = iM(1116),
-      SM = iM.n(OM),
-      jM = iM(5011),
-      aM = iM(1188),
-      PM = iM(1398),
-      nM = iM(1520),
-      QM = iM(1573),
-      zM = iM(1429),
-      LM = iM(2709),
-      mM = iM(1303);
-    const HM = {
+    var JV = xV(1146),
+      YV = xV.n(JV),
+      UV = xV(5115),
+      yV = xV(1220),
+      pV = xV(1414),
+      QV = xV(1551),
+      nV = xV(1603),
+      wV = xV(1439),
+      ZV = xV(2771),
+      vV = xV(1321);
+    const rV = {
       youtube: {
         icon: "youtube",
         color: "#FF0033",
@@ -9626,406 +9626,406 @@ export const modules = {
       }
     };
 
-    function hM(MM) {
+    function kV(VV) {
       let {
-        platform: rM
-      } = MM;
-      const iM = "youtube" === rM;
-      return (0, mM.jsxs)("span", {
-        className: SM()("PlayerProfileSocialLinkIcon", {
-          PlayerProfileSocialLinkIconYoutube: iM
+        platform: eV
+      } = VV;
+      const xV = "youtube" === eV;
+      return (0, vV.jsxs)("span", {
+        className: YV()("PlayerProfileSocialLinkIcon", {
+          PlayerProfileSocialLinkIconYoutube: xV
         }),
-        children: [iM && (0, mM.jsx)(LM.d, {
+        children: [xV && (0, vV.jsx)(ZV.b, {
           variant: "white"
-        }), !iM && (0, mM.jsx)(PM.b, {
-          name: HM[rM].icon,
+        }), !xV && (0, vV.jsx)(pV.b, {
+          name: rV[eV].icon,
           kit: "brands"
         })]
       })
     }
 
-    function JM(MM) {
+    function bV(VV) {
       let {
-        platform: rM,
-        link: iM,
-        editable: OM,
-        userContext: SM,
-        onLinksUpdated: LM
-      } = MM;
+        platform: eV,
+        link: xV,
+        editable: JV,
+        userContext: YV,
+        onLinksUpdated: ZV
+      } = VV;
       const {
-        t: JM
-      } = (0, aM.A)(), dM = HM[rM];
-      if (!iM && !OM) return null;
+        t: bV
+      } = (0, yV.A)(), EV = rV[eV];
+      if (!xV && !JV) return null;
 
-      function yM() {
-        var MM;
-        if (!SM || !LM) return;
-        zM.NotificationProvider.showInputPopup({
+      function BV() {
+        var VV;
+        if (!YV || !ZV) return;
+        wV.NotificationProvider.showInputPopup({
           title: "homePage:profileSocialLinkEditTitle",
           textOpts: {
             title: {
-              platform: dM.name
+              platform: EV.name
             }
           },
-          prefixText: jM.t[rM],
+          prefixText: UV.s[eV],
           placeholderText: "playBloxd",
-          initialValue: null !== (MM = null === iM || void 0 === iM ? void 0 : iM.handle) && void 0 !== MM ? MM : "",
+          initialValue: null !== (VV = null === xV || void 0 === xV ? void 0 : xV.handle) && void 0 !== VV ? VV : "",
           maxLength: 30,
           submitText: "general:save",
-          secondaryButtonText: iM ? "general:remove" : void 0
-        }).getResult().then((async MM => {
-          if ("notificationTornDown" !== MM && null !== MM) try {
-            "submit" === MM.type ? await QM.c.setSocialLink(SM, rM, MM.value) : await QM.c.clearSocialLink(SM, rM), LM()
-          } catch (iM) {
-            console.error("Failed to update social link", iM), zM.NotificationProvider.showAlertPopup({
-              title: iM.errorMessageForUser,
+          secondaryButtonText: xV ? "general:remove" : void 0
+        }).getResult().then((async VV => {
+          if ("notificationTornDown" !== VV && null !== VV) try {
+            "submit" === VV.type ? await nV.b.setSocialLink(YV, eV, VV.value) : await nV.b.clearSocialLink(YV, eV), ZV()
+          } catch (xV) {
+            console.error("Failed to update social link", xV), wV.NotificationProvider.showAlertPopup({
+              title: xV.errorMessageForUser,
               confirmText: "general:ok"
             })
           }
         }))
       }
-      if (iM) {
-        const MM = `@${iM.handle}`;
-        return (0, mM.jsxs)("a", {
+      if (xV) {
+        const VV = `@${xV.handle}`;
+        return (0, vV.jsxs)("a", {
           className: "PlayerProfileSocialLink",
           style: {
-            background: dM.color
+            background: EV.color
           },
-          href: iM.profileUrl,
+          href: xV.profileUrl,
           target: "_blank",
           rel: "noopener noreferrer",
-          children: [(0, mM.jsxs)("div", {
+          children: [(0, vV.jsxs)("div", {
             className: "PlayerProfileSocialLinkMain",
-            children: [(0, mM.jsx)(hM, {
-              platform: rM
-            }), (0, mM.jsx)("span", {
+            children: [(0, vV.jsx)(kV, {
+              platform: eV
+            }), (0, vV.jsx)("span", {
               className: "PlayerProfileSocialLinkText",
-              children: (0, mM.jsx)("span", {
+              children: (0, vV.jsx)("span", {
                 className: "PlayerProfileSocialLinkName SmallTextBold",
-                children: MM
+                children: VV
               })
             })]
-          }), OM && (0, mM.jsx)("button", {
+          }), JV && (0, vV.jsx)("button", {
             type: "button",
             className: "PlayerProfileSocialLinkEditButton",
-            ...(0, nM.fb)({
+            ...(0, QV.V)({
               stopPropagation: !0
             }),
-            onClick: MM => {
-              MM.stopPropagation(), MM.preventDefault(), yM()
+            onClick: VV => {
+              VV.stopPropagation(), VV.preventDefault(), BV()
             },
-            children: (0, mM.jsx)(PM.b, {
+            children: (0, vV.jsx)(pV.b, {
               name: "pen-to-square"
             })
-          }), !OM && (0, mM.jsx)("span", {
+          }), !JV && (0, vV.jsx)("span", {
             className: "PlayerProfileSocialLinkArrow",
-            children: (0, mM.jsx)(PM.b, {
+            children: (0, vV.jsx)(pV.b, {
               name: "arrow-up-right-from-square"
             })
           })]
         })
       }
-      return (0, mM.jsxs)("button", {
+      return (0, vV.jsxs)("button", {
         type: "button",
         className: "PlayerProfileSocialLink PlayerProfileSocialLinkUnlinked",
         style: {
-          background: dM.color
+          background: EV.color
         },
-        ...(0, nM.fb)(),
+        ...(0, QV.V)(),
         onClick: () => {
-          yM()
+          BV()
         },
-        children: [(0, mM.jsx)(hM, {
-          platform: rM
-        }), (0, mM.jsxs)("span", {
+        children: [(0, vV.jsx)(kV, {
+          platform: eV
+        }), (0, vV.jsxs)("span", {
           className: "PlayerProfileSocialLinkText",
-          children: [(0, mM.jsx)("span", {
+          children: [(0, vV.jsx)("span", {
             className: "PlayerProfileSocialLinkName SmallTextBold",
-            children: dM.name
-          }), (0, mM.jsx)("span", {
+            children: EV.name
+          }), (0, vV.jsx)("span", {
             className: "PlayerProfileSocialLinkCount SmallTextLight",
-            children: JM("homePage:profileSocialLinkAdd")
+            children: bV("homePage:profileSocialLinkAdd")
           })]
-        }), (0, mM.jsx)("span", {
+        }), (0, vV.jsx)("span", {
           className: "PlayerProfileSocialLinkEditButton",
-          children: (0, mM.jsx)(PM.b, {
+          children: (0, vV.jsx)(pV.b, {
             name: "pen-to-square"
           })
         })]
       })
     }
 
-    function dM(MM) {
+    function EV(VV) {
       let {
-        socialLinks: rM,
-        editable: iM = !1,
-        userContext: OM,
-        onLinksUpdated: SM
-      } = MM;
-      if (!iM && 0 === rM.length) return null;
-      const aM = new Map(rM.map((MM => [MM.platform, MM]))),
-        PM = iM ? jM.s : rM.map((MM => MM.platform));
-      return (0, mM.jsx)("div", {
+        socialLinks: eV,
+        editable: xV = !1,
+        userContext: JV,
+        onLinksUpdated: YV
+      } = VV;
+      if (!xV && 0 === eV.length) return null;
+      const yV = new Map(eV.map((VV => [VV.platform, VV]))),
+        pV = xV ? UV.p : eV.map((VV => VV.platform));
+      return (0, vV.jsx)("div", {
         className: "PlayerProfileSocialLinks",
-        children: (0, mM.jsx)("div", {
+        children: (0, vV.jsx)("div", {
           className: "PlayerProfileSocialLinksList",
-          children: PM.map((MM => (0, mM.jsx)(JM, {
-            platform: MM,
-            link: aM.get(MM),
-            editable: iM,
-            userContext: OM,
-            onLinksUpdated: SM
-          }, MM)))
+          children: pV.map((VV => (0, vV.jsx)(bV, {
+            platform: VV,
+            link: yV.get(VV),
+            editable: xV,
+            userContext: JV,
+            onLinksUpdated: YV
+          }, VV)))
         })
       })
     }
   },
-  35064: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => jM
+  35346: (VV, eV, xV) => {
+    xV.d(eV, {
+      e: () => UV
     });
-    var OM = iM(44),
-      SM = iM(3839);
+    var JV = xV(62),
+      YV = xV(3886);
 
-    function jM() {
-      const [MM, rM] = (0, OM.useState)(!1);
-      return (0, OM.useLayoutEffect)((() => {
-        let MM = !0;
-        return (0, SM.e)().then((() => {
-          MM && rM(!0)
+    function UV() {
+      const [VV, eV] = (0, JV.useState)(!1);
+      return (0, JV.useLayoutEffect)((() => {
+        let VV = !0;
+        return (0, YV.f)().then((() => {
+          VV && eV(!0)
         })), () => {
-          MM = !1
+          VV = !1
         }
-      }), []), MM
+      }), []), VV
     }
   },
-  34997: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => JM,
-      e: () => hM
+  35275: (VV, eV, xV) => {
+    xV.d(eV, {
+      c: () => bV,
+      e: () => kV
     });
-    iM(34999);
-    var OM = iM(1116),
-      SM = iM.n(OM),
-      jM = iM(44),
-      aM = iM(34989);
+    xV(35278);
+    var JV = xV(1146),
+      YV = xV.n(JV),
+      UV = xV(62),
+      yV = xV(35272);
 
-    function PM(MM, rM) {
-      return Math.max(1, Math.round(MM * rM))
+    function pV(VV, eV) {
+      return Math.max(1, Math.round(VV * eV))
     }
 
-    function nM(MM, rM) {
-      const iM = rM * (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1),
-        OM = function(MM, rM) {
-          if (MM.lines) return PM(MM.lineThickness, rM) % 2;
-          if (MM.dot) return PM(MM.dotSize, rM) % 2;
-          return QM(MM, rM) % 2
-        }(MM, rM),
-        SM = zM(MM.lineThickness * iM, OM),
-        jM = PM(MM.lineLength, iM),
-        aM = Math.round(MM.gap * iM),
-        nM = MM.outline > 0 ? PM(MM.outline, iM) : 0,
-        mM = [];
-      if (MM.lines && (mM.push({
-          x: SM + aM,
+    function QV(VV, eV) {
+      const xV = eV * (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1),
+        JV = function(VV, eV) {
+          if (VV.lines) return pV(VV.lineThickness, eV) % 2;
+          if (VV.dot) return pV(VV.dotSize, eV) % 2;
+          return nV(VV, eV) % 2
+        }(VV, eV),
+        YV = wV(VV.lineThickness * xV, JV),
+        UV = pV(VV.lineLength, xV),
+        yV = Math.round(VV.gap * xV),
+        QV = VV.outline > 0 ? pV(VV.outline, xV) : 0,
+        vV = [];
+      if (VV.lines && (vV.push({
+          x: YV + yV,
           y: 0,
-          w: jM,
-          h: SM,
+          w: UV,
+          h: YV,
           arm: "right"
-        }), mM.push({
-          x: -aM - jM,
+        }), vV.push({
+          x: -yV - UV,
           y: 0,
-          w: jM,
-          h: SM,
+          w: UV,
+          h: YV,
           arm: "left"
-        }), mM.push({
+        }), vV.push({
           x: 0,
-          y: SM + aM,
-          w: SM,
-          h: jM,
+          y: YV + yV,
+          w: YV,
+          h: UV,
           arm: "down"
-        }), MM.tStyle || mM.push({
+        }), VV.tStyle || vV.push({
           x: 0,
-          y: -aM - jM,
-          w: SM,
-          h: jM,
+          y: -yV - UV,
+          w: YV,
+          h: UV,
           arm: "up"
-        }), 0 === aM && mM.push({
+        }), 0 === yV && vV.push({
           x: 0,
           y: 0,
-          w: SM,
-          h: SM
-        })), MM.dot) {
-        const rM = zM(MM.dotSize * iM, OM),
-          jM = MM.lines && 0 === aM && MM.dotSize > MM.lineThickness ? Math.max(rM, SM + 2) : rM,
-          PM = (SM - jM) / 2;
-        mM.push({
-          x: PM,
-          y: PM,
-          w: jM,
-          h: jM
+          w: YV,
+          h: YV
+        })), VV.dot) {
+        const eV = wV(VV.dotSize * xV, JV),
+          UV = VV.lines && 0 === yV && VV.dotSize > VV.lineThickness ? Math.max(eV, YV + 2) : eV,
+          pV = (YV - UV) / 2;
+        vV.push({
+          x: pV,
+          y: pV,
+          w: UV,
+          h: UV
         })
       }
-      const HM = mM.map((MM => ({
-        ...MM,
-        x: MM.x - nM,
-        y: MM.y - nM,
-        w: MM.w + 2 * nM,
-        h: MM.h + 2 * nM
+      const rV = vV.map((VV => ({
+        ...VV,
+        x: VV.x - QV,
+        y: VV.y - QV,
+        w: VV.w + 2 * QV,
+        h: VV.h + 2 * QV
       })));
-      let hM = null,
-        JM = null;
-      if (MM.circle) {
-        const rM = PM(MM.circleThickness, iM),
-          jM = function(MM, rM) {
-            return MM + (MM % 2 === rM ? 0 : 1)
-          }(QM(MM, iM), OM),
-          aM = (SM - jM) / 2;
-        hM = LM(aM, jM, rM), nM > 0 && (JM = LM(aM - nM, jM + 2 * nM, rM + 2 * nM))
+      let kV = null,
+        bV = null;
+      if (VV.circle) {
+        const eV = pV(VV.circleThickness, xV),
+          UV = function(VV, eV) {
+            return VV + (VV % 2 === eV ? 0 : 1)
+          }(nV(VV, xV), JV),
+          yV = (YV - UV) / 2;
+        kV = ZV(yV, UV, eV), QV > 0 && (bV = ZV(yV - QV, UV + 2 * QV, eV + 2 * QV))
       }
       return {
-        cell: SM,
-        fills: mM,
-        outlines: nM > 0 ? HM : [],
-        ring: hM,
-        ringOutline: JM
+        cell: YV,
+        fills: vV,
+        outlines: QV > 0 ? rV : [],
+        ring: kV,
+        ringOutline: bV
       }
     }
 
-    function QM(MM, rM) {
-      return Math.round(MM.circleRadius * rM * 2 + PM(MM.circleThickness, rM))
+    function nV(VV, eV) {
+      return Math.round(VV.circleRadius * eV * 2 + pV(VV.circleThickness, eV))
     }
 
-    function zM(MM, rM) {
-      return Math.max(2 - rM, 2 * Math.round((MM - rM) / 2) + rM)
+    function wV(VV, eV) {
+      return Math.max(2 - eV, 2 * Math.round((VV - eV) / 2) + eV)
     }
 
-    function LM(MM, rM, iM) {
-      const OM = 2 * iM >= rM - 1;
+    function ZV(VV, eV, xV) {
+      const JV = 2 * xV >= eV - 1;
       return {
-        x: MM,
-        y: MM,
-        size: rM,
-        border: Math.min(iM, Math.floor(rM / 2)),
-        filled: OM
+        x: VV,
+        y: VV,
+        size: eV,
+        border: Math.min(xV, Math.floor(eV / 2)),
+        filled: JV
       }
     }
-    var mM = iM(1303);
-    const HM = 1.4;
+    var vV = xV(1321);
+    const rV = 1.4;
 
-    function hM(MM, rM) {
-      return MM && rM ? `scale(${HM})` : "scale(1)"
+    function kV(VV, eV) {
+      return VV && eV ? `scale(${rV})` : "scale(1)"
     }
 
-    function JM(MM) {
-      return "classic" === MM.settings.style ? (0, mM.jsx)(lM, {
-        ...MM
-      }) : (0, mM.jsx)(wM, {
-        ...MM
+    function bV(VV) {
+      return "classic" === VV.settings.style ? (0, vV.jsx)(jV, {
+        ...VV
+      }) : (0, vV.jsx)(NV, {
+        ...VV
       })
     }
-    const dM = .125;
+    const EV = .125;
 
-    function yM(MM, rM) {
-      const iM = {};
-      if (MM.color !== aM.e.color && (iM.color = (0, aM.i)(MM.color)), MM.opacity !== aM.e.opacity && (iM.opacity = MM.opacity / 100), MM.outline !== aM.e.outline || MM.outlineColor !== aM.e.outlineColor) {
-        const rM = MM.outline,
-          OM = (0, aM.i)(MM.outlineColor);
-        iM.textShadow = rM > 0 ? `-${rM}px 0 ${OM}, 0 ${rM}px ${OM}, ${rM}px 0 ${OM}, 0 -${rM}px ${OM}` : "none"
+    function BV(VV, eV) {
+      const xV = {};
+      if (VV.color !== yV.f.color && (xV.color = (0, yV.l)(VV.color)), VV.opacity !== yV.f.opacity && (xV.opacity = VV.opacity / 100), VV.outline !== yV.f.outline || VV.outlineColor !== yV.f.outlineColor) {
+        const eV = VV.outline,
+          JV = (0, yV.l)(VV.outlineColor);
+        xV.textShadow = eV > 0 ? `-${eV}px 0 ${JV}, 0 ${eV}px ${JV}, ${eV}px 0 ${JV}, 0 -${eV}px ${JV}` : "none"
       }
-      if (MM.size !== aM.e.size) {
-        const OM = MM.size / 100;
-        iM.fontSize = rM ? `calc(max(1.3rem, 18px) * ${OM})` : `calc(1.3rem * ${OM})`, iM.marginTop = `-${dM}em`, iM.transformOrigin = `50% calc(50% + ${dM}em)`
+      if (VV.size !== yV.f.size) {
+        const JV = VV.size / 100;
+        xV.fontSize = eV ? `calc(max(1.3rem, 18px) * ${JV})` : `calc(1.3rem * ${JV})`, xV.marginTop = `-${EV}em`, xV.transformOrigin = `50% calc(50% + ${EV}em)`
       }
-      return iM
+      return xV
     }
 
-    function lM(MM) {
+    function jV(VV) {
       let {
-        settings: rM,
-        touch: iM,
-        inPreview: OM,
-        inEditor: jM,
-        pressed: aM = !1,
-        pressRef: PM
-      } = MM;
-      return (0, mM.jsx)("div", {
-        className: SM()("Crosshair", {
-          Touch: iM,
-          CrosshairInPreview: OM,
-          CrosshairInEditor: jM || OM
+        settings: eV,
+        touch: xV,
+        inPreview: JV,
+        inEditor: UV,
+        pressed: yV = !1,
+        pressRef: pV
+      } = VV;
+      return (0, vV.jsx)("div", {
+        className: YV()("Crosshair", {
+          Touch: xV,
+          CrosshairInPreview: JV,
+          CrosshairInEditor: UV || JV
         }),
-        ref: PM,
+        ref: pV,
         style: {
-          transform: hM(aM, rM.growOnClick),
-          ...yM(rM, iM)
+          transform: kV(yV, eV.growOnClick),
+          ...BV(eV, xV)
         },
         children: "+"
       })
     }
 
-    function EM(MM, rM) {
-      return MM / rM + "px"
+    function qV(VV, eV) {
+      return VV / eV + "px"
     }
 
-    function UM(MM, rM, iM, OM) {
+    function tV(VV, eV, xV, JV) {
       return {
-        ...eM(MM, rM, iM),
-        width: EM(MM.w, iM),
-        height: EM(MM.h, iM),
-        background: OM
+        ...PV(VV, eV, xV),
+        width: qV(VV.w, xV),
+        height: qV(VV.h, xV),
+        background: JV
       }
     }
 
-    function GM(MM, rM, iM) {
+    function FV(VV, eV, xV) {
       return {
-        left: EM(MM.x, rM),
-        top: EM(MM.y, rM),
-        width: EM(MM.size, rM),
-        height: EM(MM.size, rM),
-        borderWidth: EM(MM.border, rM),
-        borderColor: iM,
-        background: MM.filled ? iM : void 0
+        left: qV(VV.x, eV),
+        top: qV(VV.y, eV),
+        width: qV(VV.size, eV),
+        height: qV(VV.size, eV),
+        borderWidth: qV(VV.border, eV),
+        borderColor: xV,
+        background: VV.filled ? xV : void 0
       }
     }
-    const CM = {
+    const TV = {
       left: [-1, 0],
       right: [1, 0],
       up: [0, -1],
       down: [0, 1]
     };
 
-    function eM(MM, rM, iM) {
-      const [OM, SM] = MM.arm ? CM[MM.arm] : [0, 0], jM = Math.round(rM * iM);
+    function PV(VV, eV, xV) {
+      const [JV, YV] = VV.arm ? TV[VV.arm] : [0, 0], UV = Math.round(eV * xV);
       return {
-        left: EM(MM.x + OM * jM, iM),
-        top: EM(MM.y + SM * jM, iM)
+        left: qV(VV.x + JV * UV, xV),
+        top: qV(VV.y + YV * UV, xV)
       }
     }
 
-    function bM(MM) {
-      return MM.arm ? {
-        "data-arm": MM.arm,
-        "data-x": MM.x,
-        "data-y": MM.y
+    function AV(VV) {
+      return VV.arm ? {
+        "data-arm": VV.arm,
+        "data-x": VV.x,
+        "data-y": VV.y
       } : {}
     }
 
-    function wM(MM) {
+    function NV(VV) {
       let {
-        settings: rM,
-        inPreview: iM,
-        inEditor: OM,
-        pressed: PM = !1,
-        spread: QM,
-        spreadRef: zM
-      } = MM;
-      const LM = (0, jM.useRef)(null),
+        settings: eV,
+        inPreview: xV,
+        inEditor: JV,
+        pressed: pV = !1,
+        spread: nV,
+        spreadRef: wV
+      } = VV;
+      const ZV = (0, UV.useRef)(null),
         {
-          box: hM,
-          dpr: JM
-        } = function(MM) {
-          const [rM, iM] = (0, jM.useState)({
+          box: kV,
+          dpr: bV
+        } = function(VV) {
+          const [eV, xV] = (0, UV.useState)({
             box: {
               left: 0,
               top: 0,
@@ -10034,200 +10034,200 @@ export const modules = {
             },
             dpr: 1
           });
-          return (0, jM.useLayoutEffect)((() => {
-            const rM = MM.current;
-            if (!rM) return;
-            const OM = () => {
-              const MM = rM.getBoundingClientRect(),
-                OM = window.devicePixelRatio || 1;
-              iM((rM => rM.dpr === OM && rM.box.left === MM.left && rM.box.top === MM.top && rM.box.width === MM.width && rM.box.height === MM.height ? rM : {
+          return (0, UV.useLayoutEffect)((() => {
+            const eV = VV.current;
+            if (!eV) return;
+            const JV = () => {
+              const VV = eV.getBoundingClientRect(),
+                JV = window.devicePixelRatio || 1;
+              xV((eV => eV.dpr === JV && eV.box.left === VV.left && eV.box.top === VV.top && eV.box.width === VV.width && eV.box.height === VV.height ? eV : {
                 box: {
-                  left: MM.left,
-                  top: MM.top,
-                  width: MM.width,
-                  height: MM.height
+                  left: VV.left,
+                  top: VV.top,
+                  width: VV.width,
+                  height: VV.height
                 },
-                dpr: OM
+                dpr: JV
               }))
             };
-            OM();
-            const SM = new ResizeObserver(OM);
-            return SM.observe(rM), window.addEventListener("resize", OM), window.addEventListener("scroll", OM, !0), () => {
-              SM.disconnect(), window.removeEventListener("resize", OM), window.removeEventListener("scroll", OM, !0)
+            JV();
+            const YV = new ResizeObserver(JV);
+            return YV.observe(eV), window.addEventListener("resize", JV), window.addEventListener("scroll", JV, !0), () => {
+              YV.disconnect(), window.removeEventListener("resize", JV), window.removeEventListener("scroll", JV, !0)
             }
-          }), [MM]), rM
-        }(LM),
-        dM = (0, jM.useRef)(JM);
-      dM.current = JM;
-      const yM = nM(rM, JM, PM && rM.growOnClick ? HM : 1),
-        lM = function(MM, rM, iM) {
-          const OM = Math.round((MM.left + MM.width / 2) * iM - rM / 2),
-            SM = Math.round((MM.top + MM.height / 2) * iM - rM / 2);
+          }), [VV]), eV
+        }(ZV),
+        EV = (0, UV.useRef)(bV);
+      EV.current = bV;
+      const BV = QV(eV, bV, pV && eV.growOnClick ? rV : 1),
+        jV = function(VV, eV, xV) {
+          const JV = Math.round((VV.left + VV.width / 2) * xV - eV / 2),
+            YV = Math.round((VV.top + VV.height / 2) * xV - eV / 2);
           return {
-            x: OM / iM - MM.left,
-            y: SM / iM - MM.top
+            x: JV / xV - VV.left,
+            y: YV / xV - VV.top
           }
-        }(hM, yM.cell, JM),
-        EM = (0, aM.i)(rM.color),
-        CM = (0, aM.i)(rM.outlineColor),
-        wM = (0, jM.useRef)(0);
-      (0, jM.useLayoutEffect)((() => {
-        if (zM) return zM.current = MM => {
-          var rM;
-          wM.current = MM, null === (rM = LM.current) || void 0 === rM || rM.querySelectorAll("[data-arm]").forEach((rM => {
-            Object.assign(rM.style, eM(function(MM) {
+        }(kV, BV.cell, bV),
+        qV = (0, yV.l)(eV.color),
+        TV = (0, yV.l)(eV.outlineColor),
+        NV = (0, UV.useRef)(0);
+      (0, UV.useLayoutEffect)((() => {
+        if (wV) return wV.current = VV => {
+          var eV;
+          NV.current = VV, null === (eV = ZV.current) || void 0 === eV || eV.querySelectorAll("[data-arm]").forEach((eV => {
+            Object.assign(eV.style, PV(function(VV) {
               return {
-                x: Number(MM.dataset.x),
-                y: Number(MM.dataset.y),
-                arm: MM.dataset.arm
+                x: Number(VV.dataset.x),
+                y: Number(VV.dataset.y),
+                arm: VV.dataset.arm
               }
-            }(rM), MM, dM.current))
+            }(eV), VV, EV.current))
           }))
         }, () => {
-          zM.current = null
+          wV.current = null
         }
-      }), [zM]);
-      const tM = null !== QM && void 0 !== QM ? QM : wM.current;
-      return (0, mM.jsx)("div", {
-        ref: LM,
-        className: SM()("CrosshairShapes", {
-          CrosshairInPreview: iM,
-          CrosshairInEditor: OM || iM,
-          CrosshairSpreads: void 0 !== zM
+      }), [wV]);
+      const XV = null !== nV && void 0 !== nV ? nV : NV.current;
+      return (0, vV.jsx)("div", {
+        ref: ZV,
+        className: YV()("CrosshairShapes", {
+          CrosshairInPreview: xV,
+          CrosshairInEditor: JV || xV,
+          CrosshairSpreads: void 0 !== wV
         }),
-        children: (0, mM.jsx)("div", {
+        children: (0, vV.jsx)("div", {
           className: "CrosshairShapesOrigin",
           style: {
-            left: lM.x,
-            top: lM.y,
-            opacity: rM.opacity / 100
+            left: jV.x,
+            top: jV.y,
+            opacity: eV.opacity / 100
           },
-          children: (0, mM.jsxs)("div", {
+          children: (0, vV.jsxs)("div", {
             className: "CrosshairShapesPress",
-            children: [yM.ringOutline && (0, mM.jsx)("div", {
+            children: [BV.ringOutline && (0, vV.jsx)("div", {
               className: "CrosshairRing",
-              style: GM(yM.ringOutline, JM, CM)
-            }), yM.outlines.map(((MM, rM) => (0, mM.jsx)("div", {
+              style: FV(BV.ringOutline, bV, TV)
+            }), BV.outlines.map(((VV, eV) => (0, vV.jsx)("div", {
               className: "CrosshairPart",
-              ...bM(MM),
-              style: UM(MM, tM, JM, CM)
-            }, `o${rM}`))), yM.ring && (0, mM.jsx)("div", {
+              ...AV(VV),
+              style: tV(VV, XV, bV, TV)
+            }, `o${eV}`))), BV.ring && (0, vV.jsx)("div", {
               className: "CrosshairRing",
-              style: GM(yM.ring, JM, EM)
-            }), yM.fills.map(((MM, rM) => (0, mM.jsx)("div", {
+              style: FV(BV.ring, bV, qV)
+            }), BV.fills.map(((VV, eV) => (0, vV.jsx)("div", {
               className: "CrosshairPart",
-              ...bM(MM),
-              style: UM(MM, tM, JM, EM)
-            }, `f${rM}`)))]
+              ...AV(VV),
+              style: tV(VV, XV, bV, qV)
+            }, `f${eV}`)))]
           })
         })
       })
     }
   },
-  35003: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => zM,
-      f: () => dM,
-      i: () => JM
+  35285: (VV, eV, xV) => {
+    xV.d(eV, {
+      d: () => wV,
+      h: () => EV,
+      j: () => bV
     });
-    var OM = iM(34989);
-    const SM = "XH1-",
-      jM = ["lines", "dot", "circle", "tStyle", "growOnClick", "forGuns"],
-      aM = ["opacity", "outline", "size", "lineLength", "lineThickness", "gap", "dotSize", "circleRadius", "circleThickness"],
-      PM = ["color", "outlineColor"],
-      nM = 1 + 3 * PM.length + aM.length + 1,
-      QM = Math.ceil(8 * nM / Math.log2(62)),
-      zM = SM.length + QM;
+    var JV = xV(35272);
+    const YV = "XH1-",
+      UV = ["lines", "dot", "circle", "tStyle", "growOnClick", "forGuns"],
+      yV = ["opacity", "outline", "size", "lineLength", "lineThickness", "gap", "dotSize", "circleRadius", "circleThickness"],
+      pV = ["color", "outlineColor"],
+      QV = 1 + 3 * pV.length + yV.length + 1,
+      nV = Math.ceil(8 * QV / Math.log2(62)),
+      wV = YV.length + nV;
 
-    function LM(MM) {
-      let rM = 90;
-      for (const iM of MM) rM = 31 * rM + iM & 255;
-      return rM
+    function ZV(VV) {
+      let eV = 90;
+      for (const xV of VV) eV = 31 * eV + xV & 255;
+      return eV
     }
-    const mM = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
-      HM = BigInt(mM.length);
+    const vV = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
+      rV = BigInt(vV.length);
 
-    function hM(MM, rM) {
-      let iM = 0n;
-      for (const SM of MM) {
-        const MM = mM.indexOf(SM);
-        if (MM < 0) return null;
-        iM = iM * HM + BigInt(MM)
+    function kV(VV, eV) {
+      let xV = 0n;
+      for (const YV of VV) {
+        const VV = vV.indexOf(YV);
+        if (VV < 0) return null;
+        xV = xV * rV + BigInt(VV)
       }
-      if (iM >> BigInt(8 * rM) !== 0n) return null;
-      const OM = [];
-      for (let SM = 0; SM < rM; SM++) OM.unshift(Number(0xffn & iM)), iM >>= 8n;
-      return OM
+      if (xV >> BigInt(8 * eV) !== 0n) return null;
+      const JV = [];
+      for (let YV = 0; YV < eV; YV++) JV.unshift(Number(0xffn & xV)), xV >>= 8n;
+      return JV
     }
 
-    function JM(MM) {
-      let rM = "shapes" === MM.style ? 1 : 0;
-      jM.forEach(((iM, OM) => {
-        MM[iM] && (rM |= 1 << OM + 1)
+    function bV(VV) {
+      let eV = "shapes" === VV.style ? 1 : 0;
+      UV.forEach(((xV, JV) => {
+        VV[xV] && (eV |= 1 << JV + 1)
       }));
-      const iM = [rM];
-      for (const SM of PM) {
-        const rM = (0, OM.f)(SM, MM[SM]);
-        iM.push(rM >> 16 & 255, rM >> 8 & 255, 255 & rM)
+      const xV = [eV];
+      for (const YV of pV) {
+        const eV = (0, JV.i)(YV, VV[YV]);
+        xV.push(eV >> 16 & 255, eV >> 8 & 255, 255 & eV)
       }
-      for (const SM of aM) {
+      for (const YV of yV) {
         const {
-          min: rM,
-          step: jM
-        } = OM.d[SM];
-        iM.push(Math.round(((0, OM.f)(SM, MM[SM]) - rM) / jM))
+          min: eV,
+          step: UV
+        } = JV.b[YV];
+        xV.push(Math.round(((0, JV.i)(YV, VV[YV]) - eV) / UV))
       }
-      return iM.push(LM(iM)), SM + function(MM, rM) {
-        let iM = 0n;
-        for (const SM of MM) iM = iM << 8n | BigInt(SM);
-        let OM = "";
-        for (let SM = 0; SM < rM; SM++) OM = mM[Number(iM % HM)] + OM, iM /= HM;
-        return OM
-      }(iM, QM)
+      return xV.push(ZV(xV)), YV + function(VV, eV) {
+        let xV = 0n;
+        for (const YV of VV) xV = xV << 8n | BigInt(YV);
+        let JV = "";
+        for (let YV = 0; YV < eV; YV++) JV = vV[Number(xV % rV)] + JV, xV /= rV;
+        return JV
+      }(xV, nV)
     }
 
-    function dM(MM) {
-      for (const rM of MM.matchAll(new RegExp(`XH1-([0-9A-Za-z]{${QM}})`, "gi"))) {
-        const MM = yM(hM(rM[1], nM));
-        if (MM) return MM
+    function EV(VV) {
+      for (const eV of VV.matchAll(new RegExp(`XH1-([0-9A-Za-z]{${nV}})`, "gi"))) {
+        const VV = BV(kV(eV[1], QV));
+        if (VV) return VV
       }
       return null
     }
 
-    function yM(MM) {
-      if (!MM || MM.length !== nM || LM(MM.slice(0, -1)) !== MM[MM.length - 1]) return null;
-      const rM = MM[0],
-        iM = {
-          ...OM.e,
-          style: 1 & rM ? "shapes" : "classic"
+    function BV(VV) {
+      if (!VV || VV.length !== QV || ZV(VV.slice(0, -1)) !== VV[VV.length - 1]) return null;
+      const eV = VV[0],
+        xV = {
+          ...JV.f,
+          style: 1 & eV ? "shapes" : "classic"
         };
-      jM.forEach(((MM, OM) => {
-        iM[MM] = 0 !== (rM & 1 << OM + 1)
+      UV.forEach(((VV, JV) => {
+        xV[VV] = 0 !== (eV & 1 << JV + 1)
       }));
-      let SM = 1;
-      for (const OM of PM) iM[OM] = MM[SM] << 16 | MM[SM + 1] << 8 | MM[SM + 2], SM += 3;
-      for (const jM of aM) {
+      let YV = 1;
+      for (const JV of pV) xV[JV] = VV[YV] << 16 | VV[YV + 1] << 8 | VV[YV + 2], YV += 3;
+      for (const UV of yV) {
         const {
-          min: rM,
-          step: aM
-        } = OM.d[jM];
-        iM[jM] = (0, OM.f)(jM, rM + MM[SM] * aM), SM++
+          min: eV,
+          step: yV
+        } = JV.b[UV];
+        xV[UV] = (0, JV.i)(UV, eV + VV[YV] * yV), YV++
       }
-      return iM
+      return xV
     }
   },
-  34989: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => OM,
-      e: () => SM,
-      f: () => jM,
-      i: () => QM,
-      j: () => nM,
-      m: () => zM,
-      p: () => PM,
-      t: () => aM
+  35272: (VV, eV, xV) => {
+    xV.d(eV, {
+      b: () => JV,
+      f: () => YV,
+      i: () => UV,
+      l: () => nV,
+      o: () => QV,
+      q: () => wV,
+      u: () => pV,
+      w: () => yV
     });
-    const OM = {
+    const JV = {
         opacity: {
           min: 5,
           max: 100,
@@ -10284,7 +10284,7 @@ export const modules = {
           step: 1
         }
       },
-      SM = Object.freeze({
+      YV = Object.freeze({
         style: "classic",
         color: 16777215,
         opacity: 100,
@@ -10305,150 +10305,150 @@ export const modules = {
         forGuns: !1
       });
 
-    function jM(MM, rM) {
-      var iM;
+    function UV(VV, eV) {
+      var xV;
       const {
-        min: jM,
-        max: aM,
-        step: PM
-      } = OM[MM];
-      if (!Number.isFinite(rM)) return SM[MM];
-      const nM = (null !== (iM = String(PM).split(".")[1]) && void 0 !== iM ? iM : "").length,
-        QM = Number((Math.round(rM / PM) * PM).toFixed(nM));
-      return Math.min(aM, Math.max(jM, QM))
+        min: UV,
+        max: yV,
+        step: pV
+      } = JV[VV];
+      if (!Number.isFinite(eV)) return YV[VV];
+      const QV = (null !== (xV = String(pV).split(".")[1]) && void 0 !== xV ? xV : "").length,
+        nV = Number((Math.round(eV / pV) * pV).toFixed(QV));
+      return Math.min(yV, Math.max(UV, nV))
     }
 
-    function aM(MM, rM, iM) {
-      const OM = "number" === typeof iM ? jM(rM, iM) : iM;
+    function yV(VV, eV, xV) {
+      const JV = "number" === typeof xV ? UV(eV, xV) : xV;
       return {
-        ...MM,
-        [rM]: OM
+        ...VV,
+        [eV]: JV
       }
     }
 
-    function PM(MM, rM) {
-      let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-      return Object.keys(SM).every((OM => iM.includes(OM) || MM[OM] === rM[OM]))
+    function pV(VV, eV) {
+      let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+      return Object.keys(YV).every((JV => xV.includes(JV) || VV[JV] === eV[JV]))
     }
 
-    function nM(MM) {
-      return PM(MM, SM)
+    function QV(VV) {
+      return pV(VV, YV)
     }
 
-    function QM(MM) {
-      return `#${MM.toString(16).padStart(6,"0")}`
+    function nV(VV) {
+      return `#${VV.toString(16).padStart(6,"0")}`
     }
 
-    function zM(MM) {
-      const rM = /^#?([0-9a-f]{6})$/i.exec(MM.trim());
-      return rM ? parseInt(rM[1], 16) : null
+    function wV(VV) {
+      const eV = /^#?([0-9a-f]{6})$/i.exec(VV.trim());
+      return eV ? parseInt(eV[1], 16) : null
     }
   },
-  35006: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => LM,
-      f: () => mM
+  35292: (VV, eV, xV) => {
+    xV.d(eV, {
+      e: () => ZV,
+      h: () => vV
     });
-    var OM = iM(44),
-      SM = iM(30),
-      jM = iM(35003),
-      aM = iM(34989);
-    const PM = "crosshairCode";
-    let nM = null;
-    const QM = new Set;
+    var JV = xV(62),
+      YV = xV(40),
+      UV = xV(35285),
+      yV = xV(35272);
+    const pV = "crosshairCode";
+    let QV = null;
+    const nV = new Set;
 
-    function zM() {
-      if (null === nM) {
-        var MM;
-        const rM = SM.g.getItem(PM);
-        nM = null !== (MM = "string" === typeof rM ? (0, jM.f)(rM) : null) && void 0 !== MM ? MM : aM.e
+    function wV() {
+      if (null === QV) {
+        var VV;
+        const eV = YV.m.getItem(pV);
+        QV = null !== (VV = "string" === typeof eV ? (0, UV.h)(eV) : null) && void 0 !== VV ? VV : yV.f
       }
-      return nM
+      return QV
     }
 
-    function LM(MM) {
-      nM = MM, (0, aM.j)(MM) ? SM.g.removeItem(PM) : SM.g.setItem(PM, (0, jM.i)(MM));
-      for (const rM of QM) rM()
+    function ZV(VV) {
+      QV = VV, (0, yV.o)(VV) ? YV.m.removeItem(pV) : YV.m.setItem(pV, (0, UV.j)(VV));
+      for (const eV of nV) eV()
     }
 
-    function mM() {
-      const [MM, rM] = (0, OM.useState)(zM);
-      return (0, OM.useEffect)((() => {
-        const MM = () => {
-          rM(zM())
+    function vV() {
+      const [VV, eV] = (0, JV.useState)(wV);
+      return (0, JV.useEffect)((() => {
+        const VV = () => {
+          eV(wV())
         };
-        return MM(), iM = MM, QM.add(iM), () => {
-          QM.delete(iM)
+        return VV(), xV = VV, nV.add(xV), () => {
+          nV.delete(xV)
         };
-        var iM
-      }), []), MM
+        var xV
+      }), []), VV
     }
   },
-  34985: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => jM,
-      c: () => SM
+  35268: (VV, eV, xV) => {
+    xV.d(eV, {
+      d: () => UV,
+      e: () => YV
     });
-    var OM = iM(19);
+    var JV = xV(27);
 
-    function SM(MM, rM) {
-      return MM && !rM
+    function YV(VV, eV) {
+      return VV && !eV
     }
 
-    function jM() {
-      return SM(OM.d.get("isTouchScreen"), OM.d.get("clientEscMenuOptions").touchActionButtons)
+    function UV() {
+      return YV(JV.b.get("isTouchScreen"), JV.b.get("clientEscMenuOptions").touchActionButtons)
     }
   },
-  5096: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => aM,
-      e: () => jM,
-      i: () => SM
+  5204: (VV, eV, xV) => {
+    xV.d(eV, {
+      c: () => yV,
+      f: () => UV,
+      j: () => YV
     });
-    let OM = null;
+    let JV = null;
 
-    function SM(MM) {
-      OM = MM
+    function YV(VV) {
+      JV = VV
     }
 
-    function jM() {
-      return OM
+    function UV() {
+      return JV
     }
 
-    function aM(MM) {
-      return "bloxd" === MM.site && !MM.isMobileApp && !MM.isTouchScreen
+    function yV(VV) {
+      return "bloxd" === VV.site && !VV.isMobileApp && !VV.isTouchScreen
     }
   },
-  34954: (MM, rM, iM) => {
-    function OM(MM, rM) {
-      return MM && !rM
+  35238: (VV, eV, xV) => {
+    function JV(VV, eV) {
+      return VV && !eV
     }
-    iM.d(rM, {
-      e: () => OM
+    xV.d(eV, {
+      e: () => JV
     })
   },
-  34971: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => jM
+  35251: (VV, eV, xV) => {
+    xV.d(eV, {
+      e: () => UV
     });
-    var OM = iM(1329);
+    var JV = xV(1353);
 
-    function SM() {
-      var MM, rM;
-      return null !== (MM = null === (rM = screen.orientation) || void 0 === rM ? void 0 : rM.type) && void 0 !== MM ? MM : innerWidth > innerHeight ? "landscape" : "portrait"
+    function YV() {
+      var VV, eV;
+      return null !== (VV = null === (eV = screen.orientation) || void 0 === eV ? void 0 : eV.type) && void 0 !== VV ? VV : innerWidth > innerHeight ? "landscape" : "portrait"
     }
-    const jM = new class {
+    const UV = new class {
       constructor() {
         this.holding = !1, this.heldOrientation = "", this.releaseTimer = void 0, this.longHoldTimer = void 0, this.resizers = new Set, this.releaseWhenShown = () => {
           document.hidden || (document.removeEventListener("visibilitychange", this.releaseWhenShown), this.release())
         }
       }
       isHeld() {
-        return this.holding && SM() !== this.heldOrientation && (this.holding = !1), this.holding
+        return this.holding && YV() !== this.heldOrientation && (this.holding = !1), this.holding
       }
       hold() {
-        this.heldOrientation = SM(), this.holding = !0, clearTimeout(this.releaseTimer), document.removeEventListener("visibilitychange", this.releaseWhenShown), clearTimeout(this.longHoldTimer), this.longHoldTimer = setTimeout((() => {
-          this.holding && (0, OM.CJ)(new Error("Game view size held for 60 s"))
+        this.heldOrientation = YV(), this.holding = !0, clearTimeout(this.releaseTimer), document.removeEventListener("visibilitychange", this.releaseWhenShown), clearTimeout(this.longHoldTimer), this.longHoldTimer = setTimeout((() => {
+          this.holding && (0, JV.lb)(new Error("Game view size held for 60 s"))
         }), 6e4)
       }
       release() {
@@ -10456,181 +10456,181 @@ export const modules = {
           if (document.hidden) document.addEventListener("visibilitychange", this.releaseWhenShown);
           else {
             this.holding = !1;
-            for (const MM of this.resizers) MM()
+            for (const VV of this.resizers) VV()
           }
         }), 1e3)
       }
-      heldSizer(MM) {
-        let rM = !1;
+      heldSizer(VV) {
+        let eV = !1;
         return () => {
-          if (rM && this.isHeld()) return null;
-          const iM = MM();
-          return rM ||= null !== iM, iM
+          if (eV && this.isHeld()) return null;
+          const xV = VV();
+          return eV ||= null !== xV, xV
         }
       }
-      onRelease(MM) {
-        return this.resizers.add(MM), () => {
-          this.resizers.delete(MM)
+      onRelease(VV) {
+        return this.resizers.add(VV), () => {
+          this.resizers.delete(VV)
         }
       }
     }
   },
-  34929: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => lM,
-      i: () => QM,
-      j: () => JM,
-      n: () => hM
+  35205: (VV, eV, xV) => {
+    xV.d(eV, {
+      d: () => jV,
+      e: () => nV,
+      g: () => bV,
+      j: () => kV
     });
-    var OM = iM(143),
-      SM = iM(1279),
-      jM = iM(1202),
-      aM = iM(1144),
-      PM = iM(1826);
-    const nM = {
+    var JV = xV(165),
+      YV = xV(1293),
+      UV = xV(1230),
+      yV = xV(1173),
+      pV = xV(1829);
+    const QV = {
       offline: "homePage:onboardingNameNoAccount",
       outdated: "general:updatedReloading",
       busy: "homePage:changeNameTooFast",
       server: "homePage:changeNameFailed"
     };
 
-    function QM(MM) {
-      return nM[MM]
+    function nV(VV) {
+      return QV[VV]
     }
 
-    function zM(MM) {
-      return (0, PM.c)(MM) ? "outdated" : MM instanceof OM.e ? 429 === MM.httpCode ? "busy" : "server" : "offline"
+    function wV(VV) {
+      return (0, pV.c)(VV) ? "outdated" : VV instanceof JV.b ? 429 === VV.httpCode ? "busy" : "server" : "offline"
     }
 
-    function LM(MM, rM, iM) {
-      return (0, aM.postJsonWithMetricsCookiesAndJsonResponse)(`${jM.clientSideServerUrls.indexUrl}${rM}`, iM, {
+    function ZV(VV, eV, xV) {
+      return (0, yV.postJsonWithMetricsCookiesAndJsonResponse)(`${UV.clientSideServerUrls.indexUrl}${eV}`, xV, {
         retries: 3
-      }, MM.getMetricsCookies()).catch((MM => (console.error("Bad response from the server when trying to change name:", rM, MM), {
+      }, VV.getMetricsCookies()).catch((VV => (console.error("Bad response from the server when trying to change name:", eV, VV), {
         outcome: "failed",
-        failure: zM(MM)
+        failure: wV(VV)
       })))
     }
 
-    function mM(MM) {
-      return "outcome" in MM && "failed" === MM.outcome
+    function vV(VV) {
+      return "outcome" in VV && "failed" === VV.outcome
     }
 
-    function HM(MM) {
-      return console.error("Error when trying to get with new name from DB", MM), {
+    function rV(VV) {
+      return console.error("Error when trying to get with new name from DB", VV), {
         outcome: "refused",
-        message: MM
+        message: VV
       }
     }
-    async function hM(MM) {
-      const rM = await LM(MM, "/index/name/random", {});
-      return mM(rM) ? rM : "err" in rM ? HM(rM.err) : (MM.setPlayerName(rM.name), {
+    async function kV(VV) {
+      const eV = await ZV(VV, "/index/name/random", {});
+      return vV(eV) ? eV : "err" in eV ? rV(eV.err) : (VV.setPlayerName(eV.name), {
         outcome: "changed",
-        name: rM.name
+        name: eV.name
       })
     }
-    async function JM(MM, rM) {
-      const iM = await LM(MM, "/index/name/update", {
-        name: rM
+    async function bV(VV, eV) {
+      const xV = await ZV(VV, "/index/name/update", {
+        name: eV
       });
-      return mM(iM) ? iM : "err" in iM ? HM(iM.err) : iM.nameExists ? {
+      return vV(xV) ? xV : "err" in xV ? rV(xV.err) : xV.nameExists ? {
         outcome: "taken"
-      } : (MM.setPlayerName(rM), {
+      } : (VV.setPlayerName(eV), {
         outcome: "changed",
-        name: rM
+        name: eV
       })
     }
 
-    function dM(MM, rM) {
-      let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Math.random;
-      const OM = 1 === rM ? 1 : 10 ** (rM - 1),
-        jM = String(OM + Math.floor(iM() * (10 ** rM - OM)));
-      return `${MM.slice(0,SM.g-rM)}${jM}`
+    function EV(VV, eV) {
+      let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Math.random;
+      const JV = 1 === eV ? 1 : 10 ** (eV - 1),
+        UV = String(JV + Math.floor(xV() * (10 ** eV - JV)));
+      return `${VV.slice(0,YV.f-eV)}${UV}`
     }
-    const yM = [1, 2, 3, 4];
-    async function lM(MM, rM) {
-      const iM = await JM(MM, rM);
-      if ("taken" !== iM.outcome) return iM;
-      for (const OM of yM) {
-        const iM = dM(rM, OM),
-          SM = await JM(MM, iM);
-        if ("taken" !== SM.outcome) return SM
+    const BV = [1, 2, 3, 4];
+    async function jV(VV, eV) {
+      const xV = await bV(VV, eV);
+      if ("taken" !== xV.outcome) return xV;
+      for (const JV of BV) {
+        const xV = EV(eV, JV),
+          YV = await bV(VV, xV);
+        if ("taken" !== YV.outcome) return YV
       }
       return {
         outcome: "taken"
       }
     }
   },
-  34956: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => PM,
-      f: () => nM
+  35240: (VV, eV, xV) => {
+    xV.d(eV, {
+      d: () => pV,
+      f: () => QV
     });
-    var OM = iM(19);
-    const SM = 24,
-      jM = "farNametags",
-      aM = 1e5;
+    var JV = xV(27);
+    const YV = 24,
+      UV = "farNametags",
+      yV = 1e5;
 
-    function PM() {
-      var MM;
-      return null === (MM = OM.d.get("showDistantNametags")) || void 0 === MM || MM
+    function pV() {
+      var VV;
+      return null === (VV = JV.b.get("showDistantNametags")) || void 0 === VV || VV
     }
 
-    function nM() {
-      var MM;
-      return null !== (MM = function() {
-        const MM = new URLSearchParams(window.location.search).get(jM),
-          rM = null === MM || "" === MM ? NaN : Number(MM);
-        return Number.isFinite(rM) && rM >= 0 ? Math.min(rM, aM) : null
-      }()) && void 0 !== MM ? MM : PM() ? 0 : SM
+    function QV() {
+      var VV;
+      return null !== (VV = function() {
+        const VV = new URLSearchParams(window.location.search).get(UV),
+          eV = null === VV || "" === VV ? NaN : Number(VV);
+        return Number.isFinite(eV) && eV >= 0 ? Math.min(eV, yV) : null
+      }()) && void 0 !== VV ? VV : pV() ? 0 : YV
     }
   },
-  34980: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => QM,
-      d: () => LM,
-      g: () => zM
+  35259: (VV, eV, xV) => {
+    xV.d(eV, {
+      c: () => nV,
+      f: () => ZV,
+      j: () => wV
     });
-    var OM = iM(243),
-      SM = iM(83),
-      jM = iM(114),
-      aM = iM(110),
-      PM = iM(650);
-    const nM = new Set(["mali_bifrost"]);
+    var JV = xV(296),
+      YV = xV(99),
+      UV = xV(134),
+      yV = xV(129),
+      pV = xV(679);
+    const QV = new Set(["mali_bifrost"]);
 
-    function QM() {
-      if (PM.i) return;
-      const MM = (0, SM.pageOperatingSystem)();
-      if ("android" !== MM && "windows" !== MM || (0, PM.e)("webgl_default")) return;
-      if ("windows" === MM) return MM => "qualcomm" === (0, SM.normaliseGpuVendor)((0, aM.d)(MM).vendor);
-      const rM = (0, jM.o)(),
-        iM = null === rM ? (0, OM.w)() : (0, OM.l)(rM.vendor, rM.renderer);
-      return null !== iM && nM.has(iM) ? MM => (0, OM.q)((0, aM.d)(MM).vendor, iM) : void 0
+    function nV() {
+      if (pV.f) return;
+      const VV = (0, YV.pageOperatingSystem)();
+      if ("android" !== VV && "windows" !== VV || (0, pV.e)("webgl_default")) return;
+      if ("windows" === VV) return VV => "qualcomm" === (0, YV.normaliseGpuVendor)((0, yV.c)(VV).vendor);
+      const eV = (0, UV.o)(),
+        xV = null === eV ? (0, JV.p)() : (0, JV.h)(eV.vendor, eV.renderer);
+      return null !== xV && QV.has(xV) ? VV => (0, JV.m)((0, yV.c)(VV).vendor, xV) : void 0
     }
 
-    function zM(MM, rM) {
-      return MM ? () => !0 : rM()
+    function wV(VV, eV) {
+      return VV ? () => !0 : eV()
     }
-    async function LM(MM) {
+    async function ZV(VV) {
       try {
-        const rM = zM(MM, QM),
-          iM = navigator.gpu;
-        if (void 0 === rM || void 0 === iM) return !1;
-        const OM = await (0, aM.o)(iM, {
+        const eV = wV(VV, nV),
+          xV = navigator.gpu;
+        if (void 0 === eV || void 0 === xV) return !1;
+        const JV = await (0, yV.l)(xV, {
           seed: !1,
-          compatibility: rM
+          compatibility: eV
         });
-        return "string" !== typeof OM && OM.compatibility && !(0, aM.j)(OM.adapter)
-      } catch (rM) {
-        return console.error("WebGPU compatibility-mode adapter request failed.", rM), !1
+        return "string" !== typeof JV && JV.compatibility && !(0, yV.j)(JV.adapter)
+      } catch (eV) {
+        return console.error("WebGPU compatibility-mode adapter request failed.", eV), !1
       }
     }
   },
-  35040: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => SM,
-      g: () => aM
+  35325: (VV, eV, xV) => {
+    xV.d(eV, {
+      c: () => YV,
+      d: () => yV
     });
-    const OM = [{
+    const JV = [{
       threshold: 10n ** 180n,
       suffix: "NoQig"
     }, {
@@ -10812,79 +10812,79 @@ export const modules = {
       suffix: "K"
     }];
 
-    function SM(MM) {
-      let rM, iM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
-      if ("number" === typeof MM) {
-        if (!Number.isFinite(MM)) return "0";
-        if (Math.abs(MM) < 100) {
-          const rM = MM < 0 ? "-" : "",
-            iM = Math.abs(MM);
-          return iM >= 10 ? `${rM}${iM.toFixed(1).replace(/\.0$/,"")}` : `${rM}${iM.toFixed(2).replace(/\.?0+$/,"")}`
+    function YV(VV) {
+      let eV, xV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
+      if ("number" === typeof VV) {
+        if (!Number.isFinite(VV)) return "0";
+        if (Math.abs(VV) < 100) {
+          const eV = VV < 0 ? "-" : "",
+            xV = Math.abs(VV);
+          return xV >= 10 ? `${eV}${xV.toFixed(1).replace(/\.0$/,"")}` : `${eV}${xV.toFixed(2).replace(/\.?0+$/,"")}`
         }
-        rM = BigInt(Math.floor(MM))
-      } else rM = MM;
-      const SM = rM < 0n ? -rM : rM,
-        jM = rM < 0n ? "-" : "",
-        aM = SM.toString();
-      if (aM.length <= iM) return `${jM}${aM}`;
-      const PM = 3 * Math.floor((aM.length - 1) / 3);
-      if (PM < 3) return `${jM}${aM}`;
-      if (PM > 3 * OM.length) {
-        const MM = aM[0],
-          rM = aM.slice(1, 3).replace(/0+$/, "");
-        return `${jM}${rM?`${MM}.${rM}`:MM}e${aM.length-1}`
+        eV = BigInt(Math.floor(VV))
+      } else eV = VV;
+      const YV = eV < 0n ? -eV : eV,
+        UV = eV < 0n ? "-" : "",
+        yV = YV.toString();
+      if (yV.length <= xV) return `${UV}${yV}`;
+      const pV = 3 * Math.floor((yV.length - 1) / 3);
+      if (pV < 3) return `${UV}${yV}`;
+      if (pV > 3 * JV.length) {
+        const VV = yV[0],
+          eV = yV.slice(1, 3).replace(/0+$/, "");
+        return `${UV}${eV?`${VV}.${eV}`:VV}e${yV.length-1}`
       }
       const {
-        threshold: nM,
-        suffix: QM
-      } = OM[OM.length - PM / 3], zM = SM / nM, LM = Number(1000n * (SM % nM) / nM), mM = Number(zM) + LM / 1e3;
-      let HM;
-      return HM = mM >= 100 ? Math.floor(mM).toString() : mM >= 10 ? mM.toFixed(1).replace(/\.0$/, "") : mM.toFixed(2).replace(/\.?0+$/, ""), `${jM}${HM}${QM}`
+        threshold: QV,
+        suffix: nV
+      } = JV[JV.length - pV / 3], wV = YV / QV, ZV = Number(1000n * (YV % QV) / QV), vV = Number(wV) + ZV / 1e3;
+      let rV;
+      return rV = vV >= 100 ? Math.floor(vV).toString() : vV >= 10 ? vV.toFixed(1).replace(/\.0$/, "") : vV.toFixed(2).replace(/\.?0+$/, ""), `${UV}${rV}${nV}`
     }
-    const jM = OM.map((MM => {
+    const UV = JV.map((VV => {
       let {
-        threshold: rM,
-        suffix: iM
-      } = MM;
+        threshold: eV,
+        suffix: xV
+      } = VV;
       return {
-        threshold: Number(rM),
-        suffix: iM
+        threshold: Number(eV),
+        suffix: xV
       }
-    })).filter((MM => {
+    })).filter((VV => {
       let {
-        threshold: rM
-      } = MM;
-      return Number.isFinite(rM)
+        threshold: eV
+      } = VV;
+      return Number.isFinite(eV)
     }));
 
-    function aM(MM) {
-      const rM = Math.abs(MM),
-        iM = MM < 0 ? "-" : "";
+    function yV(VV) {
+      const eV = Math.abs(VV),
+        xV = VV < 0 ? "-" : "";
       for (const {
-          threshold: OM,
-          suffix: SM
+          threshold: JV,
+          suffix: YV
         }
-        of jM)
-        if (rM >= OM) {
-          const MM = rM / OM;
-          if (MM >= 1e3) return `${iM}${rM.toExponential(2).replace("e+","e")}`;
-          let jM;
-          return jM = MM >= 100 ? Math.floor(MM).toString() : MM >= 10 ? MM.toFixed(1).replace(/\.0$/, "") : MM.toFixed(2).replace(/\.?0+$/, ""), `${iM}${jM}${SM}`
-        } return `${iM}${rM}`
+        of UV)
+        if (eV >= JV) {
+          const VV = eV / JV;
+          if (VV >= 1e3) return `${xV}${eV.toExponential(2).replace("e+","e")}`;
+          let UV;
+          return UV = VV >= 100 ? Math.floor(VV).toString() : VV >= 10 ? VV.toFixed(1).replace(/\.0$/, "") : VV.toFixed(2).replace(/\.?0+$/, ""), `${xV}${UV}${YV}`
+        } return `${xV}${eV}`
     }
   },
-  35029: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => zM,
-      f: () => mM,
-      g: () => LM,
-      k: () => aM,
-      o: () => QM,
-      p: () => nM
+  35311: (VV, eV, xV) => {
+    xV.d(eV, {
+      e: () => wV,
+      f: () => vV,
+      i: () => ZV,
+      k: () => yV,
+      n: () => nV,
+      q: () => QV
     });
-    var OM = iM(332);
-    const SM = ["Wood Enchanting Table", "Stone Enchanting Table", "Iron Enchanting Table", "Gold Enchanting Table", "Diamond Enchanting Table"],
-      jM = {
+    var JV = xV(375);
+    const YV = ["Wood Enchanting Table", "Stone Enchanting Table", "Iron Enchanting Table", "Gold Enchanting Table", "Diamond Enchanting Table"],
+      UV = {
         Damage: {
           translationKey: "enchantments:damageDescription"
         },
@@ -10959,13 +10959,13 @@ export const modules = {
         }
       };
 
-    function aM(MM) {
-      var rM;
-      return null !== (rM = jM[MM]) && void 0 !== rM ? rM : {
+    function yV(VV) {
+      var eV;
+      return null !== (eV = UV[VV]) && void 0 !== eV ? eV : {
         translationKey: ""
       }
     }
-    const PM = {
+    const pV = {
       "Wood Enchanting Table": [{
         min: 1,
         max: 2
@@ -11018,77 +11018,77 @@ export const modules = {
       }]
     };
 
-    function nM(MM) {
-      return SM.includes(MM)
+    function QV(VV) {
+      return YV.includes(VV)
     }
 
-    function QM(MM) {
-      var rM;
-      return !0 === (null === MM || void 0 === MM || null === (rM = MM.customAttributes) || void 0 === rM ? void 0 : rM.cannotEnchant)
+    function nV(VV) {
+      var eV;
+      return !0 === (null === VV || void 0 === VV || null === (eV = VV.customAttributes) || void 0 === eV ? void 0 : eV.cannotEnchant)
     }
 
-    function zM(MM, rM) {
+    function wV(VV, eV) {
       const {
-        max: iM
-      } = PM[MM].at(-1);
-      return rM <= iM
+        max: xV
+      } = pV[VV].at(-1);
+      return eV <= xV
     }
 
-    function LM(MM) {
-      const rM = Math.sin(MM / 80),
-        iM = MM => {
-          if (MM <= 0) return 0;
-          if (MM > 1) return 1;
-          let rM = 0;
-          const iM = [1, 7, 21, 35, 35, 21, 7, 1];
-          for (let OM = 0; OM < iM.length; OM++) {
-            rM += (OM % 2 === 0 ? 1 : -1) * iM[OM] * Math.pow(MM, 2 + OM) / (2 + OM)
+    function ZV(VV) {
+      const eV = Math.sin(VV / 80),
+        xV = VV => {
+          if (VV <= 0) return 0;
+          if (VV > 1) return 1;
+          let eV = 0;
+          const xV = [1, 7, 21, 35, 35, 21, 7, 1];
+          for (let JV = 0; JV < xV.length; JV++) {
+            eV += (JV % 2 === 0 ? 1 : -1) * xV[JV] * Math.pow(VV, 2 + JV) / (2 + JV)
           }
-          return 72 * rM
+          return 72 * eV
         },
-        OM = .3 - .78 * rM,
-        SM = .5 - .78 * rM,
-        jM = .6 - .7 * rM,
-        aM = .8 - .6 * rM;
-      let PM = iM(OM),
-        nM = iM(SM) - PM,
-        QM = iM(jM) - nM - PM,
-        zM = iM(aM) - QM - nM - PM;
-      OM < .041 && (nM /= 1 - PM, QM /= 1 - PM, zM /= 1 - PM, PM = 0), SM < .041 && (PM /= 1 - nM, QM /= 1 - nM, zM /= 1 - nM, nM = 0), jM < .041 && (PM /= 1 - QM, nM /= 1 - QM, zM /= 1 - QM, QM = 0), aM < .041 && (PM /= 1 - zM, nM /= 1 - zM, QM /= 1 - zM, zM = 0);
+        JV = .3 - .78 * eV,
+        YV = .5 - .78 * eV,
+        UV = .6 - .7 * eV,
+        yV = .8 - .6 * eV;
+      let pV = xV(JV),
+        QV = xV(YV) - pV,
+        nV = xV(UV) - QV - pV,
+        wV = xV(yV) - nV - QV - pV;
+      JV < .041 && (QV /= 1 - pV, nV /= 1 - pV, wV /= 1 - pV, pV = 0), YV < .041 && (pV /= 1 - QV, nV /= 1 - QV, wV /= 1 - QV, QV = 0), UV < .041 && (pV /= 1 - nV, QV /= 1 - nV, wV /= 1 - nV, nV = 0), yV < .041 && (pV /= 1 - wV, QV /= 1 - wV, nV /= 1 - wV, wV = 0);
       return {
-        commonProb: PM,
-        uncommonProb: nM,
-        rareProb: QM,
-        epicProb: zM,
-        legendaryProb: 1 - (zM + QM + nM + PM)
+        commonProb: pV,
+        uncommonProb: QV,
+        rareProb: nV,
+        epicProb: wV,
+        legendaryProb: 1 - (wV + nV + QV + pV)
       }
     }
 
-    function mM(MM, rM) {
+    function vV(VV, eV) {
       const {
-        min: iM,
-        max: SM
-      } = PM[MM][rM], jM = OM.d.sampleUniformIntDistribution(iM, SM, "includeMax");
+        min: xV,
+        max: YV
+      } = pV[VV][eV], UV = JV.b.sampleUniformIntDistribution(xV, YV, "includeMax");
       return {
-        ...LM(jM),
-        level: jM
+        ...ZV(UV),
+        level: UV
       }
     }
   },
-  34999: () => {},
-  35072: () => {},
-  13457: MM => {
-    MM.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAaUlEQVR4AWyOQQ6AIAwECwGNr/HkYzz4Hy9+WEkq01BDDCRDy3ZbGo9rU2c/V+1Bj9JOeW7RokaTBO0zpDxJXmYJKXjdohlwOqbWi4YaJFIgcYEIaGAT+JvHCDNQ8El9ziQz/BdzE00vAAAA//+cTXaSAAAABklEQVQDAHI9N5g1NM74AAAAAElFTkSuQmCC"
+  35278: () => {},
+  35362: () => {},
+  13474: VV => {
+    VV.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAaUlEQVR4AWyOQQ6AIAwECwGNr/HkYzz4Hy9+WEkq01BDDCRDy3ZbGo9rU2c/V+1Bj9JOeW7RokaTBO0zpDxJXmYJKXjdohlwOqbWi4YaJFIgcYEIaGAT+JvHCDNQ8El9ziQz/BdzE00vAAAA//+cTXaSAAAABklEQVQDAHI9N5g1NM74AAAAAElFTkSuQmCC"
   },
-  14650: MM => {
-    MM.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAAXNSR0IArs4c6QAAAGBJREFUGJVNjjEOxEAIA+dW22Rpk2+nSndPZFtMewU6FBdIjJHx536+ABARUl7XCbjvyV9mJqX7BtY6RkS0t9bRc0op5ZuaGTAqtPZCpfG+AqSs8FFlulh7s6j7rh9d9wclFjd0V4Z2HAAAAABJRU5ErkJggg=="
+  14627: VV => {
+    VV.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAAXNSR0IArs4c6QAAAGBJREFUGJVNjjEOxEAIA+dW22Rpk2+nSndPZFtMewU6FBdIjJHx536+ABARUl7XCbjvyV9mJqX7BtY6RkS0t9bRc0op5ZuaGTAqtPZCpfG+AqSs8FFlulh7s6j7rh9d9wclFjd0V4Z2HAAAAABJRU5ErkJggg=="
   },
-  16014: MM => {
-    MM.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAbUlEQVR4nESOSwqAMAxEow0pive/gIcTBBdSsZh+NG20DlnkM8MLhnXuzHSnAwBaI8LIV2RXOiIkaGfMKfXGyByZparbyQZpGNUV/KaHGrWowZKVgSx8Qr8vzdXgAkYFCIn9mZP7E8pQ1Q9fzAMAAP//PTNTFgAAAAZJREFUAwAk1D9dXrbJngAAAABJRU5ErkJggg=="
+  16087: VV => {
+    VV.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAbUlEQVR4nESOSwqAMAxEow0pive/gIcTBBdSsZh+NG20DlnkM8MLhnXuzHSnAwBaI8LIV2RXOiIkaGfMKfXGyByZparbyQZpGNUV/KaHGrWowZKVgSx8Qr8vzdXgAkYFCIn9mZP7E8pQ1Q9fzAMAAP//PTNTFgAAAAZJREFUAwAk1D9dXrbJngAAAABJRU5ErkJggg=="
   },
-  16502: MM => {
-    MM.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAAXNSR0IArs4c6QAAAE1JREFUGJVNjsEOwDAIQp/GZv3/j+xx5zVbsh0wZFxEImCsc88RRwHsB5OaI8SA636hjwosNXSUWuRTphxp5iahHX+pozQs+Yt0rU1SPg0CIfgDMgomAAAAAElFTkSuQmCC"
+  16618: VV => {
+    VV.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAAXNSR0IArs4c6QAAAE1JREFUGJVNjsEOwDAIQp/GZv3/j+xx5zVbsh0wZFxEImCsc88RRwHsB5OaI8SA636hjwosNXSUWuRTphxp5iahHX+pozQs+Yt0rU1SPg0CIfgDMgomAAAAAElFTkSuQmCC"
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const VV in modules) Object.freeze(modules[VV]);

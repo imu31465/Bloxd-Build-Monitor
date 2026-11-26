@@ -1,116 +1,116 @@
 export const id = 31;
 export const ids = [31];
 export const modules = {
-  40668: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      default: () => PM
+  40837: (VV, eV, xV) => {
+    xV.r(eV), xV.d(eV, {
+      default: () => pV
     });
-    var OM = iM(35040);
-    const SM = 1e3 / 3;
+    var JV = xV(35325);
+    const YV = 1e3 / 3;
 
-    function jM(MM, rM, iM) {
-      if ("parenthetical-seconds" === rM) return ` (${MM}s)`;
-      const OM = `${Math.floor(MM/60)}:${(MM%60).toString().padStart(2,"0")}`;
-      return iM ? `${iM}${OM}` : OM
+    function UV(VV, eV, xV) {
+      if ("parenthetical-seconds" === eV) return ` (${VV}s)`;
+      const JV = `${Math.floor(VV/60)}:${(VV%60).toString().padStart(2,"0")}`;
+      return xV ? `${xV}${JV}` : JV
     }
 
-    function aM(MM, rM, iM, SM, jM) {
-      var aM;
-      const PM = {
-        ...SM.baseNametag
+    function yV(VV, eV, xV, YV, UV) {
+      var yV;
+      const pV = {
+        ...YV.baseNametag
       };
-      PM.content = [...null !== (aM = SM.baseNametag.content) && void 0 !== aM ? aM : [], {
+      pV.content = [...null !== (yV = YV.baseNametag.content) && void 0 !== yV ? yV : [], {
         str: " "
       }, {
         icon: "Gold Coin"
       }, {
-        str: `: ${(0,OM.e)(jM)}`
-      }], MM.setOtherEntitySetting(rM, iM, "nameTagInfo", PM)
+        str: `: ${(0,JV.c)(UV)}`
+      }], VV.setOtherEntitySetting(eV, xV, "nameTagInfo", pV)
     }
-    const PM = function(MM, rM, iM, OM) {
-      let PM, {
-        localPlayerId: nM
-      } = OM;
-      const QM = new Map,
-        zM = new Map;
-      let LM = 0,
-        mM = 0;
+    const pV = function(VV, eV, xV, JV) {
+      let pV, {
+        localPlayerId: QV
+      } = JV;
+      const nV = new Map,
+        wV = new Map;
+      let ZV = 0,
+        vV = 0;
       return {
-        onCreate: MM => {
-          PM = MM
+        onCreate: VV => {
+          pV = VV
         },
-        bL: MM => {
-          const rM = Date.now();
-          for (const [OM, SM] of QM) {
-            const MM = Math.floor((rM - SM.startTime) / 1e3),
-              aM = Math.max(0, SM.remainingSeconds - MM);
-            if (aM === SM.lastRenderedSecond) continue;
-            SM.lastRenderedSecond = aM;
-            const zM = {
-                str: jM(aM, SM.format, SM.prefix),
-                style: SM.style
+        iZ: VV => {
+          const eV = Date.now();
+          for (const [JV, YV] of nV) {
+            const VV = Math.floor((eV - YV.startTime) / 1e3),
+              yV = Math.max(0, YV.remainingSeconds - VV);
+            if (yV === YV.lastRenderedSecond) continue;
+            YV.lastRenderedSecond = yV;
+            const wV = {
+                str: UV(yV, YV.format, YV.prefix),
+                style: YV.style
               },
-              LM = {
-                ...SM.baseNametag
+              ZV = {
+                ...YV.baseNametag
               };
-            var iM;
-            if ("content" === SM.location) LM.content = [...null !== (iM = SM.baseNametag.content) && void 0 !== iM ? iM : [], zM];
-            else LM.subtitle = [zM];
-            PM.setOtherEntitySetting(nM, OM, "nameTagInfo", LM), aM <= 0 && QM.delete(OM)
+            var xV;
+            if ("content" === YV.location) ZV.content = [...null !== (xV = YV.baseNametag.content) && void 0 !== xV ? xV : [], wV];
+            else ZV.subtitle = [wV];
+            pV.setOtherEntitySetting(QV, JV, "nameTagInfo", ZV), yV <= 0 && nV.delete(JV)
           }
-          if (zM.size > 0 && rM - LM >= SM) {
-            LM = rM, mM = (mM + 1) % 3;
-            let MM = 0;
-            for (const [iM, OM] of zM) {
-              if (MM++ % 3 !== mM) continue;
-              const SM = Math.floor((rM - OM.startTime) / 1e3);
-              if (SM === OM.lastRenderedSecond) continue;
-              OM.lastRenderedSecond = SM;
-              const jM = OM.accumulatedIncome + OM.incomePerSecond * BigInt(SM);
-              aM(PM, nM, iM, OM, jM)
+          if (wV.size > 0 && eV - ZV >= YV) {
+            ZV = eV, vV = (vV + 1) % 3;
+            let VV = 0;
+            for (const [xV, JV] of wV) {
+              if (VV++ % 3 !== vV) continue;
+              const YV = Math.floor((eV - JV.startTime) / 1e3);
+              if (YV === JV.lastRenderedSecond) continue;
+              JV.lastRenderedSecond = YV;
+              const UV = JV.accumulatedIncome + JV.incomePerSecond * BigInt(YV);
+              yV(pV, QV, xV, JV, UV)
             }
           }
         },
-        onReceivedMessageFromServer: (MM, rM) => {
-          if ("startCountdown" === MM) QM.set(rM.eId, {
-            baseNametag: rM.baseNametag,
-            remainingSeconds: rM.remainingSeconds,
+        onReceivedMessageFromServer: (VV, eV) => {
+          if ("startCountdown" === VV) nV.set(eV.eId, {
+            baseNametag: eV.baseNametag,
+            remainingSeconds: eV.remainingSeconds,
             startTime: Date.now(),
-            format: rM.format,
-            location: rM.location,
-            prefix: rM.prefix,
-            style: rM.style,
+            format: eV.format,
+            location: eV.location,
+            prefix: eV.prefix,
+            style: eV.style,
             lastRenderedSecond: -1
           });
-          else if ("stopCountdown" === MM) QM.delete(rM.eId);
-          else if ("startIncomeTicking" === MM) {
-            const MM = {
-              baseNametag: rM.baseNametag,
-              accumulatedIncome: BigInt(rM.accumulatedIncome),
-              incomePerSecond: BigInt(rM.incomePerSecond),
+          else if ("stopCountdown" === VV) nV.delete(eV.eId);
+          else if ("startIncomeTicking" === VV) {
+            const VV = {
+              baseNametag: eV.baseNametag,
+              accumulatedIncome: BigInt(eV.accumulatedIncome),
+              incomePerSecond: BigInt(eV.incomePerSecond),
               startTime: Date.now(),
               lastRenderedSecond: -1
             };
-            zM.set(rM.eId, MM), aM(PM, nM, rM.eId, MM, MM.accumulatedIncome)
-          } else "stopIncomeTicking" === MM && zM.delete(rM.eId) && PM.setOtherEntitySetting(nM, rM.eId, "nameTagInfo", {
+            wV.set(eV.eId, VV), yV(pV, QV, eV.eId, VV, VV.accumulatedIncome)
+          } else "stopIncomeTicking" === VV && wV.delete(eV.eId) && pV.setOtherEntitySetting(QV, eV.eId, "nameTagInfo", {
             content: []
           })
         },
-        onPlayerAltAction: (MM, rM, iM, OM, SM, jM) => {
-          if (jM && "Mesh" === PM.getEntityType(jM)) {
-            const rM = PM.getEntityName(jM);
-            "Upgrades" === rM ? PM.openShop(MM, !1, "Upgrades") : "Items" === rM ? PM.openShop(MM, !1, "Items") : "Prestige" === rM ? PM.openShop(MM, !1, "Prestige") : "Collections" === rM ? PM.openShop(MM, !1, "Collections") : "Base Skins" === rM ? PM.openShop(MM, !1, "Base Skins") : "Gauntlet" === rM ? PM.openShop(MM, !1, "Gauntlet") : "Diamond Shop" === rM && PM.openShop(MM, !1, "Diamond Shop")
+        onPlayerAltAction: (VV, eV, xV, JV, YV, UV) => {
+          if (UV && "Mesh" === pV.getEntityType(UV)) {
+            const eV = pV.getEntityName(UV);
+            "Upgrades" === eV ? pV.openShop(VV, !1, "Upgrades") : "Items" === eV ? pV.openShop(VV, !1, "Items") : "Prestige" === eV ? pV.openShop(VV, !1, "Prestige") : "Collections" === eV ? pV.openShop(VV, !1, "Collections") : "Base Skins" === eV ? pV.openShop(VV, !1, "Base Skins") : "Gauntlet" === eV ? pV.openShop(VV, !1, "Gauntlet") : "Diamond Shop" === eV && pV.openShop(VV, !1, "Diamond Shop")
           }
         }
       }
     }
   },
-  35040: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => SM,
-      g: () => aM
+  35325: (VV, eV, xV) => {
+    xV.d(eV, {
+      c: () => YV,
+      d: () => yV
     });
-    const OM = [{
+    const JV = [{
       threshold: 10n ** 180n,
       suffix: "NoQig"
     }, {
@@ -292,67 +292,67 @@ export const modules = {
       suffix: "K"
     }];
 
-    function SM(MM) {
-      let rM, iM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
-      if ("number" === typeof MM) {
-        if (!Number.isFinite(MM)) return "0";
-        if (Math.abs(MM) < 100) {
-          const rM = MM < 0 ? "-" : "",
-            iM = Math.abs(MM);
-          return iM >= 10 ? `${rM}${iM.toFixed(1).replace(/\.0$/,"")}` : `${rM}${iM.toFixed(2).replace(/\.?0+$/,"")}`
+    function YV(VV) {
+      let eV, xV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
+      if ("number" === typeof VV) {
+        if (!Number.isFinite(VV)) return "0";
+        if (Math.abs(VV) < 100) {
+          const eV = VV < 0 ? "-" : "",
+            xV = Math.abs(VV);
+          return xV >= 10 ? `${eV}${xV.toFixed(1).replace(/\.0$/,"")}` : `${eV}${xV.toFixed(2).replace(/\.?0+$/,"")}`
         }
-        rM = BigInt(Math.floor(MM))
-      } else rM = MM;
-      const SM = rM < 0n ? -rM : rM,
-        jM = rM < 0n ? "-" : "",
-        aM = SM.toString();
-      if (aM.length <= iM) return `${jM}${aM}`;
-      const PM = 3 * Math.floor((aM.length - 1) / 3);
-      if (PM < 3) return `${jM}${aM}`;
-      if (PM > 3 * OM.length) {
-        const MM = aM[0],
-          rM = aM.slice(1, 3).replace(/0+$/, "");
-        return `${jM}${rM?`${MM}.${rM}`:MM}e${aM.length-1}`
+        eV = BigInt(Math.floor(VV))
+      } else eV = VV;
+      const YV = eV < 0n ? -eV : eV,
+        UV = eV < 0n ? "-" : "",
+        yV = YV.toString();
+      if (yV.length <= xV) return `${UV}${yV}`;
+      const pV = 3 * Math.floor((yV.length - 1) / 3);
+      if (pV < 3) return `${UV}${yV}`;
+      if (pV > 3 * JV.length) {
+        const VV = yV[0],
+          eV = yV.slice(1, 3).replace(/0+$/, "");
+        return `${UV}${eV?`${VV}.${eV}`:VV}e${yV.length-1}`
       }
       const {
-        threshold: nM,
-        suffix: QM
-      } = OM[OM.length - PM / 3], zM = SM / nM, LM = Number(1000n * (SM % nM) / nM), mM = Number(zM) + LM / 1e3;
-      let HM;
-      return HM = mM >= 100 ? Math.floor(mM).toString() : mM >= 10 ? mM.toFixed(1).replace(/\.0$/, "") : mM.toFixed(2).replace(/\.?0+$/, ""), `${jM}${HM}${QM}`
+        threshold: QV,
+        suffix: nV
+      } = JV[JV.length - pV / 3], wV = YV / QV, ZV = Number(1000n * (YV % QV) / QV), vV = Number(wV) + ZV / 1e3;
+      let rV;
+      return rV = vV >= 100 ? Math.floor(vV).toString() : vV >= 10 ? vV.toFixed(1).replace(/\.0$/, "") : vV.toFixed(2).replace(/\.?0+$/, ""), `${UV}${rV}${nV}`
     }
-    const jM = OM.map((MM => {
+    const UV = JV.map((VV => {
       let {
-        threshold: rM,
-        suffix: iM
-      } = MM;
+        threshold: eV,
+        suffix: xV
+      } = VV;
       return {
-        threshold: Number(rM),
-        suffix: iM
+        threshold: Number(eV),
+        suffix: xV
       }
-    })).filter((MM => {
+    })).filter((VV => {
       let {
-        threshold: rM
-      } = MM;
-      return Number.isFinite(rM)
+        threshold: eV
+      } = VV;
+      return Number.isFinite(eV)
     }));
 
-    function aM(MM) {
-      const rM = Math.abs(MM),
-        iM = MM < 0 ? "-" : "";
+    function yV(VV) {
+      const eV = Math.abs(VV),
+        xV = VV < 0 ? "-" : "";
       for (const {
-          threshold: OM,
-          suffix: SM
+          threshold: JV,
+          suffix: YV
         }
-        of jM)
-        if (rM >= OM) {
-          const MM = rM / OM;
-          if (MM >= 1e3) return `${iM}${rM.toExponential(2).replace("e+","e")}`;
-          let jM;
-          return jM = MM >= 100 ? Math.floor(MM).toString() : MM >= 10 ? MM.toFixed(1).replace(/\.0$/, "") : MM.toFixed(2).replace(/\.?0+$/, ""), `${iM}${jM}${SM}`
-        } return `${iM}${rM}`
+        of UV)
+        if (eV >= JV) {
+          const VV = eV / JV;
+          if (VV >= 1e3) return `${xV}${eV.toExponential(2).replace("e+","e")}`;
+          let UV;
+          return UV = VV >= 100 ? Math.floor(VV).toString() : VV >= 10 ? VV.toFixed(1).replace(/\.0$/, "") : VV.toFixed(2).replace(/\.?0+$/, ""), `${xV}${UV}${YV}`
+        } return `${xV}${eV}`
     }
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const VV in modules) Object.freeze(modules[VV]);

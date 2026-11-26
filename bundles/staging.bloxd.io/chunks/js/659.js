@@ -1,77 +1,77 @@
 export const id = 659;
 export const ids = [659];
 export const modules = {
-  45185: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => aM
+  45387: (VV, eV, xV) => {
+    xV.d(eV, {
+      b: () => yV
     });
-    var OM = iM(40964);
-    const SM = "clipPlaneFragment",
-      jM = "#if defined(CLIPPLANE) || defined(CLIPPLANE2) || defined(CLIPPLANE3) || defined(CLIPPLANE4) || defined(CLIPPLANE5) || defined(CLIPPLANE6)\nif (false) {}\n#endif\n#ifdef CLIPPLANE\nelse if (fragmentInputs.fClipDistance>0.0)\n{discard;}\n#endif\n#ifdef CLIPPLANE2\nelse if (fragmentInputs.fClipDistance2>0.0)\n{discard;}\n#endif\n#ifdef CLIPPLANE3\nelse if (fragmentInputs.fClipDistance3>0.0)\n{discard;}\n#endif\n#ifdef CLIPPLANE4\nelse if (fragmentInputs.fClipDistance4>0.0)\n{discard;}\n#endif\n#ifdef CLIPPLANE5\nelse if (fragmentInputs.fClipDistance5>0.0)\n{discard;}\n#endif\n#ifdef CLIPPLANE6\nelse if (fragmentInputs.fClipDistance6>0.0)\n{discard;}\n#endif\n";
-    OM.e.IncludesShadersStoreWGSL[SM] || (OM.e.IncludesShadersStoreWGSL[SM] = jM);
-    const aM = {
-      name: SM,
-      shader: jM
+    var JV = xV(41108);
+    const YV = "clipPlaneFragment",
+      UV = "#if defined(CLIPPLANE) || defined(CLIPPLANE2) || defined(CLIPPLANE3) || defined(CLIPPLANE4) || defined(CLIPPLANE5) || defined(CLIPPLANE6)\nif (false) {}\n#endif\n#ifdef CLIPPLANE\nelse if (fragmentInputs.fClipDistance>0.0)\n{discard;}\n#endif\n#ifdef CLIPPLANE2\nelse if (fragmentInputs.fClipDistance2>0.0)\n{discard;}\n#endif\n#ifdef CLIPPLANE3\nelse if (fragmentInputs.fClipDistance3>0.0)\n{discard;}\n#endif\n#ifdef CLIPPLANE4\nelse if (fragmentInputs.fClipDistance4>0.0)\n{discard;}\n#endif\n#ifdef CLIPPLANE5\nelse if (fragmentInputs.fClipDistance5>0.0)\n{discard;}\n#endif\n#ifdef CLIPPLANE6\nelse if (fragmentInputs.fClipDistance6>0.0)\n{discard;}\n#endif\n";
+    JV.d.IncludesShadersStoreWGSL[YV] || (JV.d.IncludesShadersStoreWGSL[YV] = UV);
+    const yV = {
+      name: YV,
+      shader: UV
     }
   },
-  45168: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => aM
+  45376: (VV, eV, xV) => {
+    xV.d(eV, {
+      c: () => yV
     });
-    var OM = iM(40964);
-    const SM = "clipPlaneFragmentDeclaration",
-      jM = "#ifdef CLIPPLANE\nvarying fClipDistance: f32;\n#endif\n#ifdef CLIPPLANE2\nvarying fClipDistance2: f32;\n#endif\n#ifdef CLIPPLANE3\nvarying fClipDistance3: f32;\n#endif\n#ifdef CLIPPLANE4\nvarying fClipDistance4: f32;\n#endif\n#ifdef CLIPPLANE5\nvarying fClipDistance5: f32;\n#endif\n#ifdef CLIPPLANE6\nvarying fClipDistance6: f32;\n#endif\n";
-    OM.e.IncludesShadersStoreWGSL[SM] || (OM.e.IncludesShadersStoreWGSL[SM] = jM);
-    const aM = {
-      name: SM,
-      shader: jM
+    var JV = xV(41108);
+    const YV = "clipPlaneFragmentDeclaration",
+      UV = "#ifdef CLIPPLANE\nvarying fClipDistance: f32;\n#endif\n#ifdef CLIPPLANE2\nvarying fClipDistance2: f32;\n#endif\n#ifdef CLIPPLANE3\nvarying fClipDistance3: f32;\n#endif\n#ifdef CLIPPLANE4\nvarying fClipDistance4: f32;\n#endif\n#ifdef CLIPPLANE5\nvarying fClipDistance5: f32;\n#endif\n#ifdef CLIPPLANE6\nvarying fClipDistance6: f32;\n#endif\n";
+    JV.d.IncludesShadersStoreWGSL[YV] || (JV.d.IncludesShadersStoreWGSL[YV] = UV);
+    const yV = {
+      name: YV,
+      shader: UV
     }
   },
-  45208: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => aM
+  45427: (VV, eV, xV) => {
+    xV.d(eV, {
+      b: () => yV
     });
-    var OM = iM(40964);
-    const SM = "fogFragment",
-      jM = "#ifdef FOG\nvar fog: f32=CalcFogFactor();\n#ifdef PBR\nfog=toLinearSpace(fog);\n#endif\ncolor= vec4f(mix(uniforms.vFogColor,color.rgb,fog),color.a);\n#endif\n";
-    OM.e.IncludesShadersStoreWGSL[SM] || (OM.e.IncludesShadersStoreWGSL[SM] = jM);
-    const aM = {
-      name: SM,
-      shader: jM
+    var JV = xV(41108);
+    const YV = "fogFragment",
+      UV = "#ifdef FOG\nvar fog: f32=CalcFogFactor();\n#ifdef PBR\nfog=toLinearSpace(fog);\n#endif\ncolor= vec4f(mix(uniforms.vFogColor,color.rgb,fog),color.a);\n#endif\n";
+    JV.d.IncludesShadersStoreWGSL[YV] || (JV.d.IncludesShadersStoreWGSL[YV] = UV);
+    const yV = {
+      name: YV,
+      shader: UV
     }
   },
-  45177: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => aM
+  45378: (VV, eV, xV) => {
+    xV.d(eV, {
+      d: () => yV
     });
-    var OM = iM(40964);
-    const SM = "fogFragmentDeclaration",
-      jM = "#ifdef FOG\n#define FOGMODE_NONE 0.\n#define FOGMODE_EXP 1.\n#define FOGMODE_EXP2 2.\n#define FOGMODE_LINEAR 3.\nconst E=2.71828;uniform vFogInfos: vec4f;uniform vFogColor: vec3f;varying vFogDistance: vec3f;fn CalcFogFactor()->f32\n{var fogCoeff: f32=1.0;var fogStart: f32=uniforms.vFogInfos.y;var fogEnd: f32=uniforms.vFogInfos.z;var fogDensity: f32=uniforms.vFogInfos.w;var fogDistance: f32=length(fragmentInputs.vFogDistance);if (FOGMODE_LINEAR==uniforms.vFogInfos.x)\n{fogCoeff=(fogEnd-fogDistance)/(fogEnd-fogStart);}\nelse if (FOGMODE_EXP==uniforms.vFogInfos.x)\n{fogCoeff=1.0/pow(E,fogDistance*fogDensity);}\nelse if (FOGMODE_EXP2==uniforms.vFogInfos.x)\n{fogCoeff=1.0/pow(E,fogDistance*fogDistance*fogDensity*fogDensity);}\nreturn clamp(fogCoeff,0.0,1.0);}\n#endif\n";
-    OM.e.IncludesShadersStoreWGSL[SM] || (OM.e.IncludesShadersStoreWGSL[SM] = jM);
-    const aM = {
-      name: SM,
-      shader: jM
+    var JV = xV(41108);
+    const YV = "fogFragmentDeclaration",
+      UV = "#ifdef FOG\n#define FOGMODE_NONE 0.\n#define FOGMODE_EXP 1.\n#define FOGMODE_EXP2 2.\n#define FOGMODE_LINEAR 3.\nconst E=2.71828;uniform vFogInfos: vec4f;uniform vFogColor: vec3f;varying vFogDistance: vec3f;fn CalcFogFactor()->f32\n{var fogCoeff: f32=1.0;var fogStart: f32=uniforms.vFogInfos.y;var fogEnd: f32=uniforms.vFogInfos.z;var fogDensity: f32=uniforms.vFogInfos.w;var fogDistance: f32=length(fragmentInputs.vFogDistance);if (FOGMODE_LINEAR==uniforms.vFogInfos.x)\n{fogCoeff=(fogEnd-fogDistance)/(fogEnd-fogStart);}\nelse if (FOGMODE_EXP==uniforms.vFogInfos.x)\n{fogCoeff=1.0/pow(E,fogDistance*fogDensity);}\nelse if (FOGMODE_EXP2==uniforms.vFogInfos.x)\n{fogCoeff=1.0/pow(E,fogDistance*fogDistance*fogDensity*fogDensity);}\nreturn clamp(fogCoeff,0.0,1.0);}\n#endif\n";
+    JV.d.IncludesShadersStoreWGSL[YV] || (JV.d.IncludesShadersStoreWGSL[YV] = UV);
+    const yV = {
+      name: YV,
+      shader: UV
     }
   },
-  45238: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      colorPixelShaderWGSL: () => LM
+  45448: (VV, eV, xV) => {
+    xV.r(eV), xV.d(eV, {
+      colorPixelShaderWGSL: () => ZV
     });
-    var OM = iM(40964),
-      SM = iM(45168),
-      jM = iM(45177),
-      aM = iM(45185),
-      PM = iM(45208);
-    const nM = "colorPixelShader",
-      QM = "#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\n#define VERTEXCOLOR\nvarying vColor: vec4f;\n#else\nuniform color: vec4f;\n#endif\n#include<clipPlaneFragmentDeclaration>\n#include<fogFragmentDeclaration>\n#define CUSTOM_FRAGMENT_DEFINITIONS\n@fragment\nfn main(input: FragmentInputs)->FragmentOutputs {\n#define CUSTOM_FRAGMENT_MAIN_BEGIN\n#include<clipPlaneFragment>\n#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nfragmentOutputs.color=input.vColor;\n#else\nfragmentOutputs.color=uniforms.color;\n#endif\n#include<fogFragment>(color,fragmentOutputs.color)\n#define CUSTOM_FRAGMENT_MAIN_END\n}";
-    OM.e.ShadersStoreWGSL[nM] || (OM.e.ShadersStoreWGSL[nM] = QM);
-    const zM = [SM.c, jM.c, aM.c, PM.b];
-    for (const mM of zM) OM.e.IncludesShadersStoreWGSL[mM.name] || (OM.e.IncludesShadersStoreWGSL[mM.name] = mM.shader);
-    const LM = {
-      name: nM,
-      shader: QM
+    var JV = xV(41108),
+      YV = xV(45376),
+      UV = xV(45378),
+      yV = xV(45387),
+      pV = xV(45427);
+    const QV = "colorPixelShader",
+      nV = "#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\n#define VERTEXCOLOR\nvarying vColor: vec4f;\n#else\nuniform color: vec4f;\n#endif\n#include<clipPlaneFragmentDeclaration>\n#include<fogFragmentDeclaration>\n#define CUSTOM_FRAGMENT_DEFINITIONS\n@fragment\nfn main(input: FragmentInputs)->FragmentOutputs {\n#define CUSTOM_FRAGMENT_MAIN_BEGIN\n#include<clipPlaneFragment>\n#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nfragmentOutputs.color=input.vColor;\n#else\nfragmentOutputs.color=uniforms.color;\n#endif\n#include<fogFragment>(color,fragmentOutputs.color)\n#define CUSTOM_FRAGMENT_MAIN_END\n}";
+    JV.d.ShadersStoreWGSL[QV] || (JV.d.ShadersStoreWGSL[QV] = nV);
+    const wV = [YV.c, UV.d, yV.b, pV.b];
+    for (const vV of wV) JV.d.IncludesShadersStoreWGSL[vV.name] || (JV.d.IncludesShadersStoreWGSL[vV.name] = vV.shader);
+    const ZV = {
+      name: QV,
+      shader: nV
     }
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const VV in modules) Object.freeze(modules[VV]);

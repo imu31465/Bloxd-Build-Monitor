@@ -1,39 +1,39 @@
 export const id = 255;
 export const ids = [255];
 export const modules = {
-  38173: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => LM,
-      h: () => mM,
-      i: () => JM,
-      j: () => HM
+  38389: (VV, eV, xV) => {
+    xV.d(eV, {
+      d: () => ZV,
+      h: () => vV,
+      i: () => bV,
+      k: () => rV
     });
-    var OM = iM(38048),
-      SM = iM(38044),
-      jM = iM(38074),
-      aM = iM(38085);
+    var JV = xV(38278),
+      YV = xV(38272),
+      UV = xV(38303),
+      yV = xV(38318);
 
-    function PM(MM) {
-      return Math.pow(MM, SM.h)
+    function pV(VV) {
+      return Math.pow(VV, YV.f)
     }
 
-    function nM(MM) {
-      return MM <= .04045 ? .0773993808 * MM : Math.pow(.947867299 * (MM + .055), 2.4)
+    function QV(VV) {
+      return VV <= .04045 ? .0773993808 * VV : Math.pow(.947867299 * (VV + .055), 2.4)
     }
 
-    function QM(MM) {
-      return Math.pow(MM, SM.f)
+    function nV(VV) {
+      return Math.pow(VV, YV.c)
     }
 
-    function zM(MM) {
-      return MM <= .0031308 ? 12.92 * MM : 1.055 * Math.pow(MM, .41666) - .055
+    function wV(VV) {
+      return VV <= .0031308 ? 12.92 * VV : 1.055 * Math.pow(VV, .41666) - .055
     }
-    class LM {
+    class ZV {
       constructor() {
-        let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        this.r = MM, this.g = rM, this.b = iM
+        let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        this.r = VV, this.g = eV, this.b = xV
       }
       toString() {
         return "{R: " + this.r + " G:" + this.g + " B:" + this.b + "}"
@@ -42,416 +42,416 @@ export const modules = {
         return "Color3"
       }
       getHashCode() {
-        let MM = 255 * this.r | 0;
-        return MM = 397 * MM ^ 255 * this.g, MM = 397 * MM ^ 255 * this.b, MM
+        let VV = 255 * this.r | 0;
+        return VV = 397 * VV ^ 255 * this.g, VV = 397 * VV ^ 255 * this.b, VV
       }
-      toArray(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return MM[rM] = this.r, MM[rM + 1] = this.g, MM[rM + 2] = this.b, this
+      toArray(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return VV[eV] = this.r, VV[eV + 1] = this.g, VV[eV + 2] = this.b, this
       }
-      cz(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return LM.FromArrayToRef(MM, rM, this), this
+      wZ(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return ZV.FromArrayToRef(VV, eV, this), this
       }
       toColor4() {
-        let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1;
-        return new mM(this.r, this.g, this.b, MM)
+        let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1;
+        return new vV(this.r, this.g, this.b, VV)
       }
-      HOM() {
+      WYV() {
         return [this.r, this.g, this.b]
       }
       toLuminance() {
         return .3 * this.r + .59 * this.g + .11 * this.b
       }
-      multiply(MM) {
-        return new LM(this.r * MM.r, this.g * MM.g, this.b * MM.b)
+      multiply(VV) {
+        return new ZV(this.r * VV.r, this.g * VV.g, this.b * VV.b)
       }
-      multiplyToRef(MM, rM) {
-        return rM.r = this.r * MM.r, rM.g = this.g * MM.g, rM.b = this.b * MM.b, rM
+      multiplyToRef(VV, eV) {
+        return eV.r = this.r * VV.r, eV.g = this.g * VV.g, eV.b = this.b * VV.b, eV
       }
-      multiplyInPlace(MM) {
-        return this.r *= MM.r, this.g *= MM.g, this.b *= MM.b, this
+      multiplyInPlace(VV) {
+        return this.r *= VV.r, this.g *= VV.g, this.b *= VV.b, this
       }
-      multiplyByFloats(MM, rM, iM) {
-        return new LM(this.r * MM, this.g * rM, this.b * iM)
+      multiplyByFloats(VV, eV, xV) {
+        return new ZV(this.r * VV, this.g * eV, this.b * xV)
       }
-      divide(MM) {
+      divide(VV) {
         throw new ReferenceError("Can not divide a color")
       }
-      divideToRef(MM, rM) {
+      divideToRef(VV, eV) {
         throw new ReferenceError("Can not divide a color")
       }
-      divideInPlace(MM) {
+      divideInPlace(VV) {
         throw new ReferenceError("Can not divide a color")
       }
-      minimizeInPlace(MM) {
-        return this.minimizeInPlaceFromFloats(MM.r, MM.g, MM.b)
+      minimizeInPlace(VV) {
+        return this.minimizeInPlaceFromFloats(VV.r, VV.g, VV.b)
       }
-      maximizeInPlace(MM) {
-        return this.maximizeInPlaceFromFloats(MM.r, MM.g, MM.b)
+      maximizeInPlace(VV) {
+        return this.maximizeInPlaceFromFloats(VV.r, VV.g, VV.b)
       }
-      minimizeInPlaceFromFloats(MM, rM, iM) {
-        return this.r = Math.min(MM, this.r), this.g = Math.min(rM, this.g), this.b = Math.min(iM, this.b), this
+      minimizeInPlaceFromFloats(VV, eV, xV) {
+        return this.r = Math.min(VV, this.r), this.g = Math.min(eV, this.g), this.b = Math.min(xV, this.b), this
       }
-      maximizeInPlaceFromFloats(MM, rM, iM) {
-        return this.r = Math.max(MM, this.r), this.g = Math.max(rM, this.g), this.b = Math.max(iM, this.b), this
+      maximizeInPlaceFromFloats(VV, eV, xV) {
+        return this.r = Math.max(VV, this.r), this.g = Math.max(eV, this.g), this.b = Math.max(xV, this.b), this
       }
-      floorToRef(MM) {
+      floorToRef(VV) {
         throw new ReferenceError("Can not floor a color")
       }
       floor() {
         throw new ReferenceError("Can not floor a color")
       }
-      fractToRef(MM) {
+      fractToRef(VV) {
         throw new ReferenceError("Can not fract a color")
       }
       fract() {
         throw new ReferenceError("Can not fract a color")
       }
-      equals(MM) {
-        return MM && this.r === MM.r && this.g === MM.g && this.b === MM.b
+      equals(VV) {
+        return VV && this.r === VV.r && this.g === VV.g && this.b === VV.b
       }
-      equalsFloats(MM, rM, iM) {
-        return this.IaM(MM, rM, iM)
+      equalsFloats(VV, eV, xV) {
+        return this.rQV(VV, eV, xV)
       }
-      IaM(MM, rM, iM) {
-        return this.r === MM && this.g === rM && this.b === iM
+      rQV(VV, eV, xV) {
+        return this.r === VV && this.g === eV && this.b === xV
       }
-      equalsWithEpsilon(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : SM.d;
-        return (0, jM.WithinEpsilon)(this.r, MM.r, rM) && (0, jM.WithinEpsilon)(this.g, MM.g, rM) && (0, jM.WithinEpsilon)(this.b, MM.b, rM)
+      equalsWithEpsilon(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : YV.b;
+        return (0, UV.WithinEpsilon)(this.r, VV.r, eV) && (0, UV.WithinEpsilon)(this.g, VV.g, eV) && (0, UV.WithinEpsilon)(this.b, VV.b, eV)
       }
-      VJ() {
+      gr() {
         throw new ReferenceError("Can not negate a color")
       }
       negateInPlace() {
         throw new ReferenceError("Can not negate a color")
       }
-      negateToRef(MM) {
+      negateToRef(VV) {
         throw new ReferenceError("Can not negate a color")
       }
-      scale(MM) {
-        return new LM(this.r * MM, this.g * MM, this.b * MM)
+      scale(VV) {
+        return new ZV(this.r * VV, this.g * VV, this.b * VV)
       }
-      scaleInPlace(MM) {
-        return this.r *= MM, this.g *= MM, this.b *= MM, this
+      scaleInPlace(VV) {
+        return this.r *= VV, this.g *= VV, this.b *= VV, this
       }
-      scaleToRef(MM, rM) {
-        return rM.r = this.r * MM, rM.g = this.g * MM, rM.b = this.b * MM, rM
+      scaleToRef(VV, eV) {
+        return eV.r = this.r * VV, eV.g = this.g * VV, eV.b = this.b * VV, eV
       }
-      scaleAndAddToRef(MM, rM) {
-        return rM.r += this.r * MM, rM.g += this.g * MM, rM.b += this.b * MM, rM
+      scaleAndAddToRef(VV, eV) {
+        return eV.r += this.r * VV, eV.g += this.g * VV, eV.b += this.b * VV, eV
       }
       clampToRef() {
-        let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-          iM = arguments.length > 2 ? arguments[2] : void 0;
-        return iM.r = (0, jM.Clamp)(this.r, MM, rM), iM.g = (0, jM.Clamp)(this.g, MM, rM), iM.b = (0, jM.Clamp)(this.b, MM, rM), iM
+        let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+          xV = arguments.length > 2 ? arguments[2] : void 0;
+        return xV.r = (0, UV.Clamp)(this.r, VV, eV), xV.g = (0, UV.Clamp)(this.g, VV, eV), xV.b = (0, UV.Clamp)(this.b, VV, eV), xV
       }
-      add(MM) {
-        return new LM(this.r + MM.r, this.g + MM.g, this.b + MM.b)
+      add(VV) {
+        return new ZV(this.r + VV.r, this.g + VV.g, this.b + VV.b)
       }
-      addInPlace(MM) {
-        return this.r += MM.r, this.g += MM.g, this.b += MM.b, this
+      addInPlace(VV) {
+        return this.r += VV.r, this.g += VV.g, this.b += VV.b, this
       }
-      addInPlaceFromFloats(MM, rM, iM) {
-        return this.r += MM, this.g += rM, this.b += iM, this
+      addInPlaceFromFloats(VV, eV, xV) {
+        return this.r += VV, this.g += eV, this.b += xV, this
       }
-      addToRef(MM, rM) {
-        return rM.r = this.r + MM.r, rM.g = this.g + MM.g, rM.b = this.b + MM.b, rM
+      addToRef(VV, eV) {
+        return eV.r = this.r + VV.r, eV.g = this.g + VV.g, eV.b = this.b + VV.b, eV
       }
-      subtract(MM) {
-        return new LM(this.r - MM.r, this.g - MM.g, this.b - MM.b)
+      subtract(VV) {
+        return new ZV(this.r - VV.r, this.g - VV.g, this.b - VV.b)
       }
-      subtractToRef(MM, rM) {
-        return rM.r = this.r - MM.r, rM.g = this.g - MM.g, rM.b = this.b - MM.b, rM
+      subtractToRef(VV, eV) {
+        return eV.r = this.r - VV.r, eV.g = this.g - VV.g, eV.b = this.b - VV.b, eV
       }
-      kOM(MM) {
-        return this.r -= MM.r, this.g -= MM.g, this.b -= MM.b, this
+      IYV(VV) {
+        return this.r -= VV.r, this.g -= VV.g, this.b -= VV.b, this
       }
-      subtractFromFloats(MM, rM, iM) {
-        return new LM(this.r - MM, this.g - rM, this.b - iM)
+      subtractFromFloats(VV, eV, xV) {
+        return new ZV(this.r - VV, this.g - eV, this.b - xV)
       }
-      subtractFromFloatsToRef(MM, rM, iM, OM) {
-        return OM.r = this.r - MM, OM.g = this.g - rM, OM.b = this.b - iM, OM
+      subtractFromFloatsToRef(VV, eV, xV, JV) {
+        return JV.r = this.r - VV, JV.g = this.g - eV, JV.b = this.b - xV, JV
       }
       clone() {
-        return new LM(this.r, this.g, this.b)
+        return new ZV(this.r, this.g, this.b)
       }
-      jR(MM) {
-        return this.r = MM.r, this.g = MM.g, this.b = MM.b, this
+      iG(VV) {
+        return this.r = VV.r, this.g = VV.g, this.b = VV.b, this
       }
-      iMM(MM, rM, iM) {
-        return this.r = MM, this.g = rM, this.b = iM, this
+      FeV(VV, eV, xV) {
+        return this.r = VV, this.g = eV, this.b = xV, this
       }
-      set(MM, rM, iM) {
-        return this.iMM(MM, rM, iM)
+      set(VV, eV, xV) {
+        return this.FeV(VV, eV, xV)
       }
-      P_(MM) {
-        return this.r = this.g = this.b = MM, this
+      HVV(VV) {
+        return this.r = this.g = this.b = VV, this
       }
       toHexString() {
-        const MM = Math.round(255 * this.r),
-          rM = Math.round(255 * this.g),
-          iM = Math.round(255 * this.b);
-        return "#" + (0, jM.ToHex)(MM) + (0, jM.ToHex)(rM) + (0, jM.ToHex)(iM)
+        const VV = Math.round(255 * this.r),
+          eV = Math.round(255 * this.g),
+          xV = Math.round(255 * this.b);
+        return "#" + (0, UV.ToHex)(VV) + (0, UV.ToHex)(eV) + (0, UV.ToHex)(xV)
       }
-      fromHexString(MM) {
-        return "#" !== MM.substring(0, 1) || 7 !== MM.length || (this.r = parseInt(MM.substring(1, 3), 16) / 255, this.g = parseInt(MM.substring(3, 5), 16) / 255, this.b = parseInt(MM.substring(5, 7), 16) / 255), this
+      fromHexString(VV) {
+        return "#" !== VV.substring(0, 1) || 7 !== VV.length || (this.r = parseInt(VV.substring(1, 3), 16) / 255, this.g = parseInt(VV.substring(3, 5), 16) / 255, this.b = parseInt(VV.substring(5, 7), 16) / 255), this
       }
       toHSV() {
-        return this.toHSVToRef(new LM)
+        return this.toHSVToRef(new ZV)
       }
-      toHSVToRef(MM) {
-        const rM = this.r,
-          iM = this.g,
-          OM = this.b,
-          SM = Math.max(rM, iM, OM),
-          jM = Math.min(rM, iM, OM);
-        let aM = 0,
-          PM = 0;
-        const nM = SM,
-          QM = SM - jM;
-        return 0 !== SM && (PM = QM / SM), SM != jM && (SM == rM ? (aM = (iM - OM) / QM, iM < OM && (aM += 6)) : SM == iM ? aM = (OM - rM) / QM + 2 : SM == OM && (aM = (rM - iM) / QM + 4), aM *= 60), MM.r = aM, MM.g = PM, MM.b = nM, MM
+      toHSVToRef(VV) {
+        const eV = this.r,
+          xV = this.g,
+          JV = this.b,
+          YV = Math.max(eV, xV, JV),
+          UV = Math.min(eV, xV, JV);
+        let yV = 0,
+          pV = 0;
+        const QV = YV,
+          nV = YV - UV;
+        return 0 !== YV && (pV = nV / YV), YV != UV && (YV == eV ? (yV = (xV - JV) / nV, xV < JV && (yV += 6)) : YV == xV ? yV = (JV - eV) / nV + 2 : YV == JV && (yV = (eV - xV) / nV + 4), yV *= 60), VV.r = yV, VV.g = pV, VV.b = QV, VV
       }
       toLinearSpace() {
-        let MM = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const rM = new LM;
-        return this.toLinearSpaceToRef(rM, MM), rM
+        let VV = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const eV = new ZV;
+        return this.toLinearSpaceToRef(eV, VV), eV
       }
-      toLinearSpaceToRef(MM) {
-        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (MM.r = nM(this.r), MM.g = nM(this.g), MM.b = nM(this.b)) : (MM.r = PM(this.r), MM.g = PM(this.g), MM.b = PM(this.b)), this
+      toLinearSpaceToRef(VV) {
+        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (VV.r = QV(this.r), VV.g = QV(this.g), VV.b = QV(this.b)) : (VV.r = pV(this.r), VV.g = pV(this.g), VV.b = pV(this.b)), this
       }
       toGammaSpace() {
-        let MM = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const rM = new LM;
-        return this.toGammaSpaceToRef(rM, MM), rM
+        let VV = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const eV = new ZV;
+        return this.toGammaSpaceToRef(eV, VV), eV
       }
-      toGammaSpaceToRef(MM) {
-        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (MM.r = zM(this.r), MM.g = zM(this.g), MM.b = zM(this.b)) : (MM.r = QM(this.r), MM.g = QM(this.g), MM.b = QM(this.b)), this
+      toGammaSpaceToRef(VV) {
+        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (VV.r = wV(this.r), VV.g = wV(this.g), VV.b = wV(this.b)) : (VV.r = nV(this.r), VV.g = nV(this.g), VV.b = nV(this.b)), this
       }
-      static HSVtoRGBToRef(MM, rM, iM, OM) {
-        const SM = iM * rM,
-          jM = MM / 60,
-          aM = SM * (1 - Math.abs(jM % 2 - 1));
-        let PM = 0,
-          nM = 0,
-          QM = 0;
-        jM >= 0 && jM <= 1 ? (PM = SM, nM = aM) : jM >= 1 && jM <= 2 ? (PM = aM, nM = SM) : jM >= 2 && jM <= 3 ? (nM = SM, QM = aM) : jM >= 3 && jM <= 4 ? (nM = aM, QM = SM) : jM >= 4 && jM <= 5 ? (PM = aM, QM = SM) : jM >= 5 && jM <= 6 && (PM = SM, QM = aM);
-        const zM = iM - SM;
-        return OM.r = PM + zM, OM.g = nM + zM, OM.b = QM + zM, OM
+      static HSVtoRGBToRef(VV, eV, xV, JV) {
+        const YV = xV * eV,
+          UV = VV / 60,
+          yV = YV * (1 - Math.abs(UV % 2 - 1));
+        let pV = 0,
+          QV = 0,
+          nV = 0;
+        UV >= 0 && UV <= 1 ? (pV = YV, QV = yV) : UV >= 1 && UV <= 2 ? (pV = yV, QV = YV) : UV >= 2 && UV <= 3 ? (QV = YV, nV = yV) : UV >= 3 && UV <= 4 ? (QV = yV, nV = YV) : UV >= 4 && UV <= 5 ? (pV = yV, nV = YV) : UV >= 5 && UV <= 6 && (pV = YV, nV = yV);
+        const wV = xV - YV;
+        return JV.r = pV + wV, JV.g = QV + wV, JV.b = nV + wV, JV
       }
-      static FromHSV(MM, rM, iM) {
-        const OM = new LM(0, 0, 0);
-        return LM.HSVtoRGBToRef(MM, rM, iM, OM), OM
+      static FromHSV(VV, eV, xV) {
+        const JV = new ZV(0, 0, 0);
+        return ZV.HSVtoRGBToRef(VV, eV, xV, JV), JV
       }
-      static FromHexString(MM) {
-        return new LM(0, 0, 0).fromHexString(MM)
+      static FromHexString(VV) {
+        return new ZV(0, 0, 0).fromHexString(VV)
       }
-      static FromArray(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return new LM(MM[rM], MM[rM + 1], MM[rM + 2])
+      static FromArray(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return new ZV(VV[eV], VV[eV + 1], VV[eV + 2])
       }
-      static FromArrayToRef(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          iM = arguments.length > 2 ? arguments[2] : void 0;
-        iM.r = MM[rM], iM.g = MM[rM + 1], iM.b = MM[rM + 2]
+      static FromArrayToRef(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          xV = arguments.length > 2 ? arguments[2] : void 0;
+        xV.r = VV[eV], xV.g = VV[eV + 1], xV.b = VV[eV + 2]
       }
-      static FromInts(MM, rM, iM) {
-        return new LM(MM / 255, rM / 255, iM / 255)
+      static FromInts(VV, eV, xV) {
+        return new ZV(VV / 255, eV / 255, xV / 255)
       }
-      static Lerp(MM, rM, iM) {
-        const OM = new LM(0, 0, 0);
-        return LM.LerpToRef(MM, rM, iM, OM), OM
+      static Lerp(VV, eV, xV) {
+        const JV = new ZV(0, 0, 0);
+        return ZV.LerpToRef(VV, eV, xV, JV), JV
       }
-      static LerpToRef(MM, rM, iM, OM) {
-        OM.r = MM.r + (rM.r - MM.r) * iM, OM.g = MM.g + (rM.g - MM.g) * iM, OM.b = MM.b + (rM.b - MM.b) * iM
+      static LerpToRef(VV, eV, xV, JV) {
+        JV.r = VV.r + (eV.r - VV.r) * xV, JV.g = VV.g + (eV.g - VV.g) * xV, JV.b = VV.b + (eV.b - VV.b) * xV
       }
-      static Hermite(MM, rM, iM, OM, SM) {
-        const jM = SM * SM,
-          aM = SM * jM,
-          PM = 2 * aM - 3 * jM + 1,
-          nM = -2 * aM + 3 * jM,
-          QM = aM - 2 * jM + SM,
-          zM = aM - jM,
-          mM = MM.r * PM + iM.r * nM + rM.r * QM + OM.r * zM,
-          HM = MM.g * PM + iM.g * nM + rM.g * QM + OM.g * zM,
-          hM = MM.b * PM + iM.b * nM + rM.b * QM + OM.b * zM;
-        return new LM(mM, HM, hM)
+      static Hermite(VV, eV, xV, JV, YV) {
+        const UV = YV * YV,
+          yV = YV * UV,
+          pV = 2 * yV - 3 * UV + 1,
+          QV = -2 * yV + 3 * UV,
+          nV = yV - 2 * UV + YV,
+          wV = yV - UV,
+          vV = VV.r * pV + xV.r * QV + eV.r * nV + JV.r * wV,
+          rV = VV.g * pV + xV.g * QV + eV.g * nV + JV.g * wV,
+          kV = VV.b * pV + xV.b * QV + eV.b * nV + JV.b * wV;
+        return new ZV(vV, rV, kV)
       }
-      static Hermite1stDerivative(MM, rM, iM, OM, SM) {
-        const jM = LM.Black();
-        return this.Hermite1stDerivativeToRef(MM, rM, iM, OM, SM, jM), jM
+      static Hermite1stDerivative(VV, eV, xV, JV, YV) {
+        const UV = ZV.Black();
+        return this.Hermite1stDerivativeToRef(VV, eV, xV, JV, YV, UV), UV
       }
-      static Hermite1stDerivativeToRef(MM, rM, iM, OM, SM, jM) {
-        const aM = SM * SM;
-        jM.r = 6 * (aM - SM) * MM.r + (3 * aM - 4 * SM + 1) * rM.r + 6 * (-aM + SM) * iM.r + (3 * aM - 2 * SM) * OM.r, jM.g = 6 * (aM - SM) * MM.g + (3 * aM - 4 * SM + 1) * rM.g + 6 * (-aM + SM) * iM.g + (3 * aM - 2 * SM) * OM.g, jM.b = 6 * (aM - SM) * MM.b + (3 * aM - 4 * SM + 1) * rM.b + 6 * (-aM + SM) * iM.b + (3 * aM - 2 * SM) * OM.b
+      static Hermite1stDerivativeToRef(VV, eV, xV, JV, YV, UV) {
+        const yV = YV * YV;
+        UV.r = 6 * (yV - YV) * VV.r + (3 * yV - 4 * YV + 1) * eV.r + 6 * (-yV + YV) * xV.r + (3 * yV - 2 * YV) * JV.r, UV.g = 6 * (yV - YV) * VV.g + (3 * yV - 4 * YV + 1) * eV.g + 6 * (-yV + YV) * xV.g + (3 * yV - 2 * YV) * JV.g, UV.b = 6 * (yV - YV) * VV.b + (3 * yV - 4 * YV + 1) * eV.b + 6 * (-yV + YV) * xV.b + (3 * yV - 2 * YV) * JV.b
       }
       static Red() {
-        return new LM(1, 0, 0)
+        return new ZV(1, 0, 0)
       }
       static Green() {
-        return new LM(0, 1, 0)
+        return new ZV(0, 1, 0)
       }
       static Blue() {
-        return new LM(0, 0, 1)
+        return new ZV(0, 0, 1)
       }
       static Black() {
-        return new LM(0, 0, 0)
+        return new ZV(0, 0, 0)
       }
       static get BlackReadOnly() {
-        return LM._BlackReadOnly
+        return ZV._BlackReadOnly
       }
       static White() {
-        return new LM(1, 1, 1)
+        return new ZV(1, 1, 1)
       }
       static Purple() {
-        return new LM(.5, 0, .5)
+        return new ZV(.5, 0, .5)
       }
       static Magenta() {
-        return new LM(1, 0, 1)
+        return new ZV(1, 0, 1)
       }
       static Yellow() {
-        return new LM(1, 1, 0)
+        return new ZV(1, 1, 0)
       }
       static Gray() {
-        return new LM(.5, .5, .5)
+        return new ZV(.5, .5, .5)
       }
       static Teal() {
-        return new LM(0, 1, 1)
+        return new ZV(0, 1, 1)
       }
       static Random() {
-        return new LM(Math.random(), Math.random(), Math.random())
+        return new ZV(Math.random(), Math.random(), Math.random())
       }
     }
-    LM._V8PerformanceHack = new LM(.5, .5, .5), LM._BlackReadOnly = LM.Black();
-    class mM {
+    ZV._V8PerformanceHack = new ZV(.5, .5, .5), ZV._BlackReadOnly = ZV.Black();
+    class vV {
       constructor() {
-        let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          OM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1;
-        this.r = MM, this.g = rM, this.b = iM, this.a = OM
+        let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          JV = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1;
+        this.r = VV, this.g = eV, this.b = xV, this.a = JV
       }
-      HOM() {
+      WYV() {
         return [this.r, this.g, this.b, this.a]
       }
-      toArray(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return MM[rM] = this.r, MM[rM + 1] = this.g, MM[rM + 2] = this.b, MM[rM + 3] = this.a, this
+      toArray(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return VV[eV] = this.r, VV[eV + 1] = this.g, VV[eV + 2] = this.b, VV[eV + 3] = this.a, this
       }
-      cz(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return this.r = MM[rM], this.g = MM[rM + 1], this.b = MM[rM + 2], this.a = MM[rM + 3], this
+      wZ(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return this.r = VV[eV], this.g = VV[eV + 1], this.b = VV[eV + 2], this.a = VV[eV + 3], this
       }
-      equals(MM) {
-        return MM && this.r === MM.r && this.g === MM.g && this.b === MM.b && this.a === MM.a
+      equals(VV) {
+        return VV && this.r === VV.r && this.g === VV.g && this.b === VV.b && this.a === VV.a
       }
-      add(MM) {
-        return new mM(this.r + MM.r, this.g + MM.g, this.b + MM.b, this.a + MM.a)
+      add(VV) {
+        return new vV(this.r + VV.r, this.g + VV.g, this.b + VV.b, this.a + VV.a)
       }
-      addToRef(MM, rM) {
-        return rM.r = this.r + MM.r, rM.g = this.g + MM.g, rM.b = this.b + MM.b, rM.a = this.a + MM.a, rM
+      addToRef(VV, eV) {
+        return eV.r = this.r + VV.r, eV.g = this.g + VV.g, eV.b = this.b + VV.b, eV.a = this.a + VV.a, eV
       }
-      addInPlace(MM) {
-        return this.r += MM.r, this.g += MM.g, this.b += MM.b, this.a += MM.a, this
+      addInPlace(VV) {
+        return this.r += VV.r, this.g += VV.g, this.b += VV.b, this.a += VV.a, this
       }
-      addInPlaceFromFloats(MM, rM, iM, OM) {
-        return this.r += MM, this.g += rM, this.b += iM, this.a += OM, this
+      addInPlaceFromFloats(VV, eV, xV, JV) {
+        return this.r += VV, this.g += eV, this.b += xV, this.a += JV, this
       }
-      subtract(MM) {
-        return new mM(this.r - MM.r, this.g - MM.g, this.b - MM.b, this.a - MM.a)
+      subtract(VV) {
+        return new vV(this.r - VV.r, this.g - VV.g, this.b - VV.b, this.a - VV.a)
       }
-      subtractToRef(MM, rM) {
-        return rM.r = this.r - MM.r, rM.g = this.g - MM.g, rM.b = this.b - MM.b, rM.a = this.a - MM.a, rM
+      subtractToRef(VV, eV) {
+        return eV.r = this.r - VV.r, eV.g = this.g - VV.g, eV.b = this.b - VV.b, eV.a = this.a - VV.a, eV
       }
-      kOM(MM) {
-        return this.r -= MM.r, this.g -= MM.g, this.b -= MM.b, this.a -= MM.a, this
+      IYV(VV) {
+        return this.r -= VV.r, this.g -= VV.g, this.b -= VV.b, this.a -= VV.a, this
       }
-      subtractFromFloats(MM, rM, iM, OM) {
-        return new mM(this.r - MM, this.g - rM, this.b - iM, this.a - OM)
+      subtractFromFloats(VV, eV, xV, JV) {
+        return new vV(this.r - VV, this.g - eV, this.b - xV, this.a - JV)
       }
-      subtractFromFloatsToRef(MM, rM, iM, OM, SM) {
-        return SM.r = this.r - MM, SM.g = this.g - rM, SM.b = this.b - iM, SM.a = this.a - OM, SM
+      subtractFromFloatsToRef(VV, eV, xV, JV, YV) {
+        return YV.r = this.r - VV, YV.g = this.g - eV, YV.b = this.b - xV, YV.a = this.a - JV, YV
       }
-      scale(MM) {
-        return new mM(this.r * MM, this.g * MM, this.b * MM, this.a * MM)
+      scale(VV) {
+        return new vV(this.r * VV, this.g * VV, this.b * VV, this.a * VV)
       }
-      scaleInPlace(MM) {
-        return this.r *= MM, this.g *= MM, this.b *= MM, this.a *= MM, this
+      scaleInPlace(VV) {
+        return this.r *= VV, this.g *= VV, this.b *= VV, this.a *= VV, this
       }
-      scaleToRef(MM, rM) {
-        return rM.r = this.r * MM, rM.g = this.g * MM, rM.b = this.b * MM, rM.a = this.a * MM, rM
+      scaleToRef(VV, eV) {
+        return eV.r = this.r * VV, eV.g = this.g * VV, eV.b = this.b * VV, eV.a = this.a * VV, eV
       }
-      scaleAndAddToRef(MM, rM) {
-        return rM.r += this.r * MM, rM.g += this.g * MM, rM.b += this.b * MM, rM.a += this.a * MM, rM
+      scaleAndAddToRef(VV, eV) {
+        return eV.r += this.r * VV, eV.g += this.g * VV, eV.b += this.b * VV, eV.a += this.a * VV, eV
       }
       clampToRef() {
-        let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-          iM = arguments.length > 2 ? arguments[2] : void 0;
-        return iM.r = (0, jM.Clamp)(this.r, MM, rM), iM.g = (0, jM.Clamp)(this.g, MM, rM), iM.b = (0, jM.Clamp)(this.b, MM, rM), iM.a = (0, jM.Clamp)(this.a, MM, rM), iM
+        let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+          xV = arguments.length > 2 ? arguments[2] : void 0;
+        return xV.r = (0, UV.Clamp)(this.r, VV, eV), xV.g = (0, UV.Clamp)(this.g, VV, eV), xV.b = (0, UV.Clamp)(this.b, VV, eV), xV.a = (0, UV.Clamp)(this.a, VV, eV), xV
       }
-      multiply(MM) {
-        return new mM(this.r * MM.r, this.g * MM.g, this.b * MM.b, this.a * MM.a)
+      multiply(VV) {
+        return new vV(this.r * VV.r, this.g * VV.g, this.b * VV.b, this.a * VV.a)
       }
-      multiplyToRef(MM, rM) {
-        return rM.r = this.r * MM.r, rM.g = this.g * MM.g, rM.b = this.b * MM.b, rM.a = this.a * MM.a, rM
+      multiplyToRef(VV, eV) {
+        return eV.r = this.r * VV.r, eV.g = this.g * VV.g, eV.b = this.b * VV.b, eV.a = this.a * VV.a, eV
       }
-      multiplyInPlace(MM) {
-        return this.r *= MM.r, this.g *= MM.g, this.b *= MM.b, this.a *= MM.a, this
+      multiplyInPlace(VV) {
+        return this.r *= VV.r, this.g *= VV.g, this.b *= VV.b, this.a *= VV.a, this
       }
-      multiplyByFloats(MM, rM, iM, OM) {
-        return new mM(this.r * MM, this.g * rM, this.b * iM, this.a * OM)
+      multiplyByFloats(VV, eV, xV, JV) {
+        return new vV(this.r * VV, this.g * eV, this.b * xV, this.a * JV)
       }
-      divide(MM) {
+      divide(VV) {
         throw new ReferenceError("Can not divide a color")
       }
-      divideToRef(MM, rM) {
+      divideToRef(VV, eV) {
         throw new ReferenceError("Can not divide a color")
       }
-      divideInPlace(MM) {
+      divideInPlace(VV) {
         throw new ReferenceError("Can not divide a color")
       }
-      minimizeInPlace(MM) {
-        return this.r = Math.min(this.r, MM.r), this.g = Math.min(this.g, MM.g), this.b = Math.min(this.b, MM.b), this.a = Math.min(this.a, MM.a), this
+      minimizeInPlace(VV) {
+        return this.r = Math.min(this.r, VV.r), this.g = Math.min(this.g, VV.g), this.b = Math.min(this.b, VV.b), this.a = Math.min(this.a, VV.a), this
       }
-      maximizeInPlace(MM) {
-        return this.r = Math.max(this.r, MM.r), this.g = Math.max(this.g, MM.g), this.b = Math.max(this.b, MM.b), this.a = Math.max(this.a, MM.a), this
+      maximizeInPlace(VV) {
+        return this.r = Math.max(this.r, VV.r), this.g = Math.max(this.g, VV.g), this.b = Math.max(this.b, VV.b), this.a = Math.max(this.a, VV.a), this
       }
-      minimizeInPlaceFromFloats(MM, rM, iM, OM) {
-        return this.r = Math.min(MM, this.r), this.g = Math.min(rM, this.g), this.b = Math.min(iM, this.b), this.a = Math.min(OM, this.a), this
+      minimizeInPlaceFromFloats(VV, eV, xV, JV) {
+        return this.r = Math.min(VV, this.r), this.g = Math.min(eV, this.g), this.b = Math.min(xV, this.b), this.a = Math.min(JV, this.a), this
       }
-      maximizeInPlaceFromFloats(MM, rM, iM, OM) {
-        return this.r = Math.max(MM, this.r), this.g = Math.max(rM, this.g), this.b = Math.max(iM, this.b), this.a = Math.max(OM, this.a), this
+      maximizeInPlaceFromFloats(VV, eV, xV, JV) {
+        return this.r = Math.max(VV, this.r), this.g = Math.max(eV, this.g), this.b = Math.max(xV, this.b), this.a = Math.max(JV, this.a), this
       }
-      floorToRef(MM) {
+      floorToRef(VV) {
         throw new ReferenceError("Can not floor a color")
       }
       floor() {
         throw new ReferenceError("Can not floor a color")
       }
-      fractToRef(MM) {
+      fractToRef(VV) {
         throw new ReferenceError("Can not fract a color")
       }
       fract() {
         throw new ReferenceError("Can not fract a color")
       }
-      VJ() {
+      gr() {
         throw new ReferenceError("Can not negate a color")
       }
       negateInPlace() {
         throw new ReferenceError("Can not negate a color")
       }
-      negateToRef(MM) {
+      negateToRef(VV) {
         throw new ReferenceError("Can not negate a color")
       }
-      equalsWithEpsilon(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : SM.d;
-        return (0, jM.WithinEpsilon)(this.r, MM.r, rM) && (0, jM.WithinEpsilon)(this.g, MM.g, rM) && (0, jM.WithinEpsilon)(this.b, MM.b, rM) && (0, jM.WithinEpsilon)(this.a, MM.a, rM)
+      equalsWithEpsilon(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : YV.b;
+        return (0, UV.WithinEpsilon)(this.r, VV.r, eV) && (0, UV.WithinEpsilon)(this.g, VV.g, eV) && (0, UV.WithinEpsilon)(this.b, VV.b, eV) && (0, UV.WithinEpsilon)(this.a, VV.a, eV)
       }
-      IaM(MM, rM, iM, OM) {
-        return this.r === MM && this.g === rM && this.b === iM && this.a === OM
+      rQV(VV, eV, xV, JV) {
+        return this.r === VV && this.g === eV && this.b === xV && this.a === JV
       }
       toString() {
         return "{R: " + this.r + " G:" + this.g + " B:" + this.b + " A:" + this.a + "}"
@@ -460,346 +460,346 @@ export const modules = {
         return "Color4"
       }
       getHashCode() {
-        let MM = 255 * this.r | 0;
-        return MM = 397 * MM ^ 255 * this.g, MM = 397 * MM ^ 255 * this.b, MM = 397 * MM ^ 255 * this.a, MM
+        let VV = 255 * this.r | 0;
+        return VV = 397 * VV ^ 255 * this.g, VV = 397 * VV ^ 255 * this.b, VV = 397 * VV ^ 255 * this.a, VV
       }
       clone() {
-        return (new mM).jR(this)
+        return (new vV).iG(this)
       }
-      jR(MM) {
-        return this.r = MM.r, this.g = MM.g, this.b = MM.b, this.a = MM.a, this
+      iG(VV) {
+        return this.r = VV.r, this.g = VV.g, this.b = VV.b, this.a = VV.a, this
       }
-      iMM(MM, rM, iM, OM) {
-        return this.r = MM, this.g = rM, this.b = iM, this.a = OM, this
+      FeV(VV, eV, xV, JV) {
+        return this.r = VV, this.g = eV, this.b = xV, this.a = JV, this
       }
-      set(MM, rM, iM, OM) {
-        return this.iMM(MM, rM, iM, OM)
+      set(VV, eV, xV, JV) {
+        return this.FeV(VV, eV, xV, JV)
       }
-      P_(MM) {
-        return this.r = this.g = this.b = this.a = MM, this
+      HVV(VV) {
+        return this.r = this.g = this.b = this.a = VV, this
       }
       toHexString() {
-        let MM = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const rM = Math.round(255 * this.r),
-          iM = Math.round(255 * this.g),
-          OM = Math.round(255 * this.b);
-        if (MM) return "#" + (0, jM.ToHex)(rM) + (0, jM.ToHex)(iM) + (0, jM.ToHex)(OM);
-        const SM = Math.round(255 * this.a);
-        return "#" + (0, jM.ToHex)(rM) + (0, jM.ToHex)(iM) + (0, jM.ToHex)(OM) + (0, jM.ToHex)(SM)
+        let VV = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const eV = Math.round(255 * this.r),
+          xV = Math.round(255 * this.g),
+          JV = Math.round(255 * this.b);
+        if (VV) return "#" + (0, UV.ToHex)(eV) + (0, UV.ToHex)(xV) + (0, UV.ToHex)(JV);
+        const YV = Math.round(255 * this.a);
+        return "#" + (0, UV.ToHex)(eV) + (0, UV.ToHex)(xV) + (0, UV.ToHex)(JV) + (0, UV.ToHex)(YV)
       }
-      fromHexString(MM) {
-        return "#" !== MM.substring(0, 1) || 9 !== MM.length && 7 !== MM.length || (this.r = parseInt(MM.substring(1, 3), 16) / 255, this.g = parseInt(MM.substring(3, 5), 16) / 255, this.b = parseInt(MM.substring(5, 7), 16) / 255, 9 === MM.length && (this.a = parseInt(MM.substring(7, 9), 16) / 255)), this
+      fromHexString(VV) {
+        return "#" !== VV.substring(0, 1) || 9 !== VV.length && 7 !== VV.length || (this.r = parseInt(VV.substring(1, 3), 16) / 255, this.g = parseInt(VV.substring(3, 5), 16) / 255, this.b = parseInt(VV.substring(5, 7), 16) / 255, 9 === VV.length && (this.a = parseInt(VV.substring(7, 9), 16) / 255)), this
       }
       toLinearSpace() {
-        let MM = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const rM = new mM;
-        return this.toLinearSpaceToRef(rM, MM), rM
+        let VV = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const eV = new vV;
+        return this.toLinearSpaceToRef(eV, VV), eV
       }
-      toLinearSpaceToRef(MM) {
-        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (MM.r = nM(this.r), MM.g = nM(this.g), MM.b = nM(this.b)) : (MM.r = PM(this.r), MM.g = PM(this.g), MM.b = PM(this.b)), MM.a = this.a, this
+      toLinearSpaceToRef(VV) {
+        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (VV.r = QV(this.r), VV.g = QV(this.g), VV.b = QV(this.b)) : (VV.r = pV(this.r), VV.g = pV(this.g), VV.b = pV(this.b)), VV.a = this.a, this
       }
       toGammaSpace() {
-        let MM = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const rM = new mM;
-        return this.toGammaSpaceToRef(rM, MM), rM
+        let VV = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const eV = new vV;
+        return this.toGammaSpaceToRef(eV, VV), eV
       }
-      toGammaSpaceToRef(MM) {
-        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (MM.r = zM(this.r), MM.g = zM(this.g), MM.b = zM(this.b)) : (MM.r = QM(this.r), MM.g = QM(this.g), MM.b = QM(this.b)), MM.a = this.a, this
+      toGammaSpaceToRef(VV) {
+        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (VV.r = wV(this.r), VV.g = wV(this.g), VV.b = wV(this.b)) : (VV.r = nV(this.r), VV.g = nV(this.g), VV.b = nV(this.b)), VV.a = this.a, this
       }
-      static FromHexString(MM) {
-        return "#" !== MM.substring(0, 1) || 9 !== MM.length && 7 !== MM.length ? new mM(0, 0, 0, 0) : new mM(0, 0, 0, 1).fromHexString(MM)
+      static FromHexString(VV) {
+        return "#" !== VV.substring(0, 1) || 9 !== VV.length && 7 !== VV.length ? new vV(0, 0, 0, 0) : new vV(0, 0, 0, 1).fromHexString(VV)
       }
-      static Lerp(MM, rM, iM) {
-        return mM.LerpToRef(MM, rM, iM, new mM)
+      static Lerp(VV, eV, xV) {
+        return vV.LerpToRef(VV, eV, xV, new vV)
       }
-      static LerpToRef(MM, rM, iM, OM) {
-        return OM.r = MM.r + (rM.r - MM.r) * iM, OM.g = MM.g + (rM.g - MM.g) * iM, OM.b = MM.b + (rM.b - MM.b) * iM, OM.a = MM.a + (rM.a - MM.a) * iM, OM
+      static LerpToRef(VV, eV, xV, JV) {
+        return JV.r = VV.r + (eV.r - VV.r) * xV, JV.g = VV.g + (eV.g - VV.g) * xV, JV.b = VV.b + (eV.b - VV.b) * xV, JV.a = VV.a + (eV.a - VV.a) * xV, JV
       }
-      static Hermite(MM, rM, iM, OM, SM) {
-        const jM = SM * SM,
-          aM = SM * jM,
-          PM = 2 * aM - 3 * jM + 1,
-          nM = -2 * aM + 3 * jM,
-          QM = aM - 2 * jM + SM,
-          zM = aM - jM,
-          LM = MM.r * PM + iM.r * nM + rM.r * QM + OM.r * zM,
-          HM = MM.g * PM + iM.g * nM + rM.g * QM + OM.g * zM,
-          hM = MM.b * PM + iM.b * nM + rM.b * QM + OM.b * zM,
-          JM = MM.a * PM + iM.a * nM + rM.a * QM + OM.a * zM;
-        return new mM(LM, HM, hM, JM)
+      static Hermite(VV, eV, xV, JV, YV) {
+        const UV = YV * YV,
+          yV = YV * UV,
+          pV = 2 * yV - 3 * UV + 1,
+          QV = -2 * yV + 3 * UV,
+          nV = yV - 2 * UV + YV,
+          wV = yV - UV,
+          ZV = VV.r * pV + xV.r * QV + eV.r * nV + JV.r * wV,
+          rV = VV.g * pV + xV.g * QV + eV.g * nV + JV.g * wV,
+          kV = VV.b * pV + xV.b * QV + eV.b * nV + JV.b * wV,
+          bV = VV.a * pV + xV.a * QV + eV.a * nV + JV.a * wV;
+        return new vV(ZV, rV, kV, bV)
       }
-      static Hermite1stDerivative(MM, rM, iM, OM, SM) {
-        const jM = new mM;
-        return this.Hermite1stDerivativeToRef(MM, rM, iM, OM, SM, jM), jM
+      static Hermite1stDerivative(VV, eV, xV, JV, YV) {
+        const UV = new vV;
+        return this.Hermite1stDerivativeToRef(VV, eV, xV, JV, YV, UV), UV
       }
-      static Hermite1stDerivativeToRef(MM, rM, iM, OM, SM, jM) {
-        const aM = SM * SM;
-        jM.r = 6 * (aM - SM) * MM.r + (3 * aM - 4 * SM + 1) * rM.r + 6 * (-aM + SM) * iM.r + (3 * aM - 2 * SM) * OM.r, jM.g = 6 * (aM - SM) * MM.g + (3 * aM - 4 * SM + 1) * rM.g + 6 * (-aM + SM) * iM.g + (3 * aM - 2 * SM) * OM.g, jM.b = 6 * (aM - SM) * MM.b + (3 * aM - 4 * SM + 1) * rM.b + 6 * (-aM + SM) * iM.b + (3 * aM - 2 * SM) * OM.b, jM.a = 6 * (aM - SM) * MM.a + (3 * aM - 4 * SM + 1) * rM.a + 6 * (-aM + SM) * iM.a + (3 * aM - 2 * SM) * OM.a
+      static Hermite1stDerivativeToRef(VV, eV, xV, JV, YV, UV) {
+        const yV = YV * YV;
+        UV.r = 6 * (yV - YV) * VV.r + (3 * yV - 4 * YV + 1) * eV.r + 6 * (-yV + YV) * xV.r + (3 * yV - 2 * YV) * JV.r, UV.g = 6 * (yV - YV) * VV.g + (3 * yV - 4 * YV + 1) * eV.g + 6 * (-yV + YV) * xV.g + (3 * yV - 2 * YV) * JV.g, UV.b = 6 * (yV - YV) * VV.b + (3 * yV - 4 * YV + 1) * eV.b + 6 * (-yV + YV) * xV.b + (3 * yV - 2 * YV) * JV.b, UV.a = 6 * (yV - YV) * VV.a + (3 * yV - 4 * YV + 1) * eV.a + 6 * (-yV + YV) * xV.a + (3 * yV - 2 * YV) * JV.a
       }
-      static FromColor3(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        return new mM(MM.r, MM.g, MM.b, rM)
+      static FromColor3(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        return new vV(VV.r, VV.g, VV.b, eV)
       }
-      static FromArray(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return new mM(MM[rM], MM[rM + 1], MM[rM + 2], MM[rM + 3])
+      static FromArray(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return new vV(VV[eV], VV[eV + 1], VV[eV + 2], VV[eV + 3])
       }
-      static FromArrayToRef(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          iM = arguments.length > 2 ? arguments[2] : void 0;
-        iM.r = MM[rM], iM.g = MM[rM + 1], iM.b = MM[rM + 2], iM.a = MM[rM + 3]
+      static FromArrayToRef(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          xV = arguments.length > 2 ? arguments[2] : void 0;
+        xV.r = VV[eV], xV.g = VV[eV + 1], xV.b = VV[eV + 2], xV.a = VV[eV + 3]
       }
-      static FromInts(MM, rM, iM, OM) {
-        return new mM(MM / 255, rM / 255, iM / 255, OM / 255)
+      static FromInts(VV, eV, xV, JV) {
+        return new vV(VV / 255, eV / 255, xV / 255, JV / 255)
       }
-      static CheckColors4(MM, rM) {
-        if (MM.length === 3 * rM) {
-          const rM = [];
-          for (let iM = 0; iM < MM.length; iM += 3) {
-            const OM = iM / 3 * 4;
-            rM[OM] = MM[iM], rM[OM + 1] = MM[iM + 1], rM[OM + 2] = MM[iM + 2], rM[OM + 3] = 1
+      static CheckColors4(VV, eV) {
+        if (VV.length === 3 * eV) {
+          const eV = [];
+          for (let xV = 0; xV < VV.length; xV += 3) {
+            const JV = xV / 3 * 4;
+            eV[JV] = VV[xV], eV[JV + 1] = VV[xV + 1], eV[JV + 2] = VV[xV + 2], eV[JV + 3] = 1
           }
-          return rM
+          return eV
         }
-        return MM
+        return VV
       }
     }
-    mM._V8PerformanceHack = new mM(.5, .5, .5, .5);
-    class HM {}
-    HM.Color3 = (0, OM.c)(3, LM.Black), HM.Color4 = (0, OM.c)(3, (() => new mM(0, 0, 0, 0)));
-    let hM = !1;
+    vV._V8PerformanceHack = new vV(.5, .5, .5, .5);
+    class rV {}
+    rV.Color3 = (0, JV.e)(3, ZV.Black), rV.Color4 = (0, JV.e)(3, (() => new vV(0, 0, 0, 0)));
+    let kV = !1;
 
-    function JM() {
-      hM || (hM = !0, Object.defineProperties(LM.prototype, {
+    function bV() {
+      kV || (kV = !0, Object.defineProperties(ZV.prototype, {
         dimension: {
           value: [3]
         },
         rank: {
           value: 1
         }
-      }), Object.defineProperties(mM.prototype, {
+      }), Object.defineProperties(vV.prototype, {
         dimension: {
           value: [4]
         },
         rank: {
           value: 1
         }
-      }), (0, aM.e)("BABYLON.Color3", LM), (0, aM.e)("BABYLON.Color4", mM))
+      }), (0, yV.d)("BABYLON.Color3", ZV), (0, yV.d)("BABYLON.Color4", vV))
     }
   },
-  38044: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => jM,
-      f: () => OM,
-      h: () => SM
+  38272: (VV, eV, xV) => {
+    xV.d(eV, {
+      b: () => UV,
+      c: () => JV,
+      f: () => YV
     });
-    const OM = 1 / 2.2,
-      SM = 2.2;
+    const JV = 1 / 2.2,
+      YV = 2.2;
     Math.sqrt(5);
-    let jM = .001
+    let UV = .001
   },
-  38074: (MM, rM, iM) => {
-    function OM(MM) {
-      return parseInt(MM.toString().replace(/\W/g, ""))
+  38303: (VV, eV, xV) => {
+    function JV(VV) {
+      return parseInt(VV.toString().replace(/\W/g, ""))
     }
 
-    function SM(MM, rM) {
-      let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1401298e-51;
-      return Math.abs(MM - rM) <= iM
+    function YV(VV, eV) {
+      let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1401298e-51;
+      return Math.abs(VV - eV) <= xV
     }
 
-    function jM(MM, rM, iM) {
-      let OM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1401298e-51;
-      return MM < rM - OM || MM > iM + OM
+    function UV(VV, eV, xV) {
+      let JV = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1401298e-51;
+      return VV < eV - JV || VV > xV + JV
     }
 
-    function aM(MM, rM) {
-      return MM === rM ? MM : Math.random() * (rM - MM) + MM
+    function yV(VV, eV) {
+      return VV === eV ? VV : Math.random() * (eV - VV) + VV
     }
 
-    function PM(MM, rM, iM) {
-      return MM + (rM - MM) * iM
+    function pV(VV, eV, xV) {
+      return VV + (eV - VV) * xV
     }
 
-    function nM(MM, rM, iM) {
-      let OM = dM(rM - MM, 360);
-      return OM > 180 && (OM -= 360), MM + OM * mM(iM)
+    function QV(VV, eV, xV) {
+      let JV = EV(eV - VV, 360);
+      return JV > 180 && (JV -= 360), VV + JV * vV(xV)
     }
 
-    function QM(MM, rM, iM) {
-      let OM;
-      return OM = MM != rM ? mM((iM - MM) / (rM - MM)) : 0, OM
+    function nV(VV, eV, xV) {
+      let JV;
+      return JV = VV != eV ? vV((xV - VV) / (eV - VV)) : 0, JV
     }
 
-    function zM(MM, rM, iM, OM, SM) {
-      const jM = SM * SM,
-        aM = SM * jM;
-      return MM * (2 * aM - 3 * jM + 1) + iM * (-2 * aM + 3 * jM) + rM * (aM - 2 * jM + SM) + OM * (aM - jM)
+    function wV(VV, eV, xV, JV, YV) {
+      const UV = YV * YV,
+        yV = YV * UV;
+      return VV * (2 * yV - 3 * UV + 1) + xV * (-2 * yV + 3 * UV) + eV * (yV - 2 * UV + YV) + JV * (yV - UV)
     }
 
-    function LM(MM, rM, iM, OM, SM) {
-      const jM = SM * SM;
-      return 6 * (jM - SM) * MM + (3 * jM - 4 * SM + 1) * rM + 6 * (-jM + SM) * iM + (3 * jM - 2 * SM) * OM
+    function ZV(VV, eV, xV, JV, YV) {
+      const UV = YV * YV;
+      return 6 * (UV - YV) * VV + (3 * UV - 4 * YV + 1) * eV + 6 * (-UV + YV) * xV + (3 * UV - 2 * YV) * JV
     }
 
-    function mM(MM) {
-      let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-        iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
-      return Math.min(iM, Math.max(rM, MM))
+    function vV(VV) {
+      let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+        xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
+      return Math.min(xV, Math.max(eV, VV))
     }
 
-    function HM(MM) {
-      return MM -= 2 * Math.PI * Math.floor((MM + Math.PI) / (2 * Math.PI))
+    function rV(VV) {
+      return VV -= 2 * Math.PI * Math.floor((VV + Math.PI) / (2 * Math.PI))
     }
 
-    function hM(MM) {
-      const rM = MM.toString(16);
-      return MM <= 15 ? ("0" + rM).toUpperCase() : rM.toUpperCase()
+    function kV(VV) {
+      const eV = VV.toString(16);
+      return VV <= 15 ? ("0" + eV).toUpperCase() : eV.toUpperCase()
     }
 
-    function JM(MM) {
-      if (Math.log2) return Math.floor(Math.log2(MM));
-      if (MM < 0) return NaN;
-      if (0 === MM) return -1 / 0;
-      let rM = 0;
-      if (MM < 1) {
-        for (; MM < 1;) rM++, MM *= 2;
-        rM = -rM
-      } else if (MM > 1)
-        for (; MM > 1;) rM++, MM = Math.floor(MM / 2);
-      return rM
+    function bV(VV) {
+      if (Math.log2) return Math.floor(Math.log2(VV));
+      if (VV < 0) return NaN;
+      if (0 === VV) return -1 / 0;
+      let eV = 0;
+      if (VV < 1) {
+        for (; VV < 1;) eV++, VV *= 2;
+        eV = -eV
+      } else if (VV > 1)
+        for (; VV > 1;) eV++, VV = Math.floor(VV / 2);
+      return eV
     }
 
-    function dM(MM, rM) {
-      return MM - Math.floor(MM / rM) * rM
+    function EV(VV, eV) {
+      return VV - Math.floor(VV / eV) * eV
     }
 
-    function yM(MM, rM, iM) {
-      return (MM - rM) / (iM - rM)
+    function BV(VV, eV, xV) {
+      return (VV - eV) / (xV - eV)
     }
 
-    function lM(MM, rM, iM) {
-      return MM * (iM - rM) + rM
+    function jV(VV, eV, xV) {
+      return VV * (xV - eV) + eV
     }
 
-    function EM(MM, rM) {
-      let iM = dM(rM - MM, 360);
-      return iM > 180 && (iM -= 360), iM
+    function qV(VV, eV) {
+      let xV = EV(eV - VV, 360);
+      return xV > 180 && (xV -= 360), xV
     }
 
-    function UM(MM, rM) {
-      const iM = dM(MM, 2 * rM);
-      return rM - Math.abs(iM - rM)
+    function tV(VV, eV) {
+      const xV = EV(VV, 2 * eV);
+      return eV - Math.abs(xV - eV)
     }
 
-    function GM(MM, rM, iM) {
-      let OM = mM(iM);
-      return OM = -2 * OM * OM * OM + 3 * OM * OM, rM * OM + MM * (1 - OM)
+    function FV(VV, eV, xV) {
+      let JV = vV(xV);
+      return JV = -2 * JV * JV * JV + 3 * JV * JV, eV * JV + VV * (1 - JV)
     }
 
-    function CM(MM, rM, iM) {
-      let OM;
-      return OM = Math.abs(rM - MM) <= iM ? rM : MM + Math.sign(rM - MM) * iM, OM
+    function TV(VV, eV, xV) {
+      let JV;
+      return JV = Math.abs(eV - VV) <= xV ? eV : VV + Math.sign(eV - VV) * xV, JV
     }
 
-    function eM(MM, rM, iM) {
-      const OM = EM(MM, rM);
-      let SM;
-      return SM = -iM < OM && OM < iM ? rM : CM(MM, rM = MM + OM, iM), SM
+    function PV(VV, eV, xV) {
+      const JV = qV(VV, eV);
+      let YV;
+      return YV = -xV < JV && JV < xV ? eV : TV(VV, eV = VV + JV, xV), YV
     }
 
-    function bM(MM, rM, iM) {
-      return (MM - rM) / (iM - rM)
+    function AV(VV, eV, xV) {
+      return (VV - eV) / (xV - eV)
     }
 
-    function wM(MM, rM, iM) {
-      return (iM - rM) * MM + rM
+    function NV(VV, eV, xV) {
+      return (xV - eV) * VV + eV
     }
 
-    function tM(MM, rM) {
-      const iM = MM % rM;
-      return 0 === iM ? rM : tM(rM, iM)
+    function XV(VV, eV) {
+      const xV = VV % eV;
+      return 0 === xV ? eV : XV(eV, xV)
     }
-    iM.r(rM), iM.d(rM, {
-      Clamp: () => mM,
-      DeltaAngle: () => EM,
-      Denormalize: () => lM,
-      ExtractAsInt: () => OM,
-      Hermite: () => zM,
-      Hermite1stDerivative: () => LM,
-      HighestCommonFactor: () => tM,
-      ILog2: () => JM,
-      InverseLerp: () => QM,
-      Lerp: () => PM,
-      LerpAngle: () => nM,
-      MoveTowards: () => CM,
-      MoveTowardsAngle: () => eM,
-      Normalize: () => yM,
-      NormalizeRadians: () => HM,
-      OutsideRange: () => jM,
-      PercentToRange: () => wM,
-      PingPong: () => UM,
-      RandomRange: () => aM,
-      RangeToPercent: () => bM,
-      Repeat: () => dM,
-      SmoothStep: () => GM,
-      ToHex: () => hM,
-      WithinEpsilon: () => SM
+    xV.r(eV), xV.d(eV, {
+      Clamp: () => vV,
+      DeltaAngle: () => qV,
+      Denormalize: () => jV,
+      ExtractAsInt: () => JV,
+      Hermite: () => wV,
+      Hermite1stDerivative: () => ZV,
+      HighestCommonFactor: () => XV,
+      ILog2: () => bV,
+      InverseLerp: () => nV,
+      Lerp: () => pV,
+      LerpAngle: () => QV,
+      MoveTowards: () => TV,
+      MoveTowardsAngle: () => PV,
+      Normalize: () => BV,
+      NormalizeRadians: () => rV,
+      OutsideRange: () => UV,
+      PercentToRange: () => NV,
+      PingPong: () => tV,
+      RandomRange: () => yV,
+      RangeToPercent: () => AV,
+      Repeat: () => EV,
+      SmoothStep: () => FV,
+      ToHex: () => kV,
+      WithinEpsilon: () => YV
     })
   },
-  38048: (MM, rM, iM) => {
-    function OM(MM, rM) {
-      const iM = [];
-      for (let OM = 0; OM < MM; ++OM) iM.push(rM());
-      return iM
+  38278: (VV, eV, xV) => {
+    function JV(VV, eV) {
+      const xV = [];
+      for (let JV = 0; JV < VV; ++JV) xV.push(eV());
+      return xV
     }
 
-    function SM(MM, rM) {
-      return OM(MM, rM)
+    function YV(VV, eV) {
+      return JV(VV, eV)
     }
-    iM.d(rM, {
-      c: () => OM,
-      g: () => SM,
-      j: () => aM
+    xV.d(eV, {
+      e: () => JV,
+      h: () => YV,
+      i: () => yV
     });
-    const jM = ["push", "splice", "pop", "shift", "unshift"];
+    const UV = ["push", "splice", "pop", "shift", "unshift"];
 
-    function aM(MM, rM) {
-      const iM = jM.map((iM => function(MM, rM, iM) {
-        const OM = MM[rM];
-        if ("function" !== typeof OM) return null;
-        const SM = function() {
-          const OM = MM.length,
-            jM = SM.previous.apply(MM, arguments);
-          return iM(rM, OM), jM
+    function yV(VV, eV) {
+      const xV = UV.map((xV => function(VV, eV, xV) {
+        const JV = VV[eV];
+        if ("function" !== typeof JV) return null;
+        const YV = function() {
+          const JV = VV.length,
+            UV = YV.previous.apply(VV, arguments);
+          return xV(eV, JV), UV
         };
-        return OM.next = SM, SM.previous = OM, MM[rM] = SM, () => {
-          const iM = SM.previous;
-          if (!iM) return;
-          const OM = SM.next;
-          OM ? (iM.next = OM, OM.previous = iM) : (iM.next = void 0, MM[rM] = iM), SM.next = void 0, SM.previous = void 0
+        return JV.next = YV, YV.previous = JV, VV[eV] = YV, () => {
+          const xV = YV.previous;
+          if (!xV) return;
+          const JV = YV.next;
+          JV ? (xV.next = JV, JV.previous = xV) : (xV.next = void 0, VV[eV] = xV), YV.next = void 0, YV.previous = void 0
         }
-      }(MM, iM, rM)));
+      }(VV, xV, eV)));
       return () => {
-        for (const MM of iM) MM?.()
+        for (const VV of xV) VV?.()
       }
     }
   },
-  38085: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => jM,
-      e: () => SM
+  38318: (VV, eV, xV) => {
+    xV.d(eV, {
+      c: () => UV,
+      d: () => YV
     });
-    const OM = {};
+    const JV = {};
 
-    function SM(MM, rM) {
-      OM[MM] = rM
+    function YV(VV, eV) {
+      JV[VV] = eV
     }
 
-    function jM(MM) {
-      return OM[MM]
+    function UV(VV) {
+      return JV[VV]
     }
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const VV in modules) Object.freeze(modules[VV]);

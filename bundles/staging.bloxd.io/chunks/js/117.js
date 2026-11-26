@@ -1,470 +1,470 @@
 export const id = 117;
 export const ids = [117];
 export const modules = {
-  5306: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => mM
+  5404: (VV, eV, xV) => {
+    xV.d(eV, {
+      d: () => vV
     });
-    var OM = iM(1116),
-      SM = iM.n(OM),
-      jM = iM(1398),
-      aM = iM(1396),
-      PM = iM(3902),
-      nM = iM(119),
-      QM = iM(3945),
-      zM = iM(3934),
-      LM = iM(1303);
+    var JV = xV(1146),
+      YV = xV.n(JV),
+      UV = xV(1414),
+      yV = xV(1408),
+      pV = xV(3942),
+      QV = xV(138),
+      nV = xV(3974),
+      wV = xV(3967),
+      ZV = xV(1321);
 
-    function mM(MM) {
+    function vV(VV) {
       let {
-        game: rM
-      } = MM;
-      const iM = (0, nM.is99NightsCrazyGamesBundle)() ? "large" : "small",
-        OM = (0, QM.g)(rM, iM),
-        mM = (0, PM.c)(OM),
-        HM = void 0 !== mM.blurhash;
-      return (0, LM.jsxs)("div", {
+        game: eV
+      } = VV;
+      const xV = (0, QV.is99NightsCrazyGamesBundle)() ? "large" : "small",
+        JV = (0, nV.g)(eV, xV),
+        vV = (0, pV.d)(JV),
+        rV = void 0 !== vV.blurhash;
+      return (0, ZV.jsxs)("div", {
         className: "SchematicImageContainer",
-        children: [mM.isLoading && !HM && (0, LM.jsx)(aM.d, {
+        children: [vV.isLoading && !rV && (0, ZV.jsx)(yV.d, {
           loaderType: "Secondary"
-        }), !mM.failed && (null !== mM.src || HM) && (0, LM.jsx)("div", {
-          className: SM()("SchematicImage", zM.k, {
-            SchematicImageFadeIn: mM.fadeIn && !HM
+        }), !vV.failed && (null !== vV.src || rV) && (0, ZV.jsx)("div", {
+          className: YV()("SchematicImage", wV.i, {
+            SchematicImageFadeIn: vV.fadeIn && !rV
           }),
-          style: (0, zM.h)(mM),
-          children: (0, LM.jsx)(zM.e, {
-            image: mM
+          style: (0, wV.h)(vV),
+          children: (0, ZV.jsx)(wV.e, {
+            image: vV
           })
-        }), mM.failed && (0, LM.jsx)("div", {
+        }), vV.failed && (0, ZV.jsx)("div", {
           className: "SchematicImageError",
-          children: (0, LM.jsx)(jM.b, {
+          children: (0, ZV.jsx)(UV.b, {
             name: "face-dizzy"
           })
         })]
       })
     }
   },
-  5424: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => dM
+  5542: (VV, eV, xV) => {
+    xV.d(eV, {
+      c: () => EV
     });
-    var OM = iM(44),
-      SM = iM(1116),
-      jM = iM.n(SM),
-      aM = iM(5364),
-      PM = iM(1396),
-      nM = iM(1188),
-      QM = iM(3571),
-      zM = iM(3706),
-      LM = iM(1398),
-      mM = iM(3573),
-      HM = iM(5430),
-      hM = iM(5451),
-      JM = iM(1303);
+    var JV = xV(62),
+      YV = xV(1146),
+      UV = xV.n(YV),
+      yV = xV(5448),
+      pV = xV(1408),
+      QV = xV(1220),
+      nV = xV(3586),
+      wV = xV(3724),
+      ZV = xV(1414),
+      vV = xV(3588),
+      rV = xV(5548),
+      kV = xV(5564),
+      bV = xV(1321);
 
-    function dM(MM) {
+    function EV(VV) {
       let {
-        folderName: rM,
-        onTexturePackUpdated: SM,
-        disabled: dM = !1,
-        maxFileSizeMb: yM,
-        packOwner: lM
-      } = MM;
+        folderName: eV,
+        onTexturePackUpdated: YV,
+        disabled: EV = !1,
+        maxFileSizeMb: BV,
+        packOwner: jV
+      } = VV;
       const {
-        t: EM
-      } = (0, nM.A)(), [UM, GM] = (0, OM.useState)(!1), [CM, eM] = (0, OM.useState)(null), [bM, wM] = (0, OM.useState)(null), tM = (0, OM.useRef)(null);
-      async function gM(MM) {
-        GM(!0);
+        t: qV
+      } = (0, QV.A)(), [tV, FV] = (0, JV.useState)(!1), [TV, PV] = (0, JV.useState)(null), [AV, NV] = (0, JV.useState)(null), XV = (0, JV.useRef)(null);
+      async function MV(VV) {
+        FV(!0);
         try {
-          const rM = await (0, QM.m)(MM);
-          if ("customGame" === lM && (0, zM.h)(rM)) return void eM(EM(zM.d));
-          if (void 0 !== yM) {
-            const MM = JSON.stringify(rM).length / 1048576;
-            if (MM > yM) return void eM(EM("customTexturePack:packTooBig", {
-              size: MM.toFixed(1),
-              max: yM
+          const eV = await (0, nV.p)(VV);
+          if ("customGame" === jV && (0, wV.i)(eV)) return void PV(qV(wV.c));
+          if (void 0 !== BV) {
+            const VV = JSON.stringify(eV).length / 1048576;
+            if (VV > BV) return void PV(qV("customTexturePack:packTooBig", {
+              size: VV.toFixed(1),
+              max: BV
             }))
           }
-          eM(null), wM(null), SM(rM), tM.current = rM,
-            function(MM, rM) {
-              const OM = MM.modelOverrides;
-              OM && Promise.all([iM.e(230), iM.e(229)]).then((() => iM(35106))).then((iM => {
+          PV(null), NV(null), YV(eV), XV.current = eV,
+            function(VV, eV) {
+              const JV = VV.modelOverrides;
+              JV && Promise.all([xV.e(230), xV.e(229)]).then((() => xV(35402))).then((xV => {
                 let {
-                  packDisplayName: SM,
-                  refusedPackModels: jM,
-                  packModelSummary: aM
-                } = iM;
-                const PM = SM(MM.metaData);
-                rM(aM(PM, jM(PM, OM, !1)))
-              })).catch((MM => {
-                console.error("Checking the texture pack's models failed:", MM)
+                  packDisplayName: YV,
+                  refusedPackModels: UV,
+                  packModelSummary: yV
+                } = xV;
+                const pV = YV(VV.metaData);
+                eV(yV(pV, UV(pV, JV, !1)))
+              })).catch((VV => {
+                console.error("Checking the texture pack's models failed:", VV)
               }))
-            }(rM, (MM => {
-              tM.current === rM && wM(MM)
+            }(eV, (VV => {
+              XV.current === eV && NV(VV)
             }))
-        } catch (rM) {
-          if (rM instanceof mM.e) {
-            const MM = "customTexturePack:invalidPack" !== rM.translationKey || (0, hM.g)() ? rM.translationKey : "customTexturePack:invalidPackZip";
-            eM((0, HM.i)(EM, MM, rM.params))
-          } else console.error("Couldn't read the texture pack", rM), eM(EM("customTexturePack:errorTitle"))
+        } catch (eV) {
+          if (eV instanceof vV.d) {
+            const VV = "customTexturePack:invalidPack" !== eV.translationKey || (0, kV.g)() ? eV.translationKey : "customTexturePack:invalidPackZip";
+            PV((0, rV.h)(qV, VV, eV.params))
+          } else console.error("Couldn't read the texture pack", eV), PV(qV("customTexturePack:errorTitle"))
         } finally {
-          GM(!1)
+          FV(!1)
         }
       }
       const {
-        getRootProps: uM,
-        getInputProps: RM,
-        isDragActive: pM,
-        open: WM
-      } = (0, aM.e)({
-        onDrop: gM,
+        getRootProps: zV,
+        getInputProps: GV,
+        isDragActive: WV,
+        open: RV
+      } = (0, yV.e)({
+        onDrop: MV,
         noClick: !0,
         noKeyboard: !0,
         useFsAccessApi: !1,
-        disabled: dM
+        disabled: EV
       });
-      return (0, JM.jsxs)("div", {
+      return (0, bV.jsxs)("div", {
         className: "CustomTexturePackContainer",
-        children: [(0, JM.jsxs)("div", {
+        children: [(0, bV.jsxs)("div", {
           className: "CustomTextureWarning",
-          children: [EM("settingsMenu:customTextureWarning"), ".", (0, JM.jsx)("br", {}), EM("settingsMenu:viewDocumentation"), ":", " ", (0, JM.jsx)("a", {
+          children: [qV("settingsMenu:customTextureWarning"), ".", (0, bV.jsx)("br", {}), qV("settingsMenu:viewDocumentation"), ":", " ", (0, bV.jsx)("a", {
             href: "https://github.com/Bloxdy/texturePacks",
             target: "_blank",
             rel: "noreferrer",
             children: "github.com/Bloxdy/texturePacks"
           })]
-        }), CM && (0, JM.jsxs)("div", {
+        }), TV && (0, bV.jsxs)("div", {
           className: "CustomTextureError",
-          children: [EM("general:error"), ": ", CM]
-        }), bM && (0, JM.jsx)("div", {
+          children: [qV("general:error"), ": ", TV]
+        }), AV && (0, bV.jsx)("div", {
           className: "CustomTextureError",
-          children: bM
-        }), (0, JM.jsxs)("div", {
-          ...uM({
-            className: jM()("CustomTextureFolderUpload", {
-              ActiveDrag: pM,
-              Disabled: dM
+          children: AV
+        }), (0, bV.jsxs)("div", {
+          ...zV({
+            className: UV()("CustomTextureFolderUpload", {
+              ActiveDrag: WV,
+              Disabled: EV
             })
           }),
-          children: [(0, JM.jsx)("input", {
-            ...RM({
+          children: [(0, bV.jsx)("input", {
+            ...GV({
               webkitdirectory: "true"
             })
-          }), UM && (0, JM.jsx)("div", {
+          }), tV && (0, bV.jsx)("div", {
             className: "CustomTextureFolderUploadLoading",
-            children: (0, JM.jsx)(PM.d, {})
-          }), !UM && !pM && rM && (0, JM.jsxs)(JM.Fragment, {
-            children: [(0, JM.jsx)("div", {
+            children: (0, bV.jsx)(pV.d, {})
+          }), !tV && !WV && eV && (0, bV.jsxs)(bV.Fragment, {
+            children: [(0, bV.jsx)("div", {
               className: "CustomTextureFolderUploadIcon Active",
-              children: (0, JM.jsx)(LM.b, {
+              children: (0, bV.jsx)(ZV.b, {
                 name: "folder-image"
               })
-            }), (0, JM.jsx)("div", {
+            }), (0, bV.jsx)("div", {
               className: "CustomTextureFolderUploadInstructions Active",
-              children: rM
+              children: eV
             })]
-          }), !UM && (pM || !rM) && (0, JM.jsxs)(JM.Fragment, {
-            children: [(0, JM.jsx)("div", {
+          }), !tV && (WV || !eV) && (0, bV.jsxs)(bV.Fragment, {
+            children: [(0, bV.jsx)("div", {
               className: "CustomTextureFolderUploadIcon",
-              children: (0, JM.jsx)(LM.b, {
+              children: (0, bV.jsx)(ZV.b, {
                 name: "up-from-bracket"
               })
-            }), (0, JM.jsx)("div", {
+            }), (0, bV.jsx)("div", {
               className: "CustomTextureFolderUploadInstructions",
-              children: EM((0, hM.g)() ? "customTexturePack:dropHere" : "customTexturePack:chooseZipInstructions")
+              children: qV((0, kV.g)() ? "customTexturePack:dropHere" : "customTexturePack:chooseZipInstructions")
             })]
-          }), !UM && (0, JM.jsx)(hM.d, {
-            disabled: dM,
-            openFolderPicker: WM,
-            onFiles: MM => {
-              gM(MM)
+          }), !tV && (0, bV.jsx)(kV.e, {
+            disabled: EV,
+            openFolderPicker: RV,
+            onFiles: VV => {
+              MV(VV)
             }
           })]
         })]
       })
     }
   },
-  5451: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => zM,
-      g: () => QM
+  5564: (VV, eV, xV) => {
+    xV.d(eV, {
+      e: () => wV,
+      g: () => nV
     });
-    var OM = iM(44),
-      SM = iM(1520),
-      jM = iM(1188),
-      aM = iM(83),
-      PM = iM(3540),
-      nM = iM(1303);
+    var JV = xV(62),
+      YV = xV(1551),
+      UV = xV(1220),
+      yV = xV(99),
+      pV = xV(3561),
+      QV = xV(1321);
 
-    function QM() {
-      return !(0, aM.isMobile)()
+    function nV() {
+      return !(0, yV.isMobile)()
     }
 
-    function zM(MM) {
+    function wV(VV) {
       let {
-        disabled: rM,
-        openFolderPicker: iM,
-        onFiles: aM
-      } = MM;
+        disabled: eV,
+        openFolderPicker: xV,
+        onFiles: yV
+      } = VV;
       const {
-        t: zM
-      } = (0, jM.A)(), LM = (0, OM.useRef)(null);
-      return (0, nM.jsxs)("div", {
+        t: wV
+      } = (0, UV.A)(), ZV = (0, JV.useRef)(null);
+      return (0, QV.jsxs)("div", {
         className: "PackPickButtons",
         "data-pad-mouse-only": !0,
-        children: [(0, nM.jsx)("input", {
-          ref: LM,
+        children: [(0, QV.jsx)("input", {
+          ref: ZV,
           type: "file",
           accept: ".zip,application/zip",
           hidden: !0,
-          onChange: function(MM) {
-            const rM = Array.from(MM.target.files);
-            MM.target.value = "", aM(rM)
+          onChange: function(VV) {
+            const eV = Array.from(VV.target.files);
+            VV.target.value = "", yV(eV)
           }
-        }), QM() && (0, nM.jsx)(SM.e, {
-          disabled: rM,
-          onClick: iM,
-          children: zM("general:chooseFolder")
-        }), (0, nM.jsx)(SM.e, {
-          disabled: rM,
+        }), nV() && (0, QV.jsx)(YV.f, {
+          disabled: eV,
+          onClick: xV,
+          children: wV("general:chooseFolder")
+        }), (0, QV.jsx)(YV.f, {
+          disabled: eV,
           onClick: () => {
-            (0, PM.f)(LM.current)
+            (0, pV.g)(ZV.current)
           },
-          children: zM("general:chooseZip")
+          children: wV("general:chooseZip")
         })]
       })
     }
   },
-  5401: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => hM,
-      f: () => UM,
-      h: () => JM,
-      j: () => EM
+  5500: (VV, eV, xV) => {
+    xV.d(eV, {
+      e: () => kV,
+      i: () => tV,
+      m: () => bV,
+      q: () => qV
     });
-    var OM = iM(44),
-      SM = iM(5403),
-      jM = iM(4720),
-      aM = iM(1440),
-      PM = iM(5417),
-      nM = iM(1116),
-      QM = iM.n(nM),
-      zM = iM(1429),
-      LM = iM(1830),
-      mM = iM(5419),
-      HM = iM(1303);
+    var JV = xV(62),
+      YV = xV(5508),
+      UV = xV(4795),
+      yV = xV(1446),
+      pV = xV(5529),
+      QV = xV(1146),
+      nV = xV.n(QV),
+      wV = xV(1439),
+      ZV = xV(1838),
+      vV = xV(5536),
+      rV = xV(1321);
 
-    function hM(MM) {
+    function kV(VV) {
       let {
-        label: rM,
-        onClick: iM,
-        checked: OM,
-        circleInfoText: SM,
-        className: PM,
-        disabled: nM,
-        note: zM
-      } = MM;
-      return (0, HM.jsxs)("div", {
-        "aria-disabled": nM || void 0,
+        label: eV,
+        onClick: xV,
+        checked: JV,
+        circleInfoText: YV,
+        className: pV,
+        disabled: QV,
+        note: wV
+      } = VV;
+      return (0, rV.jsxs)("div", {
+        "aria-disabled": QV || void 0,
         "data-pad-focusable": !0,
-        className: QM()("SettingBox CheckboxContainer", {
-          [PM]: PM,
-          SettingBoxDisabled: nM
+        className: nV()("SettingBox CheckboxContainer", {
+          [pV]: pV,
+          SettingBoxDisabled: QV
         }),
         onClick: () => {
-          nM || iM(!OM)
+          QV || xV(!JV)
         },
-        children: [(0, HM.jsxs)("div", {
+        children: [(0, rV.jsxs)("div", {
           className: "CheckboxInputAndText",
-          children: [(0, HM.jsx)("label", {
+          children: [(0, rV.jsx)("label", {
             className: "CheckboxClickableLabel",
-            children: (0, HM.jsx)(jM.c, {
+            children: (0, rV.jsx)(UV.b, {
               className: "SettingsCheckbox",
-              checked: OM,
-              disabled: nM,
+              checked: JV,
+              disabled: QV,
               onChange: () => {}
             })
-          }), (0, HM.jsxs)("div", {
+          }), (0, rV.jsxs)("div", {
             className: "CheckboxText",
-            children: [rM, SM && (0, HM.jsx)("span", {
-              onClick: MM => MM.stopPropagation(),
-              children: (0, HM.jsx)(aM.e, {
+            children: [eV, YV && (0, rV.jsx)("span", {
+              onClick: VV => VV.stopPropagation(),
+              children: (0, rV.jsx)(yV.c, {
                 className: "SettingsTextInputCircleInfo",
-                hoverInfo: SM
+                hoverInfo: YV
               })
             })]
           })]
-        }), zM && (0, HM.jsx)("div", {
+        }), wV && (0, rV.jsx)("div", {
           className: "SettingNote",
-          children: zM
+          children: wV
         })]
       })
     }
 
-    function JM(MM) {
+    function bV(VV) {
       let {
-        name: rM,
-        onChange: iM,
-        min: SM,
-        max: jM,
-        step: PM,
-        initValue: nM,
-        circleInfoText: zM,
-        format: LM,
-        className: mM,
-        padStep: hM,
-        disabled: JM = !1,
-        selectableMax: dM,
-        cappedNote: yM,
-        onChangeComplete: EM
-      } = MM;
-      const [UM, GM] = (0, OM.useState)(nM), CM = (0, OM.useRef)(nM);
-      (0, OM.useEffect)((() => {
-        CM.current = nM, GM(nM)
-      }), [nM]);
-      const eM = void 0 !== dM && dM < jM,
-        bM = eM ? {
-          "--slider-selectable": (dM - SM) / (jM - SM)
+        name: eV,
+        onChange: xV,
+        min: YV,
+        max: UV,
+        step: pV,
+        initValue: QV,
+        circleInfoText: wV,
+        format: ZV,
+        className: vV,
+        padStep: kV,
+        disabled: bV = !1,
+        selectableMax: EV,
+        cappedNote: BV,
+        onChangeComplete: qV
+      } = VV;
+      const [tV, FV] = (0, JV.useState)(QV), TV = (0, JV.useRef)(QV);
+      (0, JV.useEffect)((() => {
+        TV.current = QV, FV(QV)
+      }), [QV]);
+      const PV = void 0 !== EV && EV < UV,
+        AV = PV ? {
+          "--slider-selectable": (EV - YV) / (UV - YV)
         } : void 0;
-      return (0, HM.jsxs)("div", {
-        className: QM()("SettingBox SettingsSliderDiv", {
-          [mM]: mM,
-          SettingBoxDisabled: JM,
-          SliderCapped: eM
+      return (0, rV.jsxs)("div", {
+        className: nV()("SettingBox SettingsSliderDiv", {
+          [vV]: vV,
+          SettingBoxDisabled: bV,
+          SliderCapped: PV
         }),
-        style: bM,
-        children: [(0, HM.jsxs)("div", {
+        style: AV,
+        children: [(0, rV.jsxs)("div", {
           className: "SliderText",
-          children: [`${rM}: ${LM?LM(UM):UM}`, zM && (0, HM.jsx)(aM.e, {
+          children: [`${eV}: ${ZV?ZV(tV):tV}`, wV && (0, rV.jsx)(yV.c, {
             className: "SettingsTextInputCircleInfo",
-            hoverInfo: zM
+            hoverInfo: wV
           })]
-        }), (0, HM.jsx)("div", {
+        }), (0, rV.jsx)("div", {
           className: "SliderDiv",
-          children: (0, HM.jsx)(lM, {
-            value: UM,
-            min: SM,
-            max: jM,
-            step: PM,
-            onChange: MM => {
-              if (eM && MM >= dM && UM === dM) return;
-              const rM = eM ? Math.min(MM, dM) : MM;
-              CM.current = rM, GM(rM), iM(rM)
+          children: (0, rV.jsx)(jV, {
+            value: tV,
+            min: YV,
+            max: UV,
+            step: pV,
+            onChange: VV => {
+              if (PV && VV >= EV && tV === EV) return;
+              const eV = PV ? Math.min(VV, EV) : VV;
+              TV.current = eV, FV(eV), xV(eV)
             },
-            onChangeComplete: EM && (() => {
-              EM(CM.current)
+            onChangeComplete: qV && (() => {
+              qV(TV.current)
             }),
-            format: LM,
-            padStep: hM,
-            disabled: JM
+            format: ZV,
+            padStep: kV,
+            disabled: bV
           })
-        }), eM && yM && (0, HM.jsx)("div", {
+        }), PV && BV && (0, rV.jsx)("div", {
           className: "SettingNote",
-          children: yM
+          children: BV
         })]
       })
     }
-    const dM = new Set(["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"]);
+    const EV = new Set(["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"]);
 
-    function yM(MM) {
-      var rM;
-      return (null !== (rM = String(MM).split(".")[1]) && void 0 !== rM ? rM : "").length
+    function BV(VV) {
+      var eV;
+      return (null !== (eV = String(VV).split(".")[1]) && void 0 !== eV ? eV : "").length
     }
 
-    function lM(MM) {
+    function jV(VV) {
       let {
-        value: rM,
-        min: iM,
-        max: jM,
-        step: aM,
-        onChange: PM,
-        orientation: nM,
-        reverse: QM,
-        setIsChanging: zM,
-        tooltip: LM,
-        labels: hM,
-        handleLabel: JM,
-        format: lM,
-        onChangeStart: EM,
-        onChangeComplete: UM,
-        padStep: GM,
-        disabled: CM = !1
-      } = MM;
-      const eM = (0, OM.useRef)(null),
-        bM = (0, OM.useRef)(null);
-      (0, OM.useLayoutEffect)((() => {
-        var MM, rM, iM;
-        const OM = null !== (MM = null === (rM = eM.current) || void 0 === rM ? void 0 : rM.querySelector(".rangeslider")) && void 0 !== MM ? MM : null;
-        null === OM || void 0 === OM || OM.setAttribute("data-pad-slider", ""), null === OM || void 0 === OM || OM.setAttribute("data-pad-focusable", ""), null === OM || void 0 === OM || null === (iM = OM.querySelector(".rangeslider__handle")) || void 0 === iM || iM.setAttribute("data-pad-slider-handle", ""), bM.current = OM
-      }), []), (0, OM.useLayoutEffect)((() => {
-        var MM, rM;
-        CM ? null === (MM = bM.current) || void 0 === MM || MM.setAttribute("aria-disabled", "true") : null === (rM = bM.current) || void 0 === rM || rM.removeAttribute("aria-disabled")
-      }), [CM]);
-      const wM = Math.max(yM(aM), yM(iM)),
-        tM = MM => {
-          if (MM >= jM) return jM;
-          if (MM <= iM) return iM;
-          const rM = Number((Math.round((MM - iM) / aM) * aM + iM).toFixed(wM));
-          return Math.min(jM, Math.max(iM, rM))
+        value: eV,
+        min: xV,
+        max: UV,
+        step: yV,
+        onChange: pV,
+        orientation: QV,
+        reverse: nV,
+        setIsChanging: wV,
+        tooltip: ZV,
+        labels: kV,
+        handleLabel: bV,
+        format: jV,
+        onChangeStart: qV,
+        onChangeComplete: tV,
+        padStep: FV,
+        disabled: TV = !1
+      } = VV;
+      const PV = (0, JV.useRef)(null),
+        AV = (0, JV.useRef)(null);
+      (0, JV.useLayoutEffect)((() => {
+        var VV, eV, xV;
+        const JV = null !== (VV = null === (eV = PV.current) || void 0 === eV ? void 0 : eV.querySelector(".rangeslider")) && void 0 !== VV ? VV : null;
+        null === JV || void 0 === JV || JV.setAttribute("data-pad-slider", ""), null === JV || void 0 === JV || JV.setAttribute("data-pad-focusable", ""), null === JV || void 0 === JV || null === (xV = JV.querySelector(".rangeslider__handle")) || void 0 === xV || xV.setAttribute("data-pad-slider-handle", ""), AV.current = JV
+      }), []), (0, JV.useLayoutEffect)((() => {
+        var VV, eV;
+        TV ? null === (VV = AV.current) || void 0 === VV || VV.setAttribute("aria-disabled", "true") : null === (eV = AV.current) || void 0 === eV || eV.removeAttribute("aria-disabled")
+      }), [TV]);
+      const NV = Math.max(BV(yV), BV(xV)),
+        XV = VV => {
+          if (VV >= UV) return UV;
+          if (VV <= xV) return xV;
+          const eV = Number((Math.round((VV - xV) / yV) * yV + xV).toFixed(NV));
+          return Math.min(UV, Math.max(xV, eV))
         },
-        gM = (0, OM.useRef)(UM);
-      gM.current = UM, (0, OM.useEffect)((() => {
-        const MM = eM.current;
-        if (!MM) return;
-        const rM = MM => {
-          var rM;
-          dM.has(MM.key) && (null === (rM = gM.current) || void 0 === rM || rM.call(gM))
+        MV = (0, JV.useRef)(tV);
+      MV.current = tV, (0, JV.useEffect)((() => {
+        const VV = PV.current;
+        if (!VV) return;
+        const eV = VV => {
+          var eV;
+          EV.has(VV.key) && (null === (eV = MV.current) || void 0 === eV || eV.call(MV))
         };
-        return MM.addEventListener("keyup", rM), () => {
-          MM.removeEventListener("keyup", rM)
+        return VV.addEventListener("keyup", eV), () => {
+          VV.removeEventListener("keyup", eV)
         }
       }), []);
-      const uM = (0, OM.useRef)(!1);
-      return (0, mM.d)(bM, {
-        adjust: MM => {
-          if (CM) return;
-          const OM = null !== GM && void 0 !== GM ? GM : Math.max(aM, Math.round((jM - iM) / 20 / aM) * aM),
-            SM = tM(rM + MM * OM * (QM ? -1 : 1));
-          SM !== rM && (null === EM || void 0 === EM || EM(), PM(SM), null === UM || void 0 === UM || UM())
+      const zV = (0, JV.useRef)(!1);
+      return (0, vV.h)(AV, {
+        adjust: VV => {
+          if (TV) return;
+          const JV = null !== FV && void 0 !== FV ? FV : Math.max(yV, Math.round((UV - xV) / 20 / yV) * yV),
+            YV = XV(eV + VV * JV * (nV ? -1 : 1));
+          YV !== eV && (null === qV || void 0 === qV || qV(), pV(YV), null === tV || void 0 === tV || tV())
         },
-        setFraction: MM => {
-          if (CM) return;
-          const OM = tM(iM + (QM ? 1 - MM : MM) * (jM - iM));
-          OM !== rM && (uM.current || (uM.current = !0, null === EM || void 0 === EM || EM()), PM(OM))
+        setFraction: VV => {
+          if (TV) return;
+          const JV = XV(xV + (nV ? 1 - VV : VV) * (UV - xV));
+          JV !== eV && (zV.current || (zV.current = !0, null === qV || void 0 === qV || qV()), pV(JV))
         },
         endDrag: () => {
-          uM.current && (uM.current = !1, null === UM || void 0 === UM || UM())
+          zV.current && (zV.current = !1, null === tV || void 0 === tV || tV())
         }
-      }), (0, HM.jsx)("div", {
-        ref: eM,
+      }), (0, rV.jsx)("div", {
+        ref: PV,
         style: {
           display: "contents"
         },
-        children: (0, HM.jsx)(SM.d, {
-          value: rM,
-          min: iM,
-          max: jM,
-          step: aM,
-          onChange: MM => {
-            PM(tM(MM))
+        children: (0, rV.jsx)(YV.e, {
+          value: eV,
+          min: xV,
+          max: UV,
+          step: yV,
+          onChange: VV => {
+            pV(XV(VV))
           },
-          orientation: nM,
-          reverse: QM,
-          tooltip: LM,
-          labels: hM,
-          handleLabel: JM,
-          format: lM,
+          orientation: QV,
+          reverse: nV,
+          tooltip: ZV,
+          labels: kV,
+          handleLabel: bV,
+          format: jV,
           onChangeStart: () => {
-            null === EM || void 0 === EM || EM(), null === zM || void 0 === zM || zM(!0)
+            null === qV || void 0 === qV || qV(), null === wV || void 0 === wV || wV(!0)
           },
           onChangeComplete: () => {
-            null === zM || void 0 === zM || zM(!1), null === UM || void 0 === UM || UM()
+            null === wV || void 0 === wV || wV(!1), null === tV || void 0 === tV || tV()
           }
         })
       })
     }
-    async function EM() {
-      const MM = zM.NotificationProvider.showPromptPopup({
+    async function qV() {
+      const VV = wV.NotificationProvider.showPromptPopup({
         title: "settingsMenu:reloadPagePopupTitle",
         subtitle: "settingsMenu:reloadPagePopupSubtitle",
         confirmText: "settingsMenu:reloadPagePopupConfirm",
@@ -472,75 +472,75 @@ export const modules = {
         cancelText: "general:cancel",
         cancelTooltip: ""
       });
-      !0 === await MM.getResult() && (0, LM.reloadBloxd)()
+      !0 === await VV.getResult() && (0, ZV.reloadBloxd)()
     }
 
-    function UM(MM) {
+    function tV(VV) {
       let {
-        label: rM,
-        options: iM,
-        value: OM,
-        onChange: SM,
-        circleInfoText: jM
-      } = MM;
-      return (0, HM.jsxs)("div", {
+        label: eV,
+        options: xV,
+        value: JV,
+        onChange: YV,
+        circleInfoText: UV
+      } = VV;
+      return (0, rV.jsxs)("div", {
         className: "SettingBox SegmentedSettingRow",
-        children: [(0, HM.jsxs)("div", {
+        children: [(0, rV.jsxs)("div", {
           className: "SliderText",
-          children: [rM, jM && (0, HM.jsx)(aM.e, {
+          children: [eV, UV && (0, rV.jsx)(yV.c, {
             className: "SettingsTextInputCircleInfo",
-            hoverInfo: jM
+            hoverInfo: UV
           })]
-        }), (0, HM.jsx)(PM.e, {
-          ariaLabel: rM,
-          options: iM,
-          value: OM,
-          onChange: SM
+        }), (0, rV.jsx)(pV.b, {
+          ariaLabel: eV,
+          options: xV,
+          value: JV,
+          onChange: YV
         })]
       })
     }
   },
-  5393: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => dM,
-      e: () => yM
+  5494: (VV, eV, xV) => {
+    xV.d(eV, {
+      d: () => EV,
+      h: () => BV
     });
-    var OM = iM(3571),
-      SM = iM(2263),
-      jM = iM(44),
-      aM = iM(1116),
-      PM = iM.n(aM),
-      nM = iM(1396),
-      QM = iM(3563),
-      zM = iM(1429),
-      LM = iM(5401),
-      mM = iM(5424),
-      HM = iM(656),
-      hM = iM(5456),
-      JM = iM(1303);
+    var JV = xV(3586),
+      YV = xV(2277),
+      UV = xV(62),
+      yV = xV(1146),
+      pV = xV.n(yV),
+      QV = xV(1408),
+      nV = xV(3584),
+      wV = xV(1439),
+      ZV = xV(5500),
+      vV = xV(5542),
+      rV = xV(686),
+      kV = xV(5569),
+      bV = xV(1321);
 
-    function dM(MM) {
-      var rM;
+    function EV(VV) {
+      var eV;
       let {
-        setApplySettingsCallback: iM
-      } = MM;
-      const [, aM] = (0, jM.useReducer)((MM => MM + 1), 0), PM = (0, jM.useRef)(!1), nM = (0, jM.useRef)(null);
+        setApplySettingsCallback: xV
+      } = VV;
+      const [, yV] = (0, UV.useReducer)((VV => VV + 1), 0), pV = (0, UV.useRef)(!1), QV = (0, UV.useRef)(null);
 
-      function dM(MM, rM) {
-        QM.e.setFromJson(MM, "player");
-        const OM = QM.e.saveTexturePack();
-        if (HM.H) {
-          const MM = QM.e.toJson();
-          OM.then((rM => {
-            rM && (0, hM.e)(MM)
+      function EV(VV, eV) {
+        nV.b.setFromJson(VV, "player");
+        const JV = nV.b.saveTexturePack();
+        if (rV.I) {
+          const VV = nV.b.toJson();
+          JV.then((eV => {
+            eV && (0, kV.e)(VV)
           }))
-        } else PM.current ||= rM, nM.current !== QM.e.getId() || QM.e.getId() === SM.o.CUSTOM && PM.current ? iM((() => LM.j)) : iM(null);
-        aM()
+        } else pV.current ||= eV, QV.current !== nV.b.getId() || nV.b.getId() === YV.r.CUSTOM && pV.current ? xV((() => ZV.q)) : xV(null);
+        yV()
       }
-      async function lM(MM) {
-        if (QM.e.getId() !== MM.metaData.id) {
-          if (QM.e.getId() === SM.o.CUSTOM && QM.e.getFromFolderName()) {
-            const MM = zM.NotificationProvider.showPromptPopup({
+      async function jV(VV) {
+        if (nV.b.getId() !== VV.metaData.id) {
+          if (nV.b.getId() === YV.r.CUSTOM && nV.b.getFromFolderName()) {
+            const VV = wV.NotificationProvider.showPromptPopup({
               title: "settingsMenu:loseChangesTitle",
               subtitle: "settingsMenu:loseChangesSubtitle",
               confirmText: "general:continue",
@@ -549,29 +549,29 @@ export const modules = {
               cancelText: "general:cancel",
               cancelTooltip: ""
             });
-            if (!0 !== await MM.getResult()) return
+            if (!0 !== await VV.getResult()) return
           }
-          dM(MM, !1)
+          EV(VV, !1)
         }
-      }(0, jM.useEffect)((() => {
-        nM.current = QM.e.getId()
+      }(0, UV.useEffect)((() => {
+        QV.current = nV.b.getId()
       }), []);
-      const EM = OM.b,
-        UM = [EM, ...Object.values(SM.o).filter((MM => MM !== EM))];
-      return (0, JM.jsx)(JM.Fragment, {
-        children: (0, JM.jsxs)("div", {
+      const qV = JV.c,
+        tV = [qV, ...Object.values(YV.r).filter((VV => VV !== qV))];
+      return (0, bV.jsx)(bV.Fragment, {
+        children: (0, bV.jsxs)("div", {
           className: "TexturePackCategory SettingsMenuRightInner",
-          children: [(0, JM.jsx)("div", {
+          children: [(0, bV.jsx)("div", {
             className: "TexturePackList",
-            children: UM.map((MM => (0, JM.jsx)(yM, {
-              id: MM,
-              isSelected: MM === QM.e.getId(),
-              setSelected: lM
-            }, MM)))
-          }), QM.e.getId() === SM.o.CUSTOM && (0, JM.jsx)(mM.e, {
-            folderName: null !== (rM = QM.e.getFromFolderName()) && void 0 !== rM ? rM : null,
-            onTexturePackUpdated: function(MM) {
-              dM(MM, !0)
+            children: tV.map((VV => (0, bV.jsx)(BV, {
+              id: VV,
+              isSelected: VV === nV.b.getId(),
+              setSelected: jV
+            }, VV)))
+          }), nV.b.getId() === YV.r.CUSTOM && (0, bV.jsx)(vV.c, {
+            folderName: null !== (eV = nV.b.getFromFolderName()) && void 0 !== eV ? eV : null,
+            onTexturePackUpdated: function(VV) {
+              EV(VV, !0)
             },
             packOwner: "player"
           })]
@@ -579,417 +579,417 @@ export const modules = {
       })
     }
 
-    function yM(MM) {
+    function BV(VV) {
       let {
-        id: rM,
-        isSelected: iM,
-        setSelected: aM,
-        disabled: QM = !1
-      } = MM;
-      const [zM, LM] = (0, jM.useState)(!0), [mM, HM] = (0, jM.useState)(""), [hM, dM] = (0, jM.useState)(""), [yM, lM] = (0, jM.useState)(""), EM = (0, jM.useRef)({});
-      return (0, jM.useEffect)((() => {
-        (0, OM.k)(rM).then((MM => {
-          var rM;
-          MM && (EM.current = MM, LM(!1), HM(EM.current.metaData.name), dM(EM.current.metaData.author), lM(null !== (rM = EM.current.metaData.previewImage) && void 0 !== rM ? rM : ""))
-        })).catch((MM => {
-          console.warn(`Failed to fetch texture pack ${rM}`, MM)
+        id: eV,
+        isSelected: xV,
+        setSelected: yV,
+        disabled: nV = !1
+      } = VV;
+      const [wV, ZV] = (0, UV.useState)(!0), [vV, rV] = (0, UV.useState)(""), [kV, EV] = (0, UV.useState)(""), [BV, jV] = (0, UV.useState)(""), qV = (0, UV.useRef)({});
+      return (0, UV.useEffect)((() => {
+        (0, JV.l)(eV).then((VV => {
+          var eV;
+          VV && (qV.current = VV, ZV(!1), rV(qV.current.metaData.name), EV(qV.current.metaData.author), jV(null !== (eV = qV.current.metaData.previewImage) && void 0 !== eV ? eV : ""))
+        })).catch((VV => {
+          console.warn(`Failed to fetch texture pack ${eV}`, VV)
         }))
-      }), [rM]), (0, JM.jsxs)("div", {
+      }), [eV]), (0, bV.jsxs)("div", {
         "data-pad-focusable": !0,
-        "aria-disabled": QM || void 0,
-        className: PM()("TexturePack", {
-          Selected: iM,
-          Custom: rM === SM.o.CUSTOM,
-          Disabled: QM
+        "aria-disabled": nV || void 0,
+        className: pV()("TexturePack", {
+          Selected: xV,
+          Custom: eV === YV.r.CUSTOM,
+          Disabled: nV
         }),
         onClick: () => {
-          zM || QM || aM(EM.current)
+          wV || nV || yV(qV.current)
         },
-        children: [(0, JM.jsx)("div", {
+        children: [(0, bV.jsx)("div", {
           className: "TexturePackBg",
           style: {
-            backgroundImage: yM ? `url(${yM})` : void 0
+            backgroundImage: BV ? `url(${BV})` : void 0
           }
-        }), zM && (0, JM.jsx)("div", {
+        }), wV && (0, bV.jsx)("div", {
           className: "TexturePackName",
-          children: (0, JM.jsx)(nM.d, {})
-        }), !zM && mM && (0, JM.jsx)("div", {
+          children: (0, bV.jsx)(QV.d, {})
+        }), !wV && vV && (0, bV.jsx)("div", {
           className: "TexturePackName",
-          children: mM
-        }), !zM && hM && (0, JM.jsx)("div", {
+          children: vV
+        }), !wV && kV && (0, bV.jsx)("div", {
           className: "TexturePackAuthor",
-          children: hM
+          children: kV
         })]
       })
     }
   },
-  5430: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => PM,
-      e: () => aM,
-      i: () => jM
+  5548: (VV, eV, xV) => {
+    xV.d(eV, {
+      c: () => pV,
+      f: () => yV,
+      h: () => UV
     });
-    var OM = iM(5435);
-    const SM = [MM => MM.strict ? "strict" : "nonStrict", MM => MM.program];
+    var JV = xV(5556);
+    const YV = [VV => VV.strict ? "strict" : "nonStrict", VV => VV.program];
 
-    function jM(MM, rM) {
-      let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-      const OM = {};
-      for (const SM in iM) OM[SM] = `\0${SM}\0`;
-      return MM(rM, OM).replace(/\0(\w+)\0/g, ((MM, rM) => iM[rM]))
+    function UV(VV, eV) {
+      let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      const JV = {};
+      for (const YV in xV) JV[YV] = `\0${YV}\0`;
+      return VV(eV, JV).replace(/\0(\w+)\0/g, ((VV, eV) => xV[eV]))
     }
 
-    function aM(MM) {
-      return null === MM.file ? null : MM.line > 0 ? `${MM.file}:${MM.line}` : MM.file
+    function yV(VV) {
+      return null === VV.file ? null : VV.line > 0 ? `${VV.file}:${VV.line}` : VV.file
     }
 
-    function PM(MM) {
-      const rM = new Map(MM.map((MM => [nM(MM).join("."), MM])));
-      if (0 === rM.size) return [];
-      const iM = zM([...rM.values()]);
-      return 0 === iM[0].length ? [] : iM
+    function pV(VV) {
+      const eV = new Map(VV.map((VV => [QV(VV).join("."), VV])));
+      if (0 === eV.size) return [];
+      const xV = wV([...eV.values()]);
+      return 0 === xV[0].length ? [] : xV
     }
 
-    function nM(MM) {
-      return SM.map((rM => rM(MM)))
+    function QV(VV) {
+      return YV.map((eV => eV(VV)))
     }
-    const QM = SM.map((MM => new Set(OM.g.map(MM)).size));
+    const nV = YV.map((VV => new Set(JV.g.map(VV)).size));
 
-    function zM(MM) {
-      const rM = SM.map((rM => new Set(MM.map(rM)))),
-        iM = rM.reduce(((MM, rM) => MM * rM.size), 1),
-        OM = rM.every(((MM, rM) => 1 === MM.size || MM.size === QM[rM]));
-      if (iM === MM.length && OM) return [SM.filter(((MM, iM) => 1 === rM[iM].size)).map((rM => rM(MM[0])))];
-      let jM = null;
-      for (let aM = 0; aM < SM.length; aM++) {
-        if (1 === rM[aM].size) continue;
-        const iM = LM(MM, SM[aM]).flatMap(zM);
-        (null === jM || iM.length < jM.length) && (jM = iM)
+    function wV(VV) {
+      const eV = YV.map((eV => new Set(VV.map(eV)))),
+        xV = eV.reduce(((VV, eV) => VV * eV.size), 1),
+        JV = eV.every(((VV, eV) => 1 === VV.size || VV.size === nV[eV]));
+      if (xV === VV.length && JV) return [YV.filter(((VV, xV) => 1 === eV[xV].size)).map((eV => eV(VV[0])))];
+      let UV = null;
+      for (let yV = 0; yV < YV.length; yV++) {
+        if (1 === eV[yV].size) continue;
+        const xV = ZV(VV, YV[yV]).flatMap(wV);
+        (null === UV || xV.length < UV.length) && (UV = xV)
       }
-      return jM
+      return UV
     }
 
-    function LM(MM, rM) {
-      const iM = new Map;
-      for (const SM of MM) {
-        var OM;
-        const MM = rM(SM);
-        iM.set(MM, [...null !== (OM = iM.get(MM)) && void 0 !== OM ? OM : [], SM])
+    function ZV(VV, eV) {
+      const xV = new Map;
+      for (const YV of VV) {
+        var JV;
+        const VV = eV(YV);
+        xV.set(VV, [...null !== (JV = xV.get(VV)) && void 0 !== JV ? JV : [], YV])
       }
-      return [...iM.values()]
+      return [...xV.values()]
     }
   },
-  5417: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => aM
+  5529: (VV, eV, xV) => {
+    xV.d(eV, {
+      b: () => yV
     });
-    var OM = iM(1116),
-      SM = iM.n(OM),
-      jM = iM(1303);
+    var JV = xV(1146),
+      YV = xV.n(JV),
+      UV = xV(1321);
 
-    function aM(MM) {
+    function yV(VV) {
       let {
-        options: rM,
-        value: iM,
-        onChange: OM,
-        ariaLabel: aM,
-        className: PM,
-        reselectable: nM = !1,
-        keepsFocus: QM = !1,
-        padTabs: zM
-      } = MM;
-      const LM = void 0 !== zM;
-      return (0, jM.jsx)("div", {
-        className: SM()("SegmentedToggle", PM),
+        options: eV,
+        value: xV,
+        onChange: JV,
+        ariaLabel: yV,
+        className: pV,
+        reselectable: QV = !1,
+        keepsFocus: nV = !1,
+        padTabs: wV
+      } = VV;
+      const ZV = void 0 !== wV;
+      return (0, UV.jsx)("div", {
+        className: YV()("SegmentedToggle", pV),
         role: "group",
-        "aria-label": aM,
-        "data-pad-tabs": zM,
-        children: rM.map((MM => {
-          const rM = MM.value === iM;
-          return (0, jM.jsx)("button", {
+        "aria-label": yV,
+        "data-pad-tabs": wV,
+        children: eV.map((VV => {
+          const eV = VV.value === xV;
+          return (0, UV.jsx)("button", {
             type: "button",
-            "aria-pressed": rM,
-            "data-pad-tab": LM || void 0,
-            "data-pad-selected": LM && rM ? "true" : void 0,
-            "data-pad-default-focus": LM && rM || void 0,
-            "aria-label": MM.ariaLabel,
-            title: MM.ariaLabel,
-            className: SM()("SegmentedToggleOption SmallTextLight", {
-              SegmentedToggleOptionSelected: rM
+            "aria-pressed": eV,
+            "data-pad-tab": ZV || void 0,
+            "data-pad-selected": ZV && eV ? "true" : void 0,
+            "data-pad-default-focus": ZV && eV || void 0,
+            "aria-label": VV.ariaLabel,
+            title: VV.ariaLabel,
+            className: YV()("SegmentedToggleOption SmallTextLight", {
+              SegmentedToggleOptionSelected: eV
             }),
-            onMouseDown: QM ? MM => {
-              MM.preventDefault()
+            onMouseDown: nV ? VV => {
+              VV.preventDefault()
             } : void 0,
             onClick: () => {
-              rM && !nM || OM(MM.value)
+              eV && !QV || JV(VV.value)
             },
-            children: MM.label
-          }, MM.value)
+            children: VV.label
+          }, VV.value)
         }))
       })
     }
   },
-  5419: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => jM,
-      d: () => aM
+  5536: (VV, eV, xV) => {
+    xV.d(eV, {
+      e: () => UV,
+      h: () => yV
     });
-    var OM = iM(44);
-    const SM = new WeakMap,
-      jM = MM => {
-        var rM;
-        const iM = MM.closest("[data-pad-slider]");
-        return iM && null !== (rM = SM.get(iM)) && void 0 !== rM ? rM : null
+    var JV = xV(62);
+    const YV = new WeakMap,
+      UV = VV => {
+        var eV;
+        const xV = VV.closest("[data-pad-slider]");
+        return xV && null !== (eV = YV.get(xV)) && void 0 !== eV ? eV : null
       },
-      aM = (MM, rM) => {
-        const iM = (0, OM.useRef)(rM);
-        iM.current = rM, (0, OM.useEffect)((() => {
-          if (MM.current) return ((MM, rM) => (SM.set(MM, rM), () => {
-            SM.get(MM) === rM && SM.delete(MM)
-          }))(MM.current, {
-            adjust: MM => {
-              iM.current.adjust(MM)
+      yV = (VV, eV) => {
+        const xV = (0, JV.useRef)(eV);
+        xV.current = eV, (0, JV.useEffect)((() => {
+          if (VV.current) return ((VV, eV) => (YV.set(VV, eV), () => {
+            YV.get(VV) === eV && YV.delete(VV)
+          }))(VV.current, {
+            adjust: VV => {
+              xV.current.adjust(VV)
             },
-            setFraction: MM => {
-              iM.current.setFraction(MM)
+            setFraction: VV => {
+              xV.current.setFraction(VV)
             },
             endDrag: () => {
-              iM.current.endDrag()
+              xV.current.endDrag()
             }
           })
-        }), [MM])
+        }), [VV])
       }
   },
-  5435: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => OM.g,
-      g: () => SM,
-      k: () => OM.o
+  5556: (VV, eV, xV) => {
+    xV.d(eV, {
+      d: () => JV.f,
+      g: () => YV,
+      j: () => JV.o
     });
-    var OM = iM(5442);
-    const SM = [!1, !0].flatMap((MM => ["terrain", "liquid", "model"].map((rM => ({
-      strict: MM,
-      program: rM
+    var JV = xV(5561);
+    const YV = [!1, !0].flatMap((VV => ["terrain", "liquid", "model"].map((eV => ({
+      strict: VV,
+      program: eV
     })))))
   },
-  5463: (MM, rM, iM) => {
-    function OM(MM, rM) {
-      return SM(MM, rM)
+  5576: (VV, eV, xV) => {
+    function JV(VV, eV) {
+      return YV(VV, eV)
     }
 
-    function SM(MM, rM) {
-      if (MM === rM) return !0;
-      if ("object" !== typeof MM || "object" !== typeof rM || null === MM || null === rM || Array.isArray(MM) !== Array.isArray(rM)) return !1;
-      const iM = MM,
-        OM = rM,
-        jM = Object.keys(iM);
-      return jM.length === Object.keys(OM).length && jM.every((MM => Object.prototype.hasOwnProperty.call(OM, MM) && SM(iM[MM], OM[MM])))
+    function YV(VV, eV) {
+      if (VV === eV) return !0;
+      if ("object" !== typeof VV || "object" !== typeof eV || null === VV || null === eV || Array.isArray(VV) !== Array.isArray(eV)) return !1;
+      const xV = VV,
+        JV = eV,
+        UV = Object.keys(xV);
+      return UV.length === Object.keys(JV).length && UV.every((VV => Object.prototype.hasOwnProperty.call(JV, VV) && YV(xV[VV], JV[VV])))
     }
-    iM.d(rM, {
-      d: () => OM
+    xV.d(eV, {
+      d: () => JV
     })
   },
-  5456: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => aM,
-      g: () => PM
+  5569: (VV, eV, xV) => {
+    xV.d(eV, {
+      e: () => yV,
+      h: () => pV
     });
-    var OM = iM(2263),
-      SM = iM(5463);
-    let jM = null;
+    var JV = xV(2277),
+      YV = xV(5576);
+    let UV = null;
 
-    function aM(MM) {
-      jM = {
-        pack: MM.metaData.id === OM.b ? null : MM
+    function yV(VV) {
+      UV = {
+        pack: VV.metaData.id === JV.e ? null : VV
       }
     }
 
-    function PM(MM) {
-      return !(null === jM || !(0, SM.d)(jM.pack, MM)) && (jM = null, !0)
+    function pV(VV) {
+      return !(null === UV || !(0, YV.d)(UV.pack, VV)) && (UV = null, !0)
     }
   },
-  5442: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => PM,
-      f: () => aM,
-      g: () => OM,
-      j: () => JM,
-      k: () => LM,
-      o: () => SM,
-      q: () => jM,
-      t: () => QM,
-      w: () => zM,
-      z: () => mM
+  5561: (VV, eV, xV) => {
+    xV.d(eV, {
+      c: () => pV,
+      d: () => yV,
+      f: () => JV,
+      j: () => bV,
+      n: () => ZV,
+      o: () => YV,
+      p: () => UV,
+      s: () => nV,
+      t: () => wV,
+      x: () => vV
     });
-    const OM = 5;
+    const JV = 5;
 
-    function SM(MM) {
-      return MM === OM
+    function YV(VV) {
+      return VV === JV
     }
 
-    function jM(MM) {
-      return [...MM.features]
+    function UV(VV) {
+      return [...VV.features]
     }
-    const aM = 262144,
-      PM = 256,
-      nM = 256;
+    const yV = 262144,
+      pV = 256,
+      QV = 256;
 
-    function QM(MM) {
-      if ("object" !== typeof MM || null === MM || Array.isArray(MM)) return "The pack has no files.";
-      const rM = [];
-      for (const [iM, OM] of Object.entries(MM)) {
-        if ("string" !== typeof OM) return `${iM} isn't text.`;
-        rM.push({
-          path: iM,
-          source: OM
+    function nV(VV) {
+      if ("object" !== typeof VV || null === VV || Array.isArray(VV)) return "The pack has no files.";
+      const eV = [];
+      for (const [xV, JV] of Object.entries(VV)) {
+        if ("string" !== typeof JV) return `${xV} isn't text.`;
+        eV.push({
+          path: xV,
+          source: JV
         })
       }
-      return rM.sort(((MM, rM) => LM(MM.path, rM.path))),
-        function(MM) {
-          if (0 === MM.length) return "The pack has no .wgsl files.";
-          if (MM.length > PM) return `The pack has more than ${PM} .wgsl files.`;
-          const rM = new Set;
+      return eV.sort(((VV, eV) => ZV(VV.path, eV.path))),
+        function(VV) {
+          if (0 === VV.length) return "The pack has no .wgsl files.";
+          if (VV.length > pV) return `The pack has more than ${pV} .wgsl files.`;
+          const eV = new Set;
           for (const {
-              path: iM
+              path: xV
             }
-            of MM) {
-            const MM = HM(iM);
-            if (null !== MM) return MM;
-            if (rM.has(iM)) return `The pack has two files at ${iM}.`;
-            rM.add(iM)
+            of VV) {
+            const VV = rV(xV);
+            if (null !== VV) return VV;
+            if (eV.has(xV)) return `The pack has two files at ${xV}.`;
+            eV.add(xV)
           }
-          return mM(MM) > aM ? `The pack's .wgsl files are over ${aM/1024} KB in total.` : null
-        }(rM) ?? rM
+          return vV(VV) > yV ? `The pack's .wgsl files are over ${yV/1024} KB in total.` : null
+        }(eV) ?? eV
     }
 
-    function zM(MM) {
-      const rM = {};
-      for (const iM of MM) rM[iM.path] = iM.source;
-      return rM
+    function wV(VV) {
+      const eV = {};
+      for (const xV of VV) eV[xV.path] = xV.source;
+      return eV
     }
 
-    function LM(MM, rM) {
-      return MM < rM ? -1 : MM > rM ? 1 : 0
+    function ZV(VV, eV) {
+      return VV < eV ? -1 : VV > eV ? 1 : 0
     }
 
-    function mM(MM) {
-      const rM = new TextEncoder;
-      let iM = 0;
+    function vV(VV) {
+      const eV = new TextEncoder;
+      let xV = 0;
       for (const {
-          source: OM
+          source: JV
         }
-        of MM) iM += rM.encode(OM).byteLength;
-      return iM
+        of VV) xV += eV.encode(JV).byteLength;
+      return xV
     }
 
-    function HM(MM) {
-      if (!MM.toLowerCase().endsWith(".wgsl")) return `${MM} isn't a .wgsl file.`;
-      if (MM.length > nM) return `A file path is over ${nM} characters.`;
-      if (MM.includes("\\") || /[\u0000-\u001f]/.test(MM)) return `${MM} isn't a valid file path.`;
-      return MM.split("/").some((MM => "" === MM || "." === MM || ".." === MM)) ? `${MM} isn't a valid file path.` : null
+    function rV(VV) {
+      if (!VV.toLowerCase().endsWith(".wgsl")) return `${VV} isn't a .wgsl file.`;
+      if (VV.length > QV) return `A file path is over ${QV} characters.`;
+      if (VV.includes("\\") || /[\u0000-\u001f]/.test(VV)) return `${VV} isn't a valid file path.`;
+      return VV.split("/").some((VV => "" === VV || "." === VV || ".." === VV)) ? `${VV} isn't a valid file path.` : null
     }
-    const hM = /^(.*)\[rot\[([1-4])$/;
+    const kV = /^(.*)\[rot\[([1-4])$/;
 
-    function JM(MM, rM) {
-      let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
-      const OM = new Map;
-      rM.forEach(((MM, rM) => {
+    function bV(VV, eV) {
+      let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
+      const JV = new Map;
+      eV.forEach(((VV, eV) => {
         let {
-          numAnimStates: iM,
-          animStartIdx: SM
-        } = MM;
-        for (let jM = 1; jM < iM; jM++) OM.set(SM + jM - 1, rM)
+          numAnimStates: xV,
+          animStartIdx: YV
+        } = VV;
+        for (let UV = 1; UV < xV; UV++) JV.set(YV + UV - 1, eV)
       }));
-      const SM = Object.entries(MM),
-        jM = new Map;
-      for (const [JM, dM] of SM) {
-        const MM = hM.exec(JM);
-        "1" === MM?.[2] && jM.set(MM[1], dM + 1)
+      const YV = Object.entries(VV),
+        UV = new Map;
+      for (const [bV, EV] of YV) {
+        const VV = kV.exec(bV);
+        "1" === VV?.[2] && UV.set(VV[1], EV + 1)
       }
-      const aM = MM => {
-          const rM = hM.exec(MM);
-          return rM && jM.has(rM[1]) ? {
-            root: rM[1],
-            rotation: Number(rM[2]) - 1
+      const yV = VV => {
+          const eV = kV.exec(VV);
+          return eV && UV.has(eV[1]) ? {
+            root: eV[1],
+            rotation: Number(eV[2]) - 1
           } : null
         },
-        PM = new Set(SM.map((MM => {
-          let [rM] = MM;
-          return aM(rM)?.root ?? rM
+        pV = new Set(YV.map((VV => {
+          let [eV] = VV;
+          return yV(eV)?.root ?? eV
         }))),
-        nM = (MM, iM) => {
-          const OM = MM.replace(/_?0$/, "");
-          return (rM[iM]?.numAnimStates ?? 0) > 1 && !PM.has(OM) ? OM : MM
+        QV = (VV, xV) => {
+          const JV = VV.replace(/_?0$/, "");
+          return (eV[xV]?.numAnimStates ?? 0) > 1 && !pV.has(JV) ? JV : VV
         },
-        QM = new Map;
-      for (const [hM, JM] of SM) QM.set(JM, nM(aM(hM)?.root ?? hM, JM));
-      const zM = SM.reduce(((MM, rM) => {
-          let [, iM] = rM;
-          return Math.max(MM, iM + 1)
+        nV = new Map;
+      for (const [kV, bV] of YV) nV.set(bV, QV(yV(kV)?.root ?? kV, bV));
+      const wV = YV.reduce(((VV, eV) => {
+          let [, xV] = eV;
+          return Math.max(VV, xV + 1)
         }), 0),
-        LM = Array.from({
-          length: zM
-        }, ((MM, rM) => ({
-          id: rM + 1,
+        ZV = Array.from({
+          length: wV
+        }, ((VV, eV) => ({
+          id: eV + 1,
           rotation: 0
         }))),
-        mM = new Map,
-        HM = new Map;
-      for (const [hM, JM] of SM) {
-        const MM = aM(hM),
-          rM = OM.get(JM);
-        if (void 0 !== rM) {
-          const iM = QM.get(rM);
-          HM.set(hM, {
-            name: hM,
-            texture: iM,
+        vV = new Map,
+        rV = new Map;
+      for (const [kV, bV] of YV) {
+        const VV = yV(kV),
+          eV = JV.get(bV);
+        if (void 0 !== eV) {
+          const xV = nV.get(eV);
+          rV.set(kV, {
+            name: kV,
+            texture: xV,
             kind: "frame"
-          }), MM && !HM.has(MM.root) && HM.set(MM.root, {
-            name: MM.root,
-            texture: iM,
+          }), VV && !rV.has(VV.root) && rV.set(VV.root, {
+            name: VV.root,
+            texture: xV,
             kind: "frame"
           });
           continue
         }
-        const iM = QM.get(JM),
-          SM = MM?.root ?? hM;
-        if (iM !== SM && HM.set(SM, {
-            name: SM,
-            texture: iM,
+        const xV = nV.get(bV),
+          YV = VV?.root ?? kV;
+        if (xV !== YV && rV.set(YV, {
+            name: YV,
+            texture: xV,
             kind: "frame"
-          }), MM) {
-          const rM = jM.get(MM.root);
-          LM[JM] = {
-            id: rM,
-            rotation: MM.rotation
-          }, mM.set(iM, rM), HM.set(hM, {
-            name: hM,
-            texture: iM,
+          }), VV) {
+          const eV = UV.get(VV.root);
+          ZV[bV] = {
+            id: eV,
+            rotation: VV.rotation
+          }, vV.set(xV, eV), rV.set(kV, {
+            name: kV,
+            texture: xV,
             kind: "rotation"
           })
-        } else mM.set(iM, JM + 1)
+        } else vV.set(xV, bV + 1)
       }
-      for (const hM of mM.keys()) HM.delete(hM);
-      for (const [hM, JM] of iM) {
-        const MM = mM.get(JM);
-        void 0 === MM || mM.has(hM) || (mM.set(hM, MM), HM.delete(hM))
+      for (const kV of vV.keys()) rV.delete(kV);
+      for (const [kV, bV] of xV) {
+        const VV = vV.get(bV);
+        void 0 === VV || vV.has(kV) || (vV.set(kV, VV), rV.delete(kV))
       }
       return {
-        named: [...mM].sort(((MM, rM) => {
-          let [iM] = MM, [OM] = rM;
-          return iM < OM ? -1 : iM > OM ? 1 : 0
-        })).map((MM => {
-          let [rM, iM] = MM;
+        named: [...vV].sort(((VV, eV) => {
+          let [xV] = VV, [JV] = eV;
+          return xV < JV ? -1 : xV > JV ? 1 : 0
+        })).map((VV => {
+          let [eV, xV] = VV;
           return {
-            name: rM,
-            id: iM
+            name: eV,
+            id: xV
           }
         })),
-        aliases: [...HM.values()],
-        layers: LM
+        aliases: [...rV.values()],
+        layers: ZV
       }
     }
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const VV in modules) Object.freeze(modules[VV]);

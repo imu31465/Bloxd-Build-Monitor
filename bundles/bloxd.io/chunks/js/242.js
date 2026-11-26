@@ -1,80 +1,80 @@
 export const id = 242;
 export const ids = [242];
 export const modules = {
-  42181: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      LobbyManageView: () => Cr
+  42402: (VV, eV, xV) => {
+    xV.r(eV), xV.d(eV, {
+      LobbyManageView: () => Te
     });
-    var OM = iM(44),
-      SM = iM(1548),
-      jM = iM(37950),
-      aM = iM(2653),
-      PM = iM(2658),
-      nM = iM(2640),
-      QM = iM(37498);
+    var JV = xV(62),
+      YV = xV(1586),
+      UV = xV(38185),
+      yV = xV(2712),
+      pV = xV(2719),
+      QV = xV(2693),
+      nV = xV(37712);
 
-    function zM() {
-      const [MM, rM] = (0, OM.useState)(new Map);
+    function wV() {
+      const [VV, eV] = (0, JV.useState)(new Map);
       return {
-        get: rM => MM.get(rM),
-        hold: (0, OM.useCallback)(((MM, iM, OM) => {
-          rM((rM => new Map(rM).set(MM, iM))), OM.then((() => {
-            rM((rM => {
-              const iM = new Map(rM);
-              return iM.delete(MM), iM
+        get: eV => VV.get(eV),
+        hold: (0, JV.useCallback)(((VV, xV, JV) => {
+          eV((eV => new Map(eV).set(VV, xV))), JV.then((() => {
+            eV((eV => {
+              const xV = new Map(eV);
+              return xV.delete(VV), xV
             }))
           }))
         }), [])
       }
     }
-    var LM = iM(1116),
-      mM = iM.n(LM),
-      HM = iM(1188),
-      hM = iM(1398),
-      JM = iM(1396),
-      dM = iM(2880),
-      yM = iM(5417),
-      lM = iM(3839);
-    var EM = iM(2084),
-      UM = iM(1520);
+    var ZV = xV(1146),
+      vV = xV.n(ZV),
+      rV = xV(1220),
+      kV = xV(1414),
+      bV = xV(1408),
+      EV = xV(2945),
+      BV = xV(5529),
+      jV = xV(3886);
+    var qV = xV(2100),
+      tV = xV(1551);
 
-    function GM(MM, rM, iM) {
-      const OM = MM.filter((MM => MM.name !== rM)),
-        SM = OM.filter((MM => "none" === MM.role)).sort(((MM, rM) => rM.at - MM.at)),
-        jM = OM.filter((MM => "none" !== MM.role)).sort(((MM, rM) => iM.indexOf(MM.role) - iM.indexOf(rM.role) || rM.at - MM.at));
-      return [...MM.some((MM => MM.name === rM)) && null !== rM ? [rM] : [], ...[...SM, ...jM].map((MM => MM.name))]
+    function FV(VV, eV, xV) {
+      const JV = VV.filter((VV => VV.name !== eV)),
+        YV = JV.filter((VV => "none" === VV.role)).sort(((VV, eV) => eV.at - VV.at)),
+        UV = JV.filter((VV => "none" !== VV.role)).sort(((VV, eV) => xV.indexOf(VV.role) - xV.indexOf(eV.role) || eV.at - VV.at));
+      return [...VV.some((VV => VV.name === eV)) && null !== eV ? [eV] : [], ...[...YV, ...UV].map((VV => VV.name))]
     }
 
-    function CM(MM, rM) {
-      const iM = MM.banned.map((MM => MM.name)),
-        OM = new Set(iM);
+    function TV(VV, eV) {
+      const xV = VV.banned.map((VV => VV.name)),
+        JV = new Set(xV);
       return {
-        here: GM(MM.here, rM, MM.roles.map((MM => MM.role))),
-        away: MM.away.filter((MM => !OM.has(MM.name))).map((MM => MM.name)),
-        banned: iM
+        here: FV(VV.here, eV, VV.roles.map((VV => VV.role))),
+        away: VV.away.filter((VV => !JV.has(VV.name))).map((VV => VV.name)),
+        banned: xV
       }
     }
 
-    function eM(MM, rM) {
-      const iM = MM.here.find((MM => MM.name === rM));
-      if (iM) return {
+    function PV(VV, eV) {
+      const xV = VV.here.find((VV => VV.name === eV));
+      if (xV) return {
         section: "here",
-        player: iM
+        player: xV
       };
-      const OM = MM.banned.find((MM => MM.name === rM));
-      if (OM) return {
+      const JV = VV.banned.find((VV => VV.name === eV));
+      if (JV) return {
         section: "banned",
-        bannedAt: OM.at
+        bannedAt: JV.at
       };
-      const SM = MM.away.find((MM => MM.name === rM));
-      return SM ? {
+      const YV = VV.away.find((VV => VV.name === eV));
+      return YV ? {
         section: "away",
-        player: SM
+        player: YV
       } : {
         section: "gone"
       }
     }
-    const bM = {
+    const AV = {
       gamemode: !1,
       roles: [],
       fixedRole: null,
@@ -82,357 +82,357 @@ export const modules = {
       ban: !1,
       unban: !1
     };
-    var wM = iM(2875),
-      tM = iM(3025),
-      gM = iM(37667),
-      uM = iM(3530),
-      RM = iM(332);
+    var NV = xV(2942),
+      XV = xV(3069),
+      MV = xV(37891),
+      zV = xV(3551),
+      GV = xV(375);
 
-    function pM(MM, rM, iM) {
-      return rM.map((rM => {
-        if ("string" === typeof rM) return rM;
-        const OM = "str" in rM ? rM.str : rM;
-        return "string" === typeof OM ? OM : "entityName" in OM ? OM.entityName : "translationKey" in OM ? MM(OM.translationKey, (0, HM.o)(OM.params, iM)) : ""
+    function WV(VV, eV, xV) {
+      return eV.map((eV => {
+        if ("string" === typeof eV) return eV;
+        const JV = "str" in eV ? eV.str : eV;
+        return "string" === typeof JV ? JV : "entityName" in JV ? JV.entityName : "translationKey" in JV ? VV(JV.translationKey, (0, rV.p)(JV.params, xV)) : ""
       })).join("")
     }
 
-    function WM(MM, rM, iM, OM, SM) {
-      return SM - OM < 6e4 ? MM(`${iM}JustNow`) : MM(iM, {
-        time: (0, RM.db)((0, HM.n)(rM, iM), OM, SM)
+    function RV(VV, eV, xV, JV, YV) {
+      return YV - JV < 6e4 ? VV(`${xV}JustNow`) : VV(xV, {
+        time: (0, GV.bb)((0, rV.m)(eV, xV), JV, YV)
       })
     }
-    var sM = iM(2006),
-      DM = iM(1763),
-      kM = iM(1303);
+    var gV = xV(2021),
+      DV = xV(1772),
+      iV = xV(1321);
 
-    function ZM(MM) {
+    function CV(VV) {
       let {
-        status: rM
-      } = MM;
-      return (0, kM.jsx)("span", {
-        className: mM()("LobbyManageStatus", {
-          LobbyManageStatusRefused: !rM.ok
+        status: eV
+      } = VV;
+      return (0, iV.jsx)("span", {
+        className: vV()("LobbyManageStatus", {
+          LobbyManageStatusRefused: !eV.ok
         }),
-        children: (0, kM.jsx)(sM.b, {
-          text: rM.text
+        children: (0, iV.jsx)(gV.b, {
+          text: eV.text
         })
       })
     }
 
-    function oM(MM) {
+    function aV(VV) {
       let {
-        names: rM,
-        cap: iM,
-        filterFrom: SM,
-        moreLabel: jM,
-        reveal: aM = null,
-        renderRow: PM
-      } = MM;
+        names: eV,
+        cap: xV,
+        filterFrom: YV,
+        moreLabel: UV,
+        reveal: yV = null,
+        renderRow: pV
+      } = VV;
       const {
-        t: nM
-      } = (0, HM.A)(), [QM, zM] = (0, OM.useState)(!1), [LM, mM] = (0, OM.useState)(""), JM = QM || null !== aM && rM.indexOf(aM) >= iM, yM = (JM || rM.length <= iM) && null !== SM && rM.length > SM, lM = LM.trim().toLowerCase();
-      let EM = JM ? rM : rM.slice(0, iM);
-      return yM && "" !== lM && (EM = EM.filter((MM => MM.toLowerCase().includes(lM)))), (0, kM.jsxs)(kM.Fragment, {
-        children: [yM && (0, kM.jsx)(DM.b, {
+        t: QV
+      } = (0, rV.A)(), [nV, wV] = (0, JV.useState)(!1), [ZV, vV] = (0, JV.useState)(""), bV = nV || null !== yV && eV.indexOf(yV) >= xV, BV = (bV || eV.length <= xV) && null !== YV && eV.length > YV, jV = ZV.trim().toLowerCase();
+      let qV = bV ? eV : eV.slice(0, xV);
+      return BV && "" !== jV && (qV = qV.filter((VV => VV.toLowerCase().includes(jV)))), (0, iV.jsxs)(iV.Fragment, {
+        children: [BV && (0, iV.jsx)(DV.d, {
           className: "LobbyManageFilter",
-          placeholderText: nM("lobbyManage:findName"),
-          ariaLabel: nM("lobbyManage:findName"),
-          onValueChange: MM => {
-            mM(MM)
+          placeholderText: QV("lobbyManage:findName"),
+          ariaLabel: QV("lobbyManage:findName"),
+          onValueChange: VV => {
+            vV(VV)
           }
-        }), EM.length > 0 && (0, kM.jsx)("div", {
+        }), qV.length > 0 && (0, iV.jsx)("div", {
           className: "PlayerRows",
-          children: EM.map(((MM, rM) => PM(MM, EM.length - rM)))
-        }), !JM && rM.length > iM && (0, kM.jsx)("div", {
+          children: qV.map(((VV, eV) => pV(VV, qV.length - eV)))
+        }), !bV && eV.length > xV && (0, iV.jsx)("div", {
           className: "LobbyManageMore",
-          children: (0, kM.jsx)(dM.d, {
-            label: (0, kM.jsxs)(kM.Fragment, {
-              children: [jM, " ", (0, kM.jsx)(hM.b, {
+          children: (0, iV.jsx)(EV.b, {
+            label: (0, iV.jsxs)(iV.Fragment, {
+              children: [UV, " ", (0, iV.jsx)(kV.b, {
                 name: "angle-down"
               })]
             }),
             onClick: () => {
-              zM(!0)
+              wV(!0)
             }
           })
         })]
       })
     }
 
-    function fM(MM) {
+    function oV(VV) {
       let {
-        value: rM,
-        placeholder: iM,
-        ariaLabel: SM,
-        maxLength: jM,
-        wide: aM = !1,
-        onSave: PM
-      } = MM;
-      const nM = (0, OM.useRef)(null),
-        [QM, zM] = (0, OM.useState)(0),
-        LM = (0, OM.useRef)(!0),
-        HM = (0, OM.useRef)(null),
-        hM = (0, OM.useRef)({
-          value: rM,
-          onSave: PM
+        value: eV,
+        placeholder: xV,
+        ariaLabel: YV,
+        maxLength: UV,
+        wide: yV = !1,
+        onSave: pV
+      } = VV;
+      const QV = (0, JV.useRef)(null),
+        [nV, wV] = (0, JV.useState)(0),
+        ZV = (0, JV.useRef)(!0),
+        rV = (0, JV.useRef)(null),
+        kV = (0, JV.useRef)({
+          value: eV,
+          onSave: pV
         });
-      hM.current = {
-        value: rM,
-        onSave: PM
+      kV.current = {
+        value: eV,
+        onSave: pV
       };
-      const JM = () => {
-        const MM = HM.current;
-        HM.current = null, null !== MM && MM !== hM.current.value && hM.current.onSave(MM).then((() => {
-          LM.current && zM((MM => MM + 1))
+      const bV = () => {
+        const VV = rV.current;
+        rV.current = null, null !== VV && VV !== kV.current.value && kV.current.onSave(VV).then((() => {
+          ZV.current && wV((VV => VV + 1))
         }))
       };
-      return (0, OM.useEffect)((() => {
-        null === HM.current && nM.current && (nM.current.value = rM)
-      }), [rM, QM]), (0, OM.useEffect)((() => () => {
-        LM.current = !1, JM()
-      }), []), (0, kM.jsx)("div", {
-        className: mM()("LobbyManageRuleInput", {
-          LobbyManageRuleInputWide: aM
+      return (0, JV.useEffect)((() => {
+        null === rV.current && QV.current && (QV.current.value = eV)
+      }), [eV, nV]), (0, JV.useEffect)((() => () => {
+        ZV.current = !1, bV()
+      }), []), (0, iV.jsx)("div", {
+        className: vV()("LobbyManageRuleInput", {
+          LobbyManageRuleInputWide: yV
         }),
-        onBlur: JM,
-        children: (0, kM.jsx)(DM.b, {
-          domRef: nM,
-          defaultValue: rM,
-          placeholderText: iM,
-          ariaLabel: SM,
-          maxLength: jM,
-          onValueChange: MM => {
-            HM.current = MM
+        onBlur: bV,
+        children: (0, iV.jsx)(DV.d, {
+          domRef: QV,
+          defaultValue: eV,
+          placeholderText: xV,
+          ariaLabel: YV,
+          maxLength: UV,
+          onValueChange: VV => {
+            rV.current = VV
           },
-          onEnter: JM
+          onEnter: bV
         })
       })
     }
-    const YM = ["mod", "coOwner"],
-      NM = {
+    const cV = ["mod", "coOwner"],
+      hV = {
         coOwner: "lobbyManage:roleCanCoOwner",
         mod: "lobbyManage:roleCanMod",
         coder: "lobbyManage:roleCanCoder",
         builder: "lobbyManage:roleCanBuilder"
       };
 
-    function AM(MM) {
-      var rM, iM, jM;
+    function lV(VV) {
+      var eV, xV, UV;
       let {
-        name: aM,
-        place: PM,
-        openedIn: nM,
-        isYou: QM,
-        manage: LM,
-        hiddenNames: mM,
-        zIndex: JM
-      } = MM;
+        name: yV,
+        place: pV,
+        openedIn: QV,
+        isYou: nV,
+        manage: ZV,
+        hiddenNames: vV,
+        zIndex: bV
+      } = VV;
       const {
-        t: dM,
-        selectedLanguage: yM
-      } = (0, HM.A)(), [lM, EM] = (0, OM.useState)(null), {
-        state: GM
-      } = LM, CM = `player:${aM}`, eM = function(MM, rM) {
-        if ("banned" === MM.section) return {
-          ...bM,
+        t: EV,
+        selectedLanguage: BV
+      } = (0, rV.A)(), [jV, qV] = (0, JV.useState)(null), {
+        state: FV
+      } = ZV, TV = `player:${yV}`, PV = function(VV, eV) {
+        if ("banned" === VV.section) return {
+          ...AV,
           unban: !0
         };
-        if ("gone" === MM.section) return bM;
+        if ("gone" === VV.section) return AV;
         const {
-          player: iM
-        } = MM, OM = "here" === MM.section, SM = OM || "none" !== iM.role ? iM.can.roles : [], jM = OM && rM && null !== iM.gamemode && iM.can.gamemode;
+          player: xV
+        } = VV, JV = "here" === VV.section, YV = JV || "none" !== xV.role ? xV.can.roles : [], UV = JV && eV && null !== xV.gamemode && xV.can.gamemode;
         return {
-          gamemode: jM,
-          roles: SM,
-          fixedRole: 0 !== SM.length || "none" === iM.role && !jM ? null : iM.role,
-          kick: OM && iM.can.kick,
-          ban: iM.can.ban,
+          gamemode: UV,
+          roles: YV,
+          fixedRole: 0 !== YV.length || "none" === xV.role && !UV ? null : xV.role,
+          kick: JV && xV.can.kick,
+          ban: xV.can.ban,
           unban: !1
         }
-      }(PM, null !== GM.gamemodes), RM = LM.statusOf(CM), sM = LM.isPending(CM), DM = zM(), oM = Date.now(), fM = MM => {
-        var rM, iM;
-        return null !== (rM = null === (iM = (MM => GM.roles.find((rM => rM.role === MM)))(MM)) || void 0 === iM ? void 0 : iM.label) && void 0 !== rM ? rM : MM
-      }, AM = MM => {
-        const rM = NM[MM];
-        return void 0 === rM ? void 0 : dM(rM)
-      }, xM = "here" === PM.section || "away" === PM.section ? PM.player : null, vM = "here" === PM.section ? PM.player.id : null, {
-        playerSocialPreview: FM,
-        isFriend: BM
-      } = null === vM ? {
-        playerSocialPreview: (0, gM.h)(aM, null),
+      }(pV, null !== FV.gamemodes), GV = ZV.statusOf(TV), gV = ZV.isPending(TV), DV = wV(), aV = Date.now(), oV = VV => {
+        var eV, xV;
+        return null !== (eV = null === (xV = (VV => FV.roles.find((eV => eV.role === VV)))(VV)) || void 0 === xV ? void 0 : xV.label) && void 0 !== eV ? eV : VV
+      }, lV = VV => {
+        const eV = hV[VV];
+        return void 0 === eV ? void 0 : EV(eV)
+      }, LV = "here" === pV.section || "away" === pV.section ? pV.player : null, fV = "here" === pV.section ? pV.player.id : null, {
+        playerSocialPreview: mV,
+        isFriend: KV
+      } = null === fV ? {
+        playerSocialPreview: (0, MV.k)(yV, null),
         isFriend: !1
-      } : (0, tM.g)(vM, aM), XM = function() {
-        LM.send(...arguments)
-      }, IM = (MM, rM) => {
-        DM.hold("role", MM, LM.send({
+      } : (0, XV.f)(fV, yV), HV = function() {
+        ZV.send(...arguments)
+      }, uV = (VV, eV) => {
+        DV.hold("role", VV, ZV.send({
           type: "setRole",
-          name: aM,
-          role: MM
-        }, CM, rM))
+          name: yV,
+          role: VV
+        }, TV, eV))
       };
-      let KM = null;
-      if ("ban" === (null === lM || void 0 === lM ? void 0 : lM.kind)) KM = dM("lobbyManageEntry:banConfirm", {
-        playerName: aM
+      let sV = null;
+      if ("ban" === (null === jV || void 0 === jV ? void 0 : jV.kind)) sV = EV("lobbyManageEntry:banConfirm", {
+        playerName: yV
       });
-      else if ("role" === (null === lM || void 0 === lM ? void 0 : lM.kind)) {
-        var qM;
-        KM = `${dM("lobbyManage:roleConfirm",{playerName:aM,role:fM(lM.role)})} ${null!==(qM=AM(lM.role))&&void 0!==qM?qM:""}`
-      } else if (RM) KM = (0, kM.jsx)(ZM, {
-        status: RM
+      else if ("role" === (null === jV || void 0 === jV ? void 0 : jV.kind)) {
+        var SV;
+        sV = `${EV("lobbyManage:roleConfirm",{playerName:yV,role:oV(jV.role)})} ${null!==(SV=lV(jV.role))&&void 0!==SV?SV:""}`
+      } else if (GV) sV = (0, iV.jsx)(CV, {
+        status: GV
       });
-      else if (QM) KM = dM("lobbyManage:you");
-      else if ("here" === PM.section) "none" === PM.player.role && oM - PM.player.at < 6e5 && (KM = WM(dM, yM.code, "lobbyManage:joinedAgo", PM.player.at, oM));
-      else if ("away" === PM.section) {
-        if (PM.player.at > 0) {
-          const MM = "kicked" === PM.player.why ? "lobbyManage:kickedAgo" : "lobbyManage:leftAgo";
-          KM = WM(dM, yM.code, MM, PM.player.at, oM)
+      else if (nV) sV = EV("lobbyManage:you");
+      else if ("here" === pV.section) "none" === pV.player.role && aV - pV.player.at < 6e5 && (sV = RV(EV, BV.code, "lobbyManage:joinedAgo", pV.player.at, aV));
+      else if ("away" === pV.section) {
+        if (pV.player.at > 0) {
+          const VV = "kicked" === pV.player.why ? "lobbyManage:kickedAgo" : "lobbyManage:leftAgo";
+          sV = RV(EV, BV.code, VV, pV.player.at, aV)
         }
-      } else "banned" === PM.section ? null !== PM.bannedAt && (KM = WM(dM, yM.code, "lobbyManage:bannedAgo", PM.bannedAt, oM)) : "banned" === nM && (KM = dM("lobbyManageEntry:unbanned"));
-      return (0, kM.jsx)("div", {
+      } else "banned" === pV.section ? null !== pV.bannedAt && (sV = RV(EV, BV.code, "lobbyManage:bannedAgo", pV.bannedAt, aV)) : "banned" === QV && (sV = EV("lobbyManageEntry:unbanned"));
+      return (0, iV.jsx)("div", {
         className: "LobbyManagePlayerRow",
-        "data-lobby-manage-row": aM,
-        children: (0, kM.jsxs)(wM.h, {
-          playerSocialPreview: FM,
-          isFriend: BM,
-          status: KM,
-          opensProfileCard: !QM && (0, tM.i)(!0, aM, mM),
-          zIndex: JM,
-          children: [null !== lM && (0, kM.jsxs)("div", {
+        "data-lobby-manage-row": yV,
+        children: (0, iV.jsxs)(NV.e, {
+          playerSocialPreview: mV,
+          isFriend: KV,
+          status: sV,
+          opensProfileCard: !nV && (0, XV.g)(!0, yV, vV),
+          zIndex: bV,
+          children: [null !== jV && (0, iV.jsxs)("div", {
             className: "LobbyManageButtons",
-            children: ["ban" === lM.kind && (0, kM.jsxs)(UM.J, {
+            children: ["ban" === jV.kind && (0, iV.jsxs)(tV.E, {
               className: "LobbyManageIconButton SmallTextLight",
               analyticsClick: {
                 id: "lobby_manage.ban",
                 value: "row"
               },
               onClick: () => {
-                EM(null), XM({
+                qV(null), HV({
                   type: "ban",
-                  name: aM
-                }, CM)
+                  name: yV
+                }, TV)
               },
-              children: [(0, kM.jsx)(hM.b, {
+              children: [(0, iV.jsx)(kV.b, {
                 name: "gavel"
-              }), (0, kM.jsx)("span", {
+              }), (0, iV.jsx)("span", {
                 className: "LobbyManageButtonLabel",
-                children: dM("lobbyManageEntry:ban")
+                children: EV("lobbyManageEntry:ban")
               })]
-            }), "role" === lM.kind && (0, kM.jsx)(UM.e, {
+            }), "role" === jV.kind && (0, iV.jsx)(tV.f, {
               className: "LobbyManageIconButton SmallTextLight",
               analyticsClick: {
                 id: "lobby_manage.set_role",
-                value: lM.role
+                value: jV.role
               },
               onClick: () => {
-                EM(null), IM(lM.role)
+                qV(null), uV(jV.role)
               },
-              children: dM("lobbyManage:makeRole", {
-                role: fM(lM.role)
+              children: EV("lobbyManage:makeRole", {
+                role: oV(jV.role)
               })
-            }), (0, kM.jsx)(UM.i, {
+            }), (0, iV.jsx)(tV.j, {
               className: "LobbyManageIconButton SmallTextLight",
               onClick: () => {
-                EM(null)
+                qV(null)
               },
-              children: dM("general:cancel")
+              children: EV("general:cancel")
             })]
-          }), null === lM && (0, kM.jsxs)(kM.Fragment, {
-            children: [(0, kM.jsxs)("div", {
+          }), null === jV && (0, iV.jsxs)(iV.Fragment, {
+            children: [(0, iV.jsxs)("div", {
               className: "LobbyManageChoices",
-              children: [eM.gamemode && null !== xM && (0, kM.jsx)(uM.e, {
-                options: (null !== (rM = GM.gamemodes) && void 0 !== rM ? rM : []).map((MM => ({
-                  value: MM.value,
-                  label: pM(dM, MM.label, mM)
+              children: [PV.gamemode && null !== LV && (0, iV.jsx)(zV.c, {
+                options: (null !== (eV = FV.gamemodes) && void 0 !== eV ? eV : []).map((VV => ({
+                  value: VV.value,
+                  label: WV(EV, VV.label, vV)
                 }))),
-                value: null !== (iM = DM.get("gamemode")) && void 0 !== iM ? iM : xM.gamemode,
-                disabled: sM,
-                onChange: MM => {
-                  (0, SM.reportAnalyticsClick)({
+                value: null !== (xV = DV.get("gamemode")) && void 0 !== xV ? xV : LV.gamemode,
+                disabled: gV,
+                onChange: VV => {
+                  (0, YV.reportAnalyticsClick)({
                     id: "lobby_manage.set_gamemode",
-                    value: MM.value
-                  }), DM.hold("gamemode", MM.value, LM.send({
+                    value: VV.value
+                  }), DV.hold("gamemode", VV.value, ZV.send({
                     type: "setGamemode",
-                    name: aM,
-                    gamemode: MM.value
-                  }, CM))
+                    name: yV,
+                    gamemode: VV.value
+                  }, TV))
                 }
-              }), eM.roles.length > 0 && null !== xM && (0, kM.jsx)(uM.e, {
-                options: [...GM.roles].reverse().filter((MM => eM.roles.includes(MM.role))).map((MM => ({
-                  value: MM.role,
-                  label: MM.label
+              }), PV.roles.length > 0 && null !== LV && (0, iV.jsx)(zV.c, {
+                options: [...FV.roles].reverse().filter((VV => PV.roles.includes(VV.role))).map((VV => ({
+                  value: VV.role,
+                  label: VV.label
                 }))),
-                value: null !== (jM = DM.get("role")) && void 0 !== jM ? jM : xM.role,
-                disabled: sM,
-                onChange: MM => {
-                  var rM;
-                  (rM = MM.value) !== (null === xM || void 0 === xM ? void 0 : xM.role) && (YM.includes(rM) ? EM({
+                value: null !== (UV = DV.get("role")) && void 0 !== UV ? UV : LV.role,
+                disabled: gV,
+                onChange: VV => {
+                  var eV;
+                  (eV = VV.value) !== (null === LV || void 0 === LV ? void 0 : LV.role) && (cV.includes(eV) ? qV({
                     kind: "role",
-                    role: rM
-                  }) : ((0, SM.reportAnalyticsClick)({
+                    role: eV
+                  }) : ((0, YV.reportAnalyticsClick)({
                     id: "lobby_manage.set_role",
-                    value: rM
-                  }), IM(rM, AM(rM))))
+                    value: eV
+                  }), uV(eV, lV(eV))))
                 }
-              }), null !== eM.fixedRole && (0, kM.jsx)("div", {
+              }), null !== PV.fixedRole && (0, iV.jsx)("div", {
                 className: "LobbyManageChoiceFixed",
-                children: fM(eM.fixedRole)
+                children: oV(PV.fixedRole)
               })]
-            }), (0, kM.jsxs)("div", {
+            }), (0, iV.jsxs)("div", {
               className: "LobbyManageButtons",
-              children: [eM.kick && (0, kM.jsxs)(UM.i, {
+              children: [PV.kick && (0, iV.jsxs)(tV.j, {
                 className: "LobbyManageIconButton SmallTextLight",
-                ariaLabel: `${dM("lobbyManageEntry:kick")} ${aM}`,
-                disabled: sM,
+                ariaLabel: `${EV("lobbyManageEntry:kick")} ${yV}`,
+                disabled: gV,
                 analyticsClick: {
                   id: "lobby_manage.kick",
                   value: "row"
                 },
                 onClick: () => {
-                  XM({
+                  HV({
                     type: "kick",
-                    name: aM
-                  }, CM)
+                    name: yV
+                  }, TV)
                 },
-                children: [(0, kM.jsx)(hM.b, {
+                children: [(0, iV.jsx)(kV.b, {
                   name: "person-falling-burst"
-                }), (0, kM.jsx)("span", {
+                }), (0, iV.jsx)("span", {
                   className: "LobbyManageButtonLabel",
-                  children: dM("lobbyManageEntry:kick")
+                  children: EV("lobbyManageEntry:kick")
                 })]
-              }), eM.ban && (0, kM.jsxs)(UM.N, {
+              }), PV.ban && (0, iV.jsxs)(tV.G, {
                 className: "LobbyManageOutlineButton SmallTextLight",
-                ariaLabel: `${dM("lobbyManageEntry:ban")} ${aM}`,
-                disabled: sM,
+                ariaLabel: `${EV("lobbyManageEntry:ban")} ${yV}`,
+                disabled: gV,
                 padDestructive: !0,
                 onClick: () => {
-                  EM({
+                  qV({
                     kind: "ban"
                   })
                 },
-                children: [(0, kM.jsx)(hM.b, {
+                children: [(0, iV.jsx)(kV.b, {
                   name: "gavel"
-                }), (0, kM.jsx)("span", {
+                }), (0, iV.jsx)("span", {
                   className: "LobbyManageButtonLabel",
-                  children: dM("lobbyManageEntry:ban")
+                  children: EV("lobbyManageEntry:ban")
                 })]
-              }), eM.unban && (0, kM.jsxs)(UM.i, {
+              }), PV.unban && (0, iV.jsxs)(tV.j, {
                 className: "LobbyManageIconButton SmallTextLight",
-                ariaLabel: `${dM("lobbyManageEntry:unban")} ${aM}`,
-                disabled: sM,
+                ariaLabel: `${EV("lobbyManageEntry:unban")} ${yV}`,
+                disabled: gV,
                 analyticsClick: {
                   id: "lobby_manage.unban"
                 },
                 onClick: () => {
-                  XM({
+                  HV({
                     type: "unban",
-                    name: aM
-                  }, CM)
+                    name: yV
+                  }, TV)
                 },
-                children: [(0, kM.jsx)(hM.b, {
+                children: [(0, iV.jsx)(kV.b, {
                   name: "user-unlock"
-                }), (0, kM.jsx)("span", {
+                }), (0, iV.jsx)("span", {
                   className: "LobbyManageButtonLabel",
-                  children: dM("lobbyManageEntry:unban")
+                  children: EV("lobbyManageEntry:unban")
                 })]
               })]
             })]
@@ -441,783 +441,783 @@ export const modules = {
       })
     }
 
-    function xM(MM) {
-      var rM, iM, SM, jM;
+    function LV(VV) {
+      var eV, xV, YV, UV;
       let {
-        manage: aM,
-        focusRequest: PM,
-        onFocused: nM
-      } = MM;
+        manage: yV,
+        focusRequest: pV,
+        onFocused: QV
+      } = VV;
       const {
-        t: QM
-      } = (0, HM.A)(), zM = (0, EM.j)("players"), LM = (0, EM.j)("hiddenPlayerNames"), mM = (0, OM.useRef)(null), {
-        state: JM
-      } = aM, yM = null === zM.localId ? null : null !== (rM = null === (iM = zM.byId[zM.localId]) || void 0 === iM ? void 0 : iM.name) && void 0 !== rM ? rM : null, [lM] = (0, OM.useState)((() => CM(JM, yM))), GM = function(MM, rM, iM) {
-        const OM = new Set([...MM.here, ...MM.away, ...MM.banned]),
-          SM = CM(rM, iM),
-          jM = rM => {
-            const iM = SM[rM].filter((MM => !OM.has(MM)));
-            for (const MM of iM) OM.add(MM);
-            return [...MM[rM], ...iM]
+        t: nV
+      } = (0, rV.A)(), wV = (0, qV.h)("players"), ZV = (0, qV.h)("hiddenPlayerNames"), vV = (0, JV.useRef)(null), {
+        state: bV
+      } = yV, BV = null === wV.localId ? null : null !== (eV = null === (xV = wV.byId[wV.localId]) || void 0 === xV ? void 0 : xV.name) && void 0 !== eV ? eV : null, [jV] = (0, JV.useState)((() => TV(bV, BV))), FV = function(VV, eV, xV) {
+        const JV = new Set([...VV.here, ...VV.away, ...VV.banned]),
+          YV = TV(eV, xV),
+          UV = eV => {
+            const xV = YV[eV].filter((VV => !JV.has(VV)));
+            for (const VV of xV) JV.add(VV);
+            return [...VV[eV], ...xV]
           };
         return {
-          here: jM("here"),
-          away: jM("away"),
-          banned: jM("banned")
+          here: UV("here"),
+          away: UV("away"),
+          banned: UV("banned")
         }
-      }(lM, JM, yM), [bM, wM] = (0, OM.useState)(!1), tM = function(MM, rM) {
-        return MM.here.filter((MM => MM.name !== rM && "none" === MM.role && MM.can.kick)).length
-      }(JM, yM), gM = aM.statusOf("kickAll");
-      (0, OM.useEffect)((() => {
-        var MM, rM;
-        if (null === PM) return;
-        const iM = null === (MM = mM.current) || void 0 === MM ? void 0 : MM.querySelector(`[data-lobby-manage-row="${CSS.escape(PM.name)}"]`);
-        null === iM || void 0 === iM || iM.scrollIntoView({
+      }(jV, bV, BV), [AV, NV] = (0, JV.useState)(!1), XV = function(VV, eV) {
+        return VV.here.filter((VV => VV.name !== eV && "none" === VV.role && VV.can.kick)).length
+      }(bV, BV), MV = yV.statusOf("kickAll");
+      (0, JV.useEffect)((() => {
+        var VV, eV;
+        if (null === pV) return;
+        const xV = null === (VV = vV.current) || void 0 === VV ? void 0 : VV.querySelector(`[data-lobby-manage-row="${CSS.escape(pV.name)}"]`);
+        null === xV || void 0 === xV || xV.scrollIntoView({
           block: "center"
-        }), null === iM || void 0 === iM || null === (rM = iM.querySelector(".ProfilePreview")) || void 0 === rM || rM.focus({
+        }), null === xV || void 0 === xV || null === (eV = xV.querySelector(".ProfilePreview")) || void 0 === eV || eV.focus({
           preventScroll: !0
-        }), nM(PM.seq)
-      }), [null === PM || void 0 === PM ? void 0 : PM.seq]);
-      const uM = MM => (rM, iM) => (0, kM.jsx)(AM, {
-        name: rM,
-        place: eM(JM, rM),
-        openedIn: MM,
-        isYou: rM === yM,
-        manage: aM,
-        hiddenNames: LM,
-        zIndex: iM
-      }, rM);
-      return (0, kM.jsxs)("div", {
-        ref: mM,
+        }), QV(pV.seq)
+      }), [null === pV || void 0 === pV ? void 0 : pV.seq]);
+      const zV = VV => (eV, xV) => (0, iV.jsx)(lV, {
+        name: eV,
+        place: PV(bV, eV),
+        openedIn: VV,
+        isYou: eV === BV,
+        manage: yV,
+        hiddenNames: ZV,
+        zIndex: xV
+      }, eV);
+      return (0, iV.jsxs)("div", {
+        ref: vV,
         className: "LobbyManagePage",
-        children: [GM.here.length > 0 && (0, kM.jsxs)("div", {
+        children: [FV.here.length > 0 && (0, iV.jsxs)("div", {
           className: "LobbyManageBox",
-          children: [(0, kM.jsxs)("div", {
+          children: [(0, iV.jsxs)("div", {
             className: "LobbyManageBoxHeading",
-            children: [(0, kM.jsx)(dM.d, {
-              label: QM("lobbyManage:here"),
-              meta: JM.here.length
-            }), tM >= 2 && !bM && (0, kM.jsxs)(UM.N, {
+            children: [(0, iV.jsx)(EV.b, {
+              label: nV("lobbyManage:here"),
+              meta: bV.here.length
+            }), XV >= 2 && !AV && (0, iV.jsxs)(tV.G, {
               className: "LobbyManageTitleAction SmallTextLight",
               padDestructive: !0,
-              disabled: aM.isPending("kickAll"),
+              disabled: yV.isPending("kickAll"),
               onClick: () => {
-                wM(!0)
+                NV(!0)
               },
-              children: [(0, kM.jsx)(hM.b, {
+              children: [(0, iV.jsx)(kV.b, {
                 name: "person-falling-burst"
-              }), " ", QM("lobbyManage:kickAll")]
+              }), " ", nV("lobbyManage:kickAll")]
             })]
-          }), bM && tM >= 2 && (0, kM.jsxs)("div", {
+          }), AV && XV >= 2 && (0, iV.jsxs)("div", {
             className: "LobbyManageConfirm",
-            children: [(0, kM.jsx)("span", {
+            children: [(0, iV.jsx)("span", {
               className: "LobbyManageConfirmText",
-              children: QM("lobbyManage:kickAllConfirm", {
-                count: tM
+              children: nV("lobbyManage:kickAllConfirm", {
+                count: XV
               })
-            }), (0, kM.jsxs)("div", {
+            }), (0, iV.jsxs)("div", {
               className: "LobbyManageButtons",
-              children: [(0, kM.jsx)(UM.J, {
+              children: [(0, iV.jsx)(tV.E, {
                 className: "LobbyManageIconButton SmallTextLight",
                 analyticsClick: {
                   id: "lobby_manage.kick_all"
                 },
                 onClick: () => {
-                  wM(!1), aM.send({
+                  NV(!1), yV.send({
                     type: "kickAll"
                   }, "kickAll")
                 },
-                children: QM("lobbyManage:kickAll")
-              }), (0, kM.jsx)(UM.i, {
+                children: nV("lobbyManage:kickAll")
+              }), (0, iV.jsx)(tV.j, {
                 className: "LobbyManageIconButton SmallTextLight",
                 onClick: () => {
-                  wM(!1)
+                  NV(!1)
                 },
-                children: QM("general:cancel")
+                children: nV("general:cancel")
               })]
             })]
-          }), gM && (0, kM.jsx)("div", {
+          }), MV && (0, iV.jsx)("div", {
             className: "LobbyManageBoxStatus",
-            children: (0, kM.jsx)(ZM, {
-              status: gM
+            children: (0, iV.jsx)(CV, {
+              status: MV
             })
-          }), (0, kM.jsx)(oM, {
-            names: GM.here,
-            cap: GM.here.length,
+          }), (0, iV.jsx)(aV, {
+            names: FV.here,
+            cap: FV.here.length,
             filterFrom: 20,
             moreLabel: "",
-            renderRow: uM("here")
+            renderRow: zV("here")
           })]
-        }), GM.away.length > 0 && (0, kM.jsxs)("div", {
+        }), FV.away.length > 0 && (0, iV.jsxs)("div", {
           className: "LobbyManageBox",
-          children: [(0, kM.jsx)(dM.d, {
-            label: QM("lobbyManage:notHere"),
-            meta: GM.away.length
-          }), (0, kM.jsx)(oM, {
-            names: GM.away,
+          children: [(0, iV.jsx)(EV.b, {
+            label: nV("lobbyManage:notHere"),
+            meta: FV.away.length
+          }), (0, iV.jsx)(aV, {
+            names: FV.away,
             cap: 5,
             filterFrom: null,
-            moreLabel: QM("lobbyManage:allCount", {
-              count: GM.away.length
+            moreLabel: nV("lobbyManage:allCount", {
+              count: FV.away.length
             }),
-            reveal: null !== (SM = null === PM || void 0 === PM ? void 0 : PM.name) && void 0 !== SM ? SM : null,
-            renderRow: uM("away")
+            reveal: null !== (YV = null === pV || void 0 === pV ? void 0 : pV.name) && void 0 !== YV ? YV : null,
+            renderRow: zV("away")
           })]
-        }), GM.banned.length > 0 && (0, kM.jsxs)("div", {
+        }), FV.banned.length > 0 && (0, iV.jsxs)("div", {
           className: "LobbyManageBox",
-          children: [(0, kM.jsx)(dM.d, {
-            label: QM("lobbyManage:banned"),
-            meta: GM.banned.length
-          }), (0, kM.jsx)(oM, {
-            names: GM.banned,
+          children: [(0, iV.jsx)(EV.b, {
+            label: nV("lobbyManage:banned"),
+            meta: FV.banned.length
+          }), (0, iV.jsx)(aV, {
+            names: FV.banned,
             cap: 5,
             filterFrom: 20,
-            moreLabel: QM("lobbyManage:allCount", {
-              count: GM.banned.length
+            moreLabel: nV("lobbyManage:allCount", {
+              count: FV.banned.length
             }),
-            reveal: null !== (jM = null === PM || void 0 === PM ? void 0 : PM.name) && void 0 !== jM ? jM : null,
-            renderRow: uM("banned")
+            reveal: null !== (UV = null === pV || void 0 === pV ? void 0 : pV.name) && void 0 !== UV ? UV : null,
+            renderRow: zV("banned")
           })]
         })]
       })
     }
-    var vM = iM(5003),
-      FM = iM(1722),
-      BM = iM(37647),
-      XM = iM(37662),
-      IM = iM(37658),
-      KM = iM(37654),
-      qM = iM(37687),
-      TM = iM(37669),
-      VM = iM(37678);
+    var fV = xV(5103),
+      mV = xV(1734),
+      KV = xV(37869),
+      HV = xV(37882),
+      uV = xV(37875),
+      sV = xV(37871),
+      SV = xV(37911),
+      IV = xV(37898),
+      dV = xV(37902);
 
-    function cM(MM) {
-      const rM = new Set;
-      for (const iM of MM) rM.add(iM.toLowerCase());
-      return rM
+    function OV(VV) {
+      const eV = new Set;
+      for (const xV of VV) eV.add(xV.toLowerCase());
+      return eV
     }
 
-    function Mr(MM) {
-      var rM, iM;
+    function Ve(VV) {
+      var eV, xV;
       let {
-        state: SM,
-        lobbyName: jM,
-        listed: aM,
-        isListed: PM,
-        kE: nM,
-        PU: QM,
-        statusOf: zM
-      } = MM;
+        state: YV,
+        lobbyName: UV,
+        listed: yV,
+        isListed: pV,
+        Iq: QV,
+        uF: nV,
+        statusOf: wV
+      } = VV;
       const {
-        t: LM,
-        selectedLanguage: mM
-      } = (0, HM.A)(), hM = (0, FM.m)(), JM = (0, EM.j)("players"), yM = null === JM.localId ? null : null !== (rM = null === (iM = JM.byId[JM.localId]) || void 0 === iM ? void 0 : iM.name) && void 0 !== rM ? rM : null, lM = (0, OM.useMemo)((() => (0, KM.g)(hM.friends, jM, SM.here.map((MM => MM.name)))), [hM.friends, jM, SM.here]), UM = new Map(lM.map((MM => [MM.friend.name.toLowerCase(), MM]))), GM = function(MM) {
+        t: ZV,
+        selectedLanguage: vV
+      } = (0, rV.A)(), kV = (0, mV.m)(), bV = (0, qV.h)("players"), BV = null === bV.localId ? null : null !== (eV = null === (xV = bV.byId[bV.localId]) || void 0 === xV ? void 0 : xV.name) && void 0 !== eV ? eV : null, jV = (0, JV.useMemo)((() => (0, sV.g)(kV.friends, UV, YV.here.map((VV => VV.name)))), [kV.friends, UV, YV.here]), tV = new Map(jV.map((VV => [VV.friend.name.toLowerCase(), VV]))), FV = function(VV) {
         let {
-          refused: rM,
-          listed: iM,
-          here: OM,
-          friends: SM,
-          excluded: jM
-        } = MM;
-        const aM = cM(jM),
-          PM = MM => MM.filter((MM => {
-            const rM = MM.toLowerCase();
-            return !aM.has(rM) && (aM.add(rM), !0)
+          refused: eV,
+          listed: xV,
+          here: JV,
+          friends: YV,
+          excluded: UV
+        } = VV;
+        const yV = OV(UV),
+          pV = VV => VV.filter((VV => {
+            const eV = VV.toLowerCase();
+            return !yV.has(eV) && (yV.add(eV), !0)
           }));
         return {
           added: [],
-          refused: PM(rM),
-          listed: PM(iM),
-          suggested: PM([...OM, ...SM])
+          refused: pV(eV),
+          listed: pV(xV),
+          suggested: pV([...JV, ...YV])
         }
       }({
-        refused: SM.refused.map((MM => MM.name)),
-        listed: aM,
-        here: SM.here.map((MM => MM.name)),
-        friends: lM.flatMap((MM => "here" === MM.place ? [] : [MM.friend.name])),
-        excluded: [...null === yM ? [] : [yM], ...[...SM.here, ...SM.away].flatMap((MM => "none" === MM.role || (0, KM.j)(aM, MM.name) ? [] : [MM.name]))]
-      }), [CM] = (0, OM.useState)(GM), [eM, bM] = (0, OM.useState)([]), wM = function(MM, rM, iM) {
-        const OM = cM(iM),
-          SM = cM([...iM, ...MM.refused, ...MM.listed, ...MM.suggested]),
-          jM = iM => [...MM[iM].filter((MM => !OM.has(MM.toLowerCase()))), ...rM[iM].filter((MM => {
-            const rM = MM.toLowerCase();
-            return !SM.has(rM) && (SM.add(rM), !0)
+        refused: YV.refused.map((VV => VV.name)),
+        listed: yV,
+        here: YV.here.map((VV => VV.name)),
+        friends: jV.flatMap((VV => "here" === VV.place ? [] : [VV.friend.name])),
+        excluded: [...null === BV ? [] : [BV], ...[...YV.here, ...YV.away].flatMap((VV => "none" === VV.role || (0, sV.k)(yV, VV.name) ? [] : [VV.name]))]
+      }), [TV] = (0, JV.useState)(FV), [PV, AV] = (0, JV.useState)([]), NV = function(VV, eV, xV) {
+        const JV = OV(xV),
+          YV = OV([...xV, ...VV.refused, ...VV.listed, ...VV.suggested]),
+          UV = xV => [...VV[xV].filter((VV => !JV.has(VV.toLowerCase()))), ...eV[xV].filter((VV => {
+            const eV = VV.toLowerCase();
+            return !YV.has(eV) && (YV.add(eV), !0)
           }))];
         return {
-          added: [...iM],
-          refused: jM("refused"),
-          listed: jM("listed"),
-          suggested: jM("suggested")
+          added: [...xV],
+          refused: UV("refused"),
+          listed: UV("listed"),
+          suggested: UV("suggested")
         }
-      }(CM, GM, eM), uM = (MM, rM) => {
-        var iM, OM;
-        const jM = MM.toLowerCase(),
-          aM = UM.get(jM),
-          QM = SM.here.find((MM => MM.name.toLowerCase() === jM)),
-          HM = SM.refused.find((MM => MM.name.toLowerCase() === jM)),
-          hM = null !== (iM = null === zM || void 0 === zM ? void 0 : zM(MM)) && void 0 !== iM ? iM : null;
-        let JM = null;
-        hM ? JM = (0, kM.jsx)(ZM, {
-          status: hM
-        }) : HM ? JM = WM(LM, mM.code, "lobbyManage:triedToJoinAgo", HM.at, Date.now()) : aM && QM ? JM = LM("lobbyManage:friendHere") : aM ? JM = "online" === aM.place ? LM("lobbyManage:friendOnline") : LM("lobbyManage:friend") : QM && (JM = LM("lobbyManage:hereStatus"));
-        let dM = null !== (OM = null === aM || void 0 === aM ? void 0 : aM.friend) && void 0 !== OM ? OM : (0, gM.h)(MM, null);
-        return !aM && null !== QM && void 0 !== QM && QM.id && (dM = (0, tM.g)(QM.id, QM.name).playerSocialPreview), (0, kM.jsx)(TM.e, {
-          playerSocialPreview: dM,
-          isFriend: void 0 !== aM,
+      }(TV, FV, PV), zV = (VV, eV) => {
+        var xV, JV;
+        const UV = VV.toLowerCase(),
+          yV = tV.get(UV),
+          nV = YV.here.find((VV => VV.name.toLowerCase() === UV)),
+          rV = YV.refused.find((VV => VV.name.toLowerCase() === UV)),
+          kV = null !== (xV = null === wV || void 0 === wV ? void 0 : wV(VV)) && void 0 !== xV ? xV : null;
+        let bV = null;
+        kV ? bV = (0, iV.jsx)(CV, {
+          status: kV
+        }) : rV ? bV = RV(ZV, vV.code, "lobbyManage:triedToJoinAgo", rV.at, Date.now()) : yV && nV ? bV = ZV("lobbyManage:friendHere") : yV ? bV = "online" === yV.place ? ZV("lobbyManage:friendOnline") : ZV("lobbyManage:friend") : nV && (bV = ZV("lobbyManage:hereStatus"));
+        let EV = null !== (JV = null === yV || void 0 === yV ? void 0 : yV.friend) && void 0 !== JV ? JV : (0, MV.k)(VV, null);
+        return !yV && null !== nV && void 0 !== nV && nV.id && (EV = (0, XV.f)(nV.id, nV.name).playerSocialPreview), (0, iV.jsx)(IV.d, {
+          playerSocialPreview: EV,
+          isFriend: void 0 !== yV,
           hideFriendBadge: !0,
-          status: JM,
-          zIndex: rM,
-          bL: {
-            on: PM(MM),
-            onChange: rM => {
-              nM(MM, rM)
+          status: bV,
+          zIndex: eV,
+          iZ: {
+            on: pV(VV),
+            onChange: eV => {
+              QV(VV, eV)
             }
           }
-        }, jM)
-      }, RM = [...wM.added, ...wM.refused];
-      return (0, kM.jsxs)("div", {
+        }, UV)
+      }, GV = [...NV.added, ...NV.refused];
+      return (0, iV.jsxs)("div", {
         className: "LobbyManageBox",
-        children: [(0, kM.jsx)(dM.d, {
-          label: LM("worldSocial:whitelist"),
-          meta: aM.length
-        }), (0, kM.jsx)(VM.e, {
-          label: LM("lobbyManage:add"),
+        children: [(0, iV.jsx)(EV.b, {
+          label: ZV("worldSocial:whitelist"),
+          meta: yV.length
+        }), (0, iV.jsx)(dV.b, {
+          label: ZV("lobbyManage:add"),
           icon: "user-check",
-          placeholder: LM("socialBar:enterPlayerName"),
-          onSubmit: async MM => {
-            const rM = await QM(MM);
-            return rM.ok && bM((rM => [MM, ...rM])), rM
+          placeholder: ZV("socialBar:enterPlayerName"),
+          onSubmit: async VV => {
+            const eV = await nV(VV);
+            return eV.ok && AV((eV => [VV, ...eV])), eV
           }
-        }), RM.length > 0 && (0, kM.jsx)("div", {
+        }), GV.length > 0 && (0, iV.jsx)("div", {
           className: "PlayerRows",
-          children: RM.map(((MM, rM) => uM(MM, RM.length - rM)))
-        }), (0, kM.jsx)(oM, {
-          names: wM.listed,
+          children: GV.map(((VV, eV) => zV(VV, GV.length - eV)))
+        }), (0, iV.jsx)(aV, {
+          names: NV.listed,
           cap: 8,
           filterFrom: 8,
-          moreLabel: LM("lobbyManage:allOnWhitelist", {
-            count: wM.listed.length
+          moreLabel: ZV("lobbyManage:allOnWhitelist", {
+            count: NV.listed.length
           }),
-          renderRow: uM
-        }), (0, kM.jsx)(oM, {
-          names: wM.suggested,
+          renderRow: zV
+        }), (0, iV.jsx)(aV, {
+          names: NV.suggested,
           cap: 8,
           filterFrom: null,
-          moreLabel: LM("lobbyManage:allCount", {
-            count: wM.suggested.length
+          moreLabel: ZV("lobbyManage:allCount", {
+            count: NV.suggested.length
           }),
-          renderRow: uM
+          renderRow: zV
         })]
       })
     }
 
-    function rr(MM) {
+    function ee(VV) {
       let {
-        manage: rM,
-        listing: iM
-      } = MM;
+        manage: eV,
+        listing: xV
+      } = VV;
       const {
-        t: OM
-      } = (0, HM.A)(), jM = (MM, iM) => ((0, SM.reportAnalyticsClick)({
+        t: JV
+      } = (0, rV.A)(), UV = (VV, xV) => ((0, YV.reportAnalyticsClick)({
         id: "lobby_manage.set_listing",
-        value: MM
-      }), rM.send({
+        value: VV
+      }), eV.send({
         type: "setListing",
-        field: MM,
-        value: iM
-      }, `listing:${MM}`)), aM = MM => {
-        const iM = rM.statusOf(`listing:${MM}`);
-        return iM && !iM.ok && (0, kM.jsx)("div", {
+        field: VV,
+        value: xV
+      }, `listing:${VV}`)), yV = VV => {
+        const xV = eV.statusOf(`listing:${VV}`);
+        return xV && !xV.ok && (0, iV.jsx)("div", {
           className: "LobbyManageFieldError",
-          children: (0, kM.jsx)(ZM, {
-            status: iM
+          children: (0, iV.jsx)(CV, {
+            status: xV
           })
         })
       };
-      return (0, kM.jsxs)("div", {
+      return (0, iV.jsxs)("div", {
         className: "LobbyManageBox LobbyManageListing",
-        children: [(0, kM.jsx)(dM.d, {
-          label: OM("lobbyManage:inWorldsList")
-        }), (0, kM.jsxs)("div", {
+        children: [(0, iV.jsx)(EV.b, {
+          label: JV("lobbyManage:inWorldsList")
+        }), (0, iV.jsxs)("div", {
           className: "LobbyManageRuleRow",
-          children: [(0, kM.jsx)("div", {
+          children: [(0, iV.jsx)("div", {
             className: "SliderText",
-            children: OM("lobbyManage:description")
-          }), (0, kM.jsx)(fM, {
-            value: iM.description,
-            ariaLabel: OM("lobbyManage:description"),
+            children: JV("lobbyManage:description")
+          }), (0, iV.jsx)(oV, {
+            value: xV.description,
+            ariaLabel: JV("lobbyManage:description"),
             wide: !0,
-            onSave: MM => jM("description", MM)
+            onSave: VV => UV("description", VV)
           })]
-        }), aM("description"), (0, kM.jsxs)("div", {
+        }), yV("description"), (0, iV.jsxs)("div", {
           className: "LobbyManageRuleRow",
-          children: [(0, kM.jsx)("div", {
+          children: [(0, iV.jsx)("div", {
             className: "SliderText",
-            children: OM("lobbyManage:emojis")
-          }), (0, kM.jsx)(fM, {
-            value: iM.emojis,
-            ariaLabel: OM("lobbyManage:emojis"),
-            onSave: MM => jM("emojis", MM)
+            children: JV("lobbyManage:emojis")
+          }), (0, iV.jsx)(oV, {
+            value: xV.emojis,
+            ariaLabel: JV("lobbyManage:emojis"),
+            onSave: VV => UV("emojis", VV)
           })]
-        }), aM("emojis"), (0, kM.jsxs)("div", {
+        }), yV("emojis"), (0, iV.jsxs)("div", {
           className: "LobbyManageRuleRow",
-          children: [(0, kM.jsx)("div", {
+          children: [(0, iV.jsx)("div", {
             className: "SliderText",
-            children: OM("lobbyManage:colour")
-          }), (0, kM.jsx)(ir, {
-            value: iM.colour,
-            ariaLabel: OM("lobbyManage:colour"),
-            onSave: MM => {
-              jM("colour", MM)
+            children: JV("lobbyManage:colour")
+          }), (0, iV.jsx)(xe, {
+            value: xV.colour,
+            ariaLabel: JV("lobbyManage:colour"),
+            onSave: VV => {
+              UV("colour", VV)
             }
           })]
-        }), aM("colour")]
+        }), yV("colour")]
       })
     }
 
-    function ir(MM) {
+    function xe(VV) {
       let {
-        value: rM,
-        ariaLabel: iM,
-        onSave: SM
-      } = MM;
-      const jM = (0, OM.useRef)(null),
-        aM = (0, OM.useRef)({
-          value: rM,
-          onSave: SM
+        value: eV,
+        ariaLabel: xV,
+        onSave: YV
+      } = VV;
+      const UV = (0, JV.useRef)(null),
+        yV = (0, JV.useRef)({
+          value: eV,
+          onSave: YV
         });
-      aM.current = {
-        value: rM,
-        onSave: SM
+      yV.current = {
+        value: eV,
+        onSave: YV
       };
-      const PM = (0, OM.useRef)(null),
-        nM = (0, OM.useRef)(!1),
-        QM = MM => {
-          nM.current && MM.value !== aM.current.value && MM.value !== PM.current && (PM.current = MM.value, aM.current.onSave(MM.value))
+      const pV = (0, JV.useRef)(null),
+        QV = (0, JV.useRef)(!1),
+        nV = VV => {
+          QV.current && VV.value !== yV.current.value && VV.value !== pV.current && (pV.current = VV.value, yV.current.onSave(VV.value))
         };
-      return (0, OM.useEffect)((() => {
-        jM.current && document.activeElement !== jM.current && (jM.current.value = rM)
-      }), [rM]), (0, OM.useEffect)((() => {
-        const MM = jM.current,
-          rM = () => {
-            QM(MM)
+      return (0, JV.useEffect)((() => {
+        UV.current && document.activeElement !== UV.current && (UV.current.value = eV)
+      }), [eV]), (0, JV.useEffect)((() => {
+        const VV = UV.current,
+          eV = () => {
+            nV(VV)
           };
-        return MM.addEventListener("change", rM), () => {
-          MM.removeEventListener("change", rM), QM(MM)
+        return VV.addEventListener("change", eV), () => {
+          VV.removeEventListener("change", eV), nV(VV)
         }
-      }), []), (0, kM.jsx)("input", {
-        ref: jM,
+      }), []), (0, iV.jsx)("input", {
+        ref: UV,
         type: "color",
         className: "LobbyManageColour",
-        defaultValue: rM,
-        "aria-label": iM,
+        defaultValue: eV,
+        "aria-label": xV,
         onInput: () => {
-          nM.current = !0
+          QV.current = !0
         },
-        onBlur: MM => {
-          QM(MM.currentTarget)
+        onBlur: VV => {
+          nV(VV.currentTarget)
         }
       })
     }
 
-    function Or(MM) {
+    function Je(VV) {
       let {
-        manage: rM
-      } = MM;
+        manage: eV
+      } = VV;
       const {
-        lobbyName: iM,
-        shownLobbyName: OM
-      } = (0, EM.j)("connectedGame");
-      return rM.state.you.canSetVisibility && null !== iM ? (0, kM.jsx)(jr, {
-        manage: rM,
-        lobbyName: iM,
-        worldCode: null !== OM && void 0 !== OM ? OM : iM
-      }, iM) : (0, kM.jsx)(ar, {
-        manage: rM,
-        lobbyName: null !== iM && void 0 !== iM ? iM : ""
+        lobbyName: xV,
+        shownLobbyName: JV
+      } = (0, qV.h)("connectedGame");
+      return eV.state.you.canSetVisibility && null !== xV ? (0, iV.jsx)(Ue, {
+        manage: eV,
+        lobbyName: xV,
+        worldCode: null !== JV && void 0 !== JV ? JV : xV
+      }, xV) : (0, iV.jsx)(ye, {
+        manage: eV,
+        lobbyName: null !== xV && void 0 !== xV ? xV : ""
       })
     }
 
-    function Sr(MM) {
-      return MM.map((MM => MM.toLowerCase())).sort().join(",")
+    function Ye(VV) {
+      return VV.map((VV => VV.toLowerCase())).sort().join(",")
     }
 
-    function jr(MM) {
-      var rM;
+    function Ue(VV) {
+      var eV;
       let {
-        manage: iM,
-        lobbyName: jM,
-        worldCode: aM
-      } = MM;
+        manage: xV,
+        lobbyName: UV,
+        worldCode: yV
+      } = VV;
       const {
-        t: PM
-      } = (0, HM.A)(), {
-        settings: nM,
-        loading: QM,
-        change: zM,
-        retry: LM,
-        refresh: mM
-      } = (0, BM.j)(jM), hM = (0, FM.m)(), {
-        state: yM
-      } = iM, lM = (0, OM.useRef)(nM);
-      lM.current = nM;
-      const EM = Sr(null !== (rM = yM.whitelist) && void 0 !== rM ? rM : []),
-        GM = null !== yM.whitelist;
-      (0, OM.useEffect)((() => {
-        const MM = lM.current;
-        null !== MM && (MM.visibility !== yM.visibility || GM && Sr(MM.whitelist) !== EM) && mM()
-      }), [yM.visibility, EM, GM, mM]);
-      const CM = async (MM, rM) => {
-        let iM = null;
-        return await zM(MM, rM, {
+        t: pV
+      } = (0, rV.A)(), {
+        settings: QV,
+        loading: nV,
+        change: wV,
+        retry: ZV,
+        refresh: vV
+      } = (0, KV.g)(UV), kV = (0, mV.m)(), {
+        state: BV
+      } = xV, jV = (0, JV.useRef)(QV);
+      jV.current = QV;
+      const qV = Ye(null !== (eV = BV.whitelist) && void 0 !== eV ? eV : []),
+        FV = null !== BV.whitelist;
+      (0, JV.useEffect)((() => {
+        const VV = jV.current;
+        null !== VV && (VV.visibility !== BV.visibility || FV && Ye(VV.whitelist) !== qV) && vV()
+      }), [BV.visibility, qV, FV, vV]);
+      const TV = async (VV, eV) => {
+        let xV = null;
+        return await wV(VV, eV, {
           quiet: !0,
-          onAnswer: MM => {
-            iM = MM
+          onAnswer: VV => {
+            xV = VV
           }
-        }), iM
-      }, eM = (MM, rM) => {
-        null !== rM && "error" in rM && iM.showStatus(MM, {
+        }), xV
+      }, PV = (VV, eV) => {
+        null !== eV && "error" in eV && xV.showStatus(VV, {
           ok: !1,
-          text: [PM(rM.error)]
+          text: [pV(eV.error)]
         })
-      }, bM = async MM => {
-        if (null === nM || MM === nM.visibility) return;
-        (0, SM.reportAnalyticsClick)({
+      }, AV = async VV => {
+        if (null === QV || VV === QV.visibility) return;
+        (0, YV.reportAnalyticsClick)({
           id: "lobby_manage.set_mode",
-          value: MM
+          value: VV
         });
-        const rM = "whitelist" === MM ? (0, KM.d)((0, KM.g)(hM.friends, jM, yM.here.map((MM => MM.name))), (0, qM.c)(jM), nM.whitelist) : [],
-          iM = await CM({
-            setVisibility: MM
-          }, (rM => ({
-            ...rM,
-            visibility: MM
+        const eV = "whitelist" === VV ? (0, sV.e)((0, sV.g)(kV.friends, UV, BV.here.map((VV => VV.name))), (0, SV.c)(UV), QV.whitelist) : [],
+          xV = await TV({
+            setVisibility: VV
+          }, (eV => ({
+            ...eV,
+            visibility: VV
           })));
-        eM("mode", iM), null === iM || "error" in iM || await (async MM => {
-          for (const rM of (0, KM.l)(MM, vM.z))
-            if (!await zM({
-                whitelistAdd: rM
-              }, (MM => (0, KM.r)(MM, rM, !0)))) return !1;
+        PV("mode", xV), null === xV || "error" in xV || await (async VV => {
+          for (const eV of (0, sV.o)(VV, fV.z))
+            if (!await wV({
+                whitelistAdd: eV
+              }, (VV => (0, sV.u)(VV, eV, !0)))) return !1;
           return !0
-        })(rM)
-      }, wM = (0, OM.useMemo)((() => {
-        var MM;
-        if (null === nM) return [];
-        const rM = null !== (MM = yM.whitelist) && void 0 !== MM ? MM : [];
-        return [...rM.filter((MM => (0, KM.j)(nM.whitelist, MM))), ...nM.whitelist.filter((MM => !(0, KM.j)(rM, MM)))]
-      }), [nM, yM.whitelist]), tM = iM.statusOf("mode");
-      return (0, kM.jsxs)("div", {
+        })(eV)
+      }, NV = (0, JV.useMemo)((() => {
+        var VV;
+        if (null === QV) return [];
+        const eV = null !== (VV = BV.whitelist) && void 0 !== VV ? VV : [];
+        return [...eV.filter((VV => (0, sV.k)(QV.whitelist, VV))), ...QV.whitelist.filter((VV => !(0, sV.k)(eV, VV)))]
+      }), [QV, BV.whitelist]), XV = xV.statusOf("mode");
+      return (0, iV.jsxs)("div", {
         className: "LobbyManagePage",
-        children: [(0, kM.jsxs)("div", {
+        children: [(0, iV.jsxs)("div", {
           className: "LobbyManageBox",
-          children: [(0, kM.jsx)(dM.d, {
-            label: PM("worldSocial:whoCanJoin")
-          }), null === nM && QM && (0, kM.jsx)("div", {
+          children: [(0, iV.jsx)(EV.b, {
+            label: pV("worldSocial:whoCanJoin")
+          }), null === QV && nV && (0, iV.jsx)("div", {
             className: "LobbyManageLoading",
-            children: (0, kM.jsx)(JM.d, {})
-          }), null === nM && !QM && (0, kM.jsx)(UM.i, {
+            children: (0, iV.jsx)(bV.d, {})
+          }), null === QV && !nV && (0, iV.jsx)(tV.j, {
             className: "SmallTextLight",
-            onClick: LM,
-            children: PM("worldSocial:loadFailed")
-          }), null !== nM && (0, kM.jsx)(XM.e, {
-            visibility: nM.visibility,
-            onPick: MM => {
-              bM(MM)
+            onClick: ZV,
+            children: pV("worldSocial:loadFailed")
+          }), null !== QV && (0, iV.jsx)(HV.d, {
+            visibility: QV.visibility,
+            onPick: VV => {
+              AV(VV)
             }
-          }), tM && (0, kM.jsx)("div", {
+          }), XV && (0, iV.jsx)("div", {
             className: "LobbyManageFieldError",
-            children: (0, kM.jsx)(ZM, {
-              status: tM
+            children: (0, iV.jsx)(CV, {
+              status: XV
             })
-          }), null !== nM && "private" !== nM.visibility && (0, kM.jsx)(IM.e, {
-            worldCode: aM,
+          }), null !== QV && "private" !== QV.visibility && (0, iV.jsx)(uV.c, {
+            worldCode: yV,
             message: null
           })]
-        }), "whitelist" === (null === nM || void 0 === nM ? void 0 : nM.visibility) && (0, kM.jsx)(Mr, {
-          state: yM,
-          lobbyName: jM,
-          listed: wM,
-          isListed: MM => (0, KM.j)(nM.whitelist, MM),
-          kE: (MM, rM) => {
-            (0, SM.reportAnalyticsClick)(rM ? {
+        }), "whitelist" === (null === QV || void 0 === QV ? void 0 : QV.visibility) && (0, iV.jsx)(Ve, {
+          state: BV,
+          lobbyName: UV,
+          listed: NV,
+          isListed: VV => (0, sV.k)(QV.whitelist, VV),
+          Iq: (VV, eV) => {
+            (0, YV.reportAnalyticsClick)(eV ? {
               id: "lobby_manage.whitelist_add",
-              value: "bL"
+              value: "iZ"
             } : {
               id: "lobby_manage.whitelist_remove"
-            }), CM(rM ? {
-              whitelistAdd: [MM]
+            }), TV(eV ? {
+              whitelistAdd: [VV]
             } : {
-              whitelistRemove: MM
-            }, (iM => (0, KM.r)(iM, [MM], rM))).then((rM => {
-              eM(`whitelist:${MM.toLowerCase()}`, rM)
+              whitelistRemove: VV
+            }, (xV => (0, sV.u)(xV, [VV], eV))).then((eV => {
+              PV(`whitelist:${VV.toLowerCase()}`, eV)
             }))
           },
-          PU: async MM => {
-            (0, SM.reportAnalyticsClick)({
+          uF: async VV => {
+            (0, YV.reportAnalyticsClick)({
               id: "lobby_manage.whitelist_add",
               value: "field"
             });
-            const rM = await CM({
-              whitelistAdd: [MM]
-            }, (rM => (0, KM.r)(rM, [MM], !0)));
-            return null === rM ? {
+            const eV = await TV({
+              whitelistAdd: [VV]
+            }, (eV => (0, sV.u)(eV, [VV], !0)));
+            return null === eV ? {
               ok: !1,
-              error: PM("worldSocial:changeFailed")
-            } : "error" in rM ? {
+              error: pV("worldSocial:changeFailed")
+            } : "error" in eV ? {
               ok: !1,
-              error: PM(rM.error)
-            } : (0, KM.j)(rM.notFound, MM) ? {
+              error: pV(eV.error)
+            } : (0, sV.k)(eV.notFound, VV) ? {
               ok: !1,
-              error: PM("lobbyManage:noPlayerCalled", {
-                playerName: MM
+              error: pV("lobbyManage:noPlayerCalled", {
+                playerName: VV
               })
             } : {
               ok: !0
             }
           },
-          statusOf: MM => iM.statusOf(`whitelist:${MM.toLowerCase()}`)
-        }), "public" === (null === nM || void 0 === nM ? void 0 : nM.visibility) && null !== yM.listing && (0, kM.jsx)(rr, {
-          manage: iM,
-          listing: yM.listing
+          statusOf: VV => xV.statusOf(`whitelist:${VV.toLowerCase()}`)
+        }), "public" === (null === QV || void 0 === QV ? void 0 : QV.visibility) && null !== BV.listing && (0, iV.jsx)(ee, {
+          manage: xV,
+          listing: BV.listing
         })]
       })
     }
 
-    function ar(MM) {
-      var rM;
+    function ye(VV) {
+      var eV;
       let {
-        manage: iM,
-        lobbyName: OM
-      } = MM;
+        manage: xV,
+        lobbyName: JV
+      } = VV;
       const {
-        t: jM
-      } = (0, HM.A)(), {
-        state: aM
-      } = iM, PM = zM(), nM = null !== (rM = aM.whitelist) && void 0 !== rM ? rM : [];
-      return (0, kM.jsxs)("div", {
+        t: UV
+      } = (0, rV.A)(), {
+        state: yV
+      } = xV, pV = wV(), QV = null !== (eV = yV.whitelist) && void 0 !== eV ? eV : [];
+      return (0, iV.jsxs)("div", {
         className: "LobbyManagePage",
-        children: [(0, kM.jsxs)("div", {
+        children: [(0, iV.jsxs)("div", {
           className: "LobbyManageBox",
-          children: [(0, kM.jsx)(dM.d, {
-            label: jM("worldSocial:whoCanJoin")
-          }), (0, kM.jsx)("div", {
+          children: [(0, iV.jsx)(EV.b, {
+            label: UV("worldSocial:whoCanJoin")
+          }), (0, iV.jsx)("div", {
             className: "LobbyManageModeText",
-            children: jM(`worldSocial:${aM.visibility}`)
+            children: UV(`worldSocial:${yV.visibility}`)
           })]
-        }), "whitelist" === aM.visibility && aM.you.canEditWhitelist && (0, kM.jsx)(Mr, {
-          state: aM,
-          lobbyName: OM,
-          listed: nM,
-          isListed: MM => {
-            var rM;
-            return null !== (rM = PM.get(MM.toLowerCase())) && void 0 !== rM ? rM : (0, KM.j)(nM, MM)
+        }), "whitelist" === yV.visibility && yV.you.canEditWhitelist && (0, iV.jsx)(Ve, {
+          state: yV,
+          lobbyName: JV,
+          listed: QV,
+          isListed: VV => {
+            var eV;
+            return null !== (eV = pV.get(VV.toLowerCase())) && void 0 !== eV ? eV : (0, sV.k)(QV, VV)
           },
-          kE: (MM, rM) => {
-            (0, SM.reportAnalyticsClick)(rM ? {
+          Iq: (VV, eV) => {
+            (0, YV.reportAnalyticsClick)(eV ? {
               id: "lobby_manage.whitelist_add",
-              value: "bL"
+              value: "iZ"
             } : {
               id: "lobby_manage.whitelist_remove"
             });
-            const OM = MM.toLowerCase();
-            PM.hold(OM, rM, iM.send(rM ? {
+            const JV = VV.toLowerCase();
+            pV.hold(JV, eV, xV.send(eV ? {
               type: "whitelistAdd",
-              names: [MM]
+              names: [VV]
             } : {
               type: "whitelistRemove",
-              name: MM
-            }, `whitelist:${OM}`))
+              name: VV
+            }, `whitelist:${JV}`))
           },
-          PU: async MM => {
-            (0, SM.reportAnalyticsClick)({
+          uF: async VV => {
+            (0, YV.reportAnalyticsClick)({
               id: "lobby_manage.whitelist_add",
               value: "field"
             });
-            const rM = await iM.send({
+            const eV = await xV.send({
               type: "whitelistAdd",
-              names: [MM]
+              names: [VV]
             }, "whitelist-field");
-            return rM.ok ? {
+            return eV.ok ? {
               ok: !0
             } : {
               ok: !1,
-              error: (0, kM.jsx)(sM.b, {
-                text: rM.message
+              error: (0, iV.jsx)(gV.b, {
+                text: eV.message
               })
             }
           },
-          statusOf: MM => iM.statusOf(`whitelist:${MM.toLowerCase()}`)
-        }), "public" === aM.visibility && null !== aM.listing && (0, kM.jsx)(rr, {
-          manage: iM,
-          listing: aM.listing
+          statusOf: VV => xV.statusOf(`whitelist:${VV.toLowerCase()}`)
+        }), "public" === yV.visibility && null !== yV.listing && (0, iV.jsx)(ee, {
+          manage: xV,
+          listing: yV.listing
         })]
       })
     }
-    var Pr = iM(5401),
-      nr = iM(1440);
-    const Qr = /[\p{Script_Extensions=Han}\p{Script_Extensions=Hiragana}\p{Script_Extensions=Katakana}\p{Script_Extensions=Hangul}\u{3000}-\u{303F}\u{FF01}-\u{FF60}\u{FFE0}-\u{FFE6}]/u;
-    const zr = (0, OM.memo)((function(MM) {
-      var rM;
+    var pe = xV(5500),
+      Qe = xV(1446);
+    const ne = /[\p{Script_Extensions=Han}\p{Script_Extensions=Hiragana}\p{Script_Extensions=Katakana}\p{Script_Extensions=Hangul}\u{3000}-\u{303F}\u{FF01}-\u{FF60}\u{FFE0}-\u{FFE6}]/u;
+    const we = (0, JV.memo)((function(VV) {
+      var eV;
       let {
-        rule: iM,
-        value: OM,
-        status: SM,
-        pending: jM,
-        hiddenNames: aM,
-        uC: PM,
-        onAction: nM
-      } = MM;
+        rule: xV,
+        value: JV,
+        status: YV,
+        pending: UV,
+        hiddenNames: yV,
+        bM: pV,
+        onAction: QV
+      } = VV;
       const {
-        t: QM
-      } = (0, HM.A)(), zM = MM => PM(iM, MM), LM = (MM, rM) => {
-        nM(iM, MM, rM)
-      }, mM = pM(QM, iM.label, aM), hM = iM.info ? pM(QM, iM.info, aM) : void 0, JM = iM.placeholder ? pM(QM, iM.placeholder, aM) : void 0, dM = (null !== (rM = iM.options) && void 0 !== rM ? rM : []).map((MM => ({
-        value: MM.value,
-        label: pM(QM, MM.label, aM)
-      }))), yM = Math.max(0, ...dM.map((MM => function(MM) {
-        let rM = 0;
-        for (const iM of MM) rM += Qr.test(iM) ? 2 : 1;
-        return rM
-      }(MM.label)))), lM = SM && (0, kM.jsx)("div", {
+        t: nV
+      } = (0, rV.A)(), wV = VV => pV(xV, VV), ZV = (VV, eV) => {
+        QV(xV, VV, eV)
+      }, vV = WV(nV, xV.label, yV), kV = xV.info ? WV(nV, xV.info, yV) : void 0, bV = xV.placeholder ? WV(nV, xV.placeholder, yV) : void 0, EV = (null !== (eV = xV.options) && void 0 !== eV ? eV : []).map((VV => ({
+        value: VV.value,
+        label: WV(nV, VV.label, yV)
+      }))), BV = Math.max(0, ...EV.map((VV => function(VV) {
+        let eV = 0;
+        for (const xV of VV) eV += ne.test(xV) ? 2 : 1;
+        return eV
+      }(VV.label)))), jV = YV && (0, iV.jsx)("div", {
         className: "LobbyManageRuleStatus",
-        children: (0, kM.jsx)(ZM, {
-          status: SM
+        children: (0, iV.jsx)(CV, {
+          status: YV
         })
-      }), EM = (0, kM.jsxs)("div", {
+      }), qV = (0, iV.jsxs)("div", {
         className: "SliderText",
-        children: [mM, void 0 !== hM && (0, kM.jsx)(nr.e, {
+        children: [vV, void 0 !== kV && (0, iV.jsx)(Qe.c, {
           className: "SettingsTextInputCircleInfo",
-          hoverInfo: hM
+          hoverInfo: kV
         })]
       });
-      return "toggle" === iM.kind ? (0, kM.jsxs)(kM.Fragment, {
-        children: [(0, kM.jsx)(Pr.c, {
-          label: mM,
-          checked: !0 === OM,
-          circleInfoText: hM,
-          disabled: jM,
-          onClick: zM
-        }), lM]
-      }) : "choice" === iM.kind && dM.length <= 3 ? (0, kM.jsxs)(kM.Fragment, {
-        children: [(0, kM.jsx)(Pr.f, {
-          label: mM,
-          options: dM,
-          value: String(OM),
-          circleInfoText: hM,
-          onChange: zM
-        }), lM]
-      }) : (0, kM.jsxs)("div", {
+      return "toggle" === xV.kind ? (0, iV.jsxs)(iV.Fragment, {
+        children: [(0, iV.jsx)(pe.e, {
+          label: vV,
+          checked: !0 === JV,
+          circleInfoText: kV,
+          disabled: UV,
+          onClick: wV
+        }), jV]
+      }) : "choice" === xV.kind && EV.length <= 3 ? (0, iV.jsxs)(iV.Fragment, {
+        children: [(0, iV.jsx)(pe.i, {
+          label: vV,
+          options: EV,
+          value: String(JV),
+          circleInfoText: kV,
+          onChange: wV
+        }), jV]
+      }) : (0, iV.jsxs)("div", {
         className: "SettingBox LobbyManageRuleRow",
-        children: [EM, "choice" === iM.kind && (0, kM.jsx)("span", {
+        children: [qV, "choice" === xV.kind && (0, iV.jsx)("span", {
           className: "LobbyManageRuleChoice",
           style: {
-            "--lobby-choice-chars": yM
+            "--lobby-choice-chars": BV
           },
-          children: (0, kM.jsx)(uM.e, {
-            options: dM,
-            value: String(OM),
-            disabled: jM,
-            onChange: MM => {
-              zM(MM.value)
+          children: (0, iV.jsx)(zV.c, {
+            options: EV,
+            value: String(JV),
+            disabled: UV,
+            onChange: VV => {
+              wV(VV.value)
             }
           })
-        }), ("number" === iM.kind || "text" === iM.kind) && (0, kM.jsx)(fM, {
-          value: null === OM ? "" : String(OM),
-          placeholder: JM,
-          ariaLabel: mM,
-          onSave: MM => {
-            const rM = MM.trim(),
-              OM = Number(rM);
-            return zM("number" === iM.kind && "" !== rM && Number.isFinite(OM) ? OM : rM)
+        }), ("number" === xV.kind || "text" === xV.kind) && (0, iV.jsx)(oV, {
+          value: null === JV ? "" : String(JV),
+          placeholder: bV,
+          ariaLabel: vV,
+          onSave: VV => {
+            const eV = VV.trim(),
+              JV = Number(eV);
+            return wV("number" === xV.kind && "" !== eV && Number.isFinite(JV) ? JV : eV)
           }
-        }), "action" === iM.kind && (0, kM.jsxs)("div", {
+        }), "action" === xV.kind && (0, iV.jsxs)("div", {
           className: "LobbyManageRuleInput",
-          children: [dM.length > 3 && (0, kM.jsx)(uM.e, {
-            options: dM,
+          children: [EV.length > 3 && (0, iV.jsx)(zV.c, {
+            options: EV,
             value: {
               value: "",
-              label: null !== JM && void 0 !== JM ? JM : mM
+              label: null !== bV && void 0 !== bV ? bV : vV
             },
-            disabled: jM,
-            onChange: MM => {
-              LM(MM.value)
+            disabled: UV,
+            onChange: VV => {
+              ZV(VV.value)
             }
-          }), dM.length > 0 && dM.length <= 3 && dM.map((MM => (0, kM.jsx)(UM.i, {
+          }), EV.length > 0 && EV.length <= 3 && EV.map((VV => (0, iV.jsx)(tV.j, {
             className: "SmallTextLight",
-            disabled: jM,
+            disabled: UV,
             onClick: () => {
-              LM(MM.value)
+              ZV(VV.value)
             },
-            children: MM.label
-          }, MM.value))), 0 === dM.length && (0, kM.jsx)(UM.i, {
+            children: VV.label
+          }, VV.value))), 0 === EV.length && (0, iV.jsx)(tV.j, {
             className: "SmallTextLight",
-            disabled: jM,
+            disabled: UV,
             onClick: () => {
-              LM()
+              ZV()
             },
-            children: null !== JM && void 0 !== JM ? JM : mM
+            children: null !== bV && void 0 !== bV ? bV : vV
           })]
-        }), "names" === iM.kind && (0, kM.jsx)(Lr, {
-          names: Array.isArray(OM) ? OM : [],
-          pending: jM,
-          onAction: LM
-        }), lM]
+        }), "names" === xV.kind && (0, iV.jsx)(Ze, {
+          names: Array.isArray(JV) ? JV : [],
+          pending: UV,
+          onAction: ZV
+        }), jV]
       })
     }));
 
-    function Lr(MM) {
+    function Ze(VV) {
       let {
-        names: rM,
-        pending: iM,
-        onAction: SM
-      } = MM;
+        names: eV,
+        pending: xV,
+        onAction: YV
+      } = VV;
       const {
-        t: jM
-      } = (0, HM.A)(), aM = (0, OM.useRef)(null), [PM, nM] = (0, OM.useState)(""), QM = () => {
-        const MM = PM.trim();
-        "" !== MM && (SM(MM, "add"), aM.current && (aM.current.value = ""), nM(""))
+        t: UV
+      } = (0, rV.A)(), yV = (0, JV.useRef)(null), [pV, QV] = (0, JV.useState)(""), nV = () => {
+        const VV = pV.trim();
+        "" !== VV && (YV(VV, "add"), yV.current && (yV.current.value = ""), QV(""))
       };
-      return (0, kM.jsxs)("div", {
+      return (0, iV.jsxs)("div", {
         className: "LobbyManageNames",
-        children: [rM.map((MM => (0, kM.jsxs)("div", {
+        children: [eV.map((VV => (0, iV.jsxs)("div", {
           className: "LobbyManageName",
-          children: [(0, kM.jsx)("span", {
+          children: [(0, iV.jsx)("span", {
             className: "LobbyManageNameText",
-            children: MM
-          }), (0, kM.jsx)(UM.i, {
+            children: VV
+          }), (0, iV.jsx)(tV.j, {
             className: "LobbyManageIconButton SmallTextLight",
-            ariaLabel: jM("lobbyManage:removeName", {
-              name: MM
+            ariaLabel: UV("lobbyManage:removeName", {
+              name: VV
             }),
-            disabled: iM,
+            disabled: xV,
             onClick: () => {
-              SM(MM, "remove")
+              YV(VV, "remove")
             },
-            children: (0, kM.jsx)(hM.b, {
+            children: (0, iV.jsx)(kV.b, {
               name: "xmark"
             })
           })]
-        }, MM))), (0, kM.jsxs)("div", {
+        }, VV))), (0, iV.jsxs)("div", {
           className: "LobbyManageRuleInput",
-          children: [(0, kM.jsx)(DM.b, {
-            domRef: aM,
-            placeholderText: jM("lobbyManage:namePlaceholder"),
-            ariaLabel: jM("lobbyManage:namePlaceholder"),
+          children: [(0, iV.jsx)(DV.d, {
+            domRef: yV,
+            placeholderText: UV("lobbyManage:namePlaceholder"),
+            ariaLabel: UV("lobbyManage:namePlaceholder"),
             maxLength: 32,
-            onValueChange: MM => {
-              nM(MM)
+            onValueChange: VV => {
+              QV(VV)
             },
-            onEnter: QM
-          }), (0, kM.jsx)(UM.i, {
+            onEnter: nV
+          }), (0, iV.jsx)(tV.j, {
             className: "SmallTextLight",
-            disabled: iM || "" === PM.trim(),
-            onClick: QM,
-            children: jM("lobbyManage:addHere")
+            disabled: xV || "" === pV.trim(),
+            onClick: nV,
+            children: UV("lobbyManage:addHere")
           })]
         })]
       })
     }
-    const mr = [{
+    const ve = [{
       group: "gameplay",
       title: "lobbyManage:gameplay"
     }, {
@@ -1225,125 +1225,125 @@ export const modules = {
       title: "lobbyManage:world"
     }];
 
-    function Hr(MM, rM) {
-      return mr.map((iM => {
+    function re(VV, eV) {
+      return ve.map((xV => {
         let {
-          group: OM,
-          title: SM
-        } = iM;
-        const jM = MM.filter((MM => MM.group === OM && void 0 === MM.parent)).map((iM => {
-          const OM = !0 === rM(iM) ? MM.filter((MM => MM.parent === iM.key)) : [];
+          group: JV,
+          title: YV
+        } = xV;
+        const UV = VV.filter((VV => VV.group === JV && void 0 === VV.parent)).map((xV => {
+          const JV = !0 === eV(xV) ? VV.filter((VV => VV.parent === xV.key)) : [];
           return {
-            rule: iM,
-            children: OM
+            rule: xV,
+            children: JV
           }
         }));
         return {
-          group: OM,
-          title: SM,
-          items: jM
+          group: JV,
+          title: YV,
+          items: UV
         }
       }))
     }
 
-    function hr(MM) {
-      return MM.flatMap((MM => {
+    function ke(VV) {
+      return VV.flatMap((VV => {
         let {
-          items: rM
-        } = MM;
-        return rM.flatMap((MM => {
+          items: eV
+        } = VV;
+        return eV.flatMap((VV => {
           let {
-            rule: rM,
-            children: iM
-          } = MM;
-          return [rM, ...iM]
+            rule: eV,
+            children: xV
+          } = VV;
+          return [eV, ...xV]
         }))
       }))
     }
 
-    function Jr(MM) {
+    function be(VV) {
       let {
-        manage: rM,
-        rowsShown: iM
-      } = MM;
+        manage: eV,
+        rowsShown: xV
+      } = VV;
       const {
-        t: jM
-      } = (0, HM.A)(), aM = (0, EM.j)("hiddenPlayerNames"), {
-        rules: PM
-      } = rM.state, nM = zM(), QM = MM => {
-        const rM = nM.get(MM.key);
-        return void 0 === rM ? MM.value : rM
-      }, LM = Hr(PM, QM), [mM] = (0, OM.useState)((() => hr(LM).map((MM => MM.key)))), hM = iM === 1 / 0 ? null : new Set(mM.slice(0, iM)), JM = MM => null === hM || hM.has(MM.key), {
-        hold: yM
-      } = nM, lM = (0, OM.useCallback)(((MM, iM) => {
-        (0, SM.reportAnalyticsClick)({
+        t: UV
+      } = (0, rV.A)(), yV = (0, qV.h)("hiddenPlayerNames"), {
+        rules: pV
+      } = eV.state, QV = wV(), nV = VV => {
+        const eV = QV.get(VV.key);
+        return void 0 === eV ? VV.value : eV
+      }, ZV = re(pV, nV), [vV] = (0, JV.useState)((() => ke(ZV).map((VV => VV.key)))), kV = xV === 1 / 0 ? null : new Set(vV.slice(0, xV)), bV = VV => null === kV || kV.has(VV.key), {
+        hold: BV
+      } = QV, jV = (0, JV.useCallback)(((VV, xV) => {
+        (0, YV.reportAnalyticsClick)({
           id: "lobby_manage.set_rule",
-          value: MM.key
+          value: VV.key
         });
-        const OM = rM.send({
+        const JV = eV.send({
           type: "setRule",
-          key: MM.key,
-          value: iM
-        }, `rule:${MM.key}`);
-        return yM(MM.key, iM, OM), OM
-      }), [rM, yM]), UM = (0, OM.useCallback)(((MM, iM, OM) => {
-        (0, SM.reportAnalyticsClick)({
+          key: VV.key,
+          value: xV
+        }, `rule:${VV.key}`);
+        return BV(VV.key, xV, JV), JV
+      }), [eV, BV]), tV = (0, JV.useCallback)(((VV, xV, JV) => {
+        (0, YV.reportAnalyticsClick)({
           id: "lobby_manage.set_rule",
-          value: MM.key
-        }), rM.send({
+          value: VV.key
+        }), eV.send({
           type: "ruleAction",
-          key: MM.key,
-          ...void 0 === iM ? {} : {
-            arg: iM
+          key: VV.key,
+          ...void 0 === xV ? {} : {
+            arg: xV
           },
-          ...void 0 === OM ? {} : {
-            op: OM
+          ...void 0 === JV ? {} : {
+            op: JV
           }
-        }, `rule:${MM.key}`, void 0 === OM ? jM("lobbyManage:setJustNow") : void 0)
-      }), [rM, jM]), GM = MM => {
-        const iM = `rule:${MM.key}`;
-        return (0, kM.jsx)(zr, {
-          rule: MM,
-          value: QM(MM),
-          status: rM.statusOf(iM),
-          pending: rM.isPending(iM),
-          hiddenNames: aM,
-          uC: lM,
-          onAction: UM
-        }, MM.key)
+        }, `rule:${VV.key}`, void 0 === JV ? UV("lobbyManage:setJustNow") : void 0)
+      }), [eV, UV]), FV = VV => {
+        const xV = `rule:${VV.key}`;
+        return (0, iV.jsx)(we, {
+          rule: VV,
+          value: nV(VV),
+          status: eV.statusOf(xV),
+          pending: eV.isPending(xV),
+          hiddenNames: yV,
+          bM: jV,
+          onAction: tV
+        }, VV.key)
       };
-      return (0, kM.jsx)("div", {
+      return (0, iV.jsx)("div", {
         className: "LobbyManagePage LobbyManageRules",
-        children: LM.map((MM => {
+        children: ZV.map((VV => {
           let {
-            group: rM,
-            title: iM,
-            items: SM
-          } = MM;
-          const aM = SM.filter((MM => {
+            group: eV,
+            title: xV,
+            items: YV
+          } = VV;
+          const yV = YV.filter((VV => {
             let {
-              rule: rM
-            } = MM;
-            return JM(rM)
+              rule: eV
+            } = VV;
+            return bV(eV)
           }));
-          return 0 === aM.length ? null : (0, kM.jsxs)(OM.Fragment, {
-            children: [(0, kM.jsx)(dM.d, {
-              label: jM(iM)
-            }), aM.map((MM => {
+          return 0 === yV.length ? null : (0, iV.jsxs)(JV.Fragment, {
+            children: [(0, iV.jsx)(EV.b, {
+              label: UV(xV)
+            }), yV.map((VV => {
               let {
-                rule: rM,
-                children: iM
-              } = MM;
-              return 0 === iM.length ? GM(rM) : (0, kM.jsxs)("div", {
+                rule: eV,
+                children: xV
+              } = VV;
+              return 0 === xV.length ? FV(eV) : (0, iV.jsxs)("div", {
                 className: "SettingBoxGroup",
-                children: [GM(rM), iM.filter(JM).map(GM)]
-              }, rM.key)
+                children: [FV(eV), xV.filter(bV).map(FV)]
+              }, eV.key)
             }))]
-          }, rM)
+          }, eV)
         }))
       })
     }
-    const dr = {
+    const Ee = {
         players: {
           icon: "user-group",
           title: "lobbyManage:players"
@@ -1361,550 +1361,550 @@ export const modules = {
           title: "lobbyManage:leaderboard"
         }
       },
-      yr = 5,
-      lr = (0, OM.memo)((function(MM) {
+      Be = 5,
+      je = (0, JV.memo)((function(VV) {
         let {
-          page: rM,
-          manage: iM,
-          leaderboard: SM,
-          focusRequest: jM,
-          onFocused: aM,
-          ruleRowsShown: PM
-        } = MM;
-        return "leaderboard" === rM ? (0, kM.jsx)(OM.Suspense, {
-          fallback: (0, kM.jsx)("div", {
+          page: eV,
+          manage: xV,
+          leaderboard: YV,
+          focusRequest: UV,
+          onFocused: yV,
+          ruleRowsShown: pV
+        } = VV;
+        return "leaderboard" === eV ? (0, iV.jsx)(JV.Suspense, {
+          fallback: (0, iV.jsx)("div", {
             className: "LobbyManageLoading",
-            children: (0, kM.jsx)(JM.d, {})
+            children: (0, iV.jsx)(bV.d, {})
           }),
-          children: SM
-        }) : "joining" === rM ? (0, kM.jsx)(Or, {
-          manage: iM
-        }) : "rules" === rM ? (0, kM.jsx)(Jr, {
-          manage: iM,
-          rowsShown: PM
-        }) : (0, kM.jsx)(xM, {
-          manage: iM,
-          focusRequest: jM,
-          onFocused: aM
+          children: YV
+        }) : "joining" === eV ? (0, iV.jsx)(Je, {
+          manage: xV
+        }) : "rules" === eV ? (0, iV.jsx)(be, {
+          manage: xV,
+          rowsShown: pV
+        }) : (0, iV.jsx)(LV, {
+          manage: xV,
+          focusRequest: UV,
+          onFocused: yV
         })
       }));
 
-    function Er(MM) {
+    function qe(VV) {
       let {
-        page: rM
-      } = MM;
+        page: eV
+      } = VV;
       const {
-        t: iM
-      } = (0, HM.A)(), OM = dr[rM];
-      return (0, kM.jsxs)(kM.Fragment, {
-        children: [(0, kM.jsx)(hM.b, {
-          name: OM.icon
-        }), " ", (0, kM.jsx)("span", {
+        t: xV
+      } = (0, rV.A)(), JV = Ee[eV];
+      return (0, iV.jsxs)(iV.Fragment, {
+        children: [(0, iV.jsx)(kV.b, {
+          name: JV.icon
+        }), " ", (0, iV.jsx)("span", {
           className: "LobbyManagePageTitle",
-          children: iM(OM.title)
+          children: xV(JV.title)
         })]
       })
     }
 
-    function Ur(MM) {
-      var rM;
+    function te(VV) {
+      var eV;
       const {
-        t: iM
-      } = (0, HM.A)(), {
-        pages: jM,
-        landing: aM
-      } = MM, nM = (0, OM.useRef)(null), QM = (0, OM.useRef)(null), zM = (0, OM.useRef)(null), LM = (0, OM.useRef)(new Map), [hM, JM] = (0, OM.useState)(null), EM = (0, OM.useRef)(hM), UM = (0, OM.useRef)(0), [GM, CM] = (0, OM.useState)(jM[0]), eM = null !== hM && void 0 !== hM ? hM : jM.includes(GM) ? GM : jM[0], [bM] = (0, OM.useState)(null !== (rM = null === aM || void 0 === aM ? void 0 : aM.page) && void 0 !== rM ? rM : null), wM = null !== bM && jM.includes(bM) ? [bM, ...jM.filter((MM => MM !== bM))] : jM, [tM] = (0, OM.useState)((() => {
-        const rM = hr(Hr(MM.manage.state.rules, (MM => MM.value)));
-        return Math.max(1, Math.ceil(rM.length / yr))
-      })), gM = wM.flatMap((MM => "rules" === MM ? Array(tM).fill(MM) : [MM])), uM = function(MM, rM) {
-        const [iM, SM] = (0, OM.useState)(MM), jM = iM >= rM;
-        return jM && iM !== 1 / 0 && SM(1 / 0), (0, OM.useLayoutEffect)((() => {
-          if (jM) return;
-          let MM = !0;
-          return (0, lM.e)().then((() => {
-            MM && SM((MM => MM + 1))
+        t: xV
+      } = (0, rV.A)(), {
+        pages: UV,
+        landing: yV
+      } = VV, QV = (0, JV.useRef)(null), nV = (0, JV.useRef)(null), wV = (0, JV.useRef)(null), ZV = (0, JV.useRef)(new Map), [kV, bV] = (0, JV.useState)(null), qV = (0, JV.useRef)(kV), tV = (0, JV.useRef)(0), [FV, TV] = (0, JV.useState)(UV[0]), PV = null !== kV && void 0 !== kV ? kV : UV.includes(FV) ? FV : UV[0], [AV] = (0, JV.useState)(null !== (eV = null === yV || void 0 === yV ? void 0 : yV.page) && void 0 !== eV ? eV : null), NV = null !== AV && UV.includes(AV) ? [AV, ...UV.filter((VV => VV !== AV))] : UV, [XV] = (0, JV.useState)((() => {
+        const eV = ke(re(VV.manage.state.rules, (VV => VV.value)));
+        return Math.max(1, Math.ceil(eV.length / Be))
+      })), MV = NV.flatMap((VV => "rules" === VV ? Array(XV).fill(VV) : [VV])), zV = function(VV, eV) {
+        const [xV, YV] = (0, JV.useState)(VV), UV = xV >= eV;
+        return UV && xV !== 1 / 0 && YV(1 / 0), (0, JV.useLayoutEffect)((() => {
+          if (UV) return;
+          let VV = !0;
+          return (0, jV.f)().then((() => {
+            VV && YV((VV => VV + 1))
           })), () => {
-            MM = !1
+            VV = !1
           }
-        }), [iM, jM]), jM ? 1 / 0 : iM
-      }(1, gM.length), RM = gM.slice(0, uM), pM = new Set(RM), WM = uM < gM.length, sM = WM ? RM.filter((MM => "rules" === MM)).length * yr : 1 / 0, DM = (0, OM.useRef)(MM.focusRequest);
-      DM.current = MM.focusRequest;
-      const ZM = MM => {
-          EM.current = MM, JM(MM)
+        }), [xV, UV]), UV ? 1 / 0 : xV
+      }(1, MV.length), GV = MV.slice(0, zV), WV = new Set(GV), RV = zV < MV.length, gV = RV ? GV.filter((VV => "rules" === VV)).length * Be : 1 / 0, DV = (0, JV.useRef)(VV.focusRequest);
+      DV.current = VV.focusRequest;
+      const CV = VV => {
+          qV.current = VV, bV(VV)
         },
-        oM = () => {
-          var MM, rM;
-          nM.current.style.scrollPaddingTop = `${null!==(MM=null===(rM=zM.current)||void 0===rM?void 0:rM.offsetHeight)&&void 0!==MM?MM:0}px`
+        aV = () => {
+          var VV, eV;
+          QV.current.style.scrollPaddingTop = `${null!==(VV=null===(eV=wV.current)||void 0===eV?void 0:eV.offsetHeight)&&void 0!==VV?VV:0}px`
         },
-        fM = MM => {
-          const rM = nM.current,
-            iM = LM.current.get(MM);
-          if (void 0 === iM) return;
-          const OM = document.activeElement,
-            SM = DM.current,
-            jM = null === SM ? null : iM.querySelector(`[data-lobby-manage-row="${CSS.escape(SM.name)}"]`);
-          oM(), OM instanceof HTMLElement && null !== jM && void 0 !== jM && jM.contains(OM) ? OM.scrollIntoView({
+        oV = VV => {
+          const eV = QV.current,
+            xV = ZV.current.get(VV);
+          if (void 0 === xV) return;
+          const JV = document.activeElement,
+            YV = DV.current,
+            UV = null === YV ? null : xV.querySelector(`[data-lobby-manage-row="${CSS.escape(YV.name)}"]`);
+          aV(), JV instanceof HTMLElement && null !== UV && void 0 !== UV && UV.contains(JV) ? JV.scrollIntoView({
             block: "center"
-          }) : null === iM.previousElementSibling ? rM.scrollTop = 0 : iM.scrollIntoView({
+          }) : null === xV.previousElementSibling ? eV.scrollTop = 0 : xV.scrollIntoView({
             block: "start"
-          }), UM.current = rM.scrollTop
+          }), tV.current = eV.scrollTop
         },
-        YM = MM => {
-          (0, SM.reportAnalyticsClick)({
+        cV = VV => {
+          (0, YV.reportAnalyticsClick)({
             id: "lobby_manage.page",
-            value: MM
-          }), ZM(MM), fM(MM)
+            value: VV
+          }), CV(VV), oV(VV)
         },
-        NM = () => {
-          var MM, rM;
-          const iM = nM.current,
-            OM = iM.getBoundingClientRect().top + (null !== (MM = null === (rM = zM.current) || void 0 === rM ? void 0 : rM.offsetHeight) && void 0 !== MM ? MM : 0),
-            SM = jM.map((MM => {
-              var rM, iM;
-              return (null !== (rM = null === (iM = LM.current.get(MM)) || void 0 === iM ? void 0 : iM.getBoundingClientRect().top) && void 0 !== rM ? rM : 1 / 0) - OM
+        hV = () => {
+          var VV, eV;
+          const xV = QV.current,
+            JV = xV.getBoundingClientRect().top + (null !== (VV = null === (eV = wV.current) || void 0 === eV ? void 0 : eV.offsetHeight) && void 0 !== VV ? VV : 0),
+            YV = UV.map((VV => {
+              var eV, xV;
+              return (null !== (eV = null === (xV = ZV.current.get(VV)) || void 0 === xV ? void 0 : xV.getBoundingClientRect().top) && void 0 !== eV ? eV : 1 / 0) - JV
             })),
-            aM = !WM && iM.scrollTop + iM.clientHeight >= iM.scrollHeight - 1;
-          CM(jM[(0, PM.e)(SM, aM)])
+            yV = !RV && xV.scrollTop + xV.clientHeight >= xV.scrollHeight - 1;
+          TV(UV[(0, pV.l)(YV, yV)])
         },
-        AM = () => {
-          null !== EM.current && (ZM(null), NM())
+        lV = () => {
+          null !== qV.current && (CV(null), hV())
         };
-      (0, OM.useLayoutEffect)((() => {
-        null !== aM && jM.includes(aM.page) && YM(aM.page)
-      }), [null === aM || void 0 === aM ? void 0 : aM.seq]), (0, OM.useLayoutEffect)((() => {
-        null === EM.current || jM.includes(EM.current) || AM()
+      (0, JV.useLayoutEffect)((() => {
+        null !== yV && UV.includes(yV.page) && cV(yV.page)
+      }), [null === yV || void 0 === yV ? void 0 : yV.seq]), (0, JV.useLayoutEffect)((() => {
+        null === qV.current || UV.includes(qV.current) || lV()
       }));
       const {
-        onFocused: xM
-      } = MM, vM = (0, OM.useCallback)((MM => {
-        null !== EM.current && fM(EM.current), xM(MM)
-      }), [xM]);
-      (0, OM.useLayoutEffect)((() => {
-        const MM = EM.current;
-        null !== MM && (!WM || jM.indexOf(gM[uM - 1]) < jM.indexOf(MM)) && fM(MM)
-      }), [uM]), (0, OM.useEffect)((() => {
-        const MM = new ResizeObserver((() => {
-          null !== EM.current ? fM(EM.current) : oM()
+        onFocused: LV
+      } = VV, fV = (0, JV.useCallback)((VV => {
+        null !== qV.current && oV(qV.current), LV(VV)
+      }), [LV]);
+      (0, JV.useLayoutEffect)((() => {
+        const VV = qV.current;
+        null !== VV && (!RV || UV.indexOf(MV[zV - 1]) < UV.indexOf(VV)) && oV(VV)
+      }), [zV]), (0, JV.useEffect)((() => {
+        const VV = new ResizeObserver((() => {
+          null !== qV.current ? oV(qV.current) : aV()
         }));
-        return MM.observe(nM.current), MM.observe(QM.current), () => {
-          MM.disconnect()
+        return VV.observe(QV.current), VV.observe(nV.current), () => {
+          VV.disconnect()
         }
-      }), []), (0, OM.useLayoutEffect)((() => {
-        const MM = zM.current,
-          rM = null === MM || void 0 === MM ? void 0 : MM.querySelector(".SegmentedToggleOptionSelected");
-        rM && (MM.scrollLeft = Math.min(rM.offsetLeft, Math.max(MM.scrollLeft, rM.offsetLeft + rM.offsetWidth - MM.clientWidth)))
-      }), [eM]);
-      return (0, kM.jsxs)("div", {
-        ref: nM,
+      }), []), (0, JV.useLayoutEffect)((() => {
+        const VV = wV.current,
+          eV = null === VV || void 0 === VV ? void 0 : VV.querySelector(".SegmentedToggleOptionSelected");
+        eV && (VV.scrollLeft = Math.min(eV.offsetLeft, Math.max(VV.scrollLeft, eV.offsetLeft + eV.offsetWidth - VV.clientWidth)))
+      }), [PV]);
+      return (0, iV.jsxs)("div", {
+        ref: QV,
         className: "MenuBody LobbyManageBody",
         onScroll: () => {
-          null === EM.current ? NM() : Math.abs(nM.current.scrollTop - UM.current) > 1 && AM()
+          null === qV.current ? hV() : Math.abs(QV.current.scrollTop - tV.current) > 1 && lV()
         },
-        onClick: MM => {
-          var rM;
-          null !== (rM = zM.current) && void 0 !== rM && rM.contains(MM.target) || AM()
+        onClick: VV => {
+          var eV;
+          null !== (eV = wV.current) && void 0 !== eV && eV.contains(VV.target) || lV()
         },
-        onFocus: MM => {
-          var rM;
-          const iM = null === EM.current ? null : LM.current.get(EM.current);
-          !iM || iM.contains(MM.target) || null !== (rM = zM.current) && void 0 !== rM && rM.contains(MM.target) || AM()
+        onFocus: VV => {
+          var eV;
+          const xV = null === qV.current ? null : ZV.current.get(qV.current);
+          !xV || xV.contains(VV.target) || null !== (eV = wV.current) && void 0 !== eV && eV.contains(VV.target) || lV()
         },
-        children: [jM.length > 1 && (0, kM.jsx)("div", {
-          ref: zM,
+        children: [UV.length > 1 && (0, iV.jsx)("div", {
+          ref: wV,
           className: "LobbyManageChips",
-          children: (0, kM.jsx)(yM.e, {
-            options: jM.map((MM => ({
-              value: MM,
-              label: (0, kM.jsx)(Er, {
-                page: MM
+          children: (0, iV.jsx)(BV.b, {
+            options: UV.map((VV => ({
+              value: VV,
+              label: (0, iV.jsx)(qe, {
+                page: VV
               }),
-              ariaLabel: iM(dr[MM].title)
+              ariaLabel: xV(Ee[VV].title)
             }))),
-            value: eM,
+            value: PV,
             padTabs: "2",
-            ariaLabel: iM("lobbyManageEntry:manageLobby"),
+            ariaLabel: xV("lobbyManageEntry:manageLobby"),
             reselectable: !0,
-            onChange: YM
+            onChange: cV
           })
-        }), (0, kM.jsx)("div", {
-          ref: QM,
-          className: mM()("LobbyManageInner", {
-            Staging: WM
+        }), (0, iV.jsx)("div", {
+          ref: nV,
+          className: vV()("LobbyManageInner", {
+            Staging: RV
           }),
-          children: jM.filter((MM => pM.has(MM))).map((rM => {
-            const iM = rM === hM;
-            return (0, kM.jsxs)("section", {
-              ref: MM => {
-                MM ? LM.current.set(rM, MM) : LM.current.delete(rM)
+          children: UV.filter((VV => WV.has(VV))).map((eV => {
+            const xV = eV === kV;
+            return (0, iV.jsxs)("section", {
+              ref: VV => {
+                VV ? ZV.current.set(eV, VV) : ZV.current.delete(eV)
               },
               className: "LobbyManageSection",
-              "data-pad-initial-area": iM || void 0,
-              children: [jM.length > 1 && (0, kM.jsx)("div", {
+              "data-pad-initial-area": xV || void 0,
+              children: [UV.length > 1 && (0, iV.jsx)("div", {
                 className: "LobbyManageSectionHeading",
-                "data-pad-focusable": iM || void 0,
-                "data-pad-unavailable": iM || void 0,
-                children: (0, kM.jsx)(dM.d, {
-                  label: (0, kM.jsx)(Er, {
-                    page: rM
+                "data-pad-focusable": xV || void 0,
+                "data-pad-unavailable": xV || void 0,
+                children: (0, iV.jsx)(EV.b, {
+                  label: (0, iV.jsx)(qe, {
+                    page: eV
                   })
                 })
-              }), (0, kM.jsx)(lr, {
-                page: rM,
-                manage: MM.manage,
-                leaderboard: MM.leaderboard,
-                focusRequest: MM.focusRequest,
-                onFocused: vM,
-                ruleRowsShown: "rules" === rM ? sM : 1 / 0
+              }), (0, iV.jsx)(je, {
+                page: eV,
+                manage: VV.manage,
+                leaderboard: VV.leaderboard,
+                focusRequest: VV.focusRequest,
+                onFocused: fV,
+                ruleRowsShown: "rules" === eV ? gV : 1 / 0
               })]
-            }, rM)
+            }, eV)
           }))
         })]
       })
     }
 
-    function Gr(MM) {
-      return void 0 === (null === MM || void 0 === MM ? void 0 : MM.page) ? null : {
-        page: MM.page,
-        seq: MM.seq
+    function Fe(VV) {
+      return void 0 === (null === VV || void 0 === VV ? void 0 : VV.page) ? null : {
+        page: VV.page,
+        seq: VV.seq
       }
     }
 
-    function Cr(MM) {
+    function Te(VV) {
       let {
-        leaderboard: rM
-      } = MM;
-      const iM = function() {
-          const MM = (0, nM.f)("lobbyManage"),
-            [rM, iM] = (0, OM.useReducer)((MM => MM + 1), 0),
-            [SM] = (0, OM.useState)((() => new QM.b(iM)));
-          return (0, OM.useEffect)((() => {
-            const MM = SM.nextDeadline();
-            if (null === MM) return;
-            const rM = setTimeout((() => {
-              SM.expire(Date.now()), iM()
-            }), Math.max(0, MM - Date.now()));
+        leaderboard: eV
+      } = VV;
+      const xV = function() {
+          const VV = (0, QV.j)("lobbyManage"),
+            [eV, xV] = (0, JV.useReducer)((VV => VV + 1), 0),
+            [YV] = (0, JV.useState)((() => new nV.d(xV)));
+          return (0, JV.useEffect)((() => {
+            const VV = YV.nextDeadline();
+            if (null === VV) return;
+            const eV = setTimeout((() => {
+              YV.expire(Date.now()), xV()
+            }), Math.max(0, VV - Date.now()));
             return () => {
-              clearTimeout(rM)
+              clearTimeout(eV)
             }
-          })), (0, OM.useMemo)((() => null === MM ? null : {
-            state: MM,
-            send: (MM, rM, OM) => {
-              const jM = SM.send(MM, rM, null !== OM && void 0 !== OM ? OM : null);
-              return iM(), jM
+          })), (0, JV.useMemo)((() => null === VV ? null : {
+            state: VV,
+            send: (VV, eV, JV) => {
+              const UV = YV.send(VV, eV, null !== JV && void 0 !== JV ? JV : null);
+              return xV(), UV
             },
-            statusOf: MM => SM.statusOf(MM, Date.now()),
-            showStatus: (MM, rM) => {
-              SM.show(MM, rM)
+            statusOf: VV => YV.statusOf(VV, Date.now()),
+            showStatus: (VV, eV) => {
+              YV.show(VV, eV)
             },
-            isPending: MM => SM.isPending(MM)
-          }), [MM, rM, SM])
+            isPending: VV => YV.isPending(VV)
+          }), [VV, eV, YV])
         }(),
-        zM = (0, PM.f)((0, jM.b)()),
-        LM = (0, aM.k)(),
-        [mM, HM] = (0, OM.useState)((() => Gr(LM))),
-        [hM, JM] = (0, OM.useState)(null);
-      return (0, OM.useEffect)((() => {
-        null === LM && (0, SM.reportAnalyticsClick)({
+        wV = (0, pV.o)((0, UV.b)()),
+        ZV = (0, yV.j)(),
+        [vV, rV] = (0, JV.useState)((() => Fe(ZV))),
+        [kV, bV] = (0, JV.useState)(null);
+      return (0, JV.useEffect)((() => {
+        null === ZV && (0, YV.reportAnalyticsClick)({
           id: "lobby_manage.open",
           value: "menu_tab"
         })
-      }), []), (0, OM.useEffect)((() => {
-        null !== LM && (HM((MM => (null === MM || void 0 === MM ? void 0 : MM.seq) === LM.seq ? MM : Gr(LM))), void 0 !== LM.focusName && "players" === LM.page ? JM({
-          name: LM.focusName,
-          seq: LM.seq
-        }) : (0, aM.i)(LM.seq))
-      }), [null === LM || void 0 === LM ? void 0 : LM.seq]), null === iM ? null : (0, kM.jsx)("div", {
+      }), []), (0, JV.useEffect)((() => {
+        null !== ZV && (rV((VV => (null === VV || void 0 === VV ? void 0 : VV.seq) === ZV.seq ? VV : Fe(ZV))), void 0 !== ZV.focusName && "players" === ZV.page ? bV({
+          name: ZV.focusName,
+          seq: ZV.seq
+        }) : (0, yV.f)(ZV.seq))
+      }), [null === ZV || void 0 === ZV ? void 0 : ZV.seq]), null === xV ? null : (0, iV.jsx)("div", {
         className: "LobbyManage Menu",
-        children: (0, kM.jsx)(Ur, {
-          pages: (0, PM.c)(iM.state, zM),
-          manage: iM,
-          leaderboard: rM,
-          focusRequest: hM,
-          onFocused: aM.i,
-          landing: mM
+        children: (0, iV.jsx)(te, {
+          pages: (0, pV.h)(xV.state, wV),
+          manage: xV,
+          leaderboard: eV,
+          focusRequest: kV,
+          onFocused: yV.f,
+          landing: vV
         })
       })
     }
   },
-  37498: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => zM,
-      e: () => nM
+  37712: (VV, eV, xV) => {
+    xV.d(eV, {
+      d: () => wV,
+      f: () => QV
     });
-    var OM = iM(1548),
-      SM = iM(2067),
-      jM = iM(2039);
-    const aM = 1e4;
-    let PM = 0;
+    var JV = xV(1586),
+      YV = xV(2080),
+      UV = xV(2051);
+    const yV = 1e4;
+    let pV = 0;
 
-    function nM(MM) {
-      const rM = ++PM;
-      return new Promise((iM => {
-        const PM = rM => {
-            nM(), clearTimeout(QM), !1 === (null === rM || void 0 === rM ? void 0 : rM.ok) && (0, OM.reportAnalyticsClick)({
+    function QV(VV) {
+      const eV = ++pV;
+      return new Promise((xV => {
+        const pV = eV => {
+            QV(), clearTimeout(nV), !1 === (null === eV || void 0 === eV ? void 0 : eV.ok) && (0, JV.reportAnalyticsClick)({
               id: "lobby_manage.refused",
-              value: MM.type
-            }), iM(rM)
+              value: VV.type
+            }), xV(eV)
           },
-          nM = SM.d.subscribe("lobbyManage", (MM => {
-            const iM = function(MM, rM) {
-              var iM;
-              return null !== (iM = null === MM || void 0 === MM ? void 0 : MM.results.find((MM => MM.requestId === rM))) && void 0 !== iM ? iM : null
-            }(MM, rM);
-            null !== iM && PM(iM)
+          QV = YV.c.subscribe("lobbyManage", (VV => {
+            const xV = function(VV, eV) {
+              var xV;
+              return null !== (xV = null === VV || void 0 === VV ? void 0 : VV.results.find((VV => VV.requestId === eV))) && void 0 !== xV ? xV : null
+            }(VV, eV);
+            null !== xV && pV(xV)
           })),
-          QM = setTimeout((() => {
-            PM(null)
-          }), aM);
-        jM.gameBridge.send("lobbyManage", {
-          ...MM,
-          requestId: rM
+          nV = setTimeout((() => {
+            pV(null)
+          }), yV);
+        UV.gameBridge.send("lobbyManage", {
+          ...VV,
+          requestId: eV
         })
       }))
     }
-    const QM = [{
+    const nV = [{
       translationKey: "lobbyManageEntry:noAnswer"
     }];
-    class zM {
-      constructor(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : nM;
-        this.onChange = MM, this.sendAction = rM, this.pending = new Map, this.statuses = new Map
+    class wV {
+      constructor(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : QV;
+        this.onChange = VV, this.sendAction = eV, this.pending = new Map, this.statuses = new Map
       }
-      send(MM, rM, iM) {
-        var OM;
-        return this.statuses.delete(rM), this.pending.set(rM, (null !== (OM = this.pending.get(rM)) && void 0 !== OM ? OM : 0) + 1), this.sendAction(MM).then((MM => {
-          var OM;
-          const SM = null !== MM && void 0 !== MM ? MM : {
+      send(VV, eV, xV) {
+        var JV;
+        return this.statuses.delete(eV), this.pending.set(eV, (null !== (JV = this.pending.get(eV)) && void 0 !== JV ? JV : 0) + 1), this.sendAction(VV).then((VV => {
+          var JV;
+          const YV = null !== VV && void 0 !== VV ? VV : {
               requestId: -1,
               ok: !1,
-              message: QM
+              message: nV
             },
-            jM = (null !== (OM = this.pending.get(rM)) && void 0 !== OM ? OM : 1) - 1;
-          jM > 0 ? this.pending.set(rM, jM) : this.pending.delete(rM);
-          const aM = !SM.ok || SM.message.length > 0 ? SM.message : null === iM ? null : [iM];
-          return null !== aM && this.statuses.set(rM, {
-            ok: SM.ok,
-            text: aM,
+            UV = (null !== (JV = this.pending.get(eV)) && void 0 !== JV ? JV : 1) - 1;
+          UV > 0 ? this.pending.set(eV, UV) : this.pending.delete(eV);
+          const yV = !YV.ok || YV.message.length > 0 ? YV.message : null === xV ? null : [xV];
+          return null !== yV && this.statuses.set(eV, {
+            ok: YV.ok,
+            text: yV,
             until: Date.now() + 4e3
-          }), this.onChange(), SM
+          }), this.onChange(), YV
         }))
       }
-      show(MM, rM) {
-        this.statuses.set(MM, {
-          ...rM,
+      show(VV, eV) {
+        this.statuses.set(VV, {
+          ...eV,
           until: Date.now() + 4e3
         }), this.onChange()
       }
-      expire(MM) {
-        for (const [rM, iM] of this.statuses) iM.until <= MM && this.statuses.delete(rM)
+      expire(VV) {
+        for (const [eV, xV] of this.statuses) xV.until <= VV && this.statuses.delete(eV)
       }
       nextDeadline() {
-        let MM = null;
-        for (const iM of this.statuses.values()) {
-          var rM;
-          MM = Math.min(null !== (rM = MM) && void 0 !== rM ? rM : 1 / 0, iM.until)
+        let VV = null;
+        for (const xV of this.statuses.values()) {
+          var eV;
+          VV = Math.min(null !== (eV = VV) && void 0 !== eV ? eV : 1 / 0, xV.until)
         }
-        return MM
+        return VV
       }
-      statusOf(MM, rM) {
-        const iM = this.statuses.get(MM);
-        return !iM || iM.until <= rM ? null : {
-          ok: iM.ok,
-          text: iM.text
+      statusOf(VV, eV) {
+        const xV = this.statuses.get(VV);
+        return !xV || xV.until <= eV ? null : {
+          ok: xV.ok,
+          text: xV.text
         }
       }
-      isPending(MM) {
-        return this.pending.has(MM)
+      isPending(VV) {
+        return this.pending.has(VV)
       }
     }
   },
-  37678: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => LM
+  37902: (VV, eV, xV) => {
+    xV.d(eV, {
+      b: () => ZV
     });
-    var OM = iM(44),
-      SM = iM(1116),
-      jM = iM.n(SM),
-      aM = iM(1763),
-      PM = iM(1520),
-      nM = iM(1396),
-      QM = iM(1398),
-      zM = iM(1303);
+    var JV = xV(62),
+      YV = xV(1146),
+      UV = xV.n(YV),
+      yV = xV(1772),
+      pV = xV(1551),
+      QV = xV(1408),
+      nV = xV(1414),
+      wV = xV(1321);
 
-    function LM(MM) {
+    function ZV(VV) {
       let {
-        label: rM,
-        icon: iM,
-        placeholder: SM,
-        onSubmit: LM
-      } = MM;
-      const mM = (0, OM.useRef)(null),
-        [HM, hM] = (0, OM.useState)(""),
-        [JM, dM] = (0, OM.useState)("Enter"),
-        [yM, lM] = (0, OM.useState)(null);
-      (0, OM.useEffect)((() => {
-        if ("Success" !== JM && "Error" !== JM) return;
-        const MM = setTimeout((() => {
-          "Success" === JM && mM.current && (mM.current.value = "", hM("")), dM("Enter")
-        }), "Success" === JM ? 1e3 : 4e3);
+        label: eV,
+        icon: xV,
+        placeholder: YV,
+        onSubmit: ZV
+      } = VV;
+      const vV = (0, JV.useRef)(null),
+        [rV, kV] = (0, JV.useState)(""),
+        [bV, EV] = (0, JV.useState)("Enter"),
+        [BV, jV] = (0, JV.useState)(null);
+      (0, JV.useEffect)((() => {
+        if ("Success" !== bV && "Error" !== bV) return;
+        const VV = setTimeout((() => {
+          "Success" === bV && vV.current && (vV.current.value = "", kV("")), EV("Enter")
+        }), "Success" === bV ? 1e3 : 4e3);
         return () => {
-          clearTimeout(MM)
+          clearTimeout(VV)
         }
-      }), [JM]);
-      const EM = () => {
-        const MM = HM.trim();
-        "" !== MM && "Enter" === JM && (dM("Loading"), LM(MM).then((MM => {
-          mM.current && ("error" in MM ? null === MM.error ? dM("Enter") : (lM(MM.error), dM("Error")) : dM("Success"))
+      }), [bV]);
+      const qV = () => {
+        const VV = rV.trim();
+        "" !== VV && "Enter" === bV && (EV("Loading"), ZV(VV).then((VV => {
+          vV.current && ("error" in VV ? null === VV.error ? EV("Enter") : (jV(VV.error), EV("Error")) : EV("Success"))
         })))
       };
-      return (0, zM.jsxs)("div", {
+      return (0, wV.jsxs)("div", {
         className: "PlayerNameField",
-        onKeyDown: MM => {
-          MM.target === mM.current && "Escape" !== MM.key && MM.stopPropagation()
+        onKeyDown: VV => {
+          VV.target === vV.current && "Escape" !== VV.key && VV.stopPropagation()
         },
-        children: [(0, zM.jsxs)("div", {
-          className: jM()("AddFriendBodyOverlay", `AddFriendBodyOverlay${JM}`),
-          children: ["Loading" === JM && (0, zM.jsx)(nM.d, {}), "Success" === JM && (0, zM.jsx)(QM.b, {
+        children: [(0, wV.jsxs)("div", {
+          className: UV()("AddFriendBodyOverlay", `AddFriendBodyOverlay${bV}`),
+          children: ["Loading" === bV && (0, wV.jsx)(QV.d, {}), "Success" === bV && (0, wV.jsx)(nV.b, {
             name: "check"
-          }), "Error" === JM && yM]
-        }), (0, zM.jsxs)("div", {
+          }), "Error" === bV && BV]
+        }), (0, wV.jsxs)("div", {
           className: "PlayerSearch",
-          children: [(0, zM.jsx)(aM.b, {
+          children: [(0, wV.jsx)(yV.d, {
             className: "PlayerSearchInput",
-            domRef: mM,
+            domRef: vV,
             maxLength: 32,
-            placeholderText: SM,
-            ariaLabel: SM,
+            placeholderText: YV,
+            ariaLabel: YV,
             stopPropagation: !1,
-            onValueChange: MM => {
-              hM(MM)
+            onValueChange: VV => {
+              kV(VV)
             },
-            onEnter: EM
-          }), (0, zM.jsxs)(PM.e, {
+            onEnter: qV
+          }), (0, wV.jsxs)(pV.f, {
             className: "PlayerSearchInputButton SmallTextLight",
-            disabled: "Enter" !== JM || "" === HM.trim(),
-            onClick: EM,
-            children: [(0, zM.jsx)(QM.b, {
-              name: iM
-            }), " ", rM]
+            disabled: "Enter" !== bV || "" === rV.trim(),
+            onClick: qV,
+            children: [(0, wV.jsx)(nV.b, {
+              name: xV
+            }), " ", eV]
           })]
         })]
       })
     }
   },
-  37662: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => LM
+  37882: (VV, eV, xV) => {
+    xV.d(eV, {
+      d: () => ZV
     });
-    var OM = iM(44),
-      SM = iM(1116),
-      jM = iM.n(SM),
-      aM = iM(1188),
-      PM = iM(1398),
-      nM = iM(1303);
-    const QM = {
+    var JV = xV(62),
+      YV = xV(1146),
+      UV = xV.n(YV),
+      yV = xV(1220),
+      pV = xV(1414),
+      QV = xV(1321);
+    const nV = {
         unlisted: "link",
         public: "globe",
         whitelist: "user-check",
         private: "lock"
       },
-      zM = ["unlisted", "public", "whitelist", "private"];
+      wV = ["unlisted", "public", "whitelist", "private"];
 
-    function LM(MM) {
+    function ZV(VV) {
       let {
-        visibility: rM,
-        onPick: iM
-      } = MM;
+        visibility: eV,
+        onPick: xV
+      } = VV;
       const {
-        t: SM
-      } = (0, aM.A)(), LM = (0, OM.useRef)([]);
-      return (0, nM.jsx)("div", {
+        t: YV
+      } = (0, yV.A)(), ZV = (0, JV.useRef)([]);
+      return (0, QV.jsx)("div", {
         className: "WorldSocialTiles",
         role: "group",
-        "aria-label": SM("worldSocial:whoCanJoin"),
-        children: zM.map(((MM, OM) => {
-          const aM = MM === rM;
-          return (0, nM.jsxs)("button", {
-            ref: MM => {
-              LM.current[OM] = MM
+        "aria-label": YV("worldSocial:whoCanJoin"),
+        children: wV.map(((VV, JV) => {
+          const yV = VV === eV;
+          return (0, QV.jsxs)("button", {
+            ref: VV => {
+              ZV.current[JV] = VV
             },
             type: "button",
-            className: jM()("WorldSocialTile", {
-              WorldSocialTileSelected: aM
+            className: UV()("WorldSocialTile", {
+              WorldSocialTileSelected: yV
             }),
-            "aria-pressed": aM,
-            tabIndex: aM ? 0 : -1,
-            onKeyDown: MM => {
-              ((MM, rM) => {
-                const iM = "ArrowRight" === MM.key || "ArrowDown" === MM.key ? 1 : "ArrowLeft" === MM.key || "ArrowUp" === MM.key ? -1 : 0;
-                var OM;
-                0 !== iM && (MM.preventDefault(), null === (OM = LM.current[(rM + iM + zM.length) % zM.length]) || void 0 === OM || OM.focus())
-              })(MM, OM)
+            "aria-pressed": yV,
+            tabIndex: yV ? 0 : -1,
+            onKeyDown: VV => {
+              ((VV, eV) => {
+                const xV = "ArrowRight" === VV.key || "ArrowDown" === VV.key ? 1 : "ArrowLeft" === VV.key || "ArrowUp" === VV.key ? -1 : 0;
+                var JV;
+                0 !== xV && (VV.preventDefault(), null === (JV = ZV.current[(eV + xV + wV.length) % wV.length]) || void 0 === JV || JV.focus())
+              })(VV, JV)
             },
             onClick: () => {
-              iM(MM)
+              xV(VV)
             },
-            children: [(0, nM.jsx)("span", {
+            children: [(0, QV.jsx)("span", {
               className: "WorldSocialTileIcon",
-              children: (0, nM.jsx)(PM.b, {
-                name: QM[MM]
+              children: (0, QV.jsx)(pV.b, {
+                name: nV[VV]
               })
-            }), (0, nM.jsxs)("span", {
+            }), (0, QV.jsxs)("span", {
               className: "WorldSocialTileText",
-              children: [(0, nM.jsx)("span", {
+              children: [(0, QV.jsx)("span", {
                 className: "WorldSocialTileTitle",
-                children: SM(`worldSocial:${MM}`)
-              }), (0, nM.jsx)("span", {
+                children: YV(`worldSocial:${VV}`)
+              }), (0, QV.jsx)("span", {
                 className: "WorldSocialTileDescription",
-                children: SM(`worldSocial:${MM}Description`)
+                children: YV(`worldSocial:${VV}Description`)
               })]
             })]
-          }, MM)
+          }, VV)
         }))
       })
     }
   },
-  37669: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => PM
+  37898: (VV, eV, xV) => {
+    xV.d(eV, {
+      d: () => pV
     });
-    var OM = iM(1188),
-      SM = iM(2875),
-      jM = iM(4720),
-      aM = iM(1303);
+    var JV = xV(1220),
+      YV = xV(2942),
+      UV = xV(4795),
+      yV = xV(1321);
 
-    function PM(MM) {
+    function pV(VV) {
       let {
-        bL: rM,
-        children: iM,
-        ...PM
-      } = MM;
+        iZ: eV,
+        children: xV,
+        ...pV
+      } = VV;
       const {
-        t: nM
-      } = (0, OM.A)();
-      return (0, aM.jsx)("div", {
+        t: QV
+      } = (0, JV.A)();
+      return (0, yV.jsx)("div", {
         className: "WhitelistTickRow",
         onClick: () => {
-          rM.onChange(!rM.on)
+          eV.onChange(!eV.on)
         },
-        children: (0, aM.jsx)(SM.h, {
-          ...PM,
+        children: (0, yV.jsx)(YV.e, {
+          ...pV,
           opensProfileCard: !1,
-          children: (0, aM.jsxs)("div", {
+          children: (0, yV.jsxs)("div", {
             className: "WhitelistTickRowActions",
-            onClick: MM => {
-              MM.stopPropagation()
+            onClick: VV => {
+              VV.stopPropagation()
             },
-            children: [iM, (0, aM.jsx)("label", {
+            children: [xV, (0, yV.jsx)("label", {
               className: "WhitelistTickRowTick",
-              children: (0, aM.jsx)(jM.c, {
-                checked: rM.on,
+              children: (0, yV.jsx)(UV.b, {
+                checked: eV.on,
                 disabled: !1,
-                ariaLabel: nM("worldSocial:letJoin", {
-                  playerName: PM.playerSocialPreview.name
+                ariaLabel: QV("worldSocial:letJoin", {
+                  playerName: pV.playerSocialPreview.name
                 }),
-                onChange: MM => {
-                  rM.onChange(MM.target.checked)
+                onChange: VV => {
+                  eV.onChange(VV.target.checked)
                 }
               })
             })]
@@ -1913,395 +1913,395 @@ export const modules = {
       })
     }
   },
-  37658: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => hM
+  37875: (VV, eV, xV) => {
+    xV.d(eV, {
+      c: () => kV
     });
-    var OM = iM(44),
-      SM = iM(1188),
-      jM = iM(1963),
-      aM = iM(83),
-      PM = iM(19),
-      nM = iM(1548),
-      QM = iM(2901),
-      zM = iM(34938),
-      LM = iM(1520),
-      mM = iM(1398),
-      HM = iM(1303);
+    var JV = xV(62),
+      YV = xV(1220),
+      UV = xV(1976),
+      yV = xV(99),
+      pV = xV(27),
+      QV = xV(1586),
+      nV = xV(2966),
+      wV = xV(35213),
+      ZV = xV(1551),
+      vV = xV(1414),
+      rV = xV(1321);
 
-    function hM(MM) {
+    function kV(VV) {
       let {
-        worldCode: rM,
-        message: iM
-      } = MM;
+        worldCode: eV,
+        message: xV
+      } = VV;
       const {
-        t: hM
-      } = (0, SM.A)(), {
-        isTouchScreen: JM
-      } = (0, PM.m)(["isTouchScreen"]), dM = aM.featureFlags.canUseInviteLinks, yM = (0, zM.i)(dM && null === iM), [lM, EM] = (0, QM.g)(), UM = (0, OM.useRef)(null);
-      if (null !== iM) return (0, HM.jsxs)("div", {
+        t: kV
+      } = (0, YV.A)(), {
+        isTouchScreen: bV
+      } = (0, pV.l)(["isTouchScreen"]), EV = yV.featureFlags.canUseInviteLinks, BV = (0, wV.i)(EV && null === xV), [jV, qV] = (0, nV.d)(), tV = (0, JV.useRef)(null);
+      if (null !== xV) return (0, rV.jsxs)("div", {
         className: "WorldSocialLinkRow WorldSocialLinkRowMessage",
-        children: [(0, HM.jsx)(mM.b, {
+        children: [(0, rV.jsx)(vV.b, {
           name: "lock"
-        }), (0, HM.jsx)("span", {
-          children: iM
+        }), (0, rV.jsx)("span", {
+          children: xV
         })]
       });
-      const GM = dM ? yM : rM,
-        CM = JM && dM && (0, QM.d)();
-      return (0, HM.jsxs)("div", {
+      const FV = EV ? BV : eV,
+        TV = bV && EV && (0, nV.b)();
+      return (0, rV.jsxs)("div", {
         className: "WorldSocialLinkRow",
-        children: [!dM && (0, HM.jsx)("span", {
+        children: [!EV && (0, rV.jsx)("span", {
           className: "WorldSocialCodeLabel",
-          children: hM("worldSocial:worldCode")
-        }), (0, HM.jsx)("input", {
-          ref: UM,
+          children: kV("worldSocial:worldCode")
+        }), (0, rV.jsx)("input", {
+          ref: tV,
           className: "WorldSocialLink",
           readOnly: !0,
-          value: null !== GM && void 0 !== GM ? GM : "",
-          "aria-label": hM(dM ? "worldSocial:worldLink" : "worldSocial:worldCode"),
-          onFocus: MM => {
-            MM.currentTarget.select()
+          value: null !== FV && void 0 !== FV ? FV : "",
+          "aria-label": kV(EV ? "worldSocial:worldLink" : "worldSocial:worldCode"),
+          onFocus: VV => {
+            VV.currentTarget.select()
           }
-        }), (0, HM.jsxs)(LM.e, {
+        }), (0, rV.jsxs)(ZV.f, {
           className: "WorldSocialCopy",
-          disabled: null === GM,
+          disabled: null === FV,
           onClick: () => {
-            null !== GM && (0, QM.f)(GM, {
-              useShareSheet: CM,
-              onOutcome: MM => {
-                if ((0, nM.reportAnalyticsClick)({
+            null !== FV && (0, nV.c)(FV, {
+              useShareSheet: TV,
+              onOutcome: VV => {
+                if ((0, QV.reportAnalyticsClick)({
                     id: "world_social.copy_link",
-                    value: "copied" !== MM || dM ? MM : "code"
-                  }), "copied" === MM) EM();
-                else if ("failed" === MM) {
-                  var rM;
-                  null === (rM = UM.current) || void 0 === rM || rM.focus(), jM.k.showMessage({
+                    value: "copied" !== VV || EV ? VV : "code"
+                  }), "copied" === VV) qV();
+                else if ("failed" === VV) {
+                  var eV;
+                  null === (eV = tV.current) || void 0 === eV || eV.focus(), UV.e.showMessage({
                     translationKey: "partyBar:copyFailed"
                   })
                 }
               }
             })
           },
-          children: [(0, HM.jsx)(mM.b, {
-            name: lM ? "check" : CM ? "up-from-bracket" : "copy"
-          }), " ", hM(lM ? "general:copied" : CM ? "worldSocial:share" : "general:copy")]
+          children: [(0, rV.jsx)(vV.b, {
+            name: jV ? "check" : TV ? "up-from-bracket" : "copy"
+          }), " ", kV(jV ? "general:copied" : TV ? "worldSocial:share" : "general:copy")]
         })]
       })
     }
   },
-  37667: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => HM,
-      g: () => mM,
-      h: () => LM
+  37891: (VV, eV, xV) => {
+    xV.d(eV, {
+      d: () => rV,
+      h: () => vV,
+      k: () => ZV
     });
-    var OM = iM(605),
-      SM = iM(1188),
-      jM = iM(1722),
-      aM = iM(2875),
-      PM = iM(2818),
-      nM = iM(1520),
-      QM = iM(37669),
-      zM = iM(1303);
+    var JV = xV(642),
+      YV = xV(1220),
+      UV = xV(1734),
+      yV = xV(2942),
+      pV = xV(2903),
+      QV = xV(1551),
+      nV = xV(37898),
+      wV = xV(1321);
 
-    function LM(MM, rM) {
-      var iM;
+    function ZV(VV, eV) {
+      var xV;
       return {
         isError: !1,
-        name: MM,
+        name: VV,
         ranks: [...arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : []],
-        cosmetics: null !== rM && void 0 !== rM ? rM : {},
-        nameColour: null !== (iM = null === rM || void 0 === rM ? void 0 : rM.nameColour) && void 0 !== iM ? iM : OM.d,
+        cosmetics: null !== eV && void 0 !== eV ? eV : {},
+        nameColour: null !== (xV = null === eV || void 0 === eV ? void 0 : eV.nameColour) && void 0 !== xV ? xV : JV.e,
         location: {
           status: "offline"
         }
       }
     }
 
-    function mM(MM) {
+    function vV(VV) {
       let {
-        player: rM,
-        isFriend: iM = !1,
-        status: OM,
-        showLocation: nM = void 0 === OM,
-        bL: LM,
-        onSendFriendRequest: mM,
-        actions: HM,
-        zIndex: hM
-      } = MM;
+        player: eV,
+        isFriend: xV = !1,
+        status: JV,
+        showLocation: QV = void 0 === JV,
+        iZ: ZV,
+        onSendFriendRequest: vV,
+        actions: rV,
+        zIndex: kV
+      } = VV;
       const {
-        t: JM
-      } = (0, SM.A)();
-      let dM = OM;
-      null !== LM && void 0 !== LM && LM.on && (dM = (0, zM.jsxs)(zM.Fragment, {
-        children: [null !== OM && void 0 !== OM ? OM : (0, zM.jsx)(PM.d, {
-          socialPreview: rM
-        }), (0, zM.jsxs)("span", {
+        t: bV
+      } = (0, YV.A)();
+      let EV = JV;
+      null !== ZV && void 0 !== ZV && ZV.on && (EV = (0, wV.jsxs)(wV.Fragment, {
+        children: [null !== JV && void 0 !== JV ? JV : (0, wV.jsx)(pV.e, {
+          socialPreview: eV
+        }), (0, wV.jsxs)("span", {
           className: "WorldSocialCanJoin",
-          children: [" \xb7 ", JM("worldSocial:canJoin")]
+          children: [" \xb7 ", bV("worldSocial:canJoin")]
         })]
       }));
-      const yM = {
-        playerSocialPreview: rM,
-        isFriend: iM,
+      const BV = {
+        playerSocialPreview: eV,
+        isFriend: xV,
         hideFriendBadge: !0,
-        onFriendRemoved: iM ? MM => {
-          jM.e.removeFriendFromState(MM)
+        onFriendRemoved: xV ? VV => {
+          UV.c.removeFriendFromState(VV)
         } : void 0,
-        status: dM,
-        showLocation: nM,
-        onSendFriendRequest: mM,
-        zIndex: hM
+        status: EV,
+        showLocation: QV,
+        onSendFriendRequest: vV,
+        zIndex: kV
       };
-      return LM ? (0, zM.jsx)(QM.e, {
-        ...yM,
-        bL: LM,
-        children: HM
-      }) : (0, zM.jsx)(aM.h, {
-        ...yM,
+      return ZV ? (0, wV.jsx)(nV.d, {
+        ...BV,
+        iZ: ZV,
+        children: rV
+      }) : (0, wV.jsx)(yV.e, {
+        ...BV,
         opensProfileCard: !1,
-        children: HM || void 0
+        children: rV || void 0
       })
     }
 
-    function HM(MM) {
+    function rV(VV) {
       let {
-        row: rM,
-        bL: iM,
-        canInvite: OM,
-        invited: jM,
-        onInvite: aM,
-        zIndex: PM
-      } = MM;
+        row: eV,
+        iZ: xV,
+        canInvite: JV,
+        invited: UV,
+        onInvite: yV,
+        zIndex: pV
+      } = VV;
       const {
-        t: QM
-      } = (0, SM.A)(), LM = "online" === rM.place ? nM.e : nM.i;
-      return (0, zM.jsx)(mM, {
-        player: rM.friend,
+        t: nV
+      } = (0, YV.A)(), ZV = "online" === eV.place ? QV.f : QV.j;
+      return (0, wV.jsx)(vV, {
+        player: eV.friend,
         isFriend: !0,
-        status: "here" === rM.place ? QM("worldSocial:inThisWorld") : void 0,
+        status: "here" === eV.place ? nV("worldSocial:inThisWorld") : void 0,
         showLocation: !0,
-        bL: iM,
-        zIndex: PM,
-        actions: OM && (0, zM.jsx)(LM, {
+        iZ: xV,
+        zIndex: pV,
+        actions: JV && (0, wV.jsx)(ZV, {
           className: "WorldSocialInvite SmallTextLight",
-          disabled: jM,
-          onClick: aM,
-          ariaLabel: `${QM("worldSocial:invite")} ${rM.friend.name}`,
-          children: QM(jM ? "worldSocial:invited" : "worldSocial:invite")
+          disabled: UV,
+          onClick: yV,
+          ariaLabel: `${nV("worldSocial:invite")} ${eV.friend.name}`,
+          children: nV(UV ? "worldSocial:invited" : "worldSocial:invite")
         })
       })
     }
   },
-  37647: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => nM,
-      g: () => aM,
-      j: () => QM
+  37869: (VV, eV, xV) => {
+    xV.d(eV, {
+      d: () => QV,
+      e: () => yV,
+      g: () => nV
     });
-    var OM = iM(44),
-      SM = iM(4961),
-      jM = iM(1963);
+    var JV = xV(62),
+      YV = xV(5056),
+      UV = xV(1976);
 
-    function aM(MM) {
-      const rM = {
-        lobbyName: MM,
+    function yV(VV) {
+      const eV = {
+        lobbyName: VV,
         answer: null,
-        response: SM.b.getSocialSettings(MM)
+        response: YV.e.getSocialSettings(VV)
       };
-      return rM.response.then((MM => {
-        rM.answer = MM
-      })), rM
+      return eV.response.then((VV => {
+        eV.answer = VV
+      })), eV
     }
-    const PM = new Map;
+    const pV = new Map;
 
-    function nM(MM) {
-      PM.set(MM.lobbyName, MM)
+    function QV(VV) {
+      pV.set(VV.lobbyName, VV)
     }
 
-    function QM(MM) {
-      const [rM] = (0, OM.useState)((() => function(MM) {
-        var rM;
-        const iM = null !== (rM = PM.get(MM)) && void 0 !== rM ? rM : null;
-        return null !== iM && void 0 !== iM && iM.answer && "error" in iM.answer ? null : iM
-      }(MM))), [iM, aM] = (0, OM.useState)((() => null !== rM && void 0 !== rM && rM.answer && "settings" in rM.answer ? rM.answer.settings : null)), [nM, QM] = (0, OM.useState)(!0), [zM, LM] = (0, OM.useState)(null !== iM), mM = (0, OM.useRef)(iM);
-      mM.current = iM;
-      const HM = (0, OM.useRef)(0),
-        hM = (0, OM.useRef)(0),
-        JM = (0, OM.useRef)(!1),
-        dM = (0, OM.useRef)(!0),
-        yM = (0, OM.useCallback)((async rM => {
-          const iM = ++HM.current,
-            OM = await (null !== rM && void 0 !== rM ? rM : SM.b.getSocialSettings(MM));
-          dM.current && iM === HM.current && (LM(!0), QM(!1), "error" in OM || aM(OM.settings))
-        }), [MM]),
-        lM = (0, OM.useCallback)((() => {
-          QM(!0), yM()
-        }), [yM]),
-        EM = (0, OM.useCallback)((() => {
-          hM.current > 0 ? JM.current = !0 : yM()
-        }), [yM]);
-      (0, OM.useEffect)((() => (dM.current = !0, PM.delete(MM), QM(!0), yM(null === rM || void 0 === rM ? void 0 : rM.response), () => {
-        dM.current = !1
-      })), [yM, MM, rM]);
-      const UM = MM => {
-        HM.current++, QM(!1), mM.current = MM, aM(MM)
+    function nV(VV) {
+      const [eV] = (0, JV.useState)((() => function(VV) {
+        var eV;
+        const xV = null !== (eV = pV.get(VV)) && void 0 !== eV ? eV : null;
+        return null !== xV && void 0 !== xV && xV.answer && "error" in xV.answer ? null : xV
+      }(VV))), [xV, yV] = (0, JV.useState)((() => null !== eV && void 0 !== eV && eV.answer && "settings" in eV.answer ? eV.answer.settings : null)), [QV, nV] = (0, JV.useState)(!0), [wV, ZV] = (0, JV.useState)(null !== xV), vV = (0, JV.useRef)(xV);
+      vV.current = xV;
+      const rV = (0, JV.useRef)(0),
+        kV = (0, JV.useRef)(0),
+        bV = (0, JV.useRef)(!1),
+        EV = (0, JV.useRef)(!0),
+        BV = (0, JV.useCallback)((async eV => {
+          const xV = ++rV.current,
+            JV = await (null !== eV && void 0 !== eV ? eV : YV.e.getSocialSettings(VV));
+          EV.current && xV === rV.current && (ZV(!0), nV(!1), "error" in JV || yV(JV.settings))
+        }), [VV]),
+        jV = (0, JV.useCallback)((() => {
+          nV(!0), BV()
+        }), [BV]),
+        qV = (0, JV.useCallback)((() => {
+          kV.current > 0 ? bV.current = !0 : BV()
+        }), [BV]);
+      (0, JV.useEffect)((() => (EV.current = !0, pV.delete(VV), nV(!0), BV(null === eV || void 0 === eV ? void 0 : eV.response), () => {
+        EV.current = !1
+      })), [BV, VV, eV]);
+      const tV = VV => {
+        rV.current++, nV(!1), vV.current = VV, yV(VV)
       };
       return {
-        settings: iM,
-        loading: nM,
-        answered: zM,
-        retry: lM,
-        refresh: EM,
-        change: async function(rM, iM) {
+        settings: xV,
+        loading: QV,
+        answered: wV,
+        retry: jV,
+        refresh: qV,
+        change: async function(eV, xV) {
           let {
-            quiet: OM = !1,
-            onAnswer: aM
+            quiet: JV = !1,
+            onAnswer: yV
           } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-          const PM = mM.current;
-          if (null === PM) return !1;
-          UM(iM(PM)), hM.current > 0 && (JM.current = !0), hM.current++;
-          const nM = await SM.b.setSocialSettings(MM, rM);
-          hM.current--;
-          const QM = !("error" in nM);
-          if (!dM.current) return QM;
-          if (null === aM || void 0 === aM || aM(nM), OM);
-          else if ("error" in nM) jM.k.showMessage({
-            translationKey: nM.error
+          const pV = vV.current;
+          if (null === pV) return !1;
+          tV(xV(pV)), kV.current > 0 && (bV.current = !0), kV.current++;
+          const QV = await YV.e.setSocialSettings(VV, eV);
+          kV.current--;
+          const nV = !("error" in QV);
+          if (!EV.current) return nV;
+          if (null === yV || void 0 === yV || yV(QV), JV);
+          else if ("error" in QV) UV.e.showMessage({
+            translationKey: QV.error
           });
           else
-            for (const MM of nM.notFound) jM.k.showMessage({
+            for (const VV of QV.notFound) UV.e.showMessage({
               translationKey: "worldSocial:notFound",
               params: {
-                playerName: MM
+                playerName: VV
               }
             });
-          if (hM.current > 0) return QM;
-          const zM = JM.current;
-          return JM.current = !1, !zM && "settings" in nM ? UM(nM.settings) : (zM || UM(PM), yM()), QM
+          if (kV.current > 0) return nV;
+          const wV = bV.current;
+          return bV.current = !1, !wV && "settings" in QV ? tV(QV.settings) : (wV || tV(pV), BV()), nV
         }
       }
     }
   },
-  37687: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => aM,
-      d: () => jM
+  37911: (VV, eV, xV) => {
+    xV.d(eV, {
+      c: () => yV,
+      d: () => UV
     });
-    var OM = iM(143);
-    const SM = new Map;
+    var JV = xV(165);
+    const YV = new Map;
 
-    function jM(MM, rM) {
-      var iM;
-      const OM = null !== (iM = SM.get(MM)) && void 0 !== iM ? iM : new Map;
-      OM.set(rM, Date.now()), SM.set(MM, OM)
+    function UV(VV, eV) {
+      var xV;
+      const JV = null !== (xV = YV.get(VV)) && void 0 !== xV ? xV : new Map;
+      JV.set(eV, Date.now()), YV.set(VV, JV)
     }
 
-    function aM(MM) {
-      const rM = SM.get(MM);
-      if (!rM) return [];
-      const iM = Date.now();
-      for (const [SM, jM] of rM) iM - jM >= OM.t && rM.delete(SM);
-      return [...rM.keys()]
+    function yV(VV) {
+      const eV = YV.get(VV);
+      if (!eV) return [];
+      const xV = Date.now();
+      for (const [YV, UV] of eV) xV - UV >= JV.l && eV.delete(YV);
+      return [...eV.keys()]
     }
   },
-  37654: (MM, rM, iM) => {
-    function OM(MM, rM) {
-      const iM = rM.toLowerCase();
-      for (const OM of MM)
-        if (OM.toLowerCase() === iM) return !0;
+  37871: (VV, eV, xV) => {
+    function JV(VV, eV) {
+      const xV = eV.toLowerCase();
+      for (const JV of VV)
+        if (JV.toLowerCase() === xV) return !0;
       return !1
     }
 
-    function SM(MM, rM, iM) {
-      const SM = [],
-        jM = [],
-        aM = [];
-      for (const PM of MM) !PM.isError && PM.name && ("inGame" === PM.location.status && PM.location.inLobbyName === rM || OM(iM, PM.name) ? jM.push({
-        friend: PM,
+    function YV(VV, eV, xV) {
+      const YV = [],
+        UV = [],
+        yV = [];
+      for (const pV of VV) !pV.isError && pV.name && ("inGame" === pV.location.status && pV.location.inLobbyName === eV || JV(xV, pV.name) ? UV.push({
+        friend: pV,
         place: "here"
-      }) : "offline" === PM.location.status ? aM.push({
-        friend: PM,
+      }) : "offline" === pV.location.status ? yV.push({
+        friend: pV,
         place: "offline"
-      }) : SM.push({
-        friend: PM,
+      }) : YV.push({
+        friend: pV,
         place: "online"
       }));
-      return [...SM, ...jM, ...aM]
+      return [...YV, ...UV, ...yV]
     }
 
-    function jM(MM, rM, iM) {
-      const SM = [],
-        jM = MM.flatMap((MM => "here" === MM.place ? [MM.friend.name] : []));
-      for (const aM of [...jM, ...rM]) OM(SM, aM) || OM(iM, aM) || SM.push(aM);
-      return SM
+    function UV(VV, eV, xV) {
+      const YV = [],
+        UV = VV.flatMap((VV => "here" === VV.place ? [VV.friend.name] : []));
+      for (const yV of [...UV, ...eV]) JV(YV, yV) || JV(xV, yV) || YV.push(yV);
+      return YV
     }
 
-    function aM(MM, rM) {
-      return null === MM || void 0 === MM || !MM.canManage || OM(MM.whitelist, rM) ? "none" : "whitelist" === MM.visibility ? "required" : "quiet"
+    function yV(VV, eV) {
+      return null === VV || void 0 === VV || !VV.canManage || JV(VV.whitelist, eV) ? "none" : "whitelist" === VV.visibility ? "required" : "quiet"
     }
 
-    function PM(MM) {
-      if (null === MM) return !0;
+    function pV(VV) {
+      if (null === VV) return !0;
       const {
-        visibility: rM
-      } = MM;
-      return "public" === rM || "unlisted" === rM || "whitelist" === rM && MM.canManage
+        visibility: eV
+      } = VV;
+      return "public" === eV || "unlisted" === eV || "whitelist" === eV && VV.canManage
     }
 
-    function nM(MM, rM, iM) {
-      if (iM) {
-        const iM = rM.filter((rM => !OM(MM.whitelist, rM)));
+    function QV(VV, eV, xV) {
+      if (xV) {
+        const xV = eV.filter((eV => !JV(VV.whitelist, eV)));
         return {
-          ...MM,
-          whitelist: [...MM.whitelist, ...iM]
+          ...VV,
+          whitelist: [...VV.whitelist, ...xV]
         }
       }
       return {
-        ...MM,
-        whitelist: MM.whitelist.filter((MM => !OM(rM, MM)))
+        ...VV,
+        whitelist: VV.whitelist.filter((VV => !JV(eV, VV)))
       }
     }
 
-    function QM(MM, rM) {
-      const iM = [];
-      for (let OM = 0; OM < MM.length; OM += rM) iM.push(MM.slice(OM, OM + rM));
-      return iM
+    function nV(VV, eV) {
+      const xV = [];
+      for (let JV = 0; JV < VV.length; JV += eV) xV.push(VV.slice(JV, JV + eV));
+      return xV
     }
-    iM.d(rM, {
-      c: () => PM,
-      d: () => jM,
-      g: () => SM,
-      j: () => OM,
-      l: () => QM,
-      o: () => aM,
-      r: () => nM
+    xV.d(eV, {
+      c: () => pV,
+      e: () => UV,
+      g: () => YV,
+      k: () => JV,
+      o: () => nV,
+      r: () => yV,
+      u: () => QV
     })
   },
-  37950: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => jM
+  38185: (VV, eV, xV) => {
+    xV.d(eV, {
+      b: () => UV
     });
-    var OM = iM(44),
-      SM = iM(2640);
+    var JV = xV(62),
+      YV = xV(2693);
 
-    function jM() {
-      const MM = (0, SM.f)("lobbyLeaderboardInfo");
-      return (0, OM.useMemo)((() => function(MM) {
-        if (null === MM) return null;
-        const rM = Object.entries(MM),
-          iM = rM.filter((MM => {
-            let [, rM] = MM;
-            return void 0 !== rM
+    function UV() {
+      const VV = (0, YV.j)("lobbyLeaderboardInfo");
+      return (0, JV.useMemo)((() => function(VV) {
+        if (null === VV) return null;
+        const eV = Object.entries(VV),
+          xV = eV.filter((VV => {
+            let [, eV] = VV;
+            return void 0 !== eV
           }));
-        if (iM.length === rM.length) return MM;
-        const OM = Object.fromEntries(iM),
-          SM = Object.keys(MM).filter((MM => !Object.hasOwn(OM, MM)));
-        return console.warn(`lobbyLeaderboardInfo left out its undefined columns: ${SM.join(", ")}`), OM
-      }(MM)), [MM])
+        if (xV.length === eV.length) return VV;
+        const JV = Object.fromEntries(xV),
+          YV = Object.keys(VV).filter((VV => !Object.hasOwn(JV, VV)));
+        return console.warn(`lobbyLeaderboardInfo left out its undefined columns: ${YV.join(", ")}`), JV
+      }(VV)), [VV])
     }
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const VV in modules) Object.freeze(modules[VV]);

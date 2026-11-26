@@ -1,135 +1,135 @@
 export const id = 227;
 export const ids = [227];
 export const modules = {
-  37331: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      default: () => ir
+  37536: (VV, eV, xV) => {
+    xV.r(eV), xV.d(eV, {
+      default: () => xe
     });
-    var OM = iM(44);
-    const SM = "newPlayerDeal",
-      jM = 36e5,
-      aM = [4, 12, 20, 20, 30];
-    const PM = 12 * jM;
+    var JV = xV(62);
+    const YV = "newPlayerDeal",
+      UV = 36e5,
+      yV = [4, 12, 20, 20, 30];
+    const pV = 12 * UV;
 
-    function nM(MM) {
-      return MM - PM
+    function QV(VV) {
+      return VV - pV
     }
 
-    function QM(MM, rM, iM) {
-      const OM = nM(iM);
-      return rM >= OM && rM < iM && (null === MM.lastShownAt || MM.lastShownAt < OM)
+    function nV(VV, eV, xV) {
+      const JV = QV(xV);
+      return eV >= JV && eV < xV && (null === VV.lastShownAt || VV.lastShownAt < JV)
     }
 
-    function zM(MM, rM) {
+    function wV(VV, eV) {
       const {
-        arrival: iM,
-        now: OM,
-        endsAt: SM,
-        playedOnDevice: PM
-      } = rM;
-      return !(OM >= SM || !PM) && (!(!QM(MM, OM, SM) && 0 !== MM.shownCount && null !== MM.lastShownAt) || "open" === iM && OM - MM.lastShownAt >= (nM = MM.shownCount, aM[Math.min(Math.max(nM, 1), aM.length) - 1] * jM));
-      var nM
+        arrival: xV,
+        now: JV,
+        endsAt: YV,
+        playedOnDevice: pV
+      } = eV;
+      return !(JV >= YV || !pV) && (!(!nV(VV, JV, YV) && 0 !== VV.shownCount && null !== VV.lastShownAt) || "open" === xV && JV - VV.lastShownAt >= (QV = VV.shownCount, yV[Math.min(Math.max(QV, 1), yV.length) - 1] * UV));
+      var QV
     }
-    var LM = iM(313),
-      mM = iM(1548),
-      HM = iM(19),
-      hM = iM(2401),
-      JM = iM(3381),
-      dM = iM(3385),
-      yM = iM(2060),
-      lM = iM(1202),
-      EM = iM(1144);
-    var UM = iM(1429),
-      GM = iM(30),
-      CM = iM(673),
-      eM = iM(2741),
-      bM = iM(1438),
-      wM = iM(2743),
-      tM = iM(2397),
-      gM = iM(1142),
-      uM = iM(2779),
-      RM = iM(2782),
-      pM = iM(3432),
-      WM = iM(1188),
-      sM = iM(1520),
-      DM = iM(3452),
-      kM = iM(35070),
-      ZM = iM(2787),
-      oM = iM(35077),
-      fM = iM(1303);
+    var ZV = xV(364),
+      vV = xV(1586),
+      rV = xV(27),
+      kV = xV(2430),
+      bV = xV(3390),
+      EV = xV(3398),
+      BV = xV(2076),
+      jV = xV(1230),
+      qV = xV(1173);
+    var tV = xV(1439),
+      FV = xV(40),
+      TV = xV(701),
+      PV = xV(2795),
+      AV = xV(1442),
+      NV = xV(2800),
+      XV = xV(2428),
+      MV = xV(1168),
+      zV = xV(2847),
+      GV = xV(2849),
+      WV = xV(3437),
+      RV = xV(1220),
+      gV = xV(1551),
+      DV = xV(3461),
+      iV = xV(35354),
+      CV = xV(2855),
+      aV = xV(35371),
+      oV = xV(1321);
 
-    function YM(MM) {
+    function cV(VV) {
       let {
-        shownView: rM,
-        close: iM
-      } = MM;
+        shownView: eV,
+        close: xV
+      } = VV;
       const {
-        t: SM
-      } = (0, WM.A)(), jM = (0, uM.S)(), {
-        purchaseUnderWay: aM,
-        notice: PM,
-        needsLogin: nM,
-        buyPack: QM
-      } = (0, oM.e)("popup", ((MM, rM) => {
-        iM(!1), (0, pM.e)(MM, rM)
-      })), zM = null === jM;
-      (0, OM.useEffect)((() => {
-        zM && iM(!1)
-      }), [zM, iM]);
-      const LM = null !== jM && void 0 !== jM ? jM : rM;
-      return (0, fM.jsxs)("div", {
+        t: YV
+      } = (0, RV.A)(), UV = (0, zV.T)(), {
+        purchaseUnderWay: yV,
+        notice: pV,
+        needsLogin: QV,
+        buyPack: nV
+      } = (0, aV.g)("popup", ((VV, eV) => {
+        xV(!1), (0, WV.e)(VV, eV)
+      })), wV = null === UV;
+      (0, JV.useEffect)((() => {
+        wV && xV(!1)
+      }), [wV, xV]);
+      const ZV = null !== UV && void 0 !== UV ? UV : eV;
+      return (0, oV.jsxs)("div", {
         className: "NewPlayerDealPopup",
-        children: [(0, fM.jsx)("div", {
+        children: [(0, oV.jsx)("div", {
           className: "NewPlayerDealPopupTitle",
-          children: SM("newPlayerDeal:title")
-        }), (0, fM.jsx)("div", {
+          children: YV("newPlayerDeal:title")
+        }), (0, oV.jsx)("div", {
           className: "NewPlayerDealPopupSub",
-          children: SM("newPlayerDeal:samePrice")
-        }), (0, fM.jsx)(kM.e, {
+          children: YV("newPlayerDeal:samePrice")
+        }), (0, oV.jsx)(iV.b, {
           className: "NewPlayerDealClockBig",
-          endsAt: LM.endsAt
-        }), (0, fM.jsx)(kM.i, {
-          view: LM,
-          needsLogin: nM,
-          busy: aM,
+          endsAt: ZV.endsAt
+        }), (0, oV.jsx)(iV.c, {
+          view: ZV,
+          needsLogin: QV,
+          busy: yV,
           highlight: null,
-          onBuy: MM => {
-            QM(LM, MM)
+          onBuy: VV => {
+            nV(ZV, VV)
           }
-        }), (0, fM.jsx)(DM.i, {
-          notice: PM,
+        }), (0, oV.jsx)(DV.i, {
+          notice: pV,
           className: "SmallTextBold NewPlayerDealNotice"
-        }), (0, fM.jsx)(DM.b, {
+        }), (0, oV.jsx)(DV.d, {
           className: "SmallTextBold NewPlayerDealNotice"
-        }), (0, fM.jsx)(sM.e, {
+        }), (0, oV.jsx)(gV.f, {
           className: "NewPlayerDealNoThanks",
           onClick: () => {
-            iM(!0)
+            xV(!0)
           },
-          children: SM("newPlayerDeal:noThanks")
+          children: YV("newPlayerDeal:noThanks")
         })]
       })
     }
 
-    function NM(MM) {
+    function hV(VV) {
       let {
-        arm: rM,
-        children: iM
-      } = MM;
-      return (0, OM.useEffect)((() => {
-        (0, uM.M)(!0)
-      }), []), (0, uM.U)(rM, "popup"), iM
+        arm: eV,
+        children: xV
+      } = VV;
+      return (0, JV.useEffect)((() => {
+        (0, zV.K)(!0)
+      }), []), (0, zV.X)(eV, "popup"), xV
     }
 
-    function AM(MM) {
-      let rM = null;
-      UM.NotificationProvider.showCustomPopup({
-        body: iM => (0, fM.jsx)(NM, {
-          arm: MM.arm,
-          children: (0, fM.jsx)(YM, {
-            shownView: MM,
-            close: MM => {
-              rM ??= MM, iM()
+    function lV(VV) {
+      let eV = null;
+      tV.NotificationProvider.showCustomPopup({
+        body: xV => (0, oV.jsx)(hV, {
+          arm: VV.arm,
+          children: (0, oV.jsx)(cV, {
+            shownView: VV,
+            close: VV => {
+              eV ??= VV, xV()
             }
           })
         }),
@@ -137,477 +137,477 @@ export const modules = {
         middleScreenPopupClassName: "NewPlayerDealPopupPanel",
         disableExitButton: !0,
         unlockPointerKey: "NewPlayerDealPopup"
-      }).getResult().then((iM => {
-        (0, uM.M)(!1), !1 !== rM && "notificationTornDown" !== iM && (0, uM.G)("new_player_deal.close", (0, ZM.b)(MM.arm, "popup"))
+      }).getResult().then((xV => {
+        (0, zV.K)(!1), !1 !== eV && "notificationTornDown" !== xV && (0, zV.E)("new_player_deal.close", (0, CV.c)(VV.arm, "popup"))
       }))
     }
-    const xM = 2500,
-      vM = 6e4;
-    const FM = 500,
-      BM = 6e4;
+    const LV = 2500,
+      fV = 6e4;
+    const mV = 500,
+      KV = 6e4;
 
-    function XM(MM) {
-      const rM = Date.now() + BM;
-      return new Promise((iM => {
-        const OM = () => {
-          MM() ? (0, wM.e)() || UM.NotificationProvider.hasPopup() || (0, bM.m)() || (0, uM.v)() || null !== HM.d.get("openEverythingMenuName") ? Date.now() > rM ? iM(!1) : setTimeout(OM, FM) : iM(!0) : iM(!1)
+    function HV(VV) {
+      const eV = Date.now() + KV;
+      return new Promise((xV => {
+        const JV = () => {
+          VV() ? (0, NV.i)() || tV.NotificationProvider.hasPopup() || (0, AV.f)() || (0, zV.s)() || null !== rV.b.get("openEverythingMenuName") ? Date.now() > eV ? xV(!1) : setTimeout(JV, mV) : xV(!0) : xV(!1)
         };
-        OM()
+        JV()
       }))
     }
-    const IM = "newPlayerDealPointerDeferred_";
-    let KM = !1,
-      qM = null;
+    const uV = "newPlayerDealPointerDeferred_";
+    let sV = !1,
+      SV = null;
 
-    function TM(MM, rM) {
-      var iM;
-      return (null === (iM = qM) || void 0 === iM ? void 0 : iM.accountId) === rM && qM.shownCount === MM.shownCount
+    function IV(VV, eV) {
+      var xV;
+      return (null === (xV = SV) || void 0 === xV ? void 0 : xV.accountId) === eV && SV.shownCount === VV.shownCount
     }
 
-    function VM(MM, rM, iM) {
-      return !!TM(rM, iM) && (qM = null, (0, uM.A)(iM), AM(MM), !0)
+    function dV(VV, eV, xV) {
+      return !!IV(eV, xV) && (SV = null, (0, zV.y)(xV), lV(VV), !0)
     }
-    async function cM(MM, rM, iM, OM) {
-      if (KM) return !1;
-      let SM;
-      KM = !0;
+    async function OV(VV, eV, xV, JV) {
+      if (sV) return !1;
+      let YV;
+      sV = !0;
       try {
-        SM = await async function(MM) {
+        YV = await async function(VV) {
           const {
-            newPlayerDeal: rM,
-            counted: iM
-          } = await (0, EM.postJsonWithMetricsCookiesAndJsonResponse)(`${lM.clientSideServerUrls.indexUrl}/index/new-player-deal/shown`, {
-            shownCount: MM
+            newPlayerDeal: eV,
+            counted: xV
+          } = await (0, qV.postJsonWithMetricsCookiesAndJsonResponse)(`${jV.clientSideServerUrls.indexUrl}/index/new-player-deal/shown`, {
+            shownCount: VV
           }, {
             retries: 1
           });
           return {
-            newPlayerDeal: rM,
-            counted: !0 === iM
+            newPlayerDeal: eV,
+            counted: !0 === xV
           }
-        }(rM.shownCount)
-      } catch (jM) {
-        return console.error("New player deal: counting a showing of its popup failed", jM), !1
+        }(eV.shownCount)
+      } catch (UV) {
+        return console.error("New player deal: counting a showing of its popup failed", UV), !1
       } finally {
-        KM = !1
+        sV = !1
       }
-      return (0, uM.N)(iM, SM.newPlayerDeal), SM.counted && null !== SM.newPlayerDeal && (qM = {
-        accountId: OM,
-        shownCount: SM.newPlayerDeal.shownCount
-      }, "landingPage" === HM.d.get("gameState") && VM(MM, SM.newPlayerDeal, OM)), !0
+      return (0, zV.O)(xV, YV.newPlayerDeal), YV.counted && null !== YV.newPlayerDeal && (SV = {
+        accountId: JV,
+        shownCount: YV.newPlayerDeal.shownCount
+      }, "landingPage" === rV.b.get("gameState") && dV(VV, YV.newPlayerDeal, JV)), !0
     }
-    let Mr = null;
+    let Ve = null;
 
-    function rr(MM, rM, iM, SM, jM) {
-      var aM;
+    function ee(VV, eV, xV, YV, UV) {
+      var yV;
       const {
-        gameState: PM
-      } = (0, HM.m)(["gameState"]), mM = "landingPage" === PM, {
-        pointing: hM
-      } = (0, eM.f)(), JM = (0, OM.useRef)(hM);
-      JM.current = hM;
-      const dM = (0, OM.useRef)(MM);
-      dM.current = MM;
-      const lM = (0, OM.useRef)(rM);
-      lM.current = rM;
-      const EM = (0, OM.useRef)(iM);
-      EM.current = iM;
-      const [UM, bM] = (0, OM.useState)(null), wM = (0, OM.useRef)(0), tM = (0, OM.useRef)(0), gM = (0, OM.useRef)(!1), uM = (0, OM.useCallback)((MM => {
-        "open" === function(MM) {
-          const rM = MM ? (0, CM.e)() : (0, CM.peekVisitSessionId)(),
-            iM = null !== rM && rM === Mr ? "return" : "open";
-          return Mr = rM, iM
-        }(MM) && (gM.current = !0), wM.current++, bM({
-          seq: wM.current,
-          kind: gM.current ? "open" : "return"
+        gameState: pV
+      } = (0, rV.l)(["gameState"]), vV = "landingPage" === pV, {
+        pointing: kV
+      } = (0, PV.h)(), bV = (0, JV.useRef)(kV);
+      bV.current = kV;
+      const EV = (0, JV.useRef)(VV);
+      EV.current = VV;
+      const jV = (0, JV.useRef)(eV);
+      jV.current = eV;
+      const qV = (0, JV.useRef)(xV);
+      qV.current = xV;
+      const [tV, AV] = (0, JV.useState)(null), NV = (0, JV.useRef)(0), XV = (0, JV.useRef)(0), MV = (0, JV.useRef)(!1), zV = (0, JV.useCallback)((VV => {
+        "open" === function(VV) {
+          const eV = VV ? (0, TV.f)() : (0, TV.peekVisitSessionId)(),
+            xV = null !== eV && eV === Ve ? "return" : "open";
+          return Ve = eV, xV
+        }(VV) && (MV.current = !0), NV.current++, AV({
+          seq: NV.current,
+          kind: MV.current ? "open" : "return"
         })
       }), []);
-      (0, OM.useEffect)((() => {
-        if (!mM) return void bM(null);
-        uM(!0);
-        const MM = () => {
-          "visible" === document.visibilityState && uM(!0)
+      (0, JV.useEffect)((() => {
+        if (!vV) return void AV(null);
+        zV(!0);
+        const VV = () => {
+          "visible" === document.visibilityState && zV(!0)
         };
-        return document.addEventListener("visibilitychange", MM), () => {
-          document.removeEventListener("visibilitychange", MM)
+        return document.addEventListener("visibilitychange", VV), () => {
+          document.removeEventListener("visibilitychange", VV)
         }
-      }), [mM, uM]);
-      const RM = null !== (aM = null === MM || void 0 === MM ? void 0 : MM.endsAt) && void 0 !== aM ? aM : null;
-      (0, OM.useEffect)((() => {
-        if (!mM || null === RM) return;
-        const MM = nM(RM) - Date.now();
-        if (MM <= 0 || MM > yM.c) return;
-        const rM = setTimeout((() => {
-          uM(!1)
-        }), MM);
+      }), [vV, zV]);
+      const GV = null !== (yV = null === VV || void 0 === VV ? void 0 : VV.endsAt) && void 0 !== yV ? yV : null;
+      (0, JV.useEffect)((() => {
+        if (!vV || null === GV) return;
+        const VV = QV(GV) - Date.now();
+        if (VV <= 0 || VV > BV.e) return;
+        const eV = setTimeout((() => {
+          zV(!1)
+        }), VV);
         return () => {
-          clearTimeout(rM)
+          clearTimeout(eV)
         }
-      }), [mM, RM, uM]);
-      const pM = null !== MM && null !== SM && null === jM;
-      (0, OM.useEffect)((() => {
-        if (null === UM || !pM || tM.current >= UM.seq) return;
-        const MM = () => wM.current === UM.seq && "landingPage" === HM.d.get("gameState"),
-          rM = setTimeout((() => {
-            const rM = dM.current,
-              iM = lM.current;
-            if (null === rM || null === iM || !MM()) return;
-            tM.current = UM.seq;
-            const OM = Date.now(),
-              jM = TM(iM, SM);
-            if (!(jM || zM(iM, {
-                arrival: UM.kind,
-                now: OM,
-                endsAt: rM.endsAt,
-                playedOnDevice: GM.g.getItem(LM.Cb) > 0
-              }))) return void(gM.current = !1);
-            const aM = QM(iM, OM, rM.endsAt);
-            XM(MM).then((async MM => {
-              const rM = dM.current;
-              MM && null !== rM && lM.current === iM && (!JM.current || aM || function(MM, rM) {
-                return GM.g.getItem(IM + MM) === rM
-              }(SM, iM.shownCount) ? jM ? VM(rM, iM, SM) && (gM.current = !1) : await cM(rM, iM, EM.current, SM) && (gM.current = !1) : function(MM, rM) {
-                GM.g.setItem(IM + MM, rM)
-              }(SM, iM.shownCount))
+      }), [vV, GV, zV]);
+      const WV = null !== VV && null !== YV && null === UV;
+      (0, JV.useEffect)((() => {
+        if (null === tV || !WV || XV.current >= tV.seq) return;
+        const VV = () => NV.current === tV.seq && "landingPage" === rV.b.get("gameState"),
+          eV = setTimeout((() => {
+            const eV = EV.current,
+              xV = jV.current;
+            if (null === eV || null === xV || !VV()) return;
+            XV.current = tV.seq;
+            const JV = Date.now(),
+              UV = IV(xV, YV);
+            if (!(UV || wV(xV, {
+                arrival: tV.kind,
+                now: JV,
+                endsAt: eV.endsAt,
+                playedOnDevice: FV.m.getItem(ZV.Ib) > 0
+              }))) return void(MV.current = !1);
+            const yV = nV(xV, JV, eV.endsAt);
+            HV(VV).then((async VV => {
+              const eV = EV.current;
+              VV && null !== eV && jV.current === xV && (!bV.current || yV || function(VV, eV) {
+                return FV.m.getItem(uV + VV) === eV
+              }(YV, xV.shownCount) ? UV ? dV(eV, xV, YV) && (MV.current = !1) : await OV(eV, xV, qV.current, YV) && (MV.current = !1) : function(VV, eV) {
+                FV.m.setItem(uV + VV, eV)
+              }(YV, xV.shownCount))
             }))
-          }), xM);
+          }), LV);
         return () => {
-          clearTimeout(rM)
+          clearTimeout(eV)
         }
-      }), [UM, pM, SM])
+      }), [tV, WV, YV])
     }
 
-    function ir() {
+    function xe() {
       const {
-        userContext: MM
-      } = (0, gM.b)(), rM = (0, hM.usePurchasesAllowed)(), [iM, jM] = (0, OM.useState)(RM.m);
-      (0, OM.useEffect)((() => (jM((0, RM.m)()), (0, RM.q)(jM))), []);
-      const aM = (0, uM.d)(MM);
-      ! function(MM, rM, iM) {
-        const [jM, aM] = (0, OM.useState)(0);
-        (0, OM.useEffect)((() => {
-          if (!rM || null === MM) return;
-          if (null !== iM) return void(0, uM.J)(MM, (0, RM.h)());
-          if (null !== (0, uM.j)(MM)) return;
-          let OM, jM = !1;
-          return (0, dM.getBillingClient)().getOfferings(SM).then((rM => {
+        userContext: VV
+      } = (0, MV.d)(), eV = (0, kV.usePurchasesAllowed)(), [xV, UV] = (0, JV.useState)(GV.i);
+      (0, JV.useEffect)((() => (UV((0, GV.i)()), (0, GV.j)(UV))), []);
+      const yV = (0, zV.b)(VV);
+      ! function(VV, eV, xV) {
+        const [UV, yV] = (0, JV.useState)(0);
+        (0, JV.useEffect)((() => {
+          if (!eV || null === VV) return;
+          if (null !== xV) return void(0, zV.I)(VV, (0, GV.c)());
+          if (null !== (0, zV.g)(VV)) return;
+          let JV, UV = !1;
+          return (0, EV.getBillingClient)().getOfferings(YV).then((eV => {
             let {
-              offering: iM
-            } = rM;
-            (0, uM.J)(MM, null === iM ? [] : iM.packages.filter(JM.isPricedPackage))
-          }), (MM => {
-            console.error("New player deal: loading its prices failed", MM), jM || (OM = setTimeout((() => {
-              aM((MM => MM + 1))
-            }), vM))
+              offering: xV
+            } = eV;
+            (0, zV.I)(VV, null === xV ? [] : xV.packages.filter(bV.isPricedPackage))
+          }), (VV => {
+            console.error("New player deal: loading its prices failed", VV), UV || (JV = setTimeout((() => {
+              yV((VV => VV + 1))
+            }), fV))
           })), () => {
-            jM = !0, clearTimeout(OM)
+            UV = !0, clearTimeout(JV)
           }
-        }), [MM, rM, iM, jM])
-      }(aM, null !== (0, uM.n)(MM) && (rM || null !== iM), iM);
-      const PM = (0, uM.S)();
-      return rr(PM, (0, uM.n)(MM), MM, aM, iM),
+        }), [VV, eV, xV, UV])
+      }(yV, null !== (0, zV.i)(VV) && (eV || null !== xV), xV);
+      const pV = (0, zV.T)();
+      return ee(pV, (0, zV.i)(VV), VV, yV, xV),
         function() {
           const {
-            userContext: MM
-          } = (0, gM.b)(), {
-            gameState: rM
-          } = (0, HM.m)(["gameState"]);
-          (0, OM.useEffect)((() => {
-            if ("landingPage" !== rM || !MM.isLoggedIn() && !(0, hM.guestsMayBuy)()) return;
-            const iM = (0, uM.g)(MM),
-              OM = (0, tM.u)((MM => iM.includes(MM.item)));
-            null !== OM && ((0, mM.reportAnalyticsClick)({
+            userContext: VV
+          } = (0, MV.d)(), {
+            gameState: eV
+          } = (0, rV.l)(["gameState"]);
+          (0, JV.useEffect)((() => {
+            if ("landingPage" !== eV || !VV.isLoggedIn() && !(0, kV.guestsMayBuy)()) return;
+            const xV = (0, zV.c)(VV),
+              JV = (0, XV.B)((VV => xV.includes(VV.item)));
+            null !== JV && ((0, vV.reportAnalyticsClick)({
               id: "store.login_resume",
-              value: OM.item
-            }), (0, tM.n)({
+              value: JV.item
+            }), (0, XV.o)({
               mode: "self",
               source: "loginResume",
-              highlight: OM.item
+              highlight: JV.item
             }))
-          }), [MM, rM])
+          }), [VV, eV])
         }(),
-        function(MM, rM, iM) {
-          const SM = (0, OM.useRef)(null);
-          (0, OM.useEffect)((() => {
-            if (null === iM || null === MM || null === rM || SM.current === iM) return;
-            SM.current = iM;
-            const OM = MM.packs[0].pack;
-            switch (iM.show) {
+        function(VV, eV, xV) {
+          const YV = (0, JV.useRef)(null);
+          (0, JV.useEffect)((() => {
+            if (null === xV || null === VV || null === eV || YV.current === xV) return;
+            YV.current = xV;
+            const JV = VV.packs[0].pack;
+            switch (xV.show) {
               case "popup":
-                (0, uM.A)(rM), AM(MM);
+                (0, zV.y)(eV), lV(VV);
                 break;
               case "store":
-                (0, tM.n)({
+                (0, XV.o)({
                   mode: "self",
                   source: "newPlayerDeal"
                 });
                 break;
               case "resume":
-                (0, tM.n)({
+                (0, XV.o)({
                   mode: "self",
                   source: "loginResume",
-                  highlight: OM.packageId
+                  highlight: JV.packageId
                 });
                 break;
               case "bought":
-                (0, tM.n)({
+                (0, XV.o)({
                   mode: "self",
                   source: "newPlayerDeal"
-                }), (0, uM.z)(rM), (0, oM.c)(OM.gems);
+                }), (0, zV.v)(eV), (0, aV.d)(JV.gems);
                 break;
               case "gift":
-                (0, tM.n)({
+                (0, XV.o)({
                   mode: "gift",
                   source: "newPlayerDeal",
                   giftRecipientName: "Friend"
                 })
             }
-          }), [iM, MM, rM])
-        }(PM, aM, iM), null
+          }), [xV, VV, eV])
+        }(pV, yV, xV), null
     }
   },
-  35070: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => hM,
-      i: () => dM
+  35354: (VV, eV, xV) => {
+    xV.d(eV, {
+      b: () => kV,
+      c: () => EV
     });
-    iM(35072);
-    var OM = iM(44),
-      SM = iM(1116),
-      jM = iM.n(SM),
-      aM = iM(1188),
-      PM = iM(1520),
-      nM = iM(2796),
-      QM = iM(1398),
-      zM = iM(2382),
-      LM = iM(3449),
-      mM = iM(2412),
-      HM = iM(1303);
+    xV(35362);
+    var JV = xV(62),
+      YV = xV(1146),
+      UV = xV.n(YV),
+      yV = xV(1220),
+      pV = xV(1551),
+      QV = xV(2866),
+      nV = xV(1414),
+      wV = xV(2404),
+      ZV = xV(3454),
+      vV = xV(2437),
+      rV = xV(1321);
 
-    function hM(MM) {
+    function kV(VV) {
       let {
-        endsAt: rM,
-        className: iM
-      } = MM;
-      return (0, HM.jsxs)("span", {
-        className: jM()("NewPlayerDealClock", iM),
-        children: [(0, HM.jsx)(QM.b, {
+        endsAt: eV,
+        className: xV
+      } = VV;
+      return (0, rV.jsxs)("span", {
+        className: UV()("NewPlayerDealClock", xV),
+        children: [(0, rV.jsx)(nV.b, {
           name: "hourglass"
-        }), (0, HM.jsx)(nM.f, {
-          toTime: rM
+        }), (0, rV.jsx)(QV.e, {
+          toTime: eV
         })]
       })
     }
 
-    function JM(MM) {
+    function bV(VV) {
       let {
-        offered: rM,
-        needsLogin: iM,
-        busy: OM,
-        highlight: SM,
-        onBuy: nM
-      } = MM;
+        offered: eV,
+        needsLogin: xV,
+        busy: JV,
+        highlight: YV,
+        onBuy: QV
+      } = VV;
       const {
-        t: QM
-      } = (0, aM.A)(), {
-        pack: hM
-      } = rM, JM = (0, LM.c)(rM.package);
-      return (0, HM.jsxs)("div", {
-        className: jM()("NewPlayerDealPack", {
-          NewPlayerDealPackHighlight: SM
+        t: nV
+      } = (0, yV.A)(), {
+        pack: kV
+      } = eV, bV = (0, ZV.e)(eV.package);
+      return (0, rV.jsxs)("div", {
+        className: UV()("NewPlayerDealPack", {
+          NewPlayerDealPackHighlight: YV
         }),
-        children: [(0, HM.jsxs)("div", {
+        children: [(0, rV.jsxs)("div", {
           className: "NewPlayerDealPackArt",
-          children: [(0, HM.jsx)("img", {
-            src: mM.c[rM.tier],
+          children: [(0, rV.jsx)("img", {
+            src: vV.c[eV.tier],
             alt: "",
             draggable: !1
-          }), (0, HM.jsx)("span", {
+          }), (0, rV.jsx)("span", {
             className: "NewPlayerDealTag",
-            children: QM("newPlayerDeal:tag")
+            children: nV("newPlayerDeal:tag")
           })]
-        }), (0, HM.jsx)("div", {
+        }), (0, rV.jsx)("div", {
           className: "NewPlayerDealPackText",
-          children: (0, HM.jsx)(zM.b, {
+          children: (0, rV.jsx)(wV.e, {
             className: "NewPlayerDealPackAmount",
-            amount: hM.gems
+            amount: kV.gems
           })
-        }), (0, HM.jsx)(PM.p, {
+        }), (0, rV.jsx)(pV.m, {
           className: "NewPlayerDealBuy",
-          loading: OM,
-          onClick: nM,
-          ariaLabel: QM("newPlayerDeal:buyLabel", {
-            amount: hM.gems.toLocaleString(),
-            price: JM
+          loading: JV,
+          onClick: QV,
+          ariaLabel: nV("newPlayerDeal:buyLabel", {
+            amount: kV.gems.toLocaleString(),
+            price: bV
           }),
-          children: QM(iM ? "newPlayerDeal:logInToBuy" : "newPlayerDeal:buy", {
-            price: JM
+          children: nV(xV ? "newPlayerDeal:logInToBuy" : "newPlayerDeal:buy", {
+            price: bV
           })
         })]
       })
     }
 
-    function dM(MM) {
+    function EV(VV) {
       let {
-        view: rM,
-        needsLogin: iM,
-        busy: SM,
-        highlight: PM,
-        onBuy: nM
-      } = MM;
+        view: eV,
+        needsLogin: xV,
+        busy: YV,
+        highlight: pV,
+        onBuy: QV
+      } = VV;
       const {
-        t: QM
-      } = (0, aM.A)();
-      return (0, HM.jsxs)("div", {
-        className: jM()("NewPlayerDealPacks", rM.packs.length > 1 ? "NewPlayerDealPacksTwo" : "NewPlayerDealPacksOne"),
-        children: [rM.packs.map(((MM, rM) => (0, HM.jsxs)(OM.Fragment, {
-          children: [rM > 0 && (0, HM.jsx)("div", {
+        t: nV
+      } = (0, yV.A)();
+      return (0, rV.jsxs)("div", {
+        className: UV()("NewPlayerDealPacks", eV.packs.length > 1 ? "NewPlayerDealPacksTwo" : "NewPlayerDealPacksOne"),
+        children: [eV.packs.map(((VV, eV) => (0, rV.jsxs)(JV.Fragment, {
+          children: [eV > 0 && (0, rV.jsx)("div", {
             className: "NewPlayerDealDivider",
             "aria-hidden": !0,
-            children: (0, HM.jsx)("i", {})
-          }), (0, HM.jsx)(JM, {
-            offered: MM,
-            needsLogin: iM,
-            busy: SM,
-            highlight: PM === MM.pack.packageId,
+            children: (0, rV.jsx)("i", {})
+          }), (0, rV.jsx)(bV, {
+            offered: VV,
+            needsLogin: xV,
+            busy: YV,
+            highlight: pV === VV.pack.packageId,
             onBuy: () => {
-              nM(MM)
+              QV(VV)
             }
           })]
-        }, MM.pack.packageId))), (0, HM.jsx)("div", {
+        }, VV.pack.packageId))), (0, rV.jsx)("div", {
           className: "NewPlayerDealUnder",
-          children: (0, HM.jsx)("span", {
+          children: (0, rV.jsx)("span", {
             className: "NewPlayerDealLimit",
-            children: QM("newPlayerDeal:limit")
+            children: nV("newPlayerDeal:limit")
           })
         })]
       })
     }
   },
-  35077: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => wM,
-      e: () => gM
+  35371: (VV, eV, xV) => {
+    xV.d(eV, {
+      d: () => NV,
+      g: () => MV
     });
-    iM(35072);
-    var OM = iM(3442),
-      SM = iM(1548),
-      jM = iM(2401),
-      aM = iM(3432),
-      PM = iM(3411),
-      nM = iM(3439),
-      QM = iM(3385),
-      zM = iM(1188),
-      LM = iM(1429),
-      mM = iM(1142),
-      HM = iM(1520),
-      hM = iM(1398),
-      JM = iM(2382),
-      dM = iM(2910),
-      yM = iM(2779),
-      lM = iM(2782),
-      EM = iM(2787),
-      UM = iM(1303);
-    const GM = new nM.c(QM.getBillingClient, QM.addPurchaseRecordListener);
-    let CM = !1;
+    xV(35362);
+    var JV = xV(3450),
+      YV = xV(1586),
+      UV = xV(2430),
+      yV = xV(3437),
+      pV = xV(3412),
+      QV = xV(3446),
+      nV = xV(3398),
+      wV = xV(1220),
+      ZV = xV(1439),
+      vV = xV(1168),
+      rV = xV(1551),
+      kV = xV(1414),
+      bV = xV(2404),
+      EV = xV(2971),
+      BV = xV(2847),
+      jV = xV(2849),
+      qV = xV(2855),
+      tV = xV(1321);
+    const FV = new QV.d(nV.getBillingClient, nV.addPurchaseRecordListener);
+    let TV = !1;
 
-    function eM(MM, rM) {
-      null !== MM && (0, yM.u)(MM) || ((0, SM.reportAnalyticsClick)({
+    function PV(VV, eV) {
+      null !== VV && (0, BV.o)(VV) || ((0, YV.reportAnalyticsClick)({
         id: "store.purchase_done",
-        value: `self:${rM.pack.packageId}`
-      }), null !== MM && (0, yM.z)(MM), wM(rM.pack.gems))
+        value: `self:${eV.pack.packageId}`
+      }), null !== VV && (0, BV.v)(VV), NV(eV.pack.gems))
     }
 
-    function bM(MM, rM, iM) {
-      const SM = (0, yM.d)(rM);
-      switch (MM.kind) {
+    function AV(VV, eV, xV) {
+      const YV = (0, BV.b)(eV);
+      switch (VV.kind) {
         case "completed":
-          eM(SM, iM);
+          PV(YV, xV);
           break;
         case "pending":
-          jM = MM.intentId, aM = () => {
-            dM.i.refresh(), eM(SM, iM)
-          }, CM || (CM = !0, GM.listen()), GM.follow(jM, aM);
+          UV = VV.intentId, yV = () => {
+            EV.j.refresh(), PV(YV, xV)
+          }, TV || (TV = !0, FV.listen()), FV.follow(UV, yV);
           break;
         case "unknownPackage":
-          (0, yM.N)(rM, null);
+          (0, BV.O)(eV, null);
           break;
         case "failed":
-          MM.errorKey === OM.d.newPlayerDealUnavailable && (0, yM.N)(rM, null)
+          VV.errorKey === JV.d.newPlayerDealUnavailable && (0, BV.O)(eV, null)
       }
-      var jM, aM
+      var UV, yV
     }
 
-    function wM(MM) {
-      LM.NotificationProvider.showCustomPopup({
-        body: rM => (0, UM.jsx)(tM, {
-          gems: MM,
-          close: rM
+    function NV(VV) {
+      ZV.NotificationProvider.showCustomPopup({
+        body: eV => (0, tV.jsx)(XV, {
+          gems: VV,
+          close: eV
         }),
         middleScreenPopupClassName: "NewPlayerDealAddedPopup",
         disableExitButton: !0
       })
     }
 
-    function tM(MM) {
+    function XV(VV) {
       let {
-        gems: rM,
-        close: iM
-      } = MM;
+        gems: eV,
+        close: xV
+      } = VV;
       const {
-        t: OM
-      } = (0, zM.A)();
-      return (0, UM.jsxs)("div", {
+        t: JV
+      } = (0, wV.A)();
+      return (0, tV.jsxs)("div", {
         className: "NewPlayerDealAdded",
-        children: [(0, UM.jsxs)("div", {
+        children: [(0, tV.jsxs)("div", {
           className: "NewPlayerDealAddedHead",
-          children: [(0, UM.jsx)(hM.b, {
+          children: [(0, tV.jsx)(kV.b, {
             name: "circle-check"
-          }), (0, UM.jsx)(JM.b, {
-            amount: rM
-          }), (0, UM.jsx)("span", {
-            children: OM("newPlayerDeal:added")
+          }), (0, tV.jsx)(bV.e, {
+            amount: eV
+          }), (0, tV.jsx)("span", {
+            children: JV("newPlayerDeal:added")
           })]
-        }), (0, UM.jsx)(HM.p, {
+        }), (0, tV.jsx)(rV.m, {
           className: "NewPlayerDealAddedOk",
-          onClick: iM,
-          children: OM("general:ok")
+          onClick: xV,
+          children: JV("general:ok")
         })]
       })
     }
 
-    function gM(MM) {
-      let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : aM.e;
+    function MV(VV) {
+      let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : yV.e;
       const {
-        userContext: iM
-      } = (0, mM.b)(), {
-        purchaseUnderWay: OM,
-        notice: SM,
-        buy: nM
-      } = (0, PM.d)(rM), QM = (0, lM.m)(), zM = iM.mayBuy() || (0, jM.guestsMayBuy)(), LM = null === QM ? !zM : QM.guest && !iM.isLoggedIn();
+        userContext: xV
+      } = (0, vV.d)(), {
+        purchaseUnderWay: JV,
+        notice: YV,
+        buy: QV
+      } = (0, pV.d)(eV), nV = (0, jV.i)(), wV = xV.mayBuy() || (0, UV.guestsMayBuy)(), ZV = null === nV ? !wV : nV.guest && !xV.isLoggedIn();
       return {
-        purchaseUnderWay: OM,
-        notice: SM,
-        needsLogin: LM,
-        buyPack: function(OM, SM) {
-          (0, yM.G)("new_player_deal.buy", (0, EM.b)(OM.arm, MM, SM.pack.packageId)), null === QM ? nM(function(MM) {
+        purchaseUnderWay: JV,
+        notice: YV,
+        needsLogin: ZV,
+        buyPack: function(JV, YV) {
+          (0, BV.E)("new_player_deal.buy", (0, qV.c)(JV.arm, VV, YV.pack.packageId)), null === nV ? QV(function(VV) {
             return {
-              sku: MM.pack.packageId,
-              tier: MM.tier,
-              amount: MM.pack.gems,
+              sku: VV.pack.packageId,
+              tier: VV.tier,
+              amount: VV.pack.gems,
               bonusPercent: 0,
-              package: MM.package
+              package: VV.package
             }
-          }(SM), null, {
+          }(YV), null, {
             followPending: !1
-          }).then((MM => {
-            bM(MM, iM, SM)
-          })) : LM ? rM(SM.pack.packageId, null) : eM((0, yM.d)(iM), SM)
+          }).then((VV => {
+            AV(VV, xV, YV)
+          })) : ZV ? eV(YV.pack.packageId, null) : PV((0, BV.b)(xV), YV)
         }
       }
     }
   },
-  35072: () => {}
+  35362: () => {}
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const VV in modules) Object.freeze(modules[VV]);

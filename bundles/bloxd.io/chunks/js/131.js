@@ -1,44 +1,44 @@
 export const id = 131;
 export const ids = [131];
 export const modules = {
-  34641: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => QM
+  34898: (VV, eV, xV) => {
+    xV.d(eV, {
+      c: () => nV
     });
-    var OM = iM(2590);
-    const SM = ["recordings", "videoHeaders", "videoChunks", "videoSequences", "videoProgress", "telemetry", "dom", "domTail"];
+    var JV = xV(2645);
+    const YV = ["recordings", "videoHeaders", "videoChunks", "videoSequences", "videoProgress", "telemetry", "dom", "domTail"];
 
-    function jM(MM) {
-      return new Promise(((rM, iM) => {
-        MM.onsuccess = () => {
-          rM(MM.result)
-        }, MM.onerror = () => {
-          iM(MM.error)
+    function UV(VV) {
+      return new Promise(((eV, xV) => {
+        VV.onsuccess = () => {
+          eV(VV.result)
+        }, VV.onerror = () => {
+          xV(VV.error)
         }
       }))
     }
 
-    function aM(MM) {
-      return new Promise(((rM, iM) => {
-        MM.oncomplete = () => {
-          rM()
-        }, MM.onerror = () => {
-          iM(MM.error)
-        }, MM.onabort = () => {
-          var rM;
-          iM(null !== (rM = MM.error) && void 0 !== rM ? rM : new Error("IndexedDB transaction aborted"))
+    function yV(VV) {
+      return new Promise(((eV, xV) => {
+        VV.oncomplete = () => {
+          eV()
+        }, VV.onerror = () => {
+          xV(VV.error)
+        }, VV.onabort = () => {
+          var eV;
+          xV(null !== (eV = VV.error) && void 0 !== eV ? eV : new Error("IndexedDB transaction aborted"))
         }
       }))
     }
 
-    function PM(MM) {
-      return IDBKeyRange.bound([MM], [MM, []])
+    function pV(VV) {
+      return IDBKeyRange.bound([VV], [VV, []])
     }
 
-    function nM(MM, rM) {
-      return IDBKeyRange.bound([MM, rM], [MM, rM, []])
+    function QV(VV, eV) {
+      return IDBKeyRange.bound([VV, eV], [VV, eV, []])
     }
-    class QM {
+    class nV {
       constructor() {
         this.db = null, this.opening = null, this.failed = !1, this.tailRecordings = new Set
       }
@@ -49,383 +49,383 @@ export const modules = {
           return !1
         }
       }
-      putRecording(MM) {
-        this.write(["recordings"], (rM => {
-          rM.objectStore("recordings").put(MM)
+      putRecording(VV) {
+        this.write(["recordings"], (eV => {
+          eV.objectStore("recordings").put(VV)
         }))
       }
-      putVideoSequence(MM, rM, iM) {
-        this.write(["recordings", "videoSequences"], (OM => {
-          OM.objectStore("recordings").put(MM), OM.objectStore("videoSequences").put({
-            recordingId: MM.recordingId,
-            segmentId: rM,
-            sequence: iM
+      putVideoSequence(VV, eV, xV) {
+        this.write(["recordings", "videoSequences"], (JV => {
+          JV.objectStore("recordings").put(VV), JV.objectStore("videoSequences").put({
+            recordingId: VV.recordingId,
+            segmentId: eV,
+            sequence: xV
           })
         }))
       }
-      appendVideo(MM, rM) {
-        this.write(["videoHeaders", "videoChunks"], (iM => {
-          iM.objectStore("videoHeaders").put(MM);
-          const OM = iM.objectStore("videoChunks");
-          for (const MM of rM) OM.put(MM)
+      appendVideo(VV, eV) {
+        this.write(["videoHeaders", "videoChunks"], (xV => {
+          xV.objectStore("videoHeaders").put(VV);
+          const JV = xV.objectStore("videoChunks");
+          for (const VV of eV) JV.put(VV)
         }))
       }
-      putVideoProgress(MM, rM) {
-        this.write(["videoProgress", "videoChunks"], (iM => {
-          if (iM.objectStore("videoProgress").put(MM), rM > 0) {
+      putVideoProgress(VV, eV) {
+        this.write(["videoProgress", "videoChunks"], (xV => {
+          if (xV.objectStore("videoProgress").put(VV), eV > 0) {
             const {
-              recordingId: OM,
-              segmentId: SM
-            } = MM;
-            iM.objectStore("videoChunks").delete(IDBKeyRange.bound([OM, SM, 0], [OM, SM, rM], !1, !0))
+              recordingId: JV,
+              segmentId: YV
+            } = VV;
+            xV.objectStore("videoChunks").delete(IDBKeyRange.bound([JV, YV, 0], [JV, YV, eV], !1, !0))
           }
         }))
       }
-      removeVideoChunks(MM, rM) {
-        this.write(["videoChunks"], (iM => {
-          iM.objectStore("videoChunks").delete(nM(MM, rM))
+      removeVideoChunks(VV, eV) {
+        this.write(["videoChunks"], (xV => {
+          xV.objectStore("videoChunks").delete(QV(VV, eV))
         }))
       }
-      removeVideo(MM, rM) {
-        this.write(["videoHeaders", "videoChunks", "videoSequences", "videoProgress"], (iM => {
-          iM.objectStore("videoHeaders").delete([MM, rM]), iM.objectStore("videoChunks").delete(nM(MM, rM)), iM.objectStore("videoSequences").delete([MM, rM]), iM.objectStore("videoProgress").delete([MM, rM])
+      removeVideo(VV, eV) {
+        this.write(["videoHeaders", "videoChunks", "videoSequences", "videoProgress"], (xV => {
+          xV.objectStore("videoHeaders").delete([VV, eV]), xV.objectStore("videoChunks").delete(QV(VV, eV)), xV.objectStore("videoSequences").delete([VV, eV]), xV.objectStore("videoProgress").delete([VV, eV])
         }))
       }
-      putTelemetry(MM) {
-        this.write(["telemetry"], (rM => {
-          rM.objectStore("telemetry").put(MM)
+      putTelemetry(VV) {
+        this.write(["telemetry"], (eV => {
+          eV.objectStore("telemetry").put(VV)
         }))
       }
-      removeTelemetry(MM, rM) {
-        this.write(["telemetry"], (iM => {
-          iM.objectStore("telemetry").delete([MM, rM])
+      removeTelemetry(VV, eV) {
+        this.write(["telemetry"], (xV => {
+          xV.objectStore("telemetry").delete([VV, eV])
         }))
       }
-      putDom(MM) {
-        this.write(["dom"], (rM => {
-          rM.objectStore("dom").put(MM)
+      putDom(VV) {
+        this.write(["dom"], (eV => {
+          eV.objectStore("dom").put(VV)
         }))
       }
-      queueDom(MM, rM, iM) {
-        this.write(["recordings", "dom", "domTail"], (OM => {
-          OM.objectStore("recordings").put(MM), OM.objectStore("dom").put(rM), OM.objectStore("domTail").delete(nM(rM.recordingId, iM))
+      queueDom(VV, eV, xV) {
+        this.write(["recordings", "dom", "domTail"], (JV => {
+          JV.objectStore("recordings").put(VV), JV.objectStore("dom").put(eV), JV.objectStore("domTail").delete(QV(eV.recordingId, xV))
         }))
       }
-      putDomTail(MM) {
-        this.tailRecordings.add(MM.recordingId), this.write(["domTail"], (rM => {
-          rM.objectStore("domTail").put(MM)
+      putDomTail(VV) {
+        this.tailRecordings.add(VV.recordingId), this.write(["domTail"], (eV => {
+          eV.objectStore("domTail").put(VV)
         }))
       }
-      removeDomTail(MM, rM) {
-        this.write(["domTail"], (iM => {
-          iM.objectStore("domTail").delete(nM(MM, rM))
+      removeDomTail(VV, eV) {
+        this.write(["domTail"], (xV => {
+          xV.objectStore("domTail").delete(QV(VV, eV))
         }))
       }
-      removeDom(MM, rM) {
-        this.write(["dom"], (iM => {
-          iM.objectStore("dom").delete([MM, rM])
+      removeDom(VV, eV) {
+        this.write(["dom"], (xV => {
+          xV.objectStore("dom").delete([VV, eV])
         }))
       }
       async listRecordings() {
-        const MM = await this.open();
-        return await jM(MM.transaction("recordings", "readonly").objectStore("recordings").getAll())
+        const VV = await this.open();
+        return await UV(VV.transaction("recordings", "readonly").objectStore("recordings").getAll())
       }
-      async read(MM) {
-        const rM = (await this.open()).transaction(["videoHeaders", "videoChunks", "videoSequences", "videoProgress", "telemetry", "dom", "domTail"], "readonly"),
-          iM = PM(MM.recordingId),
-          OM = MM => jM(rM.objectStore(MM).getAll(iM)),
-          [SM, aM, nM, QM, zM, LM, mM] = await Promise.all([OM("videoHeaders"), OM("videoChunks"), OM("videoSequences"), OM("videoProgress"), OM("telemetry"), OM("dom"), OM("domTail")]);
+      async read(VV) {
+        const eV = (await this.open()).transaction(["videoHeaders", "videoChunks", "videoSequences", "videoProgress", "telemetry", "dom", "domTail"], "readonly"),
+          xV = pV(VV.recordingId),
+          JV = VV => UV(eV.objectStore(VV).getAll(xV)),
+          [YV, yV, QV, nV, wV, ZV, vV] = await Promise.all([JV("videoHeaders"), JV("videoChunks"), JV("videoSequences"), JV("videoProgress"), JV("telemetry"), JV("dom"), JV("domTail")]);
         return {
-          recording: MM,
-          telemetry: zM,
-          dom: LM,
-          domTails: mM,
-          video: SM.map((MM => {
-            var rM, iM, OM;
+          recording: VV,
+          telemetry: wV,
+          dom: ZV,
+          domTails: vV,
+          video: YV.map((VV => {
+            var eV, xV, JV;
             return {
-              header: MM,
-              sequence: null !== (rM = null === (iM = nM.find((rM => rM.segmentId === MM.segmentId))) || void 0 === iM ? void 0 : iM.sequence) && void 0 !== rM ? rM : null,
-              progress: null !== (OM = QM.find((rM => rM.segmentId === MM.segmentId))) && void 0 !== OM ? OM : null,
-              chunks: aM.filter((rM => rM.segmentId === MM.segmentId))
+              header: VV,
+              sequence: null !== (eV = null === (xV = QV.find((eV => eV.segmentId === VV.segmentId))) || void 0 === xV ? void 0 : xV.sequence) && void 0 !== eV ? eV : null,
+              progress: null !== (JV = nV.find((eV => eV.segmentId === VV.segmentId))) && void 0 !== JV ? JV : null,
+              chunks: yV.filter((eV => eV.segmentId === VV.segmentId))
             }
           }))
         }
       }
-      async deleteRecording(MM) {
-        const rM = (await this.open()).transaction([...SM], "readwrite");
-        rM.objectStore("recordings").delete(MM);
-        for (const iM of SM.slice(1)) rM.objectStore(iM).delete(PM(MM));
-        await aM(rM)
+      async deleteRecording(VV) {
+        const eV = (await this.open()).transaction([...YV], "readwrite");
+        eV.objectStore("recordings").delete(VV);
+        for (const xV of YV.slice(1)) eV.objectStore(xV).delete(pV(VV));
+        await yV(eV)
       }
-      async forgetSent(MM, rM) {
-        const iM = (await this.open()).transaction([...SM], "readwrite"),
+      async forgetSent(VV, eV) {
+        const xV = (await this.open()).transaction([...YV], "readwrite"),
           {
-            recordingId: OM
-          } = MM;
-        iM.objectStore("recordings").put(MM);
-        for (const SM of rM.videoSegmentIds) iM.objectStore("videoHeaders").delete([OM, SM]), iM.objectStore("videoChunks").delete(nM(OM, SM)), iM.objectStore("videoSequences").delete([OM, SM]), iM.objectStore("videoProgress").delete([OM, SM]);
-        for (const SM of rM.telemetrySequences) iM.objectStore("telemetry").delete([OM, SM]);
-        for (const SM of rM.domSequences) iM.objectStore("dom").delete([OM, SM]);
-        for (const SM of rM.domTailChunks) iM.objectStore("domTail").delete(nM(OM, SM));
-        await aM(iM)
+            recordingId: JV
+          } = VV;
+        xV.objectStore("recordings").put(VV);
+        for (const YV of eV.videoSegmentIds) xV.objectStore("videoHeaders").delete([JV, YV]), xV.objectStore("videoChunks").delete(QV(JV, YV)), xV.objectStore("videoSequences").delete([JV, YV]), xV.objectStore("videoProgress").delete([JV, YV]);
+        for (const YV of eV.telemetrySequences) xV.objectStore("telemetry").delete([JV, YV]);
+        for (const YV of eV.domSequences) xV.objectStore("dom").delete([JV, YV]);
+        for (const YV of eV.domTailChunks) xV.objectStore("domTail").delete(QV(JV, YV));
+        await yV(xV)
       }
-      write(MM, rM) {
+      write(VV, eV) {
         if (this.failed) return;
-        const iM = iM => {
+        const xV = xV => {
           try {
-            var OM;
-            const SM = iM.transaction(MM, "readwrite");
-            rM(SM), null === (OM = SM.commit) || void 0 === OM || OM.call(SM), aM(SM).catch((MM => {
-              this.fail(MM)
+            var JV;
+            const YV = xV.transaction(VV, "readwrite");
+            eV(YV), null === (JV = YV.commit) || void 0 === JV || JV.call(YV), yV(YV).catch((VV => {
+              this.fail(VV)
             }))
-          } catch (SM) {
-            this.fail(SM)
+          } catch (YV) {
+            this.fail(YV)
           }
         };
-        null === this.db ? this.open().then(iM, (MM => {
-          this.fail(MM)
-        })) : iM(this.db)
+        null === this.db ? this.open().then(xV, (VV => {
+          this.fail(VV)
+        })) : xV(this.db)
       }
-      fail(MM) {
-        this.failed || (this.failed = !0, console.warn("Session replay can't keep its upload journal; what a closing tab leaves unsent will be lost.", MM), this.dropTails())
+      fail(VV) {
+        this.failed || (this.failed = !0, console.warn("Session replay can't keep its upload journal; what a closing tab leaves unsent will be lost.", VV), this.dropTails())
       }
       dropTails() {
         if (null === this.db || 0 === this.tailRecordings.size) return;
-        const MM = MM => {
-          console.warn("Session replay couldn't drop its page recording tails from its upload journal.", MM)
+        const VV = VV => {
+          console.warn("Session replay couldn't drop its page recording tails from its upload journal.", VV)
         };
         try {
-          const rM = this.db.transaction(["domTail"], "readwrite");
-          for (const MM of this.tailRecordings) rM.objectStore("domTail").delete(PM(MM));
-          aM(rM).catch(MM)
-        } catch (rM) {
-          MM(rM)
+          const eV = this.db.transaction(["domTail"], "readwrite");
+          for (const VV of this.tailRecordings) eV.objectStore("domTail").delete(pV(VV));
+          yV(eV).catch(VV)
+        } catch (eV) {
+          VV(eV)
         }
       }
       open() {
-        return this.opening ??= new Promise(((MM, rM) => {
-          const iM = indexedDB.open(OM.i, 4);
-          iM.onupgradeneeded = MM => {
-            const rM = iM.result;
-            MM.oldVersion < 1 && (rM.createObjectStore("recordings", {
+        return this.opening ??= new Promise(((VV, eV) => {
+          const xV = indexedDB.open(JV.g, 4);
+          xV.onupgradeneeded = VV => {
+            const eV = xV.result;
+            VV.oldVersion < 1 && (eV.createObjectStore("recordings", {
               keyPath: "recordingId"
-            }), rM.createObjectStore("videoHeaders", {
+            }), eV.createObjectStore("videoHeaders", {
               keyPath: ["recordingId", "segmentId"]
-            }), rM.createObjectStore("videoChunks", {
+            }), eV.createObjectStore("videoChunks", {
               keyPath: ["recordingId", "segmentId", "index"]
-            }), rM.createObjectStore("videoSequences", {
+            }), eV.createObjectStore("videoSequences", {
               keyPath: ["recordingId", "segmentId"]
-            }), rM.createObjectStore("telemetry", {
+            }), eV.createObjectStore("telemetry", {
               keyPath: ["recordingId", "sequence"]
-            })), MM.oldVersion < 2 && rM.createObjectStore("videoProgress", {
+            })), VV.oldVersion < 2 && eV.createObjectStore("videoProgress", {
               keyPath: ["recordingId", "segmentId"]
-            }), MM.oldVersion < 3 && rM.createObjectStore("dom", {
+            }), VV.oldVersion < 3 && eV.createObjectStore("dom", {
               keyPath: ["recordingId", "sequence"]
-            }), rM.createObjectStore("domTail", {
+            }), eV.createObjectStore("domTail", {
               keyPath: ["recordingId", "chunkIndex", "fromChar"]
             })
           };
-          let SM = !1;
-          iM.onblocked = () => {
-            SM = !0, rM(new Error("An older tab holds the upload journal at an earlier version"))
-          }, iM.onsuccess = () => {
-            SM ? iM.result.close() : (this.db = iM.result, this.db.onversionchange = () => {
-              var MM;
-              this.dropTails(), null === (MM = this.db) || void 0 === MM || MM.close(), this.db = null, this.opening = null
-            }, MM(iM.result))
-          }, iM.onerror = () => {
-            rM(iM.error)
+          let YV = !1;
+          xV.onblocked = () => {
+            YV = !0, eV(new Error("An older tab holds the upload journal at an earlier version"))
+          }, xV.onsuccess = () => {
+            YV ? xV.result.close() : (this.db = xV.result, this.db.onversionchange = () => {
+              var VV;
+              this.dropTails(), null === (VV = this.db) || void 0 === VV || VV.close(), this.db = null, this.opening = null
+            }, VV(xV.result))
+          }, xV.onerror = () => {
+            eV(xV.error)
           }
         })), this.opening
       }
     }
   },
-  34788: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => nM,
-      i: () => jM,
-      l: () => PM
+  35048: (VV, eV, xV) => {
+    xV.d(eV, {
+      c: () => QV,
+      e: () => UV,
+      i: () => pV
     });
-    var OM = iM(34639);
-    const SM = new TextEncoder;
+    var JV = xV(34892);
+    const YV = new TextEncoder;
 
-    function jM(MM, rM) {
-      return new Blob([SM.encode(`${JSON.stringify(MM)}\n`), rM], {
+    function UV(VV, eV) {
+      return new Blob([YV.encode(`${JSON.stringify(VV)}\n`), eV], {
         type: "text/plain"
       })
     }
-    class aM {
-      constructor(MM, rM) {
-        let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Date.now;
-        this.token = MM, this.relay = rM, this.nowMs = iM, this.refused = !1, this.skipUntilMs = 0
+    class yV {
+      constructor(VV, eV) {
+        let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Date.now;
+        this.token = VV, this.relay = eV, this.nowMs = xV, this.refused = !1, this.skipUntilMs = 0
       }
-      async send(MM, rM, iM, SM, aM) {
-        if (this.goesDirect(rM, iM)) return null;
-        const PM = jM({
+      async send(VV, eV, xV, YV, yV) {
+        if (this.goesDirect(eV, xV)) return null;
+        const pV = UV({
             token: this.token,
-            contentType: iM,
-            target: MM
-          }, rM),
-          nM = {
+            contentType: xV,
+            target: VV
+          }, eV),
+          QV = {
             method: "POST",
             headers: {
               "Content-Type": "text/plain"
             },
-            body: PM,
-            signal: SM
+            body: pV,
+            signal: YV
           };
-        let QM;
+        let nV;
         try {
-          const MM = rM.byteLength <= OM.e ? await OM.h.fetch(this.relay.url, nM, PM.size, iM) : await fetch(this.relay.url, nM);
-          if (!MM.ok) throw new Error(`HTTP ${MM.status}`);
-          if (QM = await MM.json(), "refused" !== QM.outcome && ("forwarded" !== QM.outcome || !Number.isInteger(QM.status))) throw new Error(`Unexpected relay answer ${JSON.stringify(QM)}`)
-        } catch (zM) {
-          if (!0 === (null === aM || void 0 === aM ? void 0 : aM.aborted)) throw zM;
-          return console.warn("Session replay couldn't relay an upload through the part joiner; uploading straight to storage.", zM), this.skipUntilMs = this.nowMs() + 12e4, null
+          const VV = eV.byteLength <= JV.b ? await JV.e.fetch(this.relay.url, QV, pV.size, xV) : await fetch(this.relay.url, QV);
+          if (!VV.ok) throw new Error(`HTTP ${VV.status}`);
+          if (nV = await VV.json(), "refused" !== nV.outcome && ("forwarded" !== nV.outcome || !Number.isInteger(nV.status))) throw new Error(`Unexpected relay answer ${JSON.stringify(nV)}`)
+        } catch (wV) {
+          if (!0 === (null === yV || void 0 === yV ? void 0 : yV.aborted)) throw wV;
+          return console.warn("Session replay couldn't relay an upload through the part joiner; uploading straight to storage.", wV), this.skipUntilMs = this.nowMs() + 12e4, null
         }
-        return "refused" === QM.outcome ? (console.info(`Session replay's part joiner refused to relay (${QM.reason}); uploading straight to storage.`), this.refused = !0, null) : QM.status
+        return "refused" === nV.outcome ? (console.info(`Session replay's part joiner refused to relay (${nV.reason}); uploading straight to storage.`), this.refused = !0, null) : nV.status
       }
-      beacon(MM, rM, iM, OM) {
-        if (this.goesDirect(rM, iM)) return null;
-        const SM = jM({
+      beacon(VV, eV, xV, JV) {
+        if (this.goesDirect(eV, xV)) return null;
+        const YV = UV({
           token: this.token,
-          contentType: iM,
-          target: MM
-        }, rM);
-        return OM.sendUploadBeacon(this.relay.url, SM, SM.size)
+          contentType: xV,
+          target: VV
+        }, eV);
+        return JV.sendUploadBeacon(this.relay.url, YV, YV.size)
       }
-      goesDirect(MM, rM) {
-        return this.refused || this.nowMs() < this.skipUntilMs || MM.byteLength > this.relay.maxBytes || "video/mp4" === rM
+      goesDirect(VV, eV) {
+        return this.refused || this.nowMs() < this.skipUntilMs || VV.byteLength > this.relay.maxBytes || "video/mp4" === eV
       }
     }
 
-    function PM(MM) {
-      return void 0 === (null === MM || void 0 === MM ? void 0 : MM.relay) ? null : new aM(MM.token, MM.relay)
+    function pV(VV) {
+      return void 0 === (null === VV || void 0 === VV ? void 0 : VV.relay) ? null : new yV(VV.token, VV.relay)
     }
-    class nM {
+    class QV {
       constructor() {
         this.relays = new Map
       }
-      for (MM) {
-        let rM = this.relays.get(MM.recordingId);
-        return void 0 === rM && (rM = PM(MM.partJoiner), this.relays.set(MM.recordingId, rM)), rM
+      for (VV) {
+        let eV = this.relays.get(VV.recordingId);
+        return void 0 === eV && (eV = pV(VV.partJoiner), this.relays.set(VV.recordingId, eV)), eV
       }
     }
   },
-  34793: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => mM,
-      e: () => LM,
-      f: () => nM
+  35055: (VV, eV, xV) => {
+    xV.d(eV, {
+      e: () => vV,
+      i: () => ZV,
+      l: () => QV
     });
-    var OM = iM(34639),
-      SM = iM(1215),
-      jM = iM(34799);
-    const aM = 1024;
+    var JV = xV(34892),
+      YV = xV(1241),
+      UV = xV(35063);
+    const yV = 1024;
 
-    function PM(MM) {
-      return 6e4 + Math.ceil(MM / 16384 * 1e3)
+    function pV(VV) {
+      return 6e4 + Math.ceil(VV / 16384 * 1e3)
     }
 
-    function nM(MM, rM, iM) {
-      const SM = new FormData;
-      let jM = rM.byteLength + aM;
-      for (const [aM, PM] of Object.entries(MM.fields)) SM.append(aM, PM), jM += (0, OM.k)(aM) + (0, OM.k)(PM);
-      return SM.append("file", new Blob([rM], {
-        type: iM
+    function QV(VV, eV, xV) {
+      const YV = new FormData;
+      let UV = eV.byteLength + yV;
+      for (const [yV, pV] of Object.entries(VV.fields)) YV.append(yV, pV), UV += (0, JV.f)(yV) + (0, JV.f)(pV);
+      return YV.append("file", new Blob([eV], {
+        type: xV
       })), {
-        form: SM,
-        byteLength: jM
+        form: YV,
+        byteLength: UV
       }
     }
 
-    function QM(MM) {
-      if (MM < 200 || MM > 299) throw new jM.d(`Segment POST failed with ${MM}`, MM)
+    function nV(VV) {
+      if (VV < 200 || VV > 299) throw new UV.d(`Segment POST failed with ${VV}`, VV)
     }
 
-    function zM(MM, rM) {
-      if ((MM < 200 || MM > 299) && (!rM || 412 !== MM)) throw new jM.d(`Segment PUT failed with ${MM}`, MM)
+    function wV(VV, eV) {
+      if ((VV < 200 || VV > 299) && (!eV || 412 !== VV)) throw new UV.d(`Segment PUT failed with ${VV}`, VV)
     }
-    class LM {
-      constructor(MM) {
-        var rM;
-        let iM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        this.segmentUploadUrl = MM, this.deadline = void 0, this.relay = void 0, this.deadline = iM.deadline, this.relay = null !== (rM = iM.relay) && void 0 !== rM ? rM : null
+    class ZV {
+      constructor(VV) {
+        var eV;
+        let xV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        this.segmentUploadUrl = VV, this.deadline = void 0, this.relay = void 0, this.deadline = xV.deadline, this.relay = null !== (eV = xV.relay) && void 0 !== eV ? eV : null
       }
-      requestPutUrl(MM) {
-        return this.presign(MM)
+      requestPutUrl(VV) {
+        return this.presign(VV)
       }
-      requestPostTargets(MM) {
-        return this.presign(MM)
+      requestPostTargets(VV) {
+        return this.presign(VV)
       }
-      async presign(MM) {
-        const rM = await fetch(this.segmentUploadUrl, {
+      async presign(VV) {
+        const eV = await fetch(this.segmentUploadUrl, {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
           },
-          body: JSON.stringify(MM),
+          body: JSON.stringify(VV),
           signal: this.signal(6e4)
         });
-        if (!rM.ok) throw new jM.d(`Segment presign failed with ${rM.status}`, rM.status);
-        return await rM.json()
+        if (!eV.ok) throw new UV.d(`Segment presign failed with ${eV.status}`, eV.status);
+        return await eV.json()
       }
-      async put(MM, rM, iM, SM) {
-        const jM = await this.sendThroughRelay({
+      async put(VV, eV, xV, YV) {
+        const UV = await this.sendThroughRelay({
           method: "PUT",
-          url: MM,
-          ifNoneMatch: SM
-        }, rM, iM);
-        if (null !== jM) return void zM(jM, SM);
-        const aM = {
+          url: VV,
+          ifNoneMatch: YV
+        }, eV, xV);
+        if (null !== UV) return void wV(UV, YV);
+        const yV = {
           method: "PUT",
           headers: {
-            "Content-Type": iM,
-            ...SM ? {
+            "Content-Type": xV,
+            ...YV ? {
               "If-None-Match": "*"
             } : {}
           },
-          body: rM,
-          signal: this.signal(PM(rM.byteLength))
+          body: eV,
+          signal: this.signal(pV(eV.byteLength))
         };
-        zM((rM.byteLength <= OM.e ? await OM.h.fetch(MM, aM, rM.byteLength, iM) : await fetch(MM, aM)).status, SM)
+        wV((eV.byteLength <= JV.b ? await JV.e.fetch(VV, yV, eV.byteLength, xV) : await fetch(VV, yV)).status, YV)
       }
-      async post(MM, rM, iM) {
-        const SM = await this.sendThroughRelay({
+      async post(VV, eV, xV) {
+        const YV = await this.sendThroughRelay({
           method: "POST",
-          url: MM.url,
-          fields: MM.fields
-        }, rM, iM);
-        if (null !== SM) return void QM(SM);
+          url: VV.url,
+          fields: VV.fields
+        }, eV, xV);
+        if (null !== YV) return void nV(YV);
         const {
-          form: jM,
-          byteLength: aM
-        } = nM(MM, rM, iM), zM = {
+          form: UV,
+          byteLength: yV
+        } = QV(VV, eV, xV), wV = {
           method: "POST",
-          body: jM,
-          signal: this.signal(PM(aM))
+          body: UV,
+          signal: this.signal(pV(yV))
         };
-        QM((aM <= OM.e ? await OM.h.fetch(MM.url, zM, aM, iM) : await fetch(MM.url, zM)).status)
+        nV((yV <= JV.b ? await JV.e.fetch(VV.url, wV, yV, xV) : await fetch(VV.url, wV)).status)
       }
-      async sendThroughRelay(MM, rM, iM) {
-        return null === this.relay ? null : await this.relay.send(MM, rM, iM, this.signal(PM(rM.byteLength)), this.deadline)
+      async sendThroughRelay(VV, eV, xV) {
+        return null === this.relay ? null : await this.relay.send(VV, eV, xV, this.signal(pV(eV.byteLength)), this.deadline)
       }
-      signal(MM) {
-        const rM = (0, SM.q)(MM);
-        return void 0 === this.deadline ? rM : (0, SM.m)([this.deadline, rM])
+      signal(VV) {
+        const eV = (0, YV.u)(VV);
+        return void 0 === this.deadline ? eV : (0, YV.m)([this.deadline, eV])
       }
     }
-    class mM {
-      async requestPutUrl(MM) {
+    class vV {
+      async requestPutUrl(VV) {
         return {
           uploadUrl: "",
-          key: `dry-run/${MM.kind}/${MM.sequence}`
+          key: `dry-run/${VV.kind}/${VV.sequence}`
         }
       }
-      async requestPostTargets(MM) {
+      async requestPostTargets(VV) {
         return {
           targets: Array.from({
-            length: MM.parts.count
+            length: VV.parts.count
           }, (() => ({
             url: "",
             fields: {}
@@ -441,236 +441,236 @@ export const modules = {
       }
     }
   },
-  34647: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => SM
+  34905: (VV, eV, xV) => {
+    xV.d(eV, {
+      e: () => YV
     });
-    var OM = iM(34654);
+    var JV = xV(34907);
 
-    function SM(MM) {
-      const rM = (new TextEncoder).encode(MM);
+    function YV(VV) {
+      const eV = (new TextEncoder).encode(VV);
       return {
-        bytes: (0, OM.e)(rM),
-        inflatedBytes: rM.byteLength
+        bytes: (0, JV.b)(eV),
+        inflatedBytes: eV.byteLength
       }
     }
   },
-  34785: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => jM
+  35045: (VV, eV, xV) => {
+    xV.d(eV, {
+      c: () => UV
     });
-    const OM = 20;
-    let SM = Date.now() - performance.now();
+    const JV = 20;
+    let YV = Date.now() - performance.now();
 
-    function jM() {
-      const MM = performance.now(),
-        rM = Date.now();
-      return Math.abs(rM - (MM + SM)) > OM && (SM = rM - MM), MM + SM
+    function UV() {
+      const VV = performance.now(),
+        eV = Date.now();
+      return Math.abs(eV - (VV + YV)) > JV && (YV = eV - VV), VV + YV
     }
   },
-  34631: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => jM
+  34886: (VV, eV, xV) => {
+    xV.d(eV, {
+      c: () => UV
     });
-    var OM = iM(5479),
-      SM = iM(1202);
+    var JV = xV(5589),
+      YV = xV(1230);
 
-    function jM() {
+    function UV() {
       return {
-        segmentUploadUrl: `${SM.clientSideServerUrls.indexUrl}${OM.w}`,
-        manifestUrl: `${SM.clientSideServerUrls.indexUrl}${OM.o}`
+        segmentUploadUrl: `${YV.clientSideServerUrls.indexUrl}${JV.B}`,
+        manifestUrl: `${YV.clientSideServerUrls.indexUrl}${JV.p}`
       }
     }
   },
-  34639: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => OM,
-      h: () => jM,
-      k: () => SM
+  34892: (VV, eV, xV) => {
+    xV.d(eV, {
+      b: () => JV,
+      e: () => UV,
+      f: () => YV
     });
-    const OM = 32768;
+    const JV = 32768;
 
-    function SM(MM) {
-      return (new TextEncoder).encode(MM).byteLength
+    function YV(VV) {
+      return (new TextEncoder).encode(VV).byteLength
     }
-    const jM = new class {
+    const UV = new class {
       constructor() {
         this.inFlightBytes = 0, this.inFlightLabels = new Map
       }
-      async fetch(MM, rM, iM, OM) {
-        if (this.inFlightBytes + iM > 49152) return await fetch(MM, rM);
-        this.inFlightBytes += iM, this.countLabel(OM, 1);
-        const SM = () => {
-          this.inFlightBytes -= iM, this.countLabel(OM, -1)
+      async fetch(VV, eV, xV, JV) {
+        if (this.inFlightBytes + xV > 49152) return await fetch(VV, eV);
+        this.inFlightBytes += xV, this.countLabel(JV, 1);
+        const YV = () => {
+          this.inFlightBytes -= xV, this.countLabel(JV, -1)
         };
-        let jM;
+        let UV;
         try {
-          jM = await fetch(MM, {
-            ...rM,
+          UV = await fetch(VV, {
+            ...eV,
             keepalive: !0
           })
-        } catch (PM) {
-          var aM;
-          if (SM(), null !== (aM = rM.signal) && void 0 !== aM && aM.aborted) throw PM;
-          return console.info("Session replay keepalive request failed; retrying without keepalive.", PM), await fetch(MM, rM)
+        } catch (pV) {
+          var yV;
+          if (YV(), null !== (yV = eV.signal) && void 0 !== yV && yV.aborted) throw pV;
+          return console.info("Session replay keepalive request failed; retrying without keepalive.", pV), await fetch(VV, eV)
         }
-        return SM(), jM
+        return YV(), UV
       }
-      isInFlight(MM) {
-        var rM;
-        return (null !== (rM = this.inFlightLabels.get(MM)) && void 0 !== rM ? rM : 0) > 0
+      isInFlight(VV) {
+        var eV;
+        return (null !== (eV = this.inFlightLabels.get(VV)) && void 0 !== eV ? eV : 0) > 0
       }
-      sendBeacon(MM, rM) {
-        const iM = SM(rM);
-        return !(this.inFlightBytes + iM > 57344) && this.beaconSent(navigator.sendBeacon(MM, new Blob([rM], {
+      sendBeacon(VV, eV) {
+        const xV = YV(eV);
+        return !(this.inFlightBytes + xV > 57344) && this.beaconSent(navigator.sendBeacon(VV, new Blob([eV], {
           type: "text/plain"
-        })), iM)
+        })), xV)
       }
-      sendUploadBeacon(MM, rM, iM) {
-        return !(this.inFlightBytes + iM > 40960) && this.beaconSent(navigator.sendBeacon(MM, rM), iM)
+      sendUploadBeacon(VV, eV, xV) {
+        return !(this.inFlightBytes + xV > 40960) && this.beaconSent(navigator.sendBeacon(VV, eV), xV)
       }
-      countLabel(MM, rM) {
-        var iM;
-        void 0 !== MM && this.inFlightLabels.set(MM, (null !== (iM = this.inFlightLabels.get(MM)) && void 0 !== iM ? iM : 0) + rM)
+      countLabel(VV, eV) {
+        var xV;
+        void 0 !== VV && this.inFlightLabels.set(VV, (null !== (xV = this.inFlightLabels.get(VV)) && void 0 !== xV ? xV : 0) + eV)
       }
-      beaconSent(MM, rM) {
-        return MM && (this.inFlightBytes += rM, setTimeout((() => {
-          this.inFlightBytes -= rM
-        }), 1e4)), MM
+      beaconSent(VV, eV) {
+        return VV && (this.inFlightBytes += eV, setTimeout((() => {
+          this.inFlightBytes -= eV
+        }), 1e4)), VV
       }
     }
   },
-  34633: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => aM
+  34889: (VV, eV, xV) => {
+    xV.d(eV, {
+      b: () => yV
     });
-    var OM = iM(34639),
-      SM = iM(1215);
-    const jM = 6e4;
-    async function aM(MM, rM) {
-      const iM = JSON.stringify(rM);
+    var JV = xV(34892),
+      YV = xV(1241);
+    const UV = 6e4;
+    async function yV(VV, eV) {
+      const xV = JSON.stringify(eV);
       try {
-        const rM = await OM.h.fetch(MM, {
+        const eV = await JV.e.fetch(VV, {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
           },
-          body: iM,
-          signal: (0, SM.q)(jM)
-        }, (0, OM.k)(iM));
-        return await async function(MM) {
-          if (!MM.ok) return MM.status >= 400 && MM.status < 500 && 408 !== MM.status && 429 !== MM.status ? "refused" : "retryLater";
-          const rM = await MM.json();
-          return "rejected" in rM ? (console.warn(`Session replay manifest refused: ${rM.reason}`), rM.retryable ? "retryLater" : "refused") : "uploaded"
-        }(rM)
-      } catch (aM) {
-        return console.warn("Session replay manifest upload failed.", aM), "retryLater"
+          body: xV,
+          signal: (0, YV.u)(UV)
+        }, (0, JV.f)(xV));
+        return await async function(VV) {
+          if (!VV.ok) return VV.status >= 400 && VV.status < 500 && 408 !== VV.status && 429 !== VV.status ? "refused" : "retryLater";
+          const eV = await VV.json();
+          return "rejected" in eV ? (console.warn(`Session replay manifest refused: ${eV.reason}`), eV.retryable ? "retryLater" : "refused") : "uploaded"
+        }(eV)
+      } catch (yV) {
+        return console.warn("Session replay manifest upload failed.", yV), "retryLater"
       }
     }
   },
-  34670: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => PM,
-      d: () => nM
+  34924: (VV, eV, xV) => {
+    xV.d(eV, {
+      c: () => pV,
+      f: () => QV
     });
-    var OM = iM(34639);
-    const SM = 16384,
-      jM = 100,
-      aM = (0, OM.k)(',"domSegments":[]');
+    var JV = xV(34892);
+    const YV = 16384,
+      UV = 100,
+      yV = (0, JV.f)(',"domSegments":[]');
 
-    function PM(MM, rM) {
-      let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : SM;
+    function pV(VV, eV) {
+      let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : YV;
       const {
-        domSegments: PM,
-        ...nM
-      } = MM.manifest, QM = () => ({
-        ...MM,
+        domSegments: pV,
+        ...QV
+      } = VV.manifest, nV = () => ({
+        ...VV,
         manifest: {
-          ...nM,
+          ...QV,
           videoSegments: [],
           telemetrySegments: [],
           games: []
         },
         creatorGrants: []
-      }), zM = (0, OM.k)(JSON.stringify(QM())), LM = [];
-      let mM = {
-          request: QM(),
+      }), wV = (0, JV.f)(JSON.stringify(nV())), ZV = [];
+      let vV = {
+          request: nV(),
           items: []
         },
-        HM = zM;
-      const hM = (MM, rM) => {
-          var iM;
-          return "domSegments" === rM ? null !== (iM = MM.manifest.domSegments) && void 0 !== iM ? iM : [] : "creatorGrants" === rM ? MM.creatorGrants : MM.manifest[rM]
+        rV = wV;
+      const kV = (VV, eV) => {
+          var xV;
+          return "domSegments" === eV ? null !== (xV = VV.manifest.domSegments) && void 0 !== xV ? xV : [] : "creatorGrants" === eV ? VV.creatorGrants : VV.manifest[eV]
         },
-        JM = (MM, rM, iM) => iM + (MM.length > 0 ? 1 : "domSegments" === rM.list ? aM : 0);
-      for (const SM of rM) {
-        const MM = (0, OM.k)(JSON.stringify(SM.value));
-        let rM = hM(mM.request, SM.list);
-        mM.items.length > 0 && (HM + JM(rM, SM, MM) > iM || rM.length >= jM) && (LM.push(mM), mM = {
-          request: QM(),
+        bV = (VV, eV, xV) => xV + (VV.length > 0 ? 1 : "domSegments" === eV.list ? yV : 0);
+      for (const YV of eV) {
+        const VV = (0, JV.f)(JSON.stringify(YV.value));
+        let eV = kV(vV.request, YV.list);
+        vV.items.length > 0 && (rV + bV(eV, YV, VV) > xV || eV.length >= UV) && (ZV.push(vV), vV = {
+          request: nV(),
           items: []
-        }, HM = zM, rM = hM(mM.request, SM.list)), HM += JM(rM, SM, MM), "domSegments" === SM.list && (mM.request.manifest.domSegments = rM), rM.push(SM.value), mM.items.push(SM)
+        }, rV = wV, eV = kV(vV.request, YV.list)), rV += bV(eV, YV, VV), "domSegments" === YV.list && (vV.request.manifest.domSegments = eV), eV.push(YV.value), vV.items.push(YV)
       }
-      return LM.push(mM), LM
+      return ZV.push(vV), ZV
     }
 
-    function nM(MM) {
-      let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : SM;
-      return PM(MM, function(MM) {
-        var rM;
-        return [...MM.creatorGrants.map((MM => ({
+    function QV(VV) {
+      let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : YV;
+      return pV(VV, function(VV) {
+        var eV;
+        return [...VV.creatorGrants.map((VV => ({
           list: "creatorGrants",
-          value: MM
-        }))), ...MM.manifest.games.map((MM => ({
+          value: VV
+        }))), ...VV.manifest.games.map((VV => ({
           list: "games",
-          value: MM
-        }))), ...MM.manifest.videoSegments.map((MM => ({
+          value: VV
+        }))), ...VV.manifest.videoSegments.map((VV => ({
           list: "videoSegments",
-          value: MM
-        }))), ...MM.manifest.telemetrySegments.map((MM => ({
+          value: VV
+        }))), ...VV.manifest.telemetrySegments.map((VV => ({
           list: "telemetrySegments",
-          value: MM
-        }))), ...(null !== (rM = MM.manifest.domSegments) && void 0 !== rM ? rM : []).map((MM => ({
+          value: VV
+        }))), ...(null !== (eV = VV.manifest.domSegments) && void 0 !== eV ? eV : []).map((VV => ({
           list: "domSegments",
-          value: MM
+          value: VV
         })))]
-      }(MM), rM).map((MM => {
+      }(VV), eV).map((VV => {
         let {
-          request: rM
-        } = MM;
-        return rM
+          request: eV
+        } = VV;
+        return eV
       }))
     }
   },
-  34799: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => OM
+  35063: (VV, eV, xV) => {
+    xV.d(eV, {
+      d: () => JV
     });
-    class OM extends Error {
-      constructor(MM, rM) {
-        super(MM), this.status = rM
+    class JV extends Error {
+      constructor(VV, eV) {
+        super(VV), this.status = eV
       }
     }
   },
-  5479: (MM, rM, iM) => {
-    iM.d(rM, {
-      A: () => LM,
-      E: () => HM,
-      G: () => zM,
-      J: () => aM,
-      c: () => jM,
-      g: () => lM,
-      h: () => EM,
-      j: () => dM,
-      l: () => JM,
-      o: () => nM,
-      r: () => yM,
-      s: () => QM,
-      v: () => hM,
-      w: () => PM,
-      x: () => mM
+  5589: (VV, eV, xV) => {
+    xV.d(eV, {
+      B: () => pV,
+      D: () => vV,
+      H: () => ZV,
+      I: () => rV,
+      K: () => wV,
+      N: () => yV,
+      b: () => UV,
+      d: () => jV,
+      h: () => qV,
+      i: () => EV,
+      l: () => bV,
+      p: () => QV,
+      t: () => BV,
+      x: () => nV,
+      y: () => kV
     });
-    const OM = {
+    const JV = {
         maxFps: 30,
         bitrate: 178e4,
         minBitrate: 5e5,
@@ -683,55 +683,55 @@ export const modules = {
         captureFrameCostFloorMs: .6,
         softwareEncoderOnWindows: !0
       },
-      SM = {
-        ...OM,
+      YV = {
+        ...JV,
         maxFps: 15,
         bitrate: 5e5,
         maxMacroblocks: 2040,
         softwareEncoderOnWindows: !1
       },
-      jM = {
-        desktop: OM,
-        mobile: SM,
-        tablet: SM
+      UV = {
+        desktop: JV,
+        mobile: YV,
+        tablet: YV
       };
 
-    function aM(MM, rM) {
+    function yV(VV, eV) {
       return {
-        ...jM[rM],
-        ...MM
+        ...UV[eV],
+        ...VV
       }
     }
-    const PM = "/index/replay/segment-upload-url",
-      nM = "/index/replay/manifest",
-      QM = 65536;
+    const pV = "/index/replay/segment-upload-url",
+      QV = "/index/replay/manifest",
+      nV = 65536;
 
-    function zM(MM) {
+    function wV(VV) {
       return {
-        count: Math.ceil(MM.segmentDurationMs / MM.partDurationMs) + 1,
-        maxBytes: Math.ceil(1.5 * MM.bitrate / 8 * (MM.partDurationMs / 1e3)) + 32768
+        count: Math.ceil(VV.segmentDurationMs / VV.partDurationMs) + 1,
+        maxBytes: Math.ceil(1.5 * VV.bitrate / 8 * (VV.partDurationMs / 1e3)) + 32768
       }
     }
-    const LM = "/index/studio/replay-segment-urls",
-      mM = 20,
-      HM = 50,
-      hM = 6e4,
-      JM = 432e5,
-      dM = "Chat",
-      yM = {
+    const ZV = "/index/studio/replay-segment-urls",
+      vV = 20,
+      rV = 50,
+      kV = 6e4,
+      bV = 432e5,
+      EV = "Chat",
+      BV = {
         clock: "bloxd-clock",
         active: "bloxd-active",
         death: "player_death",
         error: "error"
       },
-      lM = {
+      jV = {
         FullSnapshot: 2,
         IncrementalSnapshot: 3,
         Meta: 4,
         Custom: 5,
         Plugin: 6
       },
-      EM = {
+      qV = {
         Mutation: 0,
         MouseMove: 1,
         MouseInteraction: 2,
@@ -746,4 +746,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const VV in modules) Object.freeze(modules[VV]);

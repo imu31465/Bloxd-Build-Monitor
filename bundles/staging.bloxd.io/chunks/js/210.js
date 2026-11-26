@@ -1,144 +1,144 @@
 export const id = 210;
 export const ids = [210];
 export const modules = {
-  44153: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      loadGlbAsset: () => Er,
-      loadGlbTree: () => lr
+  44385: (VV, eV, xV) => {
+    xV.r(eV), xV.d(eV, {
+      loadGlbAsset: () => qe,
+      loadGlbTree: () => je
     });
-    var OM = iM(38885),
-      SM = iM(44160),
-      jM = iM(34814),
-      aM = iM.n(jM);
+    var JV = xV(39058),
+      YV = xV(44388),
+      UV = xV(35081),
+      yV = xV.n(UV);
 
-    function PM() {
-      return aM()('(()=>{class MM extends Error{}function rM(rM,iM){const OM=rM._malloc(iM);if(0===OM)throw new MM(`Draco: the decoder\'s heap refused ${iM} bytes`);return OM}function iM(MM){return{[MM.DT_FLOAT32]:[Float32Array,5126],[MM.DT_INT8]:[Int8Array,5120],[MM.DT_INT16]:[Int16Array,5122],[MM.DT_INT32]:[Int32Array,5124],[MM.DT_UINT8]:[Uint8Array,5121],[MM.DT_UINT16]:[Uint16Array,5123],[MM.DT_UINT32]:[Uint32Array,5125]}}function OM(rM,OM,SM,jM,aM){let PM=null,nM=null,QM=null;try{PM=new rM.Decoder,nM=new rM.DecoderBuffer,nM.Init(OM,OM.byteLength);let zM=0;const LM=PM.GetEncodedGeometryType(nM);if(LM===rM.TRIANGULAR_MESH){const iM=new rM.Mesh;QM=iM;const OM=PM.DecodeBufferToMesh(nM,iM);if(!OM.ok()||0===iM.ptr)throw new MM(OM.error_msg());zM=3*iM.num_faces()}else{if(LM!==rM.POINT_CLOUD)throw new MM(`Draco: Cannot decode invalid geometry type ${LM}`);{const iM=new rM.PointCloud;QM=iM;const OM=PM.DecodeBufferToPointCloud(nM,iM);if(!OM.ok()||!iM.ptr)throw new MM(OM.error_msg())}}const mM=QM.num_points();if(mM!==jM.vertices||zM!==jM.indices)throw new MM(`Draco: decoded ${mM} vertices and ${zM} indices, the accessors declare ${jM.vertices} and ${jM.indices}`);const HM=iM(rM),hM=[];for(const{kind:rM,id:iM,components:OM}of SM){const SM=PM.GetAttributeByUniqueId(QM,iM);if(!SM||0===SM.ptr)throw new MM(`Draco: no attribute with id ${iM} (${rM})`);const jM=SM.data_type();if(!HM[jM])throw new MM(`Draco: Cannot decode invalid data type ${jM}`);if(SM.num_components()!==OM)throw new MM(`Draco: ${rM} decodes to ${SM.num_components()} components, its accessor declares ${OM}`);hM.push([rM,SM,jM])}return aM({dracoDecoder:PM,geometry:QM,triangles:LM===rM.TRIANGULAR_MESH,numPoints:mM,numIndices:zM,attributes:hM})}finally{QM&&rM.destroy(QM),nM&&rM.destroy(nM),PM&&rM.destroy(PM)}}const SM=self;let jM=null;self.onmessage=MM=>{let{data:aM}=MM;if("init"===aM.id){try{importScripts(aM.url),jM=DracoDecoderModule({wasmBinary:aM.wasmBinary}),SM.postMessage({id:"initDone"})}catch(LM){SM.postMessage({id:"initError",message:LM instanceof Error?LM.message:String(LM)})}return}const{seq:PM,data:nM,attributeIds:QM,expected:zM}=aM;jM?jM.then((MM=>{try{const jM=function(MM,SM,jM,aM){const PM=Object.keys(jM).map((MM=>({kind:MM,id:jM[MM],components:aM.components[MM]})));return OM(MM,SM,PM,aM,(OM=>{let{dracoDecoder:SM,geometry:jM,triangles:aM,numPoints:PM,numIndices:nM,attributes:QM}=OM;const zM=iM(MM);let LM=null;if(aM){const iM=4*nM,OM=rM(MM,iM);try{SM.GetTrianglesUInt32Array(jM,iM,OM),LM=new Uint32Array(nM),LM.set(new Uint32Array(MM.HEAPF32.buffer,OM,nM))}finally{MM._free(OM)}}const mM=[];for(const[iM,HM,hM]of QM){const[OM]=zM[hM],aM=HM.num_components(),nM=PM*aM,QM=nM*OM.BYTES_PER_ELEMENT,LM=rM(MM,QM);try{SM.GetAttributeDataArrayForAllPoints(jM,HM,hM,QM,LM),mM.push({kind:iM,data:new OM(MM.HEAPF32.buffer,LM,nM).slice(),size:aM,byteOffset:HM.byte_offset(),byteStride:HM.byte_stride(),normalized:HM.normalized()})}finally{MM._free(LM)}}return{indices:LM,attributes:mM,totalVertices:PM}}))}(MM,nM,QM,zM),aM=jM.attributes.map((MM=>MM.data.buffer));jM.indices&&aM.push(jM.indices.buffer),SM.postMessage({id:"decoded",seq:PM,...jM},aM)}catch(LM){SM.postMessage({id:"decodeError",seq:PM,message:LM instanceof Error?LM.message:String(LM)})}}),(MM=>{SM.postMessage({id:"decodeError",seq:PM,message:MM instanceof Error?MM.message:String(MM)})})):SM.postMessage({id:"decodeError",seq:PM,message:"Draco: the decoder module is not loaded"})}})();', "Worker", void 0, iM.p + "dracoDecode.worker.a264d6a6.worker.js")
+    function pV() {
+      return yV()('(()=>{class VV extends Error{}function eV(eV,xV){const JV=eV._malloc(xV);if(0===JV)throw new VV(`Draco: the decoder\'s heap refused ${xV} bytes`);return JV}function xV(VV){return{[VV.DT_FLOAT32]:[Float32Array,5126],[VV.DT_INT8]:[Int8Array,5120],[VV.DT_INT16]:[Int16Array,5122],[VV.DT_INT32]:[Int32Array,5124],[VV.DT_UINT8]:[Uint8Array,5121],[VV.DT_UINT16]:[Uint16Array,5123],[VV.DT_UINT32]:[Uint32Array,5125]}}function JV(eV,JV,YV,UV,yV){let pV=null,QV=null,nV=null;try{pV=new eV.Decoder,QV=new eV.DecoderBuffer,QV.Init(JV,JV.byteLength);let wV=0;const ZV=pV.GetEncodedGeometryType(QV);if(ZV===eV.TRIANGULAR_MESH){const xV=new eV.Mesh;nV=xV;const JV=pV.DecodeBufferToMesh(QV,xV);if(!JV.ok()||0===xV.ptr)throw new VV(JV.error_msg());wV=3*xV.num_faces()}else{if(ZV!==eV.POINT_CLOUD)throw new VV(`Draco: Cannot decode invalid geometry type ${ZV}`);{const xV=new eV.PointCloud;nV=xV;const JV=pV.DecodeBufferToPointCloud(QV,xV);if(!JV.ok()||!xV.ptr)throw new VV(JV.error_msg())}}const vV=nV.num_points();if(vV!==UV.vertices||wV!==UV.indices)throw new VV(`Draco: decoded ${vV} vertices and ${wV} indices, the accessors declare ${UV.vertices} and ${UV.indices}`);const rV=xV(eV),kV=[];for(const{kind:eV,id:xV,components:JV}of YV){const YV=pV.GetAttributeByUniqueId(nV,xV);if(!YV||0===YV.ptr)throw new VV(`Draco: no attribute with id ${xV} (${eV})`);const UV=YV.data_type();if(!rV[UV])throw new VV(`Draco: Cannot decode invalid data type ${UV}`);if(YV.num_components()!==JV)throw new VV(`Draco: ${eV} decodes to ${YV.num_components()} components, its accessor declares ${JV}`);kV.push([eV,YV,UV])}return yV({dracoDecoder:pV,geometry:nV,triangles:ZV===eV.TRIANGULAR_MESH,numPoints:vV,numIndices:wV,attributes:kV})}finally{nV&&eV.destroy(nV),QV&&eV.destroy(QV),pV&&eV.destroy(pV)}}const YV=self;let UV=null;self.onmessage=VV=>{let{data:yV}=VV;if("init"===yV.id){try{importScripts(yV.url),UV=DracoDecoderModule({wasmBinary:yV.wasmBinary}),YV.postMessage({id:"initDone"})}catch(ZV){YV.postMessage({id:"initError",message:ZV instanceof Error?ZV.message:String(ZV)})}return}const{seq:pV,data:QV,attributeIds:nV,expected:wV}=yV;UV?UV.then((VV=>{try{const UV=function(VV,YV,UV,yV){const pV=Object.keys(UV).map((VV=>({kind:VV,id:UV[VV],components:yV.components[VV]})));return JV(VV,YV,pV,yV,(JV=>{let{dracoDecoder:YV,geometry:UV,triangles:yV,numPoints:pV,numIndices:QV,attributes:nV}=JV;const wV=xV(VV);let ZV=null;if(yV){const xV=4*QV,JV=eV(VV,xV);try{YV.GetTrianglesUInt32Array(UV,xV,JV),ZV=new Uint32Array(QV),ZV.set(new Uint32Array(VV.HEAPF32.buffer,JV,QV))}finally{VV._free(JV)}}const vV=[];for(const[xV,rV,kV]of nV){const[JV]=wV[kV],yV=rV.num_components(),QV=pV*yV,nV=QV*JV.BYTES_PER_ELEMENT,ZV=eV(VV,nV);try{YV.GetAttributeDataArrayForAllPoints(UV,rV,kV,nV,ZV),vV.push({kind:xV,data:new JV(VV.HEAPF32.buffer,ZV,QV).slice(),size:yV,byteOffset:rV.byte_offset(),byteStride:rV.byte_stride(),normalized:rV.normalized()})}finally{VV._free(ZV)}}return{indices:ZV,attributes:vV,totalVertices:pV}}))}(VV,QV,nV,wV),yV=UV.attributes.map((VV=>VV.data.buffer));UV.indices&&yV.push(UV.indices.buffer),YV.postMessage({id:"decoded",seq:pV,...UV},yV)}catch(ZV){YV.postMessage({id:"decodeError",seq:pV,message:ZV instanceof Error?ZV.message:String(ZV)})}}),(VV=>{YV.postMessage({id:"decodeError",seq:pV,message:VV instanceof Error?VV.message:String(VV)})})):YV.postMessage({id:"decodeError",seq:pV,message:"Draco: the decoder module is not loaded"})}})();', "Worker", void 0, xV.p + "dracoDecode.worker.dbcd5e37.worker.js")
     }
-    var nM = iM(83);
-    const QM = 1e3;
-    let zM = null,
-      LM = null;
-    const mM = [],
-      HM = [];
-    let hM = 0;
-    const JM = {
+    var QV = xV(99);
+    const nV = 1e3;
+    let wV = null,
+      ZV = null;
+    const vV = [],
+      rV = [];
+    let kV = 0;
+    const bV = {
         decodes: 0,
         workersStarted: 0,
         mostWorkers: 0
       },
-      dM = function(MM, rM) {
-        const iM = MM ? Math.max(1, Math.min(Math.floor(.5 * MM), 4)) : 1;
-        return rM ? Math.min(iM, 2) : iM
-      }("object" === typeof navigator ? navigator.hardwareConcurrency : void 0, (0, nM.isMobile)());
+      EV = function(VV, eV) {
+        const xV = VV ? Math.max(1, Math.min(Math.floor(.5 * VV), 4)) : 1;
+        return eV ? Math.min(xV, 2) : xV
+      }("object" === typeof navigator ? navigator.hardwareConcurrency : void 0, (0, QV.isMobile)());
 
-    function yM() {
-      if (!zM) return Promise.reject(new Error("Draco: configureDracoPool was not called"));
+    function BV() {
+      if (!wV) return Promise.reject(new Error("Draco: configureDracoPool was not called"));
       const {
-        scriptUrl: MM,
-        wasmBinaryUrl: rM
-      } = zM;
-      return LM ??= fetch(rM).then((MM => {
-        if (!MM.ok) throw new Error(`Draco: fetching ${rM} failed: ${MM.status}`);
-        return MM.arrayBuffer()
-      })), LM.catch((() => {
-        LM = null
-      })), JM.workersStarted++, LM.then((rM => new Promise(((iM, OM) => {
-        const SM = new PM;
-        SM.onerror = MM => {
-          SM.onmessage = null, SM.onerror = null, SM.terminate(), OM(new Error("Draco: the decode worker failed to start" + (MM.message ? `: ${MM.message}` : " (its script did not load)")))
-        }, SM.onmessage = MM => {
+        scriptUrl: VV,
+        wasmBinaryUrl: eV
+      } = wV;
+      return ZV ??= fetch(eV).then((VV => {
+        if (!VV.ok) throw new Error(`Draco: fetching ${eV} failed: ${VV.status}`);
+        return VV.arrayBuffer()
+      })), ZV.catch((() => {
+        ZV = null
+      })), bV.workersStarted++, ZV.then((eV => new Promise(((xV, JV) => {
+        const YV = new pV;
+        YV.onerror = VV => {
+          YV.onmessage = null, YV.onerror = null, YV.terminate(), JV(new Error("Draco: the decode worker failed to start" + (VV.message ? `: ${VV.message}` : " (its script did not load)")))
+        }, YV.onmessage = VV => {
           let {
-            data: rM
-          } = MM;
-          SM.onmessage = null, SM.onerror = null, "initDone" === rM.id ? iM(SM) : (SM.terminate(), OM(new Error(`Draco: ${"initError"===rM.id?rM.message:"the worker did not start"}`)))
+            data: eV
+          } = VV;
+          YV.onmessage = null, YV.onerror = null, "initDone" === eV.id ? xV(YV) : (YV.terminate(), JV(new Error(`Draco: ${"initError"===eV.id?eV.message:"the worker did not start"}`)))
         };
-        const jM = rM.slice(0),
-          aM = {
+        const UV = eV.slice(0),
+          yV = {
             id: "init",
-            url: MM,
-            wasmBinary: jM
+            url: VV,
+            wasmBinary: UV
           };
-        SM.postMessage(aM, [jM])
+        YV.postMessage(yV, [UV])
       }))))
     }
 
-    function lM(MM) {
-      const rM = mM.indexOf(MM); - 1 !== rM && mM.splice(rM, 1);
-      const iM = HM.shift();
-      iM && UM(iM)
+    function jV(VV) {
+      const eV = vV.indexOf(VV); - 1 !== eV && vV.splice(eV, 1);
+      const xV = rV.shift();
+      xV && tV(xV)
     }
 
-    function EM(MM, rM) {
-      MM.busy = !0, MM.releaseTimer && (clearTimeout(MM.releaseTimer), MM.releaseTimer = null);
-      MM.worker.then((iM => {
-        const OM = hM++;
-        iM.onmessage = SM => {
+    function qV(VV, eV) {
+      VV.busy = !0, VV.releaseTimer && (clearTimeout(VV.releaseTimer), VV.releaseTimer = null);
+      VV.worker.then((xV => {
+        const JV = kV++;
+        xV.onmessage = YV => {
           let {
-            data: jM
-          } = SM;
-          if (("decoded" === jM.id || "decodeError" === jM.id) && jM.seq === OM) {
-            if (iM.onmessage = null, iM.onerror = null, "decoded" === jM.id) return JM.decodes++, rM.resolve({
-              indices: jM.indices,
-              attributes: jM.attributes,
-              totalVertices: jM.totalVertices
+            data: UV
+          } = YV;
+          if (("decoded" === UV.id || "decodeError" === UV.id) && UV.seq === JV) {
+            if (xV.onmessage = null, xV.onerror = null, "decoded" === UV.id) return bV.decodes++, eV.resolve({
+              indices: UV.indices,
+              attributes: UV.attributes,
+              totalVertices: UV.totalVertices
             }), void(() => {
-              const rM = HM.shift();
-              rM ? EM(MM, rM) : (MM.busy = !1, MM.releaseTimer = setTimeout((() => {
-                const rM = mM.indexOf(MM); - 1 !== rM && mM.splice(rM, 1), MM.worker.then((MM => {
-                  MM.terminate()
+              const eV = rV.shift();
+              eV ? qV(VV, eV) : (VV.busy = !1, VV.releaseTimer = setTimeout((() => {
+                const eV = vV.indexOf(VV); - 1 !== eV && vV.splice(eV, 1), VV.worker.then((VV => {
+                  VV.terminate()
                 }))
-              }), QM))
+              }), nV))
             })();
-            iM.terminate(), rM.reject(new Error(jM.message)), lM(MM)
+            xV.terminate(), eV.reject(new Error(UV.message)), jV(VV)
           }
-        }, iM.onerror = OM => {
-          iM.onmessage = null, iM.onerror = null, iM.terminate(), rM.reject(new Error(`Draco: the decode worker failed: ${OM.message}`)), lM(MM)
+        }, xV.onerror = JV => {
+          xV.onmessage = null, xV.onerror = null, xV.terminate(), eV.reject(new Error(`Draco: the decode worker failed: ${JV.message}`)), jV(VV)
         };
-        const SM = {
+        const YV = {
           id: "decode",
-          seq: OM,
-          data: rM.data,
-          attributeIds: rM.attributeIds,
-          expected: rM.expected
+          seq: JV,
+          data: eV.data,
+          attributeIds: eV.attributeIds,
+          expected: eV.expected
         };
-        iM.postMessage(SM, [rM.data.buffer])
-      }), (iM => {
-        rM.reject(iM instanceof Error ? iM : new Error(String(iM))), lM(MM)
+        xV.postMessage(YV, [eV.data.buffer])
+      }), (xV => {
+        eV.reject(xV instanceof Error ? xV : new Error(String(xV))), jV(VV)
       }))
     }
 
-    function UM(MM) {
-      const rM = mM.find((MM => !MM.busy));
-      if (rM) EM(rM, MM);
+    function tV(VV) {
+      const eV = vV.find((VV => !VV.busy));
+      if (eV) qV(eV, VV);
       else {
-        if (mM.length < dM) {
-          const rM = {
-            worker: yM(),
+        if (vV.length < EV) {
+          const eV = {
+            worker: BV(),
             busy: !0,
             releaseTimer: null
           };
-          return mM.push(rM), JM.mostWorkers = Math.max(JM.mostWorkers, mM.length), void EM(rM, MM)
+          return vV.push(eV), bV.mostWorkers = Math.max(bV.mostWorkers, vV.length), void qV(eV, VV)
         }
-        HM.push(MM)
+        rV.push(VV)
       }
     }
 
-    function GM(MM, rM, iM) {
-      return new Promise(((OM, SM) => {
-        UM({
-          data: new Int8Array(MM.buffer, MM.byteOffset, MM.byteLength).slice(),
-          attributeIds: rM,
-          expected: iM,
-          resolve: OM,
-          reject: SM
+    function FV(VV, eV, xV) {
+      return new Promise(((JV, YV) => {
+        tV({
+          data: new Int8Array(VV.buffer, VV.byteOffset, VV.byteLength).slice(),
+          attributeIds: eV,
+          expected: xV,
+          resolve: JV,
+          reject: YV
         })
       }))
     }
-    var CM = iM(38340),
-      eM = iM(38347),
-      bM = iM(35120),
-      wM = iM(35113);
-    const tM = {
+    var TV = xV(38542),
+      PV = xV(38547),
+      AV = xV(35415),
+      NV = xV(35408);
+    const XV = {
       index: -1,
       magFilter: void 0,
       minFilter: void 0,
@@ -146,323 +146,323 @@ export const modules = {
       wrapT: void 0
     };
 
-    function gM(MM) {
-      const rM = (0, wM.j)(MM.byteLength);
-      if (rM) throw new bM.p(rM);
+    function MV(VV) {
+      const eV = (0, NV.l)(VV.byteLength);
+      if (eV) throw new AV.h(eV);
       const {
-        json: iM,
-        bin: OM
-      } = (0, bM.E)(MM), SM = (0, wM.g)(iM, OM);
-      if (SM) throw new bM.p(SM);
+        json: xV,
+        bin: JV
+      } = (0, AV.v)(VV), YV = (0, NV.h)(xV, JV);
+      if (YV) throw new AV.h(YV);
       try {
-        return function(MM, rM) {
-          var iM, OM, SM, jM, aM, PM, nM, QM, zM, LM, mM, HM, hM, JM, dM;
-          const yM = new Map,
-            lM = iM => {
-              let OM = yM.get(iM);
-              if (!OM) {
-                var SM;
-                const jM = MM.bufferViews[iM],
-                  aM = null !== (SM = jM.byteOffset) && void 0 !== SM ? SM : 0;
-                OM = {
-                  index: iM,
-                  bytes: rM.subarray(aM, aM + jM.byteLength),
-                  byteStride: jM.byteStride
-                }, yM.set(iM, OM)
+        return function(VV, eV) {
+          var xV, JV, YV, UV, yV, pV, QV, nV, wV, ZV, vV, rV, kV, bV, EV;
+          const BV = new Map,
+            jV = xV => {
+              let JV = BV.get(xV);
+              if (!JV) {
+                var YV;
+                const UV = VV.bufferViews[xV],
+                  yV = null !== (YV = UV.byteOffset) && void 0 !== YV ? YV : 0;
+                JV = {
+                  index: xV,
+                  bytes: eV.subarray(yV, yV + UV.byteLength),
+                  byteStride: UV.byteStride
+                }, BV.set(xV, JV)
               }
-              return OM
+              return JV
             },
-            EM = new Map,
-            UM = rM => {
-              let iM = EM.get(rM);
-              if (!iM) {
-                var OM;
-                const SM = MM.accessors[rM];
-                iM = {
-                  index: rM,
-                  count: SM.count,
-                  type: SM.type,
-                  numComponents: bM.s[SM.type],
-                  componentType: SM.componentType,
-                  normalized: null !== (OM = SM.normalized) && void 0 !== OM && OM,
-                  byteOffset: SM.byteOffset,
-                  bufferView: void 0 === SM.bufferView ? null : lM(SM.bufferView),
-                  min: SM.min,
-                  max: SM.max
-                }, EM.set(rM, iM)
+            qV = new Map,
+            tV = eV => {
+              let xV = qV.get(eV);
+              if (!xV) {
+                var JV;
+                const YV = VV.accessors[eV];
+                xV = {
+                  index: eV,
+                  count: YV.count,
+                  type: YV.type,
+                  numComponents: AV.l[YV.type],
+                  componentType: YV.componentType,
+                  normalized: null !== (JV = YV.normalized) && void 0 !== JV && JV,
+                  byteOffset: YV.byteOffset,
+                  bufferView: void 0 === YV.bufferView ? null : jV(YV.bufferView),
+                  min: YV.min,
+                  max: YV.max
+                }, qV.set(eV, xV)
               }
-              return iM
+              return xV
             },
-            GM = null !== (iM = null === (OM = MM.extensionsUsed) || void 0 === OM ? void 0 : OM.includes("KHR_draco_mesh_compression")) && void 0 !== iM && iM,
-            CM = (null !== (SM = MM.meshes) && void 0 !== SM ? SM : []).map(((rM, iM) => {
-              const OM = rM.primitives.map(((rM, iM) => {
-                var OM, SM, jM;
-                const aM = GM ? null === (OM = rM.extensions) || void 0 === OM ? void 0 : OM.KHR_draco_mesh_compression : void 0;
-                let PM = null;
-                const nM = [];
-                if (aM) {
-                  const iM = {
-                    vertices: MM.accessors[rM.attributes.POSITION].count,
-                    indices: void 0 === rM.indices ? 0 : MM.accessors[rM.indices].count,
+            FV = null !== (xV = null === (JV = VV.extensionsUsed) || void 0 === JV ? void 0 : JV.includes("KHR_draco_mesh_compression")) && void 0 !== xV && xV,
+            TV = (null !== (YV = VV.meshes) && void 0 !== YV ? YV : []).map(((eV, xV) => {
+              const JV = eV.primitives.map(((eV, xV) => {
+                var JV, YV, UV;
+                const yV = FV ? null === (JV = eV.extensions) || void 0 === JV ? void 0 : JV.KHR_draco_mesh_compression : void 0;
+                let pV = null;
+                const QV = [];
+                if (yV) {
+                  const xV = {
+                    vertices: VV.accessors[eV.attributes.POSITION].count,
+                    indices: void 0 === eV.indices ? 0 : VV.accessors[eV.indices].count,
                     components: {}
                   };
-                  PM = {
-                    bufferView: lM(aM.bufferView),
+                  pV = {
+                    bufferView: jV(yV.bufferView),
                     attributeIds: {},
                     normalized: {},
-                    expected: iM
+                    expected: xV
                   };
-                  for (const [OM, SM] of bM.h) {
-                    const jM = aM.attributes[OM];
-                    if (void 0 === jM) continue;
-                    PM.attributeIds[SM] = jM;
-                    const nM = rM.attributes[OM];
-                    var QM;
-                    if (void 0 !== nM) PM.normalized[SM] = null !== (QM = MM.accessors[nM].normalized) && void 0 !== QM && QM, iM.components[SM] = bM.s[MM.accessors[nM].type]
+                  for (const [JV, YV] of AV.f) {
+                    const UV = yV.attributes[JV];
+                    if (void 0 === UV) continue;
+                    pV.attributeIds[YV] = UV;
+                    const QV = eV.attributes[JV];
+                    var nV;
+                    if (void 0 !== QV) pV.normalized[YV] = null !== (nV = VV.accessors[QV].normalized) && void 0 !== nV && nV, xV.components[YV] = AV.l[VV.accessors[QV].type]
                   }
                 } else
-                  for (const [MM, zM] of bM.h) {
-                    const iM = rM.attributes[MM];
-                    void 0 !== iM && nM.push({
-                      semantic: MM,
-                      kind: zM,
-                      accessor: UM(iM)
+                  for (const [VV, wV] of AV.f) {
+                    const xV = eV.attributes[VV];
+                    void 0 !== xV && QV.push({
+                      semantic: VV,
+                      kind: wV,
+                      accessor: tV(xV)
                     })
                   }
                 return {
-                  index: iM,
-                  mode: null !== (SM = rM.mode) && void 0 !== SM ? SM : 4,
-                  attributes: nM,
-                  indices: aM || void 0 === rM.indices ? null : UM(rM.indices),
-                  position: void 0 === rM.attributes.POSITION ? null : UM(rM.attributes.POSITION),
-                  material: null !== (jM = rM.material) && void 0 !== jM ? jM : null,
-                  draco: PM
+                  index: xV,
+                  mode: null !== (YV = eV.mode) && void 0 !== YV ? YV : 4,
+                  attributes: QV,
+                  indices: yV || void 0 === eV.indices ? null : tV(eV.indices),
+                  position: void 0 === eV.attributes.POSITION ? null : tV(eV.attributes.POSITION),
+                  material: null !== (UV = eV.material) && void 0 !== UV ? UV : null,
+                  draco: pV
                 }
               }));
               return {
-                index: iM,
-                name: rM.name,
-                primitives: OM,
-                extras: rM.extras
+                index: xV,
+                name: eV.name,
+                primitives: JV,
+                extras: eV.extras
               }
             })),
-            eM = (null !== (jM = MM.nodes) && void 0 !== jM ? jM : []).map(((MM, rM) => {
-              var iM, OM;
+            PV = (null !== (UV = VV.nodes) && void 0 !== UV ? UV : []).map(((VV, eV) => {
+              var xV, JV;
               return {
-                index: rM,
-                name: MM.name,
-                children: null !== (iM = MM.children) && void 0 !== iM ? iM : [],
-                mesh: null !== (OM = MM.mesh) && void 0 !== OM ? OM : null,
-                translation: MM.translation,
-                rotation: MM.rotation,
-                scale: MM.scale,
-                hasCamera: void 0 !== MM.camera,
-                extras: MM.extras
+                index: eV,
+                name: VV.name,
+                children: null !== (xV = VV.children) && void 0 !== xV ? xV : [],
+                mesh: null !== (JV = VV.mesh) && void 0 !== JV ? JV : null,
+                translation: VV.translation,
+                rotation: VV.rotation,
+                scale: VV.scale,
+                hasCamera: void 0 !== VV.camera,
+                extras: VV.extras
               }
             })),
-            wM = null !== (aM = null === (PM = MM.extensionsUsed) || void 0 === PM ? void 0 : PM.includes("KHR_materials_unlit")) && void 0 !== aM && aM,
-            gM = null !== (nM = null === (QM = MM.extensionsUsed) || void 0 === QM ? void 0 : QM.includes("KHR_texture_transform")) && void 0 !== nM && nM,
-            uM = (null !== (zM = MM.materials) && void 0 !== zM ? zM : []).map(((MM, rM) => {
-              var iM, OM, SM, jM;
-              const aM = MM.pbrMetallicRoughness,
-                PM = null === aM || void 0 === aM ? void 0 : aM.baseColorTexture;
+            NV = null !== (yV = null === (pV = VV.extensionsUsed) || void 0 === pV ? void 0 : pV.includes("KHR_materials_unlit")) && void 0 !== yV && yV,
+            MV = null !== (QV = null === (nV = VV.extensionsUsed) || void 0 === nV ? void 0 : nV.includes("KHR_texture_transform")) && void 0 !== QV && QV,
+            zV = (null !== (wV = VV.materials) && void 0 !== wV ? wV : []).map(((VV, eV) => {
+              var xV, JV, YV, UV;
+              const yV = VV.pbrMetallicRoughness,
+                pV = null === yV || void 0 === yV ? void 0 : yV.baseColorTexture;
               return {
-                index: rM,
-                name: MM.name,
-                extras: MM.extras,
-                unlit: wM && void 0 !== (null === (iM = MM.extensions) || void 0 === iM ? void 0 : iM.KHR_materials_unlit),
-                pbr: aM ? {
-                  baseColorFactor: aM.baseColorFactor,
-                  metallicFactor: aM.metallicFactor,
-                  roughnessFactor: aM.roughnessFactor
+                index: eV,
+                name: VV.name,
+                extras: VV.extras,
+                unlit: NV && void 0 !== (null === (xV = VV.extensions) || void 0 === xV ? void 0 : xV.KHR_materials_unlit),
+                pbr: yV ? {
+                  baseColorFactor: yV.baseColorFactor,
+                  metallicFactor: yV.metallicFactor,
+                  roughnessFactor: yV.roughnessFactor
                 } : null,
-                baseColorTexture: PM ? {
-                  texture: PM.index,
-                  transform: gM && (null === (OM = PM.extensions) || void 0 === OM ? void 0 : OM.KHR_texture_transform) || null
+                baseColorTexture: pV ? {
+                  texture: pV.index,
+                  transform: MV && (null === (JV = pV.extensions) || void 0 === JV ? void 0 : JV.KHR_texture_transform) || null
                 } : null,
-                emissiveFactor: MM.emissiveFactor,
-                alphaMode: null !== (SM = MM.alphaMode) && void 0 !== SM ? SM : "OPAQUE",
-                alphaCutoff: MM.alphaCutoff,
-                doubleSided: null !== (jM = MM.doubleSided) && void 0 !== jM && jM
+                emissiveFactor: VV.emissiveFactor,
+                alphaMode: null !== (YV = VV.alphaMode) && void 0 !== YV ? YV : "OPAQUE",
+                alphaCutoff: VV.alphaCutoff,
+                doubleSided: null !== (UV = VV.doubleSided) && void 0 !== UV && UV
               }
             })),
-            RM = (null !== (LM = MM.textures) && void 0 !== LM ? LM : []).map(((rM, iM) => {
-              var OM, SM;
-              const jM = void 0 === rM.sampler ? tM : {
-                index: rM.sampler,
-                ...null === (OM = MM.samplers) || void 0 === OM ? void 0 : OM[rM.sampler]
+            GV = (null !== (ZV = VV.textures) && void 0 !== ZV ? ZV : []).map(((eV, xV) => {
+              var JV, YV;
+              const UV = void 0 === eV.sampler ? XV : {
+                index: eV.sampler,
+                ...null === (JV = VV.samplers) || void 0 === JV ? void 0 : JV[eV.sampler]
               };
               return {
-                index: iM,
+                index: xV,
                 sampler: {
-                  index: jM.index,
-                  magFilter: jM.magFilter,
-                  minFilter: jM.minFilter,
-                  wrapS: jM.wrapS,
-                  wrapT: jM.wrapT
+                  index: UV.index,
+                  magFilter: UV.magFilter,
+                  minFilter: UV.minFilter,
+                  wrapS: UV.wrapS,
+                  wrapT: UV.wrapT
                 },
-                image: null !== (SM = rM.source) && void 0 !== SM ? SM : -1
+                image: null !== (YV = eV.source) && void 0 !== YV ? YV : -1
               }
             })),
-            pM = (null !== (mM = MM.images) && void 0 !== mM ? mM : []).map(((MM, rM) => ({
-              index: rM,
-              name: MM.name,
-              mimeType: MM.mimeType,
-              bufferView: lM(MM.bufferView)
+            WV = (null !== (vV = VV.images) && void 0 !== vV ? vV : []).map(((VV, eV) => ({
+              index: eV,
+              name: VV.name,
+              mimeType: VV.mimeType,
+              bufferView: jV(VV.bufferView)
             }))),
-            WM = null !== (HM = (0, bM.B)(MM)) && void 0 !== HM ? HM : 0;
+            RV = null !== (rV = (0, AV.u)(VV)) && void 0 !== rV ? rV : 0;
           return {
-            json: MM,
-            rootNodes: null !== (hM = null === (JM = MM.scenes) || void 0 === JM || null === (dM = JM[WM]) || void 0 === dM ? void 0 : dM.nodes) && void 0 !== hM ? hM : [],
-            nodes: eM,
-            meshes: CM,
-            materials: uM,
-            textures: RM,
-            images: pM
+            json: VV,
+            rootNodes: null !== (kV = null === (bV = VV.scenes) || void 0 === bV || null === (EV = bV[RV]) || void 0 === EV ? void 0 : EV.nodes) && void 0 !== kV ? kV : [],
+            nodes: PV,
+            meshes: TV,
+            materials: zV,
+            textures: GV,
+            images: WV
           }
-        }(iM, OM)
-      } catch (jM) {
-        throw jM instanceof bM.l ? jM : new bM.l(`reading the GLB failed: ${jM instanceof Error?jM.message:String(jM)}`)
+        }(xV, JV)
+      } catch (UV) {
+        throw UV instanceof AV.g ? UV : new AV.g(`reading the GLB failed: ${UV instanceof Error?UV.message:String(UV)}`)
       }
     }
-    async function uM(MM, rM) {
-      var iM, OM;
-      const SM = MM.draco;
-      if (!SM) throw new bM.l("not a Draco primitive");
-      let jM;
+    async function zV(VV, eV) {
+      var xV, JV;
+      const YV = VV.draco;
+      if (!YV) throw new AV.g("not a Draco primitive");
+      let UV;
       try {
-        jM = await rM(SM.bufferView.bytes, SM.attributeIds, SM.expected)
-      } catch (QM) {
-        throw new bM.l(`Draco decoding failed: ${QM instanceof Error?QM.message:String(QM)}`)
+        UV = await eV(YV.bufferView.bytes, YV.attributeIds, YV.expected)
+      } catch (nV) {
+        throw new AV.g(`Draco decoding failed: ${nV instanceof Error?nV.message:String(nV)}`)
       }
       const {
-        vertices: aM,
-        indices: PM,
-        components: nM
-      } = SM.expected;
-      if (jM.totalVertices !== aM || (null !== (iM = null === (OM = jM.indices) || void 0 === OM ? void 0 : OM.length) && void 0 !== iM ? iM : 0) !== PM || jM.attributes.some((MM => MM.size !== nM[MM.kind] || MM.data.length !== aM * MM.size))) throw new bM.l("Draco decoding gave other counts than the accessors declare");
-      for (const zM of jM.attributes) {
-        const MM = SM.normalized[zM.kind];
-        void 0 !== MM && (zM.normalized = MM)
+        vertices: yV,
+        indices: pV,
+        components: QV
+      } = YV.expected;
+      if (UV.totalVertices !== yV || (null !== (xV = null === (JV = UV.indices) || void 0 === JV ? void 0 : JV.length) && void 0 !== xV ? xV : 0) !== pV || UV.attributes.some((VV => VV.size !== QV[VV.kind] || VV.data.length !== yV * VV.size))) throw new AV.g("Draco decoding gave other counts than the accessors declare");
+      for (const wV of UV.attributes) {
+        const VV = YV.normalized[wV.kind];
+        void 0 !== VV && (wV.normalized = VV)
       }
-      return jM
+      return UV
     }
-    const RM = new WeakMap;
+    const GV = new WeakMap;
 
-    function pM(MM, rM) {
-      var iM;
-      const OM = null !== (iM = RM.get(MM)) && void 0 !== iM ? iM : rM(MM);
-      return RM.set(MM, OM), OM
-    }
-
-    function WM(MM) {
-      const rM = MM.bufferView,
-        iM = 5125 === MM.componentType ? Uint32Array : Uint16Array,
-        OM = rM.bytes.buffer,
-        SM = rM.bytes.byteOffset + (MM.byteOffset || 0);
-      return SM % iM.BYTES_PER_ELEMENT !== 0 ? new iM(OM.slice(SM, SM + MM.count * iM.BYTES_PER_ELEMENT), 0) : new iM(OM, SM, MM.count)
+    function WV(VV, eV) {
+      var xV;
+      const JV = null !== (xV = GV.get(VV)) && void 0 !== xV ? xV : eV(VV);
+      return GV.set(VV, JV), JV
     }
 
-    function sM(MM, rM) {
-      if (MM.min && MM.max) return [new Float64Array(MM.min), new Float64Array(MM.max)];
-      const iM = rM.find((MM => {
+    function RV(VV) {
+      const eV = VV.bufferView,
+        xV = 5125 === VV.componentType ? Uint32Array : Uint16Array,
+        JV = eV.bytes.buffer,
+        YV = eV.bytes.byteOffset + (VV.byteOffset || 0);
+      return YV % xV.BYTES_PER_ELEMENT !== 0 ? new xV(JV.slice(YV, YV + VV.count * xV.BYTES_PER_ELEMENT), 0) : new xV(JV, YV, VV.count)
+    }
+
+    function gV(VV, eV) {
+      if (VV.min && VV.max) return [new Float64Array(VV.min), new Float64Array(VV.max)];
+      const xV = eV.find((VV => {
           let {
-            kind: rM
-          } = MM;
-          return "position" === rM
+            kind: eV
+          } = VV;
+          return "position" === eV
         })),
-        OM = iM ? (0, eM.f)(iM, MM.count) : new Float32Array(0);
-      return (0, eM.n)(OM.length / 3, ((MM, rM) => OM[3 * MM + rM]))
+        JV = xV ? (0, PV.g)(xV, VV.count) : new Float32Array(0);
+      return (0, PV.s)(JV.length / 3, ((VV, eV) => JV[3 * VV + eV]))
     }
 
-    function DM(MM) {
-      const rM = MM.attributes.map((MM => {
-          var rM, iM;
+    function DV(VV) {
+      const eV = VV.attributes.map((VV => {
+          var eV, xV;
           let {
-            kind: OM,
-            accessor: SM
-          } = MM;
+            kind: JV,
+            accessor: YV
+          } = VV;
           const {
-            bufferView: jM,
-            numComponents: aM
-          } = SM;
-          if (!jM) {
+            bufferView: UV,
+            numComponents: yV
+          } = YV;
+          if (!UV) {
             return {
-              kind: OM,
-              data: pM(SM, (() => new Float32Array(aM * SM.count))),
+              kind: JV,
+              data: WV(YV, (() => new Float32Array(yV * YV.count))),
               offset: 0,
-              stride: 4 * aM,
-              components: aM,
+              stride: 4 * yV,
+              components: yV,
               glType: 5126,
               isNormalized: !1
             }
           }
-          const PM = null !== (rM = jM.byteStride) && void 0 !== rM ? rM : aM * bM.c[SM.componentType];
+          const pV = null !== (eV = UV.byteStride) && void 0 !== eV ? eV : yV * AV.b[YV.componentType];
           return {
-            kind: OM,
-            data: jM.bytes,
-            offset: null !== (iM = SM.byteOffset) && void 0 !== iM ? iM : 0,
-            stride: PM,
-            components: aM,
-            glType: SM.componentType,
-            isNormalized: SM.normalized
+            kind: JV,
+            data: UV.bytes,
+            offset: null !== (xV = YV.byteOffset) && void 0 !== xV ? xV : 0,
+            stride: pV,
+            components: yV,
+            glType: YV.componentType,
+            isNormalized: YV.normalized
           }
         })),
-        iM = MM.indices,
-        OM = iM && pM(iM, WM),
-        SM = MM.position;
-      return new eM.e(rM, OM, SM.count, ...sM(SM, rM))
+        xV = VV.indices,
+        JV = xV && WV(xV, RV),
+        YV = VV.position;
+      return new PV.e(eV, JV, YV.count, ...gV(YV, eV))
     }
-    const kM = [Int8Array, Uint8Array, Int16Array, Uint16Array, Int32Array, Uint32Array, Float32Array];
+    const iV = [Int8Array, Uint8Array, Int16Array, Uint16Array, Int32Array, Uint32Array, Float32Array];
 
-    function ZM(MM, rM) {
-      const iM = rM.attributes.map((MM => {
+    function CV(VV, eV) {
+      const xV = eV.attributes.map((VV => {
         let {
-          kind: rM,
-          data: iM,
-          size: OM,
-          byteOffset: SM,
-          byteStride: jM,
-          normalized: aM
-        } = MM;
+          kind: eV,
+          data: xV,
+          size: JV,
+          byteOffset: YV,
+          byteStride: UV,
+          normalized: yV
+        } = VV;
         return {
-          kind: rM,
-          data: iM,
-          offset: SM,
-          stride: jM,
-          components: OM,
-          glType: 5120 + kM.indexOf(iM.constructor),
-          isNormalized: aM
+          kind: eV,
+          data: xV,
+          offset: YV,
+          stride: UV,
+          components: JV,
+          glType: 5120 + iV.indexOf(xV.constructor),
+          isNormalized: yV
         }
       }));
-      return new eM.e(iM, rM.indices, rM.totalVertices, ...sM(MM.position, iM))
+      return new PV.e(xV, eV.indices, eV.totalVertices, ...gV(VV.position, xV))
     }
 
-    function oM(MM) {
-      const rM = MM.lastIndexOf("/");
-      return rM < 0 ? MM : MM.substring(rM + 1)
+    function aV(VV) {
+      const eV = VV.lastIndexOf("/");
+      return eV < 0 ? VV : VV.substring(eV + 1)
     }
 
-    function fM(MM) {
-      const rM = MM.lastIndexOf("/");
-      return rM < 0 ? "" : MM.substring(0, rM + 1)
+    function oV(VV) {
+      const eV = VV.lastIndexOf("/");
+      return eV < 0 ? "" : VV.substring(0, eV + 1)
     }
 
-    function YM(MM) {
-      return MM.name || `node${MM.index}`
+    function cV(VV) {
+      return VV.name || `node${VV.index}`
     }
-    const NM = {
+    const hV = {
         rotation: [0, 1, 0, 0],
         scale: [1, 1, -1]
       },
-      AM = {
+      lV = {
         9728: 12,
         9729: 2,
         9984: 9,
         9985: 11,
         9986: 10
       },
-      xM = {
+      LV = {
         9728: 1,
         9729: 7,
         9984: 4,
@@ -471,353 +471,353 @@ export const modules = {
         9987: 6
       };
 
-    function vM(MM) {
-      var rM, iM, OM, SM;
-      const jM = null !== (rM = MM.minFilter) && void 0 !== rM ? rM : 9987;
-      return 9729 === (null !== (iM = MM.magFilter) && void 0 !== iM ? iM : 9729) ? null !== (OM = AM[jM]) && void 0 !== OM ? OM : 3 : null !== (SM = xM[jM]) && void 0 !== SM ? SM : 4
+    function fV(VV) {
+      var eV, xV, JV, YV;
+      const UV = null !== (eV = VV.minFilter) && void 0 !== eV ? eV : 9987;
+      return 9729 === (null !== (xV = VV.magFilter) && void 0 !== xV ? xV : 9729) ? null !== (JV = lV[UV]) && void 0 !== JV ? JV : 3 : null !== (YV = LV[UV]) && void 0 !== YV ? YV : 4
     }
-    const FM = {
+    const mV = {
       33071: 0,
       33648: 2
     };
 
-    function BM(MM) {
-      var rM;
-      return null !== (rM = FM[null !== MM && void 0 !== MM ? MM : 10497]) && void 0 !== rM ? rM : 1
+    function KV(VV) {
+      var eV;
+      return null !== (eV = mV[null !== VV && void 0 !== VV ? VV : 10497]) && void 0 !== eV ? eV : 1
     }
 
-    function XM(MM) {
-      return 9728 === MM.minFilter || 9729 === MM.minFilter
+    function HV(VV) {
+      return 9728 === VV.minFilter || 9729 === VV.minFilter
     }
 
-    function IM(MM) {
-      var rM, iM, OM;
-      const SM = Float64Array.from(null !== (rM = MM.scale) && void 0 !== rM ? rM : [1, 1, 1]);
-      return MM.hasCamera && (SM[0] = -1), {
-        translation: Float64Array.from(null !== (iM = MM.translation) && void 0 !== iM ? iM : [0, 0, 0]),
-        rotation: Float64Array.from(null !== (OM = MM.rotation) && void 0 !== OM ? OM : [0, 0, 0, 1]),
-        scale: SM
+    function uV(VV) {
+      var eV, xV, JV;
+      const YV = Float64Array.from(null !== (eV = VV.scale) && void 0 !== eV ? eV : [1, 1, 1]);
+      return VV.hasCamera && (YV[0] = -1), {
+        translation: Float64Array.from(null !== (xV = VV.translation) && void 0 !== xV ? xV : [0, 0, 0]),
+        rotation: Float64Array.from(null !== (JV = VV.rotation) && void 0 !== JV ? JV : [0, 0, 0, 1]),
+        scale: YV
       }
     }
 
-    function KM(MM, rM) {
+    function sV(VV, eV) {
       let {
-        translation: iM,
-        rotation: OM,
-        scale: SM
-      } = MM;
-      const jM = new Float32Array(16);
-      return (0, CM.d)(SM, 0, OM, 0, iM, 0, jM), rM && (0, CM.j)(jM, rM, 0, jM), jM
+        translation: xV,
+        rotation: JV,
+        scale: YV
+      } = VV;
+      const UV = new Float32Array(16);
+      return (0, TV.d)(YV, 0, JV, 0, xV, 0, UV), eV && (0, TV.s)(UV, eV, 0, UV), UV
     }
-    class qM {
-      constructor(MM, rM, iM, OM) {
-        this.model = MM, this.decode = rM, this.fileInfo = iM, this.uniqueRootUrl = OM, this.primitives = void 0, this.parents = new Map, this.uses = new Map, this.own = new Map;
-        const SM = new Set,
-          jM = (rM, iM) => {
-            const OM = MM.nodes[rM];
-            if (this.parents.has(OM)) throw new bM.l(`/nodes/${rM}: Invalid recursive node hierarchy`);
-            this.parents.set(OM, iM);
-            const aM = null === OM.mesh ? [] : MM.meshes[OM.mesh].primitives,
-              PM = aM.map((MM => {
-                const rM = aM.length > 1;
+    class SV {
+      constructor(VV, eV, xV, JV) {
+        this.model = VV, this.decode = eV, this.fileInfo = xV, this.uniqueRootUrl = JV, this.primitives = void 0, this.parents = new Map, this.uses = new Map, this.own = new Map;
+        const YV = new Set,
+          UV = (eV, xV) => {
+            const JV = VV.nodes[eV];
+            if (this.parents.has(JV)) throw new AV.g(`/nodes/${eV}: Invalid recursive node hierarchy`);
+            this.parents.set(JV, xV);
+            const yV = null === JV.mesh ? [] : VV.meshes[JV.mesh].primitives,
+              pV = yV.map((VV => {
+                const eV = yV.length > 1;
                 return {
-                  name: rM ? `${YM(OM)}_primitive${MM.index}` : YM(OM),
-                  node: OM,
-                  primitive: MM,
-                  part: rM,
+                  name: eV ? `${cV(JV)}_primitive${VV.index}` : cV(JV),
+                  node: JV,
+                  primitive: VV,
+                  part: eV,
                   geometry: null
                 }
               }));
-            this.uses.set(OM, PM);
-            const nM = null !== OM.mesh && SM.has(OM.mesh);
-            SM.add(OM.mesh), this.own.set(OM, nM ? [] : PM);
-            for (const MM of OM.children) jM(MM, OM)
+            this.uses.set(JV, pV);
+            const QV = null !== JV.mesh && YV.has(JV.mesh);
+            YV.add(JV.mesh), this.own.set(JV, QV ? [] : pV);
+            for (const VV of JV.children) UV(VV, JV)
           };
-        for (const aM of MM.rootNodes) jM(aM, null);
-        this.primitives = MM.nodes.flatMap((MM => {
-          var rM;
-          return null !== (rM = this.own.get(MM)) && void 0 !== rM ? rM : []
+        for (const yV of VV.rootNodes) UV(yV, null);
+        this.primitives = VV.nodes.flatMap((VV => {
+          var eV;
+          return null !== (eV = this.own.get(VV)) && void 0 !== eV ? eV : []
         }))
       }
       decodeGeometries() {
-        const MM = new Map;
-        return Promise.all(this.primitives.map((async rM => {
+        const VV = new Map;
+        return Promise.all(this.primitives.map((async eV => {
           const {
-            primitive: iM
-          } = rM, OM = iM.draco;
-          let SM = OM ? MM.get(OM.bufferView.index) : Promise.resolve(DM(iM));
-          SM || (SM = uM(iM, this.decode).then((MM => ZM(iM, MM))), MM.set(OM.bufferView.index, SM)), rM.geometry = await SM
+            primitive: xV
+          } = eV, JV = xV.draco;
+          let YV = JV ? VV.get(JV.bufferView.index) : Promise.resolve(DV(xV));
+          YV || (YV = zV(xV, this.decode).then((VV => CV(xV, VV))), VV.set(JV.bufferView.index, YV)), eV.geometry = await YV
         })))
       }
-      parentOf(MM) {
-        var rM;
-        return null !== (rM = this.parents.get(MM)) && void 0 !== rM ? rM : null
+      parentOf(VV) {
+        var eV;
+        return null !== (eV = this.parents.get(VV)) && void 0 !== eV ? eV : null
       }
-      meshesUnder(MM) {
-        const rM = this.model.nodes.filter((MM => this.uses.has(MM)));
-        for (const OM of rM) {
-          const rM = this.uses.get(OM),
-            iM = rM.find((rM => rM.name === MM));
-          if (iM) return 1 === rM.length ? this.subtree(OM) : this.own.get(OM).includes(iM) ? [iM] : []
+      meshesUnder(VV) {
+        const eV = this.model.nodes.filter((VV => this.uses.has(VV)));
+        for (const JV of eV) {
+          const eV = this.uses.get(JV),
+            xV = eV.find((eV => eV.name === VV));
+          if (xV) return 1 === eV.length ? this.subtree(JV) : this.own.get(JV).includes(xV) ? [xV] : []
         }
-        const iM = rM.find((rM => 1 !== this.uses.get(rM).length && YM(rM) === MM));
-        return iM ? this.subtree(iM) : null
+        const xV = eV.find((eV => 1 !== this.uses.get(eV).length && cV(eV) === VV));
+        return xV ? this.subtree(xV) : null
       }
-      subtree(MM) {
-        return [...this.own.get(MM), ...MM.children.flatMap((MM => this.subtree(this.model.nodes[MM])))]
+      subtree(VV) {
+        return [...this.own.get(VV), ...VV.children.flatMap((VV => this.subtree(this.model.nodes[VV])))]
       }
-      worldMatrix(MM, rM, iM) {
-        let OM = KM(IM(rM ? NM : {}), null);
-        const SM = [];
-        for (let aM = MM.part ? MM.node : this.parentOf(MM.node); aM; aM = this.parentOf(aM)) SM.unshift(aM);
-        for (const aM of SM) OM = KM(IM(aM), OM);
-        const jM = IM(MM.part ? {} : MM.node);
-        return void 0 !== iM && jM.scale.fill(iM), KM(jM, OM)
+      worldMatrix(VV, eV, xV) {
+        let JV = sV(uV(eV ? hV : {}), null);
+        const YV = [];
+        for (let yV = VV.part ? VV.node : this.parentOf(VV.node); yV; yV = this.parentOf(yV)) YV.unshift(yV);
+        for (const yV of YV) JV = sV(uV(yV), JV);
+        const UV = uV(VV.part ? {} : VV.node);
+        return void 0 !== xV && UV.scale.fill(xV), sV(UV, JV)
       }
-      floats(MM) {
+      floats(VV) {
         const {
-          vertexAttributes: rM,
-          vertexCount: iM
-        } = MM.geometry;
-        return new Map(rM.map((MM => [MM.kind, (0, eM.f)(MM, iM)])))
+          vertexAttributes: eV,
+          vertexCount: xV
+        } = VV.geometry;
+        return new Map(eV.map((VV => [VV.kind, (0, PV.g)(VV, xV)])))
       }
-      imageUrl(MM) {
-        return function(MM, rM, iM) {
+      imageUrl(VV) {
+        return function(VV, eV, xV) {
           let {
-            name: OM
-          } = rM;
-          return `data:${MM}${OM}#image${iM}`
-        }(this.uniqueRootUrl, this.fileInfo, MM)
+            name: JV
+          } = eV;
+          return `data:${VV}${JV}#image${xV}`
+        }(this.uniqueRootUrl, this.fileInfo, VV)
       }
-      textureDesc(MM, rM) {
-        var iM;
+      textureDesc(VV, eV) {
+        var xV;
         let {
-          texture: OM,
-          transform: SM
-        } = MM;
+          texture: JV,
+          transform: YV
+        } = VV;
         const {
-          sampler: jM,
-          image: aM
-        } = this.model.textures[OM], {
-          bufferView: PM,
-          mimeType: nM,
-          name: QM
-        } = this.model.images[aM], zM = SM && {
-          ...SM.offset ? {
-            uOffset: SM.offset[0],
-            vOffset: SM.offset[1]
+          sampler: UV,
+          image: yV
+        } = this.model.textures[JV], {
+          bufferView: pV,
+          mimeType: QV,
+          name: nV
+        } = this.model.images[yV], wV = YV && {
+          ...YV.offset ? {
+            uOffset: YV.offset[0],
+            vOffset: YV.offset[1]
           } : {},
           uRotationCenter: 0,
           vRotationCenter: 0,
-          ...SM.rotation ? {
-            wAng: -SM.rotation
+          ...YV.rotation ? {
+            wAng: -YV.rotation
           } : {},
-          ...SM.scale ? {
-            uScale: SM.scale[0],
-            vScale: SM.scale[1]
+          ...YV.scale ? {
+            uScale: YV.scale[0],
+            vScale: YV.scale[1]
           } : {}
         };
         return {
-          url: this.imageUrl(aM),
-          noMipmap: XM(jM),
+          url: this.imageUrl(yV),
+          noMipmap: HV(UV),
           invertY: !1,
-          samplingMode: vM(jM),
+          samplingMode: fV(UV),
           data: {
-            bytes: PM.bytes,
-            mimeType: nM,
-            label: QM,
-            context: `/textures/${OM}`
+            bytes: pV.bytes,
+            mimeType: QV,
+            label: nV,
+            context: `/textures/${JV}`
           },
           sets: {
-            wrapU: BM(jM.wrapS),
-            wrapV: BM(jM.wrapT),
-            ...zM,
-            coordinatesIndex: null !== (iM = null === SM || void 0 === SM ? void 0 : SM.texCoord) && void 0 !== iM ? iM : 0,
-            hasAlpha: rM
+            wrapU: KV(UV.wrapS),
+            wrapV: KV(UV.wrapT),
+            ...wV,
+            coordinatesIndex: null !== (xV = null === YV || void 0 === YV ? void 0 : YV.texCoord) && void 0 !== xV ? xV : 0,
+            hasAlpha: eV
           }
         }
       }
     }
-    async function TM(MM, rM, iM, OM, SM, jM) {
-      let aM = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6];
-      const PM = function(MM, rM, iM) {
-          return "string" !== typeof rM ? {
+    async function IV(VV, eV, xV, JV, YV, UV) {
+      let yV = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6];
+      const pV = function(VV, eV, xV) {
+          return "string" !== typeof eV ? {
             url: "",
-            rootUrl: MM,
-            name: iM()
-          } : rM ? rM.startsWith("data:") ? {
-            url: rM,
-            rootUrl: MM,
+            rootUrl: VV,
+            name: xV()
+          } : eV ? eV.startsWith("data:") ? {
+            url: eV,
+            rootUrl: VV,
             name: ""
-          } : MM ? {
-            url: MM + rM,
-            rootUrl: MM,
-            name: rM
+          } : VV ? {
+            url: VV + eV,
+            rootUrl: VV,
+            name: eV
           } : {
-            url: rM,
-            rootUrl: fM(rM),
-            name: oM(rM)
+            url: eV,
+            rootUrl: oV(eV),
+            name: aV(eV)
           } : {
-            url: MM,
-            rootUrl: fM(MM),
-            name: oM(MM)
+            url: VV,
+            rootUrl: oV(VV),
+            name: aV(VV)
           }
-        }(iM, MM, SM),
-        nM = {};
-      rM.addPendingData(nM);
+        }(xV, VV, YV),
+        QV = {};
+      eV.addPendingData(QV);
       try {
-        const iM = gM(await async function(MM, rM) {
-            return "string" !== typeof rM ? rM : MM.url.startsWith("data:") ? (0, bM.v)(MM.url) : await (0, bM.x)(MM.url)
-          }(PM, MM)),
-          nM = new qM(iM, OM, PM, function(MM, rM) {
+        const xV = MV(await async function(VV, eV) {
+            return "string" !== typeof eV ? eV : VV.url.startsWith("data:") ? (0, AV.o)(VV.url) : await (0, AV.r)(VV.url)
+          }(pV, VV)),
+          QV = new SV(xV, JV, pV, function(VV, eV) {
             let {
-              rootUrl: iM,
-              name: OM
-            } = MM;
-            return !iM.startsWith("file:") && OM ? iM : `${iM}${rM()}/`
-          }(PM, SM));
-        return await jM(nM), rM.importedMeshesFiles && (rM.loadingPluginName = "dD", aM && rM.importedMeshesFiles.push(PM.url)), nM
+              rootUrl: xV,
+              name: JV
+            } = VV;
+            return !xV.startsWith("file:") && JV ? xV : `${xV}${eV()}/`
+          }(pV, YV));
+        return await UV(QV), eV.importedMeshesFiles && (eV.loadingPluginName = "ZD", yV && eV.importedMeshesFiles.push(pV.url)), QV
       } finally {
-        rM.removePendingData(nM)
+        eV.removePendingData(QV)
       }
     }
-    var VM = iM(38457),
-      cM = iM(38316),
-      Mr = iM(38864);
+    var dV = xV(38662),
+      OV = xV(38519),
+      Ve = xV(39045);
 
-    function rr(MM) {
-      if (null === MM || void 0 === MM || !MM.min || !MM.max) return null;
-      const [rM, iM, OM] = MM.min, [SM, jM, aM] = MM.max, {
-        BoundingInfo: PM,
-        sh: nM
-      } = (0, VM.c)();
-      return new PM(new nM(rM, iM, OM), new nM(SM, jM, aM))
+    function ee(VV) {
+      if (null === VV || void 0 === VV || !VV.min || !VV.max) return null;
+      const [eV, xV, JV] = VV.min, [YV, UV, yV] = VV.max, {
+        BoundingInfo: pV,
+        Ik: QV
+      } = (0, dV.e)();
+      return new pV(new QV(eV, xV, JV), new QV(YV, UV, yV))
     }
 
-    function ir(MM) {
-      (0, cM.f)(MM) || (MM.geometry && MM.geometry.useBoundingInfoFromGeometry ? MM._updateBoundingInfo() : MM.refreshBoundingInfo(!0, !0))
+    function xe(VV) {
+      (0, OV.f)(VV) || (VV.geometry && VV.geometry.useBoundingInfoFromGeometry ? VV._updateBoundingInfo() : VV.refreshBoundingInfo(!0, !0))
     }
-    class Or {
-      constructor(MM, rM) {
-        this.YJ = MM, this.decode = rM, this.bufferData = Promise.resolve(), this.viewData = new Map, this.viewBuffers = new Map, this.vertexBuffers = new Map, this.dracoGeometry = new Map
+    class Je {
+      constructor(VV, eV) {
+        this.yE = VV, this.decode = eV, this.bufferData = Promise.resolve(), this.viewData = new Map, this.viewBuffers = new Map, this.vertexBuffers = new Map, this.dracoGeometry = new Map
       }
-      viewBytes(MM) {
-        let rM = this.viewData.get(MM.index);
-        return rM || (rM = this.bufferData.then((() => MM.bytes)), this.viewData.set(MM.index, rM)), rM
+      viewBytes(VV) {
+        let eV = this.viewData.get(VV.index);
+        return eV || (eV = this.bufferData.then((() => VV.bytes)), this.viewData.set(VV.index, eV)), eV
       }
-      viewBuffer(MM) {
-        let rM = this.viewBuffers.get(MM.index);
-        return rM || (rM = this.viewBytes(MM).then((MM => new((0, VM.c)().Vz)(this.YJ.ph(), MM, !1))), this.viewBuffers.set(MM.index, rM)), rM
+      viewBuffer(VV) {
+        let eV = this.viewBuffers.get(VV.index);
+        return eV || (eV = this.viewBytes(VV).then((VV => new((0, dV.e)().nZ)(this.yE.sk(), VV, !1))), this.viewBuffers.set(VV.index, eV)), eV
       }
-      vertexBuffer(MM, rM) {
+      vertexBuffer(VV, eV) {
         const {
-          kind: iM,
-          data: OM
-        } = rM, SM = `${MM.index}:${iM}`;
-        let jM = this.vertexBuffers.get(SM);
-        if (!jM) {
-          const aM = MM.bufferView;
-          jM = aM ? this.viewBuffer(aM).then((MM => this.layoutVertexBuffer(MM, rM))) : Promise.resolve(OM).then((MM => new((0, VM.c)().VertexBuffer)(this.YJ.ph(), MM, iM, !1))), this.vertexBuffers.set(SM, jM)
+          kind: xV,
+          data: JV
+        } = eV, YV = `${VV.index}:${xV}`;
+        let UV = this.vertexBuffers.get(YV);
+        if (!UV) {
+          const yV = VV.bufferView;
+          UV = yV ? this.viewBuffer(yV).then((VV => this.layoutVertexBuffer(VV, eV))) : Promise.resolve(JV).then((VV => new((0, dV.e)().VertexBuffer)(this.yE.sk(), VV, xV, !1))), this.vertexBuffers.set(YV, UV)
         }
-        return jM
+        return UV
       }
-      layoutVertexBuffer(MM, rM) {
+      layoutVertexBuffer(VV, eV) {
         let {
-          kind: iM,
-          offset: OM,
-          stride: SM,
-          components: jM,
-          glType: aM,
-          isNormalized: PM
-        } = rM;
-        const nM = this.YJ.ph();
-        return new((0, VM.c)().VertexBuffer)(nM, MM, iM, !1, void 0, SM, void 0, OM, jM, aM, PM, !0, void 0, !0)
+          kind: xV,
+          offset: JV,
+          stride: YV,
+          components: UV,
+          glType: yV,
+          isNormalized: pV
+        } = eV;
+        const QV = this.yE.sk();
+        return new((0, dV.e)().VertexBuffer)(QV, VV, xV, !1, void 0, YV, void 0, JV, UV, yV, pV, !0, void 0, !0)
       }
-      load(MM, rM, iM) {
-        const OM = (0, cM.f)(iM),
-          SM = MM => {
-            OM || (iM._delayInfo = iM._delayInfo || [], -1 === iM._delayInfo.indexOf(MM) && iM._delayInfo.push(MM))
+      load(VV, eV, xV) {
+        const JV = (0, OV.f)(xV),
+          YV = VV => {
+            JV || (xV._delayInfo = xV._delayInfo || [], -1 === xV._delayInfo.indexOf(VV) && xV._delayInfo.push(VV))
           },
-          jM = rM.draco;
-        if (jM) {
-          for (const MM in jM.attributeIds) SM(MM);
-          let aM = this.dracoGeometry.get(jM.bufferView.index);
-          return aM || (aM = this.viewBytes(jM.bufferView).then((async () => {
-            let SM;
+          UV = eV.draco;
+        if (UV) {
+          for (const VV in UV.attributeIds) YV(VV);
+          let yV = this.dracoGeometry.get(UV.bufferView.index);
+          return yV || (yV = this.viewBytes(UV.bufferView).then((async () => {
+            let YV;
             try {
-              SM = await uM(rM, this.decode)
-            } catch (nM) {
-              throw new bM.l(`${MM}: ${nM instanceof Error?nM.message:String(nM)}`)
+              YV = await zV(eV, this.decode)
+            } catch (QV) {
+              throw new AV.g(`${VV}: ${QV instanceof Error?QV.message:String(QV)}`)
             }
-            const jM = ZM(rM, SM);
-            if (OM) return jM;
-            const aM = rr(rM.position),
-              PM = new((0, VM.c)().MirroredGeometry)(iM.name, this.YJ);
-            aM && (PM._boundingInfo = aM, PM.useBoundingInfoFromGeometry = !0), jM.indexData && PM.setIndices(jM.indexData);
-            for (const MM of jM.vertexAttributes) PM.setVerticesBuffer(this.layoutVertexBuffer(MM.data, MM), jM.vertexCount);
-            return PM.link(jM), PM
-          })), this.dracoGeometry.set(jM.bufferView.index, aM)), aM
+            const UV = CV(eV, YV);
+            if (JV) return UV;
+            const yV = ee(eV.position),
+              pV = new((0, dV.e)().MirroredGeometry)(xV.name, this.yE);
+            yV && (pV._boundingInfo = yV, pV.useBoundingInfoFromGeometry = !0), UV.indexData && pV.setIndices(UV.indexData);
+            for (const VV of UV.vertexAttributes) pV.setVerticesBuffer(this.layoutVertexBuffer(VV.data, VV), UV.vertexCount);
+            return pV.link(UV), pV
+          })), this.dracoGeometry.set(UV.bufferView.index, yV)), yV
         }
-        const aM = [],
-          PM = DM(rM);
-        if (OM) return iM.isUnIndexed = !PM.indexData, iM.hasVertexAlpha = (0, Mr.g)(rM), Promise.resolve(PM);
-        const nM = new((0, VM.c)().MirroredGeometry)(iM.name, this.YJ),
+        const yV = [],
+          pV = DV(eV);
+        if (JV) return xV.isUnIndexed = !pV.indexData, xV.hasVertexAlpha = (0, Ve.f)(eV), Promise.resolve(pV);
+        const QV = new((0, dV.e)().MirroredGeometry)(xV.name, this.yE),
           {
-            indexData: QM
-          } = PM;
-        QM ? aM.push(this.viewBytes(rM.indices.bufferView).then((() => {
-          nM.setIndices(QM)
-        }))) : iM.isUnIndexed = !0;
-        for (const [zM, {
-            kind: LM,
-            accessor: mM
-          }] of rM.attributes.entries()) SM(LM), aM.push(this.vertexBuffer(mM, PM.vertexAttributes[zM]).then((MM => {
-          if ("position" === MM.getKind()) {
-            const MM = rr(mM);
-            MM && (nM._boundingInfo = MM, nM.useBoundingInfoFromGeometry = !0)
+            indexData: nV
+          } = pV;
+        nV ? yV.push(this.viewBytes(eV.indices.bufferView).then((() => {
+          QV.setIndices(nV)
+        }))) : xV.isUnIndexed = !0;
+        for (const [wV, {
+            kind: ZV,
+            accessor: vV
+          }] of eV.attributes.entries()) YV(ZV), yV.push(this.vertexBuffer(vV, pV.vertexAttributes[wV]).then((VV => {
+          if ("position" === VV.getKind()) {
+            const VV = ee(vV);
+            VV && (QV._boundingInfo = VV, QV.useBoundingInfoFromGeometry = !0)
           }
-          nM.setVerticesBuffer(MM, PM.vertexCount)
+          QV.setVerticesBuffer(VV, pV.vertexCount)
         })));
-        return (0, Mr.g)(rM) && (iM.hasVertexAlpha = !0), Promise.all(aM).then((() => (nM.link(PM), nM)))
+        return (0, Ve.f)(eV) && (xV.hasVertexAlpha = !0), Promise.all(yV).then((() => (QV.link(pV), QV)))
       }
     }
-    var Sr, jr = iM(38261),
-      ar = iM(38034),
-      Pr = iM(38878),
-      nr = iM(38158),
-      Qr = iM(38235),
-      zr = iM(3063),
-      Lr = iM(38205);
+    var Ye, Ue = xV(38472),
+      ye = xV(38263),
+      pe = xV(39055),
+      Qe = xV(38385),
+      ne = xV(38445),
+      we = xV(3093),
+      Ze = xV(38411);
 
-    function mr(MM, rM) {
-      MM.metadata = MM.metadata || {};
-      const iM = MM._internalMetadata = MM._internalMetadata || {},
-        OM = iM.dD = iM.dD || {};
-      (OM.pointers = OM.pointers || []).push(rM)
+    function ve(VV, eV) {
+      VV.metadata = VV.metadata || {};
+      const xV = VV._internalMetadata = VV._internalMetadata || {},
+        JV = xV.ZD = xV.ZD || {};
+      (JV.pointers = JV.pointers || []).push(eV)
     }
 
-    function Hr(MM, rM) {
-      if (rM && Object.keys(rM).length > 0) {
-        const iM = MM.metadata = MM.metadata || {};
-        (iM.dD = iM.dD || {}).extras = rM
+    function re(VV, eV) {
+      if (eV && Object.keys(eV).length > 0) {
+        const xV = VV.metadata = VV.metadata || {};
+        (xV.ZD = xV.ZD || {}).extras = eV
       }
     }
 
-    function hr(MM, rM) {
-      rM.position = MM.translation ? ar.sh.FromArray(MM.translation) : ar.sh.Zero(), rM.rotationQuaternion = MM.rotation ? ar.Quaternion.FromArray(MM.rotation) : ar.Quaternion.Identity(), rM.UL = MM.scale ? ar.sh.FromArray(MM.scale) : ar.sh.One()
+    function ke(VV, eV) {
+      eV.position = VV.translation ? ye.Ik.FromArray(VV.translation) : ye.Ik.Zero(), eV.rotationQuaternion = VV.rotation ? ye.Quaternion.FromArray(VV.rotation) : ye.Quaternion.Identity(), eV.WZ = VV.scale ? ye.Ik.FromArray(VV.scale) : ye.Ik.One()
     }
-    class Jr {
-      constructor(MM, rM) {
-        if (this.YJ = MM, this.meshes = [], this.transformNodes = [], this.geometries = [], this.materials = [], this.textures = [], this.rootNodes = [], this.release = null, rM) {
-          const rM = MM.ph(),
-            iM = MM.Rk.add((() => {
+    class be {
+      constructor(VV, eV) {
+        if (this.yE = VV, this.meshes = [], this.transformNodes = [], this.geometries = [], this.materials = [], this.textures = [], this.rootNodes = [], this.release = null, eV) {
+          const eV = VV.sk(),
+            xV = VV.eC.add((() => {
               this.dispose()
             })),
-            OM = rM.Rh.add((() => {
-              for (const MM of [...this.geometries, ...this.meshes, ...this.textures]) MM._rebuild()
+            JV = eV.uk.add((() => {
+              for (const VV of [...this.geometries, ...this.meshes, ...this.textures]) VV._rebuild()
             }));
           this.release = () => {
-            MM.Rk.remove(iM), rM.Rh.remove(OM)
+            VV.eC.remove(xV), eV.uk.remove(JV)
           }
         }
       }
@@ -827,267 +827,267 @@ export const modules = {
       addAllToScene() {
         if (this.release) {
           this.release(), this.release = null;
-          for (const MM of this.meshes) this.YJ.JOM(MM);
-          for (const MM of this.materials) this.YJ.addMaterial(MM);
-          for (const MM of this.geometries) this.YJ.addGeometry(MM);
-          for (const MM of this.transformNodes) this.YJ.addTransformNode(MM);
-          for (const MM of this.textures) this.YJ.addTexture(MM)
+          for (const VV of this.meshes) this.yE.gYV(VV);
+          for (const VV of this.materials) this.yE.addMaterial(VV);
+          for (const VV of this.geometries) this.yE.addGeometry(VV);
+          for (const VV of this.transformNodes) this.yE.addTransformNode(VV);
+          for (const VV of this.textures) this.yE.addTexture(VV)
         }
       }
       dispose() {
-        var MM;
-        for (const rM of [this.meshes, this.materials, this.geometries, this.transformNodes, this.textures]) {
-          for (const MM of rM.slice()) MM.dispose();
-          rM.length = 0
+        var VV;
+        for (const eV of [this.meshes, this.materials, this.geometries, this.transformNodes, this.textures]) {
+          for (const VV of eV.slice()) VV.dispose();
+          eV.length = 0
         }
-        null === (MM = this.release) || void 0 === MM || MM.call(this), this.release = null
+        null === (VV = this.release) || void 0 === VV || VV.call(this), this.release = null
       }
     }
-    class dr {
-      constructor(MM, rM, iM, OM, SM, jM, aM) {
-        this.asset = MM, this.YJ = rM, this.tree = iM, this.geometryData = SM, this.materials = jM, this.lite = aM, this.container = void 0, this.root = null, this.nodeObjects = new Map, this.nodePrimitives = new Map, this.materialData = new Map, this.container = OM ? iM : null
+    class Ee {
+      constructor(VV, eV, xV, JV, YV, UV, yV) {
+        this.asset = VV, this.yE = eV, this.tree = xV, this.geometryData = YV, this.materials = UV, this.lite = yV, this.container = void 0, this.root = null, this.nodeObjects = new Map, this.nodePrimitives = new Map, this.materialData = new Map, this.container = JV ? xV : null
       }
-      create(MM) {
-        if (this.lite) return MM();
-        const rM = this.YJ;
-        rM._blockEntityCollection = !!this.container;
+      create(VV) {
+        if (this.lite) return VV();
+        const eV = this.yE;
+        eV._blockEntityCollection = !!this.container;
         try {
-          const rM = MM();
-          return this.container && (rM._parentContainer = this.container), rM
+          const eV = VV();
+          return this.container && (eV._parentContainer = this.container), eV
         } finally {
-          rM._blockEntityCollection = !1
+          eV._blockEntityCollection = !1
         }
       }
-      node(MM, rM) {
-        return this.create((() => this.lite ? rM ? (0, Pr.e)(this.lite, MM) : (0, Pr.p)(this.lite, MM) : rM ? new((0, VM.c)().Mesh)(MM, this.YJ) : new((0, VM.c)().TransformNode)(MM, this.YJ)))
+      node(VV, eV) {
+        return this.create((() => this.lite ? eV ? (0, pe.g)(this.lite, VV) : (0, pe.t)(this.lite, VV) : eV ? new((0, dV.e)().Mesh)(VV, this.yE) : new((0, dV.e)().TransformNode)(VV, this.yE)))
       }
       async load() {
-        var MM;
+        var VV;
         this.asset.model.json.nodes && this.createRoot();
-        const rM = this.lite ? null : this.YJ,
-          iM = null !== (MM = null === rM || void 0 === rM ? void 0 : rM.blockMaterialDirtyMechanism) && void 0 !== MM && MM;
-        let OM;
-        rM && (rM.blockMaterialDirtyMechanism = !0);
+        const eV = this.lite ? null : this.yE,
+          xV = null !== (VV = null === eV || void 0 === eV ? void 0 : eV.blockMaterialDirtyMechanism) && void 0 !== VV && VV;
+        let JV;
+        eV && (eV.blockMaterialDirtyMechanism = !0);
         try {
-          OM = this.loadScene()
+          JV = this.loadScene()
         } finally {
-          null === rM || void 0 === rM || rM._forceBlockMaterialDirtyMechanism(iM)
+          null === eV || void 0 === eV || eV._forceBlockMaterialDirtyMechanism(xV)
         }
-        await OM;
+        await JV;
         const {
-          root: SM,
-          tree: jM
+          root: YV,
+          tree: UV
         } = this;
-        SM && (SM.kR(!0), jM.meshes.push(SM), jM.rootNodes.push(SM));
-        for (const PM of this.asset.model.nodes) {
-          const MM = this.nodeObjects.get(PM.index);
-          MM && ["TransformNode", "LiteNode"].includes(MM.getClassName()) && jM.transformNodes.push(MM);
-          for (const rM of null !== (aM = this.nodePrimitives.get(PM.index)) && void 0 !== aM ? aM : []) {
-            var aM;
-            jM.meshes.push(rM);
-            const MM = rM.geometry;
-            MM && !jM.geometries.includes(MM) && jM.geometries.push(MM)
+        YV && (YV.pW(!0), UV.meshes.push(YV), UV.rootNodes.push(YV));
+        for (const pV of this.asset.model.nodes) {
+          const VV = this.nodeObjects.get(pV.index);
+          VV && ["TransformNode", "LiteNode"].includes(VV.getClassName()) && UV.transformNodes.push(VV);
+          for (const eV of null !== (yV = this.nodePrimitives.get(pV.index)) && void 0 !== yV ? yV : []) {
+            var yV;
+            UV.meshes.push(eV);
+            const VV = eV.geometry;
+            VV && !UV.geometries.includes(VV) && UV.geometries.push(VV)
           }
         }
       }
       createRoot() {
-        const MM = this.node("__root__", !0);
-        this.root = MM, MM.kR(!1), this.YJ.useRightHandedSystem || hr(NM, MM)
+        const VV = this.node("__root__", !0);
+        this.root = VV, VV.pW(!1), this.yE.useRightHandedSystem || ke(hV, VV)
       }
       loadScene() {
-        const MM = [];
-        for (const rM of this.asset.model.rootNodes) MM.push(this.loadNode(this.asset.model.nodes[rM], (MM => {
-          MM.parent = this.root
+        const VV = [];
+        for (const eV of this.asset.model.rootNodes) VV.push(this.loadNode(this.asset.model.nodes[eV], (VV => {
+          VV.parent = this.root
         })));
-        return MM.push(Promise.resolve()), Promise.all(MM).then((() => {}))
+        return VV.push(Promise.resolve()), Promise.all(VV).then((() => {}))
       }
-      loadNode(MM, rM) {
-        const iM = `/nodes/${MM.index}`,
-          OM = [],
-          SM = SM => {
-            if (mr(SM, iM), hr(MM, SM), MM.hasCamera && !this.YJ.useRightHandedSystem) {
+      loadNode(VV, eV) {
+        const xV = `/nodes/${VV.index}`,
+          JV = [],
+          YV = YV => {
+            if (ve(YV, xV), ke(VV, YV), VV.hasCamera && !this.yE.useRightHandedSystem) {
               const {
-                UL: MM
-              } = SM;
-              MM.set(-1, MM.y, MM.z)
+                WZ: VV
+              } = YV;
+              VV.set(-1, VV.y, VV.z)
             }
-            for (const rM of MM.children) OM.push(this.loadNode(this.asset.model.nodes[rM], (MM => {
-              MM.parent = SM
+            for (const eV of VV.children) JV.push(this.loadNode(this.asset.model.nodes[eV], (VV => {
+              VV.parent = YV
             })));
-            (iM => {
-              Hr(iM, MM.extras), rM(iM)
-            })(SM)
+            (xV => {
+              re(xV, VV.extras), eV(xV)
+            })(YV)
           };
-        if (null === MM.mesh) {
-          const rM = this.node(YM(MM), !1);
-          this.nodeObjects.set(MM.index, rM), SM(rM)
+        if (null === VV.mesh) {
+          const eV = this.node(cV(VV), !1);
+          this.nodeObjects.set(VV.index, eV), YV(eV)
         } else {
-          const rM = this.asset.model.meshes[MM.mesh];
-          OM.push(this.loadMesh(`/meshes/${rM.index}`, MM, rM, SM))
+          const eV = this.asset.model.meshes[VV.mesh];
+          JV.push(this.loadMesh(`/meshes/${eV.index}`, VV, eV, YV))
         }
-        return Promise.all(OM).then((() => {
-          for (const iM of null !== (rM = this.nodePrimitives.get(MM.index)) && void 0 !== rM ? rM : []) {
-            var rM;
-            ir(iM)
+        return Promise.all(JV).then((() => {
+          for (const xV of null !== (eV = this.nodePrimitives.get(VV.index)) && void 0 !== eV ? eV : []) {
+            var eV;
+            xe(xV)
           }
-          return this.nodeObjects.get(MM.index)
+          return this.nodeObjects.get(VV.index)
         }))
       }
-      loadMesh(MM, rM, iM, OM) {
-        const SM = [],
-          jM = YM(rM);
-        if (1 === iM.primitives.length) {
-          const OM = iM.primitives[0];
-          SM.push(this.loadPrimitive(`${MM}/primitives/${OM.index}`, jM, OM, (MM => {
-            this.nodeObjects.set(rM.index, MM), this.nodePrimitives.set(rM.index, [MM])
+      loadMesh(VV, eV, xV, JV) {
+        const YV = [],
+          UV = cV(eV);
+        if (1 === xV.primitives.length) {
+          const JV = xV.primitives[0];
+          YV.push(this.loadPrimitive(`${VV}/primitives/${JV.index}`, UV, JV, (VV => {
+            this.nodeObjects.set(eV.index, VV), this.nodePrimitives.set(eV.index, [VV])
           })))
         } else {
-          const OM = this.node(jM, !1);
-          this.nodeObjects.set(rM.index, OM);
-          const aM = [];
-          this.nodePrimitives.set(rM.index, aM);
-          for (const rM of iM.primitives) SM.push(this.loadPrimitive(`${MM}/primitives/${rM.index}`, `${jM}_primitive${rM.index}`, rM, (MM => {
-            MM.parent = OM, aM.push(MM)
+          const JV = this.node(UV, !1);
+          this.nodeObjects.set(eV.index, JV);
+          const yV = [];
+          this.nodePrimitives.set(eV.index, yV);
+          for (const eV of xV.primitives) YV.push(this.loadPrimitive(`${VV}/primitives/${eV.index}`, `${UV}_primitive${eV.index}`, eV, (VV => {
+            VV.parent = JV, yV.push(VV)
           })))
         }
-        const aM = this.nodeObjects.get(rM.index);
-        return OM(aM), Promise.all(SM).then((() => aM))
+        const yV = this.nodeObjects.get(eV.index);
+        return JV(yV), Promise.all(YV).then((() => yV))
       }
-      loadPrimitive(MM, rM, iM, OM) {
-        const SM = [],
-          jM = this.node(rM, !0);
-        if (jM.sideOrientation = this.YJ.useRightHandedSystem ? nr.c.CounterClockWiseSideOrientation : nr.c.ClockWiseSideOrientation, SM.push(this.geometryData.load(MM, iM, jM).then((MM => {
-            if ((0, cM.f)(jM)) {
-              var rM, iM;
-              const OM = MM;
-              jM.replaceModel(OM, Int32Array.of(0, null !== (rM = null === (iM = OM.indexData) || void 0 === iM ? void 0 : iM.length) && void 0 !== rM ? rM : OM.vertexCount, 0, OM.vertexCount))
-            } else this.create((() => (MM.applyToMesh(jM), MM)))
+      loadPrimitive(VV, eV, xV, JV) {
+        const YV = [],
+          UV = this.node(eV, !0);
+        if (UV.sideOrientation = this.yE.useRightHandedSystem ? Qe.d.CounterClockWiseSideOrientation : Qe.d.ClockWiseSideOrientation, YV.push(this.geometryData.load(VV, xV, UV).then((VV => {
+            if ((0, OV.f)(UV)) {
+              var eV, xV;
+              const JV = VV;
+              UV.replaceModel(JV, Int32Array.of(0, null !== (eV = null === (xV = JV.indexData) || void 0 === xV ? void 0 : xV.length) && void 0 !== eV ? eV : JV.vertexCount, 0, JV.vertexCount))
+            } else this.create((() => (VV.applyToMesh(UV), VV)))
           }))), this.materials) {
-          const MM = 0 === iM.mode ? nr.c.PointListDrawMode : nr.c.TriangleFillMode,
-            rM = null === iM.material ? null : this.asset.model.materials[iM.material];
-          SM.push(this.loadMaterial(rM, MM, (MM => {
-            jM.material = MM
+          const VV = 0 === xV.mode ? Qe.d.PointListDrawMode : Qe.d.TriangleFillMode,
+            eV = null === xV.material ? null : this.asset.model.materials[xV.material];
+          YV.push(this.loadMaterial(eV, VV, (VV => {
+            UV.material = VV
           })))
         }
-        return mr(jM, MM), OM(jM), Promise.all(SM).then((() => jM))
+        return ve(UV, VV), JV(UV), Promise.all(YV).then((() => UV))
       }
-      loadMaterial(MM, rM, iM) {
-        var OM;
-        const SM = `${null!==(OM=null===MM||void 0===MM?void 0:MM.index)&&void 0!==OM?OM:"default"}:${rM}`;
-        let jM = this.materialData.get(SM);
-        return jM || (jM = this.createMaterial(MM, rM), this.materialData.set(SM, jM)), iM(jM.material), jM.promise
+      loadMaterial(VV, eV, xV) {
+        var JV;
+        const YV = `${null!==(JV=null===VV||void 0===VV?void 0:VV.index)&&void 0!==JV?JV:"default"}:${eV}`;
+        let UV = this.materialData.get(YV);
+        return UV || (UV = this.createMaterial(VV, eV), this.materialData.set(YV, UV)), xV(UV.material), UV.promise
       }
-      createMaterial(MM, rM) {
-        const iM = MM ? MM.name || `material${MM.index}` : "__GLTFLoader._default",
+      createMaterial(VV, eV) {
+        const xV = VV ? VV.name || `material${VV.index}` : "__GLTFLoader._default",
           {
-            style: OM,
-            unlit: SM
+            style: JV,
+            unlit: YV
           } = this.materials;
-        let jM;
-        const aM = this.create((() => {
-          const aM = (0, Lr.d)({
-            name: iM,
-            YJ: this.YJ,
+        let UV;
+        const yV = this.create((() => {
+          const yV = (0, Ze.e)({
+            name: xV,
+            yE: this.yE,
             sets: {
-              ...(0, Mr.d)(this.asset, MM, OM, SM),
-              fillMode: rM
+              ...(0, Ve.b)(this.asset, VV, JV, YV),
+              fillMode: eV
             },
             unrendered: !0
           });
-          return jM = aM.model, aM.mirror
+          return UV = yV.model, yV.mirror
         }));
-        let PM = Promise.resolve();
-        if (MM) {
-          const rM = `/materials/${MM.index}`,
-            OM = jM.diffuseTexture;
-          if (OM && !OM.mirror) PM = new Promise((MM => setTimeout(MM)));
-          else if (OM) {
-            const SM = OM.mirror;
-            SM._parentContainer = this.container, SM.name = `${iM} (Base Color)`, mr(SM, `${rM}${MM.unlit?"":"/pbrMetallicRoughness"}/baseColorTexture`), this.tree.textures.push(SM), PM = (0, Qr.x)(OM)
+        let pV = Promise.resolve();
+        if (VV) {
+          const eV = `/materials/${VV.index}`,
+            JV = UV.diffuseTexture;
+          if (JV && !JV.mirror) pV = new Promise((VV => setTimeout(VV)));
+          else if (JV) {
+            const YV = JV.mirror;
+            YV._parentContainer = this.container, YV.name = `${xV} (Base Color)`, ve(YV, `${eV}${VV.unlit?"":"/pbrMetallicRoughness"}/baseColorTexture`), this.tree.textures.push(YV), pV = (0, ne.r)(JV)
           }
-          Hr(aM, MM.extras), mr(aM, rM)
+          re(yV, VV.extras), ve(yV, eV)
         }
-        return this.tree.materials.push(aM), {
-          material: aM,
-          promise: PM
+        return this.tree.materials.push(yV), {
+          material: yV,
+          promise: pV
         }
       }
     }
 
-    function yr() {
-      jr.h.dracoDecodes = JM.decodes, jr.h.dracoWorkersStarted = JM.workersStarted, jr.h.dracoMostWorkers = JM.mostWorkers
+    function Be() {
+      Ue.e.dracoDecodes = bV.decodes, Ue.e.dracoWorkersStarted = bV.workersStarted, Ue.e.dracoMostWorkers = bV.mostWorkers
     }
-    async function lr(MM, rM, iM, SM, jM) {
+    async function je(VV, eV, xV, YV, UV) {
       try {
-        return await async function(MM, rM, iM, SM, jM, aM) {
-          var PM;
-          let nM;
-          const QM = null === (PM = (0, zr.f)()) || void 0 === PM ? void 0 : PM.CL,
-            zM = null !== QM && void 0 !== QM && QM.MJ && rM === QM.Hk() ? QM : null,
-            LM = jM && !zM;
-          return await TM(MM, rM, iM, SM, OM.d, (MM => (nM = new Jr(rM, LM), new dr(MM, rM, nM, LM, new Or(rM, SM), aM, zM).load())), !jM), nM
-        }(MM, rM, iM, GM, SM, jM)
+        return await async function(VV, eV, xV, YV, UV, yV) {
+          var pV;
+          let QV;
+          const nV = null === (pV = (0, we.d)()) || void 0 === pV ? void 0 : pV.gZ,
+            wV = null !== nV && void 0 !== nV && nV.jb && eV === nV.dD() ? nV : null,
+            ZV = UV && !wV;
+          return await IV(VV, eV, xV, YV, JV.d, (VV => (QV = new be(eV, ZV), new Ee(VV, eV, QV, ZV, new Je(eV, YV), yV, wV).load())), !UV), QV
+        }(VV, eV, xV, FV, YV, UV)
       } finally {
-        yr()
+        Be()
       }
     }
-    async function Er(MM, rM, iM, SM) {
+    async function qe(VV, eV, xV, YV) {
       try {
-        return await TM(MM, rM, iM, GM, OM.d, (MM => SM(MM, new Or(rM, GM))))
+        return await IV(VV, eV, xV, FV, JV.d, (VV => YV(VV, new Je(eV, FV))))
       } finally {
-        yr()
+        Be()
       }
     }
-    Sr = SM.b, zM || (zM = {
-      scriptUrl: new URL(Sr.scriptUrl, location.href).href,
-      wasmBinaryUrl: new URL(Sr.wasmBinaryUrl, location.href).href
+    Ye = YV.c, wV || (wV = {
+      scriptUrl: new URL(Ye.scriptUrl, location.href).href,
+      wasmBinaryUrl: new URL(Ye.wasmBinaryUrl, location.href).href
     })
   },
-  44160: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => aM
+  44388: (VV, eV, xV) => {
+    xV.d(eV, {
+      c: () => yV
     });
-    var OM = iM(119),
-      SM = iM(1211);
+    var JV = xV(138),
+      YV = xV(1238);
 
-    function jM(MM) {
-      return (0, OM.isDiscordClient)() ? `https://${SM.e.discordDomain}/${MM.href}` : MM.href
+    function UV(VV) {
+      return (0, JV.isDiscordClient)() ? `https://${YV.e.discordDomain}/${VV.href}` : VV.href
     }
-    const aM = {
-      scriptUrl: jM(new iM.U(iM(44167))),
-      wasmBinaryUrl: jM(new iM.U(iM(44169)))
+    const yV = {
+      scriptUrl: UV(new xV.U(xV(44395))),
+      wasmBinaryUrl: UV(new xV.U(xV(44404)))
     }
   },
-  34814: MM => {
-    MM.exports = function(MM, rM, iM, OM) {
-      var SM = self || window;
+  35081: VV => {
+    VV.exports = function(VV, eV, xV, JV) {
+      var YV = self || window;
       try {
         try {
-          var jM;
+          var UV;
           try {
-            jM = new SM.Blob([MM])
-          } catch (QM) {
-            (jM = new(SM.BlobBuilder || SM.WebKitBlobBuilder || SM.MozBlobBuilder || SM.MSBlobBuilder)).append(MM), jM = jM.getBlob()
+            UV = new YV.Blob([VV])
+          } catch (nV) {
+            (UV = new(YV.BlobBuilder || YV.WebKitBlobBuilder || YV.MozBlobBuilder || YV.MSBlobBuilder)).append(VV), UV = UV.getBlob()
           }
-          var aM = SM.URL || SM.webkitURL,
-            PM = aM.createObjectURL(jM),
-            nM = new SM[rM](PM, iM);
-          return aM.revokeObjectURL(PM), nM
-        } catch (QM) {
-          return new SM[rM]("data:application/javascript,".concat(encodeURIComponent(MM)), iM)
+          var yV = YV.URL || YV.webkitURL,
+            pV = yV.createObjectURL(UV),
+            QV = new YV[eV](pV, xV);
+          return yV.revokeObjectURL(pV), QV
+        } catch (nV) {
+          return new YV[eV]("data:application/javascript,".concat(encodeURIComponent(VV)), xV)
         }
-      } catch (QM) {
-        if (!OM) throw Error("Inline worker is not supported");
-        return new SM[rM](OM, iM)
+      } catch (nV) {
+        if (!JV) throw Error("Inline worker is not supported");
+        return new YV[eV](JV, xV)
       }
     }
   },
-  44169: (MM, rM, iM) => {
-    MM.exports = iM.p + "static/media/draco_decoder_gltf_v2_1.1207caa8c6e38dc2aa04.wasm"
+  44395: (VV, eV, xV) => {
+    VV.exports = xV.p + "static/media/draco_wasm_wrapper_gltf_v2_1.8b33994b6159ad3fc976.js"
   },
-  44167: (MM, rM, iM) => {
-    MM.exports = iM.p + "static/media/draco_wasm_wrapper_gltf_v2_1.8b33994b6159ad3fc976.js"
+  44404: (VV, eV, xV) => {
+    VV.exports = xV.p + "static/media/draco_decoder_gltf_v2_1.1207caa8c6e38dc2aa04.wasm"
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const VV in modules) Object.freeze(modules[VV]);

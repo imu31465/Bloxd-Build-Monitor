@@ -1,66 +1,66 @@
 export const id = 46;
 export const ids = [46];
 export const modules = {
-  5104: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      startMemoryDebug: () => zM
+  5209: (VV, eV, xV) => {
+    xV.r(eV), xV.d(eV, {
+      startMemoryDebug: () => wV
     });
-    var OM = iM(3185),
-      SM = iM(3122);
-    const jM = 6e4,
-      aM = 5,
-      PM = ["wasmMainMiB", "wasmWorkersMiB", "jsHeapMiB", "gpuMiB", "footprintMiB", "footprintBudgetMiB", "decodedAudioMiB", "storedChunks", "knownChunks", "liveParticleSystems", "renderDistance", "sheds", "gcFull60s", "gcHighS"];
-    var nM = iM(665);
-    const QM = [];
+    var JV = xV(3194),
+      YV = xV(3142);
+    const UV = 6e4,
+      yV = 5,
+      pV = ["wasmMainMiB", "wasmWorkersMiB", "jsHeapMiB", "gpuMiB", "footprintMiB", "footprintBudgetMiB", "decodedAudioMiB", "storedChunks", "knownChunks", "liveParticleSystems", "renderDistance", "sheds", "gcFull60s", "gcHighS"];
+    var QV = xV(691);
+    const nV = [];
 
-    function zM() {
-      (0, SM.q)() && (0, SM.x)(mM), LM(), setInterval(LM, jM)
+    function wV() {
+      (0, YV.p)() && (0, YV.v)(vV), ZV(), setInterval(ZV, UV)
     }
 
-    function LM() {
-      var MM;
+    function ZV() {
+      var VV;
       const {
-        client: rM,
-        playedS: iM,
-        snapshot: jM
-      } = (0, nM.m)(), zM = null !== (MM = jM.wasmMainMiB) && void 0 !== MM ? MM : function() {
+        client: eV,
+        playedS: xV,
+        snapshot: UV
+      } = (0, QV.n)(), wV = null !== (VV = UV.wasmMainMiB) && void 0 !== VV ? VV : function() {
         try {
-          return (0, nM.J)((0, OM.y)().buffer.byteLength)
+          return (0, QV.V)((0, JV.x)().buffer.byteLength)
         } catch {
           return null
         }
-      }(), LM = function(MM) {
+      }(), ZV = function(VV) {
         let {
-          client: rM,
-          playedS: iM,
-          hidden: OM,
-          snapshot: SM
-        } = MM;
-        const jM = [`client=${null!==rM&&void 0!==rM?rM:"none"}`];
-        null !== iM && jM.push(`playedS=${iM}`);
-        const aM = SM.pageAgeS;
-        "number" === typeof aM && jM.push(`pageAgeS=${aM}`), jM.push("hidden=" + (OM ? 1 : 0));
-        for (const nM of PM) {
-          const MM = SM[nM];
-          "number" === typeof MM && Number.isFinite(MM) && jM.push(`${nM}=${MM}`)
+          client: eV,
+          playedS: xV,
+          hidden: JV,
+          snapshot: YV
+        } = VV;
+        const UV = [`client=${null!==eV&&void 0!==eV?eV:"none"}`];
+        null !== xV && UV.push(`playedS=${xV}`);
+        const yV = YV.pageAgeS;
+        "number" === typeof yV && UV.push(`pageAgeS=${yV}`), UV.push("hidden=" + (JV ? 1 : 0));
+        for (const QV of pV) {
+          const VV = YV[QV];
+          "number" === typeof VV && Number.isFinite(VV) && UV.push(`${QV}=${VV}`)
         }
-        return jM.join(" ")
+        return UV.join(" ")
       }({
-        client: rM,
-        playedS: iM,
+        client: eV,
+        playedS: xV,
         hidden: document.hidden,
         snapshot: {
-          ...jM,
-          wasmMainMiB: zM
+          ...UV,
+          wasmMainMiB: wV
         }
       });
-      (0, SM.q)() ? (QM.push(LM), QM.length >= aM && mM()) : (0, SM.k)("memory", LM)
+      (0, YV.p)() ? (nV.push(ZV), nV.length >= yV && vV()) : (0, YV.i)("memory", ZV)
     }
 
-    function mM() {
-      for (const MM of QM.splice(0))(0, SM.k)("memory", MM)
+    function vV() {
+      for (const VV of nV.splice(0))(0, YV.i)("memory", VV)
     }
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const VV in modules) Object.freeze(modules[VV]);

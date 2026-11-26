@@ -1,14 +1,14 @@
 export const id = 230;
 export const ids = [230];
 export const modules = {
-  35113: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => WM,
-      g: () => pM,
-      j: () => RM
+  35408: (VV, eV, xV) => {
+    xV.d(eV, {
+      d: () => RV,
+      h: () => WV,
+      l: () => GV
     });
-    var OM = iM(35120);
-    const SM = {
+    var JV = xV(35415);
+    const YV = {
         fileBytes: 4194304,
         vertices: 65535,
         indices: 196608,
@@ -20,7 +20,7 @@ export const modules = {
         images: 8,
         imageSide: 1024
       },
-      jM = {
+      UV = {
         items: 1024,
         perFile: 1024,
         surfaces: 256,
@@ -28,453 +28,453 @@ export const modules = {
         bounds: 16,
         attributeMembers: 32
       },
-      aM = 1048576,
-      PM = "is not a binary glTF 2.0 file",
-      nM = "loads data from outside the file",
-      QM = new Set(["KHR_draco_mesh_compression", "KHR_materials_unlit", "KHR_texture_transform", "KHR_materials_specular", "KHR_materials_ior", "KHR_materials_anisotropy"]),
-      zM = {
+      yV = 1048576,
+      pV = "is not a binary glTF 2.0 file",
+      QV = "loads data from outside the file",
+      nV = new Set(["KHR_draco_mesh_compression", "KHR_materials_unlit", "KHR_texture_transform", "KHR_materials_specular", "KHR_materials_ior", "KHR_materials_anisotropy"]),
+      wV = {
         POSITION: "VEC3",
         NORMAL: "VEC3",
         TEXCOORD_0: "VEC2",
         COLOR_0: "VEC4"
       },
-      LM = {
+      ZV = {
         type: "VEC2",
         componentTypes: [5126, 5121, 5123]
       },
-      mM = {
+      vV = {
         TANGENT: {
           type: "VEC4",
           componentTypes: [5126]
         },
-        TEXCOORD_1: LM,
-        TEXCOORD_2: LM,
-        TEXCOORD_3: LM,
-        TEXCOORD_4: LM,
-        TEXCOORD_5: LM
+        TEXCOORD_1: ZV,
+        TEXCOORD_2: ZV,
+        TEXCOORD_3: ZV,
+        TEXCOORD_4: ZV,
+        TEXCOORD_5: ZV
       },
-      HM = new Set(OM.h.map((MM => {
-        let [rM] = MM;
-        return rM
+      rV = new Set(JV.f.map((VV => {
+        let [eV] = VV;
+        return eV
       }))),
-      hM = {
+      kV = {
         1: "line",
         2: "line loop",
         3: "line strip",
         5: "triangle strip",
         6: "triangle fan"
       },
-      JM = 5126;
+      bV = 5126;
 
-    function dM(MM) {
-      return MM.toLocaleString("en-US")
+    function EV(VV) {
+      return VV.toLocaleString("en-US")
     }
 
-    function yM(MM, rM, iM) {
-      return MM > rM ? `has ${dM(MM)} ${iM} (the limit is ${dM(rM)})` : null
+    function BV(VV, eV, xV) {
+      return VV > eV ? `has ${EV(VV)} ${xV} (the limit is ${EV(eV)})` : null
     }
 
-    function lM(MM, rM) {
-      return Number.isInteger(MM) && MM >= 0 && MM < (null !== rM && void 0 !== rM ? rM : 0)
+    function jV(VV, eV) {
+      return Number.isInteger(VV) && VV >= 0 && VV < (null !== eV && void 0 !== eV ? eV : 0)
     }
 
-    function EM(MM) {
-      return Number.isInteger(MM) && MM >= 0
+    function qV(VV) {
+      return Number.isInteger(VV) && VV >= 0
     }
 
-    function UM(MM, rM) {
-      return void 0 !== MM && (!Array.isArray(MM) || MM.length > rM)
+    function tV(VV, eV) {
+      return void 0 !== VV && (!Array.isArray(VV) || VV.length > eV)
     }
 
-    function GM(MM, rM) {
-      return "object" === typeof MM && null !== MM && Object.keys(MM).length > rM
+    function FV(VV, eV) {
+      return "object" === typeof VV && null !== VV && Object.keys(VV).length > eV
     }
 
-    function CM(MM) {
-      var rM;
-      return `${MM.normalized?"normalized ":""}${null!==(rM=OM.e[MM.componentType])&&void 0!==rM?rM:MM.componentType} ${MM.type}`
+    function TV(VV) {
+      var eV;
+      return `${VV.normalized?"normalized ":""}${null!==(eV=JV.d[VV.componentType])&&void 0!==eV?eV:VV.componentType} ${VV.type}`
     }
 
-    function eM(MM) {
-      const rM = rM => {
-        var iM;
-        return null !== (iM = MM[rM]) && void 0 !== iM ? iM : -1
+    function PV(VV) {
+      const eV = eV => {
+        var xV;
+        return null !== (xV = VV[eV]) && void 0 !== xV ? xV : -1
       };
-      return 255 === rM(0) && 216 === rM(1) ? "JPEG" : 82 === rM(0) && 73 === rM(1) && 87 === rM(8) && 69 === rM(9) ? "WebP" : 171 === rM(0) && 75 === rM(1) && 84 === rM(2) && 88 === rM(3) ? "KTX2" : "non-PNG"
+      return 255 === eV(0) && 216 === eV(1) ? "JPEG" : 82 === eV(0) && 73 === eV(1) && 87 === eV(8) && 69 === eV(9) ? "WebP" : 171 === eV(0) && 75 === eV(1) && 84 === eV(2) && 88 === eV(3) ? "KTX2" : "non-PNG"
     }
 
-    function bM(MM) {
-      return MM.length >= 24 && [137, 80, 78, 71, 13, 10, 26, 10].every(((rM, iM) => MM[iM] === rM)) && 73 === MM[12] && 72 === MM[13] && 68 === MM[14] && 82 === MM[15]
+    function AV(VV) {
+      return VV.length >= 24 && [137, 80, 78, 71, 13, 10, 26, 10].every(((eV, xV) => VV[xV] === eV)) && 73 === VV[12] && 72 === VV[13] && 68 === VV[14] && 82 === VV[15]
     }
 
-    function wM(MM) {
-      return /^[aeiou]/i.test(MM) ? `an ${MM}` : `a ${MM}`
+    function NV(VV) {
+      return /^[aeiou]/i.test(VV) ? `an ${VV}` : `a ${VV}`
     }
 
-    function tM(MM) {
-      const rM = MM.byteStride;
-      return void 0 === rM || Number.isInteger(rM) && rM >= 4 && rM <= 252 && rM % 4 === 0
+    function XV(VV) {
+      const eV = VV.byteStride;
+      return void 0 === eV || Number.isInteger(eV) && eV >= 4 && eV <= 252 && eV % 4 === 0
     }
 
-    function gM(MM, rM, iM) {
-      var OM, SM;
-      const jM = null === (OM = MM.bufferViews) || void 0 === OM ? void 0 : OM[iM];
-      if (!jM || !rM || 0 !== jM.buffer) return null;
-      const aM = null !== (SM = jM.byteOffset) && void 0 !== SM ? SM : 0;
-      return !EM(aM) || !EM(jM.byteLength) || aM + jM.byteLength > rM.byteLength ? null : rM.subarray(aM, aM + jM.byteLength)
+    function MV(VV, eV, xV) {
+      var JV, YV;
+      const UV = null === (JV = VV.bufferViews) || void 0 === JV ? void 0 : JV[xV];
+      if (!UV || !eV || 0 !== UV.buffer) return null;
+      const yV = null !== (YV = UV.byteOffset) && void 0 !== YV ? YV : 0;
+      return !qV(yV) || !qV(UV.byteLength) || yV + UV.byteLength > eV.byteLength ? null : eV.subarray(yV, yV + UV.byteLength)
     }
 
-    function uM(MM, rM) {
-      var iM, SM, jM;
-      const aM = OM.s[rM.type],
-        PM = OM.c[rM.componentType];
-      if (!aM || !PM || !Number.isInteger(rM.count) || rM.count < 0) return !1;
-      if (void 0 === rM.bufferView) return !0;
-      const nM = null === (iM = MM.bufferViews) || void 0 === iM ? void 0 : iM[rM.bufferView],
-        QM = null !== (SM = rM.byteOffset) && void 0 !== SM ? SM : 0;
-      if (!nM || !EM(QM) || QM % PM !== 0) return !1;
-      const zM = aM * PM,
-        LM = null !== (jM = nM.byteStride) && void 0 !== jM ? jM : zM;
-      if (LM < zM) return !1;
-      return (0 === rM.count ? 0 : QM + LM * (rM.count - 1) + zM) <= nM.byteLength
+    function zV(VV, eV) {
+      var xV, YV, UV;
+      const yV = JV.l[eV.type],
+        pV = JV.b[eV.componentType];
+      if (!yV || !pV || !Number.isInteger(eV.count) || eV.count < 0) return !1;
+      if (void 0 === eV.bufferView) return !0;
+      const QV = null === (xV = VV.bufferViews) || void 0 === xV ? void 0 : xV[eV.bufferView],
+        nV = null !== (YV = eV.byteOffset) && void 0 !== YV ? YV : 0;
+      if (!QV || !qV(nV) || nV % pV !== 0) return !1;
+      const wV = yV * pV,
+        ZV = null !== (UV = QV.byteStride) && void 0 !== UV ? UV : wV;
+      if (ZV < wV) return !1;
+      return (0 === eV.count ? 0 : nV + ZV * (eV.count - 1) + wV) <= QV.byteLength
     }
 
-    function RM(MM) {
-      return MM > SM.fileBytes ? `is ${(MM/aM).toFixed(1)} MiB (the limit is ${SM.fileBytes/aM} MiB)` : null
+    function GV(VV) {
+      return VV > YV.fileBytes ? `is ${(VV/yV).toFixed(1)} MiB (the limit is ${YV.fileBytes/yV} MiB)` : null
     }
 
-    function pM(MM, rM) {
+    function WV(VV, eV) {
       try {
-        return function(MM, rM) {
-          var iM, aM, LM, dM, EM, RM, pM, WM, sM, DM, kM, ZM, oM, fM, YM, NM, AM;
-          const xM = Array.isArray(MM.extensionsUsed) && MM.extensionsUsed.includes("KHR_draco_mesh_compression");
-          if (function(MM, rM) {
-              var iM, OM;
+        return function(VV, eV) {
+          var xV, yV, ZV, EV, qV, GV, WV, RV, gV, DV, iV, CV, aV, oV, cV, hV, lV;
+          const LV = Array.isArray(VV.extensionsUsed) && VV.extensionsUsed.includes("KHR_draco_mesh_compression");
+          if (function(VV, eV) {
+              var xV, JV;
               const {
-                items: SM,
-                perFile: aM,
-                surfaces: PM,
-                few: nM,
-                bounds: QM,
-                attributeMembers: zM
-              } = jM;
-              if (UM(MM.extensionsRequired, nM) || UM(MM.animations, 1 / 0) || UM(MM.skins, 1 / 0)) return !0;
-              if (null !== (iM = MM.animations) && void 0 !== iM && iM.length || null !== (OM = MM.skins) && void 0 !== OM && OM.length) return !1;
+                items: YV,
+                perFile: yV,
+                surfaces: pV,
+                few: QV,
+                bounds: nV,
+                attributeMembers: wV
+              } = UV;
+              if (tV(VV.extensionsRequired, QV) || tV(VV.animations, 1 / 0) || tV(VV.skins, 1 / 0)) return !0;
+              if (null !== (xV = VV.animations) && void 0 !== xV && xV.length || null !== (JV = VV.skins) && void 0 !== JV && JV.length) return !1;
               if ([
-                  [MM.buffers, nM],
-                  [MM.scenes, nM],
-                  [MM.bufferViews, SM],
-                  [MM.accessors, SM],
-                  [MM.nodes, SM],
-                  [MM.meshes, SM],
-                  [MM.materials, PM],
-                  [MM.textures, PM],
-                  [MM.samplers, PM],
-                  [MM.images, PM]
-                ].some((MM => {
-                  let [rM, iM] = MM;
-                  return UM(rM, iM)
+                  [VV.buffers, QV],
+                  [VV.scenes, QV],
+                  [VV.bufferViews, YV],
+                  [VV.accessors, YV],
+                  [VV.nodes, YV],
+                  [VV.meshes, YV],
+                  [VV.materials, pV],
+                  [VV.textures, pV],
+                  [VV.samplers, pV],
+                  [VV.images, pV]
+                ].some((VV => {
+                  let [eV, xV] = VV;
+                  return tV(eV, xV)
                 }))) return !0;
-              for (const jM of null !== (LM = MM.accessors) && void 0 !== LM ? LM : []) {
-                var LM, mM, HM;
-                if (Number.isInteger(jM.count) && (!Number.isSafeInteger(jM.count) || Object.is(jM.count, -0)) || UM(null !== (mM = jM.min) && void 0 !== mM ? mM : void 0, QM) || UM(null !== (HM = jM.max) && void 0 !== HM ? HM : void 0, QM)) return !0
+              for (const UV of null !== (ZV = VV.accessors) && void 0 !== ZV ? ZV : []) {
+                var ZV, vV, rV;
+                if (Number.isInteger(UV.count) && (!Number.isSafeInteger(UV.count) || Object.is(UV.count, -0)) || tV(null !== (vV = UV.min) && void 0 !== vV ? vV : void 0, nV) || tV(null !== (rV = UV.max) && void 0 !== rV ? rV : void 0, nV)) return !0
               }
-              for (const jM of null !== (hM = MM.scenes) && void 0 !== hM ? hM : []) {
-                var hM;
-                if (UM(jM.nodes, SM)) return !0
+              for (const UV of null !== (kV = VV.scenes) && void 0 !== kV ? kV : []) {
+                var kV;
+                if (tV(UV.nodes, YV)) return !0
               }
-              let JM = 0;
-              for (const jM of null !== (dM = MM.nodes) && void 0 !== dM ? dM : []) {
-                var dM, yM, lM;
-                if (UM(jM.children, aM)) return !0;
-                JM += null !== (yM = null === (lM = jM.children) || void 0 === lM ? void 0 : lM.length) && void 0 !== yM ? yM : 0
+              let bV = 0;
+              for (const UV of null !== (EV = VV.nodes) && void 0 !== EV ? EV : []) {
+                var EV, BV, jV;
+                if (tV(UV.children, yV)) return !0;
+                bV += null !== (BV = null === (jV = UV.children) || void 0 === jV ? void 0 : jV.length) && void 0 !== BV ? BV : 0
               }
-              if (JM > aM) return !0;
-              let EM = 0;
-              for (const jM of null !== (CM = MM.meshes) && void 0 !== CM ? CM : []) {
-                var CM;
-                if (!Array.isArray(jM.primitives)) return !0;
-                if (EM += jM.primitives.length, EM > aM) return !0;
-                for (const MM of jM.primitives) {
-                  var eM;
-                  const iM = rM ? null === (eM = MM.extensions) || void 0 === eM ? void 0 : eM.KHR_draco_mesh_compression : void 0;
-                  if (GM(MM.attributes, zM) || GM(null === iM || void 0 === iM ? void 0 : iM.attributes, zM)) return !0
+              if (bV > yV) return !0;
+              let qV = 0;
+              for (const UV of null !== (TV = VV.meshes) && void 0 !== TV ? TV : []) {
+                var TV;
+                if (!Array.isArray(UV.primitives)) return !0;
+                if (qV += UV.primitives.length, qV > yV) return !0;
+                for (const VV of UV.primitives) {
+                  var PV;
+                  const xV = eV ? null === (PV = VV.extensions) || void 0 === PV ? void 0 : PV.KHR_draco_mesh_compression : void 0;
+                  if (FV(VV.attributes, wV) || FV(null === xV || void 0 === xV ? void 0 : xV.attributes, wV)) return !0
                 }
               }
               return !1
-            }(MM, xM)) return PM;
-          const vM = null === (iM = MM.asset) || void 0 === iM ? void 0 : iM.version;
-          if ("string" !== typeof vM || !/^2\.\d+/.test(vM)) return `uses glTF version ${null!==vM&&void 0!==vM?vM:"(none)"}`;
-          const FM = null === (aM = MM.asset) || void 0 === aM ? void 0 : aM.minVersion;
-          if (void 0 !== FM && "2.0" !== FM) return `uses glTF version ${FM}`;
-          for (const OM of null !== (BM = MM.extensionsRequired) && void 0 !== BM ? BM : []) {
-            var BM;
-            if (!QM.has(OM)) return `requires the glTF extension ${OM}`
+            }(VV, LV)) return pV;
+          const fV = null === (xV = VV.asset) || void 0 === xV ? void 0 : xV.version;
+          if ("string" !== typeof fV || !/^2\.\d+/.test(fV)) return `uses glTF version ${null!==fV&&void 0!==fV?fV:"(none)"}`;
+          const mV = null === (yV = VV.asset) || void 0 === yV ? void 0 : yV.minVersion;
+          if (void 0 !== mV && "2.0" !== mV) return `uses glTF version ${mV}`;
+          for (const JV of null !== (KV = VV.extensionsRequired) && void 0 !== KV ? KV : []) {
+            var KV;
+            if (!nV.has(JV)) return `requires the glTF extension ${JV}`
           }
-          if (null !== (LM = MM.animations) && void 0 !== LM && LM.length) return "has animations";
-          if (null !== (dM = MM.skins) && void 0 !== dM && dM.length) return "uses skins";
-          const XM = null !== (EM = MM.buffers) && void 0 !== EM ? EM : [];
-          for (const [OM, SM] of XM.entries()) {
-            if (void 0 !== SM.uri) return nM;
-            if (OM > 0 || !rM) return PM
+          if (null !== (ZV = VV.animations) && void 0 !== ZV && ZV.length) return "has animations";
+          if (null !== (EV = VV.skins) && void 0 !== EV && EV.length) return "uses skins";
+          const HV = null !== (qV = VV.buffers) && void 0 !== qV ? qV : [];
+          for (const [JV, YV] of HV.entries()) {
+            if (void 0 !== YV.uri) return QV;
+            if (JV > 0 || !eV) return pV
           }
-          for (const [OM, SM] of(null !== (IM = MM.bufferViews) && void 0 !== IM ? IM : []).entries()) {
-            var IM;
-            if (!gM(MM, rM, OM) || !tM(SM)) return PM
+          for (const [JV, YV] of(null !== (uV = VV.bufferViews) && void 0 !== uV ? uV : []).entries()) {
+            var uV;
+            if (!MV(VV, eV, JV) || !XV(YV)) return pV
           }
-          const KM = null !== (RM = MM.accessors) && void 0 !== RM ? RM : [];
-          for (const OM of KM) {
-            if (void 0 !== OM.sparse) return "uses sparse accessors";
-            const rM = Number.isInteger(OM.count) ? yM(OM.count, SM.accessorElements, "elements in an accessor") : null;
-            if (rM) return rM;
-            if (!uM(MM, OM)) return PM
+          const sV = null !== (GV = VV.accessors) && void 0 !== GV ? GV : [];
+          for (const JV of sV) {
+            if (void 0 !== JV.sparse) return "uses sparse accessors";
+            const eV = Number.isInteger(JV.count) ? BV(JV.count, YV.accessorElements, "elements in an accessor") : null;
+            if (eV) return eV;
+            if (!zV(VV, JV)) return pV
           }
-          const qM = null !== (pM = MM.scenes) && void 0 !== pM ? pM : [];
-          if (1 !== qM.length) return `has ${qM.length} scenes`;
-          const TM = (0, OM.B)(MM);
-          if (void 0 !== TM && 0 !== TM) return PM;
-          const VM = null !== (WM = MM.nodes) && void 0 !== WM ? WM : [],
-            cM = null !== (sM = MM.meshes) && void 0 !== sM ? sM : [],
-            Mr = null !== (DM = MM.materials) && void 0 !== DM ? DM : [],
-            rr = null !== (kM = MM.textures) && void 0 !== kM ? kM : [],
-            ir = null !== (ZM = MM.images) && void 0 !== ZM ? ZM : [],
-            Or = null !== (oM = null !== (fM = null !== (YM = yM(VM.length, SM.nodes, "nodes")) && void 0 !== YM ? YM : yM(cM.length, SM.meshes, "meshes")) && void 0 !== fM ? fM : yM(Mr.length, SM.materials, "materials")) && void 0 !== oM ? oM : yM(ir.length, SM.images, "images");
-          if (Or) return Or;
-          const Sr = new Set;
-          for (const OM of VM)
-            for (const MM of null !== (jr = OM.children) && void 0 !== jr ? jr : []) {
-              var jr;
-              if (!lM(MM, VM.length) || Sr.has(MM)) return PM;
-              Sr.add(MM)
+          const SV = null !== (WV = VV.scenes) && void 0 !== WV ? WV : [];
+          if (1 !== SV.length) return `has ${SV.length} scenes`;
+          const IV = (0, JV.u)(VV);
+          if (void 0 !== IV && 0 !== IV) return pV;
+          const dV = null !== (RV = VV.nodes) && void 0 !== RV ? RV : [],
+            OV = null !== (gV = VV.meshes) && void 0 !== gV ? gV : [],
+            Ve = null !== (DV = VV.materials) && void 0 !== DV ? DV : [],
+            ee = null !== (iV = VV.textures) && void 0 !== iV ? iV : [],
+            xe = null !== (CV = VV.images) && void 0 !== CV ? CV : [],
+            Je = null !== (aV = null !== (oV = null !== (cV = BV(dV.length, YV.nodes, "nodes")) && void 0 !== cV ? cV : BV(OV.length, YV.meshes, "meshes")) && void 0 !== oV ? oV : BV(Ve.length, YV.materials, "materials")) && void 0 !== aV ? aV : BV(xe.length, YV.images, "images");
+          if (Je) return Je;
+          const Ye = new Set;
+          for (const JV of dV)
+            for (const VV of null !== (Ue = JV.children) && void 0 !== Ue ? Ue : []) {
+              var Ue;
+              if (!jV(VV, dV.length) || Ye.has(VV)) return pV;
+              Ye.add(VV)
             }
-          const ar = new Set,
-            Pr = MM => {
-              var rM;
-              return !ar.has(MM) && (ar.add(MM), (null !== (rM = VM[MM].children) && void 0 !== rM ? rM : []).every(Pr))
+          const ye = new Set,
+            pe = VV => {
+              var eV;
+              return !ye.has(VV) && (ye.add(VV), (null !== (eV = dV[VV].children) && void 0 !== eV ? eV : []).every(pe))
             };
-          for (const OM of null !== (nr = qM[0].nodes) && void 0 !== nr ? nr : []) {
-            var nr;
-            if (!lM(OM, VM.length) || Sr.has(OM) || !Pr(OM)) return PM
+          for (const JV of null !== (Qe = SV[0].nodes) && void 0 !== Qe ? Qe : []) {
+            var Qe;
+            if (!jV(JV, dV.length) || Ye.has(JV) || !pe(JV)) return pV
           }
-          for (const OM of VM) {
-            if (void 0 !== OM.matrix) return "uses node matrices";
-            if (void 0 !== OM.skin) return "uses skins";
-            if (void 0 !== OM.weights) return "uses morph targets";
-            if (void 0 !== OM.mesh && !lM(OM.mesh, cM.length)) return PM;
-            const MM = [
-              [OM.translation, 3],
-              [OM.rotation, 4],
-              [OM.scale, 3]
+          for (const JV of dV) {
+            if (void 0 !== JV.matrix) return "uses node matrices";
+            if (void 0 !== JV.skin) return "uses skins";
+            if (void 0 !== JV.weights) return "uses morph targets";
+            if (void 0 !== JV.mesh && !jV(JV.mesh, OV.length)) return pV;
+            const VV = [
+              [JV.translation, 3],
+              [JV.rotation, 4],
+              [JV.scale, 3]
             ];
-            for (const [rM, iM] of MM)
-              if (void 0 !== rM && (!Array.isArray(rM) || rM.length !== iM || !rM.every((MM => Number.isFinite(MM))))) return PM
+            for (const [eV, xV] of VV)
+              if (void 0 !== eV && (!Array.isArray(eV) || eV.length !== xV || !eV.every((VV => Number.isFinite(VV))))) return pV
           }
-          let Qr = -1,
-            zr = 0,
-            Lr = 0,
-            mr = null;
-          for (const SM of cM) {
-            if (void 0 !== SM.weights) return "uses morph targets";
-            if (0 === SM.primitives.length) return PM;
-            for (const iM of SM.primitives) {
-              var Hr, hr;
-              const SM = null !== (Hr = iM.mode) && void 0 !== Hr ? Hr : 4;
-              var Jr;
-              if (4 !== SM && 0 !== SM) return `uses ${null!==(Jr=hM[SM])&&void 0!==Jr?Jr:`mode ${SM}`} primitives`;
-              if (void 0 !== iM.targets) return "uses morph targets";
-              if (void 0 !== iM.material && !lM(iM.material, Mr.length)) return PM;
-              const jM = xM ? null === (hr = iM.extensions) || void 0 === hr ? void 0 : hr.KHR_draco_mesh_compression : void 0;
-              if (jM) {
-                if (4 !== SM) return "uses Draco-compressed points";
-                if (!gM(MM, rM, jM.bufferView) || "object" !== typeof jM.attributes) return PM
+          let ne = -1,
+            we = 0,
+            Ze = 0,
+            ve = null;
+          for (const YV of OV) {
+            if (void 0 !== YV.weights) return "uses morph targets";
+            if (0 === YV.primitives.length) return pV;
+            for (const xV of YV.primitives) {
+              var re, ke;
+              const YV = null !== (re = xV.mode) && void 0 !== re ? re : 4;
+              var be;
+              if (4 !== YV && 0 !== YV) return `uses ${null!==(be=kV[YV])&&void 0!==be?be:`mode ${YV}`} primitives`;
+              if (void 0 !== xV.targets) return "uses morph targets";
+              if (void 0 !== xV.material && !jV(xV.material, Ve.length)) return pV;
+              const UV = LV ? null === (ke = xV.extensions) || void 0 === ke ? void 0 : ke.KHR_draco_mesh_compression : void 0;
+              if (UV) {
+                if (4 !== YV) return "uses Draco-compressed points";
+                if (!MV(VV, eV, UV.bufferView) || "object" !== typeof UV.attributes) return pV
               }
-              const aM = iM.attributes;
-              if ("object" !== typeof aM || null === aM) return PM;
-              if (void 0 === aM.POSITION) return "has a primitive with no positions";
-              if (!lM(aM.POSITION, KM.length)) return PM;
-              const nM = KM[aM.POSITION].count;
-              for (const [MM, rM] of Object.entries(aM)) {
-                if (!lM(rM, KM.length)) return PM;
-                if (/^(JOINTS|WEIGHTS)_\d+$/.test(MM)) return "uses skins";
-                const iM = KM[rM],
-                  OM = zM[MM];
-                if (OM && (iM.componentType !== JM || iM.normalized || iM.type !== OM)) return `stores ${MM} as ${CM(iM)}`;
-                const SM = mM[MM];
-                if (SM && (iM.type !== SM.type || !SM.componentTypes.includes(iM.componentType) || iM.componentType === JM === !!iM.normalized)) return `stores ${MM} as ${CM(iM)}`;
-                if (HM.has(MM) && iM.count !== nM) return "has vertex attributes of different lengths"
+              const yV = xV.attributes;
+              if ("object" !== typeof yV || null === yV) return pV;
+              if (void 0 === yV.POSITION) return "has a primitive with no positions";
+              if (!jV(yV.POSITION, sV.length)) return pV;
+              const QV = sV[yV.POSITION].count;
+              for (const [VV, eV] of Object.entries(yV)) {
+                if (!jV(eV, sV.length)) return pV;
+                if (/^(JOINTS|WEIGHTS)_\d+$/.test(VV)) return "uses skins";
+                const xV = sV[eV],
+                  JV = wV[VV];
+                if (JV && (xV.componentType !== bV || xV.normalized || xV.type !== JV)) return `stores ${VV} as ${TV(xV)}`;
+                const YV = vV[VV];
+                if (YV && (xV.type !== YV.type || !YV.componentTypes.includes(xV.componentType) || xV.componentType === bV === !!xV.normalized)) return `stores ${VV} as ${TV(xV)}`;
+                if (rV.has(VV) && xV.count !== QV) return "has vertex attributes of different lengths"
               }
-              if (jM) {
-                if (void 0 === iM.indices) return PM;
-                for (const rM in jM.attributes)
-                  if (HM.has(rM) && void 0 === aM[rM]) return PM;
-                if (void 0 === jM.attributes.POSITION) return PM;
-                const MM = lM(iM.indices, KM.length) ? KM[iM.indices].count : -1;
-                if (0 === MM) return PM;
-                if (-1 === Qr) Qr = jM.bufferView, zr = nM, Lr = MM;
+              if (UV) {
+                if (void 0 === xV.indices) return pV;
+                for (const eV in UV.attributes)
+                  if (rV.has(eV) && void 0 === yV[eV]) return pV;
+                if (void 0 === UV.attributes.POSITION) return pV;
+                const VV = jV(xV.indices, sV.length) ? sV[xV.indices].count : -1;
+                if (0 === VV) return pV;
+                if (-1 === ne) ne = UV.bufferView, we = QV, Ze = VV;
                 else {
-                  mr ??= new Map([
-                    [Qr, [zr, Lr]]
+                  ve ??= new Map([
+                    [ne, [we, Ze]]
                   ]);
-                  const rM = mr.get(jM.bufferView);
-                  if (rM && (rM[0] !== nM || rM[1] !== MM)) return PM;
-                  mr.set(jM.bufferView, null !== rM && void 0 !== rM ? rM : [nM, MM])
+                  const eV = ve.get(UV.bufferView);
+                  if (eV && (eV[0] !== QV || eV[1] !== VV)) return pV;
+                  ve.set(UV.bufferView, null !== eV && void 0 !== eV ? eV : [QV, VV])
                 }
               }
-              let QM = nM;
-              if (void 0 !== iM.indices) {
-                if (!lM(iM.indices, KM.length)) return PM;
-                const MM = KM[iM.indices];
-                if ("SCALAR" !== MM.type) return PM;
-                if (5121 === MM.componentType) return "uses 8-bit indices";
-                var dr;
-                if (5123 !== MM.componentType && 5125 !== MM.componentType) return `stores indices as ${null!==(dr=OM.e[MM.componentType])&&void 0!==dr?dr:MM.componentType}`;
-                if (!jM && void 0 === MM.bufferView) return PM;
-                QM = MM.count
+              let nV = QV;
+              if (void 0 !== xV.indices) {
+                if (!jV(xV.indices, sV.length)) return pV;
+                const VV = sV[xV.indices];
+                if ("SCALAR" !== VV.type) return pV;
+                if (5121 === VV.componentType) return "uses 8-bit indices";
+                var Ee;
+                if (5123 !== VV.componentType && 5125 !== VV.componentType) return `stores indices as ${null!==(Ee=JV.d[VV.componentType])&&void 0!==Ee?Ee:VV.componentType}`;
+                if (!UV && void 0 === VV.bufferView) return pV;
+                nV = VV.count
               }
-              if (4 === SM && QM % 3 !== 0) return PM
+              if (4 === YV && nV % 3 !== 0) return pV
             }
           }
-          let yr = 0,
-            lr = 0,
-            Er = 0;
-          for (let OM = 0; OM < VM.length; OM++) {
-            const MM = VM[OM].mesh;
-            if (void 0 !== MM && ar.has(OM))
-              for (const rM of cM[MM].primitives) Er++, yr += KM[rM.attributes.POSITION].count, void 0 !== rM.indices && (lr += KM[rM.indices].count)
+          let Be = 0,
+            je = 0,
+            qe = 0;
+          for (let JV = 0; JV < dV.length; JV++) {
+            const VV = dV[JV].mesh;
+            if (void 0 !== VV && ye.has(JV))
+              for (const eV of OV[VV].primitives) qe++, Be += sV[eV.attributes.POSITION].count, void 0 !== eV.indices && (je += sV[eV.indices].count)
           }
-          const Ur = null !== (NM = null !== (AM = yM(yr, SM.vertices, "vertices")) && void 0 !== AM ? AM : yM(lr, SM.indices, "indices")) && void 0 !== NM ? NM : yM(Er, SM.primitives, "primitives");
-          if (Ur) return Ur;
-          for (const OM of Mr) {
-            var Gr, Cr;
-            if (void 0 !== OM.emissiveTexture) return "uses an emissive texture";
-            const rM = null !== (Gr = OM.alphaMode) && void 0 !== Gr ? Gr : "OPAQUE";
-            if ("OPAQUE" !== rM && "MASK" !== rM && "BLEND" !== rM) return PM;
-            const iM = null === (Cr = OM.pbrMetallicRoughness) || void 0 === Cr ? void 0 : Cr.baseColorTexture;
-            if (iM) {
-              var er, br, wr, tr, gr;
-              const rM = null !== (er = MM.extensionsUsed) && void 0 !== er && er.includes("KHR_texture_transform") ? null === (br = iM.extensions) || void 0 === br ? void 0 : br.KHR_texture_transform : void 0;
-              if (0 !== (null !== (wr = iM.texCoord) && void 0 !== wr ? wr : 0) || 0 !== (null !== (tr = null === rM || void 0 === rM ? void 0 : rM.texCoord) && void 0 !== tr ? tr : 0)) return "uses a second UV set";
-              const OM = rr[iM.index];
-              if (!OM || !lM(OM.source, ir.length) || void 0 !== OM.sampler && !lM(OM.sampler, null === (gr = MM.samplers) || void 0 === gr ? void 0 : gr.length)) return PM
+          const te = null !== (hV = null !== (lV = BV(Be, YV.vertices, "vertices")) && void 0 !== lV ? lV : BV(je, YV.indices, "indices")) && void 0 !== hV ? hV : BV(qe, YV.primitives, "primitives");
+          if (te) return te;
+          for (const JV of Ve) {
+            var Fe, Te;
+            if (void 0 !== JV.emissiveTexture) return "uses an emissive texture";
+            const eV = null !== (Fe = JV.alphaMode) && void 0 !== Fe ? Fe : "OPAQUE";
+            if ("OPAQUE" !== eV && "MASK" !== eV && "BLEND" !== eV) return pV;
+            const xV = null === (Te = JV.pbrMetallicRoughness) || void 0 === Te ? void 0 : Te.baseColorTexture;
+            if (xV) {
+              var Pe, Ae, Ne, Xe, Me;
+              const eV = null !== (Pe = VV.extensionsUsed) && void 0 !== Pe && Pe.includes("KHR_texture_transform") ? null === (Ae = xV.extensions) || void 0 === Ae ? void 0 : Ae.KHR_texture_transform : void 0;
+              if (0 !== (null !== (Ne = xV.texCoord) && void 0 !== Ne ? Ne : 0) || 0 !== (null !== (Xe = null === eV || void 0 === eV ? void 0 : eV.texCoord) && void 0 !== Xe ? Xe : 0)) return "uses a second UV set";
+              const JV = ee[xV.index];
+              if (!JV || !jV(JV.source, xe.length) || void 0 !== JV.sampler && !jV(JV.sampler, null === (Me = VV.samplers) || void 0 === Me ? void 0 : Me.length)) return pV
             }
           }
-          for (const OM of ir) {
-            if (void 0 !== OM.uri) return nM;
-            if (void 0 === OM.bufferView) return PM;
-            const iM = gM(MM, rM, OM.bufferView);
-            if (!iM) return PM;
-            if ("image/png" !== OM.mimeType) {
-              var ur, Rr, pr;
-              return `has ${wM(null!==(ur=null!==(Rr={"image/jpeg":"JPEG","image/webp":"WebP","image/ktx2":"KTX2"}[null!==(pr=OM.mimeType)&&void 0!==pr?pr:""])&&void 0!==Rr?Rr:OM.mimeType)&&void 0!==ur?ur:"untyped")} image`
+          for (const JV of xe) {
+            if (void 0 !== JV.uri) return QV;
+            if (void 0 === JV.bufferView) return pV;
+            const xV = MV(VV, eV, JV.bufferView);
+            if (!xV) return pV;
+            if ("image/png" !== JV.mimeType) {
+              var ze, Ge, We;
+              return `has ${NV(null!==(ze=null!==(Ge={"image/jpeg":"JPEG","image/webp":"WebP","image/ktx2":"KTX2"}[null!==(We=JV.mimeType)&&void 0!==We?We:""])&&void 0!==Ge?Ge:JV.mimeType)&&void 0!==ze?ze:"untyped")} image`
             }
-            if (!bM(iM)) return `has ${wM(eM(iM))} image`;
-            const jM = new DataView(iM.buffer, iM.byteOffset, iM.byteLength),
-              aM = jM.getUint32(16),
-              QM = jM.getUint32(20);
-            if (aM > SM.imageSide || QM > SM.imageSide) return `has a ${aM} \xd7 ${QM} image (the limit is ${SM.imageSide})`
+            if (!AV(xV)) return `has ${NV(PV(xV))} image`;
+            const UV = new DataView(xV.buffer, xV.byteOffset, xV.byteLength),
+              yV = UV.getUint32(16),
+              nV = UV.getUint32(20);
+            if (yV > YV.imageSide || nV > YV.imageSide) return `has a ${yV} \xd7 ${nV} image (the limit is ${YV.imageSide})`
           }
           return null
-        }(MM, rM)
+        }(VV, eV)
       } catch {
-        return PM
+        return pV
       }
     }
 
-    function WM(MM) {
-      const rM = RM(MM.byteLength);
-      if (rM) return rM;
+    function RV(VV) {
+      const eV = GV(VV.byteLength);
+      if (eV) return eV;
       try {
         const {
-          json: rM,
-          bin: iM
-        } = (0, OM.E)(MM);
-        return pM(rM, iM)
-      } catch (iM) {
-        if (iM instanceof OM.p) return iM.reason;
-        throw iM
+          json: eV,
+          bin: xV
+        } = (0, JV.v)(VV);
+        return WV(eV, xV)
+      } catch (xV) {
+        if (xV instanceof JV.h) return xV.reason;
+        throw xV
       }
     }
   },
-  35120: (MM, rM, iM) => {
-    iM.d(rM, {
-      B: () => aM,
-      E: () => QM,
-      c: () => HM,
-      e: () => mM,
-      h: () => JM,
-      l: () => jM,
-      p: () => SM,
-      s: () => hM,
-      v: () => zM,
-      x: () => LM
+  35415: (VV, eV, xV) => {
+    xV.d(eV, {
+      b: () => rV,
+      d: () => vV,
+      f: () => bV,
+      g: () => UV,
+      h: () => YV,
+      l: () => kV,
+      o: () => wV,
+      r: () => ZV,
+      u: () => yV,
+      v: () => nV
     });
-    var OM = iM(35126);
-    class SM extends Error {
-      constructor(MM) {
-        super(`GLB refused: it ${MM}`), this.reason = MM, this.name = "GlbRefused"
+    var JV = xV(35419);
+    class YV extends Error {
+      constructor(VV) {
+        super(`GLB refused: it ${VV}`), this.reason = VV, this.name = "GlbRefused"
       }
     }
-    class jM extends Error {
-      constructor(MM) {
-        super(MM), this.name = "GlbError"
+    class UV extends Error {
+      constructor(VV) {
+        super(VV), this.name = "GlbError"
       }
     }
 
-    function aM(MM) {
-      return Reflect.get(MM, "scene")
+    function yV(VV) {
+      return Reflect.get(VV, "scene")
     }
-    const PM = 5130562,
-      nM = "is not a binary glTF 2.0 file";
+    const pV = 5130562,
+      QV = "is not a binary glTF 2.0 file";
 
-    function QM(MM) {
-      var rM;
-      const iM = MM instanceof Uint8Array ? MM : new Uint8Array(MM),
-        jM = (0, OM.g)(iM);
-      if (null === jM) throw new SM(nM);
-      const aM = jM.json,
+    function nV(VV) {
+      var eV;
+      const xV = VV instanceof Uint8Array ? VV : new Uint8Array(VV),
+        UV = (0, JV.d)(xV);
+      if (null === UV) throw new YV(QV);
+      const yV = UV.json,
         {
-          jsonEnd: QM,
-          length: zM
-        } = jM,
-        LM = new DataView(iM.buffer, iM.byteOffset, iM.byteLength);
-      let mM = -1,
-        HM = 0;
-      for (let dM = QM; dM < zM;) {
-        if (dM + 8 > zM) throw new SM(nM);
-        const MM = LM.getUint32(dM, !0),
-          rM = LM.getUint32(dM + 4, !0);
-        if (dM + 8 + MM > zM || rM === OM.d || rM === PM && -1 !== mM) throw new SM(nM);
-        rM === PM && (mM = dM + 8, HM = MM), dM += 8 + MM
+          jsonEnd: nV,
+          length: wV
+        } = UV,
+        ZV = new DataView(xV.buffer, xV.byteOffset, xV.byteLength);
+      let vV = -1,
+        rV = 0;
+      for (let EV = nV; EV < wV;) {
+        if (EV + 8 > wV) throw new YV(QV);
+        const VV = ZV.getUint32(EV, !0),
+          eV = ZV.getUint32(EV + 4, !0);
+        if (EV + 8 + VV > wV || eV === JV.c || eV === pV && -1 !== vV) throw new YV(QV);
+        eV === pV && (vV = EV + 8, rV = VV), EV += 8 + VV
       }
-      let hM = null;
-      const JM = null === (rM = aM.buffers) || void 0 === rM ? void 0 : rM[0];
-      if (-1 !== mM && JM && void 0 === JM.uri) {
-        if (!(JM.byteLength >= 0) || JM.byteLength > HM) throw new SM(nM);
-        hM = new Uint8Array(iM.buffer, iM.byteOffset + mM, JM.byteLength)
+      let kV = null;
+      const bV = null === (eV = yV.buffers) || void 0 === eV ? void 0 : eV[0];
+      if (-1 !== vV && bV && void 0 === bV.uri) {
+        if (!(bV.byteLength >= 0) || bV.byteLength > rV) throw new YV(QV);
+        kV = new Uint8Array(xV.buffer, xV.byteOffset + vV, bV.byteLength)
       }
       return {
-        json: aM,
-        bin: hM,
-        fileBytes: iM.byteLength
+        json: yV,
+        bin: kV,
+        fileBytes: xV.byteLength
       }
     }
 
-    function zM(MM) {
-      const rM = MM.slice(MM.indexOf(",") + 1),
-        iM = Uint8Array.fromBase64;
-      if (iM) return iM(rM).buffer;
-      const OM = atob(rM),
-        SM = new Uint8Array(OM.length);
-      for (let jM = 0; jM < OM.length; jM++) SM[jM] = OM.charCodeAt(jM);
-      return SM.buffer
+    function wV(VV) {
+      const eV = VV.slice(VV.indexOf(",") + 1),
+        xV = Uint8Array.fromBase64;
+      if (xV) return xV(eV).buffer;
+      const JV = atob(eV),
+        YV = new Uint8Array(JV.length);
+      for (let UV = 0; UV < JV.length; UV++) YV[UV] = JV.charCodeAt(UV);
+      return YV.buffer
     }
-    async function LM(MM) {
-      if (MM.startsWith("data:")) return zM(MM);
-      const rM = await fetch(MM);
-      if (!rM.ok) throw new jM(`fetching ${MM} failed: ${rM.status} ${rM.statusText}`);
-      return await rM.arrayBuffer()
+    async function ZV(VV) {
+      if (VV.startsWith("data:")) return wV(VV);
+      const eV = await fetch(VV);
+      if (!eV.ok) throw new UV(`fetching ${VV} failed: ${eV.status} ${eV.statusText}`);
+      return await eV.arrayBuffer()
     }
-    const mM = {
+    const vV = {
         5120: "i8",
         5121: "u8",
         5122: "i16",
@@ -482,7 +482,7 @@ export const modules = {
         5125: "u32",
         5126: "f32"
       },
-      HM = {
+      rV = {
         5120: 1,
         5121: 1,
         5122: 2,
@@ -490,7 +490,7 @@ export const modules = {
         5125: 4,
         5126: 4
       },
-      hM = {
+      kV = {
         SCALAR: 1,
         VEC2: 2,
         VEC3: 3,
@@ -499,7 +499,7 @@ export const modules = {
         MAT3: 9,
         MAT4: 16
       },
-      JM = [
+      bV = [
         ["POSITION", "position"],
         ["NORMAL", "normal"],
         ["TANGENT", "tangent"],
@@ -512,48 +512,48 @@ export const modules = {
         ["COLOR_0", "color"]
       ]
   },
-  35126: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => SM,
-      g: () => jM,
-      j: () => aM
+  35419: (VV, eV, xV) => {
+    xV.d(eV, {
+      c: () => YV,
+      d: () => UV,
+      g: () => yV
     });
-    const OM = 1179937895,
-      SM = 1313821514;
+    const JV = 1179937895,
+      YV = 1313821514;
 
-    function jM(MM) {
-      const rM = new DataView(MM.buffer, MM.byteOffset, MM.byteLength);
-      if (MM.byteLength < 20 || rM.getUint32(0, !0) !== OM || 2 !== rM.getUint32(4, !0)) return null;
-      const iM = Math.min(rM.getUint32(8, !0), MM.byteLength),
-        jM = rM.getUint32(12, !0);
-      if (rM.getUint32(16, !0) !== SM || 20 + jM > iM) return null;
-      let aM;
+    function UV(VV) {
+      const eV = new DataView(VV.buffer, VV.byteOffset, VV.byteLength);
+      if (VV.byteLength < 20 || eV.getUint32(0, !0) !== JV || 2 !== eV.getUint32(4, !0)) return null;
+      const xV = Math.min(eV.getUint32(8, !0), VV.byteLength),
+        UV = eV.getUint32(12, !0);
+      if (eV.getUint32(16, !0) !== YV || 20 + UV > xV) return null;
+      let yV;
       try {
-        aM = JSON.parse((new TextDecoder).decode(MM.subarray(20, 20 + jM)))
+        yV = JSON.parse((new TextDecoder).decode(VV.subarray(20, 20 + UV)))
       } catch {
         return null
       }
-      return "object" === typeof aM && null !== aM ? {
-        json: aM,
-        jsonEnd: 20 + jM,
-        length: iM
+      return "object" === typeof yV && null !== yV ? {
+        json: yV,
+        jsonEnd: 20 + UV,
+        length: xV
       } : null
     }
 
-    function aM(MM) {
-      var rM;
-      const iM = null === (rM = jM(MM)) || void 0 === rM ? void 0 : rM.json;
-      if (void 0 === iM || !Array.isArray(iM.extensionsUsed) || !iM.extensionsUsed.includes("KHR_draco_mesh_compression")) return !1;
-      const OM = iM.meshes;
-      return Array.isArray(OM) && OM.some((MM => {
-        const rM = null === MM || void 0 === MM ? void 0 : MM.primitives;
-        return Array.isArray(rM) && rM.some((MM => {
-          const rM = null === MM || void 0 === MM ? void 0 : MM.extensions;
-          return null != (null === rM || void 0 === rM ? void 0 : rM.KHR_draco_mesh_compression)
+    function yV(VV) {
+      var eV;
+      const xV = null === (eV = UV(VV)) || void 0 === eV ? void 0 : eV.json;
+      if (void 0 === xV || !Array.isArray(xV.extensionsUsed) || !xV.extensionsUsed.includes("KHR_draco_mesh_compression")) return !1;
+      const JV = xV.meshes;
+      return Array.isArray(JV) && JV.some((VV => {
+        const eV = null === VV || void 0 === VV ? void 0 : VV.primitives;
+        return Array.isArray(eV) && eV.some((VV => {
+          const eV = null === VV || void 0 === VV ? void 0 : VV.extensions;
+          return null != (null === eV || void 0 === eV ? void 0 : eV.KHR_draco_mesh_compression)
         }))
       }))
     }
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const VV in modules) Object.freeze(modules[VV]);

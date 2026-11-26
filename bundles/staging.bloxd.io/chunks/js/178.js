@@ -1,11 +1,11 @@
 export const id = 178;
 export const ids = [178];
 export const modules = {
-  9554: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      pageBody: () => OM
+  9566: (VV, eV, xV) => {
+    xV.r(eV), xV.d(eV, {
+      pageBody: () => JV
     });
-    const OM = {
+    const JV = {
       whatIs: ["Your gear is completely random, and only one player makes it out of the madness. Bloxd Lucky Towers is a last-player-standing PvP mode where everyone spawns on their own pillar. Rounds are quick, chaotic and pretty unpredictable. There are no Lucky Blocks to open here, which is the big difference from Lucky Blocks Battlegrounds. Your items just turn up every 3 seconds."],
       howToPlay: ["Up to 15 players spawn on pillars spaced out across the map. You start in a glass cage for 3 seconds. After that, everyone gets a random item every 3 seconds. It could be blocks, food, a weapon, armour, a potion or something that explodes. Build bridges over to your rivals, knock them off their pillars and be the last one alive.", "Keep an eye on the announcements, because random events can flip a whole fight. A chest might drop with a guaranteed weapon and armour inside. Jump Boost lets everyone jump higher for a bit, and Double Speed makes items spawn twice as fast. During Lava Rise the ground starts creeping up beneath you. If a Bombardment is announced, get under cover fast. Holding a Respawn Totem saves you from a fall into the void. Knocked out? You can still spectate the rest of the match."],
       features: ["Up to 15 Players per Match", "A Random Item Every 3 Seconds", "Weapons, Armour, Potions, Arrows and Explosives", "Special Items Like Updraft, SnowDash, Steal Ball, Bouncy Bomb and Chaos Potion", "Respawn Totems for an Extra Life", "Five Random Events, From Chest Drops to Bombardment", "Craft Sticks, Reinforced Pebbles, Floor Creators and More", "Maps: The OG, Desert, Icy, Space and Forest, Plus Seasonal Spooky and Holiday Maps"],
@@ -37,4 +37,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const VV in modules) Object.freeze(modules[VV]);

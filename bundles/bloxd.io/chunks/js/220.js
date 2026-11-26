@@ -1,46 +1,46 @@
 export const id = 220;
 export const ids = [220];
 export const modules = {
-  34920: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      ALL_DEV_TOOLS: () => aM,
-      coreDevTools: () => QM,
-      devTools: () => nM
+  35189: (VV, eV, xV) => {
+    xV.r(eV), xV.d(eV, {
+      ALL_DEV_TOOLS: () => yV,
+      coreDevTools: () => nV,
+      devTools: () => QV
     });
-    var OM = iM(656),
-      SM = iM(1327),
-      jM = iM(34926);
-    const aM = new Set(["sceneDownload", "ambientLight", "weaponRaycasts", "chunkBorders"]);
-    async function PM() {
+    var JV = xV(686),
+      YV = xV(1348),
+      UV = xV(35197);
+    const yV = new Set(["sceneDownload", "ambientLight", "weaponRaycasts", "chunkBorders"]);
+    async function pV() {
       const {
-        noaDevTools: MM
-      } = await iM.e(260).then((() => iM(42174)));
-      return MM
+        noaDevTools: VV
+      } = await xV.e(260).then((() => xV(42389)));
+      return VV
     }
-    const nM = new class {
+    const QV = new class {
         constructor() {
-          this.loadHost = PM, this.tools = aM
+          this.loadHost = pV, this.tools = yV
         }
-        setHost(MM) {
-          this.tools = null === MM ? aM : MM.tools, this.loadHost = null === MM ? PM : async () => MM
+        setHost(VV) {
+          this.tools = null === VV ? yV : VV.tools, this.loadHost = null === VV ? pV : async () => VV
         }
-        supports(MM) {
-          return this.tools.has(MM)
+        supports(VV) {
+          return this.tools.has(VV)
         }
-        async downloadScene(MM, rM) {
-          const iM = await this.loadHost();
-          await iM.downloadScene(MM, rM)
+        async downloadScene(VV, eV) {
+          const xV = await this.loadHost();
+          await xV.downloadScene(VV, eV)
         }
-        async setAmbientLightIntensity(MM) {
-          const rM = await this.loadHost();
-          await rM.setAmbientLightIntensity(MM)
+        async setAmbientLightIntensity(VV) {
+          const eV = await this.loadHost();
+          await eV.setAmbientLightIntensity(VV)
         }
-        async capturePhoto(MM, rM, iM) {
-          return (await this.loadHost()).capturePhoto(MM, rM, iM)
+        async capturePhoto(VV, eV, xV) {
+          return (await this.loadHost()).capturePhoto(VV, eV, xV)
         }
       },
-      QM = {
-        tools: jM.e,
+      nV = {
+        tools: UV.e,
         downloadScene: async () => {
           throw new Error("This client can't download the scene")
         },
@@ -51,10 +51,10 @@ export const modules = {
           throw new Error("No game is drawing yet")
         }
       };
-    OM.H && nM.setHost(QM), (0, SM.A)((() => {
-      nM.setHost(QM)
+    JV.I && QV.setHost(nV), (0, YV.C)((() => {
+      QV.setHost(nV)
     }))
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const VV in modules) Object.freeze(modules[VV]);

@@ -1,18 +1,18 @@
 export const id = 87;
 export const ids = [87];
 export const modules = {
-  37996: (MM, rM, iM) => {
-    if (iM.d(rM, {
-        d: () => nM,
-        h: () => SM,
-        k: () => aM,
-        l: () => jM,
-        m: () => GM,
-        q: () => yM
-      }), 45 == iM.j) var OM = iM(38005);
-    const SM = ["Wood", "Stone", "Iron", "Gold", "Diamond", "Moonstone", "Magmasteel", "Sanguine", "Astral"],
-      jM = ["Blade", "Guard", "Handle"],
-      aM = {
+  38239: (VV, eV, xV) => {
+    if (xV.d(eV, {
+        d: () => QV,
+        g: () => YV,
+        h: () => yV,
+        l: () => UV,
+        m: () => FV,
+        p: () => BV
+      }), 45 == xV.j) var JV = xV(38245);
+    const YV = ["Wood", "Stone", "Iron", "Gold", "Diamond", "Moonstone", "Magmasteel", "Sanguine", "Astral"],
+      UV = ["Blade", "Guard", "Handle"],
+      yV = {
         Wood: {
           material: "Wood",
           baseSword: "Wood Sword",
@@ -131,59 +131,59 @@ export const modules = {
           handleReach: .5
         }
       },
-      PM = 4,
-      nM = "Coal",
-      QM = {
+      pV = 4,
+      QV = "Coal",
+      nV = {
         Blade: 1,
         Guard: .6,
         Handle: .4
       },
-      zM = 1.15,
-      LM = 1.35,
-      mM = .06,
-      HM = {
+      wV = 1.15,
+      ZV = 1.35,
+      vV = .06,
+      rV = {
         defence: {
           name: "Bulwark",
           amount: .06,
-          describe: MM => `${bM(.06*MM)} less damage taken`
+          describe: VV => `${AV(.06*VV)} less damage taken`
         },
         coins: {
           name: "Midas",
           amount: 4,
-          describe: MM => `Mobs you slay drop ${Math.round(4*MM)}+ extra coins`
+          describe: VV => `Mobs you slay drop ${Math.round(4*VV)}+ extra coins`
         },
         crit: {
           name: "Keen Edge",
           chance: .12,
           amount: .6,
-          describe: MM => `${bM(.12*MM)} chance to strike for +60% damage`
+          describe: VV => `${AV(.12*VV)} chance to strike for +60% damage`
         },
         bossBane: {
           name: "Bossbane",
           amount: .2,
-          describe: MM => `+${bM(.2*MM)} damage to bosses`
+          describe: VV => `+${AV(.2*VV)} damage to bosses`
         },
         firePool: {
           name: "Magma Pool",
           chance: .15,
           amount: .12,
           cooldownMs: 3e3,
-          describe: MM => `${bM(.15*MM)} chance to leave a fire pool under the mob that burns for 3s`
+          describe: VV => `${AV(.15*VV)} chance to leave a fire pool under the mob that burns for 3s`
         },
         lifesteal: {
           name: "Bloodthirst",
           amount: .06,
-          describe: MM => `Heal ${bM(.06*MM)} of the damage you deal`
+          describe: VV => `Heal ${AV(.06*VV)} of the damage you deal`
         },
         starfall: {
           name: "Starfall",
           chance: .1,
           amount: .6,
           cooldownMs: 4e3,
-          describe: MM => `${bM(.1*MM)} chance to call a falling star that hits nearby mobs and slows them`
+          describe: VV => `${AV(.1*VV)} chance to call a falling star that hits nearby mobs and slows them`
         }
       },
-      hM = {
+      kV = {
         eclipseField: {
           name: "Eclipse Field",
           description: "Right-click: slow every mob within 6 blocks for 3s",
@@ -225,120 +225,120 @@ export const modules = {
           cooldownMs: 25e3
         }
       },
-      JM = 45 == iM.j ? OM.e : null,
-      dM = "skyblock:forged:";
+      bV = 45 == xV.j ? JV.c : null,
+      EV = "skyblock:forged:";
 
-    function yM(MM, rM) {
-      return `${MM} ${rM}`
+    function BV(VV, eV) {
+      return `${VV} ${eV}`
     }
-    SM.flatMap((MM => jM.map((rM => yM(MM, rM)))));
+    YV.flatMap((VV => UV.map((eV => BV(VV, eV)))));
 
-    function lM(MM) {
+    function jV(VV) {
       let {
-        blade: rM,
-        guard: iM,
-        handle: OM
-      } = MM;
-      return `${dM}${rM.toLowerCase()}-${iM.toLowerCase()}-${OM.toLowerCase()}`
+        blade: eV,
+        guard: xV,
+        handle: JV
+      } = VV;
+      return `${EV}${eV.toLowerCase()}-${xV.toLowerCase()}-${JV.toLowerCase()}`
     }
 
-    function EM(MM) {
-      if (! function(MM) {
-          return "string" === typeof MM && MM.startsWith(dM)
-        }(MM)) return null;
-      const rM = MM.slice(dM.length).split("-").map((MM => SM.find((rM => rM.toLowerCase() === MM))));
-      return 3 !== rM.length || rM.includes(void 0) ? null : {
-        blade: rM[0],
-        guard: rM[1],
-        handle: rM[2]
+    function qV(VV) {
+      if (! function(VV) {
+          return "string" === typeof VV && VV.startsWith(EV)
+        }(VV)) return null;
+      const eV = VV.slice(EV.length).split("-").map((VV => YV.find((eV => eV.toLowerCase() === VV))));
+      return 3 !== eV.length || eV.includes(void 0) ? null : {
+        blade: eV[0],
+        guard: eV[1],
+        handle: eV[2]
       }
     }
-    const UM = new Map;
+    const tV = new Map;
 
-    function GM(MM) {
-      var rM;
-      let iM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : JM;
-      const OM = "string" === typeof MM ? EM(MM) : MM;
-      if (null === OM) return null;
-      const SM = lM(OM),
-        nM = iM === JM ? UM.get(SM) : void 0;
-      if (void 0 !== nM) return nM;
-      const dM = function(MM, rM) {
-        var iM, OM, SM, nM, JM, dM, yM, EM, UM;
+    function FV(VV) {
+      var eV;
+      let xV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : bV;
+      const JV = "string" === typeof VV ? qV(VV) : VV;
+      if (null === JV) return null;
+      const YV = jV(JV),
+        QV = xV === bV ? tV.get(YV) : void 0;
+      if (void 0 !== QV) return QV;
+      const EV = function(VV, eV) {
+        var xV, JV, YV, QV, bV, EV, BV, qV, tV;
         const {
-          blade: GM,
-          guard: tM,
-          handle: gM
-        } = MM, uM = aM, RM = GM === tM && tM === gM, pM = eM((1 + uM[GM].bladeDamage) * (RM ? 1 + mM : 1)), WM = null !== (iM = rM.damageMultiplier) && void 0 !== iM ? iM : pM, sM = null !== (OM = rM.cooldownMultiplier) && void 0 !== OM ? OM : uM[gM].handleCooldown, DM = null !== (SM = rM.knockbackMultiplier) && void 0 !== SM ? SM : eM(1 + uM[gM].handleKnockback), kM = null !== (nM = rM.reachBonus) && void 0 !== nM ? nM : uM[gM].handleReach, ZM = null !== (JM = rM.damageReduction) && void 0 !== JM ? JM : uM[tM].guardReduction, oM = null !== (dM = rM.traits) && void 0 !== dM ? dM : function(MM) {
-          const rM = {},
-            iM = {};
-          for (const PM of jM) {
-            var OM, SM;
-            const jM = aM[CM(MM, PM)].trait;
-            null !== jM && (rM[jM] = (null !== (OM = rM[jM]) && void 0 !== OM ? OM : 0) + QM[PM], iM[jM] = (null !== (SM = iM[jM]) && void 0 !== SM ? SM : 0) + 1)
+          blade: FV,
+          guard: XV,
+          handle: MV
+        } = VV, zV = yV, GV = FV === XV && XV === MV, WV = PV((1 + zV[FV].bladeDamage) * (GV ? 1 + vV : 1)), RV = null !== (xV = eV.damageMultiplier) && void 0 !== xV ? xV : WV, gV = null !== (JV = eV.cooldownMultiplier) && void 0 !== JV ? JV : zV[MV].handleCooldown, DV = null !== (YV = eV.knockbackMultiplier) && void 0 !== YV ? YV : PV(1 + zV[MV].handleKnockback), iV = null !== (QV = eV.reachBonus) && void 0 !== QV ? QV : zV[MV].handleReach, CV = null !== (bV = eV.damageReduction) && void 0 !== bV ? bV : zV[XV].guardReduction, aV = null !== (EV = eV.traits) && void 0 !== EV ? EV : function(VV) {
+          const eV = {},
+            xV = {};
+          for (const pV of UV) {
+            var JV, YV;
+            const UV = yV[TV(VV, pV)].trait;
+            null !== UV && (eV[UV] = (null !== (JV = eV[UV]) && void 0 !== JV ? JV : 0) + nV[pV], xV[UV] = (null !== (YV = xV[UV]) && void 0 !== YV ? YV : 0) + 1)
           }
-          for (const jM of Object.keys(rM)) {
-            const MM = 3 === iM[jM] ? LM : 2 === iM[jM] ? zM : 1;
-            rM[jM] = eM(rM[jM] * MM)
+          for (const UV of Object.keys(eV)) {
+            const VV = 3 === xV[UV] ? ZV : 2 === xV[UV] ? wV : 1;
+            eV[UV] = PV(eV[UV] * VV)
           }
-          return rM
-        }(MM), fM = null !== (yM = rM.ability) && void 0 !== yM ? yM : null, YM = void 0 !== rM.name, NM = null !== (EM = rM.name) && void 0 !== EM ? EM : RM ? `Pure ${GM} Sword` : `${uM[tM].epithet} ${GM} Sword`, AM = null !== (UM = rM.lore) && void 0 !== UM ? UM : `Forged by the Forge Mother from a ${GM.toLowerCase()} blade, ${tM.toLowerCase()} guard and ${gM.toLowerCase()} handle.`, xM = function(MM) {
+          return eV
+        }(VV), oV = null !== (BV = eV.ability) && void 0 !== BV ? BV : null, cV = void 0 !== eV.name, hV = null !== (qV = eV.name) && void 0 !== qV ? qV : GV ? `Pure ${FV} Sword` : `${zV[XV].epithet} ${FV} Sword`, lV = null !== (tV = eV.lore) && void 0 !== tV ? tV : `Forged by the Forge Mother from a ${FV.toLowerCase()} blade, ${XV.toLowerCase()} guard and ${MV.toLowerCase()} handle.`, LV = function(VV) {
           let {
-            blade: rM,
-            guard: iM,
-            handle: OM
-          } = MM;
-          const SM = aM;
-          return PM * (SM[rM].value + SM[iM].value + SM[OM].value)
-        }(MM), vM = uM[GM].value + uM[tM].value + uM[gM].value, FM = YM ? "Tier 5" : vM <= 4 ? "Tier 1" : vM <= 8 ? "Tier 2" : vM <= 14 ? "Tier 3" : vM <= 22 ? "Tier 4" : "Tier 5", BM = [];
-        1 !== WM && BM.push(`${wM(WM-1)} damage`);
-        1 !== sM && BM.push(`${bM(1/sM-1)} faster strikes`);
-        1 !== DM && BM.push(`${wM(DM-1)} knockback`);
-        kM > 0 && BM.push(`+${kM} reach`);
-        ZM > 0 && BM.push(`${bM(ZM)} less damage taken while held`);
-        const XM = [];
-        for (const jM of Object.keys(oM)) XM.push(`${HM[jM].name}: ${HM[jM].describe(oM[jM])}`);
-        null !== fM && XM.push(`${hM[fM].name}: ${hM[fM].description}`);
-        return BM.push(...XM), {
-          id: lM(MM),
-          parts: MM,
-          baseSword: uM[GM].baseSword,
-          displayName: NM,
-          lore: AM,
-          properties: BM,
-          effects: XM,
-          named: YM,
-          damageMultiplier: WM,
-          cooldownMultiplier: sM,
-          knockbackMultiplier: DM,
-          reachBonus: kM,
-          damageReduction: ZM,
-          traits: oM,
-          ability: fM,
-          coalCost: xM,
-          enchantmentTier: FM,
-          powerMultiplier: eM(WM / sM)
+            blade: eV,
+            guard: xV,
+            handle: JV
+          } = VV;
+          const YV = yV;
+          return pV * (YV[eV].value + YV[xV].value + YV[JV].value)
+        }(VV), fV = zV[FV].value + zV[XV].value + zV[MV].value, mV = cV ? "Tier 5" : fV <= 4 ? "Tier 1" : fV <= 8 ? "Tier 2" : fV <= 14 ? "Tier 3" : fV <= 22 ? "Tier 4" : "Tier 5", KV = [];
+        1 !== RV && KV.push(`${NV(RV-1)} damage`);
+        1 !== gV && KV.push(`${AV(1/gV-1)} faster strikes`);
+        1 !== DV && KV.push(`${NV(DV-1)} knockback`);
+        iV > 0 && KV.push(`+${iV} reach`);
+        CV > 0 && KV.push(`${AV(CV)} less damage taken while held`);
+        const HV = [];
+        for (const UV of Object.keys(aV)) HV.push(`${rV[UV].name}: ${rV[UV].describe(aV[UV])}`);
+        null !== oV && HV.push(`${kV[oV].name}: ${kV[oV].description}`);
+        return KV.push(...HV), {
+          id: jV(VV),
+          parts: VV,
+          baseSword: zV[FV].baseSword,
+          displayName: hV,
+          lore: lV,
+          properties: KV,
+          effects: HV,
+          named: cV,
+          damageMultiplier: RV,
+          cooldownMultiplier: gV,
+          knockbackMultiplier: DV,
+          reachBonus: iV,
+          damageReduction: CV,
+          traits: aV,
+          ability: oV,
+          coalCost: LV,
+          enchantmentTier: mV,
+          powerMultiplier: PV(RV / gV)
         }
-      }(OM, null !== (rM = iM[SM]) && void 0 !== rM ? rM : {});
-      return iM === JM && UM.set(SM, dM), dM
+      }(JV, null !== (eV = xV[YV]) && void 0 !== eV ? eV : {});
+      return xV === bV && tV.set(YV, EV), EV
     }
 
-    function CM(MM, rM) {
-      return "Blade" === rM ? MM.blade : "Guard" === rM ? MM.guard : MM.handle
+    function TV(VV, eV) {
+      return "Blade" === eV ? VV.blade : "Guard" === eV ? VV.guard : VV.handle
     }
 
-    function eM(MM) {
-      return Math.round(100 * MM) / 100
+    function PV(VV) {
+      return Math.round(100 * VV) / 100
     }
 
-    function bM(MM) {
-      return `${Math.round(100*MM)}%`
+    function AV(VV) {
+      return `${Math.round(100*VV)}%`
     }
 
-    function wM(MM) {
-      return `${MM>=0?"+":""}${bM(MM)}`
+    function NV(VV) {
+      return `${VV>=0?"+":""}${AV(VV)}`
     }
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const VV in modules) Object.freeze(modules[VV]);

@@ -1,13 +1,13 @@
 export const id = 148;
 export const ids = [148, 151, 152];
 export const modules = {
-  7102: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => aM
+  7169: (VV, eV, xV) => {
+    xV.d(eV, {
+      d: () => yV
     });
-    var OM = iM(5430),
-      SM = iM(1303);
-    const jM = {
+    var JV = xV(5548),
+      YV = xV(1321);
+    const UV = {
       strict: "shaderPack:variantStrict",
       nonStrict: "shaderPack:variantNonStrict",
       terrain: "shaderPack:variantTerrain",
@@ -15,339 +15,339 @@ export const modules = {
       model: "shaderPack:variantModel"
     };
 
-    function aM(MM) {
+    function yV(VV) {
       let {
-        diagnostics: rM,
-        more: iM = 0,
-        t: aM
-      } = MM;
-      return (0, SM.jsxs)("ul", {
+        diagnostics: eV,
+        more: xV = 0,
+        t: yV
+      } = VV;
+      return (0, YV.jsxs)("ul", {
         className: "ShaderPackDiagnostics",
-        children: [rM.map(((MM, rM) => {
-          const iM = (0, OM.e)(MM),
-            PM = function(MM, rM) {
-              const iM = (0, OM.d)(null !== MM && void 0 !== MM ? MM : []);
-              if (0 === iM.length) return null;
-              return iM.map((MM => MM.map((MM => rM(jM[MM]))).join(", "))).join("; ")
-            }(MM.variants, aM);
-          return (0, SM.jsxs)("li", {
-            children: [iM && (0, SM.jsx)("span", {
+        children: [eV.map(((VV, eV) => {
+          const xV = (0, JV.f)(VV),
+            pV = function(VV, eV) {
+              const xV = (0, JV.c)(null !== VV && void 0 !== VV ? VV : []);
+              if (0 === xV.length) return null;
+              return xV.map((VV => VV.map((VV => eV(UV[VV]))).join(", "))).join("; ")
+            }(VV.variants, yV);
+          return (0, YV.jsxs)("li", {
+            children: [xV && (0, YV.jsx)("span", {
               className: "ShaderPackDiagnosticLocation",
-              children: iM
-            }), MM.message, PM && (0, SM.jsx)("span", {
+              children: xV
+            }), VV.message, pV && (0, YV.jsx)("span", {
               className: "ShaderPackDiagnosticVariants",
-              children: aM("shaderPack:onlyIn", {
-                variants: PM
+              children: yV("shaderPack:onlyIn", {
+                variants: pV
               })
             })]
-          }, rM)
-        })), iM > 0 && (0, SM.jsx)("li", {
-          children: aM("shaderPack:moreErrors", {
-            count: String(iM)
+          }, eV)
+        })), xV > 0 && (0, YV.jsx)("li", {
+          children: yV("shaderPack:moreErrors", {
+            count: String(xV)
           })
         })]
       })
     }
   },
-  7105: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => CM,
-      e: () => eM
+  7174: (VV, eV, xV) => {
+    xV.d(eV, {
+      b: () => TV,
+      c: () => PV
     });
-    var OM = iM(44),
-      SM = iM(1116),
-      jM = iM.n(SM),
-      aM = iM(5364),
-      PM = iM(1396),
-      nM = iM(1398),
-      QM = iM(1188),
-      zM = iM(5442),
-      LM = iM(5435),
-      mM = iM(3573);
-    const HM = 33554432,
-      hM = 1024,
-      JM = 65536;
-    async function dM(MM) {
-      const rM = (0, mM.s)(MM);
-      if (rM) {
-        if (rM.size > HM) throw new mM.e("shaderPack:loadZipTooBig", {
-          megabytes: String(HM / 1048576)
+    var JV = xV(62),
+      YV = xV(1146),
+      UV = xV.n(YV),
+      yV = xV(5448),
+      pV = xV(1408),
+      QV = xV(1414),
+      nV = xV(1220),
+      wV = xV(5561),
+      ZV = xV(5556),
+      vV = xV(3588);
+    const rV = 33554432,
+      kV = 1024,
+      bV = 65536;
+    async function EV(VV) {
+      const eV = (0, vV.p)(VV);
+      if (eV) {
+        if (eV.size > rV) throw new vV.d("shaderPack:loadZipTooBig", {
+          megabytes: String(rV / 1048576)
         });
-        return async function(MM) {
-          return yM((0, mM.j)(MM, hM).map((rM => ({
-            path: rM.path,
-            read: iM => (0, mM.o)(MM, rM, iM)
+        return async function(VV) {
+          return BV((0, vV.j)(VV, kV).map((eV => ({
+            path: eV.path,
+            read: xV => (0, vV.n)(VV, eV, xV)
           }))))
-        }(new Uint8Array(await rM.arrayBuffer()))
+        }(new Uint8Array(await eV.arrayBuffer()))
       }
-      return yM(MM.map((MM => ({
-        path: (0, mM.l)(MM),
-        read: rM => async function(MM, rM) {
-          return MM.size > rM ? null : new Uint8Array(await MM.arrayBuffer())
-        }(MM, rM)
+      return BV(VV.map((VV => ({
+        path: (0, vV.m)(VV),
+        read: eV => async function(VV, eV) {
+          return VV.size > eV ? null : new Uint8Array(await VV.arrayBuffer())
+        }(VV, eV)
       }))))
     }
-    async function yM(MM) {
-      const rM = function(MM) {
-          const rM = MM.length > 0 ? MM[0].path.indexOf("/") : -1;
-          if (-1 === rM) return MM;
-          const iM = MM[0].path.slice(0, rM + 1);
-          if (!MM.every((MM => MM.path.startsWith(iM)))) return MM;
-          return MM.map((MM => ({
-            ...MM,
-            path: MM.path.slice(iM.length)
+    async function BV(VV) {
+      const eV = function(VV) {
+          const eV = VV.length > 0 ? VV[0].path.indexOf("/") : -1;
+          if (-1 === eV) return VV;
+          const xV = VV[0].path.slice(0, eV + 1);
+          if (!VV.every((VV => VV.path.startsWith(xV)))) return VV;
+          return VV.map((VV => ({
+            ...VV,
+            path: VV.path.slice(xV.length)
           })))
-        }(MM.filter((MM => !(0, mM.h)(MM.path)))),
-        iM = rM.filter((MM => "pack.json" === MM.path.toLowerCase()));
-      if (0 === iM.length) throw new mM.e("shaderPack:loadNoManifest");
-      if (iM.length > 1) throw new mM.e("shaderPack:loadDuplicateManifest");
-      const OM = iM[0],
-        SM = await OM.read(JM);
-      if (null === SM) throw new mM.e("shaderPack:loadManifestTooBig", {
-        kilobytes: String(JM / 1024)
+        }(VV.filter((VV => !(0, vV.h)(VV.path)))),
+        xV = eV.filter((VV => "pack.json" === VV.path.toLowerCase()));
+      if (0 === xV.length) throw new vV.d("shaderPack:loadNoManifest");
+      if (xV.length > 1) throw new vV.d("shaderPack:loadDuplicateManifest");
+      const JV = xV[0],
+        YV = await JV.read(bV);
+      if (null === YV) throw new vV.d("shaderPack:loadManifestTooBig", {
+        kilobytes: String(bV / 1024)
       });
-      const jM = function(MM) {
-          let rM;
+      const UV = function(VV) {
+          let eV;
           try {
-            rM = JSON.parse(MM)
-          } catch (PM) {
-            throw new mM.e("shaderPack:loadManifestNotJson", {
-              error: PM.message
+            eV = JSON.parse(VV)
+          } catch (pV) {
+            throw new vV.d("shaderPack:loadManifestNotJson", {
+              error: pV.message
             }, {
-              cause: PM
+              cause: pV
             })
           }
-          if ("object" !== typeof rM || null === rM || Array.isArray(rM)) throw new mM.e("shaderPack:loadManifestNotObject");
+          if ("object" !== typeof eV || null === eV || Array.isArray(eV)) throw new vV.d("shaderPack:loadManifestNotObject");
           const {
-            apiVersion: iM,
-            name: OM,
-            author: SM,
-            description: jM,
-            keepCircleShadows: aM
-          } = rM;
-          if (void 0 === iM) throw new mM.e("shaderPack:loadNoApiVersion", {
-            version: String(LM.e)
+            apiVersion: xV,
+            name: JV,
+            author: YV,
+            description: UV,
+            keepCircleShadows: yV
+          } = eV;
+          if (void 0 === xV) throw new vV.d("shaderPack:loadNoApiVersion", {
+            version: String(ZV.d)
           });
-          if (!(0, LM.k)(iM)) throw new mM.e("shaderPack:loadWrongApiVersion", {
-            packVersion: JSON.stringify(iM),
-            version: String(LM.e)
+          if (!(0, ZV.j)(xV)) throw new vV.d("shaderPack:loadWrongApiVersion", {
+            packVersion: JSON.stringify(xV),
+            version: String(ZV.d)
           });
-          if ("string" !== typeof OM || "" === OM.trim()) throw new mM.e("shaderPack:loadNoName");
-          if (void 0 !== SM && null !== SM && "string" !== typeof SM) throw new mM.e("shaderPack:loadAuthorNotString");
-          if (void 0 !== jM && null !== jM && "string" !== typeof jM) throw new mM.e("shaderPack:loadDescriptionNotString");
-          if (void 0 !== aM && "boolean" !== typeof aM) throw new mM.e("shaderPack:loadKeepCircleShadowsNotBoolean");
+          if ("string" !== typeof JV || "" === JV.trim()) throw new vV.d("shaderPack:loadNoName");
+          if (void 0 !== YV && null !== YV && "string" !== typeof YV) throw new vV.d("shaderPack:loadAuthorNotString");
+          if (void 0 !== UV && null !== UV && "string" !== typeof UV) throw new vV.d("shaderPack:loadDescriptionNotString");
+          if (void 0 !== yV && "boolean" !== typeof yV) throw new vV.d("shaderPack:loadKeepCircleShadowsNotBoolean");
           return {
-            apiVersion: iM,
-            name: OM,
-            author: "string" === typeof SM ? SM : null,
-            description: "string" === typeof jM && "" !== jM.trim() ? jM : null,
-            keepCircleShadows: !0 === aM
+            apiVersion: xV,
+            name: JV,
+            author: "string" === typeof YV ? YV : null,
+            description: "string" === typeof UV && "" !== UV.trim() ? UV : null,
+            keepCircleShadows: !0 === yV
           }
-        }(lM(SM, OM.path)),
-        aM = rM.filter((MM => MM.path.toLowerCase().endsWith(".wgsl"))).sort(((MM, rM) => (0, zM.k)(MM.path, rM.path)));
-      if (0 === aM.length) throw new mM.e("shaderPack:loadNoWgsl");
-      if (aM.length > zM.d) throw new mM.e("shaderPack:loadTooManyWgsl", {
-        count: String(zM.d)
+        }(jV(YV, JV.path)),
+        yV = eV.filter((VV => VV.path.toLowerCase().endsWith(".wgsl"))).sort(((VV, eV) => (0, wV.n)(VV.path, eV.path)));
+      if (0 === yV.length) throw new vV.d("shaderPack:loadNoWgsl");
+      if (yV.length > wV.c) throw new vV.d("shaderPack:loadTooManyWgsl", {
+        count: String(wV.c)
       });
-      const PM = aM.find(((MM, rM) => rM > 0 && MM.path === aM[rM - 1].path));
-      if (PM) throw new mM.e("shaderPack:loadDuplicatePath", {
-        path: PM.path
+      const pV = yV.find(((VV, eV) => eV > 0 && VV.path === yV[eV - 1].path));
+      if (pV) throw new vV.d("shaderPack:loadDuplicatePath", {
+        path: pV.path
       });
-      const nM = [];
-      let QM = zM.f;
-      for (const LM of aM) {
-        const MM = await LM.read(QM);
-        if (null === MM) throw new mM.e("shaderPack:loadSourceTooBig", {
-          kilobytes: String(zM.f / 1024)
+      const QV = [];
+      let nV = wV.d;
+      for (const ZV of yV) {
+        const VV = await ZV.read(nV);
+        if (null === VV) throw new vV.d("shaderPack:loadSourceTooBig", {
+          kilobytes: String(wV.d / 1024)
         });
-        QM -= MM.byteLength, nM.push({
-          path: LM.path,
-          source: lM(MM, LM.path)
+        nV -= VV.byteLength, QV.push({
+          path: ZV.path,
+          source: jV(VV, ZV.path)
         })
       }
       return {
-        manifest: jM,
-        files: nM
+        manifest: UV,
+        files: QV
       }
     }
 
-    function lM(MM, rM) {
+    function jV(VV, eV) {
       try {
         return new TextDecoder("utf-8", {
           fatal: !0
-        }).decode(MM)
-      } catch (iM) {
-        throw new mM.e("shaderPack:loadNotUtf8", {
-          path: rM
+        }).decode(VV)
+      } catch (xV) {
+        throw new vV.d("shaderPack:loadNotUtf8", {
+          path: eV
         }, {
-          cause: iM
+          cause: xV
         })
       }
     }
-    var EM = iM(5430),
-      UM = iM(5451),
-      GM = iM(1303);
+    var qV = xV(5548),
+      tV = xV(5564),
+      FV = xV(1321);
 
-    function CM(MM) {
+    function TV(VV) {
       let {
-        busy: rM,
-        disabled: iM,
-        onFiles: OM
-      } = MM;
+        busy: eV,
+        disabled: xV,
+        onFiles: JV
+      } = VV;
       const {
-        t: SM
-      } = (0, QM.A)(), {
-        getRootProps: zM,
-        getInputProps: LM,
-        isDragActive: mM,
-        open: HM
-      } = (0, aM.e)({
-        onDrop: OM,
+        t: YV
+      } = (0, nV.A)(), {
+        getRootProps: wV,
+        getInputProps: ZV,
+        isDragActive: vV,
+        open: rV
+      } = (0, yV.e)({
+        onDrop: JV,
         noClick: !0,
         noKeyboard: !0,
         useFsAccessApi: !1,
-        disabled: iM
+        disabled: xV
       });
-      return (0, GM.jsxs)("div", {
-        ...zM({
-          className: jM()("ShaderPackDropZone", {
-            ActiveDrag: mM,
-            Disabled: iM
+      return (0, FV.jsxs)("div", {
+        ...wV({
+          className: UV()("ShaderPackDropZone", {
+            ActiveDrag: vV,
+            Disabled: xV
           })
         }),
-        children: [(0, GM.jsx)("input", {
-          ...LM({
+        children: [(0, FV.jsx)("input", {
+          ...ZV({
             webkitdirectory: "true"
           })
-        }), rM && (0, GM.jsx)(PM.d, {}), !rM && (0, GM.jsxs)(GM.Fragment, {
-          children: [(0, GM.jsx)("div", {
+        }), eV && (0, FV.jsx)(pV.d, {}), !eV && (0, FV.jsxs)(FV.Fragment, {
+          children: [(0, FV.jsx)("div", {
             className: "ShaderPackDropZoneIcon",
-            children: (0, GM.jsx)(nM.b, {
+            children: (0, FV.jsx)(QV.b, {
               name: "up-from-bracket"
             })
-          }), (0, GM.jsx)("div", {
+          }), (0, FV.jsx)("div", {
             className: "ShaderPackDropZoneInstructions",
-            children: SM((0, UM.g)() ? "shaderPack:dropHere" : "shaderPack:chooseZipInstructions")
-          }), (0, GM.jsx)(UM.d, {
-            disabled: iM,
-            openFolderPicker: HM,
-            onFiles: OM
+            children: YV((0, tV.g)() ? "shaderPack:dropHere" : "shaderPack:chooseZipInstructions")
+          }), (0, FV.jsx)(tV.e, {
+            disabled: xV,
+            openFolderPicker: rV,
+            onFiles: JV
           })]
         })]
       })
     }
 
-    function eM(MM) {
+    function PV(VV) {
       const {
-        t: rM
-      } = (0, QM.A)(), [iM, SM] = (0, OM.useState)(!1), [jM, aM] = (0, OM.useState)(null), PM = (0, OM.useRef)(!1);
+        t: eV
+      } = (0, nV.A)(), [xV, YV] = (0, JV.useState)(!1), [UV, yV] = (0, JV.useState)(null), pV = (0, JV.useRef)(!1);
       return {
-        loading: iM,
-        error: jM,
-        setError: aM,
-        onFiles: async function(iM) {
-          if (!PM.current) {
-            PM.current = !0, SM(!0), aM(null);
+        loading: xV,
+        error: UV,
+        setError: yV,
+        onFiles: async function(xV) {
+          if (!pV.current) {
+            pV.current = !0, YV(!0), yV(null);
             try {
-              await MM(await dM(iM))
-            } catch (OM) {
-              OM instanceof mM.e ? aM((0, EM.i)(rM, OM.translationKey, OM.params)) : (console.error("Failed to load the shader pack", OM), aM(rM("shaderPack:unexpectedError")))
+              await VV(await EV(xV))
+            } catch (JV) {
+              JV instanceof vV.d ? yV((0, qV.h)(eV, JV.translationKey, JV.params)) : (console.error("Failed to load the shader pack", JV), yV(eV("shaderPack:unexpectedError")))
             } finally {
-              PM.current = !1, SM(!1)
+              pV.current = !1, YV(!1)
             }
           }
         }
       }
     }
   },
-  7142: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      forgetShaderPackActiveHint: () => uM,
-      isOtherApiVersion: () => bM,
-      isShaderPackActive: () => UM,
-      isShaderPackChangePending: () => eM,
-      markShaderPackChangePending: () => CM,
-      pageShaderPackValidationVersion: () => wM,
-      reconcileStoredShaderPackHint: () => gM,
-      removeShaderPack: () => EM,
-      replaceShaderPack: () => dM,
-      saveShaderPack: () => JM,
-      shaderPackNeedsCheck: () => tM,
-      storedPackOutcome: () => GM,
-      storedShaderPackFiles: () => mM,
-      toStoredShaderPack: () => LM
+  7212: (VV, eV, xV) => {
+    xV.r(eV), xV.d(eV, {
+      forgetShaderPackActiveHint: () => zV,
+      isOtherApiVersion: () => AV,
+      isShaderPackActive: () => tV,
+      isShaderPackChangePending: () => PV,
+      markShaderPackChangePending: () => TV,
+      pageShaderPackValidationVersion: () => NV,
+      reconcileStoredShaderPackHint: () => MV,
+      removeShaderPack: () => qV,
+      replaceShaderPack: () => EV,
+      saveShaderPack: () => bV,
+      shaderPackNeedsCheck: () => XV,
+      storedPackOutcome: () => FV,
+      storedShaderPackFiles: () => vV,
+      toStoredShaderPack: () => ZV
     });
-    var OM = iM(5442),
-      SM = iM(5435),
-      jM = iM(30),
-      aM = iM(3855),
-      PM = iM(7148),
-      nM = iM(7120);
-    const QM = "shaderPackChangePending";
-    let zM = null;
+    var JV = xV(5561),
+      YV = xV(5556),
+      UV = xV(40),
+      yV = xV(3907),
+      pV = xV(7216),
+      QV = xV(7191);
+    const nV = "shaderPackChangePending";
+    let wV = null;
 
-    function LM(MM, rM, iM) {
+    function ZV(VV, eV, xV) {
       return {
-        manifest: MM.manifest,
-        files: (0, OM.w)(MM.files),
-        validation: rM,
-        ...iM && {
-          listing: iM
+        manifest: VV.manifest,
+        files: (0, JV.t)(VV.files),
+        validation: eV,
+        ...xV && {
+          listing: xV
         }
       }
     }
 
-    function mM(MM) {
-      return Object.keys(MM.files).map((rM => ({
-        path: rM,
-        source: MM.files[rM]
+    function vV(VV) {
+      return Object.keys(VV.files).map((eV => ({
+        path: eV,
+        source: VV.files[eV]
       })))
     }
-    let HM = Promise.resolve();
+    let rV = Promise.resolve();
 
-    function hM(MM) {
-      const rM = HM.then(MM);
-      return HM = rM.catch((() => {})), rM
-    }
-
-    function JM(MM, rM) {
-      return hM((() => yM(MM, rM)))
+    function kV(VV) {
+      const eV = rV.then(VV);
+      return rV = eV.catch((() => {})), eV
     }
 
-    function dM(MM, rM, iM) {
-      return hM((async () => JSON.stringify(await (0, PM.d)()) === JSON.stringify(MM) && (null === rM ? (await lM(), !0) : yM(rM, iM))))
-    }
-    async function yM(MM, rM) {
-      const iM = await jM.f.setItem(PM.b, MM);
-      return iM && RM(MM, rM), iM
-    }
-    async function lM() {
-      await jM.f.removeItem(PM.b), jM.g.removeItem(aM.c)
+    function bV(VV, eV) {
+      return kV((() => BV(VV, eV)))
     }
 
-    function EM() {
-      return hM(lM)
+    function EV(VV, eV, xV) {
+      return kV((async () => JSON.stringify(await (0, pV.f)()) === JSON.stringify(VV) && (null === eV ? (await jV(), !0) : BV(eV, xV))))
+    }
+    async function BV(VV, eV) {
+      const xV = await UV.i.setItem(pV.d, VV);
+      return xV && GV(VV, eV), xV
+    }
+    async function jV() {
+      await UV.i.removeItem(pV.d), UV.m.removeItem(yV.d)
     }
 
-    function UM(MM, rM) {
-      return "active" === GM(MM, rM).kind
+    function qV() {
+      return kV(jV)
     }
 
-    function GM(MM, rM) {
-      var iM;
-      return null === MM ? {
+    function tV(VV, eV) {
+      return "active" === FV(VV, eV).kind
+    }
+
+    function FV(VV, eV) {
+      var xV;
+      return null === VV ? {
         kind: "none",
         reason: "nothingStored"
-      } : bM(MM) ? {
+      } : AV(VV) ? {
         kind: "none",
         reason: "otherApiVersion"
-      } : !1 !== (null === (iM = MM.validation) || void 0 === iM ? void 0 : iM.ok) || MM.validation.fromRecheck ? null === rM ? {
+      } : !1 !== (null === (xV = VV.validation) || void 0 === xV ? void 0 : xV.ok) || VV.validation.fromRecheck ? null === eV ? {
         kind: "none",
         reason: "noCompiler"
-      } : tM(MM, rM) ? {
+      } : XV(VV, eV) ? {
         kind: "blocked",
         messageKey: "shaderPack:failedUnchecked"
-      } : MM.validation.ok ? {
+      } : VV.validation.ok ? {
         kind: "active"
       } : {
         kind: "blocked",
@@ -358,149 +358,149 @@ export const modules = {
       }
     }
 
-    function CM() {
-      jM.k.setItem(QM, performance.timeOrigin)
+    function TV() {
+      UV.q.setItem(nV, performance.timeOrigin)
     }
 
-    function eM() {
-      return jM.k.getItem(QM) === performance.timeOrigin
+    function PV() {
+      return UV.q.getItem(nV) === performance.timeOrigin
     }
 
-    function bM(MM) {
-      return !(0, SM.k)(MM.manifest.apiVersion)
+    function AV(VV) {
+      return !(0, YV.j)(VV.manifest.apiVersion)
     }
 
-    function wM(MM) {
-      return zM ??= MM.KD((0, nM.shaderPackTextures)()), zM
+    function NV(VV) {
+      return wV ??= VV.lD((0, QV.shaderPackTextures)()), wV
     }
 
-    function tM(MM, rM) {
-      var iM;
-      return (null === (iM = MM.validation) || void 0 === iM ? void 0 : iM.headerVersion) !== wM(rM)
+    function XV(VV, eV) {
+      var xV;
+      return (null === (xV = VV.validation) || void 0 === xV ? void 0 : xV.headerVersion) !== NV(eV)
     }
 
-    function gM(MM) {
-      return hM((async () => {
-        RM(await (0, PM.d)(!0), MM)
+    function MV(VV) {
+      return kV((async () => {
+        GV(await (0, pV.f)(!0), VV)
       }))
     }
 
-    function uM() {
-      return hM((async () => {
-        jM.g.removeItem(aM.c)
+    function zV() {
+      return kV((async () => {
+        UV.m.removeItem(yV.d)
       }))
     }
 
-    function RM(MM, rM) {
-      UM(MM, rM) ? jM.g.setItem(aM.c, !0) : jM.g.removeItem(aM.c)
+    function GV(VV, eV) {
+      tV(VV, eV) ? UV.m.setItem(yV.d, !0) : UV.m.removeItem(yV.d)
     }
   },
-  7120: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      loadShaderPackTextures: () => aM,
-      shaderPackTextures: () => PM
+  7191: (VV, eV, xV) => {
+    xV.r(eV), xV.d(eV, {
+      loadShaderPackTextures: () => yV,
+      shaderPackTextures: () => pV
     });
-    var OM = iM(5442);
-    let SM = null,
-      jM = null;
+    var JV = xV(5561);
+    let YV = null,
+      UV = null;
 
-    function aM() {
-      return jM ??= Promise.all([iM.e(84), iM.e(204)]).then((() => iM(41585))).then((MM => {
+    function yV() {
+      return UV ??= Promise.all([xV.e(84), xV.e(204)]).then((() => xV(41764))).then((VV => {
         let {
-          FORMER_BLOCK_IMAGE_NAMES: rM,
-          textureNameToIndex: iM,
-          textureAnimationData: jM
-        } = MM;
-        return SM ??= (0, OM.j)(iM, jM, rM), SM
-      })), jM
+          FORMER_BLOCK_IMAGE_NAMES: eV,
+          textureNameToIndex: xV,
+          textureAnimationData: UV
+        } = VV;
+        return YV ??= (0, JV.j)(xV, UV, eV), YV
+      })), UV
     }
 
-    function PM() {
-      if (null === SM) throw new Error("Shader pack textures read before loadShaderPackTextures");
-      return SM
+    function pV() {
+      if (null === YV) throw new Error("Shader pack textures read before loadShaderPackTextures");
+      return YV
     }
   },
-  7134: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => nM,
-      f: () => PM
+  7208: (VV, eV, xV) => {
+    xV.d(eV, {
+      b: () => QV,
+      d: () => pV
     });
-    var OM = iM(7142),
-      SM = iM(7120),
-      jM = iM(106);
-    const aM = 100;
-    async function PM(MM, rM) {
-      var iM;
-      let OM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null !== (iM = navigator.gpu) && void 0 !== iM ? iM : null;
-      const aM = MM.zMM(rM, (0, SM.shaderPackTextures)());
-      if (aM.errors.length > 0) return QM(MM, aM.errors, aM.offInStrict);
-      const PM = await async function(MM) {
-        if (!MM) return null;
+    var JV = xV(7212),
+      YV = xV(7191),
+      UV = xV(124);
+    const yV = 100;
+    async function pV(VV, eV) {
+      var xV;
+      let JV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null !== (xV = navigator.gpu) && void 0 !== xV ? xV : null;
+      const yV = VV.GeV(eV, (0, YV.shaderPackTextures)());
+      if (yV.errors.length > 0) return nV(VV, yV.errors, yV.offInStrict);
+      const pV = await async function(VV) {
+        if (!VV) return null;
         try {
-          const rM = await (0, jM.z)(MM);
-          return rM ? await rM.requestDevice() : null
-        } catch (rM) {
-          return console.error("Couldn't get a WebGPU device to validate the shader pack.", rM), null
+          const eV = await (0, UV.w)(VV);
+          return eV ? await eV.requestDevice() : null
+        } catch (eV) {
+          return console.error("Couldn't get a WebGPU device to validate the shader pack.", eV), null
         }
-      }(OM);
-      if (!PM) return null;
-      let nM = !1;
-      PM.lost.then((() => {
-        nM = !0
+      }(JV);
+      if (!pV) return null;
+      let QV = !1;
+      pV.lost.then((() => {
+        QV = !0
       }));
       try {
-        const rM = await Promise.all(aM.validationModules.map((rM => async function(MM, rM, iM) {
-          rM.pushErrorScope("validation");
-          const OM = rM.createShaderModule({
-              code: iM.code
+        const eV = await Promise.all(yV.validationModules.map((eV => async function(VV, eV, xV) {
+          eV.pushErrorScope("validation");
+          const JV = eV.createShaderModule({
+              code: xV.code
             }),
-            SM = rM.popErrorScope(),
+            YV = eV.popErrorScope(),
             {
-              messages: jM
-            } = await OM.getCompilationInfo(),
-            aM = jM.filter((MM => "error" === MM.type)).map((rM => MM.mapValidationMessage(iM, rM))),
-            PM = await SM;
-          PM && 0 === aM.length && aM.push({
+              messages: UV
+            } = await JV.getCompilationInfo(),
+            yV = UV.filter((VV => "error" === VV.type)).map((eV => VV.mapValidationMessage(xV, eV))),
+            pV = await YV;
+          pV && 0 === yV.length && yV.push({
             file: null,
             line: 0,
-            message: PM.message,
-            variants: [iM.key]
+            message: pV.message,
+            variants: [xV.key]
           });
-          return aM
-        }(MM, PM, rM))));
-        return nM ? null : QM(MM, MM.ciM(rM.flat()), aM.offInStrict)
-      } catch (zM) {
-        return console.error("Couldn't validate the shader pack on WebGPU.", zM), null
+          return yV
+        }(VV, pV, eV))));
+        return QV ? null : nV(VV, VV.BYV(eV.flat()), yV.offInStrict)
+      } catch (wV) {
+        return console.error("Couldn't validate the shader pack on WebGPU.", wV), null
       } finally {
-        PM.destroy()
+        pV.destroy()
       }
     }
-    async function nM(MM, rM) {
-      var iM;
-      if (!(0, OM.shaderPackNeedsCheck)(MM, rM) || (0, OM.isOtherApiVersion)(MM)) return MM;
-      const SM = await PM(rM, (0, OM.storedShaderPackFiles)(MM));
-      if (!SM) return MM;
-      const jM = !1 === (null === (iM = MM.validation) || void 0 === iM ? void 0 : iM.ok) && !MM.validation.fromRecheck,
-        aM = {
-          ...MM,
-          validation: jM ? SM : {
-            ...SM,
+    async function QV(VV, eV) {
+      var xV;
+      if (!(0, JV.shaderPackNeedsCheck)(VV, eV) || (0, JV.isOtherApiVersion)(VV)) return VV;
+      const YV = await pV(eV, (0, JV.storedShaderPackFiles)(VV));
+      if (!YV) return VV;
+      const UV = !1 === (null === (xV = VV.validation) || void 0 === xV ? void 0 : xV.ok) && !VV.validation.fromRecheck,
+        yV = {
+          ...VV,
+          validation: UV ? YV : {
+            ...YV,
             fromRecheck: !0
           }
         };
-      return await (0, OM.replaceShaderPack)(MM, aM, rM) || console.warn("Didn't save the shader pack's validation result: the stored pack changed or couldn't be written"), aM
+      return await (0, JV.replaceShaderPack)(VV, yV, eV) || console.warn("Didn't save the shader pack's validation result: the stored pack changed or couldn't be written"), yV
     }
 
-    function QM(MM, rM, iM) {
+    function nV(VV, eV, xV) {
       return {
-        headerVersion: (0, OM.pageShaderPackValidationVersion)(MM),
-        ok: 0 === rM.length,
-        errors: rM.slice(0, aM),
-        moreErrors: Math.max(0, rM.length - aM),
-        offInStrict: iM
+        headerVersion: (0, JV.pageShaderPackValidationVersion)(VV),
+        ok: 0 === eV.length,
+        errors: eV.slice(0, yV),
+        moreErrors: Math.max(0, eV.length - yV),
+        offInStrict: xV
       }
     }
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const VV in modules) Object.freeze(modules[VV]);

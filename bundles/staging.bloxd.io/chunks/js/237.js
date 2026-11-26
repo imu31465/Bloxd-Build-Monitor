@@ -1,64 +1,30 @@
 export const id = 237;
 export const ids = [58, 237];
 export const modules = {
-  39586: (MM, rM, iM) => {
-    var OM = {
-      "./combat_1.png": 39588,
-      "./dungeon_crumbling_crypt.png": 39596,
-      "./dungeon_frozen_hollow.png": 39605,
-      "./dungeon_wildwood_grove.png": 39614,
-      "./dungeons.png": 39621,
-      "./farming_1.png": 39628,
-      "./fishing_1.png": 39634,
-      "./hub.png": 39639,
-      "./island.png": 39645,
-      "./mining_1.png": 39648,
-      "./mining_1_bridge.png": 39653,
-      "./mining_1_gallery.png": 39658,
-      "./mining_1_hollow.png": 39660,
-      "./mining_1_village.png": 39666
-    };
-
-    function SM(MM) {
-      var rM = jM(MM);
-      return iM(rM)
-    }
-
-    function jM(MM) {
-      if (!iM.o(OM, MM)) {
-        var rM = new Error("Cannot find module '" + MM + "'");
-        throw rM.code = "MODULE_NOT_FOUND", rM
-      }
-      return OM[MM]
-    }
-    SM.keys = function() {
-      return Object.keys(OM)
-    }, SM.resolve = jM, MM.exports = SM, SM.id = 39586
-  },
-  39673: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => SM,
-      g: () => jM
+  39828: (VV, eV, xV) => {
+    xV.d(eV, {
+      b: () => YV,
+      c: () => UV
     });
-    const OM = new WeakMap;
+    const JV = new WeakMap;
 
-    function SM(MM, rM) {
-      return OM.set(MM, rM), MM
+    function YV(VV, eV) {
+      return JV.set(VV, eV), VV
     }
 
-    function jM(MM) {
-      var rM;
-      return null !== (rM = OM.get(MM)) && void 0 !== rM ? rM : null
+    function UV(VV) {
+      var eV;
+      return null !== (eV = JV.get(VV)) && void 0 !== eV ? eV : null
     }
   },
-  39536: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => OM
+  39687: (VV, eV, xV) => {
+    xV.d(eV, {
+      c: () => JV
     });
-    class OM {
-      constructor(MM, rM, iM) {
-        this.Tz = MM, this.beforeOpen = rM, this.afterClose = iM, this.open = !1, this.dh = !1, this.snapshot = void 0, this.getSnapshot = () => this.snapshot, this.show = () => {
-          this.isEnabled() && !this.dh && (this.open = !0, this.beforeOpen(this), this.emit())
+    class JV {
+      constructor(VV, eV, xV) {
+        this.QZ = VV, this.beforeOpen = eV, this.afterClose = xV, this.open = !1, this.ik = !1, this.snapshot = void 0, this.getSnapshot = () => this.snapshot, this.show = () => {
+          this.isEnabled() && !this.ik && (this.open = !0, this.beforeOpen(this), this.emit())
         }, this.close = () => {
           this.closePanel(!1)
         }, this.dismiss = () => {
@@ -71,179 +37,179 @@ export const modules = {
       showOrRefresh() {
         this.open ? this.emit() : this.show()
       }
-      closePanel(MM) {
-        this.open = !1, this.onClosed(), this.emit(), this.afterClose(MM)
+      closePanel(VV) {
+        this.open = !1, this.onClosed(), this.emit(), this.afterClose(VV)
       }
       onClosed() {}
       dispose() {
-        this.open = !1, this.emit(), this.dh = !0
+        this.open = !1, this.emit(), this.ik = !0
       }
       isEnabled() {
         return !0
       }
       emit() {
-        this.dh || (this.snapshot = this.buildSnapshot(), this.Tz(this.snapshot))
+        this.ik || (this.snapshot = this.buildSnapshot(), this.QZ(this.snapshot))
       }
     }
   },
-  39676: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      SkyblockEntityFacing: () => PM,
-      needsSkyblockEntityFacing: () => aM
+  39833: (VV, eV, xV) => {
+    xV.r(eV), xV.d(eV, {
+      SkyblockEntityFacing: () => pV,
+      needsSkyblockEntityFacing: () => yV
     });
-    var OM = iM(620),
-      SM = iM(4577),
-      jM = iM(39678);
+    var JV = xV(654),
+      YV = xV(4642),
+      UV = xV(39842);
 
-    function aM(MM, rM) {
-      if (MM.metaInfo === OM.c || "Iron Guardian" === MM.type || "Gold Guardian" === MM.type) return !0;
-      if ("Pig" === MM.type) return "sitting" === MM.pose;
-      if ("Person" !== MM.meshKind || void 0 === MM.meshOpts) return !1;
-      let iM = null === rM || void 0 === rM ? void 0 : rM.get(MM.meshOpts);
-      if (void 0 === iM) {
-        var jM, aM;
-        const OM = (0, SM.g)(MM);
-        iM = !1, "pig_napoleon" === (null === OM || void 0 === OM || null === (jM = OM.opts.textures) || void 0 === jM ? void 0 : jM.head) ? iM = !0 : "npc_pig_head" === (null === OM || void 0 === OM || null === (aM = OM.opts.textures) || void 0 === aM ? void 0 : aM.head) && (iM = "sitting" === OM.opts.pose || "sitting"), rM && (rM.size >= 256 && rM.clear(), rM.set(MM.meshOpts, iM))
+    function yV(VV, eV) {
+      if (VV.metaInfo === JV.d || "Iron Guardian" === VV.type || "Gold Guardian" === VV.type) return !0;
+      if ("Pig" === VV.type) return "sitting" === VV.pose;
+      if ("Person" !== VV.meshKind || void 0 === VV.meshOpts) return !1;
+      let xV = null === eV || void 0 === eV ? void 0 : eV.get(VV.meshOpts);
+      if (void 0 === xV) {
+        var UV, yV;
+        const JV = (0, YV.h)(VV);
+        xV = !1, "pig_napoleon" === (null === JV || void 0 === JV || null === (UV = JV.opts.textures) || void 0 === UV ? void 0 : UV.head) ? xV = !0 : "npc_pig_head" === (null === JV || void 0 === JV || null === (yV = JV.opts.textures) || void 0 === yV ? void 0 : yV.head) && (xV = "sitting" === JV.opts.pose || "sitting"), eV && (eV.size >= 256 && eV.clear(), eV.set(VV.meshOpts, xV))
       }
-      return "sitting" === iM ? "sitting" === MM.pose : iM
-    }(0, jM.g)("skyblock", ((MM, rM) => {
-      rM.setFacingTolerance(aM(MM) ? 0 : null)
+      return "sitting" === xV ? "sitting" === VV.pose : xV
+    }(0, UV.d)("skyblock", ((VV, eV) => {
+      eV.setFacingTolerance(yV(VV) ? 0 : null)
     }));
-    class PM {
-      constructor(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        this.api = MM, this.alsoVisit = rM, this.facing = new Set, this.nextFacing = new Set, this.meshFacingCache = new Map, this.visit = MM => {
-          var rM;
-          const iM = this.api.getEntityInfo(MM);
-          iM && (aM(iM, this.meshFacingCache) && (this.api.setFacingTolerance(MM, 0), this.nextFacing.add(MM)), null === (rM = this.alsoVisit) || void 0 === rM || rM.call(this, MM, iM))
+    class pV {
+      constructor(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+        this.api = VV, this.alsoVisit = eV, this.facing = new Set, this.nextFacing = new Set, this.meshFacingCache = new Map, this.visit = VV => {
+          var eV;
+          const xV = this.api.getEntityInfo(VV);
+          xV && (yV(xV, this.meshFacingCache) && (this.api.setFacingTolerance(VV, 0), this.nextFacing.add(VV)), null === (eV = this.alsoVisit) || void 0 === eV || eV.call(this, VV, xV))
         }
       }
-      bL() {
+      iZ() {
         const {
-          api: MM
-        } = this, rM = this.nextFacing;
-        MM.forEachEntity(this.visit);
-        for (const iM of this.facing) rM.has(iM) || MM.setFacingTolerance(iM, null);
-        this.facing.clear(), this.nextFacing = this.facing, this.facing = rM
+          api: VV
+        } = this, eV = this.nextFacing;
+        VV.forEachEntity(this.visit);
+        for (const xV of this.facing) eV.has(xV) || VV.setFacingTolerance(xV, null);
+        this.facing.clear(), this.nextFacing = this.facing, this.facing = eV
       }
       dispose() {
-        for (const MM of this.facing) this.api.setFacingTolerance(MM, null);
+        for (const VV of this.facing) this.api.setFacingTolerance(VV, null);
         this.facing.clear(), this.meshFacingCache.clear()
       }
     }
   },
-  39519: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      default: () => NP
+  39671: (VV, eV, xV) => {
+    xV.r(eV), xV.d(eV, {
+      default: () => op
     });
-    const OM = "island";
-    var SM = iM(39526);
+    const JV = "island";
+    var YV = xV(39678);
 
-    function jM(MM, rM, iM) {
-      const jM = "local" === rM,
-        PM = MM.background,
-        nM = rM => PM ? (0, SM.c)(rM[0] - MM.mapOrigin[0], rM[2] - MM.mapOrigin[2], PM.bounds) : [50, 50],
-        QM = (MM.insideDungeon ? [] : MM.landmarks).map((MM => {
-          var rM, OM;
+    function UV(VV, eV, xV) {
+      const UV = "local" === eV,
+        pV = VV.background,
+        QV = eV => pV ? (0, YV.c)(eV[0] - VV.mapOrigin[0], eV[2] - VV.mapOrigin[2], pV.bounds) : [50, 50],
+        nV = (VV.insideDungeon ? [] : VV.landmarks).map((VV => {
+          var eV, JV;
           return {
-            id: MM.id,
-            name: iM(MM.visited && MM.nameKey ? null !== (rM = MM.mapLabelKey) && void 0 !== rM ? rM : MM.nameKey : "skyblockGame:mapUnknown"),
-            icon: MM.visited && null !== (OM = MM.icon) && void 0 !== OM ? OM : "unknown",
-            visited: MM.visited,
+            id: VV.id,
+            name: xV(VV.visited && VV.nameKey ? null !== (eV = VV.mapLabelKey) && void 0 !== eV ? eV : VV.nameKey : "skyblockGame:mapUnknown"),
+            icon: VV.visited && null !== (JV = VV.icon) && void 0 !== JV ? JV : "unknown",
+            visited: VV.visited,
             current: !1,
-            position: nM(MM.position),
+            position: QV(VV.position),
             travelKind: "landmark",
-            travelId: MM.id
+            travelId: VV.id
           }
         })),
-        zM = MM.zones.map((rM => {
-          var OM;
+        wV = VV.zones.map((eV => {
+          var JV;
           return {
-            id: rM.id,
-            name: iM(rM.visited && rM.nameKey ? rM.nameKey : "skyblockGame:mapUnknown"),
-            icon: rM.visited && null !== (OM = rM.icon) && void 0 !== OM ? OM : "unknown",
-            visited: rM.visited,
-            current: rM.id === MM.zoneId,
-            position: rM.position,
-            thumbnail: rM.visited ? rM.id : void 0,
+            id: eV.id,
+            name: xV(eV.visited && eV.nameKey ? eV.nameKey : "skyblockGame:mapUnknown"),
+            icon: eV.visited && null !== (JV = eV.icon) && void 0 !== JV ? JV : "unknown",
+            visited: eV.visited,
+            current: eV.id === VV.zoneId,
+            position: eV.position,
+            thumbnail: eV.visited ? eV.id : void 0,
             travelKind: "zone",
-            travelId: rM.id
+            travelId: eV.id
           }
         })),
-        LM = MM.insideDungeon || !PM ? [] : MM.portals.map((MM => {
-          var rM;
+        ZV = VV.insideDungeon || !pV ? [] : VV.portals.map((VV => {
+          var eV;
           return {
-            id: MM.id,
-            name: iM(null !== (rM = MM.nameKey) && void 0 !== rM ? rM : "skyblockGame:mapUnknown"),
-            icon: MM.visited ? "dungeons" === MM.destination ? "portal_orange" : "portal" : "unknown",
-            visited: MM.visited,
+            id: VV.id,
+            name: xV(null !== (eV = VV.nameKey) && void 0 !== eV ? eV : "skyblockGame:mapUnknown"),
+            icon: VV.visited ? "dungeons" === VV.destination ? "portal_orange" : "portal" : "unknown",
+            visited: VV.visited,
             current: !1,
-            position: nM(MM.position),
-            colour: MM.colour,
+            position: QV(VV.position),
+            colour: VV.colour,
             travelKind: "zone",
-            travelId: MM.destination
+            travelId: VV.destination
           }
         })),
-        mM = jM ? QM : zM,
-        HM = mM.filter((MM => MM.visited)).length,
-        hM = PM ? (PM.bounds.mapMaxX - PM.bounds.mapMinX) / (PM.bounds.mapMaxZ - PM.bounds.mapMinZ) : 2,
-        JM = PM ? JSON.stringify([PM.bounds, MM.mapOrigin]) : "";
+        vV = UV ? nV : wV,
+        rV = vV.filter((VV => VV.visited)).length,
+        kV = pV ? (pV.bounds.mapMaxX - pV.bounds.mapMinX) / (pV.bounds.mapMaxZ - pV.bounds.mapMinZ) : 2,
+        bV = pV ? JSON.stringify([pV.bounds, VV.mapOrigin]) : "";
       return {
-        local: jM,
-        points: mM,
-        portals: jM ? LM : [],
-        progress: mM.length ? iM("skyblockGame:mapDiscovered", {
-          current: String(HM),
-          total: String(mM.length)
+        local: UV,
+        points: vV,
+        portals: UV ? ZV : [],
+        progress: vV.length ? xV("skyblockGame:mapDiscovered", {
+          current: String(rV),
+          total: String(vV.length)
         }) : null,
-        percent: mM.length ? 100 * HM / mM.length : 0,
-        canTravel: [...mM, ...jM ? LM : []].some((MM => MM.visited && !MM.current)),
-        noLandmarks: jM && !MM.insideDungeon && 0 === QM.length,
-        background: PM ? {
-          imageKey: PM.imageKey,
-          fallbackImageKey: MM.zoneId,
-          geometryKey: JM,
-          label: iM(PM.labelKey),
-          colour: PM.backgroundColour,
-          ratio: hM
+        percent: vV.length ? 100 * rV / vV.length : 0,
+        canTravel: [...vV, ...UV ? ZV : []].some((VV => VV.visited && !VV.current)),
+        noLandmarks: UV && !VV.insideDungeon && 0 === nV.length,
+        background: pV ? {
+          imageKey: pV.imageKey,
+          fallbackImageKey: VV.zoneId,
+          geometryKey: bV,
+          label: xV(pV.labelKey),
+          colour: pV.backgroundColour,
+          ratio: kV
         } : null,
-        connections: aM(MM.zones),
-        minimap: PM ? {
-          imageKey: PM.imageKey,
-          fallbackImageKey: MM.zoneId,
-          geometryKey: JM,
-          label: iM(PM.labelKey),
-          colour: PM.backgroundColour,
-          caption: iM(MM.zoneId === OM ? "skyblockGame:zoneIsland" : PM.labelKey),
-          width: (PM.bounds.mapMaxX - PM.bounds.mapMinX) / PM.minimapSpan * 100 + "%",
-          height: (PM.bounds.mapMaxZ - PM.bounds.mapMinZ) / PM.minimapSpan * 100 + "%",
-          markers: [...QM, ...LM]
+        connections: yV(VV.zones),
+        minimap: pV ? {
+          imageKey: pV.imageKey,
+          fallbackImageKey: VV.zoneId,
+          geometryKey: bV,
+          label: xV(pV.labelKey),
+          colour: pV.backgroundColour,
+          caption: xV(VV.zoneId === JV ? "skyblockGame:zoneIsland" : pV.labelKey),
+          width: (pV.bounds.mapMaxX - pV.bounds.mapMinX) / pV.minimapSpan * 100 + "%",
+          height: (pV.bounds.mapMaxZ - pV.bounds.mapMinZ) / pV.minimapSpan * 100 + "%",
+          markers: [...nV, ...ZV]
         } : null
       }
     }
 
-    function aM(MM) {
-      const rM = new Set;
-      return MM.flatMap((iM => iM.connections.flatMap((OM => {
-        const SM = MM.find((MM => MM.id === OM)),
-          jM = [iM.id, OM].sort().join("|");
-        return !SM || rM.has(jM) ? [] : (rM.add(jM), [{
-          id: `${iM.id}-${OM}`,
-          start: iM.position,
-          end: SM.position,
-          explored: iM.visited && SM.visited
+    function yV(VV) {
+      const eV = new Set;
+      return VV.flatMap((xV => xV.connections.flatMap((JV => {
+        const YV = VV.find((VV => VV.id === JV)),
+          UV = [xV.id, JV].sort().join("|");
+        return !YV || eV.has(UV) ? [] : (eV.add(UV), [{
+          id: `${xV.id}-${JV}`,
+          start: xV.position,
+          end: YV.position,
+          explored: xV.visited && YV.visited
         }])
       }))))
     }
-    var PM = iM(39536);
-    class nM extends PM.e {}
-    const QM = "skyblockMapView";
-    class zM extends nM {
-      constructor(MM, rM, iM) {
-        let OM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => {},
-          SM = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => {},
-          jM = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : Date.now;
-        super(MM, OM, SM), this.requestTravel = rM, this.translate = iM, this.now = jM, this.entities = [], this.map = null, this.tab = "local", this.pending = null, this.nextRequestId = 0, this.feedbackKey = "", this.snapshot = {
+    var pV = xV(39687);
+    class QV extends pV.c {}
+    const nV = "skyblockMapView";
+    class wV extends QV {
+      constructor(VV, eV, xV) {
+        let JV = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => {},
+          YV = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => {},
+          UV = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : Date.now;
+        super(VV, JV, YV), this.requestTravel = eV, this.translate = xV, this.now = UV, this.entities = [], this.map = null, this.tab = "local", this.pending = null, this.nextRequestId = 0, this.feedbackKey = "", this.snapshot = {
           presentation: null,
           enabled: !1,
           open: !1,
@@ -253,25 +219,25 @@ export const modules = {
           feedback: ""
         }, this.showLocal = () => {
           this.selectTab("local"), this.show()
-        }, this.selectTab = MM => {
-          this.tab = MM, this.feedbackKey = "", this.emit()
-        }, this.travel = (MM, rM) => {
-          if (!this.map || this.pending || this.dh) return;
-          const iM = ("zone" === MM ? this.map.zones : this.map.landmarks).find((MM => MM.id === rM));
-          if (iM) {
+        }, this.selectTab = VV => {
+          this.tab = VV, this.feedbackKey = "", this.emit()
+        }, this.travel = (VV, eV) => {
+          if (!this.map || this.pending || this.ik) return;
+          const xV = ("zone" === VV ? this.map.zones : this.map.landmarks).find((VV => VV.id === eV));
+          if (xV) {
             if (this.map.insideDungeon) this.feedbackKey = "skyblockGame:mapDungeonTravelDisabled";
-            else if ("fastTravelEnabled" in iM && !iM.fastTravelEnabled) this.feedbackKey = "skyblockGame:mapLandmarkTravelDisabled";
-            else if (iM.visited)
-              if ("zone" === MM && rM === this.map.zoneId) this.feedbackKey = "skyblockGame:mapAlreadyHere";
+            else if ("fastTravelEnabled" in xV && !xV.fastTravelEnabled) this.feedbackKey = "skyblockGame:mapLandmarkTravelDisabled";
+            else if (xV.visited)
+              if ("zone" === VV && eV === this.map.zoneId) this.feedbackKey = "skyblockGame:mapAlreadyHere";
               else {
-                const iM = ++this.nextRequestId;
+                const xV = ++this.nextRequestId;
                 this.pending = {
-                  requestId: iM,
+                  requestId: xV,
                   expiresAt: this.now() + 1e4
                 }, this.feedbackKey = "skyblockGame:mapTravelling", this.requestTravel({
-                  kind: MM,
-                  id: rM,
-                  requestId: iM
+                  kind: VV,
+                  id: eV,
+                  requestId: xV
                 })
               }
             else this.feedbackKey = "skyblockGame:mapVisitFirst";
@@ -282,28 +248,28 @@ export const modules = {
       getEntities() {
         return this.entities
       }
-      setTranslator(MM) {
-        this.translate = MM, this.emit()
+      setTranslator(VV) {
+        this.translate = VV, this.emit()
       }
-      GL(MM) {
-        var rM;
-        if (!this.dh)
-          if ("entities" !== MM.kind)
-            if ("open" !== MM.kind) {
-              var iM, OM;
-              if ("snapshot" === MM.kind)(null === (iM = MM.snapshot) || void 0 === iM ? void 0 : iM.zoneId) !== (null === (OM = this.map) || void 0 === OM ? void 0 : OM.zoneId) && (this.pending = null, this.feedbackKey = ""), this.map = MM.snapshot, !this.map && this.open && this.close();
-              else if ("travelQueued" === MM.kind) {
-                var SM;
-                MM.requestId === (null === (SM = this.pending) || void 0 === SM ? void 0 : SM.requestId) && (this.pending.expiresAt = 1 / 0, this.close())
-              } else if (MM.requestId === (null === (rM = this.pending) || void 0 === rM ? void 0 : rM.requestId)) {
-                var jM;
-                this.pending = null, this.feedbackKey = null !== (jM = MM.errorKey) && void 0 !== jM ? jM : "", null === MM.errorKey && this.close()
+      RZ(VV) {
+        var eV;
+        if (!this.ik)
+          if ("entities" !== VV.kind)
+            if ("open" !== VV.kind) {
+              var xV, JV;
+              if ("snapshot" === VV.kind)(null === (xV = VV.snapshot) || void 0 === xV ? void 0 : xV.zoneId) !== (null === (JV = this.map) || void 0 === JV ? void 0 : JV.zoneId) && (this.pending = null, this.feedbackKey = ""), this.map = VV.snapshot, !this.map && this.open && this.close();
+              else if ("travelQueued" === VV.kind) {
+                var YV;
+                VV.requestId === (null === (YV = this.pending) || void 0 === YV ? void 0 : YV.requestId) && (this.pending.expiresAt = 1 / 0, this.close())
+              } else if (VV.requestId === (null === (eV = this.pending) || void 0 === eV ? void 0 : eV.requestId)) {
+                var UV;
+                this.pending = null, this.feedbackKey = null !== (UV = VV.errorKey) && void 0 !== UV ? UV : "", null === VV.errorKey && this.close()
               }
               this.emit()
             } else this.show();
-        else this.entities = MM.entities
+        else this.entities = VV.entities
       }
-      bL() {
+      iZ() {
         this.pending && this.now() >= this.pending.expiresAt && (this.pending = null, this.feedbackKey = "skyblockGame:mapTravelTimeout", this.emit())
       }
       dispose() {
@@ -314,7 +280,7 @@ export const modules = {
       }
       buildSnapshot() {
         return {
-          presentation: this.map ? jM(this.map, this.tab, this.translate) : null,
+          presentation: this.map ? UV(this.map, this.tab, this.translate) : null,
           enabled: this.isEnabled(),
           open: this.open,
           tab: this.tab,
@@ -324,184 +290,184 @@ export const modules = {
         }
       }
     }
-    var LM = iM(332);
-    const mM = 67.5 * Math.PI / 180;
+    var ZV = xV(375);
+    const vV = 67.5 * Math.PI / 180;
 
-    function HM(MM, rM) {
-      const iM = Math.abs(MM);
-      if (iM > mM || rM.trackHalfWidth <= 0) return null;
-      const OM = rM.trackHalfWidth,
-        SM = rM.screenHalfWidth / (rM.tanHalfFovX * Math.max(.5, Math.cos(rM.pitch))),
-        jM = Math.min(Math.atan(.6 * OM / SM), .75 * mM),
-        aM = SM * Math.tan(jM);
-      let PM;
-      if (iM <= jM) PM = SM * Math.tan(iM);
+    function rV(VV, eV) {
+      const xV = Math.abs(VV);
+      if (xV > vV || eV.trackHalfWidth <= 0) return null;
+      const JV = eV.trackHalfWidth,
+        YV = eV.screenHalfWidth / (eV.tanHalfFovX * Math.max(.5, Math.cos(eV.pitch))),
+        UV = Math.min(Math.atan(.6 * JV / YV), .75 * vV),
+        yV = YV * Math.tan(UV);
+      let pV;
+      if (xV <= UV) pV = YV * Math.tan(xV);
       else {
-        const MM = mM - jM,
-          rM = Math.max(0, SM * MM / (Math.cos(jM) ** 2 * (OM - aM)) - 1),
-          nM = (iM - jM) / MM;
-        PM = aM + (OM - aM) * (1 + rM) * nM / (1 + rM * nM)
+        const VV = vV - UV,
+          eV = Math.max(0, YV * VV / (Math.cos(UV) ** 2 * (JV - yV)) - 1),
+          QV = (xV - UV) / VV;
+        pV = yV + (JV - yV) * (1 + eV) * QV / (1 + eV * QV)
       }
-      return 50 + Math.sign(MM) * PM * 50 / OM
+      return 50 + Math.sign(VV) * pV * 50 / JV
     }
-    class hM {
-      constructor(MM, rM) {
-        this.map = MM, this.visited = rM, this.id = void 0, this.enabled = !0, this.range = 96, this.limit = 40, this.id = rM ? "landmarks" : "unknownLandmarks"
+    class kV {
+      constructor(VV, eV) {
+        this.map = VV, this.visited = eV, this.id = void 0, this.enabled = !0, this.range = 96, this.limit = 40, this.id = eV ? "landmarks" : "unknownLandmarks"
       }
       getPoints() {
-        const MM = this.map.getSnapshot().map;
-        return !MM || MM.insideDungeon ? [] : MM.landmarks.filter((MM => MM.visited === this.visited)).map((MM => {
-          var rM, iM;
+        const VV = this.map.getSnapshot().map;
+        return !VV || VV.insideDungeon ? [] : VV.landmarks.filter((VV => VV.visited === this.visited)).map((VV => {
+          var eV, xV;
           return {
-            id: `landmark:${MM.id}`,
-            position: MM.position,
-            icon: null !== (rM = MM.icon) && void 0 !== rM ? rM : "unknown",
-            nameKey: null !== (iM = MM.nameKey) && void 0 !== iM ? iM : "skyblockGame:compassUnknown",
+            id: `landmark:${VV.id}`,
+            position: VV.position,
+            icon: null !== (eV = VV.icon) && void 0 !== eV ? eV : "unknown",
+            nameKey: null !== (xV = VV.nameKey) && void 0 !== xV ? xV : "skyblockGame:compassUnknown",
             kind: this.visited ? "landmark" : "unknown"
           }
         }))
       }
     }
-    class JM {
-      constructor(MM, rM, iM, OM) {
-        this.map = MM, this.kind = rM, this.position = iM, this.alive = OM, this.id = void 0, this.enabled = !0, this.range = void 0, this.limit = void 0, this.id = rM, this.range = "enemy" === rM ? 48 : 64, this.limit = 12
+    class bV {
+      constructor(VV, eV, xV, JV) {
+        this.map = VV, this.kind = eV, this.position = xV, this.alive = JV, this.id = void 0, this.enabled = !0, this.range = void 0, this.limit = void 0, this.id = eV, this.range = "enemy" === eV ? 48 : 64, this.limit = 12
       }
-      XE(MM) {
-        if ("enemy" !== this.kind || this.alive(MM.QS)) return this.position(MM.QS)
+      YF(VV) {
+        if ("enemy" !== this.kind || this.alive(VV.EY)) return this.position(VV.EY)
       }
       getPoints() {
-        const MM = [];
-        for (const OM of this.map.getEntities()) {
-          if (OM.kind !== this.kind || "enemy" === this.kind && !this.alive(OM.compassEntityId)) continue;
-          const SM = this.position(OM.compassEntityId);
-          var rM, iM;
-          if (SM) MM.push({
-            id: `${this.kind}:${OM.compassEntityId}`,
-            QS: OM.compassEntityId,
+        const VV = [];
+        for (const JV of this.map.getEntities()) {
+          if (JV.kind !== this.kind || "enemy" === this.kind && !this.alive(JV.compassEntityId)) continue;
+          const YV = this.position(JV.compassEntityId);
+          var eV, xV;
+          if (YV) VV.push({
+            id: `${this.kind}:${JV.compassEntityId}`,
+            EY: JV.compassEntityId,
             kind: this.kind,
-            icon: null !== (rM = OM.icon) && void 0 !== rM ? rM : OM.npcSkin ? `npc_${OM.npcSkin}` : this.kind,
-            displayName: OM.displayName,
-            position: SM,
-            nameKey: null !== (iM = OM.nameKey) && void 0 !== iM ? iM : "enemy" === this.kind ? "skyblockGame:compassEnemy" : "skyblockGame:compassNpc"
+            icon: null !== (eV = JV.icon) && void 0 !== eV ? eV : JV.npcSkin ? `npc_${JV.npcSkin}` : this.kind,
+            displayName: JV.displayName,
+            position: YV,
+            nameKey: null !== (xV = JV.nameKey) && void 0 !== xV ? xV : "enemy" === this.kind ? "skyblockGame:compassEnemy" : "skyblockGame:compassNpc"
           })
         }
-        return MM
+        return VV
       }
     }
-    class dM {
-      constructor(MM) {
-        this.map = MM, this.id = "portals", this.enabled = !0, this.range = 96, this.limit = 12
+    class EV {
+      constructor(VV) {
+        this.map = VV, this.id = "portals", this.enabled = !0, this.range = 96, this.limit = 12
       }
       getPoints() {
-        const MM = this.map.getSnapshot().map;
-        return !MM || MM.insideDungeon ? [] : MM.portals.map((MM => {
-          var rM;
+        const VV = this.map.getSnapshot().map;
+        return !VV || VV.insideDungeon ? [] : VV.portals.map((VV => {
+          var eV;
           return {
-            id: "portal:" + MM.id,
+            id: "portal:" + VV.id,
             kind: "portal",
-            position: MM.position,
-            nameKey: null !== (rM = MM.nameKey) && void 0 !== rM ? rM : "skyblockGame:compassUnvisitedZone",
-            icon: MM.visited ? "dungeons" === MM.destination ? "portal_orange" : "portal" : "unknown",
-            colour: MM.colour
+            position: VV.position,
+            nameKey: null !== (eV = VV.nameKey) && void 0 !== eV ? eV : "skyblockGame:compassUnvisitedZone",
+            icon: VV.visited ? "dungeons" === VV.destination ? "portal_orange" : "portal" : "unknown",
+            colour: VV.colour
           }
         }))
       }
     }
-    class yM {
-      constructor(MM) {
-        this.target = MM, this.id = "quest", this.enabled = !0, this.range = 1 / 0, this.limit = 1
+    class BV {
+      constructor(VV) {
+        this.target = VV, this.id = "quest", this.enabled = !0, this.range = 1 / 0, this.limit = 1
       }
       getPoints() {
-        const MM = this.target();
-        return MM ? [{
+        const VV = this.target();
+        return VV ? [{
           id: "quest",
           kind: "quest",
           icon: "quest",
-          position: MM.position,
-          nameKey: MM.nameKey
+          position: VV.position,
+          nameKey: VV.nameKey
         }] : []
       }
     }
 
-    function lM(MM, rM, iM) {
-      let OM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : MM.position;
-      const SM = OM[0] - rM[0],
-        jM = OM[2] - rM[2];
+    function jV(VV, eV, xV) {
+      let JV = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : VV.position;
+      const YV = JV[0] - eV[0],
+        UV = JV[2] - eV[2];
       return {
-        ...MM,
-        position: OM,
-        offset: LM.d.computeShortestRotation(iM, (0, LM.wb)([SM, 0, jM])),
-        distance: Math.hypot(SM, OM[1] - rM[1], jM)
+        ...VV,
+        position: JV,
+        offset: ZV.b.computeShortestRotation(xV, (0, ZV.Cb)([YV, 0, UV])),
+        distance: Math.hypot(YV, JV[1] - eV[1], UV)
       }
     }
-    let EM;
+    let qV;
 
-    function UM(MM, rM) {
-      var iM;
-      return (null === (iM = EM) || void 0 === iM ? void 0 : iM.locale) !== rM && (EM = {
-        locale: rM,
-        near: new Intl.NumberFormat(rM, {
+    function tV(VV, eV) {
+      var xV;
+      return (null === (xV = qV) || void 0 === xV ? void 0 : xV.locale) !== eV && (qV = {
+        locale: eV,
+        near: new Intl.NumberFormat(eV, {
           minimumFractionDigits: 1,
           maximumFractionDigits: 1
         }),
-        far: new Intl.NumberFormat(rM, {
+        far: new Intl.NumberFormat(eV, {
           minimumFractionDigits: 0,
           maximumFractionDigits: 0
         })
-      }), (MM < 10 ? EM.near : EM.far).format(MM)
+      }), (VV < 10 ? qV.near : qV.far).format(VV)
     }
-    class GM {
+    class FV {
       constructor() {
         this.providers = new Map, this.candidates = [], this.refreshAt = 0
       }
-      register(MM) {
-        return this.providers.set(MM.id, MM), this.refreshAt = 0, () => {
-          this.providers.get(MM.id) === MM && (this.providers.delete(MM.id), this.refreshAt = 0)
+      register(VV) {
+        return this.providers.set(VV.id, VV), this.refreshAt = 0, () => {
+          this.providers.get(VV.id) === VV && (this.providers.delete(VV.id), this.refreshAt = 0)
         }
       }
-      frame(MM, rM, iM) {
-        if (iM >= this.refreshAt) {
-          this.refreshAt = iM + 200, this.candidates = [];
-          for (const rM of this.providers.values()) {
-            if (!rM.enabled) continue;
-            const iM = rM.getPoints().map((rM => {
-              const iM = rM.position;
+      frame(VV, eV, xV) {
+        if (xV >= this.refreshAt) {
+          this.refreshAt = xV + 200, this.candidates = [];
+          for (const eV of this.providers.values()) {
+            if (!eV.enabled) continue;
+            const xV = eV.getPoints().map((eV => {
+              const xV = eV.position;
               return {
-                point: rM,
-                distance: Math.hypot(iM[0] - MM[0], iM[1] - MM[1], iM[2] - MM[2])
+                point: eV,
+                distance: Math.hypot(xV[0] - VV[0], xV[1] - VV[1], xV[2] - VV[2])
               }
-            })).filter((MM => MM.distance <= rM.range)).sort(((MM, rM) => MM.distance - rM.distance)).slice(0, rM.limit);
+            })).filter((VV => VV.distance <= eV.range)).sort(((VV, eV) => VV.distance - eV.distance)).slice(0, eV.limit);
             for (const {
-                point: MM
+                point: VV
               }
-              of iM) this.candidates.push({
-              provider: rM,
-              point: MM
+              of xV) this.candidates.push({
+              provider: eV,
+              point: VV
             })
           }
         }
-        const OM = [];
+        const JV = [];
         for (const {
-            point: SM,
-            provider: jM
+            point: YV,
+            provider: UV
           }
           of this.candidates) {
-          if (!jM.enabled) continue;
-          const iM = jM.XE ? jM.XE(SM) : SM.position;
-          if (iM) {
-            const jM = lM(SM, MM, rM, iM);
-            Math.abs(jM.offset) <= mM && OM.push(jM)
+          if (!UV.enabled) continue;
+          const xV = UV.YF ? UV.YF(YV) : YV.position;
+          if (xV) {
+            const UV = jV(YV, VV, eV, xV);
+            Math.abs(UV.offset) <= vV && JV.push(UV)
           }
         }
-        return OM
+        return JV
       }
       dispose() {
         this.providers.clear(), this.candidates = []
       }
     }
-    var CM = iM(37544),
-      eM = iM(44);
-    const bM = [{
+    var TV = xV(37771),
+      PV = xV(62);
+    const AV = [{
         dailyRewardCoins: 1e3,
         dailyRewardItems: []
       }, {
@@ -532,41 +498,41 @@ export const modules = {
           dailyRewardItemAmount: 1
         }]
       }],
-      wM = bM.length;
+      NV = AV.length;
 
-    function tM(MM) {
-      return MM >= wM ? 1 : MM + 1
+    function XV(VV) {
+      return VV >= NV ? 1 : VV + 1
     }
-    const gM = "skyblockQuests",
-      uM = Object.freeze({
+    const MV = "skyblockQuests",
+      zV = Object.freeze({
         easy: "skyblockGame:difficultyEasy",
         medium: "skyblockGame:difficultyMedium",
         hard: "skyblockGame:difficultyHard",
         insane: "skyblockGame:difficultyInsane"
       }),
-      RM = Object.freeze({
+      GV = Object.freeze({
         easy: "#77b326",
         medium: "#eac03d",
         hard: "#df7622",
         insane: "#e74d4d"
       });
 
-    function pM(MM) {
-      let rM = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-      const iM = Math.max(0, Math.floor(MM)),
-        OM = Math.floor(iM % 1e3 / 100),
-        SM = Math.floor(iM / 1e3),
-        jM = SM % 60,
-        aM = Math.floor(SM / 60),
-        PM = aM % 60,
-        nM = Math.floor(aM / 60),
-        QM = MM => MM < 10 ? `0${MM}` : String(MM),
-        zM = rM ? `.${OM}` : "";
-      return nM > 0 ? `${nM}:${QM(PM)}:${QM(jM)}${zM}` : `${PM}:${QM(jM)}${zM}`
+    function WV(VV) {
+      let eV = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+      const xV = Math.max(0, Math.floor(VV)),
+        JV = Math.floor(xV % 1e3 / 100),
+        YV = Math.floor(xV / 1e3),
+        UV = YV % 60,
+        yV = Math.floor(YV / 60),
+        pV = yV % 60,
+        QV = Math.floor(yV / 60),
+        nV = VV => VV < 10 ? `0${VV}` : String(VV),
+        wV = eV ? `.${JV}` : "";
+      return QV > 0 ? `${QV}:${nV(pV)}:${nV(UV)}${wV}` : `${pV}:${nV(UV)}${wV}`
     }
-    const WM = "devquests",
-      sM = "none",
-      DM = {
+    const RV = "devquests",
+      gV = "none",
+      DV = {
         hub: {
           farming_1: {
             min: [4, 16, 90],
@@ -604,8 +570,8 @@ export const modules = {
           }
         }
       },
-      kM = "Compressed Messy Stone",
-      ZM = {
+      iV = "Compressed Messy Stone",
+      CV = {
         "Grass Block": "Useless Soil",
         "Pine Grass Block": "Useless Soil",
         "Jungle Grass Block": "Useless Soil",
@@ -618,120 +584,120 @@ export const modules = {
         Sand: "Sandstone",
         Gravel: "Smooth Andesite"
       },
-      oM = ["Stone", "Diorite", "Andesite", "Granite"],
-      fM = new Set(oM),
-      YM = (Object.keys(ZM), {
+      aV = ["Stone", "Diorite", "Andesite", "Granite"],
+      oV = new Set(aV),
+      cV = (Object.keys(CV), {
         "Pure Coal Ore": "Coal Ore",
         "Pure Iron Ore": "Iron Ore",
         "Pure Gold Ore": "Gold Ore",
         "Pure Diamond Ore": "Diamond Ore",
         "Pure Moonstone Ore": "Moonstone Ore"
       });
-    const NM = ["Magmasteel Helmet", "Magmasteel Chestplate", "Magmasteel Gauntlets", "Magmasteel Leggings", "Magmasteel Boots"];
+    const hV = ["Magmasteel Helmet", "Magmasteel Chestplate", "Magmasteel Gauntlets", "Magmasteel Leggings", "Magmasteel Boots"];
 
-    function AM(MM, rM) {
-      const iM = Math.floor(5 * MM / (2 * rM + 1));
-      return Math.min(4, Math.max(0, iM))
+    function lV(VV, eV) {
+      const xV = Math.floor(5 * VV / (2 * eV + 1));
+      return Math.min(4, Math.max(0, xV))
     }
-    var xM = iM(1242);
-    var vM = iM(37305);
-    var FM = iM(37542),
-      BM = iM(22),
-      XM = iM(9467);
-    const IM = ["foraging", "combat", "mining", "farming", "fishing", "exploration"],
-      KM = 1e3;
+    var LV = xV(1269);
+    var fV = xV(37507);
+    var mV = xV(37762),
+      KV = xV(32),
+      HV = xV(9477);
+    const uV = ["foraging", "combat", "mining", "farming", "fishing", "exploration"],
+      sV = 1e3;
 
-    function qM(MM) {
-      return Math.max(0, MM)
-    }
-
-    function TM(MM) {
-      return 1 + .01 * qM(MM)
+    function SV(VV) {
+      return Math.max(0, VV)
     }
 
-    function VM(MM) {
-      return 1 + .005 * qM(MM)
+    function IV(VV) {
+      return 1 + .01 * SV(VV)
     }
 
-    function cM(MM) {
-      return 1 + .005 * qM(MM)
+    function dV(VV) {
+      return 1 + .005 * SV(VV)
     }
 
-    function Mr(MM) {
-      return .01 * qM(MM)
+    function OV(VV) {
+      return 1 + .005 * SV(VV)
     }
 
-    function rr(MM) {
-      return 150 / (150 + qM(MM))
+    function Ve(VV) {
+      return .01 * SV(VV)
     }
 
-    function ir(MM) {
-      return 1 + .002 * qM(MM)
+    function ee(VV) {
+      return 150 / (150 + SV(VV))
     }
 
-    function Or(MM) {
-      return Math.round(10 * MM) / 10
+    function xe(VV) {
+      return 1 + .002 * SV(VV)
     }
 
-    function Sr(MM, rM) {
-      switch (MM) {
+    function Je(VV) {
+      return Math.round(10 * VV) / 10
+    }
+
+    function Ye(VV, eV) {
+      switch (VV) {
         case "foraging":
           return {
-            translationKey: "skyblockGame:foragingBenefit", percent: Or(100 * (VM(rM) - 1))
+            translationKey: "skyblockGame:foragingBenefit", percent: Je(100 * (dV(eV) - 1))
           };
         case "combat":
           return {
-            translationKey: "skyblockGame:combatBenefit", percent: Or(100 * (TM(rM) - 1))
+            translationKey: "skyblockGame:combatBenefit", percent: Je(100 * (IV(eV) - 1))
           };
         case "mining":
           return {
-            translationKey: "skyblockGame:miningBenefit", percent: Or(100 * (cM(rM) - 1))
+            translationKey: "skyblockGame:miningBenefit", percent: Je(100 * (OV(eV) - 1))
           };
         case "farming":
           return {
-            translationKey: "skyblockGame:farmingBenefit", percent: Or(100 * Mr(rM))
+            translationKey: "skyblockGame:farmingBenefit", percent: Je(100 * Ve(eV))
           };
         case "fishing":
           return {
-            translationKey: "skyblockGame:fishingBenefit", percent: Or(100 * (1 - rr(rM)))
+            translationKey: "skyblockGame:fishingBenefit", percent: Je(100 * (1 - ee(eV)))
           };
         case "exploration":
           return {
-            translationKey: "skyblockGame:explorationBenefit", percent: Or(100 * (ir(rM) - 1))
+            translationKey: "skyblockGame:explorationBenefit", percent: Je(100 * (xe(eV) - 1))
           }
       }
     }
 
-    function jr(MM) {
-      return "farming" === MM ? 200 : 100
+    function Ue(VV) {
+      return "farming" === VV ? 200 : 100
     }
 
-    function ar(MM, rM) {
-      if (!Number.isSafeInteger(MM) || MM < 0) throw new Error("Skill XP must be a non-negative safe integer");
-      const iM = jr(rM),
-        OM = MM => function(MM, rM) {
-          return jr(MM) * rM * (rM + 1) / 2
-        }(rM, MM);
-      let SM = Math.min(KM, Math.floor((Math.sqrt(8 * MM / iM + 1) - 1) / 2));
-      return SM < KM && OM(SM + 1) <= MM ? SM++ : OM(SM) > MM && SM--, {
-        totalXp: MM,
-        level: SM,
-        xpIntoLevel: MM - OM(SM),
-        xpForNextLevel: SM === KM ? null : iM * (SM + 1)
+    function ye(VV, eV) {
+      if (!Number.isSafeInteger(VV) || VV < 0) throw new Error("Skill XP must be a non-negative safe integer");
+      const xV = Ue(eV),
+        JV = VV => function(VV, eV) {
+          return Ue(VV) * eV * (eV + 1) / 2
+        }(eV, VV);
+      let YV = Math.min(sV, Math.floor((Math.sqrt(8 * VV / xV + 1) - 1) / 2));
+      return YV < sV && JV(YV + 1) <= VV ? YV++ : JV(YV) > VV && YV--, {
+        totalXp: VV,
+        level: YV,
+        xpIntoLevel: VV - JV(YV),
+        xpForNextLevel: YV === sV ? null : xV * (YV + 1)
       }
     }
-    const Pr = new Set(["Apple Block", "Plum Block", "Coconut Block", "Pear Block", "Cherry Block", "Mango Block", "Banana Block"]);
+    const pe = new Set(["Apple Block", "Plum Block", "Coconut Block", "Pear Block", "Cherry Block", "Mango Block", "Banana Block"]);
 
-    function nr(MM) {
-      return Pr.has(MM)
+    function Qe(VV) {
+      return pe.has(VV)
     }
-    const Qr = new Set(LM.lb);
+    const ne = new Set(ZV.nb);
 
-    function zr(MM) {
-      return Qr.has(MM)
+    function we(VV) {
+      return ne.has(VV)
     }
     new Set(["Watermelon", "Melon", "Wheat|FreshlyGrown", "Rice|FreshlyGrown", "Corn Plant|FreshlyGrown", "Chili Pepper Plant|FreshlyGrown", "Chili Pepper Plant|Lava|FreshlyGrown", "Tomato Plant|FreshlyGrown", "Tomato Plant|Top|FreshlyGrown", "Carrot Plant|FreshlyGrown", "Potato Plant|FreshlyGrown", "Sugar Cane Plant|FreshlyGrown", "Sugar Cane Plant|Top|FreshlyGrown", "Coffee Plant|FreshlyGrown", "Lettuce Plant|FreshlyGrown", "Cauliflower Plant|FreshlyGrown", "Parsnip Plant|FreshlyGrown", "Red Cabbage Plant|FreshlyGrown", "Beetroot Plant|FreshlyGrown"]);
-    const Lr = {
+    const Ze = {
         "Maple Log": 10,
         "Pine Log": 10,
         "Plum Log": 10,
@@ -744,7 +710,7 @@ export const modules = {
         "Spectral Log": 10,
         "Mango Log": 10
       },
-      mr = {
+      ve = {
         Stone: 2,
         Diorite: 18,
         Granite: 18,
@@ -757,14 +723,14 @@ export const modules = {
         "Block of Coal": 15,
         "Block of Gold": 30
       },
-      Hr = {
-        ...mr,
-        ...Object.fromEntries(Object.entries(YM).map((MM => {
-          let [rM, iM] = MM;
-          return [rM, 9 * mr[iM]]
+      re = {
+        ...ve,
+        ...Object.fromEntries(Object.entries(cV).map((VV => {
+          let [eV, xV] = VV;
+          return [eV, 9 * ve[xV]]
         })))
       },
-      hr = {
+      ke = {
         Watermelon: 10,
         Melon: 10,
         "Wheat|FreshlyGrown": 10,
@@ -785,7 +751,7 @@ export const modules = {
         "Red Cabbage Plant|FreshlyGrown": 10,
         "Beetroot Plant|FreshlyGrown": 10
       },
-      Jr = {
+      be = {
         Wheatfish: 25,
         Darter: 25,
         "Sunset Minnow": 25,
@@ -849,7 +815,7 @@ export const modules = {
         "Pearlescent Moonfish": 300,
         "Game Dev Fish": 50
       };
-    const dr = {
+    const Ee = {
         foraging: "Iron Axe",
         combat: "Iron Sword",
         mining: "Iron Pickaxe",
@@ -857,7 +823,7 @@ export const modules = {
         fishing: "Rusty Rod",
         exploration: "Compass"
       },
-      yr = {
+      Be = {
         foraging: [80, 220, 100],
         combat: [240, 70, 70],
         mining: [60, 220, 240],
@@ -866,112 +832,112 @@ export const modules = {
         exploration: [255, 180, 70]
       };
 
-    function lr(MM) {
-      return `rgb(${yr[MM].join(", ")})`
+    function je(VV) {
+      return `rgb(${Be[VV].join(", ")})`
     }
 
-    function Er(MM, rM, iM) {
-      if (!iM) return MM(rM);
-      const OM = {};
-      for (const [SM, jM] of Object.entries(iM)) OM[SM] = "string" === typeof jM ? jM : MM(jM.translationKey);
-      return MM(rM, OM)
+    function qe(VV, eV, xV) {
+      if (!xV) return VV(eV);
+      const JV = {};
+      for (const [YV, UV] of Object.entries(xV)) JV[YV] = "string" === typeof UV ? UV : VV(UV.translationKey);
+      return VV(eV, JV)
     }
-    class Ur {
-      constructor(MM, rM) {
-        this.now = MM, this.getJournal = rM, this.pending = [], this.current = null, this.followUp = null, this.shownAt = 0, this.expiresAt = 0, this.token = 0, this.sQ = !1, this.onShown = () => {}
+    class te {
+      constructor(VV, eV) {
+        this.now = VV, this.getJournal = eV, this.pending = [], this.current = null, this.followUp = null, this.shownAt = 0, this.expiresAt = 0, this.token = 0, this.hn = !1, this.onShown = () => {}
       }
-      enqueue(MM) {
-        const rM = Gr(MM);
-        if (rM) this.pending.push(MM);
+      enqueue(VV) {
+        const eV = Fe(VV);
+        if (eV) this.pending.push(VV);
         else {
-          const rM = this.pending.findIndex(Gr);
-          this.pending.splice(-1 === rM ? this.pending.length : rM, 0, MM)
+          const eV = this.pending.findIndex(Fe);
+          this.pending.splice(-1 === eV ? this.pending.length : eV, 0, VV)
         }
-        return (null === this.current || null !== this.followUp && !rM) && (this.advance(), !0)
+        return (null === this.current || null !== this.followUp && !eV) && (this.advance(), !0)
       }
-      setHeld(MM) {
-        return this.sQ = MM, !MM && null === this.current && this.pending.length > 0 && (this.advance(), !0)
+      setHeld(VV) {
+        return this.hn = VV, !VV && null === this.current && this.pending.length > 0 && (this.advance(), !0)
       }
-      bL() {
-        const MM = this.getJournal(),
-          rM = this.followUp;
-        if (null !== this.current && this.now() >= this.expiresAt) return this.showFollowUp(null === rM ? this.findFollowUp(this.current) : null), !0;
-        if ("explore" === (null === rM || void 0 === rM ? void 0 : rM.kind) && MM && MM.active.length > 0) return this.showFollowUp(this.findFollowUp(this.current)), !0;
-        if ("step" === (null === rM || void 0 === rM ? void 0 : rM.kind)) {
-          const MM = this.findFollowUp(this.current);
-          if ("step" !== (null === MM || void 0 === MM ? void 0 : MM.kind) || MM.questId !== rM.questId || MM.step.id !== rM.step.id) return this.showFollowUp(MM, this.expiresAt), !0
+      iZ() {
+        const VV = this.getJournal(),
+          eV = this.followUp;
+        if (null !== this.current && this.now() >= this.expiresAt) return this.showFollowUp(null === eV ? this.findFollowUp(this.current) : null), !0;
+        if ("explore" === (null === eV || void 0 === eV ? void 0 : eV.kind) && VV && VV.active.length > 0) return this.showFollowUp(this.findFollowUp(this.current)), !0;
+        if ("step" === (null === eV || void 0 === eV ? void 0 : eV.kind)) {
+          const VV = this.findFollowUp(this.current);
+          if ("step" !== (null === VV || void 0 === VV ? void 0 : VV.kind) || VV.questId !== eV.questId || VV.step.id !== eV.step.id) return this.showFollowUp(VV, this.expiresAt), !0
         }
         return !1
       }
       clear() {
         this.pending = [], this.current = null, this.followUp = null, this.expiresAt = 0
       }
-      getView(MM, rM, iM) {
-        var OM, SM, jM, aM;
+      getView(VV, eV, xV) {
+        var JV, YV, UV, yV;
         if (null === this.current) return null;
-        if ("skillLevel" === this.current.questCompletionKind) return this.getSkillLevelView(this.current, MM, iM);
-        if ("landmark" === this.current.questCompletionKind) return this.getLandmarkView(this.current, MM);
-        if ("npcNote" === this.current.questCompletionKind) return this.getNpcNoteView(this.current, MM, rM);
+        if ("skillLevel" === this.current.questCompletionKind) return this.getSkillLevelView(this.current, VV, xV);
+        if ("landmark" === this.current.questCompletionKind) return this.getLandmarkView(this.current, VV);
+        if ("npcNote" === this.current.questCompletionKind) return this.getNpcNoteView(this.current, VV, eV);
         const {
-          questCompletionKind: PM,
-          questCompletionNameKey: nM
-        } = this.current, QM = "step" === this.current.questCompletionKind ? this.current.questCompletionNameParams : void 0, zM = "quest" === this.current.questCompletionKind ? this.current.questCompletionCoins : 0, LM = "step" === (null === (OM = this.followUp) || void 0 === OM ? void 0 : OM.kind) ? this.followUp : null, mM = "explore" === (null === (SM = this.followUp) || void 0 === SM ? void 0 : SM.kind);
-        let HM;
-        return HM = mM ? MM("skyblockGame:questExploreTitle") : null !== LM ? "quest" === PM ? MM("skyblockGame:questNextQuestTitle", {
-          quest: MM(LM.questNameKey)
-        }) : MM("skyblockGame:questNextStepTitle") : MM("started" === PM ? "skyblockGame:questStartedTitle" : "quest" === PM ? "skyblockGame:questCompletedTitle" : "skyblockGame:subquestCompletedTitle"), {
+          questCompletionKind: pV,
+          questCompletionNameKey: QV
+        } = this.current, nV = "step" === this.current.questCompletionKind ? this.current.questCompletionNameParams : void 0, wV = "quest" === this.current.questCompletionKind ? this.current.questCompletionCoins : 0, ZV = "step" === (null === (JV = this.followUp) || void 0 === JV ? void 0 : JV.kind) ? this.followUp : null, vV = "explore" === (null === (YV = this.followUp) || void 0 === YV ? void 0 : YV.kind);
+        let rV;
+        return rV = vV ? VV("skyblockGame:questExploreTitle") : null !== ZV ? "quest" === pV ? VV("skyblockGame:questNextQuestTitle", {
+          quest: VV(ZV.questNameKey)
+        }) : VV("skyblockGame:questNextStepTitle") : VV("started" === pV ? "skyblockGame:questStartedTitle" : "quest" === pV ? "skyblockGame:questCompletedTitle" : "skyblockGame:subquestCompletedTitle"), {
           token: this.token,
-          kind: null === this.followUp ? PM : "step",
+          kind: null === this.followUp ? pV : "step",
           phase: null === this.followUp ? "completion" : "next",
-          title: HM,
-          name: mM ? rM("skyblockGame:questExploreName") : null !== LM ? Er(rM, LM.step.nameKey, LM.step.nameParams) : Er(rM, nM, QM),
-          description: mM ? rM("skyblockGame:questExploreDescription") : null === LM ? null : Er(rM, LM.step.descriptionKey, LM.step.descriptionParams),
-          reward: null === this.followUp && zM > 0 ? rM("skyblockGame:questCoinRewardSuffix", {
-            amount: zM.toLocaleString(iM)
+          title: rV,
+          name: vV ? eV("skyblockGame:questExploreName") : null !== ZV ? qe(eV, ZV.step.nameKey, ZV.step.nameParams) : qe(eV, QV, nV),
+          description: vV ? eV("skyblockGame:questExploreDescription") : null === ZV ? null : qe(eV, ZV.step.descriptionKey, ZV.step.descriptionParams),
+          reward: null === this.followUp && wV > 0 ? eV("skyblockGame:questCoinRewardSuffix", {
+            amount: wV.toLocaleString(xV)
           }) : null,
-          iconItem: null !== (jM = null === LM || void 0 === LM ? void 0 : LM.step.questIconItem) && void 0 !== jM ? jM : null,
+          iconItem: null !== (UV = null === ZV || void 0 === ZV ? void 0 : ZV.step.questIconItem) && void 0 !== UV ? UV : null,
           accent: null,
           durationMs: this.expiresAt - this.shownAt,
-          waypointNameKey: null !== LM && (null === (aM = this.getJournal()) || void 0 === aM ? void 0 : aM.trackedQuestId) === LM.questId ? LM.step.nameKey : null
+          waypointNameKey: null !== ZV && (null === (yV = this.getJournal()) || void 0 === yV ? void 0 : yV.trackedQuestId) === ZV.questId ? ZV.step.nameKey : null
         }
       }
-      getSkillLevelView(MM, rM, iM) {
+      getSkillLevelView(VV, eV, xV) {
         let {
-          skill: OM,
-          beforeLevel: SM,
-          level: jM
-        } = MM;
-        const aM = Sr(OM, SM),
-          PM = Sr(OM, jM);
+          skill: JV,
+          beforeLevel: YV,
+          level: UV
+        } = VV;
+        const yV = Ye(JV, YV),
+          pV = Ye(JV, UV);
         return {
           token: this.token,
           kind: "skillLevel",
           phase: "completion",
-          title: rM(`skyblockGame:${OM}`),
-          name: rM("skyblockGame:skillLevelUp", {
-            to: jM.toLocaleString(iM)
+          title: eV(`skyblockGame:${JV}`),
+          name: eV("skyblockGame:skillLevelUp", {
+            to: UV.toLocaleString(xV)
           }),
-          description: aM.percent === PM.percent ? null : rM(`${PM.translationKey}Change`, {
-            before: aM.percent.toLocaleString(iM),
-            after: PM.percent.toLocaleString(iM)
+          description: yV.percent === pV.percent ? null : eV(`${pV.translationKey}Change`, {
+            before: yV.percent.toLocaleString(xV),
+            after: pV.percent.toLocaleString(xV)
           }),
           reward: null,
-          iconItem: dr[OM],
-          accent: lr(OM),
+          iconItem: Ee[JV],
+          accent: je(JV),
           durationMs: this.expiresAt - this.shownAt,
           waypointNameKey: null
         }
       }
-      getLandmarkView(MM, rM) {
+      getLandmarkView(VV, eV) {
         let {
-          landmarkNameKey: iM
-        } = MM;
+          landmarkNameKey: xV
+        } = VV;
         return {
           token: this.token,
           kind: "landmark",
           phase: "completion",
-          title: rM("skyblockGame:landmarkDiscovered"),
-          name: rM(iM),
+          title: eV("skyblockGame:landmarkDiscovered"),
+          name: eV(xV),
           description: null,
           reward: null,
           iconItem: null,
@@ -980,36 +946,36 @@ export const modules = {
           waypointNameKey: null
         }
       }
-      getNpcNoteView(MM, rM, iM) {
+      getNpcNoteView(VV, eV, xV) {
         let {
-          titleKey: OM,
-          textKey: SM,
-          params: jM = {},
-          nameKeys: aM = {},
-          iconItem: PM = null
-        } = MM;
-        const nM = {
-          ...jM
+          titleKey: JV,
+          textKey: YV,
+          params: UV = {},
+          nameKeys: yV = {},
+          iconItem: pV = null
+        } = VV;
+        const QV = {
+          ...UV
         };
-        for (const [QM, zM] of Object.entries(aM)) nM[QM] = rM(zM);
+        for (const [nV, wV] of Object.entries(yV)) QV[nV] = eV(wV);
         return {
           token: this.token,
           kind: "npcNote",
           phase: "completion",
-          title: rM(OM),
-          name: iM(SM, nM),
+          title: eV(JV),
+          name: xV(YV, QV),
           description: null,
           reward: null,
-          iconItem: PM,
+          iconItem: pV,
           accent: null,
           durationMs: this.expiresAt - this.shownAt,
           waypointNameKey: null
         }
       }
       durationMs() {
-        var MM;
+        var VV;
         if (null !== this.followUp) return 5600;
-        switch (null === (MM = this.current) || void 0 === MM ? void 0 : MM.questCompletionKind) {
+        switch (null === (VV = this.current) || void 0 === VV ? void 0 : VV.questCompletionKind) {
           case "quest":
             return 4800;
           case "started":
@@ -1024,49 +990,49 @@ export const modules = {
             return 2400
         }
       }
-      showFollowUp(MM, rM) {
-        null === MM || this.sQ ? this.advance() : (this.followUp = MM, this.token++, this.shownAt = this.now(), this.expiresAt = null !== rM && void 0 !== rM ? rM : this.shownAt + this.durationMs())
+      showFollowUp(VV, eV) {
+        null === VV || this.hn ? this.advance() : (this.followUp = VV, this.token++, this.shownAt = this.now(), this.expiresAt = null !== eV && void 0 !== eV ? eV : this.shownAt + this.durationMs())
       }
-      findFollowUp(MM) {
-        var rM;
-        const iM = this.getJournal();
-        if (!iM || this.hasPendingQuestPopup() || Gr(MM)) return null;
-        const OM = "started" === MM.questCompletionKind ? iM.active.some((rM => rM.id === MM.questCompletionQuestId)) : "quest" === MM.questCompletionKind ? iM.completed.some((rM => rM.id === MM.questCompletionQuestId)) : [...iM.active, ...iM.completed].some((rM => rM.id === MM.questCompletionQuestId && rM.subquests.some((rM => rM.id === MM.questCompletionStepId && "completed" === rM.status))));
-        if (!OM) return null;
-        if ("quest" === MM.questCompletionKind && 0 === iM.active.length && !this.hasPendingQuestPopup()) return {
+      findFollowUp(VV) {
+        var eV;
+        const xV = this.getJournal();
+        if (!xV || this.hasPendingQuestPopup() || Fe(VV)) return null;
+        const JV = "started" === VV.questCompletionKind ? xV.active.some((eV => eV.id === VV.questCompletionQuestId)) : "quest" === VV.questCompletionKind ? xV.completed.some((eV => eV.id === VV.questCompletionQuestId)) : [...xV.active, ...xV.completed].some((eV => eV.id === VV.questCompletionQuestId && eV.subquests.some((eV => eV.id === VV.questCompletionStepId && "completed" === eV.status))));
+        if (!JV) return null;
+        if ("quest" === VV.questCompletionKind && 0 === xV.active.length && !this.hasPendingQuestPopup()) return {
           kind: "explore"
         };
-        const SM = iM.active.find((MM => MM.id === iM.trackedQuestId)),
-          jM = null !== (rM = null === SM || void 0 === SM ? void 0 : SM.subquests.find((MM => "ready" === MM.status))) && void 0 !== rM ? rM : null === SM || void 0 === SM ? void 0 : SM.subquests.find((MM => "active" === MM.status));
-        return jM ? {
+        const YV = xV.active.find((VV => VV.id === xV.trackedQuestId)),
+          UV = null !== (eV = null === YV || void 0 === YV ? void 0 : YV.subquests.find((VV => "ready" === VV.status))) && void 0 !== eV ? eV : null === YV || void 0 === YV ? void 0 : YV.subquests.find((VV => "active" === VV.status));
+        return UV ? {
           kind: "step",
-          questId: SM.id,
-          questNameKey: SM.nameKey,
-          step: jM
+          questId: YV.id,
+          questNameKey: YV.nameKey,
+          step: UV
         } : null
       }
       hasPendingQuestPopup() {
-        return this.pending.some((MM => !Gr(MM)))
+        return this.pending.some((VV => !Fe(VV)))
       }
       advance() {
-        var MM;
-        this.current = this.sQ ? null : null !== (MM = this.pending.shift()) && void 0 !== MM ? MM : null, this.followUp = null, null !== this.current && (this.token++, this.shownAt = this.now(), this.expiresAt = this.shownAt + this.durationMs(), this.onShown(this.current.questCompletionKind))
+        var VV;
+        this.current = this.hn ? null : null !== (VV = this.pending.shift()) && void 0 !== VV ? VV : null, this.followUp = null, null !== this.current && (this.token++, this.shownAt = this.now(), this.expiresAt = this.shownAt + this.durationMs(), this.onShown(this.current.questCompletionKind))
       }
     }
 
-    function Gr(MM) {
-      return Cr(MM.questCompletionKind)
+    function Fe(VV) {
+      return Te(VV.questCompletionKind)
     }
 
-    function Cr(MM) {
-      return "skillLevel" === MM || "landmark" === MM || "npcNote" === MM
+    function Te(VV) {
+      return "skillLevel" === VV || "landmark" === VV || "npcNote" === VV
     }
-    var er = iM(39543),
-      br = iM(39548),
-      wr = iM(39509),
-      tr = iM(39571);
-    const gr = ".InGameHeaderContainer, .TopRightElementsLeft > *, .TopRightElementsRight > *, .MiddleTextTopContainer";
-    class ur {
+    var Pe = xV(39693),
+      Ae = xV(39696),
+      Ne = xV(39665),
+      Xe = xV(39725);
+    const Me = ".InGameHeaderContainer, .TopRightElementsLeft > *, .TopRightElementsRight > *, .MiddleTextTopContainer";
+    class ze {
       constructor() {
         this.compassSpacing = 1, this.compassSize = {
           trackHalfWidth: 0,
@@ -1087,593 +1053,593 @@ export const modules = {
         }, this.viewport = {
           width: 0,
           height: 0
-        }, this.stopLayout = null, this.stopWaypoint = null, this.stopWaypointOrigin = null, this.waypointOriginToken = null, this.waypointLaunch = null, this.markers = new Map, this.cardinals = [], this.frame = null, this.dh = !1, this.mountCompass = MM => {
-          var rM;
-          if (null === (rM = this.stopLayout) || void 0 === rM || rM.call(this), this.stopLayout = null, this.markers.clear(), this.cardinals = [], this.compass = null, !MM || this.dh) return;
-          const iM = MM.querySelector(".SkyblockCompassTrack");
+        }, this.stopLayout = null, this.stopWaypoint = null, this.stopWaypointOrigin = null, this.waypointOriginToken = null, this.waypointLaunch = null, this.markers = new Map, this.cardinals = [], this.frame = null, this.ik = !1, this.mountCompass = VV => {
+          var eV;
+          if (null === (eV = this.stopLayout) || void 0 === eV || eV.call(this), this.stopLayout = null, this.markers.clear(), this.cardinals = [], this.compass = null, !VV || this.ik) return;
+          const xV = VV.querySelector(".SkyblockCompassTrack");
           this.compass = {
-            root: MM,
-            track: iM,
-            label: MM.querySelector(".SkyblockCompassLabel")
-          }, iM.replaceChildren();
-          for (let SM = 0; SM < 4; SM++) {
-            const MM = document.createElement("span");
-            MM.className = "SkyblockCompassCardinal", iM.appendChild(MM), this.cardinals.push(MM)
+            root: VV,
+            track: xV,
+            label: VV.querySelector(".SkyblockCompassLabel")
+          }, xV.replaceChildren();
+          for (let YV = 0; YV < 4; YV++) {
+            const VV = document.createElement("span");
+            VV.className = "SkyblockCompassCardinal", xV.appendChild(VV), this.cardinals.push(VV)
           }
-          const OM = (0, wr.b)(gr, [MM], this.layout);
+          const JV = (0, Ne.b)(Me, [VV], this.layout);
           this.stopLayout = () => {
-            OM(), iM.replaceChildren()
+            JV(), xV.replaceChildren()
           }, this.render(this.frame)
-        }, this.mountTerrain = MM => {
-          this.terrain = this.dh ? null : MM, this.render(this.frame)
-        }, this.mountMinimapSearchArea = MM => {
-          this.mountSearchArea("minimap", MM)
-        }, this.mountMapSearchArea = MM => {
-          this.mountSearchArea("map", MM)
-        }, this.mountPlayer = MM => {
-          this.player = this.dh ? null : MM, this.render(this.frame)
-        }, this.mountWaypoint = MM => {
-          var rM, iM;
-          if (null === (rM = this.stopWaypoint) || void 0 === rM || rM.call(this), this.stopWaypoint = null, this.waypoint = null, this.markerIcon = null, !MM || this.dh) return;
-          const OM = MM.querySelector(".SkyblockQuestWaypointMarker");
-          OM.replaceChildren((0, br.d)("quest")), this.markerIcon = "quest", this.waypoint = {
-            root: MM,
-            marker: OM,
-            clip: MM.querySelector(".SkyblockQuestWaypointTextClip"),
-            text: MM.querySelector(".SkyblockQuestWaypointText"),
-            label: MM.querySelector(".SkyblockQuestWaypointLabel"),
-            distance: MM.querySelector(".SkyblockQuestWaypointDistance"),
-            hint: MM.querySelector(".SkyblockQuestWaypointHint")
+        }, this.mountTerrain = VV => {
+          this.terrain = this.ik ? null : VV, this.render(this.frame)
+        }, this.mountMinimapSearchArea = VV => {
+          this.mountSearchArea("minimap", VV)
+        }, this.mountMapSearchArea = VV => {
+          this.mountSearchArea("map", VV)
+        }, this.mountPlayer = VV => {
+          this.player = this.ik ? null : VV, this.render(this.frame)
+        }, this.mountWaypoint = VV => {
+          var eV, xV;
+          if (null === (eV = this.stopWaypoint) || void 0 === eV || eV.call(this), this.stopWaypoint = null, this.waypoint = null, this.markerIcon = null, !VV || this.ik) return;
+          const JV = VV.querySelector(".SkyblockQuestWaypointMarker");
+          JV.replaceChildren((0, Ae.c)("quest")), this.markerIcon = "quest", this.waypoint = {
+            root: VV,
+            marker: JV,
+            clip: VV.querySelector(".SkyblockQuestWaypointTextClip"),
+            text: VV.querySelector(".SkyblockQuestWaypointText"),
+            label: VV.querySelector(".SkyblockQuestWaypointLabel"),
+            distance: VV.querySelector(".SkyblockQuestWaypointDistance"),
+            hint: VV.querySelector(".SkyblockQuestWaypointHint")
           };
-          const SM = () => {
+          const YV = () => {
               this.waypointMarkerSize = {
-                width: OM.offsetWidth,
-                height: OM.offsetHeight
+                width: JV.offsetWidth,
+                height: JV.offsetHeight
               }, this.waypointInset = {
-                x: OM.offsetWidth / 2 + 8,
-                top: OM.offsetHeight + 8,
+                x: JV.offsetWidth / 2 + 8,
+                top: JV.offsetHeight + 8,
                 bottom: 8
               }
             },
-            jM = new ResizeObserver((() => {
-              SM(), this.render(this.frame)
+            UV = new ResizeObserver((() => {
+              YV(), this.render(this.frame)
             }));
-          jM.observe(OM, {
+          UV.observe(JV, {
             box: "border-box"
           });
-          const aM = () => {
+          const yV = () => {
             this.viewport = {
               width: window.innerWidth,
               height: window.innerHeight
             }
           };
-          window.addEventListener("resize", aM), null === (iM = window.visualViewport) || void 0 === iM || iM.addEventListener("resize", aM), this.stopWaypoint = () => {
-            var MM;
-            jM.disconnect(), window.removeEventListener("resize", aM), null === (MM = window.visualViewport) || void 0 === MM || MM.removeEventListener("resize", aM)
-          }, aM(), SM(), this.render(this.frame)
-        }, this.mountWaypointOrigin = MM => {
-          var rM;
-          if (null === (rM = this.stopWaypointOrigin) || void 0 === rM || rM.call(this), this.stopWaypointOrigin = null, this.waypointLaunch = null, this.waypointOriginToken = MM && !this.dh ? Number(MM.dataset.notificationToken) : null, MM && !this.dh && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-            const rM = {
-              nameKey: MM.dataset.waypointNameKey,
+          window.addEventListener("resize", yV), null === (xV = window.visualViewport) || void 0 === xV || xV.addEventListener("resize", yV), this.stopWaypoint = () => {
+            var VV;
+            UV.disconnect(), window.removeEventListener("resize", yV), null === (VV = window.visualViewport) || void 0 === VV || VV.removeEventListener("resize", yV)
+          }, yV(), YV(), this.render(this.frame)
+        }, this.mountWaypointOrigin = VV => {
+          var eV;
+          if (null === (eV = this.stopWaypointOrigin) || void 0 === eV || eV.call(this), this.stopWaypointOrigin = null, this.waypointLaunch = null, this.waypointOriginToken = VV && !this.ik ? Number(VV.dataset.notificationToken) : null, VV && !this.ik && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+            const eV = {
+              nameKey: VV.dataset.waypointNameKey,
               x: 0,
               y: 0,
               startedAt: null
             };
-            this.waypointLaunch = rM;
-            const iM = () => {
-                const iM = MM.getBoundingClientRect();
-                rM.x = (iM.left + iM.width / 2) / window.innerWidth * 100, rM.y = (iM.top + iM.height / 2) / window.innerHeight * 100
+            this.waypointLaunch = eV;
+            const xV = () => {
+                const xV = VV.getBoundingClientRect();
+                eV.x = (xV.left + xV.width / 2) / window.innerWidth * 100, eV.y = (xV.top + xV.height / 2) / window.innerHeight * 100
               },
-              OM = new ResizeObserver(iM);
-            OM.observe(MM.parentElement), OM.observe(MM), window.addEventListener("resize", iM), this.stopWaypointOrigin = () => {
-              OM.disconnect(), window.removeEventListener("resize", iM)
-            }, iM()
+              JV = new ResizeObserver(xV);
+            JV.observe(VV.parentElement), JV.observe(VV), window.addEventListener("resize", xV), this.stopWaypointOrigin = () => {
+              JV.disconnect(), window.removeEventListener("resize", xV)
+            }, xV()
           }
           this.render(this.frame)
         }, this.layout = () => {
           if (!this.compass) return;
-          const MM = this.compass.root,
-            rM = getComputedStyle(MM),
-            iM = getComputedStyle(document.documentElement),
-            OM = parseFloat(iM.fontSize),
-            SM = parseFloat(rM.getPropertyValue("--compass-icon-size")) * OM,
-            jM = "1" === rM.getPropertyValue("--compass-fit-top").trim(),
-            aM = jM ? 1 : 8,
-            PM = Array.from(document.querySelectorAll(gr), (MM => {
-              var rM;
-              return (null !== (rM = MM.querySelector(".MiddleTextTop")) && void 0 !== rM ? rM : MM).getBoundingClientRect()
-            })).filter((MM => MM.width > 0 && MM.height > 0));
-          let nM = (parseFloat(iM.getPropertyValue("--notchTop")) || 0) + aM,
-            QM = "";
-          if (jM) {
-            const rM = window.innerWidth / 2,
-              iM = MM.getBoundingClientRect().height,
-              jM = [nM, ...PM.map((MM => Math.max(nM, MM.bottom + aM)))].sort(((MM, rM) => MM - rM));
-            for (const MM of jM) {
-              let jM = rM - 8;
-              for (const OM of PM) OM.bottom + aM <= MM || OM.top >= MM + iM + aM || (jM = Math.min(jM, OM.right <= rM ? rM - OM.right - 8 : OM.left - rM - 8));
-              const zM = 2 * jM - SM;
-              if (zM >= 16 * OM) {
-                QM = `${zM}px`, nM = MM;
+          const VV = this.compass.root,
+            eV = getComputedStyle(VV),
+            xV = getComputedStyle(document.documentElement),
+            JV = parseFloat(xV.fontSize),
+            YV = parseFloat(eV.getPropertyValue("--compass-icon-size")) * JV,
+            UV = "1" === eV.getPropertyValue("--compass-fit-top").trim(),
+            yV = UV ? 1 : 8,
+            pV = Array.from(document.querySelectorAll(Me), (VV => {
+              var eV;
+              return (null !== (eV = VV.querySelector(".MiddleTextTop")) && void 0 !== eV ? eV : VV).getBoundingClientRect()
+            })).filter((VV => VV.width > 0 && VV.height > 0));
+          let QV = (parseFloat(xV.getPropertyValue("--notchTop")) || 0) + yV,
+            nV = "";
+          if (UV) {
+            const eV = window.innerWidth / 2,
+              xV = VV.getBoundingClientRect().height,
+              UV = [QV, ...pV.map((VV => Math.max(QV, VV.bottom + yV)))].sort(((VV, eV) => VV - eV));
+            for (const VV of UV) {
+              let UV = eV - 8;
+              for (const JV of pV) JV.bottom + yV <= VV || JV.top >= VV + xV + yV || (UV = Math.min(UV, JV.right <= eV ? eV - JV.right - 8 : JV.left - eV - 8));
+              const wV = 2 * UV - YV;
+              if (wV >= 16 * JV) {
+                nV = `${wV}px`, QV = VV;
                 break
               }
             }
           }
-          MM.style.maxWidth !== QM && (MM.style.maxWidth = QM);
-          const zM = MM.getBoundingClientRect(),
-            LM = this.compassSize.trackHalfWidth;
-          if (zM.width > 0) {
-            const MM = this.compass.track.getBoundingClientRect();
+          VV.style.maxWidth !== nV && (VV.style.maxWidth = nV);
+          const wV = VV.getBoundingClientRect(),
+            ZV = this.compassSize.trackHalfWidth;
+          if (wV.width > 0) {
+            const VV = this.compass.track.getBoundingClientRect();
             this.compassSize = {
-              trackHalfWidth: MM.width / 2,
+              trackHalfWidth: VV.width / 2,
               screenHalfWidth: window.innerWidth / 2
-            }, this.compassSpacing = 4 * SM / MM.width
+            }, this.compassSpacing = 4 * YV / VV.width
           }
-          if (!QM)
-            for (const mM of PM) mM.right > zM.left - 8 && mM.left < zM.right + 8 && (nM = Math.max(nM, mM.bottom + aM));
-          MM.style.top = `${nM}px`, this.compassSize.trackHalfWidth !== LM && this.render(this.frame)
+          if (!nV)
+            for (const vV of pV) vV.right > wV.left - 8 && vV.left < wV.right + 8 && (QV = Math.max(QV, vV.bottom + yV));
+          VV.style.top = `${QV}px`, this.compassSize.trackHalfWidth !== ZV && this.render(this.frame)
         }
       }
-      mountSearchArea(MM, rM) {
-        this.searchAreas[MM] = this.dh ? null : rM, this.render(this.frame)
+      mountSearchArea(VV, eV) {
+        this.searchAreas[VV] = this.ik ? null : eV, this.render(this.frame)
       }
-      render(MM) {
-        if (this.dh) return;
-        if (this.frame = MM, this.compass && (Rr(this.compass.root, !MM), MM)) {
-          const rM = this.compassSize.trackHalfWidth / 50;
-          MM.compass.cardinals.forEach(((MM, iM) => {
-            const OM = this.cardinals[iM];
-            OM.textContent !== MM.name && (OM.textContent = MM.name), Rr(OM, MM.hidden), OM.style.translate = MM.left * rM + "px"
+      render(VV) {
+        if (this.ik) return;
+        if (this.frame = VV, this.compass && (Ge(this.compass.root, !VV), VV)) {
+          const eV = this.compassSize.trackHalfWidth / 50;
+          VV.compass.cardinals.forEach(((VV, xV) => {
+            const JV = this.cardinals[xV];
+            JV.textContent !== VV.name && (JV.textContent = VV.name), Ge(JV, VV.hidden), JV.style.translate = VV.left * eV + "px"
           }));
-          const iM = new Set;
-          MM.compass.markers.forEach(((OM, SM) => {
-            var jM;
-            iM.add(OM.id);
-            let aM = this.markers.get(OM.id);
-            aM || (aM = document.createElement("span"), aM.className = "SkyblockCompassMarker", this.markers.set(OM.id, aM), this.compass.track.appendChild(aM)), aM.dataset.icon !== OM.icon && (aM.dataset.icon = OM.icon, aM.replaceChildren((0, br.d)(OM.icon))), aM.style.color = null !== (jM = OM.colour) && void 0 !== jM ? jM : "", aM.style.translate = OM.left * rM + "px", aM.style.zIndex = String(MM.compass.markers.length - SM), aM.title !== OM.name && (aM.title = OM.name)
+          const xV = new Set;
+          VV.compass.markers.forEach(((JV, YV) => {
+            var UV;
+            xV.add(JV.id);
+            let yV = this.markers.get(JV.id);
+            yV || (yV = document.createElement("span"), yV.className = "SkyblockCompassMarker", this.markers.set(JV.id, yV), this.compass.track.appendChild(yV)), yV.dataset.icon !== JV.icon && (yV.dataset.icon = JV.icon, yV.replaceChildren((0, Ae.c)(JV.icon))), yV.style.color = null !== (UV = JV.colour) && void 0 !== UV ? UV : "", yV.style.translate = JV.left * eV + "px", yV.style.zIndex = String(VV.compass.markers.length - YV), yV.title !== JV.name && (yV.title = JV.name)
           }));
-          for (const [MM, OM] of this.markers) iM.has(MM) || (OM.remove(), this.markers.delete(MM));
-          this.compass.label.textContent !== MM.compass.label && (this.compass.label.textContent = MM.compass.label)
+          for (const [VV, JV] of this.markers) xV.has(VV) || (JV.remove(), this.markers.delete(VV));
+          this.compass.label.textContent !== VV.compass.label && (this.compass.label.textContent = VV.compass.label)
         }
-        this.terrain && (Rr(this.terrain, !(null !== MM && void 0 !== MM && MM.minimap)), null !== MM && void 0 !== MM && MM.minimap && (this.terrain.style.transform = MM.minimap.transform, this.terrain.style.setProperty("--minimap-icon-rotation", MM.minimap.iconRotation)));
-        const rM = null === MM || void 0 === MM ? void 0 : MM.searchArea;
-        for (const iM of [this.searchAreas.minimap, this.searchAreas.map])
-          if (iM && (Rr(iM, !rM), rM)) {
-            if (this.searchAreaPath.seed !== rM.shapeSeed && (this.searchAreaPath = {
-                seed: rM.shapeSeed,
-                d: (0, tr.f)((0, tr.d)(rM.shapeSeed))
-              }), iM.dataset.shapeSeed !== rM.shapeSeed) {
-              iM.dataset.shapeSeed = rM.shapeSeed;
-              for (const MM of iM.querySelectorAll("path")) MM.setAttribute("d", this.searchAreaPath.d)
+        this.terrain && (Ge(this.terrain, !(null !== VV && void 0 !== VV && VV.minimap)), null !== VV && void 0 !== VV && VV.minimap && (this.terrain.style.transform = VV.minimap.transform, this.terrain.style.setProperty("--minimap-icon-rotation", VV.minimap.iconRotation)));
+        const eV = null === VV || void 0 === VV ? void 0 : VV.searchArea;
+        for (const xV of [this.searchAreas.minimap, this.searchAreas.map])
+          if (xV && (Ge(xV, !eV), eV)) {
+            if (this.searchAreaPath.seed !== eV.shapeSeed && (this.searchAreaPath = {
+                seed: eV.shapeSeed,
+                d: (0, Xe.d)((0, Xe.b)(eV.shapeSeed))
+              }), xV.dataset.shapeSeed !== eV.shapeSeed) {
+              xV.dataset.shapeSeed = eV.shapeSeed;
+              for (const VV of xV.querySelectorAll("path")) VV.setAttribute("d", this.searchAreaPath.d)
             }
-            iM.style.left = `${rM.left}%`, iM.style.top = `${rM.top}%`, iM.style.width = `${rM.width}%`, iM.style.height = `${rM.height}%`
-          } if (this.player && (Rr(this.player, !(null !== MM && void 0 !== MM && MM.player) || MM.player.hidden), null !== MM && void 0 !== MM && MM.player && (this.player.style.left = `${MM.player.left}%`, this.player.style.top = `${MM.player.top}%`, this.player.style.setProperty("--map-player-rotation", MM.player.rotation))), this.waypoint) {
+            xV.style.left = `${eV.left}%`, xV.style.top = `${eV.top}%`, xV.style.width = `${eV.width}%`, xV.style.height = `${eV.height}%`
+          } if (this.player && (Ge(this.player, !(null !== VV && void 0 !== VV && VV.player) || VV.player.hidden), null !== VV && void 0 !== VV && VV.player && (this.player.style.left = `${VV.player.left}%`, this.player.style.top = `${VV.player.top}%`, this.player.style.setProperty("--map-player-rotation", VV.player.rotation))), this.waypoint) {
           const {
-            root: rM,
-            marker: iM,
-            clip: OM,
-            text: SM,
-            label: jM,
-            distance: aM,
-            hint: PM
-          } = this.waypoint, nM = !(null !== MM && void 0 !== MM && MM.waypoint) || null !== MM.waypoint.popupToken && MM.waypoint.popupToken !== this.waypointOriginToken;
-          Rr(rM, nM);
-          let QM = 1;
-          const zM = this.waypointLaunch;
-          if (!nM && zM && MM.waypoint.nameKey === zM.nameKey) {
-            const MM = performance.now();
-            zM.startedAt ??= MM, QM = Math.min(1, Math.max(0, (MM - zM.startedAt - 450) / 1e3)), iM.style.opacity = String(Math.min(1, (MM - zM.startedAt) / 150)), 1 === QM && (this.waypointLaunch = null)
-          } else iM.style.opacity = "", zM && null !== zM.startedAt && (this.waypointLaunch = null);
-          if (rM.classList.toggle("Launching", QM < 1), null !== MM && void 0 !== MM && MM.waypoint) {
-            const rM = this.waypointInset,
-              nM = "quest_talk" === MM.waypoint.markerIcon ? function(MM, rM, iM) {
-                if (!MM.text || null === MM.blockHeight || 0 === MM.nearness) return MM;
-                const OM = MM.blockHeight / 100 * iM.height,
-                  SM = -MM.nearness * (pr * OM + rM.width / 2),
-                  jM = MM.nearness * (Wr * OM + rM.height / 2);
+            root: eV,
+            marker: xV,
+            clip: JV,
+            text: YV,
+            label: UV,
+            distance: yV,
+            hint: pV
+          } = this.waypoint, QV = !(null !== VV && void 0 !== VV && VV.waypoint) || null !== VV.waypoint.popupToken && VV.waypoint.popupToken !== this.waypointOriginToken;
+          Ge(eV, QV);
+          let nV = 1;
+          const wV = this.waypointLaunch;
+          if (!QV && wV && VV.waypoint.nameKey === wV.nameKey) {
+            const VV = performance.now();
+            wV.startedAt ??= VV, nV = Math.min(1, Math.max(0, (VV - wV.startedAt - 450) / 1e3)), xV.style.opacity = String(Math.min(1, (VV - wV.startedAt) / 150)), 1 === nV && (this.waypointLaunch = null)
+          } else xV.style.opacity = "", wV && null !== wV.startedAt && (this.waypointLaunch = null);
+          if (eV.classList.toggle("Launching", nV < 1), null !== VV && void 0 !== VV && VV.waypoint) {
+            const eV = this.waypointInset,
+              QV = "quest_talk" === VV.waypoint.markerIcon ? function(VV, eV, xV) {
+                if (!VV.text || null === VV.blockHeight || 0 === VV.nearness) return VV;
+                const JV = VV.blockHeight / 100 * xV.height,
+                  YV = -VV.nearness * (We * JV + eV.width / 2),
+                  UV = VV.nearness * (Re * JV + eV.height / 2);
                 return {
-                  ...MM,
+                  ...VV,
                   text: {
-                    x: MM.text.x + SM / iM.width * 100,
-                    y: MM.text.y + jM / iM.height * 100
+                    x: VV.text.x + YV / xV.width * 100,
+                    y: VV.text.y + UV / xV.height * 100
                   }
                 }
-              }(MM.waypoint, this.waypointMarkerSize, this.viewport) : MM.waypoint,
-              LM = (0, er.c)(nM, rM, this.viewport),
-              mM = QM * QM * (3 - 2 * QM),
-              HM = QM < 1 ? zM.x + (LM.x - zM.x) * mM : LM.x,
-              hM = QM < 1 ? zM.y + (LM.y - zM.y) * mM : LM.y;
-            iM.style.translate = `${HM}vw ${hM}vh`, OM.style.clipPath = `inset(${rM.top}px ${rM.x}px ${rM.bottom}px)`, Rr(SM, QM < 1 || !MM.waypoint.text), SM.style.opacity = String(1 - MM.waypoint.nearness), MM.waypoint.text && (SM.style.translate = `${MM.waypoint.text.x}vw ${MM.waypoint.text.y}vh`), jM.textContent !== MM.waypoint.name && (jM.textContent = MM.waypoint.name), this.markerIcon !== MM.waypoint.markerIcon && (this.markerIcon = MM.waypoint.markerIcon, iM.replaceChildren((0, br.d)(this.markerIcon))), aM.textContent !== MM.waypoint.distance && (aM.textContent = MM.waypoint.distance), Rr(PM, null === MM.waypoint.hint), null !== MM.waypoint.hint && PM.textContent !== MM.waypoint.hint && (PM.textContent = MM.waypoint.hint)
+              }(VV.waypoint, this.waypointMarkerSize, this.viewport) : VV.waypoint,
+              ZV = (0, Pe.c)(QV, eV, this.viewport),
+              vV = nV * nV * (3 - 2 * nV),
+              rV = nV < 1 ? wV.x + (ZV.x - wV.x) * vV : ZV.x,
+              kV = nV < 1 ? wV.y + (ZV.y - wV.y) * vV : ZV.y;
+            xV.style.translate = `${rV}vw ${kV}vh`, JV.style.clipPath = `inset(${eV.top}px ${eV.x}px ${eV.bottom}px)`, Ge(YV, nV < 1 || !VV.waypoint.text), YV.style.opacity = String(1 - VV.waypoint.nearness), VV.waypoint.text && (YV.style.translate = `${VV.waypoint.text.x}vw ${VV.waypoint.text.y}vh`), UV.textContent !== VV.waypoint.name && (UV.textContent = VV.waypoint.name), this.markerIcon !== VV.waypoint.markerIcon && (this.markerIcon = VV.waypoint.markerIcon, xV.replaceChildren((0, Ae.c)(this.markerIcon))), yV.textContent !== VV.waypoint.distance && (yV.textContent = VV.waypoint.distance), Ge(pV, null === VV.waypoint.hint), null !== VV.waypoint.hint && pV.textContent !== VV.waypoint.hint && (pV.textContent = VV.waypoint.hint)
           }
         }
       }
       dispose() {
-        var MM, rM;
-        this.mountWaypointOrigin(null), this.render(null), null === (MM = this.stopLayout) || void 0 === MM || MM.call(this), this.stopLayout = null, null === (rM = this.stopWaypoint) || void 0 === rM || rM.call(this), this.stopWaypoint = null, this.compass = null, this.terrain = null, this.searchAreas = {
+        var VV, eV;
+        this.mountWaypointOrigin(null), this.render(null), null === (VV = this.stopLayout) || void 0 === VV || VV.call(this), this.stopLayout = null, null === (eV = this.stopWaypoint) || void 0 === eV || eV.call(this), this.stopWaypoint = null, this.compass = null, this.terrain = null, this.searchAreas = {
           minimap: null,
           map: null
-        }, this.player = null, this.waypoint = null, this.markers.clear(), this.cardinals = [], this.dh = !0
+        }, this.player = null, this.waypoint = null, this.markers.clear(), this.cardinals = [], this.ik = !0
       }
     }
 
-    function Rr(MM, rM) {
-      MM.hidden !== rM && (MM.hidden = rM)
+    function Ge(VV, eV) {
+      VV.hidden !== eV && (VV.hidden = eV)
     }
-    const pr = .55,
-      Wr = .6;
-    var sr = iM(39532);
-    const Dr = {
+    const We = .55,
+      Re = .6;
+    var ge = xV(39683);
+    const De = {
       talk: "quest_talk",
       search: "quest_search"
     };
-    class kr {
-      constructor(MM, rM, iM, OM) {
-        this.map = MM, this.quests = rM, this.compass = iM, this.display = new ur, this.translate = void 0, this.locale = "en-GB", this.metresFormat = new Intl.NumberFormat(this.locale), this.dh = !1, this.snapshot = null, this.texts = new Map, this.translate = OM
+    class ie {
+      constructor(VV, eV, xV, JV) {
+        this.map = VV, this.quests = eV, this.compass = xV, this.display = new ze, this.translate = void 0, this.locale = "en-GB", this.metresFormat = new Intl.NumberFormat(this.locale), this.ik = !1, this.snapshot = null, this.texts = new Map, this.translate = JV
       }
-      setTranslator(MM, rM) {
-        this.translate = MM, this.locale = rM, this.metresFormat = new Intl.NumberFormat(rM), this.texts.clear()
+      setTranslator(VV, eV) {
+        this.translate = VV, this.locale = eV, this.metresFormat = new Intl.NumberFormat(eV), this.texts.clear()
       }
-      translateCached(MM, rM) {
-        const iM = void 0 === rM ? MM : `${MM} ${rM}`;
-        let OM = this.texts.get(iM);
-        return void 0 === OM && (this.texts.size >= 500 && this.texts.clear(), OM = this.translate(MM, void 0 === rM ? void 0 : {
-          distance: rM
-        }), this.texts.set(iM, OM)), OM
+      translateCached(VV, eV) {
+        const xV = void 0 === eV ? VV : `${VV} ${eV}`;
+        let JV = this.texts.get(xV);
+        return void 0 === JV && (this.texts.size >= 500 && this.texts.clear(), JV = this.translate(VV, void 0 === eV ? void 0 : {
+          distance: eV
+        }), this.texts.set(xV, JV)), JV
       }
       getSnapshot() {
         return this.snapshot
       }
-      afterRender(MM, rM, iM) {
-        if (this.dh) return;
-        if (!MM) return this.snapshot = null, void this.display.render(null);
-        const OM = this.map.getSnapshot().map,
-          jM = iM.cameraHeading,
-          aM = {
+      afterRender(VV, eV, xV) {
+        if (this.ik) return;
+        if (!VV) return this.snapshot = null, void this.display.render(null);
+        const JV = this.map.getSnapshot().map,
+          UV = xV.cameraHeading,
+          yV = {
             ...this.display.compassSize,
-            tanHalfFovX: iM.tanHalfFovX,
-            pitch: iM.cameraPitch
+            tanHalfFovX: xV.tanHalfFovX,
+            pitch: xV.cameraPitch
           },
-          PM = [];
-        if (OM)
-          for (const SM of this.compass.frame(MM, jM, rM)) {
-            const MM = HM(SM.offset, aM);
-            null !== MM && PM.push({
-              ...SM,
-              left: MM
+          pV = [];
+        if (JV)
+          for (const YV of this.compass.frame(VV, UV, eV)) {
+            const VV = rV(YV.offset, yV);
+            null !== VV && pV.push({
+              ...YV,
+              left: VV
             })
           }
-        const nM = function(MM, rM) {
-            const iM = [],
-              OM = MM => "quest" === MM.kind ? MM.distance - 1 : MM.distance,
-              SM = [...MM].sort(((MM, rM) => OM(MM) - OM(rM) || MM.id.localeCompare(rM.id)));
-            for (const jM of SM) {
-              let MM = !1;
-              if ("quest" !== jM.kind)
-                for (const OM of iM)
-                  if (Math.abs(OM.left - jM.left) < rM) {
-                    MM = !0;
+        const QV = function(VV, eV) {
+            const xV = [],
+              JV = VV => "quest" === VV.kind ? VV.distance - 1 : VV.distance,
+              YV = [...VV].sort(((VV, eV) => JV(VV) - JV(eV) || VV.id.localeCompare(eV.id)));
+            for (const UV of YV) {
+              let VV = !1;
+              if ("quest" !== UV.kind)
+                for (const JV of xV)
+                  if (Math.abs(JV.left - UV.left) < eV) {
+                    VV = !0;
                     break
-                  } MM || iM.push(jM)
+                  } VV || xV.push(UV)
             }
-            return iM
-          }(PM, this.display.compassSpacing),
-          QM = function(MM) {
-            let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.PI / 36,
-              iM = null;
-            for (const OM of MM) Math.abs(OM.offset) <= rM && (!iM || OM.distance < iM.distance || OM.distance === iM.distance && Math.abs(OM.offset) < Math.abs(iM.offset)) && (iM = OM);
-            return iM
-          }(nM),
-          zM = MM => {
-            var rM;
-            return null !== (rM = MM.displayName) && void 0 !== rM ? rM : this.translateCached(MM.nameKey)
+            return xV
+          }(pV, this.display.compassSpacing),
+          nV = function(VV) {
+            let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.PI / 36,
+              xV = null;
+            for (const JV of VV) Math.abs(JV.offset) <= eV && (!xV || JV.distance < xV.distance || JV.distance === xV.distance && Math.abs(JV.offset) < Math.abs(xV.offset)) && (xV = JV);
+            return xV
+          }(QV),
+          wV = VV => {
+            var eV;
+            return null !== (eV = VV.displayName) && void 0 !== eV ? eV : this.translateCached(VV.nameKey)
           },
-          mM = {
+          vV = {
             compass: {
-              markers: nM.map((MM => ({
-                id: MM.id,
-                icon: MM.icon,
-                colour: MM.colour,
-                name: zM(MM),
-                left: MM.left
+              markers: QV.map((VV => ({
+                id: VV.id,
+                icon: VV.icon,
+                colour: VV.colour,
+                name: wV(VV),
+                left: VV.left
               }))),
-              cardinals: sr.d.map((MM => {
+              cardinals: ge.d.map((VV => {
                 let {
-                  name: rM,
-                  bearing: iM
-                } = MM;
-                const OM = HM(LM.d.computeShortestRotation(jM, iM), aM);
+                  name: eV,
+                  bearing: xV
+                } = VV;
+                const JV = rV(ZV.b.computeShortestRotation(UV, xV), yV);
                 return {
-                  name: rM,
-                  left: null !== OM && void 0 !== OM ? OM : 0,
-                  hidden: null === OM
+                  name: eV,
+                  left: null !== JV && void 0 !== JV ? JV : 0,
+                  hidden: null === JV
                 }
               })),
-              label: QM ? `${zM(QM)} \xb7 ${this.translateCached("skyblockGame:waypointDistance",UM(QM.distance,this.locale))}` : ""
+              label: nV ? `${wV(nV)} \xb7 ${this.translateCached("skyblockGame:waypointDistance",tV(nV.distance,this.locale))}` : ""
             },
             minimap: null,
             searchArea: null,
             player: null,
             waypoint: null
           };
-        if (null !== OM && void 0 !== OM && OM.background) {
-          const rM = MM[0] - OM.mapOrigin[0],
-            iM = MM[2] - OM.mapOrigin[2],
+        if (null !== JV && void 0 !== JV && JV.background) {
+          const eV = VV[0] - JV.mapOrigin[0],
+            xV = VV[2] - JV.mapOrigin[2],
             {
-              rotation: aM,
-              transform: PM
-            } = (0, SM.d)(rM, iM, jM, OM.background.bounds);
-          mM.minimap = {
-            transform: PM,
-            iconRotation: -aM + "rad"
+              rotation: yV,
+              transform: pV
+            } = (0, YV.g)(eV, xV, UV, JV.background.bounds);
+          vV.minimap = {
+            transform: pV,
+            iconRotation: -yV + "rad"
           };
-          const [nM, QM] = (0, SM.c)(rM, iM, OM.background.bounds);
-          mM.player = {
-            left: nM,
-            top: QM,
-            hidden: nM < 0 || QM < 0 || nM > 100 || QM > 100,
-            rotation: -aM + "rad"
+          const [QV, nV] = (0, YV.c)(eV, xV, JV.background.bounds);
+          vV.player = {
+            left: QV,
+            top: nV,
+            hidden: QV < 0 || nV < 0 || QV > 100 || nV > 100,
+            rotation: -yV + "rad"
           }
         }
         const {
-          waypoint: hM
+          waypoint: kV
         } = this.quests.getSnapshot();
-        if ("search" === (null === hM || void 0 === hM ? void 0 : hM.questMarkerIcon) && null !== OM && void 0 !== OM && OM.background) {
+        if ("search" === (null === kV || void 0 === kV ? void 0 : kV.questMarkerIcon) && null !== JV && void 0 !== JV && JV.background) {
           const {
-            bounds: MM
-          } = OM.background, [rM, iM] = (0, SM.c)(hM.position[0] - OM.mapOrigin[0], hM.position[2] - OM.mapOrigin[2], MM);
-          mM.searchArea = {
-            left: rM,
-            top: iM,
-            width: 6400 / (MM.mapMaxX - MM.mapMinX),
-            height: 6400 / (MM.mapMaxZ - MM.mapMinZ),
-            shapeSeed: hM.nameKey
+            bounds: VV
+          } = JV.background, [eV, xV] = (0, YV.c)(kV.position[0] - JV.mapOrigin[0], kV.position[2] - JV.mapOrigin[2], VV);
+          vV.searchArea = {
+            left: eV,
+            top: xV,
+            width: 6400 / (VV.mapMaxX - VV.mapMinX),
+            height: 6400 / (VV.mapMaxZ - VV.mapMinZ),
+            shapeSeed: kV.nameKey
           }
         }
-        const JM = this.quests.getNotificationSnapshot(),
-          dM = "completion" === (null === JM || void 0 === JM ? void 0 : JM.phase) && !Cr(JM.kind);
-        if (hM && !dM) {
-          const rM = Math.hypot(...hM.position.map(((rM, iM) => rM - MM[iM]))),
-            OM = Math.round(rM),
-            SM = "talk" === hM.questMarkerIcon ? Math.min(1, Math.max(0, (10 - rM) / 5)) : 0,
-            jM = iM.projectWorldPosToViewport(hM.position),
-            aM = jM && iM.projectWorldPosToViewport([hM.position[0], hM.position[1] - 1, hM.position[2]]);
-          mM.waypoint = {
-            ...iM.projectWorldPosToScreenPos(hM.position),
-            text: jM,
-            nearness: SM * SM * (3 - 2 * SM),
-            blockHeight: jM && aM ? aM.y - jM.y : null,
-            name: this.translateCached(hM.nameKey),
-            nameKey: hM.nameKey,
-            markerIcon: hM.questMarkerIcon ? Dr[hM.questMarkerIcon] : "quest",
-            popupToken: (null === JM || void 0 === JM ? void 0 : JM.waypointNameKey) === hM.nameKey ? JM.token : null,
-            distance: this.translateCached("skyblockGame:waypointDistance", this.metresFormat.format(OM)),
-            hint: "search" === hM.questMarkerIcon && Math.hypot(hM.position[0] - MM[0], hM.position[2] - MM[2]) <= 32 ? this.translateCached("skyblockGame:waypointSearchHint") : null
+        const bV = this.quests.getNotificationSnapshot(),
+          EV = "completion" === (null === bV || void 0 === bV ? void 0 : bV.phase) && !Te(bV.kind);
+        if (kV && !EV) {
+          const eV = Math.hypot(...kV.position.map(((eV, xV) => eV - VV[xV]))),
+            JV = Math.round(eV),
+            YV = "talk" === kV.questMarkerIcon ? Math.min(1, Math.max(0, (10 - eV) / 5)) : 0,
+            UV = xV.projectWorldPosToViewport(kV.position),
+            yV = UV && xV.projectWorldPosToViewport([kV.position[0], kV.position[1] - 1, kV.position[2]]);
+          vV.waypoint = {
+            ...xV.projectWorldPosToScreenPos(kV.position),
+            text: UV,
+            nearness: YV * YV * (3 - 2 * YV),
+            blockHeight: UV && yV ? yV.y - UV.y : null,
+            name: this.translateCached(kV.nameKey),
+            nameKey: kV.nameKey,
+            markerIcon: kV.questMarkerIcon ? De[kV.questMarkerIcon] : "quest",
+            popupToken: (null === bV || void 0 === bV ? void 0 : bV.waypointNameKey) === kV.nameKey ? bV.token : null,
+            distance: this.translateCached("skyblockGame:waypointDistance", this.metresFormat.format(JV)),
+            hint: "search" === kV.questMarkerIcon && Math.hypot(kV.position[0] - VV[0], kV.position[2] - VV[2]) <= 32 ? this.translateCached("skyblockGame:waypointSearchHint") : null
           }
         }
-        this.snapshot = mM, this.display.render(mM)
+        this.snapshot = vV, this.display.render(vV)
       }
       dispose() {
-        this.dh = !0, this.snapshot = null, this.display.dispose()
+        this.ik = !0, this.snapshot = null, this.display.dispose()
       }
     }
-    const Zr = "skyblockSkillsView";
-    class or extends nM {
-      constructor(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now,
-          iM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : MM => MM,
-          OM = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "en-GB",
-          SM = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : MM => MM;
-        super(MM, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {}, arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : () => {}), this.now = rM, this.translate = iM, this.locale = OM, this.itemName = SM, this.progress = null, this.selected = "foraging", this.pending = new Map, this.recent = null, this.nextLevelUpToken = 0, this.onLevelUp = () => {}, this.skillText = new Map, this.sourceText = new Map, this.snapshot = {
+    const Ce = "skyblockSkillsView";
+    class ae extends QV {
+      constructor(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now,
+          xV = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : VV => VV,
+          JV = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "en-GB",
+          YV = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : VV => VV;
+        super(VV, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {}, arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : () => {}), this.now = eV, this.translate = xV, this.locale = JV, this.itemName = YV, this.progress = null, this.selected = "foraging", this.pending = new Map, this.recent = null, this.nextLevelUpToken = 0, this.onLevelUp = () => {}, this.skillText = new Map, this.sourceText = new Map, this.snapshot = {
           enabled: !1,
           open: !1,
           skills: [],
           detail: null,
           overallLevel: null,
           hud: null
-        }, this.select = MM => {
-          this.selected = MM, this.emit()
+        }, this.select = VV => {
+          this.selected = VV, this.emit()
         }
       }
-      setTranslator(MM, rM, iM) {
-        this.translate = MM, this.locale = rM, this.itemName = iM, this.skillText.clear(), this.sourceText.clear(), this.emit()
+      setTranslator(VV, eV, xV) {
+        this.translate = VV, this.locale = eV, this.itemName = xV, this.skillText.clear(), this.sourceText.clear(), this.emit()
       }
-      text(MM) {
-        let rM = this.skillText.get(MM);
-        return rM || (rM = {
-          label: this.translate(`skyblockGame:${MM}`),
-          description: this.translate(`skyblockGame:${MM}Description`)
-        }, this.skillText.set(MM, rM)), rM
+      text(VV) {
+        let eV = this.skillText.get(VV);
+        return eV || (eV = {
+          label: this.translate(`skyblockGame:${VV}`),
+          description: this.translate(`skyblockGame:${VV}Description`)
+        }, this.skillText.set(VV, eV)), eV
       }
-      sources(MM) {
-        if ("mining" === MM || "fishing" === MM) return this.buildSources(MM);
-        let rM = this.sourceText.get(MM);
-        return rM || (rM = this.buildSources(MM), this.sourceText.set(MM, rM)), rM
+      sources(VV) {
+        if ("mining" === VV || "fishing" === VV) return this.buildSources(VV);
+        let eV = this.sourceText.get(VV);
+        return eV || (eV = this.buildSources(VV), this.sourceText.set(VV, eV)), eV
       }
-      buildSources(MM) {
-        const rM = this.translate;
-        return "exploration" === MM ? [rM("skyblockGame:explorationZoneSource", {
+      buildSources(VV) {
+        const eV = this.translate;
+        return "exploration" === VV ? [eV("skyblockGame:explorationZoneSource", {
           xp: this.number(100)
-        }), rM("skyblockGame:explorationLandmarkSource", {
+        }), eV("skyblockGame:explorationLandmarkSource", {
           xp: this.number(50)
-        })] : "foraging" === MM ? [rM("skyblockGame:logSource", {
-          xp: this.number(Lr["Maple Log"])
-        })] : "combat" === MM ? [rM("skyblockGame:creatureKillSource"), rM("skyblockGame:noEnvironmentalXp")] : "farming" === MM ? [rM("skyblockGame:cropSource", {
-          xp: this.number(hr["Wheat|FreshlyGrown"])
-        }), rM("skyblockGame:terrainFarmingSource", {
+        })] : "foraging" === VV ? [eV("skyblockGame:logSource", {
+          xp: this.number(Ze["Maple Log"])
+        })] : "combat" === VV ? [eV("skyblockGame:creatureKillSource"), eV("skyblockGame:noEnvironmentalXp")] : "farming" === VV ? [eV("skyblockGame:cropSource", {
+          xp: this.number(ke["Wheat|FreshlyGrown"])
+        }), eV("skyblockGame:terrainFarmingSource", {
           xp: this.number(2)
-        }), rM("skyblockGame:noYoungCropXp")] : Object.entries("mining" === MM ? Hr : Jr).map((MM => {
-          let [iM, OM] = MM;
-          return rM("skyblockGame:itemXpSource", {
-            item: this.itemName(iM),
-            xp: this.number(OM)
+        }), eV("skyblockGame:noYoungCropXp")] : Object.entries("mining" === VV ? re : be).map((VV => {
+          let [xV, JV] = VV;
+          return eV("skyblockGame:itemXpSource", {
+            item: this.itemName(xV),
+            xp: this.number(JV)
           })
         }))
       }
-      number(MM) {
-        return MM.toLocaleString(this.locale)
+      number(VV) {
+        return VV.toLocaleString(this.locale)
       }
-      benefit(MM, rM) {
-        const iM = Sr(MM, rM);
-        return this.translate(iM.translationKey, {
-          bonus: this.number(iM.percent)
+      benefit(VV, eV) {
+        const xV = Ye(VV, eV);
+        return this.translate(xV.translationKey, {
+          bonus: this.number(xV.percent)
         })
       }
-      GL(MM) {
-        if (!this.dh) {
-          if ("snapshot" === MM.kind) this.progress = MM.progress, this.pending.clear(), this.recent = null;
-          else if ("award" === MM.kind && this.progress) {
+      RZ(VV) {
+        if (!this.ik) {
+          if ("snapshot" === VV.kind) this.progress = VV.progress, this.pending.clear(), this.recent = null;
+          else if ("award" === VV.kind && this.progress) {
             const {
-              award: rM
-            } = MM;
+              award: eV
+            } = VV;
             this.progress = {
               ...this.progress,
-              [rM.skill]: rM.after
+              [eV.skill]: eV.after
             };
-            for (const [MM, OM] of this.pending) OM.skill === rM.skill && this.pending.delete(MM);
-            const iM = rM.after.level > rM.before.level;
-            this.recordGain(rM.skill, rM.amount, iM ? ++this.nextLevelUpToken : null), iM && this.onLevelUp({
+            for (const [VV, JV] of this.pending) JV.skill === eV.skill && this.pending.delete(VV);
+            const xV = eV.after.level > eV.before.level;
+            this.recordGain(eV.skill, eV.amount, xV ? ++this.nextLevelUpToken : null), xV && this.onLevelUp({
               questCompletionKind: "skillLevel",
-              skill: rM.skill,
-              beforeLevel: rM.before.level,
-              level: rM.after.level
+              skill: eV.skill,
+              beforeLevel: eV.before.level,
+              level: eV.after.level
             })
           } else {
-            if ("rejectBlock" === MM.kind) return void this.rejectBlock(MM.position);
-            if ("open" === MM.kind) return void this.show()
+            if ("rejectBlock" === VV.kind) return void this.rejectBlock(VV.position);
+            if ("open" === VV.kind) return void this.show()
           }
           this.emit()
         }
       }
-      predictBlock(MM, rM, iM) {
-        if (!this.progress || this.dh || iM) return;
-        const OM = function(MM, rM) {
-          const iM = MM.split("|")[0];
-          return "Air" === rM || rM === `Barkless ${MM}` ? Object.hasOwn(Lr, iM) ? {
+      predictBlock(VV, eV, xV) {
+        if (!this.progress || this.ik || xV) return;
+        const JV = function(VV, eV) {
+          const xV = VV.split("|")[0];
+          return "Air" === eV || eV === `Barkless ${VV}` ? Object.hasOwn(Ze, xV) ? {
             skill: "foraging",
-            amount: Lr[iM]
-          } : "Air" !== rM ? null : Object.hasOwn(Hr, MM) ? {
+            amount: Ze[xV]
+          } : "Air" !== eV ? null : Object.hasOwn(re, VV) ? {
             skill: "mining",
-            amount: Hr[MM]
-          } : nr(MM) ? {
+            amount: re[VV]
+          } : Qe(VV) ? {
             skill: "farming",
             amount: 10
-          } : zr(MM) ? {
+          } : we(VV) ? {
             skill: "foraging",
             amount: 2
-          } : Object.hasOwn(hr, MM) ? {
+          } : Object.hasOwn(ke, VV) ? {
             skill: "farming",
-            amount: hr[MM]
-          } : Object.hasOwn(ZM, MM) ? {
+            amount: ke[VV]
+          } : Object.hasOwn(CV, VV) ? {
             skill: "farming",
             amount: 2
           } : null : null
-        }(rM, "Air");
-        if (!OM) return;
-        const SM = MM.join(",");
-        if (this.pending.has(SM)) return;
-        const jM = this.predictedProgress(OM.skill).totalXp + OM.amount;
-        Number.isSafeInteger(jM) && (this.pending.set(SM, {
-          ...OM,
+        }(eV, "Air");
+        if (!JV) return;
+        const YV = VV.join(",");
+        if (this.pending.has(YV)) return;
+        const UV = this.predictedProgress(JV.skill).totalXp + JV.amount;
+        Number.isSafeInteger(UV) && (this.pending.set(YV, {
+          ...JV,
           expires: this.now() + 2e3
-        }), this.recordGain(OM.skill, 0), this.emit())
+        }), this.recordGain(JV.skill, 0), this.emit())
       }
-      rejectBlock(MM) {
-        this.pending.delete(MM.join(",")) && this.emit()
+      rejectBlock(VV) {
+        this.pending.delete(VV.join(",")) && this.emit()
       }
-      bL() {
-        if (this.dh) return;
-        let MM = !1;
-        for (const [rM, iM] of this.pending) iM.expires <= this.now() && (this.pending.delete(rM), MM = !0);
-        this.recent && this.recent.expires <= this.now() && (this.recent = null, MM = !0), MM && this.emit()
+      iZ() {
+        if (this.ik) return;
+        let VV = !1;
+        for (const [eV, xV] of this.pending) xV.expires <= this.now() && (this.pending.delete(eV), VV = !0);
+        this.recent && this.recent.expires <= this.now() && (this.recent = null, VV = !0), VV && this.emit()
       }
       dispose() {
         this.progress = null, this.pending.clear(), this.recent = null, super.dispose()
       }
-      recordGain(MM, rM) {
-        var iM, OM;
-        let SM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        const jM = (null === (iM = this.recent) || void 0 === iM ? void 0 : iM.skill) === MM && this.recent.expires > this.now() ? this.recent.confirmed : 0,
-          aM = (null === (OM = this.recent) || void 0 === OM ? void 0 : OM.skill) === MM && this.recent.expires > this.now() ? this.recent.levelUpToken : null;
+      recordGain(VV, eV) {
+        var xV, JV;
+        let YV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+        const UV = (null === (xV = this.recent) || void 0 === xV ? void 0 : xV.skill) === VV && this.recent.expires > this.now() ? this.recent.confirmed : 0,
+          yV = (null === (JV = this.recent) || void 0 === JV ? void 0 : JV.skill) === VV && this.recent.expires > this.now() ? this.recent.levelUpToken : null;
         this.recent = {
-          skill: MM,
-          confirmed: jM + rM,
+          skill: VV,
+          confirmed: UV + eV,
           expires: this.now() + 3e3,
-          levelUpToken: null !== SM && void 0 !== SM ? SM : aM
+          levelUpToken: null !== YV && void 0 !== YV ? YV : yV
         }
       }
-      pendingXp(MM) {
-        let rM = 0;
-        for (const iM of this.pending.values()) iM.skill === MM && (rM += iM.amount);
-        return rM
+      pendingXp(VV) {
+        let eV = 0;
+        for (const xV of this.pending.values()) xV.skill === VV && (eV += xV.amount);
+        return eV
       }
-      predictedProgress(MM) {
-        const rM = this.progress[MM],
-          iM = this.pendingXp(MM);
-        return iM ? ar(rM.totalXp + iM, MM) : rM
+      predictedProgress(VV) {
+        const eV = this.progress[VV],
+          xV = this.pendingXp(VV);
+        return xV ? ye(eV.totalXp + xV, VV) : eV
       }
       isEnabled() {
         return null !== this.progress
       }
       buildSnapshot() {
-        var MM, rM, iM;
-        const OM = this.progress ? IM.map((MM => {
-            const rM = this.predictedProgress(MM);
+        var VV, eV, xV;
+        const JV = this.progress ? uV.map((VV => {
+            const eV = this.predictedProgress(VV);
             return {
-              ...this.text(MM),
-              icon: dr[MM],
-              benefit: this.benefit(MM, rM.level),
-              sources: this.sources(MM),
-              id: MM,
-              selected: MM === this.selected,
+              ...this.text(VV),
+              icon: Ee[VV],
+              benefit: this.benefit(VV, eV.level),
+              sources: this.sources(VV),
+              id: VV,
+              selected: VV === this.selected,
               level: this.translate("skyblockGame:level", {
-                level: this.number(rM.level)
+                level: this.number(eV.level)
               }),
-              xp: null === rM.xpForNextLevel ? this.translate("skyblockGame:max") : this.translate("skyblockGame:xpProgress", {
-                current: this.number(rM.xpIntoLevel),
-                target: this.number(rM.xpForNextLevel)
+              xp: null === eV.xpForNextLevel ? this.translate("skyblockGame:max") : this.translate("skyblockGame:xpProgress", {
+                current: this.number(eV.xpIntoLevel),
+                target: this.number(eV.xpForNextLevel)
               }),
-              percent: null === rM.xpForNextLevel ? 100 : Math.min(100, rM.xpIntoLevel / rM.xpForNextLevel * 100)
+              percent: null === eV.xpForNextLevel ? 100 : Math.min(100, eV.xpIntoLevel / eV.xpForNextLevel * 100)
             }
           })) : [],
-          SM = OM.find((MM => {
-            var rM;
-            return MM.id === (null === (rM = this.recent) || void 0 === rM ? void 0 : rM.skill)
+          YV = JV.find((VV => {
+            var eV;
+            return VV.id === (null === (eV = this.recent) || void 0 === eV ? void 0 : eV.skill)
           })),
-          jM = this.recent ? this.recent.confirmed + this.pendingXp(this.recent.skill) : 0;
+          UV = this.recent ? this.recent.confirmed + this.pendingXp(this.recent.skill) : 0;
         return {
           enabled: this.isEnabled(),
           open: this.open,
-          skills: OM,
-          detail: null !== (MM = OM.find((MM => MM.selected))) && void 0 !== MM ? MM : null,
-          overallLevel: this.progress ? IM.reduce(((MM, rM) => MM + this.predictedProgress(rM).level), 0) : null,
-          hud: SM && jM > 0 ? {
-            skill: SM,
+          skills: JV,
+          detail: null !== (VV = JV.find((VV => VV.selected))) && void 0 !== VV ? VV : null,
+          overallLevel: this.progress ? uV.reduce(((VV, eV) => VV + this.predictedProgress(eV).level), 0) : null,
+          hud: YV && UV > 0 ? {
+            skill: YV,
             gain: this.translate("skyblockGame:xpGain", {
-              xp: this.number(jM)
+              xp: this.number(UV)
             }),
-            levelUpToken: null !== (rM = null === (iM = this.recent) || void 0 === iM ? void 0 : iM.levelUpToken) && void 0 !== rM ? rM : null,
-            colour: lr(SM.id)
+            levelUpToken: null !== (eV = null === (xV = this.recent) || void 0 === xV ? void 0 : xV.levelUpToken) && void 0 !== eV ? eV : null,
+            colour: je(YV.id)
           } : null
         }
       }
     }
-    const fr = Math.max(1600, 600, 950) + 400,
-      Yr = {
+    const oe = Math.max(1600, 600, 950) + 400,
+      ce = {
         "--quest-step-flash": "1600ms",
         "--quest-step-pop": "600ms",
         "--quest-step-unlock": "500ms",
         "--quest-step-unlock-delay": "450ms"
       },
-      Nr = "skyblockQuestsView",
-      Ar = "skyblockQuestNotificationView";
-    class xr extends nM {
-      constructor(MM, rM, iM) {
-        let OM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => {},
-          SM = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : Date.now,
-          jM = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : "en-GB",
-          aM = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : () => {};
-        super(MM, OM, arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : () => {}), this.requestTracking = rM, this.translate = iM, this.now = SM, this.locale = jM, this.publishNotification = aM, this.notifications = void 0, this.notificationSnapshot = null, this.authoritative = null, this.receivedAt = 0, this.selected = null, this.completedExpanded = !1, this.trackAvailableAt = 0, this.waitingForTrack = !1, this.compassTarget = null, this.waypoint = null, this.trackedSteps = null, this.trackedStepPulse = 0, this.trackedChange = null, this.onTrackedStepFinished = () => {}, this.onViewDialogue = null, this.translateWithIcons = null, this.snapshot = {
+      he = "skyblockQuestsView",
+      le = "skyblockQuestNotificationView";
+    class Le extends QV {
+      constructor(VV, eV, xV) {
+        let JV = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => {},
+          YV = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : Date.now,
+          UV = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : "en-GB",
+          yV = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : () => {};
+        super(VV, JV, arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : () => {}), this.requestTracking = eV, this.translate = xV, this.now = YV, this.locale = UV, this.publishNotification = yV, this.notifications = void 0, this.notificationSnapshot = null, this.authoritative = null, this.receivedAt = 0, this.selected = null, this.completedExpanded = !1, this.trackAvailableAt = 0, this.waitingForTrack = !1, this.compassTarget = null, this.waypoint = null, this.trackedSteps = null, this.trackedStepPulse = 0, this.trackedChange = null, this.onTrackedStepFinished = () => {}, this.onViewDialogue = null, this.translateWithIcons = null, this.snapshot = {
           enabled: !1,
           open: !1,
           active: [],
@@ -1685,189 +1651,189 @@ export const modules = {
           waypoint: null,
           compassTarget: null
         }, this.getNotificationSnapshot = () => this.notificationSnapshot, this.showTracked = () => {
-          var MM, rM;
-          this.selected = null !== (MM = null === (rM = this.authoritative) || void 0 === rM ? void 0 : rM.trackedQuestId) && void 0 !== MM ? MM : null, this.show()
-        }, this.select = MM => {
-          this.selected = MM, this.emit()
+          var VV, eV;
+          this.selected = null !== (VV = null === (eV = this.authoritative) || void 0 === eV ? void 0 : eV.trackedQuestId) && void 0 !== VV ? VV : null, this.show()
+        }, this.select = VV => {
+          this.selected = VV, this.emit()
         }, this.toggleCompleted = () => {
           this.completedExpanded = !this.completedExpanded, this.emit()
         }, this.trackSelected = () => {
-          const MM = this.snapshot.detail;
-          !this.dh && null !== MM && void 0 !== MM && MM.canTrack && this.now() >= this.trackAvailableAt && (this.trackAvailableAt = this.now() + 2500, this.waitingForTrack = !0, this.requestTracking(MM.id), this.emit())
+          const VV = this.snapshot.detail;
+          !this.ik && null !== VV && void 0 !== VV && VV.canTrack && this.now() >= this.trackAvailableAt && (this.trackAvailableAt = this.now() + 2500, this.waitingForTrack = !0, this.requestTracking(VV.id), this.emit())
         }, this.viewDialogue = () => {
-          const MM = this.snapshot.detail;
-          var rM;
-          MM && (null === (rM = this.onViewDialogue) || void 0 === rM || rM.call(this, MM.id))
-        }, this.notifications = new Ur(SM, (() => this.authoritative))
+          const VV = this.snapshot.detail;
+          var eV;
+          VV && (null === (eV = this.onViewDialogue) || void 0 === eV || eV.call(this, VV.id))
+        }, this.notifications = new te(YV, (() => this.authoritative))
       }
       getTrackedQuestId() {
-        var MM, rM;
-        return null !== (MM = null === (rM = this.authoritative) || void 0 === rM ? void 0 : rM.trackedQuestId) && void 0 !== MM ? MM : null
+        var VV, eV;
+        return null !== (VV = null === (eV = this.authoritative) || void 0 === eV ? void 0 : eV.trackedQuestId) && void 0 !== VV ? VV : null
       }
-      notify(MM) {
-        !this.dh && this.notifications.enqueue(MM) && this.emitNotification()
+      notify(VV) {
+        !this.ik && this.notifications.enqueue(VV) && this.emitNotification()
       }
-      setNotificationsHeld(MM) {
-        (this.notifications.setHeld(MM) || MM) && this.emitNotification()
+      setNotificationsHeld(VV) {
+        (this.notifications.setHeld(VV) || VV) && this.emitNotification()
       }
-      bL() {
-        var MM, rM;
-        if (this.dh) return;
-        this.notifications.bL() && this.emitNotification();
-        let iM = !1;
-        this.trackAvailableAt && this.now() >= this.trackAvailableAt && (this.trackAvailableAt = 0, this.waitingForTrack = !1, iM = !0), this.trackedChange && this.now() >= this.trackedChange.expiresAt && (this.trackedChange = null, iM = !0);
-        const OM = vr(this.authoritative);
-        null !== OM && void 0 !== OM && null !== (MM = OM.questClock) && void 0 !== MM && MM.running && this.clockText(OM) !== (null === (rM = this.snapshot.tracked) || void 0 === rM ? void 0 : rM.clock) && (iM = !0), iM && this.emit()
+      iZ() {
+        var VV, eV;
+        if (this.ik) return;
+        this.notifications.iZ() && this.emitNotification();
+        let xV = !1;
+        this.trackAvailableAt && this.now() >= this.trackAvailableAt && (this.trackAvailableAt = 0, this.waitingForTrack = !1, xV = !0), this.trackedChange && this.now() >= this.trackedChange.expiresAt && (this.trackedChange = null, xV = !0);
+        const JV = fe(this.authoritative);
+        null !== JV && void 0 !== JV && null !== (VV = JV.questClock) && void 0 !== VV && VV.running && this.clockText(JV) !== (null === (eV = this.snapshot.tracked) || void 0 === eV ? void 0 : eV.clock) && (xV = !0), xV && this.emit()
       }
-      setTranslator(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.locale;
-        this.translate = MM, this.locale = rM, this.emitNotification(), this.emit()
+      setTranslator(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.locale;
+        this.translate = VV, this.locale = eV, this.emitNotification(), this.emit()
       }
-      GL(MM) {
-        if (!this.dh)
-          if ("completion" === MM.kind) this.notify(MM.questCompletion);
-          else if ("landmark" === MM.kind) this.notify({
+      RZ(VV) {
+        if (!this.ik)
+          if ("completion" === VV.kind) this.notify(VV.questCompletion);
+          else if ("landmark" === VV.kind) this.notify({
           questCompletionKind: "landmark",
-          landmarkNameKey: MM.landmarkDiscoveredNameKey
+          landmarkNameKey: VV.landmarkDiscoveredNameKey
         });
-        else if ("npcNote" === MM.kind) {
-          var rM, iM, OM;
+        else if ("npcNote" === VV.kind) {
+          var eV, xV, JV;
           this.notify({
             questCompletionKind: "npcNote",
-            titleKey: MM.npcNoteTitleKey,
-            textKey: MM.npcNoteTextKey,
-            params: null !== (rM = MM.npcNoteParams) && void 0 !== rM ? rM : {},
-            nameKeys: null !== (iM = MM.npcNoteNameKeys) && void 0 !== iM ? iM : {},
-            iconItem: null !== (OM = MM.npcNoteIconItem) && void 0 !== OM ? OM : null
+            titleKey: VV.npcNoteTitleKey,
+            textKey: VV.npcNoteTextKey,
+            params: null !== (eV = VV.npcNoteParams) && void 0 !== eV ? eV : {},
+            nameKeys: null !== (xV = VV.npcNoteNameKeys) && void 0 !== xV ? xV : {},
+            iconItem: null !== (JV = VV.npcNoteIconItem) && void 0 !== JV ? JV : null
           })
-        } else if ("open" === MM.kind) this.show();
-        else if ("guidance" === MM.kind) this.waypoint = MM.waypoint, this.compassTarget = MM.compassTarget, this.snapshot = {
+        } else if ("open" === VV.kind) this.show();
+        else if ("guidance" === VV.kind) this.waypoint = VV.waypoint, this.compassTarget = VV.compassTarget, this.snapshot = {
           ...this.snapshot,
           waypoint: this.waypoint,
           compassTarget: this.compassTarget
         };
-        else if ("snapshot" === MM.kind) {
-          this.authoritative = MM.snapshot, this.notifications.bL() && this.emitNotification(), this.receivedAt = this.now(), this.waitingForTrack = !1;
-          const rM = this.trackedStepPulse;
-          this.updateTrackedStepPulse(MM.snapshot), this.emit(), this.trackedStepPulse > rM && this.onTrackedStepFinished()
+        else if ("snapshot" === VV.kind) {
+          this.authoritative = VV.snapshot, this.notifications.iZ() && this.emitNotification(), this.receivedAt = this.now(), this.waitingForTrack = !1;
+          const eV = this.trackedStepPulse;
+          this.updateTrackedStepPulse(VV.snapshot), this.emit(), this.trackedStepPulse > eV && this.onTrackedStepFinished()
         }
       }
       dispose() {
         this.notifications.clear(), this.emitNotification(), this.authoritative = null, this.selected = null, this.completedExpanded = !1, this.trackAvailableAt = 0, this.waitingForTrack = !1, this.waypoint = null, this.compassTarget = null, this.trackedSteps = null, this.trackedStepPulse = 0, this.trackedChange = null, super.dispose()
       }
       emitNotification() {
-        this.dh || (this.notificationSnapshot = this.notifications.getView(this.translate, this.questTextTranslator(), this.locale), this.publishNotification(this.notificationSnapshot))
+        this.ik || (this.notificationSnapshot = this.notifications.getView(this.translate, this.questTextTranslator(), this.locale), this.publishNotification(this.notificationSnapshot))
       }
       questTextTranslator() {
-        var MM;
-        return null !== (MM = this.translateWithIcons) && void 0 !== MM ? MM : this.translate
+        var VV;
+        return null !== (VV = this.translateWithIcons) && void 0 !== VV ? VV : this.translate
       }
-      clockText(MM) {
-        const rM = MM.questClock;
-        if (!rM) return null;
-        const iM = rM.elapsedMs + (rM.running ? this.now() - this.receivedAt : 0);
-        return void 0 === rM.countdownFromMs ? pM(iM, !1) : pM(1e3 * Math.ceil(Math.max(0, rM.countdownFromMs - iM) / 1e3), !1)
+      clockText(VV) {
+        const eV = VV.questClock;
+        if (!eV) return null;
+        const xV = eV.elapsedMs + (eV.running ? this.now() - this.receivedAt : 0);
+        return void 0 === eV.countdownFromMs ? WV(xV, !1) : WV(1e3 * Math.ceil(Math.max(0, eV.countdownFromMs - xV) / 1e3), !1)
       }
-      updateTrackedStepPulse(MM) {
-        var rM, iM, OM;
-        const SM = vr(MM);
-        if (!SM) return this.trackedSteps = null, this.trackedStepPulse = 0, void(this.trackedChange = null);
-        const jM = MM => SM.subquests.filter((rM => MM(rM.status))).map((MM => MM.id)),
-          aM = jM((MM => "completed" === MM || "skipped" === MM)),
-          PM = jM((MM => "locked" !== MM)),
-          nM = (null === (rM = this.trackedSteps) || void 0 === rM ? void 0 : rM.questId) === SM.id && SM.progress >= this.trackedSteps.progress ? this.trackedSteps : null;
-        if (nM) {
-          const MM = aM.filter((MM => !nM.finished.has(MM))),
-            rM = jM((MM => "active" === MM || "ready" === MM)).filter((MM => !nM.unlocked.has(MM)));
-          MM.length > 0 && this.trackedStepPulse++, (MM.length > 0 || rM.length > 0) && (this.trackedChange = {
-            finished: new Set(MM),
-            unlocked: new Set(rM),
-            expiresAt: this.now() + fr
+      updateTrackedStepPulse(VV) {
+        var eV, xV, JV;
+        const YV = fe(VV);
+        if (!YV) return this.trackedSteps = null, this.trackedStepPulse = 0, void(this.trackedChange = null);
+        const UV = VV => YV.subquests.filter((eV => VV(eV.status))).map((VV => VV.id)),
+          yV = UV((VV => "completed" === VV || "skipped" === VV)),
+          pV = UV((VV => "locked" !== VV)),
+          QV = (null === (eV = this.trackedSteps) || void 0 === eV ? void 0 : eV.questId) === YV.id && YV.progress >= this.trackedSteps.progress ? this.trackedSteps : null;
+        if (QV) {
+          const VV = yV.filter((VV => !QV.finished.has(VV))),
+            eV = UV((VV => "active" === VV || "ready" === VV)).filter((VV => !QV.unlocked.has(VV)));
+          VV.length > 0 && this.trackedStepPulse++, (VV.length > 0 || eV.length > 0) && (this.trackedChange = {
+            finished: new Set(VV),
+            unlocked: new Set(eV),
+            expiresAt: this.now() + oe
           })
         } else {
-          var QM;
-          this.trackedStepPulse = (null === (QM = this.trackedSteps) || void 0 === QM ? void 0 : QM.questId) === SM.id ? this.trackedStepPulse : 0, this.trackedChange = null
+          var nV;
+          this.trackedStepPulse = (null === (nV = this.trackedSteps) || void 0 === nV ? void 0 : nV.questId) === YV.id ? this.trackedStepPulse : 0, this.trackedChange = null
         }
         this.trackedSteps = {
-          questId: SM.id,
-          progress: SM.progress,
-          finished: new Set([...null !== (iM = null === nM || void 0 === nM ? void 0 : nM.finished) && void 0 !== iM ? iM : [], ...aM]),
-          unlocked: new Set([...null !== (OM = null === nM || void 0 === nM ? void 0 : nM.unlocked) && void 0 !== OM ? OM : [], ...PM])
+          questId: YV.id,
+          progress: YV.progress,
+          finished: new Set([...null !== (xV = null === QV || void 0 === QV ? void 0 : QV.finished) && void 0 !== xV ? xV : [], ...yV]),
+          unlocked: new Set([...null !== (JV = null === QV || void 0 === QV ? void 0 : QV.unlocked) && void 0 !== JV ? JV : [], ...pV])
         }
       }
-      entry(MM, rM) {
-        var iM, OM;
-        const SM = MM.id === (null === (iM = this.authoritative) || void 0 === iM ? void 0 : iM.trackedQuestId),
-          jM = this.now() < this.trackAvailableAt,
-          aM = this.questTextTranslator(),
-          PM = MM.subquests.map((rM => {
-            var iM, OM, jM, PM, nM, QM;
-            const zM = null !== (iM = rM.handInNpcName) && void 0 !== iM ? iM : MM.giverName,
-              LM = this.translate("skyblockGame:progress", {
-                current: rM.progress.toLocaleString(this.locale),
-                target: rM.target.toLocaleString(this.locale)
+      entry(VV, eV) {
+        var xV, JV;
+        const YV = VV.id === (null === (xV = this.authoritative) || void 0 === xV ? void 0 : xV.trackedQuestId),
+          UV = this.now() < this.trackAvailableAt,
+          yV = this.questTextTranslator(),
+          pV = VV.subquests.map((eV => {
+            var xV, JV, UV, pV, QV, nV;
+            const wV = null !== (xV = eV.handInNpcName) && void 0 !== xV ? xV : VV.giverName,
+              ZV = this.translate("skyblockGame:progress", {
+                current: eV.progress.toLocaleString(this.locale),
+                target: eV.target.toLocaleString(this.locale)
               }),
-              mM = {
+              vV = {
                 active: null,
                 locked: "skyblockGame:subquestLocked",
-                ready: zM ? "skyblockGame:subquestReady" : "skyblockGame:subquestReadyNoNpc",
+                ready: wV ? "skyblockGame:subquestReady" : "skyblockGame:subquestReadyNoNpc",
                 completed: "skyblockGame:completed",
                 skipped: "skyblockGame:subquestSkipped"
-              } [rM.status],
-              HM = "active" === rM.status || "ready" === rM.status;
+              } [eV.status],
+              rV = "active" === eV.status || "ready" === eV.status;
             return {
-              id: rM.id,
-              name: Er(aM, rM.nameKey, rM.nameParams),
-              description: Er(aM, rM.descriptionKey, rM.descriptionParams),
-              progress: LM,
-              status: rM.status,
-              statusLabel: mM ? this.translate(mM, {
-                npc: zM
-              }) : LM,
-              iconItem: HM && null !== (OM = rM.questIconItem) && void 0 !== OM ? OM : null,
-              barPercent: "active" === rM.status && rM.showsProgressBar ? Math.min(100, 100 * rM.progress / rM.target) : null,
-              justFinished: SM && null !== (jM = null === (PM = this.trackedChange) || void 0 === PM ? void 0 : PM.finished.has(rM.id)) && void 0 !== jM && jM,
-              justUnlocked: SM && null !== (nM = null === (QM = this.trackedChange) || void 0 === QM ? void 0 : QM.unlocked.has(rM.id)) && void 0 !== nM && nM
+              id: eV.id,
+              name: qe(yV, eV.nameKey, eV.nameParams),
+              description: qe(yV, eV.descriptionKey, eV.descriptionParams),
+              progress: ZV,
+              status: eV.status,
+              statusLabel: vV ? this.translate(vV, {
+                npc: wV
+              }) : ZV,
+              iconItem: rV && null !== (JV = eV.questIconItem) && void 0 !== JV ? JV : null,
+              barPercent: "active" === eV.status && eV.showsProgressBar ? Math.min(100, 100 * eV.progress / eV.target) : null,
+              justFinished: YV && null !== (UV = null === (pV = this.trackedChange) || void 0 === pV ? void 0 : pV.finished.has(eV.id)) && void 0 !== UV && UV,
+              justUnlocked: YV && null !== (QV = null === (nV = this.trackedChange) || void 0 === nV ? void 0 : nV.unlocked.has(eV.id)) && void 0 !== QV && QV
             }
           }));
         return {
-          id: MM.id,
-          name: Er(aM, MM.nameKey, MM.nameParams),
-          description: Er(aM, MM.descriptionKey, MM.descriptionParams),
-          progress: rM ? this.translate("skyblockGame:completed") : this.translate("skyblockGame:stepsProgress", {
-            current: MM.progress.toLocaleString(this.locale),
-            target: MM.target.toLocaleString(this.locale)
+          id: VV.id,
+          name: qe(yV, VV.nameKey, VV.nameParams),
+          description: qe(yV, VV.descriptionKey, VV.descriptionParams),
+          progress: eV ? this.translate("skyblockGame:completed") : this.translate("skyblockGame:stepsProgress", {
+            current: VV.progress.toLocaleString(this.locale),
+            target: VV.target.toLocaleString(this.locale)
           }),
-          completed: rM,
-          tracked: SM,
-          selected: MM.id === this.selected,
-          canTrack: !rM && !SM && !jM,
-          trackLabel: this.translate(SM ? "skyblockGame:trackingQuest" : this.waitingForTrack ? "skyblockGame:updating" : jM ? "skyblockGame:pleaseWait" : "skyblockGame:trackQuest"),
-          canViewDialogue: null !== this.onViewDialogue && "dungeon_run" !== MM.id,
-          subquests: PM,
-          focusStep: null !== (OM = PM.find((MM => null !== MM.barPercent))) && void 0 !== OM ? OM : null,
-          clock: this.clockText(MM)
+          completed: eV,
+          tracked: YV,
+          selected: VV.id === this.selected,
+          canTrack: !eV && !YV && !UV,
+          trackLabel: this.translate(YV ? "skyblockGame:trackingQuest" : this.waitingForTrack ? "skyblockGame:updating" : UV ? "skyblockGame:pleaseWait" : "skyblockGame:trackQuest"),
+          canViewDialogue: null !== this.onViewDialogue && "dungeon_run" !== VV.id,
+          subquests: pV,
+          focusStep: null !== (JV = pV.find((VV => null !== VV.barPercent))) && void 0 !== JV ? JV : null,
+          clock: this.clockText(VV)
         }
       }
       isEnabled() {
         return null !== this.authoritative
       }
       buildSnapshot() {
-        var MM, rM, iM, OM, SM, jM, aM, PM, nM, QM;
-        const zM = [...null !== (MM = null === (rM = this.authoritative) || void 0 === rM ? void 0 : rM.active) && void 0 !== MM ? MM : [], ...null !== (iM = null === (OM = this.authoritative) || void 0 === OM ? void 0 : OM.completed) && void 0 !== iM ? iM : []];
-        var LM, mM, HM, hM;
-        zM.some((MM => MM.id === this.selected)) || (this.selected = null !== (LM = null !== (mM = null === (HM = this.authoritative) || void 0 === HM ? void 0 : HM.trackedQuestId) && void 0 !== mM ? mM : null === (hM = zM[0]) || void 0 === hM ? void 0 : hM.id) && void 0 !== LM ? LM : null);
-        const JM = null !== (SM = null === (jM = this.authoritative) || void 0 === jM ? void 0 : jM.active.map((MM => this.entry(MM, !1)))) && void 0 !== SM ? SM : [];
-        JM.sort(((MM, rM) => Number(rM.tracked) - Number(MM.tracked)));
-        const dM = null !== (aM = null === (PM = this.authoritative) || void 0 === PM ? void 0 : PM.completed.map((MM => this.entry(MM, !0)))) && void 0 !== aM ? aM : [];
+        var VV, eV, xV, JV, YV, UV, yV, pV, QV, nV;
+        const wV = [...null !== (VV = null === (eV = this.authoritative) || void 0 === eV ? void 0 : eV.active) && void 0 !== VV ? VV : [], ...null !== (xV = null === (JV = this.authoritative) || void 0 === JV ? void 0 : JV.completed) && void 0 !== xV ? xV : []];
+        var ZV, vV, rV, kV;
+        wV.some((VV => VV.id === this.selected)) || (this.selected = null !== (ZV = null !== (vV = null === (rV = this.authoritative) || void 0 === rV ? void 0 : rV.trackedQuestId) && void 0 !== vV ? vV : null === (kV = wV[0]) || void 0 === kV ? void 0 : kV.id) && void 0 !== ZV ? ZV : null);
+        const bV = null !== (YV = null === (UV = this.authoritative) || void 0 === UV ? void 0 : UV.active.map((VV => this.entry(VV, !1)))) && void 0 !== YV ? YV : [];
+        bV.sort(((VV, eV) => Number(eV.tracked) - Number(VV.tracked)));
+        const EV = null !== (yV = null === (pV = this.authoritative) || void 0 === pV ? void 0 : pV.completed.map((VV => this.entry(VV, !0)))) && void 0 !== yV ? yV : [];
         return {
           enabled: this.isEnabled(),
           open: this.open,
-          active: JM,
-          completed: dM,
+          active: bV,
+          completed: EV,
           completedExpanded: this.completedExpanded,
-          detail: null !== (nM = [...JM, ...dM].find((MM => MM.selected))) && void 0 !== nM ? nM : null,
-          tracked: null !== (QM = JM.find((MM => MM.tracked))) && void 0 !== QM ? QM : null,
+          detail: null !== (QV = [...bV, ...EV].find((VV => VV.selected))) && void 0 !== QV ? QV : null,
+          tracked: null !== (nV = bV.find((VV => VV.tracked))) && void 0 !== nV ? nV : null,
           trackedStepPulse: this.trackedStepPulse,
           waypoint: this.waypoint,
           compassTarget: this.compassTarget
@@ -1875,40 +1841,40 @@ export const modules = {
       }
     }
 
-    function vr(MM) {
-      var rM;
-      return null !== (rM = null === MM || void 0 === MM ? void 0 : MM.active.find((rM => rM.id === MM.trackedQuestId))) && void 0 !== rM ? rM : null
+    function fe(VV) {
+      var eV;
+      return null !== (eV = null === VV || void 0 === VV ? void 0 : VV.active.find((eV => eV.id === VV.trackedQuestId))) && void 0 !== eV ? eV : null
     }
-    const Fr = "skyblockDungeonsView";
-    class Br extends nM {
-      constructor(MM, rM) {
-        let iM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "en-GB",
-          OM = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : () => {};
-        super(MM, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {}, arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => {}), this.translate = rM, this.locale = iM, this.requestEnter = OM, this.authoritative = null, this.selected = null, this.pickerDungeonId = null, this.pageIndex = 0, this.snapshot = {
+    const me = "skyblockDungeonsView";
+    class Ke extends QV {
+      constructor(VV, eV) {
+        let xV = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "en-GB",
+          JV = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : () => {};
+        super(VV, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {}, arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => {}), this.translate = eV, this.locale = xV, this.requestEnter = JV, this.authoritative = null, this.selected = null, this.pickerDungeonId = null, this.pageIndex = 0, this.snapshot = {
           enabled: !1,
           open: !1,
           dungeons: [],
           detail: null,
           picker: null
-        }, this.select = MM => {
-          this.selected = MM, this.emit()
+        }, this.select = VV => {
+          this.selected = VV, this.emit()
         }, this.previous = () => {
           this.turnTo(this.pageIndex - 1)
         }, this.next = () => {
           this.turnTo(this.pageIndex + 1)
         }, this.enter = () => {
-          const MM = this.pickerEntry(),
-            rM = null === MM || void 0 === MM ? void 0 : MM.difficulties[this.pageIndex];
-          void 0 !== rM && null !== rM.unlockedBoss && (this.close(), this.requestEnter(MM.id, rM.difficulty))
+          const VV = this.pickerEntry(),
+            eV = null === VV || void 0 === VV ? void 0 : VV.difficulties[this.pageIndex];
+          void 0 !== eV && null !== eV.unlockedBoss && (this.close(), this.requestEnter(VV.id, eV.difficulty))
         }
       }
-      setTranslator(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.locale;
-        this.translate = MM, this.locale = rM, this.emit()
+      setTranslator(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.locale;
+        this.translate = VV, this.locale = eV, this.emit()
       }
-      GL(MM) {
-        var rM, iM;
-        if (!this.dh) return "open" === MM.kind ? (this.pickerDungeonId = null, void this.show()) : void("choose" !== MM.kind ? "snapshot" === MM.kind && (this.authoritative = MM.snapshot, this.pageIndex = Math.min(this.pageIndex, Math.max(0, (null !== (rM = null === (iM = this.pickerEntry()) || void 0 === iM ? void 0 : iM.difficulties.length) && void 0 !== rM ? rM : 1) - 1)), null === MM.snapshot && this.open ? this.close() : this.emit()) : this.choose(MM.chooseDungeonId))
+      RZ(VV) {
+        var eV, xV;
+        if (!this.ik) return "open" === VV.kind ? (this.pickerDungeonId = null, void this.show()) : void("choose" !== VV.kind ? "snapshot" === VV.kind && (this.authoritative = VV.snapshot, this.pageIndex = Math.min(this.pageIndex, Math.max(0, (null !== (eV = null === (xV = this.pickerEntry()) || void 0 === xV ? void 0 : xV.difficulties.length) && void 0 !== eV ? eV : 1) - 1)), null === VV.snapshot && this.open ? this.close() : this.emit()) : this.choose(VV.chooseDungeonId))
       }
       dispose() {
         this.authoritative = null, this.selected = null, this.pickerDungeonId = null, super.dispose()
@@ -1916,133 +1882,133 @@ export const modules = {
       onClosed() {
         this.pickerDungeonId = null
       }
-      choose(MM) {
-        var rM;
-        const iM = null === (rM = this.authoritative) || void 0 === rM ? void 0 : rM.dungeons.find((rM => rM.id === MM));
-        void 0 !== iM ? this.open && this.pickerDungeonId === MM || (this.pickerDungeonId = MM, this.pageIndex = Math.max(0, iM.difficulties.findLastIndex((MM => null !== MM.unlockedBoss))), this.showOrRefresh()) : console.warn(`Skyblock dungeons: asked to choose a boss in unknown dungeon ${MM}`)
+      choose(VV) {
+        var eV;
+        const xV = null === (eV = this.authoritative) || void 0 === eV ? void 0 : eV.dungeons.find((eV => eV.id === VV));
+        void 0 !== xV ? this.open && this.pickerDungeonId === VV || (this.pickerDungeonId = VV, this.pageIndex = Math.max(0, xV.difficulties.findLastIndex((VV => null !== VV.unlockedBoss))), this.showOrRefresh()) : console.warn(`Skyblock dungeons: asked to choose a boss in unknown dungeon ${VV}`)
       }
-      turnTo(MM) {
-        var rM, iM;
-        const OM = null !== (rM = null === (iM = this.pickerEntry()) || void 0 === iM ? void 0 : iM.difficulties.length) && void 0 !== rM ? rM : 0;
-        MM < 0 || MM >= OM || MM === this.pageIndex || (this.pageIndex = MM, this.emit())
+      turnTo(VV) {
+        var eV, xV;
+        const JV = null !== (eV = null === (xV = this.pickerEntry()) || void 0 === xV ? void 0 : xV.difficulties.length) && void 0 !== eV ? eV : 0;
+        VV < 0 || VV >= JV || VV === this.pageIndex || (this.pageIndex = VV, this.emit())
       }
       pickerEntry() {
-        var MM, rM;
-        return null !== (MM = null === (rM = this.authoritative) || void 0 === rM ? void 0 : rM.dungeons.find((MM => MM.id === this.pickerDungeonId))) && void 0 !== MM ? MM : null
+        var VV, eV;
+        return null !== (VV = null === (eV = this.authoritative) || void 0 === eV ? void 0 : eV.dungeons.find((VV => VV.id === this.pickerDungeonId))) && void 0 !== VV ? VV : null
       }
-      difficulty(MM) {
-        const rM = MM.completions > 0,
-          iM = null === MM.bestMs ? null : pM(MM.bestMs);
+      difficulty(VV) {
+        const eV = VV.completions > 0,
+          xV = null === VV.bestMs ? null : WV(VV.bestMs);
         return {
-          difficulty: MM.difficulty,
-          label: this.translate(uM[MM.difficulty]),
-          colour: RM[MM.difficulty],
-          beaten: rM,
-          bestTime: iM,
-          completions: MM.completions,
-          summary: rM ? [null === iM ? null : this.translate("skyblockGame:dungeonBestTime", {
-            time: iM
+          difficulty: VV.difficulty,
+          label: this.translate(zV[VV.difficulty]),
+          colour: GV[VV.difficulty],
+          beaten: eV,
+          bestTime: xV,
+          completions: VV.completions,
+          summary: eV ? [null === xV ? null : this.translate("skyblockGame:dungeonBestTime", {
+            time: xV
           }), this.translate("skyblockGame:dungeonCompletions", {
-            completions: MM.completions.toLocaleString(this.locale)
-          })].filter((MM => null !== MM)).join(" \xb7 ") : this.translate("skyblockGame:dungeonNotCompleted")
+            completions: VV.completions.toLocaleString(this.locale)
+          })].filter((VV => null !== VV)).join(" \xb7 ") : this.translate("skyblockGame:dungeonNotCompleted")
         }
       }
-      entry(MM) {
-        const rM = MM.difficulties.map((MM => this.difficulty(MM))),
-          iM = rM.filter((MM => MM.beaten)).length;
+      entry(VV) {
+        const eV = VV.difficulties.map((VV => this.difficulty(VV))),
+          xV = eV.filter((VV => VV.beaten)).length;
         return {
-          id: MM.id,
-          name: this.translate(MM.nameKey),
-          selected: MM.id === this.selected,
-          beatenSummary: `${iM} / ${rM.length}`,
-          difficulties: rM
+          id: VV.id,
+          name: this.translate(VV.nameKey),
+          selected: VV.id === this.selected,
+          beatenSummary: `${xV} / ${eV.length}`,
+          difficulties: eV
         }
       }
       picker() {
-        const MM = this.pickerEntry();
-        if (null === MM || 0 === MM.difficulties.length) return null;
-        const rM = MM.difficulties.map(((rM, iM) => {
-          var OM, SM, jM, aM;
-          const PM = rM.unlockedBoss,
-            nM = null === PM ? this.lockedHint(MM, iM) : null;
+        const VV = this.pickerEntry();
+        if (null === VV || 0 === VV.difficulties.length) return null;
+        const eV = VV.difficulties.map(((eV, xV) => {
+          var JV, YV, UV, yV;
+          const pV = eV.unlockedBoss,
+            QV = null === pV ? this.lockedHint(VV, xV) : null;
           return {
-            ...this.difficulty(rM),
-            unlocked: null !== PM,
-            bossName: null === PM ? null : this.translate(PM.bossNameKey),
-            bossMobType: null !== (OM = null === PM || void 0 === PM ? void 0 : PM.bossMobType) && void 0 !== OM ? OM : null,
-            bossMobVariation: null !== (SM = null === PM || void 0 === PM ? void 0 : PM.bossMobVariation) && void 0 !== SM ? SM : null,
-            lockedHint: null !== (jM = null === nM || void 0 === nM ? void 0 : nM.text) && void 0 !== jM ? jM : null,
-            lockedHintHighlight: null !== (aM = null === nM || void 0 === nM ? void 0 : nM.highlight) && void 0 !== aM ? aM : null,
-            current: iM === this.pageIndex
+            ...this.difficulty(eV),
+            unlocked: null !== pV,
+            bossName: null === pV ? null : this.translate(pV.bossNameKey),
+            bossMobType: null !== (JV = null === pV || void 0 === pV ? void 0 : pV.bossMobType) && void 0 !== JV ? JV : null,
+            bossMobVariation: null !== (YV = null === pV || void 0 === pV ? void 0 : pV.bossMobVariation) && void 0 !== YV ? YV : null,
+            lockedHint: null !== (UV = null === QV || void 0 === QV ? void 0 : QV.text) && void 0 !== UV ? UV : null,
+            lockedHintHighlight: null !== (yV = null === QV || void 0 === QV ? void 0 : QV.highlight) && void 0 !== yV ? yV : null,
+            current: xV === this.pageIndex
           }
         }));
         return {
-          dungeonName: this.translate(MM.nameKey),
-          pages: rM,
-          page: rM[this.pageIndex],
+          dungeonName: this.translate(VV.nameKey),
+          pages: eV,
+          page: eV[this.pageIndex],
           canPrevious: this.pageIndex > 0,
-          canNext: this.pageIndex < rM.length - 1
+          canNext: this.pageIndex < eV.length - 1
         }
       }
-      lockedHint(MM, rM) {
-        var iM, OM, SM;
-        if (0 === rM && "number" === typeof MM.combatLevelLock) {
-          const rM = this.translate("skyblockGame:dungeonBossLockedCombatLevel", {
-            level: MM.combatLevelLock
+      lockedHint(VV, eV) {
+        var xV, JV, YV;
+        if (0 === eV && "number" === typeof VV.combatLevelLock) {
+          const eV = this.translate("skyblockGame:dungeonBossLockedCombatLevel", {
+            level: VV.combatLevelLock
           });
           return this.hintHighlighting("skyblockGame:dungeonBossLockedCombat", {}, "skill", {
-            name: rM,
-            colour: lr("combat"),
-            icon: dr.combat
+            name: eV,
+            colour: je("combat"),
+            icon: Ee.combat
           })
         }
-        const jM = null !== (iM = null === (OM = this.authoritative) || void 0 === OM ? void 0 : OM.dungeons) && void 0 !== iM ? iM : [],
-          aM = rM > 0 ? MM : null !== (SM = jM[jM.indexOf(MM) - 1]) && void 0 !== SM ? SM : null,
-          PM = rM > 0 ? MM.difficulties[rM - 1] : null === aM || void 0 === aM ? void 0 : aM.difficulties[0];
-        if (null === aM || void 0 === PM) return null;
-        const nM = this.translate(aM.nameKey);
-        if (null === PM.unlockedBoss) return aM === MM ? this.hintNamingDifficulty("skyblockGame:dungeonBossLockedUnseen", {}, PM.difficulty) : this.hintNamingDifficulty("skyblockGame:dungeonBossLockedUnseenElsewhere", {
-          dungeon: nM
-        }, PM.difficulty);
-        const QM = this.translate(PM.unlockedBoss.bossNameKey);
-        return aM === MM ? this.hintNamingDifficulty("skyblockGame:dungeonBossLocked", {
-          boss: QM
-        }, PM.difficulty) : {
+        const UV = null !== (xV = null === (JV = this.authoritative) || void 0 === JV ? void 0 : JV.dungeons) && void 0 !== xV ? xV : [],
+          yV = eV > 0 ? VV : null !== (YV = UV[UV.indexOf(VV) - 1]) && void 0 !== YV ? YV : null,
+          pV = eV > 0 ? VV.difficulties[eV - 1] : null === yV || void 0 === yV ? void 0 : yV.difficulties[0];
+        if (null === yV || void 0 === pV) return null;
+        const QV = this.translate(yV.nameKey);
+        if (null === pV.unlockedBoss) return yV === VV ? this.hintNamingDifficulty("skyblockGame:dungeonBossLockedUnseen", {}, pV.difficulty) : this.hintNamingDifficulty("skyblockGame:dungeonBossLockedUnseenElsewhere", {
+          dungeon: QV
+        }, pV.difficulty);
+        const nV = this.translate(pV.unlockedBoss.bossNameKey);
+        return yV === VV ? this.hintNamingDifficulty("skyblockGame:dungeonBossLocked", {
+          boss: nV
+        }, pV.difficulty) : {
           text: this.translate("skyblockGame:dungeonBossLockedElsewhere", {
-            boss: QM,
-            dungeon: nM
+            boss: nV,
+            dungeon: QV
           }),
           highlight: null
         }
       }
-      hintNamingDifficulty(MM, rM, iM) {
-        return this.hintHighlighting(MM, rM, "difficulty", {
-          name: this.translate(uM[iM]),
-          colour: RM[iM],
+      hintNamingDifficulty(VV, eV, xV) {
+        return this.hintHighlighting(VV, eV, "difficulty", {
+          name: this.translate(zV[xV]),
+          colour: GV[xV],
           icon: null
         })
       }
-      hintHighlighting(MM, rM, iM, OM) {
+      hintHighlighting(VV, eV, xV, JV) {
         let {
-          name: SM,
-          colour: jM,
-          icon: aM
-        } = OM;
-        const PM = this.translate(MM, {
-          ...rM,
-          [iM]: "\x01"
+          name: YV,
+          colour: UV,
+          icon: yV
+        } = JV;
+        const pV = this.translate(VV, {
+          ...eV,
+          [xV]: "\x01"
         }).split("\x01");
         return {
-          text: this.translate(MM, {
-            ...rM,
-            [iM]: SM
+          text: this.translate(VV, {
+            ...eV,
+            [xV]: YV
           }),
-          highlight: 2 === PM.length ? {
-            before: PM[0],
-            name: SM,
-            after: PM[1],
-            colour: jM,
-            icon: aM
+          highlight: 2 === pV.length ? {
+            before: pV[0],
+            name: YV,
+            after: pV[1],
+            colour: UV,
+            icon: yV
           } : null
         }
       }
@@ -2050,49 +2016,49 @@ export const modules = {
         return null !== this.authoritative
       }
       buildSnapshot() {
-        var MM, rM, iM;
-        const OM = null !== (MM = null === (rM = this.authoritative) || void 0 === rM ? void 0 : rM.dungeons) && void 0 !== MM ? MM : [];
-        var SM, jM;
-        OM.some((MM => MM.id === this.selected)) || (this.selected = null !== (SM = null === (jM = OM[0]) || void 0 === jM ? void 0 : jM.id) && void 0 !== SM ? SM : null);
-        const aM = OM.map((MM => this.entry(MM)));
+        var VV, eV, xV;
+        const JV = null !== (VV = null === (eV = this.authoritative) || void 0 === eV ? void 0 : eV.dungeons) && void 0 !== VV ? VV : [];
+        var YV, UV;
+        JV.some((VV => VV.id === this.selected)) || (this.selected = null !== (YV = null === (UV = JV[0]) || void 0 === UV ? void 0 : UV.id) && void 0 !== YV ? YV : null);
+        const yV = JV.map((VV => this.entry(VV)));
         return {
           enabled: this.isEnabled(),
           open: this.open,
-          dungeons: aM,
-          detail: null !== (iM = aM.find((MM => MM.selected))) && void 0 !== iM ? iM : null,
+          dungeons: yV,
+          detail: null !== (xV = yV.find((VV => VV.selected))) && void 0 !== xV ? xV : null,
           picker: null === this.pickerDungeonId ? null : this.picker()
         }
       }
     }
-    const Xr = ["mining", "farming", "foraging", "fishing", "combat"],
-      Ir = [25, 50, 100, 200, 400, 750, 1250, 2e3, 3e3],
-      Kr = [20, 40, 80, 150, 300, 500, 800, 1200, 2e3];
+    const He = ["mining", "farming", "foraging", "fishing", "combat"],
+      ue = [25, 50, 100, 200, 400, 750, 1250, 2e3, 3e3],
+      se = [20, 40, 80, 150, 300, 500, 800, 1200, 2e3];
 
-    function qr() {
-      for (var MM = arguments.length, rM = new Array(MM), iM = 0; iM < MM; iM++) rM[iM] = arguments[iM];
-      return rM.map(((MM, rM) => ({
-        amount: MM,
-        coins: Ir[rM],
-        xp: Kr[rM]
+    function Se() {
+      for (var VV = arguments.length, eV = new Array(VV), xV = 0; xV < VV; xV++) eV[xV] = arguments[xV];
+      return eV.map(((VV, eV) => ({
+        amount: VV,
+        coins: ue[eV],
+        xp: se[eV]
       })))
     }
-    const Tr = qr(100, 250, 500, 1e3, 2500, 5e3, 1e4, 25e3, 5e4),
-      Vr = qr(50, 100, 250, 1e3, 2500, 5e3, 1e4, 25e3),
-      cr = qr(50, 100, 250, 500, 1e3, 2500, 5e3),
-      Mi = qr(25, 50, 100, 250, 500, 1e3),
-      ri = qr(10, 25, 50, 100, 250, 500, 1e3),
-      ii = qr(1, 5, 10, 25, 50);
+    const Ie = Se(100, 250, 500, 1e3, 2500, 5e3, 1e4, 25e3, 5e4),
+      de = Se(50, 100, 250, 1e3, 2500, 5e3, 1e4, 25e3),
+      Oe = Se(50, 100, 250, 500, 1e3, 2500, 5e3),
+      Vx = Se(25, 50, 100, 250, 500, 1e3),
+      ex = Se(10, 25, 50, 100, 250, 500, 1e3),
+      xx = Se(1, 5, 10, 25, 50);
 
-    function Oi(MM, rM) {
+    function Jx(VV, eV) {
       return {
-        id: MM,
+        id: VV,
         category: "fishing",
-        item: rM,
-        drops: [rM],
-        tiers: arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : ri
+        item: eV,
+        drops: [eV],
+        tiers: arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : ex
       }
     }
-    const Si = [{
+    const Yx = [{
         id: "coal",
         category: "mining",
         item: "Coal",
@@ -2101,7 +2067,7 @@ export const modules = {
           "Pure Coal Ore": 9,
           "Block of Coal": 3
         },
-        tiers: Vr
+        tiers: de
       }, {
         id: "iron",
         category: "mining",
@@ -2110,7 +2076,7 @@ export const modules = {
           "Iron Ore": 1,
           "Pure Iron Ore": 9
         },
-        tiers: cr
+        tiers: Oe
       }, {
         id: "gold",
         category: "mining",
@@ -2119,7 +2085,7 @@ export const modules = {
           "Gold Ore": 1,
           "Pure Gold Ore": 9
         },
-        tiers: cr
+        tiers: Oe
       }, {
         id: "diamond",
         category: "mining",
@@ -2128,7 +2094,7 @@ export const modules = {
           "Diamond Ore": 1,
           "Pure Diamond Ore": 9
         },
-        tiers: Mi
+        tiers: Vx
       }, {
         id: "moonstone",
         category: "mining",
@@ -2137,7 +2103,7 @@ export const modules = {
           "Moonstone Ore": 1,
           "Pure Moonstone Ore": 9
         },
-        tiers: Mi
+        tiers: Vx
       }, {
         id: "stone",
         category: "mining",
@@ -2145,7 +2111,7 @@ export const modules = {
         blocks: {
           Stone: 1
         },
-        tiers: Vr
+        tiers: de
       }, {
         id: "wheat",
         category: "farming",
@@ -2153,7 +2119,7 @@ export const modules = {
         blocks: {
           "Wheat|FreshlyGrown": 1
         },
-        tiers: Tr
+        tiers: Ie
       }, {
         id: "carrot",
         category: "farming",
@@ -2161,7 +2127,7 @@ export const modules = {
         blocks: {
           "Carrot Plant|FreshlyGrown": 1
         },
-        tiers: Tr
+        tiers: Ie
       }, {
         id: "potato",
         category: "farming",
@@ -2169,7 +2135,7 @@ export const modules = {
         blocks: {
           "Potato Plant|FreshlyGrown": 1
         },
-        tiers: Tr
+        tiers: Ie
       }, {
         id: "beetroot",
         category: "farming",
@@ -2177,7 +2143,7 @@ export const modules = {
         blocks: {
           "Beetroot Plant|FreshlyGrown": 1
         },
-        tiers: cr
+        tiers: Oe
       }, {
         id: "melon",
         category: "farming",
@@ -2185,7 +2151,7 @@ export const modules = {
         blocks: {
           Melon: 1
         },
-        tiers: Vr
+        tiers: de
       }, {
         id: "watermelon",
         category: "farming",
@@ -2193,7 +2159,7 @@ export const modules = {
         blocks: {
           Watermelon: 1
         },
-        tiers: Vr
+        tiers: de
       }, {
         id: "maple_log",
         category: "foraging",
@@ -2201,7 +2167,7 @@ export const modules = {
         blocks: {
           "Maple Log": 1
         },
-        tiers: Vr
+        tiers: de
       }, {
         id: "pear_log",
         category: "foraging",
@@ -2209,7 +2175,7 @@ export const modules = {
         blocks: {
           "Pear Log": 1
         },
-        tiers: cr
+        tiers: Oe
       }, {
         id: "palm_log",
         category: "foraging",
@@ -2217,78 +2183,78 @@ export const modules = {
         blocks: {
           "Palm Log": 1
         },
-        tiers: cr
-      }, Oi("wheatfish", "Wheatfish"), Oi("darter", "Darter"), Oi("sunset_minnow", "Sunset Minnow"), Oi("root_flounder", "Root Flounder"), Oi("greenfin_loach", "Greenfin Loach"), Oi("red_strongfish", "Red Strongfish"), Oi("green_strongfish", "Green Strongfish"), Oi("boomerang_fish", "Boomerang Fish"), Oi("seahorse", "Seahorse"), Oi("spined_stickleback", "Spined Stickleback"), Oi("moon_strongfish", "Moon Strongfish"), Oi("boulder_bass", "Boulder Bass"), Oi("grass_snapper", "Grass Snapper"), Oi("crystal_wheatfish", "Crystalized Wheatfish", ii), Oi("moonstone_pupfish", "Moonstone Pupfish", ii), Oi("reedglass_minnow", "Reedglass Minnow"), Oi("mangrove_herring", "Mangrove Herring"), Oi("mudline_perch", "Mudline Perch"), Oi("coastal_mullet", "Coastal Mullet"), Oi("reef_sardine", "Reef Sardine"), Oi("root_perch", "Root Perch"), Oi("driftwood_catfish", "Driftwood Catfish"), Oi("aether_minnow", "Aether Minnow"), Oi("needlefish", "Tri-Pointed Needlefish"), Oi("threadfin_bream", "Threadfin Bream"), Oi("mudbelly_tilapia", "Mudbelly Tilapia"), Oi("rotslab_eel", "Rotslab Eel"), Oi("polarflash_electron", "Polarflash Electron"), Oi("mireback_carp", "Mireback Carp"), Oi("blackwater_bream", "Blackwater Bream"), Oi("stone_grouper", "Stone Grouper"), Oi("shadeback_ray", "Shadeback Ray"), Oi("glacial_silverfish", "Glacial Silverfish"), Oi("hatchetfish", "Hatchetfish"), Oi("moonlit_boomerang", "Moonlit Boomerang Fish"), Oi("murkborne_ray", "Murkborne Ray"), Oi("bamboo_catfish", "Bamboo Catfish"), Oi("mossback_arapaima", "Mossback Arapaima"), Oi("murk_stingray", "Murk Stingray"), Oi("channel_sawfish", "Channel Sawfish"), Oi("boned_sturgeon", "Boned Sturgeon"), Oi("oarfish", "Oarfish"), Oi("snakehead", "Snakehead", ii), Oi("eldertide_leviathan", "Eldertide Leviathan", ii), Oi("pithead", "Pithead"), Oi("electric_eel", "Electric Eel"), Oi("shadow_darter", "Shadow Darter"), Oi("abyss_carp", "Abyss Carp"), Oi("nomai_moray", "Nomai Moray"), Oi("silver_dragonfish", "Silver Dragonfish"), Oi("giant_moray", "Giant Moray"), Oi("coelacanth", "Coelacanth", ii), Oi("frost_herring", "Frost Herring"), Oi("permafrost_halibut", "Permafrost Halibut"), Oi("glacial_lanternfish", "Glacial Lanternfish"), Oi("frozen_grenadier", "Frozen Grenadier"), Oi("blackfin_icefish", "Blackfin Icefish"), Oi("moonfish", "Moonfish"), Oi("alpha_strongfish", "Alpha Moon Strongfish"), Oi("deep_lanternfish", "Deepwater Lanternfish", ii), Oi("pearlescent_moonfish", "Pearlescent Moonfish", ii), {
+        tiers: Oe
+      }, Jx("wheatfish", "Wheatfish"), Jx("darter", "Darter"), Jx("sunset_minnow", "Sunset Minnow"), Jx("root_flounder", "Root Flounder"), Jx("greenfin_loach", "Greenfin Loach"), Jx("red_strongfish", "Red Strongfish"), Jx("green_strongfish", "Green Strongfish"), Jx("boomerang_fish", "Boomerang Fish"), Jx("seahorse", "Seahorse"), Jx("spined_stickleback", "Spined Stickleback"), Jx("moon_strongfish", "Moon Strongfish"), Jx("boulder_bass", "Boulder Bass"), Jx("grass_snapper", "Grass Snapper"), Jx("crystal_wheatfish", "Crystalized Wheatfish", xx), Jx("moonstone_pupfish", "Moonstone Pupfish", xx), Jx("reedglass_minnow", "Reedglass Minnow"), Jx("mangrove_herring", "Mangrove Herring"), Jx("mudline_perch", "Mudline Perch"), Jx("coastal_mullet", "Coastal Mullet"), Jx("reef_sardine", "Reef Sardine"), Jx("root_perch", "Root Perch"), Jx("driftwood_catfish", "Driftwood Catfish"), Jx("aether_minnow", "Aether Minnow"), Jx("needlefish", "Tri-Pointed Needlefish"), Jx("threadfin_bream", "Threadfin Bream"), Jx("mudbelly_tilapia", "Mudbelly Tilapia"), Jx("rotslab_eel", "Rotslab Eel"), Jx("polarflash_electron", "Polarflash Electron"), Jx("mireback_carp", "Mireback Carp"), Jx("blackwater_bream", "Blackwater Bream"), Jx("stone_grouper", "Stone Grouper"), Jx("shadeback_ray", "Shadeback Ray"), Jx("glacial_silverfish", "Glacial Silverfish"), Jx("hatchetfish", "Hatchetfish"), Jx("moonlit_boomerang", "Moonlit Boomerang Fish"), Jx("murkborne_ray", "Murkborne Ray"), Jx("bamboo_catfish", "Bamboo Catfish"), Jx("mossback_arapaima", "Mossback Arapaima"), Jx("murk_stingray", "Murk Stingray"), Jx("channel_sawfish", "Channel Sawfish"), Jx("boned_sturgeon", "Boned Sturgeon"), Jx("oarfish", "Oarfish"), Jx("snakehead", "Snakehead", xx), Jx("eldertide_leviathan", "Eldertide Leviathan", xx), Jx("pithead", "Pithead"), Jx("electric_eel", "Electric Eel"), Jx("shadow_darter", "Shadow Darter"), Jx("abyss_carp", "Abyss Carp"), Jx("nomai_moray", "Nomai Moray"), Jx("silver_dragonfish", "Silver Dragonfish"), Jx("giant_moray", "Giant Moray"), Jx("coelacanth", "Coelacanth", xx), Jx("frost_herring", "Frost Herring"), Jx("permafrost_halibut", "Permafrost Halibut"), Jx("glacial_lanternfish", "Glacial Lanternfish"), Jx("frozen_grenadier", "Frozen Grenadier"), Jx("blackfin_icefish", "Blackfin Icefish"), Jx("moonfish", "Moonfish"), Jx("alpha_strongfish", "Alpha Moon Strongfish"), Jx("deep_lanternfish", "Deepwater Lanternfish", xx), Jx("pearlescent_moonfish", "Pearlescent Moonfish", xx), {
         id: "rotten_flesh",
         category: "combat",
         item: "Rotten Flesh",
         drops: ["Rotten Flesh"],
-        tiers: Vr
+        tiers: de
       }, {
         id: "rotten_brain",
         category: "combat",
         item: "Rotten Brain",
         drops: ["Rotten Brain"],
-        tiers: Mi
+        tiers: Vx
       }, {
         id: "iron_fragment",
         category: "combat",
         item: "Iron Fragment",
         drops: ["Iron Fragment"],
-        tiers: Mi
+        tiers: Vx
       }],
-      ji = (new Map(Si.map((MM => [MM.id, MM]))), new Map),
-      ai = new Map;
-    for (const AP of Si) {
-      for (const [MM, rM] of Object.entries(null !== (Pi = AP.blocks) && void 0 !== Pi ? Pi : {})) {
-        var Pi;
-        ji.set(MM, {
-          collection: AP,
-          amount: rM
+      Ux = (new Map(Yx.map((VV => [VV.id, VV]))), new Map),
+      yx = new Map;
+    for (const cp of Yx) {
+      for (const [VV, eV] of Object.entries(null !== (px = cp.blocks) && void 0 !== px ? px : {})) {
+        var px;
+        Ux.set(VV, {
+          collection: cp,
+          amount: eV
         })
       }
-      for (const MM of null !== (ni = AP.drops) && void 0 !== ni ? ni : []) {
-        var ni;
-        ai.set(MM, AP)
+      for (const VV of null !== (Qx = cp.drops) && void 0 !== Qx ? Qx : []) {
+        var Qx;
+        yx.set(VV, cp)
       }
     }
 
-    function Qi(MM, rM) {
-      let iM = 0;
-      for (; iM < MM.tiers.length && rM >= MM.tiers[iM].amount;) iM++;
-      return iM
+    function nx(VV, eV) {
+      let xV = 0;
+      for (; xV < VV.tiers.length && eV >= VV.tiers[xV].amount;) xV++;
+      return xV
     }
-    const zi = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"];
+    const wx = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"];
 
-    function Li(MM) {
-      return zi[MM - 1]
+    function Zx(VV) {
+      return wx[VV - 1]
     }
-    const mi = "skyblockCollectionsView";
-    class Hi extends nM {
-      constructor(MM, rM) {
-        let iM = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "en-GB",
-          OM = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : MM => MM;
-        super(MM, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {}, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => {}), this.translate = rM, this.locale = iM, this.itemName = OM, this.counts = null, this.category = "mining", this.selected = Si[0].id, this.snapshot = {
+    const vx = "skyblockCollectionsView";
+    class rx extends QV {
+      constructor(VV, eV) {
+        let xV = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "en-GB",
+          JV = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : VV => VV;
+        super(VV, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {}, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => {}), this.translate = eV, this.locale = xV, this.itemName = JV, this.counts = null, this.category = "mining", this.selected = Yx[0].id, this.snapshot = {
           enabled: !1,
           open: !1,
           categories: [],
           collections: [],
           detail: null,
           tiersUnlocked: ""
-        }, this.selectCategory = MM => {
-          this.category = MM, this.selected = this.inCategory(MM)[0].id, this.emit()
-        }, this.select = MM => {
-          this.selected = MM, this.emit()
+        }, this.selectCategory = VV => {
+          this.category = VV, this.selected = this.inCategory(VV)[0].id, this.emit()
+        }, this.select = VV => {
+          this.selected = VV, this.emit()
         }
       }
-      setTranslator(MM, rM, iM) {
-        this.translate = MM, this.locale = rM, this.itemName = iM, this.emit()
+      setTranslator(VV, eV, xV) {
+        this.translate = VV, this.locale = eV, this.itemName = xV, this.emit()
       }
-      GL(MM) {
-        if (!this.dh)
-          if ("collOpen" !== MM.kind) {
-            (MM.collFull || null === this.counts) && (this.counts = new Map);
-            for (const [rM, iM] of MM.collCounts) this.counts.set(rM, iM);
+      RZ(VV) {
+        if (!this.ik)
+          if ("collOpen" !== VV.kind) {
+            (VV.collFull || null === this.counts) && (this.counts = new Map);
+            for (const [eV, xV] of VV.collCounts) this.counts.set(eV, xV);
             this.emit()
           } else this.show()
       }
@@ -2299,7 +2265,7 @@ export const modules = {
         return null !== this.counts
       }
       buildSnapshot() {
-        var MM;
+        var VV;
         if (null === this.counts) return {
           enabled: !1,
           open: this.open,
@@ -2308,297 +2274,297 @@ export const modules = {
           detail: null,
           tiersUnlocked: ""
         };
-        const rM = this.inCategory(this.category).map((MM => this.collectionView(MM))),
-          iM = Si.reduce(((MM, rM) => MM + this.tierOf(rM)), 0);
+        const eV = this.inCategory(this.category).map((VV => this.collectionView(VV))),
+          xV = Yx.reduce(((VV, eV) => VV + this.tierOf(eV)), 0);
         return {
           enabled: !0,
           open: this.open,
-          categories: Xr.map((MM => this.categoryView(MM))),
-          collections: rM,
-          detail: null !== (MM = rM.find((MM => MM.selected))) && void 0 !== MM ? MM : null,
+          categories: He.map((VV => this.categoryView(VV))),
+          collections: eV,
+          detail: null !== (VV = eV.find((VV => VV.selected))) && void 0 !== VV ? VV : null,
           tiersUnlocked: this.translate("skyblockGame:collectionTiersUnlocked", {
-            count: this.number(iM)
+            count: this.number(xV)
           })
         }
       }
-      categoryView(MM) {
-        const rM = this.inCategory(MM),
-          iM = rM.reduce(((MM, rM) => MM + this.tierOf(rM)), 0),
-          OM = rM.reduce(((MM, rM) => MM + rM.tiers.length), 0);
+      categoryView(VV) {
+        const eV = this.inCategory(VV),
+          xV = eV.reduce(((VV, eV) => VV + this.tierOf(eV)), 0),
+          JV = eV.reduce(((VV, eV) => VV + eV.tiers.length), 0);
         return {
-          id: MM,
-          label: this.translate(`skyblockGame:${MM}`),
-          icon: dr[MM],
+          id: VV,
+          label: this.translate(`skyblockGame:${VV}`),
+          icon: Ee[VV],
           tiers: this.translate("skyblockGame:collectionProgress", {
-            current: this.number(iM),
-            target: this.number(OM)
+            current: this.number(xV),
+            target: this.number(JV)
           }),
-          selected: MM === this.category
+          selected: VV === this.category
         }
       }
-      collectionView(MM) {
-        var rM, iM;
-        const OM = null !== (rM = this.counts.get(MM.id)) && void 0 !== rM ? rM : 0,
-          SM = Qi(MM, OM),
-          jM = null !== (iM = MM.tiers[SM]) && void 0 !== iM ? iM : null,
-          aM = 0 === SM ? 0 : MM.tiers[SM - 1].amount;
+      collectionView(VV) {
+        var eV, xV;
+        const JV = null !== (eV = this.counts.get(VV.id)) && void 0 !== eV ? eV : 0,
+          YV = nx(VV, JV),
+          UV = null !== (xV = VV.tiers[YV]) && void 0 !== xV ? xV : null,
+          yV = 0 === YV ? 0 : VV.tiers[YV - 1].amount;
         return {
-          id: MM.id,
-          name: this.itemName(MM.item),
-          icon: MM.item,
-          selected: MM.id === this.selected,
-          locked: 0 === OM,
+          id: VV.id,
+          name: this.itemName(VV.item),
+          icon: VV.item,
+          selected: VV.id === this.selected,
+          locked: 0 === JV,
           count: this.translate("skyblockGame:collectionCount", {
-            count: this.number(OM)
+            count: this.number(JV)
           }),
-          tier: 0 === SM ? this.translate("skyblockGame:collectionNoTier") : this.tierLabel(SM),
-          percent: null === jM ? 100 : Math.min(100, (OM - aM) / (jM.amount - aM) * 100),
-          progress: null === jM ? this.translate("skyblockGame:max") : this.translate("skyblockGame:collectionProgress", {
-            current: this.number(OM),
-            target: this.number(jM.amount)
+          tier: 0 === YV ? this.translate("skyblockGame:collectionNoTier") : this.tierLabel(YV),
+          percent: null === UV ? 100 : Math.min(100, (JV - yV) / (UV.amount - yV) * 100),
+          progress: null === UV ? this.translate("skyblockGame:max") : this.translate("skyblockGame:collectionProgress", {
+            current: this.number(JV),
+            target: this.number(UV.amount)
           }),
-          nextReward: null === jM ? null : this.reward(MM, jM.coins, jM.xp)
+          nextReward: null === UV ? null : this.reward(VV, UV.coins, UV.xp)
         }
       }
-      reward(MM, rM, iM) {
+      reward(VV, eV, xV) {
         return this.translate("skyblockGame:collectionReward", {
-          coins: this.number(rM),
-          xp: this.number(iM),
-          skill: this.translate(`skyblockGame:${MM.category}`)
+          coins: this.number(eV),
+          xp: this.number(xV),
+          skill: this.translate(`skyblockGame:${VV.category}`)
         })
       }
-      tierLabel(MM) {
+      tierLabel(VV) {
         return this.translate("skyblockGame:collectionTier", {
-          tier: Li(MM)
+          tier: Zx(VV)
         })
       }
-      tierOf(MM) {
-        var rM;
-        return Qi(MM, null !== (rM = this.counts.get(MM.id)) && void 0 !== rM ? rM : 0)
+      tierOf(VV) {
+        var eV;
+        return nx(VV, null !== (eV = this.counts.get(VV.id)) && void 0 !== eV ? eV : 0)
       }
-      inCategory(MM) {
-        return Si.filter((rM => rM.category === MM))
+      inCategory(VV) {
+        return Yx.filter((eV => eV.category === VV))
       }
-      number(MM) {
-        return MM.toLocaleString(this.locale)
+      number(VV) {
+        return VV.toLocaleString(this.locale)
       }
     }
-    const Ji = "skyblockPortalTransitView",
-      di = "skyblockPortalArrival";
-    class yi {
-      constructor(MM, rM) {
-        let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Date.now;
-        this.Tz = MM, this.storage = rM, this.now = iM, this.view = null, this.token = 0, this.hideTimer = null
+    const kx = "skyblockPortalTransitView",
+      bx = "skyblockPortalArrival";
+    class Ex {
+      constructor(VV, eV) {
+        let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Date.now;
+        this.QZ = VV, this.storage = eV, this.now = xV, this.view = null, this.token = 0, this.hideTimer = null
       }
       getSnapshot() {
         return this.view
       }
-      GL(MM) {
-        const rM = {
-          zoneNameKey: MM.transitZoneNameKey,
-          variation: MM.transitZoneVariation,
-          colour: MM.transitColour,
+      RZ(VV) {
+        const eV = {
+          zoneNameKey: VV.transitZoneNameKey,
+          variation: VV.transitZoneVariation,
+          colour: VV.transitColour,
           departedAt: this.now()
         };
-        this.storage.setItem(di, rM), this.show("departure", rM.zoneNameKey, rM.colour, MM.transitDurationMs, MM.transitDurationMs + 1500, (() => {
-          this.storage.removeItem(di)
+        this.storage.setItem(bx, eV), this.show("departure", eV.zoneNameKey, eV.colour, VV.transitDurationMs, VV.transitDurationMs + 1500, (() => {
+          this.storage.removeItem(bx)
         }))
       }
-      resumeArrival(MM) {
-        const rM = this.storage.getItem(di);
-        this.storage.removeItem(di), null === rM || rM.variation !== MM || this.now() - rM.departedAt > 3e4 || this.show("arrival", rM.zoneNameKey, rM.colour, 3200, 2e4)
+      resumeArrival(VV) {
+        const eV = this.storage.getItem(bx);
+        this.storage.removeItem(bx), null === eV || eV.variation !== VV || this.now() - eV.departedAt > 3e4 || this.show("arrival", eV.zoneNameKey, eV.colour, 3200, 2e4)
       }
-      finishArrival(MM) {
-        var rM;
-        "arrival" === (null === (rM = this.view) || void 0 === rM ? void 0 : rM.phase) && this.view.token === MM && (this.clearTimer(), this.view = null, this.Tz(null))
+      finishArrival(VV) {
+        var eV;
+        "arrival" === (null === (eV = this.view) || void 0 === eV ? void 0 : eV.phase) && this.view.token === VV && (this.clearTimer(), this.view = null, this.QZ(null))
       }
       dispose() {
         this.clearTimer()
       }
-      show(MM, rM, iM, OM, SM, jM) {
+      show(VV, eV, xV, JV, YV, UV) {
         this.clearTimer(), this.view = {
           token: ++this.token,
-          phase: MM,
-          zoneNameKey: rM,
-          colour: iM,
-          durationMs: OM
-        }, this.Tz(this.view), this.hideTimer = setTimeout((() => {
-          this.hideTimer = null, this.view = null, this.Tz(null), null === jM || void 0 === jM || jM()
-        }), SM)
+          phase: VV,
+          zoneNameKey: eV,
+          colour: xV,
+          durationMs: JV
+        }, this.QZ(this.view), this.hideTimer = setTimeout((() => {
+          this.hideTimer = null, this.view = null, this.QZ(null), null === UV || void 0 === UV || UV()
+        }), YV)
       }
       clearTimer() {
         null !== this.hideTimer && (clearTimeout(this.hideTimer), this.hideTimer = null)
       }
     }
-    const li = "skyblockDailyRewardView",
-      Ei = "skyblockDailyRewardCoin";
-    class Ui {
-      constructor(MM, rM, iM, OM) {
-        let SM = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => {},
-          jM = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : () => {},
-          aM = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : () => {},
-          PM = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : () => {},
-          nM = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : performance.now.bind(performance);
-        this.Tz = MM, this.isBusy = rM, this.holdQuestPopups = iM, this.onHeldCoinsChanged = OM, this.onCoinLanded = SM, this.onStarted = jM, this.onFinished = aM, this.onItemLanded = PM, this.now = nM, this.sQ = [], this.queue = [], this.playing = null, this.token = 0
+    const Bx = "skyblockDailyRewardView",
+      jx = "skyblockDailyRewardCoin";
+    class qx {
+      constructor(VV, eV, xV, JV) {
+        let YV = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => {},
+          UV = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : () => {},
+          yV = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : () => {},
+          pV = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : () => {},
+          QV = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : performance.now.bind(performance);
+        this.QZ = VV, this.isBusy = eV, this.holdQuestPopups = xV, this.onHeldCoinsChanged = JV, this.onCoinLanded = YV, this.onStarted = UV, this.onFinished = yV, this.onItemLanded = pV, this.now = QV, this.hn = [], this.queue = [], this.playing = null, this.token = 0
       }
       getSnapshot() {
-        var MM, rM;
-        return null !== (MM = null === (rM = this.playing) || void 0 === rM ? void 0 : rM.view) && void 0 !== MM ? MM : null
+        var VV, eV;
+        return null !== (VV = null === (eV = this.playing) || void 0 === eV ? void 0 : eV.view) && void 0 !== VV ? VV : null
       }
       getHeldCoins() {
-        var MM, rM;
-        let iM = 0;
-        for (const OM of this.sQ) iM += OM.coins;
-        return iM - (null !== (MM = null === (rM = this.playing) || void 0 === rM ? void 0 : rM.released) && void 0 !== MM ? MM : 0)
+        var VV, eV;
+        let xV = 0;
+        for (const JV of this.hn) xV += JV.coins;
+        return xV - (null !== (VV = null === (eV = this.playing) || void 0 === eV ? void 0 : eV.released) && void 0 !== VV ? VV : 0)
       }
-      GL(MM) {
-        "dailyRewardClaimed" !== MM.kind ? (this.queue.push(MM), this.bL()) : this.sQ.push({
-          coins: MM.dailyRewardCoins,
+      RZ(VV) {
+        "dailyRewardClaimed" !== VV.kind ? (this.queue.push(VV), this.iZ()) : this.hn.push({
+          coins: VV.dailyRewardCoins,
           receivedAt: this.now()
         })
       }
-      bL() {
-        const MM = this.now();
-        if (null === this.playing) return this.releaseUnshown(MM), void this.startNext(MM);
-        const rM = this.playing,
-          iM = MM - rM.startedAt,
-          OM = rM.view.flyingCoins,
-          SM = function(MM, rM) {
-            let iM = 0;
-            for (; iM < rM && Ci(iM, rM) <= MM;) iM++;
-            return iM
-          }(iM, OM);
-        if (SM !== rM.landed) {
-          for (let MM = SM - rM.landed > 2 ? SM - 1 : rM.landed; MM < SM; MM++) this.onCoinLanded(MM, OM);
-          rM.landed = SM, rM.released = Math.round(rM.view.coins * SM / OM), this.onHeldCoinsChanged()
+      iZ() {
+        const VV = this.now();
+        if (null === this.playing) return this.releaseUnshown(VV), void this.startNext(VV);
+        const eV = this.playing,
+          xV = VV - eV.startedAt,
+          JV = eV.view.flyingCoins,
+          YV = function(VV, eV) {
+            let xV = 0;
+            for (; xV < eV && Fx(xV, eV) <= VV;) xV++;
+            return xV
+          }(xV, JV);
+        if (YV !== eV.landed) {
+          for (let VV = YV - eV.landed > 2 ? YV - 1 : eV.landed; VV < YV; VV++) this.onCoinLanded(VV, JV);
+          eV.landed = YV, eV.released = Math.round(eV.view.coins * YV / JV), this.onHeldCoinsChanged()
         }
-        for (; rM.itemsLanded < rM.view.items.length && 2e3 + 160 * rM.itemsLanded + 630 <= iM;) this.onItemLanded(rM.itemsLanded), rM.itemsLanded++;
-        iM >= rM.view.durationMs && (this.finish(), this.startNext(MM))
+        for (; eV.itemsLanded < eV.view.items.length && 2e3 + 160 * eV.itemsLanded + 630 <= xV;) this.onItemLanded(eV.itemsLanded), eV.itemsLanded++;
+        xV >= eV.view.durationMs && (this.finish(), this.startNext(VV))
       }
       dispose() {
-        null !== this.playing && this.holdQuestPopups(!1), this.playing = null, this.queue = [], this.sQ = [], this.Tz(null)
+        null !== this.playing && this.holdQuestPopups(!1), this.playing = null, this.queue = [], this.hn = [], this.QZ(null)
       }
-      startNext(MM) {
+      startNext(VV) {
         if (0 === this.queue.length || this.isBusy()) return;
-        const rM = this.queue.shift();
+        const eV = this.queue.shift();
         this.token++;
-        const iM = {
+        const xV = {
           token: this.token,
-          day: rM.dailyRewardDay,
-          coins: rM.dailyRewardCoins,
-          items: rM.dailyRewardItems,
+          day: eV.dailyRewardDay,
+          coins: eV.dailyRewardCoins,
+          items: eV.dailyRewardItems,
           durationMs: 5e3,
-          flyingCoins: rM.dailyRewardDay === wM ? 24 : 14
+          flyingCoins: eV.dailyRewardDay === NV ? 24 : 14
         };
         this.playing = {
-          view: iM,
-          startedAt: MM,
+          view: xV,
+          startedAt: VV,
           landed: 0,
           released: 0,
           itemsLanded: 0
-        }, this.holdQuestPopups(!0), this.Tz(iM), this.onStarted(iM)
+        }, this.holdQuestPopups(!0), this.QZ(xV), this.onStarted(xV)
       }
       finish() {
-        this.sQ.shift(), this.playing = null, this.holdQuestPopups(!1), this.Tz(null), this.onHeldCoinsChanged(), this.onFinished()
+        this.hn.shift(), this.playing = null, this.holdQuestPopups(!1), this.QZ(null), this.onHeldCoinsChanged(), this.onFinished()
       }
-      releaseUnshown(MM) {
-        if (this.queue.length > 0 || 0 === this.sQ.length) return;
-        const rM = this.sQ.length;
-        this.sQ = this.sQ.filter((rM => MM - rM.receivedAt < 6e4)), this.sQ.length !== rM && this.onHeldCoinsChanged()
+      releaseUnshown(VV) {
+        if (this.queue.length > 0 || 0 === this.hn.length) return;
+        const eV = this.hn.length;
+        this.hn = this.hn.filter((eV => VV - eV.receivedAt < 6e4)), this.hn.length !== eV && this.onHeldCoinsChanged()
       }
     }
 
-    function Gi(MM, rM) {
-      return 450 + 715 * MM / (rM - 1)
+    function tx(VV, eV) {
+      return 450 + 715 * VV / (eV - 1)
     }
 
-    function Ci(MM, rM) {
-      return Gi(MM, rM) + 650
+    function Fx(VV, eV) {
+      return tx(VV, eV) + 650
     }
-    const ei = "skyblockMailboxView";
-    class bi {
-      constructor(MM, rM) {
-        let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {},
-          OM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : performance.now.bind(performance);
-        this.Tz = MM, this.isBusy = rM, this.onStarted = iM, this.now = OM, this.waiting = [], this.playing = null, this.token = 0, this.itemName = MM => MM
+    const Tx = "skyblockMailboxView";
+    class Px {
+      constructor(VV, eV) {
+        let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {},
+          JV = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : performance.now.bind(performance);
+        this.QZ = VV, this.isBusy = eV, this.onStarted = xV, this.now = JV, this.waiting = [], this.playing = null, this.token = 0, this.itemName = VV => VV
       }
       getSnapshot() {
-        var MM, rM;
-        return null !== (MM = null === (rM = this.playing) || void 0 === rM ? void 0 : rM.view) && void 0 !== MM ? MM : null
+        var VV, eV;
+        return null !== (VV = null === (eV = this.playing) || void 0 === eV ? void 0 : eV.view) && void 0 !== VV ? VV : null
       }
-      setItemName(MM) {
-        this.itemName = MM
+      setItemName(VV) {
+        this.itemName = VV
       }
-      GL(MM) {
-        this.waiting.push(...MM.mailLetters), this.bL()
+      RZ(VV) {
+        this.waiting.push(...VV.mailLetters), this.iZ()
       }
-      bL() {
-        const MM = this.now();
-        null !== this.playing && MM - this.playing.startedAt >= this.playing.view.durationMs && (this.playing = null, this.Tz(null)), null === this.playing && this.waiting.length > 0 && !this.isBusy() && this.start(MM)
+      iZ() {
+        const VV = this.now();
+        null !== this.playing && VV - this.playing.startedAt >= this.playing.view.durationMs && (this.playing = null, this.QZ(null)), null === this.playing && this.waiting.length > 0 && !this.isBusy() && this.start(VV)
       }
       dispose() {
-        this.playing = null, this.waiting = [], this.Tz(null)
+        this.playing = null, this.waiting = [], this.QZ(null)
       }
-      start(MM) {
-        const rM = this.waiting.slice(0, 3);
+      start(VV) {
+        const eV = this.waiting.slice(0, 3);
         this.token++;
-        const iM = {
+        const xV = {
           token: this.token,
-          letters: rM.map((MM => this.toView(MM))),
-          more: this.waiting.length - rM.length,
-          durationMs: 4500 + 700 * rM.length
+          letters: eV.map((VV => this.toView(VV))),
+          more: this.waiting.length - eV.length,
+          durationMs: 4500 + 700 * eV.length
         };
         this.waiting = [], this.playing = {
-          view: iM,
-          startedAt: MM
-        }, this.Tz(iM), this.onStarted(iM)
+          view: xV,
+          startedAt: VV
+        }, this.QZ(xV), this.onStarted(xV)
       }
-      toView(MM) {
+      toView(VV) {
         return {
-          coins: MM.mailCoins,
-          items: MM.mailItems.map((MM => {
-            var rM;
+          coins: VV.mailCoins,
+          items: VV.mailItems.map((VV => {
+            var eV;
             return {
-              itemName: MM.mailItemName,
-              amount: MM.mailItemAmount,
-              label: null !== (rM = MM.mailItemLabel) && void 0 !== rM ? rM : this.itemName(MM.mailItemName)
+              itemName: VV.mailItemName,
+              amount: VV.mailItemAmount,
+              label: null !== (eV = VV.mailItemLabel) && void 0 !== eV ? eV : this.itemName(VV.mailItemName)
             }
           })),
-          reasonKey: MM.mailReasonKey,
-          reasonParams: MM.mailReasonParams
+          reasonKey: VV.mailReasonKey,
+          reasonParams: VV.mailReasonParams
         }
       }
     }
-    const wi = "skyblockQuestGraphView",
-      ti = "skyblockDevQuestJump";
+    const Ax = "skyblockQuestGraphView",
+      Nx = "skyblockDevQuestJump";
 
-    function gi(MM) {
-      if (0 === MM.length) return "";
-      const rM = [`M ${MM[0].x} ${MM[0].y}`];
-      for (let OM = 1; OM < MM.length - 1; OM++) {
-        const iM = MM[OM + 1];
-        rM.push(`Q ${MM[OM].x} ${MM[OM].y} ${(MM[OM].x+iM.x)/2} ${(MM[OM].y+iM.y)/2}`)
+    function Xx(VV) {
+      if (0 === VV.length) return "";
+      const eV = [`M ${VV[0].x} ${VV[0].y}`];
+      for (let JV = 1; JV < VV.length - 1; JV++) {
+        const xV = VV[JV + 1];
+        eV.push(`Q ${VV[JV].x} ${VV[JV].y} ${(VV[JV].x+xV.x)/2} ${(VV[JV].y+xV.y)/2}`)
       }
-      const iM = MM[MM.length - 1];
-      return rM.push(`L ${iM.x} ${iM.y}`), rM.join(" ")
+      const xV = VV[VV.length - 1];
+      return eV.push(`L ${xV.x} ${xV.y}`), eV.join(" ")
     }
 
-    function ui(MM, rM) {
-      return MM < rM ? `${MM}|${rM}` : `${rM}|${MM}`
+    function Mx(VV, eV) {
+      return VV < eV ? `${VV}|${eV}` : `${eV}|${VV}`
     }
-    class Ri extends nM {
-      constructor(MM, rM) {
-        let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {},
-          OM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => {},
-          SM = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => {},
-          jM = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : () => {},
-          aM = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : {
+    class zx extends QV {
+      constructor(VV, eV) {
+        let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {},
+          JV = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => {},
+          YV = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => {},
+          UV = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : () => {},
+          yV = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : {
             getItem: () => null,
             setItem: () => {},
             removeItem: () => {}
           },
-          PM = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : Date.now;
-        super(MM, iM, OM), this.translate = rM, this.requestJump = SM, this.requestArrive = jM, this.storage = aM, this.now = PM, this.layout = null, this.hoveredId = null, this.graphCount = 0, this.snapshot = {
+          pV = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : Date.now;
+        super(VV, xV, JV), this.translate = eV, this.requestJump = YV, this.requestArrive = UV, this.storage = yV, this.now = pV, this.layout = null, this.hoveredId = null, this.graphCount = 0, this.snapshot = {
           enabled: !1,
           open: !1,
           width: 0,
@@ -2606,89 +2572,89 @@ export const modules = {
           nodes: [],
           edges: [],
           planning: !1
-        }, this.hover = MM => {
-          MM !== this.hoveredId && (this.hoveredId = MM, this.emit())
-        }, this.jump = MM => {
-          this.close(), this.requestJump(MM)
+        }, this.hover = VV => {
+          VV !== this.hoveredId && (this.hoveredId = VV, this.emit())
+        }, this.jump = VV => {
+          this.close(), this.requestJump(VV)
         }
       }
-      GL(MM) {
-        if (!this.dh)
-          if ("graph" !== MM.kind) {
-            if ("jumping" === MM.kind) {
-              const rM = {
-                questId: MM.graphQuestId,
-                variation: MM.graphVariation,
-                completes: MM.graphCompletesOnArrival,
+      RZ(VV) {
+        if (!this.ik)
+          if ("graph" !== VV.kind) {
+            if ("jumping" === VV.kind) {
+              const eV = {
+                questId: VV.graphQuestId,
+                variation: VV.graphVariation,
+                completes: VV.graphCompletesOnArrival,
                 departedAt: this.now()
               };
-              this.storage.setItem(ti, rM)
+              this.storage.setItem(Nx, eV)
             }
           } else {
-            const rM = ++this.graphCount;
-            iM.e(133).then((() => iM(6888))).then((iM => {
+            const eV = ++this.graphCount;
+            xV.e(133).then((() => xV(6987))).then((xV => {
               let {
-                default: OM
-              } = iM;
-              this.dh || rM !== this.graphCount || (this.layout = function(MM, rM, iM) {
-                var OM, SM;
-                const jM = new MM.graphlib.Graph;
-                jM.setGraph({
+                default: JV
+              } = xV;
+              this.ik || eV !== this.graphCount || (this.layout = function(VV, eV, xV) {
+                var JV, YV;
+                const UV = new VV.graphlib.Graph;
+                UV.setGraph({
                   rankdir: "LR",
                   ranksep: 70,
                   nodesep: 14,
                   marginx: 24,
                   marginy: 24
-                }), jM.setDefaultEdgeLabel((() => ({})));
-                const aM = new Set;
-                for (const zM of rM) aM.add(zM.graphQuestId), jM.setNode(zM.graphQuestId, {
+                }), UV.setDefaultEdgeLabel((() => ({})));
+                const yV = new Set;
+                for (const wV of eV) yV.add(wV.graphQuestId), UV.setNode(wV.graphQuestId, {
                   width: 190,
                   height: 52
                 });
-                const PM = iM.filter((MM => aM.has(MM.graphFromId) && aM.has(MM.graphToId) && MM.graphFromId !== MM.graphToId)),
-                  nM = new Map;
-                for (const zM of [...PM].sort(((MM, rM) => Number("awaits" === MM.graphEdgeKind) - Number("awaits" === rM.graphEdgeKind)))) {
-                  const MM = ui(zM.graphFromId, zM.graphToId);
-                  nM.has(MM) || (nM.set(MM, zM), jM.setEdge(zM.graphFromId, zM.graphToId))
+                const pV = xV.filter((VV => yV.has(VV.graphFromId) && yV.has(VV.graphToId) && VV.graphFromId !== VV.graphToId)),
+                  QV = new Map;
+                for (const wV of [...pV].sort(((VV, eV) => Number("awaits" === VV.graphEdgeKind) - Number("awaits" === eV.graphEdgeKind)))) {
+                  const VV = Mx(wV.graphFromId, wV.graphToId);
+                  QV.has(VV) || (QV.set(VV, wV), UV.setEdge(wV.graphFromId, wV.graphToId))
                 }
-                MM.layout(jM);
-                const QM = jM.graph();
+                VV.layout(UV);
+                const nV = UV.graph();
                 return {
-                  width: Math.ceil(null !== (OM = QM.width) && void 0 !== OM ? OM : 0),
-                  height: Math.ceil(null !== (SM = QM.height) && void 0 !== SM ? SM : 0),
-                  nodes: rM.map((MM => {
-                    var rM, iM;
-                    const OM = jM.node(MM.graphQuestId);
+                  width: Math.ceil(null !== (JV = nV.width) && void 0 !== JV ? JV : 0),
+                  height: Math.ceil(null !== (YV = nV.height) && void 0 !== YV ? YV : 0),
+                  nodes: eV.map((VV => {
+                    var eV, xV;
+                    const JV = UV.node(VV.graphQuestId);
                     return {
-                      node: MM,
-                      left: (null !== (rM = OM.x) && void 0 !== rM ? rM : 0) - 95,
-                      top: (null !== (iM = OM.y) && void 0 !== iM ? iM : 0) - 26
+                      node: VV,
+                      left: (null !== (eV = JV.x) && void 0 !== eV ? eV : 0) - 95,
+                      top: (null !== (xV = JV.y) && void 0 !== xV ? xV : 0) - 26
                     }
                   })),
-                  edges: PM.map((MM => {
-                    var rM;
-                    const iM = nM.get(ui(MM.graphFromId, MM.graphToId)),
-                      OM = null !== (rM = jM.edge(iM.graphFromId, iM.graphToId).points) && void 0 !== rM ? rM : [];
+                  edges: pV.map((VV => {
+                    var eV;
+                    const xV = QV.get(Mx(VV.graphFromId, VV.graphToId)),
+                      JV = null !== (eV = UV.edge(xV.graphFromId, xV.graphToId).points) && void 0 !== eV ? eV : [];
                     return {
-                      edge: MM,
-                      key: `${MM.graphFromId}|${MM.graphToId}|${MM.graphEdgeKind}`,
-                      path: gi(iM.graphFromId === MM.graphFromId ? OM : [...OM].reverse())
+                      edge: VV,
+                      key: `${VV.graphFromId}|${VV.graphToId}|${VV.graphEdgeKind}`,
+                      path: Xx(xV.graphFromId === VV.graphFromId ? JV : [...JV].reverse())
                     }
                   })),
-                  plans: new Map(rM.map((MM => [MM.graphQuestId, new Set([MM.graphQuestId, ...MM.graphPlanIds])])))
+                  plans: new Map(eV.map((VV => [VV.graphQuestId, new Set([VV.graphQuestId, ...VV.graphPlanIds])])))
                 }
-              }(OM, MM.graphNodes, MM.graphEdges), this.show())
-            })).catch((MM => {
-              console.error("The quest graph could not be laid out", MM)
+              }(JV, VV.graphNodes, VV.graphEdges), this.show())
+            })).catch((VV => {
+              console.error("The quest graph could not be laid out", VV)
             }))
           }
       }
-      resumeJump(MM) {
-        const rM = this.storage.getItem(ti);
-        this.storage.removeItem(ti), null === rM || rM.variation !== MM || this.now() - rM.departedAt > 6e4 || this.requestArrive(rM.questId, rM.completes)
+      resumeJump(VV) {
+        const eV = this.storage.getItem(Nx);
+        this.storage.removeItem(Nx), null === eV || eV.variation !== VV || this.now() - eV.departedAt > 6e4 || this.requestArrive(eV.questId, eV.completes)
       }
-      setTranslator(MM) {
-        this.translate = MM, this.emit()
+      setTranslator(VV) {
+        this.translate = VV, this.emit()
       }
       dispose() {
         this.layout = null, this.hoveredId = null, super.dispose()
@@ -2700,12 +2666,12 @@ export const modules = {
         return null !== this.layout
       }
       getPlan() {
-        var MM, rM;
-        return null !== (MM = null === this.hoveredId || null === (rM = this.layout) || void 0 === rM ? void 0 : rM.plans.get(this.hoveredId)) && void 0 !== MM ? MM : new Set
+        var VV, eV;
+        return null !== (VV = null === this.hoveredId || null === (eV = this.layout) || void 0 === eV ? void 0 : eV.plans.get(this.hoveredId)) && void 0 !== VV ? VV : new Set
       }
       buildSnapshot() {
-        const MM = this.layout;
-        if (null === MM) return {
+        const VV = this.layout;
+        if (null === VV) return {
           enabled: !1,
           open: this.open,
           width: 0,
@@ -2714,230 +2680,230 @@ export const modules = {
           edges: [],
           planning: !1
         };
-        const rM = this.getPlan();
+        const eV = this.getPlan();
         return {
           enabled: !0,
           open: this.open,
-          width: MM.width,
-          height: MM.height,
-          nodes: MM.nodes.map((MM => {
+          width: VV.width,
+          height: VV.height,
+          nodes: VV.nodes.map((VV => {
             let {
-              node: iM,
-              left: OM,
-              top: SM
-            } = MM;
+              node: xV,
+              left: JV,
+              top: YV
+            } = VV;
             return {
-              id: iM.graphQuestId,
-              name: this.translate(iM.graphNameKey),
-              detail: null === iM.graphGiverName ? iM.graphZoneId : `${iM.graphGiverName} \xb7 ${iM.graphZoneId}`,
-              state: iM.graphState,
-              left: OM,
-              top: SM,
-              inPlan: rM.has(iM.graphQuestId),
-              hovered: iM.graphQuestId === this.hoveredId
+              id: xV.graphQuestId,
+              name: this.translate(xV.graphNameKey),
+              detail: null === xV.graphGiverName ? xV.graphZoneId : `${xV.graphGiverName} \xb7 ${xV.graphZoneId}`,
+              state: xV.graphState,
+              left: JV,
+              top: YV,
+              inPlan: eV.has(xV.graphQuestId),
+              hovered: xV.graphQuestId === this.hoveredId
             }
           })),
-          edges: MM.edges.map((MM => {
+          edges: VV.edges.map((VV => {
             let {
-              edge: iM,
-              key: OM,
-              path: SM
-            } = MM;
+              edge: xV,
+              key: JV,
+              path: YV
+            } = VV;
             return {
-              key: OM,
-              kind: iM.graphEdgeKind,
-              path: SM,
-              inPlan: rM.has(iM.graphFromId) && rM.has(iM.graphToId)
+              key: JV,
+              kind: xV.graphEdgeKind,
+              path: YV,
+              inPlan: eV.has(xV.graphFromId) && eV.has(xV.graphToId)
             }
           })),
-          planning: rM.size > 0
+          planning: eV.size > 0
         }
       }
     }
-    var Wi = iM(37996);
-    const si = 250,
-      Di = 2150,
-      ki = -2.8,
-      Zi = 2.2,
-      oi = -27,
-      fi = {
+    var Gx = xV(38239);
+    const Wx = 250,
+      Rx = 2150,
+      gx = -2.8,
+      Dx = 2.2,
+      ix = -27,
+      Cx = {
         zeta: .34,
         period: .7,
         lead: .1,
         rush: .04
       },
-      Yi = {
+      ax = {
         zeta: .45,
         period: .55,
         delay: .12,
         to: 1.25
       },
-      Ni = Math.round(50 + 1e3 * (Yi.delay + Yi.period / 2)),
-      Ai = "\u16a0\u16a2\u16a6\u16a8\u16b1\u16b2\u16b7\u16b9\u16ba\u16be\u16c1\u16c3\u16c7\u16c8\u16c9\u16ca\u16cf\u16d2\u16d6\u16d7\u16da\u16dc\u16de\u16df",
-      xi = Array.from({
+      ox = Math.round(50 + 1e3 * (ax.delay + ax.period / 2)),
+      cx = "\u16a0\u16a2\u16a6\u16a8\u16b1\u16b2\u16b7\u16b9\u16ba\u16be\u16c1\u16c3\u16c7\u16c8\u16c9\u16ca\u16cf\u16d2\u16d6\u16d7\u16da\u16dc\u16de\u16df",
+      hx = Array.from({
         length: 26
-      }, ((MM, rM) => {
-        const iM = 2.39996 * rM,
-          OM = .5 + .618034 * rM % 1 * .23,
-          SM = rM % 3 !== 2;
+      }, ((VV, eV) => {
+        const xV = 2.39996 * eV,
+          JV = .5 + .618034 * eV % 1 * .23,
+          YV = eV % 3 !== 2;
         return {
-          rune: SM ? Ai[7 * rM % 24] : "",
+          rune: YV ? cx[7 * eV % 24] : "",
           style: {
-            "--from-x": `calc(var(--sword-size) * ${(Math.cos(iM)*OM).toFixed(3)})`,
-            "--from-y": `calc(var(--sword-size) * ${(Math.sin(iM)*OM).toFixed(3)})`,
-            "--spin": 40 * (rM % 5 - 2) + "deg",
-            "--size": (SM ? 1 + rM % 4 * .2 : .3 + rM % 2 * .15) + "rem",
-            "--duration": `${(1.8+7*rM%5*.35).toFixed(2)}s`,
-            "--delay": `${(-.83*rM%3).toFixed(2)}s`
+            "--from-x": `calc(var(--sword-size) * ${(Math.cos(xV)*JV).toFixed(3)})`,
+            "--from-y": `calc(var(--sword-size) * ${(Math.sin(xV)*JV).toFixed(3)})`,
+            "--spin": 40 * (eV % 5 - 2) + "deg",
+            "--size": (YV ? 1 + eV % 4 * .2 : .3 + eV % 2 * .15) + "rem",
+            "--duration": `${(1.8+7*eV%5*.35).toFixed(2)}s`,
+            "--delay": `${(-.83*eV%3).toFixed(2)}s`
           }
         }
       }));
 
-    function vi(MM, rM) {
+    function lx(VV, eV) {
       return Array.from({
-        length: 30 + 3 * MM + (rM ? 10 : 0)
-      }, ((MM, rM) => {
-        const iM = rM < 4,
-          OM = iM ? "#fff" : Math.random() < .25 ? "#ff922b" : "#ffe08a",
-          SM = iM ? 7 + 3 * Math.random() : 3.5 + 5 * Math.random(),
-          jM = iM ? 2.2 : .6 + Math.random(),
-          aM = iM ? .3 : Math.random() < .5 ? .16 : .24,
-          PM = iM ? 600 + 100 * Math.random() : 280 + 280 * Math.random();
+        length: 30 + 3 * VV + (eV ? 10 : 0)
+      }, ((VV, eV) => {
+        const xV = eV < 4,
+          JV = xV ? "#fff" : Math.random() < .25 ? "#ff922b" : "#ffe08a",
+          YV = xV ? 7 + 3 * Math.random() : 3.5 + 5 * Math.random(),
+          UV = xV ? 2.2 : .6 + Math.random(),
+          yV = xV ? .3 : Math.random() < .5 ? .16 : .24,
+          pV = xV ? 600 + 100 * Math.random() : 280 + 280 * Math.random();
         return {
-          "--c": OM,
+          "--c": JV,
           "--angle": `${Math.round(220*(Math.random()-.5)+15)}deg`,
-          "--distance": `${SM.toFixed(2)}rem`,
-          "--length": `${jM.toFixed(2)}rem`,
-          "--width": `${aM}rem`,
-          "--duration": `${Math.round(PM)}ms`,
+          "--distance": `${YV.toFixed(2)}rem`,
+          "--length": `${UV.toFixed(2)}rem`,
+          "--width": `${yV}rem`,
+          "--duration": `${Math.round(pV)}ms`,
           "--delay": `${Math.round(40*Math.random())}ms`,
           "--fall": `${(1+Math.random()).toFixed(2)}rem`
         }
       }))
     }
 
-    function Fi(MM) {
+    function Lx(VV) {
       let {
-        zeta: rM,
-        period: iM
-      } = MM;
-      const OM = 2 * Math.PI / iM;
+        zeta: eV,
+        period: xV
+      } = VV;
+      const JV = 2 * Math.PI / xV;
       return {
-        w: OM,
-        decay: rM * OM / Math.sqrt(1 - rM * rM)
+        w: JV,
+        decay: eV * JV / Math.sqrt(1 - eV * eV)
       }
     }
-    let Bi = !1;
+    let fx = !1;
 
-    function Xi() {
-      if (Bi) return;
-      Bi = !0;
-      const MM = document.createElement("style");
-      MM.textContent = function() {
-        const MM = Fi(fi),
-          rM = Fi(Yi),
-          iM = rM => Math.exp(-MM.decay * rM) * Math.sin(MM.w * rM),
-          OM = iM(Math.atan(MM.w / MM.decay) / MM.w),
-          SM = .25,
-          jM = 2.15,
-          aM = Math.round(215),
-          PM = [];
-        for (let nM = 0; nM <= aM; nM++) {
-          const MM = nM / aM * jM;
-          let QM = Math.sin(Math.min(MM, SM) / SM * Math.PI / 2) ** 2,
-            zM = 0,
-            LM = 1,
-            mM = 1 - .2 * QM,
-            HM = 1;
-          if (MM >= SM) {
-            const aM = MM - SM,
-              PM = Math.max(0, aM - .05);
-            QM = Math.exp(-PM / .05), zM = iM(PM + fi.lead * (1 - Math.exp(-PM / fi.rush))) / OM;
-            const nM = PM - Yi.delay,
-              hM = nM <= 0 ? 0 : 1 - Math.exp(-rM.decay * nM) * (Math.cos(rM.w * nM) + rM.decay / rM.w * Math.sin(rM.w * nM)),
-              JM = Math.max(0, (MM - 1.77) / (jM - 1.77));
-            LM = (1 + (Yi.to - 1) * hM) * (1 + .08 * JM), mM = 1.1 + 1.5 * Math.exp(-aM / .07) + .3 * Math.exp(-(((1e3 * aM - Ni) / 100) ** 2)) + .8 * JM, HM = 1 - JM ** 1.5
+    function mx() {
+      if (fx) return;
+      fx = !0;
+      const VV = document.createElement("style");
+      VV.textContent = function() {
+        const VV = Lx(Cx),
+          eV = Lx(ax),
+          xV = eV => Math.exp(-VV.decay * eV) * Math.sin(VV.w * eV),
+          JV = xV(Math.atan(VV.w / VV.decay) / VV.w),
+          YV = .25,
+          UV = 2.15,
+          yV = Math.round(215),
+          pV = [];
+        for (let QV = 0; QV <= yV; QV++) {
+          const VV = QV / yV * UV;
+          let nV = Math.sin(Math.min(VV, YV) / YV * Math.PI / 2) ** 2,
+            wV = 0,
+            ZV = 1,
+            vV = 1 - .2 * nV,
+            rV = 1;
+          if (VV >= YV) {
+            const yV = VV - YV,
+              pV = Math.max(0, yV - .05);
+            nV = Math.exp(-pV / .05), wV = xV(pV + Cx.lead * (1 - Math.exp(-pV / Cx.rush))) / JV;
+            const QV = pV - ax.delay,
+              kV = QV <= 0 ? 0 : 1 - Math.exp(-eV.decay * QV) * (Math.cos(eV.w * QV) + eV.decay / eV.w * Math.sin(eV.w * QV)),
+              bV = Math.max(0, (VV - 1.77) / (UV - 1.77));
+            ZV = (1 + (ax.to - 1) * kV) * (1 + .08 * bV), vV = 1.1 + 1.5 * Math.exp(-yV / .07) + .3 * Math.exp(-(((1e3 * yV - ox) / 100) ** 2)) + .8 * bV, rV = 1 - bV ** 1.5
           }
-          const hM = .15 * QM + ki * zM,
-            JM = -.1 * QM + Zi * zM,
-            dM = 3 * QM + oi * zM;
-          PM.push(`${(nM/aM*100).toFixed(3)}% { opacity: ${HM.toFixed(3)}; transform: translate(${hM.toFixed(3)}rem, ${JM.toFixed(3)}rem) rotate(${dM.toFixed(2)}deg) scale(${LM.toFixed(3)}); filter: brightness(${mM.toFixed(2)}) drop-shadow(0 0 0.8rem color-mix(in srgb, var(--tier) 55%, transparent)); }`)
+          const kV = .15 * nV + gx * wV,
+            bV = -.1 * nV + Dx * wV,
+            EV = 3 * nV + ix * wV;
+          pV.push(`${(QV/yV*100).toFixed(3)}% { opacity: ${rV.toFixed(3)}; transform: translate(${kV.toFixed(3)}rem, ${bV.toFixed(3)}rem) rotate(${EV.toFixed(2)}deg) scale(${ZV.toFixed(3)}); filter: brightness(${vV.toFixed(2)}) drop-shadow(0 0 0.8rem color-mix(in srgb, var(--tier) 55%, transparent)); }`)
         }
-        return `@keyframes SkyblockForgeSwordBurst { ${PM.join(" ")} }`
-      }(), document.head.append(MM)
+        return `@keyframes SkyblockForgeSwordBurst { ${pV.join(" ")} }`
+      }(), document.head.append(VV)
     }
-    const Ii = "skyblockForgeView",
-      Ki = {
+    const Kx = "skyblockForgeView",
+      Hx = {
         Blade: "skyblockGame:forgeSlotBlade",
         Guard: "skyblockGame:forgeSlotGuard",
         Handle: "skyblockGame:forgeSlotHandle"
       };
-    class qi extends nM {
-      constructor(MM, rM, iM, OM, SM) {
-        super(MM, iM, OM), this.translate = rM, this.requestForge = SM, this.snapshot = void 0, this.owned = {}, this.coal = 0, this.received = !1, this.awaitingReply = !1, this.pacing = null, this.replyTimeout = null, this.status = null, this.forging = null, this.forgeId = 0, this.arriving = null, this.selected = {
+    class ux extends QV {
+      constructor(VV, eV, xV, JV, YV) {
+        super(VV, xV, JV), this.translate = eV, this.requestForge = YV, this.snapshot = void 0, this.owned = {}, this.coal = 0, this.received = !1, this.awaitingReply = !1, this.pacing = null, this.replyTimeout = null, this.status = null, this.forging = null, this.forgeId = 0, this.arriving = null, this.selected = {
           Blade: null,
           Guard: null,
           Handle: null
-        }, this.onForgeStarted = null, this.onPartSelected = null, this.onOpened = null, this.select = (MM, rM) => {
-          var iM, OM;
-          null !== this.forging || (null !== (iM = this.owned[(0, Wi.q)(rM, MM)]) && void 0 !== iM ? iM : 0) <= 0 || (this.selected[MM] = this.selected[MM] === rM ? null : rM, this.status = null, null === (OM = this.onPartSelected) || void 0 === OM || OM.call(this), this.emit())
-        }, this.forge = MM => {
-          var rM, iM;
-          const OM = this.selectedParts();
-          if (null === OM || this.isPending() || !this.open) return;
-          const SM = (0, Wi.m)(OM);
-          if (null === SM || SM.coalCost > this.coal) return;
-          const jM = this.preview(SM),
-            aM = null !== (rM = null === (iM = this.onForgeStarted) || void 0 === iM ? void 0 : iM.call(this, jM.tier, jM.named, MM)) && void 0 !== rM ? rM : () => {};
-          if (this.dropArrival(), MM) {
-            const MM = {
+        }, this.onForgeStarted = null, this.onPartSelected = null, this.onOpened = null, this.select = (VV, eV) => {
+          var xV, JV;
+          null !== this.forging || (null !== (xV = this.owned[(0, Gx.p)(eV, VV)]) && void 0 !== xV ? xV : 0) <= 0 || (this.selected[VV] = this.selected[VV] === eV ? null : eV, this.status = null, null === (JV = this.onPartSelected) || void 0 === JV || JV.call(this), this.emit())
+        }, this.forge = VV => {
+          var eV, xV;
+          const JV = this.selectedParts();
+          if (null === JV || this.isPending() || !this.open) return;
+          const YV = (0, Gx.m)(JV);
+          if (null === YV || YV.coalCost > this.coal) return;
+          const UV = this.preview(YV),
+            yV = null !== (eV = null === (xV = this.onForgeStarted) || void 0 === xV ? void 0 : xV.call(this, UV.tier, UV.named, VV)) && void 0 !== eV ? eV : () => {};
+          if (this.dropArrival(), VV) {
+            const VV = {
               id: ++this.forgeId,
-              preview: jM,
+              preview: UV,
               timers: [],
-              stopSounds: aM,
+              stopSounds: yV,
               landed: !1,
               reply: null
             };
-            MM.timers.push(setTimeout((() => {
-              MM.landed = !0, null !== MM.reply && (this.apply(MM.reply), MM.reply = null, this.emit())
-            }), si), setTimeout((() => {
-              this.finishForge(MM)
-            }), Di)), this.forging = MM
+            VV.timers.push(setTimeout((() => {
+              VV.landed = !0, null !== VV.reply && (this.apply(VV.reply), VV.reply = null, this.emit())
+            }), Wx), setTimeout((() => {
+              this.finishForge(VV)
+            }), Rx)), this.forging = VV
           }
           this.awaitingReply = !0, this.pacing = setTimeout((() => {
             this.pacing = null, this.emit()
           }), 2500), this.replyTimeout = setTimeout((() => {
             this.replyTimeout = null, this.awaitingReply = !1, this.emit()
-          }), 8e3), this.emit(), this.requestForge(OM)
+          }), 8e3), this.emit(), this.requestForge(JV)
         }, this.snapshot = this.buildSnapshot()
       }
-      GL(MM) {
-        var rM;
-        if (this.received = !0, this.awaitingReply = !1, this.clearReplyTimeout(), "open" === MM.forgeMessageKind) return this.dropForge(), this.apply(MM), this.status = null, this.show(), void(null === (rM = this.onOpened) || void 0 === rM || rM.call(this));
-        const iM = this.forging;
-        if (null !== iM && null !== MM.forgeRefusalKey) this.dropForge();
-        else if (null !== iM && !iM.landed) return void(iM.reply = MM);
-        this.apply(MM), this.emit()
+      RZ(VV) {
+        var eV;
+        if (this.received = !0, this.awaitingReply = !1, this.clearReplyTimeout(), "open" === VV.forgeMessageKind) return this.dropForge(), this.apply(VV), this.status = null, this.show(), void(null === (eV = this.onOpened) || void 0 === eV || eV.call(this));
+        const xV = this.forging;
+        if (null !== xV && null !== VV.forgeRefusalKey) this.dropForge();
+        else if (null !== xV && !xV.landed) return void(xV.reply = VV);
+        this.apply(VV), this.emit()
       }
-      apply(MM) {
-        if (this.owned = MM.forgeOwnedParts, this.coal = MM.forgeCoalOwned, this.keepSelectionOwned("open" === MM.forgeMessageKind), null !== MM.forgeForgedSwordId) {
-          var rM;
-          const iM = (0, Wi.m)(MM.forgeForgedSwordId);
+      apply(VV) {
+        if (this.owned = VV.forgeOwnedParts, this.coal = VV.forgeCoalOwned, this.keepSelectionOwned("open" === VV.forgeMessageKind), null !== VV.forgeForgedSwordId) {
+          var eV;
+          const xV = (0, Gx.m)(VV.forgeForgedSwordId);
           this.status = {
             tone: "forged",
             key: "skyblockGame:forgeForged",
             params: {
-              sword: null !== (rM = null === iM || void 0 === iM ? void 0 : iM.displayName) && void 0 !== rM ? rM : ""
+              sword: null !== (eV = null === xV || void 0 === xV ? void 0 : xV.displayName) && void 0 !== eV ? eV : ""
             }
           }
-        } else null !== MM.forgeRefusalKey && (this.status = {
+        } else null !== VV.forgeRefusalKey && (this.status = {
           tone: "refused",
-          key: MM.forgeRefusalKey,
+          key: VV.forgeRefusalKey,
           params: {}
         })
       }
-      setTranslator(MM) {
-        this.translate = MM, this.emit()
+      setTranslator(VV) {
+        this.translate = VV, this.emit()
       }
       isEnabled() {
         return this.received
@@ -2945,25 +2911,25 @@ export const modules = {
       onClosed() {
         this.dropForge(), this.dropArrival(), this.status = null, this.awaitingReply = !1, this.clearReplyTimeout()
       }
-      finishForge(MM) {
-        var rM;
+      finishForge(VV) {
+        var eV;
         this.forging = null;
-        const iM = this.selectedParts(),
-          OM = setTimeout((() => {
+        const xV = this.selectedParts(),
+          JV = setTimeout((() => {
             this.arriving = null, this.emit()
           }), 400);
         this.arriving = {
-          id: MM.id,
-          sameSword: null !== iM && (null === (rM = (0, Wi.m)(iM)) || void 0 === rM ? void 0 : rM.displayName) === MM.preview.name,
-          timer: OM
+          id: VV.id,
+          sameSword: null !== xV && (null === (eV = (0, Gx.m)(xV)) || void 0 === eV ? void 0 : eV.displayName) === VV.preview.name,
+          timer: JV
         }, this.emit()
       }
       dropForge() {
-        const MM = this.forging;
-        if (null !== MM) {
+        const VV = this.forging;
+        if (null !== VV) {
           this.forging = null;
-          for (const rM of MM.timers) clearTimeout(rM);
-          MM.stopSounds(), null !== MM.reply && this.apply(MM.reply)
+          for (const eV of VV.timers) clearTimeout(eV);
+          VV.stopSounds(), null !== VV.reply && this.apply(VV.reply)
         }
       }
       dropArrival() {
@@ -2976,23 +2942,23 @@ export const modules = {
         null !== this.replyTimeout && (clearTimeout(this.replyTimeout), this.replyTimeout = null)
       }
       buildSnapshot() {
-        var MM, rM, iM;
-        const OM = this.selectedParts(),
-          SM = null === OM ? null : (0, Wi.m)(OM),
-          jM = null !== (MM = null === (rM = this.forging) || void 0 === rM ? void 0 : rM.preview) && void 0 !== MM ? MM : null === SM ? null : this.preview(SM);
+        var VV, eV, xV;
+        const JV = this.selectedParts(),
+          YV = null === JV ? null : (0, Gx.m)(JV),
+          UV = null !== (VV = null === (eV = this.forging) || void 0 === eV ? void 0 : eV.preview) && void 0 !== VV ? VV : null === YV ? null : this.preview(YV);
         return {
           enabled: this.received,
           open: this.open,
-          slots: Wi.l.map((MM => ({
-            kind: MM,
-            label: this.translate(Ki[MM]),
-            parts: this.partsFor(MM)
+          slots: Gx.l.map((VV => ({
+            kind: VV,
+            label: this.translate(Hx[VV]),
+            parts: this.partsFor(VV)
           }))),
           coalOwned: this.coal,
-          preview: jM,
-          unformedSword: Wi.k[null !== (iM = this.selected.Blade) && void 0 !== iM ? iM : "Iron"].baseSword,
-          anyParts: Object.values(this.owned).some((MM => MM > 0)),
-          canForge: null !== jM && !jM.coalShort && !this.isPending(),
+          preview: UV,
+          unformedSword: Gx.h[null !== (xV = this.selected.Blade) && void 0 !== xV ? xV : "Iron"].baseSword,
+          anyParts: Object.values(this.owned).some((VV => VV > 0)),
+          canForge: null !== UV && !UV.coalShort && !this.isPending(),
           status: null === this.status ? null : {
             tone: this.status.tone,
             text: this.translate(this.status.key, this.status.params)
@@ -3007,145 +2973,145 @@ export const modules = {
           }
         }
       }
-      preview(MM) {
+      preview(VV) {
         return {
-          name: MM.displayName,
-          lore: MM.lore,
-          baseSword: MM.baseSword,
-          enchantmentTier: MM.enchantmentTier,
-          tier: Number(MM.enchantmentTier.slice(-1)),
-          named: MM.named,
-          stats: this.stats(MM),
-          effects: MM.effects,
-          coalCost: MM.coalCost,
-          coalShort: null === this.forging && MM.coalCost > this.coal
+          name: VV.displayName,
+          lore: VV.lore,
+          baseSword: VV.baseSword,
+          enchantmentTier: VV.enchantmentTier,
+          tier: Number(VV.enchantmentTier.slice(-1)),
+          named: VV.named,
+          stats: this.stats(VV),
+          effects: VV.effects,
+          coalCost: VV.coalCost,
+          coalShort: null === this.forging && VV.coalCost > this.coal
         }
       }
-      partsFor(MM) {
-        const rM = [];
-        for (const OM of Wi.h) {
-          var iM;
-          const SM = (0, Wi.q)(OM, MM),
-            jM = null !== (iM = this.owned[SM]) && void 0 !== iM ? iM : 0;
-          jM > 0 && rM.push({
-            material: OM,
-            itemName: SM,
-            owned: jM,
-            selected: this.selected[MM] === OM,
+      partsFor(VV) {
+        const eV = [];
+        for (const JV of Gx.g) {
+          var xV;
+          const YV = (0, Gx.p)(JV, VV),
+            UV = null !== (xV = this.owned[YV]) && void 0 !== xV ? xV : 0;
+          UV > 0 && eV.push({
+            material: JV,
+            itemName: YV,
+            owned: UV,
+            selected: this.selected[VV] === JV,
             placeholder: !1
           })
         }
-        if (0 === rM.length) {
-          const iM = Wi.h[0];
-          rM.push({
-            material: iM,
-            itemName: (0, Wi.q)(iM, MM),
+        if (0 === eV.length) {
+          const xV = Gx.g[0];
+          eV.push({
+            material: xV,
+            itemName: (0, Gx.p)(xV, VV),
             owned: 0,
             selected: !1,
             placeholder: !0
           })
         }
-        return rM
+        return eV
       }
-      stats(MM) {
-        const rM = [{
+      stats(VV) {
+        const eV = [{
           label: this.translate("skyblockGame:forgeStatPower"),
-          value: `\xd7${MM.powerMultiplier.toFixed(2)}`,
-          better: MM.powerMultiplier > 1
+          value: `\xd7${VV.powerMultiplier.toFixed(2)}`,
+          better: VV.powerMultiplier > 1
         }, {
           label: this.translate("skyblockGame:forgeStatDamage"),
-          value: `\xd7${MM.damageMultiplier.toFixed(2)}`,
-          better: MM.damageMultiplier > 1
+          value: `\xd7${VV.damageMultiplier.toFixed(2)}`,
+          better: VV.damageMultiplier > 1
         }, {
           label: this.translate("skyblockGame:forgeStatSpeed"),
-          value: `\xd7${(1/MM.cooldownMultiplier).toFixed(2)}`,
-          better: MM.cooldownMultiplier < 1
+          value: `\xd7${(1/VV.cooldownMultiplier).toFixed(2)}`,
+          better: VV.cooldownMultiplier < 1
         }, {
           label: this.translate("skyblockGame:forgeStatKnockback"),
-          value: `\xd7${MM.knockbackMultiplier.toFixed(2)}`,
-          better: MM.knockbackMultiplier > 1
+          value: `\xd7${VV.knockbackMultiplier.toFixed(2)}`,
+          better: VV.knockbackMultiplier > 1
         }];
-        return MM.reachBonus > 0 && rM.push({
+        return VV.reachBonus > 0 && eV.push({
           label: this.translate("skyblockGame:forgeStatReach"),
-          value: `+${MM.reachBonus.toFixed(1)}`,
+          value: `+${VV.reachBonus.toFixed(1)}`,
           better: !0
-        }), MM.damageReduction > 0 && rM.push({
+        }), VV.damageReduction > 0 && eV.push({
           label: this.translate("skyblockGame:forgeStatDefence"),
-          value: `${Math.round(100*MM.damageReduction)}%`,
+          value: `${Math.round(100*VV.damageReduction)}%`,
           better: !0
-        }), rM
+        }), eV
       }
       selectedParts() {
         const {
-          Blade: MM,
-          Guard: rM,
-          Handle: iM
+          Blade: VV,
+          Guard: eV,
+          Handle: xV
         } = this.selected;
-        return null === MM || null === rM || null === iM ? null : {
-          blade: MM,
-          guard: rM,
-          handle: iM
+        return null === VV || null === eV || null === xV ? null : {
+          blade: VV,
+          guard: eV,
+          handle: xV
         }
       }
-      keepSelectionOwned(MM) {
-        for (const iM of Wi.l) {
-          var rM;
-          const OM = this.selected[iM];
-          if (null !== OM && (null !== (rM = this.owned[(0, Wi.q)(OM, iM)]) && void 0 !== rM ? rM : 0) > 0) continue;
-          if (!MM) {
-            this.selected[iM] = null;
+      keepSelectionOwned(VV) {
+        for (const xV of Gx.l) {
+          var eV;
+          const JV = this.selected[xV];
+          if (null !== JV && (null !== (eV = this.owned[(0, Gx.p)(JV, xV)]) && void 0 !== eV ? eV : 0) > 0) continue;
+          if (!VV) {
+            this.selected[xV] = null;
             continue
           }
-          const SM = [...Wi.h].reverse().find((MM => {
-            var rM;
-            return (null !== (rM = this.owned[(0, Wi.q)(MM, iM)]) && void 0 !== rM ? rM : 0) > 0
+          const YV = [...Gx.g].reverse().find((VV => {
+            var eV;
+            return (null !== (eV = this.owned[(0, Gx.p)(VV, xV)]) && void 0 !== eV ? eV : 0) > 0
           }));
-          this.selected[iM] = null !== SM && void 0 !== SM ? SM : null
+          this.selected[xV] = null !== YV && void 0 !== YV ? YV : null
         }
       }
       dispose() {
         this.received = !1, this.dropForge(), this.dropArrival(), this.clearReplyTimeout(), null !== this.pacing && (clearTimeout(this.pacing), this.pacing = null), super.dispose()
       }
     }
-    const Ti = "skyblockSmugglerView",
-      Vi = {
+    const sx = "skyblockSmugglerView",
+      Sx = {
         "Red Firecracker Pebble": "skyblockGame:mortarStrike",
         "Purple Firecracker Pebble": "skyblockGame:interdimensionalStrike"
       };
-    class ci extends nM {
-      constructor(MM, rM, iM, OM, SM) {
-        let jM = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : Date.now;
-        super(MM, iM, OM), this.translate = rM, this.requestBuy = SM, this.now = jM, this.snapshot = void 0, this.day = 0, this.deals = [], this.rivets = 0, this.crests = 0, this.soldOut = new Set, this.rotatesAtMs = 0, this.received = !1, this.awaitingReply = !1, this.pacing = null, this.replyTimeout = null, this.countdown = null, this.status = null, this.boughtSlot = null, this.boughtCount = 0, this.itemName = MM => MM, this.onBought = null, this.buy = MM => {
-          const rM = this.deals[MM];
-          void 0 !== rM && !this.isPending() && this.open && !this.soldOut.has(MM) && this.canAfford(rM) && (this.awaitingReply = !0, this.pacing = setTimeout((() => {
+    class Ix extends QV {
+      constructor(VV, eV, xV, JV, YV) {
+        let UV = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : Date.now;
+        super(VV, xV, JV), this.translate = eV, this.requestBuy = YV, this.now = UV, this.snapshot = void 0, this.day = 0, this.deals = [], this.rivets = 0, this.crests = 0, this.soldOut = new Set, this.rotatesAtMs = 0, this.received = !1, this.awaitingReply = !1, this.pacing = null, this.replyTimeout = null, this.countdown = null, this.status = null, this.boughtSlot = null, this.boughtCount = 0, this.itemName = VV => VV, this.onBought = null, this.buy = VV => {
+          const eV = this.deals[VV];
+          void 0 !== eV && !this.isPending() && this.open && !this.soldOut.has(VV) && this.canAfford(eV) && (this.awaitingReply = !0, this.pacing = setTimeout((() => {
             this.pacing = null, this.emit()
           }), 2500), this.replyTimeout = setTimeout((() => {
             this.replyTimeout = null, this.awaitingReply = !1, this.emit()
-          }), 8e3), this.emit(), this.requestBuy(this.day, MM))
+          }), 8e3), this.emit(), this.requestBuy(this.day, VV))
         }, this.snapshot = this.buildSnapshot()
       }
-      GL(MM) {
-        if (this.received = !0, this.day = MM.smugglerDay, this.deals = MM.smugglerDeals, this.rivets = MM.smugglerRivetsOwned, this.crests = MM.smugglerCrestsOwned, this.soldOut = new Set(MM.smugglerSoldOutSlots), this.rotatesAtMs = this.now() + MM.smugglerRotatesInMs, this.awaitingReply = !1, this.clearReplyTimeout(), "open" === MM.smugglerMessageKind) return this.status = null, this.boughtSlot = null, this.show(), void this.startCountdown();
-        if (this.boughtSlot = MM.smugglerBoughtSlot, null !== MM.smugglerBoughtSlot) {
-          var rM, iM;
-          const OM = this.deals[MM.smugglerBoughtSlot];
+      RZ(VV) {
+        if (this.received = !0, this.day = VV.smugglerDay, this.deals = VV.smugglerDeals, this.rivets = VV.smugglerRivetsOwned, this.crests = VV.smugglerCrestsOwned, this.soldOut = new Set(VV.smugglerSoldOutSlots), this.rotatesAtMs = this.now() + VV.smugglerRotatesInMs, this.awaitingReply = !1, this.clearReplyTimeout(), "open" === VV.smugglerMessageKind) return this.status = null, this.boughtSlot = null, this.show(), void this.startCountdown();
+        if (this.boughtSlot = VV.smugglerBoughtSlot, null !== VV.smugglerBoughtSlot) {
+          var eV, xV;
+          const JV = this.deals[VV.smugglerBoughtSlot];
           this.status = {
             tone: "bought",
             key: "skyblockGame:smugglerBought",
             params: {
-              item: void 0 === OM ? "" : this.dealName(OM),
-              amount: String(null !== (rM = null === OM || void 0 === OM ? void 0 : OM.smugglerDealAmount) && void 0 !== rM ? rM : 0)
+              item: void 0 === JV ? "" : this.dealName(JV),
+              amount: String(null !== (eV = null === JV || void 0 === JV ? void 0 : JV.smugglerDealAmount) && void 0 !== eV ? eV : 0)
             }
-          }, this.boughtCount++, null === (iM = this.onBought) || void 0 === iM || iM.call(this)
-        } else null !== MM.smugglerRefusalKey && (this.status = {
+          }, this.boughtCount++, null === (xV = this.onBought) || void 0 === xV || xV.call(this)
+        } else null !== VV.smugglerRefusalKey && (this.status = {
           tone: "refused",
-          key: MM.smugglerRefusalKey,
+          key: VV.smugglerRefusalKey,
           params: {}
         });
         this.emit()
       }
-      setTranslator(MM, rM, iM) {
-        this.translate = MM, void 0 !== iM && (this.itemName = iM), this.emit()
+      setTranslator(VV, eV, xV) {
+        this.translate = VV, void 0 !== xV && (this.itemName = xV), this.emit()
       }
       isEnabled() {
         return this.received
@@ -3153,13 +3119,13 @@ export const modules = {
       onClosed() {
         this.status = null, this.boughtSlot = null, this.awaitingReply = !1, this.clearReplyTimeout(), this.stopCountdown(), this.boughtCount = 0
       }
-      dealName(MM) {
-        if (null !== MM.smugglerDealUniqueName) return MM.smugglerDealUniqueName;
-        const rM = Vi[MM.smugglerDealItem];
-        return void 0 === rM ? this.itemName(MM.smugglerDealItem) : this.translate(rM)
+      dealName(VV) {
+        if (null !== VV.smugglerDealUniqueName) return VV.smugglerDealUniqueName;
+        const eV = Sx[VV.smugglerDealItem];
+        return void 0 === eV ? this.itemName(VV.smugglerDealItem) : this.translate(eV)
       }
-      canAfford(MM) {
-        return MM.smugglerDealRivets <= this.rivets && MM.smugglerDealCrests <= this.crests
+      canAfford(VV) {
+        return VV.smugglerDealRivets <= this.rivets && VV.smugglerDealCrests <= this.crests
       }
       isPending() {
         return this.awaitingReply || null !== this.pacing
@@ -3176,29 +3142,29 @@ export const modules = {
         null !== this.replyTimeout && (clearTimeout(this.replyTimeout), this.replyTimeout = null)
       }
       rotatesText() {
-        const MM = Math.ceil((this.rotatesAtMs - this.now()) / 6e4);
-        return MM <= 0 ? this.translate("skyblockGame:smugglerRotatesSoon") : MM < 60 ? this.translate("skyblockGame:smugglerRotatesMinutes", {
-          minutes: String(MM)
+        const VV = Math.ceil((this.rotatesAtMs - this.now()) / 6e4);
+        return VV <= 0 ? this.translate("skyblockGame:smugglerRotatesSoon") : VV < 60 ? this.translate("skyblockGame:smugglerRotatesMinutes", {
+          minutes: String(VV)
         }) : this.translate("skyblockGame:smugglerRotatesHours", {
-          hours: String(Math.floor(MM / 60)),
-          minutes: String(MM % 60)
+          hours: String(Math.floor(VV / 60)),
+          minutes: String(VV % 60)
         })
       }
       buildSnapshot() {
         return {
           enabled: this.received,
           open: this.open,
-          deals: this.deals.map(((MM, rM) => ({
-            slot: rM,
-            itemName: MM.smugglerDealItem,
-            displayName: this.dealName(MM),
-            enchantmentTier: MM.smugglerDealEnchantmentTier,
-            amount: MM.smugglerDealAmount,
-            rivets: MM.smugglerDealRivets,
-            crests: MM.smugglerDealCrests,
-            affordable: this.canAfford(MM),
-            soldOut: this.soldOut.has(rM),
-            justBought: this.boughtSlot === rM
+          deals: this.deals.map(((VV, eV) => ({
+            slot: eV,
+            itemName: VV.smugglerDealItem,
+            displayName: this.dealName(VV),
+            enchantmentTier: VV.smugglerDealEnchantmentTier,
+            amount: VV.smugglerDealAmount,
+            rivets: VV.smugglerDealRivets,
+            crests: VV.smugglerDealCrests,
+            affordable: this.canAfford(VV),
+            soldOut: this.soldOut.has(eV),
+            justBought: this.boughtSlot === eV
           }))),
           rivetsOwned: this.rivets,
           crestsOwned: this.crests,
@@ -3215,56 +3181,56 @@ export const modules = {
         this.received = !1, this.clearReplyTimeout(), this.stopCountdown(), null !== this.pacing && (clearTimeout(this.pacing), this.pacing = null), super.dispose()
       }
     }
-    const MO = "skyblockPassageView",
-      rO = {
+    const dx = "skyblockPassageView",
+      Ox = {
         new: "skyblockGame:passagePhaseNew",
         waxing: "skyblockGame:passagePhaseWaxing",
         full: "skyblockGame:passagePhaseFull",
         waning: "skyblockGame:passagePhaseWaning"
       };
 
-    function iO(MM, rM) {
-      return MM(rO[rM])
+    function VJ(VV, eV) {
+      return VV(Ox[eV])
     }
 
-    function OO(MM, rM, iM, OM) {
-      const SM = Math.ceil((iM - OM) / 864e5),
-        jM = iO(MM, rM);
-      return SM > 1 ? MM("skyblockGame:passageNextDays", {
-        phase: jM,
-        days: String(SM)
-      }) : MM("skyblockGame:passageNextSoon", {
-        phase: jM
+    function eJ(VV, eV, xV, JV) {
+      const YV = Math.ceil((xV - JV) / 864e5),
+        UV = VJ(VV, eV);
+      return YV > 1 ? VV("skyblockGame:passageNextDays", {
+        phase: UV,
+        days: String(YV)
+      }) : VV("skyblockGame:passageNextSoon", {
+        phase: UV
       })
     }
-    class SO extends nM {
-      constructor(MM, rM, iM, OM) {
-        let SM = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : Date.now;
-        super(MM, iM, OM), this.translate = rM, this.now = SM, this.snapshot = void 0, this.message = null, this.receivedAtMs = 0, this.itemName = MM => MM, this.toggle = () => {
+    class xJ extends QV {
+      constructor(VV, eV, xV, JV) {
+        let YV = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : Date.now;
+        super(VV, xV, JV), this.translate = eV, this.now = YV, this.snapshot = void 0, this.message = null, this.receivedAtMs = 0, this.itemName = VV => VV, this.toggle = () => {
           this.open ? this.dismiss() : this.show()
         }, this.snapshot = this.buildSnapshot()
       }
-      GL(MM) {
-        this.message = MM, this.receivedAtMs = this.now(), this.emit()
+      RZ(VV) {
+        this.message = VV, this.receivedAtMs = this.now(), this.emit()
       }
-      setTranslator(MM, rM, iM) {
-        this.translate = MM, void 0 !== iM && (this.itemName = iM), this.emit()
+      setTranslator(VV, eV, xV) {
+        this.translate = VV, void 0 !== xV && (this.itemName = xV), this.emit()
       }
       isEnabled() {
         return null !== this.message
       }
-      describe(MM) {
+      describe(VV) {
         return {
-          itemName: MM.passageFish,
-          displayName: this.itemName(MM.passageFish),
+          itemName: VV.passageFish,
+          displayName: this.itemName(VV.passageFish),
           where: this.translate("skyblockGame:passageInWater", {
-            water: this.translate(MM.passageFishWaterKey)
+            water: this.translate(VV.passageFishWaterKey)
           })
         }
       }
       buildSnapshot() {
-        const MM = this.message;
-        return null === MM ? {
+        const VV = this.message;
+        return null === VV ? {
           enabled: !1,
           open: !1,
           phase: "new",
@@ -3276,43 +3242,43 @@ export const modules = {
         } : {
           enabled: !0,
           open: this.open,
-          phase: MM.passagePhase,
-          phaseName: iO(this.translate, MM.passagePhase),
-          visitors: MM.passageVisitors.map((MM => this.describe(MM))),
-          resting: this.describe(MM.passageResting),
-          nextPhase: MM.passageNextPhase,
-          next: OO(this.translate, MM.passageNextPhase, MM.passageTurnsInMs, this.now() - this.receivedAtMs)
+          phase: VV.passagePhase,
+          phaseName: VJ(this.translate, VV.passagePhase),
+          visitors: VV.passageVisitors.map((VV => this.describe(VV))),
+          resting: this.describe(VV.passageResting),
+          nextPhase: VV.passageNextPhase,
+          next: eJ(this.translate, VV.passageNextPhase, VV.passageTurnsInMs, this.now() - this.receivedAtMs)
         }
       }
       dispose() {
         this.message = null, super.dispose()
       }
     }
-    var jO = iM(39578);
-    const aO = "skyblockKeepersChairView";
-    class PO extends nM {
-      constructor(MM, rM, iM, OM, SM) {
-        let jM = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : Date.now,
-          aM = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : new jO.e;
-        super(MM, iM, OM), this.translate = rM, this.requestAim = SM, this.now = jM, this.pacer = aM, this.snapshot = void 0, this.islands = [], this.favoured = null, this.received = !1, this.awaitingReply = !1, this.unsubscribePacer = void 0, this.replyTimeout = null, this.status = null, this.aimedCount = 0, this.passage = null, this.passageReceivedAtMs = 0, this.atChair = !0, this.itemName = MM => MM, this.aim = MM => {
-          !this.awaitingReply && this.open && this.atChair && MM !== this.favoured && (null === MM || this.islands.some((rM => rM.keepersChairIslandId === MM && rM.keepersChairIslandRelit))) && this.pacer.tryStart() && (this.awaitingReply = !0, this.replyTimeout = setTimeout((() => {
+    var JJ = xV(39728);
+    const YJ = "skyblockKeepersChairView";
+    class UJ extends QV {
+      constructor(VV, eV, xV, JV, YV) {
+        let UV = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : Date.now,
+          yV = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : new JJ.c;
+        super(VV, xV, JV), this.translate = eV, this.requestAim = YV, this.now = UV, this.pacer = yV, this.snapshot = void 0, this.islands = [], this.favoured = null, this.received = !1, this.awaitingReply = !1, this.unsubscribePacer = void 0, this.replyTimeout = null, this.status = null, this.aimedCount = 0, this.passage = null, this.passageReceivedAtMs = 0, this.atChair = !0, this.itemName = VV => VV, this.aim = VV => {
+          !this.awaitingReply && this.open && this.atChair && VV !== this.favoured && (null === VV || this.islands.some((eV => eV.keepersChairIslandId === VV && eV.keepersChairIslandRelit))) && this.pacer.tryStart() && (this.awaitingReply = !0, this.replyTimeout = setTimeout((() => {
             this.replyTimeout = null, this.awaitingReply = !1, this.emit()
-          }), 8e3), this.emit(), this.requestAim(null !== MM && void 0 !== MM ? MM : "none"))
-        }, this.snapshot = this.buildSnapshot(), this.unsubscribePacer = aM.subscribe((() => {
+          }), 8e3), this.emit(), this.requestAim(null !== VV && void 0 !== VV ? VV : "none"))
+        }, this.snapshot = this.buildSnapshot(), this.unsubscribePacer = yV.subscribe((() => {
           this.emit()
         }))
       }
-      GL(MM) {
-        var rM, iM;
+      RZ(VV) {
+        var eV, xV;
         this.received = !0;
-        const OM = this.favoured,
-          SM = this.atChair;
-        var jM;
-        return this.islands = MM.keepersChairIslands, this.favoured = MM.keepersChairFavoured, this.passage = null !== (rM = MM.keepersChairPassage) && void 0 !== rM ? rM : null, this.passageReceivedAtMs = this.now(), this.atChair = null === (iM = MM.keepersChairAtChair) || void 0 === iM || iM, "place" === MM.keepersChairMessageKind ? (!SM && this.atChair && "refused" === (null === (jM = this.status) || void 0 === jM ? void 0 : jM.tone) && (this.status = null), void this.emit()) : (this.awaitingReply = !1, this.clearReplyTimeout(), "open" === MM.keepersChairMessageKind ? (this.status = null, void this.show()) : void(this.open ? (null !== MM.keepersChairRefusalKey ? this.status = {
+        const JV = this.favoured,
+          YV = this.atChair;
+        var UV;
+        return this.islands = VV.keepersChairIslands, this.favoured = VV.keepersChairFavoured, this.passage = null !== (eV = VV.keepersChairPassage) && void 0 !== eV ? eV : null, this.passageReceivedAtMs = this.now(), this.atChair = null === (xV = VV.keepersChairAtChair) || void 0 === xV || xV, "place" === VV.keepersChairMessageKind ? (!YV && this.atChair && "refused" === (null === (UV = this.status) || void 0 === UV ? void 0 : UV.tone) && (this.status = null), void this.emit()) : (this.awaitingReply = !1, this.clearReplyTimeout(), "open" === VV.keepersChairMessageKind ? (this.status = null, void this.show()) : void(this.open ? (null !== VV.keepersChairRefusalKey ? this.status = {
           tone: "refused",
-          key: MM.keepersChairRefusalKey,
+          key: VV.keepersChairRefusalKey,
           island: null
-        } : this.favoured !== OM && (this.status = null === this.favoured ? {
+        } : this.favoured !== JV && (this.status = null === this.favoured ? {
           tone: "aimed",
           key: "skyblockGame:keepersChairRestedStatus",
           island: null
@@ -3325,11 +3291,11 @@ export const modules = {
       isAtChair() {
         return this.atChair
       }
-      receivePassage(MM) {
-        this.received && (this.passage = MM, this.passageReceivedAtMs = this.now(), this.emit())
+      receivePassage(VV) {
+        this.received && (this.passage = VV, this.passageReceivedAtMs = this.now(), this.emit())
       }
-      setTranslator(MM, rM, iM) {
-        this.translate = MM, void 0 !== iM && (this.itemName = iM), this.emit()
+      setTranslator(VV, eV, xV) {
+        this.translate = VV, void 0 !== xV && (this.itemName = xV), this.emit()
       }
       isEnabled() {
         return this.received
@@ -3343,47 +3309,47 @@ export const modules = {
       clearReplyTimeout() {
         null !== this.replyTimeout && (clearTimeout(this.replyTimeout), this.replyTimeout = null)
       }
-      islandName(MM) {
-        const rM = this.islands.find((rM => rM.keepersChairIslandId === MM));
-        return void 0 === rM ? MM : this.translate(rM.keepersChairIslandNameKey)
+      islandName(VV) {
+        const eV = this.islands.find((eV => eV.keepersChairIslandId === VV));
+        return void 0 === eV ? VV : this.translate(eV.keepersChairIslandNameKey)
       }
       buildSnapshot() {
-        const MM = this.atChair ? this.status : {
+        const VV = this.atChair ? this.status : {
             tone: "refused",
             key: "skyblockGame:keepersChairTooFar",
             island: null
           },
-          rM = this.passage;
+          eV = this.passage;
         return {
           enabled: this.received,
           open: this.open,
-          islands: this.islands.map((MM => {
-            const rM = MM.keepersChairFeaturedFish;
+          islands: this.islands.map((VV => {
+            const eV = VV.keepersChairFeaturedFish;
             return {
-              id: MM.keepersChairIslandId,
-              name: this.translate(MM.keepersChairIslandNameKey),
-              relit: MM.keepersChairIslandRelit,
-              featuredFish: null === rM ? null : {
-                itemName: rM,
-                displayName: this.itemName(rM)
+              id: VV.keepersChairIslandId,
+              name: this.translate(VV.keepersChairIslandNameKey),
+              relit: VV.keepersChairIslandRelit,
+              featuredFish: null === eV ? null : {
+                itemName: eV,
+                displayName: this.itemName(eV)
               },
-              favoured: MM.keepersChairIslandId === this.favoured
+              favoured: VV.keepersChairIslandId === this.favoured
             }
           })),
           aimed: null !== this.favoured,
           canAim: this.atChair && !this.isPending(),
-          status: null === MM ? null : {
-            tone: MM.tone,
-            text: this.translate(MM.key, null === MM.island ? void 0 : {
-              island: this.islandName(MM.island)
+          status: null === VV ? null : {
+            tone: VV.tone,
+            text: this.translate(VV.key, null === VV.island ? void 0 : {
+              island: this.islandName(VV.island)
             })
           },
           aimedCount: this.aimedCount,
-          almanac: null === rM ? null : {
-            phase: rM.keepersChairPassagePhase,
-            phaseName: iO(this.translate, rM.keepersChairPassagePhase),
-            nextPhase: rM.keepersChairPassageNextPhase,
-            next: OO(this.translate, rM.keepersChairPassageNextPhase, rM.keepersChairPassageTurnsInMs, this.now() - this.passageReceivedAtMs)
+          almanac: null === eV ? null : {
+            phase: eV.keepersChairPassagePhase,
+            phaseName: VJ(this.translate, eV.keepersChairPassagePhase),
+            nextPhase: eV.keepersChairPassageNextPhase,
+            next: eJ(this.translate, eV.keepersChairPassageNextPhase, eV.keepersChairPassageTurnsInMs, this.now() - this.passageReceivedAtMs)
           }
         }
       }
@@ -3391,63 +3357,63 @@ export const modules = {
         this.received = !1, this.passage = null, this.atChair = !0, this.clearReplyTimeout(), this.unsubscribePacer(), super.dispose()
       }
     }
-    const nO = "skyblockReachLogView",
-      QO = ["skyblockGame:reachLogBronze", "skyblockGame:reachLogSilver", "skyblockGame:reachLogGold"],
-      zO = "Caught Fish",
-      LO = [1, 2, 4];
+    const yJ = "skyblockReachLogView",
+      pJ = ["skyblockGame:reachLogBronze", "skyblockGame:reachLogSilver", "skyblockGame:reachLogGold"],
+      QJ = "Caught Fish",
+      nJ = [1, 2, 4];
 
-    function mO(MM, rM) {
-      return MM.map((MM => ({
-        ...MM,
-        reachLogPageFish: MM.reachLogPageFish.map((MM => ({
-          ...MM,
-          reachLogFishFresh: rM(MM)
+    function wJ(VV, eV) {
+      return VV.map((VV => ({
+        ...VV,
+        reachLogPageFish: VV.reachLogPageFish.map((VV => ({
+          ...VV,
+          reachLogFishFresh: eV(VV)
         })))
       })))
     }
-    class HO extends nM {
-      constructor(MM, rM, iM, OM, SM) {
-        let jM = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : new jO.e;
-        super(MM, iM, OM), this.translate = rM, this.requestOpen = SM, this.pacer = jM, this.snapshot = void 0, this.pages = [], this.pagesCurrent = !1, this.serverFresh = 0, this.passagePhase = null, this.heldFresh = new Set, this.shown = !1, this.received = !1, this.selected = null, this.letGoShown = !1, this.awaitingReply = !1, this.replyTimeout = null, this.newsToken = 0, this.news = !1, this.pageViews = null, this.newsTimeout = null, this.unsubscribePacer = void 0, this.itemName = MM => MM, this.ask = () => {
+    class ZJ extends QV {
+      constructor(VV, eV, xV, JV, YV) {
+        let UV = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : new JJ.c;
+        super(VV, xV, JV), this.translate = eV, this.requestOpen = YV, this.pacer = UV, this.snapshot = void 0, this.pages = [], this.pagesCurrent = !1, this.serverFresh = 0, this.passagePhase = null, this.heldFresh = new Set, this.shown = !1, this.received = !1, this.selected = null, this.letGoShown = !1, this.awaitingReply = !1, this.replyTimeout = null, this.newsToken = 0, this.news = !1, this.pageViews = null, this.newsTimeout = null, this.unsubscribePacer = void 0, this.itemName = VV => VV, this.ask = () => {
           !this.received || this.open || this.awaitingReply || (this.pagesCurrent && 0 === this.serverFresh ? this.showPages() : this.pacer.tryStart() && (this.awaitingReply = !0, this.replyTimeout = setTimeout((() => {
             this.replyTimeout = null, this.awaitingReply = !1, this.emit()
           }), 8e3), this.emit(), this.requestOpen()))
-        }, this.selectPage = MM => {
-          this.pages.some((rM => rM.reachLogIslandId === MM)) && (this.selected = MM, this.emit())
-        }, this.snapshot = this.buildSnapshot(), this.unsubscribePacer = jM.subscribe((() => {
+        }, this.selectPage = VV => {
+          this.pages.some((eV => eV.reachLogIslandId === VV)) && (this.selected = VV, this.emit())
+        }, this.snapshot = this.buildSnapshot(), this.unsubscribePacer = UV.subscribe((() => {
           this.emit()
         }))
       }
-      GL(MM) {
-        if (this.received = !0, "status" === MM.reachLogMessageKind) return !0 === MM.reachLogNews && this.markNews(), this.serverFresh = MM.reachLogFreshCount, this.pagesCurrent = !1, void this.emit();
-        const rM = this.awaitingReply;
-        if (this.awaitingReply = !1, this.clearReplyTimeout(), "unavailable" !== MM.reachLogMessageKind)
-          if (this.pageViews = null, this.pages = mO(MM.reachLogPages, (MM => MM.reachLogFishFresh || this.heldFresh.has(MM.reachLogFishItem))), this.letGoShown = MM.reachLogLetGoRibbonShown, this.pagesCurrent = !0, this.serverFresh = 0, rM) this.showPages();
+      RZ(VV) {
+        if (this.received = !0, "status" === VV.reachLogMessageKind) return !0 === VV.reachLogNews && this.markNews(), this.serverFresh = VV.reachLogFreshCount, this.pagesCurrent = !1, void this.emit();
+        const eV = this.awaitingReply;
+        if (this.awaitingReply = !1, this.clearReplyTimeout(), "unavailable" !== VV.reachLogMessageKind)
+          if (this.pageViews = null, this.pages = wJ(VV.reachLogPages, (VV => VV.reachLogFishFresh || this.heldFresh.has(VV.reachLogFishItem))), this.letGoShown = VV.reachLogLetGoRibbonShown, this.pagesCurrent = !0, this.serverFresh = 0, eV) this.showPages();
           else {
-            for (const MM of this.pages)
-              for (const rM of MM.reachLogPageFish) rM.reachLogFishFresh && this.heldFresh.add(rM.reachLogFishItem);
+            for (const VV of this.pages)
+              for (const eV of VV.reachLogPageFish) eV.reachLogFishFresh && this.heldFresh.add(eV.reachLogFishItem);
             this.emit()
           }
         else this.emit()
       }
-      setTranslator(MM, rM, iM) {
-        this.translate = MM, this.pageViews = null, void 0 !== iM && (this.itemName = iM), this.emit()
+      setTranslator(VV, eV, xV) {
+        this.translate = VV, this.pageViews = null, void 0 !== xV && (this.itemName = xV), this.emit()
       }
       isEnabled() {
         return this.received
       }
       onClosed() {
-        this.shown && (this.shown = !1, this.pageViews = null, this.pages = mO(this.pages, (() => !1)))
+        this.shown && (this.shown = !1, this.pageViews = null, this.pages = wJ(this.pages, (() => !1)))
       }
       showPages() {
         this.heldFresh.clear(), this.selected = this.pickPage(), this.show(), this.shown = this.isOpen()
       }
       pickPage() {
-        var MM, rM, iM, OM;
-        const SM = this.pages.find((MM => MM.reachLogPageFish.some((MM => MM.reachLogFishFresh))));
-        if (void 0 !== SM) return SM.reachLogIslandId;
-        if (null !== this.selected && this.pages.some((MM => MM.reachLogIslandId === this.selected))) return this.selected;
-        return null !== (MM = null !== (rM = null === (iM = this.pages.filter((MM => MM.reachLogIslandAwake)).at(-1)) || void 0 === iM ? void 0 : iM.reachLogIslandId) && void 0 !== rM ? rM : null === (OM = this.pages[0]) || void 0 === OM ? void 0 : OM.reachLogIslandId) && void 0 !== MM ? MM : null
+        var VV, eV, xV, JV;
+        const YV = this.pages.find((VV => VV.reachLogPageFish.some((VV => VV.reachLogFishFresh))));
+        if (void 0 !== YV) return YV.reachLogIslandId;
+        if (null !== this.selected && this.pages.some((VV => VV.reachLogIslandId === this.selected))) return this.selected;
+        return null !== (VV = null !== (eV = null === (xV = this.pages.filter((VV => VV.reachLogIslandAwake)).at(-1)) || void 0 === xV ? void 0 : xV.reachLogIslandId) && void 0 !== eV ? eV : null === (JV = this.pages[0]) || void 0 === JV ? void 0 : JV.reachLogIslandId) && void 0 !== VV ? VV : null
       }
       markNews() {
         this.newsToken++, this.news = !0, this.clearNewsTimeout(), this.newsTimeout = setTimeout((() => {
@@ -3474,119 +3440,119 @@ export const modules = {
         }
       }
       buildPages() {
-        return this.pages.map((MM => {
-          var rM;
+        return this.pages.map((VV => {
+          var eV;
           return {
-            id: MM.reachLogIslandId,
-            name: this.translate(MM.reachLogIslandNameKey),
-            awake: MM.reachLogIslandAwake,
-            gold: MM.reachLogPageGold,
-            caught: MM.reachLogPageFish.filter((MM => MM.reachLogFishCaught && !MM.reachLogFishVisitor)).length,
-            total: MM.reachLogPageFish.filter((MM => !MM.reachLogFishVisitor)).length,
-            fish: MM.reachLogPageFish.map((MM => {
-              const rM = MM.reachLogFishBestKg;
+            id: VV.reachLogIslandId,
+            name: this.translate(VV.reachLogIslandNameKey),
+            awake: VV.reachLogIslandAwake,
+            gold: VV.reachLogPageGold,
+            caught: VV.reachLogPageFish.filter((VV => VV.reachLogFishCaught && !VV.reachLogFishVisitor)).length,
+            total: VV.reachLogPageFish.filter((VV => !VV.reachLogFishVisitor)).length,
+            fish: VV.reachLogPageFish.map((VV => {
+              const eV = VV.reachLogFishBestKg;
               return {
-                itemName: MM.reachLogFishItem,
-                name: MM.reachLogFishCaught ? this.itemName(MM.reachLogFishItem) : this.translate("skyblockGame:reachLogUnknownFish"),
-                caught: MM.reachLogFishCaught,
+                itemName: VV.reachLogFishItem,
+                name: VV.reachLogFishCaught ? this.itemName(VV.reachLogFishItem) : this.translate("skyblockGame:reachLogUnknownFish"),
+                caught: VV.reachLogFishCaught,
                 chance: this.translate("skyblockGame:reachLogChance", {
-                  count: Math.max(1, Math.round(1 / MM.reachLogFishChance))
+                  count: Math.max(1, Math.round(1 / VV.reachLogFishChance))
                 }),
-                best: MM.reachLogFishCaught ? null === rM ? this.translate("skyblockGame:reachLogNoSize") : this.translate("skyblockGame:reachLogBest", {
-                  kg: rM.toFixed(1)
+                best: VV.reachLogFishCaught ? null === eV ? this.translate("skyblockGame:reachLogNoSize") : this.translate("skyblockGame:reachLogBest", {
+                  kg: eV.toFixed(1)
                 }) : this.translate("skyblockGame:reachLogNotCaught"),
-                marks: MM.reachLogFishMarks,
-                ribbons: LO.map((rM => 0 !== (MM.reachLogFishRibbons & rM))),
-                glimmer: 0 !== (8 & MM.reachLogFishRibbons),
-                halo: 0 !== (32 & MM.reachLogFishRibbons),
-                fresh: MM.reachLogFishFresh,
-                visitor: MM.reachLogFishVisitor
+                marks: VV.reachLogFishMarks,
+                ribbons: nJ.map((eV => 0 !== (VV.reachLogFishRibbons & eV))),
+                glimmer: 0 !== (8 & VV.reachLogFishRibbons),
+                halo: 0 !== (32 & VV.reachLogFishRibbons),
+                fresh: VV.reachLogFishFresh,
+                visitor: VV.reachLogFishVisitor
               }
             })),
-            returner: this.buildReturner(null !== (rM = MM.reachLogPageReturner) && void 0 !== rM ? rM : null)
+            returner: this.buildReturner(null !== (eV = VV.reachLogPageReturner) && void 0 !== eV ? eV : null)
           }
         }))
       }
-      buildReturner(MM) {
-        return null === MM ? null : {
-          itemName: MM.reachLogReturnerFishItem,
-          line: this.translate(MM.reachLogReturnerLineKey, {
-            name: this.translate(MM.reachLogReturnerNameKey),
-            trinket: this.translate(MM.reachLogReturnerTrinketKey)
+      buildReturner(VV) {
+        return null === VV ? null : {
+          itemName: VV.reachLogReturnerFishItem,
+          line: this.translate(VV.reachLogReturnerLineKey, {
+            name: this.translate(VV.reachLogReturnerNameKey),
+            trinket: this.translate(VV.reachLogReturnerTrinketKey)
           }),
-          back: MM.reachLogReturnerBack
+          back: VV.reachLogReturnerBack
         }
       }
-      receivePassagePhase(MM) {
-        null !== this.passagePhase && this.passagePhase !== MM && (this.pagesCurrent = !1), this.passagePhase = MM
+      receivePassagePhase(VV) {
+        null !== this.passagePhase && this.passagePhase !== VV && (this.pagesCurrent = !1), this.passagePhase = VV
       }
       dispose() {
         this.received = !1, this.pagesCurrent = !1, this.passagePhase = null, this.heldFresh.clear(), this.clearReplyTimeout(), this.clearNewsTimeout(), this.unsubscribePacer(), super.dispose()
       }
     }
-    const hO = "skyblockLampLightView";
-    class JO {
-      constructor(MM, rM, iM, OM) {
-        this.Tz = MM, this.translate = rM, this.requestCommand = iM, this.pacer = OM, this.snapshot = void 0, this.message = null, this.shop = null, this.situation = "open", this.awaitingTag = null, this.awaitingOff = !1, this.offQueued = !1, this.offTag = null, this.lastTag = 0, this.replyTimeout = null, this.offTimeout = null, this.refusalKey = null, this.gainedCount = 0, this.lastGained = 0, this.atChair = !0, this.sparkle = null, this.locale = "en", this.dh = !1, this.unsubscribePacer = void 0, this.removePriority = void 0, this.getSnapshot = () => this.snapshot, this.setRelease = MM => {
-          MM ? this.send("release on") : this.awaitingOff || (this.awaitingOff = !0, this.offQueued = !0, this.sendQueuedOff(), this.emit())
-        }, this.buy = MM => {
-          this.send(`buy ${MM}`)
-        }, this.socket = MM => {
-          this.send(`socket ${null!==MM&&void 0!==MM?MM:sM}`)
-        }, this.wearTint = MM => {
-          this.send(`tint ${null!==MM&&void 0!==MM?MM:sM}`)
-        }, this.setSituation = MM => {
-          this.situation = MM, this.emit()
-        }, this.snapshot = this.buildSnapshot(), this.unsubscribePacer = OM.subscribe((() => {
+    const vJ = "skyblockLampLightView";
+    class rJ {
+      constructor(VV, eV, xV, JV) {
+        this.QZ = VV, this.translate = eV, this.requestCommand = xV, this.pacer = JV, this.snapshot = void 0, this.message = null, this.shop = null, this.situation = "open", this.awaitingTag = null, this.awaitingOff = !1, this.offQueued = !1, this.offTag = null, this.lastTag = 0, this.replyTimeout = null, this.offTimeout = null, this.refusalKey = null, this.gainedCount = 0, this.lastGained = 0, this.atChair = !0, this.sparkle = null, this.locale = "en", this.ik = !1, this.unsubscribePacer = void 0, this.removePriority = void 0, this.getSnapshot = () => this.snapshot, this.setRelease = VV => {
+          VV ? this.send("release on") : this.awaitingOff || (this.awaitingOff = !0, this.offQueued = !0, this.sendQueuedOff(), this.emit())
+        }, this.buy = VV => {
+          this.send(`buy ${VV}`)
+        }, this.socket = VV => {
+          this.send(`socket ${null!==VV&&void 0!==VV?VV:gV}`)
+        }, this.wearTint = VV => {
+          this.send(`tint ${null!==VV&&void 0!==VV?VV:gV}`)
+        }, this.setSituation = VV => {
+          this.situation = VV, this.emit()
+        }, this.snapshot = this.buildSnapshot(), this.unsubscribePacer = JV.subscribe((() => {
           this.sendQueuedOff(), this.emit()
-        })), this.removePriority = OM.addPriority({
+        })), this.removePriority = JV.addPriority({
           waiting: () => this.offQueued,
           flush: () => {
             this.sendQueuedOff()
           }
         })
       }
-      GL(MM) {
-        if (this.message = MM, null !== MM.lampLightShop && (this.shop = MM.lampLightShop), "open" === MM.lampLightKind && (this.refusalKey = null), "reply" === MM.lampLightKind) {
-          var rM;
-          const SM = null !== (rM = MM.lampLightReplyTag) && void 0 !== rM ? rM : null,
-            jM = null !== SM && SM === this.offTag;
-          var iM, OM;
-          if (jM ? this.settleOff() : null !== SM && SM !== this.awaitingTag || this.settleReply(), this.refusalKey = MM.lampLightRefusalKey, null !== MM.lampLightBought && !jM) this.sparkle = {
-            id: MM.lampLightBought,
-            count: (null !== (iM = null === (OM = this.sparkle) || void 0 === OM ? void 0 : OM.count) && void 0 !== iM ? iM : 0) + 1
+      RZ(VV) {
+        if (this.message = VV, null !== VV.lampLightShop && (this.shop = VV.lampLightShop), "open" === VV.lampLightKind && (this.refusalKey = null), "reply" === VV.lampLightKind) {
+          var eV;
+          const YV = null !== (eV = VV.lampLightReplyTag) && void 0 !== eV ? eV : null,
+            UV = null !== YV && YV === this.offTag;
+          var xV, JV;
+          if (UV ? this.settleOff() : null !== YV && YV !== this.awaitingTag || this.settleReply(), this.refusalKey = VV.lampLightRefusalKey, null !== VV.lampLightBought && !UV) this.sparkle = {
+            id: VV.lampLightBought,
+            count: (null !== (xV = null === (JV = this.sparkle) || void 0 === JV ? void 0 : JV.count) && void 0 !== xV ? xV : 0) + 1
           }
         }
-        MM.lampLightReleasing || (this.settleOff(), this.gainedCount = 0), "released" === MM.lampLightKind && (this.lastGained = MM.lampLightGained, this.gainedCount++), this.emit()
+        VV.lampLightReleasing || (this.settleOff(), this.gainedCount = 0), "released" === VV.lampLightKind && (this.lastGained = VV.lampLightGained, this.gainedCount++), this.emit()
       }
-      setAtChair(MM) {
-        MM !== this.atChair && (this.atChair = MM, MM && (this.refusalKey = null), this.emit())
+      setAtChair(VV) {
+        VV !== this.atChair && (this.atChair = VV, VV && (this.refusalKey = null), this.emit())
       }
-      setTranslator(MM, rM) {
-        this.translate = MM, this.locale = null !== rM && void 0 !== rM ? rM : this.locale, this.emit()
+      setTranslator(VV, eV) {
+        this.translate = VV, this.locale = null !== eV && void 0 !== eV ? eV : this.locale, this.emit()
       }
       onChairClosed() {
         this.refusalKey = null, this.emit()
       }
       dispose() {
-        this.clearReplyTimeout(), this.settleOff(), this.unsubscribePacer(), this.removePriority(), this.message = null, this.shop = null, this.emit(), this.dh = !0
+        this.clearReplyTimeout(), this.settleOff(), this.unsubscribePacer(), this.removePriority(), this.message = null, this.shop = null, this.emit(), this.ik = !0
       }
-      send(MM) {
-        var rM;
-        if (null !== this.awaitingTag || "ready" !== (null === (rM = this.message) || void 0 === rM ? void 0 : rM.lampLightStatus) || !this.atChair) return;
+      send(VV) {
+        var eV;
+        if (null !== this.awaitingTag || "ready" !== (null === (eV = this.message) || void 0 === eV ? void 0 : eV.lampLightStatus) || !this.atChair) return;
         if (this.sendQueuedOff(), this.offQueued || !this.pacer.tryStart()) return;
-        const iM = this.nextTag();
-        this.awaitingTag = iM, this.replyTimeout = setTimeout((() => {
+        const xV = this.nextTag();
+        this.awaitingTag = xV, this.replyTimeout = setTimeout((() => {
           this.replyTimeout = null, this.awaitingTag = null, this.emit()
-        }), 8e3), this.requestCommand(`lamplight-${MM} ${iM}`), this.emit()
+        }), 8e3), this.requestCommand(`lamplight-${VV} ${xV}`), this.emit()
       }
       sendQueuedOff() {
         if (!this.offQueued || !this.pacer.canSendPriority()) return;
         this.offQueued = !1;
-        const MM = this.nextTag();
-        this.offTag = MM, this.pacer.start(), this.offTimeout = setTimeout((() => {
+        const VV = this.nextTag();
+        this.offTag = VV, this.pacer.start(), this.offTimeout = setTimeout((() => {
           this.offTimeout = null, this.awaitingOff = !1, this.offTag = null, this.emit()
-        }), 8e3), this.requestCommand(`lamplight-release off ${MM}`)
+        }), 8e3), this.requestCommand(`lamplight-release off ${VV}`)
       }
       nextTag() {
         return this.lastTag = this.lastTag % 999999 + 1, this.lastTag
@@ -3604,427 +3570,427 @@ export const modules = {
         null !== this.replyTimeout && (clearTimeout(this.replyTimeout), this.replyTimeout = null)
       }
       emit() {
-        this.dh || (this.snapshot = this.buildSnapshot(), this.Tz(this.snapshot))
+        this.ik || (this.snapshot = this.buildSnapshot(), this.QZ(this.snapshot))
       }
-      formatLight(MM) {
-        return Math.floor(MM).toLocaleString(this.locale)
+      formatLight(VV) {
+        return Math.floor(VV).toLocaleString(this.locale)
       }
-      formatPercent(MM) {
-        const rM = 100 * MM;
-        return rM >= 10 ? Math.round(rM).toLocaleString(this.locale) : rM.toLocaleString(this.locale, {
+      formatPercent(VV) {
+        const eV = 100 * VV;
+        return eV >= 10 ? Math.round(eV).toLocaleString(this.locale) : eV.toLocaleString(this.locale, {
           maximumFractionDigits: 1
         })
       }
-      formatOdds(MM, rM) {
-        if ("bite" === MM) return this.translate("skyblockGame:lampLightBite", {
-          seconds: (rM.lampLightBiteMs / 1e3).toLocaleString(this.locale, {
+      formatOdds(VV, eV) {
+        if ("bite" === VV) return this.translate("skyblockGame:lampLightBite", {
+          seconds: (eV.lampLightBiteMs / 1e3).toLocaleString(this.locale, {
             maximumFractionDigits: 1
           })
         });
-        if ("rare" === MM) return this.translate("skyblockGame:lampLightRare", {
-          percent: this.formatPercent(rM.lampLightRareChance)
+        if ("rare" === VV) return this.translate("skyblockGame:lampLightRare", {
+          percent: this.formatPercent(eV.lampLightRareChance)
         });
-        if ("notice" === MM) return null === rM.lampLightNoticeChance ? null : this.translate("skyblockGame:lampLightNotice", {
-          percent: this.formatPercent(rM.lampLightNoticeChance)
+        if ("notice" === VV) return null === eV.lampLightNoticeChance ? null : this.translate("skyblockGame:lampLightNotice", {
+          percent: this.formatPercent(eV.lampLightNoticeChance)
         });
-        const iM = "meter" === MM ? rM.lampLightMeterCatches : rM.lampLightBloomCatches;
-        return null === iM ? null : this.translate("meter" === MM ? "skyblockGame:lampLightMeter" : "skyblockGame:lampLightBloomLasts", {
-          catches: String(Math.round(iM))
+        const xV = "meter" === VV ? eV.lampLightMeterCatches : eV.lampLightBloomCatches;
+        return null === xV ? null : this.translate("meter" === VV ? "skyblockGame:lampLightMeter" : "skyblockGame:lampLightBloomLasts", {
+          catches: String(Math.round(xV))
         })
       }
-      oddsLines(MM, rM) {
-        const iM = (MM, rM) => {
-            var iM;
-            return null !== (iM = {
-              bite: rM.lampLightBiteMs,
-              rare: rM.lampLightRareChance,
-              meter: rM.lampLightMeterCatches,
-              bloom: rM.lampLightBloomCatches,
-              notice: rM.lampLightNoticeChance
-            } [MM]) && void 0 !== iM ? iM : 0
+      oddsLines(VV, eV) {
+        const xV = (VV, eV) => {
+            var xV;
+            return null !== (xV = {
+              bite: eV.lampLightBiteMs,
+              rare: eV.lampLightRareChance,
+              meter: eV.lampLightMeterCatches,
+              bloom: eV.lampLightBloomCatches,
+              notice: eV.lampLightNoticeChance
+            } [VV]) && void 0 !== xV ? xV : 0
           },
-          OM = {
+          JV = {
             bite: !0,
             rare: !1,
             meter: !0,
             bloom: !1,
             notice: !1
           },
-          SM = [];
-        for (const jM of ["bite", "rare", "meter", "bloom", "notice"]) {
-          const aM = this.formatOdds(jM, MM),
-            PM = this.formatOdds(jM, rM);
-          if (null === aM || null === PM || "bite" !== jM && "rare" !== jM && aM === PM) continue;
-          const nM = iM(jM, rM) - iM(jM, MM),
-            QM = OM[jM] ? nM < 0 : nM > 0;
-          SM.push({
-            label: jM,
-            before: aM,
-            after: PM,
-            tone: aM === PM ? "same" : QM ? "better" : "worse"
+          YV = [];
+        for (const UV of ["bite", "rare", "meter", "bloom", "notice"]) {
+          const yV = this.formatOdds(UV, VV),
+            pV = this.formatOdds(UV, eV);
+          if (null === yV || null === pV || "bite" !== UV && "rare" !== UV && yV === pV) continue;
+          const QV = xV(UV, eV) - xV(UV, VV),
+            nV = JV[UV] ? QV < 0 : QV > 0;
+          YV.push({
+            label: UV,
+            before: yV,
+            after: pV,
+            tone: yV === pV ? "same" : nV ? "better" : "worse"
           })
         }
-        return SM
+        return YV
       }
-      charmView(MM, rM, iM) {
-        const OM = MM.lampLightCharmId.charAt(0).toUpperCase() + MM.lampLightCharmId.slice(1),
-          SM = "bloom" === this.situation;
+      charmView(VV, eV, xV) {
+        const JV = VV.lampLightCharmId.charAt(0).toUpperCase() + VV.lampLightCharmId.slice(1),
+          YV = "bloom" === this.situation;
         return {
-          id: MM.lampLightCharmId,
-          name: this.translate(`skyblockGame:lampLightCharm${OM}`),
-          effect: this.translate(`skyblockGame:lampLightCharm${OM}Effect`),
+          id: VV.lampLightCharmId,
+          name: this.translate(`skyblockGame:lampLightCharm${JV}`),
+          effect: this.translate(`skyblockGame:lampLightCharm${JV}Effect`),
           cost: this.translate("skyblockGame:lampLightCost", {
-            light: this.formatLight(MM.lampLightCharmCost)
+            light: this.formatLight(VV.lampLightCharmCost)
           }),
-          owned: MM.lampLightCharmOwned,
-          affordable: iM >= MM.lampLightCharmCost,
-          socketed: rM.lampLightSocketed === MM.lampLightCharmId,
-          lines: this.oddsLines(SM ? rM.lampLightBareBloom : rM.lampLightBareOpen, SM ? MM.lampLightCharmBloom : MM.lampLightCharmOpen)
+          owned: VV.lampLightCharmOwned,
+          affordable: xV >= VV.lampLightCharmCost,
+          socketed: eV.lampLightSocketed === VV.lampLightCharmId,
+          lines: this.oddsLines(YV ? eV.lampLightBareBloom : eV.lampLightBareOpen, YV ? VV.lampLightCharmBloom : VV.lampLightCharmOpen)
         }
       }
       buildSnapshot() {
-        var MM, rM, iM, OM;
-        const SM = this.message,
-          jM = "ready" === (null === SM || void 0 === SM ? void 0 : SM.lampLightStatus) ? this.shop : null,
-          aM = null !== (MM = null === SM || void 0 === SM ? void 0 : SM.lampLightBalance) && void 0 !== MM ? MM : 0,
-          PM = this.atChair,
-          nM = "loading" === (null === SM || void 0 === SM ? void 0 : SM.lampLightStatus) ? "skyblockGame:lampLightLoading" : "unreadable" === (null === SM || void 0 === SM ? void 0 : SM.lampLightStatus) ? "skyblockGame:lampLightUnreadable" : null,
-          QM = "ready" !== (null === SM || void 0 === SM ? void 0 : SM.lampLightStatus) || PM ? null !== (rM = this.refusalKey) && void 0 !== rM ? rM : nM : "skyblockGame:lampLightTooFar";
+        var VV, eV, xV, JV;
+        const YV = this.message,
+          UV = "ready" === (null === YV || void 0 === YV ? void 0 : YV.lampLightStatus) ? this.shop : null,
+          yV = null !== (VV = null === YV || void 0 === YV ? void 0 : YV.lampLightBalance) && void 0 !== VV ? VV : 0,
+          pV = this.atChair,
+          QV = "loading" === (null === YV || void 0 === YV ? void 0 : YV.lampLightStatus) ? "skyblockGame:lampLightLoading" : "unreadable" === (null === YV || void 0 === YV ? void 0 : YV.lampLightStatus) ? "skyblockGame:lampLightUnreadable" : null,
+          nV = "ready" !== (null === YV || void 0 === YV ? void 0 : YV.lampLightStatus) || pV ? null !== (eV = this.refusalKey) && void 0 !== eV ? eV : QV : "skyblockGame:lampLightTooFar";
         return {
-          enabled: null !== SM && "locked" !== SM.lampLightStatus,
-          status: null !== (iM = null === SM || void 0 === SM ? void 0 : SM.lampLightStatus) && void 0 !== iM ? iM : "loading",
+          enabled: null !== YV && "locked" !== YV.lampLightStatus,
+          status: null !== (xV = null === YV || void 0 === YV ? void 0 : YV.lampLightStatus) && void 0 !== xV ? xV : "loading",
           balance: this.translate("skyblockGame:lampLightBalance", {
-            light: this.formatLight(aM)
+            light: this.formatLight(yV)
           }),
-          releasing: null !== (OM = null === SM || void 0 === SM ? void 0 : SM.lampLightReleasing) && void 0 !== OM && OM,
-          gained: null === SM || 0 === this.gainedCount ? null : {
+          releasing: null !== (JV = null === YV || void 0 === YV ? void 0 : YV.lampLightReleasing) && void 0 !== JV && JV,
+          gained: null === YV || 0 === this.gainedCount ? null : {
             text: this.translate("skyblockGame:lampLightGained", {
               light: this.formatLight(this.lastGained)
             }),
             count: this.gainedCount
           },
-          canCommand: "ready" === (null === SM || void 0 === SM ? void 0 : SM.lampLightStatus) && PM && !this.isPending(),
+          canCommand: "ready" === (null === YV || void 0 === YV ? void 0 : YV.lampLightStatus) && pV && !this.isPending(),
           situation: this.situation,
-          shop: null === jM ? null : {
+          shop: null === UV ? null : {
             oddsFor: this.translate("skyblockGame:lampLightOddsFor", {
-              rod: jM.lampLightOddsRod,
-              island: this.translate(jM.lampLightIslandNameKey)
+              rod: UV.lampLightOddsRod,
+              island: this.translate(UV.lampLightIslandNameKey)
             }),
-            heldRod: null !== jM.lampLightHeldRod,
-            charms: jM.lampLightCharms.map((MM => this.charmView(MM, jM, aM))),
-            tints: jM.lampLightTints.map((MM => {
-              const rM = MM.lampLightTintId,
-                [iM, OM, SM] = MM.lampLightTintColour;
+            heldRod: null !== UV.lampLightHeldRod,
+            charms: UV.lampLightCharms.map((VV => this.charmView(VV, UV, yV))),
+            tints: UV.lampLightTints.map((VV => {
+              const eV = VV.lampLightTintId,
+                [xV, JV, YV] = VV.lampLightTintColour;
               return {
-                id: rM,
-                name: this.translate(`skyblockGame:lampLightTint${rM.charAt(0).toUpperCase()}${rM.slice(1)}`),
+                id: eV,
+                name: this.translate(`skyblockGame:lampLightTint${eV.charAt(0).toUpperCase()}${eV.slice(1)}`),
                 cost: this.translate("skyblockGame:lampLightCost", {
-                  light: this.formatLight(MM.lampLightTintCost)
+                  light: this.formatLight(VV.lampLightTintCost)
                 }),
-                owned: MM.lampLightTintOwned,
-                affordable: aM >= MM.lampLightTintCost,
-                wearing: jM.lampLightTint === rM,
-                colour: `rgb(${iM}, ${OM}, ${SM})`
+                owned: VV.lampLightTintOwned,
+                affordable: yV >= VV.lampLightTintCost,
+                wearing: UV.lampLightTint === eV,
+                colour: `rgb(${xV}, ${JV}, ${YV})`
               }
             })),
-            wearingIslandColours: null === jM.lampLightTint
+            wearingIslandColours: null === UV.lampLightTint
           },
-          notice: null === QM ? null : this.translate(QM),
+          notice: null === nV ? null : this.translate(nV),
           sparkle: this.sparkle
         }
       }
     }
-    const dO = "skyblockMagmawardView";
-    class yO {
-      constructor(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
-        this.Tz = MM, this.now = rM, this.snapshot = null, this.pulseToken = 0, this.pulseAt = -1 / 0, this.flareToken = 0, this.flareAt = -1 / 0, this.setLitToken = 0, this.setLitAt = -1 / 0, this.wornTokens = NM.map((() => 0)), this.wornAt = NM.map((() => -1 / 0))
+    const kJ = "skyblockMagmawardView";
+    class bJ {
+      constructor(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
+        this.QZ = VV, this.now = eV, this.snapshot = null, this.pulseToken = 0, this.pulseAt = -1 / 0, this.flareToken = 0, this.flareAt = -1 / 0, this.setLitToken = 0, this.setLitAt = -1 / 0, this.wornTokens = hV.map((() => 0)), this.wornAt = hV.map((() => -1 / 0))
       }
       getSnapshot() {
         return this.snapshot
       }
-      GL(MM) {
-        var rM, iM;
-        const OM = NM.map(((rM, iM) => !0 === MM.magmawardPiecesWorn[iM]));
-        if (!OM.includes(!0)) return this.snapshot = null, void this.Tz(null);
-        const SM = this.now(),
-          jM = this.snapshot;
-        null === jM && (this.wornTokens.fill(0), this.wornAt.fill(-1 / 0), this.setLitAt = -1 / 0);
-        const aM = MM.magmawardFuelCarried,
-          PM = !OM.includes(!1);
-        let nM = null !== (rM = null === jM || void 0 === jM ? void 0 : jM.pulse) && void 0 !== rM ? rM : null,
-          QM = null !== (iM = null === jM || void 0 === jM ? void 0 : jM.flare) && void 0 !== iM ? iM : null;
-        MM.magmawardFuelBurned ? (nM = "burn", QM = "burn", this.pulseToken++, this.flareToken++, this.pulseAt = SM, this.flareAt = SM) : null !== jM && aM > jM.fuel && (nM = "gain", this.pulseToken++, this.pulseAt = SM), PM && null !== jM && !jM.fullSet && (QM = "fullSet", this.flareToken++, this.setLitToken++, this.flareAt = SM, this.setLitAt = SM);
-        const zM = NM.map(((MM, rM) => (OM[rM] && null !== jM && !jM.pieces[rM].worn && (this.wornTokens[rM]++, this.wornAt[rM] = SM), {
-          itemName: MM,
-          worn: OM[rM],
-          wornToken: this.wornTokens[rM],
-          justWorn: OM[rM] && this.isPlaying(this.wornAt[rM], SM)
+      RZ(VV) {
+        var eV, xV;
+        const JV = hV.map(((eV, xV) => !0 === VV.magmawardPiecesWorn[xV]));
+        if (!JV.includes(!0)) return this.snapshot = null, void this.QZ(null);
+        const YV = this.now(),
+          UV = this.snapshot;
+        null === UV && (this.wornTokens.fill(0), this.wornAt.fill(-1 / 0), this.setLitAt = -1 / 0);
+        const yV = VV.magmawardFuelCarried,
+          pV = !JV.includes(!1);
+        let QV = null !== (eV = null === UV || void 0 === UV ? void 0 : UV.pulse) && void 0 !== eV ? eV : null,
+          nV = null !== (xV = null === UV || void 0 === UV ? void 0 : UV.flare) && void 0 !== xV ? xV : null;
+        VV.magmawardFuelBurned ? (QV = "burn", nV = "burn", this.pulseToken++, this.flareToken++, this.pulseAt = YV, this.flareAt = YV) : null !== UV && yV > UV.fuel && (QV = "gain", this.pulseToken++, this.pulseAt = YV), pV && null !== UV && !UV.fullSet && (nV = "fullSet", this.flareToken++, this.setLitToken++, this.flareAt = YV, this.setLitAt = YV);
+        const wV = hV.map(((VV, eV) => (JV[eV] && null !== UV && !UV.pieces[eV].worn && (this.wornTokens[eV]++, this.wornAt[eV] = YV), {
+          itemName: VV,
+          worn: JV[eV],
+          wornToken: this.wornTokens[eV],
+          justWorn: JV[eV] && this.isPlaying(this.wornAt[eV], YV)
         })));
         this.snapshot = {
-          pieces: zM,
-          wornCount: OM.filter(Boolean).length,
-          fullSet: PM,
-          fuel: aM,
-          fuelState: aM <= 0 ? "empty" : aM <= 3 ? "low" : "ok",
-          pulse: this.isPlaying(this.pulseAt, SM) ? nM : null,
+          pieces: wV,
+          wornCount: JV.filter(Boolean).length,
+          fullSet: pV,
+          fuel: yV,
+          fuelState: yV <= 0 ? "empty" : yV <= 3 ? "low" : "ok",
+          pulse: this.isPlaying(this.pulseAt, YV) ? QV : null,
           pulseToken: this.pulseToken,
-          flare: this.isPlaying(this.flareAt, SM) ? QM : null,
+          flare: this.isPlaying(this.flareAt, YV) ? nV : null,
           flareToken: this.flareToken,
-          setLit: PM && this.isPlaying(this.setLitAt, SM),
+          setLit: pV && this.isPlaying(this.setLitAt, YV),
           setLitToken: this.setLitToken
-        }, this.Tz(this.snapshot)
+        }, this.QZ(this.snapshot)
       }
       dispose() {
-        this.snapshot = null, this.Tz(null)
+        this.snapshot = null, this.QZ(null)
       }
-      isPlaying(MM, rM) {
-        return rM - MM < 1200
+      isPlaying(VV, eV) {
+        return eV - VV < 1200
       }
     }
-    const lO = "skyblockGlowtideView";
-    class EO {
-      constructor(MM) {
-        this.Tz = MM, this.bloom = null, this.snapshot = null, this.inRangeToken = 0, this.arrow = null, this.arrowTurn = NaN, this.mountArrow = MM => {
-          this.arrow = MM, this.arrowTurn = NaN
+    const EJ = "skyblockGlowtideView";
+    class BJ {
+      constructor(VV) {
+        this.QZ = VV, this.bloom = null, this.snapshot = null, this.inRangeToken = 0, this.arrow = null, this.arrowTurn = NaN, this.mountArrow = VV => {
+          this.arrow = VV, this.arrowTurn = NaN
         }
       }
       getSnapshot() {
         return this.snapshot
       }
-      GL(MM) {
-        this.bloom = MM.glowtideBloom, null === this.bloom && null !== this.snapshot && (this.snapshot = null, this.Tz(null))
+      RZ(VV) {
+        this.bloom = VV.glowtideBloom, null === this.bloom && null !== this.snapshot && (this.snapshot = null, this.QZ(null))
       }
-      afterRender(MM, rM) {
-        const iM = this.bloom;
-        if (null === iM || null === MM) return;
-        const OM = iM.glowtideBloomX - MM[0],
-          SM = iM.glowtideBloomZ - MM[2],
-          jM = Math.hypot(OM, SM),
-          aM = this.snapshot,
-          PM = null !== aM && void 0 !== aM && aM.inRange ? 1 : 0,
-          nM = jM <= 12.5 + PM && MM[1] - iM.glowtideBloomY <= 10 + PM;
-        !nM || null !== aM && void 0 !== aM && aM.inRange || this.inRangeToken++;
-        const QM = {
-          colour: iM.glowtideBloomColour,
-          inRange: nM,
-          distance: Math.round(jM),
+      afterRender(VV, eV) {
+        const xV = this.bloom;
+        if (null === xV || null === VV) return;
+        const JV = xV.glowtideBloomX - VV[0],
+          YV = xV.glowtideBloomZ - VV[2],
+          UV = Math.hypot(JV, YV),
+          yV = this.snapshot,
+          pV = null !== yV && void 0 !== yV && yV.inRange ? 1 : 0,
+          QV = UV <= 12.5 + pV && VV[1] - xV.glowtideBloomY <= 10 + pV;
+        !QV || null !== yV && void 0 !== yV && yV.inRange || this.inRangeToken++;
+        const nV = {
+          colour: xV.glowtideBloomColour,
+          inRange: QV,
+          distance: Math.round(UV),
           inRangeToken: this.inRangeToken
         };
-        (null === aM || QM.colour !== aM.colour || QM.inRange !== aM.inRange || !nM && QM.distance !== aM.distance) && (this.snapshot = QM, this.Tz(QM));
-        const zM = LM.d.computeShortestRotation(rM, (0, LM.wb)([OM, 0, SM]));
-        null === this.arrow || Math.abs(zM - this.arrowTurn) < .01 || (this.arrow.style.transform = `rotate(${zM}rad)`, this.arrowTurn = zM)
+        (null === yV || nV.colour !== yV.colour || nV.inRange !== yV.inRange || !QV && nV.distance !== yV.distance) && (this.snapshot = nV, this.QZ(nV));
+        const wV = ZV.b.computeShortestRotation(eV, (0, ZV.Cb)([JV, 0, YV]));
+        null === this.arrow || Math.abs(wV - this.arrowTurn) < .01 || (this.arrow.style.transform = `rotate(${wV}rad)`, this.arrowTurn = wV)
       }
       dispose() {
-        this.bloom = null, this.arrow = null, this.snapshot = null, this.Tz(null)
+        this.bloom = null, this.arrow = null, this.snapshot = null, this.QZ(null)
       }
     }
-    const UO = "skyblockGlowMeterView";
-    class GO {
-      constructor(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
-        this.Tz = MM, this.now = rM, this.snapshot = null, this.fullToken = 0, this.fullAt = -1 / 0, this.burstToken = 0, this.burstAt = -1 / 0, this.gainToken = 0, this.gainAt = -1 / 0
+    const jJ = "skyblockGlowMeterView";
+    class qJ {
+      constructor(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
+        this.QZ = VV, this.now = eV, this.snapshot = null, this.fullToken = 0, this.fullAt = -1 / 0, this.burstToken = 0, this.burstAt = -1 / 0, this.gainToken = 0, this.gainAt = -1 / 0
       }
       getSnapshot() {
         return this.snapshot
       }
-      GL(MM) {
-        const rM = this.now(),
+      RZ(VV) {
+        const eV = this.now(),
           {
-            glowMeterFill: iM,
-            glowMeterCapacity: OM
-          } = MM,
-          SM = iM >= OM,
-          jM = this.snapshot;
-        null !== jM && (SM && !jM.full && (this.fullToken++, this.fullAt = rM), jM.full && !SM ? (this.burstToken++, this.burstAt = rM) : iM > jM.fill && (this.gainToken++, this.gainAt = rM)), this.snapshot = {
-          fill: iM,
-          vL: OM,
-          ratio: Math.min(1, Math.max(0, iM / OM)),
-          full: SM,
-          rares: MM.glowMeterRares,
-          ready: SM && this.isPlaying(this.fullAt, rM),
+            glowMeterFill: xV,
+            glowMeterCapacity: JV
+          } = VV,
+          YV = xV >= JV,
+          UV = this.snapshot;
+        null !== UV && (YV && !UV.full && (this.fullToken++, this.fullAt = eV), UV.full && !YV ? (this.burstToken++, this.burstAt = eV) : xV > UV.fill && (this.gainToken++, this.gainAt = eV)), this.snapshot = {
+          fill: xV,
+          Jv: JV,
+          ratio: Math.min(1, Math.max(0, xV / JV)),
+          full: YV,
+          rares: VV.glowMeterRares,
+          ready: YV && this.isPlaying(this.fullAt, eV),
           fullToken: this.fullToken,
-          burst: this.isPlaying(this.burstAt, rM),
+          burst: this.isPlaying(this.burstAt, eV),
           burstToken: this.burstToken,
-          gained: this.isPlaying(this.gainAt, rM),
+          gained: this.isPlaying(this.gainAt, eV),
           gainToken: this.gainToken
-        }, this.Tz(this.snapshot)
+        }, this.QZ(this.snapshot)
       }
       dispose() {
-        this.snapshot = null, this.Tz(null)
+        this.snapshot = null, this.QZ(null)
       }
-      isPlaying(MM, rM) {
-        return rM - MM < 2e3
+      isPlaying(VV, eV) {
+        return eV - VV < 2e3
       }
     }
-    const CO = "skyblockHushWaitView";
-    class eO {
-      constructor(MM) {
-        this.Tz = MM, this.snapshot = null, this.token = 0, this.timers = []
+    const tJ = "skyblockHushWaitView";
+    class FJ {
+      constructor(VV) {
+        this.QZ = VV, this.snapshot = null, this.token = 0, this.timers = []
       }
       getSnapshot() {
         return this.snapshot
       }
-      GL(MM) {
+      RZ(VV) {
         let {
-          hushWaitMs: rM,
-          hushWaitTotalMs: iM,
-          hushWaitLines: OM
-        } = MM;
-        if (this.clearTimers(), this.token++, 0 === OM.length) return console.warn("Skyblock: a Hush wait message came without a line"), void this.show(null);
-        if (rM <= 0) return this.show({
+          hushWaitMs: eV,
+          hushWaitTotalMs: xV,
+          hushWaitLines: JV
+        } = VV;
+        if (this.clearTimers(), this.token++, 0 === JV.length) return console.warn("Skyblock: a Hush wait message came without a line"), void this.show(null);
+        if (eV <= 0) return this.show({
           token: this.token,
           phase: "abandoned",
           waitMs: 3500,
           elapsedMs: 0,
-          line: OM[0],
+          line: JV[0],
           lineIndex: 0
         }), void this.later(3500, (() => {
           this.show(null)
         }));
-        const SM = Math.max(null !== iM && void 0 !== iM ? iM : rM, rM),
-          jM = SM - rM,
-          aM = MM => SM * MM / OM.length,
-          PM = MM => {
+        const YV = Math.max(null !== xV && void 0 !== xV ? xV : eV, eV),
+          UV = YV - eV,
+          yV = VV => YV * VV / JV.length,
+          pV = VV => {
             this.show({
               token: this.token,
               phase: "waiting",
-              waitMs: SM,
-              elapsedMs: jM,
-              line: OM[MM],
-              lineIndex: MM
+              waitMs: YV,
+              elapsedMs: UV,
+              line: JV[VV],
+              lineIndex: VV
             })
           };
-        let nM = 0;
-        for (; nM + 1 < OM.length && aM(nM + 1) <= jM;) nM++;
-        PM(nM);
-        for (let QM = nM + 1; QM < OM.length; QM++) this.later(aM(QM) - jM, (() => {
-          PM(QM)
+        let QV = 0;
+        for (; QV + 1 < JV.length && yV(QV + 1) <= UV;) QV++;
+        pV(QV);
+        for (let nV = QV + 1; nV < JV.length; nV++) this.later(yV(nV) - UV, (() => {
+          pV(nV)
         }));
-        this.later(rM, (() => {
+        this.later(eV, (() => {
           this.show(null)
         }))
       }
       dispose() {
         this.clearTimers(), this.show(null)
       }
-      show(MM) {
-        this.snapshot = MM, this.Tz(MM)
+      show(VV) {
+        this.snapshot = VV, this.QZ(VV)
       }
-      later(MM, rM) {
-        this.timers.push(setTimeout(rM, MM))
+      later(VV, eV) {
+        this.timers.push(setTimeout(eV, VV))
       }
       clearTimers() {
-        for (const MM of this.timers) clearTimeout(MM);
+        for (const VV of this.timers) clearTimeout(VV);
         this.timers = []
       }
     }
-    const bO = "skyblockTideChartsView",
-      wO = 36e5,
-      tO = 864e5;
+    const TJ = "skyblockTideChartsView",
+      PJ = 36e5,
+      AJ = 864e5;
 
-    function gO(MM, rM, iM) {
-      const [OM, SM, jM, aM] = MM.tideChartArea, PM = Math.floor(rM), nM = Math.floor(iM);
-      return PM >= OM && PM <= jM && nM >= SM && nM <= aM
+    function NJ(VV, eV, xV) {
+      const [JV, YV, UV, yV] = VV.tideChartArea, pV = Math.floor(eV), QV = Math.floor(xV);
+      return pV >= JV && pV <= UV && QV >= YV && QV <= yV
     }
 
-    function uO(MM, rM, iM) {
-      const [OM, SM, jM, aM] = MM.tideChartWater;
-      return function(MM, rM, iM, OM, SM, jM) {
-        const aM = 4 - AM(Math.floor(SM) - (MM - iM), iM);
-        return 5 * AM(Math.floor(jM) - (rM - OM), OM) + aM
-      }(OM, SM, jM, aM, rM, iM)
+    function XJ(VV, eV, xV) {
+      const [JV, YV, UV, yV] = VV.tideChartWater;
+      return function(VV, eV, xV, JV, YV, UV) {
+        const yV = 4 - lV(Math.floor(YV) - (VV - xV), xV);
+        return 5 * lV(Math.floor(UV) - (eV - JV), JV) + yV
+      }(JV, YV, UV, yV, eV, xV)
     }
 
-    function RO(MM, rM, iM) {
-      const OM = MM.tideCharts;
-      for (let SM = 0; SM < OM.length; SM++)
-        if (gO(OM[SM], rM, iM)) return OM[SM];
+    function MJ(VV, eV, xV) {
+      const JV = VV.tideCharts;
+      for (let YV = 0; YV < JV.length; YV++)
+        if (NJ(JV[YV], eV, xV)) return JV[YV];
       return null
     }
 
-    function pO(MM, rM, iM) {
-      const OM = Math.max(0, rM - iM);
-      return OM > tO ? MM("skyblockGame:tideChartsTurnDays", {
-        days: String(Math.ceil(OM / tO))
-      }) : OM > wO ? MM("skyblockGame:tideChartsTurnHours", {
-        hours: String(Math.ceil(OM / wO))
-      }) : MM("skyblockGame:tideChartsTurnSoon")
+    function zJ(VV, eV, xV) {
+      const JV = Math.max(0, eV - xV);
+      return JV > AJ ? VV("skyblockGame:tideChartsTurnDays", {
+        days: String(Math.ceil(JV / AJ))
+      }) : JV > PJ ? VV("skyblockGame:tideChartsTurnHours", {
+        hours: String(Math.ceil(JV / PJ))
+      }) : VV("skyblockGame:tideChartsTurnSoon")
     }
-    class WO extends nM {
-      constructor(MM, rM, iM, OM) {
-        let SM = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : Date.now;
-        super(MM, iM, OM), this.translate = rM, this.now = SM, this.snapshot = void 0, this.message = null, this.receivedAtMs = 0, this.hereIsland = null, this.hereCell = -1, this.lastX = Number.NaN, this.lastZ = Number.NaN, this.picked = null, this.lastIsland = null, this.pulse = {
+    class GJ extends QV {
+      constructor(VV, eV, xV, JV) {
+        let YV = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : Date.now;
+        super(VV, xV, JV), this.translate = eV, this.now = YV, this.snapshot = void 0, this.message = null, this.receivedAtMs = 0, this.hereIsland = null, this.hereCell = -1, this.lastX = Number.NaN, this.lastZ = Number.NaN, this.picked = null, this.lastIsland = null, this.pulse = {
           island: "",
           cells: 0,
           token: 0,
           atMs: 0
         }, this.cast = null, this.castToken = 0, this.turnsCheckedAtMs = 0, this.toggle = () => {
           this.open ? this.dismiss() : (this.picked = null, this.show())
-        }, this.LH = MM => {
-          this.picked = MM, this.emit()
+        }, this.Pr = VV => {
+          this.picked = VV, this.emit()
         }, this.snapshot = this.buildSnapshot()
       }
-      GL(MM) {
-        const rM = this.message;
-        if (null !== rM)
-          for (const OM of MM.tideCharts) {
-            var iM;
-            const MM = rM.tideCharts.find((MM => MM.tideChartIsland === OM.tideChartIsland)),
-              SM = OM.tideChartLit & ~(null !== (iM = null === MM || void 0 === MM ? void 0 : MM.tideChartLit) && void 0 !== iM ? iM : 0);
-            void 0 !== MM && 0 !== SM && (this.pulse = {
-              island: OM.tideChartIsland,
-              cells: SM,
+      RZ(VV) {
+        const eV = this.message;
+        if (null !== eV)
+          for (const JV of VV.tideCharts) {
+            var xV;
+            const VV = eV.tideCharts.find((VV => VV.tideChartIsland === JV.tideChartIsland)),
+              YV = JV.tideChartLit & ~(null !== (xV = null === VV || void 0 === VV ? void 0 : VV.tideChartLit) && void 0 !== xV ? xV : 0);
+            void 0 !== VV && 0 !== YV && (this.pulse = {
+              island: JV.tideChartIsland,
+              cells: YV,
               token: this.pulse.token + 1,
               atMs: this.now()
             })
           }
-        this.message = MM, this.receivedAtMs = this.now(), this.locate(this.lastX, this.lastZ), this.emit()
+        this.message = VV, this.receivedAtMs = this.now(), this.locate(this.lastX, this.lastZ), this.emit()
       }
-      locate(MM, rM) {
-        var iM;
-        const OM = null === this.message || Number.isNaN(MM) ? null : RO(this.message, MM, rM),
-          SM = null !== (iM = null === OM || void 0 === OM ? void 0 : OM.tideChartIsland) && void 0 !== iM ? iM : null,
-          jM = null === OM ? -1 : function(MM, rM, iM) {
-            const [OM, SM, jM, aM] = MM.tideChartWater;
-            return function(MM, rM, iM, OM, SM, jM, aM) {
-              return ((SM - MM) / (iM + aM)) ** 2 + ((jM - rM) / (OM + aM)) ** 2 <= 1
-            }(OM, SM, jM, aM, rM, iM, 2) ? uO(MM, rM, iM) : -1
-          }(OM, MM, rM);
-        return (SM !== this.hereIsland || jM !== this.hereCell) && (this.hereIsland = SM, this.hereCell = jM, null !== SM && (this.lastIsland = SM), !0)
+      locate(VV, eV) {
+        var xV;
+        const JV = null === this.message || Number.isNaN(VV) ? null : MJ(this.message, VV, eV),
+          YV = null !== (xV = null === JV || void 0 === JV ? void 0 : JV.tideChartIsland) && void 0 !== xV ? xV : null,
+          UV = null === JV ? -1 : function(VV, eV, xV) {
+            const [JV, YV, UV, yV] = VV.tideChartWater;
+            return function(VV, eV, xV, JV, YV, UV, yV) {
+              return ((YV - VV) / (xV + yV)) ** 2 + ((UV - eV) / (JV + yV)) ** 2 <= 1
+            }(JV, YV, UV, yV, eV, xV, 2) ? XJ(VV, eV, xV) : -1
+          }(JV, VV, eV);
+        return (YV !== this.hereIsland || UV !== this.hereCell) && (this.hereIsland = YV, this.hereCell = UV, null !== YV && (this.lastIsland = YV), !0)
       }
-      afterRender(MM) {
+      afterRender(VV) {
         if (null === this.message) return;
-        this.lastX = null === MM ? Number.NaN : MM[0], this.lastZ = null === MM ? Number.NaN : MM[2];
-        const rM = this.locate(this.lastX, this.lastZ),
-          iM = this.expirePulses();
-        (rM || iM || this.turnsChanged()) && this.emit()
+        this.lastX = null === VV ? Number.NaN : VV[0], this.lastZ = null === VV ? Number.NaN : VV[2];
+        const eV = this.locate(this.lastX, this.lastZ),
+          xV = this.expirePulses();
+        (eV || xV || this.turnsChanged()) && this.emit()
       }
       turnsChanged() {
-        const MM = this.now();
-        return !(!this.open || MM - this.turnsCheckedAtMs < 3e4 || null === this.message) && (this.turnsCheckedAtMs = MM, pO(this.translate, this.message.tideChartTurnsInMs, MM - this.receivedAtMs) !== this.snapshot.turnsText)
+        const VV = this.now();
+        return !(!this.open || VV - this.turnsCheckedAtMs < 3e4 || null === this.message) && (this.turnsCheckedAtMs = VV, zJ(this.translate, this.message.tideChartTurnsInMs, VV - this.receivedAtMs) !== this.snapshot.turnsText)
       }
-      castLanded(MM, rM) {
-        const iM = null === this.message ? null : RO(this.message, MM, rM);
-        if (null === iM) return;
-        const OM = uO(iM, MM, rM);
-        0 === (iM.tideChartPreBlank & 1 << OM) && (this.cast = {
-          island: iM.tideChartIsland,
-          cell: OM,
+      castLanded(VV, eV) {
+        const xV = null === this.message ? null : MJ(this.message, VV, eV);
+        if (null === xV) return;
+        const JV = XJ(xV, VV, eV);
+        0 === (xV.tideChartPreBlank & 1 << JV) && (this.cast = {
+          island: xV.tideChartIsland,
+          cell: JV,
           token: ++this.castToken,
           atMs: this.now()
         }, this.emit())
       }
       expirePulses() {
-        const MM = this.now();
-        let rM = !1;
-        return 0 !== this.pulse.cells && MM - this.pulse.atMs >= 1500 && (this.pulse = {
+        const VV = this.now();
+        let eV = !1;
+        return 0 !== this.pulse.cells && VV - this.pulse.atMs >= 1500 && (this.pulse = {
           ...this.pulse,
           cells: 0
-        }, rM = !0), null !== this.cast && MM - this.cast.atMs >= 1500 && (this.cast = null, rM = !0), rM
+        }, eV = !0), null !== this.cast && VV - this.cast.atMs >= 1500 && (this.cast = null, eV = !0), eV
       }
-      setTranslator(MM) {
-        this.translate = MM, this.emit()
+      setTranslator(VV) {
+        this.translate = VV, this.emit()
       }
       isEnabled() {
         return null !== this.message && this.message.tideCharts.length > 0
@@ -4032,62 +3998,62 @@ export const modules = {
       onClosed() {
         this.picked = null
       }
-      findChart(MM, rM) {
-        var iM;
-        return null !== (iM = MM.tideCharts.find((MM => MM.tideChartIsland === rM))) && void 0 !== iM ? iM : null
+      findChart(VV, eV) {
+        var xV;
+        return null !== (xV = VV.tideCharts.find((VV => VV.tideChartIsland === eV))) && void 0 !== xV ? xV : null
       }
-      describe(MM) {
-        var rM, iM, OM;
-        const SM = MM.tideChartIsland,
-          jM = [];
-        for (let HM = 0; HM < 25; HM++) {
-          const rM = 1 << HM;
-          0 !== (MM.tideChartLit & rM) ? jM.push("lit") : 0 !== (MM.tideChartClear & rM) ? jM.push("clear") : 0 !== (MM.tideChartPreBlank & rM) ? jM.push("shore") : jM.push("water")
+      describe(VV) {
+        var eV, xV, JV;
+        const YV = VV.tideChartIsland,
+          UV = [];
+        for (let rV = 0; rV < 25; rV++) {
+          const eV = 1 << rV;
+          0 !== (VV.tideChartLit & eV) ? UV.push("lit") : 0 !== (VV.tideChartClear & eV) ? UV.push("clear") : 0 !== (VV.tideChartPreBlank & eV) ? UV.push("shore") : UV.push("water")
         }
-        const aM = function(MM) {
-            let rM = 0;
-            for (let iM = MM >>> 0; 0 !== iM; iM &= iM - 1) rM++;
-            return rM
-          }(MM.tideChartLit),
-          PM = MM.tideChartInkCount,
-          nM = this.translate(MM.tideChartIslandNameKey),
-          QM = this.translate("skyblockGame:tideChartsLit", {
-            lit: String(aM),
-            ink: String(PM)
+        const yV = function(VV) {
+            let eV = 0;
+            for (let xV = VV >>> 0; 0 !== xV; xV &= xV - 1) eV++;
+            return eV
+          }(VV.tideChartLit),
+          pV = VV.tideChartInkCount,
+          QV = this.translate(VV.tideChartIslandNameKey),
+          nV = this.translate("skyblockGame:tideChartsLit", {
+            lit: String(yV),
+            ink: String(pV)
           }),
-          zM = null === MM.tideChartPictureNameKey ? null : this.translate(MM.tideChartPictureNameKey),
-          LM = this.hereIsland === SM && -1 !== this.hereCell ? this.hereCell : null,
-          mM = [`${nM}: ${QM}.`];
-        if (null !== zM && mM.push(this.translate("skyblockGame:tideChartsPictureRevealed", {
-            picture: zM
-          })), null !== LM) {
-          const MM = Math.floor(LM / 5) + 1,
-            rM = LM % 5 + 1;
-          mM.push(this.translate("skyblockGame:tideChartsHereCell", {
-            row: String(MM),
-            column: String(rM)
+          wV = null === VV.tideChartPictureNameKey ? null : this.translate(VV.tideChartPictureNameKey),
+          ZV = this.hereIsland === YV && -1 !== this.hereCell ? this.hereCell : null,
+          vV = [`${QV}: ${nV}.`];
+        if (null !== wV && vV.push(this.translate("skyblockGame:tideChartsPictureRevealed", {
+            picture: wV
+          })), null !== ZV) {
+          const VV = Math.floor(ZV / 5) + 1,
+            eV = ZV % 5 + 1;
+          vV.push(this.translate("skyblockGame:tideChartsHereCell", {
+            row: String(VV),
+            column: String(eV)
           }))
         }
         return {
-          island: SM,
-          islandName: nM,
-          cells: jM,
-          hereCell: LM,
-          lit: aM,
-          ink: PM,
-          litText: QM,
-          pictureName: zM,
-          gridLabel: mM.join(" "),
-          pulseCells: this.pulse.island === SM ? this.pulse.cells : 0,
+          island: YV,
+          islandName: QV,
+          cells: UV,
+          hereCell: ZV,
+          lit: yV,
+          ink: pV,
+          litText: nV,
+          pictureName: wV,
+          gridLabel: vV.join(" "),
+          pulseCells: this.pulse.island === YV ? this.pulse.cells : 0,
           pulseToken: this.pulse.token,
-          castCell: (null === (rM = this.cast) || void 0 === rM ? void 0 : rM.island) === SM ? this.cast.cell : null,
-          castToken: null !== (iM = null === (OM = this.cast) || void 0 === OM ? void 0 : OM.token) && void 0 !== iM ? iM : 0
+          castCell: (null === (eV = this.cast) || void 0 === eV ? void 0 : eV.island) === YV ? this.cast.cell : null,
+          castToken: null !== (xV = null === (JV = this.cast) || void 0 === JV ? void 0 : JV.token) && void 0 !== xV ? xV : 0
         }
       }
       buildSnapshot() {
-        var MM, rM, iM;
-        const OM = this.message;
-        if (null === OM || 0 === OM.tideCharts.length) return {
+        var VV, eV, xV;
+        const JV = this.message;
+        if (null === JV || 0 === JV.tideCharts.length) return {
           enabled: !1,
           open: !1,
           chip: null,
@@ -4096,22 +4062,22 @@ export const modules = {
           bookText: "",
           tabs: []
         };
-        const SM = this.findChart(OM, this.hereIsland),
-          jM = null !== (MM = null !== (rM = null !== (iM = this.findChart(OM, this.open ? this.picked : null)) && void 0 !== iM ? iM : SM) && void 0 !== rM ? rM : this.findChart(OM, this.lastIsland)) && void 0 !== MM ? MM : OM.tideCharts[0],
-          aM = null === SM ? null : this.describe(SM);
+        const YV = this.findChart(JV, this.hereIsland),
+          UV = null !== (VV = null !== (eV = null !== (xV = this.findChart(JV, this.open ? this.picked : null)) && void 0 !== xV ? xV : YV) && void 0 !== eV ? eV : this.findChart(JV, this.lastIsland)) && void 0 !== VV ? VV : JV.tideCharts[0],
+          yV = null === YV ? null : this.describe(YV);
         return this.turnsCheckedAtMs = this.now(), {
           enabled: !0,
           open: this.open,
-          chip: aM,
-          card: jM === SM ? aM : this.describe(jM),
-          turnsText: pO(this.translate, OM.tideChartTurnsInMs, this.now() - this.receivedAtMs),
+          chip: yV,
+          card: UV === YV ? yV : this.describe(UV),
+          turnsText: zJ(this.translate, JV.tideChartTurnsInMs, this.now() - this.receivedAtMs),
           bookText: this.translate("skyblockGame:tideChartsBook", {
-            count: String(OM.tideChartBookCount)
+            count: String(JV.tideChartBookCount)
           }),
-          tabs: OM.tideCharts.map((MM => ({
-            island: MM.tideChartIsland,
-            name: this.translate(MM.tideChartIslandNameKey),
-            selected: MM.tideChartIsland === jM.tideChartIsland
+          tabs: JV.tideCharts.map((VV => ({
+            island: VV.tideChartIsland,
+            name: this.translate(VV.tideChartIslandNameKey),
+            selected: VV.tideChartIsland === UV.tideChartIsland
           })))
         }
       }
@@ -4119,173 +4085,173 @@ export const modules = {
         this.message = null, this.hereIsland = null, this.hereCell = -1, this.cast = null, super.dispose()
       }
     }
-    const sO = "skyblockRegularsView",
-      DO = {
+    const WJ = "skyblockRegularsView",
+      RJ = {
         goal: "skyblockGame:regularsGiftTint",
         given: "skyblockGame:regularsGiftTint",
         owed: "skyblockGame:regularsGiftTintOwed"
       },
-      kO = {
+      gJ = {
         goal: "skyblockGame:regularsCharmGoal",
         given: "skyblockGame:regularsCharmGiven",
         owed: "skyblockGame:regularsCharmOwed"
       };
 
-    function ZO(MM, rM) {
-      return "given" === MM ? rM.given : "owed" === MM ? rM.owed : rM.goal
+    function DJ(VV, eV) {
+      return "given" === VV ? eV.given : "owed" === VV ? eV.owed : eV.goal
     }
-    class oO extends nM {
-      constructor(MM, rM, iM, OM) {
-        super(MM, iM, OM), this.translate = rM, this.snapshot = void 0, this.message = null, this.selected = "", this.openedFromReachLog = !1, this.itemName = MM => MM, this.openIsland = MM => {
-          this.selected = MM, this.openedFromReachLog = !0, this.show()
-        }, this.selectIsland = MM => {
-          this.selected = MM, this.emit()
+    class iJ extends QV {
+      constructor(VV, eV, xV, JV) {
+        super(VV, xV, JV), this.translate = eV, this.snapshot = void 0, this.message = null, this.selected = "", this.openedFromReachLog = !1, this.itemName = VV => VV, this.openIsland = VV => {
+          this.selected = VV, this.openedFromReachLog = !0, this.show()
+        }, this.selectIsland = VV => {
+          this.selected = VV, this.emit()
         }, this.snapshot = this.buildSnapshot()
       }
-      GL(MM) {
-        this.message = MM, this.emit()
+      RZ(VV) {
+        this.message = VV, this.emit()
       }
       isOverReachLog() {
         return this.open && this.openedFromReachLog
       }
       takeReturnToReachLog() {
-        const MM = this.openedFromReachLog;
-        return this.openedFromReachLog = !1, MM
+        const VV = this.openedFromReachLog;
+        return this.openedFromReachLog = !1, VV
       }
-      setTranslator(MM, rM, iM) {
-        this.translate = MM, void 0 !== iM && (this.itemName = iM), this.emit()
+      setTranslator(VV, eV, xV) {
+        this.translate = VV, void 0 !== xV && (this.itemName = xV), this.emit()
       }
       isEnabled() {
         return null !== this.message
       }
-      describeGift(MM, rM, iM) {
+      describeGift(VV, eV, xV) {
         return {
-          text: this.translate(ZO(MM, rM), iM),
-          given: "given" === MM
+          text: this.translate(DJ(VV, eV), xV),
+          given: "given" === VV
         }
       }
-      describeRegular(MM, rM) {
-        const iM = this.translate,
-          OM = null !== MM.regularKg,
-          SM = MM.regularMeetings,
-          jM = OM ? 0 === SM ? iM("skyblockGame:regularsNotMet") : 1 === SM ? iM("skyblockGame:regularsMeetingsOne") : iM("skyblockGame:regularsMeetings", {
-            count: SM
+      describeRegular(VV, eV) {
+        const xV = this.translate,
+          JV = null !== VV.regularKg,
+          YV = VV.regularMeetings,
+          UV = JV ? 0 === YV ? xV("skyblockGame:regularsNotMet") : 1 === YV ? xV("skyblockGame:regularsMeetingsOne") : xV("skyblockGame:regularsMeetings", {
+            count: YV
           }) : "";
         return {
-          id: MM.regularId,
-          name: iM(MM.regularNameKey),
-          line: iM(MM.regularLineKey),
-          itemName: MM.regularFishItem,
-          fishName: this.itemName(MM.regularFishItem),
-          tagged: OM,
-          size: null === MM.regularKg ? iM("skyblockGame:regularsNotTagged") : iM("skyblockGame:regularsSize", {
-            kg: MM.regularKg.toFixed(1)
+          id: VV.regularId,
+          name: xV(VV.regularNameKey),
+          line: xV(VV.regularLineKey),
+          itemName: VV.regularFishItem,
+          fishName: this.itemName(VV.regularFishItem),
+          tagged: JV,
+          size: null === VV.regularKg ? xV("skyblockGame:regularsNotTagged") : xV("skyblockGame:regularsSize", {
+            kg: VV.regularKg.toFixed(1)
           }),
-          meetings: jM,
-          chance: iM("skyblockGame:regularsChance", {
-            count: MM.regularOneInCasts
+          meetings: UV,
+          chance: xV("skyblockGame:regularsChance", {
+            count: VV.regularOneInCasts
           }),
-          resting: MM.regularRestingToday,
+          resting: VV.regularRestingToday,
           gifts: [{
-            text: iM("skyblockGame:regularsGiftFlare"),
-            given: SM >= 3
-          }, this.describeGift(MM.regularTintGift, DO, {
-            tint: iM(MM.regularTintNameKey)
+            text: xV("skyblockGame:regularsGiftFlare"),
+            given: YV >= 3
+          }, this.describeGift(VV.regularTintGift, RJ, {
+            tint: xV(VV.regularTintNameKey)
           })],
-          history: [...MM.regularHistory].reverse().map((MM => {
-            const OM = MM.regularMeetingKg.toFixed(1),
-              SM = rM - MM.regularMeetingDay;
-            return SM <= 0 ? iM("skyblockGame:regularsToday", {
-              kg: OM
-            }) : iM("skyblockGame:regularsDaysAgo", {
-              days: SM,
-              kg: OM
+          history: [...VV.regularHistory].reverse().map((VV => {
+            const JV = VV.regularMeetingKg.toFixed(1),
+              YV = eV - VV.regularMeetingDay;
+            return YV <= 0 ? xV("skyblockGame:regularsToday", {
+              kg: JV
+            }) : xV("skyblockGame:regularsDaysAgo", {
+              days: YV,
+              kg: JV
             })
           }))
         }
       }
-      describeIsland(MM, rM) {
+      describeIsland(VV, eV) {
         return {
-          id: MM.regularsIslandId,
-          name: this.translate(MM.regularsIslandNameKey),
-          charm: this.describeGift(MM.regularsCharmGift, kO, {
-            charm: this.translate(MM.regularsCharmNameKey)
+          id: VV.regularsIslandId,
+          name: this.translate(VV.regularsIslandNameKey),
+          charm: this.describeGift(VV.regularsCharmGift, gJ, {
+            charm: this.translate(VV.regularsCharmNameKey)
           }),
-          regulars: MM.regularsList.map((MM => this.describeRegular(MM, rM)))
+          regulars: VV.regularsList.map((VV => this.describeRegular(VV, eV)))
         }
       }
       buildSnapshot() {
-        var MM, rM, iM, OM;
-        const SM = this.message;
-        if (null === SM) return {
+        var VV, eV, xV, JV;
+        const YV = this.message;
+        if (null === YV) return {
           enabled: !1,
           open: !1,
           selected: "",
           islands: []
         };
-        const jM = SM.regularsIslands.map((MM => this.describeIsland(MM, SM.regularsToday))),
-          aM = null !== (MM = null !== (rM = null === (iM = jM.find((MM => MM.id === this.selected))) || void 0 === iM ? void 0 : iM.id) && void 0 !== rM ? rM : null === (OM = jM[0]) || void 0 === OM ? void 0 : OM.id) && void 0 !== MM ? MM : "";
+        const UV = YV.regularsIslands.map((VV => this.describeIsland(VV, YV.regularsToday))),
+          yV = null !== (VV = null !== (eV = null === (xV = UV.find((VV => VV.id === this.selected))) || void 0 === xV ? void 0 : xV.id) && void 0 !== eV ? eV : null === (JV = UV[0]) || void 0 === JV ? void 0 : JV.id) && void 0 !== VV ? VV : "";
         return {
           enabled: !0,
           open: this.open,
-          selected: aM,
-          islands: jM
+          selected: yV,
+          islands: UV
         }
       }
       dispose() {
         this.message = null, super.dispose()
       }
     }
-    const fO = "skyblockHiddenWatersView";
-    class YO {
-      constructor(MM) {
-        this.Tz = MM, this.snapshot = null
+    const CJ = "skyblockHiddenWatersView";
+    class aJ {
+      constructor(VV) {
+        this.QZ = VV, this.snapshot = null
       }
       getSnapshot() {
         return this.snapshot
       }
-      GL(MM) {
-        this.snapshot = function(MM) {
-          const [rM, iM] = MM.hiddenWatersMapSize, OM = (MM, OM) => ({
-            left: 1 - MM / rM,
-            top: OM / iM
-          }), SM = new Map;
-          for (const [aM, PM] of MM.hiddenWatersGlimpses) {
-            var jM;
-            const MM = null !== (jM = SM.get(aM)) && void 0 !== jM ? jM : [];
-            MM.push(PM), SM.set(aM, MM)
+      RZ(VV) {
+        this.snapshot = function(VV) {
+          const [eV, xV] = VV.hiddenWatersMapSize, JV = (VV, JV) => ({
+            left: 1 - VV / eV,
+            top: JV / xV
+          }), YV = new Map;
+          for (const [yV, pV] of VV.hiddenWatersGlimpses) {
+            var UV;
+            const VV = null !== (UV = YV.get(yV)) && void 0 !== UV ? UV : [];
+            VV.push(pV), YV.set(yV, VV)
           }
           return {
-            found: MM.hiddenWatersFound,
-            total: MM.hiddenWatersTotal,
-            aspect: iM / rM,
-            pins: MM.hiddenWatersPins.map((MM => {
-              let [rM, iM] = MM;
-              return OM(rM, iM)
+            found: VV.hiddenWatersFound,
+            total: VV.hiddenWatersTotal,
+            aspect: xV / eV,
+            pins: VV.hiddenWatersPins.map((VV => {
+              let [eV, xV] = VV;
+              return JV(eV, xV)
             })),
-            islands: MM.hiddenWatersIslands.map((MM => {
-              let [SM, jM, aM, PM] = MM;
+            islands: VV.hiddenWatersIslands.map((VV => {
+              let [YV, UV, yV, pV] = VV;
               const {
-                left: nM,
-                top: QM
-              } = OM(aM + 1, jM);
+                left: QV,
+                top: nV
+              } = JV(yV + 1, UV);
               return {
-                left: nM,
-                top: QM,
-                width: (aM + 1 - SM) / rM,
-                height: (PM + 1 - jM) / iM
+                left: QV,
+                top: nV,
+                width: (yV + 1 - YV) / eV,
+                height: (pV + 1 - UV) / xV
               }
             })),
-            glimpses: SM
+            glimpses: YV
           }
-        }(MM), this.Tz(this.snapshot)
+        }(VV), this.QZ(this.snapshot)
       }
     }
-    const NO = "skyblockDialogueView";
-    class AO extends nM {
-      constructor(MM, rM, iM, OM, SM) {
-        let jM = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : Date.now;
-        super(MM, iM, OM), this.translate = rM, this.requestDialogue = SM, this.now = jM, this.snapshot = void 0, this.enabled = !1, this.scripts = [], this.speakers = new Map, this.received = !1, this.selection = {
+    const oJ = "skyblockDialogueView";
+    class cJ extends QV {
+      constructor(VV, eV, xV, JV, YV) {
+        let UV = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : Date.now;
+        super(VV, xV, JV), this.translate = eV, this.requestDialogue = YV, this.now = UV, this.snapshot = void 0, this.enabled = !1, this.scripts = [], this.speakers = new Map, this.received = !1, this.selection = {
           kind: "character",
           npcId: null
         }, this.requestAvailableAt = 0, this.showCharacters = () => {
@@ -4293,122 +4259,122 @@ export const modules = {
             kind: "character",
             npcId: "character" === this.selection.kind ? this.selection.npcId : null
           }, this.request(), this.show()
-        }, this.showQuest = MM => {
+        }, this.showQuest = VV => {
           this.selection = {
             kind: "quest",
-            questId: MM
+            questId: VV
           }, this.request(), this.show()
-        }, this.selectCharacter = MM => {
+        }, this.selectCharacter = VV => {
           this.selection = {
             kind: "character",
-            npcId: MM
+            npcId: VV
           }, this.emit()
         }, this.snapshot = this.buildSnapshot()
       }
-      GL(MM) {
-        this.received = !0, this.scripts = MM.questDialogueScripts, this.speakers = new Map(MM.questDialogueSpeakers.map((MM => [MM.dialogueSpeakerId, MM]))), this.emit()
+      RZ(VV) {
+        this.received = !0, this.scripts = VV.questDialogueScripts, this.speakers = new Map(VV.questDialogueSpeakers.map((VV => [VV.dialogueSpeakerId, VV]))), this.emit()
       }
-      setTranslator(MM) {
-        this.translate = MM, this.emit()
+      setTranslator(VV) {
+        this.translate = VV, this.emit()
       }
       isEnabled() {
         return this.enabled
       }
       request() {
-        const MM = this.now();
-        MM >= this.requestAvailableAt && (this.requestAvailableAt = MM + 3e3, this.requestDialogue())
+        const VV = this.now();
+        VV >= this.requestAvailableAt && (this.requestAvailableAt = VV + 3e3, this.requestDialogue())
       }
       buildSnapshot() {
-        var MM;
-        const rM = {
+        var VV;
+        const eV = {
           enabled: this.enabled,
           open: this.open,
           loading: !this.received,
           completedLabel: this.translate("skyblockDialogue:completed")
         };
         if (!this.open) return {
-          ...rM,
+          ...eV,
           characters: [],
           questFocus: null,
           conversations: []
         };
-        const iM = this.selection;
-        if ("quest" === iM.kind) {
-          const MM = this.scripts.find((MM => MM.dialogueQuestId === iM.questId));
+        const xV = this.selection;
+        if ("quest" === xV.kind) {
+          const VV = this.scripts.find((VV => VV.dialogueQuestId === xV.questId));
           return {
-            ...rM,
+            ...eV,
             characters: [],
-            questFocus: iM.questId,
-            conversations: MM ? [this.conversation(MM)] : []
+            questFocus: xV.questId,
+            conversations: VV ? [this.conversation(VV)] : []
           }
         }
-        const OM = [];
-        for (let jM = this.scripts.length - 1; jM >= 0; jM--) {
-          const MM = this.scripts[jM].dialogueLines;
-          for (let rM = MM.length - 1; rM >= 0; rM--) OM.includes(MM[rM].dialogueSpeakerId) || OM.push(MM[rM].dialogueSpeakerId)
+        const JV = [];
+        for (let UV = this.scripts.length - 1; UV >= 0; UV--) {
+          const VV = this.scripts[UV].dialogueLines;
+          for (let eV = VV.length - 1; eV >= 0; eV--) JV.includes(VV[eV].dialogueSpeakerId) || JV.push(VV[eV].dialogueSpeakerId)
         }
-        const SM = null !== iM.npcId && OM.includes(iM.npcId) ? iM.npcId : null !== (MM = OM[0]) && void 0 !== MM ? MM : null;
+        const YV = null !== xV.npcId && JV.includes(xV.npcId) ? xV.npcId : null !== (VV = JV[0]) && void 0 !== VV ? VV : null;
         return {
-          ...rM,
-          characters: OM.map((MM => {
-            var rM, iM;
+          ...eV,
+          characters: JV.map((VV => {
+            var eV, xV;
             return {
-              id: MM,
-              styling: null !== (rM = null === (iM = this.speakers.get(MM)) || void 0 === iM ? void 0 : iM.dialogueSpeakerStyling) && void 0 !== rM ? rM : MM,
-              selected: MM === SM
+              id: VV,
+              styling: null !== (eV = null === (xV = this.speakers.get(VV)) || void 0 === xV ? void 0 : xV.dialogueSpeakerStyling) && void 0 !== eV ? eV : VV,
+              selected: VV === YV
             }
           })),
           questFocus: null,
-          conversations: this.scripts.filter((MM => MM.dialogueLines.some((MM => MM.dialogueSpeakerId === SM)))).map((MM => this.conversation(MM))).reverse()
+          conversations: this.scripts.filter((VV => VV.dialogueLines.some((VV => VV.dialogueSpeakerId === YV)))).map((VV => this.conversation(VV))).reverse()
         }
       }
-      conversation(MM) {
-        let rM = null;
+      conversation(VV) {
+        let eV = null;
         return {
-          questId: MM.dialogueQuestId,
-          questName: this.translate(MM.dialogueQuestNameKey),
-          completed: MM.dialogueQuestCompleted,
-          lines: MM.dialogueLines.map(((MM, iM) => {
-            var OM;
-            const SM = MM.dialogueSpeakerId === rM || null === (OM = this.speakers.get(MM.dialogueSpeakerId)) || void 0 === OM ? void 0 : OM.dialogueSpeakerStyling;
-            return rM = MM.dialogueSpeakerId, {
-              key: iM,
+          questId: VV.dialogueQuestId,
+          questName: this.translate(VV.dialogueQuestNameKey),
+          completed: VV.dialogueQuestCompleted,
+          lines: VV.dialogueLines.map(((VV, xV) => {
+            var JV;
+            const YV = VV.dialogueSpeakerId === eV || null === (JV = this.speakers.get(VV.dialogueSpeakerId)) || void 0 === JV ? void 0 : JV.dialogueSpeakerStyling;
+            return eV = VV.dialogueSpeakerId, {
+              key: xV,
               display: {
                 line: {
-                  translationKey: MM.dialogueLineKey,
-                  params: this.params(MM.dialogueLineParams)
+                  translationKey: VV.dialogueLineKey,
+                  params: this.params(VV.dialogueLineParams)
                 },
-                speakerName: SM,
+                speakerName: YV,
                 animateIn: !1
               }
             }
           }))
         }
       }
-      params(MM) {
-        if (void 0 !== MM) return Object.fromEntries(Object.entries(MM).map((MM => {
-          let [rM, iM] = MM;
-          return [rM, "string" === typeof iM ? iM : this.translate(iM.translationKey)]
+      params(VV) {
+        if (void 0 !== VV) return Object.fromEntries(Object.entries(VV).map((VV => {
+          let [eV, xV] = VV;
+          return [eV, "string" === typeof xV ? xV : this.translate(xV.translationKey)]
         })))
       }
     }
-    var xO = iM(605),
-      vO = iM(1279),
-      FO = iM(83);
-    const BO = "skyblockAutographsView";
+    var hJ = xV(642),
+      lJ = xV(1293),
+      LJ = xV(99);
+    const fJ = "skyblockAutographsView";
 
-    function XO(MM) {
-      const rM = xO.n[MM];
+    function mJ(VV) {
+      const eV = hJ.n[VV];
       return {
-        label: rM.chatTag.map((MM => MM.str)).join(""),
-        icon: rM.icon,
-        colour: rM.mainRGB
+        label: eV.chatTag.map((VV => VV.str)).join(""),
+        icon: eV.icon,
+        colour: eV.mainRGB
       }
     }
-    class IO extends nM {
-      constructor(MM) {
-        let rM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "en-GB";
-        super(MM, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => {}, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {}), this.locale = rM, this.signatures = null, this.snapshot = {
+    class KJ extends QV {
+      constructor(VV) {
+        let eV = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "en-GB";
+        super(VV, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => {}, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {}), this.locale = eV, this.signatures = null, this.snapshot = {
           enabled: !1,
           open: !1,
           entries: [],
@@ -4416,12 +4382,12 @@ export const modules = {
           rankTotal: 0
         }
       }
-      GL(MM) {
-        this.signatures = MM.autographSignatures, MM.autographOpen ? this.show() : this.emit()
+      RZ(VV) {
+        this.signatures = VV.autographSignatures, VV.autographOpen ? this.show() : this.emit()
       }
-      setTranslator(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.locale;
-        this.locale = rM, this.emit()
+      setTranslator(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.locale;
+        this.locale = eV, this.emit()
       }
       dispose() {
         this.signatures = null, super.dispose()
@@ -4430,256 +4396,256 @@ export const modules = {
         return null !== this.signatures
       }
       buildSnapshot() {
-        var MM;
-        const rM = null !== (MM = this.signatures) && void 0 !== MM ? MM : [],
-          iM = new Intl.DateTimeFormat(this.locale, {
+        var VV;
+        const eV = null !== (VV = this.signatures) && void 0 !== VV ? VV : [],
+          xV = new Intl.DateTimeFormat(this.locale, {
             dateStyle: "medium"
           }),
-          OM = [...rM].sort(((MM, rM) => Number(null !== rM.autographRank) - Number(null !== MM.autographRank) || rM.autographSignedAtMs - MM.autographSignedAtMs)).map((MM => ({
-            key: `${MM.autographSignedAtMs}|${MM.autographSignerName}`,
-            name: (0, vO.e)(MM.autographSignerName, !FO.featureFlags.canSeeRealPlayerNames),
-            rank: null === MM.autographRank ? null : XO(MM.autographRank),
-            signedOn: iM.format(MM.autographSignedAtMs)
+          JV = [...eV].sort(((VV, eV) => Number(null !== eV.autographRank) - Number(null !== VV.autographRank) || eV.autographSignedAtMs - VV.autographSignedAtMs)).map((VV => ({
+            key: `${VV.autographSignedAtMs}|${VV.autographSignerName}`,
+            name: (0, lJ.b)(VV.autographSignerName, !LJ.featureFlags.canSeeRealPlayerNames),
+            rank: null === VV.autographRank ? null : mJ(VV.autographRank),
+            signedOn: xV.format(VV.autographSignedAtMs)
           })));
         return {
           enabled: this.isEnabled(),
           open: this.open,
-          entries: OM,
-          total: OM.length,
-          rankTotal: OM.filter((MM => null !== MM.rank)).length
+          entries: JV,
+          total: JV.length,
+          rankTotal: JV.filter((VV => null !== VV.rank)).length
         }
       }
     }
-    const KO = "skyblockHudView",
-      qO = () => {},
-      TO = {
+    const HJ = "skyblockHudView",
+      uJ = () => {},
+      sJ = {
         getItem: () => null,
-        setItem: qO,
-        removeItem: qO
+        setItem: uJ,
+        removeItem: uJ
       };
-    class VO {
-      constructor(MM) {
+    class SJ {
+      constructor(VV) {
         let {
-          translate: rM,
-          translateWithIcons: iM,
-          setMenuOpen: OM = qO,
-          dismissMenu: SM = () => {
-            OM(!1)
+          translate: eV,
+          translateWithIcons: xV,
+          setMenuOpen: JV = uJ,
+          dismissMenu: YV = () => {
+            JV(!1)
           },
-          publishSkills: jM = qO,
-          publishQuests: aM = qO,
-          publishQuestNotification: PM = qO,
-          publishDungeons: nM = qO,
-          publishCollections: QM = qO,
-          publishMap: LM = qO,
-          publishHud: mM = qO,
-          publishPortalTransit: HM = qO,
-          publishDailyReward: hM = qO,
-          publishMailbox: JM = qO,
-          publishQuestGraph: dM = qO,
-          publishForge: yM = qO,
-          publishSmuggler: lM = qO,
-          publishKeepersChair: EM = qO,
-          publishReachLog: UM = qO,
-          publishLampLight: CM = qO,
-          publishMagmaward: eM = qO,
-          publishGlowtide: bM = qO,
-          publishGlowMeter: wM = qO,
-          publishHushWait: tM = qO,
-          publishPassage: gM = qO,
-          publishTideCharts: uM = qO,
-          publishRegulars: RM = qO,
-          publishHiddenWaters: pM = qO,
-          publishDialogue: WM = qO,
-          publishAutographs: sM = qO,
-          isLoadingScreenUp: DM = () => !1,
-          onDailyRewardCoinLanded: kM = qO,
-          onDailyRewardStarted: ZM = qO,
-          onDailyRewardFinished: oM = qO,
-          onDailyRewardItemLanded: fM = qO,
-          onMailboxStarted: YM = qO,
-          journeyStorage: NM = TO,
-          requestTracking: AM = qO,
-          requestTravel: xM = qO,
-          requestDungeonEnter: vM = qO,
-          requestQuestJump: FM = qO,
-          requestQuestArrive: BM = qO,
-          requestForge: XM = qO,
-          requestSmuggle: IM = qO,
-          requestKeepersChairAim: KM = qO,
-          requestReachLogOpen: qM = qO,
-          requestLampLight: TM = qO,
-          requestDialogue: VM = qO
-        } = MM;
-        this.navigation = void 0, this.map = void 0, this.compass = new GM, this.skills = void 0, this.quests = void 0, this.dungeons = void 0, this.collections = void 0, this.questGraph = void 0, this.forge = void 0, this.smuggler = void 0, this.keepersChair = void 0, this.reachLog = void 0, this.lampLight = void 0, this.commandPacer = new jO.e, this.passage = void 0, this.tideCharts = void 0, this.regulars = void 0, this.hiddenWaters = void 0, this.autographs = void 0, this.portalTransit = void 0, this.dailyReward = void 0, this.mailbox = void 0, this.magmaward = void 0, this.glowtide = void 0, this.glowMeter = void 0, this.hushWait = void 0, this.dialogue = void 0, this.panels = void 0, this.setMenuOpen = void 0, this.hudSnapshot = null, this.openingPanel = null, this.publishHud = void 0, this.resolveItemName = MM => MM, this.close = () => {
-          for (const MM of this.panels) MM.close()
-        }, this.setMenuOpen = OM, this.publishHud = mM, this.portalTransit = new yi(HM, NM), this.magmaward = new yO(eM), this.glowtide = new EO(bM), this.glowMeter = new GO(wM), this.hushWait = new eO(tM), this.dailyReward = new Ui(hM, (() => DM() || null !== this.portalTransit.getSnapshot() || null !== this.quests.getNotificationSnapshot() || null !== this.mailbox.getSnapshot()), (MM => {
-          this.quests.setNotificationsHeld(MM)
+          publishSkills: UV = uJ,
+          publishQuests: yV = uJ,
+          publishQuestNotification: pV = uJ,
+          publishDungeons: QV = uJ,
+          publishCollections: nV = uJ,
+          publishMap: ZV = uJ,
+          publishHud: vV = uJ,
+          publishPortalTransit: rV = uJ,
+          publishDailyReward: kV = uJ,
+          publishMailbox: bV = uJ,
+          publishQuestGraph: EV = uJ,
+          publishForge: BV = uJ,
+          publishSmuggler: jV = uJ,
+          publishKeepersChair: qV = uJ,
+          publishReachLog: tV = uJ,
+          publishLampLight: TV = uJ,
+          publishMagmaward: PV = uJ,
+          publishGlowtide: AV = uJ,
+          publishGlowMeter: NV = uJ,
+          publishHushWait: XV = uJ,
+          publishPassage: MV = uJ,
+          publishTideCharts: zV = uJ,
+          publishRegulars: GV = uJ,
+          publishHiddenWaters: WV = uJ,
+          publishDialogue: RV = uJ,
+          publishAutographs: gV = uJ,
+          isLoadingScreenUp: DV = () => !1,
+          onDailyRewardCoinLanded: iV = uJ,
+          onDailyRewardStarted: CV = uJ,
+          onDailyRewardFinished: aV = uJ,
+          onDailyRewardItemLanded: oV = uJ,
+          onMailboxStarted: cV = uJ,
+          journeyStorage: hV = sJ,
+          requestTracking: lV = uJ,
+          requestTravel: LV = uJ,
+          requestDungeonEnter: fV = uJ,
+          requestQuestJump: mV = uJ,
+          requestQuestArrive: KV = uJ,
+          requestForge: HV = uJ,
+          requestSmuggle: uV = uJ,
+          requestKeepersChairAim: sV = uJ,
+          requestReachLogOpen: SV = uJ,
+          requestLampLight: IV = uJ,
+          requestDialogue: dV = uJ
+        } = VV;
+        this.navigation = void 0, this.map = void 0, this.compass = new FV, this.skills = void 0, this.quests = void 0, this.dungeons = void 0, this.collections = void 0, this.questGraph = void 0, this.forge = void 0, this.smuggler = void 0, this.keepersChair = void 0, this.reachLog = void 0, this.lampLight = void 0, this.commandPacer = new JJ.c, this.passage = void 0, this.tideCharts = void 0, this.regulars = void 0, this.hiddenWaters = void 0, this.autographs = void 0, this.portalTransit = void 0, this.dailyReward = void 0, this.mailbox = void 0, this.magmaward = void 0, this.glowtide = void 0, this.glowMeter = void 0, this.hushWait = void 0, this.dialogue = void 0, this.panels = void 0, this.setMenuOpen = void 0, this.hudSnapshot = null, this.openingPanel = null, this.publishHud = void 0, this.resolveItemName = VV => VV, this.close = () => {
+          for (const VV of this.panels) VV.close()
+        }, this.setMenuOpen = JV, this.publishHud = vV, this.portalTransit = new Ex(rV, hV), this.magmaward = new bJ(PV), this.glowtide = new BJ(AV), this.glowMeter = new qJ(NV), this.hushWait = new FJ(XV), this.dailyReward = new qx(kV, (() => DV() || null !== this.portalTransit.getSnapshot() || null !== this.quests.getNotificationSnapshot() || null !== this.mailbox.getSnapshot()), (VV => {
+          this.quests.setNotificationsHeld(VV)
         }), (() => {
           null !== this.hudSnapshot && this.publishHud(this.getHudSnapshot())
-        }), kM, ZM, oM, fM);
-        const cM = MM => {
-          this.panels.some((MM => MM.isOpen())) || (MM ? SM() : this.setMenuOpen(!1))
+        }), iV, CV, aV, oV);
+        const OV = VV => {
+          this.panels.some((VV => VV.isOpen())) || (VV ? YV() : this.setMenuOpen(!1))
         };
-        this.skills = new or(jM, Date.now, (() => {
+        this.skills = new ae(UV, Date.now, (() => {
           this.beforePanelOpen(this.skills)
-        }), rM, void 0, void 0, cM), this.quests = new xr(aM, AM, rM, (() => {
+        }), eV, void 0, void 0, OV), this.quests = new Le(yV, lV, eV, (() => {
           this.beforePanelOpen(this.quests)
-        }), void 0, void 0, cM, PM), this.dungeons = new Br(nM, rM, (() => {
+        }), void 0, void 0, OV, pV), this.dungeons = new Ke(QV, eV, (() => {
           this.beforePanelOpen(this.dungeons)
-        }), void 0, cM, vM), this.collections = new Hi(QM, rM, (() => {
+        }), void 0, OV, fV), this.collections = new rx(nV, eV, (() => {
           this.beforePanelOpen(this.collections)
-        }), cM), this.map = new zM(LM, xM, rM, (() => {
+        }), OV), this.map = new wV(ZV, LV, eV, (() => {
           this.beforePanelOpen(this.map)
-        }), cM), this.questGraph = new Ri(dM, rM, (() => {
+        }), OV), this.questGraph = new zx(EV, eV, (() => {
           this.beforePanelOpen(this.questGraph)
-        }), cM, FM, BM, NM), this.forge = new qi(yM, rM, (() => {
+        }), OV, mV, KV, hV), this.forge = new ux(BV, eV, (() => {
           this.beforePanelOpen(this.forge)
-        }), cM, XM), this.smuggler = new ci(lM, rM, (() => {
+        }), OV, HV), this.smuggler = new Ix(jV, eV, (() => {
           this.beforePanelOpen(this.smuggler)
-        }), cM, IM), this.lampLight = new JO(CM, rM, TM, this.commandPacer), this.keepersChair = new PO(EM, rM, (() => {
+        }), OV, uV), this.lampLight = new rJ(TV, eV, IV, this.commandPacer), this.keepersChair = new UJ(qV, eV, (() => {
           this.beforePanelOpen(this.keepersChair)
-        }), (MM => {
-          this.lampLight.onChairClosed(), cM(MM)
-        }), KM, Date.now, this.commandPacer), this.reachLog = new HO(UM, rM, (() => {
+        }), (VV => {
+          this.lampLight.onChairClosed(), OV(VV)
+        }), sV, Date.now, this.commandPacer), this.reachLog = new ZJ(tV, eV, (() => {
           this.beforePanelOpen(this.reachLog)
-        }), cM, qM, this.commandPacer), this.passage = new SO(gM, rM, (() => {
+        }), OV, SV, this.commandPacer), this.passage = new xJ(MV, eV, (() => {
           this.beforePanelOpen(this.passage)
-        }), cM), this.tideCharts = new WO(uM, rM, (() => {
+        }), OV), this.tideCharts = new GJ(zV, eV, (() => {
           this.beforePanelOpen(this.tideCharts)
-        }), cM), this.regulars = new oO(RM, rM, (() => {
+        }), OV), this.regulars = new iJ(GV, eV, (() => {
           this.beforePanelOpen(this.regulars)
-        }), (MM => {
-          this.regulars.takeReturnToReachLog() && !MM && null === this.openingPanel && this.reachLog.isOpen() && this.reachLog.close(), cM(MM)
-        })), this.hiddenWaters = new YO(pM), this.dialogue = new AO(WM, rM, (() => {
+        }), (VV => {
+          this.regulars.takeReturnToReachLog() && !VV && null === this.openingPanel && this.reachLog.isOpen() && this.reachLog.close(), OV(VV)
+        })), this.hiddenWaters = new aJ(WV), this.dialogue = new cJ(RV, eV, (() => {
           this.beforePanelOpen(this.dialogue)
-        }), cM, VM), this.autographs = new IO(sM, (() => {
+        }), OV, dV), this.autographs = new KJ(gV, (() => {
           this.beforePanelOpen(this.autographs)
-        }), cM), this.mailbox = new bi(JM, (() => DM() || null !== this.portalTransit.getSnapshot() || null !== this.dailyReward.getSnapshot()), YM), this.quests.translateWithIcons = null !== iM && void 0 !== iM ? iM : null, this.skills.onLevelUp = MM => {
-          this.quests.notify(MM)
-        }, this.panels = [this.map, this.skills, this.quests, this.dungeons, this.collections, this.questGraph, this.forge, this.smuggler, this.keepersChair, this.reachLog, this.passage, this.tideCharts, this.regulars, this.dialogue, this.autographs], this.navigation = new kr(this.map, this.quests, this.compass, rM)
+        }), OV), this.mailbox = new Px(bV, (() => DV() || null !== this.portalTransit.getSnapshot() || null !== this.dailyReward.getSnapshot()), cV), this.quests.translateWithIcons = null !== xV && void 0 !== xV ? xV : null, this.skills.onLevelUp = VV => {
+          this.quests.notify(VV)
+        }, this.panels = [this.map, this.skills, this.quests, this.dungeons, this.collections, this.questGraph, this.forge, this.smuggler, this.keepersChair, this.reachLog, this.passage, this.tideCharts, this.regulars, this.dialogue, this.autographs], this.navigation = new ie(this.map, this.quests, this.compass, eV)
       }
       getHudSnapshot() {
-        const MM = this.hudSnapshot,
-          rM = this.dailyReward.getHeldCoins();
-        return null === MM || rM <= 0 || !("hudPurseCoins" in MM) ? MM : {
-          ...MM,
-          hudPurseCoins: Math.max(0, MM.hudPurseCoins - rM)
+        const VV = this.hudSnapshot,
+          eV = this.dailyReward.getHeldCoins();
+        return null === VV || eV <= 0 || !("hudPurseCoins" in VV) ? VV : {
+          ...VV,
+          hudPurseCoins: Math.max(0, VV.hudPurseCoins - eV)
         }
       }
-      receiveHud(MM) {
-        this.hudSnapshot = MM, this.publishHud(this.getHudSnapshot())
+      receiveHud(VV) {
+        this.hudSnapshot = VV, this.publishHud(this.getHudSnapshot())
       }
-      beforePanelOpen(MM) {
+      beforePanelOpen(VV) {
         this.setMenuOpen(!0);
-        const rM = MM === this.regulars && this.regulars.isOverReachLog();
-        this.openingPanel = MM;
-        for (const iM of this.panels) iM === MM || rM && iM === this.reachLog || iM.close();
+        const eV = VV === this.regulars && this.regulars.isOverReachLog();
+        this.openingPanel = VV;
+        for (const xV of this.panels) xV === VV || eV && xV === this.reachLog || xV.close();
         this.openingPanel = null
       }
-      setTranslator(MM, rM, iM) {
-        let OM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : rM => this.resolveItemName(rM, MM);
-        this.quests.translateWithIcons = null !== iM && void 0 !== iM ? iM : null, this.navigation.setTranslator(MM, rM), this.lampLight.setTranslator(MM, rM), this.mailbox.setItemName(OM);
-        for (const SM of this.panels) SM.setTranslator(MM, rM, OM)
+      setTranslator(VV, eV, xV) {
+        let JV = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : eV => this.resolveItemName(eV, VV);
+        this.quests.translateWithIcons = null !== xV && void 0 !== xV ? xV : null, this.navigation.setTranslator(VV, eV), this.lampLight.setTranslator(VV, eV), this.mailbox.setItemName(JV);
+        for (const YV of this.panels) YV.setTranslator(VV, eV, JV)
       }
       dispose() {
         this.navigation.dispose(), this.compass.dispose(), this.portalTransit.dispose(), this.dailyReward.dispose(), this.mailbox.dispose(), this.magmaward.dispose(), this.glowtide.dispose(), this.glowMeter.dispose(), this.hushWait.dispose(), this.lampLight.dispose(), this.commandPacer.dispose();
-        for (const MM of this.panels) MM.dispose()
+        for (const VV of this.panels) VV.dispose()
       }
     }
-    var cO = iM(1116),
-      MS = iM.n(cO),
-      rS = iM(19),
-      iS = iM(37538),
-      OS = iM(3815),
-      SS = iM(2026),
-      jS = iM(2006),
-      aS = iM(35040),
-      PS = iM(1188),
-      nS = iM(1516),
-      QS = iM(1303);
+    var IJ = xV(1146),
+      dJ = xV.n(IJ),
+      OJ = xV(27),
+      VY = xV(37756),
+      eY = xV(3848),
+      xY = xV(2039),
+      JY = xV(2021),
+      YY = xV(35325),
+      UY = xV(1220),
+      yY = xV(1542),
+      pY = xV(1321);
 
-    function zS(MM) {
+    function QY(VV) {
       let {
-        controller: rM,
-        minimap: iM,
-        children: OM
-      } = MM;
-      const SM = (0, nS.e)(KO, rM.getHudSnapshot()),
-        [jM, aM] = (0, eM.useState)(rM.skills.getSnapshot().overallLevel);
-      (0, nS.d)(Zr, (MM => {
-        aM(MM.overallLevel)
+        controller: eV,
+        minimap: xV,
+        children: JV
+      } = VV;
+      const YV = (0, yY.j)(HJ, eV.getHudSnapshot()),
+        [UV, yV] = (0, PV.useState)(eV.skills.getSnapshot().overallLevel);
+      (0, yY.g)(Ce, (VV => {
+        yV(VV.overallLevel)
       }));
-      const PM = (0, eM.useRef)(null);
-      (0, nS.d)(Ei, (MM => {
-        ! function(MM, rM) {
-          if (null === MM || "function" !== typeof MM.animate) return;
-          const iM = rM ? 1.35 : 1.15;
-          MM.animate([{
+      const pV = (0, PV.useRef)(null);
+      (0, yY.g)(jx, (VV => {
+        ! function(VV, eV) {
+          if (null === VV || "function" !== typeof VV.animate) return;
+          const xV = eV ? 1.35 : 1.15;
+          VV.animate([{
             transform: "scale(1)"
           }, {
-            transform: `scale(${iM})`
+            transform: `scale(${xV})`
           }, {
             transform: "scale(1)"
           }], {
-            duration: rM ? 320 : 160,
+            duration: eV ? 320 : 160,
             easing: "ease-out"
-          }), MM.classList.toggle("Receiving", !rM), rM && (MM.classList.remove("Shine"), MM.offsetWidth, MM.classList.add("Shine"))
-        }(PM.current, MM)
+          }), VV.classList.toggle("Receiving", !eV), eV && (VV.classList.remove("Shine"), VV.offsetWidth, VV.classList.add("Shine"))
+        }(pV.current, VV)
       }));
       const {
-        t: nM
-      } = (0, PS.A)(), {
-        isTouchScreen: QM
-      } = (0, rS.m)(["isTouchScreen"]), [zM, mM] = (0, eM.useState)(null);
-      return (0, OS.j)(zM, ".SkyblockRightHud"), null !== SM || iM ? (0, QS.jsx)(iS.i, {
+        t: QV
+      } = (0, UY.A)(), {
+        isTouchScreen: nV
+      } = (0, OJ.l)(["isTouchScreen"]), [wV, vV] = (0, PV.useState)(null);
+      return (0, eY.j)(wV, ".SkyblockRightHud"), null !== YV || xV ? (0, pY.jsx)(VY.e, {
         placement: "topRight",
-        children: (0, QS.jsxs)("div", {
-          className: MS()("SkyblockRightHud", {
-            TouchScreen: QM
+        children: (0, pY.jsxs)("div", {
+          className: dJ()("SkyblockRightHud", {
+            TouchScreen: nV
           }),
-          children: [iM, null !== SM && (0, QS.jsxs)("div", {
-            ref: mM,
+          children: [xV, null !== YV && (0, pY.jsxs)("div", {
+            ref: vV,
             className: "SkyblockRightHudCard",
-            children: ["hudHelpText" in SM ? (0, QS.jsx)("div", {
+            children: ["hudHelpText" in YV ? (0, pY.jsx)("div", {
               className: "SkyblockHudHelp",
-              children: SM.hudHelpText
-            }) : (0, QS.jsxs)(QS.Fragment, {
-              children: [(0, QS.jsxs)("div", {
+              children: YV.hudHelpText
+            }) : (0, pY.jsxs)(pY.Fragment, {
+              children: [(0, pY.jsxs)("div", {
                 className: "SkyblockHudStatus",
-                children: [(0, QS.jsxs)("span", {
+                children: [(0, pY.jsxs)("span", {
                   className: "SkyblockHudIdentity",
-                  children: [(0, QS.jsx)("strong", {
+                  children: [(0, pY.jsx)("strong", {
                     style: {
-                      color: LM.L.cyanUiText
+                      color: ZV.E.cyanUiText
                     },
-                    children: nM(SM.hudZoneNameKey)
-                  }), null !== jM && (0, QS.jsx)("span", {
+                    children: QV(YV.hudZoneNameKey)
+                  }), null !== UV && (0, pY.jsx)("span", {
                     style: {
-                      color: LM.L.goldUiText
+                      color: ZV.E.goldUiText
                     },
-                    children: nM("skyblockGame:level", {
-                      level: (0, aS.g)(jM)
+                    children: QV("skyblockGame:level", {
+                      level: (0, YY.d)(UV)
                     })
                   })]
-                }), (0, QS.jsxs)("span", {
+                }), (0, pY.jsxs)("span", {
                   className: "SkyblockHudCoins",
-                  ref: PM,
-                  children: [(0, QS.jsx)("span", {
+                  ref: pV,
+                  children: [(0, pY.jsx)("span", {
                     "aria-hidden": "true",
-                    children: (0, QS.jsx)(SS.b, {
+                    children: (0, pY.jsx)(xY.e, {
                       itemName: "Gold Coin",
                       amount: 0
                     })
-                  }), (0, aS.g)(SM.hudPurseCoins)]
+                  }), (0, YY.d)(YV.hudPurseCoins)]
                 })]
-              }), SM.hudClockText.length > 0 && (0, QS.jsx)("div", {
+              }), YV.hudClockText.length > 0 && (0, pY.jsx)("div", {
                 className: "SkyblockHudClock",
-                children: (0, QS.jsx)(jS.b, {
-                  text: SM.hudClockText
+                children: (0, pY.jsx)(JY.b, {
+                  text: YV.hudClockText
                 })
               })]
-            }), OM, "hudZoneNameKey" in SM && (0, QS.jsx)("div", {
+            }), JV, "hudZoneNameKey" in YV && (0, pY.jsx)("div", {
               className: "SkyblockHudAddress",
               children: "www.bloxd.io"
             })]
@@ -4687,806 +4653,806 @@ export const modules = {
         })
       }) : null
     }
-    var LS = iM(39580);
+    var nY = xV(39735);
 
-    function mS(MM) {
+    function wY(VV) {
       let {
-        controller: rM
-      } = MM;
+        controller: eV
+      } = VV;
       const {
-        t: iM
-      } = (0, PS.A)();
-      return (0, QS.jsx)("div", {
+        t: xV
+      } = (0, UY.A)();
+      return (0, pY.jsx)("div", {
         className: "SkyblockMapPlayer",
-        ref: rM.display.mountPlayer,
-        title: iM("skyblockGame:mapYouAreHere"),
-        children: (0, QS.jsx)(LS.c, {
+        ref: eV.display.mountPlayer,
+        title: xV("skyblockGame:mapYouAreHere"),
+        children: (0, pY.jsx)(nY.b, {
           icon: "player"
         })
       })
     }
-    const HS = iM(39586),
-      hS = Object.fromEntries(HS.keys().map((MM => [MM.replace(/^\.\/(.*)\.png$/, "$1"), HS(MM)])));
+    const ZY = xV(39742),
+      vY = Object.fromEntries(ZY.keys().map((VV => [VV.replace(/^\.\/(.*)\.png$/, "$1"), ZY(VV)])));
 
-    function JS(MM, rM) {
-      var iM;
-      return null !== (iM = hS[MM]) && void 0 !== iM ? iM : hS[rM]
+    function rY(VV, eV) {
+      var xV;
+      return null !== (xV = vY[VV]) && void 0 !== xV ? xV : vY[eV]
     }
 
-    function dS(MM) {
+    function kY(VV) {
       let {
-        imageKey: rM,
-        fallbackImageKey: iM,
-        geometryKey: OM,
-        alt: SM,
-        className: jM
-      } = MM;
-      const [aM, PM] = (0, eM.useState)((() => function(MM, rM) {
+        imageKey: eV,
+        fallbackImageKey: xV,
+        geometryKey: JV,
+        alt: YV,
+        className: UV
+      } = VV;
+      const [yV, pV] = (0, PV.useState)((() => function(VV, eV) {
         return [{
           id: 0,
-          imageKey: MM,
-          geometryKey: rM,
+          imageKey: VV,
+          geometryKey: eV,
           phase: "shown"
         }]
-      }(rM, OM))), nM = function(MM, rM, iM) {
-        const OM = MM[MM.length - 1];
-        if (OM.imageKey === rM && OM.geometryKey === iM) return MM;
-        const SM = {
-          id: OM.id + 1,
-          imageKey: rM,
-          geometryKey: iM,
+      }(eV, JV))), QV = function(VV, eV, xV) {
+        const JV = VV[VV.length - 1];
+        if (JV.imageKey === eV && JV.geometryKey === xV) return VV;
+        const YV = {
+          id: JV.id + 1,
+          imageKey: eV,
+          geometryKey: xV,
           phase: "entering"
         };
-        return OM.geometryKey === iM ? [{
-          ...OM,
+        return JV.geometryKey === xV ? [{
+          ...JV,
           phase: "leaving"
-        }, SM] : [SM]
-      }(aM, rM, OM);
-      return nM !== aM && PM(nM), (0, QS.jsx)(QS.Fragment, {
-        children: nM.map((MM => (0, QS.jsx)("img", {
-          className: MS()("SkyblockMapTerrainImage", jM, {
-            Entering: "entering" === MM.phase,
-            Leaving: "leaving" === MM.phase
+        }, YV] : [YV]
+      }(yV, eV, JV);
+      return QV !== yV && pV(QV), (0, pY.jsx)(pY.Fragment, {
+        children: QV.map((VV => (0, pY.jsx)("img", {
+          className: dJ()("SkyblockMapTerrainImage", UV, {
+            Entering: "entering" === VV.phase,
+            Leaving: "leaving" === VV.phase
           }),
-          src: JS(MM.imageKey, iM),
-          alt: "leaving" === MM.phase ? "" : SM,
+          src: rY(VV.imageKey, xV),
+          alt: "leaving" === VV.phase ? "" : YV,
           onAnimationEnd: () => {
-            PM((rM => function(MM, rM) {
-              return MM.flatMap((MM => MM.id !== rM ? [MM] : "leaving" === MM.phase ? [] : [{
-                ...MM,
+            pV((eV => function(VV, eV) {
+              return VV.flatMap((VV => VV.id !== eV ? [VV] : "leaving" === VV.phase ? [] : [{
+                ...VV,
                 phase: "shown"
               }]))
-            }(rM, MM.id)))
+            }(eV, VV.id)))
           }
-        }, MM.id)))
+        }, VV.id)))
       })
     }
-    var yS = iM(4917),
-      lS = iM(1520);
+    var bY = xV(5011),
+      EY = xV(1551);
 
-    function ES(MM) {
-      if ("Tab" !== MM.key) return;
-      const rM = Array.from(MM.currentTarget.querySelectorAll('[role="button"][tabindex="0"], button:not(:disabled)')),
-        iM = rM.indexOf(document.activeElement);
-      var OM;
-      if (MM.shiftKey && iM <= 0) MM.preventDefault(), null === (OM = rM.at(-1)) || void 0 === OM || OM.focus();
-      else if (!MM.shiftKey && (-1 === iM || iM === rM.length - 1)) {
-        var SM;
-        MM.preventDefault(), null === (SM = rM[0]) || void 0 === SM || SM.focus()
+    function BY(VV) {
+      if ("Tab" !== VV.key) return;
+      const eV = Array.from(VV.currentTarget.querySelectorAll('[role="button"][tabindex="0"], button:not(:disabled)')),
+        xV = eV.indexOf(document.activeElement);
+      var JV;
+      if (VV.shiftKey && xV <= 0) VV.preventDefault(), null === (JV = eV.at(-1)) || void 0 === JV || JV.focus();
+      else if (!VV.shiftKey && (-1 === xV || xV === eV.length - 1)) {
+        var YV;
+        VV.preventDefault(), null === (YV = eV[0]) || void 0 === YV || YV.focus()
       }
     }
 
-    function US() {
-      const MM = (0, eM.useRef)(null);
-      return (0, eM.useCallback)((rM => {
-        var iM;
-        rM ? (MM.current = document.activeElement, rM.focus()) : null === (iM = MM.current) || void 0 === iM || iM.focus()
+    function jY() {
+      const VV = (0, PV.useRef)(null);
+      return (0, PV.useCallback)((eV => {
+        var xV;
+        eV ? (VV.current = document.activeElement, eV.focus()) : null === (xV = VV.current) || void 0 === xV || xV.focus()
       }), [])
     }
 
-    function GS(MM) {
+    function qY(VV) {
       let {
-        percent: rM,
-        label: iM,
-        levelUpToken: OM,
-        colour: SM
-      } = MM;
-      return (0, QS.jsxs)("div", {
+        percent: eV,
+        label: xV,
+        levelUpToken: JV,
+        colour: YV
+      } = VV;
+      return (0, pY.jsxs)("div", {
         className: "SkillProgressBar",
         role: "progressbar",
-        "aria-label": iM,
+        "aria-label": xV,
         "aria-valuemin": 0,
         "aria-valuemax": 100,
-        "aria-valuenow": rM,
-        "aria-valuetext": iM,
-        children: [(0, QS.jsx)("div", {
+        "aria-valuenow": eV,
+        "aria-valuetext": xV,
+        children: [(0, pY.jsx)("div", {
           className: "SkillProgressBarFill",
           style: {
-            transform: `scaleX(${rM/100})`
+            transform: `scaleX(${eV/100})`
           }
-        }), null !== OM && void 0 !== OM && (0, QS.jsx)("div", {
+        }), null !== JV && void 0 !== JV && (0, pY.jsx)("div", {
           className: "SkillProgressBarLevelUp",
           style: {
-            "--skill-colour": SM
+            "--skill-colour": YV
           }
-        }, OM)]
+        }, JV)]
       })
     }
 
-    function CS(MM) {
+    function tY(VV) {
       let {
-        mount: rM
-      } = MM;
-      return (0, QS.jsx)("div", {
+        mount: eV
+      } = VV;
+      return (0, pY.jsx)("div", {
         className: "SkyblockSearchArea",
-        ref: rM,
+        ref: eV,
         hidden: !0,
-        children: (0, QS.jsxs)("svg", {
+        children: (0, pY.jsxs)("svg", {
           viewBox: "0 0 100 100",
           preserveAspectRatio: "none",
-          children: [(0, QS.jsx)("path", {
+          children: [(0, pY.jsx)("path", {
             className: "SkyblockSearchAreaShadow"
-          }), (0, QS.jsx)("path", {
+          }), (0, pY.jsx)("path", {
             className: "SkyblockSearchAreaDashes"
           })]
         })
       })
     }
 
-    function eS(MM, rM, iM, OM) {
-      (0, eM.useLayoutEffect)((() => {
-        const SM = MM.current;
-        if (!iM || null === rM || void 0 === rM || !rM.local || !SM) return;
-        const jM = Array.from(SM.querySelectorAll(".SkyblockMapNode")),
-          aM = [...rM.points, ...rM.portals],
-          PM = () => {
-            const MM = SM.clientWidth,
-              iM = SM.clientHeight,
-              PM = jM.map(((SM, jM) => {
-                const PM = aM[jM];
+    function FY(VV, eV, xV, JV) {
+      (0, PV.useLayoutEffect)((() => {
+        const YV = VV.current;
+        if (!xV || null === eV || void 0 === eV || !eV.local || !YV) return;
+        const UV = Array.from(YV.querySelectorAll(".SkyblockMapNode")),
+          yV = [...eV.points, ...eV.portals],
+          pV = () => {
+            const VV = YV.clientWidth,
+              xV = YV.clientHeight,
+              pV = UV.map(((YV, UV) => {
+                const pV = yV[UV];
                 return {
-                  id: PM.id,
-                  portal: jM >= rM.points.length,
-                  x: PM.position[0] * MM / 100,
-                  y: PM.position[1] * iM / 100,
-                  width: SM.offsetWidth / OM,
-                  height: SM.offsetHeight / OM
+                  id: pV.id,
+                  portal: UV >= eV.points.length,
+                  x: pV.position[0] * VV / 100,
+                  y: pV.position[1] * xV / 100,
+                  width: YV.offsetWidth / JV,
+                  height: YV.offsetHeight / JV
                 }
               })),
-              nM = new Map(aM.map(((MM, rM) => [MM.id, jM[rM]])));
-            for (const rM of function(MM, rM, iM) {
-                const OM = [],
-                  SM = [...MM].sort(((MM, rM) => Number(rM.portal) - Number(MM.portal) || MM.id.localeCompare(rM.id)));
-                for (const jM of SM) {
-                  const MM = MM => Math.max(jM.width / 2, Math.min(rM - jM.width / 2, MM)),
-                    SM = MM => Math.max(jM.height / 2, Math.min(iM - jM.height / 2, MM)),
-                    aM = [MM(jM.x)],
-                    PM = [SM(jM.y)];
-                  for (const rM of OM) aM.push(MM(rM.x - (rM.width + jM.width) / 2 - 4), MM(rM.x + (rM.width + jM.width) / 2 + 4)), PM.push(SM(rM.y - (rM.height + jM.height) / 2 - 4), SM(rM.y + (rM.height + jM.height) / 2 + 4));
-                  let nM = {
-                      ...jM,
-                      x: aM[0],
-                      y: PM[0]
+              QV = new Map(yV.map(((VV, eV) => [VV.id, UV[eV]])));
+            for (const eV of function(VV, eV, xV) {
+                const JV = [],
+                  YV = [...VV].sort(((VV, eV) => Number(eV.portal) - Number(VV.portal) || VV.id.localeCompare(eV.id)));
+                for (const UV of YV) {
+                  const VV = VV => Math.max(UV.width / 2, Math.min(eV - UV.width / 2, VV)),
+                    YV = VV => Math.max(UV.height / 2, Math.min(xV - UV.height / 2, VV)),
+                    yV = [VV(UV.x)],
+                    pV = [YV(UV.y)];
+                  for (const eV of JV) yV.push(VV(eV.x - (eV.width + UV.width) / 2 - 4), VV(eV.x + (eV.width + UV.width) / 2 + 4)), pV.push(YV(eV.y - (eV.height + UV.height) / 2 - 4), YV(eV.y + (eV.height + UV.height) / 2 + 4));
+                  let QV = {
+                      ...UV,
+                      x: yV[0],
+                      y: pV[0]
                     },
-                    QM = 1 / 0,
-                    zM = 1 / 0;
-                  for (const rM of new Set(aM))
-                    for (const MM of new Set(PM)) {
-                      let iM = 0;
-                      for (const aM of OM) iM += Math.max(0, (jM.width + aM.width) / 2 + 4 - Math.abs(rM - aM.x)) * Math.max(0, (jM.height + aM.height) / 2 + 4 - Math.abs(MM - aM.y));
-                      const SM = (rM - jM.x) ** 2 + (MM - jM.y) ** 2;
-                      (iM < QM || iM === QM && SM < zM) && (nM = {
-                        ...jM,
-                        x: rM,
-                        y: MM
-                      }, QM = iM, zM = SM)
+                    nV = 1 / 0,
+                    wV = 1 / 0;
+                  for (const eV of new Set(yV))
+                    for (const VV of new Set(pV)) {
+                      let xV = 0;
+                      for (const yV of JV) xV += Math.max(0, (UV.width + yV.width) / 2 + 4 - Math.abs(eV - yV.x)) * Math.max(0, (UV.height + yV.height) / 2 + 4 - Math.abs(VV - yV.y));
+                      const YV = (eV - UV.x) ** 2 + (VV - UV.y) ** 2;
+                      (xV < nV || xV === nV && YV < wV) && (QV = {
+                        ...UV,
+                        x: eV,
+                        y: VV
+                      }, nV = xV, wV = YV)
                     }
-                  OM.push(nM)
+                  JV.push(QV)
                 }
-                return OM
-              }(PM, MM, iM)) {
-              const MM = nM.get(rM.id);
-              MM.style.left = `${rM.x}px`, MM.style.top = `${rM.y}px`
+                return JV
+              }(pV, VV, xV)) {
+              const VV = QV.get(eV.id);
+              VV.style.left = `${eV.x}px`, VV.style.top = `${eV.y}px`
             }
           };
-        PM();
-        const nM = new ResizeObserver(PM);
-        nM.observe(SM);
-        for (const MM of jM) nM.observe(MM);
+        pV();
+        const QV = new ResizeObserver(pV);
+        QV.observe(YV);
+        for (const VV of UV) QV.observe(VV);
         return () => {
-          nM.disconnect()
+          QV.disconnect()
         }
-      }), [MM, rM, iM, OM])
+      }), [VV, eV, xV, JV])
     }
-    const bS = {
+    const TY = {
         zoom: 1,
         x: 0,
         y: 0
       },
-      wS = {
+      PY = {
         x0: 0,
         y0: 0,
         x1: 1,
         y1: 1
       };
 
-    function tS(MM, rM, iM) {
-      return Math.min(iM, Math.max(rM, MM))
+    function AY(VV, eV, xV) {
+      return Math.min(xV, Math.max(eV, VV))
     }
 
-    function gS(MM, rM, iM) {
-      const OM = Math.min(1, iM * rM / MM),
-        SM = Math.min(1, MM / (iM * rM));
+    function NY(VV, eV, xV) {
+      const JV = Math.min(1, xV * eV / VV),
+        YV = Math.min(1, VV / (xV * eV));
       return {
-        x0: (1 - OM) / 2,
-        y0: (1 - SM) / 2,
-        x1: (1 + OM) / 2,
-        y1: (1 + SM) / 2
+        x0: (1 - JV) / 2,
+        y0: (1 - YV) / 2,
+        x1: (1 + JV) / 2,
+        y1: (1 + YV) / 2
       }
     }
 
-    function uS(MM, rM, iM, OM) {
-      const SM = rM * (OM - iM);
-      if (SM <= 1) return .5 - rM * (iM + OM) / 2;
-      const jM = .45 * Math.min(1, SM - 1);
-      return tS(MM, 1 - rM * OM - jM, jM - rM * iM)
+    function XY(VV, eV, xV, JV) {
+      const YV = eV * (JV - xV);
+      if (YV <= 1) return .5 - eV * (xV + JV) / 2;
+      const UV = .45 * Math.min(1, YV - 1);
+      return AY(VV, 1 - eV * JV - UV, UV - eV * xV)
     }
 
-    function RS(MM, rM) {
-      const iM = tS(MM.zoom, 1, 12);
+    function MY(VV, eV) {
+      const xV = AY(VV.zoom, 1, 12);
       return {
-        zoom: iM,
-        x: uS(MM.x, iM, rM.x0, rM.x1),
-        y: uS(MM.y, iM, rM.y0, rM.y1)
+        zoom: xV,
+        x: XY(VV.x, xV, eV.x0, eV.x1),
+        y: XY(VV.y, xV, eV.y0, eV.y1)
       }
     }
 
-    function pS(MM, rM, iM, OM) {
-      let SM = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : wS;
-      const jM = tS(MM.zoom * rM, 1, 12),
-        aM = jM / MM.zoom;
-      return RS({
-        zoom: jM,
-        x: iM - (iM - MM.x) * aM,
-        y: OM - (OM - MM.y) * aM
-      }, SM)
+    function zY(VV, eV, xV, JV) {
+      let YV = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : PY;
+      const UV = AY(VV.zoom * eV, 1, 12),
+        yV = UV / VV.zoom;
+      return MY({
+        zoom: UV,
+        x: xV - (xV - VV.x) * yV,
+        y: JV - (JV - VV.y) * yV
+      }, YV)
     }
 
-    function WS(MM, rM, iM, OM) {
-      const [SM, jM] = (0, eM.useState)(bS);
-      (0, eM.useEffect)((() => {
-        jM(bS)
-      }), [iM]), (0, eM.useEffect)((() => {
-        const iM = MM.current;
-        if (!rM || !iM) return;
-        const SM = () => gS(iM.clientWidth, iM.clientHeight, OM),
-          aM = MM => {
-            const rM = iM.getBoundingClientRect();
+    function GY(VV, eV, xV, JV) {
+      const [YV, UV] = (0, PV.useState)(TY);
+      (0, PV.useEffect)((() => {
+        UV(TY)
+      }), [xV]), (0, PV.useEffect)((() => {
+        const xV = VV.current;
+        if (!eV || !xV) return;
+        const YV = () => NY(xV.clientWidth, xV.clientHeight, JV),
+          yV = VV => {
+            const eV = xV.getBoundingClientRect();
             return {
-              x: (MM.clientX - rM.left) / rM.width,
-              y: (MM.clientY - rM.top) / rM.height
+              x: (VV.clientX - eV.left) / eV.width,
+              y: (VV.clientY - eV.top) / eV.height
             }
           },
-          PM = new Map;
-        let nM = {
+          pV = new Map;
+        let QV = {
             x: 0,
             y: 0
           },
-          QM = !1,
-          zM = 0;
-        const LM = MM => {
-            MM.preventDefault();
-            const rM = MM.deltaMode === WheelEvent.DOM_DELTA_LINE ? 16 * MM.deltaY : MM.deltaY,
-              iM = aM(MM);
-            jM((MM => pS(MM, Math.exp(.0015 * -rM), iM.x, iM.y, SM())))
+          nV = !1,
+          wV = 0;
+        const ZV = VV => {
+            VV.preventDefault();
+            const eV = VV.deltaMode === WheelEvent.DOM_DELTA_LINE ? 16 * VV.deltaY : VV.deltaY,
+              xV = yV(VV);
+            UV((VV => zY(VV, Math.exp(.0015 * -eV), xV.x, xV.y, YV())))
           },
-          mM = MM => {
-            "mouse" === MM.pointerType && 0 !== MM.button || (PM.set(MM.pointerId, aM(MM)), 1 === PM.size && (nM = {
-              x: MM.clientX,
-              y: MM.clientY
-            }, QM = !1), zM = 0)
+          vV = VV => {
+            "mouse" === VV.pointerType && 0 !== VV.button || (pV.set(VV.pointerId, yV(VV)), 1 === pV.size && (QV = {
+              x: VV.clientX,
+              y: VV.clientY
+            }, nV = !1), wV = 0)
           },
-          HM = MM => {
-            const rM = PM.get(MM.pointerId);
-            if (!rM) return;
-            const OM = aM(MM);
-            if (PM.set(MM.pointerId, OM), 2 === PM.size) {
-              const [MM, rM] = [...PM.values()], iM = Math.hypot(MM.x - rM.x, MM.y - rM.y);
-              if (zM > 0) {
-                const OM = iM / zM;
-                jM((iM => pS(iM, OM, (MM.x + rM.x) / 2, (MM.y + rM.y) / 2, SM())))
+          rV = VV => {
+            const eV = pV.get(VV.pointerId);
+            if (!eV) return;
+            const JV = yV(VV);
+            if (pV.set(VV.pointerId, JV), 2 === pV.size) {
+              const [VV, eV] = [...pV.values()], xV = Math.hypot(VV.x - eV.x, VV.y - eV.y);
+              if (wV > 0) {
+                const JV = xV / wV;
+                UV((xV => zY(xV, JV, (VV.x + eV.x) / 2, (VV.y + eV.y) / 2, YV())))
               }
-              return zM = iM, void(QM = !0)
-            }!QM && Math.hypot(MM.clientX - nM.x, MM.clientY - nM.y) < 4 || (QM || (QM = !0, iM.setPointerCapture(MM.pointerId)), jM((MM => function(MM, rM, iM) {
-              let OM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : wS;
-              return RS({
-                zoom: MM.zoom,
-                x: MM.x + rM,
-                y: MM.y + iM
-              }, OM)
-            }(MM, OM.x - rM.x, OM.y - rM.y, SM()))))
+              return wV = xV, void(nV = !0)
+            }!nV && Math.hypot(VV.clientX - QV.x, VV.clientY - QV.y) < 4 || (nV || (nV = !0, xV.setPointerCapture(VV.pointerId)), UV((VV => function(VV, eV, xV) {
+              let JV = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : PY;
+              return MY({
+                zoom: VV.zoom,
+                x: VV.x + eV,
+                y: VV.y + xV
+              }, JV)
+            }(VV, JV.x - eV.x, JV.y - eV.y, YV()))))
           },
-          hM = MM => {
-            PM.delete(MM.pointerId), zM = 0
+          kV = VV => {
+            pV.delete(VV.pointerId), wV = 0
           },
-          JM = MM => {
-            QM && (MM.stopPropagation(), MM.preventDefault(), QM = !1)
+          bV = VV => {
+            nV && (VV.stopPropagation(), VV.preventDefault(), nV = !1)
           },
-          dM = new ResizeObserver((() => {
-            jM((MM => RS(MM, SM())))
+          EV = new ResizeObserver((() => {
+            UV((VV => MY(VV, YV())))
           }));
-        return dM.observe(iM), iM.addEventListener("wheel", LM, {
+        return EV.observe(xV), xV.addEventListener("wheel", ZV, {
           passive: !1
-        }), iM.addEventListener("pointerdown", mM), iM.addEventListener("pointermove", HM), iM.addEventListener("pointerup", hM), iM.addEventListener("pointercancel", hM), iM.addEventListener("click", JM, !0), () => {
-          dM.disconnect(), iM.removeEventListener("wheel", LM), iM.removeEventListener("pointerdown", mM), iM.removeEventListener("pointermove", HM), iM.removeEventListener("pointerup", hM), iM.removeEventListener("pointercancel", hM), iM.removeEventListener("click", JM, !0)
+        }), xV.addEventListener("pointerdown", vV), xV.addEventListener("pointermove", rV), xV.addEventListener("pointerup", kV), xV.addEventListener("pointercancel", kV), xV.addEventListener("click", bV, !0), () => {
+          EV.disconnect(), xV.removeEventListener("wheel", ZV), xV.removeEventListener("pointerdown", vV), xV.removeEventListener("pointermove", rV), xV.removeEventListener("pointerup", kV), xV.removeEventListener("pointercancel", kV), xV.removeEventListener("click", bV, !0)
         }
-      }), [MM, rM, iM, OM]);
+      }), [VV, eV, xV, JV]);
       return {
-        view: SM,
-        zoomBy: rM => {
-          const iM = MM.current;
-          iM && jM((MM => pS(MM, rM, .5, .5, gS(iM.clientWidth, iM.clientHeight, OM))))
+        view: YV,
+        zoomBy: eV => {
+          const xV = VV.current;
+          xV && UV((VV => zY(VV, eV, .5, .5, NY(xV.clientWidth, xV.clientHeight, JV))))
         }
       }
     }
 
-    function sS(MM) {
-      var rM, iM, OM, SM;
+    function WY(VV) {
+      var eV, xV, JV, YV;
       let {
-        controller: jM,
-        navigation: aM
-      } = MM;
-      const PM = (0, nS.e)(QM, jM.getSnapshot()),
+        controller: UV,
+        navigation: yV
+      } = VV;
+      const pV = (0, yY.j)(nV, UV.getSnapshot()),
         {
-          t: nM
-        } = (0, PS.A)(),
-        zM = US(),
-        LM = PM.presentation,
-        mM = (0, eM.useRef)(null),
-        HM = (0, eM.useRef)(null),
-        hM = Boolean(PM.open && (null === LM || void 0 === LM ? void 0 : LM.local) && LM.background),
-        JM = WS(mM, hM, `${PM.open}|${PM.tab}|${null===LM||void 0===LM||null===(rM=LM.background)||void 0===rM?void 0:rM.geometryKey}`, null !== (iM = null === LM || void 0 === LM || null === (OM = LM.background) || void 0 === OM ? void 0 : OM.ratio) && void 0 !== iM ? iM : 2);
-      if (eS(HM, LM, PM.open, JM.view.zoom), !LM || !PM.open) return null;
-      const dM = LM.local ? LM.background : null,
-        yM = {
-          "--map-ratio": String(null !== (SM = null === dM || void 0 === dM ? void 0 : dM.ratio) && void 0 !== SM ? SM : 2),
-          backgroundColor: null === dM || void 0 === dM ? void 0 : dM.colour
+          t: QV
+        } = (0, UY.A)(),
+        wV = jY(),
+        ZV = pV.presentation,
+        vV = (0, PV.useRef)(null),
+        rV = (0, PV.useRef)(null),
+        kV = Boolean(pV.open && (null === ZV || void 0 === ZV ? void 0 : ZV.local) && ZV.background),
+        bV = GY(vV, kV, `${pV.open}|${pV.tab}|${null===ZV||void 0===ZV||null===(eV=ZV.background)||void 0===eV?void 0:eV.geometryKey}`, null !== (xV = null === ZV || void 0 === ZV || null === (JV = ZV.background) || void 0 === JV ? void 0 : JV.ratio) && void 0 !== xV ? xV : 2);
+      if (FY(rV, ZV, pV.open, bV.view.zoom), !ZV || !pV.open) return null;
+      const EV = ZV.local ? ZV.background : null,
+        BV = {
+          "--map-ratio": String(null !== (YV = null === EV || void 0 === EV ? void 0 : EV.ratio) && void 0 !== YV ? YV : 2),
+          backgroundColor: null === EV || void 0 === EV ? void 0 : EV.colour
         },
-        lM = {
-          "--map-zoom": String(JM.view.zoom),
-          transform: `translate(${100*JM.view.x}%, ${100*JM.view.y}%) scale(${JM.view.zoom})`
+        jV = {
+          "--map-zoom": String(bV.view.zoom),
+          transform: `translate(${100*bV.view.x}%, ${100*bV.view.y}%) scale(${bV.view.zoom})`
         };
-      return (0, QS.jsx)(yS.e, {
-        show: PM.open,
-        close: jM.dismiss,
+      return (0, pY.jsx)(bY.e, {
+        show: pV.open,
+        close: UV.dismiss,
         togglePointerLock: !1,
         className: "SkyblockSkillsOverlay",
-        children: (0, QS.jsxs)("section", {
+        children: (0, pY.jsxs)("section", {
           className: "SkyblockSkillsPanel SkyblockMapPanel",
           role: "dialog",
           "aria-modal": "true",
           "aria-labelledby": "skyblockMapTitle",
           tabIndex: -1,
-          ref: zM,
-          onKeyDown: ES,
-          children: [(0, QS.jsxs)("header", {
+          ref: wV,
+          onKeyDown: BY,
+          children: [(0, pY.jsxs)("header", {
             className: "SkyblockSkillsHeader",
-            children: [(0, QS.jsxs)("div", {
+            children: [(0, pY.jsxs)("div", {
               className: "SkyblockMapTitle",
-              children: [(0, QS.jsx)("h2", {
+              children: [(0, pY.jsx)("h2", {
                 id: "skyblockMapTitle",
-                children: nM("skyblockGame:map")
-              }), LM.minimap && (0, QS.jsx)("p", {
-                children: LM.minimap.caption
+                children: QV("skyblockGame:map")
+              }), ZV.minimap && (0, pY.jsx)("p", {
+                children: ZV.minimap.caption
               })]
-            }), (0, QS.jsx)("div", {
+            }), (0, pY.jsx)("div", {
               className: "SkyblockMapTabs",
               "data-pad-tabs": "1",
-              children: ["local", "world"].map((MM => (0, QS.jsx)("button", {
+              children: ["local", "world"].map((VV => (0, pY.jsx)("button", {
                 type: "button",
                 "data-pad-tab": !0,
-                "data-pad-selected": MM === PM.tab ? "true" : void 0,
-                className: MS()({
-                  Selected: MM === PM.tab
+                "data-pad-selected": VV === pV.tab ? "true" : void 0,
+                className: dJ()({
+                  Selected: VV === pV.tab
                 }),
-                "aria-pressed": MM === PM.tab,
+                "aria-pressed": VV === pV.tab,
                 onClick: () => {
-                  jM.selectTab(MM)
+                  UV.selectTab(VV)
                 },
-                children: nM("local" === MM ? "skyblockGame:mapLocal" : "skyblockGame:mapWorld")
-              }, MM)))
-            }), (0, QS.jsx)(lS.l, {
+                children: QV("local" === VV ? "skyblockGame:mapLocal" : "skyblockGame:mapWorld")
+              }, VV)))
+            }), (0, pY.jsx)(EY.k, {
               padIgnore: !0,
-              onClick: jM.dismiss
+              onClick: UV.dismiss
             })]
-          }), (0, QS.jsx)("div", {
+          }), (0, pY.jsx)("div", {
             className: "SkyblockMapBody",
-            children: (0, QS.jsxs)("div", {
-              ref: mM,
-              className: MS()("SkyblockMapCanvas", {
-                Local: LM.local,
-                Overview: !LM.local,
-                Zoomed: JM.view.zoom > 1
+            children: (0, pY.jsxs)("div", {
+              ref: vV,
+              className: dJ()("SkyblockMapCanvas", {
+                Local: ZV.local,
+                Overview: !ZV.local,
+                Zoomed: bV.view.zoom > 1
               }),
-              style: yM,
-              children: [(0, QS.jsx)("div", {
+              style: BV,
+              children: [(0, pY.jsx)("div", {
                 className: "SkyblockMapZoomLayer",
-                style: hM ? lM : void 0,
-                children: (0, QS.jsxs)("div", {
+                style: kV ? jV : void 0,
+                children: (0, pY.jsxs)("div", {
                   className: "SkyblockMapArea",
-                  ref: HM,
-                  children: [dM && (0, QS.jsx)(dS, {
+                  ref: rV,
+                  children: [EV && (0, pY.jsx)(kY, {
                     className: "SkyblockMapTerrain",
-                    imageKey: dM.imageKey,
-                    fallbackImageKey: dM.fallbackImageKey,
-                    geometryKey: dM.geometryKey,
-                    alt: dM.label
-                  }), LM.local && (0, QS.jsx)(CS, {
-                    mount: aM.display.mountMapSearchArea
-                  }), !LM.local && (0, QS.jsx)("svg", {
+                    imageKey: EV.imageKey,
+                    fallbackImageKey: EV.fallbackImageKey,
+                    geometryKey: EV.geometryKey,
+                    alt: EV.label
+                  }), ZV.local && (0, pY.jsx)(tY, {
+                    mount: yV.display.mountMapSearchArea
+                  }), !ZV.local && (0, pY.jsx)("svg", {
                     className: "SkyblockMapConnections",
                     viewBox: "0 0 100 100",
                     preserveAspectRatio: "none",
                     "aria-hidden": "true",
-                    children: LM.connections.map((MM => (0, QS.jsx)("line", {
-                      className: MS()({
-                        Explored: MM.explored
+                    children: ZV.connections.map((VV => (0, pY.jsx)("line", {
+                      className: dJ()({
+                        Explored: VV.explored
                       }),
-                      x1: MM.start[0],
-                      y1: MM.start[1],
-                      x2: MM.end[0],
-                      y2: MM.end[1]
-                    }, MM.id)))
-                  }), LM.points.map((MM => {
-                    const rM = !LM.local && MM.thumbnail ? hS[MM.thumbnail] : void 0;
-                    return (0, QS.jsxs)("div", {
-                      className: MS()("SkyblockMapNode", {
-                        Current: MM.current
+                      x1: VV.start[0],
+                      y1: VV.start[1],
+                      x2: VV.end[0],
+                      y2: VV.end[1]
+                    }, VV.id)))
+                  }), ZV.points.map((VV => {
+                    const eV = !ZV.local && VV.thumbnail ? vY[VV.thumbnail] : void 0;
+                    return (0, pY.jsxs)("div", {
+                      className: dJ()("SkyblockMapNode", {
+                        Current: VV.current
                       }),
                       style: {
-                        left: `${MM.position[0]}%`,
-                        top: `${MM.position[1]}%`
+                        left: `${VV.position[0]}%`,
+                        top: `${VV.position[1]}%`
                       },
-                      children: [(0, QS.jsxs)(lS.e, {
-                        className: MS()("SkyblockMapPin", {
-                          Unknown: !MM.visited,
-                          Current: MM.current
+                      children: [(0, pY.jsxs)(EY.f, {
+                        className: dJ()("SkyblockMapPin", {
+                          Unknown: !VV.visited,
+                          Current: VV.current
                         }),
-                        disabled: PM.pending,
+                        disabled: pV.pending,
                         onClick: () => {
-                          jM.travel(MM.travelKind, MM.travelId)
+                          UV.travel(VV.travelKind, VV.travelId)
                         },
-                        children: [rM && (0, QS.jsx)("img", {
+                        children: [eV && (0, pY.jsx)("img", {
                           className: "SkyblockMapZoneThumbnail",
-                          src: rM,
+                          src: eV,
                           alt: ""
-                        }), !rM && (0, QS.jsx)("span", {
+                        }), !eV && (0, pY.jsx)("span", {
                           className: "SkyblockMapPinSymbol",
                           "aria-hidden": "true",
-                          children: (0, QS.jsx)(LS.c, {
-                            icon: MM.icon
+                          children: (0, pY.jsx)(nY.b, {
+                            icon: VV.icon
                           })
-                        }), (0, QS.jsx)("span", {
+                        }), (0, pY.jsx)("span", {
                           className: "SkyblockMapPinName",
-                          children: MM.name
+                          children: VV.name
                         })]
-                      }), MM.current && (0, QS.jsx)("span", {
-                        className: MS()("SkyblockMapHereBadge", {
-                          Above: MM.position[1] > 50
+                      }), VV.current && (0, pY.jsx)("span", {
+                        className: dJ()("SkyblockMapHereBadge", {
+                          Above: VV.position[1] > 50
                         }),
-                        children: nM("skyblockGame:mapYouAreHere")
+                        children: QV("skyblockGame:mapYouAreHere")
                       })]
-                    }, MM.id)
-                  })), LM.portals.map((MM => (0, QS.jsx)("div", {
+                    }, VV.id)
+                  })), ZV.portals.map((VV => (0, pY.jsx)("div", {
                     className: "SkyblockMapNode",
                     style: {
-                      left: `clamp(3rem, ${MM.position[0]}%, calc(100% - 3rem))`,
-                      top: `clamp(2rem, ${MM.position[1]}%, calc(100% - 2rem))`
+                      left: `clamp(3rem, ${VV.position[0]}%, calc(100% - 3rem))`,
+                      top: `clamp(2rem, ${VV.position[1]}%, calc(100% - 2rem))`
                     },
-                    children: (0, QS.jsxs)(lS.e, {
+                    children: (0, pY.jsxs)(EY.f, {
                       className: "SkyblockMapPin",
-                      disabled: PM.pending,
+                      disabled: pV.pending,
                       onClick: () => {
-                        jM.travel(MM.travelKind, MM.travelId)
+                        UV.travel(VV.travelKind, VV.travelId)
                       },
-                      children: [(0, QS.jsx)("span", {
+                      children: [(0, pY.jsx)("span", {
                         className: "SkyblockMapPinSymbol",
                         style: {
-                          color: MM.colour
+                          color: VV.colour
                         },
                         "aria-hidden": "true",
-                        children: (0, QS.jsx)(LS.c, {
-                          icon: MM.icon
+                        children: (0, pY.jsx)(nY.b, {
+                          icon: VV.icon
                         })
-                      }), (0, QS.jsx)("span", {
+                      }), (0, pY.jsx)("span", {
                         className: "SkyblockMapPinName",
-                        children: MM.name
+                        children: VV.name
                       })]
                     })
-                  }, MM.id))), LM.local && (0, QS.jsx)(mS, {
-                    controller: aM
+                  }, VV.id))), ZV.local && (0, pY.jsx)(wY, {
+                    controller: yV
                   })]
                 })
-              }), hM && (0, QS.jsxs)("div", {
+              }), kV && (0, pY.jsxs)("div", {
                 className: "SkyblockMapZoomControls",
-                children: [(0, QS.jsx)("button", {
+                children: [(0, pY.jsx)("button", {
                   type: "button",
-                  "aria-label": nM("skyblockGame:mapZoomIn"),
-                  disabled: JM.view.zoom >= 12,
+                  "aria-label": QV("skyblockGame:mapZoomIn"),
+                  disabled: bV.view.zoom >= 12,
                   onClick: () => {
-                    JM.zoomBy(1.5)
+                    bV.zoomBy(1.5)
                   },
                   children: "+"
-                }), (0, QS.jsx)("button", {
+                }), (0, pY.jsx)("button", {
                   type: "button",
-                  "aria-label": nM("skyblockGame:mapZoomOut"),
-                  disabled: JM.view.zoom <= 1,
+                  "aria-label": QV("skyblockGame:mapZoomOut"),
+                  disabled: bV.view.zoom <= 1,
                   onClick: () => {
-                    JM.zoomBy(1 / 1.5)
+                    bV.zoomBy(1 / 1.5)
                   },
                   children: "\u2212"
                 })]
-              }), (0, QS.jsx)("div", {
+              }), (0, pY.jsx)("div", {
                 className: "SkyblockMapFeedback",
                 role: "status",
                 "aria-live": "polite",
-                children: PM.feedback
+                children: pV.feedback
               })]
             })
-          }), (0, QS.jsxs)("footer", {
+          }), (0, pY.jsxs)("footer", {
             className: "SkyblockMapFooter",
-            children: [LM.progress && (0, QS.jsxs)("div", {
+            children: [ZV.progress && (0, pY.jsxs)("div", {
               className: "SkyblockMapProgress",
-              children: [(0, QS.jsx)("span", {
-                children: LM.progress
-              }), (0, QS.jsx)(GS, {
-                percent: LM.percent,
-                label: LM.progress
+              children: [(0, pY.jsx)("span", {
+                children: ZV.progress
+              }), (0, pY.jsx)(qY, {
+                percent: ZV.percent,
+                label: ZV.progress
               })]
-            }), LM.noLandmarks && (0, QS.jsx)("span", {
-              children: nM("skyblockGame:mapNoLandmarks")
-            }), LM.canTravel && (0, QS.jsx)("span", {
+            }), ZV.noLandmarks && (0, pY.jsx)("span", {
+              children: QV("skyblockGame:mapNoLandmarks")
+            }), ZV.canTravel && (0, pY.jsx)("span", {
               className: "SkyblockMapHint",
-              children: nM("skyblockGame:mapTravelHint")
+              children: QV("skyblockGame:mapTravelHint")
             })]
           })]
         })
       })
     }
 
-    function DS(MM) {
+    function RY(VV) {
       let {
-        view: rM,
-        controller: iM,
-        navigation: OM
-      } = MM;
+        view: eV,
+        controller: xV,
+        navigation: JV
+      } = VV;
       const {
-        t: SM
-      } = (0, PS.A)(), {
-        isTouchScreen: jM
-      } = (0, rS.m)(["isTouchScreen"]);
-      return (0, QS.jsxs)("aside", {
+        t: YV
+      } = (0, UY.A)(), {
+        isTouchScreen: UV
+      } = (0, OJ.l)(["isTouchScreen"]);
+      return (0, pY.jsxs)("aside", {
         className: "SkyblockMinimap",
-        "aria-label": SM("skyblockGame:mapLocal"),
-        children: [jM && (0, QS.jsx)(lS.e, {
+        "aria-label": YV("skyblockGame:mapLocal"),
+        children: [UV && (0, pY.jsx)(EY.f, {
           className: "SkyblockMinimapOpen",
-          onClick: iM.showLocal,
-          children: SM("skyblockGame:map")
-        }), (0, QS.jsxs)("div", {
+          onClick: xV.showLocal,
+          children: YV("skyblockGame:map")
+        }), (0, pY.jsxs)("div", {
           className: "SkyblockMinimapFrame",
           style: {
-            backgroundColor: rM.colour
+            backgroundColor: eV.colour
           },
-          children: [(0, QS.jsxs)("div", {
+          children: [(0, pY.jsxs)("div", {
             className: "SkyblockMinimapTerrain",
-            ref: OM.display.mountTerrain,
+            ref: JV.display.mountTerrain,
             style: {
-              width: rM.width,
-              height: rM.height
+              width: eV.width,
+              height: eV.height
             },
-            children: [(0, QS.jsx)(dS, {
-              imageKey: rM.imageKey,
-              fallbackImageKey: rM.fallbackImageKey,
-              geometryKey: rM.geometryKey,
-              alt: rM.label
-            }), (0, QS.jsx)(CS, {
-              mount: OM.display.mountMinimapSearchArea
-            }), rM.markers.map((MM => (0, QS.jsx)("span", {
+            children: [(0, pY.jsx)(kY, {
+              imageKey: eV.imageKey,
+              fallbackImageKey: eV.fallbackImageKey,
+              geometryKey: eV.geometryKey,
+              alt: eV.label
+            }), (0, pY.jsx)(tY, {
+              mount: JV.display.mountMinimapSearchArea
+            }), eV.markers.map((VV => (0, pY.jsx)("span", {
               className: "SkyblockMinimapLandmark",
               style: {
-                left: `${MM.position[0]}%`,
-                top: `${MM.position[1]}%`,
-                color: MM.colour
+                left: `${VV.position[0]}%`,
+                top: `${VV.position[1]}%`,
+                color: VV.colour
               },
-              title: MM.name,
-              children: (0, QS.jsx)(LS.c, {
-                icon: MM.icon
+              title: VV.name,
+              children: (0, pY.jsx)(nY.b, {
+                icon: VV.icon
               })
-            }, MM.id)))]
-          }), (0, QS.jsx)("div", {
+            }, VV.id)))]
+          }), (0, pY.jsx)("div", {
             className: "SkyblockMinimapPlayer",
-            title: SM("skyblockGame:mapYouAreHere"),
-            children: (0, QS.jsx)(LS.c, {
+            title: YV("skyblockGame:mapYouAreHere"),
+            children: (0, pY.jsx)(nY.b, {
               icon: "player"
             })
           })]
-        }), (0, QS.jsx)("div", {
+        }), (0, pY.jsx)("div", {
           className: "SkyblockMinimapCaption",
-          children: rM.caption
+          children: eV.caption
         })]
       })
     }
 
-    function kS(MM) {
+    function gY(VV) {
       let {
-        controller: rM
-      } = MM;
-      return (0, QS.jsxs)("div", {
+        controller: eV
+      } = VV;
+      return (0, pY.jsxs)("div", {
         className: "SkyblockCompass",
-        ref: rM.display.mountCompass,
-        children: [(0, QS.jsx)("span", {
+        ref: eV.display.mountCompass,
+        children: [(0, pY.jsx)("span", {
           className: "SkyblockCompassArrow",
           "aria-hidden": "true",
           children: "\u25bc"
-        }), (0, QS.jsx)("div", {
+        }), (0, pY.jsx)("div", {
           className: "SkyblockCompassTrack",
           "aria-hidden": "true"
-        }), (0, QS.jsx)("div", {
+        }), (0, pY.jsx)("div", {
           className: "SkyblockCompassLabel"
         })]
       })
     }
 
-    function ZS(MM) {
+    function DY(VV) {
       let {
-        controller: rM,
-        surface: iM
-      } = MM;
+        controller: eV,
+        surface: xV
+      } = VV;
       const {
-        t: OM
-      } = (0, PS.A)(), SM = (0, nS.e)(Zr, rM.getSnapshot()), jM = US();
-      return SM.enabled ? (0, QS.jsxs)(QS.Fragment, {
-        children: ["hud" === iM && (0, QS.jsx)(iS.i, {
+        t: JV
+      } = (0, UY.A)(), YV = (0, yY.j)(Ce, eV.getSnapshot()), UV = jY();
+      return YV.enabled ? (0, pY.jsxs)(pY.Fragment, {
+        children: ["hud" === xV && (0, pY.jsx)(VY.e, {
           placement: "statBars",
-          children: SM.hud && (0, QS.jsxs)("div", {
+          children: YV.hud && (0, pY.jsxs)("div", {
             className: "SkyblockSkillsHudCompact",
             style: {
-              "--skill-colour": SM.hud.colour
+              "--skill-colour": YV.hud.colour
             },
-            children: [(0, QS.jsx)(GS, {
-              percent: SM.hud.skill.percent,
-              label: SM.hud.skill.xp,
-              levelUpToken: SM.hud.levelUpToken,
-              colour: SM.hud.colour
-            }), (0, QS.jsxs)("div", {
+            children: [(0, pY.jsx)(qY, {
+              percent: YV.hud.skill.percent,
+              label: YV.hud.skill.xp,
+              levelUpToken: YV.hud.levelUpToken,
+              colour: YV.hud.colour
+            }), (0, pY.jsxs)("div", {
               className: "SkyblockSkillsHudCompactText SmallTextBold",
-              children: [(0, QS.jsxs)("span", {
-                children: [SM.hud.skill.label, " \xb7 ", SM.hud.skill.level]
-              }), (0, QS.jsx)("span", {
-                children: SM.hud.gain
+              children: [(0, pY.jsxs)("span", {
+                children: [YV.hud.skill.label, " \xb7 ", YV.hud.skill.level]
+              }), (0, pY.jsx)("span", {
+                children: YV.hud.gain
               })]
             })]
           })
-        }), "hud" === iM && (0, QS.jsx)(iS.i, {
-          children: SM.hud && (0, QS.jsxs)("div", {
+        }), "hud" === xV && (0, pY.jsx)(VY.e, {
+          children: YV.hud && (0, pY.jsxs)("div", {
             className: "SkyblockSkillsHud",
-            children: [(0, QS.jsxs)("div", {
+            children: [(0, pY.jsxs)("div", {
               className: "SkyblockSkillsHudHeading",
-              children: [(0, QS.jsx)("strong", {
-                children: SM.hud.skill.label
-              }), (0, QS.jsx)("span", {
-                children: SM.hud.gain
+              children: [(0, pY.jsx)("strong", {
+                children: YV.hud.skill.label
+              }), (0, pY.jsx)("span", {
+                children: YV.hud.gain
               })]
-            }), (0, QS.jsx)(GS, {
-              percent: SM.hud.skill.percent,
-              label: SM.hud.skill.xp,
-              levelUpToken: SM.hud.levelUpToken,
-              colour: SM.hud.colour
-            }), (0, QS.jsxs)("div", {
+            }), (0, pY.jsx)(qY, {
+              percent: YV.hud.skill.percent,
+              label: YV.hud.skill.xp,
+              levelUpToken: YV.hud.levelUpToken,
+              colour: YV.hud.colour
+            }), (0, pY.jsxs)("div", {
               className: "SkyblockSkillsHudProgress",
-              children: [(0, QS.jsx)("span", {
-                children: SM.hud.skill.level
-              }), (0, QS.jsx)("span", {
-                children: SM.hud.skill.xp
+              children: [(0, pY.jsx)("span", {
+                children: YV.hud.skill.level
+              }), (0, pY.jsx)("span", {
+                children: YV.hud.skill.xp
               })]
             })]
           })
-        }), "menu" === iM && (0, QS.jsx)(yS.e, {
-          show: SM.open,
-          close: rM.dismiss,
+        }), "menu" === xV && (0, pY.jsx)(bY.e, {
+          show: YV.open,
+          close: eV.dismiss,
           togglePointerLock: !1,
           className: "SkyblockSkillsOverlay",
-          children: (0, QS.jsxs)("section", {
+          children: (0, pY.jsxs)("section", {
             className: "SkyblockSkillsPanel",
             role: "dialog",
             "aria-modal": "true",
             "aria-labelledby": "skyblockSkillsTitle",
             tabIndex: -1,
-            ref: jM,
-            onKeyDown: ES,
-            children: [(0, QS.jsxs)("header", {
+            ref: UV,
+            onKeyDown: BY,
+            children: [(0, pY.jsxs)("header", {
               className: "SkyblockSkillsHeader",
-              children: [(0, QS.jsxs)("div", {
-                children: [(0, QS.jsx)("h2", {
+              children: [(0, pY.jsxs)("div", {
+                children: [(0, pY.jsx)("h2", {
                   id: "skyblockSkillsTitle",
-                  children: OM("skyblockGame:skills")
-                }), (0, QS.jsx)("p", {
-                  children: OM("skyblockGame:skillsIntro")
+                  children: JV("skyblockGame:skills")
+                }), (0, pY.jsx)("p", {
+                  children: JV("skyblockGame:skillsIntro")
                 })]
-              }), (0, QS.jsx)(lS.l, {
+              }), (0, pY.jsx)(EY.k, {
                 padIgnore: !0,
-                onClick: rM.dismiss
+                onClick: eV.dismiss
               })]
-            }), (0, QS.jsxs)("div", {
+            }), (0, pY.jsxs)("div", {
               className: "SkyblockSkillsBody",
-              children: [(0, QS.jsx)("div", {
+              children: [(0, pY.jsx)("div", {
                 className: "SkyblockSkillsList",
                 "data-pad-select-on-focus": !0,
-                children: SM.skills.map((MM => (0, QS.jsxs)(lS.e, {
-                  className: MS()("SkyblockSkillCard", {
-                    Selected: MM.selected
+                children: YV.skills.map((VV => (0, pY.jsxs)(EY.f, {
+                  className: dJ()("SkyblockSkillCard", {
+                    Selected: VV.selected
                   }),
-                  ariaPressed: MM.selected,
+                  ariaPressed: VV.selected,
                   onClick: () => {
-                    rM.select(MM.id)
+                    eV.select(VV.id)
                   },
-                  children: [(0, QS.jsx)("div", {
+                  children: [(0, pY.jsx)("div", {
                     className: "SkyblockSkillIcon",
-                    children: (0, QS.jsx)(SS.b, {
-                      itemName: MM.icon,
+                    children: (0, pY.jsx)(xY.e, {
+                      itemName: VV.icon,
                       amount: 0
                     })
-                  }), (0, QS.jsxs)("div", {
+                  }), (0, pY.jsxs)("div", {
                     className: "SkyblockSkillSummary",
-                    children: [(0, QS.jsxs)("div", {
+                    children: [(0, pY.jsxs)("div", {
                       className: "SkyblockSkillTitle",
-                      children: [(0, QS.jsx)("strong", {
-                        children: MM.label
-                      }), (0, QS.jsx)("span", {
-                        children: MM.level
+                      children: [(0, pY.jsx)("strong", {
+                        children: VV.label
+                      }), (0, pY.jsx)("span", {
+                        children: VV.level
                       })]
-                    }), (0, QS.jsx)(GS, {
-                      percent: MM.percent,
-                      label: `${MM.label}: ${MM.xp}`
-                    }), (0, QS.jsx)("span", {
+                    }), (0, pY.jsx)(qY, {
+                      percent: VV.percent,
+                      label: `${VV.label}: ${VV.xp}`
+                    }), (0, pY.jsx)("span", {
                       className: "SkyblockSkillXp",
-                      children: MM.xp
+                      children: VV.xp
                     })]
                   })]
-                }, MM.id)))
-              }), SM.detail && (0, QS.jsxs)("div", {
+                }, VV.id)))
+              }), YV.detail && (0, pY.jsxs)("div", {
                 className: "SkyblockSkillDetail",
-                children: [(0, QS.jsx)("div", {
+                children: [(0, pY.jsx)("div", {
                   className: "SkyblockSkillDetailIcon",
-                  children: (0, QS.jsx)(SS.b, {
-                    itemName: SM.detail.icon,
+                  children: (0, pY.jsx)(xY.e, {
+                    itemName: YV.detail.icon,
                     amount: 0
                   })
-                }), (0, QS.jsx)("h3", {
-                  children: SM.detail.label
-                }), (0, QS.jsx)("strong", {
+                }), (0, pY.jsx)("h3", {
+                  children: YV.detail.label
+                }), (0, pY.jsx)("strong", {
                   className: "SkyblockSkillDetailLevel",
-                  children: SM.detail.level
-                }), (0, QS.jsx)("p", {
-                  children: SM.detail.description
-                }), (0, QS.jsxs)("div", {
+                  children: YV.detail.level
+                }), (0, pY.jsx)("p", {
+                  children: YV.detail.description
+                }), (0, pY.jsxs)("div", {
                   className: "SkyblockSkillBenefit",
-                  children: [(0, QS.jsx)("strong", {
-                    children: OM("skyblockGame:currentBenefit")
-                  }), (0, QS.jsx)("span", {
-                    children: SM.detail.benefit
+                  children: [(0, pY.jsx)("strong", {
+                    children: JV("skyblockGame:currentBenefit")
+                  }), (0, pY.jsx)("span", {
+                    children: YV.detail.benefit
                   })]
-                }), (0, QS.jsx)(GS, {
-                  percent: SM.detail.percent,
-                  label: SM.detail.xp
-                }), (0, QS.jsx)("p", {
-                  children: SM.detail.xp
-                }), (0, QS.jsx)("h4", {
-                  children: OM("skyblockGame:earnXp")
-                }), (0, QS.jsx)("ul", {
-                  children: SM.detail.sources.map((MM => (0, QS.jsx)("li", {
-                    children: MM
-                  }, MM)))
+                }), (0, pY.jsx)(qY, {
+                  percent: YV.detail.percent,
+                  label: YV.detail.xp
+                }), (0, pY.jsx)("p", {
+                  children: YV.detail.xp
+                }), (0, pY.jsx)("h4", {
+                  children: JV("skyblockGame:earnXp")
+                }), (0, pY.jsx)("ul", {
+                  children: YV.detail.sources.map((VV => (0, pY.jsx)("li", {
+                    children: VV
+                  }, VV)))
                 })]
               })]
             })]
@@ -5494,274 +5460,274 @@ export const modules = {
         })]
       }) : null
     }
-    var oS = iM(1440),
-      fS = iM(5242),
-      YS = iM(313);
+    var iY = xV(1446),
+      CY = xV(5335),
+      aY = xV(364);
 
-    function NS(MM) {
+    function oY(VV) {
       let {
-        item: rM
-      } = MM;
-      return (0, QS.jsx)("span", {
+        item: eV
+      } = VV;
+      return (0, pY.jsx)("span", {
         className: "SkyblockQuestStepIcon",
         "aria-hidden": "true",
-        children: (0, QS.jsx)(SS.b, {
-          itemName: rM,
+        children: (0, pY.jsx)(xY.e, {
+          itemName: eV,
           amount: 0
         })
       })
     }
 
-    function AS(MM) {
+    function cY(VV) {
       let {
-        name: rM,
-        percent: iM,
-        progress: OM
-      } = MM;
-      return (0, QS.jsxs)("span", {
+        name: eV,
+        percent: xV,
+        progress: JV
+      } = VV;
+      return (0, pY.jsxs)("span", {
         className: "SkyblockQuestStepBar",
-        children: [(0, QS.jsx)(GS, {
-          percent: iM,
-          label: `${(0,YS.lb)(rM)}: ${OM}`
-        }), (0, QS.jsx)("span", {
+        children: [(0, pY.jsx)(qY, {
+          percent: xV,
+          label: `${(0,aY.rb)(eV)}: ${JV}`
+        }), (0, pY.jsx)("span", {
           className: "SkyblockQuestStepBarLabel",
-          children: OM
+          children: JV
         })]
       })
     }
 
-    function xS(MM) {
+    function hY(VV) {
       let {
-        subquests: rM,
-        showDescriptions: iM = !1
-      } = MM;
-      return (0, QS.jsx)("ul", {
+        subquests: eV,
+        showDescriptions: xV = !1
+      } = VV;
+      return (0, pY.jsx)("ul", {
         className: "SkyblockQuestChecklist",
-        children: rM.map((MM => {
-          const rM = iM && "completed" === MM.status,
-            OM = (0, QS.jsxs)("li", {
-              className: MS()("SkyblockQuestStep", MM.status, {
-                JustFinished: MM.justFinished,
-                JustUnlocked: MM.justUnlocked
+        children: eV.map((VV => {
+          const eV = xV && "completed" === VV.status,
+            JV = (0, pY.jsxs)("li", {
+              className: dJ()("SkyblockQuestStep", VV.status, {
+                JustFinished: VV.justFinished,
+                JustUnlocked: VV.justUnlocked
               }),
-              tabIndex: rM ? 0 : void 0,
-              children: [null !== MM.iconItem && (0, QS.jsx)(NS, {
-                item: MM.iconItem
-              }), null === MM.iconItem && (0, QS.jsx)("span", {
+              tabIndex: eV ? 0 : void 0,
+              children: [null !== VV.iconItem && (0, pY.jsx)(oY, {
+                item: VV.iconItem
+              }), null === VV.iconItem && (0, pY.jsx)("span", {
                 className: "SkyblockQuestStepMark",
                 "aria-hidden": "true",
-                children: "completed" === MM.status ? "\u2713" : "skipped" === MM.status ? "\u2212" : "\u25cb"
-              }), (0, QS.jsxs)("span", {
+                children: "completed" === VV.status ? "\u2713" : "skipped" === VV.status ? "\u2212" : "\u25cb"
+              }), (0, pY.jsxs)("span", {
                 className: "SkyblockQuestStepBody",
-                children: [(0, QS.jsx)("strong", {
-                  children: (0, QS.jsx)(fS.c, {
-                    text: MM.name
+                children: [(0, pY.jsx)("strong", {
+                  children: (0, pY.jsx)(CY.e, {
+                    text: VV.name
                   })
-                }), iM && !rM && (0, QS.jsx)("span", {
-                  children: (0, QS.jsx)(fS.c, {
-                    text: MM.description
+                }), xV && !eV && (0, pY.jsx)("span", {
+                  children: (0, pY.jsx)(CY.e, {
+                    text: VV.description
                   })
-                }), null !== MM.barPercent && (0, QS.jsx)(AS, {
-                  name: MM.name,
-                  percent: MM.barPercent,
-                  progress: MM.progress
-                }), null === MM.barPercent && !rM && (0, QS.jsx)("span", {
+                }), null !== VV.barPercent && (0, pY.jsx)(cY, {
+                  name: VV.name,
+                  percent: VV.barPercent,
+                  progress: VV.progress
+                }), null === VV.barPercent && !eV && (0, pY.jsx)("span", {
                   className: "SkyblockQuestStepStatus",
-                  children: MM.statusLabel
+                  children: VV.statusLabel
                 })]
               })]
-            }, MM.id);
-          return rM ? (0, QS.jsx)(oS.i, {
+            }, VV.id);
+          return eV ? (0, pY.jsx)(iY.d, {
             delayShow: 200,
-            tooltipInner: (0, QS.jsxs)("div", {
+            tooltipInner: (0, pY.jsxs)("div", {
               className: "SkyblockQuestStepTooltip",
-              children: [(0, QS.jsx)("span", {
-                children: (0, QS.jsx)(fS.c, {
-                  text: MM.description
+              children: [(0, pY.jsx)("span", {
+                children: (0, pY.jsx)(CY.e, {
+                  text: VV.description
                 })
-              }), (0, QS.jsx)("strong", {
-                children: MM.statusLabel
+              }), (0, pY.jsx)("strong", {
+                children: VV.statusLabel
               })]
             }),
-            children: OM
-          }, MM.id) : OM
+            children: JV
+          }, VV.id) : JV
         }))
       })
     }
 
-    function vS(MM) {
+    function lY(VV) {
       let {
-        quest: rM,
-        select: iM
-      } = MM;
+        quest: eV,
+        select: xV
+      } = VV;
       const {
-        t: OM
-      } = (0, PS.A)(), SM = rM.focusStep;
-      return (0, QS.jsxs)(lS.e, {
-        className: MS()("SkyblockQuestCard", {
-          Selected: rM.selected,
-          Tracked: rM.tracked
+        t: JV
+      } = (0, UY.A)(), YV = eV.focusStep;
+      return (0, pY.jsxs)(EY.f, {
+        className: dJ()("SkyblockQuestCard", {
+          Selected: eV.selected,
+          Tracked: eV.tracked
         }),
         onClick: () => {
-          iM(rM.id)
+          xV(eV.id)
         },
-        children: [(0, QS.jsxs)("div", {
+        children: [(0, pY.jsxs)("div", {
           className: "SkyblockQuestCardTitle",
-          children: [(0, QS.jsx)("strong", {
-            children: (0, QS.jsx)(fS.c, {
-              text: rM.name
+          children: [(0, pY.jsx)("strong", {
+            children: (0, pY.jsx)(CY.e, {
+              text: eV.name
             })
-          }), rM.tracked && (0, QS.jsx)("span", {
+          }), eV.tracked && (0, pY.jsx)("span", {
             className: "SkyblockQuestTrackingBadge",
-            children: OM("skyblockGame:currentQuest")
+            children: JV("skyblockGame:currentQuest")
           })]
-        }), SM && (0, QS.jsxs)("div", {
+        }), YV && (0, pY.jsxs)("div", {
           className: "SkyblockQuestCardStep",
-          children: [null !== SM.iconItem && (0, QS.jsx)(NS, {
-            item: SM.iconItem
-          }), (0, QS.jsx)(AS, {
-            name: SM.name,
-            percent: SM.barPercent,
-            progress: SM.progress
+          children: [null !== YV.iconItem && (0, pY.jsx)(oY, {
+            item: YV.iconItem
+          }), (0, pY.jsx)(cY, {
+            name: YV.name,
+            percent: YV.barPercent,
+            progress: YV.progress
           })]
-        }), (0, QS.jsx)("span", {
+        }), (0, pY.jsx)("span", {
           className: "SkyblockQuestProgress",
-          children: rM.progress
+          children: eV.progress
         })]
       })
     }
 
-    function FS(MM) {
+    function LY(VV) {
       let {
-        controller: rM,
-        surface: iM
-      } = MM;
-      const OM = (0, nS.e)(Nr, rM.getSnapshot()),
+        controller: eV,
+        surface: xV
+      } = VV;
+      const JV = (0, yY.j)(he, eV.getSnapshot()),
         {
-          t: SM
-        } = (0, PS.A)(),
-        jM = US();
-      return OM.enabled ? (0, QS.jsxs)(QS.Fragment, {
-        children: ["hud" === iM && (0, QS.jsx)(QS.Fragment, {
-          children: OM.tracked && (0, QS.jsx)("div", {
+          t: YV
+        } = (0, UY.A)(),
+        UV = jY();
+      return JV.enabled ? (0, pY.jsxs)(pY.Fragment, {
+        children: ["hud" === xV && (0, pY.jsx)(pY.Fragment, {
+          children: JV.tracked && (0, pY.jsx)("div", {
             className: "SkyblockQuestTracker",
-            style: Yr,
-            children: (0, QS.jsxs)("div", {
+            style: ce,
+            children: (0, pY.jsxs)("div", {
               className: "SkyblockQuestTrackerBody",
-              children: [OM.trackedStepPulse > 0 && (0, QS.jsx)("span", {
+              children: [JV.trackedStepPulse > 0 && (0, pY.jsx)("span", {
                 className: "SkyblockQuestTrackerPulse",
                 "aria-hidden": "true"
-              }, OM.trackedStepPulse), (0, QS.jsx)("span", {
+              }, JV.trackedStepPulse), (0, pY.jsx)("span", {
                 className: "SkyblockQuestEyebrow",
-                children: SM("skyblockGame:currentQuest")
-              }), (0, QS.jsxs)("span", {
+                children: YV("skyblockGame:currentQuest")
+              }), (0, pY.jsxs)("span", {
                 className: "SkyblockQuestTrackerTitle",
-                children: [(0, QS.jsx)("strong", {
-                  children: (0, QS.jsx)(fS.c, {
-                    text: OM.tracked.name
+                children: [(0, pY.jsx)("strong", {
+                  children: (0, pY.jsx)(CY.e, {
+                    text: JV.tracked.name
                   })
-                }), null !== OM.tracked.clock && (0, QS.jsx)("span", {
+                }), null !== JV.tracked.clock && (0, pY.jsx)("span", {
                   className: "SkyblockQuestClock",
-                  children: OM.tracked.clock
+                  children: JV.tracked.clock
                 })]
-              }), (0, QS.jsx)(xS, {
-                subquests: OM.tracked.subquests
+              }), (0, pY.jsx)(hY, {
+                subquests: JV.tracked.subquests
               })]
             })
           })
-        }), "menu" === iM && (0, QS.jsx)(yS.e, {
-          show: OM.open,
-          close: rM.dismiss,
+        }), "menu" === xV && (0, pY.jsx)(bY.e, {
+          show: JV.open,
+          close: eV.dismiss,
           togglePointerLock: !1,
           className: "SkyblockSkillsOverlay",
-          children: (0, QS.jsxs)("section", {
+          children: (0, pY.jsxs)("section", {
             className: "SkyblockSkillsPanel SkyblockQuestsPanel",
             role: "dialog",
             "aria-modal": "true",
             "aria-labelledby": "skyblockQuestsTitle",
             tabIndex: -1,
-            ref: jM,
-            onKeyDown: ES,
-            children: [(0, QS.jsxs)("header", {
+            ref: UV,
+            onKeyDown: BY,
+            children: [(0, pY.jsxs)("header", {
               className: "SkyblockSkillsHeader",
-              children: [(0, QS.jsx)("div", {
-                children: (0, QS.jsx)("h2", {
+              children: [(0, pY.jsx)("div", {
+                children: (0, pY.jsx)("h2", {
                   id: "skyblockQuestsTitle",
-                  children: SM("skyblockGame:quests")
+                  children: YV("skyblockGame:quests")
                 })
-              }), (0, QS.jsx)(lS.l, {
+              }), (0, pY.jsx)(EY.k, {
                 padIgnore: !0,
-                onClick: rM.dismiss
+                onClick: eV.dismiss
               })]
-            }), (0, QS.jsxs)("div", {
+            }), (0, pY.jsxs)("div", {
               className: "SkyblockSkillsBody SkyblockQuestsBody",
-              children: [(0, QS.jsxs)("div", {
+              children: [(0, pY.jsxs)("div", {
                 className: "SkyblockQuestList",
-                children: [(0, QS.jsx)("h3", {
-                  children: SM("skyblockGame:current")
-                }), 0 === OM.active.length && (0, QS.jsx)("p", {
+                children: [(0, pY.jsx)("h3", {
+                  children: YV("skyblockGame:current")
+                }), 0 === JV.active.length && (0, pY.jsx)("p", {
                   className: "SkyblockQuestEmpty",
-                  children: SM("skyblockGame:noActiveQuests")
-                }), OM.active.map((MM => (0, QS.jsx)(vS, {
-                  quest: MM,
-                  select: rM.select
-                }, MM.id))), (0, QS.jsx)("h3", {
-                  children: (0, QS.jsxs)("button", {
+                  children: YV("skyblockGame:noActiveQuests")
+                }), JV.active.map((VV => (0, pY.jsx)(lY, {
+                  quest: VV,
+                  select: eV.select
+                }, VV.id))), (0, pY.jsx)("h3", {
+                  children: (0, pY.jsxs)("button", {
                     type: "button",
-                    className: MS()("SkyblockQuestSectionToggle", {
-                      Expanded: OM.completedExpanded
+                    className: dJ()("SkyblockQuestSectionToggle", {
+                      Expanded: JV.completedExpanded
                     }),
-                    "aria-expanded": OM.completedExpanded,
-                    onClick: rM.toggleCompleted,
-                    children: [(0, QS.jsx)("span", {
+                    "aria-expanded": JV.completedExpanded,
+                    onClick: eV.toggleCompleted,
+                    children: [(0, pY.jsx)("span", {
                       className: "SkyblockQuestSectionCaret",
                       "aria-hidden": "true"
-                    }), SM("skyblockGame:completed"), (0, QS.jsx)("span", {
+                    }), YV("skyblockGame:completed"), (0, pY.jsx)("span", {
                       className: "SkyblockQuestSectionCount",
-                      children: OM.completed.length
+                      children: JV.completed.length
                     })]
                   })
-                }), OM.completedExpanded && 0 === OM.completed.length && (0, QS.jsx)("p", {
+                }), JV.completedExpanded && 0 === JV.completed.length && (0, pY.jsx)("p", {
                   className: "SkyblockQuestEmpty",
-                  children: SM("skyblockGame:noCompletedQuests")
-                }), OM.completedExpanded && OM.completed.map((MM => (0, QS.jsx)(vS, {
-                  quest: MM,
-                  select: rM.select
-                }, MM.id)))]
-              }), OM.detail && (0, QS.jsxs)("div", {
+                  children: YV("skyblockGame:noCompletedQuests")
+                }), JV.completedExpanded && JV.completed.map((VV => (0, pY.jsx)(lY, {
+                  quest: VV,
+                  select: eV.select
+                }, VV.id)))]
+              }), JV.detail && (0, pY.jsxs)("div", {
                 className: "SkyblockQuestDetail",
-                children: [OM.detail.completed && (0, QS.jsx)("span", {
+                children: [JV.detail.completed && (0, pY.jsx)("span", {
                   className: "SkyblockQuestEyebrow",
-                  children: SM("skyblockGame:completedQuest")
-                }), (0, QS.jsx)("h3", {
-                  children: (0, QS.jsx)(fS.c, {
-                    text: OM.detail.name
+                  children: YV("skyblockGame:completedQuest")
+                }), (0, pY.jsx)("h3", {
+                  children: (0, pY.jsx)(CY.e, {
+                    text: JV.detail.name
                   })
-                }), (0, QS.jsx)("p", {
+                }), (0, pY.jsx)("p", {
                   className: "SkyblockQuestDescription",
-                  children: (0, QS.jsx)(fS.c, {
-                    text: OM.detail.description
+                  children: (0, pY.jsx)(CY.e, {
+                    text: JV.detail.description
                   })
-                }), (0, QS.jsxs)("p", {
+                }), (0, pY.jsxs)("p", {
                   className: "SkyblockQuestProgress",
-                  children: [OM.detail.progress, null !== OM.detail.clock && (0, QS.jsx)("span", {
+                  children: [JV.detail.progress, null !== JV.detail.clock && (0, pY.jsx)("span", {
                     className: "SkyblockQuestClock",
-                    children: OM.detail.clock
+                    children: JV.detail.clock
                   })]
-                }), (0, QS.jsx)(xS, {
-                  subquests: OM.detail.subquests,
+                }), (0, pY.jsx)(hY, {
+                  subquests: JV.detail.subquests,
                   showDescriptions: !0
-                }), OM.detail.tracked && (0, QS.jsx)("p", {
+                }), JV.detail.tracked && (0, pY.jsx)("p", {
                   className: "SkyblockQuestTrackingStatus",
-                  children: OM.detail.trackLabel
-                }), !OM.detail.completed && !OM.detail.tracked && (0, QS.jsx)(lS.p, {
-                  onClick: rM.trackSelected,
-                  disabled: !OM.detail.canTrack,
-                  children: OM.detail.trackLabel
-                }), OM.detail.canViewDialogue && (0, QS.jsx)(lS.e, {
+                  children: JV.detail.trackLabel
+                }), !JV.detail.completed && !JV.detail.tracked && (0, pY.jsx)(EY.m, {
+                  onClick: eV.trackSelected,
+                  disabled: !JV.detail.canTrack,
+                  children: JV.detail.trackLabel
+                }), JV.detail.canViewDialogue && (0, pY.jsx)(EY.f, {
                   className: "SkyblockQuestViewDialogue",
-                  onClick: rM.viewDialogue,
-                  children: SM("skyblockDialogue:viewDialogue")
+                  onClick: eV.viewDialogue,
+                  children: YV("skyblockDialogue:viewDialogue")
                 })]
               })]
             })]
@@ -5769,35 +5735,35 @@ export const modules = {
         })]
       }) : null
     }
-    var BS = iM(1398),
-      XS = iM(2843);
+    var fY = xV(1414),
+      mY = xV(2919);
 
-    function IS(MM, rM, iM, OM, SM) {
-      const jM = MM => "linear" === SM ? MM : {
-          bS: SM,
-          point: MM
+    function KY(VV, eV, xV, JV, YV) {
+      const UV = VV => "linear" === YV ? VV : {
+          zY: YV,
+          point: VV
         },
-        aM = {};
-      for (const [PM, nM] of OM)
-        for (const [rM, iM] of Object.entries(MM(PM, nM, jM))) aM[rM] ??= {
+        yV = {};
+      for (const [pV, QV] of JV)
+        for (const [eV, xV] of Object.entries(VV(pV, QV, UV))) yV[eV] ??= {
           timeline: []
-        }, aM[rM].timeline.push(iM);
+        }, yV[eV].timeline.push(xV);
       return {
-        yS: rM,
-        loop: iM,
-        GS: aM
+        PY: eV,
+        loop: xV,
+        NY: yV
       }
     }
-    const KS = .547,
-      qS = .022,
-      TS = {
+    const HY = .547,
+      uY = .022,
+      sY = {
         drop: -.03,
         torso: -.28,
         nod: -.4,
         arms: -2.85,
         spread: .18
       },
-      VS = {
+      SY = {
         drop: .22,
         torso: .7,
         nod: -.25,
@@ -5806,167 +5772,167 @@ export const modules = {
         spread: .12
       };
 
-    function cS(MM, rM, iM) {
+    function IY(VV, eV, xV) {
       const {
-        drop: OM = 0,
-        shift: SM = 0,
-        torso: jM = 0,
-        nod: aM = 0,
-        tilt: PM = 0,
-        legs: nM = [0, 0],
-        arms: QM = 0,
-        spread: zM = 0
-      } = rM, LM = KS * Math.cos(jM) - qS * Math.sin(jM), mM = KS * Math.sin(jM) + qS * Math.cos(jM), HM = iM([0, -OM, SM]);
+        drop: JV = 0,
+        shift: YV = 0,
+        torso: UV = 0,
+        nod: yV = 0,
+        tilt: pV = 0,
+        legs: QV = [0, 0],
+        arms: nV = 0,
+        spread: wV = 0
+      } = eV, ZV = HY * Math.cos(UV) - uY * Math.sin(UV), vV = HY * Math.sin(UV) + uY * Math.cos(UV), rV = xV([0, -JV, YV]);
       return {
         LowerBody: {
-          timeFraction: MM,
-          position: HM,
-          rotation: iM([0, 0, 0])
+          timeFraction: VV,
+          position: rV,
+          rotation: xV([0, 0, 0])
         },
         UpperBody: {
-          timeFraction: MM,
-          position: HM,
-          rotation: iM([jM, 0, PM])
+          timeFraction: VV,
+          position: rV,
+          rotation: xV([UV, 0, pV])
         },
         HeadMesh: {
-          timeFraction: MM,
-          position: iM([0, LM - KS - OM, mM - qS + SM]),
-          rotation: iM([jM + aM, 0, PM])
+          timeFraction: VV,
+          position: xV([0, ZV - HY - JV, vV - uY + YV]),
+          rotation: xV([UV + yV, 0, pV])
         },
         LegLeftMesh: {
-          timeFraction: MM,
-          rotation: iM([nM[0], 0, 0])
+          timeFraction: VV,
+          rotation: xV([QV[0], 0, 0])
         },
         LegRightMesh: {
-          timeFraction: MM,
-          rotation: iM([nM[1], 0, 0])
+          timeFraction: VV,
+          rotation: xV([QV[1], 0, 0])
         },
         ArmLeftMesh: {
-          timeFraction: MM,
-          rotation: iM([QM, 0, zM])
+          timeFraction: VV,
+          rotation: xV([nV, 0, wV])
         },
         ArmRightMesh: {
-          timeFraction: MM,
-          rotation: iM([QM, 0, -zM])
+          timeFraction: VV,
+          rotation: xV([nV, 0, -wV])
         }
       }
     }
 
-    function Mj(MM, rM, iM) {
-      return IS(cS, MM, rM, iM, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "linear")
+    function dY(VV, eV, xV) {
+      return KY(IY, VV, eV, xV, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "linear")
     }
 
-    function rj(MM) {
-      return "number" === typeof MM ? [MM, MM] : MM
+    function OY(VV) {
+      return "number" === typeof VV ? [VV, VV] : VV
     }
 
-    function ij(MM, rM, iM) {
+    function VU(VV, eV, xV) {
       const {
-        rise: OM = 0,
-        shift: SM = 0,
-        torso: jM = 0,
-        twist: aM = 0,
-        tilt: PM = 0,
-        nod: nM = 0,
-        cock: QM = 0,
-        arms: zM = 0,
-        spread: LM = 0
-      } = rM, [mM, HM] = rj(zM), [hM, JM] = rj(LM);
+        rise: JV = 0,
+        shift: YV = 0,
+        torso: UV = 0,
+        twist: yV = 0,
+        tilt: pV = 0,
+        nod: QV = 0,
+        cock: nV = 0,
+        arms: wV = 0,
+        spread: ZV = 0
+      } = eV, [vV, rV] = OY(wV), [kV, bV] = OY(ZV);
       return {
         TorsoNode: {
-          timeFraction: MM,
-          position: iM([0, OM, SM]),
-          rotation: iM([jM, aM, PM])
+          timeFraction: VV,
+          position: xV([0, JV, YV]),
+          rotation: xV([UV, yV, pV])
         },
         HeadMesh: {
-          timeFraction: MM,
-          rotation: iM([nM, 0, QM])
+          timeFraction: VV,
+          rotation: xV([QV, 0, nV])
         },
         ArmLeftMesh: {
-          timeFraction: MM,
-          rotation: iM([mM, 0, hM])
+          timeFraction: VV,
+          rotation: xV([vV, 0, kV])
         },
         ArmRightMesh: {
-          timeFraction: MM,
-          rotation: iM([HM, 0, -JM])
+          timeFraction: VV,
+          rotation: xV([rV, 0, -bV])
         }
       }
     }
-    const Oj = [1.0625, -1, 0];
+    const eU = [1.0625, -1, 0];
 
-    function Sj(MM) {
-      return "number" === typeof MM ? [MM, MM] : MM
+    function xU(VV) {
+      return "number" === typeof VV ? [VV, VV] : VV
     }
 
-    function jj(MM, rM, iM) {
+    function JU(VV, eV, xV) {
       const {
-        drop: OM = 0,
-        shift: SM = 0,
-        torso: jM = 0,
-        tilt: aM = 0,
-        nod: PM = 0,
-        cock: nM = 0,
-        legs: QM = [0, 0],
-        arms: zM = 0,
-        spread: LM = 0
-      } = rM, [mM, HM] = Sj(zM), [hM, JM] = Sj(LM), dM = -jM, yM = -aM, [lM, EM, UM] = function(MM, rM) {
-        const [iM, OM, SM] = [-Oj[0], Oj[1], -Oj[2]], jM = iM * Math.cos(rM) - OM * Math.sin(rM), aM = iM * Math.sin(rM) + OM * Math.cos(rM);
-        return [jM - iM, -(aM * Math.cos(MM) - SM * Math.sin(MM) - OM), aM * Math.sin(MM) + SM * Math.cos(MM) - SM]
-      }(dM, yM), GM = iM([0, -OM, SM]);
+        drop: JV = 0,
+        shift: YV = 0,
+        torso: UV = 0,
+        tilt: yV = 0,
+        nod: pV = 0,
+        cock: QV = 0,
+        legs: nV = [0, 0],
+        arms: wV = 0,
+        spread: ZV = 0
+      } = eV, [vV, rV] = xU(wV), [kV, bV] = xU(ZV), EV = -UV, BV = -yV, [jV, qV, tV] = function(VV, eV) {
+        const [xV, JV, YV] = [-eU[0], eU[1], -eU[2]], UV = xV * Math.cos(eV) - JV * Math.sin(eV), yV = xV * Math.sin(eV) + JV * Math.cos(eV);
+        return [UV - xV, -(yV * Math.cos(VV) - YV * Math.sin(VV) - JV), yV * Math.sin(VV) + YV * Math.cos(VV) - YV]
+      }(EV, BV), FV = xV([0, -JV, YV]);
       return {
         TorsoNode: {
-          timeFraction: MM,
-          position: iM([lM, EM - OM, UM + SM]),
-          rotation: iM([dM, 0, yM])
+          timeFraction: VV,
+          position: xV([jV, qV - JV, tV + YV]),
+          rotation: xV([EV, 0, BV])
         },
         HeadMesh: {
-          timeFraction: MM,
-          rotation: iM([-PM, 0, -nM])
+          timeFraction: VV,
+          rotation: xV([-pV, 0, -QV])
         },
         ArmLeftMesh: {
-          timeFraction: MM,
-          rotation: iM([-mM, 0, -hM])
+          timeFraction: VV,
+          rotation: xV([-vV, 0, -kV])
         },
         ArmRightMesh: {
-          timeFraction: MM,
-          rotation: iM([-HM, 0, JM])
+          timeFraction: VV,
+          rotation: xV([-rV, 0, bV])
         },
         LegLeftMesh: {
-          timeFraction: MM,
-          position: GM,
-          rotation: iM([-QM[0], 0, 0])
+          timeFraction: VV,
+          position: FV,
+          rotation: xV([-nV[0], 0, 0])
         },
         LegRightMesh: {
-          timeFraction: MM,
-          position: GM,
-          rotation: iM([-QM[1], 0, 0])
+          timeFraction: VV,
+          position: FV,
+          rotation: xV([-nV[1], 0, 0])
         }
       }
     }
-    var aj = iM(38111),
-      Pj = iM(39471),
-      nj = iM(39673);
+    var YU = xV(38340),
+      UU = xV(39624),
+      yU = xV(39828);
 
-    function Qj(MM, rM, iM) {
-      var OM, SM;
-      const jM = function() {
-          let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-          return MM + ((arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0) - MM) * iM
+    function pU(VV, eV, xV) {
+      var JV, YV;
+      const UV = function() {
+          let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
+          return VV + ((arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0) - VV) * xV
         },
-        [aM, PM] = null !== (OM = MM.legs) && void 0 !== OM ? OM : [0, 0],
-        [nM, QM] = null !== (SM = rM.legs) && void 0 !== SM ? SM : [0, 0];
+        [yV, pV] = null !== (JV = VV.legs) && void 0 !== JV ? JV : [0, 0],
+        [QV, nV] = null !== (YV = eV.legs) && void 0 !== YV ? YV : [0, 0];
       return {
-        drop: jM(MM.drop, rM.drop),
-        shift: jM(MM.shift, rM.shift),
-        torso: jM(MM.torso, rM.torso),
-        nod: jM(MM.nod, rM.nod),
-        tilt: jM(MM.tilt, rM.tilt),
-        legs: [jM(aM, nM), jM(PM, QM)],
-        arms: jM(MM.arms, rM.arms),
-        spread: jM(MM.spread, rM.spread)
+        drop: UV(VV.drop, eV.drop),
+        shift: UV(VV.shift, eV.shift),
+        torso: UV(VV.torso, eV.torso),
+        nod: UV(VV.nod, eV.nod),
+        tilt: UV(VV.tilt, eV.tilt),
+        legs: [UV(yV, QV), UV(pV, nV)],
+        arms: UV(VV.arms, eV.arms),
+        spread: UV(VV.spread, eV.spread)
       }
     }
-    const zj = {
+    const QU = {
         drop: .1,
         torso: .22,
         nod: -.32,
@@ -5974,44 +5940,44 @@ export const modules = {
         arms: -.75,
         spread: .32
       },
-      Lj = Mj(4400, !0, [
-        [0, zj],
+      nU = dY(4400, !0, [
+        [0, QU],
         [.16, {
-          ...zj,
+          ...QU,
           drop: .06,
           torso: .16,
           arms: -.85
         }],
-        [.3, zj],
+        [.3, QU],
         [.44, {
-          ...zj,
+          ...QU,
           drop: .06,
           torso: .16,
           arms: -.85
         }],
-        [.56, Qj(zj, TS, .7)],
-        [.66, Qj(zj, TS, .78)],
-        [.74, Qj(zj, VS, .65)],
+        [.56, pU(QU, sY, .7)],
+        [.66, pU(QU, sY, .78)],
+        [.74, pU(QU, SY, .65)],
         [.86, {
-          ...zj,
+          ...QU,
           drop: .14
         }],
-        [1, zj]
+        [1, QU]
       ], "catmull-rom-spline"),
-      mj = {
-        ...zj,
+      wU = {
+        ...QU,
         drop: .14,
         torso: .3,
         spread: .4
       },
-      Hj = {
+      ZU = {
         rise: .15,
         torso: .15,
         nod: -.25,
         arms: -.6,
         spread: .35
       },
-      hj = {
+      vU = {
         drop: .06,
         torso: .18,
         nod: -.25,
@@ -6019,62 +5985,62 @@ export const modules = {
         arms: -.45,
         spread: .45
       },
-      Jj = {
-        caveGolem: Lj,
-        magmaGolem: Mj(3600, !0, [
-          [0, mj],
+      rU = {
+        caveGolem: nU,
+        magmaGolem: dY(3600, !0, [
+          [0, wU],
           [.12, {
-            ...mj,
+            ...wU,
             tilt: .08,
             drop: .11
           }],
           [.26, {
-            ...mj,
+            ...wU,
             tilt: -.08
           }],
           [.4, {
-            ...mj,
+            ...wU,
             tilt: .06,
             drop: .11
           }],
-          [.52, Qj(mj, TS, .9)],
-          [.62, Qj(mj, VS, .8)],
-          [.7, Qj(mj, VS, .45)],
-          [.78, Qj(mj, VS, .85)],
+          [.52, pU(wU, sY, .9)],
+          [.62, pU(wU, SY, .8)],
+          [.7, pU(wU, SY, .45)],
+          [.78, pU(wU, SY, .85)],
           [.9, {
-            ...mj,
+            ...wU,
             drop: .17
           }],
-          [1, mj]
+          [1, wU]
         ], "catmull-rom-spline"),
-        frostWraith: function(MM, rM, iM) {
-          return IS(ij, MM, rM, iM, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "linear")
+        frostWraith: function(VV, eV, xV) {
+          return KY(VU, VV, eV, xV, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "linear")
         }(4800, !0, [
-          [0, Hj],
+          [0, ZU],
           [.14, {
-            ...Hj,
+            ...ZU,
             rise: .25,
             tilt: .06
           }],
           [.28, {
-            ...Hj,
+            ...ZU,
             rise: .12,
             tilt: -.04
           }],
           [.42, {
-            ...Hj,
+            ...ZU,
             rise: .24,
             tilt: .04
           }],
           [.54, {
-            ...Hj,
+            ...ZU,
             rise: .22,
             twist: .2,
             arms: [-.3, -1.6],
             spread: [.4, .05]
           }],
           [.64, {
-            ...Hj,
+            ...ZU,
             rise: .26,
             twist: .2,
             torso: .05,
@@ -6082,7 +6048,7 @@ export const modules = {
             spread: [.4, .05]
           }],
           [.72, {
-            ...Hj,
+            ...ZU,
             rise: .1,
             twist: .22,
             torso: .35,
@@ -6091,26 +6057,26 @@ export const modules = {
             spread: [.4, -.05]
           }],
           [.86, {
-            ...Hj,
+            ...ZU,
             rise: .16,
             tilt: -.04
           }],
-          [1, Hj]
+          [1, ZU]
         ], "catmull-rom-spline"),
-        tikiTerror: function(MM, rM, iM) {
-          return IS(jj, MM, rM, iM, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "linear")
+        tikiTerror: function(VV, eV, xV) {
+          return KY(JU, VV, eV, xV, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "linear")
         }(4400, !0, [
-          [0, hj],
+          [0, vU],
           [.16, {
-            ...hj,
+            ...vU,
             drop: .02,
             torso: .12,
             arms: -.55,
             spread: .52
           }],
-          [.3, hj],
+          [.3, vU],
           [.44, {
-            ...hj,
+            ...vU,
             drop: .02,
             torso: .12,
             arms: -.55,
@@ -6143,271 +6109,271 @@ export const modules = {
             spread: 1.1
           }],
           [.86, {
-            ...hj,
+            ...vU,
             drop: .1
           }],
-          [1, hj]
+          [1, vU]
         ], "catmull-rom-spline")
       },
-      dj = {
+      kU = {
         golem: "caveGolem",
         wraith: "frostWraith",
         tiki: "tikiTerror"
       },
-      yj = {
+      bU = {
         "Cave Golem": "caveGolem",
         "Magma Golem": "magmaGolem"
       },
-      lj = Object.fromEntries(Object.entries(Jj).map((MM => {
-        let [rM, iM] = MM;
-        return [rM, (0, nj.d)((0, aj.f)(iM), rM)]
+      EU = Object.fromEntries(Object.entries(rU).map((VV => {
+        let [eV, xV] = VV;
+        return [eV, (0, yU.b)((0, YU.e)(xV), eV)]
       })));
 
-    function Ej(MM) {
-      const rM = function(MM) {
-        var rM;
-        const iM = (0, Pj.d)(MM).poseRig;
-        return null !== (rM = yj[MM]) && void 0 !== rM ? rM : void 0 === iM ? null : dj[iM]
-      }(MM);
-      return null === rM ? null : lj[rM]
+    function BU(VV) {
+      const eV = function(VV) {
+        var eV;
+        const xV = (0, UU.d)(VV).poseRig;
+        return null !== (eV = bU[VV]) && void 0 !== eV ? eV : void 0 === xV ? null : kU[xV]
+      }(VV);
+      return null === eV ? null : EU[eV]
     }
 
-    function Uj(MM) {
+    function jU(VV) {
       return {
-        "--difficulty-colour": MM
+        "--difficulty-colour": VV
       }
     }
-    const Gj = (0, eM.lazy)((() => (0, XS.e)(iM.e(226).then((() => iM(44180))), (MM => MM.MobPreview))));
+    const qU = (0, PV.lazy)((() => (0, mY.c)(xV.e(226).then((() => xV(44421))), (VV => VV.MobPreview))));
 
-    function Cj(MM) {
-      var rM, iM, OM;
+    function tU(VV) {
+      var eV, xV, JV;
       let {
-        picker: SM,
-        controller: jM
-      } = MM;
+        picker: YV,
+        controller: UV
+      } = VV;
       const {
-        t: aM
-      } = (0, PS.A)(), PM = US(), {
-        page: nM
-      } = SM;
-      return (0, QS.jsxs)("section", {
+        t: yV
+      } = (0, UY.A)(), pV = jY(), {
+        page: QV
+      } = YV;
+      return (0, pY.jsxs)("section", {
         className: "SkyblockSkillsPanel SkyblockBossPicker",
         role: "dialog",
         "aria-modal": "true",
         "aria-labelledby": "skyblockBossPickerTitle",
         tabIndex: -1,
-        ref: PM,
-        onKeyDown: MM => {
-          "ArrowLeft" === MM.key ? (MM.preventDefault(), MM.stopPropagation(), jM.previous()) : "ArrowRight" === MM.key ? (MM.preventDefault(), MM.stopPropagation(), jM.next()) : ES(MM)
+        ref: pV,
+        onKeyDown: VV => {
+          "ArrowLeft" === VV.key ? (VV.preventDefault(), VV.stopPropagation(), UV.previous()) : "ArrowRight" === VV.key ? (VV.preventDefault(), VV.stopPropagation(), UV.next()) : BY(VV)
         },
-        style: Uj(nM.colour),
-        children: [(0, QS.jsxs)("header", {
+        style: jU(QV.colour),
+        children: [(0, pY.jsxs)("header", {
           className: "SkyblockSkillsHeader",
-          children: [(0, QS.jsx)("h2", {
+          children: [(0, pY.jsx)("h2", {
             id: "skyblockBossPickerTitle",
-            children: SM.dungeonName
-          }), (0, QS.jsx)(lS.l, {
+            children: YV.dungeonName
+          }), (0, pY.jsx)(EY.k, {
             padIgnore: !0,
-            onClick: jM.dismiss
+            onClick: UV.dismiss
           })]
-        }), (0, QS.jsxs)("div", {
+        }), (0, pY.jsxs)("div", {
           className: "SkyblockBossPickerBody",
-          children: [(0, QS.jsxs)("div", {
+          children: [(0, pY.jsxs)("div", {
             className: "SkyblockBossPickerStage",
-            children: [(0, QS.jsx)(lS.e, {
+            children: [(0, pY.jsx)(EY.f, {
               className: "SkyblockBossPickerTurn Previous",
-              disabled: !SM.canPrevious,
-              onClick: jM.previous,
-              children: (0, QS.jsx)("span", {
+              disabled: !YV.canPrevious,
+              onClick: UV.previous,
+              children: (0, pY.jsx)("span", {
                 className: "SkyblockBossPickerChevron",
-                children: (0, QS.jsx)(BS.b, {
+                children: (0, pY.jsx)(fY.b, {
                   name: "angle-up"
                 })
               })
-            }), (0, QS.jsxs)("div", {
-              className: MS()("SkyblockBossPickerBoss", {
-                Locked: !nM.unlocked
+            }), (0, pY.jsxs)("div", {
+              className: dJ()("SkyblockBossPickerBoss", {
+                Locked: !QV.unlocked
               }),
-              children: [null !== nM.bossMobType && (0, QS.jsx)(eM.Suspense, {
-                fallback: (0, QS.jsx)("div", {
+              children: [null !== QV.bossMobType && (0, pY.jsx)(PV.Suspense, {
+                fallback: (0, pY.jsx)("div", {
                   className: "SkyblockBossPickerModel"
                 }),
-                children: (0, QS.jsx)(Gj, {
+                children: (0, pY.jsx)(qU, {
                   className: "SkyblockBossPickerModel",
-                  mobType: nM.bossMobType,
-                  variation: nM.bossMobVariation,
-                  animation: null !== (rM = Ej(nM.bossMobType)) && void 0 !== rM ? rM : void 0
+                  mobType: QV.bossMobType,
+                  variation: QV.bossMobVariation,
+                  animation: null !== (eV = BU(QV.bossMobType)) && void 0 !== eV ? eV : void 0
                 })
-              }), null === nM.bossMobType && (0, QS.jsx)("div", {
+              }), null === QV.bossMobType && (0, pY.jsx)("div", {
                 className: "SkyblockBossPickerModel SkyblockBossPickerUnknown",
                 "aria-hidden": "true",
                 children: "?"
               })]
-            }), (0, QS.jsx)(lS.e, {
+            }), (0, pY.jsx)(EY.f, {
               className: "SkyblockBossPickerTurn Next",
-              disabled: !SM.canNext,
-              onClick: jM.next,
-              children: (0, QS.jsx)("span", {
+              disabled: !YV.canNext,
+              onClick: UV.next,
+              children: (0, pY.jsx)("span", {
                 className: "SkyblockBossPickerChevron",
-                children: (0, QS.jsx)(BS.b, {
+                children: (0, pY.jsx)(fY.b, {
                   name: "angle-up"
                 })
               })
             })]
-          }), (0, QS.jsxs)("div", {
+          }), (0, pY.jsxs)("div", {
             className: "SkyblockBossPickerCaption",
-            children: [(0, QS.jsxs)("span", {
+            children: [(0, pY.jsxs)("span", {
               className: "SkyblockBossPickerDifficulty",
-              children: [nM.beaten && (0, QS.jsx)("span", {
+              children: [QV.beaten && (0, pY.jsx)("span", {
                 "aria-hidden": "true",
                 children: "\u2713 "
-              }), nM.label]
-            }), (0, QS.jsx)("strong", {
+              }), QV.label]
+            }), (0, pY.jsx)("strong", {
               className: "SkyblockBossPickerName",
-              children: null !== (iM = nM.bossName) && void 0 !== iM ? iM : "???"
-            }), (0, QS.jsxs)("span", {
-              className: MS()("SkyblockBossPickerRecord", {
-                Locked: null !== nM.lockedHint
+              children: null !== (xV = QV.bossName) && void 0 !== xV ? xV : "???"
+            }), (0, pY.jsxs)("span", {
+              className: dJ()("SkyblockBossPickerRecord", {
+                Locked: null !== QV.lockedHint
               }),
-              children: [null !== nM.lockedHintHighlight && (0, QS.jsxs)(QS.Fragment, {
-                children: [nM.lockedHintHighlight.before, (0, QS.jsxs)("span", {
+              children: [null !== QV.lockedHintHighlight && (0, pY.jsxs)(pY.Fragment, {
+                children: [QV.lockedHintHighlight.before, (0, pY.jsxs)("span", {
                   className: "SkyblockDifficulty",
-                  style: Uj(nM.lockedHintHighlight.colour),
-                  children: [null !== nM.lockedHintHighlight.icon && (0, QS.jsx)("span", {
+                  style: jU(QV.lockedHintHighlight.colour),
+                  children: [null !== QV.lockedHintHighlight.icon && (0, pY.jsx)("span", {
                     className: "SkyblockBossPickerHintIcon",
                     "aria-hidden": "true",
-                    children: (0, QS.jsx)(SS.b, {
-                      itemName: nM.lockedHintHighlight.icon,
+                    children: (0, pY.jsx)(xY.e, {
+                      itemName: QV.lockedHintHighlight.icon,
                       amount: 0
                     })
-                  }), nM.lockedHintHighlight.name]
-                }), nM.lockedHintHighlight.after]
-              }), null === nM.lockedHintHighlight && (null !== (OM = nM.lockedHint) && void 0 !== OM ? OM : nM.summary)]
+                  }), QV.lockedHintHighlight.name]
+                }), QV.lockedHintHighlight.after]
+              }), null === QV.lockedHintHighlight && (null !== (JV = QV.lockedHint) && void 0 !== JV ? JV : QV.summary)]
             })]
-          }), (0, QS.jsx)("div", {
+          }), (0, pY.jsx)("div", {
             className: "SkyblockBossPickerDots",
             "aria-hidden": "true",
-            children: SM.pages.map((MM => (0, QS.jsx)("span", {
-              className: MS()("SkyblockBossPickerDot", {
-                Current: MM.current,
-                Locked: !MM.unlocked
+            children: YV.pages.map((VV => (0, pY.jsx)("span", {
+              className: dJ()("SkyblockBossPickerDot", {
+                Current: VV.current,
+                Locked: !VV.unlocked
               }),
-              style: Uj(MM.colour)
-            }, MM.difficulty)))
-          }), (0, QS.jsx)(lS.u, {
+              style: jU(VV.colour)
+            }, VV.difficulty)))
+          }), (0, pY.jsx)(EY.q, {
             className: "SkyblockBossPickerFight",
-            disabled: !nM.unlocked,
-            onClick: jM.enter,
-            children: aM("skyblockGame:dungeonFight")
+            disabled: !QV.unlocked,
+            onClick: UV.enter,
+            children: yV("skyblockGame:dungeonFight")
           })]
         })]
       })
     }
 
-    function ej(MM) {
+    function FU(VV) {
       let {
-        dungeon: rM,
-        select: iM
-      } = MM;
-      return (0, QS.jsxs)(lS.e, {
-        className: MS()("SkyblockDungeonCard", {
-          Selected: rM.selected
+        dungeon: eV,
+        select: xV
+      } = VV;
+      return (0, pY.jsxs)(EY.f, {
+        className: dJ()("SkyblockDungeonCard", {
+          Selected: eV.selected
         }),
         onClick: () => {
-          iM(rM.id)
+          xV(eV.id)
         },
-        children: [(0, QS.jsxs)("div", {
+        children: [(0, pY.jsxs)("div", {
           className: "SkyblockDungeonCardTitle",
-          children: [(0, QS.jsx)("strong", {
-            children: rM.name
-          }), (0, QS.jsx)("span", {
-            children: rM.beatenSummary
+          children: [(0, pY.jsx)("strong", {
+            children: eV.name
+          }), (0, pY.jsx)("span", {
+            children: eV.beatenSummary
           })]
-        }), (0, QS.jsx)("div", {
+        }), (0, pY.jsx)("div", {
           className: "SkyblockDungeonChips",
-          children: rM.difficulties.map((MM => (0, QS.jsxs)("span", {
-            className: MS()("SkyblockDungeonChip", "SkyblockDifficulty", {
-              Beaten: MM.beaten
+          children: eV.difficulties.map((VV => (0, pY.jsxs)("span", {
+            className: dJ()("SkyblockDungeonChip", "SkyblockDifficulty", {
+              Beaten: VV.beaten
             }),
-            style: Uj(MM.colour),
-            title: MM.summary,
-            children: [MM.beaten && (0, QS.jsx)("span", {
+            style: jU(VV.colour),
+            title: VV.summary,
+            children: [VV.beaten && (0, pY.jsx)("span", {
               "aria-hidden": "true",
               children: "\u2713 "
-            }), MM.label]
-          }, MM.difficulty)))
+            }), VV.label]
+          }, VV.difficulty)))
         })]
       })
     }
 
-    function bj(MM) {
+    function TU(VV) {
       let {
-        controller: rM
-      } = MM;
-      const iM = (0, nS.e)(Fr, rM.getSnapshot()),
+        controller: eV
+      } = VV;
+      const xV = (0, yY.j)(me, eV.getSnapshot()),
         {
-          t: OM
-        } = (0, PS.A)(),
-        SM = US();
-      return iM.enabled ? (0, QS.jsxs)(yS.e, {
-        show: iM.open,
-        close: rM.dismiss,
+          t: JV
+        } = (0, UY.A)(),
+        YV = jY();
+      return xV.enabled ? (0, pY.jsxs)(bY.e, {
+        show: xV.open,
+        close: eV.dismiss,
         togglePointerLock: !1,
         className: "SkyblockSkillsOverlay",
-        children: [iM.picker && (0, QS.jsx)(Cj, {
-          picker: iM.picker,
-          controller: rM
-        }), !iM.picker && (0, QS.jsxs)("section", {
+        children: [xV.picker && (0, pY.jsx)(tU, {
+          picker: xV.picker,
+          controller: eV
+        }), !xV.picker && (0, pY.jsxs)("section", {
           className: "SkyblockSkillsPanel SkyblockDungeonsPanel",
           role: "dialog",
           "aria-modal": "true",
           "aria-labelledby": "skyblockDungeonsTitle",
           tabIndex: -1,
-          ref: SM,
-          onKeyDown: ES,
-          children: [(0, QS.jsxs)("header", {
+          ref: YV,
+          onKeyDown: BY,
+          children: [(0, pY.jsxs)("header", {
             className: "SkyblockSkillsHeader",
-            children: [(0, QS.jsxs)("div", {
-              children: [(0, QS.jsx)("h2", {
+            children: [(0, pY.jsxs)("div", {
+              children: [(0, pY.jsx)("h2", {
                 id: "skyblockDungeonsTitle",
-                children: OM("skyblockGame:dungeons")
-              }), (0, QS.jsx)("p", {
-                children: OM("skyblockGame:dungeonsIntro")
+                children: JV("skyblockGame:dungeons")
+              }), (0, pY.jsx)("p", {
+                children: JV("skyblockGame:dungeonsIntro")
               })]
-            }), (0, QS.jsx)(lS.l, {
+            }), (0, pY.jsx)(EY.k, {
               padIgnore: !0,
-              onClick: rM.dismiss
+              onClick: eV.dismiss
             })]
-          }), (0, QS.jsxs)("div", {
+          }), (0, pY.jsxs)("div", {
             className: "SkyblockSkillsBody SkyblockDungeonsBody",
-            children: [(0, QS.jsx)("div", {
+            children: [(0, pY.jsx)("div", {
               className: "SkyblockDungeonList",
-              children: iM.dungeons.map((MM => (0, QS.jsx)(ej, {
-                dungeon: MM,
-                select: rM.select
-              }, MM.id)))
-            }), iM.detail && (0, QS.jsxs)("div", {
+              children: xV.dungeons.map((VV => (0, pY.jsx)(FU, {
+                dungeon: VV,
+                select: eV.select
+              }, VV.id)))
+            }), xV.detail && (0, pY.jsxs)("div", {
               className: "SkyblockDungeonDetail",
-              children: [(0, QS.jsx)("h3", {
-                children: iM.detail.name
-              }), (0, QS.jsx)("ul", {
+              children: [(0, pY.jsx)("h3", {
+                children: xV.detail.name
+              }), (0, pY.jsx)("ul", {
                 className: "SkyblockDungeonRecords",
-                children: iM.detail.difficulties.map((MM => (0, QS.jsxs)("li", {
-                  className: MS()("SkyblockDungeonRecord", {
-                    Beaten: MM.beaten
+                children: xV.detail.difficulties.map((VV => (0, pY.jsxs)("li", {
+                  className: dJ()("SkyblockDungeonRecord", {
+                    Beaten: VV.beaten
                   }),
-                  children: [(0, QS.jsxs)("span", {
+                  children: [(0, pY.jsxs)("span", {
                     className: "SkyblockDungeonRecordName SkyblockDifficulty",
-                    style: Uj(MM.colour),
-                    children: [MM.beaten && (0, QS.jsx)("span", {
+                    style: jU(VV.colour),
+                    children: [VV.beaten && (0, pY.jsx)("span", {
                       "aria-hidden": "true",
                       children: "\u2713 "
-                    }), MM.label]
-                  }), (0, QS.jsx)("span", {
+                    }), VV.label]
+                  }), (0, pY.jsx)("span", {
                     className: "SkyblockDungeonRecordSummary",
-                    children: MM.summary
+                    children: VV.summary
                   })]
-                }, MM.difficulty)))
+                }, VV.difficulty)))
               })]
             })]
           })]
@@ -6415,236 +6381,236 @@ export const modules = {
       }) : null
     }
 
-    function wj(MM) {
+    function PU(VV) {
       let {
-        collection: rM,
-        select: iM
-      } = MM;
-      return (0, QS.jsxs)(lS.e, {
-        className: MS()("SkyblockSkillCard", "SkyblockCollectionCard", {
-          Selected: rM.selected,
-          Locked: rM.locked
+        collection: eV,
+        select: xV
+      } = VV;
+      return (0, pY.jsxs)(EY.f, {
+        className: dJ()("SkyblockSkillCard", "SkyblockCollectionCard", {
+          Selected: eV.selected,
+          Locked: eV.locked
         }),
-        ariaPressed: rM.selected,
+        ariaPressed: eV.selected,
         onClick: () => {
-          iM(rM.id)
+          xV(eV.id)
         },
-        children: [(0, QS.jsx)("div", {
+        children: [(0, pY.jsx)("div", {
           className: "SkyblockSkillIcon",
-          children: (0, QS.jsx)(SS.b, {
-            itemName: rM.icon,
+          children: (0, pY.jsx)(xY.e, {
+            itemName: eV.icon,
             amount: 0
           })
-        }), (0, QS.jsxs)("div", {
+        }), (0, pY.jsxs)("div", {
           className: "SkyblockSkillSummary",
-          children: [(0, QS.jsxs)("div", {
+          children: [(0, pY.jsxs)("div", {
             className: "SkyblockSkillTitle",
-            children: [(0, QS.jsx)("strong", {
-              children: rM.name
-            }), (0, QS.jsx)("span", {
-              children: rM.tier
+            children: [(0, pY.jsx)("strong", {
+              children: eV.name
+            }), (0, pY.jsx)("span", {
+              children: eV.tier
             })]
-          }), (0, QS.jsx)(GS, {
-            percent: rM.percent,
-            label: `${rM.name}: ${rM.progress}`
-          }), (0, QS.jsx)("span", {
+          }), (0, pY.jsx)(qY, {
+            percent: eV.percent,
+            label: `${eV.name}: ${eV.progress}`
+          }), (0, pY.jsx)("span", {
             className: "SkyblockSkillXp",
-            children: rM.progress
+            children: eV.progress
           })]
         })]
       })
     }
 
-    function tj(MM) {
+    function AU(VV) {
       let {
-        collection: rM
-      } = MM;
+        collection: eV
+      } = VV;
       const {
-        t: iM
-      } = (0, PS.A)();
-      return (0, QS.jsxs)("div", {
+        t: xV
+      } = (0, UY.A)();
+      return (0, pY.jsxs)("div", {
         className: "SkyblockSkillDetail SkyblockCollectionDetail",
-        children: [(0, QS.jsx)("div", {
+        children: [(0, pY.jsx)("div", {
           className: "SkyblockSkillDetailIcon",
-          children: (0, QS.jsx)(SS.b, {
-            itemName: rM.icon,
+          children: (0, pY.jsx)(xY.e, {
+            itemName: eV.icon,
             amount: 0
           })
-        }), (0, QS.jsx)("h3", {
-          children: rM.name
-        }), (0, QS.jsx)("strong", {
+        }), (0, pY.jsx)("h3", {
+          children: eV.name
+        }), (0, pY.jsx)("strong", {
           className: "SkyblockSkillDetailLevel",
-          children: rM.tier
-        }), (0, QS.jsx)("p", {
-          children: rM.locked ? iM("skyblockGame:collectionLocked") : rM.count
-        }), null !== rM.nextReward && (0, QS.jsxs)("div", {
+          children: eV.tier
+        }), (0, pY.jsx)("p", {
+          children: eV.locked ? xV("skyblockGame:collectionLocked") : eV.count
+        }), null !== eV.nextReward && (0, pY.jsxs)("div", {
           className: "SkyblockSkillBenefit",
-          children: [(0, QS.jsx)("strong", {
-            children: iM("skyblockGame:collectionNextReward")
-          }), (0, QS.jsx)("span", {
-            children: rM.nextReward
+          children: [(0, pY.jsx)("strong", {
+            children: xV("skyblockGame:collectionNextReward")
+          }), (0, pY.jsx)("span", {
+            children: eV.nextReward
           })]
-        }), (0, QS.jsx)(GS, {
-          percent: rM.percent,
-          label: rM.progress
-        }), (0, QS.jsx)("p", {
-          children: rM.progress
+        }), (0, pY.jsx)(qY, {
+          percent: eV.percent,
+          label: eV.progress
+        }), (0, pY.jsx)("p", {
+          children: eV.progress
         })]
       })
     }
 
-    function gj(MM) {
+    function NU(VV) {
       let {
-        controller: rM
-      } = MM;
-      const iM = (0, nS.e)(mi, rM.getSnapshot()),
+        controller: eV
+      } = VV;
+      const xV = (0, yY.j)(vx, eV.getSnapshot()),
         {
-          t: OM
-        } = (0, PS.A)(),
-        SM = US();
-      return iM.enabled ? (0, QS.jsx)(yS.e, {
-        show: iM.open,
-        close: rM.dismiss,
+          t: JV
+        } = (0, UY.A)(),
+        YV = jY();
+      return xV.enabled ? (0, pY.jsx)(bY.e, {
+        show: xV.open,
+        close: eV.dismiss,
         togglePointerLock: !1,
         className: "SkyblockSkillsOverlay",
-        children: (0, QS.jsxs)("section", {
+        children: (0, pY.jsxs)("section", {
           className: "SkyblockSkillsPanel SkyblockCollectionsPanel",
           role: "dialog",
           "aria-modal": "true",
           "aria-labelledby": "skyblockCollectionsTitle",
           tabIndex: -1,
-          ref: SM,
-          onKeyDown: ES,
-          children: [(0, QS.jsxs)("header", {
+          ref: YV,
+          onKeyDown: BY,
+          children: [(0, pY.jsxs)("header", {
             className: "SkyblockSkillsHeader",
-            children: [(0, QS.jsxs)("div", {
-              children: [(0, QS.jsx)("h2", {
+            children: [(0, pY.jsxs)("div", {
+              children: [(0, pY.jsx)("h2", {
                 id: "skyblockCollectionsTitle",
-                children: OM("skyblockGame:collections")
-              }), (0, QS.jsxs)("p", {
-                children: [OM("skyblockGame:collectionsIntro"), " ", iM.tiersUnlocked]
+                children: JV("skyblockGame:collections")
+              }), (0, pY.jsxs)("p", {
+                children: [JV("skyblockGame:collectionsIntro"), " ", xV.tiersUnlocked]
               })]
-            }), (0, QS.jsx)(lS.l, {
+            }), (0, pY.jsx)(EY.k, {
               padIgnore: !0,
-              onClick: rM.dismiss
+              onClick: eV.dismiss
             })]
-          }), (0, QS.jsx)("div", {
+          }), (0, pY.jsx)("div", {
             className: "SkyblockCollectionCategories",
             "data-pad-tabs": "1",
-            children: iM.categories.map((MM => (0, QS.jsxs)(lS.e, {
-              className: MS()("SkyblockCollectionCategory", {
-                Selected: MM.selected
+            children: xV.categories.map((VV => (0, pY.jsxs)(EY.f, {
+              className: dJ()("SkyblockCollectionCategory", {
+                Selected: VV.selected
               }),
-              ariaPressed: MM.selected,
-              padTabSelected: MM.selected,
+              ariaPressed: VV.selected,
+              padTabSelected: VV.selected,
               onClick: () => {
-                rM.selectCategory(MM.id)
+                eV.selectCategory(VV.id)
               },
-              children: [(0, QS.jsx)("span", {
+              children: [(0, pY.jsx)("span", {
                 className: "SkyblockCollectionCategoryIcon",
-                children: (0, QS.jsx)(SS.b, {
-                  itemName: MM.icon,
+                children: (0, pY.jsx)(xY.e, {
+                  itemName: VV.icon,
                   amount: 0
                 })
-              }), (0, QS.jsxs)("span", {
+              }), (0, pY.jsxs)("span", {
                 className: "SkyblockCollectionCategoryText",
-                children: [(0, QS.jsx)("strong", {
-                  children: MM.label
-                }), (0, QS.jsx)("span", {
-                  children: MM.tiers
+                children: [(0, pY.jsx)("strong", {
+                  children: VV.label
+                }), (0, pY.jsx)("span", {
+                  children: VV.tiers
                 })]
               })]
-            }, MM.id)))
-          }), (0, QS.jsxs)("div", {
+            }, VV.id)))
+          }), (0, pY.jsxs)("div", {
             className: "SkyblockSkillsBody",
-            children: [(0, QS.jsx)("div", {
+            children: [(0, pY.jsx)("div", {
               className: "SkyblockSkillsList",
               "data-pad-select-on-focus": !0,
-              children: iM.collections.map((MM => (0, QS.jsx)(wj, {
-                collection: MM,
-                select: rM.select
-              }, MM.id)))
-            }), iM.detail && (0, QS.jsx)(tj, {
-              collection: iM.detail
+              children: xV.collections.map((VV => (0, pY.jsx)(PU, {
+                collection: VV,
+                select: eV.select
+              }, VV.id)))
+            }), xV.detail && (0, pY.jsx)(AU, {
+              collection: xV.detail
             })]
           })]
         })
       }) : null
     }
-    const uj = ["completed", "active", "available", "locked"],
-      Rj = ["prerequisite", "acceptFirst", "sends", "awaits"];
+    const XU = ["completed", "active", "available", "locked"],
+      MU = ["prerequisite", "acceptFirst", "sends", "awaits"];
 
-    function pj(MM) {
+    function zU(VV) {
       let {
-        controller: rM
-      } = MM;
-      const iM = (0, nS.e)(wi, rM.getSnapshot()),
+        controller: eV
+      } = VV;
+      const xV = (0, yY.j)(Ax, eV.getSnapshot()),
         {
-          t: OM
-        } = (0, PS.A)(),
-        SM = US();
-      return iM.enabled ? (0, QS.jsx)(yS.e, {
-        show: iM.open,
-        close: rM.dismiss,
+          t: JV
+        } = (0, UY.A)(),
+        YV = jY();
+      return xV.enabled ? (0, pY.jsx)(bY.e, {
+        show: xV.open,
+        close: eV.dismiss,
         togglePointerLock: !1,
         className: "SkyblockSkillsOverlay",
-        children: (0, QS.jsxs)("section", {
+        children: (0, pY.jsxs)("section", {
           className: "SkyblockSkillsPanel SkyblockQuestGraphPanel",
           role: "dialog",
           "aria-modal": "true",
           "aria-labelledby": "skyblockQuestGraphTitle",
           tabIndex: -1,
-          ref: SM,
-          onKeyDown: ES,
-          children: [(0, QS.jsxs)("header", {
+          ref: YV,
+          onKeyDown: BY,
+          children: [(0, pY.jsxs)("header", {
             className: "SkyblockSkillsHeader",
-            children: [(0, QS.jsxs)("div", {
-              children: [(0, QS.jsx)("h2", {
+            children: [(0, pY.jsxs)("div", {
+              children: [(0, pY.jsx)("h2", {
                 id: "skyblockQuestGraphTitle",
-                children: OM("skyblockDevQuests:title")
-              }), (0, QS.jsx)("p", {
-                children: OM("skyblockDevQuests:intro")
+                children: JV("skyblockDevQuests:title")
+              }), (0, pY.jsx)("p", {
+                children: JV("skyblockDevQuests:intro")
               })]
-            }), (0, QS.jsx)(lS.l, {
-              onClick: rM.dismiss
+            }), (0, pY.jsx)(EY.k, {
+              onClick: eV.dismiss
             })]
-          }), (0, QS.jsxs)("div", {
+          }), (0, pY.jsxs)("div", {
             className: "SkyblockQuestGraphLegend",
-            children: [uj.map((MM => (0, QS.jsx)("span", {
-              className: MS()("SkyblockQuestGraphLegendState", MM),
-              children: OM(`skyblockDevQuests:state_${MM}`)
-            }, MM))), Rj.map((MM => (0, QS.jsxs)("span", {
+            children: [XU.map((VV => (0, pY.jsx)("span", {
+              className: dJ()("SkyblockQuestGraphLegendState", VV),
+              children: JV(`skyblockDevQuests:state_${VV}`)
+            }, VV))), MU.map((VV => (0, pY.jsxs)("span", {
               className: "SkyblockQuestGraphLegendEdge",
-              children: [(0, QS.jsx)("svg", {
+              children: [(0, pY.jsx)("svg", {
                 width: "28",
                 height: "8",
                 "aria-hidden": "true",
-                children: (0, QS.jsx)("line", {
-                  className: MS()("SkyblockQuestGraphEdge", MM),
+                children: (0, pY.jsx)("line", {
+                  className: dJ()("SkyblockQuestGraphEdge", VV),
                   x1: "0",
                   y1: "4",
                   x2: "28",
                   y2: "4"
                 })
-              }), OM(`skyblockDevQuests:edge_${MM}`)]
-            }, MM)))]
-          }), (0, QS.jsx)("div", {
+              }), JV(`skyblockDevQuests:edge_${VV}`)]
+            }, VV)))]
+          }), (0, pY.jsx)("div", {
             className: "SkyblockQuestGraphScroll",
-            children: (0, QS.jsxs)("div", {
-              className: MS()("SkyblockQuestGraphCanvas", {
-                Planning: iM.planning
+            children: (0, pY.jsxs)("div", {
+              className: dJ()("SkyblockQuestGraphCanvas", {
+                Planning: xV.planning
               }),
               style: {
-                width: iM.width,
-                height: iM.height
+                width: xV.width,
+                height: xV.height
               },
-              children: [(0, QS.jsxs)("svg", {
+              children: [(0, pY.jsxs)("svg", {
                 className: "SkyblockQuestGraphEdges",
-                width: iM.width,
-                height: iM.height,
+                width: xV.width,
+                height: xV.height,
                 "aria-hidden": "true",
-                children: [(0, QS.jsx)("defs", {
-                  children: (0, QS.jsx)("marker", {
+                children: [(0, pY.jsx)("defs", {
+                  children: (0, pY.jsx)("marker", {
                     id: "skyblockQuestGraphArrow",
                     viewBox: "0 0 8 8",
                     refX: "7",
@@ -6652,699 +6618,699 @@ export const modules = {
                     markerWidth: "6",
                     markerHeight: "6",
                     orient: "auto-start-reverse",
-                    children: (0, QS.jsx)("path", {
+                    children: (0, pY.jsx)("path", {
                       className: "SkyblockQuestGraphArrow",
                       d: "M 0 0 L 8 4 L 0 8 z"
                     })
                   })
-                }), iM.edges.map((MM => (0, QS.jsx)("path", {
-                  className: MS()("SkyblockQuestGraphEdge", MM.kind, {
-                    InPlan: MM.inPlan
+                }), xV.edges.map((VV => (0, pY.jsx)("path", {
+                  className: dJ()("SkyblockQuestGraphEdge", VV.kind, {
+                    InPlan: VV.inPlan
                   }),
-                  d: MM.path,
+                  d: VV.path,
                   markerEnd: "url(#skyblockQuestGraphArrow)"
-                }, MM.key)))]
-              }), iM.nodes.map((MM => (0, QS.jsxs)("button", {
+                }, VV.key)))]
+              }), xV.nodes.map((VV => (0, pY.jsxs)("button", {
                 type: "button",
-                className: MS()("SkyblockQuestGraphNode", MM.state, {
-                  InPlan: MM.inPlan,
-                  Hovered: MM.hovered
+                className: dJ()("SkyblockQuestGraphNode", VV.state, {
+                  InPlan: VV.inPlan,
+                  Hovered: VV.hovered
                 }),
                 style: {
-                  left: MM.left,
-                  top: MM.top,
+                  left: VV.left,
+                  top: VV.top,
                   width: 190,
                   height: 52
                 },
-                title: MM.id,
+                title: VV.id,
                 onMouseEnter: () => {
-                  rM.hover(MM.id)
+                  eV.hover(VV.id)
                 },
                 onMouseLeave: () => {
-                  rM.hover(null)
+                  eV.hover(null)
                 },
                 onFocus: () => {
-                  rM.hover(MM.id)
+                  eV.hover(VV.id)
                 },
                 onBlur: () => {
-                  rM.hover(null)
+                  eV.hover(null)
                 },
                 onClick: () => {
-                  rM.jump(MM.id)
+                  eV.jump(VV.id)
                 },
-                children: [(0, QS.jsx)("strong", {
-                  children: MM.name
-                }), (0, QS.jsx)("span", {
-                  children: MM.detail
+                children: [(0, pY.jsx)("strong", {
+                  children: VV.name
+                }), (0, pY.jsx)("span", {
+                  children: VV.detail
                 })]
-              }, MM.id)))]
+              }, VV.id)))]
             })
           })]
         })
       }) : null
     }
-    const Wj = ["skyblockGame:forgeStatPower", "skyblockGame:forgeStatDamage", "skyblockGame:forgeStatSpeed", "skyblockGame:forgeStatKnockback"],
-      sj = {
+    const GU = ["skyblockGame:forgeStatPower", "skyblockGame:forgeStatDamage", "skyblockGame:forgeStatSpeed", "skyblockGame:forgeStatKnockback"],
+      WU = {
         "--impact": "250ms",
         "--hold": "50ms",
-        "--pop-at": `${Ni}ms`,
+        "--pop-at": `${ox}ms`,
         "--forge-duration": "2150ms"
       },
-      Dj = Array.from({
+      RU = Array.from({
         length: 18
-      }, ((MM, rM) => ({
-        "--ember-left": `${(4+92*(.618034*rM%1)).toFixed(1)}%`,
-        "--ember-size": 3 + rM % 3 * 2 + "px",
-        "--ember-drift": 14 * (rM % 5 - 2) + "px",
-        "--ember-duration": `${(5.5+7*rM%5*.9).toFixed(1)}s`,
-        "--ember-delay": `${(-1.37*rM%8).toFixed(2)}s`
+      }, ((VV, eV) => ({
+        "--ember-left": `${(4+92*(.618034*eV%1)).toFixed(1)}%`,
+        "--ember-size": 3 + eV % 3 * 2 + "px",
+        "--ember-drift": 14 * (eV % 5 - 2) + "px",
+        "--ember-duration": `${(5.5+7*eV%5*.9).toFixed(1)}s`,
+        "--ember-delay": `${(-1.37*eV%8).toFixed(2)}s`
       })));
 
-    function kj(MM) {
-      if (MM.style.removeProperty("--part-size"), null === MM.parentElement || "wrap" === getComputedStyle(MM.parentElement).flexWrap) return;
-      const rM = [...MM.children],
-        iM = getComputedStyle(MM),
-        OM = parseFloat(iM.getPropertyValue("--part-size")) * parseFloat(getComputedStyle(document.documentElement).fontSize),
-        SM = (MM.clientHeight - parseFloat(iM.rowGap) * (rM.length - 1)) / rM.length,
-        jM = rM.map((MM => {
-          const rM = getComputedStyle(MM),
-            iM = MM.querySelector("h3"),
-            jM = MM.querySelector(".SkyblockForgeParts");
-          if (null === iM || null === jM) return OM;
-          const aM = SM - parseFloat(rM.paddingTop) - parseFloat(rM.paddingBottom) - iM.offsetHeight - parseFloat(getComputedStyle(iM).marginBottom),
-            PM = parseFloat(getComputedStyle(jM).columnGap),
-            nM = jM.children.length;
-          let QM = 0;
-          for (let OM = 1; OM <= nM; OM++) {
-            const MM = Math.ceil(nM / OM);
-            QM = Math.max(QM, Math.min((jM.clientWidth - PM * (OM - 1)) / OM, (aM - PM * (MM - 1)) / MM))
+    function gU(VV) {
+      if (VV.style.removeProperty("--part-size"), null === VV.parentElement || "wrap" === getComputedStyle(VV.parentElement).flexWrap) return;
+      const eV = [...VV.children],
+        xV = getComputedStyle(VV),
+        JV = parseFloat(xV.getPropertyValue("--part-size")) * parseFloat(getComputedStyle(document.documentElement).fontSize),
+        YV = (VV.clientHeight - parseFloat(xV.rowGap) * (eV.length - 1)) / eV.length,
+        UV = eV.map((VV => {
+          const eV = getComputedStyle(VV),
+            xV = VV.querySelector("h3"),
+            UV = VV.querySelector(".SkyblockForgeParts");
+          if (null === xV || null === UV) return JV;
+          const yV = YV - parseFloat(eV.paddingTop) - parseFloat(eV.paddingBottom) - xV.offsetHeight - parseFloat(getComputedStyle(xV).marginBottom),
+            pV = parseFloat(getComputedStyle(UV).columnGap),
+            QV = UV.children.length;
+          let nV = 0;
+          for (let JV = 1; JV <= QV; JV++) {
+            const VV = Math.ceil(QV / JV);
+            nV = Math.max(nV, Math.min((UV.clientWidth - pV * (JV - 1)) / JV, (yV - pV * (VV - 1)) / VV))
           }
-          return QM
+          return nV
         }));
-      MM.style.setProperty("--part-size", `${Math.floor(Math.max(OM,Math.min(...jM)))}px`)
+      VV.style.setProperty("--part-size", `${Math.floor(Math.max(JV,Math.min(...UV)))}px`)
     }
 
-    function Zj(MM) {
-      var rM, iM, OM, SM, jM;
+    function DU(VV) {
+      var eV, xV, JV, YV, UV;
       let {
-        controller: aM
-      } = MM;
-      const PM = (0, nS.e)(Ii, aM.getSnapshot()),
+        controller: yV
+      } = VV;
+      const pV = (0, yY.j)(Kx, yV.getSnapshot()),
         {
-          t: nM
-        } = (0, PS.A)(),
-        QM = US(),
-        zM = function() {
-          const MM = (0, eM.useRef)(null),
-            rM = (0, eM.useRef)(null);
-          return (0, eM.useLayoutEffect)((() => {
-            null !== MM.current && kj(MM.current)
-          })), (0, eM.useCallback)((iM => {
-            var OM;
-            null === (OM = rM.current) || void 0 === OM || OM.disconnect(), rM.current = null, MM.current = iM, null !== iM && (rM.current = new ResizeObserver((() => {
-              kj(iM)
-            })), rM.current.observe(iM))
+          t: QV
+        } = (0, UY.A)(),
+        nV = jY(),
+        wV = function() {
+          const VV = (0, PV.useRef)(null),
+            eV = (0, PV.useRef)(null);
+          return (0, PV.useLayoutEffect)((() => {
+            null !== VV.current && gU(VV.current)
+          })), (0, PV.useCallback)((xV => {
+            var JV;
+            null === (JV = eV.current) || void 0 === JV || JV.disconnect(), eV.current = null, VV.current = xV, null !== xV && (eV.current = new ResizeObserver((() => {
+              gU(xV)
+            })), eV.current.observe(xV))
           }), [])
         }(),
-        mM = function(MM) {
-          const rM = (0, eM.useRef)(null);
-          return (0, eM.useLayoutEffect)((() => {
-            const MM = rM.current;
-            if (null !== MM) {
-              MM.style.removeProperty("font-size");
-              for (let rM = 1.7; rM > 1.1 && MM.scrollWidth > MM.clientWidth; rM -= .1) MM.style.fontSize = rM - .1 + "rem"
+        vV = function(VV) {
+          const eV = (0, PV.useRef)(null);
+          return (0, PV.useLayoutEffect)((() => {
+            const VV = eV.current;
+            if (null !== VV) {
+              VV.style.removeProperty("font-size");
+              for (let eV = 1.7; eV > 1.1 && VV.scrollWidth > VV.clientWidth; eV -= .1) VV.style.fontSize = eV - .1 + "rem"
             }
-          }), [MM]), (0, eM.useCallback)((MM => {
-            rM.current = MM
+          }), [VV]), (0, PV.useCallback)((VV => {
+            eV.current = VV
           }), [])
-        }(null === (rM = PM.preview) || void 0 === rM ? void 0 : rM.name),
-        HM = (0, eM.useRef)(null),
-        hM = (0, eM.useRef)({}),
-        JM = PM.forging,
-        dM = null !== (iM = null === JM || void 0 === JM ? void 0 : JM.preview.tier) && void 0 !== iM ? iM : 0,
-        yM = null !== (OM = null === JM || void 0 === JM ? void 0 : JM.preview.named) && void 0 !== OM && OM,
-        lM = (0, eM.useMemo)((() => {
-          return null === JM ? null : {
-            flames: (MM = dM, rM = yM, Array.from({
-              length: 26 + 6 * MM + (rM ? 20 : 0)
-            }, ((MM, rM) => {
-              const iM = rM < 6,
-                OM = Math.random() * Math.PI * 2,
-                SM = iM ? 5 + 3 * Math.random() : 6 + Math.random() ** 1.3 * 8,
-                jM = Math.cos(OM) * SM,
-                aM = Math.sin(OM) * SM - 2 - 3 * Math.random(),
-                PM = Math.random(),
-                [nM, QM, zM] = iM ? ["var(--ember-glow)", .8 + .2 * Math.random(), 1100 + 200 * Math.random()] : PM < .15 ? ["#fff6c2", .3 + .2 * Math.random(), 350 + 150 * Math.random()] : PM < .45 ? ["var(--tier)", .35 + .45 * Math.random(), 500 + 300 * Math.random()] : [PM < .7 ? "var(--ember)" : "var(--ember-glow)", .35 + .5 * Math.random(), 500 + 300 * Math.random()];
+        }(null === (eV = pV.preview) || void 0 === eV ? void 0 : eV.name),
+        rV = (0, PV.useRef)(null),
+        kV = (0, PV.useRef)({}),
+        bV = pV.forging,
+        EV = null !== (xV = null === bV || void 0 === bV ? void 0 : bV.preview.tier) && void 0 !== xV ? xV : 0,
+        BV = null !== (JV = null === bV || void 0 === bV ? void 0 : bV.preview.named) && void 0 !== JV && JV,
+        jV = (0, PV.useMemo)((() => {
+          return null === bV ? null : {
+            flames: (VV = EV, eV = BV, Array.from({
+              length: 26 + 6 * VV + (eV ? 20 : 0)
+            }, ((VV, eV) => {
+              const xV = eV < 6,
+                JV = Math.random() * Math.PI * 2,
+                YV = xV ? 5 + 3 * Math.random() : 6 + Math.random() ** 1.3 * 8,
+                UV = Math.cos(JV) * YV,
+                yV = Math.sin(JV) * YV - 2 - 3 * Math.random(),
+                pV = Math.random(),
+                [QV, nV, wV] = xV ? ["var(--ember-glow)", .8 + .2 * Math.random(), 1100 + 200 * Math.random()] : pV < .15 ? ["#fff6c2", .3 + .2 * Math.random(), 350 + 150 * Math.random()] : pV < .45 ? ["var(--tier)", .35 + .45 * Math.random(), 500 + 300 * Math.random()] : [pV < .7 ? "var(--ember)" : "var(--ember-glow)", .35 + .5 * Math.random(), 500 + 300 * Math.random()];
               return {
-                "--c": nM,
-                "--x0": `${(.15*jM).toFixed(2)}rem`,
-                "--y0": `${(.15*aM).toFixed(2)}rem`,
-                "--x": `${jM.toFixed(2)}rem`,
-                "--y": `${aM.toFixed(2)}rem`,
+                "--c": QV,
+                "--x0": `${(.15*UV).toFixed(2)}rem`,
+                "--y0": `${(.15*yV).toFixed(2)}rem`,
+                "--x": `${UV.toFixed(2)}rem`,
+                "--y": `${yV.toFixed(2)}rem`,
                 "--spin": `${Math.round(360*(Math.random()-.5))}deg`,
-                "--size": `${QM.toFixed(2)}rem`,
-                "--duration": `${Math.round(zM)}ms`,
+                "--size": `${nV.toFixed(2)}rem`,
+                "--duration": `${Math.round(wV)}ms`,
                 "--delay": `${Math.round(80*Math.random())}ms`
               }
             }))),
-            sparks: vi(dM, yM)
+            sparks: lx(EV, BV)
           };
-          var MM, rM
-        }), [null === JM || void 0 === JM ? void 0 : JM.id]);
-      if (!PM.enabled) return null;
-      const EM = PM.preview,
-        UM = PM.arriving,
-        GM = null !== UM && !UM.sameSword,
-        CM = null !== EM && (0, QS.jsx)(SS.b, {
-          itemName: EM.baseSword,
+          var VV, eV
+        }), [null === bV || void 0 === bV ? void 0 : bV.id]);
+      if (!pV.enabled) return null;
+      const qV = pV.preview,
+        tV = pV.arriving,
+        FV = null !== tV && !tV.sameSword,
+        TV = null !== qV && (0, pY.jsx)(xY.e, {
+          itemName: qV.baseSword,
           amount: 0,
-          enchantmentTier: EM.enchantmentTier
+          enchantmentTier: qV.enchantmentTier
         });
-      return (0, QS.jsx)(yS.e, {
-        show: PM.open,
-        close: aM.dismiss,
+      return (0, pY.jsx)(bY.e, {
+        show: pV.open,
+        close: yV.dismiss,
         togglePointerLock: !1,
         className: "SkyblockSkillsOverlay",
-        children: (0, QS.jsxs)("section", {
+        children: (0, pY.jsxs)("section", {
           className: "SkyblockSkillsPanel SkyblockForgePanel",
           role: "dialog",
           "aria-modal": "true",
           "aria-labelledby": "skyblockForgeTitle",
           tabIndex: -1,
-          ref: QM,
-          onKeyDown: ES,
-          children: [(0, QS.jsx)("div", {
+          ref: nV,
+          onKeyDown: BY,
+          children: [(0, pY.jsx)("div", {
             className: "SkyblockForgeEmbers",
             "aria-hidden": "true",
-            children: Dj.map(((MM, rM) => (0, QS.jsx)("span", {
-              style: MM
-            }, rM)))
-          }), (0, QS.jsxs)("header", {
+            children: RU.map(((VV, eV) => (0, pY.jsx)("span", {
+              style: VV
+            }, eV)))
+          }), (0, pY.jsxs)("header", {
             className: "SkyblockSkillsHeader",
-            children: [(0, QS.jsxs)("div", {
-              children: [(0, QS.jsx)("h2", {
+            children: [(0, pY.jsxs)("div", {
+              children: [(0, pY.jsx)("h2", {
                 id: "skyblockForgeTitle",
-                children: nM("skyblockGame:forgeTitle")
-              }), (0, QS.jsx)("p", {
-                children: nM("skyblockGame:forgeIntro")
+                children: QV("skyblockGame:forgeTitle")
+              }), (0, pY.jsx)("p", {
+                children: QV("skyblockGame:forgeIntro")
               })]
-            }), (0, QS.jsx)(lS.l, {
-              onClick: aM.dismiss
+            }), (0, pY.jsx)(EY.k, {
+              onClick: yV.dismiss
             })]
-          }), (0, QS.jsxs)("div", {
+          }), (0, pY.jsxs)("div", {
             className: "SkyblockForgeBody",
-            children: [(0, QS.jsx)("div", {
-              ref: zM,
-              className: MS()("SkyblockForgeSlots", {
-                Locked: null !== JM
+            children: [(0, pY.jsx)("div", {
+              ref: wV,
+              className: dJ()("SkyblockForgeSlots", {
+                Locked: null !== bV
               }),
-              children: PM.slots.map((MM => (0, QS.jsxs)("div", {
+              children: pV.slots.map((VV => (0, pY.jsxs)("div", {
                 className: "SkyblockForgeSlot",
-                children: [(0, QS.jsx)("h3", {
-                  children: MM.label
-                }), (0, QS.jsx)("div", {
+                children: [(0, pY.jsx)("h3", {
+                  children: VV.label
+                }), (0, pY.jsx)("div", {
                   className: "SkyblockForgeParts",
-                  children: MM.parts.map((rM => (0, QS.jsx)("button", {
+                  children: VV.parts.map((eV => (0, pY.jsx)("button", {
                     type: "button",
-                    className: MS()("SkyblockForgePart", {
-                      Selected: rM.selected,
-                      Missing: rM.placeholder
+                    className: dJ()("SkyblockForgePart", {
+                      Selected: eV.selected,
+                      Missing: eV.placeholder
                     }),
-                    disabled: rM.placeholder,
-                    title: rM.placeholder ? nM("skyblockGame:forgePickParts") : rM.itemName,
-                    "aria-pressed": rM.selected,
+                    disabled: eV.placeholder,
+                    title: eV.placeholder ? QV("skyblockGame:forgePickParts") : eV.itemName,
+                    "aria-pressed": eV.selected,
                     onClick: () => {
-                      aM.select(MM.kind, rM.material)
+                      yV.select(VV.kind, eV.material)
                     },
-                    children: (0, QS.jsx)(SS.b, {
-                      itemName: rM.itemName,
-                      amount: rM.owned
+                    children: (0, pY.jsx)(xY.e, {
+                      itemName: eV.itemName,
+                      amount: eV.owned
                     })
-                  }, rM.material)))
+                  }, eV.material)))
                 })]
-              }, MM.kind)))
-            }), (0, QS.jsxs)("div", {
-              className: MS()("SkyblockForgeAnvil", {
-                Named: null === EM || void 0 === EM ? void 0 : EM.named
+              }, VV.kind)))
+            }), (0, pY.jsxs)("div", {
+              className: dJ()("SkyblockForgeAnvil", {
+                Named: null === qV || void 0 === qV ? void 0 : qV.named
               }),
               style: {
-                "--tier": null === EM ? "transparent" : LM.kb[EM.enchantmentTier]
+                "--tier": null === qV ? "transparent" : ZV.kb[qV.enchantmentTier]
               },
-              children: [(0, QS.jsxs)("div", {
-                className: MS()("SkyblockForgeAltar", {
-                  Forging: null !== JM
+              children: [(0, pY.jsxs)("div", {
+                className: dJ()("SkyblockForgeAltar", {
+                  Forging: null !== bV
                 }),
-                style: null === JM ? void 0 : sj,
-                children: [(0, QS.jsxs)("div", {
-                  className: MS()("SkyblockForgeMount", {
-                    Arrive: null !== UM
+                style: null === bV ? void 0 : WU,
+                children: [(0, pY.jsxs)("div", {
+                  className: dJ()("SkyblockForgeMount", {
+                    Arrive: null !== tV
                   }),
-                  children: [null === EM && (0, QS.jsx)("div", {
+                  children: [null === qV && (0, pY.jsx)("div", {
                     className: "SkyblockForgeSword Unformed",
-                    children: (0, QS.jsx)(SS.b, {
-                      itemName: PM.unformedSword,
+                    children: (0, pY.jsx)(xY.e, {
+                      itemName: pV.unformedSword,
                       amount: 0
                     })
-                  }), null !== EM && (0, QS.jsx)("div", {
+                  }), null !== qV && (0, pY.jsx)("div", {
                     className: "SkyblockForgeGlow"
-                  }), null !== EM && null === JM && (0, QS.jsx)("div", {
-                    ref: HM,
+                  }), null !== qV && null === bV && (0, pY.jsx)("div", {
+                    ref: rV,
                     className: "SkyblockForgeFloat",
-                    children: (0, QS.jsx)("div", {
+                    children: (0, pY.jsx)("div", {
                       className: "SkyblockForgeSword",
-                      children: CM
+                      children: TV
                     })
-                  }), null !== EM && (0, QS.jsx)("div", {
+                  }), null !== qV && (0, pY.jsx)("div", {
                     className: "SkyblockForgeAura",
                     "aria-hidden": "true",
-                    children: xi.map(((MM, rM) => (0, QS.jsx)("span", {
-                      className: MS()({
-                        Rune: "" !== MM.rune
+                    children: hx.map(((VV, eV) => (0, pY.jsx)("span", {
+                      className: dJ()({
+                        Rune: "" !== VV.rune
                       }),
-                      style: MM.style,
-                      children: MM.rune
-                    }, rM)))
-                  }), null !== JM && null !== lM && (0, QS.jsxs)(QS.Fragment, {
-                    children: [(0, QS.jsx)("div", {
+                      style: VV.style,
+                      children: VV.rune
+                    }, eV)))
+                  }), null !== bV && null !== jV && (0, pY.jsxs)(pY.Fragment, {
+                    children: [(0, pY.jsx)("div", {
                       className: "SkyblockForgeFlash"
-                    }), (0, QS.jsx)("div", {
+                    }), (0, pY.jsx)("div", {
                       className: "SkyblockForgeFlames",
-                      children: lM.flames.map(((MM, rM) => (0, QS.jsx)("span", {
-                        style: MM
-                      }, rM)))
-                    }), (0, QS.jsx)("div", {
+                      children: jV.flames.map(((VV, eV) => (0, pY.jsx)("span", {
+                        style: VV
+                      }, eV)))
+                    }), (0, pY.jsx)("div", {
                       className: "SkyblockForgeSettle",
-                      style: hM.current,
-                      children: (0, QS.jsx)("div", {
+                      style: kV.current,
+                      children: (0, pY.jsx)("div", {
                         className: "SkyblockForgeSword",
-                        children: CM
+                        children: TV
                       })
-                    }), (0, QS.jsx)("div", {
+                    }), (0, pY.jsx)("div", {
                       className: "SkyblockForgeHitFlash"
-                    }), (0, QS.jsx)("div", {
+                    }), (0, pY.jsx)("div", {
                       className: "SkyblockForgeShock"
-                    }), (dM >= 4 || yM) && (0, QS.jsx)("div", {
+                    }), (EV >= 4 || BV) && (0, pY.jsx)("div", {
                       className: "SkyblockForgeShock Echo"
-                    }), (0, QS.jsx)("div", {
+                    }), (0, pY.jsx)("div", {
                       className: "SkyblockForgeSparks",
-                      children: lM.sparks.map(((MM, rM) => (0, QS.jsx)("span", {
-                        style: MM
-                      }, rM)))
-                    }), (0, QS.jsx)("div", {
+                      children: jV.sparks.map(((VV, eV) => (0, pY.jsx)("span", {
+                        style: VV
+                      }, eV)))
+                    }), (0, pY.jsx)("div", {
                       className: "SkyblockForgeSwing"
                     })]
                   })]
-                }), (0, QS.jsx)("p", {
-                  className: MS()("SkyblockForgeStatus", null === (SM = PM.status) || void 0 === SM ? void 0 : SM.tone),
-                  children: null === (jM = PM.status) || void 0 === jM ? void 0 : jM.text
+                }), (0, pY.jsx)("p", {
+                  className: dJ()("SkyblockForgeStatus", null === (YV = pV.status) || void 0 === YV ? void 0 : YV.tone),
+                  children: null === (UV = pV.status) || void 0 === UV ? void 0 : UV.text
                 })]
-              }), null === EM && (0, QS.jsx)("p", {
-                className: MS()("SkyblockForgeName Waiting", {
-                  ArriveText: GM
+              }), null === qV && (0, pY.jsx)("p", {
+                className: dJ()("SkyblockForgeName Waiting", {
+                  ArriveText: FV
                 }),
-                children: nM(PM.anyParts ? "skyblockGame:forgePickToPreview" : "skyblockGame:forgePickParts")
-              }), null !== EM && (0, QS.jsx)("h3", {
-                ref: mM,
-                className: MS()("SkyblockForgeName", {
-                  ArriveText: GM
+                children: QV(pV.anyParts ? "skyblockGame:forgePickToPreview" : "skyblockGame:forgePickParts")
+              }), null !== qV && (0, pY.jsx)("h3", {
+                ref: vV,
+                className: dJ()("SkyblockForgeName", {
+                  ArriveText: FV
                 }),
-                title: EM.name,
-                children: EM.name
-              }), (null === EM || void 0 === EM ? void 0 : EM.named) && (0, QS.jsx)("span", {
+                title: qV.name,
+                children: qV.name
+              }), (null === qV || void 0 === qV ? void 0 : qV.named) && (0, pY.jsx)("span", {
                 className: "SkyblockForgeSecret",
-                children: nM("skyblockGame:forgeSecret")
-              }), (0, QS.jsxs)(lS.u, {
+                children: QV("skyblockGame:forgeSecret")
+              }), (0, pY.jsxs)(EY.q, {
                 className: "SkyblockForgeButton",
-                disabled: !PM.canForge,
-                title: null === EM ? void 0 : nM("skyblockGame:forgeCoalOwned", {
-                  owned: String(PM.coalOwned)
+                disabled: !pV.canForge,
+                title: null === qV ? void 0 : QV("skyblockGame:forgeCoalOwned", {
+                  owned: String(pV.coalOwned)
                 }),
                 onClick: () => {
-                  hM.current = function(MM) {
-                    const rM = null === MM ? "none" : getComputedStyle(MM).transform,
-                      iM = new DOMMatrixReadOnly("none" === rM ? void 0 : rM);
+                  kV.current = function(VV) {
+                    const eV = null === VV ? "none" : getComputedStyle(VV).transform,
+                      xV = new DOMMatrixReadOnly("none" === eV ? void 0 : eV);
                     return {
-                      "--settle-y": `${iM.f.toFixed(2)}px`,
-                      "--settle-turn": `${(180*Math.atan2(iM.b,iM.a)/Math.PI).toFixed(2)}deg`
+                      "--settle-y": `${xV.f.toFixed(2)}px`,
+                      "--settle-turn": `${(180*Math.atan2(xV.b,xV.a)/Math.PI).toFixed(2)}deg`
                     }
-                  }(HM.current), Xi(), aM.forge(!window.matchMedia("(prefers-reduced-motion: reduce)").matches)
+                  }(rV.current), mx(), yV.forge(!window.matchMedia("(prefers-reduced-motion: reduce)").matches)
                 },
-                children: [nM("skyblockGame:forgeButton"), null !== EM && (0, QS.jsxs)("span", {
-                  className: MS()("SkyblockForgeCost", {
-                    Short: EM.coalShort
+                children: [QV("skyblockGame:forgeButton"), null !== qV && (0, pY.jsxs)("span", {
+                  className: dJ()("SkyblockForgeCost", {
+                    Short: qV.coalShort
                   }),
-                  children: [(0, QS.jsx)("span", {
+                  children: [(0, pY.jsx)("span", {
                     className: "SkyblockForgeCoal",
-                    children: (0, QS.jsx)(SS.b, {
-                      itemName: Wi.d,
+                    children: (0, pY.jsx)(xY.e, {
+                      itemName: Gx.d,
                       amount: 0
                     })
-                  }), EM.coalCost]
+                  }), qV.coalCost]
                 })]
               })]
-            }), (0, QS.jsxs)("div", {
-              className: MS()("SkyblockForgeDetails", {
-                Named: null === EM || void 0 === EM ? void 0 : EM.named
+            }), (0, pY.jsxs)("div", {
+              className: dJ()("SkyblockForgeDetails", {
+                Named: null === qV || void 0 === qV ? void 0 : qV.named
               }),
-              children: [(0, QS.jsx)("p", {
-                className: MS()("SkyblockForgeLore", {
-                  ArriveText: GM
+              children: [(0, pY.jsx)("p", {
+                className: dJ()("SkyblockForgeLore", {
+                  ArriveText: FV
                 }),
-                title: null === EM || void 0 === EM ? void 0 : EM.lore,
-                children: null === EM || void 0 === EM ? void 0 : EM.lore
-              }), (0, QS.jsxs)("dl", {
-                className: MS()("SkyblockForgeStats", {
-                  ArriveText: GM
+                title: null === qV || void 0 === qV ? void 0 : qV.lore,
+                children: null === qV || void 0 === qV ? void 0 : qV.lore
+              }), (0, pY.jsxs)("dl", {
+                className: dJ()("SkyblockForgeStats", {
+                  ArriveText: FV
                 }),
-                children: [null === EM && Wj.map((MM => (0, QS.jsxs)("div", {
+                children: [null === qV && GU.map((VV => (0, pY.jsxs)("div", {
                   className: "SkyblockForgeStat Empty",
-                  children: [(0, QS.jsx)("dt", {
-                    children: nM(MM)
-                  }), (0, QS.jsx)("dd", {
+                  children: [(0, pY.jsx)("dt", {
+                    children: QV(VV)
+                  }), (0, pY.jsx)("dd", {
                     children: "\u2013"
                   })]
-                }, MM))), null === EM || void 0 === EM ? void 0 : EM.stats.map((MM => (0, QS.jsxs)("div", {
-                  className: MS()("SkyblockForgeStat", {
-                    Better: MM.better
+                }, VV))), null === qV || void 0 === qV ? void 0 : qV.stats.map((VV => (0, pY.jsxs)("div", {
+                  className: dJ()("SkyblockForgeStat", {
+                    Better: VV.better
                   }),
-                  children: [(0, QS.jsx)("dt", {
-                    children: MM.label
-                  }), (0, QS.jsx)("dd", {
-                    children: MM.value
+                  children: [(0, pY.jsx)("dt", {
+                    children: VV.label
+                  }), (0, pY.jsx)("dd", {
+                    children: VV.value
                   })]
-                }, MM.label)))]
-              }), (0, QS.jsx)("ul", {
-                className: MS()("SkyblockForgeEffects", {
-                  ArriveText: GM
+                }, VV.label)))]
+              }), (0, pY.jsx)("ul", {
+                className: dJ()("SkyblockForgeEffects", {
+                  ArriveText: FV
                 }),
-                children: null === EM || void 0 === EM ? void 0 : EM.effects.map((MM => (0, QS.jsx)("li", {
-                  children: MM
-                }, MM)))
+                children: null === qV || void 0 === qV ? void 0 : qV.effects.map((VV => (0, pY.jsx)("li", {
+                  children: VV
+                }, VV)))
               })]
             })]
           })]
         })
       })
     }
-    const oj = "Doom Rivet",
-      fj = "Doom Crest";
+    const iU = "Doom Rivet",
+      CU = "Doom Crest";
 
-    function Yj(MM) {
+    function aU(VV) {
       let {
-        itemName: rM,
-        amount: iM,
-        owned: OM
-      } = MM;
-      return (0, QS.jsxs)("span", {
-        className: MS()("SkyblockSmugglerPrice", {
-          Short: iM > OM
+        itemName: eV,
+        amount: xV,
+        owned: JV
+      } = VV;
+      return (0, pY.jsxs)("span", {
+        className: dJ()("SkyblockSmugglerPrice", {
+          Short: xV > JV
         }),
-        children: [(0, QS.jsx)("span", {
+        children: [(0, pY.jsx)("span", {
           className: "SkyblockSmugglerPriceIcon",
-          children: (0, QS.jsx)(SS.b, {
-            itemName: rM,
+          children: (0, pY.jsx)(xY.e, {
+            itemName: eV,
             amount: 0
           })
-        }), (0, QS.jsx)("span", {
-          children: iM
+        }), (0, pY.jsx)("span", {
+          children: xV
         })]
       })
     }
 
-    function Nj(MM) {
-      return MM.justBought ? "skyblockGame:smugglerJustBought" : MM.soldOut ? "skyblockGame:smugglerSoldOut" : "skyblockGame:smugglerBuy"
+    function oU(VV) {
+      return VV.justBought ? "skyblockGame:smugglerJustBought" : VV.soldOut ? "skyblockGame:smugglerSoldOut" : "skyblockGame:smugglerBuy"
     }
 
-    function Aj(MM) {
+    function cU(VV) {
       let {
-        deal: rM,
-        view: iM,
-        buy: OM
-      } = MM;
+        deal: eV,
+        view: xV,
+        buy: JV
+      } = VV;
       const {
-        t: SM
-      } = (0, PS.A)();
-      return (0, QS.jsxs)("div", {
-        className: MS()("SkyblockSmugglerPocket", {
-          Bought: rM.justBought,
-          Unaffordable: !rM.affordable,
-          SoldOut: rM.soldOut && !rM.justBought
+        t: YV
+      } = (0, UY.A)();
+      return (0, pY.jsxs)("div", {
+        className: dJ()("SkyblockSmugglerPocket", {
+          Bought: eV.justBought,
+          Unaffordable: !eV.affordable,
+          SoldOut: eV.soldOut && !eV.justBought
         }),
-        children: [(0, QS.jsx)("span", {
+        children: [(0, pY.jsx)("span", {
           className: "SkyblockSmugglerBuckle",
           "aria-hidden": "true"
-        }), (0, QS.jsxs)("div", {
+        }), (0, pY.jsxs)("div", {
           className: "SkyblockSmugglerGoods",
-          children: [(0, QS.jsx)(SS.b, {
-            itemName: rM.itemName,
+          children: [(0, pY.jsx)(xY.e, {
+            itemName: eV.itemName,
             amount: 0,
-            enchantmentTier: rM.enchantmentTier
-          }), rM.amount > 1 && (0, QS.jsx)("span", {
+            enchantmentTier: eV.enchantmentTier
+          }), eV.amount > 1 && (0, pY.jsx)("span", {
             className: "SkyblockSmugglerAmount",
-            children: SM("skyblockGame:smugglerAmount", {
-              amount: rM.amount
+            children: YV("skyblockGame:smugglerAmount", {
+              amount: eV.amount
             })
           })]
-        }), (0, QS.jsx)("h3", {
-          children: rM.displayName
-        }), (0, QS.jsxs)("div", {
+        }), (0, pY.jsx)("h3", {
+          children: eV.displayName
+        }), (0, pY.jsxs)("div", {
           className: "SkyblockSmugglerDeal",
-          children: [(0, QS.jsxs)("div", {
+          children: [(0, pY.jsxs)("div", {
             className: "SkyblockSmugglerPrices",
-            children: [rM.rivets > 0 && (0, QS.jsx)(Yj, {
-              itemName: oj,
-              amount: rM.rivets,
-              owned: iM.rivetsOwned
-            }), rM.crests > 0 && (0, QS.jsx)(Yj, {
-              itemName: fj,
-              amount: rM.crests,
-              owned: iM.crestsOwned
+            children: [eV.rivets > 0 && (0, pY.jsx)(aU, {
+              itemName: iU,
+              amount: eV.rivets,
+              owned: xV.rivetsOwned
+            }), eV.crests > 0 && (0, pY.jsx)(aU, {
+              itemName: CU,
+              amount: eV.crests,
+              owned: xV.crestsOwned
             })]
-          }), (0, QS.jsx)(lS.e, {
+          }), (0, pY.jsx)(EY.f, {
             className: "SkyblockSmugglerBuy",
-            disabled: rM.soldOut || !rM.affordable || iM.pending,
+            disabled: eV.soldOut || !eV.affordable || xV.pending,
             onClick: () => {
-              OM(rM.slot)
+              JV(eV.slot)
             },
-            children: SM(Nj(rM))
+            children: YV(oU(eV))
           })]
         })]
-      }, rM.justBought ? iM.boughtCount : 0)
+      }, eV.justBought ? xV.boughtCount : 0)
     }
 
-    function xj(MM) {
+    function hU(VV) {
       let {
-        controller: rM
-      } = MM;
-      const iM = (0, nS.e)(Ti, rM.getSnapshot()),
+        controller: eV
+      } = VV;
+      const xV = (0, yY.j)(sx, eV.getSnapshot()),
         {
-          t: OM
-        } = (0, PS.A)(),
-        SM = US();
-      return iM.enabled ? (0, QS.jsx)(yS.e, {
-        show: iM.open,
-        close: rM.dismiss,
+          t: JV
+        } = (0, UY.A)(),
+        YV = jY();
+      return xV.enabled ? (0, pY.jsx)(bY.e, {
+        show: xV.open,
+        close: eV.dismiss,
         togglePointerLock: !1,
         className: "SkyblockSkillsOverlay",
-        children: (0, QS.jsxs)("section", {
+        children: (0, pY.jsxs)("section", {
           className: "SkyblockSkillsPanel SkyblockSmugglerPanel",
           role: "dialog",
           "aria-modal": "true",
           "aria-labelledby": "skyblockSmugglerTitle",
           tabIndex: -1,
-          ref: SM,
-          onKeyDown: ES,
-          children: [(0, QS.jsx)("span", {
+          ref: YV,
+          onKeyDown: BY,
+          children: [(0, pY.jsx)("span", {
             className: "SkyblockSmugglerStrap Left",
             "aria-hidden": "true"
-          }), (0, QS.jsx)("span", {
+          }), (0, pY.jsx)("span", {
             className: "SkyblockSmugglerStrap Right",
             "aria-hidden": "true"
-          }), (0, QS.jsxs)("header", {
+          }), (0, pY.jsxs)("header", {
             className: "SkyblockSmugglerFlap",
-            children: [(0, QS.jsxs)("div", {
-              children: [(0, QS.jsx)("h2", {
+            children: [(0, pY.jsxs)("div", {
+              children: [(0, pY.jsx)("h2", {
                 id: "skyblockSmugglerTitle",
-                children: OM("skyblockGame:smugglerTitle")
-              }), (0, QS.jsx)("p", {
-                children: OM("skyblockGame:smugglerIntro")
+                children: JV("skyblockGame:smugglerTitle")
+              }), (0, pY.jsx)("p", {
+                children: JV("skyblockGame:smugglerIntro")
               })]
-            }), (0, QS.jsxs)("div", {
+            }), (0, pY.jsxs)("div", {
               className: "SkyblockSmugglerFlapActions",
-              children: [(0, QS.jsxs)("div", {
+              children: [(0, pY.jsxs)("div", {
                 className: "SkyblockSmugglerWallet",
-                children: [(0, QS.jsx)(Yj, {
-                  itemName: oj,
-                  amount: iM.rivetsOwned,
-                  owned: iM.rivetsOwned
-                }), (0, QS.jsx)(Yj, {
-                  itemName: fj,
-                  amount: iM.crestsOwned,
-                  owned: iM.crestsOwned
+                children: [(0, pY.jsx)(aU, {
+                  itemName: iU,
+                  amount: xV.rivetsOwned,
+                  owned: xV.rivetsOwned
+                }), (0, pY.jsx)(aU, {
+                  itemName: CU,
+                  amount: xV.crestsOwned,
+                  owned: xV.crestsOwned
                 })]
-              }), (0, QS.jsx)(lS.l, {
-                onClick: rM.dismiss
+              }), (0, pY.jsx)(EY.k, {
+                onClick: eV.dismiss
               })]
             })]
-          }), (0, QS.jsx)("div", {
+          }), (0, pY.jsx)("div", {
             className: "SkyblockSmugglerPockets",
-            children: iM.deals.map((MM => (0, QS.jsx)(Aj, {
-              deal: MM,
-              view: iM,
-              buy: rM.buy
-            }, MM.slot)))
-          }), (0, QS.jsxs)("footer", {
+            children: xV.deals.map((VV => (0, pY.jsx)(cU, {
+              deal: VV,
+              view: xV,
+              buy: eV.buy
+            }, VV.slot)))
+          }), (0, pY.jsxs)("footer", {
             className: "SkyblockSmugglerBedroll",
-            children: [(0, QS.jsx)("span", {
+            children: [(0, pY.jsx)("span", {
               className: "SkyblockSmugglerRotates",
-              children: iM.rotatesText
-            }), null !== iM.status && (0, QS.jsx)("span", {
-              className: MS()("SkyblockSmugglerStatus", iM.status.tone),
-              children: iM.status.text
+              children: xV.rotatesText
+            }), null !== xV.status && (0, pY.jsx)("span", {
+              className: dJ()("SkyblockSmugglerStatus", xV.status.tone),
+              children: xV.status.text
             })]
           })]
         })
       }) : null
     }
 
-    function vj(MM) {
+    function lU(VV) {
       let {
-        phase: rM,
-        className: iM
-      } = MM;
-      return (0, QS.jsx)("span", {
-        className: MS()("SkyblockMoon", `Moon-${rM}`, iM),
+        phase: eV,
+        className: xV
+      } = VV;
+      return (0, pY.jsx)("span", {
+        className: dJ()("SkyblockMoon", `Moon-${eV}`, xV),
         "aria-hidden": "true"
       })
     }
 
-    function Fj(MM) {
+    function LU(VV) {
       let {
-        controller: rM
-      } = MM;
-      const iM = (0, nS.e)(MO, rM.getSnapshot()),
+        controller: eV
+      } = VV;
+      const xV = (0, yY.j)(dx, eV.getSnapshot()),
         {
-          t: OM
-        } = (0, PS.A)();
-      return iM.enabled ? (0, QS.jsx)(iS.i, {
+          t: JV
+        } = (0, UY.A)();
+      return xV.enabled ? (0, pY.jsx)(VY.e, {
         placement: "statBars",
-        children: (0, QS.jsx)("button", {
+        children: (0, pY.jsx)("button", {
           type: "button",
           tabIndex: -1,
-          className: MS()("SkyblockPassageChip", iM.open && "Open"),
-          "aria-label": OM("skyblockGame:passageChipLabel", {
-            phase: iM.phaseName
+          className: dJ()("SkyblockPassageChip", xV.open && "Open"),
+          "aria-label": JV("skyblockGame:passageChipLabel", {
+            phase: xV.phaseName
           }),
-          title: OM("skyblockGame:passageChipLabel", {
-            phase: iM.phaseName
+          title: JV("skyblockGame:passageChipLabel", {
+            phase: xV.phaseName
           }),
-          onMouseDown: MM => {
-            MM.preventDefault()
+          onMouseDown: VV => {
+            VV.preventDefault()
           },
-          onClick: rM.toggle,
-          children: (0, QS.jsx)(vj, {
-            phase: iM.phase
-          }, iM.phase)
+          onClick: eV.toggle,
+          children: (0, pY.jsx)(lU, {
+            phase: xV.phase
+          }, xV.phase)
         })
       }) : null
     }
 
-    function Bj(MM) {
+    function fU(VV) {
       let {
-        fish: rM
-      } = MM;
-      return (0, QS.jsxs)("li", {
+        fish: eV
+      } = VV;
+      return (0, pY.jsxs)("li", {
         className: "SkyblockPassageFish",
-        children: [(0, QS.jsx)("span", {
+        children: [(0, pY.jsx)("span", {
           className: "SkyblockPassageFishIcon",
-          children: (0, QS.jsx)(SS.b, {
-            itemName: rM.itemName,
+          children: (0, pY.jsx)(xY.e, {
+            itemName: eV.itemName,
             amount: 0
           })
-        }), (0, QS.jsxs)("span", {
+        }), (0, pY.jsxs)("span", {
           className: "SkyblockPassageFishText",
-          children: [(0, QS.jsx)("span", {
+          children: [(0, pY.jsx)("span", {
             className: "SkyblockPassageFishName",
-            children: rM.displayName
-          }), (0, QS.jsx)("span", {
+            children: eV.displayName
+          }), (0, pY.jsx)("span", {
             className: "SkyblockPassageFishWhere",
-            children: rM.where
+            children: eV.where
           })]
         })]
       })
     }
 
-    function Xj(MM) {
+    function mU(VV) {
       let {
-        controller: rM
-      } = MM;
-      const iM = (0, nS.e)(MO, rM.getSnapshot()),
+        controller: eV
+      } = VV;
+      const xV = (0, yY.j)(dx, eV.getSnapshot()),
         {
-          t: OM
-        } = (0, PS.A)(),
-        SM = US();
-      return iM.enabled ? (0, QS.jsx)(yS.e, {
-        show: iM.open,
-        close: rM.dismiss,
+          t: JV
+        } = (0, UY.A)(),
+        YV = jY();
+      return xV.enabled ? (0, pY.jsx)(bY.e, {
+        show: xV.open,
+        close: eV.dismiss,
         togglePointerLock: !1,
         className: "SkyblockSkillsOverlay",
-        children: (0, QS.jsxs)("section", {
+        children: (0, pY.jsxs)("section", {
           className: "SkyblockSkillsPanel SkyblockPassagePanel",
           role: "dialog",
           "aria-modal": "true",
           "aria-labelledby": "skyblockPassageTitle",
           tabIndex: -1,
-          ref: SM,
-          onKeyDown: ES,
-          children: [(0, QS.jsxs)("header", {
+          ref: YV,
+          onKeyDown: BY,
+          children: [(0, pY.jsxs)("header", {
             className: "SkyblockPassageHeader",
-            children: [(0, QS.jsx)(vj, {
-              phase: iM.phase,
+            children: [(0, pY.jsx)(lU, {
+              phase: xV.phase,
               className: "SkyblockPassageHeaderMoon"
-            }), (0, QS.jsxs)("div", {
-              children: [(0, QS.jsx)("h2", {
+            }), (0, pY.jsxs)("div", {
+              children: [(0, pY.jsx)("h2", {
                 id: "skyblockPassageTitle",
-                children: OM("skyblockGame:passageTitle")
-              }), (0, QS.jsx)("p", {
+                children: JV("skyblockGame:passageTitle")
+              }), (0, pY.jsx)("p", {
                 className: "SkyblockPassagePhase",
-                children: iM.phaseName
+                children: xV.phaseName
               })]
-            }), (0, QS.jsx)(lS.l, {
+            }), (0, pY.jsx)(EY.k, {
               padIgnore: !0,
-              onClick: rM.dismiss
+              onClick: eV.dismiss
             })]
-          }), (0, QS.jsx)("p", {
+          }), (0, pY.jsx)("p", {
             className: "SkyblockPassageIntro",
-            children: OM("skyblockGame:passageIntro")
-          }), (0, QS.jsxs)("div", {
+            children: JV("skyblockGame:passageIntro")
+          }), (0, pY.jsxs)("div", {
             className: "SkyblockPassageBody",
-            children: [(0, QS.jsxs)("section", {
+            children: [(0, pY.jsxs)("section", {
               className: "SkyblockPassageColumn",
-              children: [(0, QS.jsx)("h3", {
-                children: OM("skyblockGame:passageVisiting")
-              }), (0, QS.jsx)("ul", {
+              children: [(0, pY.jsx)("h3", {
+                children: JV("skyblockGame:passageVisiting")
+              }), (0, pY.jsx)("ul", {
                 className: "SkyblockPassageList",
-                children: iM.visitors.map((MM => (0, QS.jsx)(Bj, {
-                  fish: MM
-                }, MM.itemName)))
+                children: xV.visitors.map((VV => (0, pY.jsx)(fU, {
+                  fish: VV
+                }, VV.itemName)))
               })]
-            }), (0, QS.jsxs)("section", {
+            }), (0, pY.jsxs)("section", {
               className: "SkyblockPassageColumn",
-              children: [null !== iM.resting && (0, QS.jsxs)(QS.Fragment, {
-                children: [(0, QS.jsx)("h3", {
-                  children: OM("skyblockGame:passageResting")
-                }), (0, QS.jsx)("ul", {
+              children: [null !== xV.resting && (0, pY.jsxs)(pY.Fragment, {
+                children: [(0, pY.jsx)("h3", {
+                  children: JV("skyblockGame:passageResting")
+                }), (0, pY.jsx)("ul", {
                   className: "SkyblockPassageList Resting",
-                  children: (0, QS.jsx)(Bj, {
-                    fish: iM.resting
+                  children: (0, pY.jsx)(fU, {
+                    fish: xV.resting
                   })
                 })]
-              }), (0, QS.jsxs)("p", {
+              }), (0, pY.jsxs)("p", {
                 className: "SkyblockPassageNext",
-                children: [(0, QS.jsx)(vj, {
-                  phase: iM.nextPhase
-                }), (0, QS.jsx)("span", {
-                  children: iM.next
+                children: [(0, pY.jsx)(lU, {
+                  phase: xV.nextPhase
+                }), (0, pY.jsx)("span", {
+                  children: xV.next
                 })]
               })]
             })]
@@ -7353,664 +7319,664 @@ export const modules = {
       }) : null
     }
 
-    function Ij() {
-      return (0, QS.jsx)("span", {
+    function KU() {
+      return (0, pY.jsx)("span", {
         className: "SkyblockLampLightSparkle",
         "aria-hidden": "true",
-        children: [0, 1, 2, 3, 4, 5].map((MM => (0, QS.jsx)("i", {
+        children: [0, 1, 2, 3, 4, 5].map((VV => (0, pY.jsx)("i", {
           style: {
-            "--sparkle-index": MM
+            "--sparkle-index": VV
           }
-        }, MM)))
+        }, VV)))
       })
     }
 
-    function Kj(MM) {
-      var rM;
+    function HU(VV) {
+      var eV;
       let {
-        charm: iM,
-        view: OM,
-        controller: SM
-      } = MM;
+        charm: xV,
+        view: JV,
+        controller: YV
+      } = VV;
       const {
-        t: jM
-      } = (0, PS.A)(), aM = OM.shop, PM = (null === (rM = OM.sparkle) || void 0 === rM ? void 0 : rM.id) === iM.id;
-      return (0, QS.jsxs)("li", {
-        className: MS()("SkyblockLampLightCharm", iM.owned && "Owned", iM.socketed && "Socketed"),
-        children: [PM && (0, QS.jsx)(Ij, {}, OM.sparkle.count), (0, QS.jsx)("h4", {
-          children: iM.name
-        }), (0, QS.jsx)("p", {
+        t: UV
+      } = (0, UY.A)(), yV = JV.shop, pV = (null === (eV = JV.sparkle) || void 0 === eV ? void 0 : eV.id) === xV.id;
+      return (0, pY.jsxs)("li", {
+        className: dJ()("SkyblockLampLightCharm", xV.owned && "Owned", xV.socketed && "Socketed"),
+        children: [pV && (0, pY.jsx)(KU, {}, JV.sparkle.count), (0, pY.jsx)("h4", {
+          children: xV.name
+        }), (0, pY.jsx)("p", {
           className: "SkyblockLampLightEffect",
-          children: iM.effect
-        }), (0, QS.jsx)("ul", {
+          children: xV.effect
+        }), (0, pY.jsx)("ul", {
           className: "SkyblockLampLightOdds",
-          children: iM.lines.map((MM => (0, QS.jsxs)("li", {
-            className: MS()("SkyblockLampLightOddsLine", "better" === MM.tone ? "Better" : "worse" === MM.tone ? "Worse" : "Same"),
-            children: [(0, QS.jsx)("span", {
+          children: xV.lines.map((VV => (0, pY.jsxs)("li", {
+            className: dJ()("SkyblockLampLightOddsLine", "better" === VV.tone ? "Better" : "worse" === VV.tone ? "Worse" : "Same"),
+            children: [(0, pY.jsx)("span", {
               className: "Before",
-              children: MM.before
-            }), (0, QS.jsx)("span", {
+              children: VV.before
+            }), (0, pY.jsx)("span", {
               className: "Arrow",
               children: "\u2192"
-            }), (0, QS.jsx)("span", {
+            }), (0, pY.jsx)("span", {
               className: "After",
-              children: MM.after
+              children: VV.after
             })]
-          }, MM.label)))
-        }), (0, QS.jsx)("div", {
+          }, VV.label)))
+        }), (0, pY.jsx)("div", {
           className: "SkyblockLampLightCharmAction",
-          children: iM.owned ? iM.socketed ? (0, QS.jsxs)(QS.Fragment, {
-            children: [(0, QS.jsx)("span", {
+          children: xV.owned ? xV.socketed ? (0, pY.jsxs)(pY.Fragment, {
+            children: [(0, pY.jsx)("span", {
               className: "SkyblockLampLightBadge",
-              children: jM("skyblockGame:lampLightSocketed")
-            }), (0, QS.jsx)(lS.V, {
-              disabled: !OM.canCommand,
-              ariaLabel: jM("skyblockGame:lampLightRemoveLabel", {
-                charm: iM.name
+              children: UV("skyblockGame:lampLightSocketed")
+            }), (0, pY.jsx)(EY.M, {
+              disabled: !JV.canCommand,
+              ariaLabel: UV("skyblockGame:lampLightRemoveLabel", {
+                charm: xV.name
               }),
               onClick: () => {
-                SM.socket(null)
+                YV.socket(null)
               },
-              children: jM("skyblockGame:lampLightRemove")
+              children: UV("skyblockGame:lampLightRemove")
             })]
-          }) : (0, QS.jsx)(lS.e, {
-            disabled: !OM.canCommand || !aM.heldRod,
-            ariaLabel: jM("skyblockGame:lampLightSocketLabel", {
-              charm: iM.name
+          }) : (0, pY.jsx)(EY.f, {
+            disabled: !JV.canCommand || !yV.heldRod,
+            ariaLabel: UV("skyblockGame:lampLightSocketLabel", {
+              charm: xV.name
             }),
             onClick: () => {
-              SM.socket(iM.id)
+              YV.socket(xV.id)
             },
-            children: jM("skyblockGame:lampLightSocket")
-          }) : (0, QS.jsx)(lS.e, {
-            disabled: !OM.canCommand || !iM.affordable,
-            ariaLabel: jM("skyblockGame:lampLightBuyLabel", {
-              item: iM.name,
-              cost: iM.cost
+            children: UV("skyblockGame:lampLightSocket")
+          }) : (0, pY.jsx)(EY.f, {
+            disabled: !JV.canCommand || !xV.affordable,
+            ariaLabel: UV("skyblockGame:lampLightBuyLabel", {
+              item: xV.name,
+              cost: xV.cost
             }),
             onClick: () => {
-              SM.buy(iM.id)
+              YV.buy(xV.id)
             },
-            children: iM.cost
+            children: xV.cost
           })
         })]
       })
     }
 
-    function qj(MM) {
-      var rM;
+    function uU(VV) {
+      var eV;
       let {
-        tint: iM,
-        view: OM,
-        controller: SM
-      } = MM;
+        tint: xV,
+        view: JV,
+        controller: YV
+      } = VV;
       const {
-        t: jM
-      } = (0, PS.A)();
-      return (0, QS.jsxs)("li", {
-        className: MS()("SkyblockLampLightTint", iM.wearing && "Wearing"),
+        t: UV
+      } = (0, UY.A)();
+      return (0, pY.jsxs)("li", {
+        className: dJ()("SkyblockLampLightTint", xV.wearing && "Wearing"),
         style: {
-          "--tint-colour": iM.colour
+          "--tint-colour": xV.colour
         },
-        children: [(null === (rM = OM.sparkle) || void 0 === rM ? void 0 : rM.id) === iM.id && (0, QS.jsx)(Ij, {}, OM.sparkle.count), (0, QS.jsx)("span", {
+        children: [(null === (eV = JV.sparkle) || void 0 === eV ? void 0 : eV.id) === xV.id && (0, pY.jsx)(KU, {}, JV.sparkle.count), (0, pY.jsx)("span", {
           className: "SkyblockLampLightSwatch",
           "aria-hidden": "true"
-        }), (0, QS.jsx)("span", {
+        }), (0, pY.jsx)("span", {
           className: "SkyblockLampLightTintName",
-          children: iM.name
-        }), iM.wearing ? (0, QS.jsx)("span", {
+          children: xV.name
+        }), xV.wearing ? (0, pY.jsx)("span", {
           className: "SkyblockLampLightBadge",
-          children: jM("skyblockGame:lampLightWearing")
-        }) : (0, QS.jsx)(lS.e, {
-          disabled: !OM.canCommand || !iM.owned && !iM.affordable,
-          ariaLabel: iM.owned ? jM("skyblockGame:lampLightWearLabel", {
-            tint: iM.name
-          }) : jM("skyblockGame:lampLightBuyLabel", {
-            item: iM.name,
-            cost: iM.cost
+          children: UV("skyblockGame:lampLightWearing")
+        }) : (0, pY.jsx)(EY.f, {
+          disabled: !JV.canCommand || !xV.owned && !xV.affordable,
+          ariaLabel: xV.owned ? UV("skyblockGame:lampLightWearLabel", {
+            tint: xV.name
+          }) : UV("skyblockGame:lampLightBuyLabel", {
+            item: xV.name,
+            cost: xV.cost
           }),
           onClick: () => {
-            iM.owned ? SM.wearTint(iM.id) : SM.buy(iM.id)
+            xV.owned ? YV.wearTint(xV.id) : YV.buy(xV.id)
           },
-          children: iM.owned ? jM("skyblockGame:lampLightWear") : iM.cost
+          children: xV.owned ? UV("skyblockGame:lampLightWear") : xV.cost
         })]
       })
     }
 
-    function Tj(MM) {
+    function sU(VV) {
       let {
-        controller: rM
-      } = MM;
-      const iM = (0, nS.e)(hO, rM.getSnapshot()),
+        controller: eV
+      } = VV;
+      const xV = (0, yY.j)(vJ, eV.getSnapshot()),
         {
-          t: OM
-        } = (0, PS.A)(),
-        SM = iM.shop;
-      return (0, QS.jsxs)("div", {
+          t: JV
+        } = (0, UY.A)(),
+        YV = xV.shop;
+      return (0, pY.jsxs)("div", {
         className: "SkyblockLampLightTab",
-        children: [(0, QS.jsxs)("div", {
+        children: [(0, pY.jsxs)("div", {
           className: "SkyblockLampLightTop",
-          children: [(0, QS.jsx)("span", {
+          children: [(0, pY.jsx)("span", {
             className: "SkyblockLampLightBalance",
-            children: iM.balance
-          }), (0, QS.jsxs)("button", {
+            children: xV.balance
+          }), (0, pY.jsxs)("button", {
             type: "button",
             role: "switch",
-            "aria-checked": iM.releasing,
-            className: MS()("SkyblockLampLightSwitch", iM.releasing && "On"),
-            disabled: iM.releasing ? "ready" !== iM.status : !iM.canCommand,
+            "aria-checked": xV.releasing,
+            className: dJ()("SkyblockLampLightSwitch", xV.releasing && "On"),
+            disabled: xV.releasing ? "ready" !== xV.status : !xV.canCommand,
             onClick: () => {
-              rM.setRelease(!iM.releasing)
+              eV.setRelease(!xV.releasing)
             },
-            children: [(0, QS.jsx)("span", {
+            children: [(0, pY.jsx)("span", {
               className: "SkyblockLampLightSwitchTrack",
               "aria-hidden": "true",
-              children: (0, QS.jsx)("span", {
+              children: (0, pY.jsx)("span", {
                 className: "SkyblockLampLightSwitchKnob"
               })
-            }), OM("skyblockGame:lampLightRelease")]
-          }), (0, QS.jsx)("span", {
+            }), JV("skyblockGame:lampLightRelease")]
+          }), (0, pY.jsx)("span", {
             className: "SkyblockLampLightHint",
-            children: OM("skyblockGame:lampLightReleaseHint")
+            children: JV("skyblockGame:lampLightReleaseHint")
           })]
-        }), null !== iM.notice && (0, QS.jsx)("p", {
+        }), null !== xV.notice && (0, pY.jsx)("p", {
           className: "SkyblockLampLightNotice",
           role: "status",
-          children: iM.notice
-        }), null !== SM && (0, QS.jsxs)(QS.Fragment, {
-          children: [(0, QS.jsxs)("div", {
+          children: xV.notice
+        }), null !== YV && (0, pY.jsxs)(pY.Fragment, {
+          children: [(0, pY.jsxs)("div", {
             className: "SkyblockLampLightSectionHead",
-            children: [(0, QS.jsx)("h3", {
-              children: OM("skyblockGame:lampLightCharms")
-            }), (0, QS.jsx)("span", {
+            children: [(0, pY.jsx)("h3", {
+              children: JV("skyblockGame:lampLightCharms")
+            }), (0, pY.jsx)("span", {
               className: "SkyblockLampLightOddsFor",
-              children: SM.oddsFor
-            }), (0, QS.jsx)("div", {
+              children: YV.oddsFor
+            }), (0, pY.jsx)("div", {
               className: "SkyblockLampLightSituations",
               role: "group",
-              children: ["open", "bloom"].map((MM => (0, QS.jsx)("button", {
+              children: ["open", "bloom"].map((VV => (0, pY.jsx)("button", {
                 type: "button",
-                "aria-pressed": iM.situation === MM,
-                className: MS()("SkyblockLampLightSituation", iM.situation === MM && "Selected"),
+                "aria-pressed": xV.situation === VV,
+                className: dJ()("SkyblockLampLightSituation", xV.situation === VV && "Selected"),
                 onClick: () => {
-                  rM.setSituation(MM)
+                  eV.setSituation(VV)
                 },
-                children: OM("open" === MM ? "skyblockGame:lampLightOpenWater" : "skyblockGame:lampLightInBloom")
-              }, MM)))
+                children: JV("open" === VV ? "skyblockGame:lampLightOpenWater" : "skyblockGame:lampLightInBloom")
+              }, VV)))
             })]
-          }), !SM.heldRod && (0, QS.jsx)("p", {
+          }), !YV.heldRod && (0, pY.jsx)("p", {
             className: "SkyblockLampLightHoldRod",
-            children: OM("skyblockGame:lampLightHoldRod")
-          }), (0, QS.jsx)("ul", {
+            children: JV("skyblockGame:lampLightHoldRod")
+          }), (0, pY.jsx)("ul", {
             className: "SkyblockLampLightCharms",
-            children: SM.charms.map((MM => (0, QS.jsx)(Kj, {
-              charm: MM,
-              view: iM,
-              controller: rM
-            }, MM.id)))
-          }), (0, QS.jsx)("div", {
+            children: YV.charms.map((VV => (0, pY.jsx)(HU, {
+              charm: VV,
+              view: xV,
+              controller: eV
+            }, VV.id)))
+          }), (0, pY.jsx)("div", {
             className: "SkyblockLampLightSectionHead",
-            children: (0, QS.jsx)("h3", {
-              children: OM("skyblockGame:lampLightTints")
+            children: (0, pY.jsx)("h3", {
+              children: JV("skyblockGame:lampLightTints")
             })
-          }), (0, QS.jsxs)("ul", {
+          }), (0, pY.jsxs)("ul", {
             className: "SkyblockLampLightTints",
-            children: [(0, QS.jsxs)("li", {
-              className: MS()("SkyblockLampLightTint", "Islands", SM.wearingIslandColours && "Wearing"),
-              children: [(0, QS.jsx)("span", {
+            children: [(0, pY.jsxs)("li", {
+              className: dJ()("SkyblockLampLightTint", "Islands", YV.wearingIslandColours && "Wearing"),
+              children: [(0, pY.jsx)("span", {
                 className: "SkyblockLampLightSwatch",
                 "aria-hidden": "true"
-              }), (0, QS.jsx)("span", {
+              }), (0, pY.jsx)("span", {
                 className: "SkyblockLampLightTintName",
-                children: OM("skyblockGame:lampLightIslandColours")
-              }), SM.wearingIslandColours ? (0, QS.jsx)("span", {
+                children: JV("skyblockGame:lampLightIslandColours")
+              }), YV.wearingIslandColours ? (0, pY.jsx)("span", {
                 className: "SkyblockLampLightBadge",
-                children: OM("skyblockGame:lampLightWearing")
-              }) : (0, QS.jsx)(lS.e, {
-                disabled: !iM.canCommand,
-                ariaLabel: OM("skyblockGame:lampLightWearLabel", {
-                  tint: OM("skyblockGame:lampLightIslandColours")
+                children: JV("skyblockGame:lampLightWearing")
+              }) : (0, pY.jsx)(EY.f, {
+                disabled: !xV.canCommand,
+                ariaLabel: JV("skyblockGame:lampLightWearLabel", {
+                  tint: JV("skyblockGame:lampLightIslandColours")
                 }),
                 onClick: () => {
-                  rM.wearTint(null)
+                  eV.wearTint(null)
                 },
-                children: OM("skyblockGame:lampLightWear")
+                children: JV("skyblockGame:lampLightWear")
               })]
-            }), SM.tints.map((MM => (0, QS.jsx)(qj, {
-              tint: MM,
-              view: iM,
-              controller: rM
-            }, MM.id)))]
+            }), YV.tints.map((VV => (0, pY.jsx)(uU, {
+              tint: VV,
+              view: xV,
+              controller: eV
+            }, VV.id)))]
           })]
         })]
       })
     }
 
-    function Vj(MM) {
+    function SU(VV) {
       let {
-        controller: rM
-      } = MM;
-      const iM = (0, nS.e)(hO, rM.getSnapshot()),
+        controller: eV
+      } = VV;
+      const xV = (0, yY.j)(vJ, eV.getSnapshot()),
         {
-          t: OM
-        } = (0, PS.A)();
-      return iM.releasing ? (0, QS.jsx)(iS.i, {
-        children: (0, QS.jsxs)("button", {
+          t: JV
+        } = (0, UY.A)();
+      return xV.releasing ? (0, pY.jsx)(VY.e, {
+        children: (0, pY.jsxs)("button", {
           type: "button",
           className: "SkyblockLampLightPill",
           onClick: () => {
-            rM.setRelease(!1)
+            eV.setRelease(!1)
           },
-          children: [(0, QS.jsx)("span", {
+          children: [(0, pY.jsx)("span", {
             className: "SkyblockLampLightPillOrb",
             "aria-hidden": "true"
-          }), (0, QS.jsxs)("span", {
+          }), (0, pY.jsxs)("span", {
             className: "SkyblockLampLightPillText SmallTextBold",
-            children: [OM("skyblockGame:lampLightReleasing"), " \xb7 ", iM.balance]
-          }), (0, QS.jsx)("span", {
+            children: [JV("skyblockGame:lampLightReleasing"), " \xb7 ", xV.balance]
+          }), (0, pY.jsx)("span", {
             className: "SkyblockLampLightPillStop SmallTextBold",
-            children: OM("skyblockGame:lampLightKeepCatches")
-          }), null !== iM.gained && (0, QS.jsx)("span", {
+            children: JV("skyblockGame:lampLightKeepCatches")
+          }), null !== xV.gained && (0, pY.jsx)("span", {
             className: "SkyblockLampLightPillGain SmallTextBold",
             "aria-hidden": "true",
-            children: iM.gained.text
-          }, iM.gained.count)]
+            children: xV.gained.text
+          }, xV.gained.count)]
         })
       }) : null
     }
 
-    function cj(MM) {
+    function IU(VV) {
       let {
-        island: rM,
-        view: iM,
-        aim: OM
-      } = MM;
+        island: eV,
+        view: xV,
+        aim: JV
+      } = VV;
       const {
-        t: SM
-      } = (0, PS.A)(), jM = rM.featuredFish;
-      return (0, QS.jsxs)("li", {
-        className: MS()("SkyblockKeepersChairIsland", `Island-${rM.id}`, rM.favoured && "Aimed", !rM.relit && "Dark"),
-        children: [(0, QS.jsx)("h3", {
-          children: rM.name
-        }), rM.relit && null !== jM ? (0, QS.jsxs)("div", {
+        t: YV
+      } = (0, UY.A)(), UV = eV.featuredFish;
+      return (0, pY.jsxs)("li", {
+        className: dJ()("SkyblockKeepersChairIsland", `Island-${eV.id}`, eV.favoured && "Aimed", !eV.relit && "Dark"),
+        children: [(0, pY.jsx)("h3", {
+          children: eV.name
+        }), eV.relit && null !== UV ? (0, pY.jsxs)("div", {
           className: "SkyblockKeepersChairNotice",
-          children: [(0, QS.jsx)("span", {
+          children: [(0, pY.jsx)("span", {
             className: "SkyblockKeepersChairNoticeLabel",
-            children: SM("skyblockGame:keepersChairTideNotice")
-          }), (0, QS.jsx)("span", {
+            children: YV("skyblockGame:keepersChairTideNotice")
+          }), (0, pY.jsx)("span", {
             className: "SkyblockKeepersChairFish",
-            children: (0, QS.jsx)(SS.b, {
-              itemName: jM.itemName,
+            children: (0, pY.jsx)(xY.e, {
+              itemName: UV.itemName,
               amount: 0
             })
-          }), (0, QS.jsx)("span", {
+          }), (0, pY.jsx)("span", {
             className: "SkyblockKeepersChairFishName",
-            children: jM.displayName
+            children: UV.displayName
           })]
-        }) : (0, QS.jsx)("div", {
+        }) : (0, pY.jsx)("div", {
           className: "SkyblockKeepersChairNotice",
-          children: (0, QS.jsx)("span", {
+          children: (0, pY.jsx)("span", {
             className: "SkyblockKeepersChairDarkLens",
-            children: SM("skyblockGame:keepersChairDark")
+            children: YV("skyblockGame:keepersChairDark")
           })
-        }), rM.relit && (rM.favoured ? (0, QS.jsx)("span", {
+        }), eV.relit && (eV.favoured ? (0, pY.jsx)("span", {
           className: "SkyblockKeepersChairAimedBadge",
-          children: SM("skyblockGame:keepersChairAimed")
-        }) : (0, QS.jsx)(lS.e, {
+          children: YV("skyblockGame:keepersChairAimed")
+        }) : (0, pY.jsx)(EY.f, {
           className: "SkyblockKeepersChairAim",
-          disabled: !iM.canAim,
-          ariaLabel: SM("skyblockGame:keepersChairAimLabel", {
-            island: rM.name
+          disabled: !xV.canAim,
+          ariaLabel: YV("skyblockGame:keepersChairAimLabel", {
+            island: eV.name
           }),
           onClick: () => {
-            OM(rM.id)
+            JV(eV.id)
           },
-          children: SM("skyblockGame:keepersChairAim")
+          children: YV("skyblockGame:keepersChairAim")
         }))]
-      }, rM.favoured ? iM.aimedCount : 0)
+      }, eV.favoured ? xV.aimedCount : 0)
     }
 
-    function Ma(MM) {
+    function dU(VV) {
       let {
-        controller: rM,
-        lampLight: iM
-      } = MM;
-      const OM = (0, nS.e)(aO, rM.getSnapshot()),
-        SM = (0, nS.e)(hO, iM.getSnapshot()),
-        [jM, aM] = (0, eM.useState)("lamp"),
+        controller: eV,
+        lampLight: xV
+      } = VV;
+      const JV = (0, yY.j)(YJ, eV.getSnapshot()),
+        YV = (0, yY.j)(vJ, xV.getSnapshot()),
+        [UV, yV] = (0, PV.useState)("lamp"),
         {
-          t: PM
-        } = (0, PS.A)(),
-        nM = US();
-      if (!OM.enabled) return null;
-      const QM = "light" === jM && SM.enabled;
-      return (0, QS.jsx)(yS.e, {
-        show: OM.open,
-        close: rM.dismiss,
+          t: pV
+        } = (0, UY.A)(),
+        QV = jY();
+      if (!JV.enabled) return null;
+      const nV = "light" === UV && YV.enabled;
+      return (0, pY.jsx)(bY.e, {
+        show: JV.open,
+        close: eV.dismiss,
         togglePointerLock: !1,
         className: "SkyblockSkillsOverlay",
-        children: (0, QS.jsxs)("section", {
-          className: MS()("SkyblockSkillsPanel", "SkyblockKeepersChairPanel", QM && "OnLampLight"),
+        children: (0, pY.jsxs)("section", {
+          className: dJ()("SkyblockSkillsPanel", "SkyblockKeepersChairPanel", nV && "OnLampLight"),
           role: "dialog",
           "aria-modal": "true",
           "aria-labelledby": "skyblockKeepersChairTitle",
           tabIndex: -1,
-          ref: nM,
-          onKeyDown: ES,
-          children: [(0, QS.jsxs)("header", {
+          ref: QV,
+          onKeyDown: BY,
+          children: [(0, pY.jsxs)("header", {
             className: "SkyblockKeepersChairHeader",
-            children: [(0, QS.jsxs)("div", {
-              children: [(0, QS.jsx)("h2", {
+            children: [(0, pY.jsxs)("div", {
+              children: [(0, pY.jsx)("h2", {
                 id: "skyblockKeepersChairTitle",
-                children: PM("skyblockGame:keepersChairTitle")
-              }), (0, QS.jsx)("p", {
-                children: PM(QM ? "skyblockGame:keeperWickLampLightWelcome" : "skyblockGame:keeperWickKeepersChairWelcome")
+                children: pV("skyblockGame:keepersChairTitle")
+              }), (0, pY.jsx)("p", {
+                children: pV(nV ? "skyblockGame:keeperWickLampLightWelcome" : "skyblockGame:keeperWickKeepersChairWelcome")
               })]
-            }), (0, QS.jsx)(lS.l, {
+            }), (0, pY.jsx)(EY.k, {
               padIgnore: !0,
-              ariaLabel: PM("skyblockGame:keepersChairClose"),
-              onClick: rM.dismiss
+              ariaLabel: pV("skyblockGame:keepersChairClose"),
+              onClick: eV.dismiss
             })]
-          }), SM.enabled && (0, QS.jsx)("div", {
+          }), YV.enabled && (0, pY.jsx)("div", {
             className: "SkyblockKeepersChairTabs",
             role: "tablist",
             "data-pad-tabs": "1",
-            children: ["lamp", "light"].map((MM => (0, QS.jsxs)("button", {
+            children: ["lamp", "light"].map((VV => (0, pY.jsxs)("button", {
               type: "button",
               role: "tab",
-              "aria-selected": "light" === MM === QM,
+              "aria-selected": "light" === VV === nV,
               "data-pad-tab": !0,
-              "data-pad-selected": "light" === MM === QM ? "true" : void 0,
-              className: MS()("SkyblockKeepersChairTab", "light" === MM === QM && "Selected"),
+              "data-pad-selected": "light" === VV === nV ? "true" : void 0,
+              className: dJ()("SkyblockKeepersChairTab", "light" === VV === nV && "Selected"),
               onClick: () => {
-                aM(MM)
+                yV(VV)
               },
-              children: [PM("lamp" === MM ? "skyblockGame:lampLightChairTab" : "skyblockGame:lampLightTab"), "light" === MM && (0, QS.jsx)("span", {
+              children: [pV("lamp" === VV ? "skyblockGame:lampLightChairTab" : "skyblockGame:lampLightTab"), "light" === VV && (0, pY.jsx)("span", {
                 className: "SkyblockKeepersChairTabBalance",
-                children: SM.balance
+                children: YV.balance
               })]
-            }, MM)))
-          }), QM ? (0, QS.jsx)(Tj, {
-            controller: iM
-          }) : (0, QS.jsx)(ra, {
-            view: OM,
-            controller: rM
+            }, VV)))
+          }), nV ? (0, pY.jsx)(sU, {
+            controller: xV
+          }) : (0, pY.jsx)(OU, {
+            view: JV,
+            controller: eV
           })]
         })
       })
     }
 
-    function ra(MM) {
+    function OU(VV) {
       let {
-        view: rM,
-        controller: iM
-      } = MM;
+        view: eV,
+        controller: xV
+      } = VV;
       const {
-        t: OM
-      } = (0, PS.A)();
-      return (0, QS.jsxs)(QS.Fragment, {
-        children: [(0, QS.jsx)("ul", {
+        t: JV
+      } = (0, UY.A)();
+      return (0, pY.jsxs)(pY.Fragment, {
+        children: [(0, pY.jsx)("ul", {
           className: "SkyblockKeepersChairIslands",
-          children: rM.islands.map((MM => (0, QS.jsx)(cj, {
-            island: MM,
-            view: rM,
-            aim: iM.aim
-          }, MM.id)))
-        }), null !== rM.almanac && (0, QS.jsxs)("div", {
+          children: eV.islands.map((VV => (0, pY.jsx)(IU, {
+            island: VV,
+            view: eV,
+            aim: xV.aim
+          }, VV.id)))
+        }), null !== eV.almanac && (0, pY.jsxs)("div", {
           className: "SkyblockKeepersChairAlmanac",
-          children: [(0, QS.jsx)("span", {
+          children: [(0, pY.jsx)("span", {
             className: "SkyblockKeepersChairAlmanacLabel",
-            children: OM("skyblockGame:passageTitle")
-          }), (0, QS.jsxs)("span", {
+            children: JV("skyblockGame:passageTitle")
+          }), (0, pY.jsxs)("span", {
             className: "SkyblockKeepersChairAlmanacWeek",
-            children: [(0, QS.jsx)(vj, {
-              phase: rM.almanac.phase
-            }), rM.almanac.phaseName]
-          }), (0, QS.jsxs)("span", {
+            children: [(0, pY.jsx)(lU, {
+              phase: eV.almanac.phase
+            }), eV.almanac.phaseName]
+          }), (0, pY.jsxs)("span", {
             className: "SkyblockKeepersChairAlmanacWeek Next",
-            children: [(0, QS.jsx)(vj, {
-              phase: rM.almanac.nextPhase
-            }), rM.almanac.next]
+            children: [(0, pY.jsx)(lU, {
+              phase: eV.almanac.nextPhase
+            }), eV.almanac.next]
           })]
-        }), (0, QS.jsxs)("footer", {
+        }), (0, pY.jsxs)("footer", {
           className: "SkyblockKeepersChairFooter",
-          children: [(0, QS.jsx)("span", {
+          children: [(0, pY.jsx)("span", {
             className: "SkyblockKeepersChairFavour",
-            children: OM("skyblockGame:keepersChairFavour")
-          }), rM.aimed && (0, QS.jsx)(lS.V, {
+            children: JV("skyblockGame:keepersChairFavour")
+          }), eV.aimed && (0, pY.jsx)(EY.M, {
             className: "SkyblockKeepersChairRest",
-            disabled: !rM.canAim,
+            disabled: !eV.canAim,
             onClick: () => {
-              iM.aim(null)
+              xV.aim(null)
             },
-            children: OM("skyblockGame:keepersChairRest")
+            children: JV("skyblockGame:keepersChairRest")
           })]
-        }), null !== rM.status && (0, QS.jsx)("p", {
-          className: MS()("SkyblockKeepersChairStatus", "refused" === rM.status.tone ? "Refused" : "Shines"),
+        }), null !== eV.status && (0, pY.jsx)("p", {
+          className: dJ()("SkyblockKeepersChairStatus", "refused" === eV.status.tone ? "Refused" : "Shines"),
           role: "status",
-          children: rM.status.text
+          children: eV.status.text
         })]
       })
     }
 
-    function ia(MM) {
+    function Vy(VV) {
       let {
-        controller: rM
-      } = MM;
+        controller: eV
+      } = VV;
       const {
-        t: iM
-      } = (0, PS.A)(), OM = (0, nS.e)(nO, rM.getSnapshot());
-      if (!OM.enabled) return null;
-      const SM = OM.freshCount > 0 ? iM("skyblockGame:reachLogOpenNews", {
-        count: OM.freshCount
-      }) : iM("skyblockGame:reachLogOpen");
-      return (0, QS.jsx)(iS.i, {
+        t: xV
+      } = (0, UY.A)(), JV = (0, yY.j)(yJ, eV.getSnapshot());
+      if (!JV.enabled) return null;
+      const YV = JV.freshCount > 0 ? xV("skyblockGame:reachLogOpenNews", {
+        count: JV.freshCount
+      }) : xV("skyblockGame:reachLogOpen");
+      return (0, pY.jsx)(VY.e, {
         placement: "statBars",
-        children: (0, QS.jsxs)("button", {
+        children: (0, pY.jsxs)("button", {
           type: "button",
-          className: MS()("SkyblockReachLogButton", OM.freshCount > 0 && "HasNews", OM.pending && "Pending"),
-          "aria-label": SM,
-          title: SM,
-          onClick: rM.ask,
-          children: [OM.news && (0, QS.jsx)("span", {
+          className: dJ()("SkyblockReachLogButton", JV.freshCount > 0 && "HasNews", JV.pending && "Pending"),
+          "aria-label": YV,
+          title: YV,
+          onClick: eV.ask,
+          children: [JV.news && (0, pY.jsx)("span", {
             className: "SkyblockReachLogPulse",
             "aria-hidden": "true"
-          }, `pulse:${OM.newsToken}`), (0, QS.jsx)("span", {
-            className: MS()("SkyblockReachLogIcon", OM.news && "Jump"),
+          }, `pulse:${JV.newsToken}`), (0, pY.jsx)("span", {
+            className: dJ()("SkyblockReachLogIcon", JV.news && "Jump"),
             "aria-hidden": "true",
-            children: (0, QS.jsx)(SS.b, {
-              itemName: zO,
+            children: (0, pY.jsx)(xY.e, {
+              itemName: QJ,
               amount: 0
             })
-          }, `icon:${OM.newsToken}`), OM.freshCount > 0 && (0, QS.jsx)("span", {
+          }, `icon:${JV.newsToken}`), JV.freshCount > 0 && (0, pY.jsx)("span", {
             className: "SkyblockReachLogBadge",
-            children: OM.freshCount
+            children: JV.freshCount
           })]
         })
       })
     }
 
-    function Oa(MM) {
+    function ey(VV) {
       let {
-        gift: rM
-      } = MM;
-      return (0, QS.jsx)("li", {
-        className: MS()("SkyblockRegularsGift", rM.given && "Given"),
-        children: rM.text
+        gift: eV
+      } = VV;
+      return (0, pY.jsx)("li", {
+        className: dJ()("SkyblockRegularsGift", eV.given && "Given"),
+        children: eV.text
       })
     }
 
-    function Sa(MM) {
+    function xy(VV) {
       let {
-        regular: rM
-      } = MM;
+        regular: eV
+      } = VV;
       const {
-        t: iM
-      } = (0, PS.A)();
-      return (0, QS.jsxs)("li", {
-        className: MS()("SkyblockRegularsCard", rM.tagged ? "Tagged" : "Untagged", rM.resting && "Resting"),
-        children: [(0, QS.jsxs)("div", {
+        t: xV
+      } = (0, UY.A)();
+      return (0, pY.jsxs)("li", {
+        className: dJ()("SkyblockRegularsCard", eV.tagged ? "Tagged" : "Untagged", eV.resting && "Resting"),
+        children: [(0, pY.jsxs)("div", {
           className: "SkyblockRegularsCardTop",
-          children: [(0, QS.jsx)("span", {
+          children: [(0, pY.jsx)("span", {
             className: "SkyblockRegularsIcon",
-            title: rM.fishName,
-            children: (0, QS.jsx)(SS.b, {
-              itemName: rM.itemName,
+            title: eV.fishName,
+            children: (0, pY.jsx)(xY.e, {
+              itemName: eV.itemName,
               amount: 0
             })
-          }), (0, QS.jsxs)("div", {
+          }), (0, pY.jsxs)("div", {
             className: "SkyblockRegularsNames",
-            children: [(0, QS.jsx)("h3", {
-              children: rM.name
-            }), (0, QS.jsx)("span", {
+            children: [(0, pY.jsx)("h3", {
+              children: eV.name
+            }), (0, pY.jsx)("span", {
               className: "SkyblockRegularsFish",
-              children: rM.fishName
+              children: eV.fishName
             })]
           })]
-        }), (0, QS.jsx)("p", {
+        }), (0, pY.jsx)("p", {
           className: "SkyblockRegularsLine",
-          children: rM.line
-        }), (0, QS.jsxs)("p", {
+          children: eV.line
+        }), (0, pY.jsxs)("p", {
           className: "SkyblockRegularsStats",
-          children: [(0, QS.jsx)("span", {
+          children: [(0, pY.jsx)("span", {
             className: "SkyblockRegularsSize",
-            children: rM.size
-          }), rM.tagged && (0, QS.jsx)("span", {
+            children: eV.size
+          }), eV.tagged && (0, pY.jsx)("span", {
             className: "SkyblockRegularsMeetings",
-            children: rM.resting ? iM("skyblockGame:regularsResting") : rM.meetings
+            children: eV.resting ? xV("skyblockGame:regularsResting") : eV.meetings
           })]
-        }), (0, QS.jsx)("p", {
+        }), (0, pY.jsx)("p", {
           className: "SkyblockRegularsChance",
-          children: rM.chance
-        }), (0, QS.jsx)("ul", {
+          children: eV.chance
+        }), (0, pY.jsx)("ul", {
           className: "SkyblockRegularsGifts",
-          children: rM.gifts.map((MM => (0, QS.jsx)(Oa, {
-            gift: MM
-          }, MM.text)))
-        }), rM.history.length > 0 && (0, QS.jsx)("ul", {
+          children: eV.gifts.map((VV => (0, pY.jsx)(ey, {
+            gift: VV
+          }, VV.text)))
+        }), eV.history.length > 0 && (0, pY.jsx)("ul", {
           className: "SkyblockRegularsHistory",
-          children: rM.history.map(((MM, rM) => (0, QS.jsx)("li", {
-            children: MM
-          }, rM)))
+          children: eV.history.map(((VV, eV) => (0, pY.jsx)("li", {
+            children: VV
+          }, eV)))
         })]
       })
     }
 
-    function ja(MM) {
+    function Jy(VV) {
       let {
-        controller: rM,
-        island: iM
-      } = MM;
+        controller: eV,
+        island: xV
+      } = VV;
       const {
-        t: OM
-      } = (0, PS.A)(), SM = (0, nS.e)(sO, rM.getSnapshot()), jM = SM.islands.find((MM => MM.id === iM));
-      if (!SM.enabled || void 0 === jM) return null;
-      const aM = OM("skyblockGame:regularsOpen");
-      return (0, QS.jsxs)("button", {
+        t: JV
+      } = (0, UY.A)(), YV = (0, yY.j)(WJ, eV.getSnapshot()), UV = YV.islands.find((VV => VV.id === xV));
+      if (!YV.enabled || void 0 === UV) return null;
+      const yV = JV("skyblockGame:regularsOpen");
+      return (0, pY.jsxs)("button", {
         type: "button",
         className: "SkyblockRegularsStrip",
-        "aria-label": aM,
-        title: aM,
+        "aria-label": yV,
+        title: yV,
         onClick: () => {
-          rM.openIsland(iM)
+          eV.openIsland(xV)
         },
-        children: [(0, QS.jsx)("span", {
+        children: [(0, pY.jsx)("span", {
           className: "SkyblockRegularsStripTitle",
-          children: OM("skyblockGame:regularsTitle")
-        }), jM.regulars.map((MM => (0, QS.jsx)("span", {
-          className: MS()("SkyblockRegularsStripIcon", MM.tagged && "Tagged"),
-          title: MM.name,
-          children: (0, QS.jsx)(SS.b, {
-            itemName: MM.itemName,
+          children: JV("skyblockGame:regularsTitle")
+        }), UV.regulars.map((VV => (0, pY.jsx)("span", {
+          className: dJ()("SkyblockRegularsStripIcon", VV.tagged && "Tagged"),
+          title: VV.name,
+          children: (0, pY.jsx)(xY.e, {
+            itemName: VV.itemName,
             amount: 0
           })
-        }, MM.id)))]
+        }, VV.id)))]
       })
     }
 
-    function aa(MM) {
-      var rM;
+    function Yy(VV) {
+      var eV;
       let {
-        controller: iM
-      } = MM;
-      const OM = (0, nS.e)(sO, iM.getSnapshot()),
+        controller: xV
+      } = VV;
+      const JV = (0, yY.j)(WJ, xV.getSnapshot()),
         {
-          t: SM
-        } = (0, PS.A)(),
-        jM = US();
-      if (!OM.enabled) return null;
-      const aM = null !== (rM = OM.islands.find((MM => MM.id === OM.selected))) && void 0 !== rM ? rM : null;
-      return (0, QS.jsx)(yS.e, {
-        show: OM.open,
-        close: iM.dismiss,
+          t: YV
+        } = (0, UY.A)(),
+        UV = jY();
+      if (!JV.enabled) return null;
+      const yV = null !== (eV = JV.islands.find((VV => VV.id === JV.selected))) && void 0 !== eV ? eV : null;
+      return (0, pY.jsx)(bY.e, {
+        show: JV.open,
+        close: xV.dismiss,
         togglePointerLock: !1,
         className: "SkyblockSkillsOverlay",
-        children: (0, QS.jsxs)("section", {
+        children: (0, pY.jsxs)("section", {
           className: "SkyblockSkillsPanel SkyblockReachLogPanel SkyblockRegularsPanel",
           role: "dialog",
           "aria-modal": "true",
           "aria-labelledby": "skyblockRegularsTitle",
           tabIndex: -1,
-          ref: jM,
-          onKeyDown: ES,
-          children: [(0, QS.jsxs)("header", {
+          ref: UV,
+          onKeyDown: BY,
+          children: [(0, pY.jsxs)("header", {
             className: "SkyblockReachLogHeader",
-            children: [(0, QS.jsxs)("div", {
-              children: [(0, QS.jsx)("h2", {
+            children: [(0, pY.jsxs)("div", {
+              children: [(0, pY.jsx)("h2", {
                 id: "skyblockRegularsTitle",
-                children: SM("skyblockGame:regularsTitle")
-              }), (0, QS.jsx)("p", {
-                children: SM("skyblockGame:pimRegularsLedgerWelcome")
+                children: YV("skyblockGame:regularsTitle")
+              }), (0, pY.jsx)("p", {
+                children: YV("skyblockGame:pimRegularsLedgerWelcome")
               })]
-            }), (0, QS.jsx)(lS.l, {
+            }), (0, pY.jsx)(EY.k, {
               padIgnore: !0,
-              onClick: iM.dismiss
+              onClick: xV.dismiss
             })]
-          }), (0, QS.jsx)("nav", {
+          }), (0, pY.jsx)("nav", {
             className: "SkyblockReachLogTabs",
             role: "tablist",
             "data-pad-tabs": "1",
-            children: OM.islands.map((MM => {
-              const rM = MM.id === OM.selected;
-              return (0, QS.jsx)("button", {
+            children: JV.islands.map((VV => {
+              const eV = VV.id === JV.selected;
+              return (0, pY.jsx)("button", {
                 type: "button",
                 role: "tab",
-                "aria-selected": rM,
+                "aria-selected": eV,
                 "data-pad-tab": !0,
-                "data-pad-selected": rM ? "true" : void 0,
-                className: MS()("SkyblockReachLogTab", `Island-${MM.id}`, rM && "Selected", MM.charm.given && "GoldPage"),
+                "data-pad-selected": eV ? "true" : void 0,
+                className: dJ()("SkyblockReachLogTab", `Island-${VV.id}`, eV && "Selected", VV.charm.given && "GoldPage"),
                 onClick: () => {
-                  iM.selectIsland(MM.id)
+                  xV.selectIsland(VV.id)
                 },
-                children: (0, QS.jsx)("span", {
+                children: (0, pY.jsx)("span", {
                   className: "SkyblockReachLogTabName",
-                  children: MM.name
+                  children: VV.name
                 })
-              }, MM.id)
+              }, VV.id)
             }))
-          }), (0, QS.jsxs)("div", {
-            className: MS()("SkyblockRegularsPage", null !== aM && `Island-${aM.id}`),
+          }), (0, pY.jsxs)("div", {
+            className: dJ()("SkyblockRegularsPage", null !== yV && `Island-${yV.id}`),
             role: "tabpanel",
-            children: [(0, QS.jsx)("p", {
+            children: [(0, pY.jsx)("p", {
               className: "SkyblockRegularsHow",
-              children: SM("skyblockGame:regularsHow")
-            }), null !== aM && (0, QS.jsx)("ul", {
+              children: YV("skyblockGame:regularsHow")
+            }), null !== yV && (0, pY.jsx)("ul", {
               className: "SkyblockRegularsGrid",
-              children: aM.regulars.map((MM => (0, QS.jsx)(Sa, {
-                regular: MM
-              }, MM.id)))
+              children: yV.regulars.map((VV => (0, pY.jsx)(xy, {
+                regular: VV
+              }, VV.id)))
             })]
-          }), null !== aM && (0, QS.jsx)("footer", {
+          }), null !== yV && (0, pY.jsx)("footer", {
             className: "SkyblockRegularsFooter",
-            children: (0, QS.jsx)("span", {
-              className: MS()("SkyblockRegularsCharm", aM.charm.given && "Given"),
-              children: aM.charm.text
+            children: (0, pY.jsx)("span", {
+              className: dJ()("SkyblockRegularsCharm", yV.charm.given && "Given"),
+              children: yV.charm.text
             })
           })]
         })
       })
     }
-    const Pa = [{
+    const Uy = [{
         "--left": "12%",
         "--tilt": "14deg",
         "--duration": "11s",
@@ -8021,120 +7987,120 @@ export const modules = {
         "--duration": "14s",
         "--delay": "-9s"
       }],
-      na = Array.from({
+      yy = Array.from({
         length: 6
-      }, ((MM, rM) => ({
-        "--x": `${(88*(.618034*rM%1)).toFixed(1)}%`,
-        "--y": `${(10+37*rM%70).toFixed(1)}%`,
-        "--size": 7 + rM % 3 * 3 + "rem",
-        "--drift-x": 3 * (rM % 3 - 1) + "rem",
-        "--drift-y": 2 * (rM % 2 === 0 ? -1 : 1) + "rem",
-        "--duration": 14 + rM % 4 * 3 + "s",
-        "--delay": 2.5 * -rM + "s"
+      }, ((VV, eV) => ({
+        "--x": `${(88*(.618034*eV%1)).toFixed(1)}%`,
+        "--y": `${(10+37*eV%70).toFixed(1)}%`,
+        "--size": 7 + eV % 3 * 3 + "rem",
+        "--drift-x": 3 * (eV % 3 - 1) + "rem",
+        "--drift-y": 2 * (eV % 2 === 0 ? -1 : 1) + "rem",
+        "--duration": 14 + eV % 4 * 3 + "s",
+        "--delay": 2.5 * -eV + "s"
       }))),
-      Qa = Array.from({
+      py = Array.from({
         length: 14
-      }, ((MM, rM) => ({
-        "--left": `${(3+94*((.618034*rM+.3)%1)).toFixed(1)}%`,
-        "--size": 4 + rM % 4 * 2 + "px",
-        "--sway": rM % 3 * 3 + 3 + "px",
-        "--duration": `${(8+7*rM%6*1.1).toFixed(1)}s`,
-        "--delay": `${(-1.73*rM%12).toFixed(2)}s`
+      }, ((VV, eV) => ({
+        "--left": `${(3+94*((.618034*eV+.3)%1)).toFixed(1)}%`,
+        "--size": 4 + eV % 4 * 2 + "px",
+        "--sway": eV % 3 * 3 + 3 + "px",
+        "--duration": `${(8+7*eV%6*1.1).toFixed(1)}s`,
+        "--delay": `${(-1.73*eV%12).toFixed(2)}s`
       }))),
-      za = (0, eM.memo)((function(MM) {
+      Qy = (0, PV.memo)((function(VV) {
         let {
-          island: rM
-        } = MM;
-        return (0, QS.jsxs)("div", {
-          className: MS()("SkyblockReachLogDepths", null !== rM && `Island-${rM}`),
+          island: eV
+        } = VV;
+        return (0, pY.jsxs)("div", {
+          className: dJ()("SkyblockReachLogDepths", null !== eV && `Island-${eV}`),
           "aria-hidden": "true",
-          children: [Pa.map(((MM, rM) => (0, QS.jsx)("span", {
+          children: [Uy.map(((VV, eV) => (0, pY.jsx)("span", {
             className: "SkyblockReachLogShaft",
-            style: MM
-          }, `shaft${rM}`))), na.map(((MM, rM) => (0, QS.jsx)("span", {
-            className: MS()("SkyblockReachLogMote", rM % 2 === 1 && "Violet"),
-            style: MM
-          }, `mote${rM}`))), Qa.map(((MM, rM) => (0, QS.jsx)("span", {
+            style: VV
+          }, `shaft${eV}`))), yy.map(((VV, eV) => (0, pY.jsx)("span", {
+            className: dJ()("SkyblockReachLogMote", eV % 2 === 1 && "Violet"),
+            style: VV
+          }, `mote${eV}`))), py.map(((VV, eV) => (0, pY.jsx)("span", {
             className: "SkyblockReachLogBubble",
-            style: MM
-          }, `bubble${rM}`)))]
+            style: VV
+          }, `bubble${eV}`)))]
         })
       })),
-      La = 100;
+      ny = 100;
 
-    function ma(MM) {
+    function wy(VV) {
       let {
-        view: rM
-      } = MM;
+        view: eV
+      } = VV;
       const {
-        t: iM
-      } = (0, PS.A)();
-      if (null === rM || 0 === rM.total) return null;
-      const OM = La * rM.aspect,
-        SM = iM("skyblockGame:hiddenWatersCount", {
-          found: rM.found,
-          total: rM.total
+        t: xV
+      } = (0, UY.A)();
+      if (null === eV || 0 === eV.total) return null;
+      const JV = ny * eV.aspect,
+        YV = xV("skyblockGame:hiddenWatersCount", {
+          found: eV.found,
+          total: eV.total
         });
-      return (0, QS.jsxs)("div", {
+      return (0, pY.jsxs)("div", {
         className: "SkyblockHiddenWatersStrip",
-        title: `${iM("skyblockGame:hiddenWatersTitle")}: ${SM}`,
-        children: [(0, QS.jsxs)("svg", {
+        title: `${xV("skyblockGame:hiddenWatersTitle")}: ${YV}`,
+        children: [(0, pY.jsxs)("svg", {
           className: "SkyblockHiddenWatersOutline",
-          viewBox: `0 0 100 ${OM}`,
+          viewBox: `0 0 100 ${JV}`,
           "aria-hidden": "true",
-          children: [rM.islands.map(((MM, rM) => (0, QS.jsx)("ellipse", {
+          children: [eV.islands.map(((VV, eV) => (0, pY.jsx)("ellipse", {
             className: "SkyblockHiddenWatersIsland",
-            cx: (MM.left + MM.width / 2) * La,
-            cy: (MM.top + MM.height / 2) * OM,
-            rx: MM.width / 2 * La,
-            ry: MM.height / 2 * OM
-          }, rM))), rM.pins.map(((MM, rM) => (0, QS.jsx)("circle", {
+            cx: (VV.left + VV.width / 2) * ny,
+            cy: (VV.top + VV.height / 2) * JV,
+            rx: VV.width / 2 * ny,
+            ry: VV.height / 2 * JV
+          }, eV))), eV.pins.map(((VV, eV) => (0, pY.jsx)("circle", {
             className: "SkyblockHiddenWatersPin",
-            cx: MM.left * La,
-            cy: MM.top * OM,
+            cx: VV.left * ny,
+            cy: VV.top * JV,
             r: 13
-          }, rM)))]
-        }), (0, QS.jsxs)("span", {
+          }, eV)))]
+        }), (0, pY.jsxs)("span", {
           className: "SkyblockHiddenWatersText",
-          children: [(0, QS.jsx)("span", {
+          children: [(0, pY.jsx)("span", {
             className: "SkyblockHiddenWatersTitle",
-            children: iM("skyblockGame:hiddenWatersTitle")
-          }), (0, QS.jsx)("span", {
-            className: rM.found === rM.total ? "SkyblockHiddenWatersCount AllFound" : "SkyblockHiddenWatersCount",
-            children: SM
+            children: xV("skyblockGame:hiddenWatersTitle")
+          }), (0, pY.jsx)("span", {
+            className: eV.found === eV.total ? "SkyblockHiddenWatersCount AllFound" : "SkyblockHiddenWatersCount",
+            children: YV
           })]
         })]
       })
     }
 
-    function Ha(MM) {
+    function Zy(VV) {
       let {
-        view: rM,
-        island: iM
-      } = MM;
+        view: eV,
+        island: xV
+      } = VV;
       const {
-        t: OM
-      } = (0, PS.A)(), SM = null === rM || void 0 === rM ? void 0 : rM.glimpses.get(iM);
-      return void 0 === SM || 0 === SM.length ? null : (0, QS.jsxs)("div", {
+        t: JV
+      } = (0, UY.A)(), YV = null === eV || void 0 === eV ? void 0 : eV.glimpses.get(xV);
+      return void 0 === YV || 0 === YV.length ? null : (0, pY.jsxs)("div", {
         className: "SkyblockHiddenWatersGlimpses",
-        children: [(0, QS.jsx)("span", {
+        children: [(0, pY.jsx)("span", {
           className: "SkyblockHiddenWatersGlimpsesTitle",
-          children: OM("skyblockGame:hiddenWatersGlimpsed")
-        }), (0, QS.jsx)("span", {
+          children: JV("skyblockGame:hiddenWatersGlimpsed")
+        }), (0, pY.jsx)("span", {
           className: "SkyblockHiddenWatersGlimpsesRow",
-          children: SM.map((MM => (0, QS.jsx)("span", {
+          children: YV.map((VV => (0, pY.jsx)("span", {
             className: "SkyblockHiddenWatersSilhouette",
             "aria-hidden": "true",
-            children: (0, QS.jsx)(SS.b, {
-              itemName: MM,
+            children: (0, pY.jsx)(xY.e, {
+              itemName: VV,
               amount: 0
             })
-          }, MM)))
+          }, VV)))
         })]
       })
     }
-    const ha = ["Bronze", "Silver", "Gold"],
-      Ja = [{
+    const vy = ["Bronze", "Silver", "Gold"],
+      ry = [{
         className: "Bloom",
         titleKey: "skyblockGame:reachLogRibbonBloomTitle",
         legendKey: "skyblockGame:reachLogLegendBloom"
@@ -8147,481 +8113,481 @@ export const modules = {
         titleKey: "skyblockGame:reachLogRibbonLetGoTitle",
         legendKey: "skyblockGame:reachLogLegendLetGo"
       }],
-      da = Ja.slice(0, 2);
+      ky = ry.slice(0, 2);
 
-    function ya(MM) {
-      return MM ? Ja : da
+    function by(VV) {
+      return VV ? ry : ky
     }
 
-    function la(MM) {
+    function Ey(VV) {
       let {
-        fish: rM,
-        letGoShown: iM
-      } = MM;
+        fish: eV,
+        letGoShown: xV
+      } = VV;
       const {
-        t: OM
-      } = (0, PS.A)();
-      return (0, QS.jsxs)("span", {
+        t: JV
+      } = (0, UY.A)();
+      return (0, pY.jsxs)("span", {
         className: "SkyblockReachLogMarks",
-        children: [ha.map(((MM, iM) => {
-          const SM = iM < rM.marks;
-          return (0, QS.jsx)("span", {
-            className: MS()("SkyblockReachLogPip", MM, SM && "Earned", SM && rM.fresh && iM === rM.marks - 1 && "Newest"),
-            title: OM(QO[iM])
-          }, MM)
-        })), (0, QS.jsx)("span", {
+        children: [vy.map(((VV, xV) => {
+          const YV = xV < eV.marks;
+          return (0, pY.jsx)("span", {
+            className: dJ()("SkyblockReachLogPip", VV, YV && "Earned", YV && eV.fresh && xV === eV.marks - 1 && "Newest"),
+            title: JV(pJ[xV])
+          }, VV)
+        })), (0, pY.jsx)("span", {
           className: "SkyblockReachLogDivider"
-        }), ya(iM).map(((MM, iM) => (0, QS.jsx)("span", {
-          className: MS()("SkyblockReachLogRibbon", MM.className, !0 === rM.ribbons[iM] && "Earned"),
-          title: OM(MM.titleKey)
-        }, MM.className)))]
+        }), by(xV).map(((VV, xV) => (0, pY.jsx)("span", {
+          className: dJ()("SkyblockReachLogRibbon", VV.className, !0 === eV.ribbons[xV] && "Earned"),
+          title: JV(VV.titleKey)
+        }, VV.className)))]
       })
     }
 
-    function Ea(MM) {
+    function By(VV) {
       let {
-        letGoShown: rM,
-        haloShown: iM
-      } = MM;
+        letGoShown: eV,
+        haloShown: xV
+      } = VV;
       const {
-        t: OM
-      } = (0, PS.A)();
-      return (0, QS.jsxs)("span", {
+        t: JV
+      } = (0, UY.A)();
+      return (0, pY.jsxs)("span", {
         className: "SkyblockReachLogLegend",
-        children: [(0, QS.jsxs)("span", {
+        children: [(0, pY.jsxs)("span", {
           className: "SkyblockReachLogLegendItem",
-          title: OM("skyblockGame:reachLogMarks"),
-          children: [(0, QS.jsx)("span", {
+          title: JV("skyblockGame:reachLogMarks"),
+          children: [(0, pY.jsx)("span", {
             className: "SkyblockReachLogPip Gold Earned"
-          }), OM("skyblockGame:reachLogLegendMarks")]
-        }), ya(rM).map((MM => (0, QS.jsxs)("span", {
+          }), JV("skyblockGame:reachLogLegendMarks")]
+        }), by(eV).map((VV => (0, pY.jsxs)("span", {
           className: "SkyblockReachLogLegendItem",
-          title: OM(MM.titleKey),
-          children: [(0, QS.jsx)("span", {
-            className: MS()("SkyblockReachLogRibbon", MM.className, "Earned")
-          }), OM(MM.legendKey)]
-        }, MM.className))), (0, QS.jsxs)("span", {
+          title: JV(VV.titleKey),
+          children: [(0, pY.jsx)("span", {
+            className: dJ()("SkyblockReachLogRibbon", VV.className, "Earned")
+          }), JV(VV.legendKey)]
+        }, VV.className))), (0, pY.jsxs)("span", {
           className: "SkyblockReachLogLegendItem",
-          title: OM("skyblockGame:reachLogGlimmerTitle"),
-          children: [(0, QS.jsx)("span", {
+          title: JV("skyblockGame:reachLogGlimmerTitle"),
+          children: [(0, pY.jsx)("span", {
             className: "SkyblockReachLogGlimmer"
-          }), OM("skyblockGame:reachLogLegendGlimmer")]
-        }), iM && (0, QS.jsxs)("span", {
+          }), JV("skyblockGame:reachLogLegendGlimmer")]
+        }), xV && (0, pY.jsxs)("span", {
           className: "SkyblockReachLogLegendItem",
-          title: OM("skyblockGame:reachLogHaloTitle"),
-          children: [(0, QS.jsx)("span", {
+          title: JV("skyblockGame:reachLogHaloTitle"),
+          children: [(0, pY.jsx)("span", {
             className: "SkyblockReachLogHalo"
-          }), OM("skyblockGame:reachLogLegendHalo")]
+          }), JV("skyblockGame:reachLogLegendHalo")]
         })]
       })
     }
 
-    function Ua(MM) {
+    function jy(VV) {
       let {
-        returner: rM
-      } = MM;
-      return (0, QS.jsxs)("div", {
-        className: MS()("SkyblockReachLogReturner", rM.back && "Back"),
-        children: [(0, QS.jsx)("span", {
+        returner: eV
+      } = VV;
+      return (0, pY.jsxs)("div", {
+        className: dJ()("SkyblockReachLogReturner", eV.back && "Back"),
+        children: [(0, pY.jsx)("span", {
           className: "SkyblockReachLogReturnerIcon",
           "aria-hidden": "true",
-          children: (0, QS.jsx)(SS.b, {
-            itemName: rM.itemName,
+          children: (0, pY.jsx)(xY.e, {
+            itemName: eV.itemName,
             amount: 0
           })
-        }), (0, QS.jsx)("span", {
+        }), (0, pY.jsx)("span", {
           className: "SkyblockReachLogReturnerLine",
-          children: rM.line
+          children: eV.line
         })]
       })
     }
 
-    function Ga(MM) {
+    function qy(VV) {
       let {
-        fish: rM,
-        letGoShown: iM
-      } = MM;
+        fish: eV,
+        letGoShown: xV
+      } = VV;
       const {
-        t: OM
-      } = (0, PS.A)();
-      return (0, QS.jsxs)("li", {
-        className: MS()("SkyblockReachLogCard", rM.caught ? "Caught" : "Unknown", rM.marks >= 3 && "GoldCard", rM.fresh && "Fresh", rM.visitor && "Visitor"),
-        children: [rM.visitor && (0, QS.jsx)("span", {
+        t: JV
+      } = (0, UY.A)();
+      return (0, pY.jsxs)("li", {
+        className: dJ()("SkyblockReachLogCard", eV.caught ? "Caught" : "Unknown", eV.marks >= 3 && "GoldCard", eV.fresh && "Fresh", eV.visitor && "Visitor"),
+        children: [eV.visitor && (0, pY.jsx)("span", {
           className: "SkyblockReachLogVisitorTag",
-          children: OM("skyblockGame:reachLogVisitor")
-        }), rM.fresh && Array.from({
+          children: JV("skyblockGame:reachLogVisitor")
+        }), eV.fresh && Array.from({
           length: 4
-        }, ((MM, rM) => (0, QS.jsx)("span", {
+        }, ((VV, eV) => (0, pY.jsx)("span", {
           className: "SkyblockReachLogSparkle"
-        }, rM))), (0, QS.jsxs)("span", {
+        }, eV))), (0, pY.jsxs)("span", {
           className: "SkyblockReachLogFishIcon",
           "aria-hidden": "true",
-          children: [rM.halo && (0, QS.jsx)("span", {
+          children: [eV.halo && (0, pY.jsx)("span", {
             className: "SkyblockReachLogHalo",
-            title: OM("skyblockGame:reachLogHaloTitle")
-          }), (0, QS.jsx)(SS.b, {
-            itemName: rM.itemName,
+            title: JV("skyblockGame:reachLogHaloTitle")
+          }), (0, pY.jsx)(xY.e, {
+            itemName: eV.itemName,
             amount: 0
-          }), rM.glimmer && (0, QS.jsx)("span", {
+          }), eV.glimmer && (0, pY.jsx)("span", {
             className: "SkyblockReachLogGlimmer",
-            title: OM("skyblockGame:reachLogGlimmerTitle")
+            title: JV("skyblockGame:reachLogGlimmerTitle")
           })]
-        }), (0, QS.jsx)("span", {
+        }), (0, pY.jsx)("span", {
           className: "SkyblockReachLogFishName",
-          children: rM.name
-        }), (0, QS.jsx)("span", {
+          children: eV.name
+        }), (0, pY.jsx)("span", {
           className: "SkyblockReachLogFishChance",
-          children: rM.chance
-        }), (0, QS.jsx)("span", {
+          children: eV.chance
+        }), (0, pY.jsx)("span", {
           className: "SkyblockReachLogFishBest",
-          children: rM.best
-        }), (0, QS.jsx)(la, {
-          fish: rM,
-          letGoShown: iM
+          children: eV.best
+        }), (0, pY.jsx)(Ey, {
+          fish: eV,
+          letGoShown: xV
         })]
       })
     }
 
-    function Ca(MM) {
+    function ty(VV) {
       let {
-        page: rM,
-        letGoShown: iM,
-        hiddenWaters: OM
-      } = MM;
+        page: eV,
+        letGoShown: xV,
+        hiddenWaters: JV
+      } = VV;
       const {
-        t: SM
-      } = (0, PS.A)();
-      return rM.awake ? (0, QS.jsx)("ul", {
+        t: YV
+      } = (0, UY.A)();
+      return eV.awake ? (0, pY.jsx)("ul", {
         className: "SkyblockReachLogGrid",
-        children: rM.fish.map((MM => (0, QS.jsx)(Ga, {
-          fish: MM,
-          letGoShown: iM
-        }, MM.itemName)))
-      }) : (0, QS.jsxs)(QS.Fragment, {
-        children: [(0, QS.jsx)("p", {
+        children: eV.fish.map((VV => (0, pY.jsx)(qy, {
+          fish: VV,
+          letGoShown: xV
+        }, VV.itemName)))
+      }) : (0, pY.jsxs)(pY.Fragment, {
+        children: [(0, pY.jsx)("p", {
           className: "SkyblockReachLogAsleep",
-          children: SM("skyblockGame:reachLogAsleep")
-        }), (0, QS.jsx)(Ha, {
-          view: OM,
-          island: rM.id
+          children: YV("skyblockGame:reachLogAsleep")
+        }), (0, pY.jsx)(Zy, {
+          view: JV,
+          island: eV.id
         })]
       })
     }
 
-    function ea(MM) {
-      var rM, iM;
+    function Fy(VV) {
+      var eV, xV;
       let {
-        controller: OM,
-        regulars: SM,
-        hiddenWaters: jM
-      } = MM;
-      const aM = (0, nS.e)(nO, OM.getSnapshot()),
-        PM = function(MM) {
-          return (0, nS.e)(fO, MM.getSnapshot())
-        }(jM),
-        nM = (0, nS.e)(sO, SM.getSnapshot()),
+        controller: JV,
+        regulars: YV,
+        hiddenWaters: UV
+      } = VV;
+      const yV = (0, yY.j)(yJ, JV.getSnapshot()),
+        pV = function(VV) {
+          return (0, yY.j)(CJ, VV.getSnapshot())
+        }(UV),
+        QV = (0, yY.j)(WJ, YV.getSnapshot()),
         {
-          t: QM
-        } = (0, PS.A)(),
-        zM = US();
-      if (!aM.enabled) return null;
-      const LM = null !== (rM = aM.pages.find((MM => MM.id === aM.selected))) && void 0 !== rM ? rM : null;
-      return (0, QS.jsx)(yS.e, {
-        show: aM.open,
-        close: OM.dismiss,
+          t: nV
+        } = (0, UY.A)(),
+        wV = jY();
+      if (!yV.enabled) return null;
+      const ZV = null !== (eV = yV.pages.find((VV => VV.id === yV.selected))) && void 0 !== eV ? eV : null;
+      return (0, pY.jsx)(bY.e, {
+        show: yV.open,
+        close: JV.dismiss,
         togglePointerLock: !1,
-        className: MS()("SkyblockSkillsOverlay", nM.open && "SkyblockReachLogUnderLedger"),
-        children: (0, QS.jsxs)("section", {
+        className: dJ()("SkyblockSkillsOverlay", QV.open && "SkyblockReachLogUnderLedger"),
+        children: (0, pY.jsxs)("section", {
           className: "SkyblockSkillsPanel SkyblockReachLogPanel",
           role: "dialog",
           "aria-modal": "true",
           "aria-labelledby": "skyblockReachLogTitle",
           tabIndex: -1,
-          ref: zM,
-          onKeyDown: ES,
-          children: [(0, QS.jsx)(za, {
-            island: null !== (iM = null === LM || void 0 === LM ? void 0 : LM.id) && void 0 !== iM ? iM : null
-          }), (0, QS.jsxs)("header", {
+          ref: wV,
+          onKeyDown: BY,
+          children: [(0, pY.jsx)(Qy, {
+            island: null !== (xV = null === ZV || void 0 === ZV ? void 0 : ZV.id) && void 0 !== xV ? xV : null
+          }), (0, pY.jsxs)("header", {
             className: "SkyblockReachLogHeader",
-            children: [(0, QS.jsxs)("div", {
-              children: [(0, QS.jsx)("h2", {
+            children: [(0, pY.jsxs)("div", {
+              children: [(0, pY.jsx)("h2", {
                 id: "skyblockReachLogTitle",
-                children: QM("skyblockGame:reachLogTitle")
-              }), (0, QS.jsx)("p", {
-                children: QM("skyblockGame:keeperWickReachLogWelcome")
+                children: nV("skyblockGame:reachLogTitle")
+              }), (0, pY.jsx)("p", {
+                children: nV("skyblockGame:keeperWickReachLogWelcome")
               })]
-            }), (0, QS.jsx)(ma, {
-              view: PM
-            }), (0, QS.jsx)(lS.l, {
+            }), (0, pY.jsx)(wy, {
+              view: pV
+            }), (0, pY.jsx)(EY.k, {
               padIgnore: !0,
-              onClick: OM.dismiss
+              onClick: JV.dismiss
             })]
-          }), (0, QS.jsx)("nav", {
+          }), (0, pY.jsx)("nav", {
             className: "SkyblockReachLogTabs",
             role: "tablist",
             "data-pad-tabs": "1",
-            children: aM.pages.map((MM => {
-              const rM = MM.id === aM.selected,
-                iM = MM.fish.some((MM => MM.fresh));
-              return (0, QS.jsxs)("button", {
+            children: yV.pages.map((VV => {
+              const eV = VV.id === yV.selected,
+                xV = VV.fish.some((VV => VV.fresh));
+              return (0, pY.jsxs)("button", {
                 type: "button",
                 role: "tab",
-                "aria-selected": rM,
+                "aria-selected": eV,
                 "data-pad-tab": !0,
-                "data-pad-selected": rM ? "true" : void 0,
-                className: MS()("SkyblockReachLogTab", `Island-${MM.id}`, rM && "Selected", !MM.awake && "Asleep", MM.gold && "GoldPage", iM && "HasNews"),
+                "data-pad-selected": eV ? "true" : void 0,
+                className: dJ()("SkyblockReachLogTab", `Island-${VV.id}`, eV && "Selected", !VV.awake && "Asleep", VV.gold && "GoldPage", xV && "HasNews"),
                 onClick: () => {
-                  OM.selectPage(MM.id)
+                  JV.selectPage(VV.id)
                 },
-                children: [(0, QS.jsx)("span", {
+                children: [(0, pY.jsx)("span", {
                   className: "SkyblockReachLogTabName",
-                  children: MM.name
-                }), MM.awake && (0, QS.jsx)("span", {
+                  children: VV.name
+                }), VV.awake && (0, pY.jsx)("span", {
                   className: "SkyblockReachLogTabCount",
-                  children: QM("skyblockGame:reachLogCaughtCount", {
-                    caught: MM.caught,
-                    total: MM.total
+                  children: nV("skyblockGame:reachLogCaughtCount", {
+                    caught: VV.caught,
+                    total: VV.total
                   })
                 })]
-              }, MM.id)
+              }, VV.id)
             }))
-          }), (0, QS.jsxs)("div", {
-            className: MS()("SkyblockReachLogPage", null !== LM && `Island-${LM.id}`),
+          }), (0, pY.jsxs)("div", {
+            className: dJ()("SkyblockReachLogPage", null !== ZV && `Island-${ZV.id}`),
             role: "tabpanel",
-            children: [null !== LM && (0, QS.jsx)(Ca, {
-              page: LM,
-              letGoShown: aM.letGoShown,
-              hiddenWaters: PM
-            }), !0 === (null === LM || void 0 === LM ? void 0 : LM.awake) && null !== LM.returner && (0, QS.jsx)(Ua, {
-              returner: LM.returner
-            }), !0 === (null === LM || void 0 === LM ? void 0 : LM.awake) && (0, QS.jsx)(ja, {
-              controller: SM,
-              island: LM.id
+            children: [null !== ZV && (0, pY.jsx)(ty, {
+              page: ZV,
+              letGoShown: yV.letGoShown,
+              hiddenWaters: pV
+            }), !0 === (null === ZV || void 0 === ZV ? void 0 : ZV.awake) && null !== ZV.returner && (0, pY.jsx)(jy, {
+              returner: ZV.returner
+            }), !0 === (null === ZV || void 0 === ZV ? void 0 : ZV.awake) && (0, pY.jsx)(Jy, {
+              controller: YV,
+              island: ZV.id
             })]
-          }), (0, QS.jsx)("footer", {
-            className: MS()("SkyblockReachLogFooter", null !== LM && `Island-${LM.id}`, !0 === (null === LM || void 0 === LM ? void 0 : LM.gold) && "GoldPage"),
-            children: !0 === (null === LM || void 0 === LM ? void 0 : LM.gold) ? (0, QS.jsx)("span", {
+          }), (0, pY.jsx)("footer", {
+            className: dJ()("SkyblockReachLogFooter", null !== ZV && `Island-${ZV.id}`, !0 === (null === ZV || void 0 === ZV ? void 0 : ZV.gold) && "GoldPage"),
+            children: !0 === (null === ZV || void 0 === ZV ? void 0 : ZV.gold) ? (0, pY.jsx)("span", {
               className: "SkyblockReachLogGoldLine",
-              children: QM("skyblockGame:keeperWickReachLogPageGold")
-            }) : (0, QS.jsxs)(QS.Fragment, {
-              children: [(0, QS.jsx)(Ea, {
-                letGoShown: aM.letGoShown,
-                haloShown: !0 === (null === LM || void 0 === LM ? void 0 : LM.fish.some((MM => MM.halo)))
-              }), (0, QS.jsx)("span", {
+              children: nV("skyblockGame:keeperWickReachLogPageGold")
+            }) : (0, pY.jsxs)(pY.Fragment, {
+              children: [(0, pY.jsx)(By, {
+                letGoShown: yV.letGoShown,
+                haloShown: !0 === (null === ZV || void 0 === ZV ? void 0 : ZV.fish.some((VV => VV.halo)))
+              }), (0, pY.jsx)("span", {
                 className: "SkyblockReachLogReward",
-                children: QM("skyblockGame:reachLogPageReward")
+                children: nV("skyblockGame:reachLogPageReward")
               })]
             })
           })]
         })
       })
     }
-    var ba = iM(5233);
+    var Ty = xV(5333);
 
-    function wa(MM) {
+    function Py(VV) {
       let {
-        conversation: rM,
-        completedLabel: iM
-      } = MM;
-      return (0, QS.jsxs)("article", {
+        conversation: eV,
+        completedLabel: xV
+      } = VV;
+      return (0, pY.jsxs)("article", {
         className: "SkyblockDialogueConversation",
-        children: [(0, QS.jsxs)("header", {
-          children: [(0, QS.jsx)("h3", {
-            children: rM.questName
-          }), rM.completed && (0, QS.jsx)("span", {
+        children: [(0, pY.jsxs)("header", {
+          children: [(0, pY.jsx)("h3", {
+            children: eV.questName
+          }), eV.completed && (0, pY.jsx)("span", {
             className: "SkyblockDialogueCompleted",
-            children: iM
+            children: xV
           })]
-        }), rM.lines.map((MM => (0, QS.jsx)(ba.b, {
-          display: MM.display
-        }, MM.key)))]
+        }), eV.lines.map((VV => (0, pY.jsx)(Ty.e, {
+          display: VV.display
+        }, VV.key)))]
       })
     }
 
-    function ta(MM) {
+    function Ay(VV) {
       let {
-        controller: rM
-      } = MM;
+        controller: eV
+      } = VV;
       const {
-        t: iM
-      } = (0, PS.A)(), OM = (0, nS.e)(NO, rM.getSnapshot()), SM = US();
-      if (!OM.enabled) return null;
-      const jM = !OM.loading && 0 === OM.conversations.length;
-      return (0, QS.jsx)(yS.e, {
-        show: OM.open,
-        close: rM.dismiss,
+        t: xV
+      } = (0, UY.A)(), JV = (0, yY.j)(oJ, eV.getSnapshot()), YV = jY();
+      if (!JV.enabled) return null;
+      const UV = !JV.loading && 0 === JV.conversations.length;
+      return (0, pY.jsx)(bY.e, {
+        show: JV.open,
+        close: eV.dismiss,
         togglePointerLock: !1,
         className: "SkyblockSkillsOverlay",
-        children: (0, QS.jsxs)("section", {
+        children: (0, pY.jsxs)("section", {
           className: "SkyblockSkillsPanel SkyblockDialoguePanel",
           role: "dialog",
           "aria-modal": "true",
           "aria-labelledby": "skyblockDialogueTitle",
           tabIndex: -1,
-          ref: SM,
-          onKeyDown: ES,
-          children: [(0, QS.jsxs)("header", {
+          ref: YV,
+          onKeyDown: BY,
+          children: [(0, pY.jsxs)("header", {
             className: "SkyblockSkillsHeader",
-            children: [(0, QS.jsxs)("div", {
-              children: [(0, QS.jsx)("h2", {
+            children: [(0, pY.jsxs)("div", {
+              children: [(0, pY.jsx)("h2", {
                 id: "skyblockDialogueTitle",
-                children: iM("skyblockDialogue:title")
-              }), (0, QS.jsx)("p", {
-                children: iM("skyblockDialogue:intro")
+                children: xV("skyblockDialogue:title")
+              }), (0, pY.jsx)("p", {
+                children: xV("skyblockDialogue:intro")
               })]
-            }), (0, QS.jsx)(lS.l, {
+            }), (0, pY.jsx)(EY.k, {
               padIgnore: !0,
-              onClick: rM.dismiss
+              onClick: eV.dismiss
             })]
-          }), (0, QS.jsxs)("div", {
-            className: MS()("SkyblockDialogueBody", {
-              SingleColumn: null !== OM.questFocus || 0 === OM.characters.length
+          }), (0, pY.jsxs)("div", {
+            className: dJ()("SkyblockDialogueBody", {
+              SingleColumn: null !== JV.questFocus || 0 === JV.characters.length
             }),
-            children: [null === OM.questFocus && OM.characters.length > 0 && (0, QS.jsx)("nav", {
+            children: [null === JV.questFocus && JV.characters.length > 0 && (0, pY.jsx)("nav", {
               className: "SkyblockDialogueCharacters",
-              children: OM.characters.map((MM => (0, QS.jsx)(lS.e, {
-                className: MS()("SkyblockDialogueCharacter", {
-                  Selected: MM.selected
+              children: JV.characters.map((VV => (0, pY.jsx)(EY.f, {
+                className: dJ()("SkyblockDialogueCharacter", {
+                  Selected: VV.selected
                 }),
                 onClick: () => {
-                  rM.selectCharacter(MM.id)
+                  eV.selectCharacter(VV.id)
                 },
-                children: (0, QS.jsx)(jS.b, {
-                  text: MM.styling
+                children: (0, pY.jsx)(JY.b, {
+                  text: VV.styling
                 })
-              }, MM.id)))
-            }), (0, QS.jsxs)("div", {
+              }, VV.id)))
+            }), (0, pY.jsxs)("div", {
               className: "SkyblockDialogueConversations",
-              children: [null !== OM.questFocus && (0, QS.jsx)(lS.e, {
+              children: [null !== JV.questFocus && (0, pY.jsx)(EY.f, {
                 className: "SkyblockDialogueBack",
-                onClick: rM.showCharacters,
-                children: iM("skyblockDialogue:allCharacters")
-              }), OM.loading && (0, QS.jsx)("p", {
+                onClick: eV.showCharacters,
+                children: xV("skyblockDialogue:allCharacters")
+              }), JV.loading && (0, pY.jsx)("p", {
                 className: "SkyblockDialogueEmpty",
-                children: iM("skyblockDialogue:loading")
-              }), jM && (0, QS.jsx)("p", {
+                children: xV("skyblockDialogue:loading")
+              }), UV && (0, pY.jsx)("p", {
                 className: "SkyblockDialogueEmpty",
-                children: iM(null === OM.questFocus ? "skyblockDialogue:empty" : "skyblockDialogue:questEmpty")
-              }), OM.conversations.map((MM => (0, QS.jsx)(wa, {
-                conversation: MM,
-                completedLabel: OM.completedLabel
-              }, MM.questId)))]
+                children: xV(null === JV.questFocus ? "skyblockDialogue:empty" : "skyblockDialogue:questEmpty")
+              }), JV.conversations.map((VV => (0, pY.jsx)(Py, {
+                conversation: VV,
+                completedLabel: JV.completedLabel
+              }, VV.questId)))]
             })]
           })]
         })
       })
     }
 
-    function ga(MM) {
+    function Ny(VV) {
       let {
-        controller: rM
-      } = MM;
-      const iM = (0, nS.e)(BO, rM.getSnapshot()),
+        controller: eV
+      } = VV;
+      const xV = (0, yY.j)(fJ, eV.getSnapshot()),
         {
-          t: OM
-        } = (0, PS.A)(),
-        SM = US();
-      return iM.enabled ? (0, QS.jsx)(yS.e, {
-        show: iM.open,
-        close: rM.dismiss,
+          t: JV
+        } = (0, UY.A)(),
+        YV = jY();
+      return xV.enabled ? (0, pY.jsx)(bY.e, {
+        show: xV.open,
+        close: eV.dismiss,
         togglePointerLock: !1,
         className: "SkyblockSkillsOverlay",
-        children: (0, QS.jsxs)("section", {
+        children: (0, pY.jsxs)("section", {
           className: "SkyblockSkillsPanel SkyblockAutographsPanel",
           role: "dialog",
           "aria-modal": "true",
           "aria-labelledby": "skyblockAutographsTitle",
           tabIndex: -1,
-          ref: SM,
-          onKeyDown: ES,
-          children: [(0, QS.jsxs)("header", {
+          ref: YV,
+          onKeyDown: BY,
+          children: [(0, pY.jsxs)("header", {
             className: "SkyblockSkillsHeader",
-            children: [(0, QS.jsxs)("div", {
-              children: [(0, QS.jsx)("h2", {
+            children: [(0, pY.jsxs)("div", {
+              children: [(0, pY.jsx)("h2", {
                 id: "skyblockAutographsTitle",
-                children: OM("skyblockGame:autographBook")
-              }), (0, QS.jsx)("p", {
-                children: OM("skyblockGame:autographBookIntro")
+                children: JV("skyblockGame:autographBook")
+              }), (0, pY.jsx)("p", {
+                children: JV("skyblockGame:autographBookIntro")
               })]
-            }), (0, QS.jsx)(lS.l, {
+            }), (0, pY.jsx)(EY.k, {
               padIgnore: !0,
-              onClick: rM.dismiss
+              onClick: eV.dismiss
             })]
-          }), (0, QS.jsxs)("div", {
+          }), (0, pY.jsxs)("div", {
             className: "SkyblockAutographsBody",
-            children: [(0, QS.jsxs)("div", {
+            children: [(0, pY.jsxs)("div", {
               className: "SkyblockAutographTotals",
-              children: [(0, QS.jsxs)("div", {
+              children: [(0, pY.jsxs)("div", {
                 className: "SkyblockAutographTotal",
-                children: [(0, QS.jsx)("strong", {
-                  children: iM.total
-                }), (0, QS.jsx)("span", {
-                  children: OM("skyblockGame:autographTotal")
+                children: [(0, pY.jsx)("strong", {
+                  children: xV.total
+                }), (0, pY.jsx)("span", {
+                  children: JV("skyblockGame:autographTotal")
                 })]
-              }), (0, QS.jsxs)("div", {
+              }), (0, pY.jsxs)("div", {
                 className: "SkyblockAutographTotal Ranked",
-                children: [(0, QS.jsx)("strong", {
-                  children: iM.rankTotal
-                }), (0, QS.jsx)("span", {
-                  children: OM("skyblockGame:autographRankTotal")
+                children: [(0, pY.jsx)("strong", {
+                  children: xV.rankTotal
+                }), (0, pY.jsx)("span", {
+                  children: JV("skyblockGame:autographRankTotal")
                 })]
               })]
-            }), 0 === iM.entries.length ? (0, QS.jsx)("p", {
+            }), 0 === xV.entries.length ? (0, pY.jsx)("p", {
               className: "SkyblockAutographsEmpty",
-              children: OM("skyblockGame:autographBookEmpty")
-            }) : (0, QS.jsx)("ul", {
+              children: JV("skyblockGame:autographBookEmpty")
+            }) : (0, pY.jsx)("ul", {
               className: "SkyblockAutographList",
-              children: iM.entries.map((MM => (0, QS.jsxs)("li", {
-                className: MS()("SkyblockAutograph", {
-                  Ranked: null !== MM.rank
+              children: xV.entries.map((VV => (0, pY.jsxs)("li", {
+                className: dJ()("SkyblockAutograph", {
+                  Ranked: null !== VV.rank
                 }),
-                style: null === MM.rank ? void 0 : {
-                  color: MM.rank.colour
+                style: null === VV.rank ? void 0 : {
+                  color: VV.rank.colour
                 },
-                children: [null !== MM.rank && (0, QS.jsx)(BS.b, {
+                children: [null !== VV.rank && (0, pY.jsx)(fY.b, {
                   className: "SkyblockAutographRankIcon",
-                  name: MM.rank.icon,
-                  kit: (0, BS.d)(MM.rank.icon)
-                }), (0, QS.jsxs)("div", {
+                  name: VV.rank.icon,
+                  kit: (0, fY.c)(VV.rank.icon)
+                }), (0, pY.jsxs)("div", {
                   className: "SkyblockAutographText",
-                  children: [(0, QS.jsx)("span", {
+                  children: [(0, pY.jsx)("span", {
                     className: "SkyblockAutographName",
-                    children: MM.name
-                  }), (0, QS.jsxs)("span", {
+                    children: VV.name
+                  }), (0, pY.jsxs)("span", {
                     className: "SkyblockAutographDetails",
-                    children: [null !== MM.rank && (0, QS.jsx)("span", {
+                    children: [null !== VV.rank && (0, pY.jsx)("span", {
                       className: "SkyblockAutographRank",
-                      children: MM.rank.label
-                    }), (0, QS.jsx)("span", {
+                      children: VV.rank.label
+                    }), (0, pY.jsx)("span", {
                       className: "SkyblockAutographDate",
-                      children: MM.signedOn
+                      children: VV.signedOn
                     })]
                   })]
                 })]
-              }, MM.key)))
+              }, VV.key)))
             })]
           })]
         })
       }) : null
     }
-    const ua = (0, eM.memo)((function(MM) {
+    const Xy = (0, PV.memo)((function(VV) {
         let {
-          controller: rM
-        } = MM;
-        return (0, QS.jsxs)("div", {
+          controller: eV
+        } = VV;
+        return (0, pY.jsxs)("div", {
           className: "SkyblockQuestWaypoint",
-          ref: rM.display.mountWaypoint,
-          children: [(0, QS.jsx)("div", {
+          ref: eV.display.mountWaypoint,
+          children: [(0, pY.jsx)("div", {
             className: "SkyblockQuestWaypointMarker"
-          }), (0, QS.jsx)("div", {
+          }), (0, pY.jsx)("div", {
             className: "SkyblockQuestWaypointTextClip",
-            children: (0, QS.jsxs)("div", {
+            children: (0, pY.jsxs)("div", {
               className: "SkyblockQuestWaypointText",
-              children: [(0, QS.jsx)("span", {
+              children: [(0, pY.jsx)("span", {
                 className: "SkyblockQuestWaypointLabel"
-              }), (0, QS.jsx)("span", {
+              }), (0, pY.jsx)("span", {
                 className: "SkyblockQuestWaypointDistance"
-              }), (0, QS.jsx)("span", {
+              }), (0, pY.jsx)("span", {
                 className: "SkyblockQuestWaypointHint",
                 hidden: !0
               })]
@@ -8629,7 +8595,7 @@ export const modules = {
           })]
         })
       })),
-      Ra = {
+      My = {
         started: "!",
         quest: "\u2605",
         step: "\u2713",
@@ -8638,631 +8604,631 @@ export const modules = {
         npcNote: "\u2709\ufe0e"
       };
 
-    function pa(MM) {
-      return "next" === MM.phase ? "\u2192" : Ra[MM.kind]
+    function zy(VV) {
+      return "next" === VV.phase ? "\u2192" : My[VV.kind]
     }
-    const Wa = (0, eM.memo)((function(MM) {
+    const Gy = (0, PV.memo)((function(VV) {
       let {
-        controller: rM,
-        display: iM
-      } = MM;
-      const OM = (0, nS.e)(Ar, rM.getNotificationSnapshot()),
-        [SM, jM] = (0, eM.useState)(!1);
-      return (0, nS.d)("qteStateUpdated", (MM => {
-        jM(MM.isActive)
-      })), (0, QS.jsxs)("div", {
-        className: "SkyblockQuestNotificationAnchor" + (SM ? " UnderQte" : ""),
+        controller: eV,
+        display: xV
+      } = VV;
+      const JV = (0, yY.j)(le, eV.getNotificationSnapshot()),
+        [YV, UV] = (0, PV.useState)(!1);
+      return (0, yY.g)("qteStateUpdated", (VV => {
+        UV(VV.isActive)
+      })), (0, pY.jsxs)("div", {
+        className: "SkyblockQuestNotificationAnchor" + (YV ? " UnderQte" : ""),
         role: "status",
         "aria-live": "polite",
         "aria-atomic": "true",
-        children: [OM && (0, QS.jsxs)("div", {
-          className: `SkyblockQuestNotification ${OM.kind} ${OM.phase}`,
+        children: [JV && (0, pY.jsxs)("div", {
+          className: `SkyblockQuestNotification ${JV.kind} ${JV.phase}`,
           style: {
-            "--quest-notification-duration": `${OM.durationMs}ms`,
-            ...OM.accent && {
-              "--quest-notification-accent": OM.accent
+            "--quest-notification-duration": `${JV.durationMs}ms`,
+            ...JV.accent && {
+              "--quest-notification-accent": JV.accent
             }
           },
-          children: [(0, QS.jsxs)("div", {
-            className: "SkyblockQuestNotificationSymbols" + (OM.iconItem ? " WithIcon" : ""),
+          children: [(0, pY.jsxs)("div", {
+            className: "SkyblockQuestNotificationSymbols" + (JV.iconItem ? " WithIcon" : ""),
             "aria-hidden": "true",
-            children: [(0, QS.jsx)("span", {
+            children: [(0, pY.jsx)("span", {
               className: "SkyblockQuestNotificationMark",
-              children: pa(OM)
-            }), OM.iconItem && (0, QS.jsx)("span", {
+              children: zy(JV)
+            }), JV.iconItem && (0, pY.jsx)("span", {
               className: "SkyblockQuestNotificationIcon",
-              children: (0, QS.jsx)(SS.b, {
-                itemName: OM.iconItem,
+              children: (0, pY.jsx)(xY.e, {
+                itemName: JV.iconItem,
                 amount: 0
               })
             })]
-          }), (0, QS.jsxs)("div", {
+          }), (0, pY.jsxs)("div", {
             className: "SkyblockQuestNotificationText",
-            children: [(0, QS.jsx)("span", {
+            children: [(0, pY.jsx)("span", {
               className: "SkyblockQuestNotificationTitle",
-              children: OM.title
-            }), (0, QS.jsx)("strong", {
+              children: JV.title
+            }), (0, pY.jsx)("strong", {
               className: "SkyblockQuestNotificationName",
-              children: (0, QS.jsx)(fS.c, {
-                text: OM.name
+              children: (0, pY.jsx)(CY.e, {
+                text: JV.name
               })
-            }), OM.description && (0, QS.jsx)("span", {
+            }), JV.description && (0, pY.jsx)("span", {
               className: "SkyblockQuestNotificationDescription",
-              children: (0, QS.jsx)(fS.c, {
-                text: OM.description
+              children: (0, pY.jsx)(CY.e, {
+                text: JV.description
               })
-            }), OM.reward && (0, QS.jsx)("span", {
+            }), JV.reward && (0, pY.jsx)("span", {
               className: "SkyblockQuestNotificationReward",
-              children: (0, QS.jsx)(fS.c, {
-                text: OM.reward
+              children: (0, pY.jsx)(CY.e, {
+                text: JV.reward
               })
             })]
           })]
-        }, OM.token), (null === OM || void 0 === OM ? void 0 : OM.waypointNameKey) && (0, QS.jsx)("div", {
+        }, JV.token), (null === JV || void 0 === JV ? void 0 : JV.waypointNameKey) && (0, pY.jsx)("div", {
           className: "SkyblockQuestNotificationWaypointOrigin",
-          "data-waypoint-name-key": OM.waypointNameKey,
-          "data-notification-token": OM.token,
-          ref: iM.mountWaypointOrigin,
+          "data-waypoint-name-key": JV.waypointNameKey,
+          "data-notification-token": JV.token,
+          ref: xV.mountWaypointOrigin,
           "aria-hidden": "true"
-        }, `waypoint-${OM.token}`)]
+        }, `waypoint-${JV.token}`)]
       })
     }));
 
-    function sa(MM) {
-      const rM = parseInt(MM.replace("#", ""), 16);
-      return `${rM>>16&255}, ${rM>>8&255}, ${255&rM}`
+    function Wy(VV) {
+      const eV = parseInt(VV.replace("#", ""), 16);
+      return `${eV>>16&255}, ${eV>>8&255}, ${255&eV}`
     }
-    const Da = (0, eM.memo)((function(MM) {
+    const Ry = (0, PV.memo)((function(VV) {
       let {
-        controller: rM
-      } = MM;
+        controller: eV
+      } = VV;
       const {
-        t: iM
-      } = (0, PS.A)(), OM = (0, nS.e)(Ji, rM.getSnapshot());
-      if (!OM) return null;
-      const SM = "arrival" === OM.phase;
-      return (0, QS.jsxs)("div", {
-        className: MS()("SkyblockPortalTransit", {
-          Departure: !SM,
-          Arrival: SM
+        t: xV
+      } = (0, UY.A)(), JV = (0, yY.j)(kx, eV.getSnapshot());
+      if (!JV) return null;
+      const YV = "arrival" === JV.phase;
+      return (0, pY.jsxs)("div", {
+        className: dJ()("SkyblockPortalTransit", {
+          Departure: !YV,
+          Arrival: YV
         }),
         style: {
-          "--portal-rgb": sa(OM.colour),
-          "--portal-duration": `${OM.durationMs}ms`
+          "--portal-rgb": Wy(JV.colour),
+          "--portal-duration": `${JV.durationMs}ms`
         },
         role: "status",
         "aria-live": "polite",
-        children: [(0, QS.jsx)("div", {
+        children: [(0, pY.jsx)("div", {
           className: "SkyblockPortalTransitVeil",
           "aria-hidden": "true"
-        }), (0, QS.jsx)("div", {
+        }), (0, pY.jsx)("div", {
           className: "SkyblockPortalTransitRim",
           "aria-hidden": "true",
           onAnimationEnd: () => {
-            rM.finishArrival(OM.token)
+            eV.finishArrival(JV.token)
           }
-        }), (0, QS.jsxs)("div", {
+        }), (0, pY.jsxs)("div", {
           className: "SkyblockPortalTransitTitle",
-          children: [(0, QS.jsx)("div", {
+          children: [(0, pY.jsx)("div", {
             className: "SkyblockPortalTransitBand",
             "aria-hidden": "true"
-          }), !SM && (0, QS.jsx)("span", {
+          }), !YV && (0, pY.jsx)("span", {
             className: "SkyblockPortalTransitEyebrow",
-            children: iM("skyblockGame:portalTransitHeading")
-          }), (0, QS.jsx)("strong", {
+            children: xV("skyblockGame:portalTransitHeading")
+          }), (0, pY.jsx)("strong", {
             className: "SkyblockPortalTransitZone",
-            children: iM(OM.zoneNameKey)
+            children: xV(JV.zoneNameKey)
           })]
         })]
-      }, OM.token)
+      }, JV.token)
     }));
 
-    function ka() {
+    function gy() {
       return window.matchMedia("(prefers-reduced-motion: reduce)").matches
     }
 
-    function Za() {
-      const MM = document.querySelector(".SkyblockHudCoins"),
-        rM = null === MM || void 0 === MM ? void 0 : MM.getBoundingClientRect();
-      return rM && rM.width > 0 ? {
-        x: rM.left + Math.min(rM.width, 24) / 2,
-        y: rM.top + rM.height / 2
+    function Dy() {
+      const VV = document.querySelector(".SkyblockHudCoins"),
+        eV = null === VV || void 0 === VV ? void 0 : VV.getBoundingClientRect();
+      return eV && eV.width > 0 ? {
+        x: eV.left + Math.min(eV.width, 24) / 2,
+        y: eV.top + eV.height / 2
       } : {
         x: window.innerWidth - 48,
         y: 48
       }
     }
 
-    function oa(MM) {
+    function iy(VV) {
       return {
-        x: MM.left + MM.width / 2,
-        y: MM.top + MM.height / 2
+        x: VV.left + VV.width / 2,
+        y: VV.top + VV.height / 2
       }
     }
 
-    function fa() {
-      var MM;
-      const rM = null === (MM = document.querySelector(".HotBar")) || void 0 === MM ? void 0 : MM.getBoundingClientRect();
-      return rM && rM.width > 0 ? oa(rM) : {
+    function Cy() {
+      var VV;
+      const eV = null === (VV = document.querySelector(".HotBar")) || void 0 === VV ? void 0 : VV.getBoundingClientRect();
+      return eV && eV.width > 0 ? iy(eV) : {
         x: window.innerWidth / 2,
         y: window.innerHeight - 40
       }
     }
 
-    function Ya(MM) {
+    function ay(VV) {
       let {
-        items: rM,
-        origins: iM,
-        target: OM
-      } = MM;
-      return (0, QS.jsx)("div", {
+        items: eV,
+        origins: xV,
+        target: JV
+      } = VV;
+      return (0, pY.jsx)("div", {
         className: "SkyblockDailyRewardFlyingItems",
-        children: rM.map(((MM, rM) => {
-          const SM = iM[rM];
-          return (0, QS.jsx)("span", {
+        children: eV.map(((VV, eV) => {
+          const YV = xV[eV];
+          return (0, pY.jsx)("span", {
             className: "SkyblockDailyRewardFlyingItem",
             style: {
-              left: `${SM.x}px`,
-              top: `${SM.y}px`,
-              "--item-dx": OM.x - SM.x + "px",
-              "--item-dy": OM.y - SM.y + "px",
-              "--item-delay": 2e3 + 160 * rM + "ms",
+              left: `${YV.x}px`,
+              top: `${YV.y}px`,
+              "--item-dx": JV.x - YV.x + "px",
+              "--item-dy": JV.y - YV.y + "px",
+              "--item-delay": 2e3 + 160 * eV + "ms",
               "--item-flight": "700ms"
             },
-            children: (0, QS.jsx)(SS.b, {
-              itemName: MM.dailyRewardItemName,
+            children: (0, pY.jsx)(xY.e, {
+              itemName: VV.dailyRewardItemName,
               amount: 0
             })
-          }, MM.dailyRewardItemName)
+          }, VV.dailyRewardItemName)
         }))
       })
     }
 
-    function Na(MM, rM) {
-      const iM = -Math.PI / 2 + 1.25 * (MM / (rM - 1) * 2 - 1),
-        OM = 70 + MM % 3 * 22;
+    function oy(VV, eV) {
+      const xV = -Math.PI / 2 + 1.25 * (VV / (eV - 1) * 2 - 1),
+        JV = 70 + VV % 3 * 22;
       return {
-        x: Math.cos(iM) * OM,
-        y: Math.sin(iM) * OM * .7
+        x: Math.cos(xV) * JV,
+        y: Math.sin(xV) * JV * .7
       }
     }
 
-    function Aa(MM) {
+    function cy(VV) {
       let {
-        origin: rM,
-        target: iM,
-        count: OM
-      } = MM;
-      const SM = [];
-      for (let jM = 0; jM < OM; jM++) {
-        const MM = Na(jM, OM);
-        SM.push((0, QS.jsx)("span", {
+        origin: eV,
+        target: xV,
+        count: JV
+      } = VV;
+      const YV = [];
+      for (let UV = 0; UV < JV; UV++) {
+        const VV = oy(UV, JV);
+        YV.push((0, pY.jsx)("span", {
           className: "SkyblockDailyRewardCoin",
           style: {
-            left: `${rM.x}px`,
-            top: `${rM.y}px`,
-            "--coin-bx": `${MM.x}px`,
-            "--coin-by": `${MM.y}px`,
-            "--coin-dx": iM.x - rM.x + "px",
-            "--coin-dy": iM.y - rM.y + "px",
-            "--coin-delay": `${Gi(jM,OM)}ms`,
+            left: `${eV.x}px`,
+            top: `${eV.y}px`,
+            "--coin-bx": `${VV.x}px`,
+            "--coin-by": `${VV.y}px`,
+            "--coin-dx": xV.x - eV.x + "px",
+            "--coin-dy": xV.y - eV.y + "px",
+            "--coin-delay": `${tx(UV,JV)}ms`,
             "--coin-flight": "650ms"
           },
-          children: (0, QS.jsx)(SS.b, {
+          children: (0, pY.jsx)(xY.e, {
             itemName: "Gold Coin",
             amount: 0
           })
-        }, jM))
+        }, UV))
       }
-      return (0, QS.jsx)("div", {
+      return (0, pY.jsx)("div", {
         className: "SkyblockDailyRewardCoins",
-        children: SM
+        children: YV
       })
     }
 
-    function xa(MM) {
+    function hy(VV) {
       let {
-        day: rM
-      } = MM;
-      const iM = bM[rM - 1];
-      return (0, QS.jsxs)(QS.Fragment, {
-        children: [(0, QS.jsxs)("span", {
+        day: eV
+      } = VV;
+      const xV = AV[eV - 1];
+      return (0, pY.jsxs)(pY.Fragment, {
+        children: [(0, pY.jsxs)("span", {
           className: "SkyblockDailyRewardFooterReward",
-          children: [(0, QS.jsx)(SS.b, {
+          children: [(0, pY.jsx)(xY.e, {
             itemName: "Gold Coin",
             amount: 0
-          }), (0, aS.g)(iM.dailyRewardCoins)]
-        }), iM.dailyRewardItems.map((MM => (0, QS.jsxs)("span", {
+          }), (0, YY.d)(xV.dailyRewardCoins)]
+        }), xV.dailyRewardItems.map((VV => (0, pY.jsxs)("span", {
           className: "SkyblockDailyRewardFooterReward",
-          children: [(0, QS.jsx)(SS.b, {
-            itemName: MM.dailyRewardItemName,
+          children: [(0, pY.jsx)(xY.e, {
+            itemName: VV.dailyRewardItemName,
             amount: 0
-          }), "\xd7", MM.dailyRewardItemAmount]
-        }, MM.dailyRewardItemName)))]
+          }), "\xd7", VV.dailyRewardItemAmount]
+        }, VV.dailyRewardItemName)))]
       })
     }
 
-    function va(MM) {
+    function ly(VV) {
       let {
-        day: rM
-      } = MM;
-      const iM = tM(rM);
-      return (0, QS.jsx)("ol", {
+        day: eV
+      } = VV;
+      const xV = XV(eV);
+      return (0, pY.jsx)("ol", {
         className: "SkyblockDailyRewardStrip",
-        children: bM.map(((MM, OM) => {
-          const SM = OM + 1;
-          return (0, QS.jsxs)("li", {
-            className: MS()("SkyblockDailyRewardTile", {
-              Claimed: SM < rM && SM !== iM,
-              Today: SM === rM,
-              Tomorrow: SM === iM,
-              Jackpot: SM === wM
+        children: AV.map(((VV, JV) => {
+          const YV = JV + 1;
+          return (0, pY.jsxs)("li", {
+            className: dJ()("SkyblockDailyRewardTile", {
+              Claimed: YV < eV && YV !== xV,
+              Today: YV === eV,
+              Tomorrow: YV === xV,
+              Jackpot: YV === NV
             }),
-            children: [(0, QS.jsx)("span", {
+            children: [(0, pY.jsx)("span", {
               className: "SkyblockDailyRewardTileDay",
-              children: SM
-            }), (0, QS.jsxs)("span", {
+              children: YV
+            }), (0, pY.jsxs)("span", {
               className: "SkyblockDailyRewardTileReward SkyblockDailyRewardTileCoins",
-              children: [(0, QS.jsx)(SS.b, {
+              children: [(0, pY.jsx)(xY.e, {
                 itemName: "Gold Coin",
                 amount: 0
-              }), (0, aS.g)(MM.dailyRewardCoins)]
-            }), MM.dailyRewardItems.map((MM => (0, QS.jsxs)("span", {
+              }), (0, YY.d)(VV.dailyRewardCoins)]
+            }), VV.dailyRewardItems.map((VV => (0, pY.jsxs)("span", {
               className: "SkyblockDailyRewardTileReward",
-              children: [(0, QS.jsx)(SS.b, {
-                itemName: MM.dailyRewardItemName,
+              children: [(0, pY.jsx)(xY.e, {
+                itemName: VV.dailyRewardItemName,
                 amount: 0
-              }), "\xd7", MM.dailyRewardItemAmount]
-            }, MM.dailyRewardItemName)))]
-          }, SM)
+              }), "\xd7", VV.dailyRewardItemAmount]
+            }, VV.dailyRewardItemName)))]
+          }, YV)
         }))
       })
     }
 
-    function Fa(MM) {
+    function Ly(VV) {
       let {
-        view: rM
-      } = MM;
+        view: eV
+      } = VV;
       const {
-        t: iM
-      } = (0, PS.A)(), OM = (0, eM.useRef)(null), SM = (0, eM.useRef)(null), [jM, aM] = (0, eM.useState)(null);
-      (0, eM.useLayoutEffect)((() => {
-        var MM;
-        const rM = null === (MM = OM.current) || void 0 === MM ? void 0 : MM.getBoundingClientRect();
-        if (rM) {
-          var iM, jM;
-          const MM = Array.from(null !== (iM = null === (jM = SM.current) || void 0 === jM ? void 0 : jM.children) && void 0 !== iM ? iM : [], (MM => oa(MM.getBoundingClientRect())));
-          aM({
-            origin: oa(rM),
-            target: Za(),
-            itemOrigins: MM,
-            itemTarget: fa()
+        t: xV
+      } = (0, UY.A)(), JV = (0, PV.useRef)(null), YV = (0, PV.useRef)(null), [UV, yV] = (0, PV.useState)(null);
+      (0, PV.useLayoutEffect)((() => {
+        var VV;
+        const eV = null === (VV = JV.current) || void 0 === VV ? void 0 : VV.getBoundingClientRect();
+        if (eV) {
+          var xV, UV;
+          const VV = Array.from(null !== (xV = null === (UV = YV.current) || void 0 === UV ? void 0 : UV.children) && void 0 !== xV ? xV : [], (VV => iy(VV.getBoundingClientRect())));
+          yV({
+            origin: iy(eV),
+            target: Dy(),
+            itemOrigins: VV,
+            itemTarget: Cy()
           })
         }
       }), []);
-      const PM = tM(rM.day),
-        nM = function(MM, rM) {
-          const [iM, OM] = (0, eM.useState)((() => ka() ? MM : 0));
-          return (0, eM.useEffect)((() => {
-            if (ka()) return;
-            const iM = performance.now();
-            let SM = 0;
-            const jM = aM => {
-              const PM = Math.min(Math.max((aM - iM) / rM, 0), 1);
-              OM(Math.round(MM * (1 - (1 - PM) ** 3))), PM < 1 && (SM = requestAnimationFrame(jM))
+      const pV = XV(eV.day),
+        QV = function(VV, eV) {
+          const [xV, JV] = (0, PV.useState)((() => gy() ? VV : 0));
+          return (0, PV.useEffect)((() => {
+            if (gy()) return;
+            const xV = performance.now();
+            let YV = 0;
+            const UV = yV => {
+              const pV = Math.min(Math.max((yV - xV) / eV, 0), 1);
+              JV(Math.round(VV * (1 - (1 - pV) ** 3))), pV < 1 && (YV = requestAnimationFrame(UV))
             };
-            return SM = requestAnimationFrame(jM), () => {
-              cancelAnimationFrame(SM)
+            return YV = requestAnimationFrame(UV), () => {
+              cancelAnimationFrame(YV)
             }
-          }), [MM, rM]), iM
-        }(rM.coins, 450);
-      return (0, QS.jsxs)("div", {
-        className: MS()("SkyblockDailyReward", {
-          Jackpot: rM.day === wM
+          }), [VV, eV]), xV
+        }(eV.coins, 450);
+      return (0, pY.jsxs)("div", {
+        className: dJ()("SkyblockDailyReward", {
+          Jackpot: eV.day === NV
         }),
         style: {
-          "--daily-duration": `${rM.durationMs}ms`
+          "--daily-duration": `${eV.durationMs}ms`
         },
         role: "status",
         "aria-live": "polite",
-        children: [(0, QS.jsx)("div", {
+        children: [(0, pY.jsx)("div", {
           className: "SkyblockDailyRewardGlow",
           "aria-hidden": "true"
-        }), (0, QS.jsxs)("div", {
+        }), (0, pY.jsxs)("div", {
           className: "SkyblockDailyRewardCard",
-          children: [(0, QS.jsxs)("div", {
+          children: [(0, pY.jsxs)("div", {
             className: "SkyblockDailyRewardHeading",
-            children: [(0, QS.jsx)("span", {
+            children: [(0, pY.jsx)("span", {
               className: "SkyblockDailyRewardTitle",
-              children: iM("skyblockGame:dailyRewardTitle")
-            }), (0, QS.jsx)("span", {
+              children: xV("skyblockGame:dailyRewardTitle")
+            }), (0, pY.jsx)("span", {
               className: "SkyblockDailyRewardDay",
-              children: iM("skyblockGame:dailyRewardDay", {
-                day: String(rM.day)
+              children: xV("skyblockGame:dailyRewardDay", {
+                day: String(eV.day)
               })
             })]
-          }), (0, QS.jsxs)("div", {
+          }), (0, pY.jsxs)("div", {
             className: "SkyblockDailyRewardAmount",
-            ref: OM,
-            children: [(0, QS.jsx)(SS.b, {
+            ref: JV,
+            children: [(0, pY.jsx)(xY.e, {
               itemName: "Gold Coin",
               amount: 0
-            }), (0, QS.jsxs)("span", {
-              children: ["+", (0, aS.g)(nM)]
+            }), (0, pY.jsxs)("span", {
+              children: ["+", (0, YY.d)(QV)]
             })]
-          }), rM.items.length > 0 && (0, QS.jsx)("div", {
+          }), eV.items.length > 0 && (0, pY.jsx)("div", {
             className: "SkyblockDailyRewardItems",
-            ref: SM,
-            children: rM.items.map((MM => (0, QS.jsxs)("span", {
+            ref: YV,
+            children: eV.items.map((VV => (0, pY.jsxs)("span", {
               className: "SkyblockDailyRewardItem",
-              children: [(0, QS.jsx)(SS.b, {
-                itemName: MM.dailyRewardItemName,
+              children: [(0, pY.jsx)(xY.e, {
+                itemName: VV.dailyRewardItemName,
                 amount: 0
-              }), "\xd7", MM.dailyRewardItemAmount]
-            }, MM.dailyRewardItemName)))
-          }), (0, QS.jsx)(va, {
-            day: rM.day
-          }), (0, QS.jsxs)("div", {
+              }), "\xd7", VV.dailyRewardItemAmount]
+            }, VV.dailyRewardItemName)))
+          }), (0, pY.jsx)(ly, {
+            day: eV.day
+          }), (0, pY.jsxs)("div", {
             className: "SkyblockDailyRewardFooter",
-            children: [iM("skyblockGame:dailyRewardComeBack"), (0, QS.jsx)(xa, {
-              day: PM
+            children: [xV("skyblockGame:dailyRewardComeBack"), (0, pY.jsx)(hy, {
+              day: pV
             })]
           })]
-        }), null !== jM && (0, QS.jsx)(Aa, {
-          origin: jM.origin,
-          target: jM.target,
-          count: rM.flyingCoins
-        }), null !== jM && jM.itemOrigins.length === rM.items.length && (0, QS.jsx)(Ya, {
-          items: rM.items,
-          origins: jM.itemOrigins,
-          target: jM.itemTarget
+        }), null !== UV && (0, pY.jsx)(cy, {
+          origin: UV.origin,
+          target: UV.target,
+          count: eV.flyingCoins
+        }), null !== UV && UV.itemOrigins.length === eV.items.length && (0, pY.jsx)(ay, {
+          items: eV.items,
+          origins: UV.itemOrigins,
+          target: UV.itemTarget
         })]
       })
     }
-    const Ba = (0, eM.memo)((function(MM) {
+    const fy = (0, PV.memo)((function(VV) {
         let {
-          controller: rM
-        } = MM;
-        const iM = (0, nS.e)(li, rM.getSnapshot());
-        return iM ? (0, QS.jsx)(Fa, {
-          view: iM
-        }, iM.token) : null
+          controller: eV
+        } = VV;
+        const xV = (0, yY.j)(Bx, eV.getSnapshot());
+        return xV ? (0, pY.jsx)(Ly, {
+          view: xV
+        }, xV.token) : null
       })),
-      Xa = "Gold Coin";
+      my = "Gold Coin";
 
-    function Ia(MM) {
-      return 650 + 220 * MM
+    function Ky(VV) {
+      return 650 + 220 * VV
     }
 
-    function Ka(MM) {
+    function Hy(VV) {
       return {
-        "--letter-delay": `${Ia(MM)}ms`,
-        "--letter-land": `${Ia(MM)+300}ms`
+        "--letter-delay": `${Ky(VV)}ms`,
+        "--letter-land": `${Ky(VV)+300}ms`
       }
     }
 
-    function qa(MM) {
+    function uy(VV) {
       let {
-        letterCount: rM
-      } = MM;
-      return (0, QS.jsxs)("div", {
+        letterCount: eV
+      } = VV;
+      return (0, pY.jsxs)("div", {
         className: "SkyblockMailboxArt",
         "aria-hidden": "true",
-        children: [(0, QS.jsx)("img", {
+        children: [(0, pY.jsx)("img", {
           className: "SkyblockMailboxFrame",
           src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAPUlEQVR4nGNgGBTgPxbMgKHoU7Y/Cr7hqI9VMVji8yqV//8veYHxPC0l7ApBEugYp/UgXBNljteN6BrIBwC4hzWhsgbVSgAAAABJRU5ErkJggg==",
           alt: ""
-        }), (0, QS.jsx)("img", {
+        }), (0, pY.jsx)("img", {
           className: "SkyblockMailboxFrame SkyblockMailboxFrameFlag",
           src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAATElEQVR4nGNgIBP8h2L8iv5f8gJjQor/f16lAlOEU/H/T9n+YIUgGoRvOOpjVQyWACkE0SA8T0sJu0KQBDrGaT0I10SZ43UjugbyAQAsw0ABFINz6QAAAABJRU5ErkJggg==",
           alt: ""
-        }), (0, QS.jsx)("img", {
+        }), (0, pY.jsx)("img", {
           className: "SkyblockMailboxFrame SkyblockMailboxFrameOpen",
           src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAW0lEQVR4nGNgIBP8h2L8iv5f8gJjQor/f16lAlOEjBlQFH3K9gcrBNEgHGyt9P//rwMYiv/fcNQHKwTRIPzh8SEwxlA4T0sJBYNMBJmM1XoQrokyx+tGdA3kAwD3jUzPjfodhAAAAABJRU5ErkJggg==",
           alt: ""
         }), Array.from({
-          length: rM
-        }, ((MM, rM) => (0, QS.jsx)("img", {
+          length: eV
+        }, ((VV, eV) => (0, pY.jsx)("img", {
           className: "SkyblockMailboxFlyingLetter",
-          style: Ka(rM),
+          style: Hy(eV),
           src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAP0lEQVR4nGNgoCX4jwOjgP//fx1AwZ+y/f/fcNTHUPz/w+NDKBikaJ6WEnaFa7qCwBhZA0ETcSkEKybGM9QDAOtbYxX7UuH5AAAAAElFTkSuQmCC",
           alt: ""
-        }, rM)))]
+        }, eV)))]
       })
     }
 
-    function Ta(MM) {
-      var rM, iM, OM;
+    function sy(VV) {
+      var eV, xV, JV;
       let {
-        letter: SM,
-        index: jM
-      } = MM;
+        letter: YV,
+        index: UV
+      } = VV;
       const {
-        t: aM
-      } = (0, PS.A)(), PM = null !== (rM = null === (iM = SM.items[0]) || void 0 === iM ? void 0 : iM.itemName) && void 0 !== rM ? rM : Xa;
-      return (0, QS.jsxs)("li", {
+        t: yV
+      } = (0, UY.A)(), pV = null !== (eV = null === (xV = YV.items[0]) || void 0 === xV ? void 0 : xV.itemName) && void 0 !== eV ? eV : my;
+      return (0, pY.jsxs)("li", {
         className: "SkyblockMailboxLetter",
-        style: Ka(jM),
-        children: [(0, QS.jsx)("div", {
+        style: Hy(UV),
+        children: [(0, pY.jsx)("div", {
           className: "SkyblockMailboxStamp",
           "aria-hidden": "true",
-          children: (0, QS.jsx)(SS.b, {
-            itemName: PM,
+          children: (0, pY.jsx)(xY.e, {
+            itemName: pV,
             amount: 0
           })
-        }), (0, QS.jsx)("div", {
+        }), (0, pY.jsx)("div", {
           className: "SkyblockMailboxReason",
-          children: aM(SM.reasonKey, null !== (OM = SM.reasonParams) && void 0 !== OM ? OM : void 0)
-        }), (0, QS.jsxs)("div", {
+          children: yV(YV.reasonKey, null !== (JV = YV.reasonParams) && void 0 !== JV ? JV : void 0)
+        }), (0, pY.jsxs)("div", {
           className: "SkyblockMailboxContents",
-          children: [SM.coins > 0 && (0, QS.jsxs)("span", {
+          children: [YV.coins > 0 && (0, pY.jsxs)("span", {
             className: "SkyblockMailboxGift SkyblockMailboxCoins",
-            children: [(0, QS.jsx)(SS.b, {
-              itemName: Xa,
+            children: [(0, pY.jsx)(xY.e, {
+              itemName: my,
               amount: 0
-            }), "+", (0, aS.g)(SM.coins)]
-          }), SM.items.map(((MM, rM) => (0, QS.jsxs)("span", {
+            }), "+", (0, YY.d)(YV.coins)]
+          }), YV.items.map(((VV, eV) => (0, pY.jsxs)("span", {
             className: "SkyblockMailboxGift",
-            children: [(0, QS.jsx)(SS.b, {
-              itemName: MM.itemName,
+            children: [(0, pY.jsx)(xY.e, {
+              itemName: VV.itemName,
               amount: 0
-            }), MM.label, " \xd7", MM.amount]
-          }, rM)))]
+            }), VV.label, " \xd7", VV.amount]
+          }, eV)))]
         })]
       })
     }
 
-    function Va(MM) {
+    function Sy(VV) {
       let {
-        view: rM
-      } = MM;
+        view: eV
+      } = VV;
       const {
-        t: iM
-      } = (0, PS.A)();
-      return (0, QS.jsx)("div", {
+        t: xV
+      } = (0, UY.A)();
+      return (0, pY.jsx)("div", {
         className: "SkyblockMailbox",
         style: {
-          "--mail-duration": `${rM.durationMs}ms`,
+          "--mail-duration": `${eV.durationMs}ms`,
           "--flag-up": "300ms",
           "--door-open": "500ms",
-          "--more-land": `${Ia(rM.letters.length)+300}ms`
+          "--more-land": `${Ky(eV.letters.length)+300}ms`
         },
         role: "status",
         "aria-live": "polite",
-        children: (0, QS.jsxs)("div", {
+        children: (0, pY.jsxs)("div", {
           className: "SkyblockMailboxCard",
-          children: [(0, QS.jsxs)("div", {
+          children: [(0, pY.jsxs)("div", {
             className: "SkyblockMailboxHeading",
-            children: [(0, QS.jsx)(qa, {
-              letterCount: rM.letters.length
-            }), (0, QS.jsx)("span", {
+            children: [(0, pY.jsx)(uy, {
+              letterCount: eV.letters.length
+            }), (0, pY.jsx)("span", {
               className: "SkyblockMailboxTitle",
-              children: iM("skyblockGame:mailboxTitle")
+              children: xV("skyblockGame:mailboxTitle")
             })]
-          }), (0, QS.jsx)("ol", {
+          }), (0, pY.jsx)("ol", {
             className: "SkyblockMailboxLetters",
-            children: rM.letters.map(((MM, rM) => (0, QS.jsx)(Ta, {
-              letter: MM,
-              index: rM
-            }, rM)))
-          }), rM.more > 0 && (0, QS.jsx)("div", {
+            children: eV.letters.map(((VV, eV) => (0, pY.jsx)(sy, {
+              letter: VV,
+              index: eV
+            }, eV)))
+          }), eV.more > 0 && (0, pY.jsx)("div", {
             className: "SkyblockMailboxMore",
-            children: iM("skyblockGame:mailboxMore", {
-              count: String(rM.more)
+            children: xV("skyblockGame:mailboxMore", {
+              count: String(eV.more)
             })
           })]
         })
       })
     }
-    const ca = (0, eM.memo)((function(MM) {
+    const Iy = (0, PV.memo)((function(VV) {
       let {
-        controller: rM
-      } = MM;
-      const iM = (0, nS.e)(ei, rM.getSnapshot());
-      return iM ? (0, QS.jsx)(Va, {
-        view: iM
-      }, iM.token) : null
+        controller: eV
+      } = VV;
+      const xV = (0, yY.j)(Tx, eV.getSnapshot());
+      return xV ? (0, pY.jsx)(Sy, {
+        view: xV
+      }, xV.token) : null
     }));
 
-    function MP(MM) {
+    function dy(VV) {
       let {
-        controller: rM
-      } = MM;
+        controller: eV
+      } = VV;
       const {
-        t: iM
-      } = (0, PS.A)(), OM = (0, nS.e)(dO, rM.getSnapshot());
-      if (null === OM) return null;
-      const SM = OM.fullSet ? "empty" === OM.fuelState ? {
-        text: iM("skyblockGame:magmawardHudNoFuel"),
+        t: xV
+      } = (0, UY.A)(), JV = (0, yY.j)(kJ, eV.getSnapshot());
+      if (null === JV) return null;
+      const YV = JV.fullSet ? "empty" === JV.fuelState ? {
+        text: xV("skyblockGame:magmawardHudNoFuel"),
         tone: "empty"
       } : null : {
-        text: iM("skyblockGame:magmawardHudFullSet", {
-          worn: String(OM.wornCount)
+        text: xV("skyblockGame:magmawardHudFullSet", {
+          worn: String(JV.wornCount)
         }),
         tone: "partial"
       };
-      return (0, QS.jsx)(iS.i, {
+      return (0, pY.jsx)(VY.e, {
         placement: "statBars",
-        children: (0, QS.jsxs)("div", {
-          className: MS()("SkyblockMagmawardHud", `SkyblockMagmawardHud-${OM.fuelState}`, {
-            "SkyblockMagmawardHud-partial": !OM.fullSet,
-            "SkyblockMagmawardHud-armed": OM.fullSet && "empty" !== OM.fuelState
+        children: (0, pY.jsxs)("div", {
+          className: dJ()("SkyblockMagmawardHud", `SkyblockMagmawardHud-${JV.fuelState}`, {
+            "SkyblockMagmawardHud-partial": !JV.fullSet,
+            "SkyblockMagmawardHud-armed": JV.fullSet && "empty" !== JV.fuelState
           }),
-          children: [null !== OM.flare && (0, QS.jsx)("div", {
-            className: `SkyblockMagmawardFlare SkyblockMagmawardFlare-${OM.flare}`
-          }, `flare:${OM.flareToken}`), (0, QS.jsx)("div", {
-            className: MS()("SkyblockMagmawardPieces", {
-              SkyblockMagmawardPiecesComplete: OM.setLit
+          children: [null !== JV.flare && (0, pY.jsx)("div", {
+            className: `SkyblockMagmawardFlare SkyblockMagmawardFlare-${JV.flare}`
+          }, `flare:${JV.flareToken}`), (0, pY.jsx)("div", {
+            className: dJ()("SkyblockMagmawardPieces", {
+              SkyblockMagmawardPiecesComplete: JV.setLit
             }),
-            children: OM.pieces.map(((MM, rM) => (0, QS.jsx)("div", {
-              className: MS()("SkyblockMagmawardPiece", {
-                SkyblockMagmawardPieceWorn: MM.worn,
-                SkyblockMagmawardPieceJustWorn: MM.justWorn
+            children: JV.pieces.map(((VV, eV) => (0, pY.jsx)("div", {
+              className: dJ()("SkyblockMagmawardPiece", {
+                SkyblockMagmawardPieceWorn: VV.worn,
+                SkyblockMagmawardPieceJustWorn: VV.justWorn
               }),
-              children: (0, QS.jsx)(SS.b, {
-                itemName: MM.itemName,
+              children: (0, pY.jsx)(xY.e, {
+                itemName: VV.itemName,
                 amount: 0
               })
-            }, `${rM}:${MM.wornToken}`)))
-          }, `pieces:${OM.setLitToken}`), (0, QS.jsxs)("div", {
+            }, `${eV}:${VV.wornToken}`)))
+          }, `pieces:${JV.setLitToken}`), (0, pY.jsxs)("div", {
             className: "SkyblockMagmawardFuel",
-            children: [(0, QS.jsx)("div", {
+            children: [(0, pY.jsx)("div", {
               className: "SkyblockMagmawardLowGlow"
-            }), (0, QS.jsxs)("div", {
-              className: MS()("SkyblockMagmawardFuelCounter", OM.pulse && `SkyblockMagmawardFuelCounter-${OM.pulse}`),
-              children: [(0, QS.jsx)("div", {
+            }), (0, pY.jsxs)("div", {
+              className: dJ()("SkyblockMagmawardFuelCounter", JV.pulse && `SkyblockMagmawardFuelCounter-${JV.pulse}`),
+              children: [(0, pY.jsx)("div", {
                 className: "SkyblockMagmawardFuelIcon",
-                children: (0, QS.jsx)(SS.b, {
+                children: (0, pY.jsx)(xY.e, {
                   itemName: "Magmaward Fuel",
                   amount: 0
                 })
-              }), (0, QS.jsx)("span", {
+              }), (0, pY.jsx)("span", {
                 className: "SkyblockMagmawardFuelCount SmallTextBold",
-                children: OM.fuel
+                children: JV.fuel
               })]
-            }, `counter:${OM.pulseToken}`), "burn" === OM.pulse && (0, QS.jsx)("span", {
+            }, `counter:${JV.pulseToken}`), "burn" === JV.pulse && (0, pY.jsx)("span", {
               className: "SkyblockMagmawardEmber SmallTextBold",
               children: "-1"
-            }, `ember:${OM.pulseToken}`)]
-          }), SM && (0, QS.jsx)("div", {
-            className: `SkyblockMagmawardCaption SkyblockMagmawardCaption-${SM.tone} SmallTextBold`,
-            children: SM.text
+            }, `ember:${JV.pulseToken}`)]
+          }), YV && (0, pY.jsx)("div", {
+            className: `SkyblockMagmawardCaption SkyblockMagmawardCaption-${YV.tone} SmallTextBold`,
+            children: YV.text
           })]
         })
       })
     }
 
-    function rP(MM) {
+    function Oy(VV) {
       let {
-        controller: rM
-      } = MM;
+        controller: eV
+      } = VV;
       const {
-        t: iM,
-        selectedLanguage: OM
-      } = (0, PS.A)(), SM = (0, nS.e)(lO, rM.getSnapshot());
-      return null === SM ? null : (0, QS.jsx)(iS.i, {
+        t: xV,
+        selectedLanguage: JV
+      } = (0, UY.A)(), YV = (0, yY.j)(EJ, eV.getSnapshot());
+      return null === YV ? null : (0, pY.jsx)(VY.e, {
         placement: "statBars",
-        children: (0, QS.jsxs)("div", {
-          className: MS()("SkyblockGlowtideChip", {
-            SkyblockGlowtideChipInRange: SM.inRange
+        children: (0, pY.jsxs)("div", {
+          className: dJ()("SkyblockGlowtideChip", {
+            SkyblockGlowtideChipInRange: YV.inRange
           }),
           style: {
-            "--glowtide-colour": SM.colour
+            "--glowtide-colour": YV.colour
           },
-          "aria-label": iM("skyblockGame:glowtideChipLabel"),
-          children: [(0, QS.jsx)("div", {
+          "aria-label": xV("skyblockGame:glowtideChipLabel"),
+          children: [(0, pY.jsx)("div", {
             className: "SkyblockGlowtideChipOrb"
-          }), SM.inRange ? (0, QS.jsx)("span", {
+          }), YV.inRange ? (0, pY.jsx)("span", {
             className: "SkyblockGlowtideChipCall SmallTextBold",
-            children: iM("skyblockGame:glowtideChipInRange")
-          }, `call:${SM.inRangeToken}`) : (0, QS.jsxs)(QS.Fragment, {
-            children: [(0, QS.jsx)("div", {
-              ref: rM.mountArrow,
+            children: xV("skyblockGame:glowtideChipInRange")
+          }, `call:${YV.inRangeToken}`) : (0, pY.jsxs)(pY.Fragment, {
+            children: [(0, pY.jsx)("div", {
+              ref: eV.mountArrow,
               className: "SkyblockGlowtideChipArrow"
-            }), (0, QS.jsx)("span", {
+            }), (0, pY.jsx)("span", {
               className: "SkyblockGlowtideChipDistance SmallTextBold",
-              children: iM("skyblockGame:waypointDistance", {
-                distance: UM(SM.distance, OM.code)
+              children: xV("skyblockGame:waypointDistance", {
+                distance: tV(YV.distance, JV.code)
               })
             })]
           })]
@@ -9270,266 +9236,266 @@ export const modules = {
       })
     }
 
-    function iP(MM) {
+    function Vp(VV) {
       let {
-        controller: rM
-      } = MM;
+        controller: eV
+      } = VV;
       const {
-        t: iM
-      } = (0, PS.A)(), OM = (0, nS.e)(UO, rM.getSnapshot());
-      return null === OM ? null : (0, QS.jsx)(iS.i, {
+        t: xV
+      } = (0, UY.A)(), JV = (0, yY.j)(jJ, eV.getSnapshot());
+      return null === JV ? null : (0, pY.jsx)(VY.e, {
         placement: "statBars",
-        children: (0, QS.jsxs)("div", {
-          className: MS()("SkyblockGlowMeter", {
-            SkyblockGlowMeterFull: OM.full
+        children: (0, pY.jsxs)("div", {
+          className: dJ()("SkyblockGlowMeter", {
+            SkyblockGlowMeterFull: JV.full
           }),
-          "aria-label": iM("skyblockGame:glowMeterLabel", {
-            fill: String(OM.fill),
-            vL: String(OM.vL)
+          "aria-label": xV("skyblockGame:glowMeterLabel", {
+            fill: String(JV.fill),
+            Jv: String(JV.Jv)
           }),
-          children: [OM.burst && (0, QS.jsx)("div", {
+          children: [JV.burst && (0, pY.jsx)("div", {
             className: "SkyblockGlowMeterBurst"
-          }, `burst:${OM.burstToken}`), (0, QS.jsxs)("div", {
+          }, `burst:${JV.burstToken}`), (0, pY.jsxs)("div", {
             className: "SkyblockGlowMeterVial",
-            children: [(0, QS.jsx)("div", {
+            children: [(0, pY.jsx)("div", {
               className: "SkyblockGlowMeterLiquid",
               style: {
-                transform: `scaleX(${OM.ratio})`
+                transform: `scaleX(${JV.ratio})`
               }
-            }), OM.gained && (0, QS.jsx)("div", {
+            }), JV.gained && (0, pY.jsx)("div", {
               className: "SkyblockGlowMeterGlint"
-            }, `gain:${OM.gainToken}`), OM.full && Array.from({
+            }, `gain:${JV.gainToken}`), JV.full && Array.from({
               length: 5
-            }, ((MM, rM) => (0, QS.jsx)("span", {
+            }, ((VV, eV) => (0, pY.jsx)("span", {
               className: "SkyblockGlowMeterSparkle"
-            }, rM)))]
-          }), OM.full && OM.rares.map((MM => (0, QS.jsx)("div", {
+            }, eV)))]
+          }), JV.full && JV.rares.map((VV => (0, pY.jsx)("div", {
             className: "SkyblockGlowMeterRare",
-            children: (0, QS.jsx)(SS.b, {
-              itemName: MM,
+            children: (0, pY.jsx)(xY.e, {
+              itemName: VV,
               amount: 0
             })
-          }, MM))), OM.ready && (0, QS.jsx)("div", {
+          }, VV))), JV.ready && (0, pY.jsx)("div", {
             className: "SkyblockGlowMeterReady SmallTextBold",
-            children: (0, QS.jsx)("span", {
-              children: iM("skyblockGame:glowMeterReady")
+            children: (0, pY.jsx)("span", {
+              children: xV("skyblockGame:glowMeterReady")
             })
-          }, `ready:${OM.fullToken}`)]
+          }, `ready:${JV.fullToken}`)]
         })
       })
     }
 
-    function OP(MM) {
+    function ep(VV) {
       let {
-        controller: rM
-      } = MM;
+        controller: eV
+      } = VV;
       const {
-        t: iM
-      } = (0, PS.A)(), OM = (0, nS.e)(CO, rM.getSnapshot());
-      if (null === OM) return null;
-      const SM = "waiting" === OM.phase,
-        jM = {
-          animationDuration: `${OM.waitMs}ms`,
-          animationDelay: -OM.elapsedMs + "ms"
+        t: xV
+      } = (0, UY.A)(), JV = (0, yY.j)(tJ, eV.getSnapshot());
+      if (null === JV) return null;
+      const YV = "waiting" === JV.phase,
+        UV = {
+          animationDuration: `${JV.waitMs}ms`,
+          animationDelay: -JV.elapsedMs + "ms"
         },
-        aM = SM ? void 0 : {
-          animationDuration: `${OM.waitMs}ms`
+        yV = YV ? void 0 : {
+          animationDuration: `${JV.waitMs}ms`
         };
-      return (0, QS.jsxs)("div", {
-        className: SM ? "SkyblockHushWait" : "SkyblockHushWait SkyblockHushWaitAbandoned",
-        children: [SM && (0, QS.jsxs)("div", {
+      return (0, pY.jsxs)("div", {
+        className: YV ? "SkyblockHushWait" : "SkyblockHushWait SkyblockHushWaitAbandoned",
+        children: [YV && (0, pY.jsxs)("div", {
           className: "SkyblockHushWaitRing",
           children: [Array.from({
             length: 3
-          }, ((MM, rM) => (0, QS.jsx)("span", {
+          }, ((VV, eV) => (0, pY.jsx)("span", {
             className: "SkyblockHushWaitRipple"
-          }, rM))), (0, QS.jsx)("span", {
+          }, eV))), (0, pY.jsx)("span", {
             className: "SkyblockHushWaitClosing",
-            style: jM
-          }), (0, QS.jsxs)("svg", {
+            style: UV
+          }), (0, pY.jsxs)("svg", {
             className: "SkyblockHushWaitProgress",
             viewBox: "0 0 100 100",
-            children: [(0, QS.jsx)("circle", {
+            children: [(0, pY.jsx)("circle", {
               className: "SkyblockHushWaitTrack",
               cx: "50",
               cy: "50",
               r: 46
-            }), (0, QS.jsx)("circle", {
+            }), (0, pY.jsx)("circle", {
               className: "SkyblockHushWaitArc",
               cx: "50",
               cy: "50",
               r: 46,
               pathLength: 100,
-              style: jM
+              style: UV
             })]
-          }), (0, QS.jsx)("span", {
+          }), (0, pY.jsx)("span", {
             className: "SkyblockHushWaitMoon"
           })]
-        }), (0, QS.jsx)("div", {
+        }), (0, pY.jsx)("div", {
           className: "SkyblockHushWaitLine SmallTextBold",
-          style: aM,
-          children: iM(OM.line)
-        }, OM.lineIndex)]
-      }, OM.token)
+          style: yV,
+          children: xV(JV.line)
+        }, JV.lineIndex)]
+      }, JV.token)
     }
 
-    function SP(MM) {
+    function xp(VV) {
       let {
-        chart: rM,
-        showHere: iM,
-        className: OM
-      } = MM;
-      return (0, QS.jsx)("div", {
-        className: MS()("SkyblockTideChartGrid", OM, null !== rM.pictureName && "Complete"),
+        chart: eV,
+        showHere: xV,
+        className: JV
+      } = VV;
+      return (0, pY.jsx)("div", {
+        className: dJ()("SkyblockTideChartGrid", JV, null !== eV.pictureName && "Complete"),
         "aria-hidden": "true",
-        children: rM.cells.map(((MM, OM) => {
-          const SM = 0 !== (rM.pulseCells & 1 << OM),
-            jM = rM.castCell === OM;
-          return (0, QS.jsx)("span", {
-            className: MS()("SkyblockTideChartCell", `Cell-${MM}`, SM && "Pulse", jM && "Cast", iM && rM.hereCell === OM && "Here")
-          }, `${OM}:${SM?`p${rM.pulseToken}`:""}:${jM?`c${rM.castToken}`:""}`)
+        children: eV.cells.map(((VV, JV) => {
+          const YV = 0 !== (eV.pulseCells & 1 << JV),
+            UV = eV.castCell === JV;
+          return (0, pY.jsx)("span", {
+            className: dJ()("SkyblockTideChartCell", `Cell-${VV}`, YV && "Pulse", UV && "Cast", xV && eV.hereCell === JV && "Here")
+          }, `${JV}:${YV?`p${eV.pulseToken}`:""}:${UV?`c${eV.castToken}`:""}`)
         }))
       })
     }
 
-    function jP(MM) {
+    function Jp(VV) {
       let {
-        controller: rM
-      } = MM;
-      const iM = (0, nS.e)(bO, rM.getSnapshot()),
+        controller: eV
+      } = VV;
+      const xV = (0, yY.j)(TJ, eV.getSnapshot()),
         {
-          t: OM
-        } = (0, PS.A)(),
-        SM = iM.chip;
-      if (!iM.enabled || null === SM) return null;
-      const jM = OM("skyblockGame:tideChartsChipLabel", {
-        island: SM.islandName,
-        lit: String(SM.lit),
-        ink: String(SM.ink)
+          t: JV
+        } = (0, UY.A)(),
+        YV = xV.chip;
+      if (!xV.enabled || null === YV) return null;
+      const UV = JV("skyblockGame:tideChartsChipLabel", {
+        island: YV.islandName,
+        lit: String(YV.lit),
+        ink: String(YV.ink)
       });
-      return (0, QS.jsx)(iS.i, {
+      return (0, pY.jsx)(VY.e, {
         placement: "statBars",
-        children: (0, QS.jsxs)("button", {
+        children: (0, pY.jsxs)("button", {
           type: "button",
           tabIndex: -1,
-          className: MS()("SkyblockTideChartsChip", iM.open && "Open", null !== SM.pictureName && "Complete"),
-          "aria-label": jM,
-          title: jM,
-          onMouseDown: MM => {
-            MM.preventDefault()
+          className: dJ()("SkyblockTideChartsChip", xV.open && "Open", null !== YV.pictureName && "Complete"),
+          "aria-label": UV,
+          title: UV,
+          onMouseDown: VV => {
+            VV.preventDefault()
           },
-          onClick: rM.toggle,
-          children: [(0, QS.jsx)(SP, {
-            chart: SM,
+          onClick: eV.toggle,
+          children: [(0, pY.jsx)(xp, {
+            chart: YV,
             showHere: !1,
             className: "Mini"
-          }), (0, QS.jsxs)("span", {
+          }), (0, pY.jsxs)("span", {
             className: "SkyblockTideChartsChipCount SmallTextBold",
-            children: [SM.lit, "/", SM.ink]
+            children: [YV.lit, "/", YV.ink]
           })]
         })
       })
     }
 
-    function aP(MM) {
+    function Yp(VV) {
       let {
-        controller: rM
-      } = MM;
-      const iM = (0, nS.e)(bO, rM.getSnapshot()),
+        controller: eV
+      } = VV;
+      const xV = (0, yY.j)(TJ, eV.getSnapshot()),
         {
-          t: OM
-        } = (0, PS.A)(),
-        SM = US(),
-        jM = iM.card;
-      return iM.enabled && null !== jM ? (0, QS.jsx)(yS.e, {
-        show: iM.open,
-        close: rM.dismiss,
+          t: JV
+        } = (0, UY.A)(),
+        YV = jY(),
+        UV = xV.card;
+      return xV.enabled && null !== UV ? (0, pY.jsx)(bY.e, {
+        show: xV.open,
+        close: eV.dismiss,
         togglePointerLock: !1,
         className: "SkyblockSkillsOverlay",
-        children: (0, QS.jsxs)("section", {
+        children: (0, pY.jsxs)("section", {
           className: "SkyblockSkillsPanel SkyblockTideChartsPanel",
           role: "dialog",
           "aria-modal": "true",
           "aria-labelledby": "skyblockTideChartsTitle",
           tabIndex: -1,
-          ref: SM,
-          onKeyDown: ES,
-          children: [(0, QS.jsxs)("header", {
+          ref: YV,
+          onKeyDown: BY,
+          children: [(0, pY.jsxs)("header", {
             className: "SkyblockTideChartsHeader",
-            children: [(0, QS.jsxs)("div", {
-              children: [(0, QS.jsx)("h2", {
+            children: [(0, pY.jsxs)("div", {
+              children: [(0, pY.jsx)("h2", {
                 id: "skyblockTideChartsTitle",
-                children: OM("skyblockGame:tideChartsTitle")
-              }), (0, QS.jsx)("p", {
+                children: JV("skyblockGame:tideChartsTitle")
+              }), (0, pY.jsx)("p", {
                 className: "SkyblockTideChartsIntro",
-                children: OM("skyblockGame:tideChartsIntro")
+                children: JV("skyblockGame:tideChartsIntro")
               })]
-            }), (0, QS.jsx)(lS.l, {
+            }), (0, pY.jsx)(EY.k, {
               padIgnore: !0,
-              ariaLabel: OM("skyblockGame:tideChartsClose"),
-              onClick: rM.dismiss
+              ariaLabel: JV("skyblockGame:tideChartsClose"),
+              onClick: eV.dismiss
             })]
-          }), iM.tabs.length > 1 && (0, QS.jsx)("div", {
+          }), xV.tabs.length > 1 && (0, pY.jsx)("div", {
             className: "SkyblockTideChartsTabs",
             role: "group",
-            "aria-label": OM("skyblockGame:tideChartsIslands"),
-            children: iM.tabs.map((MM => (0, QS.jsx)("button", {
+            "aria-label": JV("skyblockGame:tideChartsIslands"),
+            children: xV.tabs.map((VV => (0, pY.jsx)("button", {
               type: "button",
-              className: MS()("SkyblockTideChartsTab", MM.selected && "Selected"),
-              "aria-pressed": MM.selected,
+              className: dJ()("SkyblockTideChartsTab", VV.selected && "Selected"),
+              "aria-pressed": VV.selected,
               onClick: () => {
-                rM.LH(MM.island)
+                eV.Pr(VV.island)
               },
-              children: MM.name
-            }, MM.island)))
-          }), (0, QS.jsxs)("div", {
+              children: VV.name
+            }, VV.island)))
+          }), (0, pY.jsxs)("div", {
             className: "SkyblockTideChartsBody",
-            children: [(0, QS.jsx)("div", {
+            children: [(0, pY.jsx)("div", {
               className: "SkyblockTideChartsMap",
               role: "img",
-              "aria-label": jM.gridLabel,
-              children: (0, QS.jsx)(SP, {
-                chart: jM,
+              "aria-label": UV.gridLabel,
+              children: (0, pY.jsx)(xp, {
+                chart: UV,
                 showHere: !0,
                 className: "Large"
               })
-            }), (0, QS.jsxs)("div", {
+            }), (0, pY.jsxs)("div", {
               className: "SkyblockTideChartsInfo",
-              children: [(0, QS.jsx)("h3", {
-                children: jM.islandName
-              }), (0, QS.jsx)("p", {
+              children: [(0, pY.jsx)("h3", {
+                children: UV.islandName
+              }), (0, pY.jsx)("p", {
                 className: "SkyblockTideChartsLit",
-                children: jM.litText
-              }), null === jM.pictureName ? (0, QS.jsx)("p", {
+                children: UV.litText
+              }), null === UV.pictureName ? (0, pY.jsx)("p", {
                 className: "SkyblockTideChartsPicture",
-                children: OM("skyblockGame:tideChartsPictureHidden")
-              }) : (0, QS.jsx)("p", {
+                children: JV("skyblockGame:tideChartsPictureHidden")
+              }) : (0, pY.jsx)("p", {
                 className: "SkyblockTideChartsPicture Revealed",
-                children: OM("skyblockGame:tideChartsPictureRevealed", {
-                  picture: jM.pictureName
+                children: JV("skyblockGame:tideChartsPictureRevealed", {
+                  picture: UV.pictureName
                 })
-              }, jM.pictureName), (0, QS.jsxs)("ul", {
+              }, UV.pictureName), (0, pY.jsxs)("ul", {
                 className: "SkyblockTideChartsLegend",
                 "aria-hidden": "true",
-                children: [(0, QS.jsxs)("li", {
-                  children: [(0, QS.jsx)("span", {
+                children: [(0, pY.jsxs)("li", {
+                  children: [(0, pY.jsx)("span", {
                     className: "SkyblockTideChartCell Cell-lit"
-                  }), OM("skyblockGame:tideChartsLegendLit")]
-                }), (0, QS.jsxs)("li", {
-                  children: [(0, QS.jsx)("span", {
+                  }), JV("skyblockGame:tideChartsLegendLit")]
+                }), (0, pY.jsxs)("li", {
+                  children: [(0, pY.jsx)("span", {
                     className: "SkyblockTideChartCell Cell-clear"
-                  }), OM("skyblockGame:tideChartsLegendClear")]
-                }), null !== jM.hereCell && (0, QS.jsxs)("li", {
-                  children: [(0, QS.jsx)("span", {
+                  }), JV("skyblockGame:tideChartsLegendClear")]
+                }), null !== UV.hereCell && (0, pY.jsxs)("li", {
+                  children: [(0, pY.jsx)("span", {
                     className: "SkyblockTideChartCell Cell-water Here"
-                  }), OM("skyblockGame:tideChartsLegendHere")]
+                  }), JV("skyblockGame:tideChartsLegendHere")]
                 })]
-              }), (0, QS.jsxs)("p", {
+              }), (0, pY.jsxs)("p", {
                 className: "SkyblockTideChartsFooter",
-                children: [(0, QS.jsx)("span", {
-                  children: iM.turnsText
-                }), (0, QS.jsx)("span", {
-                  children: iM.bookText
+                children: [(0, pY.jsx)("span", {
+                  children: xV.turnsText
+                }), (0, pY.jsx)("span", {
+                  children: xV.bookText
                 })]
               })]
             })]
@@ -9538,144 +9504,144 @@ export const modules = {
       }) : null
     }
 
-    function PP(MM) {
-      var rM;
+    function Up(VV) {
+      var eV;
       let {
-        controller: iM
-      } = MM;
+        controller: xV
+      } = VV;
       const {
-        selectedLanguage: OM
-      } = (0, PS.A)(), SM = OM.code;
-      (0, eM.useEffect)((() => {
-        iM.setTranslator(((MM, rM) => (0, PS.x)(SM, MM, rM)), SM, ((MM, rM) => (0, PS.r)(SM, MM, rM)))
-      }), [iM, SM]);
-      const jM = (0, nS.e)(QM, iM.map.getSnapshot()),
+        selectedLanguage: JV
+      } = (0, UY.A)(), YV = JV.code;
+      (0, PV.useEffect)((() => {
+        xV.setTranslator(((VV, eV) => (0, UY.u)(YV, VV, eV)), YV, ((VV, eV) => (0, UY.r)(YV, VV, eV)))
+      }), [xV, YV]);
+      const UV = (0, yY.j)(nV, xV.map.getSnapshot()),
         {
-          openInGameMenuName: aM
-        } = (0, rS.m)(["openInGameMenuName"]);
-      return (0, QS.jsxs)(QS.Fragment, {
-        children: [(0, QS.jsx)(Wa, {
-          controller: iM.quests,
-          display: iM.navigation.display
-        }), jM.enabled && !aM && (0, QS.jsx)(kS, {
-          controller: iM.navigation
-        }), (0, QS.jsx)(zS, {
-          controller: iM,
-          minimap: jM.enabled && (null === (rM = jM.presentation) || void 0 === rM ? void 0 : rM.minimap) && (0, QS.jsx)(DS, {
-            view: jM.presentation.minimap,
-            navigation: iM.navigation,
-            controller: iM.map
+          openInGameMenuName: yV
+        } = (0, OJ.l)(["openInGameMenuName"]);
+      return (0, pY.jsxs)(pY.Fragment, {
+        children: [(0, pY.jsx)(Gy, {
+          controller: xV.quests,
+          display: xV.navigation.display
+        }), UV.enabled && !yV && (0, pY.jsx)(gY, {
+          controller: xV.navigation
+        }), (0, pY.jsx)(QY, {
+          controller: xV,
+          minimap: UV.enabled && (null === (eV = UV.presentation) || void 0 === eV ? void 0 : eV.minimap) && (0, pY.jsx)(RY, {
+            view: UV.presentation.minimap,
+            navigation: xV.navigation,
+            controller: xV.map
           }),
-          children: (0, QS.jsx)(FS, {
-            controller: iM.quests,
+          children: (0, pY.jsx)(LY, {
+            controller: xV.quests,
             surface: "hud"
           })
-        }), (0, QS.jsx)(ua, {
-          controller: iM.navigation
-        }), (0, QS.jsx)(Da, {
-          controller: iM.portalTransit
-        }), (0, QS.jsx)(Ba, {
-          controller: iM.dailyReward
-        }), (0, QS.jsx)(ca, {
-          controller: iM.mailbox
-        }), (0, QS.jsx)(MP, {
-          controller: iM.magmaward
-        }), (0, QS.jsx)(rP, {
-          controller: iM.glowtide
-        }), (0, QS.jsx)(Fj, {
-          controller: iM.passage
-        }), (0, QS.jsx)(jP, {
-          controller: iM.tideCharts
-        }), (0, QS.jsx)(iP, {
-          controller: iM.glowMeter
-        }), (0, QS.jsx)(ia, {
-          controller: iM.reachLog
-        }), (0, QS.jsx)(OP, {
-          controller: iM.hushWait
-        }), (0, QS.jsx)(Vj, {
-          controller: iM.lampLight
-        }), (0, QS.jsx)(ZS, {
-          controller: iM.skills,
+        }), (0, pY.jsx)(Xy, {
+          controller: xV.navigation
+        }), (0, pY.jsx)(Ry, {
+          controller: xV.portalTransit
+        }), (0, pY.jsx)(fy, {
+          controller: xV.dailyReward
+        }), (0, pY.jsx)(Iy, {
+          controller: xV.mailbox
+        }), (0, pY.jsx)(dy, {
+          controller: xV.magmaward
+        }), (0, pY.jsx)(Oy, {
+          controller: xV.glowtide
+        }), (0, pY.jsx)(LU, {
+          controller: xV.passage
+        }), (0, pY.jsx)(Jp, {
+          controller: xV.tideCharts
+        }), (0, pY.jsx)(Vp, {
+          controller: xV.glowMeter
+        }), (0, pY.jsx)(Vy, {
+          controller: xV.reachLog
+        }), (0, pY.jsx)(ep, {
+          controller: xV.hushWait
+        }), (0, pY.jsx)(SU, {
+          controller: xV.lampLight
+        }), (0, pY.jsx)(DY, {
+          controller: xV.skills,
           surface: "hud"
         })]
       })
     }
 
-    function nP(MM) {
+    function yp(VV) {
       let {
-        controller: rM
-      } = MM;
-      return (0, QS.jsxs)(QS.Fragment, {
-        children: [(0, QS.jsx)(sS, {
-          controller: rM.map,
-          navigation: rM.navigation
-        }), (0, QS.jsx)(ZS, {
-          controller: rM.skills,
+        controller: eV
+      } = VV;
+      return (0, pY.jsxs)(pY.Fragment, {
+        children: [(0, pY.jsx)(WY, {
+          controller: eV.map,
+          navigation: eV.navigation
+        }), (0, pY.jsx)(DY, {
+          controller: eV.skills,
           surface: "menu"
-        }), (0, QS.jsx)(FS, {
-          controller: rM.quests,
+        }), (0, pY.jsx)(LY, {
+          controller: eV.quests,
           surface: "menu"
-        }), (0, QS.jsx)(bj, {
-          controller: rM.dungeons
-        }), (0, QS.jsx)(gj, {
-          controller: rM.collections
-        }), (0, QS.jsx)(pj, {
-          controller: rM.questGraph
-        }), (0, QS.jsx)(Zj, {
-          controller: rM.forge
-        }), (0, QS.jsx)(xj, {
-          controller: rM.smuggler
-        }), (0, QS.jsx)(Ma, {
-          controller: rM.keepersChair,
-          lampLight: rM.lampLight
-        }), (0, QS.jsx)(ea, {
-          controller: rM.reachLog,
-          regulars: rM.regulars,
-          hiddenWaters: rM.hiddenWaters
-        }), (0, QS.jsx)(aa, {
-          controller: rM.regulars
-        }), (0, QS.jsx)(Xj, {
-          controller: rM.passage
-        }), (0, QS.jsx)(aP, {
-          controller: rM.tideCharts
-        }), (0, QS.jsx)(ta, {
-          controller: rM.dialogue
-        }), (0, QS.jsx)(ga, {
-          controller: rM.autographs
+        }), (0, pY.jsx)(TU, {
+          controller: eV.dungeons
+        }), (0, pY.jsx)(NU, {
+          controller: eV.collections
+        }), (0, pY.jsx)(zU, {
+          controller: eV.questGraph
+        }), (0, pY.jsx)(DU, {
+          controller: eV.forge
+        }), (0, pY.jsx)(hU, {
+          controller: eV.smuggler
+        }), (0, pY.jsx)(dU, {
+          controller: eV.keepersChair,
+          lampLight: eV.lampLight
+        }), (0, pY.jsx)(Fy, {
+          controller: eV.reachLog,
+          regulars: eV.regulars,
+          hiddenWaters: eV.hiddenWaters
+        }), (0, pY.jsx)(Yy, {
+          controller: eV.regulars
+        }), (0, pY.jsx)(mU, {
+          controller: eV.passage
+        }), (0, pY.jsx)(Yp, {
+          controller: eV.tideCharts
+        }), (0, pY.jsx)(Ay, {
+          controller: eV.dialogue
+        }), (0, pY.jsx)(Ny, {
+          controller: eV.autographs
         })]
       })
     }
-    var QP = iM(37705);
-    const zP = si + Ni;
+    var pp = xV(37930);
+    const Qp = Wx + ox;
 
-    function LP(MM, rM) {
-      const iM = [{
+    function np(VV, eV) {
+      const xV = [{
         sound: "rpgKnifeSlice1",
-        beat: si,
+        beat: Wx,
         lead: 260,
         volume: .5,
         rate: 1
       }, {
         sound: "sweep6",
-        beat: si,
+        beat: Wx,
         lead: 140,
         volume: .35,
         rate: .85
       }, {
         sound: "rpgMetalPot1",
-        beat: si,
+        beat: Wx,
         lead: 100,
         volume: 1,
         rate: .78 + .04 * Math.random()
       }, {
         sound: "hit1",
-        beat: si,
+        beat: Wx,
         lead: 0,
         volume: .8,
         rate: .7
       }, {
         sound: "lowDrum1",
-        beat: si,
+        beat: Wx,
         lead: 60,
         volume: .6,
         rate: 1
@@ -9687,7 +9653,7 @@ export const modules = {
         rate: 1.3
       }, {
         sound: "firecracker",
-        LH: !0,
+        Pr: !0,
         beat: 420,
         lead: 160,
         volume: .25,
@@ -9695,103 +9661,103 @@ export const modules = {
         cutAfter: 500
       }, {
         sound: "fireBurn",
-        beat: zP + 150,
+        beat: Qp + 150,
         lead: 400,
         volume: .6,
         rate: 1.2
       }, {
         sound: "bigDrumSwish",
-        LH: !0,
-        beat: zP + 80,
+        Pr: !0,
+        beat: Qp + 80,
         lead: 480,
         volume: .35,
         rate: 1,
         cutAfter: 1400
       }, {
         sound: "magicAccent2",
-        beat: zP + 60,
+        beat: Qp + 60,
         lead: 180,
-        volume: .5 + .06 * MM,
-        rate: .82 + .07 * MM
+        volume: .5 + .06 * VV,
+        rate: .82 + .07 * VV
       }];
-      return MM >= 4 && iM.push({
+      return VV >= 4 && xV.push({
         sound: "exp_levelup",
-        beat: zP + 120,
+        beat: Qp + 120,
         lead: 60,
         volume: .35,
         rate: 1
-      }), rM && iM.push({
+      }), eV && xV.push({
         sound: "trumpetFlare",
-        beat: zP + 40,
+        beat: Qp + 40,
         lead: 20,
         volume: .8,
         rate: 1
-      }), iM.push({
+      }), xV.push({
         sound: "harp_pling",
-        beat: Di,
+        beat: Rx,
         lead: 40,
         volume: .2,
         rate: 1.5
-      }), iM
+      }), xV
     }
-    class mP {
-      constructor(MM) {
-        this.deps = MM, this.pending = new Map, this.localHook = null
+    class wp {
+      constructor(VV) {
+        this.deps = VV, this.pending = new Map, this.localHook = null
       }
-      hookWaiting(MM, rM) {
-        this.pending.delete(MM);
-        const iM = this.deps.now();
-        if (null === rM) {
-          var OM;
-          if ((null === (OM = this.localHook) || void 0 === OM ? void 0 : OM.hookId) === MM) {
-            const MM = iM >= this.localHook.biteAtMs - 300;
-            this.localHook = null, this.deps.onLocalWaitEnded(MM)
+      hookWaiting(VV, eV) {
+        this.pending.delete(VV);
+        const xV = this.deps.now();
+        if (null === eV) {
+          var JV;
+          if ((null === (JV = this.localHook) || void 0 === JV ? void 0 : JV.hookId) === VV) {
+            const VV = xV >= this.localHook.biteAtMs - 300;
+            this.localHook = null, this.deps.onLocalWaitEnded(VV)
           }
           return
         }
-        const SM = iM + rM;
-        this.settle(MM, SM) || (this.pending.size >= 16 && this.pending.delete(this.pending.keys().next().value), this.pending.set(MM, {
-          untilMs: iM + 1e3,
-          biteAtMs: SM
+        const YV = xV + eV;
+        this.settle(VV, YV) || (this.pending.size >= 16 && this.pending.delete(this.pending.keys().next().value), this.pending.set(VV, {
+          untilMs: xV + 1e3,
+          biteAtMs: YV
         }))
       }
       getLocalHook() {
-        var MM, rM;
-        return null !== (MM = null === (rM = this.localHook) || void 0 === rM ? void 0 : rM.hookId) && void 0 !== MM ? MM : null
+        var VV, eV;
+        return null !== (VV = null === (eV = this.localHook) || void 0 === eV ? void 0 : eV.hookId) && void 0 !== VV ? VV : null
       }
       afterRender() {
         if (0 === this.pending.size) return;
-        const MM = this.deps.now();
-        for (const [rM, {
-            untilMs: iM,
-            biteAtMs: OM
-          }] of this.pending)(this.settle(rM, OM) || MM > iM) && this.pending.delete(rM)
+        const VV = this.deps.now();
+        for (const [eV, {
+            untilMs: xV,
+            biteAtMs: JV
+          }] of this.pending)(this.settle(eV, JV) || VV > xV) && this.pending.delete(eV)
       }
       dispose() {
         this.pending.clear(), this.localHook = null
       }
-      settle(MM, rM) {
-        const iM = this.deps.getLineOwner(MM);
-        if (null === iM) return !1;
-        if (!this.deps.isLocalPlayer(iM)) return !0;
+      settle(VV, eV) {
+        const xV = this.deps.getLineOwner(VV);
+        if (null === xV) return !1;
+        if (!this.deps.isLocalPlayer(xV)) return !0;
         if (this.localHook = {
-            hookId: MM,
-            biteAtMs: rM
+            hookId: VV,
+            biteAtMs: eV
           }, !this.deps.isHushWaiting()) {
-          const [rM, iM] = this.deps.getHookPosition(MM);
-          this.deps.onCastLanded(rM, iM)
+          const [eV, xV] = this.deps.getHookPosition(VV);
+          this.deps.onCastLanded(eV, xV)
         }
         return this.deps.onLocalHookSettled(), !0
       }
     }
-    var HP = iM(4577);
-    const hP = {
+    var Zp = xV(4642);
+    const vp = {
         0: [15],
         1: [40, 60, 40],
         2: [40, 60, 40, 60, 60],
         3: [30, 50, 30, 50, 90]
       },
-      JP = {
+      rp = {
         1: {
           count: 24,
           rise: 2.5,
@@ -9808,16 +9774,16 @@ export const modules = {
           colour: [206, 145, 206]
         }
       };
-    class dP {
-      constructor(MM) {
-        this.deps = MM, this.tell = null
+    class kp {
+      constructor(VV) {
+        this.deps = VV, this.tell = null
       }
-      receiveTell(MM) {
+      receiveTell(VV) {
         let {
-          biteTellTier: rM
-        } = MM;
+          biteTellTier: eV
+        } = VV;
         this.tell = {
-          tier: rM,
+          tier: eV,
           atMs: this.deps.now(),
           burst: !1
         }, this.burstAtHook()
@@ -9825,35 +9791,35 @@ export const modules = {
       onLocalHookSettled() {
         null !== this.tell && this.deps.now() - this.tell.atMs <= 500 && this.burstAtHook()
       }
-      onLocalWaitEnded(MM) {
-        const rM = this.tell;
-        if (this.tell = null, !MM) return;
-        const iM = null !== rM && this.deps.now() - rM.atMs <= 3e3 ? rM.tier : 0;
-        this.deps.vibrate(hP[iM])
+      onLocalWaitEnded(VV) {
+        const eV = this.tell;
+        if (this.tell = null, !VV) return;
+        const xV = null !== eV && this.deps.now() - eV.atMs <= 3e3 ? eV.tier : 0;
+        this.deps.vibrate(vp[xV])
       }
       burstAtHook() {
-        const MM = this.tell,
-          rM = this.deps.getLocalHookPosition();
-        null === MM || MM.burst || null === rM || (MM.burst = !0, this.deps.playParticles(function(MM, rM) {
-          let [iM, OM, SM] = rM;
+        const VV = this.tell,
+          eV = this.deps.getLocalHookPosition();
+        null === VV || VV.burst || null === eV || (VV.burst = !0, this.deps.playParticles(function(VV, eV) {
+          let [xV, JV, YV] = eV;
           const {
-            count: jM,
-            rise: aM,
-            colour: PM
-          } = JP[MM], [nM, QM, zM] = PM;
+            count: UV,
+            rise: yV,
+            colour: pV
+          } = rp[VV], [QV, nV, wV] = pV;
           return {
             texture: "glint",
-            pos1: [iM - .3, OM, SM - .3],
-            pos2: [iM + .3, OM + .2, SM + .3],
-            dir1: [-.6, aM, -.6],
-            dir2: [.6, 1.4 * aM, .6],
+            pos1: [xV - .3, JV, YV - .3],
+            pos2: [xV + .3, JV + .2, YV + .3],
+            dir1: [-.6, yV, -.6],
+            dir2: [.6, 1.4 * yV, .6],
             minLifeTime: .5,
             maxLifeTime: .9,
             minEmitPower: 1,
             maxEmitPower: 1.6,
             minSize: .12,
             maxSize: .3,
-            manualEmitCount: jM,
+            manualEmitCount: UV,
             gravity: [0, -4, 0],
             velocityGradients: [{
               timeFraction: 0,
@@ -9866,38 +9832,38 @@ export const modules = {
             }],
             colorGradients: [{
               timeFraction: 0,
-              minColor: [nM, QM, zM, 1],
+              minColor: [QV, nV, wV, 1],
               maxColor: [255, 255, 255, 1]
             }, {
               timeFraction: 1,
-              minColor: [nM, QM, zM, 0],
-              maxColor: [nM, QM, zM, 0]
+              minColor: [QV, nV, wV, 0],
+              maxColor: [QV, nV, wV, 0]
             }],
-            blendMode: HP.d.Add,
+            blendMode: Zp.g.Add,
             hideDist: 48
           }
-        }(MM.tier, rM)))
+        }(VV.tier, eV)))
       }
     }
-    var yP = iM(1258),
-      lP = iM(2045),
-      EP = iM(30);
+    var bp = xV(1279),
+      Ep = xV(2059),
+      Bp = xV(40);
 
-    function UP(MM, rM) {
+    function jp(VV, eV) {
       return [{
         timeFraction: 0,
-        minColor: [255 * MM[0], 255 * MM[1], 255 * MM[2], 1],
-        maxColor: [255 * rM[0], 255 * rM[1], 255 * rM[2], 1]
+        minColor: [255 * VV[0], 255 * VV[1], 255 * VV[2], 1],
+        maxColor: [255 * eV[0], 255 * eV[1], 255 * eV[2], 1]
       }, {
         timeFraction: 1,
         minColor: [0, 0, 0, 1]
       }]
     }
-    const GP = [0, 0, 0],
-      CP = {
+    const qp = [0, 0, 0],
+      tp = {
         texture: "glint",
         mipmaps: !1,
-        vL: 24,
+        Jv: 24,
         minLifeTime: .18,
         maxLifeTime: .35,
         minSize: .07,
@@ -9905,23 +9871,23 @@ export const modules = {
         minEmitPower: 0,
         maxEmitPower: 0,
         emitRate: 12,
-        dir1: GP,
-        dir2: GP,
-        blendMode: HP.d.OneOne
+        dir1: qp,
+        dir2: qp,
+        blendMode: Zp.g.OneOne
       },
-      eP = {
-        ...CP,
-        colorGradients: UP([1, .88, .38], [1, .65, .15])
+      Fp = {
+        ...tp,
+        colorGradients: jp([1, .88, .38], [1, .65, .15])
       },
-      bP = {
-        ...CP,
-        colorGradients: UP([.55, .95, 1], [.9, 1, 1])
+      Tp = {
+        ...tp,
+        colorGradients: jp([.55, .95, 1], [.9, 1, 1])
       },
-      wP = [.5, .5, .5],
-      tP = {
+      Pp = [.5, .5, .5],
+      Ap = {
         texture: "glint",
         mipmaps: !1,
-        vL: 24,
+        Jv: 24,
         minLifeTime: .2,
         maxLifeTime: .4,
         minSize: .12,
@@ -9929,24 +9895,24 @@ export const modules = {
         minEmitPower: .5,
         maxEmitPower: 1.5,
         emitRate: 0,
-        colorGradients: UP([1, .12, .12], [1, .35, .2]),
-        blendMode: HP.d.OneOne
+        colorGradients: jp([1, .12, .12], [1, .35, .2]),
+        blendMode: Zp.g.OneOne
       };
-    class gP {
+    class Np {
       constructor() {
         this.drops = new Map
       }
-      GL(MM, rM) {
-        if ("overflowFlash" === rM.kind) {
-          const [iM, OM, SM] = rM.position, jM = MM.createParticles(tP, {
-            pos: [iM, OM, SM],
-            half: wP
+      RZ(VV, eV) {
+        if ("overflowFlash" === eV.kind) {
+          const [xV, JV, YV] = eV.position, UV = VV.createParticles(Ap, {
+            pos: [xV, JV, YV],
+            half: Pp
           });
-          return jM.emit(18), void jM.stop()
+          return UV.emit(18), void UV.stop()
         }
-        this.drops.has(rM.itemId) || this.drops.set(rM.itemId, {
-          owner: rM.owner,
-          cosmetic: rM.cosmetic,
+        this.drops.has(eV.itemId) || this.drops.set(eV.itemId, {
+          owner: eV.owner,
+          cosmetic: eV.cosmetic,
           pickupDelayCleared: !1,
           seen: !1,
           markedAt: performance.now(),
@@ -9955,105 +9921,105 @@ export const modules = {
           particles: null
         })
       }
-      bL(MM) {
+      iZ(VV) {
         if (0 === this.drops.size) return;
-        const rM = performance.now(),
-          iM = MM.getCameraPosition();
-        let OM = 0;
-        for (const jM of this.drops.values()) null !== jM.particles && OM++;
-        for (const [jM, aM] of this.drops) {
-          const PM = MM.getPositionView(jM);
-          if (null === PM) {
-            var SM;
-            if (aM.seen || rM - aM.markedAt > 5e3) null !== aM.particles && OM--, null === (SM = aM.particles) || void 0 === SM || SM.stop(), this.drops.delete(jM);
+        const eV = performance.now(),
+          xV = VV.getCameraPosition();
+        let JV = 0;
+        for (const UV of this.drops.values()) null !== UV.particles && JV++;
+        for (const [UV, yV] of this.drops) {
+          const pV = VV.getPositionView(UV);
+          if (null === pV) {
+            var YV;
+            if (yV.seen || eV - yV.markedAt > 5e3) null !== yV.particles && JV--, null === (YV = yV.particles) || void 0 === YV || YV.stop(), this.drops.delete(UV);
             continue
           }
-          aM.cosmetic || !MM.isLocalPlayer(aM.owner) || aM.pickupDelayCleared || (MM.clearPickupDelay(jM), aM.pickupDelayCleared = !0);
-          const nM = aM.lastPosition,
-            QM = aM.seen && (PM[0] - nM[0]) ** 2 + (PM[1] - nM[1]) ** 2 + (PM[2] - nM[2]) ** 2 > 4e-4,
-            zM = (PM[0] - iM[0]) ** 2 + (PM[1] - iM[1]) ** 2 + (PM[2] - iM[2]) ** 2 < 2025;
-          aM.seen = !0, nM[0] = PM[0], nM[1] = PM[1], nM[2] = PM[2], QM && (aM.lastMovingAt = rM), null !== aM.particles && (!zM || rM - aM.lastMovingAt > 500) && (aM.particles.stop(), aM.particles = null, OM--), QM && zM && null === aM.particles && OM < 32 && (aM.particles = MM.createParticles(aM.cosmetic ? bP : eP, {
-            pos: PM
-          }), OM++), null !== aM.particles && (aM.particles.moveTo(PM), aM.particles.setEmitRate(QM ? 12 : 0)), !QM && null === aM.particles && rM - Math.max(aM.lastMovingAt, aM.markedAt) > 2e3 && this.drops.delete(jM)
+          yV.cosmetic || !VV.isLocalPlayer(yV.owner) || yV.pickupDelayCleared || (VV.clearPickupDelay(UV), yV.pickupDelayCleared = !0);
+          const QV = yV.lastPosition,
+            nV = yV.seen && (pV[0] - QV[0]) ** 2 + (pV[1] - QV[1]) ** 2 + (pV[2] - QV[2]) ** 2 > 4e-4,
+            wV = (pV[0] - xV[0]) ** 2 + (pV[1] - xV[1]) ** 2 + (pV[2] - xV[2]) ** 2 < 2025;
+          yV.seen = !0, QV[0] = pV[0], QV[1] = pV[1], QV[2] = pV[2], nV && (yV.lastMovingAt = eV), null !== yV.particles && (!wV || eV - yV.lastMovingAt > 500) && (yV.particles.stop(), yV.particles = null, JV--), nV && wV && null === yV.particles && JV < 32 && (yV.particles = VV.createParticles(yV.cosmetic ? Tp : Fp, {
+            pos: pV
+          }), JV++), null !== yV.particles && (yV.particles.moveTo(pV), yV.particles.setEmitRate(nV ? 12 : 0)), !nV && null === yV.particles && eV - Math.max(yV.lastMovingAt, yV.markedAt) > 2e3 && this.drops.delete(UV)
         }
       }
       dispose() {
-        for (const rM of this.drops.values()) {
-          var MM;
-          null === (MM = rM.particles) || void 0 === MM || MM.stop()
+        for (const eV of this.drops.values()) {
+          var VV;
+          null === (VV = eV.particles) || void 0 === VV || VV.stop()
         }
         this.drops.clear()
       }
     }
-    var uP = iM(181);
-    const RP = uP.f.jy * uP.f.playerEyeToHeightRatio;
-    class pP {
-      constructor(MM) {
-        this.host = MM, this.lava = [], this.loop = null, this.nextUpdateAt = 0
+    var Xp = xV(206);
+    const Mp = Xp.f.nB * Xp.f.playerEyeToHeightRatio;
+    class zp {
+      constructor(VV) {
+        this.host = VV, this.lava = [], this.loop = null, this.nextUpdateAt = 0
       }
-      GL(MM) {
-        this.lava = MM, this.nextUpdateAt = 0
+      RZ(VV) {
+        this.lava = VV, this.nextUpdateAt = 0
       }
-      bL() {
-        var MM;
-        const rM = this.host.now();
-        if (rM < this.nextUpdateAt) return;
-        this.nextUpdateAt = rM + 250;
-        const iM = this.host.playerPosition(),
-          OM = iM && this.findNearest([iM[0], iM[1] + RP, iM[2]]);
-        if (!OM || OM.distance >= 40) return void this.stop();
-        const SM = .5 * Math.min(1, (40 - OM.distance) / 8);
-        this.loop ? this.loop.setRelativeVolume(SM) : this.loop = this.host.play("lavaFlow", SM, OM.position, 40 + RP, 9, !0), null === (MM = this.loop) || void 0 === MM || MM.setPosition(OM.position)
+      iZ() {
+        var VV;
+        const eV = this.host.now();
+        if (eV < this.nextUpdateAt) return;
+        this.nextUpdateAt = eV + 250;
+        const xV = this.host.playerPosition(),
+          JV = xV && this.findNearest([xV[0], xV[1] + Mp, xV[2]]);
+        if (!JV || JV.distance >= 40) return void this.stop();
+        const YV = .5 * Math.min(1, (40 - JV.distance) / 8);
+        this.loop ? this.loop.setRelativeVolume(YV) : this.loop = this.host.play("lavaFlow", YV, JV.position, 40 + Mp, 9, !0), null === (VV = this.loop) || void 0 === VV || VV.setPosition(JV.position)
       }
       dispose() {
         this.stop(), this.lava = []
       }
       stop() {
-        var MM;
-        null === (MM = this.loop) || void 0 === MM || MM.stop(), this.loop = null
+        var VV;
+        null === (VV = this.loop) || void 0 === VV || VV.stop(), this.loop = null
       }
-      findNearest(MM) {
-        let rM = -1,
-          iM = 1 / 0;
-        for (let OM = 0; OM < this.lava.length; OM += 3) {
-          const SM = this.lava[OM] - MM[0],
-            jM = this.lava[OM + 1] - MM[1],
-            aM = this.lava[OM + 2] - MM[2],
-            PM = SM * SM + jM * jM + aM * aM;
-          PM < iM && (iM = PM, rM = OM)
+      findNearest(VV) {
+        let eV = -1,
+          xV = 1 / 0;
+        for (let JV = 0; JV < this.lava.length; JV += 3) {
+          const YV = this.lava[JV] - VV[0],
+            UV = this.lava[JV + 1] - VV[1],
+            yV = this.lava[JV + 2] - VV[2],
+            pV = YV * YV + UV * UV + yV * yV;
+          pV < xV && (xV = pV, eV = JV)
         }
-        return rM < 0 ? null : {
-          position: [this.lava[rM], this.lava[rM + 1], this.lava[rM + 2]],
-          distance: Math.sqrt(iM)
+        return eV < 0 ? null : {
+          position: [this.lava[eV], this.lava[eV + 1], this.lava[eV + 2]],
+          distance: Math.sqrt(xV)
         }
       }
     }
-    var WP = iM(2022),
-      sP = iM(39676);
-    const DP = {
+    var Gp = xV(2033),
+      Wp = xV(39833);
+    const Rp = {
       "Grey Portal": "Gray"
     };
-    for (const AP of LM.Ec) DP[`${AP} Portal`] = AP;
-    const kP = Object.keys(DP),
-      ZP = Object.fromEntries(kP.map((MM => [MM, (0, LM.X)(LM.L[`${(0,LM.me)(DP[MM])}Team`])])));
-    Object.fromEntries(kP.map((MM => [MM, LM.L[`${(0,LM.me)(DP[MM])}UiText`]])));
-    class oP {
-      constructor(MM, rM) {
-        this.presentation = MM, this.portal = rM, this.unlocked = void 0
+    for (const cp of ZV.Lc) Rp[`${cp} Portal`] = cp;
+    const gp = Object.keys(Rp),
+      Dp = Object.fromEntries(gp.map((VV => [VV, (0, ZV.V)(ZV.E[`${(0,ZV.ue)(Rp[VV])}Team`])])));
+    Object.fromEntries(gp.map((VV => [VV, ZV.E[`${(0,ZV.ue)(Rp[VV])}UiText`]])));
+    class ip {
+      constructor(VV, eV) {
+        this.presentation = VV, this.portal = eV, this.unlocked = void 0
       }
-      GL(MM) {
-        const rM = !1 === this.unlocked && MM;
-        this.unlocked = MM, this.bL();
+      RZ(VV) {
+        const eV = !1 === this.unlocked && VV;
+        this.unlocked = VV, this.iZ();
         const {
-          min: iM,
-          max: OM,
-          unlockedBlock: SM
+          min: xV,
+          max: JV,
+          unlockedBlock: YV
         } = this.portal;
-        if (rM && this.presentation.hasChunk(...iM)) {
-          const [MM, rM, jM] = ZP[SM];
+        if (eV && this.presentation.hasChunk(...xV)) {
+          const [VV, eV, UV] = Dp[YV];
           this.presentation.playParticles({
-            pos1: [...iM],
-            pos2: OM.map((MM => MM + 1)),
+            pos1: [...xV],
+            pos2: JV.map((VV => VV + 1)),
             dir1: [-1, 0, -1],
             dir2: [1, 1, 1],
             texture: "glint",
@@ -10068,8 +10034,8 @@ export const modules = {
             gravity: [0, .5, 0],
             colorGradients: [{
               timeFraction: 0,
-              minColor: [MM, rM, jM, 1],
-              maxColor: [Math.min(255, MM + 55), Math.min(255, rM + 55), Math.min(255, jM + 90), 1]
+              minColor: [VV, eV, UV, 1],
+              maxColor: [Math.min(255, VV + 55), Math.min(255, eV + 55), Math.min(255, UV + 90), 1]
             }],
             velocityGradients: [{
               timeFraction: 0,
@@ -10080,332 +10046,332 @@ export const modules = {
           })
         }
       }
-      bL() {
-        var MM;
-        const rM = this.unlocked ? this.portal.unlockedBlock : null !== (MM = this.portal.lockedBlock) && void 0 !== MM ? MM : "Light Gray Portal",
+      iZ() {
+        var VV;
+        const eV = this.unlocked ? this.portal.unlockedBlock : null !== (VV = this.portal.lockedBlock) && void 0 !== VV ? VV : "Light Gray Portal",
           {
-            min: iM,
-            max: OM
+            min: xV,
+            max: JV
           } = this.portal;
-        for (let SM = iM[0]; SM <= OM[0]; SM++)
-          for (let MM = iM[1]; MM <= OM[1]; MM++)
-            for (let jM = iM[2]; jM <= OM[2]; jM++) this.presentation.hasChunk(SM, MM, jM) && this.presentation.sE(SM, MM, jM) !== rM && this.presentation.cW(SM, MM, jM, rM)
+        for (let YV = xV[0]; YV <= JV[0]; YV++)
+          for (let VV = xV[1]; VV <= JV[1]; VV++)
+            for (let UV = xV[2]; UV <= JV[2]; UV++) this.presentation.hasChunk(YV, VV, UV) && this.presentation.mq(YV, VV, UV) !== eV && this.presentation.gR(YV, VV, UV, eV)
       }
     }
-    var fP = iM(39565);
-    iM(39552);
-    const YP = {
+    var Cp = xV(39720);
+    xV(39698);
+    const ap = {
         farming_1: {
-          raises: MM => "NPC" === MM.type && "chef" === MM.variation,
+          raises: VV => "NPC" === VV.type && "chef" === VV.variation,
           rise: .4
         },
         fishing_1: {
-          raises: MM => "Draugr Warper" === MM.type,
+          raises: VV => "Draugr Warper" === VV.type,
           rise: .4
         }
       },
-      NP = (MM, rM, iM, SM) => {
+      op = (VV, eV, xV, YV) => {
         let {
-          localPlayerId: jM
-        } = SM;
-        const aM = new VO({
-          translate: (MM, rM) => (0, PS.x)(yP.e.get().getCurrentLanguageCode(), MM, rM),
-          translateWithIcons: (MM, rM) => (0, PS.r)(yP.e.get().getCurrentLanguageCode(), MM, rM),
-          setMenuOpen: MM => {
-            MM ? (0, FM.w)() : (0, FM.k)()
+          localPlayerId: UV
+        } = YV;
+        const yV = new SJ({
+          translate: (VV, eV) => (0, UY.u)(bp.c.get().getCurrentLanguageCode(), VV, eV),
+          translateWithIcons: (VV, eV) => (0, UY.r)(bp.c.get().getCurrentLanguageCode(), VV, eV),
+          setMenuOpen: VV => {
+            VV ? (0, mV.r)() : (0, mV.i)()
           },
-          dismissMenu: FM.n,
-          publishSkills: MM => {
-            BM.i.Tz(Zr, MM, !0)
+          dismissMenu: mV.m,
+          publishSkills: VV => {
+            KV.h.QZ(Ce, VV, !0)
           },
-          publishQuests: MM => {
-            BM.i.Tz(Nr, MM, !0)
+          publishQuests: VV => {
+            KV.h.QZ(he, VV, !0)
           },
-          publishQuestNotification: MM => {
-            BM.i.Tz(Ar, MM, !0)
+          publishQuestNotification: VV => {
+            KV.h.QZ(le, VV, !0)
           },
-          publishDungeons: MM => {
-            BM.i.Tz(Fr, MM, !0)
+          publishDungeons: VV => {
+            KV.h.QZ(me, VV, !0)
           },
-          publishCollections: MM => {
-            BM.i.Tz(mi, MM, !0)
+          publishCollections: VV => {
+            KV.h.QZ(vx, VV, !0)
           },
-          publishMap: MM => {
-            BM.i.Tz(QM, MM, !0)
+          publishMap: VV => {
+            KV.h.QZ(nV, VV, !0)
           },
-          publishHud: MM => {
-            BM.i.Tz(KO, MM, !0)
+          publishHud: VV => {
+            KV.h.QZ(HJ, VV, !0)
           },
-          publishPortalTransit: MM => {
-            BM.i.Tz(Ji, MM, !0)
+          publishPortalTransit: VV => {
+            KV.h.QZ(kx, VV, !0)
           },
-          isLoadingScreenUp: () => rS.d.get("loadingOverlayVisible"),
-          publishDailyReward: MM => {
-            BM.i.Tz(li, MM, !0)
+          isLoadingScreenUp: () => OJ.b.get("loadingOverlayVisible"),
+          publishDailyReward: VV => {
+            KV.h.QZ(Bx, VV, !0)
           },
-          publishMailbox: MM => {
-            BM.i.Tz(ei, MM, !0)
+          publishMailbox: VV => {
+            KV.h.QZ(Tx, VV, !0)
           },
-          publishQuestGraph: MM => {
-            BM.i.Tz(wi, MM, !0)
+          publishQuestGraph: VV => {
+            KV.h.QZ(Ax, VV, !0)
           },
-          publishForge: MM => {
-            BM.i.Tz(Ii, MM, !0)
+          publishForge: VV => {
+            KV.h.QZ(Kx, VV, !0)
           },
-          publishSmuggler: MM => {
-            BM.i.Tz(Ti, MM, !0)
+          publishSmuggler: VV => {
+            KV.h.QZ(sx, VV, !0)
           },
-          publishKeepersChair: MM => {
-            BM.i.Tz(aO, MM, !0)
+          publishKeepersChair: VV => {
+            KV.h.QZ(YJ, VV, !0)
           },
-          publishReachLog: MM => {
-            BM.i.Tz(nO, MM, !0)
+          publishReachLog: VV => {
+            KV.h.QZ(yJ, VV, !0)
           },
-          publishLampLight: MM => {
-            BM.i.Tz(hO, MM, !0)
+          publishLampLight: VV => {
+            KV.h.QZ(vJ, VV, !0)
           },
-          publishMagmaward: MM => {
-            BM.i.Tz(dO, MM, !0)
+          publishMagmaward: VV => {
+            KV.h.QZ(kJ, VV, !0)
           },
-          publishGlowtide: MM => {
-            BM.i.Tz(lO, MM, !0)
+          publishGlowtide: VV => {
+            KV.h.QZ(EJ, VV, !0)
           },
-          publishGlowMeter: MM => {
-            BM.i.Tz(UO, MM, !0)
+          publishGlowMeter: VV => {
+            KV.h.QZ(jJ, VV, !0)
           },
-          publishHushWait: MM => {
-            BM.i.Tz(CO, MM, !0)
+          publishHushWait: VV => {
+            KV.h.QZ(tJ, VV, !0)
           },
-          publishPassage: MM => {
-            BM.i.Tz(MO, MM, !0)
+          publishPassage: VV => {
+            KV.h.QZ(dx, VV, !0)
           },
-          publishTideCharts: MM => {
-            BM.i.Tz(bO, MM, !0)
+          publishTideCharts: VV => {
+            KV.h.QZ(TJ, VV, !0)
           },
-          publishRegulars: MM => {
-            BM.i.Tz(sO, MM, !0)
+          publishRegulars: VV => {
+            KV.h.QZ(WJ, VV, !0)
           },
-          publishHiddenWaters: MM => {
-            BM.i.Tz(fO, MM, !0)
+          publishHiddenWaters: VV => {
+            KV.h.QZ(CJ, VV, !0)
           },
-          publishDialogue: MM => {
-            BM.i.Tz(NO, MM, !0)
+          publishDialogue: VV => {
+            KV.h.QZ(oJ, VV, !0)
           },
-          publishAutographs: MM => {
-            BM.i.Tz(BO, MM, !0)
+          publishAutographs: VV => {
+            KV.h.QZ(fJ, VV, !0)
           },
-          onDailyRewardStarted: MM => {
-            sM.playSound(jM, MM.day === wM ? "trumpetFlare" : "chestOpen", .8, 1)
+          onDailyRewardStarted: VV => {
+            gV.playSound(UV, VV.day === NV ? "trumpetFlare" : "chestOpen", .8, 1)
           },
-          onDailyRewardCoinLanded: (MM, rM) => {
-            sM.playSound(jM, "exp_collect", .35, 1 + .6 * MM / (rM - 1)), BM.i.Tz(Ei, MM === rM - 1)
+          onDailyRewardCoinLanded: (VV, eV) => {
+            gV.playSound(UV, "exp_collect", .35, 1 + .6 * VV / (eV - 1)), KV.h.QZ(jx, VV === eV - 1)
           },
-          onDailyRewardItemLanded: MM => {
-            sM.playSound(jM, "pickUp", .6, 1 + .15 * MM)
+          onDailyRewardItemLanded: VV => {
+            gV.playSound(UV, "pickUp", .6, 1 + .15 * VV)
           },
           onMailboxStarted: () => {
-            sM.playSound(jM, "rpgMetalClick", .6, 1), sM.playSound(jM, "rpgBookFlip1", .7, 1)
+            gV.playSound(UV, "rpgMetalClick", .6, 1), gV.playSound(UV, "rpgBookFlip1", .7, 1)
           },
           onDailyRewardFinished: () => {
-            sM.sendCommand("skyblockDailyRewardDone")
+            gV.sendCommand("skyblockDailyRewardDone")
           },
-          journeyStorage: EP.k,
-          requestTracking: MM => {
-            sM.sendCommand(`quests track ${MM}`)
+          journeyStorage: Bp.q,
+          requestTracking: VV => {
+            gV.sendCommand(`quests track ${VV}`)
           },
-          requestDungeonEnter: (MM, rM) => {
-            sM.sendCommand(`dungeonEnter ${MM} ${rM}`)
+          requestDungeonEnter: (VV, eV) => {
+            gV.sendCommand(`dungeonEnter ${VV} ${eV}`)
           },
-          requestQuestJump: MM => {
-            sM.sendCommand(`${WM} jump ${MM}`)
+          requestQuestJump: VV => {
+            gV.sendCommand(`${RV} jump ${VV}`)
           },
-          requestQuestArrive: (MM, rM) => {
-            const iM = `${WM} arrive ${MM}`;
-            sM.sendCommand(rM ? `${iM} complete` : iM)
+          requestQuestArrive: (VV, eV) => {
+            const xV = `${RV} arrive ${VV}`;
+            gV.sendCommand(eV ? `${xV} complete` : xV)
           },
-          requestForge: MM => {
+          requestForge: VV => {
             let {
-              blade: rM,
-              guard: iM,
-              handle: OM
-            } = MM;
-            sM.sendCommand(`forge ${rM} ${iM} ${OM}`)
+              blade: eV,
+              guard: xV,
+              handle: JV
+            } = VV;
+            gV.sendCommand(`forge ${eV} ${xV} ${JV}`)
           },
           requestDialogue: () => {
-            sM.sendCommand("quests dialogue")
+            gV.sendCommand("quests dialogue")
           },
-          requestSmuggle: (MM, rM) => {
-            sM.sendCommand(`smuggle ${MM} ${rM}`)
+          requestSmuggle: (VV, eV) => {
+            gV.sendCommand(`smuggle ${VV} ${eV}`)
           },
-          requestKeepersChairAim: MM => {
-            sM.sendCommand(`keeperschair-aim ${MM}`)
+          requestKeepersChairAim: VV => {
+            gV.sendCommand(`keeperschair-aim ${VV}`)
           },
           requestReachLogOpen: () => {
-            sM.sendCommand("reachlog-open")
+            gV.sendCommand("reachlog-open")
           },
-          requestLampLight: MM => {
-            sM.sendCommand(`${MM}`)
+          requestLampLight: VV => {
+            gV.sendCommand(`${VV}`)
           },
-          requestTravel: MM => {
-            sM.sendCommand(`map travel ${MM.kind} ${MM.id} ${MM.requestId}`)
+          requestTravel: VV => {
+            gV.sendCommand(`map travel ${VV.kind} ${VV.id} ${VV.requestId}`)
           }
         });
-        let PM, nM, zM, mM, HM, lM, EM, UM, GM, bM, tM, uM, RM;
-        const pM = new gP;
-        let sM, oM = null;
-        const NM = YP[null !== iM && void 0 !== iM ? iM : ""],
-          AM = (MM, rM) => {
-            null !== NM && void 0 !== NM && NM.raises(rM) && sM.setNametagOffset(MM, NM.rise)
+        let pV, QV, wV, vV, rV, jV, qV, tV, FV, AV, XV, zV, GV;
+        const WV = new Np;
+        let gV, aV = null;
+        const hV = ap[null !== xV && void 0 !== xV ? xV : ""],
+          lV = (VV, eV) => {
+            null !== hV && void 0 !== hV && hV.raises(eV) && gV.setNametagOffset(VV, hV.rise)
           },
-          IM = new dP({
+          uV = new kp({
             getLocalHookPosition: () => {
-              const MM = KM.getLocalHook();
-              return null !== MM && sM.checkValid(MM) ? sM.XE(MM) : null
+              const VV = sV.getLocalHook();
+              return null !== VV && gV.checkValid(VV) ? gV.YF(VV) : null
             },
-            playParticles: MM => {
-              sM.playParticleEffect(MM)
+            playParticles: VV => {
+              gV.playParticleEffect(VV)
             },
-            vibrate: MM => {
-              XM.e.play("fishBite", MM)
+            vibrate: VV => {
+              HV.g.play("fishBite", VV)
             },
             now: () => performance.now()
           }),
-          KM = new mP({
-            getLineOwner: MM => sM.checkValid(MM) ? sM.getLineOwner(MM) : null,
-            isLocalPlayer: MM => sM.isLocalPlayer(MM),
-            getHookPosition: MM => {
-              const [rM, , iM] = sM.XE(MM);
-              return [rM, iM]
+          sV = new wp({
+            getLineOwner: VV => gV.checkValid(VV) ? gV.getLineOwner(VV) : null,
+            isLocalPlayer: VV => gV.isLocalPlayer(VV),
+            getHookPosition: VV => {
+              const [eV, , xV] = gV.YF(VV);
+              return [eV, xV]
             },
             isHushWaiting: () => {
-              var MM;
-              return "waiting" === (null === (MM = aM.hushWait.getSnapshot()) || void 0 === MM ? void 0 : MM.phase)
+              var VV;
+              return "waiting" === (null === (VV = yV.hushWait.getSnapshot()) || void 0 === VV ? void 0 : VV.phase)
             },
-            onCastLanded: (MM, rM) => {
-              aM.tideCharts.castLanded(MM, rM)
+            onCastLanded: (VV, eV) => {
+              yV.tideCharts.castLanded(VV, eV)
             },
             onLocalHookSettled: () => {
-              IM.onLocalHookSettled()
+              uV.onLocalHookSettled()
             },
-            onLocalWaitEnded: MM => {
-              IM.onLocalWaitEnded(MM)
+            onLocalWaitEnded: VV => {
+              uV.onLocalWaitEnded(VV)
             },
             now: () => performance.now()
           }),
-          qM = new pP({
+          SV = new zp({
             now: () => performance.now(),
-            playerPosition: () => sM.checkValid(jM) ? sM.XE(jM) : null,
-            play: (MM, rM, iM, OM, SM, aM) => sM.playSound(jM, MM, rM, 1, {
-              kS: iM,
-              maxHearDist: OM,
-              refDistance: SM
-            }, aM)
+            playerPosition: () => gV.checkValid(UV) ? gV.YF(UV) : null,
+            play: (VV, eV, xV, JV, YV, yV) => gV.playSound(UV, VV, eV, 1, {
+              cY: xV,
+              maxHearDist: JV,
+              refDistance: YV
+            }, yV)
           }),
-          TM = new Map;
-        let VM;
+          IV = new Map;
+        let dV;
         return {
-          onCreate: MM => {
-            if (sM = MM, oM = new sP.SkyblockEntityFacing(MM, NM ? AM : null), aM.portalTransit.resumeArrival(null !== iM && void 0 !== iM ? iM : null), (null !== iM && void 0 !== iM ? iM : OM) === OM) {
-              let MM = -1 / 0;
-              VM = BM.i.subscribe("toggleMenu", (rM => {
-                const iM = performance.now();
-                "inventory|Workbench" !== rM || "cross_to_hub" !== aM.quests.getTrackedQuestId() || iM - MM < 1e4 || (MM = iM, sM.sendCommand("skyblockWorkbenchOpened"))
+          onCreate: VV => {
+            if (gV = VV, aV = new Wp.SkyblockEntityFacing(VV, hV ? lV : null), yV.portalTransit.resumeArrival(null !== xV && void 0 !== xV ? xV : null), (null !== xV && void 0 !== xV ? xV : JV) === JV) {
+              let VV = -1 / 0;
+              dV = KV.h.subscribe("toggleMenu", (eV => {
+                const xV = performance.now();
+                "inventory|Workbench" !== eV || "cross_to_hub" !== yV.quests.getTrackedQuestId() || xV - VV < 1e4 || (VV = xV, gV.sendCommand("skyblockWorkbenchOpened"))
               }))
             }
-            for (const [OM, SM] of Object.entries(null !== (rM = DM[null !== iM && void 0 !== iM ? iM : ""]) && void 0 !== rM ? rM : {})) {
-              var rM;
-              TM.set(OM, new oP({
-                hasChunk: (rM, iM, OM) => MM.isBlockInLoadedChunk(rM, iM, OM),
-                sE: (rM, iM, OM) => MM.blockIdToBlockName(MM.getBlockId(rM, iM, OM)),
-                cW: (rM, iM, OM, SM) => {
-                  MM.cW(rM, iM, OM, SM)
+            for (const [JV, YV] of Object.entries(null !== (eV = DV[null !== xV && void 0 !== xV ? xV : ""]) && void 0 !== eV ? eV : {})) {
+              var eV;
+              IV.set(JV, new ip({
+                hasChunk: (eV, xV, JV) => VV.isBlockInLoadedChunk(eV, xV, JV),
+                mq: (eV, xV, JV) => VV.blockIdToBlockName(VV.getBlockId(eV, xV, JV)),
+                gR: (eV, xV, JV, YV) => {
+                  VV.gR(eV, xV, JV, YV)
                 },
-                playParticles: rM => {
-                  MM.playParticleEffect(rM)
+                playParticles: eV => {
+                  VV.playParticleEffect(eV)
                 }
-              }, SM))
+              }, YV))
             }
-            RM = (0, WP.e)((MM => (0, br.f)(MM) ? (0, br.d)(MM) : null)), aM.resolveItemName = (rM, iM) => {
-              const OM = MM.getItemStat(jM, rM, "displayName");
-              return OM && "object" === typeof OM && "translationKey" in OM ? iM(OM.translationKey, (0, PS.o)(OM.params, lP.c.shown)) : "string" === typeof OM ? iM(OM) : rM
-            }, aM.quests.notifications.onShown = MM => {
-              "quest" === MM ? sM.playSound(jM, "magicAccent1", 1, 1) : "skillLevel" === MM ? sM.playSound(jM, "magicAccent1", 1, .6) : "landmark" === MM ? sM.playSound(jM, "trumpetFlare", 1, .6) : "npcNote" === MM ? sM.playSound(jM, "magicAccent2", .8, 1.1) : "started" === MM ? sM.playSound(jM, (0, QP.f)("bigDrumSwish"), 1, 1) : sM.playSound(jM, (0, QP.f)("rpgHandleSmallLeather"), 1, 1)
-            }, aM.forge.onPartSelected = () => {
-              sM.playSound(jM, "rpgMetalClick", .6, .9 + .2 * Math.random())
-            }, aM.forge.onOpened = () => {
-              ! function(MM) {
-                MM.preloadSounds(LP(4, !0).map((MM => MM.sound)))
-              }(MM)
-            }, aM.forge.onForgeStarted = (rM, iM, OM) => function(MM, rM, iM, OM, SM) {
-              const jM = [],
-                aM = [],
-                PM = iM => {
-                  const OM = MM.playSound(rM, iM.LH ? (0, QP.f)(iM.sound) : iM.sound, iM.volume, iM.rate);
-                  OM && (aM.push(OM), void 0 !== iM.cutAfter && jM.push(setTimeout((() => {
-                    OM.fade(OM.getVolume(), 0, 300)
-                  }), iM.cutAfter)))
+            GV = (0, Gp.d)((VV => (0, Ae.g)(VV) ? (0, Ae.c)(VV) : null)), yV.resolveItemName = (eV, xV) => {
+              const JV = VV.getItemStat(UV, eV, "displayName");
+              return JV && "object" === typeof JV && "translationKey" in JV ? xV(JV.translationKey, (0, UY.p)(JV.params, Ep.e.shown)) : "string" === typeof JV ? xV(JV) : eV
+            }, yV.quests.notifications.onShown = VV => {
+              "quest" === VV ? gV.playSound(UV, "magicAccent1", 1, 1) : "skillLevel" === VV ? gV.playSound(UV, "magicAccent1", 1, .6) : "landmark" === VV ? gV.playSound(UV, "trumpetFlare", 1, .6) : "npcNote" === VV ? gV.playSound(UV, "magicAccent2", .8, 1.1) : "started" === VV ? gV.playSound(UV, (0, pp.f)("bigDrumSwish"), 1, 1) : gV.playSound(UV, (0, pp.f)("rpgHandleSmallLeather"), 1, 1)
+            }, yV.forge.onPartSelected = () => {
+              gV.playSound(UV, "rpgMetalClick", .6, .9 + .2 * Math.random())
+            }, yV.forge.onOpened = () => {
+              ! function(VV) {
+                VV.preloadSounds(np(4, !0).map((VV => VV.sound)))
+              }(VV)
+            }, yV.forge.onForgeStarted = (eV, xV, JV) => function(VV, eV, xV, JV, YV) {
+              const UV = [],
+                yV = [],
+                pV = xV => {
+                  const JV = VV.playSound(eV, xV.Pr ? (0, pp.f)(xV.sound) : xV.sound, xV.volume, xV.rate);
+                  JV && (yV.push(JV), void 0 !== xV.cutAfter && UV.push(setTimeout((() => {
+                    JV.fade(JV.getVolume(), 0, 300)
+                  }), xV.cutAfter)))
                 };
-              for (const nM of LP(iM, OM)) SM ? jM.push(setTimeout((() => {
-                PM(nM)
-              }), Math.max(0, nM.beat - nM.lead / nM.rate))) : nM.beat !== si && "magicAccent2" !== nM.sound && "trumpetFlare" !== nM.sound || PM(nM);
+              for (const QV of np(xV, JV)) YV ? UV.push(setTimeout((() => {
+                pV(QV)
+              }), Math.max(0, QV.beat - QV.lead / QV.rate))) : QV.beat !== Wx && "magicAccent2" !== QV.sound && "trumpetFlare" !== QV.sound || pV(QV);
               return () => {
-                for (const MM of jM) clearTimeout(MM);
-                for (const MM of aM) MM.fade(MM.getVolume(), 0, 120)
+                for (const VV of UV) clearTimeout(VV);
+                for (const VV of yV) VV.fade(VV.getVolume(), 0, 120)
               }
-            }(MM, jM, rM, iM, OM), aM.smuggler.onBought = () => {
-              sM.playSound(jM, (0, QP.f)("rpgHandleSmallLeather"), 1, 1), sM.playSound(jM, "chestOpen", .6, 1)
-            }, aM.compass.register(new hM(aM.map, !0)), aM.compass.register(new hM(aM.map, !1)), aM.compass.register(new dM(aM.map)), aM.compass.register(new yM((() => aM.quests.getSnapshot().compassTarget)));
-            for (const iM of ["enemy", "npc"]) aM.compass.register(new JM(aM.map, iM, (rM => MM.checkValid(rM) ? MM.XE(rM) : void 0), (rM => MM.isAlive(rM))))
+            }(VV, UV, eV, xV, JV), yV.smuggler.onBought = () => {
+              gV.playSound(UV, (0, pp.f)("rpgHandleSmallLeather"), 1, 1), gV.playSound(UV, "chestOpen", .6, 1)
+            }, yV.compass.register(new kV(yV.map, !0)), yV.compass.register(new kV(yV.map, !1)), yV.compass.register(new EV(yV.map)), yV.compass.register(new BV((() => yV.quests.getSnapshot().compassTarget)));
+            for (const xV of ["enemy", "npc"]) yV.compass.register(new bV(yV.map, xV, (eV => VV.checkValid(eV) ? VV.YF(eV) : void 0), (eV => VV.isAlive(eV))))
           },
-          onAfterRender: (MM, rM) => {
-            const iM = sM.checkValid(jM) ? sM.XE(jM) : null;
-            aM.navigation.afterRender(iM, performance.now(), rM), aM.glowtide.afterRender(iM, rM.cameraHeading), aM.tideCharts.afterRender(iM), KM.afterRender()
+          onAfterRender: (VV, eV) => {
+            const xV = gV.checkValid(UV) ? gV.YF(UV) : null;
+            yV.navigation.afterRender(xV, performance.now(), eV), yV.glowtide.afterRender(xV, eV.cameraHeading), yV.tideCharts.afterRender(xV), sV.afterRender()
           },
           onClose: () => {
-            var MM, rM, iM, OM, SM, jM, QM, LM, hM, JM, dM, yM, lM, CM, eM;
-            VM && BM.i.unsubscribe(VM), null === (MM = RM) || void 0 === MM || MM(), pM.dispose(), qM.dispose(), null === (rM = oM) || void 0 === rM || rM.dispose(), KM.dispose(), aM.dispose(), null === (iM = PM) || void 0 === iM || iM(), null === (OM = nM) || void 0 === OM || OM(), null === (SM = zM) || void 0 === SM || SM(), null === (jM = mM) || void 0 === jM || jM(), null === (QM = HM) || void 0 === QM || QM(), null === (LM = EM) || void 0 === LM || LM(), null === (hM = undefined) || void 0 === hM || hM(), null === (JM = UM) || void 0 === JM || JM(), null === (dM = GM) || void 0 === dM || dM(), null === (yM = bM) || void 0 === yM || yM(), null === (lM = tM) || void 0 === lM || lM(), null === (CM = undefined) || void 0 === CM || CM(), null === (eM = uM) || void 0 === eM || eM()
+            var VV, eV, xV, JV, YV, UV, nV, ZV, kV, bV, EV, BV, jV, TV, PV;
+            dV && KV.h.unsubscribe(dV), null === (VV = GV) || void 0 === VV || VV(), WV.dispose(), SV.dispose(), null === (eV = aV) || void 0 === eV || eV.dispose(), sV.dispose(), yV.dispose(), null === (xV = pV) || void 0 === xV || xV(), null === (JV = QV) || void 0 === JV || JV(), null === (YV = wV) || void 0 === YV || YV(), null === (UV = vV) || void 0 === UV || UV(), null === (nV = rV) || void 0 === nV || nV(), null === (ZV = qV) || void 0 === ZV || ZV(), null === (kV = undefined) || void 0 === kV || kV(), null === (bV = tV) || void 0 === bV || bV(), null === (EV = FV) || void 0 === EV || EV(), null === (BV = AV) || void 0 === BV || BV(), null === (jV = XV) || void 0 === jV || jV(), null === (TV = undefined) || void 0 === TV || TV(), null === (PV = zV) || void 0 === PV || PV()
           },
-          onPlayerChangeBlock: (MM, rM, OM, SM, PM, nM) => {
-            if (MM === jM && "Air" === nM) {
-              const MM = sM.getClientOption(jM, "creative");
-              aM.skills.predictBlock([rM, OM, SM], PM, MM);
-              const nM = function(MM, rM) {
-                  if ("hub" === rM || "farming_1" === rM || "mining_1" === rM) return !fM.has(MM) || "hub" !== rM && "mining_1" !== rM ? Object.hasOwn(ZM, MM) ? ZM[MM] : void 0 : kM
-                }(PM, iM),
-                QM = ("hub" === iM || "mining_1" === iM) && (LM.od.some((MM => MM === PM)) || Object.hasOwn(YM, PM) || "mining_1" === iM && "Block of Coal" === PM);
-              MM || void 0 === nM && !QM || sM.cW(rM, OM, SM, null !== nM && void 0 !== nM ? nM : kM)
+          onPlayerChangeBlock: (VV, eV, JV, YV, pV, QV) => {
+            if (VV === UV && "Air" === QV) {
+              const VV = gV.getClientOption(UV, "creative");
+              yV.skills.predictBlock([eV, JV, YV], pV, VV);
+              const QV = function(VV, eV) {
+                  if ("hub" === eV || "farming_1" === eV || "mining_1" === eV) return !oV.has(VV) || "hub" !== eV && "mining_1" !== eV ? Object.hasOwn(CV, VV) ? CV[VV] : void 0 : iV
+                }(pV, xV),
+                nV = ("hub" === xV || "mining_1" === xV) && (ZV.md.some((VV => VV === pV)) || Object.hasOwn(cV, pV) || "mining_1" === xV && "Block of Coal" === pV);
+              VV || void 0 === QV && !nV || gV.gR(eV, JV, YV, null !== QV && void 0 !== QV ? QV : iV)
             }
           },
-          onPlayerAttackEntity: (MM, rM) => {
-            if (MM !== jM || "Player" !== sM.getEntityType(rM)) return;
-            const [iM, OM, SM] = sM.XE(rM);
-            sM.burstParticlePreset("critical", [iM, OM + 1, SM], 10)
+          onPlayerAttackEntity: (VV, eV) => {
+            if (VV !== UV || "Player" !== gV.getEntityType(eV)) return;
+            const [xV, JV, YV] = gV.YF(eV);
+            gV.burstParticlePreset("critical", [xV, JV + 1, YV], 10)
           },
-          onChangeBlockFail: MM => {
+          onChangeBlockFail: VV => {
             for (const {
-                GO: rM
+                RJ: eV
               }
-              of MM) aM.skills.rejectBlock(rM)
+              of VV) yV.skills.rejectBlock(eV)
           },
-          onReceivedMessageFromServer: (MM, rM) => {
-            if ("skyblockGatedPortal" === MM) {
-              var iM;
-              const [MM, OM] = rM;
-              return void(null === (iM = TM.get(MM)) || void 0 === iM || iM.GL(OM))
+          onReceivedMessageFromServer: (VV, eV) => {
+            if ("skyblockGatedPortal" === VV) {
+              var xV;
+              const [VV, JV] = eV;
+              return void(null === (xV = IV.get(VV)) || void 0 === xV || xV.RZ(JV))
             }
-            if ("skyblockDailyReward" === MM) return void aM.dailyReward.GL(rM);
-            if ("skyblockMailbox" === MM) return void aM.mailbox.GL(rM);
-            if ("skyblockPortalTransit" === MM) return void aM.portalTransit.GL(rM);
-            if ("skyblockLoot" === MM) return void pM.GL(sM, rM);
-            if ("skyblockLava" === MM) return void qM.GL(rM);
-            if ("skyblockForge" === MM) return void aM.forge.GL(rM);
-            if ("skyblockMagmaward" === MM) return void aM.magmaward.GL(rM);
-            if ("skyblockGlowtide" === MM) return void aM.glowtide.GL(rM);
-            if ("skyblockGlowMeter" === MM) return void aM.glowMeter.GL(rM);
-            if ("skyblockHushWait" === MM) return void aM.hushWait.GL(rM);
-            if ("skyblockPassage" === MM) {
-              const MM = rM;
-              return aM.passage.GL(MM), aM.reachLog.receivePassagePhase(MM.passagePhase), bM ??= (0, CM.x)({
+            if ("skyblockDailyReward" === VV) return void yV.dailyReward.RZ(eV);
+            if ("skyblockMailbox" === VV) return void yV.mailbox.RZ(eV);
+            if ("skyblockPortalTransit" === VV) return void yV.portalTransit.RZ(eV);
+            if ("skyblockLoot" === VV) return void WV.RZ(gV, eV);
+            if ("skyblockLava" === VV) return void SV.RZ(eV);
+            if ("skyblockForge" === VV) return void yV.forge.RZ(eV);
+            if ("skyblockMagmaward" === VV) return void yV.magmaward.RZ(eV);
+            if ("skyblockGlowtide" === VV) return void yV.glowtide.RZ(eV);
+            if ("skyblockGlowMeter" === VV) return void yV.glowMeter.RZ(eV);
+            if ("skyblockHushWait" === VV) return void yV.hushWait.RZ(eV);
+            if ("skyblockPassage" === VV) {
+              const VV = eV;
+              return yV.passage.RZ(VV), yV.reachLog.receivePassagePhase(VV.passagePhase), AV ??= (0, TV.s)({
                 id: "skyblockPassage",
                 order: 5,
                 labelKey: "skyblockGame:passageButton",
@@ -10414,16 +10380,16 @@ export const modules = {
                   name: "Moonfish"
                 },
                 panel: !0,
-                onClick: aM.passage.show
-              }), void aM.keepersChair.receivePassage({
-                keepersChairPassagePhase: MM.passagePhase,
-                keepersChairPassageNextPhase: MM.passageNextPhase,
-                keepersChairPassageTurnsInMs: MM.passageTurnsInMs
+                onClick: yV.passage.show
+              }), void yV.keepersChair.receivePassage({
+                keepersChairPassagePhase: VV.passagePhase,
+                keepersChairPassageNextPhase: VV.passageNextPhase,
+                keepersChairPassageTurnsInMs: VV.passageTurnsInMs
               })
             }
-            if ("skyblockTideCharts" === MM) {
-              const MM = rM;
-              return aM.tideCharts.GL(MM), void(MM.tideCharts.length > 0 && (tM ??= (0, CM.x)({
+            if ("skyblockTideCharts" === VV) {
+              const VV = eV;
+              return yV.tideCharts.RZ(VV), void(VV.tideCharts.length > 0 && (XV ??= (0, TV.s)({
                 id: "skyblockTideCharts",
                 order: 8,
                 labelKey: "skyblockGame:tideChartsTitle",
@@ -10432,24 +10398,24 @@ export const modules = {
                   name: "Chunk Map"
                 },
                 panel: !0,
-                onClick: aM.tideCharts.show
+                onClick: yV.tideCharts.show
               })))
             }
-            if (MM === xM.y) {
-              var OM;
+            if (VV === LV.C) {
+              var JV;
               const {
-                hookId: MM,
-                waiting: iM
-              } = rM;
-              return void KM.hookWaiting(MM, null !== (OM = null === iM || void 0 === iM ? void 0 : iM.remainingMs) && void 0 !== OM ? OM : null)
+                hookId: VV,
+                waiting: xV
+              } = eV;
+              return void sV.hookWaiting(VV, null !== (JV = null === xV || void 0 === xV ? void 0 : xV.remainingMs) && void 0 !== JV ? JV : null)
             }
-            if ("skyblockBiteTell" === MM) return void IM.receiveTell(rM);
-            if ("skyblockSmuggler" === MM) return void aM.smuggler.GL(rM);
-            if ("skyblockKeepersChair" === MM) return aM.keepersChair.GL(rM), void aM.lampLight.setAtChair(aM.keepersChair.isAtChair());
-            if ("skyblockLampLight" === MM) {
-              const MM = rM;
-              var SM;
-              if (aM.lampLight.GL(MM), MM.lampLightReleasing) GM ??= (0, CM.x)({
+            if ("skyblockBiteTell" === VV) return void uV.receiveTell(eV);
+            if ("skyblockSmuggler" === VV) return void yV.smuggler.RZ(eV);
+            if ("skyblockKeepersChair" === VV) return yV.keepersChair.RZ(eV), void yV.lampLight.setAtChair(yV.keepersChair.isAtChair());
+            if ("skyblockLampLight" === VV) {
+              const VV = eV;
+              var YV;
+              if (yV.lampLight.RZ(VV), VV.lampLightReleasing) FV ??= (0, TV.s)({
                 id: "skyblockLampLightKeepCatches",
                 order: 7,
                 labelKey: "skyblockGame:lampLightKeepCatches",
@@ -10458,42 +10424,42 @@ export const modules = {
                   name: "Bucket"
                 },
                 onClick: () => {
-                  aM.lampLight.setRelease(!1)
+                  yV.lampLight.setRelease(!1)
                 }
               });
-              else null === (SM = GM) || void 0 === SM || SM(), GM = void 0;
+              else null === (YV = FV) || void 0 === YV || YV(), FV = void 0;
               return
             }
-            if ("skyblockRegulars" === MM) return void aM.regulars.GL(rM);
-            if ("skyblockHiddenWaters" === MM) return void aM.hiddenWaters.GL(rM);
-            if ("skyblockReachLog" === MM) return aM.reachLog.GL(rM), void(UM ??= (0, CM.x)({
+            if ("skyblockRegulars" === VV) return void yV.regulars.RZ(eV);
+            if ("skyblockHiddenWaters" === VV) return void yV.hiddenWaters.RZ(eV);
+            if ("skyblockReachLog" === VV) return yV.reachLog.RZ(eV), void(tV ??= (0, TV.s)({
               id: "skyblockReachLog",
               order: 6,
               labelKey: "skyblockGame:reachLogTitle",
               icon: {
                 kind: "item",
-                name: zO
+                name: QJ
               },
-              onClick: aM.reachLog.ask
+              onClick: yV.reachLog.ask
             }));
-            if ("skyblockBurrowDoor" === MM) {
-              for (const [MM, iM, OM, SM] of rM) sM.cW(MM, iM, OM, SM);
+            if ("skyblockBurrowDoor" === VV) {
+              for (const [VV, xV, JV, YV] of eV) gV.gR(VV, xV, JV, YV);
               return
             }
-            if ("skyblockHud" === MM) aM.receiveHud(rM);
-            else if ("skyblockMap" === MM) aM.map.GL(rM);
-            else if (MM === vM.f) aM.skills.GL(rM);
-            else if (MM === gM && "dialogue" === rM.kind) aM.dialogue.GL(rM);
-            else if (MM === gM) aM.quests.GL(rM);
-            else if ("skyblockDungeons" === MM) aM.dungeons.GL(rM);
-            else if ("sbCollections" === MM) aM.collections.GL(rM);
-            else if ("skyblockQuestGraph" === MM) aM.questGraph.GL(rM);
+            if ("skyblockHud" === VV) yV.receiveHud(eV);
+            else if ("skyblockMap" === VV) yV.map.RZ(eV);
+            else if (VV === fV.f) yV.skills.RZ(eV);
+            else if (VV === MV && "dialogue" === eV.kind) yV.dialogue.RZ(eV);
+            else if (VV === MV) yV.quests.RZ(eV);
+            else if ("skyblockDungeons" === VV) yV.dungeons.RZ(eV);
+            else if ("sbCollections" === VV) yV.collections.RZ(eV);
+            else if ("skyblockQuestGraph" === VV) yV.questGraph.RZ(eV);
             else {
-              if ("skyblockAutographs" !== MM) return;
-              aM.autographs.GL(rM)
+              if ("skyblockAutographs" !== VV) return;
+              yV.autographs.RZ(eV)
             }
-            if (!nM && aM.map.getSnapshot().enabled) {
-              const MM = (0, CM.x)({
+            if (!QV && yV.map.getSnapshot().enabled) {
+              const VV = (0, TV.s)({
                   id: "skyblockMap",
                   order: 3,
                   labelKey: "skyblockGame:map",
@@ -10502,13 +10468,13 @@ export const modules = {
                     name: "Compass"
                   },
                   panel: !0,
-                  onClick: aM.map.show
+                  onClick: yV.map.show
                 }),
-                rM = (0, FM.A)(aM.map.show);
-              nM = () => {
-                MM(), rM()
+                eV = (0, mV.v)(yV.map.show);
+              QV = () => {
+                VV(), eV()
               }
-            }!zM && aM.skills.getSnapshot().enabled && (zM = (0, CM.x)({
+            }!wV && yV.skills.getSnapshot().enabled && (wV = (0, TV.s)({
               id: "skyblockSkills",
               order: 0,
               labelKey: "skyblockGame:skills",
@@ -10517,8 +10483,8 @@ export const modules = {
                 name: "Iron Sword"
               },
               panel: !0,
-              onClick: aM.skills.show
-            })), !EM && aM.collections.getSnapshot().enabled && (EM = (0, CM.x)({
+              onClick: yV.skills.show
+            })), !qV && yV.collections.getSnapshot().enabled && (qV = (0, TV.s)({
               id: "skyblockCollections",
               order: 2.5,
               labelKey: "skyblockGame:collections",
@@ -10527,8 +10493,8 @@ export const modules = {
                 name: "Coal"
               },
               panel: !0,
-              onClick: aM.collections.show
-            })), !mM && aM.quests.getSnapshot().enabled && (mM = (0, CM.x)({
+              onClick: yV.collections.show
+            })), !vV && yV.quests.getSnapshot().enabled && (vV = (0, TV.s)({
               id: "skyblockQuests",
               order: 1,
               labelKey: "skyblockGame:quests",
@@ -10537,8 +10503,8 @@ export const modules = {
                 name: "Book"
               },
               panel: !0,
-              onClick: aM.quests.show
-            })), !uM && aM.autographs.getSnapshot().enabled && (uM = (0, CM.x)({
+              onClick: yV.quests.show
+            })), !zV && yV.autographs.getSnapshot().enabled && (zV = (0, TV.s)({
               id: "skyblockAutographs",
               order: 5,
               labelKey: "skyblockGame:autographs",
@@ -10547,86 +10513,86 @@ export const modules = {
                 name: "Name Tag"
               },
               panel: !0,
-              onClick: aM.autographs.show
+              onClick: yV.autographs.show
             }));
-            const jM = aM.dungeons.getSnapshot().enabled;
-            var QM;
-            (zM || mM || jM) && lM !== jM && (lM = jM, null === (QM = HM) || void 0 === QM || QM(), HM = (0, CM.x)({
+            const UV = yV.dungeons.getSnapshot().enabled;
+            var nV;
+            (wV || vV || UV) && jV !== UV && (jV = UV, null === (nV = rV) || void 0 === nV || nV(), rV = (0, TV.s)({
               id: "skyblockDungeons",
               order: 2,
               labelKey: "skyblockGame:dungeons",
               icon: {
                 kind: "image",
-                src: fP
+                src: Cp
               },
-              disabled: !jM,
+              disabled: !UV,
               panel: !0,
-              onClick: aM.dungeons.show
+              onClick: yV.dungeons.show
             }));
-            PM || (PM = (0, FM.C)((0, eM.createElement)(PP, {
-              controller: aM
+            pV || (pV = (0, mV.z)((0, PV.createElement)(Up, {
+              controller: yV
             }), {
-              content: (0, eM.createElement)(nP, {
-                controller: aM
+              content: (0, PV.createElement)(yp, {
+                controller: yV
               }),
-              onClose: aM.close
+              onClose: yV.close
             }))
           },
-          bL: () => {
-            var MM;
-            for (const rM of TM.values()) rM.bL();
-            pM.bL(sM), qM.bL(), null === (MM = oM) || void 0 === MM || MM.bL(), aM.skills.bL(), aM.quests.bL(), aM.dailyReward.bL(), aM.mailbox.bL(), aM.map.bL()
+          iZ: () => {
+            var VV;
+            for (const eV of IV.values()) eV.iZ();
+            WV.iZ(gV), SV.iZ(), null === (VV = aV) || void 0 === VV || VV.iZ(), yV.skills.iZ(), yV.quests.iZ(), yV.dailyReward.iZ(), yV.mailbox.iZ(), yV.map.iZ()
           }
         }
       }
   },
-  39532: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => jM,
-      g: () => SM
+  39683: (VV, eV, xV) => {
+    xV.d(eV, {
+      d: () => UV,
+      f: () => YV
     });
-    var OM = iM(332);
-    const SM = (0, OM.wb)([0, 0, -1]),
-      jM = [{
+    var JV = xV(375);
+    const YV = (0, JV.Cb)([0, 0, -1]),
+      UV = [{
         name: "S",
-        bearing: (0, OM.wb)([0, 0, 1])
+        bearing: (0, JV.Cb)([0, 0, 1])
       }, {
         name: "E",
-        bearing: (0, OM.wb)([-1, 0, 0])
+        bearing: (0, JV.Cb)([-1, 0, 0])
       }, {
         name: "N",
-        bearing: SM
+        bearing: YV
       }, {
         name: "W",
-        bearing: (0, OM.wb)([1, 0, 0])
+        bearing: (0, JV.Cb)([1, 0, 0])
       }]
   },
-  39526: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => SM,
-      d: () => jM
+  39678: (VV, eV, xV) => {
+    xV.d(eV, {
+      c: () => YV,
+      g: () => UV
     });
-    var OM = iM(39532);
+    var JV = xV(39683);
 
-    function SM(MM, rM, iM) {
-      return [100 * (iM.mapMaxX - MM) / (iM.mapMaxX - iM.mapMinX), 100 * (rM - iM.mapMinZ) / (iM.mapMaxZ - iM.mapMinZ)]
+    function YV(VV, eV, xV) {
+      return [100 * (xV.mapMaxX - VV) / (xV.mapMaxX - xV.mapMinX), 100 * (eV - xV.mapMinZ) / (xV.mapMaxZ - xV.mapMinZ)]
     }
 
-    function jM(MM, rM, iM, jM) {
-      const [aM, PM] = SM(MM, rM, jM), nM = OM.g - iM;
+    function UV(VV, eV, xV, UV) {
+      const [yV, pV] = YV(VV, eV, UV), QV = JV.f - xV;
       return {
-        rotation: nM,
-        transform: `rotate(${nM}rad) translate(-${aM}%, -${PM}%)`
+        rotation: QV,
+        transform: `rotate(${QV}rad) translate(-${yV}%, -${pV}%)`
       }
     }
   },
-  39571: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => jM,
-      f: () => aM
+  39725: (VV, eV, xV) => {
+    xV.d(eV, {
+      b: () => UV,
+      d: () => yV
     });
-    var OM = iM(4586);
-    const SM = [{
+    var JV = xV(4648);
+    const YV = [{
       lobes: [3, 4],
       amount: [.04, .055]
     }, {
@@ -10634,101 +10600,135 @@ export const modules = {
       amount: [.025, .035]
     }];
 
-    function jM(MM) {
-      const rM = new OM.h(MM);
+    function UV(VV) {
+      const eV = new JV.l(VV);
       return {
         radius: 45,
         squareness: 3,
-        wobbles: SM.map((MM => {
+        wobbles: YV.map((VV => {
           let {
-            lobes: iM,
-            amount: OM
-          } = MM;
+            lobes: xV,
+            amount: JV
+          } = VV;
           return {
-            lobes: iM[Math.floor(rM.next() * iM.length)],
-            amount: OM[0] + rM.next() * (OM[1] - OM[0]),
-            phase: 2 * rM.next() * Math.PI
+            lobes: xV[Math.floor(eV.next() * xV.length)],
+            amount: JV[0] + eV.next() * (JV[1] - JV[0]),
+            phase: 2 * eV.next() * Math.PI
           }
         })),
         samples: 160
       }
     }
 
-    function aM(MM) {
+    function yV(VV) {
       let {
-        radius: rM,
-        squareness: iM,
-        wobbles: OM,
-        samples: SM
-      } = MM;
-      const jM = [];
-      for (let aM = 0; aM < SM; aM++) {
-        const MM = 2 * Math.PI * aM / SM,
-          PM = Math.cos(MM),
-          nM = Math.sin(MM),
-          QM = rM * (Math.abs(PM) ** iM + Math.abs(nM) ** iM) ** (-1 / iM) * OM.reduce(((rM, iM) => {
+        radius: eV,
+        squareness: xV,
+        wobbles: JV,
+        samples: YV
+      } = VV;
+      const UV = [];
+      for (let yV = 0; yV < YV; yV++) {
+        const VV = 2 * Math.PI * yV / YV,
+          pV = Math.cos(VV),
+          QV = Math.sin(VV),
+          nV = eV * (Math.abs(pV) ** xV + Math.abs(QV) ** xV) ** (-1 / xV) * JV.reduce(((eV, xV) => {
             let {
-              lobes: OM,
-              amount: SM,
-              phase: jM
-            } = iM;
-            return rM + SM * Math.sin(OM * MM + jM)
+              lobes: JV,
+              amount: YV,
+              phase: UV
+            } = xV;
+            return eV + YV * Math.sin(JV * VV + UV)
           }), 1);
-        jM.push(`${(50+QM*PM).toFixed(2)} ${(50+QM*nM).toFixed(2)}`)
+        UV.push(`${(50+nV*pV).toFixed(2)} ${(50+nV*QV).toFixed(2)}`)
       }
-      return `M${jM.join("L")}Z`
+      return `M${UV.join("L")}Z`
     }
   },
-  37305: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => SM,
-      f: () => OM
+  37507: (VV, eV, xV) => {
+    xV.d(eV, {
+      e: () => YV,
+      f: () => JV
     });
-    const OM = "skyblockSkills",
-      SM = "skills_test_gym"
+    const JV = "skyblockSkills",
+      YV = "skills_test_gym"
   },
-  39588: (MM, rM, iM) => {
-    MM.exports = iM.p + "static/media/combat_1.72ac23641446e4f80923.png"
+  39742: (VV, eV, xV) => {
+    var JV = {
+      "./combat_1.png": 39749,
+      "./dungeon_crumbling_crypt.png": 39756,
+      "./dungeon_frozen_hollow.png": 39758,
+      "./dungeon_wildwood_grove.png": 39767,
+      "./dungeons.png": 39769,
+      "./farming_1.png": 39771,
+      "./fishing_1.png": 39779,
+      "./hub.png": 39788,
+      "./island.png": 39792,
+      "./mining_1.png": 39796,
+      "./mining_1_bridge.png": 39805,
+      "./mining_1_gallery.png": 39813,
+      "./mining_1_hollow.png": 39816,
+      "./mining_1_village.png": 39820
+    };
+
+    function YV(VV) {
+      var eV = UV(VV);
+      return xV(eV)
+    }
+
+    function UV(VV) {
+      if (!xV.o(JV, VV)) {
+        var eV = new Error("Cannot find module '" + VV + "'");
+        throw eV.code = "MODULE_NOT_FOUND", eV
+      }
+      return JV[VV]
+    }
+    YV.keys = function() {
+      return Object.keys(JV)
+    }, YV.resolve = UV, VV.exports = YV, YV.id = 39742
   },
-  39596: (MM, rM, iM) => {
-    MM.exports = iM.p + "static/media/dungeon_crumbling_crypt.39389aef74bd36e64180.png"
+  39749: (VV, eV, xV) => {
+    VV.exports = xV.p + "static/media/combat_1.72ac23641446e4f80923.png"
   },
-  39605: (MM, rM, iM) => {
-    MM.exports = iM.p + "static/media/dungeon_frozen_hollow.042bf06d2cfd2c68c7e6.png"
+  39756: (VV, eV, xV) => {
+    VV.exports = xV.p + "static/media/dungeon_crumbling_crypt.39389aef74bd36e64180.png"
   },
-  39614: (MM, rM, iM) => {
-    MM.exports = iM.p + "static/media/dungeon_wildwood_grove.d5115bf7a4d3fc811ff4.png"
+  39758: (VV, eV, xV) => {
+    VV.exports = xV.p + "static/media/dungeon_frozen_hollow.042bf06d2cfd2c68c7e6.png"
   },
-  39621: (MM, rM, iM) => {
-    MM.exports = iM.p + "static/media/dungeons.6836b40c30687755a545.png"
+  39767: (VV, eV, xV) => {
+    VV.exports = xV.p + "static/media/dungeon_wildwood_grove.d5115bf7a4d3fc811ff4.png"
   },
-  39628: (MM, rM, iM) => {
-    MM.exports = iM.p + "static/media/farming_1.88c6a10630aed3ef8195.png"
+  39769: (VV, eV, xV) => {
+    VV.exports = xV.p + "static/media/dungeons.6836b40c30687755a545.png"
   },
-  39634: (MM, rM, iM) => {
-    MM.exports = iM.p + "static/media/fishing_1.c63e97744abce5bb9af7.png"
+  39771: (VV, eV, xV) => {
+    VV.exports = xV.p + "static/media/farming_1.88c6a10630aed3ef8195.png"
   },
-  39639: (MM, rM, iM) => {
-    MM.exports = iM.p + "static/media/hub.2531ead8f8a327f34b1c.png"
+  39779: (VV, eV, xV) => {
+    VV.exports = xV.p + "static/media/fishing_1.c63e97744abce5bb9af7.png"
   },
-  39645: (MM, rM, iM) => {
-    MM.exports = iM.p + "static/media/island.205bb9973a65f87b60a3.png"
+  39788: (VV, eV, xV) => {
+    VV.exports = xV.p + "static/media/hub.2531ead8f8a327f34b1c.png"
   },
-  39648: (MM, rM, iM) => {
-    MM.exports = iM.p + "static/media/mining_1.98c7a7e3424532a89b98.png"
+  39792: (VV, eV, xV) => {
+    VV.exports = xV.p + "static/media/island.205bb9973a65f87b60a3.png"
   },
-  39653: (MM, rM, iM) => {
-    MM.exports = iM.p + "static/media/mining_1_bridge.65d4e676030492359993.png"
+  39796: (VV, eV, xV) => {
+    VV.exports = xV.p + "static/media/mining_1.98c7a7e3424532a89b98.png"
   },
-  39658: (MM, rM, iM) => {
-    MM.exports = iM.p + "static/media/mining_1_gallery.f9f2baffc0a921cd9ffe.png"
+  39805: (VV, eV, xV) => {
+    VV.exports = xV.p + "static/media/mining_1_bridge.65d4e676030492359993.png"
   },
-  39660: (MM, rM, iM) => {
-    MM.exports = iM.p + "static/media/mining_1_hollow.82ed2e9c753519918230.png"
+  39813: (VV, eV, xV) => {
+    VV.exports = xV.p + "static/media/mining_1_gallery.f9f2baffc0a921cd9ffe.png"
   },
-  39666: (MM, rM, iM) => {
-    MM.exports = iM.p + "static/media/mining_1_village.855cb5fdab046ca65e04.png"
+  39816: (VV, eV, xV) => {
+    VV.exports = xV.p + "static/media/mining_1_hollow.82ed2e9c753519918230.png"
+  },
+  39820: (VV, eV, xV) => {
+    VV.exports = xV.p + "static/media/mining_1_village.855cb5fdab046ca65e04.png"
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const VV in modules) Object.freeze(modules[VV]);

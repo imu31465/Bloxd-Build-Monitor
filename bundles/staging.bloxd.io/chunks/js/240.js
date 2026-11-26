@@ -1,311 +1,311 @@
 export const id = 240;
 export const ids = [240];
 export const modules = {
-  37353: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => tM,
-      e: () => gM,
-      h: () => EM
+  37556: (VV, eV, xV) => {
+    xV.d(eV, {
+      b: () => XV,
+      e: () => MV,
+      h: () => qV
     });
-    var OM = iM(255),
-      SM = iM(83);
-    const jM = new(iM(37356).b)(new URL(iM.p + iM.u(3), iM.b), {
+    var JV = xV(313),
+      YV = xV(99);
+    const UV = new(xV(37560).b)(new URL(xV.p + xV.u(3), xV.b), {
       name: "blockIconWorker",
       type: "module"
     });
-    var aM = iM(1899),
-      PM = iM(2260);
-    const nM = 1e4,
-      QM = 3e4;
-    let zM = null,
-      LM = null,
-      mM = null,
-      HM = !1,
-      hM = 0;
-    const JM = new Map;
-    let dM = null;
-    const yM = new Map,
-      lM = new Map;
+    var yV = xV(1900),
+      pV = xV(2270);
+    const QV = 1e4,
+      nV = 3e4;
+    let wV = null,
+      ZV = null,
+      vV = null,
+      rV = !1,
+      kV = 0;
+    const bV = new Map;
+    let EV = null;
+    const BV = new Map,
+      jV = new Map;
 
-    function EM(MM) {
-      const rM = new Promise(((rM, iM) => {
-        const OM = new Image;
-        OM.crossOrigin = "anonymous", OM.fetchPriority = "high", OM.onload = () => {
-          rM(OM)
-        }, OM.onerror = () => {
-          iM(new Error(`A block icon's texture did not load: ${MM.slice(0,100)}`))
-        }, OM.src = MM
+    function qV(VV) {
+      const eV = new Promise(((eV, xV) => {
+        const JV = new Image;
+        JV.crossOrigin = "anonymous", JV.fetchPriority = "high", JV.onload = () => {
+          eV(JV)
+        }, JV.onerror = () => {
+          xV(new Error(`A block icon's texture did not load: ${VV.slice(0,100)}`))
+        }, JV.src = VV
       }));
-      return (0, PM.d)(rM)
+      return (0, pV.d)(eV)
     }
 
-    function UM(MM) {
-      var rM, iM;
-      HM || console.warn(`[blockIconWorker] block icons draw on the page, as the worker ${MM}`), HM = !0, null === (rM = zM) || void 0 === rM || rM.terminate(), zM = null, LM = null, yM.clear(), lM.clear();
-      for (const OM of JM.values()) OM(null);
-      JM.clear(), null === (iM = dM) || void 0 === iM || iM()
+    function tV(VV) {
+      var eV, xV;
+      rV || console.warn(`[blockIconWorker] block icons draw on the page, as the worker ${VV}`), rV = !0, null === (eV = wV) || void 0 === eV || eV.terminate(), wV = null, ZV = null, BV.clear(), jV.clear();
+      for (const JV of bV.values()) JV(null);
+      bV.clear(), null === (xV = EV) || void 0 === xV || xV()
     }
 
-    function GM() {
-      return mM ??= async function() {
+    function FV() {
+      return vV ??= async function() {
         if ("undefined" === typeof Worker || "undefined" === typeof OffscreenCanvas || "undefined" === typeof createImageBitmap) return;
-        if ("page" === OM.e.ios_icon_worker_v1 && (0, SM.isWebKit)()) return;
+        if ("page" === JV.b.ios_icon_worker_v1 && (0, YV.isWebKit)()) return;
         try {
-          zM = await async function() {
-            return await jM.ready(), jM.start()
+          wV = await async function() {
+            return await UV.ready(), UV.start()
           }()
-        } catch (PM) {
-          return void UM(`did not start (${String(PM)})`)
+        } catch (pV) {
+          return void tV(`did not start (${String(pV)})`)
         }
-        let MM = () => {};
-        const rM = new Promise((rM => {
-          MM = rM
+        let VV = () => {};
+        const eV = new Promise((eV => {
+          VV = eV
         }));
-        zM.onmessage = rM => {
+        wV.onmessage = eV => {
           let {
-            data: iM
-          } = rM;
-          if ("started" === iM.type) LM = zM, MM();
-          else if ("failed" === iM.type) UM(`failed a draw (${iM.message})`);
+            data: xV
+          } = eV;
+          if ("started" === xV.type) ZV = wV, VV();
+          else if ("failed" === xV.type) tV(`failed a draw (${xV.message})`);
           else {
-            var OM, SM;
-            null === (OM = JM.get(iM.id)) || void 0 === OM || OM(iM.url), JM.delete(iM.id), null === (SM = dM) || void 0 === SM || SM()
+            var JV, YV;
+            null === (JV = bV.get(xV.id)) || void 0 === JV || JV(xV.url), bV.delete(xV.id), null === (YV = EV) || void 0 === YV || YV()
           }
-        }, zM.onerror = rM => {
-          rM.preventDefault(), UM(`stopped (${rM.message||"its script did not load or run"})`), MM()
+        }, wV.onerror = eV => {
+          eV.preventDefault(), tV(`stopped (${eV.message||"its script did not load or run"})`), VV()
         };
-        const iM = `did not start in ${QM/1e3} s`;
-        await (0, aM.n)(rM, QM, iM).catch((() => {
-          UM(iM)
+        const xV = `did not start in ${nV/1e3} s`;
+        await (0, yV.m)(eV, nV, xV).catch((() => {
+          tV(xV)
         }))
-      }(), mM
+      }(), vV
     }
 
-    function CM() {
-      if (null !== dM || 0 === JM.size) return;
-      const MM = new Promise((MM => {
-          dM = MM
+    function TV() {
+      if (null !== EV || 0 === bV.size) return;
+      const VV = new Promise((VV => {
+          EV = VV
         })),
-        rM = `did not answer in ${nM/1e3} s`;
-      (0, aM.n)(MM, nM, rM).then((() => {
-        dM = null, CM()
+        eV = `did not answer in ${QV/1e3} s`;
+      (0, yV.m)(VV, QV, eV).then((() => {
+        EV = null, TV()
       }), (() => {
-        dM = null, UM(rM)
+        EV = null, tV(eV)
       }))
     }
 
-    function eM(MM, rM) {
-      let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-      MM.postMessage(rM, iM)
+    function PV(VV, eV) {
+      let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+      VV.postMessage(eV, xV)
     }
 
-    function bM(MM, rM, iM, OM) {
-      let SM = rM.get(iM);
-      return void 0 === SM && (SM = OM().then((async rM => {
+    function AV(VV, eV, xV, JV) {
+      let YV = eV.get(xV);
+      return void 0 === YV && (YV = JV().then((async eV => {
         let {
-          image: iM,
-          request: OM
-        } = rM;
+          image: xV,
+          request: JV
+        } = eV;
         try {
-          const rM = await createImageBitmap(iM);
-          eM(MM, OM(rM), [rM])
-        } catch (SM) {
-          UM(`could not take an image (${String(SM)})`)
+          const eV = await createImageBitmap(xV);
+          PV(VV, JV(eV), [eV])
+        } catch (YV) {
+          tV(`could not take an image (${String(YV)})`)
         }
-      })), SM.catch((() => {
-        rM.get(iM) === SM && rM.delete(iM)
-      })), rM.set(iM, SM)), SM
+      })), YV.catch((() => {
+        eV.get(xV) === YV && eV.delete(xV)
+      })), eV.set(xV, YV)), YV
     }
-    async function wM(MM, rM) {
-      GM();
-      const iM = LM;
-      if (null === iM) return null;
-      if (await MM(iM), LM !== iM) return null;
-      const OM = ++hM;
-      return new Promise((MM => {
-        JM.set(OM, MM), eM(iM, rM(OM)), CM()
+    async function NV(VV, eV) {
+      FV();
+      const xV = ZV;
+      if (null === xV) return null;
+      if (await VV(xV), ZV !== xV) return null;
+      const JV = ++kV;
+      return new Promise((VV => {
+        bV.set(JV, VV), PV(xV, eV(JV)), TV()
       }))
     }
 
-    function tM(MM, rM, iM) {
-      return wM((rM => Promise.all([MM.top, MM.left, MM.right].map((MM => function(MM, rM) {
-        return bM(MM, yM, rM, (async () => ({
-          image: await EM(rM),
-          request: MM => ({
+    function XV(VV, eV, xV) {
+      return NV((eV => Promise.all([VV.top, VV.left, VV.right].map((VV => function(VV, eV) {
+        return AV(VV, BV, eV, (async () => ({
+          image: await qV(eV),
+          request: VV => ({
             type: "texture",
-            url: rM,
-            bitmap: MM
+            url: eV,
+            bitmap: VV
           })
         })))
-      }(rM, MM))))), (OM => ({
+      }(eV, VV))))), (JV => ({
         type: "draw",
-        id: OM,
-        ...MM,
-        size: rM,
-        outlineWidth: iM
+        id: JV,
+        ...VV,
+        size: eV,
+        outlineWidth: xV
       })))
     }
 
-    function gM(MM, rM, iM, OM) {
-      return wM((iM => function(MM, rM, iM) {
-        return bM(MM, lM, rM, (async () => {
+    function MV(VV, eV, xV, JV) {
+      return NV((xV => function(VV, eV, xV) {
+        return AV(VV, jV, eV, (async () => {
           const {
-            texture: MM,
-            ...OM
-          } = await iM();
+            texture: VV,
+            ...JV
+          } = await xV();
           return {
-            image: await EM(MM),
-            request: MM => ({
+            image: await qV(VV),
+            request: VV => ({
               type: "model",
-              name: rM,
-              bitmap: MM,
-              geometry: OM
+              name: eV,
+              bitmap: VV,
+              geometry: JV
             })
           }
         }))
-      }(iM, MM, rM)), (rM => ({
+      }(xV, VV, eV)), (eV => ({
         type: "drawModel",
-        id: rM,
-        name: MM,
-        size: iM,
-        outlineWidth: OM
+        id: eV,
+        name: VV,
+        size: xV,
+        outlineWidth: JV
       })))
     }
   },
-  37344: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => OM,
-      f: () => nM,
-      h: () => aM,
-      k: () => mM,
-      n: () => QM
+  37549: (VV, eV, xV) => {
+    xV.d(eV, {
+      b: () => JV,
+      c: () => QV,
+      g: () => yV,
+      k: () => vV,
+      n: () => nV
     });
-    const OM = {
+    const JV = {
         across: Math.SQRT1_2,
         down: Math.SQRT1_2 / 2,
         up: Math.sqrt(3) / 2
       },
-      SM = .6,
-      jM = {
-        width: 2 * OM.across,
-        height: 2 * OM.down + OM.up
+      YV = .6,
+      UV = {
+        width: 2 * JV.across,
+        height: 2 * JV.down + JV.up
       };
 
-    function aM(MM, rM) {
-      const iM = rM > 0 ? rM + 1 : 0,
-        aM = MM * SM - rM / OM.across;
-      return Math.max(0, Math.min(aM, (MM - 2 * iM) / jM.height))
+    function yV(VV, eV) {
+      const xV = eV > 0 ? eV + 1 : 0,
+        yV = VV * YV - eV / JV.across;
+      return Math.max(0, Math.min(yV, (VV - 2 * xV) / UV.height))
     }
-    const PM = [15, 15, 15],
-      nM = {
+    const pV = [15, 15, 15],
+      QV = {
         top: 1,
         left: .85,
         right: .7
       };
 
-    function QM(MM, rM, iM, OM) {
+    function nV(VV, eV, xV, JV) {
       const {
-        vertices: SM,
-        uvs: PM,
-        indices: nM,
-        shades: QM
-      } = MM, zM = function(MM, rM) {
-        const iM = aM(MM, rM),
-          OM = jM.width * iM,
-          SM = jM.height * iM;
+        vertices: YV,
+        uvs: pV,
+        indices: QV,
+        shades: nV
+      } = VV, wV = function(VV, eV) {
+        const xV = yV(VV, eV),
+          JV = UV.width * xV,
+          YV = UV.height * xV;
         return {
-          left: (MM - OM) / 2,
-          top: (MM - SM) / 2,
-          width: OM,
-          height: SM
+          left: (VV - JV) / 2,
+          top: (VV - YV) / 2,
+          width: JV,
+          height: YV
         }
-      }(iM, OM), LM = new Float32Array(SM.length);
-      for (let jM = 0; jM < SM.length; jM += 3) LM[jM] = zM.left + SM[jM] * zM.width, LM[jM + 1] = zM.top + SM[jM + 1] * zM.height, LM[jM + 2] = SM[jM + 2];
-      const HM = new Float32Array(iM * iM).fill(-1 / 0),
-        hM = new Uint8ClampedArray(iM * iM * 4),
-        JM = 255 * MM.alphaCutoff;
-      for (let jM = 0; jM < nM.length; jM += 3) {
-        const [MM, OM, SM] = [nM[jM], nM[jM + 1], nM[jM + 2]], [aM, zM, mM] = [3 * MM, 3 * OM, 3 * SM], [dM, yM, lM, EM, UM, GM] = [LM[aM], LM[aM + 1], LM[zM], LM[zM + 1], LM[mM], LM[mM + 1]], CM = (lM - dM) * (GM - yM) - (UM - dM) * (EM - yM);
-        if (Math.abs(CM) < 1e-9) continue;
-        const eM = QM[jM / 3],
-          [bM, wM, tM, gM, uM, RM] = [PM[2 * MM], PM[2 * MM + 1], PM[2 * OM], PM[2 * OM + 1], PM[2 * SM], PM[2 * SM + 1]],
-          pM = Math.max(0, Math.floor(Math.min(dM, lM, UM))),
-          WM = Math.min(iM - 1, Math.ceil(Math.max(dM, lM, UM))),
-          sM = Math.max(0, Math.floor(Math.min(yM, EM, GM))),
-          DM = Math.min(iM - 1, Math.ceil(Math.max(yM, EM, GM)));
-        for (let jM = sM; jM <= DM; jM++)
-          for (let MM = pM; MM <= WM; MM++) {
-            const [OM, SM] = [MM + .5, jM + .5], PM = ((OM - dM) * (GM - yM) - (UM - dM) * (SM - yM)) / CM, nM = ((lM - dM) * (SM - yM) - (OM - dM) * (EM - yM)) / CM, QM = 1 - PM - nM;
-            if (QM < 0 || PM < 0 || nM < 0) continue;
-            const pM = QM * LM[aM + 2] + PM * LM[zM + 2] + nM * LM[mM + 2],
-              WM = jM * iM + MM;
-            if (pM <= HM[WM]) continue;
-            const sM = Math.max(0, Math.min(rM.width - 1, Math.floor((QM * bM + PM * tM + nM * uM) * rM.width))),
-              DM = 4 * (Math.max(0, Math.min(rM.height - 1, Math.floor((QM * wM + PM * gM + nM * RM) * rM.height))) * rM.width + sM);
-            rM.pixels[DM + 3] < JM || (HM[WM] = pM, hM[4 * WM] = rM.pixels[DM] * eM, hM[4 * WM + 1] = rM.pixels[DM + 1] * eM, hM[4 * WM + 2] = rM.pixels[DM + 2] * eM, hM[4 * WM + 3] = 255)
+      }(xV, JV), ZV = new Float32Array(YV.length);
+      for (let UV = 0; UV < YV.length; UV += 3) ZV[UV] = wV.left + YV[UV] * wV.width, ZV[UV + 1] = wV.top + YV[UV + 1] * wV.height, ZV[UV + 2] = YV[UV + 2];
+      const rV = new Float32Array(xV * xV).fill(-1 / 0),
+        kV = new Uint8ClampedArray(xV * xV * 4),
+        bV = 255 * VV.alphaCutoff;
+      for (let UV = 0; UV < QV.length; UV += 3) {
+        const [VV, JV, YV] = [QV[UV], QV[UV + 1], QV[UV + 2]], [yV, wV, vV] = [3 * VV, 3 * JV, 3 * YV], [EV, BV, jV, qV, tV, FV] = [ZV[yV], ZV[yV + 1], ZV[wV], ZV[wV + 1], ZV[vV], ZV[vV + 1]], TV = (jV - EV) * (FV - BV) - (tV - EV) * (qV - BV);
+        if (Math.abs(TV) < 1e-9) continue;
+        const PV = nV[UV / 3],
+          [AV, NV, XV, MV, zV, GV] = [pV[2 * VV], pV[2 * VV + 1], pV[2 * JV], pV[2 * JV + 1], pV[2 * YV], pV[2 * YV + 1]],
+          WV = Math.max(0, Math.floor(Math.min(EV, jV, tV))),
+          RV = Math.min(xV - 1, Math.ceil(Math.max(EV, jV, tV))),
+          gV = Math.max(0, Math.floor(Math.min(BV, qV, FV))),
+          DV = Math.min(xV - 1, Math.ceil(Math.max(BV, qV, FV)));
+        for (let UV = gV; UV <= DV; UV++)
+          for (let VV = WV; VV <= RV; VV++) {
+            const [JV, YV] = [VV + .5, UV + .5], pV = ((JV - EV) * (FV - BV) - (tV - EV) * (YV - BV)) / TV, QV = ((jV - EV) * (YV - BV) - (JV - EV) * (qV - BV)) / TV, nV = 1 - pV - QV;
+            if (nV < 0 || pV < 0 || QV < 0) continue;
+            const WV = nV * ZV[yV + 2] + pV * ZV[wV + 2] + QV * ZV[vV + 2],
+              RV = UV * xV + VV;
+            if (WV <= rV[RV]) continue;
+            const gV = Math.max(0, Math.min(eV.width - 1, Math.floor((nV * AV + pV * XV + QV * zV) * eV.width))),
+              DV = 4 * (Math.max(0, Math.min(eV.height - 1, Math.floor((nV * NV + pV * MV + QV * GV) * eV.height))) * eV.width + gV);
+            eV.pixels[DV + 3] < bV || (rV[RV] = WV, kV[4 * RV] = eV.pixels[DV] * PV, kV[4 * RV + 1] = eV.pixels[DV + 1] * PV, kV[4 * RV + 2] = eV.pixels[DV + 2] * PV, kV[4 * RV + 3] = 255)
           }
       }
-      return mM(hM, iM, OM), hM
+      return vV(kV, xV, JV), kV
     }
-    let zM = NaN,
-      LM = new Int32Array(0);
+    let wV = NaN,
+      ZV = new Int32Array(0);
 
-    function mM(MM, rM, iM) {
-      let OM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : rM => 0 !== MM[4 * rM + 3];
-      const SM = new Uint8Array(rM * rM);
-      for (let PM = 0; PM < rM * rM; PM++) SM[PM] = OM(PM) ? 1 : 0;
-      const jM = (MM, iM) => MM >= 0 && iM >= 0 && MM < rM && iM < rM && 0 === SM[iM * rM + MM],
-        aM = new Float32Array(rM * rM).fill(1 / 0),
-        nM = function(MM) {
-          if (MM !== zM) {
-            const rM = Math.ceil(MM + 1),
-              iM = [];
-            for (let OM = -rM; OM <= rM; OM++)
-              for (let SM = -rM; SM <= rM; SM++) {
-                const rM = SM * SM + OM * OM;
-                rM > 0 && rM < (MM + 1) ** 2 && iM.push(SM, OM, rM)
+    function vV(VV, eV, xV) {
+      let JV = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : eV => 0 !== VV[4 * eV + 3];
+      const YV = new Uint8Array(eV * eV);
+      for (let pV = 0; pV < eV * eV; pV++) YV[pV] = JV(pV) ? 1 : 0;
+      const UV = (VV, xV) => VV >= 0 && xV >= 0 && VV < eV && xV < eV && 0 === YV[xV * eV + VV],
+        yV = new Float32Array(eV * eV).fill(1 / 0),
+        QV = function(VV) {
+          if (VV !== wV) {
+            const eV = Math.ceil(VV + 1),
+              xV = [];
+            for (let JV = -eV; JV <= eV; JV++)
+              for (let YV = -eV; YV <= eV; YV++) {
+                const eV = YV * YV + JV * JV;
+                eV > 0 && eV < (VV + 1) ** 2 && xV.push(YV, JV, eV)
               }
-            zM = MM, LM = Int32Array.from(iM)
+            wV = VV, ZV = Int32Array.from(xV)
           }
-          return LM
-        }(iM);
-      for (let PM = 0; PM < rM; PM++)
-        for (let MM = 0; MM < rM; MM++) {
-          if (1 === SM[PM * rM + MM] && (jM(MM - 1, PM) || jM(MM + 1, PM) || jM(MM, PM - 1) || jM(MM, PM + 1)))
-            for (let iM = 0; iM < nM.length; iM += 3) {
-              const OM = MM + nM[iM],
-                SM = PM + nM[iM + 1];
-              if (OM >= 0 && SM >= 0 && OM < rM && SM < rM) {
-                const MM = SM * rM + OM;
-                aM[MM] = Math.min(aM[MM], nM[iM + 2])
+          return ZV
+        }(xV);
+      for (let pV = 0; pV < eV; pV++)
+        for (let VV = 0; VV < eV; VV++) {
+          if (1 === YV[pV * eV + VV] && (UV(VV - 1, pV) || UV(VV + 1, pV) || UV(VV, pV - 1) || UV(VV, pV + 1)))
+            for (let xV = 0; xV < QV.length; xV += 3) {
+              const JV = VV + QV[xV],
+                YV = pV + QV[xV + 1];
+              if (JV >= 0 && YV >= 0 && JV < eV && YV < eV) {
+                const VV = YV * eV + JV;
+                yV[VV] = Math.min(yV[VV], QV[xV + 2])
               }
             }
         }
-      for (let QM = 0; QM < rM * rM; QM++) 1 !== SM[QM] && aM[QM] !== 1 / 0 && (MM.set(PM, 4 * QM), MM[4 * QM + 3] = Math.round(255 * Math.min(1, iM + 1 - Math.sqrt(aM[QM]))))
+      for (let nV = 0; nV < eV * eV; nV++) 1 !== YV[nV] && yV[nV] !== 1 / 0 && (VV.set(pV, 4 * nV), VV[4 * nV + 3] = Math.round(255 * Math.min(1, xV + 1 - Math.sqrt(yV[nV]))))
     }
   },
-  37356: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => SM
+  37560: (VV, eV, xV) => {
+    xV.d(eV, {
+      b: () => YV
     });
-    const OM = {
-      wait: function(MM) {
-        return new Promise((rM => {
-          setTimeout(rM, MM)
+    const JV = {
+      wait: function(VV) {
+        return new Promise((eV => {
+          setTimeout(eV, VV)
         }))
       },
       stallMs: 2e4
     };
-    class SM {
-      constructor(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-          iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : OM;
-        this.url = MM, this.options = rM, this.timing = iM, this.fetched = null, this.fetchAbort = null, this.scriptUrl = void 0, this.scriptUrl = MM
+    class YV {
+      constructor(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+          xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : JV;
+        this.url = VV, this.options = eV, this.timing = xV, this.fetched = null, this.fetchAbort = null, this.scriptUrl = void 0, this.scriptUrl = VV
       }
       ready() {
         if (null === this.fetched) {
-          const MM = new AbortController;
-          this.fetchAbort = MM, this.fetched = this.fetchWithRetries(MM.signal).then((rM => (this.fetchAbort === MM && (this.fetchAbort = null), rM)))
+          const VV = new AbortController;
+          this.fetchAbort = VV, this.fetched = this.fetchWithRetries(VV.signal).then((eV => (this.fetchAbort === VV && (this.fetchAbort = null), eV)))
         }
         return this.fetched
       }
@@ -321,51 +321,51 @@ export const modules = {
       start() {
         return new Worker(this.scriptUrl, this.options)
       }
-      async fetchWithRetries(MM) {
-        for (let rM = 0;; rM++) {
-          const iM = new URL(this.url);
-          if (rM > 0 && iM.searchParams.set("cache-bust", `${Date.now()}-${rM}`), await this.fetchWhole(iM, MM)) return this.scriptUrl = iM, !0;
-          if (rM >= 3 || MM.aborted) return !1;
-          if (await this.timing.wait(500 * 2 ** rM), MM.aborted) return !1
+      async fetchWithRetries(VV) {
+        for (let eV = 0;; eV++) {
+          const xV = new URL(this.url);
+          if (eV > 0 && xV.searchParams.set("cache-bust", `${Date.now()}-${eV}`), await this.fetchWhole(xV, VV)) return this.scriptUrl = xV, !0;
+          if (eV >= 3 || VV.aborted) return !1;
+          if (await this.timing.wait(500 * 2 ** eV), VV.aborted) return !1
         }
       }
-      async fetchWhole(MM, rM) {
-        const iM = new AbortController;
-        let OM;
-        const SM = () => {
-            clearTimeout(OM), OM = setTimeout((() => {
-              iM.abort()
+      async fetchWhole(VV, eV) {
+        const xV = new AbortController;
+        let JV;
+        const YV = () => {
+            clearTimeout(JV), JV = setTimeout((() => {
+              xV.abort()
             }), this.timing.stallMs)
           },
-          jM = () => {
-            iM.abort()
+          UV = () => {
+            xV.abort()
           };
-        rM.addEventListener("abort", jM, {
+        eV.addEventListener("abort", UV, {
           once: !0
-        }), SM();
+        }), YV();
         try {
-          var aM;
-          const rM = await fetch(MM, {
-            signal: iM.signal
+          var yV;
+          const eV = await fetch(VV, {
+            signal: xV.signal
           });
-          if (!rM.ok) return !1;
-          const OM = null === (aM = rM.body) || void 0 === aM ? void 0 : aM.getReader();
-          if (!OM) return !1;
+          if (!eV.ok) return !1;
+          const JV = null === (yV = eV.body) || void 0 === yV ? void 0 : yV.getReader();
+          if (!JV) return !1;
           for (;;) {
             const {
-              done: MM
-            } = await OM.read();
-            if (MM) return !0;
-            SM()
+              done: VV
+            } = await JV.read();
+            if (VV) return !0;
+            YV()
           }
         } catch {
           return !1
         } finally {
-          clearTimeout(OM), rM.removeEventListener("abort", jM)
+          clearTimeout(JV), eV.removeEventListener("abort", UV)
         }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const VV in modules) Object.freeze(modules[VV]);

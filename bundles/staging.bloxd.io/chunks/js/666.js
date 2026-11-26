@@ -1,62 +1,62 @@
 export const id = 666;
 export const ids = [666];
 export const modules = {
-  63981: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      applyLightFoOffset: () => aM,
-      getFloatingOriginOffset: () => SM,
-      lightFoVersion: () => jM,
-      wrapRenderableForFO: () => PM
+  64380: (VV, eV, xV) => {
+    xV.r(eV), xV.d(eV, {
+      applyLightFoOffset: () => yV,
+      getFloatingOriginOffset: () => YV,
+      lightFoVersion: () => UV,
+      wrapRenderableForFO: () => pV
     });
-    var OM = iM(44384);
+    var JV = xV(44627);
 
-    function SM(MM) {
-      const rM = MM.camera;
-      if (!rM) return {
+    function YV(VV) {
+      const eV = VV.camera;
+      if (!eV) return {
         x: 0,
         y: 0,
         z: 0
       };
-      const iM = rM.worldMatrix;
+      const xV = eV.worldMatrix;
       return {
-        x: iM[12],
-        y: iM[13],
-        z: iM[14]
+        x: xV[12],
+        y: xV[13],
+        z: xV[14]
       }
     }
 
-    function jM(MM) {
-      return MM.camera ? MM.camera.worldMatrixVersion : 0
+    function UV(VV) {
+      return VV.camera ? VV.camera.worldMatrixVersion : 0
     }
 
-    function aM(MM, rM) {
-      const iM = rM.camera?.worldMatrix;
-      if (!iM) return;
-      const SM = iM[12],
-        jM = iM[13],
-        aM = iM[14];
-      let PM = 0;
-      for (const nM of rM.lights) {
-        if (PM >= OM.b) break;
-        if (!nM._writeLightUbo) continue;
-        const rM = 4 + 16 * PM,
-          iM = MM[rM + 3];
-        if (0 === iM || 2 === iM) {
-          const iM = nM.worldMatrix;
-          MM[rM] = iM[12] - SM, MM[rM + 1] = iM[13] - jM, MM[rM + 2] = iM[14] - aM
+    function yV(VV, eV) {
+      const xV = eV.camera?.worldMatrix;
+      if (!xV) return;
+      const YV = xV[12],
+        UV = xV[13],
+        yV = xV[14];
+      let pV = 0;
+      for (const QV of eV.lights) {
+        if (pV >= JV.b) break;
+        if (!QV._writeLightUbo) continue;
+        const eV = 4 + 16 * pV,
+          xV = VV[eV + 3];
+        if (0 === xV || 2 === xV) {
+          const xV = QV.worldMatrix;
+          VV[eV] = xV[12] - YV, VV[eV + 1] = xV[13] - UV, VV[eV + 2] = xV[14] - yV
         }
-        PM++
+        pV++
       }
     }
 
-    function PM(MM, rM, iM) {
-      let OM = -1;
+    function pV(VV, eV, xV) {
+      let JV = -1;
       return () => {
-        const SM = rM.camera ? rM.camera.worldMatrixVersion : -1;
-        SM !== OM && (iM(), OM = SM), MM()
+        const YV = eV.camera ? eV.camera.worldMatrixVersion : -1;
+        YV !== JV && (xV(), JV = YV), VV()
       }
     }
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const VV in modules) Object.freeze(modules[VV]);

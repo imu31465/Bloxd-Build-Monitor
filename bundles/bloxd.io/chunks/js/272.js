@@ -1,502 +1,502 @@
 export const id = 272;
 export const ids = [272];
 export const modules = {
-  42144: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => jM,
-      h: () => aM
+  42344: (VV, eV, xV) => {
+    xV.d(eV, {
+      b: () => UV,
+      f: () => yV
     });
-    var OM = iM(2050);
-    let SM = !1;
+    var JV = xV(2066);
+    let YV = !1;
 
-    function jM() {
-      SM = !0
+    function UV() {
+      YV = !0
     }
 
-    function aM() {
-      SM && (SM = !1, (0, OM.c)())
+    function yV() {
+      YV && (YV = !1, (0, JV.d)())
     }
   },
-  42135: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => aM,
-      f: () => jM,
-      j: () => PM
+  42341: (VV, eV, xV) => {
+    xV.d(eV, {
+      c: () => yV,
+      f: () => UV,
+      g: () => pV
     });
-    var OM = iM(41669),
-      SM = iM(41677);
+    var JV = xV(41852),
+      YV = xV(41861);
 
-    function jM(MM) {
-      if (MM.queries.drawCensus() < OM.wb.BYTES) return null;
-      const rM = MM.memoryData(MM.scratch(), OM.wb.BYTES, 4, "the draw census");
-      return null === rM ? null : {
-        terrainOpaque: OM.wb.terrainOpaque(rM, 0),
-        terrainTransparent: OM.wb.terrainTransparent(rM, 0),
-        terrainPack: OM.wb.terrainPack(rM, 0),
-        earthSky: OM.wb.earthSky(rM, 0),
-        skyMeshes: OM.wb.skyMeshes(rM, 0),
-        regular: OM.wb.regular(rM, 0),
-        thin: OM.wb.thin(rM, 0),
-        line: OM.wb.line(rM, 0),
-        text: OM.wb.text(rM, 0),
-        particles: OM.wb.particles(rM, 0),
-        terrainParts: OM.wb.terrainParts(rM, 0),
-        terrainCompiling: OM.wb.terrainCompiling(rM, 0),
-        ringCopiesMax: OM.wb.ringCopiesMax(rM, 0),
-        ringBusyWrites: OM.wb.ringBusyWrites(rM, 0)
+    function UV(VV) {
+      if (VV.queries.drawCensus() < JV.xb.BYTES) return null;
+      const eV = VV.memoryData(VV.scratch(), JV.xb.BYTES, 4, "the draw census");
+      return null === eV ? null : {
+        terrainOpaque: JV.xb.terrainOpaque(eV, 0),
+        terrainTransparent: JV.xb.terrainTransparent(eV, 0),
+        terrainPack: JV.xb.terrainPack(eV, 0),
+        earthSky: JV.xb.earthSky(eV, 0),
+        skyMeshes: JV.xb.skyMeshes(eV, 0),
+        regular: JV.xb.regular(eV, 0),
+        thin: JV.xb.thin(eV, 0),
+        line: JV.xb.line(eV, 0),
+        text: JV.xb.text(eV, 0),
+        particles: JV.xb.particles(eV, 0),
+        terrainParts: JV.xb.terrainParts(eV, 0),
+        terrainCompiling: JV.xb.terrainCompiling(eV, 0),
+        ringCopiesMax: JV.xb.ringCopiesMax(eV, 0),
+        ringBusyWrites: JV.xb.ringBusyWrites(eV, 0)
       }
     }
 
-    function aM(MM) {
+    function yV(VV) {
       const {
-        terrainOpaque: rM,
-        terrainTransparent: iM,
-        earthSky: OM,
-        skyMeshes: SM,
-        regular: jM,
-        thin: aM,
-        line: PM,
-        text: nM,
-        particles: QM
-      } = MM;
-      return rM + iM + OM + SM + jM + aM + PM + nM + QM
+        terrainOpaque: eV,
+        terrainTransparent: xV,
+        earthSky: JV,
+        skyMeshes: YV,
+        regular: UV,
+        thin: yV,
+        line: pV,
+        text: QV,
+        particles: nV
+      } = VV;
+      return eV + xV + JV + YV + UV + yV + pV + QV + nV
     }
 
-    function PM() {
-      const MM = (0, SM.e)();
-      return !0 === (null === MM || void 0 === MM ? void 0 : MM.isCoreRunning) ? function(MM) {
-        const rM = jM(MM);
-        if (null === rM) return [];
+    function pV() {
+      const VV = (0, YV.k)();
+      return !0 === (null === VV || void 0 === VV ? void 0 : VV.isCoreRunning) ? function(VV) {
+        const eV = UV(VV);
+        if (null === eV) return [];
         const {
-          terrainOpaque: iM,
-          terrainTransparent: OM,
-          terrainPack: SM,
-          earthSky: PM,
-          skyMeshes: nM,
-          regular: QM,
-          thin: zM,
-          line: LM,
-          text: mM,
-          particles: HM
-        } = rM;
+          terrainOpaque: xV,
+          terrainTransparent: JV,
+          terrainPack: YV,
+          earthSky: pV,
+          skyMeshes: QV,
+          regular: nV,
+          thin: wV,
+          line: ZV,
+          text: vV,
+          particles: rV
+        } = eV;
         return [{
           label: "Drawn",
-          value: `${aM(rM)}`
+          value: `${yV(eV)}`
         }, {
           label: "Terrain",
-          value: `${iM} opaque / ${OM} transparent (${SM} shader pack)`
+          value: `${xV} opaque / ${JV} transparent (${YV} shader pack)`
         }, {
           label: "Meshes / Thin bases",
-          value: `${QM} / ${zM}`
+          value: `${nV} / ${wV}`
         }, {
           label: "Text / Lines",
-          value: `${mM} / ${LM}`
+          value: `${vV} / ${ZV}`
         }, {
           label: "Sky / Particles",
-          value: `${PM+nM} / ${HM}`
+          value: `${pV+QV} / ${rV}`
         }]
-      }(MM.api) : []
+      }(VV.api) : []
     }
   },
-  42111: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => hM,
-      e: () => mM,
-      f: () => HM
+  42322: (VV, eV, xV) => {
+    xV.d(eV, {
+      c: () => kV,
+      f: () => vV,
+      i: () => rV
     });
-    var OM = iM(2058),
-      SM = iM(1319),
-      jM = iM(41677),
-      aM = iM(41697),
-      PM = iM(41704),
-      nM = iM(41712);
-    const QM = new SM.d;
-    let zM = !1;
+    var JV = xV(2070),
+      YV = xV(1339),
+      UV = xV(41861),
+      yV = xV(41880),
+      pV = xV(41885),
+      QV = xV(41909);
+    const nV = new YV.c;
+    let wV = !1;
 
-    function LM(MM) {
-      const rM = (0, jM.e)();
-      return null !== rM && +MM === rM.api.localId
+    function ZV(VV) {
+      const eV = (0, UV.k)();
+      return null !== eV && +VV === eV.api.localId
     }
 
-    function mM() {
-      zM || (zM = !0, (0, nM.h)(aM.k, (MM => {
-        var rM, iM;
-        const OM = (0, PM.d)(aM.k, MM);
-        if (!(0, PM.c)(OM)) return;
-        const SM = OM;
-        LM(SM.Pi) && HM(SM.ni, {
-          icon: SM.Ui,
-          level: SM.Ci,
-          displayName: null !== (rM = SM.Qi) && void 0 !== rM ? rM : null,
-          durationMs: null !== (iM = SM.Gi) && void 0 !== iM ? iM : null
+    function vV() {
+      wV || (wV = !0, (0, QV.l)(yV.o, (VV => {
+        var eV, xV;
+        const JV = (0, pV.i)(yV.o, VV);
+        if (!(0, pV.e)(JV)) return;
+        const YV = JV;
+        ZV(YV.bx) && rV(YV.Ex, {
+          icon: YV.zx,
+          level: YV.Wx,
+          displayName: null !== (eV = YV.Bx) && void 0 !== eV ? eV : null,
+          durationMs: null !== (xV = YV.Gx) && void 0 !== xV ? xV : null
         })
-      })), (0, nM.h)(aM.P, (MM => {
-        const rM = (0, PM.d)(aM.P, MM);
-        if (!(0, PM.c)(rM)) return;
-        const iM = rM;
-        LM(iM.Pi) && OM.d.remove(iM.ni)
-      })), (0, nM.c)((() => {
-        OM.d.clear()
+      })), (0, QV.l)(yV.P, (VV => {
+        const eV = (0, pV.i)(yV.P, VV);
+        if (!(0, pV.e)(eV)) return;
+        const xV = eV;
+        ZV(xV.bx) && JV.d.remove(xV.Ex)
+      })), (0, QV.f)((() => {
+        JV.d.clear()
       })))
     }
 
-    function HM(MM, rM) {
-      OM.d.update(MM, rM), QM.forEach((rM => {
-        rM(MM)
+    function rV(VV, eV) {
+      JV.d.update(VV, eV), nV.forEach((eV => {
+        eV(VV)
       }))
     }
-    const hM = {
+    const kV = {
       localEffectUpdated: {
-        watch: MM => QM.add(MM)
+        watch: VV => nV.add(VV)
       }
     }
   },
-  42119: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => zM
+  42326: (VV, eV, xV) => {
+    xV.d(eV, {
+      d: () => wV
     });
-    var OM = iM(5200),
-      SM = iM(5198),
-      jM = iM(41706),
-      aM = iM(41712);
-    const PM = new Set(OM.M),
-      nM = OM.M.map((MM => (new TextEncoder).encode(MM))),
-      QM = new Map;
+    var JV = xV(5301),
+      YV = xV(5297),
+      UV = xV(41893),
+      yV = xV(41909);
+    const pV = new Set(JV.W),
+      QV = JV.W.map((VV => (new TextEncoder).encode(VV))),
+      nV = new Map;
 
-    function zM(MM, rM) {
-      var iM;
-      return null === (iM = QM.get(MM)) || void 0 === iM ? void 0 : iM[rM]
-    }(0, aM.h)(OM.hc.NewOtherEntitySettings, (MM => {
-      MM.payloadKind === SM.hc.Msgpack && nM.some((rM => function(MM, rM) {
-        const iM = rM[0];
-        for (let OM = MM.indexOf(iM); - 1 !== OM && OM + rM.length <= MM.length; OM = MM.indexOf(iM, OM + 1)) {
-          let iM = 1;
-          for (; iM < rM.length && MM[OM + iM] === rM[iM];) iM++;
-          if (iM === rM.length) return !0
+    function wV(VV, eV) {
+      var xV;
+      return null === (xV = nV.get(VV)) || void 0 === xV ? void 0 : xV[eV]
+    }(0, yV.l)(JV.mc.NewOtherEntitySettings, (VV => {
+      VV.payloadKind === YV.sc.Msgpack && QV.some((eV => function(VV, eV) {
+        const xV = eV[0];
+        for (let JV = VV.indexOf(xV); - 1 !== JV && JV + eV.length <= VV.length; JV = VV.indexOf(xV, JV + 1)) {
+          let xV = 1;
+          for (; xV < eV.length && VV[JV + xV] === eV[xV];) xV++;
+          if (xV === eV.length) return !0
         }
         return !1
-      }(MM.payload, rM))) && function(MM) {
-        if (null === MM || "object" !== typeof MM || null === MM.settings || "object" !== typeof MM.settings) return;
-        const rM = String(MM.eId),
-          iM = MM.settings;
-        let OM = QM.get(rM);
-        for (const SM in iM) {
-          if (!PM.has(SM)) continue;
-          const MM = iM[SM];
-          null === MM || void 0 === MM ? OM && delete OM[SM] : (OM ??= {}, OM[SM] = MM)
+      }(VV.payload, eV))) && function(VV) {
+        if (null === VV || "object" !== typeof VV || null === VV.settings || "object" !== typeof VV.settings) return;
+        const eV = String(VV.eId),
+          xV = VV.settings;
+        let JV = nV.get(eV);
+        for (const YV in xV) {
+          if (!pV.has(YV)) continue;
+          const VV = xV[YV];
+          null === VV || void 0 === VV ? JV && delete JV[YV] : (JV ??= {}, JV[YV] = VV)
         }
-        OM && QM.set(rM, OM)
-      }((0, jM.c)(MM.payload))
-    })), (0, aM.c)((() => {
-      QM.clear()
+        JV && nV.set(eV, JV)
+      }((0, UV.e)(VV.payload))
+    })), (0, yV.f)((() => {
+      nV.clear()
     }))
   },
-  42106: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => HM,
-      e: () => QM,
-      g: () => LM
+  42314: (VV, eV, xV) => {
+    xV.d(eV, {
+      d: () => rV,
+      e: () => nV,
+      f: () => ZV
     });
-    var OM = iM(40036),
-      SM = iM(2045),
-      jM = iM(1319),
-      aM = iM(41697),
-      PM = iM(41704),
-      nM = iM(41712);
-    const QM = new OM.c;
-    let zM = {};
+    var JV = xV(40197),
+      YV = xV(2059),
+      UV = xV(1339),
+      yV = xV(41880),
+      pV = xV(41885),
+      QV = xV(41909);
+    const nV = new JV.d;
+    let wV = {};
 
-    function LM(MM) {
-      return zM[MM]
+    function ZV(VV) {
+      return wV[VV]
     }
-    const mM = new jM.d;
+    const vV = new UV.c;
 
-    function HM(MM) {
-      return mM.add(MM)
+    function rV(VV) {
+      return vV.add(VV)
     }
 
-    function hM(MM) {
-      mM.callEach(MM, "a roster listener")
-    }(0, nM.h)(aM.W, (MM => {
-      const rM = (0, PM.d)(aM.W, MM);
-      if (void 0 === rM) return;
-      const iM = rM.MM.some((MM => {
+    function kV(VV) {
+      vV.callEach(VV, "a roster listener")
+    }(0, QV.l)(yV.Y, (VV => {
+      const eV = (0, pV.i)(yV.Y, VV);
+      if (void 0 === eV) return;
+      const xV = eV.VV.some((VV => {
           let {
-            rM: rM,
-            iM: iM
-          } = MM;
-          return null !== iM && QM.has(rM) && QM.getName(rM) !== iM
+            eV: eV,
+            xV: xV
+          } = VV;
+          return null !== xV && nV.has(eV) && nV.getName(eV) !== xV
         })),
         {
-          added: OM,
-          removed: jM,
-          settingChanges: nM
-        } = QM.apply(rM),
-        zM = new Set;
-      for (const SM of nM)
-        for (const MM in SM.settings) zM.add(MM);
-      const LM = iM || OM.length > 0 || jM.length > 0;
-      (LM || zM.has("hideNameSeed")) && function() {
-        const MM = new Map;
-        for (const rM of QM.ids()) {
-          const iM = QM.getName(rM),
-            OM = QM.getSetting(rM, "hideNameSeed");
-          void 0 !== iM && void 0 !== OM && null !== OM && MM.set(iM, OM)
+          added: JV,
+          removed: UV,
+          settingChanges: QV
+        } = nV.apply(eV),
+        wV = new Set;
+      for (const YV of QV)
+        for (const VV in YV.settings) wV.add(VV);
+      const ZV = xV || JV.length > 0 || UV.length > 0;
+      (ZV || wV.has("hideNameSeed")) && function() {
+        const VV = new Map;
+        for (const eV of nV.ids()) {
+          const xV = nV.getName(eV),
+            JV = nV.getSetting(eV, "hideNameSeed");
+          void 0 !== xV && void 0 !== JV && null !== JV && VV.set(xV, JV)
         }
-        SM.c.replaceAll(MM)
-      }(), hM({
+        YV.e.replaceAll(VV)
+      }(), kV({
         kind: "roster",
-        members: LM,
-        settings: zM
+        members: ZV,
+        settings: wV
       })
-    })), (0, nM.h)(aM.O, (MM => {
-      const rM = (0, PM.d)(aM.O, MM);
-      if (void 0 !== rM) {
+    })), (0, QV.l)(yV.O, (VV => {
+      const eV = (0, pV.i)(yV.O, VV);
+      if (void 0 !== eV) {
         for (const {
-            Xi: MM,
-            Ii: iM,
-            Ki: OM
+            JJ: VV,
+            YJ: xV,
+            UJ: JV
           }
-          of rM) zM[MM] = {
-          ...zM[MM],
-          [iM]: OM
+          of eV) wV[VV] = {
+          ...wV[VV],
+          [xV]: JV
         };
-        hM({
+        kV({
           kind: "cosmetics",
-          updates: rM
+          updates: eV
         })
       }
-    })), (0, nM.c)((() => {
-      QM.clear(), zM = {}, SM.c.clear(), hM({
+    })), (0, QV.f)((() => {
+      nV.clear(), wV = {}, YV.e.clear(), kV({
         kind: "reset"
       })
-    })), (0, nM.e)((() => {
-      QM.clear(), hM({
+    })), (0, QV.h)((() => {
+      nV.clear(), kV({
         kind: "reset"
       })
     }))
   },
-  42126: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => gM,
-      d: () => dM,
-      e: () => WM,
-      i: () => sM
+  42334: (VV, eV, xV) => {
+    xV.d(eV, {
+      e: () => MV,
+      h: () => EV,
+      k: () => RV,
+      m: () => gV
     });
-    var OM = iM(1279),
-      SM = iM(613),
-      jM = iM(83),
-      aM = iM(5200),
-      PM = iM(41669),
-      nM = iM(41695),
-      QM = iM(41677),
-      zM = iM(42119),
-      LM = iM(42106),
-      mM = iM(41704),
-      HM = iM(41712);
+    var JV = xV(1293),
+      YV = xV(648),
+      UV = xV(99),
+      yV = xV(5301),
+      pV = xV(41852),
+      QV = xV(41876),
+      nV = xV(41861),
+      wV = xV(42326),
+      ZV = xV(42314),
+      vV = xV(41885),
+      rV = xV(41909);
 
-    function hM(MM) {
+    function kV(VV) {
       let {
-        deadEId: rM,
-        killerEId: iM,
-        killerLifeformType: OM,
-        withItem: SM,
-        killstreak: jM
-      } = MM;
+        deadEId: eV,
+        killerEId: xV,
+        killerLifeformType: JV,
+        withItem: YV,
+        killstreak: UV
+      } = VV;
       return {
-        killer: UM({
-          eId: iM,
-          lifeformType: OM
+        killer: tV({
+          eId: xV,
+          lifeformType: JV
         }),
-        victim: UM({
-          eId: rM
+        victim: tV({
+          eId: eV
         }),
-        withItem: SM,
-        killstreak: jM
+        withItem: YV,
+        killstreak: UV
       }
     }
 
-    function JM(MM) {
+    function bV(VV) {
       let {
-        killer: rM,
-        victim: iM,
-        withItem: OM
-      } = MM;
+        killer: eV,
+        victim: xV,
+        withItem: JV
+      } = VV;
       return {
-        killer: UM(rM),
-        victim: UM(iM),
-        withItem: OM,
+        killer: tV(eV),
+        victim: tV(xV),
+        withItem: JV,
         killstreak: 0
       }
     }
 
-    function dM(MM) {
-      bM && tM((() => "killed" === MM.kind ? hM(MM.body) : JM(MM.body)))
+    function EV(VV) {
+      AV && XV((() => "killed" === VV.kind ? kV(VV.body) : bV(VV.body)))
     }
-    const yM = "#2727f1",
-      lM = "#912c2c";
+    const BV = "#2727f1",
+      jV = "#912c2c";
 
-    function EM(MM, rM) {
-      var iM;
-      return LM.e.has(MM) ? null === (iM = LM.e.getSettings(MM)) || void 0 === iM ? void 0 : iM[rM] : (0, zM.d)(MM, rM)
+    function qV(VV, eV) {
+      var xV;
+      return ZV.e.has(VV) ? null === (xV = ZV.e.getSettings(VV)) || void 0 === xV ? void 0 : xV[eV] : (0, wV.d)(VV, eV)
     }
 
-    function UM(MM) {
-      var rM, iM, aM, PM, zM;
+    function tV(VV) {
+      var eV, xV, yV, pV, wV;
       let {
-        eId: mM,
-        name: HM,
-        colour: hM,
-        lifeformType: JM
-      } = MM;
-      if (void 0 === mM || null === mM || "" === mM) {
-        const MM = HM || null;
+        eId: vV,
+        name: rV,
+        colour: kV,
+        lifeformType: bV
+      } = VV;
+      if (void 0 === vV || null === vV || "" === vV) {
+        const VV = rV || null;
         return {
           id: null,
-          shownName: MM,
-          lifeformType: null === MM && null !== JM && void 0 !== JM ? JM : null,
-          colour: hM || null,
+          shownName: VV,
+          lifeformType: null === VV && null !== bV && void 0 !== bV ? bV : null,
+          colour: kV || null,
           local: !1,
           realName: null
         }
       }
-      const dM = String(mM),
-        UM = null === (rM = (0, QM.e)()) || void 0 === rM ? void 0 : rM.api,
-        GM = void 0 !== UM && String(UM.localId) === dM,
-        CM = null !== (iM = LM.e.getName(dM)) && void 0 !== iM ? iM : null,
-        eM = null !== (aM = EM(dM, "hideNameSeed")) && void 0 !== aM ? aM : null;
-      let bM = null === CM ? null : (0, OM.e)(CM, !jM.featureFlags.canSeeRealPlayerNames, eM) || null,
-        wM = null;
-      if (null === bM && void 0 !== UM) {
-        const MM = UM.getEntityType(dM);
-        "Player" !== MM && (bM = (0, nM.j)(UM, +dM) || null), wM = SM.j.includes(MM) ? MM : null
+      const EV = String(vV),
+        tV = null === (eV = (0, nV.k)()) || void 0 === eV ? void 0 : eV.api,
+        FV = void 0 !== tV && String(tV.localId) === EV,
+        TV = null !== (xV = ZV.e.getName(EV)) && void 0 !== xV ? xV : null,
+        PV = null !== (yV = qV(EV, "hideNameSeed")) && void 0 !== yV ? yV : null;
+      let AV = null === TV ? null : (0, JV.b)(TV, !UV.featureFlags.canSeeRealPlayerNames, PV) || null,
+        NV = null;
+      if (null === AV && void 0 !== tV) {
+        const VV = tV.getEntityType(EV);
+        "Player" !== VV && (AV = (0, QV.k)(tV, +EV) || null), NV = YV.m.includes(VV) ? VV : null
       }
       return {
-        id: dM,
-        shownName: bM,
-        lifeformType: null === bM && null !== (PM = null !== (zM = wM) && void 0 !== zM ? zM : JM) && void 0 !== PM ? PM : null,
-        colour: hM || EM(dM, "killfeedColour") || (GM ? yM : lM),
-        local: GM,
-        realName: CM
+        id: EV,
+        shownName: AV,
+        lifeformType: null === AV && null !== (pV = null !== (wV = NV) && void 0 !== wV ? wV : bV) && void 0 !== pV ? pV : null,
+        colour: kV || qV(EV, "killfeedColour") || (FV ? BV : jV),
+        local: FV,
+        realName: TV
       }
     }
-    const GM = 32;
-    let CM = [],
-      eM = null,
-      bM = !1,
-      wM = !1;
+    const FV = 32;
+    let TV = [],
+      PV = null,
+      AV = !1,
+      NV = !1;
 
-    function tM(MM) {
-      null === eM ? (CM.length === GM && CM.shift(), CM.push(MM)) : eM(MM())
+    function XV(VV) {
+      null === PV ? (TV.length === FV && TV.shift(), TV.push(VV)) : PV(VV())
     }
 
-    function gM() {
-      wM || (wM = !0, (0, HM.h)(aM.hc.PlayerKilled, (MM => {
-        const rM = (0, mM.f)(MM);
-        (0, mM.c)(rM) && tM((() => hM(rM)))
-      })), (0, HM.h)(aM.hc.CustomKillfeed, (MM => {
-        const rM = (0, mM.f)(MM);
-        (0, mM.c)(rM) && (0, mM.c)(rM.killer) && (0, mM.c)(rM.victim) && tM((() => JM(rM)))
-      })), (0, HM.c)((() => {
-        CM = []
+    function MV() {
+      NV || (NV = !0, (0, rV.l)(yV.mc.PlayerKilled, (VV => {
+        const eV = (0, vV.j)(VV);
+        (0, vV.e)(eV) && XV((() => kV(eV)))
+      })), (0, rV.l)(yV.mc.CustomKillfeed, (VV => {
+        const eV = (0, vV.j)(VV);
+        (0, vV.e)(eV) && (0, vV.e)(eV.killer) && (0, vV.e)(eV.victim) && XV((() => bV(eV)))
+      })), (0, rV.f)((() => {
+        TV = []
       })))
     }
-    const uM = Object.freeze([0, 0, 0]),
-      RM = [0, 0, 0],
-      pM = [0, 0, 0],
-      WM = {
+    const zV = Object.freeze([0, 0, 0]),
+      GV = [0, 0, 0],
+      WV = [0, 0, 0],
+      RV = {
         kill: {
-          watch(MM) {
-            if (bM = !0, 0 === CM.length) return eM = MM, () => {
-              bM = !1, eM = null
+          watch(VV) {
+            if (AV = !0, 0 === TV.length) return PV = VV, () => {
+              AV = !1, PV = null
             };
-            const rM = setTimeout((() => {
-              const rM = CM;
-              CM = [], eM = MM;
-              for (const OM of rM) try {
-                MM(OM())
-              } catch (iM) {
-                console.error("[bloxd-wasm-client] a kept kill couldn't be handed on", iM)
+            const eV = setTimeout((() => {
+              const eV = TV;
+              TV = [], PV = VV;
+              for (const JV of eV) try {
+                VV(JV())
+              } catch (xV) {
+                console.error("[bloxd-wasm-client] a kept kill couldn't be handed on", xV)
               }
             }), 0);
             return () => {
-              clearTimeout(rM), bM = !1, eM = null
+              clearTimeout(eV), AV = !1, PV = null
             }
           }
         }
       },
-      sM = {
+      gV = {
         localPos() {
-          const MM = (0, QM.e)();
-          if (null === MM) return uM;
-          const rM = MM.api.apiView;
-          for (let iM = 0; iM < 3; iM++) RM[iM] = PM.v.localPos(rM, 0, iM);
-          return RM
+          const VV = (0, nV.k)();
+          if (null === VV) return zV;
+          const eV = VV.api.apiView;
+          for (let xV = 0; xV < 3; xV++) GV[xV] = pV.s.localPos(eV, 0, xV);
+          return GV
         },
         targetedBlockPos() {
-          const MM = (0, QM.e)();
-          if (null === MM || PM.v.targetBlockId(MM.api.apiView, 0) === PM.Pc) return null;
-          for (let rM = 0; rM < 3; rM++) pM[rM] = PM.v.targetBlock(MM.api.apiView, 0, rM);
-          return pM
+          const VV = (0, nV.k)();
+          if (null === VV || pV.s.targetBlockId(VV.api.apiView, 0) === pV.Yc) return null;
+          for (let eV = 0; eV < 3; eV++) WV[eV] = pV.s.targetBlock(VV.api.apiView, 0, eV);
+          return WV
         }
       }
   },
-  40036: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => OM
+  40197: (VV, eV, xV) => {
+    xV.d(eV, {
+      d: () => JV
     });
-    class OM {
+    class JV {
       constructor() {
         this.members = new Map
       }
-      apply(MM) {
-        const rM = {
+      apply(VV) {
+        const eV = {
           added: [],
           removed: [],
           settingChanges: []
         };
-        for (const OM of MM.MM) {
-          let MM = this.members.get(OM.rM);
-          if (MM || (MM = {
+        for (const JV of VV.VV) {
+          let VV = this.members.get(JV.eV);
+          if (VV || (VV = {
               name: null,
               settings: {}
-            }, this.members.set(OM.rM, MM), rM.added.push(OM.rM)), null !== OM.iM && (MM.name = OM.iM), null !== OM.OM || OM.SM.length > 0) {
-            const iM = null === OM.OM ? {} : JSON.parse(OM.OM);
-            Object.assign(MM.settings, iM);
-            for (const rM of OM.SM) delete MM.settings[rM], iM[rM] = void 0;
-            rM.settingChanges.push({
-              playerId: OM.rM,
-              settings: iM
+            }, this.members.set(JV.eV, VV), eV.added.push(JV.eV)), null !== JV.xV && (VV.name = JV.xV), null !== JV.JV || JV.YV.length > 0) {
+            const xV = null === JV.JV ? {} : JSON.parse(JV.JV);
+            Object.assign(VV.settings, xV);
+            for (const eV of JV.YV) delete VV.settings[eV], xV[eV] = void 0;
+            eV.settingChanges.push({
+              playerId: JV.eV,
+              settings: xV
             })
           }
         }
-        for (const OM of MM.jM) {
-          const MM = this.members.get(OM);
-          var iM;
-          if (MM) this.members.delete(OM), rM.removed.push({
-            playerId: OM,
-            name: null !== (iM = MM.name) && void 0 !== iM ? iM : void 0
+        for (const JV of VV.yV) {
+          const VV = this.members.get(JV);
+          var xV;
+          if (VV) this.members.delete(JV), eV.removed.push({
+            playerId: JV,
+            name: null !== (xV = VV.name) && void 0 !== xV ? xV : void 0
           })
         }
-        return rM
+        return eV
       }
-      has(MM) {
-        return this.members.has(MM)
+      has(VV) {
+        return this.members.has(VV)
       }
       ids() {
         return [...this.members.keys()]
       }
-      getName(MM) {
-        var rM, iM;
-        return null !== (rM = null === (iM = this.members.get(MM)) || void 0 === iM ? void 0 : iM.name) && void 0 !== rM ? rM : void 0
+      getName(VV) {
+        var eV, xV;
+        return null !== (eV = null === (xV = this.members.get(VV)) || void 0 === xV ? void 0 : xV.name) && void 0 !== eV ? eV : void 0
       }
-      getSettings(MM) {
-        var rM;
-        return null === (rM = this.members.get(MM)) || void 0 === rM ? void 0 : rM.settings
+      getSettings(VV) {
+        var eV;
+        return null === (eV = this.members.get(VV)) || void 0 === eV ? void 0 : eV.settings
       }
-      getSetting(MM, rM) {
-        var iM;
-        return null === (iM = this.members.get(MM)) || void 0 === iM ? void 0 : iM.settings[rM]
+      getSetting(VV, eV) {
+        var xV;
+        return null === (xV = this.members.get(VV)) || void 0 === xV ? void 0 : xV.settings[eV]
       }
       clear() {
         this.members.clear()
@@ -505,4 +505,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const VV in modules) Object.freeze(modules[VV]);

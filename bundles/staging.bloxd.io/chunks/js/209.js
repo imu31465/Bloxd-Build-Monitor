@@ -1,330 +1,330 @@
 export const id = 209;
 export const ids = [209];
 export const modules = {
-  37207: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      WasmTextureWorker: () => lM
+  37410: (VV, eV, xV) => {
+    xV.r(eV), xV.d(eV, {
+      WasmTextureWorker: () => jV
     });
-    var OM = iM(613),
-      SM = iM(3601),
-      jM = iM(34814),
-      aM = iM.n(jM);
+    var JV = xV(648),
+      YV = xV(3624),
+      UV = xV(35081),
+      yV = xV.n(UV);
 
-    function PM() {
-      return aM()('(()=>{var MM={d:(rM,iM)=>{for(var OM in iM)MM.o(iM,OM)&&!MM.o(rM,OM)&&Object.defineProperty(rM,OM,{enumerable:!0,get:iM[OM]})},o:(MM,rM)=>Object.prototype.hasOwnProperty.call(MM,rM),r:MM=>{"undefined"!==typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(MM,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(MM,"__esModule",{value:!0})}},rM={};MM.r(rM),MM.d(rM,{TS:()=>iM,PQ:()=>OM,default:()=>pM,initSync:()=>RM,HQ:()=>SM});class iM{__destroy_into_raw(){const MM=this.__wbg_ptr;return this.__wbg_ptr=0,aM.unregister(this),MM}free(){const MM=this.__destroy_into_raw();tM.kBjc(MM,0)}On(MM){const rM=function(MM,rM){const iM=rM(1*MM.length,1)>>>0;return hM().set(MM,iM/1),gM=MM.length,iM}(MM,tM.l7ge),iM=gM;return tM.iNBm(this.__wbg_ptr,rM,iM)>>>0}In(){const MM=tM.Hcca(this.__wbg_ptr);var rM=PM(MM[0],MM[1]).slice();return tM.SH6B(MM[0],4*MM[1],4),rM}wh(){let MM,rM;try{const iM=tM.gI3A(this.__wbg_ptr);return MM=iM[0],rM=iM[1],zM(iM[0],iM[1])}finally{tM.SH6B(MM,rM,1)}}th(){return tM.Y3s6(this.__wbg_ptr)>>>0}rd(){return tM.boFw(this.__wbg_ptr)>>>0}nd(){let MM,rM;try{const iM=tM.mxFd(this.__wbg_ptr);return MM=iM[0],rM=iM[1],zM(iM[0],iM[1])}finally{tM.SH6B(MM,rM,1)}}md(){const MM=tM.Ha7W(this.__wbg_ptr);var rM=PM(MM[0],MM[1]).slice();return tM.SH6B(MM[0],4*MM[1],4),rM}ld(){const MM=tM.YbGx(this.__wbg_ptr);var rM,iM,OM=(rM=MM[0],iM=MM[1],rM>>>=0,QM().subarray(rM/8,rM/8+iM)).slice();return tM.SH6B(MM[0],8*MM[1],8),OM}Ed(){return tM.f4r3(this.__wbg_ptr)>>>0}ed(MM){const rM=tM.TEw8(this.__wbg_ptr,MM);if(rM[1])throw EM(rM[0])}bd(){tM.cdJL(this.__wbg_ptr)}td(){tM.DcSa(this.__wbg_ptr)}Cd(){const MM=tM.PxNK(this.__wbg_ptr);if(MM[1])throw EM(MM[0])}ud(){return tM.VL7J(this.__wbg_ptr)>>>0}wd(){const MM=tM.HVwM(this.__wbg_ptr);if(MM[1])throw EM(MM[0])}Rd(MM,rM){const iM=tM.ydSl(this.__wbg_ptr,MM,rM);if(iM[1])throw EM(iM[0])}pd(MM){let rM,iM;try{const jM=tM.iH85(this.__wbg_ptr,MM);var OM=jM[0],SM=jM[1];if(jM[3])throw OM=0,SM=0,EM(jM[2]);return rM=OM,iM=SM,zM(OM,SM)}finally{tM.SH6B(rM,iM,1)}}Wd(MM){return tM.l5zJ(this.__wbg_ptr,MM)>>>0}sd(MM){return tM.MKpo(this.__wbg_ptr,MM)>>>0}Ud(){const MM=tM.Dw7E(this.__wbg_ptr);var rM=PM(MM[0],MM[1]).slice();return tM.SH6B(MM[0],4*MM[1],4),rM}Dd(){return 0!==tM.RYxg(this.__wbg_ptr)}constructor(MM,rM,iM,OM,SM,jM){const PM=lM(MM,tM.l7ge,tM.x3l4),nM=gM,zM=yM(rM,tM.l7ge),LM=gM,mM=function(MM,rM){const iM=rM(8*MM.length,8)>>>0;return QM().set(MM,iM/8),gM=MM.length,iM}(iM,tM.l7ge),HM=gM,hM=yM(OM,tM.l7ge),JM=gM,dM=yM(SM,tM.l7ge),UM=gM,GM=tM.pqki(PM,nM,zM,LM,mM,HM,hM,JM,dM,UM,jM);if(GM[2])throw EM(GM[1]);return this.__wbg_ptr=GM[0],aM.register(this,this.__wbg_ptr,this),this}kd(){let MM,rM;try{const iM=tM.hi9y(this.__wbg_ptr);return MM=iM[0],rM=iM[1],zM(iM[0],iM[1])}finally{tM.SH6B(MM,rM,1)}}Zd(MM,rM){const iM=lM(MM,tM.l7ge,tM.x3l4),OM=gM,SM=yM(rM,tM.l7ge),jM=gM,aM=tM.lN6C(this.__wbg_ptr,iM,OM,SM,jM);if(aM[1])throw EM(aM[0])}od(){return tM.zUXN(this.__wbg_ptr)>>>0}fd(){return tM.xuHy(this.__wbg_ptr)>>>0}gd(){return tM.aVjl(this.__wbg_ptr)>>>0}Gd(){return tM.KH0s(this.__wbg_ptr)>>>0}warnings(){let MM,rM;try{const iM=tM.mwGb(this.__wbg_ptr);return MM=iM[0],rM=iM[1],zM(iM[0],iM[1])}finally{tM.SH6B(MM,rM,1)}}}function OM(MM,rM){const iM=lM(MM,tM.l7ge,tM.x3l4),OM=gM,SM=tM.pKfi(iM,OM,rM);if(SM[1])throw EM(SM[0])}function SM(){tM.zJDg()}function jM(){return{__proto__:null,nlQB:{__proto__:null,boDE:function(MM,rM){return function(MM){dM===JM.length&&JM.push(JM.length+1);const rM=dM;return dM=JM[rM],JM[rM]=MM,rM}(Error(zM(MM,rM)))},opG3:function(MM,rM){throw new Error(zM(MM,rM))},fJWF:function(MM,rM){console.error(zM(MM,rM))}}}}Symbol.dispose&&(iM.prototype[Symbol.dispose]=iM.prototype.free);const aM="undefined"===typeof FinalizationRegistry?{register:()=>{},unregister:()=>{}}:new FinalizationRegistry((MM=>tM.kBjc(MM,1)));function PM(MM,rM){return MM>>>=0,mM().subarray(MM/4,MM/4+rM)}let nM=null;function QM(){return null!==nM&&0!==nM.byteLength||(nM=new Float64Array(tM.memory.buffer)),nM}function zM(MM,rM){return function(MM,rM){CM+=rM,CM>=GM&&(UM=new TextDecoder("utf-8",{ignoreBOM:!0,fatal:!0}),UM.decode(),CM=rM);return UM.decode(hM().subarray(MM,MM+rM))}(MM>>>0,rM)}let LM=null;function mM(){return null!==LM&&0!==LM.byteLength||(LM=new Uint32Array(tM.memory.buffer)),LM}let HM=null;function hM(){return null!==HM&&0!==HM.byteLength||(HM=new Uint8Array(tM.memory.buffer)),HM}let JM=new Array(1024).fill(void 0);JM.push(void 0,null,!0,!1);let dM=JM.length;function yM(MM,rM){const iM=rM(4*MM.length,4)>>>0;return mM().set(MM,iM/4),gM=MM.length,iM}function lM(MM,rM,iM){if(void 0===iM){const iM=eM.encode(MM),OM=rM(iM.length,1)>>>0;return hM().subarray(OM,OM+iM.length).set(iM),gM=iM.length,OM}let OM=MM.length,SM=rM(OM,1)>>>0;const jM=hM();let aM=0;for(;aM<OM;aM++){const rM=MM.charCodeAt(aM);if(rM>127)break;jM[SM+aM]=rM}if(aM!==OM){0!==aM&&(MM=MM.slice(aM)),SM=iM(SM,OM,OM=aM+3*MM.length,1)>>>0;const rM=hM().subarray(SM+aM,SM+OM);aM+=eM.encodeInto(MM,rM).written,SM=iM(SM,OM,aM,1)>>>0}return gM=aM,SM}function EM(MM){const rM=function(MM){return JM[MM]}(MM);return function(MM){MM<1028||(JM[MM]=dM,dM=MM)}(MM),rM}let UM=new TextDecoder("utf-8",{ignoreBOM:!0,fatal:!0});UM.decode();const GM=2146435072;let CM=0;const eM=new TextEncoder;"encodeInto"in eM||(eM.encodeInto=function(MM,rM){const iM=eM.encode(MM);return rM.set(iM),{read:MM.length,written:iM.length}});let bM,wM,tM,gM=0;function uM(MM,rM){return wM=MM,tM=MM.exports,bM=rM,nM=null,LM=null,HM=null,tM.z8nZ(),tM}function RM(MM){if(void 0!==tM)return tM;void 0!==MM&&(Object.getPrototypeOf(MM)===Object.prototype?({module:MM}=MM):console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));const rM=jM();MM instanceof WebAssembly.Module||(MM=new WebAssembly.Module(MM));return uM(new WebAssembly.Instance(MM,rM),MM)}async function pM(MM){if(void 0!==tM)return tM;void 0!==MM&&(Object.getPrototypeOf(MM)===Object.prototype?({module_or_path:MM}=MM):console.warn("using deprecated parameters for the initialization function; pass a single object instead"));const rM=jM();("string"===typeof MM||"function"===typeof Request&&MM instanceof Request||"function"===typeof URL&&MM instanceof URL)&&(MM=fetch(MM));const{instance:iM,module:OM}=await async function(MM,rM){if("function"===typeof Response&&MM instanceof Response){if(!MM.ok)throw new Error(`failed to fetch Wasm: ${MM.status} ${MM.statusText} fetching \'${MM.url}\'`);if("function"===typeof WebAssembly.instantiateStreaming)try{return await WebAssembly.instantiateStreaming(MM,rM)}catch(iM){if(!function(MM){switch(MM){case"basic":case"cors":case"default":return!0}return!1}(MM.type)||"application/wasm"===MM.headers.get("Content-Type"))throw iM;console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\\n",iM)}const OM=await MM.arrayBuffer();return await WebAssembly.instantiate(OM,rM)}{const iM=await WebAssembly.instantiate(MM,rM);return iM instanceof WebAssembly.Instance?{instance:iM,module:MM}:iM}}(await MM,rM);return uM(iM,OM)}let WM=null,sM=null;function DM(MM){if(null!==sM)throw sM;if(null===WM)try{const{memory:iM}=RM({module:MM});WM={wasm:rM,memory:iM}}catch(iM){throw sM=function(MM,rM){return new Error(`${MM}: ${rM instanceof Error?`${rM.name}: ${rM.message}`:String(rM)}`,{cause:rM})}("instantiate",iM),sM}return WM}function kM(MM){return MM instanceof Error?MM.message:String(MM)}const ZM=0,oM=1,fM=2,YM=3,NM=4;Error;function AM(MM){return`the texture module didn\'t load (${kM(MM)})`}function xM(MM){return""===MM?[]:MM.split("\\0")}const vM=self;let FM=null,BM=null,XM=ZM,IM=0;function KM(MM){const rM=performance.now();var iM,OM;(MM!==XM||rM-IM>=1e3)&&(XM=MM,IM=rM,vM.postMessage({type:"progress",stage:MM,wasmBytes:null!==(iM=null===(OM=BM)||void 0===OM?void 0:OM.buffer.byteLength)&&void 0!==iM?iM:0}))}const{FileReaderSync:qM}=self;function TM(MM){return(new qM).readAsDataURL(new Blob([MM],{type:"image/png"}))}function VM(MM,rM){vM.postMessage({type:"sheet",sheet:MM,pixels:rM},[rM.buffer])}function cM(MM){let rM;KM(oM);try{rM=DM(MM.module)}catch(aM){return void vM.postMessage({type:"failed",reason:AM(aM),moduleLoad:!0})}BM=rM.memory,KM(fM);const{assets:iM,layerCap:OM,warnings:SM,generator:jM}=function(MM,rM,iM,OM,SM,jM,aM){var PM;const{wasm:nM,memory:QM}=MM,{strings:zM,blocks:LM,numbers:mM,index:HM,armour:hM}=rM,JM=new nM.TS(zM,LM,mM,HM,hM,iM),dM=OM.sources.map((MM=>(null===jM||void 0===jM||jM(fM),JM.On(MM)))),yM=new Uint32Array(2*OM.sourceOfName.length);for(const[gM,uM]of OM.sourceOfName.entries())yM[2*gM]=gM,yM[2*gM+1]=dM[uM];JM.Zd(OM.names,yM),null===jM||void 0===jM||jM(YM),JM.Rd(SM,null!==(PM=null===aM||void 0===aM?void 0:aM.layers)&&void 0!==PM?PM:0),null===jM||void 0===jM||jM(NM);const lM={};for(const[gM,uM]of xM(JM.kd()).entries())null===jM||void 0===jM||jM(NM),lM[uM]=JM.pd(gM);const EM={},UM=JM.In(),GM=new Map;for(const[gM,uM]of xM(JM.wh()).entries()){const MM=UM[gM];GM.has(MM)||(null===jM||void 0===jM||jM(NM),GM.set(MM,JM.pd(MM))),EM[uM]=GM.get(MM)}JM.bd();const CM=Array.from(JM.Ud()),eM=[],bM=[],wM=(MM,rM)=>new Uint8ClampedArray(QM.buffer,MM,rM).slice();if(aM){for(let MM=0;MM<CM.length;MM++)null===jM||void 0===jM||jM(NM),JM.ed(MM),JM.Cd(),eM.push(aM.dataUrl(new Uint8Array(QM.buffer,JM.gd(),JM.fd()))),aM.onSheet(MM,wM(JM.Gd(),JM.od()));JM.td()}const tM=JM.ud();for(let gM=tM;gM<tM+JM.rd();gM++)null===jM||void 0===jM||jM(NM),eM.push(JM.pd(gM)),bM.push(wM(JM.sd(gM),JM.Wd(gM)));return{assets:{rotatedBlockTextures:lM,animatedBlockTextures:EM,blockAtlasArr:eM,blockAtlasPixels:bM,armourAtlas:JM.pd(JM.th()),imagesPerAtlas:CM,blockAtlasWidth:JM.Ed()},layerCap:JM.Dd()?SM:0,warnings:JM.warnings(),generator:JM}}(rM,MM.inputs,MM.isDefaultPack,{sources:MM.sources,names:MM.names,sourceOfName:MM.sourceOfName},MM.maxLayerWidth,KM,MM.sheetLayers>0?{layers:MM.sheetLayers,onSheet:VM,dataUrl:TM}:void 0);FM=jM,vM.postMessage({type:"required",assets:iM,layerCap:OM,warnings:SM},iM.blockAtlasPixels.map((MM=>MM.buffer)))}self.onmessageerror=()=>{vM.postMessage({type:"failed",reason:"the request couldn\'t be deserialised"})},self.onmessage=MM=>{let{data:rM}=MM;try{"required"===rM.type?cM(rM):function(){if(!FM)throw new Error("No required assets to follow");const{colours:MM,warnings:rM}=function(MM){return MM.wd(),{colours:{blocks:MM.nd(),counts:MM.md(),values:MM.ld()},warnings:MM.warnings()}}(FM);vM.postMessage({type:"optional",...MM,warnings:rM},[MM.counts.buffer,MM.values.buffer])}()}catch(iM){const MM=kM(iM),rM=iM instanceof WebAssembly.RuntimeError?`wasm trapped (${MM})`:MM;vM.postMessage({type:"failed",reason:rM,stack:iM instanceof Error?iM.stack:void 0})}}})();', "Worker", void 0, iM.p + "generation.worker.2dfe4cda.worker.js")
+    function pV() {
+      return yV()('(()=>{var VV={d:(eV,xV)=>{for(var JV in xV)VV.o(xV,JV)&&!VV.o(eV,JV)&&Object.defineProperty(eV,JV,{enumerable:!0,get:xV[JV]})},o:(VV,eV)=>Object.prototype.hasOwnProperty.call(VV,eV),r:VV=>{"undefined"!==typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(VV,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(VV,"__esModule",{value:!0})}},eV={};VV.r(eV),VV.d(eV,{we:()=>xV,sw:()=>JV,default:()=>WV,initSync:()=>GV,hZ:()=>YV});class xV{__destroy_into_raw(){const VV=this.__wbg_ptr;return this.__wbg_ptr=0,yV.unregister(this),VV}free(){const VV=this.__destroy_into_raw();XV.GZwV(VV,0)}re(VV){const eV=function(VV,eV){const xV=eV(1*VV.length,1)>>>0;return kV().set(VV,xV/1),MV=VV.length,xV}(VV,XV.Fgdn),xV=MV;return XV.aE67(this.__wbg_ptr,eV,xV)>>>0}We(){const VV=XV.HpA8(this.__wbg_ptr);var eV=pV(VV[0],VV[1]).slice();return XV.LxZd(VV[0],4*VV[1],4),eV}me(){let VV,eV;try{const xV=XV.BbLk(this.__wbg_ptr);return VV=xV[0],eV=xV[1],wV(xV[0],xV[1])}finally{XV.LxZd(VV,eV,1)}}xx(){return XV.hkRp(this.__wbg_ptr)>>>0}op(){return XV.i7ii(this.__wbg_ptr)>>>0}In(){let VV,eV;try{const xV=XV.aGVQ(this.__wbg_ptr);return VV=xV[0],eV=xV[1],wV(xV[0],xV[1])}finally{XV.LxZd(VV,eV,1)}}On(){const VV=XV.vclb(this.__wbg_ptr);var eV=pV(VV[0],VV[1]).slice();return XV.LxZd(VV[0],4*VV[1],4),eV}cr(){const VV=XV.nzr8(this.__wbg_ptr);var eV,xV,JV=(eV=VV[0],xV=VV[1],eV>>>=0,nV().subarray(eV/8,eV/8+xV)).slice();return XV.LxZd(VV[0],8*VV[1],8),JV}dk(){return XV.uaMC(this.__wbg_ptr)>>>0}GE(VV){const eV=XV.YQzf(this.__wbg_ptr,VV);if(eV[1])throw qV(eV[0])}WE(){XV.T1L8(this.__wbg_ptr)}gE(){XV.ATfT(this.__wbg_ptr)}NE(){const VV=XV.TQMz(this.__wbg_ptr);if(VV[1])throw qV(VV[0])}iE(){return XV.mNE5(this.__wbg_ptr)>>>0}RE(){const VV=XV.Jabu(this.__wbg_ptr);if(VV[1])throw qV(VV[0])}CE(VV,eV){const xV=XV.p3kD(this.__wbg_ptr,VV,eV);if(xV[1])throw qV(xV[0])}aE(VV){let eV,xV;try{const UV=XV.Zeyf(this.__wbg_ptr,VV);var JV=UV[0],YV=UV[1];if(UV[3])throw JV=0,YV=0,qV(UV[2]);return eV=JV,xV=YV,wV(JV,YV)}finally{XV.LxZd(eV,xV,1)}}oE(VV){return XV.f8Nl(this.__wbg_ptr,VV)>>>0}cE(VV){return XV.kAhC(this.__wbg_ptr,VV)>>>0}mb(){const VV=XV.YOVa(this.__wbg_ptr);var eV=pV(VV[0],VV[1]).slice();return XV.LxZd(VV[0],4*VV[1],4),eV}hE(){return 0!==XV.OZuT(this.__wbg_ptr)}constructor(VV,eV,xV,JV,YV,UV){const pV=jV(VV,XV.Fgdn,XV.hFdF),QV=MV,wV=BV(eV,XV.Fgdn),ZV=MV,vV=function(VV,eV){const xV=eV(8*VV.length,8)>>>0;return nV().set(VV,xV/8),MV=VV.length,xV}(xV,XV.Fgdn),rV=MV,kV=BV(JV,XV.Fgdn),bV=MV,EV=BV(YV,XV.Fgdn),tV=MV,FV=XV.djJ8(pV,QV,wV,ZV,vV,rV,kV,bV,EV,tV,UV);if(FV[2])throw qV(FV[1]);return this.__wbg_ptr=FV[0],yV.register(this,this.__wbg_ptr,this),this}lE(){let VV,eV;try{const xV=XV.IW0F(this.__wbg_ptr);return VV=xV[0],eV=xV[1],wV(xV[0],xV[1])}finally{XV.LxZd(VV,eV,1)}}LE(VV,eV){const xV=jV(VV,XV.Fgdn,XV.hFdF),JV=MV,YV=BV(eV,XV.Fgdn),UV=MV,yV=XV.ShfN(this.__wbg_ptr,xV,JV,YV,UV);if(yV[1])throw qV(yV[0])}fE(){return XV.ifuy(this.__wbg_ptr)>>>0}mE(){return XV.D2NN(this.__wbg_ptr)>>>0}DE(){return XV.yUcm(this.__wbg_ptr)>>>0}BE(){return XV.t5n1(this.__wbg_ptr)>>>0}warnings(){let VV,eV;try{const xV=XV.h0gn(this.__wbg_ptr);return VV=xV[0],eV=xV[1],wV(xV[0],xV[1])}finally{XV.LxZd(VV,eV,1)}}}function JV(VV,eV){const xV=jV(VV,XV.Fgdn,XV.hFdF),JV=MV,YV=XV.ANFx(xV,JV,eV);if(YV[1])throw qV(YV[0])}function YV(){XV.BtR8()}function UV(){return{__proto__:null,CUEF:{__proto__:null,MYfM:function(VV,eV){return function(VV){EV===bV.length&&bV.push(bV.length+1);const eV=EV;return EV=bV[eV],bV[eV]=VV,eV}(Error(wV(VV,eV)))},s3e6:function(VV,eV){throw new Error(wV(VV,eV))},oKVj:function(VV,eV){console.error(wV(VV,eV))}}}}Symbol.dispose&&(xV.prototype[Symbol.dispose]=xV.prototype.free);const yV="undefined"===typeof FinalizationRegistry?{register:()=>{},unregister:()=>{}}:new FinalizationRegistry((VV=>XV.GZwV(VV,1)));function pV(VV,eV){return VV>>>=0,vV().subarray(VV/4,VV/4+eV)}let QV=null;function nV(){return null!==QV&&0!==QV.byteLength||(QV=new Float64Array(XV.memory.buffer)),QV}function wV(VV,eV){return function(VV,eV){TV+=eV,TV>=FV&&(tV=new TextDecoder("utf-8",{ignoreBOM:!0,fatal:!0}),tV.decode(),TV=eV);return tV.decode(kV().subarray(VV,VV+eV))}(VV>>>0,eV)}let ZV=null;function vV(){return null!==ZV&&0!==ZV.byteLength||(ZV=new Uint32Array(XV.memory.buffer)),ZV}let rV=null;function kV(){return null!==rV&&0!==rV.byteLength||(rV=new Uint8Array(XV.memory.buffer)),rV}let bV=new Array(1024).fill(void 0);bV.push(void 0,null,!0,!1);let EV=bV.length;function BV(VV,eV){const xV=eV(4*VV.length,4)>>>0;return vV().set(VV,xV/4),MV=VV.length,xV}function jV(VV,eV,xV){if(void 0===xV){const xV=PV.encode(VV),JV=eV(xV.length,1)>>>0;return kV().subarray(JV,JV+xV.length).set(xV),MV=xV.length,JV}let JV=VV.length,YV=eV(JV,1)>>>0;const UV=kV();let yV=0;for(;yV<JV;yV++){const eV=VV.charCodeAt(yV);if(eV>127)break;UV[YV+yV]=eV}if(yV!==JV){0!==yV&&(VV=VV.slice(yV)),YV=xV(YV,JV,JV=yV+3*VV.length,1)>>>0;const eV=kV().subarray(YV+yV,YV+JV);yV+=PV.encodeInto(VV,eV).written,YV=xV(YV,JV,yV,1)>>>0}return MV=yV,YV}function qV(VV){const eV=function(VV){return bV[VV]}(VV);return function(VV){VV<1028||(bV[VV]=EV,EV=VV)}(VV),eV}let tV=new TextDecoder("utf-8",{ignoreBOM:!0,fatal:!0});tV.decode();const FV=2146435072;let TV=0;const PV=new TextEncoder;"encodeInto"in PV||(PV.encodeInto=function(VV,eV){const xV=PV.encode(VV);return eV.set(xV),{read:VV.length,written:xV.length}});let AV,NV,XV,MV=0;function zV(VV,eV){return NV=VV,XV=VV.exports,AV=eV,QV=null,ZV=null,rV=null,XV.OJqV(),XV}function GV(VV){if(void 0!==XV)return XV;void 0!==VV&&(Object.getPrototypeOf(VV)===Object.prototype?({module:VV}=VV):console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));const eV=UV();VV instanceof WebAssembly.Module||(VV=new WebAssembly.Module(VV));return zV(new WebAssembly.Instance(VV,eV),VV)}async function WV(VV){if(void 0!==XV)return XV;void 0!==VV&&(Object.getPrototypeOf(VV)===Object.prototype?({module_or_path:VV}=VV):console.warn("using deprecated parameters for the initialization function; pass a single object instead"));const eV=UV();("string"===typeof VV||"function"===typeof Request&&VV instanceof Request||"function"===typeof URL&&VV instanceof URL)&&(VV=fetch(VV));const{instance:xV,module:JV}=await async function(VV,eV){if("function"===typeof Response&&VV instanceof Response){if(!VV.ok)throw new Error(`failed to fetch Wasm: ${VV.status} ${VV.statusText} fetching \'${VV.url}\'`);if("function"===typeof WebAssembly.instantiateStreaming)try{return await WebAssembly.instantiateStreaming(VV,eV)}catch(xV){if(!function(VV){switch(VV){case"basic":case"cors":case"default":return!0}return!1}(VV.type)||"application/wasm"===VV.headers.get("Content-Type"))throw xV;console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\\n",xV)}const JV=await VV.arrayBuffer();return await WebAssembly.instantiate(JV,eV)}{const xV=await WebAssembly.instantiate(VV,eV);return xV instanceof WebAssembly.Instance?{instance:xV,module:VV}:xV}}(await VV,eV);return zV(xV,JV)}let RV=null,gV=null;function DV(VV){if(null!==gV)throw gV;if(null===RV)try{const{memory:xV}=GV({module:VV});RV={wasm:eV,memory:xV}}catch(xV){throw gV=function(VV,eV){return new Error(`${VV}: ${eV instanceof Error?`${eV.name}: ${eV.message}`:String(eV)}`,{cause:eV})}("instantiate",xV),gV}return RV}function iV(VV){return VV instanceof Error?VV.message:String(VV)}const CV=0,aV=1,oV=2,cV=3,hV=4;Error;function lV(VV){return`the texture module didn\'t load (${iV(VV)})`}function LV(VV){return""===VV?[]:VV.split("\\0")}const fV=self;let mV=null,KV=null,HV=CV,uV=0;function sV(VV){const eV=performance.now();var xV,JV;(VV!==HV||eV-uV>=1e3)&&(HV=VV,uV=eV,fV.postMessage({type:"progress",stage:VV,wasmBytes:null!==(xV=null===(JV=KV)||void 0===JV?void 0:JV.buffer.byteLength)&&void 0!==xV?xV:0}))}const{FileReaderSync:SV}=self;function IV(VV){return(new SV).readAsDataURL(new Blob([VV],{type:"image/png"}))}function dV(VV,eV){fV.postMessage({type:"sheet",sheet:VV,pixels:eV},[eV.buffer])}function OV(VV){let eV;sV(aV);try{eV=DV(VV.module)}catch(yV){return void fV.postMessage({type:"failed",reason:lV(yV),moduleLoad:!0})}KV=eV.memory,sV(oV);const{assets:xV,layerCap:JV,warnings:YV,generator:UV}=function(VV,eV,xV,JV,YV,UV,yV){var pV;const{wasm:QV,memory:nV}=VV,{strings:wV,blocks:ZV,numbers:vV,index:rV,armour:kV}=eV,bV=new QV.we(wV,ZV,vV,rV,kV,xV),EV=JV.sources.map((VV=>(null===UV||void 0===UV||UV(oV),bV.re(VV)))),BV=new Uint32Array(2*JV.sourceOfName.length);for(const[MV,zV]of JV.sourceOfName.entries())BV[2*MV]=MV,BV[2*MV+1]=EV[zV];bV.LE(JV.names,BV),null===UV||void 0===UV||UV(cV),bV.CE(YV,null!==(pV=null===yV||void 0===yV?void 0:yV.layers)&&void 0!==pV?pV:0),null===UV||void 0===UV||UV(hV);const jV={};for(const[MV,zV]of LV(bV.lE()).entries())null===UV||void 0===UV||UV(hV),jV[zV]=bV.aE(MV);const qV={},tV=bV.We(),FV=new Map;for(const[MV,zV]of LV(bV.me()).entries()){const VV=tV[MV];FV.has(VV)||(null===UV||void 0===UV||UV(hV),FV.set(VV,bV.aE(VV))),qV[zV]=FV.get(VV)}bV.WE();const TV=Array.from(bV.mb()),PV=[],AV=[],NV=(VV,eV)=>new Uint8ClampedArray(nV.buffer,VV,eV).slice();if(yV){for(let VV=0;VV<TV.length;VV++)null===UV||void 0===UV||UV(hV),bV.GE(VV),bV.NE(),PV.push(yV.dataUrl(new Uint8Array(nV.buffer,bV.DE(),bV.mE()))),yV.onSheet(VV,NV(bV.BE(),bV.fE()));bV.gE()}const XV=bV.iE();for(let MV=XV;MV<XV+bV.op();MV++)null===UV||void 0===UV||UV(hV),PV.push(bV.aE(MV)),AV.push(NV(bV.cE(MV),bV.oE(MV)));return{assets:{rotatedBlockTextures:jV,animatedBlockTextures:qV,blockAtlasArr:PV,blockAtlasPixels:AV,armourAtlas:bV.aE(bV.xx()),imagesPerAtlas:TV,blockAtlasWidth:bV.dk()},layerCap:bV.hE()?YV:0,warnings:bV.warnings(),generator:bV}}(eV,VV.inputs,VV.isDefaultPack,{sources:VV.sources,names:VV.names,sourceOfName:VV.sourceOfName},VV.maxLayerWidth,sV,VV.sheetLayers>0?{layers:VV.sheetLayers,onSheet:dV,dataUrl:IV}:void 0);mV=UV,fV.postMessage({type:"required",assets:xV,layerCap:JV,warnings:YV},xV.blockAtlasPixels.map((VV=>VV.buffer)))}self.onmessageerror=()=>{fV.postMessage({type:"failed",reason:"the request couldn\'t be deserialised"})},self.onmessage=VV=>{let{data:eV}=VV;try{"required"===eV.type?OV(eV):function(){if(!mV)throw new Error("No required assets to follow");const{colours:VV,warnings:eV}=function(VV){return VV.RE(),{colours:{blocks:VV.In(),counts:VV.On(),values:VV.cr()},warnings:VV.warnings()}}(mV);fV.postMessage({type:"optional",...VV,warnings:eV},[VV.counts.buffer,VV.values.buffer])}()}catch(xV){const VV=iV(xV),eV=xV instanceof WebAssembly.RuntimeError?`wasm trapped (${VV})`:VV;fV.postMessage({type:"failed",reason:eV,stack:xV instanceof Error?xV.stack:void 0})}}})();', "Worker", void 0, xV.p + "generation.worker.423e9489.worker.js")
     }
-    var nM = iM(37215),
-      QM = iM(3629),
-      zM = iM(3647),
-      LM = iM(3640),
-      mM = iM(3606);
+    var QV = xV(37418),
+      nV = xV(3651),
+      wV = xV(3673),
+      ZV = xV(3666),
+      vV = xV(3628);
 
-    function HM(MM) {
-      return "" === MM ? [] : MM.split("\0")
-    }
-
-    function hM(MM) {
-      if ("" !== MM)
-        for (const rM of MM.split("\n")) console.error(rM)
+    function rV(VV) {
+      return "" === VV ? [] : VV.split("\0")
     }
 
-    function JM(MM, rM) {
-      return async function(MM, rM) {
-        const iM = Object.keys(MM),
-          OM = [],
-          SM = new Map,
-          jM = new Uint32Array(iM.length);
-        for (const [aM, PM] of iM.entries()) {
+    function kV(VV) {
+      if ("" !== VV)
+        for (const eV of VV.split("\n")) console.error(eV)
+    }
+
+    function bV(VV, eV) {
+      return async function(VV, eV) {
+        const xV = Object.keys(VV),
+          JV = [],
+          YV = new Map,
+          UV = new Uint32Array(xV.length);
+        for (const [yV, pV] of xV.entries()) {
           const {
-            url: rM
-          } = MM[PM];
-          SM.has(rM) || (SM.set(rM, OM.length), OM.push(rM)), jM[aM] = SM.get(rM)
+            url: eV
+          } = VV[pV];
+          YV.has(eV) || (YV.set(eV, JV.length), JV.push(eV)), UV[yV] = YV.get(eV)
         }
         return {
-          sources: await rM(OM),
-          names: iM.join("\0"),
-          sourceOfName: jM
+          sources: await eV(JV),
+          names: xV.join("\0"),
+          sourceOfName: UV
         }
-      }(MM, (async MM => {
-        const iM = await async function(MM, rM) {
-          const iM = new AbortController,
-            OM = () => {
-              iM.abort()
+      }(VV, (async VV => {
+        const xV = await async function(VV, eV) {
+          const xV = new AbortController,
+            JV = () => {
+              xV.abort()
             };
-          rM.addEventListener("abort", OM);
+          eV.addEventListener("abort", JV);
           try {
-            const rM = await Promise.all(MM.map((async MM => {
+            const eV = await Promise.all(VV.map((async VV => {
               try {
-                const rM = await fetch(MM, {
-                  signal: iM.signal
+                const eV = await fetch(VV, {
+                  signal: xV.signal
                 });
-                if (!rM.ok) throw new Error(`HTTP ${rM.status}`);
-                return [MM, await rM.blob()]
-              } catch (rM) {
-                throw iM.abort(), new zM.k(zM.j.Fetch, `fetching ${MM} failed: ${(0,LM.d)(rM)}`)
+                if (!eV.ok) throw new Error(`HTTP ${eV.status}`);
+                return [VV, await eV.blob()]
+              } catch (eV) {
+                throw xV.abort(), new wV.p(wV.m.Fetch, `fetching ${VV} failed: ${(0,ZV.e)(eV)}`)
               }
             })));
-            return new Map(rM)
+            return new Map(eV)
           } finally {
-            rM.removeEventListener("abort", OM)
+            eV.removeEventListener("abort", JV)
           }
-        }(MM.filter((MM => !MM.startsWith("data:"))), rM);
-        return Promise.all(MM.map((MM => {
-          var rM;
-          return (0, mM.d)(null !== (rM = iM.get(MM)) && void 0 !== rM ? rM : MM)
+        }(VV.filter((VV => !VV.startsWith("data:"))), eV);
+        return Promise.all(VV.map((VV => {
+          var eV;
+          return (0, vV.h)(null !== (eV = xV.get(VV)) && void 0 !== eV ? eV : VV)
         })))
       }))
     }
 
-    function dM(MM, rM) {
-      const iM = zM.k.from(MM, rM ? zM.j.Optional : zM.j.Error);
-      return iM.code !== zM.j.Fetch && iM.code !== zM.j.Error && (0, QM.h)(iM.message), iM
+    function EV(VV, eV) {
+      const xV = wV.p.from(VV, eV ? wV.m.Optional : wV.m.Error);
+      return xV.code !== wV.m.Fetch && xV.code !== wV.m.Error && (0, nV.d)(xV.message), xV
     }
 
-    function yM(MM) {
-      return MM.message ? new Error(`the texture worker failed: ${MM.message}`) : new zM.k(zM.j.Load, "the texture worker failed to start")
+    function BV(VV) {
+      return VV.message ? new Error(`the texture worker failed: ${VV.message}`) : new wV.p(wV.m.Load, "the texture worker failed to start")
     }
-    class lM {
-      constructor(MM) {
-        this.worker = MM, this.failure = void 0, this.abandonStep = null, MM.addEventListener("error", (MM => {
-          MM.preventDefault(), this.failure ??= yM(MM)
+    class jV {
+      constructor(VV) {
+        this.worker = VV, this.failure = void 0, this.abandonStep = null, VV.addEventListener("error", (VV => {
+          VV.preventDefault(), this.failure ??= BV(VV)
         }))
       }
-      static async generateRequired(MM, rM, iM, jM) {
-        let aM = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : zM.c,
-          QM = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0;
-        const mM = (0, nM.j)();
-        if (null !== mM) throw dM(new zM.k(zM.j.Load, mM), !1);
-        let HM;
-        const yM = new AbortController;
+      static async generateRequired(VV, eV, xV, UV) {
+        let yV = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : wV.e,
+          nV = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0;
+        const vV = (0, QV.i)();
+        if (null !== vV) throw EV(new wV.p(wV.m.Load, vV), !1);
+        let rV;
+        const BV = new AbortController;
         try {
-          HM = new lM(function() {
+          rV = new jV(function() {
             try {
-              return new PM
-            } catch (MM) {
-              throw new zM.k(zM.j.Load, `the texture worker failed to start: ${(0,LM.d)(MM)}`)
+              return new pV
+            } catch (VV) {
+              throw new wV.p(wV.m.Load, `the texture worker failed to start: ${(0,ZV.e)(VV)}`)
             }
           }());
-          const mM = (0, nM.c)().catch((MM => {
-              throw new zM.k(zM.j.Load, function(MM) {
-                return `the texture module didn't load (${(0,LM.d)(MM)})`
-              }(MM))
+          const vV = (0, QV.e)().catch((VV => {
+              throw new wV.p(wV.m.Load, function(VV) {
+                return `the texture module didn't load (${(0,ZV.e)(VV)})`
+              }(VV))
             })),
-            dM = (async () => {
-              const jM = function(MM, rM, iM) {
-                const OM = [],
-                  SM = new Map,
-                  jM = MM => {
-                    let rM = SM.get(MM);
-                    return void 0 === rM && (rM = OM.length, OM.push(MM), SM.set(MM, rM)), rM
+            EV = (async () => {
+              const UV = function(VV, eV, xV) {
+                const JV = [],
+                  YV = new Map,
+                  UV = VV => {
+                    let eV = YV.get(VV);
+                    return void 0 === eV && (eV = JV.length, JV.push(VV), YV.set(VV, eV)), eV
                   },
-                  aM = [],
-                  PM = [],
-                  nM = new Map,
-                  QM = (MM, rM) => {
-                    const iM = "object" === typeof MM && null !== MM && "animTextures" in MM ? MM.animTextures : void 0;
-                    if (!Array.isArray(iM) || !iM.every((MM => "string" === typeof MM))) throw new Error(`Block ${rM} has textureInfo the encoding doesn't cover`);
-                    aM.push(iM.length, ...iM.map(jM))
+                  yV = [],
+                  pV = [],
+                  QV = new Map,
+                  nV = (VV, eV) => {
+                    const xV = "object" === typeof VV && null !== VV && "animTextures" in VV ? VV.animTextures : void 0;
+                    if (!Array.isArray(xV) || !xV.every((VV => "string" === typeof VV))) throw new Error(`Block ${eV} has textureInfo the encoding doesn't cover`);
+                    yV.push(xV.length, ...xV.map(UV))
                   };
-                let zM = 0;
-                for (const HM in MM) {
-                  const rM = MM[HM];
-                  aM.push(jM(HM));
-                  const iM = (rM.transTex ? 1 : 0) | (rM.CH ? 2 : 0) | (rM.particlesIgnoreBlack ? 4 : 0),
-                    OM = "string" === typeof rM.itemTexture ? jM(rM.itemTexture) : 4294967295,
-                    SM = `${iM},${OM}`,
-                    LM = rM.textureInfo,
-                    mM = nM.get(LM);
-                  if ((null === mM || void 0 === mM ? void 0 : mM.fields) !== SM)
-                    if (nM.set(LM, {
-                        entry: zM++,
-                        fields: SM
-                      }), aM.push(1, iM, OM), "string" === typeof LM) aM.push(1, jM(LM));
-                    else if (Array.isArray(LM)) {
-                    aM.push(3, LM.length);
-                    for (const MM of LM) "string" === typeof MM ? aM.push(0, jM(MM)) : "number" === typeof MM ? (aM.push(2, PM.length), PM.push(MM)) : (aM.push(1), QM(MM, HM))
-                  } else LM ? (aM.push(2), QM(LM, HM)) : aM.push(0);
-                  else aM.push(0, mM.entry), zM++
+                let wV = 0;
+                for (const rV in VV) {
+                  const eV = VV[rV];
+                  yV.push(UV(rV));
+                  const xV = (eV.transTex ? 1 : 0) | (eV.Cr ? 2 : 0) | (eV.particlesIgnoreBlack ? 4 : 0),
+                    JV = "string" === typeof eV.itemTexture ? UV(eV.itemTexture) : 4294967295,
+                    YV = `${xV},${JV}`,
+                    ZV = eV.textureInfo,
+                    vV = QV.get(ZV);
+                  if ((null === vV || void 0 === vV ? void 0 : vV.fields) !== YV)
+                    if (QV.set(ZV, {
+                        entry: wV++,
+                        fields: YV
+                      }), yV.push(1, xV, JV), "string" === typeof ZV) yV.push(1, UV(ZV));
+                    else if (Array.isArray(ZV)) {
+                    yV.push(3, ZV.length);
+                    for (const VV of ZV) "string" === typeof VV ? yV.push(0, UV(VV)) : "number" === typeof VV ? (yV.push(2, pV.length), pV.push(VV)) : (yV.push(1), nV(VV, rV))
+                  } else ZV ? (yV.push(2), nV(ZV, rV)) : yV.push(0);
+                  else yV.push(0, vV.entry), wV++
                 }
-                const LM = [];
-                for (const HM in rM) LM.push(jM(HM), rM[HM]);
-                const mM = new Uint32Array(iM.map(jM));
+                const ZV = [];
+                for (const rV in eV) ZV.push(UV(rV), eV[rV]);
+                const vV = new Uint32Array(xV.map(UV));
                 return {
-                  strings: OM.join("\0"),
-                  blocks: new Uint32Array(aM),
-                  numbers: new Float64Array(PM),
-                  index: new Uint32Array(LM),
-                  armour: mM
+                  strings: JV.join("\0"),
+                  blocks: new Uint32Array(yV),
+                  numbers: new Float64Array(pV),
+                  index: new Uint32Array(ZV),
+                  armour: vV
                 }
-              }(MM, rM, OM.c.map(SM.g));
+              }(VV, eV, JV.f.map(YV.k));
               return {
-                inputs: jM,
-                sources: await JM(iM, yM.signal)
+                inputs: UV,
+                sources: await bV(xV, BV.signal)
               }
             })(),
-            [EM, {
-              inputs: UM,
-              sources: GM
-            }] = await Promise.all([mM, dM]),
-            CM = [UM.blocks.buffer, UM.numbers.buffer, UM.index.buffer, UM.armour.buffer, GM.sourceOfName.buffer];
-          for (const MM of GM.sources) CM.push(MM.buffer);
-          const eM = [],
+            [qV, {
+              inputs: tV,
+              sources: FV
+            }] = await Promise.all([vV, EV]),
+            TV = [tV.blocks.buffer, tV.numbers.buffer, tV.index.buffer, tV.armour.buffer, FV.sourceOfName.buffer];
+          for (const VV of FV.sources) TV.push(VV.buffer);
+          const PV = [],
             {
-              assets: bM,
-              layerCap: wM,
-              warnings: tM
-            } = await HM.request({
+              assets: AV,
+              layerCap: NV,
+              warnings: XV
+            } = await rV.request({
               type: "required",
-              module: EM,
-              inputs: UM,
-              isDefaultPack: jM,
-              maxLayerWidth: aM,
-              sheetLayers: QM,
-              ...GM
-            }, CM, ((MM, rM) => {
-              eM[MM] = rM
+              module: qV,
+              inputs: tV,
+              isDefaultPack: UV,
+              maxLayerWidth: yV,
+              sheetLayers: nV,
+              ...FV
+            }, TV, ((VV, eV) => {
+              PV[VV] = eV
             }));
-          return QM > 0 && (bM.blockAtlasPixels = function(MM, rM) {
-            const iM = [];
-            for (let OM = 0; OM < rM; OM++) {
-              const SM = MM[OM];
-              if (void 0 === SM) throw new Error(`the texture worker's sheet ${OM} of ${rM} didn't arrive`);
-              iM.push(SM)
+          return nV > 0 && (AV.blockAtlasPixels = function(VV, eV) {
+            const xV = [];
+            for (let JV = 0; JV < eV; JV++) {
+              const YV = VV[JV];
+              if (void 0 === YV) throw new Error(`the texture worker's sheet ${JV} of ${eV} didn't arrive`);
+              xV.push(YV)
             }
-            return iM
-          }(eM, bM.imagesPerAtlas.length)), hM(tM), {
-            assets: bM,
-            layerCap: wM,
-            worker: HM
+            return xV
+          }(PV, AV.imagesPerAtlas.length)), kV(XV), {
+            assets: AV,
+            layerCap: NV,
+            worker: rV
           }
-        } catch (UM) {
-          var EM;
-          throw yM.abort(), null === (EM = HM) || void 0 === EM || EM.terminate(), dM(UM, !1)
+        } catch (tV) {
+          var qV;
+          throw BV.abort(), null === (qV = rV) || void 0 === qV || qV.terminate(), EV(tV, !1)
         }
       }
       async generateOptional() {
-        let MM;
+        let VV;
         try {
-          MM = await this.request({
+          VV = await this.request({
             type: "optional"
           }, [])
-        } catch (rM) {
-          throw dM(rM, !0)
+        } catch (eV) {
+          throw EV(eV, !0)
         } finally {
           this.terminate()
         }
-        return hM(MM.warnings),
-          function(MM) {
+        return kV(VV.warnings),
+          function(VV) {
             let {
-              blocks: rM,
-              counts: iM,
-              values: OM
-            } = MM;
-            const SM = {};
-            let jM = 0;
-            for (const [aM, PM] of HM(rM).entries()) {
-              const MM = [];
-              for (let rM = 0; rM < iM[aM]; rM++, jM += 3) MM.push([OM[jM], OM[jM + 1], OM[jM + 2]]);
-              SM[PM] = MM
+              blocks: eV,
+              counts: xV,
+              values: JV
+            } = VV;
+            const YV = {};
+            let UV = 0;
+            for (const [yV, pV] of rV(eV).entries()) {
+              const VV = [];
+              for (let eV = 0; eV < xV[yV]; eV++, UV += 3) VV.push([JV[UV], JV[UV + 1], JV[UV + 2]]);
+              YV[pV] = VV
             }
-            return SM
-          }(MM)
+            return YV
+          }(VV)
       }
       terminate() {
-        var MM;
-        this.worker.terminate(), null === (MM = this.abandonStep) || void 0 === MM || MM.call(this)
+        var VV;
+        this.worker.terminate(), null === (VV = this.abandonStep) || void 0 === VV || VV.call(this)
       }
-      request(MM, rM, iM) {
-        return new Promise(((OM, SM) => {
-          if (void 0 !== this.failure) return void SM(this.failure);
-          let jM = zM.m.None,
-            aM = 0,
-            PM = null;
-          const nM = () => {
-            var MM;
-            null === (MM = PM) || void 0 === MM || MM.stop(), this.abandonStep = null, this.worker.onmessage = null, this.worker.onerror = null, this.worker.onmessageerror = null
+      request(VV, eV, xV) {
+        return new Promise(((JV, YV) => {
+          if (void 0 !== this.failure) return void YV(this.failure);
+          let UV = wV.q.None,
+            yV = 0,
+            pV = null;
+          const QV = () => {
+            var VV;
+            null === (VV = pV) || void 0 === VV || VV.stop(), this.abandonStep = null, this.worker.onmessage = null, this.worker.onerror = null, this.worker.onmessageerror = null
           };
           this.abandonStep = () => {
-            nM(), SM(new Error("the texture worker was terminated"))
-          }, this.worker.onmessage = rM => {
+            QV(), YV(new Error("the texture worker was terminated"))
+          }, this.worker.onmessage = eV => {
             let {
-              data: QM
-            } = rM;
-            var LM;
-            if ("progress" === QM.type) return jM = QM.stage, aM = QM.wasmBytes, void(null === (LM = PM) || void 0 === LM || LM.restart(jM === zM.m.Generating ? zM.f : zM.h));
-            "sheet" === QM.type && iM ? iM(QM.sheet, QM.pixels) : (nM(), "failed" === QM.type ? SM(QM.moduleLoad ? new zM.k(zM.j.Load, QM.reason) : function(MM, rM) {
+              data: nV
+            } = eV;
+            var ZV;
+            if ("progress" === nV.type) return UV = nV.stage, yV = nV.wasmBytes, void(null === (ZV = pV) || void 0 === ZV || ZV.restart(UV === wV.q.Generating ? wV.h : wV.l));
+            "sheet" === nV.type && xV ? xV(nV.sheet, nV.pixels) : (QV(), "failed" === nV.type ? YV(nV.moduleLoad ? new wV.p(wV.m.Load, nV.reason) : function(VV, eV) {
               let {
-                reason: iM,
-                stack: OM
-              } = MM;
-              const SM = new Error(EM(iM, rM));
-              void 0 !== OM && (SM.stack = OM);
-              return SM
-            }(QM, aM)) : QM.type !== MM.type ? SM(new Error(`the texture worker answered ${QM.type} to ${MM.type}`)) : OM(QM))
-          }, this.worker.onerror = MM => {
-            nM(), SM(yM(MM))
+                reason: xV,
+                stack: JV
+              } = VV;
+              const YV = new Error(qV(xV, eV));
+              void 0 !== JV && (YV.stack = JV);
+              return YV
+            }(nV, yV)) : nV.type !== VV.type ? YV(new Error(`the texture worker answered ${nV.type} to ${VV.type}`)) : JV(nV))
+          }, this.worker.onerror = VV => {
+            QV(), YV(BV(VV))
           }, this.worker.onmessageerror = () => {
-            nM(), SM(new Error("the texture worker's answer couldn't be read"))
+            QV(), YV(new Error("the texture worker's answer couldn't be read"))
           };
           try {
-            this.worker.postMessage(MM, rM), PM = (0, zM.n)((() => {
-              nM();
-              const rM = new zM.k("required" === MM.type ? `${zM.j.Stalled}${jM}` : zM.j.Optional, EM("the texture worker stopped responding", aM));
-              SM(rM)
+            this.worker.postMessage(VV, eV), pV = (0, wV.s)((() => {
+              QV();
+              const eV = new wV.p("required" === VV.type ? `${wV.m.Stalled}${UV}` : wV.m.Optional, qV("the texture worker stopped responding", yV));
+              YV(eV)
             }))
-          } catch (QM) {
-            nM(), SM(QM)
+          } catch (nV) {
+            QV(), YV(nV)
           }
         }))
       }
     }
 
-    function EM(MM, rM) {
-      return rM > 0 ? `${MM}, its module's memory ${Math.round(rM/2**20)} MiB` : MM
+    function qV(VV, eV) {
+      return eV > 0 ? `${VV}, its module's memory ${Math.round(eV/2**20)} MiB` : VV
     }
   },
-  37223: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => OM,
-      e: () => SM,
-      h: () => jM,
-      l: () => aM
+  37429: (VV, eV, xV) => {
+    xV.d(eV, {
+      e: () => JV,
+      h: () => YV,
+      i: () => UV,
+      l: () => yV
     });
-    const OM = 1024,
-      SM = 1024 * OM;
+    const JV = 1024,
+      YV = 1024 * JV;
 
-    function jM(MM) {
-      return 2 ** Math.floor(Math.log2(Math.max(1, MM / SM)))
+    function UV(VV) {
+      return 2 ** Math.floor(Math.log2(Math.max(1, VV / YV)))
     }
 
-    function aM(MM) {
-      return (MM / SM).toFixed(1)
+    function yV(VV) {
+      return (VV / YV).toFixed(1)
     }
   },
-  34814: MM => {
-    MM.exports = function(MM, rM, iM, OM) {
-      var SM = self || window;
+  35081: VV => {
+    VV.exports = function(VV, eV, xV, JV) {
+      var YV = self || window;
       try {
         try {
-          var jM;
+          var UV;
           try {
-            jM = new SM.Blob([MM])
-          } catch (QM) {
-            (jM = new(SM.BlobBuilder || SM.WebKitBlobBuilder || SM.MozBlobBuilder || SM.MSBlobBuilder)).append(MM), jM = jM.getBlob()
+            UV = new YV.Blob([VV])
+          } catch (nV) {
+            (UV = new(YV.BlobBuilder || YV.WebKitBlobBuilder || YV.MozBlobBuilder || YV.MSBlobBuilder)).append(VV), UV = UV.getBlob()
           }
-          var aM = SM.URL || SM.webkitURL,
-            PM = aM.createObjectURL(jM),
-            nM = new SM[rM](PM, iM);
-          return aM.revokeObjectURL(PM), nM
-        } catch (QM) {
-          return new SM[rM]("data:application/javascript,".concat(encodeURIComponent(MM)), iM)
+          var yV = YV.URL || YV.webkitURL,
+            pV = yV.createObjectURL(UV),
+            QV = new YV[eV](pV, xV);
+          return yV.revokeObjectURL(pV), QV
+        } catch (nV) {
+          return new YV[eV]("data:application/javascript,".concat(encodeURIComponent(VV)), xV)
         }
-      } catch (QM) {
-        if (!OM) throw Error("Inline worker is not supported");
-        return new SM[rM](OM, iM)
+      } catch (nV) {
+        if (!JV) throw Error("Inline worker is not supported");
+        return new YV[eV](JV, xV)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const VV in modules) Object.freeze(modules[VV]);

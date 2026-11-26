@@ -1,66 +1,66 @@
 export const id = 223;
 export const ids = [223];
 export const modules = {
-  37546: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => JM,
-      e: () => CM
+  37777: (VV, eV, xV) => {
+    xV.d(eV, {
+      e: () => bV,
+      i: () => TV
     });
-    iM(34999);
-    var OM = iM(44),
-      SM = iM(1516),
-      jM = iM(2039),
-      aM = iM(2084),
-      PM = iM(19),
-      nM = iM(2640),
-      QM = iM(37554),
-      zM = iM(37559),
-      LM = iM(34985),
-      mM = iM(34997),
-      HM = iM(35006),
-      hM = iM(1303);
-    const JM = (0, OM.memo)((function() {
-      var MM;
+    xV(35278);
+    var JV = xV(62),
+      YV = xV(1542),
+      UV = xV(2051),
+      yV = xV(2100),
+      pV = xV(27),
+      QV = xV(2693),
+      nV = xV(37786),
+      wV = xV(37790),
+      ZV = xV(35268),
+      vV = xV(35275),
+      rV = xV(35292),
+      kV = xV(1321);
+    const bV = (0, JV.memo)((function() {
+      var VV;
       const {
-        isTouchScreen: rM,
-        clientEscMenuOptions: iM,
-        scriptedCameraFacing: jM,
-        crosshairShownOverride: JM,
-        crosshairGameView: yM
-      } = (0, PM.m)(["isTouchScreen", "clientEscMenuOptions", "scriptedCameraFacing", "crosshairShownOverride", "crosshairGameView"]), lM = (0, nM.f)("gunshotOrigin"), EM = (0, OM.useRef)(null), UM = (0, OM.useRef)(!1), [GM, eM] = (0, OM.useState)(dM);
-      (0, SM.d)("cameraZoomSet", eM), (0, OM.useEffect)((() => {
-        eM(dM())
+        isTouchScreen: eV,
+        clientEscMenuOptions: xV,
+        scriptedCameraFacing: UV,
+        crosshairShownOverride: bV,
+        crosshairGameView: BV
+      } = (0, pV.l)(["isTouchScreen", "clientEscMenuOptions", "scriptedCameraFacing", "crosshairShownOverride", "crosshairGameView"]), jV = (0, QV.j)("gunshotOrigin"), qV = (0, JV.useRef)(null), tV = (0, JV.useRef)(!1), [FV, PV] = (0, JV.useState)(EV);
+      (0, YV.g)("cameraZoomSet", PV), (0, JV.useEffect)((() => {
+        PV(EV())
       }), []);
-      const bM = (0, aM.j)("heldItemAim"),
-        tM = bM.gun,
-        gM = (0, HM.f)(),
-        uM = (0, OM.useRef)(gM);
-      uM.current = gM;
-      const [RM, pM] = (0, OM.useState)(!1);
-      (0, OM.useEffect)((() => (0, zM.h)("crosshairAccuracy", CM)), []), (0, SM.d)("mouseState", (MM => {
+      const AV = (0, yV.h)("heldItemAim"),
+        XV = AV.gun,
+        MV = (0, rV.h)(),
+        zV = (0, JV.useRef)(MV);
+      zV.current = MV;
+      const [GV, WV] = (0, JV.useState)(!1);
+      (0, JV.useEffect)((() => (0, wV.g)("crosshairAccuracy", TV)), []), (0, YV.g)("mouseState", (VV => {
         let {
-          isDown: rM
-        } = MM;
-        UM.current = rM, EM.current && (EM.current.style.transform = (0, mM.e)(rM, uM.current.growOnClick)), "shapes" === uM.current.style && pM(rM)
+          isDown: eV
+        } = VV;
+        tV.current = eV, qV.current && (qV.current.style.transform = (0, vV.e)(eV, zV.current.growOnClick)), "shapes" === zV.current.style && WV(eV)
       }));
-      const WM = (0, LM.c)(rM, iM.touchActionButtons);
-      return (null !== (MM = (0, QM.e)(yM, JM)) && void 0 !== MM ? MM : (0, QM.k)(bM, GM > 1, WM, lM)) ? "movement" === jM || "cursor" === jM ? null : (0, hM.jsxs)(hM.Fragment, {
-        children: [tM && (0, hM.jsx)(wM, {
-          custom: gM.forGuns && "shapes" === gM.style ? gM : null,
-          touch: rM
-        }), !tM && (0, hM.jsx)(mM.c, {
-          settings: gM,
-          touch: rM,
-          pressRef: EM,
-          pressed: "shapes" === gM.style ? RM : UM.current
+      const RV = (0, ZV.e)(eV, xV.touchActionButtons);
+      return (null !== (VV = (0, nV.c)(BV, bV)) && void 0 !== VV ? VV : (0, nV.g)(AV, FV > 1, RV, jV)) ? "movement" === UV || "cursor" === UV ? null : (0, kV.jsxs)(kV.Fragment, {
+        children: [XV && (0, kV.jsx)(NV, {
+          custom: MV.forGuns && "shapes" === MV.style ? MV : null,
+          touch: eV
+        }), !XV && (0, kV.jsx)(vV.c, {
+          settings: MV,
+          touch: eV,
+          pressRef: qV,
+          pressed: "shapes" === MV.style ? GV : tV.current
         })]
       }) : null
     }));
 
-    function dM() {
-      return jM.gameBridge.lookup("cameraZoom", null)
+    function EV() {
+      return UV.gameBridge.lookup("cameraZoom", null)
     }
-    const yM = [{
+    const BV = [{
         current: null
       }, {
         current: null
@@ -69,340 +69,340 @@ export const modules = {
       }, {
         current: null
       }],
-      lM = {
+      jV = {
         current: null
       },
-      EM = {
+      qV = {
         current: null
       };
-    let UM = 0,
-      GM = 0;
+    let tV = 0,
+      FV = 0;
 
-    function CM(MM) {
-      GM = MM, yM[0].current || lM.current || EM.current ? bM(MM) : UM = MM
+    function TV(VV) {
+      FV = VV, BV[0].current || jV.current || qV.current ? AV(VV) : tV = VV
     }
 
-    function eM(MM) {
-      return ((0, QM.g)(MM) - (0, QM.g)(0)) * window.innerHeight / 100
+    function PV(VV) {
+      return ((0, nV.d)(VV) - (0, nV.d)(0)) * window.innerHeight / 100
     }
 
-    function bM(MM) {
-      var rM;
-      if (null === (rM = EM.current) || void 0 === rM || rM.call(EM, eM(MM)), yM[0].current) {
-        const rM = `${(0,QM.g)(MM)}vh`;
-        yM[0].current.style.transform = `translateX(calc(0px - ${rM}))`, yM[1].current.style.transform = `translateX(calc(0px + ${rM}))`, yM[2].current.style.transform = `translateY(calc(0px - ${rM}))`, yM[3].current.style.transform = `translateY(calc(0px + ${rM}))`
+    function AV(VV) {
+      var eV;
+      if (null === (eV = qV.current) || void 0 === eV || eV.call(qV, PV(VV)), BV[0].current) {
+        const eV = `${(0,nV.d)(VV)}vh`;
+        BV[0].current.style.transform = `translateX(calc(0px - ${eV}))`, BV[1].current.style.transform = `translateX(calc(0px + ${eV}))`, BV[2].current.style.transform = `translateY(calc(0px - ${eV}))`, BV[3].current.style.transform = `translateY(calc(0px + ${eV}))`
       }
-      lM.current && (lM.current.style.filter = `blur(${Math.round(MM/10)}px)`)
+      jV.current && (jV.current.style.filter = `blur(${Math.round(VV/10)}px)`)
     }
 
-    function wM(MM) {
+    function NV(VV) {
       let {
-        custom: rM,
-        touch: iM
-      } = MM;
-      const jM = (0, SM.e)("aimingOverlay", "none"),
-        aM = "1.2vh",
-        PM = "0.3vh";
-      (0, OM.useEffect)((() => {
-        UM && bM(UM)
+        custom: eV,
+        touch: xV
+      } = VV;
+      const UV = (0, YV.j)("aimingOverlay", "none"),
+        yV = "1.2vh",
+        pV = "0.3vh";
+      (0, JV.useEffect)((() => {
+        tV && AV(tV)
       }), []);
-      const nM = (0, OM.useRef)(null !== rM);
-      return (0, OM.useLayoutEffect)((() => {
-        var MM;
-        rM ? null === (MM = EM.current) || void 0 === MM || MM.call(EM, eM(GM)) : nM.current && bM(GM);
-        nM.current = null !== rM
-      }), [rM]), (0, hM.jsxs)(hM.Fragment, {
-        children: ["sniper" === jM && (0, hM.jsxs)("div", {
-          ref: lM,
+      const QV = (0, JV.useRef)(null !== eV);
+      return (0, JV.useLayoutEffect)((() => {
+        var VV;
+        eV ? null === (VV = qV.current) || void 0 === VV || VV.call(qV, PV(FV)) : QV.current && AV(FV);
+        QV.current = null !== eV
+      }), [eV]), (0, kV.jsxs)(kV.Fragment, {
+        children: ["sniper" === UV && (0, kV.jsxs)("div", {
+          ref: jV,
           className: "GunCrosshairOverlayWrapper",
-          children: [(0, hM.jsx)("div", {
+          children: [(0, kV.jsx)("div", {
             className: "GunCrosshairOverlay"
-          }), (0, hM.jsx)("div", {
+          }), (0, kV.jsx)("div", {
             className: "GunCrosshairOverlayLine1"
-          }), (0, hM.jsx)("div", {
+          }), (0, kV.jsx)("div", {
             className: "GunCrosshairOverlayLine2"
-          }), (0, hM.jsx)("div", {
+          }), (0, kV.jsx)("div", {
             className: "GunCrosshairOverlayDot"
           })]
-        }), (0, hM.jsxs)("div", {
+        }), (0, kV.jsxs)("div", {
           className: "GunCrosshairWrapper",
           style: {
-            opacity: "sniper" === jM ? 0 : 1
+            opacity: "sniper" === UV ? 0 : 1
           },
-          children: [rM && (0, hM.jsx)(mM.c, {
-            settings: rM,
-            touch: iM,
-            spreadRef: EM
-          }), !rM && (0, hM.jsxs)(hM.Fragment, {
-            children: [(0, hM.jsx)("div", {
+          children: [eV && (0, kV.jsx)(vV.c, {
+            settings: eV,
+            touch: xV,
+            spreadRef: qV
+          }), !eV && (0, kV.jsxs)(kV.Fragment, {
+            children: [(0, kV.jsx)("div", {
               className: "GunCrosshair",
               style: {
-                width: aM,
-                height: PM,
+                width: yV,
+                height: pV,
                 top: "49.85vh",
                 left: "calc(50vw - 0.6vh)"
               },
-              ref: yM[0]
-            }), (0, hM.jsx)("div", {
+              ref: BV[0]
+            }), (0, kV.jsx)("div", {
               className: "GunCrosshair",
               style: {
-                width: aM,
-                height: PM,
+                width: yV,
+                height: pV,
                 top: "49.85vh",
                 left: "calc(50vw - 0.6vh)"
               },
-              ref: yM[1]
-            }), (0, hM.jsx)("div", {
+              ref: BV[1]
+            }), (0, kV.jsx)("div", {
               className: "GunCrosshair",
               style: {
-                width: PM,
-                height: aM,
+                width: pV,
+                height: yV,
                 top: "49.4vh",
                 left: "calc(50vw - 0.15vh)"
               },
-              ref: yM[2]
-            }), (0, hM.jsx)("div", {
+              ref: BV[2]
+            }), (0, kV.jsx)("div", {
               className: "GunCrosshair",
               style: {
-                width: PM,
-                height: aM,
+                width: pV,
+                height: yV,
                 top: "49.4vh",
                 left: "calc(50vw - 0.15vh)"
               },
-              ref: yM[3]
+              ref: BV[3]
             })]
           })]
         })]
       })
     }
   },
-  34997: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => JM,
-      e: () => hM
+  35275: (VV, eV, xV) => {
+    xV.d(eV, {
+      c: () => bV,
+      e: () => kV
     });
-    iM(34999);
-    var OM = iM(1116),
-      SM = iM.n(OM),
-      jM = iM(44),
-      aM = iM(34989);
+    xV(35278);
+    var JV = xV(1146),
+      YV = xV.n(JV),
+      UV = xV(62),
+      yV = xV(35272);
 
-    function PM(MM, rM) {
-      return Math.max(1, Math.round(MM * rM))
+    function pV(VV, eV) {
+      return Math.max(1, Math.round(VV * eV))
     }
 
-    function nM(MM, rM) {
-      const iM = rM * (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1),
-        OM = function(MM, rM) {
-          if (MM.lines) return PM(MM.lineThickness, rM) % 2;
-          if (MM.dot) return PM(MM.dotSize, rM) % 2;
-          return QM(MM, rM) % 2
-        }(MM, rM),
-        SM = zM(MM.lineThickness * iM, OM),
-        jM = PM(MM.lineLength, iM),
-        aM = Math.round(MM.gap * iM),
-        nM = MM.outline > 0 ? PM(MM.outline, iM) : 0,
-        mM = [];
-      if (MM.lines && (mM.push({
-          x: SM + aM,
+    function QV(VV, eV) {
+      const xV = eV * (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1),
+        JV = function(VV, eV) {
+          if (VV.lines) return pV(VV.lineThickness, eV) % 2;
+          if (VV.dot) return pV(VV.dotSize, eV) % 2;
+          return nV(VV, eV) % 2
+        }(VV, eV),
+        YV = wV(VV.lineThickness * xV, JV),
+        UV = pV(VV.lineLength, xV),
+        yV = Math.round(VV.gap * xV),
+        QV = VV.outline > 0 ? pV(VV.outline, xV) : 0,
+        vV = [];
+      if (VV.lines && (vV.push({
+          x: YV + yV,
           y: 0,
-          w: jM,
-          h: SM,
+          w: UV,
+          h: YV,
           arm: "right"
-        }), mM.push({
-          x: -aM - jM,
+        }), vV.push({
+          x: -yV - UV,
           y: 0,
-          w: jM,
-          h: SM,
+          w: UV,
+          h: YV,
           arm: "left"
-        }), mM.push({
+        }), vV.push({
           x: 0,
-          y: SM + aM,
-          w: SM,
-          h: jM,
+          y: YV + yV,
+          w: YV,
+          h: UV,
           arm: "down"
-        }), MM.tStyle || mM.push({
+        }), VV.tStyle || vV.push({
           x: 0,
-          y: -aM - jM,
-          w: SM,
-          h: jM,
+          y: -yV - UV,
+          w: YV,
+          h: UV,
           arm: "up"
-        }), 0 === aM && mM.push({
+        }), 0 === yV && vV.push({
           x: 0,
           y: 0,
-          w: SM,
-          h: SM
-        })), MM.dot) {
-        const rM = zM(MM.dotSize * iM, OM),
-          jM = MM.lines && 0 === aM && MM.dotSize > MM.lineThickness ? Math.max(rM, SM + 2) : rM,
-          PM = (SM - jM) / 2;
-        mM.push({
-          x: PM,
-          y: PM,
-          w: jM,
-          h: jM
+          w: YV,
+          h: YV
+        })), VV.dot) {
+        const eV = wV(VV.dotSize * xV, JV),
+          UV = VV.lines && 0 === yV && VV.dotSize > VV.lineThickness ? Math.max(eV, YV + 2) : eV,
+          pV = (YV - UV) / 2;
+        vV.push({
+          x: pV,
+          y: pV,
+          w: UV,
+          h: UV
         })
       }
-      const HM = mM.map((MM => ({
-        ...MM,
-        x: MM.x - nM,
-        y: MM.y - nM,
-        w: MM.w + 2 * nM,
-        h: MM.h + 2 * nM
+      const rV = vV.map((VV => ({
+        ...VV,
+        x: VV.x - QV,
+        y: VV.y - QV,
+        w: VV.w + 2 * QV,
+        h: VV.h + 2 * QV
       })));
-      let hM = null,
-        JM = null;
-      if (MM.circle) {
-        const rM = PM(MM.circleThickness, iM),
-          jM = function(MM, rM) {
-            return MM + (MM % 2 === rM ? 0 : 1)
-          }(QM(MM, iM), OM),
-          aM = (SM - jM) / 2;
-        hM = LM(aM, jM, rM), nM > 0 && (JM = LM(aM - nM, jM + 2 * nM, rM + 2 * nM))
+      let kV = null,
+        bV = null;
+      if (VV.circle) {
+        const eV = pV(VV.circleThickness, xV),
+          UV = function(VV, eV) {
+            return VV + (VV % 2 === eV ? 0 : 1)
+          }(nV(VV, xV), JV),
+          yV = (YV - UV) / 2;
+        kV = ZV(yV, UV, eV), QV > 0 && (bV = ZV(yV - QV, UV + 2 * QV, eV + 2 * QV))
       }
       return {
-        cell: SM,
-        fills: mM,
-        outlines: nM > 0 ? HM : [],
-        ring: hM,
-        ringOutline: JM
+        cell: YV,
+        fills: vV,
+        outlines: QV > 0 ? rV : [],
+        ring: kV,
+        ringOutline: bV
       }
     }
 
-    function QM(MM, rM) {
-      return Math.round(MM.circleRadius * rM * 2 + PM(MM.circleThickness, rM))
+    function nV(VV, eV) {
+      return Math.round(VV.circleRadius * eV * 2 + pV(VV.circleThickness, eV))
     }
 
-    function zM(MM, rM) {
-      return Math.max(2 - rM, 2 * Math.round((MM - rM) / 2) + rM)
+    function wV(VV, eV) {
+      return Math.max(2 - eV, 2 * Math.round((VV - eV) / 2) + eV)
     }
 
-    function LM(MM, rM, iM) {
-      const OM = 2 * iM >= rM - 1;
+    function ZV(VV, eV, xV) {
+      const JV = 2 * xV >= eV - 1;
       return {
-        x: MM,
-        y: MM,
-        size: rM,
-        border: Math.min(iM, Math.floor(rM / 2)),
-        filled: OM
+        x: VV,
+        y: VV,
+        size: eV,
+        border: Math.min(xV, Math.floor(eV / 2)),
+        filled: JV
       }
     }
-    var mM = iM(1303);
-    const HM = 1.4;
+    var vV = xV(1321);
+    const rV = 1.4;
 
-    function hM(MM, rM) {
-      return MM && rM ? `scale(${HM})` : "scale(1)"
+    function kV(VV, eV) {
+      return VV && eV ? `scale(${rV})` : "scale(1)"
     }
 
-    function JM(MM) {
-      return "classic" === MM.settings.style ? (0, mM.jsx)(lM, {
-        ...MM
-      }) : (0, mM.jsx)(wM, {
-        ...MM
+    function bV(VV) {
+      return "classic" === VV.settings.style ? (0, vV.jsx)(jV, {
+        ...VV
+      }) : (0, vV.jsx)(NV, {
+        ...VV
       })
     }
-    const dM = .125;
+    const EV = .125;
 
-    function yM(MM, rM) {
-      const iM = {};
-      if (MM.color !== aM.e.color && (iM.color = (0, aM.i)(MM.color)), MM.opacity !== aM.e.opacity && (iM.opacity = MM.opacity / 100), MM.outline !== aM.e.outline || MM.outlineColor !== aM.e.outlineColor) {
-        const rM = MM.outline,
-          OM = (0, aM.i)(MM.outlineColor);
-        iM.textShadow = rM > 0 ? `-${rM}px 0 ${OM}, 0 ${rM}px ${OM}, ${rM}px 0 ${OM}, 0 -${rM}px ${OM}` : "none"
+    function BV(VV, eV) {
+      const xV = {};
+      if (VV.color !== yV.f.color && (xV.color = (0, yV.l)(VV.color)), VV.opacity !== yV.f.opacity && (xV.opacity = VV.opacity / 100), VV.outline !== yV.f.outline || VV.outlineColor !== yV.f.outlineColor) {
+        const eV = VV.outline,
+          JV = (0, yV.l)(VV.outlineColor);
+        xV.textShadow = eV > 0 ? `-${eV}px 0 ${JV}, 0 ${eV}px ${JV}, ${eV}px 0 ${JV}, 0 -${eV}px ${JV}` : "none"
       }
-      if (MM.size !== aM.e.size) {
-        const OM = MM.size / 100;
-        iM.fontSize = rM ? `calc(max(1.3rem, 18px) * ${OM})` : `calc(1.3rem * ${OM})`, iM.marginTop = `-${dM}em`, iM.transformOrigin = `50% calc(50% + ${dM}em)`
+      if (VV.size !== yV.f.size) {
+        const JV = VV.size / 100;
+        xV.fontSize = eV ? `calc(max(1.3rem, 18px) * ${JV})` : `calc(1.3rem * ${JV})`, xV.marginTop = `-${EV}em`, xV.transformOrigin = `50% calc(50% + ${EV}em)`
       }
-      return iM
+      return xV
     }
 
-    function lM(MM) {
+    function jV(VV) {
       let {
-        settings: rM,
-        touch: iM,
-        inPreview: OM,
-        inEditor: jM,
-        pressed: aM = !1,
-        pressRef: PM
-      } = MM;
-      return (0, mM.jsx)("div", {
-        className: SM()("Crosshair", {
-          Touch: iM,
-          CrosshairInPreview: OM,
-          CrosshairInEditor: jM || OM
+        settings: eV,
+        touch: xV,
+        inPreview: JV,
+        inEditor: UV,
+        pressed: yV = !1,
+        pressRef: pV
+      } = VV;
+      return (0, vV.jsx)("div", {
+        className: YV()("Crosshair", {
+          Touch: xV,
+          CrosshairInPreview: JV,
+          CrosshairInEditor: UV || JV
         }),
-        ref: PM,
+        ref: pV,
         style: {
-          transform: hM(aM, rM.growOnClick),
-          ...yM(rM, iM)
+          transform: kV(yV, eV.growOnClick),
+          ...BV(eV, xV)
         },
         children: "+"
       })
     }
 
-    function EM(MM, rM) {
-      return MM / rM + "px"
+    function qV(VV, eV) {
+      return VV / eV + "px"
     }
 
-    function UM(MM, rM, iM, OM) {
+    function tV(VV, eV, xV, JV) {
       return {
-        ...eM(MM, rM, iM),
-        width: EM(MM.w, iM),
-        height: EM(MM.h, iM),
-        background: OM
+        ...PV(VV, eV, xV),
+        width: qV(VV.w, xV),
+        height: qV(VV.h, xV),
+        background: JV
       }
     }
 
-    function GM(MM, rM, iM) {
+    function FV(VV, eV, xV) {
       return {
-        left: EM(MM.x, rM),
-        top: EM(MM.y, rM),
-        width: EM(MM.size, rM),
-        height: EM(MM.size, rM),
-        borderWidth: EM(MM.border, rM),
-        borderColor: iM,
-        background: MM.filled ? iM : void 0
+        left: qV(VV.x, eV),
+        top: qV(VV.y, eV),
+        width: qV(VV.size, eV),
+        height: qV(VV.size, eV),
+        borderWidth: qV(VV.border, eV),
+        borderColor: xV,
+        background: VV.filled ? xV : void 0
       }
     }
-    const CM = {
+    const TV = {
       left: [-1, 0],
       right: [1, 0],
       up: [0, -1],
       down: [0, 1]
     };
 
-    function eM(MM, rM, iM) {
-      const [OM, SM] = MM.arm ? CM[MM.arm] : [0, 0], jM = Math.round(rM * iM);
+    function PV(VV, eV, xV) {
+      const [JV, YV] = VV.arm ? TV[VV.arm] : [0, 0], UV = Math.round(eV * xV);
       return {
-        left: EM(MM.x + OM * jM, iM),
-        top: EM(MM.y + SM * jM, iM)
+        left: qV(VV.x + JV * UV, xV),
+        top: qV(VV.y + YV * UV, xV)
       }
     }
 
-    function bM(MM) {
-      return MM.arm ? {
-        "data-arm": MM.arm,
-        "data-x": MM.x,
-        "data-y": MM.y
+    function AV(VV) {
+      return VV.arm ? {
+        "data-arm": VV.arm,
+        "data-x": VV.x,
+        "data-y": VV.y
       } : {}
     }
 
-    function wM(MM) {
+    function NV(VV) {
       let {
-        settings: rM,
-        inPreview: iM,
-        inEditor: OM,
-        pressed: PM = !1,
-        spread: QM,
-        spreadRef: zM
-      } = MM;
-      const LM = (0, jM.useRef)(null),
+        settings: eV,
+        inPreview: xV,
+        inEditor: JV,
+        pressed: pV = !1,
+        spread: nV,
+        spreadRef: wV
+      } = VV;
+      const ZV = (0, UV.useRef)(null),
         {
-          box: hM,
-          dpr: JM
-        } = function(MM) {
-          const [rM, iM] = (0, jM.useState)({
+          box: kV,
+          dpr: bV
+        } = function(VV) {
+          const [eV, xV] = (0, UV.useState)({
             box: {
               left: 0,
               top: 0,
@@ -411,200 +411,200 @@ export const modules = {
             },
             dpr: 1
           });
-          return (0, jM.useLayoutEffect)((() => {
-            const rM = MM.current;
-            if (!rM) return;
-            const OM = () => {
-              const MM = rM.getBoundingClientRect(),
-                OM = window.devicePixelRatio || 1;
-              iM((rM => rM.dpr === OM && rM.box.left === MM.left && rM.box.top === MM.top && rM.box.width === MM.width && rM.box.height === MM.height ? rM : {
+          return (0, UV.useLayoutEffect)((() => {
+            const eV = VV.current;
+            if (!eV) return;
+            const JV = () => {
+              const VV = eV.getBoundingClientRect(),
+                JV = window.devicePixelRatio || 1;
+              xV((eV => eV.dpr === JV && eV.box.left === VV.left && eV.box.top === VV.top && eV.box.width === VV.width && eV.box.height === VV.height ? eV : {
                 box: {
-                  left: MM.left,
-                  top: MM.top,
-                  width: MM.width,
-                  height: MM.height
+                  left: VV.left,
+                  top: VV.top,
+                  width: VV.width,
+                  height: VV.height
                 },
-                dpr: OM
+                dpr: JV
               }))
             };
-            OM();
-            const SM = new ResizeObserver(OM);
-            return SM.observe(rM), window.addEventListener("resize", OM), window.addEventListener("scroll", OM, !0), () => {
-              SM.disconnect(), window.removeEventListener("resize", OM), window.removeEventListener("scroll", OM, !0)
+            JV();
+            const YV = new ResizeObserver(JV);
+            return YV.observe(eV), window.addEventListener("resize", JV), window.addEventListener("scroll", JV, !0), () => {
+              YV.disconnect(), window.removeEventListener("resize", JV), window.removeEventListener("scroll", JV, !0)
             }
-          }), [MM]), rM
-        }(LM),
-        dM = (0, jM.useRef)(JM);
-      dM.current = JM;
-      const yM = nM(rM, JM, PM && rM.growOnClick ? HM : 1),
-        lM = function(MM, rM, iM) {
-          const OM = Math.round((MM.left + MM.width / 2) * iM - rM / 2),
-            SM = Math.round((MM.top + MM.height / 2) * iM - rM / 2);
+          }), [VV]), eV
+        }(ZV),
+        EV = (0, UV.useRef)(bV);
+      EV.current = bV;
+      const BV = QV(eV, bV, pV && eV.growOnClick ? rV : 1),
+        jV = function(VV, eV, xV) {
+          const JV = Math.round((VV.left + VV.width / 2) * xV - eV / 2),
+            YV = Math.round((VV.top + VV.height / 2) * xV - eV / 2);
           return {
-            x: OM / iM - MM.left,
-            y: SM / iM - MM.top
+            x: JV / xV - VV.left,
+            y: YV / xV - VV.top
           }
-        }(hM, yM.cell, JM),
-        EM = (0, aM.i)(rM.color),
-        CM = (0, aM.i)(rM.outlineColor),
-        wM = (0, jM.useRef)(0);
-      (0, jM.useLayoutEffect)((() => {
-        if (zM) return zM.current = MM => {
-          var rM;
-          wM.current = MM, null === (rM = LM.current) || void 0 === rM || rM.querySelectorAll("[data-arm]").forEach((rM => {
-            Object.assign(rM.style, eM(function(MM) {
+        }(kV, BV.cell, bV),
+        qV = (0, yV.l)(eV.color),
+        TV = (0, yV.l)(eV.outlineColor),
+        NV = (0, UV.useRef)(0);
+      (0, UV.useLayoutEffect)((() => {
+        if (wV) return wV.current = VV => {
+          var eV;
+          NV.current = VV, null === (eV = ZV.current) || void 0 === eV || eV.querySelectorAll("[data-arm]").forEach((eV => {
+            Object.assign(eV.style, PV(function(VV) {
               return {
-                x: Number(MM.dataset.x),
-                y: Number(MM.dataset.y),
-                arm: MM.dataset.arm
+                x: Number(VV.dataset.x),
+                y: Number(VV.dataset.y),
+                arm: VV.dataset.arm
               }
-            }(rM), MM, dM.current))
+            }(eV), VV, EV.current))
           }))
         }, () => {
-          zM.current = null
+          wV.current = null
         }
-      }), [zM]);
-      const tM = null !== QM && void 0 !== QM ? QM : wM.current;
-      return (0, mM.jsx)("div", {
-        ref: LM,
-        className: SM()("CrosshairShapes", {
-          CrosshairInPreview: iM,
-          CrosshairInEditor: OM || iM,
-          CrosshairSpreads: void 0 !== zM
+      }), [wV]);
+      const XV = null !== nV && void 0 !== nV ? nV : NV.current;
+      return (0, vV.jsx)("div", {
+        ref: ZV,
+        className: YV()("CrosshairShapes", {
+          CrosshairInPreview: xV,
+          CrosshairInEditor: JV || xV,
+          CrosshairSpreads: void 0 !== wV
         }),
-        children: (0, mM.jsx)("div", {
+        children: (0, vV.jsx)("div", {
           className: "CrosshairShapesOrigin",
           style: {
-            left: lM.x,
-            top: lM.y,
-            opacity: rM.opacity / 100
+            left: jV.x,
+            top: jV.y,
+            opacity: eV.opacity / 100
           },
-          children: (0, mM.jsxs)("div", {
+          children: (0, vV.jsxs)("div", {
             className: "CrosshairShapesPress",
-            children: [yM.ringOutline && (0, mM.jsx)("div", {
+            children: [BV.ringOutline && (0, vV.jsx)("div", {
               className: "CrosshairRing",
-              style: GM(yM.ringOutline, JM, CM)
-            }), yM.outlines.map(((MM, rM) => (0, mM.jsx)("div", {
+              style: FV(BV.ringOutline, bV, TV)
+            }), BV.outlines.map(((VV, eV) => (0, vV.jsx)("div", {
               className: "CrosshairPart",
-              ...bM(MM),
-              style: UM(MM, tM, JM, CM)
-            }, `o${rM}`))), yM.ring && (0, mM.jsx)("div", {
+              ...AV(VV),
+              style: tV(VV, XV, bV, TV)
+            }, `o${eV}`))), BV.ring && (0, vV.jsx)("div", {
               className: "CrosshairRing",
-              style: GM(yM.ring, JM, EM)
-            }), yM.fills.map(((MM, rM) => (0, mM.jsx)("div", {
+              style: FV(BV.ring, bV, qV)
+            }), BV.fills.map(((VV, eV) => (0, vV.jsx)("div", {
               className: "CrosshairPart",
-              ...bM(MM),
-              style: UM(MM, tM, JM, EM)
-            }, `f${rM}`)))]
+              ...AV(VV),
+              style: tV(VV, XV, bV, qV)
+            }, `f${eV}`)))]
           })
         })
       })
     }
   },
-  35003: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => zM,
-      f: () => dM,
-      i: () => JM
+  35285: (VV, eV, xV) => {
+    xV.d(eV, {
+      d: () => wV,
+      h: () => EV,
+      j: () => bV
     });
-    var OM = iM(34989);
-    const SM = "XH1-",
-      jM = ["lines", "dot", "circle", "tStyle", "growOnClick", "forGuns"],
-      aM = ["opacity", "outline", "size", "lineLength", "lineThickness", "gap", "dotSize", "circleRadius", "circleThickness"],
-      PM = ["color", "outlineColor"],
-      nM = 1 + 3 * PM.length + aM.length + 1,
-      QM = Math.ceil(8 * nM / Math.log2(62)),
-      zM = SM.length + QM;
+    var JV = xV(35272);
+    const YV = "XH1-",
+      UV = ["lines", "dot", "circle", "tStyle", "growOnClick", "forGuns"],
+      yV = ["opacity", "outline", "size", "lineLength", "lineThickness", "gap", "dotSize", "circleRadius", "circleThickness"],
+      pV = ["color", "outlineColor"],
+      QV = 1 + 3 * pV.length + yV.length + 1,
+      nV = Math.ceil(8 * QV / Math.log2(62)),
+      wV = YV.length + nV;
 
-    function LM(MM) {
-      let rM = 90;
-      for (const iM of MM) rM = 31 * rM + iM & 255;
-      return rM
+    function ZV(VV) {
+      let eV = 90;
+      for (const xV of VV) eV = 31 * eV + xV & 255;
+      return eV
     }
-    const mM = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
-      HM = BigInt(mM.length);
+    const vV = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
+      rV = BigInt(vV.length);
 
-    function hM(MM, rM) {
-      let iM = 0n;
-      for (const SM of MM) {
-        const MM = mM.indexOf(SM);
-        if (MM < 0) return null;
-        iM = iM * HM + BigInt(MM)
+    function kV(VV, eV) {
+      let xV = 0n;
+      for (const YV of VV) {
+        const VV = vV.indexOf(YV);
+        if (VV < 0) return null;
+        xV = xV * rV + BigInt(VV)
       }
-      if (iM >> BigInt(8 * rM) !== 0n) return null;
-      const OM = [];
-      for (let SM = 0; SM < rM; SM++) OM.unshift(Number(0xffn & iM)), iM >>= 8n;
-      return OM
+      if (xV >> BigInt(8 * eV) !== 0n) return null;
+      const JV = [];
+      for (let YV = 0; YV < eV; YV++) JV.unshift(Number(0xffn & xV)), xV >>= 8n;
+      return JV
     }
 
-    function JM(MM) {
-      let rM = "shapes" === MM.style ? 1 : 0;
-      jM.forEach(((iM, OM) => {
-        MM[iM] && (rM |= 1 << OM + 1)
+    function bV(VV) {
+      let eV = "shapes" === VV.style ? 1 : 0;
+      UV.forEach(((xV, JV) => {
+        VV[xV] && (eV |= 1 << JV + 1)
       }));
-      const iM = [rM];
-      for (const SM of PM) {
-        const rM = (0, OM.f)(SM, MM[SM]);
-        iM.push(rM >> 16 & 255, rM >> 8 & 255, 255 & rM)
+      const xV = [eV];
+      for (const YV of pV) {
+        const eV = (0, JV.i)(YV, VV[YV]);
+        xV.push(eV >> 16 & 255, eV >> 8 & 255, 255 & eV)
       }
-      for (const SM of aM) {
+      for (const YV of yV) {
         const {
-          min: rM,
-          step: jM
-        } = OM.d[SM];
-        iM.push(Math.round(((0, OM.f)(SM, MM[SM]) - rM) / jM))
+          min: eV,
+          step: UV
+        } = JV.b[YV];
+        xV.push(Math.round(((0, JV.i)(YV, VV[YV]) - eV) / UV))
       }
-      return iM.push(LM(iM)), SM + function(MM, rM) {
-        let iM = 0n;
-        for (const SM of MM) iM = iM << 8n | BigInt(SM);
-        let OM = "";
-        for (let SM = 0; SM < rM; SM++) OM = mM[Number(iM % HM)] + OM, iM /= HM;
-        return OM
-      }(iM, QM)
+      return xV.push(ZV(xV)), YV + function(VV, eV) {
+        let xV = 0n;
+        for (const YV of VV) xV = xV << 8n | BigInt(YV);
+        let JV = "";
+        for (let YV = 0; YV < eV; YV++) JV = vV[Number(xV % rV)] + JV, xV /= rV;
+        return JV
+      }(xV, nV)
     }
 
-    function dM(MM) {
-      for (const rM of MM.matchAll(new RegExp(`XH1-([0-9A-Za-z]{${QM}})`, "gi"))) {
-        const MM = yM(hM(rM[1], nM));
-        if (MM) return MM
+    function EV(VV) {
+      for (const eV of VV.matchAll(new RegExp(`XH1-([0-9A-Za-z]{${nV}})`, "gi"))) {
+        const VV = BV(kV(eV[1], QV));
+        if (VV) return VV
       }
       return null
     }
 
-    function yM(MM) {
-      if (!MM || MM.length !== nM || LM(MM.slice(0, -1)) !== MM[MM.length - 1]) return null;
-      const rM = MM[0],
-        iM = {
-          ...OM.e,
-          style: 1 & rM ? "shapes" : "classic"
+    function BV(VV) {
+      if (!VV || VV.length !== QV || ZV(VV.slice(0, -1)) !== VV[VV.length - 1]) return null;
+      const eV = VV[0],
+        xV = {
+          ...JV.f,
+          style: 1 & eV ? "shapes" : "classic"
         };
-      jM.forEach(((MM, OM) => {
-        iM[MM] = 0 !== (rM & 1 << OM + 1)
+      UV.forEach(((VV, JV) => {
+        xV[VV] = 0 !== (eV & 1 << JV + 1)
       }));
-      let SM = 1;
-      for (const OM of PM) iM[OM] = MM[SM] << 16 | MM[SM + 1] << 8 | MM[SM + 2], SM += 3;
-      for (const jM of aM) {
+      let YV = 1;
+      for (const JV of pV) xV[JV] = VV[YV] << 16 | VV[YV + 1] << 8 | VV[YV + 2], YV += 3;
+      for (const UV of yV) {
         const {
-          min: rM,
-          step: aM
-        } = OM.d[jM];
-        iM[jM] = (0, OM.f)(jM, rM + MM[SM] * aM), SM++
+          min: eV,
+          step: yV
+        } = JV.b[UV];
+        xV[UV] = (0, JV.i)(UV, eV + VV[YV] * yV), YV++
       }
-      return iM
+      return xV
     }
   },
-  34989: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => OM,
-      e: () => SM,
-      f: () => jM,
-      i: () => QM,
-      j: () => nM,
-      m: () => zM,
-      p: () => PM,
-      t: () => aM
+  35272: (VV, eV, xV) => {
+    xV.d(eV, {
+      b: () => JV,
+      f: () => YV,
+      i: () => UV,
+      l: () => nV,
+      o: () => QV,
+      q: () => wV,
+      u: () => pV,
+      w: () => yV
     });
-    const OM = {
+    const JV = {
         opacity: {
           min: 5,
           max: 100,
@@ -661,7 +661,7 @@ export const modules = {
           step: 1
         }
       },
-      SM = Object.freeze({
+      YV = Object.freeze({
         style: "classic",
         color: 16777215,
         opacity: 100,
@@ -682,212 +682,212 @@ export const modules = {
         forGuns: !1
       });
 
-    function jM(MM, rM) {
-      var iM;
+    function UV(VV, eV) {
+      var xV;
       const {
-        min: jM,
-        max: aM,
-        step: PM
-      } = OM[MM];
-      if (!Number.isFinite(rM)) return SM[MM];
-      const nM = (null !== (iM = String(PM).split(".")[1]) && void 0 !== iM ? iM : "").length,
-        QM = Number((Math.round(rM / PM) * PM).toFixed(nM));
-      return Math.min(aM, Math.max(jM, QM))
+        min: UV,
+        max: yV,
+        step: pV
+      } = JV[VV];
+      if (!Number.isFinite(eV)) return YV[VV];
+      const QV = (null !== (xV = String(pV).split(".")[1]) && void 0 !== xV ? xV : "").length,
+        nV = Number((Math.round(eV / pV) * pV).toFixed(QV));
+      return Math.min(yV, Math.max(UV, nV))
     }
 
-    function aM(MM, rM, iM) {
-      const OM = "number" === typeof iM ? jM(rM, iM) : iM;
+    function yV(VV, eV, xV) {
+      const JV = "number" === typeof xV ? UV(eV, xV) : xV;
       return {
-        ...MM,
-        [rM]: OM
+        ...VV,
+        [eV]: JV
       }
     }
 
-    function PM(MM, rM) {
-      let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-      return Object.keys(SM).every((OM => iM.includes(OM) || MM[OM] === rM[OM]))
+    function pV(VV, eV) {
+      let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+      return Object.keys(YV).every((JV => xV.includes(JV) || VV[JV] === eV[JV]))
     }
 
-    function nM(MM) {
-      return PM(MM, SM)
+    function QV(VV) {
+      return pV(VV, YV)
     }
 
-    function QM(MM) {
-      return `#${MM.toString(16).padStart(6,"0")}`
+    function nV(VV) {
+      return `#${VV.toString(16).padStart(6,"0")}`
     }
 
-    function zM(MM) {
-      const rM = /^#?([0-9a-f]{6})$/i.exec(MM.trim());
-      return rM ? parseInt(rM[1], 16) : null
+    function wV(VV) {
+      const eV = /^#?([0-9a-f]{6})$/i.exec(VV.trim());
+      return eV ? parseInt(eV[1], 16) : null
     }
   },
-  35006: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => LM,
-      f: () => mM
+  35292: (VV, eV, xV) => {
+    xV.d(eV, {
+      e: () => ZV,
+      h: () => vV
     });
-    var OM = iM(44),
-      SM = iM(30),
-      jM = iM(35003),
-      aM = iM(34989);
-    const PM = "crosshairCode";
-    let nM = null;
-    const QM = new Set;
+    var JV = xV(62),
+      YV = xV(40),
+      UV = xV(35285),
+      yV = xV(35272);
+    const pV = "crosshairCode";
+    let QV = null;
+    const nV = new Set;
 
-    function zM() {
-      if (null === nM) {
-        var MM;
-        const rM = SM.g.getItem(PM);
-        nM = null !== (MM = "string" === typeof rM ? (0, jM.f)(rM) : null) && void 0 !== MM ? MM : aM.e
+    function wV() {
+      if (null === QV) {
+        var VV;
+        const eV = YV.m.getItem(pV);
+        QV = null !== (VV = "string" === typeof eV ? (0, UV.h)(eV) : null) && void 0 !== VV ? VV : yV.f
       }
-      return nM
+      return QV
     }
 
-    function LM(MM) {
-      nM = MM, (0, aM.j)(MM) ? SM.g.removeItem(PM) : SM.g.setItem(PM, (0, jM.i)(MM));
-      for (const rM of QM) rM()
+    function ZV(VV) {
+      QV = VV, (0, yV.o)(VV) ? YV.m.removeItem(pV) : YV.m.setItem(pV, (0, UV.j)(VV));
+      for (const eV of nV) eV()
     }
 
-    function mM() {
-      const [MM, rM] = (0, OM.useState)(zM);
-      return (0, OM.useEffect)((() => {
-        const MM = () => {
-          rM(zM())
+    function vV() {
+      const [VV, eV] = (0, JV.useState)(wV);
+      return (0, JV.useEffect)((() => {
+        const VV = () => {
+          eV(wV())
         };
-        return MM(), iM = MM, QM.add(iM), () => {
-          QM.delete(iM)
+        return VV(), xV = VV, nV.add(xV), () => {
+          nV.delete(xV)
         };
-        var iM
-      }), []), MM
+        var xV
+      }), []), VV
     }
   },
-  37722: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => jM,
-      i: () => nM,
-      m: () => aM
+  37943: (VV, eV, xV) => {
+    xV.d(eV, {
+      c: () => UV,
+      e: () => QV,
+      h: () => yV
     });
-    var OM = iM(625),
-      SM = iM(3063);
+    var JV = xV(657),
+      YV = xV(3093);
 
-    function jM(MM) {
-      return MM === (0, SM.f)().IMM ? (0, SM.f)().eD : MM
+    function UV(VV) {
+      return VV === (0, YV.d)().vxV ? (0, YV.d)().bD : VV
     }
 
-    function aM(MM) {
-      return !(0, OM.J)(MM) && jM(MM) === (0, SM.f)().eD
+    function yV(VV) {
+      return !(0, JV.J)(VV) && UV(VV) === (0, YV.d)().bD
     }
-    const PM = "gravity";
+    const pV = "gravity";
 
-    function nM() {
-      return (0, SM.f)().physics[PM][1]
+    function QV() {
+      return (0, YV.d)().physics[pV][1]
     }
   },
-  37699: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => eM
+  37925: (VV, eV, xV) => {
+    xV.d(eV, {
+      d: () => PV
     });
-    var OM = iM(37705),
-      SM = iM(181),
-      jM = iM(5265),
-      aM = iM(37713),
-      PM = iM(37390),
-      nM = iM(37761),
-      QM = iM(37722),
-      zM = iM(347),
-      LM = iM.n(zM),
-      mM = iM(3063),
-      HM = iM(37758),
-      hM = iM(22),
-      JM = iM(19),
-      dM = iM(37730),
-      yM = iM(37737),
-      lM = iM(37741),
-      EM = iM(37744);
-    const UM = new Set(["note"]);
-    const GM = {
-      stop: () => GM,
-      fade: () => GM,
-      rate: () => GM,
+    var JV = xV(37930),
+      YV = xV(206),
+      UV = xV(5353),
+      yV = xV(37935),
+      pV = xV(37593),
+      QV = xV(37985),
+      nV = xV(37943),
+      wV = xV(380),
+      ZV = xV.n(wV),
+      vV = xV(3093),
+      rV = xV(37977),
+      kV = xV(32),
+      bV = xV(27),
+      EV = xV(37950),
+      BV = xV(37952),
+      jV = xV(37959),
+      qV = xV(37964);
+    const tV = new Set(["note"]);
+    const FV = {
+      stop: () => FV,
+      fade: () => FV,
+      rate: () => FV,
       stopsAtOnce: () => !1,
       isAlive: () => !1,
       getDurationMs: () => 0,
       getVolume: () => 0,
       getRelativeVolume: () => 0,
-      setRelativeVolume: () => GM,
-      setPannerAttr: () => GM,
-      setPosition: () => GM
+      setRelativeVolume: () => FV,
+      setPannerAttr: () => FV,
+      setPosition: () => FV
     };
-    class CM {
-      constructor(MM) {
-        this._howl = void 0, this._volumeMultiplier = void 0, this._loadFailed = !1, this._unloaded = !1, this._volumeMultiplier = new nM.h, this._howl = (0, PM.countDecodesAs)(new jM.Howl({
-          src: [...(0, OM.r)(MM).src],
+    class TV {
+      constructor(VV) {
+        this._howl = void 0, this._volumeMultiplier = void 0, this._loadFailed = !1, this._unloaded = !1, this._volumeMultiplier = new QV.i, this._howl = (0, pV.countDecodesAs)(new UV.Howl({
+          src: [...(0, JV.w)(VV).src],
           pool: 15
         }), "sound"), this._howl.once("loaderror", (() => {
           this._loadFailed = !0
         }))
       }
       play() {
-        let MM = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const rM = this._howl.play(aM.e);
-        MM && this._howl.loop(!0, rM);
-        let iM = 1;
-        this._howl.volume(this._volumeMultiplier.getTotalMultipliedVal(), rM);
-        const OM = {
+        let VV = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const eV = this._howl.play(yV.e);
+        VV && this._howl.loop(!0, eV);
+        let xV = 1;
+        this._howl.volume(this._volumeMultiplier.getTotalMultipliedVal(), eV);
+        const JV = {
           stop: () => {
-            var MM;
-            return null === (MM = this.liveHowl()) || void 0 === MM || MM.stop(rM), OM
+            var VV;
+            return null === (VV = this.liveHowl()) || void 0 === VV || VV.stop(eV), JV
           },
-          fade: (MM, iM, SM) => {
-            var jM;
-            return null === (jM = this.liveHowl()) || void 0 === jM || jM.fade(MM, iM, SM, rM), OM
+          fade: (VV, xV, YV) => {
+            var UV;
+            return null === (UV = this.liveHowl()) || void 0 === UV || UV.fade(VV, xV, YV, eV), JV
           },
-          rate: MM => {
-            var iM;
-            return null === (iM = this.liveHowl()) || void 0 === iM || iM.rate(MM, rM), OM
+          rate: VV => {
+            var xV;
+            return null === (xV = this.liveHowl()) || void 0 === xV || xV.rate(VV, eV), JV
           },
-          stopsAtOnce: () => this._howl.playing(rM) && !this._howl._playLock,
+          stopsAtOnce: () => this._howl.playing(eV) && !this._howl._playLock,
           isAlive: () => {
-            const MM = this._howl._soundById(rM);
-            return !this._loadFailed && !!MM && !MM._ended
+            const VV = this._howl._soundById(eV);
+            return !this._loadFailed && !!VV && !VV._ended
           },
-          getDurationMs: () => this._howl._soundById(rM) ? 1e3 * this._howl.duration(rM) / this._howl.rate(rM) : 0,
-          getVolume: () => iM * this._volumeMultiplier.getTotalMultipliedVal(),
-          getRelativeVolume: () => iM,
-          setRelativeVolume: MM => {
-            var SM;
-            if (MM > 1) throw new Error("Volume should be <= 1");
-            return iM = JM.d.get("soundOnFromAd") ? MM : 0, null === (SM = this.liveHowl()) || void 0 === SM || SM.volume(Math.min(1, iM * this._volumeMultiplier.getTotalMultipliedVal()), rM), OM
+          getDurationMs: () => this._howl._soundById(eV) ? 1e3 * this._howl.duration(eV) / this._howl.rate(eV) : 0,
+          getVolume: () => xV * this._volumeMultiplier.getTotalMultipliedVal(),
+          getRelativeVolume: () => xV,
+          setRelativeVolume: VV => {
+            var YV;
+            if (VV > 1) throw new Error("Volume should be <= 1");
+            return xV = bV.b.get("soundOnFromAd") ? VV : 0, null === (YV = this.liveHowl()) || void 0 === YV || YV.volume(Math.min(1, xV * this._volumeMultiplier.getTotalMultipliedVal()), eV), JV
           },
-          setPannerAttr: MM => {
+          setPannerAttr: VV => {
             let {
-              coneInnerAngle: iM,
-              coneOuterAngle: SM = 360,
-              coneOuterGain: jM,
-              distanceModel: aM,
-              maxDistance: PM,
-              panningModel: nM,
-              refDistance: QM,
-              rolloffFactor: zM
-            } = MM;
+              coneInnerAngle: xV,
+              coneOuterAngle: YV = 360,
+              coneOuterGain: UV,
+              distanceModel: yV,
+              maxDistance: pV,
+              panningModel: QV,
+              refDistance: nV,
+              rolloffFactor: wV
+            } = VV;
             return this._setPannerAttr({
-              id: rM,
-              coneInnerAngle: iM,
-              coneOuterAngle: SM,
-              coneOuterGain: jM,
-              distanceModel: aM,
-              maxDistance: PM,
-              panningModel: nM,
-              refDistance: QM,
-              rolloffFactor: zM
-            }), OM
+              id: eV,
+              coneInnerAngle: xV,
+              coneOuterAngle: YV,
+              coneOuterGain: UV,
+              distanceModel: yV,
+              maxDistance: pV,
+              panningModel: QV,
+              refDistance: nV,
+              rolloffFactor: wV
+            }), JV
           },
-          setPosition: MM => {
-            var iM;
-            return null === (iM = this.liveHowl()) || void 0 === iM || iM.pos(MM[2], MM[1], MM[0], rM), OM
+          setPosition: VV => {
+            var xV;
+            return null === (xV = this.liveHowl()) || void 0 === xV || xV.pos(VV[2], VV[1], VV[0], eV), JV
           }
         };
-        return OM
+        return JV
       }
       liveHowl() {
         return this._unloaded ? null : this._howl
@@ -896,196 +896,196 @@ export const modules = {
         return "loaded" === this._howl.state()
       }
       unloadOnceIdle() {
-        (0, aM.i)(this._howl, (() => {
+        (0, yV.i)(this._howl, (() => {
           this._unloaded = !0
         }))
       }
-      setGlobalVolume(MM) {
-        this._volumeMultiplier.setMultiplierType("globalVolume", MM), this._howl.volume(MM)
+      setGlobalVolume(VV) {
+        this._volumeMultiplier.setMultiplierType("globalVolume", VV), this._howl.volume(VV)
       }
-      _setPannerAttr(MM) {
+      _setPannerAttr(VV) {
         let {
-          id: rM,
-          coneInnerAngle: iM = 360,
-          coneOuterAngle: OM = 360,
-          coneOuterGain: SM = 0,
-          distanceModel: jM = "inverse",
-          maxDistance: aM = 1e3,
-          panningModel: PM = "HRTF",
-          refDistance: nM = HM.l,
-          rolloffFactor: QM = 1
-        } = MM;
-        const zM = this.liveHowl();
-        if (null === zM) return;
-        zM.pannerAttr({
-          coneOuterAngle: OM
-        }, rM);
-        const LM = {
-          coneInnerAngle: iM,
-          coneOuterAngle: OM,
-          coneOuterGain: SM,
-          distanceModel: jM,
-          maxDistance: aM,
-          panningModel: PM,
-          refDistance: nM,
-          rolloffFactor: QM
+          id: eV,
+          coneInnerAngle: xV = 360,
+          coneOuterAngle: JV = 360,
+          coneOuterGain: YV = 0,
+          distanceModel: UV = "inverse",
+          maxDistance: yV = 1e3,
+          panningModel: pV = "HRTF",
+          refDistance: QV = rV.h,
+          rolloffFactor: nV = 1
+        } = VV;
+        const wV = this.liveHowl();
+        if (null === wV) return;
+        wV.pannerAttr({
+          coneOuterAngle: JV
+        }, eV);
+        const ZV = {
+          coneInnerAngle: xV,
+          coneOuterAngle: JV,
+          coneOuterGain: YV,
+          distanceModel: UV,
+          maxDistance: yV,
+          panningModel: pV,
+          refDistance: QV,
+          rolloffFactor: nV
         };
-        zM.pannerAttr(LM, rM)
+        wV.pannerAttr(ZV, eV)
       }
     }
-    const eM = new class {
+    const PV = new class {
       constructor() {
-        this.stereoSounds = {}, this.spatialSounds = {}, this.spatialVoices = new dM.e, this.idlePreloads = new Set, this.idlePreloadGeneration = 0, hM.i.subscribe("appManagerUpdated|soundVolume", (MM => {
-          const rM = Object.values(this.stereoSounds).concat(Object.values(this.spatialSounds));
-          for (const iM of rM) iM.setGlobalVolume(MM)
+        this.stereoSounds = {}, this.spatialSounds = {}, this.spatialVoices = new EV.b, this.idlePreloads = new Set, this.idlePreloadGeneration = 0, kV.h.subscribe("appManagerUpdated|soundVolume", (VV => {
+          const eV = Object.values(this.stereoSounds).concat(Object.values(this.spatialSounds));
+          for (const xV of eV) xV.setGlobalVolume(VV)
         }))
       }
-      play(MM, rM) {
-        var iM;
-        let jM, aM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null === (iM = (0, mM.f)()) || void 0 === iM ? void 0 : iM.eD,
-          PM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : HM.i,
-          nM = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : HM.l,
-          zM = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
-        var hM;
-        (0, mM.f)() ? jM = !!Array.isArray(aM) || (0, QM.e)(aM) !== (null === (hM = (0, mM.f)()) || void 0 === hM ? void 0 : hM.eD): jM = !1;
-        const JM = (0, OM.j)(MM),
-          yM = this.loadSound(jM ? this.spatialSounds : this.stereoSounds, MM);
-        if (!jM) {
-          const MM = yM.play(zM);
-          return MM.setRelativeVolume(rM), MM
+      play(VV, eV) {
+        var xV;
+        let UV, yV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null === (xV = (0, vV.d)()) || void 0 === xV ? void 0 : xV.bD,
+          pV = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : rV.f,
+          QV = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : rV.h,
+          wV = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
+        var kV;
+        (0, vV.d)() ? UV = !!Array.isArray(yV) || (0, nV.c)(yV) !== (null === (kV = (0, vV.d)()) || void 0 === kV ? void 0 : kV.bD): UV = !1;
+        const bV = (0, JV.n)(VV),
+          BV = this.loadSound(UV ? this.spatialSounds : this.stereoSounds, VV);
+        if (!UV) {
+          const VV = BV.play(wV);
+          return VV.setRelativeVolume(eV), VV
         }
-        const lM = (0, mM.f)(),
-          EM = Array.isArray(aM) ? aM : lM.hU.XE(aM),
-          CM = lM.hU.XE(lM.eD);
-        if (!EM || LM().sqrDist(EM, CM) > PM * PM) return GM;
-        let eM;
-        if (!zM) {
+        const jV = (0, vV.d)(),
+          qV = Array.isArray(yV) ? yV : jV.sF.YF(yV),
+          TV = jV.sF.YF(jV.bD);
+        if (!qV || ZV().sqrDist(qV, TV) > pV * pV) return FV;
+        let PV;
+        if (!wV) {
           if (!this.spatialVoices.admit({
-              group: UM.has(JM) ? null : (0, dM.i)(MM),
-              loudness: (0, dM.f)(rM, LM().RQ(EM, CM), nM),
+              group: tV.has(bV) ? null : (0, EV.e)(VV),
+              loudness: (0, EV.d)(eV, ZV().Dn(qV, TV), QV),
               startMs: performance.now(),
               getDurationMs: () => {
-                var MM, rM;
-                return null !== (MM = null === (rM = eM) || void 0 === rM ? void 0 : rM.getDurationMs()) && void 0 !== MM ? MM : 0
+                var VV, eV;
+                return null !== (VV = null === (eV = PV) || void 0 === eV ? void 0 : eV.getDurationMs()) && void 0 !== VV ? VV : 0
               },
               isAlive: () => {
-                var MM, rM;
-                return null !== (MM = null === (rM = eM) || void 0 === rM ? void 0 : rM.isAlive()) && void 0 !== MM && MM
+                var VV, eV;
+                return null !== (VV = null === (eV = PV) || void 0 === eV ? void 0 : eV.isAlive()) && void 0 !== VV && VV
               },
               canStop: () => {
-                var MM, rM;
-                return null !== (MM = null === (rM = eM) || void 0 === rM ? void 0 : rM.stopsAtOnce()) && void 0 !== MM && MM
+                var VV, eV;
+                return null !== (VV = null === (eV = PV) || void 0 === eV ? void 0 : eV.stopsAtOnce()) && void 0 !== VV && VV
               },
               stop: () => {
-                var MM;
-                null === (MM = eM) || void 0 === MM || MM.stop()
+                var VV;
+                null === (VV = PV) || void 0 === VV || VV.stop()
               }
-            })) return GM
+            })) return FV
         }
-        return eM = yM.play(zM), eM.setRelativeVolume(rM), eM.setPannerAttr({
-          refDistance: nM
-        }), eM.setPosition([EM[0], EM[1] + SM.f.jy * SM.f.playerEyeToHeightRatio, EM[2]]), eM
+        return PV = BV.play(wV), PV.setRelativeVolume(eV), PV.setPannerAttr({
+          refDistance: QV
+        }), PV.setPosition([qV[0], qV[1] + YV.f.nB * YV.f.playerEyeToHeightRatio, qV[2]]), PV
       }
-      preload(MM) {
-        const rM = (0, OM.p)(MM) ? [MM] : (0, OM.v)(MM);
-        if (0 === rM.length) throw new Error(`Invalid sound name ${MM} (no sound has it or starts with it)`);
-        for (const iM of rM) this.loadSound(this.stereoSounds, iM)
+      preload(VV) {
+        const eV = (0, JV.r)(VV) ? [VV] : (0, JV.y)(VV);
+        if (0 === eV.length) throw new Error(`Invalid sound name ${VV} (no sound has it or starts with it)`);
+        for (const xV of eV) this.loadSound(this.stereoSounds, xV)
       }
-      preloadAtIdle(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : EM.b;
-        const iM = MM.filter((MM => !this.idlePreloads.has(MM)));
-        for (const SM of iM) this.idlePreloads.add(SM);
-        const OM = this.idlePreloadGeneration;
-        (0, lM.c)(iM, {
-          ...rM,
-          Ti: () => OM !== this.idlePreloadGeneration,
-          fetchFile: MM => {
-            this.idlePreloads.delete(MM);
+      preloadAtIdle(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : qV.b;
+        const xV = VV.filter((VV => !this.idlePreloads.has(VV)));
+        for (const YV of xV) this.idlePreloads.add(YV);
+        const JV = this.idlePreloadGeneration;
+        (0, jV.d)(xV, {
+          ...eV,
+          pJ: () => JV !== this.idlePreloadGeneration,
+          fetchFile: VV => {
+            this.idlePreloads.delete(VV);
             try {
-              return this.preload(MM), Promise.resolve()
-            } catch (rM) {
-              return Promise.reject(rM)
+              return this.preload(VV), Promise.resolve()
+            } catch (eV) {
+              return Promise.reject(eV)
             }
           }
         })
       }
-      loadSound(MM, rM) {
-        const iM = MM[rM];
-        if (iM) return iM;
-        const SM = this.makeSound(MM, rM);
-        for (const aM of null !== (jM = (0, OM.q)(rM)) && void 0 !== jM ? jM : []) {
-          var jM;
-          MM[aM] || this.makeSound(MM, aM)
+      loadSound(VV, eV) {
+        const xV = VV[eV];
+        if (xV) return xV;
+        const YV = this.makeSound(VV, eV);
+        for (const yV of null !== (UV = (0, JV.s)(eV)) && void 0 !== UV ? UV : []) {
+          var UV;
+          VV[yV] || this.makeSound(VV, yV)
         }
-        return SM
+        return YV
       }
-      makeSound(MM, rM) {
-        (0, EM.c)(rM);
-        const iM = new CM(rM);
-        return iM.setGlobalVolume(JM.d.get("soundVolume")), MM[rM] = iM, iM
+      makeSound(VV, eV) {
+        (0, qV.d)(eV);
+        const xV = new TV(eV);
+        return xV.setGlobalVolume(bV.b.get("soundVolume")), VV[eV] = xV, xV
       }
       freeSoundsAfterGame() {
         this.idlePreloadGeneration++, this.idlePreloads.clear(), this.freeSounds()
       }
       freeSounds() {
-        for (const MM of [this.stereoSounds, this.spatialSounds])
-          for (const [rM, iM] of Object.entries(MM)) !yM.b.has((0, OM.j)(rM)) && iM.loaded() && (iM.unloadOnceIdle(), delete MM[rM])
+        for (const VV of [this.stereoSounds, this.spatialSounds])
+          for (const [eV, xV] of Object.entries(VV)) !BV.e.has((0, JV.n)(eV)) && xV.loaded() && (xV.unloadOnceIdle(), delete VV[eV])
       }
     }
   },
-  37787: (MM, rM, iM) => {
-    function OM(MM, rM) {
-      var iM, OM, SM, jM, aM, PM, nM, QM;
-      return MM.name === rM.name && ((null === (iM = MM.attributes) || void 0 === iM || null === (OM = iM.customAttributes) || void 0 === OM ? void 0 : OM.stackKey) === (null === (SM = rM.attributes) || void 0 === SM || null === (jM = SM.customAttributes) || void 0 === jM ? void 0 : jM.stackKey) && (!0 !== (null === (aM = MM.attributes) || void 0 === aM || null === (PM = aM.customAttributes) || void 0 === PM ? void 0 : PM.unstackable) && !0 !== (null === (nM = rM.attributes) || void 0 === nM || null === (QM = nM.customAttributes) || void 0 === QM ? void 0 : QM.unstackable)))
+  38028: (VV, eV, xV) => {
+    function JV(VV, eV) {
+      var xV, JV, YV, UV, yV, pV, QV, nV;
+      return VV.name === eV.name && ((null === (xV = VV.attributes) || void 0 === xV || null === (JV = xV.customAttributes) || void 0 === JV ? void 0 : JV.stackKey) === (null === (YV = eV.attributes) || void 0 === YV || null === (UV = YV.customAttributes) || void 0 === UV ? void 0 : UV.stackKey) && (!0 !== (null === (yV = VV.attributes) || void 0 === yV || null === (pV = yV.customAttributes) || void 0 === pV ? void 0 : pV.unstackable) && !0 !== (null === (QV = eV.attributes) || void 0 === QV || null === (nV = QV.customAttributes) || void 0 === nV ? void 0 : nV.unstackable)))
     }
-    iM.d(rM, {
-      d: () => OM
+    xV.d(eV, {
+      c: () => JV
     })
   },
-  37858: (MM, rM, iM) => {
-    function OM(MM) {
-      return MM.includes("Leaf Bed")
+  38114: (VV, eV, xV) => {
+    function JV(VV) {
+      return VV.includes("Leaf Bed")
     }
 
-    function SM(MM) {
-      return / Bed(?: Head)?(?:\||$)/.test(MM) && !OM(MM)
+    function YV(VV) {
+      return / Bed(?: Head)?(?:\||$)/.test(VV) && !JV(VV)
     }
 
-    function jM(MM) {
-      return MM.includes(" Strongbed")
+    function UV(VV) {
+      return VV.includes(" Strongbed")
     }
 
-    function aM(MM) {
-      return OM(MM) || SM(MM) || jM(MM)
+    function yV(VV) {
+      return JV(VV) || YV(VV) || UV(VV)
     }
-    iM.d(rM, {
-      e: () => aM,
-      g: () => OM,
-      h: () => jM,
-      l: () => SM
+    xV.d(eV, {
+      d: () => yV,
+      e: () => JV,
+      f: () => UV,
+      j: () => YV
     })
   },
-  37855: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => QM
+  38112: (VV, eV, xV) => {
+    xV.d(eV, {
+      b: () => nV
     });
-    var OM = iM(37858),
-      SM = iM(9816);
-    const jM = [],
-      aM = [],
-      PM = [],
-      nM = [];
-    for (const zM of Object.keys(SM.p))(0, OM.g)(zM) ? jM.push(zM) : (0, OM.l)(zM) && aM.push(zM), (0, OM.h)(zM) && PM.push(zM), (zM.includes(" Bed Head") || zM.includes(" Strongbed Head")) && nM.push(zM);
-    const QM = {
-      leafBeds: jM,
-      woolBeds: aM,
-      strongBeds: PM,
-      beds: [...jM, ...aM, ...PM],
-      bedHeads: nM,
+    var JV = xV(38114),
+      YV = xV(9820);
+    const UV = [],
+      yV = [],
+      pV = [],
+      QV = [];
+    for (const wV of Object.keys(YV.p))(0, JV.e)(wV) ? UV.push(wV) : (0, JV.j)(wV) && yV.push(wV), (0, JV.f)(wV) && pV.push(wV), (wV.includes(" Bed Head") || wV.includes(" Strongbed Head")) && QV.push(wV);
+    const nV = {
+      leafBeds: UV,
+      woolBeds: yV,
+      strongBeds: pV,
+      beds: [...UV, ...yV, ...pV],
+      bedHeads: QV,
       blockRemoveActionRoots: ["Chest", "Loot Chest", "Iron Chest", "Mailbox", "Bookshelf", "Empty Bookshelf"]
     }
   },
-  34999: () => {}
+  35278: () => {}
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const VV in modules) Object.freeze(modules[VV]);

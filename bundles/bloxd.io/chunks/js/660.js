@@ -1,68 +1,68 @@
 export const id = 660;
 export const ids = [660];
 export const modules = {
-  45226: (MM, rM, iM) => {
-    function OM(MM) {
-      return Math.floor(MM / 8)
+  45439: (VV, eV, xV) => {
+    function JV(VV) {
+      return Math.floor(VV / 8)
     }
 
-    function SM(MM) {
-      return 1 << MM % 8
+    function YV(VV) {
+      return 1 << VV % 8
     }
-    iM.d(rM, {
-      OptimizeIndices: () => aM
+    xV.d(eV, {
+      OptimizeIndices: () => yV
     });
-    class jM {
-      constructor(MM) {
-        this.size = MM, this._byteArray = new Uint8Array(Math.ceil(this.size / 8))
+    class UV {
+      constructor(VV) {
+        this.size = VV, this._byteArray = new Uint8Array(Math.ceil(this.size / 8))
       }
-      get(MM) {
-        if (MM >= this.size) throw new RangeError("Bit index out of range");
-        const rM = OM(MM),
-          iM = SM(MM);
-        return 0 !== (this._byteArray[rM] & iM)
+      get(VV) {
+        if (VV >= this.size) throw new RangeError("Bit index out of range");
+        const eV = JV(VV),
+          xV = YV(VV);
+        return 0 !== (this._byteArray[eV] & xV)
       }
-      set(MM, rM) {
-        if (MM >= this.size) throw new RangeError("Bit index out of range");
-        const iM = OM(MM),
-          jM = SM(MM);
-        rM ? this._byteArray[iM] |= jM : this._byteArray[iM] &= ~jM
+      set(VV, eV) {
+        if (VV >= this.size) throw new RangeError("Bit index out of range");
+        const xV = JV(VV),
+          UV = YV(VV);
+        eV ? this._byteArray[xV] |= UV : this._byteArray[xV] &= ~UV
       }
     }
 
-    function aM(MM) {
-      const rM = [],
-        iM = MM.length / 3;
-      for (let jM = 0; jM < iM; jM++) rM.push([MM[3 * jM], MM[3 * jM + 1], MM[3 * jM + 2]]);
-      const OM = new Map;
-      for (let jM = 0; jM < rM.length; jM++) {
-        const MM = rM[jM];
-        for (const rM of MM) {
-          let MM = OM.get(rM);
-          MM || OM.set(rM, MM = []), MM.push(jM)
+    function yV(VV) {
+      const eV = [],
+        xV = VV.length / 3;
+      for (let UV = 0; UV < xV; UV++) eV.push([VV[3 * UV], VV[3 * UV + 1], VV[3 * UV + 2]]);
+      const JV = new Map;
+      for (let UV = 0; UV < eV.length; UV++) {
+        const VV = eV[UV];
+        for (const eV of VV) {
+          let VV = JV.get(eV);
+          VV || JV.set(eV, VV = []), VV.push(UV)
         }
       }
-      const SM = new jM(iM),
-        aM = [],
-        PM = MM => {
-          const iM = [MM];
-          for (; iM.length > 0;) {
-            const MM = iM.pop();
-            if (!SM.get(MM)) {
-              SM.set(MM, !0), aM.push(rM[MM]);
-              for (const jM of rM[MM]) {
-                const MM = OM.get(jM);
-                if (!MM) return;
-                for (const rM of MM) SM.get(rM) || iM.push(rM)
+      const YV = new UV(xV),
+        yV = [],
+        pV = VV => {
+          const xV = [VV];
+          for (; xV.length > 0;) {
+            const VV = xV.pop();
+            if (!YV.get(VV)) {
+              YV.set(VV, !0), yV.push(eV[VV]);
+              for (const UV of eV[VV]) {
+                const VV = JV.get(UV);
+                if (!VV) return;
+                for (const eV of VV) YV.get(eV) || xV.push(eV)
               }
             }
           }
         };
-      for (let jM = 0; jM < iM; jM++) SM.get(jM) || PM(jM);
-      let nM = 0;
-      for (const jM of aM) MM[nM++] = jM[0], MM[nM++] = jM[1], MM[nM++] = jM[2]
+      for (let UV = 0; UV < xV; UV++) YV.get(UV) || pV(UV);
+      let QV = 0;
+      for (const UV of yV) VV[QV++] = UV[0], VV[QV++] = UV[1], VV[QV++] = UV[2]
     }
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const VV in modules) Object.freeze(modules[VV]);

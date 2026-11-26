@@ -1,219 +1,219 @@
 export const id = 124;
 export const ids = [124];
 export const modules = {
-  9502: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      default: () => Gr
+  9518: (VV, eV, xV) => {
+    xV.r(eV), xV.d(eV, {
+      default: () => Fe
     });
-    var OM = iM(1608),
-      SM = iM(19),
-      jM = iM(5035),
-      aM = iM(44),
-      PM = iM(1516);
-    var nM = iM(2039),
-      QM = iM(1591),
-      zM = iM(1429),
-      LM = iM(1188),
-      mM = iM(143),
-      HM = iM(181),
-      hM = iM(1073),
-      JM = iM(1088),
-      dM = iM(1229),
-      yM = iM(2482),
-      lM = iM(1573),
-      EM = iM(1144),
-      UM = iM(9510),
-      GM = iM(1627);
+    var JV = xV(1625),
+      YV = xV(27),
+      UV = xV(5145),
+      yV = xV(62),
+      pV = xV(1542);
+    var QV = xV(2051),
+      nV = xV(1612),
+      wV = xV(1439),
+      ZV = xV(1220),
+      vV = xV(165),
+      rV = xV(206),
+      kV = xV(1099),
+      bV = xV(1117),
+      EV = xV(1252),
+      BV = xV(2517),
+      jV = xV(1603),
+      qV = xV(1173),
+      tV = xV(9527),
+      FV = xV(1639);
 
-    function CM(MM, rM) {
-      const iM = !0 === rM.debugResult.gameRefused,
-        OM = iM || rM.code === mM.n.REQUEST_TO_MATCHMAKING ? (0, UM.h)(rM.message) : null;
-      if (null !== OM) return eM(MM, MM((0, UM.p)(OM)), MM(UM.l[OM])), !0;
-      if (iM) return async function(MM) {
+    function TV(VV, eV) {
+      const xV = !0 === eV.debugResult.gameRefused,
+        JV = xV || eV.code === vV.i.REQUEST_TO_MATCHMAKING ? (0, tV.f)(eV.message) : null;
+      if (null !== JV) return PV(VV, VV((0, tV.j)(JV)), VV(tV.h[JV])), !0;
+      if (xV) return async function(VV) {
         const {
-          gameNameWithVariation: rM,
-          lobbyName: iM,
-          shownLobbyName: OM
-        } = nM.gameBridge.latest("connectedGame"), SM = "classic" === rM && (0, dM.J)(iM) ? OM : await (0, yM.g)(MM, rM, iM);
-        return "" !== SM ? MM("general:cantJoinGame", {
-          game: SM
-        }) : MM("general:cantJoinThisGame")
-      }(MM).then((iM => {
-        eM(MM, iM, rM.message)
+          gameNameWithVariation: eV,
+          lobbyName: xV,
+          shownLobbyName: JV
+        } = QV.gameBridge.latest("connectedGame"), YV = "classic" === eV && (0, EV.F)(xV) ? JV : await (0, BV.g)(VV, eV, xV);
+        return "" !== YV ? VV("general:cantJoinGame", {
+          game: YV
+        }) : VV("general:cantJoinThisGame")
+      }(VV).then((xV => {
+        PV(VV, xV, eV.message)
       })), !0;
       const {
-        joinFailure: SM
-      } = rM.debugResult, jM = "refused" === (null === SM || void 0 === SM ? void 0 : SM.at) ? SM.code : null;
-      return jM === HM.d.schematicNotPublished.code ? (async function(MM, rM) {
-        const iM = (0, hM.p)(nM.gameBridge.latest("connectedGame").gameNameWithVariation),
-          OM = await async function(MM) {
+        joinFailure: YV
+      } = eV.debugResult, UV = "refused" === (null === YV || void 0 === YV ? void 0 : YV.at) ? YV.code : null;
+      return UV === rV.b.schematicNotPublished.code ? (async function(VV, eV) {
+        const xV = (0, kV.p)(QV.gameBridge.latest("connectedGame").gameNameWithVariation),
+          JV = await async function(VV) {
             try {
-              const rM = await lM.c.getGame(await EM.userContextManager.getCurrentUserContext(), MM, !0);
-              return rM.gamePublished ? null : rM.name
-            } catch (rM) {
-              return rM instanceof mM.e && 435 === rM.httpCode || console.error(`Failed to get unpublished game ${MM}`, rM), null
+              const eV = await jV.b.getGame(await qV.userContextManager.getCurrentUserContext(), VV, !0);
+              return eV.gamePublished ? null : eV.name
+            } catch (eV) {
+              return eV instanceof vV.b && 435 === eV.httpCode || console.error(`Failed to get unpublished game ${VV}`, eV), null
             }
-          }(iM);
-        if (null === OM) return void eM(MM, MM("general:cantJoinThisGame"), rM);
-        const SM = await zM.NotificationProvider.showPromptPopup({
+          }(xV);
+        if (null === JV) return void PV(VV, VV("general:cantJoinThisGame"), eV);
+        const YV = await wV.NotificationProvider.showPromptPopup({
           icon: "rocket-launch",
-          title: MM("studio:gameNotPublishedTitle", {
-            game: OM
+          title: VV("studio:gameNotPublishedTitle", {
+            game: JV
           }),
-          confirmText: MM("studio:publishInStudio"),
-          cancelText: MM("general:cancel")
+          confirmText: VV("studio:publishInStudio"),
+          cancelText: VV("general:cancel")
         }).getResult();
-        !0 === SM && (0, QM.navigatePreserveSearch)((0, GM.p)((0, JM.d)(iM), "manage"))
-      }(MM, rM.message), !0) : jM === HM.d.schematicBanned.code && (eM(MM, MM("general:cantJoinThisGame"), rM.message), !0)
+        !0 === YV && (0, nV.navigatePreserveSearch)((0, FV.m)((0, bV.e)(xV), "manage"))
+      }(VV, eV.message), !0) : UV === rV.b.schematicBanned.code && (PV(VV, VV("general:cantJoinThisGame"), eV.message), !0)
     }
 
-    function eM(MM, rM, iM) {
-      zM.NotificationProvider.showPromptPopup({
+    function PV(VV, eV, xV) {
+      wV.NotificationProvider.showPromptPopup({
         icon: "lock",
-        title: rM,
-        subtitle: iM,
-        confirmText: MM("general:ok"),
+        title: eV,
+        subtitle: xV,
+        confirmText: VV("general:ok"),
         cancelText: ""
       })
     }
-    var bM = iM(4961),
-      wM = iM(22),
-      tM = iM(1251),
-      gM = iM(1830),
-      uM = iM(83),
-      RM = iM(1360),
-      pM = iM(1503),
-      WM = iM(4913),
-      sM = iM(4711),
-      DM = iM(4662),
-      kM = iM(3647),
-      ZM = iM(1382),
-      oM = iM(821),
-      fM = iM(1232),
-      YM = iM(3706),
-      NM = iM(3563),
-      AM = iM(1438),
-      xM = iM(1396),
-      vM = iM(5388),
-      FM = iM(9514),
-      BM = iM(3297),
-      XM = iM(1303);
+    var AV = xV(5056),
+      NV = xV(32),
+      XV = xV(1276),
+      MV = xV(1838),
+      zV = xV(99),
+      GV = xV(1382),
+      WV = xV(1530),
+      RV = xV(5002),
+      gV = xV(4784),
+      DV = xV(4725),
+      iV = xV(3673),
+      CV = xV(1397),
+      aV = xV(812),
+      oV = xV(1260),
+      cV = xV(3724),
+      hV = xV(3584),
+      lV = xV(1442),
+      LV = xV(1408),
+      fV = xV(5486),
+      mV = xV(9530),
+      KV = xV(3305),
+      HV = xV(1321);
 
-    function IM(MM) {
+    function uV(VV) {
       let {
-        onApply: rM,
-        onSkip: iM
-      } = MM;
+        onApply: eV,
+        onSkip: xV
+      } = VV;
       const {
-        t: OM
-      } = (0, LM.A)();
-      return (0, aM.useEffect)((() => {
-        BM.c.skipPlayWait()
-      }), []), (0, XM.jsx)(AM.i, {
+        t: JV
+      } = (0, ZV.A)();
+      return (0, yV.useEffect)((() => {
+        KV.d.skipPlayWait()
+      }), []), (0, HV.jsx)(lV.e, {
         icon: "download",
         title: "customTexturePack:downloadTitle",
-        subtitle: (0, XM.jsxs)("div", {
+        subtitle: (0, HV.jsxs)("div", {
           className: "CustomTexturePackDownloaderSubtitleText",
-          children: [OM("customTexturePack:downloadPrompt"), (0, XM.jsx)("div", {
+          children: [JV("customTexturePack:downloadPrompt"), (0, HV.jsx)("div", {
             className: "CustomTexturePackDownloaderWarningText",
-            children: OM("customTexturePack:authorWarning")
-          }), (0, XM.jsx)("div", {
+            children: JV("customTexturePack:authorWarning")
+          }), (0, HV.jsx)("div", {
             className: "CustomTexturePackDownloaderSecondaryText",
-            children: OM("customTexturePack:existingPackSaved")
+            children: JV("customTexturePack:existingPackSaved")
           })]
         }),
         confirm: {
           text: "general:apply",
-          onClick: rM
+          onClick: eV
         },
         cancel: {
           text: "customTexturePack:skip",
-          onClick: iM
+          onClick: xV
         }
       })
     }
-    async function KM() {
-      let MM = !1;
-      const rM = zM.NotificationProvider.showCustomPopup({
-        body: rM => (0, XM.jsx)(IM, {
+    async function sV() {
+      let VV = !1;
+      const eV = wV.NotificationProvider.showCustomPopup({
+        body: eV => (0, HV.jsx)(uV, {
           onApply: () => {
-            MM = !0, rM()
+            VV = !0, eV()
           },
-          onSkip: rM
+          onSkip: eV
         }),
         disableExitButton: !0,
         disablePressBackgroundToClose: !0
       });
-      return await rM.getResult(), MM
+      return await eV.getResult(), VV
     }
-    let qM = {
+    let SV = {
       wanted: !1
     };
-    let TM = null;
+    let IV = null;
 
-    function VM(MM) {
-      MM.setGamePackConfirm(KM), TM = MM
+    function dV(VV) {
+      VV.setGamePackConfirm(sV), IV = VV
     }
-    var cM = iM(3881),
-      Mr = iM(30),
-      rr = iM(3657);
+    var OV = xV(3931),
+      Ve = xV(40),
+      ee = xV(3681);
 
-    function ir(MM) {
+    function xe(VV) {
       let {
-        schematicId: rM,
-        texturePackKey: iM,
-        onClose: OM
-      } = MM;
-      const [SM, jM] = (0, aM.useState)("prompt"), [PM, nM] = (0, aM.useState)(null), QM = (0, cM.b)();
+        schematicId: eV,
+        texturePackKey: xV,
+        onClose: JV
+      } = VV;
+      const [YV, UV] = (0, yV.useState)("prompt"), [pV, QV] = (0, yV.useState)(null), nV = (0, OV.e)();
 
-      function zM() {
-        OM()
+      function wV() {
+        JV()
       }
-      return "prompt" === SM ? (0, XM.jsx)(IM, {
+      return "prompt" === YV ? (0, HV.jsx)(uV, {
         onApply: async function() {
-          jM("downloading");
+          UV("downloading");
           try {
-            const MM = await async function(MM, rM) {
-              const iM = await (0, vM.d)(rM);
-              if (iM) return {
-                pack: iM,
-                key: rM
+            const VV = await async function(VV, eV) {
+              const xV = await (0, fV.d)(eV);
+              if (xV) return {
+                pack: xV,
+                key: eV
               };
-              const OM = await EM.userContextManager.getCurrentUserContext(),
-                SM = (await lM.c.getGame(OM, MM, !0)).customTexturePackKey;
-              if (!SM) return null;
-              const jM = await (0, vM.d)(SM);
-              if (!jM) throw new Error("The texture pack could not be found");
+              const JV = await qV.userContextManager.getCurrentUserContext(),
+                YV = (await jV.b.getGame(JV, VV, !0)).customTexturePackKey;
+              if (!YV) return null;
+              const UV = await (0, fV.d)(YV);
+              if (!UV) throw new Error("The texture pack could not be found");
               return {
-                pack: jM,
-                key: SM
+                pack: UV,
+                key: YV
               }
-            }(rM, iM);
-            if (!QM.current) return;
-            if (!MM) return void OM();
-            if ((0, YM.h)(MM.pack)) return void jM("refused");
-            const SM = NM.e.toJson(),
-              aM = NM.e.isUsingTemporaryTexturePack() ? "customGame" : "player";
-            if (NM.e.setFromJson(MM.pack, "customGame"), await NM.e.saveTemporaryTexturePack(MM.key), QM.current) return void(0, gM.reloadBloxd)();
-            NM.e.setFromJson(SM, aM), await (0, rr.k)(Mr.f)
-          } catch (MM) {
-            nM(MM instanceof Error ? MM.message : String(MM)), jM("error")
+            }(eV, xV);
+            if (!nV.current) return;
+            if (!VV) return void JV();
+            if ((0, cV.i)(VV.pack)) return void UV("refused");
+            const YV = hV.b.toJson(),
+              yV = hV.b.isUsingTemporaryTexturePack() ? "customGame" : "player";
+            if (hV.b.setFromJson(VV.pack, "customGame"), await hV.b.saveTemporaryTexturePack(VV.key), nV.current) return void(0, MV.reloadBloxd)();
+            hV.b.setFromJson(YV, yV), await (0, ee.k)(Ve.i)
+          } catch (VV) {
+            QV(VV instanceof Error ? VV.message : String(VV)), UV("error")
           }
         },
-        onSkip: zM
-      }) : "downloading" === SM ? (0, XM.jsx)(AM.i, {
+        onSkip: wV
+      }) : "downloading" === YV ? (0, HV.jsx)(lV.e, {
         icon: "download",
         title: "customTexturePack:downloading",
-        subtitle: (0, XM.jsx)("div", {
+        subtitle: (0, HV.jsx)("div", {
           className: "CustomTexturePackDownloaderLogoLoaderContainer",
-          children: (0, XM.jsx)(xM.d, {
+          children: (0, HV.jsx)(LV.d, {
             showFace: !0
           })
         })
-      }) : "error" === SM ? (0, XM.jsx)(AM.i, {
+      }) : "error" === YV ? (0, HV.jsx)(lV.e, {
         icon: "face-worried",
         title: "customTexturePack:errorTitle",
-        subtitle: PM,
+        subtitle: pV,
         confirm: {
           text: "customTexturePack:refreshPage",
           onClick: () => {
@@ -222,580 +222,580 @@ export const modules = {
         },
         cancel: {
           text: "customTexturePack:skip",
-          onClick: zM
+          onClick: wV
         }
-      }) : "refused" === SM ? (0, XM.jsx)(AM.i, {
+      }) : "refused" === YV ? (0, HV.jsx)(lV.e, {
         icon: "face-worried",
         title: "customTexturePack:cantApplyTitle",
         subtitle: "customTexturePack:gamePackHasExternalUrls",
         confirm: {
           text: "general:continue",
-          onClick: zM
+          onClick: wV
         }
       }) : null
     }
-    var Or = iM(9525),
-      Sr = iM(4647),
-      jr = iM(1871),
-      ar = iM(3258),
-      Pr = iM(4654),
-      nr = iM(2252),
-      Qr = iM(9530);
-    var zr = iM(5052),
-      Lr = iM(1327),
-      mr = iM(1826),
-      Hr = iM(656),
-      hr = iM(766),
-      Jr = iM(1899);
+    var Je = xV(9541),
+      Ye = xV(4709),
+      Ue = xV(1868),
+      ye = xV(3268),
+      pe = xV(4716),
+      Qe = xV(2259),
+      ne = xV(9545);
+    var we = xV(5164),
+      Ze = xV(1348),
+      ve = xV(1829),
+      re = xV(686),
+      ke = xV(767),
+      be = xV(1900);
 
-    function dr() {
-      const MM = SM.d.get("clientEscMenuOptions");
-      nM.gameBridge.send("setLookSensitivity", SM.d.get("isTouchScreen") ? (0, hr.t)(MM) : MM.mouseSensitivity)
+    function Ee() {
+      const VV = YV.b.get("clientEscMenuOptions");
+      QV.gameBridge.send("setLookSensitivity", YV.b.get("isTouchScreen") ? (0, ke.r)(VV) : VV.mouseSensitivity)
     }
-    const yr = 45e3;
+    const Be = 45e3;
 
-    function lr(MM) {
-      const rM = MM.asError();
-      if (rM.debugResult.Ti || (0, mr.c)(rM.debugResult.error)) return;
-      console.log("Failed to join lobby:", rM.message);
-      const iM = "timedOut" === rM.debugResult.gameServerUnreachable;
-      (0, ar.reportClientError)("matchmake_failed", rM.message, iM ? "CONNECT_TO_GAME_SERVER_TIMEOUT" : mM.n[rM.code]);
+    function je(VV) {
+      const eV = VV.asError();
+      if (eV.debugResult.pJ || (0, ve.c)(eV.debugResult.error)) return;
+      console.log("Failed to join lobby:", eV.message);
+      const xV = "timedOut" === eV.debugResult.gameServerUnreachable;
+      (0, ye.reportClientError)("matchmake_failed", eV.message, xV ? "CONNECT_TO_GAME_SERVER_TIMEOUT" : vV.i[eV.code]);
       const {
-        error: OM
-      } = rM.debugResult;
-      if (OM instanceof kM.k && "default" !== OM.packSource) {
-        const MM = (0, Pr.e)("js", "game" === OM.packSource ? "game" : "page", (0, Pr.h)(OM));
-        (0, ar.reportClientError)("texture_pack", OM, MM)
+        error: JV
+      } = eV.debugResult;
+      if (JV instanceof iV.p && "default" !== JV.packSource) {
+        const VV = (0, pe.c)("js", "game" === JV.packSource ? "game" : "page", (0, pe.f)(JV));
+        (0, ye.reportClientError)("texture_pack", JV, VV)
       }
     }
 
-    function Er(MM) {
-      if (null === MM || void 0 === MM || !MM.isError()) return !1;
-      const rM = MM.asError();
-      return rM.code === mM.n.REQUEST_TO_MATCHMAKING && !(0, mr.c)(rM.debugResult.error)
+    function qe(VV) {
+      if (null === VV || void 0 === VV || !VV.isError()) return !1;
+      const eV = VV.asError();
+      return eV.code === vV.i.REQUEST_TO_MATCHMAKING && !(0, ve.c)(eV.debugResult.error)
     }
-    async function Ur(MM, rM, iM) {
-      const OM = (0, zr.M)(rM);
-      async function aM(MM, rM, iM, OM) {
-        var aM;
-        if (OM.aborted) return null;
-        null === SM.d.get("gameEntrySource") && (0, SM.j)("directPlayUrl"), Hr.H && (0, FM.f)().catch((() => {})), SM.d.set({
+    async function te(VV, eV, xV) {
+      const JV = (0, we.T)(eV);
+      async function yV(VV, eV, xV, JV) {
+        var yV;
+        if (JV.aborted) return null;
+        null === YV.b.get("gameEntrySource") && (0, YV.h)("directPlayUrl"), re.I && (0, mV.h)().catch((() => {})), YV.b.set({
           gameState: "findingLobby"
-        }), wM.i.Tz("loadingScreenState", "loadingPage:findingLobby");
-        const PM = await EM.userContextManager.getCurrentUserContext();
-        nM.gameBridge.send("setRequestedGame", {
-          gameNameWithVariation: rM,
-          discordContext: MM instanceof fM.e ? MM.getSerialisableParams() : null
-        }), (0, jr.d)(null !== (aM = BM.c.playInputAt()) && void 0 !== aM ? aM : performance.now());
-        const QM = await async function(MM, rM, iM, OM, SM) {
+        }), NV.h.QZ("loadingScreenState", "loadingPage:findingLobby");
+        const pV = await qV.userContextManager.getCurrentUserContext();
+        QV.gameBridge.send("setRequestedGame", {
+          gameNameWithVariation: eV,
+          discordContext: VV instanceof oV.i ? VV.getSerialisableParams() : null
+        }), (0, Ue.d)(null !== (yV = KV.d.playInputAt()) && void 0 !== yV ? yV : performance.now());
+        const nV = await async function(VV, eV, xV, JV, YV) {
           try {
-            await (0, Jr.n)(jM.reqLibsLoadedPromise, yr, "Required libraries timed out")
-          } catch (aM) {
-            const MM = aM instanceof Jr.h ? `Required libraries still loading after ${yr/1e3} s: ${(0,jM.requiredLibsPending)().join(", ")}` : aM.toString();
-            return tM.b.errorWithCode(MM, mM.n.LOAD_REQUIRED_LIBS, {
-              error: aM,
+            await (0, be.m)(UV.reqLibsLoadedPromise, Be, "Required libraries timed out")
+          } catch (yV) {
+            const VV = yV instanceof be.i ? `Required libraries still loading after ${Be/1e3} s: ${(0,UV.requiredLibsPending)().join(", ")}` : yV.toString();
+            return XV.e.errorWithCode(VV, vV.i.LOAD_REQUIRED_LIBS, {
+              error: yV,
               severity: "medium"
             })
           }
-          return wM.i.Tz("matchmakeAndPlayStepCompleted", {
-            step: mM.n.LOAD_REQUIRED_LIBS,
+          return NV.h.QZ("matchmakeAndPlayStepCompleted", {
+            step: vV.i.LOAD_REQUIRED_LIBS,
             totalSubSteps: 1
-          }), (0, jM.matchmakeAndPlayMaybeUnloaded)(MM, rM, iM, OM, SM)
-        }(MM, rM, iM, PM, OM), zM = QM.isError() ? QM.asError() : null;
-        if (OM.aborted) return zM && lr(QM), nM.gameBridge.send("leaveGame", {
+          }), (0, UV.matchmakeAndPlayMaybeUnloaded)(VV, eV, xV, JV, YV)
+        }(VV, eV, xV, pV, JV), wV = nV.isError() ? nV.asError() : null;
+        if (JV.aborted) return wV && je(nV), QV.gameBridge.send("leaveGame", {
           reloadPath: null
         }), null;
-        if (null !== zM && void 0 !== zM && zM.debugResult.Ti) return console.log("Join cancelled:", zM.message), null;
-        if (zM) return QM;
+        if (null !== wV && void 0 !== wV && wV.debugResult.pJ) return console.log("Join cancelled:", wV.message), null;
+        if (wV) return nV;
         const {
-          gameNameWithVariation: LM,
-          lobbyName: HM
-        } = QM.getValue();
-        return dr(), (0, Lr.M)().setGameViewShown(!0), PM.recordJoin(LM, HM), (0, RM.I)(), QM
+          gameNameWithVariation: ZV,
+          lobbyName: rV
+        } = nV.getValue();
+        return Ee(), (0, Ze.K)().setGameViewShown(!0), pV.recordJoin(ZV, rV), (0, GV.L)(), nV
       }
-      return OM && (0, SM.j)("updateRejoin"), (0, nr.h)((async SM => {
+      return JV && (0, YV.h)("updateRejoin"), (0, Qe.j)((async YV => {
         try {
-          var jM;
-          let PM = MM,
-            nM = await aM(PM, rM, iM, SM);
-          for (let MM = 0; OM && MM < zr.l && (Er(nM) && await (0, zr.O)((0, zr.x)(MM), SM)); MM++) PM = (0, zr.z)(PM, MM + 1, "string" === typeof PM && (0, dM.P)(PM)), nM = await aM(PM, rM, iM, SM);
-          return null !== (jM = nM) && void 0 !== jM && jM.isError() && lr(nM), nM
-        } catch (PM) {
-          if ((0, ar.reportClientError)("matchmake_failed", PM, "unexpected"), nM.gameBridge.send("leaveGame", {
-              reloadPath: SM.aborted ? null : "/"
-            }), SM.aborted) return null;
-          throw PM
+          var UV;
+          let pV = VV,
+            QV = await yV(pV, eV, xV, YV);
+          for (let VV = 0; JV && VV < we.l && (qe(QV) && await (0, we.U)((0, we.v)(VV), YV)); VV++) pV = (0, we.y)(pV, VV + 1, "string" === typeof pV && (0, EV.I)(pV)), QV = await yV(pV, eV, xV, YV);
+          return null !== (UV = QV) && void 0 !== UV && UV.isError() && je(QV), QV
+        } catch (pV) {
+          if ((0, ye.reportClientError)("matchmake_failed", pV, "unexpected"), QV.gameBridge.send("leaveGame", {
+              reloadPath: YV.aborted ? null : "/"
+            }), YV.aborted) return null;
+          throw pV
         }
-      }), (async MM => {
-        var iM;
-        if (OM) return;
-        const SM = (0, RM.y)();
-        null !== SM && (await SM, MM.aborted) || (null !== (iM = oM.e[rM]) && void 0 !== iM && iM.playAdBeforeMatchmaking ? (BM.c.skipPlayWait(), await new Promise((MM => {
-          (0, RM.bb)((() => {
-            MM(!0)
+      }), (async VV => {
+        var xV;
+        if (JV) return;
+        const YV = (0, GV.B)();
+        null !== YV && (await YV, VV.aborted) || (null !== (xV = aV.e[eV]) && void 0 !== xV && xV.playAdBeforeMatchmaking ? (KV.d.skipPlayWait(), await new Promise((VV => {
+          (0, GV.db)((() => {
+            VV(!0)
           }), "video_start")
-        }))) : (0, RM.bb)((() => {}), "video_start"))
+        }))) : (0, GV.db)((() => {}), "video_start"))
       }))
     }
 
-    function Gr() {
+    function Fe() {
       const {
-        t: MM
-      } = (0, LM.A)(), rM = (0, QM.useNavigatePreserveSearch)(), iM = (0, OM.u)(), HM = (0, OM.D)(), JM = (0, aM.useRef)({
-        t: MM,
-        navigate: rM
+        t: VV
+      } = (0, ZV.A)(), eV = (0, nV.useNavigatePreserveSearch)(), xV = (0, JV.r)(), rV = (0, JV.A)(), bV = (0, yV.useRef)({
+        t: VV,
+        navigate: eV
       });
-      JM.current = {
-        t: MM,
-        navigate: rM
+      bV.current = {
+        t: VV,
+        navigate: eV
       };
-      const UM = (0, aM.useRef)("");
-      UM.current = iM.pathname + iM.search;
+      const tV = (0, yV.useRef)("");
+      tV.current = xV.pathname + xV.search;
       const {
-        gameState: GM,
-        clientEscMenuOptions: eM
-      } = (0, SM.m)(["gameState", "clientEscMenuOptions"]), fM = (0, aM.useRef)(null), YM = (0, aM.useRef)(!1);
-      var AM;
-      (0, aM.useEffect)((() => () => {
-        wM.i.Tz("leftPlayPage")
-      }), []), (0, nr.j)(), (0, nr.m)(), AM = Hr.H, (0, aM.useEffect)((() => {
-        if (!AM) return;
-        let MM = !0;
-        return (0, FM.f)().then((rM => {
-          MM && VM(rM)
+        gameState: FV,
+        clientEscMenuOptions: PV
+      } = (0, YV.l)(["gameState", "clientEscMenuOptions"]), oV = (0, yV.useRef)(null), cV = (0, yV.useRef)(!1);
+      var lV;
+      (0, yV.useEffect)((() => () => {
+        NV.h.QZ("leftPlayPage")
+      }), []), (0, Qe.l)(), (0, Qe.n)(), lV = re.I, (0, yV.useEffect)((() => {
+        if (!lV) return;
+        let VV = !0;
+        return (0, mV.h)().then((eV => {
+          VV && dV(eV)
         })).catch((() => {})), () => {
-          var rM;
-          MM = !1, qM.wanted = !1, null === (rM = TM) || void 0 === rM || rM.setGamePackConfirm(null), TM = null
+          var eV;
+          VV = !1, SV.wanted = !1, null === (eV = IV) || void 0 === eV || eV.setGamePackConfirm(null), IV = null
         }
-      }), [AM]), (0, aM.useEffect)((() => {
-        var MM, rM, OM;
-        (0, jM.needGameClientNow)();
+      }), [lV]), (0, yV.useEffect)((() => {
+        var VV, eV, JV;
+        (0, UV.needGameClientNow)();
         const {
-          t: aM,
-          navigate: PM
-        } = JM.current, LM = (0, Or.d)(HM, iM.search);
-        if (HM.lobbyName && !new URLSearchParams(iM.search).has("lobby")) return void PM((0, ZM.b)(LM.gameNameWithVariation, LM.lobbyName), {
+          t: yV,
+          navigate: pV
+        } = bV.current, ZV = (0, Je.d)(rV, xV.search);
+        if (rV.lobbyName && !new URLSearchParams(xV.search).has("lobby")) return void pV((0, CV.c)(ZV.gameNameWithVariation, ZV.lobbyName), {
           replace: !0
         });
-        let GM = Promise.resolve({
+        let FV = Promise.resolve({
           shouldMatchmake: !0
         });
-        const eM = new AbortController;
-        if ("/play/discord-custom-lobby" === iM.pathname) {
-          const MM = SM.d.get("discordContext");
-          if (!MM) return void PM("/");
-          GM = bM.b.setupDiscordLobby(MM, "classic").then((() => ({
+        const PV = new AbortController;
+        if ("/play/discord-custom-lobby" === xV.pathname) {
+          const VV = YV.b.get("discordContext");
+          if (!VV) return void pV("/");
+          FV = AV.e.setupDiscordLobby(VV, "classic").then((() => ({
             shouldMatchmake: !0,
-            discordContext: MM
-          }))).catch((rM => (console.error("Failed to setup discord lobby", rM), {
+            discordContext: VV
+          }))).catch((eV => (console.error("Failed to setup discord lobby", eV), {
             shouldMatchmake: !1,
-            discordContext: MM
+            discordContext: VV
           })))
-        } else if (!LM.gameNameWithVariation || !(0, dM.L)(LM.gameNameWithVariation)) return console.error(`Valid game name with variation is required. Received ${LM.gameNameWithVariation}`), void PM(-1);
-        const pM = fM.current;
-        if (null !== pM && LM.gameNameWithVariation === pM.gameNameWithVariation && LM.lobbyName === pM.lobbyName) return;
-        if (nM.gameBridge.latest("connectedGame").replay) return void(0, nr.g)(null);
-        if ("releaseCountdown" === (null === (MM = (0, yM.j)(LM.gameNameWithVariation)) || void 0 === MM ? void 0 : MM.type)) return console.error(`Game hasn't been released yet: ${LM.gameNameWithVariation}`), void PM(-1);
-        const AM = YM.current;
-        YM.current = !1, (0, RM.B)(), SM.d.set({
+        } else if (!ZV.gameNameWithVariation || !(0, EV.H)(ZV.gameNameWithVariation)) return console.error(`Valid game name with variation is required. Received ${ZV.gameNameWithVariation}`), void pV(-1);
+        const WV = oV.current;
+        if (null !== WV && ZV.gameNameWithVariation === WV.gameNameWithVariation && ZV.lobbyName === WV.lobbyName) return;
+        if (QV.gameBridge.latest("connectedGame").replay) return void(0, Qe.h)(null);
+        if ("releaseCountdown" === (null === (VV = (0, BV.k)(ZV.gameNameWithVariation)) || void 0 === VV ? void 0 : VV.type)) return console.error(`Game hasn't been released yet: ${ZV.gameNameWithVariation}`), void pV(-1);
+        const lV = cV.current;
+        cV.current = !1, (0, GV.F)(), YV.b.set({
           gameState: "loadingScreen"
         });
-        const xM = function() {
-            qM.wanted = !1;
-            const MM = {
+        const LV = function() {
+            SV.wanted = !1;
+            const VV = {
               wanted: !0
             };
-            return qM = MM, () => MM.wanted
+            return SV = VV, () => VV.wanted
           }(),
-          vM = LM.gameNameWithVariation;
-        if (vM && (Hr.H || (0, hM.m)(vM))) {
-          const MM = Hr.H ? Promise.all([(0, FM.f)(), EM.userContextManager.getCurrentUserContext()]).then((MM => {
-            let [rM, iM] = MM;
-            if (xM()) return VM(rM), rM.packForGame(vM, iM, xM)
-          })) : async function(MM, rM) {
-            await NM.e.indexedDbValuesAreLoaded();
-            const iM = await EM.userContextManager.getCurrentUserContext(),
-              OM = (0, hM.p)(MM);
-            let SM;
+          fV = ZV.gameNameWithVariation;
+        if (fV && (re.I || (0, kV.l)(fV))) {
+          const VV = re.I ? Promise.all([(0, mV.h)(), qV.userContextManager.getCurrentUserContext()]).then((VV => {
+            let [eV, xV] = VV;
+            if (LV()) return dV(eV), eV.packForGame(fV, xV, LV)
+          })) : async function(VV, eV) {
+            await hV.b.indexedDbValuesAreLoaded();
+            const xV = await qV.userContextManager.getCurrentUserContext(),
+              JV = (0, kV.p)(VV);
+            let YV;
             try {
-              SM = await lM.c.getGame(iM, OM, !0)
-            } catch (nM) {
-              return void console.error("Failed to get game", nM)
+              YV = await jV.b.getGame(xV, JV, !0)
+            } catch (QV) {
+              return void console.error("Failed to get game", QV)
             }
-            if (null !== rM && void 0 !== rM && rM.aborted) return;
-            const jM = SM.customTexturePackKey;
-            if (!jM) return void(NM.e.isUsingTemporaryTexturePack() && ((0, gM.reloadBloxd)(), await new Promise((() => {}))));
-            if (NM.e.isUsingTemporaryTexturePack() && NM.e.getTemporaryTexturePackSource() === jM) return;
-            const aM = zM.NotificationProvider.showCustomPopup({
-                body: MM => (0, XM.jsx)(ir, {
-                  schematicId: OM,
-                  texturePackKey: jM,
-                  onClose: MM
+            if (null !== eV && void 0 !== eV && eV.aborted) return;
+            const UV = YV.customTexturePackKey;
+            if (!UV) return void(hV.b.isUsingTemporaryTexturePack() && ((0, MV.reloadBloxd)(), await new Promise((() => {}))));
+            if (hV.b.isUsingTemporaryTexturePack() && hV.b.getTemporaryTexturePackSource() === UV) return;
+            const yV = wV.NotificationProvider.showCustomPopup({
+                body: VV => (0, HV.jsx)(xe, {
+                  schematicId: JV,
+                  texturePackKey: UV,
+                  onClose: VV
                 }),
                 disableExitButton: !0,
                 disablePressBackgroundToClose: !0
               }),
-              PM = () => {
-                aM.tearDownNotification()
+              pV = () => {
+                yV.tearDownNotification()
               };
-            null === rM || void 0 === rM || rM.addEventListener("abort", PM, {
+            null === eV || void 0 === eV || eV.addEventListener("abort", pV, {
               once: !0
-            }), await aM.getResult(), null === rM || void 0 === rM || rM.removeEventListener("abort", PM)
-          }(vM, eM.signal), rM = GM;
-          GM = MM.catch((MM => {
-            console.error("Failed to check for custom texture pack", MM)
-          })).then((() => rM))
+            }), await yV.getResult(), null === eV || void 0 === eV || eV.removeEventListener("abort", pV)
+          }(fV, PV.signal), eV = FV;
+          FV = VV.catch((VV => {
+            console.error("Failed to check for custom texture pack", VV)
+          })).then((() => eV))
         }
-        const BM = {
-          wasm: Hr.H,
-          game: LM.gameNameWithVariation,
-          custom: void 0 !== vM && (0, hM.m)(vM),
-          lobbyName: null !== (rM = LM.lobbyName) && void 0 !== rM ? rM : null,
-          direct: null !== LM.directJoinVmUrl && void 0 !== LM.directJoinVmUrl,
-          discord: "/play/discord-custom-lobby" === iM.pathname,
-          adBeforeMatchmaking: void 0 !== vM && !0 === (null === (OM = oM.e[vM]) || void 0 === OM ? void 0 : OM.playAdBeforeMatchmaking),
-          afterAnother: null !== fM.current || (0, nr.d)()
+        const KV = {
+          wasm: re.I,
+          game: ZV.gameNameWithVariation,
+          custom: void 0 !== fV && (0, kV.l)(fV),
+          lobbyName: null !== (eV = ZV.lobbyName) && void 0 !== eV ? eV : null,
+          direct: null !== ZV.directJoinVmUrl && void 0 !== ZV.directJoinVmUrl,
+          discord: "/play/discord-custom-lobby" === xV.pathname,
+          adBeforeMatchmaking: void 0 !== fV && !0 === (null === (JV = aV.e[fV]) || void 0 === JV ? void 0 : JV.playAdBeforeMatchmaking),
+          afterAnother: null !== oV.current || (0, Qe.b)()
         };
-        (0, Qr.i)(null);
-        const IM = !(KM = BM).wasm || void 0 === KM.game || KM.custom || KM.direct || KM.discord || KM.adBeforeMatchmaking || KM.afterAnother ? null : () => {
-          ! function(MM, rM) {
-            (0, Qr.i)({
-              key: (0, Qr.g)(MM, rM),
-              settled: Promise.all([jM.matchmakingLibrariesPromise, EM.userContextManager.getCurrentUserContext()]).then((iM => {
-                let [OM, SM] = iM;
-                if (void 0 === OM.matchmakeForAhead) throw new Error("the matchmaking chunk has no matchmaking ahead");
-                return OM.matchmakeForAhead(MM, rM, SM)
-              })).catch((MM => ({
-                result: tM.b.errorWithCode(String(MM), mM.n.REQUEST_TO_MATCHMAKING, {
-                  error: MM,
+        (0, ne.i)(null);
+        const uV = !(sV = KV).wasm || void 0 === sV.game || sV.custom || sV.direct || sV.discord || sV.adBeforeMatchmaking || sV.afterAnother ? null : () => {
+          ! function(VV, eV) {
+            (0, ne.i)({
+              key: (0, ne.e)(VV, eV),
+              settled: Promise.all([UV.matchmakingLibrariesPromise, qV.userContextManager.getCurrentUserContext()]).then((xV => {
+                let [JV, YV] = xV;
+                if (void 0 === JV.matchmakeForAhead) throw new Error("the matchmaking chunk has no matchmaking ahead");
+                return JV.matchmakeForAhead(VV, eV, YV)
+              })).catch((VV => ({
+                result: XV.e.errorWithCode(String(VV), vV.i.REQUEST_TO_MATCHMAKING, {
+                  error: VV,
                   severity: "medium"
                 }),
                 at: performance.now()
               })))
             })
-          }(BM.lobbyName, BM.game)
+          }(KV.lobbyName, KV.game)
         };
-        var KM;
-        const TM = null !== fM.current;
-        fM.current = null, (0, nr.g)(null);
-        const cM = () => {
-          AM ? (0, QM.navigateToHomePage)() : (YM.current = TM, PM(-1))
+        var sV;
+        const IV = null !== oV.current;
+        oV.current = null, (0, Qe.h)(null);
+        const OV = () => {
+          lV ? (0, nV.navigateToHomePage)() : (cV.current = IV, pV(-1))
         };
-        let Mr = !1;
-        const rr = iM.pathname + iM.search,
-          jr = () => !Mr && UM.current === rr;
-        return (0, Qr.e)(GM, IM, (MM => {
+        let Ve = !1;
+        const ee = xV.pathname + xV.search,
+          Ue = () => !Ve && tV.current === ee;
+        return (0, ne.d)(FV, uV, (VV => {
           let {
-            shouldMatchmake: rM,
-            discordContext: iM
-          } = MM;
-          jr() && (rM ? Ur(null !== iM && void 0 !== iM ? iM : LM.lobbyName, iM ? "classic" : LM.gameNameWithVariation, LM.directJoinVmUrl).then((MM => {
-            if (null !== MM && jr())
-              if (MM.isError()) {
-                var rM, iM;
-                const OM = MM.asError(),
-                  jM = null !== (rM = OM.debugResult.severity) && void 0 !== rM ? rM : "high";
-                if (wM.i.Tz("joinFailed", {
-                    step: null !== (iM = OM.code) && void 0 !== iM ? iM : null,
-                    severity: jM
-                  }), (0, mr.c)(OM.debugResult.error)) return void mr.d.reload();
-                if (OM.code === mM.n.SHADER_PACK) return void(0, Sr.e)(OM.message, PM);
-                const QM = SM.d.get("gameEntrySource"),
-                  HM = OM.code === mM.n.INITIALISE_WEBGL ? (0, sM.b)() : null,
+            shouldMatchmake: eV,
+            discordContext: xV
+          } = VV;
+          Ue() && (eV ? te(null !== xV && void 0 !== xV ? xV : ZV.lobbyName, xV ? "classic" : ZV.gameNameWithVariation, ZV.directJoinVmUrl).then((VV => {
+            if (null !== VV && Ue())
+              if (VV.isError()) {
+                var eV, xV;
+                const JV = VV.asError(),
+                  UV = null !== (eV = JV.debugResult.severity) && void 0 !== eV ? eV : "high";
+                if (NV.h.QZ("joinFailed", {
+                    step: null !== (xV = JV.code) && void 0 !== xV ? xV : null,
+                    severity: UV
+                  }), (0, ve.c)(JV.debugResult.error)) return void ve.d.reload();
+                if (JV.code === vV.i.SHADER_PACK) return void(0, Ye.b)(JV.message, pV);
+                const nV = YV.b.get("gameEntrySource"),
+                  rV = JV.code === vV.i.INITIALISE_WEBGL ? (0, gV.d)() : null,
                   {
-                    error: hM
-                  } = OM.debugResult;
-                let JM;
-                if (CM(aM, OM)) JM = Promise.resolve(!1);
-                else if (null !== HM) JM = (0, sM.h)(HM);
-                else if (hM instanceof kM.k) JM = (0, DM.f)(hM);
+                    error: kV
+                  } = JV.debugResult;
+                let bV;
+                if (TV(yV, JV)) bV = Promise.resolve(!1);
+                else if (null !== rV) bV = (0, gV.l)(rV);
+                else if (kV instanceof iV.p) bV = (0, DV.g)(kV);
                 else {
-                  let MM;
-                  switch (jM) {
+                  let VV;
+                  switch (UV) {
                     case "low":
-                      MM = "face-diagonal-mouth";
+                      VV = "face-diagonal-mouth";
                       break;
                     case "medium":
-                      MM = "face-worried";
+                      VV = "face-worried";
                       break;
                     case "high":
-                      MM = "face-dizzy"
+                      VV = "face-dizzy"
                   }
-                  const rM = hM instanceof Jr.h;
-                  let iM = OM.message;
-                  rM ? iM = aM("general:gameFilesStalled") : OM.debugResult.gameServerUnreachable && (iM = aM((0, uM.isMobile)() ? "general:gameServerUnreachableMobile" : "general:gameServerUnreachable"));
-                  JM = zM.NotificationProvider.showPromptPopup({
-                    icon: MM,
-                    title: mM.E[OM.code],
-                    subtitle: (0, XM.jsxs)(XM.Fragment, {
-                      children: [iM, hM instanceof Error && !rM && (0, XM.jsx)("div", {
+                  const eV = kV instanceof be.i;
+                  let xV = JV.message;
+                  eV ? xV = yV("general:gameFilesStalled") : JV.debugResult.gameServerUnreachable && (xV = yV((0, zV.isMobile)() ? "general:gameServerUnreachableMobile" : "general:gameServerUnreachable"));
+                  bV = wV.NotificationProvider.showPromptPopup({
+                    icon: VV,
+                    title: vV.x[JV.code],
+                    subtitle: (0, HV.jsxs)(HV.Fragment, {
+                      children: [xV, kV instanceof Error && !eV && (0, HV.jsx)("div", {
                         style: {
                           fontSize: "0.9rem",
                           paddingTop: "1rem"
                         },
-                        children: (0, XM.jsx)(WM.d, {
-                          errorString: hM.stack
+                        children: (0, HV.jsx)(RV.b, {
+                          errorString: kV.stack
                         })
                       })]
                     }),
-                    confirmText: aM("general:tryAgain"),
-                    cancelText: aM("general:cancel")
-                  }).getResult().then((MM => !0 === MM))
+                    confirmText: yV("general:tryAgain"),
+                    cancelText: yV("general:cancel")
+                  }).getResult().then((VV => !0 === VV))
                 }
-                JM.then((MM => {
-                  if (MM) {
-                    (0, SM.j)(QM);
-                    const MM = (0, ZM.b)(LM.gameNameWithVariation, LM.lobbyName);
-                    "low" === jM ? PM(MM) : (0, gM.reloadBloxd)(MM)
+                bV.then((VV => {
+                  if (VV) {
+                    (0, YV.h)(nV);
+                    const VV = (0, CV.c)(ZV.gameNameWithVariation, ZV.lobbyName);
+                    "low" === UV ? pV(VV) : (0, MV.reloadBloxd)(VV)
                   }
-                })), nM.gameBridge.send("leaveGame", {
+                })), QV.gameBridge.send("leaveGame", {
                   reloadPath: "/"
-                }), cM()
+                }), OV()
               } else {
                 const {
-                  gameNameWithVariation: rM,
-                  lobbyName: iM
-                } = MM.getValue();
-                fM.current = {
-                  gameNameWithVariation: rM,
-                  lobbyName: iM
+                  gameNameWithVariation: eV,
+                  lobbyName: xV
+                } = VV.getValue();
+                oV.current = {
+                  gameNameWithVariation: eV,
+                  lobbyName: xV
                 };
-                const OM = (0, ZM.b)(rM, iM);
-                PM(OM, {
+                const JV = (0, CV.c)(eV, xV);
+                pV(JV, {
                   replace: !0
                 })
               }
-          })).catch((MM => {
-            if (!jr()) return;
-            wM.i.Tz("joinFailed", {
+          })).catch((VV => {
+            if (!Ue()) return;
+            NV.h.QZ("joinFailed", {
               step: null,
               severity: "unexpected"
             });
-            zM.NotificationProvider.showPromptPopup({
+            wV.NotificationProvider.showPromptPopup({
               icon: "face-dizzy",
               title: "Unexpected Error",
-              subtitle: (0, XM.jsxs)(XM.Fragment, {
-                children: [aM("homePage:pleaseCopyError"), (0, XM.jsx)("div", {
+              subtitle: (0, HV.jsxs)(HV.Fragment, {
+                children: [yV("homePage:pleaseCopyError"), (0, HV.jsx)("div", {
                   style: {
                     fontSize: "0.9rem",
                     paddingTop: "1rem"
                   },
-                  children: (0, XM.jsx)(WM.d, {
-                    errorString: MM.stack
+                  children: (0, HV.jsx)(RV.b, {
+                    errorString: VV.stack
                   })
                 })]
               }),
-              confirmText: aM("general:tryAgain"),
-              cancelText: aM("general:cancel")
-            }).getResult().then((MM => {
-              !0 === MM && (0, gM.reloadBloxd)((0, ZM.b)(LM.gameNameWithVariation, LM.lobbyName))
-            })), cM()
-          })) : PM(-1))
-        }), jr), () => {
-          Mr = !0, eM.abort()
+              confirmText: yV("general:tryAgain"),
+              cancelText: yV("general:cancel")
+            }).getResult().then((VV => {
+              !0 === VV && (0, MV.reloadBloxd)((0, CV.c)(ZV.gameNameWithVariation, ZV.lobbyName))
+            })), OV()
+          })) : pV(-1))
+        }), Ue), () => {
+          Ve = !0, PV.abort()
         }
-      }), [HM, iM.search, iM.pathname]), (0, aM.useEffect)((() => {
-        eM.disableFullscreen && (0, pM.f)() ? (0, pM.n)() : !eM.disableFullscreen && (0, pM.j)() && (0, pM.r)({
+      }), [rV, xV.search, xV.pathname]), (0, yV.useEffect)((() => {
+        PV.disableFullscreen && (0, WV.g)() ? (0, WV.n)() : !PV.disableFullscreen && (0, WV.k)() && (0, WV.t)({
           automatic: !0
         })
-      }), [GM, eM]), (0, aM.useEffect)((() => {
-        "inGame" === GM && dr()
-      }), [GM, eM]), (0, aM.useEffect)((() => {
-        "inGame" !== GM && SM.d.set({
+      }), [FV, PV]), (0, yV.useEffect)((() => {
+        "inGame" === FV && Ee()
+      }), [FV, PV]), (0, yV.useEffect)((() => {
+        "inGame" !== FV && YV.b.set({
           openInGameMenuName: null
         })
-      }), [GM]);
-      const xM = function(MM) {
-        const rM = (0, SM.i)(MM),
-          [iM, OM] = (0, aM.useState)(0),
-          [jM, nM] = (0, aM.useState)(!1);
-        (0, PM.d)("gameJoined", (() => {
-          (0, SM.i)(SM.d.get("gameState")) && (OM((MM => MM + 1)), nM(!0))
-        })), (0, aM.useEffect)((() => {
-          rM || nM(!1)
-        }), [rM]);
-        const QM = "inGame" === MM;
+      }), [FV]);
+      const LV = function(VV) {
+        const eV = (0, YV.e)(VV),
+          [xV, JV] = (0, yV.useState)(0),
+          [UV, QV] = (0, yV.useState)(!1);
+        (0, pV.g)("gameJoined", (() => {
+          (0, YV.e)(YV.b.get("gameState")) && (JV((VV => VV + 1)), QV(!0))
+        })), (0, yV.useEffect)((() => {
+          eV || QV(!1)
+        }), [eV]);
+        const nV = "inGame" === VV;
         return {
-          mounted: QM || rM && jM,
-          shown: QM,
-          key: iM
+          mounted: nV || eV && UV,
+          shown: nV,
+          key: xV
         }
-      }(GM);
-      return (0, XM.jsx)(XM.Fragment, {
-        children: xM.mounted && (0, XM.jsx)(jM.InGameUi, {
-          shown: xM.shown
-        }, xM.key)
+      }(FV);
+      return (0, HV.jsx)(HV.Fragment, {
+        children: LV.mounted && (0, HV.jsx)(UV.InGameUi, {
+          shown: LV.shown
+        }, LV.key)
       })
     }
   },
-  5388: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => SM
+  5486: (VV, eV, xV) => {
+    xV.d(eV, {
+      d: () => YV
     });
-    var OM = iM(1202);
-    async function SM(MM) {
-      const rM = await fetch(`${OM.clientSideServerUrls.s3Url}/${MM}`, {
+    var JV = xV(1230);
+    async function YV(VV) {
+      const eV = await fetch(`${JV.clientSideServerUrls.s3Url}/${VV}`, {
         headers: {
           Accept: "application/json"
         }
       });
-      if (404 === rM.status || 403 === rM.status) return null;
-      if (!rM.ok) throw new Error(`Failed to download the texture pack (${rM.status})`);
-      return await rM.json()
+      if (404 === eV.status || 403 === eV.status) return null;
+      if (!eV.ok) throw new Error(`Failed to download the texture pack (${eV.status})`);
+      return await eV.json()
     }
   },
-  9525: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => aM
+  9541: (VV, eV, xV) => {
+    xV.d(eV, {
+      d: () => yV
     });
-    var OM = iM(1382),
-      SM = iM(1229),
-      jM = iM(625);
+    var JV = xV(1397),
+      YV = xV(1252),
+      UV = xV(657);
 
-    function aM(MM) {
-      return MM = function(MM, rM) {
-        var iM;
-        const OM = new URLSearchParams(rM),
-          SM = OM.get("lobby"),
-          jM = OM.get("vm"),
-          aM = null !== (iM = SM) && void 0 !== iM ? iM : MM.lobbyName,
-          PM = null !== jM && void 0 !== jM ? jM : MM.directJoinVmUrl;
-        if (aM === MM.lobbyName && PM === MM.directJoinVmUrl) return MM;
+    function yV(VV) {
+      return VV = function(VV, eV) {
+        var xV;
+        const JV = new URLSearchParams(eV),
+          YV = JV.get("lobby"),
+          UV = JV.get("vm"),
+          yV = null !== (xV = YV) && void 0 !== xV ? xV : VV.lobbyName,
+          pV = null !== UV && void 0 !== UV ? UV : VV.directJoinVmUrl;
+        if (yV === VV.lobbyName && pV === VV.directJoinVmUrl) return VV;
         return {
-          ...MM,
-          lobbyName: aM,
-          directJoinVmUrl: PM
+          ...VV,
+          lobbyName: yV,
+          directJoinVmUrl: pV
         }
-      }(MM, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ""), MM = function(MM) {
-        if ((0, jM.J)(MM.directJoinVmUrl)) return MM;
-        const rM = (0, SM.bb)(MM.directJoinVmUrl);
-        null === rM && (MM.directJoinVmUrl = void 0);
-        return MM
-      }(MM = function(MM) {
-        if ((0, jM.J)(MM.gameNameWithVariation)) return MM;
-        return MM.gameNameWithVariation = (0, OM.h)(MM.gameNameWithVariation), MM
-      }(MM))
+      }(VV, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ""), VV = function(VV) {
+        if ((0, UV.J)(VV.directJoinVmUrl)) return VV;
+        const eV = (0, YV.U)(VV.directJoinVmUrl);
+        null === eV && (VV.directJoinVmUrl = void 0);
+        return VV
+      }(VV = function(VV) {
+        if ((0, UV.J)(VV.gameNameWithVariation)) return VV;
+        return VV.gameNameWithVariation = (0, JV.g)(VV.gameNameWithVariation), VV
+      }(VV))
     }
   },
-  9517: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => jM,
-      e: () => SM
+  9532: (VV, eV, xV) => {
+    xV.d(eV, {
+      e: () => UV,
+      h: () => YV
     });
-    let OM = !1;
+    let JV = !1;
 
-    function SM() {
-      OM = !0
+    function YV() {
+      JV = !0
     }
 
-    function jM() {
-      return OM
+    function UV() {
+      return JV
     }
   },
-  9530: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => PM,
-      g: () => SM,
-      i: () => jM,
-      l: () => aM
+  9545: (VV, eV, xV) => {
+    xV.d(eV, {
+      d: () => pV,
+      e: () => YV,
+      i: () => UV,
+      j: () => yV
     });
-    let OM = null;
+    let JV = null;
 
-    function SM(MM, rM) {
-      return `${rM}\n${null!==MM&&void 0!==MM?MM:""}`
+    function YV(VV, eV) {
+      return `${eV}\n${null!==VV&&void 0!==VV?VV:""}`
     }
 
-    function jM(MM) {
-      OM = MM
+    function UV(VV) {
+      JV = VV
     }
 
-    function aM(MM) {
-      const rM = OM;
-      return OM = null, null !== rM && rM.key === MM ? rM.settled : null
+    function yV(VV) {
+      const eV = JV;
+      return JV = null, null !== eV && eV.key === VV ? eV.settled : null
     }
 
-    function PM(MM, rM, iM, OM) {
-      let SM = !1;
-      null !== rM && setTimeout((() => {
-        OM() && !SM && rM()
-      }), 0), MM.then((MM => {
-        SM = !0, iM(MM)
+    function pV(VV, eV, xV, JV) {
+      let YV = !1;
+      null !== eV && setTimeout((() => {
+        JV() && !YV && eV()
+      }), 0), VV.then((VV => {
+        YV = !0, xV(VV)
       }))
     }
   },
-  9514: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => HM,
-      f: () => mM,
-      h: () => hM
+  9530: (VV, eV, xV) => {
+    xV.d(eV, {
+      d: () => rV,
+      h: () => vV,
+      j: () => kV
     });
-    var OM = iM(3563),
-      SM = iM(2414),
-      jM = iM(2257),
-      aM = iM(5022),
-      PM = iM(3902),
-      nM = iM(9517);
-    let QM = null;
+    var JV = xV(3584),
+      YV = xV(2441),
+      UV = xV(2261),
+      yV = xV(5135),
+      pV = xV(3942),
+      QV = xV(9532);
+    let nV = null;
 
-    function zM() {
-      return Promise.all([iM.e(86), iM.e(89), iM.e(103), iM.e(233), iM.e(232), iM.e(174), iM.e(222), iM.e(150), iM.e(153), iM.e(101), iM.e(298), iM.e(75)]).then((() => iM(41755)))
+    function wV() {
+      return Promise.all([xV.e(86), xV.e(89), xV.e(103), xV.e(233), xV.e(232), xV.e(174), xV.e(222), xV.e(150), xV.e(153), xV.e(101), xV.e(298), xV.e(75)]).then((() => xV(41952)))
     }
 
-    function LM() {
-      Promise.all([iM.e(84), iM.e(87), iM.e(85), iM.e(86), iM.e(103), iM.e(100), iM.e(296), iM.e(205), iM.e(246), iM.e(272), iM.e(298), iM.e(53)]).then((() => iM(42102))).catch((() => {}))
+    function ZV() {
+      Promise.all([xV.e(84), xV.e(87), xV.e(85), xV.e(86), xV.e(103), xV.e(100), xV.e(296), xV.e(205), xV.e(246), xV.e(272), xV.e(298), xV.e(53)]).then((() => xV(42308))).catch((() => {}))
     }
 
-    function mM() {
-      return aM.e.cancelDownloadForJoin(), (0, PM.b)(), (0, SM.c)(), (0, nM.e)(), (0, jM.j)(), LM(), Promise.all([iM.e(89), iM.e(103), iM.e(233), iM.e(232), iM.e(150), iM.e(153), iM.e(70)]).then((() => iM(42162))).then((MM => {
+    function vV() {
+      return yV.d.cancelDownloadForJoin(), (0, pV.c)(), (0, YV.g)(), (0, QV.h)(), (0, UV.h)(), ZV(), Promise.all([xV.e(89), xV.e(103), xV.e(233), xV.e(232), xV.e(150), xV.e(153), xV.e(70)]).then((() => xV(42363))).then((VV => {
         let {
-          startJoinLoad: rM
-        } = MM;
-        rM()
-      }), (() => {})), QM ??= zM().then((MM => (MM.startWasmPlay(), MM.followPageUiPack((MM => {
-        OM.e.showGamePack(MM)
-      })), MM)), (MM => {
-        throw QM = null, MM
-      })), QM
+          startJoinLoad: eV
+        } = VV;
+        eV()
+      }), (() => {})), nV ??= wV().then((VV => (VV.startWasmPlay(), VV.followPageUiPack((VV => {
+        JV.b.showGamePack(VV)
+      })), VV)), (VV => {
+        throw nV = null, VV
+      })), nV
     }
 
-    function HM() {
-      return LM(), iM.e(299).then((() => iM(42165))).catch((() => {})), zM().then((() => {}))
+    function rV() {
+      return ZV(), xV.e(299).then((() => xV(42371))).catch((() => {})), wV().then((() => {}))
     }
 
-    function hM() {
-      return zM().then((MM => {
-        MM.startWasmPreviews(), MM.prefetchWasmPreviews()
+    function kV() {
+      return wV().then((VV => {
+        VV.startWasmPreviews(), VV.prefetchWasmPreviews()
       }))
     }
   },
-  9510: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => jM,
-      f: () => aM,
-      h: () => PM,
-      l: () => QM,
-      p: () => nM
+  9527: (VV, eV, xV) => {
+    xV.d(eV, {
+      b: () => UV,
+      d: () => yV,
+      f: () => pV,
+      h: () => nV,
+      j: () => QV
     });
-    var OM = iM(181),
-      SM = iM(5003);
+    var JV = xV(206),
+      YV = xV(5103);
 
-    function jM(MM) {
-      return aM(MM) === OM.d.gameOrPluginOnPlayerAuthRejected.code
+    function UV(VV) {
+      return yV(VV) === JV.b.gameOrPluginOnPlayerAuthRejected.code
     }
 
-    function aM(MM) {
-      return "object" === typeof MM && null !== MM ? MM.code : void 0
+    function yV(VV) {
+      return "object" === typeof VV && null !== VV ? VV.code : void 0
     }
 
-    function PM(MM) {
-      var rM;
-      return null !== (rM = Object.keys(SM.e).find((rM => SM.e[rM] === MM))) && void 0 !== rM ? rM : null
+    function pV(VV) {
+      var eV;
+      return null !== (eV = Object.keys(YV.b).find((eV => YV.b[eV] === VV))) && void 0 !== eV ? eV : null
     }
 
-    function nM(MM) {
-      return "notWhitelisted" === MM ? "customLobby:cantJoinNotWhitelistedTitle" : "customLobby:cantJoinWorld"
+    function QV(VV) {
+      return "notWhitelisted" === VV ? "customLobby:cantJoinNotWhitelistedTitle" : "customLobby:cantJoinWorld"
     }
-    const QM = {
+    const nV = {
       private: "customLobby:cantJoinPrivate",
       notWhitelisted: "customLobby:cantJoinNotWhitelisted",
       banned: "customLobby:cantJoinBanned",
@@ -804,4 +804,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const VV in modules) Object.freeze(modules[VV]);

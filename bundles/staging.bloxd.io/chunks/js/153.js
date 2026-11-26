@@ -1,51 +1,51 @@
 export const id = 153;
 export const ids = [153];
 export const modules = {
-  34880: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => PM,
-      e: () => aM
+  35146: (VV, eV, xV) => {
+    xV.d(eV, {
+      d: () => pV,
+      f: () => yV
     });
-    var OM = iM(243),
-      SM = iM(114),
-      jM = iM(34885);
+    var JV = xV(296),
+      YV = xV(134),
+      UV = xV(35148);
 
-    function aM() {
-      var MM, rM, iM;
-      return null !== (MM = (0, OM.p)(null !== (rM = null === (iM = (0, SM.o)()) || void 0 === iM ? void 0 : iM.renderer) && void 0 !== rM ? rM : null, (0, SM.k)())) && void 0 !== MM ? MM : "unknown"
+    function yV() {
+      var VV, eV, xV;
+      return null !== (VV = (0, JV.k)(null !== (eV = null === (xV = (0, YV.o)()) || void 0 === xV ? void 0 : xV.renderer) && void 0 !== eV ? eV : null, (0, YV.k)())) && void 0 !== VV ? VV : "unknown"
     }
 
-    function PM(MM, rM, iM, OM, SM) {
-      const aM = null === rM ? "untimed" : `${Math.round(rM)} ms`;
-      return `frames stalled, ${iM}, gpu ${(0,jM.b)(SM)}, blocking ${aM}, drawn ${Math.round(MM)} ms apart, timers ${OM.timers}, timer gap ${Math.round(OM.longestGapMs)} ms`
+    function pV(VV, eV, xV, JV, YV) {
+      const yV = null === eV ? "untimed" : `${Math.round(eV)} ms`;
+      return `frames stalled, ${xV}, gpu ${(0,UV.b)(YV)}, blocking ${yV}, drawn ${Math.round(VV)} ms apart, timers ${JV.timers}, timer gap ${Math.round(JV.longestGapMs)} ms`
     }
   },
-  39814: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => QM,
-      e: () => mM,
-      i: () => HM,
-      l: () => dM,
-      o: () => LM,
-      s: () => zM,
-      t: () => aM,
-      w: () => hM
+  39952: (VV, eV, xV) => {
+    xV.d(eV, {
+      e: () => nV,
+      g: () => vV,
+      h: () => rV,
+      l: () => EV,
+      m: () => ZV,
+      p: () => wV,
+      t: () => yV,
+      x: () => kV
     });
-    var OM = iM(310),
-      SM = iM(1818);
-    const jM = "A valid external Instance reference no longer exists.";
+    var JV = xV(355),
+      YV = xV(1817);
+    const UV = "A valid external Instance reference no longer exists.";
 
-    function aM(MM) {
-      return MM.includes(jM)
+    function yV(VV) {
+      return VV.includes(UV)
     }
-    const PM = [
+    const pV = [
         [1e4, "<10s", "lt10s"],
         [6e4, "<1m", "lt1m"],
         [3e5, "<5m", "lt5m"],
         [18e5, "<30m", "lt30m"],
         [1 / 0, "30m+", "ge30m"]
       ],
-      nM = [
+      QV = [
         [1e3, "lt1s"],
         [2e3, "lt2s"],
         [5e3, "lt5s"],
@@ -53,606 +53,606 @@ export const modules = {
         [3e4, "lt30s"],
         [1 / 0, "ge30s"]
       ];
-    const QM = {
+    const nV = {
       WebGPU: "WebGPU device lost",
       WebGL2: "WebGL2 context lost"
     };
 
-    function zM(MM, rM) {
-      return MM ? "frames_refused" : arguments.length > 2 && void 0 !== arguments[2] && arguments[2] ? "browser_destroyed" : function(MM) {
-        var rM;
-        const iM = null !== (rM = /Device removed reason: (?!S_OK)([A-Z][A-Z0-9_]+)/.exec(MM)) && void 0 !== rM ? rM : /failed with ([A-Z][A-Z0-9_]+)/.exec(MM);
-        return iM ? iM[1] : aM(MM) ? "gpu_process_lost" : "other"
-      }(rM)
+    function wV(VV, eV) {
+      return VV ? "frames_refused" : arguments.length > 2 && void 0 !== arguments[2] && arguments[2] ? "browser_destroyed" : function(VV) {
+        var eV;
+        const xV = null !== (eV = /Device removed reason: (?!S_OK)([A-Z][A-Z0-9_]+)/.exec(VV)) && void 0 !== eV ? eV : /failed with ([A-Z][A-Z0-9_]+)/.exec(VV);
+        return xV ? xV[1] : yV(VV) ? "gpu_process_lost" : "other"
+      }(eV)
     }
 
-    function LM(MM) {
-      return `${(null===MM||void 0===MM?void 0:MM.vendor)||"unknown vendor"} ${(null===MM||void 0===MM?void 0:MM.architecture)||"unknown architecture"}`
+    function ZV(VV) {
+      return `${(null===VV||void 0===VV?void 0:VV.vendor)||"unknown vendor"} ${(null===VV||void 0===VV?void 0:VV.architecture)||"unknown architecture"}`
     }
 
-    function mM(MM) {
-      return yM(MM)[1]
+    function vV(VV) {
+      return BV(VV)[1]
     }
 
-    function HM(MM) {
-      return yM(MM)[2]
+    function rV(VV) {
+      return BV(VV)[2]
     }
 
-    function hM(MM, rM, iM) {
-      const SM = (0, OM.e)(),
-        jM = null !== SM && SM >= rM,
-        aM = document.hidden ? "hidden" : jM ? "shown" : "visible",
-        PM = jM ? iM - SM : null;
+    function kV(VV, eV, xV) {
+      const YV = (0, JV.h)(),
+        UV = null !== YV && YV >= eV,
+        yV = document.hidden ? "hidden" : UV ? "shown" : "visible",
+        pV = UV ? xV - YV : null;
       return {
-        page: null === PM ? aM : `${aM}${mM(PM)}`,
-        code: `${MM}_${null===PM?aM:`${aM}_${HM(PM)}`}_${JM(iM)}`
+        page: null === pV ? yV : `${yV}${vV(pV)}`,
+        code: `${VV}_${null===pV?yV:`${yV}_${rV(pV)}`}_${bV(xV)}`
       }
     }
 
-    function JM(MM) {
-      if ((0, SM.e)()) return "ad_open";
-      const rM = (0, SM.d)();
-      return null === rM ? "ad_none" : `ad_${HM(MM-rM.endedAt)}_${rM.pageHid?"h":"v"}`
+    function bV(VV) {
+      if ((0, YV.e)()) return "ad_open";
+      const eV = (0, YV.b)();
+      return null === eV ? "ad_none" : `ad_${rV(VV-eV.endedAt)}_${eV.pageHid?"h":"v"}`
     }
 
-    function dM(MM) {
-      return lM(nM, MM)[1]
+    function EV(VV) {
+      return jV(QV, VV)[1]
     }
 
-    function yM(MM) {
-      return lM(PM, MM)
+    function BV(VV) {
+      return jV(pV, VV)
     }
 
-    function lM(MM, rM) {
-      var iM;
-      return null !== (iM = MM.find((MM => {
-        let [iM] = MM;
-        return rM < iM
-      }))) && void 0 !== iM ? iM : MM[MM.length - 1]
+    function jV(VV, eV) {
+      var xV;
+      return null !== (xV = VV.find((VV => {
+        let [xV] = VV;
+        return eV < xV
+      }))) && void 0 !== xV ? xV : VV[VV.length - 1]
     }
   },
-  34885: (MM, rM, iM) => {
-    function OM(MM) {
-      return String(MM).replace(/\d/g, (MM => String.fromCharCode(97 + Number(MM))))
+  35148: (VV, eV, xV) => {
+    function JV(VV) {
+      return String(VV).replace(/\d/g, (VV => String.fromCharCode(97 + Number(VV))))
     }
-    iM.d(rM, {
-      b: () => OM
+    xV.d(eV, {
+      b: () => JV
     })
   },
-  41714: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => OM,
-      g: () => zM,
-      h: () => aM,
-      i: () => SM,
-      k: () => PM,
-      l: () => QM
+  41914: (VV, eV, xV) => {
+    xV.d(eV, {
+      d: () => JV,
+      g: () => wV,
+      j: () => yV,
+      k: () => YV,
+      o: () => pV,
+      r: () => nV
     });
-    class OM extends Error {
+    class JV extends Error {
       constructor() {
         super(...arguments), this.name = "CoreCorruption"
       }
     }
 
-    function SM(MM) {
-      return MM instanceof RangeError && /call stack/i.test(MM.message) || MM instanceof Error && "InternalError" === MM.name && /recursion/i.test(MM.message)
+    function YV(VV) {
+      return VV instanceof RangeError && /call stack/i.test(VV.message) || VV instanceof Error && "InternalError" === VV.name && /recursion/i.test(VV.message)
     }
-    const jM = /wasm:\/\/|wasm-function\[|\[wasm code\]/;
+    const UV = /wasm:\/\/|wasm-function\[|\[wasm code\]/;
 
-    function aM(MM) {
-      var rM;
-      return MM instanceof WebAssembly.RuntimeError || MM instanceof OM || SM(MM) && jM.test(null !== (rM = MM.stack) && void 0 !== rM ? rM : "")
-    }
-
-    function PM(MM, rM) {
-      if (aM(MM)) throw MM;
-      console.error(rM, MM)
+    function yV(VV) {
+      var eV;
+      return VV instanceof WebAssembly.RuntimeError || VV instanceof JV || YV(VV) && UV.test(null !== (eV = VV.stack) && void 0 !== eV ? eV : "")
     }
 
-    function nM(MM, rM, iM, SM, jM) {
-      if (rM % SM !== 0 || rM + iM > MM.byteLength) throw new OM(`${jM}: ${iM} bytes at ${rM}, ${SM}-aligned, outside ${MM.byteLength} bytes of memory`)
+    function pV(VV, eV) {
+      if (yV(VV)) throw VV;
+      console.error(eV, VV)
     }
 
-    function QM(MM, rM, iM, OM, SM) {
-      return 0 === iM ? null : (nM(rM, iM, OM * MM.BYTES_PER_ELEMENT, MM.BYTES_PER_ELEMENT, SM), new MM(rM, iM, OM))
+    function QV(VV, eV, xV, YV, UV) {
+      if (eV % YV !== 0 || eV + xV > VV.byteLength) throw new JV(`${UV}: ${xV} bytes at ${eV}, ${YV}-aligned, outside ${VV.byteLength} bytes of memory`)
     }
 
-    function zM(MM, rM, iM, OM, SM) {
-      return 0 === rM ? null : (nM(MM, rM, iM, OM, SM), new DataView(MM, rM, iM))
+    function nV(VV, eV, xV, JV, YV) {
+      return 0 === xV ? null : (QV(eV, xV, JV * VV.BYTES_PER_ELEMENT, VV.BYTES_PER_ELEMENT, YV), new VV(eV, xV, JV))
+    }
+
+    function wV(VV, eV, xV, JV, YV) {
+      return 0 === eV ? null : (QV(VV, eV, xV, JV, YV), new DataView(VV, eV, xV))
     }
   },
-  41798: (MM, rM, iM) => {
-    iM.d(rM, {
-      C: () => TM,
-      D: () => FM,
-      G: () => rr,
-      K: () => Mr,
-      L: () => VM,
-      M: () => Or,
-      P: () => Jr,
-      S: () => ir,
-      U: () => cM,
-      V: () => Sr,
-      X: () => nr,
-      _: () => Lr,
-      cb: () => WM,
-      e: () => RM,
-      g: () => dr,
-      h: () => Ur,
-      j: () => zr,
-      k: () => hr,
-      l: () => Pr,
-      p: () => Hr,
-      t: () => mr,
-      w: () => Er,
-      z: () => KM
+  42001: (VV, eV, xV) => {
+    xV.d(eV, {
+      $: () => Ze,
+      C: () => IV,
+      D: () => mV,
+      E: () => ee,
+      H: () => Ve,
+      I: () => dV,
+      M: () => Je,
+      P: () => be,
+      S: () => xe,
+      U: () => OV,
+      V: () => Ye,
+      Y: () => Qe,
+      ab: () => RV,
+      e: () => GV,
+      f: () => Ee,
+      j: () => te,
+      k: () => we,
+      n: () => ke,
+      q: () => pe,
+      s: () => re,
+      w: () => ve,
+      x: () => qe,
+      y: () => sV
     });
-    var OM = iM(313),
-      SM = iM(236),
-      jM = iM(243),
-      aM = iM(19),
-      PM = iM(3122),
-      nM = iM(694),
-      QM = iM(4903),
-      zM = iM(3090),
-      LM = iM(3855),
-      mM = iM(83),
-      HM = iM(119),
-      hM = iM(310),
-      JM = iM(30),
-      dM = iM(308),
-      yM = iM(106),
-      lM = iM(650),
-      EM = iM(114),
-      UM = iM(110),
-      GM = iM(5200),
-      CM = iM(41800),
-      eM = iM(1899),
-      bM = iM(41809),
-      wM = iM(34980),
-      tM = iM(41812),
-      gM = iM(41819);
-    const uM = "bloxd-webgpuOffAfterLoss",
-      RM = "context:webgl",
-      pM = "probe:threw";
+    var JV = xV(364),
+      YV = xV(291),
+      UV = xV(296),
+      yV = xV(27),
+      pV = xV(3142),
+      QV = xV(717),
+      nV = xV(4990),
+      wV = xV(3111),
+      ZV = xV(3907),
+      vV = xV(99),
+      rV = xV(138),
+      kV = xV(355),
+      bV = xV(40),
+      EV = xV(348),
+      BV = xV(124),
+      jV = xV(679),
+      qV = xV(134),
+      tV = xV(129),
+      FV = xV(5301),
+      TV = xV(42007),
+      PV = xV(1900),
+      AV = xV(42011),
+      NV = xV(35259),
+      XV = xV(42017),
+      MV = xV(42024);
+    const zV = "bloxd-webgpuOffAfterLoss",
+      GV = "context:webgl",
+      WV = "probe:threw";
 
-    function WM(MM) {
-      let rM;
+    function RV(VV) {
+      let eV;
       try {
-        rM = MM.getContext("webgl", {
-          powerPreference: EM.c
+        eV = VV.getContext("webgl", {
+          powerPreference: qV.c
         })
       } catch {
-        rM = null
+        eV = null
       }
-      if (null === rM) return null;
-      let iM = null;
+      if (null === eV) return null;
+      let xV = null;
       try {
-        const MM = rM.getParameter(rM.MAX_TEXTURE_SIZE);
-        iM = "number" === typeof MM && MM > 0 ? MM : null
+        const VV = eV.getParameter(eV.MAX_TEXTURE_SIZE);
+        xV = "number" === typeof VV && VV > 0 ? VV : null
       } catch {
-        iM = null
+        xV = null
       }
       try {
-        var OM;
-        null === (OM = rM.getExtension("WEBGL_lose_context")) || void 0 === OM || OM.loseContext()
+        var JV;
+        null === (JV = eV.getExtension("WEBGL_lose_context")) || void 0 === JV || JV.loseContext()
       } catch {}
-      return iM
+      return xV
     }
-    const sM = new Set(["android_arm", "chromeos_other", "chromeos_intel", "windows_intel_low", "ios"]);
+    const gV = new Set(["android_arm", "chromeos_other", "chromeos_intel", "windows_intel_low", "ios"]);
 
-    function DM() {
-      return "ios" === (0, mM.getOperatingSystem)() ? "ios" : "other"
+    function DV() {
+      return "ios" === (0, vV.getOperatingSystem)() ? "ios" : "other"
     }
-    const kM = "mali_valhall",
-      ZM = new Set(["nvidia_pre_turing"]),
-      oM = new Set(["intel_gen7_8"]);
+    const iV = "mali_valhall",
+      CV = new Set(["nvidia_pre_turing"]),
+      aV = new Set(["intel_gen7_8"]);
 
-    function fM(MM, rM, iM) {
-      return sM.has(MM) ? "android_arm" === MM && rM === kM && "mobileAndroid" !== iM ? "webgpu_default" : "webgl_default" : null
+    function oV(VV, eV, xV) {
+      return gV.has(VV) ? "android_arm" === VV && eV === iV && "mobileAndroid" !== xV ? "webgpu_default" : "webgl_default" : null
     }
 
-    function YM(MM) {
-      return function(MM) {
+    function cV(VV) {
+      return function(VV) {
         try {
-          return MM()
+          return VV()
         } catch {
           return null
         }
       }((() => {
-        var rM, iM, OM, aM;
-        const PM = null !== (rM = null === (iM = MM.info) || void 0 === iM ? void 0 : iM.vendor) && void 0 !== rM ? rM : "";
-        return "windows" === (0, mM.getOperatingSystem)() && "" !== PM && "intel" !== (0, mM.normaliseGpuVendor)(PM) ? null : ((0, mM.seedGpuVendor)(PM), fM((0, SM.j)(), (0, jM.i)(PM, null !== (OM = null === (aM = MM.info) || void 0 === aM ? void 0 : aM.architecture) && void 0 !== OM ? OM : ""), HM.siteUsed))
+        var eV, xV, JV, yV;
+        const pV = null !== (eV = null === (xV = VV.info) || void 0 === xV ? void 0 : xV.vendor) && void 0 !== eV ? eV : "";
+        return "windows" === (0, vV.getOperatingSystem)() && "" !== pV && "intel" !== (0, vV.normaliseGpuVendor)(pV) ? null : ((0, vV.seedGpuVendor)(pV), oV((0, YV.i)(), (0, UV.e)(pV, null !== (JV = null === (yV = VV.info) || void 0 === yV ? void 0 : yV.architecture) && void 0 !== JV ? JV : ""), rV.siteUsed))
       }))
     }
 
-    function NM() {
-      var MM;
+    function hV() {
+      var VV;
       return {
-        gpu: null !== (MM = navigator.gpu) && void 0 !== MM ? MM : null,
-        webgl2: tM.g,
-        webgl1: () => function(MM) {
-          let rM, iM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : CM.b;
+        gpu: null !== (VV = navigator.gpu) && void 0 !== VV ? VV : null,
+        webgl2: XV.g,
+        webgl1: () => function(VV) {
+          let eV, xV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : TV.c;
           try {
-            rM = MM.getContext("webgl")
+            eV = VV.getContext("webgl")
           } catch {
-            rM = null
+            eV = null
           }
-          if (null === rM) return [RM];
-          const OM = [];
+          if (null === eV) return [GV];
+          const JV = [];
           try {
-            for (const SM of iM.extensions) null === rM.getExtension(SM) && OM.push(SM);
-            for (const [SM, jM] of Object.entries(iM.limits)) {
-              const MM = rM[SM],
-                iM = "number" === typeof MM ? rM.getParameter(MM) : null;
-              ("number" !== typeof iM || iM < jM) && OM.push(`limit:${SM}`)
+            for (const YV of xV.extensions) null === eV.getExtension(YV) && JV.push(YV);
+            for (const [YV, UV] of Object.entries(xV.limits)) {
+              const VV = eV[YV],
+                xV = "number" === typeof VV ? eV.getParameter(VV) : null;
+              ("number" !== typeof xV || xV < UV) && JV.push(`limit:${YV}`)
             }
-            const MM = rM.getShaderPrecisionFormat(rM.VERTEX_SHADER, rM.HIGH_FLOAT);
-            (null === MM || MM.precision < iM.vertexHighFloatBits) && OM.push("precision:vertex_high_float")
+            const VV = eV.getShaderPrecisionFormat(eV.VERTEX_SHADER, eV.HIGH_FLOAT);
+            (null === VV || VV.precision < xV.vertexHighFloatBits) && JV.push("precision:vertex_high_float")
           } catch {
-            OM.push(pM)
+            JV.push(WV)
           }
           try {
-            var SM;
-            null === (SM = rM.getExtension("WEBGL_lose_context")) || void 0 === SM || SM.loseContext()
+            var YV;
+            null === (YV = eV.getExtension("WEBGL_lose_context")) || void 0 === YV || YV.loseContext()
           } catch {}
-          return OM
+          return JV
         }(document.createElement("canvas")),
-        offAfterLoss: MM => xM((() => MM ? (0, dM.D)() : aM.d.isWebGpuOffAfterLoss())),
-        oldIntelDriver: MM => xM((() => (0, yM.i)(MM))),
-        intelGen9: MM => xM((() => (0, yM.r)(MM))),
-        storeIntelGen9Verdict: MM => {
-          JM.g.setItem(yM.J, MM)
+        offAfterLoss: VV => LV((() => VV ? (0, EV.H)() : yV.b.isWebGpuOffAfterLoss())),
+        oldIntelDriver: VV => LV((() => (0, BV.e)(VV))),
+        intelGen9: VV => LV((() => (0, BV.q)(VV))),
+        storeIntelGen9Verdict: VV => {
+          bV.m.setItem(BV.F, VV)
         },
-        gpuClassWebGlArm: YM,
-        storeGpuClassVerdict: MM => {
-          JM.g.setItem(yM.H, MM)
+        gpuClassWebGlArm: cV,
+        storeGpuClassVerdict: VV => {
+          bV.m.setItem(BV.B, VV)
         },
-        gpuClassOnWebGl: MM => (0, lM.e)(MM),
-        webGlDefaultFamily: MM => oM.has((0, jM.i)(MM.vendor, MM.architecture)),
-        storeWebGlDefaultFamilyVerdict: MM => {
-          JM.g.setItem(yM.R, MM)
+        gpuClassOnWebGl: VV => (0, jV.e)(VV),
+        webGlDefaultFamily: VV => aV.has((0, UV.e)(VV.vendor, VV.architecture)),
+        storeWebGlDefaultFamilyVerdict: VV => {
+          bV.m.setItem(BV.N, VV)
         },
-        override: () => AM(),
-        claimed: () => vM((0, nM.i)()),
+        override: () => lV(),
+        claimed: () => fV((0, QV.k)()),
         webGpuSetting: () => {
-          const MM = JM.g.getItem(OM.fc);
-          return "boolean" === typeof MM ? MM : null
+          const VV = bV.m.getItem(JV.jc);
+          return "boolean" === typeof VV ? VV : null
         },
-        heldBack: () => lM.i,
-        storeHoldbackSpared: MM => {
-          JM.g.setItem(yM.E, MM)
+        heldBack: () => jV.f,
+        storeHoldbackSpared: VV => {
+          bV.m.setItem(BV.A, VV)
         },
-        intelGen9OnWebGl: () => lM.k,
-        nh: () => xM((() => (0, LM.d)(mM.featureFlags.settings.canUseShaderPacks))),
-        windows: () => xM((() => "windows" === (0, mM.getOperatingSystem)())),
-        defaultCompatibility: wM.b
+        intelGen9OnWebGl: () => jV.h,
+        Xk: () => LV((() => (0, ZV.e)(vV.featureFlags.settings.canUseShaderPacks))),
+        windows: () => LV((() => "windows" === (0, vV.getOperatingSystem)())),
+        defaultCompatibility: NV.c
       }
     }
 
-    function AM() {
-      let MM = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-      if ((0, PM.p)("render") && "webgl1" === (0, PM.o)("renderer")) return "webgl1";
-      const rM = [() => new URLSearchParams(window.location.search).get(zM.d), () => JM.g.getItem(zM.h), () => {
-        const rM = localStorage.getItem(uM);
-        return null !== rM && MM && localStorage.removeItem(uM), "1" === rM ? "webgl2" : null
+    function lV() {
+      let VV = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+      if ((0, pV.o)("render") && "webgl1" === (0, pV.k)("renderer")) return "webgl1";
+      const eV = [() => new URLSearchParams(window.location.search).get(wV.e), () => bV.m.getItem(wV.i), () => {
+        const eV = localStorage.getItem(zV);
+        return null !== eV && VV && localStorage.removeItem(zV), "1" === eV ? "webgl2" : null
       }];
-      for (const iM of rM) {
-        let MM = null;
+      for (const xV of eV) {
+        let VV = null;
         try {
-          MM = vM(iM())
+          VV = fV(xV())
         } catch {}
-        if (null !== MM) return MM
+        if (null !== VV) return VV
       }
       return null
     }
 
-    function xM(MM) {
+    function LV(VV) {
       try {
-        return MM()
+        return VV()
       } catch {
         return !1
       }
     }
 
-    function vM(MM) {
-      return "lite" === MM ? "webgpu" : "webgl2" === MM || "babylon" === MM ? "webgl" : null
+    function fV(VV) {
+      return "lite" === VV ? "webgpu" : "webgl2" === VV || "babylon" === VV ? "webgl" : null
     }
 
-    function FM(MM) {
-      return "none" === MM || "compatibility_mode" === MM
+    function mV(VV) {
+      return "none" === VV || "compatibility_mode" === VV
     }
-    async function BM() {
-      let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : NM();
-      const rM = await async function(MM) {
-        const rM = IM(MM),
+    async function KV() {
+      let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : hV();
+      const eV = await async function(VV) {
+        const eV = uV(VV),
           {
-            source: iM
-          } = rM,
-          OM = !rM.asked,
-          SM = "gpu" in rM && rM.heldBack,
-          aM = function(MM) {
-            let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-            return SM && !FM(MM) ? {
+            source: xV
+          } = eV,
+          JV = !eV.asked,
+          YV = "gpu" in eV && eV.heldBack,
+          yV = function(VV) {
+            let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+            return YV && !mV(VV) ? {
               reason: "webgl_holdback",
               adapter: null,
-              source: iM
+              source: xV
             } : {
-              reason: MM,
-              adapter: rM,
-              source: iM
+              reason: VV,
+              adapter: eV,
+              source: xV
             }
           };
-        if (!("gpu" in rM)) return aM(rM.refused);
-        let PM;
+        if (!("gpu" in eV)) return yV(eV.refused);
+        let pV;
         try {
-          PM = await (0, eM.n)((0, UM.o)(rM.gpu, {
-            compatibility: XM(MM, rM)
-          }), yr, `requestAdapter didn't settle in ${yr/1e3} s`)
+          pV = await (0, PV.m)((0, tV.l)(eV.gpu, {
+            compatibility: HV(VV, eV)
+          }), Be, `requestAdapter didn't settle in ${Be/1e3} s`)
         } catch {
-          return aM("adapter_error")
+          return yV("adapter_error")
         }
-        if ("string" === typeof PM) return aM(PM);
+        if ("string" === typeof pV) return yV(pV);
         const {
-          adapter: nM,
-          compatibility: QM
-        } = PM, zM = (0, UM.d)(nM);
-        if ((0, UM.j)(nM)) return aM("software_adapter", zM);
-        const LM = MM.windows() && function(MM) {
-          return ZM.has((0, jM.i)(MM.vendor, MM.architecture))
-        }(zM);
-        if (MM.storeHoldbackSpared(LM), SM && !LM) return aM("webgl_holdback");
-        const mM = MM.intelGen9(nM);
-        MM.storeIntelGen9Verdict(mM);
-        const HM = mM ? null : MM.gpuClassWebGlArm(nM);
-        MM.storeGpuClassVerdict(null !== HM && void 0 !== HM && HM);
-        const hM = MM.webGlDefaultFamily(zM);
-        if (MM.storeWebGlDefaultFamilyVerdict(hM), OM && MM.oldIntelDriver(nM)) return aM("old_intel_driver", zM);
-        if ("default" === iM && mM && MM.intelGen9OnWebGl()) return aM("intel_gen9", zM);
-        if ("default" === iM && null !== HM && MM.gpuClassOnWebGl(HM)) return aM("gpu_class_webgl", zM);
-        if ("default" === iM && hM) return aM("gpu_wasm_arm", zM);
-        return aM(QM ? "compatibility_mode" : "none", zM)
-      }(MM);
-      if (FM(rM.reason)) return {
+          adapter: QV,
+          compatibility: nV
+        } = pV, wV = (0, tV.c)(QV);
+        if ((0, tV.j)(QV)) return yV("software_adapter", wV);
+        const ZV = VV.windows() && function(VV) {
+          return CV.has((0, UV.e)(VV.vendor, VV.architecture))
+        }(wV);
+        if (VV.storeHoldbackSpared(ZV), YV && !ZV) return yV("webgl_holdback");
+        const vV = VV.intelGen9(QV);
+        VV.storeIntelGen9Verdict(vV);
+        const rV = vV ? null : VV.gpuClassWebGlArm(QV);
+        VV.storeGpuClassVerdict(null !== rV && void 0 !== rV && rV);
+        const kV = VV.webGlDefaultFamily(wV);
+        if (VV.storeWebGlDefaultFamilyVerdict(kV), JV && VV.oldIntelDriver(QV)) return yV("old_intel_driver", wV);
+        if ("default" === xV && vV && VV.intelGen9OnWebGl()) return yV("intel_gen9", wV);
+        if ("default" === xV && null !== rV && VV.gpuClassOnWebGl(rV)) return yV("gpu_class_webgl", wV);
+        if ("default" === xV && kV) return yV("gpu_wasm_arm", wV);
+        return yV(nV ? "compatibility_mode" : "none", wV)
+      }(VV);
+      if (mV(eV.reason)) return {
         backend: "webgpu",
-        ...rM
+        ...eV
       };
-      if ("webgl1" !== MM.override() && MM.webgl2()) return {
+      if ("webgl1" !== VV.override() && VV.webgl2()) return {
         backend: "webgl",
-        ...rM
+        ...eV
       };
-      const iM = MM.webgl1();
-      return 0 === iM.length ? {
+      const xV = VV.webgl1();
+      return 0 === xV.length ? {
         backend: "webgl1",
-        ...rM
+        ...eV
       } : {
-        missing: iM
+        missing: xV
       }
     }
 
-    function XM(MM, rM) {
+    function HV(VV, eV) {
       let {
-        source: iM,
-        asked: OM
-      } = rM;
-      return OM || "default" === iM ? (0, wM.g)(OM, MM.defaultCompatibility) : void 0
+        source: xV,
+        asked: JV
+      } = eV;
+      return JV || "default" === xV ? (0, NV.j)(JV, VV.defaultCompatibility) : void 0
     }
 
-    function IM(MM) {
-      const rM = MM.override(),
-        iM = MM.webGpuSetting(),
-        OM = null === rM && !0 !== iM && MM.nh(),
-        SM = null !== rM || null !== iM || OM ? null : MM.claimed(),
-        jM = null !== rM ? "override" : !0 === iM ? "setting" : OM ? "pack" : !1 === iM ? "setting" : null !== SM ? "claim" : "default",
-        aM = function(MM) {
-          return "override" === MM || "setting" === MM
-        }(jM);
-      if ("webgl" === rM || "webgl1" === rM || "webgl" === SM || "setting" === jM && !1 === iM) return {
-        source: jM,
-        asked: aM,
+    function uV(VV) {
+      const eV = VV.override(),
+        xV = VV.webGpuSetting(),
+        JV = null === eV && !0 !== xV && VV.Xk(),
+        YV = null !== eV || null !== xV || JV ? null : VV.claimed(),
+        UV = null !== eV ? "override" : !0 === xV ? "setting" : JV ? "pack" : !1 === xV ? "setting" : null !== YV ? "claim" : "default",
+        yV = function(VV) {
+          return "override" === VV || "setting" === VV
+        }(UV);
+      if ("webgl" === eV || "webgl1" === eV || "webgl" === YV || "setting" === UV && !1 === xV) return {
+        source: UV,
+        asked: yV,
         refused: "not_requested"
       };
-      if (!MM.gpu) return {
-        source: jM,
-        asked: aM,
+      if (!VV.gpu) return {
+        source: UV,
+        asked: yV,
         refused: "no_webgpu_api"
       };
-      const PM = "default" === jM && MM.heldBack();
-      return PM && !MM.windows() ? {
-        source: jM,
-        asked: aM,
+      const pV = "default" === UV && VV.heldBack();
+      return pV && !VV.windows() ? {
+        source: UV,
+        asked: yV,
         refused: "webgl_holdback"
-      } : !aM && MM.offAfterLoss("pack" === jM) ? {
-        source: jM,
-        asked: aM,
-        refused: PM ? "webgl_holdback" : "off_after_loss"
+      } : !yV && VV.offAfterLoss("pack" === UV) ? {
+        source: UV,
+        asked: yV,
+        refused: pV ? "webgl_holdback" : "off_after_loss"
       } : {
-        source: jM,
-        asked: aM,
-        heldBack: PM,
-        gpu: MM.gpu
+        source: UV,
+        asked: yV,
+        heldBack: pV,
+        gpu: VV.gpu
       }
     }
 
-    function KM() {
-      let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
-          ...NM(),
-          override: () => AM(!1)
+    function sV() {
+      let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
+          ...hV(),
+          override: () => lV(!1)
         },
-        rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : mM.isWebKit,
-        iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : DM;
+        eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : vV.isWebKit,
+        xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : DV;
       try {
-        if (!rM()) return !1;
-        const OM = IM(MM);
-        if (!("gpu" in OM) || OM.heldBack) return !1;
-        const SM = "default" === OM.source ? fM(iM(), "apple", HM.siteUsed) : null;
-        return null === SM || !MM.gpuClassOnWebGl(SM)
-      } catch (OM) {
-        return console.warn("[bloxd-wasm-client] the WebGPU guess failed: guessing WebGL2", OM), !1
+        if (!eV()) return !1;
+        const JV = uV(VV);
+        if (!("gpu" in JV) || JV.heldBack) return !1;
+        const YV = "default" === JV.source ? oV(xV(), "apple", rV.siteUsed) : null;
+        return null === YV || !VV.gpuClassOnWebGl(YV)
+      } catch (JV) {
+        return console.warn("[bloxd-wasm-client] the WebGPU guess failed: guessing WebGL2", JV), !1
       }
     }
-    let qM = !1;
-    async function TM(MM) {
-      let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : NM();
-      if (null === MM) return null;
-      const iM = await BM(rM);
-      return qM = !("missing" in iM) && "webgpu" === iM.backend && "claim" === iM.source, "missing" in iM ? iM : {
-        ...iM,
-        load: MM[iM.backend]
+    let SV = !1;
+    async function IV(VV) {
+      let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : hV();
+      if (null === VV) return null;
+      const xV = await KV(eV);
+      return SV = !("missing" in xV) && "webgpu" === xV.backend && "claim" === xV.source, "missing" in xV ? xV : {
+        ...xV,
+        load: VV[xV.backend]
       }
     }
-    async function VM(MM, rM) {
-      let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : NM().gpu,
-        OM = arguments.length > 3 ? arguments[3] : void 0;
-      if ("webgpu" !== MM.backend) return !1;
-      const SM = ar(MM, rM, "indirectDraws", "off", "on");
-      if (null !== SM) return SM;
-      if (null !== MM.adapter && (0, yM.s)(MM.adapter, OM)) return !0;
-      if (null === iM) return !1;
+    async function dV(VV, eV) {
+      let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : hV().gpu,
+        JV = arguments.length > 3 ? arguments[3] : void 0;
+      if ("webgpu" !== VV.backend) return !1;
+      const YV = ye(VV, eV, "indirectDraws", "off", "on");
+      if (null !== YV) return YV;
+      if (null !== VV.adapter && (0, BV.t)(VV.adapter, JV)) return !0;
+      if (null === xV) return !1;
       try {
-        var jM;
-        const MM = await (0, eM.n)(iM.requestAdapter({
+        var UV;
+        const VV = await (0, PV.m)(xV.requestAdapter({
           powerPreference: "low-power"
-        }).then((async MM => (null !== MM && await (0, UM.h)(MM), MM))), yr, `the low-power requestAdapter didn't settle in ${yr/1e3} s`);
-        return (0, yM.s)(null !== (jM = null === MM || void 0 === MM ? void 0 : MM.info) && void 0 !== jM ? jM : {}, OM)
-      } catch (aM) {
-        return aM instanceof eM.h
+        }).then((async VV => (null !== VV && await (0, tV.g)(VV), VV))), Be, `the low-power requestAdapter didn't settle in ${Be/1e3} s`);
+        return (0, BV.t)(null !== (UV = null === VV || void 0 === VV ? void 0 : VV.info) && void 0 !== UV ? UV : {}, JV)
+      } catch (yV) {
+        return yV instanceof PV.i
       }
     }
 
-    function cM(MM, rM, iM) {
-      let OM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : (0, mM.pageOperatingSystem)();
-      if ("webgpu" !== MM.backend) return !1;
-      const SM = ar(MM, rM, "terrainFetch", "texture", "storage");
-      return null !== SM ? SM : null !== MM.adapter && ((0, yM.k)(MM.adapter, iM) || (0, yM.j)(MM.adapter, OM))
+    function OV(VV, eV, xV) {
+      let JV = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : (0, vV.pageOperatingSystem)();
+      if ("webgpu" !== VV.backend) return !1;
+      const YV = ye(VV, eV, "terrainFetch", "texture", "storage");
+      return null !== YV ? YV : null !== VV.adapter && ((0, BV.j)(VV.adapter, xV) || (0, BV.h)(VV.adapter, JV))
     }
 
-    function Mr(MM, rM) {
-      if ("webgpu" !== MM.backend) return !1;
-      const iM = ar(MM, rM, "skyOrder", "early", "last");
-      return null !== iM ? iM : null !== MM.adapter && (0, jM.i)(MM.adapter.vendor, MM.adapter.architecture) === kM
+    function Ve(VV, eV) {
+      if ("webgpu" !== VV.backend) return !1;
+      const xV = ye(VV, eV, "skyOrder", "early", "last");
+      return null !== xV ? xV : null !== VV.adapter && (0, UV.e)(VV.adapter.vendor, VV.adapter.architecture) === iV
     }
 
-    function rr(MM, rM) {
-      if ("webgpu" !== MM.backend) return !1;
-      const iM = ar(MM, rM, "uploadCopies", "off", "on");
-      return null !== iM ? iM : null !== MM.adapter && "powervr_rogue" === (0, jM.i)(MM.adapter.vendor, MM.adapter.architecture)
+    function ee(VV, eV) {
+      if ("webgpu" !== VV.backend) return !1;
+      const xV = ye(VV, eV, "uploadCopies", "off", "on");
+      return null !== xV ? xV : null !== VV.adapter && "powervr_rogue" === (0, UV.e)(VV.adapter.vendor, VV.adapter.architecture)
     }
 
-    function ir(MM, rM, iM) {
-      if ("webgpu" !== MM.backend) return !1;
-      const OM = ar(MM, rM, "sceneDepth", "off", "on");
-      return null !== OM ? OM : null !== MM.adapter && (0, yM.n)(MM.adapter, iM)
+    function xe(VV, eV, xV) {
+      if ("webgpu" !== VV.backend) return !1;
+      const JV = ye(VV, eV, "sceneDepth", "off", "on");
+      return null !== JV ? JV : null !== VV.adapter && (0, BV.n)(VV.adapter, xV)
     }
 
-    function Or(MM, rM) {
-      return "webgl" === MM.backend ? ar(MM, rM, "instancedTerrain", "1", "0") : null
+    function Je(VV, eV) {
+      return "webgl" === VV.backend ? ye(VV, eV, "instancedTerrain", "1", "0") : null
     }
 
-    function Sr(MM, rM) {
-      return "webgpu" !== MM.backend || rM && (null === MM.adapter || !(0, dM.H)(MM.adapter))
+    function Ye(VV, eV) {
+      return "webgpu" !== VV.backend || eV && (null === VV.adapter || !(0, EV.L)(VV.adapter))
     }
 
-    function jr(MM, rM, iM, OM) {
-      const SM = new URLSearchParams(rM).get(iM),
-        jM = null !== SM && void 0 !== SM ? SM : null === MM ? null : (0, nM.d)(iM);
-      return null !== jM && OM(jM) ? (qM ||= null === SM && "webgpu" === (null === MM || void 0 === MM ? void 0 : MM.backend), jM) : null
+    function Ue(VV, eV, xV, JV) {
+      const YV = new URLSearchParams(eV).get(xV),
+        UV = null !== YV && void 0 !== YV ? YV : null === VV ? null : (0, QV.g)(xV);
+      return null !== UV && JV(UV) ? (SV ||= null === YV && "webgpu" === (null === VV || void 0 === VV ? void 0 : VV.backend), UV) : null
     }
 
-    function ar(MM, rM, iM, OM, SM) {
-      const jM = jr(MM, rM, iM, (MM => MM === OM || MM === SM));
-      return null === jM ? null : jM === OM
+    function ye(VV, eV, xV, JV, YV) {
+      const UV = Ue(VV, eV, xV, (VV => VV === JV || VV === YV));
+      return null === UV ? null : UV === JV
     }
 
-    function Pr(MM) {
-      return null !== MM && "missing" in MM
+    function pe(VV) {
+      return null !== VV && "missing" in VV
     }
 
-    function nr(MM) {
-      let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : !Lr(),
-        iM = arguments.length > 2 ? arguments[2] : void 0;
-      return rM ? function(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : aM.d,
-          iM = arguments.length > 2 ? arguments[2] : void 0;
+    function Qe(VV) {
+      let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : !Ze(),
+        xV = arguments.length > 2 ? arguments[2] : void 0;
+      return eV ? function(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : yV.b,
+          xV = arguments.length > 2 ? arguments[2] : void 0;
         try {
-          const OM = "start_failed" === MM || "pipeline_failed" === MM,
-            SM = (0, gM.k)(MM, iM),
-            jM = rM.turnOffWebGpuAfterDeviceLoss(OM ? "visible" : (0, dM.l)((0, hM.h)()), OM, SM);
-          return qM && (0, nM.q)("webgpuLoss"), rM.isWebGpuOffAfterLoss() && "webgpu" === vM(JM.g.getItem(zM.h)) && JM.g.removeItem(zM.h), (0, PM.p)("webgpuloss") && (0, QM.d)((rM => {
-            var iM;
-            rM.noteWebGpuLoss("wasm", jM ? MM : `${MM}, which storage didn't keep`, null !== (iM = SM.message) && void 0 !== iM ? iM : null)
-          })), jM
+          const JV = "start_failed" === VV || "pipeline_failed" === VV,
+            YV = (0, MV.l)(VV, xV),
+            UV = eV.turnOffWebGpuAfterDeviceLoss(JV ? "visible" : (0, EV.o)((0, kV.i)()), JV, YV);
+          return SV && (0, QV.q)("webgpuLoss"), eV.isWebGpuOffAfterLoss() && "webgpu" === fV(bV.m.getItem(wV.i)) && bV.m.removeItem(wV.i), (0, pV.o)("webgpuloss") && (0, nV.b)((eV => {
+            var xV;
+            eV.noteWebGpuLoss("wasm", UV ? VV : `${VV}, which storage didn't keep`, null !== (xV = YV.message) && void 0 !== xV ? xV : null)
+          })), UV
         } catch {
           return !1
         }
-      }(MM, aM.d, iM) ? null : "storage won't keep WebGPU off" : "the URL asks for WebGPU"
+      }(VV, yV.b, xV) ? null : "storage won't keep WebGPU off" : "the URL asks for WebGPU"
     }
-    const Qr = "framePacing";
+    const ne = "framePacing";
 
-    function zr(MM, rM) {
-      const iM = jr("webgpu" === (null === rM || void 0 === rM ? void 0 : rM.backend) ? rM : null, MM, Qr, (MM => /^\d{1,9}$/.test(MM)));
-      return null === iM ? void 0 : Number(iM)
+    function we(VV, eV) {
+      const xV = Ue("webgpu" === (null === eV || void 0 === eV ? void 0 : eV.backend) ? eV : null, VV, ne, (VV => /^\d{1,9}$/.test(VV)));
+      return null === xV ? void 0 : Number(xV)
     }
 
-    function Lr() {
-      let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : window.location.search;
+    function Ze() {
+      let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : window.location.search;
       try {
-        return "webgpu" === vM(new URLSearchParams(MM).get(zM.d))
+        return "webgpu" === fV(new URLSearchParams(VV).get(wV.e))
       } catch {
         return !1
       }
     }
 
-    function mr(MM) {
-      return !!Hr(MM) || MM instanceof Error && !(MM instanceof WebAssembly.RuntimeError) && MM.message.startsWith(`${GM.n.RenderSurfaceUnusable}:`)
+    function ve(VV) {
+      return !!re(VV) || VV instanceof Error && !(VV instanceof WebAssembly.RuntimeError) && VV.message.startsWith(`${FV.s.RenderSurfaceUnusable}:`)
     }
 
-    function Hr(MM) {
+    function re(VV) {
       const {
-        name: rM,
-        message: iM
-      } = null !== MM && void 0 !== MM ? MM : {};
-      return "InvalidStateError" === rM && "string" === typeof iM && iM.startsWith("GPUDevice.")
+        name: eV,
+        message: xV
+      } = null !== VV && void 0 !== VV ? VV : {};
+      return "InvalidStateError" === eV && "string" === typeof xV && xV.startsWith("GPUDevice.")
     }
 
-    function hr(MM) {
-      const rM = MM;
-      return "function" === typeof rM.iOM && "function" === typeof rM.SOM ? rM : null
+    function ke(VV) {
+      const eV = VV;
+      return "function" === typeof eV.tYV && "function" === typeof eV.FYV ? eV : null
     }
 
-    function Jr(MM) {
-      return "function" === typeof MM.Oy ? MM : null
+    function be(VV) {
+      return "function" === typeof VV.pB ? VV : null
     }
-    const dr = "openRenderer";
-    const yr = 5e3,
-      lr = 15e3;
+    const Ee = "openRenderer";
+    const Be = 5e3,
+      je = 15e3;
 
-    function Er(MM, rM, iM, OM, SM, jM) {
-      return (0, eM.n)(function(MM, rM, iM, OM, SM, jM) {
-        return (0, bM.i)(MM, rM, (() => MM.Oy(iM, OM, SM, jM.indirectHangs, jM.storagePullBreaks, jM.splitPassBreaks, jM.earlySky, jM.instancedTerrain, jM.cellLight, jM.framesAhead, jM.webGpuRestores, jM.bufferCopiesCrash)))
-      }(MM, rM, iM, OM, SM, jM), lr, `${GM.n.RenderSurfaceUnusable}: the renderer didn't open in ${lr/1e3} s`, Gr)
+    function qe(VV, eV, xV, JV, YV, UV) {
+      return (0, PV.m)(function(VV, eV, xV, JV, YV, UV) {
+        return (0, AV.g)(VV, eV, (() => VV.pB(xV, JV, YV, UV.indirectHangs, UV.storagePullBreaks, UV.splitPassBreaks, UV.earlySky, UV.instancedTerrain, UV.cellLight, UV.framesAhead, UV.webGpuRestores, UV.bufferCopiesCrash)))
+      }(VV, eV, xV, JV, YV, UV), je, `${FV.s.RenderSurfaceUnusable}: the renderer didn't open in ${je/1e3} s`, Fe)
     }
-    async function Ur(MM, rM, iM, OM, SM, jM) {
-      if ("function" !== typeof MM.HaM) throw new Error("this core has no set_renderer");
-      const aM = await Er(rM, dr, iM, SM, OM, jM);
+    async function te(VV, eV, xV, JV, YV, UV) {
+      if ("function" !== typeof VV.DpV) throw new Error("this core has no set_renderer");
+      const yV = await qe(eV, Ee, xV, YV, JV, UV);
       try {
-        MM.HaM(aM)
-      } catch (PM) {
-        throw Gr(aM), PM
+        VV.DpV(yV)
+      } catch (pV) {
+        throw Fe(yV), pV
       }
     }
 
-    function Gr(MM) {
+    function Fe(VV) {
       try {
-        MM.free()
+        VV.free()
       } catch {}
     }
   },
-  41913: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => OM
+  42123: (VV, eV, xV) => {
+    xV.d(eV, {
+      d: () => JV
     });
-    const OM = {
+    const JV = {
       destroy_stage_0: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAK0lEQVQYlWP8//8/IwMewIRPknQFjIyM/wmaYGdn9w9FE7IjYSagiFHsCwCM7A/Ccc+NjAAAAABJRU5ErkJggg==",
       destroy_stage_1: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAQklEQVQYlYWPMQ4AIAgDOeO7+v9XWScMOGinpjmgYJt4aKQB/ASqKtwASeuGZxrbAEhyRJxe1JJ1debtRIZt6PfmBqYNG36KBWHbAAAAAElFTkSuQmCC",
       destroy_stage_2: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAARUlEQVQYlYWPwQnAMAwDdaVr2ftPVfWVIBJC9DI6LMvYRpIAjzn1rMaq9wQAbwnd/SWUJNkmb1eVkx07zPK5PaLTu37xA3+wH3UI6vmHAAAAAElFTkSuQmCC",
@@ -665,284 +665,284 @@ export const modules = {
       destroy_stage_9: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAUElEQVQYlW2OyQ3AMAgEhyhtQfF2X9m8IKvIvBDMHkgKSQGQmcJGUtBAZsr3hm6Aqnr4zUBOt4vfJh8gIuTPtdZFK1ztXUbtcXvvz/nU3F1eyBpW2eqlL9QAAAAASUVORK5CYII="
     }
   },
-  41840: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => hM,
-      f: () => JM,
-      j: () => mM,
-      n: () => LM
+  42039: (VV, eV, xV) => {
+    xV.d(eV, {
+      d: () => kV,
+      f: () => bV,
+      i: () => vV,
+      k: () => ZV
     });
-    const OM = 2e3,
-      SM = "unavailable";
-    let jM = () => Promise.resolve().then((() => iM(3262))),
-      aM = null,
-      PM = null,
-      nM = QM();
+    const JV = 2e3,
+      YV = "unavailable";
+    let UV = () => Promise.resolve().then((() => xV(3271))),
+      yV = null,
+      pV = null,
+      QV = nV();
 
-    function QM() {
-      let MM = () => {};
+    function nV() {
+      let VV = () => {};
       return {
-        promise: new Promise((rM => {
-          MM = () => {
-            rM(null)
+        promise: new Promise((eV => {
+          VV = () => {
+            eV(null)
           }
         })),
-        resolve: MM
+        resolve: VV
       }
     }
 
-    function zM() {
-      if (null === aM) {
-        const MM = jM();
-        aM = MM, MM.then((rM => {
-          aM === MM && (PM = rM)
+    function wV() {
+      if (null === yV) {
+        const VV = UV();
+        yV = VV, VV.then((eV => {
+          yV === VV && (pV = eV)
         }), (() => {
-          aM === MM && (aM = null)
+          yV === VV && (yV = null)
         }))
       }
-      return aM
+      return yV
     }
 
-    function LM() {
-      zM().catch((() => {}))
+    function ZV() {
+      wV().catch((() => {}))
     }
 
-    function mM() {
-      nM.resolve()
+    function vV() {
+      QV.resolve()
     }
 
-    function HM(MM, rM, iM, OM) {
-      if (null === MM) return {
-        errorKind: rM,
-        fingerprint: SM,
-        dedupe: `${rM}|${OM}`
+    function rV(VV, eV, xV, JV) {
+      if (null === VV) return {
+        errorKind: eV,
+        fingerprint: YV,
+        dedupe: `${eV}|${JV}`
       };
       const {
-        fingerprint: jM
-      } = MM.clientErrorKey(rM, iM, OM);
+        fingerprint: UV
+      } = VV.clientErrorKey(eV, xV, JV);
       return {
-        errorKind: rM,
-        fingerprint: jM,
-        dedupe: jM
+        errorKind: eV,
+        fingerprint: UV,
+        dedupe: UV
       }
     }
 
-    function hM(MM, rM, iM, OM) {
-      return null === PM ? OM ? (LM(), HM(null, MM, rM, iM)) : null : HM(PM, MM, rM, iM)
+    function kV(VV, eV, xV, JV) {
+      return null === pV ? JV ? (ZV(), rV(null, VV, eV, xV)) : null : rV(pV, VV, eV, xV)
     }
-    async function JM(MM, rM, iM) {
-      let SM;
-      const jM = new Promise((MM => {
-        SM = setTimeout((() => {
-          MM(null)
-        }), OM)
+    async function bV(VV, eV, xV) {
+      let YV;
+      const UV = new Promise((VV => {
+        YV = setTimeout((() => {
+          VV(null)
+        }), JV)
       }));
       try {
-        return HM(await Promise.race([zM(), jM, nM.promise]), MM, rM, iM)
+        return rV(await Promise.race([wV(), UV, QV.promise]), VV, eV, xV)
       } catch {
-        return HM(null, MM, rM, iM)
+        return rV(null, VV, eV, xV)
       } finally {
-        clearTimeout(SM)
+        clearTimeout(YV)
       }
     }
   },
-  41833: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      BUILT_IN_ANIMATIONS_SITE: () => TM,
-      CORE_ERRORS_SITE: () => NM,
-      EVENT_OVERFLOW_SITE: () => qM,
-      FIRST_VIEW_SITE: () => Mr,
-      JOIN_SITE: () => xM,
-      LEAVE_SITE: () => vM,
-      MAIN_THREAD_SITE: () => rr,
-      MODEL_FEED_SITE: () => FM,
-      MODEL_POOL_SITE: () => BM,
-      NON_FATAL_LOKI_REPORTS_PER_PAGE: () => jr,
-      NON_FATAL_REPORTS_PER_SESSION: () => er,
-      PREVIEW_ANIMATIONS_SITE: () => KM,
-      RENDER_RELOAD_SITE: () => IM,
-      REQUEST_DEVICE_SITE: () => ir,
-      TEXTURE_NAMES_SITE: () => XM,
-      TEXTURE_PACK_FEED_SITE: () => VM,
-      TEXTURE_PACK_SWAP_SITE: () => cM,
-      TurnstilePageError: () => ni,
-      WASM_LOAD_SITE: () => AM,
-      countRenderLost: () => Fi,
-      crashError: () => Rr,
-      crashReportsSettled: () => Yr,
-      deviceLossFields: () => Fr,
-      deviceLossWords: () => Ni,
-      flushCrashReports: () => or,
-      joinFailureCode: () => Qi,
-      lokiTransport: () => nr,
-      modelFailureCode: () => yi,
-      readTrap: () => Ir,
-      renderLoss: () => vi,
-      renderReloadMessage: () => Ai,
-      reportCoreErrors: () => xr,
-      reportCountedLoadFallback: () => ai,
-      reportCrash: () => pr,
-      reportDataLoadFailure: () => Ti,
-      reportDisconnect: () => Ji,
-      reportDracoDecoderFailure: () => Gi,
-      reportDroppedRequiredLimits: () => Si,
-      reportEventOverflow: () => wi,
-      reportFirstViewNoTerrain: () => si,
-      reportLightFault: () => ui,
-      reportMainStall: () => Di,
-      reportMemoryShed: () => Wi,
-      reportModelFailure: () => li,
-      reportModelPoolFailure: () => Ei,
-      reportModelsModuleRetry: () => Ui,
-      reportNoBackendRetry: () => Oi,
-      reportPageJoinFailure: () => Li,
-      reportReconnectGaveUp: () => di,
-      reportRenderRecovery: () => Dr,
-      reportRenderReload: () => Ii,
-      reportReplayFault: () => Zi,
-      reportStaleBuildReload: () => ci,
-      reportStoppedCore: () => Vr,
-      reportTerrainTextureFailure: () => Ki,
-      reportTexturePackFeedLoadFailure: () => ei,
-      reportTexturePackKeptOut: () => bi,
-      reportUnstreamedCoreLoad: () => Pi,
-      reportUnsupportedFallback: () => ii,
-      reportUnusedSeat: () => Hi,
-      reportWorkerLost: () => ti,
-      reportWorkerStartTimeout: () => ki,
-      reportWorldgenGaveUp: () => Ri,
-      reportWorldgenLoadFailure: () => Ci,
-      reportWorldgenWorkerLost: () => gi,
-      resetCrashReports: () => Nr,
-      setCrashAdPreload: () => yr,
-      setCrashBackend: () => dr,
-      setCrashScreen: () => Hr,
-      setCrashTransport: () => Lr,
-      showCrash: () => Tr,
-      showJoinFailure: () => zi,
-      showUnsupported: () => Mi,
-      unknownSkyWords: () => Ar
+  42034: (VV, eV, xV) => {
+    xV.r(eV), xV.d(eV, {
+      BUILT_IN_ANIMATIONS_SITE: () => IV,
+      CORE_ERRORS_SITE: () => hV,
+      EVENT_OVERFLOW_SITE: () => SV,
+      FIRST_VIEW_SITE: () => Ve,
+      JOIN_SITE: () => LV,
+      LEAVE_SITE: () => fV,
+      MAIN_THREAD_SITE: () => ee,
+      MODEL_FEED_SITE: () => mV,
+      MODEL_POOL_SITE: () => KV,
+      NON_FATAL_LOKI_REPORTS_PER_PAGE: () => Ue,
+      NON_FATAL_REPORTS_PER_SESSION: () => Pe,
+      PREVIEW_ANIMATIONS_SITE: () => sV,
+      RENDER_RELOAD_SITE: () => uV,
+      REQUEST_DEVICE_SITE: () => xe,
+      TEXTURE_NAMES_SITE: () => HV,
+      TEXTURE_PACK_FEED_SITE: () => dV,
+      TEXTURE_PACK_SWAP_SITE: () => OV,
+      TurnstilePageError: () => Qx,
+      WASM_LOAD_SITE: () => lV,
+      countRenderLost: () => Lx,
+      crashError: () => Ge,
+      crashReportsSettled: () => ce,
+      deviceLossFields: () => me,
+      deviceLossWords: () => ox,
+      flushCrashReports: () => ae,
+      joinFailureCode: () => nx,
+      lokiTransport: () => Qe,
+      modelFailureCode: () => Ex,
+      readTrap: () => ue,
+      renderLoss: () => lx,
+      renderReloadMessage: () => cx,
+      reportCoreErrors: () => Le,
+      reportCountedLoadFallback: () => yx,
+      reportCrash: () => We,
+      reportDataLoadFailure: () => sx,
+      reportDisconnect: () => kx,
+      reportDracoDecoderFailure: () => tx,
+      reportDroppedRequiredLimits: () => Yx,
+      reportEventOverflow: () => Ax,
+      reportFirstViewNoTerrain: () => Wx,
+      reportLightFault: () => Mx,
+      reportMainStall: () => Rx,
+      reportMemoryShed: () => Gx,
+      reportModelFailure: () => Bx,
+      reportModelPoolFailure: () => jx,
+      reportModelsModuleRetry: () => qx,
+      reportNoBackendRetry: () => Jx,
+      reportPageJoinFailure: () => Zx,
+      reportReconnectGaveUp: () => bx,
+      reportRenderRecovery: () => De,
+      reportRenderReload: () => Kx,
+      reportReplayFault: () => Dx,
+      reportStaleBuildReload: () => Ix,
+      reportStoppedCore: () => de,
+      reportTerrainTextureFailure: () => Hx,
+      reportTexturePackFeedLoadFailure: () => Tx,
+      reportTexturePackKeptOut: () => Px,
+      reportUnstreamedCoreLoad: () => px,
+      reportUnsupportedFallback: () => xx,
+      reportUnusedSeat: () => rx,
+      reportWorkerLost: () => Nx,
+      reportWorkerStartTimeout: () => gx,
+      reportWorldgenGaveUp: () => zx,
+      reportWorldgenLoadFailure: () => Fx,
+      reportWorldgenWorkerLost: () => Xx,
+      resetCrashReports: () => he,
+      setCrashAdPreload: () => Be,
+      setCrashBackend: () => Ee,
+      setCrashScreen: () => re,
+      setCrashTransport: () => Ze,
+      showCrash: () => Ie,
+      showJoinFailure: () => wx,
+      showUnsupported: () => Vx,
+      unknownSkyWords: () => le
     });
-    var OM = iM(1073),
-      SM = iM(1382),
-      jM = iM(1373),
-      aM = iM(1329),
-      PM = iM(243),
-      nM = iM(3270),
-      QM = iM(4654),
-      zM = iM(41840),
-      LM = iM(5198),
-      mM = iM(41846),
-      HM = iM(34885),
-      hM = iM(3324),
-      JM = iM(34880),
-      dM = iM(39814),
-      yM = iM(119),
-      lM = iM(114),
-      EM = iM(3333),
-      UM = iM(37437),
-      GM = iM(1899),
-      CM = iM(41858),
-      eM = iM(41677),
-      bM = iM(41764),
-      wM = iM(41767),
-      tM = iM(37428),
-      gM = iM(3185),
-      uM = iM(3188),
-      RM = iM(41882),
-      pM = iM(41895),
-      WM = iM(41900),
-      sM = iM(37790),
-      DM = iM(3632),
-      kM = iM(37218),
-      ZM = iM(41809),
-      oM = iM(37229),
-      fM = iM(41922);
-    const YM = "[bloxd-wasm-client]",
-      NM = "coreErrors",
-      AM = "wasmLoad",
-      xM = "join",
-      vM = "leave",
-      FM = "modelFeed",
-      BM = "modelWorkerPool",
-      XM = "textureNames",
-      IM = "renderReload",
-      KM = "previewAnimations",
-      qM = "eventOverflow",
-      TM = "builtInAnimations",
-      VM = "texturePackFeed",
-      cM = "texturePackSwap",
-      Mr = "firstView",
-      rr = "mainThread",
-      ir = "requestDevice",
-      Or = 300,
-      Sr = 64,
-      jr = 8;
-    let ar = 0;
-    const Pr = new Set,
-      nr = (MM, rM) => {
-        const iM = lr[MM.kind],
-          OM = {
-            backend: hr,
-            adPreload: Jr
+    var JV = xV(1099),
+      YV = xV(1397),
+      UV = xV(1391),
+      yV = xV(1353),
+      pV = xV(296),
+      QV = xV(3273),
+      nV = xV(4716),
+      wV = xV(42039),
+      ZV = xV(5297),
+      vV = xV(42046),
+      rV = xV(35148),
+      kV = xV(3328),
+      bV = xV(35146),
+      EV = xV(39952),
+      BV = xV(138),
+      jV = xV(134),
+      qV = xV(3336),
+      tV = xV(37633),
+      FV = xV(1900),
+      TV = xV(42057),
+      PV = xV(41861),
+      AV = xV(41963),
+      NV = xV(41968),
+      XV = xV(37631),
+      MV = xV(3194),
+      zV = xV(3196),
+      GV = xV(42085),
+      WV = xV(42101),
+      RV = xV(42109),
+      gV = xV(38036),
+      DV = xV(3658),
+      iV = xV(37422),
+      CV = xV(42011),
+      aV = xV(37437),
+      oV = xV(42125);
+    const cV = "[bloxd-wasm-client]",
+      hV = "coreErrors",
+      lV = "wasmLoad",
+      LV = "join",
+      fV = "leave",
+      mV = "modelFeed",
+      KV = "modelWorkerPool",
+      HV = "textureNames",
+      uV = "renderReload",
+      sV = "previewAnimations",
+      SV = "eventOverflow",
+      IV = "builtInAnimations",
+      dV = "texturePackFeed",
+      OV = "texturePackSwap",
+      Ve = "firstView",
+      ee = "mainThread",
+      xe = "requestDevice",
+      Je = 300,
+      Ye = 64,
+      Ue = 8;
+    let ye = 0;
+    const pe = new Set,
+      Qe = (VV, eV) => {
+        const xV = je[VV.kind],
+          JV = {
+            backend: ke,
+            adPreload: be
           };
-        if (null === iM) return void Qr(MM, rM, OM, null);
-        const SM = (0, zM.d)(iM, MM.message, MM.code, MM.fatal);
-        null === SM ? Zr("Loki", (async () => {
-          Qr(MM, rM, OM, await (0, zM.f)(iM, MM.message, MM.code))
-        })) : Qr(MM, rM, OM, SM)
+        if (null === xV) return void ne(VV, eV, JV, null);
+        const YV = (0, wV.d)(xV, VV.message, VV.code, VV.fatal);
+        null === YV ? Ce("Loki", (async () => {
+          ne(VV, eV, JV, await (0, wV.f)(xV, VV.message, VV.code))
+        })) : ne(VV, eV, JV, YV)
       };
 
-    function Qr(MM, rM, iM, OM) {
+    function ne(VV, eV, xV, JV) {
       let {
-        backend: SM,
-        adPreload: jM
-      } = iM;
+        backend: YV,
+        adPreload: UV
+      } = xV;
       const {
-        kind: PM,
-        code: QM,
-        site: zM,
-        fatal: LM,
-        details: mM
-      } = MM;
-      if (!LM)
-        if (null === OM || (0, nM.c)(OM.errorKind) || Pr.has(OM.dedupe)) {
-          if (ar >= jr) return;
-          ar++
-        } else Pr.add(OM.dedupe);
-      const HM = {
-        ...mM,
-        kind: PM,
-        code: QM,
-        site: zM,
-        fatal: String(LM),
-        backend: SM
+        kind: pV,
+        code: nV,
+        site: wV,
+        fatal: ZV,
+        details: vV
+      } = VV;
+      if (!ZV)
+        if (null === JV || (0, QV.e)(JV.errorKind) || pe.has(JV.dedupe)) {
+          if (ye >= Ue) return;
+          ye++
+        } else pe.add(JV.dedupe);
+      const rV = {
+        ...vV,
+        kind: pV,
+        code: nV,
+        site: wV,
+        fatal: String(ZV),
+        backend: YV
       };
-      jM && (HM.adPreload = "true"), null !== OM && (HM.errorKind = OM.errorKind, HM.fingerprint = OM.fingerprint), rM instanceof Error && "string" === typeof rM.stack && (HM.causeStack = rM.stack.slice(0, 2e3)), (0, aM.CJ)(Rr(MM, rM), HM)
+      UV && (rV.adPreload = "true"), null !== JV && (rV.errorKind = JV.errorKind, rV.fingerprint = JV.fingerprint), eV instanceof Error && "string" === typeof eV.stack && (rV.causeStack = eV.stack.slice(0, 2e3)), (0, yV.lb)(Ge(VV, eV), rV)
     }
-    let zr = nr;
+    let we = Qe;
 
-    function Lr(MM) {
-      const rM = zr;
-      return zr = MM, rM
+    function Ze(VV) {
+      const eV = we;
+      return we = VV, eV
     }
-    let mr = () => {};
+    let ve = () => {};
 
-    function Hr(MM) {
-      const rM = mr;
-      return mr = MM, rM
+    function re(VV) {
+      const eV = ve;
+      return ve = VV, eV
     }
-    let hr = "unpicked",
-      Jr = !1;
+    let ke = "unpicked",
+      be = !1;
 
-    function dr(MM) {
-      hr = MM
+    function Ee(VV) {
+      ke = VV
     }
 
-    function yr(MM) {
-      Jr = MM
+    function Be(VV) {
+      be = VV
     }
-    const lr = {
+    const je = {
         crash: "wasm_load",
         unsupported: "wasm_load",
         model: "wasm_load",
@@ -968,7 +968,7 @@ export const modules = {
         linkCensus: "wasm_load",
         linksReadAfterView: "wasm_load"
       },
-      Er = {
+      qe = {
         coreError: "wasm_load",
         recovered: "wasm_load",
         unstreamedLoad: "wasm_load",
@@ -976,255 +976,255 @@ export const modules = {
         mainStall: "wasm_load",
         texturePackKeptOut: "texture_pack"
       },
-      Ur = new Set(["unstreamedLoad"]),
-      Gr = new Set(["linkCensus", "linksReadAfterView"]);
-    let Cr = !1;
-    const er = 20,
-      br = new Map;
-    let wr = 0,
-      tr = 0;
-    const gr = new Set,
-      ur = new Set;
+      te = new Set(["unstreamedLoad"]),
+      Fe = new Set(["linkCensus", "linksReadAfterView"]);
+    let Te = !1;
+    const Pe = 20,
+      Ae = new Map;
+    let Ne = 0,
+      Xe = 0;
+    const Me = new Set,
+      ze = new Set;
 
-    function Rr(MM, rM) {
-      const iM = Object.assign(new Error(`${MM.code}: ${MM.message}`), {
+    function Ge(VV, eV) {
+      const xV = Object.assign(new Error(`${VV.code}: ${VV.message}`), {
         name: "WasmClientCrash",
-        cause: null !== rM && void 0 !== rM ? rM : void 0
+        cause: null !== eV && void 0 !== eV ? eV : void 0
       });
-      return rM instanceof Error && rM.stack && (iM.stack = rM.stack), iM
+      return eV instanceof Error && eV.stack && (xV.stack = eV.stack), xV
     }
 
-    function pr(MM) {
-      var rM, OM;
+    function We(VV) {
+      var eV, JV;
       const {
-        kind: SM,
-        code: jM,
-        site: aM,
-        fatal: PM,
-        message: nM,
-        error: QM
-      } = MM, zM = !1 !== MM.toTransport && !Ur.has(SM), LM = !PM && zM && !Gr.has(SM), mM = {
-        kind: SM,
-        code: jM,
-        site: aM,
-        fatal: PM,
-        message: nM,
-        details: null !== (rM = MM.details) && void 0 !== rM ? rM : {}
-      }, HM = `${jM}@${aM}${void 0===MM.instance?"":`#${MM.instance}`}${PM?"!":""}`, hM = (null !== (OM = br.get(HM)) && void 0 !== OM ? OM : 0) + 1;
-      if (br.set(HM, hM), void 0 !== MM.countAs && 1 === hM && sr(MM.countAs), hM > 1 ? 0 === (hM & hM - 1) && kr((() => {
-          console.warn(`${YM} ${jM} at ${aM} reported ${hM} times`)
-        })) : LM && wr >= er ? kr((() => {
-          console.warn(`${YM} ${SM} ${jM} at ${aM}: ${nM} (not sent: the session's ${er} went)`, mM.details, null !== QM && void 0 !== QM ? QM : "")
-        })) : (LM && wr++, function(MM, rM, OM, SM) {
-          var jM, aM;
+        kind: YV,
+        code: UV,
+        site: yV,
+        fatal: pV,
+        message: QV,
+        error: nV
+      } = VV, wV = !1 !== VV.toTransport && !te.has(YV), ZV = !pV && wV && !Fe.has(YV), vV = {
+        kind: YV,
+        code: UV,
+        site: yV,
+        fatal: pV,
+        message: QV,
+        details: null !== (eV = VV.details) && void 0 !== eV ? eV : {}
+      }, rV = `${UV}@${yV}${void 0===VV.instance?"":`#${VV.instance}`}${pV?"!":""}`, kV = (null !== (JV = Ae.get(rV)) && void 0 !== JV ? JV : 0) + 1;
+      if (Ae.set(rV, kV), void 0 !== VV.countAs && 1 === kV && ge(VV.countAs), kV > 1 ? 0 === (kV & kV - 1) && ie((() => {
+          console.warn(`${cV} ${UV} at ${yV} reported ${kV} times`)
+        })) : ZV && Ne >= Pe ? ie((() => {
+          console.warn(`${cV} ${YV} ${UV} at ${yV}: ${QV} (not sent: the session's ${Pe} went)`, vV.details, null !== nV && void 0 !== nV ? nV : "")
+        })) : (ZV && Ne++, function(VV, eV, JV, YV) {
+          var UV, yV;
           const {
-            kind: PM,
-            code: nM,
-            site: QM,
-            fatal: zM,
-            message: LM,
-            details: mM
-          } = MM;
-          kr((() => {
-            (zM ? console.error : console.warn)(`${YM} ${PM} ${nM} at ${QM}: ${LM}`, mM, null !== rM && void 0 !== rM ? rM : "")
+            kind: pV,
+            code: QV,
+            site: nV,
+            fatal: wV,
+            message: ZV,
+            details: vV
+          } = VV;
+          ie((() => {
+            (wV ? console.error : console.warn)(`${cV} ${pV} ${QV} at ${nV}: ${ZV}`, vV, null !== eV && void 0 !== eV ? eV : "")
           }));
-          const HM = Er[PM],
-            hM = null !== (jM = null !== (aM = lr[PM]) && void 0 !== aM ? aM : HM) && void 0 !== jM ? jM : null;
-          SM || null === hM || Wr((async () => {
+          const rV = qe[pV],
+            kV = null !== (UV = null !== (yV = je[pV]) && void 0 !== yV ? yV : rV) && void 0 !== UV ? UV : null;
+          YV || null === kV || Re((async () => {
             const {
-              reportCappedWasmFailure: rM,
-              reportUncappedWasmFailure: OM,
-              reportWasmFailure: SM
-            } = await iM.e(218).then((() => iM(34877))), jM = Gr.has(PM) ? OM : void 0 === HM ? SM : rM, aM = function(MM) {
+              reportCappedWasmFailure: eV,
+              reportUncappedWasmFailure: JV,
+              reportWasmFailure: YV
+            } = await xV.e(218).then((() => xV(35139))), UV = Fe.has(pV) ? JV : void 0 === rV ? YV : eV, yV = function(VV) {
               let {
-                kind: rM,
-                site: iM,
-                fatal: OM,
-                details: SM
-              } = MM;
-              if ("crash" !== rM) return;
+                kind: eV,
+                site: xV,
+                fatal: JV,
+                details: YV
+              } = VV;
+              if ("crash" !== eV) return;
               return {
-                ...SM,
-                site: iM,
-                fatal: String(OM)
+                ...YV,
+                site: xV,
+                fatal: String(JV)
               }
-            }(MM);
-            void 0 === aM ? jM(hM, LM, nM) : jM(hM, LM, nM, aM)
+            }(VV);
+            void 0 === yV ? UV(kV, ZV, QV) : UV(kV, ZV, QV, yV)
           }));
-          OM && kr((() => {
-            zr(MM, rM)
+          JV && ie((() => {
+            we(VV, eV)
           }))
-        }(mM, QM, zM, void 0 !== MM.countAs)), PM) {
-        var JM;
-        const rM = null !== (JM = MM.screen) && void 0 !== JM ? JM : {
-          text: (0, sM.f)(mM, !0),
+        }(vV, nV, wV, void 0 !== VV.countAs)), pV) {
+        var bV;
+        const eV = null !== (bV = VV.screen) && void 0 !== bV ? bV : {
+          text: (0, gV.e)(vV, !0),
           reload: !0
         };
-        kr((() => {
-          mr(rM)
+        ie((() => {
+          ve(eV)
         }))
       }
-      return mM
+      return vV
     }
 
-    function Wr(MM) {
-      Zr("counts", (async () => {
+    function Re(VV) {
+      Ce("counts", (async () => {
         const {
-          peekVisitSessionId: rM
-        } = await Promise.resolve().then((() => iM(673)));
-        null !== rM() && (await MM(), Cr = !0)
+          peekVisitSessionId: eV
+        } = await Promise.resolve().then((() => xV(701)));
+        null !== eV() && (await VV(), Te = !0)
       }))
     }
 
-    function sr(MM) {
-      gr.has(MM.errorKind) || (gr.add(MM.errorKind), Wr((async () => {
+    function ge(VV) {
+      Me.has(VV.errorKind) || (Me.add(VV.errorKind), Re((async () => {
         const {
-          reportClientError: rM
-        } = await Promise.resolve().then((() => iM(3258)));
-        rM(MM.errorKind, MM.error, MM.code, !0, void 0, MM.fields)
+          reportClientError: eV
+        } = await Promise.resolve().then((() => xV(3268)));
+        eV(VV.errorKind, VV.error, VV.code, !0, void 0, VV.fields)
       })))
     }
 
-    function Dr(MM, rM) {
-      Zr("render_lost", (async () => {
+    function De(VV, eV) {
+      Ce("render_lost", (async () => {
         const [{
-          reportClientError: OM
+          reportClientError: JV
         }, {
-          CAPPED_COUNTS_VISIT_CAP: SM
-        }] = await Promise.all([Promise.resolve().then((() => iM(3258))), iM.e(218).then((() => iM(34877)))]);
-        OM("render_lost", rM, MM, !0, SM)
+          CAPPED_COUNTS_VISIT_CAP: YV
+        }] = await Promise.all([Promise.resolve().then((() => xV(3268))), xV.e(218).then((() => xV(35139)))]);
+        JV("render_lost", eV, VV, !0, YV)
       }))
     }
 
-    function kr(MM) {
+    function ie(VV) {
       try {
-        MM()
-      } catch (rM) {
+        VV()
+      } catch (eV) {
         try {
-          console.warn(`${YM} could not send a report`, rM)
+          console.warn(`${cV} could not send a report`, eV)
         } catch {}
       }
     }
 
-    function Zr(MM, rM) {
+    function Ce(VV, eV) {
       try {
-        const iM = rM().catch((rM => {
-          console.warn(`${YM} could not send the report to ${MM}`, rM)
+        const xV = eV().catch((eV => {
+          console.warn(`${cV} could not send the report to ${VV}`, eV)
         })).finally((() => {
-          ur.delete(iM)
+          ze.delete(xV)
         }));
-        ur.add(iM)
-      } catch (iM) {
-        console.warn(`${YM} could not send the report to ${MM}`, iM)
+        ze.add(xV)
+      } catch (xV) {
+        console.warn(`${cV} could not send the report to ${VV}`, xV)
       }
     }
-    async function or(MM) {
-      let rM;
-      (0, zM.j)();
-      const iM = new Promise((iM => {
-        rM = setTimeout(iM, MM)
+    async function ae(VV) {
+      let eV;
+      (0, wV.i)();
+      const xV = new Promise((xV => {
+        eV = setTimeout(xV, VV)
       }));
-      await Promise.race([fr(), iM]), clearTimeout(rM)
+      await Promise.race([oe(), xV]), clearTimeout(eV)
     }
-    async function fr() {
-      if (await Promise.allSettled([...ur]), Cr) try {
+    async function oe() {
+      if (await Promise.allSettled([...ze]), Te) try {
         const {
-          flushClientAnalyticsEvents: MM
-        } = await Promise.resolve().then((() => iM(1568)));
-        await MM()
-      } catch (MM) {
-        console.warn(`${YM} could not send the counts`, MM)
+          flushClientAnalyticsEvents: VV
+        } = await Promise.resolve().then((() => xV(1601)));
+        await VV()
+      } catch (VV) {
+        console.warn(`${cV} could not send the counts`, VV)
       }
     }
-    async function Yr() {
-      for (; ur.size > 0;) await Promise.allSettled([...ur])
+    async function ce() {
+      for (; ze.size > 0;) await Promise.allSettled([...ze])
     }
 
-    function Nr() {
-      br.clear(), wr = 0, Cr = !1, ar = 0, Pr.clear(), tr = 0, gr.clear(), (0, mM.v)()
+    function he() {
+      Ae.clear(), Ne = 0, Te = !1, ye = 0, pe.clear(), Xe = 0, Me.clear(), (0, vV.s)()
     }
 
-    function Ar(MM) {
-      const rM = "object" === typeof MM && null !== MM ? MM.type : MM;
-      return "string" !== typeof rM ? "sky not named" : `sky ${JSON.stringify(Array.from(rM).slice(0,Sr).join(""))}`
+    function le(VV) {
+      const eV = "object" === typeof VV && null !== VV ? VV.type : VV;
+      return "string" !== typeof eV ? "sky not named" : `sky ${JSON.stringify(Array.from(eV).slice(0,Ye).join(""))}`
     }
 
-    function xr(MM, rM, iM, OM) {
-      tr += rM;
+    function Le(VV, eV, xV, JV) {
+      Xe += eV;
       for (const {
-          code: PM,
-          detail: nM
+          code: pV,
+          detail: QV
         }
-        of MM) {
-        var SM, jM, aM;
-        const MM = (0, LM.Yd)(PM),
-          rM = (0, mM.e)(PM, nM),
-          QM = null === OM || void 0 === OM ? void 0 : OM(PM, nM),
-          zM = void 0 !== (null === rM || void 0 === rM ? void 0 : rM.gpuDetails),
-          hM = zM ? null === (SM = (0, lM.y)()) || void 0 === SM ? void 0 : SM.renderer : void 0,
-          JM = zM ? ` ${(0,mM.q)()}` : "",
-          dM = Array.from([hM && `gpu ${(0,HM.b)(hM)}`, QM].filter(Boolean).join("; ")).slice(0, Or).join(""),
-          yM = `core error ${MM}${null!==(jM=null===rM||void 0===rM?void 0:rM.words)&&void 0!==jM?jM:""}${JM}${dM?`: ${dM}`:""}`,
-          EM = {
-            errorCode: String(PM),
-            detail: String(nM),
-            droppedBefore: String(tr),
-            wasmBuild: iM.wasm,
-            clientVersion: iM.client,
-            ...null === rM || void 0 === rM ? void 0 : rM.gpuDetails,
-            ...Fr(PM, nM)
+        of VV) {
+        var YV, UV, yV;
+        const VV = (0, ZV.be)(pV),
+          eV = (0, vV.c)(pV, QV),
+          nV = null === JV || void 0 === JV ? void 0 : JV(pV, QV),
+          wV = void 0 !== (null === eV || void 0 === eV ? void 0 : eV.gpuDetails),
+          kV = wV ? null === (YV = (0, jV.z)()) || void 0 === YV ? void 0 : YV.renderer : void 0,
+          bV = wV ? ` ${(0,vV.k)()}` : "",
+          EV = Array.from([kV && `gpu ${(0,rV.b)(kV)}`, nV].filter(Boolean).join("; ")).slice(0, Je).join(""),
+          BV = `core error ${VV}${null!==(UV=null===eV||void 0===eV?void 0:eV.words)&&void 0!==UV?UV:""}${bV}${EV?`: ${EV}`:""}`,
+          qV = {
+            errorCode: String(pV),
+            detail: String(QV),
+            droppedBefore: String(Xe),
+            wasmBuild: xV.wasm,
+            clientVersion: xV.client,
+            ...null === eV || void 0 === eV ? void 0 : eV.gpuDetails,
+            ...me(pV, QV)
           };
-        null !== rM && (0, mM.u)(rM) ? kr((() => {
-          console.warn(`${YM} coreError CORE-${MM}: ${yM} (not sent: the session's render warnings of its kind went)`, EM)
-        })) : vr(PM) ? kr((() => {
-          console.warn(`${YM} coreError CORE-${MM}: ${yM} (not sent: World Code's own sound or clip name, a warning as in the JS client)`, EM)
-        })) : pr({
-          kind: Xr(PM, nM),
-          code: `CORE-${MM}`,
-          site: NM,
+        null !== eV && (0, vV.r)(eV) ? ie((() => {
+          console.warn(`${cV} coreError CORE-${VV}: ${BV} (not sent: the session's render warnings of its kind went)`, qV)
+        })) : fe(pV) ? ie((() => {
+          console.warn(`${cV} coreError CORE-${VV}: ${BV} (not sent: World Code's own sound or clip name, a warning as in the JS client)`, qV)
+        })) : We({
+          kind: He(pV, QV),
+          code: `CORE-${VV}`,
+          site: hV,
           fatal: !1,
-          message: yM,
-          details: EM,
-          instance: null !== (aM = null === rM || void 0 === rM ? void 0 : rM.instance) && void 0 !== aM ? aM : Br(PM, nM)
+          message: BV,
+          details: qV,
+          instance: null !== (yV = null === eV || void 0 === eV ? void 0 : eV.instance) && void 0 !== yV ? yV : Ke(pV, QV)
         })
       }
     }
 
-    function vr(MM) {
-      if (MM !== LM.H.AudioUnknownSound && MM !== LM.H.PresentationClipUnplayable) return !1;
+    function fe(VV) {
+      if (VV !== ZV.M.AudioUnknownSound && VV !== ZV.M.PresentationClipUnplayable) return !1;
       const {
-        gameNameWithVariation: rM,
-        lobbyName: iM
-      } = (0, jM.e)();
-      return null !== rM && (!!(0, OM.m)(rM) || MM === LM.H.AudioUnknownSound && (0, SM.f)(rM, iM))
+        gameNameWithVariation: eV,
+        lobbyName: xV
+      } = (0, UV.e)();
+      return null !== eV && (!!(0, JV.l)(eV) || VV === ZV.M.AudioUnknownSound && (0, YV.f)(eV, xV))
     }
 
-    function Fr(MM, rM) {
-      if (MM !== LM.H.RenderDeviceLost) return;
-      const iM = rM >>> LM.P.LINKS_IN_FLIGHT_SHIFT & LM.P.LINKS_IN_FLIGHT_MAX,
-        OM = rM >>> LM.P.OLDEST_LINK_SHIFT & LM.P.OLDEST_LINK_MAX;
+    function me(VV, eV) {
+      if (VV !== ZV.M.RenderDeviceLost) return;
+      const xV = eV >>> ZV.Y.LINKS_IN_FLIGHT_SHIFT & ZV.Y.LINKS_IN_FLIGHT_MAX,
+        JV = eV >>> ZV.Y.OLDEST_LINK_SHIFT & ZV.Y.OLDEST_LINK_MAX;
       return {
-        linksInFlight: String(iM),
-        oldestLinkMs: String(OM * LM.P.OLDEST_LINK_UNIT_MS)
+        linksInFlight: String(xV),
+        oldestLinkMs: String(JV * ZV.Y.OLDEST_LINK_UNIT_MS)
       }
     }
 
-    function Br(MM, rM) {
-      return MM === LM.H.RenderDeviceLost && 0 !== (rM & LM.P.RESTORE_UNHELD) ? "restoreUnheld" : void 0
+    function Ke(VV, eV) {
+      return VV === ZV.M.RenderDeviceLost && 0 !== (eV & ZV.Y.RESTORE_UNHELD) ? "restoreUnheld" : void 0
     }
 
-    function Xr(MM, rM) {
-      return MM === LM.H.JobsHeapGaveUp ? "meshHeap" : (0, mM.m)(MM, rM) ? "linksReadAfterView" : (0, mM.i)(MM, rM) ? "linkCensus" : "coreError"
+    function He(VV, eV) {
+      return VV === ZV.M.JobsHeapGaveUp ? "meshHeap" : (0, vV.h)(VV, eV) ? "linksReadAfterView" : (0, vV.f)(VV, eV) ? "linkCensus" : "coreError"
     }
 
-    function Ir(MM) {
-      return (0, kM.k)(MM instanceof ZM.e ? MM.trap : MM, gM.I, gM.ab)
+    function ue(VV) {
+      return (0, iV.j)(VV instanceof CV.e ? VV.trap : VV, MV.G, MV.ab)
     }
-    const Kr = "declined=js";
+    const se = "declined=js";
 
-    function qr(MM) {
-      return MM ? {
-        labels: [Kr],
+    function Se(VV) {
+      return VV ? {
+        labels: [se],
         details: {
           declined: "js"
         }
@@ -1234,203 +1234,203 @@ export const modules = {
       }
     }
 
-    function Tr(MM, rM, iM) {
-      return cr(MM, rM, iM, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {}, !0)
+    function Ie(VV, eV, xV) {
+      return Oe(VV, eV, xV, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {}, !0)
     }
 
-    function Vr(MM, rM, iM) {
-      return cr(MM, rM, iM, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {}, !1)
+    function de(VV, eV, xV) {
+      return Oe(VV, eV, xV, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {}, !1)
     }
 
-    function cr(MM, rM, iM, OM, SM) {
+    function Oe(VV, eV, xV, JV, YV) {
       let {
-        memoryDetails: jM = {},
-        declined: aM = !1
-      } = OM;
+        memoryDetails: UV = {},
+        declined: yV = !1
+      } = JV;
       const {
-        code: PM,
-        details: nM,
-        message: QM
-      } = (0, CM.O)(MM, rM), zM = [];
-      Object.assign(nM, (0, oM.f)(MM.error)), null !== iM && (nM.trapKind = iM.kind, null !== iM.panic && (nM.panic = (0, kM.i)(iM.panic)), iM.refusedBytes > 0 && (nM.refusedAllocation = String(iM.refusedBytes)), zM.push((0, kM.o)(iM.kind, iM.refusedBytes)));
-      const LM = qr(aM);
-      return pr({
+        code: pV,
+        details: QV,
+        message: nV
+      } = (0, TV.M)(VV, eV), wV = [];
+      Object.assign(QV, (0, aV.h)(VV.error)), null !== xV && (QV.trapKind = xV.kind, null !== xV.panic && (QV.panic = (0, iV.i)(xV.panic)), xV.refusedBytes > 0 && (QV.refusedAllocation = String(xV.refusedBytes)), wV.push((0, iV.l)(xV.kind, xV.refusedBytes)));
+      const ZV = Se(yV);
+      return We({
         kind: "crash",
-        code: PM,
-        site: MM.site,
-        fatal: SM,
-        message: [...zM, ...LM.labels, QM].join("; "),
+        code: pV,
+        site: VV.site,
+        fatal: YV,
+        message: [...wV, ...ZV.labels, nV].join("; "),
         details: {
-          ...nM,
-          ...LM.details,
-          ...jM
+          ...QV,
+          ...ZV.details,
+          ...UV
         },
-        error: MM.error
+        error: VV.error
       })
     }
 
-    function Mi(MM, rM, iM) {
-      return pr({
+    function Vx(VV, eV, xV) {
+      return We({
         kind: "unsupported",
-        code: rM,
-        site: AM,
+        code: eV,
+        site: lV,
         fatal: !0,
-        message: iM,
+        message: xV,
         details: {
           ...arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
-          cause: MM,
-          status: rM
+          cause: VV,
+          status: eV
         },
         screen: {
-          text: (0, sM.p)(MM),
-          reload: "download" === MM
+          text: (0, gV.k)(VV),
+          reload: "download" === VV
         }
       })
     }
-    const ri = {
+    const ex = {
       unsupported: "unsupported_js_fallback",
       blockedAfterLoss: "blocked_after_loss",
       noContext: "no_context_js_fallback"
     };
 
-    function ii(MM, rM, iM) {
-      let OM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-      return pr({
+    function xx(VV, eV, xV) {
+      let JV = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+      return We({
         kind: "unsupportedFallback",
-        code: ri[rM],
-        site: AM,
+        code: ex[eV],
+        site: lV,
         fatal: !1,
-        message: iM,
+        message: xV,
         details: {
-          ...OM,
-          cause: MM,
+          ...JV,
+          cause: VV,
           status: "unsupported",
-          decline: rM,
+          decline: eV,
           fallback: "js"
         }
       })
     }
 
-    function Oi(MM, rM, iM) {
-      return pr({
+    function Jx(VV, eV, xV) {
+      return We({
         kind: "recovered",
-        code: "reprobed" === MM ? "no_backend_reprobed" : "no_backend_wasm_reload",
-        site: AM,
+        code: "reprobed" === VV ? "no_backend_reprobed" : "no_backend_wasm_reload",
+        site: lV,
         fatal: !1,
-        message: iM,
+        message: xV,
         details: {
           ...arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
-          decline: rM,
-          step: MM
+          decline: eV,
+          step: VV
         }
       })
     }
 
-    function Si(MM) {
-      return pr({
+    function Yx(VV) {
+      return We({
         kind: "recovered",
         code: "WEBGPU-unknownLimits",
-        site: ir,
+        site: xe,
         fatal: !1,
         message: "WebGPU dropped required limits the browser doesn't name",
         details: {
-          limits: MM.join(",")
+          limits: VV.join(",")
         }
       })
     }
-    const ji = "reload=wasm";
+    const Ux = "reload=wasm";
 
-    function ai(MM, rM, iM, OM) {
-      const SM = qr("declined" === OM),
-        jM = "wasmReload" === OM ? [ji] : SM.labels;
-      return pr({
+    function yx(VV, eV, xV, JV) {
+      const YV = Se("declined" === JV),
+        UV = "wasmReload" === JV ? [Ux] : YV.labels;
+      return We({
         kind: "unsupported",
-        code: rM,
-        site: AM,
+        code: eV,
+        site: lV,
         fatal: !1,
-        message: [...jM, iM].join("; "),
+        message: [...UV, xV].join("; "),
         details: {
-          cause: MM,
-          status: rM,
-          fallback: "wasmReload" === OM ? "wasmReload" : "js",
-          ...SM.details
+          cause: VV,
+          status: eV,
+          fallback: "wasmReload" === JV ? "wasmReload" : "js",
+          ...YV.details
         }
       })
     }
 
-    function Pi() {
+    function px() {
       const {
-        code: MM,
-        message: rM
-      } = DM.d;
-      return pr({
+        code: VV,
+        message: eV
+      } = DV.d;
+      return We({
         kind: "unstreamedLoad",
-        code: MM,
-        site: AM,
+        code: VV,
+        site: lV,
         fatal: !1,
-        message: rM
+        message: eV
       })
     }
-    class ni extends Error {
+    class Qx extends Error {
       constructor() {
         super("the shell's page can't run the Turnstile check: join from /play"), this.name = "TurnstilePageError"
       }
     }
 
-    function Qi(MM) {
-      return MM instanceof bM.n ? 0 === MM.code ? "JOIN-matchmake" : `JOIN-${MM.code}` : MM instanceof bM.d ? 0 === MM.code ? `JOIN-${MM.stage}` : `JOIN-${MM.stage}-${MM.code}` : MM instanceof eM.b ? "JOIN-gameCode" : MM instanceof ni ? "JOIN-turnstilePage" : MM instanceof bM.w ? "JOIN-trafficCheck" : MM instanceof UM.i ? "JOIN-timeout" : "JOIN-network"
+    function nx(VV) {
+      return VV instanceof AV.n ? 0 === VV.code ? "JOIN-matchmake" : `JOIN-${VV.code}` : VV instanceof AV.c ? 0 === VV.code ? `JOIN-${VV.stage}` : `JOIN-${VV.stage}-${VV.code}` : VV instanceof PV.e ? "JOIN-gameCode" : VV instanceof Qx ? "JOIN-turnstilePage" : VV instanceof AV.u ? "JOIN-trafficCheck" : VV instanceof tV.d ? "JOIN-timeout" : "JOIN-network"
     }
 
-    function zi(MM, rM) {
-      const iM = (0, oM.k)(MM),
-        OM = {
-          wasmBuild: rM.wasm,
-          clientVersion: rM.client
+    function wx(VV, eV) {
+      const xV = (0, aV.m)(VV),
+        JV = {
+          wasmBuild: eV.wasm,
+          clientVersion: eV.client
         },
-        SM = MM instanceof ni ? {
-          text: (0, sM.j)(),
+        YV = VV instanceof Qx ? {
+          text: (0, gV.i)(),
           reload: !1
         } : void 0,
-        jM = (0, wM.e)(MM),
-        aM = "expected" !== jM;
-      return pr({
+        UV = (0, NV.f)(VV),
+        yV = "expected" !== UV;
+      return We({
         kind: "join",
-        code: Qi(MM),
-        site: xM,
+        code: nx(VV),
+        site: LV,
         fatal: !0,
-        message: iM,
-        details: OM,
-        error: MM,
-        screen: SM,
-        toTransport: aM,
-        instance: jM
+        message: xV,
+        details: JV,
+        error: VV,
+        screen: YV,
+        toTransport: yV,
+        instance: UV
       })
     }
 
-    function Li(MM, rM, iM) {
-      var OM;
-      const SM = (0, wM.e)(MM),
-        jM = {
-          cause: (MM instanceof bM.d || MM instanceof bM.n) && null !== (OM = MM.serverText) && void 0 !== OM ? OM : "",
-          sinceJoinStart: (0, EM.c)(iM.sinceJoinStartMs),
-          game: iM.game,
-          ...(0, EM.h)(),
-          wasmBuild: rM.wasm,
-          clientVersion: rM.client
+    function Zx(VV, eV, xV) {
+      var JV;
+      const YV = (0, NV.f)(VV),
+        UV = {
+          cause: (VV instanceof AV.c || VV instanceof AV.n) && null !== (JV = VV.serverText) && void 0 !== JV ? JV : "",
+          sinceJoinStart: (0, qV.c)(xV.sinceJoinStartMs),
+          game: xV.game,
+          ...(0, qV.h)(),
+          wasmBuild: eV.wasm,
+          clientVersion: eV.client
         };
-      return pr({
+      return We({
         kind: "pageJoin",
-        code: Qi(MM),
-        site: xM,
+        code: nx(VV),
+        site: LV,
         fatal: !1,
-        message: (0, oM.k)(MM),
-        details: jM,
-        error: MM,
-        toTransport: "unrecognised" === SM,
-        instance: SM
+        message: (0, aV.m)(VV),
+        details: UV,
+        error: VV,
+        toTransport: "unrecognised" === YV,
+        instance: YV
       })
     }
-    const mi = {
+    const vx = {
       renewed: {
         code: "CORE-seatRenewed",
         message: "the early seat outlasted the room's hold, so the join reserved another"
@@ -1449,699 +1449,699 @@ export const modules = {
       }
     };
 
-    function Hi(MM, rM) {
+    function rx(VV, eV) {
       let {
-        unused: iM,
-        answered: OM,
-        heldMs: SM
-      } = MM;
+        unused: xV,
+        answered: JV,
+        heldMs: YV
+      } = VV;
       const {
-        code: jM,
-        message: aM
-      } = mi[iM], PM = {
-        unused: iM,
-        answered: String(OM),
-        heldMs: String(SM),
-        wasmBuild: rM.wasm,
-        clientVersion: rM.client
+        code: UV,
+        message: yV
+      } = vx[xV], pV = {
+        unused: xV,
+        answered: String(JV),
+        heldMs: String(YV),
+        wasmBuild: eV.wasm,
+        clientVersion: eV.client
       };
-      return pr({
+      return We({
         kind: "seat",
-        code: jM,
-        site: xM,
+        code: UV,
+        site: LV,
         fatal: !1,
-        message: aM,
-        details: PM
+        message: yV,
+        details: pV
       })
     }
 
-    function Ji(MM, rM, iM) {
-      var OM;
-      let SM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null !== (OM = MM.name) && void 0 !== OM ? OM : String(MM.code);
-      const jM = {
-          closeCode: String(MM.code),
-          recognised: String(null !== MM.name),
-          closeReason: iM.closeReason,
-          sinceJoined: (0, EM.c)(iM.sinceJoinedMs),
-          game: iM.game,
-          ...(0, EM.h)(),
-          wasmBuild: rM.wasm,
-          clientVersion: rM.client
+    function kx(VV, eV, xV) {
+      var JV;
+      let YV = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null !== (JV = VV.name) && void 0 !== JV ? JV : String(VV.code);
+      const UV = {
+          closeCode: String(VV.code),
+          recognised: String(null !== VV.name),
+          closeReason: xV.closeReason,
+          sinceJoined: (0, qV.c)(xV.sinceJoinedMs),
+          game: xV.game,
+          ...(0, qV.h)(),
+          wasmBuild: eV.wasm,
+          clientVersion: eV.client
         },
-        aM = null === MM.name && !(0, EM.d)(MM.code);
-      return pr({
+        yV = null === VV.name && !(0, qV.d)(VV.code);
+      return We({
         kind: "disconnect",
-        code: SM,
-        site: vM,
+        code: YV,
+        site: fV,
         fatal: !1,
         message: "Left room",
-        details: jM,
-        toTransport: aM
+        details: UV,
+        toTransport: yV
       })
     }
 
-    function di(MM, rM) {
-      const iM = {
-        ...(0, hM.i)(MM),
-        wasmBuild: rM.wasm,
-        clientVersion: rM.client
+    function bx(VV, eV) {
+      const xV = {
+        ...(0, kV.l)(VV),
+        wasmBuild: eV.wasm,
+        clientVersion: eV.client
       };
-      return pr({
+      return We({
         kind: "disconnect",
-        code: `reconnect-${MM.reason}`,
-        site: xM,
+        code: `reconnect-${VV.reason}`,
+        site: LV,
         fatal: !1,
         message: "Reconnect failed",
-        details: iM
+        details: xV
       })
     }
 
-    function yi(MM) {
-      return MM.error instanceof uM.e ? `MODEL-${MM.error.status}` : MM.error instanceof RM.h ? "MODEL-ring" : "MODEL-network"
+    function Ex(VV) {
+      return VV.error instanceof zV.f ? `MODEL-${VV.error.status}` : VV.error instanceof GV.l ? "MODEL-ring" : "MODEL-network"
     }
 
-    function li(MM, rM) {
-      const iM = yi(MM),
-        OM = `model file ${MM.file} ${MM.startup?"(startup) ":""}could not load`,
-        SM = {
-          file: String(MM.file),
-          url: MM.url,
-          wasmBuild: rM.wasm,
-          clientVersion: rM.client
+    function Bx(VV, eV) {
+      const xV = Ex(VV),
+        JV = `model file ${VV.file} ${VV.startup?"(startup) ":""}could not load`,
+        YV = {
+          file: String(VV.file),
+          url: VV.url,
+          wasmBuild: eV.wasm,
+          clientVersion: eV.client
         };
-      return pr({
-        kind: MM.startup ? "model" : "modelLate",
-        code: iM,
-        site: FM,
-        fatal: MM.startup,
-        message: OM,
-        details: SM,
-        error: MM.error
+      return We({
+        kind: VV.startup ? "model" : "modelLate",
+        code: xV,
+        site: mV,
+        fatal: VV.startup,
+        message: JV,
+        details: YV,
+        error: VV.error
       })
     }
 
-    function Ei(MM, rM) {
-      const iM = {
-        wasmBuild: rM.wasm,
-        clientVersion: rM.client
+    function jx(VV, eV) {
+      const xV = {
+        wasmBuild: eV.wasm,
+        clientVersion: eV.client
       };
-      return pr({
+      return We({
         kind: "model",
         code: "CORE-modelWorkerPool",
-        site: BM,
+        site: KV,
         fatal: !1,
         message: "the model workers could not start: no model can build",
-        details: iM,
-        error: MM
+        details: xV,
+        error: VV
       })
     }
 
-    function Ui(MM, rM, iM) {
-      const OM = {
-        delayMs: String(rM),
-        wasmBuild: iM.wasm,
-        clientVersion: iM.client
+    function qx(VV, eV, xV) {
+      const JV = {
+        delayMs: String(eV),
+        wasmBuild: xV.wasm,
+        clientVersion: xV.client
       };
-      MM instanceof uM.e && (OM.status = String(MM.status));
-      return pr({
+      VV instanceof zV.f && (JV.status = String(VV.status));
+      return We({
         kind: "recovered",
         code: "CORE-modelsModuleRetry",
-        site: BM,
+        site: KV,
         fatal: !1,
         message: "the models module didn't download: fetching it again",
-        details: OM,
-        error: MM
+        details: JV,
+        error: VV
       })
     }
 
-    function Gi(MM, rM) {
-      const iM = {
-        wasmBuild: rM.wasm,
-        clientVersion: rM.client
+    function tx(VV, eV) {
+      const xV = {
+        wasmBuild: eV.wasm,
+        clientVersion: eV.client
       };
-      return pr({
+      return We({
         kind: "recovered",
         code: "CORE-dracoDecoder",
-        site: BM,
+        site: KV,
         fatal: !1,
         message: "the Draco decoder did not load: the Draco files waiting on it failed",
-        details: iM,
-        error: MM
+        details: xV,
+        error: VV
       })
     }
 
-    function Ci(MM, rM) {
-      const iM = {
-        wasmBuild: rM.wasm,
-        clientVersion: rM.client
+    function Fx(VV, eV) {
+      const xV = {
+        wasmBuild: eV.wasm,
+        clientVersion: eV.client
       };
-      return pr({
+      return We({
         kind: "worldgenLoad",
         code: "CORE-worldgenLoad",
-        site: CM.I,
+        site: TV.H,
         fatal: !1,
         message: "world-gen worker code could not load",
-        details: iM,
-        error: MM
+        details: xV,
+        error: VV
       })
     }
 
-    function ei(MM, rM) {
-      const iM = {
-        wasmBuild: rM.wasm,
-        clientVersion: rM.client
+    function Tx(VV, eV) {
+      const xV = {
+        wasmBuild: eV.wasm,
+        clientVersion: eV.client
       };
-      return pr({
+      return We({
         kind: "texturePackLoad",
         code: "CORE-texturePackLoad",
-        site: VM,
+        site: dV,
         fatal: !1,
         message: "texture pack feed code could not load",
-        details: iM,
-        error: MM
+        details: xV,
+        error: VV
       })
     }
 
-    function bi(MM, rM, iM, OM) {
-      const SM = {
-        wasmBuild: OM.wasm,
-        clientVersion: OM.client
+    function Px(VV, eV, xV, JV) {
+      const YV = {
+        wasmBuild: JV.wasm,
+        clientVersion: JV.client
       };
-      return pr({
+      return We({
         kind: "texturePackKeptOut",
-        code: (0, QM.e)("wasm", MM, rM),
-        site: cM,
+        code: (0, nV.c)("wasm", VV, eV),
+        site: OV,
         fatal: !1,
-        message: rM.detail,
-        details: SM,
-        error: iM
+        message: eV.detail,
+        details: YV,
+        error: xV
       })
     }
 
-    function wi(MM, rM) {
+    function Ax(VV, eV) {
       const {
-        frames: iM,
-        acks: OM,
-        mask: SM,
-        outcome: jM
-      } = MM, aM = {
-        frames: String(iM),
-        acks: String(OM),
-        mask: String(SM),
-        outcome: null !== jM && void 0 !== jM ? jM : "resynced",
-        wasmBuild: rM.wasm,
-        clientVersion: rM.client
+        frames: xV,
+        acks: JV,
+        mask: YV,
+        outcome: UV
+      } = VV, yV = {
+        frames: String(xV),
+        acks: String(JV),
+        mask: String(YV),
+        outcome: null !== UV && void 0 !== UV ? UV : "resynced",
+        wasmBuild: eV.wasm,
+        clientVersion: eV.client
       };
-      return pr({
+      return We({
         kind: "recovered",
-        code: "rejoined" === jM ? "CORE-eventOverflowRejoin" : "failed" === jM ? "CORE-eventOverflowFailed" : "CORE-eventOverflow",
-        site: qM,
+        code: "rejoined" === UV ? "CORE-eventOverflowRejoin" : "failed" === UV ? "CORE-eventOverflowFailed" : "CORE-eventOverflow",
+        site: SV,
         fatal: !1,
-        message: `the event buffer refused records in ${iM} frames`,
-        details: aM
+        message: `the event buffer refused records in ${xV} frames`,
+        details: yV
       })
     }
 
-    function ti(MM, rM, iM) {
-      return pr({
+    function Nx(VV, eV, xV) {
+      return We({
         kind: "recovered",
         code: "CORE-workerLost",
-        site: MM,
+        site: VV,
         fatal: !1,
-        message: `a ${MM} worker was lost`,
+        message: `a ${VV} worker was lost`,
         details: {
-          reason: rM,
-          wasmBuild: iM.wasm,
-          clientVersion: iM.client
+          reason: eV,
+          wasmBuild: xV.wasm,
+          clientVersion: xV.client
         }
       })
     }
 
-    function gi(MM, rM, iM, OM) {
-      const SM = {
-          reason: MM,
-          pageBuild: OM.build,
-          pageAgeMin: String(Math.floor(OM.ageMs / 6e4)),
-          wasmBuild: iM.wasm,
-          clientVersion: iM.client
+    function Xx(VV, eV, xV, JV) {
+      const YV = {
+          reason: VV,
+          pageBuild: JV.build,
+          pageAgeMin: String(Math.floor(JV.ageMs / 6e4)),
+          wasmBuild: xV.wasm,
+          clientVersion: xV.client
         },
-        jM = rM ? "a world-gen worker's code did not load" : "a world-gen worker was lost";
-      return pr({
+        UV = eV ? "a world-gen worker's code did not load" : "a world-gen worker was lost";
+      return We({
         kind: "recovered",
         code: "CORE-worldgenWorkerLost",
-        site: CM.I,
+        site: TV.H,
         fatal: !1,
-        message: jM,
-        details: SM
+        message: UV,
+        details: YV
       })
     }
 
-    function ui(MM, rM, iM) {
-      const OM = {
-        wasmBuild: iM.wasm,
-        clientVersion: iM.client
+    function Mx(VV, eV, xV) {
+      const JV = {
+        wasmBuild: xV.wasm,
+        clientVersion: xV.client
       };
-      return pr({
+      return We({
         kind: "recovered",
-        code: MM,
-        site: CM.t,
+        code: VV,
+        site: TV.p,
         fatal: !1,
-        message: rM,
-        details: OM
+        message: eV,
+        details: JV
       })
     }
 
-    function Ri(MM, rM) {
-      const iM = {
-        lastReason: MM,
-        wasmBuild: rM.wasm,
-        clientVersion: rM.client
+    function zx(VV, eV) {
+      const xV = {
+        lastReason: VV,
+        wasmBuild: eV.wasm,
+        clientVersion: eV.client
       };
-      return pr({
+      return We({
         kind: "recovered",
         code: "CORE-worldgenGaveUp",
-        site: CM.I,
+        site: TV.H,
         fatal: !1,
         message: "no world-gen worker generated: chunks come whole",
-        details: iM
+        details: xV
       })
     }
 
-    function Wi(MM, rM, iM) {
-      return pr({
+    function Gx(VV, eV, xV) {
+      return We({
         kind: "recovered",
         code: "CORE-memoryShed",
-        site: CM.p,
+        site: TV.l,
         fatal: !1,
-        message: `${(0,tM.E)(MM)}: the session shed load`,
+        message: `${(0,XV.y)(VV)}: the session shed load`,
         details: {
-          cause: MM,
-          ...rM,
-          wasmBuild: iM.wasm,
-          clientVersion: iM.client
+          cause: VV,
+          ...eV,
+          wasmBuild: xV.wasm,
+          clientVersion: xV.client
         }
       })
     }
 
-    function si(MM, rM, iM, OM) {
-      var SM, jM;
-      const aM = (0, mM.r)(),
-        PM = {
-          game: MM,
-          cause: rM,
-          census: null === iM ? "none" : JSON.stringify(iM),
-          gpu: null !== (SM = null === (jM = (0, lM.y)()) || void 0 === jM ? void 0 : jM.renderer) && void 0 !== SM ? SM : "",
-          renderWarned: String(aM),
-          browser: (0, mM.q)(),
-          wasmBuild: OM.wasm,
-          clientVersion: OM.client
+    function Wx(VV, eV, xV, JV) {
+      var YV, UV;
+      const yV = (0, vV.o)(),
+        pV = {
+          game: VV,
+          cause: eV,
+          census: null === xV ? "none" : JSON.stringify(xV),
+          gpu: null !== (YV = null === (UV = (0, jV.z)()) || void 0 === UV ? void 0 : UV.renderer) && void 0 !== YV ? YV : "",
+          renderWarned: String(yV),
+          browser: (0, vV.k)(),
+          wasmBuild: JV.wasm,
+          clientVersion: JV.client
         },
-        nM = `first view drew no whole terrain in ${pM.c/1e3} s, ${rM}${aM?", render warned":""}`;
-      return pr({
+        QV = `first view drew no whole terrain in ${WV.e/1e3} s, ${eV}${yV?", render warned":""}`;
+      return We({
         kind: "noTerrain",
         code: "CORE-firstViewNoTerrain",
-        site: Mr,
+        site: Ve,
         fatal: !1,
-        message: nM,
-        details: PM
+        message: QV,
+        details: pV
       })
     }
 
-    function Di(MM, rM, iM, OM, SM) {
-      const jM = (0, JM.e)(),
-        aM = (0, JM.d)(MM, rM, iM, OM, jM),
-        PM = {
-          gpuModel: jM,
-          wasmBuild: SM.wasm,
-          clientVersion: SM.client
+    function Rx(VV, eV, xV, JV, YV) {
+      const UV = (0, bV.f)(),
+        yV = (0, bV.d)(VV, eV, xV, JV, UV),
+        pV = {
+          gpuModel: UV,
+          wasmBuild: YV.wasm,
+          clientVersion: YV.client
         };
-      return pr({
+      return We({
         kind: "mainStall",
         code: "CORE-mainStall",
-        site: rr,
+        site: ee,
         fatal: !1,
-        message: aM,
-        details: PM
+        message: yV,
+        details: pV
       })
     }
 
-    function ki(MM, rM, iM) {
-      return pr({
+    function gx(VV, eV, xV) {
+      return We({
         kind: "recovered",
         code: "CORE-workerStartTimeout",
-        site: MM,
+        site: VV,
         fatal: !1,
-        message: `a ${MM} worker did not start`,
+        message: `a ${VV} worker did not start`,
         details: {
-          waitedMs: String(Math.round(rM)),
-          wasmBuild: iM.wasm,
-          clientVersion: iM.client
+          waitedMs: String(Math.round(eV)),
+          wasmBuild: xV.wasm,
+          clientVersion: xV.client
         }
       })
     }
 
-    function Zi(MM, rM, iM) {
-      return pr({
+    function Dx(VV, eV, xV) {
+      return We({
         kind: "recovered",
         code: "CORE-replayFault",
-        site: MM,
+        site: VV,
         fatal: !1,
-        message: `the replay's ${MM} failed`,
+        message: `the replay's ${VV} failed`,
         details: {
-          wasmBuild: iM.wasm,
-          clientVersion: iM.client
+          wasmBuild: xV.wasm,
+          clientVersion: xV.client
         },
-        error: rM
+        error: eV
       })
     }
-    const oi = {
+    const ix = {
       lost: "render device was lost",
       frames_refused: "render device refused a frame",
       start_failed: "renderer couldn't start",
       pipeline_failed: "renderer's pipeline failed"
     };
 
-    function fi(MM) {
-      if (0 === MM) return "none";
-      const rM = [60, 600, 3600].find((rM => MM < rM));
-      return void 0 === rM ? "ge3600" : `lt${rM}`
+    function Cx(VV) {
+      if (0 === VV) return "none";
+      const eV = [60, 600, 3600].find((eV => VV < eV));
+      return void 0 === eV ? "ge3600" : `lt${eV}`
     }
 
-    function Yi(MM, rM) {
-      return null === MM ? "unbound" : (0, dM.i)(rM - MM)
+    function ax(VV, eV) {
+      return null === VV ? "unbound" : (0, EV.h)(eV - VV)
     }
 
-    function Ni(MM, rM) {
-      let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : performance.now();
-      return [0 !== (MM & LM.P.RESTORE_UNHELD) ? "restore unheld" : "", 0 !== (MM & LM.P.LINKS_RUNNING) ? "links running" : "", `frames ${(0,HM.b)(fi(MM&LM.P.FRAMES))}`, `up ${(0,HM.b)(Yi(rM,iM))}`].filter(Boolean).join(", ")
+    function ox(VV, eV) {
+      let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : performance.now();
+      return [0 !== (VV & ZV.Y.RESTORE_UNHELD) ? "restore unheld" : "", 0 !== (VV & ZV.Y.LINKS_RUNNING) ? "links running" : "", `frames ${(0,rV.b)(Cx(VV&ZV.Y.FRAMES))}`, `up ${(0,rV.b)(ax(eV,xV))}`].filter(Boolean).join(", ")
     }
 
-    function Ai(MM, rM, iM) {
-      const OM = "lost" === rM && void 0 !== iM ? ` (${iM})` : "";
-      return `the ${MM} ${oi[rM]}${OM}`
+    function cx(VV, eV, xV) {
+      const JV = "lost" === eV && void 0 !== xV ? ` (${xV})` : "";
+      return `the ${VV} ${ix[eV]}${JV}`
     }
-    const xi = {
+    const hx = {
       adapter: null,
       boundAtMs: null,
       indirectHangs: null,
       restoresSkipped: null
     };
 
-    function vi(MM, rM, iM, OM) {
-      var SM;
+    function lx(VV, eV, xV, JV) {
+      var YV;
       let {
-        restoreLost: jM = !1,
-        adapterRemembered: aM = !1
-      } = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {}, PM = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : performance.now();
-      const nM = null === iM || void 0 === iM ? void 0 : iM.message,
-        QM = "pipeline_failed" === rM ? rM : iM instanceof GM.h ? "timeout" : (0, dM.s)("frames_refused" === rM, "string" === typeof nM ? nM : ""),
-        zM = null === OM.boundAtMs ? "unbound" : `up${(0,dM.e)(PM-OM.boundAtMs)}`,
-        LM = null === OM.adapter ? "no adapter" : (0, dM.o)(OM.adapter),
-        mM = `${!0===OM.indirectHangs?" ih":""}${!0===OM.restoresSkipped?" nr":""}${jM?" rl":""}${aM?" ar":""}`,
-        HM = `${QM} ${(0,GM.k)()?"hidden":"visible"} ${zM}${mM} ${LM}`;
-      if ("webgpu" !== MM || "lost" !== rM && "frames_refused" !== rM) return {
-        detail: HM,
+        restoreLost: UV = !1,
+        adapterRemembered: yV = !1
+      } = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {}, pV = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : performance.now();
+      const QV = null === xV || void 0 === xV ? void 0 : xV.message,
+        nV = "pipeline_failed" === eV ? eV : xV instanceof FV.i ? "timeout" : (0, EV.p)("frames_refused" === eV, "string" === typeof QV ? QV : ""),
+        wV = null === JV.boundAtMs ? "unbound" : `up${(0,EV.g)(pV-JV.boundAtMs)}`,
+        ZV = null === JV.adapter ? "no adapter" : (0, EV.m)(JV.adapter),
+        vV = `${!0===JV.indirectHangs?" ih":""}${!0===JV.restoresSkipped?" nr":""}${UV?" rl":""}${yV?" ar":""}`,
+        rV = `${nV} ${(0,FV.j)()?"hidden":"visible"} ${wV}${vV} ${ZV}`;
+      if ("webgpu" !== VV || "lost" !== eV && "frames_refused" !== eV) return {
+        detail: rV,
         count: void 0
       };
       return {
-        detail: HM,
+        detail: rV,
         count: {
           errorKind: "render_lost",
-          error: new Error(HM),
-          code: (0, dM.w)(QM, null !== (SM = OM.boundAtMs) && void 0 !== SM ? SM : PM, PM).code,
+          error: new Error(rV),
+          code: (0, EV.x)(nV, null !== (YV = JV.boundAtMs) && void 0 !== YV ? YV : pV, pV).code,
           fields: {
-            renderBackend: fM.b.webgpu
+            renderBackend: oV.b.webgpu
           }
         }
       }
     }
 
-    function Fi(MM, rM, iM) {
+    function Lx(VV, eV, xV) {
       const {
-        count: OM
-      } = vi("webgpu", MM, rM, iM);
-      void 0 !== OM && sr(OM)
+        count: JV
+      } = lx("webgpu", VV, eV, xV);
+      void 0 !== JV && ge(JV)
     }
-    const Bi = {
+    const fx = {
       samples: null,
       sunShadows: null,
       renderDistance: null
     };
 
-    function Xi(MM) {
-      var rM;
-      return null !== (rM = MM instanceof Error ? MM.reason : void 0) && void 0 !== rM ? rM : ""
+    function mx(VV) {
+      var eV;
+      return null !== (eV = VV instanceof Error ? VV.reason : void 0) && void 0 !== eV ? eV : ""
     }
 
-    function Ii(MM, rM, OM) {
-      var SM, jM, aM, nM, QM;
+    function Kx(VV, eV, JV) {
+      var YV, UV, yV, QV, nV;
       let {
-        from: zM,
-        cause: LM = "lost",
-        restoreLost: hM = !1,
-        adapterRemembered: JM = !1,
-        error: lM,
-        context: EM = xi,
-        session: UM = Bi
-      } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {}, GM = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : performance.now();
+        from: wV,
+        cause: ZV = "lost",
+        restoreLost: kV = !1,
+        adapterRemembered: bV = !1,
+        error: jV,
+        context: qV = hx,
+        session: tV = fx
+      } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {}, FV = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : performance.now();
       const {
-        detail: CM,
-        count: eM
-      } = vi(MM, LM, lM, EM, {
-        restoreLost: hM,
-        adapterRemembered: JM
-      }, GM), bM = {
-        reloadFrom: null !== zM && void 0 !== zM ? zM : "",
-        losses: String(rM),
-        cause: LM,
-        detail: CM,
-        vendor: null !== (SM = null === (jM = EM.adapter) || void 0 === jM ? void 0 : jM.vendor) && void 0 !== SM ? SM : "",
-        architecture: null !== (aM = null === (nM = EM.adapter) || void 0 === nM ? void 0 : nM.architecture) && void 0 !== aM ? aM : "",
-        indirectHangs: String(EM.indirectHangs),
-        restoresSkipped: String(EM.restoresSkipped),
-        restoreLost: String(hM),
-        adapterRemembered: String(JM),
-        lossReason: Xi(lM),
-        samples: String(UM.samples),
-        sunShadows: String(UM.sunShadows),
-        renderDistance: String(UM.renderDistance),
-        gpuFamily: null !== (QM = (0, PM.e)()) && void 0 !== QM ? QM : "",
-        browser: (0, mM.q)(),
-        siteUsed: yM.siteUsed,
-        wasmBuild: OM.wasm,
-        clientVersion: OM.client
-      }, wM = "webgpu" !== MM && void 0 !== zM ? function(MM, rM, iM, OM) {
-        return `: ${MM}, ${rM?"restore lost":"not restored"}, up ${(0,HM.b)(Yi(iM,OM))}`
-      }(zM, hM, EM.boundAtMs, GM) : "", tM = `${Ai(MM,LM)}${wM}`, gM = pr({
+        detail: TV,
+        count: PV
+      } = lx(VV, ZV, jV, qV, {
+        restoreLost: kV,
+        adapterRemembered: bV
+      }, FV), AV = {
+        reloadFrom: null !== wV && void 0 !== wV ? wV : "",
+        losses: String(eV),
+        cause: ZV,
+        detail: TV,
+        vendor: null !== (YV = null === (UV = qV.adapter) || void 0 === UV ? void 0 : UV.vendor) && void 0 !== YV ? YV : "",
+        architecture: null !== (yV = null === (QV = qV.adapter) || void 0 === QV ? void 0 : QV.architecture) && void 0 !== yV ? yV : "",
+        indirectHangs: String(qV.indirectHangs),
+        restoresSkipped: String(qV.restoresSkipped),
+        restoreLost: String(kV),
+        adapterRemembered: String(bV),
+        lossReason: mx(jV),
+        samples: String(tV.samples),
+        sunShadows: String(tV.sunShadows),
+        renderDistance: String(tV.renderDistance),
+        gpuFamily: null !== (nV = (0, pV.d)()) && void 0 !== nV ? nV : "",
+        browser: (0, vV.k)(),
+        siteUsed: BV.siteUsed,
+        wasmBuild: JV.wasm,
+        clientVersion: JV.client
+      }, NV = "webgpu" !== VV && void 0 !== wV ? function(VV, eV, xV, JV) {
+        return `: ${VV}, ${eV?"restore lost":"not restored"}, up ${(0,rV.b)(ax(xV,JV))}`
+      }(wV, kV, qV.boundAtMs, FV) : "", XV = `${cx(VV,ZV)}${NV}`, MV = We({
         kind: "recovered",
         code: "CORE-renderLost",
-        site: IM,
+        site: uV,
         fatal: !1,
-        message: tM,
-        details: bM,
-        error: lM,
-        countAs: eM
+        message: XV,
+        details: AV,
+        error: jV,
+        countAs: PV
       });
-      return Zr("ga", (async () => {
+      return Ce("ga", (async () => {
         const {
-          logError: rM
-        } = await Promise.resolve().then((() => iM(3241))), OM = `${dM.b["webgpu"===MM?"WebGPU":"WebGL2"]}\n Error: ${CM}`;
-        rM("warning", OM), rM("error", OM)
-      })), gM
+          logError: eV
+        } = await Promise.resolve().then((() => xV(3245))), JV = `${EV.e["webgpu"===VV?"WebGPU":"WebGL2"]}\n Error: ${TV}`;
+        eV("warning", JV), eV("error", JV)
+      })), MV
     }
 
-    function Ki(MM, rM) {
-      var iM, OM;
-      const SM = null === MM.name ? "TEXTURE-sources" : null === MM.url ? "TEXTURE-nourl" : MM.error instanceof WM.d ? `TEXTURE-${MM.error.status}` : "TEXTURE-network",
-        jM = null === MM.name ? "terrain textures could not load" : `terrain texture ${MM.name} could not load`,
-        aM = {
-          texture: null !== (iM = MM.name) && void 0 !== iM ? iM : "",
-          url: null !== (OM = MM.url) && void 0 !== OM ? OM : "",
-          wasmBuild: rM.wasm,
-          clientVersion: rM.client
+    function Hx(VV, eV) {
+      var xV, JV;
+      const YV = null === VV.name ? "TEXTURE-sources" : null === VV.url ? "TEXTURE-nourl" : VV.error instanceof RV.b ? `TEXTURE-${VV.error.status}` : "TEXTURE-network",
+        UV = null === VV.name ? "terrain textures could not load" : `terrain texture ${VV.name} could not load`,
+        yV = {
+          texture: null !== (xV = VV.name) && void 0 !== xV ? xV : "",
+          url: null !== (JV = VV.url) && void 0 !== JV ? JV : "",
+          wasmBuild: eV.wasm,
+          clientVersion: eV.client
         };
-      return pr({
+      return We({
         kind: "terrainTexture",
-        code: SM,
-        site: CM.H,
+        code: YV,
+        site: TV.E,
         fatal: !1,
-        message: jM,
-        details: aM,
-        error: MM.error
+        message: UV,
+        details: yV,
+        error: VV.error
       })
     }
-    const qi = {
+    const ux = {
       previewAnimations: {
-        site: KM,
+        site: sV,
         prefix: "ANIMS",
         name: "the previews' animations"
       },
       builtInAnimations: {
-        site: TM,
+        site: IV,
         prefix: "BUILTIN",
         name: "the built-in animations"
       }
     };
 
-    function Ti(MM, rM, iM, OM) {
+    function sx(VV, eV, xV, JV) {
       const {
-        site: SM,
-        prefix: jM,
-        name: aM
-      } = qi[MM], {
-        stage: PM,
-        error: nM
-      } = iM;
-      return pr({
-        kind: MM,
-        code: "decode" === PM ? null === nM ? `${jM}-decode` : `${jM}-trap` : nM instanceof uM.e ? `${jM}-${nM.status}` : `${jM}-network`,
-        site: SM,
+        site: YV,
+        prefix: UV,
+        name: yV
+      } = ux[VV], {
+        stage: pV,
+        error: QV
+      } = xV;
+      return We({
+        kind: VV,
+        code: "decode" === pV ? null === QV ? `${UV}-decode` : `${UV}-trap` : QV instanceof zV.f ? `${UV}-${QV.status}` : `${UV}-network`,
+        site: YV,
         fatal: !1,
-        message: "decode" === PM ? `${aM} did not decode` : `${aM} could not load`,
+        message: "decode" === pV ? `${yV} did not decode` : `${yV} could not load`,
         details: {
-          url: rM,
-          wasmBuild: OM.wasm,
-          clientVersion: OM.client
+          url: eV,
+          wasmBuild: JV.wasm,
+          clientVersion: JV.client
         },
-        error: nM
+        error: QV
       })
     }
-    const Vi = "staleBuild";
+    const Sx = "staleBuild";
 
-    function ci(MM, rM, iM) {
-      const OM = {
-          failedSite: MM.site,
-          url: MM.url,
-          from: MM.from,
-          sameBuild: String(MM.from === rM),
-          reloadMs: String(Math.max(0, Date.now() - MM.at)),
-          wasmBuild: iM.wasm,
-          clientVersion: iM.client
+    function Ix(VV, eV, xV) {
+      const JV = {
+          failedSite: VV.site,
+          url: VV.url,
+          from: VV.from,
+          sameBuild: String(VV.from === eV),
+          reloadMs: String(Math.max(0, Date.now() - VV.at)),
+          wasmBuild: xV.wasm,
+          clientVersion: xV.client
         },
-        SM = `reloaded into a newer build after ${MM.site} failed to load: ${MM.error}`;
-      return pr({
+        YV = `reloaded into a newer build after ${VV.site} failed to load: ${VV.error}`;
+      return We({
         kind: "staleBuild",
         code: "CORE-staleBuild",
-        site: Vi,
+        site: Sx,
         fatal: !1,
-        message: SM,
-        details: OM
+        message: YV,
+        details: JV
       })
     }
   },
-  41895: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => jM,
-      c: () => SM,
-      g: () => aM
+  42101: (VV, eV, xV) => {
+    xV.d(eV, {
+      d: () => UV,
+      e: () => YV,
+      i: () => yV
     });
-    var OM = iM(5200);
-    const SM = 3e4;
-    class jM {
-      constructor(MM) {
-        this.aL = MM, this.waitedMs = 0, this.lastMs = null
+    var JV = xV(5301);
+    const YV = 3e4;
+    class UV {
+      constructor(VV) {
+        this.EZ = VV, this.waitedMs = 0, this.lastMs = null
       }
-      frame(MM, rM) {
-        if (rM) return !0;
-        const iM = null === this.lastMs ? 0 : MM - this.lastMs;
-        return this.lastMs = MM, iM <= 900 && (this.waitedMs += iM), !(this.waitedMs < SM) && (this.aL(), !0)
+      frame(VV, eV) {
+        if (eV) return !0;
+        const xV = null === this.lastMs ? 0 : VV - this.lastMs;
+        return this.lastMs = VV, xV <= 900 && (this.waitedMs += xV), !(this.waitedMs < YV) && (this.EZ(), !0)
       }
     }
 
-    function aM(MM, rM) {
-      return 0 === (MM & OM.T.ChunkRequested) ? "no_chunk_request" : 0 === (MM & OM.T.ChunkStored) ? "chunk_not_stored" : 0 === (MM & OM.T.MeshLanded) ? "not_meshed" : null === rM ? "no_frame_drawn" : 0 === rM.terrainParts ? "no_terrain_parts" : rM.terrainCompiling > 0 ? "terrain_compiling" : rM.terrainOpaque + rM.terrainTransparent === 0 ? "terrain_not_drawn" : "view_incomplete"
+    function yV(VV, eV) {
+      return 0 === (VV & JV.cb.ChunkRequested) ? "no_chunk_request" : 0 === (VV & JV.cb.ChunkStored) ? "chunk_not_stored" : 0 === (VV & JV.cb.MeshLanded) ? "not_meshed" : null === eV ? "no_frame_drawn" : 0 === eV.terrainParts ? "no_terrain_parts" : eV.terrainCompiling > 0 ? "terrain_compiling" : eV.terrainOpaque + eV.terrainTransparent === 0 ? "terrain_not_drawn" : "view_incomplete"
     }
   },
-  41677: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => OM,
-      c: () => yM,
-      e: () => JM,
-      h: () => dM,
-      i: () => mM,
-      m: () => HM,
-      p: () => zM,
-      r: () => LM,
-      t: () => hM
+  41861: (VV, eV, xV) => {
+    xV.d(eV, {
+      B: () => kV,
+      e: () => JV,
+      i: () => BV,
+      k: () => bV,
+      n: () => EV,
+      p: () => vV,
+      t: () => rV,
+      v: () => wV,
+      z: () => ZV
     });
-    class OM extends Error {
-      constructor(MM) {
-        super(`the join's code did not load: ${MM instanceof Error?MM.message:String(MM)}`, {
-          cause: MM
-        }), this.request = void 0, this.name = "GameCodeLoadError", this.request = null === MM || void 0 === MM ? void 0 : MM.request
+    class JV extends Error {
+      constructor(VV) {
+        super(`the join's code did not load: ${VV instanceof Error?VV.message:String(VV)}`, {
+          cause: VV
+        }), this.request = void 0, this.name = "GameCodeLoadError", this.request = null === VV || void 0 === VV ? void 0 : VV.request
       }
     }
-    let SM = null,
-      jM = null,
-      aM = null;
-    const PM = [];
-    let nM = null;
+    let YV = null,
+      UV = null,
+      yV = null;
+    const pV = [];
+    let QV = null;
 
-    function QM(MM, rM) {
+    function nV(VV, eV) {
       try {
-        MM(rM)
-      } catch (iM) {
-        console.error("[bloxd-wasm-client] the game chunk's listener failed", iM)
+        VV(eV)
+      } catch (xV) {
+        console.error("[bloxd-wasm-client] the game chunk's listener failed", xV)
       }
     }
 
-    function zM() {
-      return nM
+    function wV() {
+      return QV
     }
 
-    function LM(MM) {
-      PM.push(MM), null !== nM && QM(MM, nM)
+    function ZV(VV) {
+      pV.push(VV), null !== QV && nV(VV, QV)
     }
 
-    function mM(MM) {
-      return SM ??= Promise.all([iM.e(84), iM.e(111), iM.e(86), iM.e(244), iM.e(89), iM.e(245), iM.e(224), iM.e(109), iM.e(264), iM.e(296), iM.e(48), iM.e(213), iM.e(232), iM.e(222), iM.e(205), iM.e(206), iM.e(170), iM.e(101), iM.e(134), iM.e(272), iM.e(68)]).then((() => iM(45248))).then((rM => {
-        rM.loadAudio(MM), nM = rM;
-        for (const MM of PM) QM(MM, rM);
-        return rM
-      })).catch((MM => {
-        throw SM = null, MM
-      })), SM
+    function vV(VV) {
+      return YV ??= Promise.all([xV.e(84), xV.e(111), xV.e(86), xV.e(244), xV.e(89), xV.e(245), xV.e(224), xV.e(109), xV.e(264), xV.e(296), xV.e(48), xV.e(213), xV.e(232), xV.e(222), xV.e(205), xV.e(206), xV.e(170), xV.e(101), xV.e(134), xV.e(272), xV.e(68)]).then((() => xV(45460))).then((eV => {
+        eV.loadAudio(VV), QV = eV;
+        for (const VV of pV) nV(VV, eV);
+        return eV
+      })).catch((VV => {
+        throw YV = null, VV
+      })), YV
     }
-    async function HM(MM, rM) {
+    async function rV(VV, eV) {
       try {
-        const iM = await mM(MM);
-        await iM.loadClientGame(rM)
-      } catch (iM) {
-        throw new OM(iM)
+        const xV = await vV(VV);
+        await xV.loadClientGame(eV)
+      } catch (xV) {
+        throw new JV(xV)
       }
     }
 
-    function hM(MM, rM) {
-      jM = {
-        running: MM,
-        shell: rM
+    function kV(VV, eV) {
+      UV = {
+        running: VV,
+        shell: eV
       }
     }
 
-    function JM() {
-      return aM
+    function bV() {
+      return yV
     }
-    async function dM(MM) {
-      const rM = jM;
-      if ((null === rM || void 0 === rM ? void 0 : rM.running) !== MM) throw new Error("the core's session has ended");
-      const iM = await mM(rM.shell.audio).catch((MM => {
-        throw new OM(MM)
+    async function EV(VV) {
+      const eV = UV;
+      if ((null === eV || void 0 === eV ? void 0 : eV.running) !== VV) throw new Error("the core's session has ended");
+      const xV = await vV(eV.shell.audio).catch((VV => {
+        throw new JV(VV)
       }));
-      if (null !== aM) return aM;
-      if (jM !== rM || MM.isStopped) throw new Error("the core stopped while the game code loaded");
-      if (aM = iM.startGameHost(MM, rM.shell), null === aM) throw new Error("the core's shared tables didn't read, so the game can't start");
-      return aM
+      if (null !== yV) return yV;
+      if (UV !== eV || VV.isStopped) throw new Error("the core stopped while the game code loaded");
+      if (yV = xV.startGameHost(VV, eV.shell), null === yV) throw new Error("the core's shared tables didn't read, so the game can't start");
+      return yV
     }
 
-    function yM() {
-      null !== aM && (null !== nM ? nM.endGameHost(aM) : aM.closeGame()), aM = null, jM = null
+    function BV() {
+      null !== yV && (null !== QV ? QV.endGameHost(yV) : yV.closeGame()), yV = null, UV = null
     }
   },
-  41800: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => OM
+  42007: (VV, eV, xV) => {
+    xV.d(eV, {
+      c: () => JV
     });
-    const OM = {
+    const JV = {
       extensions: ["ANGLE_instanced_arrays", "OES_vertex_array_object", "OES_element_index_uint", "OES_standard_derivatives"],
       limits: {
         MAX_VERTEX_ATTRIBS: 16,
@@ -2154,136 +2154,136 @@ export const modules = {
       vertexHighFloatBits: 23
     }
   },
-  41764: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => QM,
-      h: () => jM,
-      j: () => aM,
-      k: () => SM,
-      n: () => HM,
-      p: () => zM,
-      t: () => nM,
-      v: () => mM,
-      w: () => LM,
-      z: () => PM
+  41963: (VV, eV, xV) => {
+    xV.d(eV, {
+      c: () => nV,
+      e: () => UV,
+      h: () => yV,
+      k: () => YV,
+      n: () => rV,
+      o: () => wV,
+      p: () => QV,
+      t: () => vV,
+      u: () => ZV,
+      x: () => pV
     });
-    var OM = iM(1906);
-    const SM = new Uint8Array([12]),
-      jM = 2e3,
-      aM = 257;
+    var JV = xV(1908);
+    const YV = new Uint8Array([12]),
+      UV = 2e3,
+      yV = 257;
 
-    function PM(MM) {
-      const rM = new Uint8Array(4);
-      return new DataView(rM.buffer).setUint32(0, MM, !0), rM
+    function pV(VV) {
+      const eV = new Uint8Array(4);
+      return new DataView(eV.buffer).setUint32(0, VV, !0), eV
     }
-    class nM extends Error {
+    class QV extends Error {
       constructor() {
         super("the game was left while it reconnected"), this.name = "AbortError"
       }
     }
-    class QM extends Error {
-      constructor(MM, rM) {
-        let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          OM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
-          SM = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        super(MM), this.stage = rM, this.code = iM, this.serverText = OM, this.socketOpened = SM, this.name = "JoinError"
+    class nV extends Error {
+      constructor(VV, eV) {
+        let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          JV = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
+          YV = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        super(VV), this.stage = eV, this.code = xV, this.serverText = JV, this.socketOpened = YV, this.name = "JoinError"
       }
     }
-    class zM extends Error {
-      constructor(MM) {
-        super(MM), this.final = !0, this.name = "ResumeRefusedError"
+    class wV extends Error {
+      constructor(VV) {
+        super(VV), this.final = !0, this.name = "ResumeRefusedError"
       }
     }
-    class LM extends Error {
-      constructor(MM) {
-        super((0, OM.e)(MM), {
-          cause: MM
+    class ZV extends Error {
+      constructor(VV) {
+        super((0, JV.f)(VV), {
+          cause: VV
         }), this.name = "TrafficCheckError"
       }
     }
-    class mM extends Error {
-      constructor(MM, rM, iM) {
-        let OM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-        super(MM, {
-          cause: iM
-        }), this.networkLost = rM, this.httpStatus = OM, this.name = "SeatRequestError"
+    class vV extends Error {
+      constructor(VV, eV, xV) {
+        let JV = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+        super(VV, {
+          cause: xV
+        }), this.networkLost = eV, this.httpStatus = JV, this.name = "SeatRequestError"
       }
     }
-    class HM extends Error {
-      constructor(MM, rM) {
-        let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        super(MM), this.code = rM, this.serverText = iM, this.name = "MatchmakeError"
+    class rV extends Error {
+      constructor(VV, eV) {
+        let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+        super(VV), this.code = eV, this.serverText = xV, this.name = "MatchmakeError"
       }
     }
   },
-  41767: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => HM,
-      e: () => mM,
-      h: () => hM
+  41968: (VV, eV, xV) => {
+    xV.d(eV, {
+      c: () => rV,
+      f: () => vV,
+      g: () => kV
     });
-    var OM = iM(2843),
-      SM = iM(3333),
-      jM = iM(40094),
-      aM = iM(37437),
-      PM = iM(40100),
-      nM = iM(41764),
-      QM = iM(41776);
-    const zM = "seat reservation expired.",
-      LM = "early_leave";
+    var JV = xV(2919),
+      YV = xV(3336),
+      UV = xV(40258),
+      yV = xV(37633),
+      pV = xV(40264),
+      QV = xV(41963),
+      nV = xV(41977);
+    const wV = "seat reservation expired.",
+      ZV = "early_leave";
 
-    function mM(MM) {
-      if (MM instanceof aM.i) return "expected";
-      if (MM instanceof nM.v) return MM.networkLost ? "expected" : "unrecognised";
-      if (MM instanceof nM.d) {
-        if ("closed" === MM.stage && (0 === MM.code || (0, SM.d)(MM.code))) return "expected";
-        if ("roomError" === MM.stage && (MM.serverText === zM || MM.serverText === LM)) return "expected"
+    function vV(VV) {
+      if (VV instanceof yV.d) return "expected";
+      if (VV instanceof QV.t) return VV.networkLost ? "expected" : "unrecognised";
+      if (VV instanceof QV.c) {
+        if ("closed" === VV.stage && (0 === VV.code || (0, YV.d)(VV.code))) return "expected";
+        if ("roomError" === VV.stage && (VV.serverText === wV || VV.serverText === ZV)) return "expected"
       }
-      return MM instanceof nM.d || MM instanceof nM.n ? null === (0, PM.m)(MM.code).name ? "unrecognised" : "known" : (0, OM.i)(MM) ? "expected" : MM instanceof nM.w || MM instanceof QM.e ? "known" : "unrecognised"
+      return VV instanceof QV.c || VV instanceof QV.n ? null === (0, pV.l)(VV.code).name ? "unrecognised" : "known" : (0, JV.g)(VV) ? "expected" : VV instanceof QV.u || VV instanceof nV.e ? "known" : "unrecognised"
     }
 
-    function HM(MM) {
-      return MM instanceof aM.i ? "timedOut" : "expected" !== mM(MM) || (0, OM.i)(MM) || MM instanceof nM.d && 1001 === MM.code ? void 0 : "failed"
+    function rV(VV) {
+      return VV instanceof yV.d ? "timedOut" : "expected" !== vV(VV) || (0, JV.g)(VV) || VV instanceof QV.c && 1001 === VV.code ? void 0 : "failed"
     }
 
-    function hM(MM) {
-      return MM instanceof nM.d && "attach" !== MM.stage ? (0, jM.e)(MM, "closed" !== MM.stage || MM.socketOpened ? "socket" : "socket_unopened") : MM instanceof nM.v ? {
+    function kV(VV) {
+      return VV instanceof QV.c && "attach" !== VV.stage ? (0, UV.d)(VV, "closed" !== VV.stage || VV.socketOpened ? "socket" : "socket_unopened") : VV instanceof QV.t ? {
         at: "seat_lost",
-        code: MM.httpStatus
-      } : MM instanceof nM.n || MM instanceof aM.i ? (0, jM.e)(MM, MM instanceof aM.i ? MM.leg : "seat") : void 0
+        code: VV.httpStatus
+      } : VV instanceof QV.n || VV instanceof yV.d ? (0, UV.d)(VV, VV instanceof yV.d ? VV.leg : "seat") : void 0
     }
   },
-  41882: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => nM,
-      e: () => QM,
-      f: () => HM,
-      h: () => LM
+  42085: (VV, eV, xV) => {
+    xV.d(eV, {
+      d: () => QV,
+      f: () => nV,
+      h: () => rV,
+      l: () => ZV
     });
-    var OM = iM(3188),
-      SM = iM(5198),
-      jM = iM(41884),
-      aM = iM(41888),
-      PM = iM(37229);
-    const nM = 395,
-      QM = 2147483648,
-      zM = new Uint8Array(0);
-    class LM extends Error {
+    var JV = xV(3196),
+      YV = xV(5297),
+      UV = xV(42091),
+      yV = xV(42096),
+      pV = xV(37437);
+    const QV = 395,
+      nV = 2147483648,
+      wV = new Uint8Array(0);
+    class ZV extends Error {
       constructor() {
         super(...arguments), this.name = "ModelRingError"
       }
     }
-    class mM extends Error {
+    class vV extends Error {
       constructor() {
         super(...arguments), this.name = "ModelPackRefusedError"
       }
     }
-    class HM {
-      constructor(MM, rM, iM) {
-        var OM, SM, aM, PM;
-        let nM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-        this.files = MM, this.build = rM, this.onFailure = iM, this.ready = [], this.pending = new Map, this.written = new Map, this.drawn = new Map, this.undrawn = new Set, this.ML = new Map, this.keptTotal = 0, this.refusedPack = new Map, this.startupLeft = void 0, this.fetchFile = void 0, this.onWritten = void 0, this.onTaken = void 0, this.onPackFileFailed = void 0, this.refreshes = 0, this.nextSeq = 1, this.fetchFile = null !== (OM = nM.fetchFile) && void 0 !== OM ? OM : MM => (0, jM.j)(MM), this.onWritten = null !== (SM = nM.onWritten) && void 0 !== SM ? SM : null, this.onTaken = null !== (aM = nM.onTaken) && void 0 !== aM ? aM : null, this.onPackFileFailed = null !== (PM = nM.onPackFileFailed) && void 0 !== PM ? PM : null, this.startupLeft = new Set(MM.startup);
-        for (const jM of MM.startup) this.request(jM)
+    class rV {
+      constructor(VV, eV, xV) {
+        var JV, YV, yV, pV;
+        let QV = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+        this.files = VV, this.build = eV, this.onFailure = xV, this.ready = [], this.pending = new Map, this.written = new Map, this.drawn = new Map, this.undrawn = new Set, this.ZZ = new Map, this.keptTotal = 0, this.refusedPack = new Map, this.startupLeft = void 0, this.fetchFile = void 0, this.onWritten = void 0, this.onTaken = void 0, this.onPackFileFailed = void 0, this.refreshes = 0, this.nextSeq = 1, this.fetchFile = null !== (JV = QV.fetchFile) && void 0 !== JV ? JV : VV => (0, UV.i)(VV), this.onWritten = null !== (YV = QV.onWritten) && void 0 !== YV ? YV : null, this.onTaken = null !== (yV = QV.onTaken) && void 0 !== yV ? yV : null, this.onPackFileFailed = null !== (pV = QV.onPackFileFailed) && void 0 !== pV ? pV : null, this.startupLeft = new Set(VV.startup);
+        for (const UV of VV.startup) this.request(UV)
       }
       get startupDone() {
         return 0 === this.startupLeft.size
@@ -2303,649 +2303,649 @@ export const modules = {
       get keptBytes() {
         return this.keptTotal
       }
-      drawnUrl(MM) {
-        return this.drawn.get(MM)
+      drawnUrl(VV) {
+        return this.drawn.get(VV)
       }
-      request(MM) {
-        const rM = this.pending.get(MM);
-        if (!0 === (null === rM || void 0 === rM ? void 0 : rM.ask)) return;
-        const iM = this.JL(MM, !0);
-        iM.recheck = void 0 !== rM;
-        const OM = this.drawn.get(MM);
-        if (void 0 !== OM) return iM.sQ = !0, iM.recheck = !0, void this.fetch(MM, iM, OM);
-        this.fetchWanted(MM, iM)
+      request(VV) {
+        const eV = this.pending.get(VV);
+        if (!0 === (null === eV || void 0 === eV ? void 0 : eV.ask)) return;
+        const xV = this.NZ(VV, !0);
+        xV.recheck = void 0 !== eV;
+        const JV = this.drawn.get(VV);
+        if (void 0 !== JV) return xV.hn = !0, xV.recheck = !0, void this.fetch(VV, xV, JV);
+        this.fetchWanted(VV, xV)
       }
       async refresh() {
-        const MM = ++this.refreshes,
-          rM = new Set;
-        for (const aM of [this.drawn.keys(), this.written.keys(), this.pending.keys(), this.undrawn.values()])
-          for (const MM of aM) 0 === (MM & jM.f) && rM.add(MM);
-        const iM = [...rM];
-        let OM;
+        const VV = ++this.refreshes,
+          eV = new Set;
+        for (const yV of [this.drawn.keys(), this.written.keys(), this.pending.keys(), this.undrawn.values()])
+          for (const VV of yV) 0 === (VV & UV.f) && eV.add(VV);
+        const xV = [...eV];
+        let JV;
         try {
-          OM = await Promise.all(iM.map((MM => this.wanted(MM))))
+          JV = await Promise.all(xV.map((VV => this.wanted(VV))))
         } catch {
           return null
         }
-        if (MM !== this.refreshes) return null;
-        const SM = {
+        if (VV !== this.refreshes) return null;
+        const YV = {
           resent: 0,
           refetched: 0,
-          delivered: iM.filter((MM => this.drawn.has(MM))).length
+          delivered: xV.filter((VV => this.drawn.has(VV))).length
         };
-        return iM.forEach(((MM, rM) => {
+        return xV.forEach(((VV, eV) => {
           const {
-            url: iM,
-            inPlaceOf: jM
-          } = OM[rM], aM = this.pending.get(MM);
-          if (void 0 !== aM) {
-            if (aM.sQ || void 0 === aM.url) return void(aM.recheck = !0);
-            if (aM.url === iM) return;
-            SM.refetched++;
-            const rM = this.JL(MM, aM.ask);
-            return rM.recheck = aM.recheck, void this.fetch(MM, rM, iM, jM)
+            url: xV,
+            inPlaceOf: UV
+          } = JV[eV], yV = this.pending.get(VV);
+          if (void 0 !== yV) {
+            if (yV.hn || void 0 === yV.url) return void(yV.recheck = !0);
+            if (yV.url === xV) return;
+            YV.refetched++;
+            const eV = this.NZ(VV, yV.ask);
+            return eV.recheck = yV.recheck, void this.fetch(VV, eV, xV, UV)
           }
-          const PM = this.written.get(MM);
-          void 0 === PM ? this.drawn.get(MM) !== (null !== iM && void 0 !== iM ? iM : void 0) && (SM.resent++, this.fetch(MM, this.JL(MM, !1), iM, jM)) : PM.url !== (null !== iM && void 0 !== iM ? iM : "") && (PM.attempt.recheck = !0)
-        })), SM
+          const pV = this.written.get(VV);
+          void 0 === pV ? this.drawn.get(VV) !== (null !== xV && void 0 !== xV ? xV : void 0) && (YV.resent++, this.fetch(VV, this.NZ(VV, !1), xV, UV)) : pV.url !== (null !== xV && void 0 !== xV ? xV : "") && (pV.attempt.recheck = !0)
+        })), YV
       }
-      taken(MM, rM) {
-        const iM = new Set,
-          OM = new Set;
-        for (const SM of Array.from(rM)) 0 === (SM & QM) ? iM.add(SM) : OM.add((SM & ~QM) >>> 0);
-        for (const [SM, jM] of this.written) jM.seq > MM || (this.written.delete(SM), iM.has(jM.seq) ? this.refusedFile(SM, jM) : this.takenFile(SM, jM, !jM.empty && !OM.has(jM.seq)))
+      taken(VV, eV) {
+        const xV = new Set,
+          JV = new Set;
+        for (const YV of Array.from(eV)) 0 === (YV & nV) ? xV.add(YV) : JV.add((YV & ~nV) >>> 0);
+        for (const [YV, UV] of this.written) UV.seq > VV || (this.written.delete(YV), xV.has(UV.seq) ? this.refusedFile(YV, UV) : this.takenFile(YV, UV, !UV.empty && !JV.has(UV.seq)))
       }
-      takenFile(MM, rM, iM) {
+      takenFile(VV, eV, xV) {
         const {
-          attempt: OM
-        } = rM;
-        if (iM) {
-          var SM;
-          this.drawn.set(MM, rM.url), this.undrawn.delete(MM), void 0 !== OM.inPlaceOf ? this.refusedPack.set(MM, OM.inPlaceOf) : OM.sQ || this.refusedPack.delete(MM), null === (SM = this.onTaken) || void 0 === SM || SM.call(this, MM, !0);
-          const iM = this.pending.get(MM);
-          if (!0 === (null === iM || void 0 === iM ? void 0 : iM.sQ) && iM.url !== rM.url) {
-            const iM = this.JL(MM, !0);
-            iM.sQ = !0, iM.recheck = !0, this.fetch(MM, iM, rM.url)
+          attempt: JV
+        } = eV;
+        if (xV) {
+          var YV;
+          this.drawn.set(VV, eV.url), this.undrawn.delete(VV), void 0 !== JV.inPlaceOf ? this.refusedPack.set(VV, JV.inPlaceOf) : JV.hn || this.refusedPack.delete(VV), null === (YV = this.onTaken) || void 0 === YV || YV.call(this, VV, !0);
+          const xV = this.pending.get(VV);
+          if (!0 === (null === xV || void 0 === xV ? void 0 : xV.hn) && xV.url !== eV.url) {
+            const xV = this.NZ(VV, !0);
+            xV.hn = !0, xV.recheck = !0, this.fetch(VV, xV, eV.url)
           }
         } else {
-          var jM;
-          this.drawn.has(MM) || this.undrawn.add(MM), null === (jM = this.onTaken) || void 0 === jM || jM.call(this, MM, !1)
+          var UV;
+          this.drawn.has(VV) || this.undrawn.add(VV), null === (UV = this.onTaken) || void 0 === UV || UV.call(this, VV, !1)
         }
-        OM.recheck && this.resendIfChanged(MM)
+        JV.recheck && this.resendIfChanged(VV)
       }
-      refusedFile(MM, rM) {
-        var iM, OM;
-        if (null === (iM = this.onTaken) || void 0 === iM || iM.call(this, MM, !1), this.refusedPack.set(MM, rM.url), this.pending.has(MM)) return void(null === (OM = this.onPackFileFailed) || void 0 === OM || OM.call(this, MM, hM(rM.url)));
-        const SM = this.JL(MM, rM.attempt.ask);
-        SM.recheck = rM.attempt.recheck, this.afterRefusal(MM, SM, rM.url)
+      refusedFile(VV, eV) {
+        var xV, JV;
+        if (null === (xV = this.onTaken) || void 0 === xV || xV.call(this, VV, !1), this.refusedPack.set(VV, eV.url), this.pending.has(VV)) return void(null === (JV = this.onPackFileFailed) || void 0 === JV || JV.call(this, VV, kV(eV.url)));
+        const YV = this.NZ(VV, eV.attempt.ask);
+        YV.recheck = eV.attempt.recheck, this.afterRefusal(VV, YV, eV.url)
       }
-      async afterRefusal(MM, rM, iM) {
-        var OM;
-        let SM;
+      async afterRefusal(VV, eV, xV) {
+        var JV;
+        let YV;
         try {
-          SM = await this.wanted(MM)
-        } catch (jM) {
-          return void(this.pending.get(MM) === rM && this.giveUp(MM, rM, iM, jM))
+          YV = await this.wanted(VV)
+        } catch (UV) {
+          return void(this.pending.get(VV) === eV && this.giveUp(VV, eV, xV, UV))
         }
-        this.pending.get(MM) === rM && (SM.inPlaceOf !== iM ? rM.ask || (null !== (OM = SM.url) && void 0 !== OM ? OM : void 0) !== this.drawn.get(MM) ? this.fetch(MM, rM, SM.url, SM.inPlaceOf) : this.pending.delete(MM) : this.fallBack(MM, rM, iM, hM(iM)))
+        this.pending.get(VV) === eV && (YV.inPlaceOf !== xV ? eV.ask || (null !== (JV = YV.url) && void 0 !== JV ? JV : void 0) !== this.drawn.get(VV) ? this.fetch(VV, eV, YV.url, YV.inPlaceOf) : this.pending.delete(VV) : this.fallBack(VV, eV, xV, kV(xV)))
       }
-      JL(MM, rM) {
-        const iM = {
+      NZ(VV, eV) {
+        const xV = {
           url: void 0,
-          ask: rM,
-          sQ: !1,
+          ask: eV,
+          hn: !1,
           recheck: !1,
           inPlaceOf: void 0
         };
-        this.pending.set(MM, iM);
-        for (let OM = this.ready.length - 1; OM >= 0; OM--) this.ready[OM].file === MM && this.ready.splice(OM, 1);
-        return iM
+        this.pending.set(VV, xV);
+        for (let JV = this.ready.length - 1; JV >= 0; JV--) this.ready[JV].file === VV && this.ready.splice(JV, 1);
+        return xV
       }
-      async wanted(MM) {
-        const rM = await this.files.url(MM);
-        return null !== rM && this.refusedPack.get(MM) === rM ? {
-          url: await this.files.shippedUrl(MM),
-          inPlaceOf: rM
+      async wanted(VV) {
+        const eV = await this.files.url(VV);
+        return null !== eV && this.refusedPack.get(VV) === eV ? {
+          url: await this.files.shippedUrl(VV),
+          inPlaceOf: eV
         } : {
-          url: rM,
+          url: eV,
           inPlaceOf: void 0
         }
       }
-      fetchWanted(MM, rM) {
-        const iM = this.files.url(MM);
-        iM instanceof Promise ? iM.then((iM => {
-          this.fetchFound(MM, rM, iM)
-        }), (iM => {
-          this.pending.get(MM) === rM && this.giveUp(MM, rM, "", iM)
-        })) : this.fetchFound(MM, rM, iM)
+      fetchWanted(VV, eV) {
+        const xV = this.files.url(VV);
+        xV instanceof Promise ? xV.then((xV => {
+          this.fetchFound(VV, eV, xV)
+        }), (xV => {
+          this.pending.get(VV) === eV && this.giveUp(VV, eV, "", xV)
+        })) : this.fetchFound(VV, eV, xV)
       }
-      fetchFound(MM, rM, iM) {
-        null !== iM && this.refusedPack.get(MM) === iM ? Promise.resolve(this.files.shippedUrl(MM)).then((OM => {
-          this.fetch(MM, rM, OM, iM)
-        }), (OM => {
-          this.pending.get(MM) === rM && this.giveUp(MM, rM, iM, OM)
-        })) : this.fetch(MM, rM, iM)
+      fetchFound(VV, eV, xV) {
+        null !== xV && this.refusedPack.get(VV) === xV ? Promise.resolve(this.files.shippedUrl(VV)).then((JV => {
+          this.fetch(VV, eV, JV, xV)
+        }), (JV => {
+          this.pending.get(VV) === eV && this.giveUp(VV, eV, xV, JV)
+        })) : this.fetch(VV, eV, xV)
       }
-      fetch(MM, rM, iM, OM) {
-        this.pending.get(MM) === rM && (rM.url = iM, rM.inPlaceOf = OM, null !== iM ? this.load(MM, rM, iM) : this.buildFile(MM, rM, "", zM))
+      fetch(VV, eV, xV, JV) {
+        this.pending.get(VV) === eV && (eV.url = xV, eV.inPlaceOf = JV, null !== xV ? this.load(VV, eV, xV) : this.buildFile(VV, eV, "", wV))
       }
-      load(MM, rM, iM) {
-        const OM = this.ML.get(MM);
-        (null === OM || void 0 === OM ? void 0 : OM.url) !== iM ? this.fetchFile(iM).then((OM => {
-          var SM, jM;
-          this.pending.get(MM) === rM && (this.keptTotal += OM.byteLength - (null !== (SM = null === (jM = this.ML.get(MM)) || void 0 === jM ? void 0 : jM.glb.byteLength) && void 0 !== SM ? SM : 0), this.ML.set(MM, {
-            url: iM,
-            glb: OM
-          }), this.buildFile(MM, rM, iM, OM))
-        }), (OM => {
-          this.pending.get(MM) === rM && this.fallBack(MM, rM, iM, OM)
-        })) : this.buildFile(MM, rM, iM, OM.glb)
+      load(VV, eV, xV) {
+        const JV = this.ZZ.get(VV);
+        (null === JV || void 0 === JV ? void 0 : JV.url) !== xV ? this.fetchFile(xV).then((JV => {
+          var YV, UV;
+          this.pending.get(VV) === eV && (this.keptTotal += JV.byteLength - (null !== (YV = null === (UV = this.ZZ.get(VV)) || void 0 === UV ? void 0 : UV.glb.byteLength) && void 0 !== YV ? YV : 0), this.ZZ.set(VV, {
+            url: xV,
+            glb: JV
+          }), this.buildFile(VV, eV, xV, JV))
+        }), (JV => {
+          this.pending.get(VV) === eV && this.fallBack(VV, eV, xV, JV)
+        })) : this.buildFile(VV, eV, xV, JV.glb)
       }
-      buildFile(MM, rM, iM, OM) {
-        let SM = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        const aM = OM.byteLength > 0 && (0, jM.l)(iM) ? (MM | jM.e) >>> 0 : MM;
-        this.queueRecord(MM, rM, iM, OM, this.build(aM, OM), SM)
+      buildFile(VV, eV, xV, JV) {
+        let YV = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const yV = JV.byteLength > 0 && (0, UV.m)(xV) ? (VV | UV.e) >>> 0 : VV;
+        this.queueRecord(VV, eV, xV, JV, this.build(yV, JV), YV)
       }
-      queueRecord(MM, rM, iM, OM, jM, PM) {
-        jM.then((jM => {
-          if (this.pending.get(MM) !== rM) return;
-          if (SM.s + (0, SM.oe)(jM.byteLength) > SM.Gc) return void this.ringRefused(MM, rM, iM, new LM(`${JM(iM)}'s record is ${jM.byteLength-aM.b} bytes, past the cmd ring's ${SM.Gc}`), PM);
-          const nM = {
-            file: MM,
-            url: iM,
-            payload: jM,
-            glb: OM,
-            attempt: rM
+      queueRecord(VV, eV, xV, JV, UV, pV) {
+        UV.then((UV => {
+          if (this.pending.get(VV) !== eV) return;
+          if (YV.x + (0, YV.ze)(UV.byteLength) > YV.Qc) return void this.ringRefused(VV, eV, xV, new ZV(`${bV(xV)}'s record is ${UV.byteLength-yV.c} bytes, past the cmd ring's ${YV.Qc}`), pV);
+          const QV = {
+            file: VV,
+            url: xV,
+            payload: UV,
+            glb: JV,
+            attempt: eV
           };
-          PM ? this.ready.unshift(nM) : this.ready.push(nM)
+          pV ? this.ready.unshift(QV) : this.ready.push(QV)
         }))
       }
-      async fallBack(MM, rM, iM, OM) {
-        var SM;
-        let jM = null,
-          aM = OM;
+      async fallBack(VV, eV, xV, JV) {
+        var YV;
+        let UV = null,
+          yV = JV;
         try {
-          jM = await this.files.shippedUrl(MM)
-        } catch (PM) {
-          aM = PM
+          UV = await this.files.shippedUrl(VV)
+        } catch (pV) {
+          yV = pV
         }
-        this.pending.get(MM) === rM && (null !== jM && jM !== iM ? (null === (SM = this.onPackFileFailed) || void 0 === SM || SM.call(this, MM, OM), rM.ask || this.drawn.get(MM) !== jM ? (rM.url = jM, rM.inPlaceOf = iM, this.load(MM, rM, jM)) : this.pending.delete(MM)) : this.giveUp(MM, rM, iM, aM))
+        this.pending.get(VV) === eV && (null !== UV && UV !== xV ? (null === (YV = this.onPackFileFailed) || void 0 === YV || YV.call(this, VV, JV), eV.ask || this.drawn.get(VV) !== UV ? (eV.url = UV, eV.inPlaceOf = xV, this.load(VV, eV, UV)) : this.pending.delete(VV)) : this.giveUp(VV, eV, xV, yV))
       }
-      ringRefused(MM, rM, iM, OM) {
-        let SM = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        (0, jM.l)(iM) ? this.fallBack(MM, rM, iM, OM): this.giveUp(MM, rM, iM, OM, SM)
+      ringRefused(VV, eV, xV, JV) {
+        let YV = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        (0, UV.m)(xV) ? this.fallBack(VV, eV, xV, JV): this.giveUp(VV, eV, xV, JV, YV)
       }
-      giveUp(MM, rM, iM, SM) {
-        let jM = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+      giveUp(VV, eV, xV, YV) {
+        let UV = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
         this.onFailure({
-          file: MM,
-          url: JM(iM),
-          error: SM,
-          startup: this.startupLeft.has(MM)
-        }), rM.ask || !this.drawn.has(MM) ? (0, OM.R)(SM) ? this.queueRecord(MM, rM, iM, zM, Promise.resolve((0, aM.m)(MM, (0, PM.k)(SM))), jM) : this.buildFile(MM, rM, iM, zM, jM) : this.pending.delete(MM)
+          file: VV,
+          url: bV(xV),
+          error: YV,
+          startup: this.startupLeft.has(VV)
+        }), eV.ask || !this.drawn.has(VV) ? (0, JV.R)(YV) ? this.queueRecord(VV, eV, xV, wV, Promise.resolve((0, yV.m)(VV, (0, pV.m)(YV))), UV) : this.buildFile(VV, eV, xV, wV, UV) : this.pending.delete(VV)
       }
-      async resendIfChanged(MM) {
-        var rM;
-        if (0 !== (MM & jM.f)) return;
-        let iM;
+      async resendIfChanged(VV) {
+        var eV;
+        if (0 !== (VV & UV.f)) return;
+        let xV;
         try {
-          iM = await this.wanted(MM)
+          xV = await this.wanted(VV)
         } catch {
           return
-        }(null !== (rM = iM.url) && void 0 !== rM ? rM : void 0) === this.drawn.get(MM) || this.pending.has(MM) || this.written.has(MM) || this.fetch(MM, this.JL(MM, !1), iM.url, iM.inPlaceOf)
+        }(null !== (eV = xV.url) && void 0 !== eV ? eV : void 0) === this.drawn.get(VV) || this.pending.has(VV) || this.written.has(VV) || this.fetch(VV, this.NZ(VV, !1), xV.url, xV.inPlaceOf)
       }
-      drain(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        if (null === MM) return;
-        let iM = 0,
-          OM = 0;
-        for (; OM < this.ready.length && iM < 262144;) {
-          const PM = this.ready[OM];
-          if (this.written.has(PM.file)) {
-            OM++;
+      drain(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+        if (null === VV) return;
+        let xV = 0,
+          JV = 0;
+        for (; JV < this.ready.length && xV < 262144;) {
+          const pV = this.ready[JV];
+          if (this.written.has(pV.file)) {
+            JV++;
             continue
           }
-          const zM = this.nextSeq;
-          new DataView(PM.payload.buffer, PM.payload.byteOffset, PM.payload.byteLength).setUint32(aM.d, zM, !0);
-          const mM = PM.attempt.sQ && PM.glb.byteLength > 0 && this.drawn.get(PM.file) === PM.url;
-          if (MM(nM, mM ? 1 : 0, PM.payload)) {
-            if (this.nextSeq = zM >= QM - 1 ? 1 : zM + 1, this.ready.splice(OM, 1), iM += PM.payload.byteLength, this.pending.delete(PM.file), this.startupLeft.delete(PM.file), this.written.set(PM.file, {
-                seq: zM,
-                url: PM.url,
-                empty: 0 === PM.glb.byteLength,
-                attempt: PM.attempt
-              }), PM.glb.byteLength > 0) try {
-              var SM;
-              null === (SM = this.onWritten) || void 0 === SM || SM.call(this, PM.file, PM.glb)
-            } catch (jM) {
-              console.warn("ModelFeed: reading the file's images failed", jM)
+          const wV = this.nextSeq;
+          new DataView(pV.payload.buffer, pV.payload.byteOffset, pV.payload.byteLength).setUint32(yV.e, wV, !0);
+          const vV = pV.attempt.hn && pV.glb.byteLength > 0 && this.drawn.get(pV.file) === pV.url;
+          if (VV(QV, vV ? 1 : 0, pV.payload)) {
+            if (this.nextSeq = wV >= nV - 1 ? 1 : wV + 1, this.ready.splice(JV, 1), xV += pV.payload.byteLength, this.pending.delete(pV.file), this.startupLeft.delete(pV.file), this.written.set(pV.file, {
+                seq: wV,
+                url: pV.url,
+                empty: 0 === pV.glb.byteLength,
+                attempt: pV.attempt
+              }), pV.glb.byteLength > 0) try {
+              var YV;
+              null === (YV = this.onWritten) || void 0 === YV || YV.call(this, pV.file, pV.glb)
+            } catch (UV) {
+              console.warn("ModelFeed: reading the file's images failed", UV)
             }
           } else {
-            if (null === rM || 0 === PM.glb.byteLength || rM(PM.payload.byteLength)) return;
-            this.ready.splice(OM, 1);
-            const MM = new LM(`${JM(PM.url)}'s record is ${PM.payload.byteLength-aM.b} bytes, more than the cmd ring can grow to take`);
-            this.ringRefused(PM.file, PM.attempt, PM.url, MM, !0)
+            if (null === eV || 0 === pV.glb.byteLength || eV(pV.payload.byteLength)) return;
+            this.ready.splice(JV, 1);
+            const VV = new ZV(`${bV(pV.url)}'s record is ${pV.payload.byteLength-yV.c} bytes, more than the cmd ring can grow to take`);
+            this.ringRefused(pV.file, pV.attempt, pV.url, VV, !0)
           }
         }
       }
     }
 
-    function hM(MM) {
-      return new mM(`presentation refused ${JM(MM)}`)
+    function kV(VV) {
+      return new vV(`presentation refused ${bV(VV)}`)
     }
 
-    function JM(MM) {
-      return MM.startsWith("data:") ? `${MM.slice(0,Math.min(Math.max(MM.indexOf(","),5),64))},...` : MM
+    function bV(VV) {
+      return VV.startsWith("data:") ? `${VV.slice(0,Math.min(Math.max(VV.indexOf(","),5),64))},...` : VV
     }
   },
-  41884: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => aM,
-      f: () => jM,
-      j: () => zM,
-      l: () => PM,
-      o: () => QM,
-      r: () => nM
+  42091: (VV, eV, xV) => {
+    xV.d(eV, {
+      e: () => yV,
+      f: () => UV,
+      i: () => wV,
+      m: () => pV,
+      n: () => nV,
+      r: () => QV
     });
-    var OM = iM(3188),
-      SM = iM(3614);
-    const jM = 2147483648,
-      aM = 1073741824;
+    var JV = xV(3196),
+      YV = xV(3630);
+    const UV = 2147483648,
+      yV = 1073741824;
 
-    function PM(MM) {
-      return MM.startsWith("data:")
+    function pV(VV) {
+      return VV.startsWith("data:")
     }
 
-    function nM(MM) {
+    function QV(VV) {
       let {
-        onTableFailed: rM,
-        packUrl: iM
+        onTableFailed: eV,
+        packUrl: xV
       } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      const OM = QM();
-      OM.catch((MM => {
-        null === rM || void 0 === rM || rM(MM)
+      const JV = nV();
+      JV.catch((VV => {
+        null === eV || void 0 === eV || eV(VV)
       }));
-      const SM = async rM => (await OM).fileUrl((rM & ~jM) >>> 0, MM);
+      const YV = async eV => (await JV).fileUrl((eV & ~UV) >>> 0, VV);
       return {
         startup: [],
-        url: async MM => {
-          if (iM && 0 === (MM & jM)) {
-            const rM = await OM,
-              SM = rM.filePackName(MM),
-              jM = null === SM || "lifeform" === rM.fileSource(MM) ? null : iM(SM);
-            if (null !== jM) return jM
+        url: async VV => {
+          if (xV && 0 === (VV & UV)) {
+            const eV = await JV,
+              YV = eV.filePackName(VV),
+              UV = null === YV || "lifeform" === eV.fileSource(VV) ? null : xV(YV);
+            if (null !== UV) return UV
           }
-          return SM(MM)
+          return YV(VV)
         },
-        shippedUrl: SM
+        shippedUrl: YV
       }
     }
 
-    function QM() {
-      return iM.e(48).then((() => iM(45251)))
+    function nV() {
+      return xV.e(48).then((() => xV(45462)))
     }
-    async function zM(MM) {
-      let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-      return MM.startsWith("data:") ? (0, SM.e)(MM.slice(MM.indexOf(",") + 1), rM) : (0, OM.F)(MM, {
-        spare: rM
+    async function wV(VV) {
+      let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+      return VV.startsWith("data:") ? (0, YV.b)(VV.slice(VV.indexOf(",") + 1), eV) : (0, JV.H)(VV, {
+        spare: eV
       })
     }
   },
-  41888: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => QM,
-      d: () => zM,
-      f: () => HM,
-      i: () => dM,
-      m: () => hM,
-      p: () => mM,
-      q: () => JM
+  42096: (VV, eV, xV) => {
+    xV.d(eV, {
+      c: () => nV,
+      e: () => wV,
+      g: () => rV,
+      j: () => EV,
+      m: () => kV,
+      p: () => vV,
+      t: () => bV
     });
-    const OM = 826427981,
-      SM = 1,
-      jM = 2,
-      aM = 44,
-      PM = 46,
-      nM = 58,
-      QM = 8,
-      zM = 4;
+    const JV = 826427981,
+      YV = 1,
+      UV = 2,
+      yV = 44,
+      pV = 46,
+      QV = 58,
+      nV = 8,
+      wV = 4;
 
-    function LM(MM, rM, iM) {
-      const SM = (new TextEncoder).encode(iM),
-        jM = QM + 4 * (rM.length + 2),
-        aM = new Uint8Array(jM + (SM.byteLength + 3 & -4)),
-        PM = new DataView(aM.buffer);
-      return PM.setUint32(0, MM, !0), PM.setUint32(QM, OM, !0), rM.forEach(((MM, rM) => {
-        PM.setUint32(QM + 4 * (rM + 1), MM, !0)
-      })), PM.setUint32(jM - 4, SM.byteLength, !0), aM.set(SM, jM), aM
+    function ZV(VV, eV, xV) {
+      const YV = (new TextEncoder).encode(xV),
+        UV = nV + 4 * (eV.length + 2),
+        yV = new Uint8Array(UV + (YV.byteLength + 3 & -4)),
+        pV = new DataView(yV.buffer);
+      return pV.setUint32(0, VV, !0), pV.setUint32(nV, JV, !0), eV.forEach(((VV, eV) => {
+        pV.setUint32(nV + 4 * (eV + 1), VV, !0)
+      })), pV.setUint32(UV - 4, YV.byteLength, !0), yV.set(YV, UV), yV
     }
 
-    function mM(MM, rM) {
-      return LM(MM, [jM], rM)
+    function vV(VV, eV) {
+      return ZV(VV, [UV], eV)
     }
 
-    function HM(MM, rM) {
-      return LM(MM, [SM, PM], rM)
+    function rV(VV, eV) {
+      return ZV(VV, [YV, pV], eV)
     }
 
-    function hM(MM, rM) {
-      return LM(MM, [SM, nM], rM)
+    function kV(VV, eV) {
+      return ZV(VV, [YV, QV], eV)
     }
 
-    function JM(MM, rM) {
-      return LM(MM, [SM, aM], rM)
+    function bV(VV, eV) {
+      return ZV(VV, [YV, yV], eV)
     }
 
-    function dM(MM) {
-      const rM = QM;
-      if (MM.byteLength < rM + 12) return !1;
-      const iM = new DataView(MM.buffer, MM.byteOffset, MM.byteLength);
-      return iM.getUint32(rM, !0) === OM && iM.getUint32(rM + 4, !0) === SM && iM.getUint32(rM + 8, !0) === aM
+    function EV(VV) {
+      const eV = nV;
+      if (VV.byteLength < eV + 12) return !1;
+      const xV = new DataView(VV.buffer, VV.byteOffset, VV.byteLength);
+      return xV.getUint32(eV, !0) === JV && xV.getUint32(eV + 4, !0) === YV && xV.getUint32(eV + 8, !0) === yV
     }
   },
-  41809: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => SM,
-      i: () => zM,
-      m: () => aM,
-      q: () => nM
+  42011: (VV, eV, xV) => {
+    xV.d(eV, {
+      e: () => YV,
+      g: () => wV,
+      j: () => yV,
+      n: () => QV
     });
-    var OM = iM(37229);
-    class SM extends Error {
-      constructor(MM, rM) {
-        let iM = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        super(`${MM}: the module trapped${iM?" in an earlier call":""}: ${String(rM)}`, {
-          cause: rM
-        }), this.site = MM, this.trap = rM, this.earlier = iM, this.name = "ModuleTrapError", rM instanceof Error && void 0 !== rM.stack && (this.stack = `${this.name}: ${this.message}\n${rM.stack}`)
+    var JV = xV(37437);
+    class YV extends Error {
+      constructor(VV, eV) {
+        let xV = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        super(`${VV}: the module trapped${xV?" in an earlier call":""}: ${String(eV)}`, {
+          cause: eV
+        }), this.site = VV, this.trap = eV, this.earlier = xV, this.name = "ModuleTrapError", eV instanceof Error && void 0 !== eV.stack && (this.stack = `${this.name}: ${this.message}\n${eV.stack}`)
       }
     }
-    const jM = new WeakMap;
+    const UV = new WeakMap;
 
-    function aM(MM) {
-      return jM.has(MM)
+    function yV(VV) {
+      return UV.has(VV)
     }
 
-    function PM(MM, rM) {
-      jM.has(MM) || jM.set(MM, rM)
+    function pV(VV, eV) {
+      UV.has(VV) || UV.set(VV, eV)
     }
 
-    function nM(MM, rM) {
-      return !!(0, OM.j)(rM) && (PM(MM, rM), !0)
+    function QV(VV, eV) {
+      return !!(0, JV.j)(eV) && (pV(VV, eV), !0)
     }
-    const QM = [
-      ["error", MM => MM.error],
-      ["unhandledrejection", MM => MM.reason]
+    const nV = [
+      ["error", VV => VV.error],
+      ["unhandledrejection", VV => VV.reason]
     ];
 
-    function zM(MM, rM, iM) {
-      let aM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "function" === typeof globalThis.addEventListener ? globalThis : null;
-      return jM.has(MM) ? Promise.reject(new SM(rM, jM.get(MM), !0)) : new Promise(((jM, nM) => {
-        const zM = iM => {
-            PM(MM, iM), HM(), nM(new SM(rM, iM))
+    function wV(VV, eV, xV) {
+      let yV = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "function" === typeof globalThis.addEventListener ? globalThis : null;
+      return UV.has(VV) ? Promise.reject(new YV(eV, UV.get(VV), !0)) : new Promise(((UV, QV) => {
+        const wV = xV => {
+            pV(VV, xV), rV(), QV(new YV(eV, xV))
           },
-          LM = MM => {
-            MM instanceof WebAssembly.RuntimeError ? zM(MM) : (HM(), nM(MM))
+          ZV = VV => {
+            VV instanceof WebAssembly.RuntimeError ? wV(VV) : (rV(), QV(VV))
           },
-          mM = QM.map((MM => {
-            let [rM, iM] = MM;
-            return [rM, MM => {
-              const rM = iM(MM);
-              (0, OM.j)(rM) && zM(rM)
+          vV = nV.map((VV => {
+            let [eV, xV] = VV;
+            return [eV, VV => {
+              const eV = xV(VV);
+              (0, JV.j)(eV) && wV(eV)
             }]
           })),
-          HM = () => {
-            for (const [MM, rM] of mM) null === aM || void 0 === aM || aM.removeEventListener(MM, rM)
+          rV = () => {
+            for (const [VV, eV] of vV) null === yV || void 0 === yV || yV.removeEventListener(VV, eV)
           };
-        for (const [MM, rM] of mM) null === aM || void 0 === aM || aM.addEventListener(MM, rM);
-        let hM;
+        for (const [VV, eV] of vV) null === yV || void 0 === yV || yV.addEventListener(VV, eV);
+        let kV;
         try {
-          hM = iM()
-        } catch (JM) {
-          return void LM(JM)
+          kV = xV()
+        } catch (bV) {
+          return void ZV(bV)
         }
-        hM.then((MM => {
-          HM(), jM(MM)
-        }), LM)
+        kV.then((VV => {
+          rV(), UV(VV)
+        }), ZV)
       }))
     }
   },
-  41793: (MM, rM, iM) => {
-    iM.d(rM, {
-      $: () => WM,
-      C: () => BM,
-      F: () => FM,
-      G: () => kM,
-      K: () => tM,
-      O: () => sM,
-      R: () => XM,
-      U: () => DM,
-      W: () => NM,
-      Y: () => oM,
-      cb: () => IM,
-      e: () => wM,
-      g: () => CM,
-      k: () => YM,
-      o: () => ZM,
-      r: () => GM,
-      s: () => bM,
-      u: () => EM,
-      v: () => uM,
-      y: () => pM
+  41994: (VV, eV, xV) => {
+    xV.d(eV, {
+      C: () => KV,
+      F: () => mV,
+      G: () => iV,
+      J: () => XV,
+      N: () => gV,
+      O: () => HV,
+      R: () => DV,
+      S: () => hV,
+      U: () => aV,
+      Y: () => RV,
+      _: () => uV,
+      e: () => NV,
+      h: () => TV,
+      j: () => cV,
+      l: () => CV,
+      n: () => FV,
+      r: () => AV,
+      v: () => qV,
+      w: () => zV,
+      z: () => WV
     });
-    var OM = iM(187),
-      SM = iM(19),
-      jM = iM(3961),
-      aM = iM(114),
-      PM = iM(310),
-      nM = iM(30),
-      QM = iM(41798),
-      zM = iM(37422),
-      LM = iM(41826),
-      mM = (iM(41862), iM(41922)),
-      HM = iM(41855),
-      hM = iM(41812);
-    const JM = "wasmJoinBuild";
-    let dM = null,
-      yM = null,
-      lM = null;
+    var JV = xV(220),
+      YV = xV(27),
+      UV = xV(3992),
+      yV = xV(134),
+      pV = xV(355),
+      QV = xV(40),
+      nV = xV(42001),
+      wV = xV(37622),
+      ZV = xV(42029),
+      vV = (xV(42066), xV(42125)),
+      rV = xV(42049),
+      kV = xV(42017);
+    const bV = "wasmJoinBuild";
+    let EV = null,
+      BV = null,
+      jV = null;
 
-    function EM(MM) {
-      lM = MM
+    function qV(VV) {
+      jV = VV
     }
-    let UM = !1;
+    let tV = !1;
 
-    function GM() {
-      UM = !0
-    }
-
-    function CM() {
-      return UM
-    }
-    let eM = !1;
-
-    function bM() {
-      eM = !0
+    function FV() {
+      tV = !0
     }
 
-    function wM() {
-      return eM
+    function TV() {
+      return tV
+    }
+    let PV = !1;
+
+    function AV() {
+      PV = !0
     }
 
-    function tM() {
-      return lM
-    }
-    let gM = null;
-
-    function uM(MM) {
-      gM = MM, (0, PM.d)(MM)
-    }
-    const RM = "wasmClientRenderLost";
-
-    function pM() {
-      nM.k.setItem(RM, !0)
+    function NV() {
+      return PV
     }
 
-    function WM() {
-      return !0 === nM.k.getItem(RM)
+    function XV() {
+      return jV
+    }
+    let MV = null;
+
+    function zV(VV) {
+      MV = VV, (0, pV.d)(VV)
+    }
+    const GV = "wasmClientRenderLost";
+
+    function WV() {
+      QV.q.setItem(GV, !0)
     }
 
-    function sM() {
-      return gM
+    function RV() {
+      return !0 === QV.q.getItem(GV)
     }
 
-    function DM() {
-      if (null === dM) {
-        nM.g.removeItem("wasmLastPick"), nM.g.removeItem("wasmGuessVerdict");
+    function gV() {
+      return MV
+    }
+
+    function DV() {
+      if (null === EV) {
+        QV.m.removeItem("wasmLastPick"), QV.m.removeItem("wasmGuessVerdict");
         try {
           localStorage.removeItem("wasmClientMisdrawnGpu"), localStorage.removeItem("wasmClientGameGpu")
-        } catch {}(0, PM.l)(), dM = (0, QM.C)(LM.f).then((MM => (null === MM || (0, QM.l)(MM) || (yM = mM.b[MM.backend], SM.d.followGameGpu("webgpu" === MM.backend ? MM.adapter : null), "webgpu" === MM.backend && (0, HM.h)()), MM)))
+        } catch {}(0, pV.m)(), EV = (0, nV.C)(ZV.f).then((VV => (null === VV || (0, nV.q)(VV) || (BV = vV.b[VV.backend], YV.b.followGameGpu("webgpu" === VV.backend ? VV.adapter : null), "webgpu" === VV.backend && (0, rV.g)()), VV)))
       }
-      return dM
+      return EV
     }
 
-    function kM() {
-      return yM
+    function iV() {
+      return BV
     }
 
-    function ZM(MM) {
-      return MM ? MM.load() : Promise.resolve().then((function() {
-        var MM = new Error("Cannot find module '@bloxd/wasm/client'");
-        throw MM.code = "MODULE_NOT_FOUND", MM
-      })).then((MM => MM.bloxdWasmClient))
+    function CV(VV) {
+      return VV ? VV.load() : Promise.resolve().then((function() {
+        var VV = new Error("Cannot find module '@bloxd/wasm/client'");
+        throw VV.code = "MODULE_NOT_FOUND", VV
+      })).then((VV => VV.bloxdWasmClient))
     }
 
-    function oM(MM) {
-      nM.g.setItem(JM, MM)
+    function aV(VV) {
+      QV.m.setItem(bV, VV)
     }
 
-    function fM(MM, rM) {
-      const iM = nM.g.getItem(JM);
-      return null === iM ? function(MM) {
-        if (void 0 !== (0, OM.d)(MM, "webgpu") && (0, QM.z)()) return "webgpu";
-        return !1 === (0, aM.u)() ? "webgl1" : "webgl"
-      }(MM) : "none" === iM ? null : "string" === typeof iM && void 0 !== (0, OM.d)(MM, iM) ? iM : (rM && console.warn(`[bloxd-wasm-client] the last join's build, ${JSON.stringify(iM)}, is none of this client's: guessing WebGL2's`), "webgl")
+    function oV(VV, eV) {
+      const xV = QV.m.getItem(bV);
+      return null === xV ? function(VV) {
+        if (void 0 !== (0, JV.b)(VV, "webgpu") && (0, nV.y)()) return "webgpu";
+        return !1 === (0, yV.u)() ? "webgl1" : "webgl"
+      }(VV) : "none" === xV ? null : "string" === typeof xV && void 0 !== (0, JV.b)(VV, xV) ? xV : (eV && console.warn(`[bloxd-wasm-client] the last join's build, ${JSON.stringify(xV)}, is none of this client's: guessing WebGL2's`), "webgl")
     }
-    async function YM() {
-      if (null === LM.f) return ZM(null);
-      const MM = fM(LM.f, !0);
-      return null === MM ? null : LM.f[MM]()
+    async function cV() {
+      if (null === ZV.f) return CV(null);
+      const VV = oV(ZV.f, !0);
+      return null === VV ? null : ZV.f[VV]()
     }
 
-    function NM() {
-      null === dM && null !== LM.f && "webgl" === fM(LM.f, !1) && (0, hM.e)()
+    function hV() {
+      null === EV && null !== ZV.f && "webgl" === oV(ZV.f, !1) && (0, kV.c)()
     }
-    let AM = null,
-      xM = null,
-      vM = null;
+    let lV = null,
+      LV = null,
+      fV = null;
 
-    function FM() {
-      return AM ??= DM().then((async MM => {
-        const rM = null !== MM && !(0, QM.l)(MM),
-          iM = {
-            indirectHangs: rM && await (0, QM.L)(MM, window.location.search),
-            storagePullBreaks: rM && (0, QM.U)(MM, window.location.search),
-            splitPassBreaks: rM && (0, QM.S)(MM, window.location.search),
-            earlySky: rM && (0, QM.K)(MM, window.location.search),
-            instancedTerrain: rM ? (0, QM.M)(MM, window.location.search) : null,
-            cellLight: rM && await (0, jM.h)("cellLight"),
-            framesAhead: (0, QM.j)(window.location.search, rM ? MM : null),
-            webGpuRestores: !rM || (0, QM.V)(MM, (0, zM.b)()),
-            bufferCopiesCrash: rM && (0, QM.G)(MM, window.location.search)
+    function mV() {
+      return lV ??= DV().then((async VV => {
+        const eV = null !== VV && !(0, nV.q)(VV),
+          xV = {
+            indirectHangs: eV && await (0, nV.I)(VV, window.location.search),
+            storagePullBreaks: eV && (0, nV.U)(VV, window.location.search),
+            splitPassBreaks: eV && (0, nV.S)(VV, window.location.search),
+            earlySky: eV && (0, nV.H)(VV, window.location.search),
+            instancedTerrain: eV ? (0, nV.M)(VV, window.location.search) : null,
+            cellLight: eV && await (0, UV.h)("cellLight"),
+            framesAhead: (0, nV.k)(window.location.search, eV ? VV : null),
+            webGpuRestores: !eV || (0, nV.V)(VV, (0, wV.e)()),
+            bufferCopiesCrash: eV && (0, nV.E)(VV, window.location.search)
           };
-        return xM = iM.indirectHangs, vM = !iM.webGpuRestores, iM
-      })), AM
+        return LV = xV.indirectHangs, fV = !xV.webGpuRestores, xV
+      })), lV
     }
 
-    function BM() {
-      return xM
+    function KV() {
+      return LV
     }
 
-    function XM() {
-      return vM
+    function HV() {
+      return fV
     }
-    async function IM() {
-      const MM = null === dM ? null : await dM;
-      return null !== MM && (0, QM.l)(MM) && (dM = null, AM = null, xM = null, vM = null), DM()
+    async function uV() {
+      const VV = null === EV ? null : await EV;
+      return null !== VV && (0, nV.q)(VV) && (EV = null, lV = null, LV = null, fV = null), DV()
     }
   },
-  42076: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => PM
+  42295: (VV, eV, xV) => {
+    xV.d(eV, {
+      d: () => pV
     });
-    var OM = iM(37257),
-      SM = iM(41961),
-      jM = iM(4765),
-      aM = iM(37422);
-    async function PM(MM, rM) {
-      return await (0, jM.b)(void 0, !0), (0, OM.k)(MM, SM.f, {
-        ...rM,
-        memoryMaximumBytes: (0, aM.j)()
+    var JV = xV(37469),
+      YV = xV(42158),
+      UV = xV(4846),
+      yV = xV(37622);
+    async function pV(VV, eV) {
+      return await (0, UV.b)(void 0, !0), (0, JV.h)(VV, YV.f, {
+        ...eV,
+        memoryMaximumBytes: (0, yV.q)()
       })
     }
   },
-  41819: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => QM,
-      g: () => PM,
-      k: () => zM,
-      o: () => aM
+  42024: (VV, eV, xV) => {
+    xV.d(eV, {
+      d: () => nV,
+      h: () => pV,
+      l: () => wV,
+      o: () => yV
     });
-    var OM = iM(327),
-      SM = iM(643);
-    let jM;
+    var JV = xV(370),
+      YV = xV(670);
+    let UV;
 
-    function aM(MM) {
-      var rM;
-      const iM = jM;
-      return jM = void 0, null !== (rM = nM(MM)) && void 0 !== rM ? rM : iM
+    function yV(VV) {
+      var eV;
+      const xV = UV;
+      return UV = void 0, null !== (eV = QV(VV)) && void 0 !== eV ? eV : xV
     }
 
-    function PM(MM) {
+    function pV(VV) {
       try {
-        const rM = nM(MM);
-        void 0 !== rM && (jM = rM, (0, SM.e)((0, OM.h)(rM.reason, rM.message)))
-      } catch (rM) {
-        console.warn("Couldn't keep the WebGPU loss's cause", rM)
+        const eV = QV(VV);
+        void 0 !== eV && (UV = eV, (0, YV.g)((0, JV.l)(eV.reason, eV.message)))
+      } catch (eV) {
+        console.warn("Couldn't keep the WebGPU loss's cause", eV)
       }
     }
 
-    function nM(MM) {
-      var rM;
-      const iM = null === MM || void 0 === MM || null === (rM = MM.tjM) || void 0 === rM ? void 0 : rM.call(MM),
-        OM = null === MM || void 0 === MM ? void 0 : MM.wjM();
-      if (void 0 === OM) return;
-      const SM = new Error(OM);
-      return void 0 !== iM && (SM.reason = iM), SM
+    function QV(VV) {
+      var eV;
+      const xV = null === VV || void 0 === VV || null === (eV = VV.KyV) || void 0 === eV ? void 0 : eV.call(VV),
+        JV = null === VV || void 0 === VV ? void 0 : VV.myV();
+      if (void 0 === JV) return;
+      const YV = new Error(JV);
+      return void 0 !== xV && (YV.reason = xV), YV
     }
 
-    function QM(MM) {
-      return MM instanceof Error ? MM : void 0
+    function nV(VV) {
+      return VV instanceof Error ? VV : void 0
     }
 
-    function zM(MM, rM) {
-      return "lost" !== MM && "frames_refused" !== MM ? {} : (0, OM.h)("frames_refused" === MM ? MM : null === rM || void 0 === rM ? void 0 : rM.reason, null === rM || void 0 === rM ? void 0 : rM.message)
+    function wV(VV, eV) {
+      return "lost" !== VV && "frames_refused" !== VV ? {} : (0, JV.l)("frames_refused" === VV ? VV : null === eV || void 0 === eV ? void 0 : eV.reason, null === eV || void 0 === eV ? void 0 : eV.message)
     }
   },
-  41846: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => bM,
-      i: () => UM,
-      m: () => EM,
-      q: () => eM,
-      r: () => uM,
-      u: () => gM,
-      v: () => RM
+  42046: (VV, eV, xV) => {
+    xV.d(eV, {
+      c: () => AV,
+      f: () => tV,
+      h: () => qV,
+      k: () => PV,
+      o: () => zV,
+      r: () => MV,
+      s: () => GV
     });
-    var OM = iM(5200),
-      SM = iM(41855),
-      jM = iM(34885);
-    const aM = 1,
-      PM = 18,
-      nM = 19,
-      QM = 20,
-      zM = 21,
-      LM = {
-        [aM]: "link",
+    var JV = xV(5301),
+      YV = xV(42049),
+      UV = xV(35148);
+    const yV = 1,
+      pV = 18,
+      QV = 19,
+      nV = 20,
+      wV = 21,
+      ZV = {
+        [yV]: "link",
         2: "draw",
         3: "draw base vertex",
         4: "draw no index buffer",
@@ -2958,26 +2958,26 @@ export const modules = {
         13: "draw short constant",
         15: "draw no zero buffer",
         16: "draw feedback loop",
-        [PM]: "retry linked",
-        [nM]: "fallback linked",
-        [QM]: "fallback failed",
-        [zM]: "link stalled",
+        [pV]: "retry linked",
+        [QV]: "fallback linked",
+        [nV]: "fallback failed",
+        [wV]: "link stalled",
         32: "compile validation",
         33: "compile internal",
         34: "compile timeout"
       };
 
-    function mM(MM, rM, iM) {
-      return MM === PM ? "program retry" : MM === aM ? "program link" : MM === zM ? "program link stall" : MM === nM || MM === QM ? `program ${rM} ${iM}` : "program"
+    function vV(VV, eV, xV) {
+      return VV === pV ? "program retry" : VV === yV ? "program link" : VV === wV ? "program link stall" : VV === QV || VV === nV ? `program ${eV} ${xV}` : "program"
     }
-    const HM = {
+    const rV = {
         1: "renderer",
         2: "sky",
         3: "meshes",
         4: "terrain",
         5: "scene warm stuck"
       },
-      hM = {
+      kV = {
         0: "transform",
         1: "object",
         2: "instance batch",
@@ -2990,18 +2990,18 @@ export const modules = {
         10: "text plane",
         11: "object chunk"
       },
-      JM = {
+      bV = {
         1: "mesh undecodable",
         2: "part refused",
         3: "terrain ids full",
         4: "unknown terrain id",
         5: "buffer failed"
       },
-      dM = {
+      EV = {
         11: "none read after view",
         12: "some read after view"
       },
-      yM = {
+      BV = {
         1: "view waited drained",
         2: "view waited capped",
         3: "none after view",
@@ -3009,22 +3009,22 @@ export const modules = {
         5: "no wait no clock",
         6: "no wait parallel links",
         7: "view shown unheld",
-        ...dM
+        ...EV
       },
-      lM = {
+      jV = {
         8: "view",
         9: "minute",
         10: "loss"
       };
 
-    function EM(MM, rM) {
-      return MM === OM.n.RenderSerialLinks && void 0 !== dM[rM]
+    function qV(VV, eV) {
+      return VV === JV.s.RenderSerialLinks && void 0 !== EV[eV]
     }
 
-    function UM(MM, rM) {
-      return MM === OM.n.RenderSerialLinks && void 0 !== lM[15 & rM]
+    function tV(VV, eV) {
+      return VV === JV.s.RenderSerialLinks && void 0 !== jV[15 & eV]
     }
-    const GM = {
+    const FV = {
       1280: "invalid enum",
       1281: "invalid value",
       1282: "invalid operation",
@@ -3033,89 +3033,89 @@ export const modules = {
       37442: "context lost"
     };
 
-    function CM(MM, rM) {
-      var iM;
-      return null !== (iM = MM[rM]) && void 0 !== iM ? iM : (0, jM.b)(rM)
+    function TV(VV, eV) {
+      var xV;
+      return null !== (xV = VV[eV]) && void 0 !== xV ? xV : (0, UV.b)(eV)
     }
 
-    function eM() {
-      return (0, jM.b)((0, SM.d)())
+    function PV() {
+      return (0, UV.b)((0, YV.c)())
     }
 
-    function bM(MM, rM) {
-      switch (MM) {
-        case OM.n.RenderSceneRowNotDrawn:
+    function AV(VV, eV) {
+      switch (VV) {
+        case JV.s.RenderSceneRowNotDrawn:
           return {
-            words: ` ${CM(hM,rM)}`, instance: String(rM), group: String(MM)
+            words: ` ${TV(kV,eV)}`, instance: String(eV), group: String(VV)
           };
-        case OM.n.RenderChunkMeshNotDrawn: {
-          const iM = 0 === (128 & rM) ? "" : " shortage",
-            OM = rM >>> 8;
+        case JV.s.RenderChunkMeshNotDrawn: {
+          const xV = 0 === (128 & eV) ? "" : " shortage",
+            JV = eV >>> 8;
           return {
-            words: ` ${CM(JM,127&rM)}${iM}${0===OM?"":` kind ${(0,jM.b)(OM)}`}`,
-            instance: String(rM),
-            group: String(MM)
+            words: ` ${TV(bV,127&eV)}${xV}${0===JV?"":` kind ${(0,UV.b)(JV)}`}`,
+            instance: String(eV),
+            group: String(VV)
           }
         }
-        case OM.n.RenderInternal: {
-          const iM = CM(HM, 255 & rM),
-            OM = rM >>> 8 & 255;
-          if (0 === OM) return {
-            words: ` ${iM}`,
-            instance: String(rM),
-            group: String(MM)
+        case JV.s.RenderInternal: {
+          const xV = TV(rV, 255 & eV),
+            JV = eV >>> 8 & 255;
+          if (0 === JV) return {
+            words: ` ${xV}`,
+            instance: String(eV),
+            group: String(VV)
           };
-          const SM = CM(LM, OM),
-            aM = rM >>> 16;
+          const YV = TV(ZV, JV),
+            yV = eV >>> 16;
           return {
-            words: ` ${iM} ${SM} program ${(0,jM.b)(aM)}`,
-            instance: `${iM} ${SM} ${aM}`,
-            group: mM(OM, SM, iM),
+            words: ` ${xV} ${YV} program ${(0,UV.b)(yV)}`,
+            instance: `${xV} ${YV} ${yV}`,
+            group: vV(JV, YV, xV),
             gpuDetails: {
-              programFailure: SM,
-              program: String(aM)
+              programFailure: YV,
+              program: String(yV)
             }
           }
         }
-        case OM.n.RenderSerialLinks: {
-          if (UM(MM, rM)) {
-            const MM = function(MM) {
-              const rM = (rM, iM) => (0, jM.b)(MM >>> rM & (1 << iM) - 1),
-                iM = MM >>> 30 & 1 ? " restored" : "";
-              return `link census ${lM[15&MM]} linked ${rM(22,8)} failed ${rM(4,6)} retried ${rM(10,6)} fallback ${rM(16,6)}${iM}`
-            }(rM);
+        case JV.s.RenderSerialLinks: {
+          if (tV(VV, eV)) {
+            const VV = function(VV) {
+              const eV = (eV, xV) => (0, UV.b)(VV >>> eV & (1 << xV) - 1),
+                xV = VV >>> 30 & 1 ? " restored" : "";
+              return `link census ${jV[15&VV]} linked ${eV(22,8)} failed ${eV(4,6)} retried ${eV(10,6)} fallback ${eV(16,6)}${xV}`
+            }(eV);
             return {
-              words: ` ${MM}`,
-              instance: String(15 & rM),
+              words: ` ${VV}`,
+              instance: String(15 & eV),
               group: "link census",
               gpuDetails: {
-                linkCensus: MM
+                linkCensus: VV
               }
             }
           }
-          const iM = CM(yM, rM);
+          const xV = TV(BV, eV);
           return {
-            words: ` ${iM}`,
-            instance: String(rM),
-            group: String(MM),
+            words: ` ${xV}`,
+            instance: String(eV),
+            group: String(VV),
             gpuDetails: {
-              serialLinks: iM
+              serialLinks: xV
             }
           }
         }
-        case OM.n.RenderGlErrorAfterRestore: {
-          const iM = CM(GM, 65535 & rM),
-            OM = rM >>> 16,
-            SM = 65535 !== OM;
+        case JV.s.RenderGlErrorAfterRestore: {
+          const xV = TV(FV, 65535 & eV),
+            JV = eV >>> 16,
+            YV = 65535 !== JV;
           return {
-            words: ` ${iM}${SM?` program ${(0,jM.b)(OM)}`:""}`,
-            instance: String(rM),
-            group: String(MM),
-            gpuDetails: SM ? {
-              glError: iM,
-              program: String(OM)
+            words: ` ${xV}${YV?` program ${(0,UV.b)(JV)}`:""}`,
+            instance: String(eV),
+            group: String(VV),
+            gpuDetails: YV ? {
+              glError: xV,
+              program: String(JV)
             } : {
-              glError: iM
+              glError: xV
             }
           }
         }
@@ -3123,562 +3123,562 @@ export const modules = {
           return null
       }
     }
-    const wM = 2,
-      tM = new Map;
+    const NV = 2,
+      XV = new Map;
 
-    function gM(MM) {
+    function MV(VV) {
       let {
-        group: rM,
-        instance: iM
-      } = MM, OM = tM.get(rM);
-      return void 0 === OM && (OM = [], tM.set(rM, OM)), !OM.includes(iM) && (OM.length >= wM || (OM.push(iM), !1))
+        group: eV,
+        instance: xV
+      } = VV, JV = XV.get(eV);
+      return void 0 === JV && (JV = [], XV.set(eV, JV)), !JV.includes(xV) && (JV.length >= NV || (JV.push(xV), !1))
     }
 
-    function uM() {
-      return tM.size > 0
+    function zV() {
+      return XV.size > 0
     }
 
-    function RM() {
-      tM.clear()
+    function GV() {
+      XV.clear()
     }
   },
-  41826: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => aM,
-      f: () => jM
+  42029: (VV, eV, xV) => {
+    xV.d(eV, {
+      e: () => yV,
+      f: () => UV
     });
-    var OM = iM(41833);
-    const SM = new WeakSet;
-    const jM = {
+    var JV = xV(42034);
+    const YV = new WeakSet;
+    const UV = {
         webgpu: async () => (function() {
-          let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : globalThis.GPUAdapter;
-          if (void 0 === MM || SM.has(MM.prototype)) return;
-          SM.add(MM.prototype);
-          const rM = MM.prototype.requestDevice;
-          MM.prototype.requestDevice = function(MM) {
-            var iM;
-            const SM = null !== (iM = null === MM || void 0 === MM ? void 0 : MM.requiredLimits) && void 0 !== iM ? iM : {},
-              jM = Object.keys(SM).filter((MM => !(MM in this.limits)));
-            if (0 === jM.length) return rM.call(this, MM);
-            const aM = Object.fromEntries(Object.entries(SM).filter((MM => {
-              let [rM] = MM;
-              return rM in this.limits
+          let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : globalThis.GPUAdapter;
+          if (void 0 === VV || YV.has(VV.prototype)) return;
+          YV.add(VV.prototype);
+          const eV = VV.prototype.requestDevice;
+          VV.prototype.requestDevice = function(VV) {
+            var xV;
+            const YV = null !== (xV = null === VV || void 0 === VV ? void 0 : VV.requiredLimits) && void 0 !== xV ? xV : {},
+              UV = Object.keys(YV).filter((VV => !(VV in this.limits)));
+            if (0 === UV.length) return eV.call(this, VV);
+            const yV = Object.fromEntries(Object.entries(YV).filter((VV => {
+              let [eV] = VV;
+              return eV in this.limits
             })));
-            return console.warn(`WebGPU: dropped required limits this browser doesn't name: ${jM.join(", ")}`), (0, OM.reportDroppedRequiredLimits)(jM), rM.call(this, {
-              ...MM,
-              requiredLimits: aM
+            return console.warn(`WebGPU: dropped required limits this browser doesn't name: ${UV.join(", ")}`), (0, JV.reportDroppedRequiredLimits)(UV), eV.call(this, {
+              ...VV,
+              requiredLimits: yV
             })
           }
-        }(), (await iM.e(8).then((() => iM(53685)))).bloxdWasmWebgpu),
-        webgl: async () => (await iM.e(6).then((() => iM(53702)))).bloxdWasmWebgl,
-        webgl1: async () => (await iM.e(7).then((() => iM(53713)))).bloxdWasmWebgl1
+        }(), (await xV.e(8).then((() => xV(53885)))).bloxdWasmWebgpu),
+        webgl: async () => (await xV.e(6).then((() => xV(53898)))).bloxdWasmWebgl,
+        webgl1: async () => (await xV.e(7).then((() => xV(53911)))).bloxdWasmWebgl1
       },
-      aM = async () => (await iM.e(5).then((() => iM(53722)))).compileAnimationPackInWasm
+      yV = async () => (await xV.e(5).then((() => xV(53922)))).compileAnimationPackInWasm
   },
-  41776: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => yM,
-      g: () => dM,
-      k: () => GM
+  41977: (VV, eV, xV) => {
+    xV.d(eV, {
+      e: () => BV,
+      f: () => EV,
+      g: () => FV
     });
-    var OM = iM(7131),
-      SM = iM(22),
-      jM = iM(4641),
-      aM = iM(5200),
-      PM = iM(7124),
-      nM = iM(41782);
+    var JV = xV(7201),
+      YV = xV(32),
+      UV = xV(4703),
+      yV = xV(5301),
+      pV = xV(7193),
+      QV = xV(41983);
 
-    function QM(MM, rM) {
-      const iM = (0, PM.b)(rM.variants);
-      return MM.setShaderPack(iM.variantFlags, iM.hooks, iM.moduleCodes, (0, nM.s)(rM.layers), nM.l[rM.lQ], rM.keepCircleShadows)
+    function nV(VV, eV) {
+      const xV = (0, pV.b)(eV.variants);
+      return VV.setShaderPack(xV.variantFlags, xV.hooks, xV.moduleCodes, (0, QV.z)(eV.layers), QV.n[eV.Fn], eV.keepCircleShadows)
     }
-    const zM = 0,
-      LM = 1,
-      mM = 2,
-      HM = "shaderPack:failedToCompile",
-      hM = new Set(["no_webgpu_api", "no_adapter", "compatibility_held", "software_adapter", "adapter_error", "start_no_adapter"]),
-      JM = new Set(["not_requested", "off_after_loss", "gpu_class_webgl", "gpu_wasm_arm"]);
+    const wV = 0,
+      ZV = 1,
+      vV = 2,
+      rV = "shaderPack:failedToCompile",
+      kV = new Set(["no_webgpu_api", "no_adapter", "compatibility_held", "software_adapter", "adapter_error", "start_no_adapter"]),
+      bV = new Set(["not_requested", "off_after_loss", "gpu_class_webgl", "gpu_wasm_arm"]);
 
-    function dM(MM, rM) {
-      var iM;
-      const OM = null !== (iM = null === MM || void 0 === MM ? void 0 : MM.reason) && void 0 !== iM ? iM : "none";
-      return hM.has(OM) ? {
-        messageKey: rM ? "shaderPack:failedWebGpuDisabledUntilRestart" : "shaderPack:failedNoWebGpu",
+    function EV(VV, eV) {
+      var xV;
+      const JV = null !== (xV = null === VV || void 0 === VV ? void 0 : VV.reason) && void 0 !== xV ? xV : "none";
+      return kV.has(JV) ? {
+        messageKey: eV ? "shaderPack:failedWebGpuDisabledUntilRestart" : "shaderPack:failedNoWebGpu",
         noAdapter: !0
-      } : "not_requested" === OM && "override" === (null === MM || void 0 === MM ? void 0 : MM.source) ? {
+      } : "not_requested" === JV && "override" === (null === VV || void 0 === VV ? void 0 : VV.source) ? {
         messageKey: "shaderPack:failedRendererOverride",
         noAdapter: !1
       } : {
-        messageKey: JM.has(OM) ? "shaderPack:failedWebGpuOff" : "shaderPack:failedNoWebGpu",
+        messageKey: bV.has(JV) ? "shaderPack:failedWebGpuOff" : "shaderPack:failedNoWebGpu",
         noAdapter: !1
       }
     }
-    class yM extends Error {
-      constructor(MM) {
-        super(`the shader pack can't run in this game: ${MM}`), this.messageKey = MM, this.name = "ShaderPackJoinError"
+    class BV extends Error {
+      constructor(VV) {
+        super(`the shader pack can't run in this game: ${VV}`), this.messageKey = VV, this.name = "ShaderPackJoinError"
       }
     }
-    const lM = "strict";
-    class EM {
-      constructor(MM) {
-        this.deps = MM, this.pagePack = void 0, this.loaded = null, this.lQ = lM, this.failedPolicies = new Set, this.failedModelPolicies = new Set, this.refused = !1, this.joined = !1, this.playing = !1, this.game = 0, this.failedWhileJoining = !1, this.offInThisGame = !1, this.couldntRun = null, this.modelsNotified = !1, this.pagePack = MM.load().catch((rM => (MM.warn("the shader pack could not load: the game draws without it", rM), {
+    const jV = "strict";
+    class qV {
+      constructor(VV) {
+        this.deps = VV, this.pagePack = void 0, this.loaded = null, this.Fn = jV, this.failedPolicies = new Set, this.failedModelPolicies = new Set, this.refused = !1, this.joined = !1, this.playing = !1, this.game = 0, this.failedWhileJoining = !1, this.offInThisGame = !1, this.couldntRun = null, this.modelsNotified = !1, this.pagePack = VV.load().catch((eV => (VV.warn("the shader pack could not load: the game draws without it", eV), {
           status: "none"
-        }))).then((MM => (this.loaded = MM, "active" === MM.status && (this.handOverToPreviews(MM), null !== MM.harnessPolicy && (this.lQ = MM.harnessPolicy, this.handOver())), MM)))
+        }))).then((VV => (this.loaded = VV, "active" === VV.status && (this.handOverToPreviews(VV), null !== VV.harnessPolicy && (this.Fn = VV.harnessPolicy, this.handOver())), VV)))
       }
-      async join(MM) {
+      async join(VV) {
         this.leave();
-        const rM = this.game,
-          [iM, SM] = await Promise.all([this.pagePack, this.policyOf(MM)]);
-        if (rM !== this.game || "none" === iM.status) return null;
-        const jM = "active" === iM.status ? iM.pack.variants : iM.variants,
-          aM = (0, OM.l)(jM, SM);
-        if (aM && "active" === iM.status && null === this.deps.core) return this.joined = !0, this.offInThisGame = !0, this.couldntRun = this.deps.noWebGpu.messageKey, null;
-        if (aM) {
-          const MM = this.cantRun(iM, SM);
-          if (null !== MM) return MM
-        } else if ("blocked" === iM.status || null === this.deps.core) return null;
-        return this.lQ = SM, this.handOver(), aM && this.refused ? HM : (this.joined = !0, this.offInThisGame = !aM, null)
+        const eV = this.game,
+          [xV, YV] = await Promise.all([this.pagePack, this.policyOf(VV)]);
+        if (eV !== this.game || "none" === xV.status) return null;
+        const UV = "active" === xV.status ? xV.pack.variants : xV.variants,
+          yV = (0, JV.h)(UV, YV);
+        if (yV && "active" === xV.status && null === this.deps.core) return this.joined = !0, this.offInThisGame = !0, this.couldntRun = this.deps.noWebGpu.messageKey, null;
+        if (yV) {
+          const VV = this.cantRun(xV, YV);
+          if (null !== VV) return VV
+        } else if ("blocked" === xV.status || null === this.deps.core) return null;
+        return this.Fn = YV, this.handOver(), yV && this.refused ? rV : (this.joined = !0, this.offInThisGame = !yV, null)
       }
-      async replay(MM) {
-        const rM = await this.join(MM);
-        null === rM ? this.playable() : this.deps.failInGame(rM)
+      async replay(VV) {
+        const eV = await this.join(VV);
+        null === eV ? this.playable() : this.deps.failInGame(eV)
       }
-      cantRun(MM, rM) {
+      cantRun(VV, eV) {
         const {
-          core: iM,
-          noWebGpu: OM
+          core: xV,
+          noWebGpu: JV
         } = this.deps;
-        if ("blocked" === MM.status) {
-          return "shaderPack:failedUnchecked" === MM.messageKey && null === iM && OM.noAdapter ? OM.messageKey : MM.messageKey
+        if ("blocked" === VV.status) {
+          return "shaderPack:failedUnchecked" === VV.messageKey && null === xV && JV.noAdapter ? JV.messageKey : VV.messageKey
         }
-        return this.refused || this.failedPolicies.has(rM) ? HM : null
+        return this.refused || this.failedPolicies.has(eV) ? rV : null
       }
       runsInJoinedGame() {
         return this.joined && !this.offInThisGame
       }
       reachInJoinedGame() {
-        var MM;
-        return this.runsInJoinedGame() && "active" === (null === (MM = this.loaded) || void 0 === MM ? void 0 : MM.status) ? function(MM, rM) {
-          const iM = MM.filter((MM => (0, OM.l)([MM], rM))),
-            SM = MM => iM.some((rM => rM[MM]));
+        var VV;
+        return this.runsInJoinedGame() && "active" === (null === (VV = this.loaded) || void 0 === VV ? void 0 : VV.status) ? function(VV, eV) {
+          const xV = VV.filter((VV => (0, JV.h)([VV], eV))),
+            YV = VV => xV.some((eV => eV[VV]));
           return {
-            sceneDepth: SM("sceneDepth"),
-            sunShadow: SM("sunShadow"),
-            airShadow: SM("airShadow")
+            sceneDepth: YV("sceneDepth"),
+            sunShadow: YV("sunShadow"),
+            airShadow: YV("airShadow")
           }
-        }(this.loaded.pack.variants, this.lQ) : null
+        }(this.loaded.pack.variants, this.Fn) : null
       }
       couldntRunInJoinedGame() {
         return this.couldntRun
       }
       playable() {
-        this.joined && !this.playing && (this.playing = !0, this.failedWhileJoining ? this.fail(HM) : (null !== this.couldntRun ? this.notify(jM.b, this.couldntRun) : this.offInThisGame && this.notify("shaderPack:offInThisGame"), this.failedModelPolicies.has(this.lQ) && this.notifyModelFallback()))
+        this.joined && !this.playing && (this.playing = !0, this.failedWhileJoining ? this.fail(rV) : (null !== this.couldntRun ? this.notify(UV.d, this.couldntRun) : this.offInThisGame && this.notify("shaderPack:offInThisGame"), this.failedModelPolicies.has(this.Fn) && this.notifyModelFallback()))
       }
       leave() {
         this.game++, this.joined = !1, this.playing = !1, this.failedWhileJoining = !1, this.offInThisGame = !1, this.couldntRun = null, this.modelsNotified = !1
       }
-      coreErrors(MM) {
+      coreErrors(VV) {
         for (const {
-            code: rM,
-            detail: iM
+            code: eV,
+            detail: xV
           }
-          of MM)
-          if (rM === aM.n.RenderShaderPackNotRun) switch (255 & iM) {
-            case zM:
+          of VV)
+          if (eV === yV.s.RenderShaderPackNotRun) switch (255 & xV) {
+            case wV:
               this.refused = !0, this.failed();
               break;
-            case LM:
-              this.failedPolicies.add(this.lQ), this.failed();
+            case ZV:
+              this.failedPolicies.add(this.Fn), this.failed();
               break;
-            case mM:
-              this.failedModelPolicies.add(this.lQ), this.playing && this.notifyModelFallback()
+            case vV:
+              this.failedModelPolicies.add(this.Fn), this.playing && this.notifyModelFallback()
           }
       }
       failed() {
-        this.joined && !this.offInThisGame && (this.playing ? this.fail(HM) : this.failedWhileJoining = !0)
+        this.joined && !this.offInThisGame && (this.playing ? this.fail(rV) : this.failedWhileJoining = !0)
       }
-      fail(MM) {
-        this.leave(), this.deps.failInGame(MM)
+      fail(VV) {
+        this.leave(), this.deps.failInGame(VV)
       }
       notifyModelFallback() {
         this.modelsNotified || (this.modelsNotified = !0, this.notify("shaderPack:modelsWithoutPack"))
       }
-      notify(MM, rM) {
-        const iM = this.game;
-        this.deps.notify(MM, (() => iM === this.game && this.joined), rM)
+      notify(VV, eV) {
+        const xV = this.game;
+        this.deps.notify(VV, (() => xV === this.game && this.joined), eV)
       }
       handOver() {
-        var MM;
+        var VV;
         const {
-          core: rM
+          core: eV
         } = this.deps;
-        null !== rM && "active" === (null === (MM = this.loaded) || void 0 === MM ? void 0 : MM.status) && (QM(rM, {
+        null !== eV && "active" === (null === (VV = this.loaded) || void 0 === VV ? void 0 : VV.status) && (nV(eV, {
           ...this.loaded.pack,
-          lQ: this.lQ
+          Fn: this.Fn
         }) || (this.refused = !0, this.deps.warn("the core refused the shader pack: the games it runs in fail", null)))
       }
-      handOverToPreviews(MM) {
+      handOverToPreviews(VV) {
         let {
-          pack: rM,
-          harnessPolicy: iM
-        } = MM;
+          pack: eV,
+          harnessPolicy: xV
+        } = VV;
         const {
-          previews: OM
+          previews: JV
         } = this.deps;
-        null !== OM && QM(OM, {
-          ...rM,
-          lQ: null !== iM && void 0 !== iM ? iM : lM
+        null !== JV && nV(JV, {
+          ...eV,
+          Fn: null !== xV && void 0 !== xV ? xV : jV
         })
       }
-      policyOf(MM) {
-        return this.deps.policyOf(MM).catch((MM => (this.deps.warn("the game's shader pack policy could not load: the policy of a game without one", MM), lM)))
+      policyOf(VV) {
+        return this.deps.policyOf(VV).catch((VV => (this.deps.warn("the game's shader pack policy could not load: the policy of a game without one", VV), jV)))
       }
     }
-    const UM = "wasmShaderPackNotice";
+    const tV = "wasmShaderPackNotice";
 
-    function GM(MM, rM, iM, OM) {
-      return SM.i.subscribe(UM, (MM => {
+    function FV(VV, eV, xV, JV) {
+      return YV.h.subscribe(tV, (VV => {
         let {
-          translationKey: rM,
-          stillCurrent: iM,
-          reasonKey: OM
-        } = MM;
-        iM() && SM.i.Tz("chat", (0, jM.f)(rM, OM))
-      })), new EM({
-        load: CM,
-        policyOf: eM,
-        core: MM,
-        previews: rM,
-        noWebGpu: iM,
-        notify: (MM, rM, iM) => {
-          const OM = {
-            translationKey: MM,
-            stillCurrent: rM,
-            reasonKey: iM
+          translationKey: eV,
+          stillCurrent: xV,
+          reasonKey: JV
+        } = VV;
+        xV() && YV.h.QZ("chat", (0, UV.i)(eV, JV))
+      })), new qV({
+        load: TV,
+        policyOf: PV,
+        core: VV,
+        previews: eV,
+        noWebGpu: xV,
+        notify: (VV, eV, xV) => {
+          const JV = {
+            translationKey: VV,
+            stillCurrent: eV,
+            reasonKey: xV
           };
-          SM.i.Tz(UM, OM, !0)
+          YV.h.QZ(tV, JV, !0)
         },
-        failInGame: MM => {
-          SM.i.Tz(jM.e, MM)
+        failInGame: VV => {
+          YV.h.QZ(UV.e, VV)
         },
-        warn: OM
+        warn: JV
       })
     }
-    async function CM() {
+    async function TV() {
       const [{
-        shaderPackPage: MM,
-        harnessShaderPackMode: rM
+        shaderPackPage: VV,
+        harnessShaderPackMode: eV
       }, {
-        shaderPackTextures: OM
-      }] = await Promise.all([iM.e(129).then((() => iM(40300))), iM.e(130).then((() => iM(7120)))]), SM = await MM.load();
-      return "active" !== SM.status ? SM : {
+        shaderPackTextures: JV
+      }] = await Promise.all([xV.e(129).then((() => xV(40443))), xV.e(130).then((() => xV(7191)))]), YV = await VV.load();
+      return "active" !== YV.status ? YV : {
         status: "active",
         pack: {
-          variants: SM.pack.variants,
-          layers: OM().layers,
-          keepCircleShadows: SM.pack.keepCircleShadows
+          variants: YV.pack.variants,
+          layers: JV().layers,
+          keepCircleShadows: YV.pack.keepCircleShadows
         },
-        harnessPolicy: rM()
+        harnessPolicy: eV()
       }
     }
-    async function eM(MM) {
-      var rM;
+    async function PV(VV) {
+      var eV;
       const [{
-        shaderPackPage: OM,
-        harnessShaderPackMode: SM
+        shaderPackPage: JV,
+        harnessShaderPackMode: YV
       }, {
-        getShaderPackPolicy: jM
-      }] = await Promise.all([iM.e(129).then((() => iM(40300))), iM.e(106).then((() => iM(43937)))]);
-      return await OM.load(), null !== (rM = SM()) && void 0 !== rM ? rM : jM(MM)
+        getShaderPackPolicy: UV
+      }] = await Promise.all([xV.e(129).then((() => xV(40443))), xV.e(106).then((() => xV(44193)))]);
+      return await JV.load(), null !== (eV = YV()) && void 0 !== eV ? eV : UV(VV)
     }
   },
-  41900: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => PM,
-      g: () => dM,
-      i: () => nM,
-      k: () => QM,
-      o: () => zM,
-      p: () => mM
+  42109: (VV, eV, xV) => {
+    xV.d(eV, {
+      b: () => pV,
+      c: () => EV,
+      f: () => QV,
+      i: () => nV,
+      j: () => wV,
+      k: () => vV
     });
-    var OM = iM(41906),
-      SM = iM(41913);
-    const jM = "atlas:",
-      aM = 3e4;
-    class PM extends Error {
-      constructor(MM, rM) {
-        super(`fetching ${MM} answered HTTP ${rM}`), this.url = MM, this.status = rM, this.name = "TerrainTextureFetchError"
+    var JV = xV(42117),
+      YV = xV(42123);
+    const UV = "atlas:",
+      yV = 3e4;
+    class pV extends Error {
+      constructor(VV, eV) {
+        super(`fetching ${VV} answered HTTP ${eV}`), this.url = VV, this.status = eV, this.name = "TerrainTextureFetchError"
       }
     }
 
-    function nM(MM) {
-      if (!MM.startsWith(jM)) return null;
-      const rM = Number(MM.slice(jM.length));
-      return Number.isInteger(rM) && rM >= 0 ? rM : null
+    function QV(VV) {
+      if (!VV.startsWith(UV)) return null;
+      const eV = Number(VV.slice(UV.length));
+      return Number.isInteger(eV) && eV >= 0 ? eV : null
     }
-    async function QM() {
-      const MM = await iM.e(231).then((() => iM(35131)));
+    async function nV() {
+      const VV = await xV.e(231).then((() => xV(35423)));
       return {
-        atlasSheets: MM.blockAtlasUrls,
-        texture: rM => {
-          var iM, OM, jM;
-          return null !== (iM = null !== (OM = null !== (jM = MM.animatedBlockTextures[rM]) && void 0 !== jM ? jM : MM.rotatedBlockTextures[rM]) && void 0 !== OM ? OM : SM.c[rM]) && void 0 !== iM ? iM : null
+        atlasSheets: VV.blockAtlasUrls,
+        texture: eV => {
+          var xV, JV, UV;
+          return null !== (xV = null !== (JV = null !== (UV = VV.animatedBlockTextures[eV]) && void 0 !== UV ? UV : VV.rotatedBlockTextures[eV]) && void 0 !== JV ? JV : YV.d[eV]) && void 0 !== xV ? xV : null
         }
       }
     }
-    async function zM(MM) {
-      const rM = new AbortController,
-        iM = setTimeout((() => {
-          rM.abort(new DOMException(`${MM} took over ${aM} ms`, "TimeoutError"))
-        }), aM);
-      let OM;
+    async function wV(VV) {
+      const eV = new AbortController,
+        xV = setTimeout((() => {
+          eV.abort(new DOMException(`${VV} took over ${yV} ms`, "TimeoutError"))
+        }), yV);
+      let JV;
       try {
-        const iM = await fetch(MM, {
-          signal: rM.signal
+        const xV = await fetch(VV, {
+          signal: eV.signal
         });
-        if (!iM.ok) throw new PM(MM, iM.status);
-        OM = await iM.blob()
+        if (!xV.ok) throw new pV(VV, xV.status);
+        JV = await xV.blob()
       } finally {
-        clearTimeout(iM)
+        clearTimeout(xV)
       }
-      const SM = await createImageBitmap(OM, {
+      const YV = await createImageBitmap(JV, {
         premultiplyAlpha: "none",
         colorSpaceConversion: "none"
       });
       try {
-        return mM(SM)
+        return vV(YV)
       } finally {
-        SM.close()
+        YV.close()
       }
     }
-    const LM = 8192;
+    const ZV = 8192;
 
-    function mM(MM) {
+    function vV(VV) {
       const {
-        width: rM,
-        height: iM
-      } = MM, SM = Math.max(1, Math.min(iM, LM)), jM = (0, OM.d)(rM, SM, {
+        width: eV,
+        height: xV
+      } = VV, YV = Math.max(1, Math.min(xV, ZV)), UV = (0, JV.c)(eV, YV, {
         willReadFrequently: !0
       });
-      if (!jM) throw new Error("no 2D context to read the texture back");
-      jM.globalCompositeOperation = "copy";
-      const aM = new Uint8Array(rM * iM * 4);
-      for (let OM = 0; OM < iM; OM += SM) {
-        const PM = Math.min(SM, iM - OM);
-        jM.drawImage(MM, 0, OM, rM, PM, 0, 0, rM, PM), aM.set(jM.getImageData(0, 0, rM, PM).data, OM * rM * 4)
+      if (!UV) throw new Error("no 2D context to read the texture back");
+      UV.globalCompositeOperation = "copy";
+      const yV = new Uint8Array(eV * xV * 4);
+      for (let JV = 0; JV < xV; JV += YV) {
+        const pV = Math.min(YV, xV - JV);
+        UV.drawImage(VV, 0, JV, eV, pV, 0, 0, eV, pV), yV.set(UV.getImageData(0, 0, eV, pV).data, JV * eV * 4)
       }
       return {
-        width: rM,
-        height: iM,
-        pixels: aM
+        width: eV,
+        height: xV,
+        pixels: yV
       }
     }
-    async function HM(MM, rM) {
-      let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : zM;
-      const OM = [],
-        SM = await Promise.all(MM.map((async MM => {
-          var SM, aM;
-          const PM = null !== (SM = null === (aM = rM.decoded) || void 0 === aM ? void 0 : aM.call(rM, MM)) && void 0 !== SM ? SM : null,
-            QM = null === PM ? function(MM, rM) {
-              if (MM.startsWith(jM)) {
-                var iM;
-                const OM = nM(MM);
-                return null === OM ? null : null !== (iM = rM.atlasSheets[OM]) && void 0 !== iM ? iM : null
+    async function rV(VV, eV) {
+      let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : wV;
+      const JV = [],
+        YV = await Promise.all(VV.map((async VV => {
+          var YV, yV;
+          const pV = null !== (YV = null === (yV = eV.decoded) || void 0 === yV ? void 0 : yV.call(eV, VV)) && void 0 !== YV ? YV : null,
+            nV = null === pV ? function(VV, eV) {
+              if (VV.startsWith(UV)) {
+                var xV;
+                const JV = QV(VV);
+                return null === JV ? null : null !== (xV = eV.atlasSheets[JV]) && void 0 !== xV ? xV : null
               }
-              return rM.texture(MM)
-            }(MM, rM) : null,
-            zM = null !== PM && void 0 !== PM ? PM : null === QM ? null : iM(QM);
-          if (null === zM) return OM.push({
-            name: MM,
-            url: QM,
-            error: new Error(`no URL for terrain texture ${MM}`)
+              return eV.texture(VV)
+            }(VV, eV) : null,
+            wV = null !== pV && void 0 !== pV ? pV : null === nV ? null : xV(nV);
+          if (null === wV) return JV.push({
+            name: VV,
+            url: nV,
+            error: new Error(`no URL for terrain texture ${VV}`)
           }), null;
           try {
-            const rM = await zM;
-            if (rM.pixels.byteLength !== rM.width * rM.height * 4) throw new Error(`decoded ${rM.pixels.byteLength} bytes for ${rM.width}x${rM.height} texels`);
+            const eV = await wV;
+            if (eV.pixels.byteLength !== eV.width * eV.height * 4) throw new Error(`decoded ${eV.pixels.byteLength} bytes for ${eV.width}x${eV.height} texels`);
             return {
-              name: MM,
-              texture: rM
+              name: VV,
+              texture: eV
             }
-          } catch (LM) {
-            return OM.push({
-              name: MM,
-              url: QM,
-              error: LM
+          } catch (ZV) {
+            return JV.push({
+              name: VV,
+              url: nV,
+              error: ZV
             }), null
           }
         }))),
-        aM = SM.filter((MM => null !== MM)),
-        PM = new Uint32Array(2 * aM.length);
-      aM.forEach(((MM, rM) => {
+        yV = YV.filter((VV => null !== VV)),
+        pV = new Uint32Array(2 * yV.length);
+      yV.forEach(((VV, eV) => {
         let {
-          texture: iM
-        } = MM;
-        PM[2 * rM] = iM.width, PM[2 * rM + 1] = iM.height
+          texture: xV
+        } = VV;
+        pV[2 * eV] = xV.width, pV[2 * eV + 1] = xV.height
       }));
       return {
         handOver: {
-          names: aM.map((MM => {
+          names: yV.map((VV => {
             let {
-              name: rM
-            } = MM;
-            return rM
+              name: eV
+            } = VV;
+            return eV
           })),
-          textures: aM.map((MM => {
+          textures: yV.map((VV => {
             let {
-              texture: rM
-            } = MM;
-            return rM.pixels
+              texture: eV
+            } = VV;
+            return eV.pixels
           })),
-          sizes: PM
+          sizes: pV
         },
-        failures: OM
+        failures: JV
       }
     }
-    const hM = [2e3, 1e4, 3e4, 6e4, 12e4];
+    const kV = [2e3, 1e4, 3e4, 6e4, 12e4];
 
-    function JM() {}
-    class dM {
-      constructor(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : hM,
-          iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1048576;
-        this.core = MM, this.retryMs = rM, this.keepBelow = iM, this.started = 0, this.landed = 0, this.current = null, this.restoring = null
+    function bV() {}
+    class EV {
+      constructor(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : kV,
+          xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1048576;
+        this.core = VV, this.retryMs = eV, this.keepBelow = xV, this.started = 0, this.landed = 0, this.current = null, this.restoring = null
       }
-      async swap(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : QM,
-          iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        const OM = ++this.started,
-          SM = {
-            decode: iM.decode,
-            wholeAtlas: iM.wholeAtlas
+      async swap(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : nV,
+          xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        const JV = ++this.started,
+          YV = {
+            decode: xV.decode,
+            wholeAtlas: xV.wholeAtlas
           };
-        return this.loadAndHandOver(rM, SM, MM, (() => {
-          var MM;
-          return OM < this.landed || !1 === (null === (MM = iM.wanted) || void 0 === MM ? void 0 : MM.call(iM))
+        return this.loadAndHandOver(eV, YV, VV, (() => {
+          var VV;
+          return JV < this.landed || !1 === (null === (VV = xV.wanted) || void 0 === VV ? void 0 : VV.call(xV))
         }), {
-          onTaken: (MM, iM) => {
-            this.landed = OM, this.current = {
-              mine: OM,
-              sources: rM,
-              load: SM,
-              ML: MM,
-              failed: iM
+          onTaken: (VV, xV) => {
+            this.landed = JV, this.current = {
+              mine: JV,
+              sources: eV,
+              load: YV,
+              ZZ: VV,
+              failed: xV
             }
           }
         })
       }
-      restore(MM) {
-        var rM;
-        const iM = this.current;
-        if (null === iM) return Promise.resolve(null);
-        if ((null === (rM = this.restoring) || void 0 === rM ? void 0 : rM.mine) === iM.mine) return this.restoring.done;
-        const OM = {
-          mine: iM.mine,
-          done: this.restoreLanded(iM, MM).finally((() => {
-            this.restoring === OM && (this.restoring = null)
+      restore(VV) {
+        var eV;
+        const xV = this.current;
+        if (null === xV) return Promise.resolve(null);
+        if ((null === (eV = this.restoring) || void 0 === eV ? void 0 : eV.mine) === xV.mine) return this.restoring.done;
+        const JV = {
+          mine: xV.mine,
+          done: this.restoreLanded(xV, VV).finally((() => {
+            this.restoring === JV && (this.restoring = null)
           }))
         };
-        return this.restoring = OM, OM.done
+        return this.restoring = JV, JV.done
       }
-      async restoreLanded(MM, rM) {
-        const iM = () => this.landed !== MM.mine,
+      async restoreLanded(VV, eV) {
+        const xV = () => this.landed !== VV.mine,
           {
-            ML: OM
-          } = MM;
-        if (null !== OM) return this.stopped() ? null : this.core.setTerrainTextures(OM.names, OM.textures, OM.sizes);
-        let SM = rM;
-        for (let jM = 0;; jM++) {
-          const rM = this.retryMs.at(jM),
-            OM = {
-              allOrNothingExcept: void 0 === rM ? void 0 : MM.failed
+            ZZ: JV
+          } = VV;
+        if (null !== JV) return this.stopped() ? null : this.core.setTerrainTextures(JV.names, JV.textures, JV.sizes);
+        let YV = eV;
+        for (let UV = 0;; UV++) {
+          const eV = this.retryMs.at(UV),
+            JV = {
+              allOrNothingExcept: void 0 === eV ? void 0 : VV.failed
             },
-            aM = await this.loadAndHandOver(MM.sources, MM.load, SM, iM, OM);
-          if (!1 !== aM || void 0 === rM || this.stopped()) return aM;
-          if (SM = JM, await new Promise((MM => {
-              setTimeout(MM, rM)
-            })), iM()) return null
+            yV = await this.loadAndHandOver(VV.sources, VV.load, YV, xV, JV);
+          if (!1 !== yV || void 0 === eV || this.stopped()) return yV;
+          if (YV = bV, await new Promise((VV => {
+              setTimeout(VV, eV)
+            })), xV()) return null
         }
       }
       stopped() {
         return !0 === this.core.isStopped
       }
-      async loadAndHandOver(MM, rM, iM, OM) {
-        let SM = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
+      async loadAndHandOver(VV, eV, xV, JV) {
+        let YV = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
         if (this.stopped()) return null;
-        const jM = this.core.terrainTextureNames();
-        var aM;
-        if (0 === jM.length) return null === (aM = SM.onTaken) || void 0 === aM || aM.call(SM, null, new Set), !0;
-        let PM, QM;
+        const UV = this.core.terrainTextureNames();
+        var yV;
+        if (0 === UV.length) return null === (yV = YV.onTaken) || void 0 === yV || yV.call(YV, null, new Set), !0;
+        let pV, nV;
         try {
-          PM = await MM(), QM = await HM(jM, PM, rM.decode)
-        } catch (dM) {
-          return OM() ? null : (iM({
+          pV = await VV(), nV = await rV(UV, pV, eV.decode)
+        } catch (EV) {
+          return JV() ? null : (xV({
             name: null,
             url: null,
-            error: dM
+            error: EV
           }), !1)
         }
-        if (OM() || this.stopped()) return null;
-        for (const nM of QM.failures) iM(nM);
-        const zM = SM.allOrNothingExcept;
-        if (void 0 !== zM && QM.failures.some((MM => {
+        if (JV() || this.stopped()) return null;
+        for (const QV of nV.failures) xV(QV);
+        const wV = YV.allOrNothingExcept;
+        if (void 0 !== wV && nV.failures.some((VV => {
             let {
-              name: rM
-            } = MM;
-            return null === rM || !zM.has(rM)
-          })) || !0 === rM.wholeAtlas && QM.failures.some((MM => {
+              name: eV
+            } = VV;
+            return null === eV || !wV.has(eV)
+          })) || !0 === eV.wholeAtlas && nV.failures.some((VV => {
             let {
-              name: rM
-            } = MM;
-            return null === rM || null !== nM(rM)
+              name: eV
+            } = VV;
+            return null === eV || null !== QV(eV)
           }))) return !1;
         const {
-          handOver: LM
-        } = QM, mM = function(MM) {
-          return MM.textures.reduce(((MM, rM) => MM + rM.byteLength), 0)
-        }(LM) < this.keepBelow, hM = this.core.setTerrainTextures(LM.names, LM.textures, LM.sizes, mM ? void 0 : () => {
-          !async function(MM, rM) {
-            await rM;
+          handOver: ZV
+        } = nV, vV = function(VV) {
+          return VV.textures.reduce(((VV, eV) => VV + eV.byteLength), 0)
+        }(ZV) < this.keepBelow, kV = this.core.setTerrainTextures(ZV.names, ZV.textures, ZV.sizes, vV ? void 0 : () => {
+          !async function(VV, eV) {
+            await eV;
             for (const {
-                buffer: OM
+                buffer: JV
               }
-              of MM) {
-              const MM = OM;
-              var iM;
-              if (!MM.detached) null === (iM = MM.transfer) || void 0 === iM || iM.call(MM, 0)
+              of VV) {
+              const VV = JV;
+              var xV;
+              if (!VV.detached) null === (xV = VV.transfer) || void 0 === xV || xV.call(VV, 0)
             }
-          }(LM.textures, PM.heldUntil)
+          }(ZV.textures, pV.heldUntil)
         });
-        if (hM) {
-          var JM;
-          const MM = new Set(QM.failures.flatMap((MM => {
+        if (kV) {
+          var bV;
+          const VV = new Set(nV.failures.flatMap((VV => {
             let {
-              name: rM
-            } = MM;
-            return null === rM ? [] : [rM]
+              name: eV
+            } = VV;
+            return null === eV ? [] : [eV]
           })));
-          null === (JM = SM.onTaken) || void 0 === JM || JM.call(SM, mM ? LM : null, MM)
+          null === (bV = YV.onTaken) || void 0 === bV || bV.call(YV, vV ? ZV : null, VV)
         }
-        return hM
+        return kV
       }
     }
   },
-  37790: (MM, rM, iM) => {
-    function OM(MM) {
-      return "fetch" === MM || "timeout" === MM || "integrity" === MM ? "download" : "browser"
+  38036: (VV, eV, xV) => {
+    function JV(VV) {
+      return "fetch" === VV || "timeout" === VV || "integrity" === VV ? "download" : "browser"
     }
-    iM.d(rM, {
-      d: () => SM,
-      f: () => aM,
-      g: () => nM,
-      j: () => PM,
-      n: () => OM,
-      p: () => jM
+    xV.d(eV, {
+      d: () => YV,
+      e: () => yV,
+      g: () => QV,
+      i: () => pV,
+      j: () => JV,
+      k: () => UV
     });
-    const SM = "https://discord.gg/playbloxd";
+    const YV = "https://discord.gg/playbloxd";
 
-    function jM(MM) {
-      return "download" === MM ? {
+    function UV(VV) {
+      return "download" === VV ? {
         icon: "wifi",
         title: "wasmScreens:downloadFailedTitle",
         help: "wasmScreens:downloadFailedHelp",
@@ -3697,21 +3697,21 @@ export const modules = {
       }
     }
 
-    function aM(MM, rM) {
+    function yV(VV, eV) {
       return {
         icon: "face-dizzy",
         title: "wasmScreens:crashTitle",
-        help: rM ? "wasmScreens:crashHelp" : "wasmScreens:crashHelpNoDiscord",
+        help: eV ? "wasmScreens:crashHelp" : "wasmScreens:crashHelpNoDiscord",
         helpValues: {
-          code: MM.code
+          code: VV.code
         },
-        discordLink: rM,
+        discordLink: eV,
         confirm: "general:reload",
         cancel: "general:back"
       }
     }
 
-    function PM() {
+    function pV() {
       return {
         icon: "face-dizzy",
         title: "wasmScreens:turnstilePageTitle",
@@ -3723,314 +3723,314 @@ export const modules = {
       }
     }
 
-    function nM(MM, rM, iM) {
+    function QV(VV, eV, xV) {
       return {
         icon: "wifi",
         title: "wasmScreens:disconnectedTitle",
-        help: iM ? "wasmScreens:reconnectingHelp" : "wasmScreens:disconnectedHelp",
+        help: xV ? "wasmScreens:reconnectingHelp" : "wasmScreens:disconnectedHelp",
         helpValues: {
-          reason: MM.reason
+          reason: VV.reason
         },
-        discordLink: null === MM.name,
-        confirm: rM ? "general:reconnect" : MM.requiresRefresh ? "general:reload" : "general:ok",
+        discordLink: null === VV.name,
+        confirm: eV ? "general:reconnect" : VV.requiresRefresh ? "general:reload" : "general:ok",
         cancel: null
       }
     }
   },
-  34980: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => QM,
-      d: () => LM,
-      g: () => zM
+  35259: (VV, eV, xV) => {
+    xV.d(eV, {
+      c: () => nV,
+      f: () => ZV,
+      j: () => wV
     });
-    var OM = iM(243),
-      SM = iM(83),
-      jM = iM(114),
-      aM = iM(110),
-      PM = iM(650);
-    const nM = new Set(["mali_bifrost"]);
+    var JV = xV(296),
+      YV = xV(99),
+      UV = xV(134),
+      yV = xV(129),
+      pV = xV(679);
+    const QV = new Set(["mali_bifrost"]);
 
-    function QM() {
-      if (PM.i) return;
-      const MM = (0, SM.pageOperatingSystem)();
-      if ("android" !== MM && "windows" !== MM || (0, PM.e)("webgl_default")) return;
-      if ("windows" === MM) return MM => "qualcomm" === (0, SM.normaliseGpuVendor)((0, aM.d)(MM).vendor);
-      const rM = (0, jM.o)(),
-        iM = null === rM ? (0, OM.w)() : (0, OM.l)(rM.vendor, rM.renderer);
-      return null !== iM && nM.has(iM) ? MM => (0, OM.q)((0, aM.d)(MM).vendor, iM) : void 0
+    function nV() {
+      if (pV.f) return;
+      const VV = (0, YV.pageOperatingSystem)();
+      if ("android" !== VV && "windows" !== VV || (0, pV.e)("webgl_default")) return;
+      if ("windows" === VV) return VV => "qualcomm" === (0, YV.normaliseGpuVendor)((0, yV.c)(VV).vendor);
+      const eV = (0, UV.o)(),
+        xV = null === eV ? (0, JV.p)() : (0, JV.h)(eV.vendor, eV.renderer);
+      return null !== xV && QV.has(xV) ? VV => (0, JV.m)((0, yV.c)(VV).vendor, xV) : void 0
     }
 
-    function zM(MM, rM) {
-      return MM ? () => !0 : rM()
+    function wV(VV, eV) {
+      return VV ? () => !0 : eV()
     }
-    async function LM(MM) {
+    async function ZV(VV) {
       try {
-        const rM = zM(MM, QM),
-          iM = navigator.gpu;
-        if (void 0 === rM || void 0 === iM) return !1;
-        const OM = await (0, aM.o)(iM, {
+        const eV = wV(VV, nV),
+          xV = navigator.gpu;
+        if (void 0 === eV || void 0 === xV) return !1;
+        const JV = await (0, yV.l)(xV, {
           seed: !1,
-          compatibility: rM
+          compatibility: eV
         });
-        return "string" !== typeof OM && OM.compatibility && !(0, aM.j)(OM.adapter)
-      } catch (rM) {
-        return console.error("WebGPU compatibility-mode adapter request failed.", rM), !1
+        return "string" !== typeof JV && JV.compatibility && !(0, yV.j)(JV.adapter)
+      } catch (eV) {
+        return console.error("WebGPU compatibility-mode adapter request failed.", eV), !1
       }
     }
   },
-  41855: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => nM,
-      h: () => QM
+  42049: (VV, eV, xV) => {
+    xV.d(eV, {
+      c: () => QV,
+      g: () => nV
     });
-    var OM = iM(83),
-      SM = iM(39814);
-    const jM = "webgpuPipeline";
+    var JV = xV(99),
+      YV = xV(39952);
+    const UV = "webgpuPipeline";
 
-    function aM(MM) {
-      return MM.split(".").slice(0, 2).join("_").replace(/[^0-9_]/g, "")
+    function yV(VV) {
+      return VV.split(".").slice(0, 2).join("_").replace(/[^0-9_]/g, "")
     }
-    let PM = null;
+    let pV = null;
 
-    function nM() {
-      if (null === PM) try {
-        MM = (0, OM.getBrowserName)(), rM = (0, OM.getBrowserVersion)(), iM = (0, OM.getOperatingSystem)(), SM = (0, OM.getOperatingSystemVersion)(), PM = `${MM.toLowerCase().replace(/[^a-z0-9]/g,"")}_${void 0===rM?"unknown":aM(rM)}-${iM}${void 0===SM?"":`_${aM(SM)}`}`
-      } catch (jM) {
-        console.warn("The user agent couldn't be read for its browser code", jM), PM = "unknown"
+    function QV() {
+      if (null === pV) try {
+        VV = (0, JV.getBrowserName)(), eV = (0, JV.getBrowserVersion)(), xV = (0, JV.getOperatingSystem)(), YV = (0, JV.getOperatingSystemVersion)(), pV = `${VV.toLowerCase().replace(/[^a-z0-9]/g,"")}_${void 0===eV?"unknown":yV(eV)}-${xV}${void 0===YV?"":`_${yV(YV)}`}`
+      } catch (UV) {
+        console.warn("The user agent couldn't be read for its browser code", UV), pV = "unknown"
       }
-      var MM, rM, iM, SM;
-      return PM
+      var VV, eV, xV, YV;
+      return pV
     }
 
-    function QM() {
-      let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : GPUDevice.prototype;
-      const rM = `WGPU-${nM()}`,
-        OM = (MM, OM) => {
+    function nV() {
+      let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : GPUDevice.prototype;
+      const eV = `WGPU-${QV()}`,
+        JV = (VV, JV) => {
           const {
-            reason: aM,
-            message: PM
-          } = OM;
-          if ((0, SM.t)(String(PM))) return;
-          const nM = {
-            pipeline: null !== MM && void 0 !== MM ? MM : "",
-            reason: String(aM),
-            browserMessage: String(PM)
+            reason: yV,
+            message: pV
+          } = JV;
+          if ((0, YV.t)(String(pV))) return;
+          const QV = {
+            pipeline: null !== VV && void 0 !== VV ? VV : "",
+            reason: String(yV),
+            browserMessage: String(pV)
           };
-          Promise.resolve().then((() => iM(41833))).then((MM => {
+          Promise.resolve().then((() => xV(42034))).then((VV => {
             let {
-              reportCrash: iM
-            } = MM;
-            iM({
+              reportCrash: xV
+            } = VV;
+            xV({
               kind: "coreError",
-              code: rM,
-              site: jM,
+              code: eV,
+              site: UV,
               fatal: !1,
-              message: `${nM.pipeline} ${nM.reason}: ${nM.browserMessage}`,
-              details: nM,
-              error: OM
+              message: `${QV.pipeline} ${QV.reason}: ${QV.browserMessage}`,
+              details: QV,
+              error: JV
             })
-          })).catch((MM => {
-            console.warn("A rejected WebGPU pipeline compile couldn't be reported", MM)
+          })).catch((VV => {
+            console.warn("A rejected WebGPU pipeline compile couldn't be reported", VV)
           }))
         },
-        aM = MM.createRenderPipelineAsync;
-      MM.createRenderPipelineAsync = function(MM) {
-        return aM.call(this, MM).catch((rM => {
-          throw OM(MM.label, rM), rM
+        yV = VV.createRenderPipelineAsync;
+      VV.createRenderPipelineAsync = function(VV) {
+        return yV.call(this, VV).catch((eV => {
+          throw JV(VV.label, eV), eV
         }))
       };
-      const PM = MM.createComputePipelineAsync;
-      MM.createComputePipelineAsync = function(MM) {
-        return PM.call(this, MM).catch((rM => {
-          throw OM(MM.label, rM), rM
+      const pV = VV.createComputePipelineAsync;
+      VV.createComputePipelineAsync = function(VV) {
+        return pV.call(this, VV).catch((eV => {
+          throw JV(VV.label, eV), eV
         }))
       }
     }
   },
-  41812: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => PM,
-      g: () => nM
+  42017: (VV, eV, xV) => {
+    xV.d(eV, {
+      c: () => pV,
+      g: () => QV
     });
-    var OM = iM(114);
-    let SM = !1;
+    var JV = xV(134);
+    let YV = !1;
 
-    function jM() {
-      let MM = null;
+    function UV() {
+      let VV = null;
       try {
-        return MM = document.createElement("canvas").getContext("webgl2"), null !== MM
+        return VV = document.createElement("canvas").getContext("webgl2"), null !== VV
       } catch {
         return !1
       } finally {
         try {
-          var rM, iM;
-          null === (rM = MM) || void 0 === rM || null === (iM = rM.getExtension("WEBGL_lose_context")) || void 0 === iM || iM.loseContext()
+          var eV, xV;
+          null === (eV = VV) || void 0 === eV || null === (xV = eV.getExtension("WEBGL_lose_context")) || void 0 === xV || xV.loseContext()
         } catch {}
       }
     }
 
-    function aM() {
-      "hidden" === document.visibilityState && (SM = !1, document.removeEventListener("visibilitychange", aM))
+    function yV() {
+      "hidden" === document.visibilityState && (YV = !1, document.removeEventListener("visibilitychange", yV))
     }
 
-    function PM() {
-      SM || "visible" !== document.visibilityState || !(0, OM.q)() && !jM() || (SM = !0, document.addEventListener("visibilitychange", aM))
+    function pV() {
+      YV || "visible" !== document.visibilityState || !(0, JV.q)() && !UV() || (YV = !0, document.addEventListener("visibilitychange", yV))
     }
 
-    function nM() {
-      return SM || jM()
+    function QV() {
+      return YV || UV()
     }
   },
-  41971: (MM, rM, iM) => {
-    MM.exports = iM.p + "static/media/bloxd_wasm_models_bg.20cde5d06eea3961364a.wasm"
+  42165: (VV, eV, xV) => {
+    VV.exports = xV.p + "static/media/bloxd_wasm_models_bg.d897fc9b9fa0d1538289.wasm"
   },
-  41968: (MM, rM, iM) => {
-    MM.exports = iM.p + "static/media/bloxd_wasm_workers_bg.a748c387a816d887f35c.wasm"
+  42160: (VV, eV, xV) => {
+    VV.exports = xV.p + "static/media/bloxd_wasm_workers_bg.ee04f59e40d645c6ee05.wasm"
   },
-  41961: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => SM,
-      f: () => OM
+  42158: (VV, eV, xV) => {
+    xV.d(eV, {
+      d: () => YV,
+      f: () => JV
     });
-    const OM = {
+    const JV = {
       name: "bloxd_wasm_workers",
       url: function() {
-        return new iM.U(iM(41968))
+        return new xV.U(xV(42160))
       }
     };
-    const SM = {
+    const YV = {
       name: "bloxd_wasm_models",
       url: function() {
-        return new iM.U(iM(41971))
+        return new xV.U(xV(42165))
       }
     }
   },
-  7124: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => UM,
-      c: () => GM,
-      f: () => lM,
-      g: () => yM
+  7193: (VV, eV, xV) => {
+    xV.d(eV, {
+      b: () => tV,
+      e: () => FV,
+      g: () => jV,
+      j: () => BV
     });
-    var OM = iM(7131);
-    const SM = 6,
-      jM = 3,
-      aM = 1,
-      PM = 2,
-      nM = 4,
-      QM = 8,
-      zM = 16,
-      LM = 32,
-      mM = 64,
-      HM = 128,
-      hM = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
+    var JV = xV(7201);
+    const YV = 6,
+      UV = 3,
+      yV = 1,
+      pV = 2,
+      QV = 4,
+      nV = 8,
+      wV = 16,
+      ZV = 32,
+      vV = 64,
+      rV = 128,
+      kV = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
 
-    function JM(MM) {
-      if (!MM) return 0;
-      const rM = hM.indexOf(MM);
-      if (rM <= 0) throw new Error(`"${MM}" is not a shader pack hook function`);
-      return rM
+    function bV(VV) {
+      if (!VV) return 0;
+      const eV = kV.indexOf(VV);
+      if (eV <= 0) throw new Error(`"${VV}" is not a shader pack hook function`);
+      return eV
     }
 
-    function dM(MM) {
-      if (0 === MM) return null;
-      const rM = hM[MM];
-      if (void 0 === rM) throw new Error(`${MM} is not a shader pack hook function id`);
-      return rM
+    function EV(VV) {
+      if (0 === VV) return null;
+      const eV = kV[VV];
+      if (void 0 === eV) throw new Error(`${VV} is not a shader pack hook function id`);
+      return eV
     }
 
-    function yM(MM) {
-      const rM = OM.e.length;
+    function BV(VV) {
+      const eV = JV.c.length;
       return {
-        strict: MM >= rM,
-        program: OM.e[MM % rM]
+        strict: VV >= eV,
+        program: JV.c[VV % eV]
       }
     }
 
-    function lM(MM) {
-      return Number(MM.strict) * OM.e.length + OM.e.indexOf(MM.program)
+    function jV(VV) {
+      return Number(VV.strict) * JV.c.length + JV.c.indexOf(VV.program)
     }
 
-    function EM(MM) {
-      return "" === MM ? [] : MM.split(" ")
+    function qV(VV) {
+      return "" === VV ? [] : VV.split(" ")
     }
 
-    function UM(MM) {
-      const rM = {
-        variantFlags: new Uint8Array(SM),
-        hooks: new Uint8Array(SM * jM),
-        moduleCodes: Array(SM).fill(""),
-        reads: Array(2 * SM).fill("")
+    function tV(VV) {
+      const eV = {
+        variantFlags: new Uint8Array(YV),
+        hooks: new Uint8Array(YV * UV),
+        moduleCodes: Array(YV).fill(""),
+        reads: Array(2 * YV).fill("")
       };
-      for (const iM of MM) {
-        const MM = lM(iM.key),
-          OM = (MM, rM) => null === iM.hooks.surface || iM.reads.fragment.includes(MM) ? 0 : rM;
-        rM.variantFlags[MM] = (iM.sceneDepth ? aM : 0) | (iM.movesVertices ? PM : 0) | (iM.sunShadow ? nM : 0) | (iM.airShadow ? QM : 0) | (iM.discards ? zM : 0) | OM("localPosition", LM) | OM("enchantSpeed", mM) | OM("enchantTier", HM), rM.hooks[MM * jM] = JM(iM.hooks.vertex), rM.hooks[MM * jM + 1] = JM(iM.hooks.surface), rM.hooks[MM * jM + 2] = JM(iM.hooks.light), rM.moduleCodes[MM] = iM.moduleCode, rM.reads[2 * MM] = iM.reads.vertex.join(" "), rM.reads[2 * MM + 1] = iM.reads.fragment.join(" ")
+      for (const xV of VV) {
+        const VV = jV(xV.key),
+          JV = (VV, eV) => null === xV.hooks.surface || xV.reads.fragment.includes(VV) ? 0 : eV;
+        eV.variantFlags[VV] = (xV.sceneDepth ? yV : 0) | (xV.movesVertices ? pV : 0) | (xV.sunShadow ? QV : 0) | (xV.airShadow ? nV : 0) | (xV.discards ? wV : 0) | JV("localPosition", ZV) | JV("enchantSpeed", vV) | JV("enchantTier", rV), eV.hooks[VV * UV] = bV(xV.hooks.vertex), eV.hooks[VV * UV + 1] = bV(xV.hooks.surface), eV.hooks[VV * UV + 2] = bV(xV.hooks.light), eV.moduleCodes[VV] = xV.moduleCode, eV.reads[2 * VV] = xV.reads.vertex.join(" "), eV.reads[2 * VV + 1] = xV.reads.fragment.join(" ")
       }
-      return rM
+      return eV
     }
 
-    function GM(MM) {
+    function FV(VV) {
       const {
-        hooks: rM,
-        moduleCodes: iM,
-        reads: OM
-      } = MM;
-      return Array.from(MM.variantFlags, ((MM, SM) => {
-        const LM = SM * jM;
+        hooks: eV,
+        moduleCodes: xV,
+        reads: JV
+      } = VV;
+      return Array.from(VV.variantFlags, ((VV, YV) => {
+        const ZV = YV * UV;
         return {
-          key: yM(SM),
+          key: BV(YV),
           hooks: {
-            vertex: dM(rM[LM]),
-            surface: dM(rM[LM + 1]),
-            light: dM(rM[LM + 2])
+            vertex: EV(eV[ZV]),
+            surface: EV(eV[ZV + 1]),
+            light: EV(eV[ZV + 2])
           },
-          moduleCode: iM[SM],
-          sceneDepth: 0 !== (MM & aM),
-          sunShadow: 0 !== (MM & nM),
-          airShadow: 0 !== (MM & QM),
-          movesVertices: 0 !== (MM & PM),
-          discards: 0 !== (MM & zM),
+          moduleCode: xV[YV],
+          sceneDepth: 0 !== (VV & yV),
+          sunShadow: 0 !== (VV & QV),
+          airShadow: 0 !== (VV & nV),
+          movesVertices: 0 !== (VV & pV),
+          discards: 0 !== (VV & wV),
           reads: {
-            vertex: EM(OM[2 * SM]),
-            fragment: EM(OM[2 * SM + 1])
+            vertex: qV(JV[2 * YV]),
+            fragment: qV(JV[2 * YV + 1])
           }
         }
       }))
     }
   },
-  41782: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => SM,
-      f: () => OM,
-      h: () => mM,
-      i: () => zM,
-      l: () => dM,
-      n: () => jM,
-      p: () => PM,
-      q: () => nM,
-      r: () => aM,
-      s: () => JM,
-      w: () => HM,
-      x: () => hM
+  41983: (VV, eV, xV) => {
+    xV.d(eV, {
+      B: () => rV,
+      E: () => kV,
+      d: () => YV,
+      e: () => JV,
+      g: () => vV,
+      j: () => wV,
+      n: () => EV,
+      o: () => UV,
+      r: () => pV,
+      u: () => QV,
+      y: () => yV,
+      z: () => bV
     });
-    const OM = 3,
-      SM = 0,
-      jM = 1,
-      aM = 2,
-      PM = {
+    const JV = 3,
+      YV = 0,
+      UV = 1,
+      yV = 2,
+      pV = {
         uniform: 3,
-        Xm: 4,
+        Ur: 4,
         special: 5,
         volume: 6,
         sampler: 7,
         entities: 8,
         entityGrids: 9
       },
-      nM = 10,
-      QM = "BloxdPackInputs",
-      zM = "bloxdPackInputs",
-      LM = [{
+      QV = 10,
+      nV = "BloxdPackInputs",
+      wV = "bloxdPackInputs",
+      ZV = [{
         name: "seconds",
         type: "f32",
         offset: 0
@@ -4055,74 +4055,74 @@ export const modules = {
         type: "vec3f",
         offset: 64
       }],
-      mM = 80;
+      vV = 80;
 
-    function HM() {
-      const MM = LM.map((MM => {
+    function rV() {
+      const VV = ZV.map((VV => {
         let {
-          name: rM,
-          type: iM
-        } = MM;
-        return `    ${rM}: ${iM},\n`
+          name: eV,
+          type: xV
+        } = VV;
+        return `    ${eV}: ${xV},\n`
       })).join("");
-      return `struct ${QM} {\n${MM}}\n@group(${OM}) @binding(${SM}) var<uniform> ${zM}: ${QM};\n`
+      return `struct ${nV} {\n${VV}}\n@group(${JV}) @binding(${YV}) var<uniform> ${wV}: ${nV};\n`
     }
 
-    function hM(MM, rM) {
-      const iM = new DataView(MM, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, mM),
-        [OM, SM, jM, aM, PM, nM] = LM;
-      iM.setFloat32(OM.offset, rM.seconds, !0), iM.setUint32(SM.offset, rM.lit ? 1 : 0, !0);
-      for (let QM = 0; QM < 3; QM++) iM.setInt32(jM.offset + 4 * QM, rM.renderOffset[QM], !0), iM.setFloat32(aM.offset + 4 * QM, rM.mMM[QM], !0), iM.setFloat32(PM.offset + 4 * QM, rM.eyePosition[QM], !0), iM.setFloat32(nM.offset + 4 * QM, rM.shadowDirection[QM], !0)
+    function kV(VV, eV) {
+      const xV = new DataView(VV, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, vV),
+        [JV, YV, UV, yV, pV, QV] = ZV;
+      xV.setFloat32(JV.offset, eV.seconds, !0), xV.setUint32(YV.offset, eV.lit ? 1 : 0, !0);
+      for (let nV = 0; nV < 3; nV++) xV.setInt32(UV.offset + 4 * nV, eV.renderOffset[nV], !0), xV.setFloat32(yV.offset + 4 * nV, eV.ReV[nV], !0), xV.setFloat32(pV.offset + 4 * nV, eV.eyePosition[nV], !0), xV.setFloat32(QV.offset + 4 * nV, eV.shadowDirection[nV], !0)
     }
 
-    function JM(MM) {
-      const rM = new Uint32Array(Math.max(1, MM.length));
-      return MM.forEach(((MM, iM) => {
+    function bV(VV) {
+      const eV = new Uint32Array(Math.max(1, VV.length));
+      return VV.forEach(((VV, xV) => {
         let {
-          id: OM,
-          rotation: SM
-        } = MM;
-        rM[iM] = 65535 & OM | (3 & SM) << 16
-      })), rM
+          id: JV,
+          rotation: YV
+        } = VV;
+        eV[xV] = 65535 & JV | (3 & YV) << 16
+      })), eV
     }
-    const dM = {
+    const EV = {
       off: 0,
       strict: 1,
       allow: 2
     }
   },
-  7131: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => OM,
-      h: () => aM,
-      l: () => PM,
-      m: () => SM,
-      o: () => jM
+  7201: (VV, eV, xV) => {
+    xV.d(eV, {
+      c: () => JV,
+      g: () => yV,
+      h: () => pV,
+      l: () => YV,
+      p: () => UV
     });
-    const OM = ["terrain", "liquid", "model"];
+    const JV = ["terrain", "liquid", "model"];
 
-    function SM() {
-      const MM = [];
-      for (const rM of [!1, !0])
-        for (const iM of OM) MM.push({
-          strict: rM,
-          program: iM
+    function YV() {
+      const VV = [];
+      for (const eV of [!1, !0])
+        for (const xV of JV) VV.push({
+          strict: eV,
+          program: xV
         });
-      return MM
+      return VV
     }
 
-    function jM(MM) {
-      return `${MM.strict?"strict":"allow"}.${MM.program}`
+    function UV(VV) {
+      return `${VV.strict?"strict":"allow"}.${VV.program}`
     }
 
-    function aM(MM) {
-      return !MM.hooks.vertex && !MM.hooks.surface && !MM.hooks.light
+    function yV(VV) {
+      return !VV.hooks.vertex && !VV.hooks.surface && !VV.hooks.light
     }
 
-    function PM(MM, rM) {
-      return "off" !== rM && (null === MM || MM.some((MM => MM.key.strict === ("strict" === rM) && !aM(MM))))
+    function pV(VV, eV) {
+      return "off" !== eV && (null === VV || VV.some((VV => VV.key.strict === ("strict" === eV) && !yV(VV))))
     }
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const VV in modules) Object.freeze(modules[VV]);

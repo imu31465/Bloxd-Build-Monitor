@@ -1,433 +1,433 @@
 export const id = 615;
 export const ids = [615];
 export const modules = {
-  44412: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => QM
+  44663: (VV, eV, xV) => {
+    xV.d(eV, {
+      b: () => nV
     });
-    var OM = iM(38040),
-      SM = iM(38074),
-      jM = iM(41086),
-      aM = iM(38044),
-      PM = iM(38173);
-    class nM {
-      constructor(MM, rM, iM, OM) {
-        this.name = MM, this.worldAxisForNormal = rM, this.worldAxisForFileX = iM, this.worldAxisForFileY = OM
+    var JV = xV(38269),
+      YV = xV(38303),
+      UV = xV(41248),
+      yV = xV(38272),
+      pV = xV(38389);
+    class QV {
+      constructor(VV, eV, xV, JV) {
+        this.name = VV, this.worldAxisForNormal = eV, this.worldAxisForFileX = xV, this.worldAxisForFileY = JV
       }
     }
-    class QM {
-      static _NearestPow2Floor(MM) {
-        return MM <= 1 ? 1 : 1 << Math.floor(Math.log2(MM))
+    class nV {
+      static _NearestPow2Floor(VV) {
+        return VV <= 1 ? 1 : 1 << Math.floor(Math.log2(VV))
       }
-      static ConvertCubeMapTextureToSphericalPolynomial(MM) {
-        if (!MM.isCube) return null;
-        MM.Hk()?.ph().flushFramebuffer();
-        const rM = MM.getSize().width,
-          iM = MM._sphericalPolynomialTargetSize,
-          OM = iM > 0 ? this._NearestPow2Floor(iM) : 0,
-          SM = !MM.noMipmap && !0 === MM._texture?.generateMipMaps,
-          jM = OM > 0 && OM < rM && SM,
-          aM = jM ? Math.max(0, Math.round(Math.log2(rM / OM))) : 0,
-          PM = jM ? Math.max(1, Math.floor(rM / Math.pow(2, aM))) : rM,
-          nM = MM.readPixels(0, aM, void 0, !1),
-          QM = MM.readPixels(1, aM, void 0, !1);
-        let zM, LM;
-        MM.isRenderTarget ? (zM = MM.readPixels(3, aM, void 0, !1), LM = MM.readPixels(2, aM, void 0, !1)) : (zM = MM.readPixels(2, aM, void 0, !1), LM = MM.readPixels(3, aM, void 0, !1));
-        const mM = MM.readPixels(4, aM, void 0, !1),
-          HM = MM.readPixels(5, aM, void 0, !1),
-          hM = MM.gammaSpace,
-          JM = OM > 0 && OM < rM && !jM;
-        return new Promise((MM => {
-          Promise.all([QM, nM, zM, LM, mM, HM]).then((iM => {
-            let [SM, jM, aM, nM, QM, zM] = iM, LM = PM;
-            if (JM) {
-              const MM = 4;
-              SM = this._DownsampleFace(SM, rM, OM, MM), jM = this._DownsampleFace(jM, rM, OM, MM), aM = this._DownsampleFace(aM, rM, OM, MM), nM = this._DownsampleFace(nM, rM, OM, MM), QM = this._DownsampleFace(QM, rM, OM, MM), zM = this._DownsampleFace(zM, rM, OM, MM), LM = OM
+      static ConvertCubeMapTextureToSphericalPolynomial(VV) {
+        if (!VV.isCube) return null;
+        VV.dD()?.sk().flushFramebuffer();
+        const eV = VV.getSize().width,
+          xV = VV._sphericalPolynomialTargetSize,
+          JV = xV > 0 ? this._NearestPow2Floor(xV) : 0,
+          YV = !VV.noMipmap && !0 === VV._texture?.generateMipMaps,
+          UV = JV > 0 && JV < eV && YV,
+          yV = UV ? Math.max(0, Math.round(Math.log2(eV / JV))) : 0,
+          pV = UV ? Math.max(1, Math.floor(eV / Math.pow(2, yV))) : eV,
+          QV = VV.readPixels(0, yV, void 0, !1),
+          nV = VV.readPixels(1, yV, void 0, !1);
+        let wV, ZV;
+        VV.isRenderTarget ? (wV = VV.readPixels(3, yV, void 0, !1), ZV = VV.readPixels(2, yV, void 0, !1)) : (wV = VV.readPixels(2, yV, void 0, !1), ZV = VV.readPixels(3, yV, void 0, !1));
+        const vV = VV.readPixels(4, yV, void 0, !1),
+          rV = VV.readPixels(5, yV, void 0, !1),
+          kV = VV.gammaSpace,
+          bV = JV > 0 && JV < eV && !UV;
+        return new Promise((VV => {
+          Promise.all([nV, QV, wV, ZV, vV, rV]).then((xV => {
+            let [YV, UV, yV, QV, nV, wV] = xV, ZV = pV;
+            if (bV) {
+              const VV = 4;
+              YV = this._DownsampleFace(YV, eV, JV, VV), UV = this._DownsampleFace(UV, eV, JV, VV), yV = this._DownsampleFace(yV, eV, JV, VV), QV = this._DownsampleFace(QV, eV, JV, VV), nV = this._DownsampleFace(nV, eV, JV, VV), wV = this._DownsampleFace(wV, eV, JV, VV), ZV = JV
             }
-            const mM = {
-              size: LM,
-              right: jM,
-              left: SM,
-              up: aM,
-              down: nM,
-              front: QM,
-              back: zM,
+            const vV = {
+              size: ZV,
+              right: UV,
+              left: YV,
+              up: yV,
+              down: QV,
+              front: nV,
+              back: wV,
               format: 5,
-              type: SM instanceof Float32Array ? 1 : 0,
-              gammaSpace: hM
+              type: YV instanceof Float32Array ? 1 : 0,
+              gammaSpace: kV
             };
-            MM(this.ConvertCubeMapToSphericalPolynomial(mM))
+            VV(this.ConvertCubeMapToSphericalPolynomial(vV))
           }))
         }))
       }
-      static _AreaElement(MM, rM) {
-        return Math.atan2(MM * rM, Math.sqrt(MM * MM + rM * rM + 1))
+      static _AreaElement(VV, eV) {
+        return Math.atan2(VV * eV, Math.sqrt(VV * VV + eV * eV + 1))
       }
-      static _DownsampleFace(MM, rM, iM, OM) {
-        const SM = MM instanceof Float32Array ? MM : Float32Array.from(MM),
-          jM = iM * iM * OM,
-          aM = new Float32Array(jM),
-          PM = rM / iM,
-          nM = 1 / (PM * PM);
-        for (let zM = 0; zM < iM; zM++) {
-          const MM = Math.floor(zM * PM),
-            jM = Math.floor((zM + 1) * PM);
-          for (let QM = 0; QM < iM; QM++) {
-            const LM = Math.floor(QM * PM),
-              mM = Math.floor((QM + 1) * PM),
-              HM = (zM * iM + QM) * OM;
-            for (let iM = 0; iM < OM; iM++) {
-              let PM = 0;
-              for (let aM = MM; aM < jM; aM++)
-                for (let MM = LM; MM < mM; MM++) PM += SM[(aM * rM + MM) * OM + iM];
-              aM[HM + iM] = PM * nM
+      static _DownsampleFace(VV, eV, xV, JV) {
+        const YV = VV instanceof Float32Array ? VV : Float32Array.from(VV),
+          UV = xV * xV * JV,
+          yV = new Float32Array(UV),
+          pV = eV / xV,
+          QV = 1 / (pV * pV);
+        for (let wV = 0; wV < xV; wV++) {
+          const VV = Math.floor(wV * pV),
+            UV = Math.floor((wV + 1) * pV);
+          for (let nV = 0; nV < xV; nV++) {
+            const ZV = Math.floor(nV * pV),
+              vV = Math.floor((nV + 1) * pV),
+              rV = (wV * xV + nV) * JV;
+            for (let xV = 0; xV < JV; xV++) {
+              let pV = 0;
+              for (let yV = VV; yV < UV; yV++)
+                for (let VV = ZV; VV < vV; VV++) pV += YV[(yV * eV + VV) * JV + xV];
+              yV[rV + xV] = pV * QV
             }
           }
         }
-        if (MM instanceof Float32Array) return aM;
-        const QM = new(0, MM.constructor)(jM);
-        for (let zM = 0; zM < jM; zM++) QM[zM] = aM[zM] + .5 | 0;
-        return QM
+        if (VV instanceof Float32Array) return yV;
+        const nV = new(0, VV.constructor)(UV);
+        for (let wV = 0; wV < UV; wV++) nV[wV] = yV[wV] + .5 | 0;
+        return nV
       }
-      static ConvertCubeMapToSphericalPolynomial(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        const iM = rM > 0 ? this._NearestPow2Floor(rM) : 0;
-        if (iM > 0 && MM.size > iM) {
-          const rM = 5 === MM.format ? 4 : 3,
-            OM = ["right", "left", "up", "down", "front", "back"],
-            SM = {};
-          for (const jM of OM) SM[jM] = this._DownsampleFace(MM[jM], MM.size, iM, rM);
-          MM = {
-            ...MM,
-            ...SM,
-            size: iM
+      static ConvertCubeMapToSphericalPolynomial(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        const xV = eV > 0 ? this._NearestPow2Floor(eV) : 0;
+        if (xV > 0 && VV.size > xV) {
+          const eV = 5 === VV.format ? 4 : 3,
+            JV = ["right", "left", "up", "down", "front", "back"],
+            YV = {};
+          for (const UV of JV) YV[UV] = this._DownsampleFace(VV[UV], VV.size, xV, eV);
+          VV = {
+            ...VV,
+            ...YV,
+            size: xV
           }
         }
-        const OM = new jM.b;
-        let nM = 0;
-        const QM = 2 / MM.size,
-          zM = QM,
-          LM = .5 * QM,
-          mM = LM - 1;
-        for (let jM = 0; jM < 6; jM++) {
-          const rM = this._FileFaces[jM],
-            iM = MM[rM.name];
-          let HM = mM;
-          const hM = 5 === MM.format ? 4 : 3;
-          for (let jM = 0; jM < MM.size; jM++) {
-            let JM = mM;
-            for (let zM = 0; zM < MM.size; zM++) {
-              const mM = rM.worldAxisForFileX.scale(JM).add(rM.worldAxisForFileY.scale(HM)).add(rM.worldAxisForNormal);
-              mM.normalize();
-              const dM = this._AreaElement(JM - LM, HM - LM) - this._AreaElement(JM - LM, HM + LM) - this._AreaElement(JM + LM, HM - LM) + this._AreaElement(JM + LM, HM + LM);
-              let yM = iM[jM * MM.size * hM + zM * hM + 0],
-                lM = iM[jM * MM.size * hM + zM * hM + 1],
-                EM = iM[jM * MM.size * hM + zM * hM + 2];
-              isNaN(yM) && (yM = 0), isNaN(lM) && (lM = 0), isNaN(EM) && (EM = 0), 0 === MM.type && (yM /= 255, lM /= 255, EM /= 255), MM.gammaSpace && (yM = Math.pow((0, SM.Clamp)(yM), aM.h), lM = Math.pow((0, SM.Clamp)(lM), aM.h), EM = Math.pow((0, SM.Clamp)(EM), aM.h));
-              const UM = this.MAX_HDRI_VALUE;
+        const JV = new UV.e;
+        let QV = 0;
+        const nV = 2 / VV.size,
+          wV = nV,
+          ZV = .5 * nV,
+          vV = ZV - 1;
+        for (let UV = 0; UV < 6; UV++) {
+          const eV = this._FileFaces[UV],
+            xV = VV[eV.name];
+          let rV = vV;
+          const kV = 5 === VV.format ? 4 : 3;
+          for (let UV = 0; UV < VV.size; UV++) {
+            let bV = vV;
+            for (let wV = 0; wV < VV.size; wV++) {
+              const vV = eV.worldAxisForFileX.scale(bV).add(eV.worldAxisForFileY.scale(rV)).add(eV.worldAxisForNormal);
+              vV.normalize();
+              const EV = this._AreaElement(bV - ZV, rV - ZV) - this._AreaElement(bV - ZV, rV + ZV) - this._AreaElement(bV + ZV, rV - ZV) + this._AreaElement(bV + ZV, rV + ZV);
+              let BV = xV[UV * VV.size * kV + wV * kV + 0],
+                jV = xV[UV * VV.size * kV + wV * kV + 1],
+                qV = xV[UV * VV.size * kV + wV * kV + 2];
+              isNaN(BV) && (BV = 0), isNaN(jV) && (jV = 0), isNaN(qV) && (qV = 0), 0 === VV.type && (BV /= 255, jV /= 255, qV /= 255), VV.gammaSpace && (BV = Math.pow((0, YV.Clamp)(BV), yV.f), jV = Math.pow((0, YV.Clamp)(jV), yV.f), qV = Math.pow((0, YV.Clamp)(qV), yV.f));
+              const tV = this.MAX_HDRI_VALUE;
               if (this.PRESERVE_CLAMPED_COLORS) {
-                const MM = Math.max(yM, lM, EM);
-                if (MM > UM) {
-                  const rM = UM / MM;
-                  yM *= rM, lM *= rM, EM *= rM
+                const VV = Math.max(BV, jV, qV);
+                if (VV > tV) {
+                  const eV = tV / VV;
+                  BV *= eV, jV *= eV, qV *= eV
                 }
-              } else yM = (0, SM.Clamp)(yM, 0, UM), lM = (0, SM.Clamp)(lM, 0, UM), EM = (0, SM.Clamp)(EM, 0, UM);
-              const GM = new PM.d(yM, lM, EM);
-              OM.addLight(mM, GM, dM), nM += dM, JM += QM
+              } else BV = (0, YV.Clamp)(BV, 0, tV), jV = (0, YV.Clamp)(jV, 0, tV), qV = (0, YV.Clamp)(qV, 0, tV);
+              const FV = new pV.d(BV, jV, qV);
+              JV.addLight(vV, FV, EV), QV += EV, bV += nV
             }
-            HM += zM
+            rV += wV
           }
         }
-        const HM = 6 * (4 * Math.PI) / 6 / nM;
-        return OM.scaleInPlace(HM), OM.convertIncidentRadianceToIrradiance(), OM.convertIrradianceToLambertianRadiance(), jM.c.FromHarmonics(OM)
+        const rV = 6 * (4 * Math.PI) / 6 / QV;
+        return JV.scaleInPlace(rV), JV.convertIncidentRadianceToIrradiance(), JV.convertIrradianceToLambertianRadiance(), UV.f.FromHarmonics(JV)
       }
     }
-    QM._FileFaces = [new nM("right", new OM.q(1, 0, 0), new OM.q(0, 0, -1), new OM.q(0, -1, 0)), new nM("left", new OM.q(-1, 0, 0), new OM.q(0, 0, 1), new OM.q(0, -1, 0)), new nM("up", new OM.q(0, 1, 0), new OM.q(1, 0, 0), new OM.q(0, 0, 1)), new nM("down", new OM.q(0, -1, 0), new OM.q(1, 0, 0), new OM.q(0, 0, -1)), new nM("front", new OM.q(0, 0, 1), new OM.q(1, 0, 0), new OM.q(0, -1, 0)), new nM("back", new OM.q(0, 0, -1), new OM.q(-1, 0, 0), new OM.q(0, -1, 0))], QM.MAX_HDRI_VALUE = 4096, QM.PRESERVE_CLAMPED_COLORS = !1
+    nV._FileFaces = [new QV("right", new JV.o(1, 0, 0), new JV.o(0, 0, -1), new JV.o(0, -1, 0)), new QV("left", new JV.o(-1, 0, 0), new JV.o(0, 0, 1), new JV.o(0, -1, 0)), new QV("up", new JV.o(0, 1, 0), new JV.o(1, 0, 0), new JV.o(0, 0, 1)), new QV("down", new JV.o(0, -1, 0), new JV.o(1, 0, 0), new JV.o(0, 0, -1)), new QV("front", new JV.o(0, 0, 1), new JV.o(1, 0, 0), new JV.o(0, -1, 0)), new QV("back", new JV.o(0, 0, -1), new JV.o(-1, 0, 0), new JV.o(0, -1, 0))], nV.MAX_HDRI_VALUE = 4096, nV.PRESERVE_CLAMPED_COLORS = !1
   },
-  44406: (MM, rM, iM) => {
-    iM.d(rM, {
-      DDSTools: () => hM
+  44657: (VV, eV, xV) => {
+    xV.d(eV, {
+      DDSTools: () => kV
     });
-    var OM = iM(38074),
-      SM = iM(39711),
-      jM = iM(44412),
-      aM = iM(41176);
-    const PM = 131072,
-      nM = 131072;
+    var JV = xV(38303),
+      YV = xV(39870),
+      UV = xV(44663),
+      yV = xV(41323);
+    const pV = 131072,
+      QV = 131072;
 
-    function QM(MM) {
-      return MM.charCodeAt(0) + (MM.charCodeAt(1) << 8) + (MM.charCodeAt(2) << 16) + (MM.charCodeAt(3) << 24)
+    function nV(VV) {
+      return VV.charCodeAt(0) + (VV.charCodeAt(1) << 8) + (VV.charCodeAt(2) << 16) + (VV.charCodeAt(3) << 24)
     }
-    const zM = QM("DXT1"),
-      LM = QM("DXT3"),
-      mM = QM("DXT5"),
-      HM = QM("DX10");
-    class hM {
-      static GetDDSInfo(MM) {
-        const rM = new Int32Array(MM.buffer, MM.byteOffset, 31),
-          iM = new Int32Array(MM.buffer, MM.byteOffset, 35);
-        let OM = 1;
-        rM[2] & PM && (OM = Math.max(1, rM[7]));
-        const SM = rM[21],
-          jM = SM === HM ? iM[32] : 0;
-        let aM = 0;
-        switch (SM) {
+    const wV = nV("DXT1"),
+      ZV = nV("DXT3"),
+      vV = nV("DXT5"),
+      rV = nV("DX10");
+    class kV {
+      static GetDDSInfo(VV) {
+        const eV = new Int32Array(VV.buffer, VV.byteOffset, 31),
+          xV = new Int32Array(VV.buffer, VV.byteOffset, 35);
+        let JV = 1;
+        eV[2] & pV && (JV = Math.max(1, eV[7]));
+        const YV = eV[21],
+          UV = YV === rV ? xV[32] : 0;
+        let yV = 0;
+        switch (YV) {
           case 113:
-            aM = 2;
+            yV = 2;
             break;
           case 116:
-            aM = 1;
+            yV = 1;
             break;
-          case HM:
-            if (10 === jM) {
-              aM = 2;
+          case rV:
+            if (10 === UV) {
+              yV = 2;
               break
             }
-            if (2 === jM) {
-              aM = 1;
+            if (2 === UV) {
+              yV = 1;
               break
             }
         }
         return {
-          width: rM[4],
-          height: rM[3],
-          mipmapCount: OM,
-          isFourCC: 4 === (4 & rM[20]),
-          isRGB: 64 === (64 & rM[20]),
-          isLuminance: (rM[20] & nM) === nM,
-          isCube: 512 === (512 & rM[28]),
-          isCompressed: SM === zM || SM === LM || SM === mM,
-          dxgiFormat: jM,
-          textureType: aM
+          width: eV[4],
+          height: eV[3],
+          mipmapCount: JV,
+          isFourCC: 4 === (4 & eV[20]),
+          isRGB: 64 === (64 & eV[20]),
+          isLuminance: (eV[20] & QV) === QV,
+          isCube: 512 === (512 & eV[28]),
+          isCompressed: YV === wV || YV === ZV || YV === vV,
+          dxgiFormat: UV,
+          textureType: yV
         }
       }
-      static _GetHalfFloatAsFloatRGBAArrayBuffer(MM, rM, iM, OM, SM, jM) {
-        const PM = new Float32Array(OM),
-          nM = new Uint16Array(SM, iM);
-        let QM = 0;
-        for (let zM = 0; zM < rM; zM++)
-          for (let rM = 0; rM < MM; rM++) {
-            const iM = 4 * (rM + zM * MM);
-            PM[QM] = (0, aM.c)(nM[iM]), PM[QM + 1] = (0, aM.c)(nM[iM + 1]), PM[QM + 2] = (0, aM.c)(nM[iM + 2]), hM.StoreLODInAlphaChannel ? PM[QM + 3] = jM : PM[QM + 3] = (0, aM.c)(nM[iM + 3]), QM += 4
+      static _GetHalfFloatAsFloatRGBAArrayBuffer(VV, eV, xV, JV, YV, UV) {
+        const pV = new Float32Array(JV),
+          QV = new Uint16Array(YV, xV);
+        let nV = 0;
+        for (let wV = 0; wV < eV; wV++)
+          for (let eV = 0; eV < VV; eV++) {
+            const xV = 4 * (eV + wV * VV);
+            pV[nV] = (0, yV.c)(QV[xV]), pV[nV + 1] = (0, yV.c)(QV[xV + 1]), pV[nV + 2] = (0, yV.c)(QV[xV + 2]), kV.StoreLODInAlphaChannel ? pV[nV + 3] = UV : pV[nV + 3] = (0, yV.c)(QV[xV + 3]), nV += 4
           }
-        return PM
+        return pV
       }
-      static _GetHalfFloatRGBAArrayBuffer(MM, rM, iM, OM, SM, jM) {
-        if (hM.StoreLODInAlphaChannel) {
-          const PM = new Uint16Array(OM),
-            nM = new Uint16Array(SM, iM);
-          let QM = 0;
-          for (let iM = 0; iM < rM; iM++)
-            for (let rM = 0; rM < MM; rM++) {
-              const OM = 4 * (rM + iM * MM);
-              PM[QM] = nM[OM], PM[QM + 1] = nM[OM + 1], PM[QM + 2] = nM[OM + 2], PM[QM + 3] = (0, aM.g)(jM), QM += 4
+      static _GetHalfFloatRGBAArrayBuffer(VV, eV, xV, JV, YV, UV) {
+        if (kV.StoreLODInAlphaChannel) {
+          const pV = new Uint16Array(JV),
+            QV = new Uint16Array(YV, xV);
+          let nV = 0;
+          for (let xV = 0; xV < eV; xV++)
+            for (let eV = 0; eV < VV; eV++) {
+              const JV = 4 * (eV + xV * VV);
+              pV[nV] = QV[JV], pV[nV + 1] = QV[JV + 1], pV[nV + 2] = QV[JV + 2], pV[nV + 3] = (0, yV.j)(UV), nV += 4
             }
-          return PM
+          return pV
         }
-        return new Uint16Array(SM, iM, OM)
+        return new Uint16Array(YV, xV, JV)
       }
-      static _GetFloatRGBAArrayBuffer(MM, rM, iM, OM, SM, jM) {
-        if (hM.StoreLODInAlphaChannel) {
-          const aM = new Float32Array(OM),
-            PM = new Float32Array(SM, iM);
-          let nM = 0;
-          for (let iM = 0; iM < rM; iM++)
-            for (let rM = 0; rM < MM; rM++) {
-              const OM = 4 * (rM + iM * MM);
-              aM[nM] = PM[OM], aM[nM + 1] = PM[OM + 1], aM[nM + 2] = PM[OM + 2], aM[nM + 3] = jM, nM += 4
+      static _GetFloatRGBAArrayBuffer(VV, eV, xV, JV, YV, UV) {
+        if (kV.StoreLODInAlphaChannel) {
+          const yV = new Float32Array(JV),
+            pV = new Float32Array(YV, xV);
+          let QV = 0;
+          for (let xV = 0; xV < eV; xV++)
+            for (let eV = 0; eV < VV; eV++) {
+              const JV = 4 * (eV + xV * VV);
+              yV[QV] = pV[JV], yV[QV + 1] = pV[JV + 1], yV[QV + 2] = pV[JV + 2], yV[QV + 3] = UV, QV += 4
             }
-          return aM
+          return yV
         }
-        return new Float32Array(SM, iM, OM)
+        return new Float32Array(YV, xV, JV)
       }
-      static _GetFloatAsHalfFloatRGBAArrayBuffer(MM, rM, iM, OM, SM, jM) {
-        const PM = new Uint16Array(OM),
-          nM = new Float32Array(SM, iM);
-        let QM = 0;
-        for (let zM = 0; zM < rM; zM++)
-          for (let rM = 0; rM < MM; rM++) PM[QM] = (0, aM.g)(nM[QM]), PM[QM + 1] = (0, aM.g)(nM[QM + 1]), PM[QM + 2] = (0, aM.g)(nM[QM + 2]), hM.StoreLODInAlphaChannel ? PM[QM + 3] = (0, aM.g)(jM) : PM[QM + 3] = (0, aM.g)(nM[QM + 3]), QM += 4;
-        return PM
+      static _GetFloatAsHalfFloatRGBAArrayBuffer(VV, eV, xV, JV, YV, UV) {
+        const pV = new Uint16Array(JV),
+          QV = new Float32Array(YV, xV);
+        let nV = 0;
+        for (let wV = 0; wV < eV; wV++)
+          for (let eV = 0; eV < VV; eV++) pV[nV] = (0, yV.j)(QV[nV]), pV[nV + 1] = (0, yV.j)(QV[nV + 1]), pV[nV + 2] = (0, yV.j)(QV[nV + 2]), kV.StoreLODInAlphaChannel ? pV[nV + 3] = (0, yV.j)(UV) : pV[nV + 3] = (0, yV.j)(QV[nV + 3]), nV += 4;
+        return pV
       }
-      static _GetFloatAsUIntRGBAArrayBuffer(MM, rM, iM, SM, jM, aM) {
-        const PM = new Uint8Array(SM),
-          nM = new Float32Array(jM, iM);
-        let QM = 0;
-        for (let zM = 0; zM < rM; zM++)
-          for (let rM = 0; rM < MM; rM++) {
-            const iM = 4 * (rM + zM * MM);
-            PM[QM] = 255 * (0, OM.Clamp)(nM[iM]), PM[QM + 1] = 255 * (0, OM.Clamp)(nM[iM + 1]), PM[QM + 2] = 255 * (0, OM.Clamp)(nM[iM + 2]), hM.StoreLODInAlphaChannel ? PM[QM + 3] = aM : PM[QM + 3] = 255 * (0, OM.Clamp)(nM[iM + 3]), QM += 4
+      static _GetFloatAsUIntRGBAArrayBuffer(VV, eV, xV, YV, UV, yV) {
+        const pV = new Uint8Array(YV),
+          QV = new Float32Array(UV, xV);
+        let nV = 0;
+        for (let wV = 0; wV < eV; wV++)
+          for (let eV = 0; eV < VV; eV++) {
+            const xV = 4 * (eV + wV * VV);
+            pV[nV] = 255 * (0, JV.Clamp)(QV[xV]), pV[nV + 1] = 255 * (0, JV.Clamp)(QV[xV + 1]), pV[nV + 2] = 255 * (0, JV.Clamp)(QV[xV + 2]), kV.StoreLODInAlphaChannel ? pV[nV + 3] = yV : pV[nV + 3] = 255 * (0, JV.Clamp)(QV[xV + 3]), nV += 4
           }
-        return PM
+        return pV
       }
-      static _GetHalfFloatAsUIntRGBAArrayBuffer(MM, rM, iM, SM, jM, PM) {
-        const nM = new Uint8Array(SM),
-          QM = new Uint16Array(jM, iM);
-        let zM = 0;
-        for (let LM = 0; LM < rM; LM++)
-          for (let rM = 0; rM < MM; rM++) {
-            const iM = 4 * (rM + LM * MM);
-            nM[zM] = 255 * (0, OM.Clamp)((0, aM.c)(QM[iM])), nM[zM + 1] = 255 * (0, OM.Clamp)((0, aM.c)(QM[iM + 1])), nM[zM + 2] = 255 * (0, OM.Clamp)((0, aM.c)(QM[iM + 2])), hM.StoreLODInAlphaChannel ? nM[zM + 3] = PM : nM[zM + 3] = 255 * (0, OM.Clamp)((0, aM.c)(QM[iM + 3])), zM += 4
+      static _GetHalfFloatAsUIntRGBAArrayBuffer(VV, eV, xV, YV, UV, pV) {
+        const QV = new Uint8Array(YV),
+          nV = new Uint16Array(UV, xV);
+        let wV = 0;
+        for (let ZV = 0; ZV < eV; ZV++)
+          for (let eV = 0; eV < VV; eV++) {
+            const xV = 4 * (eV + ZV * VV);
+            QV[wV] = 255 * (0, JV.Clamp)((0, yV.c)(nV[xV])), QV[wV + 1] = 255 * (0, JV.Clamp)((0, yV.c)(nV[xV + 1])), QV[wV + 2] = 255 * (0, JV.Clamp)((0, yV.c)(nV[xV + 2])), kV.StoreLODInAlphaChannel ? QV[wV + 3] = pV : QV[wV + 3] = 255 * (0, JV.Clamp)((0, yV.c)(nV[xV + 3])), wV += 4
           }
-        return nM
+        return QV
       }
-      static _GetRGBAArrayBuffer(MM, rM, iM, OM, SM, jM, aM, PM, nM) {
-        const QM = new Uint8Array(OM),
-          zM = new Uint8Array(SM, iM);
-        let LM = 0;
-        for (let mM = 0; mM < rM; mM++)
-          for (let rM = 0; rM < MM; rM++) {
-            const iM = 4 * (rM + mM * MM);
-            QM[LM] = zM[iM + jM], QM[LM + 1] = zM[iM + aM], QM[LM + 2] = zM[iM + PM], QM[LM + 3] = zM[iM + nM], LM += 4
+      static _GetRGBAArrayBuffer(VV, eV, xV, JV, YV, UV, yV, pV, QV) {
+        const nV = new Uint8Array(JV),
+          wV = new Uint8Array(YV, xV);
+        let ZV = 0;
+        for (let vV = 0; vV < eV; vV++)
+          for (let eV = 0; eV < VV; eV++) {
+            const xV = 4 * (eV + vV * VV);
+            nV[ZV] = wV[xV + UV], nV[ZV + 1] = wV[xV + yV], nV[ZV + 2] = wV[xV + pV], nV[ZV + 3] = wV[xV + QV], ZV += 4
           }
-        return QM
+        return nV
       }
-      static _ExtractLongWordOrder(MM) {
-        return 0 === MM || 255 === MM || -16777216 === MM ? 0 : 1 + hM._ExtractLongWordOrder(MM >> 8)
+      static _ExtractLongWordOrder(VV) {
+        return 0 === VV || 255 === VV || -16777216 === VV ? 0 : 1 + kV._ExtractLongWordOrder(VV >> 8)
       }
-      static _GetRGBArrayBuffer(MM, rM, iM, OM, SM, jM, aM, PM) {
-        const nM = new Uint8Array(OM),
-          QM = new Uint8Array(SM, iM);
-        let zM = 0;
-        for (let LM = 0; LM < rM; LM++)
-          for (let rM = 0; rM < MM; rM++) {
-            const iM = 3 * (rM + LM * MM);
-            nM[zM] = QM[iM + jM], nM[zM + 1] = QM[iM + aM], nM[zM + 2] = QM[iM + PM], zM += 3
+      static _GetRGBArrayBuffer(VV, eV, xV, JV, YV, UV, yV, pV) {
+        const QV = new Uint8Array(JV),
+          nV = new Uint8Array(YV, xV);
+        let wV = 0;
+        for (let ZV = 0; ZV < eV; ZV++)
+          for (let eV = 0; eV < VV; eV++) {
+            const xV = 3 * (eV + ZV * VV);
+            QV[wV] = nV[xV + UV], QV[wV + 1] = nV[xV + yV], QV[wV + 2] = nV[xV + pV], wV += 3
           }
-        return nM
+        return QV
       }
-      static _GetLuminanceArrayBuffer(MM, rM, iM, OM, SM) {
-        const jM = new Uint8Array(OM),
-          aM = new Uint8Array(SM, iM);
-        let PM = 0;
-        for (let nM = 0; nM < rM; nM++)
-          for (let rM = 0; rM < MM; rM++) {
-            const iM = rM + nM * MM;
-            jM[PM] = aM[iM], PM++
+      static _GetLuminanceArrayBuffer(VV, eV, xV, JV, YV) {
+        const UV = new Uint8Array(JV),
+          yV = new Uint8Array(YV, xV);
+        let pV = 0;
+        for (let QV = 0; QV < eV; QV++)
+          for (let eV = 0; eV < VV; eV++) {
+            const xV = eV + QV * VV;
+            UV[pV] = yV[xV], pV++
           }
-        return jM
+        return UV
       }
-      static UploadDDSLevels(MM, rM, iM, OM, aM, nM) {
-        let QM = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : -1,
-          JM = arguments.length > 7 ? arguments[7] : void 0,
-          dM = !(arguments.length > 8 && void 0 !== arguments[8]) || arguments[8],
-          yM = null;
-        OM.sphericalPolynomial && (yM = []);
-        const lM = !!MM.getCaps().s3tc;
-        rM.generateMipMaps = aM;
-        const EM = new Int32Array(iM.buffer, iM.byteOffset, 31);
-        let UM, GM, CM, eM, bM, wM, tM, gM = 0,
-          uM = 0,
-          RM = 1;
-        if (542327876 !== EM[0]) return void SM.e.Error("Invalid magic number in DDS header");
-        if (!OM.isFourCC && !OM.isRGB && !OM.isLuminance) return void SM.e.Error("Unsupported format, must contain a FourCC, RGB or LUMINANCE code");
-        if (OM.isCompressed && !lM) return void SM.e.Error("Compressed textures are not supported on this platform.");
-        let pM = EM[22];
-        eM = EM[1] + 4;
-        let WM = !1;
-        if (OM.isFourCC) switch (UM = EM[21], UM) {
-          case zM:
-            RM = 8, uM = 33777;
+      static UploadDDSLevels(VV, eV, xV, JV, yV, QV) {
+        let nV = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : -1,
+          bV = arguments.length > 7 ? arguments[7] : void 0,
+          EV = !(arguments.length > 8 && void 0 !== arguments[8]) || arguments[8],
+          BV = null;
+        JV.sphericalPolynomial && (BV = []);
+        const jV = !!VV.getCaps().s3tc;
+        eV.generateMipMaps = yV;
+        const qV = new Int32Array(xV.buffer, xV.byteOffset, 31);
+        let tV, FV, TV, PV, AV, NV, XV, MV = 0,
+          zV = 0,
+          GV = 1;
+        if (542327876 !== qV[0]) return void YV.b.Error("Invalid magic number in DDS header");
+        if (!JV.isFourCC && !JV.isRGB && !JV.isLuminance) return void YV.b.Error("Unsupported format, must contain a FourCC, RGB or LUMINANCE code");
+        if (JV.isCompressed && !jV) return void YV.b.Error("Compressed textures are not supported on this platform.");
+        let WV = qV[22];
+        PV = qV[1] + 4;
+        let RV = !1;
+        if (JV.isFourCC) switch (tV = qV[21], tV) {
+          case wV:
+            GV = 8, zV = 33777;
             break;
-          case LM:
-            RM = 16, uM = 33778;
+          case ZV:
+            GV = 16, zV = 33778;
             break;
-          case mM:
-            RM = 16, uM = 33779;
+          case vV:
+            GV = 16, zV = 33779;
             break;
           case 113:
-            WM = !0, pM = 64;
+            RV = !0, WV = 64;
             break;
           case 116:
-            WM = !0, pM = 128;
+            RV = !0, WV = 128;
             break;
-          case HM: {
-            eM += 20;
-            let MM = !1;
-            switch (OM.dxgiFormat) {
+          case rV: {
+            PV += 20;
+            let VV = !1;
+            switch (JV.dxgiFormat) {
               case 10:
-                WM = !0, pM = 64, MM = !0;
+                RV = !0, WV = 64, VV = !0;
                 break;
               case 2:
-                WM = !0, pM = 128, MM = !0;
+                RV = !0, WV = 128, VV = !0;
                 break;
               case 88:
-                OM.isRGB = !0, OM.isFourCC = !1, pM = 32, MM = !0
+                JV.isRGB = !0, JV.isFourCC = !1, WV = 32, VV = !0
             }
-            if (MM) break
+            if (VV) break
           }
           default:
-            return void SM.e.Error(["Unsupported FourCC code:", (sM = UM, String.fromCharCode(255 & sM, sM >> 8 & 255, sM >> 16 & 255, sM >> 24 & 255))])
+            return void YV.b.Error(["Unsupported FourCC code:", (gV = tV, String.fromCharCode(255 & gV, gV >> 8 & 255, gV >> 16 & 255, gV >> 24 & 255))])
         }
-        var sM;
-        const DM = hM._ExtractLongWordOrder(EM[23]),
-          kM = hM._ExtractLongWordOrder(EM[24]),
-          ZM = hM._ExtractLongWordOrder(EM[25]),
-          oM = hM._ExtractLongWordOrder(EM[26]);
-        WM && (uM = MM._getRGBABufferInternalSizedFormat(OM.textureType)), wM = 1, EM[2] & PM && !1 !== aM && (wM = Math.max(1, EM[7]));
-        const fM = JM || 0,
-          YM = MM.getCaps();
-        for (let SM = fM; SM < nM; SM++) {
-          for (GM = EM[4], CM = EM[3], tM = 0; tM < wM; ++tM) {
-            if (-1 === QM || QM === tM) {
-              const jM = -1 === QM ? tM : 0;
-              if (!OM.isCompressed && OM.isFourCC) {
-                rM.format = 5, gM = GM * CM * 4;
-                let OM = null;
-                if (MM._badOS || MM._badDesktopOS || !YM.textureHalfFloat && !YM.textureFloat) 128 === pM ? (OM = hM._GetFloatAsUIntRGBAArrayBuffer(GM, CM, iM.byteOffset + eM, gM, iM.buffer, jM), yM && 0 == jM && yM.push(hM._GetFloatRGBAArrayBuffer(GM, CM, iM.byteOffset + eM, gM, iM.buffer, jM))) : 64 === pM && (OM = hM._GetHalfFloatAsUIntRGBAArrayBuffer(GM, CM, iM.byteOffset + eM, gM, iM.buffer, jM), yM && 0 == jM && yM.push(hM._GetHalfFloatAsFloatRGBAArrayBuffer(GM, CM, iM.byteOffset + eM, gM, iM.buffer, jM))), rM.type = 0;
+        var gV;
+        const DV = kV._ExtractLongWordOrder(qV[23]),
+          iV = kV._ExtractLongWordOrder(qV[24]),
+          CV = kV._ExtractLongWordOrder(qV[25]),
+          aV = kV._ExtractLongWordOrder(qV[26]);
+        RV && (zV = VV._getRGBABufferInternalSizedFormat(JV.textureType)), NV = 1, qV[2] & pV && !1 !== yV && (NV = Math.max(1, qV[7]));
+        const oV = bV || 0,
+          cV = VV.getCaps();
+        for (let YV = oV; YV < QV; YV++) {
+          for (FV = qV[4], TV = qV[3], XV = 0; XV < NV; ++XV) {
+            if (-1 === nV || nV === XV) {
+              const UV = -1 === nV ? XV : 0;
+              if (!JV.isCompressed && JV.isFourCC) {
+                eV.format = 5, MV = FV * TV * 4;
+                let JV = null;
+                if (VV._badOS || VV._badDesktopOS || !cV.textureHalfFloat && !cV.textureFloat) 128 === WV ? (JV = kV._GetFloatAsUIntRGBAArrayBuffer(FV, TV, xV.byteOffset + PV, MV, xV.buffer, UV), BV && 0 == UV && BV.push(kV._GetFloatRGBAArrayBuffer(FV, TV, xV.byteOffset + PV, MV, xV.buffer, UV))) : 64 === WV && (JV = kV._GetHalfFloatAsUIntRGBAArrayBuffer(FV, TV, xV.byteOffset + PV, MV, xV.buffer, UV), BV && 0 == UV && BV.push(kV._GetHalfFloatAsFloatRGBAArrayBuffer(FV, TV, xV.byteOffset + PV, MV, xV.buffer, UV))), eV.type = 0;
                 else {
-                  const MM = YM.textureFloat && (dM && YM.textureFloatLinearFiltering || !dM),
-                    SM = YM.textureHalfFloat && (dM && YM.textureHalfFloatLinearFiltering || !dM),
-                    aM = (128 === pM || 64 === pM && !SM) && MM ? 1 : (64 === pM || 128 === pM && !MM) && SM ? 2 : 0;
-                  let PM, nM = null;
-                  if (128 === pM) switch (aM) {
+                  const VV = cV.textureFloat && (EV && cV.textureFloatLinearFiltering || !EV),
+                    YV = cV.textureHalfFloat && (EV && cV.textureHalfFloatLinearFiltering || !EV),
+                    yV = (128 === WV || 64 === WV && !YV) && VV ? 1 : (64 === WV || 128 === WV && !VV) && YV ? 2 : 0;
+                  let pV, QV = null;
+                  if (128 === WV) switch (yV) {
                     case 1:
-                      PM = hM._GetFloatRGBAArrayBuffer, nM = null;
+                      pV = kV._GetFloatRGBAArrayBuffer, QV = null;
                       break;
                     case 2:
-                      PM = hM._GetFloatAsHalfFloatRGBAArrayBuffer, nM = hM._GetFloatRGBAArrayBuffer;
+                      pV = kV._GetFloatAsHalfFloatRGBAArrayBuffer, QV = kV._GetFloatRGBAArrayBuffer;
                       break;
                     case 0:
-                      PM = hM._GetFloatAsUIntRGBAArrayBuffer, nM = hM._GetFloatRGBAArrayBuffer
-                  } else switch (aM) {
+                      pV = kV._GetFloatAsUIntRGBAArrayBuffer, QV = kV._GetFloatRGBAArrayBuffer
+                  } else switch (yV) {
                     case 1:
-                      PM = hM._GetHalfFloatAsFloatRGBAArrayBuffer, nM = null;
+                      pV = kV._GetHalfFloatAsFloatRGBAArrayBuffer, QV = null;
                       break;
                     case 2:
-                      PM = hM._GetHalfFloatRGBAArrayBuffer, nM = hM._GetHalfFloatAsFloatRGBAArrayBuffer;
+                      pV = kV._GetHalfFloatRGBAArrayBuffer, QV = kV._GetHalfFloatAsFloatRGBAArrayBuffer;
                       break;
                     case 0:
-                      PM = hM._GetHalfFloatAsUIntRGBAArrayBuffer, nM = hM._GetHalfFloatAsFloatRGBAArrayBuffer
+                      pV = kV._GetHalfFloatAsUIntRGBAArrayBuffer, QV = kV._GetHalfFloatAsFloatRGBAArrayBuffer
                   }
-                  rM.type = aM, OM = PM(GM, CM, iM.byteOffset + eM, gM, iM.buffer, jM), yM && 0 == jM && yM.push(nM ? nM(GM, CM, iM.byteOffset + eM, gM, iM.buffer, jM) : OM)
+                  eV.type = yV, JV = pV(FV, TV, xV.byteOffset + PV, MV, xV.buffer, UV), BV && 0 == UV && BV.push(QV ? QV(FV, TV, xV.byteOffset + PV, MV, xV.buffer, UV) : JV)
                 }
-                OM && MM._uploadDataToTextureDirectly(rM, OM, SM, jM)
-              } else if (OM.isRGB) rM.type = 0, 24 === pM ? (rM.format = 4, gM = GM * CM * 3, bM = hM._GetRGBArrayBuffer(GM, CM, iM.byteOffset + eM, gM, iM.buffer, DM, kM, ZM), MM._uploadDataToTextureDirectly(rM, bM, SM, jM)) : (rM.format = 5, gM = GM * CM * 4, bM = hM._GetRGBAArrayBuffer(GM, CM, iM.byteOffset + eM, gM, iM.buffer, DM, kM, ZM, oM), MM._uploadDataToTextureDirectly(rM, bM, SM, jM));
-              else if (OM.isLuminance) {
-                const OM = MM._getUnpackAlignement(),
-                  aM = GM;
-                gM = Math.floor((GM + OM - 1) / OM) * OM * (CM - 1) + aM, bM = hM._GetLuminanceArrayBuffer(GM, CM, iM.byteOffset + eM, gM, iM.buffer), rM.format = 1, rM.type = 0, MM._uploadDataToTextureDirectly(rM, bM, SM, jM)
-              } else gM = Math.max(4, GM) / 4 * Math.max(4, CM) / 4 * RM, bM = new Uint8Array(iM.buffer, iM.byteOffset + eM, gM), rM.type = 0, MM._uploadCompressedDataToTextureDirectly(rM, uM, GM, CM, bM, SM, jM)
+                JV && VV._uploadDataToTextureDirectly(eV, JV, YV, UV)
+              } else if (JV.isRGB) eV.type = 0, 24 === WV ? (eV.format = 4, MV = FV * TV * 3, AV = kV._GetRGBArrayBuffer(FV, TV, xV.byteOffset + PV, MV, xV.buffer, DV, iV, CV), VV._uploadDataToTextureDirectly(eV, AV, YV, UV)) : (eV.format = 5, MV = FV * TV * 4, AV = kV._GetRGBAArrayBuffer(FV, TV, xV.byteOffset + PV, MV, xV.buffer, DV, iV, CV, aV), VV._uploadDataToTextureDirectly(eV, AV, YV, UV));
+              else if (JV.isLuminance) {
+                const JV = VV._getUnpackAlignement(),
+                  yV = FV;
+                MV = Math.floor((FV + JV - 1) / JV) * JV * (TV - 1) + yV, AV = kV._GetLuminanceArrayBuffer(FV, TV, xV.byteOffset + PV, MV, xV.buffer), eV.format = 1, eV.type = 0, VV._uploadDataToTextureDirectly(eV, AV, YV, UV)
+              } else MV = Math.max(4, FV) / 4 * Math.max(4, TV) / 4 * GV, AV = new Uint8Array(xV.buffer, xV.byteOffset + PV, MV), eV.type = 0, VV._uploadCompressedDataToTextureDirectly(eV, zV, FV, TV, AV, YV, UV)
             }
-            eM += pM ? GM * CM * (pM / 8) : gM, GM *= .5, CM *= .5, GM = Math.max(1, GM), CM = Math.max(1, CM)
+            PV += WV ? FV * TV * (WV / 8) : MV, FV *= .5, TV *= .5, FV = Math.max(1, FV), TV = Math.max(1, TV)
           }
-          if (void 0 !== JM) break
+          if (void 0 !== bV) break
         }
-        yM && yM.length > 0 ? OM.sphericalPolynomial = jM.e.ConvertCubeMapToSphericalPolynomial({
-          size: EM[4],
-          right: yM[0],
-          left: yM[1],
-          up: yM[2],
-          down: yM[3],
-          front: yM[4],
-          back: yM[5],
+        BV && BV.length > 0 ? JV.sphericalPolynomial = UV.b.ConvertCubeMapToSphericalPolynomial({
+          size: qV[4],
+          right: BV[0],
+          left: BV[1],
+          up: BV[2],
+          down: BV[3],
+          front: BV[4],
+          back: BV[5],
           format: 5,
           type: 1,
           gammaSpace: !1
-        }) : OM.sphericalPolynomial = void 0
+        }) : JV.sphericalPolynomial = void 0
       }
     }
-    hM.StoreLODInAlphaChannel = !1
+    kV.StoreLODInAlphaChannel = !1
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const VV in modules) Object.freeze(modules[VV]);

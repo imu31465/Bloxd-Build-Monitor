@@ -1,427 +1,427 @@
 export const id = 142;
 export const ids = [142];
 export const modules = {
-  7048: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      default: () => ZM
+  7126: (VV, eV, xV) => {
+    xV.r(eV), xV.d(eV, {
+      default: () => CV
     });
-    var OM = iM(44),
-      SM = iM(1608),
-      jM = iM(1116),
-      aM = iM.n(jM),
-      PM = iM(313),
-      nM = iM(7054),
-      QM = iM(1398),
-      zM = iM(1591),
-      LM = iM(4937),
-      mM = iM(1520),
-      HM = iM(3530),
-      hM = iM(4945),
-      JM = iM(1763),
-      dM = iM(4934),
-      yM = iM(1142),
-      lM = iM(19),
-      EM = iM(1573),
-      UM = iM(1202),
-      GM = iM(83),
-      CM = iM(1188),
-      eM = iM(1396),
-      bM = iM(1229),
-      wM = iM(7051),
-      tM = iM(7061),
-      gM = iM(1303);
+    var JV = xV(62),
+      YV = xV(1625),
+      UV = xV(1146),
+      yV = xV.n(UV),
+      pV = xV(364),
+      QV = xV(7132),
+      nV = xV(1414),
+      wV = xV(1612),
+      ZV = xV(5037),
+      vV = xV(1551),
+      rV = xV(3551),
+      kV = xV(5043),
+      bV = xV(1772),
+      EV = xV(5031),
+      BV = xV(1168),
+      jV = xV(27),
+      qV = xV(1603),
+      tV = xV(1230),
+      FV = xV(99),
+      TV = xV(1220),
+      PV = xV(1408),
+      AV = xV(1252),
+      NV = xV(7130),
+      XV = xV(7135),
+      MV = xV(1321);
 
-    function uM(MM) {
+    function zV(VV) {
       let {
-        pack: rM,
-        view: iM,
-        favourite: OM,
-        notice: SM
-      } = MM;
+        pack: eV,
+        view: xV,
+        favourite: JV,
+        notice: YV
+      } = VV;
       const {
-        width: jM,
-        height: PM
-      } = nM.v.thumb, {
-        live: LM
-      } = rM;
-      return (0, gM.jsx)("div", {
+        width: UV,
+        height: pV
+      } = QV.w.thumb, {
+        live: ZV
+      } = eV;
+      return (0, MV.jsx)("div", {
         className: "ShaderPackCard",
-        children: (0, gM.jsxs)("div", {
+        children: (0, MV.jsxs)("div", {
           className: "ShaderPackCardTile",
-          children: [(0, gM.jsxs)(zM.LinkPreserveSearch, {
-            to: (0, wM.W)(rM.packId),
+          children: [(0, MV.jsxs)(wV.LinkPreserveSearch, {
+            to: (0, NV.db)(eV.packId),
             className: "ShaderPackCardLink",
-            children: [LM && (0, gM.jsx)("img", {
+            children: [ZV && (0, MV.jsx)("img", {
               className: "ShaderPackCardImage",
-              src: (0, nM.w)(UM.clientSideServerUrls.s3Url, LM, iM, "thumb"),
-              width: jM,
-              height: PM,
+              src: (0, QV.x)(tV.clientSideServerUrls.s3Url, ZV, xV, "thumb"),
+              width: UV,
+              height: pV,
               loading: "lazy",
               alt: "",
               draggable: !1
-            }), LM && (0, gM.jsx)(tM.e, {
-              item: LM
-            }), !LM && (0, gM.jsx)("div", {
+            }), ZV && (0, MV.jsx)(XV.e, {
+              item: ZV
+            }), !ZV && (0, MV.jsx)("div", {
               className: "ShaderPackCardImage ShaderPackCardImagePending",
-              children: (0, gM.jsx)(QM.b, {
+              children: (0, MV.jsx)(nV.b, {
                 name: "hourglass"
               })
-            }), (0, gM.jsxs)("div", {
+            }), (0, MV.jsxs)("div", {
               className: "ShaderPackCardText",
-              children: [SM && (0, gM.jsx)("div", {
-                className: aM()("ShaderPackCardNotice", {
-                  Warning: "warning" === SM.tone
+              children: [YV && (0, MV.jsx)("div", {
+                className: yV()("ShaderPackCardNotice", {
+                  Warning: "warning" === YV.tone
                 }),
-                children: SM.text
-              }), (0, gM.jsx)("div", {
+                children: YV.text
+              }), (0, MV.jsx)("div", {
                 className: "ShaderPackCardName SmallTextBold",
-                children: rM.name
+                children: eV.name
               })]
             })]
-          }), LM && (0, gM.jsxs)("div", {
+          }), ZV && (0, MV.jsxs)("div", {
             className: "ShaderPackCardStats",
-            children: [(0, gM.jsxs)("div", {
+            children: [(0, MV.jsxs)("div", {
               className: "ShaderPackCardUses SmallTextBold",
-              children: [(0, gM.jsx)(QM.b, {
+              children: [(0, MV.jsx)(nV.b, {
                 name: "download"
-              }), (0, bM.T)(LM.downloads)]
-            }), OM && (0, gM.jsx)(mM.y, {
-              onClick: OM.onToggle,
-              isLiked: !0 === OM.isFavourite,
-              isLoading: null === OM.isFavourite
+              }), (0, AV.N)(ZV.downloads)]
+            }), JV && (0, MV.jsx)(vV.s, {
+              onClick: JV.onToggle,
+              isLiked: !0 === JV.isFavourite,
+              isLoading: null === JV.isFavourite
             })]
           })]
         })
       })
     }
-    var RM = iM(7068);
+    var GV = xV(7141);
 
-    function pM(MM) {
+    function WV(VV) {
       let {
-        results: rM,
-        loading: iM,
-        failed: OM,
-        onRetry: SM,
-        view: jM,
-        previewView: PM
-      } = MM;
+        results: eV,
+        loading: xV,
+        failed: JV,
+        onRetry: YV,
+        view: UV,
+        previewView: pV
+      } = VV;
       const {
-        t: nM
-      } = (0, CM.A)(), QM = (0, RM.l)(), zM = Date.now(), LM = null === rM ? 0 : "owned" === rM.kind ? rM.packs.length : rM.page.results.length;
-      return (0, gM.jsxs)("div", {
-        className: aM()("ShaderPackBrowseResults", {
-          Loading: iM && null !== rM
+        t: QV
+      } = (0, TV.A)(), nV = (0, GV.n)(), wV = Date.now(), ZV = null === eV ? 0 : "owned" === eV.kind ? eV.packs.length : eV.page.results.length;
+      return (0, MV.jsxs)("div", {
+        className: yV()("ShaderPackBrowseResults", {
+          Loading: xV && null !== eV
         }),
-        children: [iM && null === rM && (0, gM.jsx)("div", {
+        children: [xV && null === eV && (0, MV.jsx)("div", {
           className: "ShaderPackBrowseMessage",
-          children: (0, gM.jsx)(eM.d, {})
-        }), OM && (0, gM.jsxs)("div", {
+          children: (0, MV.jsx)(PV.d, {})
+        }), JV && (0, MV.jsxs)("div", {
           className: "ShaderPackBrowseMessage",
-          children: [nM("shaderPackListing:loadFailed"), (0, gM.jsx)(mM.e, {
-            onClick: SM,
-            children: nM("general:tryAgain")
+          children: [QV("shaderPackListing:loadFailed"), (0, MV.jsx)(vV.f, {
+            onClick: YV,
+            children: QV("general:tryAgain")
           })]
-        }), "listing" === (null === rM || void 0 === rM ? void 0 : rM.kind) && LM > 0 && (0, gM.jsx)("div", {
+        }), "listing" === (null === eV || void 0 === eV ? void 0 : eV.kind) && ZV > 0 && (0, MV.jsx)("div", {
           className: "ShaderPackBrowseGrid",
-          children: rM.page.results.map((MM => (0, gM.jsx)(uM, {
+          children: eV.page.results.map((VV => (0, MV.jsx)(zV, {
             pack: {
-              packId: MM.packId,
-              name: MM.name,
-              live: MM
+              packId: VV.packId,
+              name: VV.name,
+              live: VV
             },
-            view: PM,
+            view: pV,
             favourite: {
-              isFavourite: QM.isFavourite(MM.packId),
+              isFavourite: nV.isFavourite(VV.packId),
               onToggle: () => {
-                QM.toggle(MM.packId)
+                nV.toggle(VV.packId)
               }
             }
-          }, MM.packId)))
-        }), "owned" === (null === rM || void 0 === rM ? void 0 : rM.kind) && LM > 0 && (0, gM.jsx)("div", {
+          }, VV.packId)))
+        }), "owned" === (null === eV || void 0 === eV ? void 0 : eV.kind) && ZV > 0 && (0, MV.jsx)("div", {
           className: "ShaderPackBrowseGrid",
-          children: rM.packs.map((MM => {
-            var rM;
-            return (0, gM.jsx)(uM, {
-              pack: MM,
-              view: PM,
-              notice: MM.owner ? (0, wM.S)(MM.owner, !(null === (rM = MM.live) || void 0 === rM || !rM.renderId), zM, nM)[0] : void 0
-            }, MM.packId)
+          children: eV.packs.map((VV => {
+            var eV;
+            return (0, MV.jsx)(zV, {
+              pack: VV,
+              view: pV,
+              notice: VV.owner ? (0, NV.$)(VV.owner, !(null === (eV = VV.live) || void 0 === eV || !eV.renderId), wV, QV)[0] : void 0
+            }, VV.packId)
           }))
-        }), null !== rM && 0 === LM && (0, gM.jsx)("div", {
+        }), null !== eV && 0 === ZV && (0, MV.jsx)("div", {
           className: "ShaderPackBrowseMessage",
-          children: nM(WM(jM))
+          children: QV(RV(UV))
         })]
       })
     }
 
-    function WM(MM) {
-      return "mine" === MM.section ? "shaderPackListing:noOwnPacks" : (0, wM.r)(MM) ? "general:noResults" : "favourites" === MM.section ? "shaderPackListing:noFavourites" : "general:noResults"
+    function RV(VV) {
+      return "mine" === VV.section ? "shaderPackListing:noOwnPacks" : (0, NV.t)(VV) ? "general:noResults" : "favourites" === VV.section ? "shaderPackListing:noFavourites" : "general:noResults"
     }
-    var sM = iM(7081);
-    const DM = 24,
-      kM = {
+    var gV = xV(7154);
+    const DV = 24,
+      iV = {
         favourites: "general:favourites",
         mine: "shaderPackListing:mine"
       };
 
-    function ZM() {
-      var MM, rM, iM, jM;
+    function CV() {
+      var VV, eV, xV, UV;
       const {
-        t: eM
-      } = (0, CM.A)(), bM = (0, zM.useNavigatePreserveSearch)(), tM = (0, SM.u)(), {
-        userContext: uM,
-        isUserContextUpdating: WM
-      } = (0, yM.b)(), [ZM, oM] = (0, RM.h)(), [fM, YM] = (0, RM.e)(), NM = (0, OM.useRef)(!1), [AM, xM] = (0, LM.k)(), vM = (0, wM.z)(AM), [FM, BM] = (0, OM.useState)(null !== (MM = vM.searchQuery) && void 0 !== MM ? MM : ""), XM = (0, OM.useRef)(null), {
-        searchQuery: IM
-      } = vM;
-      (0, OM.useEffect)((() => {
-        BM(null !== IM && void 0 !== IM ? IM : ""), XM.current && (XM.current.value = null !== IM && void 0 !== IM ? IM : "")
-      }), [IM]);
-      const [KM, qM] = (0, OM.useState)(null), [TM, VM] = (0, OM.useState)(!1), [cM, Mr] = (0, OM.useState)(!1), [rr, ir] = (0, OM.useState)(0), Or = (0, OM.useRef)(0), Sr = JSON.stringify(vM), jr = (0, wM.j)();
+        t: PV
+      } = (0, TV.A)(), AV = (0, wV.useNavigatePreserveSearch)(), XV = (0, YV.r)(), {
+        userContext: zV,
+        isUserContextUpdating: RV
+      } = (0, BV.d)(), [CV, aV] = (0, GV.j)(), [oV, cV] = (0, GV.g)(), hV = (0, JV.useRef)(!1), [lV, LV] = (0, ZV.n)(), fV = (0, NV.I)(lV), [mV, KV] = (0, JV.useState)(null !== (VV = fV.searchQuery) && void 0 !== VV ? VV : ""), HV = (0, JV.useRef)(null), {
+        searchQuery: uV
+      } = fV;
+      (0, JV.useEffect)((() => {
+        KV(null !== uV && void 0 !== uV ? uV : ""), HV.current && (HV.current.value = null !== uV && void 0 !== uV ? uV : "")
+      }), [uV]);
+      const [sV, SV] = (0, JV.useState)(null), [IV, dV] = (0, JV.useState)(!1), [OV, Ve] = (0, JV.useState)(!1), [ee, xe] = (0, JV.useState)(0), Je = (0, JV.useRef)(0), Ye = JSON.stringify(fV), Ue = (0, NV.k)();
 
-      function ar() {
-        null !== jr ? (bM(jr), lM.d.set({
-          openEverythingMenuName: PM.m.SETTINGS,
-          openSettingsCategory: "nh"
-        })) : bM("/")
+      function ye() {
+        null !== Ue ? (AV(Ue), jV.b.set({
+          openEverythingMenuName: pV.q.SETTINGS,
+          openSettingsCategory: "Xk"
+        })) : AV("/")
       }
 
-      function Pr(MM) {
-        xM((rM => {
-          (0, wM.jb)(rM, {
-            ...vM,
+      function pe(VV) {
+        LV((eV => {
+          (0, NV.qb)(eV, {
+            ...fV,
             pageNumber: 1,
-            ...MM
+            ...VV
           })
         }))
       }
 
-      function nr() {
-        const MM = FM.trim() || null;
-        Pr({
-          searchQuery: MM,
-          ...null !== MM && !NM.current && (0, wM.n)(vM) && {
+      function Qe() {
+        const VV = mV.trim() || null;
+        pe({
+          searchQuery: VV,
+          ...null !== VV && !hV.current && (0, NV.o)(fV) && {
             withFeatures: [],
             withoutFeatures: []
           }
         })
-      }(0, dM.e)(ar), (0, RM.c)(), (0, OM.useEffect)((() => {
-        if (WM) return;
-        const MM = ++Or.current,
-          rM = JSON.parse(Sr);
-        VM(!0), Mr(!1), async function(MM) {
-          if ("mine" === MM.section) return {
+      }(0, EV.d)(ye), (0, GV.e)(), (0, JV.useEffect)((() => {
+        if (RV) return;
+        const VV = ++Je.current,
+          eV = JSON.parse(Ye);
+        dV(!0), Ve(!1), async function(VV) {
+          if ("mine" === VV.section) return {
             kind: "owned",
-            packs: await EM.c.getOwnedShaderPacks(uM)
+            packs: await qV.b.getOwnedShaderPacks(zV)
           };
-          const rM = "favourites" === MM.section,
-            iM = rM && (0, wM.n)(MM),
-            OM = await EM.c.getShaderPacks(uM, {
-              sort: rM ? wM.d : MM.sort,
-              features: iM ? [] : MM.withFeatures,
-              withoutFeatures: iM ? [] : MM.withoutFeatures,
-              searchQuery: MM.searchQuery,
-              pageNumber: MM.pageNumber,
-              pageSize: DM,
-              onlyFavourites: rM,
-              banned: (0, wM.q)(uM) ? (0, wM.c)(MM.banned) : void 0
+          const eV = "favourites" === VV.section,
+            xV = eV && (0, NV.o)(VV),
+            JV = await qV.b.getShaderPacks(zV, {
+              sort: eV ? NV.d : VV.sort,
+              features: xV ? [] : VV.withFeatures,
+              withoutFeatures: xV ? [] : VV.withoutFeatures,
+              searchQuery: VV.searchQuery,
+              pageNumber: VV.pageNumber,
+              pageSize: DV,
+              onlyFavourites: eV,
+              banned: (0, NV.r)(zV) ? (0, NV.b)(VV.banned) : void 0
             });
           return {
             kind: "listing",
-            page: OM
+            page: JV
           }
-        }(rM).then((rM => {
-          Or.current === MM && qM(rM)
-        })).catch((rM => {
-          Or.current === MM && (console.error("Failed to get shader packs", rM), qM(null), Mr(!0))
+        }(eV).then((eV => {
+          Je.current === VV && SV(eV)
+        })).catch((eV => {
+          Je.current === VV && (console.error("Failed to get shader packs", eV), SV(null), Ve(!0))
         })).finally((() => {
-          Or.current === MM && VM(!1)
+          Je.current === VV && dV(!1)
         }))
-      }), [Sr, uM, WM, rr]);
-      const [Qr, zr] = (0, OM.useState)(null), Lr = null !== (iM = null === (jM = ("listing" === (null === KM || void 0 === KM ? void 0 : KM.kind) ? KM.page.results : (null !== (rM = null === KM || void 0 === KM ? void 0 : KM.packs) && void 0 !== rM ? rM : []).flatMap((MM => MM.live ? [MM.live] : [])))[0]) || void 0 === jM ? void 0 : jM.baselineVersion) && void 0 !== iM ? iM : null;
-      (0, OM.useEffect)((() => {
-        null !== Lr && zr(Lr)
-      }), [Lr]);
-      const mr = "mine" === vM.section,
-        Hr = (0, wM.q)(uM),
-        hr = MM => {
-          "explore" !== vM.section && (MM.stopPropagation(), MM.preventDefault(), Pr({
+      }), [Ye, zV, RV, ee]);
+      const [ne, we] = (0, JV.useState)(null), Ze = null !== (xV = null === (UV = ("listing" === (null === sV || void 0 === sV ? void 0 : sV.kind) ? sV.page.results : (null !== (eV = null === sV || void 0 === sV ? void 0 : sV.packs) && void 0 !== eV ? eV : []).flatMap((VV => VV.live ? [VV.live] : [])))[0]) || void 0 === UV ? void 0 : UV.baselineVersion) && void 0 !== xV ? xV : null;
+      (0, JV.useEffect)((() => {
+        null !== Ze && we(Ze)
+      }), [Ze]);
+      const ve = "mine" === fV.section,
+        re = (0, NV.r)(zV),
+        ke = VV => {
+          "explore" !== fV.section && (VV.stopPropagation(), VV.preventDefault(), pe({
             section: "explore"
           }))
         };
-      return (0, gM.jsxs)("div", {
+      return (0, MV.jsxs)("div", {
         className: "ShaderPackBrowse AnimFadeIn",
-        children: [(0, gM.jsx)(mM.c, {
-          onClick: ar,
-          children: eM(null === jr ? "homePage:backToGames" : "shaderPackListing:backToSettings")
-        }), (0, gM.jsxs)("div", {
+        children: [(0, MV.jsx)(vV.b, {
+          onClick: ye,
+          children: PV(null === Ue ? "homePage:backToGames" : "shaderPackListing:backToSettings")
+        }), (0, MV.jsxs)("div", {
           className: "ShaderPackBrowseHeader",
-          children: [(0, gM.jsxs)("div", {
+          children: [(0, MV.jsxs)("div", {
             className: "ShaderPackBrowseHeaderRow",
-            children: [(0, gM.jsx)("h1", {
+            children: [(0, MV.jsx)("h1", {
               className: "VisuallyHidden",
-              children: eM("shaderPackListing:title")
-            }), (0, gM.jsxs)("div", {
+              children: PV("shaderPackListing:title")
+            }), (0, MV.jsxs)("div", {
               className: "ShaderPackBrowseTabs",
-              children: [(0, gM.jsx)("div", {
-                className: aM()("ShaderPackBrowseSort", {
-                  Active: "explore" === vM.section
+              children: [(0, MV.jsx)("div", {
+                className: yV()("ShaderPackBrowseSort", {
+                  Active: "explore" === fV.section
                 }),
-                onMouseDownCapture: hr,
-                onTouchEndCapture: hr,
-                children: (0, gM.jsx)(HM.e, {
-                  options: nM.y.map((MM => ({
-                    value: MM,
-                    label: eM(wM.$[MM])
+                onMouseDownCapture: ke,
+                onTouchEndCapture: ke,
+                children: (0, MV.jsx)(rV.c, {
+                  options: QV.B.map((VV => ({
+                    value: VV,
+                    label: PV(NV.jb[VV])
                   }))),
-                  value: vM.sort,
-                  onChange: MM => {
-                    Pr({
+                  value: fV.sort,
+                  onChange: VV => {
+                    pe({
                       section: "explore",
-                      sort: MM.value
+                      sort: VV.value
                     })
                   }
                 })
-              }), Object.keys(kM).map((MM => (0, gM.jsx)(mM.V, {
-                active: vM.section === MM,
+              }), Object.keys(iV).map((VV => (0, MV.jsx)(vV.M, {
+                active: fV.section === VV,
                 onClick: () => {
-                  Pr({
-                    section: MM
+                  pe({
+                    section: VV
                   })
                 },
-                children: eM(kM[MM])
-              }, MM)))]
-            }), !mr && (0, gM.jsx)("div", {
+                children: PV(iV[VV])
+              }, VV)))]
+            }), !ve && (0, MV.jsx)("div", {
               className: "ShaderPackBrowseDivider"
-            }), !mr && (0, gM.jsxs)("div", {
+            }), !ve && (0, MV.jsxs)("div", {
               className: "ShaderPackBrowseSearch",
-              children: [(0, gM.jsx)("div", {
+              children: [(0, MV.jsx)("div", {
                 className: "ShaderPackBrowseSearchIcon",
-                children: (0, gM.jsx)(QM.b, {
+                children: (0, MV.jsx)(nV.b, {
                   name: "magnifying-glass"
                 })
-              }), (0, gM.jsx)(JM.b, {
+              }), (0, MV.jsx)(bV.d, {
                 className: "ShaderPackBrowseSearchInput",
-                placeholderText: eM("shaderPackListing:searchPlaceholder"),
-                maxLength: nM.M,
-                defaultValue: FM,
-                domRef: XM,
-                onValueChange: BM,
-                onEnter: nr
-              }), (0, gM.jsx)(mM.e, {
-                onClick: nr,
-                children: eM("general:search")
+                placeholderText: PV("shaderPackListing:searchPlaceholder"),
+                maxLength: QV.P,
+                defaultValue: mV,
+                domRef: HV,
+                onValueChange: KV,
+                onEnter: Qe
+              }), (0, MV.jsx)(vV.f, {
+                onClick: Qe,
+                children: PV("general:search")
               })]
-            }), !mr && (0, gM.jsxs)(mM.V, {
-              className: aM()("ShaderPackBrowseFilterToggle", {
-                Open: fM
+            }), !ve && (0, MV.jsxs)(vV.M, {
+              className: yV()("ShaderPackBrowseFilterToggle", {
+                Open: oV
               }),
-              pressed: fM,
+              pressed: oV,
               onClick: () => {
-                YM(!fM)
+                cV(!oV)
               },
-              children: [eM("shaderPackListing:filter"), " ", (0, gM.jsx)(QM.b, {
-                name: fM ? "angle-up" : "angle-down"
+              children: [PV("shaderPackListing:filter"), " ", (0, MV.jsx)(nV.b, {
+                name: oV ? "angle-up" : "angle-down"
               })]
-            }), (0, gM.jsx)("div", {
+            }), (0, MV.jsx)("div", {
               className: "ShaderPackBrowseSpace"
-            }), GM.featureFlags.settings.canUseShaderPacks && (0, gM.jsxs)(mM.p, {
+            }), FV.featureFlags.settings.canUseShaderPacks && (0, MV.jsxs)(vV.m, {
               onClick: () => {
-                bM(wM.Y)
+                AV(NV.hb)
               },
-              children: [(0, gM.jsx)(QM.b, {
+              children: [(0, MV.jsx)(nV.b, {
                 name: "upload"
-              }), " ", eM("shaderPackListing:publish")]
+              }), " ", PV("shaderPackListing:publish")]
             })]
-          }), !mr && fM && (0, gM.jsxs)("div", {
+          }), !ve && oV && (0, MV.jsxs)("div", {
             className: "ShaderPackBrowseFeatures",
-            children: [wM.w.map((MM => {
-              const rM = (0, wM.g)(vM, MM),
-                iM = eM(wM.I[MM]);
-              return (0, gM.jsx)(mM.V, {
-                className: aM()("ShaderPackBrowseFeature", {
-                  Without: "without" === rM
+            children: [NV.A.map((VV => {
+              const eV = (0, NV.e)(fV, VV),
+                xV = PV(NV.Q[VV]);
+              return (0, MV.jsx)(vV.M, {
+                className: yV()("ShaderPackBrowseFeature", {
+                  Without: "without" === eV
                 }),
-                active: "with" === rM,
-                pressed: null !== rM,
+                active: "with" === eV,
+                pressed: null !== eV,
                 onClick: () => {
-                  NM.current = !0, Pr((0, wM.fb)(vM, MM))
+                  hV.current = !0, pe((0, NV.nb)(fV, VV))
                 },
-                children: (0, gM.jsxs)("span", {
+                children: (0, MV.jsxs)("span", {
                   className: "ShaderPackBrowseFeatureLabel",
-                  children: [(0, gM.jsxs)("span", {
+                  children: [(0, MV.jsxs)("span", {
                     className: "ShaderPackBrowseFeatureReserve",
-                    children: [(0, gM.jsx)(QM.b, {
+                    children: [(0, MV.jsx)(nV.b, {
                       name: "check"
-                    }), " ", iM]
-                  }), (0, gM.jsxs)("span", {
-                    children: [null !== rM && (0, gM.jsx)(QM.b, {
-                      name: "with" === rM ? "check" : "xmark"
-                    }), " ", iM]
+                    }), " ", xV]
+                  }), (0, MV.jsxs)("span", {
+                    children: [null !== eV && (0, MV.jsx)(nV.b, {
+                      name: "with" === eV ? "check" : "xmark"
+                    }), " ", xV]
                   })]
                 })
-              }, MM)
-            })), Hr && (0, gM.jsx)(mM.V, {
-              className: aM()("ShaderPackBrowseFeature", {
-                Without: "without" === vM.banned
+              }, VV)
+            })), re && (0, MV.jsx)(vV.M, {
+              className: yV()("ShaderPackBrowseFeature", {
+                Without: "without" === fV.banned
               }),
-              active: "with" === vM.banned,
-              pressed: null !== vM.banned,
+              active: "with" === fV.banned,
+              pressed: null !== fV.banned,
               onClick: () => {
-                const MM = "without" === vM.banned && !NM.current && (0, wM.n)(vM);
-                Pr({
-                  banned: (0, wM.x)(vM.banned),
-                  ...MM && {
+                const VV = "without" === fV.banned && !hV.current && (0, NV.o)(fV);
+                pe({
+                  banned: (0, NV.E)(fV.banned),
+                  ...VV && {
                     withFeatures: [],
                     withoutFeatures: []
                   }
                 })
               },
-              children: (0, gM.jsxs)("span", {
+              children: (0, MV.jsxs)("span", {
                 className: "ShaderPackBrowseFeatureLabel",
-                children: [(0, gM.jsxs)("span", {
+                children: [(0, MV.jsxs)("span", {
                   className: "ShaderPackBrowseFeatureReserve",
-                  children: [(0, gM.jsx)(QM.b, {
+                  children: [(0, MV.jsx)(nV.b, {
                     name: "check"
                   }), " BANNED"]
-                }), (0, gM.jsxs)("span", {
-                  children: [null !== vM.banned && (0, gM.jsx)(QM.b, {
-                    name: "with" === vM.banned ? "check" : "xmark"
+                }), (0, MV.jsxs)("span", {
+                  children: [null !== fV.banned && (0, MV.jsx)(nV.b, {
+                    name: "with" === fV.banned ? "check" : "xmark"
                   }), " BANNED"]
                 })]
               })
             })]
           })]
-        }), (!mr || null !== Qr) && (0, gM.jsx)("div", {
+        }), (!ve || null !== ne) && (0, MV.jsx)("div", {
           className: "ShaderPackBrowseScenes",
-          children: (0, gM.jsx)(sM.c, {
-            selected: ZM,
-            onSelect: oM,
-            imageUrl: MM => null === Qr ? null : (0, nM.q)(UM.clientSideServerUrls.s3Url, Qr, MM, "thumb")
+          children: (0, MV.jsx)(gV.d, {
+            selected: CV,
+            onSelect: aV,
+            imageUrl: VV => null === ne ? null : (0, QV.q)(tV.clientSideServerUrls.s3Url, ne, VV, "thumb")
           })
-        }), (0, gM.jsx)(pM, {
-          results: KM,
-          loading: TM,
-          failed: cM,
+        }), (0, MV.jsx)(WV, {
+          results: sV,
+          loading: IV,
+          failed: OV,
           onRetry: () => {
-            ir((MM => MM + 1))
+            xe((VV => VV + 1))
           },
-          view: vM,
-          previewView: ZM
-        }), "listing" === (null === KM || void 0 === KM ? void 0 : KM.kind) && (0, gM.jsx)(hM.d, {
+          view: fV,
+          previewView: CV
+        }), "listing" === (null === sV || void 0 === sV ? void 0 : sV.kind) && (0, MV.jsx)(kV.b, {
           className: "ShaderPackBrowsePagination",
-          page: KM.page.pageNumber,
-          totalPages: KM.page.totalPages,
-          onSetPage: MM => {
-            xM((rM => {
-              (0, LM.h)(rM, MM)
+          page: sV.page.pageNumber,
+          totalPages: sV.page.totalPages,
+          onSetPage: VV => {
+            LV((eV => {
+              (0, ZV.l)(eV, VV)
             }))
           },
-          getPageHref: function(MM) {
-            const rM = new URLSearchParams(AM);
-            (0, LM.h)(rM, MM);
-            const iM = rM.toString();
-            return iM ? `${tM.pathname}?${iM}` : tM.pathname
+          getPageHref: function(VV) {
+            const eV = new URLSearchParams(lV);
+            (0, ZV.l)(eV, VV);
+            const xV = eV.toString();
+            return xV ? `${XV.pathname}?${xV}` : XV.pathname
           }
         })]
       })
@@ -429,4 +429,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const VV in modules) Object.freeze(modules[VV]);

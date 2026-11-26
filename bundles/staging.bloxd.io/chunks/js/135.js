@@ -1,243 +1,243 @@
 export const id = 135;
 export const ids = [135, 705];
 export const modules = {
-  37278: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      default: () => kr
+  37482: (VV, eV, xV) => {
+    xV.r(eV), xV.d(eV, {
+      default: () => ie
     });
-    var OM = iM(313),
-      SM = iM(3902),
-      jM = iM(3945),
-      aM = iM(3938),
-      PM = iM(3934),
-      nM = iM(1188),
-      QM = iM(30),
-      zM = iM(1830),
-      LM = iM(1440),
-      mM = iM(1520),
-      HM = iM(1116),
-      hM = iM.n(HM),
-      JM = iM(1763),
-      dM = iM(44),
-      yM = iM(65),
-      lM = iM(2482),
-      EM = iM(1382),
-      UM = iM(1694),
-      GM = iM(1142),
-      CM = iM(3821),
-      eM = iM(4934),
-      bM = iM(2796),
-      wM = iM(2006),
-      tM = iM(3898),
-      gM = iM(1843),
-      uM = iM(1573),
-      RM = iM(2280),
-      pM = iM(1396),
-      WM = iM(2818),
-      sM = iM(5417),
-      DM = iM(1303);
-    const kM = 15e3,
-      ZM = 2500;
+    var JV = xV(364),
+      YV = xV(3942),
+      UV = xV(3974),
+      yV = xV(3971),
+      pV = xV(3967),
+      QV = xV(1220),
+      nV = xV(40),
+      wV = xV(1838),
+      ZV = xV(1446),
+      vV = xV(1551),
+      rV = xV(1146),
+      kV = xV.n(rV),
+      bV = xV(1772),
+      EV = xV(62),
+      BV = xV(78),
+      jV = xV(2517),
+      qV = xV(1397),
+      tV = xV(1708),
+      FV = xV(1168),
+      TV = xV(3853),
+      PV = xV(5031),
+      AV = xV(2866),
+      NV = xV(2021),
+      XV = xV(3935),
+      MV = xV(1844),
+      zV = xV(1603),
+      GV = xV(2298),
+      WV = xV(1408),
+      RV = xV(2903),
+      gV = xV(5529),
+      DV = xV(1321);
+    const iV = 15e3,
+      CV = 2500;
 
-    function oM(MM) {
-      var rM;
+    function aV(VV) {
+      var eV;
       let {
-        eventName: iM
-      } = MM;
+        eventName: xV
+      } = VV;
       const {
-        t: OM
-      } = (0, nM.A)(), SM = gM.e[iM], [jM, aM] = (0, dM.useState)((() => Date.now() >= SM.endsAt.getTime())), [PM, QM] = (0, dM.useState)("overall"), zM = function(MM, rM) {
+        t: JV
+      } = (0, QV.A)(), YV = MV.g[xV], [UV, yV] = (0, EV.useState)((() => Date.now() >= YV.endsAt.getTime())), [pV, nV] = (0, EV.useState)("overall"), wV = function(VV, eV) {
         const {
-          userContext: iM,
-          isUserContextUpdating: OM
-        } = (0, GM.b)(), SM = `${MM}:${rM}`, [jM, aM] = (0, dM.useState)({
-          requestKey: SM,
+          userContext: xV,
+          isUserContextUpdating: JV
+        } = (0, FV.d)(), YV = `${VV}:${eV}`, [UV, yV] = (0, EV.useState)({
+          requestKey: YV,
           leaderboard: {
             status: "loading"
           }
         });
-        return (0, dM.useEffect)((() => {
-          if (OM) return;
-          let jM, PM = !1;
-          const nM = async () => {
+        return (0, EV.useEffect)((() => {
+          if (JV) return;
+          let UV, pV = !1;
+          const QV = async () => {
             if ("visible" === document.visibilityState) try {
-              const OM = await uM.c.getGameEventLeaderboard(iM, {
-                event: MM,
-                scope: rM
+              const JV = await zV.b.getGameEventLeaderboard(xV, {
+                event: VV,
+                scope: eV
               });
-              PM || aM({
-                requestKey: SM,
+              pV || yV({
+                requestKey: YV,
                 leaderboard: {
                   status: "loaded",
-                  leaderboard: OM
+                  leaderboard: JV
                 }
               })
             } catch {
-              PM || aM((MM => MM.requestKey === SM && "loaded" === MM.leaderboard.status ? MM : {
-                requestKey: SM,
+              pV || yV((VV => VV.requestKey === YV && "loaded" === VV.leaderboard.status ? VV : {
+                requestKey: YV,
                 leaderboard: {
                   status: "unavailable"
                 }
               }))
             }
-            PM || (jM = setTimeout(nM, kM))
+            pV || (UV = setTimeout(QV, iV))
           };
-          return nM(), () => {
-            PM = !0, clearTimeout(jM)
+          return QV(), () => {
+            pV = !0, clearTimeout(UV)
           }
-        }), [MM, rM, SM, iM, OM]), jM.requestKey === SM ? jM.leaderboard : {
+        }), [VV, eV, YV, xV, JV]), UV.requestKey === YV ? UV.leaderboard : {
           status: "loading"
         }
-      }(iM, PM), LM = function(MM) {
-        const rM = (0, dM.useRef)(null),
-          iM = (0, dM.useRef)(0),
-          OM = (0, dM.useRef)(),
-          [SM, jM] = (0, dM.useState)({});
-        return (0, dM.useEffect)((() => {
-          const SM = null === MM || void 0 === MM ? void 0 : MM.entries;
-          if (!SM) return;
-          const aM = new Map(SM.map((MM => [MM.player.name, MM.value]))),
-            PM = rM.current;
-          if (rM.current = aM, null === PM) return;
-          const nM = {};
-          for (const [MM, rM] of aM) {
-            const OM = PM.get(MM);
-            void 0 !== OM && rM > OM && (nM[MM] = {
-              amount: rM - OM,
-              key: iM.current++
+      }(xV, pV), ZV = function(VV) {
+        const eV = (0, EV.useRef)(null),
+          xV = (0, EV.useRef)(0),
+          JV = (0, EV.useRef)(),
+          [YV, UV] = (0, EV.useState)({});
+        return (0, EV.useEffect)((() => {
+          const YV = null === VV || void 0 === VV ? void 0 : VV.entries;
+          if (!YV) return;
+          const yV = new Map(YV.map((VV => [VV.player.name, VV.value]))),
+            pV = eV.current;
+          if (eV.current = yV, null === pV) return;
+          const QV = {};
+          for (const [VV, eV] of yV) {
+            const JV = pV.get(VV);
+            void 0 !== JV && eV > JV && (QV[VV] = {
+              amount: eV - JV,
+              key: xV.current++
             })
           }
-          0 !== Object.keys(nM).length && (jM(nM), clearTimeout(OM.current), OM.current = setTimeout((() => {
-            jM({})
-          }), ZM))
-        }), [MM]), (0, dM.useEffect)((() => () => {
-          clearTimeout(OM.current)
-        }), []), SM
-      }("loaded" === zM.status ? zM.leaderboard : null), mM = function(MM) {
-        const [rM, iM] = (0, dM.useState)(null), OM = "loaded" === MM.status ? MM.leaderboard.goalProgress : void 0;
-        return (0, dM.useEffect)((() => {
-          OM && iM(OM)
-        }), [OM]), rM
-      }(zM), HM = RM.f[`profileEffect_${SM.prizePack}`];
-      if (jM) return null;
-      const JM = "loaded" === zM.status ? zM.leaderboard : null,
-        yM = null !== (rM = null === JM || void 0 === JM ? void 0 : JM.entries) && void 0 !== rM ? rM : null,
-        lM = null !== JM && void 0 !== JM && JM.own && null !== yM && !yM.some((MM => MM.isOwn)) ? JM.own : null;
-      return (0, DM.jsx)("section", {
+          0 !== Object.keys(QV).length && (UV(QV), clearTimeout(JV.current), JV.current = setTimeout((() => {
+            UV({})
+          }), CV))
+        }), [VV]), (0, EV.useEffect)((() => () => {
+          clearTimeout(JV.current)
+        }), []), YV
+      }("loaded" === wV.status ? wV.leaderboard : null), vV = function(VV) {
+        const [eV, xV] = (0, EV.useState)(null), JV = "loaded" === VV.status ? VV.leaderboard.goalProgress : void 0;
+        return (0, EV.useEffect)((() => {
+          JV && xV(JV)
+        }), [JV]), eV
+      }(wV), rV = GV.f[`profileEffect_${YV.prizePack}`];
+      if (UV) return null;
+      const bV = "loaded" === wV.status ? wV.leaderboard : null,
+        BV = null !== (eV = null === bV || void 0 === bV ? void 0 : bV.entries) && void 0 !== eV ? eV : null,
+        jV = null !== bV && void 0 !== bV && bV.own && null !== BV && !BV.some((VV => VV.isOwn)) ? bV.own : null;
+      return (0, DV.jsx)("section", {
         className: "GameEventPanel AnimFadeIn",
-        children: (0, DM.jsxs)("div", {
+        children: (0, DV.jsxs)("div", {
           className: "GameEventPanelCard",
-          children: [(0, DM.jsxs)("div", {
+          children: [(0, DV.jsxs)("div", {
             className: "GameEventPanelInfo",
-            children: [(0, DM.jsxs)("div", {
+            children: [(0, DV.jsxs)("div", {
               className: "GameEventPanelStatus",
-              children: [(0, DM.jsxs)("span", {
+              children: [(0, DV.jsxs)("span", {
                 className: "GameEventPanelLive",
-                children: [(0, DM.jsx)("span", {
+                children: [(0, DV.jsx)("span", {
                   className: "GameEventPanelLiveDot"
-                }), OM("gameEvents:live")]
-              }), (0, DM.jsxs)("span", {
+                }), JV("gameEvents:live")]
+              }), (0, DV.jsxs)("span", {
                 className: "GameEventPanelEndsIn",
-                children: [OM("gameEvents:endsIn"), (0, DM.jsx)(bM.c, {
-                  toTime: SM.endsAt,
+                children: [JV("gameEvents:endsIn"), (0, DV.jsx)(AV.d, {
+                  toTime: YV.endsAt,
                   onReachEndOfCountdown: () => {
-                    aM(!0)
+                    yV(!0)
                   }
                 })]
               })]
-            }), (0, DM.jsx)("h2", {
+            }), (0, DV.jsx)("h2", {
               className: "GameEventPanelTitle",
-              children: OM(SM.titleKey)
-            }), (0, DM.jsxs)("div", {
+              children: JV(YV.titleKey)
+            }), (0, DV.jsxs)("div", {
               className: "GameEventPanelPrize",
-              children: [(0, DM.jsxs)("div", {
+              children: [(0, DV.jsxs)("div", {
                 className: "GameEventPanelPrizeSummary",
-                children: [HM && (0, DM.jsx)("div", {
+                children: [rV && (0, DV.jsx)("div", {
                   className: "GameEventPanelPrizePreview",
-                  children: (0, DM.jsx)(HM, {})
-                }), (0, DM.jsxs)("div", {
+                  children: (0, DV.jsx)(rV, {})
+                }), (0, DV.jsxs)("div", {
                   className: "GameEventPanelPrizeText",
-                  children: [(0, DM.jsx)("div", {
+                  children: [(0, DV.jsx)("div", {
                     className: "GameEventPanelPrizeLabel",
-                    children: OM("gameEvents:prize")
-                  }), (0, DM.jsx)("div", {
+                    children: JV("gameEvents:prize")
+                  }), (0, DV.jsx)("div", {
                     className: "GameEventPanelPrizeName",
-                    children: OM(SM.prizeNameKey)
+                    children: JV(YV.prizeNameKey)
                   })]
                 })]
-              }), (0, DM.jsx)(fM, {
-                event: SM,
-                progress: mM
+              }), (0, DV.jsx)(oV, {
+                event: YV,
+                progress: vV
               })]
             })]
-          }), (0, DM.jsxs)("div", {
+          }), (0, DV.jsxs)("div", {
             className: "GameEventPanelLeaderboard",
-            children: [(0, DM.jsxs)("div", {
+            children: [(0, DV.jsxs)("div", {
               className: "GameEventPanelLeaderboardHeader",
-              children: [(0, DM.jsx)("h3", {
+              children: [(0, DV.jsx)("h3", {
                 className: "GameEventPanelLeaderboardTitle",
-                children: OM(SM.leaderboard.titleKey)
-              }), (0, DM.jsx)(sM.e, {
-                ariaLabel: OM("gameEvents:leaderboardScope"),
-                options: gM.b.map((MM => ({
-                  value: MM,
-                  label: OM(`gameEvents:${MM}Scope`)
+                children: JV(YV.leaderboard.titleKey)
+              }), (0, DV.jsx)(gV.b, {
+                ariaLabel: JV("gameEvents:leaderboardScope"),
+                options: MV.c.map((VV => ({
+                  value: VV,
+                  label: JV(`gameEvents:${VV}Scope`)
                 }))),
-                value: PM,
-                onChange: QM
+                value: pV,
+                onChange: nV
               })]
-            }), "loading" === zM.status && (0, DM.jsx)("div", {
+            }), "loading" === wV.status && (0, DV.jsx)("div", {
               className: "GameEventPanelLeaderboardLoader AnimFadeIn",
-              children: (0, DM.jsx)(pM.d, {})
-            }), ("unavailable" === zM.status || "loaded" === zM.status && null === yM) && (0, DM.jsx)("div", {
+              children: (0, DV.jsx)(WV.d, {})
+            }), ("unavailable" === wV.status || "loaded" === wV.status && null === BV) && (0, DV.jsx)("div", {
               className: "GameEventPanelLeaderboardMessage",
-              children: OM("gameEvents:leaderboardUnavailable")
-            }), null !== yM && 0 === yM.length && (0, DM.jsx)("div", {
+              children: JV("gameEvents:leaderboardUnavailable")
+            }), null !== BV && 0 === BV.length && (0, DV.jsx)("div", {
               className: "GameEventPanelLeaderboardMessage",
-              children: OM("friends" === PM ? "gameEvents:friendsLeaderboardEmpty" : "gameEvents:leaderboardEmpty")
-            }), null !== yM && yM.length > 0 && (0, DM.jsx)("ol", {
+              children: JV("friends" === pV ? "gameEvents:friendsLeaderboardEmpty" : "gameEvents:leaderboardEmpty")
+            }), null !== BV && BV.length > 0 && (0, DV.jsx)("ol", {
               className: "GameEventPanelRows",
-              children: yM.map((MM => {
-                const rM = LM[MM.player.name];
-                return (0, DM.jsxs)("li", {
-                  className: hM()("GameEventPanelRow", {
-                    GameEventPanelRowOwn: MM.isOwn,
-                    GameEventPanelRowTop: MM.rank <= 3
+              children: BV.map((VV => {
+                const eV = ZV[VV.player.name];
+                return (0, DV.jsxs)("li", {
+                  className: kV()("GameEventPanelRow", {
+                    GameEventPanelRowOwn: VV.isOwn,
+                    GameEventPanelRowTop: VV.rank <= 3
                   }),
-                  children: [(0, DM.jsxs)("span", {
+                  children: [(0, DV.jsxs)("span", {
                     className: "GameEventPanelRank",
-                    children: ["#", MM.rank]
-                  }), (0, DM.jsx)("div", {
+                    children: ["#", VV.rank]
+                  }), (0, DV.jsx)("div", {
                     className: "GameEventPanelPlayer",
-                    children: (0, DM.jsx)(WM.f, {
+                    children: (0, DV.jsx)(RV.f, {
                       playerSocialPreview: {
-                        ...MM.player,
+                        ...VV.player,
                         location: {
                           status: "offline"
                         }
                       },
                       showLocation: !1
                     })
-                  }), void 0 !== rM && (0, DM.jsxs)("span", {
+                  }), void 0 !== eV && (0, DV.jsxs)("span", {
                     className: "GameEventPanelGain",
-                    children: ["+", rM.amount.toLocaleString()]
-                  }, rM.key), (0, DM.jsx)("span", {
+                    children: ["+", eV.amount.toLocaleString()]
+                  }, eV.key), (0, DV.jsx)("span", {
                     className: "GameEventPanelScore",
-                    children: MM.value.toLocaleString()
+                    children: VV.value.toLocaleString()
                   })]
-                }, MM.player.name)
+                }, VV.player.name)
               }))
-            }), lM && (0, DM.jsxs)("div", {
+            }), jV && (0, DV.jsxs)("div", {
               className: "GameEventPanelRow GameEventPanelRowOwn GameEventPanelOwnRow",
-              children: [(0, DM.jsxs)("span", {
+              children: [(0, DV.jsxs)("span", {
                 className: "GameEventPanelRank",
-                children: ["#", lM.rank.toLocaleString()]
-              }), (0, DM.jsx)("span", {
+                children: ["#", jV.rank.toLocaleString()]
+              }), (0, DV.jsx)("span", {
                 className: "GameEventPanelPlayer",
-                children: OM("gameEvents:yourPlace")
-              }), (0, DM.jsx)("span", {
+                children: JV("gameEvents:yourPlace")
+              }), (0, DV.jsx)("span", {
                 className: "GameEventPanelScore",
-                children: lM.value.toLocaleString()
+                children: jV.value.toLocaleString()
               })]
             })]
           })]
@@ -245,355 +245,355 @@ export const modules = {
       })
     }
 
-    function fM(MM) {
+    function oV(VV) {
       let {
-        event: rM,
-        progress: iM
-      } = MM;
+        event: eV,
+        progress: xV
+      } = VV;
       const {
-        t: OM
-      } = (0, nM.A)(), SM = null !== iM && rM.prizeGoals.some(((MM, rM) => iM[rM] >= MM.target));
-      return (0, DM.jsxs)("div", {
+        t: JV
+      } = (0, QV.A)(), YV = null !== xV && eV.prizeGoals.some(((VV, eV) => xV[eV] >= VV.target));
+      return (0, DV.jsxs)("div", {
         className: "GameEventPanelGoals",
-        children: [(0, DM.jsx)("div", {
+        children: [(0, DV.jsx)("div", {
           className: "GameEventPanelGoalsHeading",
-          children: OM(SM ? "gameEvents:prizeEarned" : "gameEvents:goalsHeading")
-        }), (0, DM.jsx)("div", {
+          children: JV(YV ? "gameEvents:prizeEarned" : "gameEvents:goalsHeading")
+        }), (0, DV.jsx)("div", {
           className: "GameEventPanelGoalRow",
-          children: rM.prizeGoals.map(((MM, rM) => {
-            const SM = null === iM ? null : Math.min(iM[rM], MM.target);
-            return (0, DM.jsxs)(dM.Fragment, {
-              children: [rM > 0 && (0, DM.jsx)("div", {
+          children: eV.prizeGoals.map(((VV, eV) => {
+            const YV = null === xV ? null : Math.min(xV[eV], VV.target);
+            return (0, DV.jsxs)(EV.Fragment, {
+              children: [eV > 0 && (0, DV.jsx)("div", {
                 className: "GameEventPanelGoalsOr",
-                children: OM("gameEvents:goalsOr")
-              }), (0, DM.jsxs)("div", {
-                className: hM()("GameEventPanelGoal", {
-                  GameEventPanelGoalDone: SM === MM.target
+                children: JV("gameEvents:goalsOr")
+              }), (0, DV.jsxs)("div", {
+                className: kV()("GameEventPanelGoal", {
+                  GameEventPanelGoalDone: YV === VV.target
                 }),
-                children: [(0, DM.jsx)("span", {
+                children: [(0, DV.jsx)("span", {
                   className: "GameEventPanelGoalLabel",
-                  children: OM(MM.labelKey)
-                }), (0, DM.jsxs)("div", {
+                  children: JV(VV.labelKey)
+                }), (0, DV.jsxs)("div", {
                   className: "GameEventPanelGoalBar",
-                  children: [(0, DM.jsx)("div", {
+                  children: [(0, DV.jsx)("div", {
                     className: "GameEventPanelGoalBarFill",
                     style: {
-                      width: (null !== SM && void 0 !== SM ? SM : 0) / MM.target * 100 + "%"
+                      width: (null !== YV && void 0 !== YV ? YV : 0) / VV.target * 100 + "%"
                     }
-                  }), null !== SM && (0, DM.jsxs)("span", {
+                  }), null !== YV && (0, DV.jsxs)("span", {
                     className: "GameEventPanelGoalCount",
-                    children: [SM.toLocaleString(), " / ", MM.target.toLocaleString()]
+                    children: [YV.toLocaleString(), " / ", VV.target.toLocaleString()]
                   })]
                 })]
               })]
-            }, MM.board)
+            }, VV.board)
           }))
         })]
       })
     }
-    var YM = iM(1630),
-      NM = iM(1675),
-      AM = iM(1099),
-      xM = iM(783),
-      vM = iM(3875);
+    var cV = xV(1643),
+      hV = xV(1700),
+      lV = xV(1133),
+      LV = xV(780),
+      fV = xV(3922);
 
-    function FM(MM) {
+    function mV(VV) {
       let {
-        gameNameWithVariation: rM
-      } = MM;
-      const iM = (0, YM.F)(rM),
-        [OM, SM] = (0, dM.useState)(null);
-      if ((0, dM.useEffect)((() => {
-          if (!iM) return;
-          let MM = !0;
-          return (0, NM.h)(iM).then((rM => {
-            MM && SM(rM)
-          })).catch((MM => {
-            console.error(`Failed to load the page copy for ${iM.name}`, MM)
+        gameNameWithVariation: eV
+      } = VV;
+      const xV = (0, cV.z)(eV),
+        [JV, YV] = (0, EV.useState)(null);
+      if ((0, EV.useEffect)((() => {
+          if (!xV) return;
+          let VV = !0;
+          return (0, hV.i)(xV).then((eV => {
+            VV && YV(eV)
+          })).catch((VV => {
+            console.error(`Failed to load the page copy for ${xV.name}`, VV)
           })), () => {
-            MM = !1
+            VV = !1
           }
-        }), [iM]), !iM || !OM || OM.name !== iM.name) return null;
-      const jM = (0, NM.e)(OM),
-        aM = new Set((0, AM.c)((0, xM.i)()).map((MM => (0, YM.w)(MM)))),
-        PM = OM.similarGames.filter((MM => aM.has((0, YM.w)(MM))));
-      return (0, DM.jsx)("div", {
+        }), [xV]), !xV || !JV || JV.name !== xV.name) return null;
+      const UV = (0, hV.g)(JV),
+        yV = new Set((0, lV.b)((0, LV.h)()).map((VV => (0, cV.v)(VV)))),
+        pV = JV.similarGames.filter((VV => yV.has((0, cV.v)(VV))));
+      return (0, DV.jsx)("div", {
         className: "GamePageContent",
-        children: (0, DM.jsxs)("div", {
+        children: (0, DV.jsxs)("div", {
           className: "GamePageContentColumns",
-          children: [(0, DM.jsxs)("section", {
+          children: [(0, DV.jsxs)("section", {
             className: "GamePageContentSection",
-            children: [(0, DM.jsx)("h2", {
-              children: jM.whatIs
-            }), OM.whatIs.map((MM => (0, DM.jsx)("p", {
-              children: MM
-            }, MM)))]
-          }), (0, DM.jsxs)("section", {
+            children: [(0, DV.jsx)("h2", {
+              children: UV.whatIs
+            }), JV.whatIs.map((VV => (0, DV.jsx)("p", {
+              children: VV
+            }, VV)))]
+          }), (0, DV.jsxs)("section", {
             className: "GamePageContentSection",
-            children: [(0, DM.jsx)("h2", {
-              children: jM.howToPlay
-            }), OM.howToPlay.map((MM => (0, DM.jsx)("p", {
-              children: MM
-            }, MM)))]
-          }), (0, DM.jsxs)("section", {
+            children: [(0, DV.jsx)("h2", {
+              children: UV.howToPlay
+            }), JV.howToPlay.map((VV => (0, DV.jsx)("p", {
+              children: VV
+            }, VV)))]
+          }), (0, DV.jsxs)("section", {
             className: "GamePageContentSection",
-            children: [(0, DM.jsx)("h2", {
-              children: jM.features
-            }), (0, DM.jsx)("ul", {
-              children: OM.features.map((MM => (0, DM.jsx)("li", {
-                children: MM
-              }, MM)))
+            children: [(0, DV.jsx)("h2", {
+              children: UV.features
+            }), (0, DV.jsx)("ul", {
+              children: JV.features.map((VV => (0, DV.jsx)("li", {
+                children: VV
+              }, VV)))
             })]
-          }), (0, DM.jsxs)("aside", {
+          }), (0, DV.jsxs)("aside", {
             className: "GamePageContentSection",
-            children: [(0, DM.jsx)("h2", {
-              children: jM.tips
-            }), (0, DM.jsx)("ul", {
-              children: OM.tips.map((MM => (0, DM.jsx)("li", {
-                children: MM
-              }, MM)))
+            children: [(0, DV.jsx)("h2", {
+              children: UV.tips
+            }), (0, DV.jsx)("ul", {
+              children: JV.tips.map((VV => (0, DV.jsx)("li", {
+                children: VV
+              }, VV)))
             })]
-          }), (0, DM.jsxs)("section", {
+          }), (0, DV.jsxs)("section", {
             className: "GamePageContentSection GamePageContentFaq",
-            children: [(0, DM.jsx)("h2", {
-              children: jM.faq
-            }), OM.faq.map((MM => {
+            children: [(0, DV.jsx)("h2", {
+              children: UV.faq
+            }), JV.faq.map((VV => {
               let {
-                question: rM,
-                answer: iM
-              } = MM;
-              return (0, DM.jsxs)("div", {
+                question: eV,
+                answer: xV
+              } = VV;
+              return (0, DV.jsxs)("div", {
                 className: "GamePageContentFaqItem",
-                children: [(0, DM.jsx)("h3", {
-                  children: rM
-                }), (0, DM.jsx)("p", {
-                  children: iM
+                children: [(0, DV.jsx)("h3", {
+                  children: eV
+                }), (0, DV.jsx)("p", {
+                  children: xV
                 })]
-              }, rM)
+              }, eV)
             }))]
-          }), PM.length > 0 && (0, DM.jsxs)("nav", {
+          }), pV.length > 0 && (0, DV.jsxs)("nav", {
             className: "GamePageContentSection GamePageContentSimilarGamesSection",
-            children: [(0, DM.jsx)("h2", {
-              children: jM.similarGames
-            }), (0, DM.jsx)("ul", {
+            children: [(0, DV.jsx)("h2", {
+              children: UV.similarGames
+            }), (0, DV.jsx)("ul", {
               className: "GamePageContentSimilarGames",
-              children: PM.map((MM => (0, DM.jsx)("li", {
-                children: (0, DM.jsx)(vM.h, {
+              children: pV.map((VV => (0, DV.jsx)("li", {
+                children: (0, DV.jsx)(fV.g, {
                   source: {
                     type: "game",
-                    gameNameWithVariation: MM
+                    gameNameWithVariation: VV
                   },
                   entrySource: "other",
                   gameWidth: "100%",
                   useLongRatio: !0
                 })
-              }, MM)))
+              }, VV)))
             })]
           })]
         })
       })
     }
-    var BM = iM(1398),
-      XM = iM(83),
-      IM = iM(1144),
-      KM = iM(35064),
-      qM = iM(1733),
-      TM = iM(1608),
-      VM = iM(1591),
-      cM = iM(1685),
-      Mr = iM(1530),
-      rr = iM(1429),
-      ir = iM(37280),
-      Or = iM(1240),
-      Sr = iM(1073),
-      jr = iM(332),
-      ar = iM(1088),
-      Pr = iM(1627),
-      nr = iM(9525),
-      Qr = iM(19),
-      zr = iM(2721),
-      Lr = iM(821),
-      mr = iM(1229),
-      Hr = iM(6982),
-      hr = iM(3881);
+    var KV = xV(1414),
+      HV = xV(99),
+      uV = xV(1173),
+      sV = xV(35346),
+      SV = xV(1745),
+      IV = xV(1625),
+      dV = xV(1612),
+      OV = xV(1704),
+      Ve = xV(1565),
+      ee = xV(1439),
+      xe = xV(37486),
+      Je = xV(1267),
+      Ye = xV(1099),
+      Ue = xV(375),
+      ye = xV(1117),
+      pe = xV(1639),
+      Qe = xV(9541),
+      ne = xV(27),
+      we = xV(2777),
+      Ze = xV(812),
+      ve = xV(1252),
+      re = xV(7064),
+      ke = xV(3931);
 
-    function Jr(MM) {
+    function be(VV) {
       let {
-        preview: rM,
-        isBroken: iM
-      } = MM;
-      const OM = null === rM ? null : (0, jM.g)(rM, "small"),
-        aM = (0, SM.c)(null !== OM && void 0 !== OM ? OM : jM.t);
-      return null === rM ? (0, DM.jsx)("div", {
-        className: hM()("FeaturedGamesPopupSlotThumbnail FeaturedGamesPopupSlotThumbnailEmpty", {
-          FeaturedGamesPopupSlotThumbnailBroken: iM
+        preview: eV,
+        isBroken: xV
+      } = VV;
+      const JV = null === eV ? null : (0, UV.g)(eV, "small"),
+        yV = (0, YV.d)(null !== JV && void 0 !== JV ? JV : UV.q);
+      return null === eV ? (0, DV.jsx)("div", {
+        className: kV()("FeaturedGamesPopupSlotThumbnail FeaturedGamesPopupSlotThumbnailEmpty", {
+          FeaturedGamesPopupSlotThumbnailBroken: xV
         }),
-        children: (0, DM.jsx)(BM.b, {
-          name: iM ? "triangle-exclamation" : "star"
+        children: (0, DV.jsx)(KV.b, {
+          name: xV ? "triangle-exclamation" : "star"
         })
-      }) : (0, DM.jsx)("div", {
-        className: hM()("FeaturedGamesPopupSlotThumbnail", PM.k),
-        style: (0, PM.h)(aM),
+      }) : (0, DV.jsx)("div", {
+        className: kV()("FeaturedGamesPopupSlotThumbnail", pV.i),
+        style: (0, pV.h)(yV),
         role: "img",
-        "aria-label": rM.name,
-        children: (0, DM.jsx)(PM.e, {
-          image: aM
+        "aria-label": eV.name,
+        children: (0, DV.jsx)(pV.e, {
+          image: yV
         })
       })
     }
 
-    function dr(MM) {
+    function Ee(VV) {
       let {
-        schematicId: rM,
-        gameName: iM
-      } = MM;
+        schematicId: eV,
+        gameName: xV
+      } = VV;
       const {
-        userContext: SM
-      } = (0, GM.b)(), jM = (0, hr.b)(), [aM, PM] = (0, dM.useState)(null), [nM, QM] = (0, dM.useState)(null), [zM, LM] = (0, dM.useState)(!1), HM = (0, dM.useCallback)((() => {
-        QM(null), uM.c.getFeaturedGames(SM).then((MM => {
-          jM.current && PM(MM.slots)
-        })).catch((MM => {
-          console.error("Failed to get featured games", MM), jM.current && QM("Failed to load featured games")
+        userContext: YV
+      } = (0, FV.d)(), UV = (0, ke.e)(), [yV, pV] = (0, EV.useState)(null), [QV, nV] = (0, EV.useState)(null), [wV, ZV] = (0, EV.useState)(!1), rV = (0, EV.useCallback)((() => {
+        nV(null), zV.b.getFeaturedGames(YV).then((VV => {
+          UV.current && pV(VV.slots)
+        })).catch((VV => {
+          console.error("Failed to get featured games", VV), UV.current && nV("Failed to load featured games")
         }))
-      }), [SM, jM]);
-      (0, dM.useEffect)((() => {
-        HM()
-      }), [HM]);
-      const hM = (MM, rM) => {
-        zM || (LM(!0), uM.c.setFeaturedGame(SM, MM, rM).then((() => {
-          jM.current && HM()
-        })).catch((MM => {
-          console.error("Failed to set featured game", MM), jM.current && QM("Failed to update the featured slot")
+      }), [YV, UV]);
+      (0, EV.useEffect)((() => {
+        rV()
+      }), [rV]);
+      const kV = (VV, eV) => {
+        wV || (ZV(!0), zV.b.setFeaturedGame(YV, VV, eV).then((() => {
+          UV.current && rV()
+        })).catch((VV => {
+          console.error("Failed to set featured game", VV), UV.current && nV("Failed to update the featured slot")
         })).finally((() => {
-          jM.current && LM(!1)
+          UV.current && ZV(!1)
         })))
       };
-      return (0, DM.jsxs)("div", {
+      return (0, DV.jsxs)("div", {
         className: "FeaturedGamesPopupBody",
-        children: [(0, DM.jsx)("h1", {
+        children: [(0, DV.jsx)("h1", {
           className: "FeaturedGamesPopupTitle",
           children: "Featured Games"
-        }), !aM && !nM && (0, DM.jsx)("div", {
+        }), !yV && !QV && (0, DV.jsx)("div", {
           className: "FeaturedGamesPopupLoader",
-          children: (0, DM.jsx)(pM.d, {})
-        }), nM && (0, DM.jsx)("div", {
+          children: (0, DV.jsx)(WV.d, {})
+        }), QV && (0, DV.jsx)("div", {
           className: "FeaturedGamesPopupError",
-          children: nM
-        }), aM && (0, DM.jsxs)(DM.Fragment, {
-          children: [(0, DM.jsx)("div", {
+          children: QV
+        }), yV && (0, DV.jsxs)(DV.Fragment, {
+          children: [(0, DV.jsx)("div", {
             className: "FeaturedGamesPopupSlots",
-            children: aM.map((MM => {
-              const iM = MM.schematicId === rM,
-                SM = null === MM.schematicId,
+            children: yV.map((VV => {
+              const xV = VV.schematicId === eV,
+                YV = null === VV.schematicId,
                 {
-                  categoryGroup: jM
-                } = OM.I[MM.slotId];
-              return (0, DM.jsxs)("div", {
+                  categoryGroup: UV
+                } = JV.K[VV.slotId];
+              return (0, DV.jsxs)("div", {
                 className: "FeaturedGamesPopupSlot",
-                children: [(0, DM.jsx)(Jr, {
-                  preview: MM.preview,
-                  isBroken: !SM
-                }), (0, DM.jsxs)("div", {
+                children: [(0, DV.jsx)(be, {
+                  preview: VV.preview,
+                  isBroken: !YV
+                }), (0, DV.jsxs)("div", {
                   className: "FeaturedGamesPopupSlotText",
-                  children: [(0, DM.jsxs)("div", {
+                  children: [(0, DV.jsxs)("div", {
                     className: "FeaturedGamesPopupSlotLabel",
-                    children: [(0, OM.ab)(jM), " \xb7 position", " ", (0, OM.J)(MM.slotId, OM.Jb) + 1, " of", " ", (0, OM.Gb)(jM, OM.Jb)]
-                  }), SM && (0, DM.jsx)("div", {
+                    children: [(0, JV.lb)(UV), " \xb7 position", " ", (0, JV.O)(VV.slotId, JV.Nb) + 1, " of", " ", (0, JV.Lb)(UV, JV.Nb)]
+                  }), YV && (0, DV.jsx)("div", {
                     className: "FeaturedGamesPopupSlotEmpty",
                     children: "Empty"
-                  }), !SM && null !== MM.preview && (0, DM.jsx)("div", {
+                  }), !YV && null !== VV.preview && (0, DV.jsx)("div", {
                     className: "FeaturedGamesPopupSlotGame",
-                    children: MM.preview.name
-                  }), !SM && null === MM.preview && (0, DM.jsxs)("div", {
+                    children: VV.preview.name
+                  }), !YV && null === VV.preview && (0, DV.jsxs)("div", {
                     className: "FeaturedGamesPopupSlotMissing",
-                    children: [(0, DM.jsx)(BM.b, {
+                    children: [(0, DV.jsx)(KV.b, {
                       name: "triangle-exclamation"
                     }), " Pinned game is no longer published"]
                   })]
-                }), (0, DM.jsxs)("div", {
+                }), (0, DV.jsxs)("div", {
                   className: "FeaturedGamesPopupSlotActions",
-                  children: [SM && (0, DM.jsxs)(mM.u, {
+                  children: [YV && (0, DV.jsxs)(vV.q, {
                     className: "FeaturedGamesPopupSlotButton",
                     onClick: () => {
-                      hM(MM.slotId, rM)
+                      kV(VV.slotId, eV)
                     },
-                    disabled: zM,
-                    children: [(0, DM.jsx)(BM.b, {
+                    disabled: wV,
+                    children: [(0, DV.jsx)(KV.b, {
                       name: "star"
                     }), " Feature here"]
-                  }), !SM && !iM && (0, DM.jsxs)(mM.V, {
+                  }), !YV && !xV && (0, DV.jsxs)(vV.M, {
                     className: "FeaturedGamesPopupSlotButton",
                     onClick: () => {
-                      hM(MM.slotId, rM)
+                      kV(VV.slotId, eV)
                     },
-                    disabled: zM,
-                    children: [(0, DM.jsx)(BM.b, {
+                    disabled: wV,
+                    children: [(0, DV.jsx)(KV.b, {
                       name: "star"
                     }), " Replace"]
-                  }), !SM && (0, DM.jsxs)(mM.J, {
+                  }), !YV && (0, DV.jsxs)(vV.E, {
                     className: "FeaturedGamesPopupSlotButton",
                     onClick: () => {
-                      hM(MM.slotId, null)
+                      kV(VV.slotId, null)
                     },
-                    disabled: zM,
-                    children: [(0, DM.jsx)(BM.b, {
+                    disabled: wV,
+                    children: [(0, DV.jsx)(KV.b, {
                       name: "xmark"
                     }), " Clear"]
                   })]
                 })]
-              }, MM.slotId)
+              }, VV.slotId)
             }))
-          }), (0, DM.jsx)("p", {
+          }), (0, DV.jsx)("p", {
             className: "FeaturedGamesPopupHint",
             children: "A game leaves its slot once it ranks higher on its own."
           })]
         })]
       })
     }
-    var yr = iM(5046),
-      lr = iM(4963),
-      Er = iM(3839);
-    const Ur = 8,
-      Gr = 12;
+    var Be = xV(5157),
+      je = xV(5062),
+      qe = xV(3886);
+    const te = 8,
+      Fe = 12;
 
-    function Cr(MM) {
+    function Te(VV) {
       let {
-        customLobbies: rM,
-        favouriteLobbies: iM,
-        toggleLikeLobby: OM,
-        showReport: SM
-      } = MM;
-      const [jM, aM] = (0, dM.useState)(Ur);
-      return (0, dM.useEffect)((() => {
-        if (jM >= rM.length) return;
-        let MM = !0;
-        return (0, Er.e)().then((() => {
-          MM && aM(jM + Gr)
+        customLobbies: eV,
+        favouriteLobbies: xV,
+        toggleLikeLobby: JV,
+        showReport: YV
+      } = VV;
+      const [UV, yV] = (0, EV.useState)(te);
+      return (0, EV.useEffect)((() => {
+        if (UV >= eV.length) return;
+        let VV = !0;
+        return (0, qe.f)().then((() => {
+          VV && yV(UV + Fe)
         })), () => {
-          MM = !1
+          VV = !1
         }
-      }), [jM, rM.length]), (0, DM.jsx)(DM.Fragment, {
-        children: rM.slice(0, jM).map((MM => (0, DM.jsx)(lr.e, {
-          customLobby: MM,
-          favouriteLobbies: iM,
-          toggleLikeLobby: OM,
-          showReport: SM
-        }, MM.name)))
+      }), [UV, eV.length]), (0, DV.jsx)(DV.Fragment, {
+        children: eV.slice(0, UV).map((VV => (0, DV.jsx)(je.d, {
+          customLobby: VV,
+          favouriteLobbies: xV,
+          toggleLikeLobby: JV,
+          showReport: YV
+        }, VV.name)))
       })
     }
-    var er = iM(4971),
-      br = iM(4987),
-      wr = iM(4948),
-      tr = iM(3963),
-      gr = iM(9517),
-      ur = iM(192);
-    const Rr = {
-      skyblock: [iM(37305).b]
+    var Pe = xV(5065),
+      Ae = xV(5087),
+      Ne = xV(5045),
+      Xe = xV(3995),
+      Me = xV(9532),
+      ze = xV(228);
+    const Ge = {
+      skyblock: [xV(37507).e]
     };
-    var pr = iM(625);
-    const Wr = {
+    var We = xV(657);
+    const Re = {
       listedVariations: null,
-      backgroundImage: jM.t,
+      backgroundImage: UV.q,
       badges: [],
       category: null,
       title: null,
@@ -609,363 +609,363 @@ export const modules = {
       countdownInformation: null
     };
 
-    function sr(MM, rM) {
-      const iM = Lr.g[MM.schematicId];
+    function ge(VV, eV) {
+      const xV = Ze.h[VV.schematicId];
       return {
         listedVariations: [],
-        backgroundImage: (0, jM.g)(MM, "large"),
+        backgroundImage: (0, UV.g)(VV, "large"),
         badges: [],
-        category: MM.gameCategory,
-        title: void 0 !== (null === iM || void 0 === iM ? void 0 : iM.title) ? rM(iM.title) : MM.name,
+        category: VV.gameCategory,
+        title: void 0 !== (null === xV || void 0 === xV ? void 0 : xV.title) ? eV(xV.title) : VV.name,
         variationTitle: null,
-        description: void 0 !== (null === iM || void 0 === iM ? void 0 : iM.description) ? rM(iM.description) : MM.description,
-        ownerSocialPreviewWithoutLocation: "owner" in MM ? MM.owner : null,
-        ccu: MM.ccu,
-        favourites: MM.favourites,
+        description: void 0 !== (null === xV || void 0 === xV ? void 0 : xV.description) ? eV(xV.description) : VV.description,
+        ownerSocialPreviewWithoutLocation: "owner" in VV ? VV.owner : null,
+        ccu: VV.ccu,
+        favourites: VV.favourites,
         isFavourite: null,
-        useRejoinLastLobbyButton: "persistWorld" in MM ? MM.persistWorld : null,
+        useRejoinLastLobbyButton: "persistWorld" in VV ? VV.persistWorld : null,
         showWorldsInsteadOfCustomLobbies: !1,
         canCreateCustomLobbies: !0,
         countdownInformation: null
       }
     }
 
-    function Dr(MM) {
-      var rM, iM, OM;
-      return null !== (rM = null !== (iM = (0, ur.m)() ? function(MM) {
-        for (const [rM, iM] of Object.entries(Rr)) {
-          const OM = [rM, ...iM.map((MM => (0, jr.Kb)(rM, MM)))];
-          if (OM.includes(MM)) return OM
+    function De(VV) {
+      var eV, xV, JV;
+      return null !== (eV = null !== (xV = (0, ze.l)() ? function(VV) {
+        for (const [eV, xV] of Object.entries(Ge)) {
+          const JV = [eV, ...xV.map((VV => (0, Ue.Mb)(eV, VV)))];
+          if (JV.includes(VV)) return JV
         }
         return null
-      }(MM) : null) && void 0 !== iM ? iM : null === (OM = Lr.e[MM]) || void 0 === OM ? void 0 : OM.listedVariations) && void 0 !== rM ? rM : null
+      }(VV) : null) && void 0 !== xV ? xV : null === (JV = Ze.e[VV]) || void 0 === JV ? void 0 : JV.listedVariations) && void 0 !== eV ? eV : null
     }
 
-    function kr() {
+    function ie() {
       const {
-        gameNameWithVariation: MM
-      } = (0, TM.D)();
-      if ((0, dM.useEffect)(tr.r, []), MM && (0, Or.r)(MM)) return (0, DM.jsx)(Zr, {
-        urlId: MM
-      }, MM);
-      const rM = MM && (0, Sr.m)(MM) ? MM : "firstParty";
-      return (0, DM.jsx)(or, {}, rM)
+        gameNameWithVariation: VV
+      } = (0, IV.A)();
+      if ((0, EV.useEffect)(Xe.m, []), VV && (0, Je.w)(VV)) return (0, DV.jsx)(Ce, {
+        urlId: VV
+      }, VV);
+      const eV = VV && (0, Ye.l)(VV) ? VV : "firstParty";
+      return (0, DV.jsx)(ae, {}, eV)
     }
 
-    function Zr(MM) {
+    function Ce(VV) {
       let {
-        urlId: rM
-      } = MM;
+        urlId: eV
+      } = VV;
       const {
-        userContext: iM,
-        isUserContextUpdating: OM
-      } = (0, GM.b)(), SM = (0, dM.useMemo)((() => (0, qM.g)(rM)), [rM]);
-      (0, dM.useMemo)((() => {
-        if (null === SM) return;
-        const MM = IM.userContextManager.peekCurrentUserContext();
-        (null !== MM ? uM.c.getGame(MM, SM.schematicId) : IM.userContextManager.getCurrentUserContext().then((MM => uM.c.getGame(MM, SM.schematicId)))).catch((MM => {
-          console.error(`Failed to get the custom game ${SM.schematicId}`, MM), (0, qM.f)(rM)
+        userContext: xV,
+        isUserContextUpdating: JV
+      } = (0, FV.d)(), YV = (0, EV.useMemo)((() => (0, SV.j)(eV)), [eV]);
+      (0, EV.useMemo)((() => {
+        if (null === YV) return;
+        const VV = uV.userContextManager.peekCurrentUserContext();
+        (null !== VV ? zV.b.getGame(VV, YV.schematicId) : uV.userContextManager.getCurrentUserContext().then((VV => zV.b.getGame(VV, YV.schematicId)))).catch((VV => {
+          console.error(`Failed to get the custom game ${YV.schematicId}`, VV), (0, SV.g)(eV)
         }))
-      }), [SM, rM]);
-      const [jM, aM] = (0, dM.useState)(null), PM = (0, KM.d)();
-      (0, dM.useEffect)((() => {
-        if (null !== SM || OM) return;
-        let MM = !0;
-        return uM.c.getGameByUrlId(iM, rM).then((iM => {
-          MM && aM({
-            urlId: rM,
-            game: iM
+      }), [YV, eV]);
+      const [UV, yV] = (0, EV.useState)(null), pV = (0, sV.e)();
+      (0, EV.useEffect)((() => {
+        if (null !== YV || JV) return;
+        let VV = !0;
+        return zV.b.getGameByUrlId(xV, eV).then((xV => {
+          VV && yV({
+            urlId: eV,
+            game: xV
           })
-        })).catch((iM => {
-          console.error(`Failed to find the custom game with urlId ${rM}`, iM), MM && (0, VM.navigateToHomePage)()
+        })).catch((xV => {
+          console.error(`Failed to find the custom game with urlId ${eV}`, xV), VV && (0, dV.navigateToHomePage)()
         })), () => {
-          MM = !1
+          VV = !1
         }
-      }), [rM, SM, OM, iM]);
-      const nM = null !== SM && void 0 !== SM ? SM : (null === jM || void 0 === jM ? void 0 : jM.urlId) === rM ? jM.game : null;
-      return null === nM ? (0, DM.jsx)(pM.d, {}) : PM ? (0, DM.jsx)(or, {
-        gameNameWithVariation: (0, Sr.w)(nM.schematicId),
-        knownCustomGame: nM
-      }, nM.schematicId) : null
+      }), [eV, YV, JV, xV]);
+      const QV = null !== YV && void 0 !== YV ? YV : (null === UV || void 0 === UV ? void 0 : UV.urlId) === eV ? UV.game : null;
+      return null === QV ? (0, DV.jsx)(WV.d, {}) : pV ? (0, DV.jsx)(ae, {
+        gameNameWithVariation: (0, Ye.t)(QV.schematicId),
+        knownCustomGame: QV
+      }, QV.schematicId) : null
     }
 
-    function or(MM) {
-      var rM, iM, aM, HM, gM, RM, pM, sM;
+    function ae(VV) {
+      var eV, xV, yV, rV, MV, GV, WV, gV;
       let {
-        gameNameWithVariation: kM,
-        knownCustomGame: ZM = null
-      } = MM;
+        gameNameWithVariation: iV,
+        knownCustomGame: CV = null
+      } = VV;
       const {
-        t: fM
-      } = (0, nM.A)();
-      (0, zr.j)();
-      const NM = (0, zr.q)(),
+        t: oV
+      } = (0, QV.A)();
+      (0, we.l)();
+      const hV = (0, we.r)(),
         {
-          userContext: AM,
-          isUserContextUpdating: xM
-        } = (0, GM.b)(),
-        vM = (0, wr.d)(),
-        IM = (0, VM.useNavigatePreserveSearch)(),
-        KM = (0, TM.D)(),
-        qM = (0, dM.useMemo)((() => kM ? {
-          gameNameWithVariation: kM
-        } : KM), [kM, KM]),
-        Mr = (0, nr.d)(qM),
-        Or = (0, dM.useMemo)((() => {
-          const MM = function(MM) {
-            var rM, iM;
-            const OM = Dr(MM);
-            if (!OM || 0 === OM.length || OM.includes(MM)) return MM;
-            const SM = QM.g.getItem((0, lM.n)(MM));
-            if (SM && OM.includes(SM)) return SM;
-            return null !== (rM = null === (iM = Lr.e[MM]) || void 0 === iM ? void 0 : iM.defaultListedVariation) && void 0 !== rM ? rM : OM[0]
-          }(Mr.gameNameWithVariation);
-          return MM === Mr.gameNameWithVariation ? Mr : {
-            ...Mr,
-            gameNameWithVariation: MM
+          userContext: lV,
+          isUserContextUpdating: LV
+        } = (0, FV.d)(),
+        fV = (0, Ne.h)(),
+        uV = (0, dV.useNavigatePreserveSearch)(),
+        sV = (0, IV.A)(),
+        SV = (0, EV.useMemo)((() => iV ? {
+          gameNameWithVariation: iV
+        } : sV), [iV, sV]),
+        Ve = (0, Qe.d)(SV),
+        Je = (0, EV.useMemo)((() => {
+          const VV = function(VV) {
+            var eV, xV;
+            const JV = De(VV);
+            if (!JV || 0 === JV.length || JV.includes(VV)) return VV;
+            const YV = nV.m.getItem((0, jV.n)(VV));
+            if (YV && JV.includes(YV)) return YV;
+            return null !== (eV = null === (xV = Ze.e[VV]) || void 0 === xV ? void 0 : xV.defaultListedVariation) && void 0 !== eV ? eV : JV[0]
+          }(Ve.gameNameWithVariation);
+          return VV === Ve.gameNameWithVariation ? Ve : {
+            ...Ve,
+            gameNameWithVariation: VV
           }
-        }), [Mr]);
-      (0, dM.useEffect)((() => {
-        const MM = Mr.gameNameWithVariation;
-        Or.gameNameWithVariation !== MM && MM !== (0, jr.Mb)(MM) && IM((0, YM.x)(Or.gameNameWithVariation), {
+        }), [Ve]);
+      (0, EV.useEffect)((() => {
+        const VV = Ve.gameNameWithVariation;
+        Je.gameNameWithVariation !== VV && VV !== (0, Ue.Pb)(VV) && uV((0, cV.x)(Je.gameNameWithVariation), {
           replace: !0
         })
-      }), [Or.gameNameWithVariation, Mr.gameNameWithVariation, IM]);
-      const [hr, Jr] = (0, dM.useState)(""), Er = dM.useRef(null), [Ur, Gr] = (0, dM.useState)(), tr = (0, Sr.m)(Or.gameNameWithVariation), ur = (0, dM.useMemo)((() => tr ? null : function(MM, rM, iM) {
-        var OM, SM;
-        const aM = Lr.e[MM];
-        return (0, pr.J)(aM) ? null : {
-          listedVariations: Dr(MM),
-          backgroundImage: (0, jM.m)(MM, (0, jM.d)(aM)),
-          badges: (0, zM.filterBadges)(aM.badges),
-          category: aM.type,
-          title: iM(aM.title),
-          variationTitle: aM.variationTitle ? iM(aM.variationTitle) : null,
-          description: iM(aM.description),
+      }), [Je.gameNameWithVariation, Ve.gameNameWithVariation, uV]);
+      const [ke, be] = (0, EV.useState)(""), qe = EV.useRef(null), [te, Fe] = (0, EV.useState)(), Xe = (0, Ye.l)(Je.gameNameWithVariation), ze = (0, EV.useMemo)((() => Xe ? null : function(VV, eV, xV) {
+        var JV, YV;
+        const yV = Ze.e[VV];
+        return (0, We.J)(yV) ? null : {
+          listedVariations: De(VV),
+          backgroundImage: (0, UV.n)(VV, (0, UV.e)(yV)),
+          badges: (0, wV.filterBadges)(yV.badges),
+          category: yV.type,
+          title: xV(yV.title),
+          variationTitle: yV.variationTitle ? xV(yV.variationTitle) : null,
+          description: xV(yV.description),
           ownerSocialPreviewWithoutLocation: null,
-          ccu: null !== rM ? null !== (OM = rM[MM]) && void 0 !== OM ? OM : 0 : null,
+          ccu: null !== eV ? null !== (JV = eV[VV]) && void 0 !== JV ? JV : 0 : null,
           favourites: null,
           isFavourite: null,
-          useRejoinLastLobbyButton: aM.useRejoinLastLobbyButton,
-          showWorldsInsteadOfCustomLobbies: aM.showWorldsInsteadOfCustomLobbies,
-          canCreateCustomLobbies: null === (SM = aM.canCreateCustomLobbies) || void 0 === SM || SM,
-          countdownInformation: (0, lM.j)(MM)
+          useRejoinLastLobbyButton: yV.useRejoinLastLobbyButton,
+          showWorldsInsteadOfCustomLobbies: yV.showWorldsInsteadOfCustomLobbies,
+          canCreateCustomLobbies: null === (YV = yV.canCreateCustomLobbies) || void 0 === YV || YV,
+          countdownInformation: (0, jV.k)(VV)
         }
-      }(Or.gameNameWithVariation, NM, fM)), [tr, Or.gameNameWithVariation, NM, fM]), [Rr, kr] = (0, dM.useState)(!1), [Zr, or] = (0, dM.useState)((() => ZM ? sr(ZM, fM) : Wr)), Yr = null !== ur && void 0 !== ur ? ur : Zr, [Nr] = (0, dM.useState)(Yr === Wr), Ar = (0, SM.c)(Yr.backgroundImage, {
+      }(Je.gameNameWithVariation, hV, oV)), [Xe, Je.gameNameWithVariation, hV, oV]), [Ge, ie] = (0, EV.useState)(!1), [Ce, ae] = (0, EV.useState)((() => CV ? ge(CV, oV) : Re)), ce = null !== ze && void 0 !== ze ? ze : Ce, [he] = (0, EV.useState)(ce === Re), le = (0, YV.d)(ce.backgroundImage, {
         keepPrevious: !0,
         decode: !0
       }), {
-        recentlyPlayedPublicLobbies: xr,
-        recentlyPlayedCustomLobbies: vr
-      } = (0, dM.useMemo)((() => function(MM, rM, iM, OM) {
-        var SM;
-        const jM = MM => {
-            const iM = (0, Sr.p)(MM),
-              OM = rM.find((rM => "custom" === rM.type ? rM.schematicId === iM : rM.gameNameWithVariation === MM));
-            return OM ? [...OM.recentLobbies] : []
+        recentlyPlayedPublicLobbies: Le,
+        recentlyPlayedCustomLobbies: fe
+      } = (0, EV.useMemo)((() => function(VV, eV, xV, JV) {
+        var YV;
+        const UV = VV => {
+            const xV = (0, Ye.p)(VV),
+              JV = eV.find((eV => "custom" === eV.type ? eV.schematicId === xV : eV.gameNameWithVariation === VV));
+            return JV ? [...JV.recentLobbies] : []
           },
-          aM = (0, zM.getRecentGameNameWithVariationLobbiesKey)(MM),
-          PM = null !== (SM = QM.g.getItem(aM)) && void 0 !== SM ? SM : [],
-          nM = [...jM(MM), ...PM],
-          LM = [];
-        for (const QM of nM)(0, mr.P)(QM) && !LM.includes(QM) && LM.push(QM);
-        let mM = nM;
-        if (iM) {
-          const MM = jM("classic_worlds"),
-            rM = nM.filter((rM => !MM.includes(rM)));
-          mM = [...MM, ...rM]
+          yV = (0, wV.getRecentGameNameWithVariationLobbiesKey)(VV),
+          pV = null !== (YV = nV.m.getItem(yV)) && void 0 !== YV ? YV : [],
+          QV = [...UV(VV), ...pV],
+          ZV = [];
+        for (const nV of QV)(0, ve.I)(nV) && !ZV.includes(nV) && ZV.push(nV);
+        let vV = QV;
+        if (xV) {
+          const VV = UV("classic_worlds"),
+            eV = QV.filter((eV => !VV.includes(eV)));
+          vV = [...VV, ...eV]
         }
-        const HM = [],
-          hM = !1 === OM ? [] : mM;
-        for (const QM of hM)(0, mr.P)(QM) || HM.includes(QM) || HM.push(QM);
+        const rV = [],
+          kV = !1 === JV ? [] : vV;
+        for (const nV of kV)(0, ve.I)(nV) || rV.includes(nV) || rV.push(nV);
         return {
-          recentlyPlayedPublicLobbies: LM,
-          recentlyPlayedCustomLobbies: HM
+          recentlyPlayedPublicLobbies: ZV,
+          recentlyPlayedCustomLobbies: rV
         }
-      }(Or.gameNameWithVariation, vM, Yr.showWorldsInsteadOfCustomLobbies, Yr.canCreateCustomLobbies)), [Or.gameNameWithVariation, vM, Yr.showWorldsInsteadOfCustomLobbies, Yr.canCreateCustomLobbies]), [Fr, Br] = (0, dM.useState)(!0), [Xr, Ir] = (0, dM.useState)([]), [Kr, qr] = (0, dM.useState)(null), [Tr, Vr] = (0, dM.useState)("explore"), cr = (0, dM.useRef)(!1), Mi = (0, dM.useCallback)((MM => {
-        (0, yM.unstable_batchedUpdates)((() => {
-          Gr(MM), or((rM => ({
-            ...sr(MM, fM),
-            isFavourite: rM.isFavourite
+      }(Je.gameNameWithVariation, fV, ce.showWorldsInsteadOfCustomLobbies, ce.canCreateCustomLobbies)), [Je.gameNameWithVariation, fV, ce.showWorldsInsteadOfCustomLobbies, ce.canCreateCustomLobbies]), [me, Ke] = (0, EV.useState)(!0), [He, ue] = (0, EV.useState)([]), [se, Se] = (0, EV.useState)(null), [Ie, de] = (0, EV.useState)("explore"), Oe = (0, EV.useRef)(!1), Vx = (0, EV.useCallback)((VV => {
+        (0, BV.unstable_batchedUpdates)((() => {
+          Fe(VV), ae((eV => ({
+            ...ge(VV, oV),
+            isFavourite: eV.isFavourite
           })))
         }))
-      }), [fM]);
-      (0, dM.useEffect)((() => {
-        null === Qr.d.get("gameEntrySource") && (0, Qr.j)("gameInformationPageDirect")
+      }), [oV]);
+      (0, EV.useEffect)((() => {
+        null === ne.b.get("gameEntrySource") && (0, ne.h)("gameInformationPageDirect")
       }), []);
-      const ri = (0, dM.useRef)(null);
-      (0, dM.useEffect)((() => {
-        const MM = MM => {
-            ri.current = MM.target instanceof Element ? MM.target.closest("a, button") : null
+      const ex = (0, EV.useRef)(null);
+      (0, EV.useEffect)((() => {
+        const VV = VV => {
+            ex.current = VV.target instanceof Element ? VV.target.closest("a, button") : null
           },
-          rM = MM => {
-            "Tab" === MM.key && (ri.current = null)
+          eV = VV => {
+            "Tab" === VV.key && (ex.current = null)
           };
-        return document.addEventListener("pointerdown", MM, !0), document.addEventListener("keydown", rM, !0), () => {
-          document.removeEventListener("pointerdown", MM, !0), document.removeEventListener("keydown", rM, !0)
+        return document.addEventListener("pointerdown", VV, !0), document.addEventListener("keydown", eV, !0), () => {
+          document.removeEventListener("pointerdown", VV, !0), document.removeEventListener("keydown", eV, !0)
         }
-      }), []), (0, CM.d)("Enter", (MM => {
-        const rM = MM.target instanceof Element ? MM.target : null;
-        if (MM.defaultPrevented || null !== rM && void 0 !== rM && rM.closest("input, textarea, select")) return;
-        const iM = null === rM || void 0 === rM ? void 0 : rM.closest("a, button");
-        iM && iM !== ri.current || (MM.preventDefault(), zi())
-      })), (0, eM.e)(VM.navigateToHomePage);
-      const ii = xr.length > 0 || vr.length > 0,
-        Oi = !Yr.useRejoinLastLobbyButton || 0 === xr.length,
-        Si = tr && null === Yr.ownerSocialPreviewWithoutLocation,
-        ji = AM.getPlayerName() === (null === Ur || void 0 === Ur || null === (rM = Ur.owner) || void 0 === rM ? void 0 : rM.name),
-        ai = null !== (iM = null === (aM = Yr.badges.find((MM => "event" === MM.type))) || void 0 === aM ? void 0 : aM.event) && void 0 !== iM ? iM : null,
-        Pi = Oi ? mM.p : mM.e,
-        ni = (0, DM.jsx)(LM.i, {
-          tooltipInner: (0, DM.jsx)("div", {
-            children: fM("homePage:quickPlayInfo")
+      }), []), (0, TV.d)("Enter", (VV => {
+        const eV = VV.target instanceof Element ? VV.target : null;
+        if (VV.defaultPrevented || null !== eV && void 0 !== eV && eV.closest("input, textarea, select")) return;
+        const xV = null === eV || void 0 === eV ? void 0 : eV.closest("a, button");
+        xV && xV !== ex.current || (VV.preventDefault(), wx())
+      })), (0, PV.d)(dV.navigateToHomePage);
+      const xx = Le.length > 0 || fe.length > 0,
+        Jx = !ce.useRejoinLastLobbyButton || 0 === Le.length,
+        Yx = Xe && null === ce.ownerSocialPreviewWithoutLocation,
+        Ux = lV.getPlayerName() === (null === te || void 0 === te || null === (eV = te.owner) || void 0 === eV ? void 0 : eV.name),
+        yx = null !== (xV = null === (yV = ce.badges.find((VV => "event" === VV.type))) || void 0 === yV ? void 0 : yV.event) && void 0 !== xV ? xV : null,
+        px = Jx ? vV.m : vV.f,
+        Qx = (0, DV.jsx)(ZV.d, {
+          tooltipInner: (0, DV.jsx)("div", {
+            children: oV("homePage:quickPlayInfo")
           }),
           hoverOnly: !0,
-          children: (0, DM.jsx)(Pi, {
+          children: (0, DV.jsx)(px, {
             className: "GameInformationButton",
-            padDefaultFocus: Oi,
+            padDefaultFocus: Jx,
             showPress: !0,
             onClick: () => {
-              zi()
+              wx()
             },
-            children: (0, DM.jsxs)("div", {
+            children: (0, DV.jsxs)("div", {
               className: "GameInformationButtonInner",
-              children: [Oi && (0, DM.jsxs)(DM.Fragment, {
-                children: [(0, DM.jsx)(BM.b, {
+              children: [Jx && (0, DV.jsxs)(DV.Fragment, {
+                children: [(0, DV.jsx)(KV.b, {
                   name: "play"
                 }), " "]
-              }), fM("homePage:quickPlay")]
+              }), oV("homePage:quickPlay")]
             })
           })
         });
-      (0, dM.useEffect)((() => {
-        if (!tr || xM) return;
-        let MM = !0;
-        const rM = (0, Sr.p)(Or.gameNameWithVariation);
-        return uM.c.getGame(AM, rM).then((rM => {
-          MM && Mi(rM)
-        })).catch((rM => {
-          console.error("Failed to get Custom Game information", rM), MM && (0, VM.navigateToHomePage)()
-        })), uM.c.getFavouriteGames(AM).then((iM => {
-          MM && or((MM => ({
-            ...MM,
-            isFavourite: iM.includes(rM)
+      (0, EV.useEffect)((() => {
+        if (!Xe || LV) return;
+        let VV = !0;
+        const eV = (0, Ye.p)(Je.gameNameWithVariation);
+        return zV.b.getGame(lV, eV).then((eV => {
+          VV && Vx(eV)
+        })).catch((eV => {
+          console.error("Failed to get Custom Game information", eV), VV && (0, dV.navigateToHomePage)()
+        })), zV.b.getFavouriteGames(lV).then((xV => {
+          VV && ae((VV => ({
+            ...VV,
+            isFavourite: xV.includes(eV)
           })))
-        })).catch((rM => {
-          console.error("Failed to get favourite games", rM), MM && kr(!0)
+        })).catch((eV => {
+          console.error("Failed to get favourite games", eV), VV && ie(!0)
         })), () => {
-          MM = !1
+          VV = !1
         }
-      }), [tr, xM, Or.gameNameWithVariation, Mi, AM]);
-      const Qi = !tr && null === ur;
+      }), [Xe, LV, Je.gameNameWithVariation, Vx, lV]);
+      const nx = !Xe && null === ze;
 
-      function zi(MM) {
-        (0, gr.e)(), IM((0, EM.b)(Or.gameNameWithVariation, MM))
-      }(0, dM.useEffect)((() => {
-        Qi && (0, VM.navigateToHomePage)()
-      }), [Qi]), (0, dM.useEffect)((() => {
-        if (!1 === Yr.canCreateCustomLobbies) return;
-        let MM = !0;
-        return null !== Yr.showWorldsInsteadOfCustomLobbies && !1 === xM && (Br(!0), uM.c.getFavouriteLobbies(AM).then((MM => {
-          qr(MM)
-        })), uM.c.getOpenCustomLobbies(AM, {
-          gameNameWithVariation: Yr.showWorldsInsteadOfCustomLobbies ? "classic" : Or.gameNameWithVariation,
-          onlyOwnedLobbies: "owned" === Tr,
-          onlyFavouriteLobbies: "favourite" === Tr
-        }).then((rM => {
-          MM && (0, yM.unstable_batchedUpdates)((() => {
-            Ir(rM), Br(!1)
+      function wx(VV) {
+        (0, Me.h)(), uV((0, qV.c)(Je.gameNameWithVariation, VV))
+      }(0, EV.useEffect)((() => {
+        nx && (0, dV.navigateToHomePage)()
+      }), [nx]), (0, EV.useEffect)((() => {
+        if (!1 === ce.canCreateCustomLobbies) return;
+        let VV = !0;
+        return null !== ce.showWorldsInsteadOfCustomLobbies && !1 === LV && (Ke(!0), zV.b.getFavouriteLobbies(lV).then((VV => {
+          Se(VV)
+        })), zV.b.getOpenCustomLobbies(lV, {
+          gameNameWithVariation: ce.showWorldsInsteadOfCustomLobbies ? "classic" : Je.gameNameWithVariation,
+          onlyOwnedLobbies: "owned" === Ie,
+          onlyFavouriteLobbies: "favourite" === Ie
+        }).then((eV => {
+          VV && (0, BV.unstable_batchedUpdates)((() => {
+            ue(eV), Ke(!1)
           }))
-        })).catch((rM => {
-          console.error("Failed to get open custom lobbies", rM), MM && Br(!1)
+        })).catch((eV => {
+          console.error("Failed to get open custom lobbies", eV), VV && Ke(!1)
         }))), () => {
-          MM = !1
+          VV = !1
         }
-      }), [xM, Or, Tr, Yr.showWorldsInsteadOfCustomLobbies, Yr.canCreateCustomLobbies, AM]);
-      const Li = (0, dM.useCallback)((async MM => {
+      }), [LV, Je, Ie, ce.showWorldsInsteadOfCustomLobbies, ce.canCreateCustomLobbies, lV]);
+      const Zx = (0, EV.useCallback)((async VV => {
           try {
-            if (!Kr) return;
-            Kr.includes(MM) ? (uM.c.unfavouriteLobby(AM, MM), qr(Kr.filter((rM => rM !== MM)))) : (uM.c.favouriteLobby(AM, MM).catch((MM => {
-              console.error("Failed to favourite lobby", MM)
-            })), qr([...Kr, MM]))
-          } catch (rM) {
-            console.error("Failed to like lobby", rM)
+            if (!se) return;
+            se.includes(VV) ? (zV.b.unfavouriteLobby(lV, VV), Se(se.filter((eV => eV !== VV)))) : (zV.b.favouriteLobby(lV, VV).catch((VV => {
+              console.error("Failed to favourite lobby", VV)
+            })), Se([...se, VV]))
+          } catch (eV) {
+            console.error("Failed to like lobby", eV)
           }
-        }), [AM, Kr]),
-        mi = (null === Ur || void 0 === Ur ? void 0 : Ur.schematicId) === (0, Sr.p)(Mr.gameNameWithVariation) ? Ur : null,
-        Hi = mi && (0, YM.H)(Mr.gameNameWithVariation, (MM => fM(MM)), mi);
-      (0, cM.g)(mi && (0, YM.x)(Mr.gameNameWithVariation, mi));
-      const Ji = XM.featureFlags.canUseCustomLobbies && !0 === Yr.canCreateCustomLobbies,
-        di = (0, DM.jsx)("div", {
+        }), [lV, se]),
+        vx = (null === te || void 0 === te ? void 0 : te.schematicId) === (0, Ye.p)(Ve.gameNameWithVariation) ? te : null,
+        rx = vx && (0, cV.B)(Ve.gameNameWithVariation, (VV => oV(VV)), vx);
+      (0, OV.e)(vx && (0, cV.x)(Ve.gameNameWithVariation, vx));
+      const kx = HV.featureFlags.canUseCustomLobbies && !0 === ce.canCreateCustomLobbies,
+        bx = (0, DV.jsx)("div", {
           className: "GameInformationPageContentAnchor",
-          children: (0, DM.jsx)(FM, {
-            gameNameWithVariation: Or.gameNameWithVariation
+          children: (0, DV.jsx)(mV, {
+            gameNameWithVariation: Je.gameNameWithVariation
           })
         });
-      return (0, DM.jsx)(DM.Fragment, {
-        children: (0, DM.jsxs)("article", {
-          className: hM()("GameInformation", {
-            GameInformationFadeIn: Nr,
-            GameInformationReleaseCountdown: "releaseCountdown" === (null === (HM = Yr.countdownInformation) || void 0 === HM ? void 0 : HM.type)
+      return (0, DV.jsx)(DV.Fragment, {
+        children: (0, DV.jsxs)("article", {
+          className: kV()("GameInformation", {
+            GameInformationFadeIn: he,
+            GameInformationReleaseCountdown: "releaseCountdown" === (null === (rV = ce.countdownInformation) || void 0 === rV ? void 0 : rV.type)
           }),
-          children: [Hi && (0, DM.jsx)(UM.c, {
-            meta: Hi
-          }), (0, DM.jsxs)("div", {
+          children: [rx && (0, DV.jsx)(tV.c, {
+            meta: rx
+          }), (0, DV.jsxs)("div", {
             className: "GameInformationInner",
-            children: [(0, DM.jsxs)("div", {
+            children: [(0, DV.jsxs)("div", {
               className: "GameInformationTop",
-              children: [(0, DM.jsxs)("div", {
+              children: [(0, DV.jsxs)("div", {
                 className: "GameInformationTopBackgroundContainer",
-                children: [(0, DM.jsx)("div", {
+                children: [(0, DV.jsx)("div", {
                   className: "GameInformationTopBackgroundColor"
-                }), (0, DM.jsx)("div", {
-                  className: hM()("GameInformationTopBackgroundImage", PM.k),
-                  style: (0, PM.h)(Ar),
-                  children: (0, DM.jsx)(PM.e, {
-                    image: Ar
+                }), (0, DV.jsx)("div", {
+                  className: kV()("GameInformationTopBackgroundImage", pV.i),
+                  style: (0, pV.h)(le),
+                  children: (0, DV.jsx)(pV.e, {
+                    image: le
                   })
                 })]
-              }), (0, DM.jsxs)("div", {
+              }), (0, DV.jsxs)("div", {
                 className: "GameInformationTopLeft",
-                children: [(0, DM.jsx)(yr.c, {}), (0, DM.jsxs)("div", {
+                children: [(0, DV.jsx)(Be.e, {}), (0, DV.jsxs)("div", {
                   className: "GameInformationTopLeftBody",
-                  children: [(0, DM.jsxs)("div", {
+                  children: [(0, DV.jsxs)("div", {
                     className: "GameInformationHeader",
-                    children: [(0, DM.jsxs)("div", {
-                      className: hM()("GameInformationHeaderTagList", {
-                        GameInformationHeaderTagListPending: Si
+                    children: [(0, DV.jsxs)("div", {
+                      className: kV()("GameInformationHeaderTagList", {
+                        GameInformationHeaderTagListPending: Yx
                       }),
-                      children: [Yr.badges.map((MM => (0, DM.jsx)("div", {
-                        className: `GameInformationHeaderTag AnimFadeInScaleUp ${MM.type}`,
-                        children: (0, DM.jsx)(tM.b, {
-                          badge: MM
+                      children: [ce.badges.map((VV => (0, DV.jsx)("div", {
+                        className: `GameInformationHeaderTag AnimFadeInScaleUp ${VV.type}`,
+                        children: (0, DV.jsx)(XV.d, {
+                          badge: VV
                         })
-                      }, MM.type))), tr && (0, DM.jsx)("div", {
+                      }, VV.type))), Xe && (0, DV.jsx)("div", {
                         className: "GameInformationHeaderTag playerCrafted AnimFadeInScaleUp",
-                        children: (0, DM.jsx)(wM.b, {
-                          text: (0, OM.U)({
+                        children: (0, DV.jsx)(NV.b, {
+                          text: (0, JV.fb)({
                             type: "playerCrafted"
                           })
                         })
-                      }), Yr.category && (0, DM.jsx)("div", {
+                      }), ce.category && (0, DV.jsx)("div", {
                         className: "GameInformationHeaderTag CustomGameCategory AnimFadeInScaleUp",
-                        children: (0, DM.jsx)(wM.b, {
+                        children: (0, DV.jsx)(NV.b, {
                           text: [{
-                            str: (0, OM.W)(Yr.category).toUpperCase()
+                            str: (0, JV.gb)(ce.category).toUpperCase()
                           }]
                         })
-                      }), null !== Yr.ccu && (0, DM.jsxs)("div", {
+                      }), null !== ce.ccu && (0, DV.jsxs)("div", {
                         className: "CustomGameChip CustomGameChipCcu AnimFadeIn",
-                        children: [(0, DM.jsx)(BM.b, {
+                        children: [(0, DV.jsx)(KV.b, {
                           name: "user"
-                        }), (0, mr.T)(Yr.ccu), " online"]
-                      }), null !== Yr.ownerSocialPreviewWithoutLocation && (0, DM.jsxs)("div", {
+                        }), (0, ve.N)(ce.ccu), " online"]
+                      }), null !== ce.ownerSocialPreviewWithoutLocation && (0, DV.jsxs)("div", {
                         className: "CustomGameChip CustomGameChipOwner AnimFadeIn",
-                        children: [(0, DM.jsx)("span", {
+                        children: [(0, DV.jsx)("span", {
                           children: "Made by"
-                        }), (0, DM.jsx)(WM.f, {
+                        }), (0, DV.jsx)(RV.f, {
                           playerSocialPreview: {
-                            ...Yr.ownerSocialPreviewWithoutLocation,
+                            ...ce.ownerSocialPreviewWithoutLocation,
                             location: {
                               status: "offline"
                             }
@@ -973,402 +973,402 @@ export const modules = {
                           showLocation: !1,
                           linkToProfile: !0
                         })]
-                      }), Si && (0, DM.jsxs)("div", {
+                      }), Yx && (0, DV.jsxs)("div", {
                         className: "CustomGameChip CustomGameChipOwner",
-                        children: [(0, DM.jsx)("span", {
+                        children: [(0, DV.jsx)("span", {
                           children: "Made by"
-                        }), (0, DM.jsx)("div", {
+                        }), (0, DV.jsx)("div", {
                           className: "CustomGameChipOwnerPlaceholder"
                         })]
-                      }), null !== Yr.favourites && (null !== Yr.isFavourite || tr && !Rr) && (0, DM.jsx)(mM.y, {
+                      }), null !== ce.favourites && (null !== ce.isFavourite || Xe && !Ge) && (0, DV.jsx)(vV.s, {
                         onClick: () => {
                           ! function() {
-                            if (!0 !== cr.current && (cr.current = !0, null !== Yr.isFavourite)) {
-                              const MM = (0, Sr.p)(Or.gameNameWithVariation);
-                              let rM;
-                              Yr.isFavourite ? (rM = -1, uM.c.unfavouriteGame(AM, MM).catch((MM => {
-                                console.error("Failed to get unfavourite game", MM)
+                            if (!0 !== Oe.current && (Oe.current = !0, null !== ce.isFavourite)) {
+                              const VV = (0, Ye.p)(Je.gameNameWithVariation);
+                              let eV;
+                              ce.isFavourite ? (eV = -1, zV.b.unfavouriteGame(lV, VV).catch((VV => {
+                                console.error("Failed to get unfavourite game", VV)
                               })).finally((() => {
-                                cr.current = !1
-                              }))) : (rM = 1, uM.c.favouriteGame(AM, MM).catch((MM => {
-                                console.error("Failed to get favourite game", MM)
+                                Oe.current = !1
+                              }))) : (eV = 1, zV.b.favouriteGame(lV, VV).catch((VV => {
+                                console.error("Failed to get favourite game", VV)
                               })).finally((() => {
-                                cr.current = !1
-                              }))), or((MM => ({
-                                ...MM,
-                                isFavourite: !MM.isFavourite
-                              }))), or((MM => ({
-                                ...MM,
-                                favourites: MM.favourites + rM
+                                Oe.current = !1
+                              }))), ae((VV => ({
+                                ...VV,
+                                isFavourite: !VV.isFavourite
+                              }))), ae((VV => ({
+                                ...VV,
+                                favourites: VV.favourites + eV
                               })))
                             }
                           }()
                         },
-                        isLiked: null !== (gM = Yr.isFavourite) && void 0 !== gM && gM,
-                        disabled: null === Yr.isFavourite,
-                        className: hM()("CustomGameChip AnimFadeIn", {
-                          CustomGameChipPending: null === Yr.isFavourite
+                        isLiked: null !== (MV = ce.isFavourite) && void 0 !== MV && MV,
+                        disabled: null === ce.isFavourite,
+                        className: kV()("CustomGameChip AnimFadeIn", {
+                          CustomGameChipPending: null === ce.isFavourite
                         })
-                      }, null === Yr.isFavourite ? "pending" : "known"), tr && !Si && XM.featureFlags.useSocialFeatures && !ji && (0, DM.jsx)(er.e, {
+                      }, null === ce.isFavourite ? "pending" : "known"), Xe && !Yx && HV.featureFlags.useSocialFeatures && !Ux && (0, DV.jsx)(Pe.b, {
                         targetType: "customGame",
-                        targetId: (0, Sr.p)(Or.gameNameWithVariation),
+                        targetId: (0, Ye.p)(Je.gameNameWithVariation),
                         className: "CustomGameChip AnimFadeIn"
-                      }), (AM.playerHasRank("developer") || AM.playerHasRank("admin") && ji) && (0, DM.jsxs)(mM.p, {
+                      }), (lV.playerHasRank("developer") || lV.playerHasRank("admin") && Ux) && (0, DV.jsxs)(vV.m, {
                         className: "CustomGameChip AnimFadeIn",
                         onClick: () => {
-                          IM((0, Pr.p)((0, ar.e)(Or.gameNameWithVariation, !0)))
+                          uV((0, pe.m)((0, ye.i)(Je.gameNameWithVariation, !0)))
                         },
-                        children: [(0, DM.jsx)(BM.b, {
+                        children: [(0, DV.jsx)(KV.b, {
                           name: "star-christmas"
-                        }), " ", fM("studio:viewInStudio")]
-                      }), tr && AM.playerHasRank("developer") && (0, DM.jsxs)(mM.e, {
+                        }), " ", oV("studio:viewInStudio")]
+                      }), Xe && lV.playerHasRank("developer") && (0, DV.jsxs)(vV.f, {
                         className: "CustomGameChip AnimFadeIn",
                         onClick: () => {
-                          (0, Hr.b)({
-                            schematicId: (0, Sr.p)(Or.gameNameWithVariation),
+                          (0, re.d)({
+                            schematicId: (0, Ye.p)(Je.gameNameWithVariation),
                             canOverride: !0
                           })
                         },
-                        children: [(0, DM.jsx)(BM.b, {
+                        children: [(0, DV.jsx)(KV.b, {
                           name: "circle-info"
                         }), " Approval Info"]
-                      }), tr && AM.playerHasRank("developer") && (0, DM.jsxs)(mM.e, {
+                      }), Xe && lV.playerHasRank("developer") && (0, DV.jsxs)(vV.f, {
                         className: "CustomGameChip AnimFadeIn",
                         onClick: () => {
-                          rr.NotificationProvider.showCustomPopup({
-                            body: () => (0, DM.jsx)(dr, {
-                              schematicId: (0, Sr.p)(Or.gameNameWithVariation),
-                              gameName: Yr.title
+                          ee.NotificationProvider.showCustomPopup({
+                            body: () => (0, DV.jsx)(Ee, {
+                              schematicId: (0, Ye.p)(Je.gameNameWithVariation),
+                              gameName: ce.title
                             }),
                             middleScreenPopupClassName: "FeaturedGamesPopup",
                             onClose: () => {},
                             unlockPointerKey: "featuredGamesPopup"
                           })
                         },
-                        children: [(0, DM.jsx)(BM.b, {
+                        children: [(0, DV.jsx)(KV.b, {
                           name: "star"
                         }), " Featured Games"]
-                      }), "updateCountdown" === (null === (RM = Yr.countdownInformation) || void 0 === RM ? void 0 : RM.type) && (0, DM.jsxs)("div", {
+                      }), "updateCountdown" === (null === (GV = ce.countdownInformation) || void 0 === GV ? void 0 : GV.type) && (0, DV.jsxs)("div", {
                         className: "CustomGameChip GameChipUpdateCountdown AnimFadeIn",
-                        children: [(0, DM.jsxs)("div", {
+                        children: [(0, DV.jsxs)("div", {
                           className: "GameChipUpdateCountdownTop",
-                          children: ["Update in ", (0, DM.jsx)(bM.c, {
-                            toTime: Yr.countdownInformation.countdownToTime
+                          children: ["Update in ", (0, DV.jsx)(AV.d, {
+                            toTime: ce.countdownInformation.countdownToTime
                           })]
-                        }), (0, DM.jsx)("div", {
+                        }), (0, DV.jsx)("div", {
                           className: "GameChipUpdateCountdownBottom",
-                          children: Yr.countdownInformation.previewText
+                          children: ce.countdownInformation.previewText
                         })]
                       })]
-                    }, Si ? "pending" : "shown"), (0, DM.jsxs)("header", {
+                    }, Yx ? "pending" : "shown"), (0, DV.jsxs)("header", {
                       className: "GameInformationTitle",
-                      children: [(0, DM.jsx)("div", {
+                      children: [(0, DV.jsx)("div", {
                         className: "GameInformationTitleAndChips",
-                        children: (0, DM.jsxs)("h1", {
+                        children: (0, DV.jsxs)("h1", {
                           className: "GameInformationTitleText FullyFancyText",
-                          children: [Yr.title, " ", Yr.variationTitle && (null === (pM = Lr.e[Or.gameNameWithVariation]) || void 0 === pM ? void 0 : pM.variationThumbnailUseBigRatio) && (0, DM.jsx)("span", {
+                          children: [ce.title, " ", ce.variationTitle && (null === (WV = Ze.e[Je.gameNameWithVariation]) || void 0 === WV ? void 0 : WV.variationThumbnailUseBigRatio) && (0, DV.jsx)("span", {
                             className: "GameInformationTitleVariation",
-                            children: Yr.variationTitle
+                            children: ce.variationTitle
                           })]
                         })
-                      }), Yr.listedVariations && Yr.listedVariations.length > 0 && (0, DM.jsx)("div", {
-                        className: hM()("GameInformationVariationList", {
-                          GameInformationVariationListBig: null === (sM = Lr.e[Or.gameNameWithVariation]) || void 0 === sM ? void 0 : sM.variationThumbnailUseBigRatio
+                      }), ce.listedVariations && ce.listedVariations.length > 0 && (0, DV.jsx)("div", {
+                        className: kV()("GameInformationVariationList", {
+                          GameInformationVariationListBig: null === (gV = Ze.e[Je.gameNameWithVariation]) || void 0 === gV ? void 0 : gV.variationThumbnailUseBigRatio
                         }),
-                        children: Yr.listedVariations.map((MM => {
-                          var rM, iM;
-                          return (0, DM.jsxs)(fr, {
-                            variation: MM,
-                            isSelected: Or.gameNameWithVariation === MM,
-                            children: [null !== NM && (0, DM.jsx)("div", {
+                        children: ce.listedVariations.map((VV => {
+                          var eV, xV;
+                          return (0, DV.jsxs)(oe, {
+                            variation: VV,
+                            isSelected: Je.gameNameWithVariation === VV,
+                            children: [null !== hV && (0, DV.jsx)("div", {
                               className: "GameInformationVariationCCU AnimFadeIn",
-                              children: (0, DM.jsxs)("div", {
+                              children: (0, DV.jsxs)("div", {
                                 className: "GameInformationVariationCCUInner",
-                                children: [(0, DM.jsx)(BM.b, {
+                                children: [(0, DV.jsx)(KV.b, {
                                   name: "user"
-                                }), " ", (0, mr.T)(null !== (rM = NM[MM]) && void 0 !== rM ? rM : 0)]
+                                }), " ", (0, ve.N)(null !== (eV = hV[VV]) && void 0 !== eV ? eV : 0)]
                               })
-                            }), (0, DM.jsx)("div", {
+                            }), (0, DV.jsx)("div", {
                               className: "GameInformationVariationTitle SmallTextBold",
-                              children: fM(null !== (iM = Lr.e[MM].variationTitle) && void 0 !== iM ? iM : Lr.e[MM].title)
-                            }), (0, DM.jsx)("div", {
+                              children: oV(null !== (xV = Ze.e[VV].variationTitle) && void 0 !== xV ? xV : Ze.e[VV].title)
+                            }), (0, DV.jsx)("div", {
                               className: "ThumbnailBadgesContainer",
-                              children: (0, zM.filterBadges)(Lr.e[MM].badges).map((MM => (0, DM.jsx)("div", {
-                                className: "ThumbnailBadgeContainer " + MM.type,
-                                children: (0, DM.jsx)("div", {
+                              children: (0, wV.filterBadges)(Ze.e[VV].badges).map((VV => (0, DV.jsx)("div", {
+                                className: "ThumbnailBadgeContainer " + VV.type,
+                                children: (0, DV.jsx)("div", {
                                   className: "ThumbnailBadgeMain",
-                                  children: (0, DM.jsx)(tM.b, {
-                                    badge: MM
+                                  children: (0, DV.jsx)(XV.d, {
+                                    badge: VV
                                   })
                                 })
-                              }, MM.type)))
+                              }, VV.type)))
                             })]
-                          }, MM)
+                          }, VV)
                         }))
                       })]
-                    }), Yr.description && (0, DM.jsx)("p", {
+                    }), ce.description && (0, DV.jsx)("p", {
                       className: "GameInformationDescription",
-                      children: Yr.description
+                      children: ce.description
                     })]
-                  }), (0, DM.jsxs)("div", {
+                  }), (0, DV.jsxs)("div", {
                     className: "GameInformationButtonRows",
-                    children: [(0, DM.jsxs)("div", {
+                    children: [(0, DV.jsxs)("div", {
                       className: "GameInformationButtonRow GameInformationButtonRowPrimary",
-                      children: [!Oi && (0, DM.jsx)(LM.i, {
-                        tooltipInner: (0, DM.jsx)("div", {
-                          children: fM("homePage:rejoinLobbyNumberInfo")
+                      children: [!Jx && (0, DV.jsx)(ZV.d, {
+                        tooltipInner: (0, DV.jsx)("div", {
+                          children: oV("homePage:rejoinLobbyNumberInfo")
                         }),
                         hoverOnly: !0,
-                        children: (0, DM.jsx)(mM.p, {
+                        children: (0, DV.jsx)(vV.m, {
                           className: "GameInformationButton",
                           padDefaultFocus: !0,
                           showPress: !0,
                           onClick: () => {
-                            zi(xr[0])
+                            wx(Le[0])
                           },
-                          children: (0, DM.jsxs)("div", {
+                          children: (0, DV.jsxs)("div", {
                             className: "GameInformationButtonInner",
-                            children: [(0, DM.jsx)(BM.b, {
+                            children: [(0, DV.jsx)(KV.b, {
                               name: "play"
-                            }), " ", fM("homePage:rejoinLobbyNumber", {
-                              number: xr[0]
+                            }), " ", oV("homePage:rejoinLobbyNumber", {
+                              number: Le[0]
                             })]
                           })
                         })
-                      }), Oi && ni]
-                    }), (0, DM.jsxs)("div", {
+                      }), Jx && Qx]
+                    }), (0, DV.jsxs)("div", {
                       className: "GameInformationButtonRow GameInformationButtonRowSecondary",
-                      children: [!Oi && ni, (0, DM.jsxs)("div", {
+                      children: [!Jx && Qx, (0, DV.jsxs)("div", {
                         className: "JoinLobbyContainer",
-                        children: [(0, DM.jsx)(BM.b, {
+                        children: [(0, DV.jsx)(KV.b, {
                           name: "magnifying-glass",
                           className: "JoinLobbyInputIcon"
-                        }), (0, DM.jsx)(JM.b, {
+                        }), (0, DV.jsx)(bV.d, {
                           className: "JoinLobbyInput",
-                          placeholderText: fM("homePage:lobbyName"),
-                          maxLength: mr.Q,
-                          domRef: Er,
-                          onValueChange: MM => {
-                            MM = (0, mr.vb)(MM), Jr(MM)
+                          placeholderText: oV("homePage:lobbyName"),
+                          maxLength: ve.L,
+                          domRef: qe,
+                          onValueChange: VV => {
+                            VV = (0, ve.qb)(VV), be(VV)
                           },
                           onEnter: () => {
-                            0 === hr.length ? zi(xr[0]) : zi(hr)
+                            0 === ke.length ? wx(Le[0]) : wx(ke)
                           }
-                        }), (0, DM.jsx)(mM.e, {
+                        }), (0, DV.jsx)(vV.f, {
                           className: "JoinLobbyButton",
                           showPress: !0,
                           onClick: () => {
-                            0 === hr.length ? zi(xr[0]) : zi(hr)
+                            0 === ke.length ? wx(Le[0]) : wx(ke)
                           },
-                          children: fM("general:join")
+                          children: oV("general:join")
                         })]
                       })]
-                    }), (0, DM.jsxs)("section", {
-                      className: hM()("LobbyCollection RecentLobbyCollection", {
-                        LobbyCollectionHidden: !ii
+                    }), (0, DV.jsxs)("section", {
+                      className: kV()("LobbyCollection RecentLobbyCollection", {
+                        LobbyCollectionHidden: !xx
                       }),
-                      children: [(0, DM.jsx)("div", {
+                      children: [(0, DV.jsx)("div", {
                         className: "LobbyCollectionHeader RecentLobbyCollectionHeader",
-                        children: (0, DM.jsxs)("div", {
+                        children: (0, DV.jsxs)("div", {
                           className: "LobbyCollectionTitle",
-                          children: [(0, DM.jsx)(BM.b, {
+                          children: [(0, DV.jsx)(KV.b, {
                             name: "clock-rotate-left"
-                          }), ii && (0, DM.jsx)("h2", {
+                          }), xx && (0, DV.jsx)("h2", {
                             className: "VisuallyHidden",
-                            children: fM("homePage:recentlyPlayedLobbies")
+                            children: oV("homePage:recentlyPlayedLobbies")
                           })]
                         })
-                      }), (0, DM.jsx)(br.b, {
-                        lobbyGroups: [xr, vr],
-                        onLobbyClick: MM => {
-                          zi(MM)
+                      }), (0, DV.jsx)(Ae.c, {
+                        lobbyGroups: [Le, fe],
+                        onLobbyClick: VV => {
+                          wx(VV)
                         },
-                        keyPrefix: Or.gameNameWithVariation
+                        keyPrefix: Je.gameNameWithVariation
                       })]
                     })]
                   })]
                 })]
-              }), null !== ai && (0, DM.jsx)(oM, {
-                eventName: ai
+              }), null !== yx && (0, DV.jsx)(aV, {
+                eventName: yx
               })]
-            }), Ji && (0, DM.jsx)("div", {
+            }), kx && (0, DV.jsx)("div", {
               className: "GameInformationBottom",
-              children: (0, DM.jsxs)("section", {
+              children: (0, DV.jsxs)("section", {
                 className: "LobbyCollection",
-                children: [(0, DM.jsxs)("div", {
-                  className: hM()("LobbyCollectionHeader", {
-                    SandboxWorldsLobbyCollectionHeader: !0 === Yr.showWorldsInsteadOfCustomLobbies
+                children: [(0, DV.jsxs)("div", {
+                  className: kV()("LobbyCollectionHeader", {
+                    SandboxWorldsLobbyCollectionHeader: !0 === ce.showWorldsInsteadOfCustomLobbies
                   }),
-                  children: [!0 === Yr.showWorldsInsteadOfCustomLobbies && (0, DM.jsxs)("h2", {
+                  children: [!0 === ce.showWorldsInsteadOfCustomLobbies && (0, DV.jsxs)("h2", {
                     className: "LobbyCollectionTitle",
-                    children: [(0, DM.jsx)(BM.b, {
+                    children: [(0, DV.jsx)(KV.b, {
                       name: "planet-ringed",
                       kit: "duotone"
-                    }), (0, DM.jsxs)("div", {
+                    }), (0, DV.jsxs)("div", {
                       className: "LobbyCollectionTitleText",
-                      children: [(0, DM.jsx)("div", {
+                      children: [(0, DV.jsx)("div", {
                         className: "LobbyCollectionTitleTextBackground"
-                      }), fM("game:worlds")]
+                      }), oV("game:worlds")]
                     })]
-                  }), !1 === Yr.showWorldsInsteadOfCustomLobbies && (0, DM.jsxs)("h2", {
+                  }), !1 === ce.showWorldsInsteadOfCustomLobbies && (0, DV.jsxs)("h2", {
                     className: "LobbyCollectionTitle",
-                    children: [(0, DM.jsx)(BM.b, {
+                    children: [(0, DV.jsx)(KV.b, {
                       name: "joystick"
-                    }), (0, DM.jsxs)("div", {
+                    }), (0, DV.jsxs)("div", {
                       className: "LobbyCollectionTitleText",
-                      children: [(0, DM.jsx)("div", {
+                      children: [(0, DV.jsx)("div", {
                         className: "LobbyCollectionTitleTextBackground"
-                      }), fM("homePage:customLobbies")]
+                      }), oV("homePage:customLobbies")]
                     })]
-                  }), (0, DM.jsx)(mM.V, {
+                  }), (0, DV.jsx)(vV.M, {
                     onClick: () => {
-                      Vr("explore")
+                      de("explore")
                     },
-                    active: "explore" === Tr,
-                    children: fM("general:explore")
-                  }), (0, DM.jsx)(mM.V, {
+                    active: "explore" === Ie,
+                    children: oV("general:explore")
+                  }), (0, DV.jsx)(vV.M, {
                     onClick: () => {
-                      Vr("favourite")
+                      de("favourite")
                     },
-                    active: "favourite" === Tr,
-                    children: fM("homePage:favouriteLobbies")
-                  }), (0, DM.jsx)(mM.V, {
+                    active: "favourite" === Ie,
+                    children: oV("homePage:favouriteLobbies")
+                  }), (0, DV.jsx)(vV.M, {
                     onClick: () => {
-                      Vr("owned")
+                      de("owned")
                     },
-                    active: "owned" === Tr,
-                    children: fM("homePage:ownedLobbies")
+                    active: "owned" === Ie,
+                    children: oV("homePage:ownedLobbies")
                   })]
-                }), (0, DM.jsxs)("div", {
+                }), (0, DV.jsxs)("div", {
                   className: "CustomLobbyList",
-                  children: [(0, DM.jsxs)("div", {
+                  children: [(0, DV.jsxs)("div", {
                     className: "CustomLobbyListInner",
-                    children: [(0, DM.jsx)(lr.c, {
+                    children: [(0, DV.jsx)(je.c, {
                       label: "Create",
                       onClick: () => {
-                        rr.NotificationProvider.showCustomPopup({
-                          body: MM => (0, DM.jsx)(ir.CreateCustomLobby, {
-                            gameNameWithVariation: Or.gameNameWithVariation,
-                            close: MM
+                        ee.NotificationProvider.showCustomPopup({
+                          body: VV => (0, DV.jsx)(xe.CreateCustomLobby, {
+                            gameNameWithVariation: Je.gameNameWithVariation,
+                            close: VV
                           }),
                           middleScreenPopupClassName: "CreateCustomLobbyPopup"
                         })
                       }
-                    }), !0 === Fr && (0, DM.jsx)(lr.g, {}), !1 === Fr && (0, DM.jsx)(Cr, {
-                      customLobbies: Xr,
-                      favouriteLobbies: Kr,
-                      toggleLikeLobby: Li,
-                      showReport: XM.featureFlags.useSocialFeatures && "owned" !== Tr
+                    }), !0 === me && (0, DV.jsx)(je.e, {}), !1 === me && (0, DV.jsx)(Te, {
+                      customLobbies: He,
+                      favouriteLobbies: se,
+                      toggleLikeLobby: Zx,
+                      showReport: HV.featureFlags.useSocialFeatures && "owned" !== Ie
                     })]
-                  }), di]
+                  }), bx]
                 })]
               })
             })]
-          }), !Ji && di]
+          }), !kx && bx]
         })
       })
     }
 
-    function fr(MM) {
+    function oe(VV) {
       let {
-        variation: rM,
-        isSelected: iM,
-        children: OM
-      } = MM;
-      const nM = Lr.e[rM],
-        zM = (0, jM.m)(rM, (0, jM.p)(nM)),
-        LM = (0, SM.c)(zM),
-        mM = (0, aM.e)([(0, jM.j)(rM, (0, jM.d)(nM))]);
-      return (0, DM.jsxs)(VM.LinkPreserveSearch, {
-        to: (0, YM.x)(rM),
+        variation: eV,
+        isSelected: xV,
+        children: JV
+      } = VV;
+      const QV = Ze.e[eV],
+        wV = (0, UV.n)(eV, (0, UV.o)(QV)),
+        ZV = (0, YV.d)(wV),
+        vV = (0, yV.g)([(0, UV.j)(eV, (0, UV.e)(QV))]);
+      return (0, DV.jsxs)(dV.LinkPreserveSearch, {
+        to: (0, cV.x)(eV),
         replace: !0,
-        className: hM()("GameInformationVariation", PM.k, {
-          SelectedGameInformationVariation: iM
+        className: kV()("GameInformationVariation", pV.i, {
+          SelectedGameInformationVariation: xV
         }),
-        onClick: MM => {
-          if (!(0, Mr.d)(MM)) return;
-          const iM = (0, lM.n)(rM);
-          QM.g.setItem(iM, rM)
+        onClick: VV => {
+          if (!(0, Ve.e)(VV)) return;
+          const xV = (0, jV.n)(eV);
+          nV.m.setItem(xV, eV)
         },
-        onMouseEnter: mM.start,
-        onMouseLeave: mM.cancel,
-        onFocus: mM.start,
-        onBlur: mM.cancel,
-        style: (0, PM.h)(LM),
-        children: [(0, DM.jsx)(PM.e, {
-          image: LM
-        }), OM]
+        onMouseEnter: vV.start,
+        onMouseLeave: vV.cancel,
+        onFocus: vV.start,
+        onBlur: vV.cancel,
+        style: (0, pV.h)(ZV),
+        children: [(0, DV.jsx)(pV.e, {
+          image: ZV
+        }), JV]
       })
     }
   },
-  6982: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => lM
+  7064: (VV, eV, xV) => {
+    xV.d(eV, {
+      d: () => jV
     });
-    var OM = iM(44),
-      SM = iM(1520),
-      jM = iM(1573),
-      aM = iM(3881),
-      PM = iM(1142),
-      nM = iM(1396),
-      QM = iM(1440),
-      zM = iM(1398),
-      LM = iM(1116),
-      mM = iM.n(LM),
-      HM = iM(6975),
-      hM = iM(1303);
+    var JV = xV(62),
+      YV = xV(1551),
+      UV = xV(1603),
+      yV = xV(3931),
+      pV = xV(1168),
+      QV = xV(1408),
+      nV = xV(1446),
+      wV = xV(1414),
+      ZV = xV(1146),
+      vV = xV.n(ZV),
+      rV = xV(7056),
+      kV = xV(1321);
 
-    function JM(MM) {
+    function bV(VV) {
       let {
-        info: rM,
-        className: iM
-      } = MM;
+        info: eV,
+        className: xV
+      } = VV;
       const {
-        statusText: OM,
-        rowText: SM
-      } = (0, HM.f)();
-      return (0, hM.jsxs)("div", {
-        className: mM()("GameApprovalInfoDetails", iM),
-        children: [(0, hM.jsxs)("div", {
-          className: mM()("GameApprovalInfoSummary", rM.overallPassed ? "Passed" : "Failed"),
-          children: [(0, hM.jsx)(zM.b, {
-            name: rM.overallPassed ? "circle-check" : "circle-xmark"
-          }), (0, hM.jsx)("span", {
-            children: OM(rM.status)
+        statusText: JV,
+        rowText: YV
+      } = (0, rV.f)();
+      return (0, kV.jsxs)("div", {
+        className: vV()("GameApprovalInfoDetails", xV),
+        children: [(0, kV.jsxs)("div", {
+          className: vV()("GameApprovalInfoSummary", eV.overallPassed ? "Passed" : "Failed"),
+          children: [(0, kV.jsx)(wV.b, {
+            name: eV.overallPassed ? "circle-check" : "circle-xmark"
+          }), (0, kV.jsx)("span", {
+            children: JV(eV.status)
           })]
-        }), rM.rows.length > 0 && (0, hM.jsx)("div", {
+        }), eV.rows.length > 0 && (0, kV.jsx)("div", {
           className: "GameApprovalInfoRows",
-          children: rM.rows.map((MM => {
+          children: eV.rows.map((VV => {
             const {
-              label: rM,
-              value: iM
-            } = SM(MM);
-            return (0, hM.jsxs)("div", {
-              className: mM()("GameApprovalInfoRow", MM.passed ? "Passed" : "Failed"),
-              children: [(0, hM.jsx)(zM.b, {
-                name: MM.passed ? "check" : "xmark"
-              }), (0, hM.jsxs)("div", {
+              label: eV,
+              value: xV
+            } = YV(VV);
+            return (0, kV.jsxs)("div", {
+              className: vV()("GameApprovalInfoRow", VV.passed ? "Passed" : "Failed"),
+              children: [(0, kV.jsx)(wV.b, {
+                name: VV.passed ? "check" : "xmark"
+              }), (0, kV.jsxs)("div", {
                 className: "GameApprovalInfoRowText",
-                children: [(0, hM.jsx)("div", {
+                children: [(0, kV.jsx)("div", {
                   className: "GameApprovalInfoRowLabel",
-                  children: rM
-                }), null !== iM && (0, hM.jsx)("div", {
+                  children: eV
+                }), null !== xV && (0, kV.jsx)("div", {
                   className: "GameApprovalInfoRowValue",
-                  children: iM
+                  children: xV
                 })]
               })]
-            }, MM.kind)
+            }, VV.kind)
           }))
         })]
       })
     }
-    var dM = iM(1188),
-      yM = iM(1429);
+    var EV = xV(1220),
+      BV = xV(1439);
 
-    function lM(MM) {
-      yM.NotificationProvider.showCustomPopup({
-        body: () => (0, hM.jsx)(EM, {
-          ...MM
+    function jV(VV) {
+      BV.NotificationProvider.showCustomPopup({
+        body: () => (0, kV.jsx)(qV, {
+          ...VV
         }),
         middleScreenPopupClassName: "ApprovalInfoPopup",
         onClose: () => {},
@@ -1376,92 +1376,92 @@ export const modules = {
       })
     }
 
-    function EM(MM) {
+    function qV(VV) {
       let {
-        schematicId: rM,
-        canOverride: iM,
-        onApprovalChanged: LM
-      } = MM;
+        schematicId: eV,
+        canOverride: xV,
+        onApprovalChanged: ZV
+      } = VV;
       const {
-        t: mM
-      } = (0, dM.A)(), {
-        userContext: HM
-      } = (0, PM.b)(), yM = (0, aM.b)(), [lM, EM] = (0, OM.useState)(null), [UM, GM] = (0, OM.useState)(null), [CM, eM] = (0, OM.useState)(!1), bM = (0, OM.useCallback)((() => {
-        GM(null), jM.c.getGameApprovalInfo(HM, rM).then((MM => {
-          yM.current && EM(MM)
-        })).catch((MM => {
-          console.error("Failed to get game approval info", MM), yM.current && GM(mM("studio:approvalLoadFailed"))
+        t: vV
+      } = (0, EV.A)(), {
+        userContext: rV
+      } = (0, pV.d)(), BV = (0, yV.e)(), [jV, qV] = (0, JV.useState)(null), [tV, FV] = (0, JV.useState)(null), [TV, PV] = (0, JV.useState)(!1), AV = (0, JV.useCallback)((() => {
+        FV(null), UV.b.getGameApprovalInfo(rV, eV).then((VV => {
+          BV.current && qV(VV)
+        })).catch((VV => {
+          console.error("Failed to get game approval info", VV), BV.current && FV(vV("studio:approvalLoadFailed"))
         }))
-      }), [HM, rM, yM, mM]);
-      (0, OM.useEffect)((() => {
-        bM()
-      }), [bM]);
-      const wM = MM => {
-        CM || (eM(!0), jM.c.setGameApproval(HM, rM, MM).then((() => {
-          null === LM || void 0 === LM || LM(), yM.current && bM()
-        })).catch((MM => {
-          console.error("Failed to set game approval", MM)
+      }), [rV, eV, BV, vV]);
+      (0, JV.useEffect)((() => {
+        AV()
+      }), [AV]);
+      const NV = VV => {
+        TV || (PV(!0), UV.b.setGameApproval(rV, eV, VV).then((() => {
+          null === ZV || void 0 === ZV || ZV(), BV.current && AV()
+        })).catch((VV => {
+          console.error("Failed to set game approval", VV)
         })).finally((() => {
-          yM.current && eM(!1)
+          BV.current && PV(!1)
         })))
       };
-      return (0, hM.jsxs)("div", {
+      return (0, kV.jsxs)("div", {
         className: "ApprovalInfoPopupBody",
-        children: [(0, hM.jsx)("h1", {
+        children: [(0, kV.jsx)("h1", {
           className: "ApprovalInfoPopupTitle",
-          children: mM("studio:approvalTitle")
-        }), !lM && !UM && (0, hM.jsx)("div", {
+          children: vV("studio:approvalTitle")
+        }), !jV && !tV && (0, kV.jsx)("div", {
           className: "ApprovalInfoPopupLoader",
-          children: (0, hM.jsx)(nM.d, {})
-        }), UM && (0, hM.jsx)("div", {
+          children: (0, kV.jsx)(QV.d, {})
+        }), tV && (0, kV.jsx)("div", {
           className: "ApprovalInfoPopupError",
-          children: UM
-        }), lM && (0, hM.jsxs)(hM.Fragment, {
-          children: [(0, hM.jsx)(JM, {
-            info: lM
-          }), iM && (0, hM.jsxs)("div", {
+          children: tV
+        }), jV && (0, kV.jsxs)(kV.Fragment, {
+          children: [(0, kV.jsx)(bV, {
+            info: jV
+          }), xV && (0, kV.jsxs)("div", {
             className: "ApprovalInfoPopupActions",
-            children: [!0 !== lM.manualOverride && (0, hM.jsx)(QM.i, {
-              tooltipInner: (0, hM.jsx)("div", {
-                children: mM("studio:approvalApproveTooltip")
+            children: [!0 !== jV.manualOverride && (0, kV.jsx)(nV.d, {
+              tooltipInner: (0, kV.jsx)("div", {
+                children: vV("studio:approvalApproveTooltip")
               }),
-              children: (0, hM.jsxs)(SM.p, {
+              children: (0, kV.jsxs)(YV.m, {
                 className: "ApprovalInfoPopupActionButton",
                 onClick: () => {
-                  wM(!0)
+                  NV(!0)
                 },
-                disabled: CM,
-                children: [(0, hM.jsx)(zM.b, {
+                disabled: TV,
+                children: [(0, kV.jsx)(wV.b, {
                   name: "check"
-                }), " ", mM("studio:approvalApprove")]
+                }), " ", vV("studio:approvalApprove")]
               })
-            }), !1 !== lM.manualOverride && (0, hM.jsx)(QM.i, {
-              tooltipInner: (0, hM.jsx)("div", {
-                children: mM("studio:approvalDenyTooltip")
+            }), !1 !== jV.manualOverride && (0, kV.jsx)(nV.d, {
+              tooltipInner: (0, kV.jsx)("div", {
+                children: vV("studio:approvalDenyTooltip")
               }),
-              children: (0, hM.jsxs)(SM.J, {
+              children: (0, kV.jsxs)(YV.E, {
                 className: "ApprovalInfoPopupActionButton",
                 onClick: () => {
-                  wM(!1)
+                  NV(!1)
                 },
-                disabled: CM,
-                children: [(0, hM.jsx)(zM.b, {
+                disabled: TV,
+                children: [(0, kV.jsx)(wV.b, {
                   name: "xmark"
-                }), " ", mM("studio:approvalDeny")]
+                }), " ", vV("studio:approvalDeny")]
               })
-            }), null !== lM.manualOverride && (0, hM.jsx)(QM.i, {
-              tooltipInner: (0, hM.jsx)("div", {
-                children: mM("studio:approvalClearOverrideTooltip")
+            }), null !== jV.manualOverride && (0, kV.jsx)(nV.d, {
+              tooltipInner: (0, kV.jsx)("div", {
+                children: vV("studio:approvalClearOverrideTooltip")
               }),
-              children: (0, hM.jsxs)(SM.e, {
+              children: (0, kV.jsxs)(YV.f, {
                 className: "ApprovalInfoPopupActionButton",
                 onClick: () => {
-                  wM(null)
+                  NV(null)
                 },
-                disabled: CM,
-                children: [(0, hM.jsx)(zM.b, {
+                disabled: TV,
+                children: [(0, kV.jsx)(wV.b, {
                   name: "arrows-rotate"
-                }), " ", mM("studio:approvalClearOverride")]
+                }), " ", vV("studio:approvalClearOverride")]
               })
             })]
           })]
@@ -1469,14 +1469,14 @@ export const modules = {
       })
     }
   },
-  6975: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => PM,
-      f: () => aM
+  7056: (VV, eV, xV) => {
+    xV.d(eV, {
+      e: () => pV,
+      f: () => yV
     });
-    var OM = iM(332),
-      SM = iM(1188);
-    const jM = {
+    var JV = xV(375),
+      YV = xV(1220);
+    const UV = {
       manuallyApproved: "studio:approvalStatusManuallyApproved",
       manuallyAndAutoApproved: "studio:approvalStatusManuallyAndAutoApproved",
       manuallyDenied: "studio:approvalStatusManuallyDenied",
@@ -1485,60 +1485,60 @@ export const modules = {
       notIndexed: "studio:approvalStatusNotIndexed"
     };
 
-    function aM() {
+    function yV() {
       const {
-        t: MM,
-        selectedLanguage: rM
-      } = (0, SM.A)();
+        t: VV,
+        selectedLanguage: eV
+      } = (0, YV.A)();
       return {
-        statusText: rM => MM(jM[rM]),
-        rowText: iM => {
-          const jM = (MM, iM) => (0, OM.db)((0, SM.n)(rM.code, MM), 0, iM);
-          switch (iM.kind) {
+        statusText: eV => VV(UV[eV]),
+        rowText: xV => {
+          const UV = (VV, xV) => (0, JV.bb)((0, YV.m)(eV.code, VV), 0, xV);
+          switch (xV.kind) {
             case "ownerAccountAge": {
-              const rM = iM.ownerIsLoggedIn ? "studio:approvalAccountAgeLoggedIn" : "studio:approvalAccountAgeNotLoggedIn";
+              const eV = xV.ownerIsLoggedIn ? "studio:approvalAccountAgeLoggedIn" : "studio:approvalAccountAgeNotLoggedIn";
               return {
-                label: MM("studio:approvalAccountAgeLabel"),
-                value: MM(rM, {
-                  age: jM(rM, iM.accountAgeMs),
-                  days: iM.minAccountAgeDays
+                label: VV("studio:approvalAccountAgeLabel"),
+                value: VV(eV, {
+                  age: UV(eV, xV.accountAgeMs),
+                  days: xV.minAccountAgeDays
                 })
               }
             }
             case "sinceUnbannedOrUnmuted":
               return {
-                label: MM("studio:approvalSinceUnbannedLabel"), value: MM("studio:approvalSinceUnbannedValue", {
-                  time: jM("studio:approvalSinceUnbannedValue", iM.sinceMs),
-                  days: iM.minDays
+                label: VV("studio:approvalSinceUnbannedLabel"), value: VV("studio:approvalSinceUnbannedValue", {
+                  time: UV("studio:approvalSinceUnbannedValue", xV.sinceMs),
+                  days: xV.minDays
                 })
               };
             case "reportHold": {
               const {
-                detail: rM
-              } = iM;
-              if (null === rM) return {
-                label: MM("studio:approvalUnderInvestigation"),
+                detail: eV
+              } = xV;
+              if (null === eV) return {
+                label: VV("studio:approvalUnderInvestigation"),
                 value: null
               };
-              const OM = rM.weightedReporters.toFixed(1),
-                SM = rM.threshold.toFixed(1),
-                aM = MM("studio:approvalReportHoldLabel", {
-                  hours: rM.windowHours
+              const JV = eV.weightedReporters.toFixed(1),
+                YV = eV.threshold.toFixed(1),
+                yV = VV("studio:approvalReportHoldLabel", {
+                  hours: eV.windowHours
                 });
-              if (null === rM.heldUntil) return {
-                label: aM,
-                value: MM("studio:approvalReportHoldValue", {
-                  weightedReporters: OM,
-                  threshold: SM
+              if (null === eV.heldUntil) return {
+                label: yV,
+                value: VV("studio:approvalReportHoldValue", {
+                  weightedReporters: JV,
+                  threshold: YV
                 })
               };
-              const PM = "studio:approvalReportHoldValueHeld";
+              const pV = "studio:approvalReportHoldValueHeld";
               return {
-                label: aM,
-                value: MM(PM, {
-                  weightedReporters: OM,
-                  threshold: SM,
-                  time: jM(PM, rM.heldUntil - Date.now())
+                label: yV,
+                value: VV(pV, {
+                  weightedReporters: JV,
+                  threshold: YV,
+                  time: UV(pV, eV.heldUntil - Date.now())
                 })
               }
             }
@@ -1547,85 +1547,85 @@ export const modules = {
       }
     }
 
-    function PM(MM) {
-      return null === MM.manualOverride && MM.rows.some((MM => "reportHold" === MM.kind && !MM.passed))
+    function pV(VV) {
+      return null === VV.manualOverride && VV.rows.some((VV => "reportHold" === VV.kind && !VV.passed))
     }
   },
-  35064: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => jM
+  35346: (VV, eV, xV) => {
+    xV.d(eV, {
+      e: () => UV
     });
-    var OM = iM(44),
-      SM = iM(3839);
+    var JV = xV(62),
+      YV = xV(3886);
 
-    function jM() {
-      const [MM, rM] = (0, OM.useState)(!1);
-      return (0, OM.useLayoutEffect)((() => {
-        let MM = !0;
-        return (0, SM.e)().then((() => {
-          MM && rM(!0)
+    function UV() {
+      const [VV, eV] = (0, JV.useState)(!1);
+      return (0, JV.useLayoutEffect)((() => {
+        let VV = !0;
+        return (0, YV.f)().then((() => {
+          VV && eV(!0)
         })), () => {
-          MM = !1
+          VV = !1
         }
-      }), []), MM
+      }), []), VV
     }
   },
-  9525: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => aM
+  9541: (VV, eV, xV) => {
+    xV.d(eV, {
+      d: () => yV
     });
-    var OM = iM(1382),
-      SM = iM(1229),
-      jM = iM(625);
+    var JV = xV(1397),
+      YV = xV(1252),
+      UV = xV(657);
 
-    function aM(MM) {
-      return MM = function(MM, rM) {
-        var iM;
-        const OM = new URLSearchParams(rM),
-          SM = OM.get("lobby"),
-          jM = OM.get("vm"),
-          aM = null !== (iM = SM) && void 0 !== iM ? iM : MM.lobbyName,
-          PM = null !== jM && void 0 !== jM ? jM : MM.directJoinVmUrl;
-        if (aM === MM.lobbyName && PM === MM.directJoinVmUrl) return MM;
+    function yV(VV) {
+      return VV = function(VV, eV) {
+        var xV;
+        const JV = new URLSearchParams(eV),
+          YV = JV.get("lobby"),
+          UV = JV.get("vm"),
+          yV = null !== (xV = YV) && void 0 !== xV ? xV : VV.lobbyName,
+          pV = null !== UV && void 0 !== UV ? UV : VV.directJoinVmUrl;
+        if (yV === VV.lobbyName && pV === VV.directJoinVmUrl) return VV;
         return {
-          ...MM,
-          lobbyName: aM,
-          directJoinVmUrl: PM
+          ...VV,
+          lobbyName: yV,
+          directJoinVmUrl: pV
         }
-      }(MM, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ""), MM = function(MM) {
-        if ((0, jM.J)(MM.directJoinVmUrl)) return MM;
-        const rM = (0, SM.bb)(MM.directJoinVmUrl);
-        null === rM && (MM.directJoinVmUrl = void 0);
-        return MM
-      }(MM = function(MM) {
-        if ((0, jM.J)(MM.gameNameWithVariation)) return MM;
-        return MM.gameNameWithVariation = (0, OM.h)(MM.gameNameWithVariation), MM
-      }(MM))
+      }(VV, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ""), VV = function(VV) {
+        if ((0, UV.J)(VV.directJoinVmUrl)) return VV;
+        const eV = (0, YV.U)(VV.directJoinVmUrl);
+        null === eV && (VV.directJoinVmUrl = void 0);
+        return VV
+      }(VV = function(VV) {
+        if ((0, UV.J)(VV.gameNameWithVariation)) return VV;
+        return VV.gameNameWithVariation = (0, JV.g)(VV.gameNameWithVariation), VV
+      }(VV))
     }
   },
-  9517: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => jM,
-      e: () => SM
+  9532: (VV, eV, xV) => {
+    xV.d(eV, {
+      e: () => UV,
+      h: () => YV
     });
-    let OM = !1;
+    let JV = !1;
 
-    function SM() {
-      OM = !0
+    function YV() {
+      JV = !0
     }
 
-    function jM() {
-      return OM
+    function UV() {
+      return JV
     }
   },
-  37305: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => SM,
-      f: () => OM
+  37507: (VV, eV, xV) => {
+    xV.d(eV, {
+      e: () => YV,
+      f: () => JV
     });
-    const OM = "skyblockSkills",
-      SM = "skills_test_gym"
+    const JV = "skyblockSkills",
+      YV = "skills_test_gym"
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const VV in modules) Object.freeze(modules[VV]);

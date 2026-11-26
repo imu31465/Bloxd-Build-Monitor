@@ -1,332 +1,332 @@
 export const id = 171;
 export const ids = [171];
 export const modules = {
-  9463: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => PM
+  9475: (VV, eV, xV) => {
+    xV.d(eV, {
+      b: () => pV
     });
-    var OM = iM(19),
-      SM = iM(1188),
-      jM = iM(5401),
-      aM = iM(1303);
+    var JV = xV(27),
+      YV = xV(1220),
+      UV = xV(5500),
+      yV = xV(1321);
 
-    function PM(MM) {
+    function pV(VV) {
       let {
-        note: rM
-      } = MM;
+        note: eV
+      } = VV;
       const {
-        t: iM
-      } = (0, SM.A)(), {
-        clientEscMenuOptions: PM
-      } = (0, OM.m)(["clientEscMenuOptions"]);
-      return (0, aM.jsx)(jM.c, {
-        label: iM("touchSettings:actionButtons"),
-        checked: PM.touchActionButtons,
-        onClick: MM => {
-          OM.d.setClientEscMenuOptions({
-            touchActionButtons: MM
+        t: xV
+      } = (0, YV.A)(), {
+        clientEscMenuOptions: pV
+      } = (0, JV.l)(["clientEscMenuOptions"]);
+      return (0, yV.jsx)(UV.e, {
+        label: xV("touchSettings:actionButtons"),
+        checked: pV.touchActionButtons,
+        onClick: VV => {
+          JV.b.setClientEscMenuOptions({
+            touchActionButtons: VV
           })
         },
-        circleInfoText: iM("touchSettings:actionButtonsInfo"),
-        note: rM
+        circleInfoText: xV("touchSettings:actionButtonsInfo"),
+        note: eV
       })
     }
   },
-  9459: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => ui,
-      f: () => gi
+  9469: (VV, eV, xV) => {
+    xV.d(eV, {
+      c: () => Mx,
+      e: () => Xx
     });
-    var OM = iM(1188),
-      SM = iM(44),
-      jM = iM(2093),
-      aM = iM(2099),
-      PM = iM(1116),
-      nM = iM.n(PM),
-      QM = iM(1520),
-      zM = iM(19),
-      LM = iM(83),
-      mM = iM(103),
-      HM = iM(5401),
-      hM = iM(2640),
-      JM = iM(255),
-      dM = iM(2104),
-      yM = iM(2111),
-      lM = iM(9461),
-      EM = iM(9463),
-      UM = iM(313),
-      GM = iM(1303);
-    const CM = {
+    var JV = xV(1220),
+      YV = xV(62),
+      UV = xV(2116),
+      yV = xV(2130),
+      pV = xV(1146),
+      QV = xV.n(pV),
+      nV = xV(1551),
+      wV = xV(27),
+      ZV = xV(99),
+      vV = xV(115),
+      rV = xV(5500),
+      kV = xV(2693),
+      bV = xV(313),
+      EV = xV(2138),
+      BV = xV(2141),
+      jV = xV(9471),
+      qV = xV(9475),
+      tV = xV(364),
+      FV = xV(1321);
+    const TV = {
       floating: "settingsMenu:joystickFloating",
       fixed_shown: "settingsMenu:joystickFixed",
       fixed_hidden: "settingsMenu:joystickHidden"
     };
-    var eM = iM(9467);
-    var bM = iM(1548),
-      wM = iM(1429),
-      tM = iM(9472),
-      gM = iM(1474),
-      uM = iM(1398),
-      RM = iM(9479),
-      pM = iM(2666);
+    var PV = xV(9477);
+    var AV = xV(1586),
+      NV = xV(1439),
+      XV = xV(9482),
+      MV = xV(1493),
+      zV = xV(1414),
+      GV = xV(9491),
+      WV = xV(2729);
 
-    function WM(MM) {
+    function RV(VV) {
       let {
-        className: rM,
-        keepPlace: iM
-      } = MM;
-      return iM ? (0, GM.jsx)("div", {
-        className: nM()(rM, "Placeholder")
+        className: eV,
+        keepPlace: xV
+      } = VV;
+      return xV ? (0, FV.jsx)("div", {
+        className: QV()(eV, "Placeholder")
       }) : null
     }
 
-    function sM(MM) {
+    function gV(VV) {
       let {
-        id: rM,
-        elements: iM,
-        actionButtons: SM,
-        keyNames: jM,
-        className: aM,
-        keepPlace: PM,
-        onHidden: nM
-      } = MM;
+        id: eV,
+        elements: xV,
+        actionButtons: YV,
+        keyNames: UV,
+        className: yV,
+        keepPlace: pV,
+        onHidden: QV
+      } = VV;
       const {
-        t: zM
-      } = (0, OM.A)();
-      if (!RM.f[rM].hide) return (0, GM.jsx)(WM, {
-        className: aM,
-        keepPlace: PM
+        t: wV
+      } = (0, JV.A)();
+      if (!GV.i[eV].hide) return (0, FV.jsx)(RV, {
+        className: yV,
+        keepPlace: pV
       });
-      const LM = (0, pM.p)(iM, rM);
-      return (0, GM.jsx)(QM.V, {
-        className: aM,
-        ariaLabel: zM(LM ? "hudLayout:showElement" : "hudLayout:hideElement", {
-          name: (0, RM.s)(rM, SM, zM, jM)
+      const ZV = (0, WV.v)(xV, eV);
+      return (0, FV.jsx)(nV.M, {
+        className: yV,
+        ariaLabel: wV(ZV ? "hudLayout:showElement" : "hudLayout:hideElement", {
+          name: (0, GV.u)(eV, YV, wV, UV)
         }),
-        pressed: !LM,
+        pressed: !ZV,
         onClick: () => {
-          nM(rM, !LM)
+          QV(eV, !ZV)
         },
-        children: (0, GM.jsx)(uM.b, {
-          name: LM ? "eye-slash" : "eye"
+        children: (0, FV.jsx)(zV.b, {
+          name: ZV ? "eye-slash" : "eye"
         })
       })
     }
 
-    function DM(MM) {
+    function DV(VV) {
       let {
-        id: rM,
-        elements: iM,
-        actionButtons: SM,
-        keyNames: jM,
-        className: aM,
-        keepPlace: PM,
-        onlyWhenMoved: nM,
-        locked: zM,
-        onReset: LM
-      } = MM;
+        id: eV,
+        elements: xV,
+        actionButtons: YV,
+        keyNames: UV,
+        className: yV,
+        keepPlace: pV,
+        onlyWhenMoved: QV,
+        locked: wV,
+        onReset: ZV
+      } = VV;
       const {
-        t: mM
-      } = (0, OM.A)(), HM = RM.f[rM], hM = (0, pM.G)(iM[rM]);
-      return !HM.move && !HM.scale || nM && hM ? (0, GM.jsx)(WM, {
-        className: aM,
-        keepPlace: PM
-      }) : (0, GM.jsx)(QM.V, {
-        className: aM,
-        disabled: hM || zM,
-        ariaLabel: mM("hudLayout:resetElement", {
-          name: (0, RM.s)(rM, SM, mM, jM)
+        t: vV
+      } = (0, JV.A)(), rV = GV.i[eV], kV = (0, WV.P)(xV[eV]);
+      return !rV.move && !rV.scale || QV && kV ? (0, FV.jsx)(RV, {
+        className: yV,
+        keepPlace: pV
+      }) : (0, FV.jsx)(nV.M, {
+        className: yV,
+        disabled: kV || wV,
+        ariaLabel: vV("hudLayout:resetElement", {
+          name: (0, GV.u)(eV, YV, vV, UV)
         }),
         analyticsClick: {
           id: "hud_layout.reset_element",
-          value: rM
+          value: eV
         },
-        onClick: MM => {
-          nM && fM(MM.currentTarget), LM(rM)
+        onClick: VV => {
+          QV && oV(VV.currentTarget), ZV(eV)
         },
-        children: (0, GM.jsx)(uM.b, {
+        children: (0, FV.jsx)(zV.b, {
           name: "rotate-left"
         })
       })
     }
 
-    function kM(MM) {
+    function iV(VV) {
       let {
-        id: rM,
-        actionButtons: iM,
-        keyNames: SM,
-        className: jM,
-        keepPlace: aM,
-        locked: PM,
-        lockable: nM,
-        onLocked: zM
-      } = MM;
+        id: eV,
+        actionButtons: xV,
+        keyNames: YV,
+        className: UV,
+        keepPlace: yV,
+        locked: pV,
+        lockable: QV,
+        onLocked: wV
+      } = VV;
       const {
-        t: LM
-      } = (0, OM.A)();
-      return nM || PM ? (0, GM.jsx)(QM.V, {
-        className: jM,
-        ariaLabel: LM(PM ? "hudLayout:unlockElement" : "hudLayout:lockElement", {
-          name: (0, RM.s)(rM, iM, LM, SM)
+        t: ZV
+      } = (0, JV.A)();
+      return QV || pV ? (0, FV.jsx)(nV.M, {
+        className: UV,
+        ariaLabel: ZV(pV ? "hudLayout:unlockElement" : "hudLayout:lockElement", {
+          name: (0, GV.u)(eV, xV, ZV, YV)
         }),
-        pressed: PM,
-        active: PM,
+        pressed: pV,
+        active: pV,
         analyticsClick: {
           id: "hud_layout.edit",
-          value: `${PM?"unlock":"lock"}:${rM}`
+          value: `${pV?"unlock":"lock"}:${eV}`
         },
         onClick: () => {
-          zM(rM, !PM)
+          wV(eV, !pV)
         },
-        children: (0, GM.jsx)(uM.b, {
-          name: PM ? "lock" : "lock-open"
+        children: (0, FV.jsx)(zV.b, {
+          name: pV ? "lock" : "lock-open"
         })
-      }) : (0, GM.jsx)(WM, {
-        className: jM,
-        keepPlace: aM
+      }) : (0, FV.jsx)(RV, {
+        className: UV,
+        keepPlace: yV
       })
     }
 
-    function ZM(MM) {
+    function CV(VV) {
       let {
-        className: rM,
-        open: iM,
-        name: SM,
-        onToggle: jM
-      } = MM;
+        className: eV,
+        open: xV,
+        name: YV,
+        onToggle: UV
+      } = VV;
       const {
-        t: aM
-      } = (0, OM.A)();
-      return (0, GM.jsx)(QM.V, {
-        className: rM,
-        ariaLabel: aM(iM ? "hudLayout:hideChildren" : "hudLayout:showChildren", {
-          name: SM
+        t: yV
+      } = (0, JV.A)();
+      return (0, FV.jsx)(nV.M, {
+        className: eV,
+        ariaLabel: yV(xV ? "hudLayout:hideChildren" : "hudLayout:showChildren", {
+          name: YV
         }),
-        pressed: iM,
+        pressed: xV,
         analyticsClick: {
           id: "hud_layout.children",
-          value: iM ? "close" : "open"
+          value: xV ? "close" : "open"
         },
         onClick: () => {
-          jM(!iM)
+          UV(!xV)
         },
-        children: (0, GM.jsx)(uM.b, {
-          name: iM ? "angle-up" : "angle-down"
+        children: (0, FV.jsx)(zV.b, {
+          name: xV ? "angle-up" : "angle-down"
         })
       })
     }
 
-    function oM(MM, rM) {
-      var iM;
-      MM.contains(document.activeElement) && rM.focus({
+    function aV(VV, eV) {
+      var xV;
+      VV.contains(document.activeElement) && eV.focus({
         preventScroll: !0
-      }), null === (iM = (0, gM.d)()) || void 0 === iM || iM.handOverPadFocus(MM, rM)
+      }), null === (xV = (0, MV.e)()) || void 0 === xV || xV.handOverPadFocus(VV, eV)
     }
 
-    function fM(MM) {
-      const rM = MM.closest("[data-hud-row]"),
-        iM = null === rM || void 0 === rM ? void 0 : rM.querySelector(".HudElementRowName");
-      return !(!rM || !iM) && (oM(rM, iM), !0)
+    function oV(VV) {
+      const eV = VV.closest("[data-hud-row]"),
+        xV = null === eV || void 0 === eV ? void 0 : eV.querySelector(".HudElementRowName");
+      return !(!eV || !xV) && (aV(eV, xV), !0)
     }
-    const YM = "button:not(:disabled), [role=button]:not([aria-disabled='true'])";
+    const cV = "button:not(:disabled), [role=button]:not([aria-disabled='true'])";
 
-    function NM(MM, rM) {
-      return "joystick" === MM && !rM
+    function hV(VV, eV) {
+      return "joystick" === VV && !eV
     }
 
-    function AM() {
+    function lV() {
       const {
-        t: MM
-      } = (0, OM.A)();
-      return (0, GM.jsx)(QM.V, {
+        t: VV
+      } = (0, JV.A)();
+      return (0, FV.jsx)(nV.M, {
         className: "HudFixJoystickButton",
         analyticsClick: {
           id: "hud_layout.fix_joystick"
         },
-        onClick: MM => {
-          const rM = MM.currentTarget;
-          if (!fM(rM)) {
-            const MM = function(MM) {
-              var rM, iM;
-              const OM = [MM.previousElementSibling, MM.nextElementSibling].find((MM => MM instanceof HTMLElement && MM.matches(YM)));
-              return null !== (rM = null !== OM && void 0 !== OM ? OM : null === (iM = MM.closest(".HudLayoutSidePanel, .HudFullScreenToolbar")) || void 0 === iM ? void 0 : iM.querySelector(`:is(${YM}):not(.HudFixJoystickButton)`)) && void 0 !== rM ? rM : null
-            }(rM);
-            MM && oM(rM, MM)
+        onClick: VV => {
+          const eV = VV.currentTarget;
+          if (!oV(eV)) {
+            const VV = function(VV) {
+              var eV, xV;
+              const JV = [VV.previousElementSibling, VV.nextElementSibling].find((VV => VV instanceof HTMLElement && VV.matches(cV)));
+              return null !== (eV = null !== JV && void 0 !== JV ? JV : null === (xV = VV.closest(".HudLayoutSidePanel, .HudFullScreenToolbar")) || void 0 === xV ? void 0 : xV.querySelector(`:is(${cV}):not(.HudFixJoystickButton)`)) && void 0 !== eV ? eV : null
+            }(eV);
+            VV && aV(eV, VV)
           }
-          zM.d.setClientEscMenuOptions({
+          wV.b.setClientEscMenuOptions({
             joystickMode: "fixed_shown"
           })
         },
-        children: MM("hudLayout:fixJoystick")
+        children: VV("hudLayout:fixJoystick")
       })
     }
-    var xM = iM(65),
-      vM = iM(1287),
-      FM = iM(3508),
-      BM = iM(3047),
-      XM = iM(9484),
-      IM = iM(9487),
-      KM = iM(2668),
-      qM = iM(2690),
-      TM = iM(3563),
-      VM = iM(9489);
-    const cM = MM => ({
-      [RM.e]: MM
+    var LV = xV(78),
+      fV = xV(1309),
+      mV = xV(3528),
+      KV = xV(3080),
+      HV = xV(9500),
+      uV = xV(9503),
+      sV = xV(2736),
+      SV = xV(2752),
+      IV = xV(3584),
+      dV = xV(9506);
+    const OV = VV => ({
+      [GV.f]: VV
     });
 
-    function Mr(MM) {
+    function Ve(VV) {
       let {
-        id: rM,
-        slot: iM,
-        icon: OM,
-        label: jM,
-        hidden: aM,
-        className: PM,
-        face: QM
-      } = MM;
-      const zM = (0, SM.useRef)(null);
-      return (0, SM.useLayoutEffect)((() => {
-        QM && zM.current && (0, VM.k)(zM.current, QM)
-      }), [QM]), (0, GM.jsxs)("div", {
-        className: nM()("TouchKeyHit", `TouchSlot${iM}`, PM, {
-          HudPreviewGhost: aM.has(rM)
+        id: eV,
+        slot: xV,
+        icon: JV,
+        label: UV,
+        hidden: yV,
+        className: pV,
+        face: nV
+      } = VV;
+      const wV = (0, YV.useRef)(null);
+      return (0, YV.useLayoutEffect)((() => {
+        nV && wV.current && (0, dV.m)(wV.current, nV)
+      }), [nV]), (0, FV.jsxs)("div", {
+        className: QV()("TouchKeyHit", `TouchSlot${xV}`, pV, {
+          HudPreviewGhost: yV.has(eV)
         }),
-        ...cM(rM),
-        children: [QM && (0, GM.jsx)("div", {
-          ref: zM,
-          className: nM()("TouchKey", {
-            Labelled: QM.classList.contains("Labelled")
+        ...OV(eV),
+        children: [nV && (0, FV.jsx)("div", {
+          ref: wV,
+          className: QV()("TouchKey", {
+            Labelled: nV.classList.contains("Labelled")
           })
-        }), !QM && (0, GM.jsxs)("div", {
-          className: nM()("TouchKey", {
-            Labelled: void 0 !== jM
+        }), !nV && (0, FV.jsxs)("div", {
+          className: QV()("TouchKey", {
+            Labelled: void 0 !== UV
           }),
-          children: [OM && (0, GM.jsx)(uM.b, {
-            name: OM
-          }), void 0 !== jM && (0, GM.jsx)("span", {
+          children: [JV && (0, FV.jsx)(zV.b, {
+            name: JV
+          }), void 0 !== UV && (0, FV.jsx)("span", {
             className: "TouchKeyLabel",
-            children: jM
+            children: UV
           })]
         })]
       })
     }
 
-    function rr(MM) {
+    function ee(VV) {
       let {
-        item: rM,
-        selected: iM
-      } = MM;
-      const OM = (0, SM.useRef)(null);
-      return (0, SM.useLayoutEffect)((() => {
-        OM.current && (0, VM.k)(OM.current, rM)
-      }), [rM]), (0, GM.jsx)("div", {
-        ref: OM,
-        className: nM()("InvenItem", {
-          Selected: iM
+        item: eV,
+        selected: xV
+      } = VV;
+      const JV = (0, YV.useRef)(null);
+      return (0, YV.useLayoutEffect)((() => {
+        JV.current && (0, dV.m)(JV.current, eV)
+      }), [eV]), (0, FV.jsx)("div", {
+        ref: JV,
+        className: QV()("InvenItem", {
+          Selected: xV
         })
       })
     }
-    const ir = {
+    const xe = {
         emotes: "face-smile",
         perspective: "video",
         scoreboard: "list",
@@ -335,173 +335,173 @@ export const modules = {
         invite: "user-plus",
         settings: "gear"
       },
-      Or = MM => void 0 === MM ? {} : {
+      Je = VV => void 0 === VV ? {} : {
         style: {
-          "--parked": MM
+          "--parked": VV
         }
       };
 
-    function Sr(MM) {
+    function Ye(VV) {
       let {
-        id: rM,
-        hidden: iM,
-        parked: OM,
-        unslotted: SM = !1
-      } = MM;
-      return (0, GM.jsx)("div", {
-        className: nM()("TopRightIcon", qM.l[rM], {
-          HudPreviewGhost: iM.has(rM),
-          [KM.c]: void 0 !== OM,
-          [KM.e]: SM
+        id: eV,
+        hidden: xV,
+        parked: JV,
+        unslotted: YV = !1
+      } = VV;
+      return (0, FV.jsx)("div", {
+        className: QV()("TopRightIcon", SV.i[eV], {
+          HudPreviewGhost: xV.has(eV),
+          [sV.d]: void 0 !== JV,
+          [sV.e]: YV
         }),
-        ...Or(OM),
-        children: (0, GM.jsx)("div", {
+        ...Je(JV),
+        children: (0, FV.jsx)("div", {
           className: "UiItemIcon SmallTextBold",
-          ...cM(rM),
-          children: (0, GM.jsx)("div", {
+          ...OV(eV),
+          children: (0, FV.jsx)("div", {
             className: "ScaleOnHover",
-            children: (0, GM.jsx)(uM.b, {
-              name: ir[rM]
+            children: (0, FV.jsx)(zV.b, {
+              name: xe[eV]
             })
           })
         })
       })
     }
 
-    function jr(MM) {
+    function Ue(VV) {
       let {
-        portraitPhone: rM,
-        icons: iM,
-        pinnedIcons: OM,
-        hidden: jM,
-        moved: aM,
-        trayState: PM
-      } = MM;
-      const QM = rM ? (0, KM.z)(iM) : [],
-        zM = iM.filter((MM => "settings" === MM)),
-        LM = iM.filter((MM => "settings" !== MM && !QM.includes(MM))).reverse(),
-        mM = QM.length > 0 && "gone" === PM,
-        HM = [...zM, ...mM ? ["tray"] : [], ...LM].filter((MM => "tray" === MM || jM.has(MM) && !aM.has(MM))),
-        hM = MM => {
-          const rM = HM.indexOf(MM);
-          return rM < 0 ? void 0 : rM
+        portraitPhone: eV,
+        icons: xV,
+        pinnedIcons: JV,
+        hidden: UV,
+        moved: yV,
+        trayState: pV
+      } = VV;
+      const nV = eV ? (0, sV.E)(xV) : [],
+        wV = xV.filter((VV => "settings" === VV)),
+        ZV = xV.filter((VV => "settings" !== VV && !nV.includes(VV))).reverse(),
+        vV = nV.length > 0 && "gone" === pV,
+        rV = [...wV, ...vV ? ["tray"] : [], ...ZV].filter((VV => "tray" === VV || UV.has(VV) && !yV.has(VV))),
+        kV = VV => {
+          const eV = rV.indexOf(VV);
+          return eV < 0 ? void 0 : eV
         },
-        JM = (MM, rM) => (0, GM.jsx)(Sr, {
-          id: MM,
-          hidden: jM,
-          parked: rM ? hM(MM) : void 0,
-          unslotted: rM && jM.has(MM) && aM.has(MM)
-        }, MM);
-      return (0, GM.jsxs)("div", {
-        className: nM()("TopRightIcons TouchInGame", {
-          Column: rM
+        bV = (VV, eV) => (0, FV.jsx)(Ye, {
+          id: VV,
+          hidden: UV,
+          parked: eV ? kV(VV) : void 0,
+          unslotted: eV && UV.has(VV) && yV.has(VV)
+        }, VV);
+      return (0, FV.jsxs)("div", {
+        className: QV()("TopRightIcons TouchInGame", {
+          Column: eV
         }),
-        children: [zM.map((MM => JM(MM, !0))), QM.length > 0 && (0, GM.jsxs)("div", {
-          className: nM()("TopRightIcon TopRightTrayToggle Open", {
-            [KM.c]: mM
+        children: [wV.map((VV => bV(VV, !0))), nV.length > 0 && (0, FV.jsxs)("div", {
+          className: QV()("TopRightIcon TopRightTrayToggle Open", {
+            [sV.d]: vV
           }),
-          ...Or(hM("tray")),
-          children: [(0, GM.jsx)("div", {
-            className: nM()("UiItemIcon SmallTextBold", {
-              HudPreviewGhost: "filled" !== PM
+          ...Je(kV("tray")),
+          children: [(0, FV.jsx)("div", {
+            className: QV()("UiItemIcon SmallTextBold", {
+              HudPreviewGhost: "filled" !== pV
             }),
-            children: (0, GM.jsx)("div", {
+            children: (0, FV.jsx)("div", {
               className: "ScaleOnHover",
-              children: (0, GM.jsx)(uM.b, {
+              children: (0, FV.jsx)(zV.b, {
                 name: "ellipsis"
               })
             })
-          }), (0, GM.jsx)("div", {
+          }), (0, FV.jsx)("div", {
             className: "TopRightTray",
-            children: QM.map((MM => JM(MM, !1)))
+            children: nV.map((VV => bV(VV, !1)))
           })]
-        }), LM.map((MM => (0, GM.jsxs)(SM.Fragment, {
-          children: ["perspective" === MM && null !== OM.rightOfCamera && (0, GM.jsx)(ar, {
-            icon: OM.rightOfCamera
-          }), JM(MM, !0)]
-        }, MM))), null !== OM.leftEnd && (0, GM.jsx)(ar, {
-          icon: OM.leftEnd
+        }), ZV.map((VV => (0, FV.jsxs)(YV.Fragment, {
+          children: ["perspective" === VV && null !== JV.rightOfCamera && (0, FV.jsx)(ye, {
+            icon: JV.rightOfCamera
+          }), bV(VV, !0)]
+        }, VV))), null !== JV.leftEnd && (0, FV.jsx)(ye, {
+          icon: JV.leftEnd
         })]
       })
     }
 
-    function ar(MM) {
+    function ye(VV) {
       let {
-        icon: rM
-      } = MM;
-      return (0, GM.jsx)("div", {
+        icon: eV
+      } = VV;
+      return (0, FV.jsx)("div", {
         className: "TopRightIcon",
-        children: (0, GM.jsx)("div", {
+        children: (0, FV.jsx)("div", {
           className: "UiItemIcon SmallTextBold",
-          children: (0, GM.jsx)("div", {
+          children: (0, FV.jsx)("div", {
             className: "ScaleOnHover",
-            children: (0, GM.jsx)(uM.b, {
-              name: rM
+            children: (0, FV.jsx)(zV.b, {
+              name: eV
             })
           })
         })
       })
     }
 
-    function Pr(MM) {
+    function pe(VV) {
       let {
-        next: rM,
-        hidden: iM
-      } = MM;
-      return (0, GM.jsx)("div", {
-        className: nM()("HotBarArrow", rM ? "Next" : "Previous", {
-          HudPreviewGhost: iM
+        next: eV,
+        hidden: xV
+      } = VV;
+      return (0, FV.jsx)("div", {
+        className: QV()("HotBarArrow", eV ? "Next" : "Previous", {
+          HudPreviewGhost: xV
         }),
-        ...cM("arrows"),
-        children: (0, GM.jsx)("div", {
+        ...OV("arrows"),
+        children: (0, FV.jsx)("div", {
           className: "UiItemIcon SmallTextBold",
-          children: (0, GM.jsx)("div", {
+          children: (0, FV.jsx)("div", {
             className: "ScaleOnHover",
-            children: (0, GM.jsx)(uM.b, {
-              name: rM ? "caret-right" : "caret-left"
+            children: (0, FV.jsx)(zV.b, {
+              name: eV ? "caret-right" : "caret-left"
             })
           })
         })
       })
     }
 
-    function nr() {
-      return (0, GM.jsx)("div", {
+    function Qe() {
+      return (0, FV.jsx)("div", {
         className: "SocialBarContainer",
-        children: (0, GM.jsx)("div", {
+        children: (0, FV.jsx)("div", {
           className: "SocialBarOuter",
-          children: (0, GM.jsx)("div", {
+          children: (0, FV.jsx)("div", {
             className: "SocialBar",
-            children: (0, GM.jsx)("div", {
+            children: (0, FV.jsx)("div", {
               className: "CondensedSocialBarInner",
-              children: (0, GM.jsx)("div", {
+              children: (0, FV.jsx)("div", {
                 className: "CondensedSectionsContainer",
-                children: (0, GM.jsxs)("div", {
+                children: (0, FV.jsxs)("div", {
                   className: "CondensedSections",
-                  children: [(0, GM.jsxs)("div", {
+                  children: [(0, FV.jsxs)("div", {
                     className: "CondensedSection CondensedSectionFriendRequests",
-                    children: [(0, GM.jsx)("div", {
+                    children: [(0, FV.jsx)("div", {
                       className: "CondensedSectionValue",
                       children: "0"
-                    }), (0, GM.jsx)("div", {
+                    }), (0, FV.jsx)("div", {
                       className: "CondensedSectionIcon",
-                      children: (0, GM.jsx)(uM.b, {
+                      children: (0, FV.jsx)(zV.b, {
                         name: "user-clock"
                       })
                     })]
-                  }), (0, GM.jsx)("div", {
+                  }), (0, FV.jsx)("div", {
                     className: "SocialBarDividerContainer",
-                    children: (0, GM.jsx)("div", {
+                    children: (0, FV.jsx)("div", {
                       className: "SocialBarDivider"
                     })
-                  }), (0, GM.jsxs)("div", {
+                  }), (0, FV.jsxs)("div", {
                     className: "CondensedSection CondensedSectionOnlineFriends",
-                    children: [(0, GM.jsx)("div", {
+                    children: [(0, FV.jsx)("div", {
                       className: "CondensedSectionValue",
                       children: "0"
-                    }), (0, GM.jsx)("div", {
+                    }), (0, FV.jsx)("div", {
                       className: "CondensedSectionIcon",
-                      children: (0, GM.jsx)(uM.b, {
+                      children: (0, FV.jsx)(zV.b, {
                         name: "user"
                       })
                     })]
@@ -513,11 +513,11 @@ export const modules = {
         })
       })
     }
-    const Qr = {
+    const ne = {
         J: "JumpKey",
         C: "CrouchKey"
       },
-      zr = {
+      we = {
         P: {
           icon: "crosshairs",
           labelKey: "touchKeys:scope"
@@ -527,8 +527,8 @@ export const modules = {
           labelKey: "touchKeys:fly"
         }
       },
-      Lr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
-      mr = {
+      Ze = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+      ve = {
         0: "swords",
         1: "hammer",
         2: "cube",
@@ -536,320 +536,320 @@ export const modules = {
         5: "cookie"
       };
 
-    function Hr(MM) {
+    function re(VV) {
       let {
-        presence: rM,
-        portraitPhone: iM,
-        hidden: SM,
-        actionButtons: jM,
-        joystickFixed: aM,
-        keysAbove: PM,
-        auraBar: QM,
-        trayState: zM,
-        moved: mM
-      } = MM;
+        presence: eV,
+        portraitPhone: xV,
+        hidden: YV,
+        actionButtons: UV,
+        joystickFixed: yV,
+        keysAbove: pV,
+        auraBar: nV,
+        trayState: wV,
+        moved: vV
+      } = VV;
       const {
-        t: HM
-      } = (0, OM.A)(), {
-        faces: hM,
-        items: JM
-      } = rM, dM = MM => ({
-        HudPreviewGhost: (0, RM.H)(MM).some((MM => SM.has(MM)))
+        t: rV
+      } = (0, JV.A)(), {
+        faces: kV,
+        items: bV
+      } = eV, EV = VV => ({
+        HudPreviewGhost: (0, GV.A)(VV).some((VV => YV.has(VV)))
       });
-      return (0, GM.jsxs)("div", {
+      return (0, FV.jsxs)("div", {
         className: "InGameUi HudPreviewInGameUi",
-        children: [(0, GM.jsx)("div", {
+        children: [(0, FV.jsx)("div", {
           className: "InGameHeaderContainer Touchscreen",
-          children: (0, GM.jsxs)("div", {
+          children: (0, FV.jsxs)("div", {
             className: "InGameHeader",
-            children: [(0, GM.jsx)("div", {
+            children: [(0, FV.jsx)("div", {
               className: "InGameHeaderLogo",
               children: "bloxd.io"
-            }), (0, GM.jsx)("div", {
+            }), (0, FV.jsx)("div", {
               className: "InGameHeaderSpacer"
-            }), (0, GM.jsx)("div", {
+            }), (0, FV.jsx)("div", {
               className: "InGameHeaderGameName",
-              children: HM("hudLayout:previewGameName")
+              children: rV("hudLayout:previewGameName")
             })]
           })
-        }), (0, GM.jsx)("div", {
+        }), (0, FV.jsx)("div", {
           className: "TopLeftElements",
-          children: (0, GM.jsx)("div", {
+          children: (0, FV.jsx)("div", {
             className: "InGameHeaderAndChat",
-            children: (0, GM.jsxs)("div", {
+            children: (0, FV.jsxs)("div", {
               className: "Chat",
-              children: [(0, GM.jsx)("div", {
+              children: [(0, FV.jsx)("div", {
                 className: "ChatMessages HideScrollbar",
-                children: [HM("hudLayout:previewChatLine"), HM("hudLayout:previewChatJoined", {
+                children: [rV("hudLayout:previewChatLine"), rV("hudLayout:previewChatJoined", {
                   name: "Steve"
-                }), HM("hudLayout:previewChatJoined", {
+                }), rV("hudLayout:previewChatJoined", {
                   name: "Alex"
-                })].map((MM => (0, GM.jsx)("div", {
+                })].map((VV => (0, FV.jsx)("div", {
                   className: "MessageWrapper",
-                  children: (0, GM.jsx)("div", {
+                  children: (0, FV.jsx)("div", {
                     className: "TextFromServer",
-                    children: (0, GM.jsx)("div", {
+                    children: (0, FV.jsx)("div", {
                       className: "IndividualText",
-                      children: MM
+                      children: VV
                     })
                   })
-                }, MM)))
-              }), (0, GM.jsx)("button", {
+                }, VV)))
+              }), (0, FV.jsx)("button", {
                 type: "button",
                 tabIndex: -1,
-                className: nM()("ChatIconWrapper SmallTextLight", dM("chat")),
-                ...cM("chat"),
-                children: (0, GM.jsx)(uM.b, {
+                className: QV()("ChatIconWrapper SmallTextLight", EV("chat")),
+                ...OV("chat"),
+                children: (0, FV.jsx)(zV.b, {
                   name: "comment-dots",
                   className: "ChatIcon"
                 })
               })]
             })
           })
-        }), (0, GM.jsx)("div", {
+        }), (0, FV.jsx)("div", {
           className: "RightElements RightElementsTouchscreen",
-          children: (0, GM.jsxs)("div", {
+          children: (0, FV.jsxs)("div", {
             className: "TopRightElements",
-            children: [(0, GM.jsx)("div", {
+            children: [(0, FV.jsx)("div", {
               className: "TopRightElementsLeft",
-              children: (0, GM.jsx)("div", {
+              children: (0, FV.jsx)("div", {
                 className: "TopRightIconsContainer",
-                ...cM("menu"),
-                children: (0, GM.jsx)(jr, {
-                  portraitPhone: iM,
-                  icons: rM.rowIcons,
-                  pinnedIcons: rM.pinnedIcons,
-                  hidden: SM,
-                  trayState: zM,
-                  moved: mM
+                ...OV("menu"),
+                children: (0, FV.jsx)(Ue, {
+                  portraitPhone: xV,
+                  icons: eV.rowIcons,
+                  pinnedIcons: eV.pinnedIcons,
+                  hidden: YV,
+                  trayState: wV,
+                  moved: vV
                 })
               })
-            }), LM.featureFlags.useSocialFeatures && (0, GM.jsx)("div", {
+            }), ZV.featureFlags.useSocialFeatures && (0, FV.jsx)("div", {
               className: "TopRightElementsRight",
-              children: (0, GM.jsx)(nr, {})
+              children: (0, FV.jsx)(Qe, {})
             })]
           })
-        }), (0, GM.jsx)("div", {
+        }), (0, FV.jsx)("div", {
           className: "HudPreviewCrosshair"
-        }), (0, GM.jsx)("div", {
+        }), (0, FV.jsx)("div", {
           className: "TouchInteractHit HudPreviewInteract",
-          children: (0, GM.jsxs)("div", {
+          children: (0, FV.jsxs)("div", {
             className: "TouchInteractKey",
-            ...cM("interact"),
-            children: [(0, GM.jsx)("div", {
+            ...OV("interact"),
+            children: [(0, FV.jsx)("div", {
               className: "TouchInteractIcon",
-              children: (0, GM.jsx)(uM.b, {
+              children: (0, FV.jsx)(zV.b, {
                 name: "hand-back-point-up"
               })
-            }), (0, GM.jsx)("div", {
-              children: HM("hudLayout:previewInteract")
+            }), (0, FV.jsx)("div", {
+              children: rV("hudLayout:previewInteract")
             })]
           })
-        }), (0, GM.jsx)("div", {
+        }), (0, FV.jsx)("div", {
           className: "BottomCentre",
-          children: (0, GM.jsxs)("div", {
+          children: (0, FV.jsxs)("div", {
             className: "BottomElements",
-            children: [(0, GM.jsx)("div", {
+            children: [(0, FV.jsx)("div", {
               className: "BottomLeftElements Touch"
-            }), (0, GM.jsxs)("div", {
+            }), (0, FV.jsxs)("div", {
               className: "BottomMiddleElements",
-              children: [(0, GM.jsx)("div", {
+              children: [(0, FV.jsx)("div", {
                 className: "BottomScreenStatBarList",
-                ...cM("hotbar"),
-                children: (0, GM.jsx)("div", {
+                ...OV("hotbar"),
+                children: (0, FV.jsx)("div", {
                   className: "BottomScreenStatBarWrapper",
-                  children: (0, GM.jsxs)("div", {
+                  children: (0, FV.jsxs)("div", {
                     className: "BottomScreenStatBarBackground",
-                    children: [(0, GM.jsx)("div", {
+                    children: [(0, FV.jsx)("div", {
                       className: "BottomScreenStatBar HealthBar",
                       style: {
                         transform: "scaleX(0.8)",
                         transformOrigin: "left center"
                       }
-                    }), (0, GM.jsxs)("div", {
+                    }), (0, FV.jsxs)("div", {
                       className: "BottomScreenStatBarText SmallTextBold",
-                      children: [(0, GM.jsx)(uM.b, {
+                      children: [(0, FV.jsx)(zV.b, {
                         name: "heart"
                       }), " 80/100"]
                     })]
                   })
                 })
-              }), QM && (0, GM.jsxs)("div", {
+              }), nV && (0, FV.jsxs)("div", {
                 className: "AuraBarWrapper",
-                children: [(0, GM.jsxs)("div", {
+                children: [(0, FV.jsxs)("div", {
                   className: "AuraBarLabel SmallTextBold",
-                  children: [(0, GM.jsx)("img", {
+                  children: [(0, FV.jsx)("img", {
                     className: "AuraBarLabelImage",
-                    src: (0, TM.f)("glint"),
+                    src: (0, IV.e)("glint"),
                     alt: ""
-                  }), (0, GM.jsx)("div", {
+                  }), (0, FV.jsx)("div", {
                     className: "AuraBarLabelText",
                     children: "0"
                   })]
-                }), (0, GM.jsx)("div", {
+                }), (0, FV.jsx)("div", {
                   className: "AuraBar",
-                  children: (0, GM.jsx)("div", {
+                  children: (0, FV.jsx)("div", {
                     className: "AuraBarBackground",
                     style: {
                       width: "40%"
                     }
                   })
                 })]
-              }), (0, GM.jsx)("div", {
+              }), (0, FV.jsx)("div", {
                 className: "HotBarRow",
-                children: (0, GM.jsx)("div", {
-                  className: nM()("HotBarContainer Touch", {
-                    KeysAbove: PM
+                children: (0, FV.jsx)("div", {
+                  className: QV()("HotBarContainer Touch", {
+                    KeysAbove: pV
                   }),
-                  children: (0, GM.jsxs)("div", {
+                  children: (0, FV.jsxs)("div", {
                     className: "HotBar",
-                    ...cM("hotbar"),
-                    children: [(0, GM.jsxs)("div", {
-                      className: nM()("TouchInventoryKeys", {
-                        NoAuraBar: !QM
+                    ...OV("hotbar"),
+                    children: [(0, FV.jsxs)("div", {
+                      className: QV()("TouchInventoryKeys", {
+                        NoAuraBar: !nV
                       }),
-                      children: [(0, GM.jsx)("div", {
-                        className: nM()("TouchInventoryKey ShopKey", dM("shop"), {
-                          Hidden: !rM.shop
+                      children: [(0, FV.jsx)("div", {
+                        className: QV()("TouchInventoryKey ShopKey", EV("shop"), {
+                          Hidden: !eV.shop
                         }),
-                        ...cM("shop"),
-                        children: (0, GM.jsx)("div", {
+                        ...OV("shop"),
+                        children: (0, FV.jsx)("div", {
                           className: "UiItemIcon SmallTextBold",
-                          children: (0, GM.jsx)("div", {
+                          children: (0, FV.jsx)("div", {
                             className: "ScaleOnHover",
-                            children: (0, GM.jsx)(uM.b, {
+                            children: (0, FV.jsx)(zV.b, {
                               name: "cart-shopping"
                             })
                           })
                         })
-                      }), (0, GM.jsx)("div", {
-                        className: nM()("TouchInventoryKey BagKey", dM("bag"), {
-                          Hidden: !rM.bag
+                      }), (0, FV.jsx)("div", {
+                        className: QV()("TouchInventoryKey BagKey", EV("bag"), {
+                          Hidden: !eV.bag
                         }),
-                        ...cM("bag"),
-                        children: (0, GM.jsx)("div", {
+                        ...OV("bag"),
+                        children: (0, FV.jsx)("div", {
                           className: "UiItemIcon SmallTextBold",
-                          children: (0, GM.jsx)("div", {
+                          children: (0, FV.jsx)("div", {
                             className: "ScaleOnHover",
-                            children: (0, GM.jsx)(uM.b, {
+                            children: (0, FV.jsx)(zV.b, {
                               name: "backpack"
                             })
                           })
                         })
                       })]
-                    }), (0, GM.jsx)(Pr, {
+                    }), (0, FV.jsx)(pe, {
                       next: !1,
-                      hidden: SM.has("arrows")
-                    }), (0, GM.jsxs)("div", {
+                      hidden: YV.has("arrows")
+                    }), (0, FV.jsxs)("div", {
                       className: "HotBarGameItemsContainer",
-                      children: [null !== JM && JM.map(((MM, rM) => (0, GM.jsx)(rr, {
-                        item: MM,
-                        selected: MM.classList.contains("Selected")
-                      }, rM))), null === JM && Lr.map((MM => {
-                        const rM = mr[MM];
-                        return (0, GM.jsx)("div", {
-                          className: nM()("InvenItem", {
-                            Selected: 0 === MM
+                      children: [null !== bV && bV.map(((VV, eV) => (0, FV.jsx)(ee, {
+                        item: VV,
+                        selected: VV.classList.contains("Selected")
+                      }, eV))), null === bV && Ze.map((VV => {
+                        const eV = ve[VV];
+                        return (0, FV.jsx)("div", {
+                          className: QV()("InvenItem", {
+                            Selected: 0 === VV
                           }),
-                          children: rM && (0, GM.jsx)("div", {
+                          children: eV && (0, FV.jsx)("div", {
                             className: "HudPreviewItem",
-                            children: (0, GM.jsx)(uM.b, {
-                              name: rM
+                            children: (0, FV.jsx)(zV.b, {
+                              name: eV
                             })
                           })
-                        }, MM)
+                        }, VV)
                       }))]
-                    }), (0, GM.jsx)(Pr, {
+                    }), (0, FV.jsx)(pe, {
                       next: !0,
-                      hidden: SM.has("arrows")
+                      hidden: YV.has("arrows")
                     })]
                   })
                 })
               })]
-            }), (0, GM.jsx)("div", {
+            }), (0, FV.jsx)("div", {
               className: "BottomRightElements",
-              children: (0, GM.jsxs)("div", {
+              children: (0, FV.jsxs)("div", {
                 className: "TouchComponentsButtons",
-                children: [null !== hM && VM.g.map((MM => {
-                  const rM = hM[MM];
-                  return rM && (0, GM.jsx)(Mr, {
-                    id: VM.e[MM],
-                    slot: MM,
-                    face: rM,
-                    className: Qr[MM],
-                    hidden: SM
-                  }, MM)
-                })), (0, VM.n)(rM, jM).map((MM => (0, GM.jsx)(Mr, {
-                  id: VM.e[MM],
-                  slot: MM,
-                  icon: zr[MM].icon,
-                  label: HM(zr[MM].labelKey),
+                children: [null !== kV && dV.i.map((VV => {
+                  const eV = kV[VV];
+                  return eV && (0, FV.jsx)(Ve, {
+                    id: dV.g[VV],
+                    slot: VV,
+                    face: eV,
+                    className: ne[VV],
+                    hidden: YV
+                  }, VV)
+                })), (0, dV.n)(eV, UV).map((VV => (0, FV.jsx)(Ve, {
+                  id: dV.g[VV],
+                  slot: VV,
+                  icon: we[VV].icon,
+                  label: rV(we[VV].labelKey),
                   className: "HudPreviewContextSlot",
-                  hidden: SM
-                }, MM))), null === hM && (0, GM.jsxs)(GM.Fragment, {
-                  children: [(0, GM.jsx)(Mr, {
+                  hidden: YV
+                }, VV))), null === kV && (0, FV.jsxs)(FV.Fragment, {
+                  children: [(0, FV.jsx)(Ve, {
                     id: "jump",
                     slot: "J",
                     icon: "arrow-up-from-line",
                     className: "JumpKey",
-                    hidden: SM
-                  }), (0, GM.jsx)(Mr, {
+                    hidden: YV
+                  }), (0, FV.jsx)(Ve, {
                     id: "crouch",
                     slot: "C",
                     icon: "arrow-down-to-line",
                     className: "CrouchKey",
-                    hidden: SM
-                  }), jM && (0, GM.jsxs)(GM.Fragment, {
-                    children: [(0, GM.jsx)(Mr, {
+                    hidden: YV
+                  }), UV && (0, FV.jsxs)(FV.Fragment, {
+                    children: [(0, FV.jsx)(Ve, {
                       id: "attack",
                       slot: "A",
                       icon: "swords",
-                      hidden: SM
-                    }), (0, GM.jsx)(Mr, {
+                      hidden: YV
+                    }), (0, FV.jsx)(Ve, {
                       id: "use",
                       slot: "U",
                       icon: "hand-back-point-up",
-                      hidden: SM
+                      hidden: YV
                     })]
-                  }), (0, VM.j)(jM).map((MM => (0, GM.jsx)(Mr, {
-                    id: VM.e[MM],
-                    slot: MM,
-                    icon: zr[MM].icon,
-                    label: HM(zr[MM].labelKey),
-                    hidden: SM
-                  }, MM))), (0, GM.jsx)(Mr, {
+                  }), (0, dV.l)(UV).map((VV => (0, FV.jsx)(Ve, {
+                    id: dV.g[VV],
+                    slot: VV,
+                    icon: we[VV].icon,
+                    label: rV(we[VV].labelKey),
+                    hidden: YV
+                  }, VV))), (0, FV.jsx)(Ve, {
                     id: "game",
                     slot: "G",
                     icon: "bolt",
-                    hidden: SM
+                    hidden: YV
                   })]
                 })]
               })
             })]
           })
-        }), (0, GM.jsxs)("div", {
+        }), (0, FV.jsxs)("div", {
           className: "TouchMovementWrapper",
-          children: [(0, GM.jsx)("div", {
+          children: [(0, FV.jsx)("div", {
             className: "JoystickZone HudPreviewJoystickZone",
-            children: (0, GM.jsxs)("div", {
-              className: nM()("Joystick Resting HudPreviewJoystick", {
-                Floating: !aM
+            children: (0, FV.jsxs)("div", {
+              className: QV()("Joystick Resting HudPreviewJoystick", {
+                Floating: !yV
               }),
-              ...cM("joystick"),
-              children: [(0, GM.jsx)("div", {
+              ...OV("joystick"),
+              children: [(0, FV.jsx)("div", {
                 className: "JoystickBase"
-              }), (0, GM.jsx)("div", {
+              }), (0, FV.jsx)("div", {
                 className: "JoystickKnob"
               })]
             })
-          }), rM.sprint && (0, GM.jsx)("div", {
-            className: nM()("TouchSprintHit", dM("sprint"), {
-              AtHome: !aM
+          }), eV.sprint && (0, FV.jsx)("div", {
+            className: QV()("TouchSprintHit", EV("sprint"), {
+              AtHome: !yV
             }),
-            ...cM("sprint"),
-            children: (0, GM.jsx)("div", {
+            ...OV("sprint"),
+            children: (0, FV.jsx)("div", {
               className: "TouchKey TouchSprintKey Lit",
-              children: (0, GM.jsx)(uM.b, {
+              children: (0, FV.jsx)(zV.b, {
                 name: "person-running"
               })
             })
@@ -858,1050 +858,1050 @@ export const modules = {
       })
     }
 
-    function hr() {
-      const [MM, rM] = (0, SM.useState)({}), iM = (0, SM.useCallback)((MM => {
-        rM((rM => [...new Set([...Object.keys(rM), ...Object.keys(MM)])].every((iM => rM[iM] === MM[iM])) ? rM : MM))
+    function ke() {
+      const [VV, eV] = (0, YV.useState)({}), xV = (0, YV.useCallback)((VV => {
+        eV((eV => [...new Set([...Object.keys(eV), ...Object.keys(VV)])].every((xV => eV[xV] === VV[xV])) ? eV : VV))
       }), []);
-      return [MM, iM]
+      return [VV, xV]
     }
-    const Jr = .05;
+    const be = .05;
 
-    function dr(MM) {
-      var rM;
+    function Ee(VV) {
+      var eV;
       let {
-        selected: iM,
-        layout: SM,
-        actionButtons: jM,
-        keyNames: aM,
-        overlaps: PM,
-        scaleCaps: zM,
-        joystickFixed: LM,
-        onScale: mM,
-        onHidden: HM,
-        onReset: hM,
-        locked: JM,
-        lockable: dM,
-        onLocked: yM,
-        extra: lM
-      } = MM;
+        selected: xV,
+        layout: YV,
+        actionButtons: UV,
+        keyNames: yV,
+        overlaps: pV,
+        scaleCaps: wV,
+        joystickFixed: ZV,
+        onScale: vV,
+        onHidden: rV,
+        onReset: kV,
+        locked: bV,
+        lockable: EV,
+        onLocked: BV,
+        extra: jV
+      } = VV;
       const {
-        t: EM
-      } = (0, OM.A)(), UM = iM ? RM.f[iM] : null, CM = null !== iM && JM.has(iM), eM = (iM && SM.hudElements[iM] || pM.k)[2], bM = null !== (rM = iM && zM[iM]) && void 0 !== rM ? rM : pM.f, wM = MM => {
-        iM && mM(iM, Math.min(bM, Math.round(100 * (eM + .1 * MM)) / 100))
+        t: qV
+      } = (0, JV.A)(), tV = xV ? GV.i[xV] : null, TV = null !== xV && bV.has(xV), PV = (xV && YV.hudElements[xV] || WV.q)[2], AV = null !== (eV = xV && wV[xV]) && void 0 !== eV ? eV : WV.k, NV = VV => {
+        xV && vV(xV, Math.min(AV, Math.round(100 * (PV + .1 * VV)) / 100))
       };
-      return (0, GM.jsxs)(GM.Fragment, {
-        children: [(0, GM.jsxs)("div", {
-          className: nM()("HudQuickName SmallTextBold", {
-            Overlap: PM.length > 0
+      return (0, FV.jsxs)(FV.Fragment, {
+        children: [(0, FV.jsxs)("div", {
+          className: QV()("HudQuickName SmallTextBold", {
+            Overlap: pV.length > 0
           }),
-          children: [PM.length > 0 && (0, GM.jsx)(uM.b, {
+          children: [pV.length > 0 && (0, FV.jsx)(zV.b, {
             name: "triangle-exclamation"
-          }), UM ? (0, RM.s)(UM.id, jM, EM, aM) : EM("hudLayout:fullScreenHint"), PM.length > 0 && (0, GM.jsx)("span", {
+          }), tV ? (0, GV.u)(tV.id, UV, qV, yV) : qV("hudLayout:fullScreenHint"), pV.length > 0 && (0, FV.jsx)("span", {
             className: "HudQuickOverlap",
-            children: EM("hudLayout:overlapsShort", {
-              names: (0, RM.q)(PM, jM, EM, aM)
+            children: qV("hudLayout:overlapsShort", {
+              names: (0, GV.r)(pV, UV, qV, yV)
             })
           })]
-        }), (null === UM || void 0 === UM ? void 0 : UM.scale) && (0, GM.jsxs)("div", {
+        }), (null === tV || void 0 === tV ? void 0 : tV.scale) && (0, FV.jsxs)("div", {
           className: "HudQuickSize",
-          children: [(0, GM.jsx)(QM.V, {
-            disabled: CM || eM <= pM.j,
-            ariaLabel: EM("hudLayout:smaller"),
+          children: [(0, FV.jsx)(nV.M, {
+            disabled: TV || PV <= WV.o,
+            ariaLabel: qV("hudLayout:smaller"),
             onClick: () => {
-              wM(-1)
+              NV(-1)
             },
-            children: (0, GM.jsx)(uM.b, {
+            children: (0, FV.jsx)(zV.b, {
               name: "minus"
             })
-          }), (0, GM.jsx)("span", {
+          }), (0, FV.jsx)("span", {
             className: "HudQuickSizeValue",
-            children: `${Math.round(100*eM)}%`
-          }), (0, GM.jsx)(QM.V, {
-            disabled: CM || eM >= bM,
-            ariaLabel: EM("hudLayout:larger"),
+            children: `${Math.round(100*PV)}%`
+          }), (0, FV.jsx)(nV.M, {
+            disabled: TV || PV >= AV,
+            ariaLabel: qV("hudLayout:larger"),
             onClick: () => {
-              wM(1)
+              NV(1)
             },
-            children: (0, GM.jsx)(uM.b, {
+            children: (0, FV.jsx)(zV.b, {
               name: "plus"
             })
           })]
-        }), (UM || lM) && (0, GM.jsxs)("div", {
+        }), (tV || jV) && (0, FV.jsxs)("div", {
           className: "HudQuickActions",
-          children: [UM && (0, GM.jsxs)(GM.Fragment, {
-            children: [(0, GM.jsx)(kM, {
-              id: UM.id,
-              actionButtons: jM,
-              keyNames: aM,
-              locked: CM,
-              lockable: dM(UM.id),
-              onLocked: yM
-            }), (0, GM.jsx)(sM, {
-              id: UM.id,
-              elements: SM.hudElements,
-              actionButtons: jM,
-              keyNames: aM,
-              onHidden: HM
-            }), (0, GM.jsx)(DM, {
-              id: UM.id,
-              elements: SM.hudElements,
-              actionButtons: jM,
-              keyNames: aM,
-              locked: CM,
-              onReset: hM
-            }), NM(UM.id, LM) && (0, GM.jsx)(AM, {})]
-          }), lM]
+          children: [tV && (0, FV.jsxs)(FV.Fragment, {
+            children: [(0, FV.jsx)(iV, {
+              id: tV.id,
+              actionButtons: UV,
+              keyNames: yV,
+              locked: TV,
+              lockable: EV(tV.id),
+              onLocked: BV
+            }), (0, FV.jsx)(gV, {
+              id: tV.id,
+              elements: YV.hudElements,
+              actionButtons: UV,
+              keyNames: yV,
+              onHidden: rV
+            }), (0, FV.jsx)(DV, {
+              id: tV.id,
+              elements: YV.hudElements,
+              actionButtons: UV,
+              keyNames: yV,
+              locked: TV,
+              onReset: kV
+            }), hV(tV.id, ZV) && (0, FV.jsx)(lV, {})]
+          }), jV]
         })]
       })
     }
-    var yr = iM(1130),
-      lr = iM(4796);
-    const Er = "HudPreviewDoc",
-      Ur = {
+    var Be = xV(1157),
+      je = xV(4882);
+    const qe = "HudPreviewDoc",
+      te = {
         hotbar: "TouchHotbar",
         keysAbove: "TouchHotbarKeysAbove",
         hasShop: "TouchHotbarHasShop",
         hasBag: "TouchHotbarHasBag"
       },
-      Gr = new Set([Er, ...Object.values(Ur)]),
-      Cr = new Set(pM.t.map(qM.x)),
-      er = new Set(qM.j),
-      br = 'style, link[rel="stylesheet"]';
+      Fe = new Set([qe, ...Object.values(te)]),
+      Te = new Set(WV.z.map(SV.w)),
+      Pe = new Set(SV.g),
+      Ae = 'style, link[rel="stylesheet"]';
 
-    function wr(MM, rM, iM, OM) {
-      const SM = new Map,
-        jM = new Set,
-        aM = new URL(MM.baseURI).origin,
-        PM = rM => {
-          var iM;
-          if ("LINK" !== rM.nodeName) return !0;
-          const OM = null === (iM = rM.getAttribute("href")) || void 0 === iM ? void 0 : iM.trim();
-          if (!OM) return !1;
+    function Ne(VV, eV, xV, JV) {
+      const YV = new Map,
+        UV = new Set,
+        yV = new URL(VV.baseURI).origin,
+        pV = eV => {
+          var xV;
+          if ("LINK" !== eV.nodeName) return !0;
+          const JV = null === (xV = eV.getAttribute("href")) || void 0 === xV ? void 0 : xV.trim();
+          if (!JV) return !1;
           try {
-            return new URL(OM, MM.baseURI).origin === aM
+            return new URL(JV, VV.baseURI).origin === yV
           } catch {
             return !1
           }
         };
-      let nM = null;
-      const QM = () => {
-          nM !== (0 === jM.size) && (nM = 0 === jM.size, null === OM || void 0 === OM || OM(nM))
+      let QV = null;
+      const nV = () => {
+          QV !== (0 === UV.size) && (QV = 0 === UV.size, null === JV || void 0 === JV || JV(QV))
         },
-        zM = MM => {
-          const rM = MM.cloneNode(!0);
-          if ("LINK" === rM.tagName) {
-            jM.add(rM);
-            const MM = () => {
-              jM.delete(rM), QM()
+        wV = VV => {
+          const eV = VV.cloneNode(!0);
+          if ("LINK" === eV.tagName) {
+            UV.add(eV);
+            const VV = () => {
+              UV.delete(eV), nV()
             };
-            rM.addEventListener("load", MM), rM.addEventListener("error", MM), iM && rM.addEventListener("load", iM)
+            eV.addEventListener("load", VV), eV.addEventListener("error", VV), xV && eV.addEventListener("load", xV)
           }
-          return rM
+          return eV
         },
-        LM = () => {
-          const OM = function(MM) {
-              const rM = [...MM.body.children].filter((MM => MM.matches(br)));
-              return [...MM.head.querySelectorAll(br), ...rM]
-            }(MM).filter(PM),
-            aM = new Set(OM);
-          for (const [MM, rM] of SM) aM.has(MM) || (rM.remove(), SM.delete(MM), jM.delete(rM));
-          let nM = null;
-          for (let MM = OM.length - 1; MM >= 0; MM--) {
-            const jM = OM[MM];
-            let aM = SM.get(jM);
-            aM ? "STYLE" === jM.tagName && aM.textContent !== jM.textContent && (aM.textContent = jM.textContent, null === iM || void 0 === iM || iM()) : (aM = zM(jM), SM.set(jM, aM), rM.head.insertBefore(aM, nM)), nM = aM
+        ZV = () => {
+          const JV = function(VV) {
+              const eV = [...VV.body.children].filter((VV => VV.matches(Ae)));
+              return [...VV.head.querySelectorAll(Ae), ...eV]
+            }(VV).filter(pV),
+            yV = new Set(JV);
+          for (const [VV, eV] of YV) yV.has(VV) || (eV.remove(), YV.delete(VV), UV.delete(eV));
+          let QV = null;
+          for (let VV = JV.length - 1; VV >= 0; VV--) {
+            const UV = JV[VV];
+            let yV = YV.get(UV);
+            yV ? "STYLE" === UV.tagName && yV.textContent !== UV.textContent && (yV.textContent = UV.textContent, null === xV || void 0 === xV || xV()) : (yV = wV(UV), YV.set(UV, yV), eV.head.insertBefore(yV, QV)), QV = yV
           }
-          QM()
+          nV()
         };
-      LM();
-      const mM = new MutationObserver(LM);
-      return mM.observe(MM.head, {
+      ZV();
+      const vV = new MutationObserver(ZV);
+      return vV.observe(VV.head, {
         childList: !0,
         subtree: !0,
         characterData: !0
-      }), mM.observe(MM.body, {
+      }), vV.observe(VV.body, {
         childList: !0
       }), () => {
-        mM.disconnect()
+        vV.disconnect()
       }
     }
 
-    function tr(MM, rM, iM) {
+    function Xe(VV, eV, xV) {
       let {
-        keysAbove: OM
-      } = iM;
-      const SM = [...MM.documentElement.classList].filter((MM => !Gr.has(MM) && !er.has(MM))),
-        jM = [...rM.documentElement.classList].filter((MM => er.has(MM))),
-        aM = [Er, Ur.hotbar, Ur.hasShop, Ur.hasBag];
-      OM && aM.push(Ur.keysAbove), rM.documentElement.className = [...SM, ...aM, ...jM].join(" ")
+        keysAbove: JV
+      } = xV;
+      const YV = [...VV.documentElement.classList].filter((VV => !Fe.has(VV) && !Pe.has(VV))),
+        UV = [...eV.documentElement.classList].filter((VV => Pe.has(VV))),
+        yV = [qe, te.hotbar, te.hasShop, te.hasBag];
+      JV && yV.push(te.keysAbove), eV.documentElement.className = [...YV, ...yV, ...UV].join(" ")
     }
-    const gr = ["--notchTop", "--notchRight", "--notchBottom", "--notchLeft"];
+    const Me = ["--notchTop", "--notchRight", "--notchBottom", "--notchLeft"];
 
-    function ur(MM, rM, iM, OM, SM) {
-      const jM = (0, pM.v)(iM, OM, "joystick"),
-        aM = (0, qM.z)((0, qM.R)(iM, OM, SM), OM),
-        PM = aM.classes.filter((MM => !Cr.has(MM))),
-        nM = rM.documentElement,
-        QM = iM.hudLayouts[OM].hudSafe,
-        zM = (0, qM.G)(QM, window.innerWidth, window.innerHeight, Rr(), QM ? (0, qM.T)(rM) : 0);
-      (0, qM.W)({
-        ...aM,
-        classes: PM
+    function ze(VV, eV, xV, JV, YV) {
+      const UV = (0, WV.C)(xV, JV, "joystick"),
+        yV = (0, SV.A)((0, SV.Q)(xV, JV, YV), JV),
+        pV = yV.classes.filter((VV => !Te.has(VV))),
+        QV = eV.documentElement,
+        nV = xV.hudLayouts[JV].hudSafe,
+        wV = (0, SV.F)(nV, window.innerWidth, window.innerHeight, Ge(), nV ? (0, SV.U)(eV) : 0);
+      (0, SV.V)({
+        ...yV,
+        classes: pV
       }, {
-        vars: nM,
-        safe: nM,
-        classes: nM
-      }), nM.style.setProperty("--preview-joystick-shift-left", `${zM[3]}px`), nM.style.setProperty("--preview-joystick-shift-bottom", `${zM[2]}px`), nM.style.setProperty("--preview-joystick-scale", String(jM[2])), (0, lr.c)(nM, rM, iM, OM);
-      for (const LM of gr) nM.style.setProperty(LM, MM.documentElement.style.getPropertyValue(LM) || "0px")
+        vars: QV,
+        safe: QV,
+        classes: QV
+      }), QV.style.setProperty("--preview-joystick-shift-left", `${wV[3]}px`), QV.style.setProperty("--preview-joystick-shift-bottom", `${wV[2]}px`), QV.style.setProperty("--preview-joystick-scale", String(UV[2])), (0, je.e)(QV, eV, xV, JV);
+      for (const ZV of Me) QV.style.setProperty(ZV, VV.documentElement.style.getPropertyValue(ZV) || "0px")
     }
 
-    function Rr() {
-      return (0, qM.O)(zM.d.get("notchSize"), window.innerWidth, window.innerHeight)
+    function Ge() {
+      return (0, SV.M)(wV.b.get("notchSize"), window.innerWidth, window.innerHeight)
     }
 
-    function pr(MM) {
-      return (0, qM.v)(Rr(), (0, qM.T)(MM))
+    function We(VV) {
+      return (0, SV.q)(Ge(), (0, SV.U)(VV))
     }
 
-    function Wr(MM, rM, iM) {
-      const OM = MM.documentElement.style,
-        SM = (0, qM.K)(rM),
-        jM = OM.getPropertyValue(SM);
+    function Re(VV, eV, xV) {
+      const JV = VV.documentElement.style,
+        YV = (0, SV.I)(eV),
+        UV = JV.getPropertyValue(YV);
       try {
-        return iM((MM => {
-          OM.setProperty(SM, String(MM))
+        return xV((VV => {
+          JV.setProperty(YV, String(VV))
         }))
       } finally {
-        "" === jM ? OM.removeProperty(SM) : OM.setProperty(SM, jM)
+        "" === UV ? JV.removeProperty(YV) : JV.setProperty(YV, UV)
       }
     }
 
-    function sr(MM, rM) {
-      const [iM, OM] = Wr(MM, "hotbar", (rM => {
-        const iM = iM => {
-          var OM, SM;
-          return rM(iM), null !== (OM = null === (SM = MM.querySelector(".HotBarGameItemsContainer")) || void 0 === SM ? void 0 : SM.getBoundingClientRect().width) && void 0 !== OM ? OM : 0
+    function ge(VV, eV) {
+      const [xV, JV] = Re(VV, "hotbar", (eV => {
+        const xV = xV => {
+          var JV, YV;
+          return eV(xV), null !== (JV = null === (YV = VV.querySelector(".HotBarGameItemsContainer")) || void 0 === YV ? void 0 : YV.getBoundingClientRect().width) && void 0 !== JV ? JV : 0
         };
-        return [iM(1), iM(pM.f)]
+        return [xV(1), xV(WV.k)]
       }));
-      return iM <= 0 ? pM.f : Math.min(pM.f, Math.max(1, Math.floor(OM / iM / rM + 1e-6) * rM))
+      return xV <= 0 ? WV.k : Math.min(WV.k, Math.max(1, Math.floor(JV / xV / eV + 1e-6) * eV))
     }
-    const Dr = 3,
-      kr = .5,
-      Zr = MM => MM.right - MM.left;
-    const or = (MM, rM) => Math.abs((0, XM.e)(MM).x - (0, XM.e)(rM).x) + Math.abs((0, XM.e)(MM).y - (0, XM.e)(rM).y) + Math.abs(Zr(MM) - Zr(rM));
+    const De = 3,
+      ie = .5,
+      Ce = VV => VV.right - VV.left;
+    const ae = (VV, eV) => Math.abs((0, HV.d)(VV).x - (0, HV.d)(eV).x) + Math.abs((0, HV.d)(VV).y - (0, HV.d)(eV).y) + Math.abs(Ce(VV) - Ce(eV));
 
-    function fr(MM, rM, iM, OM, SM) {
+    function oe(VV, eV, xV, JV, YV) {
       let {
-        canKeep: jM = () => !0,
-        passes: aM = Dr,
-        before: PM
+        canKeep: UV = () => !0,
+        passes: yV = De,
+        before: pV
       } = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : {};
-      const nM = rM.hudLayouts[iM].hudLocked.filter(jM);
-      if (0 === nM.length) return rM;
-      const QM = [...RM.d].filter((OM => !nM.includes(OM) && (0, pM.v)(MM, iM, OM).join() === (0, pM.v)(rM, iM, OM).join())),
-        zM = MM => {
-          const rM = (0, XM.M)(QM.flatMap((rM => MM[rM] ? [MM[rM]] : [])));
+      const QV = eV.hudLayouts[xV].hudLocked.filter(UV);
+      if (0 === QV.length) return eV;
+      const nV = [...GV.b].filter((JV => !QV.includes(JV) && (0, WV.C)(VV, xV, JV).join() === (0, WV.C)(eV, xV, JV).join())),
+        wV = VV => {
+          const eV = (0, HV.I)(nV.flatMap((eV => VV[eV] ? [VV[eV]] : [])));
           return {
-            ...MM,
-            cluster: null !== rM && void 0 !== rM ? rM : void 0
+            ...VV,
+            cluster: null !== eV && void 0 !== eV ? eV : void 0
           }
         };
-      let LM = null;
-      const mM = MM => {
-          LM = MM;
-          const rM = SM(MM);
-          return rM && {
-            ...rM,
-            boxes: zM(rM.boxes)
+      let ZV = null;
+      const vV = VV => {
+          ZV = VV;
+          const eV = YV(VV);
+          return eV && {
+            ...eV,
+            boxes: wV(eV.boxes)
           }
         },
-        HM = PM ? {
-          ...PM,
-          boxes: zM(PM.boxes)
-        } : mM(MM),
-        hM = HM && mM(rM);
-      if (!HM || !hM) return rM;
-      const JM = HM.boxes;
-      let dM = hM.boxes;
-      const yM = HM.keysAbove !== hM.keysAbove,
-        lM = yM || Boolean(HM.shopAlone) !== Boolean(hM.shopAlone),
-        EM = new Set(nM.filter((MM => !(0, RM.w)(MM) || !("bag" === MM ? yM : lM))));
-      let UM = rM;
-      for (let eM = 0; eM < aM && EM.size > 0; eM++) {
-        var GM, CM;
-        const MM = new Map;
-        for (const rM of EM) {
-          const SM = JM[rM],
-            jM = dM[rM],
-            aM = SM && jM ? Yr(rM, (0, pM.v)(UM, iM, rM), SM, jM, OM) : null;
-          aM ? MM.set(rM, aM) : EM.delete(rM)
+        rV = pV ? {
+          ...pV,
+          boxes: wV(pV.boxes)
+        } : vV(VV),
+        kV = rV && vV(eV);
+      if (!rV || !kV) return eV;
+      const bV = rV.boxes;
+      let EV = kV.boxes;
+      const BV = rV.keysAbove !== kV.keysAbove,
+        jV = BV || Boolean(rV.shopAlone) !== Boolean(kV.shopAlone),
+        qV = new Set(QV.filter((VV => !(0, GV.x)(VV) || !("bag" === VV ? BV : jV))));
+      let tV = eV;
+      for (let PV = 0; PV < yV && qV.size > 0; PV++) {
+        var FV, TV;
+        const VV = new Map;
+        for (const eV of qV) {
+          const YV = bV[eV],
+            UV = EV[eV],
+            yV = YV && UV ? ce(eV, (0, WV.C)(tV, xV, eV), YV, UV, JV) : null;
+          yV ? VV.set(eV, yV) : qV.delete(eV)
         }
-        if (0 === MM.size) break;
-        let SM = UM;
-        for (const [rM, OM] of MM) SM = (0, pM.cb)(SM, iM, rM, OM);
-        const jM = null === (GM = mM(SM)) || void 0 === GM ? void 0 : GM.boxes;
-        if (!jM) return rM;
-        let aM = UM;
-        for (const [rM, OM] of MM) {
-          const MM = jM[rM];
-          MM && or(JM[rM], MM) < or(JM[rM], dM[rM]) - kr ? aM = (0, pM.cb)(aM, iM, rM, OM) : EM.delete(rM)
+        if (0 === VV.size) break;
+        let YV = tV;
+        for (const [eV, JV] of VV) YV = (0, WV.mb)(YV, xV, eV, JV);
+        const UV = null === (FV = vV(YV)) || void 0 === FV ? void 0 : FV.boxes;
+        if (!UV) return eV;
+        let yV = tV;
+        for (const [eV, JV] of VV) {
+          const VV = UV[eV];
+          VV && ae(bV[eV], VV) < ae(bV[eV], EV[eV]) - ie ? yV = (0, WV.mb)(yV, xV, eV, JV) : qV.delete(eV)
         }
-        if (aM === UM) break;
-        const PM = [...MM.keys()].every((MM => EM.has(MM)));
-        UM = PM ? SM : aM;
-        const nM = PM ? jM : null === (CM = mM(UM)) || void 0 === CM ? void 0 : CM.boxes;
-        if (!nM) return rM;
-        dM = nM
+        if (yV === tV) break;
+        const pV = [...VV.keys()].every((VV => qV.has(VV)));
+        tV = pV ? YV : yV;
+        const QV = pV ? UV : null === (TV = vV(tV)) || void 0 === TV ? void 0 : TV.boxes;
+        if (!QV) return eV;
+        EV = QV
       }
-      return LM !== UM && SM(UM), UM
+      return ZV !== tV && YV(tV), tV
     }
 
-    function Yr(MM, rM, iM, OM, SM) {
-      let [jM, aM, PM] = rM;
-      const nM = pM.s[MM],
-        QM = {};
-      nM.scale && Zr(OM) > 0 && Math.abs(Zr(iM) - Zr(OM)) > kr && (QM.scale = Math.max(pM.j, Math.min(pM.f, PM * Zr(iM) / Zr(OM))));
-      const zM = (0, XM.e)(iM).x - (0, XM.e)(OM).x,
-        LM = (0, XM.e)(iM).y - (0, XM.e)(OM).y;
-      return nM.move && (Math.abs(zM) > kr || Math.abs(LM) > kr) && (QM.dx = jM + zM / SM.width, QM.dy = aM + LM / SM.height), void 0 === QM.scale && void 0 === QM.dx ? null : QM
+    function ce(VV, eV, xV, JV, YV) {
+      let [UV, yV, pV] = eV;
+      const QV = WV.y[VV],
+        nV = {};
+      QV.scale && Ce(JV) > 0 && Math.abs(Ce(xV) - Ce(JV)) > ie && (nV.scale = Math.max(WV.o, Math.min(WV.k, pV * Ce(xV) / Ce(JV))));
+      const wV = (0, HV.d)(xV).x - (0, HV.d)(JV).x,
+        ZV = (0, HV.d)(xV).y - (0, HV.d)(JV).y;
+      return QV.move && (Math.abs(wV) > ie || Math.abs(ZV) > ie) && (nV.dx = UV + wV / YV.width, nV.dy = yV + ZV / YV.height), void 0 === nV.scale && void 0 === nV.dx ? null : nV
     }
-    let Nr = 0;
+    let he = 0;
 
-    function Ar() {
-      return Nr > 0
+    function le() {
+      return he > 0
     }
-    const xr = MM => 0 === MM.dx && 0 === MM.dy,
-      vr = .001,
-      Fr = MM => Math.abs(MM.dx) >= 5e-4 || Math.abs(MM.dy) >= 5e-4 ? MM : {
-        dx: MM.dx,
-        dy: MM.dy < 0 ? -.001 : vr
+    const Le = VV => 0 === VV.dx && 0 === VV.dy,
+      fe = .001,
+      me = VV => Math.abs(VV.dx) >= 5e-4 || Math.abs(VV.dy) >= 5e-4 ? VV : {
+        dx: VV.dx,
+        dy: VV.dy < 0 ? -.001 : fe
       };
 
-    function Br(MM) {
+    function Ke(VV) {
       let {
-        preview: rM,
-        stageRef: iM,
-        ringRef: OM,
-        centreLineRef: jM,
-        snapCentre: aM,
-        ready: PM,
-        measure: nM,
-        k: QM,
-        viewport: zM,
-        boxes: LM,
-        pieces: mM,
-        selected: HM,
-        insets: hM,
-        layout: JM,
-        canMove: dM,
-        onSelect: yM,
-        onMove: lM
-      } = MM;
-      const EM = (0, SM.useRef)(null),
-        UM = (0, SM.useCallback)((() => null !== EM.current), []),
-        GM = (MM, rM) => {
-          if (!rM) return null;
-          const iM = (0, XM.e)(MM.origin),
-            OM = (0, XM.e)(rM),
-            SM = (MM.to.dx - MM.from.dx) * zM.width,
-            jM = (MM.to.dy - MM.from.dy) * zM.height,
-            aM = rM.right - rM.left,
-            PM = rM.bottom - rM.top;
+        preview: eV,
+        stageRef: xV,
+        ringRef: JV,
+        centreLineRef: UV,
+        snapCentre: yV,
+        ready: pV,
+        measure: QV,
+        k: nV,
+        viewport: wV,
+        boxes: ZV,
+        pieces: vV,
+        selected: rV,
+        insets: kV,
+        layout: bV,
+        canMove: EV,
+        onSelect: BV,
+        onMove: jV
+      } = VV;
+      const qV = (0, YV.useRef)(null),
+        tV = (0, YV.useCallback)((() => null !== qV.current), []),
+        FV = (VV, eV) => {
+          if (!eV) return null;
+          const xV = (0, HV.d)(VV.origin),
+            JV = (0, HV.d)(eV),
+            YV = (VV.to.dx - VV.from.dx) * wV.width,
+            UV = (VV.to.dy - VV.from.dy) * wV.height,
+            yV = eV.right - eV.left,
+            pV = eV.bottom - eV.top;
           return {
             skew: {
-              x: OM.x - iM.x - SM,
-              y: OM.y - iM.y - jM
+              x: JV.x - xV.x - YV,
+              y: JV.y - xV.y - UV
             },
             box: {
-              left: iM.x - aM / 2,
-              top: iM.y - PM / 2,
-              right: iM.x + aM / 2,
-              bottom: iM.y + PM / 2
+              left: xV.x - yV / 2,
+              top: xV.y - pV / 2,
+              right: xV.x + yV / 2,
+              bottom: xV.y + pV / 2
             }
           }
         },
-        CM = (MM, iM) => {
-          var SM;
-          const aM = EM.current;
-          if (!aM || aM.pointerId !== MM.pointerId) return;
-          EM.current = null, null === (SM = jM.current) || void 0 === SM || SM.classList.remove("Shown", "Snapped");
-          const PM = OM.current;
-          if (PM && null !== aM.ringStyle && PM.setAttribute("style", aM.ringStyle), iM && aM.moved) {
-            const MM = xr(aM.to) ? null : nM(aM.id),
-              rM = MM ? (0, XM.I)(MM, (0, XM.H)(zM.width, zM.height, hM)) : {
+        TV = (VV, xV) => {
+          var YV;
+          const yV = qV.current;
+          if (!yV || yV.pointerId !== VV.pointerId) return;
+          qV.current = null, null === (YV = UV.current) || void 0 === YV || YV.classList.remove("Shown", "Snapped");
+          const pV = JV.current;
+          if (pV && null !== yV.ringStyle && pV.setAttribute("style", yV.ringStyle), xV && yV.moved) {
+            const VV = Le(yV.to) ? null : QV(yV.id),
+              eV = VV ? (0, HV.F)(VV, (0, HV.E)(wV.width, wV.height, kV)) : {
                 x: 0,
                 y: 0
               },
-              iM = {
-                dx: aM.to.dx + rM.x / zM.width,
-                dy: aM.to.dy + rM.y / zM.height
+              xV = {
+                dx: yV.to.dx + eV.x / wV.width,
+                dy: yV.to.dy + eV.y / wV.height
               },
-              OM = xr(aM.to) ? iM : Fr(iM);
-            lM(aM.id, OM.dx, OM.dy)
-          } else rM(aM.id, null), iM && aM.tapPick && yM(aM.tapPick)
+              JV = Le(yV.to) ? xV : me(xV);
+            jV(yV.id, JV.dx, JV.dy)
+          } else eV(yV.id, null), xV && yV.tapPick && BV(yV.tapPick)
         };
       return {
-        busy: UM,
+        busy: tV,
         handlers: {
-          onPointerDown: MM => {
-            var rM;
-            if (!PM || EM.current || !MM.target.closest(".HudPreviewHandle")) return;
-            const OM = iM.current.getBoundingClientRect(),
-              SM = {
-                x: (MM.clientX - OM.left) / QM,
-                y: (MM.clientY - OM.top) / QM
+          onPointerDown: VV => {
+            var eV;
+            if (!pV || qV.current || !VV.target.closest(".HudPreviewHandle")) return;
+            const JV = xV.current.getBoundingClientRect(),
+              YV = {
+                x: (VV.clientX - JV.left) / nV,
+                y: (VV.clientY - JV.top) / nV
               },
-              jM = (0, XM.B)(SM, mM, 40 / QM),
-              aM = null !== HM ? RM.k.get(HM) : void 0,
-              nM = void 0 !== aM && null !== (0, XM.B)(SM, mM.filter((MM => {
+              UV = (0, HV.x)(YV, vV, 40 / nV),
+              yV = null !== rV ? GV.o.get(rV) : void 0,
+              QV = void 0 !== yV && null !== (0, HV.x)(YV, vV.filter((VV => {
                 let {
-                  id: rM
-                } = MM;
-                return aM.has(rM)
-              })), 40 / QM),
-              zM = "menu" === HM && void 0 !== LM.menu && (0, XM.i)(LM.menu, SM) && ("menu" === jM || null !== jM && (0, KM.s)(jM, JM.hudElements[jM])),
-              hM = nM ? HM : zM ? "menu" : null,
-              lM = null !== hM,
-              UM = null !== hM && void 0 !== hM ? hM : jM;
-            if (!UM) return;
-            if (function(MM) {
-                Nr++;
-                const rM = iM => {
-                  iM.pointerId === MM && (Nr = Math.max(0, Nr - 1), window.removeEventListener("pointerup", rM, !0), window.removeEventListener("pointercancel", rM, !0))
+                  id: eV
+                } = VV;
+                return yV.has(eV)
+              })), 40 / nV),
+              wV = "menu" === rV && void 0 !== ZV.menu && (0, HV.g)(ZV.menu, YV) && ("menu" === UV || null !== UV && (0, sV.v)(UV, bV.hudElements[UV])),
+              kV = QV ? rV : wV ? "menu" : null,
+              jV = null !== kV,
+              tV = null !== kV && void 0 !== kV ? kV : UV;
+            if (!tV) return;
+            if (function(VV) {
+                he++;
+                const eV = xV => {
+                  xV.pointerId === VV && (he = Math.max(0, he - 1), window.removeEventListener("pointerup", eV, !0), window.removeEventListener("pointercancel", eV, !0))
                 };
-                window.addEventListener("pointerup", rM, !0), window.addEventListener("pointercancel", rM, !0)
-              }(MM.pointerId), !dM(UM)) return void yM(lM && jM ? jM : UM);
-            yM(UM);
-            const [GM, CM] = null !== (rM = JM.hudElements[UM]) && void 0 !== rM ? rM : [0, 0], eM = {
-              dx: GM,
-              dy: CM
-            }, bM = {
+                window.addEventListener("pointerup", eV, !0), window.addEventListener("pointercancel", eV, !0)
+              }(VV.pointerId), !EV(tV)) return void BV(jV && UV ? UV : tV);
+            BV(tV);
+            const [FV, TV] = null !== (eV = bV.hudElements[tV]) && void 0 !== eV ? eV : [0, 0], PV = {
+              dx: FV,
+              dy: TV
+            }, AV = {
               skew: {
                 x: 0,
                 y: 0
               },
-              box: LM[UM]
+              box: ZV[tV]
             };
-            EM.current = {
-              id: UM,
-              pointerId: MM.pointerId,
-              startX: MM.clientX,
-              startY: MM.clientY,
-              origin: LM[UM],
-              from: eM,
-              to: eM,
+            qV.current = {
+              id: tV,
+              pointerId: VV.pointerId,
+              startX: VV.clientX,
+              startY: VV.clientY,
+              origin: ZV[tV],
+              from: PV,
+              to: PV,
               moved: !1,
-              home: xr(eM) ? {
-                centre: (0, XM.e)(LM[UM]),
-                anchor: bM
+              home: Le(PV) ? {
+                centre: (0, HV.d)(ZV[tV]),
+                anchor: AV
               } : null,
-              away: xr(eM) ? null : bM,
-              anchor: bM,
+              away: Le(PV) ? null : AV,
+              anchor: AV,
               ringStyle: null,
-              tapPick: lM ? jM : null
-            }, MM.currentTarget.setPointerCapture(MM.pointerId)
+              tapPick: jV ? UV : null
+            }, VV.currentTarget.setPointerCapture(VV.pointerId)
           },
-          onPointerMove: MM => {
-            const iM = EM.current;
-            if (!iM || iM.pointerId !== MM.pointerId) return;
-            const SM = MM.clientX - iM.startX,
-              PM = MM.clientY - iM.startY;
-            if (!iM.moved && Math.hypot(SM, PM) < 5) return;
-            const LM = !iM.moved;
-            var mM, HM;
-            (iM.moved = !0, LM) && (iM.ringStyle = null !== (mM = null === (HM = OM.current) || void 0 === HM ? void 0 : HM.getAttribute("style")) && void 0 !== mM ? mM : null);
-            const JM = (0, XM.H)(zM.width, zM.height, hM);
-            if (!iM.home) {
-              var dM;
-              iM.to = {
+          onPointerMove: VV => {
+            const xV = qV.current;
+            if (!xV || xV.pointerId !== VV.pointerId) return;
+            const YV = VV.clientX - xV.startX,
+              pV = VV.clientY - xV.startY;
+            if (!xV.moved && Math.hypot(YV, pV) < 5) return;
+            const ZV = !xV.moved;
+            var vV, rV;
+            (xV.moved = !0, ZV) && (xV.ringStyle = null !== (vV = null === (rV = JV.current) || void 0 === rV ? void 0 : rV.getAttribute("style")) && void 0 !== vV ? vV : null);
+            const bV = (0, HV.E)(wV.width, wV.height, kV);
+            if (!xV.home) {
+              var EV;
+              xV.to = {
                 dx: 0,
                 dy: 0
-              }, rM(iM.id, iM.to);
-              const MM = nM(iM.id),
-                OM = null !== (dM = GM(iM, MM)) && void 0 !== dM ? dM : {
+              }, eV(xV.id, xV.to);
+              const VV = QV(xV.id),
+                JV = null !== (EV = FV(xV, VV)) && void 0 !== EV ? EV : {
                   skew: {
                     x: 0,
                     y: 0
                   },
-                  box: iM.origin
+                  box: xV.origin
                 },
-                SM = (0, XM.e)(iM.origin);
-              iM.home = {
-                centre: MM ? (0, XM.e)(MM) : {
-                  x: SM.x - iM.from.dx * zM.width,
-                  y: SM.y - iM.from.dy * zM.height
+                YV = (0, HV.d)(xV.origin);
+              xV.home = {
+                centre: VV ? (0, HV.d)(VV) : {
+                  x: YV.x - xV.from.dx * wV.width,
+                  y: YV.y - xV.from.dy * wV.height
                 },
-                anchor: OM
+                anchor: JV
               }
             }
-            const yM = iM.home;
-            let lM = !1;
-            const UM = MM => {
-                lM = !1;
-                let OM = (0, XM.s)(MM.box, SM / QM, PM / QM, JM);
-                const jM = zM.width / 2;
-                if (aM && Math.abs((0, XM.e)(iM.origin).x + OM.x - jM) <= 8 / QM) {
-                  const rM = jM - (0, XM.e)(iM.origin).x,
-                    SM = (0, XM.s)(MM.box, rM, OM.y, JM);
-                  lM = Math.abs(SM.x - rM) < .01, lM && (OM = SM)
+            const BV = xV.home;
+            let jV = !1;
+            const tV = VV => {
+                jV = !1;
+                let JV = (0, HV.q)(VV.box, YV / nV, pV / nV, bV);
+                const UV = wV.width / 2;
+                if (yV && Math.abs((0, HV.d)(xV.origin).x + JV.x - UV) <= 8 / nV) {
+                  const eV = UV - (0, HV.d)(xV.origin).x,
+                    YV = (0, HV.q)(VV.box, eV, JV.y, bV);
+                  jV = Math.abs(YV.x - eV) < .01, jV && (JV = YV)
                 }
-                const nM = (0, XM.z)(iM.from, OM.x - MM.skew.x, OM.y - MM.skew.y, zM.width, zM.height);
-                iM.to = Fr(nM), iM.anchor = MM, rM(iM.id, iM.to)
+                const QV = (0, HV.w)(xV.from, JV.x - VV.skew.x, JV.y - VV.skew.y, wV.width, wV.height);
+                xV.to = me(QV), xV.anchor = VV, eV(xV.id, xV.to)
               },
-              CM = (0, XM.s)(yM.anchor.box, SM / QM, PM / QM, JM),
-              eM = jM.current,
-              bM = (0, XM.e)(iM.origin),
-              wM = ((0, pM.L)(iM.id) ? 20 : 6) / QM;
-            if (Math.abs(bM.x + CM.x - yM.centre.x) <= wM && Math.abs(bM.y + CM.y - yM.centre.y) <= wM) iM.to = {
+              TV = (0, HV.q)(BV.anchor.box, YV / nV, pV / nV, bV),
+              PV = UV.current,
+              AV = (0, HV.d)(xV.origin),
+              NV = ((0, WV.T)(xV.id) ? 20 : 6) / nV;
+            if (Math.abs(AV.x + TV.x - BV.centre.x) <= NV && Math.abs(AV.y + TV.y - BV.centre.y) <= NV) xV.to = {
               dx: 0,
               dy: 0
-            }, iM.anchor = yM.anchor, lM = aM && Math.abs(yM.centre.x - zM.width / 2) < 1, rM(iM.id, iM.to);
-            else if (iM.away) UM(iM.away);
+            }, xV.anchor = BV.anchor, jV = yV && Math.abs(BV.centre.x - wV.width / 2) < 1, eV(xV.id, xV.to);
+            else if (xV.away) tV(xV.away);
             else {
-              var tM;
-              UM(yM.anchor), iM.away = null !== (tM = GM(iM, nM(iM.id))) && void 0 !== tM ? tM : yM.anchor, UM(iM.away)
+              var XV;
+              tV(BV.anchor), xV.away = null !== (XV = FV(xV, QV(xV.id))) && void 0 !== XV ? XV : BV.anchor, tV(xV.away)
             }
-            null === eM || void 0 === eM || eM.classList.add("Shown"), null === eM || void 0 === eM || eM.classList.toggle("Snapped", lM), (MM => {
-              const rM = OM.current;
-              if (rM) {
+            null === PV || void 0 === PV || PV.classList.add("Shown"), null === PV || void 0 === PV || PV.classList.toggle("Snapped", jV), (VV => {
+              const eV = JV.current;
+              if (eV) {
                 const {
-                  skew: iM,
-                  box: OM
-                } = MM.anchor;
-                rM.style.left = OM.left * QM + "px", rM.style.top = OM.top * QM + "px", rM.style.width = (OM.right - OM.left) * QM + "px", rM.style.height = (OM.bottom - OM.top) * QM + "px", rM.style.translate = `${((MM.to.dx-MM.from.dx)*zM.width+iM.x)*QM}px ${((MM.to.dy-MM.from.dy)*zM.height+iM.y)*QM}px`
+                  skew: xV,
+                  box: JV
+                } = VV.anchor;
+                eV.style.left = JV.left * nV + "px", eV.style.top = JV.top * nV + "px", eV.style.width = (JV.right - JV.left) * nV + "px", eV.style.height = (JV.bottom - JV.top) * nV + "px", eV.style.translate = `${((VV.to.dx-VV.from.dx)*wV.width+xV.x)*nV}px ${((VV.to.dy-VV.from.dy)*wV.height+xV.y)*nV}px`
               }
-            })(iM)
+            })(xV)
           },
-          onPointerUp: MM => {
-            CM(MM, !0)
+          onPointerUp: VV => {
+            TV(VV, !0)
           },
-          onPointerCancel: MM => {
-            CM(MM, !1)
+          onPointerCancel: VV => {
+            TV(VV, !1)
           }
         }
       }
     }
-    var Xr = iM(9498);
+    var He = xV(9513);
 
-    function Ir(MM, rM) {
-      return Object.keys(MM).filter((MM => MM !== rM)).map((rM => MM[rM]))
+    function ue(VV, eV) {
+      return Object.keys(VV).filter((VV => VV !== eV)).map((eV => VV[eV]))
     }
 
-    function Kr(MM) {
-      return MM.map((MM => {
+    function se(VV) {
+      return VV.map((VV => {
         let {
-          id: rM,
-          box: iM
-        } = MM;
-        return `${rM}:${iM.left},${iM.top},${iM.right},${iM.bottom}`
+          id: eV,
+          box: xV
+        } = VV;
+        return `${eV}:${xV.left},${xV.top},${xV.right},${xV.bottom}`
       })).join(";")
     }
 
-    function qr(MM) {
-      const rM = [],
-        iM = rM => (0, pM.L)(rM) && !MM.documentElement.classList.contains((0, qM.C)(rM));
-      for (const PM of MM.querySelectorAll(`[${RM.e}]`)) {
-        const MM = iM(PM.getAttribute(RM.e)) ? PM.querySelector(".ScaleOnHover") : null,
-          OM = (null !== MM && void 0 !== MM ? MM : PM).getBoundingClientRect();
-        (OM.width > 0 || OM.height > 0) && rM.push({
-          id: PM.getAttribute(RM.e),
-          box: (0, XM.j)(OM)
+    function Se(VV) {
+      const eV = [],
+        xV = eV => (0, WV.T)(eV) && !VV.documentElement.classList.contains((0, SV.B)(eV));
+      for (const pV of VV.querySelectorAll(`[${GV.f}]`)) {
+        const VV = xV(pV.getAttribute(GV.f)) ? pV.querySelector(".ScaleOnHover") : null,
+          JV = (null !== VV && void 0 !== VV ? VV : pV).getBoundingClientRect();
+        (JV.width > 0 || JV.height > 0) && eV.push({
+          id: pV.getAttribute(GV.f),
+          box: (0, HV.h)(JV)
         })
       }
-      const OM = MM => (0, XM.M)(rM.filter((rM => {
+      const JV = VV => (0, HV.I)(eV.filter((eV => {
           let {
-            id: iM
-          } = rM;
-          return MM(iM)
-        })).map((MM => {
+            id: xV
+          } = eV;
+          return VV(xV)
+        })).map((VV => {
           let {
-            box: rM
-          } = MM;
-          return rM
+            box: eV
+          } = VV;
+          return eV
         }))),
-        SM = {};
-      for (const PM of new Set(rM.map((MM => MM.id)))) SM[PM] = OM((MM => MM === PM));
-      for (const [PM, nM] of RM.k) {
-        const MM = OM((MM => nM.has(MM)));
-        MM && (SM[PM] = MM)
+        YV = {};
+      for (const pV of new Set(eV.map((VV => VV.id)))) YV[pV] = JV((VV => VV === pV));
+      for (const [pV, QV] of GV.o) {
+        const VV = JV((VV => QV.has(VV)));
+        VV && (YV[pV] = VV)
       }
-      const jM = MM.querySelector(".TouchInventoryKeys"),
-        aM = jM ? (0, XM.j)(jM.getBoundingClientRect()) : null;
+      const UV = VV.querySelector(".TouchInventoryKeys"),
+        yV = UV ? (0, HV.h)(UV.getBoundingClientRect()) : null;
       return {
-        boxes: SM,
-        pieces: rM,
-        pairHome: aM
+        boxes: YV,
+        pieces: eV,
+        pairHome: yV
       }
     }
 
-    function Tr(MM, rM, iM) {
-      const OM = rM.right - rM.left,
-        SM = rM.bottom - rM.top;
-      return Wr(MM, "cluster", (rM => {
-        const jM = iM => {
-            rM(iM);
-            const OM = [...MM.querySelectorAll(`[${RM.e}]:not(.HudPreviewGhost)`)].filter((MM => RM.d.has(MM.getAttribute(RM.e)))).map((MM => (0, XM.j)(MM.getBoundingClientRect()))),
-              SM = (0, XM.M)(OM);
-            return SM ? {
-              w: SM.right - SM.left,
-              h: SM.bottom - SM.top
+    function Ie(VV, eV, xV) {
+      const JV = eV.right - eV.left,
+        YV = eV.bottom - eV.top;
+      return Re(VV, "cluster", (eV => {
+        const UV = xV => {
+            eV(xV);
+            const JV = [...VV.querySelectorAll(`[${GV.f}]:not(.HudPreviewGhost)`)].filter((VV => GV.b.has(VV.getAttribute(GV.f)))).map((VV => (0, HV.h)(VV.getBoundingClientRect()))),
+              YV = (0, HV.I)(JV);
+            return YV ? {
+              w: YV.right - YV.left,
+              h: YV.bottom - YV.top
             } : null
           },
-          aM = MM => !MM || MM.w <= OM && MM.h <= SM,
-          PM = jM(1),
-          nM = jM(pM.f);
-        if (!PM || aM(nM)) return pM.f;
-        const QM = (MM, rM, iM) => rM > MM ? 1 + (iM - MM) * (pM.f - 1) / (rM - MM) : pM.f;
-        let zM = Math.floor(Math.min(pM.f, QM(PM.w, nM.w, OM), QM(PM.h, nM.h, SM)) / iM + 1e-6) * iM;
-        for (; zM > 1 && !aM(jM(zM));) zM = Math.round(100 * (zM - iM)) / 100;
-        return Math.max(1, zM)
+          yV = VV => !VV || VV.w <= JV && VV.h <= YV,
+          pV = UV(1),
+          QV = UV(WV.k);
+        if (!pV || yV(QV)) return WV.k;
+        const nV = (VV, eV, xV) => eV > VV ? 1 + (xV - VV) * (WV.k - 1) / (eV - VV) : WV.k;
+        let wV = Math.floor(Math.min(WV.k, nV(pV.w, QV.w, JV), nV(pV.h, QV.h, YV)) / xV + 1e-6) * xV;
+        for (; wV > 1 && !yV(UV(wV));) wV = Math.round(100 * (wV - xV)) / 100;
+        return Math.max(1, wV)
       }))
     }
 
-    function Vr(MM) {
-      tr(document, MM, {
+    function de(VV) {
+      Xe(document, VV, {
         keysAbove: !1
       });
-      const rM = parseFloat(getComputedStyle(MM.documentElement).getPropertyValue("--touch-hotbar-ends-spare")),
-        iM = Number.isFinite(rM) && rM < 0;
-      return tr(document, MM, {
-        keysAbove: iM
-      }), (0, Xr.e)(MM), iM
+      const eV = parseFloat(getComputedStyle(VV.documentElement).getPropertyValue("--touch-hotbar-ends-spare")),
+        xV = Number.isFinite(eV) && eV < 0;
+      return Xe(document, VV, {
+        keysAbove: xV
+      }), (0, He.b)(VV), xV
     }
 
-    function cr(MM) {
-      const rM = MM.querySelector(".TouchInventoryKey.ShopKey");
-      return null !== rM && "1" === getComputedStyle(rM).getPropertyValue("--touch-shop-above").trim()
+    function Oe(VV) {
+      const eV = VV.querySelector(".TouchInventoryKey.ShopKey");
+      return null !== eV && "1" === getComputedStyle(eV).getPropertyValue("--touch-shop-above").trim()
     }
 
-    function Mi(MM, rM) {
+    function Vx(VV, eV) {
       let {
-        layout: iM,
-        orientation: OM,
-        viewport: jM,
-        replicaKey: aM,
-        joystickFixed: PM,
-        busy: nM
-      } = rM;
-      const [QM, zM] = (0, SM.useState)(null), [LM, mM] = (0, SM.useState)({
+        layout: xV,
+        orientation: JV,
+        viewport: UV,
+        replicaKey: yV,
+        joystickFixed: pV,
+        busy: QV
+      } = eV;
+      const [nV, wV] = (0, YV.useState)(null), [ZV, vV] = (0, YV.useState)({
         boxes: {},
         pieces: []
-      }), [HM, hM] = (0, SM.useState)({
+      }), [rV, kV] = (0, YV.useState)({
         top: 0,
         right: 0,
         bottom: 0,
         left: 0
-      }), [JM, dM] = (0, SM.useState)(!1), [yM, lM] = (0, SM.useState)(!1), [EM, UM] = (0, SM.useState)(!1), GM = (0, SM.useCallback)((MM => {
-        lM(MM), MM && UM(!0)
-      }), []), CM = iM.hudLayouts[OM].hudSafe;
-      (0, SM.useLayoutEffect)((() => {
-        const rM = MM.current.contentDocument;
-        rM.open(), rM.write("<!DOCTYPE html><html><head></head><body></body></html>"), rM.close(), zM(rM)
-      }), [MM]);
-      const eM = (0, SM.useCallback)((() => {
-          QM && ((0, KM.v)(QM), mM(qr(QM)), hM(function(MM, rM) {
-            const iM = pr(MM),
-              [OM, SM, jM, aM] = rM ? (0, qM.w)(rM, window.innerWidth, window.innerHeight, iM) : iM;
+      }), [bV, EV] = (0, YV.useState)(!1), [BV, jV] = (0, YV.useState)(!1), [qV, tV] = (0, YV.useState)(!1), FV = (0, YV.useCallback)((VV => {
+        jV(VV), VV && tV(!0)
+      }), []), TV = xV.hudLayouts[JV].hudSafe;
+      (0, YV.useLayoutEffect)((() => {
+        const eV = VV.current.contentDocument;
+        eV.open(), eV.write("<!DOCTYPE html><html><head></head><body></body></html>"), eV.close(), wV(eV)
+      }), [VV]);
+      const PV = (0, YV.useCallback)((() => {
+          nV && ((0, sV.z)(nV), vV(Se(nV)), kV(function(VV, eV) {
+            const xV = We(VV),
+              [JV, YV, UV, yV] = eV ? (0, SV.t)(eV, window.innerWidth, window.innerHeight, xV) : xV;
             return {
-              top: OM,
-              right: SM,
-              bottom: jM,
-              left: aM
+              top: JV,
+              right: YV,
+              bottom: UV,
+              left: yV
             }
-          }(QM, CM)))
-        }), [QM, CM]),
-        bM = (0, SM.useCallback)((() => {
-          QM && dM(Vr(QM))
-        }), [QM]),
-        wM = (0, SM.useRef)((() => {}));
-      return wM.current = () => {
-        bM(), nM() || eM()
-      }, (0, SM.useLayoutEffect)((() => {
-        if (QM) return wr(document, QM, (() => {
-          wM.current()
-        }), GM)
-      }), [QM, GM]), (0, SM.useLayoutEffect)(bM, [bM, jM]), (0, SM.useLayoutEffect)((() => {
-        QM && (tr(document, QM, {
-          keysAbove: JM
-        }), ur(document, QM, iM, OM, PM), bM(), eM())
-      }), [QM, iM, OM, JM, aM, PM, jM, eM, bM]), (0, SM.useEffect)((() => {
-        var MM;
-        if (!QM) return;
-        const rM = new ResizeObserver((() => {
-          nM() || eM()
+          }(nV, TV)))
+        }), [nV, TV]),
+        AV = (0, YV.useCallback)((() => {
+          nV && EV(de(nV))
+        }), [nV]),
+        NV = (0, YV.useRef)((() => {}));
+      return NV.current = () => {
+        AV(), QV() || PV()
+      }, (0, YV.useLayoutEffect)((() => {
+        if (nV) return Ne(document, nV, (() => {
+          NV.current()
+        }), FV)
+      }), [nV, FV]), (0, YV.useLayoutEffect)(AV, [AV, UV]), (0, YV.useLayoutEffect)((() => {
+        nV && (Xe(document, nV, {
+          keysAbove: bV
+        }), ze(document, nV, xV, JV, pV), AV(), PV())
+      }), [nV, xV, JV, bV, yV, pV, UV, PV, AV]), (0, YV.useEffect)((() => {
+        var VV;
+        if (!nV) return;
+        const eV = new ResizeObserver((() => {
+          QV() || PV()
         }));
-        for (const iM of QM.querySelectorAll(`[${RM.e}]`)) rM.observe(iM);
-        return null === (MM = QM.fonts) || void 0 === MM || MM.ready.then(eM), () => {
-          rM.disconnect()
+        for (const xV of nV.querySelectorAll(`[${GV.f}]`)) eV.observe(xV);
+        return null === (VV = nV.fonts) || void 0 === VV || VV.ready.then(PV), () => {
+          eV.disconnect()
         }
-      }), [QM, eM, nM, aM]), {
-        doc: QM,
-        boxes: LM.boxes,
-        pieces: LM.pieces,
-        insets: HM,
-        keysAbove: JM,
-        ready: yM,
-        settled: EM
+      }), [nV, PV, QV, yV]), {
+        doc: nV,
+        boxes: ZV.boxes,
+        pieces: ZV.pieces,
+        insets: rV,
+        keysAbove: bV,
+        ready: BV,
+        settled: qV
       }
     }
-    const ri = ["Above", "Below", "Left", "Right"];
+    const ex = ["Above", "Below", "Left", "Right"];
 
-    function ii(MM, rM, iM, OM, SM) {
-      const jM = iM[MM],
-        aM = (jM.left + jM.right) / 2,
-        PM = (jM.top + jM.bottom) / 2,
-        nM = (7.5 * rM.length + 14) / OM,
-        QM = 18 / OM,
-        zM = {
+    function xx(VV, eV, xV, JV, YV) {
+      const UV = xV[VV],
+        yV = (UV.left + UV.right) / 2,
+        pV = (UV.top + UV.bottom) / 2,
+        QV = (7.5 * eV.length + 14) / JV,
+        nV = 18 / JV,
+        wV = {
           Above: {
-            left: aM - nM / 2,
-            top: jM.top - QM,
-            right: aM + nM / 2,
-            bottom: jM.top
+            left: yV - QV / 2,
+            top: UV.top - nV,
+            right: yV + QV / 2,
+            bottom: UV.top
           },
           Below: {
-            left: aM - nM / 2,
-            top: jM.bottom,
-            right: aM + nM / 2,
-            bottom: jM.bottom + QM
+            left: yV - QV / 2,
+            top: UV.bottom,
+            right: yV + QV / 2,
+            bottom: UV.bottom + nV
           },
           Left: {
-            left: jM.left - nM,
-            top: PM - QM / 2,
-            right: jM.left,
-            bottom: PM + QM / 2
+            left: UV.left - QV,
+            top: pV - nV / 2,
+            right: UV.left,
+            bottom: pV + nV / 2
           },
           Right: {
-            left: jM.right,
-            top: PM - QM / 2,
-            right: jM.right + nM,
-            bottom: PM + QM / 2
+            left: UV.right,
+            top: pV - nV / 2,
+            right: UV.right + QV,
+            bottom: pV + nV / 2
           }
         },
-        LM = Ir(iM, MM),
-        mM = {
+        ZV = ue(xV, VV),
+        vV = {
           left: 0,
           top: 0,
-          right: SM.width,
-          bottom: SM.height
+          right: YV.width,
+          bottom: YV.height
         };
-      return ri[(0, XM.w)(ri.map((MM => zM[MM])), LM, {
-        bounds: mM
+      return ex[(0, HV.u)(ex.map((VV => wV[VV])), ZV, {
+        bounds: vV
       })]
     }
 
-    function Oi() {
-      const [MM, rM] = (0, FM.d)();
-      return (0, SM.useMemo)((() => ({
-        width: MM,
-        height: rM
-      })), [MM, rM])
+    function Jx() {
+      const [VV, eV] = (0, mV.e)();
+      return (0, YV.useMemo)((() => ({
+        width: VV,
+        height: eV
+      })), [VV, eV])
     }
 
-    function Si(MM) {
-      var rM;
+    function Yx(VV) {
+      var eV;
       const {
-        layout: iM,
-        orientation: jM,
-        selected: aM,
-        onSelect: PM,
-        onMove: QM,
-        canMove: zM,
-        actionButtons: LM,
-        joystickFixed: mM,
-        presence: HM,
-        keyNames: JM,
-        maxHeight: dM,
-        fill: yM = !1,
-        apiRef: lM
-      } = MM, {
-        t: EM
-      } = (0, OM.A)(), UM = Oi(), CM = (null !== (rM = (0, hM.f)("maxAuraLevel")) && void 0 !== rM ? rM : 0) > 0, eM = iM.hudLayouts[jM], bM = (0, SM.useRef)(null), wM = (0, SM.useRef)(null), tM = (0, SM.useRef)(null), gM = (0, SM.useRef)(null), WM = (0, SM.useRef)(null), sM = (0, SM.useRef)(null), DM = (0, BM.d)(bM).width, kM = yM ? 1 : DM > 0 ? (0, XM.D)(DM, UM.width, UM.height, dM) : 0, ZM = (0, SM.useRef)((() => !1)), oM = (0, SM.useCallback)((() => ZM.current()), []), fM = `${LM}:${mM}:${CM}`, {
-        doc: YM,
-        boxes: NM,
-        pieces: AM,
-        insets: vM,
-        keysAbove: FM,
-        ready: TM,
-        settled: VM
-      } = Mi(tM, {
-        layout: iM,
-        orientation: jM,
-        viewport: UM,
-        replicaKey: fM,
-        joystickFixed: mM,
-        busy: oM
-      }), cM = (0, SM.useCallback)((MM => {
-        YM && ur(document, YM, MM, jM, mM)
-      }), [YM, jM, mM]), Mr = (0, SM.useCallback)((MM => {
-        if (!YM || !VM) return null;
-        cM(MM);
-        const rM = Vr(YM),
-          iM = function(MM, rM) {
+        layout: xV,
+        orientation: UV,
+        selected: yV,
+        onSelect: pV,
+        onMove: nV,
+        canMove: wV,
+        actionButtons: ZV,
+        joystickFixed: vV,
+        presence: rV,
+        keyNames: bV,
+        maxHeight: EV,
+        fill: BV = !1,
+        apiRef: jV
+      } = VV, {
+        t: qV
+      } = (0, JV.A)(), tV = Jx(), TV = (null !== (eV = (0, kV.j)("maxAuraLevel")) && void 0 !== eV ? eV : 0) > 0, PV = xV.hudLayouts[UV], AV = (0, YV.useRef)(null), NV = (0, YV.useRef)(null), XV = (0, YV.useRef)(null), MV = (0, YV.useRef)(null), RV = (0, YV.useRef)(null), gV = (0, YV.useRef)(null), DV = (0, KV.d)(AV).width, iV = BV ? 1 : DV > 0 ? (0, HV.B)(DV, tV.width, tV.height, EV) : 0, CV = (0, YV.useRef)((() => !1)), aV = (0, YV.useCallback)((() => CV.current()), []), oV = `${ZV}:${vV}:${TV}`, {
+        doc: cV,
+        boxes: hV,
+        pieces: lV,
+        insets: fV,
+        keysAbove: mV,
+        ready: IV,
+        settled: dV
+      } = Vx(XV, {
+        layout: xV,
+        orientation: UV,
+        viewport: tV,
+        replicaKey: oV,
+        joystickFixed: vV,
+        busy: aV
+      }), OV = (0, YV.useCallback)((VV => {
+        cV && ze(document, cV, VV, UV, vV)
+      }), [cV, UV, vV]), Ve = (0, YV.useCallback)((VV => {
+        if (!cV || !dV) return null;
+        OV(VV);
+        const eV = de(cV),
+          xV = function(VV, eV) {
             let {
-              boxes: iM,
-              pieces: OM,
-              pairHome: SM
-            } = MM;
-            const jM = OM.find((MM => RM.h.has(MM.id)));
-            if (!jM || !SM) return iM;
-            const aM = (0, XM.e)(SM),
-              PM = rM(jM.id),
-              nM = Zr(jM.box) / PM / 2,
-              QM = (jM.box.bottom - jM.box.top) / PM / 2;
+              boxes: xV,
+              pieces: JV,
+              pairHome: YV
+            } = VV;
+            const UV = JV.find((VV => GV.n.has(VV.id)));
+            if (!UV || !YV) return xV;
+            const yV = (0, HV.d)(YV),
+              pV = eV(UV.id),
+              QV = Ce(UV.box) / pV / 2,
+              nV = (UV.box.bottom - UV.box.top) / pV / 2;
             return {
-              ...iM,
+              ...xV,
               inventory: {
-                left: aM.x - nM,
-                top: aM.y - QM,
-                right: aM.x + nM,
-                bottom: aM.y + QM
+                left: yV.x - QV,
+                top: yV.y - nV,
+                right: yV.x + QV,
+                bottom: yV.y + nV
               }
             }
-          }(qr(YM), (rM => (0, pM.v)(MM, jM, rM)[2]));
+          }(Se(cV), (eV => (0, WV.C)(VV, UV, eV)[2]));
         return {
-          boxes: iM,
-          keysAbove: rM,
-          shopAlone: cr(YM)
+          boxes: xV,
+          keysAbove: eV,
+          shopAlone: Oe(cV)
         }
-      }), [YM, VM, cM, jM]), rr = (0, SM.useRef)(null), ir = (0, SM.useRef)(null), Or = (0, SM.useRef)(iM);
-      Or.current = iM;
-      const Sr = (0, SM.useCallback)((() => {
-        null !== rr.current && (cancelAnimationFrame(rr.current), rr.current = null)
+      }), [cV, dV, OV, UV]), ee = (0, YV.useRef)(null), xe = (0, YV.useRef)(null), Je = (0, YV.useRef)(xV);
+      Je.current = xV;
+      const Ye = (0, YV.useCallback)((() => {
+        null !== ee.current && (cancelAnimationFrame(ee.current), ee.current = null)
       }), []);
-      (0, SM.useEffect)((() => Sr), [iM, Sr]);
-      const jr = (0, SM.useRef)(-1 / 0),
+      (0, YV.useEffect)((() => Ye), [xV, Ye]);
+      const Ue = (0, YV.useRef)(-1 / 0),
         {
-          lockable: ar
-        } = MM,
-        Pr = (0, SM.useCallback)((MM => {
-          if (cM(MM), jr.current = performance.now(), !VM || 0 === iM.hudLayouts[jM].hudLocked.length) return;
-          const rM = iM;
-          Sr(), rr.current = requestAnimationFrame((() => {
-            var iM;
-            if (rr.current = null, Or.current !== rM) return;
-            const OM = (null === (iM = ir.current) || void 0 === iM ? void 0 : iM.from) === rM ? ir.current.measured : Mr(rM);
-            OM && (ir.current = {
-              from: rM,
-              measured: OM
-            }), cM(OM ? fr(rM, MM, jM, UM, Mr, {
-              canKeep: ar,
+          lockable: ye
+        } = VV,
+        pe = (0, YV.useCallback)((VV => {
+          if (OV(VV), Ue.current = performance.now(), !dV || 0 === xV.hudLayouts[UV].hudLocked.length) return;
+          const eV = xV;
+          Ye(), ee.current = requestAnimationFrame((() => {
+            var xV;
+            if (ee.current = null, Je.current !== eV) return;
+            const JV = (null === (xV = xe.current) || void 0 === xV ? void 0 : xV.from) === eV ? xe.current.measured : Ve(eV);
+            JV && (xe.current = {
+              from: eV,
+              measured: JV
+            }), OV(JV ? oe(eV, VV, UV, tV, Ve, {
+              canKeep: ye,
               passes: 1,
-              before: OM
-            }) : MM)
+              before: JV
+            }) : VV)
           }))
-        }), [cM, VM, iM, jM, UM, Mr, ar, Sr]),
-        nr = Br({
-          preview: (MM, rM) => {
-            rM ? Pr((0, pM.cb)(iM, jM, MM, rM)) : (Sr(), cM(iM))
+        }), [OV, dV, xV, UV, tV, Ve, ye, Ye]),
+        Qe = Ke({
+          preview: (VV, eV) => {
+            eV ? pe((0, WV.mb)(xV, UV, VV, eV)) : (Ye(), OV(xV))
           },
-          stageRef: wM,
-          ringRef: gM,
-          centreLineRef: WM,
-          snapCentre: iM.hudSnapCentre,
-          ready: VM,
-          measure: MM => {
-            const rM = YM && TM ? qr(YM).boxes[MM] : void 0;
-            return rM && (0, XM.n)(rM, UM.width, UM.height) ? rM : null
+          stageRef: NV,
+          ringRef: MV,
+          centreLineRef: RV,
+          snapCentre: xV.hudSnapCentre,
+          ready: dV,
+          measure: VV => {
+            const eV = cV && IV ? Se(cV).boxes[VV] : void 0;
+            return eV && (0, HV.l)(eV, tV.width, tV.height) ? eV : null
           },
-          k: kM,
-          viewport: UM,
-          boxes: NM,
-          pieces: AM,
-          selected: aM,
-          insets: vM,
-          layout: eM,
-          canMove: zM,
-          onSelect: PM,
-          onMove: (MM, rM, iM) => {
-            Sr(), QM(MM, rM, iM)
+          k: iV,
+          viewport: tV,
+          boxes: hV,
+          pieces: lV,
+          selected: yV,
+          insets: fV,
+          layout: PV,
+          canMove: wV,
+          onSelect: pV,
+          onMove: (VV, eV, xV) => {
+            Ye(), nV(VV, eV, xV)
           }
         });
-      (0, SM.useLayoutEffect)((() => {
-        ZM.current = nr.busy
-      }), [nr.busy]);
-      const Qr = (0, SM.useRef)([]),
-        zr = (0, SM.useRef)(eM.hudElements);
-      (0, SM.useEffect)((() => {
-        for (const SM of Object.keys(eM.hudElements)) {
-          var MM, rM, iM, OM;
-          (null !== (MM = null === (rM = eM.hudElements[SM]) || void 0 === rM ? void 0 : rM[2]) && void 0 !== MM ? MM : 1) > (null !== (iM = null === (OM = zr.current[SM]) || void 0 === OM ? void 0 : OM[2]) && void 0 !== iM ? iM : 1) && zM(SM) && !(0, KM.s)(SM, eM.hudElements[SM]) && Qr.current.push(...(0, RM.E)(SM, FM, zM))
+      (0, YV.useLayoutEffect)((() => {
+        CV.current = Qe.busy
+      }), [Qe.busy]);
+      const ne = (0, YV.useRef)([]),
+        we = (0, YV.useRef)(PV.hudElements);
+      (0, YV.useEffect)((() => {
+        for (const YV of Object.keys(PV.hudElements)) {
+          var VV, eV, xV, JV;
+          (null !== (VV = null === (eV = PV.hudElements[YV]) || void 0 === eV ? void 0 : eV[2]) && void 0 !== VV ? VV : 1) > (null !== (xV = null === (JV = we.current[YV]) || void 0 === JV ? void 0 : JV[2]) && void 0 !== xV ? xV : 1) && wV(YV) && !(0, sV.v)(YV, PV.hudElements[YV]) && ne.current.push(...(0, GV.z)(YV, mV, wV))
         }
-        zr.current = eM.hudElements
-      }), [eM.hudElements, zM, FM]), (0, SM.useEffect)((() => {
-        if (!TM) return;
-        const MM = (0, XM.H)(UM.width, UM.height, vM);
-        for (const iM of (0, RM.A)(Qr.current.splice(0), NM, MM, zM)) {
-          const OM = NM[iM];
-          if (!OM || nr.busy() || !(0, XM.n)(OM, UM.width, UM.height)) continue;
-          const SM = (0, XM.I)(OM, MM);
-          if (0 !== SM.x || 0 !== SM.y) {
-            var rM;
-            const [MM, OM] = null !== (rM = eM.hudElements[iM]) && void 0 !== rM ? rM : [0, 0];
-            QM(iM, MM + SM.x / UM.width, OM + SM.y / UM.height)
+        we.current = PV.hudElements
+      }), [PV.hudElements, wV, mV]), (0, YV.useEffect)((() => {
+        if (!IV) return;
+        const VV = (0, HV.E)(tV.width, tV.height, fV);
+        for (const xV of (0, GV.y)(ne.current.splice(0), hV, VV, wV)) {
+          const JV = hV[xV];
+          if (!JV || Qe.busy() || !(0, HV.l)(JV, tV.width, tV.height)) continue;
+          const YV = (0, HV.F)(JV, VV);
+          if (0 !== YV.x || 0 !== YV.y) {
+            var eV;
+            const [VV, JV] = null !== (eV = PV.hudElements[xV]) && void 0 !== eV ? eV : [0, 0];
+            nV(xV, VV + YV.x / tV.width, JV + YV.y / tV.height)
           }
         }
-      }), [NM, TM]), (0, SM.useImperativeHandle)(lM, (() => ({
-        setScale: (MM, rM) => {
-          Pr((0, pM.cb)(iM, jM, MM, {
-            scale: rM
+      }), [hV, IV]), (0, YV.useImperativeHandle)(jV, (() => ({
+        setScale: (VV, eV) => {
+          pe((0, WV.mb)(xV, UV, VV, {
+            scale: eV
           }))
         },
-        setOpacity: MM => {
-          cM({
-            ...iM,
-            hudKeyOpacity: MM
+        setOpacity: VV => {
+          OV({
+            ...xV,
+            hudKeyOpacity: VV
           })
         },
-        keepLocks: (MM, rM) => (Sr(), fr(MM, rM, jM, UM, Mr, {
-          canKeep: ar
+        keepLocks: (VV, eV) => (Ye(), oe(VV, eV, UV, tV, Ve, {
+          canKeep: ye
         })),
-        setSafe: MM => {
-          const rM = (0, qM.w)(MM, UM.width, UM.height, pr(null !== YM && void 0 !== YM ? YM : document));
-          Pr((0, pM.hb)(iM, jM, MM)), sM.current && (sM.current.style.inset = rM.map((MM => MM * kM + "px")).join(" "))
+        setSafe: VV => {
+          const eV = (0, SV.t)(VV, tV.width, tV.height, We(null !== cV && void 0 !== cV ? cV : document));
+          pe((0, WV.ub)(xV, UV, VV)), gV.current && (gV.current.style.inset = eV.map((VV => VV * iV + "px")).join(" "))
         }
-      })), [cM, Pr, Mr, Sr, ar, YM, iM, jM, UM, kM]);
-      const Lr = new Set(Object.keys(eM.hudElements).filter((MM => (0, pM.p)(eM.hudElements, MM)))),
-        mr = aM ? NM[aM] : void 0,
-        hr = aM ? (0, RM.s)(aM, LM, EM, JM) : "",
-        dr = (0, yr.h)(UM.width, UM.height),
-        lr = aM ? (0, IM.f)(aM, AM, eM, dr) : [],
-        Er = new Set((0, KM.o)(eM.hudElements)),
-        Ur = (0, KM.D)(eM, (0, KM.z)(HM.rowIcons)).state,
-        Gr = lr.join(),
-        Cr = (0, SM.useRef)(MM.onReady);
-      Cr.current = MM.onReady, (0, SM.useEffect)((() => {
-        var MM;
-        null === (MM = Cr.current) || void 0 === MM || MM.call(Cr, VM)
-      }), [VM]);
-      const er = (0, SM.useRef)(MM.onMeasured);
-      (0, SM.useLayoutEffect)((() => {
-        er.current = MM.onMeasured
+      })), [OV, pe, Ve, Ye, ye, cV, xV, UV, tV, iV]);
+      const Ze = new Set(Object.keys(PV.hudElements).filter((VV => (0, WV.v)(PV.hudElements, VV)))),
+        ve = yV ? hV[yV] : void 0,
+        ke = yV ? (0, GV.u)(yV, ZV, qV, bV) : "",
+        Ee = (0, Be.f)(tV.width, tV.height),
+        je = yV ? (0, uV.c)(yV, lV, PV, Ee) : [],
+        qe = new Set((0, sV.q)(PV.hudElements)),
+        te = (0, sV.I)(PV, (0, sV.E)(rV.rowIcons)).state,
+        Fe = je.join(),
+        Te = (0, YV.useRef)(VV.onReady);
+      Te.current = VV.onReady, (0, YV.useEffect)((() => {
+        var VV;
+        null === (VV = Te.current) || void 0 === VV || VV.call(Te, dV)
+      }), [dV]);
+      const Pe = (0, YV.useRef)(VV.onMeasured);
+      (0, YV.useLayoutEffect)((() => {
+        Pe.current = VV.onMeasured
       }));
-      const br = (0, SM.useRef)({
+      const Ae = (0, YV.useRef)({
           layout: null,
           input: "",
           caps: {}
         }),
-        wr = [Kr(AM), UM.width, UM.height, vM.top, vM.right, vM.bottom, vM.left, TM, fM].join("|");
-      (0, SM.useEffect)((() => {
-        const MM = Gr ? Gr.split(",") : [],
-          rM = () => {
-            var rM;
-            null === (rM = er.current) || void 0 === rM || rM.call(er, NM, MM, br.current.caps)
+        Ne = [se(lV), tV.width, tV.height, fV.top, fV.right, fV.bottom, fV.left, IV, oV].join("|");
+      (0, YV.useEffect)((() => {
+        const VV = Fe ? Fe.split(",") : [],
+          eV = () => {
+            var eV;
+            null === (eV = Pe.current) || void 0 === eV || eV.call(Pe, hV, VV, Ae.current.caps)
           };
-        let iM;
-        const OM = () => {
-          const MM = Or.current;
-          if (!YM || MM === br.current.layout && wr === br.current.input) return !1;
-          const SM = jr.current + 250 - performance.now();
-          return MM === br.current.layout && (SM > 0 || oM()) ? (iM = setTimeout((() => {
-            OM() && rM()
-          }), Math.max(SM, 62.5)), !1) : (br.current = {
-            layout: MM,
-            input: wr,
+        let xV;
+        const JV = () => {
+          const VV = Je.current;
+          if (!cV || VV === Ae.current.layout && Ne === Ae.current.input) return !1;
+          const YV = Ue.current + 250 - performance.now();
+          return VV === Ae.current.layout && (YV > 0 || aV()) ? (xV = setTimeout((() => {
+            JV() && eV()
+          }), Math.max(YV, 62.5)), !1) : (Ae.current = {
+            layout: VV,
+            input: Ne,
             caps: {
-              hotbar: sr(YM, Jr),
-              cluster: Tr(YM, (0, XM.H)(UM.width, UM.height, vM), Jr)
+              hotbar: ge(cV, be),
+              cluster: Ie(cV, (0, HV.E)(tV.width, tV.height, fV), be)
             }
           }, !0)
         };
-        return OM(), rM(), () => {
-          clearTimeout(iM)
+        return JV(), eV(), () => {
+          clearTimeout(xV)
         }
-      }), [NM, Gr, YM, UM, vM, wr, oM]);
-      const tr = MM => ({
-        left: MM.left * kM,
-        top: MM.top * kM,
-        width: (MM.right - MM.left) * kM,
-        height: (MM.bottom - MM.top) * kM
+      }), [hV, Fe, cV, tV, fV, Ne, aV]);
+      const Xe = VV => ({
+        left: VV.left * iV,
+        top: VV.top * iV,
+        width: (VV.right - VV.left) * iV,
+        height: (VV.bottom - VV.top) * iV
       });
-      return (0, GM.jsx)("div", {
-        ref: bM,
-        className: nM()("HudPreviewBox", {
-          Fill: yM
+      return (0, FV.jsx)("div", {
+        ref: AV,
+        className: QV()("HudPreviewBox", {
+          Fill: BV
         }),
         style: {
-          height: UM.height * kM
+          height: tV.height * iV
         },
-        children: (0, GM.jsxs)("div", {
-          ref: wM,
+        children: (0, FV.jsxs)("div", {
+          ref: NV,
           className: "HudPreviewStage",
           style: {
-            width: UM.width * kM,
-            height: UM.height * kM
+            width: tV.width * iV,
+            height: tV.height * iV
           },
-          children: [(0, GM.jsx)("iframe", {
-            ref: tM,
+          children: [(0, FV.jsx)("iframe", {
+            ref: XV,
             className: "HudPreviewFrame",
-            title: EM("hudLayout:preview"),
+            title: qV("hudLayout:preview"),
             "aria-hidden": !0,
             tabIndex: -1,
             style: {
-              width: UM.width,
-              height: UM.height,
-              transform: `scale(${kM})`
+              width: tV.width,
+              height: tV.height,
+              transform: `scale(${iV})`
             }
-          }), YM && (0, xM.createPortal)((0, GM.jsx)(Hr, {
-            presence: HM,
-            portraitPhone: dr,
-            hidden: Lr,
-            actionButtons: LM,
-            joystickFixed: mM,
-            keysAbove: FM,
-            auraBar: CM,
-            trayState: Ur,
-            moved: Er
-          }), YM.body), (0, GM.jsxs)("div", {
+          }), cV && (0, LV.createPortal)((0, FV.jsx)(re, {
+            presence: rV,
+            portraitPhone: Ee,
+            hidden: Ze,
+            actionButtons: ZV,
+            joystickFixed: vV,
+            keysAbove: mV,
+            auraBar: TV,
+            trayState: te,
+            moved: qe
+          }), cV.body), (0, FV.jsxs)("div", {
             className: "HudPreviewOverlay",
-            ...nr.handlers,
-            children: [(0, GM.jsx)("div", {
-              ref: sM,
+            ...Qe.handlers,
+            children: [(0, FV.jsx)("div", {
+              ref: gV,
               className: "HudPreviewSafeZone",
               style: {
-                top: vM.top * kM,
-                right: vM.right * kM,
-                bottom: vM.bottom * kM,
-                left: vM.left * kM
+                top: fV.top * iV,
+                right: fV.right * iV,
+                bottom: fV.bottom * iV,
+                left: fV.left * iV
               }
-            }), AM.map(((MM, rM) => {
+            }), lV.map(((VV, eV) => {
               let {
-                id: iM,
-                box: OM
-              } = MM;
-              return (0, GM.jsx)("div", {
+                id: xV,
+                box: JV
+              } = VV;
+              return (0, FV.jsx)("div", {
                 className: "HudPreviewHandle",
-                style: tr((0, XM.t)(OM, 40 / kM))
-              }, `${iM}:${rM}`)
-            })), eM.hudLocked.map((MM => {
-              const rM = NM[MM];
-              return rM && (0, GM.jsx)("span", {
+                style: Xe((0, HV.t)(JV, 40 / iV))
+              }, `${xV}:${eV}`)
+            })), PV.hudLocked.map((VV => {
+              const eV = hV[VV];
+              return eV && (0, FV.jsx)("span", {
                 className: "HudPreviewLockBadge",
                 style: {
-                  left: rM.right * kM,
-                  top: rM.top * kM
+                  left: eV.right * iV,
+                  top: eV.top * iV
                 },
-                children: (0, GM.jsx)(uM.b, {
+                children: (0, FV.jsx)(zV.b, {
                   name: "lock"
                 })
-              }, MM)
-            })), (0, GM.jsx)("div", {
-              ref: WM,
+              }, VV)
+            })), (0, FV.jsx)("div", {
+              ref: RV,
               className: "HudPreviewCentreLine",
               style: {
-                left: UM.width / 2 * kM
+                left: tV.width / 2 * iV
               }
-            }), aM && mr && (0, GM.jsx)("div", {
-              ref: gM,
-              className: nM()("HudPreviewRing", {
-                Fixed: !zM(aM),
-                Overlap: lr.length > 0
+            }), yV && ve && (0, FV.jsx)("div", {
+              ref: MV,
+              className: QV()("HudPreviewRing", {
+                Fixed: !wV(yV),
+                Overlap: je.length > 0
               }),
-              style: tr(mr),
-              children: (0, GM.jsx)("span", {
-                className: nM()("HudPreviewRingLabel", ii(aM, hr, NM, kM, UM)),
-                children: hr
+              style: Xe(ve),
+              children: (0, FV.jsx)("span", {
+                className: QV()("HudPreviewRingLabel", xx(yV, ke, hV, iV, tV)),
+                children: ke
               })
             })]
           })]
@@ -1909,1436 +1909,1436 @@ export const modules = {
       })
     }
 
-    function ji(MM, rM) {
-      (0, SM.useEffect)((() => {
-        var iM;
-        null === (iM = MM.current) || void 0 === iM || iM.toggleAttribute("inert", rM)
-      }), [MM, rM])
+    function Ux(VV, eV) {
+      (0, YV.useEffect)((() => {
+        var xV;
+        null === (xV = VV.current) || void 0 === xV || xV.toggleAttribute("inert", eV)
+      }), [VV, eV])
     }
-    const ai = "hudFullScreen";
+    const yx = "hudFullScreen";
 
-    function Pi(MM) {
+    function px(VV) {
       let {
-        onScale: rM,
-        onHidden: iM,
-        onReset: jM,
-        locked: aM,
-        lockable: PM,
-        onLocked: nM,
-        onClose: zM,
-        ...LM
-      } = MM;
+        onScale: eV,
+        onHidden: xV,
+        onReset: UV,
+        locked: yV,
+        lockable: pV,
+        onLocked: QV,
+        onClose: wV,
+        ...ZV
+      } = VV;
       const {
-        t: mM
-      } = (0, OM.A)(), HM = (0, SM.useRef)(null);
-      (0, vM.v)("popup", HM, zM),
-      function(MM) {
-        const rM = (0, SM.useRef)(MM);
-        rM.current = MM, (0, SM.useEffect)((() => {
+        t: vV
+      } = (0, JV.A)(), rV = (0, YV.useRef)(null);
+      (0, fV.s)("popup", rV, wV),
+      function(VV) {
+        const eV = (0, YV.useRef)(VV);
+        eV.current = VV, (0, YV.useEffect)((() => {
           window.history.pushState({
             ...window.history.state,
-            [ai]: !0
+            [yx]: !0
           }, "");
-          let MM = !1;
-          const iM = () => {
-            MM = !0, rM.current()
+          let VV = !1;
+          const xV = () => {
+            VV = !0, eV.current()
           };
-          return window.addEventListener("popstate", iM), () => {
-            var rM;
-            window.removeEventListener("popstate", iM), !MM && null !== (rM = window.history.state) && void 0 !== rM && rM[ai] && window.history.back()
+          return window.addEventListener("popstate", xV), () => {
+            var eV;
+            window.removeEventListener("popstate", xV), !VV && null !== (eV = window.history.state) && void 0 !== eV && eV[yx] && window.history.back()
           }
         }), [])
-      }(zM), (0, SM.useEffect)((() => {
-        function MM(MM) {
-          "Escape" === MM.key && (MM.stopPropagation(), zM())
+      }(wV), (0, YV.useEffect)((() => {
+        function VV(VV) {
+          "Escape" === VV.key && (VV.stopPropagation(), wV())
         }
-        return window.addEventListener("keydown", MM, !0), () => {
-          window.removeEventListener("keydown", MM, !0)
+        return window.addEventListener("keydown", VV, !0), () => {
+          window.removeEventListener("keydown", VV, !0)
         }
-      }), [zM]);
+      }), [wV]);
       const {
-        selected: hM
-      } = LM, JM = (0, SM.useRef)(null), dM = (0, SM.useRef)(null), [yM, lM] = (0, SM.useState)(!1);
-      ji(dM, !yM);
-      const [EM, UM] = (0, SM.useState)(null), [CM, eM] = (0, SM.useState)([]), [bM, wM] = hr(), tM = (0, SM.useRef)(LM.selected);
-      tM.current = LM.selected;
-      const gM = (0, SM.useRef)({}),
-        uM = (0, SM.useCallback)((() => {
-          const MM = JM.current;
-          MM && UM(function(MM, rM, iM) {
-            var OM;
+        selected: kV
+      } = ZV, bV = (0, YV.useRef)(null), EV = (0, YV.useRef)(null), [BV, jV] = (0, YV.useState)(!1);
+      Ux(EV, !BV);
+      const [qV, tV] = (0, YV.useState)(null), [TV, PV] = (0, YV.useState)([]), [AV, NV] = ke(), XV = (0, YV.useRef)(ZV.selected);
+      XV.current = ZV.selected;
+      const MV = (0, YV.useRef)({}),
+        zV = (0, YV.useCallback)((() => {
+          const VV = bV.current;
+          VV && tV(function(VV, eV, xV) {
+            var JV;
             const {
-              innerWidth: SM,
-              innerHeight: jM
-            } = window, aM = MM.offsetWidth, PM = MM.offsetHeight, nM = Math.max(Rr()[0], 6), QM = [];
-            for (const mM of [nM, .2 * jM, .5 * jM - PM / 2, .33 * jM])
-              for (const MM of [.5, .3, .7]) QM.push({
-                left: Math.max(0, Math.min(SM - aM - 6, Math.max(6, SM * MM - aM / 2))),
-                top: mM
+              innerWidth: YV,
+              innerHeight: UV
+            } = window, yV = VV.offsetWidth, pV = VV.offsetHeight, QV = Math.max(Ge()[0], 6), nV = [];
+            for (const vV of [QV, .2 * UV, .5 * UV - pV / 2, .33 * UV])
+              for (const VV of [.5, .3, .7]) nV.push({
+                left: Math.max(0, Math.min(YV - yV - 6, Math.max(6, YV * VV - yV / 2))),
+                top: vV
               });
-            const zM = QM.map((MM => ({
-                left: MM.left - 6,
-                top: MM.top - 6,
-                right: MM.left + aM + 6,
-                bottom: MM.top + PM + 6
+            const wV = nV.map((VV => ({
+                left: VV.left - 6,
+                top: VV.top - 6,
+                right: VV.left + yV + 6,
+                bottom: VV.top + pV + 6
               }))),
-              LM = Ir(rM, iM);
-            return QM[(0, XM.w)(zM, LM, {
-              avoid: iM && null !== (OM = rM[iM]) && void 0 !== OM ? OM : null
+              ZV = ue(eV, xV);
+            return nV[(0, HV.u)(wV, ZV, {
+              avoid: xV && null !== (JV = eV[xV]) && void 0 !== JV ? JV : null
             })]
-          }(MM, gM.current, tM.current))
+          }(VV, MV.current, XV.current))
         }), []),
-        RM = (0, SM.useCallback)(((MM, rM, iM) => {
-          eM(rM), wM(iM), gM.current = MM, uM()
-        }), [uM, wM]);
-      return (0, SM.useLayoutEffect)(uM, [LM.selected, uM]), (0, xM.createPortal)((0, GM.jsxs)("div", {
-        ref: HM,
+        GV = (0, YV.useCallback)(((VV, eV, xV) => {
+          PV(eV), NV(xV), MV.current = VV, zV()
+        }), [zV, NV]);
+      return (0, YV.useLayoutEffect)(zV, [ZV.selected, zV]), (0, LV.createPortal)((0, FV.jsxs)("div", {
+        ref: rV,
         className: "HudFullScreenEditor",
-        children: [(0, GM.jsx)(Si, {
-          ...LM,
+        children: [(0, FV.jsx)(Yx, {
+          ...ZV,
           maxHeight: window.innerHeight,
           fill: !0,
-          onMeasured: RM,
-          onReady: lM,
-          lockable: PM
-        }), (0, GM.jsxs)("div", {
-          ref: JM,
+          onMeasured: GV,
+          onReady: jV,
+          lockable: pV
+        }), (0, FV.jsxs)("div", {
+          ref: bV,
           className: "HudFullScreenToolbar",
-          style: null === EM ? void 0 : {
-            left: EM.left,
-            top: EM.top,
+          style: null === qV ? void 0 : {
+            left: qV.left,
+            top: qV.top,
             transform: "none"
           },
-          children: [(0, GM.jsx)("div", {
-            ref: dM,
+          children: [(0, FV.jsx)("div", {
+            ref: EV,
             className: "HudFullScreenControls",
-            children: (0, GM.jsx)(dr, {
-              selected: hM,
-              layout: LM.layout.hudLayouts[LM.orientation],
-              actionButtons: LM.actionButtons,
-              keyNames: LM.keyNames,
-              overlaps: CM,
-              scaleCaps: bM,
-              onScale: rM,
-              onHidden: iM,
-              onReset: jM,
-              locked: aM,
-              lockable: PM,
-              onLocked: nM,
-              joystickFixed: LM.joystickFixed
+            children: (0, FV.jsx)(Ee, {
+              selected: kV,
+              layout: ZV.layout.hudLayouts[ZV.orientation],
+              actionButtons: ZV.actionButtons,
+              keyNames: ZV.keyNames,
+              overlaps: TV,
+              scaleCaps: AV,
+              onScale: eV,
+              onHidden: xV,
+              onReset: UV,
+              locked: yV,
+              lockable: pV,
+              onLocked: QV,
+              joystickFixed: ZV.joystickFixed
             })
-          }), (0, GM.jsx)(QM.e, {
+          }), (0, FV.jsx)(nV.f, {
             className: "HudFullScreenDone",
-            onClick: zM,
+            onClick: wV,
             padDefaultFocus: !0,
-            children: mM("hudLayout:done")
+            children: vV("hudLayout:done")
           })]
         })]
       }), document.body)
     }
-    const ni = MM => `${Math.round(100*MM)}%`;
+    const Qx = VV => `${Math.round(100*VV)}%`;
 
-    function Qi(MM) {
+    function nx(VV) {
       let {
-        info: rM,
-        tuple: iM,
-        props: SM
-      } = MM;
+        info: eV,
+        tuple: xV,
+        props: YV
+      } = VV;
       const {
-        t: jM
-      } = (0, OM.A)();
-      return (0, GM.jsx)(HM.h, {
-        name: jM("hudLayout:size"),
-        min: pM.j,
-        max: pM.f,
-        step: Jr,
-        initValue: iM[2],
-        disabled: SM.locked.has(rM.id),
-        selectableMax: SM.scaleCaps[rM.id],
-        cappedNote: jM("hudLayout:sizeCapped"),
-        format: ni,
-        onChange: MM => {
-          SM.onScalePreview(rM.id, MM)
+        t: UV
+      } = (0, JV.A)();
+      return (0, FV.jsx)(rV.m, {
+        name: UV("hudLayout:size"),
+        min: WV.o,
+        max: WV.k,
+        step: be,
+        initValue: xV[2],
+        disabled: YV.locked.has(eV.id),
+        selectableMax: YV.scaleCaps[eV.id],
+        cappedNote: UV("hudLayout:sizeCapped"),
+        format: Qx,
+        onChange: VV => {
+          YV.onScalePreview(eV.id, VV)
         },
-        onChangeComplete: MM => {
-          SM.onScale(rM.id, MM)
+        onChangeComplete: VV => {
+          YV.onScale(eV.id, VV)
         }
       })
     }
 
-    function zi(MM) {
+    function wx(VV) {
       const {
-        t: rM
-      } = (0, OM.A)(), {
-        present: iM,
-        elements: jM,
-        selected: aM,
-        onSelect: PM,
-        onHidden: QM,
-        onReset: zM,
-        note: LM,
-        actionButtons: mM,
-        keyNames: HM,
-        sizeBesidePreview: hM,
-        locked: JM,
-        lockable: dM,
-        onLocked: yM
-      } = MM, {
-        rowIconsOpen: lM,
-        onRowIconsOpen: EM
-      } = MM, UM = (0, SM.useRef)(null), CM = null !== aM && (lM || !(0, pM.L)(aM));
-      return (0, SM.useEffect)((() => {
-        var MM;
-        const rM = aM ? null === (MM = UM.current) || void 0 === MM ? void 0 : MM.querySelector(`[data-hud-row="${aM}"]`) : null;
-        if (!rM) return;
-        const iM = rM.closest(".SettingsMenuRight"),
-          OM = performance.now();
-        let SM = null;
-        const jM = () => {
-            clearInterval(nM), null === iM || void 0 === iM || iM.removeEventListener("scroll", PM)
+        t: eV
+      } = (0, JV.A)(), {
+        present: xV,
+        elements: UV,
+        selected: yV,
+        onSelect: pV,
+        onHidden: nV,
+        onReset: wV,
+        note: ZV,
+        actionButtons: vV,
+        keyNames: rV,
+        sizeBesidePreview: kV,
+        locked: bV,
+        lockable: EV,
+        onLocked: BV
+      } = VV, {
+        rowIconsOpen: jV,
+        onRowIconsOpen: qV
+      } = VV, tV = (0, YV.useRef)(null), TV = null !== yV && (jV || !(0, WV.T)(yV));
+      return (0, YV.useEffect)((() => {
+        var VV;
+        const eV = yV ? null === (VV = tV.current) || void 0 === VV ? void 0 : VV.querySelector(`[data-hud-row="${yV}"]`) : null;
+        if (!eV) return;
+        const xV = eV.closest(".SettingsMenuRight"),
+          JV = performance.now();
+        let YV = null;
+        const UV = () => {
+            clearInterval(QV), null === xV || void 0 === xV || xV.removeEventListener("scroll", pV)
           },
-          PM = () => {
-            Ar() || jM()
+          pV = () => {
+            le() || UV()
           },
-          nM = setInterval((() => {
-            const MM = performance.now();
-            MM - OM > 1500 ? jM() : Ar() ? SM = null : null === SM ? SM = MM : MM - SM >= 150 && (jM(), function(MM) {
-              var rM;
-              const iM = MM.closest(".SettingsMenuRight"),
-                OM = null === (rM = MM.closest(".HudLayoutSettings")) || void 0 === rM ? void 0 : rM.querySelector(".HudLayoutPreviewBox");
-              if (!iM || !OM) return;
-              const SM = OM.getBoundingClientRect().bottom + 8,
-                jM = iM.getBoundingClientRect().bottom - 8,
-                aM = MM.getBoundingClientRect();
-              aM.top < SM ? iM.scrollBy({
-                top: aM.top - SM,
+          QV = setInterval((() => {
+            const VV = performance.now();
+            VV - JV > 1500 ? UV() : le() ? YV = null : null === YV ? YV = VV : VV - YV >= 150 && (UV(), function(VV) {
+              var eV;
+              const xV = VV.closest(".SettingsMenuRight"),
+                JV = null === (eV = VV.closest(".HudLayoutSettings")) || void 0 === eV ? void 0 : eV.querySelector(".HudLayoutPreviewBox");
+              if (!xV || !JV) return;
+              const YV = JV.getBoundingClientRect().bottom + 8,
+                UV = xV.getBoundingClientRect().bottom - 8,
+                yV = VV.getBoundingClientRect();
+              yV.top < YV ? xV.scrollBy({
+                top: yV.top - YV,
                 behavior: "smooth"
-              }) : aM.bottom > jM && iM.scrollBy({
-                top: Math.min(aM.bottom - jM, aM.top - SM),
+              }) : yV.bottom > UV && xV.scrollBy({
+                top: Math.min(yV.bottom - UV, yV.top - YV),
                 behavior: "smooth"
               })
-            }(rM))
+            }(eV))
           }), 50);
-        return null === iM || void 0 === iM || iM.addEventListener("scroll", PM, {
+        return null === xV || void 0 === xV || xV.addEventListener("scroll", pV, {
           passive: !0
-        }), jM
-      }), [aM, CM]), (0, GM.jsx)("div", {
-        ref: UM,
+        }), UV
+      }), [yV, TV]), (0, FV.jsx)("div", {
+        ref: tV,
         className: "SettingBoxGroup HudElementList",
-        children: RM.g.filter((MM => iM.has(MM.id) && (lM || !(0, pM.L)(MM.id)))).map((iM => {
-          const OM = ((MM, rM) => {
-              var iM;
-              return null !== (iM = MM[rM]) && void 0 !== iM ? iM : pM.k
-            })(jM, iM.id),
-            SM = (0, pM.p)(jM, iM.id),
-            UM = iM.id === aM,
-            CM = iM.scale && !hM,
-            eM = LM(iM.id, UM);
-          return (0, GM.jsxs)("div", {
-            "data-hud-row": iM.id,
-            className: nM()("SettingBox HudElementRow", {
-              Open: UM,
-              Hidden: SM,
-              Child: void 0 !== iM.parent,
-              Grandchild: (0, RM.m)(iM.id).length > 1
+        children: GV.j.filter((VV => xV.has(VV.id) && (jV || !(0, WV.T)(VV.id)))).map((xV => {
+          const JV = ((VV, eV) => {
+              var xV;
+              return null !== (xV = VV[eV]) && void 0 !== xV ? xV : WV.q
+            })(UV, xV.id),
+            YV = (0, WV.v)(UV, xV.id),
+            tV = xV.id === yV,
+            TV = xV.scale && !kV,
+            PV = ZV(xV.id, tV);
+          return (0, FV.jsxs)("div", {
+            "data-hud-row": xV.id,
+            className: QV()("SettingBox HudElementRow", {
+              Open: tV,
+              Hidden: YV,
+              Child: void 0 !== xV.parent,
+              Grandchild: (0, GV.q)(xV.id).length > 1
             }),
-            children: [(0, GM.jsxs)("div", {
+            children: [(0, FV.jsxs)("div", {
               className: "HudElementRowHead",
-              children: [(0, GM.jsx)("button", {
+              children: [(0, FV.jsx)("button", {
                 type: "button",
                 className: "HudElementRowName",
-                "aria-expanded": CM ? UM : void 0,
+                "aria-expanded": TV ? tV : void 0,
                 onClick: () => {
-                  PM(iM.id)
+                  pV(xV.id)
                 },
-                children: (0, GM.jsxs)("span", {
+                children: (0, FV.jsxs)("span", {
                   className: "HudElementRowLabel",
-                  children: [(0, RM.s)(iM.id, mM, rM, HM), iM.scale && 1 !== OM[2] && !(UM && CM) && (0, GM.jsxs)(GM.Fragment, {
-                    children: [" ", (0, GM.jsx)("span", {
+                  children: [(0, GV.u)(xV.id, vV, eV, rV), xV.scale && 1 !== JV[2] && !(tV && TV) && (0, FV.jsxs)(FV.Fragment, {
+                    children: [" ", (0, FV.jsx)("span", {
                       className: "HudElementRowSize",
-                      children: ni(OM[2])
+                      children: Qx(JV[2])
                     })]
-                  }), CM && (0, GM.jsxs)(GM.Fragment, {
-                    children: [" ", (0, GM.jsx)("span", {
+                  }), TV && (0, FV.jsxs)(FV.Fragment, {
+                    children: [" ", (0, FV.jsx)("span", {
                       className: "HudElementRowChevron",
                       children: "\u25be"
                     })]
                   })]
                 })
-              }), (0, GM.jsx)(kM, {
+              }), (0, FV.jsx)(iV, {
                 className: "HudElementRowIcon",
                 keepPlace: !0,
-                id: iM.id,
-                actionButtons: mM,
-                keyNames: HM,
-                locked: JM.has(iM.id),
-                lockable: dM(iM.id),
-                onLocked: yM
-              }), "menu" === iM.id && (0, GM.jsx)(ZM, {
+                id: xV.id,
+                actionButtons: vV,
+                keyNames: rV,
+                locked: bV.has(xV.id),
+                lockable: EV(xV.id),
+                onLocked: BV
+              }), "menu" === xV.id && (0, FV.jsx)(CV, {
                 className: "HudElementRowIcon",
-                open: lM,
-                name: (0, RM.s)(iM.id, mM, rM, HM),
-                onToggle: EM
-              }), "menu" !== iM.id && (0, GM.jsx)(sM, {
+                open: jV,
+                name: (0, GV.u)(xV.id, vV, eV, rV),
+                onToggle: qV
+              }), "menu" !== xV.id && (0, FV.jsx)(gV, {
                 className: "HudElementRowIcon",
                 keepPlace: !0,
-                id: iM.id,
-                elements: jM,
-                actionButtons: mM,
-                keyNames: HM,
-                onHidden: QM
-              }), (0, GM.jsx)(DM, {
+                id: xV.id,
+                elements: UV,
+                actionButtons: vV,
+                keyNames: rV,
+                onHidden: nV
+              }), (0, FV.jsx)(DV, {
                 className: "HudElementRowIcon",
                 keepPlace: !0,
                 onlyWhenMoved: !0,
-                locked: JM.has(iM.id),
-                id: iM.id,
-                elements: jM,
-                actionButtons: mM,
-                keyNames: HM,
-                onReset: zM
+                locked: bV.has(xV.id),
+                id: xV.id,
+                elements: UV,
+                actionButtons: vV,
+                keyNames: rV,
+                onReset: wV
               })]
-            }), UM && CM && (0, GM.jsx)(Qi, {
-              info: iM,
-              tuple: OM,
-              props: MM
-            }), eM && (0, GM.jsx)("div", {
+            }), tV && TV && (0, FV.jsx)(nx, {
+              info: xV,
+              tuple: JV,
+              props: VV
+            }), PV && (0, FV.jsx)("div", {
               className: "HudElementNote",
-              children: eM
+              children: PV
             })]
-          }, iM.id)
+          }, xV.id)
         }))
       })
     }
 
-    function Li(MM) {
+    function Zx(VV) {
       let {
-        preview: rM,
-        quick: iM,
-        onFullScreen: jM,
-        resting: aM,
-        onSidePanel: PM
-      } = MM;
+        preview: eV,
+        quick: xV,
+        onFullScreen: UV,
+        resting: yV,
+        onSidePanel: pV
+      } = VV;
       const {
-        t: nM
-      } = (0, OM.A)(), zM = Oi(), LM = (0, SM.useRef)(null), {
-        width: mM
-      } = (0, BM.d)(LM), HM = Math.floor(zM.width * Math.min(1, rM.maxHeight / zM.height)), hM = mM - HM - 12, JM = hM >= 130, dM = mM > 0;
-      (0, SM.useEffect)((() => {
-        dM && PM(JM)
-      }), [dM, JM, PM]);
-      const yM = (0, XM.D)(JM ? HM : mM, zM.width, zM.height, rM.maxHeight),
-        lM = aM ? (0, GM.jsx)("div", {
+        t: QV
+      } = (0, JV.A)(), wV = Jx(), ZV = (0, YV.useRef)(null), {
+        width: vV
+      } = (0, KV.d)(ZV), rV = Math.floor(wV.width * Math.min(1, eV.maxHeight / wV.height)), kV = vV - rV - 12, bV = kV >= 130, EV = vV > 0;
+      (0, YV.useEffect)((() => {
+        EV && pV(bV)
+      }), [EV, bV, pV]);
+      const BV = (0, HV.B)(bV ? rV : vV, wV.width, wV.height, eV.maxHeight),
+        jV = yV ? (0, FV.jsx)("div", {
           className: "HudPreviewResting",
           style: {
-            height: zM.height * yM
+            height: wV.height * BV
           }
-        }) : (0, GM.jsx)(Si, {
-          ...rM
+        }) : (0, FV.jsx)(Yx, {
+          ...eV
         }),
-        EM = MM => (0, GM.jsxs)(QM.V, {
+        qV = VV => (0, FV.jsxs)(nV.M, {
           className: "HudLayoutFullScreenButton",
-          ariaLabel: nM("hudLayout:fullScreen"),
+          ariaLabel: QV("hudLayout:fullScreen"),
           analyticsClick: {
             id: "hud_layout.full_screen"
           },
-          onClick: jM,
-          children: [(0, GM.jsx)(uM.b, {
+          onClick: UV,
+          children: [(0, FV.jsx)(zV.b, {
             name: "expand"
-          }), MM && (0, GM.jsx)("span", {
-            children: nM("hudLayout:fullScreen")
+          }), VV && (0, FV.jsx)("span", {
+            children: QV("hudLayout:fullScreen")
           })]
         });
-      return (0, GM.jsxs)("div", {
-        ref: LM,
+      return (0, FV.jsxs)("div", {
+        ref: ZV,
         className: "SettingBox HudLayoutPreviewBox",
-        children: [mM > 0 && JM && (0, GM.jsxs)("div", {
+        children: [vV > 0 && bV && (0, FV.jsxs)("div", {
           className: "HudLayoutPreviewRow",
-          children: [(0, GM.jsx)("div", {
+          children: [(0, FV.jsx)("div", {
             style: {
-              width: HM
+              width: rV
             },
-            children: lM
-          }), (0, GM.jsx)("div", {
+            children: jV
+          }), (0, FV.jsx)("div", {
             className: "HudLayoutSidePanel",
-            children: (0, GM.jsx)(dr, {
-              selected: rM.selected,
-              ...iM,
-              joystickFixed: rM.joystickFixed,
-              extra: EM(!rM.selected || hM >= 278)
+            children: (0, FV.jsx)(Ee, {
+              selected: eV.selected,
+              ...xV,
+              joystickFixed: eV.joystickFixed,
+              extra: qV(!eV.selected || kV >= 278)
             })
           })]
-        }), mM > 0 && !JM && (0, GM.jsxs)(GM.Fragment, {
-          children: [lM, (0, GM.jsx)("div", {
+        }), vV > 0 && !bV && (0, FV.jsxs)(FV.Fragment, {
+          children: [jV, (0, FV.jsx)("div", {
             className: "HudLayoutCornerButton",
-            children: EM(!1)
+            children: qV(!1)
           })]
         })]
       })
     }
-    var mi = iM(2677),
-      Hi = iM(4791),
-      Ji = iM(2663),
-      di = iM(2631);
-    const yi = MM => {
-      const rM = qM.p * ("sides" === MM ? window.innerWidth : window.innerHeight);
-      return Math.min(64, 2 * Math.floor(rM / 2))
+    var vx = xV(2744),
+      rx = xV(4874),
+      kx = xV(2722),
+      bx = xV(2672);
+    const Ex = VV => {
+      const eV = SV.l * ("sides" === VV ? window.innerWidth : window.innerHeight);
+      return Math.min(64, 2 * Math.floor(eV / 2))
     };
 
-    function li(MM, rM, iM) {
-      const [OM, SM, jM, aM] = MM;
-      return "sides" === rM ? [OM, iM, jM, iM] : [iM, SM, iM, aM]
+    function Bx(VV, eV, xV) {
+      const [JV, YV, UV, yV] = VV;
+      return "sides" === eV ? [JV, xV, UV, xV] : [xV, YV, xV, yV]
     }
-    const Ei = [null, null, null, null],
-      Ui = MM => `${MM}px`;
+    const jx = [null, null, null, null],
+      qx = VV => `${VV}px`;
 
-    function Gi(MM) {
+    function tx(VV) {
       let {
-        safe: rM,
-        onPreview: iM,
-        onCommit: jM
-      } = MM;
+        safe: eV,
+        onPreview: xV,
+        onCommit: UV
+      } = VV;
       const {
-        t: aM
-      } = (0, OM.A)(), PM = (0, qM.w)(null !== rM && void 0 !== rM ? rM : Ei, window.innerWidth, window.innerHeight, pr(document).map(Math.round)), nM = (0, SM.useRef)(null !== rM && void 0 !== rM ? rM : Ei);
-      nM.current = null !== rM && void 0 !== rM ? rM : Ei;
-      const zM = MM => {
-        const rM = Math.min(yi(MM), "sides" === MM ? Math.max(PM[1], PM[3]) : Math.max(PM[0], PM[2]));
-        return (0, GM.jsx)(HM.h, {
-          name: aM("sides" === MM ? "hudLayout:safeSides" : "hudLayout:safeEnds"),
+        t: yV
+      } = (0, JV.A)(), pV = (0, SV.t)(null !== eV && void 0 !== eV ? eV : jx, window.innerWidth, window.innerHeight, We(document).map(Math.round)), QV = (0, YV.useRef)(null !== eV && void 0 !== eV ? eV : jx);
+      QV.current = null !== eV && void 0 !== eV ? eV : jx;
+      const wV = VV => {
+        const eV = Math.min(Ex(VV), "sides" === VV ? Math.max(pV[1], pV[3]) : Math.max(pV[0], pV[2]));
+        return (0, FV.jsx)(rV.m, {
+          name: yV("sides" === VV ? "hudLayout:safeSides" : "hudLayout:safeEnds"),
           min: 0,
-          max: yi(MM),
+          max: Ex(VV),
           step: 2,
-          initValue: rM,
-          format: Ui,
-          onChange: rM => {
-            iM(li(nM.current, MM, rM))
+          initValue: eV,
+          format: qx,
+          onChange: eV => {
+            xV(Bx(QV.current, VV, eV))
           },
-          onChangeComplete: OM => {
-            if (OM === rM) return void iM(nM.current);
-            const SM = li(nM.current, MM, OM);
-            nM.current = SM, jM(SM), (0, bM.reportAnalyticsClick)({
+          onChangeComplete: JV => {
+            if (JV === eV) return void xV(QV.current);
+            const YV = Bx(QV.current, VV, JV);
+            QV.current = YV, UV(YV), (0, AV.reportAnalyticsClick)({
               id: "hud_layout.safe_zone",
-              value: MM
+              value: VV
             })
           }
         })
       };
-      return (0, GM.jsxs)("div", {
+      return (0, FV.jsxs)("div", {
         className: "SettingBoxGroup HudSafeZone",
-        children: [(0, GM.jsxs)("div", {
+        children: [(0, FV.jsxs)("div", {
           className: "SettingBox HudSafeZoneHeader",
-          children: [(0, GM.jsx)("div", {
-            children: aM("hudLayout:safeZone")
-          }), (0, GM.jsx)(QM.V, {
-            active: null === rM,
-            pressed: null === rM,
+          children: [(0, FV.jsx)("div", {
+            children: yV("hudLayout:safeZone")
+          }), (0, FV.jsx)(nV.M, {
+            active: null === eV,
+            pressed: null === eV,
             onClick: () => {
-              jM(null)
+              UV(null)
             },
-            children: aM("hudLayout:safeZoneAuto")
+            children: yV("hudLayout:safeZoneAuto")
           })]
-        }), zM("sides"), zM("ends")]
+        }), wV("sides"), wV("ends")]
       })
     }
 
-    function Ci() {
+    function Fx() {
       const {
-        t: MM
-      } = (0, OM.A)(), rM = (0, pM.ab)(), {
-        clientEscMenuOptions: iM
-      } = (0, zM.m)(["clientEscMenuOptions"]), jM = (0, mi.i)(), aM = rM.hudLayouts[jM], [PM, nM] = (0, SM.useState)(null), {
-        rowIconsOpen: LM,
-        onRowIconsOpen: mM,
-        select: hM
-      } = function(MM, rM) {
-        const [iM, OM] = (0, SM.useState)((() => pM.x.some((rM => void 0 !== MM.hudElements[rM] || MM.hudLocked.includes(rM))))), jM = (0, SM.useCallback)((MM => {
-          rM(MM), (0, pM.L)(MM) && OM(!0)
-        }), [rM]);
+        t: VV
+      } = (0, JV.A)(), eV = (0, WV.ib)(), {
+        clientEscMenuOptions: xV
+      } = (0, wV.l)(["clientEscMenuOptions"]), UV = (0, vx.g)(), yV = eV.hudLayouts[UV], [pV, QV] = (0, YV.useState)(null), {
+        rowIconsOpen: ZV,
+        onRowIconsOpen: vV,
+        select: kV
+      } = function(VV, eV) {
+        const [xV, JV] = (0, YV.useState)((() => WV.G.some((eV => void 0 !== VV.hudElements[eV] || VV.hudLocked.includes(eV))))), UV = (0, YV.useCallback)((VV => {
+          eV(VV), (0, WV.T)(VV) && JV(!0)
+        }), [eV]);
         return {
-          rowIconsOpen: iM,
-          onRowIconsOpen: OM,
-          select: jM
+          rowIconsOpen: xV,
+          onRowIconsOpen: JV,
+          select: UV
         }
-      }(aM, nM), [JM, dM] = (0, SM.useState)([]), [yM, lM] = (0, SM.useState)(null), [EM, UM] = hr(), CM = (0, SM.useCallback)(((MM, rM, iM) => {
-        dM(rM), UM(iM);
-        const OM = Object.keys(MM);
-        lM((MM => (null === MM || void 0 === MM ? void 0 : MM.size) === OM.length && OM.every((rM => MM.has(rM))) ? MM : new Set(OM)))
-      }), [UM]), {
-        gameState: eM
-      } = (0, zM.m)(["gameState"]), tM = (0, Ji.g)(), gM = (0, di.q)(), [uM] = (0, SM.useState)((() => {
-        var MM, rM, iM, OM;
-        return "inGame" === eM ? (0, VM.s)(document, tM, {
-          rightOfCamera: null !== (MM = null === (rM = gM.rightOfCamera) || void 0 === rM ? void 0 : rM.icon) && void 0 !== MM ? MM : null,
-          leftEnd: null !== (iM = null === (OM = gM.leftEnd) || void 0 === OM ? void 0 : OM.icon) && void 0 !== iM ? iM : null
-        }) : VM.b
-      })), WM = (0, SM.useRef)(null), sM = (0, SM.useRef)(null), DM = function(MM) {
-        const [rM, iM] = (0, SM.useState)((() => .4 * window.innerHeight));
-        return (0, SM.useLayoutEffect)((() => {
-          var rM;
-          const OM = null === (rM = MM.current) || void 0 === rM ? void 0 : rM.closest(".SettingsMenuRight");
-          if (!OM) return;
-          const SM = () => {
-            const MM = OM.clientHeight < ei ? .4 : .5;
-            iM(Math.max(80, OM.clientHeight * MM - 24))
+      }(yV, QV), [bV, EV] = (0, YV.useState)([]), [BV, jV] = (0, YV.useState)(null), [qV, tV] = ke(), TV = (0, YV.useCallback)(((VV, eV, xV) => {
+        EV(eV), tV(xV);
+        const JV = Object.keys(VV);
+        jV((VV => (null === VV || void 0 === VV ? void 0 : VV.size) === JV.length && JV.every((eV => VV.has(eV))) ? VV : new Set(JV)))
+      }), [tV]), {
+        gameState: PV
+      } = (0, wV.l)(["gameState"]), XV = (0, kx.h)(), MV = (0, bx.u)(), [zV] = (0, YV.useState)((() => {
+        var VV, eV, xV, JV;
+        return "inGame" === PV ? (0, dV.u)(document, XV, {
+          rightOfCamera: null !== (VV = null === (eV = MV.rightOfCamera) || void 0 === eV ? void 0 : eV.icon) && void 0 !== VV ? VV : null,
+          leftEnd: null !== (xV = null === (JV = MV.leftEnd) || void 0 === JV ? void 0 : JV.icon) && void 0 !== xV ? xV : null
+        }) : dV.d
+      })), RV = (0, YV.useRef)(null), gV = (0, YV.useRef)(null), DV = function(VV) {
+        const [eV, xV] = (0, YV.useState)((() => .4 * window.innerHeight));
+        return (0, YV.useLayoutEffect)((() => {
+          var eV;
+          const JV = null === (eV = VV.current) || void 0 === eV ? void 0 : eV.closest(".SettingsMenuRight");
+          if (!JV) return;
+          const YV = () => {
+            const VV = JV.clientHeight < Tx ? .4 : .5;
+            xV(Math.max(80, JV.clientHeight * VV - 24))
           };
-          SM();
-          const jM = new ResizeObserver(SM);
-          return jM.observe(OM), () => {
-            jM.disconnect()
+          YV();
+          const UV = new ResizeObserver(YV);
+          return UV.observe(JV), () => {
+            UV.disconnect()
           }
-        }), [MM]), rM
-      }(sM), kM = (0, Hi.q)(iM.joystickMode), ZM = iM.touchActionButtons, oM = (0, SM.useMemo)((() => (0, VM.r)(uM, ZM)), [uM, ZM]), fM = (0, SM.useMemo)((() => new Set((0, VM.n)(uM, ZM).map((MM => VM.e[MM])))), [uM, ZM]);
-      (0, SM.useEffect)((() => {
-        (0, bM.reportAnalyticsClick)({
+        }), [VV]), eV
+      }(gV), iV = (0, rx.n)(xV.joystickMode), CV = xV.touchActionButtons, aV = (0, YV.useMemo)((() => (0, dV.q)(zV, CV)), [zV, CV]), oV = (0, YV.useMemo)((() => new Set((0, dV.n)(zV, CV).map((VV => dV.g[VV])))), [zV, CV]);
+      (0, YV.useEffect)((() => {
+        (0, AV.reportAnalyticsClick)({
           id: "hud_layout.open"
         })
       }), []);
-      const [YM, xM] = (0, SM.useState)(!1), [vM, FM] = (0, SM.useState)(!1), BM = (0, SM.useRef)(null);
-      ji(BM, !vM);
-      const [XM, IM] = (0, SM.useState)(!1), qM = (0, SM.useCallback)((() => {
-        IM(!1)
-      }), []), TM = (0, SM.useMemo)((() => new Set(aM.hudLocked)), [aM.hudLocked]), cM = MM => {
-        var rM, iM;
-        const OM = (0, pM.l)(),
-          SM = MM(OM);
-        (0, pM.V)(null !== (rM = null === (iM = WM.current) || void 0 === iM ? void 0 : iM.keepLocks(OM, SM)) && void 0 !== rM ? rM : SM)
-      }, Mr = (MM, rM) => {
-        cM((iM => (0, pM.cb)(iM, jM, MM, rM)))
-      }, rr = (MM, rM, iM) => {
-        Mr(MM, {
-          dx: rM,
-          dy: iM
-        }), (0, bM.reportAnalyticsClick)({
+      const [cV, LV] = (0, YV.useState)(!1), [fV, mV] = (0, YV.useState)(!1), KV = (0, YV.useRef)(null);
+      Ux(KV, !fV);
+      const [HV, uV] = (0, YV.useState)(!1), SV = (0, YV.useCallback)((() => {
+        uV(!1)
+      }), []), IV = (0, YV.useMemo)((() => new Set(yV.hudLocked)), [yV.hudLocked]), OV = VV => {
+        var eV, xV;
+        const JV = (0, WV.r)(),
+          YV = VV(JV);
+        (0, WV.db)(null !== (eV = null === (xV = RV.current) || void 0 === xV ? void 0 : xV.keepLocks(JV, YV)) && void 0 !== eV ? eV : YV)
+      }, Ve = (VV, eV) => {
+        OV((xV => (0, WV.mb)(xV, UV, VV, eV)))
+      }, ee = (VV, eV, xV) => {
+        Ve(VV, {
+          dx: eV,
+          dy: xV
+        }), (0, AV.reportAnalyticsClick)({
           id: "hud_layout.edit",
-          value: `move:${MM}`
+          value: `move:${VV}`
         })
-      }, ir = (MM, rM) => {
-        cM((iM => (0, pM.fb)(iM, jM, MM, rM)))
-      }, Or = MM => {
-        const rM = RM.f[MM];
-        return (rM.move || rM.scale) && ("joystick" !== MM || kM) && !(0, KM.s)(MM, aM.hudElements[MM])
-      }, Sr = MM => RM.f[MM].move && ("joystick" !== MM || kM) && !TM.has(MM), jr = new Set(RM.g.map((MM => MM.id)).filter((MM => {
-        const rM = (0, pM.L)(MM) && !uM.rowIcons.includes(MM);
-        return null === yM || yM.has(MM) || (0, pM.p)(aM.hudElements, MM) && !rM
-      }))), ar = {
-        present: jr,
-        actionButtons: ZM,
-        keyNames: oM,
-        scaleCaps: EM,
-        sizeBesidePreview: YM,
-        elements: aM.hudElements,
-        selected: PM,
-        onSelect: hM,
-        rowIconsOpen: LM,
-        onRowIconsOpen: mM,
-        onScalePreview: (MM, rM) => {
-          var iM;
-          null === (iM = WM.current) || void 0 === iM || iM.setScale(MM, rM)
+      }, xe = (VV, eV) => {
+        OV((xV => (0, WV.qb)(xV, UV, VV, eV)))
+      }, Je = VV => {
+        const eV = GV.i[VV];
+        return (eV.move || eV.scale) && ("joystick" !== VV || iV) && !(0, sV.v)(VV, yV.hudElements[VV])
+      }, Ye = VV => GV.i[VV].move && ("joystick" !== VV || iV) && !IV.has(VV), Ue = new Set(GV.j.map((VV => VV.id)).filter((VV => {
+        const eV = (0, WV.T)(VV) && !zV.rowIcons.includes(VV);
+        return null === BV || BV.has(VV) || (0, WV.v)(yV.hudElements, VV) && !eV
+      }))), ye = {
+        present: Ue,
+        actionButtons: CV,
+        keyNames: aV,
+        scaleCaps: qV,
+        sizeBesidePreview: cV,
+        elements: yV.hudElements,
+        selected: pV,
+        onSelect: kV,
+        rowIconsOpen: ZV,
+        onRowIconsOpen: vV,
+        onScalePreview: (VV, eV) => {
+          var xV;
+          null === (xV = RV.current) || void 0 === xV || xV.setScale(VV, eV)
         },
-        onScale: (MM, rM) => {
-          Mr(MM, {
-            scale: rM
-          }), (0, bM.reportAnalyticsClick)({
+        onScale: (VV, eV) => {
+          Ve(VV, {
+            scale: eV
+          }), (0, AV.reportAnalyticsClick)({
             id: "hud_layout.edit",
-            value: `size:${MM}`
+            value: `size:${VV}`
           })
         },
-        onHidden: (MM, rM) => {
-          Mr(MM, {
-            hidden: rM
-          }), (0, bM.reportAnalyticsClick)({
+        onHidden: (VV, eV) => {
+          Ve(VV, {
+            hidden: eV
+          }), (0, AV.reportAnalyticsClick)({
             id: "hud_layout.edit",
-            value: `${rM?"hide":"show"}:${MM}`
+            value: `${eV?"hide":"show"}:${VV}`
           })
         },
-        onReset: MM => {
-          Mr(MM, pM.b)
+        onReset: VV => {
+          Ve(VV, WV.e)
         },
-        locked: TM,
-        lockable: Or,
-        onLocked: ir,
-        note: (rM, iM) => {
-          const OM = iM && JM.length > 0 ? MM("hudLayout:overlapsNote", {
-            names: (0, RM.q)(JM, ZM, MM, oM)
+        locked: IV,
+        lockable: Je,
+        onLocked: xe,
+        note: (eV, xV) => {
+          const JV = xV && bV.length > 0 ? VV("hudLayout:overlapsNote", {
+            names: (0, GV.r)(bV, CV, VV, aV)
           }) : null;
-          if (iM && NM(rM, kM)) return (0, GM.jsxs)(GM.Fragment, {
-            children: [OM && (0, GM.jsx)("span", {
-              children: OM
-            }), (0, GM.jsx)("span", {
-              children: MM("hudLayout:floatingJoystickNote")
-            }), !YM && (0, GM.jsx)(AM, {})]
+          if (xV && hV(eV, iV)) return (0, FV.jsxs)(FV.Fragment, {
+            children: [JV && (0, FV.jsx)("span", {
+              children: JV
+            }), (0, FV.jsx)("span", {
+              children: VV("hudLayout:floatingJoystickNote")
+            }), !cV && (0, FV.jsx)(lV, {})]
           });
-          if (OM) return OM;
-          const SM = iM && TM.has(rM) ? MM("hudLayout:lockedNote") : null,
-            jM = iM && fM.has(rM) ? MM("hudLayout:contextSlotNote") : null;
-          return SM || jM ? (0, GM.jsxs)(GM.Fragment, {
-            children: [SM && (0, GM.jsx)("span", {
-              children: SM
-            }), jM && (0, GM.jsx)("span", {
-              children: jM
+          if (JV) return JV;
+          const YV = xV && IV.has(eV) ? VV("hudLayout:lockedNote") : null,
+            UV = xV && oV.has(eV) ? VV("hudLayout:contextSlotNote") : null;
+          return YV || UV ? (0, FV.jsxs)(FV.Fragment, {
+            children: [YV && (0, FV.jsx)("span", {
+              children: YV
+            }), UV && (0, FV.jsx)("span", {
+              children: UV
             })]
-          }) : iM && "cluster" === rM ? MM("hudLayout:clusterNote") : iM && "inventory" === rM ? MM("hudLayout:inventoryNote") : iM && "menu" === rM ? MM("hudLayout:menuNote") : iM && (0, KM.s)(rM, aM.hudElements[rM]) && Sr(rM) ? MM("hudLayout:rowIconNote") : iM && "arrows" === rM ? MM("hudLayout:arrowsNote") : iM && "sprint" === rM ? MM("hudLayout:sprintNote") : (0, RM.w)(rM) && (0, pM.p)(aM.hudElements, rM) ? MM("hudLayout:inventoryHiddenNote", {
-            name: (0, RM.s)(rM, ZM, MM, oM)
+          }) : xV && "cluster" === eV ? VV("hudLayout:clusterNote") : xV && "inventory" === eV ? VV("hudLayout:inventoryNote") : xV && "menu" === eV ? VV("hudLayout:menuNote") : xV && (0, sV.v)(eV, yV.hudElements[eV]) && Ye(eV) ? VV("hudLayout:rowIconNote") : xV && "arrows" === eV ? VV("hudLayout:arrowsNote") : xV && "sprint" === eV ? VV("hudLayout:sprintNote") : (0, GV.x)(eV) && (0, WV.v)(yV.hudElements, eV) ? VV("hudLayout:inventoryHiddenNote", {
+            name: (0, GV.u)(eV, CV, VV, aV)
           }) : null
         }
       };
-      return (0, GM.jsxs)("div", {
-        ref: sM,
+      return (0, FV.jsxs)("div", {
+        ref: gV,
         className: "HudLayoutSettings",
-        children: [(0, GM.jsxs)("div", {
-          ref: BM,
+        children: [(0, FV.jsxs)("div", {
+          ref: KV,
           className: "HudLayoutBody",
-          children: [(0, GM.jsx)("div", {
+          children: [(0, FV.jsx)("div", {
             className: "HudLayoutOrientation",
-            children: MM("landscape" === jM ? "hudLayout:editingLandscape" : "hudLayout:editingPortrait")
-          }), (0, GM.jsx)(Li, {
+            children: VV("landscape" === UV ? "hudLayout:editingLandscape" : "hudLayout:editingPortrait")
+          }), (0, FV.jsx)(Zx, {
             preview: {
-              layout: rM,
-              orientation: jM,
-              selected: PM,
-              onSelect: hM,
-              onMove: rr,
-              canMove: Sr,
-              actionButtons: ZM,
-              joystickFixed: kM,
-              presence: uM,
-              keyNames: oM,
-              maxHeight: DM,
-              apiRef: WM,
-              onMeasured: CM,
-              onReady: FM,
-              lockable: Or
+              layout: eV,
+              orientation: UV,
+              selected: pV,
+              onSelect: kV,
+              onMove: ee,
+              canMove: Ye,
+              actionButtons: CV,
+              joystickFixed: iV,
+              presence: zV,
+              keyNames: aV,
+              maxHeight: DV,
+              apiRef: RV,
+              onMeasured: TV,
+              onReady: mV,
+              lockable: Je
             },
             quick: {
-              layout: aM,
-              actionButtons: ZM,
-              keyNames: oM,
-              scaleCaps: EM,
-              overlaps: JM,
-              onScale: ar.onScale,
-              onHidden: ar.onHidden,
-              onReset: ar.onReset,
-              locked: TM,
-              lockable: Or,
-              onLocked: ir
+              layout: yV,
+              actionButtons: CV,
+              keyNames: aV,
+              scaleCaps: qV,
+              overlaps: bV,
+              onScale: ye.onScale,
+              onHidden: ye.onHidden,
+              onReset: ye.onReset,
+              locked: IV,
+              lockable: Je,
+              onLocked: xe
             },
             onFullScreen: () => {
-              IM(!0)
+              uV(!0)
             },
-            resting: XM,
-            onSidePanel: xM
-          }), XM && (0, GM.jsx)(Pi, {
-            layout: rM,
-            orientation: jM,
-            selected: PM,
-            onSelect: hM,
-            onMove: rr,
-            canMove: Sr,
-            actionButtons: ZM,
-            joystickFixed: kM,
-            presence: uM,
-            keyNames: oM,
-            onScale: ar.onScale,
-            onHidden: ar.onHidden,
-            onReset: ar.onReset,
-            locked: TM,
-            lockable: Or,
-            onLocked: ir,
-            apiRef: WM,
-            onClose: qM
-          }), (0, GM.jsx)(Gi, {
-            safe: aM.hudSafe,
-            onCommit: MM => {
-              cM((rM => (0, pM.hb)(rM, jM, MM)))
+            resting: HV,
+            onSidePanel: LV
+          }), HV && (0, FV.jsx)(px, {
+            layout: eV,
+            orientation: UV,
+            selected: pV,
+            onSelect: kV,
+            onMove: ee,
+            canMove: Ye,
+            actionButtons: CV,
+            joystickFixed: iV,
+            presence: zV,
+            keyNames: aV,
+            onScale: ye.onScale,
+            onHidden: ye.onHidden,
+            onReset: ye.onReset,
+            locked: IV,
+            lockable: Je,
+            onLocked: xe,
+            apiRef: RV,
+            onClose: SV
+          }), (0, FV.jsx)(tx, {
+            safe: yV.hudSafe,
+            onCommit: VV => {
+              OV((eV => (0, WV.ub)(eV, UV, VV)))
             },
-            onPreview: MM => {
-              var rM;
-              null === (rM = WM.current) || void 0 === rM || rM.setSafe(MM)
+            onPreview: VV => {
+              var eV;
+              null === (eV = RV.current) || void 0 === eV || eV.setSafe(VV)
             }
-          }), (0, GM.jsx)(HM.c, {
-            label: MM("hudLayout:snapCentre"),
-            checked: rM.hudSnapCentre,
-            onClick: MM => {
-              (0, pM.T)(MM)
+          }), (0, FV.jsx)(rV.e, {
+            label: VV("hudLayout:snapCentre"),
+            checked: eV.hudSnapCentre,
+            onClick: VV => {
+              (0, WV.bb)(VV)
             },
-            circleInfoText: MM("hudLayout:snapCentreInfo")
-          }), (0, GM.jsx)(zi, {
-            ...ar
-          }), (0, GM.jsx)(HM.f, {
-            label: MM("hudLayout:shape"),
-            options: pM.z.map((rM => ({
-              value: rM,
-              label: MM(`hudLayout:shape_${rM}`)
+            circleInfoText: VV("hudLayout:snapCentreInfo")
+          }), (0, FV.jsx)(wx, {
+            ...ye
+          }), (0, FV.jsx)(rV.i, {
+            label: VV("hudLayout:shape"),
+            options: WV.J.map((eV => ({
+              value: eV,
+              label: VV(`hudLayout:shape_${eV}`)
             }))),
-            value: rM.hudShape,
-            onChange: MM => {
-              cM((rM => ({
-                ...rM,
-                hudShape: MM
-              }))), (0, bM.reportAnalyticsClick)({
+            value: eV.hudShape,
+            onChange: VV => {
+              OV((eV => ({
+                ...eV,
+                hudShape: VV
+              }))), (0, AV.reportAnalyticsClick)({
                 id: "hud_layout.shape",
-                value: MM
+                value: VV
               })
             }
-          }), (0, GM.jsx)(HM.h, {
-            name: MM("hudLayout:opacity"),
-            min: pM.e,
+          }), (0, FV.jsx)(rV.m, {
+            name: VV("hudLayout:opacity"),
+            min: WV.i,
             max: 1,
             step: .05,
-            initValue: rM.hudKeyOpacity,
-            format: MM => `${Math.round(100*MM)}%`,
-            circleInfoText: MM("hudLayout:opacityInfo"),
-            onChange: MM => {
-              var rM;
-              null === (rM = WM.current) || void 0 === rM || rM.setOpacity(MM)
+            initValue: eV.hudKeyOpacity,
+            format: VV => `${Math.round(100*VV)}%`,
+            circleInfoText: VV("hudLayout:opacityInfo"),
+            onChange: VV => {
+              var eV;
+              null === (eV = RV.current) || void 0 === eV || eV.setOpacity(VV)
             },
-            onChangeComplete: MM => {
-              (0, pM.P)(MM), (0, bM.reportAnalyticsClick)({
+            onChangeComplete: VV => {
+              (0, WV.Z)(VV), (0, AV.reportAnalyticsClick)({
                 id: "hud_layout.edit",
                 value: "opacity"
               })
             }
           })]
-        }), (0, GM.jsx)(QM.J, {
+        }), (0, FV.jsx)(nV.E, {
           className: "HudLayoutResetAll",
           analyticsClick: {
             id: "hud_layout.reset_all"
           },
           onClick: () => {
             !async function() {
-              const MM = wM.NotificationProvider.showPromptPopup({
+              const VV = NV.NotificationProvider.showPromptPopup({
                 title: "hudLayout:resetAllTitle",
                 subtitle: "hudLayout:resetAllSubtitle",
                 confirmText: "hudLayout:resetAllConfirm",
                 cancelText: "general:cancel",
                 destructive: !0
               });
-              !0 === await MM.getResult() && (0, pM.N)()
+              !0 === await VV.getResult() && (0, WV.X)()
             }()
           },
-          children: MM("hudLayout:resetAll")
+          children: VV("hudLayout:resetAll")
         })]
       })
     }
-    const ei = 350;
-    const bi = [function() {
+    const Tx = 350;
+    const Px = [function() {
       const {
-        t: MM
-      } = (0, OM.A)(), [rM, iM] = (0, SM.useState)(!1), jM = (0, SM.useRef)(null);
-      return (0, SM.useEffect)((() => {
-        var MM;
-        rM && (null === (MM = jM.current) || void 0 === MM || MM.scrollIntoView({
+        t: VV
+      } = (0, JV.A)(), [eV, xV] = (0, YV.useState)(!1), UV = (0, YV.useRef)(null);
+      return (0, YV.useEffect)((() => {
+        var VV;
+        eV && (null === (VV = UV.current) || void 0 === VV || VV.scrollIntoView({
           block: "start",
           behavior: "smooth"
         }))
-      }), [rM]), (0, GM.jsxs)("div", {
+      }), [eV]), (0, FV.jsxs)("div", {
         className: "HudLayoutSection",
-        children: [(0, GM.jsx)(tM.c, {
-          ref: jM,
+        children: [(0, FV.jsx)(XV.c, {
+          ref: UV,
           icon: "arrows-up-down-left-right",
-          title: MM("hudLayout:title"),
-          sub: MM("hudLayout:entrySub"),
-          expanded: rM,
+          title: VV("hudLayout:title"),
+          sub: VV("hudLayout:entrySub"),
+          expanded: eV,
           onClick: () => {
-            iM(!rM)
+            xV(!eV)
           }
-        }), rM && (0, GM.jsx)(Ci, {})]
+        }), eV && (0, FV.jsx)(Fx, {})]
       })
     }, function() {
       const {
-        t: MM
-      } = (0, OM.A)(), {
-        joystickMode: rM,
-        touchSpeedCurve: iM,
-        autorun: SM,
-        jumpLock: jM,
-        touchEdgeGuard: aM
-      } = (0, zM.m)(["clientEscMenuOptions"]).clientEscMenuOptions;
-      return (0, GM.jsxs)(GM.Fragment, {
-        children: [(0, GM.jsx)(HM.f, {
-          label: MM("settingsMenu:joystick"),
-          options: UM.ub.map((rM => ({
-            value: rM,
-            label: MM(CM[rM])
+        t: VV
+      } = (0, JV.A)(), {
+        joystickMode: eV,
+        touchSpeedCurve: xV,
+        autorun: YV,
+        jumpLock: UV,
+        touchEdgeGuard: yV
+      } = (0, wV.l)(["clientEscMenuOptions"]).clientEscMenuOptions;
+      return (0, FV.jsxs)(FV.Fragment, {
+        children: [(0, FV.jsx)(rV.i, {
+          label: VV("settingsMenu:joystick"),
+          options: tV.yb.map((eV => ({
+            value: eV,
+            label: VV(TV[eV])
           }))),
-          value: rM,
-          onChange: MM => {
-            zM.d.setClientEscMenuOptions({
-              joystickMode: MM
+          value: eV,
+          onChange: VV => {
+            wV.b.setClientEscMenuOptions({
+              joystickMode: VV
             })
           },
-          circleInfoText: MM("settingsMenu:joystickInfo")
-        }), (0, GM.jsx)(HM.c, {
-          label: MM("settingsMenu:preciseWalking"),
-          checked: iM,
-          onClick: MM => {
-            zM.d.setClientEscMenuOptions({
-              touchSpeedCurve: MM
+          circleInfoText: VV("settingsMenu:joystickInfo")
+        }), (0, FV.jsx)(rV.e, {
+          label: VV("settingsMenu:preciseWalking"),
+          checked: xV,
+          onClick: VV => {
+            wV.b.setClientEscMenuOptions({
+              touchSpeedCurve: VV
             })
           },
-          circleInfoText: MM("settingsMenu:preciseWalkingInfo")
-        }), (0, GM.jsx)(HM.c, {
-          label: MM("settingsMenu:autoRun"),
-          checked: SM,
-          onClick: MM => {
-            zM.d.setClientEscMenuOptions({
-              autorun: MM
+          circleInfoText: VV("settingsMenu:preciseWalkingInfo")
+        }), (0, FV.jsx)(rV.e, {
+          label: VV("settingsMenu:autoRun"),
+          checked: YV,
+          onClick: VV => {
+            wV.b.setClientEscMenuOptions({
+              autorun: VV
             })
           },
-          circleInfoText: MM("settingsMenu:autoRunInfo")
-        }), (0, GM.jsx)(HM.c, {
-          label: MM("settingsMenu:jumpLock"),
-          checked: jM,
-          onClick: MM => {
-            zM.d.setClientEscMenuOptions({
-              jumpLock: MM
+          circleInfoText: VV("settingsMenu:autoRunInfo")
+        }), (0, FV.jsx)(rV.e, {
+          label: VV("settingsMenu:jumpLock"),
+          checked: UV,
+          onClick: VV => {
+            wV.b.setClientEscMenuOptions({
+              jumpLock: VV
             })
           },
-          circleInfoText: MM("settingsMenu:jumpLockInfo")
-        }), (0, GM.jsx)(HM.c, {
-          label: MM("touchSettings:stopAtEdges"),
-          checked: aM,
-          onClick: MM => {
-            zM.d.setClientEscMenuOptions({
-              touchEdgeGuard: MM
+          circleInfoText: VV("settingsMenu:jumpLockInfo")
+        }), (0, FV.jsx)(rV.e, {
+          label: VV("touchSettings:stopAtEdges"),
+          checked: yV,
+          onClick: VV => {
+            wV.b.setClientEscMenuOptions({
+              touchEdgeGuard: VV
             })
           },
-          circleInfoText: MM("touchSettings:stopAtEdgesInfo")
+          circleInfoText: VV("touchSettings:stopAtEdgesInfo")
         })]
       })
     }, function() {
-      return (0, GM.jsx)(EM.c, {})
+      return (0, FV.jsx)(qV.b, {})
     }, function() {
       const {
-        t: MM
-      } = (0, OM.A)(), {
-        clientEscMenuOptions: rM
-      } = (0, zM.m)(["clientEscMenuOptions"]);
-      return (0, eM.b)() ? (0, GM.jsx)(HM.c, {
-        label: MM("settingsMenu:vibration"),
-        checked: rM.vibration,
-        onClick: MM => {
-          zM.d.setClientEscMenuOptions({
-            vibration: MM
+        t: VV
+      } = (0, JV.A)(), {
+        clientEscMenuOptions: eV
+      } = (0, wV.l)(["clientEscMenuOptions"]);
+      return (0, PV.c)() ? (0, FV.jsx)(rV.e, {
+        label: VV("settingsMenu:vibration"),
+        checked: eV.vibration,
+        onClick: VV => {
+          wV.b.setClientEscMenuOptions({
+            vibration: VV
           })
         },
-        circleInfoText: MM("settingsMenu:vibrationInfo")
+        circleInfoText: VV("settingsMenu:vibrationInfo")
       }) : null
     }];
 
-    function wi() {
-      return (0, GM.jsx)(GM.Fragment, {
-        children: bi.map(((MM, rM) => (0, GM.jsx)(MM, {}, rM)))
+    function Ax() {
+      return (0, FV.jsx)(FV.Fragment, {
+        children: Px.map(((VV, eV) => (0, FV.jsx)(VV, {}, eV)))
       })
     }
-    var ti = iM(4727);
+    var Nx = xV(4798);
 
-    function gi() {
+    function Xx() {
       const {
-        t: MM
-      } = (0, OM.A)(), {
-        isTouchScreen: rM,
-        clientEscMenuOptions: iM,
-        gameState: aM
-      } = (0, zM.m)(["isTouchScreen", "clientEscMenuOptions", "gameState"]), PM = (0, hM.f)("ezBridging"), nM = (0, hM.f)("ezTowering"), dM = "inGame" !== aM || !0 === PM, yM = (0, JM.f)(), EM = null !== yM && ("inGame" !== aM || !0 === nM), [, UM] = (0, SM.useReducer)((MM => MM + 1), 0), CM = (0, lM.e)(), [eM, bM] = (0, SM.useState)(ti.f);
-      return (0, GM.jsxs)("div", {
+        t: VV
+      } = (0, JV.A)(), {
+        isTouchScreen: eV,
+        clientEscMenuOptions: xV,
+        gameState: yV
+      } = (0, wV.l)(["isTouchScreen", "clientEscMenuOptions", "gameState"]), pV = (0, kV.j)("ezBridging"), QV = (0, kV.j)("ezTowering"), EV = "inGame" !== yV || !0 === pV, BV = (0, bV.d)(), qV = null !== BV && ("inGame" !== yV || !0 === QV), [, tV] = (0, YV.useReducer)((VV => VV + 1), 0), TV = (0, jV.h)(), [PV, AV] = (0, YV.useState)(Nx.f);
+      return (0, FV.jsxs)("div", {
         className: "SettingsMenuRightInner",
-        children: [CM && (0, GM.jsxs)("div", {
+        children: [TV && (0, FV.jsxs)("div", {
           className: "SettingBox SettingBoxWithButton",
-          children: [(0, GM.jsx)("div", {
-            children: MM("controller:settingsControlsNote")
-          }), (0, GM.jsx)(QM.V, {
+          children: [(0, FV.jsx)("div", {
+            children: VV("controller:settingsControlsNote")
+          }), (0, FV.jsx)(nV.M, {
             onClick: () => {
-              zM.d.set({
+              wV.b.set({
                 openSettingsCategory: "controller"
               })
             },
-            children: MM("controller:settingsOpenController")
+            children: VV("controller:settingsOpenController")
           })]
-        }), (0, LM.isTouchscreen)() && !(0, LM.isMobile)() ? (0, GM.jsx)(GM.Fragment, {
-          children: (0, GM.jsx)(HM.c, {
-            label: MM("settingsMenu:useTouchControls"),
-            checked: eM,
-            onClick: MM => {
-              (0, ti.d)(MM), bM(MM)
+        }), (0, ZV.isTouchscreen)() && !(0, ZV.isMobile)() ? (0, FV.jsx)(FV.Fragment, {
+          children: (0, FV.jsx)(rV.e, {
+            label: VV("settingsMenu:useTouchControls"),
+            checked: PV,
+            onClick: VV => {
+              (0, Nx.c)(VV), AV(VV)
             }
           })
-        }) : null, rM && (0, GM.jsx)(wi, {}), dM && (0, GM.jsx)(HM.c, {
-          label: MM("settingsMenu:ezBridging"),
-          checked: iM.ezBridging,
-          onClick: MM => {
-            zM.d.setClientEscMenuOptions({
-              ezBridging: MM
+        }) : null, eV && (0, FV.jsx)(Ax, {}), EV && (0, FV.jsx)(rV.e, {
+          label: VV("settingsMenu:ezBridging"),
+          checked: xV.ezBridging,
+          onClick: VV => {
+            wV.b.setClientEscMenuOptions({
+              ezBridging: VV
             })
           },
-          circleInfoText: MM("settingsMenu:ezBridgingInfo")
-        }), EM && (0, GM.jsx)(HM.c, {
-          label: MM("settingsMenu:ezTowering"),
-          checked: iM.ezTowering,
-          onClick: MM => {
-            zM.d.setClientEscMenuOptions({
-              ezTowering: MM
+          circleInfoText: VV("settingsMenu:ezBridgingInfo")
+        }), qV && (0, FV.jsx)(rV.e, {
+          label: VV("settingsMenu:ezTowering"),
+          checked: xV.ezTowering,
+          onClick: VV => {
+            wV.b.setClientEscMenuOptions({
+              ezTowering: VV
             })
           },
-          circleInfoText: MM("jump" === yM ? "ezTowering:jumpInfo" : "settingsMenu:ezToweringInfo")
-        }), (0, GM.jsx)(HM.c, {
-          label: MM("settingsMenu:crouchToggle"),
-          checked: iM.crouchIsToggle,
-          onClick: MM => {
-            zM.d.setClientEscMenuOptions({
-              crouchIsToggle: MM
+          circleInfoText: VV("jump" === BV ? "ezTowering:jumpInfo" : "settingsMenu:ezToweringInfo")
+        }), (0, FV.jsx)(rV.e, {
+          label: VV("settingsMenu:crouchToggle"),
+          checked: xV.crouchIsToggle,
+          onClick: VV => {
+            wV.b.setClientEscMenuOptions({
+              crouchIsToggle: VV
             })
           },
-          circleInfoText: MM("settingsMenu:crouchToggleInfo")
-        }), (0, GM.jsx)(HM.c, {
-          label: MM("settingsMenu:hideUiToggle"),
-          checked: iM.hideUiIsToggle,
-          onClick: MM => {
-            zM.d.setClientEscMenuOptions({
-              hideUiIsToggle: MM
+          circleInfoText: VV("settingsMenu:crouchToggleInfo")
+        }), (0, FV.jsx)(rV.e, {
+          label: VV("settingsMenu:hideUiToggle"),
+          checked: xV.hideUiIsToggle,
+          onClick: VV => {
+            wV.b.setClientEscMenuOptions({
+              hideUiIsToggle: VV
             })
           },
-          circleInfoText: MM("settingsMenu:hideUiToggleInfo")
-        }), "mouseOnly" !== (0, mM.c)() && (0, GM.jsx)(HM.h, {
-          name: MM("settingsMenu:touchscreenSensitivity"),
+          circleInfoText: VV("settingsMenu:hideUiToggleInfo")
+        }), "mouseOnly" !== (0, vV.c)() && (0, FV.jsx)(rV.m, {
+          name: VV("settingsMenu:touchscreenSensitivity"),
           min: 1,
           max: 900,
           step: 1,
-          initValue: iM.touchscreenSensitivity,
-          onChange: MM => {
-            zM.d.setClientEscMenuOptions({
-              touchscreenSensitivity: MM
+          initValue: xV.touchscreenSensitivity,
+          onChange: VV => {
+            wV.b.setClientEscMenuOptions({
+              touchscreenSensitivity: VV
             })
           }
-        }), !(0, LM.isMobile)() && (0, GM.jsx)(HM.h, {
-          name: MM("settingsMenu:mouseSensitivity"),
+        }), !(0, ZV.isMobile)() && (0, FV.jsx)(rV.m, {
+          name: VV("settingsMenu:mouseSensitivity"),
           min: 1,
           max: 200,
           step: 1,
-          initValue: iM.mouseSensitivity,
-          onChange: MM => {
-            zM.d.setClientEscMenuOptions({
-              mouseSensitivity: MM
+          initValue: xV.mouseSensitivity,
+          onChange: VV => {
+            wV.b.setClientEscMenuOptions({
+              mouseSensitivity: VV
             })
           }
-        }), !(0, LM.isMobile)() && (0, GM.jsxs)("div", {
+        }), !(0, ZV.isMobile)() && (0, FV.jsxs)("div", {
           className: "ControlsContainer",
-          children: [(0, GM.jsx)("div", {
+          children: [(0, FV.jsx)("div", {
             className: "SliderText",
-            children: MM("settingsMenu:keyBindings")
-          }), jM.f.map((rM => (0, GM.jsx)(ui, {
-            title: MM(rM.name.translationKey, rM.name.params),
-            defaultOpen: jM.i.has(rM.id),
-            children: rM.actions.map((MM => (0, GM.jsx)(Ri, {
-              noaAction: MM,
-              forceUpdate: UM,
-              clashesWith: rM.clashesWith,
-              showPadGlyph: CM
-            }, MM)))
-          }, rM.name.translationKey))), (0, GM.jsx)(QM.J, {
+            children: VV("settingsMenu:keyBindings")
+          }), UV.f.map((eV => (0, FV.jsx)(Mx, {
+            title: VV(eV.name.translationKey, eV.name.params),
+            defaultOpen: UV.g.has(eV.id),
+            children: eV.actions.map((VV => (0, FV.jsx)(zx, {
+              noaAction: VV,
+              forceUpdate: tV,
+              clashesWith: eV.clashesWith,
+              showPadGlyph: TV
+            }, VV)))
+          }, eV.name.translationKey))), (0, FV.jsx)(nV.E, {
             className: "ResetBindingsButton",
             onClick: () => {
-              (0, jM.C)(), UM()
+              (0, UV.A)(), tV()
             },
-            children: MM("controls:resetBindings")
+            children: VV("controls:resetBindings")
           })]
         })]
       })
     }
 
-    function ui(MM) {
+    function Mx(VV) {
       let {
-        title: rM,
-        defaultOpen: iM,
-        children: OM
-      } = MM;
-      const [jM, aM] = (0, SM.useState)(iM);
-      return (0, GM.jsxs)("div", {
-        className: nM()("ControlsSection", {
-          Collapsed: !jM
+        title: eV,
+        defaultOpen: xV,
+        children: JV
+      } = VV;
+      const [UV, yV] = (0, YV.useState)(xV);
+      return (0, FV.jsxs)("div", {
+        className: QV()("ControlsSection", {
+          Collapsed: !UV
         }),
-        children: [(0, GM.jsxs)("div", {
+        children: [(0, FV.jsxs)("div", {
           className: "ControlsSectionHeader",
           "data-pad-focusable": !0,
           onClick: () => {
-            aM(!jM)
+            yV(!UV)
           },
-          children: [(0, GM.jsx)("div", {
+          children: [(0, FV.jsx)("div", {
             className: "ControlsSectionTitle",
-            children: rM
-          }), (0, GM.jsx)("div", {
+            children: eV
+          }), (0, FV.jsx)("div", {
             className: "ControlsSectionChevron",
             children: "\u25be"
           })]
-        }), jM && (0, GM.jsx)("div", {
+        }), UV && (0, FV.jsx)("div", {
           className: "ControlsSectionRows",
-          children: OM
+          children: JV
         })]
       })
     }
 
-    function Ri(MM) {
+    function zx(VV) {
       let {
-        noaAction: rM,
-        forceUpdate: iM,
-        clashesWith: PM,
-        showPadGlyph: zM
-      } = MM;
+        noaAction: eV,
+        forceUpdate: xV,
+        clashesWith: pV,
+        showPadGlyph: wV
+      } = VV;
       const {
-        t: LM
-      } = (0, OM.A)(), mM = (0, yM.c)(rM), [HM, hM] = (0, SM.useState)(!1), [JM, lM] = (0, SM.useState)("controls:clickToEnterNewBinding"), [EM, UM] = (0, SM.useState)(null), [CM, eM] = (0, SM.useState)(null), bM = (0, SM.useRef)(null);
-      (0, SM.useEffect)((() => {
-        HM && bM.current && bM.current.focus()
-      }), [HM]);
-      const wM = jM.v[rM].filter((MM => aM.k[MM]));
-      let tM = null;
-      const gM = [],
-        uM = PM.flatMap((MM => {
-          var rM, iM;
-          return null !== (rM = null === (iM = jM.f.find((rM => rM.id === MM))) || void 0 === iM ? void 0 : iM.actions) && void 0 !== rM ? rM : []
+        t: ZV
+      } = (0, JV.A)(), vV = (0, BV.e)(eV), [rV, kV] = (0, YV.useState)(!1), [bV, jV] = (0, YV.useState)("controls:clickToEnterNewBinding"), [qV, tV] = (0, YV.useState)(null), [TV, PV] = (0, YV.useState)(null), AV = (0, YV.useRef)(null);
+      (0, YV.useEffect)((() => {
+        rV && AV.current && AV.current.focus()
+      }), [rV]);
+      const NV = UV.t[eV].filter((VV => yV.g[VV]));
+      let XV = null;
+      const MV = [],
+        zV = pV.flatMap((VV => {
+          var eV, xV;
+          return null !== (eV = null === (xV = UV.f.find((eV => eV.id === VV))) || void 0 === xV ? void 0 : xV.actions) && void 0 !== eV ? eV : []
         }));
-      for (const OM of uM) {
-        if (OM === rM) continue;
-        const MM = jM.v[OM];
-        for (const rM of MM) wM.includes(rM) && gM.push(LM(jM.y[OM].translationKey, jM.y[OM].params))
+      for (const JV of zV) {
+        if (JV === eV) continue;
+        const VV = UV.t[JV];
+        for (const eV of VV) NV.includes(eV) && MV.push(ZV(UV.v[JV].translationKey, UV.v[JV].params))
       }
-      gM.length > 0 && (tM = LM("controls:sharedBindingsWarning") + " ", tM += gM.join(", "));
-      const RM = () => {
-          hM(!1), UM(null), lM("controls:clickToEnterNewBinding"), eM(null)
+      MV.length > 0 && (XV = ZV("controls:sharedBindingsWarning") + " ", XV += MV.join(", "));
+      const GV = () => {
+          kV(!1), tV(null), jV("controls:clickToEnterNewBinding"), PV(null)
         },
-        pM = () => "BindingInput_" + rM;
-      return (0, GM.jsxs)("div", {
-        className: nM()("ControlRow", {
-          WarningBorder: null !== tM
+        WV = () => "BindingInput_" + eV;
+      return (0, FV.jsxs)("div", {
+        className: QV()("ControlRow", {
+          WarningBorder: null !== XV
         }),
-        children: [(0, GM.jsxs)("div", {
+        children: [(0, FV.jsxs)("div", {
           className: "ControlRowInner",
-          children: [(0, GM.jsxs)("div", {
+          children: [(0, FV.jsxs)("div", {
             className: "ControlName",
-            children: [LM(jM.y[rM].translationKey, jM.y[rM].params), zM && mM && (0, GM.jsx)(dM.b, {
-              glyph: mM,
+            children: [ZV(UV.v[eV].translationKey, UV.v[eV].params), wV && vV && (0, FV.jsx)(EV.c, {
+              glyph: vV,
               className: "ControlPadGlyph"
             })]
-          }), (0, GM.jsxs)("div", {
+          }), (0, FV.jsxs)("div", {
             className: "ControlBindingsContainer",
-            children: [(0, GM.jsxs)("div", {
+            children: [(0, FV.jsxs)("div", {
               className: "ControlBindingsList",
-              children: [wM.map((MM => (0, GM.jsxs)("div", {
+              children: [NV.map((VV => (0, FV.jsxs)("div", {
                 className: "ControlBinding",
-                children: [(0, GM.jsx)("div", {
-                  children: (0, jM.m)(MM)
-                }), (0, GM.jsx)("div", {
+                children: [(0, FV.jsx)("div", {
+                  children: (0, UV.l)(VV)
+                }), (0, FV.jsx)("div", {
                   className: "ControlBindingRemoveIcon",
                   "data-pad-focusable": !0,
                   onClick: () => {
-                    const OM = (0, jM.z)(rM, MM);
-                    OM.isError() ? eM(OM.asError().message) : eM(null), iM()
+                    const JV = (0, UV.w)(eV, VV);
+                    JV.isError() ? PV(JV.asError().message) : PV(null), xV()
                   },
                   children: "\xd7"
                 })]
-              }, MM))), !HM && (0, GM.jsx)("div", {
+              }, VV))), !rV && (0, FV.jsx)("div", {
                 className: "ControlBinding ControlBindingAdd",
                 onClick: () => {
-                  hM(!0), eM(null)
+                  kV(!0), PV(null)
                 },
-                children: (0, GM.jsx)("div", {
+                children: (0, FV.jsx)("div", {
                   className: "ControlBindingAddIcon",
                   children: "+"
                 })
               })]
-            }), HM && (0, GM.jsxs)("div", {
+            }), rV && (0, FV.jsxs)("div", {
               className: "ControlBindingAddInput",
-              children: [(0, GM.jsxs)("div", {
+              children: [(0, FV.jsxs)("div", {
                 className: "InputContainer",
-                children: [(0, GM.jsx)("div", {
+                children: [(0, FV.jsx)("div", {
                   className: "InputOverlay",
-                  children: EM ? (0, jM.m)(EM) : (0, GM.jsx)("div", {
+                  children: qV ? (0, UV.l)(qV) : (0, FV.jsx)("div", {
                     className: "InputOverlayPlaceholder",
-                    children: LM(JM)
+                    children: ZV(bV)
                   })
-                }), (0, GM.jsx)("input", {
-                  ref: bM,
-                  id: pM(),
+                }), (0, FV.jsx)("input", {
+                  ref: AV,
+                  id: WV(),
                   "data-pad-no-osk": !0,
                   defaultValue: "",
-                  onKeyDown: MM => {
-                    if ("Escape" === MM.code) return RM(), MM.preventDefault(), void MM.stopPropagation();
-                    const rM = MM.code;
-                    aM.d.includes(rM) ? (eM(null), UM(rM)) : (eM("controls:keyIsReserved"), UM(null)), MM.preventDefault(), MM.stopPropagation()
+                  onKeyDown: VV => {
+                    if ("Escape" === VV.code) return GV(), VV.preventDefault(), void VV.stopPropagation();
+                    const eV = VV.code;
+                    yV.c.includes(eV) ? (PV(null), tV(eV)) : (PV("controls:keyIsReserved"), tV(null)), VV.preventDefault(), VV.stopPropagation()
                   },
-                  onMouseDown: MM => {
-                    const rM = "Mouse" + (MM.button + 1);
-                    document.activeElement && document.activeElement.id === pM() ? aM.d.includes(rM) ? (eM(null), UM(rM)) : (eM("controls:keyIsReserved"), UM(null)) : lM("controls:enterNewBinding"), MM.stopPropagation()
+                  onMouseDown: VV => {
+                    const eV = "Mouse" + (VV.button + 1);
+                    document.activeElement && document.activeElement.id === WV() ? yV.c.includes(eV) ? (PV(null), tV(eV)) : (PV("controls:keyIsReserved"), tV(null)) : jV("controls:enterNewBinding"), VV.stopPropagation()
                   },
                   onBlur: () => {
-                    lM("controls:clickToEnterNewBinding")
+                    jV("controls:clickToEnterNewBinding")
                   }
                 })]
-              }), (0, GM.jsx)(QM.e, {
-                onPointerDown: MM => {
-                  MM.preventDefault()
+              }), (0, FV.jsx)(nV.f, {
+                onPointerDown: VV => {
+                  VV.preventDefault()
                 },
                 onClick: () => {
-                  (0, jM.e)(rM, EM), iM(), RM()
+                  (0, UV.d)(eV, qV), xV(), GV()
                 },
                 className: "ControlBindingAddButton",
-                disabled: null === EM,
-                children: LM("general:add")
-              }), (0, GM.jsx)("div", {
+                disabled: null === qV,
+                children: ZV("general:add")
+              }), (0, FV.jsx)("div", {
                 className: "ControlBindingAddCancel",
                 onClick: () => {
-                  RM()
+                  GV()
                 },
                 children: "\xd7"
               })]
-            }), CM && (0, GM.jsx)("div", {
+            }), TV && (0, FV.jsx)("div", {
               className: "ControlBindingError",
-              children: LM(CM)
+              children: ZV(TV)
             })]
           })]
-        }), tM && (0, GM.jsx)("div", {
+        }), XV && (0, FV.jsx)("div", {
           className: "ControlRowWarning",
-          children: tM
+          children: XV
         })]
       })
     }
   },
-  9472: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => aM
+  9482: (VV, eV, xV) => {
+    xV.d(eV, {
+      c: () => yV
     });
-    var OM = iM(44),
-      SM = iM(1398),
-      jM = iM(1303);
-    const aM = (0, OM.forwardRef)((function(MM, rM) {
+    var JV = xV(62),
+      YV = xV(1414),
+      UV = xV(1321);
+    const yV = (0, JV.forwardRef)((function(VV, eV) {
       let {
-        icon: iM,
-        title: OM,
-        sub: aM,
-        expanded: PM,
-        onClick: nM
-      } = MM;
-      return (0, jM.jsxs)("button", {
-        ref: rM,
+        icon: xV,
+        title: JV,
+        sub: yV,
+        expanded: pV,
+        onClick: QV
+      } = VV;
+      return (0, UV.jsxs)("button", {
+        ref: eV,
         type: "button",
         className: "SettingBox SettingBoxFeatured FeaturedSettingsEntry",
-        "aria-expanded": PM,
-        onClick: nM,
-        children: [(0, jM.jsx)(SM.b, {
-          name: iM,
+        "aria-expanded": pV,
+        onClick: QV,
+        children: [(0, UV.jsx)(YV.b, {
+          name: xV,
           className: "FeaturedSettingsEntryIcon"
-        }), (0, jM.jsxs)("span", {
+        }), (0, UV.jsxs)("span", {
           className: "FeaturedSettingsEntryText",
-          children: [(0, jM.jsx)("span", {
+          children: [(0, UV.jsx)("span", {
             className: "FeaturedSettingsEntryTitle",
-            children: OM
-          }), (0, jM.jsx)("span", {
+            children: JV
+          }), (0, UV.jsx)("span", {
             className: "FeaturedSettingsEntrySub",
-            children: aM
+            children: yV
           })]
-        }), (0, jM.jsx)("span", {
+        }), (0, UV.jsx)("span", {
           className: "FeaturedSettingsEntryChevron",
           children: "\u25be"
         })]
       })
     }))
   },
-  9287: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => yM,
-      g: () => dM,
-      i: () => zM,
-      m: () => lM,
-      o: () => EM,
-      p: () => mM
+  9301: (VV, eV, xV) => {
+    xV.d(eV, {
+      b: () => BV,
+      f: () => EV,
+      h: () => wV,
+      l: () => jV,
+      m: () => qV,
+      o: () => vV
     });
-    var OM = iM(1750),
-      SM = iM(1835);
-    const jM = MM => MM >= 56320 && MM <= 57343,
-      aM = MM => MM >= 55296 && MM <= 56319,
-      PM = (MM, rM) => rM >= 2 && jM(MM.charCodeAt(rM - 1)) && aM(MM.charCodeAt(rM - 2)) ? rM - 2 : Math.max(0, rM - 1),
-      nM = (MM, rM) => {
-        let iM;
-        var OM, SM;
-        return iM = MM.start !== MM.end ? rM < 0 ? MM.start : MM.end : rM < 0 ? PM(MM.value, MM.start) : (OM = MM.value, (SM = MM.start) + 1 < OM.length && aM(OM.charCodeAt(SM)) && jM(OM.charCodeAt(SM + 1)) ? SM + 2 : Math.min(OM.length, SM + 1)), {
-          value: MM.value,
-          start: iM,
-          end: iM
+    var JV = xV(1764),
+      YV = xV(1840);
+    const UV = VV => VV >= 56320 && VV <= 57343,
+      yV = VV => VV >= 55296 && VV <= 56319,
+      pV = (VV, eV) => eV >= 2 && UV(VV.charCodeAt(eV - 1)) && yV(VV.charCodeAt(eV - 2)) ? eV - 2 : Math.max(0, eV - 1),
+      QV = (VV, eV) => {
+        let xV;
+        var JV, YV;
+        return xV = VV.start !== VV.end ? eV < 0 ? VV.start : VV.end : eV < 0 ? pV(VV.value, VV.start) : (JV = VV.value, (YV = VV.start) + 1 < JV.length && yV(JV.charCodeAt(YV)) && UV(JV.charCodeAt(YV + 1)) ? YV + 2 : Math.min(JV.length, YV + 1)), {
+          value: VV.value,
+          start: xV,
+          end: xV
         }
       },
-      QM = ["text", "search", "url", "email", "tel", "password", "number"],
-      zM = MM => !(!(0, SM.e)(MM) || MM.isContentEditable || MM.hasAttribute("data-pad-no-osk")) && (MM instanceof HTMLTextAreaElement || MM instanceof HTMLInputElement && QM.includes(MM.type)),
-      LM = MM => null !== MM.selectionStart,
-      mM = MM => {
-        var rM, iM;
+      nV = ["text", "search", "url", "email", "tel", "password", "number"],
+      wV = VV => !(!(0, YV.b)(VV) || VV.isContentEditable || VV.hasAttribute("data-pad-no-osk")) && (VV instanceof HTMLTextAreaElement || VV instanceof HTMLInputElement && nV.includes(VV.type)),
+      ZV = VV => null !== VV.selectionStart,
+      vV = VV => {
+        var eV, xV;
         const {
-          value: OM
-        } = MM;
+          value: JV
+        } = VV;
         return {
-          value: OM,
-          start: null !== (rM = MM.selectionStart) && void 0 !== rM ? rM : OM.length,
-          end: null !== (iM = MM.selectionEnd) && void 0 !== iM ? iM : OM.length
+          value: JV,
+          start: null !== (eV = VV.selectionStart) && void 0 !== eV ? eV : JV.length,
+          end: null !== (xV = VV.selectionEnd) && void 0 !== xV ? xV : JV.length
         }
       },
-      HM = (MM, rM, iM) => {
-        if (MM.readOnly) return;
-        const SM = MM instanceof HTMLTextAreaElement ? HTMLTextAreaElement.prototype : HTMLInputElement.prototype;
-        Object.getOwnPropertyDescriptor(SM, "value").set.call(MM, rM.value), LM(MM) && MM.setSelectionRange(rM.start, rM.end), (0, OM.f)(MM, new InputEvent("input", {
+      rV = (VV, eV, xV) => {
+        if (VV.readOnly) return;
+        const YV = VV instanceof HTMLTextAreaElement ? HTMLTextAreaElement.prototype : HTMLInputElement.prototype;
+        Object.getOwnPropertyDescriptor(YV, "value").set.call(VV, eV.value), ZV(VV) && VV.setSelectionRange(eV.start, eV.end), (0, JV.f)(VV, new InputEvent("input", {
           bubbles: !0,
-          inputType: iM
+          inputType: xV
         }))
       };
-    let hM = !1;
-    const JM = (MM, rM) => !!document.execCommand(MM, !1, rM) || (hM || (hM = !0, console.warn(`execCommand("${MM}") failed; the on-screen keyboard is setting the value directly`)), !1),
-      dM = (MM, rM) => {
-        JM("insertText", rM) || HM(MM, function(MM, rM) {
-          let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1;
-          const OM = MM.value.slice(0, MM.start),
-            SM = MM.value.slice(MM.end);
-          let jM = iM < 0 ? rM.length : Math.max(0, iM - OM.length - SM.length);
-          jM > 0 && jM < rM.length && aM(rM.charCodeAt(jM - 1)) && jM--;
-          const PM = rM.slice(0, jM),
-            nM = OM.length + PM.length;
+    let kV = !1;
+    const bV = (VV, eV) => !!document.execCommand(VV, !1, eV) || (kV || (kV = !0, console.warn(`execCommand("${VV}") failed; the on-screen keyboard is setting the value directly`)), !1),
+      EV = (VV, eV) => {
+        bV("insertText", eV) || rV(VV, function(VV, eV) {
+          let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1;
+          const JV = VV.value.slice(0, VV.start),
+            YV = VV.value.slice(VV.end);
+          let UV = xV < 0 ? eV.length : Math.max(0, xV - JV.length - YV.length);
+          UV > 0 && UV < eV.length && yV(eV.charCodeAt(UV - 1)) && UV--;
+          const pV = eV.slice(0, UV),
+            QV = JV.length + pV.length;
           return {
-            value: OM + PM + SM,
-            start: nM,
-            end: nM
+            value: JV + pV + YV,
+            start: QV,
+            end: QV
           }
-        }(mM(MM), rM, MM.maxLength), "insertText")
+        }(vV(VV), eV, VV.maxLength), "insertText")
       },
-      yM = MM => {
-        JM("delete") || HM(MM, (MM => {
-          const rM = MM.start === MM.end ? PM(MM.value, MM.start) : MM.start;
+      BV = VV => {
+        bV("delete") || rV(VV, (VV => {
+          const eV = VV.start === VV.end ? pV(VV.value, VV.start) : VV.start;
           return {
-            value: MM.value.slice(0, rM) + MM.value.slice(MM.end),
-            start: rM,
-            end: rM
+            value: VV.value.slice(0, eV) + VV.value.slice(VV.end),
+            start: eV,
+            end: eV
           }
-        })(mM(MM)), "deleteContentBackward")
+        })(vV(VV)), "deleteContentBackward")
       },
-      lM = (MM, rM) => {
-        if (!LM(MM)) return;
-        const iM = nM(mM(MM), rM);
-        MM.setSelectionRange(iM.start, iM.end)
+      jV = (VV, eV) => {
+        if (!ZV(VV)) return;
+        const xV = QV(vV(VV), eV);
+        VV.setSelectionRange(xV.start, xV.end)
       },
-      EM = MM => {
-        LM(MM) && 0 === MM.selectionStart && 0 === MM.selectionEnd && MM.setSelectionRange(MM.value.length, MM.value.length)
+      qV = VV => {
+        ZV(VV) && 0 === VV.selectionStart && 0 === VV.selectionEnd && VV.setSelectionRange(VV.value.length, VV.value.length)
       }
   },
-  9438: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => PM
+  9445: (VV, eV, xV) => {
+    xV.d(eV, {
+      e: () => pV
     });
-    var OM = iM(19),
-      SM = iM(2252),
-      jM = iM(1429),
-      aM = iM(1464);
-    const PM = async () => {
-      if ((0, aM.l)()) {
-        if (!0 !== await jM.NotificationProvider.showPromptPopup({
+    var JV = xV(27),
+      YV = xV(2259),
+      UV = xV(1439),
+      yV = xV(1473);
+    const pV = async () => {
+      if ((0, yV.m)()) {
+        if (!0 !== await UV.NotificationProvider.showPromptPopup({
             title: "controller:menusLeaveGameTitle",
             confirmText: "controller:menusLeaveGameLeave",
             cancelText: "controller:menusLeaveGameStay",
             destructive: !0
-          }).getResult() || "inGame" !== OM.d.get("gameState")) return
-      }(0, SM.e)()
+          }).getResult() || "inGame" !== JV.b.get("gameState")) return
+      }(0, YV.f)()
     }
   },
-  9442: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => nM,
-      g: () => jM,
-      k: () => aM,
-      n: () => SM,
-      p: () => PM
+  9453: (VV, eV, xV) => {
+    xV.d(eV, {
+      d: () => QV,
+      e: () => UV,
+      f: () => yV,
+      h: () => YV,
+      i: () => pV
     });
-    var OM = iM(2074);
-    const SM = "controllerPadShopOpen",
-      jM = MM => OM.i.includes(MM),
-      aM = MM => Object.values(MM).some((MM => !1 !== MM.canBuy && !MM.isRewardedAd)),
-      PM = (MM, rM, iM) => {
-        var OM, SM, aM, PM;
-        const nM = MM.filter((MM => !jM(MM))),
-          QM = null !== rM && MM.includes(rM) ? rM : null;
-        return null !== QM && !jM(QM) && iM(QM) ? QM : null !== (OM = null !== (SM = null !== (aM = null !== (PM = nM.find(iM)) && void 0 !== PM ? PM : nM[0]) && void 0 !== aM ? aM : QM) && void 0 !== SM ? SM : MM[0]) && void 0 !== OM ? OM : null
+    var JV = xV(2086);
+    const YV = "controllerPadShopOpen",
+      UV = VV => JV.i.includes(VV),
+      yV = VV => Object.values(VV).some((VV => !1 !== VV.canBuy && !VV.isRewardedAd)),
+      pV = (VV, eV, xV) => {
+        var JV, YV, yV, pV;
+        const QV = VV.filter((VV => !UV(VV))),
+          nV = null !== eV && VV.includes(eV) ? eV : null;
+        return null !== nV && !UV(nV) && xV(nV) ? nV : null !== (JV = null !== (YV = null !== (yV = null !== (pV = QV.find(xV)) && void 0 !== pV ? pV : QV[0]) && void 0 !== yV ? yV : nV) && void 0 !== YV ? YV : VV[0]) && void 0 !== JV ? JV : null
       },
-      nM = MM => MM.userInput || MM.isRewardedAd || "boolean" === typeof MM.isSelected ? null : JSON.stringify([MM.image, MM.cost, MM.currency, MM.amount, MM.customTitle, MM.buyButtonText, MM.description, MM.canBuy])
+      QV = VV => VV.userInput || VV.isRewardedAd || "boolean" === typeof VV.isSelected ? null : JSON.stringify([VV.image, VV.cost, VV.currency, VV.amount, VV.customTitle, VV.buyButtonText, VV.description, VV.canBuy])
   },
-  9461: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => QM,
-      e: () => zM
+  9471: (VV, eV, xV) => {
+    xV.d(eV, {
+      e: () => nV,
+      h: () => wV
     });
-    var OM = iM(44),
-      SM = iM(1516),
-      jM = iM(2120),
-      aM = iM(1474),
-      PM = iM(1498),
-      nM = iM(1303);
-    const QM = () => {
-        const MM = (0, aM.s)();
-        if ((0, OM.useEffect)((() => {
-            (0, aM.k)()
-          }), []), !MM) return null;
+    var JV = xV(62),
+      YV = xV(1542),
+      UV = xV(2147),
+      yV = xV(1493),
+      pV = xV(1528),
+      QV = xV(1321);
+    const nV = () => {
+        const VV = (0, yV.r)();
+        if ((0, JV.useEffect)((() => {
+            (0, yV.j)()
+          }), []), !VV) return null;
         const {
-          ControllerCategory: rM
-        } = MM;
-        return (0, nM.jsx)(PM.d, {
-          children: (0, nM.jsx)(rM, {})
+          ControllerCategory: eV
+        } = VV;
+        return (0, QV.jsx)(pV.c, {
+          children: (0, QV.jsx)(eV, {})
         })
       },
-      zM = () => {
-        var MM;
-        const rM = (0, aM.s)(),
-          [, iM] = (0, OM.useReducer)((MM => MM + 1), 0);
-        return (0, SM.d)(jM.d, iM), null !== (MM = null === rM || void 0 === rM ? void 0 : rM.hasActivePad()) && void 0 !== MM && MM
+      wV = () => {
+        var VV;
+        const eV = (0, yV.r)(),
+          [, xV] = (0, JV.useReducer)((VV => VV + 1), 0);
+        return (0, YV.g)(UV.d, xV), null !== (VV = null === eV || void 0 === eV ? void 0 : eV.hasActivePad()) && void 0 !== VV && VV
       }
   },
-  9271: (MM, rM, iM) => {
-    iM.d(rM, {
-      A: () => tM,
-      B: () => CM,
-      C: () => eM,
-      E: () => dM,
-      F: () => nM,
-      J: () => zM,
-      d: () => yM,
-      g: () => wM,
-      j: () => GM,
-      m: () => UM,
-      q: () => hM,
-      t: () => JM,
-      w: () => mM,
-      x: () => HM,
-      y: () => bM,
-      z: () => QM
+  9284: (VV, eV, xV) => {
+    xV.d(eV, {
+      B: () => AV,
+      D: () => nV,
+      F: () => XV,
+      G: () => TV,
+      K: () => PV,
+      L: () => EV,
+      M: () => QV,
+      O: () => wV,
+      c: () => BV,
+      g: () => NV,
+      k: () => FV,
+      m: () => tV,
+      q: () => kV,
+      r: () => bV,
+      u: () => vV,
+      y: () => rV
     });
-    var OM = iM(22),
-      SM = iM(1750),
-      jM = iM(9279),
-      aM = iM(9287),
-      PM = iM(2508);
-    const nM = MM => (0, aM.i)(MM),
-      QM = MM => {
-        const rM = MM.getBoundingClientRect();
+    var JV = xV(32),
+      YV = xV(1764),
+      UV = xV(9293),
+      yV = xV(9301),
+      pV = xV(2550);
+    const QV = VV => (0, yV.h)(VV),
+      nV = VV => {
+        const eV = VV.getBoundingClientRect();
         return {
-          x: rM.left + rM.width / 2,
-          y: rM.top + rM.height / 2
+          x: eV.left + eV.width / 2,
+          y: eV.top + eV.height / 2
         }
       },
-      zM = (MM, rM, iM) => ({
+      wV = (VV, eV, xV) => ({
         bubbles: !0,
         cancelable: !0,
         composed: !0,
         view: window,
-        clientX: MM.x,
-        clientY: MM.y,
-        screenX: MM.x,
-        screenY: MM.y,
-        button: rM,
-        buttons: iM,
+        clientX: VV.x,
+        clientY: VV.y,
+        screenX: VV.x,
+        screenY: VV.y,
+        button: eV,
+        buttons: xV,
         pointerId: 1,
         pointerType: "mouse",
         isPrimary: !0
       }),
-      LM = (MM, rM) => {
-        (0, SM.f)(MM, rM)
+      ZV = (VV, eV) => {
+        (0, YV.f)(VV, eV)
       },
-      mM = function(MM, rM) {
-        let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        const OM = 0 === iM ? 1 : 2;
-        LM(MM, new PointerEvent("pointerdown", zM(rM, iM, OM))), LM(MM, new MouseEvent("mousedown", zM(rM, iM, OM)))
+      vV = function(VV, eV) {
+        let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        const JV = 0 === xV ? 1 : 2;
+        ZV(VV, new PointerEvent("pointerdown", wV(eV, xV, JV))), ZV(VV, new MouseEvent("mousedown", wV(eV, xV, JV)))
       },
-      HM = function(MM, rM) {
-        let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        LM(MM, new PointerEvent("pointerup", zM(rM, iM, 0))), LM(MM, new MouseEvent("mouseup", zM(rM, iM, 0)))
+      rV = function(VV, eV) {
+        let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        ZV(VV, new PointerEvent("pointerup", wV(eV, xV, 0))), ZV(VV, new MouseEvent("mouseup", wV(eV, xV, 0)))
       },
-      hM = function(MM, rM) {
-        let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        mM(MM, rM, iM), HM(MM, rM, iM), LM(MM, 0 === iM ? new MouseEvent("click", zM(rM, 0, 0)) : new MouseEvent("contextmenu", zM(rM, 2, 0)))
+      kV = function(VV, eV) {
+        let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        vV(VV, eV, xV), rV(VV, eV, xV), ZV(VV, 0 === xV ? new MouseEvent("click", wV(eV, 0, 0)) : new MouseEvent("contextmenu", wV(eV, 2, 0)))
       },
-      JM = function(MM, rM, iM) {
+      bV = function(VV, eV, xV) {
         let {
-          leaveBelow: OM = null,
-          enterBelow: SM = null
+          leaveBelow: JV = null,
+          enterBelow: YV = null
         } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-        if (MM !== rM) {
-          if (null !== MM && void 0 !== MM && MM.isConnected) {
-            const SM = {
-              ...zM(iM, 0, 0),
-              relatedTarget: rM
+        if (VV !== eV) {
+          if (null !== VV && void 0 !== VV && VV.isConnected) {
+            const YV = {
+              ...wV(xV, 0, 0),
+              relatedTarget: eV
             };
-            LM(MM, new PointerEvent("pointerout", SM)), LM(MM, new MouseEvent("mouseout", SM));
-            const jM = MM => !!rM && MM.contains(rM) || !!OM && MM.contains(OM);
-            for (let rM = MM; rM && !jM(rM); rM = rM.parentElement) LM(rM, new PointerEvent("pointerleave", {
-              ...SM,
+            ZV(VV, new PointerEvent("pointerout", YV)), ZV(VV, new MouseEvent("mouseout", YV));
+            const UV = VV => !!eV && VV.contains(eV) || !!JV && VV.contains(JV);
+            for (let eV = VV; eV && !UV(eV); eV = eV.parentElement) ZV(eV, new PointerEvent("pointerleave", {
+              ...YV,
               bubbles: !1
-            })), LM(rM, new MouseEvent("mouseleave", {
-              ...SM,
+            })), ZV(eV, new MouseEvent("mouseleave", {
+              ...YV,
               bubbles: !1
             }))
           }
-          if (rM) {
-            const OM = {
-              ...zM(iM, 0, 0),
-              relatedTarget: MM
+          if (eV) {
+            const JV = {
+              ...wV(xV, 0, 0),
+              relatedTarget: VV
             };
-            LM(rM, new PointerEvent("pointerover", OM)), LM(rM, new MouseEvent("mouseover", OM));
-            const jM = [],
-              aM = rM => !(null === MM || void 0 === MM || !MM.isConnected) && rM.contains(MM) || !!SM && rM.contains(SM);
-            for (let MM = rM; MM && !aM(MM); MM = MM.parentElement) jM.push(MM);
-            for (const MM of jM.reverse()) LM(MM, new PointerEvent("pointerenter", {
-              ...OM,
+            ZV(eV, new PointerEvent("pointerover", JV)), ZV(eV, new MouseEvent("mouseover", JV));
+            const UV = [],
+              yV = eV => !(null === VV || void 0 === VV || !VV.isConnected) && eV.contains(VV) || !!YV && eV.contains(YV);
+            for (let VV = eV; VV && !yV(VV); VV = VV.parentElement) UV.push(VV);
+            for (const VV of UV.reverse()) ZV(VV, new PointerEvent("pointerenter", {
+              ...JV,
               bubbles: !1
-            })), LM(MM, new MouseEvent("mouseenter", {
-              ...OM,
+            })), ZV(VV, new MouseEvent("mouseenter", {
+              ...JV,
               bubbles: !1
             }));
-            LM(rM, new PointerEvent("pointermove", zM(iM, 0, 0))), LM(rM, new MouseEvent("mousemove", zM(iM, 0, 0)))
+            ZV(eV, new PointerEvent("pointermove", wV(xV, 0, 0))), ZV(eV, new MouseEvent("mousemove", wV(xV, 0, 0)))
           }
-        } else rM && (LM(rM, new PointerEvent("pointermove", zM(iM, 0, 0))), LM(rM, new MouseEvent("mousemove", zM(iM, 0, 0))))
+        } else eV && (ZV(eV, new PointerEvent("pointermove", wV(xV, 0, 0))), ZV(eV, new MouseEvent("mousemove", wV(xV, 0, 0))))
       },
-      dM = MM => {
-        OM.i.Tz(jM.g, MM)
+      EV = VV => {
+        JV.h.QZ(UV.f, VV)
       },
-      yM = MM => {
-        if (nM(MM)) return void dM(MM);
-        const rM = MM.hasAttribute("data-pad-focusable") ? MM.querySelector("a[href]") : null,
-          iM = null !== rM && void 0 !== rM ? rM : MM;
-        hM(iM, QM(iM))
+      BV = VV => {
+        if (QV(VV)) return void EV(VV);
+        const eV = VV.hasAttribute("data-pad-focusable") ? VV.querySelector("a[href]") : null,
+          xV = null !== eV && void 0 !== eV ? eV : VV;
+        kV(xV, nV(xV))
       },
-      lM = ".Dropdown-root.is-open",
-      EM = MM => {
-        const rM = MM.querySelector(".Dropdown-control");
-        return yM(rM), rM
+      jV = ".Dropdown-root.is-open",
+      qV = VV => {
+        const eV = VV.querySelector(".Dropdown-control");
+        return BV(eV), eV
       },
-      UM = MM => {
-        var rM;
-        const iM = null !== (rM = MM.closest(lM)) && void 0 !== rM ? rM : MM.querySelector(lM);
-        return iM ? EM(iM) : null
+      tV = VV => {
+        var eV;
+        const xV = null !== (eV = VV.closest(jV)) && void 0 !== eV ? eV : VV.querySelector(jV);
+        return xV ? qV(xV) : null
       },
-      GM = MM => {
-        for (const rM of document.querySelectorAll(lM)) rM.contains(MM) || EM(rM)
+      FV = VV => {
+        for (const eV of document.querySelectorAll(jV)) eV.contains(VV) || qV(eV)
       },
-      CM = MM => null !== MM.closest("input[type=color], input[type=file], [data-pad-mouse-only]"),
-      eM = MM => {
-        const rM = MM ? document.elementFromPoint(MM.x, MM.y) : null;
-        return !(null === rM || void 0 === rM || !rM.closest("[data-pad-repeat]"))
+      TV = VV => null !== VV.closest("input[type=color], input[type=file], [data-pad-mouse-only]"),
+      PV = VV => {
+        const eV = VV ? document.elementFromPoint(VV.x, VV.y) : null;
+        return !(null === eV || void 0 === eV || !eV.closest("[data-pad-repeat]"))
       },
-      bM = MM => {
-        var rM;
-        return null !== (rM = [...MM.querySelectorAll("[data-pad-back]")].find(PM.n)) && void 0 !== rM ? rM : null
+      AV = VV => {
+        var eV;
+        return null !== (eV = [...VV.querySelectorAll("[data-pad-back]")].find(pV.n)) && void 0 !== eV ? eV : null
       },
-      wM = MM => {
-        const rM = bM(MM);
-        return !!rM && (yM(rM), !0)
+      NV = VV => {
+        const eV = AV(VV);
+        return !!eV && (BV(eV), !0)
       },
-      tM = MM => {
-        var rM, iM, OM, SM;
-        return null !== (rM = null !== (iM = null !== (OM = MM.getAttribute("data-pad-key")) && void 0 !== OM ? OM : MM.getAttribute("href")) && void 0 !== iM ? iM : null === (SM = MM.querySelector("a[href]")) || void 0 === SM ? void 0 : SM.getAttribute("href")) && void 0 !== rM ? rM : null
+      XV = VV => {
+        var eV, xV, JV, YV;
+        return null !== (eV = null !== (xV = null !== (JV = VV.getAttribute("data-pad-key")) && void 0 !== JV ? JV : VV.getAttribute("href")) && void 0 !== xV ? xV : null === (YV = VV.querySelector("a[href]")) || void 0 === YV ? void 0 : YV.getAttribute("href")) && void 0 !== eV ? eV : null
       }
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const VV in modules) Object.freeze(modules[VV]);

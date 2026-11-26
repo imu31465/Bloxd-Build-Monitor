@@ -1,29 +1,29 @@
 export const id = 669;
 export const ids = [669];
 export const modules = {
-  64007: (MM, rM, iM) => {
-    function OM(MM, rM) {
-      for (const iM of MM._frameGraph._tasks)
-        if (iM?._config && iM._colorAttachment && (iM._config.rt === rM.scRT || iM._config.rst === rM.scRT)) return iM
+  64392: (VV, eV, xV) => {
+    function JV(VV, eV) {
+      for (const xV of VV._frameGraph._tasks)
+        if (xV?._config && xV._colorAttachment && (xV._config.rt === eV.scRT || xV._config.rst === eV.scRT)) return xV
     }
 
-    function SM(MM, rM) {
-      const iM = MM._renderingContexts[MM._renderingContexts.length - 1];
-      if (!iM?._frameGraph) return;
-      const SM = OM(rM, MM);
-      if (!SM) return;
-      if (1 === MM.msaaSamples) return void(SM._config.clr = !1);
-      const jM = SM.enabled;
-      SM._config.clr = !0, SM.enabled = !1, rM._beforeRender.unshift((() => {
-        const rM = OM(iM, MM),
-          aM = rM?._config.rst === MM.scRT && rM._config.rt._colorView;
-        SM.enabled = !!aM && jM, SM._config.clr = !aM, aM && (SM._colorAttachment.view = aM)
+    function YV(VV, eV) {
+      const xV = VV._renderingContexts[VV._renderingContexts.length - 1];
+      if (!xV?._frameGraph) return;
+      const YV = JV(eV, VV);
+      if (!YV) return;
+      if (1 === VV.msaaSamples) return void(YV._config.clr = !1);
+      const UV = YV.enabled;
+      YV._config.clr = !0, YV.enabled = !1, eV._beforeRender.unshift((() => {
+        const eV = JV(xV, VV),
+          yV = eV?._config.rst === VV.scRT && eV._config.rt._colorView;
+        YV.enabled = !!yV && UV, YV._config.clr = !yV, yV && (YV._colorAttachment.view = yV)
       }))
     }
-    iM.r(rM), iM.d(rM, {
-      configureSwapchainOverlayScene: () => SM
+    xV.r(eV), xV.d(eV, {
+      configureSwapchainOverlayScene: () => YV
     })
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const VV in modules) Object.freeze(modules[VV]);

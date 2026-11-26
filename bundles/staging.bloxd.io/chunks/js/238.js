@@ -1,132 +1,132 @@
 export const id = 238;
 export const ids = [238];
 export const modules = {
-  37308: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      default: () => bM
+  37512: (VV, eV, xV) => {
+    xV.r(eV), xV.d(eV, {
+      default: () => AV
     });
-    var OM = iM(1116),
-      SM = iM.n(OM),
-      jM = iM(1608),
-      aM = iM(1108),
-      PM = iM(821),
-      nM = iM(1188),
-      QM = iM(1520),
-      zM = iM(1591),
-      LM = iM(3957),
-      mM = iM(1398),
-      HM = iM(3875),
-      hM = iM(2813),
-      JM = iM(1303);
-    const dM = 2;
+    var JV = xV(1146),
+      YV = xV.n(JV),
+      UV = xV(1625),
+      yV = xV(1141),
+      pV = xV(812),
+      QV = xV(1220),
+      nV = xV(1551),
+      wV = xV(1612),
+      ZV = xV(3986),
+      vV = xV(1414),
+      rV = xV(3922),
+      kV = xV(2887),
+      bV = xV(1321);
+    const EV = 2;
 
-    function yM(MM) {
-      return "firstPartyGame" === MM.type ? {
+    function BV(VV) {
+      return "firstPartyGame" === VV.type ? {
         type: "game",
-        gameNameWithVariation: MM.gameNameWithVariation
+        gameNameWithVariation: VV.gameNameWithVariation
       } : {
         type: "preview",
-        preview: MM.preview
+        preview: VV.preview
       }
     }
 
-    function lM(MM) {
+    function jV(VV) {
       let {
-        game: rM,
-        disabled: iM,
-        showPlaceholder: OM
-      } = MM;
-      return null !== rM ? (0, JM.jsx)(HM.h, {
-        source: yM(rM),
+        game: eV,
+        disabled: xV,
+        showPlaceholder: JV
+      } = VV;
+      return null !== eV ? (0, bV.jsx)(rV.g, {
+        source: BV(eV),
         gameWidth: "100%",
         useLongRatio: !0,
-        disabled: iM,
+        disabled: xV,
         entrySource: "customGamePlace"
-      }) : OM ? (0, JM.jsx)(HM.e, {
+      }) : JV ? (0, bV.jsx)(rV.d, {
         gameWidth: "100%",
         useLongRatio: !0
       }) : null
     }
 
-    function EM(MM) {
-      var rM;
+    function qV(VV) {
+      var eV;
       let {
-        category: iM,
-        title: OM,
-        tintColour: SM,
-        layout: jM,
-        games: aM,
-        landscape: PM = !1
-      } = MM;
+        category: xV,
+        title: JV,
+        tintColour: YV,
+        layout: UV,
+        games: yV,
+        landscape: pV = !1
+      } = VV;
       const {
-        followsLeader: nM
-      } = (0, hM.c)(), QM = null !== (rM = null === aM || void 0 === aM ? void 0 : aM.slice(0, jM.gameCount)) && void 0 !== rM ? rM : [], LM = {
-        "--custom-game-place-tint": SM
+        followsLeader: QV
+      } = (0, kV.f)(), nV = null !== (eV = null === yV || void 0 === yV ? void 0 : yV.slice(0, UV.gameCount)) && void 0 !== eV ? eV : [], ZV = {
+        "--custom-game-place-tint": YV
       };
-      return (0, JM.jsxs)("div", {
+      return (0, bV.jsxs)("div", {
         className: "CustomGamePlacePanel AnimFadeIn",
-        style: LM,
-        children: [(0, JM.jsx)("h2", {
+        style: ZV,
+        children: [(0, bV.jsx)("h2", {
           className: "CustomGamePlacePanelHeading",
-          children: (0, JM.jsxs)(zM.LinkPreserveSearch, {
-            to: `/custom-games/${encodeURIComponent(iM)}`,
+          children: (0, bV.jsxs)(wV.LinkPreserveSearch, {
+            to: `/custom-games/${encodeURIComponent(xV)}`,
             className: "CustomGamePlacePanelTitle SmallTextBold",
-            children: [(0, JM.jsx)("span", {
-              children: OM
-            }), (0, JM.jsx)(mM.b, {
+            children: [(0, bV.jsx)("span", {
+              children: JV
+            }), (0, bV.jsx)(vV.b, {
               name: "arrow-up"
             })]
           })
-        }), (0, JM.jsx)("div", {
+        }), (0, bV.jsx)("div", {
           className: "CustomGamePlacePanelGames",
           style: {
-            gridTemplateColumns: `repeat(${PM?jM.columnCount:dM}, ${PM?"var(--custom-game-place-tile-width)":"minmax(0, 1fr)"})`
+            gridTemplateColumns: `repeat(${pV?UV.columnCount:EV}, ${pV?"var(--custom-game-place-tile-width)":"minmax(0, 1fr)"})`
           },
           children: Array.from({
-            length: jM.gameCount
-          }, ((MM, rM) => {
-            var iM;
-            return (0, JM.jsx)(lM, {
-              game: null !== (iM = QM[rM]) && void 0 !== iM ? iM : null,
-              disabled: nM,
-              showPlaceholder: !aM
-            }, rM)
+            length: UV.gameCount
+          }, ((VV, eV) => {
+            var xV;
+            return (0, bV.jsx)(jV, {
+              game: null !== (xV = nV[eV]) && void 0 !== xV ? xV : null,
+              disabled: QV,
+              showPlaceholder: !yV
+            }, eV)
           }))
         })]
       })
     }
 
-    function UM(MM) {
+    function tV(VV) {
       let {
-        categories: rM
-      } = MM;
+        categories: eV
+      } = VV;
 
-      function iM(MM) {
-        const iM = rM[MM];
-        return (0, JM.jsx)(EM, {
-          ...iM,
+      function xV(VV) {
+        const xV = eV[VV];
+        return (0, bV.jsx)(qV, {
+          ...xV,
           landscape: !0
-        }, iM.id)
+        }, xV.id)
       }
-      return (0, JM.jsxs)("div", {
+      return (0, bV.jsxs)("div", {
         className: "CustomGamePlaceMosaic CustomGamePlaceMosaicLandscape AnimFadeIn",
-        children: [(0, JM.jsxs)("div", {
+        children: [(0, bV.jsxs)("div", {
           className: "CustomGamePlaceUpper",
-          children: [(0, JM.jsxs)("div", {
+          children: [(0, bV.jsxs)("div", {
             className: "CustomGamePlaceMain",
-            children: [(0, JM.jsxs)("div", {
+            children: [(0, bV.jsxs)("div", {
               className: "CustomGamePlaceRow",
-              children: [iM(0), iM(2)]
-            }), iM(1)]
-          }), iM(4)]
-        }), (0, JM.jsxs)("div", {
+              children: [xV(0), xV(2)]
+            }), xV(1)]
+          }), xV(4)]
+        }), (0, bV.jsxs)("div", {
           className: "CustomGamePlaceRow",
-          children: [iM(3), iM(5)]
+          children: [xV(3), xV(5)]
         })]
       })
     }
-    const GM = ["section1", "section2", "section3", "section4", "section5", "section6"],
-      CM = {
+    const FV = ["section1", "section2", "section3", "section4", "section5", "section6"],
+      TV = {
         section1: {
           gameCount: 4,
           columnCount: 2
@@ -152,67 +152,67 @@ export const modules = {
           columnCount: 4
         }
       };
-    var eM = iM(1130);
+    var PV = xV(1157);
 
-    function bM() {
-      var MM;
+    function AV() {
+      var VV;
       const {
-        t: rM
-      } = (0, nM.A)(), iM = (0, jM.D)(), OM = (0, eM.i)(), mM = (0, LM.c)({
+        t: eV
+      } = (0, QV.A)(), xV = (0, UV.A)(), JV = (0, PV.j)(), vV = (0, ZV.d)({
         refresh: !0
-      }), HM = iM.customGamePlace;
-      if (!(0, aM.j)(HM)) return (0, JM.jsx)(zM.NavigatePreserveSearch, {
+      }), rV = xV.customGamePlace;
+      if (!(0, yV.j)(rV)) return (0, bV.jsx)(wV.NavigatePreserveSearch, {
         to: "/"
       });
-      const hM = PM.e[HM],
-        dM = aM.d[HM],
-        yM = null !== (MM = null === mM || void 0 === mM ? void 0 : mM[HM]) && void 0 !== MM ? MM : null,
-        lM = [];
-      for (let SM = 0; SM < dM.length; SM++) {
-        var bM;
-        const MM = GM[SM];
-        if (!MM) continue;
-        const iM = dM[SM];
-        lM.push({
-          id: iM.id,
-          category: iM.category,
-          title: rM(iM.displayTranslationKey),
-          tintColour: iM.tintColour,
-          layout: CM[MM],
-          games: null !== (bM = null === yM || void 0 === yM ? void 0 : yM[iM.id]) && void 0 !== bM ? bM : null
+      const kV = pV.e[rV],
+        EV = yV.b[rV],
+        BV = null !== (VV = null === vV || void 0 === vV ? void 0 : vV[rV]) && void 0 !== VV ? VV : null,
+        jV = [];
+      for (let YV = 0; YV < EV.length; YV++) {
+        var AV;
+        const VV = FV[YV];
+        if (!VV) continue;
+        const xV = EV[YV];
+        jV.push({
+          id: xV.id,
+          category: xV.category,
+          title: eV(xV.displayTranslationKey),
+          tintColour: xV.tintColour,
+          layout: TV[VV],
+          games: null !== (AV = null === BV || void 0 === BV ? void 0 : BV[xV.id]) && void 0 !== AV ? AV : null
         })
       }
-      return (0, JM.jsxs)("div", {
+      return (0, bV.jsxs)("div", {
         className: "CustomGamePlaceContainer AnimFadeIn",
-        children: [(0, JM.jsx)("div", {
+        children: [(0, bV.jsx)("div", {
           className: "BackgroundImage",
           style: {
-            backgroundImage: `url(/textures/games/${HM}/${hM.largePicture}.png)`
+            backgroundImage: `url(/textures/games/${rV}/${kV.largePicture}.png)`
           }
-        }), (0, JM.jsx)("h1", {
+        }), (0, bV.jsx)("h1", {
           className: "VisuallyHidden",
-          children: rM(hM.title)
-        }), (0, JM.jsx)("div", {
+          children: eV(kV.title)
+        }), (0, bV.jsx)("div", {
           className: "CustomGamePlaceHeaderContainer",
-          children: (0, JM.jsx)(QM.c, {
-            onClick: () => (0, zM.navigatePreserveSearch)("/"),
-            children: rM("homePage:backToGames")
+          children: (0, bV.jsx)(nV.b, {
+            onClick: () => (0, wV.navigatePreserveSearch)("/"),
+            children: eV("homePage:backToGames")
           })
-        }), !OM && (0, JM.jsx)(UM, {
-          categories: lM
-        }), OM && (0, JM.jsx)("div", {
-          className: SM()("CustomGamePlaceMosaic", "CustomGamePlaceMosaicPortrait"),
-          children: lM.map((MM => (0, JM.jsx)(EM, {
-            category: MM.category,
-            title: MM.title,
-            tintColour: MM.tintColour,
-            layout: MM.layout,
-            games: MM.games
-          }, MM.id)))
+        }), !JV && (0, bV.jsx)(tV, {
+          categories: jV
+        }), JV && (0, bV.jsx)("div", {
+          className: YV()("CustomGamePlaceMosaic", "CustomGamePlaceMosaicPortrait"),
+          children: jV.map((VV => (0, bV.jsx)(qV, {
+            category: VV.category,
+            title: VV.title,
+            tintColour: VV.tintColour,
+            layout: VV.layout,
+            games: VV.games
+          }, VV.id)))
         })]
       })
     }
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const VV in modules) Object.freeze(modules[VV]);

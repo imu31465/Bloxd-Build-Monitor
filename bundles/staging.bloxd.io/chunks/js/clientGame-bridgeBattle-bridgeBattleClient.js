@@ -1,22 +1,22 @@
 export const id = 10;
 export const ids = [10];
 export const modules = {
-  40364: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      default: () => OM
+  40500: (VV, eV, xV) => {
+    xV.r(eV), xV.d(eV, {
+      default: () => JV
     });
-    const OM = function(MM, rM, iM) {
-      let OM;
+    const JV = function(VV, eV, xV) {
+      let JV;
       return {
-        onCreate: MM => {
-          OM = MM
+        onCreate: VV => {
+          JV = VV
         },
-        onPlayerAltAction: (MM, rM, iM, SM, jM, aM) => {
-          aM && "Mesh" === OM.getEntityType(aM) && ("Permanent Upgrades" === OM.getEntityName(aM) ? OM.openShop(MM, !1, "Upgrades") : "Items" === OM.getEntityName(aM) ? OM.openShop(MM, !1, "Items") : "Prestige" === OM.getEntityName(aM) && OM.openShop(MM, !1, "Prestige"))
+        onPlayerAltAction: (VV, eV, xV, YV, UV, yV) => {
+          yV && "Mesh" === JV.getEntityType(yV) && ("Permanent Upgrades" === JV.getEntityName(yV) ? JV.openShop(VV, !1, "Upgrades") : "Items" === JV.getEntityName(yV) ? JV.openShop(VV, !1, "Items") : "Prestige" === JV.getEntityName(yV) && JV.openShop(VV, !1, "Prestige"))
         }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const VV in modules) Object.freeze(modules[VV]);

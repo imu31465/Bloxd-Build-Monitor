@@ -1,545 +1,545 @@
 export const id = 109;
 export const ids = [108, 109, 110];
 export const modules = {
-  37554: (MM, rM, iM) => {
-    function OM(MM, rM, iM, OM) {
-      return !(iM && !MM.aimable) && (!rM || MM.gun && "head" !== OM)
+  37786: (VV, eV, xV) => {
+    function JV(VV, eV, xV, JV) {
+      return !(xV && !VV.aimable) && (!eV || VV.gun && "head" !== JV)
     }
 
-    function SM(MM) {
-      return Math.max(.1 * MM, 1)
+    function YV(VV) {
+      return Math.max(.1 * VV, 1)
     }
 
-    function jM(MM, rM) {
-      return !MM && rM
+    function UV(VV, eV) {
+      return !VV && eV
     }
-    iM.d(rM, {
-      e: () => jM,
-      g: () => SM,
-      k: () => OM
+    xV.d(eV, {
+      c: () => UV,
+      d: () => YV,
+      g: () => JV
     })
   },
-  37559: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => PM,
-      h: () => aM
+  37790: (VV, eV, xV) => {
+    xV.d(eV, {
+      d: () => pV,
+      g: () => yV
     });
-    let OM = null;
-    const SM = {
+    let JV = null;
+    const YV = {
         crosshairAccuracy: [],
         turnDamageIndicators: []
       },
-      jM = {
-        crosshairAccuracy: MM => {
-          const rM = SM.crosshairAccuracy.at(-1);
-          rM ? rM.hook(MM) : OM = MM
+      UV = {
+        crosshairAccuracy: VV => {
+          const eV = YV.crosshairAccuracy.at(-1);
+          eV ? eV.hook(VV) : JV = VV
         },
-        turnDamageIndicators: MM => {
-          var rM;
-          null === (rM = SM.turnDamageIndicators.at(-1)) || void 0 === rM || rM.hook(MM)
+        turnDamageIndicators: VV => {
+          var eV;
+          null === (eV = YV.turnDamageIndicators.at(-1)) || void 0 === eV || eV.hook(VV)
         }
       };
 
-    function aM(MM, rM) {
-      const iM = {
-          hook: rM
+    function yV(VV, eV) {
+      const xV = {
+          hook: eV
         },
-        aM = SM[MM];
-      if (aM.push(iM), "crosshairAccuracy" === MM && null !== OM) {
-        const MM = OM;
-        OM = null, jM.crosshairAccuracy(MM)
+        yV = YV[VV];
+      if (yV.push(xV), "crosshairAccuracy" === VV && null !== JV) {
+        const VV = JV;
+        JV = null, UV.crosshairAccuracy(VV)
       }
       return () => {
-        const MM = aM.indexOf(iM); - 1 !== MM && aM.splice(MM, 1)
+        const VV = yV.indexOf(xV); - 1 !== VV && yV.splice(VV, 1)
       }
     }
 
-    function PM() {
-      return jM
+    function pV() {
+      return UV
     }
   },
-  37390: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      countDecodesAs: () => LM,
-      decodedAudio: () => mM
+  37593: (VV, eV, xV) => {
+    xV.r(eV), xV.d(eV, {
+      countDecodesAs: () => ZV,
+      decodedAudio: () => vV
     });
-    var OM = iM(3291),
-      SM = iM(5265);
-    const jM = SM.Howler,
-      aM = new Map;
-    let PM = 0;
-    const nM = {
+    var JV = xV(3297),
+      YV = xV(5353);
+    const UV = YV.Howler,
+      yV = new Map;
+    let pV = 0;
+    const QV = {
         song: 0,
         sound: 0
       },
-      QM = new WeakMap,
-      zM = new WeakSet;
+      nV = new WeakMap,
+      wV = new WeakSet;
 
-    function LM(MM, rM) {
-      return QM.set(MM, rM), MM
+    function ZV(VV, eV) {
+      return nV.set(VV, eV), VV
     }
 
-    function mM() {
+    function vV() {
       return {
-        bytes: PM,
-        songsDecoded: nM.song,
-        soundsDecoded: nM.sound
+        bytes: pV,
+        songsDecoded: QV.song,
+        soundsDecoded: QV.sound
       }
     }
 
-    function HM(MM) {
-      if (zM.has(MM)) return;
-      zM.add(MM);
-      const rM = 1 === MM.decodeAudioData.length,
-        iM = MM.decodeAudioData.bind(MM);
-      MM.decodeAudioData = (MM, OM, SM) => {
-        const zM = MM => {
-          const rM = jM._howls.filter((MM => "loaded" !== MM._state));
+    function rV(VV) {
+      if (wV.has(VV)) return;
+      wV.add(VV);
+      const eV = 1 === VV.decodeAudioData.length,
+        xV = VV.decodeAudioData.bind(VV);
+      VV.decodeAudioData = (VV, JV, YV) => {
+        const wV = VV => {
+          const eV = UV._howls.filter((VV => "loaded" !== VV._state));
           try {
-            null === OM || void 0 === OM || OM(MM)
+            null === JV || void 0 === JV || JV(VV)
           } finally {
-            const iM = rM.find((MM => "loaded" === MM._state));
-            void 0 !== iM && "string" === typeof iM._src && function(MM, rM, iM) {
-              var OM;
-              PM += iM - (null !== (OM = aM.get(rM)) && void 0 !== OM ? OM : 0), aM.set(rM, iM);
-              const SM = QM.get(MM);
-              void 0 !== SM && nM[SM]++
-            }(iM, iM._src, MM.length * MM.numberOfChannels * Float32Array.BYTES_PER_ELEMENT)
+            const xV = eV.find((VV => "loaded" === VV._state));
+            void 0 !== xV && "string" === typeof xV._src && function(VV, eV, xV) {
+              var JV;
+              pV += xV - (null !== (JV = yV.get(eV)) && void 0 !== JV ? JV : 0), yV.set(eV, xV);
+              const YV = nV.get(VV);
+              void 0 !== YV && QV[YV]++
+            }(xV, xV._src, VV.length * VV.numberOfChannels * Float32Array.BYTES_PER_ELEMENT)
           }
-          return MM
+          return VV
         };
-        if (!rM) return iM(MM, zM, SM);
-        const LM = iM(MM).then(zM);
-        return LM.catch((MM => {
-          null === SM || void 0 === SM || SM(MM)
-        })), LM
+        if (!eV) return xV(VV, wV, YV);
+        const ZV = xV(VV).then(wV);
+        return ZV.catch((VV => {
+          null === YV || void 0 === YV || YV(VV)
+        })), ZV
       }
-    }(0, OM.g)(mM);
-    const hM = SM.Howl.prototype,
-      JM = hM.init;
-    hM.init = function(MM) {
-      return SM.Howler.volume(), jM.ctx && HM(jM.ctx), JM.call(this, MM)
+    }(0, JV.h)(vV);
+    const kV = YV.Howl.prototype,
+      bV = kV.init;
+    kV.init = function(VV) {
+      return YV.Howler.volume(), UV.ctx && rV(UV.ctx), bV.call(this, VV)
     };
-    const dM = hM.unload;
-    hM.unload = function() {
-      const MM = this._src,
-        rM = dM.call(this);
-      if ("string" !== typeof MM) return rM;
-      const iM = aM.get(MM);
-      return void 0 !== iM && function(MM) {
-        return !jM._howls.some((rM => rM._src === MM || "string" === typeof rM._src && MM.indexOf(rM._src) >= 0))
-      }(MM) && (aM.delete(MM), PM -= iM), rM
+    const EV = kV.unload;
+    kV.unload = function() {
+      const VV = this._src,
+        eV = EV.call(this);
+      if ("string" !== typeof VV) return eV;
+      const xV = yV.get(VV);
+      return void 0 !== xV && function(VV) {
+        return !UV._howls.some((eV => eV._src === VV || "string" === typeof eV._src && VV.indexOf(eV._src) >= 0))
+      }(VV) && (yV.delete(VV), pV -= xV), eV
     }
   },
-  37750: (MM, rM, iM) => {
-    async function OM(MM) {
-      const rM = await fetch(MM, {
+  37968: (VV, eV, xV) => {
+    async function JV(VV) {
+      const eV = await fetch(VV, {
         priority: "low"
       });
-      if (!rM.ok) throw new Error(`Fetching ${MM} failed: HTTP ${rM.status}`);
-      const iM = rM.body.getReader();
-      for (; !(await iM.read()).done;);
+      if (!eV.ok) throw new Error(`Fetching ${VV} failed: HTTP ${eV.status}`);
+      const xV = eV.body.getReader();
+      for (; !(await xV.read()).done;);
     }
-    iM.d(rM, {
-      b: () => OM
+    xV.d(eV, {
+      b: () => JV
     })
   },
-  5265: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      Howl: () => SM.Howl,
-      Howler: () => SM.Howler,
-      musicOutput: () => dM,
-      readyAudioContext: () => yM
+  5353: (VV, eV, xV) => {
+    xV.r(eV), xV.d(eV, {
+      Howl: () => YV.Howl,
+      Howler: () => YV.Howler,
+      musicOutput: () => EV,
+      readyAudioContext: () => BV
     });
-    var OM, SM = iM(5269),
-      jM = iM(3839),
-      aM = iM(5026);
-    const PM = SM.Howler;
+    var JV, YV = xV(5357),
+      UV = xV(3886),
+      yV = xV(5137);
+    const pV = YV.Howler;
 
-    function nM() {
-      var MM, rM;
-      if (PM.ctx || !PM.usingWebAudio || "undefined" === typeof AudioContext || !(0, aM.k)()) return;
-      const iM = navigator.audioSession;
-      let OM;
-      "auto" === (null === iM || void 0 === iM ? void 0 : iM.type) && (iM.type = "ambient");
+    function QV() {
+      var VV, eV;
+      if (pV.ctx || !pV.usingWebAudio || "undefined" === typeof AudioContext || !(0, yV.i)()) return;
+      const xV = navigator.audioSession;
+      let JV;
+      "auto" === (null === xV || void 0 === xV ? void 0 : xV.type) && (xV.type = "ambient");
       try {
-        OM = new AudioContext({
+        JV = new AudioContext({
           sampleRate: 44100
         })
       } catch {
         return
       }
-      const SM = OM.createGain();
-      SM.gain.setValueAtTime(PM._muted ? 0 : null !== (MM = PM._volume) && void 0 !== MM ? MM : 1, OM.currentTime), SM.connect(OM.destination), PM.ctx = OM, PM.masterGain = SM, null === (rM = PM._setup) || void 0 === rM || rM.call(PM)
+      const YV = JV.createGain();
+      YV.gain.setValueAtTime(pV._muted ? 0 : null !== (VV = pV._volume) && void 0 !== VV ? VV : 1, JV.currentTime), YV.connect(JV.destination), pV.ctx = JV, pV.masterGain = YV, null === (eV = pV._setup) || void 0 === eV || eV.call(pV)
     }
-    PM._mobileUnloaded = !0;
-    const QM = PM.volume.bind(SM.Howler);
-    PM.volume = function() {
-      return nM(), QM(...arguments)
+    pV._mobileUnloaded = !0;
+    const nV = pV.volume.bind(YV.Howler);
+    pV.volume = function() {
+      return QV(), nV(...arguments)
     };
-    const zM = PM.mute.bind(SM.Howler);
-    PM.mute = MM => (nM(), zM(MM));
-    const LM = SM.Howl.prototype,
-      mM = LM.init;
+    const wV = pV.mute.bind(YV.Howler);
+    pV.mute = VV => (QV(), wV(VV));
+    const ZV = YV.Howl.prototype,
+      vV = ZV.init;
 
-    function HM() {
-      for (; PM._html5AudioPool.length < PM.html5PoolSize;) {
-        const MM = new Audio;
-        MM._unlocked = !0, PM._releaseHtml5Audio(MM)
+    function rV() {
+      for (; pV._html5AudioPool.length < pV.html5PoolSize;) {
+        const VV = new Audio;
+        VV._unlocked = !0, pV._releaseHtml5Audio(VV)
       }
-      for (const rM of PM._howls)
-        if (!rM._webAudio)
-          for (const iM of rM._getSoundIds()) {
-            var MM;
-            const OM = null === (MM = rM._soundById(iM)) || void 0 === MM ? void 0 : MM._node;
-            OM && !OM._unlocked && (OM._unlocked = !0, OM.load())
+      for (const eV of pV._howls)
+        if (!eV._webAudio)
+          for (const xV of eV._getSoundIds()) {
+            var VV;
+            const JV = null === (VV = eV._soundById(xV)) || void 0 === VV ? void 0 : VV._node;
+            JV && !JV._unlocked && (JV._unlocked = !0, JV.load())
           }
     }
-    LM.init = function(MM) {
-      return nM(), mM.call(this, MM)
-    }, (0, aM.k)() && (PM._unlockAudio = () => {
-      const MM = PM.ctx;
-      if (PM._audioUnlocked || !MM) return;
-      PM.autoUnlock = !1;
-      const rM = MM.createBuffer(1, 1, 22050);
-      PM._scratchBuffer = rM;
-      const iM = new AbortController;
-      let OM = "afterPaint";
-      const SM = () => {
-          var OM;
-          if (PM._audioUnlocked) return;
-          null === (OM = PM._autoResume) || void 0 === OM || OM.call(PM);
-          const SM = MM.createBufferSource();
-          SM.buffer = rM, SM.connect(MM.destination), SM.start(0), MM.resume().catch((() => {})), SM.onended = () => {
-            SM.disconnect(0), PM._audioUnlocked = !0, iM.abort();
-            for (const MM of PM._howls) MM._emit("unlock")
+    ZV.init = function(VV) {
+      return QV(), vV.call(this, VV)
+    }, (0, yV.i)() && (pV._unlockAudio = () => {
+      const VV = pV.ctx;
+      if (pV._audioUnlocked || !VV) return;
+      pV.autoUnlock = !1;
+      const eV = VV.createBuffer(1, 1, 22050);
+      pV._scratchBuffer = eV;
+      const xV = new AbortController;
+      let JV = "afterPaint";
+      const YV = () => {
+          var JV;
+          if (pV._audioUnlocked) return;
+          null === (JV = pV._autoResume) || void 0 === JV || JV.call(pV);
+          const YV = VV.createBufferSource();
+          YV.buffer = eV, YV.connect(VV.destination), YV.start(0), VV.resume().catch((() => {})), YV.onended = () => {
+            YV.disconnect(0), pV._audioUnlocked = !0, xV.abort();
+            for (const VV of pV._howls) VV._emit("unlock")
           }
         },
-        nM = () => {
-          HM(), SM()
+        QV = () => {
+          rV(), YV()
         },
-        QM = rM => {
-          if (HM(), "inTap" === OM) {
-            if ("running" === MM.state) return;
-            console.warn("A click's resume after its frame left Howler's context suspended, so this click resumes it"), SM()
-          } else "afterPaint" === OM && (OM = "queued", (0, jM.d)(rM.timeStamp, (() => {
-            OM = "inTap", SM()
+        nV = eV => {
+          if (rV(), "inTap" === JV) {
+            if ("running" === VV.state) return;
+            console.warn("A click's resume after its frame left Howler's context suspended, so this click resumes it"), YV()
+          } else "afterPaint" === JV && (JV = "queued", (0, UV.c)(eV.timeStamp, (() => {
+            JV = "inTap", YV()
           })))
         };
-      for (const jM of ["touchstart", "touchend"]) document.addEventListener(jM, nM, {
+      for (const UV of ["touchstart", "touchend"]) document.addEventListener(UV, QV, {
         capture: !0,
-        signal: iM.signal
+        signal: xV.signal
       });
-      for (const jM of aM.e) document.addEventListener(jM, QM, {
+      for (const UV of yV.c) document.addEventListener(UV, nV, {
         capture: !0,
-        signal: iM.signal
+        signal: xV.signal
       })
     });
-    let hM = 0;
-    const JM = null === (OM = PM._autoSuspend) || void 0 === OM ? void 0 : OM.bind(SM.Howler);
+    let kV = 0;
+    const bV = null === (JV = pV._autoSuspend) || void 0 === JV ? void 0 : JV.bind(YV.Howler);
 
-    function dM() {
-      yM();
+    function EV() {
+      BV();
       const {
-        ctx: MM,
-        masterGain: rM
-      } = PM;
-      return MM && rM ? {
-        ctx: MM,
-        destination: rM,
-        holdAwake: MM => {
-          var rM, iM;
-          (hM += MM ? 1 : -1, MM) ? null === (rM = PM._autoResume) || void 0 === rM || rM.call(PM): null === (iM = PM._autoSuspend) || void 0 === iM || iM.call(PM)
+        ctx: VV,
+        masterGain: eV
+      } = pV;
+      return VV && eV ? {
+        ctx: VV,
+        destination: eV,
+        holdAwake: VV => {
+          var eV, xV;
+          (kV += VV ? 1 : -1, VV) ? null === (eV = pV._autoResume) || void 0 === eV || eV.call(pV): null === (xV = pV._autoSuspend) || void 0 === xV || xV.call(pV)
         },
         wake: () => {
-          var rM;
-          "running" !== MM.state && (null === (rM = PM._autoResume) || void 0 === rM || rM.call(PM), MM.resume().catch((() => {})))
+          var eV;
+          "running" !== VV.state && (null === (eV = pV._autoResume) || void 0 === eV || eV.call(pV), VV.resume().catch((() => {})))
         }
       } : null
     }
 
-    function yM() {
-      var MM;
-      (PM.volume(), PM.ctx && PM.autoUnlock) && (null === (MM = PM._unlockAudio) || void 0 === MM || MM.call(PM))
+    function BV() {
+      var VV;
+      (pV.volume(), pV.ctx && pV.autoUnlock) && (null === (VV = pV._unlockAudio) || void 0 === VV || VV.call(pV))
     }
-    JM && (PM._autoSuspend = () => hM > 0 ? SM.Howler : JM())
+    bV && (pV._autoSuspend = () => kV > 0 ? YV.Howler : bV())
   },
-  37741: (MM, rM, iM) => {
-    function OM(MM, rM) {
+  37959: (VV, eV, xV) => {
+    function JV(VV, eV) {
       let {
-        afterJoin: iM,
-        joining: OM,
-        idle: SM,
-        fetchFile: jM,
-        Ti: aM = () => !1
-      } = rM;
-      const PM = rM => {
-        rM >= MM.length || aM() || iM((() => {
-          SM((() => {
-            aM() || (OM() ? PM(rM) : jM(MM[rM]).catch((() => {})).finally((() => {
-              PM(rM + 1)
+        afterJoin: xV,
+        joining: JV,
+        idle: YV,
+        fetchFile: UV,
+        pJ: yV = () => !1
+      } = eV;
+      const pV = eV => {
+        eV >= VV.length || yV() || xV((() => {
+          YV((() => {
+            yV() || (JV() ? pV(eV) : UV(VV[eV]).catch((() => {})).finally((() => {
+              pV(eV + 1)
             })))
           }))
         }))
       };
-      PM(0)
+      pV(0)
     }
-    iM.d(rM, {
-      c: () => OM
+    xV.d(eV, {
+      d: () => JV
     })
   },
-  37737: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => OM
+  37952: (VV, eV, xV) => {
+    xV.d(eV, {
+      e: () => JV
     });
-    const OM = new Set(["gunSemiAutomatic", "gunSubmachineGun", "gunShotgun", "gunRifle", "gunPistol", "gunMisc", "step", "dig", "randomItems", "randomExp", "randomCash", "randomFallsmall", "note", "rpg", "phoneAndMoney"])
+    const JV = new Set(["gunSemiAutomatic", "gunSubmachineGun", "gunShotgun", "gunRifle", "gunPistol", "gunMisc", "step", "dig", "randomItems", "randomExp", "randomCash", "randomFallsmall", "note", "rpg", "phoneAndMoney"])
   },
-  37744: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => zM,
-      c: () => LM
+  37964: (VV, eV, xV) => {
+    xV.d(eV, {
+      b: () => wV,
+      d: () => ZV
     });
-    var OM = iM(19),
-      SM = iM(37705),
-      jM = iM(4692),
-      aM = iM(37750),
-      PM = iM(5265),
-      nM = iM(222),
-      QM = iM(37741);
-    const zM = {
-        afterJoin: MM => {
-          (0, jM.d)(OM.d.get("gameState"), MM)
+    var JV = xV(27),
+      YV = xV(37930),
+      UV = xV(4759),
+      yV = xV(37968),
+      pV = xV(5353),
+      QV = xV(275),
+      nV = xV(37959);
+    const wV = {
+        afterJoin: VV => {
+          (0, UV.c)(JV.b.get("gameState"), VV)
         },
-        joining: () => (0, jM.f)(OM.d.get("gameState")),
-        idle: nM.d
+        joining: () => (0, UV.f)(JV.b.get("gameState")),
+        idle: QV.e
       },
-      LM = function(MM) {
-        const rM = new Set,
-          iM = new Set,
-          OM = rM => rM.flatMap((rM => {
-            const iM = (OM = (0, SM.r)(rM).src, jM = MM.canPlay, OM.find((MM => {
-              var rM;
-              const iM = null === (rM = /\.([^.]+)$/.exec(MM.split("?", 1)[0])) || void 0 === rM ? void 0 : rM[1];
-              return void 0 !== iM && jM(iM.toLowerCase())
+      ZV = function(VV) {
+        const eV = new Set,
+          xV = new Set,
+          JV = eV => eV.flatMap((eV => {
+            const xV = (JV = (0, YV.w)(eV).src, UV = VV.canPlay, JV.find((VV => {
+              var eV;
+              const xV = null === (eV = /\.([^.]+)$/.exec(VV.split("?", 1)[0])) || void 0 === eV ? void 0 : eV[1];
+              return void 0 !== xV && UV(xV.toLowerCase())
             })));
-            var OM, jM;
-            return void 0 === iM ? [] : [iM]
+            var JV, UV;
+            return void 0 === xV ? [] : [xV]
           }));
-        return jM => {
-          var aM;
-          const PM = (0, SM.j)(jM),
-            nM = [];
-          rM.has(PM) || (rM.add(PM), nM.push(...OM((0, SM.m)(PM).filter((MM => MM !== jM)))));
-          const [zM, LM] = null !== (aM = [...SM.b].find((MM => {
-            let [, rM] = MM;
-            return rM.includes(PM)
-          }))) && void 0 !== aM ? aM : [void 0, []];
-          if (void 0 !== zM && !iM.has(zM)) {
-            iM.add(zM);
-            for (const MM of LM) rM.has(MM) || (rM.add(MM), nM.push(...OM((0, SM.m)(MM))))
+        return UV => {
+          var yV;
+          const pV = (0, YV.n)(UV),
+            QV = [];
+          eV.has(pV) || (eV.add(pV), QV.push(...JV((0, YV.o)(pV).filter((VV => VV !== UV)))));
+          const [wV, ZV] = null !== (yV = [...YV.e].find((VV => {
+            let [, eV] = VV;
+            return eV.includes(pV)
+          }))) && void 0 !== yV ? yV : [void 0, []];
+          if (void 0 !== wV && !xV.has(wV)) {
+            xV.add(wV);
+            for (const VV of ZV) eV.has(VV) || (eV.add(VV), QV.push(...JV((0, YV.o)(VV))))
           }
-          nM.length > 0 && (0, QM.c)(nM, MM)
+          QV.length > 0 && (0, nV.d)(QV, VV)
         }
       }({
-        ...zM,
-        fetchFile: aM.b,
-        canPlay: MM => !!PM.Howler.codecs(MM)
+        ...wV,
+        fetchFile: yV.b,
+        canPlay: VV => !!pV.Howler.codecs(VV)
       })
   },
-  37730: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => aM,
-      f: () => SM,
-      i: () => OM
+  37950: (VV, eV, xV) => {
+    xV.d(eV, {
+      b: () => yV,
+      d: () => YV,
+      e: () => JV
     });
 
-    function OM(MM) {
-      return MM.replace(/[_\-\s]*\d+$/, "") || MM
+    function JV(VV) {
+      return VV.replace(/[_\-\s]*\d+$/, "") || VV
     }
 
-    function SM(MM, rM, iM) {
-      return iM <= 0 ? 0 : MM * iM / Math.max(rM, iM)
+    function YV(VV, eV, xV) {
+      return xV <= 0 ? 0 : VV * xV / Math.max(eV, xV)
     }
 
-    function jM(MM, rM) {
-      const iM = MM.getDurationMs();
-      return iM > 0 ? MM.loudness * Math.max(0, 1 - (rM - MM.startMs) / iM) : 0
+    function UV(VV, eV) {
+      const xV = VV.getDurationMs();
+      return xV > 0 ? VV.loudness * Math.max(0, 1 - (eV - VV.startMs) / xV) : 0
     }
-    class aM {
+    class yV {
       constructor() {
-        let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 24,
-          rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 6;
-        this.maxVoices = MM, this.maxPerGroup = rM, this.voices = []
+        let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 24,
+          eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 6;
+        this.maxVoices = VV, this.maxPerGroup = eV, this.voices = []
       }
-      admit(MM) {
-        if (this.voices = this.voices.filter((MM => MM.isAlive())), null !== MM.group) {
-          const rM = this.voices.filter((rM => rM.group === MM.group));
-          if (rM.length >= this.maxPerGroup && !this.dropLeastWorth(rM, MM)) return !1
+      admit(VV) {
+        if (this.voices = this.voices.filter((VV => VV.isAlive())), null !== VV.group) {
+          const eV = this.voices.filter((eV => eV.group === VV.group));
+          if (eV.length >= this.maxPerGroup && !this.dropLeastWorth(eV, VV)) return !1
         }
-        return !(this.voices.length >= this.maxVoices && !this.dropLeastWorth(this.voices, MM)) && (this.voices.push(MM), !0)
+        return !(this.voices.length >= this.maxVoices && !this.dropLeastWorth(this.voices, VV)) && (this.voices.push(VV), !0)
       }
-      dropLeastWorth(MM, rM) {
-        let iM = null,
-          OM = 1 / 0;
-        for (const SM of MM) {
-          if (!SM.canStop()) continue;
-          const MM = jM(SM, rM.startMs);
-          MM < OM && (iM = SM, OM = MM)
+      dropLeastWorth(VV, eV) {
+        let xV = null,
+          JV = 1 / 0;
+        for (const YV of VV) {
+          if (!YV.canStop()) continue;
+          const VV = UV(YV, eV.startMs);
+          VV < JV && (xV = YV, JV = VV)
         }
-        return !(!iM || rM.loudness < OM) && (this.voices.splice(this.voices.indexOf(iM), 1), iM.stop(), !0)
+        return !(!xV || eV.loudness < JV) && (this.voices.splice(this.voices.indexOf(xV), 1), xV.stop(), !0)
       }
     }
   },
-  37529: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => SM,
-      e: () => aM,
-      g: () => PM
+  37749: (VV, eV, xV) => {
+    xV.d(eV, {
+      d: () => YV,
+      g: () => yV,
+      k: () => pV
     });
-    var OM = iM(22);
-    const SM = "touchSprintChanged";
-    let jM = !0;
+    var JV = xV(32);
+    const YV = "touchSprintChanged";
+    let UV = !0;
 
-    function aM() {
-      return jM
+    function yV() {
+      return UV
     }
 
-    function PM(MM) {
-      MM !== jM && (jM = MM, OM.i.Tz(SM, MM))
+    function pV(VV) {
+      VV !== UV && (UV = VV, JV.h.QZ(YV, VV))
     }
   },
-  37761: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => jM,
-      g: () => aM,
-      h: () => OM
+  37985: (VV, eV, xV) => {
+    xV.d(eV, {
+      d: () => UV,
+      g: () => yV,
+      i: () => JV
     });
-    class OM {
-      constructor(MM) {
-        this.multipliers = {}, this._onUpdate = void 0, this._onUpdate = MM
+    class JV {
+      constructor(VV) {
+        this.multipliers = {}, this._onUpdate = void 0, this._onUpdate = VV
       }
-      setMultiplierType(MM, rM) {
-        var iM;
-        this.multipliers[MM] = rM, null === (iM = this._onUpdate) || void 0 === iM || iM.call(this)
+      setMultiplierType(VV, eV) {
+        var xV;
+        this.multipliers[VV] = eV, null === (xV = this._onUpdate) || void 0 === xV || xV.call(this)
       }
-      removeMultiplier(MM) {
-        var rM;
-        delete this.multipliers[MM], null === (rM = this._onUpdate) || void 0 === rM || rM.call(this)
+      removeMultiplier(VV) {
+        var eV;
+        delete this.multipliers[VV], null === (eV = this._onUpdate) || void 0 === eV || eV.call(this)
       }
-      getMultiplierType(MM) {
-        return this.multipliers[MM]
+      getMultiplierType(VV) {
+        return this.multipliers[VV]
       }
       getTotalMultipliedVal() {
-        let MM = 1;
-        for (const rM in this.multipliers) MM *= this.multipliers[rM];
-        return MM
+        let VV = 1;
+        for (const eV in this.multipliers) VV *= this.multipliers[eV];
+        return VV
       }
     }
-    class SM {
+    class YV {
       constructor() {
-        let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
-        this.booleans = {}, this._onUpdate = void 0, this._onUpdate = MM
+        let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+        this.booleans = {}, this._onUpdate = void 0, this._onUpdate = VV
       }
-      setBooleanType(MM, rM) {
-        const iM = this._getTotalBooleanVal();
-        this.booleans[MM] = !!rM;
-        const OM = this.getTotalBooleanVal();
-        var SM;
-        OM !== iM && (null === (SM = this._onUpdate) || void 0 === SM || SM.call(this, OM, this.booleans));
-        return OM
+      setBooleanType(VV, eV) {
+        const xV = this._getTotalBooleanVal();
+        this.booleans[VV] = !!eV;
+        const JV = this.getTotalBooleanVal();
+        var YV;
+        JV !== xV && (null === (YV = this._onUpdate) || void 0 === YV || YV.call(this, JV, this.booleans));
+        return JV
       }
-      removeBoolean(MM) {
-        const rM = this._getTotalBooleanVal();
-        delete this.booleans[MM];
-        const iM = this._getTotalBooleanVal();
-        var OM;
-        null !== iM && iM !== rM && (null === (OM = this._onUpdate) || void 0 === OM || OM.call(this, iM, this.booleans));
-        return null !== iM && void 0 !== iM && iM
+      removeBoolean(VV) {
+        const eV = this._getTotalBooleanVal();
+        delete this.booleans[VV];
+        const xV = this._getTotalBooleanVal();
+        var JV;
+        null !== xV && xV !== eV && (null === (JV = this._onUpdate) || void 0 === JV || JV.call(this, xV, this.booleans));
+        return null !== xV && void 0 !== xV && xV
       }
-      getBooleanType(MM) {
-        return this.booleans[MM]
+      getBooleanType(VV) {
+        return this.booleans[VV]
       }
       getTotalBooleanVal() {
         throw new Error("This is an abstract class, use BooleanAndCombinator")
       }
       forceUpdate() {
-        var MM;
-        null === (MM = this._onUpdate) || void 0 === MM || MM.call(this, this.getTotalBooleanVal(), this.booleans)
+        var VV;
+        null === (VV = this._onUpdate) || void 0 === VV || VV.call(this, this.getTotalBooleanVal(), this.booleans)
       }
       _getTotalBooleanVal() {
         throw new Error("This is an abstract class, use BooleanAndCombinator")
       }
     }
-    class jM extends SM {
+    class UV extends YV {
       getTotalBooleanVal() {
-        const MM = this._getTotalBooleanVal();
-        if (null === MM) throw new Error("Should not be gotten before at least 1 type has been initialised");
-        return MM
+        const VV = this._getTotalBooleanVal();
+        if (null === VV) throw new Error("Should not be gotten before at least 1 type has been initialised");
+        return VV
       }
       _getTotalBooleanVal() {
-        let MM = !1,
-          rM = !0;
-        for (const iM in this.booleans) MM = !0, rM &&= this.booleans[iM];
-        return MM ? rM : null
+        let VV = !1,
+          eV = !0;
+        for (const xV in this.booleans) VV = !0, eV &&= this.booleans[xV];
+        return VV ? eV : null
       }
     }
-    class aM extends SM {
+    class yV extends YV {
       getTotalBooleanVal() {
-        const MM = this._getTotalBooleanVal();
-        if (null === MM) throw new Error("Should not be gotten before at least 1 type has been initialised");
-        return MM
+        const VV = this._getTotalBooleanVal();
+        if (null === VV) throw new Error("Should not be gotten before at least 1 type has been initialised");
+        return VV
       }
       _getTotalBooleanVal() {
-        let MM = !1,
-          rM = !1;
-        for (const iM in this.booleans) MM = !0, rM ||= this.booleans[iM];
-        return MM ? rM : null
+        let VV = !1,
+          eV = !1;
+        for (const xV in this.booleans) VV = !0, eV ||= this.booleans[xV];
+        return VV ? eV : null
       }
     }
   },
-  37758: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => jM,
-      i: () => OM,
-      l: () => SM
+  37977: (VV, eV, xV) => {
+    xV.d(eV, {
+      c: () => UV,
+      f: () => JV,
+      h: () => YV
     });
-    const OM = 15,
-      SM = 3,
-      jM = 30
+    const JV = 15,
+      YV = 3,
+      UV = 30
   },
-  6944: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => aM,
-      d: () => SM,
-      e: () => nM,
-      h: () => jM,
-      l: () => QM,
-      n: () => OM,
-      o: () => PM
+  7024: (VV, eV, xV) => {
+    xV.d(eV, {
+      e: () => yV,
+      i: () => YV,
+      j: () => QV,
+      n: () => UV,
+      o: () => nV,
+      q: () => JV,
+      s: () => pV
     });
-    let OM = function(MM) {
-        return MM[MM.DEFAULT = 0] = "DEFAULT", MM[MM.BOAT = 1] = "BOAT", MM[MM.GLIDER = 2] = "GLIDER", MM[MM.BALLOON = 3] = "BALLOON", MM[MM.SLEEPING = 4] = "SLEEPING", MM[MM.RIDING_MOB = 5] = "RIDING_MOB", MM[MM.CAR = 6] = "CAR", MM[MM.HOVERCRAFT = 7] = "HOVERCRAFT", MM
+    let JV = function(VV) {
+        return VV[VV.DEFAULT = 0] = "DEFAULT", VV[VV.BOAT = 1] = "BOAT", VV[VV.GLIDER = 2] = "GLIDER", VV[VV.BALLOON = 3] = "BALLOON", VV[VV.SLEEPING = 4] = "SLEEPING", VV[VV.RIDING_MOB = 5] = "RIDING_MOB", VV[VV.CAR = 6] = "CAR", VV[VV.HOVERCRAFT = 7] = "HOVERCRAFT", VV
       }({}),
-      SM = function(MM) {
-        return MM[MM.WOOD = 0] = "WOOD", MM[MM.OBSIDIAN = 1] = "OBSIDIAN", MM[MM.SPEED = 2] = "SPEED", MM
+      YV = function(VV) {
+        return VV[VV.WOOD = 0] = "WOOD", VV[VV.OBSIDIAN = 1] = "OBSIDIAN", VV[VV.SPEED = 2] = "SPEED", VV
       }({}),
-      jM = function(MM) {
-        return MM[MM.WOOD = 0] = "WOOD", MM[MM.IRON = 1] = "IRON", MM[MM.GOLD = 2] = "GOLD", MM[MM.DIAMOND = 3] = "DIAMOND", MM
+      UV = function(VV) {
+        return VV[VV.WOOD = 0] = "WOOD", VV[VV.IRON = 1] = "IRON", VV[VV.GOLD = 2] = "GOLD", VV[VV.DIAMOND = 3] = "DIAMOND", VV
       }({}),
-      aM = function(MM) {
-        return MM[MM.YELLOW = 0] = "YELLOW", MM[MM.WHITE = 1] = "WHITE", MM[MM.RED = 2] = "RED", MM[MM.PURPLE = 3] = "PURPLE", MM[MM.PINK = 4] = "PINK", MM[MM.ORANGE = 5] = "ORANGE", MM[MM.MAGENTA = 6] = "MAGENTA", MM[MM.LIME = 7] = "LIME", MM[MM.LIGHT_GRAY = 8] = "LIGHT_GRAY", MM[MM.LIGHT_BLUE = 9] = "LIGHT_BLUE", MM[MM.GREEN = 10] = "GREEN", MM[MM.GRAY = 11] = "GRAY", MM[MM.CYAN = 12] = "CYAN", MM[MM.BROWN = 13] = "BROWN", MM[MM.BLUE = 14] = "BLUE", MM[MM.BLACK = 15] = "BLACK", MM
+      yV = function(VV) {
+        return VV[VV.YELLOW = 0] = "YELLOW", VV[VV.WHITE = 1] = "WHITE", VV[VV.RED = 2] = "RED", VV[VV.PURPLE = 3] = "PURPLE", VV[VV.PINK = 4] = "PINK", VV[VV.ORANGE = 5] = "ORANGE", VV[VV.MAGENTA = 6] = "MAGENTA", VV[VV.LIME = 7] = "LIME", VV[VV.LIGHT_GRAY = 8] = "LIGHT_GRAY", VV[VV.LIGHT_BLUE = 9] = "LIGHT_BLUE", VV[VV.GREEN = 10] = "GREEN", VV[VV.GRAY = 11] = "GRAY", VV[VV.CYAN = 12] = "CYAN", VV[VV.BROWN = 13] = "BROWN", VV[VV.BLUE = 14] = "BLUE", VV[VV.BLACK = 15] = "BLACK", VV
       }({}),
-      PM = function(MM) {
-        return MM[MM.ROTATION_1 = 0] = "ROTATION_1", MM[MM.ROTATION_2 = 1] = "ROTATION_2", MM[MM.ROTATION_3 = 2] = "ROTATION_3", MM[MM.ROTATION_4 = 3] = "ROTATION_4", MM
+      pV = function(VV) {
+        return VV[VV.ROTATION_1 = 0] = "ROTATION_1", VV[VV.ROTATION_2 = 1] = "ROTATION_2", VV[VV.ROTATION_3 = 2] = "ROTATION_3", VV[VV.ROTATION_4 = 3] = "ROTATION_4", VV
       }({}),
-      nM = function(MM) {
-        return MM[MM.KART = 0] = "KART", MM[MM.OFF_ROADER = 1] = "OFF_ROADER", MM[MM.CAR = 2] = "CAR", MM[MM.GOLD_MINING_DRILL = 3] = "GOLD_MINING_DRILL", MM[MM.ARMORED_CAR = 4] = "ARMORED_CAR", MM[MM.IRON_MINING_DRILL = 5] = "IRON_MINING_DRILL", MM[MM.DIAMOND_MINING_DRILL = 6] = "DIAMOND_MINING_DRILL", MM[MM.MOONSTONE_MINING_DRILL = 7] = "MOONSTONE_MINING_DRILL", MM
+      QV = function(VV) {
+        return VV[VV.KART = 0] = "KART", VV[VV.OFF_ROADER = 1] = "OFF_ROADER", VV[VV.CAR = 2] = "CAR", VV[VV.GOLD_MINING_DRILL = 3] = "GOLD_MINING_DRILL", VV[VV.ARMORED_CAR = 4] = "ARMORED_CAR", VV[VV.IRON_MINING_DRILL = 5] = "IRON_MINING_DRILL", VV[VV.DIAMOND_MINING_DRILL = 6] = "DIAMOND_MINING_DRILL", VV[VV.MOONSTONE_MINING_DRILL = 7] = "MOONSTONE_MINING_DRILL", VV
       }({});
-    OM.DEFAULT, OM.BOAT, SM.SPEED, OM.GLIDER, jM.DIAMOND, OM.BALLOON, aM.BLACK, OM.SLEEPING, PM.ROTATION_4, OM.RIDING_MOB, OM.CAR, nM.MOONSTONE_MINING_DRILL, OM.HOVERCRAFT;
-    let QM = function(MM) {
-      return MM[MM.NORMAL = 0] = "NORMAL", MM[MM.GLIDING = 1] = "GLIDING", MM[MM.FLOATING = 2] = "FLOATING", MM
+    JV.DEFAULT, JV.BOAT, YV.SPEED, JV.GLIDER, UV.DIAMOND, JV.BALLOON, yV.BLACK, JV.SLEEPING, pV.ROTATION_4, JV.RIDING_MOB, JV.CAR, QV.MOONSTONE_MINING_DRILL, JV.HOVERCRAFT;
+    let nV = function(VV) {
+      return VV[VV.NORMAL = 0] = "NORMAL", VV[VV.GLIDING = 1] = "GLIDING", VV[VV.FLOATING = 2] = "FLOATING", VV
     }({})
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const VV in modules) Object.freeze(modules[VV]);

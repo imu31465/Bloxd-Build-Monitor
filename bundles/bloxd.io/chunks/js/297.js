@@ -1,167 +1,167 @@
 export const id = 297;
 export const ids = [297];
 export const modules = {
-  44259: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => dM,
-      e: () => PM,
-      h: () => aM,
-      i: () => QM
+  44494: (VV, eV, xV) => {
+    xV.d(eV, {
+      e: () => EV,
+      f: () => pV,
+      g: () => yV,
+      k: () => nV
     });
-    var OM = iM(38167),
-      SM = iM(39748),
-      jM = iM(39741);
+    var JV = xV(38387),
+      YV = xV(39899),
+      UV = xV(39892);
 
-    function aM(MM, rM, iM, OM) {
-      const SM = jM.z;
-      rM.fill(0), MM.gravity.toArray(rM, SM.gravity), MM.colorDead.toArray(rM, SM.colorDead), iM[SM.ramp] = MM.useRampGradients ? 1 : 0;
-      const aM = MM.getColorGradients(),
-        PM = mM(MM, aM, "colour", OM);
-      iM[SM.colorCount] = PM;
-      for (let jM = 0; jM < PM; jM++) {
-        var nM;
-        const MM = aM[HM(aM, jM)];
-        rM[SM.colorPositions + jM] = MM.gradient, MM.color1.toArray(rM, SM.color1 + 4 * jM), (null !== (nM = MM.color2) && void 0 !== nM ? nM : MM.color1).toArray(rM, SM.color2 + 4 * jM)
+    function yV(VV, eV, xV, JV) {
+      const YV = UV.r;
+      eV.fill(0), VV.gravity.toArray(eV, YV.gravity), VV.colorDead.toArray(eV, YV.colorDead), xV[YV.ramp] = VV.useRampGradients ? 1 : 0;
+      const yV = VV.getColorGradients(),
+        pV = vV(VV, yV, "colour", JV);
+      xV[YV.colorCount] = pV;
+      for (let UV = 0; UV < pV; UV++) {
+        var QV;
+        const VV = yV[rV(yV, UV)];
+        eV[YV.colorPositions + UV] = VV.gradient, VV.color1.toArray(eV, YV.color1 + 4 * UV), (null !== (QV = VV.color2) && void 0 !== QV ? QV : VV.color1).toArray(eV, YV.color2 + 4 * UV)
       }
-      const QM = MM.getVelocityGradients(),
-        zM = mM(MM, QM, "dd", OM);
-      iM[SM.velocityCount] = zM;
-      for (let jM = 0; jM < zM; jM++) lM(rM, SM.dd + 4 * jM, QM[HM(QM, jM)]);
-      const LM = MM.useRampGradients ? MM.getColorRemapGradients() : null,
-        hM = mM(MM, LM, "colour remap", OM);
-      iM[SM.remapCount] = hM;
-      for (let jM = 0; jM < hM; jM++) lM(rM, SM.remap + 4 * jM, LM[HM(LM, jM)])
+      const nV = VV.getVelocityGradients(),
+        wV = vV(VV, nV, "ME", JV);
+      xV[YV.velocityCount] = wV;
+      for (let UV = 0; UV < wV; UV++) jV(eV, YV.ME + 4 * UV, nV[rV(nV, UV)]);
+      const ZV = VV.useRampGradients ? VV.getColorRemapGradients() : null,
+        kV = vV(VV, ZV, "colour remap", JV);
+      xV[YV.remapCount] = kV;
+      for (let UV = 0; UV < kV; UV++) jV(eV, YV.remap + 4 * UV, ZV[rV(ZV, UV)])
     }
 
-    function PM() {
+    function pV() {
       return {
         key: [],
-        texels: new Uint8Array(4 * jM.o)
+        texels: new Uint8Array(4 * UV.j)
       }
     }
-    const nM = [];
+    const QV = [];
 
-    function QM(MM, rM) {
-      return zM(MM, nM), !yM(nM, rM.key) && (rM.key.length = 0, rM.key.push(...nM), rM.key.length > 0 && function(MM, rM) {
-        for (let iM = 0; iM < jM.o; iM++) SM.i.GetCurrentGradient(iM / jM.o, MM, ((MM, rM, iM) => {
-          OM.Color3.LerpToRef(MM.color, rM.color, iM, LM)
-        })), rM[4 * iM] = 255 * LM.r, rM[4 * iM + 1] = 255 * LM.g, rM[4 * iM + 2] = 255 * LM.b, rM[4 * iM + 3] = 255
-      }(MM.getRampGradients(), rM.texels), !0)
+    function nV(VV, eV) {
+      return wV(VV, QV), !BV(QV, eV.key) && (eV.key.length = 0, eV.key.push(...QV), eV.key.length > 0 && function(VV, eV) {
+        for (let xV = 0; xV < UV.j; xV++) YV.i.GetCurrentGradient(xV / UV.j, VV, ((VV, eV, xV) => {
+          JV.Color3.LerpToRef(VV.color, eV.color, xV, ZV)
+        })), eV[4 * xV] = 255 * ZV.r, eV[4 * xV + 1] = 255 * ZV.g, eV[4 * xV + 2] = 255 * ZV.b, eV[4 * xV + 3] = 255
+      }(VV.getRampGradients(), eV.texels), !0)
     }
 
-    function zM(MM, rM) {
-      rM.length = 0;
-      const iM = MM.useRampGradients ? MM.getRampGradients() : null;
-      if (null !== iM && void 0 !== iM && iM.length) {
-        rM.push(iM.length);
-        for (const MM of iM) rM.push(MM.gradient, MM.color.r, MM.color.g, MM.color.b)
+    function wV(VV, eV) {
+      eV.length = 0;
+      const xV = VV.useRampGradients ? VV.getRampGradients() : null;
+      if (null !== xV && void 0 !== xV && xV.length) {
+        eV.push(xV.length);
+        for (const VV of xV) eV.push(VV.gradient, VV.color.r, VV.color.g, VV.color.b)
       }
     }
-    const LM = new OM.Color3;
+    const ZV = new JV.Color3;
 
-    function mM(MM, rM, iM, OM) {
-      return rM ? rM.length > jM.d ? (OM(`particleStops:${iM}`, `GPU particles use the first 2 and last ${jM.d-2} of more than ${jM.d} ${iM} gradient stops (${MM.name})`), jM.d) : rM.length : 0
+    function vV(VV, eV, xV, JV) {
+      return eV ? eV.length > UV.e ? (JV(`particleStops:${xV}`, `GPU particles use the first 2 and last ${UV.e-2} of more than ${UV.e} ${xV} gradient stops (${VV.name})`), UV.e) : eV.length : 0
     }
 
-    function HM(MM, rM) {
-      return rM < 2 || MM.length <= jM.d ? rM : MM.length - jM.d + rM
+    function rV(VV, eV) {
+      return eV < 2 || VV.length <= UV.e ? eV : VV.length - UV.e + eV
     }
-    const hM = new Float32Array(jM.s),
-      JM = new Uint32Array(hM.buffer);
+    const kV = new Float32Array(UV.p),
+      bV = new Uint32Array(kV.buffer);
 
-    function dM(MM, rM, iM) {
-      return aM(MM, hM, JM, iM), rM && yM(JM, rM) ? null : JM.slice()
+    function EV(VV, eV, xV) {
+      return yV(VV, kV, bV, xV), eV && BV(bV, eV) ? null : bV.slice()
     }
 
-    function yM(MM, rM) {
-      if (MM.length !== rM.length) return !1;
-      for (let iM = 0; iM < MM.length; iM++)
-        if (MM[iM] !== rM[iM]) return !1;
+    function BV(VV, eV) {
+      if (VV.length !== eV.length) return !1;
+      for (let xV = 0; xV < VV.length; xV++)
+        if (VV[xV] !== eV[xV]) return !1;
       return !0
     }
 
-    function lM(MM, rM, iM) {
-      var OM;
-      MM[rM] = iM.gradient, MM[rM + 1] = iM.factor1, MM[rM + 2] = null !== (OM = iM.factor2) && void 0 !== OM ? OM : iM.factor1
+    function jV(VV, eV, xV) {
+      var JV;
+      VV[eV] = xV.gradient, VV[eV + 1] = xV.factor1, VV[eV + 2] = null !== (JV = xV.factor2) && void 0 !== JV ? JV : xV.factor1
     }
   },
-  42265: (MM, rM, iM) => {
-    function OM(MM, rM, iM) {
-      const OM = rM * rM * 4,
-        SM = MM[0].layers,
-        jM = SM * (MM.length - 1) + MM[MM.length - 1].layers,
-        aM = new Uint8Array(jM * OM);
-      MM.forEach(((rM, iM) => {
-        const jM = iM + 1 < MM.length ? Math.min(rM.layers, SM) : rM.layers;
-        aM.set(new Uint8Array(rM.pixels.buffer, rM.pixels.byteOffset, jM * OM), iM * SM * OM)
+  42490: (VV, eV, xV) => {
+    function JV(VV, eV, xV) {
+      const JV = eV * eV * 4,
+        YV = VV[0].layers,
+        UV = YV * (VV.length - 1) + VV[VV.length - 1].layers,
+        yV = new Uint8Array(UV * JV);
+      VV.forEach(((eV, xV) => {
+        const UV = xV + 1 < VV.length ? Math.min(eV.layers, YV) : eV.layers;
+        yV.set(new Uint8Array(eV.pixels.buffer, eV.pixels.byteOffset, UV * JV), xV * YV * JV)
       }));
-      const PM = Math.max(1, Math.min(jM, iM || jM));
-      if (PM === jM) return [{
-        pixels: aM,
-        layers: jM
+      const pV = Math.max(1, Math.min(UV, xV || UV));
+      if (pV === UV) return [{
+        pixels: yV,
+        layers: UV
       }];
-      const nM = [];
-      for (let QM = 0; QM < jM; QM += PM) {
-        const MM = Math.min(jM, QM + PM);
-        nM.push({
-          pixels: aM.slice(QM * OM, MM * OM),
-          layers: MM - QM
+      const QV = [];
+      for (let nV = 0; nV < UV; nV += pV) {
+        const VV = Math.min(UV, nV + pV);
+        QV.push({
+          pixels: yV.slice(nV * JV, VV * JV),
+          layers: VV - nV
         })
       }
-      return nM
+      return QV
     }
-    iM.d(rM, {
-      c: () => OM,
-      f: () => jM
+    xV.d(eV, {
+      e: () => JV,
+      g: () => UV
     });
-    const SM = new WeakMap;
+    const YV = new WeakMap;
 
-    function jM(MM, rM, iM) {
-      var OM, jM;
-      const aM = null !== (OM = SM.get(MM)) && void 0 !== OM ? OM : new Map;
-      SM.set(MM, aM);
-      const PM = null !== (jM = aM.get(rM[0])) && void 0 !== jM ? jM : [];
-      aM.set(rM[0], PM);
-      const nM = PM.find((MM => MM.urls.length === rM.length && MM.urls.every(((MM, iM) => MM === rM[iM]))));
-      if (nM) return nM.built;
-      const QM = {
-        urls: [...rM],
-        built: iM()
+    function UV(VV, eV, xV) {
+      var JV, UV;
+      const yV = null !== (JV = YV.get(VV)) && void 0 !== JV ? JV : new Map;
+      YV.set(VV, yV);
+      const pV = null !== (UV = yV.get(eV[0])) && void 0 !== UV ? UV : [];
+      yV.set(eV[0], pV);
+      const QV = pV.find((VV => VV.urls.length === eV.length && VV.urls.every(((VV, xV) => VV === eV[xV]))));
+      if (QV) return QV.built;
+      const nV = {
+        urls: [...eV],
+        built: xV()
       };
-      return PM.push(QM), QM.built.catch((() => {
-        PM.splice(PM.indexOf(QM), 1)
-      })), QM.built
+      return pV.push(nV), nV.built.catch((() => {
+        pV.splice(pV.indexOf(nV), 1)
+      })), nV.built
     }
   },
-  44250: (MM, rM, iM) => {
-    function OM() {
-      let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
-      const rM = new Set;
-      return (iM, OM) => {
-        rM.has(iM) || (rM.add(iM), console.warn(MM + OM))
+  44490: (VV, eV, xV) => {
+    function JV() {
+      let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
+      const eV = new Set;
+      return (xV, JV) => {
+        eV.has(xV) || (eV.add(xV), console.warn(VV + JV))
       }
     }
-    iM.d(rM, {
-      b: () => OM
+    xV.d(eV, {
+      b: () => JV
     })
   },
-  44309: (MM, rM, iM) => {
-    iM.d(rM, {
-      createLiteRendererAsync: () => Nn,
-      liteBabylonBackend: () => YM,
-      setPipelineFailureHook: () => Pr
+  44547: (VV, eV, xV) => {
+    xV.d(eV, {
+      createLiteRendererAsync: () => CQ,
+      liteBabylonBackend: () => cV,
+      setPipelineFailureHook: () => pe
     });
-    var OM = iM(38167),
-      SM = iM(38476),
-      jM = iM(38878),
-      aM = iM(38227),
-      PM = iM(38889);
-    class nM extends PM.d {
+    var JV = xV(38387),
+      YV = xV(38688),
+      UV = xV(39055),
+      yV = xV(38433),
+      pV = xV(39066);
+    class QV extends pV.e {
       constructor() {
-        for (var MM = arguments.length, rM = new Array(MM), iM = 0; iM < MM; iM++) rM[iM] = arguments[iM];
-        super(...rM), this.color = new OM.Color3(1, 1, 1), this.alpha = 1, this.material = {
+        for (var VV = arguments.length, eV = new Array(VV), xV = 0; xV < VV; xV++) eV[xV] = arguments[xV];
+        super(...eV), this.color = new JV.Color3(1, 1, 1), this.alpha = 1, this.material = {
           name: "colorShader",
-          uniqueId: rM[0].Hk().getUniqueId(),
+          uniqueId: eV[0].dD().getUniqueId(),
           shaderPath: "color",
           fillMode: 4,
           sideOrientation: null,
@@ -175,7 +175,7 @@ export const modules = {
           zOffsetUnits: 0,
           disableColorWrite: !1,
           getClassName: () => "ShaderMaterial",
-          needAlphaBlendingForMesh: MM => MM.visibility < 1 || MM.hasVertexAlpha,
+          needAlphaBlendingForMesh: VV => VV.visibility < 1 || VV.hasVertexAlpha,
           needAlphaTestingForMesh: () => !1,
           dispose: () => {}
         }
@@ -184,46 +184,46 @@ export const modules = {
         return "LinesMesh"
       }
     }
-    const QM = ["VERTEXCOLOR", "VERTEXALPHA", "INSTANCES", "THIN_INSTANCES", "INSTANCESCOLOR", "FOG", "LITE_FRONT_LAYER"],
-      zM = MM => 1 << QM.indexOf(MM),
-      LM = zM("VERTEXCOLOR"),
-      mM = zM("INSTANCES"),
-      HM = zM("THIN_INSTANCES"),
-      hM = zM("INSTANCESCOLOR"),
-      JM = zM("FOG"),
-      dM = zM("LITE_FRONT_LAYER");
+    const nV = ["VERTEXCOLOR", "VERTEXALPHA", "INSTANCES", "THIN_INSTANCES", "INSTANCESCOLOR", "FOG", "LITE_FRONT_LAYER"],
+      wV = VV => 1 << nV.indexOf(VV),
+      ZV = wV("VERTEXCOLOR"),
+      vV = wV("INSTANCES"),
+      rV = wV("THIN_INSTANCES"),
+      kV = wV("INSTANCESCOLOR"),
+      bV = wV("FOG"),
+      EV = wV("LITE_FRONT_LAYER");
 
-    function yM(MM, rM, iM, OM) {
-      let SM = 0;
-      return MM.isVerticesDataPresent("color") && (SM |= LM), "none" !== rM && (SM |= mM), "thin" === rM && (SM |= HM, MM.isVerticesDataPresent("instanceColor") && (SM |= hM)), OM.fogEnabled && MM.applyFog && 0 !== OM.fogMode && (SM |= JM), iM >= 1 && (SM |= dM), SM
+    function BV(VV, eV, xV, JV) {
+      let YV = 0;
+      return VV.isVerticesDataPresent("color") && (YV |= ZV), "none" !== eV && (YV |= vV), "thin" === eV && (YV |= rV, VV.isVerticesDataPresent("instanceColor") && (YV |= kV)), JV.fogEnabled && VV.applyFog && 0 !== JV.fogMode && (YV |= bV), xV >= 1 && (YV |= EV), YV
     }
 
-    function lM(MM, rM) {
-      MM.updateColor4("color", rM.color, rM.alpha)
+    function jV(VV, eV) {
+      VV.updateColor4("color", eV.color, eV.alpha)
     }
-    var EM = iM(38829),
-      UM = iM(38298),
-      GM = iM(38235),
-      CM = iM(38188),
-      eM = iM(38809),
-      bM = iM(38822),
-      wM = iM(38217),
-      tM = iM(38221),
-      gM = iM(38233);
-    const uM = CM.b.GLSL;
-    class RM {
-      constructor(MM, rM) {
-        this.name = MM, this.YJ = rM, this.uniqueId = void 0, this.checkReadyOnlyOnce = !1, this._blockDirtyMechanism = !1, this.disposers = [], this.Rk = {
-          addOnce: MM => {
-            this.disposers.push(MM)
+    var qV = xV(38994),
+      tV = xV(38502),
+      FV = xV(38445),
+      TV = xV(38399),
+      PV = xV(38985),
+      AV = xV(38991),
+      NV = xV(38421),
+      XV = xV(38424),
+      MV = xV(38437);
+    const zV = TV.d.GLSL;
+    class GV {
+      constructor(VV, eV) {
+        this.name = VV, this.yE = eV, this.uniqueId = void 0, this.checkReadyOnlyOnce = !1, this._blockDirtyMechanism = !1, this.disposers = [], this.eC = {
+          addOnce: VV => {
+            this.disposers.push(VV)
           }
-        }, this.uniqueId = rM.getUniqueId()
+        }, this.uniqueId = eV.getUniqueId()
       }
       get isFrozen() {
         return this.checkReadyOnlyOnce
       }
-      Hk() {
-        return this.YJ
+      dD() {
+        return this.yE
       }
       getClassName() {
         return "LiteMaterial"
@@ -238,89 +238,89 @@ export const modules = {
       get fillMode() {
         return this.model.fillMode
       }
-      needAlphaBlendingForMesh(MM) {
-        return (0, wM.O)(this.model, MM.visibility, MM.hasVertexAlpha)
+      needAlphaBlendingForMesh(VV) {
+        return (0, NV.T)(this.model, VV.visibility, VV.hasVertexAlpha)
       }
-      needAlphaTestingForMesh(MM) {
-        return (0, wM.S)(this.model, MM.visibility, MM.hasVertexAlpha)
+      needAlphaTestingForMesh(VV) {
+        return (0, NV.V)(this.model, VV.visibility, VV.hasVertexAlpha)
       }
       dispose() {
-        (0, UM.m)(this);
-        for (const MM of this.disposers.splice(0)) MM()
+        (0, tV.h)(this);
+        for (const VV of this.disposers.splice(0)) VV()
       }
       get model() {
-        return (0, wM.Y)(this)
+        return (0, NV.eb)(this)
       }
     }
-    const pM = new WeakSet;
+    const WV = new WeakSet;
 
-    function WM(MM) {
-      return pM.has(MM)
+    function RV(VV) {
+      return WV.has(VV)
     }
 
-    function sM(MM) {
-      pM.add(MM)
+    function gV(VV) {
+      WV.add(VV)
     }
-    const DM = {
-      create: (MM, rM) => ((0, GM.s)(MM, new RM(MM.name, rM)), tM.d.defines()),
+    const DV = {
+      create: (VV, eV) => ((0, FV.m)(VV, new GV(VV.name, eV)), XV.e.defines()),
       write: () => {},
-      addFeature: (MM, rM) => {
-        const iM = MM.mirror;
-        rM.feature === bM.j && rM.state.dirLightCount > 0 && (MM.disableLighting = !0, (0, wM.W)(MM)), "BLOXD_LIGHTING" in rM.defines && (0, UM.k)(iM), rM.feature === eM.g && ((0, EM.j)(rM.state, uM), function(MM, rM) {
-          const iM = MM.Hk().ph();
+      addFeature: (VV, eV) => {
+        const xV = VV.mirror;
+        eV.feature === AV.j && eV.state.dirLightCount > 0 && (VV.disableLighting = !0, (0, NV.bb)(VV)), "BLOXD_LIGHTING" in eV.defines && (0, tV.g)(xV), eV.feature === PV.h && ((0, qV.f)(eV.state, zV), function(VV, eV) {
+          const xV = VV.dD().sk();
           setTimeout((() => {
-            iM.atlasArrays(rM.sources).then((iM => {
-              (0, EM.c)(MM, rM, iM.map((MM => ({
-                atlas: MM,
-                layers: MM.layers
-              }))), iM[0].layerWidth, uM)
-            })).catch((MM => {
-              console.error("Failed to build the atlas's texture arrays", MM)
+            xV.atlasArrays(eV.sources).then((xV => {
+              (0, qV.b)(VV, eV, xV.map((VV => ({
+                atlas: VV,
+                layers: VV.layers
+              }))), xV[0].layerWidth, zV)
+            })).catch((VV => {
+              console.error("Failed to build the atlas's texture arrays", VV)
             }))
           }))
-        }(iM, rM.state))
+        }(xV, eV.state))
       },
-      texture: (MM, rM, iM) => {
+      texture: (VV, eV, xV) => {
         let {
-          data: OM,
-          sets: SM
-        } = iM;
-        var jM;
-        (sM(MM), OM) && (MM.uvSet = null !== (jM = null === SM || void 0 === SM ? void 0 : SM.coordinatesIndex) && void 0 !== jM ? jM : 0, (0, GM.ab)(MM.matrix, null !== SM && void 0 !== SM ? SM : {}))
+          data: JV,
+          sets: YV
+        } = xV;
+        var UV;
+        (gV(VV), JV) && (VV.uvSet = null !== (UV = null === YV || void 0 === YV ? void 0 : YV.coordinatesIndex) && void 0 !== UV ? UV : 0, (0, FV.P)(VV.matrix, null !== YV && void 0 !== YV ? YV : {}))
       },
-      cube: sM,
-      canvas: (MM, rM, iM) => {
+      cube: gV,
+      canvas: (VV, eV, xV) => {
         let {
-          width: OM,
-          height: SM,
-          mipmaps: jM,
-          samplingMode: aM = gM.i.trilinear,
-          hasAlpha: PM = !1,
-          wrap: nM = gM.b.clamp
-        } = iM;
-        const QM = MM.ph().createCanvas(OM, SM),
-          zM = new gM.k("2d", {
+          width: JV,
+          height: YV,
+          mipmaps: UV,
+          samplingMode: yV = MV.h.trilinear,
+          hasAlpha: pV = !1,
+          wrap: QV = MV.d.clamp
+        } = xV;
+        const nV = VV.sk().createCanvas(JV, YV),
+          wV = new MV.l("2d", {
             kind: "canvas",
-            width: OM,
-            height: SM,
-            canvas: QM
+            width: JV,
+            height: YV,
+            canvas: nV
           }, {
-            samplingMode: aM,
-            wrapU: nM,
-            wrapV: nM,
-            noMipmap: !jM,
+            samplingMode: yV,
+            wrapU: QV,
+            wrapV: QV,
+            noMipmap: !UV,
             invertY: !0
           });
-        return zM.hasAlpha = PM, sM(zM), zM
+        return wV.hasAlpha = pV, gV(wV), wV
       }
     };
-    var kM = iM(38316),
-      ZM = iM(38068);
-    class oM {
-      constructor(MM, rM, iM) {
-        this.engine = MM, this.clearColor = rM, this.ambientColor = iM, this.onBeforeRenderObservable = new ZM.d, this.onBeforeCameraRenderObservable = new ZM.d, this.onAfterRenderObservable = new ZM.d, this.activeCamera = null, this.useRightHandedSystem = !1, this.iblIntensity = 1, this.particlesEnabled = !0, this.meshes = [], this.materials = [], this.textures = [], this.transformNodes = [], this.aG = [], this.frustumPlanes = void 0, this.draw = () => {}, this.frameId = 0, this.animationRatio = 1, this.lastId = 0, this.pending = []
+    var iV = xV(38519),
+      CV = xV(38296);
+    class aV {
+      constructor(VV, eV, xV) {
+        this.engine = VV, this.clearColor = eV, this.ambientColor = xV, this.onBeforeRenderObservable = new CV.c, this.onBeforeCameraRenderObservable = new CV.c, this.onAfterRenderObservable = new CV.c, this.activeCamera = null, this.useRightHandedSystem = !1, this.iblIntensity = 1, this.particlesEnabled = !0, this.meshes = [], this.materials = [], this.textures = [], this.transformNodes = [], this.lT = [], this.frustumPlanes = void 0, this.draw = () => {}, this.frameId = 0, this.animationRatio = 1, this.lastId = 0, this.pending = []
       }
-      ph() {
+      sk() {
         return this.engine
       }
       getUniqueId() {
@@ -332,11 +332,11 @@ export const modules = {
       getAnimationRatio() {
         return this.animationRatio
       }
-      addPendingData(MM) {
-        this.pending.push(MM)
+      addPendingData(VV) {
+        this.pending.push(VV)
       }
-      removePendingData(MM) {
-        const rM = this.pending.indexOf(MM); - 1 !== rM && this.pending.splice(rM, 1)
+      removePendingData(VV) {
+        const eV = this.pending.indexOf(VV); - 1 !== eV && this.pending.splice(eV, 1)
       }
       getWaitingItemsCount() {
         return this.pending.length
@@ -352,208 +352,208 @@ export const modules = {
       }
     }
 
-    function fM() {
+    function oV() {
       throw new Error("Lite has no WebGL engine, Babylon particles or Babylon picks")
     }
-    const YM = {
-      uiM: fM,
-      TOM: (MM, rM) => {
-        const iM = new oM(MM.engine, OM.d.FromArray(rM.clearColor), OM.Color3.FromArray(rM.ambientColor));
-        (0, aM.e)(DM, iM), MM.YJ = iM,
-          function(MM, rM) {
-            const iM = Object.assign((0, kM.g)(MM, "camera"), {
+    const cV = {
+      uJV: oV,
+      kUV: (VV, eV) => {
+        const xV = new aV(VV.engine, JV.c.FromArray(eV.clearColor), JV.Color3.FromArray(eV.ambientColor));
+        (0, yV.e)(DV, xV), VV.yE = xV,
+          function(VV, eV) {
+            const xV = Object.assign((0, iV.j)(VV, "camera"), {
               layerMask: 268435455
             });
-            MM.model.nodes.setWorldSource(iM.row, MM.model.view.worldMatrix), MM.camera = rM.activeCamera = iM
-          }(MM, iM), (0, SM.d)(MM, ((MM, rM, iM) => (0, jM.f)(MM, rM, iM, PM.d)))
+            VV.model.nodes.setWorldSource(xV.row, VV.model.view.worldMatrix), VV.camera = eV.activeCamera = xV
+          }(VV, xV), (0, YV.j)(VV, ((VV, eV, xV) => (0, UV.k)(VV, eV, xV, pV.e)))
       },
-      XOM: () => {},
+      nUV: () => {},
       setBabylonFog: () => {},
-      cOM: fM,
-      OSM: () => {},
-      linesFromArrays: (MM, rM, iM) => (0, jM.f)(MM, rM, iM, nM),
-      NJ: () => {},
-      iSM: fM
+      EUV: oV,
+      tUV: () => {},
+      linesFromArrays: (VV, eV, xV) => (0, UV.k)(VV, eV, xV, QV),
+      pE: () => {},
+      qUV: oV
     };
-    var NM = iM(44358),
-      AM = iM(44365),
-      xM = iM(44372);
-    class vM {
-      constructor(MM) {
+    var hV = xV(44603),
+      lV = xV(44612),
+      LV = xV(44621);
+    class fV {
+      constructor(VV) {
         this.deviceLost = void 0, this.lost = !1, this.refusedFrames = 0, this.refused = void 0;
-        const rM = new Promise((MM => {
-          this.refused = MM
+        const eV = new Promise((VV => {
+          this.refused = VV
         }));
-        this.deviceLost = Promise.race([MM, rM]), this.deviceLost.then((() => {
+        this.deviceLost = Promise.race([VV, eV]), this.deviceLost.then((() => {
           this.lost = !0
         }))
       }
       frameDrawn() {
         this.refusedFrames = 0
       }
-      frameFailed(MM) {
-        (function(MM) {
+      frameFailed(VV) {
+        (function(VV) {
           const {
-            name: rM,
-            message: iM
-          } = null !== MM && void 0 !== MM ? MM : {};
-          return "InvalidStateError" === rM && "string" === typeof iM && iM.startsWith("GPUDevice.")
-        })(MM) && (this.refusedFrames++, 3 === this.refusedFrames && this.refused({
+            name: eV,
+            message: xV
+          } = null !== VV && void 0 !== VV ? VV : {};
+          return "InvalidStateError" === eV && "string" === typeof xV && xV.startsWith("GPUDevice.")
+        })(VV) && (this.refusedFrames++, 3 === this.refusedFrames && this.refused({
           reason: "unknown",
-          message: MM.message,
+          message: VV.message,
           framesRefused: !0
         }))
       }
     }
-    var FM = iM(42265),
-      BM = iM(39760);
+    var mV = xV(42490),
+      KV = xV(39910);
 
-    function XM(MM) {
-      return Math.max(4, 4 * Math.ceil(MM / 4))
+    function HV(VV) {
+      return Math.max(4, 4 * Math.ceil(VV / 4))
     }
 
-    function IM(MM, rM, iM, OM) {
-      const SM = MM.createBuffer({
-        label: OM,
-        size: XM(rM.byteLength),
-        usage: iM,
+    function uV(VV, eV, xV, JV) {
+      const YV = VV.createBuffer({
+        label: JV,
+        size: HV(eV.byteLength),
+        usage: xV,
         mappedAtCreation: !0
       });
-      return new Uint8Array(SM.getMappedRange(), 0, rM.byteLength).set(new Uint8Array(rM.buffer, rM.byteOffset, rM.byteLength)), SM.unmap(), SM
+      return new Uint8Array(YV.getMappedRange(), 0, eV.byteLength).set(new Uint8Array(eV.buffer, eV.byteOffset, eV.byteLength)), YV.unmap(), YV
     }
 
-    function KM(MM, rM) {
-      return Math.floor(Math.log2(Math.max(MM, rM))) + 1
+    function sV(VV, eV) {
+      return Math.floor(Math.log2(Math.max(VV, eV))) + 1
     }
 
-    function qM(MM, rM, iM, OM, SM, jM) {
-      const aM = MM.createTexture({
-          label: jM,
+    function SV(VV, eV, xV, JV, YV, UV) {
+      const yV = VV.createTexture({
+          label: UV,
           size: {
-            width: iM,
-            height: OM,
-            depthOrArrayLayers: SM
+            width: xV,
+            height: JV,
+            depthOrArrayLayers: YV
           },
           format: "rgba8unorm",
-          mipLevelCount: KM(iM, OM),
+          mipLevelCount: sV(xV, JV),
           usage: GPUTextureUsage.TEXTURE_BINDING | GPUTextureUsage.COPY_DST
         }),
-        PM = (rM, iM, OM, jM) => {
-          MM.queue.writeTexture({
-            texture: aM,
-            mipLevel: iM
-          }, rM, {
-            bytesPerRow: 4 * OM,
-            rowsPerImage: jM
+        pV = (eV, xV, JV, UV) => {
+          VV.queue.writeTexture({
+            texture: yV,
+            mipLevel: xV
+          }, eV, {
+            bytesPerRow: 4 * JV,
+            rowsPerImage: UV
           }, {
-            width: OM,
-            height: jM,
-            depthOrArrayLayers: SM
+            width: JV,
+            height: UV,
+            depthOrArrayLayers: YV
           })
         };
-      PM(rM, 0, iM, OM);
-      let nM = 1;
-      for (const QM of function*(MM, rM, iM, OM) {
-          let SM = MM,
-            jM = rM,
-            aM = iM;
-          for (; jM > 1 || aM > 1;) {
-            const MM = Math.max(1, jM >> 1),
-              rM = Math.max(1, aM >> 1),
-              iM = new Uint8Array(MM * rM * OM * 4),
-              PM = 4 * jM;
-            let nM = 0;
-            for (let QM = 0; QM < OM; QM++) {
-              const OM = QM * PM * aM;
-              for (let QM = 0; QM < rM; QM++) {
-                const rM = OM + Math.min(2 * QM, aM - 1) * PM,
-                  zM = OM + Math.min(2 * QM + 1, aM - 1) * PM;
-                for (let OM = 0; OM < MM; OM++) {
-                  const MM = 4 * Math.min(2 * OM, jM - 1),
-                    aM = 4 * Math.min(2 * OM + 1, jM - 1);
-                  for (let OM = 0; OM < 4; OM++) iM[nM++] = SM[rM + MM + OM] + SM[rM + aM + OM] + SM[zM + MM + OM] + SM[zM + aM + OM] + 2 >> 2
+      pV(eV, 0, xV, JV);
+      let QV = 1;
+      for (const nV of function*(VV, eV, xV, JV) {
+          let YV = VV,
+            UV = eV,
+            yV = xV;
+          for (; UV > 1 || yV > 1;) {
+            const VV = Math.max(1, UV >> 1),
+              eV = Math.max(1, yV >> 1),
+              xV = new Uint8Array(VV * eV * JV * 4),
+              pV = 4 * UV;
+            let QV = 0;
+            for (let nV = 0; nV < JV; nV++) {
+              const JV = nV * pV * yV;
+              for (let nV = 0; nV < eV; nV++) {
+                const eV = JV + Math.min(2 * nV, yV - 1) * pV,
+                  wV = JV + Math.min(2 * nV + 1, yV - 1) * pV;
+                for (let JV = 0; JV < VV; JV++) {
+                  const VV = 4 * Math.min(2 * JV, UV - 1),
+                    yV = 4 * Math.min(2 * JV + 1, UV - 1);
+                  for (let JV = 0; JV < 4; JV++) xV[QV++] = YV[eV + VV + JV] + YV[eV + yV + JV] + YV[wV + VV + JV] + YV[wV + yV + JV] + 2 >> 2
                 }
               }
             }
             yield {
-              data: iM,
-              width: MM,
-              height: rM
-            }, SM = iM, jM = MM, aM = rM
+              data: xV,
+              width: VV,
+              height: eV
+            }, YV = xV, UV = VV, yV = eV
           }
-        }(rM, iM, OM, SM)) PM(QM.data, nM++, QM.width, QM.height);
-      return aM
+        }(eV, xV, JV, YV)) pV(nV.data, QV++, nV.width, nV.height);
+      return yV
     }
-    const TM = {
+    const IV = {
       premultiplyAlpha: "none",
       colorSpaceConversion: "none"
     };
 
-    function VM(MM) {
-      if (MM.startsWith("data:")) {
-        const rM = MM.search(/[;,]/);
-        return `data:${rM>5?MM.slice(5,rM):""} URL of ${MM.length} characters`
+    function dV(VV) {
+      if (VV.startsWith("data:")) {
+        const eV = VV.search(/[;,]/);
+        return `data:${eV>5?VV.slice(5,eV):""} URL of ${VV.length} characters`
       }
-      return MM.length > 80 ? `${MM.slice(0,80)}...` : MM
+      return VV.length > 80 ? `${VV.slice(0,80)}...` : VV
     }
-    async function cM(MM) {
-      const rM = await fetch(MM);
-      if (!rM.ok) throw new Error(`${VM(MM)}: ${rM.status} ${rM.statusText}`);
-      return createImageBitmap(await rM.blob(), TM)
+    async function OV(VV) {
+      const eV = await fetch(VV);
+      if (!eV.ok) throw new Error(`${dV(VV)}: ${eV.status} ${eV.statusText}`);
+      return createImageBitmap(await eV.blob(), IV)
     }
-    async function Mr(MM) {
-      const rM = await cM(MM),
-        iM = new OffscreenCanvas(rM.width, rM.height),
-        OM = iM.getContext("2d", {
+    async function Ve(VV) {
+      const eV = await OV(VV),
+        xV = new OffscreenCanvas(eV.width, eV.height),
+        JV = xV.getContext("2d", {
           willReadFrequently: !0
         });
-      if (!OM) throw new Error("No 2D context to decode an image");
-      OM.drawImage(rM, 0, 0);
+      if (!JV) throw new Error("No 2D context to decode an image");
+      JV.drawImage(eV, 0, 0);
       const {
-        data: SM
-      } = OM.getImageData(0, 0, rM.width, rM.height);
-      return rM.close(), {
-        pixels: new Uint8Array(SM.buffer, SM.byteOffset, SM.byteLength),
-        width: iM.width,
-        height: iM.height
+        data: YV
+      } = JV.getImageData(0, 0, eV.width, eV.height);
+      return eV.close(), {
+        pixels: new Uint8Array(YV.buffer, YV.byteOffset, YV.byteLength),
+        width: xV.width,
+        height: xV.height
       }
     }
 
-    function rr(MM, rM) {
-      return (0, FM.f)(MM, rM.urls, (async () => {
-        const iM = await Promise.all(rM.urls.map((async (MM, iM) => {
-            var OM, SM, jM, aM, PM;
-            return null !== (aM = null !== (SM = null === (jM = rM.pixels) || void 0 === jM ? void 0 : jM[iM]) && void 0 !== SM ? SM : null, PM = rM.layerWidth, OM = null !== aM && void 0 !== aM && aM.byteLength && PM && aM.byteLength % (PM * PM * 4) === 0 ? {
-              pixels: aM,
-              layerWidth: PM,
-              layers: aM.byteLength / (PM * PM * 4)
-            } : null) && void 0 !== OM ? OM : await async function(MM) {
+    function ee(VV, eV) {
+      return (0, mV.g)(VV, eV.urls, (async () => {
+        const xV = await Promise.all(eV.urls.map((async (VV, xV) => {
+            var JV, YV, UV, yV, pV;
+            return null !== (yV = null !== (YV = null === (UV = eV.pixels) || void 0 === UV ? void 0 : UV[xV]) && void 0 !== YV ? YV : null, pV = eV.layerWidth, JV = null !== yV && void 0 !== yV && yV.byteLength && pV && yV.byteLength % (pV * pV * 4) === 0 ? {
+              pixels: yV,
+              layerWidth: pV,
+              layers: yV.byteLength / (pV * pV * 4)
+            } : null) && void 0 !== JV ? JV : await async function(VV) {
               const {
-                pixels: rM,
-                width: iM
-              } = await Mr(MM);
+                pixels: eV,
+                width: xV
+              } = await Ve(VV);
               return {
-                pixels: rM,
-                layerWidth: iM,
-                layers: rM.byteLength / (iM * iM * 4)
+                pixels: eV,
+                layerWidth: xV,
+                layers: eV.byteLength / (xV * xV * 4)
               }
-            }(MM)
+            }(VV)
           }))),
-          OM = iM[0].layerWidth;
-        return (0, FM.c)(iM, OM, MM.limits.maxTextureArrayLayers).map(((iM, SM) => {
+          JV = xV[0].layerWidth;
+        return (0, mV.e)(xV, JV, VV.limits.maxTextureArrayLayers).map(((xV, YV) => {
           let {
-            pixels: jM,
-            layers: aM
-          } = iM;
+            pixels: UV,
+            layers: yV
+          } = xV;
           return {
-            texture: qM(MM, jM, OM, OM, aM, `atlas-${SM}-${VM(rM.urls[0])}`),
-            layerWidth: OM,
-            layers: aM
+            texture: SV(VV, UV, JV, JV, yV, `atlas-${YV}-${dV(eV.urls[0])}`),
+            layerWidth: JV,
+            layers: yV
           }
         }))
       }))
     }
-    const ir = new Map([
+    const xe = new Map([
         [0, "zero"],
         [1, "one"],
         [768, "src"],
@@ -566,7 +566,7 @@ export const modules = {
         [775, "one-minus-dst"],
         [776, "src-alpha-saturated"]
       ]),
-      Or = new Map([
+      Je = new Map([
         [1, [770, 1, "add"]],
         [2, [770, 771, "add"]],
         [3, [0, 769, "add"]],
@@ -584,106 +584,106 @@ export const modules = {
         [19, [1, 1, "max"]]
       ]);
 
-    function Sr(MM) {
-      for (const rM of (0, BM.k)(MM))
-        if (!Or.has((0, BM.i)(rM))) return !1;
+    function Ye(VV) {
+      for (const eV of (0, KV.l)(VV))
+        if (!Je.has((0, KV.i)(eV))) return !1;
       return !0
     }
 
-    function jr(MM) {
-      const rM = Or.get(MM);
-      if (!rM) return null;
-      const [iM, OM, SM] = rM;
+    function Ue(VV) {
+      const eV = Je.get(VV);
+      if (!eV) return null;
+      const [xV, JV, YV] = eV;
       return {
-        srcFactor: ir.get(iM),
-        dstFactor: ir.get(OM),
-        operation: SM
+        srcFactor: xe.get(xV),
+        dstFactor: xe.get(JV),
+        operation: YV
       }
     }
-    let ar = null;
+    let ye = null;
 
-    function Pr(MM) {
-      ar = MM
+    function pe(VV) {
+      ye = VV
     }
-    const nr = new WeakSet;
+    const Qe = new WeakSet;
 
-    function Qr(MM) {
-      return nr.has(MM)
+    function ne(VV) {
+      return Qe.has(VV)
     }
 
-    function zr(MM, rM, iM, OM) {
-      let SM = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null;
-      var jM;
-      Qr(MM) || (null === (jM = ar) || void 0 === jM || jM(rM, iM, OM, SM))
+    function we(VV, eV, xV, JV) {
+      let YV = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null;
+      var UV;
+      ne(VV) || (null === (UV = ye) || void 0 === UV || UV(eV, xV, JV, YV))
     }
-    class Lr {
-      constructor(MM) {
-        this.resources = MM, this.matrixKey = {
-          vL: 0
+    class Ze {
+      constructor(VV) {
+        this.resources = VV, this.matrixKey = {
+          Jv: 0
         }, this.attributesKey = {
-          vL: 0
+          Jv: 0
         }, this.inputs = Object.create(null);
-        for (let rM = 0; rM < 4; rM++) this.inputs[`world${rM}`] = new hr(this.matrixKey, 16 * rM, 64, 4)
+        for (let eV = 0; eV < 4; eV++) this.inputs[`world${eV}`] = new ke(this.matrixKey, 16 * eV, 64, 4)
       }
       release() {
         this.resources.liveUploads.delete(this), this.resources.bufferDeleted(this.matrixKey), this.resources.bufferDeleted(this.attributesKey)
       }
-      bind(MM, rM) {
-        this.resources.liveUploads.add(this), this.resources.vertexBufferCreated(this.matrixKey, MM, !0), rM && this.resources.vertexBufferCreated(this.attributesKey, rM, !0)
+      bind(VV, eV) {
+        this.resources.liveUploads.add(this), this.resources.vertexBufferCreated(this.matrixKey, VV, !0), eV && this.resources.vertexBufferCreated(this.attributesKey, eV, !0)
       }
     }
-    class mr extends Lr {
-      constructor(MM, rM, iM) {
-        super(MM), this.mesh = rM, this.rowStride = void 0, this.matrices = null, this.attributes = null;
-        const OM = this.inputs;
-        let SM = 0;
+    class ve extends Ze {
+      constructor(VV, eV, xV) {
+        super(VV), this.mesh = eV, this.rowStride = void 0, this.matrices = null, this.attributes = null;
+        const JV = this.inputs;
+        let YV = 0;
         for (const {
-            size: aM
+            size: yV
           }
-          of iM) SM += aM;
+          of xV) YV += yV;
         for (const {
-            name: aM,
-            offset: PM,
-            size: nM,
-            type: QM
+            name: yV,
+            offset: pV,
+            size: QV,
+            type: nV
           }
-          of iM) OM[aM] = new hr(this.attributesKey, 4 * PM, 4 * SM, nM, !0, QM);
-        this.rowStride = SM, MM.o9.set(rM, this);
-        const jM = rM.isVerticesDataPresent;
-        rM.isVerticesDataPresent = (MM, iM) => MM in OM || jM.call(rM, MM, iM)
+          of xV) JV[yV] = new ke(this.attributesKey, 4 * pV, 4 * YV, QV, !0, nV);
+        this.rowStride = YV, VV.MVV.set(eV, this);
+        const UV = eV.isVerticesDataPresent;
+        eV.isVerticesDataPresent = (VV, xV) => VV in JV || UV.call(eV, VV, xV)
       }
-      attach(MM, rM) {
-        this.matrices = MM, this.attributes = rM, this.bind(MM, rM), this.mirror(MM, MM.length, MM.length / 16)
+      attach(VV, eV) {
+        this.matrices = VV, this.attributes = eV, this.bind(VV, eV), this.mirror(VV, VV.length, VV.length / 16)
       }
       rebind() {
         this.bind(this.matrices, this.attributes)
       }
-      k_(MM) {
-        this.matrices && this.resources.vertexBufferUpdated(this.matrixKey, this.matrices, 0, MM ? 64 * MM : void 0)
+      QeV(VV) {
+        this.matrices && this.resources.vertexBufferUpdated(this.matrixKey, this.matrices, 0, VV ? 64 * VV : void 0)
       }
-      o_() {
+      neV() {
         this.attributes && this.resources.vertexBufferUpdated(this.attributesKey, this.attributes)
       }
-      matrixRows(MM, rM) {
-        this.resources.vertexBufferFloatsUpdated(this.matrixKey, this.matrices, 16 * MM, 16 * rM)
+      matrixRows(VV, eV) {
+        this.resources.vertexBufferFloatsUpdated(this.matrixKey, this.matrices, 16 * VV, 16 * eV)
       }
-      attributeRows(MM, rM) {
-        this.resources.vertexBufferFloatsUpdated(this.attributesKey, this.attributes, MM * this.rowStride, rM * this.rowStride)
+      attributeRows(VV, eV) {
+        this.resources.vertexBufferFloatsUpdated(this.attributesKey, this.attributes, VV * this.rowStride, eV * this.rowStride)
       }
       release() {
         super.release(), this.matrices = null, this.attributes = null, this.mirror(null, 512, 0)
       }
-      mirror(MM, rM, iM) {
-        const OM = this.mesh._thinInstanceDataStorage;
-        OM.matrixData = MM, OM.matrixBufferSize = rM, OM.worldMatrices = null, OM.instancesCount = iM
+      mirror(VV, eV, xV) {
+        const JV = this.mesh._thinInstanceDataStorage;
+        JV.matrixData = VV, JV.matrixBufferSize = eV, JV.worldMatrices = null, JV.instancesCount = xV
       }
     }
-    class Hr extends Lr {
-      constructor(MM, rM, iM) {
-        var OM, SM, jM, aM;
-        super(MM), this.layout = void 0, this.offsets = void 0, this.rowStride = void 0, this.matrices = new Float32Array(512), this.attributes = void 0, this.frame = -1, this.count = 0, this.packedSource = null, this.packedBatch = null, this.layout = null !== (OM = null === iM || void 0 === iM ? void 0 : iM.interleavedKinds) && void 0 !== OM ? OM : null, this.offsets = null !== (SM = null === iM || void 0 === iM ? void 0 : iM.interleavedOffsets) && void 0 !== SM ? SM : [], this.rowStride = null !== (jM = null === iM || void 0 === iM ? void 0 : iM.interleavedRowStride) && void 0 !== jM ? jM : 0, null === (aM = this.layout) || void 0 === aM || aM.forEach(((MM, rM) => {
-          this.inputs[MM] = new hr(this.attributesKey, 4 * this.offsets[rM], 4 * this.rowStride, iM.strides[MM])
-        })), this.attributes = this.rowStride > 0 ? new Float32Array(32 * this.rowStride) : null, this.bind(this.matrices, this.attributes), MM.batchUploads.set(rM, this), rM.Rk.addOnce((() => {
+    class re extends Ze {
+      constructor(VV, eV, xV) {
+        var JV, YV, UV, yV;
+        super(VV), this.layout = void 0, this.offsets = void 0, this.rowStride = void 0, this.matrices = new Float32Array(512), this.attributes = void 0, this.frame = -1, this.count = 0, this.packedSource = null, this.packedBatch = null, this.layout = null !== (JV = null === xV || void 0 === xV ? void 0 : xV.interleavedKinds) && void 0 !== JV ? JV : null, this.offsets = null !== (YV = null === xV || void 0 === xV ? void 0 : xV.interleavedOffsets) && void 0 !== YV ? YV : [], this.rowStride = null !== (UV = null === xV || void 0 === xV ? void 0 : xV.interleavedRowStride) && void 0 !== UV ? UV : 0, null === (yV = this.layout) || void 0 === yV || yV.forEach(((VV, eV) => {
+          this.inputs[VV] = new ke(this.attributesKey, 4 * this.offsets[eV], 4 * this.rowStride, xV.strides[VV])
+        })), this.attributes = this.rowStride > 0 ? new Float32Array(32 * this.rowStride) : null, this.bind(this.matrices, this.attributes), VV.batchUploads.set(eV, this), eV.eC.addOnce((() => {
           this.release()
         }))
       }
@@ -693,49 +693,49 @@ export const modules = {
       get packedMatrices() {
         return this.matrices
       }
-      packedRowMesh(MM) {
-        const rM = this.packedBatch;
-        return rM.renderSelf ? 0 === MM ? this.packedSource : rM.instances[MM - 1] : rM.instances[MM]
+      packedRowMesh(VV) {
+        const eV = this.packedBatch;
+        return eV.renderSelf ? 0 === VV ? this.packedSource : eV.instances[VV - 1] : eV.instances[VV]
       }
       get packedAttributes() {
         return this.attributes
       }
-      pack(MM, rM, iM, OM) {
-        const SM = (rM.renderSelf ? 1 : 0) + rM.rows.length;
-        if (this.frame = OM, this.count = SM, this.packedSource = MM, this.packedBatch = rM, 0 === SM) return;
-        if (MM.getWorldMatrix(), 16 * SM > this.matrices.length) {
-          let MM = this.matrices.length / 16;
-          for (; MM < SM;) MM *= 2;
-          this.matrices = new Float32Array(16 * MM), this.attributes &&= new Float32Array(MM * this.rowStride), this.bind(this.matrices, this.attributes)
+      pack(VV, eV, xV, JV) {
+        const YV = (eV.renderSelf ? 1 : 0) + eV.rows.length;
+        if (this.frame = JV, this.count = YV, this.packedSource = VV, this.packedBatch = eV, 0 === YV) return;
+        if (VV.getWorldMatrix(), 16 * YV > this.matrices.length) {
+          let VV = this.matrices.length / 16;
+          for (; VV < YV;) VV *= 2;
+          this.matrices = new Float32Array(16 * VV), this.attributes &&= new Float32Array(VV * this.rowStride), this.bind(this.matrices, this.attributes)
         }
-        let jM = 0;
-        rM.renderSelf && this.packRow(jM++, MM, rM.row, iM);
-        for (let aM = 0; aM < rM.rows.length; aM++) this.packRow(jM++, rM.instances[aM], rM.rows[aM], iM);
-        this.resources.vertexBufferFloatsUpdated(this.matrixKey, this.matrices, 0, 16 * SM), this.attributes && this.resources.vertexBufferFloatsUpdated(this.attributesKey, this.attributes, 0, SM * this.rowStride)
+        let UV = 0;
+        eV.renderSelf && this.packRow(UV++, VV, eV.row, xV);
+        for (let yV = 0; yV < eV.rows.length; yV++) this.packRow(UV++, eV.instances[yV], eV.rows[yV], xV);
+        this.resources.vertexBufferFloatsUpdated(this.matrixKey, this.matrices, 0, 16 * YV), this.attributes && this.resources.vertexBufferFloatsUpdated(this.attributesKey, this.attributes, 0, YV * this.rowStride)
       }
-      packRow(MM, rM, iM, OM) {
-        const SM = this.matrices;
-        if (iM < 0) SM.set(rM.getWorldMatrix().m, 16 * MM);
+      packRow(VV, eV, xV, JV) {
+        const YV = this.matrices;
+        if (xV < 0) YV.set(eV.getWorldMatrix().m, 16 * VV);
         else
-          for (let QM = 0; QM < 16; QM++) SM[16 * MM + QM] = OM[16 * iM + QM];
-        const jM = this.attributes;
-        if (!jM) return;
-        const aM = rM.xZ,
-          PM = this.layout;
-        for (let QM = 0; QM < PM.length; QM++) {
-          var nM;
-          const rM = null !== (nM = aM[PM[QM]]) && void 0 !== nM ? nM : 0,
-            iM = MM * this.rowStride + this.offsets[QM];
-          rM.toArray ? rM.toArray(jM, iM) : rM.copyToArray ? rM.copyToArray(jM, iM) : jM[iM] = rM
+          for (let nV = 0; nV < 16; nV++) YV[16 * VV + nV] = JV[16 * xV + nV];
+        const UV = this.attributes;
+        if (!UV) return;
+        const yV = eV.sC,
+          pV = this.layout;
+        for (let nV = 0; nV < pV.length; nV++) {
+          var QV;
+          const eV = null !== (QV = yV[pV[nV]]) && void 0 !== QV ? QV : 0,
+            xV = VV * this.rowStride + this.offsets[nV];
+          eV.toArray ? eV.toArray(UV, xV) : eV.copyToArray ? eV.copyToArray(UV, xV) : UV[xV] = eV
         }
       }
     }
-    class hr {
-      constructor(MM, rM, iM, OM) {
-        let SM = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
-          jM = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 5126,
-          aM = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
-        this.key = MM, this.byteOffset = rM, this.byteStride = iM, this.size = OM, this.instanced = SM, this.type = jM, this.normalized = aM
+    class ke {
+      constructor(VV, eV, xV, JV) {
+        let YV = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
+          UV = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 5126,
+          yV = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
+        this.key = VV, this.byteOffset = eV, this.byteStride = xV, this.size = JV, this.instanced = YV, this.type = UV, this.normalized = yV
       }
       getBuffer() {
         return this.key
@@ -747,61 +747,61 @@ export const modules = {
         return this.instanced
       }
     }
-    const Jr = "CANVAS_ALPHA_ONE",
-      dr = `override ${Jr}: bool = false;`,
-      yr = {
+    const be = "CANVAS_ALPHA_ONE",
+      Ee = `override ${be}: bool = false;`,
+      Be = {
         srcFactor: "zero",
         dstFactor: "one",
         operation: "add"
       };
 
-    function lr(MM, rM, iM) {
-      var OM;
-      let SM = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-      const jM = null !== (OM = rM._colorFormat) && void 0 !== OM ? OM : "bgra8unorm",
-        aM = SM ? 15 : 0;
-      return iM ? {
-        ...MM,
+    function je(VV, eV, xV) {
+      var JV;
+      let YV = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+      const UV = null !== (JV = eV._colorFormat) && void 0 !== JV ? JV : "bgra8unorm",
+        yV = YV ? 15 : 0;
+      return xV ? {
+        ...VV,
         targets: [{
-          format: jM,
+          format: UV,
           blend: {
-            color: iM,
-            alpha: yr
+            color: xV,
+            alpha: Be
           },
-          writeMask: aM
+          writeMask: yV
         }]
       } : {
-        ...MM,
+        ...VV,
         constants: {
-          ...MM.constants,
-          [Jr]: 1
+          ...VV.constants,
+          [be]: 1
         },
         targets: [{
-          format: jM,
-          writeMask: aM
+          format: UV,
+          writeMask: yV
         }]
       }
     }
 
-    function Er(MM, rM) {
-      MM._renderables.push(rM)
+    function qe(VV, eV) {
+      VV._renderables.push(eV)
     }
 
-    function Ur(MM) {
-      return MM._device
+    function te(VV) {
+      return VV._device
     }
 
-    function Gr(MM) {
-      var rM, iM;
-      return null !== (rM = null === (iM = MM._frameGraph) || void 0 === iM ? void 0 : iM._tasks) && void 0 !== rM ? rM : []
+    function Fe(VV) {
+      var eV, xV;
+      return null !== (eV = null === (xV = VV._frameGraph) || void 0 === xV ? void 0 : xV._tasks) && void 0 !== eV ? eV : []
     }
 
-    function Cr(MM) {
-      return MM._currentEncoder
+    function Te(VV) {
+      return VV._currentEncoder
     }
 
-    function er(MM) {
-      return MM.createBindGroupLayout({
+    function Pe(VV) {
+      return VV.createBindGroupLayout({
         label: "lite-scene-equivalent",
         entries: [{
           binding: 0,
@@ -818,98 +818,98 @@ export const modules = {
         }]
       })
     }
-    const br = "greater-equal",
-      wr = 2e5,
-      tr = 1e5,
-      gr = new WeakMap;
+    const Ae = "greater-equal",
+      Ne = 2e5,
+      Xe = 1e5,
+      Me = new WeakMap;
 
-    function ur(MM, rM) {
-      let iM = gr.get(MM);
-      if (!iM) {
-        iM = {
-          module: MM.createShaderModule({
+    function ze(VV, eV) {
+      let xV = Me.get(VV);
+      if (!xV) {
+        xV = {
+          module: VV.createShaderModule({
             label: "placeholder",
             code: "@vertex fn v() -> @builtin(position) vec4f { return vec4f(0.0, 0.0, 0.0, 1.0); }\n@fragment fn f() -> @location(0) vec4f { return vec4f(0.0); }"
           }),
           pipelines: new Map
-        }, gr.set(MM, iM)
+        }, Me.set(VV, xV)
       }
-      const OM = `${rM._colorFormat}|${rM._depthStencilFormat}|${rM._sampleCount}`;
-      let SM = iM.pipelines.get(OM);
-      if (!SM) {
-        var jM;
+      const JV = `${eV._colorFormat}|${eV._depthStencilFormat}|${eV._sampleCount}`;
+      let YV = xV.pipelines.get(JV);
+      if (!YV) {
+        var UV;
         const {
-          module: aM
-        } = iM;
-        SM = MM.createRenderPipeline({
-          label: `placeholder ${OM}`,
-          layout: MM.createPipelineLayout({
+          module: yV
+        } = xV;
+        YV = VV.createRenderPipeline({
+          label: `placeholder ${JV}`,
+          layout: VV.createPipelineLayout({
             bindGroupLayouts: []
           }),
           vertex: {
-            module: aM,
+            module: yV,
             entryPoint: "v"
           },
           fragment: {
-            module: aM,
+            module: yV,
             entryPoint: "f",
             targets: [{
-              format: null !== (jM = rM._colorFormat) && void 0 !== jM ? jM : "bgra8unorm",
+              format: null !== (UV = eV._colorFormat) && void 0 !== UV ? UV : "bgra8unorm",
               writeMask: 0
             }]
           },
-          depthStencil: rM._depthStencilFormat ? {
-            format: rM._depthStencilFormat,
+          depthStencil: eV._depthStencilFormat ? {
+            format: eV._depthStencilFormat,
             depthCompare: "always",
             depthWriteEnabled: !1
           } : void 0,
           multisample: {
-            count: rM._sampleCount
+            count: eV._sampleCount
           }
-        }), iM.pipelines.set(OM, SM)
+        }), xV.pipelines.set(JV, YV)
       }
-      return SM
+      return YV
     }
 
-    function Rr(MM, rM, iM) {
-      const OM = rM.eye,
-        SM = rM.viewMatrix;
-      MM[0] = OM[0] + SM[2] * iM, MM[1] = OM[1] + SM[6] * iM, MM[2] = OM[2] + SM[10] * iM
+    function Ge(VV, eV, xV) {
+      const JV = eV.eye,
+        YV = eV.viewMatrix;
+      VV[0] = JV[0] + YV[2] * xV, VV[1] = JV[1] + YV[6] * xV, VV[2] = JV[2] + YV[10] * xV
     }
-    var pr = iM(38930),
-      Wr = iM(44250),
-      sr = iM(38198);
-    const Dr = Math.PI,
-      kr = Dr / 1.95,
-      Zr = [5e-4 / 94, 125e-7, 5e-4 / 18],
-      or = [
+    var We = xV(39106),
+      Re = xV(44490),
+      ge = xV(38408);
+    const De = Math.PI,
+      ie = De / 1.95,
+      Ce = [5e-4 / 94, 125e-7, 5e-4 / 18],
+      ae = [
         [68e-8, .686],
         [55e-8, .678],
         [45e-8, .666]
-      ].map((MM => {
-        let [rM, iM] = MM;
-        return .434 * Dr * Math.pow(2 * Dr / rM, 2) * iM
+      ].map((VV => {
+        let [eV, xV] = VV;
+        return .434 * De * Math.pow(2 * De / eV, 2) * xV
       }));
 
-    function fr(MM, rM, iM) {
+    function oe(VV, eV, xV) {
       const {
-        up: OM,
-        mieDirectionalG: SM
-      } = MM, jM = 1 - Ar(1 - Math.exp(rM[1] / 45e4), 0, 1), aM = MM.rayleigh - (1 - jM), PM = Math.hypot(rM[0], rM[1], rM[2]), nM = PM > 0 ? 1 / PM : 0, QM = iM.sunDir;
-      for (let HM = 0; HM < 3; HM++) QM[HM] = rM[HM] * nM;
-      const zM = QM[0] * OM[0] + QM[1] * OM[1] + QM[2] * OM[2],
-        LM = 1e3 * Math.max(0, 1 - Math.exp(-(kr - Math.acos(Ar(zM, -1, 1))) / 1.5));
-      iM.sunE = LM;
-      const mM = .2 * MM.turbidity * 1e-17 * MM.mieCoefficient;
-      for (let HM = 0; HM < 3; HM++) {
-        const MM = Zr[HM] * aM,
-          rM = or[HM] * mM,
-          OM = LM / (MM + rM);
-        iM.inScatterR[HM] = MM * OM, iM.inScatterM[HM] = rM * OM, iM.extinctionBeta[HM] = 8400 * MM + 1250 * rM
+        up: JV,
+        mieDirectionalG: YV
+      } = VV, UV = 1 - le(1 - Math.exp(eV[1] / 45e4), 0, 1), yV = VV.rayleigh - (1 - UV), pV = Math.hypot(eV[0], eV[1], eV[2]), QV = pV > 0 ? 1 / pV : 0, nV = xV.sunDir;
+      for (let rV = 0; rV < 3; rV++) nV[rV] = eV[rV] * QV;
+      const wV = nV[0] * JV[0] + nV[1] * JV[1] + nV[2] * JV[2],
+        ZV = 1e3 * Math.max(0, 1 - Math.exp(-(ie - Math.acos(le(wV, -1, 1))) / 1.5));
+      xV.sunE = ZV;
+      const vV = .2 * VV.turbidity * 1e-17 * VV.mieCoefficient;
+      for (let rV = 0; rV < 3; rV++) {
+        const VV = Ce[rV] * yV,
+          eV = ae[rV] * vV,
+          JV = ZV / (VV + eV);
+        xV.inScatterR[rV] = VV * JV, xV.inScatterM[rV] = eV * JV, xV.extinctionBeta[rV] = 8400 * VV + 1250 * eV
       }
-      return iM.sunsetMix = Ar(Math.pow(1 - zM, 5), 0, 1), iM.sunDiscE = 19e3 * LM, iM.mieScale = (1 - SM * SM) / (4 * Dr), iM.mieBase = 1 + SM * SM, iM.mieSlope = 2 * SM, iM
+      return xV.sunsetMix = le(Math.pow(1 - wV, 5), 0, 1), xV.sunDiscE = 19e3 * ZV, xV.mieScale = (1 - YV * YV) / (4 * De), xV.mieBase = 1 + YV * YV, xV.mieSlope = 2 * YV, xV
     }
-    const Yr = {
+    const ce = {
       A: .15,
       B: .5,
       C: .1,
@@ -917,599 +917,599 @@ export const modules = {
       E: .02,
       F: .3
     };
-    const Nr = 1 / function(MM) {
+    const he = 1 / function(VV) {
       const {
-        A: rM,
-        B: iM,
-        C: OM,
-        D: SM,
-        E: jM,
-        F: aM
-      } = Yr;
-      return (MM * (rM * MM + OM * iM) + SM * jM) / (MM * (rM * MM + iM) + SM * aM) - jM / aM
+        A: eV,
+        B: xV,
+        C: JV,
+        D: YV,
+        E: UV,
+        F: yV
+      } = ce;
+      return (VV * (eV * VV + JV * xV) + YV * UV) / (VV * (eV * VV + xV) + YV * yV) - UV / yV
     }(1e3);
 
-    function Ar(MM, rM, iM) {
-      return Math.min(Math.max(MM, rM), iM)
+    function le(VV, eV, xV) {
+      return Math.min(Math.max(VV, eV), xV)
     }
-    const xr = /^\s*#(ifdef|ifndef|if|elif|else|endif|define|undef)\b(.*)$/;
+    const Le = /^\s*#(ifdef|ifndef|if|elif|else|endif|define|undef)\b(.*)$/;
 
-    function vr(MM, rM) {
-      const iM = new Map(rM),
-        OM = [],
-        SM = [],
-        jM = () => 0 === SM.length || SM[SM.length - 1].active;
-      let aM = null;
-      const PM = () => {
-        const MM = [...iM].filter((MM => {
-            let [, rM] = MM;
-            return !0 !== rM
+    function fe(VV, eV) {
+      const xV = new Map(eV),
+        JV = [],
+        YV = [],
+        UV = () => 0 === YV.length || YV[YV.length - 1].active;
+      let yV = null;
+      const pV = () => {
+        const VV = [...xV].filter((VV => {
+            let [, eV] = VV;
+            return !0 !== eV
           })),
-          rM = MM.map((MM => {
-            let [rM] = MM;
-            return rM
+          eV = VV.map((VV => {
+            let [eV] = VV;
+            return eV
           })).join("|");
-        aM = MM.length ? new RegExp(`\\b(${rM})\\b`, "g") : null
+        yV = VV.length ? new RegExp(`\\b(${eV})\\b`, "g") : null
       };
-      PM();
-      for (const nM of MM.split("\n")) {
-        const MM = xr.exec(nM);
-        if (!MM) {
-          jM() && OM.push(aM ? Fr(nM, aM, iM) : nM);
+      pV();
+      for (const QV of VV.split("\n")) {
+        const VV = Le.exec(QV);
+        if (!VV) {
+          UV() && JV.push(yV ? me(QV, yV, xV) : QV);
           continue
         }
-        const rM = MM[1],
-          QM = MM[2].trim();
-        if ("ifdef" === rM || "ifndef" === rM || "if" === rM) {
-          const MM = jM(),
-            OM = "if" === rM ? Br(QM, iM) : iM.has(QM) === ("ifdef" === rM);
-          SM.push({
-            active: MM && OM,
-            parentActive: MM,
-            taken: OM
+        const eV = VV[1],
+          nV = VV[2].trim();
+        if ("ifdef" === eV || "ifndef" === eV || "if" === eV) {
+          const VV = UV(),
+            JV = "if" === eV ? Ke(nV, xV) : xV.has(nV) === ("ifdef" === eV);
+          YV.push({
+            active: VV && JV,
+            parentActive: VV,
+            taken: JV
           })
-        } else if ("elif" === rM || "else" === rM) {
-          const MM = SM[SM.length - 1];
-          if (!MM) throw new Error(`#${rM} without #if`);
-          const OM = !MM.taken && ("else" === rM || Br(QM, iM));
-          MM.active = MM.parentActive && OM, MM.taken = MM.taken || OM
-        } else if ("endif" === rM) {
-          if (!SM.pop()) throw new Error("#endif without #if")
-        } else if (jM()) {
-          const [MM, ...OM] = QM.split(/\s+/);
-          "undef" === rM ? iM.delete(MM) : iM.set(MM, !OM.length || OM.join(" ")), PM()
+        } else if ("elif" === eV || "else" === eV) {
+          const VV = YV[YV.length - 1];
+          if (!VV) throw new Error(`#${eV} without #if`);
+          const JV = !VV.taken && ("else" === eV || Ke(nV, xV));
+          VV.active = VV.parentActive && JV, VV.taken = VV.taken || JV
+        } else if ("endif" === eV) {
+          if (!YV.pop()) throw new Error("#endif without #if")
+        } else if (UV()) {
+          const [VV, ...JV] = nV.split(/\s+/);
+          "undef" === eV ? xV.delete(VV) : xV.set(VV, !JV.length || JV.join(" ")), pV()
         }
       }
-      if (SM.length) throw new Error("Unterminated #if");
-      return OM.join("\n")
+      if (YV.length) throw new Error("Unterminated #if");
+      return JV.join("\n")
     }
 
-    function Fr(MM, rM, iM) {
-      return MM.replace(rM, (MM => {
-        const rM = iM.get(MM);
-        return "string" === typeof rM ? rM : MM
+    function me(VV, eV, xV) {
+      return VV.replace(eV, (VV => {
+        const eV = xV.get(VV);
+        return "string" === typeof eV ? eV : VV
       }))
     }
 
-    function Br(MM, rM) {
-      var iM;
-      const OM = null !== (iM = MM.match(/defined|\d+(\.\d+)?|\w+|&&|\|\||==|!=|>=|<=|[()!<>]/g)) && void 0 !== iM ? iM : [];
-      let SM = 0;
-      const jM = () => OM[SM],
-        aM = () => OM[SM++],
-        PM = MM => {
-          const iM = /^\d/.test(MM) ? MM : rM.get(MM);
-          return "string" === typeof iM ? parseInt(iM) : Number.NaN
+    function Ke(VV, eV) {
+      var xV;
+      const JV = null !== (xV = VV.match(/defined|\d+(\.\d+)?|\w+|&&|\|\||==|!=|>=|<=|[()!<>]/g)) && void 0 !== xV ? xV : [];
+      let YV = 0;
+      const UV = () => JV[YV],
+        yV = () => JV[YV++],
+        pV = VV => {
+          const xV = /^\d/.test(VV) ? VV : eV.get(VV);
+          return "string" === typeof xV ? parseInt(xV) : Number.NaN
         },
-        nM = () => {
-          const MM = aM();
-          if ("!" === MM) return !nM();
-          if ("(" === MM) {
-            const MM = zM();
-            return aM(), MM
+        QV = () => {
+          const VV = yV();
+          if ("!" === VV) return !QV();
+          if ("(" === VV) {
+            const VV = wV();
+            return yV(), VV
           }
-          if ("defined" === MM) {
-            const MM = "(" === jM();
-            MM && aM();
-            const iM = aM();
-            return MM && aM(), rM.has(iM)
+          if ("defined" === VV) {
+            const VV = "(" === UV();
+            VV && yV();
+            const xV = yV();
+            return VV && yV(), eV.has(xV)
           }
-          const iM = jM();
-          if ("==" === iM || "!=" === iM || ">" === iM || "<" === iM || ">=" === iM || "<=" === iM) {
-            aM();
-            const rM = PM(MM),
-              OM = PM(aM());
-            if (Number.isNaN(rM) || Number.isNaN(OM)) return !1;
-            switch (iM) {
+          const xV = UV();
+          if ("==" === xV || "!=" === xV || ">" === xV || "<" === xV || ">=" === xV || "<=" === xV) {
+            yV();
+            const eV = pV(VV),
+              JV = pV(yV());
+            if (Number.isNaN(eV) || Number.isNaN(JV)) return !1;
+            switch (xV) {
               case "==":
-                return rM === OM;
+                return eV === JV;
               case "!=":
-                return rM !== OM;
+                return eV !== JV;
               case ">":
-                return rM > OM;
+                return eV > JV;
               case "<":
-                return rM < OM;
+                return eV < JV;
               case ">=":
-                return rM >= OM;
+                return eV >= JV;
               default:
-                return rM <= OM
+                return eV <= JV
             }
           }
-          return rM.has(MM)
+          return eV.has(VV)
         },
-        QM = () => {
-          let MM = nM();
+        nV = () => {
+          let VV = QV();
           for (;
-            "&&" === jM();) {
-            aM();
-            const rM = nM();
-            MM = MM && rM
+            "&&" === UV();) {
+            yV();
+            const eV = QV();
+            VV = VV && eV
           }
-          return MM
+          return VV
         },
-        zM = () => {
-          let MM = QM();
+        wV = () => {
+          let VV = nV();
           for (;
-            "||" === jM();) {
-            aM();
-            const rM = QM();
-            MM = MM || rM
+            "||" === UV();) {
+            yV();
+            const eV = nV();
+            VV = VV || eV
           }
-          return MM
+          return VV
         },
-        LM = zM();
-      if (SM !== OM.length) throw new Error(`Cannot evaluate #if ${MM}`);
-      return LM
+        ZV = wV();
+      if (YV !== JV.length) throw new Error(`Cannot evaluate #if ${VV}`);
+      return ZV
     }
-    var Xr = iM(38278),
-      Ir = iM(38390),
-      Kr = iM(38395),
-      qr = iM(41782),
-      Tr = iM(39799);
-    const Vr = 32,
-      cr = [10, 3, 10],
-      Mi = [21, 7, 21],
-      ri = Mi[0] * Mi[1] * Mi[2],
-      ii = 0,
-      Oi = 1,
-      Si = 2,
-      ji = 3,
-      ai = 64,
-      Pi = 512,
-      ni = 4 * ri,
-      Qi = 1536,
-      zi = ni + ri * Qi,
-      Li = 1073741824,
-      mi = zi + 1;
+    var He = xV(38484),
+      ue = xV(38595),
+      se = xV(38598),
+      Se = xV(41983),
+      Ie = xV(39948);
+    const de = 32,
+      Oe = [10, 3, 10],
+      Vx = [21, 7, 21],
+      ex = Vx[0] * Vx[1] * Vx[2],
+      xx = 0,
+      Jx = 1,
+      Yx = 2,
+      Ux = 3,
+      yx = 64,
+      px = 512,
+      Qx = 4 * ex,
+      nx = 1536,
+      wx = Qx + ex * nx,
+      Zx = 1073741824,
+      vx = wx + 1;
 
-    function Hi(MM, rM) {
-      const iM = MM % rM;
-      return iM < 0 ? iM + rM : iM
-    }
-
-    function Ji(MM, rM, iM) {
-      return OM = Hi(MM, Mi[0]), SM = Hi(rM, Mi[1]), jM = Hi(iM, Mi[2]), OM + Mi[0] * (SM + Mi[1] * jM);
-      var OM, SM, jM
+    function rx(VV, eV) {
+      const xV = VV % eV;
+      return xV < 0 ? xV + eV : xV
     }
 
-    function di(MM, rM, iM) {
-      return MM + 8 * (rM + 8 * iM)
+    function kx(VV, eV, xV) {
+      return JV = rx(VV, Vx[0]), YV = rx(eV, Vx[1]), UV = rx(xV, Vx[2]), JV + Vx[0] * (YV + Vx[1] * UV);
+      var JV, YV, UV
     }
 
-    function yi(MM, rM, iM) {
-      return MM + 4 * (rM + 4 * iM)
+    function bx(VV, eV, xV) {
+      return VV + 8 * (eV + 8 * xV)
     }
-    const li = 65535,
-      Ei = 0,
-      Ui = 1,
-      Gi = 2,
-      Ci = 3;
 
-    function ei(MM) {
-      return Math.ceil(MM * MM / 32)
+    function Ex(VV, eV, xV) {
+      return VV + 4 * (eV + 4 * xV)
     }
-    const bi = 8192,
-      wi = 1 << 18,
-      ti = 65536,
-      gi = 294912,
-      ui = 128,
-      Ri = 4096,
-      Wi = 16,
-      si = 16385,
-      Di = 81921,
-      ki = 147457,
-      Zi = 4194304;
-    const oi = [0, 0, 0],
-      fi = [0, 0, 0];
+    const Bx = 65535,
+      jx = 0,
+      qx = 1,
+      tx = 2,
+      Fx = 3;
 
-    function Yi(MM, rM, iM, OM) {
-      ! function(MM, rM, iM) {
-        const [OM, SM, jM] = [MM[0], MM[1], MM[2]];
-        let aM, PM, nM;
-        Math.abs(SM) < .99 ? (aM = jM, PM = 0, nM = -OM) : (aM = -SM, PM = OM, nM = 0);
-        const QM = Math.hypot(aM, PM, nM);
-        rM[0] = aM / QM, rM[1] = PM / QM, rM[2] = nM / QM, iM[0] = SM * rM[2] - jM * rM[1], iM[1] = jM * rM[0] - OM * rM[2], iM[2] = OM * rM[1] - SM * rM[0]
-      }(OM, oi, fi);
-      const SM = 1 / 32;
-      for (const [jM, aM] of [
-          [0, oi],
-          [4, fi]
+    function Tx(VV) {
+      return Math.ceil(VV * VV / 32)
+    }
+    const Px = 8192,
+      Ax = 1 << 18,
+      Nx = 65536,
+      Xx = 294912,
+      Mx = 128,
+      zx = 4096,
+      Gx = 16,
+      Wx = 16385,
+      Rx = 81921,
+      gx = 147457,
+      Dx = 4194304;
+    const ix = [0, 0, 0],
+      Cx = [0, 0, 0];
+
+    function ax(VV, eV, xV, JV) {
+      ! function(VV, eV, xV) {
+        const [JV, YV, UV] = [VV[0], VV[1], VV[2]];
+        let yV, pV, QV;
+        Math.abs(YV) < .99 ? (yV = UV, pV = 0, QV = -JV) : (yV = -YV, pV = JV, QV = 0);
+        const nV = Math.hypot(yV, pV, QV);
+        eV[0] = yV / nV, eV[1] = pV / nV, eV[2] = QV / nV, xV[0] = YV * eV[2] - UV * eV[1], xV[1] = UV * eV[0] - JV * eV[2], xV[2] = JV * eV[1] - YV * eV[0]
+      }(JV, ix, Cx);
+      const YV = 1 / 32;
+      for (const [UV, yV] of [
+          [0, ix],
+          [4, Cx]
         ]) {
-        for (let iM = 0; iM < 3; iM++) MM[rM + jM + iM] = aM[iM] * SM;
-        MM[rM + jM + 3] = -(aM[0] * iM[0] + aM[1] * iM[1] + aM[2] * iM[2]) * SM
+        for (let xV = 0; xV < 3; xV++) VV[eV + UV + xV] = yV[xV] * YV;
+        VV[eV + UV + 3] = -(yV[0] * xV[0] + yV[1] * xV[1] + yV[2] * xV[2]) * YV
       }
     }
-    class Ni {
+    class ox {
       constructor() {
-        this.words = new Uint32Array(ki), this.parts = 0, this.refs = 0, this.floats = new Float32Array(this.words.buffer), this.rects = new Int32Array(16384), this.counts = new Uint32Array(16384), this.inverse = new Float64Array(16), this.view = new Float32Array(8), this.viewAt = 0, this.light = [0, 1, 0]
+        this.words = new Uint32Array(gx), this.parts = 0, this.refs = 0, this.floats = new Float32Array(this.words.buffer), this.rects = new Int32Array(16384), this.counts = new Uint32Array(16384), this.inverse = new Float64Array(16), this.view = new Float32Array(8), this.viewAt = 0, this.light = [0, 1, 0]
       }
-      JL(MM, rM) {
-        this.parts = 0, this.refs = 0, this.view = MM, this.viewAt = rM;
-        const iM = MM[rM + 1] * MM[rM + 6] - MM[rM + 2] * MM[rM + 5],
-          OM = MM[rM + 2] * MM[rM + 4] - MM[rM] * MM[rM + 6],
-          SM = MM[rM] * MM[rM + 5] - MM[rM + 1] * MM[rM + 4],
-          jM = Math.hypot(iM, OM, SM) || 1;
-        this.light[0] = iM / jM, this.light[1] = OM / jM, this.light[2] = SM / jM
+      NZ(VV, eV) {
+        this.parts = 0, this.refs = 0, this.view = VV, this.viewAt = eV;
+        const xV = VV[eV + 1] * VV[eV + 6] - VV[eV + 2] * VV[eV + 5],
+          JV = VV[eV + 2] * VV[eV + 4] - VV[eV] * VV[eV + 6],
+          YV = VV[eV] * VV[eV + 5] - VV[eV + 1] * VV[eV + 4],
+          UV = Math.hypot(xV, JV, YV) || 1;
+        this.light[0] = xV / UV, this.light[1] = JV / UV, this.light[2] = YV / UV
       }
-      add(MM, rM) {
-        let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        if (this.parts >= Ri || ! function(MM, rM, iM) {
-            const OM = MM[rM],
-              SM = MM[rM + 1],
-              jM = MM[rM + 2],
-              aM = MM[rM + 3],
-              PM = MM[rM + 4],
-              nM = MM[rM + 5],
-              QM = MM[rM + 6],
-              zM = MM[rM + 7],
-              LM = MM[rM + 8],
-              mM = MM[rM + 9],
-              HM = MM[rM + 10],
-              hM = MM[rM + 11],
-              JM = MM[rM + 12],
-              dM = MM[rM + 13],
-              yM = MM[rM + 14],
-              lM = MM[rM + 15],
-              EM = OM * nM - SM * PM,
-              UM = OM * QM - jM * PM,
-              GM = OM * zM - aM * PM,
-              CM = SM * QM - jM * nM,
-              eM = SM * zM - aM * nM,
-              bM = jM * zM - aM * QM,
-              wM = LM * dM - mM * JM,
-              tM = LM * yM - HM * JM,
-              gM = LM * lM - hM * JM,
-              uM = mM * yM - HM * dM,
-              RM = mM * lM - hM * dM,
-              pM = HM * lM - hM * yM,
-              WM = EM * pM - UM * RM + GM * uM + CM * gM - eM * tM + bM * wM;
-            if (!(Math.abs(WM) > 1e-12)) return !1;
-            const sM = 1 / WM;
-            return iM[0] = (nM * pM - QM * RM + zM * uM) * sM, iM[1] = (jM * RM - SM * pM - aM * uM) * sM, iM[2] = (dM * bM - yM * eM + lM * CM) * sM, iM[3] = (HM * eM - mM * bM - hM * CM) * sM, iM[4] = (QM * gM - PM * pM - zM * tM) * sM, iM[5] = (OM * pM - jM * gM + aM * tM) * sM, iM[6] = (yM * GM - JM * bM - lM * UM) * sM, iM[7] = (LM * bM - HM * GM + hM * UM) * sM, iM[8] = (PM * RM - nM * gM + zM * wM) * sM, iM[9] = (SM * gM - OM * RM - aM * wM) * sM, iM[10] = (JM * eM - dM * GM + lM * EM) * sM, iM[11] = (mM * GM - LM * eM - hM * EM) * sM, iM[12] = (nM * tM - PM * uM - QM * wM) * sM, iM[13] = (OM * uM - SM * tM + jM * wM) * sM, iM[14] = (dM * UM - JM * CM - yM * EM) * sM, iM[15] = (LM * CM - mM * UM + HM * EM) * sM, !0
-          }(rM, iM, this.inverse)) return;
+      add(VV, eV) {
+        let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        if (this.parts >= zx || ! function(VV, eV, xV) {
+            const JV = VV[eV],
+              YV = VV[eV + 1],
+              UV = VV[eV + 2],
+              yV = VV[eV + 3],
+              pV = VV[eV + 4],
+              QV = VV[eV + 5],
+              nV = VV[eV + 6],
+              wV = VV[eV + 7],
+              ZV = VV[eV + 8],
+              vV = VV[eV + 9],
+              rV = VV[eV + 10],
+              kV = VV[eV + 11],
+              bV = VV[eV + 12],
+              EV = VV[eV + 13],
+              BV = VV[eV + 14],
+              jV = VV[eV + 15],
+              qV = JV * QV - YV * pV,
+              tV = JV * nV - UV * pV,
+              FV = JV * wV - yV * pV,
+              TV = YV * nV - UV * QV,
+              PV = YV * wV - yV * QV,
+              AV = UV * wV - yV * nV,
+              NV = ZV * EV - vV * bV,
+              XV = ZV * BV - rV * bV,
+              MV = ZV * jV - kV * bV,
+              zV = vV * BV - rV * EV,
+              GV = vV * jV - kV * EV,
+              WV = rV * jV - kV * BV,
+              RV = qV * WV - tV * GV + FV * zV + TV * MV - PV * XV + AV * NV;
+            if (!(Math.abs(RV) > 1e-12)) return !1;
+            const gV = 1 / RV;
+            return xV[0] = (QV * WV - nV * GV + wV * zV) * gV, xV[1] = (UV * GV - YV * WV - yV * zV) * gV, xV[2] = (EV * AV - BV * PV + jV * TV) * gV, xV[3] = (rV * PV - vV * AV - kV * TV) * gV, xV[4] = (nV * MV - pV * WV - wV * XV) * gV, xV[5] = (JV * WV - UV * MV + yV * XV) * gV, xV[6] = (BV * FV - bV * AV - jV * tV) * gV, xV[7] = (ZV * AV - rV * FV + kV * tV) * gV, xV[8] = (pV * GV - QV * MV + wV * NV) * gV, xV[9] = (YV * MV - JV * GV - yV * NV) * gV, xV[10] = (bV * PV - EV * FV + jV * qV) * gV, xV[11] = (vV * FV - ZV * PV - kV * qV) * gV, xV[12] = (QV * XV - pV * zV - nV * NV) * gV, xV[13] = (JV * zV - YV * XV + UV * NV) * gV, xV[14] = (EV * tV - bV * TV - BV * qV) * gV, xV[15] = (ZV * TV - vV * tV + rV * qV) * gV, !0
+          }(eV, xV, this.inverse)) return;
         const {
-          view: OM,
-          viewAt: SM
-        } = this, jM = iM;
-        let aM = 1 / 0,
-          PM = 1 / 0,
-          nM = -1 / 0,
-          QM = -1 / 0,
-          zM = -1 / 0;
-        const [LM, mM, HM] = this.light;
-        for (let GM = 0; GM < 8; GM++) {
-          const iM = 1 & GM ? MM.hi[0] : MM.lo[0],
-            hM = 2 & GM ? MM.hi[1] : MM.lo[1],
-            JM = 4 & GM ? MM.hi[2] : MM.lo[2],
-            dM = iM * rM[jM] + hM * rM[jM + 4] + JM * rM[jM + 8] + rM[jM + 12],
-            yM = iM * rM[jM + 1] + hM * rM[jM + 5] + JM * rM[jM + 9] + rM[jM + 13],
-            lM = iM * rM[jM + 2] + hM * rM[jM + 6] + JM * rM[jM + 10] + rM[jM + 14],
-            EM = OM[SM] * dM + OM[SM + 1] * yM + OM[SM + 2] * lM + OM[SM + 3],
-            UM = OM[SM + 4] * dM + OM[SM + 5] * yM + OM[SM + 6] * lM + OM[SM + 7];
-          aM = Math.min(aM, EM), PM = Math.min(PM, UM), nM = Math.max(nM, EM), QM = Math.max(QM, UM), zM = Math.max(zM, LM * dM + mM * yM + HM * lM)
+          view: JV,
+          viewAt: YV
+        } = this, UV = xV;
+        let yV = 1 / 0,
+          pV = 1 / 0,
+          QV = -1 / 0,
+          nV = -1 / 0,
+          wV = -1 / 0;
+        const [ZV, vV, rV] = this.light;
+        for (let FV = 0; FV < 8; FV++) {
+          const xV = 1 & FV ? VV.hi[0] : VV.lo[0],
+            kV = 2 & FV ? VV.hi[1] : VV.lo[1],
+            bV = 4 & FV ? VV.hi[2] : VV.lo[2],
+            EV = xV * eV[UV] + kV * eV[UV + 4] + bV * eV[UV + 8] + eV[UV + 12],
+            BV = xV * eV[UV + 1] + kV * eV[UV + 5] + bV * eV[UV + 9] + eV[UV + 13],
+            jV = xV * eV[UV + 2] + kV * eV[UV + 6] + bV * eV[UV + 10] + eV[UV + 14],
+            qV = JV[YV] * EV + JV[YV + 1] * BV + JV[YV + 2] * jV + JV[YV + 3],
+            tV = JV[YV + 4] * EV + JV[YV + 5] * BV + JV[YV + 6] * jV + JV[YV + 7];
+          yV = Math.min(yV, qV), pV = Math.min(pV, tV), QV = Math.max(QV, qV), nV = Math.max(nV, tV), wV = Math.max(wV, ZV * EV + vV * BV + rV * jV)
         }
-        if (nM < -1 || QM < -1 || aM >= 1 || PM >= 1) return;
-        const hM = this.parts++,
-          JM = this.rects;
-        JM[4 * hM] = Ai(aM), JM[4 * hM + 1] = Ai(PM), JM[4 * hM + 2] = Ai(nM), JM[4 * hM + 3] = Ai(QM);
-        const dM = this.inverse,
+        if (QV < -1 || nV < -1 || yV >= 1 || pV >= 1) return;
+        const kV = this.parts++,
+          bV = this.rects;
+        bV[4 * kV] = cx(yV), bV[4 * kV + 1] = cx(pV), bV[4 * kV + 2] = cx(QV), bV[4 * kV + 3] = cx(nV);
+        const EV = this.inverse,
           {
-            cell: yM,
-            dims: lM,
-            lo: EM
-          } = MM,
-          UM = Di + hM * Wi;
-        for (let GM = 0; GM < 3; GM++) this.floats[UM + 4 * GM] = dM[GM] / yM, this.floats[UM + 4 * GM + 1] = dM[4 + GM] / yM, this.floats[UM + 4 * GM + 2] = dM[8 + GM] / yM, this.floats[UM + 4 * GM + 3] = (dM[12 + GM] - EM[GM]) / yM;
-        this.words[UM + 12] = MM.at, this.floats[UM + 13] = zM + .001 * (1 + Math.abs(zM)), this.words[UM + 14] = lM[0] | lM[1] << 8 | lM[2] << 16
+            cell: BV,
+            dims: jV,
+            lo: qV
+          } = VV,
+          tV = Rx + kV * Gx;
+        for (let FV = 0; FV < 3; FV++) this.floats[tV + 4 * FV] = EV[FV] / BV, this.floats[tV + 4 * FV + 1] = EV[4 + FV] / BV, this.floats[tV + 4 * FV + 2] = EV[8 + FV] / BV, this.floats[tV + 4 * FV + 3] = (EV[12 + FV] - qV[FV]) / BV;
+        this.words[tV + 12] = VV.at, this.floats[tV + 13] = wV + .001 * (1 + Math.abs(wV)), this.words[tV + 14] = jV[0] | jV[1] << 8 | jV[2] << 16
       }
       finish() {
-        const MM = ui,
+        const VV = Mx,
           {
-            counts: rM,
-            rects: iM,
-            words: OM
+            counts: eV,
+            rects: xV,
+            words: JV
           } = this;
-        rM.fill(0);
-        let SM = 0,
-          jM = 0;
-        for (; jM < this.parts; jM++) {
-          const OM = 4 * jM,
-            aM = (iM[OM + 2] - iM[OM] + 1) * (iM[OM + 3] - iM[OM + 1] + 1);
-          if (SM + aM > 65536) break;
-          SM += aM;
-          for (let SM = iM[OM + 1]; SM <= iM[OM + 3]; SM++)
-            for (let jM = iM[OM]; jM <= iM[OM + 2]; jM++) rM[SM * MM + jM]++
+        eV.fill(0);
+        let YV = 0,
+          UV = 0;
+        for (; UV < this.parts; UV++) {
+          const JV = 4 * UV,
+            yV = (xV[JV + 2] - xV[JV] + 1) * (xV[JV + 3] - xV[JV + 1] + 1);
+          if (YV + yV > 65536) break;
+          YV += yV;
+          for (let YV = xV[JV + 1]; YV <= xV[JV + 3]; YV++)
+            for (let UV = xV[JV]; UV <= xV[JV + 2]; UV++) eV[YV * VV + UV]++
         }
-        let aM = 0;
-        for (let nM = 0; nM < 16384; nM++) OM[nM] = aM, aM += rM[nM], rM[nM] = OM[nM];
-        OM[16384] = aM;
-        for (let nM = 0; nM < jM; nM++) {
-          const SM = 4 * nM;
-          for (let jM = iM[SM + 1]; jM <= iM[SM + 3]; jM++)
-            for (let aM = iM[SM]; aM <= iM[SM + 2]; aM++) OM[si + rM[jM * MM + aM]++] = nM
+        let yV = 0;
+        for (let QV = 0; QV < 16384; QV++) JV[QV] = yV, yV += eV[QV], eV[QV] = JV[QV];
+        JV[16384] = yV;
+        for (let QV = 0; QV < UV; QV++) {
+          const YV = 4 * QV;
+          for (let UV = xV[YV + 1]; UV <= xV[YV + 3]; UV++)
+            for (let yV = xV[YV]; yV <= xV[YV + 2]; yV++) JV[Wx + eV[UV * VV + yV]++] = QV
         }
-        const PM = this.floats;
-        for (let nM = 0; nM < 16384; nM++) {
-          const MM = si + OM[nM],
-            rM = MM + Math.min(OM[nM + 1] - OM[nM], 64);
-          for (let iM = MM + 1; iM < rM; iM++) {
-            const rM = OM[iM],
-              SM = PM[81934 + rM * Wi];
-            let jM = iM - 1;
-            for (; jM >= MM && PM[81934 + OM[jM] * Wi] < SM; jM--) OM[jM + 1] = OM[jM];
-            OM[jM + 1] = rM
+        const pV = this.floats;
+        for (let QV = 0; QV < 16384; QV++) {
+          const VV = Wx + JV[QV],
+            eV = VV + Math.min(JV[QV + 1] - JV[QV], 64);
+          for (let xV = VV + 1; xV < eV; xV++) {
+            const eV = JV[xV],
+              YV = pV[81934 + eV * Gx];
+            let UV = xV - 1;
+            for (; UV >= VV && pV[81934 + JV[UV] * Gx] < YV; UV--) JV[UV + 1] = JV[UV];
+            JV[UV + 1] = eV
           }
         }
-        this.refs = SM
+        this.refs = YV
       }
     }
 
-    function Ai(MM) {
-      return Math.min(127, Math.max(0, Math.floor((.5 * MM + .5) * ui)))
+    function cx(VV) {
+      return Math.min(127, Math.max(0, Math.floor((.5 * VV + .5) * Mx)))
     }
 
-    function xi(MM, rM, iM, OM, SM) {
-      for (let jM = 0; jM < 4; jM++)
-        for (let aM = 0; aM < 4; aM++) SM[4 * jM + aM] = MM[rM + 4 * jM] * iM[OM + aM] + MM[rM + 4 * jM + 1] * iM[OM + 4 + aM] + MM[rM + 4 * jM + 2] * iM[OM + 8 + aM] + MM[rM + 4 * jM + 3] * iM[OM + 12 + aM]
+    function hx(VV, eV, xV, JV, YV) {
+      for (let UV = 0; UV < 4; UV++)
+        for (let yV = 0; yV < 4; yV++) YV[4 * UV + yV] = VV[eV + 4 * UV] * xV[JV + yV] + VV[eV + 4 * UV + 1] * xV[JV + 4 + yV] + VV[eV + 4 * UV + 2] * xV[JV + 8 + yV] + VV[eV + 4 * UV + 3] * xV[JV + 12 + yV]
     }
 
-    function vi(MM, rM, iM, OM, SM) {
-      const jM = MM[0] - rM,
-        aM = MM[1] - iM,
-        PM = MM[2] - OM,
-        nM = MM[3] - rM,
-        QM = MM[4] - iM,
-        zM = MM[5] - OM,
-        LM = MM[6] - rM,
-        mM = MM[7] - iM,
-        HM = MM[8] - OM;
-      if (Math.min(jM, nM, LM) > SM || Math.max(jM, nM, LM) < -SM) return !1;
-      if (Math.min(aM, QM, mM) > SM || Math.max(aM, QM, mM) < -SM) return !1;
-      if (Math.min(PM, zM, HM) > SM || Math.max(PM, zM, HM) < -SM) return !1;
-      const hM = nM - jM,
-        JM = QM - aM,
-        dM = zM - PM,
-        yM = LM - nM,
-        lM = mM - QM,
-        EM = HM - zM,
-        UM = JM * EM - dM * lM,
-        GM = dM * yM - hM * EM,
-        CM = hM * lM - JM * yM;
-      if (Math.abs(UM * jM + GM * aM + CM * PM) > SM * (Math.abs(UM) + Math.abs(GM) + Math.abs(CM))) return !1;
-      const eM = [hM, JM, dM, yM, lM, EM, jM - LM, aM - mM, PM - HM];
-      for (let bM = 0; bM < 3; bM++) {
-        const MM = eM[3 * bM],
-          rM = eM[3 * bM + 1],
-          iM = eM[3 * bM + 2];
-        for (let OM = 0; OM < 3; OM++) {
-          const hM = 0 === OM ? 0 : 1 === OM ? iM : -rM,
-            JM = 0 === OM ? -iM : 1 === OM ? 0 : MM,
-            dM = 0 === OM ? rM : 1 === OM ? -MM : 0,
-            yM = hM * jM + JM * aM + dM * PM,
-            lM = hM * nM + JM * QM + dM * zM,
-            EM = hM * LM + JM * mM + dM * HM,
-            UM = SM * (Math.abs(hM) + Math.abs(JM) + Math.abs(dM));
-          if (Math.min(yM, lM, EM) > UM || Math.max(yM, lM, EM) < -UM) return !1
+    function lx(VV, eV, xV, JV, YV) {
+      const UV = VV[0] - eV,
+        yV = VV[1] - xV,
+        pV = VV[2] - JV,
+        QV = VV[3] - eV,
+        nV = VV[4] - xV,
+        wV = VV[5] - JV,
+        ZV = VV[6] - eV,
+        vV = VV[7] - xV,
+        rV = VV[8] - JV;
+      if (Math.min(UV, QV, ZV) > YV || Math.max(UV, QV, ZV) < -YV) return !1;
+      if (Math.min(yV, nV, vV) > YV || Math.max(yV, nV, vV) < -YV) return !1;
+      if (Math.min(pV, wV, rV) > YV || Math.max(pV, wV, rV) < -YV) return !1;
+      const kV = QV - UV,
+        bV = nV - yV,
+        EV = wV - pV,
+        BV = ZV - QV,
+        jV = vV - nV,
+        qV = rV - wV,
+        tV = bV * qV - EV * jV,
+        FV = EV * BV - kV * qV,
+        TV = kV * jV - bV * BV;
+      if (Math.abs(tV * UV + FV * yV + TV * pV) > YV * (Math.abs(tV) + Math.abs(FV) + Math.abs(TV))) return !1;
+      const PV = [kV, bV, EV, BV, jV, qV, UV - ZV, yV - vV, pV - rV];
+      for (let AV = 0; AV < 3; AV++) {
+        const VV = PV[3 * AV],
+          eV = PV[3 * AV + 1],
+          xV = PV[3 * AV + 2];
+        for (let JV = 0; JV < 3; JV++) {
+          const kV = 0 === JV ? 0 : 1 === JV ? xV : -eV,
+            bV = 0 === JV ? -xV : 1 === JV ? 0 : VV,
+            EV = 0 === JV ? eV : 1 === JV ? -VV : 0,
+            BV = kV * UV + bV * yV + EV * pV,
+            jV = kV * QV + bV * nV + EV * wV,
+            qV = kV * ZV + bV * vV + EV * rV,
+            tV = YV * (Math.abs(kV) + Math.abs(bV) + Math.abs(EV));
+          if (Math.min(BV, jV, qV) > tV || Math.max(BV, jV, qV) < -tV) return !1
         }
       }
       return !0
     }
-    const Fi = new Float32Array(1);
-    new Uint32Array(Fi.buffer);
-    var Bi = iM(39807);
+    const Lx = new Float32Array(1);
+    new Uint32Array(Lx.buffer);
+    var fx = xV(39950);
 
-    function Xi(MM) {
-      const [rM, iM, OM] = Bi.q;
-      return `struct BloxdSpSunShadow {\n\teyeChunk: vec3i,\n\tstaleCount: u32,\n\tvolumeLo: vec3i,\n\tentityX: vec4f,\n\tentityY: vec4f,\n\tstale: array<vec4i, 4>,\n}\n@group(${MM.group}) @binding(${MM.uniform}) var<uniform> bloxdSpSunShadow: BloxdSpSunShadow;\nfn bloxdSpVolumeTexel(cell: vec3i) -> vec3i {\n\treturn cell & vec3i(${rM-1}, ${iM-1}, ${OM-1});\n}\n`
+    function mx(VV) {
+      const [eV, xV, JV] = fx.r;
+      return `struct BloxdSpSunShadow {\n\teyeChunk: vec3i,\n\tstaleCount: u32,\n\tvolumeLo: vec3i,\n\tentityX: vec4f,\n\tentityY: vec4f,\n\tstale: array<vec4i, 4>,\n}\n@group(${VV.group}) @binding(${VV.uniform}) var<uniform> bloxdSpSunShadow: BloxdSpSunShadow;\nfn bloxdSpVolumeTexel(cell: vec3i) -> vec3i {\n\treturn cell & vec3i(${eV-1}, ${xV-1}, ${JV-1});\n}\n`
     }
 
-    function Ii(MM) {
-      let rM = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        iM = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        OM = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-      const [SM, jM, aM] = Mi, [PM, nM, QM] = cr, zM = Math.log2(Vr), LM = OM ? "var<private> bloxdSpCrossed: bool;\n" : "", mM = OM ? "\t\t\tbloxdSpCrossed = true;\n" : "";
-      return `@group(${MM.group}) @binding(${MM.Xm}) var<storage, read> bloxdSpShadowVoxels: array<u32>;\n@group(${MM.group}) @binding(${MM.special}) var<storage, read> bloxdSpShadowSpecial: array<u32>;\n${iM?"var<private> bloxdSpPlaneTolerance: f32;\n":""}${LM}struct BloxdSpBoxExit {\n\tt: f32,\n\taxis: i32,\n\tcell: vec3i,\n}\n// inv: 1 / d, 0 where d is, taken once per ray rather than divided per exit\nfn bloxdSpExitBox(o: vec3f, d: vec3f, inv: vec3f, lo: vec3i, offset: vec3i, size: i32) -> BloxdSpBoxExit {\n\tlet low = vec3f(lo - offset);\n\tlet far = select(low, low + f32(size), d > vec3f(0.0));\n\tlet ta = select(vec3f(1e30), (far - o) * inv, d != vec3f(0.0));\n\tvar axis = 0;\n\tvar t = ta.x;\n\tif (ta.y < t) {\n\t\tt = ta.y;\n\t\taxis = 1;\n\t}\n\tif (ta.z < t) {\n\t\tt = ta.z;\n\t\taxis = 2;\n\t}\n\tlet inside = clamp(vec3i(floor(o + t * d)) + offset, lo, lo + vec3i(size - 1));\n\tlet beyond = select(lo - vec3i(1), lo + vec3i(size), d > vec3f(0.0));\n\t// select, not cell[axis] = beyond[axis]: dynamic indexing spills the vector to memory on some drivers (~9% of the frame on Mali)\n\tlet cell = select(inside, beyond, vec3<bool>(axis == 0, axis == 1, axis == 2));\n\treturn BloxdSpBoxExit(t, axis, cell);\n}\nfn bloxdSpMaskBit(word: u32, bit: u32) -> bool {\n\treturn ((bloxdSpShadowSpecial[word + (bit >> 5u)] >> (bit & 31u)) & 1u) == 1u;\n}\nfn bloxdSpCasterBlocks(caster: u32, o: vec3f, d: vec3f, cell: vec3i, offset: vec3i, t0: f32, t1: f32, axis: i32) -> bool {\n\tlet base = 0u + caster * 4u;\n\tlet kind = bloxdSpShadowSpecial[base];\n\tlet data = bloxdSpShadowSpecial[base + 1u];\n\t// Every loop here has a fixed bound, whatever the buffers hold: a GPU stuck in one loses the device\n\tlet count = min(bloxdSpShadowSpecial[base + 2u], 4u);\n\tlet size = bloxdSpShadowSpecial[base + 3u];\n\tlet q = o - vec3f(cell - offset);\n\tif (kind == ${Ui}u) {\n\t\tlet qs = q * 8.0;\n\t\tlet ds = d * 8.0;\n\t\tlet invs = select(vec3f(0.0), 1.0 / ds, ds != vec3f(0.0));\n\t\tvar sub = clamp(vec3i(floor(qs + t0 * ds)), vec3i(0), vec3i(7));\n\t\tfor (var step = 0; step < 24; step++) {\n\t\t\tif (bloxdSpMaskBit(data, u32(sub.x + 8 * (sub.y + 8 * sub.z)))) {\n\t\t\t\treturn true;\n\t\t\t}\n\t\t\tlet exit = bloxdSpExitBox(qs, ds, invs, sub, vec3i(0), 1);\n\t\t\t// Only the axis it left by can be out of the shape\n\t\t\tif (exit.t >= t1 || any(exit.cell < vec3i(0)) || any(exit.cell >= vec3i(8))) {\n\t\t\t\treturn false;\n\t\t\t}\n\t\t\tsub = exit.cell;\n\t\t}\n\t\treturn false;\n\t}\n\tlet fs = f32(size);\n\tif (kind == ${Gi}u) {\n\t\tfor (var p = 0u; p < count; p++) {\n\t\t\tlet plane = data + p * 4u;\n\t\t\tlet tx = bitcast<f32>(bloxdSpShadowSpecial[plane]);\n\t\t\tlet tz = bitcast<f32>(bloxdSpShadowSpecial[plane + 1u]);\n\t\t\tlet along = bitcast<f32>(bloxdSpShadowSpecial[plane + 2u]);\n\t\t\tlet dn = d.x * tz - d.z * tx;\n\t\t\tif (abs(dn) < 1e-6) {\n\t\t\t\tcontinue;\n\t\t\t}\n\t\t\tlet t = (along - ((q.x - 0.5) * tz - (q.z - 0.5) * tx)) / dn;\n\t\t\t// Not a plane the trace starts on (SUN_SHADOW_PLANE_START), nor in its first cell one within depth's error of it\n\t\t\tif (t < select(t0, t0 + 0.0009765625, axis < 0) || t > t1${iM?" || (axis < 0 && abs(t * dn) < bloxdSpPlaneTolerance)":""}) {\n\t\t\t\tcontinue;\n\t\t\t}\n\t\t\tlet h = q + t * d;\n\t\t\tlet u = (h.x - 0.5) * tx + (h.z - 0.5) * tz + 0.5;\n\t\t\tlet v = 1.0 - h.y;\n\t\t\tif (u < 0.0 || u >= 1.0 || v < 0.0 || v >= 1.0) {\n\t\t\t\tcontinue;\n\t\t\t}\n\t\t\tif (bloxdSpMaskBit(bloxdSpShadowSpecial[plane + 3u], u32(floor(u * fs)) + size * u32(floor(v * fs)))) {\n\t\t\t\treturn true;\n\t\t\t}\n\t\t}\n\t\treturn false;\n\t}\n\tif (kind == ${Ci}u && axis >= 0) {\n\t\t// In through the +axis face going down the axis, else the -axis face; faces go +x, -x, +y, -y, +z, -z\n\t\tlet plusFace = d[axis] < 0.0;\n\t\tlet face = u32(2 * axis) + select(1u, 0u, plusFace);\n\t\tlet h = clamp(q + t0 * d, vec3f(0.0), vec3f(1.0));\n\t\t// As terrain samples faces (terrainShader.ts packedUv)\n\t\tvar uv = vec2f(select(h.x, 1.0 - h.x, plusFace), 1.0 - h.y);\n\t\tif (axis == 0) {\n\t\t\tuv = vec2f(select(1.0 - h.z, h.z, plusFace), 1.0 - h.y);\n\t\t} else if (axis == 1) {\n\t\t\tuv = vec2f(select(1.0 - h.x, h.x, plusFace), 1.0 - h.z);\n\t\t}\n\t\tlet texel = min(vec2u(floor(uv * fs)), vec2u(size - 1u));\n\t\treturn bloxdSpMaskBit(data + face * ((size * size + 31u) / 32u), texel.x + size * texel.y);\n\t}\n\treturn false;\n}\nfn bloxdSpWindowSlot(chunk: vec3i) -> u32 {\n\tlet window = vec3i(${SM}, ${jM}, ${aM});\n\tlet r = chunk % window;\n\tlet s = select(r, r + window, r < vec3i(0));\n\treturn u32(s.x + ${SM} * (s.y + ${jM} * s.z));\n}\nfn bloxdSpWindowHas(chunk: vec3i) -> bool {\n\treturn all(abs(chunk - bloxdSpSunShadow.eyeChunk) <= vec3i(${PM}, ${nM}, ${QM}));\n}\nfn bloxdSpCellFull(cell: vec3i) -> bool {\n\tlet chunk = cell >> vec3u(${zM}u);\n\tif (!bloxdSpWindowHas(chunk)) {\n\t\treturn false;\n\t}\n\tlet slot = bloxdSpWindowSlot(chunk);\n\tlet record = slot * 4u;\n\tlet named = all(bitcast<vec3i>(vec3u(bloxdSpShadowVoxels[record], bloxdSpShadowVoxels[record + 1u], bloxdSpShadowVoxels[record + 2u])) == chunk);\n\tlet state = bloxdSpShadowVoxels[record + 3u] & 255u;\n\tif (!named || state != ${ji}u) {\n\t\treturn named && state == ${Si}u;\n\t}\n\tlet local = cell - chunk * 32;\n\tlet brick = u32((local.x >> 2u) + 8 * ((local.y >> 2u) + 8 * (local.z >> 2u)));\n\tlet brickBase = ${ni}u + slot * 1536u + brick * 3u;\n\tlet bit = u32((local.x & 3) + 4 * ((local.y & 3) + 4 * (local.z & 3)));\n\tif (((bloxdSpShadowVoxels[brickBase + (bit >> 5u)] >> (bit & 31u)) & 1u) == 0u) {\n\t\treturn false;\n\t}\n\tlet pool = bloxdSpShadowVoxels[brickBase + 2u];\n\tif (pool == 0u) {\n\t\treturn true;\n\t}\n\tlet entry = bloxdSpShadowSpecial[294912u + (pool - 1u) * 32u + (bit >> 1u)];\n\treturn ((entry >> ((bit & 1u) * 16u)) & 0xffffu) == 65535u;\n}\n// ownCell: whether the caster in the cell it starts in can block it (sunShadowTrace.ts traceSunShadow)\nfn bloxdSpShadowMarch(o: vec3f, d: vec3f, offset: vec3i, maxSteps: i32, ownCell: bool) -> vec4f {\n\tvar cell = vec3i(floor(o)) + offset;\n\tvar t = 0.0;\n\tvar axis = -1;\n\tlet inv = select(vec3f(0.0), 1.0 / d, d != vec3f(0.0));\n\t// The chunk the slot and record were read for: they change only with it\n\tvar cached = vec3i(-2147483647);\n\tvar slot = 0u;\n\tvar named = false;\n\tvar state = 0u;\n\t// Rising above the window's highest cell that may block, it crosses nothing more (0: never written)\n\tlet windowWord = bloxdSpShadowVoxels[${zi}u];\n\tlet windowTop = select(2147483647, bitcast<i32>(windowWord) - 1073741824, d.y > 0.0 && windowWord != 0u);\n${rM?"\tlet exits = bloxdSpRayFresh(o, d, offset);\n":""}\tfor (var step = 0; step < maxSteps; step++) {\n${rM?`\t\tif (exits && step > 0 && step % ${Ti} == 0 && bloxdSpVolumeOpenLit(o + t * d, offset)) {\n\t\t\treturn vec4f(o + t * d, -1.0);\n\t\t}\n`:""}\t\tif (cell.y > windowTop) {\n\t\t\treturn vec4f(o + t * d, 1.0);\n\t\t}\n\t\tlet chunk = cell >> vec3u(${zM}u);\n\t\tif (any(chunk != cached)) {\n\t\t\tif (!bloxdSpWindowHas(chunk)) {\n\t\t\t\treturn vec4f(o + t * d, 1.0);\n\t\t\t}\n\t\t\tcached = chunk;\n\t\t\tslot = bloxdSpWindowSlot(chunk);\n\t\t\tlet record = slot * 4u;\n\t\t\tnamed = all(bitcast<vec3i>(vec3u(bloxdSpShadowVoxels[record], bloxdSpShadowVoxels[record + 1u], bloxdSpShadowVoxels[record + 2u])) == chunk);\n\t\t\tstate = bloxdSpShadowVoxels[record + 3u];\n\t\t}\n\t\tlet chunkLo = chunk * 32;\n\t\tlet kind = state & 255u;\n\t\t// Rising above its highest cell that may block, it crosses nothing more in the chunk\n\t\tif (!named || kind == ${ii}u || kind == ${Oi}u || (d.y > 0.0 && cell.y - chunkLo.y > i32(state >> 8u))) {\n\t\t\tlet exit = bloxdSpExitBox(o, d, inv, chunkLo, offset, 32);\n\t\t\tt = max(t, exit.t);\n\t\t\taxis = exit.axis;\n\t\t\tcell = exit.cell;\n\t\t\tcontinue;\n\t\t}\n\t\tif (kind == ${Si}u) {\n\t\t\treturn vec4f(o + t * d, 0.0);\n\t\t}\n\t\tlet local = cell - chunkLo;\n\t\tlet brick = u32((local.x >> 2u) + 8 * ((local.y >> 2u) + 8 * (local.z >> 2u)));\n\t\tlet brickBase = ${ni}u + slot * 1536u + brick * 3u;\n\t\tlet low = bloxdSpShadowVoxels[brickBase];\n\t\tlet high = bloxdSpShadowVoxels[brickBase + 1u];\n\t\tif (low == 0u && high == 0u) {\n\t\t\tlet exit = bloxdSpExitBox(o, d, inv, chunkLo + (local & vec3i(~3)), offset, 4);\n\t\t\tt = max(t, exit.t);\n\t\t\taxis = exit.axis;\n\t\t\tcell = exit.cell;\n\t\t\tcontinue;\n\t\t}\n\t\tlet bit = u32((local.x & 3) + 4 * ((local.y & 3) + 4 * (local.z & 3)));\n\t\tlet exit = bloxdSpExitBox(o, d, inv, cell, offset, 1);\n\t\tif (((select(high, low, bit < 32u) >> (bit & 31u)) & 1u) == 1u) {\n\t\t\tlet pool = bloxdSpShadowVoxels[brickBase + 2u];\n\t\t\tif (pool == 0u) {\n\t\t\t\treturn vec4f(o + t * d, 0.0);\n\t\t\t}\n\t\t\tlet entry = bloxdSpShadowSpecial[294912u + (pool - 1u) * 32u + (bit >> 1u)];\n\t\t\tlet caster = (entry >> ((bit & 1u) * 16u)) & 0xffffu;\n\t\t\tif (caster == 65535u || ((ownCell || axis >= 0) && bloxdSpCasterBlocks(caster, o, d, cell, offset, t, exit.t, axis))) {\n\t\t\t\treturn vec4f(o + t * d, 0.0);\n\t\t\t}\n${mM}\t\t}\n\t\tt = max(t, exit.t);\n\t\taxis = exit.axis;\n\t\tcell = exit.cell;\n\t}\n\treturn vec4f(o + t * d, -1.0);\n}\n`
+    function Kx(VV) {
+      let eV = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+        xV = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        JV = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+      const [YV, UV, yV] = Vx, [pV, QV, nV] = Oe, wV = Math.log2(de), ZV = JV ? "var<private> bloxdSpCrossed: bool;\n" : "", vV = JV ? "\t\t\tbloxdSpCrossed = true;\n" : "";
+      return `@group(${VV.group}) @binding(${VV.Ur}) var<storage, read> bloxdSpShadowVoxels: array<u32>;\n@group(${VV.group}) @binding(${VV.special}) var<storage, read> bloxdSpShadowSpecial: array<u32>;\n${xV?"var<private> bloxdSpPlaneTolerance: f32;\n":""}${ZV}struct BloxdSpBoxExit {\n\tt: f32,\n\taxis: i32,\n\tcell: vec3i,\n}\n// inv: 1 / d, 0 where d is, taken once per ray rather than divided per exit\nfn bloxdSpExitBox(o: vec3f, d: vec3f, inv: vec3f, lo: vec3i, offset: vec3i, size: i32) -> BloxdSpBoxExit {\n\tlet low = vec3f(lo - offset);\n\tlet far = select(low, low + f32(size), d > vec3f(0.0));\n\tlet ta = select(vec3f(1e30), (far - o) * inv, d != vec3f(0.0));\n\tvar axis = 0;\n\tvar t = ta.x;\n\tif (ta.y < t) {\n\t\tt = ta.y;\n\t\taxis = 1;\n\t}\n\tif (ta.z < t) {\n\t\tt = ta.z;\n\t\taxis = 2;\n\t}\n\tlet inside = clamp(vec3i(floor(o + t * d)) + offset, lo, lo + vec3i(size - 1));\n\tlet beyond = select(lo - vec3i(1), lo + vec3i(size), d > vec3f(0.0));\n\t// select, not cell[axis] = beyond[axis]: dynamic indexing spills the vector to memory on some drivers (~9% of the frame on Mali)\n\tlet cell = select(inside, beyond, vec3<bool>(axis == 0, axis == 1, axis == 2));\n\treturn BloxdSpBoxExit(t, axis, cell);\n}\nfn bloxdSpMaskBit(word: u32, bit: u32) -> bool {\n\treturn ((bloxdSpShadowSpecial[word + (bit >> 5u)] >> (bit & 31u)) & 1u) == 1u;\n}\nfn bloxdSpCasterBlocks(caster: u32, o: vec3f, d: vec3f, cell: vec3i, offset: vec3i, t0: f32, t1: f32, axis: i32) -> bool {\n\tlet base = 0u + caster * 4u;\n\tlet kind = bloxdSpShadowSpecial[base];\n\tlet data = bloxdSpShadowSpecial[base + 1u];\n\t// Every loop here has a fixed bound, whatever the buffers hold: a GPU stuck in one loses the device\n\tlet count = min(bloxdSpShadowSpecial[base + 2u], 4u);\n\tlet size = bloxdSpShadowSpecial[base + 3u];\n\tlet q = o - vec3f(cell - offset);\n\tif (kind == ${qx}u) {\n\t\tlet qs = q * 8.0;\n\t\tlet ds = d * 8.0;\n\t\tlet invs = select(vec3f(0.0), 1.0 / ds, ds != vec3f(0.0));\n\t\tvar sub = clamp(vec3i(floor(qs + t0 * ds)), vec3i(0), vec3i(7));\n\t\tfor (var step = 0; step < 24; step++) {\n\t\t\tif (bloxdSpMaskBit(data, u32(sub.x + 8 * (sub.y + 8 * sub.z)))) {\n\t\t\t\treturn true;\n\t\t\t}\n\t\t\tlet exit = bloxdSpExitBox(qs, ds, invs, sub, vec3i(0), 1);\n\t\t\t// Only the axis it left by can be out of the shape\n\t\t\tif (exit.t >= t1 || any(exit.cell < vec3i(0)) || any(exit.cell >= vec3i(8))) {\n\t\t\t\treturn false;\n\t\t\t}\n\t\t\tsub = exit.cell;\n\t\t}\n\t\treturn false;\n\t}\n\tlet fs = f32(size);\n\tif (kind == ${tx}u) {\n\t\tfor (var p = 0u; p < count; p++) {\n\t\t\tlet plane = data + p * 4u;\n\t\t\tlet tx = bitcast<f32>(bloxdSpShadowSpecial[plane]);\n\t\t\tlet tz = bitcast<f32>(bloxdSpShadowSpecial[plane + 1u]);\n\t\t\tlet along = bitcast<f32>(bloxdSpShadowSpecial[plane + 2u]);\n\t\t\tlet dn = d.x * tz - d.z * tx;\n\t\t\tif (abs(dn) < 1e-6) {\n\t\t\t\tcontinue;\n\t\t\t}\n\t\t\tlet t = (along - ((q.x - 0.5) * tz - (q.z - 0.5) * tx)) / dn;\n\t\t\t// Not a plane the trace starts on (SUN_SHADOW_PLANE_START), nor in its first cell one within depth's error of it\n\t\t\tif (t < select(t0, t0 + 0.0009765625, axis < 0) || t > t1${xV?" || (axis < 0 && abs(t * dn) < bloxdSpPlaneTolerance)":""}) {\n\t\t\t\tcontinue;\n\t\t\t}\n\t\t\tlet h = q + t * d;\n\t\t\tlet u = (h.x - 0.5) * tx + (h.z - 0.5) * tz + 0.5;\n\t\t\tlet v = 1.0 - h.y;\n\t\t\tif (u < 0.0 || u >= 1.0 || v < 0.0 || v >= 1.0) {\n\t\t\t\tcontinue;\n\t\t\t}\n\t\t\tif (bloxdSpMaskBit(bloxdSpShadowSpecial[plane + 3u], u32(floor(u * fs)) + size * u32(floor(v * fs)))) {\n\t\t\t\treturn true;\n\t\t\t}\n\t\t}\n\t\treturn false;\n\t}\n\tif (kind == ${Fx}u && axis >= 0) {\n\t\t// In through the +axis face going down the axis, else the -axis face; faces go +x, -x, +y, -y, +z, -z\n\t\tlet plusFace = d[axis] < 0.0;\n\t\tlet face = u32(2 * axis) + select(1u, 0u, plusFace);\n\t\tlet h = clamp(q + t0 * d, vec3f(0.0), vec3f(1.0));\n\t\t// As terrain samples faces (terrainShader.ts packedUv)\n\t\tvar uv = vec2f(select(h.x, 1.0 - h.x, plusFace), 1.0 - h.y);\n\t\tif (axis == 0) {\n\t\t\tuv = vec2f(select(1.0 - h.z, h.z, plusFace), 1.0 - h.y);\n\t\t} else if (axis == 1) {\n\t\t\tuv = vec2f(select(1.0 - h.x, h.x, plusFace), 1.0 - h.z);\n\t\t}\n\t\tlet texel = min(vec2u(floor(uv * fs)), vec2u(size - 1u));\n\t\treturn bloxdSpMaskBit(data + face * ((size * size + 31u) / 32u), texel.x + size * texel.y);\n\t}\n\treturn false;\n}\nfn bloxdSpWindowSlot(chunk: vec3i) -> u32 {\n\tlet window = vec3i(${YV}, ${UV}, ${yV});\n\tlet r = chunk % window;\n\tlet s = select(r, r + window, r < vec3i(0));\n\treturn u32(s.x + ${YV} * (s.y + ${UV} * s.z));\n}\nfn bloxdSpWindowHas(chunk: vec3i) -> bool {\n\treturn all(abs(chunk - bloxdSpSunShadow.eyeChunk) <= vec3i(${pV}, ${QV}, ${nV}));\n}\nfn bloxdSpCellFull(cell: vec3i) -> bool {\n\tlet chunk = cell >> vec3u(${wV}u);\n\tif (!bloxdSpWindowHas(chunk)) {\n\t\treturn false;\n\t}\n\tlet slot = bloxdSpWindowSlot(chunk);\n\tlet record = slot * 4u;\n\tlet named = all(bitcast<vec3i>(vec3u(bloxdSpShadowVoxels[record], bloxdSpShadowVoxels[record + 1u], bloxdSpShadowVoxels[record + 2u])) == chunk);\n\tlet state = bloxdSpShadowVoxels[record + 3u] & 255u;\n\tif (!named || state != ${Ux}u) {\n\t\treturn named && state == ${Yx}u;\n\t}\n\tlet local = cell - chunk * 32;\n\tlet brick = u32((local.x >> 2u) + 8 * ((local.y >> 2u) + 8 * (local.z >> 2u)));\n\tlet brickBase = ${Qx}u + slot * 1536u + brick * 3u;\n\tlet bit = u32((local.x & 3) + 4 * ((local.y & 3) + 4 * (local.z & 3)));\n\tif (((bloxdSpShadowVoxels[brickBase + (bit >> 5u)] >> (bit & 31u)) & 1u) == 0u) {\n\t\treturn false;\n\t}\n\tlet pool = bloxdSpShadowVoxels[brickBase + 2u];\n\tif (pool == 0u) {\n\t\treturn true;\n\t}\n\tlet entry = bloxdSpShadowSpecial[294912u + (pool - 1u) * 32u + (bit >> 1u)];\n\treturn ((entry >> ((bit & 1u) * 16u)) & 0xffffu) == 65535u;\n}\n// ownCell: whether the caster in the cell it starts in can block it (sunShadowTrace.ts traceSunShadow)\nfn bloxdSpShadowMarch(o: vec3f, d: vec3f, offset: vec3i, maxSteps: i32, ownCell: bool) -> vec4f {\n\tvar cell = vec3i(floor(o)) + offset;\n\tvar t = 0.0;\n\tvar axis = -1;\n\tlet inv = select(vec3f(0.0), 1.0 / d, d != vec3f(0.0));\n\t// The chunk the slot and record were read for: they change only with it\n\tvar cached = vec3i(-2147483647);\n\tvar slot = 0u;\n\tvar named = false;\n\tvar state = 0u;\n\t// Rising above the window's highest cell that may block, it crosses nothing more (0: never written)\n\tlet windowWord = bloxdSpShadowVoxels[${wx}u];\n\tlet windowTop = select(2147483647, bitcast<i32>(windowWord) - 1073741824, d.y > 0.0 && windowWord != 0u);\n${eV?"\tlet exits = bloxdSpRayFresh(o, d, offset);\n":""}\tfor (var step = 0; step < maxSteps; step++) {\n${eV?`\t\tif (exits && step > 0 && step % ${sx} == 0 && bloxdSpVolumeOpenLit(o + t * d, offset)) {\n\t\t\treturn vec4f(o + t * d, -1.0);\n\t\t}\n`:""}\t\tif (cell.y > windowTop) {\n\t\t\treturn vec4f(o + t * d, 1.0);\n\t\t}\n\t\tlet chunk = cell >> vec3u(${wV}u);\n\t\tif (any(chunk != cached)) {\n\t\t\tif (!bloxdSpWindowHas(chunk)) {\n\t\t\t\treturn vec4f(o + t * d, 1.0);\n\t\t\t}\n\t\t\tcached = chunk;\n\t\t\tslot = bloxdSpWindowSlot(chunk);\n\t\t\tlet record = slot * 4u;\n\t\t\tnamed = all(bitcast<vec3i>(vec3u(bloxdSpShadowVoxels[record], bloxdSpShadowVoxels[record + 1u], bloxdSpShadowVoxels[record + 2u])) == chunk);\n\t\t\tstate = bloxdSpShadowVoxels[record + 3u];\n\t\t}\n\t\tlet chunkLo = chunk * 32;\n\t\tlet kind = state & 255u;\n\t\t// Rising above its highest cell that may block, it crosses nothing more in the chunk\n\t\tif (!named || kind == ${xx}u || kind == ${Jx}u || (d.y > 0.0 && cell.y - chunkLo.y > i32(state >> 8u))) {\n\t\t\tlet exit = bloxdSpExitBox(o, d, inv, chunkLo, offset, 32);\n\t\t\tt = max(t, exit.t);\n\t\t\taxis = exit.axis;\n\t\t\tcell = exit.cell;\n\t\t\tcontinue;\n\t\t}\n\t\tif (kind == ${Yx}u) {\n\t\t\treturn vec4f(o + t * d, 0.0);\n\t\t}\n\t\tlet local = cell - chunkLo;\n\t\tlet brick = u32((local.x >> 2u) + 8 * ((local.y >> 2u) + 8 * (local.z >> 2u)));\n\t\tlet brickBase = ${Qx}u + slot * 1536u + brick * 3u;\n\t\tlet low = bloxdSpShadowVoxels[brickBase];\n\t\tlet high = bloxdSpShadowVoxels[brickBase + 1u];\n\t\tif (low == 0u && high == 0u) {\n\t\t\tlet exit = bloxdSpExitBox(o, d, inv, chunkLo + (local & vec3i(~3)), offset, 4);\n\t\t\tt = max(t, exit.t);\n\t\t\taxis = exit.axis;\n\t\t\tcell = exit.cell;\n\t\t\tcontinue;\n\t\t}\n\t\tlet bit = u32((local.x & 3) + 4 * ((local.y & 3) + 4 * (local.z & 3)));\n\t\tlet exit = bloxdSpExitBox(o, d, inv, cell, offset, 1);\n\t\tif (((select(high, low, bit < 32u) >> (bit & 31u)) & 1u) == 1u) {\n\t\t\tlet pool = bloxdSpShadowVoxels[brickBase + 2u];\n\t\t\tif (pool == 0u) {\n\t\t\t\treturn vec4f(o + t * d, 0.0);\n\t\t\t}\n\t\t\tlet entry = bloxdSpShadowSpecial[294912u + (pool - 1u) * 32u + (bit >> 1u)];\n\t\t\tlet caster = (entry >> ((bit & 1u) * 16u)) & 0xffffu;\n\t\t\tif (caster == 65535u || ((ownCell || axis >= 0) && bloxdSpCasterBlocks(caster, o, d, cell, offset, t, exit.t, axis))) {\n\t\t\t\treturn vec4f(o + t * d, 0.0);\n\t\t\t}\n${vV}\t\t}\n\t\tt = max(t, exit.t);\n\t\taxis = exit.axis;\n\t\tcell = exit.cell;\n\t}\n\treturn vec4f(o + t * d, -1.0);\n}\n`
     }
-    const Ki = {
+    const Hx = {
       group: 0,
       uniform: 0,
-      Xm: 1,
+      Ur: 1,
       special: 2,
       work: 3,
       volume: 4
     };
 
-    function qi() {
-      const MM = Ki;
-      return `${Xi(MM)}${Ii(MM,!1,!1,!0)}struct BloxdSpVolumeBox {\n\tlo: vec3i,\n\tfirst: u32,\n\tsize: vec3u,\n}\nstruct BloxdSpVolumeWork {\n\tlight: vec3f,\n\tboxes: u32,\n\tbox: array<BloxdSpVolumeBox, ${Bi.d}>,\n}\n@group(${MM.group}) @binding(${MM.work}) var<uniform> bloxdSpVolumeWork: BloxdSpVolumeWork;\n@group(${MM.group}) @binding(${MM.volume}) var bloxdSpVolumeOut: texture_storage_3d<rgba8unorm, write>;\n@compute @workgroup_size(${Bi.n})\nfn main(@builtin(global_invocation_id) id: vec3u) {\n\tvar at = 0u;\n\tlet boxes = min(bloxdSpVolumeWork.boxes, ${Bi.d}u);\n\tfor (var b = 1u; b < boxes; b++) {\n\t\tif (id.x >= bloxdSpVolumeWork.box[b].first) {\n\t\t\tat = b;\n\t\t}\n\t}\n\tlet box = bloxdSpVolumeWork.box[at];\n\tlet index = id.x - box.first;\n\tif (index >= box.size.x * box.size.y * box.size.z) {\n\t\treturn;\n\t}\n\tlet r = box.lo + vec3i(vec3u(index % box.size.x, (index / box.size.x) % box.size.y, index / (box.size.x * box.size.y)));\n\t// From the cell's centre, relative to the volume's corner: exact in f32\n\tlet lo = bloxdSpSunShadow.volumeLo;\n\tlet cell = lo + r;\n\tlet open = !bloxdSpCellFull(cell);\n\tvar lit = 0.0;\n\tbloxdSpCrossed = false;\n\tif (open) {\n\t\t// Past its own caster: a cell's light is what reaches it (sunShadowVolume.ts sunShadowVolumeCell)\n\t\tlet march = bloxdSpShadowMarch(vec3f(r) + vec3f(0.5), bloxdSpVolumeWork.light, lo, ${Bi.h}, false);\n\t\tlit = select(march.w, 1.0, march.w < 0.0);\n\t}\n\ttextureStore(bloxdSpVolumeOut, bloxdSpVolumeTexel(cell), vec4f(lit, select(0.0, 1.0, open), select(0.0, 1.0, lit == 1.0 && !bloxdSpCrossed), 1.0));\n}\n`
+    function ux() {
+      const VV = Hx;
+      return `${mx(VV)}${Kx(VV,!1,!1,!0)}struct BloxdSpVolumeBox {\n\tlo: vec3i,\n\tfirst: u32,\n\tsize: vec3u,\n}\nstruct BloxdSpVolumeWork {\n\tlight: vec3f,\n\tboxes: u32,\n\tbox: array<BloxdSpVolumeBox, ${fx.d}>,\n}\n@group(${VV.group}) @binding(${VV.work}) var<uniform> bloxdSpVolumeWork: BloxdSpVolumeWork;\n@group(${VV.group}) @binding(${VV.volume}) var bloxdSpVolumeOut: texture_storage_3d<rgba8unorm, write>;\n@compute @workgroup_size(${fx.l})\nfn main(@builtin(global_invocation_id) id: vec3u) {\n\tvar at = 0u;\n\tlet boxes = min(bloxdSpVolumeWork.boxes, ${fx.d}u);\n\tfor (var b = 1u; b < boxes; b++) {\n\t\tif (id.x >= bloxdSpVolumeWork.box[b].first) {\n\t\t\tat = b;\n\t\t}\n\t}\n\tlet box = bloxdSpVolumeWork.box[at];\n\tlet index = id.x - box.first;\n\tif (index >= box.size.x * box.size.y * box.size.z) {\n\t\treturn;\n\t}\n\tlet r = box.lo + vec3i(vec3u(index % box.size.x, (index / box.size.x) % box.size.y, index / (box.size.x * box.size.y)));\n\t// From the cell's centre, relative to the volume's corner: exact in f32\n\tlet lo = bloxdSpSunShadow.volumeLo;\n\tlet cell = lo + r;\n\tlet open = !bloxdSpCellFull(cell);\n\tvar lit = 0.0;\n\tbloxdSpCrossed = false;\n\tif (open) {\n\t\t// Past its own caster: a cell's light is what reaches it (sunShadowVolume.ts sunShadowVolumeCell)\n\t\tlet march = bloxdSpShadowMarch(vec3f(r) + vec3f(0.5), bloxdSpVolumeWork.light, lo, ${fx.g}, false);\n\t\tlit = select(march.w, 1.0, march.w < 0.0);\n\t}\n\ttextureStore(bloxdSpVolumeOut, bloxdSpVolumeTexel(cell), vec4f(lit, select(0.0, 1.0, open), select(0.0, 1.0, lit == 1.0 && !bloxdSpCrossed), 1.0));\n}\n`
     }
-    const Ti = 2;
-    const Vi = "fn bloxdSpNormalCode(n: vec3f) -> f32 {\n\tlet a = abs(n);\n\tif (a.x >= a.y && a.x >= a.z) {\n\t\treturn select(1.0, 0.0, n.x > 0.0);\n\t}\n\tif (a.y >= a.z) {\n\t\treturn select(3.0, 2.0, n.y > 0.0);\n\t}\n\treturn select(5.0, 4.0, n.z > 0.0);\n}\n";
+    const sx = 2;
+    const Sx = "fn bloxdSpNormalCode(n: vec3f) -> f32 {\n\tlet a = abs(n);\n\tif (a.x >= a.y && a.x >= a.z) {\n\t\treturn select(1.0, 0.0, n.x > 0.0);\n\t}\n\tif (a.y >= a.z) {\n\t\treturn select(3.0, 2.0, n.y > 0.0);\n\t}\n\treturn select(5.0, 4.0, n.z > 0.0);\n}\n";
 
-    function ci(MM, rM) {
-      let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "trace";
-      const OM = `var<private> bloxdSpShadowPosition: vec3f;\nfn bloxdSpShadowLight() -> vec4f {\n\t// Towards the sun or moon, as the CPU works it out (sunShadowLight)\n\tlet bloxdSpLight = -${rM.shadowDirection};\n\treturn vec4f(bloxdSpLight, smoothstep(0.0, 0.1, bloxdSpLight.y));\n}\n`,
-        SM = "trace" === iM || "lit" === iM,
-        jM = "maskEdge" === iM ? "bloxdSpMaskEdge()" : "textureLoad(bloxdSpShadowMask, bloxdSpShadowPixel, 0).r",
-        aM = SM ? `\tlet bloxdSpOrigin = bloxdSpShadowPosition + bloxdSpShadowNormal * 0.25;\n\tlet bloxdSpMarch = bloxdSpShadowMarch(bloxdSpOrigin, bloxdSpLight.xyz, ${rM.renderOffset}, 64, true);\n\tvar bloxdSpLit = bloxdSpMarch.w;\n\tif (bloxdSpLit < 0.0) {\n\t\t// Out of steps, or open and lit from here: on from the volume, from where it got to\n\t\tbloxdSpLit = bloxdSpVolumeAt(bloxdSpMarch.xyz, ${rM.renderOffset});\n\t}\n\tif (bloxdSpLit > 0.0 && !bloxdSpShadowFirstPerson) {\n\t\t// Lifeforms and items, but not on the first-person held item, which the body you're in would shade as you turn\n\t\tbloxdSpLit *= bloxdSpEntityLight(bloxdSpShadowPosition, bloxdSpLight.xyz, bloxdSpFacingDot);\n\t}\n\treturn ${"lit"===iM?"bloxdSpLit":"bloxdSpLight.w * bloxdSpFacing * bloxdSpLit"};\n` : `\treturn bloxdSpLight.w * bloxdSpFacing * ${jM};\n`;
-      return `${OM}${MM.sunShadow?`var<private> bloxdSpShadowNormal: vec3f;\nvar<private> bloxdSpShadowEmissive: bool;\nvar<private> bloxdSpShadowFirstPerson: bool;\n${SM?function(){const[MM,rM,iM]=Bi.q;return`fn bloxdSpRayFresh(o: vec3f, d: vec3f, offset: vec3i) -> bool {\n\tif (bloxdSpSunShadow.staleCount > 4u) {\n\t\treturn false;\n\t}\n\tlet inv = select(vec3f(1e30), 1.0 / d, d != vec3f(0.0));\n\tlet count = bloxdSpSunShadow.staleCount;\n\tfor (var b = 0u; b < count; b++) {\n\t\tlet lo = vec3f(bloxdSpSunShadow.stale[b].xyz - offset) - 1.0;\n\t\tlet a = (lo - o) * inv;\n\t\tlet z = (lo + 34.0 - o) * inv;\n\t\tlet near = max(max(min(a.x, z.x), min(a.y, z.y)), min(a.z, z.z));\n\t\tlet far = min(min(max(a.x, z.x), max(a.y, z.y)), max(a.z, z.z));\n\t\tif (far >= max(near, 0.0)) {\n\t\t\treturn false;\n\t\t}\n\t}\n\treturn true;\n}\nfn bloxdSpVolumeOpenLit(p: vec3f, offset: vec3i) -> bool {\n\tlet lo = bloxdSpSunShadow.volumeLo;\n\tlet size = vec3f(${MM}.0, ${rM}.0, ${iM}.0);\n\tlet r = p - vec3f(lo - offset);\n\tif (any(r < vec3f(0.5)) || any(r > size - vec3f(0.5))) {\n\t\treturn false;\n\t}\n\tlet sample = textureSampleLevel(bloxdSpShadowVolume, bloxdSpShadowVolumeSampler, (r + vec3f(bloxdSpVolumeTexel(lo))) / size, 0.0);\n\treturn sample.b >= 0.999;\n}\n`}():""}fn bloxdShadow() -> f32 {\n\tlet bloxdSpLight = bloxdSpShadowLight();\n\t// A face lit by its own light\n\tif (bloxdSpShadowEmissive) {\n\t\treturn 1.0;\n\t}\n\tlet bloxdSpFacingDot = dot(bloxdSpShadowNormal, bloxdSpLight.xyz);\n\tlet bloxdSpFacing = smoothstep(0.0, 0.5, bloxdSpFacingDot);\n\tif (bloxdSpLight.w <= 0.0 || bloxdSpFacing <= 0.0) {\n\t\treturn 0.0;\n\t}\n${aM}}\n`:""}${MM.airShadow?`fn bloxdAirShadow(bloxdSpT: f32) -> f32 {\n\tlet bloxdSpLight = bloxdSpShadowLight();\n\tlet bloxdSpAt = mix(${rM.eyePosition}, bloxdSpShadowPosition, clamp(bloxdSpT, 0.0, 1.0));\n\treturn bloxdSpLight.w * bloxdSpVolumeAt(bloxdSpAt, ${rM.renderOffset});\n}\n`:""}`
+    function Ix(VV, eV) {
+      let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "trace";
+      const JV = `var<private> bloxdSpShadowPosition: vec3f;\nfn bloxdSpShadowLight() -> vec4f {\n\t// Towards the sun or moon, as the CPU works it out (sunShadowLight)\n\tlet bloxdSpLight = -${eV.shadowDirection};\n\treturn vec4f(bloxdSpLight, smoothstep(0.0, 0.1, bloxdSpLight.y));\n}\n`,
+        YV = "trace" === xV || "lit" === xV,
+        UV = "maskEdge" === xV ? "bloxdSpMaskEdge()" : "textureLoad(bloxdSpShadowMask, bloxdSpShadowPixel, 0).r",
+        yV = YV ? `\tlet bloxdSpOrigin = bloxdSpShadowPosition + bloxdSpShadowNormal * 0.25;\n\tlet bloxdSpMarch = bloxdSpShadowMarch(bloxdSpOrigin, bloxdSpLight.xyz, ${eV.renderOffset}, 64, true);\n\tvar bloxdSpLit = bloxdSpMarch.w;\n\tif (bloxdSpLit < 0.0) {\n\t\t// Out of steps, or open and lit from here: on from the volume, from where it got to\n\t\tbloxdSpLit = bloxdSpVolumeAt(bloxdSpMarch.xyz, ${eV.renderOffset});\n\t}\n\tif (bloxdSpLit > 0.0 && !bloxdSpShadowFirstPerson) {\n\t\t// Lifeforms and items, but not on the first-person held item, which the body you're in would shade as you turn\n\t\tbloxdSpLit *= bloxdSpEntityLight(bloxdSpShadowPosition, bloxdSpLight.xyz, bloxdSpFacingDot);\n\t}\n\treturn ${"lit"===xV?"bloxdSpLit":"bloxdSpLight.w * bloxdSpFacing * bloxdSpLit"};\n` : `\treturn bloxdSpLight.w * bloxdSpFacing * ${UV};\n`;
+      return `${JV}${VV.sunShadow?`var<private> bloxdSpShadowNormal: vec3f;\nvar<private> bloxdSpShadowEmissive: bool;\nvar<private> bloxdSpShadowFirstPerson: bool;\n${YV?function(){const[VV,eV,xV]=fx.r;return`fn bloxdSpRayFresh(o: vec3f, d: vec3f, offset: vec3i) -> bool {\n\tif (bloxdSpSunShadow.staleCount > 4u) {\n\t\treturn false;\n\t}\n\tlet inv = select(vec3f(1e30), 1.0 / d, d != vec3f(0.0));\n\tlet count = bloxdSpSunShadow.staleCount;\n\tfor (var b = 0u; b < count; b++) {\n\t\tlet lo = vec3f(bloxdSpSunShadow.stale[b].xyz - offset) - 1.0;\n\t\tlet a = (lo - o) * inv;\n\t\tlet z = (lo + 34.0 - o) * inv;\n\t\tlet near = max(max(min(a.x, z.x), min(a.y, z.y)), min(a.z, z.z));\n\t\tlet far = min(min(max(a.x, z.x), max(a.y, z.y)), max(a.z, z.z));\n\t\tif (far >= max(near, 0.0)) {\n\t\t\treturn false;\n\t\t}\n\t}\n\treturn true;\n}\nfn bloxdSpVolumeOpenLit(p: vec3f, offset: vec3i) -> bool {\n\tlet lo = bloxdSpSunShadow.volumeLo;\n\tlet size = vec3f(${VV}.0, ${eV}.0, ${xV}.0);\n\tlet r = p - vec3f(lo - offset);\n\tif (any(r < vec3f(0.5)) || any(r > size - vec3f(0.5))) {\n\t\treturn false;\n\t}\n\tlet sample = textureSampleLevel(bloxdSpShadowVolume, bloxdSpShadowVolumeSampler, (r + vec3f(bloxdSpVolumeTexel(lo))) / size, 0.0);\n\treturn sample.b >= 0.999;\n}\n`}():""}fn bloxdShadow() -> f32 {\n\tlet bloxdSpLight = bloxdSpShadowLight();\n\t// A face lit by its own light\n\tif (bloxdSpShadowEmissive) {\n\t\treturn 1.0;\n\t}\n\tlet bloxdSpFacingDot = dot(bloxdSpShadowNormal, bloxdSpLight.xyz);\n\tlet bloxdSpFacing = smoothstep(0.0, 0.5, bloxdSpFacingDot);\n\tif (bloxdSpLight.w <= 0.0 || bloxdSpFacing <= 0.0) {\n\t\treturn 0.0;\n\t}\n${yV}}\n`:""}${VV.airShadow?`fn bloxdAirShadow(bloxdSpT: f32) -> f32 {\n\tlet bloxdSpLight = bloxdSpShadowLight();\n\tlet bloxdSpAt = mix(${eV.eyePosition}, bloxdSpShadowPosition, clamp(bloxdSpT, 0.0, 1.0));\n\treturn bloxdSpLight.w * bloxdSpVolumeAt(bloxdSpAt, ${eV.renderOffset});\n}\n`:""}`
     }
-    const MO = "bloxdSpOwnTexture";
+    const dx = "bloxdSpOwnTexture";
 
-    function rO(MM) {
-      return `u32(clamp(round(bloxdSpMipLevel), 0.0, f32(textureNumLevels(${MM.texture}) - 1u)))`
+    function Ox(VV) {
+      return `u32(clamp(round(bloxdSpMipLevel), 0.0, f32(textureNumLevels(${VV.texture}) - 1u)))`
     }
-    const iO = `fn bloxdSpFlags(bloxdSpWord: u32) -> BloxdFlags {\n\tvar bloxdSpOut: BloxdFlags;\n${pr.i.map((MM=>{let[rM,iM]=MM;return`\tbloxdSpOut.${rM} = (bloxdSpWord & ${iM}u) != 0u;\n`})).join("")}\treturn bloxdSpOut;\n}\n`;
+    const VJ = `fn bloxdSpFlags(bloxdSpWord: u32) -> BloxdFlags {\n\tvar bloxdSpOut: BloxdFlags;\n${We.d.map((VV=>{let[eV,xV]=VV;return`\tbloxdSpOut.${eV} = (bloxdSpWord & ${xV}u) != 0u;\n`})).join("")}\treturn bloxdSpOut;\n}\n`;
 
-    function OO(MM) {
-      return `bloxdSpFlags(${MM})`
+    function eJ(VV) {
+      return `bloxdSpFlags(${VV})`
     }
-    const SO = `${qr.i}.eyePosition`;
+    const xJ = `${Se.j}.eyePosition`;
 
-    function jO(MM, rM, iM, OM, SM) {
-      const jM = MM.indexOf(rM);
-      if (jM < 0 || MM.indexOf(rM, jM + 1) >= 0) throw new Error(`Lite's ${SM} program changed at the shader pack ${OM} hook: ${jM<0?"no":"more than one"} anchor (lite/${SM}ShaderPack.ts)`);
-      return MM.slice(0, jM) + iM + MM.slice(jM + rM.length)
-    }
-
-    function aO(MM) {
-      return MM.sunShadow || MM.airShadow
+    function JJ(VV, eV, xV, JV, YV) {
+      const UV = VV.indexOf(eV);
+      if (UV < 0 || VV.indexOf(eV, UV + 1) >= 0) throw new Error(`Lite's ${YV} program changed at the shader pack ${JV} hook: ${UV<0?"no":"more than one"} anchor (lite/${YV}ShaderPack.ts)`);
+      return VV.slice(0, UV) + xV + VV.slice(UV + eV.length)
     }
 
-    function PO(MM, rM) {
-      return rM && aO(MM)
+    function YJ(VV) {
+      return VV.sunShadow || VV.airShadow
     }
-    const nO = {
-      group: qr.f,
-      ...qr.p
+
+    function UJ(VV, eV) {
+      return eV && YJ(VV)
+    }
+    const yJ = {
+      group: Se.e,
+      ...Se.r
     };
 
-    function QO(MM, rM) {
-      let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "trace";
-      if (!aO(MM)) return "";
-      if (rM) {
-        const rM = nO,
-          SM = "trace" === iM || "lit" === iM;
-        let jM = "";
-        MM.sunShadow && (jM = SM ? `${Ii(rM,!0,"lit"===iM)}${OM=rM,`@group(${OM.group}) @binding(${OM.entities}) var<storage, read> bloxdSpShadowEntities: array<u32>;\n@group(${OM.group}) @binding(${OM.entityGrids}) var<storage, read> bloxdSpShadowEntityGrids: array<u32>;\nfn bloxdSpEntityRow(i: u32) -> vec4f {\n\treturn bitcast<vec4f>(vec4u(bloxdSpShadowEntities[i], bloxdSpShadowEntities[i + 1u], bloxdSpShadowEntities[i + 2u], bloxdSpShadowEntities[i + 3u]));\n}\nfn bloxdSpEntityLight(p: vec3f, light: vec3f, facing: f32) -> f32 {\n\tlet p4 = vec4f(p, 1.0);\n\tlet across = vec2f(dot(bloxdSpSunShadow.entityX, p4), dot(bloxdSpSunShadow.entityY, p4));\n\tif (any(abs(across) >= vec2f(1.0))) {\n\t\treturn 1.0;\n\t}\n\tlet bin = vec2u(clamp(vec2i(floor((across * 0.5 + 0.5) * 128.0)), vec2i(0), vec2i(127)));\n\tlet b = bin.y * 128u + bin.x;\n\tlet start = bloxdSpShadowEntities[b];\n\tlet count = min(bloxdSpShadowEntities[b + 1u] - start, 64u);\n\tlet along = dot(p, light);\n\tfor (var k = 0u; k < count; k++) {\n\t\tlet base = 81921u + bloxdSpShadowEntities[16385u + start + k] * 16u;\n\t\t// Ending before the fragment along the light, as do those after it: their rays can't meet them\n\t\tif (bitcast<f32>(bloxdSpShadowEntities[base + 13u]) < along) {\n\t\t\tbreak;\n\t\t}\n\t\tlet r0 = bloxdSpEntityRow(base);\n\t\tlet r1 = bloxdSpEntityRow(base + 4u);\n\t\tlet r2 = bloxdSpEntityRow(base + 8u);\n\t\tlet packed = bloxdSpShadowEntities[base + 14u];\n\t\tlet dims = vec3u(packed & 0xffu, (packed >> 8u) & 0xffu, packed >> 16u);\n\t\t// In cells from the grid's low corner, and per unit along the light\n\t\tlet q = vec3f(dot(r0, p4), dot(r1, p4), dot(r2, p4));\n\t\t// Its rows' least squared length: the square of 1 over its largest scale, in cells\n\t\tlet shortest = min(min(dot(r0.xyz, r0.xyz), dot(r1.xyz, r1.xyz)), dot(r2.xyz, r2.xyz));\n\t\tvar dq = vec3f(dot(r0.xyz, light), dot(r1.xyz, light), dot(r2.xyz, light));\n\t\tdq = select(dq, vec3f(1e-9), abs(dq) < vec3f(1e-9));\n\t\tlet inv = 1.0 / dq;\n\t\tlet size = vec3f(dims);\n\t\tlet ta = -q * inv;\n\t\tlet tb = (size - q) * inv;\n\t\tlet tlo = min(ta, tb);\n\t\tlet thi = max(ta, tb);\n\t\t// Off the face's plane, past the cells around its own surface: its largest cells, over how fast the light leaves the\n\t\t// plane (finite as the face turns away)\n\t\tlet t0 = max(max(tlo.x, tlo.y), max(tlo.z, 2.0 * inverseSqrt(shortest) / max(facing, 1e-3)));\n\t\tlet t1 = min(min(thi.x, thi.y), thi.z);\n\t\tif (t0 >= t1) {\n\t\t\tcontinue;\n\t\t}\n\t\tlet up = dq > vec3f(0.0);\n\t\tvar at = vec3i(clamp(floor(q + dq * t0), vec3f(0.0), size - 1.0));\n\t\tlet step = select(vec3i(-1), vec3i(1), up);\n\t\tlet delta = abs(inv);\n\t\tvar next = (vec3f(at) + select(vec3f(0.0), vec3f(1.0), up) - q) * inv;\n\t\tlet data = bloxdSpShadowEntities[base + 12u];\n\t\tfor (var s = 0; s < 198; s++) {\n\t\t\tlet index = u32(at.x) + dims.x * (u32(at.y) + dims.y * u32(at.z));\n\t\t\tif ((bloxdSpShadowEntityGrids[data + (index >> 5u)] & (1u << (index & 31u))) != 0u) {\n\t\t\t\treturn 0.0;\n\t\t\t}\n\t\t\tif (next.x <= next.y && next.x <= next.z) {\n\t\t\t\tat.x += step.x;\n\t\t\t\tnext.x += delta.x;\n\t\t\t} else if (next.y <= next.z) {\n\t\t\t\tat.y += step.y;\n\t\t\t\tnext.y += delta.y;\n\t\t\t} else {\n\t\t\t\tat.z += step.z;\n\t\t\t\tnext.z += delta.z;\n\t\t\t}\n\t\t\tif (any(at < vec3i(0)) || any(at >= vec3i(dims))) {\n\t\t\t\tbreak;\n\t\t\t}\n\t\t}\n\t}\n\treturn 1.0;\n}\n`}` : function(MM, rM, iM) {
-          const OM = `@group(${MM}) @binding(${rM}) var bloxdSpShadowMask: texture_2d<f32>;\nvar<private> bloxdSpShadowPixel: vec2i;\n`;
-          return iM ? `${OM}var<private> bloxdSpShadowZ: f32;\nvar<private> bloxdSpShadowDz: vec2f;\n${Vi}fn bloxdSpMaskEdge() -> f32 {\n\tlet code = bloxdSpNormalCode(bloxdSpShadowNormal);\n\tlet tolerance = abs(bloxdSpShadowDz.x) + abs(bloxdSpShadowDz.y) + 1e-7;\n\tlet m = textureLoad(bloxdSpShadowMask, bloxdSpShadowPixel, 0);\n\tlet mCode = floor(m.r * 0.5);\n\tlet mError = select(1e30, abs(m.g - bloxdSpShadowZ), mCode == code);\n\tif (mError <= tolerance) {\n\t\treturn m.r - mCode * 2.0;\n\t}\n\tlet last = vec2i(textureDimensions(bloxdSpShadowMask)) - 1;\n\tvar lit = m.r - mCode * 2.0;\n\tvar error = mError;\n${["-1, 0","1, 0","0, -1","0, 1"].map((MM=>`\t{\n\t\tlet o = vec2i(${MM});\n\t\tlet q = textureLoad(bloxdSpShadowMask, clamp(bloxdSpShadowPixel + o, vec2i(0), last), 0);\n\t\tlet qCode = floor(q.r * 0.5);\n\t\tlet e = abs(q.g - (bloxdSpShadowZ + dot(vec2f(o), bloxdSpShadowDz)));\n\t\tif (qCode == code && e < error) {\n\t\t\terror = e;\n\t\t\tlit = q.r - qCode * 2.0;\n\t\t}\n\t}\n`)).join("")}\treturn lit;\n}\n` : OM
-        }(rM.group, qr.q, "maskEdge" === iM));
-        const aM = {
-          shadowDirection: `${qr.i}.shadowDirection`,
-          renderOffset: `${qr.i}.renderOffset`,
-          eyePosition: `${qr.i}.eyePosition`
+    function pJ(VV, eV) {
+      let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "trace";
+      if (!YJ(VV)) return "";
+      if (eV) {
+        const eV = yJ,
+          YV = "trace" === xV || "lit" === xV;
+        let UV = "";
+        VV.sunShadow && (UV = YV ? `${Kx(eV,!0,"lit"===xV)}${JV=eV,`@group(${JV.group}) @binding(${JV.entities}) var<storage, read> bloxdSpShadowEntities: array<u32>;\n@group(${JV.group}) @binding(${JV.entityGrids}) var<storage, read> bloxdSpShadowEntityGrids: array<u32>;\nfn bloxdSpEntityRow(i: u32) -> vec4f {\n\treturn bitcast<vec4f>(vec4u(bloxdSpShadowEntities[i], bloxdSpShadowEntities[i + 1u], bloxdSpShadowEntities[i + 2u], bloxdSpShadowEntities[i + 3u]));\n}\nfn bloxdSpEntityLight(p: vec3f, light: vec3f, facing: f32) -> f32 {\n\tlet p4 = vec4f(p, 1.0);\n\tlet across = vec2f(dot(bloxdSpSunShadow.entityX, p4), dot(bloxdSpSunShadow.entityY, p4));\n\tif (any(abs(across) >= vec2f(1.0))) {\n\t\treturn 1.0;\n\t}\n\tlet bin = vec2u(clamp(vec2i(floor((across * 0.5 + 0.5) * 128.0)), vec2i(0), vec2i(127)));\n\tlet b = bin.y * 128u + bin.x;\n\tlet start = bloxdSpShadowEntities[b];\n\tlet count = min(bloxdSpShadowEntities[b + 1u] - start, 64u);\n\tlet along = dot(p, light);\n\tfor (var k = 0u; k < count; k++) {\n\t\tlet base = 81921u + bloxdSpShadowEntities[16385u + start + k] * 16u;\n\t\t// Ending before the fragment along the light, as do those after it: their rays can't meet them\n\t\tif (bitcast<f32>(bloxdSpShadowEntities[base + 13u]) < along) {\n\t\t\tbreak;\n\t\t}\n\t\tlet r0 = bloxdSpEntityRow(base);\n\t\tlet r1 = bloxdSpEntityRow(base + 4u);\n\t\tlet r2 = bloxdSpEntityRow(base + 8u);\n\t\tlet packed = bloxdSpShadowEntities[base + 14u];\n\t\tlet dims = vec3u(packed & 0xffu, (packed >> 8u) & 0xffu, packed >> 16u);\n\t\t// In cells from the grid's low corner, and per unit along the light\n\t\tlet q = vec3f(dot(r0, p4), dot(r1, p4), dot(r2, p4));\n\t\t// Its rows' least squared length: the square of 1 over its largest scale, in cells\n\t\tlet shortest = min(min(dot(r0.xyz, r0.xyz), dot(r1.xyz, r1.xyz)), dot(r2.xyz, r2.xyz));\n\t\tvar dq = vec3f(dot(r0.xyz, light), dot(r1.xyz, light), dot(r2.xyz, light));\n\t\tdq = select(dq, vec3f(1e-9), abs(dq) < vec3f(1e-9));\n\t\tlet inv = 1.0 / dq;\n\t\tlet size = vec3f(dims);\n\t\tlet ta = -q * inv;\n\t\tlet tb = (size - q) * inv;\n\t\tlet tlo = min(ta, tb);\n\t\tlet thi = max(ta, tb);\n\t\t// Off the face's plane, past the cells around its own surface: its largest cells, over how fast the light leaves the\n\t\t// plane (finite as the face turns away)\n\t\tlet t0 = max(max(tlo.x, tlo.y), max(tlo.z, 2.0 * inverseSqrt(shortest) / max(facing, 1e-3)));\n\t\tlet t1 = min(min(thi.x, thi.y), thi.z);\n\t\tif (t0 >= t1) {\n\t\t\tcontinue;\n\t\t}\n\t\tlet up = dq > vec3f(0.0);\n\t\tvar at = vec3i(clamp(floor(q + dq * t0), vec3f(0.0), size - 1.0));\n\t\tlet step = select(vec3i(-1), vec3i(1), up);\n\t\tlet delta = abs(inv);\n\t\tvar next = (vec3f(at) + select(vec3f(0.0), vec3f(1.0), up) - q) * inv;\n\t\tlet data = bloxdSpShadowEntities[base + 12u];\n\t\tfor (var s = 0; s < 198; s++) {\n\t\t\tlet index = u32(at.x) + dims.x * (u32(at.y) + dims.y * u32(at.z));\n\t\t\tif ((bloxdSpShadowEntityGrids[data + (index >> 5u)] & (1u << (index & 31u))) != 0u) {\n\t\t\t\treturn 0.0;\n\t\t\t}\n\t\t\tif (next.x <= next.y && next.x <= next.z) {\n\t\t\t\tat.x += step.x;\n\t\t\t\tnext.x += delta.x;\n\t\t\t} else if (next.y <= next.z) {\n\t\t\t\tat.y += step.y;\n\t\t\t\tnext.y += delta.y;\n\t\t\t} else {\n\t\t\t\tat.z += step.z;\n\t\t\t\tnext.z += delta.z;\n\t\t\t}\n\t\t\tif (any(at < vec3i(0)) || any(at >= vec3i(dims))) {\n\t\t\t\tbreak;\n\t\t\t}\n\t\t}\n\t}\n\treturn 1.0;\n}\n`}` : function(VV, eV, xV) {
+          const JV = `@group(${VV}) @binding(${eV}) var bloxdSpShadowMask: texture_2d<f32>;\nvar<private> bloxdSpShadowPixel: vec2i;\n`;
+          return xV ? `${JV}var<private> bloxdSpShadowZ: f32;\nvar<private> bloxdSpShadowDz: vec2f;\n${Sx}fn bloxdSpMaskEdge() -> f32 {\n\tlet code = bloxdSpNormalCode(bloxdSpShadowNormal);\n\tlet tolerance = abs(bloxdSpShadowDz.x) + abs(bloxdSpShadowDz.y) + 1e-7;\n\tlet m = textureLoad(bloxdSpShadowMask, bloxdSpShadowPixel, 0);\n\tlet mCode = floor(m.r * 0.5);\n\tlet mError = select(1e30, abs(m.g - bloxdSpShadowZ), mCode == code);\n\tif (mError <= tolerance) {\n\t\treturn m.r - mCode * 2.0;\n\t}\n\tlet last = vec2i(textureDimensions(bloxdSpShadowMask)) - 1;\n\tvar lit = m.r - mCode * 2.0;\n\tvar error = mError;\n${["-1, 0","1, 0","0, -1","0, 1"].map((VV=>`\t{\n\t\tlet o = vec2i(${VV});\n\t\tlet q = textureLoad(bloxdSpShadowMask, clamp(bloxdSpShadowPixel + o, vec2i(0), last), 0);\n\t\tlet qCode = floor(q.r * 0.5);\n\t\tlet e = abs(q.g - (bloxdSpShadowZ + dot(vec2f(o), bloxdSpShadowDz)));\n\t\tif (qCode == code && e < error) {\n\t\t\terror = e;\n\t\t\tlit = q.r - qCode * 2.0;\n\t\t}\n\t}\n`)).join("")}\treturn lit;\n}\n` : JV
+        }(eV.group, Se.u, "maskEdge" === xV));
+        const yV = {
+          shadowDirection: `${Se.j}.shadowDirection`,
+          renderOffset: `${Se.j}.renderOffset`,
+          eyePosition: `${Se.j}.eyePosition`
         };
-        return `${Xi(rM)}${jM}${function(MM){const[rM,iM,OM]=Bi.q;return`@group(${MM.group}) @binding(${MM.volume}) var bloxdSpShadowVolume: texture_3d<f32>;\n@group(${MM.group}) @binding(${MM.sampler}) var bloxdSpShadowVolumeSampler: sampler;\nfn bloxdSpVolumeAt(p: vec3f, offset: vec3i) -> f32 {\n\tlet lo = bloxdSpSunShadow.volumeLo;\n\tlet size = vec3f(${rM}.0, ${iM}.0, ${OM}.0);\n\t// From the volume's low corner, in whole blocks either side, so f32 keeps it exact\n\tlet r = p - vec3f(lo - offset);\n\tif (any(r < vec3f(0.0)) || any(r > size)) {\n\t\treturn 1.0;\n\t}\n\t// Clear of the edges, where filtering would wrap onto the far side\n\tlet uvw = (clamp(r, vec3f(0.5), size - vec3f(0.5)) + vec3f(bloxdSpVolumeTexel(lo))) / size;\n\tlet sample = textureSampleLevel(bloxdSpShadowVolume, bloxdSpShadowVolumeSampler, uvw, 0.0);\n\tif (sample.g < 0.03125) {\n\t\treturn 1.0;\n\t}\n\treturn min(sample.r / sample.g, 1.0);\n}\n`}(rM)}${ci(MM,aM,iM)}`
+        return `${mx(eV)}${UV}${function(VV){const[eV,xV,JV]=fx.r;return`@group(${VV.group}) @binding(${VV.volume}) var bloxdSpShadowVolume: texture_3d<f32>;\n@group(${VV.group}) @binding(${VV.sampler}) var bloxdSpShadowVolumeSampler: sampler;\nfn bloxdSpVolumeAt(p: vec3f, offset: vec3i) -> f32 {\n\tlet lo = bloxdSpSunShadow.volumeLo;\n\tlet size = vec3f(${eV}.0, ${xV}.0, ${JV}.0);\n\t// From the volume's low corner, in whole blocks either side, so f32 keeps it exact\n\tlet r = p - vec3f(lo - offset);\n\tif (any(r < vec3f(0.0)) || any(r > size)) {\n\t\treturn 1.0;\n\t}\n\t// Clear of the edges, where filtering would wrap onto the far side\n\tlet uvw = (clamp(r, vec3f(0.5), size - vec3f(0.5)) + vec3f(bloxdSpVolumeTexel(lo))) / size;\n\tlet sample = textureSampleLevel(bloxdSpShadowVolume, bloxdSpShadowVolumeSampler, uvw, 0.0);\n\tif (sample.g < 0.03125) {\n\t\treturn 1.0;\n\t}\n\treturn min(sample.r / sample.g, 1.0);\n}\n`}(eV)}${Ix(VV,yV,xV)}`
       }
-      var OM;
-      return `${MM.sunShadow?"fn bloxdShadow() -> f32 {\n\treturn 1.0;\n}\n":""}${MM.airShadow?"fn bloxdAirShadow(bloxdSpT: f32) -> f32 {\n\treturn 1.0;\n}\n":""}`
+      var JV;
+      return `${VV.sunShadow?"fn bloxdShadow() -> f32 {\n\treturn 1.0;\n}\n":""}${VV.airShadow?"fn bloxdAirShadow(bloxdSpT: f32) -> f32 {\n\treturn 1.0;\n}\n":""}`
     }
 
-    function zO(MM, rM, iM, OM) {
-      let SM = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "trace";
-      if (!rM) return "";
-      const jM = (aM = "fragmentInputs.vPositionW", PM = MM.sunShadow ? {
-        normal: iM,
-        flags: OM
-      } : null, `\n\tbloxdSpShadowPosition = ${aM};\n${PM?`\tbloxdSpShadowNormal = normalize(${PM.normal});\n\tbloxdSpShadowEmissive = (${PM.flags} & ${pr.e.emissive}u) != 0u;\n\tbloxdSpShadowFirstPerson = (${PM.flags} & ${pr.l}u) != 0u;\n`:""}`);
-      var aM, PM;
-      return MM.sunShadow && ("mask" === SM || "maskEdge" === SM) ? `${jM}${nM="fragmentInputs.position",QM="maskEdge"===SM,`\n\tbloxdSpShadowPixel = vec2i(${nM}.xy);\n${QM?`\tbloxdSpShadowZ = ${nM}.z;\n\tbloxdSpShadowDz = vec2f(dpdx(${nM}.z), dpdy(${nM}.z));\n`:""}`}` : jM;
-      var nM, QM
+    function QJ(VV, eV, xV, JV) {
+      let YV = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "trace";
+      if (!eV) return "";
+      const UV = (yV = "fragmentInputs.vPositionW", pV = VV.sunShadow ? {
+        normal: xV,
+        flags: JV
+      } : null, `\n\tbloxdSpShadowPosition = ${yV};\n${pV?`\tbloxdSpShadowNormal = normalize(${pV.normal});\n\tbloxdSpShadowEmissive = (${pV.flags} & ${We.c.emissive}u) != 0u;\n\tbloxdSpShadowFirstPerson = (${pV.flags} & ${We.g}u) != 0u;\n`:""}`);
+      var yV, pV;
+      return VV.sunShadow && ("mask" === YV || "maskEdge" === YV) ? `${UV}${QV="fragmentInputs.position",nV="maskEdge"===YV,`\n\tbloxdSpShadowPixel = vec2i(${QV}.xy);\n${nV?`\tbloxdSpShadowZ = ${QV}.z;\n\tbloxdSpShadowDz = vec2f(dpdx(${QV}.z), dpdy(${QV}.z));\n`:""}`}` : UV;
+      var QV, nV
     }
-    const LO = "bloxdSpTextureRotation",
-      mO = "bloxdSpTextureLayers",
-      HO = `@group(${qr.f}) @binding(${qr.r}) var<storage, read> ${mO}: array<u32>;\n`;
+    const nJ = "bloxdSpTextureRotation",
+      wJ = "bloxdSpTextureLayers",
+      ZJ = `@group(${Se.e}) @binding(${Se.y}) var<storage, read> ${wJ}: array<u32>;\n`;
 
-    function hO(MM) {
-      return `\tvertexOutputs.vPackTexture = ${mO}[min(u32(${MM}), arrayLength(&${mO}) - 1u)];\n`
-    }
-
-    function JO(MM) {
-      return void 0 !== MM.uv
+    function vJ(VV) {
+      return `\tvertexOutputs.vPackTexture = ${wJ}[min(u32(${VV}), arrayLength(&${wJ}) - 1u)];\n`
     }
 
-    function dO(MM) {
-      if (!MM) return "fn bloxdTextureSize(bloxdSpMipLevel: f32) -> vec2u {\n\treturn vec2u(1u);\n}\nfn bloxdTexel(bloxdSpTextureId: u32, bloxdSpUv: vec2f, bloxdSpMipLevel: f32) -> vec4f {\n\treturn vec4f(1.0);\n}\n";
-      if (JO(MM)) return function(MM) {
+    function rJ(VV) {
+      return void 0 !== VV.uv
+    }
+
+    function kJ(VV) {
+      if (!VV) return "fn bloxdTextureSize(bloxdSpMipLevel: f32) -> vec2u {\n\treturn vec2u(1u);\n}\nfn bloxdTexel(bloxdSpTextureId: u32, bloxdSpUv: vec2f, bloxdSpMipLevel: f32) -> vec4f {\n\treturn vec4f(1.0);\n}\n";
+      if (rJ(VV)) return function(VV) {
         const {
-          texture: rM,
-          cells: iM,
-          layers: OM
-        } = MM, SM = `textureDimensions(${rM}, bloxdSpLevel)`, jM = iM ? `max(vec2u(vec2f(${SM}) / ${iM}), vec2u(1u))` : SM, aM = iM ? `fn bloxdSpOwnTexel(bloxdSpCellIndex: f32, bloxdSpUv: vec2f, bloxdSpLevel: u32) -> vec4f {\n\tlet bloxdSpSize = ${jM};\n\tlet bloxdSpIndex = u32(round(bloxdSpCellIndex));\n\tlet bloxdSpAcross = max(u32(round(${iM}.x)), 1u);\n\tlet bloxdSpDown = max(u32(round(${iM}.y)), 1u);\n\tlet bloxdSpAt = min(vec2u(fract(bloxdSpUv) * vec2f(bloxdSpSize)), bloxdSpSize - 1u);\n\tlet bloxdSpCellAt = vec2u(bloxdSpIndex % bloxdSpAcross, bloxdSpIndex / bloxdSpAcross % bloxdSpDown);\n\treturn textureLoad(${rM}, min(bloxdSpCellAt * bloxdSpSize + bloxdSpAt, ${SM} - 1u), bloxdSpLevel);\n}\n` : `fn bloxdSpOwnTexel(bloxdSpUv: vec2f, bloxdSpLevel: u32) -> vec4f {\n\tlet bloxdSpSize = ${jM};\n\tlet bloxdSpAt = min(vec2u(fract(bloxdSpUv) * vec2f(bloxdSpSize)), bloxdSpSize - 1u);\n\treturn textureLoad(${rM}, bloxdSpAt, bloxdSpLevel);\n}\n`;
-        let PM;
-        if (iM)
-          if (1 === OM.length) PM = `\treturn bloxdSpOwnTexel(${OM[0]}, bloxdSpUv, bloxdSpLevel);\n`;
+          texture: eV,
+          cells: xV,
+          layers: JV
+        } = VV, YV = `textureDimensions(${eV}, bloxdSpLevel)`, UV = xV ? `max(vec2u(vec2f(${YV}) / ${xV}), vec2u(1u))` : YV, yV = xV ? `fn bloxdSpOwnTexel(bloxdSpCellIndex: f32, bloxdSpUv: vec2f, bloxdSpLevel: u32) -> vec4f {\n\tlet bloxdSpSize = ${UV};\n\tlet bloxdSpIndex = u32(round(bloxdSpCellIndex));\n\tlet bloxdSpAcross = max(u32(round(${xV}.x)), 1u);\n\tlet bloxdSpDown = max(u32(round(${xV}.y)), 1u);\n\tlet bloxdSpAt = min(vec2u(fract(bloxdSpUv) * vec2f(bloxdSpSize)), bloxdSpSize - 1u);\n\tlet bloxdSpCellAt = vec2u(bloxdSpIndex % bloxdSpAcross, bloxdSpIndex / bloxdSpAcross % bloxdSpDown);\n\treturn textureLoad(${eV}, min(bloxdSpCellAt * bloxdSpSize + bloxdSpAt, ${YV} - 1u), bloxdSpLevel);\n}\n` : `fn bloxdSpOwnTexel(bloxdSpUv: vec2f, bloxdSpLevel: u32) -> vec4f {\n\tlet bloxdSpSize = ${UV};\n\tlet bloxdSpAt = min(vec2u(fract(bloxdSpUv) * vec2f(bloxdSpSize)), bloxdSpSize - 1u);\n\treturn textureLoad(${eV}, bloxdSpAt, bloxdSpLevel);\n}\n`;
+        let pV;
+        if (xV)
+          if (1 === JV.length) pV = `\treturn bloxdSpOwnTexel(${JV[0]}, bloxdSpUv, bloxdSpLevel);\n`;
           else {
-            const MM = OM.length - 1;
-            PM = `\tvar bloxdSpColour = bloxdSpOwnTexel(${OM[MM]}, bloxdSpUv, bloxdSpLevel);\n\tbloxdSpColour = vec4f(bloxdSpColour.rgb * bloxdSpColour.a, bloxdSpColour.a);\n`;
-            for (let rM = MM - 1; rM >= 0; rM--) PM += `\t{\n\t\tlet bloxdSpLayer = bloxdSpOwnTexel(${OM[rM]}, bloxdSpUv, bloxdSpLevel);\n\t\tbloxdSpColour = vec4f(mix(bloxdSpColour.rgb, bloxdSpLayer.rgb, bloxdSpLayer.a), bloxdSpLayer.a + bloxdSpColour.a * (1.0 - bloxdSpLayer.a));\n\t}\n`;
-            PM += "\treturn vec4f(bloxdSpColour.rgb / max(bloxdSpColour.a, 0.001), bloxdSpColour.a);\n"
+            const VV = JV.length - 1;
+            pV = `\tvar bloxdSpColour = bloxdSpOwnTexel(${JV[VV]}, bloxdSpUv, bloxdSpLevel);\n\tbloxdSpColour = vec4f(bloxdSpColour.rgb * bloxdSpColour.a, bloxdSpColour.a);\n`;
+            for (let eV = VV - 1; eV >= 0; eV--) pV += `\t{\n\t\tlet bloxdSpLayer = bloxdSpOwnTexel(${JV[eV]}, bloxdSpUv, bloxdSpLevel);\n\t\tbloxdSpColour = vec4f(mix(bloxdSpColour.rgb, bloxdSpLayer.rgb, bloxdSpLayer.a), bloxdSpLayer.a + bloxdSpColour.a * (1.0 - bloxdSpLayer.a));\n\t}\n`;
+            pV += "\treturn vec4f(bloxdSpColour.rgb / max(bloxdSpColour.a, 0.001), bloxdSpColour.a);\n"
           }
-        else PM = "\treturn bloxdSpOwnTexel(bloxdSpUv, bloxdSpLevel);\n";
-        return `${MM.id?`var<private> ${MO}: u32;\n`:""}${aM}fn bloxdTextureSize(bloxdSpMipLevel: f32) -> vec2u {\n\tlet bloxdSpLevel = ${rO(MM)};\n\treturn ${jM};\n}\nfn bloxdTexel(bloxdSpTextureId: u32, bloxdSpUv: vec2f, bloxdSpMipLevel: f32) -> vec4f {\n\tif (bloxdSpTextureId != ${MM.id?MO:"0u"}) {\n\t\treturn vec4f(1.0);\n\t}\n\tlet bloxdSpLevel = ${rO(MM)};\n${PM}}\n`
-      }(MM);
-      const rM = MM,
-        iM = MM => {
-          const iM = MM > 0 ? `bloxdSpLayer - ${rM.layers*MM}u` : "bloxdSpLayer";
-          return `return textureSampleLevel(textureAtlas${MM}, ${rM.sampler}, bloxdSpTurned, ${iM}, round(bloxdSpMipLevel));`
+        else pV = "\treturn bloxdSpOwnTexel(bloxdSpUv, bloxdSpLevel);\n";
+        return `${VV.id?`var<private> ${dx}: u32;\n`:""}${yV}fn bloxdTextureSize(bloxdSpMipLevel: f32) -> vec2u {\n\tlet bloxdSpLevel = ${Ox(VV)};\n\treturn ${UV};\n}\nfn bloxdTexel(bloxdSpTextureId: u32, bloxdSpUv: vec2f, bloxdSpMipLevel: f32) -> vec4f {\n\tif (bloxdSpTextureId != ${VV.id?dx:"0u"}) {\n\t\treturn vec4f(1.0);\n\t}\n\tlet bloxdSpLevel = ${Ox(VV)};\n${pV}}\n`
+      }(VV);
+      const eV = VV,
+        xV = VV => {
+          const xV = VV > 0 ? `bloxdSpLayer - ${eV.layers*VV}u` : "bloxdSpLayer";
+          return `return textureSampleLevel(textureAtlas${VV}, ${eV.sampler}, bloxdSpTurned, ${xV}, round(bloxdSpMipLevel));`
         };
-      let OM = "";
-      for (let jM = 0; jM < rM.count - 1; jM++) OM += `\tif (bloxdSpLayer < ${rM.layers*(jM+1)}u) {\n\t\t${iM(jM)}\n\t}\n`;
-      const SM = rM.frame ? `${rM.frame("f32(bloxdSpTextureId - 1u)","let bloxdSpFrame = ")}\tlet bloxdSpLayer = u32(round(bloxdSpFrame));\n` : "\tlet bloxdSpLayer = bloxdSpTextureId - 1u;\n";
-      return `var<private> ${LO}: u32;\n${HO}fn bloxdTextureSize(bloxdSpMipLevel: f32) -> vec2u {\n\treturn textureDimensions(textureAtlas0, u32(clamp(round(bloxdSpMipLevel), 0.0, f32(textureNumLevels(textureAtlas0) - 1u))));\n}\nfn bloxdTexel(bloxdSpTextureId: u32, bloxdSpUv: vec2f, bloxdSpMipLevel: f32) -> vec4f {\n\tif (bloxdSpTextureId == 0u) {\n\t\treturn vec4f(1.0);\n\t}\n\t// Each quarter turn clockwise the face shows its texture at reads the unturned texture at (v, 1 - u)\n\tvar bloxdSpTurned = bloxdSpUv;\n\tif (${LO} == 1u) {\n\t\tbloxdSpTurned = vec2f(bloxdSpUv.y, 1.0 - bloxdSpUv.x);\n\t} else if (${LO} == 2u) {\n\t\tbloxdSpTurned = 1.0 - bloxdSpUv;\n\t} else if (${LO} == 3u) {\n\t\tbloxdSpTurned = vec2f(1.0 - bloxdSpUv.y, bloxdSpUv.x);\n\t}\n${SM}${OM}\t${iM(rM.count-1)}\n}\n`
+      let JV = "";
+      for (let UV = 0; UV < eV.count - 1; UV++) JV += `\tif (bloxdSpLayer < ${eV.layers*(UV+1)}u) {\n\t\t${xV(UV)}\n\t}\n`;
+      const YV = eV.frame ? `${eV.frame("f32(bloxdSpTextureId - 1u)","let bloxdSpFrame = ")}\tlet bloxdSpLayer = u32(round(bloxdSpFrame));\n` : "\tlet bloxdSpLayer = bloxdSpTextureId - 1u;\n";
+      return `var<private> ${nJ}: u32;\n${ZJ}fn bloxdTextureSize(bloxdSpMipLevel: f32) -> vec2u {\n\treturn textureDimensions(textureAtlas0, u32(clamp(round(bloxdSpMipLevel), 0.0, f32(textureNumLevels(textureAtlas0) - 1u))));\n}\nfn bloxdTexel(bloxdSpTextureId: u32, bloxdSpUv: vec2f, bloxdSpMipLevel: f32) -> vec4f {\n\tif (bloxdSpTextureId == 0u) {\n\t\treturn vec4f(1.0);\n\t}\n\t// Each quarter turn clockwise the face shows its texture at reads the unturned texture at (v, 1 - u)\n\tvar bloxdSpTurned = bloxdSpUv;\n\tif (${nJ} == 1u) {\n\t\tbloxdSpTurned = vec2f(bloxdSpUv.y, 1.0 - bloxdSpUv.x);\n\t} else if (${nJ} == 2u) {\n\t\tbloxdSpTurned = 1.0 - bloxdSpUv;\n\t} else if (${nJ} == 3u) {\n\t\tbloxdSpTurned = vec2f(1.0 - bloxdSpUv.y, bloxdSpUv.x);\n\t}\n${YV}${JV}\t${xV(eV.count-1)}\n}\n`
     }
 
-    function yO(MM, rM, iM) {
-      return !!MM.surface && "bloxdDefaultSurface" !== MM.surface && function(MM, rM) {
-        return "liquid" === rM || !MM
-      }(rM, iM)
+    function bJ(VV, eV, xV) {
+      return !!VV.surface && "bloxdDefaultSurface" !== VV.surface && function(VV, eV) {
+        return "liquid" === eV || !VV
+      }(eV, xV)
     }
 
-    function lO(MM, rM) {
-      return MM.vertex ? `\n\t{\n\t\tlet bloxdSpVertexIn = BloxdVertexIn(worldPos.xyz, vertexOutputs.vNormalW, ${rM.vertexLocalPosition}, ${OO(rM.vertexFlags)});\n\t\tlet bloxdSpVertex = ${MM.vertex}(bloxdSpVertexIn);\n\t\tworldPos = vec4f(bloxdSpVertex.position, worldPos.w);\n\t}\n` : ""
+    function EJ(VV, eV) {
+      return VV.vertex ? `\n\t{\n\t\tlet bloxdSpVertexIn = BloxdVertexIn(worldPos.xyz, vertexOutputs.vNormalW, ${eV.vertexLocalPosition}, ${eJ(eV.vertexFlags)});\n\t\tlet bloxdSpVertex = ${VV.vertex}(bloxdSpVertexIn);\n\t\tworldPos = vec4f(bloxdSpVertex.position, worldPos.w);\n\t}\n` : ""
     }
 
-    function EO(MM, rM, iM, OM, SM) {
-      if (!MM.surface) return "";
-      const jM = (MM, rM) => `\n\tlet bloxdSpTexelUV = ${MM};\n\tlet bloxdSpDdx = dpdx(bloxdSpTexelUV);\n\tlet bloxdSpDdy = dpdy(bloxdSpTexelUV);\n\tlet bloxdSpLod = 0.5 * log2(max(max(dot(bloxdSpDdx, bloxdSpDdx), dot(bloxdSpDdy, bloxdSpDdy)), 1e-10));\n\tlet bloxdSpMipLevel = clamp(bloxdSpLod, 0.0, f32(textureNumLevels(${rM}) - 1u));`;
-      let aM = "",
-        PM = "0u, 0u, vec2f(0.0), 0.0";
-      const nM = OM && JO(OM) ? OM : null,
-        QM = OM && !JO(OM) ? OM : null;
-      if (nM) {
-        aM = `${nM.id?`\n\tlet bloxdSpTexture = ${nM.id};\n\t${MO} = bloxdSpTexture & 0xffffu;`:""}\n\tlet bloxdSpUv = ${nM.uv};${jM(function(MM,rM){var iM;return`${null!==(iM=MM.levelUv)&&void 0!==iM?iM:MM.cells?`${rM} / ${MM.cells}`:rM} * vec2f(textureDimensions(${MM.texture}))`}(nM,"bloxdSpUv"),nM.texture)}`, PM = (nM.id ? `${MO}, bloxdSpTexture >> 16u` : "0u, 0u") + ", bloxdSpUv, bloxdSpMipLevel"
-      } else QM && (aM = `\n\tlet bloxdSpTexture = fragmentInputs.vPackTexture;\n\t${LO} = bloxdSpTexture >> 16u;${jM(`fragmentInputs.vMainUV1 * ${(0,Xr.xb)(QM.width)}`,"textureAtlas0")}`, PM = `bloxdSpTexture & 0xffffu, ${LO}, fragmentInputs.vMainUV1, bloxdSpMipLevel`);
-      const zM = SM.overlayColour,
-        LM = zM ? "mix(bloxdSpSurface.colour, bloxdSpSurface.overlayColour.rgb, bloxdSpSurface.overlayColour.a)" : "bloxdSpSurface.colour",
-        mM = "bloxdDefaultSurface" !== MM.surface || zM ? `\n\tbaseColor = vec4f(${LM}, baseColor.a);` : "",
-        HM = yO(MM, rM, iM) ? `\n\t${SM.alphaOut} = bloxdSpSurface.alpha;` : "";
-      return `${aM}\n\tlet bloxdSpSurfaceIn = BloxdSurfaceIn(baseColor.rgb, ${SM.alpha}, ${SM.enchantTier}, ${SM.enchantColour}, ${SM.enchantSpeed}, ${null!==zM&&void 0!==zM?zM:"vec4f(0.0)"}, fragmentInputs.vPositionW, ${SM.normal}, ${SM.localPosition}, ${OO(SM.flags)}, ${PM});\n\tlet bloxdSpSurface = ${MM.surface}(bloxdSpSurfaceIn);${mM}${HM}\n`
+    function BJ(VV, eV, xV, JV, YV) {
+      if (!VV.surface) return "";
+      const UV = (VV, eV) => `\n\tlet bloxdSpTexelUV = ${VV};\n\tlet bloxdSpDdx = dpdx(bloxdSpTexelUV);\n\tlet bloxdSpDdy = dpdy(bloxdSpTexelUV);\n\tlet bloxdSpLod = 0.5 * log2(max(max(dot(bloxdSpDdx, bloxdSpDdx), dot(bloxdSpDdy, bloxdSpDdy)), 1e-10));\n\tlet bloxdSpMipLevel = clamp(bloxdSpLod, 0.0, f32(textureNumLevels(${eV}) - 1u));`;
+      let yV = "",
+        pV = "0u, 0u, vec2f(0.0), 0.0";
+      const QV = JV && rJ(JV) ? JV : null,
+        nV = JV && !rJ(JV) ? JV : null;
+      if (QV) {
+        yV = `${QV.id?`\n\tlet bloxdSpTexture = ${QV.id};\n\t${dx} = bloxdSpTexture & 0xffffu;`:""}\n\tlet bloxdSpUv = ${QV.uv};${UV(function(VV,eV){var xV;return`${null!==(xV=VV.levelUv)&&void 0!==xV?xV:VV.cells?`${eV} / ${VV.cells}`:eV} * vec2f(textureDimensions(${VV.texture}))`}(QV,"bloxdSpUv"),QV.texture)}`, pV = (QV.id ? `${dx}, bloxdSpTexture >> 16u` : "0u, 0u") + ", bloxdSpUv, bloxdSpMipLevel"
+      } else nV && (yV = `\n\tlet bloxdSpTexture = fragmentInputs.vPackTexture;\n\t${nJ} = bloxdSpTexture >> 16u;${UV(`fragmentInputs.vMainUV1 * ${(0,He.ob)(nV.width)}`,"textureAtlas0")}`, pV = `bloxdSpTexture & 0xffffu, ${nJ}, fragmentInputs.vMainUV1, bloxdSpMipLevel`);
+      const wV = YV.overlayColour,
+        ZV = wV ? "mix(bloxdSpSurface.colour, bloxdSpSurface.overlayColour.rgb, bloxdSpSurface.overlayColour.a)" : "bloxdSpSurface.colour",
+        vV = "bloxdDefaultSurface" !== VV.surface || wV ? `\n\tbaseColor = vec4f(${ZV}, baseColor.a);` : "",
+        rV = bJ(VV, eV, xV) ? `\n\t${YV.alphaOut} = bloxdSpSurface.alpha;` : "";
+      return `${yV}\n\tlet bloxdSpSurfaceIn = BloxdSurfaceIn(baseColor.rgb, ${YV.alpha}, ${YV.enchantTier}, ${YV.enchantColour}, ${YV.enchantSpeed}, ${null!==wV&&void 0!==wV?wV:"vec4f(0.0)"}, fragmentInputs.vPositionW, ${YV.normal}, ${YV.localPosition}, ${eJ(YV.flags)}, ${pV});\n\tlet bloxdSpSurface = ${VV.surface}(bloxdSpSurfaceIn);${vV}${rV}\n`
     }
-    const UO = "bloxdSpLightIn";
+    const jJ = "bloxdSpLightIn";
 
-    function GO(MM, rM, iM, OM) {
-      if (!MM.light) return "";
-      const SM = rM ? `${Xr.l}.rgb, ${Xr.l}.w, uniforms.uAmbientLightColour, uniforms.uSkyLightColour, ${Xr.i}` : "vec3f(0.0), 1.0, vec3f(1.0), vec3f(1.0), vec3f(0.0)",
+    function qJ(VV, eV, xV, JV) {
+      if (!VV.light) return "";
+      const YV = eV ? `${He.p}.rgb, ${He.p}.w, uniforms.uAmbientLightColour, uniforms.uSkyLightColour, ${He.l}` : "vec3f(0.0), 1.0, vec3f(1.0), vec3f(1.0), vec3f(0.0)",
         {
-          lambert: jM,
-          diffuse: aM,
-          emissive: PM,
-          ambient: nM,
-          fogColour: QM,
-          fogAlpha: zM,
-          normal: LM
-        } = OM;
-      return `\tvar ${UO} = BloxdLightIn(vec3f(0.0), ${iM?jM:"0.0"}, ${aM}, ${PM}, ${nM}, ${SM}, ${QM}, ${zM}, fragmentInputs.vPositionW, ${LM}, bloxdSpSurfaceIn.localPosition, bloxdSpSurfaceIn.flags, bloxdSpSurfaceIn.textureId, bloxdSpSurfaceIn.textureRotation, bloxdSpSurfaceIn.uv, bloxdSpSurfaceIn.mipLevel);\n\t${UO}.litColour = bloxdLitColour(bloxdSpSurface, ${UO});\n`
+          lambert: UV,
+          diffuse: yV,
+          emissive: pV,
+          ambient: QV,
+          fogColour: nV,
+          fogAlpha: wV,
+          normal: ZV
+        } = JV;
+      return `\tvar ${jJ} = BloxdLightIn(vec3f(0.0), ${xV?UV:"0.0"}, ${yV}, ${pV}, ${QV}, ${YV}, ${nV}, ${wV}, fragmentInputs.vPositionW, ${ZV}, bloxdSpSurfaceIn.localPosition, bloxdSpSurfaceIn.flags, bloxdSpSurfaceIn.textureId, bloxdSpSurfaceIn.textureRotation, bloxdSpSurfaceIn.uv, bloxdSpSurfaceIn.mipLevel);\n\t${jJ}.litColour = bloxdLitColour(bloxdSpSurface, ${jJ});\n`
     }
 
-    function CO(MM) {
-      return MM.light ? `\n\t{\n\t\tlet bloxdSpLight = ${MM.light}(bloxdSpSurface, ${UO});\n\t\tcolor = vec4f(bloxdSpLight.colour, color.a);\n\t}\n` : ""
+    function tJ(VV) {
+      return VV.light ? `\n\t{\n\t\tlet bloxdSpLight = ${VV.light}(bloxdSpSurface, ${jJ});\n\t\tcolor = vec4f(bloxdSpLight.colour, color.a);\n\t}\n` : ""
     }
-    const eO = "\tbaseColor = vec4f(baseColor.rgb * fragmentInputs.vColor, baseColor.a);\n",
-      bO = "\tcolor = vec4f(mix(uniforms.vFogColor, color.rgb, fog), color.a);\n",
-      wO = "\treturn color;\n}",
-      tO = {
+    const FJ = "\tbaseColor = vec4f(baseColor.rgb * fragmentInputs.vColor, baseColor.a);\n",
+      TJ = "\tcolor = vec4f(mix(uniforms.vFogColor, color.rgb, fog), color.a);\n",
+      PJ = "\treturn color;\n}",
+      AJ = {
         vertexFlags: "vertexOutputs.vBlockFlags",
         vertexLocalPosition: "vec3f(0.0)",
         flags: "fragmentInputs.vBlockFlags",
@@ -1528,57 +1528,57 @@ export const modules = {
         localPosition: "vec3f(0.0)",
         overlayColour: null
       };
-    const gO = Object.freeze({});
+    const NJ = Object.freeze({});
 
-    function uO(MM) {
-      var rM;
-      return !(null === (rM = (0, Tr.g)(MM)) || void 0 === rM || !rM.sceneDepth)
+    function XJ(VV) {
+      var eV;
+      return !(null === (eV = (0, Ie.i)(VV)) || void 0 === eV || !eV.sceneDepth)
     }
 
-    function RO(MM) {
-      const rM = (0, Tr.g)(MM);
-      return !!rM && yO(rM.hooks, rM.strict, rM.program)
+    function MJ(VV) {
+      const eV = (0, Ie.i)(VV);
+      return !!eV && bJ(eV.hooks, eV.strict, eV.program)
     }
 
-    function pO(MM, rM, iM, OM) {
-      return jO(MM, rM, iM, OM, "terrain")
+    function zJ(VV, eV, xV, JV) {
+      return JJ(VV, eV, xV, JV, "terrain")
     }
 
-    function WO(MM, rM, iM) {
-      let OM = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-        SM = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "none";
-      const jM = function(MM) {
-          return (0, Tr.c)(MM.packVariant, MM.liquid ? "liquid" : "terrain")
-        }(MM),
+    function GJ(VV, eV, xV) {
+      let JV = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+        YV = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "none";
+      const UV = function(VV) {
+          return (0, Ie.e)(VV.packVariant, VV.liquid ? "liquid" : "terrain")
+        }(VV),
         {
-          hooks: aM
-        } = jM,
-        PM = PO(jM, OM),
-        nM = "edge" === SM ? "maskEdge" : "plain" === SM ? "mask" : "trace",
-        QM = lO(aM, tO);
-      QM && (rM = pO(rM, "\tlet worldPos = vec4f(vertexInputs.position + chunk.translation, 1.0);\n\tvertexOutputs.position = liteWorldLayer(scene.viewProjection * worldPos);\n\tvertexOutputs.vPositionW = worldPos.xyz;\n\tvertexOutputs.vNormalW = normalize(vertexInputs.normal.xyz);\n", `\tvar worldPos = vec4f(vertexInputs.position + chunk.translation, 1.0);\n\tvertexOutputs.vNormalW = normalize(vertexInputs.normal.xyz);${QM}\tvertexOutputs.position = liteWorldLayer(scene.viewProjection * worldPos);\n\tvertexOutputs.vPositionW = worldPos.xyz;\n`, "vertex"));
-      const zM = "atlas" === MM.texture ? {
-          count: MM.atlasCount,
-          layers: MM.atlasLayers,
-          width: MM.U3,
+          hooks: yV
+        } = UV,
+        pV = UJ(UV, JV),
+        QV = "edge" === YV ? "maskEdge" : "plain" === YV ? "mask" : "trace",
+        nV = EJ(yV, AJ);
+      nV && (eV = zJ(eV, "\tlet worldPos = vec4f(vertexInputs.position + chunk.translation, 1.0);\n\tvertexOutputs.position = liteWorldLayer(scene.viewProjection * worldPos);\n\tvertexOutputs.vPositionW = worldPos.xyz;\n\tvertexOutputs.vNormalW = normalize(vertexInputs.normal.xyz);\n", `\tvar worldPos = vec4f(vertexInputs.position + chunk.translation, 1.0);\n\tvertexOutputs.vNormalW = normalize(vertexInputs.normal.xyz);${nV}\tvertexOutputs.position = liteWorldLayer(scene.viewProjection * worldPos);\n\tvertexOutputs.vPositionW = worldPos.xyz;\n`, "vertex"));
+      const wV = "atlas" === VV.texture ? {
+          count: VV.atlasCount,
+          layers: VV.atlasLayers,
+          width: VV.yVV,
           sampler: "atlasSampler",
-          frame: MM.animated ? iM : null
+          frame: VV.animated ? xV : null
         } : null,
-        LM = `${jM.sceneDepth?"\n\tbloxdSpPixel = vec2i(fragmentInputs.position.xy);\n\tbloxdSpPositionW = fragmentInputs.vPositionW;\n":""}${zO(jM,PM,tO.normal,tO.flags,nM)}${EO(aM,jM.strict,jM.program,zM,tO)}`;
-      LM && (rM = pO(rM, eO, `${eO.slice(0,-1)}${LM}`, "surface"));
-      const mM = CO(aM);
-      return mM && (rM = pO(rM, bO, `${GO(aM,MM.lighting,MM.dirLightCount>0,tO)}${bO}`, "light input"), rM = pO(rM, wO, `${mM.slice(1)}${wO}`, "light")), `${(0,qr.w)()}${jM.sceneDepth?`@group(${qr.f}) @binding(${qr.n}) var bloxdSpSceneDepth: texture_2d<f32>;\nvar<private> bloxdSpPixel: vec2i;\nvar<private> bloxdSpPositionW: vec3f;\nfn bloxdOpaqueBehind() -> BloxdOpaqueBehind {\n\tlet bloxdSpZ = textureLoad(bloxdSpSceneDepth, bloxdSpPixel, 0).r;\n\tif (bloxdSpZ <= 0.0) {\n\t\treturn BloxdOpaqueBehind(false, vec3f(0.0), 0.0);\n\t}\n\tlet bloxdSpEye = ${SO};\n\tlet bloxdSpScale = max(bloxdSpZ / (scene.view * vec4f(bloxdSpPositionW, 1.0)).z, 1.0);\n\tlet bloxdSpBehind = bloxdSpEye + (bloxdSpPositionW - bloxdSpEye) * bloxdSpScale;\n\treturn BloxdOpaqueBehind(true, bloxdSpBehind, distance(bloxdSpBehind, bloxdSpEye));\n}\n`:""}${QO(jM,PM,nM)}${dO(zM)}${iO}fn bloxdFragmentBlockPosition(bloxdSpPosition: vec3f, bloxdSpNormal: vec3f) -> vec3i {\n\treturn vec3i(floor(bloxdSpPosition - bloxdSpNormal * 0.5)) + bloxdRenderOffset();\n}\n${jM.code}${rM}`
+        ZV = `${UV.sceneDepth?"\n\tbloxdSpPixel = vec2i(fragmentInputs.position.xy);\n\tbloxdSpPositionW = fragmentInputs.vPositionW;\n":""}${QJ(UV,pV,AJ.normal,AJ.flags,QV)}${BJ(yV,UV.strict,UV.program,wV,AJ)}`;
+      ZV && (eV = zJ(eV, FJ, `${FJ.slice(0,-1)}${ZV}`, "surface"));
+      const vV = tJ(yV);
+      return vV && (eV = zJ(eV, TJ, `${qJ(yV,VV.lighting,VV.dirLightCount>0,AJ)}${TJ}`, "light input"), eV = zJ(eV, PJ, `${vV.slice(1)}${PJ}`, "light")), `${(0,Se.B)()}${UV.sceneDepth?`@group(${Se.e}) @binding(${Se.o}) var bloxdSpSceneDepth: texture_2d<f32>;\nvar<private> bloxdSpPixel: vec2i;\nvar<private> bloxdSpPositionW: vec3f;\nfn bloxdOpaqueBehind() -> BloxdOpaqueBehind {\n\tlet bloxdSpZ = textureLoad(bloxdSpSceneDepth, bloxdSpPixel, 0).r;\n\tif (bloxdSpZ <= 0.0) {\n\t\treturn BloxdOpaqueBehind(false, vec3f(0.0), 0.0);\n\t}\n\tlet bloxdSpEye = ${xJ};\n\tlet bloxdSpScale = max(bloxdSpZ / (scene.view * vec4f(bloxdSpPositionW, 1.0)).z, 1.0);\n\tlet bloxdSpBehind = bloxdSpEye + (bloxdSpPositionW - bloxdSpEye) * bloxdSpScale;\n\treturn BloxdOpaqueBehind(true, bloxdSpBehind, distance(bloxdSpBehind, bloxdSpEye));\n}\n`:""}${pJ(UV,pV,QV)}${kJ(wV)}${VJ}fn bloxdFragmentBlockPosition(bloxdSpPosition: vec3f, bloxdSpNormal: vec3f) -> vec3i {\n\treturn vec3i(floor(bloxdSpPosition - bloxdSpNormal * 0.5)) + bloxdRenderOffset();\n}\n${UV.code}${eV}`
     }
-    const sO = CM.b.WGSL;
+    const WJ = TV.d.WGSL;
 
-    function DO(MM) {
-      return void 0 !== MM.packVariant
+    function RJ(VV) {
+      return void 0 !== VV.packVariant
     }
-    const kO = {
-        SSM: 0,
-        jSM: 4,
-        aSM: 8,
-        PSM: 12,
+    const gJ = {
+        FUV: 0,
+        TUV: 4,
+        PUV: 8,
+        AUV: 12,
         fogInfos: 16,
         fogColour: 20,
         outputHeight: 23,
@@ -1586,19 +1586,19 @@ export const modules = {
         dirLights: 28,
         aoLevels: 44
       },
-      ZO = kO.aoLevels + 4,
-      oO = {
+      DJ = gJ.aoLevels + 4,
+      iJ = {
         diffuse: 0,
         ambientAndCutoff: 4,
         emissiveAndLevel: 8,
         anim: 12
       },
-      fO = "\nstruct TerrainFrameUniforms {\n\tuHeldLightColour: vec4f,\n\tuHeldLightPos: vec4f,\n\tuSkyLightColour: vec3f,\n\tuAmbientLightColour: vec3f,\n\tvFogInfos: vec4f,\n\tvFogColor: vec3f,\n\toutputHeight: f32,\n\tsceneAmbient: vec3f,\n\tuDirLights: array<vec4f, 4>,\n\taoLevels: vec4f,\n}\n",
-      YO = "\nstruct TerrainMaterialUniforms {\n\tvDiffuseColor: vec4f,\n\tambientAndCutoff: vec4f,\n\temissiveAndLevel: vec4f,\n\tanim: vec4f,\n}\n",
-      NO = "\nstruct LiteSceneUniforms {\n\tviewProjection: mat4x4f,\n\tview: mat4x4f,\n\tvEyePosition: vec4f,\n}\n@group(0) @binding(0) var<uniform> scene: LiteSceneUniforms;\nfn liteWorldLayer(clip: vec4f) -> vec4f {\n\treturn vec4f(clip.xy, clip.z * 0.5, clip.w);\n}\nfn liteFrontLayer(clip: vec4f) -> vec4f {\n\treturn vec4f(clip.xy, (clip.z + clip.w) * 0.5, clip.w);\n}\n",
-      AO = "\n\tlet fading = fragmentInputs.vVisibility < 255.0 / 256.0;\n\tif (fading && fragmentInputs.vVisibility < bayerDither(vec2f(fragmentInputs.position.x, uniforms.outputHeight - fragmentInputs.position.y))) {\n\t\tdiscard;\n\t}\n",
-      xO = "\nfn calcFogFactor(fogDistance: vec3f) -> f32 {\n\tvar fogCoeff: f32 = 1.0;\n\tlet fogStart = uniforms.vFogInfos.y;\n\tlet fogEnd = uniforms.vFogInfos.z;\n\tlet fogDensity = uniforms.vFogInfos.w;\n\tlet dist = length(fogDistance);\n\tif (uniforms.vFogInfos.x == 3.0) {\n\t\tfogCoeff = (fogEnd - dist) / (fogEnd - fogStart);\n\t} else if (uniforms.vFogInfos.x == 1.0) {\n\t\tfogCoeff = 1.0 / pow(2.71828, dist * fogDensity);\n\t} else if (uniforms.vFogInfos.x == 2.0) {\n\t\tfogCoeff = 1.0 / pow(2.71828, dist * dist * fogDensity * fogDensity);\n\t}\n\treturn clamp(fogCoeff, 0.0, 1.0);\n}\n",
-      vO = {
+      CJ = "\nstruct TerrainFrameUniforms {\n\tuHeldLightColour: vec4f,\n\tuHeldLightPos: vec4f,\n\tuSkyLightColour: vec3f,\n\tuAmbientLightColour: vec3f,\n\tvFogInfos: vec4f,\n\tvFogColor: vec3f,\n\toutputHeight: f32,\n\tsceneAmbient: vec3f,\n\tuDirLights: array<vec4f, 4>,\n\taoLevels: vec4f,\n}\n",
+      aJ = "\nstruct TerrainMaterialUniforms {\n\tvDiffuseColor: vec4f,\n\tambientAndCutoff: vec4f,\n\temissiveAndLevel: vec4f,\n\tanim: vec4f,\n}\n",
+      oJ = "\nstruct LiteSceneUniforms {\n\tviewProjection: mat4x4f,\n\tview: mat4x4f,\n\tvEyePosition: vec4f,\n}\n@group(0) @binding(0) var<uniform> scene: LiteSceneUniforms;\nfn liteWorldLayer(clip: vec4f) -> vec4f {\n\treturn vec4f(clip.xy, clip.z * 0.5, clip.w);\n}\nfn liteFrontLayer(clip: vec4f) -> vec4f {\n\treturn vec4f(clip.xy, (clip.z + clip.w) * 0.5, clip.w);\n}\n",
+      cJ = "\n\tlet fading = fragmentInputs.vVisibility < 255.0 / 256.0;\n\tif (fading && fragmentInputs.vVisibility < bayerDither(vec2f(fragmentInputs.position.x, uniforms.outputHeight - fragmentInputs.position.y))) {\n\t\tdiscard;\n\t}\n",
+      hJ = "\nfn calcFogFactor(fogDistance: vec3f) -> f32 {\n\tvar fogCoeff: f32 = 1.0;\n\tlet fogStart = uniforms.vFogInfos.y;\n\tlet fogEnd = uniforms.vFogInfos.z;\n\tlet fogDensity = uniforms.vFogInfos.w;\n\tlet dist = length(fogDistance);\n\tif (uniforms.vFogInfos.x == 3.0) {\n\t\tfogCoeff = (fogEnd - dist) / (fogEnd - fogStart);\n\t} else if (uniforms.vFogInfos.x == 1.0) {\n\t\tfogCoeff = 1.0 / pow(2.71828, dist * fogDensity);\n\t} else if (uniforms.vFogInfos.x == 2.0) {\n\t\tfogCoeff = 1.0 / pow(2.71828, dist * dist * fogDensity * fogDensity);\n\t}\n\treturn clamp(fogCoeff, 0.0, 1.0);\n}\n",
+      lJ = {
         position: 0,
         normal: 1,
         color: 2,
@@ -1606,84 +1606,84 @@ export const modules = {
         packedLight: 5,
         blockFlagWords: 7
       },
-      FO = 0,
-      BO = 3,
-      XO = 4,
-      IO = 5,
-      KO = `\nfn packedNormal(dir: u32) -> vec4f {\n\tlet axis = dir >> 1u;\n\tlet s = 1.0 - 2.0 * f32(dir & 1u);\n\treturn vec4f(select(0.0, s, axis == 0u), select(0.0, s, axis == 1u), select(0.0, s, axis == 2u), 0.0);\n}\nfn packedUv(p: vec3f, dir: u32, corner: u32) -> vec2f {\n\tlet axis = dir >> 1u;\n\tlet s = 1.0 - 2.0 * f32(dir & 1u);\n\tlet du = select(-${Ir.b}, ${Ir.b}, corner == 0u || corner == 3u);\n\tlet dv = select(-${Ir.b}, ${Ir.b}, corner < 2u);\n\tif (axis == 0u) {\n\t\treturn vec2f(s * (p.z + du), -(p.y + dv));\n\t}\n\tif (axis == 1u) {\n\t\treturn vec2f(s * (p.x + dv), -(p.z + du));\n\t}\n\treturn vec2f(-s * (p.x + du), -(p.y + dv));\n}\n`,
-      qO = `\n@group(1) @binding(2) var<storage, read> quads: array<u32>;\n// A quad's light: its four slots' packed values as u16, two a word, the lower slot in the low half (liteTerrainArena.ts)\n@group(1) @binding(3) var<storage, read> quadLight: array<u32>;\nfn quadSlotLight(quad: u32, slot: u32) -> f32 {\n\tlet pair = quadLight[quad * 2u + (slot >> 1u)];\n\treturn f32(select(pair, pair >> 16u, (slot & 1u) == 1u) & 0xffffu);\n}\nfn slotCorner(dir: u32, diagonal: u32, slot: u32) -> u32 {\n\tlet reversed = any(vec3u(dir) == vec3u(${[0,1,2,3,4,5].filter((MM=>Kr.e>>MM&1)).join("u, ")}u));\n\treturn (diagonal + select(slot, 4u - slot, reversed)) & 3u;\n}\nfn quadCorner(r0: u32, axis: u32, corner: u32) -> vec3f {\n\tlet w = f32(((r0 >> 18u) & 63u) + 1u) * select(0.0, 1.0, corner == 1u || corner == 2u);\n\tlet h = f32(((r0 >> 24u) & 63u) + 1u) * select(0.0, 1.0, corner >= 2u);\n\tlet du = select(vec3f(0.0, 0.0, w), vec3f(w, 0.0, 0.0), axis == 2u);\n\tlet dv = select(vec3f(0.0, h, 0.0), vec3f(h, 0.0, 0.0), axis == 1u);\n\treturn vec3f(f32(r0 & 63u), f32((r0 >> 6u) & 63u), f32((r0 >> 12u) & 63u)) + du + dv;\n}\n`;
-    const TO = {
-      bL: "material.anim.x",
+      LJ = 0,
+      fJ = 3,
+      mJ = 4,
+      KJ = 5,
+      HJ = `\nfn packedNormal(dir: u32) -> vec4f {\n\tlet axis = dir >> 1u;\n\tlet s = 1.0 - 2.0 * f32(dir & 1u);\n\treturn vec4f(select(0.0, s, axis == 0u), select(0.0, s, axis == 1u), select(0.0, s, axis == 2u), 0.0);\n}\nfn packedUv(p: vec3f, dir: u32, corner: u32) -> vec2f {\n\tlet axis = dir >> 1u;\n\tlet s = 1.0 - 2.0 * f32(dir & 1u);\n\tlet du = select(-${ue.e}, ${ue.e}, corner == 0u || corner == 3u);\n\tlet dv = select(-${ue.e}, ${ue.e}, corner < 2u);\n\tif (axis == 0u) {\n\t\treturn vec2f(s * (p.z + du), -(p.y + dv));\n\t}\n\tif (axis == 1u) {\n\t\treturn vec2f(s * (p.x + dv), -(p.z + du));\n\t}\n\treturn vec2f(-s * (p.x + du), -(p.y + dv));\n}\n`,
+      uJ = `\n@group(1) @binding(2) var<storage, read> quads: array<u32>;\n// A quad's light: its four slots' packed values as u16, two a word, the lower slot in the low half (liteTerrainArena.ts)\n@group(1) @binding(3) var<storage, read> quadLight: array<u32>;\nfn quadSlotLight(quad: u32, slot: u32) -> f32 {\n\tlet pair = quadLight[quad * 2u + (slot >> 1u)];\n\treturn f32(select(pair, pair >> 16u, (slot & 1u) == 1u) & 0xffffu);\n}\nfn slotCorner(dir: u32, diagonal: u32, slot: u32) -> u32 {\n\tlet reversed = any(vec3u(dir) == vec3u(${[0,1,2,3,4,5].filter((VV=>se.b>>VV&1)).join("u, ")}u));\n\treturn (diagonal + select(slot, 4u - slot, reversed)) & 3u;\n}\nfn quadCorner(r0: u32, axis: u32, corner: u32) -> vec3f {\n\tlet w = f32(((r0 >> 18u) & 63u) + 1u) * select(0.0, 1.0, corner == 1u || corner == 2u);\n\tlet h = f32(((r0 >> 24u) & 63u) + 1u) * select(0.0, 1.0, corner >= 2u);\n\tlet du = select(vec3f(0.0, 0.0, w), vec3f(w, 0.0, 0.0), axis == 2u);\n\tlet dv = select(vec3f(0.0, h, 0.0), vec3f(h, 0.0, 0.0), axis == 1u);\n\treturn vec3f(f32(r0 & 63u), f32((r0 >> 6u) & 63u), f32((r0 >> 12u) & 63u)) + du + dv;\n}\n`;
+    const sJ = {
+      iZ: "material.anim.x",
       stride: "material.anim.y",
       count: "material.anim.z",
-      perTexture: MM => `animDataPerTex[${MM}]`
+      perTexture: VV => `animDataPerTex[${VV}]`
     };
 
-    function VO(MM, rM) {
-      let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : TO;
-      return `\n\tlet atlasIdxIn = ${MM};\n\tlet animTick = ${iM.bL};\n\tlet animTickStride = ${iM.stride};\n\tlet numAnimTextures = ${iM.count};\n\t${(0,eM.f)(CM.b.WGSL,iM.perTexture)}\n\t${rM}animLayer;\n`
+    function SJ(VV, eV) {
+      let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : sJ;
+      return `\n\tlet atlasIdxIn = ${VV};\n\tlet animTick = ${xV.iZ};\n\tlet animTickStride = ${xV.stride};\n\tlet numAnimTextures = ${xV.count};\n\t${(0,PV.f)(TV.d.WGSL,xV.perTexture)}\n\t${eV}animLayer;\n`
     }
 
-    function cO(MM) {
-      const rM = (rM, iM) => {
-        const OM = rM > 0 ? `fragmentInputs.texAtlasIndex - ${MM.atlasLayers.toFixed(1)} * ${rM.toFixed(1)}` : "fragmentInputs.texAtlasIndex";
-        return `${iM?"textureSampleLevel":"textureSample"}(textureAtlas${rM}, atlasSampler, fragmentInputs.vMainUV1, i32(round(${OM}))${iM?", atlasLod":""})`
+    function IJ(VV) {
+      const eV = (eV, xV) => {
+        const JV = eV > 0 ? `fragmentInputs.texAtlasIndex - ${VV.atlasLayers.toFixed(1)} * ${eV.toFixed(1)}` : "fragmentInputs.texAtlasIndex";
+        return `${xV?"textureSampleLevel":"textureSample"}(textureAtlas${eV}, atlasSampler, fragmentInputs.vMainUV1, i32(round(${JV}))${xV?", atlasLod":""})`
       };
-      if (1 === MM.atlasCount) return `baseColor = ${rM(0,!1)};`;
-      let iM = `\n\tlet atlasTexelUV = fragmentInputs.vMainUV1 * ${(0,Xr.xb)(MM.U3)};\n\tlet atlasDdx = dpdx(atlasTexelUV);\n\tlet atlasDdy = dpdy(atlasTexelUV);\n\tlet atlasLod = 0.5 * log2(max(max(dot(atlasDdx, atlasDdx), dot(atlasDdy, atlasDdy)), 1e-10));\n`;
-      for (let OM = 0; OM < MM.atlasCount; OM++) {
-        const SM = MM.atlasLayers * (OM + 1) - .5;
-        iM += `${OM>0?" else ":"\n\t"}if (fragmentInputs.texAtlasIndex < ${(0,Xr.xb)(SM)}) {\n\t\tbaseColor = ${rM(OM,!0)};\n\t}`
+      if (1 === VV.atlasCount) return `baseColor = ${eV(0,!1)};`;
+      let xV = `\n\tlet atlasTexelUV = fragmentInputs.vMainUV1 * ${(0,He.ob)(VV.yVV)};\n\tlet atlasDdx = dpdx(atlasTexelUV);\n\tlet atlasDdy = dpdy(atlasTexelUV);\n\tlet atlasLod = 0.5 * log2(max(max(dot(atlasDdx, atlasDdx), dot(atlasDdy, atlasDdy)), 1e-10));\n`;
+      for (let JV = 0; JV < VV.atlasCount; JV++) {
+        const YV = VV.atlasLayers * (JV + 1) - .5;
+        xV += `${JV>0?" else ":"\n\t"}if (fragmentInputs.texAtlasIndex < ${(0,He.ob)(YV)}) {\n\t\tbaseColor = ${eV(JV,!0)};\n\t}`
       }
-      return iM
+      return xV
     }
 
-    function MS(MM) {
-      return `terrain-${MM.texture}${"atlas"===MM.texture?MM.atlasCount:""}${MM.animated?"-anim":""}${MM.alphaTest?"-test":""}${MM.lighting?"-lit":""}-dir${MM.dirLightCount}${MM.packed?"-packed":""}${DO(MM)?`-sp${MM.packVariant}`:""}${MM.liquid?"-liquid":""}${MM.resting?"-rest":""}`
+    function dJ(VV) {
+      return `terrain-${VV.texture}${"atlas"===VV.texture?VV.atlasCount:""}${VV.animated?"-anim":""}${VV.alphaTest?"-test":""}${VV.lighting?"-lit":""}-dir${VV.dirLightCount}${VV.packed?"-packed":""}${RJ(VV)?`-sp${VV.packVariant}`:""}${VV.liquid?"-liquid":""}${VV.resting?"-rest":""}`
     }
 
-    function rS(MM) {
-      let rM = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "none";
-      const OM = function(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "none";
-        const iM = "none" !== MM.texture,
-          OM = "atlas" === MM.texture,
-          SM = MM.dirLightCount > 0,
-          jM = DO(MM);
-        if (MM.dirLightCount > 4) throw new Error(`Terrain supports 4 directional lights, not ${MM.dirLightCount}`);
-        let aM = 1,
-          PM = "@group(2) @binding(0) var<uniform> material: TerrainMaterialUniforms;\n";
-        if (OM) {
-          MM.animated && (PM += `@group(2) @binding(${aM++}) var<storage, read> animDataPerTex: array<f32>;\n`), PM += `@group(2) @binding(${aM++}) var atlasSampler: sampler;\n`;
-          for (let rM = 0; rM < MM.atlasCount; rM++) PM += `@group(2) @binding(${aM++}) var textureAtlas${rM}: texture_2d_array<f32>;\n`
-        } else "single" === MM.texture && (PM += `@group(2) @binding(${aM++}) var diffuseSamplerSampler: sampler;\n`, PM += `@group(2) @binding(${aM++}) var diffuseSampler: texture_2d<f32>;\n`);
-        const nM = function(MM) {
-            const rM = vO,
-              iM = "none" !== MM.texture,
-              OM = "atlas" === MM.texture,
-              SM = DO(MM);
-            return MM.packed ? {
-              declarations: `\nstruct PackedVertexInputs {\n\t@builtin(instance_index) chunkSlot: u32,\n\t@builtin(vertex_index) vertexIndex: u32,\n}\nstruct VertexInputs {\n\tchunkSlot: u32,\n\tposition: vec3f,\n\tnormal: vec4f,\n\tcolor: vec4f,\n\t${iM?"uv: vec2f,":""}\n\t${OM?"texAtlasIndices: f32,":""}\n\t${MM.lighting?"aPackedLightLevels: f32,":""}\n\t${SM?"blockFlagWords: vec2u,":""}\n}\n${KO}\n${qO}\n${"single"===MM.texture?"\nfn packedFaceUvOffset(r0: u32, dir: u32) -> vec2f {\n\tlet axis = dir >> 1u;\n\tlet s = 1.0 - 2.0 * f32(dir & 1u);\n\tlet x = f32(r0 & 63u);\n\tlet y = f32((r0 >> 6u) & 63u);\n\tlet z = f32((r0 >> 12u) & 63u);\n\tif (axis == 0u) {\n\t\treturn vec2f(-s * z, y + f32(((r0 >> 24u) & 63u) + 1u));\n\t}\n\tif (axis == 1u) {\n\t\treturn vec2f(-s * x, z + f32(((r0 >> 18u) & 63u) + 1u));\n\t}\n\treturn vec2f(s * x, y + f32(((r0 >> 24u) & 63u) + 1u));\n}\n":""}\n`,
+    function OJ(VV) {
+      let eV = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+        xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "none";
+      const JV = function(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "none";
+        const xV = "none" !== VV.texture,
+          JV = "atlas" === VV.texture,
+          YV = VV.dirLightCount > 0,
+          UV = RJ(VV);
+        if (VV.dirLightCount > 4) throw new Error(`Terrain supports 4 directional lights, not ${VV.dirLightCount}`);
+        let yV = 1,
+          pV = "@group(2) @binding(0) var<uniform> material: TerrainMaterialUniforms;\n";
+        if (JV) {
+          VV.animated && (pV += `@group(2) @binding(${yV++}) var<storage, read> animDataPerTex: array<f32>;\n`), pV += `@group(2) @binding(${yV++}) var atlasSampler: sampler;\n`;
+          for (let eV = 0; eV < VV.atlasCount; eV++) pV += `@group(2) @binding(${yV++}) var textureAtlas${eV}: texture_2d_array<f32>;\n`
+        } else "single" === VV.texture && (pV += `@group(2) @binding(${yV++}) var diffuseSamplerSampler: sampler;\n`, pV += `@group(2) @binding(${yV++}) var diffuseSampler: texture_2d<f32>;\n`);
+        const QV = function(VV) {
+            const eV = lJ,
+              xV = "none" !== VV.texture,
+              JV = "atlas" === VV.texture,
+              YV = RJ(VV);
+            return VV.packed ? {
+              declarations: `\nstruct PackedVertexInputs {\n\t@builtin(instance_index) chunkSlot: u32,\n\t@builtin(vertex_index) vertexIndex: u32,\n}\nstruct VertexInputs {\n\tchunkSlot: u32,\n\tposition: vec3f,\n\tnormal: vec4f,\n\tcolor: vec4f,\n\t${xV?"uv: vec2f,":""}\n\t${JV?"texAtlasIndices: f32,":""}\n\t${VV.lighting?"aPackedLightLevels: f32,":""}\n\t${YV?"blockFlagWords: vec2u,":""}\n}\n${HJ}\n${uJ}\n${"single"===VV.texture?"\nfn packedFaceUvOffset(r0: u32, dir: u32) -> vec2f {\n\tlet axis = dir >> 1u;\n\tlet s = 1.0 - 2.0 * f32(dir & 1u);\n\tlet x = f32(r0 & 63u);\n\tlet y = f32((r0 >> 6u) & 63u);\n\tlet z = f32((r0 >> 12u) & 63u);\n\tif (axis == 0u) {\n\t\treturn vec2f(-s * z, y + f32(((r0 >> 24u) & 63u) + 1u));\n\t}\n\tif (axis == 1u) {\n\t\treturn vec2f(-s * x, z + f32(((r0 >> 18u) & 63u) + 1u));\n\t}\n\treturn vec2f(s * x, y + f32(((r0 >> 24u) & 63u) + 1u));\n}\n":""}\n`,
               parameter: "packedInputs: PackedVertexInputs",
-              decode: `\n\tvar vertexInputs: VertexInputs;\n\tlet part = chunks[packedInputs.chunkSlot];\n\tlet drawn = packedInputs.vertexIndex >> 2u;\n\tlet quad = select(drawn, drawn - part.faceCount, drawn >= part.faceEnd);\n\tlet slot = packedInputs.vertexIndex & 3u;\n\tlet r2 = quads[quad * 3u + 2u];\n\tlet dir = r2 & 7u;\n\tlet corner = slotCorner(dir, (r2 >> 11u) & 1u, slot);\n\tlet position = quadCorner(quads[quad * 3u], dir >> 1u, corner);\n\tlet face = quads[quad * 3u + 1u];\n\t// A constant shift a slot, as render-shaders' terrain.wgsl decodes it\n\tlet aoBits = r2 >> 3u;\n\tlet ao = select(select(aoBits, aoBits >> 2u, slot == 1u), select(aoBits >> 4u, aoBits >> 6u, slot == 3u), slot >= 2u) & 3u;\n\tvertexInputs.chunkSlot = packedInputs.chunkSlot;\n\tvertexInputs.position = position;\n\tvertexInputs.normal = packedNormal(dir);\n\t// Packed parts are untinted, so the colour is the AO level's, as unorm8 decodes it; its alpha no program reads\n\tvertexInputs.color = vec4f(vec3f(uniforms.aoLevels[ao]), 1.0);\n\t${iM?"vertexInputs.uv = packedUv(position, dir, corner);":""}\n\t${"single"===MM.texture?"vertexInputs.uv += packedFaceUvOffset(quads[quad * 3u], dir);":""}\n\t${OM?"vertexInputs.texAtlasIndices = f32(face & 0xffffu);":""}\n\t${MM.lighting?"vertexInputs.aPackedLightLevels = quadSlotLight(quad, slot);":""}\n\t${SM?"vertexInputs.blockFlagWords = vec2u(face, face << 8u);":""}\n`
+              decode: `\n\tvar vertexInputs: VertexInputs;\n\tlet part = chunks[packedInputs.chunkSlot];\n\tlet drawn = packedInputs.vertexIndex >> 2u;\n\tlet quad = select(drawn, drawn - part.faceCount, drawn >= part.faceEnd);\n\tlet slot = packedInputs.vertexIndex & 3u;\n\tlet r2 = quads[quad * 3u + 2u];\n\tlet dir = r2 & 7u;\n\tlet corner = slotCorner(dir, (r2 >> 11u) & 1u, slot);\n\tlet position = quadCorner(quads[quad * 3u], dir >> 1u, corner);\n\tlet face = quads[quad * 3u + 1u];\n\t// A constant shift a slot, as render-shaders' terrain.wgsl decodes it\n\tlet aoBits = r2 >> 3u;\n\tlet ao = select(select(aoBits, aoBits >> 2u, slot == 1u), select(aoBits >> 4u, aoBits >> 6u, slot == 3u), slot >= 2u) & 3u;\n\tvertexInputs.chunkSlot = packedInputs.chunkSlot;\n\tvertexInputs.position = position;\n\tvertexInputs.normal = packedNormal(dir);\n\t// Packed parts are untinted, so the colour is the AO level's, as unorm8 decodes it; its alpha no program reads\n\tvertexInputs.color = vec4f(vec3f(uniforms.aoLevels[ao]), 1.0);\n\t${xV?"vertexInputs.uv = packedUv(position, dir, corner);":""}\n\t${"single"===VV.texture?"vertexInputs.uv += packedFaceUvOffset(quads[quad * 3u], dir);":""}\n\t${JV?"vertexInputs.texAtlasIndices = f32(face & 0xffffu);":""}\n\t${VV.lighting?"vertexInputs.aPackedLightLevels = quadSlotLight(quad, slot);":""}\n\t${YV?"vertexInputs.blockFlagWords = vec2u(face, face << 8u);":""}\n`
             } : {
-              declarations: `\nstruct VertexInputs {\n\t@builtin(instance_index) chunkSlot: u32,\n\t@location(${rM.position}) position: vec3f,\n\t@location(${rM.normal}) normal: vec4f,\n\t@location(${rM.color}) color: vec4f,\n\t${iM?`@location(${rM.uv}) uv: vec2f,`:""}\n\t${MM.lighting?`@location(${rM.packedLight}) aPackedLightLevels: f32,`:""}\n\t${SM?`@location(${rM.blockFlagWords}) blockFlagWords: vec2u,`:""}\n}\n`,
+              declarations: `\nstruct VertexInputs {\n\t@builtin(instance_index) chunkSlot: u32,\n\t@location(${eV.position}) position: vec3f,\n\t@location(${eV.normal}) normal: vec4f,\n\t@location(${eV.color}) color: vec4f,\n\t${xV?`@location(${eV.uv}) uv: vec2f,`:""}\n\t${VV.lighting?`@location(${eV.packedLight}) aPackedLightLevels: f32,`:""}\n\t${YV?`@location(${eV.blockFlagWords}) blockFlagWords: vec2u,`:""}\n}\n`,
               parameter: "vertexInputs: VertexInputs",
               decode: ""
             }
-          }(MM),
-          QM = `\n${NO}\n${fO}\n${YO}\n@group(1) @binding(0) var<uniform> uniforms: TerrainFrameUniforms;\n/** Per chunk part, indexed by the draw's first instance (TERRAIN_CHUNK_SLOT_WORDS words). */\nstruct TerrainChunk {\n\t/** Into the render frame. */\n\ttranslation: vec3f,\n\t/** The fade-in. */\n\tvisibility: f32,\n\t/** Quad records only: where the part's faces end in its page, in records, and how many it has. */\n\tfaceEnd: u32,\n\tfaceCount: u32,\n}\n@group(1) @binding(1) var<storage, read> chunks: array<TerrainChunk>;\n${PM}\n${dr}\n${nM.declarations}\nstruct Varyings {\n\t${"none"===rM?"":"// Invariant: at 1x the scene's pass draws over the pre-pass's depth with an equal test\n\t@invariant "}@builtin(position) position: vec4f,\n\t// Centroid, as an edge pixel's centre can lie past its face and packs floor this to find the block\n\t@location(0) @interpolate(perspective, centroid) vPositionW: vec3f,\n\t@location(1) vNormalW: vec3f,\n\t@location(2) vColor: vec3f,\n\t@location(3) vFogDistance: vec3f,\n\t${MM.resting?"":"@location(4) @interpolate(flat) vVisibility: f32,"}\n\t${SM?"@location(5) vTerrainLambert: f32,":""}\n\t${iM?"@location(6) @interpolate(perspective, centroid) vMainUV1: vec2f,":""}\n\t${OM?"@location(7) texAtlasIndex: f32,":""}\n\t${MM.lighting?"@location(8) vLightLevels: vec4f,":""}\n\t${jM?"@location(9) @interpolate(flat) vBlockFlags: u32,":""}\n\t${jM&&OM?"@location(10) @interpolate(flat) vPackTexture: u32,":""}\n}\n\n${MM.resting?"":(0,Xr.s)(sO)}\n${xO}\n\n@vertex\nfn mainVertex(${nM.parameter}) -> Varyings {\n\t${nM.decode}\n\tvar vertexOutputs: Varyings;\n\tlet chunk = chunks[vertexInputs.chunkSlot];\n\t${jM?`vertexOutputs.vBlockFlags = ((vertexInputs.blockFlagWords.x >> 24u) << 8u) | (vertexInputs.blockFlagWords.y >> 24u) | ${pr.e.placed}u;`:""}\n\t${jM&&OM?hO("vertexInputs.texAtlasIndices").trim():""}\n\tlet worldPos = vec4f(vertexInputs.position + chunk.translation, 1.0);\n\tvertexOutputs.position = liteWorldLayer(scene.viewProjection * worldPos);\n\tvertexOutputs.vPositionW = worldPos.xyz;\n\tvertexOutputs.vNormalW = normalize(vertexInputs.normal.xyz);\n\tvertexOutputs.vColor = vertexInputs.color.rgb;\n\tvertexOutputs.vFogDistance = (scene.view * worldPos).xyz;\n\t${MM.resting?"":"vertexOutputs.vVisibility = chunk.visibility;"}\n\t${iM?"vertexOutputs.vMainUV1 = vertexInputs.uv;":""}\n\t${OM?function(MM){return MM?VO("vertexInputs.texAtlasIndices","vertexOutputs.texAtlasIndex = "):"vertexOutputs.texAtlasIndex = vertexInputs.texAtlasIndices;"}(MM.animated):""}\n\t${"single"===MM.texture&&MM.animated?"\n\tlet frameTick = floor(material.anim.x / material.anim.z);\n\tlet animTexIndex = frameTick - material.anim.y * floor(frameTick / material.anim.y);\n\tvertexOutputs.vMainUV1.y = (vertexOutputs.vMainUV1.y + animTexIndex) / material.anim.y;\n":""}\n\t${(0,Xr.eb)(sO)}\n\t${(0,Xr.I)(sO,MM.dirLightCount)}\n\treturn vertexOutputs;\n}\n\n@fragment\nfn mainFragment(fragmentInputs: Varyings) -> @location(0) vec4f {\n\t${MM.resting?"":AO}\n\tvar baseColor = vec4f(1.0);\n\tvar alpha = material.vDiffuseColor.a;\n\t${OM?cO(MM):""}\n\t${"single"===MM.texture?"baseColor = textureSample(diffuseSampler, diffuseSamplerSampler, fragmentInputs.vMainUV1);":""}\n\t${iM?"alpha *= baseColor.a;\n\tbaseColor = vec4f(baseColor.rgb * material.emissiveAndLevel.w, baseColor.a);":""}\n\tbaseColor = vec4f(baseColor.rgb * fragmentInputs.vColor, baseColor.a);\n\t${MM.alphaTest?"if (alpha < material.ambientAndCutoff.w) {\n\t\tdiscard;\n\t}\n\talpha = 1.0;":""}\n\tvar diffuseBase = vec3f(0.0);\n\t${SM?"diffuseBase += vec3f(fragmentInputs.vTerrainLambert);":""}\n\tlet ambient = material.ambientAndCutoff.xyz * uniforms.sceneAmbient;\n\tlet finalDiffuse = clamp(diffuseBase * material.vDiffuseColor.rgb + material.emissiveAndLevel.xyz + ambient, vec3f(0.0), vec3f(1.0)) * baseColor.rgb;\n\t// Nothing past here changes alpha: light, fog and a pack's light hook keep it\n\tvar color = vec4f(finalDiffuse, select(alpha, 1.0, ${Jr}));\n\t${DO(MM)?(0,Xr.pb)(CM.b.WGSL):(0,Xr.V)(sO)}\n\tcolor = vec4f(max(color.rgb, vec3f(0.0)), color.a);\n\tlet fog = calcFogFactor(fragmentInputs.vFogDistance);\n\tcolor = vec4f(mix(uniforms.vFogColor, color.rgb, fog), color.a);\n\treturn color;\n}\n`,
-          zM = new Set;
-        MM.lighting && zM.add("BLOXD_LIGHTING");
-        SM && zM.add("BLOXD_TERRAIN_DIRECTIONAL");
-        return vr(QM, new Map([...zM].map((MM => [MM, !0]))))
-      }(MM, iM);
-      if (!DO(MM)) return OM;
-      const SM = WO(MM, OM, VO, rM, iM);
-      return "none" === iM ? SM : `${SM}${function(MM){const rM="none"!==MM.texture&&MM.alphaTest;return`\n@fragment\nfn prepassFragment(fragmentInputs: Varyings) -> @location(0) vec4f {\n\t${MM.resting?"":AO}\n\t${MM.alphaTest?`var baseColor = vec4f(1.0);\n\tvar alpha = material.vDiffuseColor.a;\n\t${rM&&"atlas"===MM.texture?cO(MM):""}\n\t${rM&&"single"===MM.texture?"baseColor = textureSample(diffuseSampler, diffuseSamplerSampler, fragmentInputs.vMainUV1);":""}\n\t${rM?"alpha *= baseColor.a;":""}\n\tif (alpha < material.ambientAndCutoff.w) {\n\t\tdiscard;\n\t}`:""}\n\tlet emissive = (fragmentInputs.vBlockFlags & ${pr.e.emissive}u) != 0u;\n\treturn vec4f(normalize(fragmentInputs.vNormalW) * 0.5 + 0.5, select(0.0, 1.0, emissive));\n}\n`}(MM)}`
+          }(VV),
+          nV = `\n${oJ}\n${CJ}\n${aJ}\n@group(1) @binding(0) var<uniform> uniforms: TerrainFrameUniforms;\n/** Per chunk part, indexed by the draw's first instance (TERRAIN_CHUNK_SLOT_WORDS words). */\nstruct TerrainChunk {\n\t/** Into the render frame. */\n\ttranslation: vec3f,\n\t/** The fade-in. */\n\tvisibility: f32,\n\t/** Quad records only: where the part's faces end in its page, in records, and how many it has. */\n\tfaceEnd: u32,\n\tfaceCount: u32,\n}\n@group(1) @binding(1) var<storage, read> chunks: array<TerrainChunk>;\n${pV}\n${Ee}\n${QV.declarations}\nstruct Varyings {\n\t${"none"===eV?"":"// Invariant: at 1x the scene's pass draws over the pre-pass's depth with an equal test\n\t@invariant "}@builtin(position) position: vec4f,\n\t// Centroid, as an edge pixel's centre can lie past its face and packs floor this to find the block\n\t@location(0) @interpolate(perspective, centroid) vPositionW: vec3f,\n\t@location(1) vNormalW: vec3f,\n\t@location(2) vColor: vec3f,\n\t@location(3) vFogDistance: vec3f,\n\t${VV.resting?"":"@location(4) @interpolate(flat) vVisibility: f32,"}\n\t${YV?"@location(5) vTerrainLambert: f32,":""}\n\t${xV?"@location(6) @interpolate(perspective, centroid) vMainUV1: vec2f,":""}\n\t${JV?"@location(7) texAtlasIndex: f32,":""}\n\t${VV.lighting?"@location(8) vLightLevels: vec4f,":""}\n\t${UV?"@location(9) @interpolate(flat) vBlockFlags: u32,":""}\n\t${UV&&JV?"@location(10) @interpolate(flat) vPackTexture: u32,":""}\n}\n\n${VV.resting?"":(0,He.t)(WJ)}\n${hJ}\n\n@vertex\nfn mainVertex(${QV.parameter}) -> Varyings {\n\t${QV.decode}\n\tvar vertexOutputs: Varyings;\n\tlet chunk = chunks[vertexInputs.chunkSlot];\n\t${UV?`vertexOutputs.vBlockFlags = ((vertexInputs.blockFlagWords.x >> 24u) << 8u) | (vertexInputs.blockFlagWords.y >> 24u) | ${We.c.placed}u;`:""}\n\t${UV&&JV?vJ("vertexInputs.texAtlasIndices").trim():""}\n\tlet worldPos = vec4f(vertexInputs.position + chunk.translation, 1.0);\n\tvertexOutputs.position = liteWorldLayer(scene.viewProjection * worldPos);\n\tvertexOutputs.vPositionW = worldPos.xyz;\n\tvertexOutputs.vNormalW = normalize(vertexInputs.normal.xyz);\n\tvertexOutputs.vColor = vertexInputs.color.rgb;\n\tvertexOutputs.vFogDistance = (scene.view * worldPos).xyz;\n\t${VV.resting?"":"vertexOutputs.vVisibility = chunk.visibility;"}\n\t${xV?"vertexOutputs.vMainUV1 = vertexInputs.uv;":""}\n\t${JV?function(VV){return VV?SJ("vertexInputs.texAtlasIndices","vertexOutputs.texAtlasIndex = "):"vertexOutputs.texAtlasIndex = vertexInputs.texAtlasIndices;"}(VV.animated):""}\n\t${"single"===VV.texture&&VV.animated?"\n\tlet frameTick = floor(material.anim.x / material.anim.z);\n\tlet animTexIndex = frameTick - material.anim.y * floor(frameTick / material.anim.y);\n\tvertexOutputs.vMainUV1.y = (vertexOutputs.vMainUV1.y + animTexIndex) / material.anim.y;\n":""}\n\t${(0,He.ab)(WJ)}\n\t${(0,He.I)(WJ,VV.dirLightCount)}\n\treturn vertexOutputs;\n}\n\n@fragment\nfn mainFragment(fragmentInputs: Varyings) -> @location(0) vec4f {\n\t${VV.resting?"":cJ}\n\tvar baseColor = vec4f(1.0);\n\tvar alpha = material.vDiffuseColor.a;\n\t${JV?IJ(VV):""}\n\t${"single"===VV.texture?"baseColor = textureSample(diffuseSampler, diffuseSamplerSampler, fragmentInputs.vMainUV1);":""}\n\t${xV?"alpha *= baseColor.a;\n\tbaseColor = vec4f(baseColor.rgb * material.emissiveAndLevel.w, baseColor.a);":""}\n\tbaseColor = vec4f(baseColor.rgb * fragmentInputs.vColor, baseColor.a);\n\t${VV.alphaTest?"if (alpha < material.ambientAndCutoff.w) {\n\t\tdiscard;\n\t}\n\talpha = 1.0;":""}\n\tvar diffuseBase = vec3f(0.0);\n\t${YV?"diffuseBase += vec3f(fragmentInputs.vTerrainLambert);":""}\n\tlet ambient = material.ambientAndCutoff.xyz * uniforms.sceneAmbient;\n\tlet finalDiffuse = clamp(diffuseBase * material.vDiffuseColor.rgb + material.emissiveAndLevel.xyz + ambient, vec3f(0.0), vec3f(1.0)) * baseColor.rgb;\n\t// Nothing past here changes alpha: light, fog and a pack's light hook keep it\n\tvar color = vec4f(finalDiffuse, select(alpha, 1.0, ${be}));\n\t${RJ(VV)?(0,He.lb)(TV.d.WGSL):(0,He.P)(WJ)}\n\tcolor = vec4f(max(color.rgb, vec3f(0.0)), color.a);\n\tlet fog = calcFogFactor(fragmentInputs.vFogDistance);\n\tcolor = vec4f(mix(uniforms.vFogColor, color.rgb, fog), color.a);\n\treturn color;\n}\n`,
+          wV = new Set;
+        VV.lighting && wV.add("BLOXD_LIGHTING");
+        YV && wV.add("BLOXD_TERRAIN_DIRECTIONAL");
+        return fe(nV, new Map([...wV].map((VV => [VV, !0]))))
+      }(VV, xV);
+      if (!RJ(VV)) return JV;
+      const YV = GJ(VV, JV, SJ, eV, xV);
+      return "none" === xV ? YV : `${YV}${function(VV){const eV="none"!==VV.texture&&VV.alphaTest;return`\n@fragment\nfn prepassFragment(fragmentInputs: Varyings) -> @location(0) vec4f {\n\t${VV.resting?"":cJ}\n\t${VV.alphaTest?`var baseColor = vec4f(1.0);\n\tvar alpha = material.vDiffuseColor.a;\n\t${eV&&"atlas"===VV.texture?IJ(VV):""}\n\t${eV&&"single"===VV.texture?"baseColor = textureSample(diffuseSampler, diffuseSamplerSampler, fragmentInputs.vMainUV1);":""}\n\t${eV?"alpha *= baseColor.a;":""}\n\tif (alpha < material.ambientAndCutoff.w) {\n\t\tdiscard;\n\t}`:""}\n\tlet emissive = (fragmentInputs.vBlockFlags & ${We.c.emissive}u) != 0u;\n\treturn vec4f(normalize(fragmentInputs.vNormalW) * 0.5 + 0.5, select(0.0, 1.0, emissive));\n}\n`}(VV)}`
     }
-    const iS = new Map([
+    const VY = new Map([
       ["float", {
         wgsl: "f32",
         align: 1,
@@ -1711,40 +1711,40 @@ export const modules = {
       }]
     ]);
 
-    function OS(MM, rM) {
-      const iM = new Map;
-      let OM = 0;
-      const SM = [],
-        jM = [],
-        aM = [];
-      for (const QM of rM) {
-        var PM, nM;
-        const rM = null !== (PM = QM.type.trim().split(/\s+/).pop()) && void 0 !== PM ? PM : QM.type,
-          zM = iS.get(rM);
-        if (!zM) throw new Error(`Lite: no uniform layout for ${QM.name}: ${QM.type}`);
-        const LM = null !== (nM = QM.arraySize) && void 0 !== nM ? nM : 0,
-          mM = LM ? 4 : zM.align;
-        OM = Math.ceil(OM / mM) * mM;
-        const HM = LM ? 4 * Math.ceil(zM.floats / 4) : zM.floats;
-        if (iM.set(QM.name, {
-            offset: OM,
-            floats: zM.floats,
-            arraySize: LM,
-            stride: HM
-          }), LM && zM.floats <= 2) {
-          const rM = `${MM}_${aM.length}_strided`;
-          jM.push(`struct ${rM} {\n\t@size(16) el: ${zM.wgsl},\n}`), aM.push(QM.name), SM.push(`\t@align(16) ${QM.name}: array<${rM}, ${LM}>,`)
-        } else LM ? SM.push(`\t@align(16) ${QM.name}: array<${zM.wgsl}, ${LM}>,`) : SM.push(`\t${QM.name}: ${zM.wgsl},`);
-        OM += LM ? HM * LM : zM.floats
+    function eY(VV, eV) {
+      const xV = new Map;
+      let JV = 0;
+      const YV = [],
+        UV = [],
+        yV = [];
+      for (const nV of eV) {
+        var pV, QV;
+        const eV = null !== (pV = nV.type.trim().split(/\s+/).pop()) && void 0 !== pV ? pV : nV.type,
+          wV = VY.get(eV);
+        if (!wV) throw new Error(`Lite: no uniform layout for ${nV.name}: ${nV.type}`);
+        const ZV = null !== (QV = nV.arraySize) && void 0 !== QV ? QV : 0,
+          vV = ZV ? 4 : wV.align;
+        JV = Math.ceil(JV / vV) * vV;
+        const rV = ZV ? 4 * Math.ceil(wV.floats / 4) : wV.floats;
+        if (xV.set(nV.name, {
+            offset: JV,
+            floats: wV.floats,
+            arraySize: ZV,
+            stride: rV
+          }), ZV && wV.floats <= 2) {
+          const eV = `${VV}_${yV.length}_strided`;
+          UV.push(`struct ${eV} {\n\t@size(16) el: ${wV.wgsl},\n}`), yV.push(nV.name), YV.push(`\t@align(16) ${nV.name}: array<${eV}, ${ZV}>,`)
+        } else ZV ? YV.push(`\t@align(16) ${nV.name}: array<${wV.wgsl}, ${ZV}>,`) : YV.push(`\t${nV.name}: ${wV.wgsl},`);
+        JV += ZV ? rV * ZV : wV.floats
       }
       return {
-        slots: iM,
-        floats: Math.max(4, 4 * Math.ceil(OM / 4)),
-        wgsl: `${jM.join("\n")}\nstruct ${MM} {\n${SM.join("\n")}\n}\n`,
-        stridedArrays: aM
+        slots: xV,
+        floats: Math.max(4, 4 * Math.ceil(JV / 4)),
+        wgsl: `${UV.join("\n")}\nstruct ${VV} {\n${YV.join("\n")}\n}\n`,
+        stridedArrays: yV
       }
     }
-    const SS = [{
+    const xY = [{
         name: "vDiffuseColor",
         type: "vec4"
       }, {
@@ -1772,14 +1772,14 @@ export const modules = {
         name: "reflectionMatrix",
         type: "mat4"
       }],
-      jS = [{
+      JY = [{
         name: "vOpacityInfos",
         type: "vec2"
       }, {
         name: "opacityMatrix",
         type: "mat4"
       }],
-      aS = [{
+      YY = [{
         name: "vEmissiveInfos",
         type: "vec2"
       }, {
@@ -1787,18 +1787,18 @@ export const modules = {
         type: "mat4"
       }];
 
-    function PS(MM, rM) {
-      return `#if defined(${MM}) && ${MM}DIRECTUV == 0\nvarying v${rM}UV: vec2f;\n#endif`
+    function UY(VV, eV) {
+      return `#if defined(${VV}) && ${VV}DIRECTUV == 0\nvarying v${eV}UV: vec2f;\n#endif`
     }
 
-    function nS(MM, rM, iM) {
-      return `#if defined(${MM}) && ${MM}DIRECTUV == 0\nif (uniforms.v${rM}Infos.x==0.)\n{vertexOutputs.v${rM}UV= (uniforms.${iM}Matrix* vec4f(uvUpdated,1.0,0.0)).xy;}\nelse\n{vertexOutputs.v${rM}UV= (uniforms.${iM}Matrix* vec4f(uv2Updated,1.0,0.0)).xy;}\n#endif`
+    function yY(VV, eV, xV) {
+      return `#if defined(${VV}) && ${VV}DIRECTUV == 0\nif (uniforms.v${eV}Infos.x==0.)\n{vertexOutputs.v${eV}UV= (uniforms.${xV}Matrix* vec4f(uvUpdated,1.0,0.0)).xy;}\nelse\n{vertexOutputs.v${eV}UV= (uniforms.${xV}Matrix* vec4f(uv2Updated,1.0,0.0)).xy;}\n#endif`
     }
 
-    function QS(MM, rM, iM) {
-      return `#ifdef ${MM}\n#if ${MM}DIRECTUV == 1\n#define v${rM}UV vMainUV1\n#elif ${MM}DIRECTUV == 2\n#define v${rM}UV vMainUV2\n#else\nvarying v${rM}UV: vec2f;\n#endif\nvar ${iM}SamplerSampler: sampler;\nvar ${iM}Sampler: texture_2d<f32>;\n#endif`
+    function pY(VV, eV, xV) {
+      return `#ifdef ${VV}\n#if ${VV}DIRECTUV == 1\n#define v${eV}UV vMainUV1\n#elif ${VV}DIRECTUV == 2\n#define v${eV}UV vMainUV2\n#else\nvarying v${eV}UV: vec2f;\n#endif\nvar ${xV}SamplerSampler: sampler;\nvar ${xV}Sampler: texture_2d<f32>;\n#endif`
     }
-    const zS = {
+    const QY = {
         lights: 0,
         lightStride: 12,
         fogInfos: 96,
@@ -1807,90 +1807,90 @@ export const modules = {
         animTick: 104,
         timeMs: 105
       },
-      LS = 256,
-      mS = "\nstruct LiteLight {\n\tvLightData: vec4f,\n\tvLightDiffuse: vec4f,\n\tvLightSpecular: vec4f,\n}\nstruct LiteFrameUniforms {\n\tlights: array<LiteLight, 8>,\n\tvFogInfos: vec4f,\n\tvFogColor: vec3f,\n\toutputHeight: f32,\n\tanimTick: f32,\n\ttimeMs: f32,\n}\n@group(1) @binding(0) var<uniform> frame: LiteFrameUniforms;\nstruct Mesh {\n\tworld: mat4x4f,\n\tvisibility: f32,\n}\n@group(1) @binding(1) var<uniform> mesh: Mesh;\nstruct Internals {\n\tyFactor_: f32,\n\ttextureOutputHeight_: f32,\n}\nconst internals = Internals(1.0, 0.0);\n",
-      HS = "#ifdef INSTANCES\nattribute world0: vec4f;\nattribute world1: vec4f;\nattribute world2: vec4f;\nattribute world3: vec4f;\n#ifdef INSTANCESCOLOR\nattribute instanceColor: vec4f;\n#endif\n#endif",
-      hS = "#ifdef INSTANCES\nvar finalWorld=mat4x4<f32>(vertexInputs.world0,vertexInputs.world1,vertexInputs.world2,vertexInputs.world3);\n#ifdef THIN_INSTANCES\nfinalWorld=mesh.world*finalWorld;\n#endif\n#else\nvar finalWorld=mesh.world;\n#endif",
-      JS = "#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nvertexOutputs.vColor=vec4f(1.0);\n#ifdef VERTEXCOLOR\n#ifdef VERTEXALPHA\nvertexOutputs.vColor*=colorUpdated;\n#else\nvertexOutputs.vColor=vec4f(vertexOutputs.vColor.rgb*colorUpdated.rgb,vertexOutputs.vColor.a);\n#endif\n#endif\n#ifdef INSTANCESCOLOR\nvertexOutputs.vColor*=vertexInputs.instanceColor;\n#endif\n#endif",
-      dS = "#ifdef LITE_FRONT_LAYER\nvertexOutputs.position=liteFrontLayer(vertexOutputs.position);\n#else\nvertexOutputs.position=liteWorldLayer(vertexOutputs.position);\n#endif\nreturn vertexOutputs;",
-      yS = "#ifdef FOG\nfn CalcFogFactor()->f32\n{var fogCoeff: f32=1.0;\nvar fogStart: f32=frame.vFogInfos.y;\nvar fogEnd: f32=frame.vFogInfos.z;\nvar fogDensity: f32=frame.vFogInfos.w;\nvar fogDistance: f32=length(fragmentInputs.vFogDistance);\nif (3.==frame.vFogInfos.x)\n{fogCoeff=(fogEnd-fogDistance)/(fogEnd-fogStart);\n}\nelse if (1.==frame.vFogInfos.x)\n{fogCoeff=1.0/pow(2.71828,fogDistance*fogDensity);\n}\nelse if (2.==frame.vFogInfos.x)\n{fogCoeff=1.0/pow(2.71828,fogDistance*fogDistance*fogDensity*fogDensity);\n}\nreturn clamp(fogCoeff,0.0,1.0);\n}\n#endif",
-      lS = "const LinearEncodePowerApprox: f32=2.2;\nconst GammaEncodePowerApprox: f32=1.0/LinearEncodePowerApprox;\nfn inverseMat3(inMatrix: mat3x3f)->mat3x3f {let a00: f32=inMatrix[0][0];let a01: f32=inMatrix[0][1];let a02: f32=inMatrix[0][2];let a10: f32=inMatrix[1][0];let a11: f32=inMatrix[1][1];let a12: f32=inMatrix[1][2];let a20: f32=inMatrix[2][0];let a21: f32=inMatrix[2][1];let a22: f32=inMatrix[2][2];let b01: f32=a22*a11-a12*a21;let b11: f32=-a22*a10+a12*a20;let b21: f32=a21*a10-a11*a20;let det: f32=a00*b01+a01*b11+a02*b21;return mat3x3f(b01/det,(-a22*a01+a02*a21)/det,(a12*a01-a02*a11)/det,\nb11/det,(a22*a00-a02*a20)/det,(-a12*a00+a02*a10)/det,\nb21/det,(-a21*a00+a01*a20)/det,(a11*a00-a01*a10)/det);}\nfn toLinearSpaceVec3(color: vec3f)->vec3f {return pow(color,vec3f(LinearEncodePowerApprox));}\nfn toGammaSpaceVec3(color: vec3f)->vec3f {return pow(color,vec3f(GammaEncodePowerApprox));}\nfn fromRGBD(rgbd: vec4<f32>)->vec3f {let rgb=toLinearSpaceVec3(rgbd.rgb);return rgb/rgbd.a;}",
-      ES = `\nattribute position: vec3f;\n#ifdef NORMAL\nattribute normal: vec3f;\n#endif\n#ifdef UV1\nattribute uv: vec2f;\n#endif\n#ifdef UV2\nattribute uv2: vec2f;\n#endif\n#ifdef VERTEXCOLOR\nattribute color: vec4f;\n#endif\n${HS}\n#ifdef MAINUV1\nvarying vMainUV1: vec2f;\n#endif\n#ifdef MAINUV2\nvarying vMainUV2: vec2f;\n#endif\n#if defined(DIFFUSE) && DIFFUSEDIRECTUV == 0\nvarying vDiffuseUV: vec2f;\n#endif\n${PS("OPACITY","Opacity")}\n${PS("EMISSIVE","Emissive")}\nvarying vPositionW: vec3f;\n#ifdef NORMAL\nvarying vNormalW: vec3f;\n#endif\n#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nvarying vColor: vec4f;\n#endif\n#ifdef FOG\nvarying vFogDistance: vec3f;\n#endif\n#ifdef REFLECTIONMAP_SKYBOX\nvarying vPositionUVW: vec3f;\n#endif\n${lS}\n#define CUSTOM_VERTEX_DEFINITIONS\n@vertex\nfn main(input : VertexInputs)->FragmentInputs {\nvertexInputs = input;\n#define CUSTOM_VERTEX_MAIN_BEGIN\nvar positionUpdated: vec3f=vertexInputs.position;\n#ifdef NORMAL\nvar normalUpdated: vec3f=vertexInputs.normal;\n#endif\n#ifdef UV1\nvar uvUpdated: vec2f=vertexInputs.uv;\n#endif\n#ifdef UV2\nvar uv2Updated: vec2f=vertexInputs.uv2;\n#endif\n#ifdef VERTEXCOLOR\nvar colorUpdated: vec4f=vertexInputs.color;\n#endif\n#ifdef REFLECTIONMAP_SKYBOX\nvertexOutputs.vPositionUVW=positionUpdated;\n#endif\n#define CUSTOM_VERTEX_UPDATE_POSITION\n#define CUSTOM_VERTEX_UPDATE_NORMAL\n${hS}\nvar worldPos: vec4f=finalWorld*vec4f(positionUpdated,1.0);\n#ifdef NORMAL\nvar normalWorld: mat3x3f= mat3x3f(finalWorld[0].xyz,finalWorld[1].xyz,finalWorld[2].xyz);\n#if defined(INSTANCES) && defined(THIN_INSTANCES)\nvertexOutputs.vNormalW=normalUpdated/ vec3f(dot(normalWorld[0],normalWorld[0]),dot(normalWorld[1],normalWorld[1]),dot(normalWorld[2],normalWorld[2]));vertexOutputs.vNormalW=normalize(normalWorld*vertexOutputs.vNormalW);\n#else\n#ifdef NONUNIFORMSCALING\nnormalWorld=transpose(inverseMat3(normalWorld));\n#endif\nvertexOutputs.vNormalW=normalize(normalWorld*normalUpdated);\n#endif\n#endif\n#define CUSTOM_VERTEX_UPDATE_WORLDPOS\nvertexOutputs.position=scene.viewProjection*worldPos;\nvertexOutputs.vPositionW= worldPos.xyz;\n#ifndef UV1\nvar uvUpdated: vec2f=vec2f(0.,0.);\n#endif\n#ifdef MAINUV1\nvertexOutputs.vMainUV1=uvUpdated;\n#endif\n#ifndef UV2\nvar uv2Updated: vec2f=vec2f(0.,0.);\n#endif\n#ifdef MAINUV2\nvertexOutputs.vMainUV2=uv2Updated;\n#endif\n#if defined(DIFFUSE) && DIFFUSEDIRECTUV == 0\nif (uniforms.vDiffuseInfos.x==0.)\n{vertexOutputs.vDiffuseUV= (uniforms.diffuseMatrix* vec4f(uvUpdated,1.0,0.0)).xy;}\nelse\n{vertexOutputs.vDiffuseUV= (uniforms.diffuseMatrix* vec4f(uv2Updated,1.0,0.0)).xy;}\n#endif\n${nS("OPACITY","Opacity","opacity")}\n${nS("EMISSIVE","Emissive","emissive")}\n#ifdef FOG\nvertexOutputs.vFogDistance=(scene.view*worldPos).xyz;\n#endif\n${JS}\n#define CUSTOM_VERTEX_MAIN_END\n${dS}\n}\n`;
-    const US = `\n#ifdef MAINUV1\nvarying vMainUV1: vec2f;\n#endif\n#ifdef MAINUV2\nvarying vMainUV2: vec2f;\n#endif\nvarying vPositionW: vec3f;\n#ifdef NORMAL\nvarying vNormalW: vec3f;\n#endif\n#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nvarying vColor: vec4f;\n#endif\n#ifdef FOG\nvarying vFogDistance: vec3f;\n#endif\n#ifdef DIFFUSE\n#if DIFFUSEDIRECTUV == 1\n#define vDiffuseUV vMainUV1\n#elif DIFFUSEDIRECTUV == 2\n#define vDiffuseUV vMainUV2\n#else\nvarying vDiffuseUV: vec2f;\n#endif\nvar diffuseSamplerSampler: sampler;\nvar diffuseSampler: texture_2d<f32>;\n#endif\n${QS("OPACITY","Opacity","opacity")}\n${QS("EMISSIVE","Emissive","emissive")}\nstruct lightingInfo\n{diffuse: vec3f,\n};\nfn computeLighting(viewDirectionW: vec3f,vNormal: vec3f,lightData: vec4f,diffuseColor: vec3f,specularColor: vec3f,range: f32,glossiness: f32)->lightingInfo {var result: lightingInfo;\nvar lightVectorW: vec3f;\nvar attenuation: f32=1.0;\nif (lightData.w==0.)\n{var direction: vec3f=lightData.xyz-fragmentInputs.vPositionW;\nattenuation=max(0.,1.0-length(direction)/range);\nlightVectorW=normalize(direction);\n}\nelse\n{lightVectorW=normalize(-lightData.xyz);\n}\nvar ndl: f32=max(0.,dot(vNormal,lightVectorW));\nresult.diffuse=ndl*diffuseColor*attenuation;\nreturn result;\n}\nfn TEXRD(t: texture_2d<f32>,ts: sampler,uv: vec2f)->vec4f {return textureSample(t,ts,uv);\n}\n#ifdef REFLECTION\nvar reflectionCubeSamplerSampler: sampler;var reflectionCubeSampler: texture_cube<f32>;\n#ifdef REFLECTIONMAP_SKYBOX\nvarying vPositionUVW: vec3f;\n#endif\nfn computeSkyBoxCoords(positionW: vec3f,reflectionMatrix: mat4x4f)->vec3f\n{return (reflectionMatrix* vec4f(positionW,1.)).xyz;}\nfn computeReflectionCoords(worldPos: vec4f,worldNormal: vec3f)->vec3f\n{\n#ifdef REFLECTIONMAP_SKYBOX\nreturn computeSkyBoxCoords(fragmentInputs.vPositionUVW,uniforms.reflectionMatrix);\n#else\nreturn vec3f(0.);\n#endif\n}\n#endif\n${lS}\n${yS}\n#define CUSTOM_FRAGMENT_DEFINITIONS\n@fragment\nfn main(input: FragmentInputs)->FragmentOutputs {\nfragmentInputs = input;\n#define CUSTOM_FRAGMENT_MAIN_BEGIN\nvar viewDirectionW: vec3f=normalize(scene.vEyePosition.xyz-fragmentInputs.vPositionW);var baseColor: vec4f= vec4f(1.,1.,1.,1.);var diffuseColor: vec3f=uniforms.vDiffuseColor.rgb;var alpha: f32=uniforms.vDiffuseColor.a;\n#ifdef NORMAL\nvar normalW: vec3f=normalize(fragmentInputs.vNormalW);\n#else\nvar normalW: vec3f=normalize(cross(dpdx(fragmentInputs.vPositionW),dpdy(fragmentInputs.vPositionW)));\nnormalW=select(-normalW,normalW,dot(normalW,viewDirectionW)>=0.0);\n#endif\n#ifdef TWOSIDEDLIGHTING\nnormalW=select(-normalW,normalW,fragmentInputs.frontFacing);\n#endif\nvar uvOffset: vec2f= vec2f(0.0,0.0);\n#ifdef DIFFUSE\nbaseColor=TEXRD(diffuseSampler,diffuseSamplerSampler,fragmentInputs.vDiffuseUV+uvOffset);\n#if defined(ALPHATEST) && !defined(ALPHATEST_AFTERALLALPHACOMPUTATIONS)\nif (baseColor.a<uniforms.alphaCutOff) {discard;}\n#endif\n#ifdef ALPHAFROMDIFFUSE\nalpha*=baseColor.a;\n#endif\n#define CUSTOM_FRAGMENT_UPDATE_ALPHA\nbaseColor=vec4f(baseColor.rgb*uniforms.vDiffuseInfos.y,baseColor.a);\n#endif\n#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nbaseColor=vec4f(baseColor.rgb*fragmentInputs.vColor.rgb,baseColor.a);\n#endif\n#define CUSTOM_FRAGMENT_UPDATE_DIFFUSE\nvar baseAmbientColor: vec3f= vec3f(1.,1.,1.);\n#define CUSTOM_FRAGMENT_BEFORE_LIGHTS\nvar glossiness: f32=uniforms.vSpecularColor.a;var specularColor: vec3f=uniforms.vSpecularColor.rgb;\nvar diffuseBase: vec3f= vec3f(0.,0.,0.);var info: lightingInfo;\nvar shadow: f32=1.;var aggShadow: f32=0.;var numLights: f32=0.;\n${Array.from({length:4},((MM,rM)=>function(MM){const rM=`
+      nY = 256,
+      wY = "\nstruct LiteLight {\n\tvLightData: vec4f,\n\tvLightDiffuse: vec4f,\n\tvLightSpecular: vec4f,\n}\nstruct LiteFrameUniforms {\n\tlights: array<LiteLight, 8>,\n\tvFogInfos: vec4f,\n\tvFogColor: vec3f,\n\toutputHeight: f32,\n\tanimTick: f32,\n\ttimeMs: f32,\n}\n@group(1) @binding(0) var<uniform> frame: LiteFrameUniforms;\nstruct Mesh {\n\tworld: mat4x4f,\n\tvisibility: f32,\n}\n@group(1) @binding(1) var<uniform> mesh: Mesh;\nstruct Internals {\n\tyFactor_: f32,\n\ttextureOutputHeight_: f32,\n}\nconst internals = Internals(1.0, 0.0);\n",
+      ZY = "#ifdef INSTANCES\nattribute world0: vec4f;\nattribute world1: vec4f;\nattribute world2: vec4f;\nattribute world3: vec4f;\n#ifdef INSTANCESCOLOR\nattribute instanceColor: vec4f;\n#endif\n#endif",
+      vY = "#ifdef INSTANCES\nvar finalWorld=mat4x4<f32>(vertexInputs.world0,vertexInputs.world1,vertexInputs.world2,vertexInputs.world3);\n#ifdef THIN_INSTANCES\nfinalWorld=mesh.world*finalWorld;\n#endif\n#else\nvar finalWorld=mesh.world;\n#endif",
+      rY = "#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nvertexOutputs.vColor=vec4f(1.0);\n#ifdef VERTEXCOLOR\n#ifdef VERTEXALPHA\nvertexOutputs.vColor*=colorUpdated;\n#else\nvertexOutputs.vColor=vec4f(vertexOutputs.vColor.rgb*colorUpdated.rgb,vertexOutputs.vColor.a);\n#endif\n#endif\n#ifdef INSTANCESCOLOR\nvertexOutputs.vColor*=vertexInputs.instanceColor;\n#endif\n#endif",
+      kY = "#ifdef LITE_FRONT_LAYER\nvertexOutputs.position=liteFrontLayer(vertexOutputs.position);\n#else\nvertexOutputs.position=liteWorldLayer(vertexOutputs.position);\n#endif\nreturn vertexOutputs;",
+      bY = "#ifdef FOG\nfn CalcFogFactor()->f32\n{var fogCoeff: f32=1.0;\nvar fogStart: f32=frame.vFogInfos.y;\nvar fogEnd: f32=frame.vFogInfos.z;\nvar fogDensity: f32=frame.vFogInfos.w;\nvar fogDistance: f32=length(fragmentInputs.vFogDistance);\nif (3.==frame.vFogInfos.x)\n{fogCoeff=(fogEnd-fogDistance)/(fogEnd-fogStart);\n}\nelse if (1.==frame.vFogInfos.x)\n{fogCoeff=1.0/pow(2.71828,fogDistance*fogDensity);\n}\nelse if (2.==frame.vFogInfos.x)\n{fogCoeff=1.0/pow(2.71828,fogDistance*fogDistance*fogDensity*fogDensity);\n}\nreturn clamp(fogCoeff,0.0,1.0);\n}\n#endif",
+      EY = "const LinearEncodePowerApprox: f32=2.2;\nconst GammaEncodePowerApprox: f32=1.0/LinearEncodePowerApprox;\nfn inverseMat3(inMatrix: mat3x3f)->mat3x3f {let a00: f32=inMatrix[0][0];let a01: f32=inMatrix[0][1];let a02: f32=inMatrix[0][2];let a10: f32=inMatrix[1][0];let a11: f32=inMatrix[1][1];let a12: f32=inMatrix[1][2];let a20: f32=inMatrix[2][0];let a21: f32=inMatrix[2][1];let a22: f32=inMatrix[2][2];let b01: f32=a22*a11-a12*a21;let b11: f32=-a22*a10+a12*a20;let b21: f32=a21*a10-a11*a20;let det: f32=a00*b01+a01*b11+a02*b21;return mat3x3f(b01/det,(-a22*a01+a02*a21)/det,(a12*a01-a02*a11)/det,\nb11/det,(a22*a00-a02*a20)/det,(-a12*a00+a02*a10)/det,\nb21/det,(-a21*a00+a01*a20)/det,(a11*a00-a01*a10)/det);}\nfn toLinearSpaceVec3(color: vec3f)->vec3f {return pow(color,vec3f(LinearEncodePowerApprox));}\nfn toGammaSpaceVec3(color: vec3f)->vec3f {return pow(color,vec3f(GammaEncodePowerApprox));}\nfn fromRGBD(rgbd: vec4<f32>)->vec3f {let rgb=toLinearSpaceVec3(rgbd.rgb);return rgb/rgbd.a;}",
+      BY = `\nattribute position: vec3f;\n#ifdef NORMAL\nattribute normal: vec3f;\n#endif\n#ifdef UV1\nattribute uv: vec2f;\n#endif\n#ifdef UV2\nattribute uv2: vec2f;\n#endif\n#ifdef VERTEXCOLOR\nattribute color: vec4f;\n#endif\n${ZY}\n#ifdef MAINUV1\nvarying vMainUV1: vec2f;\n#endif\n#ifdef MAINUV2\nvarying vMainUV2: vec2f;\n#endif\n#if defined(DIFFUSE) && DIFFUSEDIRECTUV == 0\nvarying vDiffuseUV: vec2f;\n#endif\n${UY("OPACITY","Opacity")}\n${UY("EMISSIVE","Emissive")}\nvarying vPositionW: vec3f;\n#ifdef NORMAL\nvarying vNormalW: vec3f;\n#endif\n#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nvarying vColor: vec4f;\n#endif\n#ifdef FOG\nvarying vFogDistance: vec3f;\n#endif\n#ifdef REFLECTIONMAP_SKYBOX\nvarying vPositionUVW: vec3f;\n#endif\n${EY}\n#define CUSTOM_VERTEX_DEFINITIONS\n@vertex\nfn main(input : VertexInputs)->FragmentInputs {\nvertexInputs = input;\n#define CUSTOM_VERTEX_MAIN_BEGIN\nvar positionUpdated: vec3f=vertexInputs.position;\n#ifdef NORMAL\nvar normalUpdated: vec3f=vertexInputs.normal;\n#endif\n#ifdef UV1\nvar uvUpdated: vec2f=vertexInputs.uv;\n#endif\n#ifdef UV2\nvar uv2Updated: vec2f=vertexInputs.uv2;\n#endif\n#ifdef VERTEXCOLOR\nvar colorUpdated: vec4f=vertexInputs.color;\n#endif\n#ifdef REFLECTIONMAP_SKYBOX\nvertexOutputs.vPositionUVW=positionUpdated;\n#endif\n#define CUSTOM_VERTEX_UPDATE_POSITION\n#define CUSTOM_VERTEX_UPDATE_NORMAL\n${vY}\nvar worldPos: vec4f=finalWorld*vec4f(positionUpdated,1.0);\n#ifdef NORMAL\nvar normalWorld: mat3x3f= mat3x3f(finalWorld[0].xyz,finalWorld[1].xyz,finalWorld[2].xyz);\n#if defined(INSTANCES) && defined(THIN_INSTANCES)\nvertexOutputs.vNormalW=normalUpdated/ vec3f(dot(normalWorld[0],normalWorld[0]),dot(normalWorld[1],normalWorld[1]),dot(normalWorld[2],normalWorld[2]));vertexOutputs.vNormalW=normalize(normalWorld*vertexOutputs.vNormalW);\n#else\n#ifdef NONUNIFORMSCALING\nnormalWorld=transpose(inverseMat3(normalWorld));\n#endif\nvertexOutputs.vNormalW=normalize(normalWorld*normalUpdated);\n#endif\n#endif\n#define CUSTOM_VERTEX_UPDATE_WORLDPOS\nvertexOutputs.position=scene.viewProjection*worldPos;\nvertexOutputs.vPositionW= worldPos.xyz;\n#ifndef UV1\nvar uvUpdated: vec2f=vec2f(0.,0.);\n#endif\n#ifdef MAINUV1\nvertexOutputs.vMainUV1=uvUpdated;\n#endif\n#ifndef UV2\nvar uv2Updated: vec2f=vec2f(0.,0.);\n#endif\n#ifdef MAINUV2\nvertexOutputs.vMainUV2=uv2Updated;\n#endif\n#if defined(DIFFUSE) && DIFFUSEDIRECTUV == 0\nif (uniforms.vDiffuseInfos.x==0.)\n{vertexOutputs.vDiffuseUV= (uniforms.diffuseMatrix* vec4f(uvUpdated,1.0,0.0)).xy;}\nelse\n{vertexOutputs.vDiffuseUV= (uniforms.diffuseMatrix* vec4f(uv2Updated,1.0,0.0)).xy;}\n#endif\n${yY("OPACITY","Opacity","opacity")}\n${yY("EMISSIVE","Emissive","emissive")}\n#ifdef FOG\nvertexOutputs.vFogDistance=(scene.view*worldPos).xyz;\n#endif\n${rY}\n#define CUSTOM_VERTEX_MAIN_END\n${kY}\n}\n`;
+    const jY = `\n#ifdef MAINUV1\nvarying vMainUV1: vec2f;\n#endif\n#ifdef MAINUV2\nvarying vMainUV2: vec2f;\n#endif\nvarying vPositionW: vec3f;\n#ifdef NORMAL\nvarying vNormalW: vec3f;\n#endif\n#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nvarying vColor: vec4f;\n#endif\n#ifdef FOG\nvarying vFogDistance: vec3f;\n#endif\n#ifdef DIFFUSE\n#if DIFFUSEDIRECTUV == 1\n#define vDiffuseUV vMainUV1\n#elif DIFFUSEDIRECTUV == 2\n#define vDiffuseUV vMainUV2\n#else\nvarying vDiffuseUV: vec2f;\n#endif\nvar diffuseSamplerSampler: sampler;\nvar diffuseSampler: texture_2d<f32>;\n#endif\n${pY("OPACITY","Opacity","opacity")}\n${pY("EMISSIVE","Emissive","emissive")}\nstruct lightingInfo\n{diffuse: vec3f,\n};\nfn computeLighting(viewDirectionW: vec3f,vNormal: vec3f,lightData: vec4f,diffuseColor: vec3f,specularColor: vec3f,range: f32,glossiness: f32)->lightingInfo {var result: lightingInfo;\nvar lightVectorW: vec3f;\nvar attenuation: f32=1.0;\nif (lightData.w==0.)\n{var direction: vec3f=lightData.xyz-fragmentInputs.vPositionW;\nattenuation=max(0.,1.0-length(direction)/range);\nlightVectorW=normalize(direction);\n}\nelse\n{lightVectorW=normalize(-lightData.xyz);\n}\nvar ndl: f32=max(0.,dot(vNormal,lightVectorW));\nresult.diffuse=ndl*diffuseColor*attenuation;\nreturn result;\n}\nfn TEXRD(t: texture_2d<f32>,ts: sampler,uv: vec2f)->vec4f {return textureSample(t,ts,uv);\n}\n#ifdef REFLECTION\nvar reflectionCubeSamplerSampler: sampler;var reflectionCubeSampler: texture_cube<f32>;\n#ifdef REFLECTIONMAP_SKYBOX\nvarying vPositionUVW: vec3f;\n#endif\nfn computeSkyBoxCoords(positionW: vec3f,reflectionMatrix: mat4x4f)->vec3f\n{return (reflectionMatrix* vec4f(positionW,1.)).xyz;}\nfn computeReflectionCoords(worldPos: vec4f,worldNormal: vec3f)->vec3f\n{\n#ifdef REFLECTIONMAP_SKYBOX\nreturn computeSkyBoxCoords(fragmentInputs.vPositionUVW,uniforms.reflectionMatrix);\n#else\nreturn vec3f(0.);\n#endif\n}\n#endif\n${EY}\n${bY}\n#define CUSTOM_FRAGMENT_DEFINITIONS\n@fragment\nfn main(input: FragmentInputs)->FragmentOutputs {\nfragmentInputs = input;\n#define CUSTOM_FRAGMENT_MAIN_BEGIN\nvar viewDirectionW: vec3f=normalize(scene.vEyePosition.xyz-fragmentInputs.vPositionW);var baseColor: vec4f= vec4f(1.,1.,1.,1.);var diffuseColor: vec3f=uniforms.vDiffuseColor.rgb;var alpha: f32=uniforms.vDiffuseColor.a;\n#ifdef NORMAL\nvar normalW: vec3f=normalize(fragmentInputs.vNormalW);\n#else\nvar normalW: vec3f=normalize(cross(dpdx(fragmentInputs.vPositionW),dpdy(fragmentInputs.vPositionW)));\nnormalW=select(-normalW,normalW,dot(normalW,viewDirectionW)>=0.0);\n#endif\n#ifdef TWOSIDEDLIGHTING\nnormalW=select(-normalW,normalW,fragmentInputs.frontFacing);\n#endif\nvar uvOffset: vec2f= vec2f(0.0,0.0);\n#ifdef DIFFUSE\nbaseColor=TEXRD(diffuseSampler,diffuseSamplerSampler,fragmentInputs.vDiffuseUV+uvOffset);\n#if defined(ALPHATEST) && !defined(ALPHATEST_AFTERALLALPHACOMPUTATIONS)\nif (baseColor.a<uniforms.alphaCutOff) {discard;}\n#endif\n#ifdef ALPHAFROMDIFFUSE\nalpha*=baseColor.a;\n#endif\n#define CUSTOM_FRAGMENT_UPDATE_ALPHA\nbaseColor=vec4f(baseColor.rgb*uniforms.vDiffuseInfos.y,baseColor.a);\n#endif\n#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nbaseColor=vec4f(baseColor.rgb*fragmentInputs.vColor.rgb,baseColor.a);\n#endif\n#define CUSTOM_FRAGMENT_UPDATE_DIFFUSE\nvar baseAmbientColor: vec3f= vec3f(1.,1.,1.);\n#define CUSTOM_FRAGMENT_BEFORE_LIGHTS\nvar glossiness: f32=uniforms.vSpecularColor.a;var specularColor: vec3f=uniforms.vSpecularColor.rgb;\nvar diffuseBase: vec3f= vec3f(0.,0.,0.);var info: lightingInfo;\nvar shadow: f32=1.;var aggShadow: f32=0.;var numLights: f32=0.;\n${Array.from({length:4},((VV,eV)=>function(VV){const eV=`
     frame.lights[LITE_LIGHT$ {
-        MM
+        VV
       }
       _SLOT] `;return`
     #ifdef LIGHT$ {
-      MM
+      VV
     }\
     nvar diffuse$ {
-      MM
+      VV
     }: vec4f = $ {
-      rM
+      eV
     }.vLightDiffuse;\
     n #define CUSTOM_LIGHT$ {
-      MM
+      VV
     }
     _COLOR\ ninfo = computeLighting(viewDirectionW, normalW, $ {
-      rM
+      eV
     }.vLightData, diffuse$ {
-      MM
+      VV
     }.rgb, $ {
-      rM
+      eV
     }.vLightSpecular.rgb, diffuse$ {
-      MM
+      VV
     }.a, glossiness);\
     nshadow = 1.;\
     naggShadow += shadow;\
     nnumLights += 1.0;\
     ndiffuseBase += info.diffuse * shadow;\
-    n #endif`}(rM))).join("\n")}\naggShadow=aggShadow/numLights;var refractionColor: vec4f= vec4f(0.,0.,0.,1.);\nvar reflectionColor: vec4f= vec4f(0.,0.,0.,1.);\n#ifdef REFLECTION\nvar vReflectionUVW: vec3f=computeReflectionCoords( vec4f(fragmentInputs.vPositionW,1.0),normalW);\n#ifdef REFLECTIONMAP_OPPOSITEZ\nvReflectionUVW=vec3f(vReflectionUVW.x,vReflectionUVW.y,vReflectionUVW.z*-1.0);\n#endif\n#ifdef ROUGHNESS\nvar bias: f32=uniforms.vReflectionInfos.y;\nreflectionColor=textureSampleLevel(reflectionCubeSampler,reflectionCubeSamplerSampler,vReflectionUVW,bias);\n#else\nreflectionColor=textureSample(reflectionCubeSampler,reflectionCubeSamplerSampler,vReflectionUVW);\n#endif\n#ifdef LITE_REFLECTION_LUMINANCE\nreflectionColor=vec4f(reflectionColor.rrr,1.0);\n#endif\n#ifdef RGBDREFLECTION\nreflectionColor=vec4f(fromRGBD(reflectionColor),reflectionColor.a);\n#endif\n#ifdef IS_REFLECTION_LINEAR\nreflectionColor=vec4f(toGammaSpaceVec3(reflectionColor.rgb),reflectionColor.a);\n#endif\nreflectionColor=vec4f(reflectionColor.rgb*uniforms.vReflectionInfos.x,reflectionColor.a);\n#endif\n#ifdef OPACITY\nvar opacityMap: vec4f=TEXRD(opacitySampler,opacitySamplerSampler,fragmentInputs.vOpacityUV+uvOffset);\n#ifdef OPACITYRGB\nopacityMap=vec4f(opacityMap.rgb* vec3f(0.3,0.59,0.11),opacityMap.a);alpha*=(opacityMap.x+opacityMap.y+opacityMap.z)* uniforms.vOpacityInfos.y;\n#else\nalpha*=opacityMap.a*uniforms.vOpacityInfos.y;\n#endif\n#endif\n#if defined(VERTEXALPHA) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nalpha*=fragmentInputs.vColor.a;\n#endif\n#ifdef ALPHATEST\n#ifdef ALPHATEST_AFTERALLALPHACOMPUTATIONS\nif (alpha<uniforms.alphaCutOff) {discard;}\n#endif\n#ifndef ALPHABLEND\nalpha=1.0;\n#endif\n#endif\nvar emissiveColor: vec3f=uniforms.vEmissiveColor;\n#ifdef EMISSIVE\nemissiveColor+=TEXRD(emissiveSampler,emissiveSamplerSampler,fragmentInputs.vEmissiveUV+uvOffset).rgb*uniforms.vEmissiveInfos.y;\n#endif\n#ifdef EMISSIVEASILLUMINATION\nvar finalDiffuse: vec3f=clamp(diffuseBase*diffuseColor+uniforms.vAmbientColor,vec3f(0.0),vec3f(1.0))*baseColor.rgb;\n#else\n#ifdef LINKEMISSIVEWITHDIFFUSE\nvar finalDiffuse: vec3f=clamp((diffuseBase+emissiveColor)*diffuseColor+uniforms.vAmbientColor,vec3f(0.0),vec3f(1.0))*baseColor.rgb;\n#else\nvar finalDiffuse: vec3f=clamp(diffuseBase*diffuseColor+emissiveColor+uniforms.vAmbientColor,vec3f(0.0),vec3f(1.0))*baseColor.rgb;\n#endif\n#endif\nvar finalSpecular: vec3f= vec3f(0.0);\n#ifdef REFLECTIONOVERALPHA\nalpha=clamp(alpha+dot(reflectionColor.rgb, vec3f(0.3,0.59,0.11)),0.0,1.0);\n#endif\n#ifdef EMISSIVEASILLUMINATION\nvar color: vec4f= vec4f(clamp(finalDiffuse*baseAmbientColor+finalSpecular+reflectionColor.rgb+emissiveColor+refractionColor.rgb,vec3f(0.0),vec3f(1.0)),alpha);\n#else\nvar color: vec4f= vec4f(finalDiffuse*baseAmbientColor+finalSpecular+reflectionColor.rgb+refractionColor.rgb,alpha);\n#endif\n#define CUSTOM_FRAGMENT_BEFORE_FOG\ncolor=vec4f(max(color.rgb,vec3f(0.)),color.a);\n#ifdef FOG\nvar fog: f32=CalcFogFactor();\ncolor= vec4f(mix(frame.vFogColor,color.rgb,fog),color.a);\n#endif\ncolor=vec4f(color.rgb,color.a*mesh.visibility);\n#ifdef PREMULTIPLYALPHA\ncolor=vec4f(color.rgb*color.a, color.a);\n#endif\n#define CUSTOM_FRAGMENT_BEFORE_FRAGCOLOR\nfragmentOutputs.color=color;\n#define CUSTOM_FRAGMENT_MAIN_END\nreturn fragmentOutputs;\n}\n`, GS = /^([gimus]+)!/, CS = new Set;
+    n #endif`}(eV))).join("\n")}\naggShadow=aggShadow/numLights;var refractionColor: vec4f= vec4f(0.,0.,0.,1.);\nvar reflectionColor: vec4f= vec4f(0.,0.,0.,1.);\n#ifdef REFLECTION\nvar vReflectionUVW: vec3f=computeReflectionCoords( vec4f(fragmentInputs.vPositionW,1.0),normalW);\n#ifdef REFLECTIONMAP_OPPOSITEZ\nvReflectionUVW=vec3f(vReflectionUVW.x,vReflectionUVW.y,vReflectionUVW.z*-1.0);\n#endif\n#ifdef ROUGHNESS\nvar bias: f32=uniforms.vReflectionInfos.y;\nreflectionColor=textureSampleLevel(reflectionCubeSampler,reflectionCubeSamplerSampler,vReflectionUVW,bias);\n#else\nreflectionColor=textureSample(reflectionCubeSampler,reflectionCubeSamplerSampler,vReflectionUVW);\n#endif\n#ifdef LITE_REFLECTION_LUMINANCE\nreflectionColor=vec4f(reflectionColor.rrr,1.0);\n#endif\n#ifdef RGBDREFLECTION\nreflectionColor=vec4f(fromRGBD(reflectionColor),reflectionColor.a);\n#endif\n#ifdef IS_REFLECTION_LINEAR\nreflectionColor=vec4f(toGammaSpaceVec3(reflectionColor.rgb),reflectionColor.a);\n#endif\nreflectionColor=vec4f(reflectionColor.rgb*uniforms.vReflectionInfos.x,reflectionColor.a);\n#endif\n#ifdef OPACITY\nvar opacityMap: vec4f=TEXRD(opacitySampler,opacitySamplerSampler,fragmentInputs.vOpacityUV+uvOffset);\n#ifdef OPACITYRGB\nopacityMap=vec4f(opacityMap.rgb* vec3f(0.3,0.59,0.11),opacityMap.a);alpha*=(opacityMap.x+opacityMap.y+opacityMap.z)* uniforms.vOpacityInfos.y;\n#else\nalpha*=opacityMap.a*uniforms.vOpacityInfos.y;\n#endif\n#endif\n#if defined(VERTEXALPHA) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nalpha*=fragmentInputs.vColor.a;\n#endif\n#ifdef ALPHATEST\n#ifdef ALPHATEST_AFTERALLALPHACOMPUTATIONS\nif (alpha<uniforms.alphaCutOff) {discard;}\n#endif\n#ifndef ALPHABLEND\nalpha=1.0;\n#endif\n#endif\nvar emissiveColor: vec3f=uniforms.vEmissiveColor;\n#ifdef EMISSIVE\nemissiveColor+=TEXRD(emissiveSampler,emissiveSamplerSampler,fragmentInputs.vEmissiveUV+uvOffset).rgb*uniforms.vEmissiveInfos.y;\n#endif\n#ifdef EMISSIVEASILLUMINATION\nvar finalDiffuse: vec3f=clamp(diffuseBase*diffuseColor+uniforms.vAmbientColor,vec3f(0.0),vec3f(1.0))*baseColor.rgb;\n#else\n#ifdef LINKEMISSIVEWITHDIFFUSE\nvar finalDiffuse: vec3f=clamp((diffuseBase+emissiveColor)*diffuseColor+uniforms.vAmbientColor,vec3f(0.0),vec3f(1.0))*baseColor.rgb;\n#else\nvar finalDiffuse: vec3f=clamp(diffuseBase*diffuseColor+emissiveColor+uniforms.vAmbientColor,vec3f(0.0),vec3f(1.0))*baseColor.rgb;\n#endif\n#endif\nvar finalSpecular: vec3f= vec3f(0.0);\n#ifdef REFLECTIONOVERALPHA\nalpha=clamp(alpha+dot(reflectionColor.rgb, vec3f(0.3,0.59,0.11)),0.0,1.0);\n#endif\n#ifdef EMISSIVEASILLUMINATION\nvar color: vec4f= vec4f(clamp(finalDiffuse*baseAmbientColor+finalSpecular+reflectionColor.rgb+emissiveColor+refractionColor.rgb,vec3f(0.0),vec3f(1.0)),alpha);\n#else\nvar color: vec4f= vec4f(finalDiffuse*baseAmbientColor+finalSpecular+reflectionColor.rgb+refractionColor.rgb,alpha);\n#endif\n#define CUSTOM_FRAGMENT_BEFORE_FOG\ncolor=vec4f(max(color.rgb,vec3f(0.)),color.a);\n#ifdef FOG\nvar fog: f32=CalcFogFactor();\ncolor= vec4f(mix(frame.vFogColor,color.rgb,fog),color.a);\n#endif\ncolor=vec4f(color.rgb,color.a*mesh.visibility);\n#ifdef PREMULTIPLYALPHA\ncolor=vec4f(color.rgb*color.a, color.a);\n#endif\n#define CUSTOM_FRAGMENT_BEFORE_FRAGCOLOR\nfragmentOutputs.color=color;\n#define CUSTOM_FRAGMENT_MAIN_END\nreturn fragmentOutputs;\n}\n`, qY = /^([gimus]+)!/, tY = new Set;
 
-    function eS(MM) {
-      CS.has(MM) || (CS.add(MM), console.warn(`Lite: no place for plugin code at ${MM} in the standard shader: it is left out`))
+    function FY(VV) {
+      tY.has(VV) || (tY.add(VV), console.warn(`Lite: no place for plugin code at ${VV} in the standard shader: it is left out`))
     }
 
-    function bS(MM, rM) {
-      let iM = MM;
-      const OM = new Map;
-      for (const [jM, aM] of rM) {
-        var SM;
-        OM.set(jM, `${null!==(SM=OM.get(jM))&&void 0!==SM?SM:""}${aM}\n`)
+    function TY(VV, eV) {
+      let xV = VV;
+      const JV = new Map;
+      for (const [UV, yV] of eV) {
+        var YV;
+        JV.set(UV, `${null!==(YV=JV.get(UV))&&void 0!==YV?YV:""}${yV}\n`)
       }
-      for (const [jM, aM] of OM) {
-        if (!jM.startsWith("!")) {
-          const MM = `#define ${jM}`;
-          if (!iM.includes(MM)) {
-            eS(jM);
+      for (const [UV, yV] of JV) {
+        if (!UV.startsWith("!")) {
+          const VV = `#define ${UV}`;
+          if (!xV.includes(VV)) {
+            FY(UV);
             continue
           }
-          iM = iM.replace(MM, (() => `\n${aM}\n${MM}`));
+          xV = xV.replace(VV, (() => `\n${yV}\n${VV}`));
           continue
         }
-        let MM = jM.substring(1),
-          rM = "g";
-        if (MM.startsWith("!")) rM = "", MM = MM.substring(1);
+        let VV = UV.substring(1),
+          eV = "g";
+        if (VV.startsWith("!")) eV = "", VV = VV.substring(1);
         else {
-          const iM = GS.exec(MM);
-          iM && (rM = iM[1], MM = MM.substring(rM.length + 1))
+          const xV = qY.exec(VV);
+          xV && (eV = xV[1], VV = VV.substring(eV.length + 1))
         }
-        const OM = new RegExp(MM, rM.includes("g") ? rM : `${rM}g`);
-        let SM = OM.exec(iM);
-        for (SM || eS(jM); SM;) {
-          const MM = SM,
-            rM = aM.replace(/\$(\d+)/g, ((rM, iM) => Number(iM) < MM.length ? MM[Number(iM)] : ""));
-          iM = iM.substring(0, MM.index) + rM + iM.substring(MM.index + MM[0].length), OM.lastIndex = MM.index + rM.length, SM = OM.exec(iM)
+        const JV = new RegExp(VV, eV.includes("g") ? eV : `${eV}g`);
+        let YV = JV.exec(xV);
+        for (YV || FY(UV); YV;) {
+          const VV = YV,
+            eV = yV.replace(/\$(\d+)/g, ((eV, xV) => Number(xV) < VV.length ? VV[Number(xV)] : ""));
+          xV = xV.substring(0, VV.index) + eV + xV.substring(VV.index + VV[0].length), JV.lastIndex = VV.index + eV.length, YV = JV.exec(xV)
         }
       }
-      return iM
+      return xV
     }
-    const wS = /\b(?:(attribute|uniform)|(?:(flat|linear|perspective)\s+)?(?:(center|centroid|sample)\s+)?varying)\s+(\w+)\s*:\s*([\w<>, ]+?)\s*;/g,
-      tS = /\bvar\s+(\w+)\s*:\s*sampler\s*;/g,
-      gS = /\bvar\s+(\w+)\s*:\s*(texture_\w+(?:<\s*f32\s*>)?)\s*;/g;
+    const PY = /\b(?:(attribute|uniform)|(?:(flat|linear|perspective)\s+)?(?:(center|centroid|sample)\s+)?varying)\s+(\w+)\s*:\s*([\w<>, ]+?)\s*;/g,
+      AY = /\bvar\s+(\w+)\s*:\s*sampler\s*;/g,
+      NY = /\bvar\s+(\w+)\s*:\s*(texture_\w+(?:<\s*f32\s*>)?)\s*;/g;
 
-    function uS(MM) {
-      const rM = {
+    function XY(VV) {
+      const eV = {
         attributes: [],
         varyings: [],
         uniforms: [],
@@ -1898,421 +1898,421 @@ export const modules = {
         samplers: new Set,
         body: ""
       };
-      let iM = MM.replace(wS, ((MM, iM, OM, SM, jM, aM) => ("attribute" === iM ? rM.attributes.push({
-        name: jM,
-        type: aM
-      }) : void 0 === iM ? rM.varyings.push({
-        name: jM,
-        type: aM,
-        interpolation: pS(aM, OM, SM)
-      }) : rM.uniforms.push({
-        name: jM,
-        type: RS(aM)
+      let xV = VV.replace(PY, ((VV, xV, JV, YV, UV, yV) => ("attribute" === xV ? eV.attributes.push({
+        name: UV,
+        type: yV
+      }) : void 0 === xV ? eV.varyings.push({
+        name: UV,
+        type: yV,
+        interpolation: zY(yV, JV, YV)
+      }) : eV.uniforms.push({
+        name: UV,
+        type: MY(yV)
       }), "")));
-      return iM = iM.replace(tS, ((MM, iM) => (rM.samplers.add(iM), ""))), iM = iM.replace(gS, ((MM, iM, OM) => (rM.textures.push({
-        name: iM,
-        type: OM
-      }), ""))), rM.body = iM, rM
+      return xV = xV.replace(AY, ((VV, xV) => (eV.samplers.add(xV), ""))), xV = xV.replace(NY, ((VV, xV, JV) => (eV.textures.push({
+        name: xV,
+        type: JV
+      }), ""))), eV.body = xV, eV
     }
 
-    function RS(MM) {
-      const rM = MM.replace(/\s+/g, "").replace("vec2<f32>", "vec2f").replace("vec3<f32>", "vec3f").replace("vec4<f32>", "vec4f").replace("mat4x4<f32>", "mat4x4f"),
-        iM = new Map([
+    function MY(VV) {
+      const eV = VV.replace(/\s+/g, "").replace("vec2<f32>", "vec2f").replace("vec3<f32>", "vec3f").replace("vec4<f32>", "vec4f").replace("mat4x4<f32>", "mat4x4f"),
+        xV = new Map([
           ["f32", "float"],
           ["vec2f", "vec2"],
           ["vec3f", "vec3"],
           ["vec4f", "vec4"],
           ["mat4x4f", "mat4"]
-        ]).get(rM);
-      if (!iM) throw new Error(`Lite: unsupported uniform type ${MM}`);
-      return iM
+        ]).get(eV);
+      if (!xV) throw new Error(`Lite: unsupported uniform type ${VV}`);
+      return xV
     }
 
-    function pS(MM, rM, iM) {
-      return void 0 === rM && void 0 === iM ? /^(u32|i32|vec\du|vec\di|vec\d<[ui]32>)$/.test(MM.replace(/\s+/g, "")) ? "@interpolate(flat) " : "" : "flat" === rM ? "@interpolate(flat) " : `@interpolate(${null!==rM&&void 0!==rM?rM:"perspective"}, ${null!==iM&&void 0!==iM?iM:"center"}) `
+    function zY(VV, eV, xV) {
+      return void 0 === eV && void 0 === xV ? /^(u32|i32|vec\du|vec\di|vec\d<[ui]32>)$/.test(VV.replace(/\s+/g, "")) ? "@interpolate(flat) " : "" : "flat" === eV ? "@interpolate(flat) " : `@interpolate(${null!==eV&&void 0!==eV?eV:"perspective"}, ${null!==xV&&void 0!==xV?xV:"center"}) `
     }
 
-    function WS(MM) {
-      return ZS({
-        defines: MM.defines,
-        vertex: bS(ES, MM.vertexCode),
-        fragment: bS(US, MM.fragmentCode),
-        members: [...SS, ...MM.defines.has("OPACITY") ? jS : [], ...MM.defines.has("EMISSIVE") ? aS : [], ...MM.pluginUniforms],
+    function GY(VV) {
+      return DY({
+        defines: VV.defines,
+        vertex: TY(BY, VV.vertexCode),
+        fragment: TY(jY, VV.fragmentCode),
+        members: [...xY, ...VV.defines.has("OPACITY") ? JY : [], ...VV.defines.has("EMISSIVE") ? YY : [], ...VV.pluginUniforms],
         structName: "StandardUniforms"
       })
     }
 
-    function sS(MM) {
-      const rM = MM.replace(/\breturn\s+fragmentOutputs\s*;/g, "return canvasOutputs();");
-      if (rM === MM) throw new Error("Lite: fragment main has no return");
-      return rM
+    function WY(VV) {
+      const eV = VV.replace(/\breturn\s+fragmentOutputs\s*;/g, "return canvasOutputs();");
+      if (eV === VV) throw new Error("Lite: fragment main has no return");
+      return eV
     }
-    const DS = `\nattribute position: vec3f;\n#ifdef VERTEXCOLOR\nattribute color: vec4f;\n#endif\n${HS}\n#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nvarying vColor: vec4f;\n#endif\n#ifdef FOG\nvarying vFogDistance: vec3f;\n#endif\n@vertex\nfn main(input : VertexInputs)->FragmentInputs {\nvertexInputs = input;\n#ifdef VERTEXCOLOR\nvar colorUpdated: vec4f=vertexInputs.color;\n#endif\n${hS}\nvar worldPos: vec4f=finalWorld*vec4f(vertexInputs.position,1.0);\nvertexOutputs.position=scene.viewProjection*worldPos;\n#ifdef FOG\nvertexOutputs.vFogDistance=(scene.view*worldPos).xyz;\n#endif\n${JS}\n${dS}\n}\n`,
-      kS = `\nuniform color: vec4f;\n#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nvarying vColor: vec4f;\n#endif\n#ifdef FOG\nvarying vFogDistance: vec3f;\n#endif\n${yS}\n@fragment\nfn main(input: FragmentInputs)->FragmentOutputs {\nfragmentInputs = input;\n#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nvar color: vec4f=fragmentInputs.vColor;\n#else\nvar color: vec4f=uniforms.color;\n#endif\n#ifdef FOG\ncolor=vec4f(mix(frame.vFogColor,color.rgb,CalcFogFactor()),color.a);\n#endif\nfragmentOutputs.color=color;\nreturn fragmentOutputs;\n}\n`;
+    const RY = `\nattribute position: vec3f;\n#ifdef VERTEXCOLOR\nattribute color: vec4f;\n#endif\n${ZY}\n#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nvarying vColor: vec4f;\n#endif\n#ifdef FOG\nvarying vFogDistance: vec3f;\n#endif\n@vertex\nfn main(input : VertexInputs)->FragmentInputs {\nvertexInputs = input;\n#ifdef VERTEXCOLOR\nvar colorUpdated: vec4f=vertexInputs.color;\n#endif\n${vY}\nvar worldPos: vec4f=finalWorld*vec4f(vertexInputs.position,1.0);\nvertexOutputs.position=scene.viewProjection*worldPos;\n#ifdef FOG\nvertexOutputs.vFogDistance=(scene.view*worldPos).xyz;\n#endif\n${rY}\n${kY}\n}\n`,
+      gY = `\nuniform color: vec4f;\n#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nvarying vColor: vec4f;\n#endif\n#ifdef FOG\nvarying vFogDistance: vec3f;\n#endif\n${bY}\n@fragment\nfn main(input: FragmentInputs)->FragmentOutputs {\nfragmentInputs = input;\n#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nvar color: vec4f=fragmentInputs.vColor;\n#else\nvar color: vec4f=uniforms.color;\n#endif\n#ifdef FOG\ncolor=vec4f(mix(frame.vFogColor,color.rgb,CalcFogFactor()),color.a);\n#endif\nfragmentOutputs.color=color;\nreturn fragmentOutputs;\n}\n`;
 
-    function ZS(MM) {
-      const rM = MM.defines,
-        iM = uS(vr(MM.vertex, rM)),
-        OM = uS(vr(MM.fragment, rM)),
-        SM = new Map;
-      for (const EM of [...iM.varyings, ...OM.varyings]) SM.has(EM.name) || SM.set(EM.name, EM);
-      const jM = [...SM.values()].map(((MM, rM) => `\t@location(${rM}) ${MM.interpolation}${MM.name}: ${MM.type},`)),
-        aM = [...MM.members];
-      for (const EM of [...iM.uniforms, ...OM.uniforms]) aM.some((MM => MM.name === EM.name)) || aM.push(EM);
-      const PM = OS(MM.structName, aM),
-        nM = [],
-        QM = [];
-      let zM = 1;
-      const LM = new Set;
-      for (const EM of [...iM.textures, ...OM.textures]) {
-        if (LM.has(EM.name)) continue;
-        LM.add(EM.name);
-        const MM = `${EM.name}Sampler`,
-          rM = zM++,
-          iM = zM++,
-          OM = EM.type.startsWith("texture_2d_array") ? "2d-array" : EM.type.startsWith("texture_cube") ? "cube" : "2d";
-        nM.push({
-          name: EM.name,
-          binding: rM,
-          samplerBinding: iM,
-          dimension: OM
-        }), QM.push(`@group(2) @binding(${rM}) var ${EM.name}: ${EM.type};`), QM.push(`@group(2) @binding(${iM}) var ${MM}: sampler;`)
+    function DY(VV) {
+      const eV = VV.defines,
+        xV = XY(fe(VV.vertex, eV)),
+        JV = XY(fe(VV.fragment, eV)),
+        YV = new Map;
+      for (const qV of [...xV.varyings, ...JV.varyings]) YV.has(qV.name) || YV.set(qV.name, qV);
+      const UV = [...YV.values()].map(((VV, eV) => `\t@location(${eV}) ${VV.interpolation}${VV.name}: ${VV.type},`)),
+        yV = [...VV.members];
+      for (const qV of [...xV.uniforms, ...JV.uniforms]) yV.some((VV => VV.name === qV.name)) || yV.push(qV);
+      const pV = eY(VV.structName, yV),
+        QV = [],
+        nV = [];
+      let wV = 1;
+      const ZV = new Set;
+      for (const qV of [...xV.textures, ...JV.textures]) {
+        if (ZV.has(qV.name)) continue;
+        ZV.add(qV.name);
+        const VV = `${qV.name}Sampler`,
+          eV = wV++,
+          xV = wV++,
+          JV = qV.type.startsWith("texture_2d_array") ? "2d-array" : qV.type.startsWith("texture_cube") ? "cube" : "2d";
+        QV.push({
+          name: qV.name,
+          binding: eV,
+          samplerBinding: xV,
+          dimension: JV
+        }), nV.push(`@group(2) @binding(${eV}) var ${qV.name}: ${qV.type};`), nV.push(`@group(2) @binding(${xV}) var ${VV}: sampler;`)
       }
-      for (const EM of [...iM.samplers, ...OM.samplers])
-        if (!LM.has(EM.replace(/Sampler$/, ""))) throw new Error(`Lite: sampler ${EM} has no texture`);
-      const mM = [NO, mS, PM.wgsl, `@group(2) @binding(0) var<uniform> uniforms: ${MM.structName};`, ...QM].join("\n"),
-        HM = iM.attributes,
-        hM = ["struct VertexInputs {", "\t@builtin(vertex_index) vertexIndex: u32,", "\t@builtin(instance_index) instanceIndex: u32,", ...iM.attributes.map(((MM, rM) => `\t@location(${rM}) ${MM.name}: ${MM.type},`)), "}", "var<private> vertexInputs: VertexInputs;"].join("\n"),
-        JM = ["struct FragmentInputs {", "\t@builtin(position) position: vec4f,", ...jM, "}", "var<private> vertexOutputs: FragmentInputs;"].join("\n"),
-        dM = ["struct FragmentInputs {", "\t@builtin(position) position: vec4f,", ...OM.body.includes("fragmentInputs.frontFacing") ? ["\t@builtin(front_facing) frontFacing: bool,"] : [], ...jM, "}", "var<private> fragmentInputs: FragmentInputs;", "struct FragmentOutputs {", "\t@location(0) color: vec4f,", "}", "var<private> fragmentOutputs: FragmentOutputs;", dr, "fn canvasOutputs() -> FragmentOutputs {", `\tif (${Jr}) {`, "\t\tfragmentOutputs.color.a = 1.0;", "\t}", "\treturn fragmentOutputs;", "}"].join("\n"),
-        yM = MM => {
-          for (const rM of PM.stridedArrays) MM = MM.replace(new RegExp(`\\b${rM}\\s*\\[(.*?)\\]`, "g"), `${rM}[$1].el`);
-          return MM
+      for (const qV of [...xV.samplers, ...JV.samplers])
+        if (!ZV.has(qV.replace(/Sampler$/, ""))) throw new Error(`Lite: sampler ${qV} has no texture`);
+      const vV = [oJ, wY, pV.wgsl, `@group(2) @binding(0) var<uniform> uniforms: ${VV.structName};`, ...nV].join("\n"),
+        rV = xV.attributes,
+        kV = ["struct VertexInputs {", "\t@builtin(vertex_index) vertexIndex: u32,", "\t@builtin(instance_index) instanceIndex: u32,", ...xV.attributes.map(((VV, eV) => `\t@location(${eV}) ${VV.name}: ${VV.type},`)), "}", "var<private> vertexInputs: VertexInputs;"].join("\n"),
+        bV = ["struct FragmentInputs {", "\t@builtin(position) position: vec4f,", ...UV, "}", "var<private> vertexOutputs: FragmentInputs;"].join("\n"),
+        EV = ["struct FragmentInputs {", "\t@builtin(position) position: vec4f,", ...JV.body.includes("fragmentInputs.frontFacing") ? ["\t@builtin(front_facing) frontFacing: bool,"] : [], ...UV, "}", "var<private> fragmentInputs: FragmentInputs;", "struct FragmentOutputs {", "\t@location(0) color: vec4f,", "}", "var<private> fragmentOutputs: FragmentOutputs;", Ee, "fn canvasOutputs() -> FragmentOutputs {", `\tif (${be}) {`, "\t\tfragmentOutputs.color.a = 1.0;", "\t}", "\treturn fragmentOutputs;", "}"].join("\n"),
+        BV = VV => {
+          for (const eV of pV.stridedArrays) VV = VV.replace(new RegExp(`\\b${eV}\\s*\\[(.*?)\\]`, "g"), `${eV}[$1].el`);
+          return VV
         };
       return {
-        vertex: `${mM}\n${hM}\n${JM}\n${yM(iM.body)}`,
-        fragment: `diagnostic(off, derivative_uniformity);\n${mM}\n${dM}\n${sS((lM=yM(OM.body),lM.includes("fragmentInputs.position")?lM.replace("fragmentInputs = input;","fragmentInputs = input;\nfragmentInputs.position.y = frame.outputHeight - fragmentInputs.position.y;"):lM))}`,
-        attributes: HM,
-        material: PM,
-        textures: nM
+        vertex: `${vV}\n${kV}\n${bV}\n${BV(xV.body)}`,
+        fragment: `diagnostic(off, derivative_uniformity);\n${vV}\n${EV}\n${WY((jV=BV(JV.body),jV.includes("fragmentInputs.position")?jV.replace("fragmentInputs = input;","fragmentInputs = input;\nfragmentInputs.position.y = frame.outputHeight - fragmentInputs.position.y;"):jV))}`,
+        attributes: rV,
+        material: pV,
+        textures: QV
       };
-      var lM
+      var jV
     }
-    const oS = [6, 4, 5, 7, 6, 5, 0, 2, 3, 1, 0, 3, 5, 1, 3, 7, 5, 3, 0, 4, 6, 2, 0, 6, 3, 2, 6, 7, 3, 6, 0, 1, 5, 4, 0, 5],
-      fS = MM => ({
-        name: MM,
+    const iY = [6, 4, 5, 7, 6, 5, 0, 2, 3, 1, 0, 3, 5, 1, 3, 7, 5, 3, 0, 4, 6, 2, 0, 6, 3, 2, 6, 7, 3, 6, 0, 1, 5, 4, 0, 5],
+      CY = VV => ({
+        name: VV,
         type: "vec3"
       }),
-      YS = MM => ({
-        name: MM,
+      aY = VV => ({
+        name: VV,
         type: "float"
       }),
-      NS = OS("EarthSkyUniforms", [fS("viewFrom"), YS("exposureScale"), fS("zenithOffset"), YS("fogOn"), fS("up"), YS("ditherOn"), fS("sun"), YS("turbidity"), fS("tint"), YS("rayleigh"), fS("sunDir"), YS("mieStrength"), fS("inScatterR"), YS("mieFocus"), fS("inScatterM"), YS("sunE"), fS("extinctionBeta"), YS("sunsetMix"), YS("mieScale"), YS("mieBase"), YS("mieSlope"), YS("sunDiscE"), YS("exposure")]),
-      AS = `${NO}\n${mS}\n${NS.wgsl}\n@group(2) @binding(0) var<uniform> sky: EarthSkyUniforms;\nstruct EarthSkyVarying {\n\t@builtin(position) position: vec4f,\n\t@location(0) worldPosition: vec3f,\n\t@location(1) fogDistance: vec3f,\n\t@location(2) tint: vec3f,\n}\n`,
-      xS = `\n@vertex\nfn main(@builtin(vertex_index) index: u32) -> EarthSkyVarying {\n\tlet corners = array<u32, 36>(${oS.join(", ")});\n\tlet corner = corners[index];\n\tlet position = vec3f(f32(corner & 1u), f32((corner >> 1u) & 1u), f32(corner >> 2u)) - 0.5;\n\tvar out: EarthSkyVarying;\n\tout.position = liteWorldLayer(scene.viewProjection * mesh.world * vec4f(position, 1.0));\n\tlet worldPosition = mesh.world * vec4f(position, 1.0);\n\tout.worldPosition = worldPosition.xyz;\n\tout.fogDistance = (scene.view * worldPosition).xyz;\n\tout.tint = sky.tint;\n\treturn out;\n}\n`,
-      vS = `\n${dr}\nconst PI: f32 = 3.141592653589793238462643383279502884197169;\nconst SUN_DISC_COS: f32 = 0.999956676946448443553574619906976478926848692873900859324;\n${Object.entries(Yr).map((MM=>{let[rM,iM]=MM;return`const TONE_${rM}: f32 = ${iM};`})).join(" ")}\n\n// The rest of main's prelude, as it was, for sky pack overrides that use it; the default calls none of it\nconst WAVELENGTHS: vec3f = vec3f(680E-9, 550E-9, 450E-9);\nconst MIE_K: vec3f = vec3f(0.686, 0.678, 0.666);\nconst MIE_V: f32 = 4.0;\nconst RAYLEIGH_ZENITH_LENGTH: f32 = 8.4E3;\nconst MIE_ZENITH_LENGTH: f32 = 1.25E3;\nconst SUN_INTENSITY: f32 = 1000.0;\nconst SUN_CUTOFF: f32 = PI / 1.95;\nconst SUN_STEEPNESS: f32 = 1.5;\nconst TONE_WHITE: f32 = 1000.0;\n\nfn rayleighBeta() -> vec3f { return vec3f(0.0005) / vec3f(94, 40, 18); }\n\nfn rayleighPhase(cosTheta: f32) -> f32 { return (3.0 / (16.0 * PI)) * (1.0 + pow(cosTheta, 2.0)); }\n\nfn mieBeta(wavelengths: vec3f, k: vec3f, turbidity: f32) -> vec3f {\n\tvar c: f32 = (0.2 * turbidity) * 10E-18;\n\treturn 0.434 * c * PI * pow((2.0 * PI) / wavelengths, vec3f(MIE_V - 2.0)) * k;\n}\n\nfn henyeyGreenstein(cosTheta: f32, g: f32) -> f32 {\n\treturn (1.0 / (4.0 * PI)) * ((1.0 - pow(g, 2.0)) / pow(1.0 - 2.0 * g * cosTheta + pow(g, 2.0), 1.5));\n}\n\nfn sunIntensity(zenithAngleCos: f32) -> f32 {\n\treturn SUN_INTENSITY * max(0.0, 1.0 - exp((-(SUN_CUTOFF - acos(zenithAngleCos)) / SUN_STEEPNESS)));\n}\n\n// A sky shader pack can replace earthSkyRadiance (the scattering, over EarthSkyInput) or earthSkyColour (the tonemap) by\n// name. The prelude, EarthSkyInput and both signatures are main's, so a pack written against main compiles unchanged.\nstruct EarthSkyInput {\n\tview: vec3f, zenithView: vec3f, sun: vec3f, up: vec3f,\n\tturbidity: f32, rayleigh: f32, mieStrength: f32, mieFocus: f32,\n}\n\nfn filmic(x: vec3f) -> vec3f {\n\treturn ((x * (TONE_A * x + TONE_C * TONE_B) + TONE_D * TONE_E) / (x * (TONE_A * x + TONE_B) + TONE_D * TONE_F)) - TONE_E / TONE_F;\n}\n\n// The default reads input's view, zenithView and up, and the terms the CPU precomputes from the frame's uniforms\n// (earthSkyDerived.ts) straight from sky: they already include input's sun, turbidity, rayleigh, mieStrength and mieFocus.\nfn earthSkyRadiance(input: EarthSkyInput) -> vec3f {\n\t// cos(acos(x)) is x: the Rayleigh and Mie optical lengths share this denominator\n\tlet cosZenith = max(0.0, dot(input.up, input.zenithView));\n\tlet zenithAngle = acos(cosZenith);\n\tlet opticalLength = 1.0 / (cosZenith + 0.15 * pow(93.885 - ((zenithAngle * 180.0) / PI), -1.253));\n\tlet extinction = exp(-sky.extinctionBeta * opticalLength);\n\tlet cosTheta = dot(input.view, sky.sunDir);\n\tlet rCos = cosTheta * 0.5 + 0.5;\n\tlet rPhase = (3.0 / (16.0 * PI)) * (1.0 + rCos * rCos);\n\tlet mBase = sky.mieBase - sky.mieSlope * cosTheta;\n\tlet mPhase = sky.mieScale * inverseSqrt(mBase) / mBase;\n\tlet scattered = sky.inScatterR * rPhase + sky.inScatterM * mPhase;\n\tlet lit = scattered * (1.0 - extinction);\n\tlet inScattered = lit * sqrt(lit) * mix(vec3f(1.0), sqrt(scattered * extinction), vec3f(sky.sunsetMix));\n\tlet sunDisc = smoothstep(SUN_DISC_COS, SUN_DISC_COS + 0.00002, cosTheta);\n\tlet night = (0.1 + sky.sunDiscE * sunDisc) * extinction;\n\treturn (inScattered + night) * 0.04 + vec3f(0.0, 0.001, 0.0025) * 0.3;\n}\n\n// The contract for overrides: exposure is SkyMaterial's luminance (main passes sky.exposure), as Babylon's tonemap reads it.\n// The default tonemaps with the frame's precomputed sky.exposureScale, its log2(2 / exposure^4), written together with it.\nfn earthSkyColour(radiance: vec3f, exposure: f32) -> vec3f {\n\treturn filmic(sky.exposureScale * radiance) * ${Nr};\n}\n\nfn ditherOffset(seed: vec2f, variance: f32) -> f32 {\n\tlet rand: f32 = fract(sin(dot(seed.xy, vec2f(12.9898, 78.233))) * 43758.5453);\n\tlet normVariance: f32 = variance / 255.0;\n\treturn mix(-normVariance, normVariance, rand);\n}\n\nfn fogFactor(fromEye: vec3f) -> f32 {\n\tvar fogCoeff: f32 = 1.0;\n\tlet fogStart = frame.vFogInfos.y;\n\tlet fogEnd = frame.vFogInfos.z;\n\tlet fogDensity = frame.vFogInfos.w;\n\tlet dist = length(fromEye);\n\tif (3.0 == frame.vFogInfos.x) {\n\t\tfogCoeff = (fogEnd - dist) / (fogEnd - fogStart);\n\t} else if (1.0 == frame.vFogInfos.x) {\n\t\tfogCoeff = 1.0 / pow(2.71828, dist * fogDensity);\n\t} else if (2.0 == frame.vFogInfos.x) {\n\t\tfogCoeff = 1.0 / pow(2.71828, dist * dist * fogDensity * fogDensity);\n\t}\n\treturn clamp(fogCoeff, 0.0, 1.0);\n}\n\n@fragment\nfn main(input: EarthSkyVarying) -> @location(0) vec4f {\n\tlet toSky = input.worldPosition - sky.viewFrom;\n\tlet radiance = earthSkyRadiance(EarthSkyInput(normalize(toSky), normalize(toSky + sky.zenithOffset), sky.sun, sky.up, sky.turbidity, sky.rayleigh, sky.mieStrength, sky.mieFocus));\n\t// Parity: off, the dither and fog branches are skipped, as Babylon leaves them out with its defines; the dither reads the WebGL frag coord, as in Babylon\n\tvar dither = 0.0;\n\tif (sky.ditherOn != 0.0) { dither = ditherOffset(vec2f(input.position.x, frame.outputHeight - input.position.y), 0.5); }\n\tvar colour = clamp(vec4f(earthSkyColour(radiance, sky.exposure) * input.tint + dither, 1.0), vec4f(0.0), vec4f(1.0));\n\tif (sky.fogOn != 0.0) { colour = vec4f(mix(frame.vFogColor, colour.rgb, fogFactor(input.fogDistance)), colour.a); }\n\t// The canvas's alpha on the unblended pipeline it draws in (canvasFragment)\n\tif (${Jr}) { colour.a = 1.0; }\n\treturn colour;\n}\n`;
-    var FS = iM(38034);
-    const BS = new FS.sh,
-      XS = new FS.sh,
-      IS = new FS.Quaternion,
-      KS = new Float64Array(3),
-      qS = new class {
+      oY = eY("EarthSkyUniforms", [CY("viewFrom"), aY("exposureScale"), CY("zenithOffset"), aY("fogOn"), CY("up"), aY("ditherOn"), CY("sun"), aY("turbidity"), CY("tint"), aY("rayleigh"), CY("sunDir"), aY("mieStrength"), CY("inScatterR"), aY("mieFocus"), CY("inScatterM"), aY("sunE"), CY("extinctionBeta"), aY("sunsetMix"), aY("mieScale"), aY("mieBase"), aY("mieSlope"), aY("sunDiscE"), aY("exposure")]),
+      cY = `${oJ}\n${wY}\n${oY.wgsl}\n@group(2) @binding(0) var<uniform> sky: EarthSkyUniforms;\nstruct EarthSkyVarying {\n\t@builtin(position) position: vec4f,\n\t@location(0) worldPosition: vec3f,\n\t@location(1) fogDistance: vec3f,\n\t@location(2) tint: vec3f,\n}\n`,
+      hY = `\n@vertex\nfn main(@builtin(vertex_index) index: u32) -> EarthSkyVarying {\n\tlet corners = array<u32, 36>(${iY.join(", ")});\n\tlet corner = corners[index];\n\tlet position = vec3f(f32(corner & 1u), f32((corner >> 1u) & 1u), f32(corner >> 2u)) - 0.5;\n\tvar out: EarthSkyVarying;\n\tout.position = liteWorldLayer(scene.viewProjection * mesh.world * vec4f(position, 1.0));\n\tlet worldPosition = mesh.world * vec4f(position, 1.0);\n\tout.worldPosition = worldPosition.xyz;\n\tout.fogDistance = (scene.view * worldPosition).xyz;\n\tout.tint = sky.tint;\n\treturn out;\n}\n`,
+      lY = `\n${Ee}\nconst PI: f32 = 3.141592653589793238462643383279502884197169;\nconst SUN_DISC_COS: f32 = 0.999956676946448443553574619906976478926848692873900859324;\n${Object.entries(ce).map((VV=>{let[eV,xV]=VV;return`const TONE_${eV}: f32 = ${xV};`})).join(" ")}\n\n// The rest of main's prelude, as it was, for sky pack overrides that use it; the default calls none of it\nconst WAVELENGTHS: vec3f = vec3f(680E-9, 550E-9, 450E-9);\nconst MIE_K: vec3f = vec3f(0.686, 0.678, 0.666);\nconst MIE_V: f32 = 4.0;\nconst RAYLEIGH_ZENITH_LENGTH: f32 = 8.4E3;\nconst MIE_ZENITH_LENGTH: f32 = 1.25E3;\nconst SUN_INTENSITY: f32 = 1000.0;\nconst SUN_CUTOFF: f32 = PI / 1.95;\nconst SUN_STEEPNESS: f32 = 1.5;\nconst TONE_WHITE: f32 = 1000.0;\n\nfn rayleighBeta() -> vec3f { return vec3f(0.0005) / vec3f(94, 40, 18); }\n\nfn rayleighPhase(cosTheta: f32) -> f32 { return (3.0 / (16.0 * PI)) * (1.0 + pow(cosTheta, 2.0)); }\n\nfn mieBeta(wavelengths: vec3f, k: vec3f, turbidity: f32) -> vec3f {\n\tvar c: f32 = (0.2 * turbidity) * 10E-18;\n\treturn 0.434 * c * PI * pow((2.0 * PI) / wavelengths, vec3f(MIE_V - 2.0)) * k;\n}\n\nfn henyeyGreenstein(cosTheta: f32, g: f32) -> f32 {\n\treturn (1.0 / (4.0 * PI)) * ((1.0 - pow(g, 2.0)) / pow(1.0 - 2.0 * g * cosTheta + pow(g, 2.0), 1.5));\n}\n\nfn sunIntensity(zenithAngleCos: f32) -> f32 {\n\treturn SUN_INTENSITY * max(0.0, 1.0 - exp((-(SUN_CUTOFF - acos(zenithAngleCos)) / SUN_STEEPNESS)));\n}\n\n// A sky shader pack can replace earthSkyRadiance (the scattering, over EarthSkyInput) or earthSkyColour (the tonemap) by\n// name. The prelude, EarthSkyInput and both signatures are main's, so a pack written against main compiles unchanged.\nstruct EarthSkyInput {\n\tview: vec3f, zenithView: vec3f, sun: vec3f, up: vec3f,\n\tturbidity: f32, rayleigh: f32, mieStrength: f32, mieFocus: f32,\n}\n\nfn filmic(x: vec3f) -> vec3f {\n\treturn ((x * (TONE_A * x + TONE_C * TONE_B) + TONE_D * TONE_E) / (x * (TONE_A * x + TONE_B) + TONE_D * TONE_F)) - TONE_E / TONE_F;\n}\n\n// The default reads input's view, zenithView and up, and the terms the CPU precomputes from the frame's uniforms\n// (earthSkyDerived.ts) straight from sky: they already include input's sun, turbidity, rayleigh, mieStrength and mieFocus.\nfn earthSkyRadiance(input: EarthSkyInput) -> vec3f {\n\t// cos(acos(x)) is x: the Rayleigh and Mie optical lengths share this denominator\n\tlet cosZenith = max(0.0, dot(input.up, input.zenithView));\n\tlet zenithAngle = acos(cosZenith);\n\tlet opticalLength = 1.0 / (cosZenith + 0.15 * pow(93.885 - ((zenithAngle * 180.0) / PI), -1.253));\n\tlet extinction = exp(-sky.extinctionBeta * opticalLength);\n\tlet cosTheta = dot(input.view, sky.sunDir);\n\tlet rCos = cosTheta * 0.5 + 0.5;\n\tlet rPhase = (3.0 / (16.0 * PI)) * (1.0 + rCos * rCos);\n\tlet mBase = sky.mieBase - sky.mieSlope * cosTheta;\n\tlet mPhase = sky.mieScale * inverseSqrt(mBase) / mBase;\n\tlet scattered = sky.inScatterR * rPhase + sky.inScatterM * mPhase;\n\tlet lit = scattered * (1.0 - extinction);\n\tlet inScattered = lit * sqrt(lit) * mix(vec3f(1.0), sqrt(scattered * extinction), vec3f(sky.sunsetMix));\n\tlet sunDisc = smoothstep(SUN_DISC_COS, SUN_DISC_COS + 0.00002, cosTheta);\n\tlet night = (0.1 + sky.sunDiscE * sunDisc) * extinction;\n\treturn (inScattered + night) * 0.04 + vec3f(0.0, 0.001, 0.0025) * 0.3;\n}\n\n// The contract for overrides: exposure is SkyMaterial's luminance (main passes sky.exposure), as Babylon's tonemap reads it.\n// The default tonemaps with the frame's precomputed sky.exposureScale, its log2(2 / exposure^4), written together with it.\nfn earthSkyColour(radiance: vec3f, exposure: f32) -> vec3f {\n\treturn filmic(sky.exposureScale * radiance) * ${he};\n}\n\nfn ditherOffset(seed: vec2f, variance: f32) -> f32 {\n\tlet rand: f32 = fract(sin(dot(seed.xy, vec2f(12.9898, 78.233))) * 43758.5453);\n\tlet normVariance: f32 = variance / 255.0;\n\treturn mix(-normVariance, normVariance, rand);\n}\n\nfn fogFactor(fromEye: vec3f) -> f32 {\n\tvar fogCoeff: f32 = 1.0;\n\tlet fogStart = frame.vFogInfos.y;\n\tlet fogEnd = frame.vFogInfos.z;\n\tlet fogDensity = frame.vFogInfos.w;\n\tlet dist = length(fromEye);\n\tif (3.0 == frame.vFogInfos.x) {\n\t\tfogCoeff = (fogEnd - dist) / (fogEnd - fogStart);\n\t} else if (1.0 == frame.vFogInfos.x) {\n\t\tfogCoeff = 1.0 / pow(2.71828, dist * fogDensity);\n\t} else if (2.0 == frame.vFogInfos.x) {\n\t\tfogCoeff = 1.0 / pow(2.71828, dist * dist * fogDensity * fogDensity);\n\t}\n\treturn clamp(fogCoeff, 0.0, 1.0);\n}\n\n@fragment\nfn main(input: EarthSkyVarying) -> @location(0) vec4f {\n\tlet toSky = input.worldPosition - sky.viewFrom;\n\tlet radiance = earthSkyRadiance(EarthSkyInput(normalize(toSky), normalize(toSky + sky.zenithOffset), sky.sun, sky.up, sky.turbidity, sky.rayleigh, sky.mieStrength, sky.mieFocus));\n\t// Parity: off, the dither and fog branches are skipped, as Babylon leaves them out with its defines; the dither reads the WebGL frag coord, as in Babylon\n\tvar dither = 0.0;\n\tif (sky.ditherOn != 0.0) { dither = ditherOffset(vec2f(input.position.x, frame.outputHeight - input.position.y), 0.5); }\n\tvar colour = clamp(vec4f(earthSkyColour(radiance, sky.exposure) * input.tint + dither, 1.0), vec4f(0.0), vec4f(1.0));\n\tif (sky.fogOn != 0.0) { colour = vec4f(mix(frame.vFogColor, colour.rgb, fogFactor(input.fogDistance)), colour.a); }\n\t// The canvas's alpha on the unblended pipeline it draws in (canvasFragment)\n\tif (${be}) { colour.a = 1.0; }\n\treturn colour;\n}\n`;
+    var LY = xV(38263);
+    const fY = new LY.Ik,
+      mY = new LY.Ik,
+      KY = new LY.Quaternion,
+      HY = new Float64Array(3),
+      uY = new class {
         constructor() {
           this.sunDir = new Float64Array(3), this.sunE = 0, this.inScatterR = new Float64Array(3), this.inScatterM = new Float64Array(3), this.extinctionBeta = new Float64Array(3), this.sunsetMix = 0, this.sunDiscE = 0, this.mieScale = 0, this.mieBase = 0, this.mieSlope = 0
         }
       },
-      TS = new Float64Array(16);
+      sY = new Float64Array(16);
 
-    function VS(MM, rM, iM) {
-      const OM = iM.worldMatrix;
-      var SM;
-      MM.updateFloat3("viewFrom", OM[12], OM[13], OM[14]), MM.updateFloatsFrom("zenithOffset", rM.cameraOffset, 0, 3), MM.updateFloatsFrom("up", rM.up, 0, 3), rM.luminance > 0 && (MM.updateFloat("exposure", rM.luminance), MM.updateFloat("exposureScale", (SM = rM.luminance, Math.log2(2 / Math.pow(SM, 4))))), MM.updateFloat("turbidity", rM.turbidity), MM.updateFloat("rayleigh", rM.rayleigh), MM.updateFloat("mieStrength", rM.mieCoefficient), MM.updateFloat("mieFocus", rM.mieDirectionalG), MM.updateFloatsFrom("tint", rM.tint, 0, 3), MM.updateFloat("fogOn", rM.fog && iM.fogEnabled && 0 !== iM.fogMode ? 1 : 0), MM.updateFloat("ditherOn", rM.dithering ? 1 : 0);
-      const jM = rM.sunPosition;
-      if (BS.set(jM[0], jM[1], jM[2]), !rM.useSunPosition) {
-        const MM = Math.PI * (rM.inclination - .5),
-          iM = 2 * Math.PI * (rM.azimuth - .5);
-        BS.set(rM.distance * Math.cos(iM) * Math.cos(MM), rM.distance * Math.sin(-MM), rM.distance * Math.sin(iM) * Math.cos(MM)), FS.Quaternion.FromUnitVectorsToRef(FS.sh.UpReadOnly, XS.set(rM.up[0], rM.up[1], rM.up[2]), IS), BS.rotateByQuaternionToRef(IS, BS)
+    function SY(VV, eV, xV) {
+      const JV = xV.worldMatrix;
+      var YV;
+      VV.updateFloat3("viewFrom", JV[12], JV[13], JV[14]), VV.updateFloatsFrom("zenithOffset", eV.cameraOffset, 0, 3), VV.updateFloatsFrom("up", eV.up, 0, 3), eV.luminance > 0 && (VV.updateFloat("exposure", eV.luminance), VV.updateFloat("exposureScale", (YV = eV.luminance, Math.log2(2 / Math.pow(YV, 4))))), VV.updateFloat("turbidity", eV.turbidity), VV.updateFloat("rayleigh", eV.rayleigh), VV.updateFloat("mieStrength", eV.mieCoefficient), VV.updateFloat("mieFocus", eV.mieDirectionalG), VV.updateFloatsFrom("tint", eV.tint, 0, 3), VV.updateFloat("fogOn", eV.fog && xV.fogEnabled && 0 !== xV.fogMode ? 1 : 0), VV.updateFloat("ditherOn", eV.dithering ? 1 : 0);
+      const UV = eV.sunPosition;
+      if (fY.set(UV[0], UV[1], UV[2]), !eV.useSunPosition) {
+        const VV = Math.PI * (eV.inclination - .5),
+          xV = 2 * Math.PI * (eV.azimuth - .5);
+        fY.set(eV.distance * Math.cos(xV) * Math.cos(VV), eV.distance * Math.sin(-VV), eV.distance * Math.sin(xV) * Math.cos(VV)), LY.Quaternion.FromUnitVectorsToRef(LY.Ik.UpReadOnly, mY.set(eV.up[0], eV.up[1], eV.up[2]), KY), fY.rotateByQuaternionToRef(KY, fY)
       }
-      MM.updateVector3("sun", BS), KS[0] = BS.x, KS[1] = BS.y, KS[2] = BS.z;
-      const aM = fr(rM, KS, qS);
-      MM.updateFloatsFrom("sunDir", aM.sunDir, 0, 3), MM.updateFloat("sunE", aM.sunE), MM.updateFloatsFrom("inScatterR", aM.inScatterR, 0, 3), MM.updateFloatsFrom("inScatterM", aM.inScatterM, 0, 3), MM.updateFloatsFrom("extinctionBeta", aM.extinctionBeta, 0, 3), MM.updateFloat("sunsetMix", aM.sunsetMix), MM.updateFloat("sunDiscE", aM.sunDiscE), MM.updateFloat("mieScale", aM.mieScale), MM.updateFloat("mieBase", aM.mieBase), MM.updateFloat("mieSlope", aM.mieSlope)
+      VV.updateVector3("sun", fY), HY[0] = fY.x, HY[1] = fY.y, HY[2] = fY.z;
+      const yV = oe(eV, HY, uY);
+      VV.updateFloatsFrom("sunDir", yV.sunDir, 0, 3), VV.updateFloat("sunE", yV.sunE), VV.updateFloatsFrom("inScatterR", yV.inScatterR, 0, 3), VV.updateFloatsFrom("inScatterM", yV.inScatterM, 0, 3), VV.updateFloatsFrom("extinctionBeta", yV.extinctionBeta, 0, 3), VV.updateFloat("sunsetMix", yV.sunsetMix), VV.updateFloat("sunDiscE", yV.sunDiscE), VV.updateFloat("mieScale", yV.mieScale), VV.updateFloat("mieBase", yV.mieBase), VV.updateFloat("mieSlope", yV.mieSlope)
     }
 
-    function cS(MM, rM) {
-      const iM = TS;
-      iM[0] = rM.far, iM[5] = rM.far, iM[10] = rM.far, iM[15] = 1;
-      const OM = MM.infiniteDistance;
-      for (let SM = 0; SM < 3; SM++) iM[12 + SM] = MM.position[SM] + (OM ? rM.worldMatrix[12 + SM] : 0);
-      return TS
+    function IY(VV, eV) {
+      const xV = sY;
+      xV[0] = eV.far, xV[5] = eV.far, xV[10] = eV.far, xV[15] = 1;
+      const JV = VV.infiniteDistance;
+      for (let YV = 0; YV < 3; YV++) xV[12 + YV] = VV.position[YV] + (JV ? eV.worldMatrix[12 + YV] : 0);
+      return sY
     }
-    class Mj {
+    class dY {
       constructor() {
         this.pipeline = null, this.materialGroup = null, this.packGroup = null, this.vertexBuffers = [], this.vertexOffsets = [], this.indexBuffer = null
       }
       reset() {
         this.pipeline = null, this.materialGroup = null, this.packGroup = null, this.vertexBuffers.length = 0, this.vertexOffsets.length = 0, this.indexBuffer = null
       }
-      bind(MM, rM, iM, OM, SM) {
-        iM !== this.pipeline && (MM.setPipeline(iM), this.pipeline = iM), MM.setBindGroup(1, OM, [SM]);
-        const jM = rM.material.bindGroup;
-        jM !== this.materialGroup && (MM.setBindGroup(2, jM), this.materialGroup = jM);
-        const aM = rM.program.packGroup;
-        aM && aM !== this.packGroup && (MM.setBindGroup(qr.f, aM), this.packGroup = aM);
+      bind(VV, eV, xV, JV, YV) {
+        xV !== this.pipeline && (VV.setPipeline(xV), this.pipeline = xV), VV.setBindGroup(1, JV, [YV]);
+        const UV = eV.material.bindGroup;
+        UV !== this.materialGroup && (VV.setBindGroup(2, UV), this.materialGroup = UV);
+        const yV = eV.program.packGroup;
+        yV && yV !== this.packGroup && (VV.setBindGroup(Se.e, yV), this.packGroup = yV);
         const {
-          vertexBuffers: PM,
-          vertexOffsets: nM
+          vertexBuffers: pV,
+          vertexOffsets: QV
         } = this;
-        for (let QM = 0; QM < rM.vertexBuffers.length; QM++) PM[QM] === rM.vertexBuffers[QM] && nM[QM] === rM.vertexOffsets[QM] || (MM.setVertexBuffer(QM, rM.vertexBuffers[QM], rM.vertexOffsets[QM]), PM[QM] = rM.vertexBuffers[QM], nM[QM] = rM.vertexOffsets[QM]);
-        rM.indexBuffer && rM.indexBuffer !== this.indexBuffer && (MM.setIndexBuffer(rM.indexBuffer, rM.indexFormat), this.indexBuffer = rM.indexBuffer)
+        for (let nV = 0; nV < eV.vertexBuffers.length; nV++) pV[nV] === eV.vertexBuffers[nV] && QV[nV] === eV.vertexOffsets[nV] || (VV.setVertexBuffer(nV, eV.vertexBuffers[nV], eV.vertexOffsets[nV]), pV[nV] = eV.vertexBuffers[nV], QV[nV] = eV.vertexOffsets[nV]);
+        eV.indexBuffer && eV.indexBuffer !== this.indexBuffer && (VV.setIndexBuffer(eV.indexBuffer, eV.indexFormat), this.indexBuffer = eV.indexBuffer)
       }
     }
-    class rj {
-      constructor(MM, rM, iM, OM) {
-        this.modelMeshes = MM, this.n_ = rM, this.maker = iM, this.warnOnce = OM, this.skyDraws = [], this.opaqueDraws = [], this.transparentDraws = [], this.frontDraws = [], this.warnIfNotDrawn = (MM, rM) => {
-          (rM < -1 || rM > 1) && this.warnOnce(`group:${rM}`, `rendering group ${rM} is not drawn`)
+    class OY {
+      constructor(VV, eV, xV, JV) {
+        this.modelMeshes = VV, this.uVV = eV, this.maker = xV, this.warnOnce = JV, this.skyDraws = [], this.opaqueDraws = [], this.transparentDraws = [], this.frontDraws = [], this.warnIfNotDrawn = (VV, eV) => {
+          (eV < -1 || eV > 1) && this.warnOnce(`group:${eV}`, `rendering group ${eV} is not drawn`)
         }
       }
       clear() {
         this.skyDraws.length = 0, this.opaqueDraws.length = 0, this.transparentDraws.length = 0, this.frontDraws.length = 0
       }
-      collect(MM) {
-        this.collectGroup(MM, -1, this.skyDraws, this.skyDraws, !0), this.collectGroup(MM, 0, this.opaqueDraws, this.transparentDraws, !1), this.collectGroup(MM, 1, this.frontDraws, this.frontDraws, !0), this.modelMeshes.forEachGroup(this.warnIfNotDrawn), this.n_.forEachGroup(this.warnIfNotDrawn), this.opaqueDraws.sort(ij), this.transparentDraws.sort(Oj)
+      collect(VV) {
+        this.collectGroup(VV, -1, this.skyDraws, this.skyDraws, !0), this.collectGroup(VV, 0, this.opaqueDraws, this.transparentDraws, !1), this.collectGroup(VV, 1, this.frontDraws, this.frontDraws, !0), this.modelMeshes.forEachGroup(this.warnIfNotDrawn), this.uVV.forEachGroup(this.warnIfNotDrawn), this.opaqueDraws.sort(VU), this.transparentDraws.sort(eU)
       }
-      collectGroup(MM, rM, iM, OM, SM) {
-        const jM = this.modelMeshes.group(rM),
-          aM = this.n_.group(rM),
-          PM = 0 === rM ? null === aM || void 0 === aM ? void 0 : aM.opaque : void 0;
-        this.collectList(MM, null === jM || void 0 === jM ? void 0 : jM.opaque, PM || null === aM || void 0 === aM ? void 0 : aM.opaque, rM, !1, iM, SM), PM && (this.n_.drawn += this.maker.bundleDraws(MM, PM, rM)), this.collectList(MM, null === jM || void 0 === jM ? void 0 : jM.alphaTest, void 0, rM, !1, iM, SM), this.collectList(MM, null === jM || void 0 === jM ? void 0 : jM.transparent, null === aM || void 0 === aM ? void 0 : aM.transparent, rM, !0, OM, SM)
+      collectGroup(VV, eV, xV, JV, YV) {
+        const UV = this.modelMeshes.group(eV),
+          yV = this.uVV.group(eV),
+          pV = 0 === eV ? null === yV || void 0 === yV ? void 0 : yV.opaque : void 0;
+        this.collectList(VV, null === UV || void 0 === UV ? void 0 : UV.opaque, pV || null === yV || void 0 === yV ? void 0 : yV.opaque, eV, !1, xV, YV), pV && (this.uVV.drawn += this.maker.bundleDraws(VV, pV, eV)), this.collectList(VV, null === UV || void 0 === UV ? void 0 : UV.alphaTest, void 0, eV, !1, xV, YV), this.collectList(VV, null === UV || void 0 === UV ? void 0 : UV.transparent, null === yV || void 0 === yV ? void 0 : yV.transparent, eV, !0, JV, YV)
       }
-      collectList(MM, rM, iM, OM, SM, jM, aM) {
-        var PM;
-        const nM = jM.length;
-        rM && this.maker.pushDraws(MM, rM.units, rM.units.length, OM, SM, jM, rM.rows), iM && (this.n_.drawn += this.maker.pushDraws(MM, iM, iM.length, OM, SM, jM));
-        const QM = SM ? null === (PM = this.modelMeshes.group(OM)) || void 0 === PM ? void 0 : PM.text : void 0;
-        QM && this.maker.pushDraws(MM, QM.units, QM.units.length, OM, !0, jM, QM.rows), aM && Sj(jM, nM)
-      }
-    }
-
-    function ij(MM, rM) {
-      return MM.program.id - rM.program.id || MM.material.owner.uniqueId - rM.material.owner.uniqueId
-    }
-
-    function Oj(MM, rM) {
-      return MM.material.owner.uniqueId - rM.material.owner.uniqueId
-    }
-
-    function Sj(MM, rM) {
-      for (let iM = rM + 1; iM < MM.length; iM++) {
-        const OM = MM[iM];
-        let SM = iM - 1;
-        for (; SM >= rM && Oj(MM[SM], OM) > 0; SM--) MM[SM + 1] = MM[SM];
-        MM[SM + 1] = OM
+      collectList(VV, eV, xV, JV, YV, UV, yV) {
+        var pV;
+        const QV = UV.length;
+        eV && this.maker.pushDraws(VV, eV.units, eV.units.length, JV, YV, UV, eV.rows), xV && (this.uVV.drawn += this.maker.pushDraws(VV, xV, xV.length, JV, YV, UV));
+        const nV = YV ? null === (pV = this.modelMeshes.group(JV)) || void 0 === pV ? void 0 : pV.text : void 0;
+        nV && this.maker.pushDraws(VV, nV.units, nV.units.length, JV, !0, UV, nV.rows), yV && xU(UV, QV)
       }
     }
-    const jj = {};
 
-    function aj(MM) {
-      return MM.hasThinInstances ? "thin" : MM.nSM || MM._userInstancedBuffersStorage ? "instanced" : "none"
+    function VU(VV, eV) {
+      return VV.program.id - eV.program.id || VV.material.owner.uniqueId - eV.material.owner.uniqueId
     }
 
-    function Pj(MM, rM, iM) {
-      return MM ? (iM._needUVs = !0, MM.optimizeUVAllocation && (0, gM.E)(MM.matrix) ? (iM[`${rM}DIRECTUV`] = MM.uvSet + 1, iM[`MAINUV${MM.uvSet+1}`] = !0) : iM[`${rM}DIRECTUV`] = 0, !0) : (iM[`${rM}DIRECTUV`] = 0, !1)
+    function eU(VV, eV) {
+      return VV.material.owner.uniqueId - eV.material.owner.uniqueId
     }
 
-    function nj(MM) {
-      const rM = new Map;
-      for (const iM in MM) {
-        if (95 === iM.charCodeAt(0)) continue;
-        const OM = MM[iM],
-          SM = typeof OM;
-        "number" === SM || "string" === SM ? rM.set(iM, String(OM)) : OM && "function" !== SM && rM.set(iM, !0)
+    function xU(VV, eV) {
+      for (let xV = eV + 1; xV < VV.length; xV++) {
+        const JV = VV[xV];
+        let YV = xV - 1;
+        for (; YV >= eV && eU(VV[YV], JV) > 0; YV--) VV[YV + 1] = VV[YV];
+        VV[YV + 1] = JV
       }
-      return rM
+    }
+    const JU = {};
+
+    function YU(VV) {
+      return VV.hasThinInstances ? "thin" : VV.NUV || VV._userInstancedBuffersStorage ? "instanced" : "none"
     }
 
-    function Qj(MM) {
-      const rM = {
+    function UU(VV, eV, xV) {
+      return VV ? (xV._needUVs = !0, VV.optimizeUVAllocation && (0, MV.H)(VV.matrix) ? (xV[`${eV}DIRECTUV`] = VV.uvSet + 1, xV[`MAINUV${VV.uvSet+1}`] = !0) : xV[`${eV}DIRECTUV`] = 0, !0) : (xV[`${eV}DIRECTUV`] = 0, !1)
+    }
+
+    function yU(VV) {
+      const eV = new Map;
+      for (const xV in VV) {
+        if (95 === xV.charCodeAt(0)) continue;
+        const JV = VV[xV],
+          YV = typeof JV;
+        "number" === YV || "string" === YV ? eV.set(xV, String(JV)) : JV && "function" !== YV && eV.set(xV, !0)
+      }
+      return eV
+    }
+
+    function pU(VV) {
+      const eV = {
         markAllAsDirty: () => {}
       };
       for (const {
-          defines: iM
+          defines: xV
         }
-        of MM.features)
-        for (const MM in iM) rM[MM] = iM[MM];
-      return rM
+        of VV.features)
+        for (const VV in xV) eV[VV] = xV[VV];
+      return eV
     }
 
-    function zj(MM) {
-      const rM = MM.parts.geometry;
-      return null !== rM && void 0 !== rM && rM.live ? rM : null
+    function QU(VV) {
+      const eV = VV.parts.geometry;
+      return null !== eV && void 0 !== eV && eV.live ? eV : null
     }
 
-    function Lj(MM) {
-      var rM;
-      return null !== (rM = zj(MM)) && void 0 !== rM ? rM : jj
+    function nU(VV) {
+      var eV;
+      return null !== (eV = QU(VV)) && void 0 !== eV ? eV : JU
     }
-    class mj {
-      constructor(MM, rM, iM) {
-        let OM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => !1;
-        this.resources = MM, this.warnOnce = rM, this.programWithModel = iM, this.packFailed = OM, this.drawStates = new WeakMap, this.view = void 0, this.modelPackVariant = 0
+    class wU {
+      constructor(VV, eV, xV) {
+        let JV = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => !1;
+        this.resources = VV, this.warnOnce = eV, this.programWithModel = xV, this.packFailed = JV, this.drawStates = new WeakMap, this.view = void 0, this.modelPackVariant = 0
       }
-      programFor(MM, rM, iM, OM, SM) {
-        const jM = rM.owner;
-        let aM = this.drawStates.get(rM);
-        if (!aM) {
-          const MM = rM.parts.materials[rM.range];
-          if (!MM) return this.warnOnce("model", `${iM.name} on ${jM.name} is not a model material, so it is not drawn on WebGPU (adoptModelMaterial); further ones are not reported`), null;
-          aM = {
-            defines: Qj(MM),
-            model: MM,
+      programFor(VV, eV, xV, JV, YV) {
+        const UV = eV.owner;
+        let yV = this.drawStates.get(eV);
+        if (!yV) {
+          const VV = eV.parts.materials[eV.range];
+          if (!VV) return this.warnOnce("model", `${xV.name} on ${UV.name} is not a model material, so it is not drawn on WebGPU (adoptModelMaterial); further ones are not reported`), null;
+          yV = {
+            defines: pU(VV),
+            model: VV,
             modelVersion: -1,
             definesKey: "",
             program: null,
-            instancing: SM,
-            groupId: OM,
+            instancing: YV,
+            groupId: JV,
             geometry: null,
             instanceLayout: null,
             definesBits: 0,
             packVariant: 0
-          }, this.drawStates.set(rM, aM)
+          }, this.drawStates.set(eV, yV)
         }
-        if (this.programCurrent(aM, rM, SM, OM)) return aM.program;
+        if (this.programCurrent(yV, eV, YV, JV)) return yV.program;
         const {
-          model: PM
-        } = aM, nM = Lj(rM), QM = this.instanceLayout(jM, SM), zM = this.definesBits(jM);
-        if (!this.prepareModelDefines(MM, jM, PM, aM.defines, OM, SM)) return null;
-        aM.instancing = SM, aM.groupId = OM, aM.modelVersion = PM.version, aM.geometry = nM, aM.instanceLayout = QM, aM.definesBits = zM;
-        const LM = function(MM) {
-          let rM = "";
-          for (const [iM, OM] of MM) rM += !0 === OM ? `${iM};` : `${iM}=${OM};`;
-          return rM
-        }(nj(aM.defines));
-        return LM === aM.definesKey && aM.packVariant === this.modelPackVariant && aM.program && !this.packFailed(aM.program) || (aM.definesKey = LM, aM.packVariant = this.modelPackVariant, aM.program = this.programWithModel(PM, aM.defines, LM)), aM.program
+          model: pV
+        } = yV, QV = nU(eV), nV = this.instanceLayout(UV, YV), wV = this.definesBits(UV);
+        if (!this.prepareModelDefines(VV, UV, pV, yV.defines, JV, YV)) return null;
+        yV.instancing = YV, yV.groupId = JV, yV.modelVersion = pV.version, yV.geometry = QV, yV.instanceLayout = nV, yV.definesBits = wV;
+        const ZV = function(VV) {
+          let eV = "";
+          for (const [xV, JV] of VV) eV += !0 === JV ? `${xV};` : `${xV}=${JV};`;
+          return eV
+        }(yU(yV.defines));
+        return ZV === yV.definesKey && yV.packVariant === this.modelPackVariant && yV.program && !this.packFailed(yV.program) || (yV.definesKey = ZV, yV.packVariant = this.modelPackVariant, yV.program = this.programWithModel(pV, yV.defines, ZV)), yV.program
       }
-      programCurrent(MM, rM, iM, OM) {
-        return null !== MM.program && !this.packFailed(MM.program) && MM.instancing === iM && MM.groupId === OM && this.definesHold(MM, rM, iM)
+      programCurrent(VV, eV, xV, JV) {
+        return null !== VV.program && !this.packFailed(VV.program) && VV.instancing === xV && VV.groupId === JV && this.definesHold(VV, eV, xV)
       }
-      definesHold(MM, rM, iM) {
-        return MM.modelVersion === MM.model.version && MM.geometry === Lj(rM) && MM.instanceLayout === this.instanceLayout(rM.owner, iM) && MM.definesBits === this.definesBits(rM.owner) && MM.packVariant === this.modelPackVariant
+      definesHold(VV, eV, xV) {
+        return VV.modelVersion === VV.model.version && VV.geometry === nU(eV) && VV.instanceLayout === this.instanceLayout(eV.owner, xV) && VV.definesBits === this.definesBits(eV.owner) && VV.packVariant === this.modelPackVariant
       }
-      modelPackKind(MM) {
-        var rM;
-        return 0 === this.modelPackVariant ? null : null !== (rM = (0, wM.v)(MM, bM.j.name)) && void 0 !== rM && rM.active ? "placed" : MM.item ? "item" : MM.lifeform ? "lifeform" : MM.box ? "box" : null
+      modelPackKind(VV) {
+        var eV;
+        return 0 === this.modelPackVariant ? null : null !== (eV = (0, NV.v)(VV, AV.j.name)) && void 0 !== eV && eV.active ? "placed" : VV.item ? "item" : VV.lifeform ? "lifeform" : VV.box ? "box" : null
       }
-      instanceLayout(MM, rM) {
-        var iM, OM, SM;
-        return "thin" === rM ? null !== (SM = this.resources.o9.get(MM)) && void 0 !== SM ? SM : null : "instanced" === rM && null !== (iM = null === (OM = MM._userInstancedBuffersStorage) || void 0 === OM ? void 0 : OM.interleavedKinds) && void 0 !== iM ? iM : null
+      instanceLayout(VV, eV) {
+        var xV, JV, YV;
+        return "thin" === eV ? null !== (YV = this.resources.MVV.get(VV)) && void 0 !== YV ? YV : null : "instanced" === eV && null !== (xV = null === (JV = VV._userInstancedBuffersStorage) || void 0 === JV ? void 0 : JV.interleavedKinds) && void 0 !== xV ? xV : null
       }
-      definesBits(MM) {
-        const rM = this.view;
-        return (MM.visibility < 1 ? 1 : 0) | (MM.hasVertexAlpha ? 2 : 0) | (MM.applyFog ? 4 : 0) | (MM.useVertexColors ? 8 : 0) | (MM.nonUniformScaling ? 16 : 0) | (rM.fogEnabled && 0 !== rM.fogMode ? 32 : 0) | (rM.lightsEnabled ? 64 : 0) | rM.lightCount << 7
+      definesBits(VV) {
+        const eV = this.view;
+        return (VV.visibility < 1 ? 1 : 0) | (VV.hasVertexAlpha ? 2 : 0) | (VV.applyFog ? 4 : 0) | (VV.useVertexColors ? 8 : 0) | (VV.nonUniformScaling ? 16 : 0) | (eV.fogEnabled && 0 !== eV.fogMode ? 32 : 0) | (eV.lightsEnabled ? 64 : 0) | eV.lightCount << 7
       }
-      prepareLightDefines(MM, rM, iM) {
-        let OM = 0;
-        if (this.view.lightsEnabled && !rM) {
-          const rM = Math.min(iM, 4);
-          for (; OM < this.view.lightCount && (MM[`LIGHT${OM}`] = !0, MM[`LITE_LIGHT${OM}_SLOT`] = OM, OM++, MM._needNormals = !0, OM !== rM););
+      prepareLightDefines(VV, eV, xV) {
+        let JV = 0;
+        if (this.view.lightsEnabled && !eV) {
+          const eV = Math.min(xV, 4);
+          for (; JV < this.view.lightCount && (VV[`LIGHT${JV}`] = !0, VV[`LITE_LIGHT${JV}_SLOT`] = JV, JV++, VV._needNormals = !0, JV !== eV););
         }
-        for (let SM = OM; SM < 4; SM++) MM[`LIGHT${SM}`] = !1, MM[`LITE_LIGHT${SM}_SLOT`] = void 0
+        for (let YV = JV; YV < 4; YV++) VV[`LIGHT${YV}`] = !1, VV[`LITE_LIGHT${YV}_SLOT`] = void 0
       }
-      prepareModelDefines(MM, rM, iM, OM, SM, jM) {
+      prepareModelDefines(VV, eV, xV, JV, YV, UV) {
         const {
-          features: aM
-        } = iM;
-        OM._needNormals = !1, OM._needUVs = !1;
-        const PM = this.view;
-        this.prepareLightDefines(OM, iM.disableLighting, iM.maxSimultaneousLights), OM.MAINUV1 = !1, OM.MAINUV2 = !1;
-        const nM = iM.diffuseTexture;
-        nM ? (OM._needUVs = !0, OM.DIFFUSE = !0, nM.optimizeUVAllocation && (0, gM.E)(nM.matrix) ? (OM.DIFFUSEDIRECTUV = nM.uvSet + 1, OM[`MAINUV${nM.uvSet+1}`] = !0) : OM.DIFFUSEDIRECTUV = 0, nM.uvSet > 1 && this.warnOnce(`uvset:${iM.name}`, `${iM.name} samples UV set ${nM.uvSet+1}, which is not supported`)) : (OM.DIFFUSE = !1, OM.DIFFUSEDIRECTUV = 0);
-        const QM = iM.opacityTexture,
-          zM = iM.emissiveTexture;
-        OM.OPACITY = Pj(QM, "OPACITY", OM), OM.OPACITYRGB = null !== QM && QM.getAlphaFromRGB, OM.EMISSIVE = Pj(zM, "EMISSIVE", OM), (QM && QM.uvSet > 1 || zM && zM.uvSet > 1) && this.warnOnce(`uvset:${iM.name}`, `${iM.name} samples a UV set past 2, which is not supported`);
-        const LM = iM.reflectionTexture,
-          mM = null !== LM;
-        if (mM) {
-          if (!this.resources.boundTexture(LM)) return !1;
-          OM._needNormals = !0
+          features: yV
+        } = xV;
+        JV._needNormals = !1, JV._needUVs = !1;
+        const pV = this.view;
+        this.prepareLightDefines(JV, xV.disableLighting, xV.maxSimultaneousLights), JV.MAINUV1 = !1, JV.MAINUV2 = !1;
+        const QV = xV.diffuseTexture;
+        QV ? (JV._needUVs = !0, JV.DIFFUSE = !0, QV.optimizeUVAllocation && (0, MV.H)(QV.matrix) ? (JV.DIFFUSEDIRECTUV = QV.uvSet + 1, JV[`MAINUV${QV.uvSet+1}`] = !0) : JV.DIFFUSEDIRECTUV = 0, QV.uvSet > 1 && this.warnOnce(`uvset:${xV.name}`, `${xV.name} samples UV set ${QV.uvSet+1}, which is not supported`)) : (JV.DIFFUSE = !1, JV.DIFFUSEDIRECTUV = 0);
+        const nV = xV.opacityTexture,
+          wV = xV.emissiveTexture;
+        JV.OPACITY = UU(nV, "OPACITY", JV), JV.OPACITYRGB = null !== nV && nV.getAlphaFromRGB, JV.EMISSIVE = UU(wV, "EMISSIVE", JV), (nV && nV.uvSet > 1 || wV && wV.uvSet > 1) && this.warnOnce(`uvset:${xV.name}`, `${xV.name} samples a UV set past 2, which is not supported`);
+        const ZV = xV.reflectionTexture,
+          vV = null !== ZV;
+        if (vV) {
+          if (!this.resources.boundTexture(ZV)) return !1;
+          JV._needNormals = !0
         }
-        OM.REFLECTION = mM, OM.REFLECTIONMAP_3D = mM, OM.REFLECTIONMAP_SKYBOX = mM, OM.REFLECTIONMAP_OPPOSITEZ = mM && (MM.useRightHandedSystem ? !LM.invertZ : LM.invertZ), OM.ROUGHNESS = mM && iM.roughness > 0, OM.REFLECTIONOVERALPHA = mM && iM.useReflectionOverAlpha, OM.LITE_REFLECTION_LUMINANCE = mM && "cube" === LM.source.kind && LM.source.luminance, (rM.skeleton || rM.morphTargetManager) && this.warnOnce(`skin:${rM.name}`, `${rM.name} has bones or morph targets, which are not supported`), OM.FOG = iM.fogEnabled && rM.applyFog && PM.fogEnabled && 0 !== PM.fogMode, OM.NONUNIFORMSCALING = rM.nonUniformScaling;
+        JV.REFLECTION = vV, JV.REFLECTIONMAP_3D = vV, JV.REFLECTIONMAP_SKYBOX = vV, JV.REFLECTIONMAP_OPPOSITEZ = vV && (VV.useRightHandedSystem ? !ZV.invertZ : ZV.invertZ), JV.ROUGHNESS = vV && xV.roughness > 0, JV.REFLECTIONOVERALPHA = vV && xV.useReflectionOverAlpha, JV.LITE_REFLECTION_LUMINANCE = vV && "cube" === ZV.source.kind && ZV.source.luminance, (eV.skeleton || eV.morphTargetManager) && this.warnOnce(`skin:${eV.name}`, `${eV.name} has bones or morph targets, which are not supported`), JV.FOG = xV.fogEnabled && eV.applyFog && pV.fogEnabled && 0 !== pV.fogMode, JV.NONUNIFORMSCALING = eV.nonUniformScaling;
         const {
-          visibility: HM,
-          hasVertexAlpha: hM
-        } = rM;
-        OM.ALPHATEST = (0, wM.S)(iM, HM, hM), OM.ALPHAFROMDIFFUSE = (0, wM.fb)(iM), OM.ALPHATEST_AFTERALLALPHACOMPUTATIONS = null !== iM.transparencyMode, OM.ALPHABLEND = null === iM.transparencyMode || (0, wM.O)(iM, HM, hM), OM.PREMULTIPLYALPHA = 7 === iM.alphaMode || 8 === iM.alphaMode, OM.EMISSIVEASILLUMINATION = iM.useEmissiveAsIllumination, OM.LINKEMISSIVEWITHDIFFUSE = iM.linkEmissiveWithDiffuse, OM.TWOSIDEDLIGHTING = !iM.backFaceCulling && iM.twoSidedLighting, OM.INSTANCES = "none" !== jM, OM.THIN_INSTANCES = "thin" === jM, OM.LITE_FRONT_LAYER = SM >= 1;
+          visibility: rV,
+          hasVertexAlpha: kV
+        } = eV;
+        JV.ALPHATEST = (0, NV.V)(xV, rV, kV), JV.ALPHAFROMDIFFUSE = (0, NV.pb)(xV), JV.ALPHATEST_AFTERALLALPHACOMPUTATIONS = null !== xV.transparencyMode, JV.ALPHABLEND = null === xV.transparencyMode || (0, NV.T)(xV, rV, kV), JV.PREMULTIPLYALPHA = 7 === xV.alphaMode || 8 === xV.alphaMode, JV.EMISSIVEASILLUMINATION = xV.useEmissiveAsIllumination, JV.LINKEMISSIVEWITHDIFFUSE = xV.linkEmissiveWithDiffuse, JV.TWOSIDEDLIGHTING = !xV.backFaceCulling && xV.twoSidedLighting, JV.INSTANCES = "none" !== UV, JV.THIN_INSTANCES = "thin" === UV, JV.LITE_FRONT_LAYER = YV >= 1;
         for (const {
-            feature: eM,
-            state: bM,
-            active: wM
+            feature: PV,
+            state: AV,
+            active: NV
           }
-          of aM) {
-          var JM, dM;
-          if (wM) null === (JM = (dM = (0, sr.i)(eM)).prepareDefinesBeforeAttributes) || void 0 === JM || JM.call(dM, bM, OM, MM, rM)
+          of yV) {
+          var bV, EV;
+          if (NV) null === (bV = (EV = (0, ge.j)(PV)).prepareDefinesBeforeAttributes) || void 0 === bV || bV.call(EV, AV, JV, VV, eV)
         }
-        this.modelPackKind(iM) && (OM._needNormals = !0), OM.NORMAL = OM._needNormals && rM.isVerticesDataPresent("normal"), OM.UV1 = OM._needUVs && rM.isVerticesDataPresent("uv"), OM.UV2 = OM._needUVs && rM.isVerticesDataPresent("uv2");
-        const yM = rM.useVertexColors && rM.isVerticesDataPresent("color");
-        OM.VERTEXCOLOR = yM, OM.VERTEXALPHA = rM.hasVertexAlpha && yM, OM.INSTANCESCOLOR = "none" !== jM && rM.isVerticesDataPresent("instanceColor");
+        this.modelPackKind(xV) && (JV._needNormals = !0), JV.NORMAL = JV._needNormals && eV.isVerticesDataPresent("normal"), JV.UV1 = JV._needUVs && eV.isVerticesDataPresent("uv"), JV.UV2 = JV._needUVs && eV.isVerticesDataPresent("uv2");
+        const BV = eV.useVertexColors && eV.isVerticesDataPresent("color");
+        JV.VERTEXCOLOR = BV, JV.VERTEXALPHA = eV.hasVertexAlpha && BV, JV.INSTANCESCOLOR = "none" !== UV && eV.isVerticesDataPresent("instanceColor");
         for (const {
-            feature: eM,
-            state: bM,
-            active: wM
+            feature: PV,
+            state: AV,
+            active: NV
           }
-          of aM) {
-          var lM, EM;
-          if (wM) null === (lM = (EM = (0, sr.i)(eM)).prepareDefines) || void 0 === lM || lM.call(EM, bM, OM, MM, rM, iM)
+          of yV) {
+          var jV, qV;
+          if (NV) null === (jV = (qV = (0, ge.j)(PV)).prepareDefines) || void 0 === jV || jV.call(qV, AV, JV, VV, eV, xV)
         }
-        const UM = MM.ph();
+        const tV = VV.sk();
         for (const {
-            feature: eM,
-            state: bM,
-            active: wM
+            feature: PV,
+            state: AV,
+            active: NV
           }
-          of aM) {
-          var GM, CM;
-          if (wM && !1 === (null === (GM = (CM = (0, sr.i)(eM)).isReadyForSubMesh) || void 0 === GM ? void 0 : GM.call(CM, bM, OM, MM, UM))) return !1
+          of yV) {
+          var FV, TV;
+          if (NV && !1 === (null === (FV = (TV = (0, ge.j)(PV)).isReadyForSubMesh) || void 0 === FV ? void 0 : FV.call(TV, AV, JV, VV, tV))) return !1
         }
         return !0
       }
     }
 
-    function Hj(MM, rM, iM) {
-      return MM.codeVersion !== rM.version && function(MM, rM) {
-        const iM = [],
-          OM = [];
+    function ZU(VV, eV, xV) {
+      return VV.codeVersion !== eV.version && function(VV, eV) {
+        const xV = [],
+          JV = [];
         for (const {
-            feature: mM,
-            state: HM,
-            active: hM
+            feature: vV,
+            state: rV,
+            active: kV
           }
-          of rM.features) {
-          var SM, jM, aM, PM;
-          if (hM) hj(null === (SM = (jM = (0, sr.i)(mM)).getCustomCode) || void 0 === SM ? void 0 : SM.call(jM, HM, "vertex", CM.b.WGSL), iM), hj(null === (aM = (PM = (0, sr.i)(mM)).getCustomCode) || void 0 === aM ? void 0 : aM.call(PM, HM, "fragment", CM.b.WGSL), OM)
+          of eV.features) {
+          var YV, UV, yV, pV;
+          if (kV) vU(null === (YV = (UV = (0, ge.j)(vV)).getCustomCode) || void 0 === YV ? void 0 : YV.call(UV, rV, "vertex", TV.d.WGSL), xV), vU(null === (yV = (pV = (0, ge.j)(vV)).getCustomCode) || void 0 === yV ? void 0 : yV.call(pV, rV, "fragment", TV.d.WGSL), JV)
         }
-        const nM = [];
+        const QV = [];
         for (const {
-            feature: mM,
-            state: HM
+            feature: vV,
+            state: rV
           }
-          of rM.features) {
-          var QM, zM;
-          const MM = null === (QM = (zM = (0, sr.i)(mM)).getUniforms) || void 0 === QM ? void 0 : QM.call(zM, HM, CM.b.WGSL);
-          for (const rM of null !== (LM = null === MM || void 0 === MM ? void 0 : MM.ubo) && void 0 !== LM ? LM : []) {
-            var LM;
-            rM.size && rM.type && nM.push({
-              name: rM.name,
-              type: rM.type,
-              arraySize: rM.arraySize
+          of eV.features) {
+          var nV, wV;
+          const VV = null === (nV = (wV = (0, ge.j)(vV)).getUniforms) || void 0 === nV ? void 0 : nV.call(wV, rV, TV.d.WGSL);
+          for (const eV of null !== (ZV = null === VV || void 0 === VV ? void 0 : VV.ubo) && void 0 !== ZV ? ZV : []) {
+            var ZV;
+            eV.size && eV.type && QV.push({
+              name: eV.name,
+              type: eV.type,
+              arraySize: eV.arraySize
             })
           }
         }
-        MM.vertexCode = iM, MM.fragmentCode = OM, MM.pluginUniforms = nM, MM.codeKey = JSON.stringify([iM, OM, nM]), MM.codeVersion = rM.version
-      }(MM, rM), `${iM}#${MM.codeKey}`
+        VV.vertexCode = xV, VV.fragmentCode = JV, VV.pluginUniforms = QV, VV.codeKey = JSON.stringify([xV, JV, QV]), VV.codeVersion = eV.version
+      }(VV, eV), `${xV}#${VV.codeKey}`
     }
 
-    function hj(MM, rM) {
-      if (MM)
-        for (const iM in MM) MM[iM] && rM.push([iM, MM[iM]])
+    function vU(VV, eV) {
+      if (VV)
+        for (const xV in VV) VV[xV] && eV.push([xV, VV[xV]])
     }
-    const Jj = new Map([
+    const rU = new Map([
       [512, "never"],
       [513, "greater"],
       [514, "equal"],
@@ -2322,326 +2322,326 @@ export const modules = {
       [518, "less-equal"],
       [519, "always"]
     ]);
-    class dj {
-      constructor(MM) {
-        this.warnOnce = MM, this.states = new Map
+    class kU {
+      constructor(VV) {
+        this.warnOnce = VV, this.states = new Map
       }
-      renderState(MM, rM, iM, OM) {
-        var SM;
-        let jM = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "triangle-list",
-          aM = null !== (SM = MM.sideOrientation) && void 0 !== SM ? SM : rM.sideOrientation;
-        rM._getWorldMatrixDeterminant() < 0 && (aM = 0 === aM ? 1 : 0);
-        const PM = "triangle-list" === jM,
-          nM = iM ? MM.alphaMode : 0,
-          QM = (!iM || (0 === nM || MM.forceDepthWrite)) && !MM.disableDepthWrite,
-          zM = PM && MM.backFaceCulling ? MM.cullBackFaces ? "back" : "front" : "none",
-          LM = PM && 0 !== aM ? "ccw" : "cw",
-          mM = MM.depthFunction,
-          HM = PM ? MM.zOffset : 0,
-          hM = PM ? MM.zOffsetUnits : 0,
-          JM = !MM.disableColorWrite;
-        return OM && OM.alphaMode === nM && OM.depthWrite === QM && OM.depthFunction === mM && OM.cullMode === zM && OM.frontFace === LM && OM.zOffset === HM && OM.zOffsetUnits === hM && OM.colourWrite === JM && OM.topology === jM ? OM : this.stateFor(nM, QM, mM, zM, LM, HM, hM, JM, jM)
+      renderState(VV, eV, xV, JV) {
+        var YV;
+        let UV = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "triangle-list",
+          yV = null !== (YV = VV.sideOrientation) && void 0 !== YV ? YV : eV.sideOrientation;
+        eV._getWorldMatrixDeterminant() < 0 && (yV = 0 === yV ? 1 : 0);
+        const pV = "triangle-list" === UV,
+          QV = xV ? VV.alphaMode : 0,
+          nV = (!xV || (0 === QV || VV.forceDepthWrite)) && !VV.disableDepthWrite,
+          wV = pV && VV.backFaceCulling ? VV.cullBackFaces ? "back" : "front" : "none",
+          ZV = pV && 0 !== yV ? "ccw" : "cw",
+          vV = VV.depthFunction,
+          rV = pV ? VV.zOffset : 0,
+          kV = pV ? VV.zOffsetUnits : 0,
+          bV = !VV.disableColorWrite;
+        return JV && JV.alphaMode === QV && JV.depthWrite === nV && JV.depthFunction === vV && JV.cullMode === wV && JV.frontFace === ZV && JV.zOffset === rV && JV.zOffsetUnits === kV && JV.colourWrite === bV && JV.topology === UV ? JV : this.stateFor(QV, nV, vV, wV, ZV, rV, kV, bV, UV)
       }
-      stateFor(MM, rM, iM, OM, SM, jM, aM, PM, nM) {
-        const QM = `${MM}|${rM}|${iM}|${OM}|${SM}|${jM}|${aM}|${PM}|${nM}`;
-        let zM = this.states.get(QM);
-        if (!zM) {
-          var LM;
-          const mM = MM ? jr(MM) : null;
-          MM && !mM && this.warnOnce(`alpha:${MM}`, `alpha mode ${MM} is not supported`), zM = {
-            key: QM,
-            alphaMode: MM,
-            depthFunction: iM,
-            zOffset: jM,
-            zOffsetUnits: aM,
-            topology: nM,
-            blend: mM,
-            depthWrite: rM,
-            depthCompare: iM && null !== (LM = Jj.get(iM)) && void 0 !== LM ? LM : null,
-            cullMode: OM,
-            frontFace: SM,
-            depthBias: -aM,
-            depthBiasSlopeScale: -jM,
-            colourWrite: PM
-          }, this.states.set(QM, zM)
+      stateFor(VV, eV, xV, JV, YV, UV, yV, pV, QV) {
+        const nV = `${VV}|${eV}|${xV}|${JV}|${YV}|${UV}|${yV}|${pV}|${QV}`;
+        let wV = this.states.get(nV);
+        if (!wV) {
+          var ZV;
+          const vV = VV ? Ue(VV) : null;
+          VV && !vV && this.warnOnce(`alpha:${VV}`, `alpha mode ${VV} is not supported`), wV = {
+            key: nV,
+            alphaMode: VV,
+            depthFunction: xV,
+            zOffset: UV,
+            zOffsetUnits: yV,
+            topology: QV,
+            blend: vV,
+            depthWrite: eV,
+            depthCompare: xV && null !== (ZV = rU.get(xV)) && void 0 !== ZV ? ZV : null,
+            cullMode: JV,
+            frontFace: YV,
+            depthBias: -yV,
+            depthBiasSlopeScale: -UV,
+            colourWrite: pV
+          }, this.states.set(nV, wV)
         }
-        return zM
+        return wV
       }
     }
-    var yj = iM(38303);
+    var bU = xV(38515);
 
-    function lj(MM) {
-      if (!MM.frozen) return -1;
-      let rM = MM.version;
+    function EU(VV) {
+      if (!VV.frozen) return -1;
+      let eV = VV.version;
       for (const {
-          feature: iM,
-          state: OM,
-          active: SM
+          feature: xV,
+          state: JV,
+          active: YV
         }
-        of MM.features) {
-        if (!SM || !iM.bind) continue;
-        const MM = (0, sr.i)(iM).uniformsVersion;
-        if (!MM) return -1;
-        rM += MM(OM)
+        of VV.features) {
+        if (!YV || !xV.bind) continue;
+        const VV = (0, ge.j)(xV).uniformsVersion;
+        if (!VV) return -1;
+        eV += VV(JV)
       }
-      return rM
+      return eV
     }
-    class Ej {
-      constructor(MM, rM, iM) {
-        this.slots = MM, this.data = rM, this.textures = iM, this.useUbo = !0, this.currentEffect = null, this.expected = new Set
+    class BU {
+      constructor(VV, eV, xV) {
+        this.slots = VV, this.data = eV, this.textures = xV, this.useUbo = !0, this.currentEffect = null, this.expected = new Set
       }
-      updateFloat(MM, rM) {
-        this.write4(MM, rM, 0, 0, 0, 1)
+      updateFloat(VV, eV) {
+        this.write4(VV, eV, 0, 0, 0, 1)
       }
-      updateFloat2(MM, rM, iM) {
-        this.write4(MM, rM, iM, 0, 0, 2)
+      updateFloat2(VV, eV, xV) {
+        this.write4(VV, eV, xV, 0, 0, 2)
       }
-      updateFloat3(MM, rM, iM, OM) {
-        this.write4(MM, rM, iM, OM, 0, 3)
+      updateFloat3(VV, eV, xV, JV) {
+        this.write4(VV, eV, xV, JV, 0, 3)
       }
-      updateFloat4(MM, rM, iM, OM, SM) {
-        this.write4(MM, rM, iM, OM, SM, 4)
+      updateFloat4(VV, eV, xV, JV, YV) {
+        this.write4(VV, eV, xV, JV, YV, 4)
       }
-      updateVector3(MM, rM) {
-        this.write4(MM, rM.x, rM.y, rM.z, 0, 3)
+      updateVector3(VV, eV) {
+        this.write4(VV, eV.x, eV.y, eV.z, 0, 3)
       }
-      updateVector4(MM, rM) {
-        this.write4(MM, rM.x, rM.y, rM.z, rM.w, 4)
+      updateVector4(VV, eV) {
+        this.write4(VV, eV.x, eV.y, eV.z, eV.w, 4)
       }
-      updateColor3(MM, rM) {
-        this.write4(MM, rM.r, rM.g, rM.b, 0, 3)
+      updateColor3(VV, eV) {
+        this.write4(VV, eV.r, eV.g, eV.b, 0, 3)
       }
-      updateColor4(MM, rM, iM) {
-        this.write4(MM, rM.r, rM.g, rM.b, iM, 4)
+      updateColor4(VV, eV, xV) {
+        this.write4(VV, eV.r, eV.g, eV.b, xV, 4)
       }
-      updateFloatsFrom(MM, rM, iM, OM) {
-        const SM = this.slots.get(MM);
-        if (!SM) return;
-        const jM = this.data,
-          aM = SM.offset;
-        for (let PM = 0; PM < OM; PM++) jM[aM + PM] = rM[iM + PM]
+      updateFloatsFrom(VV, eV, xV, JV) {
+        const YV = this.slots.get(VV);
+        if (!YV) return;
+        const UV = this.data,
+          yV = YV.offset;
+        for (let pV = 0; pV < JV; pV++) UV[yV + pV] = eV[xV + pV]
       }
-      updateFloat3TimesFloats(MM, rM, iM, OM) {
-        const SM = this.slots.get(MM);
-        if (!SM) return;
-        const jM = this.data,
-          aM = SM.offset;
-        jM[aM] = rM[iM] * OM[0], jM[aM + 1] = rM[iM + 1] * OM[1], jM[aM + 2] = rM[iM + 2] * OM[2]
+      updateFloat3TimesFloats(VV, eV, xV, JV) {
+        const YV = this.slots.get(VV);
+        if (!YV) return;
+        const UV = this.data,
+          yV = YV.offset;
+        UV[yV] = eV[xV] * JV[0], UV[yV + 1] = eV[xV + 1] * JV[1], UV[yV + 2] = eV[xV + 2] * JV[2]
       }
-      p_(MM, rM) {
-        const iM = this.slots.get(MM);
-        iM && this.data.set(rM.m, iM.offset)
+      peV(VV, eV) {
+        const xV = this.slots.get(VV);
+        xV && this.data.set(eV.m, xV.offset)
       }
-      updateMatrixFloats(MM, rM) {
-        const iM = this.slots.get(MM);
-        iM && this.data.set(rM, iM.offset)
+      updateMatrixFloats(VV, eV) {
+        const xV = this.slots.get(VV);
+        xV && this.data.set(eV, xV.offset)
       }
-      updateFloatArray(MM, rM) {
-        const iM = this.slots.get(MM);
-        if (!iM) return;
-        if (!iM.arraySize || iM.stride === iM.floats) return void this.data.set(rM, iM.offset);
-        const OM = Math.min(rM.length, iM.floats * iM.arraySize);
-        for (let SM = 0; SM < OM; SM++) this.data[iM.offset + Math.floor(SM / iM.floats) * iM.stride + SM % iM.floats] = rM[SM]
+      updateFloatArray(VV, eV) {
+        const xV = this.slots.get(VV);
+        if (!xV) return;
+        if (!xV.arraySize || xV.stride === xV.floats) return void this.data.set(eV, xV.offset);
+        const JV = Math.min(eV.length, xV.floats * xV.arraySize);
+        for (let YV = 0; YV < JV; YV++) this.data[xV.offset + Math.floor(YV / xV.floats) * xV.stride + YV % xV.floats] = eV[YV]
       }
-      updateArray(MM, rM) {
-        this.updateFloatArray(MM, rM)
+      updateArray(VV, eV) {
+        this.updateFloatArray(VV, eV)
       }
-      setTexture(MM, rM) {
-        this.textures.set(MM, rM), this.expected.delete(MM)
+      setTexture(VV, eV) {
+        this.textures.set(VV, eV), this.expected.delete(VV)
       }
-      expectTexture(MM) {
-        this.textures.set(MM, null), this.expected.add(MM)
+      expectTexture(VV) {
+        this.textures.set(VV, null), this.expected.add(VV)
       }
-      write4(MM, rM, iM, OM, SM, jM) {
-        const aM = this.slots.get(MM);
-        if (!aM) return;
-        const PM = this.data,
-          nM = aM.offset;
-        PM[nM] = rM, jM > 1 && (PM[nM + 1] = iM), jM > 2 && (PM[nM + 2] = OM), jM > 3 && (PM[nM + 3] = SM)
+      write4(VV, eV, xV, JV, YV, UV) {
+        const yV = this.slots.get(VV);
+        if (!yV) return;
+        const pV = this.data,
+          QV = yV.offset;
+        pV[QV] = eV, UV > 1 && (pV[QV + 1] = xV), UV > 2 && (pV[QV + 2] = JV), UV > 3 && (pV[QV + 3] = YV)
       }
     }
 
-    function Uj(MM, rM) {
-      const iM = zS,
-        OM = yj.f,
-        SM = MM.lights,
-        jM = Math.min(MM.lightCount, 8);
-      for (let aM = 0; aM < jM; aM++) {
-        const MM = iM.lights + aM * iM.lightStride,
-          jM = aM * yj.c;
-        rM[MM] = SM[jM + OM.vector], rM[MM + 1] = SM[jM + OM.vector + 1], rM[MM + 2] = SM[jM + OM.vector + 2], rM[MM + 3] = SM[jM + OM.kind] === yj.e.directional ? 1 : 0, rM[MM + 4] = SM[jM + OM.diffuse], rM[MM + 5] = SM[jM + OM.diffuse + 1], rM[MM + 6] = SM[jM + OM.diffuse + 2], rM[MM + 7] = SM[jM + OM.range], rM[MM + 8] = SM[jM + OM.specular], rM[MM + 9] = SM[jM + OM.specular + 1], rM[MM + 10] = SM[jM + OM.specular + 2], rM[MM + 11] = SM[jM + OM.range]
+    function jU(VV, eV) {
+      const xV = QY,
+        JV = bU.h,
+        YV = VV.lights,
+        UV = Math.min(VV.lightCount, 8);
+      for (let yV = 0; yV < UV; yV++) {
+        const VV = xV.lights + yV * xV.lightStride,
+          UV = yV * bU.d;
+        eV[VV] = YV[UV + JV.vector], eV[VV + 1] = YV[UV + JV.vector + 1], eV[VV + 2] = YV[UV + JV.vector + 2], eV[VV + 3] = YV[UV + JV.kind] === bU.e.directional ? 1 : 0, eV[VV + 4] = YV[UV + JV.diffuse], eV[VV + 5] = YV[UV + JV.diffuse + 1], eV[VV + 6] = YV[UV + JV.diffuse + 2], eV[VV + 7] = YV[UV + JV.range], eV[VV + 8] = YV[UV + JV.specular], eV[VV + 9] = YV[UV + JV.specular + 1], eV[VV + 10] = YV[UV + JV.specular + 2], eV[VV + 11] = YV[UV + JV.range]
       }
-      rM[iM.fogInfos] = MM.fogMode, rM[iM.fogInfos + 1] = MM.fogStart, rM[iM.fogInfos + 2] = MM.fogEnd, rM[iM.fogInfos + 3] = MM.fogDensity, rM[iM.fogColour] = MM.fogColour[0], rM[iM.fogColour + 1] = MM.fogColour[1], rM[iM.fogColour + 2] = MM.fogColour[2], rM[iM.outputHeight] = MM.renderHeight, rM[iM.animTick] = MM.animTick, rM[iM.timeMs] = MM.timeMs
+      eV[xV.fogInfos] = VV.fogMode, eV[xV.fogInfos + 1] = VV.fogStart, eV[xV.fogInfos + 2] = VV.fogEnd, eV[xV.fogInfos + 3] = VV.fogDensity, eV[xV.fogColour] = VV.fogColour[0], eV[xV.fogColour + 1] = VV.fogColour[1], eV[xV.fogColour + 2] = VV.fogColour[2], eV[xV.outputHeight] = VV.renderHeight, eV[xV.animTick] = VV.animTick, eV[xV.timeMs] = VV.timeMs
     }
-    class Gj {
-      constructor(MM) {
-        this.instancesOf = MM
+    class qU {
+      constructor(VV) {
+        this.instancesOf = VV
       }
-      refreshModelUniforms(MM, rM, iM, OM) {
-        const SM = lj(iM);
-        if (SM >= 0 && SM === rM.heldVersion && rM.textures.get("diffuseSampler") === iM.diffuseTexture && rM.textures.get("reflectionCubeSampler") === iM.reflectionTexture && rM.textures.get("opacitySampler") === iM.opacityTexture && rM.textures.get("emissiveSampler") === iM.emissiveTexture) return !0;
-        if (SM < 0)
-          for (const jM of this.instancesOf(iM)) jM.heldVersion = -1;
-        return this.writeModelUniforms(MM, rM, iM, OM), rM.heldVersion = SM, !1
+      refreshModelUniforms(VV, eV, xV, JV) {
+        const YV = EU(xV);
+        if (YV >= 0 && YV === eV.heldVersion && eV.textures.get("diffuseSampler") === xV.diffuseTexture && eV.textures.get("reflectionCubeSampler") === xV.reflectionTexture && eV.textures.get("opacitySampler") === xV.opacityTexture && eV.textures.get("emissiveSampler") === xV.emissiveTexture) return !0;
+        if (YV < 0)
+          for (const UV of this.instancesOf(xV)) UV.heldVersion = -1;
+        return this.writeModelUniforms(VV, eV, xV, JV), eV.heldVersion = YV, !1
       }
-      writeModelUniforms(MM, rM, iM, OM) {
+      writeModelUniforms(VV, eV, xV, JV) {
         const {
-          ubo: SM
-        } = rM, jM = iM.diffuseTexture, aM = iM.diffuseColor;
-        SM.updateFloat4("vDiffuseColor", aM[0], aM[1], aM[2], iM.alpha), jM && (SM.updateFloat2("vDiffuseInfos", jM.uvSet, jM.level), SM.updateMatrixFloats("diffuseMatrix", jM.matrix)), SM.updateFloat("alphaCutOff", iM.alphaCutOff), SM.updateFloatsFrom("vEmissiveColor", iM.emissiveColor, 0, 3), SM.updateFloat3TimesFloats("vAmbientColor", OM.ambientColour, 0, iM.ambientColor);
-        const PM = iM.specularColor;
-        SM.updateFloat4("vSpecularColor", PM[0], PM[1], PM[2], iM.specularPower), SM.setTexture("diffuseSampler", jM);
-        const nM = iM.opacityTexture;
-        nM && (SM.updateFloat2("vOpacityInfos", nM.uvSet, nM.level), SM.updateMatrixFloats("opacityMatrix", nM.matrix)), SM.setTexture("opacitySampler", nM);
-        const QM = iM.emissiveTexture;
-        QM && (SM.updateFloat2("vEmissiveInfos", QM.uvSet, QM.level), SM.updateMatrixFloats("emissiveMatrix", QM.matrix)), SM.setTexture("emissiveSampler", QM);
-        const zM = iM.reflectionTexture;
-        zM && SM.updateMatrixFloats("reflectionMatrix", zM.matrix), SM.updateFloat2("vReflectionInfos", zM ? zM.level * MM.iblIntensity : 0, iM.roughness), SM.setTexture("reflectionCubeSampler", zM);
-        const LM = MM.ph();
+          ubo: YV
+        } = eV, UV = xV.diffuseTexture, yV = xV.diffuseColor;
+        YV.updateFloat4("vDiffuseColor", yV[0], yV[1], yV[2], xV.alpha), UV && (YV.updateFloat2("vDiffuseInfos", UV.uvSet, UV.level), YV.updateMatrixFloats("diffuseMatrix", UV.matrix)), YV.updateFloat("alphaCutOff", xV.alphaCutOff), YV.updateFloatsFrom("vEmissiveColor", xV.emissiveColor, 0, 3), YV.updateFloat3TimesFloats("vAmbientColor", JV.ambientColour, 0, xV.ambientColor);
+        const pV = xV.specularColor;
+        YV.updateFloat4("vSpecularColor", pV[0], pV[1], pV[2], xV.specularPower), YV.setTexture("diffuseSampler", UV);
+        const QV = xV.opacityTexture;
+        QV && (YV.updateFloat2("vOpacityInfos", QV.uvSet, QV.level), YV.updateMatrixFloats("opacityMatrix", QV.matrix)), YV.setTexture("opacitySampler", QV);
+        const nV = xV.emissiveTexture;
+        nV && (YV.updateFloat2("vEmissiveInfos", nV.uvSet, nV.level), YV.updateMatrixFloats("emissiveMatrix", nV.matrix)), YV.setTexture("emissiveSampler", nV);
+        const wV = xV.reflectionTexture;
+        wV && YV.updateMatrixFloats("reflectionMatrix", wV.matrix), YV.updateFloat2("vReflectionInfos", wV ? wV.level * VV.iblIntensity : 0, xV.roughness), YV.setTexture("reflectionCubeSampler", wV);
+        const ZV = VV.sk();
         for (const {
-            feature: hM,
-            state: JM,
-            active: dM
+            feature: kV,
+            state: bV,
+            active: EV
           }
-          of iM.features) {
-          var mM, HM;
-          if (dM) null === (mM = (HM = (0, sr.i)(hM)).bind) || void 0 === mM || mM.call(HM, JM, SM, MM, LM)
+          of xV.features) {
+          var vV, rV;
+          if (EV) null === (vV = (rV = (0, ge.j)(kV)).bind) || void 0 === vV || vV.call(rV, bV, YV, VV, ZV)
         }
       }
     }
 
-    function Cj(MM) {
-      const rM = MM.replace(/\s+/g, "");
-      return /u32|^vec\du$/.test(rM) ? "u32" : /i32|^vec\di$/.test(rM) ? "i32" : "f32"
+    function tU(VV) {
+      const eV = VV.replace(/\s+/g, "");
+      return /u32|^vec\du$/.test(eV) ? "u32" : /i32|^vec\di$/.test(eV) ? "i32" : "f32"
     }
 
-    function ej(MM, rM) {
-      const iM = MM.getSize(),
-        OM = Cj(rM),
-        SM = MM => 4 === iM ? `${MM}x4` : 2 === iM ? `${MM}x2` : null;
-      if ("f32" === OM) {
-        if (5126 === MM.type) return 1 === iM ? "float32" : iM >= 2 && iM <= 4 ? `float32x${iM}` : null;
-        if (!MM.normalized) return null;
-        switch (MM.type) {
+    function FU(VV, eV) {
+      const xV = VV.getSize(),
+        JV = tU(eV),
+        YV = VV => 4 === xV ? `${VV}x4` : 2 === xV ? `${VV}x2` : null;
+      if ("f32" === JV) {
+        if (5126 === VV.type) return 1 === xV ? "float32" : xV >= 2 && xV <= 4 ? `float32x${xV}` : null;
+        if (!VV.normalized) return null;
+        switch (VV.type) {
           case 5121:
-            return SM("unorm8");
+            return YV("unorm8");
           case 5120:
-            return SM("snorm8");
+            return YV("snorm8");
           case 5123:
-            return SM("unorm16");
+            return YV("unorm16");
           case 5122:
-            return SM("snorm16")
+            return YV("snorm16")
         }
         return null
       }
-      const jM = "u32" === OM ? "uint" : "sint";
-      switch (MM.type) {
+      const UV = "u32" === JV ? "uint" : "sint";
+      switch (VV.type) {
         case 5125:
         case 5124:
-          return 1 === iM ? `${jM}32` : iM <= 4 ? `${jM}32x${iM}` : null;
+          return 1 === xV ? `${UV}32` : xV <= 4 ? `${UV}32x${xV}` : null;
         case 5121:
         case 5120:
-          return SM(`${jM}8`);
+          return YV(`${UV}8`);
         case 5123:
         case 5122:
-          return SM(`${jM}16`)
+          return YV(`${UV}16`)
       }
       return null
     }
 
-    function bj(MM) {
-      var rM;
-      const iM = /(8|16|32)(?:x(\d))?$/.exec(MM);
-      return iM ? Number(iM[1]) / 8 * Number(null !== (rM = iM[2]) && void 0 !== rM ? rM : 1) : 4
+    function TU(VV) {
+      var eV;
+      const xV = /(8|16|32)(?:x(\d))?$/.exec(VV);
+      return xV ? Number(xV[1]) / 8 * Number(null !== (eV = xV[2]) && void 0 !== eV ? eV : 1) : 4
     }
-    class wj {
-      constructor(MM, rM, iM) {
-        this.resources = MM, this.limits = rM, this.warnOnce = iM, this.layouts = new Map
+    class PU {
+      constructor(VV, eV, xV) {
+        this.resources = VV, this.limits = eV, this.warnOnce = xV, this.layouts = new Map
       }
-      resolveInputs(MM, rM, iM, OM) {
-        const SM = [],
-          jM = iM.program.attributes,
-          aM = [];
-        for (let zM = 0; zM < jM.length; zM++) {
-          const iM = jM[zM],
-            PM = iM.optional ? null : this.resources.vertexInput(MM, iM.name, OM);
-          if (!PM) {
-            const MM = Cj(iM.type),
-              rM = "u32" === MM ? "uint32x4" : "i32" === MM ? "sint32x4" : "float32x4";
-            aM.push(null);
-            const OM = SM.find((MM => null === MM.data));
-            OM ? OM.attributes.push({
-              shaderLocation: zM,
+      resolveInputs(VV, eV, xV, JV) {
+        const YV = [],
+          UV = xV.program.attributes,
+          yV = [];
+        for (let wV = 0; wV < UV.length; wV++) {
+          const xV = UV[wV],
+            pV = xV.optional ? null : this.resources.vertexInput(VV, xV.name, JV);
+          if (!pV) {
+            const VV = tU(xV.type),
+              eV = "u32" === VV ? "uint32x4" : "i32" === VV ? "sint32x4" : "float32x4";
+            yV.push(null);
+            const JV = YV.find((VV => null === VV.data));
+            JV ? JV.attributes.push({
+              shaderLocation: wV,
               offset: 0,
-              format: rM
-            }) : SM.push({
+              format: eV
+            }) : YV.push({
               data: null,
               base: 0,
               stride: 0,
               step: "vertex",
               attributes: [{
-                shaderLocation: zM,
+                shaderLocation: wV,
                 offset: 0,
-                format: rM
+                format: eV
               }]
             });
             continue
           }
-          const nM = PM.getBuffer();
-          aM.push(PM);
-          const QM = ej(PM, iM.type);
-          if (!QM) return this.warnOnce(`format:${rM}:${iM.name}`, `${rM}'s ${iM.name} (type ${PM.type}, size ${PM.getSize()}) has no WebGPU vertex format`), null;
-          const LM = PM.getIsInstanced() ? "instance" : "vertex",
-            mM = PM.byteStride,
-            HM = bj(QM),
-            hM = SM.find((MM => MM.data === nM && MM.stride === mM && MM.step === LM && PM.byteOffset >= MM.base && PM.byteOffset - MM.base + HM <= mM));
-          hM ? hM.attributes.push({
-            shaderLocation: zM,
-            offset: PM.byteOffset - hM.base,
-            format: QM
-          }) : SM.push({
-            data: nM,
-            base: PM.byteOffset,
-            stride: mM,
-            step: LM,
+          const QV = pV.getBuffer();
+          yV.push(pV);
+          const nV = FU(pV, xV.type);
+          if (!nV) return this.warnOnce(`format:${eV}:${xV.name}`, `${eV}'s ${xV.name} (type ${pV.type}, size ${pV.getSize()}) has no WebGPU vertex format`), null;
+          const ZV = pV.getIsInstanced() ? "instance" : "vertex",
+            vV = pV.byteStride,
+            rV = TU(nV),
+            kV = YV.find((VV => VV.data === QV && VV.stride === vV && VV.step === ZV && pV.byteOffset >= VV.base && pV.byteOffset - VV.base + rV <= vV));
+          kV ? kV.attributes.push({
+            shaderLocation: wV,
+            offset: pV.byteOffset - kV.base,
+            format: nV
+          }) : YV.push({
+            data: QV,
+            base: pV.byteOffset,
+            stride: vV,
+            step: ZV,
             attributes: [{
-              shaderLocation: zM,
+              shaderLocation: wV,
               offset: 0,
-              format: QM
+              format: nV
             }]
           })
         }
-        if (SM.length > this.limits.maxVertexBuffers) return this.warnOnce(`slots:${rM}`, `${rM} needs ${SM.length} vertex buffers`), null;
-        let PM = "";
-        for (const zM of SM) {
-          PM += `${zM.stride}${"instance"===zM.step?"i":"v"}`;
-          for (const MM of zM.attributes) PM += `,${MM.shaderLocation}:${MM.offset}:${MM.format}`;
-          PM += ";"
+        if (YV.length > this.limits.maxVertexBuffers) return this.warnOnce(`slots:${eV}`, `${eV} needs ${YV.length} vertex buffers`), null;
+        let pV = "";
+        for (const wV of YV) {
+          pV += `${wV.stride}${"instance"===wV.step?"i":"v"}`;
+          for (const VV of wV.attributes) pV += `,${VV.shaderLocation}:${VV.offset}:${VV.format}`;
+          pV += ";"
         }
-        let nM = this.layouts.get(PM);
-        nM || (nM = {
-          key: PM,
-          buffers: SM.map((MM => ({
-            arrayStride: MM.stride,
-            stepMode: MM.step,
-            attributes: MM.attributes
+        let QV = this.layouts.get(pV);
+        QV || (QV = {
+          key: pV,
+          buffers: YV.map((VV => ({
+            arrayStride: VV.stride,
+            stepMode: VV.step,
+            attributes: VV.attributes
           }))),
-          instanceEnds: SM.map((MM => {
-            let rM = -1;
-            if ("instance" === MM.step)
-              for (const iM of MM.attributes) rM = Math.max(rM, iM.offset + bj(iM.format));
-            return rM
+          instanceEnds: YV.map((VV => {
+            let eV = -1;
+            if ("instance" === VV.step)
+              for (const xV of VV.attributes) eV = Math.max(eV, xV.offset + TU(xV.format));
+            return eV
           }))
-        }, this.layouts.set(PM, nM));
-        const QM = SM.map((MM => MM.base));
+        }, this.layouts.set(pV, QV));
+        const nV = YV.map((VV => VV.base));
         return {
-          program: iM,
-          sources: aM,
-          layout: nM,
-          slotData: SM.map((MM => MM.data)),
-          m_: QM,
+          program: xV,
+          sources: yV,
+          layout: QV,
+          slotData: YV.map((VV => VV.data)),
+          IVV: nV,
           buffers: [],
-          offsets: QM,
+          offsets: nV,
           ends: [],
           state: null,
           pipelineKey: "",
@@ -2657,39 +2657,39 @@ export const modules = {
       }
     }
 
-    function tj(MM, rM, iM, OM) {
-      const SM = rM.program.program.attributes;
-      for (let jM = 0; jM < SM.length; jM++) {
-        if ((SM[jM].optional ? null : iM.vertexInput(MM, SM[jM].name, OM)) !== rM.sources[jM]) return !1
+    function AU(VV, eV, xV, JV) {
+      const YV = eV.program.program.attributes;
+      for (let UV = 0; UV < YV.length; UV++) {
+        if ((YV[UV].optional ? null : xV.vertexInput(VV, YV[UV].name, JV)) !== eV.sources[UV]) return !1
       }
       return !0
     }
-    const gj = 64;
-    class uj {
-      constructor(MM, rM, iM, OM) {
-        this.device = MM, this.layout = rM, this.frameBuffer = iM, this.label = OM, this.data = new Float32Array(4096), this.buffer = void 0, this.bindGroup = void 0, this.buffer = this.createBuffer(), this.bindGroup = this.createBindGroup()
+    const NU = 64;
+    class XU {
+      constructor(VV, eV, xV, JV) {
+        this.device = VV, this.layout = eV, this.frameBuffer = xV, this.label = JV, this.data = new Float32Array(4096), this.buffer = void 0, this.bindGroup = void 0, this.buffer = this.createBuffer(), this.bindGroup = this.createBindGroup()
       }
-      ensure(MM) {
-        if (MM * gj <= this.data.length) return !1;
-        let rM = 2 * this.data.length;
-        for (; MM * gj > rM;) rM *= 2;
-        const iM = new Float32Array(rM);
-        return iM.set(this.data), this.data = iM, this.buffer.destroy(), this.buffer = this.createBuffer(), this.bindGroup = this.createBindGroup(), !0
+      ensure(VV) {
+        if (VV * NU <= this.data.length) return !1;
+        let eV = 2 * this.data.length;
+        for (; VV * NU > eV;) eV *= 2;
+        const xV = new Float32Array(eV);
+        return xV.set(this.data), this.data = xV, this.buffer.destroy(), this.buffer = this.createBuffer(), this.bindGroup = this.createBindGroup(), !0
       }
-      write(MM, rM, iM) {
-        let OM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-        const SM = this.data,
-          jM = MM * gj;
-        let aM = SM[jM + 16] !== iM;
-        for (let PM = 0; PM < 16 && !aM; PM++) aM = SM[jM + PM] !== rM[OM + PM];
-        if (aM) {
-          for (let MM = 0; MM < 16; MM++) SM[jM + MM] = rM[OM + MM];
-          SM[jM + 16] = iM
+      write(VV, eV, xV) {
+        let JV = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+        const YV = this.data,
+          UV = VV * NU;
+        let yV = YV[UV + 16] !== xV;
+        for (let pV = 0; pV < 16 && !yV; pV++) yV = YV[UV + pV] !== eV[JV + pV];
+        if (yV) {
+          for (let VV = 0; VV < 16; VV++) YV[UV + VV] = eV[JV + VV];
+          YV[UV + 16] = xV
         }
-        return aM
+        return yV
       }
-      upload(MM, rM) {
-        this.device.queue.writeBuffer(this.buffer, MM * LS, this.data, MM * gj, (rM - MM) * gj)
+      upload(VV, eV) {
+        this.device.queue.writeBuffer(this.buffer, VV * nY, this.data, VV * NU, (eV - VV) * NU)
       }
       createBuffer() {
         return this.device.createBuffer({
@@ -2718,124 +2718,124 @@ export const modules = {
       }
     }
 
-    function Rj(MM) {
-      return MM.gpu[gM.e.lite] ??= MM.materials.map(((rM, iM) => ({
-        parts: MM,
-        range: iM,
-        owner: MM.owner
+    function MU(VV) {
+      return VV.gpu[MV.f.lite] ??= VV.materials.map(((eV, xV) => ({
+        parts: VV,
+        range: xV,
+        owner: VV.owner
       })))
     }
 
-    function pj(MM) {
-      var rM, iM, OM;
-      return null !== (rM = null !== (iM = null === (OM = MM.parts.materials[MM.range]) || void 0 === OM ? void 0 : OM.mirror) && void 0 !== iM ? iM : MM.owner.material) && void 0 !== rM ? rM : null
+    function zU(VV) {
+      var eV, xV, JV;
+      return null !== (eV = null !== (xV = null === (JV = VV.parts.materials[VV.range]) || void 0 === JV ? void 0 : JV.mirror) && void 0 !== xV ? xV : VV.owner.material) && void 0 !== eV ? eV : null
     }
-    const Wj = ["opaque", "alphaTest", "transparent", "text"];
+    const GU = ["opaque", "alphaTest", "transparent", "text"];
 
-    function sj(MM) {
-      for (const rM of Wj) MM[rM].units.length = 0, MM[rM].rows.length = 0
+    function WU(VV) {
+      for (const eV of GU) VV[eV].units.length = 0, VV[eV].rows.length = 0
     }
-    class Dj {
+    class RU {
       constructor() {
-        this.selectedCount = 0, this.model = null, this.mirror = null, this.groups = new Map, this.batches = new WeakMap, this.rows = new Int32Array(0), this.frame = 0, this.warnOnce = (0, Wr.b)("Lite: ")
+        this.selectedCount = 0, this.model = null, this.mirror = null, this.groups = new Map, this.batches = new WeakMap, this.rows = new Int32Array(0), this.frame = 0, this.warnOnce = (0, Re.b)("Lite: ")
       }
-      attach(MM, rM) {
-        this.model = MM, this.mirror = rM
+      attach(VV, eV) {
+        this.model = VV, this.mirror = eV
       }
       get worlds() {
-        return this.model.nodes.uL
+        return this.model.nodes.cZ
       }
       get visibility() {
         return this.model.meshes.visibility
       }
-      group(MM) {
-        return this.groups.get(MM)
+      group(VV) {
+        return this.groups.get(VV)
       }
-      forEachGroup(MM) {
-        this.groups.forEach(MM)
+      forEachGroup(VV) {
+        this.groups.forEach(VV)
       }
-      forEachSelected(MM) {
-        for (const [rM, iM] of this.groups)
-          for (const OM of Wj)
-            for (const SM of iM[OM].units) MM(SM.owner, "text" === OM ? "transparent" : OM, rM)
+      forEachSelected(VV) {
+        for (const [eV, xV] of this.groups)
+          for (const JV of GU)
+            for (const YV of xV[JV].units) VV(YV.owner, "text" === JV ? "transparent" : JV, eV)
       }
-      select(MM, rM) {
-        this.frame++, this.selectedCount = 0, this.groups.forEach(sj);
+      select(VV, eV) {
+        this.frame++, this.selectedCount = 0, this.groups.forEach(WU);
         const {
-          model: iM,
-          mirror: OM
+          model: xV,
+          mirror: JV
         } = this;
-        if (!iM || !OM || !MM) return;
-        this.rows.length < iM.nodes.vL && (this.rows = new Int32Array(iM.nodes.vL));
-        const SM = this.rows,
-          jM = iM.meshes;
-        for (let PM = 0; PM < jM.looseCount; PM++) {
-          const MM = jM.loose[PM],
-            iM = OM.nodes[MM];
-          iM && !iM.isBlocked && iM.isEnabled() && !iM.UL.hasAZeroComponent && jM.selects(MM, rM.frustum) && (this.activate(iM, MM), this.selectedCount++)
+        if (!xV || !JV || !VV) return;
+        this.rows.length < xV.nodes.Jv && (this.rows = new Int32Array(xV.nodes.Jv));
+        const YV = this.rows,
+          UV = xV.meshes;
+        for (let pV = 0; pV < UV.looseCount; pV++) {
+          const VV = UV.loose[pV],
+            xV = JV.nodes[VV];
+          xV && !xV.isBlocked && xV.isEnabled() && !xV.WZ.hasAZeroComponent && UV.selects(VV, eV.frustum) && (this.activate(xV, VV), this.selectedCount++)
         }
-        const aM = jM.selectTextPlanes(rM.frustum, SM);
-        for (let PM = 0; PM < aM; PM++) {
-          const rM = SM[PM],
-            jM = OM.nodes[rM],
-            aM = iM.meshes.parts[rM];
-          if (!jM.isVisible || !(jM.visibility > 0) || 0 === (jM.layerMask & MM.layerMask) || !aM) continue;
-          const nM = this.groupOf(iM.meshes.layer[rM]).text;
-          for (const MM of Rj(aM)) nM.units.push(MM), nM.rows.push(rM);
+        const yV = UV.selectTextPlanes(eV.frustum, YV);
+        for (let pV = 0; pV < yV; pV++) {
+          const eV = YV[pV],
+            UV = JV.nodes[eV],
+            yV = xV.meshes.parts[eV];
+          if (!UV.isVisible || !(UV.visibility > 0) || 0 === (UV.layerMask & VV.layerMask) || !yV) continue;
+          const QV = this.groupOf(xV.meshes.layer[eV]).text;
+          for (const VV of MU(yV)) QV.units.push(VV), QV.rows.push(eV);
           this.selectedCount++
         }
       }
-      instanceBatch(MM) {
-        const rM = this.batchOf(MM);
-        return rM.dispatched || (rM.dispatched = rM.renderSelf = !0, rM.row = this.rowOf(MM)), rM
+      instanceBatch(VV) {
+        const eV = this.batchOf(VV);
+        return eV.dispatched || (eV.dispatched = eV.renderSelf = !0, eV.row = this.rowOf(VV)), eV
       }
-      rowOf(MM) {
-        return MM.row
+      rowOf(VV) {
+        return VV.row
       }
-      activate(MM, rM) {
-        if (!MM.Wk) {
-          const iM = MM;
-          if (iM.nSM) {
-            const MM = this.batchOf(iM);
-            MM.dispatched = !0, MM.renderSelf = !0, MM.row = rM
+      activate(VV, eV) {
+        if (!VV.JC) {
+          const xV = VV;
+          if (xV.NUV) {
+            const VV = this.batchOf(xV);
+            VV.dispatched = !0, VV.renderSelf = !0, VV.row = eV
           }
-          return void this.dispatch(iM, rM, rM)
+          return void this.dispatch(xV, eV, eV)
         }
-        const iM = MM,
-          OM = iM.QSM;
-        if (OM._getWorldMatrixDeterminant() >= 0 !== iM._getWorldMatrixDeterminant() >= 0) return void this.warnOnce(`mirrored:${OM.name}`, `A mirrored InstancedMesh of ${OM.name} is not drawn yet`);
-        const SM = this.batchOf(OM);
-        SM.instances.push(iM), SM.rows.push(rM), SM.dispatched || (SM.dispatched = !0, this.dispatch(OM, rM, this.rowOf(OM)))
+        const xV = VV,
+          JV = xV.XUV;
+        if (JV._getWorldMatrixDeterminant() >= 0 !== xV._getWorldMatrixDeterminant() >= 0) return void this.warnOnce(`mirrored:${JV.name}`, `A mirrored InstancedMesh of ${JV.name} is not drawn yet`);
+        const YV = this.batchOf(JV);
+        YV.instances.push(xV), YV.rows.push(eV), YV.dispatched || (YV.dispatched = !0, this.dispatch(JV, eV, this.rowOf(JV)))
       }
-      batchOf(MM) {
-        let rM = this.batches.get(MM);
-        return rM || (rM = {
+      batchOf(VV) {
+        let eV = this.batches.get(VV);
+        return eV || (eV = {
           frame: 0,
           dispatched: !1,
           renderSelf: !1,
           row: -1,
           instances: [],
           rows: []
-        }, this.batches.set(MM, rM)), rM.frame !== this.frame && (rM.frame = this.frame, rM.dispatched = !1, rM.renderSelf = !1, rM.instances.length = 0, rM.rows.length = 0), rM
+        }, this.batches.set(VV, eV)), eV.frame !== this.frame && (eV.frame = this.frame, eV.dispatched = !1, eV.renderSelf = !1, eV.instances.length = 0, eV.rows.length = 0), eV
       }
-      dispatch(MM, rM, iM) {
+      dispatch(VV, eV, xV) {
         const {
-          layer: OM,
-          parts: SM
+          layer: JV,
+          parts: YV
         } = this.model.meshes;
-        if (!SM[rM]) return;
-        const jM = this.groupOf(OM[rM]),
-          aM = MM;
-        for (const PM of Rj(SM[rM])) {
-          const MM = pj(PM);
-          if (!MM) continue;
-          const rM = MM.needAlphaBlendingForMesh(aM) ? jM.transparent : MM.needAlphaTestingForMesh(aM) ? jM.alphaTest : jM.opaque;
-          rM.units.push(PM), rM.rows.push(iM)
+        if (!YV[eV]) return;
+        const UV = this.groupOf(JV[eV]),
+          yV = VV;
+        for (const pV of MU(YV[eV])) {
+          const VV = zU(pV);
+          if (!VV) continue;
+          const eV = VV.needAlphaBlendingForMesh(yV) ? UV.transparent : VV.needAlphaTestingForMesh(yV) ? UV.alphaTest : UV.opaque;
+          eV.units.push(pV), eV.rows.push(xV)
         }
       }
-      groupOf(MM) {
-        let rM = this.groups.get(MM);
-        return rM || (rM = {
+      groupOf(VV) {
+        let eV = this.groups.get(VV);
+        return eV || (eV = {
           opaque: {
             units: [],
             rows: []
@@ -2852,225 +2852,225 @@ export const modules = {
             units: [],
             rows: []
           }
-        }, this.groups.set(MM, rM)), rM
+        }, this.groups.set(VV, eV)), eV
       }
     }
 
-    function kj(MM) {
-      MM.opaque.length = 0, MM.transparent.length = 0
+    function gU(VV) {
+      VV.opaque.length = 0, VV.transparent.length = 0
     }
-    class Zj {
+    class DU {
       constructor() {
-        this.sQ = new Map, this.enabled = [], this.groups = new Map, this.ML = [], this.warned = new Set, this.selected = 0, this.drawn = 0
+        this.hn = new Map, this.enabled = [], this.groups = new Map, this.ZZ = [], this.warned = new Set, this.selected = 0, this.drawn = 0
       }
-      add(MM) {
-        if (this.sQ.has(MM)) return;
-        const rM = {
-          mesh: MM,
-          observer: MM.onEffectiveEnabledStateChangedObservable.add((MM => {
-            this.kR(rM, MM)
+      add(VV) {
+        if (this.hn.has(VV)) return;
+        const eV = {
+          mesh: VV,
+          observer: VV.onEffectiveEnabledStateChangedObservable.add((VV => {
+            this.pW(eV, VV)
           })),
           index: -1,
           steady: null
         };
-        this.sQ.set(MM, rM), this.kR(rM, MM.isEnabled())
+        this.hn.set(VV, eV), this.pW(eV, VV.isEnabled())
       }
-      remove(MM) {
-        const rM = this.sQ.get(MM);
-        rM && (rM.observer.remove(!0), this.kR(rM, !1), this.sQ.delete(MM))
+      remove(VV) {
+        const eV = this.hn.get(VV);
+        eV && (eV.observer.remove(!0), this.pW(eV, !1), this.hn.delete(VV))
       }
       dropSteady() {
-        for (const MM of this.sQ.values()) MM.steady = null
+        for (const VV of this.hn.values()) VV.steady = null
       }
-      base(MM) {
-        return this.sQ.get(MM)
+      base(VV) {
+        return this.hn.get(VV)
       }
       drawStats() {
         return {
           drawn: this.drawn,
           selected: this.selected,
-          sQ: this.sQ.size
+          hn: this.hn.size
         }
       }
-      forEachSelected(MM) {
-        for (const [rM, iM] of this.groups) {
-          for (const OM of iM.opaque) MM(OM.owner, "opaque", rM);
-          for (const OM of iM.transparent) MM(OM.owner, "transparent", rM)
+      forEachSelected(VV) {
+        for (const [eV, xV] of this.groups) {
+          for (const JV of xV.opaque) VV(JV.owner, "opaque", eV);
+          for (const JV of xV.transparent) VV(JV.owner, "transparent", eV)
         }
-        for (const rM of this.ML) MM(rM.mesh, "opaque", 0)
+        for (const eV of this.ZZ) VV(eV.mesh, "opaque", 0)
       }
-      group(MM) {
-        return this.groups.get(MM)
+      group(VV) {
+        return this.groups.get(VV)
       }
-      forEachGroup(MM) {
-        this.groups.forEach(MM)
+      forEachGroup(VV) {
+        this.groups.forEach(VV)
       }
-      select(MM, rM) {
-        if (this.drawn = 0, this.selected = 0, this.ML.length = 0, this.groups.forEach(kj), !MM) return;
-        const iM = this.enabled;
-        for (let OM = 0; OM < iM.length; OM++) {
-          const SM = iM[OM];
-          if (SM.steady && rM(SM, MM)) {
-            this.selected++, this.ML.push(SM);
+      select(VV, eV) {
+        if (this.drawn = 0, this.selected = 0, this.ZZ.length = 0, this.groups.forEach(gU), !VV) return;
+        const xV = this.enabled;
+        for (let JV = 0; JV < xV.length; JV++) {
+          const YV = xV[JV];
+          if (YV.steady && eV(YV, VV)) {
+            this.selected++, this.ZZ.push(YV);
             continue
           }
-          const jM = SM.mesh;
-          if (jM.isBlocked || jM.UL.hasAZeroComponent) continue;
-          if (!jM.isVisible || jM.visibility <= 0 || 0 === (jM.layerMask & MM.layerMask)) continue;
-          if (jM.nSM) {
-            this.warned.has(jM.name) || (this.warned.add(jM.name), console.warn(`Lite: thin instance base ${jM.name} has InstancedMeshes and is not drawn`));
+          const UV = YV.mesh;
+          if (UV.isBlocked || UV.WZ.hasAZeroComponent) continue;
+          if (!UV.isVisible || UV.visibility <= 0 || 0 === (UV.layerMask & VV.layerMask)) continue;
+          if (UV.NUV) {
+            this.warned.has(UV.name) || (this.warned.add(UV.name), console.warn(`Lite: thin instance base ${UV.name} has InstancedMeshes and is not drawn`));
             continue
           }
           const {
-            parts: aM
-          } = jM;
-          if (!aM) continue;
-          jM.computeWorldMatrix(), this.selected++;
-          const PM = this.listsFor(jM.renderingGroupId);
-          for (const MM of Rj(aM)) {
-            const rM = pj(MM);
-            rM && (rM.needAlphaBlendingForMesh(jM) ? PM.transparent.push(MM) : PM.opaque.push(MM))
+            parts: yV
+          } = UV;
+          if (!yV) continue;
+          UV.computeWorldMatrix(), this.selected++;
+          const pV = this.listsFor(UV.renderingGroupId);
+          for (const VV of MU(yV)) {
+            const eV = zU(VV);
+            eV && (eV.needAlphaBlendingForMesh(UV) ? pV.transparent.push(VV) : pV.opaque.push(VV))
           }
         }
       }
-      kR(MM, rM) {
-        if (rM === MM.index >= 0) return;
-        MM.steady = null;
-        const iM = this.enabled;
-        if (rM) MM.index = iM.length, iM.push(MM);
+      pW(VV, eV) {
+        if (eV === VV.index >= 0) return;
+        VV.steady = null;
+        const xV = this.enabled;
+        if (eV) VV.index = xV.length, xV.push(VV);
         else {
-          const rM = iM.pop();
-          rM !== MM && (iM[MM.index] = rM, rM.index = MM.index), MM.index = -1
+          const eV = xV.pop();
+          eV !== VV && (xV[VV.index] = eV, eV.index = VV.index), VV.index = -1
         }
       }
-      listsFor(MM) {
-        let rM = this.groups.get(MM);
-        return rM || (rM = {
+      listsFor(VV) {
+        let eV = this.groups.get(VV);
+        return eV || (eV = {
           opaque: [],
           transparent: []
-        }, this.groups.set(MM, rM)), rM
+        }, this.groups.set(VV, eV)), eV
       }
     }
-    var oj = iM(40703);
-    class fj {
+    var iU = xV(40867);
+    class CU {
       constructor() {
-        this.bundle = null, this.stale = !0, this.sQ = new Set
+        this.bundle = null, this.stale = !0, this.hn = new Set
       }
     }
-    class Yj {
-      constructor(MM, rM, iM) {
-        this.device = MM, this.slots = rM, this.host = iM, this.records = new Map, this.freeSlots = [], this.slotCount = 0, this.slotsFrom = Number.POSITIVE_INFINITY, this.slotsTo = -1, this.args = new Uint32Array(320), this.argsBuffer = void 0, this.argsDirty = !1, this.main = new fj, this.FW = new fj, this.rangedEpoch = -1, this.bundles = [], this.recordedTarget = "", this.recordedSceneGroup = null, this.binder = new Mj, this.frame = 0, this.drawn = 0, this.direct = void 0, this.directThisFrame = !1, this.endRecordFrame = MM => {
-          MM.seen !== this.frame && (MM.draw && (MM.draw = null, this.args[5 * MM.slot + 1] = 0, this.argsDirty = !0, this.FW.stale ||= MM.FW), this.frame - MM.seen > 120 && (this.records.delete(MM.unit), this.freeSlots.push(MM.slot), MM.recorded && (this.bundleOf(MM).stale = !0)))
-        }, this.argsBuffer = this.createArgsBuffer(), this.direct = function(MM) {
-          var rM, iM;
-          let OM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null !== (rM = null === (iM = globalThis.navigator) || void 0 === iM ? void 0 : iM.userAgent) && void 0 !== rM ? rM : "";
-          const SM = MM.adapterInfo;
-          return "intel" === (null === SM || void 0 === SM ? void 0 : SM.vendor) && "gen-12lp" === SM.architecture && OM.includes("Windows")
-        }(MM), (0, oj.I)(this.direct)
+    class aU {
+      constructor(VV, eV, xV) {
+        this.device = VV, this.slots = eV, this.host = xV, this.records = new Map, this.freeSlots = [], this.slotCount = 0, this.slotsFrom = Number.POSITIVE_INFINITY, this.slotsTo = -1, this.args = new Uint32Array(320), this.argsBuffer = void 0, this.argsDirty = !1, this.main = new CU, this.jR = new CU, this.rangedEpoch = -1, this.bundles = [], this.recordedTarget = "", this.recordedSceneGroup = null, this.binder = new dY, this.frame = 0, this.drawn = 0, this.direct = void 0, this.directThisFrame = !1, this.endRecordFrame = VV => {
+          VV.seen !== this.frame && (VV.draw && (VV.draw = null, this.args[5 * VV.slot + 1] = 0, this.argsDirty = !0, this.jR.stale ||= VV.jR), this.frame - VV.seen > 120 && (this.records.delete(VV.unit), this.freeSlots.push(VV.slot), VV.recorded && (this.bundleOf(VV).stale = !0)))
+        }, this.argsBuffer = this.createArgsBuffer(), this.direct = function(VV) {
+          var eV, xV;
+          let JV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null !== (eV = null === (xV = globalThis.navigator) || void 0 === xV ? void 0 : xV.userAgent) && void 0 !== eV ? eV : "";
+          const YV = VV.adapterInfo;
+          return "intel" === (null === YV || void 0 === YV ? void 0 : YV.vendor) && "gen-12lp" === YV.architecture && JV.includes("Windows")
+        }(VV), (0, iU.D)(this.direct)
       }
-      WU() {
-        this.frame++, this.drawn = 0, this.directThisFrame = this.direct, (0, oj.I)(this.directThisFrame)
+      pT() {
+        this.frame++, this.drawn = 0, this.directThisFrame = this.direct, (0, iU.D)(this.directThisFrame)
       }
-      add(MM, rM, iM, OM) {
-        let SM = this.records.get(MM);
-        return SM || (SM = this.createRecord(MM), this.records.set(MM, SM)), SM.recorded && Aj(SM, rM) || (this.bundleOf(SM).stale = !0), this.place(SM, rM, iM, OM), SM
+      add(VV, eV, xV, JV) {
+        let YV = this.records.get(VV);
+        return YV || (YV = this.createRecord(VV), this.records.set(VV, YV)), YV.recorded && cU(YV, eV) || (this.bundleOf(YV).stale = !0), this.place(YV, eV, xV, JV), YV
       }
-      bundleOf(MM) {
-        return MM.FW ? this.FW : this.main
+      bundleOf(VV) {
+        return VV.jR ? this.jR : this.main
       }
-      addAgain(MM, rM, iM, OM) {
-        MM.recorded || (this.bundleOf(MM).stale = !0), this.place(MM, rM, iM, OM)
+      addAgain(VV, eV, xV, JV) {
+        VV.recorded || (this.bundleOf(VV).stale = !0), this.place(VV, eV, xV, JV)
       }
-      place(MM, rM, iM, OM) {
-        MM.seen = this.frame, MM.FW && null === MM.draw && (this.FW.stale = !0), MM.draw = rM, this.drawn++, iM && this.slots.write(MM.slot, iM, OM) && (this.slotsFrom = Math.min(this.slotsFrom, MM.slot), this.slotsTo = Math.max(this.slotsTo, MM.slot));
-        const SM = this.args,
-          jM = 5 * MM.slot;
-        SM[jM] === rM.count && SM[jM + 1] === rM.instances && SM[jM + 2] === rM.first || (SM[jM] = rM.count, SM[jM + 1] = rM.instances, SM[jM + 2] = rM.first, this.argsDirty = !0, this.FW.stale ||= MM.FW)
+      place(VV, eV, xV, JV) {
+        VV.seen = this.frame, VV.jR && null === VV.draw && (this.jR.stale = !0), VV.draw = eV, this.drawn++, xV && this.slots.write(VV.slot, xV, JV) && (this.slotsFrom = Math.min(this.slotsFrom, VV.slot), this.slotsTo = Math.max(this.slotsTo, VV.slot));
+        const YV = this.args,
+          UV = 5 * VV.slot;
+        YV[UV] === eV.count && YV[UV + 1] === eV.instances && YV[UV + 2] === eV.first || (YV[UV] = eV.count, YV[UV + 1] = eV.instances, YV[UV + 2] = eV.first, this.argsDirty = !0, this.jR.stale ||= VV.jR)
       }
-      EL() {
+      GZ() {
         this.records.forEach(this.endRecordFrame), this.argsDirty && !this.directThisFrame && (this.device.queue.writeBuffer(this.argsBuffer, 0, this.args, 0, 5 * this.slotCount), this.argsDirty = !1), this.slotsTo >= 0 && (this.slots.upload(this.slotsFrom, this.slotsTo + 1), this.slotsFrom = Number.POSITIVE_INFINITY, this.slotsTo = -1)
       }
-      forEachDrawn(MM) {
-        for (const rM of this.records.values()) rM.draw && rM.seen === this.frame && !rM.FW && MM(rM.draw, this.slots.data, rM.slot * LS / 4)
+      forEachDrawn(VV) {
+        for (const eV of this.records.values()) eV.draw && eV.seen === this.frame && !eV.jR && VV(eV.draw, this.slots.data, eV.slot * nY / 4)
       }
-      resourceDestroyed(MM) {
-        this.main.stale ||= this.main.sQ.has(MM), this.FW.stale ||= this.FW.sQ.has(MM)
+      resourceDestroyed(VV) {
+        this.main.stale ||= this.main.hn.has(VV), this.jR.stale ||= this.jR.hn.has(VV)
       }
-      execute(MM, rM, iM) {
+      execute(VV, eV, xV) {
         if (0 === this.drawn) return 0;
-        if (this.directThisFrame) return this.encode(MM, rM, iM, "direct"), this.drawn;
-        const OM = this.host.sceneGroup(rM);
-        if (!OM) return this.main.bundle = null, this.FW.bundle = null, this.recordedSceneGroup = null, this.encode(MM, rM, iM, "direct"), this.drawn;
-        this.recordedTarget === iM && this.recordedSceneGroup === OM || (this.recordedTarget = iM, this.recordedSceneGroup = OM, this.main.stale = !0, this.FW.stale = !0);
-        const SM = this.main,
-          jM = this.FW;
-        let aM = !1;
-        !SM.stale && SM.bundle || (SM.bundle = this.record(rM, iM, OM, "indirect"), aM = !0);
-        const PM = (0, oj.k)();
-        return (jM.stale || this.rangedEpoch !== PM) && (this.rangedEpoch = PM, jM.bundle = this.drawsRanged() ? this.record(rM, iM, OM, "FW") : this.noRangedBundle(), aM = !0), aM && (this.bundles = jM.bundle ? [SM.bundle, jM.bundle] : [SM.bundle]), MM.executeBundles(this.bundles), MM.setBindGroup(0, OM), this.drawn
+        if (this.directThisFrame) return this.encode(VV, eV, xV, "direct"), this.drawn;
+        const JV = this.host.sceneGroup(eV);
+        if (!JV) return this.main.bundle = null, this.jR.bundle = null, this.recordedSceneGroup = null, this.encode(VV, eV, xV, "direct"), this.drawn;
+        this.recordedTarget === xV && this.recordedSceneGroup === JV || (this.recordedTarget = xV, this.recordedSceneGroup = JV, this.main.stale = !0, this.jR.stale = !0);
+        const YV = this.main,
+          UV = this.jR;
+        let yV = !1;
+        !YV.stale && YV.bundle || (YV.bundle = this.record(eV, xV, JV, "indirect"), yV = !0);
+        const pV = (0, iU.m)();
+        return (UV.stale || this.rangedEpoch !== pV) && (this.rangedEpoch = pV, UV.bundle = this.drawsRanged() ? this.record(eV, xV, JV, "jR") : this.noRangedBundle(), yV = !0), yV && (this.bundles = UV.bundle ? [YV.bundle, UV.bundle] : [YV.bundle]), VV.executeBundles(this.bundles), VV.setBindGroup(0, JV), this.drawn
       }
-      record(MM, rM, iM, OM) {
-        const SM = this.device.createRenderBundleEncoder({
-          label: "FW" === OM ? "thin-bases-ranged" : "thin-bases",
-          colorFormats: MM._colorFormat ? [MM._colorFormat] : [],
-          depthStencilFormat: MM._depthStencilFormat,
-          sampleCount: MM._sampleCount
+      record(VV, eV, xV, JV) {
+        const YV = this.device.createRenderBundleEncoder({
+          label: "jR" === JV ? "thin-bases-ranged" : "thin-bases",
+          colorFormats: VV._colorFormat ? [VV._colorFormat] : [],
+          depthStencilFormat: VV._depthStencilFormat,
+          sampleCount: VV._sampleCount
         });
-        return SM.setBindGroup(0, iM), this.encode(SM, MM, rM, OM), SM.finish()
+        return YV.setBindGroup(0, xV), this.encode(YV, VV, eV, JV), YV.finish()
       }
       noRangedBundle() {
-        for (const MM of this.records.values()) MM.FW && (MM.recorded = !1);
-        return this.FW.sQ.clear(), this.FW.stale = !1, null
+        for (const VV of this.records.values()) VV.jR && (VV.recorded = !1);
+        return this.jR.hn.clear(), this.jR.stale = !1, null
       }
       drawsRanged() {
-        for (const MM of this.records.values())
-          if (MM.FW && MM.draw) return !0;
+        for (const VV of this.records.values())
+          if (VV.jR && VV.draw) return !0;
         return !1
       }
-      encode(MM, rM, iM, OM) {
-        const SM = [];
-        for (const nM of this.records.values()) "direct" !== OM && nM.FW !== ("FW" === OM) || (nM.recorded = !1, nM.draw && SM.push(nM));
-        SM.sort(xj);
-        const jM = "direct" === OM ? null : "FW" === OM ? this.FW : this.main;
-        null === jM || void 0 === jM || jM.sQ.clear(), this.binder.reset();
-        let aM = !1;
-        for (const nM of SM) {
-          var PM;
-          const SM = nM.draw,
-            QM = this.host.pipelineFor(SM, rM, iM);
-          if (!QM) {
-            this.host.pipelineCompiling(SM, iM) ? aM = !0 : jM && this.keep(nM, SM, jM.sQ);
+      encode(VV, eV, xV, JV) {
+        const YV = [];
+        for (const QV of this.records.values()) "direct" !== JV && QV.jR !== ("jR" === JV) || (QV.recorded = !1, QV.draw && YV.push(QV));
+        YV.sort(hU);
+        const UV = "direct" === JV ? null : "jR" === JV ? this.jR : this.main;
+        null === UV || void 0 === UV || UV.hn.clear(), this.binder.reset();
+        let yV = !1;
+        for (const QV of YV) {
+          var pV;
+          const YV = QV.draw,
+            nV = this.host.pipelineFor(YV, eV, xV);
+          if (!nV) {
+            this.host.pipelineCompiling(YV, xV) ? yV = !0 : UV && this.keep(QV, YV, UV.hn);
             continue
           }
-          let zM;
-          if (nM.FW && "indirect" !== OM) {
-            const MM = nM.unit.owner;
-            zM = "direct" === OM && (0, oj.w)(MM) || (0, oj.o)(MM) || void 0
+          let wV;
+          if (QV.jR && "indirect" !== JV) {
+            const VV = QV.unit.owner;
+            wV = "direct" === JV && (0, iU.t)(VV) || (0, iU.o)(VV) || void 0
           }
-          if (jM && this.keep(nM, SM, jM.sQ), 0 === (null === (PM = zM) || void 0 === PM ? void 0 : PM.count)) continue;
-          this.binder.bind(MM, SM, QM, this.slots.bindGroup, nM.slot * LS);
-          const LM = 5 * nM.slot;
-          if ("indirect" === OM) {
-            SM.indexBuffer ? MM.drawIndexedIndirect(this.argsBuffer, 4 * LM) : MM.drawIndirect(this.argsBuffer, 4 * LM);
+          if (UV && this.keep(QV, YV, UV.hn), 0 === (null === (pV = wV) || void 0 === pV ? void 0 : pV.count)) continue;
+          this.binder.bind(VV, YV, nV, this.slots.bindGroup, QV.slot * nY);
+          const ZV = 5 * QV.slot;
+          if ("indirect" === JV) {
+            YV.indexBuffer ? VV.drawIndexedIndirect(this.argsBuffer, 4 * ZV) : VV.drawIndirect(this.argsBuffer, 4 * ZV);
             continue
           }
-          const mM = this.args;
-          zM ? Nj(MM, null !== SM.indexBuffer, mM, LM, zM) : SM.indexBuffer ? MM.drawIndexed(mM[LM], mM[LM + 1], mM[LM + 2], 0, 0) : MM.draw(mM[LM], mM[LM + 1], mM[LM + 2], 0)
+          const vV = this.args;
+          wV ? oU(VV, null !== YV.indexBuffer, vV, ZV, wV) : YV.indexBuffer ? VV.drawIndexed(vV[ZV], vV[ZV + 1], vV[ZV + 2], 0, 0) : VV.draw(vV[ZV], vV[ZV + 1], vV[ZV + 2], 0)
         }
-        jM && (jM.stale = aM)
+        UV && (UV.stale = yV)
       }
-      keep(MM, rM, iM) {
-        MM.recorded = !0, MM.pipelineKey = rM.pipelineKey, MM.materialGroup = rM.material.bindGroup, MM.vertexBuffers.length = 0, MM.vertexBuffers.push(...rM.vertexBuffers), MM.vertexOffsets = rM.vertexOffsets, MM.indexBuffer = rM.indexBuffer, MM.indexFormat = rM.indexFormat;
-        for (const OM of rM.vertexBuffers) iM.add(OM);
-        rM.indexBuffer && iM.add(rM.indexBuffer), iM.add(rM.material.buffer);
-        for (const OM of rM.material.bound) OM && iM.add(OM)
+      keep(VV, eV, xV) {
+        VV.recorded = !0, VV.pipelineKey = eV.pipelineKey, VV.materialGroup = eV.material.bindGroup, VV.vertexBuffers.length = 0, VV.vertexBuffers.push(...eV.vertexBuffers), VV.vertexOffsets = eV.vertexOffsets, VV.indexBuffer = eV.indexBuffer, VV.indexFormat = eV.indexFormat;
+        for (const JV of eV.vertexBuffers) xV.add(JV);
+        eV.indexBuffer && xV.add(eV.indexBuffer), xV.add(eV.material.buffer);
+        for (const JV of eV.material.bound) JV && xV.add(JV)
       }
-      createRecord(MM) {
-        let rM = this.freeSlots.pop();
-        return void 0 === rM && (rM = this.slotCount++, this.grow()), {
-          unit: MM,
-          slot: rM,
-          FW: void 0 !== (0, oj.o)(MM.owner),
+      createRecord(VV) {
+        let eV = this.freeSlots.pop();
+        return void 0 === eV && (eV = this.slotCount++, this.grow()), {
+          unit: VV,
+          slot: eV,
+          jR: void 0 !== (0, iU.o)(VV.owner),
           seen: -1,
           draw: null,
           recorded: !1,
@@ -3083,9 +3083,9 @@ export const modules = {
         }
       }
       grow() {
-        if (this.slots.ensure(this.slotCount) && (this.slotsFrom = 0, this.slotsTo = this.slotCount - 1, this.main.stale = !0, this.FW.stale = !0), 5 * this.slotCount > this.args.length) {
-          const MM = new Uint32Array(2 * this.args.length);
-          MM.set(this.args), this.args = MM, this.argsBuffer.destroy(), this.argsBuffer = this.createArgsBuffer(), this.argsDirty = !0, this.main.stale = !0
+        if (this.slots.ensure(this.slotCount) && (this.slotsFrom = 0, this.slotsTo = this.slotCount - 1, this.main.stale = !0, this.jR.stale = !0), 5 * this.slotCount > this.args.length) {
+          const VV = new Uint32Array(2 * this.args.length);
+          VV.set(this.args), this.args = VV, this.argsBuffer.destroy(), this.argsBuffer = this.createArgsBuffer(), this.argsDirty = !0, this.main.stale = !0
         }
       }
       createArgsBuffer() {
@@ -3097,556 +3097,556 @@ export const modules = {
       }
     }
 
-    function Nj(MM, rM, iM, OM, SM) {
-      const jM = iM[OM + 1],
-        aM = SM.data;
-      for (let PM = 0; PM < SM.count; PM++) {
-        const SM = Math.min(aM[2 * PM], jM),
-          nM = Math.min(aM[2 * PM + 1], jM - SM);
-        0 !== nM && (rM ? MM.drawIndexed(iM[OM], nM, iM[OM + 2], 0, SM) : MM.draw(iM[OM], nM, iM[OM + 2], SM))
+    function oU(VV, eV, xV, JV, YV) {
+      const UV = xV[JV + 1],
+        yV = YV.data;
+      for (let pV = 0; pV < YV.count; pV++) {
+        const YV = Math.min(yV[2 * pV], UV),
+          QV = Math.min(yV[2 * pV + 1], UV - YV);
+        0 !== QV && (eV ? VV.drawIndexed(xV[JV], QV, xV[JV + 2], 0, YV) : VV.draw(xV[JV], QV, xV[JV + 2], YV))
       }
     }
 
-    function Aj(MM, rM) {
-      if (MM.pipelineKey !== rM.pipelineKey || MM.materialGroup !== rM.material.bindGroup || MM.indexBuffer !== rM.indexBuffer || MM.indexFormat !== rM.indexFormat || MM.vertexOffsets !== rM.vertexOffsets || MM.vertexBuffers.length !== rM.vertexBuffers.length) return !1;
-      for (let iM = 0; iM < MM.vertexBuffers.length; iM++)
-        if (MM.vertexBuffers[iM] !== rM.vertexBuffers[iM]) return !1;
+    function cU(VV, eV) {
+      if (VV.pipelineKey !== eV.pipelineKey || VV.materialGroup !== eV.material.bindGroup || VV.indexBuffer !== eV.indexBuffer || VV.indexFormat !== eV.indexFormat || VV.vertexOffsets !== eV.vertexOffsets || VV.vertexBuffers.length !== eV.vertexBuffers.length) return !1;
+      for (let xV = 0; xV < VV.vertexBuffers.length; xV++)
+        if (VV.vertexBuffers[xV] !== eV.vertexBuffers[xV]) return !1;
       return !0
     }
 
-    function xj(MM, rM) {
-      return ij(MM.draw, rM.draw)
+    function hU(VV, eV) {
+      return VU(VV.draw, eV.draw)
     }
-    const vj = new WeakMap,
-      Fj = {
+    const lU = new WeakMap,
+      LU = {
         depth: !1,
         sunShadow: !1
       };
 
-    function Bj(MM, rM) {
-      let iM = vj.get(MM);
-      iM || (iM = new Map, vj.set(MM, iM));
-      const OM = `${rM.depth?"-depth":""}${rM.sunShadow?"-shadow":""}${rM.shadowMask?"-mask":""}`;
-      let SM = iM.get(OM);
-      if (!SM) {
-        const jM = [{
-          binding: qr.b,
+    function fU(VV, eV) {
+      let xV = lU.get(VV);
+      xV || (xV = new Map, lU.set(VV, xV));
+      const JV = `${eV.depth?"-depth":""}${eV.sunShadow?"-shadow":""}${eV.shadowMask?"-mask":""}`;
+      let YV = xV.get(JV);
+      if (!YV) {
+        const UV = [{
+          binding: Se.d,
           visibility: GPUShaderStage.VERTEX | GPUShaderStage.FRAGMENT,
           buffer: {
             type: "uniform",
-            minBindingSize: qr.h
+            minBindingSize: Se.g
           }
         }, {
-          binding: qr.r,
+          binding: Se.y,
           visibility: GPUShaderStage.VERTEX,
           buffer: {
             type: "read-only-storage"
           }
         }];
-        rM.depth && jM.push({
-          binding: qr.n,
+        eV.depth && UV.push({
+          binding: Se.o,
           visibility: GPUShaderStage.FRAGMENT,
           texture: {
             sampleType: "unfilterable-float"
           }
-        }), rM.sunShadow && jM.push(... function() {
-          const MM = GPUShaderStage.FRAGMENT,
-            rM = qr.p;
+        }), eV.sunShadow && UV.push(... function() {
+          const VV = GPUShaderStage.FRAGMENT,
+            eV = Se.r;
           return [{
-            binding: rM.uniform,
-            visibility: MM,
+            binding: eV.uniform,
+            visibility: VV,
             buffer: {
               type: "uniform"
             }
           }, {
-            binding: rM.Xm,
-            visibility: MM,
+            binding: eV.Ur,
+            visibility: VV,
             buffer: {
               type: "read-only-storage"
             }
           }, {
-            binding: rM.special,
-            visibility: MM,
+            binding: eV.special,
+            visibility: VV,
             buffer: {
               type: "read-only-storage"
             }
           }, {
-            binding: rM.volume,
-            visibility: MM,
+            binding: eV.volume,
+            visibility: VV,
             texture: {
               sampleType: "float",
               viewDimension: "3d"
             }
           }, {
-            binding: rM.sampler,
-            visibility: MM,
+            binding: eV.sampler,
+            visibility: VV,
             sampler: {
               type: "filtering"
             }
           }, {
-            binding: rM.entities,
-            visibility: MM,
+            binding: eV.entities,
+            visibility: VV,
             buffer: {
               type: "read-only-storage"
             }
           }, {
-            binding: rM.entityGrids,
-            visibility: MM,
+            binding: eV.entityGrids,
+            visibility: VV,
             buffer: {
               type: "read-only-storage"
             }
           }]
-        }()), rM.shadowMask && jM.push({
-          binding: qr.q,
+        }()), eV.shadowMask && UV.push({
+          binding: Se.u,
           visibility: GPUShaderStage.FRAGMENT,
           texture: {
             sampleType: "unfilterable-float"
           }
-        }), SM = MM.createBindGroupLayout({
-          label: `${rM.depth?"terrain-":""}shader-pack-inputs${OM}`,
-          entries: jM
-        }), iM.set(OM, SM)
+        }), YV = VV.createBindGroupLayout({
+          label: `${eV.depth?"terrain-":""}shader-pack-inputs${JV}`,
+          entries: UV
+        }), xV.set(JV, YV)
       }
-      return SM
+      return YV
     }
 
-    function Xj(MM) {
-      return Bj(MM, Fj)
+    function mU(VV) {
+      return fU(VV, LU)
     }
 
-    function Ij(MM, rM) {
-      if (!rM) return !1;
-      const iM = (0, Tr.g)(MM);
-      return !!iM && PO(iM, rM)
+    function KU(VV, eV) {
+      if (!eV) return !1;
+      const xV = (0, Ie.i)(VV);
+      return !!xV && UJ(xV, eV)
     }
 
-    function Kj(MM, rM) {
-      let iM = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        OM = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-      if (!DO(rM)) return [];
-      return [Bj(MM, {
-        depth: uO(rM.packVariant),
-        sunShadow: Ij(rM.packVariant, iM),
-        shadowMask: OM
+    function HU(VV, eV) {
+      let xV = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        JV = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+      if (!RJ(eV)) return [];
+      return [fU(VV, {
+        depth: XJ(eV.packVariant),
+        sunShadow: KU(eV.packVariant, xV),
+        shadowMask: JV
       })]
     }
-    class qj {
-      constructor(MM, rM) {
-        let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        this.device = MM, this.sunShadow = iM, this.bindGroup = void 0, this.buffer = void 0, this.textures = void 0, this.data = new ArrayBuffer(qr.h), this.groups = new Map, this.depthView = null, this.maskView = null, this.buffer = MM.createBuffer({
+    class uU {
+      constructor(VV, eV) {
+        let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+        this.device = VV, this.sunShadow = xV, this.bindGroup = void 0, this.buffer = void 0, this.textures = void 0, this.data = new ArrayBuffer(Se.g), this.groups = new Map, this.depthView = null, this.maskView = null, this.buffer = VV.createBuffer({
           label: "shader-pack-inputs",
-          size: qr.h,
+          size: Se.g,
           usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST
         });
-        const OM = (0, qr.s)(rM);
-        this.textures = MM.createBuffer({
+        const JV = (0, Se.z)(eV);
+        this.textures = VV.createBuffer({
           label: "shader-pack-textures",
-          size: OM.byteLength,
+          size: JV.byteLength,
           usage: GPUBufferUsage.STORAGE | GPUBufferUsage.COPY_DST
-        }), MM.queue.writeBuffer(this.textures, 0, OM), this.bindGroup = MM.createBindGroup({
+        }), VV.queue.writeBuffer(this.textures, 0, JV), this.bindGroup = VV.createBindGroup({
           label: "shader-pack-inputs",
-          layout: Xj(MM),
+          layout: mU(VV),
           entries: this.entries()
         })
       }
       entries() {
         return [{
-          binding: qr.b,
+          binding: Se.d,
           resource: {
             buffer: this.buffer
           }
         }, {
-          binding: qr.r,
+          binding: Se.y,
           resource: {
             buffer: this.textures
           }
         }]
       }
-      write(MM, rM, iM) {
-        (0, qr.x)(this.data, {
-          seconds: MM.seconds(),
-          lit: iM,
-          renderOffset: MM.renderOffset(),
-          mMM: MM.mMM(),
-          eyePosition: rM,
-          shadowDirection: MM.shadowDirection()
+      write(VV, eV, xV) {
+        (0, Se.E)(this.data, {
+          seconds: VV.seconds(),
+          lit: xV,
+          renderOffset: VV.renderOffset(),
+          ReV: VV.ReV(),
+          eyePosition: eV,
+          shadowDirection: VV.shadowDirection()
         }), this.device.queue.writeBuffer(this.buffer, 0, this.data)
       }
-      bindGroupFor(MM, rM) {
-        let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        const OM = rM ? this.sunShadow : null;
-        if ((rM || iM) && !OM) throw new Error("A shader pack program binds sun shadows on a page without them");
-        if (!MM && !OM) return this.bindGroup;
-        (MM && MM !== this.depthView || iM && iM !== this.maskView) && (this.depthView = null !== MM && void 0 !== MM ? MM : this.depthView, this.maskView = null !== iM && void 0 !== iM ? iM : this.maskView, this.groups.clear());
-        const SM = (MM ? 1 : 0) | (OM ? 2 : 0) | (iM ? 4 : 0);
-        let jM = this.groups.get(SM);
-        if (!jM) {
-          const rM = this.entries();
-          MM && rM.push({
-            binding: qr.n,
-            resource: MM
-          }), OM && rM.push(...OM.entries()), iM && rM.push({
-            binding: qr.q,
-            resource: iM
-          }), jM = this.device.createBindGroup({
-            label: `${MM||iM?"terrain-":""}shader-pack-inputs${MM?"-depth":""}${OM?"-shadow":""}${iM?"-mask":""}`,
-            layout: Bj(this.device, {
-              depth: !!MM,
-              sunShadow: !!OM,
-              shadowMask: !!iM
+      bindGroupFor(VV, eV) {
+        let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+        const JV = eV ? this.sunShadow : null;
+        if ((eV || xV) && !JV) throw new Error("A shader pack program binds sun shadows on a page without them");
+        if (!VV && !JV) return this.bindGroup;
+        (VV && VV !== this.depthView || xV && xV !== this.maskView) && (this.depthView = null !== VV && void 0 !== VV ? VV : this.depthView, this.maskView = null !== xV && void 0 !== xV ? xV : this.maskView, this.groups.clear());
+        const YV = (VV ? 1 : 0) | (JV ? 2 : 0) | (xV ? 4 : 0);
+        let UV = this.groups.get(YV);
+        if (!UV) {
+          const eV = this.entries();
+          VV && eV.push({
+            binding: Se.o,
+            resource: VV
+          }), JV && eV.push(...JV.entries()), xV && eV.push({
+            binding: Se.u,
+            resource: xV
+          }), UV = this.device.createBindGroup({
+            label: `${VV||xV?"terrain-":""}shader-pack-inputs${VV?"-depth":""}${JV?"-shadow":""}${xV?"-mask":""}`,
+            layout: fU(this.device, {
+              depth: !!VV,
+              sunShadow: !!JV,
+              shadowMask: !!xV
             }),
-            entries: rM
-          }), this.groups.set(SM, jM)
+            entries: eV
+          }), this.groups.set(YV, UV)
         }
-        return jM
+        return UV
       }
-      bind(MM, rM) {
-        let iM = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-          OM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-        MM.setBindGroup(qr.f, this.bindGroupFor(rM, iM, OM))
+      bind(VV, eV) {
+        let xV = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+          JV = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+        VV.setBindGroup(Se.e, this.bindGroupFor(eV, xV, JV))
       }
     }
 
-    function Tj(MM, rM, iM) {
-      if (MM.gpuVersion === rM.gpuBuffersVersion) return !0;
-      let OM;
+    function sU(VV, eV, xV) {
+      if (VV.gpuVersion === eV.gpuBuffersVersion) return !0;
+      let JV;
       do {
-        if (OM = rM.gpuBuffersVersion, !Vj(MM, rM, iM)) return !1
-      } while (rM.gpuBuffersVersion !== OM);
-      return MM.gpuVersion = OM, MM.fitInstances = 0, !0
+        if (JV = eV.gpuBuffersVersion, !SU(VV, eV, xV)) return !1
+      } while (eV.gpuBuffersVersion !== JV);
+      return VV.gpuVersion = JV, VV.fitInstances = 0, !0
     }
 
-    function Vj(MM, rM, iM) {
-      let OM = null;
-      for (let jM = 0; jM < MM.slotData.length; jM++) {
-        var SM;
-        const aM = MM.slotData[jM],
-          PM = aM ? rM.gpuBuffer(aM) : iM;
-        if (!PM) return !1;
-        aM && MM.layout.instanceEnds[jM] < 0 && rM.cover(aM, Number.POSITIVE_INFINITY), MM.buffers[jM] = PM;
-        const nM = MM.m_[jM] + (aM ? rM.gpuOffset(aM) : 0);
-        nM !== (null !== (SM = OM) && void 0 !== SM ? SM : MM.offsets)[jM] && (OM ??= MM.offsets.slice(), OM[jM] = nM), MM.ends[jM] = aM ? rM.gpuEnd(aM) : PM.size
+    function SU(VV, eV, xV) {
+      let JV = null;
+      for (let UV = 0; UV < VV.slotData.length; UV++) {
+        var YV;
+        const yV = VV.slotData[UV],
+          pV = yV ? eV.gpuBuffer(yV) : xV;
+        if (!pV) return !1;
+        yV && VV.layout.instanceEnds[UV] < 0 && eV.cover(yV, Number.POSITIVE_INFINITY), VV.buffers[UV] = pV;
+        const QV = VV.IVV[UV] + (yV ? eV.gpuOffset(yV) : 0);
+        QV !== (null !== (YV = JV) && void 0 !== YV ? YV : VV.offsets)[UV] && (JV ??= VV.offsets.slice(), JV[UV] = QV), VV.ends[UV] = yV ? eV.gpuEnd(yV) : pV.size
       }
-      return OM && (MM.offsets = OM), !0
+      return JV && (VV.offsets = JV), !0
     }
 
-    function cj(MM, rM, iM, OM) {
-      if (rM <= MM.fitInstances) return null;
+    function IU(VV, eV, xV, JV) {
+      if (eV <= VV.fitInstances) return null;
       const {
-        layout: SM,
-        ends: jM,
-        offsets: aM,
-        slotData: PM,
-        m_: nM
-      } = MM;
-      let QM = !1;
-      for (let zM = 0; zM < SM.buffers.length; zM++) {
-        const MM = SM.instanceEnds[zM];
-        if (MM < 0) continue;
-        const OM = (rM - 1) * SM.buffers[zM].arrayStride + MM;
-        if (jM[zM] - aM[zM] < OM) return {
-          index: zM,
-          needed: OM
+        layout: YV,
+        ends: UV,
+        offsets: yV,
+        slotData: pV,
+        IVV: QV
+      } = VV;
+      let nV = !1;
+      for (let wV = 0; wV < YV.buffers.length; wV++) {
+        const VV = YV.instanceEnds[wV];
+        if (VV < 0) continue;
+        const JV = (eV - 1) * YV.buffers[wV].arrayStride + VV;
+        if (UV[wV] - yV[wV] < JV) return {
+          index: wV,
+          needed: JV
         };
-        const LM = PM[zM];
-        LM && iM.cover(LM, nM[zM] + OM) && (QM = !0)
+        const ZV = pV[wV];
+        ZV && xV.cover(ZV, QV[wV] + JV) && (nV = !0)
       }
-      return QM && Tj(MM, iM, OM), MM.fitInstances = rM, null
+      return nV && sU(VV, xV, JV), VV.fitInstances = eV, null
     }
-    var Ma = iM(38797),
-      ra = iM(38832);
-    const ia = "vertexOutputs.position=scene.viewProjection*worldPos;\n",
-      Oa = "var baseAmbientColor: vec3f= vec3f(1.,1.,1.);\n",
-      Sa = "color=vec4f(color.rgb,color.a*mesh.visibility);\n",
-      ja = `((vertexInputs.aPackedLightLevels >> 16u) | ${pr.e.placed}u)`,
-      aa = "u32(vertexInputs.aShaderPackItem.x)",
-      Pa = `${pr.e.lifeform}u`;
+    var dU = xV(38977),
+      OU = xV(39003);
+    const Vy = "vertexOutputs.position=scene.viewProjection*worldPos;\n",
+      ey = "var baseAmbientColor: vec3f= vec3f(1.,1.,1.);\n",
+      xy = "color=vec4f(color.rgb,color.a*mesh.visibility);\n",
+      Jy = `((vertexInputs.aPackedLightLevels >> 16u) | ${We.c.placed}u)`,
+      Yy = "u32(vertexInputs.aShaderPackItem.x)",
+      Uy = `${We.c.lifeform}u`;
 
-    function na(MM) {
-      return "item" === MM.kind ? "bloxdSpItemLocalPosition(positionUpdated, vertexInputs.aShaderPackItem)" : "positionUpdated"
+    function yy(VV) {
+      return "item" === VV.kind ? "bloxdSpItemLocalPosition(positionUpdated, vertexInputs.aShaderPackItem)" : "positionUpdated"
     }
-    const Qa = "bloxdSpEnchant",
-      za = "floor(finalWorld[3].xyz)";
+    const py = "bloxdSpEnchant",
+      Qy = "floor(finalWorld[3].xyz)";
 
-    function La(MM, rM, iM) {
-      return "placed" === rM.kind && MM.reads[iM].includes("bloxdFragmentBlockPosition")
-    }
-
-    function ma(MM, rM) {
-      let [iM, OM] = MM;
-      return iM === rM.point && OM === rM.code
+    function ny(VV, eV, xV) {
+      return "placed" === eV.kind && VV.reads[xV].includes("bloxdFragmentBlockPosition")
     }
 
-    function Ha(MM, rM) {
-      var iM, OM, SM;
-      const jM = null === (iM = MM.find((MM => MM.texture))) || void 0 === iM ? void 0 : iM.texture,
-        aM = null === (OM = MM.find((MM => MM.enchantTier))) || void 0 === OM ? void 0 : OM.enchantTier,
-        PM = null === (SM = MM.find((MM => MM.overlay))) || void 0 === SM ? void 0 : SM.overlay,
-        nM = PM ? rM.filter((MM => ma(MM, PM))).length : 0;
-      return PM && 1 === nM ? {
-        texture: jM,
-        overlay: PM,
-        enchantTier: aM
+    function wy(VV, eV) {
+      let [xV, JV] = VV;
+      return xV === eV.point && JV === eV.code
+    }
+
+    function Zy(VV, eV) {
+      var xV, JV, YV;
+      const UV = null === (xV = VV.find((VV => VV.texture))) || void 0 === xV ? void 0 : xV.texture,
+        yV = null === (JV = VV.find((VV => VV.enchantTier))) || void 0 === JV ? void 0 : JV.enchantTier,
+        pV = null === (YV = VV.find((VV => VV.overlay))) || void 0 === YV ? void 0 : YV.overlay,
+        QV = pV ? eV.filter((VV => wy(VV, pV))).length : 0;
+      return pV && 1 === QV ? {
+        texture: UV,
+        overlay: pV,
+        enchantTier: yV
       } : {
-        texture: jM,
-        enchantTier: aM
+        texture: UV,
+        enchantTier: yV
       }
     }
 
-    function ha(MM) {
-      if ("item" === MM.kind) {
+    function vy(VV) {
+      if ("item" === VV.kind) {
         return {
-          vertexFlags: `(${aa} & 0xffffu)`,
+          vertexFlags: `(${Yy} & 0xffffu)`,
           varying: "vPackItem",
-          value: aa,
+          value: Yy,
           flags: "(fragmentInputs.vPackItem & 0xffffu)",
           enchantTier: "(fragmentInputs.vPackItem >> 16u)"
         }
       }
-      return MM.defines.BLOXD_LIGHT_WORD ? {
-        vertexFlags: ja,
+      return VV.defines.BLOXD_LIGHT_WORD ? {
+        vertexFlags: Jy,
         varying: "vPackFlags",
-        value: ja,
+        value: Jy,
         flags: "fragmentInputs.vPackFlags",
         enchantTier: "0u"
       } : null
     }
 
-    function Ja(MM) {
-      return "lifeform" === MM.kind ? Pa : "0u"
+    function ry(VV) {
+      return "lifeform" === VV.kind ? Uy : "0u"
     }
 
-    function da(MM) {
-      return !!MM.BLOXD_PLUGIN_ENCHANTMENT
+    function ky(VV) {
+      return !!VV.BLOXD_PLUGIN_ENCHANTMENT
     }
 
-    function ya(MM, rM) {
+    function by(VV, eV) {
       const {
-        enchantTier: iM
-      } = rM;
-      return iM && da(rM.defines) && "lifeform" === rM.kind && ea(MM, "enchantTier") ? iM : null
+        enchantTier: xV
+      } = eV;
+      return xV && ky(eV.defines) && "lifeform" === eV.kind && Fy(VV, "enchantTier") ? xV : null
     }
 
-    function la(MM, rM) {
-      return da(rM.defines) && ea(MM, "enchantSpeed")
+    function Ey(VV, eV) {
+      return ky(eV.defines) && Fy(VV, "enchantSpeed")
     }
 
-    function Ea(MM) {
+    function By(VV) {
       const {
-        overlay: rM,
-        defines: iM
-      } = MM;
-      if (!rM || !iM.DIFFUSE) return null;
-      const OM = iM.VERTEXCOLOR || iM.INSTANCESCOLOR && iM.INSTANCES;
-      return `vec4f(${rM.colour}.rgb * uniforms.vDiffuseInfos.y${OM?" * fragmentInputs.vColor.rgb":""}, ${rM.colour}.a)`
+        overlay: eV,
+        defines: xV
+      } = VV;
+      if (!eV || !xV.DIFFUSE) return null;
+      const JV = xV.VERTEXCOLOR || xV.INSTANCESCOLOR && xV.INSTANCES;
+      return `vec4f(${eV.colour}.rgb * uniforms.vDiffuseInfos.y${JV?" * fragmentInputs.vColor.rgb":""}, ${eV.colour}.a)`
     }
-    const Ua = "fragmentInputs.vPackTexture";
+    const jy = "fragmentInputs.vPackTexture";
 
-    function Ga(MM) {
+    function qy(VV) {
       const {
-        atlas: rM,
-        defines: iM,
-        texture: OM
-      } = MM;
-      if (rM || !iM.DIFFUSE) return null;
-      if (OM) return {
+        atlas: eV,
+        defines: xV,
+        texture: JV
+      } = VV;
+      if (eV || !xV.DIFFUSE) return null;
+      if (JV) return {
         texture: "diffuseSampler",
-        ...OM
+        ...JV
       };
-      const SM = {
+      const YV = {
         texture: "diffuseSampler",
         cells: null,
         layers: [],
-        uv: `fragmentInputs.${1===iM.DIFFUSEDIRECTUV?"vMainUV1":2===iM.DIFFUSEDIRECTUV?"vMainUV2":"vDiffuseUV"}`
+        uv: `fragmentInputs.${1===xV.DIFFUSEDIRECTUV?"vMainUV1":2===xV.DIFFUSEDIRECTUV?"vMainUV2":"vDiffuseUV"}`
       };
-      if ("box" !== MM.kind) return SM;
-      if (!iM.BLOXD_PLUGIN_ANIMATED) return {
-        ...SM,
-        id: Ua
+      if ("box" !== VV.kind) return YV;
+      if (!xV.BLOXD_PLUGIN_ANIMATED) return {
+        ...YV,
+        id: jy
       };
-      const jM = CM.b.WGSL,
-        aM = (0, CM.Db)(jM, "uAnimStatesNum"),
-        PM = (0, CM.bb)(jM, (0, Ma.e)(jM), aM),
-        nM = "fragmentInputs.vMainUV1";
+      const UV = TV.d.WGSL,
+        yV = (0, TV.Gb)(UV, "uAnimStatesNum"),
+        pV = (0, TV.ib)(UV, (0, dU.e)(UV), yV),
+        QV = "fragmentInputs.vMainUV1";
       return {
         texture: "diffuseSampler",
-        cells: `vec2f(1.0, ${aM})`,
-        layers: [PM],
-        uv: `vec2f(${nM}.x, ${nM}.y * ${aM} - ${PM})`,
-        levelUv: nM,
-        id: Ua
+        cells: `vec2f(1.0, ${yV})`,
+        layers: [pV],
+        uv: `vec2f(${QV}.x, ${QV}.y * ${yV} - ${pV})`,
+        levelUv: QV,
+        id: jy
       }
     }
 
-    function Ca(MM, rM) {
-      return "box" === rM.kind && !!MM.hooks.surface && null !== Ga(rM)
+    function ty(VV, eV) {
+      return "box" === eV.kind && !!VV.hooks.surface && null !== qy(eV)
     }
 
-    function ea(MM, rM) {
-      return MM.reads.fragment.includes(rM)
+    function Fy(VV, eV) {
+      return VV.reads.fragment.includes(eV)
     }
 
-    function ba(MM) {
-      return !!MM.BLOXD_LIGHTING && !MM.BLOXD_UNLIT
+    function Ty(VV) {
+      return !!VV.BLOXD_LIGHTING && !VV.BLOXD_UNLIT
     }
 
-    function wa(MM, rM, iM, OM) {
-      const SM = MM.filter((MM => {
-        let [iM, OM] = MM;
-        return "CUSTOM_FRAGMENT_BEFORE_FOG" === iM && OM === rM
+    function Py(VV, eV, xV, JV) {
+      const YV = VV.filter((VV => {
+        let [xV, JV] = VV;
+        return "CUSTOM_FRAGMENT_BEFORE_FOG" === xV && JV === eV
       }));
-      if (1 !== SM.length) throw new Error(`A model program for shader packs has ${0===SM.length?"no":"more than one"} ${OM} code before fog (lite/modelShaderPack.ts)`);
-      return MM.map((MM => MM === SM[0] ? [MM[0], iM] : MM))
+      if (1 !== YV.length) throw new Error(`A model program for shader packs has ${0===YV.length?"no":"more than one"} ${JV} code before fog (lite/modelShaderPack.ts)`);
+      return VV.map((VV => VV === YV[0] ? [VV[0], xV] : VV))
     }
 
-    function ta(MM, rM, iM, OM) {
+    function Ay(VV, eV, xV, JV) {
       const {
-        hooks: SM
-      } = MM, {
-        kind: jM,
-        defines: aM
-      } = rM, PM = [...iM];
-      var nM;
-      rM.atlas && SM.surface && PM.push(["CUSTOM_VERTEX_DEFINITIONS", "varying vPackTexture: u32;"], ["CUSTOM_VERTEX_MAIN_END", hO("atlasIdxIn")]), "item" === jM && PM.push(["CUSTOM_VERTEX_DEFINITIONS", (0, CM.e)(CM.b.WGSL, "aShaderPackItem", "vec4")], ["CUSTOM_VERTEX_DEFINITIONS", "\nfn bloxdSpQuarterTurns(v: vec2f, quarters: u32) -> vec2f {\n    let c = select(select(0.0, -1.0, quarters == 2u), 1.0, quarters == 0u);\n    let s = select(select(0.0, -1.0, quarters == 3u), 1.0, quarters == 1u);\n    return vec2f(v.x * c - v.y * s, v.x * s + v.y * c);\n}\nfn bloxdSpItemLocalPosition(position: vec3f, item: vec4f) -> vec3f {\n    let p = position * item.y + vec3f(0.0, item.z, 0.0);\n    let turn = u32(item.w);\n    let yz = bloxdSpQuarterTurns(p.yz, turn >> 2u);\n    let zx = bloxdSpQuarterTurns(vec2f(yz.y, p.x), turn & 3u);\n    return vec3f(zx.y, yz.x, zx.x);\n}\n"]), Ca(MM, rM) && PM.push(["CUSTOM_VERTEX_DEFINITIONS", (0, CM.e)(CM.b.WGSL, "aShaderPackItem", "vec4")], ["CUSTOM_VERTEX_DEFINITIONS", "varying vPackTexture: u32;"], ["CUSTOM_VERTEX_MAIN_END", (nM = "vertexInputs.aShaderPackItem.x", `\tvertexOutputs.vPackTexture = select(0u, ${mO}[min(u32(${nM}) - 1u, arrayLength(&${mO}) - 1u)], ${nM} > 0.5);\n`)]);
-      const QM = ha(rM);
-      QM && (SM.surface || SM.light) && PM.push(["CUSTOM_VERTEX_DEFINITIONS", `varying ${QM.varying}: u32;`], ["CUSTOM_VERTEX_MAIN_END", `vertexOutputs.${QM.varying} = ${QM.value};`]);
-      let zM = OM;
-      if (La(MM, rM, "fragment") && (PM.push(["CUSTOM_VERTEX_DEFINITIONS", "varying vPackCell: vec3i;"], ["CUSTOM_VERTEX_MAIN_END", `vertexOutputs.vPackCell = vec3i(${za});`]), zM = [...zM, ["CUSTOM_FRAGMENT_MAIN_BEGIN", "bloxdSpCell = vec3f(fragmentInputs.vPackCell);"]]), ea(MM, "localPosition") && PM.push(["CUSTOM_VERTEX_DEFINITIONS", "varying vPackLocalPosition: vec3f;"], ["CUSTOM_VERTEX_MAIN_END", `vertexOutputs.vPackLocalPosition = ${na(rM)};`]), da(aM) && SM.surface) {
-        la(MM, rM) && PM.push(["CUSTOM_VERTEX_DEFINITIONS", "flat varying vPackEnchantSpeed: f32;"], ["CUSTOM_VERTEX_MAIN_END", "vertexOutputs.vPackEnchantSpeed = vertexInputs.aEnchantmentSpeed;"]);
-        const iM = ya(MM, rM);
-        iM && PM.push(["CUSTOM_VERTEX_DEFINITIONS", "varying vPackEnchantTier: u32;"], ["CUSTOM_VERTEX_MAIN_END", `vertexOutputs.vPackEnchantTier = u32(${iM});`]);
-        const OM = (0, CM.ob)(CM.b.WGSL, "color", "mix(color.xyz, bloxdSpSurface.enchantColour.rgb, bloxdSpSurface.enchantColour.a)");
-        zM = [...wa(zM, (0, ra.f)(CM.b.WGSL), OM, "enchantment"), ["CUSTOM_FRAGMENT_DEFINITIONS", (0, ra.b)(Qa)]]
+        hooks: YV
+      } = VV, {
+        kind: UV,
+        defines: yV
+      } = eV, pV = [...xV];
+      var QV;
+      eV.atlas && YV.surface && pV.push(["CUSTOM_VERTEX_DEFINITIONS", "varying vPackTexture: u32;"], ["CUSTOM_VERTEX_MAIN_END", vJ("atlasIdxIn")]), "item" === UV && pV.push(["CUSTOM_VERTEX_DEFINITIONS", (0, TV.f)(TV.d.WGSL, "aShaderPackItem", "vec4")], ["CUSTOM_VERTEX_DEFINITIONS", "\nfn bloxdSpQuarterTurns(v: vec2f, quarters: u32) -> vec2f {\n    let c = select(select(0.0, -1.0, quarters == 2u), 1.0, quarters == 0u);\n    let s = select(select(0.0, -1.0, quarters == 3u), 1.0, quarters == 1u);\n    return vec2f(v.x * c - v.y * s, v.x * s + v.y * c);\n}\nfn bloxdSpItemLocalPosition(position: vec3f, item: vec4f) -> vec3f {\n    let p = position * item.y + vec3f(0.0, item.z, 0.0);\n    let turn = u32(item.w);\n    let yz = bloxdSpQuarterTurns(p.yz, turn >> 2u);\n    let zx = bloxdSpQuarterTurns(vec2f(yz.y, p.x), turn & 3u);\n    return vec3f(zx.y, yz.x, zx.x);\n}\n"]), ty(VV, eV) && pV.push(["CUSTOM_VERTEX_DEFINITIONS", (0, TV.f)(TV.d.WGSL, "aShaderPackItem", "vec4")], ["CUSTOM_VERTEX_DEFINITIONS", "varying vPackTexture: u32;"], ["CUSTOM_VERTEX_MAIN_END", (QV = "vertexInputs.aShaderPackItem.x", `\tvertexOutputs.vPackTexture = select(0u, ${wJ}[min(u32(${QV}) - 1u, arrayLength(&${wJ}) - 1u)], ${QV} > 0.5);\n`)]);
+      const nV = vy(eV);
+      nV && (YV.surface || YV.light) && pV.push(["CUSTOM_VERTEX_DEFINITIONS", `varying ${nV.varying}: u32;`], ["CUSTOM_VERTEX_MAIN_END", `vertexOutputs.${nV.varying} = ${nV.value};`]);
+      let wV = JV;
+      if (ny(VV, eV, "fragment") && (pV.push(["CUSTOM_VERTEX_DEFINITIONS", "varying vPackCell: vec3i;"], ["CUSTOM_VERTEX_MAIN_END", `vertexOutputs.vPackCell = vec3i(${Qy});`]), wV = [...wV, ["CUSTOM_FRAGMENT_MAIN_BEGIN", "bloxdSpCell = vec3f(fragmentInputs.vPackCell);"]]), Fy(VV, "localPosition") && pV.push(["CUSTOM_VERTEX_DEFINITIONS", "varying vPackLocalPosition: vec3f;"], ["CUSTOM_VERTEX_MAIN_END", `vertexOutputs.vPackLocalPosition = ${yy(eV)};`]), ky(yV) && YV.surface) {
+        Ey(VV, eV) && pV.push(["CUSTOM_VERTEX_DEFINITIONS", "flat varying vPackEnchantSpeed: f32;"], ["CUSTOM_VERTEX_MAIN_END", "vertexOutputs.vPackEnchantSpeed = vertexInputs.aEnchantmentSpeed;"]);
+        const xV = by(VV, eV);
+        xV && pV.push(["CUSTOM_VERTEX_DEFINITIONS", "varying vPackEnchantTier: u32;"], ["CUSTOM_VERTEX_MAIN_END", `vertexOutputs.vPackEnchantTier = u32(${xV});`]);
+        const JV = (0, TV.rb)(TV.d.WGSL, "color", "mix(color.xyz, bloxdSpSurface.enchantColour.rgb, bloxdSpSurface.enchantColour.a)");
+        wV = [...Py(wV, (0, OU.i)(TV.d.WGSL), JV, "enchantment"), ["CUSTOM_FRAGMENT_DEFINITIONS", (0, OU.c)(py)]]
       }
       const {
-        overlay: LM
-      } = rM;
-      LM && Ea(rM) && SM.surface && (zM = zM.filter((MM => !ma(MM, LM))));
-      const mM = SM.light ? function(MM) {
-        return "placed" === MM.kind ? {
+        overlay: ZV
+      } = eV;
+      ZV && By(eV) && YV.surface && (wV = wV.filter((VV => !wy(VV, ZV))));
+      const vV = YV.light ? function(VV) {
+        return "placed" === VV.kind ? {
           name: "terrain",
-          engine: (0, Xr.V)(CM.b.WGSL),
-          pack: (0, Xr.pb)(CM.b.WGSL)
-        } : MM.defines.BLOXD_PLUGIN_ENTITY_LIGHT ? {
+          engine: (0, He.P)(TV.d.WGSL),
+          pack: (0, He.lb)(TV.d.WGSL)
+        } : VV.defines.BLOXD_PLUGIN_ENTITY_LIGHT ? {
           name: "entity",
-          engine: (0, Xr.M)(CM.b.WGSL),
-          pack: (0, Xr.ib)(CM.b.WGSL)
+          engine: (0, He.M)(TV.d.WGSL),
+          pack: (0, He.fb)(TV.d.WGSL)
         } : null
-      }(rM) : null;
-      if (mM && (zM = wa(zM, mM.engine, mM.pack, `${mM.name} light`), "placed" !== jM && ba(aM))) {
-        const MM = aM.BLOXD_UNIFORM_ENTITY_LIGHT ? (0, CM.Db)(CM.b.WGSL, "uEntityLightLevels") : (0, CM.Hb)(CM.b.WGSL, "aLightLevels");
-        PM.push(["CUSTOM_VERTEX_DEFINITIONS", `varying ${Xr.e}: vec4f;`], ["CUSTOM_VERTEX_MAIN_END", (0, Xr.mb)(CM.b.WGSL, MM)])
+      }(eV) : null;
+      if (vV && (wV = Py(wV, vV.engine, vV.pack, `${vV.name} light`), "placed" !== UV && Ty(yV))) {
+        const VV = yV.BLOXD_UNIFORM_ENTITY_LIGHT ? (0, TV.Gb)(TV.d.WGSL, "uEntityLightLevels") : (0, TV.Kb)(TV.d.WGSL, "aLightLevels");
+        pV.push(["CUSTOM_VERTEX_DEFINITIONS", `varying ${He.d}: vec4f;`], ["CUSTOM_VERTEX_MAIN_END", (0, He.hb)(TV.d.WGSL, VV)])
       }
       return {
-        vertexCode: PM,
-        fragmentCode: zM
+        vertexCode: pV,
+        fragmentCode: wV
       }
     }
 
-    function ga(MM, rM, iM, OM) {
-      return jO(MM, rM, iM, OM, "model")
+    function Ny(VV, eV, xV, JV) {
+      return JJ(VV, eV, xV, JV, "model")
     }
-    const ua = "\t@builtin(position) position: vec4f,\n";
+    const Xy = "\t@builtin(position) position: vec4f,\n";
 
-    function Ra(MM, rM) {
-      const iM = /^(?:(?:diagnostic|enable|requires)\b[^;]*;\n)*/.exec(MM)[0];
-      return `${iM}${rM}${MM.slice(iM.length)}`
+    function My(VV, eV) {
+      const xV = /^(?:(?:diagnostic|enable|requires)\b[^;]*;\n)*/.exec(VV)[0];
+      return `${xV}${eV}${VV.slice(xV.length)}`
     }
 
-    function pa(MM, rM, iM) {
-      let OM = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+    function zy(VV, eV, xV) {
+      let JV = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
       const {
-        hooks: SM
-      } = rM, jM = PO(rM, OM), {
-        kind: aM,
-        defines: PM
-      } = iM, nM = function(MM, rM) {
-        var iM, OM, SM;
+        hooks: YV
+      } = eV, UV = UJ(eV, JV), {
+        kind: yV,
+        defines: pV
+      } = xV, QV = function(VV, eV) {
+        var xV, JV, YV;
         const {
-          defines: jM
-        } = rM, aM = ha(rM), PM = !!jM.FOG, nM = da(jM), QM = null !== (iM = null === aM || void 0 === aM ? void 0 : aM.enchantTier) && void 0 !== iM ? iM : ya(MM, rM) ? "fragmentInputs.vPackEnchantTier" : "0u", zM = "lifeform" === rM.kind && !jM.ALPHAFROMDIFFUSE;
+          defines: UV
+        } = eV, yV = vy(eV), pV = !!UV.FOG, QV = ky(UV), nV = null !== (xV = null === yV || void 0 === yV ? void 0 : yV.enchantTier) && void 0 !== xV ? xV : by(VV, eV) ? "fragmentInputs.vPackEnchantTier" : "0u", wV = "lifeform" === eV.kind && !UV.ALPHAFROMDIFFUSE;
         return {
-          vertexFlags: null !== (OM = null === aM || void 0 === aM ? void 0 : aM.vertexFlags) && void 0 !== OM ? OM : Ja(rM),
-          vertexLocalPosition: na(rM),
-          flags: null !== (SM = null === aM || void 0 === aM ? void 0 : aM.flags) && void 0 !== SM ? SM : Ja(rM),
+          vertexFlags: null !== (JV = null === yV || void 0 === yV ? void 0 : yV.vertexFlags) && void 0 !== JV ? JV : ry(eV),
+          vertexLocalPosition: yy(eV),
+          flags: null !== (YV = null === yV || void 0 === yV ? void 0 : yV.flags) && void 0 !== YV ? YV : ry(eV),
           normal: "normalW",
-          alpha: zM ? "alpha * baseColor.a" : "alpha",
-          alphaOut: zM ? "baseColor.a" : "alpha",
+          alpha: wV ? "alpha * baseColor.a" : "alpha",
+          alphaOut: wV ? "baseColor.a" : "alpha",
           lambert: "diffuseBase.r",
           diffuse: "diffuseColor",
           emissive: "emissiveColor",
           ambient: "uniforms.vAmbientColor",
-          fogColour: PM ? "frame.vFogColor" : "vec3f(0.0)",
-          fogAlpha: PM ? "1.0 - fog" : "0.0",
-          enchantTier: QM,
-          enchantColour: nM ? `${Qa}(fragmentInputs.vEnchantRgbAndRotY, fragmentInputs.vPositionAndAnimTick, baseColor.rgb)` : "vec4f(0.0)",
-          enchantSpeed: la(MM, rM) ? "fragmentInputs.vPackEnchantSpeed" : "0.0",
-          localPosition: ea(MM, "localPosition") ? "fragmentInputs.vPackLocalPosition" : "vec3f(0.0)",
-          overlayColour: Ea(rM)
+          fogColour: pV ? "frame.vFogColor" : "vec3f(0.0)",
+          fogAlpha: pV ? "1.0 - fog" : "0.0",
+          enchantTier: nV,
+          enchantColour: QV ? `${py}(fragmentInputs.vEnchantRgbAndRotY, fragmentInputs.vPositionAndAnimTick, baseColor.rgb)` : "vec4f(0.0)",
+          enchantSpeed: Ey(VV, eV) ? "fragmentInputs.vPackEnchantSpeed" : "0.0",
+          localPosition: Fy(VV, "localPosition") ? "fragmentInputs.vPackLocalPosition" : "vec3f(0.0)",
+          overlayColour: By(eV)
         }
-      }(rM, iM), QM = MM.textures.filter((MM => /^textureAtlas\d+$/.test(MM.name))).length, zM = iM.atlas && QM > 0 ? {
-        count: QM,
-        layers: iM.atlas.layers,
-        width: iM.atlas.width,
+      }(eV, xV), nV = VV.textures.filter((VV => /^textureAtlas\d+$/.test(VV.name))).length, wV = xV.atlas && nV > 0 ? {
+        count: nV,
+        layers: xV.atlas.layers,
+        width: xV.atlas.width,
         sampler: "textureAtlas0Sampler",
-        frame: MM.material.slots.has("uAnimDataPerTex") ? (rM, iM) => VO(rM, iM, function(MM) {
-          const rM = MM.material.stridedArrays.includes("uAnimDataPerTex") ? ".el" : "";
+        frame: VV.material.slots.has("uAnimDataPerTex") ? (eV, xV) => SJ(eV, xV, function(VV) {
+          const eV = VV.material.stridedArrays.includes("uAnimDataPerTex") ? ".el" : "";
           return {
-            bL: "frame.animTick",
+            iZ: "frame.animTick",
             stride: "uniforms.uAnimData.y",
             count: "uniforms.uAnimData.z",
-            perTexture: MM => `uniforms.uAnimDataPerTex[${MM}]${rM}`
+            perTexture: VV => `uniforms.uAnimDataPerTex[${VV}]${eV}`
           }
-        }(MM)) : null
-      } : null, LM = "placed" === aM ? "var<private> bloxdSpCell: vec3f;\nfn bloxdFragmentBlockPosition(bloxdSpPosition: vec3f, bloxdSpNormal: vec3f) -> vec3i {\n\tlet bloxdSpBehind = bloxdSpPosition - bloxdSpNormal * (1.0 / 64.0);\n\tlet bloxdSpInside = all(abs(bloxdSpBehind - bloxdSpCell - 0.5) <= vec3f(0.5 + 1.0 / 256.0));\n\treturn select(vec3i(floor(bloxdSpBehind)), vec3i(bloxdSpCell), bloxdSpInside) + bloxdRenderOffset();\n}\n" : "fn bloxdFragmentBlockPosition(bloxdSpPosition: vec3f, bloxdSpNormal: vec3f) -> vec3i {\n\treturn vec3i(floor(bloxdSpPosition - bloxdSpNormal * (1.0 / 64.0))) + bloxdRenderOffset();\n}\n", mM = null !== zM && void 0 !== zM ? zM : Ga(iM), HM = function(MM, iM) {
-        let OM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
-        return `${(0,qr.w)()}${QO(rM,iM)}${OM}${dO(MM)}${iO}${LM}${rM.code}`
+        }(VV)) : null
+      } : null, ZV = "placed" === yV ? "var<private> bloxdSpCell: vec3f;\nfn bloxdFragmentBlockPosition(bloxdSpPosition: vec3f, bloxdSpNormal: vec3f) -> vec3i {\n\tlet bloxdSpBehind = bloxdSpPosition - bloxdSpNormal * (1.0 / 64.0);\n\tlet bloxdSpInside = all(abs(bloxdSpBehind - bloxdSpCell - 0.5) <= vec3f(0.5 + 1.0 / 256.0));\n\treturn select(vec3i(floor(bloxdSpBehind)), vec3i(bloxdSpCell), bloxdSpInside) + bloxdRenderOffset();\n}\n" : "fn bloxdFragmentBlockPosition(bloxdSpPosition: vec3f, bloxdSpNormal: vec3f) -> vec3i {\n\treturn vec3i(floor(bloxdSpPosition - bloxdSpNormal * (1.0 / 64.0))) + bloxdRenderOffset();\n}\n", vV = null !== wV && void 0 !== wV ? wV : qy(xV), rV = function(VV, xV) {
+        let JV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
+        return `${(0,Se.B)()}${pJ(eV,xV)}${JV}${kJ(VV)}${VJ}${ZV}${eV.code}`
       };
       let {
-        vertex: hM,
-        fragment: JM
-      } = MM;
-      const dM = lO(SM, nM);
-      if (dM) {
-        const MM = La(rM, iM, "vertex") ? `\tbloxdSpCell = ${za};\n` : "";
-        hM = ga(hM, ia, `${MM}${dM.slice(1)}${ia}`, "vertex")
+        vertex: kV,
+        fragment: bV
+      } = VV;
+      const EV = EJ(YV, QV);
+      if (EV) {
+        const VV = ny(eV, xV, "vertex") ? `\tbloxdSpCell = ${Qy};\n` : "";
+        kV = Ny(kV, Vy, `${VV}${EV.slice(1)}${Vy}`, "vertex")
       }
-      const yM = `${zO(rM,jM,function(MM,rM){return rM.TWOSIDEDLIGHTING?MM:`select(-(${MM}), ${MM}, fragmentInputs.frontFacing)`}(nM.normal,PM),nM.flags)}${EO(SM,rM.strict,rM.program,mM,nM)}`;
-      yM && (JM = ga(JM, Oa, `${yM.slice(1)}${Oa}`, "surface")), jM && rM.sunShadow && !PM.TWOSIDEDLIGHTING && (JM = ga(JM, ua, `${ua}\t@builtin(front_facing) frontFacing: bool,\n`, "front facing"));
-      const lM = CO(SM);
-      if (lM) {
-        const MM = GO(SM, ba(PM), !0, nM);
-        JM = ga(JM, Sa, `${MM}${lM.slice(1)}${Sa}`, "light")
+      const BV = `${QJ(eV,UV,function(VV,eV){return eV.TWOSIDEDLIGHTING?VV:`select(-(${VV}), ${VV}, fragmentInputs.frontFacing)`}(QV.normal,pV),QV.flags)}${BJ(YV,eV.strict,eV.program,vV,QV)}`;
+      BV && (bV = Ny(bV, ey, `${BV.slice(1)}${ey}`, "surface")), UV && eV.sunShadow && !pV.TWOSIDEDLIGHTING && (bV = Ny(bV, Xy, `${Xy}\t@builtin(front_facing) frontFacing: bool,\n`, "front facing"));
+      const jV = tJ(YV);
+      if (jV) {
+        const VV = qJ(YV, Ty(pV), !0, QV);
+        bV = Ny(bV, xy, `${VV}${jV.slice(1)}${xy}`, "light")
       }
-      const EM = Ca(rM, iM) ? HO : "";
+      const qV = ty(eV, xV) ? ZJ : "";
       return {
-        ...MM,
-        vertex: Ra(hM, HM(zM, !1, EM)),
-        fragment: Ra(JM, HM(mM, jM))
+        ...VV,
+        vertex: My(kV, rV(wV, !1, qV)),
+        fragment: My(bV, rV(vV, UV))
       }
     }
-    const Wa = {
+    const Gy = {
       name: "earthSky",
       uniqueId: -1
     };
-    class sa {
-      constructor(MM, rM) {
-        this.resources = MM, this.epoch = rM, this.instances = new Map, this.vertexCode = [], this.fragmentCode = [], this.pluginUniforms = [], this.codeKey = "", this.codeVersion = -1
+    class Wy {
+      constructor(VV, eV) {
+        this.resources = VV, this.epoch = eV, this.instances = new Map, this.vertexCode = [], this.fragmentCode = [], this.pluginUniforms = [], this.codeKey = "", this.codeVersion = -1
       }
       release() {
-        for (const MM of this.instances.values()) MM.released = !0, this.resources.destroyBuffer(MM.buffer);
+        for (const VV of this.instances.values()) VV.released = !0, this.resources.destroyBuffer(VV.buffer);
         this.instances.clear()
       }
     }
 
-    function Da(MM) {
-      return MM.failed && null !== MM.packGroup
+    function Ry(VV) {
+      return VV.failed && null !== VV.packGroup
     }
-    class ka {
-      constructor(MM, rM, iM) {
-        let OM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new Zj,
-          SM = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : new Dj;
-        this.device = MM, this.resources = rM, this.skyLastRenderable = void 0, this.opaqueRenderable = void 0, this.transparentRenderable = void 0, this.frontRenderable = void 0, this.n_ = void 0, this.modelMeshes = void 0, this.thinBundle = void 0, this.binder = new Mj, this.sceneLayout = void 0, this.frameLayout = void 0, this.frameUniforms = new Float32Array(108), this.frameBuffer = void 0, this.meshSlots = void 0, this.zeroBuffer = void 0, this.programs = new Map, this.earthSkyProgram = null, this.earthSkyUniforms = null, this.earthSkyFrom = null, this.drawDefines = void 0, this.modelUniforms = new Gj((MM => this.modelSlot(MM).instances.values())), this.vertexLayouts = void 0, this.inputs = new WeakMap, this.unbuildable = new Set, this.linePrograms = new Map, this.materials = new WeakMap, this.pipelines = new Map, this.compiling = 0, this.warnOnce = (0, Wr.b)("Lite: "), this.renderStates = new dj(this.warnOnce), this.nextProgramId = 0, this.frame = 0, this.packInputs = null, this.sunShadow = null, this.caster = {}, this.casterWorlds = new Float32Array(0), this.view = void 0, this.steadyPhase = 0, this.keepSteadyBase = (MM, rM) => this.keepSteady(MM, rM), this.lists = void 0, this.slotCount = 0, this.n_ = OM, this.modelMeshes = SM, this.lists = new rj(SM, OM, this, this.warnOnce), this.drawDefines = new mj(rM, this.warnOnce, ((MM, rM, iM) => this.programWithModel(MM, rM, iM)), Da), this.vertexLayouts = new wj(rM, MM.limits, this.warnOnce), this.sceneLayout = er(MM), this.frameLayout = MM.createBindGroupLayout({
+    class gy {
+      constructor(VV, eV, xV) {
+        let JV = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new DU,
+          YV = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : new RU;
+        this.device = VV, this.resources = eV, this.skyLastRenderable = void 0, this.opaqueRenderable = void 0, this.transparentRenderable = void 0, this.frontRenderable = void 0, this.uVV = void 0, this.modelMeshes = void 0, this.thinBundle = void 0, this.binder = new dY, this.sceneLayout = void 0, this.frameLayout = void 0, this.frameUniforms = new Float32Array(108), this.frameBuffer = void 0, this.meshSlots = void 0, this.zeroBuffer = void 0, this.programs = new Map, this.earthSkyProgram = null, this.earthSkyUniforms = null, this.earthSkyFrom = null, this.drawDefines = void 0, this.modelUniforms = new qU((VV => this.modelSlot(VV).instances.values())), this.vertexLayouts = void 0, this.inputs = new WeakMap, this.unbuildable = new Set, this.linePrograms = new Map, this.materials = new WeakMap, this.pipelines = new Map, this.compiling = 0, this.warnOnce = (0, Re.b)("Lite: "), this.renderStates = new kU(this.warnOnce), this.nextProgramId = 0, this.frame = 0, this.packInputs = null, this.sunShadow = null, this.caster = {}, this.casterWorlds = new Float32Array(0), this.view = void 0, this.steadyPhase = 0, this.keepSteadyBase = (VV, eV) => this.keepSteady(VV, eV), this.lists = void 0, this.slotCount = 0, this.uVV = JV, this.modelMeshes = YV, this.lists = new OY(YV, JV, this, this.warnOnce), this.drawDefines = new wU(eV, this.warnOnce, ((VV, eV, xV) => this.programWithModel(VV, eV, xV)), Ry), this.vertexLayouts = new PU(eV, VV.limits, this.warnOnce), this.sceneLayout = Pe(VV), this.frameLayout = VV.createBindGroupLayout({
           label: "meshes-frame",
           entries: [{
             binding: 0,
@@ -3663,91 +3663,91 @@ export const modules = {
               minBindingSize: 80
             }
           }]
-        }), this.frameBuffer = MM.createBuffer({
+        }), this.frameBuffer = VV.createBuffer({
           label: "meshes-frame",
           size: this.frameUniforms.byteLength,
           usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST
-        }), this.meshSlots = new uj(MM, this.frameLayout, this.frameBuffer, "meshes-per-draw"), this.zeroBuffer = MM.createBuffer({
+        }), this.meshSlots = new XU(VV, this.frameLayout, this.frameBuffer, "meshes-per-draw"), this.zeroBuffer = VV.createBuffer({
           label: "meshes-zero-attribute",
           size: 16,
           usage: GPUBufferUsage.VERTEX
-        }), this.thinBundle = new Yj(MM, new uj(MM, this.frameLayout, this.frameBuffer, "thin-bases-slots"), {
-          pipelineFor: (MM, rM, iM) => this.pipelineFor(MM, rM, iM),
-          pipelineCompiling: (MM, rM) => !MM.program.failed && !1 !== this.pipelines.get(`${MM.pipelineKey}|${rM}`),
-          sceneGroup: MM => {
-            const rM = iM(MM);
-            return rM || this.warnOnce("scene-group", "no render task draws to this target: thin bases are drawn without a bundle"), rM
+        }), this.thinBundle = new aU(VV, new XU(VV, this.frameLayout, this.frameBuffer, "thin-bases-slots"), {
+          pipelineFor: (VV, eV, xV) => this.pipelineFor(VV, eV, xV),
+          pipelineCompiling: (VV, eV) => !VV.program.failed && !1 !== this.pipelines.get(`${VV.pipelineKey}|${eV}`),
+          sceneGroup: VV => {
+            const eV = xV(VV);
+            return eV || this.warnOnce("scene-group", "no render task draws to this target: thin bases are drawn without a bundle"), eV
           }
-        }), rM.onDestroy = MM => {
-          this.thinBundle.resourceDestroyed(MM)
+        }), eV.onDestroy = VV => {
+          this.thinBundle.resourceDestroyed(VV)
         }, this.skyLastRenderable = this.renderable(1e3, !1, this.lists.skyDraws), this.opaqueRenderable = this.renderable(150, !1, this.lists.opaqueDraws, this.thinBundle), this.transparentRenderable = this.renderable(300, !0, this.lists.transparentDraws), this.frontRenderable = this.renderable(400, !0, this.lists.frontDraws)
       }
-      renderable(MM, rM, iM) {
-        let OM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-        const SM = {
-          order: MM,
-          isTransparent: rM,
-          _direct: !rM,
-          bind: (MM, rM) => this.createBinding(SM, rM, iM, OM)
+      renderable(VV, eV, xV) {
+        let JV = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+        const YV = {
+          order: VV,
+          isTransparent: eV,
+          _direct: !eV,
+          bind: (VV, eV) => this.createBinding(YV, eV, xV, JV)
         };
-        return SM
+        return YV
       }
       get pipelinesCompiling() {
         return this.compiling
       }
-      prepare(MM, rM, iM) {
-        var OM;
-        let SM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-        this.frame++, this.view = rM, this.drawDefines.view = rM, this.thinBundle.WU(), this.writeFrameUniforms();
-        const jM = null !== (OM = null === SM || void 0 === SM ? void 0 : SM.defineFor("model")) && void 0 !== OM ? OM : 0;
-        this.drawDefines.modelPackVariant = jM, SM && 0 !== jM && (this.packInputs ??= new qj(this.device, SM.textureLayers(), this.sunShadow), this.packInputs.write(SM, rM.eye, SM.DJ())), this.lists.clear(), this.slotCount = 0;
-        const aM = MM.activeCamera;
-        this.n_.select(aM, this.keepSteadyBase), this.modelMeshes.select(aM, rM), iM && this.pushEarthSky(iM), this.lists.collect(MM), this.thinBundle.EL(), this.uploadMeshSlots()
+      prepare(VV, eV, xV) {
+        var JV;
+        let YV = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+        this.frame++, this.view = eV, this.drawDefines.view = eV, this.thinBundle.pT(), this.writeFrameUniforms();
+        const UV = null !== (JV = null === YV || void 0 === YV ? void 0 : YV.defineFor("model")) && void 0 !== JV ? JV : 0;
+        this.drawDefines.modelPackVariant = UV, YV && 0 !== UV && (this.packInputs ??= new uU(this.device, YV.textureLayers(), this.sunShadow), this.packInputs.write(YV, eV.eye, YV.eE())), this.lists.clear(), this.slotCount = 0;
+        const yV = VV.activeCamera;
+        this.uVV.select(yV, this.keepSteadyBase), this.modelMeshes.select(yV, eV), xV && this.pushEarthSky(xV), this.lists.collect(VV), this.thinBundle.GZ(), this.uploadMeshSlots()
       }
-      pushDraws(MM, rM, iM, OM, SM, jM) {
-        let aM = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : null;
-        const PM = jM.length;
-        for (let nM = 0; nM < iM; nM++) {
-          const iM = rM[nM];
-          let PM = this.retainedDraw(MM, iM, OM, SM);
-          if (void 0 === PM && (PM = this.drawFor(MM, iM, OM, SM), this.retain(iM, PM)), PM) {
-            const MM = iM.owner,
-              rM = aM ? aM[nM] : -1;
-            PM.slotOffset = rM < 0 ? this.writeMeshSlot(MM.getWorldMatrix().m, MM.visibility) : this.writeMeshSlot(this.modelMeshes.worlds, this.modelMeshes.visibility[rM], 16 * rM), jM.push(PM)
+      pushDraws(VV, eV, xV, JV, YV, UV) {
+        let yV = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : null;
+        const pV = UV.length;
+        for (let QV = 0; QV < xV; QV++) {
+          const xV = eV[QV];
+          let pV = this.retainedDraw(VV, xV, JV, YV);
+          if (void 0 === pV && (pV = this.drawFor(VV, xV, JV, YV), this.retain(xV, pV)), pV) {
+            const VV = xV.owner,
+              eV = yV ? yV[QV] : -1;
+            pV.slotOffset = eV < 0 ? this.writeMeshSlot(VV.getWorldMatrix().m, VV.visibility) : this.writeMeshSlot(this.modelMeshes.worlds, this.modelMeshes.visibility[eV], 16 * eV), UV.push(pV)
           }
         }
-        return jM.length - PM
+        return UV.length - pV
       }
-      bundleDraws(MM, rM, iM) {
-        let OM = 0;
-        for (const SM of rM) {
-          let rM = this.retainedDraw(MM, SM, iM, !1);
-          const jM = void 0 !== rM;
-          if (void 0 === rM && (rM = this.drawFor(MM, SM, iM, !1), this.retain(SM, rM)), rM) {
-            const MM = SM.owner,
-              iM = this.thinBundle.add(SM, rM, MM.getWorldMatrix().m, MM.visibility);
-            jM && this.steadyFrom(SM, rM, iM), OM++
+      bundleDraws(VV, eV, xV) {
+        let JV = 0;
+        for (const YV of eV) {
+          let eV = this.retainedDraw(VV, YV, xV, !1);
+          const UV = void 0 !== eV;
+          if (void 0 === eV && (eV = this.drawFor(VV, YV, xV, !1), this.retain(YV, eV)), eV) {
+            const VV = YV.owner,
+              xV = this.thinBundle.add(YV, eV, VV.getWorldMatrix().m, VV.visibility);
+            UV && this.steadyFrom(YV, eV, xV), JV++
           }
         }
-        return OM
+        return JV
       }
-      steadyFrom(MM, rM, iM) {
-        const OM = MM.owner,
-          SM = this.n_.base(OM),
-          jM = OM.material,
+      steadyFrom(VV, eV, xV) {
+        const JV = VV.owner,
+          YV = this.uVV.base(JV),
+          UV = JV.material,
           {
-            drawState: aM,
-            instance: PM
-          } = rM.inputs.retained;
-        if (!SM || !jM || 1 !== MM.parts.materials.length || pj(MM) !== jM) return;
-        const nM = SM.steady ??= {
-          unit: MM,
-          material: jM,
+            drawState: yV,
+            instance: pV
+          } = eV.inputs.retained;
+        if (!YV || !UV || 1 !== VV.parts.materials.length || zU(VV) !== UV) return;
+        const QV = YV.steady ??= {
+          unit: VV,
+          material: UV,
           visibility: 1,
-          draw: rM,
-          record: iM,
-          drawState: aM,
-          instance: PM,
+          draw: eV,
+          record: xV,
+          drawState: yV,
+          instance: pV,
           bindGroup: null,
           gpuVersion: -1,
           fitInstances: 0,
@@ -3755,1307 +3755,1307 @@ export const modules = {
           handedFrame: -1,
           phase: this.steadyPhase++ % 8
         };
-        nM.unit = MM, nM.material = jM, nM.visibility = OM.visibility, nM.draw = rM, nM.record = iM, nM.drawState = aM, nM.instance = PM, nM.bindGroup = PM.bindGroup, nM.gpuVersion = this.resources.gpuBuffersVersion, nM.fitInstances = rM.inputs.fitInstances, nM.worldFlag = OM.getWorldMatrix().updateFlag, nM.handedFrame = this.frame
+        QV.unit = VV, QV.material = UV, QV.visibility = JV.visibility, QV.draw = eV, QV.record = xV, QV.drawState = yV, QV.instance = pV, QV.bindGroup = pV.bindGroup, QV.gpuVersion = this.resources.gpuBuffersVersion, QV.fitInstances = eV.inputs.fitInstances, QV.worldFlag = JV.getWorldMatrix().updateFlag, QV.handedFrame = this.frame
       }
-      keepSteady(MM, rM) {
-        const iM = MM.steady;
-        if (iM.handedFrame !== this.frame - 1 || (this.frame + iM.phase) % 8 === 0) return !1;
-        const OM = MM.mesh,
+      keepSteady(VV, eV) {
+        const xV = VV.steady;
+        if (xV.handedFrame !== this.frame - 1 || (this.frame + xV.phase) % 8 === 0) return !1;
+        const JV = VV.mesh,
           {
-            unit: SM,
-            draw: jM,
-            instance: aM,
-            drawState: PM
-          } = iM,
-          nM = OM.forcedInstanceCount || OM.y_;
-        if (!OM.isVisible || OM.nSM || OM.visibility !== iM.visibility || 0 === (OM.layerMask & rM.layerMask) || OM.material !== iM.material || 0 !== OM.renderingGroupId || OM.hasVertexAlpha || !this.drawDefines.definesHold(PM, SM, PM.instancing) || iM.gpuVersion !== this.resources.gpuBuffersVersion || !this.inputsStamped(jM.inputs, SM, PM.instancing, jM.program) || jM.program.failed || aM.released || nM <= 0 || nM > iM.fitInstances) return !1;
-        if (aM.frame !== this.frame && this.bindMaterial(aM, this.modelUniforms.refreshModelUniforms(OM.Hk(), aM, aM.model, this.view)), !aM.bindable || aM.bindGroup !== iM.bindGroup) return !1;
-        const QM = OM.computeWorldMatrix(),
-          zM = QM.updateFlag !== iM.worldFlag;
-        return iM.worldFlag = QM.updateFlag, jM.instances = nM, this.thinBundle.addAgain(iM.record, jM, zM ? QM.m : null, iM.visibility), iM.handedFrame = this.frame, this.n_.drawn++, !0
+            unit: YV,
+            draw: UV,
+            instance: yV,
+            drawState: pV
+          } = xV,
+          QV = JV.forcedInstanceCount || JV.VeV;
+        if (!JV.isVisible || JV.NUV || JV.visibility !== xV.visibility || 0 === (JV.layerMask & eV.layerMask) || JV.material !== xV.material || 0 !== JV.renderingGroupId || JV.hasVertexAlpha || !this.drawDefines.definesHold(pV, YV, pV.instancing) || xV.gpuVersion !== this.resources.gpuBuffersVersion || !this.inputsStamped(UV.inputs, YV, pV.instancing, UV.program) || UV.program.failed || yV.released || QV <= 0 || QV > xV.fitInstances) return !1;
+        if (yV.frame !== this.frame && this.bindMaterial(yV, this.modelUniforms.refreshModelUniforms(JV.dD(), yV, yV.model, this.view)), !yV.bindable || yV.bindGroup !== xV.bindGroup) return !1;
+        const nV = JV.computeWorldMatrix(),
+          wV = nV.updateFlag !== xV.worldFlag;
+        return xV.worldFlag = nV.updateFlag, UV.instances = QV, this.thinBundle.addAgain(xV.record, UV, wV ? nV.m : null, xV.visibility), xV.handedFrame = this.frame, this.uVV.drawn++, !0
       }
-      retainedDraw(MM, rM, iM, OM) {
-        const SM = this.inputs.get(rM),
-          jM = null === SM || void 0 === SM ? void 0 : SM.retained;
-        if (!SM || !jM) return;
+      retainedDraw(VV, eV, xV, JV) {
+        const YV = this.inputs.get(eV),
+          UV = null === YV || void 0 === YV ? void 0 : YV.retained;
+        if (!YV || !UV) return;
         const {
-          drawState: aM,
-          program: PM,
-          instance: nM,
-          instancing: QM
-        } = jM, zM = rM.owner;
-        if (aj(zM) !== QM) return;
-        const LM = this.instanceCount(zM, QM);
-        if (LM <= 0) return null;
-        if (nM.released || PM.failed || aM.program !== PM || !this.drawDefines.programCurrent(aM, rM, QM, iM) || !this.inputsStamped(SM, rM, QM, PM) || zM.isUnIndexed !== jM.unIndexed || this.indexKey(rM) !== jM.indexData) return;
-        if (jM.indexBuffer && jM.gpuVersion !== this.resources.gpuBuffersVersion) {
-          const MM = this.resources.gpuBuffer(jM.indexData);
-          if (!MM) return;
-          jM.indexBuffer = MM, jM.gpuVersion = this.resources.gpuBuffersVersion
+          drawState: yV,
+          program: pV,
+          instance: QV,
+          instancing: nV
+        } = UV, wV = eV.owner;
+        if (YU(wV) !== nV) return;
+        const ZV = this.instanceCount(wV, nV);
+        if (ZV <= 0) return null;
+        if (QV.released || pV.failed || yV.program !== pV || !this.drawDefines.programCurrent(yV, eV, nV, xV) || !this.inputsStamped(YV, eV, nV, pV) || wV.isUnIndexed !== UV.unIndexed || this.indexKey(eV) !== UV.indexData) return;
+        if (UV.indexBuffer && UV.gpuVersion !== this.resources.gpuBuffersVersion) {
+          const VV = this.resources.gpuBuffer(UV.indexData);
+          if (!VV) return;
+          UV.indexBuffer = VV, UV.gpuVersion = this.resources.gpuBuffersVersion
         }
-        let mM = !1;
-        if (nM.frame !== this.frame && (mM = this.modelUniforms.refreshModelUniforms(MM, nM, nM.model, this.view)), !this.bindMaterial(nM, mM) || !this.withGpuBuffers(SM) || !this.instanceBuffersFit(zM.name, SM, LM)) return null;
-        const HM = this.makeDraw(PM, SM, this.renderStates.renderState(aM.model, zM, OM, SM.state), nM, LM);
-        return this.setRange(HM, rM, jM.indexBuffer, jM.indexData), HM
+        let vV = !1;
+        if (QV.frame !== this.frame && (vV = this.modelUniforms.refreshModelUniforms(VV, QV, QV.model, this.view)), !this.bindMaterial(QV, vV) || !this.withGpuBuffers(YV) || !this.instanceBuffersFit(wV.name, YV, ZV)) return null;
+        const rV = this.makeDraw(pV, YV, this.renderStates.renderState(yV.model, wV, JV, YV.state), QV, ZV);
+        return this.setRange(rV, eV, UV.indexBuffer, UV.indexData), rV
       }
-      retain(MM, rM) {
-        const iM = this.drawDefines.drawStates.get(MM);
-        if (!rM || !iM || iM.program !== rM.program) {
-          const rM = this.inputs.get(MM);
-          return void(rM && (rM.retained = null))
+      retain(VV, eV) {
+        const xV = this.drawDefines.drawStates.get(VV);
+        if (!eV || !xV || xV.program !== eV.program) {
+          const eV = this.inputs.get(VV);
+          return void(eV && (eV.retained = null))
         }
-        const OM = MM.owner,
-          SM = iM.instancing,
-          jM = this.indexKey(MM),
-          aM = rM.inputs.retained;
-        aM ? (aM.drawState = iM, aM.instancing = SM, aM.program = rM.program, aM.instance = rM.material, aM.indexData = jM, aM.unIndexed = OM.isUnIndexed, aM.indexBuffer = rM.indexBuffer, aM.gpuVersion = this.resources.gpuBuffersVersion) : rM.inputs.retained = {
-          drawState: iM,
-          instancing: SM,
-          program: rM.program,
-          instance: rM.material,
-          indexData: jM,
-          unIndexed: OM.isUnIndexed,
-          indexBuffer: rM.indexBuffer,
+        const JV = VV.owner,
+          YV = xV.instancing,
+          UV = this.indexKey(VV),
+          yV = eV.inputs.retained;
+        yV ? (yV.drawState = xV, yV.instancing = YV, yV.program = eV.program, yV.instance = eV.material, yV.indexData = UV, yV.unIndexed = JV.isUnIndexed, yV.indexBuffer = eV.indexBuffer, yV.gpuVersion = this.resources.gpuBuffersVersion) : eV.inputs.retained = {
+          drawState: xV,
+          instancing: YV,
+          program: eV.program,
+          instance: eV.material,
+          indexData: UV,
+          unIndexed: JV.isUnIndexed,
+          indexBuffer: eV.indexBuffer,
           gpuVersion: this.resources.gpuBuffersVersion
         }
       }
-      drawFor(MM, rM, iM, OM) {
-        const SM = rM.owner,
-          jM = pj(rM);
-        if (!jM) return null;
-        const aM = jM.getClassName();
-        let PM = null;
-        if (function(MM) {
-            return "LinesMesh" === MM.getClassName()
-          }(SM)) {
-          if (! function(MM) {
-              return "ShaderMaterial" === MM.getClassName() && "color" === MM.shaderPath
-            }(jM)) return this.warnOnce(`lines:${aM}`, `A LinesMesh with a ${aM} is not drawn yet (${jM.name})`), null;
-          PM = SM
-        } else if ("StandardMaterial" !== aM && "LiteMaterial" !== aM) return this.warnOnce(`class:${aM}`, `${aM} is not drawn yet (${jM.name})`), null;
-        const nM = aj(SM),
-          QM = this.instanceCount(SM, nM);
-        if (QM <= 0) return null;
-        const zM = PM ? this.lineProgramFor(SM, iM, nM) : this.drawDefines.programFor(MM, rM, jM, iM, nM);
-        if (!zM || zM.failed) return null;
-        const LM = PM ? null : this.drawDefines.drawStates.get(rM).model,
-          mM = LM ? this.modelInstance(LM, zM) : this.materialInstance(SM, zM);
-        let HM = !1;
-        if (mM.frame !== this.frame && (PM ? lM(mM.ubo, PM) : HM = this.modelUniforms.refreshModelUniforms(MM, mM, mM.model, this.view)), !this.bindMaterial(mM, HM)) return null;
-        const hM = this.meshInputs(rM, zM, nM);
-        if (!hM || !this.instanceBuffersFit(SM.name, hM, QM)) return null;
-        const JM = this.indexKey(rM);
-        let dM = null;
-        if (JM && !SM.isUnIndexed && (dM = this.resources.gpuBuffer(JM), !dM)) return null;
-        const yM = this.renderStates.renderState(null !== LM && void 0 !== LM ? LM : jM, SM, OM, hM.state, PM ? "line-list" : "triangle-list"),
-          EM = this.makeDraw(zM, hM, yM, mM, QM);
-        return this.setRange(EM, rM, dM, JM), EM
+      drawFor(VV, eV, xV, JV) {
+        const YV = eV.owner,
+          UV = zU(eV);
+        if (!UV) return null;
+        const yV = UV.getClassName();
+        let pV = null;
+        if (function(VV) {
+            return "LinesMesh" === VV.getClassName()
+          }(YV)) {
+          if (! function(VV) {
+              return "ShaderMaterial" === VV.getClassName() && "color" === VV.shaderPath
+            }(UV)) return this.warnOnce(`lines:${yV}`, `A LinesMesh with a ${yV} is not drawn yet (${UV.name})`), null;
+          pV = YV
+        } else if ("StandardMaterial" !== yV && "LiteMaterial" !== yV) return this.warnOnce(`class:${yV}`, `${yV} is not drawn yet (${UV.name})`), null;
+        const QV = YU(YV),
+          nV = this.instanceCount(YV, QV);
+        if (nV <= 0) return null;
+        const wV = pV ? this.lineProgramFor(YV, xV, QV) : this.drawDefines.programFor(VV, eV, UV, xV, QV);
+        if (!wV || wV.failed) return null;
+        const ZV = pV ? null : this.drawDefines.drawStates.get(eV).model,
+          vV = ZV ? this.modelInstance(ZV, wV) : this.materialInstance(YV, wV);
+        let rV = !1;
+        if (vV.frame !== this.frame && (pV ? jV(vV.ubo, pV) : rV = this.modelUniforms.refreshModelUniforms(VV, vV, vV.model, this.view)), !this.bindMaterial(vV, rV)) return null;
+        const kV = this.meshInputs(eV, wV, QV);
+        if (!kV || !this.instanceBuffersFit(YV.name, kV, nV)) return null;
+        const bV = this.indexKey(eV);
+        let EV = null;
+        if (bV && !YV.isUnIndexed && (EV = this.resources.gpuBuffer(bV), !EV)) return null;
+        const BV = this.renderStates.renderState(null !== ZV && void 0 !== ZV ? ZV : UV, YV, JV, kV.state, pV ? "line-list" : "triangle-list"),
+          qV = this.makeDraw(wV, kV, BV, vV, nV);
+        return this.setRange(qV, eV, EV, bV), qV
       }
-      indexKey(MM) {
-        const rM = zj(MM);
-        return rM ? this.resources.modelIndex(rM) : null
+      indexKey(VV) {
+        const eV = QU(VV);
+        return eV ? this.resources.modelIndex(eV) : null
       }
-      setRange(MM, rM, iM, OM) {
-        iM && (MM.indexBuffer = iM, MM.indexFormat = this.resources.indexFormat(OM));
-        const SM = 4 * rM.range + (iM ? 0 : 2);
-        MM.unit = rM, MM.first = rM.parts.Ld[SM], MM.count = rM.parts.Ld[SM + 1]
+      setRange(VV, eV, xV, JV) {
+        xV && (VV.indexBuffer = xV, VV.indexFormat = this.resources.indexFormat(JV));
+        const YV = 4 * eV.range + (xV ? 0 : 2);
+        VV.unit = eV, VV.first = eV.parts.TE[YV], VV.count = eV.parts.TE[YV + 1]
       }
-      makeDraw(MM, rM, iM, OM, SM) {
-        rM.state !== iM && (rM.state = iM, rM.pipelineKey = `${MM.id}|${rM.layout.key}|${iM.key}`, rM.pipeline = null);
-        const jM = rM.draw ??= {
-          program: MM,
-          inputs: rM,
+      makeDraw(VV, eV, xV, JV, YV) {
+        eV.state !== xV && (eV.state = xV, eV.pipelineKey = `${VV.id}|${eV.layout.key}|${xV.key}`, eV.pipeline = null);
+        const UV = eV.draw ??= {
+          program: VV,
+          inputs: eV,
           pipelineKey: "",
-          layout: rM.layout,
-          state: iM,
-          material: OM,
+          layout: eV.layout,
+          state: xV,
+          material: JV,
           slotOffset: 0,
-          vertexBuffers: rM.buffers,
-          vertexOffsets: rM.offsets,
+          vertexBuffers: eV.buffers,
+          vertexOffsets: eV.offsets,
           indexBuffer: null,
           indexFormat: "uint16",
           first: 0,
           count: 0,
-          instances: SM,
+          instances: YV,
           unit: null
         };
-        return jM.program = MM, jM.pipelineKey = rM.pipelineKey, jM.state = iM, jM.material = OM, jM.vertexOffsets = rM.offsets, jM.indexBuffer = null, jM.instances = SM, jM
+        return UV.program = VV, UV.pipelineKey = eV.pipelineKey, UV.state = xV, UV.material = JV, UV.vertexOffsets = eV.offsets, UV.indexBuffer = null, UV.instances = YV, UV
       }
-      instanceCount(MM, rM) {
-        switch (rM) {
+      instanceCount(VV, eV) {
+        switch (eV) {
           case "thin":
-            return MM.forcedInstanceCount || MM.y_;
+            return VV.forcedInstanceCount || VV.VeV;
           case "instanced":
-            return this.prepareInstances(MM);
+            return this.prepareInstances(VV);
           case "none":
             return 1
         }
       }
-      prepareInstances(MM) {
-        const rM = function(MM, rM) {
-          const iM = rM._userInstancedBuffersStorage,
-            OM = MM.batchUploads.get(rM);
-          if (OM) {
-            var SM;
-            if (OM.layout === (null !== (SM = null === iM || void 0 === iM ? void 0 : iM.interleavedKinds) && void 0 !== SM ? SM : null)) return OM;
-            OM.release()
+      prepareInstances(VV) {
+        const eV = function(VV, eV) {
+          const xV = eV._userInstancedBuffersStorage,
+            JV = VV.batchUploads.get(eV);
+          if (JV) {
+            var YV;
+            if (JV.layout === (null !== (YV = null === xV || void 0 === xV ? void 0 : xV.interleavedKinds) && void 0 !== YV ? YV : null)) return JV;
+            JV.release()
           }
-          return new Hr(MM, rM, iM)
-        }(this.resources, MM);
-        return rM.frame !== this.frame && rM.pack(MM, this.modelMeshes.instanceBatch(MM), this.modelMeshes.worlds, this.frame), rM.count
+          return new re(VV, eV, xV)
+        }(this.resources, VV);
+        return eV.frame !== this.frame && eV.pack(VV, this.modelMeshes.instanceBatch(VV), this.modelMeshes.worlds, this.frame), eV.count
       }
-      programWithModel(MM, rM, iM) {
-        const OM = this.modelSlot(MM),
-          SM = Hj(OM, MM, iM),
-          jM = this.drawDefines.modelPackKind(MM),
-          aM = jM ? function(MM, rM, iM, OM) {
-            const SM = (0, wM.v)(MM, eM.g.name),
-              jM = [];
+      programWithModel(VV, eV, xV) {
+        const JV = this.modelSlot(VV),
+          YV = ZU(JV, VV, xV),
+          UV = this.drawDefines.modelPackKind(VV),
+          yV = UV ? function(VV, eV, xV, JV) {
+            const YV = (0, NV.v)(VV, PV.h.name),
+              UV = [];
             for (const {
-                feature: nM,
-                state: QM,
-                active: zM
+                feature: QV,
+                state: nV,
+                active: wV
               }
-              of MM.features) {
-              var aM, PM;
-              const MM = zM ? null === (aM = (PM = (0, sr.i)(nM)).nh) || void 0 === aM ? void 0 : aM.call(PM, QM) : void 0;
-              MM && jM.push(MM)
+              of VV.features) {
+              var yV, pV;
+              const VV = wV ? null === (yV = (pV = (0, ge.j)(QV)).Xk) || void 0 === yV ? void 0 : yV.call(pV, nV) : void 0;
+              VV && UV.push(VV)
             }
             return {
-              kind: rM,
-              atlas: null !== SM && void 0 !== SM && SM.active ? (0, eM.d)(SM.state) : null,
-              defines: iM,
-              ...Ha(jM, OM)
+              kind: eV,
+              atlas: null !== YV && void 0 !== YV && YV.active ? (0, PV.d)(YV.state) : null,
+              defines: xV,
+              ...Zy(UV, JV)
             }
-          }(MM, jM, rM, OM.fragmentCode) : null;
-        if (aM && function(MM) {
-            const rM = MM.defines;
-            return (null === MM.atlas || !!rM.DIFFUSE && 1 === rM.DIFFUSEDIRECTUV) && !!rM.NORMAL && !rM.REFLECTION && !rM.EMISSIVEASILLUMINATION && !rM.LINKEMISSIVEWITHDIFFUSE
-          }(aM)) {
-          const iM = this.modelPackProgram(MM, rM, `${SM}#${jM}#sp${this.drawDefines.modelPackVariant}`, OM, aM);
-          if (iM && !iM.failed) return iM
+          }(VV, UV, eV, JV.fragmentCode) : null;
+        if (yV && function(VV) {
+            const eV = VV.defines;
+            return (null === VV.atlas || !!eV.DIFFUSE && 1 === eV.DIFFUSEDIRECTUV) && !!eV.NORMAL && !eV.REFLECTION && !eV.EMISSIVEASILLUMINATION && !eV.LINKEMISSIVEWITHDIFFUSE
+          }(yV)) {
+          const xV = this.modelPackProgram(VV, eV, `${YV}#${UV}#sp${this.drawDefines.modelPackVariant}`, JV, yV);
+          if (xV && !xV.failed) return xV
         }
-        const PM = this.programs.get(SM);
-        if (PM || this.unbuildable.has(SM)) return null !== PM && void 0 !== PM ? PM : null;
-        let nM;
+        const pV = this.programs.get(YV);
+        if (pV || this.unbuildable.has(YV)) return null !== pV && void 0 !== pV ? pV : null;
+        let QV;
         try {
-          nM = WS({
-            defines: nj(rM),
-            vertexCode: OM.vertexCode,
-            fragmentCode: OM.fragmentCode,
-            pluginUniforms: OM.pluginUniforms
+          QV = GY({
+            defines: yU(eV),
+            vertexCode: JV.vertexCode,
+            fragmentCode: JV.fragmentCode,
+            pluginUniforms: JV.pluginUniforms
           })
-        } catch (QM) {
-          return this.unbuildable.add(SM), this.warnOnce(`build:${SM}`, `could not build a program for ${MM.name}: ${String(QM)}`), null
+        } catch (nV) {
+          return this.unbuildable.add(YV), this.warnOnce(`build:${YV}`, `could not build a program for ${VV.name}: ${String(nV)}`), null
         }
-        return this.createProgram(SM, nM, "standard")
+        return this.createProgram(YV, QV, "standard")
       }
-      modelPackProgram(MM, rM, iM, OM, SM) {
-        const jM = this.programs.get(iM);
-        if (jM || this.unbuildable.has(iM)) return null !== jM && void 0 !== jM ? jM : null;
-        const aM = this.drawDefines.modelPackVariant;
-        let PM;
+      modelPackProgram(VV, eV, xV, JV, YV) {
+        const UV = this.programs.get(xV);
+        if (UV || this.unbuildable.has(xV)) return null !== UV && void 0 !== UV ? UV : null;
+        const yV = this.drawDefines.modelPackVariant;
+        let pV;
         try {
-          const MM = function(MM) {
-              return (0, Tr.c)(MM, "model")
-            }(aM),
-            iM = ta(MM, SM, OM.vertexCode, OM.fragmentCode);
-          PM = pa(WS({
-            defines: nj(rM),
-            ...iM,
-            pluginUniforms: OM.pluginUniforms
-          }), MM, SM, !!this.sunShadow)
-        } catch (zM) {
-          return this.unbuildable.add(iM), this.warnOnce(`build:${iM}`, `could not build a shader pack program for ${MM.name}, which draws without the pack: ${String(zM)}`), null
+          const VV = function(VV) {
+              return (0, Ie.e)(VV, "model")
+            }(yV),
+            xV = Ay(VV, YV, JV.vertexCode, JV.fragmentCode);
+          pV = zy(GY({
+            defines: yU(eV),
+            ...xV,
+            pluginUniforms: JV.pluginUniforms
+          }), VV, YV, !!this.sunShadow)
+        } catch (wV) {
+          return this.unbuildable.add(xV), this.warnOnce(`build:${xV}`, `could not build a shader pack program for ${VV.name}, which draws without the pack: ${String(wV)}`), null
         }
-        const nM = Ij(aM, !!this.sunShadow),
-          QM = {
-            group: this.packInputs.bindGroupFor(null, nM),
-            layout: Bj(this.device, {
+        const QV = KU(yV, !!this.sunShadow),
+          nV = {
+            group: this.packInputs.bindGroupFor(null, QV),
+            layout: fU(this.device, {
               depth: !1,
-              sunShadow: nM
+              sunShadow: QV
             })
           };
-        return this.createProgram(iM, PM, function(MM) {
-          return `standard-sp${MM}`
-        }(aM), QM)
+        return this.createProgram(xV, pV, function(VV) {
+          return `standard-sp${VV}`
+        }(yV), nV)
       }
-      lineProgramFor(MM, rM, iM) {
-        const OM = yM(MM, iM, rM, this.view);
-        let SM = this.linePrograms.get(OM);
-        var jM;
-        return SM || (SM = this.createProgram(`lines#${OM}`, (jM = function(MM) {
-          const rM = new Map;
-          for (let iM = 0; iM < QM.length; iM++) MM & 1 << iM && rM.set(QM[iM], !0);
-          return rM
-        }(OM), ZS({
-          defines: jM,
-          vertex: DS,
-          fragment: kS,
+      lineProgramFor(VV, eV, xV) {
+        const JV = BV(VV, xV, eV, this.view);
+        let YV = this.linePrograms.get(JV);
+        var UV;
+        return YV || (YV = this.createProgram(`lines#${JV}`, (UV = function(VV) {
+          const eV = new Map;
+          for (let xV = 0; xV < nV.length; xV++) VV & 1 << xV && eV.set(nV[xV], !0);
+          return eV
+        }(JV), DY({
+          defines: UV,
+          vertex: RY,
+          fragment: gY,
           members: [],
           structName: "MaterialUniforms"
-        })), "color"), this.linePrograms.set(OM, SM)), SM
+        })), "color"), this.linePrograms.set(JV, YV)), YV
       }
-      createProgram(MM, rM, iM) {
-        var OM;
-        let SM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-        const jM = this.nextProgramId++,
-          aM = `${iM}-${jM}`,
-          PM = GPUShaderStage.VERTEX | GPUShaderStage.FRAGMENT,
-          nM = [{
+      createProgram(VV, eV, xV) {
+        var JV;
+        let YV = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+        const UV = this.nextProgramId++,
+          yV = `${xV}-${UV}`,
+          pV = GPUShaderStage.VERTEX | GPUShaderStage.FRAGMENT,
+          QV = [{
             binding: 0,
-            visibility: PM,
+            visibility: pV,
             buffer: {
               type: "uniform"
             }
           }];
-        for (const LM of rM.textures) nM.push({
-          binding: LM.binding,
-          visibility: PM,
+        for (const ZV of eV.textures) QV.push({
+          binding: ZV.binding,
+          visibility: pV,
           texture: {
-            viewDimension: LM.dimension
+            viewDimension: ZV.dimension
           }
-        }), nM.push({
-          binding: LM.samplerBinding,
-          visibility: PM,
+        }), QV.push({
+          binding: ZV.samplerBinding,
+          visibility: pV,
           sampler: {}
         });
-        const QM = this.device.createBindGroupLayout({
-            label: aM,
-            entries: nM
+        const nV = this.device.createBindGroupLayout({
+            label: yV,
+            entries: QV
           }),
-          zM = {
-            key: MM,
-            id: jM,
-            kind: iM,
-            program: rM,
+          wV = {
+            key: VV,
+            id: UV,
+            kind: xV,
+            program: eV,
             vertex: this.device.createShaderModule({
-              label: `${aM}-vertex`,
-              code: rM.vertex
+              label: `${yV}-vertex`,
+              code: eV.vertex
             }),
             fragment: this.device.createShaderModule({
-              label: `${aM}-fragment`,
-              code: rM.fragment
+              label: `${yV}-fragment`,
+              code: eV.fragment
             }),
-            materialLayout: QM,
+            materialLayout: nV,
             pipelineLayout: this.device.createPipelineLayout({
-              label: aM,
-              bindGroupLayouts: [this.sceneLayout, this.frameLayout, QM, ...SM ? [SM.layout] : []]
+              label: yV,
+              bindGroupLayouts: [this.sceneLayout, this.frameLayout, nV, ...YV ? [YV.layout] : []]
             }),
-            packGroup: null !== (OM = null === SM || void 0 === SM ? void 0 : SM.group) && void 0 !== OM ? OM : null,
+            packGroup: null !== (JV = null === YV || void 0 === YV ? void 0 : YV.group) && void 0 !== JV ? JV : null,
             failed: !1
           };
-        return this.programs.set(MM, zM), zM
+        return this.programs.set(VV, wV), wV
       }
       writeFrameUniforms() {
-        const MM = this.frameUniforms;
-        Uj(this.view, MM), this.device.queue.writeBuffer(this.frameBuffer, 0, MM)
+        const VV = this.frameUniforms;
+        jU(this.view, VV), this.device.queue.writeBuffer(this.frameBuffer, 0, VV)
       }
-      materialInstance(MM, rM) {
-        let iM = this.materials.get(MM);
-        if (!iM) {
-          const rM = new Map;
-          this.materials.set(MM, rM);
+      materialInstance(VV, eV) {
+        let xV = this.materials.get(VV);
+        if (!xV) {
+          const eV = new Map;
+          this.materials.set(VV, eV);
           const {
-            resources: OM,
-            materials: SM
+            resources: JV,
+            materials: YV
           } = this;
-          MM.Rk.addOnce((() => {
-            for (const MM of rM.values()) MM.released = !0, OM.destroyBuffer(MM.buffer);
-            SM.delete(MM)
-          })), iM = rM
+          VV.eC.addOnce((() => {
+            for (const VV of eV.values()) VV.released = !0, JV.destroyBuffer(VV.buffer);
+            YV.delete(VV)
+          })), xV = eV
         }
-        let OM = iM.get(rM.key);
-        return OM || (OM = this.newMaterialInstance(MM, null, rM), iM.set(rM.key, OM)), OM
+        let JV = xV.get(eV.key);
+        return JV || (JV = this.newMaterialInstance(VV, null, eV), xV.set(eV.key, JV)), JV
       }
-      modelInstance(MM, rM) {
-        const iM = this.modelSlot(MM);
-        let OM = iM.instances.get(rM.key);
-        return OM || (OM = this.newMaterialInstance(MM, MM, rM), iM.instances.set(rM.key, OM)), OM
+      modelInstance(VV, eV) {
+        const xV = this.modelSlot(VV);
+        let JV = xV.instances.get(eV.key);
+        return JV || (JV = this.newMaterialInstance(VV, VV, eV), xV.instances.set(eV.key, JV)), JV
       }
-      modelSlot(MM) {
-        var rM;
-        let iM = MM.gpu[gM.e.lite];
-        return (null === (rM = iM) || void 0 === rM ? void 0 : rM.epoch) !== this.resources.epoch && (iM = new sa(this.resources, this.resources.epoch), MM.gpu[gM.e.lite] = iM), iM
+      modelSlot(VV) {
+        var eV;
+        let xV = VV.gpu[MV.f.lite];
+        return (null === (eV = xV) || void 0 === eV ? void 0 : eV.epoch) !== this.resources.epoch && (xV = new Wy(this.resources, this.resources.epoch), VV.gpu[MV.f.lite] = xV), xV
       }
-      newMaterialInstance(MM, rM, iM) {
-        const OM = iM.program.material.floats,
-          SM = new Float32Array(OM),
-          jM = new Map;
+      newMaterialInstance(VV, eV, xV) {
+        const JV = xV.program.material.floats,
+          YV = new Float32Array(JV),
+          UV = new Map;
         return {
-          owner: MM,
-          model: rM,
-          program: iM,
-          data: SM,
-          uploaded: new Float32Array(OM).fill(Number.NaN),
+          owner: VV,
+          model: eV,
+          program: xV,
+          data: YV,
+          uploaded: new Float32Array(JV).fill(Number.NaN),
           buffer: this.device.createBuffer({
-            label: `${MM.name}-uniforms`,
-            size: Math.max(16, 4 * OM),
+            label: `${VV.name}-uniforms`,
+            size: Math.max(16, 4 * JV),
             usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST
           }),
-          textures: jM,
-          ubo: new Ej(iM.program.material.slots, SM, jM),
+          textures: UV,
+          ubo: new BU(xV.program.material.slots, YV, UV),
           bindGroup: null,
-          bound: new Array(2 * iM.program.textures.length).fill(null),
+          bound: new Array(2 * xV.program.textures.length).fill(null),
           frame: -1,
           bindable: !1,
           released: !1,
           heldVersion: -1
         }
       }
-      pushEarthSky(MM) {
-        var rM;
-        const iM = this.earthSkyProgram ??= this.createProgram("earthSky", {
-            vertex: AS + xS,
-            fragment: AS + vS,
+      pushEarthSky(VV) {
+        var eV;
+        const xV = this.earthSkyProgram ??= this.createProgram("earthSky", {
+            vertex: cY + hY,
+            fragment: cY + lY,
             attributes: [],
-            material: NS,
+            material: oY,
             textures: []
           }, "earthSky"),
-          OM = this.earthSkyUniforms ??= this.newMaterialInstance(Wa, null, iM);
-        this.earthSkyFrom !== MM && (this.earthSkyFrom = MM, OM.data.fill(0)), VS(OM.ubo, MM, this.view);
-        const SM = this.vertexInputs(iM, Wa, "earthSky", iM, null);
-        if (iM.failed || !SM || !this.bindMaterial(OM, !1)) return;
-        const jM = null !== (rM = SM.state) && void 0 !== rM ? rM : this.renderStates.stateFor(0, !1, 0, "none", "cw", 0, 0, !0, "triangle-list"),
-          aM = this.makeDraw(iM, SM, jM, OM, 1);
-        aM.count = oS.length;
-        const PM = cS(MM, this.view);
-        aM.slotOffset = this.writeMeshSlot(PM, 1), this.lists.skyDraws.push(aM)
+          JV = this.earthSkyUniforms ??= this.newMaterialInstance(Gy, null, xV);
+        this.earthSkyFrom !== VV && (this.earthSkyFrom = VV, JV.data.fill(0)), SY(JV.ubo, VV, this.view);
+        const YV = this.vertexInputs(xV, Gy, "earthSky", xV, null);
+        if (xV.failed || !YV || !this.bindMaterial(JV, !1)) return;
+        const UV = null !== (eV = YV.state) && void 0 !== eV ? eV : this.renderStates.stateFor(0, !1, 0, "none", "cw", 0, 0, !0, "triangle-list"),
+          yV = this.makeDraw(xV, YV, UV, JV, 1);
+        yV.count = iY.length;
+        const pV = IY(VV, this.view);
+        yV.slotOffset = this.writeMeshSlot(pV, 1), this.lists.skyDraws.push(yV)
       }
-      uploadIfChanged(MM) {
+      uploadIfChanged(VV) {
         const {
-          data: rM,
-          uploaded: iM
-        } = MM;
-        for (let OM = 0; OM < rM.length; OM++)
-          if (rM[OM] !== iM[OM]) return iM.set(rM), void this.device.queue.writeBuffer(MM.buffer, 0, rM)
+          data: eV,
+          uploaded: xV
+        } = VV;
+        for (let JV = 0; JV < eV.length; JV++)
+          if (eV[JV] !== xV[JV]) return xV.set(eV), void this.device.queue.writeBuffer(VV.buffer, 0, eV)
       }
-      bindMaterial(MM, rM) {
-        return MM.frame !== this.frame && (MM.frame = this.frame, rM || this.uploadIfChanged(MM), MM.bindable = this.bindTextures(MM)), MM.bindable
+      bindMaterial(VV, eV) {
+        return VV.frame !== this.frame && (VV.frame = this.frame, eV || this.uploadIfChanged(VV), VV.bindable = this.bindTextures(VV)), VV.bindable
       }
-      bindTextures(MM) {
+      bindTextures(VV) {
         const {
-          program: rM,
-          bound: iM
-        } = MM, OM = rM.program.textures;
-        let SM = !MM.bindGroup,
-          jM = !0;
-        for (let aM = 0; aM < OM.length; aM++) {
-          const rM = MM.textures.get(OM[aM].name),
-            PM = rM ? this.resources.boundTexture(rM) : null;
-          PM ? iM[2 * aM] === PM.view && iM[2 * aM + 1] === PM.sampler || (iM[2 * aM] = PM.view, iM[2 * aM + 1] = PM.sampler, SM = !0) : (rM || MM.ubo.expected.has(OM[aM].name) || this.warnOnce(`texture:${MM.owner.name}:${OM[aM].name}`, `${MM.owner.name} has no ${OM[aM].name}`), jM = !1)
+          program: eV,
+          bound: xV
+        } = VV, JV = eV.program.textures;
+        let YV = !VV.bindGroup,
+          UV = !0;
+        for (let yV = 0; yV < JV.length; yV++) {
+          const eV = VV.textures.get(JV[yV].name),
+            pV = eV ? this.resources.boundTexture(eV) : null;
+          pV ? xV[2 * yV] === pV.view && xV[2 * yV + 1] === pV.sampler || (xV[2 * yV] = pV.view, xV[2 * yV + 1] = pV.sampler, YV = !0) : (eV || VV.ubo.expected.has(JV[yV].name) || this.warnOnce(`texture:${VV.owner.name}:${JV[yV].name}`, `${VV.owner.name} has no ${JV[yV].name}`), UV = !1)
         }
-        if (!jM) return SM && (MM.bindGroup = null), !1;
-        if (SM) {
-          const SM = [{
+        if (!UV) return YV && (VV.bindGroup = null), !1;
+        if (YV) {
+          const YV = [{
             binding: 0,
             resource: {
-              buffer: MM.buffer
+              buffer: VV.buffer
             }
           }];
-          for (let MM = 0; MM < OM.length; MM++) SM.push({
-            binding: OM[MM].binding,
-            resource: iM[2 * MM]
-          }), SM.push({
-            binding: OM[MM].samplerBinding,
-            resource: iM[2 * MM + 1]
+          for (let VV = 0; VV < JV.length; VV++) YV.push({
+            binding: JV[VV].binding,
+            resource: xV[2 * VV]
+          }), YV.push({
+            binding: JV[VV].samplerBinding,
+            resource: xV[2 * VV + 1]
           });
-          MM.bindGroup = this.device.createBindGroup({
-            label: `${MM.owner.name}-material`,
-            layout: rM.materialLayout,
-            entries: SM
+          VV.bindGroup = this.device.createBindGroup({
+            label: `${VV.owner.name}-material`,
+            layout: eV.materialLayout,
+            entries: YV
           })
         }
         return !0
       }
-      writeMeshSlot(MM, rM) {
-        let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        return this.meshSlots.ensure(this.slotCount + 1), this.meshSlots.write(this.slotCount, MM, rM, iM), this.slotCount++ * LS
+      writeMeshSlot(VV, eV) {
+        let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        return this.meshSlots.ensure(this.slotCount + 1), this.meshSlots.write(this.slotCount, VV, eV, xV), this.slotCount++ * nY
       }
       uploadMeshSlots() {
         this.slotCount > 0 && this.meshSlots.upload(0, this.slotCount)
       }
-      vertexInputs(MM, rM, iM, OM, SM) {
-        let jM = this.inputs.get(MM);
-        if (!jM || jM.program !== OM || !tj(rM, jM, this.resources, SM)) {
-          var aM;
-          if (jM = null !== (aM = this.vertexLayouts.resolveInputs(rM, iM, OM, SM)) && void 0 !== aM ? aM : void 0, !jM) return null;
-          this.inputs.set(MM, jM)
+      vertexInputs(VV, eV, xV, JV, YV) {
+        let UV = this.inputs.get(VV);
+        if (!UV || UV.program !== JV || !AU(eV, UV, this.resources, YV)) {
+          var yV;
+          if (UV = null !== (yV = this.vertexLayouts.resolveInputs(eV, xV, JV, YV)) && void 0 !== yV ? yV : void 0, !UV) return null;
+          this.inputs.set(VV, UV)
         }
-        return this.withGpuBuffers(jM)
+        return this.withGpuBuffers(UV)
       }
-      meshInputs(MM, rM, iM) {
-        const OM = this.inputs.get(MM);
-        if (OM && this.inputsStamped(OM, MM, iM, rM)) return this.withGpuBuffers(OM);
-        const SM = MM.owner,
-          jM = zj(MM),
-          aM = this.vertexInputs(MM, SM, SM.name, rM, jM);
-        return aM && (aM.geometry = Lj(MM), aM.instanceLayout = this.drawDefines.instanceLayout(SM, iM)), aM
+      meshInputs(VV, eV, xV) {
+        const JV = this.inputs.get(VV);
+        if (JV && this.inputsStamped(JV, VV, xV, eV)) return this.withGpuBuffers(JV);
+        const YV = VV.owner,
+          UV = QU(VV),
+          yV = this.vertexInputs(VV, YV, YV.name, eV, UV);
+        return yV && (yV.geometry = nU(VV), yV.instanceLayout = this.drawDefines.instanceLayout(YV, xV)), yV
       }
-      inputsStamped(MM, rM, iM, OM) {
-        return function(MM, rM, iM, OM) {
-          return MM.program === iM && MM.geometry === Lj(rM) && MM.instanceLayout === OM
-        }(MM, rM, OM, this.drawDefines.instanceLayout(rM.owner, iM))
+      inputsStamped(VV, eV, xV, JV) {
+        return function(VV, eV, xV, JV) {
+          return VV.program === xV && VV.geometry === nU(eV) && VV.instanceLayout === JV
+        }(VV, eV, JV, this.drawDefines.instanceLayout(eV.owner, xV))
       }
-      withGpuBuffers(MM) {
-        return Tj(MM, this.resources, this.zeroBuffer) ? MM : null
+      withGpuBuffers(VV) {
+        return sU(VV, this.resources, this.zeroBuffer) ? VV : null
       }
-      instanceBuffersFit(MM, rM, iM) {
-        const OM = cj(rM, iM, this.resources, this.zeroBuffer);
-        if (OM) {
-          const SM = rM.ends[OM.index] - rM.offsets[OM.index] + rM.m_[OM.index];
-          return this.warnOnce(`overrun:${MM}`, `${MM} draws ${iM} instances from a ${SM}-byte buffer (${OM.needed} needed)`), !1
+      instanceBuffersFit(VV, eV, xV) {
+        const JV = IU(eV, xV, this.resources, this.zeroBuffer);
+        if (JV) {
+          const YV = eV.ends[JV.index] - eV.offsets[JV.index] + eV.IVV[JV.index];
+          return this.warnOnce(`overrun:${VV}`, `${VV} draws ${xV} instances from a ${YV}-byte buffer (${JV.needed} needed)`), !1
         }
         return !0
       }
-      createBinding(MM, rM, iM, OM) {
-        const SM = `${rM._colorFormat}|${rM._depthStencilFormat}|${rM._depthCompare}|${rM._sampleCount}`,
-          jM = ur(this.device, rM);
-        if (MM === this.skyLastRenderable) {
-          let iM = null;
+      createBinding(VV, eV, xV, JV) {
+        const YV = `${eV._colorFormat}|${eV._depthStencilFormat}|${eV._depthCompare}|${eV._sampleCount}`,
+          UV = ze(this.device, eV);
+        if (VV === this.skyLastRenderable) {
+          let xV = null;
           return {
-            renderable: MM,
-            pipeline: jM,
-            draw: MM => iM ? this.drawSky(MM, rM, SM, iM) : 0,
-            update: MM => {
-              iM = MM
+            renderable: VV,
+            pipeline: UV,
+            draw: VV => xV ? this.drawSky(VV, eV, YV, xV) : 0,
+            update: VV => {
+              xV = VV
             }
           }
         }
         return {
-          renderable: MM,
-          pipeline: jM,
-          draw: MM => (OM ? OM.execute(MM, rM, SM) : 0) + this.drawList(MM, rM, SM, iM)
+          renderable: VV,
+          pipeline: UV,
+          draw: VV => (JV ? JV.execute(VV, eV, YV) : 0) + this.drawList(VV, eV, YV, xV)
         }
       }
-      drawSky(MM, rM, iM, OM) {
-        const SM = this.lists.skyDraws,
-          jM = SM.length > 0;
-        if (jM) {
-          var aM;
-          const iM = (null !== (aM = rM._depthCompare) && void 0 !== aM ? aM : br).startsWith("greater") ? 0 : 1;
-          MM.setViewport(0, 0, OM.targetWidth, OM.targetHeight, iM, iM)
+      drawSky(VV, eV, xV, JV) {
+        const YV = this.lists.skyDraws,
+          UV = YV.length > 0;
+        if (UV) {
+          var yV;
+          const xV = (null !== (yV = eV._depthCompare) && void 0 !== yV ? yV : Ae).startsWith("greater") ? 0 : 1;
+          VV.setViewport(0, 0, JV.targetWidth, JV.targetHeight, xV, xV)
         }
-        const PM = this.drawList(MM, rM, iM, SM);
-        return jM && MM.setViewport(0, 0, OM.targetWidth, OM.targetHeight, 0, 1), PM
+        const pV = this.drawList(VV, eV, xV, YV);
+        return UV && VV.setViewport(0, 0, JV.targetWidth, JV.targetHeight, 0, 1), pV
       }
-      drawList(MM, rM, iM, OM) {
-        let SM = 0;
-        const jM = this.binder;
-        jM.reset();
-        for (const aM of OM) {
-          const OM = this.pipelineFor(aM, rM, iM);
-          OM && (jM.bind(MM, aM, OM, this.meshSlots.bindGroup, aM.slotOffset), aM.indexBuffer ? MM.drawIndexed(aM.count, aM.instances, aM.first, 0, 0) : MM.draw(aM.count, aM.instances, aM.first, 0), SM++)
+      drawList(VV, eV, xV, JV) {
+        let YV = 0;
+        const UV = this.binder;
+        UV.reset();
+        for (const yV of JV) {
+          const JV = this.pipelineFor(yV, eV, xV);
+          JV && (UV.bind(VV, yV, JV, this.meshSlots.bindGroup, yV.slotOffset), yV.indexBuffer ? VV.drawIndexed(yV.count, yV.instances, yV.first, 0, 0) : VV.draw(yV.count, yV.instances, yV.first, 0), YV++)
         }
-        return SM
+        return YV
       }
-      pipelineFor(MM, rM, iM) {
-        var OM, SM;
-        if (MM.program.failed) return null;
-        const jM = MM.inputs;
-        if (jM.pipeline && jM.pipelineTarget === iM) return jM.pipeline;
-        const aM = `${MM.pipelineKey}|${iM}`,
-          PM = this.pipelines.get(aM);
-        if (void 0 !== PM) return PM && (jM.pipeline = PM, jM.pipelineTarget = iM), PM || null;
-        this.pipelines.set(aM, null);
+      pipelineFor(VV, eV, xV) {
+        var JV, YV;
+        if (VV.program.failed) return null;
+        const UV = VV.inputs;
+        if (UV.pipeline && UV.pipelineTarget === xV) return UV.pipeline;
+        const yV = `${VV.pipelineKey}|${xV}`,
+          pV = this.pipelines.get(yV);
+        if (void 0 !== pV) return pV && (UV.pipeline = pV, UV.pipelineTarget = xV), pV || null;
+        this.pipelines.set(yV, null);
         const {
-          program: nM,
-          layout: QM,
-          state: zM
-        } = MM, LM = {
-          label: `standard-${nM.id}`,
-          layout: nM.pipelineLayout,
+          program: QV,
+          layout: nV,
+          state: wV
+        } = VV, ZV = {
+          label: `standard-${QV.id}`,
+          layout: QV.pipelineLayout,
           vertex: {
-            module: nM.vertex,
+            module: QV.vertex,
             entryPoint: "main",
-            buffers: QM.buffers
+            buffers: nV.buffers
           },
-          fragment: lr({
-            module: nM.fragment,
+          fragment: je({
+            module: QV.fragment,
             entryPoint: "main"
-          }, rM, zM.blend, zM.colourWrite),
-          depthStencil: rM._depthStencilFormat ? {
-            format: rM._depthStencilFormat,
-            depthCompare: null !== (OM = null !== (SM = zM.depthCompare) && void 0 !== SM ? SM : rM._depthCompare) && void 0 !== OM ? OM : br,
-            depthWriteEnabled: zM.depthWrite,
-            depthBias: zM.depthBias,
-            depthBiasSlopeScale: zM.depthBiasSlopeScale
+          }, eV, wV.blend, wV.colourWrite),
+          depthStencil: eV._depthStencilFormat ? {
+            format: eV._depthStencilFormat,
+            depthCompare: null !== (JV = null !== (YV = wV.depthCompare) && void 0 !== YV ? YV : eV._depthCompare) && void 0 !== JV ? JV : Ae,
+            depthWriteEnabled: wV.depthWrite,
+            depthBias: wV.depthBias,
+            depthBiasSlopeScale: wV.depthBiasSlopeScale
           } : void 0,
           multisample: {
-            count: rM._sampleCount
+            count: eV._sampleCount
           },
           primitive: {
-            topology: zM.topology,
-            frontFace: zM.frontFace,
-            cullMode: zM.cullMode
+            topology: wV.topology,
+            frontFace: wV.frontFace,
+            cullMode: wV.cullMode
           }
         };
-        return this.compiling++, this.device.createRenderPipelineAsync(LM).then((MM => {
-          this.compiling--, this.pipelines.set(aM, MM)
-        }), (MM => {
-          this.compiling--, this.reportFailure(nM, aM, MM)
+        return this.compiling++, this.device.createRenderPipelineAsync(ZV).then((VV => {
+          this.compiling--, this.pipelines.set(yV, VV)
+        }), (VV => {
+          this.compiling--, this.reportFailure(QV, yV, VV)
         })), null
       }
-      forEachSunShadowCaster(MM) {
-        const rM = this.caster,
-          iM = (iM, OM, SM) => {
-            const jM = iM.unit && function(MM) {
-              const rM = MM.material.model;
-              return null !== rM && (rM.lifeform || rM.item) && rM.castsSunShadow && "triangle-list" === MM.state.topology
-            }(iM) ? zj(iM.unit) : null;
-            if (!jM) return;
-            const aM = iM.unit.owner;
-            switch (rM.geometry = jM, rM.skip = aM.noSunShadowVertices, rM.indexed = null !== iM.indexBuffer, rM.first = iM.first, rM.count = iM.count, rM.uL = OM, rM.worldAt = SM, rM.instances = null, rM.instanceCount = 1, rM.thin = !1, aj(aM)) {
+      forEachSunShadowCaster(VV) {
+        const eV = this.caster,
+          xV = (xV, JV, YV) => {
+            const UV = xV.unit && function(VV) {
+              const eV = VV.material.model;
+              return null !== eV && (eV.lifeform || eV.item) && eV.castsSunShadow && "triangle-list" === VV.state.topology
+            }(xV) ? QU(xV.unit) : null;
+            if (!UV) return;
+            const yV = xV.unit.owner;
+            switch (eV.geometry = UV, eV.skip = yV.noSunShadowVertices, eV.indexed = null !== xV.indexBuffer, eV.first = xV.first, eV.count = xV.count, eV.cZ = JV, eV.worldAt = YV, eV.instances = null, eV.instanceCount = 1, eV.thin = !1, YU(yV)) {
               case "thin": {
-                const MM = aM._thinInstanceDataStorage.matrixData;
-                if (!MM) return;
-                rM.instances = MM, rM.instanceCount = Math.min(iM.instances, MM.length / 16), rM.thin = !0;
+                const VV = yV._thinInstanceDataStorage.matrixData;
+                if (!VV) return;
+                eV.instances = VV, eV.instanceCount = Math.min(xV.instances, VV.length / 16), eV.thin = !0;
                 break
               }
               case "instanced": {
-                const MM = this.resources.batchUploads.get(aM);
-                if (!MM || MM.frame !== this.frame || !this.writeBatchCasters(MM)) return;
+                const VV = this.resources.batchUploads.get(yV);
+                if (!VV || VV.frame !== this.frame || !this.writeBatchCasters(VV)) return;
                 break
               }
             }
-            MM(rM)
+            VV(eV)
           };
-        for (const OM of this.lists.opaqueDraws) iM(OM, this.meshSlots.data, OM.slotOffset / 4);
-        this.thinBundle.forEachDrawn(iM)
+        for (const JV of this.lists.opaqueDraws) xV(JV, this.meshSlots.data, JV.slotOffset / 4);
+        this.thinBundle.forEachDrawn(xV)
       }
-      writeBatchCasters(MM) {
+      writeBatchCasters(VV) {
         const {
-          caster: rM
-        } = this, iM = MM.packedMatrices, OM = MM.count;
-        rM.instances = iM, rM.instanceCount = OM;
-        let SM = -1;
-        for (let jM = 0; jM < OM; jM++) {
-          const rM = Za(MM.packedRowMesh(jM));
-          rM && SM < 0 ? (this.casterWorlds.length < 16 * OM && (this.casterWorlds = new Float32Array(iM.length)), this.casterWorlds.set(iM.subarray(0, 16 * jM)), SM = jM) : !rM && SM >= 0 && (this.casterWorlds.set(iM.subarray(16 * jM, 16 * jM + 16), 16 * SM), SM++)
+          caster: eV
+        } = this, xV = VV.packedMatrices, JV = VV.count;
+        eV.instances = xV, eV.instanceCount = JV;
+        let YV = -1;
+        for (let UV = 0; UV < JV; UV++) {
+          const eV = Dy(VV.packedRowMesh(UV));
+          eV && YV < 0 ? (this.casterWorlds.length < 16 * JV && (this.casterWorlds = new Float32Array(xV.length)), this.casterWorlds.set(xV.subarray(0, 16 * UV)), YV = UV) : !eV && YV >= 0 && (this.casterWorlds.set(xV.subarray(16 * UV, 16 * UV + 16), 16 * YV), YV++)
         }
-        return SM >= 0 && (rM.instances = this.casterWorlds, rM.instanceCount = SM), rM.instanceCount > 0
+        return YV >= 0 && (eV.instances = this.casterWorlds, eV.instanceCount = YV), eV.instanceCount > 0
       }
-      async reportFailure(MM, rM, iM) {
-        const OM = [];
-        let SM = !0;
-        for (const [jM, aM] of [
-            ["vertex", MM.vertex],
-            ["fragment", MM.fragment]
+      async reportFailure(VV, eV, xV) {
+        const JV = [];
+        let YV = !0;
+        for (const [UV, yV] of [
+            ["vertex", VV.vertex],
+            ["fragment", VV.fragment]
           ]) {
-          const MM = await aM.getCompilationInfo();
-          for (const rM of MM.messages) SM &&= "error" !== rM.type, OM.push(`${jM}:${rM.lineNum}:${rM.linePos} ${rM.type}: ${rM.message}`)
+          const VV = await yV.getCompilationInfo();
+          for (const eV of VV.messages) YV &&= "error" !== eV.type, JV.push(`${UV}:${eV.lineNum}:${eV.linePos} ${eV.type}: ${eV.message}`)
         }
-        if (SM && !MM.packGroup) return this.pipelines.set(rM, !1), console.error(`Lite: pipeline ${rM} failed`, iM), void zr(this.device, "mesh", MM.kind, iM);
-        MM.failed || (MM.failed = !0, console.error(`Lite: program ${MM.id} failed`, iM, OM.join("\n"), {
-          program: MM.program,
-          key: MM.key
-        }), zr(this.device, "mesh", MM.kind, iM, SM ? null : OM[0]))
+        if (YV && !VV.packGroup) return this.pipelines.set(eV, !1), console.error(`Lite: pipeline ${eV} failed`, xV), void we(this.device, "mesh", VV.kind, xV);
+        VV.failed || (VV.failed = !0, console.error(`Lite: program ${VV.id} failed`, xV, JV.join("\n"), {
+          program: VV.program,
+          key: VV.key
+        }), we(this.device, "mesh", VV.kind, xV, YV ? null : JV[0]))
       }
     }
 
-    function Za(MM) {
-      var rM, iM;
-      const OM = null === (rM = MM.xZ) || void 0 === rM || null === (iM = rM.aShaderPackItem) || void 0 === iM ? void 0 : iM.x;
-      return void 0 !== OM && 0 !== (OM & pr.l)
+    function Dy(VV) {
+      var eV, xV;
+      const JV = null === (eV = VV.sC) || void 0 === eV || null === (xV = eV.aShaderPackItem) || void 0 === xV ? void 0 : xV.x;
+      return void 0 !== JV && 0 !== (JV & We.g)
     }
-    var oa = iM(44348),
-      fa = iM(44352),
-      Ya = iM(44354),
-      Na = iM(44311);
-    const Aa = [0, 3, 1, 4, 2, 5];
+    var iy = xV(44592),
+      Cy = xV(44595),
+      ay = xV(44601),
+      oy = xV(44554);
+    const cy = [0, 3, 1, 4, 2, 5];
 
-    function xa(MM, rM, iM, OM, SM) {
-      const jM = iM[0].width;
+    function hy(VV, eV, xV, JV, YV) {
+      const UV = xV[0].width;
       try {
-        return SM ? function(MM, rM, iM) {
-          const OM = (0, Na.c)(MM, iM, iM, 6);
-          for (let SM = 0; SM < 6; SM++)(0, Na.e)(MM, OM, SM, rM[Aa[SM]], {
+        return YV ? function(VV, eV, xV) {
+          const JV = (0, oy.b)(VV, xV, xV, 6);
+          for (let YV = 0; YV < 6; YV++)(0, oy.c)(VV, JV, YV, eV[cy[YV]], {
             invertY: !1
           });
-          return OM.texture
-        }(MM, iM, jM) : function(MM, rM, iM, OM) {
-          const SM = MM.createTexture({
+          return JV.texture
+        }(VV, xV, UV) : function(VV, eV, xV, JV) {
+          const YV = VV.createTexture({
             label: "sink-cube",
             size: {
-              width: iM,
-              height: iM,
+              width: xV,
+              height: xV,
               depthOrArrayLayers: 6
             },
-            format: OM,
+            format: JV,
             usage: GPUTextureUsage.TEXTURE_BINDING | GPUTextureUsage.COPY_DST | GPUTextureUsage.RENDER_ATTACHMENT
           });
-          for (let jM = 0; jM < 6; jM++) MM.queue.copyExternalImageToTexture({
-            source: rM[Aa[jM]]
+          for (let UV = 0; UV < 6; UV++) VV.queue.copyExternalImageToTexture({
+            source: eV[cy[UV]]
           }, {
-            texture: SM,
+            texture: YV,
             origin: {
               x: 0,
               y: 0,
-              z: jM
+              z: UV
             }
           }, {
-            width: iM,
-            height: iM
+            width: xV,
+            height: xV
           });
-          return SM
-        }(rM, iM, jM, 1 === OM ? "r8unorm" : "rgba8unorm")
+          return YV
+        }(eV, xV, UV, 1 === JV ? "r8unorm" : "rgba8unorm")
       } finally {
-        va(iM)
+        ly(xV)
       }
     }
 
-    function va(MM) {
-      for (const rM of null !== MM && void 0 !== MM ? MM : []) null === rM || void 0 === rM || rM.close()
+    function ly(VV) {
+      for (const eV of null !== VV && void 0 !== VV ? VV : []) null === eV || void 0 === eV || eV.close()
     }
-    async function Fa(MM) {
-      const rM = [],
-        iM = [];
-      if (await Promise.all(MM.map(((MM, OM) => (rM[OM] = null, MM.then((MM => {
-          rM[OM] = MM
-        }), (MM => {
-          iM.push(MM)
-        })))))), iM.length > 0) throw va(rM), iM[0];
-      return rM
+    async function Ly(VV) {
+      const eV = [],
+        xV = [];
+      if (await Promise.all(VV.map(((VV, JV) => (eV[JV] = null, VV.then((VV => {
+          eV[JV] = VV
+        }), (VV => {
+          xV.push(VV)
+        })))))), xV.length > 0) throw ly(eV), xV[0];
+      return eV
     }
-    class Ba {
-      constructor(MM) {
-        this.vL = MM, this.starts = [], this.lengths = [], this.used = 0, MM > 0 && (this.starts.push(0), this.lengths.push(MM))
+    class fy {
+      constructor(VV) {
+        this.Jv = VV, this.starts = [], this.lengths = [], this.used = 0, VV > 0 && (this.starts.push(0), this.lengths.push(VV))
       }
-      allocate(MM) {
+      allocate(VV) {
         const {
-          starts: rM,
-          lengths: iM
+          starts: eV,
+          lengths: xV
         } = this;
-        for (let OM = 0; OM < rM.length; OM++) {
-          if (iM[OM] < MM) continue;
-          const SM = rM[OM];
-          return iM[OM] === MM ? (rM.splice(OM, 1), iM.splice(OM, 1)) : (rM[OM] += MM, iM[OM] -= MM), this.used += MM, SM
+        for (let JV = 0; JV < eV.length; JV++) {
+          if (xV[JV] < VV) continue;
+          const YV = eV[JV];
+          return xV[JV] === VV ? (eV.splice(JV, 1), xV.splice(JV, 1)) : (eV[JV] += VV, xV[JV] -= VV), this.used += VV, YV
         }
         return -1
       }
-      free(MM, rM) {
-        this.used -= rM;
-        const iM = Math.min(MM + rM, this.vL);
-        iM > MM && this.release(MM, iM - MM)
+      free(VV, eV) {
+        this.used -= eV;
+        const xV = Math.min(VV + eV, this.Jv);
+        xV > VV && this.release(VV, xV - VV)
       }
-      grow(MM) {
-        const rM = this.vL;
-        this.vL = MM, this.release(rM, MM - rM)
+      grow(VV) {
+        const eV = this.Jv;
+        this.Jv = VV, this.release(eV, VV - eV)
       }
-      truncate(MM) {
+      truncate(VV) {
         const {
-          starts: rM,
-          lengths: iM
+          starts: eV,
+          lengths: xV
         } = this;
-        for (let OM = rM.length - 1; OM >= 0 && rM[OM] + iM[OM] > MM; OM--) rM[OM] >= MM ? (rM.splice(OM, 1), iM.splice(OM, 1)) : iM[OM] = MM - rM[OM];
-        this.vL = MM
+        for (let JV = eV.length - 1; JV >= 0 && eV[JV] + xV[JV] > VV; JV--) eV[JV] >= VV ? (eV.splice(JV, 1), xV.splice(JV, 1)) : xV[JV] = VV - eV[JV];
+        this.Jv = VV
       }
-      release(MM, rM) {
+      release(VV, eV) {
         const {
-          starts: iM,
-          lengths: OM
+          starts: xV,
+          lengths: JV
         } = this;
-        let SM = 0,
-          jM = iM.length;
-        for (; SM < jM;) {
-          const rM = SM + jM >> 1;
-          iM[rM] < MM ? SM = rM + 1 : jM = rM
+        let YV = 0,
+          UV = xV.length;
+        for (; YV < UV;) {
+          const eV = YV + UV >> 1;
+          xV[eV] < VV ? YV = eV + 1 : UV = eV
         }
-        const aM = SM,
-          PM = aM > 0 && iM[aM - 1] + OM[aM - 1] === MM,
-          nM = aM < iM.length && MM + rM === iM[aM];
-        PM && nM ? (OM[aM - 1] += rM + OM[aM], iM.splice(aM, 1), OM.splice(aM, 1)) : PM ? OM[aM - 1] += rM : nM ? (iM[aM] = MM, OM[aM] += rM) : (iM.splice(aM, 0, MM), OM.splice(aM, 0, rM))
+        const yV = YV,
+          pV = yV > 0 && xV[yV - 1] + JV[yV - 1] === VV,
+          QV = yV < xV.length && VV + eV === xV[yV];
+        pV && QV ? (JV[yV - 1] += eV + JV[yV], xV.splice(yV, 1), JV.splice(yV, 1)) : pV ? JV[yV - 1] += eV : QV ? (xV[yV] = VV, JV[yV] += eV) : (xV.splice(yV, 0, VV), JV.splice(yV, 0, eV))
       }
     }
-    const Xa = 256;
-    class Ia {
-      constructor(MM, rM) {
-        let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 16384,
-          OM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1048576;
-        this.device = MM, this.onReplaced = rM, this.mergeGap = iM, this.gpu = null, this.bytes = void 0, this.words = void 0, this.sourceWords = new WeakMap, this.Ld = void 0, this.dirtyStarts = [], this.dirtyEnds = [], this.order = [], this.replaced = [], this.retired = [], this.freed = [], this.holding = !0;
-        const SM = Math.max(Xa, Math.ceil(OM / Xa) * Xa);
-        this.bytes = new Uint8Array(SM), this.words = new Uint32Array(this.bytes.buffer), this.Ld = new Ba(SM / Xa)
+    const my = 256;
+    class Ky {
+      constructor(VV, eV) {
+        let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 16384,
+          JV = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1048576;
+        this.device = VV, this.onReplaced = eV, this.mergeGap = xV, this.gpu = null, this.bytes = void 0, this.words = void 0, this.sourceWords = new WeakMap, this.TE = void 0, this.dirtyStarts = [], this.dirtyEnds = [], this.order = [], this.replaced = [], this.retired = [], this.freed = [], this.holding = !0;
+        const YV = Math.max(my, Math.ceil(JV / my) * my);
+        this.bytes = new Uint8Array(YV), this.words = new Uint32Array(this.bytes.buffer), this.TE = new fy(YV / my)
       }
       get buffer() {
         return this.gpu ??= this.createGpu(this.bytes.byteLength)
       }
-      static slotBytes(MM) {
-        return Math.max(1, Math.ceil(MM / Xa)) * Xa
+      static slotBytes(VV) {
+        return Math.max(1, Math.ceil(VV / my)) * my
       }
-      allocate(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : MM;
-        const OM = Ia.slotBytes(MM),
-          SM = OM / Xa;
-        let jM = this.Ld.allocate(SM);
-        jM < 0 && (this.grow(this.Ld.vL + SM), jM = this.Ld.allocate(SM));
-        const aM = jM * Xa;
-        return this.growTo(aM + Math.max(iM, OM)), this.gpu ??= this.createGpu(this.bytes.byteLength), this.bytes.fill(0, aM, aM + OM), rM && this.bytes.set(new Uint8Array(rM.buffer, rM.byteOffset, Math.min(rM.byteLength, OM)), aM), this.markDirty(aM, aM + OM), aM
+      allocate(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : VV;
+        const JV = Ky.slotBytes(VV),
+          YV = JV / my;
+        let UV = this.TE.allocate(YV);
+        UV < 0 && (this.grow(this.TE.Jv + YV), UV = this.TE.allocate(YV));
+        const yV = UV * my;
+        return this.growTo(yV + Math.max(xV, JV)), this.gpu ??= this.createGpu(this.bytes.byteLength), this.bytes.fill(0, yV, yV + JV), eV && this.bytes.set(new Uint8Array(eV.buffer, eV.byteOffset, Math.min(eV.byteLength, JV)), yV), this.markDirty(yV, yV + JV), yV
       }
-      growTo(MM) {
-        const rM = Math.ceil(MM / Xa);
-        rM > this.Ld.vL && this.grow(rM)
+      growTo(VV) {
+        const eV = Math.ceil(VV / my);
+        eV > this.TE.Jv && this.grow(eV)
       }
-      free(MM, rM) {
-        this.freed.push(MM, rM)
+      free(VV, eV) {
+        this.freed.push(VV, eV)
       }
-      write(MM, rM, iM, OM) {
-        let SM = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        if (OM <= 0) return;
-        OM <= 1024 && 0 === (3 & (MM | iM | OM)) ? this.copyWords(MM >> 2, rM.buffer, iM >> 2, OM >> 2) : this.bytes.set(new Uint8Array(rM.buffer, iM, OM), MM);
-        let jM = MM + OM;
-        if (SM) {
-          const rM = MM + 4 * Math.ceil(OM / 4);
-          this.bytes.fill(0, jM, rM), jM = rM
+      write(VV, eV, xV, JV) {
+        let YV = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        if (JV <= 0) return;
+        JV <= 1024 && 0 === (3 & (VV | xV | JV)) ? this.copyWords(VV >> 2, eV.buffer, xV >> 2, JV >> 2) : this.bytes.set(new Uint8Array(eV.buffer, xV, JV), VV);
+        let UV = VV + JV;
+        if (YV) {
+          const eV = VV + 4 * Math.ceil(JV / 4);
+          this.bytes.fill(0, UV, eV), UV = eV
         }
-        this.markDirty(MM, jM)
+        this.markDirty(VV, UV)
       }
-      copyWords(MM, rM, iM, OM) {
-        let SM = this.sourceWords.get(rM);
-        SM || (SM = new Uint32Array(rM, 0, rM.byteLength >> 2), this.sourceWords.set(rM, SM));
-        const jM = this.words;
-        for (let aM = 0; aM < OM; aM++) jM[MM + aM] = SM[iM + aM]
+      copyWords(VV, eV, xV, JV) {
+        let YV = this.sourceWords.get(eV);
+        YV || (YV = new Uint32Array(eV, 0, eV.byteLength >> 2), this.sourceWords.set(eV, YV));
+        const UV = this.words;
+        for (let yV = 0; yV < JV; yV++) UV[VV + yV] = YV[xV + yV]
       }
-      move(MM, rM, iM) {
-        this.bytes.copyWithin(rM, MM, MM + iM), this.markDirty(rM, rM + iM)
+      move(VV, eV, xV) {
+        this.bytes.copyWithin(eV, VV, VV + xV), this.markDirty(eV, eV + xV)
       }
       flush() {
-        for (const rM of this.retired) this.onReplaced(rM), rM.destroy();
+        for (const eV of this.retired) this.onReplaced(eV), eV.destroy();
         this.retired.length = 0;
-        const MM = this.dirtyStarts.length;
-        if (MM > 0) {
+        const VV = this.dirtyStarts.length;
+        if (VV > 0) {
           const {
-            dirtyStarts: rM,
-            dirtyEnds: iM,
-            order: OM
+            dirtyStarts: eV,
+            dirtyEnds: xV,
+            order: JV
           } = this;
-          OM.length = MM;
-          for (let PM = 0; PM < MM; PM++) OM[PM] = PM;
-          MM > 1 && OM.sort(((MM, iM) => rM[MM] - rM[iM]));
-          const SM = this.mergeGap;
-          let jM = rM[OM[0]],
-            aM = iM[OM[0]];
-          for (let PM = 1; PM < MM; PM++) {
-            const MM = OM[PM];
-            rM[MM] - aM <= SM ? aM = Math.max(aM, iM[MM]) : (this.send(jM, aM), jM = rM[MM], aM = iM[MM])
+          JV.length = VV;
+          for (let pV = 0; pV < VV; pV++) JV[pV] = pV;
+          VV > 1 && JV.sort(((VV, xV) => eV[VV] - eV[xV]));
+          const YV = this.mergeGap;
+          let UV = eV[JV[0]],
+            yV = xV[JV[0]];
+          for (let pV = 1; pV < VV; pV++) {
+            const VV = JV[pV];
+            eV[VV] - yV <= YV ? yV = Math.max(yV, xV[VV]) : (this.send(UV, yV), UV = eV[VV], yV = xV[VV])
           }
-          this.send(jM, aM), rM.length = 0, iM.length = 0
+          this.send(UV, yV), eV.length = 0, xV.length = 0
         }
         this.holding = !1
       }
-      EL() {
+      GZ() {
         this.holding = !0, this.retired.push(...this.replaced), this.replaced.length = 0;
-        const MM = this.freed;
-        for (let rM = 0; rM < MM.length; rM += 2) this.Ld.free(MM[rM] / Xa, MM[rM + 1] / Xa);
-        MM.length = 0
+        const VV = this.freed;
+        for (let eV = 0; eV < VV.length; eV += 2) this.TE.free(VV[eV] / my, VV[eV + 1] / my);
+        VV.length = 0
       }
-      send(MM, rM) {
-        this.device.queue.writeBuffer(this.gpu, MM, this.bytes.buffer, MM, rM - MM);
-        for (const iM of this.replaced) {
-          const OM = Math.min(rM, iM.size);
-          OM > MM && this.device.queue.writeBuffer(iM, MM, this.bytes.buffer, MM, OM - MM)
+      send(VV, eV) {
+        this.device.queue.writeBuffer(this.gpu, VV, this.bytes.buffer, VV, eV - VV);
+        for (const xV of this.replaced) {
+          const JV = Math.min(eV, xV.size);
+          JV > VV && this.device.queue.writeBuffer(xV, VV, this.bytes.buffer, VV, JV - VV)
         }
       }
-      markDirty(MM, rM) {
-        MM &= -4, rM = rM + 3 & -4, this.holding ? (this.dirtyStarts.push(MM), this.dirtyEnds.push(rM)) : this.send(MM, rM)
+      markDirty(VV, eV) {
+        VV &= -4, eV = eV + 3 & -4, this.holding ? (this.dirtyStarts.push(VV), this.dirtyEnds.push(eV)) : this.send(VV, eV)
       }
-      grow(MM) {
-        const rM = this.Ld.vL,
-          iM = Math.max(2 * rM, MM),
-          OM = new Uint8Array(iM * Xa);
-        OM.set(this.bytes);
-        const SM = this.gpu;
-        this.gpu = this.createGpu(OM.byteLength), this.bytes = OM, this.words = new Uint32Array(OM.buffer), this.Ld.grow(iM), SM && (this.replaced.push(SM), this.onReplaced(SM)), this.dirtyStarts.length = 0, this.dirtyEnds.length = 0, this.markDirty(0, rM * Xa)
+      grow(VV) {
+        const eV = this.TE.Jv,
+          xV = Math.max(2 * eV, VV),
+          JV = new Uint8Array(xV * my);
+        JV.set(this.bytes);
+        const YV = this.gpu;
+        this.gpu = this.createGpu(JV.byteLength), this.bytes = JV, this.words = new Uint32Array(JV.buffer), this.TE.grow(xV), YV && (this.replaced.push(YV), this.onReplaced(YV)), this.dirtyStarts.length = 0, this.dirtyEnds.length = 0, this.markDirty(0, eV * my)
       }
-      createGpu(MM) {
+      createGpu(VV) {
         return this.device.createBuffer({
           label: "sink-dynamic-arena",
-          size: MM,
+          size: VV,
           usage: GPUBufferUsage.VERTEX | GPUBufferUsage.COPY_DST
         })
       }
     }
 
-    function Ka(MM) {
-      return Array.isArray(MM) ? new Float32Array(MM) : MM
+    function Hy(VV) {
+      return Array.isArray(VV) ? new Float32Array(VV) : VV
     }
 
-    function qa(MM, rM, iM, OM, SM) {
-      const jM = XM(SM),
-        aM = Math.min(SM, OM.byteLength);
-      if (jM === aM && OM.byteOffset % 4 === 0) return void MM.queue.writeBuffer(rM, iM, OM.buffer, OM.byteOffset, jM);
-      const PM = new Uint8Array(jM);
-      PM.set(new Uint8Array(OM.buffer, OM.byteOffset, aM)), MM.queue.writeBuffer(rM, iM, PM)
+    function uy(VV, eV, xV, JV, YV) {
+      const UV = HV(YV),
+        yV = Math.min(YV, JV.byteLength);
+      if (UV === yV && JV.byteOffset % 4 === 0) return void VV.queue.writeBuffer(eV, xV, JV.buffer, JV.byteOffset, UV);
+      const pV = new Uint8Array(UV);
+      pV.set(new Uint8Array(JV.buffer, JV.byteOffset, yV)), VV.queue.writeBuffer(eV, xV, pV)
     }
 
-    function Ta(MM, rM, iM) {
-      const OM = "linear",
-        SM = "nearest";
-      let jM = SM,
-        aM = SM,
-        PM = "nearest",
-        nM = !rM;
-      switch (MM) {
+    function sy(VV, eV, xV) {
+      const JV = "linear",
+        YV = "nearest";
+      let UV = YV,
+        yV = YV,
+        pV = "nearest",
+        QV = !eV;
+      switch (VV) {
         case 11:
-          jM = OM, aM = OM;
+          UV = JV, yV = JV;
           break;
         case 3:
-          jM = OM, aM = OM, PM = rM ? "linear" : "nearest";
+          UV = JV, yV = JV, pV = eV ? "linear" : "nearest";
           break;
         case 8:
-          PM = rM ? "linear" : "nearest";
+          pV = eV ? "linear" : "nearest";
           break;
         case 4:
           break;
         case 5:
-          aM = OM;
+          yV = JV;
           break;
         case 6:
-          aM = OM, PM = rM ? "linear" : "nearest";
+          yV = JV, pV = eV ? "linear" : "nearest";
           break;
         case 7:
-          aM = OM, nM = !0;
+          yV = JV, QV = !0;
           break;
         case 9:
-          jM = OM;
+          UV = JV;
           break;
         case 10:
-          jM = OM, PM = rM ? "linear" : "nearest";
+          UV = JV, pV = eV ? "linear" : "nearest";
           break;
         case 2:
-          jM = OM, aM = OM, iM > 1 ? (PM = "linear", nM = !1) : nM = !0;
+          UV = JV, yV = JV, xV > 1 ? (pV = "linear", QV = !1) : QV = !0;
           break;
         case 12:
-          jM = OM, nM = !0;
+          UV = JV, QV = !0;
           break;
         default:
-          nM = !0
+          QV = !0
       }
-      return iM > 1 && !nM ? {
-        magFilter: OM,
-        minFilter: OM,
+      return xV > 1 && !QV ? {
+        magFilter: JV,
+        minFilter: JV,
         mipmapFilter: "linear",
-        maxAnisotropy: iM
+        maxAnisotropy: xV
       } : {
-        magFilter: jM,
-        minFilter: aM,
-        mipmapFilter: PM,
-        ...nM ? {
+        magFilter: UV,
+        minFilter: yV,
+        mipmapFilter: pV,
+        ...QV ? {
           lodMinClamp: 0,
           lodMaxClamp: 0
         } : {}
       }
     }
 
-    function Va(MM) {
-      return 0 === MM ? "clamp-to-edge" : 2 === MM ? "mirror-repeat" : "repeat"
+    function Sy(VV) {
+      return 0 === VV ? "clamp-to-edge" : 2 === VV ? "mirror-repeat" : "repeat"
     }
-    class ca {
-      constructor(MM, rM) {
+    class Iy {
+      constructor(VV, eV) {
         let {
-          vertexArena: iM = !0
+          vertexArena: xV = !0
         } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        this.engine = MM, this.device = rM, this.buffers = new WeakMap, this.o9 = new WeakMap, this.batchUploads = new WeakMap, this.textures = new Map, this.samplers = new Map, this.atlasBindings = new WeakMap, this.atlasSources = new WeakMap, this.atlasRebuilds = new WeakSet, this.rebindWaiters = [], this.epoch = 0, this.liveUploads = new Set, this.gpuBuffersVersion = 0, this.onDestroy = null, this.pending = 0, this.firstBindDecodes = 0, this.arena = void 0, this.arena = iM ? this.createArena() : null
+        this.engine = VV, this.device = eV, this.buffers = new WeakMap, this.MVV = new WeakMap, this.batchUploads = new WeakMap, this.textures = new Map, this.samplers = new Map, this.atlasBindings = new WeakMap, this.atlasSources = new WeakMap, this.atlasRebuilds = new WeakSet, this.rebindWaiters = [], this.epoch = 0, this.liveUploads = new Set, this.gpuBuffersVersion = 0, this.onDestroy = null, this.pending = 0, this.firstBindDecodes = 0, this.arena = void 0, this.arena = xV ? this.createArena() : null
       }
       createArena() {
-        return new Ia(this.device, (MM => {
-          var rM;
-          null === (rM = this.onDestroy) || void 0 === rM || rM.call(this, MM), this.gpuBuffersVersion++
+        return new Ky(this.device, (VV => {
+          var eV;
+          null === (eV = this.onDestroy) || void 0 === eV || eV.call(this, VV), this.gpuBuffersVersion++
         }))
       }
-      rebind(MM, rM) {
-        this.engine = MM, this.device = rM, this.epoch++, this.buffers = new WeakMap, this.textures.clear(), this.samplers.clear(), this.atlasBindings = new WeakMap, this.atlasRebuilds = new WeakSet, this.arena &&= this.createArena(), this.pending = 0, this.gpuBuffersVersion++;
-        for (const iM of this.liveUploads) iM.rebind();
-        for (const iM of this.rebindWaiters.splice(0)) iM()
+      rebind(VV, eV) {
+        this.engine = VV, this.device = eV, this.epoch++, this.buffers = new WeakMap, this.textures.clear(), this.samplers.clear(), this.atlasBindings = new WeakMap, this.atlasRebuilds = new WeakSet, this.arena &&= this.createArena(), this.pending = 0, this.gpuBuffersVersion++;
+        for (const xV of this.liveUploads) xV.rebind();
+        for (const xV of this.rebindWaiters.splice(0)) xV()
       }
       flushUploads() {
-        var MM;
-        null === (MM = this.arena) || void 0 === MM || MM.flush()
+        var VV;
+        null === (VV = this.arena) || void 0 === VV || VV.flush()
       }
       endUploadFrame() {
-        var MM;
-        null === (MM = this.arena) || void 0 === MM || MM.EL()
+        var VV;
+        null === (VV = this.arena) || void 0 === VV || VV.GZ()
       }
-      vertexBufferCreated(MM, rM, iM) {
-        let OM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : iM ? "sink-dynamic-vertices" : "sink-vertices";
-        this.bufferDeleted(MM);
-        const SM = Ka(rM);
-        MM.vL = SM.byteLength, this.buffers.set(MM, {
+      vertexBufferCreated(VV, eV, xV) {
+        let JV = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : xV ? "sink-dynamic-vertices" : "sink-vertices";
+        this.bufferDeleted(VV);
+        const YV = Hy(eV);
+        VV.Jv = YV.byteLength, this.buffers.set(VV, {
           gpu: null,
           slot: -1,
           slotBytes: 0,
           size: 0,
-          arena: iM && null !== this.arena,
-          pending: SM,
+          arena: xV && null !== this.arena,
+          pending: YV,
           ownsPending: !1,
           usage: GPUBufferUsage.VERTEX | GPUBufferUsage.COPY_DST | GPUBufferUsage.COPY_SRC,
-          label: OM
+          label: JV
         })
       }
-      vertexBufferUpdated(MM, rM) {
-        let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          OM = arguments.length > 3 ? arguments[3] : void 0;
-        const SM = this.buffers.get(MM);
-        if (!SM) return;
-        const jM = Ka(rM),
-          aM = void 0 === OM ? jM.byteLength : Math.min(OM, jM.byteLength);
-        this.update(SM, jM, iM, aM)
+      vertexBufferUpdated(VV, eV) {
+        let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          JV = arguments.length > 3 ? arguments[3] : void 0;
+        const YV = this.buffers.get(VV);
+        if (!YV) return;
+        const UV = Hy(eV),
+          yV = void 0 === JV ? UV.byteLength : Math.min(JV, UV.byteLength);
+        this.update(YV, UV, xV, yV)
       }
-      vertexBufferFloatsUpdated(MM, rM, iM, OM) {
-        const SM = this.buffers.get(MM);
-        if (!SM) return;
-        const jM = iM * Float32Array.BYTES_PER_ELEMENT,
-          aM = (OM - iM) * Float32Array.BYTES_PER_ELEMENT;
-        SM.slot >= 0 && aM > 0 && jM + aM <= SM.size ? this.writeSlot(SM, jM, rM, rM.byteOffset + jM, aM, !1) : SM.gpu && aM > 0 && jM + aM <= SM.gpu.size ? this.device.queue.writeBuffer(SM.gpu, jM, rM.buffer, rM.byteOffset + jM, aM) : this.update(SM, rM.subarray(iM, OM), jM, aM)
+      vertexBufferFloatsUpdated(VV, eV, xV, JV) {
+        const YV = this.buffers.get(VV);
+        if (!YV) return;
+        const UV = xV * Float32Array.BYTES_PER_ELEMENT,
+          yV = (JV - xV) * Float32Array.BYTES_PER_ELEMENT;
+        YV.slot >= 0 && yV > 0 && UV + yV <= YV.size ? this.writeSlot(YV, UV, eV, eV.byteOffset + UV, yV, !1) : YV.gpu && yV > 0 && UV + yV <= YV.gpu.size ? this.device.queue.writeBuffer(YV.gpu, UV, eV.buffer, eV.byteOffset + UV, yV) : this.update(YV, eV.subarray(xV, JV), UV, yV)
       }
-      indexBufferCreated(MM, rM) {
-        let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "sink-indices";
-        this.bufferDeleted(MM);
-        const OM = function(MM) {
-          if (MM instanceof Uint16Array || MM instanceof Uint32Array) return MM;
-          for (let rM = 0; rM < MM.length; rM++)
-            if (MM[rM] >= 65535) return new Uint32Array(MM);
-          return new Uint16Array(MM)
-        }(rM);
-        MM.is32Bits = 4 === OM.BYTES_PER_ELEMENT, MM.vL = OM.byteLength, this.buffers.set(MM, {
+      indexBufferCreated(VV, eV) {
+        let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "sink-indices";
+        this.bufferDeleted(VV);
+        const JV = function(VV) {
+          if (VV instanceof Uint16Array || VV instanceof Uint32Array) return VV;
+          for (let eV = 0; eV < VV.length; eV++)
+            if (VV[eV] >= 65535) return new Uint32Array(VV);
+          return new Uint16Array(VV)
+        }(eV);
+        VV.is32Bits = 4 === JV.BYTES_PER_ELEMENT, VV.Jv = JV.byteLength, this.buffers.set(VV, {
           gpu: null,
           slot: -1,
           slotBytes: 0,
           size: 0,
           arena: !1,
-          pending: OM,
-          ownsPending: OM !== rM,
+          pending: JV,
+          ownsPending: JV !== eV,
           usage: GPUBufferUsage.INDEX | GPUBufferUsage.COPY_DST | GPUBufferUsage.COPY_SRC,
-          label: iM
+          label: xV
         })
       }
-      bufferDeleted(MM) {
-        const rM = this.buffers.get(MM);
-        null !== rM && void 0 !== rM && rM.gpu ? (this.destroyBuffer(rM.gpu), this.gpuBuffersVersion++) : rM && rM.slot >= 0 && (this.arena.free(rM.slot, rM.slotBytes), this.gpuBuffersVersion++), this.buffers.delete(MM)
+      bufferDeleted(VV) {
+        const eV = this.buffers.get(VV);
+        null !== eV && void 0 !== eV && eV.gpu ? (this.destroyBuffer(eV.gpu), this.gpuBuffersVersion++) : eV && eV.slot >= 0 && (this.arena.free(eV.slot, eV.slotBytes), this.gpuBuffersVersion++), this.buffers.delete(VV)
       }
-      update(MM, rM, iM, OM) {
-        if (MM.slot >= 0) this.updateSlot(MM, rM, iM, OM);
-        else if (MM.gpu) {
-          if (iM + XM(OM) > MM.gpu.size) {
-            const rM = this.device.createBuffer({
-                label: MM.label,
-                size: XM(Math.max(2 * MM.gpu.size, iM + OM)),
-                usage: MM.usage | GPUBufferUsage.COPY_SRC
+      update(VV, eV, xV, JV) {
+        if (VV.slot >= 0) this.updateSlot(VV, eV, xV, JV);
+        else if (VV.gpu) {
+          if (xV + HV(JV) > VV.gpu.size) {
+            const eV = this.device.createBuffer({
+                label: VV.label,
+                size: HV(Math.max(2 * VV.gpu.size, xV + JV)),
+                usage: VV.usage | GPUBufferUsage.COPY_SRC
               }),
-              SM = this.device.createCommandEncoder();
-            SM.copyBufferToBuffer(MM.gpu, 0, rM, 0, MM.gpu.size), this.device.queue.submit([SM.finish()]), this.destroyBuffer(MM.gpu), this.gpuBuffersVersion++, MM.gpu = rM
+              YV = this.device.createCommandEncoder();
+            YV.copyBufferToBuffer(VV.gpu, 0, eV, 0, VV.gpu.size), this.device.queue.submit([YV.finish()]), this.destroyBuffer(VV.gpu), this.gpuBuffersVersion++, VV.gpu = eV
           }
-          qa(this.device, MM.gpu, iM, rM, OM)
+          uy(this.device, VV.gpu, xV, eV, JV)
         } else {
-          const jM = new Uint8Array(rM.buffer, rM.byteOffset, OM),
-            aM = MM.pending;
-          if (aM && MM.ownsPending && iM + OM <= aM.byteLength) new Uint8Array(aM.buffer, aM.byteOffset, aM.byteLength).set(jM, iM);
-          else if (aM && 0 === iM && OM === aM.byteLength && rM.byteLength === OM) MM.pending = rM, MM.ownsPending = !1;
+          const UV = new Uint8Array(eV.buffer, eV.byteOffset, JV),
+            yV = VV.pending;
+          if (yV && VV.ownsPending && xV + JV <= yV.byteLength) new Uint8Array(yV.buffer, yV.byteOffset, yV.byteLength).set(UV, xV);
+          else if (yV && 0 === xV && JV === yV.byteLength && eV.byteLength === JV) VV.pending = eV, VV.ownsPending = !1;
           else {
-            var SM;
-            const rM = new Uint8Array(Math.max(null !== (SM = null === aM || void 0 === aM ? void 0 : aM.byteLength) && void 0 !== SM ? SM : 0, iM + OM));
-            aM && rM.set(new Uint8Array(aM.buffer, aM.byteOffset, aM.byteLength)), rM.set(jM, iM), MM.pending = rM, MM.ownsPending = !0
+            var YV;
+            const eV = new Uint8Array(Math.max(null !== (YV = null === yV || void 0 === yV ? void 0 : yV.byteLength) && void 0 !== YV ? YV : 0, xV + JV));
+            yV && eV.set(new Uint8Array(yV.buffer, yV.byteOffset, yV.byteLength)), eV.set(UV, xV), VV.pending = eV, VV.ownsPending = !0
           }
         }
       }
-      updateSlot(MM, rM, iM, OM) {
-        const SM = this.arena;
-        iM + XM(OM) > MM.size && (MM.size = XM(Math.max(2 * MM.size, iM + OM)), SM.growTo(MM.slot + MM.size), this.gpuBuffersVersion++), 0 === OM ? this.writeSlot(MM, iM, rP, 0, 4, !1) : this.writeSlot(MM, iM, rM, rM.byteOffset, OM, !0)
+      updateSlot(VV, eV, xV, JV) {
+        const YV = this.arena;
+        xV + HV(JV) > VV.size && (VV.size = HV(Math.max(2 * VV.size, xV + JV)), YV.growTo(VV.slot + VV.size), this.gpuBuffersVersion++), 0 === JV ? this.writeSlot(VV, xV, Oy, 0, 4, !1) : this.writeSlot(VV, xV, eV, eV.byteOffset, JV, !0)
       }
-      writeSlot(MM, rM, iM, OM, SM, jM) {
-        const aM = rM + (jM ? XM(SM) : SM);
-        aM > MM.slotBytes && this.moveSlot(MM, aM), this.arena.write(MM.slot + rM, iM, OM, SM, jM)
+      writeSlot(VV, eV, xV, JV, YV, UV) {
+        const yV = eV + (UV ? HV(YV) : YV);
+        yV > VV.slotBytes && this.moveSlot(VV, yV), this.arena.write(VV.slot + eV, xV, JV, YV, UV)
       }
-      moveSlot(MM, rM) {
-        const iM = this.arena,
-          OM = Ia.slotBytes(Math.max(rM, Math.min(2 * MM.slotBytes, MM.size))),
-          SM = iM.allocate(OM, null, MM.size);
-        iM.move(MM.slot, SM, MM.slotBytes), iM.free(MM.slot, MM.slotBytes), MM.slot = SM, MM.slotBytes = OM, this.gpuBuffersVersion++
+      moveSlot(VV, eV) {
+        const xV = this.arena,
+          JV = Ky.slotBytes(Math.max(eV, Math.min(2 * VV.slotBytes, VV.size))),
+          YV = xV.allocate(JV, null, VV.size);
+        xV.move(VV.slot, YV, VV.slotBytes), xV.free(VV.slot, VV.slotBytes), VV.slot = YV, VV.slotBytes = JV, this.gpuBuffersVersion++
       }
-      cover(MM, rM) {
-        const iM = this.buffers.get(MM);
-        if (!iM || iM.slot < 0) return !1;
-        const OM = Math.min(rM, iM.size);
-        return !(OM <= iM.slotBytes) && (this.moveSlot(iM, OM), !0)
+      cover(VV, eV) {
+        const xV = this.buffers.get(VV);
+        if (!xV || xV.slot < 0) return !1;
+        const JV = Math.min(eV, xV.size);
+        return !(JV <= xV.slotBytes) && (this.moveSlot(xV, JV), !0)
       }
-      destroyBuffer(MM) {
-        var rM;
-        null === (rM = this.onDestroy) || void 0 === rM || rM.call(this, MM), MM.destroy()
+      destroyBuffer(VV) {
+        var eV;
+        null === (eV = this.onDestroy) || void 0 === eV || eV.call(this, VV), VV.destroy()
       }
-      gpuBuffer(MM) {
-        const rM = this.buffers.get(MM);
-        if (!rM) return null;
-        if (rM.slot >= 0) return this.arena.buffer;
-        if (rM.arena && rM.pending) {
-          const MM = rM.pending,
-            iM = this.arena;
-          return rM.size = XM(MM.byteLength), rM.slotBytes = Ia.slotBytes(function(MM) {
-            const rM = new Uint8Array(MM.buffer, MM.byteOffset, MM.byteLength);
-            let iM = rM.length;
-            if (MM.byteOffset % 4 === 0) {
-              for (; iM % 4 !== 0 && 0 === rM[iM - 1];) iM--;
-              if (iM % 4 === 0) {
-                const rM = new Uint32Array(MM.buffer, MM.byteOffset, iM / 4);
-                let OM = rM.length;
-                for (; OM > 0 && 0 === rM[OM - 1];) OM--;
-                iM = 4 * OM
+      gpuBuffer(VV) {
+        const eV = this.buffers.get(VV);
+        if (!eV) return null;
+        if (eV.slot >= 0) return this.arena.buffer;
+        if (eV.arena && eV.pending) {
+          const VV = eV.pending,
+            xV = this.arena;
+          return eV.size = HV(VV.byteLength), eV.slotBytes = Ky.slotBytes(function(VV) {
+            const eV = new Uint8Array(VV.buffer, VV.byteOffset, VV.byteLength);
+            let xV = eV.length;
+            if (VV.byteOffset % 4 === 0) {
+              for (; xV % 4 !== 0 && 0 === eV[xV - 1];) xV--;
+              if (xV % 4 === 0) {
+                const eV = new Uint32Array(VV.buffer, VV.byteOffset, xV / 4);
+                let JV = eV.length;
+                for (; JV > 0 && 0 === eV[JV - 1];) JV--;
+                xV = 4 * JV
               }
             }
-            for (; iM > 0 && 0 === rM[iM - 1];) iM--;
-            return iM
-          }(MM)), rM.slot = iM.allocate(rM.slotBytes, MM, rM.size), rM.pending = null, iM.buffer
+            for (; xV > 0 && 0 === eV[xV - 1];) xV--;
+            return xV
+          }(VV)), eV.slot = xV.allocate(eV.slotBytes, VV, eV.size), eV.pending = null, xV.buffer
         }
-        if (!rM.gpu && rM.pending) {
-          const MM = rM.pending;
-          rM.gpu = this.device.createBuffer({
-            label: rM.label,
-            size: XM(MM.byteLength),
-            usage: rM.usage
-          }), qa(this.device, rM.gpu, 0, MM, MM.byteLength), rM.pending = null
+        if (!eV.gpu && eV.pending) {
+          const VV = eV.pending;
+          eV.gpu = this.device.createBuffer({
+            label: eV.label,
+            size: HV(VV.byteLength),
+            usage: eV.usage
+          }), uy(this.device, eV.gpu, 0, VV, VV.byteLength), eV.pending = null
         }
-        return rM.gpu
+        return eV.gpu
       }
-      gpuOffset(MM) {
-        var rM, iM;
-        const OM = null !== (rM = null === (iM = this.buffers.get(MM)) || void 0 === iM ? void 0 : iM.slot) && void 0 !== rM ? rM : -1;
-        return OM < 0 ? 0 : OM
+      gpuOffset(VV) {
+        var eV, xV;
+        const JV = null !== (eV = null === (xV = this.buffers.get(VV)) || void 0 === xV ? void 0 : xV.slot) && void 0 !== eV ? eV : -1;
+        return JV < 0 ? 0 : JV
       }
-      gpuEnd(MM) {
-        var rM, iM;
-        const OM = this.buffers.get(MM);
-        return OM ? OM.slot >= 0 ? OM.slot + OM.size : null !== (rM = null === (iM = OM.gpu) || void 0 === iM ? void 0 : iM.size) && void 0 !== rM ? rM : 0 : 0
+      gpuEnd(VV) {
+        var eV, xV;
+        const JV = this.buffers.get(VV);
+        return JV ? JV.slot >= 0 ? JV.slot + JV.size : null !== (eV = null === (xV = JV.gpu) || void 0 === xV ? void 0 : xV.size) && void 0 !== eV ? eV : 0 : 0
       }
-      vertexInput(MM, rM, iM) {
-        var OM, SM, jM, aM;
-        return null !== (OM = null !== (SM = iM && this.modelInput(iM, rM)) && void 0 !== SM ? SM : null === (jM = null !== (aM = this.o9.get(MM)) && void 0 !== aM ? aM : this.batchUploads.get(MM)) || void 0 === jM ? void 0 : jM.inputs[rM]) && void 0 !== OM ? OM : null
+      vertexInput(VV, eV, xV) {
+        var JV, YV, UV, yV;
+        return null !== (JV = null !== (YV = xV && this.modelInput(xV, eV)) && void 0 !== YV ? YV : null === (UV = null !== (yV = this.MVV.get(VV)) && void 0 !== yV ? yV : this.batchUploads.get(VV)) || void 0 === UV ? void 0 : UV.inputs[eV]) && void 0 !== JV ? JV : null
       }
-      modelInput(MM, rM) {
-        const iM = this.geometrySlot(MM);
-        let OM = iM.inputs.get(rM);
-        if (void 0 === OM) {
-          const SM = MM.vertexAttributes.find((MM => MM.kind === rM));
-          OM = SM ? new hr(this.modelKey(iM, SM.data, !1), SM.offset, SM.stride, SM.components, !1, SM.glType, SM.isNormalized) : null, iM.inputs.set(rM, OM)
+      modelInput(VV, eV) {
+        const xV = this.geometrySlot(VV);
+        let JV = xV.inputs.get(eV);
+        if (void 0 === JV) {
+          const YV = VV.vertexAttributes.find((VV => VV.kind === eV));
+          JV = YV ? new ke(this.modelKey(xV, YV.data, !1), YV.offset, YV.stride, YV.components, !1, YV.glType, YV.isNormalized) : null, xV.inputs.set(eV, JV)
         }
-        return OM
+        return JV
       }
-      modelIndex(MM) {
-        return MM.indexData && this.modelKey(this.geometrySlot(MM), MM.indexData, !0)
+      modelIndex(VV) {
+        return VV.indexData && this.modelKey(this.geometrySlot(VV), VV.indexData, !0)
       }
-      geometrySlot(MM) {
-        var rM;
-        let iM = MM.gpu[gM.e.lite];
-        if ((null === (rM = iM) || void 0 === rM ? void 0 : rM.epoch) !== this.epoch) {
-          const rM = new Map,
-            OM = () => {
-              for (const MM of rM.values()) this.bufferDeleted(MM)
+      geometrySlot(VV) {
+        var eV;
+        let xV = VV.gpu[MV.f.lite];
+        if ((null === (eV = xV) || void 0 === eV ? void 0 : eV.epoch) !== this.epoch) {
+          const eV = new Map,
+            JV = () => {
+              for (const VV of eV.values()) this.bufferDeleted(VV)
             },
-            SM = MM => {
-              const iM = rM.get(MM);
-              iM && this.vertexBufferUpdated(iM, MM)
+            YV = VV => {
+              const xV = eV.get(VV);
+              xV && this.vertexBufferUpdated(xV, VV)
             };
-          iM = {
-            keys: rM,
+          xV = {
+            keys: eV,
             inputs: new Map,
-            release: OM,
-            updated: SM,
+            release: JV,
+            updated: YV,
             epoch: this.epoch
-          }, MM.gpu[gM.e.lite] = iM
+          }, VV.gpu[MV.f.lite] = xV
         }
-        return iM
+        return xV
       }
-      modelKey(MM, rM, iM) {
-        let OM = MM.keys.get(rM);
-        if (!OM) {
-          if (iM) {
-            const MM = {
-              vL: 0,
+      modelKey(VV, eV, xV) {
+        let JV = VV.keys.get(eV);
+        if (!JV) {
+          if (xV) {
+            const VV = {
+              Jv: 0,
               is32Bits: !1
             };
-            this.indexBufferCreated(MM, rM, "model-indices"), OM = MM
-          } else OM = {
-            vL: 0
-          }, this.vertexBufferCreated(OM, rM, !1, "model-vertices");
-          MM.keys.set(rM, OM)
+            this.indexBufferCreated(VV, eV, "model-indices"), JV = VV
+          } else JV = {
+            Jv: 0
+          }, this.vertexBufferCreated(JV, eV, !1, "model-vertices");
+          VV.keys.set(eV, JV)
         }
-        return OM
+        return JV
       }
-      indexFormat(MM) {
-        return MM.is32Bits ? "uint32" : "uint16"
+      indexFormat(VV) {
+        return VV.is32Bits ? "uint32" : "uint16"
       }
       get texturesLoading() {
         return this.pending
       }
-      releaseSlot(MM, rM) {
-        --MM.refs > 0 || (this.releaseTexture(MM), va(MM.images), null !== rM && this.textures.delete(rM))
+      releaseSlot(VV, eV) {
+        --VV.refs > 0 || (this.releaseTexture(VV), ly(VV.images), null !== eV && this.textures.delete(eV))
       }
-      load(MM, rM) {
+      load(VV, eV) {
         const {
-          epoch: iM
-        } = this, OM = rM.decoded = async function(MM) {
-          if ("cube" === MM.kind) return async function(MM) {
-            if (6 !== MM.length) throw new Error(`${MM.length} files where six faces were expected`);
-            const rM = await Fa(MM.map((MM => cM(MM)))),
-              iM = rM[0].width;
-            return Fa(rM.map((async MM => {
-              if (MM.width === iM && MM.height === iM) return MM;
+          epoch: xV
+        } = this, JV = eV.decoded = async function(VV) {
+          if ("cube" === VV.kind) return async function(VV) {
+            if (6 !== VV.length) throw new Error(`${VV.length} files where six faces were expected`);
+            const eV = await Ly(VV.map((VV => OV(VV)))),
+              xV = eV[0].width;
+            return Ly(eV.map((async VV => {
+              if (VV.width === xV && VV.height === xV) return VV;
               try {
-                return await createImageBitmap(MM, {
-                  ...TM,
-                  resizeWidth: iM,
-                  resizeHeight: iM
+                return await createImageBitmap(VV, {
+                  ...IV,
+                  resizeWidth: xV,
+                  resizeHeight: xV
                 })
               } finally {
-                MM.close()
+                VV.close()
               }
             })))
-          }(MM.files);
-          if ("data" === MM.kind && MM.data) return [await createImageBitmap(new Blob([MM.data]), TM)];
-          return [await cM(MP(MM))]
-        }(MM.source).then((MM => {
-          0 === rM.refs || iM !== this.epoch ? va(MM) : rM.images = MM
+          }(VV.files);
+          if ("data" === VV.kind && VV.data) return [await createImageBitmap(new Blob([VV.data]), IV)];
+          return [await OV(dy(VV))]
+        }(VV.source).then((VV => {
+          0 === eV.refs || xV !== this.epoch ? ly(VV) : eV.images = VV
         }));
-        this.track(rM, MP(MM.source), OM, (() => {
-          rM.wanted && !rM.failed && rM.refs > 0 && this.upload(MM, rM)
+        this.track(eV, dy(VV.source), JV, (() => {
+          eV.wanted && !eV.failed && eV.refs > 0 && this.upload(VV, eV)
         }))
       }
-      canvasUpdated(MM, rM, iM) {
+      canvasUpdated(VV, eV, xV) {
         const {
-          state: OM
-        } = this.textureSlot(MM);
-        OM.dynamicSource = {
-          invertY: rM,
-          premultiplied: iM
-        }, OM.dynamic && this.pushDynamic(MM.source, OM)
+          state: JV
+        } = this.textureSlot(VV);
+        JV.dynamicSource = {
+          invertY: eV,
+          premultiplied: xV
+        }, JV.dynamic && this.pushDynamic(VV.source, JV)
       }
-      async atlasArrays(MM) {
+      async atlasArrays(VV) {
         const {
-          device: rM,
-          epoch: iM
+          device: eV,
+          epoch: xV
         } = this;
-        let OM;
+        let JV;
         try {
-          OM = await rr(rM, MM)
-        } catch (jM) {
-          if (iM === this.epoch) {
-            if (!Qr(rM)) throw jM;
-            await new Promise((MM => {
-              this.rebindWaiters.push(MM)
+          JV = await ee(eV, VV)
+        } catch (UV) {
+          if (xV === this.epoch) {
+            if (!ne(eV)) throw UV;
+            await new Promise((VV => {
+              this.rebindWaiters.push(VV)
             }))
           }
-          return this.atlasArrays(MM)
+          return this.atlasArrays(VV)
         }
-        if (OM.forEach(((rM, iM) => {
-            this.atlasSources.has(rM) || this.atlasSources.set(rM, {
-              sources: MM,
-              index: iM,
-              stride: OM[0].layers
+        if (JV.forEach(((eV, xV) => {
+            this.atlasSources.has(eV) || this.atlasSources.set(eV, {
+              sources: VV,
+              index: xV,
+              stride: JV[0].layers
             })
-          })), iM !== this.epoch) return OM;
-        const SM = (0, oa.e)(this.engine, {
+          })), xV !== this.epoch) return JV;
+        const YV = (0, iy.e)(this.engine, {
           magFilter: "nearest",
           minFilter: "nearest",
           mipmapFilter: "linear",
           addressModeU: "repeat",
           addressModeV: "repeat"
         });
-        for (const aM of OM) this.atlasBindings.has(aM) || this.atlasBindings.set(aM, {
-          view: aM.texture.createView({
+        for (const yV of JV) this.atlasBindings.has(yV) || this.atlasBindings.set(yV, {
+          view: yV.texture.createView({
             dimension: "2d-array"
           }),
-          sampler: SM
+          sampler: YV
         });
-        return OM
+        return JV
       }
-      boundTexture(MM) {
-        const rM = this.atlasBindings.get(MM);
-        if (rM) return rM;
-        const iM = this.atlasSources.get(MM);
-        if (iM) return this.rebuildAtlas(MM, iM), null;
-        const OM = MM;
-        if (OM.released) return null;
-        const SM = this.textureSlot(OM, !0),
+      boundTexture(VV) {
+        const eV = this.atlasBindings.get(VV);
+        if (eV) return eV;
+        const xV = this.atlasSources.get(VV);
+        if (xV) return this.rebuildAtlas(VV, xV), null;
+        const JV = VV;
+        if (JV.released) return null;
+        const YV = this.textureSlot(JV, !0),
           {
-            state: jM
-          } = SM;
-        if (!jM.view && (jM.wanted = !0, jM.loading || jM.failed || this.upload(OM, jM), !jM.view)) return null;
-        const aM = this.chosenSampler(OM, SM),
-          PM = SM.bound;
-        return PM && PM.view === jM.view && PM.sampler === aM ? PM : (SM.bound = {
-          view: jM.view,
-          sampler: aM
-        }, SM.bound)
+            state: UV
+          } = YV;
+        if (!UV.view && (UV.wanted = !0, UV.loading || UV.failed || this.upload(JV, UV), !UV.view)) return null;
+        const yV = this.chosenSampler(JV, YV),
+          pV = YV.bound;
+        return pV && pV.view === UV.view && pV.sampler === yV ? pV : (YV.bound = {
+          view: UV.view,
+          sampler: yV
+        }, YV.bound)
       }
-      rebuildAtlas(MM, rM) {
+      rebuildAtlas(VV, eV) {
         let {
-          sources: iM,
-          index: OM,
-          stride: SM
-        } = rM;
-        if (this.atlasRebuilds.has(MM)) return;
-        this.atlasRebuilds.add(MM);
+          sources: xV,
+          index: JV,
+          stride: YV
+        } = eV;
+        if (this.atlasRebuilds.has(VV)) return;
+        this.atlasRebuilds.add(VV);
         const {
-          epoch: jM
+          epoch: UV
         } = this;
-        this.atlasArrays(iM).then((rM => {
-          rM[0].layers === SM && rM[OM] ? jM === this.epoch && this.atlasBindings.set(MM, this.atlasBindings.get(rM[OM])) : console.error(`Lite: the new device splits the atlas ${VM(iM.urls[0])} into other arrays than its materials read`)
-        }), (MM => {
-          console.error(`Lite: could not build the atlas ${VM(iM.urls[0])} again on a new device`, MM)
+        this.atlasArrays(xV).then((eV => {
+          eV[0].layers === YV && eV[JV] ? UV === this.epoch && this.atlasBindings.set(VV, this.atlasBindings.get(eV[JV])) : console.error(`Lite: the new device splits the atlas ${dV(xV.urls[0])} into other arrays than its materials read`)
+        }), (VV => {
+          console.error(`Lite: could not build the atlas ${dV(xV.urls[0])} again on a new device`, VV)
         }))
       }
-      textureLoaded(MM) {
-        var rM, iM;
-        return null !== (rM = null === (iM = this.heldSlot(MM)) || void 0 === iM ? void 0 : iM.state.decoded) && void 0 !== rM ? rM : null
+      textureLoaded(VV) {
+        var eV, xV;
+        return null !== (eV = null === (xV = this.heldSlot(VV)) || void 0 === xV ? void 0 : xV.state.decoded) && void 0 !== eV ? eV : null
       }
-      textureFailed(MM) {
-        var rM;
-        return !0 === (null === (rM = this.heldSlot(MM)) || void 0 === rM ? void 0 : rM.state.failed)
+      textureFailed(VV) {
+        var eV;
+        return !0 === (null === (eV = this.heldSlot(VV)) || void 0 === eV ? void 0 : eV.state.failed)
       }
-      heldSlot(MM) {
-        const rM = MM.gpu[gM.e.lite];
-        return (null === rM || void 0 === rM ? void 0 : rM.epoch) === this.epoch ? rM : void 0
+      heldSlot(VV) {
+        const eV = VV.gpu[MV.f.lite];
+        return (null === eV || void 0 === eV ? void 0 : eV.epoch) === this.epoch ? eV : void 0
       }
-      chosenSampler(MM, rM) {
+      chosenSampler(VV, eV) {
         const {
-          samplingMode: iM,
-          wrapU: OM,
-          wrapV: SM
-        } = MM.sampler, jM = rM.state.hasMips, aM = function(MM, rM) {
+          samplingMode: xV,
+          wrapU: JV,
+          wrapV: YV
+        } = VV.sampler, UV = eV.state.hasMips, yV = function(VV, eV) {
           const {
-            bilinear: iM,
-            trilinear: OM
-          } = gM.i;
-          return !rM && MM !== iM || 11 !== MM && MM !== OM && MM !== iM ? 1 : 4
-        }(iM, jM), PM = rM.sampler;
-        if (PM && PM.samplingMode === iM && PM.hasMips === jM && PM.anisotropy === aM && PM.wrapU === OM && PM.wrapV === SM) return PM.sampler;
-        const nM = this.samplerFor(iM, jM, aM, OM, SM);
-        return rM.sampler = {
-          samplingMode: iM,
-          hasMips: jM,
-          anisotropy: aM,
-          wrapU: OM,
-          wrapV: SM,
-          sampler: nM
-        }, nM
+            bilinear: xV,
+            trilinear: JV
+          } = MV.h;
+          return !eV && VV !== xV || 11 !== VV && VV !== JV && VV !== xV ? 1 : 4
+        }(xV, UV), pV = eV.sampler;
+        if (pV && pV.samplingMode === xV && pV.hasMips === UV && pV.anisotropy === yV && pV.wrapU === JV && pV.wrapV === YV) return pV.sampler;
+        const QV = this.samplerFor(xV, UV, yV, JV, YV);
+        return eV.sampler = {
+          samplingMode: xV,
+          hasMips: UV,
+          anisotropy: yV,
+          wrapU: JV,
+          wrapV: YV,
+          sampler: QV
+        }, QV
       }
-      releaseTexture(MM) {
-        var rM, iM;
-        MM.view && (null === (iM = this.onDestroy) || void 0 === iM || iM.call(this, MM.view));
-        null === (rM = MM.destroy) || void 0 === rM || rM.call(MM)
+      releaseTexture(VV) {
+        var eV, xV;
+        VV.view && (null === (xV = this.onDestroy) || void 0 === xV || xV.call(this, VV.view));
+        null === (eV = VV.destroy) || void 0 === eV || eV.call(VV)
       }
-      textureSlot(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        const iM = MM.gpu[gM.e.lite];
-        if ((null === iM || void 0 === iM ? void 0 : iM.epoch) === this.epoch) return iM;
-        const OM = function(MM) {
+      textureSlot(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        const xV = VV.gpu[MV.f.lite];
+        if ((null === xV || void 0 === xV ? void 0 : xV.epoch) === this.epoch) return xV;
+        const JV = function(VV) {
           let {
-            source: rM,
-            sampler: iM
-          } = MM;
-          return "canvas" === rM.kind ? null : `${rM.kind}|${MP(rM)}|${iM.noMipmap}|${iM.samplingMode}|${iM.invertY}`
-        }(MM);
-        let SM = null === OM ? void 0 : this.textures.get(OM);
-        var jM;
-        SM || (SM = {
+            source: eV,
+            sampler: xV
+          } = VV;
+          return "canvas" === eV.kind ? null : `${eV.kind}|${dy(eV)}|${xV.noMipmap}|${xV.samplingMode}|${xV.invertY}`
+        }(VV);
+        let YV = null === JV ? void 0 : this.textures.get(JV);
+        var UV;
+        YV || (YV = {
           refs: 0,
           view: null,
           destroy: null,
@@ -5066,212 +5066,212 @@ export const modules = {
           hasMips: !1,
           images: null,
           dynamic: null,
-          dynamicSource: null !== (jM = null === iM || void 0 === iM ? void 0 : iM.state.dynamicSource) && void 0 !== jM ? jM : null
-        }, null !== OM && (this.textures.set(OM, SM), this.load(MM, SM), rM && !iM && this.firstBindDecodes++));
-        SM.refs++;
-        const aM = SM,
+          dynamicSource: null !== (UV = null === xV || void 0 === xV ? void 0 : xV.state.dynamicSource) && void 0 !== UV ? UV : null
+        }, null !== JV && (this.textures.set(JV, YV), this.load(VV, YV), eV && !xV && this.firstBindDecodes++));
+        YV.refs++;
+        const yV = YV,
           {
-            epoch: PM
+            epoch: pV
           } = this,
-          nM = {
-            state: SM,
+          QV = {
+            state: YV,
             bound: null,
             sampler: null,
             release: () => {
-              PM === this.epoch && this.releaseSlot(aM, OM)
+              pV === this.epoch && this.releaseSlot(yV, JV)
             },
-            epoch: PM
+            epoch: pV
           };
-        return MM.gpu[gM.e.lite] = nM, nM
+        return VV.gpu[MV.f.lite] = QV, QV
       }
-      samplerFor(MM, rM, iM, OM, SM) {
-        const jM = `${MM}|${rM}|${iM}|${OM}|${SM}`;
-        let aM = this.samplers.get(jM);
-        if (!aM) {
-          const PM = {
-            ...Ta(MM, rM, iM),
-            addressModeU: Va(OM),
-            addressModeV: Va(SM)
+      samplerFor(VV, eV, xV, JV, YV) {
+        const UV = `${VV}|${eV}|${xV}|${JV}|${YV}`;
+        let yV = this.samplers.get(UV);
+        if (!yV) {
+          const pV = {
+            ...sy(VV, eV, xV),
+            addressModeU: Sy(JV),
+            addressModeV: Sy(YV)
           };
-          aM = (0, oa.e)(this.engine, PM), this.samplers.set(jM, aM)
+          yV = (0, iy.e)(this.engine, pV), this.samplers.set(UV, yV)
         }
-        return aM
+        return yV
       }
-      upload(MM, rM) {
+      upload(VV, eV) {
         const {
-          source: iM,
-          sampler: OM
-        } = MM;
-        rM.hasMips = !OM.noMipmap, "canvas" === iM.kind ? this.createDynamic(iM, rM) : "cube" === iM.kind ? this.uploadCube(rM, iM.luminance) : this.uploadImage(rM, !0 === OM.invertY, iM.url)
+          source: xV,
+          sampler: JV
+        } = VV;
+        eV.hasMips = !JV.noMipmap, "canvas" === xV.kind ? this.createDynamic(xV, eV) : "cube" === xV.kind ? this.uploadCube(eV, xV.luminance) : this.uploadImage(eV, !0 === JV.invertY, xV.url)
       }
-      uploadImage(MM, rM, iM) {
-        const [OM] = MM.images;
-        MM.images = null;
+      uploadImage(VV, eV, xV) {
+        const [JV] = VV.images;
+        VV.images = null;
         const {
-          epoch: SM
-        } = this, jM = (0, fa.c)(this.engine, OM, {
-          mipMaps: MM.hasMips,
-          invertY: rM,
+          epoch: YV
+        } = this, UV = (0, Cy.e)(this.engine, JV, {
+          mipMaps: VV.hasMips,
+          invertY: eV,
           srgb: !1
-        }).then((rM => {
-          OM.close(), 0 !== MM.refs && SM === this.epoch ? (MM.view = rM.view, MM.destroy = rM.texture.destroy.bind(rM.texture)) : rM.texture.destroy()
+        }).then((eV => {
+          JV.close(), 0 !== VV.refs && YV === this.epoch ? (VV.view = eV.view, VV.destroy = eV.texture.destroy.bind(eV.texture)) : eV.texture.destroy()
         }));
-        this.track(MM, iM, jM)
+        this.track(VV, xV, UV)
       }
-      track(MM, rM, iM, OM) {
+      track(VV, eV, xV, JV) {
         const {
-          epoch: SM
+          epoch: YV
         } = this;
-        MM.loading = !0, this.pending++, iM.catch((iM => {
-          SM === this.epoch && (MM.failed = !0, console.warn(`Lite: could not load texture ${VM(rM)}`, iM))
+        VV.loading = !0, this.pending++, xV.catch((xV => {
+          YV === this.epoch && (VV.failed = !0, console.warn(`Lite: could not load texture ${dV(eV)}`, xV))
         })).finally((() => {
-          SM === this.epoch && (MM.loading = !1, this.pending--, null === OM || void 0 === OM || OM())
+          YV === this.epoch && (VV.loading = !1, this.pending--, null === JV || void 0 === JV || JV())
         }))
       }
-      uploadCube(MM, rM) {
-        const iM = MM.images;
-        MM.images = null;
-        const OM = xa(this.engine, this.device, iM, (0, gM.v)(rM), MM.hasMips);
-        MM.view = OM.createView({
+      uploadCube(VV, eV) {
+        const xV = VV.images;
+        VV.images = null;
+        const JV = hy(this.engine, this.device, xV, (0, MV.w)(eV), VV.hasMips);
+        VV.view = JV.createView({
           dimension: "cube"
-        }), MM.destroy = () => {
-          OM.destroy()
+        }), VV.destroy = () => {
+          JV.destroy()
         }
       }
-      createDynamic(MM, rM) {
+      createDynamic(VV, eV) {
         const {
-          canvas: iM
-        } = MM, OM = (0, Ya.c)(this.engine, Math.max(1, iM.width), Math.max(1, iM.height), {
-          mipMaps: rM.hasMips,
+          canvas: xV
+        } = VV, JV = (0, ay.e)(this.engine, Math.max(1, xV.width), Math.max(1, xV.height), {
+          mipMaps: eV.hasMips,
           srgb: !1
         });
-        rM.dynamic = OM, rM.view = OM.view, rM.destroy = () => {
-          OM.texture.destroy()
-        }, this.pushDynamic(MM, rM)
+        eV.dynamic = JV, eV.view = JV.view, eV.destroy = () => {
+          JV.texture.destroy()
+        }, this.pushDynamic(VV, eV)
       }
-      pushDynamic(MM, rM) {
-        const iM = rM.dynamicSource,
-          OM = rM.dynamic,
+      pushDynamic(VV, eV) {
+        const xV = eV.dynamicSource,
+          JV = eV.dynamic,
           {
-            canvas: SM
-          } = MM;
-        if (iM && OM && 0 !== SM.width && 0 !== SM.height) return SM.width !== OM.width || SM.height !== OM.height ? (this.releaseTexture(rM), rM.dynamic = null, rM.view = null, void this.createDynamic(MM, rM)) : void(0, Ya.g)(this.engine, OM, SM, {
-          invertY: iM.invertY,
-          premultiplyAlpha: iM.premultiplied
+            canvas: YV
+          } = VV;
+        if (xV && JV && 0 !== YV.width && 0 !== YV.height) return YV.width !== JV.width || YV.height !== JV.height ? (this.releaseTexture(eV), eV.dynamic = null, eV.view = null, void this.createDynamic(VV, eV)) : void(0, ay.i)(this.engine, JV, YV, {
+          invertY: xV.invertY,
+          premultiplyAlpha: xV.premultiplied
         })
       }
     }
 
-    function MP(MM) {
-      return "cube" === MM.kind ? MM.rootUrl : "canvas" === MM.kind ? "canvas" : MM.url
+    function dy(VV) {
+      return "cube" === VV.kind ? VV.rootUrl : "canvas" === VV.kind ? "canvas" : VV.url
     }
-    const rP = new Uint8Array(4);
-    var iP = iM(39794);
+    const Oy = new Uint8Array(4);
+    var Vp = xV(39943);
 
-    function OP(MM) {
-      const rM = arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? "store" : "discard";
-      MM._colorAttachment.storeOp = MM._targetSignature._sampleCount > 1 ? rM : "store";
-      const iM = MM._renderPassDescriptor.depthStencilAttachment;
-      iM && (iM.depthStoreOp = rM, iM.stencilStoreOp && (iM.stencilStoreOp = rM))
+    function ep(VV) {
+      const eV = arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? "store" : "discard";
+      VV._colorAttachment.storeOp = VV._targetSignature._sampleCount > 1 ? eV : "store";
+      const xV = VV._renderPassDescriptor.depthStencilAttachment;
+      xV && (xV.depthStoreOp = eV, xV.stencilStoreOp && (xV.stencilStoreOp = eV))
     }
-    var SP = iM(38744),
-      jP = iM(38801),
-      aP = iM(38340),
-      PP = iM(40712);
-    const nP = new Float64Array([1, 1, 1]),
-      QP = new Float64Array([0, 1, 0]),
-      zP = new Float64Array(4),
-      LP = new Float32Array(16),
-      mP = new Float64Array(3),
-      HP = new Float64Array(4);
+    var xp = xV(38917),
+      Jp = xV(38983),
+      Yp = xV(38542),
+      Up = xV(40876);
+    const yp = new Float64Array([1, 1, 1]),
+      pp = new Float64Array([0, 1, 0]),
+      Qp = new Float64Array(4),
+      np = new Float32Array(16),
+      wp = new Float64Array(3),
+      Zp = new Float64Array(4);
 
-    function hP(MM, rM, iM) {
-      MM.fov = rM.fov, MM.near = rM.near, MM.far = rM.far, MM.renderWidth = iM.renderWidth, MM.renderHeight = iM.renderHeight, (0, aP.p)(rM.holderRotation, 0, zP, 0), (0, aP.d)(nP, 0, zP, 0, rM.holderPosition, 0, LP);
-      const OM = rM.yV;
-      mP[0] = OM[0], mP[1] = OM[1], mP[2] = OM[2] + 1;
-      const SM = MM.viewMatrix;
-      (0, aP.h)(OM, mP, QP, SM), (0, aP.g)(SM, 0, SM), (0, aP.j)(SM, LP, 0, SM), (0, aP.g)(SM, 0, SM);
-      const jM = MM.worldMatrix;
-      (0, aP.g)(SM, 0, jM), MM.eye[0] = jM[12], MM.eye[1] = jM[13], MM.eye[2] = jM[14], HP[0] = MM.fov, HP[1] = MM.renderWidth / MM.renderHeight, HP[2] = MM.near, HP[3] = MM.far, (0, aP.m)(HP, MM.projectionMatrix), (0, aP.j)(SM, MM.projectionMatrix, 0, MM.viewProjectionMatrix), (0, PP.i)(MM.viewProjectionMatrix, MM.frustum)
+    function vp(VV, eV, xV) {
+      VV.fov = eV.fov, VV.near = eV.near, VV.far = eV.far, VV.renderWidth = xV.renderWidth, VV.renderHeight = xV.renderHeight, (0, Yp.z)(eV.holderRotation, 0, Qp, 0), (0, Yp.d)(yp, 0, Qp, 0, eV.holderPosition, 0, np);
+      const JV = eV.I9;
+      wp[0] = JV[0], wp[1] = JV[1], wp[2] = JV[2] + 1;
+      const YV = VV.viewMatrix;
+      (0, Yp.o)(JV, wp, pp, YV), (0, Yp.l)(YV, 0, YV), (0, Yp.s)(YV, np, 0, YV), (0, Yp.l)(YV, 0, YV);
+      const UV = VV.worldMatrix;
+      (0, Yp.l)(YV, 0, UV), VV.eye[0] = UV[12], VV.eye[1] = UV[13], VV.eye[2] = UV[14], Zp[0] = VV.fov, Zp[1] = VV.renderWidth / VV.renderHeight, Zp[2] = VV.near, Zp[3] = VV.far, (0, Yp.v)(Zp, VV.projectionMatrix), (0, Yp.s)(YV, VV.projectionMatrix, 0, VV.viewProjectionMatrix), (0, Up.e)(VV.viewProjectionMatrix, VV.frustum)
     }
 
-    function JP(MM, rM) {
-      let iM = MM.frustumPlanes;
-      iM || (iM = MM.frustumPlanes = Array.from({
+    function rp(VV, eV) {
+      let xV = VV.frustumPlanes;
+      xV || (xV = VV.frustumPlanes = Array.from({
         length: 6
-      }, (() => new SP.d(0, 0, 0, 0))));
-      for (let OM = 0; OM < 6; OM++) {
-        const MM = iM[OM].normal;
-        MM._x = rM[4 * OM], MM._y = rM[4 * OM + 1], MM._z = rM[4 * OM + 2], MM._isDirty = !0, iM[OM].d = rM[4 * OM + 3]
+      }, (() => new xp.d(0, 0, 0, 0))));
+      for (let JV = 0; JV < 6; JV++) {
+        const VV = xV[JV].normal;
+        VV._x = eV[4 * JV], VV._y = eV[4 * JV + 1], VV._z = eV[4 * JV + 2], VV._isDirty = !0, xV[JV].d = eV[4 * JV + 3]
       }
     }
 
-    function dP(MM, rM) {
-      const iM = rM.clearColor;
-      MM.clearColour[0] = iM.r, MM.clearColour[1] = iM.g, MM.clearColour[2] = iM.b, MM.clearColour[3] = iM.a;
-      const OM = rM.ambientColor;
-      MM.ambientColour[0] = OM.r, MM.ambientColour[1] = OM.g, MM.ambientColour[2] = OM.b, MM.animationRatio = rM.animationRatio, MM.frameId = rM.frameId, MM.version++
+    function kp(VV, eV) {
+      const xV = eV.clearColor;
+      VV.clearColour[0] = xV.r, VV.clearColour[1] = xV.g, VV.clearColour[2] = xV.b, VV.clearColour[3] = xV.a;
+      const JV = eV.ambientColor;
+      VV.ambientColour[0] = JV.r, VV.ambientColour[1] = JV.g, VV.ambientColour[2] = JV.b, VV.animationRatio = eV.animationRatio, VV.frameId = eV.frameId, VV.version++
     }
 
-    function yP(MM) {
-      const rM = MM.model.view;
-      return rM.animTick = (0, jP.d)(), rM.timeMs = performance.now(), dP(rM, MM.YJ), MM.model.update(rM.frameId), rM
+    function bp(VV) {
+      const eV = VV.model.view;
+      return eV.animTick = (0, Jp.h)(), eV.timeMs = performance.now(), kp(eV, VV.yE), VV.model.update(eV.frameId), eV
     }
 
-    function lP(MM) {
-      const rM = MM.YJ,
+    function Ep(VV) {
+      const eV = VV.yE,
         {
-          view: iM,
-          JV: OM
-        } = MM.model;
-      return hP(iM, OM, rM.ph()), rM.onBeforeRenderObservable.notifyObservers(rM), JP(rM, iM.frustum), rM.onBeforeCameraRenderObservable.notifyObservers(rM.activeCamera), yP(MM)
+          view: xV,
+          K9: JV
+        } = VV.model;
+      return vp(xV, JV, eV.sk()), eV.onBeforeRenderObservable.notifyObservers(eV), rp(eV, xV.frustum), eV.onBeforeCameraRenderObservable.notifyObservers(eV.activeCamera), bp(VV)
     }
-    var EP = iM(38300),
-      UP = iM(38412),
-      GP = iM(38791);
+    var Bp = xV(38506),
+      jp = xV(38612),
+      qp = xV(38968);
 
-    function CP(MM) {
-      var rM, iM;
-      const OM = (0, wM.Y)(MM);
-      if (!OM || OM.diffuseTexture && (0, GP.k)(MM)) return null;
-      const SM = null === (rM = (0, wM.v)(OM, eM.g.name)) || void 0 === rM ? void 0 : rM.state,
-        jM = null === (iM = (0, wM.v)(OM, Ma.b.name)) || void 0 === iM ? void 0 : iM.state,
-        aM = new Float32Array(16);
-      return function(MM, rM, iM, OM) {
-        var SM, jM;
-        const aM = oO;
-        OM.set(MM.diffuseColor, aM.diffuse), OM[aM.diffuse + 3] = MM.alpha, OM.set(MM.ambientColor, aM.ambientAndCutoff), OM[aM.ambientAndCutoff + 3] = MM.alphaCutOff, OM.set(MM.emissiveColor, aM.emissiveAndLevel), OM[aM.emissiveAndLevel + 3] = null !== (SM = null === (jM = MM.diffuseTexture) || void 0 === jM ? void 0 : jM.level) && void 0 !== SM ? SM : 1, null !== rM && void 0 !== rM && rM.animDataPerTex ? (OM[aM.anim + 1] = jP.b, OM[aM.anim + 2] = rM.animDataPerTex.length / 3 - 1) : iM && (OM[aM.anim + 1] = iM.numAnimStates, OM[aM.anim + 2] = iM.ticksPerAnimState)
-      }(OM, SM, jM, aM), {
-        model: OM,
-        atlas: SM,
-        texture: SM ? "atlas" : OM.diffuseTexture ? "single" : "none",
-        animated: SM ? !!SM.animDataPerTex : !!jM,
-        liquid: (0, GP.m)(MM),
-        customRenderMat: (0, GP.k)(MM),
-        uniformData: aM
+    function tp(VV) {
+      var eV, xV;
+      const JV = (0, NV.eb)(VV);
+      if (!JV || JV.diffuseTexture && (0, qp.f)(VV)) return null;
+      const YV = null === (eV = (0, NV.v)(JV, PV.h.name)) || void 0 === eV ? void 0 : eV.state,
+        UV = null === (xV = (0, NV.v)(JV, dU.b.name)) || void 0 === xV ? void 0 : xV.state,
+        yV = new Float32Array(16);
+      return function(VV, eV, xV, JV) {
+        var YV, UV;
+        const yV = iJ;
+        JV.set(VV.diffuseColor, yV.diffuse), JV[yV.diffuse + 3] = VV.alpha, JV.set(VV.ambientColor, yV.ambientAndCutoff), JV[yV.ambientAndCutoff + 3] = VV.alphaCutOff, JV.set(VV.emissiveColor, yV.emissiveAndLevel), JV[yV.emissiveAndLevel + 3] = null !== (YV = null === (UV = VV.diffuseTexture) || void 0 === UV ? void 0 : UV.level) && void 0 !== YV ? YV : 1, null !== eV && void 0 !== eV && eV.animDataPerTex ? (JV[yV.anim + 1] = Jp.e, JV[yV.anim + 2] = eV.animDataPerTex.length / 3 - 1) : xV && (JV[yV.anim + 1] = xV.numAnimStates, JV[yV.anim + 2] = xV.ticksPerAnimState)
+      }(JV, YV, UV, yV), {
+        model: JV,
+        atlas: YV,
+        texture: YV ? "atlas" : JV.diffuseTexture ? "single" : "none",
+        animated: YV ? !!YV.animDataPerTex : !!UV,
+        liquid: (0, qp.i)(VV),
+        customRenderMat: (0, qp.f)(VV),
+        uniformData: yV
       }
     }
-    var eP = iM(3182);
-    class bP {
-      constructor(MM) {
-        this.units = MM, this.buffer = void 0, this.twin = null, this.bufferReady = !1, this.twinReady = !1
+    var Fp = xV(3189);
+    class Tp {
+      constructor(VV) {
+        this.units = VV, this.buffer = void 0, this.twin = null, this.bufferReady = !1, this.twinReady = !1
       }
       get ready() {
         return this.bufferReady && (!this.twin || this.twinReady)
       }
       destroy() {
-        var MM;
-        this.buffer.destroy(), null === (MM = this.twin) || void 0 === MM || MM.destroy()
+        var VV;
+        this.buffer.destroy(), null === (VV = this.twin) || void 0 === VV || VV.destroy()
       }
     }
-    class wP {
-      constructor(MM, rM) {
-        this.arena = MM, this.Ld = void 0, this.buffer = void 0, this.twin = null, this.usable = 0, this.backings = [], this.growable = !0, this.dropped = !1, this.Ld = new Ba(rM);
-        const iM = new bP(rM);
-        iM.buffer = this.createBuffer(iM, !1), this.backings.push(iM), this.refresh()
+    class Pp {
+      constructor(VV, eV) {
+        this.arena = VV, this.TE = void 0, this.buffer = void 0, this.twin = null, this.usable = 0, this.backings = [], this.growable = !0, this.dropped = !1, this.TE = new fy(eV);
+        const xV = new Tp(eV);
+        xV.buffer = this.createBuffer(xV, !1), this.backings.push(xV), this.refresh()
       }
-      get vL() {
-        return this.Ld.vL
+      get Jv() {
+        return this.TE.Jv
       }
       get canGrow() {
         return this.growable && !this.dropped
@@ -5283,51 +5283,51 @@ export const modules = {
         return null !== this.backings[this.backings.length - 1].twin
       }
       get allocatedBytes() {
-        let MM = 0;
-        for (const rM of this.backings) MM += rM.units * (this.arena.unitBytes + (rM.twin ? this.arena.twinUnitBytes : 0));
-        return MM
+        let VV = 0;
+        for (const eV of this.backings) VV += eV.units * (this.arena.unitBytes + (eV.twin ? this.arena.twinUnitBytes : 0));
+        return VV
       }
-      holds(MM) {
-        return MM.start + MM.length <= this.usable
+      holds(VV) {
+        return VV.start + VV.length <= this.usable
       }
-      lost(MM) {
-        return this.dropped || MM.start + MM.length > this.vL
+      lost(VV) {
+        return this.dropped || VV.start + VV.length > this.Jv
       }
-      write(MM, rM) {
+      write(VV, eV) {
         const {
-          device: iM,
-          unitBytes: OM
+          device: xV,
+          unitBytes: JV
         } = this.arena;
-        for (const SM of this.backings) {
-          const jM = (SM.units - MM.start) * OM;
-          jM > 0 && iM.queue.writeBuffer(SM.buffer, MM.start * OM, rM, 0, Math.min(rM.byteLength, jM))
+        for (const YV of this.backings) {
+          const UV = (YV.units - VV.start) * JV;
+          UV > 0 && xV.queue.writeBuffer(YV.buffer, VV.start * JV, eV, 0, Math.min(eV.byteLength, UV))
         }
       }
-      writeLight(MM, rM) {
+      writeLight(VV, eV) {
         const {
-          device: iM,
-          twinUnitBytes: OM,
-          verticesPerUnit: SM
+          device: xV,
+          twinUnitBytes: JV,
+          verticesPerUnit: YV
         } = this.arena, {
-          light: jM,
-          count: aM
-        } = this.arena.twinLight(rM, Math.min(rM.length, MM.length * SM));
-        for (const PM of this.backings) {
-          PM.twin || (PM.twin = this.createBuffer(PM, !0));
-          const rM = (PM.units - MM.start) * SM;
-          rM > 0 && iM.queue.writeBuffer(PM.twin, MM.start * OM, jM, 0, Math.min(aM, rM))
+          light: UV,
+          count: yV
+        } = this.arena.twinLight(eV, Math.min(eV.length, VV.length * YV));
+        for (const pV of this.backings) {
+          pV.twin || (pV.twin = this.createBuffer(pV, !0));
+          const eV = (pV.units - VV.start) * YV;
+          eV > 0 && xV.queue.writeBuffer(pV.twin, VV.start * JV, UV, 0, Math.min(yV, eV))
         }
       }
-      grow(MM) {
+      grow(VV) {
         this.arena.assertNotDrawing();
         const {
-          device: rM,
-          unitBytes: iM,
-          label: OM
-        } = this.arena, SM = this.backings[this.backings.length - 1], jM = new bP(MM), aM = rM.createCommandEncoder({
-          label: `${OM}-grow`
+          device: eV,
+          unitBytes: xV,
+          label: JV
+        } = this.arena, YV = this.backings[this.backings.length - 1], UV = new Tp(VV), yV = eV.createCommandEncoder({
+          label: `${JV}-grow`
         });
-        jM.buffer = this.createBuffer(jM, !1), aM.copyBufferToBuffer(SM.buffer, 0, jM.buffer, 0, SM.units * iM), SM.twin && (jM.twin = this.createBuffer(jM, !0), aM.copyBufferToBuffer(SM.twin, 0, jM.twin, 0, SM.units * this.arena.twinUnitBytes)), rM.queue.submit([aM.finish()]), this.backings.push(jM), this.Ld.grow(MM)
+        UV.buffer = this.createBuffer(UV, !1), yV.copyBufferToBuffer(YV.buffer, 0, UV.buffer, 0, YV.units * xV), YV.twin && (UV.twin = this.createBuffer(UV, !0), yV.copyBufferToBuffer(YV.twin, 0, UV.twin, 0, YV.units * this.arena.twinUnitBytes)), eV.queue.submit([yV.finish()]), this.backings.push(UV), this.TE.grow(VV)
       }
       retire() {
         this.dropped = !0, this.refresh()
@@ -5335,243 +5335,243 @@ export const modules = {
       drop() {
         if (!this.dropped) {
           this.dropped = !0;
-          for (const MM of this.backings) MM.destroy();
+          for (const VV of this.backings) VV.destroy();
           this.refresh(), this.arena.remove(this)
         }
       }
-      createBuffer(MM, rM) {
+      createBuffer(VV, eV) {
         const {
-          device: iM,
-          unitBytes: OM,
-          twinUnitBytes: SM,
-          usage: jM,
-          label: aM
+          device: xV,
+          unitBytes: JV,
+          twinUnitBytes: YV,
+          usage: UV,
+          label: yV
         } = this.arena;
-        iM.pushErrorScope("out-of-memory");
-        const PM = iM.createBuffer({
-          label: rM ? `${aM}-light` : aM,
-          size: MM.units * (rM ? SM : OM),
-          usage: (rM ? this.arena.twinUsage : jM) | GPUBufferUsage.COPY_DST | GPUBufferUsage.COPY_SRC
+        xV.pushErrorScope("out-of-memory");
+        const pV = xV.createBuffer({
+          label: eV ? `${yV}-light` : yV,
+          size: VV.units * (eV ? YV : JV),
+          usage: (eV ? this.arena.twinUsage : UV) | GPUBufferUsage.COPY_DST | GPUBufferUsage.COPY_SRC
         });
-        return this.arena.awaitingVerdict++, iM.popErrorScope().then((iM => {
-          this.arena.awaitingVerdict--, this.settle(MM, rM, !iM, !0)
-        }), (iM => {
-          this.arena.awaitingVerdict--, this.arena.warnOnce("noVerdict", `no out-of-memory verdict for a ${aM} buffer, taken as failed: ${String(iM)}`), this.settle(MM, rM, !1, !1)
-        })), PM
+        return this.arena.awaitingVerdict++, xV.popErrorScope().then((xV => {
+          this.arena.awaitingVerdict--, this.settle(VV, eV, !xV, !0)
+        }), (xV => {
+          this.arena.awaitingVerdict--, this.arena.warnOnce("noVerdict", `no out-of-memory verdict for a ${yV} buffer, taken as failed: ${String(xV)}`), this.settle(VV, eV, !1, !1)
+        })), pV
       }
-      settle(MM, rM, iM, OM) {
-        const SM = this.backings.indexOf(MM);
-        if (!(this.dropped || SM < 0)) {
-          if (!iM) {
-            if (OM && this.arena.ranOutOfMemory(MM.units, MM.units * (rM ? this.arena.twinUnitBytes : this.arena.unitBytes)), 0 === SM) return void this.drop();
-            for (const MM of this.backings.splice(SM)) MM.destroy();
-            return this.Ld.truncate(this.backings[SM - 1].units), this.growable = !1, void this.promote()
+      settle(VV, eV, xV, JV) {
+        const YV = this.backings.indexOf(VV);
+        if (!(this.dropped || YV < 0)) {
+          if (!xV) {
+            if (JV && this.arena.ranOutOfMemory(VV.units, VV.units * (eV ? this.arena.twinUnitBytes : this.arena.unitBytes)), 0 === YV) return void this.drop();
+            for (const VV of this.backings.splice(YV)) VV.destroy();
+            return this.TE.truncate(this.backings[YV - 1].units), this.growable = !1, void this.promote()
           }
-          rM ? MM.twinReady = !0 : (MM.bufferReady = !0, this.arena.allocatedBuffer(MM.units)), this.promote()
+          eV ? VV.twinReady = !0 : (VV.bufferReady = !0, this.arena.allocatedBuffer(VV.units)), this.promote()
         }
       }
       promote() {
         const {
-          backings: MM
+          backings: VV
         } = this;
-        let rM = 0;
-        for (; rM + 1 < MM.length && MM[rM].ready && MM[rM + 1].ready;) rM++;
-        for (const iM of MM.splice(0, rM)) iM.destroy();
+        let eV = 0;
+        for (; eV + 1 < VV.length && VV[eV].ready && VV[eV + 1].ready;) eV++;
+        for (const xV of VV.splice(0, eV)) xV.destroy();
         this.refresh()
       }
       refresh() {
-        const MM = this.backings[0];
-        this.buffer = MM.buffer, this.twin = MM.twinReady ? MM.twin : null, this.usable = !this.dropped && MM.bufferReady ? MM.units : 0
+        const VV = this.backings[0];
+        this.buffer = VV.buffer, this.twin = VV.twinReady ? VV.twin : null, this.usable = !this.dropped && VV.bufferReady ? VV.units : 0
       }
     }
-    class tP {
-      constructor(MM, rM, iM, OM) {
+    class Ap {
+      constructor(VV, eV, xV, JV) {
         let {
-          verticesPerUnit: SM = 1,
-          twinUsage: jM = GPUBufferUsage.VERTEX
+          verticesPerUnit: YV = 1,
+          twinUsage: UV = GPUBufferUsage.VERTEX
         } = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
-        if (this.device = MM, this.unitBytes = rM, this.usage = iM, this.label = OM, this.pages = [], this.lL = !1, this.awaitingVerdict = 0, this.verticesPerUnit = void 0, this.twinUsage = void 0, this.twinValueBytes = void 0, this.twinUnitBytes = void 0, this.limit = -1, this.ceiling = -1, this.failed = 1 / 0, this.shortages = 0, this.forgetFailedAt = 0, this.shortageUntil = -1 / 0, this.warnOnce = (0, Wr.b)("Lite terrain: "), this.padded = new Uint16Array(0), this.widened = new Float32Array(0), rM % 4 !== 0) throw new Error(`${OM}: ${rM}-byte units cannot keep every range four-byte aligned`);
-        this.verticesPerUnit = SM, this.twinUsage = jM, this.twinValueBytes = SM > 1 ? 2 : 4, this.twinUnitBytes = this.twinValueBytes * SM
+        if (this.device = VV, this.unitBytes = eV, this.usage = xV, this.label = JV, this.pages = [], this.zZ = !1, this.awaitingVerdict = 0, this.verticesPerUnit = void 0, this.twinUsage = void 0, this.twinValueBytes = void 0, this.twinUnitBytes = void 0, this.limit = -1, this.ceiling = -1, this.failed = 1 / 0, this.shortages = 0, this.forgetFailedAt = 0, this.shortageUntil = -1 / 0, this.warnOnce = (0, Re.b)("Lite terrain: "), this.padded = new Uint16Array(0), this.widened = new Float32Array(0), eV % 4 !== 0) throw new Error(`${JV}: ${eV}-byte units cannot keep every range four-byte aligned`);
+        this.verticesPerUnit = YV, this.twinUsage = UV, this.twinValueBytes = YV > 1 ? 2 : 4, this.twinUnitBytes = this.twinValueBytes * YV
       }
-      twinLight(MM, rM) {
-        if (4 === this.twinValueBytes) return this.widened.length < rM && (this.widened = new Float32Array(Math.max(rM, 2 * this.widened.length))), this.widened.set(MM.subarray(0, rM)), {
+      twinLight(VV, eV) {
+        if (4 === this.twinValueBytes) return this.widened.length < eV && (this.widened = new Float32Array(Math.max(eV, 2 * this.widened.length))), this.widened.set(VV.subarray(0, eV)), {
           light: this.widened,
-          count: rM
+          count: eV
         };
-        const iM = rM % this.verticesPerUnit;
-        if (0 === iM) return {
-          light: MM,
-          count: rM
+        const xV = eV % this.verticesPerUnit;
+        if (0 === xV) return {
+          light: VV,
+          count: eV
         };
-        const OM = rM - iM + this.verticesPerUnit;
-        return this.padded.length < OM && (this.padded = new Uint16Array(Math.max(OM, 2 * this.padded.length))), this.padded.set(MM.subarray(0, rM)), this.padded.fill(0, rM, OM), {
+        const JV = eV - xV + this.verticesPerUnit;
+        return this.padded.length < JV && (this.padded = new Uint16Array(Math.max(JV, 2 * this.padded.length))), this.padded.set(VV.subarray(0, eV)), this.padded.fill(0, eV, JV), {
           light: this.padded,
-          count: OM
+          count: JV
         }
       }
-      allocate(MM) {
-        if (this.assertNotDrawing(), this.limit < 0 && (this.limit = this.ceiling = this.pageLimit()), MM > this.limit) return null;
+      allocate(VV) {
+        if (this.assertNotDrawing(), this.limit < 0 && (this.limit = this.ceiling = this.pageLimit()), VV > this.limit) return null;
         this.failed !== 1 / 0 && performance.now() >= this.forgetFailedAt && (this.failed = 1 / 0, this.ceiling = this.limit);
-        for (const SM of this.pages) {
-          const rM = SM.Ld.allocate(MM);
-          if (rM >= 0) return {
-            page: SM,
-            start: rM,
-            length: MM
+        for (const YV of this.pages) {
+          const eV = YV.TE.allocate(VV);
+          if (eV >= 0) return {
+            page: YV,
+            start: eV,
+            length: VV
           }
         }
-        const rM = this.pages[this.pages.length - 1];
-        if (null !== rM && void 0 !== rM && rM.canGrow) {
-          const iM = Math.min(this.ceiling, Math.max(2 * rM.vL, rM.vL + MM));
-          if (iM - rM.vL >= MM) return rM.grow(iM), {
-            page: rM,
-            start: rM.Ld.allocate(MM),
-            length: MM
+        const eV = this.pages[this.pages.length - 1];
+        if (null !== eV && void 0 !== eV && eV.canGrow) {
+          const xV = Math.min(this.ceiling, Math.max(2 * eV.Jv, eV.Jv + VV));
+          if (xV - eV.Jv >= VV) return eV.grow(xV), {
+            page: eV,
+            start: eV.TE.allocate(VV),
+            length: VV
           }
         }
-        rM && rM !== this.pages[0] && 0 === rM.Ld.used && rM.drop();
-        const iM = Math.floor(1048576 / this.unitBytes),
-          OM = new wP(this, Math.max(MM, Math.min(this.ceiling, iM)));
-        return this.pages.push(OM), {
-          page: OM,
-          start: OM.Ld.allocate(MM),
-          length: MM
+        eV && eV !== this.pages[0] && 0 === eV.TE.used && eV.drop();
+        const xV = Math.floor(1048576 / this.unitBytes),
+          JV = new Pp(this, Math.max(VV, Math.min(this.ceiling, xV)));
+        return this.pages.push(JV), {
+          page: JV,
+          start: JV.TE.allocate(VV),
+          length: VV
         }
       }
-      free(MM) {
+      free(VV) {
         this.assertNotDrawing();
         const {
-          page: rM
-        } = MM;
-        rM.Ld.free(MM.start, MM.length), 0 === rM.Ld.used && rM !== this.pages[0] && rM !== this.pages[this.pages.length - 1] && rM.drop()
+          page: eV
+        } = VV;
+        eV.TE.free(VV.start, VV.length), 0 === eV.TE.used && eV !== this.pages[0] && eV !== this.pages[this.pages.length - 1] && eV.drop()
       }
       retire() {
-        for (const MM of this.pages) MM.retire()
+        for (const VV of this.pages) VV.retire()
       }
-      remove(MM) {
-        const rM = this.pages.indexOf(MM);
-        rM >= 0 && this.pages.splice(rM, 1)
+      remove(VV) {
+        const eV = this.pages.indexOf(VV);
+        eV >= 0 && this.pages.splice(eV, 1)
       }
-      ranOutOfMemory(MM, rM) {
-        this.warnOnce("outOfMemory", `out of GPU memory for a ${rM}-byte ${this.label} buffer; its chunks are meshed again`), this.failed = Math.min(this.failed, MM), this.ceiling = Math.max(1, Math.floor(Math.min(this.ceiling, MM) / 2));
-        const iM = performance.now();
-        iM >= this.shortageUntil && (this.forgetFailedAt = iM + Math.min(6e5, 3e4 * 2 ** this.shortages++), this.shortageUntil = iM + 1e3)
+      ranOutOfMemory(VV, eV) {
+        this.warnOnce("outOfMemory", `out of GPU memory for a ${eV}-byte ${this.label} buffer; its chunks are meshed again`), this.failed = Math.min(this.failed, VV), this.ceiling = Math.max(1, Math.floor(Math.min(this.ceiling, VV) / 2));
+        const xV = performance.now();
+        xV >= this.shortageUntil && (this.forgetFailedAt = xV + Math.min(6e5, 3e4 * 2 ** this.shortages++), this.shortageUntil = xV + 1e3)
       }
-      allocatedBuffer(MM) {
-        MM >= this.failed && (this.failed = 1 / 0);
-        const rM = Math.min(2 * MM, Math.floor((MM + this.failed) / 2));
-        this.ceiling = Math.min(this.limit, Math.max(this.ceiling, rM))
+      allocatedBuffer(VV) {
+        VV >= this.failed && (this.failed = 1 / 0);
+        const eV = Math.min(2 * VV, Math.floor((VV + this.failed) / 2));
+        this.ceiling = Math.min(this.limit, Math.max(this.ceiling, eV))
       }
       stats() {
-        let MM = 0,
-          rM = 0,
-          iM = 0,
-          OM = 0;
-        for (const SM of this.pages) MM += SM.vL, rM += SM.Ld.used, iM += SM.hasTwin ? SM.vL * this.twinUnitBytes : 0, OM += SM.allocatedBytes;
+        let VV = 0,
+          eV = 0,
+          xV = 0,
+          JV = 0;
+        for (const YV of this.pages) VV += YV.Jv, eV += YV.TE.used, xV += YV.hasTwin ? YV.Jv * this.twinUnitBytes : 0, JV += YV.allocatedBytes;
         return {
           pages: this.pages.length,
-          capacityBytes: MM * this.unitBytes,
-          usedBytes: rM * this.unitBytes,
-          twinBytes: iM,
-          allocatedBytes: OM
+          capacityBytes: VV * this.unitBytes,
+          usedBytes: eV * this.unitBytes,
+          twinBytes: xV,
+          allocatedBytes: JV
         }
       }
       assertNotDrawing() {}
       pageLimit() {
         const {
-          maxBufferSize: MM,
-          maxStorageBufferBindingSize: rM
+          maxBufferSize: VV,
+          maxStorageBufferBindingSize: eV
         } = this.device.limits;
-        let iM = Math.floor(Math.min(67108864, MM) / this.unitBytes);
-        return this.usage & GPUBufferUsage.STORAGE && (iM = Math.min(iM, Math.floor(rM / this.unitBytes))), this.twinUsage & GPUBufferUsage.STORAGE && (iM = Math.min(iM, Math.floor(rM / this.twinUnitBytes))), iM
+        let xV = Math.floor(Math.min(67108864, VV) / this.unitBytes);
+        return this.usage & GPUBufferUsage.STORAGE && (xV = Math.min(xV, Math.floor(eV / this.unitBytes))), this.twinUsage & GPUBufferUsage.STORAGE && (xV = Math.min(xV, Math.floor(eV / this.twinUnitBytes))), xV
       }
     }
-    const gP = 16383;
+    const Np = 16383;
 
-    function uP(MM, rM, iM, OM, SM) {
-      let jM = 0;
-      for (let aM = iM; aM < OM; aM += gP) MM.drawIndexed(6 * Math.min(gP, OM - aM), 1, 0, rM + 4 * aM, SM), jM++;
-      return jM
+    function Xp(VV, eV, xV, JV, YV) {
+      let UV = 0;
+      for (let yV = xV; yV < JV; yV += Np) VV.drawIndexed(6 * Math.min(Np, JV - yV), 1, 0, eV + 4 * yV, YV), UV++;
+      return UV
     }
-    class RP {
-      constructor(MM, rM) {
-        this.recordsGroup = rM, this.vertexArena = void 0, this.quadArena = void 0, this.quadPattern = void 0, this.fullSky = new Uint16Array(0), this.boundVertices = null, this.boundLight = null, this.boundRecords = null, this.boundRecordsLight = null, this.boundPattern = !1;
-        const iM = Ir.c.strideWithoutAtlas;
-        this.vertexArena = new tP(MM, iM, GPUBufferUsage.VERTEX, `terrain-vertices-${iM}`), this.quadArena = new tP(MM, UP.c, GPUBufferUsage.STORAGE, "terrain-quads", {
+    class Mp {
+      constructor(VV, eV) {
+        this.recordsGroup = eV, this.vertexArena = void 0, this.quadArena = void 0, this.quadPattern = void 0, this.fullSky = new Uint16Array(0), this.boundVertices = null, this.boundLight = null, this.boundRecords = null, this.boundRecordsLight = null, this.boundPattern = !1;
+        const xV = ue.i.strideWithoutAtlas;
+        this.vertexArena = new Ap(VV, xV, GPUBufferUsage.VERTEX, `terrain-vertices-${xV}`), this.quadArena = new Ap(VV, jp.e, GPUBufferUsage.STORAGE, "terrain-quads", {
           verticesPerUnit: 4,
           twinUsage: GPUBufferUsage.STORAGE
         });
-        const OM = (0, Kr.f)(new Uint16Array(98298), gP);
-        this.quadPattern = MM.createBuffer({
+        const JV = (0, se.d)(new Uint16Array(98298), Np);
+        this.quadPattern = VV.createBuffer({
           label: "terrain-quad-pattern",
-          size: OM.byteLength,
+          size: JV.byteLength,
           usage: GPUBufferUsage.INDEX | GPUBufferUsage.COPY_DST
-        }), MM.queue.writeBuffer(this.quadPattern, 0, OM)
+        }), VV.queue.writeBuffer(this.quadPattern, 0, JV)
       }
       retire() {
         this.vertexArena.retire(), this.quadArena.retire()
       }
-      set(MM, rM) {
-        const iM = rM.packedVertices,
-          OM = iM ? this.quadArena.allocate(MM.faceCount) : this.vertexArena.allocate(MM.vertexCount);
-        if (!OM) return !1;
-        MM.vertices = OM;
-        const SM = iM ? new Uint8Array(iM.buffer, iM.byteOffset, iM.byteLength) : new Uint8Array(rM.vertices);
-        return OM.page.write(OM, SM), !0
+      set(VV, eV) {
+        const xV = eV.packedVertices,
+          JV = xV ? this.quadArena.allocate(VV.faceCount) : this.vertexArena.allocate(VV.vertexCount);
+        if (!JV) return !1;
+        VV.vertices = JV;
+        const YV = xV ? new Uint8Array(xV.buffer, xV.byteOffset, xV.byteLength) : new Uint8Array(eV.vertices);
+        return JV.page.write(JV, YV), !0
       }
-      setLight(MM, rM) {
+      setLight(VV, eV) {
         const {
-          vertices: iM
-        } = MM;
-        iM && 0 !== rM.length && iM.page.live && (rM.length < MM.vertexCount ? iM.page.arena.warnOnce("shortLight", `a part's ${rM.length} light values are fewer than its ${MM.vertexCount} vertices, so its light is left as it was`) : (iM.page.writeLight(iM, rM), MM.lit = !0))
+          vertices: xV
+        } = VV;
+        xV && 0 !== eV.length && xV.page.live && (eV.length < VV.vertexCount ? xV.page.arena.warnOnce("shortLight", `a part's ${eV.length} light values are fewer than its ${VV.vertexCount} vertices, so its light is left as it was`) : (xV.page.writeLight(xV, eV), VV.lit = !0))
       }
-      lightFullSky(MM, rM) {
-        this.fullSky.length < rM && (this.fullSky = new Uint16Array(Math.max(rM, 4096)).fill(eP.h));
-        for (const iM of MM) {
-          const MM = iM.vertices;
-          MM.page.live && (MM.page.writeLight(MM, this.fullSky), iM.lit = !0)
+      lightFullSky(VV, eV) {
+        this.fullSky.length < eV && (this.fullSky = new Uint16Array(Math.max(eV, 4096)).fill(Fp.j));
+        for (const xV of VV) {
+          const VV = xV.vertices;
+          VV.page.live && (VV.page.writeLight(VV, this.fullSky), xV.lit = !0)
         }
       }
-      backed(MM) {
+      backed(VV) {
         const {
-          vertices: rM
-        } = MM;
-        return !!rM && rM.page.holds(rM)
+          vertices: eV
+        } = VV;
+        return !!eV && eV.page.holds(eV)
       }
-      lost(MM) {
+      lost(VV) {
         const {
-          vertices: rM
-        } = MM;
-        return !!rM && rM.page.lost(rM)
+          vertices: eV
+        } = VV;
+        return !!eV && eV.page.lost(eV)
       }
-      release(MM) {
-        MM.vertices && MM.vertices.page.arena.free(MM.vertices), MM.vertices = null, MM.lit = !1
+      release(VV) {
+        VV.vertices && VV.vertices.page.arena.free(VV.vertices), VV.vertices = null, VV.lit = !1
       }
-      setDrawing(MM) {
+      setDrawing(VV) {
         this.forgetBound()
       }
-      draw(MM, rM, iM) {
-        let OM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-          SM = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : rM.faceCount;
-        const jM = rM.vertices,
-          aM = jM.page,
-          PM = iM ? aM.twin : null;
-        if (!aM.holds(jM) || iM && !PM) return 0;
+      draw(VV, eV, xV) {
+        let JV = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
+          YV = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : eV.faceCount;
+        const UV = eV.vertices,
+          yV = UV.page,
+          pV = xV ? yV.twin : null;
+        if (!yV.holds(UV) || xV && !pV) return 0;
         const {
-          verticesPerUnit: nM
-        } = aM.arena;
-        let QM = jM.start * nM;
-        this.boundPattern || (MM.setIndexBuffer(this.quadPattern, "uint16"), this.boundPattern = !0);
-        const zM = OM + SM;
-        if (nM > 1) return aM.buffer === this.boundRecords && PM === this.boundRecordsLight || (MM.setBindGroup(1, this.recordsGroup(aM.buffer, PM)), this.boundRecords = aM.buffer, this.boundRecordsLight = PM), uP(MM, QM, OM, zM, rM.slot);
-        aM.buffer !== this.boundVertices && (MM.setVertexBuffer(0, aM.buffer), this.boundVertices = aM.buffer), PM && PM !== this.boundLight && (MM.setVertexBuffer(1, PM), this.boundLight = PM);
-        const LM = rM.faceCount;
-        return zM <= LM ? uP(MM, QM, OM, zM, rM.slot) : uP(MM, QM, OM, LM, rM.slot) + uP(MM, QM, Math.max(OM, LM) - LM, zM - LM, rM.slot)
+          verticesPerUnit: QV
+        } = yV.arena;
+        let nV = UV.start * QV;
+        this.boundPattern || (VV.setIndexBuffer(this.quadPattern, "uint16"), this.boundPattern = !0);
+        const wV = JV + YV;
+        if (QV > 1) return yV.buffer === this.boundRecords && pV === this.boundRecordsLight || (VV.setBindGroup(1, this.recordsGroup(yV.buffer, pV)), this.boundRecords = yV.buffer, this.boundRecordsLight = pV), Xp(VV, nV, JV, wV, eV.slot);
+        yV.buffer !== this.boundVertices && (VV.setVertexBuffer(0, yV.buffer), this.boundVertices = yV.buffer), pV && pV !== this.boundLight && (VV.setVertexBuffer(1, pV), this.boundLight = pV);
+        const ZV = eV.faceCount;
+        return wV <= ZV ? Xp(VV, nV, JV, wV, eV.slot) : Xp(VV, nV, JV, ZV, eV.slot) + Xp(VV, nV, Math.max(JV, ZV) - ZV, wV - ZV, eV.slot)
       }
       get buffersAwaitingVerdict() {
-        let MM = 0;
-        for (const rM of this.arenas()) MM += rM.awaitingVerdict;
-        return MM
+        let VV = 0;
+        for (const eV of this.arenas()) VV += eV.awaitingVerdict;
+        return VV
       }* arenas() {
         yield this.vertexArena, yield this.quadArena
       }
@@ -5579,117 +5579,117 @@ export const modules = {
         this.boundVertices = this.boundLight = this.boundRecords = this.boundRecordsLight = null, this.boundPattern = !1
       }
     }
-    class pP {
-      constructor(MM, rM, iM, OM) {
-        this.device = MM, this.splitBefore = rM, this.wanted = !1, this.pipeline = null, this.building = !0, this.unprojectBuffer = void 0, this.unproject = new Float32Array(2), this.near = 0, this.far = 0, this.copy = null, this.retired = null, this.unprojectBuffer = MM.createBuffer({
+    class zp {
+      constructor(VV, eV, xV, JV) {
+        this.device = VV, this.splitBefore = eV, this.wanted = !1, this.pipeline = null, this.building = !0, this.unprojectBuffer = void 0, this.unproject = new Float32Array(2), this.near = 0, this.far = 0, this.copy = null, this.retired = null, this.unprojectBuffer = VV.createBuffer({
           label: "scene-depth-unproject",
           size: 8,
           usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST
         });
-        const SM = MM.createShaderModule({
+        const YV = VV.createShaderModule({
           label: "scene-depth-copy",
-          code: (jM = iM._targetSignature._sampleCount > 1, `\n@group(0) @binding(0) var depth: ${jM?"texture_depth_multisampled_2d":"texture_depth_2d"};\n@group(0) @binding(1) var<uniform> unproject: vec2f;\n\n@vertex\nfn copyVertex(@builtin(vertex_index) i: u32) -> @builtin(position) vec4f {\n\tlet corner = array<vec2f, 3>(vec2f(-1.0, -1.0), vec2f(3.0, -1.0), vec2f(-1.0, 3.0))[i];\n\treturn vec4f(corner, 0.0, 1.0);\n}\n\n@fragment\nfn copyFragment(@builtin(position) pixel: vec4f) -> @location(0) f32 {\n\tlet d = textureLoad(depth, vec2i(pixel.xy), 0);\n\tif (d <= 0.0) {\n\t\treturn 0.0;\n\t}\n\treturn unproject.y / (2.0 * d + unproject.x);\n}\n`)
+          code: (UV = xV._targetSignature._sampleCount > 1, `\n@group(0) @binding(0) var depth: ${UV?"texture_depth_multisampled_2d":"texture_depth_2d"};\n@group(0) @binding(1) var<uniform> unproject: vec2f;\n\n@vertex\nfn copyVertex(@builtin(vertex_index) i: u32) -> @builtin(position) vec4f {\n\tlet corner = array<vec2f, 3>(vec2f(-1.0, -1.0), vec2f(3.0, -1.0), vec2f(-1.0, 3.0))[i];\n\treturn vec4f(corner, 0.0, 1.0);\n}\n\n@fragment\nfn copyFragment(@builtin(position) pixel: vec4f) -> @location(0) f32 {\n\tlet d = textureLoad(depth, vec2i(pixel.xy), 0);\n\tif (d <= 0.0) {\n\t\treturn 0.0;\n\t}\n\treturn unproject.y / (2.0 * d + unproject.x);\n}\n`)
         });
-        var jM;
-        MM.createRenderPipelineAsync({
+        var UV;
+        VV.createRenderPipelineAsync({
           label: "scene-depth-copy",
           layout: "auto",
           vertex: {
-            module: SM,
+            module: YV,
             entryPoint: "copyVertex"
           },
           fragment: {
-            module: SM,
+            module: YV,
             entryPoint: "copyFragment",
             targets: [{
               format: "r32float"
             }]
           }
-        }).then((MM => {
-          this.pipeline = MM, this.building = !1
-        }), (MM => {
-          this.building = !1, console.error("Lite: the scene depth copy failed to build, so liquids find nothing behind them", MM)
-        })), iM._executeWithTransmission = () => this.execute(iM, OM)
+        }).then((VV => {
+          this.pipeline = VV, this.building = !1
+        }), (VV => {
+          this.building = !1, console.error("Lite: the scene depth copy failed to build, so liquids find nothing behind them", VV)
+        })), xV._executeWithTransmission = () => this.execute(xV, JV)
       }
       get compiling() {
         return this.building
       }
-      setWanted(MM) {
-        this.wanted = MM
+      setWanted(VV) {
+        this.wanted = VV
       }
-      setPlanes(MM, rM) {
-        MM === this.near && rM === this.far || (this.near = MM, this.far = rM, this.unproject[0] = MM / (rM - MM), this.unproject[1] = rM * MM / (rM - MM), this.device.queue.writeBuffer(this.unprojectBuffer, 0, this.unproject))
+      setPlanes(VV, eV) {
+        VV === this.near && eV === this.far || (this.near = VV, this.far = eV, this.unproject[0] = VV / (eV - VV), this.unproject[1] = eV * VV / (eV - VV), this.device.queue.writeBuffer(this.unprojectBuffer, 0, this.unproject))
       }
       get view() {
-        var MM, rM;
-        return null !== (MM = null === (rM = this.copy) || void 0 === rM ? void 0 : rM.view) && void 0 !== MM ? MM : null
+        var VV, eV;
+        return null !== (VV = null === (eV = this.copy) || void 0 === eV ? void 0 : eV.view) && void 0 !== VV ? VV : null
       }
-      execute(MM, rM) {
-        var iM;
-        null === (iM = this.retired) || void 0 === iM || iM.destroy(), this.retired = null;
-        const OM = Cr(rM),
-          SM = MM._transparentBindings,
-          jM = this.wanted && this.pipeline ? this.splitIndex(SM) : -1,
-          aM = MM._colorAttachment,
-          PM = aM.resolveTarget;
-        jM >= 0 && (aM.resolveTarget = void 0, OP(MM, !0));
-        let nM = OM.beginRenderPass(MM._renderPassDescriptor);
-        nM.setBindGroup(0, MM._sceneBG);
-        let QM = this.drawList(nM, rM, MM._opaqueBindings, 0, MM._opaqueBindings.length);
-        if (QM += this.drawList(nM, rM, MM._directBindings, 0, MM._directBindings.length), QM += this.drawList(nM, rM, SM, 0, jM >= 0 ? jM : SM.length), nM.end(), jM < 0) return QM;
-        OP(MM);
-        const zM = MM._renderPassDescriptor.depthStencilAttachment,
+      execute(VV, eV) {
+        var xV;
+        null === (xV = this.retired) || void 0 === xV || xV.destroy(), this.retired = null;
+        const JV = Te(eV),
+          YV = VV._transparentBindings,
+          UV = this.wanted && this.pipeline ? this.splitIndex(YV) : -1,
+          yV = VV._colorAttachment,
+          pV = yV.resolveTarget;
+        UV >= 0 && (yV.resolveTarget = void 0, ep(VV, !0));
+        let QV = JV.beginRenderPass(VV._renderPassDescriptor);
+        QV.setBindGroup(0, VV._sceneBG);
+        let nV = this.drawList(QV, eV, VV._opaqueBindings, 0, VV._opaqueBindings.length);
+        if (nV += this.drawList(QV, eV, VV._directBindings, 0, VV._directBindings.length), nV += this.drawList(QV, eV, YV, 0, UV >= 0 ? UV : YV.length), QV.end(), UV < 0) return nV;
+        ep(VV);
+        const wV = VV._renderPassDescriptor.depthStencilAttachment,
           {
-            depthLoadOp: LM,
-            stencilLoadOp: mM
-          } = zM,
-          HM = aM.loadOp;
-        aM.resolveTarget = PM;
+            depthLoadOp: ZV,
+            stencilLoadOp: vV
+          } = wV,
+          rV = yV.loadOp;
+        yV.resolveTarget = pV;
         try {
-          this.copyDepth(OM, MM), aM.loadOp = "load", zM.depthLoadOp = "load", mM && (zM.stencilLoadOp = "load"), nM = OM.beginRenderPass(MM._renderPassDescriptor), nM.setBindGroup(0, MM._sceneBG), QM += this.drawList(nM, rM, SM, jM, SM.length), nM.end()
+          this.copyDepth(JV, VV), yV.loadOp = "load", wV.depthLoadOp = "load", vV && (wV.stencilLoadOp = "load"), QV = JV.beginRenderPass(VV._renderPassDescriptor), QV.setBindGroup(0, VV._sceneBG), nV += this.drawList(QV, eV, YV, UV, YV.length), QV.end()
         } finally {
-          aM.loadOp = HM, zM.depthLoadOp = LM, zM.stencilLoadOp = mM
+          yV.loadOp = rV, wV.depthLoadOp = ZV, wV.stencilLoadOp = vV
         }
-        return QM
+        return nV
       }
-      splitIndex(MM) {
-        for (let rM = 0; rM < MM.length; rM++)
-          if (MM[rM].renderable === this.splitBefore) return rM;
+      splitIndex(VV) {
+        for (let eV = 0; eV < VV.length; eV++)
+          if (VV[eV].renderable === this.splitBefore) return eV;
         return -1
       }
-      drawList(MM, rM, iM, OM, SM) {
-        let jM = null,
-          aM = 0;
-        for (let PM = OM; PM < SM; PM++) {
-          const OM = iM[PM],
-            SM = OM.renderable.mesh;
-          SM && !1 === SM.visible || (OM.pipeline !== jM && (MM.setPipeline(OM.pipeline), jM = OM.pipeline), aM += OM.draw(MM, rM))
+      drawList(VV, eV, xV, JV, YV) {
+        let UV = null,
+          yV = 0;
+        for (let pV = JV; pV < YV; pV++) {
+          const JV = xV[pV],
+            YV = JV.renderable.mesh;
+          YV && !1 === YV.visible || (JV.pipeline !== UV && (VV.setPipeline(JV.pipeline), UV = JV.pipeline), yV += JV.draw(VV, eV))
         }
-        return aM
+        return yV
       }
-      copyDepth(MM, rM) {
-        var iM, OM;
-        const SM = (null !== (iM = rM._config.depth) && void 0 !== iM ? iM : rM._config.rt)._depthTexture,
-          jM = (null === (OM = this.copy) || void 0 === OM ? void 0 : OM.source) === SM ? this.copy : this.remakeCopy(SM),
-          aM = MM.beginRenderPass(jM.pass);
-        aM.setPipeline(this.pipeline), aM.setBindGroup(0, jM.bindGroup), aM.draw(3), aM.end()
+      copyDepth(VV, eV) {
+        var xV, JV;
+        const YV = (null !== (xV = eV._config.depth) && void 0 !== xV ? xV : eV._config.rt)._depthTexture,
+          UV = (null === (JV = this.copy) || void 0 === JV ? void 0 : JV.source) === YV ? this.copy : this.remakeCopy(YV),
+          yV = VV.beginRenderPass(UV.pass);
+        yV.setPipeline(this.pipeline), yV.setBindGroup(0, UV.bindGroup), yV.draw(3), yV.end()
       }
-      remakeCopy(MM) {
-        var rM, iM;
-        this.retired = null !== (rM = null === (iM = this.copy) || void 0 === iM ? void 0 : iM.texture) && void 0 !== rM ? rM : null;
-        const OM = this.device.createTexture({
+      remakeCopy(VV) {
+        var eV, xV;
+        this.retired = null !== (eV = null === (xV = this.copy) || void 0 === xV ? void 0 : xV.texture) && void 0 !== eV ? eV : null;
+        const JV = this.device.createTexture({
             label: "scene-depth",
-            size: [MM.width, MM.height],
+            size: [VV.width, VV.height],
             format: "r32float",
             usage: GPUTextureUsage.RENDER_ATTACHMENT | GPUTextureUsage.TEXTURE_BINDING
           }),
-          SM = OM.createView(),
-          jM = this.device.createBindGroup({
+          YV = JV.createView(),
+          UV = this.device.createBindGroup({
             label: "scene-depth-copy",
             layout: this.pipeline.getBindGroupLayout(0),
             entries: [{
               binding: 0,
-              resource: MM.createView({
+              resource: VV.createView({
                 aspect: "depth-only"
               })
             }, {
@@ -5699,36 +5699,36 @@ export const modules = {
               }
             }]
           }),
-          aM = {
+          yV = {
             label: "scene-depth-copy",
             colorAttachments: [{
-              view: SM,
+              view: YV,
               loadOp: "clear",
               storeOp: "store",
               clearValue: [0, 0, 0, 0]
             }]
           };
         return this.copy = {
-          source: MM,
-          texture: OM,
-          view: SM,
-          bindGroup: jM,
-          pass: aM
+          source: VV,
+          texture: JV,
+          view: YV,
+          bindGroup: UV,
+          pass: yV
         }, this.copy
       }
     }
-    const WP = "rgba8unorm";
+    const Gp = "rgba8unorm";
 
-    function sP(MM) {
-      return MM ? 15 : 1
+    function Wp(VV) {
+      return VV ? 15 : 1
     }
-    class DP {
-      constructor(MM, rM, iM, OM) {
-        this.device = MM, this.terrain = OM, this.pipeline = null, this.building = !0, this.edge = void 0, this.layout = void 0, this.empty = void 0, this.cameraBuffer = void 0, this.camera = new Float32Array(16), this.targets = null, this.retired = null, this.edge = rM._targetSignature._sampleCount > 1, this.cameraBuffer = MM.createBuffer({
+    class Rp {
+      constructor(VV, eV, xV, JV) {
+        this.device = VV, this.terrain = JV, this.pipeline = null, this.building = !0, this.edge = void 0, this.layout = void 0, this.empty = void 0, this.cameraBuffer = void 0, this.camera = new Float32Array(16), this.targets = null, this.retired = null, this.edge = eV._targetSignature._sampleCount > 1, this.cameraBuffer = VV.createBuffer({
           label: "sun-shadow-mask-camera",
           size: 64,
           usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST
-        }), this.layout = MM.createBindGroupLayout({
+        }), this.layout = VV.createBindGroupLayout({
           label: "sun-shadow-mask",
           entries: [{
             binding: 0,
@@ -5750,158 +5750,158 @@ export const modules = {
             }
           }]
         });
-        const SM = MM.createBindGroupLayout({
+        const YV = VV.createBindGroupLayout({
           label: "sun-shadow-mask-empty",
           entries: []
         });
-        this.empty = MM.createBindGroup({
+        this.empty = VV.createBindGroup({
           label: "sun-shadow-mask-empty",
-          layout: SM,
+          layout: YV,
           entries: []
         });
-        const jM = MM.createShaderModule({
+        const UV = VV.createShaderModule({
           label: "sun-shadow-mask",
-          code: (aM = this.edge, `${(0,qr.w)()}${QO({sunShadow:!0,airShadow:!1},!0,"lit")}\n@group(0) @binding(0) var bloxdSmDepth: texture_2d<f32>;\nstruct BloxdSmCamera {\n\teye: vec3f,\n\ttolerance: f32,\n\tright: vec3f,\n\tdepthScale: f32,\n\tup: vec3f,\n\tdepthBias: f32,\n\tforward: vec3f,\n}\n@group(0) @binding(1) var<uniform> bloxdSmCamera: BloxdSmCamera;\n@group(0) @binding(2) var bloxdSmNormal: texture_2d<f32>;\n${aM?Vi:""}\n@vertex\nfn maskVertex(@builtin(vertex_index) i: u32) -> @builtin(position) vec4f {\n\tlet corner = array<vec2f, 3>(vec2f(-1.0, -1.0), vec2f(3.0, -1.0), vec2f(-1.0, 3.0))[i];\n\treturn vec4f(corner, 0.0, 1.0);\n}\n\n@fragment\nfn maskFragment(@builtin(position) pixel: vec4f) -> @location(0) vec4f {\n\tlet at = vec2i(pixel.xy);\n\tlet d = textureLoad(bloxdSmDepth, at, 0).x;\n\tif (d <= 0.0) {\n\t\treturn vec4f(${sP(aM)}.0, 0.0, 0.0, 0.0);\n\t}\n\t// View z from the depth as it is, then along the pixel's ray: an inverse view-projection would round d against 1\n\tlet size = vec2f(textureDimensions(bloxdSmDepth));\n\tlet ndc = vec2f(pixel.x / size.x * 2.0 - 1.0, 1.0 - pixel.y / size.y * 2.0);\n\tlet z = bloxdSmCamera.depthScale / (2.0 * d + bloxdSmCamera.depthBias);\n\tlet packed = textureLoad(bloxdSmNormal, at, 0);\n\tbloxdSpShadowPosition = bloxdSmCamera.eye + z * (bloxdSmCamera.forward + ndc.x * bloxdSmCamera.right + ndc.y * bloxdSmCamera.up);\n\t// Capped well inside the quarter block origins start off their face: past it, a few pixels\n\tbloxdSpPlaneTolerance = min(z * z * bloxdSmCamera.tolerance, 0.125);\n\tbloxdSpShadowNormal = normalize(packed.xyz * 2.0 - 1.0);\n\tbloxdSpShadowEmissive = packed.w > 0.5;\n\treturn ${aM?"vec4f(bloxdSpNormalCode(bloxdSpShadowNormal) * 2.0 + bloxdShadow(), d, 0.0, 0.0)":"vec4f(bloxdShadow())"};\n}\n`)
+          code: (yV = this.edge, `${(0,Se.B)()}${pJ({sunShadow:!0,airShadow:!1},!0,"lit")}\n@group(0) @binding(0) var bloxdSmDepth: texture_2d<f32>;\nstruct BloxdSmCamera {\n\teye: vec3f,\n\ttolerance: f32,\n\tright: vec3f,\n\tdepthScale: f32,\n\tup: vec3f,\n\tdepthBias: f32,\n\tforward: vec3f,\n}\n@group(0) @binding(1) var<uniform> bloxdSmCamera: BloxdSmCamera;\n@group(0) @binding(2) var bloxdSmNormal: texture_2d<f32>;\n${yV?Sx:""}\n@vertex\nfn maskVertex(@builtin(vertex_index) i: u32) -> @builtin(position) vec4f {\n\tlet corner = array<vec2f, 3>(vec2f(-1.0, -1.0), vec2f(3.0, -1.0), vec2f(-1.0, 3.0))[i];\n\treturn vec4f(corner, 0.0, 1.0);\n}\n\n@fragment\nfn maskFragment(@builtin(position) pixel: vec4f) -> @location(0) vec4f {\n\tlet at = vec2i(pixel.xy);\n\tlet d = textureLoad(bloxdSmDepth, at, 0).x;\n\tif (d <= 0.0) {\n\t\treturn vec4f(${Wp(yV)}.0, 0.0, 0.0, 0.0);\n\t}\n\t// View z from the depth as it is, then along the pixel's ray: an inverse view-projection would round d against 1\n\tlet size = vec2f(textureDimensions(bloxdSmDepth));\n\tlet ndc = vec2f(pixel.x / size.x * 2.0 - 1.0, 1.0 - pixel.y / size.y * 2.0);\n\tlet z = bloxdSmCamera.depthScale / (2.0 * d + bloxdSmCamera.depthBias);\n\tlet packed = textureLoad(bloxdSmNormal, at, 0);\n\tbloxdSpShadowPosition = bloxdSmCamera.eye + z * (bloxdSmCamera.forward + ndc.x * bloxdSmCamera.right + ndc.y * bloxdSmCamera.up);\n\t// Capped well inside the quarter block origins start off their face: past it, a few pixels\n\tbloxdSpPlaneTolerance = min(z * z * bloxdSmCamera.tolerance, 0.125);\n\tbloxdSpShadowNormal = normalize(packed.xyz * 2.0 - 1.0);\n\tbloxdSpShadowEmissive = packed.w > 0.5;\n\treturn ${yV?"vec4f(bloxdSpNormalCode(bloxdSpShadowNormal) * 2.0 + bloxdShadow(), d, 0.0, 0.0)":"vec4f(bloxdShadow())"};\n}\n`)
         });
-        var aM;
-        MM.createRenderPipelineAsync({
+        var yV;
+        VV.createRenderPipelineAsync({
           label: "sun-shadow-mask",
-          layout: MM.createPipelineLayout({
-            bindGroupLayouts: [this.layout, SM, SM, Bj(MM, {
+          layout: VV.createPipelineLayout({
+            bindGroupLayouts: [this.layout, YV, YV, fU(VV, {
               depth: !1,
               sunShadow: !0
             })]
           }),
           vertex: {
-            module: jM,
+            module: UV,
             entryPoint: "maskVertex"
           },
           fragment: {
-            module: jM,
+            module: UV,
             entryPoint: "maskFragment",
             targets: [{
               format: this.maskFormat
             }]
           }
-        }).then((MM => {
-          this.pipeline = MM, this.building = !1
-        }), (MM => {
-          this.building = !1, console.error("Lite: the sun shadow mask's trace failed to build, so terrain reading it is lit", MM)
+        }).then((VV => {
+          this.pipeline = VV, this.building = !1
+        }), (VV => {
+          this.building = !1, console.error("Lite: the sun shadow mask's trace failed to build, so terrain reading it is lit", VV)
         }));
-        const PM = rM._executeWithTransmission;
-        rM._executeWithTransmission = MM => this.execute(rM, iM, (() => PM ? PM(MM) : function(MM, rM) {
-          const iM = Cr(rM).beginRenderPass(MM._renderPassDescriptor);
-          iM.setBindGroup(0, MM._sceneBG);
-          let OM = kP(iM, rM, MM._opaqueBindings);
-          return OM += kP(iM, rM, MM._directBindings), OM += kP(iM, rM, MM._transparentBindings), iM.end(), OM
-        }(rM, iM)))
+        const pV = eV._executeWithTransmission;
+        eV._executeWithTransmission = VV => this.execute(eV, xV, (() => pV ? pV(VV) : function(VV, eV) {
+          const xV = Te(eV).beginRenderPass(VV._renderPassDescriptor);
+          xV.setBindGroup(0, VV._sceneBG);
+          let JV = gp(xV, eV, VV._opaqueBindings);
+          return JV += gp(xV, eV, VV._directBindings), JV += gp(xV, eV, VV._transparentBindings), xV.end(), JV
+        }(eV, xV)))
       }
       get compiling() {
         return this.building
       }
       get view() {
-        var MM, rM;
-        return null !== (MM = null === (rM = this.targets) || void 0 === rM ? void 0 : rM.maskView) && void 0 !== MM ? MM : null
+        var VV, eV;
+        return null !== (VV = null === (eV = this.targets) || void 0 === eV ? void 0 : eV.maskView) && void 0 !== VV ? VV : null
       }
       get maskFormat() {
         return this.edge ? "rg32float" : "r8unorm"
       }
-      prepare(MM) {
-        ! function(MM, rM) {
-          const iM = MM.worldMatrix,
-            OM = MM.projectionMatrix,
-            SM = 1 / OM[0],
-            jM = 1 / OM[5],
-            aM = MM.far * MM.near / (MM.far - MM.near);
-          rM[0] = MM.eye[0], rM[1] = MM.eye[1], rM[2] = MM.eye[2], rM[3] = 2 ** -23 / aM, rM[4] = iM[0] * SM, rM[5] = iM[1] * SM, rM[6] = iM[2] * SM, rM[7] = aM, rM[8] = iM[4] * jM, rM[9] = iM[5] * jM, rM[10] = iM[6] * jM, rM[11] = MM.near / (MM.far - MM.near), rM[12] = iM[8], rM[13] = iM[9], rM[14] = iM[10], rM[15] = 0
-        }(MM, this.camera), this.device.queue.writeBuffer(this.cameraBuffer, 0, this.camera)
+      prepare(VV) {
+        ! function(VV, eV) {
+          const xV = VV.worldMatrix,
+            JV = VV.projectionMatrix,
+            YV = 1 / JV[0],
+            UV = 1 / JV[5],
+            yV = VV.far * VV.near / (VV.far - VV.near);
+          eV[0] = VV.eye[0], eV[1] = VV.eye[1], eV[2] = VV.eye[2], eV[3] = 2 ** -23 / yV, eV[4] = xV[0] * YV, eV[5] = xV[1] * YV, eV[6] = xV[2] * YV, eV[7] = yV, eV[8] = xV[4] * UV, eV[9] = xV[5] * UV, eV[10] = xV[6] * UV, eV[11] = VV.near / (VV.far - VV.near), eV[12] = xV[8], eV[13] = xV[9], eV[14] = xV[10], eV[15] = 0
+        }(VV, this.camera), this.device.queue.writeBuffer(this.cameraBuffer, 0, this.camera)
       }
-      execute(MM, rM, iM) {
-        if (this.retire(), !this.terrain.readsMask) return iM();
-        const OM = this.targetsFor(MM),
-          SM = Cr(rM),
-          jM = MM._renderPassDescriptor.depthStencilAttachment;
-        this.edge || (OM.prepass.depthStencilAttachment.view = jM.view);
-        const aM = this.terrain.drawPrepass(SM, OM.prepass, MM._sceneBG);
-        if (0 === aM) return iM();
-        if (this.trace(SM, OM), this.edge) return aM + 1 + iM();
+      execute(VV, eV, xV) {
+        if (this.retire(), !this.terrain.readsMask) return xV();
+        const JV = this.targetsFor(VV),
+          YV = Te(eV),
+          UV = VV._renderPassDescriptor.depthStencilAttachment;
+        this.edge || (JV.prepass.depthStencilAttachment.view = UV.view);
+        const yV = this.terrain.drawPrepass(YV, JV.prepass, VV._sceneBG);
+        if (0 === yV) return xV();
+        if (this.trace(YV, JV), this.edge) return yV + 1 + xV();
         const {
-          depthLoadOp: PM,
-          stencilLoadOp: nM
-        } = jM;
-        jM.depthLoadOp = "load", nM && (jM.stencilLoadOp = "load");
+          depthLoadOp: pV,
+          stencilLoadOp: QV
+        } = UV;
+        UV.depthLoadOp = "load", QV && (UV.stencilLoadOp = "load");
         try {
-          return aM + 1 + iM()
+          return yV + 1 + xV()
         } finally {
-          jM.depthLoadOp = PM, jM.stencilLoadOp = nM
+          UV.depthLoadOp = pV, UV.stencilLoadOp = QV
         }
       }
-      trace(MM, rM) {
-        const iM = this.terrain.sunShadowGroup(),
-          OM = MM.beginRenderPass(rM.trace);
-        this.pipeline && iM && (OM.setPipeline(this.pipeline), OM.setBindGroup(0, rM.bindGroup), OM.setBindGroup(1, this.empty), OM.setBindGroup(2, this.empty), OM.setBindGroup(3, iM), OM.draw(3)), OM.end()
+      trace(VV, eV) {
+        const xV = this.terrain.sunShadowGroup(),
+          JV = VV.beginRenderPass(eV.trace);
+        this.pipeline && xV && (JV.setPipeline(this.pipeline), JV.setBindGroup(0, eV.bindGroup), JV.setBindGroup(1, this.empty), JV.setBindGroup(2, this.empty), JV.setBindGroup(3, xV), JV.draw(3)), JV.end()
       }
       retire() {
-        const MM = this.retired;
-        var rM;
-        MM && (MM.mask.destroy(), MM.normals.destroy(), null === (rM = MM.depth) || void 0 === rM || rM.destroy(), this.retired = null)
+        const VV = this.retired;
+        var eV;
+        VV && (VV.mask.destroy(), VV.normals.destroy(), null === (eV = VV.depth) || void 0 === eV || eV.destroy(), this.retired = null)
       }
-      targetsFor(MM) {
-        var rM, iM;
-        const OM = (null !== (rM = MM._config.depth) && void 0 !== rM ? rM : MM._config.rt)._depthTexture;
-        return (null === (iM = this.targets) || void 0 === iM ? void 0 : iM.source) === OM ? this.targets : this.remake(MM, OM)
+      targetsFor(VV) {
+        var eV, xV;
+        const JV = (null !== (eV = VV._config.depth) && void 0 !== eV ? eV : VV._config.rt)._depthTexture;
+        return (null === (xV = this.targets) || void 0 === xV ? void 0 : xV.source) === JV ? this.targets : this.remake(VV, JV)
       }
-      remake(MM, rM) {
-        var iM;
+      remake(VV, eV) {
+        var xV;
         this.retired = this.targets;
-        const OM = [rM.width, rM.height],
-          SM = this.device.createTexture({
+        const JV = [eV.width, eV.height],
+          YV = this.device.createTexture({
             label: "sun-shadow-mask",
-            size: OM,
+            size: JV,
             format: this.maskFormat,
             usage: GPUTextureUsage.RENDER_ATTACHMENT | GPUTextureUsage.TEXTURE_BINDING
           }),
-          jM = this.device.createTexture({
+          UV = this.device.createTexture({
             label: "sun-shadow-prepass-normals",
-            size: OM,
-            format: WP,
+            size: JV,
+            format: Gp,
             usage: GPUTextureUsage.RENDER_ATTACHMENT | GPUTextureUsage.TEXTURE_BINDING
           }),
-          aM = null !== (iM = MM._targetSignature._depthStencilFormat) && void 0 !== iM ? iM : rM.format,
-          PM = this.edge ? this.device.createTexture({
+          yV = null !== (xV = VV._targetSignature._depthStencilFormat) && void 0 !== xV ? xV : eV.format,
+          pV = this.edge ? this.device.createTexture({
             label: "sun-shadow-prepass-depth",
-            size: OM,
-            format: aM,
+            size: JV,
+            format: yV,
             usage: GPUTextureUsage.RENDER_ATTACHMENT | GPUTextureUsage.TEXTURE_BINDING
           }) : null,
-          nM = MM._renderPassDescriptor.depthStencilAttachment,
-          QM = aM.includes("stencil"),
-          zM = {
+          QV = VV._renderPassDescriptor.depthStencilAttachment,
+          nV = yV.includes("stencil"),
+          wV = {
             label: "sun-shadow-prepass",
             colorAttachments: [{
-              view: jM.createView(),
+              view: UV.createView(),
               loadOp: "clear",
               storeOp: "store",
               clearValue: [.5, 1, .5, 0]
             }],
             depthStencilAttachment: {
-              view: PM ? PM.createView() : nM.view,
-              depthClearValue: nM.depthClearValue,
+              view: pV ? pV.createView() : QV.view,
+              depthClearValue: QV.depthClearValue,
               depthLoadOp: "clear",
               depthStoreOp: "store",
-              ...QM ? {
-                stencilClearValue: nM.stencilClearValue,
+              ...nV ? {
+                stencilClearValue: QV.stencilClearValue,
                 stencilLoadOp: "clear",
                 stencilStoreOp: "store"
               } : {}
             }
           },
-          LM = this.device.createBindGroup({
+          ZV = this.device.createBindGroup({
             label: "sun-shadow-mask",
             layout: this.layout,
             entries: [{
               binding: 0,
-              resource: (null !== PM && void 0 !== PM ? PM : rM).createView({
+              resource: (null !== pV && void 0 !== pV ? pV : eV).createView({
                 aspect: "depth-only"
               })
             }, {
@@ -5911,213 +5911,213 @@ export const modules = {
               }
             }, {
               binding: 2,
-              resource: jM.createView()
+              resource: UV.createView()
             }]
           }),
-          mM = {
+          vV = {
             label: "sun-shadow-mask",
             colorAttachments: [{
-              view: SM.createView(),
+              view: YV.createView(),
               loadOp: "clear",
               storeOp: "store",
-              clearValue: [sP(this.edge), 0, 0, 0]
+              clearValue: [Wp(this.edge), 0, 0, 0]
             }]
           };
         return this.targets = {
-          source: rM,
-          mask: SM,
-          maskView: SM.createView(),
-          normals: jM,
-          depth: PM,
-          bindGroup: LM,
-          prepass: zM,
-          trace: mM
+          source: eV,
+          mask: YV,
+          maskView: YV.createView(),
+          normals: UV,
+          depth: pV,
+          bindGroup: ZV,
+          prepass: wV,
+          trace: vV
         }, this.targets
       }
     }
 
-    function kP(MM, rM, iM) {
-      let OM = null,
-        SM = 0;
-      for (const jM of iM) {
-        const iM = jM.renderable.mesh;
-        iM && !1 === iM.visible || (jM.pipeline !== OM && (MM.setPipeline(jM.pipeline), OM = jM.pipeline), SM += jM.draw(MM, rM))
+    function gp(VV, eV, xV) {
+      let JV = null,
+        YV = 0;
+      for (const UV of xV) {
+        const xV = UV.renderable.mesh;
+        xV && !1 === xV.visible || (UV.pipeline !== JV && (VV.setPipeline(UV.pipeline), JV = UV.pipeline), YV += UV.draw(VV, eV))
       }
-      return SM
+      return YV
     }
-    const ZP = 6e4,
-      oP = {
+    const Dp = 6e4,
+      ip = {
         status: "ok"
       },
-      fP = {
+      Cp = {
         status: "skipped"
       };
-    async function YP(MM, rM) {
+    async function ap(VV, eV) {
       const {
-        isCancelled: iM
-      } = MM;
-      if (iM()) return {
-        status: "Ti"
+        isCancelled: xV
+      } = VV;
+      if (xV()) return {
+        status: "pJ"
       };
       const {
-        target: OM
-      } = rM;
-      if (!OM) return console.warn("Shader pack: skipped the compile check, as Lite hasn't bound terrain yet"), {
+        target: JV
+      } = eV;
+      if (!JV) return console.warn("Shader pack: skipped the compile check, as Lite hasn't bound terrain yet"), {
         status: "skipped"
       };
-      const SM = [],
-        jM = Promise.all(Array.from(new Set(MM.materials), (async iM => {
-          SM.push(await async function(MM, rM, iM, OM) {
-            const SM = {
-              lighting: MM.lighting,
-              dirLightCount: Math.min(MM.dirLightCount, 4),
-              nh: MM.runtime
+      const YV = [],
+        UV = Promise.all(Array.from(new Set(VV.materials), (async xV => {
+          YV.push(await async function(VV, eV, xV, JV) {
+            const YV = {
+              lighting: VV.lighting,
+              dirLightCount: Math.min(VV.dirLightCount, 4),
+              Xk: VV.runtime
             };
             try {
-              const jM = rM.material(OM);
-              return jM && DO(rM.programKey(jM, !1, SM)) ? (await jM.ready, MM.isCancelled() ? oP : jM.bindGroupLayout ? await async function(MM, rM, iM, OM) {
+              const UV = eV.material(JV);
+              return UV && RJ(eV.programKey(UV, !1, YV)) ? (await UV.ready, VV.isCancelled() ? ip : UV.bindGroupLayout ? await async function(VV, eV, xV, JV) {
                 const {
-                  device: SM
-                } = MM;
-                let jM, aM;
-                SM.pushErrorScope("validation");
+                  device: YV
+                } = VV;
+                let UV, yV;
+                YV.pushErrorScope("validation");
                 try {
-                  jM = MM.pipelineBuild(rM, iM, OM)
+                  UV = VV.pipelineBuild(eV, xV, JV)
                 } finally {
-                  aM = SM.popErrorScope().catch((() => null))
+                  yV = YV.popErrorScope().catch((() => null))
                 }
-                const [PM, nM] = await Promise.all([aM, jM.built.then((() => null), (MM => null !== MM && void 0 !== MM ? MM : new Error("pipeline failed")))]);
-                if (!PM && !nM) return oP;
-                const QM = await NP(jM.module),
-                  zM = QM.length > 0 ? QM.map((MM => `${jM.name} ${MM.lineNum}:${MM.linePos}: ${MM.message}`)).join("\n") : `${jM.name}: ${AP(null!==nM&&void 0!==nM?nM:PM)}`;
+                const [pV, QV] = await Promise.all([yV, UV.built.then((() => null), (VV => null !== VV && void 0 !== VV ? VV : new Error("pipeline failed")))]);
+                if (!pV && !QV) return ip;
+                const nV = await op(UV.module),
+                  wV = nV.length > 0 ? nV.map((VV => `${UV.name} ${VV.lineNum}:${VV.linePos}: ${VV.message}`)).join("\n") : `${UV.name}: ${cp(null!==QV&&void 0!==QV?QV:pV)}`;
                 return {
                   status: "failed",
-                  material: rM.model.name,
-                  message: zM
+                  material: eV.model.name,
+                  message: wV
                 }
-              }(rM, jM, rM.programKey(jM, "none" !== jM.texture, SM), iM): (console.warn(`Shader pack: skipped the compile check for "${OM.name}", whose textures failed to load`), fP)) : oP
-            } catch (jM) {
+              }(eV, UV, eV.programKey(UV, "none" !== UV.texture, YV), xV): (console.warn(`Shader pack: skipped the compile check for "${JV.name}", whose textures failed to load`), Cp)) : ip
+            } catch (UV) {
               return {
                 status: "failed",
-                material: OM.name,
-                message: AP(jM)
+                material: JV.name,
+                message: cp(UV)
               }
             }
-          }(MM, rM, OM, iM))
+          }(VV, eV, JV, xV))
         }))),
-        aM = function(MM, rM) {
-          let iM, OM, SM = !1;
-          const jM = new Promise((jM => {
-            var aM;
-            iM = setTimeout((() => {
-              jM("timeout")
-            }), null !== (aM = rM.timeoutMs) && void 0 !== aM ? aM : ZP), OM = setInterval((() => {
-              rM.isCancelled() && jM("Ti")
-            }), 50), MM.lost.then((() => {
-              SM = !0, jM("lost")
+        yV = function(VV, eV) {
+          let xV, JV, YV = !1;
+          const UV = new Promise((UV => {
+            var yV;
+            xV = setTimeout((() => {
+              UV("timeout")
+            }), null !== (yV = eV.timeoutMs) && void 0 !== yV ? yV : Dp), JV = setInterval((() => {
+              eV.isCancelled() && UV("pJ")
+            }), 50), VV.lost.then((() => {
+              YV = !0, UV("lost")
             }))
           }));
           return {
-            signal: jM,
-            lost: () => SM,
+            signal: UV,
+            lost: () => YV,
             dispose: () => {
-              clearTimeout(iM), clearInterval(OM)
+              clearTimeout(xV), clearInterval(JV)
             }
           }
-        }(rM.device, MM);
-      let PM;
+        }(eV.device, VV);
+      let pV;
       try {
-        PM = await Promise.race([jM.then((() => "done")), aM.signal])
+        pV = await Promise.race([UV.then((() => "done")), yV.signal])
       } finally {
-        aM.dispose()
+        yV.dispose()
       }
-      if ("Ti" === PM || iM()) return {
-        status: "Ti"
+      if ("pJ" === pV || xV()) return {
+        status: "pJ"
       };
-      const nM = SM.find((MM => "failed" === MM.status));
-      return nM && "lost" !== PM && !aM.lost() && await new Promise((MM => {
-        setTimeout(MM, 0)
-      })), "lost" === PM || aM.lost() ? (console.warn("Shader pack: skipped the compile check, as the GPU device was lost"), {
+      const QV = YV.find((VV => "failed" === VV.status));
+      return QV && "lost" !== pV && !yV.lost() && await new Promise((VV => {
+        setTimeout(VV, 0)
+      })), "lost" === pV || yV.lost() ? (console.warn("Shader pack: skipped the compile check, as the GPU device was lost"), {
         status: "skipped"
-      }) : nM ? {
+      }) : QV ? {
         status: "failed",
         failure: {
-          material: nM.material,
-          message: nM.message
+          material: QV.material,
+          message: QV.message
         }
-      } : "timeout" === PM ? (console.warn(`Shader pack: skipped the compile check, which didn't finish in ${(null!==(QM=MM.timeoutMs)&&void 0!==QM?QM:ZP)/1e3} s`), {
+      } : "timeout" === pV ? (console.warn(`Shader pack: skipped the compile check, which didn't finish in ${(null!==(nV=VV.timeoutMs)&&void 0!==nV?nV:Dp)/1e3} s`), {
         status: "skipped"
-      }) : SM.some((MM => "skipped" === MM.status)) ? {
+      }) : YV.some((VV => "skipped" === VV.status)) ? {
         status: "skipped"
       } : {
         status: "ok"
       };
-      var QM
+      var nV
     }
-    async function NP(MM) {
-      if (!MM) return [];
+    async function op(VV) {
+      if (!VV) return [];
       try {
-        return (await MM.getCompilationInfo()).messages.filter((MM => "error" === MM.type))
+        return (await VV.getCompilationInfo()).messages.filter((VV => "error" === VV.type))
       } catch {
         return []
       }
     }
 
-    function AP(MM) {
-      var rM;
-      return null !== (rM = null === MM || void 0 === MM ? void 0 : MM.message) && void 0 !== rM ? rM : String(MM)
+    function cp(VV) {
+      var eV;
+      return null !== (eV = null === VV || void 0 === VV ? void 0 : VV.message) && void 0 !== eV ? eV : String(VV)
     }
 
-    function xP(MM, rM, iM, OM, SM) {
-      DO(rM) ? NP(OM).then((rM => {
-        const [OM] = rM;
-        zr(MM, "terrain", iM, SM, OM ? `${OM.lineNum}:${OM.linePos} error: ${OM.message}` : null)
-      })) : zr(MM, "terrain", iM, SM)
+    function hp(VV, eV, xV, JV, YV) {
+      RJ(eV) ? op(JV).then((eV => {
+        const [JV] = eV;
+        we(VV, "terrain", xV, YV, JV ? `${JV.lineNum}:${JV.linePos} error: ${JV.message}` : null)
+      })) : we(VV, "terrain", xV, YV)
     }
-    var vP = iM(38418),
-      FP = iM(38426),
-      BP = iM(38442),
-      XP = iM(3177);
+    var lp = xV(38621),
+      Lp = xV(38633),
+      fp = xV(38647),
+      mp = xV(3185);
 
-    function IP(MM, rM, iM, OM, SM) {
-      const jM = Math.hypot(iM[0], iM[1], iM[2]);
-      if (!(jM > 0)) return;
-      const aM = [iM[0] / jM, iM[1] / jM, iM[2] / jM],
-        PM = [Math.floor(rM[0]), Math.floor(rM[1]), Math.floor(rM[2])],
-        nM = [0, 0, 0],
-        QM = [1 / 0, 1 / 0, 1 / 0],
-        zM = [1 / 0, 1 / 0, 1 / 0];
-      for (let HM = 0; HM < 3; HM++) aM[HM] > 0 ? (nM[HM] = 1, QM[HM] = (PM[HM] + 1 - rM[HM]) / aM[HM], zM[HM] = 1 / aM[HM]) : aM[HM] < 0 && (nM[HM] = -1, QM[HM] = (PM[HM] - rM[HM]) / aM[HM], zM[HM] = -1 / aM[HM]);
+    function Kp(VV, eV, xV, JV, YV) {
+      const UV = Math.hypot(xV[0], xV[1], xV[2]);
+      if (!(UV > 0)) return;
+      const yV = [xV[0] / UV, xV[1] / UV, xV[2] / UV],
+        pV = [Math.floor(eV[0]), Math.floor(eV[1]), Math.floor(eV[2])],
+        QV = [0, 0, 0],
+        nV = [1 / 0, 1 / 0, 1 / 0],
+        wV = [1 / 0, 1 / 0, 1 / 0];
+      for (let rV = 0; rV < 3; rV++) yV[rV] > 0 ? (QV[rV] = 1, nV[rV] = (pV[rV] + 1 - eV[rV]) / yV[rV], wV[rV] = 1 / yV[rV]) : yV[rV] < 0 && (QV[rV] = -1, nV[rV] = (pV[rV] - eV[rV]) / yV[rV], wV[rV] = -1 / yV[rV]);
       const {
-        HL: LM
-      } = MM;
-      let mM = MM.YB(PM[0], PM[1], PM[2]);
+        PZ: ZV
+      } = VV;
+      let vV = VV.K3(pV[0], pV[1], pV[2]);
       for (;;) {
-        const rM = QM[0] < QM[1] ? QM[0] < QM[2] ? 0 : 2 : QM[1] < QM[2] ? 1 : 2;
-        if (QM[rM] > OM) return;
-        const iM = nM[rM] > 0 ? PM[rM] + 1 : PM[rM];
-        PM[rM] += nM[rM], QM[rM] += zM[rM];
-        const jM = MM.YB(PM[0], PM[1], PM[2]),
-          aM = jM !== mM && !(MM.opaque[mM] && MM.opaque[jM]);
-        if (aM) {
-          const OM = [PM[0], PM[1], PM[2]];
-          OM[rM] = iM;
-          const jM = Math.floor(OM[0] / LM),
-            aM = Math.floor(OM[1] / LM),
-            nM = Math.floor(OM[2] / LM);
-          !MM.isDrawn(jM, aM, nM) && MM.hasParts(jM, aM, nM) && SM.add(`${jM},${aM},${nM}`)
+        const eV = nV[0] < nV[1] ? nV[0] < nV[2] ? 0 : 2 : nV[1] < nV[2] ? 1 : 2;
+        if (nV[eV] > JV) return;
+        const xV = QV[eV] > 0 ? pV[eV] + 1 : pV[eV];
+        pV[eV] += QV[eV], nV[eV] += wV[eV];
+        const UV = VV.K3(pV[0], pV[1], pV[2]),
+          yV = UV !== vV && !(VV.opaque[vV] && VV.opaque[UV]);
+        if (yV) {
+          const JV = [pV[0], pV[1], pV[2]];
+          JV[eV] = xV;
+          const UV = Math.floor(JV[0] / ZV),
+            yV = Math.floor(JV[1] / ZV),
+            QV = Math.floor(JV[2] / ZV);
+          !VV.isDrawn(UV, yV, QV) && VV.hasParts(UV, yV, QV) && YV.add(`${UV},${yV},${QV}`)
         }
-        if (aM && MM.occluders[jM]) return;
-        mM = jM
+        if (yV && VV.occluders[UV]) return;
+        vV = UV
       }
     }
 
-    function KP(MM, rM) {
-      return MM.group - rM.group || MM.nearest - rM.nearest
+    function Hp(VV, eV) {
+      return VV.group - eV.group || VV.nearest - eV.nearest
     }
-    class qP {
-      constructor(MM, rM) {
-        this.device = MM, this.pE = rM, this.data = new Float32Array(2048), this.words = new Uint32Array(this.data.buffer), this.buffer = void 0, this.free = [], this.next = 0, this.dirtyMin = 1 / 0, this.dirtyMax = -1, this.buffer = this.createBuffer()
+    class sp {
+      constructor(VV, eV) {
+        this.device = VV, this.hq = eV, this.data = new Float32Array(2048), this.words = new Uint32Array(this.data.buffer), this.buffer = void 0, this.free = [], this.next = 0, this.dirtyMin = 1 / 0, this.dirtyMax = -1, this.buffer = this.createBuffer()
       }
       createBuffer() {
         return this.device.createBuffer({
@@ -6127,57 +6127,57 @@ export const modules = {
         })
       }
       allocate() {
-        var MM;
-        const rM = null !== (MM = this.free.pop()) && void 0 !== MM ? MM : this.next++;
-        if (8 * rM >= this.data.length) {
-          const MM = new Float32Array(2 * this.data.length);
-          MM.set(this.data), this.data = MM, this.words = new Uint32Array(MM.buffer), this.buffer.destroy(), this.buffer = this.createBuffer(), this.markDirty(0, this.next - 1), this.pE()
+        var VV;
+        const eV = null !== (VV = this.free.pop()) && void 0 !== VV ? VV : this.next++;
+        if (8 * eV >= this.data.length) {
+          const VV = new Float32Array(2 * this.data.length);
+          VV.set(this.data), this.data = VV, this.words = new Uint32Array(VV.buffer), this.buffer.destroy(), this.buffer = this.createBuffer(), this.markDirty(0, this.next - 1), this.hq()
         }
-        return rM
+        return eV
       }
-      release(MM) {
-        this.free.push(MM)
+      release(VV) {
+        this.free.push(VV)
       }
-      set(MM, rM, iM, OM, SM) {
-        const jM = 8 * MM + FO;
-        this.data[jM] = rM, this.data[jM + 1] = iM, this.data[jM + 2] = OM, this.setVisibility(MM, SM)
+      set(VV, eV, xV, JV, YV) {
+        const UV = 8 * VV + LJ;
+        this.data[UV] = eV, this.data[UV + 1] = xV, this.data[UV + 2] = JV, this.setVisibility(VV, YV)
       }
-      setVisibility(MM, rM) {
-        this.data[8 * MM + BO] = rM, this.markDirty(MM, MM)
+      setVisibility(VV, eV) {
+        this.data[8 * VV + fJ] = eV, this.markDirty(VV, VV)
       }
-      setFaces(MM, rM, iM) {
-        const OM = 8 * MM;
-        this.words[OM + XO] = rM, this.words[OM + IO] = iM, this.markDirty(MM, MM)
+      setFaces(VV, eV, xV) {
+        const JV = 8 * VV;
+        this.words[JV + mJ] = eV, this.words[JV + KJ] = xV, this.markDirty(VV, VV)
       }
-      markDirty(MM, rM) {
-        this.dirtyMin = Math.min(this.dirtyMin, MM), this.dirtyMax = Math.max(this.dirtyMax, rM)
+      markDirty(VV, eV) {
+        this.dirtyMin = Math.min(this.dirtyMin, VV), this.dirtyMax = Math.max(this.dirtyMax, eV)
       }
       flush() {
         if (this.dirtyMax < this.dirtyMin) return;
         this.device.queue.writeBuffer(this.buffer, 8 * this.dirtyMin * 4, this.data, 8 * this.dirtyMin, 8 * (this.dirtyMax - this.dirtyMin + 1)), this.dirtyMin = 1 / 0, this.dirtyMax = -1
       }
     }
-    const TP = vO,
-      VP = !0;
-    const cP = {
+    const Sp = lJ,
+      Ip = !0;
+    const dp = {
         arrayStride: 4,
         stepMode: "vertex",
         attributes: [{
-          shaderLocation: TP.packedLight,
+          shaderLocation: Sp.packedLight,
           offset: 0,
           format: "float32"
         }]
       },
-      Mn = {
+      Op = {
         srcFactor: "src-alpha",
         dstFactor: "one-minus-src-alpha",
         operation: "add"
       };
-    class rn {
-      constructor(MM) {
-        this.device = MM, this.opaqueRenderable = void 0, this.transparentRenderable = void 0, this.sceneDepth = null, this.sunShadow = null, this.shadowMask = null, this.chunks = new Map, this.materials = new Map, this.slots = void 0, this.sceneLayout = void 0, this.frameLayout = void 0, this.materialLayouts = new Map, this.frameUniforms = new Float32Array(ZO), this.dirLightUniforms = this.frameUniforms.subarray(kO.dirLights, kO.aoLevels), this.frameBuffer = void 0, this.frameBindGroup = void 0, this.recordsGroups = new WeakMap, this.modules = new Map, this.pipelines = new Map, this.prepassOf = new WeakMap, this.maskPipelines = 0, this.builds = new Map, this.target = null, this.compiling = 0, this.sampler = void 0, this.geometry = void 0, this.warnOnce = (0, Wr.b)(), this.faceGroups = !0, this.visibilityGraph = VP, this.visCull = VP, this.visCheck = !1, this.visCullMinDistance = BP.h, this.visCheckFrame = 0, this.visCandidates = [], this.visCandidateBatches = [], this.visPassable = new Set, this.visBatchDraws = new Map, this.visDrawsMaterial = null, this.visDrawsBits = 0, this.visCulledParts = 0, this.visCulledTriangles = 0, this.visViolations = 0, this.visSweeps = 0, this.submittedTriangles = 0, this.chunkSorter = new an, this.opaqueBatches = [], this.transparent = [], this.unlit = [], this.lighting = !1, this.dirLightCount = 0, this.aoLevelsWritten = !1, this.originOffset = [0, 0, 0], this.eye = [0, 0, 0], this.faceRanges = new Int32Array(4), this.faceEpoch = 0, this.faceEye = [NaN, NaN, NaN], this.faceFocalPx = NaN, this.nh = null, this.shaderPackInputs = null, this.depthStandIn = null, this.geometry = new RP(MM, ((MM, rM) => this.recordsGroup(MM, rM))), this.slots = new qP(MM, (() => {
+    class VQ {
+      constructor(VV) {
+        this.device = VV, this.opaqueRenderable = void 0, this.transparentRenderable = void 0, this.sceneDepth = null, this.sunShadow = null, this.shadowMask = null, this.chunks = new Map, this.materials = new Map, this.slots = void 0, this.sceneLayout = void 0, this.frameLayout = void 0, this.materialLayouts = new Map, this.frameUniforms = new Float32Array(DJ), this.dirLightUniforms = this.frameUniforms.subarray(gJ.dirLights, gJ.aoLevels), this.frameBuffer = void 0, this.frameBindGroup = void 0, this.recordsGroups = new WeakMap, this.modules = new Map, this.pipelines = new Map, this.prepassOf = new WeakMap, this.maskPipelines = 0, this.builds = new Map, this.target = null, this.compiling = 0, this.sampler = void 0, this.geometry = void 0, this.warnOnce = (0, Re.b)(), this.faceGroups = !0, this.visibilityGraph = Ip, this.visCull = Ip, this.visCheck = !1, this.visCullMinDistance = fp.g, this.visCheckFrame = 0, this.visCandidates = [], this.visCandidateBatches = [], this.visPassable = new Set, this.visBatchDraws = new Map, this.visDrawsMaterial = null, this.visDrawsBits = 0, this.visCulledParts = 0, this.visCulledTriangles = 0, this.visViolations = 0, this.visSweeps = 0, this.submittedTriangles = 0, this.chunkSorter = new YQ, this.opaqueBatches = [], this.transparent = [], this.unlit = [], this.lighting = !1, this.dirLightCount = 0, this.aoLevelsWritten = !1, this.originOffset = [0, 0, 0], this.eye = [0, 0, 0], this.faceRanges = new Int32Array(4), this.faceEpoch = 0, this.faceEye = [NaN, NaN, NaN], this.faceFocalPx = NaN, this.Xk = null, this.shaderPackInputs = null, this.depthStandIn = null, this.geometry = new Mp(VV, ((VV, eV) => this.recordsGroup(VV, eV))), this.slots = new sp(VV, (() => {
           this.frameBindGroup = this.createFrameBindGroup(), this.recordsGroups = new WeakMap
-        })), this.sceneLayout = er(MM), this.frameLayout = MM.createBindGroupLayout({
+        })), this.sceneLayout = Pe(VV), this.frameLayout = VV.createBindGroupLayout({
           label: "terrain-frame",
           entries: [{
             binding: 0,
@@ -6204,11 +6204,11 @@ export const modules = {
               type: "read-only-storage"
             }
           }]
-        }), this.frameBuffer = MM.createBuffer({
+        }), this.frameBuffer = VV.createBuffer({
           label: "terrain-frame",
           size: this.frameUniforms.byteLength,
           usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST
-        }), this.frameBindGroup = this.createFrameBindGroup(), this.sampler = MM.createSampler({
+        }), this.frameBindGroup = this.createFrameBindGroup(), this.sampler = VV.createSampler({
           label: "terrain",
           magFilter: "nearest",
           minFilter: "nearest",
@@ -6219,23 +6219,23 @@ export const modules = {
           order: 100,
           isTransparent: !1,
           _direct: !0,
-          bind: (MM, rM) => this.createBinding(this.opaqueRenderable, rM, !1)
+          bind: (VV, eV) => this.createBinding(this.opaqueRenderable, eV, !1)
         }, this.transparentRenderable = {
           order: 200,
           isTransparent: !0,
           _worldCenter: [0, 0, 0],
-          bind: (MM, rM) => this.createBinding(this.transparentRenderable, rM, !0)
+          bind: (VV, eV) => this.createBinding(this.transparentRenderable, eV, !0)
         }
       }
       retire() {
         this.geometry.retire()
       }
-      installSceneDepth(MM, rM) {
-        this.sceneDepth = new pP(this.device, this.transparentRenderable, MM, rM)
+      installSceneDepth(VV, eV) {
+        this.sceneDepth = new zp(this.device, this.transparentRenderable, VV, eV)
       }
       createFrameBindGroup() {
-        let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
-          rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+        let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
+          eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
         return this.device.createBindGroup({
           label: "terrain-frame",
           layout: this.frameLayout,
@@ -6252,28 +6252,28 @@ export const modules = {
           }, {
             binding: 2,
             resource: {
-              buffer: null !== MM && void 0 !== MM ? MM : this.slots.buffer
+              buffer: null !== VV && void 0 !== VV ? VV : this.slots.buffer
             }
           }, {
             binding: 3,
             resource: {
-              buffer: null !== rM && void 0 !== rM ? rM : this.slots.buffer
+              buffer: null !== eV && void 0 !== eV ? eV : this.slots.buffer
             }
           }]
         })
       }
-      recordsGroup(MM, rM) {
-        const iM = null !== rM && void 0 !== rM ? rM : MM;
-        let OM = this.recordsGroups.get(iM);
-        return OM || (OM = this.createFrameBindGroup(MM, rM), this.recordsGroups.set(iM, OM)), OM
+      recordsGroup(VV, eV) {
+        const xV = null !== eV && void 0 !== eV ? eV : VV;
+        let JV = this.recordsGroups.get(xV);
+        return JV || (JV = this.createFrameBindGroup(VV, eV), this.recordsGroups.set(xV, JV)), JV
       }
-      setChunkMesh(MM, rM, iM) {
-        var OM;
-        let SM = this.chunks.get(MM);
-        SM ? this.geometry.release(SM) : (SM = {
-          mesh: MM,
+      setChunkMesh(VV, eV, xV) {
+        var JV;
+        let YV = this.chunks.get(VV);
+        YV ? this.geometry.release(YV) : (YV = {
+          mesh: VV,
           slot: this.slots.allocate(),
-          origin: [iM[0], iM[1], iM[2]],
+          origin: [xV[0], xV[1], xV[2]],
           material: null,
           vertices: null,
           lit: !1,
@@ -6282,7 +6282,7 @@ export const modules = {
           packed: !1,
           lostRemeshes: 0,
           lostRetryAt: 0,
-          visibility: MM.visibility,
+          visibility: VV.visibility,
           distance: 0,
           faceGroups: null,
           planePX: 0,
@@ -6302,23 +6302,23 @@ export const modules = {
           cj: NaN,
           ck: NaN,
           key: NaN
-        }, this.chunks.set(MM, SM), this.writeSlot(SM)), SM.material = MM.material ? this.materialFor(MM.material) : null, SM.packed = !!rM.packedVertices, SM.vertexCount = (0, UP.g)(rM), SM.faceCount = SM.vertexCount / 4;
-        const jM = null !== (OM = rM.faceGroups) && void 0 !== OM ? OM : null;
-        if (SM.faceGroups = jM, jM) {
-          const MM = vP.n;
-          SM.planePX = jM[MM], SM.planeNX = jM[MM + 1], SM.planePY = jM[MM + 2], SM.planeNY = jM[MM + 3], SM.planePZ = jM[MM + 4], SM.planeNZ = jM[MM + 5]
+        }, this.chunks.set(VV, YV), this.writeSlot(YV)), YV.material = VV.material ? this.materialFor(VV.material) : null, YV.packed = !!eV.packedVertices, YV.vertexCount = (0, jp.i)(eV), YV.faceCount = YV.vertexCount / 4;
+        const UV = null !== (JV = eV.faceGroups) && void 0 !== JV ? JV : null;
+        if (YV.faceGroups = UV, UV) {
+          const VV = lp.k;
+          YV.planePX = UV[VV], YV.planeNX = UV[VV + 1], YV.planePY = UV[VV + 2], YV.planeNY = UV[VV + 3], YV.planePZ = UV[VV + 4], YV.planeNZ = UV[VV + 5]
         }
-        this.drawWhole(SM), 0 !== SM.faceCount && (this.geometry.set(SM, rM) ? (SM.packed && this.slots.setFaces(SM.slot, SM.vertices.start + SM.faceCount, SM.faceCount), rM.Lh && this.setChunkMeshLight(MM, rM.Lh)) : this.warnOnce("tooBig", `Lite terrain: a chunk of ${SM.vertexCount} vertices is more than a buffer may hold, and is left out.`))
+        this.drawWhole(YV), 0 !== YV.faceCount && (this.geometry.set(YV, eV) ? (YV.packed && this.slots.setFaces(YV.slot, YV.vertices.start + YV.faceCount, YV.faceCount), eV.Gk && this.setChunkMeshLight(VV, eV.Gk)) : this.warnOnce("tooBig", `Lite terrain: a chunk of ${YV.vertexCount} vertices is more than a buffer may hold, and is left out.`))
       }
-      setChunkMeshLight(MM, rM) {
-        const iM = this.chunks.get(MM);
-        iM && this.geometry.setLight(iM, rM)
+      setChunkMeshLight(VV, eV) {
+        const xV = this.chunks.get(VV);
+        xV && this.geometry.setLight(xV, eV)
       }
       drawStats() {
-        let MM = this.transparent.length;
-        for (const rM of this.opaqueBatches) MM += rM.meshes.length;
+        let VV = this.transparent.length;
+        for (const eV of this.opaqueBatches) VV += eV.meshes.length;
         return {
-          drawn: MM,
+          drawn: VV,
           loaded: this.chunks.size,
           triangles: this.submittedTriangles,
           visCulled: this.visCulledParts,
@@ -6334,559 +6334,559 @@ export const modules = {
       get buffersAwaitingVerdict() {
         return this.geometry.buffersAwaitingVerdict
       }
-      removeChunkMesh(MM) {
-        const rM = this.chunks.get(MM);
-        rM && (this.geometry.release(rM), this.slots.release(rM.slot), this.chunks.delete(MM))
+      removeChunkMesh(VV) {
+        const eV = this.chunks.get(VV);
+        eV && (this.geometry.release(eV), this.slots.release(eV.slot), this.chunks.delete(VV))
       }
-      remeshLost(MM, rM) {
-        this.geometry.release(rM), rM.lostRetryAt = performance.now() + Math.min(6e4, 1e3 * 2 ** rM.lostRemeshes++);
-        const iM = MM.uL,
-          [OM, SM, jM] = iM.rOM(rM.origin[0], rM.origin[1], rM.origin[2]),
-          aM = iM.yJ.lJ(OM, SM, jM);
-        aM && (aM.JJ = !0, aM.UJ = !0, iM.dJ(aM, !1))
+      remeshLost(VV, eV) {
+        this.geometry.release(eV), eV.lostRetryAt = performance.now() + Math.min(6e4, 1e3 * 2 ** eV.lostRemeshes++);
+        const xV = VV.cZ,
+          [JV, YV, UV] = xV.qYV(eV.origin[0], eV.origin[1], eV.origin[2]),
+          yV = xV.Cb.ab(JV, YV, UV);
+        yV && (yV.Db = !0, yV.cb = !0, xV.ib(yV, !1))
       }
-      chooseFaceRanges(MM, rM, iM) {
-        const OM = this.faceRanges;
-        MM.faceMask = iM, MM.rangeCount = (0, FP.l)(rM, iM, OM), MM.first0 = OM[0], MM.count0 = OM[1], MM.first1 = OM[2], MM.count1 = OM[3]
+      chooseFaceRanges(VV, eV, xV) {
+        const JV = this.faceRanges;
+        VV.faceMask = xV, VV.rangeCount = (0, Lp.i)(eV, xV, JV), VV.first0 = JV[0], VV.count0 = JV[1], VV.first1 = JV[2], VV.count1 = JV[3]
       }
-      drawWhole(MM) {
-        MM.faceMask = -1, MM.faceEpoch = -1, MM.rangeCount = 1, MM.first0 = 0, MM.count0 = MM.faceCount
+      drawWhole(VV) {
+        VV.faceMask = -1, VV.faceEpoch = -1, VV.rangeCount = 1, VV.first0 = 0, VV.count0 = VV.faceCount
       }
-      writeSlot(MM) {
-        const [rM, iM, OM] = this.originOffset;
-        this.slots.set(MM.slot, MM.origin[0] - rM, MM.origin[1] - iM, MM.origin[2] - OM, MM.visibility)
+      writeSlot(VV) {
+        const [eV, xV, JV] = this.originOffset;
+        this.slots.set(VV.slot, VV.origin[0] - eV, VV.origin[1] - xV, VV.origin[2] - JV, VV.visibility)
       }
-      materialFor(MM) {
-        const rM = this.materials.get(MM);
-        if (rM) return rM;
-        const iM = CP(MM);
-        if (!iM) return this.warnOnce(`material:${MM.name}`, `Lite terrain cannot draw material "${MM.name}"; its chunks are skipped.`), null;
+      materialFor(VV) {
+        const eV = this.materials.get(VV);
+        if (eV) return eV;
+        const xV = tp(VV);
+        if (!xV) return this.warnOnce(`material:${VV.name}`, `Lite terrain cannot draw material "${VV.name}"; its chunks are skipped.`), null;
         const {
-          model: OM,
-          atlas: SM,
-          texture: jM,
-          animated: aM,
-          uniformData: PM
-        } = iM, nM = {
+          model: JV,
+          atlas: YV,
+          texture: UV,
+          animated: yV,
+          uniformData: pV
+        } = xV, QV = {
           id: this.materials.size,
-          model: OM,
-          texture: jM,
-          animated: aM,
-          uniformData: PM,
+          model: JV,
+          texture: UV,
+          animated: yV,
+          uniformData: pV,
           uniformBuffer: this.device.createBuffer({
-            label: `terrain-material-${MM.name}`,
-            size: PM.byteLength,
+            label: `terrain-material-${VV.name}`,
+            size: pV.byteLength,
             usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST
           }),
-          liquid: iM.liquid,
-          customRenderMat: iM.customRenderMat,
+          liquid: xV.liquid,
+          customRenderMat: xV.customRenderMat,
           atlasCount: 0,
-          U3: 0,
+          yVV: 0,
           atlasLayers: 0,
           bindGroup: null,
           bindGroupLayout: null,
           ready: Promise.resolve(),
           pipelineIds: [null, null, null, null]
         };
-        return this.materials.set(MM, nM), this.device.queue.writeBuffer(nM.uniformBuffer, 0, PM), nM.ready = this.createMaterialBindGroup(nM, SM).catch((rM => {
-          console.error(`Lite terrain failed to load the textures of material "${MM.name}"`, rM)
-        })), nM
+        return this.materials.set(VV, QV), this.device.queue.writeBuffer(QV.uniformBuffer, 0, pV), QV.ready = this.createMaterialBindGroup(QV, YV).catch((eV => {
+          console.error(`Lite terrain failed to load the textures of material "${VV.name}"`, eV)
+        })), QV
       }
-      materialLayout(MM) {
-        const rM = function(MM) {
-            const rM = ["uniforms"];
-            if ("atlas" === MM.texture) {
-              MM.animated && rM.push("animData"), rM.push("sampler");
-              for (let iM = 0; iM < MM.atlasCount; iM++) rM.push("textureArray")
-            } else "single" === MM.texture && rM.push("sampler", "texture");
-            return rM
-          }(MM),
-          iM = rM.join(",");
-        let OM = this.materialLayouts.get(iM);
-        if (!OM) {
-          const MM = GPUShaderStage.FRAGMENT;
-          OM = this.device.createBindGroupLayout({
-            label: `terrain-material-${iM}`,
-            entries: rM.map(((rM, iM) => {
-              switch (rM) {
+      materialLayout(VV) {
+        const eV = function(VV) {
+            const eV = ["uniforms"];
+            if ("atlas" === VV.texture) {
+              VV.animated && eV.push("animData"), eV.push("sampler");
+              for (let xV = 0; xV < VV.atlasCount; xV++) eV.push("textureArray")
+            } else "single" === VV.texture && eV.push("sampler", "texture");
+            return eV
+          }(VV),
+          xV = eV.join(",");
+        let JV = this.materialLayouts.get(xV);
+        if (!JV) {
+          const VV = GPUShaderStage.FRAGMENT;
+          JV = this.device.createBindGroupLayout({
+            label: `terrain-material-${xV}`,
+            entries: eV.map(((eV, xV) => {
+              switch (eV) {
                 case "uniforms":
                   return {
-                    binding: iM, visibility: GPUShaderStage.VERTEX | MM, buffer: {
+                    binding: xV, visibility: GPUShaderStage.VERTEX | VV, buffer: {
                       type: "uniform"
                     }
                   };
                 case "animData":
                   return {
-                    binding: iM, visibility: GPUShaderStage.VERTEX | MM, buffer: {
+                    binding: xV, visibility: GPUShaderStage.VERTEX | VV, buffer: {
                       type: "read-only-storage"
                     }
                   };
                 case "sampler":
                   return {
-                    binding: iM, visibility: MM, sampler: {
+                    binding: xV, visibility: VV, sampler: {
                       type: "filtering"
                     }
                   };
                 case "texture":
                   return {
-                    binding: iM, visibility: MM, texture: {
+                    binding: xV, visibility: VV, texture: {
                       sampleType: "float",
                       viewDimension: "2d"
                     }
                   };
                 case "textureArray":
                   return {
-                    binding: iM, visibility: MM, texture: {
+                    binding: xV, visibility: VV, texture: {
                       sampleType: "float",
                       viewDimension: "2d-array"
                     }
                   }
               }
             }))
-          }), this.materialLayouts.set(iM, OM)
+          }), this.materialLayouts.set(xV, JV)
         }
-        return OM
+        return JV
       }
-      async createMaterialBindGroup(MM, rM) {
-        const iM = [{
-          buffer: MM.uniformBuffer
+      async createMaterialBindGroup(VV, eV) {
+        const xV = [{
+          buffer: VV.uniformBuffer
         }];
-        if (rM) {
-          const OM = await rr(this.device, rM.sources);
-          MM.atlasCount = OM.length, MM.U3 = OM[0].layerWidth, MM.atlasLayers = OM[0].layers, rM.animDataPerTex && iM.push({
-            buffer: IM(this.device, Float32Array.from(rM.animDataPerTex), GPUBufferUsage.STORAGE, "terrain-anim")
-          }), iM.push(this.sampler);
-          for (const MM of OM) iM.push(MM.texture.createView({
+        if (eV) {
+          const JV = await ee(this.device, eV.sources);
+          VV.atlasCount = JV.length, VV.yVV = JV[0].layerWidth, VV.atlasLayers = JV[0].layers, eV.animDataPerTex && xV.push({
+            buffer: uV(this.device, Float32Array.from(eV.animDataPerTex), GPUBufferUsage.STORAGE, "terrain-anim")
+          }), xV.push(this.sampler);
+          for (const VV of JV) xV.push(VV.texture.createView({
             dimension: "2d-array"
           }))
-        } else if ("single" === MM.texture) {
+        } else if ("single" === VV.texture) {
           const {
-            url: rM
-          } = MM.model.diffuseTexture.source, {
-            pixels: OM,
-            width: SM,
-            height: jM
-          } = await Mr(rM);
-          iM.push(this.sampler), iM.push(qM(this.device, OM, SM, jM, 1, `terrain-${rM}`).createView({
+            url: eV
+          } = VV.model.diffuseTexture.source, {
+            pixels: JV,
+            width: YV,
+            height: UV
+          } = await Ve(eV);
+          xV.push(this.sampler), xV.push(SV(this.device, JV, YV, UV, 1, `terrain-${eV}`).createView({
             dimension: "2d"
           }))
         }
-        const OM = this.materialLayout(this.programKey(MM, !1));
-        MM.bindGroupLayout = OM, MM.bindGroup = this.device.createBindGroup({
-          label: `terrain-material-${MM.model.name}`,
-          layout: OM,
-          entries: iM.map(((MM, rM) => ({
-            binding: rM,
-            resource: MM
+        const JV = this.materialLayout(this.programKey(VV, !1));
+        VV.bindGroupLayout = JV, VV.bindGroup = this.device.createBindGroup({
+          label: `terrain-material-${VV.model.name}`,
+          layout: JV,
+          entries: xV.map(((VV, eV) => ({
+            binding: eV,
+            resource: VV
           })))
         })
       }
-      programKey(MM, rM) {
-        let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        const OM = iM ? iM.lighting : this.lighting,
-          SM = iM ? iM.nh : this.nh,
-          jM = {
-            texture: MM.texture,
-            atlasCount: MM.atlasCount,
-            U3: MM.U3,
-            atlasLayers: MM.atlasLayers,
-            animated: MM.animated,
-            alphaTest: MM.model.transparencyMode === wM.n.alphaTest,
-            lighting: OM,
-            dirLightCount: iM ? iM.dirLightCount : this.dirLightCount,
-            packed: rM
+      programKey(VV, eV) {
+        let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+        const JV = xV ? xV.lighting : this.lighting,
+          YV = xV ? xV.Xk : this.Xk,
+          UV = {
+            texture: VV.texture,
+            atlasCount: VV.atlasCount,
+            yVV: VV.yVV,
+            atlasLayers: VV.atlasLayers,
+            animated: VV.animated,
+            alphaTest: VV.model.transparencyMode === NV.p.alphaTest,
+            lighting: JV,
+            dirLightCount: xV ? xV.dirLightCount : this.dirLightCount,
+            packed: eV
           };
-        if (!SM) return jM;
-        const aM = this.shaderPackFields(MM, SM),
-          PM = "atlas" === MM.texture && MM.model.transparencyMode === wM.n.opaque && RO(aM.packVariant);
+        if (!YV) return UV;
+        const yV = this.shaderPackFields(VV, YV),
+          pV = "atlas" === VV.texture && VV.model.transparencyMode === NV.p.opaque && MJ(yV.packVariant);
         return {
-          ...jM,
-          ...aM,
-          alphaTest: jM.alphaTest || PM
+          ...UV,
+          ...yV,
+          alphaTest: UV.alphaTest || pV
         }
       }
-      shaderPackFields(MM, rM) {
-        const iM = this.packVariant(MM, rM);
-        return void 0 === iM ? gO : {
-          packVariant: iM,
-          liquid: MM.liquid
+      shaderPackFields(VV, eV) {
+        const xV = this.packVariant(VV, eV);
+        return void 0 === xV ? NJ : {
+          packVariant: xV,
+          liquid: VV.liquid
         }
       }
-      packVariant(MM, rM) {
-        return MM.customRenderMat ? void 0 : function(MM, rM) {
-          const iM = MM ? MM.defineFor(rM ? "liquid" : "terrain") : 0;
-          return 0 === iM ? void 0 : iM
-        }(rM, MM.liquid)
+      packVariant(VV, eV) {
+        return VV.customRenderMat ? void 0 : function(VV, eV) {
+          const xV = VV ? VV.defineFor(eV ? "liquid" : "terrain") : 0;
+          return 0 === xV ? void 0 : xV
+        }(eV, VV.liquid)
       }
-      isBlended(MM) {
-        return MM.model.transparencyMode === wM.n.alphaBlend
+      isBlended(VV) {
+        return VV.model.transparencyMode === NV.p.alphaBlend
       }
-      shaderModule(MM, rM) {
-        let iM = this.modules.get(MM);
-        return iM || (iM = this.device.createShaderModule({
-          label: rM,
-          code: MM
-        }), this.modules.set(MM, iM)), iM
+      shaderModule(VV, eV) {
+        let xV = this.modules.get(VV);
+        return xV || (xV = this.device.createShaderModule({
+          label: eV,
+          code: VV
+        }), this.modules.set(VV, xV)), xV
       }
-      pipelineFor(MM, rM, iM) {
-        let OM = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-        if (!MM.bindGroupLayout) return null;
-        if (!OM) return this.pipelineOf(MM, rM, iM);
-        const SM = this.pipelineIdNow(MM, rM, !0, iM),
-          jM = this.pipelines.get(SM);
-        if (jM) return jM;
-        const aM = this.pipelineOf(MM, rM, iM);
-        return aM && void 0 === jM && this.startPipeline(SM, MM, {
-          ...this.programKey(MM, rM),
-          resting: OM
-        }, iM), aM
+      pipelineFor(VV, eV, xV) {
+        let JV = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+        if (!VV.bindGroupLayout) return null;
+        if (!JV) return this.pipelineOf(VV, eV, xV);
+        const YV = this.pipelineIdNow(VV, eV, !0, xV),
+          UV = this.pipelines.get(YV);
+        if (UV) return UV;
+        const yV = this.pipelineOf(VV, eV, xV);
+        return yV && void 0 === UV && this.startPipeline(YV, VV, {
+          ...this.programKey(VV, eV),
+          resting: JV
+        }, xV), yV
       }
-      pipelineOf(MM, rM, iM) {
-        const OM = this.pipelineIdNow(MM, rM, !1, iM),
-          SM = this.pipelines.get(OM);
-        return void 0 !== SM ? SM : (this.startPipeline(OM, MM, this.programKey(MM, rM), iM), null)
+      pipelineOf(VV, eV, xV) {
+        const JV = this.pipelineIdNow(VV, eV, !1, xV),
+          YV = this.pipelines.get(JV);
+        return void 0 !== YV ? YV : (this.startPipeline(JV, VV, this.programKey(VV, eV), xV), null)
       }
-      pipelineIdNow(MM, rM, iM, OM) {
+      pipelineIdNow(VV, eV, xV, JV) {
         const {
-          lighting: SM,
-          dirLightCount: jM
+          lighting: YV,
+          dirLightCount: UV
         } = this, {
-          transparencyMode: aM,
-          backFaceCulling: PM
-        } = MM.model, nM = this.packVariant(MM, this.nh), QM = (rM ? 2 : 0) + (iM ? 1 : 0), zM = MM.pipelineIds[QM];
-        if (null !== zM && zM.lighting === SM && zM.dirLightCount === jM && zM.packVariant === nM && zM.transparencyMode === aM && zM.cull === PM && zM.atlasCount === MM.atlasCount && zM.U3 === MM.U3 && zM.atlasLayers === MM.atlasLayers && zM.colorFormat === OM._colorFormat && zM.depthStencilFormat === OM._depthStencilFormat && zM.sampleCount === OM._sampleCount) return zM.id;
-        const LM = this.programKey(MM, rM),
-          mM = this.pipelineId(MM, iM ? {
-            ...LM,
-            resting: iM
-          } : LM, OM);
-        return MM.pipelineIds[QM] = {
-          id: mM,
-          lighting: SM,
-          dirLightCount: jM,
-          packVariant: nM,
-          transparencyMode: aM,
-          cull: PM,
-          atlasCount: MM.atlasCount,
-          U3: MM.U3,
-          atlasLayers: MM.atlasLayers,
-          colorFormat: OM._colorFormat,
-          depthStencilFormat: OM._depthStencilFormat,
-          sampleCount: OM._sampleCount
-        }, mM
+          transparencyMode: yV,
+          backFaceCulling: pV
+        } = VV.model, QV = this.packVariant(VV, this.Xk), nV = (eV ? 2 : 0) + (xV ? 1 : 0), wV = VV.pipelineIds[nV];
+        if (null !== wV && wV.lighting === YV && wV.dirLightCount === UV && wV.packVariant === QV && wV.transparencyMode === yV && wV.cull === pV && wV.atlasCount === VV.atlasCount && wV.yVV === VV.yVV && wV.atlasLayers === VV.atlasLayers && wV.colorFormat === JV._colorFormat && wV.depthStencilFormat === JV._depthStencilFormat && wV.sampleCount === JV._sampleCount) return wV.id;
+        const ZV = this.programKey(VV, eV),
+          vV = this.pipelineId(VV, xV ? {
+            ...ZV,
+            resting: xV
+          } : ZV, JV);
+        return VV.pipelineIds[nV] = {
+          id: vV,
+          lighting: YV,
+          dirLightCount: UV,
+          packVariant: QV,
+          transparencyMode: yV,
+          cull: pV,
+          atlasCount: VV.atlasCount,
+          yVV: VV.yVV,
+          atlasLayers: VV.atlasLayers,
+          colorFormat: JV._colorFormat,
+          depthStencilFormat: JV._depthStencilFormat,
+          sampleCount: JV._sampleCount
+        }, vV
       }
-      pipelineId(MM, rM, iM) {
-        return On(rM, this.isBlended(MM), MM.model.backFaceCulling, iM)
+      pipelineId(VV, eV, xV) {
+        return eQ(eV, this.isBlended(VV), VV.model.backFaceCulling, xV)
       }
-      pipelineBuild(MM, rM, iM) {
-        var OM;
-        const SM = this.pipelineId(MM, rM, iM);
-        return null !== (OM = this.builds.get(SM)) && void 0 !== OM ? OM : this.startPipeline(SM, MM, rM, iM)
+      pipelineBuild(VV, eV, xV) {
+        var JV;
+        const YV = this.pipelineId(VV, eV, xV);
+        return null !== (JV = this.builds.get(YV)) && void 0 !== JV ? JV : this.startPipeline(YV, VV, eV, xV)
       }
-      startPipeline(MM, rM, iM, OM) {
-        var SM;
-        this.pipelines.set(MM, null);
-        const jM = MS(iM),
-          aM = this.isBlended(rM),
-          PM = this.shadowMask && OM._depthStencilFormat ? function(MM, rM, iM, OM) {
-            if (void 0 === MM.packVariant || MM.liquid || rM) return "none";
-            const SM = (0, Tr.g)(MM.packVariant);
-            return null === SM || void 0 === SM || !SM.sunShadow || !PO(SM, iM) || SM.discards || MM.alphaTest && RO(MM.packVariant) ? "none" : OM ? "edge" : "plain"
-          }(iM, aM, !!this.sunShadow, OM._sampleCount > 1) : "none";
-        let nM;
+      startPipeline(VV, eV, xV, JV) {
+        var YV;
+        this.pipelines.set(VV, null);
+        const UV = dJ(xV),
+          yV = this.isBlended(eV),
+          pV = this.shadowMask && JV._depthStencilFormat ? function(VV, eV, xV, JV) {
+            if (void 0 === VV.packVariant || VV.liquid || eV) return "none";
+            const YV = (0, Ie.i)(VV.packVariant);
+            return null === YV || void 0 === YV || !YV.sunShadow || !UJ(YV, xV) || YV.discards || VV.alphaTest && MJ(VV.packVariant) ? "none" : JV ? "edge" : "plain"
+          }(xV, yV, !!this.sunShadow, JV._sampleCount > 1) : "none";
+        let QV;
         try {
-          nM = rS(iM, !!this.sunShadow, PM)
-        } catch (dM) {
-          if (!DO(iM)) throw dM;
-          return this.failedPackBuild(MM, iM, jM, dM)
+          QV = OJ(xV, !!this.sunShadow, pV)
+        } catch (EV) {
+          if (!RJ(xV)) throw EV;
+          return this.failedPackBuild(VV, xV, UV, EV)
         }
-        const QM = this.shaderModule(nM, jM),
-          zM = [];
-        iM.packed || (zM.push(function(MM, rM) {
-          const iM = [{
-            shaderLocation: TP.position,
-            offset: Ir.c.Oi,
+        const nV = this.shaderModule(QV, UV),
+          wV = [];
+        xV.packed || (wV.push(function(VV, eV) {
+          const xV = [{
+            shaderLocation: Sp.position,
+            offset: ue.i.wx,
             format: "float32x3"
           }, {
-            shaderLocation: TP.normal,
-            offset: Ir.c.normalOffset,
+            shaderLocation: Sp.normal,
+            offset: ue.i.normalOffset,
             format: "snorm8x4"
           }, {
-            shaderLocation: TP.color,
-            offset: Ir.c.colorOffset,
+            shaderLocation: Sp.color,
+            offset: ue.i.colorOffset,
             format: "unorm8x4"
           }];
-          return MM && iM.push({
-            shaderLocation: TP.uv,
-            offset: Ir.c.uvOffset,
+          return VV && xV.push({
+            shaderLocation: Sp.uv,
+            offset: ue.i.uvOffset,
             format: "float32x2"
-          }), rM && iM.push({
-            shaderLocation: TP.blockFlagWords,
-            offset: Ir.c.normalOffset,
+          }), eV && xV.push({
+            shaderLocation: Sp.blockFlagWords,
+            offset: ue.i.normalOffset,
             format: "uint32x2"
           }), {
-            arrayStride: Ir.c.strideWithoutAtlas,
+            arrayStride: ue.i.strideWithoutAtlas,
             stepMode: "vertex",
-            attributes: iM
+            attributes: xV
           }
-        }("none" !== iM.texture, DO(iM))), iM.lighting && zM.push(cP));
-        const LM = rM.model.backFaceCulling,
-          mM = {
-            label: jM,
+        }("none" !== xV.texture, RJ(xV))), xV.lighting && wV.push(dp));
+        const ZV = eV.model.backFaceCulling,
+          vV = {
+            label: UV,
             layout: this.device.createPipelineLayout({
-              bindGroupLayouts: [this.sceneLayout, this.frameLayout, rM.bindGroupLayout, ...Kj(this.device, iM, !!this.sunShadow, "none" !== PM)]
+              bindGroupLayouts: [this.sceneLayout, this.frameLayout, eV.bindGroupLayout, ...HU(this.device, xV, !!this.sunShadow, "none" !== pV)]
             }),
             vertex: {
-              module: QM,
+              module: nV,
               entryPoint: "mainVertex",
-              buffers: zM
+              buffers: wV
             },
-            fragment: lr({
-              module: QM,
+            fragment: je({
+              module: nV,
               entryPoint: "mainFragment"
-            }, OM, aM ? Mn : null),
-            depthStencil: OM._depthStencilFormat ? {
-              format: OM._depthStencilFormat,
-              depthCompare: null !== (SM = OM._depthCompare) && void 0 !== SM ? SM : br,
+            }, JV, yV ? Op : null),
+            depthStencil: JV._depthStencilFormat ? {
+              format: JV._depthStencilFormat,
+              depthCompare: null !== (YV = JV._depthCompare) && void 0 !== YV ? YV : Ae,
               depthWriteEnabled: !0
             } : void 0,
             multisample: {
-              count: OM._sampleCount
+              count: JV._sampleCount
             },
             primitive: {
               topology: "triangle-list",
               frontFace: "ccw",
-              cullMode: LM ? "back" : "none"
+              cullMode: ZV ? "back" : "none"
             }
           },
-          HM = iM.resting ? 0 : 1;
-        this.compiling += HM;
-        const hM = "none" === PM ? this.device.createRenderPipelineAsync(mM) : this.startMaskPipelines(QM, mM, "edge" === PM);
-        hM.then((rM => {
-          this.compiling -= HM, this.pipelines.set(MM, rM)
-        }), (MM => {
-          this.compiling -= HM, console.error(`Lite terrain pipeline ${jM} failed`, MM), xP(this.device, iM, jM, QM, MM)
+          rV = xV.resting ? 0 : 1;
+        this.compiling += rV;
+        const kV = "none" === pV ? this.device.createRenderPipelineAsync(vV) : this.startMaskPipelines(nV, vV, "edge" === pV);
+        kV.then((eV => {
+          this.compiling -= rV, this.pipelines.set(VV, eV)
+        }), (VV => {
+          this.compiling -= rV, console.error(`Lite terrain pipeline ${UV} failed`, VV), hp(this.device, xV, UV, nV, VV)
         }));
-        const JM = {
-          name: jM,
-          module: QM,
-          built: hM
+        const bV = {
+          name: UV,
+          module: nV,
+          built: kV
         };
-        return this.builds.set(MM, JM), JM
+        return this.builds.set(VV, bV), bV
       }
-      startMaskPipelines(MM, rM, iM) {
-        const OM = rM.depthStencil,
-          SM = this.device.createRenderPipelineAsync(iM ? rM : {
-            ...rM,
+      startMaskPipelines(VV, eV, xV) {
+        const JV = eV.depthStencil,
+          YV = this.device.createRenderPipelineAsync(xV ? eV : {
+            ...eV,
             depthStencil: {
-              ...OM,
+              ...JV,
               depthCompare: "equal",
               depthWriteEnabled: !1
             }
           }),
-          jM = this.device.createRenderPipelineAsync({
-            ...rM,
-            label: `${rM.label}-prepass`,
+          UV = this.device.createRenderPipelineAsync({
+            ...eV,
+            label: `${eV.label}-prepass`,
             fragment: {
-              module: MM,
+              module: VV,
               entryPoint: "prepassFragment",
               targets: [{
-                format: WP
+                format: Gp
               }]
             },
             multisample: {
               count: 1
             }
           });
-        return Promise.all([SM, jM]).then((MM => {
-          let [rM, iM] = MM;
-          return this.prepassOf.set(rM, iM), this.maskPipelines++, rM
+        return Promise.all([YV, UV]).then((VV => {
+          let [eV, xV] = VV;
+          return this.prepassOf.set(eV, xV), this.maskPipelines++, eV
         }))
       }
-      failedPackBuild(MM, rM, iM, OM) {
-        console.error(`Lite terrain pipeline ${iM} failed`, OM), xP(this.device, rM, iM, null, OM);
-        const SM = Promise.reject(OM);
-        SM.catch((() => {}));
-        const jM = {
-          name: iM,
+      failedPackBuild(VV, eV, xV, JV) {
+        console.error(`Lite terrain pipeline ${xV} failed`, JV), hp(this.device, eV, xV, null, JV);
+        const YV = Promise.reject(JV);
+        YV.catch((() => {}));
+        const UV = {
+          name: xV,
           module: null,
-          built: SM
+          built: YV
         };
-        return this.builds.set(MM, jM), jM
+        return this.builds.set(VV, UV), UV
       }
-      checkShaderPack(MM) {
-        return YP(MM, {
+      checkShaderPack(VV) {
+        return ap(VV, {
           device: this.device,
           target: this.target,
-          material: MM => this.materialFor(MM),
-          programKey: (MM, rM, iM) => this.programKey(MM, rM, iM),
-          pipelineBuild: (MM, rM, iM) => this.pipelineBuild(MM, rM, iM)
+          material: VV => this.materialFor(VV),
+          programKey: (VV, eV, xV) => this.programKey(VV, eV, xV),
+          pipelineBuild: (VV, eV, xV) => this.pipelineBuild(VV, eV, xV)
         })
       }
-      createBinding(MM, rM, iM) {
-        return this.target = rM, {
-          renderable: MM,
-          pipeline: ur(this.device, rM),
-          draw: MM => {
+      createBinding(VV, eV, xV) {
+        return this.target = eV, {
+          renderable: VV,
+          pipeline: ze(this.device, eV),
+          draw: VV => {
             this.geometry.setDrawing(!0);
             try {
-              return iM ? this.drawTransparent(MM, rM) : this.drawOpaque(MM, rM)
+              return xV ? this.drawTransparent(VV, eV) : this.drawOpaque(VV, eV)
             } finally {
               this.geometry.setDrawing(!1)
             }
           }
         }
       }
-      prepare(MM, rM) {
-        var iM, OM, SM, jM;
+      prepare(VV, eV) {
+        var xV, JV, YV, UV;
         const {
-          Cm: aM
-        } = MM;
-        this.lighting = MM.DJ;
-        const PM = (0, EP.t)(rM);
-        this.dirLightCount = Math.min(PM, 4), this.nh = null !== (iM = aM.nh) && void 0 !== iM ? iM : null, PM > 4 && this.warnOnce("dirLights", "Lite terrain lights with the first 4 directional lights only."), this.writeFrameUniforms(MM, rM), this.animateMaterials(rM.animTick);
-        const nM = aM.Am,
-          QM = nM[0] !== this.originOffset[0] || nM[1] !== this.originOffset[1] || nM[2] !== this.originOffset[2];
-        QM && (this.originOffset[0] = nM[0], this.originOffset[1] = nM[1], this.originOffset[2] = nM[2]);
-        const zM = rM.eye;
-        this.eye[0] = zM[0], this.eye[1] = zM[1], this.eye[2] = zM[2], this.writeShaderPackInputs();
-        const LM = rM.projectionMatrix,
-          mM = 0 === LM[15];
-        let HM = 0;
-        (QM || this.eye[0] !== this.faceEye[0] || this.eye[1] !== this.faceEye[1] || this.eye[2] !== this.faceEye[2]) && (this.faceEpoch++, this.faceEye[0] = this.eye[0], this.faceEye[1] = this.eye[1], this.faceEye[2] = this.eye[2]);
+          iv: yV
+        } = VV;
+        this.lighting = VV.eE;
+        const pV = (0, Bp.s)(eV);
+        this.dirLightCount = Math.min(pV, 4), this.Xk = null !== (xV = yV.Xk) && void 0 !== xV ? xV : null, pV > 4 && this.warnOnce("dirLights", "Lite terrain lights with the first 4 directional lights only."), this.writeFrameUniforms(VV, eV), this.animateMaterials(eV.animTick);
+        const QV = yV.Vr,
+          nV = QV[0] !== this.originOffset[0] || QV[1] !== this.originOffset[1] || QV[2] !== this.originOffset[2];
+        nV && (this.originOffset[0] = QV[0], this.originOffset[1] = QV[1], this.originOffset[2] = QV[2]);
+        const wV = eV.eye;
+        this.eye[0] = wV[0], this.eye[1] = wV[1], this.eye[2] = wV[2], this.writeShaderPackInputs();
+        const ZV = eV.projectionMatrix,
+          vV = 0 === ZV[15];
+        let rV = 0;
+        (nV || this.eye[0] !== this.faceEye[0] || this.eye[1] !== this.faceEye[1] || this.eye[2] !== this.faceEye[2]) && (this.faceEpoch++, this.faceEye[0] = this.eye[0], this.faceEye[1] = this.eye[1], this.faceEye[2] = this.eye[2]);
         let {
-          faceEpoch: hM
+          faceEpoch: kV
         } = this;
-        Rr(this.transparentRenderable._worldCenter, rM, tr), this.resetBatches(mM), this.transparent.length = 0, this.unlit.length = 0;
-        const JM = aM.uL.hL,
-          dM = JM / 2 * Math.sqrt(3);
-        let yM = 0;
-        const lM = !!this.nh && uO(this.nh.defineFor("liquid"));
-        let EM = !1;
-        const UM = null !== (OM = null === (SM = aM.kU) || void 0 === SM ? void 0 : SM.visibility) && void 0 !== OM ? OM : null,
-          GM = this.visCull && mM && 0 === this.compiling && null !== UM && aM.uL.GOM[0] >= this.visCullMinDistance ? this.target : null,
-          CM = this.visPassable,
-          eM = this.visCandidates,
-          bM = this.visCandidateBatches;
-        CM.clear(), this.visBatchDraws.clear(), this.visDrawsMaterial = null;
-        let wM = 0;
+        Ge(this.transparentRenderable._worldCenter, eV, Xe), this.resetBatches(vV), this.transparent.length = 0, this.unlit.length = 0;
+        const bV = yV.cZ.AZ,
+          EV = bV / 2 * Math.sqrt(3);
+        let BV = 0;
+        const jV = !!this.Xk && XJ(this.Xk.defineFor("liquid"));
+        let qV = !1;
+        const tV = null !== (JV = null === (YV = yV.wT) || void 0 === YV ? void 0 : YV.visibility) && void 0 !== JV ? JV : null,
+          FV = this.visCull && vV && 0 === this.compiling && null !== tV && yV.cZ.cYV[0] >= this.visCullMinDistance ? this.target : null,
+          TV = this.visPassable,
+          PV = this.visCandidates,
+          AV = this.visCandidateBatches;
+        TV.clear(), this.visBatchDraws.clear(), this.visDrawsMaterial = null;
+        let NV = 0;
         this.visCulledParts = 0, this.visCulledTriangles = 0;
-        let tM = 0;
-        const gM = (MM, iM) => {
-          if (!iM) return this.transparent.push(MM), void(tM += 2 * MM.faceCount);
-          if (null !== MM.faceGroups && iM.faceCull) {
-            if (0 === HM && (HM = (0, FP.c)(LM, rM.renderWidth, rM.renderHeight), HM !== this.faceFocalPx && (this.faceFocalPx = HM, hM = ++this.faceEpoch)), MM.faceEpoch !== hM) {
-              MM.faceEpoch = hM;
-              const rM = Math.sqrt(MM.distance) + dM,
-                iM = (0, FP.h)(MM.planePX, MM.planeNX, MM.planePY, MM.planeNY, MM.planePZ, MM.planeNZ, this.eye[0] - (MM.origin[0] - this.originOffset[0]), this.eye[1] - (MM.origin[1] - this.originOffset[1]), this.eye[2] - (MM.origin[2] - this.originOffset[2]), (0, FP.e)(rM, HM));
-              iM !== MM.faceMask && this.chooseFaceRanges(MM, MM.faceGroups, iM)
+        let XV = 0;
+        const MV = (VV, xV) => {
+          if (!xV) return this.transparent.push(VV), void(XV += 2 * VV.faceCount);
+          if (null !== VV.faceGroups && xV.faceCull) {
+            if (0 === rV && (rV = (0, Lp.b)(ZV, eV.renderWidth, eV.renderHeight), rV !== this.faceFocalPx && (this.faceFocalPx = rV, kV = ++this.faceEpoch)), VV.faceEpoch !== kV) {
+              VV.faceEpoch = kV;
+              const eV = Math.sqrt(VV.distance) + EV,
+                xV = (0, Lp.f)(VV.planePX, VV.planeNX, VV.planePY, VV.planeNY, VV.planePZ, VV.planeNZ, this.eye[0] - (VV.origin[0] - this.originOffset[0]), this.eye[1] - (VV.origin[1] - this.originOffset[1]), this.eye[2] - (VV.origin[2] - this.originOffset[2]), (0, Lp.c)(eV, rV));
+              xV !== VV.faceMask && this.chooseFaceRanges(VV, VV.faceGroups, xV)
             }
-            if (0 === MM.rangeCount) return
-          } else - 1 !== MM.faceMask && this.drawWhole(MM);
-          iM.meshes.push(MM), tM += 2 * ((MM.rangeCount > 0 ? MM.count0 : 0) + (MM.rangeCount > 1 ? MM.count1 : 0))
+            if (0 === VV.rangeCount) return
+          } else - 1 !== VV.faceMask && this.drawWhole(VV);
+          xV.meshes.push(VV), XV += 2 * ((VV.rangeCount > 0 ? VV.count0 : 0) + (VV.rangeCount > 1 ? VV.count1 : 0))
         };
-        for (const RM of this.chunks.values()) {
-          QM && this.writeSlot(RM);
-          const MM = RM.mesh.visibility;
-          MM !== RM.visibility && (RM.visibility = MM, this.slots.setVisibility(RM.slot, MM));
+        for (const GV of this.chunks.values()) {
+          nV && this.writeSlot(GV);
+          const VV = GV.mesh.visibility;
+          VV !== GV.visibility && (GV.visibility = VV, this.slots.setVisibility(GV.slot, VV));
           const {
-            material: iM
-          } = RM;
-          this.geometry.lost(RM) && performance.now() >= RM.lostRetryAt && this.remeshLost(aM, RM);
-          const OM = !(null === iM || void 0 === iM || !iM.bindGroup) && this.geometry.backed(RM),
-            SM = OM && this.lighting && !RM.vertices.page.twin;
-          if (GM && (Number.isNaN(RM.key) && (RM.ci = Math.floor(RM.origin[0] / JM), RM.cj = Math.floor(RM.origin[1] / JM), RM.ck = Math.floor(RM.origin[2] / JM), RM.key = (0, XP.k)(RM.ci, RM.cj, RM.ck)), (!OM || MM < 1 || SM || !this.batchDraws(iM, RM.packed, GM)) && this.visSeeThrough(RM, GM) && CM.add(RM.key)), !OM) continue;
-          SM || (RM.lostRemeshes = 0);
-          const jM = RM.origin[0] - this.originOffset[0],
-            PM = RM.origin[1] - this.originOffset[1],
-            nM = RM.origin[2] - this.originOffset[2];
-          if (!(0, PP.e)(rM.frustum, jM, PM, nM, JM)) continue;
-          const zM = jM + JM / 2 - this.eye[0],
-            LM = PM + JM / 2 - this.eye[1],
-            HM = nM + JM / 2 - this.eye[2];
-          if (RM.distance = zM * zM + LM * LM + HM * HM, this.lighting && !RM.lit && (yM = Math.max(yM, RM.vertexCount), this.unlit.push(RM)), SM) continue;
-          const hM = this.isBlended(iM) ? null : this.batchFor(iM, RM.packed, RM.vertices.page, 1 === MM, mM);
-          GM ? (eM[wM] = RM, bM[wM++] = hM) : gM(RM, hM)
+            material: xV
+          } = GV;
+          this.geometry.lost(GV) && performance.now() >= GV.lostRetryAt && this.remeshLost(yV, GV);
+          const JV = !(null === xV || void 0 === xV || !xV.bindGroup) && this.geometry.backed(GV),
+            YV = JV && this.lighting && !GV.vertices.page.twin;
+          if (FV && (Number.isNaN(GV.key) && (GV.ci = Math.floor(GV.origin[0] / bV), GV.cj = Math.floor(GV.origin[1] / bV), GV.ck = Math.floor(GV.origin[2] / bV), GV.key = (0, mp.g)(GV.ci, GV.cj, GV.ck)), (!JV || VV < 1 || YV || !this.batchDraws(xV, GV.packed, FV)) && this.visSeeThrough(GV, FV) && TV.add(GV.key)), !JV) continue;
+          YV || (GV.lostRemeshes = 0);
+          const UV = GV.origin[0] - this.originOffset[0],
+            pV = GV.origin[1] - this.originOffset[1],
+            QV = GV.origin[2] - this.originOffset[2];
+          if (!(0, Up.b)(eV.frustum, UV, pV, QV, bV)) continue;
+          const wV = UV + bV / 2 - this.eye[0],
+            ZV = pV + bV / 2 - this.eye[1],
+            rV = QV + bV / 2 - this.eye[2];
+          if (GV.distance = wV * wV + ZV * ZV + rV * rV, this.lighting && !GV.lit && (BV = Math.max(BV, GV.vertexCount), this.unlit.push(GV)), YV) continue;
+          const kV = this.isBlended(xV) ? null : this.batchFor(xV, GV.packed, GV.vertices.page, 1 === VV, vV);
+          FV ? (PV[NV] = GV, AV[NV++] = kV) : MV(GV, kV)
         }
-        const uM = GM ? this.sweepVisibility(MM, rM, UM) : null;
-        null === (jM = (0, oj.A)(aM)) || void 0 === jM || jM.update(rM.frustum, this.originOffset, JM, uM);
-        for (let RM = 0; RM < wM; RM++) {
-          const MM = eM[RM];
-          !uM || uM.isDrawn(MM.ci, MM.cj, MM.ck) ? gM(MM, bM[RM]) : (this.visCulledParts++, this.visCulledTriangles += 2 * MM.faceCount)
+        const zV = FV ? this.sweepVisibility(VV, eV, tV) : null;
+        null === (UV = (0, iU.u)(yV)) || void 0 === UV || UV.update(eV.frustum, this.originOffset, bV, zV);
+        for (let GV = 0; GV < NV; GV++) {
+          const VV = PV[GV];
+          !zV || zV.isDrawn(VV.ci, VV.cj, VV.ck) ? MV(VV, AV[GV]) : (this.visCulledParts++, this.visCulledTriangles += 2 * VV.faceCount)
         }
-        for (const RM of this.transparent) EM ||= lM && RM.material.liquid && !RM.material.customRenderMat;
-        this.submittedTriangles = tM, uM && this.visCheck && ++this.visCheckFrame >= 60 && (this.visCheckFrame = 0, this.runVisCheck(MM, rM, uM)), this.slots.flush(), this.sceneDepth ? this.sceneDepth.setWanted(EM) : EM && this.warnOnce("sceneDepth", "Lite: a shader pack reads scene depth on a page that didn't turn it on, so liquids find nothing behind them"), this.lighting && yM > 0 && this.geometry.lightFullSky(this.unlit, yM);
-        for (const RM of this.opaqueBatches) this.chunkSorter.sort(RM.meshes, 1) || RM.meshes.sort(Sn);
-        this.orderBatches(), this.chunkSorter.sort(this.transparent, -1) || this.transparent.sort(jn)
+        for (const GV of this.transparent) qV ||= jV && GV.material.liquid && !GV.material.customRenderMat;
+        this.submittedTriangles = XV, zV && this.visCheck && ++this.visCheckFrame >= 60 && (this.visCheckFrame = 0, this.runVisCheck(VV, eV, zV)), this.slots.flush(), this.sceneDepth ? this.sceneDepth.setWanted(qV) : qV && this.warnOnce("sceneDepth", "Lite: a shader pack reads scene depth on a page that didn't turn it on, so liquids find nothing behind them"), this.lighting && BV > 0 && this.geometry.lightFullSky(this.unlit, BV);
+        for (const GV of this.opaqueBatches) this.chunkSorter.sort(GV.meshes, 1) || GV.meshes.sort(xQ);
+        this.orderBatches(), this.chunkSorter.sort(this.transparent, -1) || this.transparent.sort(JQ)
       }
-      sweepVisibility(MM, rM, iM) {
+      sweepVisibility(VV, eV, xV) {
         const {
-          uL: OM
-        } = MM.Cm, SM = OM.hL, jM = this.visPassable, aM = this.eye[0] + this.originOffset[0], PM = this.eye[1] + this.originOffset[1], nM = this.eye[2] + this.originOffset[2];
-        if (!iM.eyeClear(aM, PM, nM, rM.near, rM.projectionMatrix, OM)) return null;
-        const [QM, zM] = OM.GOM, LM = iM.update(aM, PM, nM, SM, QM, zM, jM);
-        return this.visSweeps = iM.sweeps, LM ? iM : null
+          cZ: JV
+        } = VV.iv, YV = JV.AZ, UV = this.visPassable, yV = this.eye[0] + this.originOffset[0], pV = this.eye[1] + this.originOffset[1], QV = this.eye[2] + this.originOffset[2];
+        if (!xV.eyeClear(yV, pV, QV, eV.near, eV.projectionMatrix, JV)) return null;
+        const [nV, wV] = JV.cYV, ZV = xV.update(yV, pV, QV, YV, nV, wV, UV);
+        return this.visSweeps = xV.sweeps, ZV ? xV : null
       }
-      visSeeThrough(MM, rM) {
+      visSeeThrough(VV, eV) {
         const {
-          material: iM
-        } = MM;
-        return (!iM || !this.isBlended(iM)) && (MM.mesh.visibility < 1 || !(null !== iM && void 0 !== iM && iM.bindGroup) || MM.faceCount > 0 && (!this.geometry.backed(MM) || this.lighting && !MM.vertices.page.twin) || !this.batchDraws(iM, MM.packed, rM))
+          material: xV
+        } = VV;
+        return (!xV || !this.isBlended(xV)) && (VV.mesh.visibility < 1 || !(null !== xV && void 0 !== xV && xV.bindGroup) || VV.faceCount > 0 && (!this.geometry.backed(VV) || this.lighting && !VV.vertices.page.twin) || !this.batchDraws(xV, VV.packed, eV))
       }
-      batchDraws(MM, rM, iM) {
-        var OM;
-        const SM = rM ? 2 : 0;
-        if (MM === this.visDrawsMaterial && function(MM, rM) {
-            return 0 !== (MM & 1 << rM)
-          }(this.visDrawsBits, SM)) return 0 !== (this.visDrawsBits & 2 << SM);
-        let jM = null !== (OM = this.visBatchDraws.get(MM)) && void 0 !== OM ? OM : 0;
-        if (!(jM & 1 << SM)) {
-          jM |= 1 << SM | (!!MM.bindGroupLayout && this.canDraw(MM, rM) && !!this.pipelines.get(this.pipelineIdNow(MM, rM, !1, iM)) ? 2 << SM : 0), this.visBatchDraws.set(MM, jM)
+      batchDraws(VV, eV, xV) {
+        var JV;
+        const YV = eV ? 2 : 0;
+        if (VV === this.visDrawsMaterial && function(VV, eV) {
+            return 0 !== (VV & 1 << eV)
+          }(this.visDrawsBits, YV)) return 0 !== (this.visDrawsBits & 2 << YV);
+        let UV = null !== (JV = this.visBatchDraws.get(VV)) && void 0 !== JV ? JV : 0;
+        if (!(UV & 1 << YV)) {
+          UV |= 1 << YV | (!!VV.bindGroupLayout && this.canDraw(VV, eV) && !!this.pipelines.get(this.pipelineIdNow(VV, eV, !1, xV)) ? 2 << YV : 0), this.visBatchDraws.set(VV, UV)
         }
-        return this.visDrawsMaterial = MM, this.visDrawsBits = jM, 0 !== (jM & 2 << SM)
+        return this.visDrawsMaterial = VV, this.visDrawsBits = UV, 0 !== (UV & 2 << YV)
       }
-      runVisCheck(MM, rM, iM) {
+      runVisCheck(VV, eV, xV) {
         const {
-          Cm: OM
-        } = MM, {
-          uL: SM
-        } = OM, jM = SM.hL, aM = new Set;
-        for (const HM of this.chunks.values()) aM.add(HM.key);
-        const PM = FS.Matrix.FromArray(rM.viewProjectionMatrix).invert(),
-          [nM, QM, zM] = this.originOffset,
-          LM = new FS.sh,
-          mM = function(MM, rM, iM, OM) {
-            const SM = new Set;
-            for (let jM = 0; jM < 27; jM++)
-              for (let aM = 0; aM < 48; aM++) {
-                const PM = iM((aM + .5) / 48 * 2 - 1, (jM + .5) / 27 * 2 - 1);
-                IP(MM, rM, [PM[0] - rM[0], PM[1] - rM[1], PM[2] - rM[2]], OM, SM)
+          iv: JV
+        } = VV, {
+          cZ: YV
+        } = JV, UV = YV.AZ, yV = new Set;
+        for (const rV of this.chunks.values()) yV.add(rV.key);
+        const pV = LY.Matrix.FromArray(eV.viewProjectionMatrix).invert(),
+          [QV, nV, wV] = this.originOffset,
+          ZV = new LY.Ik,
+          vV = function(VV, eV, xV, JV) {
+            const YV = new Set;
+            for (let UV = 0; UV < 27; UV++)
+              for (let yV = 0; yV < 48; yV++) {
+                const pV = xV((yV + .5) / 48 * 2 - 1, (UV + .5) / 27 * 2 - 1);
+                Kp(VV, eV, [pV[0] - eV[0], pV[1] - eV[1], pV[2] - eV[2]], JV, YV)
               }
-            return SM
+            return YV
           }({
-            YB: (MM, rM, iM) => SM.YB(MM, rM, iM),
-            occluders: iM.occluders,
-            opaque: iM.opaque,
-            HL: jM,
-            isDrawn: (MM, rM, OM) => iM.isDrawn(MM, rM, OM),
-            hasParts: (MM, rM, iM) => aM.has((0, XP.k)(MM, rM, iM))
-          }, [this.eye[0] + nM, this.eye[1] + QM, this.eye[2] + zM], ((MM, rM) => (FS.sh.TransformCoordinatesFromFloatsToRef(MM, rM, .5, PM, LM), [LM.x + nM, LM.y + QM, LM.z + zM])), (SM.GOM[0] + 1) * jM);
-        this.visViolations = mM.size;
-        for (const HM of mM) this.warnOnce(`vis:${HM}`, `Lite terrain cave culling skipped chunk ${HM}, which a ray from the eye reaches.`)
+            K3: (VV, eV, xV) => YV.K3(VV, eV, xV),
+            occluders: xV.occluders,
+            opaque: xV.opaque,
+            PZ: UV,
+            isDrawn: (VV, eV, JV) => xV.isDrawn(VV, eV, JV),
+            hasParts: (VV, eV, xV) => yV.has((0, mp.g)(VV, eV, xV))
+          }, [this.eye[0] + QV, this.eye[1] + nV, this.eye[2] + wV], ((VV, eV) => (LY.Ik.TransformCoordinatesFromFloatsToRef(VV, eV, .5, pV, ZV), [ZV.x + QV, ZV.y + nV, ZV.z + wV])), (YV.cYV[0] + 1) * UV);
+        this.visViolations = vV.size;
+        for (const rV of vV) this.warnOnce(`vis:${rV}`, `Lite terrain cave culling skipped chunk ${rV}, which a ray from the eye reaches.`)
       }
       writeShaderPackInputs() {
-        var MM;
-        null !== (MM = this.nh) && void 0 !== MM && MM.isRunning() && (this.shaderPackInputs ??= new qj(this.device, this.nh.textureLayers(), this.sunShadow), this.shaderPackInputs.write(this.nh, this.eye, this.lighting))
+        var VV;
+        null !== (VV = this.Xk) && void 0 !== VV && VV.isRunning() && (this.shaderPackInputs ??= new uU(this.device, this.Xk.textureLayers(), this.sunShadow), this.shaderPackInputs.write(this.Xk, this.eye, this.lighting))
       }
-      bindShaderPackInputs(MM, rM, iM) {
-        var OM, SM, jM, aM;
-        let PM = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-        const nM = this.packVariant(rM, iM);
-        if (void 0 === nM) return;
-        this.shaderPackInputs || (this.shaderPackInputs = new qj(this.device, iM.textureLayers(), this.sunShadow), this.shaderPackInputs.write(iM, this.eye, this.lighting));
-        const QM = uO(nM) ? null !== (OM = null === (SM = this.sceneDepth) || void 0 === SM ? void 0 : SM.view) && void 0 !== OM ? OM : this.standIn() : null,
-          zM = PM ? null !== (jM = null === (aM = this.shadowMask) || void 0 === aM ? void 0 : aM.view) && void 0 !== jM ? jM : this.standIn() : null;
-        this.shaderPackInputs.bind(MM, QM, Ij(nM, !!this.sunShadow), zM)
+      bindShaderPackInputs(VV, eV, xV) {
+        var JV, YV, UV, yV;
+        let pV = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+        const QV = this.packVariant(eV, xV);
+        if (void 0 === QV) return;
+        this.shaderPackInputs || (this.shaderPackInputs = new uU(this.device, xV.textureLayers(), this.sunShadow), this.shaderPackInputs.write(xV, this.eye, this.lighting));
+        const nV = XJ(QV) ? null !== (JV = null === (YV = this.sceneDepth) || void 0 === YV ? void 0 : YV.view) && void 0 !== JV ? JV : this.standIn() : null,
+          wV = pV ? null !== (UV = null === (yV = this.shadowMask) || void 0 === yV ? void 0 : yV.view) && void 0 !== UV ? UV : this.standIn() : null;
+        this.shaderPackInputs.bind(VV, nV, KU(QV, !!this.sunShadow), wV)
       }
       standIn() {
         return this.depthStandIn ??= this.device.createTexture({
@@ -6897,954 +6897,954 @@ export const modules = {
         }).createView()
       }
       sunShadowGroup() {
-        var MM, rM;
-        return null !== (MM = null === (rM = this.shaderPackInputs) || void 0 === rM ? void 0 : rM.bindGroupFor(null, !0)) && void 0 !== MM ? MM : null
+        var VV, eV;
+        return null !== (VV = null === (eV = this.shaderPackInputs) || void 0 === eV ? void 0 : eV.bindGroupFor(null, !0)) && void 0 !== VV ? VV : null
       }
-      resetBatches(MM) {
-        const rM = this.opaqueBatches;
-        let iM = 0;
-        for (const OM of rM) OM.meshes.length > 0 && (OM.meshes.length = 0, OM.faceCull = this.batchFaceCull(OM.material, MM), rM[iM++] = OM);
-        rM.length = iM
+      resetBatches(VV) {
+        const eV = this.opaqueBatches;
+        let xV = 0;
+        for (const JV of eV) JV.meshes.length > 0 && (JV.meshes.length = 0, JV.faceCull = this.batchFaceCull(JV.material, VV), eV[xV++] = JV);
+        eV.length = xV
       }
       orderBatches() {
-        const MM = this.opaqueBatches;
-        for (let rM = 0; rM < MM.length; rM++) {
-          const iM = MM[rM];
-          iM.group = rM;
-          for (let OM = 0; OM < rM; OM++) {
-            const rM = MM[OM];
-            if (rM.material === iM.material && rM.packed === iM.packed) {
-              iM.group = rM.group;
+        const VV = this.opaqueBatches;
+        for (let eV = 0; eV < VV.length; eV++) {
+          const xV = VV[eV];
+          xV.group = eV;
+          for (let JV = 0; JV < eV; JV++) {
+            const eV = VV[JV];
+            if (eV.material === xV.material && eV.packed === xV.packed) {
+              xV.group = eV.group;
               break
             }
           }
-          iM.nearest = iM.meshes.length > 0 ? iM.meshes[0].distance : 1 / 0
+          xV.nearest = xV.meshes.length > 0 ? xV.meshes[0].distance : 1 / 0
         }
-        MM.sort(KP)
+        VV.sort(Hp)
       }
-      batchFor(MM, rM, iM, OM, SM) {
-        for (const aM of this.opaqueBatches)
-          if (aM.material === MM && aM.packed === rM && aM.page === iM && aM.resting === OM) return aM;
-        const jM = {
-          material: MM,
-          packed: rM,
-          page: iM,
-          resting: OM,
+      batchFor(VV, eV, xV, JV, YV) {
+        for (const yV of this.opaqueBatches)
+          if (yV.material === VV && yV.packed === eV && yV.page === xV && yV.resting === JV) return yV;
+        const UV = {
+          material: VV,
+          packed: eV,
+          page: xV,
+          resting: JV,
           meshes: [],
           group: 0,
           nearest: 0,
-          faceCull: this.batchFaceCull(MM, SM)
+          faceCull: this.batchFaceCull(VV, YV)
         };
-        return this.opaqueBatches.push(jM), jM
+        return this.opaqueBatches.push(UV), UV
       }
-      batchFaceCull(MM, rM) {
-        return !(!rM || !(0, vP.t)(MM.model)) && (!this.nh || ! function(MM) {
-          var rM;
-          return !(null === (rM = (0, Tr.g)(MM)) || void 0 === rM || !rM.movesVertices)
-        }(this.packVariant(MM, this.nh)))
+      batchFaceCull(VV, eV) {
+        return !(!eV || !(0, lp.p)(VV.model)) && (!this.Xk || ! function(VV) {
+          var eV;
+          return !(null === (eV = (0, Ie.i)(VV)) || void 0 === eV || !eV.movesVertices)
+        }(this.packVariant(VV, this.Xk)))
       }
-      writeFrameUniforms(MM, rM) {
-        const iM = this.frameUniforms,
-          OM = kO;
-        if ((0, EP.u)(MM, iM), iM[OM.fogInfos] = rM.fogEnabled ? rM.fogMode : 0, iM[OM.fogInfos + 1] = rM.fogStart, iM[OM.fogInfos + 2] = rM.fogEnd, iM[OM.fogInfos + 3] = rM.fogDensity, iM.set(rM.fogColour, OM.fogColour), iM[OM.outputHeight] = rM.renderHeight, iM.set(rM.ambientColour, OM.sceneAmbient), (0, EP.r)(rM, this.dirLightCount, this.dirLightUniforms), !this.aoLevelsWritten) {
-          const rM = (0, UP.k)(MM.rJ, MM.bh, MM.gh);
-          for (let MM = 0; MM < 4; MM++) iM[OM.aoLevels + MM] = rM[MM] / 255;
+      writeFrameUniforms(VV, eV) {
+        const xV = this.frameUniforms,
+          JV = gJ;
+        if ((0, Bp.w)(VV, xV), xV[JV.fogInfos] = eV.fogEnabled ? eV.fogMode : 0, xV[JV.fogInfos + 1] = eV.fogStart, xV[JV.fogInfos + 2] = eV.fogEnd, xV[JV.fogInfos + 3] = eV.fogDensity, xV.set(eV.fogColour, JV.fogColour), xV[JV.outputHeight] = eV.renderHeight, xV.set(eV.ambientColour, JV.sceneAmbient), (0, Bp.r)(eV, this.dirLightCount, this.dirLightUniforms), !this.aoLevelsWritten) {
+          const eV = (0, jp.j)(VV.qb, VV.mk, VV.Kk);
+          for (let VV = 0; VV < 4; VV++) xV[JV.aoLevels + VV] = eV[VV] / 255;
           this.aoLevelsWritten = !0
         }
-        this.device.queue.writeBuffer(this.frameBuffer, 0, iM)
+        this.device.queue.writeBuffer(this.frameBuffer, 0, xV)
       }
-      animateMaterials(MM) {
-        const rM = oO.anim;
-        for (const iM of this.materials.values()) iM.animated && (iM.uniformData[rM] = MM, this.device.queue.writeBuffer(iM.uniformBuffer, 4 * rM, iM.uniformData, rM, 1))
+      animateMaterials(VV) {
+        const eV = iJ.anim;
+        for (const xV of this.materials.values()) xV.animated && (xV.uniformData[eV] = VV, this.device.queue.writeBuffer(xV.uniformBuffer, 4 * eV, xV.uniformData, eV, 1))
       }
-      canDraw(MM, rM) {
-        return !("atlas" === MM.texture && !rM) || (this.warnOnce(`stride:${MM.id}`, `Lite terrain: material "${MM.model.name}" samples the atlas but its mesh has no quad records, which hold its atlas indices.`), !1)
+      canDraw(VV, eV) {
+        return !("atlas" === VV.texture && !eV) || (this.warnOnce(`stride:${VV.id}`, `Lite terrain: material "${VV.model.name}" samples the atlas but its mesh has no quad records, which hold its atlas indices.`), !1)
       }
-      drawOpaque(MM, rM) {
-        let iM = 0;
-        MM.setBindGroup(1, this.frameBindGroup);
-        for (const OM of this.opaqueBatches) {
-          if (!OM.meshes.length || !this.canDraw(OM.material, OM.packed)) continue;
-          const SM = this.pipelineFor(OM.material, OM.packed, rM, OM.resting);
-          SM && (MM.setPipeline(SM), MM.setBindGroup(2, OM.material.bindGroup), this.nh && this.bindShaderPackInputs(MM, OM.material, this.nh, this.prepassOf.has(SM)), iM += this.drawBatch(MM, OM))
+      drawOpaque(VV, eV) {
+        let xV = 0;
+        VV.setBindGroup(1, this.frameBindGroup);
+        for (const JV of this.opaqueBatches) {
+          if (!JV.meshes.length || !this.canDraw(JV.material, JV.packed)) continue;
+          const YV = this.pipelineFor(JV.material, JV.packed, eV, JV.resting);
+          YV && (VV.setPipeline(YV), VV.setBindGroup(2, JV.material.bindGroup), this.Xk && this.bindShaderPackInputs(VV, JV.material, this.Xk, this.prepassOf.has(YV)), xV += this.drawBatch(VV, JV))
         }
-        return iM
+        return xV
       }
       get readsMask() {
         return this.maskPipelines > 0
       }
-      drawPrepass(MM, rM, iM) {
-        const OM = this.target,
-          SM = this.nh;
-        if (!OM || !SM || 0 === this.maskPipelines) return 0;
-        let jM = 0,
-          aM = null;
+      drawPrepass(VV, eV, xV) {
+        const JV = this.target,
+          YV = this.Xk;
+        if (!JV || !YV || 0 === this.maskPipelines) return 0;
+        let UV = 0,
+          yV = null;
         this.geometry.setDrawing(!0);
         try {
-          for (const PM of this.opaqueBatches) {
-            if (!PM.meshes.length || !this.canDraw(PM.material, PM.packed)) continue;
-            const nM = this.pipelineFor(PM.material, PM.packed, OM, PM.resting),
-              QM = nM && this.prepassOf.get(nM);
-            QM && (aM || (aM = MM.beginRenderPass(rM), aM.setBindGroup(0, iM), aM.setBindGroup(1, this.frameBindGroup)), aM.setPipeline(QM), aM.setBindGroup(2, PM.material.bindGroup), this.bindShaderPackInputs(aM, PM.material, SM, !0), jM += this.drawBatch(aM, PM))
+          for (const pV of this.opaqueBatches) {
+            if (!pV.meshes.length || !this.canDraw(pV.material, pV.packed)) continue;
+            const QV = this.pipelineFor(pV.material, pV.packed, JV, pV.resting),
+              nV = QV && this.prepassOf.get(QV);
+            nV && (yV || (yV = VV.beginRenderPass(eV), yV.setBindGroup(0, xV), yV.setBindGroup(1, this.frameBindGroup)), yV.setPipeline(nV), yV.setBindGroup(2, pV.material.bindGroup), this.bindShaderPackInputs(yV, pV.material, YV, !0), UV += this.drawBatch(yV, pV))
           }
         } finally {
-          var PM;
-          null === (PM = aM) || void 0 === PM || PM.end(), this.geometry.setDrawing(!1)
+          var pV;
+          null === (pV = yV) || void 0 === pV || pV.end(), this.geometry.setDrawing(!1)
         }
-        return jM
+        return UV
       }
-      drawBatch(MM, rM) {
-        let iM = 0;
-        for (const OM of rM.meshes) {
+      drawBatch(VV, eV) {
+        let xV = 0;
+        for (const JV of eV.meshes) {
           const {
-            rangeCount: rM
-          } = OM;
-          rM > 0 && (iM += this.geometry.draw(MM, OM, this.lighting, OM.first0, OM.count0), rM > 1 && (iM += this.geometry.draw(MM, OM, this.lighting, OM.first1, OM.count1)))
+            rangeCount: eV
+          } = JV;
+          eV > 0 && (xV += this.geometry.draw(VV, JV, this.lighting, JV.first0, JV.count0), eV > 1 && (xV += this.geometry.draw(VV, JV, this.lighting, JV.first1, JV.count1)))
         }
-        return iM
+        return xV
       }
-      drawTransparent(MM, rM) {
-        let iM = 0,
-          OM = null,
-          SM = null;
-        MM.setBindGroup(1, this.frameBindGroup);
-        for (const jM of this.transparent) {
-          const aM = jM.material;
-          if (!this.canDraw(aM, jM.packed)) continue;
-          const PM = this.pipelineFor(aM, jM.packed, rM);
-          PM && (PM !== OM && (MM.setPipeline(PM), OM = PM, this.nh && this.bindShaderPackInputs(MM, aM, this.nh)), aM !== SM && (MM.setBindGroup(2, aM.bindGroup), SM = aM), iM += this.geometry.draw(MM, jM, this.lighting))
+      drawTransparent(VV, eV) {
+        let xV = 0,
+          JV = null,
+          YV = null;
+        VV.setBindGroup(1, this.frameBindGroup);
+        for (const UV of this.transparent) {
+          const yV = UV.material;
+          if (!this.canDraw(yV, UV.packed)) continue;
+          const pV = this.pipelineFor(yV, UV.packed, eV);
+          pV && (pV !== JV && (VV.setPipeline(pV), JV = pV, this.Xk && this.bindShaderPackInputs(VV, yV, this.Xk)), yV !== YV && (VV.setBindGroup(2, yV.bindGroup), YV = yV), xV += this.geometry.draw(VV, UV, this.lighting))
         }
-        return iM
+        return xV
       }
     }
 
-    function On(MM, rM, iM, OM) {
-      return `${MS(MM)}|${MM.atlasLayers}|${MM.U3}|${rM}|${iM}|${OM._colorFormat}|${OM._depthStencilFormat}|${OM._sampleCount}`
+    function eQ(VV, eV, xV, JV) {
+      return `${dJ(VV)}|${VV.atlasLayers}|${VV.yVV}|${eV}|${xV}|${JV._colorFormat}|${JV._depthStencilFormat}|${JV._sampleCount}`
     }
 
-    function Sn(MM, rM) {
-      return MM.distance - rM.distance
+    function xQ(VV, eV) {
+      return VV.distance - eV.distance
     }
 
-    function jn(MM, rM) {
-      return rM.distance - MM.distance
+    function JQ(VV, eV) {
+      return eV.distance - VV.distance
     }
-    class an {
+    class YQ {
       constructor() {
         this.left = []
       }
-      sort(MM, rM) {
-        for (let iM = 0; iM < MM.length; iM++) {
-          const rM = MM[iM].distance;
-          if (rM - rM !== 0) return !1
+      sort(VV, eV) {
+        for (let xV = 0; xV < VV.length; xV++) {
+          const eV = VV[xV].distance;
+          if (eV - eV !== 0) return !1
         }
-        return this.sortRange(MM, 0, MM.length, rM), !0
+        return this.sortRange(VV, 0, VV.length, eV), !0
       }
-      sortRange(MM, rM, iM, OM) {
-        if (iM - rM <= 16) {
-          for (let SM = rM + 1; SM < iM; SM++) {
-            const iM = MM[SM],
-              jM = OM * iM.distance;
-            let aM = SM - 1;
-            for (; aM >= rM && OM * MM[aM].distance > jM; aM--) MM[aM + 1] = MM[aM];
-            MM[aM + 1] = iM
+      sortRange(VV, eV, xV, JV) {
+        if (xV - eV <= 16) {
+          for (let YV = eV + 1; YV < xV; YV++) {
+            const xV = VV[YV],
+              UV = JV * xV.distance;
+            let yV = YV - 1;
+            for (; yV >= eV && JV * VV[yV].distance > UV; yV--) VV[yV + 1] = VV[yV];
+            VV[yV + 1] = xV
           }
           return
         }
-        const SM = rM + iM >>> 1;
-        if (this.sortRange(MM, rM, SM, OM), this.sortRange(MM, SM, iM, OM), OM * MM[SM - 1].distance <= OM * MM[SM].distance) return;
+        const YV = eV + xV >>> 1;
+        if (this.sortRange(VV, eV, YV, JV), this.sortRange(VV, YV, xV, JV), JV * VV[YV - 1].distance <= JV * VV[YV].distance) return;
         const {
-          left: jM
-        } = this, aM = SM - rM;
-        for (let zM = 0; zM < aM; zM++) jM[zM] = MM[rM + zM];
-        let PM = 0,
-          nM = SM,
-          QM = rM;
-        for (; PM < aM && nM < iM;) MM[QM++] = OM * MM[nM].distance < OM * jM[PM].distance ? MM[nM++] : jM[PM++];
-        for (; PM < aM;) MM[QM++] = jM[PM++]
+          left: UV
+        } = this, yV = YV - eV;
+        for (let wV = 0; wV < yV; wV++) UV[wV] = VV[eV + wV];
+        let pV = 0,
+          QV = YV,
+          nV = eV;
+        for (; pV < yV && QV < xV;) VV[nV++] = JV * VV[QV].distance < JV * UV[pV].distance ? VV[QV++] : UV[pV++];
+        for (; pV < yV;) VV[nV++] = UV[pV++]
       }
     }
-    const Pn = Math.ceil(102);
+    const UQ = Math.ceil(102);
 
-    function nn(MM, rM, iM, OM) {
-      let SM = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : rM;
-      const jM = Math.min(rM, iM),
-        aM = new Uint32Array(ei(OM));
-      for (let PM = 0; PM < OM; PM++) {
-        const rM = Math.floor(PM * jM / OM),
-          iM = Math.max(rM + 1, Math.floor((PM + 1) * jM / OM));
-        for (let nM = 0; nM < OM; nM++) {
-          const QM = Math.floor(nM * jM / OM),
-            zM = Math.max(QM + 1, Math.floor((nM + 1) * jM / OM));
-          let LM = 0;
-          for (let OM = rM; OM < iM; OM++)
-            for (let rM = QM; rM < zM; rM++) MM[OM * SM + rM] >= Pn && LM++;
-          if (2 * LM >= (iM - rM) * (zM - QM)) {
-            const MM = nM + OM * PM;
-            aM[MM >>> 5] |= 1 << (31 & MM)
+    function yQ(VV, eV, xV, JV) {
+      let YV = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : eV;
+      const UV = Math.min(eV, xV),
+        yV = new Uint32Array(Tx(JV));
+      for (let pV = 0; pV < JV; pV++) {
+        const eV = Math.floor(pV * UV / JV),
+          xV = Math.max(eV + 1, Math.floor((pV + 1) * UV / JV));
+        for (let QV = 0; QV < JV; QV++) {
+          const nV = Math.floor(QV * UV / JV),
+            wV = Math.max(nV + 1, Math.floor((QV + 1) * UV / JV));
+          let ZV = 0;
+          for (let JV = eV; JV < xV; JV++)
+            for (let eV = nV; eV < wV; eV++) VV[JV * YV + eV] >= UQ && ZV++;
+          if (2 * ZV >= (xV - eV) * (wV - nV)) {
+            const VV = QV + JV * pV;
+            yV[VV >>> 5] |= 1 << (31 & VV)
           }
         }
       }
-      return aM
+      return yV
     }
 
-    function Qn(MM) {
-      return Math.max(1, Math.min(16, MM))
+    function pQ(VV) {
+      return Math.max(1, Math.min(16, VV))
     }
-    class zn {
-      constructor(MM, rM) {
-        let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : console.warn;
-        this.sink = MM, this.loadTexture = rM, this.warn = iM, this.blockCaster = new Uint16Array(1), this.builtVersion = -1, this.byKey = new Map, this.nextCaster = 1, this.nextMaskWord = 0, this.warned = new Set, this.textures = new Map, this.loads = [], this.pending = Promise.resolve(), this.planesLoading = 0
+    class QQ {
+      constructor(VV, eV) {
+        let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : console.warn;
+        this.sink = VV, this.loadTexture = eV, this.warn = xV, this.blockCaster = new Uint16Array(1), this.builtVersion = -1, this.byKey = new Map, this.nextCaster = 1, this.nextMaskWord = 0, this.warned = new Set, this.textures = new Map, this.loads = [], this.pending = Promise.resolve(), this.planesLoading = 0
       }
-      update(MM, rM) {
-        return (MM.vx !== this.builtVersion || this.blockCaster.length !== rM) && (this.build(MM, rM), !0)
+      update(VV, eV) {
+        return (VV.WH !== this.builtVersion || this.blockCaster.length !== eV) && (this.build(VV, eV), !0)
       }
-      build(MM, rM) {
-        this.builtVersion = MM.vx;
-        const iM = new Uint16Array(rM),
-          OM = new Map;
-        for (let SM = 1; SM < rM; SM++) {
-          const rM = this.classify(MM, SM, OM);
-          if (null === rM || rM === li) {
-            iM[SM] = null === rM ? 0 : li;
+      build(VV, eV) {
+        this.builtVersion = VV.WH;
+        const xV = new Uint16Array(eV),
+          JV = new Map;
+        for (let YV = 1; YV < eV; YV++) {
+          const eV = this.classify(VV, YV, JV);
+          if (null === eV || eV === Bx) {
+            xV[YV] = null === eV ? 0 : Bx;
             continue
           }
-          let jM = this.byKey.get(rM.key);
-          void 0 === jM && (jM = this.allocate(rM), this.byKey.set(rM.key, jM)), iM[SM] = jM
+          let UV = this.byKey.get(eV.key);
+          void 0 === UV && (UV = this.allocate(eV), this.byKey.set(eV.key, UV)), xV[YV] = UV
         }
-        this.blockCaster = iM, this.pending = Promise.all(this.loads).then((() => {}))
+        this.blockCaster = xV, this.pending = Promise.all(this.loads).then((() => {}))
       }
-      option(MM, rM) {
-        const iM = MM.w6[rM];
-        if ("function" !== typeof iM) return iM;
+      option(VV, eV) {
+        const xV = VV.tVV[eV];
+        if ("function" !== typeof xV) return xV;
         try {
-          return iM()
-        } catch (OM) {
-          return this.warnOnce(`Sun shadows: no caster option for block ${rM}: ${OM instanceof Error?OM.message:String(OM)}`), null
+          return xV()
+        } catch (JV) {
+          return this.warnOnce(`Sun shadows: no caster option for block ${eV}: ${JV instanceof Error?JV.message:String(JV)}`), null
         }
       }
-      classify(MM, rM, iM) {
-        const OM = this.option(MM, rM);
-        if ("none" === OM) return null;
-        if (OM && OM.planes.length > 0) {
-          const MM = OM.planes.slice(0, 4);
+      classify(VV, eV, xV) {
+        const JV = this.option(VV, eV);
+        if ("none" === JV) return null;
+        if (JV && JV.planes.length > 0) {
+          const VV = JV.planes.slice(0, 4);
           return {
             kind: "planes",
-            key: `planes:${JSON.stringify(MM)}`,
-            planes: MM
+            key: `planes:${JSON.stringify(VV)}`,
+            planes: VV
           }
         }
-        if (MM.GH[rM]) return null;
-        const SM = MM.eH[rM] ? MM.Xx(rM) : null;
-        if (SM && SM.length >= 6) {
-          const MM = function(MM) {
-            const rM = new Uint32Array(16);
-            for (let iM = 0; iM + 6 <= MM.length; iM += 6) {
-              const OM = [0, 1, 2].map((rM => Math.max(0, Math.ceil(8 * MM[iM + rM] - .5)))),
-                SM = [0, 1, 2].map((rM => Math.min(7, Math.floor(8 * MM[iM + rM + 3] - .5))));
-              for (let MM = OM[2]; MM <= SM[2]; MM++)
-                for (let iM = OM[1]; iM <= SM[1]; iM++)
-                  for (let jM = OM[0]; jM <= SM[0]; jM++) {
-                    const OM = jM + 8 * (iM + 8 * MM);
-                    rM[OM >>> 5] |= 1 << (31 & OM)
+        if (VV.ir[eV]) return null;
+        const YV = VV.ar[eV] ? VV.DH(eV) : null;
+        if (YV && YV.length >= 6) {
+          const VV = function(VV) {
+            const eV = new Uint32Array(16);
+            for (let xV = 0; xV + 6 <= VV.length; xV += 6) {
+              const JV = [0, 1, 2].map((eV => Math.max(0, Math.ceil(8 * VV[xV + eV] - .5)))),
+                YV = [0, 1, 2].map((eV => Math.min(7, Math.floor(8 * VV[xV + eV + 3] - .5))));
+              for (let VV = JV[2]; VV <= YV[2]; VV++)
+                for (let xV = JV[1]; xV <= YV[1]; xV++)
+                  for (let UV = JV[0]; UV <= YV[0]; UV++) {
+                    const JV = UV + 8 * (xV + 8 * VV);
+                    eV[JV >>> 5] |= 1 << (31 & JV)
                   }
             }
-            return rM
-          }(SM);
-          return function(MM) {
-            return MM.every((MM => 4294967295 === MM))
-          }(MM) ? li : MM.every((MM => 0 === MM)) ? null : {
+            return eV
+          }(YV);
+          return function(VV) {
+            return VV.every((VV => 4294967295 === VV))
+          }(VV) ? Bx : VV.every((VV => 0 === VV)) ? null : {
             kind: "shape",
-            key: `shape:${MM.join(",")}`,
-            mask: MM
+            key: `shape:${VV.join(",")}`,
+            mask: VV
           }
         }
-        if (MM.bC[rM] || !MM.iJ[rM]) return null;
-        const jM = [0, 1, 2, 3, 4, 5].map((OM => {
-          const SM = MM.OJ[6 * rM + OM];
-          let jM = iM.get(SM);
-          return void 0 === jM && (jM = function(MM) {
-            if (!MM || MM.HJ) return null;
+        if (VV.YM[eV] || !VV.tb[eV]) return null;
+        const UV = [0, 1, 2, 3, 4, 5].map((JV => {
+          const YV = VV.Fb[6 * eV + JV];
+          let UV = xV.get(YV);
+          return void 0 === UV && (UV = function(VV) {
+            if (!VV || VV.Rb) return null;
             const {
-              Z2: rM,
-              U3: iM,
-              Q0: OM
-            } = MM;
-            if (!rM || !iM || !(iM > 0) || void 0 === OM || !(OM >= 0)) return null;
-            const SM = rM[0],
-              jM = iM * iM * 4;
-            if (!SM || SM.byteLength < jM) return null;
-            const aM = Math.floor(SM.byteLength / jM),
-              PM = rM[Math.floor(OM / aM)];
-            if (!PM) return null;
-            const nM = new Uint8Array(PM.buffer, PM.byteOffset, PM.byteLength),
-              QM = OM % aM * jM;
-            if (QM + jM > nM.length) return null;
-            const zM = new Uint8Array(iM * iM);
-            let LM = !1;
-            for (let mM = 0; mM < zM.length; mM++) zM[mM] = nM[QM + 4 * mM + 3], LM ||= zM[mM] < Pn;
-            return LM ? {
-              alpha: zM,
-              width: iM
+              UVV: eV,
+              yVV: xV,
+              YVV: JV
+            } = VV;
+            if (!eV || !xV || !(xV > 0) || void 0 === JV || !(JV >= 0)) return null;
+            const YV = eV[0],
+              UV = xV * xV * 4;
+            if (!YV || YV.byteLength < UV) return null;
+            const yV = Math.floor(YV.byteLength / UV),
+              pV = eV[Math.floor(JV / yV)];
+            if (!pV) return null;
+            const QV = new Uint8Array(pV.buffer, pV.byteOffset, pV.byteLength),
+              nV = JV % yV * UV;
+            if (nV + UV > QV.length) return null;
+            const wV = new Uint8Array(xV * xV);
+            let ZV = !1;
+            for (let vV = 0; vV < wV.length; vV++) wV[vV] = QV[nV + 4 * vV + 3], ZV ||= wV[vV] < UQ;
+            return ZV ? {
+              alpha: wV,
+              width: xV
             } : null
-          }(MM.mJ(SM)), iM.set(SM, jM)), jM
+          }(VV.Wb(YV)), xV.set(YV, UV)), UV
         }));
-        if (jM.every((MM => null === MM))) return li;
-        const aM = Qn(Math.max(...jM.map((MM => {
-            var rM;
-            return null !== (rM = null === MM || void 0 === MM ? void 0 : MM.width) && void 0 !== rM ? rM : 1
+        if (UV.every((VV => null === VV))) return Bx;
+        const yV = pQ(Math.max(...UV.map((VV => {
+            var eV;
+            return null !== (eV = null === VV || void 0 === VV ? void 0 : VV.width) && void 0 !== eV ? eV : 1
           })))),
-          PM = new Uint32Array(ei(aM)).fill(4294967295),
-          nM = jM.map((MM => null === MM ? PM : nn(MM.alpha, MM.width, MM.width, aM)));
+          pV = new Uint32Array(Tx(yV)).fill(4294967295),
+          QV = UV.map((VV => null === VV ? pV : yQ(VV.alpha, VV.width, VV.width, yV)));
         return {
           kind: "cutout",
-          key: `cutout:${aM}:${nM.map((MM=>MM.join(","))).join("|")}`,
-          size: aM,
-          faces: nM
+          key: `cutout:${yV}:${QV.map((VV=>VV.join(","))).join("|")}`,
+          size: yV,
+          faces: QV
         }
       }
-      allocate(MM) {
-        if (this.nextCaster >= bi) return this.warnOnce("Sun shadows: more than 8191 casters; the rest cast nothing."), 0;
-        const rM = this.nextCaster++;
-        if (this.writeCaster(rM, Ei, 0, 0, 0), "shape" === MM.kind) {
-          const iM = this.allocateMask(MM.mask.length);
-          iM >= 0 && (this.sink(iM, MM.mask), this.writeCaster(rM, Ui, iM, 0, 8))
-        } else if ("cutout" === MM.kind) {
-          const iM = ei(MM.size),
-            OM = this.allocateMask(6 * iM);
-          if (OM >= 0) {
-            const SM = new Uint32Array(6 * iM);
-            MM.faces.forEach(((MM, rM) => {
-              SM.set(MM, rM * iM)
-            })), this.sink(OM, SM), this.writeCaster(rM, Ci, OM, 0, MM.size)
+      allocate(VV) {
+        if (this.nextCaster >= Px) return this.warnOnce("Sun shadows: more than 8191 casters; the rest cast nothing."), 0;
+        const eV = this.nextCaster++;
+        if (this.writeCaster(eV, jx, 0, 0, 0), "shape" === VV.kind) {
+          const xV = this.allocateMask(VV.mask.length);
+          xV >= 0 && (this.sink(xV, VV.mask), this.writeCaster(eV, qx, xV, 0, 8))
+        } else if ("cutout" === VV.kind) {
+          const xV = Tx(VV.size),
+            JV = this.allocateMask(6 * xV);
+          if (JV >= 0) {
+            const YV = new Uint32Array(6 * xV);
+            VV.faces.forEach(((VV, eV) => {
+              YV.set(VV, eV * xV)
+            })), this.sink(JV, YV), this.writeCaster(eV, Fx, JV, 0, VV.size)
           }
-        } else this.planesLoading++, this.loads.push(this.loadPlanes(rM, MM.planes).finally((() => {
+        } else this.planesLoading++, this.loads.push(this.loadPlanes(eV, VV.planes).finally((() => {
           this.planesLoading--
         })));
-        return rM
+        return eV
       }
-      async loadPlanes(MM, rM) {
-        const iM = await Promise.all(rM.map((MM => this.texture(MM.texture))));
-        if (iM.some((MM => null === MM))) return;
-        const OM = iM,
-          SM = Qn(Math.max(...OM.map((MM => Math.min(MM.width, MM.height))))),
-          jM = ei(SM),
-          aM = this.allocateMask(rM.length * (4 + jM));
-        if (aM < 0) return;
-        const PM = new Uint32Array(rM.length * (4 + jM)),
-          nM = 4 * rM.length;
-        rM.forEach(((MM, rM) => {
-          const iM = aM + nM + rM * jM;
-          PM.set(function(MM, rM) {
-            const [iM, OM] = MM.tangent, SM = Math.hypot(iM, OM) || 1, jM = iM / SM, aM = OM / SM, PM = MM.centre[0] * aM - MM.centre[1] * jM, nM = new Uint32Array(4);
-            return new Float32Array(nM.buffer, 0, 3).set([jM, aM, PM]), nM[3] = rM, nM
-          }(MM, iM), 4 * rM), PM.set(nn(OM[rM].alpha, OM[rM].width, OM[rM].height, SM), nM + rM * jM)
-        })), this.sink(aM, PM), this.writeCaster(MM, Gi, aM, rM.length, SM)
+      async loadPlanes(VV, eV) {
+        const xV = await Promise.all(eV.map((VV => this.texture(VV.texture))));
+        if (xV.some((VV => null === VV))) return;
+        const JV = xV,
+          YV = pQ(Math.max(...JV.map((VV => Math.min(VV.width, VV.height))))),
+          UV = Tx(YV),
+          yV = this.allocateMask(eV.length * (4 + UV));
+        if (yV < 0) return;
+        const pV = new Uint32Array(eV.length * (4 + UV)),
+          QV = 4 * eV.length;
+        eV.forEach(((VV, eV) => {
+          const xV = yV + QV + eV * UV;
+          pV.set(function(VV, eV) {
+            const [xV, JV] = VV.tangent, YV = Math.hypot(xV, JV) || 1, UV = xV / YV, yV = JV / YV, pV = VV.centre[0] * yV - VV.centre[1] * UV, QV = new Uint32Array(4);
+            return new Float32Array(QV.buffer, 0, 3).set([UV, yV, pV]), QV[3] = eV, QV
+          }(VV, xV), 4 * eV), pV.set(yQ(JV[eV].alpha, JV[eV].width, JV[eV].height, YV), QV + eV * UV)
+        })), this.sink(yV, pV), this.writeCaster(VV, tx, yV, eV.length, YV)
       }
-      texture(MM) {
-        let rM = this.textures.get(MM);
-        return rM || (rM = this.loadTexture(MM).catch((rM => (this.warn(`Sun shadows: no mask for ${MM}: ${rM instanceof Error?rM.message:String(rM)}`), null))), this.textures.set(MM, rM)), rM
+      texture(VV) {
+        let eV = this.textures.get(VV);
+        return eV || (eV = this.loadTexture(VV).catch((eV => (this.warn(`Sun shadows: no mask for ${VV}: ${eV instanceof Error?eV.message:String(eV)}`), null))), this.textures.set(VV, eV)), eV
       }
-      allocateMask(MM) {
-        if (this.nextMaskWord + MM > wi) return this.warnOnce("Sun shadows: casters' masks are over 262144 words; the rest cast nothing."), -1;
-        const rM = 32768 + this.nextMaskWord;
-        return this.nextMaskWord += MM, rM
+      allocateMask(VV) {
+        if (this.nextMaskWord + VV > Ax) return this.warnOnce("Sun shadows: casters' masks are over 262144 words; the rest cast nothing."), -1;
+        const eV = 32768 + this.nextMaskWord;
+        return this.nextMaskWord += VV, eV
       }
-      writeCaster(MM, rM, iM, OM, SM) {
-        this.sink(0 + 4 * MM, Uint32Array.of(rM, iM, OM, SM))
+      writeCaster(VV, eV, xV, JV, YV) {
+        this.sink(0 + 4 * VV, Uint32Array.of(eV, xV, JV, YV))
       }
-      warnOnce(MM) {
-        this.warned.has(MM) || (this.warned.add(MM), this.warn(MM))
+      warnOnce(VV) {
+        this.warned.has(VV) || (this.warned.add(VV), this.warn(VV))
       }
     }
-    var Ln = iM(3155);
+    var nQ = xV(3161);
 
-    function mn(MM) {
-      return !MM.JJ && !MM.vG && !MM.Bh
+    function wQ(VV) {
+      return !VV.Db && !VV.oN && !VV.nb
     }
 
-    function Hn() {
+    function ZQ() {
       return {
-        bricks: new Uint32Array(Qi),
+        bricks: new Uint32Array(nx),
         cells: new Uint16Array(32768),
-        special: new Uint8Array(Pi)
+        special: new Uint8Array(px)
       }
     }
-    class hn {
-      constructor(MM, rM, iM) {
-        let OM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : console.warn;
-        this.casters = MM, this.writeVoxels = rM, this.writePool = iM, this.warn = OM, this.eyeChunk = null, this.slotChunk = new Array(ri).fill(null), this.slotVersion = new Float64Array(ri).fill(-1), this.slotPool = new Array(ri).fill(null), this.starved = new Uint8Array(ri), this.queue = [], this.queued = new Uint8Array(ri), this.queueSorted = !0, this.freePool = new Uint32Array(ti), this.freeCount = ti, this.casterTable = null, this.warnedPool = !1, this.scratch = Hn(), this.victimScratch = Hn(), this.record = new Uint32Array(4), this.entry = new Uint32Array(32), this.records = new Int32Array(4 * ri), this.windowTopStale = !0, this.windowTop = new Uint32Array(1), this.encoded = null;
-        for (let SM = 0; SM < ti; SM++) this.freePool[SM] = 65535 - SM
+    class vQ {
+      constructor(VV, eV, xV) {
+        let JV = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : console.warn;
+        this.casters = VV, this.writeVoxels = eV, this.writePool = xV, this.warn = JV, this.eyeChunk = null, this.slotChunk = new Array(ex).fill(null), this.slotVersion = new Float64Array(ex).fill(-1), this.slotPool = new Array(ex).fill(null), this.starved = new Uint8Array(ex), this.queue = [], this.queued = new Uint8Array(ex), this.queueSorted = !0, this.freePool = new Uint32Array(Nx), this.freeCount = Nx, this.casterTable = null, this.warnedPool = !1, this.scratch = ZQ(), this.victimScratch = ZQ(), this.record = new Uint32Array(4), this.entry = new Uint32Array(32), this.records = new Int32Array(4 * ex), this.windowTopStale = !0, this.windowTop = new Uint32Array(1), this.encoded = null;
+        for (let YV = 0; YV < Nx; YV++) this.freePool[YV] = 65535 - YV
       }
       get queuedCount() {
         return this.queue.length
       }
       get poolInUse() {
-        return ti - this.freeCount
+        return Nx - this.freeCount
       }
-      chunkAdded(MM) {
-        if (null === this.eyeChunk || !this.inRadius(MM.i, MM.j, MM.k)) return;
-        const rM = Ji(MM.i, MM.j, MM.k);
-        this.slotChunk[rM] = MM, this.slotVersion[rM] = -1, this.enqueue(rM)
+      chunkAdded(VV) {
+        if (null === this.eyeChunk || !this.inRadius(VV.i, VV.j, VV.k)) return;
+        const eV = kx(VV.i, VV.j, VV.k);
+        this.slotChunk[eV] = VV, this.slotVersion[eV] = -1, this.enqueue(eV)
       }
-      update(MM, rM, iM) {
-        const OM = this.casters.blockCaster;
-        if (OM !== this.casterTable) {
-          this.casterTable = OM;
-          for (let MM = 0; MM < ri; MM++) this.slotVersion[MM] = -1, this.slotChunk[MM] && this.enqueue(MM)
+      update(VV, eV, xV) {
+        const JV = this.casters.blockCaster;
+        if (JV !== this.casterTable) {
+          this.casterTable = JV;
+          for (let VV = 0; VV < ex; VV++) this.slotVersion[VV] = -1, this.slotChunk[VV] && this.enqueue(VV)
         }
-        const SM = Math.floor(MM[0] / 32),
-          jM = Math.floor(MM[1] / 32),
-          aM = Math.floor(MM[2] / 32);
-        (null === this.eyeChunk || this.eyeChunk[0] !== SM || this.eyeChunk[1] !== jM || this.eyeChunk[2] !== aM) && (this.eyeChunk = [SM, jM, aM], this.follow(rM), this.queueSorted = !1, this.requeueStarved(), this.windowTopStale = !0);
-        for (let PM = 0; PM < ri; PM++) {
-          const MM = this.slotChunk[PM];
-          MM && (MM.xG || MM.Kh !== this.slotVersion[PM]) && this.enqueue(PM)
+        const YV = Math.floor(VV[0] / 32),
+          UV = Math.floor(VV[1] / 32),
+          yV = Math.floor(VV[2] / 32);
+        (null === this.eyeChunk || this.eyeChunk[0] !== YV || this.eyeChunk[1] !== UV || this.eyeChunk[2] !== yV) && (this.eyeChunk = [YV, UV, yV], this.follow(eV), this.queueSorted = !1, this.requeueStarved(), this.windowTopStale = !0);
+        for (let pV = 0; pV < ex; pV++) {
+          const VV = this.slotChunk[pV];
+          VV && (VV.iN || VV.kb !== this.slotVersion[pV]) && this.enqueue(pV)
         }
-        this.drain(iM), this.windowTopStale && this.writeWindowTop()
+        this.drain(xV), this.windowTopStale && this.writeWindowTop()
       }
-      writeRecord(MM, rM) {
-        this.records.set(rM, 4 * MM), this.windowTopStale = !0, this.writeVoxels(4 * MM, rM)
+      writeRecord(VV, eV) {
+        this.records.set(eV, 4 * VV), this.windowTopStale = !0, this.writeVoxels(4 * VV, eV)
       }
       writeWindowTop() {
         this.windowTopStale = !1;
-        const MM = this.records;
-        let rM = -1 / 0;
-        for (let OM = 0; OM < MM.length; OM += 4) {
-          const iM = 255 & MM[OM + 3];
-          iM !== Si && iM !== ji || !this.inRadius(MM[OM], MM[OM + 1], MM[OM + 2]) || (rM = Math.max(rM, MM[OM + 1] * Vr + (MM[OM + 3] >>> 8)))
+        const VV = this.records;
+        let eV = -1 / 0;
+        for (let JV = 0; JV < VV.length; JV += 4) {
+          const xV = 255 & VV[JV + 3];
+          xV !== Yx && xV !== Ux || !this.inRadius(VV[JV], VV[JV + 1], VV[JV + 2]) || (eV = Math.max(eV, VV[JV + 1] * de + (VV[JV + 3] >>> 8)))
         }
-        const iM = rM === -1 / 0 ? 1 : rM + Li;
-        iM !== this.windowTop[0] && (this.windowTop[0] = iM, this.writeVoxels(zi, this.windowTop))
+        const xV = eV === -1 / 0 ? 1 : eV + Zx;
+        xV !== this.windowTop[0] && (this.windowTop[0] = xV, this.writeVoxels(wx, this.windowTop))
       }
-      follow(MM) {
-        const rM = this.eyeChunk,
-          [iM, OM, SM] = cr;
-        for (let aM = -SM; aM <= SM; aM++)
-          for (let SM = -OM; SM <= OM; SM++)
-            for (let OM = -iM; OM <= iM; OM++) {
-              var jM;
-              const iM = rM[0] + OM,
-                PM = rM[1] + SM,
-                nM = rM[2] + aM,
-                QM = Ji(iM, PM, nM),
-                zM = this.slotChunk[QM];
-              if (zM && !zM.xG && zM.i === iM && zM.j === PM && zM.k === nM) continue;
-              const LM = null !== (jM = MM(iM, PM, nM)) && void 0 !== jM ? jM : null;
-              zM && (zM.i !== iM || zM.j !== PM || zM.k !== nM) && this.slotPool[QM] && (this.release(QM), this.record.fill(0), this.writeRecord(QM, this.record)), this.slotChunk[QM] = LM, this.slotVersion[QM] = -1, (LM || zM) && this.enqueue(QM)
+      follow(VV) {
+        const eV = this.eyeChunk,
+          [xV, JV, YV] = Oe;
+        for (let yV = -YV; yV <= YV; yV++)
+          for (let YV = -JV; YV <= JV; YV++)
+            for (let JV = -xV; JV <= xV; JV++) {
+              var UV;
+              const xV = eV[0] + JV,
+                pV = eV[1] + YV,
+                QV = eV[2] + yV,
+                nV = kx(xV, pV, QV),
+                wV = this.slotChunk[nV];
+              if (wV && !wV.iN && wV.i === xV && wV.j === pV && wV.k === QV) continue;
+              const ZV = null !== (UV = VV(xV, pV, QV)) && void 0 !== UV ? UV : null;
+              wV && (wV.i !== xV || wV.j !== pV || wV.k !== QV) && this.slotPool[nV] && (this.release(nV), this.record.fill(0), this.writeRecord(nV, this.record)), this.slotChunk[nV] = ZV, this.slotVersion[nV] = -1, (ZV || wV) && this.enqueue(nV)
             }
       }
       requeueStarved() {
-        for (let MM = 0; MM < ri; MM++) this.starved[MM] && this.slotChunk[MM] && this.enqueue(MM)
+        for (let VV = 0; VV < ex; VV++) this.starved[VV] && this.slotChunk[VV] && this.enqueue(VV)
       }
-      enqueue(MM) {
-        this.queued[MM] || (this.queued[MM] = 1, this.queue.push(MM), this.queueSorted = !1)
+      enqueue(VV) {
+        this.queued[VV] || (this.queued[VV] = 1, this.queue.push(VV), this.queueSorted = !1)
       }
-      drain(MM) {
+      drain(VV) {
         if (0 === this.queue.length) return;
         if (!this.queueSorted) {
-          const MM = new Map;
-          for (const rM of this.queue) MM.set(rM, this.slotDistance(rM));
-          this.queue.sort(((rM, iM) => MM.get(iM) - MM.get(rM))), this.queueSorted = !0
+          const VV = new Map;
+          for (const eV of this.queue) VV.set(eV, this.slotDistance(eV));
+          this.queue.sort(((eV, xV) => VV.get(xV) - VV.get(eV))), this.queueSorted = !0
         }
-        const rM = performance.now();
-        let iM = 0;
-        const OM = [];
-        for (; this.queue.length > 0 && (0 === iM || performance.now() - rM < MM);) {
-          const MM = this.queue.pop(),
-            rM = this.slotChunk[MM];
-          !rM || rM.xG || mn(rM) ? (this.queued[MM] = 0, this.encodeSlot(MM), iM++) : OM.push(MM)
+        const eV = performance.now();
+        let xV = 0;
+        const JV = [];
+        for (; this.queue.length > 0 && (0 === xV || performance.now() - eV < VV);) {
+          const VV = this.queue.pop(),
+            eV = this.slotChunk[VV];
+          !eV || eV.iN || wQ(eV) ? (this.queued[VV] = 0, this.encodeSlot(VV), xV++) : JV.push(VV)
         }
-        for (let SM = OM.length - 1; SM >= 0; SM--) this.queue.push(OM[SM])
+        for (let YV = JV.length - 1; YV >= 0; YV--) this.queue.push(JV[YV])
       }
-      slotDistance(MM) {
-        const rM = this.slotChunk[MM],
-          iM = this.eyeChunk;
-        return rM ? Math.max(Math.abs(rM.i - iM[0]), Math.abs(rM.j - iM[1]), Math.abs(rM.k - iM[2])) : 0
+      slotDistance(VV) {
+        const eV = this.slotChunk[VV],
+          xV = this.eyeChunk;
+        return eV ? Math.max(Math.abs(eV.i - xV[0]), Math.abs(eV.j - xV[1]), Math.abs(eV.k - xV[2])) : 0
       }
-      inRadius(MM, rM, iM) {
-        const OM = this.eyeChunk,
-          [SM, jM, aM] = cr;
-        return Math.abs(MM - OM[0]) <= SM && Math.abs(rM - OM[1]) <= jM && Math.abs(iM - OM[2]) <= aM
+      inRadius(VV, eV, xV) {
+        const JV = this.eyeChunk,
+          [YV, UV, yV] = Oe;
+        return Math.abs(VV - JV[0]) <= YV && Math.abs(eV - JV[1]) <= UV && Math.abs(xV - JV[2]) <= yV
       }
-      release(MM) {
-        const rM = this.slotPool[MM];
-        if (rM) {
-          for (let MM = rM.length - 1; MM >= 0; MM--) this.freePool[this.freeCount++] = rM[MM];
-          this.slotPool[MM] = null
+      release(VV) {
+        const eV = this.slotPool[VV];
+        if (eV) {
+          for (let VV = eV.length - 1; VV >= 0; VV--) this.freePool[this.freeCount++] = eV[VV];
+          this.slotPool[VV] = null
         }
       }
-      encodeSlot(MM) {
-        var rM, iM, OM, SM, jM;
-        let aM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.scratch,
-          PM = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-        const nM = null !== (rM = null === (iM = this.slotPool[MM]) || void 0 === iM ? void 0 : iM.length) && void 0 !== rM ? rM : 0;
-        this.release(MM), this.starved[MM] = 0;
-        const QM = this.slotChunk[MM],
-          zM = this.record;
-        if (!QM || QM.xG || !QM.Xm) return this.slotChunk[MM] = null, this.slotVersion[MM] = -1, zM.fill(0), this.writeRecord(MM, zM), void(nM > 0 && this.requeueStarved());
-        this.slotVersion[MM] = QM.Kh;
-        const LM = this.encodeBricks(QM, MM, aM, PM);
-        zM[0] = QM.i, zM[1] = QM.j, zM[2] = QM.k, zM[3] = LM, this.writeRecord(MM, zM), null === (OM = this.encoded) || void 0 === OM || OM.call(this, QM), PM && (null !== (SM = null === (jM = this.slotPool[MM]) || void 0 === jM ? void 0 : jM.length) && void 0 !== SM ? SM : 0) < nM && this.requeueStarved()
+      encodeSlot(VV) {
+        var eV, xV, JV, YV, UV;
+        let yV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.scratch,
+          pV = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+        const QV = null !== (eV = null === (xV = this.slotPool[VV]) || void 0 === xV ? void 0 : xV.length) && void 0 !== eV ? eV : 0;
+        this.release(VV), this.starved[VV] = 0;
+        const nV = this.slotChunk[VV],
+          wV = this.record;
+        if (!nV || nV.iN || !nV.Ur) return this.slotChunk[VV] = null, this.slotVersion[VV] = -1, wV.fill(0), this.writeRecord(VV, wV), void(QV > 0 && this.requeueStarved());
+        this.slotVersion[VV] = nV.kb;
+        const ZV = this.encodeBricks(nV, VV, yV, pV);
+        wV[0] = nV.i, wV[1] = nV.j, wV[2] = nV.k, wV[3] = ZV, this.writeRecord(VV, wV), null === (JV = this.encoded) || void 0 === JV || JV.call(this, nV), pV && (null !== (YV = null === (UV = this.slotPool[VV]) || void 0 === UV ? void 0 : UV.length) && void 0 !== YV ? YV : 0) < QV && this.requeueStarved()
       }
-      encodeBricks(MM, rM, iM, OM) {
-        if (MM.Hh) return Oi;
-        const SM = this.casters.blockCaster,
+      encodeBricks(VV, eV, xV, JV) {
+        if (VV.Rk) return Jx;
+        const YV = this.casters.blockCaster,
           {
-            data: jM,
-            stride: aM,
-            offset: PM
-          } = MM.Xm,
-          [nM, QM, zM] = aM,
-          LM = Vr,
+            data: UV,
+            stride: yV,
+            offset: pV
+          } = VV.Ur,
+          [QV, nV, wV] = yV,
+          ZV = de,
           {
-            bricks: mM,
-            cells: HM,
-            special: hM
-          } = iM;
-        mM.fill(0), hM.fill(0);
-        let JM = 0,
-          dM = 0,
-          yM = 0;
-        for (let lM = 0; lM < LM; lM++) {
-          const rM = lM >> 2,
-            iM = 3 & lM,
-            OM = MM.NH[lM],
-            aM = OM === Ln.i ? -1 : OM < SM.length ? SM[OM] : 0;
-          if (0 !== aM)
-            for (let MM = 0; MM < LM; MM++) {
-              const OM = MM >> 2,
-                EM = 3 & MM;
-              let UM = PM + MM * nM + lM * QM;
-              for (let MM = 0; MM < LM; MM++, UM += zM) {
-                let PM = aM;
-                if (PM < 0) {
-                  const MM = jM[UM];
-                  if (PM = MM < SM.length ? SM[MM] : 0, 0 === PM) continue
+            bricks: vV,
+            cells: rV,
+            special: kV
+          } = xV;
+        vV.fill(0), kV.fill(0);
+        let bV = 0,
+          EV = 0,
+          BV = 0;
+        for (let jV = 0; jV < ZV; jV++) {
+          const eV = jV >> 2,
+            xV = 3 & jV,
+            JV = VV.Yk[jV],
+            yV = JV === nQ.f ? -1 : JV < YV.length ? YV[JV] : 0;
+          if (0 !== yV)
+            for (let VV = 0; VV < ZV; VV++) {
+              const JV = VV >> 2,
+                qV = 3 & VV;
+              let tV = pV + VV * QV + jV * nV;
+              for (let VV = 0; VV < ZV; VV++, tV += wV) {
+                let pV = yV;
+                if (pV < 0) {
+                  const VV = UV[tV];
+                  if (pV = VV < YV.length ? YV[VV] : 0, 0 === pV) continue
                 }
-                const nM = di(OM, rM, MM >> 2),
-                  QM = yi(EM, iM, 3 & MM);
-                mM[3 * nM + (QM >>> 5)] |= 1 << (31 & QM), HM[nM * ai + QM] = PM, JM++, yM = lM, PM === li ? dM++ : hM[nM] = 1
+                const QV = bx(JV, eV, VV >> 2),
+                  nV = Ex(qV, xV, 3 & VV);
+                vV[3 * QV + (nV >>> 5)] |= 1 << (31 & nV), rV[QV * yx + nV] = pV, bV++, BV = jV, pV === Bx ? EV++ : kV[QV] = 1
               }
             }
         }
-        return 0 === JM ? Oi : 32768 === dM ? Si | yM << 8 : (this.writePoolEntries(rM, iM, OM), this.writeVoxels(ni + rM * Qi, mM), ji | yM << 8)
+        return 0 === bV ? Jx : 32768 === EV ? Yx | BV << 8 : (this.writePoolEntries(eV, xV, JV), this.writeVoxels(Qx + eV * nx, vV), Ux | BV << 8)
       }
-      writePoolEntries(MM, rM, iM) {
+      writePoolEntries(VV, eV, xV) {
         const {
-          bricks: OM,
-          cells: SM,
-          special: jM
-        } = rM, aM = this.entry;
-        let PM = 0;
-        for (let zM = 0; zM < Pi; zM++) PM += jM[zM];
-        if (0 === PM) return;
-        iM && this.freeCount < PM && this.evictBeyond(MM, PM);
-        const nM = new Uint32Array(iM ? Math.min(PM, this.freeCount) : 0);
-        let QM = 0;
-        for (let zM = 0; zM < Pi; zM++) {
-          if (!jM[zM]) continue;
-          const iM = 3 * zM;
-          if (QM === nM.length) {
-            this.dropSpecials(rM, zM), this.starved[MM] = 1;
+          bricks: JV,
+          cells: YV,
+          special: UV
+        } = eV, yV = this.entry;
+        let pV = 0;
+        for (let wV = 0; wV < px; wV++) pV += UV[wV];
+        if (0 === pV) return;
+        xV && this.freeCount < pV && this.evictBeyond(VV, pV);
+        const QV = new Uint32Array(xV ? Math.min(pV, this.freeCount) : 0);
+        let nV = 0;
+        for (let wV = 0; wV < px; wV++) {
+          if (!UV[wV]) continue;
+          const xV = 3 * wV;
+          if (nV === QV.length) {
+            this.dropSpecials(eV, wV), this.starved[VV] = 1;
             continue
           }
-          const PM = this.freePool[--this.freeCount];
-          nM[QM++] = PM;
-          for (let MM = 0; MM < ai; MM++) {
-            const rM = OM[iM + (MM >>> 5)] >>> (31 & MM) & 1 ? SM[zM * ai + MM] : 0;
-            1 & MM ? aM[MM >> 1] |= rM << 16 : aM[MM >> 1] = rM
+          const pV = this.freePool[--this.freeCount];
+          QV[nV++] = pV;
+          for (let VV = 0; VV < yx; VV++) {
+            const eV = JV[xV + (VV >>> 5)] >>> (31 & VV) & 1 ? YV[wV * yx + VV] : 0;
+            1 & VV ? yV[VV >> 1] |= eV << 16 : yV[VV >> 1] = eV
           }
-          OM[iM + 2] = PM + 1, this.writePool(gi + 32 * PM, aM)
+          JV[xV + 2] = pV + 1, this.writePool(Xx + 32 * pV, yV)
         }
-        nM.length > 0 && (this.slotPool[MM] = nM)
+        QV.length > 0 && (this.slotPool[VV] = QV)
       }
-      evictBeyond(MM, rM) {
-        const iM = this.slotDistance(MM),
-          OM = [];
-        for (let SM = 0; SM < ri; SM++) SM !== MM && this.slotPool[SM] && this.slotDistance(SM) > iM && OM.push(SM);
-        OM.sort(((MM, rM) => this.slotDistance(rM) - this.slotDistance(MM)));
-        for (const SM of OM) {
-          if (this.freeCount >= rM) return;
-          const MM = this.slotChunk[SM];
-          MM && !MM.xG && MM.Xm && (MM.Kh === this.slotVersion[SM] || mn(MM)) && this.encodeSlot(SM, this.victimScratch, !1)
+      evictBeyond(VV, eV) {
+        const xV = this.slotDistance(VV),
+          JV = [];
+        for (let YV = 0; YV < ex; YV++) YV !== VV && this.slotPool[YV] && this.slotDistance(YV) > xV && JV.push(YV);
+        JV.sort(((VV, eV) => this.slotDistance(eV) - this.slotDistance(VV)));
+        for (const YV of JV) {
+          if (this.freeCount >= eV) return;
+          const VV = this.slotChunk[YV];
+          VV && !VV.iN && VV.Ur && (VV.kb === this.slotVersion[YV] || wQ(VV)) && this.encodeSlot(YV, this.victimScratch, !1)
         }
       }
-      dropSpecials(MM, rM) {
+      dropSpecials(VV, eV) {
         this.warnedPool || (this.warnedPool = !0, this.warn("Sun shadows: the special pool's 65536 entries are in use; plants and shapes in the furthest chunks cast nothing."));
-        const iM = 3 * rM;
-        for (let OM = 0; OM < ai; OM++) MM.cells[rM * ai + OM] !== li && (MM.bricks[iM + (OM >>> 5)] &= ~(1 << (31 & OM)))
+        const xV = 3 * eV;
+        for (let JV = 0; JV < yx; JV++) VV.cells[eV * yx + JV] !== Bx && (VV.bricks[xV + (JV >>> 5)] &= ~(1 << (31 & JV)))
       }
     }
-    var Jn = iM(38347);
-    class dn {
-      constructor(MM) {
-        this.device = MM, this.frameBuffer = void 0, this.gridBuffer = void 0, this.frame = new Ni, this.grids = new WeakMap, this.gridTop = 0, this.gridsFull = !1, this.uploadedEmpty = !1, this.uL = new Float64Array(16), this.bakeDeadline = 0, this.frameBuffer = MM.createBuffer({
+    var rQ = xV(38547);
+    class kQ {
+      constructor(VV) {
+        this.device = VV, this.frameBuffer = void 0, this.gridBuffer = void 0, this.frame = new ox, this.grids = new WeakMap, this.gridTop = 0, this.gridsFull = !1, this.uploadedEmpty = !1, this.cZ = new Float64Array(16), this.bakeDeadline = 0, this.frameBuffer = VV.createBuffer({
           label: "sun-shadow-entities",
           size: 589828,
           usage: GPUBufferUsage.STORAGE | GPUBufferUsage.COPY_DST
-        }), this.gridBuffer = MM.createBuffer({
+        }), this.gridBuffer = VV.createBuffer({
           label: "sun-shadow-entity-grids",
           size: 16777216,
           usage: GPUBufferUsage.STORAGE | GPUBufferUsage.COPY_DST
         })
       }
-      update(MM, rM, iM) {
+      update(VV, eV, xV) {
         this.gridsFull && (this.gridsFull = !1, this.grids = new WeakMap, this.gridTop = 0), this.bakeDeadline = -1;
         const {
-          frame: OM
+          frame: JV
         } = this;
-        OM.JL(MM, rM), iM.forEachSunShadowCaster((MM => {
-          this.add(MM)
-        })), OM.finish();
-        const SM = 0 === OM.parts;
-        if (SM && this.uploadedEmpty) return;
-        this.uploadedEmpty = SM;
+        JV.NZ(VV, eV), xV.forEachSunShadowCaster((VV => {
+          this.add(VV)
+        })), JV.finish();
+        const YV = 0 === JV.parts;
+        if (YV && this.uploadedEmpty) return;
+        this.uploadedEmpty = YV;
         const {
-          queue: jM
+          queue: UV
         } = this.device, {
-          words: aM
-        } = OM;
-        jM.writeBuffer(this.frameBuffer, 0, aM, 0, 16385), OM.refs > 0 && jM.writeBuffer(this.frameBuffer, 65540, aM, si, OM.refs), SM || jM.writeBuffer(this.frameBuffer, 327684, aM, Di, OM.parts * Wi)
+          words: yV
+        } = JV;
+        UV.writeBuffer(this.frameBuffer, 0, yV, 0, 16385), JV.refs > 0 && UV.writeBuffer(this.frameBuffer, 65540, yV, Wx, JV.refs), YV || UV.writeBuffer(this.frameBuffer, 327684, yV, Rx, JV.parts * Gx)
       }
-      add(MM) {
-        const rM = this.gridFor(MM);
-        if (!rM) return;
+      add(VV) {
+        const eV = this.gridFor(VV);
+        if (!eV) return;
         const {
-          frame: iM
+          frame: xV
         } = this, {
-          uL: OM,
-          worldAt: SM,
-          instances: jM,
-          instanceCount: aM,
-          thin: PM
-        } = MM;
-        if (jM)
-          for (let nM = 0; nM < aM; nM++) PM ? (xi(jM, 16 * nM, OM, SM, this.uL), iM.add(rM, this.uL)) : iM.add(rM, jM, 16 * nM);
-        else iM.add(rM, OM, SM)
+          cZ: JV,
+          worldAt: YV,
+          instances: UV,
+          instanceCount: yV,
+          thin: pV
+        } = VV;
+        if (UV)
+          for (let QV = 0; QV < yV; QV++) pV ? (hx(UV, 16 * QV, JV, YV, this.cZ), xV.add(eV, this.cZ)) : xV.add(eV, UV, 16 * QV);
+        else xV.add(eV, JV, YV)
       }
-      gridFor(MM) {
+      gridFor(VV) {
         let {
-          geometry: rM,
-          indexed: iM,
-          first: OM,
-          count: SM,
-          skip: jM
-        } = MM, aM = this.grids.get(rM);
-        aM || (aM = new Map, this.grids.set(rM, aM));
-        const PM = `${iM?OM:-1-OM}:${SM}:${null!==jM&&void 0!==jM?jM:""}`;
-        let nM = aM.get(PM);
-        if (void 0 !== nM || this.gridsFull) return nM;
-        const QM = performance.now();
-        if (this.bakeDeadline < 0) this.bakeDeadline = QM + 2;
-        else if (QM > this.bakeDeadline) return;
-        return nM = this.bake(rM, iM, OM, SM, jM), void 0 !== nM && aM.set(PM, nM), nM
+          geometry: eV,
+          indexed: xV,
+          first: JV,
+          count: YV,
+          skip: UV
+        } = VV, yV = this.grids.get(eV);
+        yV || (yV = new Map, this.grids.set(eV, yV));
+        const pV = `${xV?JV:-1-JV}:${YV}:${null!==UV&&void 0!==UV?UV:""}`;
+        let QV = yV.get(pV);
+        if (void 0 !== QV || this.gridsFull) return QV;
+        const nV = performance.now();
+        if (this.bakeDeadline < 0) this.bakeDeadline = nV + 2;
+        else if (nV > this.bakeDeadline) return;
+        return QV = this.bake(eV, xV, JV, YV, UV), void 0 !== QV && yV.set(pV, QV), QV
       }
-      bake(MM, rM, iM, OM, SM) {
-        const jM = MM.vertexAttributes.find((MM => "position" === MM.kind)),
-          aM = jM ? function(MM, rM, iM, OM) {
-            let SM = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null;
-            const jM = MM => rM ? rM[iM + MM] : iM + MM,
-              aM = MM => null !== SM && [0, 1, 2].some((rM => {
-                const iM = jM(MM + rM);
-                return iM >= SM[0] && iM < SM[1]
+      bake(VV, eV, xV, JV, YV) {
+        const UV = VV.vertexAttributes.find((VV => "position" === VV.kind)),
+          yV = UV ? function(VV, eV, xV, JV) {
+            let YV = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null;
+            const UV = VV => eV ? eV[xV + VV] : xV + VV,
+              yV = VV => null !== YV && [0, 1, 2].some((eV => {
+                const xV = UV(VV + eV);
+                return xV >= YV[0] && xV < YV[1]
               })),
-              PM = [1 / 0, 1 / 0, 1 / 0],
-              nM = [-1 / 0, -1 / 0, -1 / 0];
-            for (let lM = 0; lM + 2 < OM; lM += 3)
-              if (!aM(lM))
-                for (let rM = 0; rM < 3; rM++) {
-                  const iM = jM(lM + rM);
-                  for (let rM = 0; rM < 3; rM++) PM[rM] = Math.min(PM[rM], MM[3 * iM + rM]), nM[rM] = Math.max(nM[rM], MM[3 * iM + rM])
+              pV = [1 / 0, 1 / 0, 1 / 0],
+              QV = [-1 / 0, -1 / 0, -1 / 0];
+            for (let jV = 0; jV + 2 < JV; jV += 3)
+              if (!yV(jV))
+                for (let eV = 0; eV < 3; eV++) {
+                  const xV = UV(jV + eV);
+                  for (let eV = 0; eV < 3; eV++) pV[eV] = Math.min(pV[eV], VV[3 * xV + eV]), QV[eV] = Math.max(QV[eV], VV[3 * xV + eV])
                 }
-            const QM = Math.max(nM[0] - PM[0], nM[1] - PM[1], nM[2] - PM[2]);
-            if (!(QM > 0)) return null;
-            const zM = QM / 64,
-              LM = [0, 0, 0],
-              mM = [0, 0, 0],
-              HM = [0, 0, 0];
-            for (let lM = 0; lM < 3; lM++) LM[lM] = Math.min(65, Math.ceil((nM[lM] - PM[lM]) / zM) + 1), mM[lM] = PM[lM] - zM / 2, HM[lM] = mM[lM] + LM[lM] * zM;
-            const hM = new Uint32Array(Math.ceil(LM[0] * LM[1] * LM[2] / 32)),
-              JM = new Float64Array(9),
-              dM = [0, 0, 0],
-              yM = [0, 0, 0];
-            for (let lM = 0; lM + 2 < OM; lM += 3)
-              if (!aM(lM)) {
-                for (let rM = 0; rM < 3; rM++) {
-                  const iM = jM(lM + rM);
-                  for (let OM = 0; OM < 3; OM++) JM[3 * rM + OM] = MM[3 * iM + OM]
+            const nV = Math.max(QV[0] - pV[0], QV[1] - pV[1], QV[2] - pV[2]);
+            if (!(nV > 0)) return null;
+            const wV = nV / 64,
+              ZV = [0, 0, 0],
+              vV = [0, 0, 0],
+              rV = [0, 0, 0];
+            for (let jV = 0; jV < 3; jV++) ZV[jV] = Math.min(65, Math.ceil((QV[jV] - pV[jV]) / wV) + 1), vV[jV] = pV[jV] - wV / 2, rV[jV] = vV[jV] + ZV[jV] * wV;
+            const kV = new Uint32Array(Math.ceil(ZV[0] * ZV[1] * ZV[2] / 32)),
+              bV = new Float64Array(9),
+              EV = [0, 0, 0],
+              BV = [0, 0, 0];
+            for (let jV = 0; jV + 2 < JV; jV += 3)
+              if (!yV(jV)) {
+                for (let eV = 0; eV < 3; eV++) {
+                  const xV = UV(jV + eV);
+                  for (let JV = 0; JV < 3; JV++) bV[3 * eV + JV] = VV[3 * xV + JV]
                 }
-                for (let MM = 0; MM < 3; MM++) {
-                  const rM = Math.min(JM[MM], JM[3 + MM], JM[6 + MM]),
-                    iM = Math.max(JM[MM], JM[3 + MM], JM[6 + MM]);
-                  dM[MM] = Math.max(0, Math.floor((rM - mM[MM]) / zM - 1e-6)), yM[MM] = Math.min(LM[MM] - 1, Math.floor((iM - mM[MM]) / zM + 1e-6))
+                for (let VV = 0; VV < 3; VV++) {
+                  const eV = Math.min(bV[VV], bV[3 + VV], bV[6 + VV]),
+                    xV = Math.max(bV[VV], bV[3 + VV], bV[6 + VV]);
+                  EV[VV] = Math.max(0, Math.floor((eV - vV[VV]) / wV - 1e-6)), BV[VV] = Math.min(ZV[VV] - 1, Math.floor((xV - vV[VV]) / wV + 1e-6))
                 }
-                for (let MM = dM[2]; MM <= yM[2]; MM++)
-                  for (let rM = dM[1]; rM <= yM[1]; rM++)
-                    for (let iM = dM[0]; iM <= yM[0]; iM++)
-                      if (vi(JM, mM[0] + (iM + .5) * zM, mM[1] + (rM + .5) * zM, mM[2] + (MM + .5) * zM, zM / 2)) {
-                        const OM = iM + LM[0] * (rM + LM[1] * MM);
-                        hM[OM >>> 5] |= 1 << (31 & OM)
+                for (let VV = EV[2]; VV <= BV[2]; VV++)
+                  for (let eV = EV[1]; eV <= BV[1]; eV++)
+                    for (let xV = EV[0]; xV <= BV[0]; xV++)
+                      if (lx(bV, vV[0] + (xV + .5) * wV, vV[1] + (eV + .5) * wV, vV[2] + (VV + .5) * wV, wV / 2)) {
+                        const JV = xV + ZV[0] * (eV + ZV[1] * VV);
+                        kV[JV >>> 5] |= 1 << (31 & JV)
                       }
               } return {
-              words: hM,
-              lo: mM,
-              hi: HM,
-              cell: zM,
-              dims: LM
+              words: kV,
+              lo: vV,
+              hi: rV,
+              cell: wV,
+              dims: ZV
             }
-          }((0, Jn.f)(jM, MM.vertexCount), rM ? MM.indexData : null, iM, OM, SM) : null;
-        if (!aM) return null;
+          }((0, rQ.g)(UV, VV.vertexCount), eV ? VV.indexData : null, xV, JV, YV) : null;
+        if (!yV) return null;
         const {
-          words: PM,
-          ...nM
-        } = aM;
-        if (this.gridTop + PM.length > Zi) return void(this.gridsFull = !0);
-        const QM = this.gridTop;
-        return this.gridTop += PM.length, this.device.queue.writeBuffer(this.gridBuffer, 4 * QM, PM), {
-          ...nM,
-          at: QM
+          words: pV,
+          ...QV
+        } = yV;
+        if (this.gridTop + pV.length > Dx) return void(this.gridsFull = !0);
+        const nV = this.gridTop;
+        return this.gridTop += pV.length, this.device.queue.writeBuffer(this.gridBuffer, 4 * nV, pV), {
+          ...QV,
+          at: nV
         }
       }
     }
-    const yn = Math.cos(1 * Math.PI / 180);
+    const bQ = Math.cos(1 * Math.PI / 180);
 
-    function En(MM, rM) {
-      return MM[0] * rM[0] + MM[1] * rM[1] + MM[2] * rM[2] < yn
+    function EQ(VV, eV) {
+      return VV[0] * eV[0] + VV[1] * eV[1] + VV[2] * eV[2] < bQ
     }
-    async function Un(MM) {
+    async function BQ(VV) {
       const {
-        pixels: rM,
-        width: iM,
-        height: OM
-      } = await Mr(MM), SM = new Uint8Array(iM * OM);
-      for (let jM = 0; jM < SM.length; jM++) SM[jM] = rM[4 * jM + 3];
+        pixels: eV,
+        width: xV,
+        height: JV
+      } = await Ve(VV), YV = new Uint8Array(xV * JV);
+      for (let UV = 0; UV < YV.length; UV++) YV[UV] = eV[4 * UV + 3];
       return {
-        width: iM,
-        height: OM,
-        alpha: SM
+        width: xV,
+        height: JV,
+        alpha: YV
       }
     }
-    class Gn {
-      constructor(MM, rM) {
-        this.device = MM, this.uniform = void 0, this.voxelBuffer = void 0, this.special = void 0, this.volume = void 0, this.volumeView = void 0, this.volumeSampler = void 0, this.work = void 0, this.workData = new ArrayBuffer(Bi.p), this.entities = void 0, this.entityStandIn = void 0, this.entitiesThisFrame = !1, this.window = null, this.stopWindow = null, this.casters = null, this.uniformData = new ArrayBuffer(128), this.uniformInts = new Int32Array(this.uniformData), this.uniformFloats = new Float32Array(this.uniformData), this.uniformWritten = null, this.eye = [0, 0, 0], this.warned = !1, this.volumePass = null, this.volumePassStarted = !1, this.volumePassFailed = !1, this.volumeHolds = null, this.slice = 0, this.sweepLeft = 0, this.written = !1, this.sweptChunk = [0, 0, 0], this.sweptLight = [0, 0, 0], this.stale = [], this.staleAll = !1, this.staleAllSwept = 0, this.castersWritten = !1, this.swept = 0, this.fastLeft = 0, this.paced = 0, this.staleNear = [0, 0, 0], this.uniform = MM.createBuffer({
+    class jQ {
+      constructor(VV, eV) {
+        this.device = VV, this.uniform = void 0, this.voxelBuffer = void 0, this.special = void 0, this.volume = void 0, this.volumeView = void 0, this.volumeSampler = void 0, this.work = void 0, this.workData = new ArrayBuffer(fx.n), this.entities = void 0, this.entityStandIn = void 0, this.entitiesThisFrame = !1, this.window = null, this.stopWindow = null, this.casters = null, this.uniformData = new ArrayBuffer(128), this.uniformInts = new Int32Array(this.uniformData), this.uniformFloats = new Float32Array(this.uniformData), this.uniformWritten = null, this.eye = [0, 0, 0], this.warned = !1, this.volumePass = null, this.volumePassStarted = !1, this.volumePassFailed = !1, this.volumeHolds = null, this.slice = 0, this.sweepLeft = 0, this.written = !1, this.sweptChunk = [0, 0, 0], this.sweptLight = [0, 0, 0], this.stale = [], this.staleAll = !1, this.staleAllSwept = 0, this.castersWritten = !1, this.swept = 0, this.fastLeft = 0, this.paced = 0, this.staleNear = [0, 0, 0], this.uniform = VV.createBuffer({
           label: "sun-shadow",
           size: 128,
           usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST
-        }), this.voxelBuffer = MM.createBuffer({
+        }), this.voxelBuffer = VV.createBuffer({
           label: "sun-shadow-voxels",
-          size: 4 * mi,
+          size: 4 * vx,
           usage: GPUBufferUsage.STORAGE | GPUBufferUsage.COPY_DST
-        }), this.special = MM.createBuffer({
+        }), this.special = VV.createBuffer({
           label: "sun-shadow-special",
           size: 9568256,
           usage: GPUBufferUsage.STORAGE | GPUBufferUsage.COPY_DST
         });
-        const [iM, OM, SM] = Bi.q;
-        this.volume = MM.createTexture({
+        const [xV, JV, YV] = fx.r;
+        this.volume = VV.createTexture({
           label: "sun-shadow-volume",
           size: {
-            width: iM,
-            height: OM,
-            depthOrArrayLayers: SM
+            width: xV,
+            height: JV,
+            depthOrArrayLayers: YV
           },
           dimension: "3d",
           format: "rgba8unorm",
           usage: GPUTextureUsage.STORAGE_BINDING | GPUTextureUsage.TEXTURE_BINDING
         }), this.volumeView = this.volume.createView({
           label: "sun-shadow-volume"
-        }), this.volumeSampler = MM.createSampler({
+        }), this.volumeSampler = VV.createSampler({
           label: "sun-shadow-volume",
           magFilter: "linear",
           minFilter: "linear",
           addressModeU: "repeat",
           addressModeV: "repeat",
           addressModeW: "repeat"
-        }), this.work = MM.createBuffer({
+        }), this.work = VV.createBuffer({
           label: "sun-shadow-volume-work",
-          size: Bi.p,
+          size: fx.n,
           usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST
-        }), this.entities = rM ? new dn(MM) : null, this.entityStandIn = rM ? null : MM.createBuffer({
+        }), this.entities = eV ? new kQ(VV) : null, this.entityStandIn = eV ? null : VV.createBuffer({
           label: "sun-shadow-entities-stand-in",
           size: 16,
           usage: GPUBufferUsage.STORAGE
         })
       }
       dispose() {
-        var MM;
-        null === (MM = this.stopWindow) || void 0 === MM || MM.call(this)
+        var VV;
+        null === (VV = this.stopWindow) || void 0 === VV || VV.call(this)
       }
       get tracesEntities() {
         return null !== this.entities
       }
       describePendingWork() {
-        var MM, rM;
-        const iM = [];
-        !this.volumePassStarted || this.volumePass || this.volumePassFailed || iM.push("Lite sun shadow volume pipeline compiling");
-        const OM = null !== (MM = null === (rM = this.casters) || void 0 === rM ? void 0 : rM.planesLoading) && void 0 !== MM ? MM : 0;
-        return OM > 0 && iM.push(`${OM} Lite sun shadow plane casters loading their textures`), iM
+        var VV, eV;
+        const xV = [];
+        !this.volumePassStarted || this.volumePass || this.volumePassFailed || xV.push("Lite sun shadow volume pipeline compiling");
+        const JV = null !== (VV = null === (eV = this.casters) || void 0 === eV ? void 0 : eV.planesLoading) && void 0 !== VV ? VV : 0;
+        return JV > 0 && xV.push(`${JV} Lite sun shadow plane casters loading their textures`), xV
       }
       entries() {
-        var MM, rM, iM, OM;
-        const SM = qr.p;
+        var VV, eV, xV, JV;
+        const YV = Se.r;
         return [{
-          binding: SM.uniform,
+          binding: YV.uniform,
           resource: {
             buffer: this.uniform
           }
         }, {
-          binding: SM.Xm,
+          binding: YV.Ur,
           resource: {
             buffer: this.voxelBuffer
           }
         }, {
-          binding: SM.special,
+          binding: YV.special,
           resource: {
             buffer: this.special
           }
         }, {
-          binding: SM.volume,
+          binding: YV.volume,
           resource: this.volumeView
         }, {
-          binding: SM.sampler,
+          binding: YV.sampler,
           resource: this.volumeSampler
         }, {
-          binding: SM.entities,
+          binding: YV.entities,
           resource: {
-            buffer: null !== (MM = null === (rM = this.entities) || void 0 === rM ? void 0 : rM.frameBuffer) && void 0 !== MM ? MM : this.entityStandIn
+            buffer: null !== (VV = null === (eV = this.entities) || void 0 === eV ? void 0 : eV.frameBuffer) && void 0 !== VV ? VV : this.entityStandIn
           }
         }, {
-          binding: SM.entityGrids,
+          binding: YV.entityGrids,
           resource: {
-            buffer: null !== (iM = null === (OM = this.entities) || void 0 === OM ? void 0 : OM.gridBuffer) && void 0 !== iM ? iM : this.entityStandIn
+            buffer: null !== (xV = null === (JV = this.entities) || void 0 === JV ? void 0 : JV.gridBuffer) && void 0 !== xV ? xV : this.entityStandIn
           }
         }]
       }
-      prepare(MM, rM, iM) {
-        var OM;
+      prepare(VV, eV, xV) {
+        var JV;
         this.entitiesThisFrame = !1;
-        const SM = null !== (OM = null === iM || void 0 === iM ? void 0 : iM.sunShadowReach()) && void 0 !== OM ? OM : {
+        const YV = null !== (JV = null === xV || void 0 === xV ? void 0 : xV.sunShadowReach()) && void 0 !== JV ? JV : {
           sunShadow: !1,
           airShadow: !1
         };
-        if (!iM || !SM.sunShadow && !SM.airShadow) return void(this.volumeHolds = null);
-        if (MM.uL.hL !== Vr) return void(this.warned || (this.warned = !0, console.warn(`Lite: sun shadows need chunks of 32 blocks, not ${MM.uL.hL}; everything is lit.`)));
-        const jM = this.start(MM);
-        this.casters.update(MM.nL, MM.nL.eH.length);
-        const aM = MM.Am;
-        for (let mM = 0; mM < 3; mM++) this.eye[mM] = rM[mM] + aM[mM];
-        const PM = (0, Bi.w)(this.eye);
-        this.staleNear = PM;
-        const nM = MM.uL.yJ;
-        jM.update(this.eye, ((MM, rM, iM) => nM.lJ(MM, rM, iM)), 1);
-        const QM = (0, Bi.r)(iM.mMM()),
-          zM = jM.eyeChunk,
-          LM = this.uniformInts;
-        for (let mM = 0; mM < 3; mM++) LM[mM] = zM[mM], LM[4 + mM] = PM[mM];
-        this.entitiesThisFrame = null !== this.entities && SM.sunShadow, this.entitiesThisFrame && Yi(this.uniformFloats, 8, rM, QM), null !== this.volumeHolds && (this.castersWritten || En(QM, this.sweptLight)) && (this.staleAll = !0, this.staleAllSwept = this.swept), this.castersWritten = !1, this.writeStale(), this.writeUniform(), this.computeVolume(PM, QM, zM)
+        if (!xV || !YV.sunShadow && !YV.airShadow) return void(this.volumeHolds = null);
+        if (VV.cZ.AZ !== de) return void(this.warned || (this.warned = !0, console.warn(`Lite: sun shadows need chunks of 32 blocks, not ${VV.cZ.AZ}; everything is lit.`)));
+        const UV = this.start(VV);
+        this.casters.update(VV.jZ, VV.jZ.ar.length);
+        const yV = VV.Vr;
+        for (let vV = 0; vV < 3; vV++) this.eye[vV] = eV[vV] + yV[vV];
+        const pV = (0, fx.u)(this.eye);
+        this.staleNear = pV;
+        const QV = VV.cZ.Cb;
+        UV.update(this.eye, ((VV, eV, xV) => QV.ab(VV, eV, xV)), 1);
+        const nV = (0, fx.s)(xV.ReV()),
+          wV = UV.eyeChunk,
+          ZV = this.uniformInts;
+        for (let vV = 0; vV < 3; vV++) ZV[vV] = wV[vV], ZV[4 + vV] = pV[vV];
+        this.entitiesThisFrame = null !== this.entities && YV.sunShadow, this.entitiesThisFrame && ax(this.uniformFloats, 8, eV, nV), null !== this.volumeHolds && (this.castersWritten || EQ(nV, this.sweptLight)) && (this.staleAll = !0, this.staleAllSwept = this.swept), this.castersWritten = !1, this.writeStale(), this.writeUniform(), this.computeVolume(pV, nV, wV)
       }
-      markStale(MM) {
-        const rM = this.staleNear,
-          iM = Vr,
-          OM = [MM.i * iM, MM.j * iM, MM.k * iM];
-        for (let jM = 0; jM < 3; jM++)
-          if (OM[jM] + iM <= rM[jM] - iM || OM[jM] >= rM[jM] + Bi.q[jM] + iM) return;
+      markStale(VV) {
+        const eV = this.staleNear,
+          xV = de,
+          JV = [VV.i * xV, VV.j * xV, VV.k * xV];
+        for (let UV = 0; UV < 3; UV++)
+          if (JV[UV] + xV <= eV[UV] - xV || JV[UV] >= eV[UV] + fx.r[UV] + xV) return;
         if (this.staleAll) return void(this.staleAllSwept = this.swept);
-        const SM = this.stale;
-        for (let jM = 0; jM < SM.length; jM += 4)
-          if (SM[jM] === MM.i && SM[jM + 1] === MM.j && SM[jM + 2] === MM.k) return void(SM[jM + 3] = this.swept);
-        if (16 === SM.length) return this.staleAll = !0, void(this.staleAllSwept = this.swept);
-        SM.push(MM.i, MM.j, MM.k, this.swept)
+        const YV = this.stale;
+        for (let UV = 0; UV < YV.length; UV += 4)
+          if (YV[UV] === VV.i && YV[UV + 1] === VV.j && YV[UV + 2] === VV.k) return void(YV[UV + 3] = this.swept);
+        if (16 === YV.length) return this.staleAll = !0, void(this.staleAllSwept = this.swept);
+        YV.push(VV.i, VV.j, VV.k, this.swept)
       }
       writeStale() {
-        const MM = this.swept,
-          rM = this.stale;
-        this.staleAll && MM - this.staleAllSwept >= Bi.j && (this.staleAll = !1, rM.length = 0);
-        let iM = 0;
-        for (let SM = 0; SM < rM.length; SM += 4)
-          if (MM - rM[SM + 3] < Bi.j) {
-            for (let MM = 0; MM < 4; MM++) rM[iM + MM] = rM[SM + MM];
-            iM += 4
-          } rM.length = iM;
-        const OM = this.uniformInts;
-        OM[3] = this.staleAll ? 5 : iM / 4;
-        for (let SM = 0; SM < 4; SM++)
-          for (let MM = 0; MM < 3; MM++) OM[16 + 4 * SM + MM] = 4 * SM < iM ? rM[4 * SM + MM] * Vr : 0
+        const VV = this.swept,
+          eV = this.stale;
+        this.staleAll && VV - this.staleAllSwept >= fx.j && (this.staleAll = !1, eV.length = 0);
+        let xV = 0;
+        for (let YV = 0; YV < eV.length; YV += 4)
+          if (VV - eV[YV + 3] < fx.j) {
+            for (let VV = 0; VV < 4; VV++) eV[xV + VV] = eV[YV + VV];
+            xV += 4
+          } eV.length = xV;
+        const JV = this.uniformInts;
+        JV[3] = this.staleAll ? 5 : xV / 4;
+        for (let YV = 0; YV < 4; YV++)
+          for (let VV = 0; VV < 3; VV++) JV[16 + 4 * YV + VV] = 4 * YV < xV ? eV[4 * YV + VV] * de : 0
       }
       writeUniform() {
-        const MM = this.uniformInts;
-        let rM = this.uniformWritten;
-        if (rM) {
-          let iM = !0;
-          for (let OM = 0; OM < MM.length && iM; OM++) iM = MM[OM] === rM[OM];
-          if (iM) return
+        const VV = this.uniformInts;
+        let eV = this.uniformWritten;
+        if (eV) {
+          let xV = !0;
+          for (let JV = 0; JV < VV.length && xV; JV++) xV = VV[JV] === eV[JV];
+          if (xV) return
         }
-        rM ??= this.uniformWritten = new Int32Array(MM.length), rM.set(MM), this.device.queue.writeBuffer(this.uniform, 0, this.uniformData)
+        eV ??= this.uniformWritten = new Int32Array(VV.length), eV.set(VV), this.device.queue.writeBuffer(this.uniform, 0, this.uniformData)
       }
-      traceEntities(MM) {
-        this.entitiesThisFrame && this.entities.update(this.uniformFloats, 8, MM)
+      traceEntities(VV) {
+        this.entitiesThisFrame && this.entities.update(this.uniformFloats, 8, VV)
       }
-      computeVolume(MM, rM, iM) {
-        const OM = this.buildVolumePass();
-        if (!OM) return void(this.volumeHolds = null);
-        const SM = (0, Bi.u)(this.volumeHolds, MM);
-        this.volumeHolds = MM;
-        const jM = 1 === SM.length && SM[0].size.every(((MM, rM) => MM === Bi.q[rM])),
-          aM = this.sweptChunk,
-          PM = this.sweptLight,
-          nM = rM[0] !== PM[0] || rM[1] !== PM[1] || rM[2] !== PM[2],
-          QM = iM[0] !== aM[0] || iM[1] !== aM[1] || iM[2] !== aM[2],
-          zM = nM && En(rM, PM);
-        if ((jM || this.written || QM || zM) && (this.fastLeft = Bi.j), jM || this.written || nM || QM) {
+      computeVolume(VV, eV, xV) {
+        const JV = this.buildVolumePass();
+        if (!JV) return void(this.volumeHolds = null);
+        const YV = (0, fx.t)(this.volumeHolds, VV);
+        this.volumeHolds = VV;
+        const UV = 1 === YV.length && YV[0].size.every(((VV, eV) => VV === fx.r[eV])),
+          yV = this.sweptChunk,
+          pV = this.sweptLight,
+          QV = eV[0] !== pV[0] || eV[1] !== pV[1] || eV[2] !== pV[2],
+          nV = xV[0] !== yV[0] || xV[1] !== yV[1] || xV[2] !== yV[2],
+          wV = QV && EQ(eV, pV);
+        if ((UV || this.written || nV || wV) && (this.fastLeft = fx.j), UV || this.written || QV || nV) {
           this.written = !1;
-          for (let MM = 0; MM < 3; MM++) aM[MM] = iM[MM], PM[MM] = rM[MM];
-          this.sweepLeft = jM ? 0 : Bi.j
+          for (let VV = 0; VV < 3; VV++) yV[VV] = xV[VV], pV[VV] = eV[VV];
+          this.sweepLeft = UV ? 0 : fx.j
         }
-        if (jM ? this.swept += Bi.j : this.sweepLeft > 0 && (this.fastLeft > 0 || ++this.paced % 2 === 0) && (this.fastLeft = Math.max(this.fastLeft - 1, 0), this.sweepLeft--, SM.push(...(0, Bi.z)(MM, this.slice)), this.slice = (this.slice + 1) % Bi.j, this.swept++), 0 === SM.length) return;
-        const LM = (0, Bi.D)(this.workData, rM, SM);
+        if (UV ? this.swept += fx.j : this.sweepLeft > 0 && (this.fastLeft > 0 || ++this.paced % 2 === 0) && (this.fastLeft = Math.max(this.fastLeft - 1, 0), this.sweepLeft--, YV.push(...(0, fx.x)(VV, this.slice)), this.slice = (this.slice + 1) % fx.j, this.swept++), 0 === YV.length) return;
+        const ZV = (0, fx.B)(this.workData, eV, YV);
         this.device.queue.writeBuffer(this.work, 0, this.workData);
-        const mM = this.device.createCommandEncoder({
+        const vV = this.device.createCommandEncoder({
             label: "sun-shadow-volume"
           }),
-          HM = mM.beginComputePass({
+          rV = vV.beginComputePass({
             label: "sun-shadow-volume"
           });
-        HM.setPipeline(OM.pipeline), HM.setBindGroup(Ki.group, OM.bindGroup), HM.dispatchWorkgroups(Math.ceil(LM / Bi.n)), HM.end(), this.device.queue.submit([mM.finish()])
+        rV.setPipeline(JV.pipeline), rV.setBindGroup(Hx.group, JV.bindGroup), rV.dispatchWorkgroups(Math.ceil(ZV / fx.l)), rV.end(), this.device.queue.submit([vV.finish()])
       }
       buildVolumePass() {
         if (this.volumePass || this.volumePassStarted) return this.volumePass;
         this.volumePassStarted = !0;
-        const MM = Ki,
-          rM = GPUShaderStage.COMPUTE,
-          iM = this.device.createBindGroupLayout({
+        const VV = Hx,
+          eV = GPUShaderStage.COMPUTE,
+          xV = this.device.createBindGroupLayout({
             label: "sun-shadow-volume",
             entries: [{
-              binding: MM.uniform,
-              visibility: rM,
+              binding: VV.uniform,
+              visibility: eV,
               buffer: {
                 type: "uniform"
               }
             }, {
-              binding: MM.Xm,
-              visibility: rM,
+              binding: VV.Ur,
+              visibility: eV,
               buffer: {
                 type: "read-only-storage"
               }
             }, {
-              binding: MM.special,
-              visibility: rM,
+              binding: VV.special,
+              visibility: eV,
               buffer: {
                 type: "read-only-storage"
               }
             }, {
-              binding: MM.work,
-              visibility: rM,
+              binding: VV.work,
+              visibility: eV,
               buffer: {
                 type: "uniform"
               }
             }, {
-              binding: MM.volume,
-              visibility: rM,
+              binding: VV.volume,
+              visibility: eV,
               storageTexture: {
                 access: "write-only",
                 format: "rgba8unorm",
@@ -7852,31 +7852,31 @@ export const modules = {
               }
             }]
           }),
-          OM = this.device.createBindGroup({
+          JV = this.device.createBindGroup({
             label: "sun-shadow-volume",
-            layout: iM,
+            layout: xV,
             entries: [{
-              binding: MM.uniform,
+              binding: VV.uniform,
               resource: {
                 buffer: this.uniform
               }
             }, {
-              binding: MM.Xm,
+              binding: VV.Ur,
               resource: {
                 buffer: this.voxelBuffer
               }
             }, {
-              binding: MM.special,
+              binding: VV.special,
               resource: {
                 buffer: this.special
               }
             }, {
-              binding: MM.work,
+              binding: VV.work,
               resource: {
                 buffer: this.work
               }
             }, {
-              binding: MM.volume,
+              binding: VV.volume,
               resource: this.volumeView
             }]
           });
@@ -7884,97 +7884,97 @@ export const modules = {
           label: "sun-shadow-volume",
           layout: this.device.createPipelineLayout({
             label: "sun-shadow-volume",
-            bindGroupLayouts: [iM]
+            bindGroupLayouts: [xV]
           }),
           compute: {
             module: this.device.createShaderModule({
               label: "sun-shadow-volume",
-              code: qi()
+              code: ux()
             }),
             entryPoint: "main"
           }
-        }).then((MM => {
+        }).then((VV => {
           this.volumePass = {
-            pipeline: MM,
-            bindGroup: OM
+            pipeline: VV,
+            bindGroup: JV
           }
-        }), (MM => {
-          this.volumePassFailed = !0, console.warn(`Lite: sun shadows' visibility volume didn't build, so air shadows and far traces are lit: ${String(MM)}`)
+        }), (VV => {
+          this.volumePassFailed = !0, console.warn(`Lite: sun shadows' visibility volume didn't build, so air shadows and far traces are lit: ${String(VV)}`)
         })), null
       }
-      start(MM) {
+      start(VV) {
         if (this.window) return this.window;
-        const rM = (MM, rM) => {
-          this.written = !0, this.device.queue.writeBuffer(this.special, 4 * MM, rM)
+        const eV = (VV, eV) => {
+          this.written = !0, this.device.queue.writeBuffer(this.special, 4 * VV, eV)
         };
-        this.casters = new zn(((MM, iM) => {
-          this.castersWritten = !0, rM(MM, iM)
-        }), Un);
-        const iM = new hn(this.casters, ((MM, rM) => {
-          this.written = !0, this.device.queue.writeBuffer(this.voxelBuffer, 4 * MM, rM)
-        }), rM);
-        iM.encoded = MM => {
-          this.markStale(MM)
+        this.casters = new QQ(((VV, xV) => {
+          this.castersWritten = !0, eV(VV, xV)
+        }), BQ);
+        const xV = new vQ(this.casters, ((VV, eV) => {
+          this.written = !0, this.device.queue.writeBuffer(this.voxelBuffer, 4 * VV, eV)
+        }), eV);
+        xV.encoded = VV => {
+          this.markStale(VV)
         };
-        const OM = MM => {
-          iM.chunkAdded(MM)
+        const JV = VV => {
+          xV.chunkAdded(VV)
         };
-        return MM.uL.on("chunkAdded", OM), this.stopWindow = () => {
-          MM.uL.removeListener("chunkAdded", OM)
-        }, this.window = iM, iM
+        return VV.cZ.on("chunkAdded", JV), this.stopWindow = () => {
+          VV.cZ.removeListener("chunkAdded", JV)
+        }, this.window = xV, xV
       }
     }
-    var Cn = iM(39733),
-      en = iM(39741);
-    const bn = 0,
-      wn = 3,
-      tn = 4,
-      gn = 5;
+    var qQ = xV(39890),
+      tQ = xV(39892);
+    const FQ = 0,
+      TQ = 3,
+      PQ = 4,
+      AQ = 5;
 
-    function un(MM, rM, iM, OM) {
-      MM.drawOffset(rM, OM + bn), rM[OM + wn] = MM.drawTime(), iM[OM + tn] = MM.ring.drawStart(), iM[OM + gn] = MM.ring.drawCount()
+    function NQ(VV, eV, xV, JV) {
+      VV.drawOffset(eV, JV + FQ), eV[JV + TQ] = VV.drawTime(), xV[JV + PQ] = VV.ring.drawStart(), xV[JV + AQ] = VV.ring.drawCount()
     }
-    const Rn = `\n${NO}\n\nconst MAX_STOPS = ${en.d}u;\n\nstruct SystemUniforms {\n\tgravity: vec3f,\n\tcolorCount: u32,\n\tcolorDead: vec4f,\n\tvelocityCount: u32,\n\tremapCount: u32,\n\tramp: u32,\n\tcolorPositions: array<vec4f, ${en.d/4}>,\n\tcolor1: array<vec4f, ${en.d}>,\n\tcolor2: array<vec4f, ${en.d}>,\n\t// Position, factor and factor2 per stop.\n\tvelocity: array<vec4f, ${en.d}>,\n\t// Position, min and max per stop.\n\tremap: array<vec4f, ${en.d}>,\n}\n\n// A particle as spawned: position relative to the frame offset and spawn time; direction times emit power and\n// lifetime; size, random seed and colour.\nstruct Particle {\n\tspawn: vec4f,\n\tvelocity: vec4f,\n\tsize: f32,\n\tseed: u32,\n\tcolour: vec4f,\n}\n\nstruct SystemFrame {\n\toffset: vec3f,\n\tnow: f32,\n\t// The slot drawn first (the oldest), and the slots in use.\n\tstart: u32,\n\tcount: u32,\n}\n\n@group(1) @binding(0) var<uniform> system: SystemUniforms;\n@group(1) @binding(1) var<storage, read> particles: array<Particle>;\n@group(1) @binding(2) var diffuseSampler: sampler;\n@group(1) @binding(3) var diffuseTexture: texture_2d<f32>;\n@group(1) @binding(4) var rampSampler: sampler;\n@group(1) @binding(5) var rampTexture: texture_2d<f32>;\n@group(2) @binding(0) var<uniform> frame: SystemFrame;\n\n// The MULTIPLY pass of BLENDMULTIPLYMODE, which MULTIPLYADD draws before its ADD pass.\noverride MULTIPLY_PASS: bool = false;\n\nstruct VertexOutput {\n\t@builtin(position) position: vec4f,\n\t@location(0) uv: vec2f,\n\t@location(1) colour: vec4f,\n\t@location(2) remap: vec4f,\n}\n\nfn hash(v: u32) -> u32 {\n\tlet state = v * 747796405u + 2891336453u;\n\t// (state >> 28) + 4 as constant shifts: ANGLE's Direct3D 11 on Intel gen 7/7.5/8 shifts by a variable amount wrongly\n\tlet top = state >> 28u;\n\tlet bits0 = state >> 4u;\n\tlet bits1 = select(bits0, bits0 >> 1u, (top & 1u) != 0u);\n\tlet bits2 = select(bits1, bits1 >> 2u, (top & 2u) != 0u);\n\tlet bits3 = select(bits2, bits2 >> 4u, (top & 4u) != 0u);\n\tlet word = (select(bits3, bits3 >> 8u, (top & 8u) != 0u) ^ state) * 277803737u;\n\treturn (word >> 22u) ^ word;\n}\n\n// The particle's own random pick for a gradient stop, as Babylon picks one when the particle reaches it.\nfn random(seed: u32, stop: u32) -> f32 {\n\treturn f32(hash(seed ^ (stop * 0x9e3779b9u)) >> 8u) / 16777216.0;\n}\n\nfn colourPosition(i: u32) -> f32 {\n\treturn system.colorPositions[i / 4u][i % 4u];\n}\n\nfn stopColour(i: u32, seed: u32) -> vec4f {\n\treturn mix(system.color1[i], system.color2[i], random(seed, i));\n}\n\nfn velocityFactor(i: u32, seed: u32) -> f32 {\n\tlet stop = system.velocity[i];\n\treturn mix(stop.y, stop.z, random(seed, MAX_STOPS + i));\n}\n\n// _ProcessColorGradients / _ProcessColor at the particle's age. Babylon's GetCurrentGradient picks stop 0's pair\n// below the first stop, where a particle keeps the colour it was given for the next stop (stop 1's pick); the first\n// segment containing the ratio; or else the last stop.\nfn colourAt(p: Particle, age: f32, ratio: f32, seed: u32) -> vec4f {\n\tlet n = system.colorCount;\n\tvar colour: vec4f;\n\tif (n == 0u) {\n\t\tcolour = mix(p.colour, system.colorDead, ratio);\n\t} else if (age == 0.0) {\n\t\treturn stopColour(0u, seed);\n\t} else if (ratio < colourPosition(0u)) {\n\t\tcolour = stopColour(min(1u, n - 1u), seed);\n\t} else {\n\t\tcolour = stopColour(n - 1u, seed);\n\t\tfor (var i = 0u; i + 1u < n; i++) {\n\t\t\tlet a = colourPosition(i);\n\t\t\tlet b = colourPosition(i + 1u);\n\t\t\tif (ratio >= a && ratio <= b) {\n\t\t\t\tlet scale = select(0.0, (ratio - a) / (b - a), b > a);\n\t\t\t\tcolour = mix(stopColour(i, seed), stopColour(i + 1u, seed), scale);\n\t\t\t\tbreak;\n\t\t\t}\n\t\t}\n\t}\n\tcolour.a = max(colour.a, 0.0);\n\treturn colour;\n}\n\n// The integral of (alpha + beta s)(d + g s) over s0..s1: the distance travelled while the velocity factor is\n// alpha + beta s at age s and the direction d + g s.\nfn travel(alpha: f32, beta: f32, d: vec3f, g: vec3f, s0: f32, s1: f32) -> vec3f {\n\tlet ds = s1 - s0;\n\tlet ds2 = (s1 * s1 - s0 * s0) * 0.5;\n\tlet ds3 = (s1 * s1 * s1 - s0 * s0 * s0) / 3.0;\n\treturn d * (alpha * ds) + (g * alpha + d * beta) * ds2 + g * (beta * ds3);\n}\n\n// Where the particle has moved by its age: each frame Babylon moves it by its direction times the step and the\n// velocity factor, then adds gravity times the step to the direction. The factor is piecewise linear in the age,\n// picked as colourAt picks colours.\nfn displacement(d: vec3f, age: f32, life: f32, seed: u32) -> vec3f {\n\tlet g = system.gravity;\n\tlet n = system.velocityCount;\n\tif (n == 0u) {\n\t\treturn d * age + g * (0.5 * age * age);\n\t}\n\tvar total = vec3f(0.0);\n\tlet first = system.velocity[0u].x * life;\n\tlet beforeFirst = min(age, first);\n\tif (beforeFirst > 0.0) {\n\t\ttotal += travel(velocityFactor(min(1u, n - 1u), seed), 0.0, d, g, 0.0, beforeFirst);\n\t}\n\tfor (var i = 0u; i + 1u < n; i++) {\n\t\tlet a = system.velocity[i].x * life;\n\t\tlet b = system.velocity[i + 1u].x * life;\n\t\tlet lo = max(a, 0.0);\n\t\tlet hi = min(b, age);\n\t\tif (hi > lo) {\n\t\t\tlet fa = velocityFactor(i, seed);\n\t\t\tlet beta = (velocityFactor(i + 1u, seed) - fa) / (b - a);\n\t\t\ttotal += travel(fa - beta * a, beta, d, g, lo, hi);\n\t\t}\n\t}\n\tlet afterLast = max(system.velocity[n - 1u].x * life, 0.0);\n\tif (age > afterLast) {\n\t\ttotal += travel(velocityFactor(n - 1u, seed), 0.0, d, g, afterLast, age);\n\t}\n\treturn total;\n}\n\n// _ProcessRemapGradients: the colour remap's min and range at the ratio; a new particle has (0, 1, 0, 1).\nfn remapAt(age: f32, ratio: f32) -> vec4f {\n\tlet n = system.remapCount;\n\tif (n == 0u || age == 0.0) {\n\t\treturn vec4f(0.0, 1.0, 0.0, 1.0);\n\t}\n\tvar stop = system.remap[n - 1u].yz;\n\tif (ratio < system.remap[0u].x) {\n\t\tstop = system.remap[0u].yz;\n\t} else {\n\t\tfor (var i = 0u; i + 1u < n; i++) {\n\t\t\tlet a = system.remap[i];\n\t\t\tlet b = system.remap[i + 1u];\n\t\t\tif (ratio >= a.x && ratio <= b.x) {\n\t\t\t\tstop = mix(a.yz, b.yz, select(0.0, (ratio - a.x) / (b.x - a.x), b.x > a.x));\n\t\t\t\tbreak;\n\t\t\t}\n\t\t}\n\t}\n\treturn vec4f(stop.x, stop.y - stop.x, 0.0, 1.0);\n}\n\n@vertex\nfn mainVertex(@builtin(vertex_index) vertexIndex: u32, @builtin(instance_index) instanceIndex: u32) -> VertexOutput {\n\tvar out: VertexOutput;\n\t// One wrap, not %, as glParticleShader.ts picks the slot, since start < count and a draw's instances are count\n\t// (gpuParticleRing.ts)\n\tlet count = frame.count;\n\tlet unwrapped = frame.start + instanceIndex;\n\tlet p = particles[select(unwrapped, unwrapped - count, unwrapped >= count)];\n\tlet age = frame.now - p.spawn.w;\n\tlet life = p.velocity.w;\n\tif (!(age >= 0.0 && age < life)) {\n\t\t// Dead, or not yet written: outside the clip volume.\n\t\tout.position = vec4f(0.0, 0.0, 2.0, 1.0);\n\t\treturn out;\n\t}\n\tlet ratio = age / life;\n\tlet seed = p.seed;\n\tlet centre = frame.offset + p.spawn.xyz + displacement(p.velocity.xyz, age, life, seed);\n\t// ThinParticleSystem's billboard: the corner offset in view space, here along the camera's right and up.\n\tlet corner = vec2f(f32(vertexIndex & 1u), f32(vertexIndex >> 1u));\n\tlet offset = (corner - 0.5) * p.size;\n\tlet right = vec3f(scene.view[0][0], scene.view[1][0], scene.view[2][0]);\n\tlet up = vec3f(scene.view[0][1], scene.view[1][1], scene.view[2][1]);\n\tout.position = liteWorldLayer(scene.viewProjection * vec4f(centre + right * offset.x + up * offset.y, 1.0));\n\tout.uv = corner;\n\tout.colour = colourAt(p, age, ratio, seed);\n\tout.remap = remapAt(age, ratio);\n\treturn out;\n}\n\n// Babylon's particles.fragment with the default texture mask, without fog or image processing.\n@fragment\nfn mainFragment(in: VertexOutput) -> @location(0) vec4f {\n\tlet textureColour = textureSample(diffuseTexture, diffuseSampler, in.uv);\n\tvar colour = textureColour * in.colour;\n\tif (system.ramp != 0u) {\n\t\tlet index = clamp((colour.a - in.remap.x) / in.remap.y, 0.0, 1.0);\n\t\tlet rampColour = textureSample(rampTexture, rampSampler, vec2f(1.0 - index, 0.0));\n\t\tcolour = vec4f(colour.rgb * rampColour.rgb, clamp((colour.a * rampColour.a - in.remap.z) / in.remap.w, 0.0, 1.0));\n\t}\n\tif (MULTIPLY_PASS) {\n\t\tlet sourceAlpha = in.colour.a * textureColour.a;\n\t\tcolour = vec4f(colour.rgb * sourceAlpha + vec3f(1.0 - sourceAlpha), colour.a);\n\t}\n\treturn colour;\n}\n`;
-    var pn = iM(44259);
-    class Wn {
-      constructor(MM, rM, iM, OM) {
-        this.device = MM, this.system = rM, this.frameIndex = iM, this.bindings = OM, this.ring = void 0, this.uniforms = void 0, this.uniformBits = null, this.rampTexels = (0, pn.e)(), this.ramp = null, this.rampView = null, this.bindGroup = null, this.boundView = null, this.boundSampler = null, this.boundRamp = null, this.texture = null, this.pipelines = [], this.count = 0, this.upload = (MM, rM) => {
-          this.device.queue.writeBuffer(this.ring, MM * en.g * 4, this.system.ring.records, MM * en.g, (rM - MM) * en.g)
+    const XQ = `\n${oJ}\n\nconst MAX_STOPS = ${tQ.e}u;\n\nstruct SystemUniforms {\n\tgravity: vec3f,\n\tcolorCount: u32,\n\tcolorDead: vec4f,\n\tvelocityCount: u32,\n\tremapCount: u32,\n\tramp: u32,\n\tcolorPositions: array<vec4f, ${tQ.e/4}>,\n\tcolor1: array<vec4f, ${tQ.e}>,\n\tcolor2: array<vec4f, ${tQ.e}>,\n\t// Position, factor and factor2 per stop.\n\tvelocity: array<vec4f, ${tQ.e}>,\n\t// Position, min and max per stop.\n\tremap: array<vec4f, ${tQ.e}>,\n}\n\n// A particle as spawned: position relative to the frame offset and spawn time; direction times emit power and\n// lifetime; size, random seed and colour.\nstruct Particle {\n\tspawn: vec4f,\n\tvelocity: vec4f,\n\tsize: f32,\n\tseed: u32,\n\tcolour: vec4f,\n}\n\nstruct SystemFrame {\n\toffset: vec3f,\n\tnow: f32,\n\t// The slot drawn first (the oldest), and the slots in use.\n\tstart: u32,\n\tcount: u32,\n}\n\n@group(1) @binding(0) var<uniform> system: SystemUniforms;\n@group(1) @binding(1) var<storage, read> particles: array<Particle>;\n@group(1) @binding(2) var diffuseSampler: sampler;\n@group(1) @binding(3) var diffuseTexture: texture_2d<f32>;\n@group(1) @binding(4) var rampSampler: sampler;\n@group(1) @binding(5) var rampTexture: texture_2d<f32>;\n@group(2) @binding(0) var<uniform> frame: SystemFrame;\n\n// The MULTIPLY pass of BLENDMULTIPLYMODE, which MULTIPLYADD draws before its ADD pass.\noverride MULTIPLY_PASS: bool = false;\n\nstruct VertexOutput {\n\t@builtin(position) position: vec4f,\n\t@location(0) uv: vec2f,\n\t@location(1) colour: vec4f,\n\t@location(2) remap: vec4f,\n}\n\nfn hash(v: u32) -> u32 {\n\tlet state = v * 747796405u + 2891336453u;\n\t// (state >> 28) + 4 as constant shifts: ANGLE's Direct3D 11 on Intel gen 7/7.5/8 shifts by a variable amount wrongly\n\tlet top = state >> 28u;\n\tlet bits0 = state >> 4u;\n\tlet bits1 = select(bits0, bits0 >> 1u, (top & 1u) != 0u);\n\tlet bits2 = select(bits1, bits1 >> 2u, (top & 2u) != 0u);\n\tlet bits3 = select(bits2, bits2 >> 4u, (top & 4u) != 0u);\n\tlet word = (select(bits3, bits3 >> 8u, (top & 8u) != 0u) ^ state) * 277803737u;\n\treturn (word >> 22u) ^ word;\n}\n\n// The particle's own random pick for a gradient stop, as Babylon picks one when the particle reaches it.\nfn random(seed: u32, stop: u32) -> f32 {\n\treturn f32(hash(seed ^ (stop * 0x9e3779b9u)) >> 8u) / 16777216.0;\n}\n\nfn colourPosition(i: u32) -> f32 {\n\treturn system.colorPositions[i / 4u][i % 4u];\n}\n\nfn stopColour(i: u32, seed: u32) -> vec4f {\n\treturn mix(system.color1[i], system.color2[i], random(seed, i));\n}\n\nfn velocityFactor(i: u32, seed: u32) -> f32 {\n\tlet stop = system.velocity[i];\n\treturn mix(stop.y, stop.z, random(seed, MAX_STOPS + i));\n}\n\n// _ProcessColorGradients / _ProcessColor at the particle's age. Babylon's GetCurrentGradient picks stop 0's pair\n// below the first stop, where a particle keeps the colour it was given for the next stop (stop 1's pick); the first\n// segment containing the ratio; or else the last stop.\nfn colourAt(p: Particle, age: f32, ratio: f32, seed: u32) -> vec4f {\n\tlet n = system.colorCount;\n\tvar colour: vec4f;\n\tif (n == 0u) {\n\t\tcolour = mix(p.colour, system.colorDead, ratio);\n\t} else if (age == 0.0) {\n\t\treturn stopColour(0u, seed);\n\t} else if (ratio < colourPosition(0u)) {\n\t\tcolour = stopColour(min(1u, n - 1u), seed);\n\t} else {\n\t\tcolour = stopColour(n - 1u, seed);\n\t\tfor (var i = 0u; i + 1u < n; i++) {\n\t\t\tlet a = colourPosition(i);\n\t\t\tlet b = colourPosition(i + 1u);\n\t\t\tif (ratio >= a && ratio <= b) {\n\t\t\t\tlet scale = select(0.0, (ratio - a) / (b - a), b > a);\n\t\t\t\tcolour = mix(stopColour(i, seed), stopColour(i + 1u, seed), scale);\n\t\t\t\tbreak;\n\t\t\t}\n\t\t}\n\t}\n\tcolour.a = max(colour.a, 0.0);\n\treturn colour;\n}\n\n// The integral of (alpha + beta s)(d + g s) over s0..s1: the distance travelled while the velocity factor is\n// alpha + beta s at age s and the direction d + g s.\nfn travel(alpha: f32, beta: f32, d: vec3f, g: vec3f, s0: f32, s1: f32) -> vec3f {\n\tlet ds = s1 - s0;\n\tlet ds2 = (s1 * s1 - s0 * s0) * 0.5;\n\tlet ds3 = (s1 * s1 * s1 - s0 * s0 * s0) / 3.0;\n\treturn d * (alpha * ds) + (g * alpha + d * beta) * ds2 + g * (beta * ds3);\n}\n\n// Where the particle has moved by its age: each frame Babylon moves it by its direction times the step and the\n// velocity factor, then adds gravity times the step to the direction. The factor is piecewise linear in the age,\n// picked as colourAt picks colours.\nfn displacement(d: vec3f, age: f32, life: f32, seed: u32) -> vec3f {\n\tlet g = system.gravity;\n\tlet n = system.velocityCount;\n\tif (n == 0u) {\n\t\treturn d * age + g * (0.5 * age * age);\n\t}\n\tvar total = vec3f(0.0);\n\tlet first = system.velocity[0u].x * life;\n\tlet beforeFirst = min(age, first);\n\tif (beforeFirst > 0.0) {\n\t\ttotal += travel(velocityFactor(min(1u, n - 1u), seed), 0.0, d, g, 0.0, beforeFirst);\n\t}\n\tfor (var i = 0u; i + 1u < n; i++) {\n\t\tlet a = system.velocity[i].x * life;\n\t\tlet b = system.velocity[i + 1u].x * life;\n\t\tlet lo = max(a, 0.0);\n\t\tlet hi = min(b, age);\n\t\tif (hi > lo) {\n\t\t\tlet fa = velocityFactor(i, seed);\n\t\t\tlet beta = (velocityFactor(i + 1u, seed) - fa) / (b - a);\n\t\t\ttotal += travel(fa - beta * a, beta, d, g, lo, hi);\n\t\t}\n\t}\n\tlet afterLast = max(system.velocity[n - 1u].x * life, 0.0);\n\tif (age > afterLast) {\n\t\ttotal += travel(velocityFactor(n - 1u, seed), 0.0, d, g, afterLast, age);\n\t}\n\treturn total;\n}\n\n// _ProcessRemapGradients: the colour remap's min and range at the ratio; a new particle has (0, 1, 0, 1).\nfn remapAt(age: f32, ratio: f32) -> vec4f {\n\tlet n = system.remapCount;\n\tif (n == 0u || age == 0.0) {\n\t\treturn vec4f(0.0, 1.0, 0.0, 1.0);\n\t}\n\tvar stop = system.remap[n - 1u].yz;\n\tif (ratio < system.remap[0u].x) {\n\t\tstop = system.remap[0u].yz;\n\t} else {\n\t\tfor (var i = 0u; i + 1u < n; i++) {\n\t\t\tlet a = system.remap[i];\n\t\t\tlet b = system.remap[i + 1u];\n\t\t\tif (ratio >= a.x && ratio <= b.x) {\n\t\t\t\tstop = mix(a.yz, b.yz, select(0.0, (ratio - a.x) / (b.x - a.x), b.x > a.x));\n\t\t\t\tbreak;\n\t\t\t}\n\t\t}\n\t}\n\treturn vec4f(stop.x, stop.y - stop.x, 0.0, 1.0);\n}\n\n@vertex\nfn mainVertex(@builtin(vertex_index) vertexIndex: u32, @builtin(instance_index) instanceIndex: u32) -> VertexOutput {\n\tvar out: VertexOutput;\n\t// One wrap, not %, as glParticleShader.ts picks the slot, since start < count and a draw's instances are count\n\t// (gpuParticleRing.ts)\n\tlet count = frame.count;\n\tlet unwrapped = frame.start + instanceIndex;\n\tlet p = particles[select(unwrapped, unwrapped - count, unwrapped >= count)];\n\tlet age = frame.now - p.spawn.w;\n\tlet life = p.velocity.w;\n\tif (!(age >= 0.0 && age < life)) {\n\t\t// Dead, or not yet written: outside the clip volume.\n\t\tout.position = vec4f(0.0, 0.0, 2.0, 1.0);\n\t\treturn out;\n\t}\n\tlet ratio = age / life;\n\tlet seed = p.seed;\n\tlet centre = frame.offset + p.spawn.xyz + displacement(p.velocity.xyz, age, life, seed);\n\t// ThinParticleSystem's billboard: the corner offset in view space, here along the camera's right and up.\n\tlet corner = vec2f(f32(vertexIndex & 1u), f32(vertexIndex >> 1u));\n\tlet offset = (corner - 0.5) * p.size;\n\tlet right = vec3f(scene.view[0][0], scene.view[1][0], scene.view[2][0]);\n\tlet up = vec3f(scene.view[0][1], scene.view[1][1], scene.view[2][1]);\n\tout.position = liteWorldLayer(scene.viewProjection * vec4f(centre + right * offset.x + up * offset.y, 1.0));\n\tout.uv = corner;\n\tout.colour = colourAt(p, age, ratio, seed);\n\tout.remap = remapAt(age, ratio);\n\treturn out;\n}\n\n// Babylon's particles.fragment with the default texture mask, without fog or image processing.\n@fragment\nfn mainFragment(in: VertexOutput) -> @location(0) vec4f {\n\tlet textureColour = textureSample(diffuseTexture, diffuseSampler, in.uv);\n\tvar colour = textureColour * in.colour;\n\tif (system.ramp != 0u) {\n\t\tlet index = clamp((colour.a - in.remap.x) / in.remap.y, 0.0, 1.0);\n\t\tlet rampColour = textureSample(rampTexture, rampSampler, vec2f(1.0 - index, 0.0));\n\t\tcolour = vec4f(colour.rgb * rampColour.rgb, clamp((colour.a * rampColour.a - in.remap.z) / in.remap.w, 0.0, 1.0));\n\t}\n\tif (MULTIPLY_PASS) {\n\t\tlet sourceAlpha = in.colour.a * textureColour.a;\n\t\tcolour = vec4f(colour.rgb * sourceAlpha + vec3f(1.0 - sourceAlpha), colour.a);\n\t}\n\treturn colour;\n}\n`;
+    var MQ = xV(44494);
+    class zQ {
+      constructor(VV, eV, xV, JV) {
+        this.device = VV, this.system = eV, this.frameIndex = xV, this.bindings = JV, this.ring = void 0, this.uniforms = void 0, this.uniformBits = null, this.rampTexels = (0, MQ.f)(), this.ramp = null, this.rampView = null, this.bindGroup = null, this.boundView = null, this.boundSampler = null, this.boundRamp = null, this.texture = null, this.pipelines = [], this.count = 0, this.upload = (VV, eV) => {
+          this.device.queue.writeBuffer(this.ring, VV * tQ.f * 4, this.system.ring.records, VV * tQ.f, (eV - VV) * tQ.f)
         };
         const {
-          name: SM
-        } = rM;
-        this.ring = MM.createBuffer({
-          label: `particles-${SM}`,
-          size: rM.ring.records.byteLength,
+          name: YV
+        } = eV;
+        this.ring = VV.createBuffer({
+          label: `particles-${YV}`,
+          size: eV.ring.records.byteLength,
           usage: GPUBufferUsage.STORAGE | GPUBufferUsage.COPY_DST
-        }), this.uniforms = MM.createBuffer({
-          label: `particles-uniforms-${SM}`,
-          size: 4 * en.s,
+        }), this.uniforms = VV.createBuffer({
+          label: `particles-uniforms-${YV}`,
+          size: 4 * tQ.p,
           usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST
         })
       }
-      writeUniforms(MM) {
-        const rM = (0, pn.d)(this.system, this.uniformBits, MM);
-        rM && (this.uniformBits = rM, this.device.queue.writeBuffer(this.uniforms, 0, rM))
+      writeUniforms(VV) {
+        const eV = (0, MQ.e)(this.system, this.uniformBits, VV);
+        eV && (this.uniformBits = eV, this.device.queue.writeBuffer(this.uniforms, 0, eV))
       }
       bind() {
         const {
-          system: MM
-        } = this, rM = this.texture;
-        (0, pn.i)(MM, this.rampTexels) && this.rampTexels.key.length > 0 && (this.ramp || (this.ramp = this.device.createTexture({
-          label: `particles-ramp-${MM.name}`,
-          size: [en.o, 1],
+          system: VV
+        } = this, eV = this.texture;
+        (0, MQ.k)(VV, this.rampTexels) && this.rampTexels.key.length > 0 && (this.ramp || (this.ramp = this.device.createTexture({
+          label: `particles-ramp-${VV.name}`,
+          size: [tQ.j, 1],
           format: "rgba8unorm",
           usage: GPUTextureUsage.TEXTURE_BINDING | GPUTextureUsage.COPY_DST
         }), this.rampView = this.ramp.createView()), this.device.queue.writeTexture({
           texture: this.ramp
         }, this.rampTexels.texels, {
-          bytesPerRow: 4 * en.o
-        }, [en.o, 1]));
-        const iM = this.rampTexels.key.length > 0 && this.rampView ? this.rampView : this.bindings.whiteRamp;
-        this.bindGroup && this.boundView === rM.view && this.boundSampler === rM.sampler && this.boundRamp === iM || (this.boundView = rM.view, this.boundSampler = rM.sampler, this.boundRamp = iM, this.bindGroup = this.device.createBindGroup({
-          label: `particles-${MM.name}`,
+          bytesPerRow: 4 * tQ.j
+        }, [tQ.j, 1]));
+        const xV = this.rampTexels.key.length > 0 && this.rampView ? this.rampView : this.bindings.whiteRamp;
+        this.bindGroup && this.boundView === eV.view && this.boundSampler === eV.sampler && this.boundRamp === xV || (this.boundView = eV.view, this.boundSampler = eV.sampler, this.boundRamp = xV, this.bindGroup = this.device.createBindGroup({
+          label: `particles-${VV.name}`,
           layout: this.bindings.layout,
           entries: [{
             binding: 0,
@@ -7988,49 +7988,49 @@ export const modules = {
             }
           }, {
             binding: 2,
-            resource: rM.sampler
+            resource: eV.sampler
           }, {
             binding: 3,
-            resource: rM.view
+            resource: eV.view
           }, {
             binding: 4,
             resource: this.bindings.rampSampler
           }, {
             binding: 5,
-            resource: iM
+            resource: xV
           }]
         }))
       }
       destroy() {
-        var MM;
-        this.ring.destroy(), this.uniforms.destroy(), null === (MM = this.ramp) || void 0 === MM || MM.destroy()
+        var VV;
+        this.ring.destroy(), this.uniforms.destroy(), null === (VV = this.ramp) || void 0 === VV || VV.destroy()
       }
     }
-    class sn {
-      constructor(MM, rM) {
-        this.device = MM, this.resources = rM, this.renderable = void 0, this.systems = new Map, this.draws = [], this.bindings = void 0, this.frameLayout = void 0, this.pipelineLayout = void 0, this.module = void 0, this.pipelines = new Map, this.frameData = new Float32Array(4096), this.frameBits = new Uint32Array(this.frameData.buffer), this.frameBuffer = void 0, this.frameBindGroup = void 0, this.freeFrameIndices = [], this.nextFrameIndex = 0, this.target = null, this.targetPipelines = null, this.preparedTarget = null, this.warnOnce = (0, Wr.b)(), this.build(), this.renderable = {
+    class GQ {
+      constructor(VV, eV) {
+        this.device = VV, this.resources = eV, this.renderable = void 0, this.systems = new Map, this.draws = [], this.bindings = void 0, this.frameLayout = void 0, this.pipelineLayout = void 0, this.module = void 0, this.pipelines = new Map, this.frameData = new Float32Array(4096), this.frameBits = new Uint32Array(this.frameData.buffer), this.frameBuffer = void 0, this.frameBindGroup = void 0, this.freeFrameIndices = [], this.nextFrameIndex = 0, this.target = null, this.targetPipelines = null, this.preparedTarget = null, this.warnOnce = (0, Re.b)(), this.build(), this.renderable = {
           order: 251,
           isTransparent: !0,
           _worldCenter: [0, 0, 0],
-          bind: (MM, rM) => (this.bindTarget(rM), {
+          bind: (VV, eV) => (this.bindTarget(eV), {
             renderable: this.renderable,
-            pipeline: ur(this.device, rM),
-            draw: MM => rM === this.preparedTarget ? this.draw(MM) : 0
+            pipeline: ze(this.device, eV),
+            draw: VV => eV === this.preparedTarget ? this.draw(VV) : 0
           })
         }
       }
-      rebind(MM) {
-        this.device = MM, this.build(), this.pipelines.clear(), this.target = null, this.targetPipelines = null, this.preparedTarget = null, this.draws.length = 0;
-        for (const [rM, iM] of this.systems) {
-          const OM = new Wn(MM, rM, iM.frameIndex, this.bindings),
-            SM = rM.ring.drawCount();
-          SM > 0 && OM.upload(0, SM), this.systems.set(rM, OM)
+      rebind(VV) {
+        this.device = VV, this.build(), this.pipelines.clear(), this.target = null, this.targetPipelines = null, this.preparedTarget = null, this.draws.length = 0;
+        for (const [eV, xV] of this.systems) {
+          const JV = new zQ(VV, eV, xV.frameIndex, this.bindings),
+            YV = eV.ring.drawCount();
+          YV > 0 && JV.upload(0, YV), this.systems.set(eV, JV)
         }
       }
       build() {
         const {
-          device: MM
-        } = this, rM = MM.createBindGroupLayout({
+          device: VV
+        } = this, eV = VV.createBindGroupLayout({
           label: "particles-system",
           entries: [{
             binding: 0,
@@ -8070,7 +8070,7 @@ export const modules = {
             }
           }]
         });
-        this.frameLayout = MM.createBindGroupLayout({
+        this.frameLayout = VV.createBindGroupLayout({
           label: "particles-frame",
           entries: [{
             binding: 0,
@@ -8080,152 +8080,152 @@ export const modules = {
               hasDynamicOffset: !0
             }
           }]
-        }), this.pipelineLayout = MM.createPipelineLayout({
-          bindGroupLayouts: [er(MM), rM, this.frameLayout]
-        }), this.module = MM.createShaderModule({
+        }), this.pipelineLayout = VV.createPipelineLayout({
+          bindGroupLayouts: [Pe(VV), eV, this.frameLayout]
+        }), this.module = VV.createShaderModule({
           label: "particles",
-          code: Rn
+          code: XQ
         });
-        const iM = MM.createTexture({
+        const xV = VV.createTexture({
           label: "particles-no-ramp",
           size: [1, 1],
           format: "rgba8unorm",
           usage: GPUTextureUsage.TEXTURE_BINDING | GPUTextureUsage.COPY_DST
         });
-        MM.queue.writeTexture({
-          texture: iM
+        VV.queue.writeTexture({
+          texture: xV
         }, new Uint8Array([255, 255, 255, 255]), {
           bytesPerRow: 4
         }, [1, 1]), this.bindings = {
-          layout: rM,
-          rampSampler: MM.createSampler({
+          layout: eV,
+          rampSampler: VV.createSampler({
             label: "particles-ramp",
             magFilter: "nearest",
             minFilter: "nearest",
             addressModeU: "repeat",
             addressModeV: "repeat"
           }),
-          whiteRamp: iM.createView()
+          whiteRamp: xV.createView()
         }, this.frameBuffer = this.createFrameBuffer(), this.frameBindGroup = this.createFrameBindGroup()
       }
-      get LSM() {
+      get zUV() {
         return this.systems.size
       }
       reset() {
-        for (const MM of this.systems.keys()) MM.reset()
+        for (const VV of this.systems.keys()) VV.reset()
       }
       describePendingWork() {
-        return (0, Cn.f)(this.systems.keys(), "Lite")
+        return (0, qQ.g)(this.systems.keys(), "Lite")
       }
-      uZ(MM, rM) {
-        const iM = new Cn.b(MM, rM, this);
-        return this.systems.set(iM, new Wn(this.device, iM, this.allocateFrameIndex(), this.bindings)), iM
+      fC(VV, eV) {
+        const xV = new qQ.d(VV, eV, this);
+        return this.systems.set(xV, new zQ(this.device, xV, this.allocateFrameIndex(), this.bindings)), xV
       }
-      rMM(MM, rM) {
-        for (const iM of this.systems.keys()) iM.rMM(MM, rM)
+      teV(VV, eV) {
+        for (const xV of this.systems.keys()) xV.teV(VV, eV)
       }
-      canDraw(MM) {
-        const rM = this.systems.get(MM),
-          iM = MM.texture ? this.resources.boundTexture(MM.texture) : null;
-        if (!rM || !iM || !this.targetPipelines) return !1;
-        if (rM.texture = iM, rM.pipelines.length = 0, !Sr(MM.blendMode)) return this.warnOnce(`blend:${MM.blendMode}`, `particle blend mode ${MM.blendMode} is not drawn (${MM.name})`), !0;
-        const OM = (0, BM.k)(MM.blendMode);
-        for (const SM of OM) {
-          const MM = this.pipelineFor(SM);
-          if (!1 === MM) return rM.pipelines.length = 0, !0;
-          MM && rM.pipelines.push(MM)
+      canDraw(VV) {
+        const eV = this.systems.get(VV),
+          xV = VV.texture ? this.resources.boundTexture(VV.texture) : null;
+        if (!eV || !xV || !this.targetPipelines) return !1;
+        if (eV.texture = xV, eV.pipelines.length = 0, !Ye(VV.blendMode)) return this.warnOnce(`blend:${VV.blendMode}`, `particle blend mode ${VV.blendMode} is not drawn (${VV.name})`), !0;
+        const JV = (0, KV.l)(VV.blendMode);
+        for (const YV of JV) {
+          const VV = this.pipelineFor(YV);
+          if (!1 === VV) return eV.pipelines.length = 0, !0;
+          VV && eV.pipelines.push(VV)
         }
-        return rM.pipelines.length === OM.length
+        return eV.pipelines.length === JV.length
       }
-      disposeStopped(MM) {
-        MM.dispose()
+      disposeStopped(VV) {
+        VV.dispose()
       }
-      remove(MM) {
-        const rM = this.systems.get(MM);
-        rM && (this.systems.delete(MM), rM.destroy(), this.freeFrameIndices.push(rM.frameIndex))
+      remove(VV) {
+        const eV = this.systems.get(VV);
+        eV && (this.systems.delete(VV), eV.destroy(), this.freeFrameIndices.push(eV.frameIndex))
       }
-      prepare(MM) {
-        const rM = MM.animationRatio || 1;
-        Rr(this.renderable._worldCenter, MM, wr), this.preparedTarget = this.target, this.draws.length = 0;
-        let iM = 0;
-        for (const OM of this.systems.values()) {
-          const MM = OM.system;
-          if (!MM.animateIfActive(rM)) continue;
-          if (MM.ring.takeUploads(OM.upload), !MM.hasLiveParticles() || 0 === OM.pipelines.length) continue;
-          OM.writeUniforms(this.warnOnce), OM.bind();
-          const SM = 64 * OM.frameIndex;
-          OM.count = MM.ring.drawCount(), un(MM, this.frameData, this.frameBits, SM), iM = Math.max(iM, SM + 64), this.draws.push(OM)
+      prepare(VV) {
+        const eV = VV.animationRatio || 1;
+        Ge(this.renderable._worldCenter, VV, Ne), this.preparedTarget = this.target, this.draws.length = 0;
+        let xV = 0;
+        for (const JV of this.systems.values()) {
+          const VV = JV.system;
+          if (!VV.animateIfActive(eV)) continue;
+          if (VV.ring.takeUploads(JV.upload), !VV.hasLiveParticles() || 0 === JV.pipelines.length) continue;
+          JV.writeUniforms(this.warnOnce), JV.bind();
+          const YV = 64 * JV.frameIndex;
+          JV.count = VV.ring.drawCount(), NQ(VV, this.frameData, this.frameBits, YV), xV = Math.max(xV, YV + 64), this.draws.push(JV)
         }
-        iM > 0 && this.device.queue.writeBuffer(this.frameBuffer, 0, this.frameData, 0, iM)
+        xV > 0 && this.device.queue.writeBuffer(this.frameBuffer, 0, this.frameData, 0, xV)
       }
-      draw(MM) {
-        let rM = 0,
-          iM = null;
-        for (const OM of this.draws) {
-          MM.setBindGroup(1, OM.bindGroup), MM.setBindGroup(2, this.frameBindGroup, [256 * OM.frameIndex]);
-          for (const SM of OM.pipelines) SM !== iM && (MM.setPipeline(SM), iM = SM), MM.draw(4, OM.count), rM++
+      draw(VV) {
+        let eV = 0,
+          xV = null;
+        for (const JV of this.draws) {
+          VV.setBindGroup(1, JV.bindGroup), VV.setBindGroup(2, this.frameBindGroup, [256 * JV.frameIndex]);
+          for (const YV of JV.pipelines) YV !== xV && (VV.setPipeline(YV), xV = YV), VV.draw(4, JV.count), eV++
         }
-        return rM
+        return eV
       }
-      bindTarget(MM) {
-        this.target = MM;
-        const rM = `${MM._colorFormat}|${MM._depthStencilFormat}|${MM._depthCompare}|${MM._sampleCount}`;
-        let iM = this.pipelines.get(rM);
-        iM || (iM = new Map, this.pipelines.set(rM, iM)), this.targetPipelines = iM
+      bindTarget(VV) {
+        this.target = VV;
+        const eV = `${VV._colorFormat}|${VV._depthStencilFormat}|${VV._depthCompare}|${VV._sampleCount}`;
+        let xV = this.pipelines.get(eV);
+        xV || (xV = new Map, this.pipelines.set(eV, xV)), this.targetPipelines = xV
       }
-      pipelineFor(MM) {
-        var rM;
-        const iM = this.targetPipelines,
-          OM = iM.get(MM);
-        if (void 0 !== OM) return OM;
-        iM.set(MM, null);
-        const SM = this.target,
-          jM = MM === BM.e,
-          aM = null !== (rM = SM._depthCompare) && void 0 !== rM ? rM : br,
+      pipelineFor(VV) {
+        var eV;
+        const xV = this.targetPipelines,
+          JV = xV.get(VV);
+        if (void 0 !== JV) return JV;
+        xV.set(VV, null);
+        const YV = this.target,
+          UV = VV === KV.e,
+          yV = null !== (eV = YV._depthCompare) && void 0 !== eV ? eV : Ae,
           {
-            device: PM
+            device: pV
           } = this;
-        return PM.createRenderPipelineAsync({
-          label: `particles-${MM}`,
+        return pV.createRenderPipelineAsync({
+          label: `particles-${VV}`,
           layout: this.pipelineLayout,
           vertex: {
             module: this.module,
             entryPoint: "mainVertex"
           },
-          fragment: lr({
+          fragment: je({
             module: this.module,
             entryPoint: "mainFragment",
             constants: {
-              MULTIPLY_PASS: jM ? 1 : 0
+              MULTIPLY_PASS: UV ? 1 : 0
             }
-          }, SM, jr((0, BM.i)(MM))),
+          }, YV, Ue((0, KV.i)(VV))),
           primitive: {
             topology: "triangle-strip",
             cullMode: "none"
           },
-          depthStencil: SM._depthStencilFormat ? {
-            format: SM._depthStencilFormat,
-            depthCompare: aM,
+          depthStencil: YV._depthStencilFormat ? {
+            format: YV._depthStencilFormat,
+            depthCompare: yV,
             depthWriteEnabled: !1
           } : void 0,
           multisample: {
-            count: SM._sampleCount
+            count: YV._sampleCount
           }
-        }).then((rM => {
-          iM.set(MM, rM)
-        }), (rM => {
-          iM.set(MM, !1), console.error("Lite particle pipeline failed", rM), zr(PM, "particles", `blend-${MM}`, rM)
+        }).then((eV => {
+          xV.set(VV, eV)
+        }), (eV => {
+          xV.set(VV, !1), console.error("Lite particle pipeline failed", eV), we(pV, "particles", `blend-${VV}`, eV)
         })), null
       }
       allocateFrameIndex() {
-        const MM = this.freeFrameIndices.pop();
-        if (void 0 !== MM) return MM;
-        const rM = this.nextFrameIndex++;
-        if (64 * (rM + 1) > this.frameData.length) {
-          const MM = new Float32Array(2 * this.frameData.length);
-          MM.set(this.frameData), this.frameData = MM, this.frameBits = new Uint32Array(MM.buffer), this.frameBuffer.destroy(), this.frameBuffer = this.createFrameBuffer(), this.frameBindGroup = this.createFrameBindGroup()
+        const VV = this.freeFrameIndices.pop();
+        if (void 0 !== VV) return VV;
+        const eV = this.nextFrameIndex++;
+        if (64 * (eV + 1) > this.frameData.length) {
+          const VV = new Float32Array(2 * this.frameData.length);
+          VV.set(this.frameData), this.frameData = VV, this.frameBits = new Uint32Array(VV.buffer), this.frameBuffer.destroy(), this.frameBuffer = this.createFrameBuffer(), this.frameBindGroup = this.createFrameBindGroup()
         }
-        return rM
+        return eV
       }
       createFrameBuffer() {
         return this.device.createBuffer({
@@ -8248,15 +8248,15 @@ export const modules = {
         })
       }
     }
-    class Dn {
-      constructor(MM, rM, iM, OM, SM) {
-        this.lite = MM, this.canvas = rM, this.info = iM, this.resources = SM, this.LOM = !1, this.needPOTTextures = !1, this.I6 = !0, this.renderWidth = void 0, this.renderHeight = void 0, this.performanceMonitor = {
+    class WQ {
+      constructor(VV, eV, xV, JV, YV) {
+        this.lite = VV, this.canvas = eV, this.info = xV, this.resources = YV, this.zYV = !1, this.needPOTTextures = !1, this.AVV = !0, this.renderWidth = void 0, this.renderHeight = void 0, this.performanceMonitor = {
           reset: () => {
             this.lastFrameTime = null
           }
-        }, this.caps = void 0, this.deltaTime = 0, this.lastFrameTime = null, this.renderWidth = rM.width, this.renderHeight = rM.height, this.caps = {
-          maxTextureSize: OM.maxTextureDimension2D,
-          texture2DArrayMaxLayerCount: OM.maxTextureArrayLayers
+        }, this.caps = void 0, this.deltaTime = 0, this.lastFrameTime = null, this.renderWidth = eV.width, this.renderHeight = eV.height, this.caps = {
+          maxTextureSize: JV.maxTextureDimension2D,
+          texture2DArrayMaxLayerCount: JV.maxTextureArrayLayers
         }
       }
       getCaps() {
@@ -8265,8 +8265,8 @@ export const modules = {
       detach() {
         this.lite = null
       }
-      rebind(MM) {
-        this.lite = MM, (0, NM.p)(MM, this.renderWidth, this.renderHeight)
+      rebind(VV) {
+        this.lite = VV, (0, hV.m)(VV, this.renderWidth, this.renderHeight)
       }
       getRenderWidth() {
         return this.renderWidth
@@ -8277,26 +8277,26 @@ export const modules = {
       getHardwareScalingLevel() {
         return 1
       }
-      setSize(MM, rM) {
-        if (this.renderWidth === MM && this.renderHeight === rM) return !1;
-        const iM = this.renderWidth,
-          OM = this.renderHeight;
-        this.renderWidth = MM, this.renderHeight = rM;
-        const SM = this.lite;
-        if (null === SM) return !0;
+      setSize(VV, eV) {
+        if (this.renderWidth === VV && this.renderHeight === eV) return !1;
+        const xV = this.renderWidth,
+          JV = this.renderHeight;
+        this.renderWidth = VV, this.renderHeight = eV;
+        const YV = this.lite;
+        if (null === YV) return !0;
         try {
-          (0, NM.p)(SM, MM, rM)
-        } catch (jM) {
-          if (jM instanceof DOMException && "InvalidStateError" === jM.name) {
-            this.renderWidth = iM, this.renderHeight = OM;
+          (0, hV.m)(YV, VV, eV)
+        } catch (UV) {
+          if (UV instanceof DOMException && "InvalidStateError" === UV.name) {
+            this.renderWidth = xV, this.renderHeight = JV;
             try {
-              (0, NM.p)(SM, iM, OM)
+              (0, hV.m)(YV, xV, JV)
             } catch {
-              this.canvas.width = iM, this.canvas.height = OM
+              this.canvas.width = xV, this.canvas.height = JV
             }
-            return console.warn("WebGPU could not allocate render targets for resize", MM, rM, jM.message), !1
+            return console.warn("WebGPU could not allocate render targets for resize", VV, eV, UV.message), !1
           }
-          throw jM
+          throw UV
         }
         return !0
       }
@@ -8307,52 +8307,52 @@ export const modules = {
       getInfo() {
         return this.info
       }
-      WU() {
-        const MM = performance.now();
-        this.deltaTime = null === this.lastFrameTime ? 0 : MM - this.lastFrameTime, this.lastFrameTime = MM
+      pT() {
+        const VV = performance.now();
+        this.deltaTime = null === this.lastFrameTime ? 0 : VV - this.lastFrameTime, this.lastFrameTime = VV
       }
       getDeltaTime() {
         return this.deltaTime
       }
-      createCanvas(MM, rM) {
-        const iM = document.createElement("canvas");
-        return iM.width = MM, iM.height = rM, iM
+      createCanvas(VV, eV) {
+        const xV = document.createElement("canvas");
+        return xV.width = VV, xV.height = eV, xV
       }
-      o9(MM, rM) {
-        var iM;
-        return null !== (iM = this.resources.o9.get(MM)) && void 0 !== iM ? iM : new mr(this.resources, MM, rM)
+      MVV(VV, eV) {
+        var xV;
+        return null !== (xV = this.resources.MVV.get(VV)) && void 0 !== xV ? xV : new ve(this.resources, VV, eV)
       }
-      atlasArrays(MM) {
-        return this.resources.atlasArrays(MM)
+      atlasArrays(VV) {
+        return this.resources.atlasArrays(VV)
       }
     }
-    class kn {
+    class RQ {
       constructor() {
         this.fov = .8, this.nearPlane = 1, this.farPlane = 1e3, this.children = [], this.worldMatrix = new Float32Array(16), this.worldMatrixVersion = 0, this._viewCache = new Float32Array(16), this._projCache = new Float32Array(16), this._vpCache = new Float32Array(16)
       }
-      copyFromView(MM) {
-        this.fov = MM.fov, this.nearPlane = MM.near, this.farPlane = MM.far;
-        const rM = MM.worldMatrix;
-        for (let iM = 0; iM < 16; iM++)
-          if (this.worldMatrix[iM] !== rM[iM]) return this.worldMatrix.set(rM), void this.worldMatrixVersion++
+      copyFromView(VV) {
+        this.fov = VV.fov, this.nearPlane = VV.near, this.farPlane = VV.far;
+        const eV = VV.worldMatrix;
+        for (let xV = 0; xV < 16; xV++)
+          if (this.worldMatrix[xV] !== eV[xV]) return this.worldMatrix.set(eV), void this.worldMatrixVersion++
       }
     }
-    class Zn {
-      constructor(MM, rM, iM, OM) {
-        this.canvas = rM, this.options = iM, this.XrM = void 0, this.backendName = "WebGPU (Lite)", this.n_ = void 0, this.modelMeshes = void 0, this.particles = void 0, this.resources = void 0, this.camera = new kn, this.lastFrameTime = 0, this.engine = void 0, this.YJ = void 0, this.sceneTask = void 0, this.device = void 0, this.liteTerrain = void 0, this.meshes = void 0, this.sunShadow = void 0, this.refusals = void 0, this.halted = !1, this.CL = null, this.firstTerrain = null, this.trialFrames = 0, this.install(MM);
+    class gQ {
+      constructor(VV, eV, xV, JV) {
+        this.canvas = eV, this.options = xV, this.ZJV = void 0, this.backendName = "WebGPU (Lite)", this.uVV = void 0, this.modelMeshes = void 0, this.particles = void 0, this.resources = void 0, this.camera = new RQ, this.lastFrameTime = 0, this.engine = void 0, this.yE = void 0, this.sceneTask = void 0, this.device = void 0, this.liteTerrain = void 0, this.meshes = void 0, this.sunShadow = void 0, this.refusals = void 0, this.halted = !1, this.gZ = null, this.firstTerrain = null, this.trialFrames = 0, this.install(VV);
         const {
-          resources: SM,
-          meshes: jM
-        } = MM;
-        this.resources = SM, this.particles = MM.particles, this.XrM = new Dn(MM.engine, rM, OM, MM.device.limits, SM), (0, gM.B)({
-          sQ: MM => {
-            WM(MM) && SM.textureSlot(MM)
+          resources: YV,
+          meshes: UV
+        } = VV;
+        this.resources = YV, this.particles = VV.particles, this.ZJV = new WQ(VV.engine, eV, JV, VV.device.limits, YV), (0, MV.E)({
+          hn: VV => {
+            RV(VV) && YV.textureSlot(VV)
           },
-          loaded: MM => WM(MM) ? SM.textureLoaded(MM) : null,
-          canvasUpdated: (MM, rM, iM) => {
-            WM(MM) && SM.canvasUpdated(MM, rM, iM)
+          loaded: VV => RV(VV) ? YV.textureLoaded(VV) : null,
+          canvasUpdated: (VV, eV, xV) => {
+            RV(VV) && YV.canvasUpdated(VV, eV, xV)
           }
-        }), this.n_ = jM.n_, this.modelMeshes = jM.modelMeshes
+        }), this.uVV = UV.uVV, this.modelMeshes = UV.modelMeshes
       }
       get gpuDevice() {
         return this.device
@@ -8363,85 +8363,85 @@ export const modules = {
       get terrain() {
         return this.liteTerrain
       }
-      install(MM) {
-        this.engine = MM.engine, this.YJ = MM.YJ, this.sceneTask = MM.sceneTask, this.device = MM.device, this.liteTerrain = MM.terrain, this.meshes = MM.meshes, this.sunShadow = MM.sunShadow;
-        const rM = new vM(MM.device.lost);
-        this.refusals = rM, rM.deviceLost.then((() => {
-          var rM;
-          rM = MM.device, nr.add(rM)
-        })), MM.YJ.camera = this.camera
+      install(VV) {
+        this.engine = VV.engine, this.yE = VV.yE, this.sceneTask = VV.sceneTask, this.device = VV.device, this.liteTerrain = VV.terrain, this.meshes = VV.meshes, this.sunShadow = VV.sunShadow;
+        const eV = new fV(VV.device.lost);
+        this.refusals = eV, eV.deviceLost.then((() => {
+          var eV;
+          eV = VV.device, Qe.add(eV)
+        })), VV.yE.camera = this.camera
       }
       async rebuild() {
-        var MM, rM, iM, OM, SM;
-        const jM = await An();
-        this.halted = !0, this.liteTerrain.retire(), null === (MM = this.sunShadow) || void 0 === MM || MM.dispose(), this.XrM.detach();
+        var VV, eV, xV, JV, YV;
+        const UV = await aQ();
+        this.halted = !0, this.liteTerrain.retire(), null === (VV = this.sunShadow) || void 0 === VV || VV.dispose(), this.ZJV.detach();
         try {
-          (0, AM.c)(this.engine)
-        } catch (zM) {
-          console.warn("Lite: disposing the lost device's engine threw", zM)
+          (0, lV.d)(this.engine)
+        } catch (wV) {
+          console.warn("Lite: disposing the lost device's engine threw", wV)
         }
-        const aM = {
-            width: this.XrM.renderWidth,
-            height: this.XrM.renderHeight
+        const yV = {
+            width: this.ZJV.renderWidth,
+            height: this.ZJV.renderHeight
           },
-          PM = await xn(this.canvas, this.options, aM, jM),
-          nM = Ur(PM),
-          QM = vn(nM);
+          pV = await oQ(this.canvas, this.options, yV, UV),
+          QV = te(pV),
+          nV = cQ(QV);
         try {
-          this.resources.rebind(PM, nM), this.particles.rebind(nM), this.n_.dropSteady();
-          const MM = {
+          this.resources.rebind(pV, QV), this.particles.rebind(QV), this.uVV.dropSteady();
+          const VV = {
               resources: this.resources,
               particles: this.particles,
-              n_: this.n_,
+              uVV: this.uVV,
               modelMeshes: this.modelMeshes
             },
-            rM = await Fn(PM, nM, this.options, MM),
-            iM = QM();
-          if (null !== iM) throw new Error(`WebGPU device lost while Lite was rebuilding (${iM.reason}): ${iM.message}`);
+            eV = await hQ(pV, QV, this.options, VV),
+            xV = nV();
+          if (null !== xV) throw new Error(`WebGPU device lost while Lite was rebuilding (${xV.reason}): ${xV.message}`);
           const {
-            r: OM,
-            g: SM,
-            b: jM
-          } = this.YJ.clearColor;
-          this.install(rM), this.setClearColour(OM, SM, jM), this.XrM.rebind(PM)
-        } catch (zM) {
-          throw nM.destroy(), zM
+            r: JV,
+            g: YV,
+            b: UV
+          } = this.yE.clearColor;
+          this.install(eV), this.setClearColour(JV, YV, UV), this.ZJV.rebind(pV)
+        } catch (wV) {
+          throw QV.destroy(), wV
         }
-        return this.lastFrameTime = 0, this.halted = !1, this.trialFrames = 30, null === (rM = this.CL) || void 0 === rM || rM.resize(), null === (iM = this.CL) || void 0 === iM || null === (OM = iM.Cm) || void 0 === OM || null === (SM = OM.kU) || void 0 === SM || SM.remeshForRendererRebuild(), {
+        return this.lastFrameTime = 0, this.halted = !1, this.trialFrames = 30, null === (eV = this.gZ) || void 0 === eV || eV.resize(), null === (xV = this.gZ) || void 0 === xV || null === (JV = xV.iv) || void 0 === JV || null === (YV = JV.wT) || void 0 === YV || YV.remeshForRendererRebuild(), {
           terrainDrawn: this.whenTerrainDrawn()
         }
       }
       whenTerrainDrawn() {
-        return new Promise(((MM, rM) => {
+        return new Promise(((VV, eV) => {
           this.firstTerrain = {
-            drawn: MM,
-            failed: rM
+            drawn: VV,
+            failed: eV
           }
         }))
       }
       get castsEntitySunShadows() {
-        var MM, rM;
-        return null !== (MM = null === (rM = this.sunShadow) || void 0 === rM ? void 0 : rM.tracesEntities) && void 0 !== MM && MM
+        var VV, eV;
+        return null !== (VV = null === (eV = this.sunShadow) || void 0 === eV ? void 0 : eV.tracesEntities) && void 0 !== VV && VV
       }
       get sampleCount() {
         return this.engine.msaaSamples
       }
-      attach(MM) {
-        this.CL = MM, this.modelMeshes.attach(MM.model, MM.sceneMirror);
-        const rM = MM.YJ;
-        this.setClearColour(rM.clearColor.r, rM.clearColor.g, rM.clearColor.b), rM.draw = () => {
-          this.drawFrame(MM, rM)
+      attach(VV) {
+        this.gZ = VV, this.modelMeshes.attach(VV.model, VV.sceneMirror);
+        const eV = VV.yE;
+        this.setClearColour(eV.clearColor.r, eV.clearColor.g, eV.clearColor.b), eV.draw = () => {
+          this.drawFrame(VV, eV)
         }
       }
-      get lL() {
+      get zZ() {
         return !this.refusals.lost && !this.halted
       }
-      render(MM) {
-        if (this.lL) {
+      render(VV) {
+        if (this.zZ) {
           try {
-            this.XrM.WU(), MM.YJ.render()
-          } catch (rM) {
-            throw this.refusals.frameFailed(rM), this.firstTerrain && this.trialFrames > 0 && (this.halted = !0, this.firstTerrain.failed(rM), this.firstTerrain = null), rM
+            this.ZJV.pT(), VV.yE.render()
+          } catch (eV) {
+            throw this.refusals.frameFailed(eV), this.firstTerrain && this.trialFrames > 0 && (this.halted = !0, this.firstTerrain.failed(eV), this.firstTerrain = null), eV
           }
           this.refusals.frameDrawn(), this.trialFrames > 0 && this.trialFrames--
         }
@@ -8450,175 +8450,175 @@ export const modules = {
         return this.engine.drawCallCount
       }
       describePendingWork() {
-        var MM, rM, iM, OM;
-        const SM = [...this.particles.describePendingWork(), ...null !== (MM = null === (rM = this.sunShadow) || void 0 === rM ? void 0 : rM.describePendingWork()) && void 0 !== MM ? MM : []],
-          jM = this.meshes.pipelinesCompiling + this.terrain.pipelinesCompiling + (null !== (iM = this.terrain.sceneDepth) && void 0 !== iM && iM.compiling ? 1 : 0) + (null !== (OM = this.terrain.shadowMask) && void 0 !== OM && OM.compiling ? 1 : 0);
-        jM > 0 && SM.push(`${jM} Lite pipelines compiling`);
-        const aM = this.terrain.buffersAwaitingVerdict;
-        aM > 0 && SM.push(`${aM} Lite terrain buffers awaiting their out-of-memory verdict`);
-        const PM = this.resources.texturesLoading;
-        return PM > 0 && SM.push(`${PM} Lite textures loading`), SM
+        var VV, eV, xV, JV;
+        const YV = [...this.particles.describePendingWork(), ...null !== (VV = null === (eV = this.sunShadow) || void 0 === eV ? void 0 : eV.describePendingWork()) && void 0 !== VV ? VV : []],
+          UV = this.meshes.pipelinesCompiling + this.terrain.pipelinesCompiling + (null !== (xV = this.terrain.sceneDepth) && void 0 !== xV && xV.compiling ? 1 : 0) + (null !== (JV = this.terrain.shadowMask) && void 0 !== JV && JV.compiling ? 1 : 0);
+        UV > 0 && YV.push(`${UV} Lite pipelines compiling`);
+        const yV = this.terrain.buffersAwaitingVerdict;
+        yV > 0 && YV.push(`${yV} Lite terrain buffers awaiting their out-of-memory verdict`);
+        const pV = this.resources.texturesLoading;
+        return pV > 0 && YV.push(`${pV} Lite textures loading`), YV
       }
-      prepareTexture(MM) {
-        return null !== this.resources.boundTexture(MM) || this.resources.textureFailed(MM)
+      prepareTexture(VV) {
+        return null !== this.resources.boundTexture(VV) || this.resources.textureFailed(VV)
       }
-      drawFrame(MM, rM) {
-        var iM, OM, SM, jM, aM, PM;
-        const nM = lP(MM);
-        this.camera.copyFromView(nM), this.setClearColour(nM.clearColour[0], nM.clearColour[1], nM.clearColour[2]), null === (iM = this.sunShadow) || void 0 === iM || iM.prepare(MM.Cm, nM.eye, null !== (OM = MM.Cm.nh) && void 0 !== OM ? OM : null), this.terrain.prepare(MM, nM), null === (SM = this.terrain.sceneDepth) || void 0 === SM || SM.setPlanes(nM.near, nM.far), null === (jM = this.terrain.shadowMask) || void 0 === jM || jM.prepare(nM), OP(this.sceneTask), this.meshes.prepare(rM, nM, MM.model.earthSky, null !== (aM = MM.Cm.nh) && void 0 !== aM ? aM : null), this.particles.prepare(nM);
-        const QM = performance.now();
-        this.resources.flushUploads(), null === (PM = this.sunShadow) || void 0 === PM || PM.traceEntities(this.meshes);
+      drawFrame(VV, eV) {
+        var xV, JV, YV, UV, yV, pV;
+        const QV = Ep(VV);
+        this.camera.copyFromView(QV), this.setClearColour(QV.clearColour[0], QV.clearColour[1], QV.clearColour[2]), null === (xV = this.sunShadow) || void 0 === xV || xV.prepare(VV.iv, QV.eye, null !== (JV = VV.iv.Xk) && void 0 !== JV ? JV : null), this.terrain.prepare(VV, QV), null === (YV = this.terrain.sceneDepth) || void 0 === YV || YV.setPlanes(QV.near, QV.far), null === (UV = this.terrain.shadowMask) || void 0 === UV || UV.prepare(QV), ep(this.sceneTask), this.meshes.prepare(eV, QV, VV.model.earthSky, null !== (yV = VV.iv.Xk) && void 0 !== yV ? yV : null), this.particles.prepare(QV);
+        const nV = performance.now();
+        this.resources.flushUploads(), null === (pV = this.sunShadow) || void 0 === pV || pV.traceEntities(this.meshes);
         try {
-          (0, NM.n)(this.engine, this.lastFrameTime > 0 ? QM - this.lastFrameTime : 0)
+          (0, hV.l)(this.engine, this.lastFrameTime > 0 ? nV - this.lastFrameTime : 0)
         } finally {
           this.resources.endUploadFrame()
         }
-        this.lastFrameTime = QM, this.firstTerrain && this.liteTerrain.drawStats().drawn > 0 && (this.firstTerrain.drawn(QM), this.firstTerrain = null)
+        this.lastFrameTime = nV, this.firstTerrain && this.liteTerrain.drawStats().drawn > 0 && (this.firstTerrain.drawn(nV), this.firstTerrain = null)
       }
-      setClearColour(MM, rM, iM) {
-        const OM = this.YJ.clearColor;
-        OM.r = MM, OM.g = rM, OM.b = iM, OM.a = 1
+      setClearColour(VV, eV, xV) {
+        const JV = this.yE.clearColor;
+        JV.r = VV, JV.g = eV, JV.b = xV, JV.a = 1
       }
     }
 
-    function fn(MM) {
-      const rM = {};
-      for (const iM in MM.limits) {
-        const OM = MM.limits[iM];
-        "number" === typeof OM && (rM[iM] = OM)
+    function DQ(VV) {
+      const eV = {};
+      for (const xV in VV.limits) {
+        const JV = VV.limits[xV];
+        "number" === typeof JV && (eV[xV] = JV)
       }
-      return rM
+      return eV
     }
-    const Yn = "WebGPU device lost while Lite was starting";
-    async function Nn(MM, rM) {
-      const iM = await An(),
-        OM = iM.info,
-        SM = {
-          vendor: (null === OM || void 0 === OM ? void 0 : OM.vendor) || "unknown vendor",
-          renderer: (null === OM || void 0 === OM ? void 0 : OM.architecture) || "unknown renderer",
-          version: (null === OM || void 0 === OM ? void 0 : OM.description) || "unknown version"
+    const iQ = "WebGPU device lost while Lite was starting";
+    async function CQ(VV, eV) {
+      const xV = await aQ(),
+        JV = xV.info,
+        YV = {
+          vendor: (null === JV || void 0 === JV ? void 0 : JV.vendor) || "unknown vendor",
+          renderer: (null === JV || void 0 === JV ? void 0 : JV.architecture) || "unknown renderer",
+          version: (null === JV || void 0 === JV ? void 0 : JV.description) || "unknown version"
         };
-      MM.style.background = "black";
-      const jM = await xn(MM, rM, rM.bufferSize, iM),
-        aM = Ur(jM),
-        PM = vn(aM);
+      VV.style.background = "black";
+      const UV = await oQ(VV, eV, eV.bufferSize, xV),
+        yV = te(UV),
+        pV = cQ(yV);
       try {
-        const iM = new Zn(await Fn(jM, aM, rM, null), MM, rM, SM),
-          OM = PM();
-        if (null !== OM) {
+        const xV = new gQ(await hQ(UV, yV, eV, null), VV, eV, YV),
+          JV = pV();
+        if (null !== JV) {
           const {
-            reason: MM,
-            message: rM
-          } = OM;
-          throw Object.assign(new Error(`${Yn} (${MM}): ${rM}`), {
-            fallbackReason: Yn
+            reason: VV,
+            message: eV
+          } = JV;
+          throw Object.assign(new Error(`${iQ} (${VV}): ${eV}`), {
+            fallbackReason: iQ
           })
         }
-        return iM
-      } catch (nM) {
-        throw aM.destroy(), null === PM() ? nM : (0, iP.g)(nM, "device")
+        return xV
+      } catch (QV) {
+        throw yV.destroy(), null === pV() ? QV : (0, Vp.d)(QV, "device")
       }
     }
-    async function An() {
-      const MM = await navigator.gpu.requestAdapter({
+    async function aQ() {
+      const VV = await navigator.gpu.requestAdapter({
         powerPreference: "high-performance"
       });
-      if (!MM) throw (0, iP.g)(new Error("No WebGPU adapter"), "no_adapter");
-      return MM
+      if (!VV) throw (0, Vp.d)(new Error("No WebGPU adapter"), "no_adapter");
+      return VV
     }
-    async function xn(MM, rM, iM, OM) {
-      let SM;
+    async function oQ(VV, eV, xV, JV) {
+      let YV;
       try {
-        SM = await (0, NM.f)(MM, {
-          msaaSamples: rM.biM ? 4 : 1,
-          requiredLimits: fn(OM),
+        YV = await (0, hV.e)(VV, {
+          msaaSamples: eV.fJV ? 4 : 1,
+          requiredLimits: DQ(JV),
           alphaMode: "premultiplied"
         })
-      } catch (aM) {
-        throw (0, iP.g)(aM, "#47" === (null === (jM = aM) || void 0 === jM ? void 0 : jM.message) ? "no_adapter" : "device")
+      } catch (yV) {
+        throw (0, Vp.d)(yV, "#47" === (null === (UV = yV) || void 0 === UV ? void 0 : UV.message) ? "no_adapter" : "device")
       }
-      var jM;
-      return null !== iM && (0, NM.p)(SM, iM.width, iM.height), SM
+      var UV;
+      return null !== xV && (0, hV.m)(YV, xV.width, xV.height), YV
     }
 
-    function vn(MM) {
-      let rM = null;
-      return MM.lost.then((MM => {
-        rM = MM, console.error(`WebGPU device lost (${MM.reason}): ${MM.message}`)
-      })), () => rM
+    function cQ(VV) {
+      let eV = null;
+      return VV.lost.then((VV => {
+        eV = VV, console.error(`WebGPU device lost (${VV.reason}): ${VV.message}`)
+      })), () => eV
     }
-    async function Fn(MM, rM, iM, OM) {
-      var SM, jM;
+    async function hQ(VV, eV, xV, JV) {
+      var YV, UV;
       let {
-        sceneDepth: aM,
-        sunShadow: PM
-      } = iM;
-      const nM = (0, xM.e)(MM),
-        QM = null !== (SM = null === OM || void 0 === OM ? void 0 : OM.resources) && void 0 !== SM ? SM : new ca(MM, rM),
-        zM = new rn(rM),
-        LM = new ka(rM, QM, (MM => function(MM, rM) {
-          for (const OM of Gr(MM)) {
-            var iM;
-            if (OM._targetSignature === rM) return null !== (iM = OM._sceneBG) && void 0 !== iM ? iM : null
+        sceneDepth: yV,
+        sunShadow: pV
+      } = xV;
+      const QV = (0, LV.d)(VV),
+        nV = null !== (YV = null === JV || void 0 === JV ? void 0 : JV.resources) && void 0 !== YV ? YV : new Iy(VV, eV),
+        wV = new VQ(eV),
+        ZV = new gy(eV, nV, (VV => function(VV, eV) {
+          for (const JV of Fe(VV)) {
+            var xV;
+            if (JV._targetSignature === eV) return null !== (xV = JV._sceneBG) && void 0 !== xV ? xV : null
           }
           return null
-        }(nM, MM)), null === OM || void 0 === OM ? void 0 : OM.n_, null === OM || void 0 === OM ? void 0 : OM.modelMeshes),
-        mM = null !== (jM = null === OM || void 0 === OM ? void 0 : OM.particles) && void 0 !== jM ? jM : new sn(rM, QM);
-      for (const JM of function(MM, rM, iM) {
-          return [rM.opaqueRenderable, MM.opaqueRenderable, MM.skyLastRenderable, iM.renderable, rM.transparentRenderable, MM.transparentRenderable, MM.frontRenderable]
-        }(LM, zM, mM)) Er(nM, JM);
-      const HM = function(MM) {
-        for (const rM of Gr(MM))
-          if ("YJ" === rM.name) return rM;
+        }(QV, VV)), null === JV || void 0 === JV ? void 0 : JV.uVV, null === JV || void 0 === JV ? void 0 : JV.modelMeshes),
+        vV = null !== (UV = null === JV || void 0 === JV ? void 0 : JV.particles) && void 0 !== UV ? UV : new GQ(eV, nV);
+      for (const bV of function(VV, eV, xV) {
+          return [eV.opaqueRenderable, VV.opaqueRenderable, VV.skyLastRenderable, xV.renderable, eV.transparentRenderable, VV.transparentRenderable, VV.frontRenderable]
+        }(ZV, wV, vV)) qe(QV, bV);
+      const rV = function(VV) {
+        for (const eV of Fe(VV))
+          if ("yE" === eV.name) return eV;
         throw new Error("Lite: the scene has no render task named scene")
-      }(nM);
-      aM && zM.installSceneDepth(HM, MM);
-      const hM = PM ? new Gn(rM, PM.entities) : null;
-      return zM.sunShadow = hM, hM && null !== PM && void 0 !== PM && PM.entities && (zM.shadowMask = new DP(rM, HM, MM, zM)), LM.sunShadow = hM, await (0, xM.f)(nM), {
-        engine: MM,
-        YJ: nM,
-        sceneTask: HM,
-        device: rM,
-        terrain: zM,
-        meshes: LM,
-        sunShadow: hM,
-        resources: QM,
-        particles: mM
+      }(QV);
+      yV && wV.installSceneDepth(rV, VV);
+      const kV = pV ? new jQ(eV, pV.entities) : null;
+      return wV.sunShadow = kV, kV && null !== pV && void 0 !== pV && pV.entities && (wV.shadowMask = new Rp(eV, rV, VV, wV)), ZV.sunShadow = kV, await (0, LV.h)(QV), {
+        engine: VV,
+        yE: QV,
+        sceneTask: rV,
+        device: eV,
+        terrain: wV,
+        meshes: ZV,
+        sunShadow: kV,
+        resources: nV,
+        particles: vV
       }
     }
   },
-  41782: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => SM,
-      f: () => OM,
-      h: () => mM,
-      i: () => zM,
-      l: () => dM,
-      n: () => jM,
-      p: () => PM,
-      q: () => nM,
-      r: () => aM,
-      s: () => JM,
-      w: () => HM,
-      x: () => hM
+  41983: (VV, eV, xV) => {
+    xV.d(eV, {
+      B: () => rV,
+      E: () => kV,
+      d: () => YV,
+      e: () => JV,
+      g: () => vV,
+      j: () => wV,
+      n: () => EV,
+      o: () => UV,
+      r: () => pV,
+      u: () => QV,
+      y: () => yV,
+      z: () => bV
     });
-    const OM = 3,
-      SM = 0,
-      jM = 1,
-      aM = 2,
-      PM = {
+    const JV = 3,
+      YV = 0,
+      UV = 1,
+      yV = 2,
+      pV = {
         uniform: 3,
-        Xm: 4,
+        Ur: 4,
         special: 5,
         volume: 6,
         sampler: 7,
         entities: 8,
         entityGrids: 9
       },
-      nM = 10,
-      QM = "BloxdPackInputs",
-      zM = "bloxdPackInputs",
-      LM = [{
+      QV = 10,
+      nV = "BloxdPackInputs",
+      wV = "bloxdPackInputs",
+      ZV = [{
         name: "seconds",
         type: "f32",
         offset: 0
@@ -8643,37 +8643,37 @@ export const modules = {
         type: "vec3f",
         offset: 64
       }],
-      mM = 80;
+      vV = 80;
 
-    function HM() {
-      const MM = LM.map((MM => {
+    function rV() {
+      const VV = ZV.map((VV => {
         let {
-          name: rM,
-          type: iM
-        } = MM;
-        return `    ${rM}: ${iM},\n`
+          name: eV,
+          type: xV
+        } = VV;
+        return `    ${eV}: ${xV},\n`
       })).join("");
-      return `struct ${QM} {\n${MM}}\n@group(${OM}) @binding(${SM}) var<uniform> ${zM}: ${QM};\n`
+      return `struct ${nV} {\n${VV}}\n@group(${JV}) @binding(${YV}) var<uniform> ${wV}: ${nV};\n`
     }
 
-    function hM(MM, rM) {
-      const iM = new DataView(MM, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, mM),
-        [OM, SM, jM, aM, PM, nM] = LM;
-      iM.setFloat32(OM.offset, rM.seconds, !0), iM.setUint32(SM.offset, rM.lit ? 1 : 0, !0);
-      for (let QM = 0; QM < 3; QM++) iM.setInt32(jM.offset + 4 * QM, rM.renderOffset[QM], !0), iM.setFloat32(aM.offset + 4 * QM, rM.mMM[QM], !0), iM.setFloat32(PM.offset + 4 * QM, rM.eyePosition[QM], !0), iM.setFloat32(nM.offset + 4 * QM, rM.shadowDirection[QM], !0)
+    function kV(VV, eV) {
+      const xV = new DataView(VV, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, vV),
+        [JV, YV, UV, yV, pV, QV] = ZV;
+      xV.setFloat32(JV.offset, eV.seconds, !0), xV.setUint32(YV.offset, eV.lit ? 1 : 0, !0);
+      for (let nV = 0; nV < 3; nV++) xV.setInt32(UV.offset + 4 * nV, eV.renderOffset[nV], !0), xV.setFloat32(yV.offset + 4 * nV, eV.ReV[nV], !0), xV.setFloat32(pV.offset + 4 * nV, eV.eyePosition[nV], !0), xV.setFloat32(QV.offset + 4 * nV, eV.shadowDirection[nV], !0)
     }
 
-    function JM(MM) {
-      const rM = new Uint32Array(Math.max(1, MM.length));
-      return MM.forEach(((MM, iM) => {
+    function bV(VV) {
+      const eV = new Uint32Array(Math.max(1, VV.length));
+      return VV.forEach(((VV, xV) => {
         let {
-          id: OM,
-          rotation: SM
-        } = MM;
-        rM[iM] = 65535 & OM | (3 & SM) << 16
-      })), rM
+          id: JV,
+          rotation: YV
+        } = VV;
+        eV[xV] = 65535 & JV | (3 & YV) << 16
+      })), eV
     }
-    const dM = {
+    const EV = {
       off: 0,
       strict: 1,
       allow: 2
@@ -8681,4 +8681,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const VV in modules) Object.freeze(modules[VV]);

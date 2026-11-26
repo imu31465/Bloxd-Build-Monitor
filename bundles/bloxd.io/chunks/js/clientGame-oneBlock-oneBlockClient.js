@@ -1,11 +1,11 @@
 export const id = 25;
 export const ids = [25];
 export const modules = {
-  40582: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      default: () => jM
+  40723: (VV, eV, xV) => {
+    xV.r(eV), xV.d(eV, {
+      default: () => UV
     });
-    const OM = {
+    const JV = {
       Maverick: "Portal Config",
       "Bling Bling": "Bank",
       Fred: "Farmer",
@@ -14,45 +14,45 @@ export const modules = {
       Gill: "Farmer's Guild",
       Wren: "Travelling Trader"
     };
-    const SM = 6400;
-    const jM = function(MM, rM, iM, jM) {
-      let aM, {
-          localPlayerId: PM
-        } = jM,
-        nM = [];
+    const YV = 6400;
+    const UV = function(VV, eV, xV, UV) {
+      let yV, {
+          localPlayerId: pV
+        } = UV,
+        QV = [];
       return {
-        onCreate: MM => {
-          aM = MM
+        onCreate: VV => {
+          yV = VV
         },
-        onReceivedMessageFromServer: (MM, rM) => {
-          "oneBlockNextBlocks" === MM && (nM = rM.blocks.map((MM => aM.blockNameToBlockId(MM))))
+        onReceivedMessageFromServer: (VV, eV) => {
+          "oneBlockNextBlocks" === VV && (QV = eV.blocks.map((VV => yV.blockNameToBlockId(VV))))
         },
-        bL: () => {
-          if (0 === nM.length) return;
-          const MM = aM.getPositionView(PM),
-            rM = function(MM, rM) {
-              const iM = Math.ceil((MM - 3200) / SM);
-              if (iM !== Math.ceil((rM - 3200) / SM) || iM <= 0) return null;
-              const OM = iM * SM + 6;
-              return [OM, 10, OM]
-            }(MM[0], MM[2]);
-          if (!rM) return;
-          const [iM, OM, jM] = rM;
-          if (aM.isBlockInLoadedChunk(iM, OM, jM) && 0 === aM.getBlockId(iM, OM, jM)) {
-            const MM = nM.shift();
-            aM.setBlockId(iM, OM, jM, MM)
+        iZ: () => {
+          if (0 === QV.length) return;
+          const VV = yV.getPositionView(pV),
+            eV = function(VV, eV) {
+              const xV = Math.ceil((VV - 3200) / YV);
+              if (xV !== Math.ceil((eV - 3200) / YV) || xV <= 0) return null;
+              const JV = xV * YV + 6;
+              return [JV, 10, JV]
+            }(VV[0], VV[2]);
+          if (!eV) return;
+          const [xV, JV, UV] = eV;
+          if (yV.isBlockInLoadedChunk(xV, JV, UV) && 0 === yV.getBlockId(xV, JV, UV)) {
+            const VV = QV.shift();
+            yV.setBlockId(xV, JV, UV, VV)
           }
         },
-        onPlayerAltAction: (MM, rM, iM, SM, jM, PM) => {
-          ! function(MM, rM, iM, SM) {
-            if (!iM || "Mesh" !== MM.getEntityType(iM)) return !1;
-            const jM = OM[MM.getEntityName(iM)];
-            !!jM && MM.openShop(rM, SM, jM)
-          }(aM, MM, PM, !1)
+        onPlayerAltAction: (VV, eV, xV, YV, UV, pV) => {
+          ! function(VV, eV, xV, YV) {
+            if (!xV || "Mesh" !== VV.getEntityType(xV)) return !1;
+            const UV = JV[VV.getEntityName(xV)];
+            !!UV && VV.openShop(eV, YV, UV)
+          }(yV, VV, pV, !1)
         }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const VV in modules) Object.freeze(modules[VV]);

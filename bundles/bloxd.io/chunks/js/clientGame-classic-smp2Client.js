@@ -1,18 +1,18 @@
 export const id = 13;
 export const ids = [13];
 export const modules = {
-  40376: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      makeSmp2ClientGame: () => jM
+  40509: (VV, eV, xV) => {
+    xV.r(eV), xV.d(eV, {
+      makeSmp2ClientGame: () => UV
     });
-    const OM = "smp2FirstSpawn";
-    var SM = iM(1744);
+    const JV = "smp2FirstSpawn";
+    var YV = xV(1759);
 
-    function jM() {
-      let MM = !1;
+    function UV() {
+      let VV = !1;
       return {
-        onReceivedMessageFromServer: rM => {
-          rM !== OM || MM || (MM = !0, (0, SM.c)({
+        onReceivedMessageFromServer: eV => {
+          eV !== JV || VV || (VV = !0, (0, YV.f)({
             id: "smp2.first_spawn"
           }))
         }
@@ -21,4 +21,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const VV in modules) Object.freeze(modules[VV]);

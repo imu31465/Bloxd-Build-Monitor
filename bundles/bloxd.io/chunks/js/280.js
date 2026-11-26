@@ -1,583 +1,583 @@
 export const id = 280;
 export const ids = [280];
 export const modules = {
-  41210: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => jM
+  41344: (VV, eV, xV) => {
+    xV.d(eV, {
+      e: () => UV
     });
-    var OM = iM(39711),
-      SM = iM(38085);
-    class jM {
-      static Instantiate(MM) {
-        if (this.RegisteredExternalClasses && this.RegisteredExternalClasses[MM]) return this.RegisteredExternalClasses[MM];
-        const rM = (0, SM.b)(MM);
-        if (rM) return rM;
-        OM.e.Warn(MM + " not found, you may have missed an import.");
-        const iM = MM.split(".");
-        let jM = "undefined" !== typeof window ? window : "undefined" !== typeof globalThis ? globalThis : this;
-        for (let OM = 0, SM = iM.length; OM < SM; OM++) jM = jM[iM[OM]];
-        return "function" !== typeof jM ? null : jM
+    var JV = xV(39870),
+      YV = xV(38318);
+    class UV {
+      static Instantiate(VV) {
+        if (this.RegisteredExternalClasses && this.RegisteredExternalClasses[VV]) return this.RegisteredExternalClasses[VV];
+        const eV = (0, YV.c)(VV);
+        if (eV) return eV;
+        JV.b.Warn(VV + " not found, you may have missed an import.");
+        const xV = VV.split(".");
+        let UV = "undefined" !== typeof window ? window : "undefined" !== typeof globalThis ? globalThis : this;
+        for (let JV = 0, YV = xV.length; JV < YV; JV++) UV = UV[xV[JV]];
+        return "function" !== typeof UV ? null : UV
       }
     }
-    jM.RegisteredExternalClasses = {}
+    UV.RegisteredExternalClasses = {}
   },
-  41009: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => SM
+  41154: (VV, eV, xV) => {
+    xV.d(eV, {
+      b: () => YV
     });
-    var OM = iM(40972);
-    class SM {
+    var JV = xV(41122);
+    class YV {
       static get Now() {
-        return (0, OM.l)() && window.performance && window.performance.now ? window.performance.now() : Date.now()
+        return (0, JV.n)() && window.performance && window.performance.now ? window.performance.now() : Date.now()
       }
     }
   },
-  41034: (MM, rM, iM) => {
-    function OM(MM) {
-      let rM = 1;
+  41190: (VV, eV, xV) => {
+    function JV(VV) {
+      let eV = 1;
       do {
-        rM *= 2
-      } while (rM < MM);
-      return rM === MM
+        eV *= 2
+      } while (eV < VV);
+      return eV === VV
     }
 
-    function SM(MM, rM, iM) {
-      return MM * (1 - iM) + rM * iM
+    function YV(VV, eV, xV) {
+      return VV * (1 - xV) + eV * xV
     }
 
-    function jM(MM) {
-      const rM = aM(MM),
-        iM = PM(MM);
-      return rM - MM > MM - iM ? iM : rM
+    function UV(VV) {
+      const eV = yV(VV),
+        xV = pV(VV);
+      return eV - VV > VV - xV ? xV : eV
     }
 
-    function aM(MM) {
-      return MM--, MM |= MM >> 1, MM |= MM >> 2, MM |= MM >> 4, MM |= MM >> 8, MM |= MM >> 16, ++MM
+    function yV(VV) {
+      return VV--, VV |= VV >> 1, VV |= VV >> 2, VV |= VV >> 4, VV |= VV >> 8, VV |= VV >> 16, ++VV
     }
 
-    function PM(MM) {
-      return MM |= MM >> 1, MM |= MM >> 2, MM |= MM >> 4, MM |= MM >> 8, (MM |= MM >> 16) - (MM >> 1)
+    function pV(VV) {
+      return VV |= VV >> 1, VV |= VV >> 2, VV |= VV >> 4, VV |= VV >> 8, (VV |= VV >> 16) - (VV >> 1)
     }
 
-    function nM(MM, rM) {
-      let iM;
+    function QV(VV, eV) {
+      let xV;
       switch (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 2) {
         case 1:
-          iM = PM(MM);
+          xV = pV(VV);
           break;
         case 2:
-          iM = jM(MM);
+          xV = UV(VV);
           break;
         default:
-          iM = aM(MM)
+          xV = yV(VV)
       }
-      return Math.min(iM, rM)
+      return Math.min(xV, eV)
     }
-    iM.d(rM, {
-      c: () => PM,
-      e: () => nM,
-      g: () => OM,
-      i: () => SM,
-      m: () => jM
+    xV.d(eV, {
+      e: () => pV,
+      i: () => QV,
+      k: () => JV,
+      l: () => YV,
+      o: () => UV
     })
   },
-  41205: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => EM,
-      d: () => GM,
-      e: () => yM,
-      g: () => lM
+  41341: (VV, eV, xV) => {
+    xV.d(eV, {
+      c: () => qV,
+      g: () => FV,
+      j: () => BV,
+      l: () => jV
     });
-    var OM, SM = iM(38068),
-      jM = iM(40972),
-      aM = iM(39711),
-      PM = iM(39705),
-      nM = iM(41009),
-      QM = iM(40990),
-      zM = iM(41148),
-      LM = iM(38064),
-      mM = iM(41145),
-      HM = iM(41003),
-      hM = iM(41210),
-      JM = iM(38885),
-      dM = iM(41034);
-    class yM {
+    var JV, YV = xV(38296),
+      UV = xV(41122),
+      yV = xV(39870),
+      pV = xV(39867),
+      QV = xV(41154),
+      nV = xV(41138),
+      wV = xV(41309),
+      ZV = xV(38287),
+      vV = xV(41300),
+      rV = xV(41145),
+      kV = xV(41344),
+      bV = xV(39058),
+      EV = xV(41190);
+    class BV {
       static get BaseUrl() {
-        return mM.f.BaseUrl
+        return vV.g.BaseUrl
       }
-      static set BaseUrl(MM) {
-        mM.f.BaseUrl = MM
+      static set BaseUrl(VV) {
+        vV.g.BaseUrl = VV
       }
       static get CleanUrl() {
-        return mM.f.CleanUrl
+        return vV.g.CleanUrl
       }
-      static set CleanUrl(MM) {
-        mM.f.CleanUrl = MM
+      static set CleanUrl(VV) {
+        vV.g.CleanUrl = VV
       }
-      static IsAbsoluteUrl(MM) {
-        return 0 === MM.indexOf("//") || -1 !== MM.indexOf("://") && (-1 !== MM.indexOf(".") && (-1 !== MM.indexOf("/") && (!(MM.indexOf(":") > MM.indexOf("/")) && (MM.indexOf("://") < MM.indexOf(".") || (0 === MM.indexOf("data:") || 0 === MM.indexOf("blob:"))))))
+      static IsAbsoluteUrl(VV) {
+        return 0 === VV.indexOf("//") || -1 !== VV.indexOf("://") && (-1 !== VV.indexOf(".") && (-1 !== VV.indexOf("/") && (!(VV.indexOf(":") > VV.indexOf("/")) && (VV.indexOf("://") < VV.indexOf(".") || (0 === VV.indexOf("data:") || 0 === VV.indexOf("blob:"))))))
       }
-      static set ScriptBaseUrl(MM) {
-        mM.f.ScriptBaseUrl = MM
+      static set ScriptBaseUrl(VV) {
+        vV.g.ScriptBaseUrl = VV
       }
       static get ScriptBaseUrl() {
-        return mM.f.ScriptBaseUrl
+        return vV.g.ScriptBaseUrl
       }
-      static set CDNBaseUrl(MM) {
-        OM.ScriptBaseUrl = MM, OM.AssetBaseUrl = MM
+      static set CDNBaseUrl(VV) {
+        JV.ScriptBaseUrl = VV, JV.AssetBaseUrl = VV
       }
-      static set ScriptPreprocessUrl(MM) {
-        mM.f.ScriptPreprocessUrl = MM
+      static set ScriptPreprocessUrl(VV) {
+        vV.g.ScriptPreprocessUrl = VV
       }
       static get ScriptPreprocessUrl() {
-        return mM.f.ScriptPreprocessUrl
+        return vV.g.ScriptPreprocessUrl
       }
       static get DefaultRetryStrategy() {
-        return mM.f.DefaultRetryStrategy
+        return vV.g.DefaultRetryStrategy
       }
-      static set DefaultRetryStrategy(MM) {
-        mM.f.DefaultRetryStrategy = MM
+      static set DefaultRetryStrategy(VV) {
+        vV.g.DefaultRetryStrategy = VV
       }
       static get CorsBehavior() {
-        return mM.f.CorsBehavior
+        return vV.g.CorsBehavior
       }
-      static set CorsBehavior(MM) {
-        mM.f.CorsBehavior = MM
+      static set CorsBehavior(VV) {
+        vV.g.CorsBehavior = VV
       }
       static get UseFallbackTexture() {
-        return LM.c.UseFallbackTexture
+        return ZV.d.UseFallbackTexture
       }
-      static set UseFallbackTexture(MM) {
-        LM.c.UseFallbackTexture = MM
+      static set UseFallbackTexture(VV) {
+        ZV.d.UseFallbackTexture = VV
       }
       static get RegisteredExternalClasses() {
-        return hM.d.RegisteredExternalClasses
+        return kV.e.RegisteredExternalClasses
       }
-      static set RegisteredExternalClasses(MM) {
-        hM.d.RegisteredExternalClasses = MM
+      static set RegisteredExternalClasses(VV) {
+        kV.e.RegisteredExternalClasses = VV
       }
       static get fallbackTexture() {
-        return LM.c.FallbackTexture
+        return ZV.d.FallbackTexture
       }
-      static set fallbackTexture(MM) {
-        LM.c.FallbackTexture = MM
+      static set fallbackTexture(VV) {
+        ZV.d.FallbackTexture = VV
       }
-      static FetchToRef(MM, rM, iM, OM, SM, jM) {
-        const aM = 4 * ((Math.abs(MM) * iM % iM | 0) + (Math.abs(rM) * OM % OM | 0) * iM);
-        jM.r = SM[aM] / 255, jM.g = SM[aM + 1] / 255, jM.b = SM[aM + 2] / 255, jM.a = SM[aM + 3] / 255
+      static FetchToRef(VV, eV, xV, JV, YV, UV) {
+        const yV = 4 * ((Math.abs(VV) * xV % xV | 0) + (Math.abs(eV) * JV % JV | 0) * xV);
+        UV.r = YV[yV] / 255, UV.g = YV[yV + 1] / 255, UV.b = YV[yV + 2] / 255, UV.a = YV[yV + 3] / 255
       }
-      static Mix(MM, rM, iM) {
+      static Mix(VV, eV, xV) {
         return 0
       }
-      static Instantiate(MM) {
-        return hM.d.Instantiate(MM)
+      static Instantiate(VV) {
+        return kV.e.Instantiate(VV)
       }
-      static SetImmediate(MM) {
-        HM.c.SetImmediate(MM)
+      static SetImmediate(VV) {
+        rV.b.SetImmediate(VV)
       }
-      static IsExponentOfTwo(MM) {
+      static IsExponentOfTwo(VV) {
         return !0
       }
-      static FloatRound(MM) {
-        return Math.fround(MM)
+      static FloatRound(VV) {
+        return Math.fround(VV)
       }
-      static GetFilename(MM) {
-        const rM = MM.lastIndexOf("/");
-        return rM < 0 ? MM : MM.substring(rM + 1)
+      static GetFilename(VV) {
+        const eV = VV.lastIndexOf("/");
+        return eV < 0 ? VV : VV.substring(eV + 1)
       }
-      static GetFolderPath(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        const iM = MM.lastIndexOf("/");
-        return iM < 0 ? rM ? MM : "" : MM.substring(0, iM + 1)
+      static GetFolderPath(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        const xV = VV.lastIndexOf("/");
+        return xV < 0 ? eV ? VV : "" : VV.substring(0, xV + 1)
       }
-      static ToDegrees(MM) {
-        return 180 * MM / Math.PI
+      static ToDegrees(VV) {
+        return 180 * VV / Math.PI
       }
-      static ToRadians(MM) {
-        return MM * Math.PI / 180
+      static ToRadians(VV) {
+        return VV * Math.PI / 180
       }
-      static SmoothAngleChange(MM, rM) {
-        let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : .9;
-        const OM = this.ToRadians(MM),
-          SM = this.ToRadians(rM);
-        return this.ToDegrees(Math.atan2((1 - iM) * Math.sin(SM) + iM * Math.sin(OM), (1 - iM) * Math.cos(SM) + iM * Math.cos(OM)))
+      static SmoothAngleChange(VV, eV) {
+        let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : .9;
+        const JV = this.ToRadians(VV),
+          YV = this.ToRadians(eV);
+        return this.ToDegrees(Math.atan2((1 - xV) * Math.sin(YV) + xV * Math.sin(JV), (1 - xV) * Math.cos(YV) + xV * Math.cos(JV)))
       }
-      static MakeArray(MM, rM) {
-        return !0 === rM || void 0 !== MM && null != MM ? Array.isArray(MM) ? MM : [MM] : null
+      static MakeArray(VV, eV) {
+        return !0 === eV || void 0 !== VV && null != VV ? Array.isArray(VV) ? VV : [VV] : null
       }
-      static GetPointerPrefix(MM) {
-        return (0, jM.l)() && !window.PointerEvent ? "mouse" : "pointer"
+      static GetPointerPrefix(VV) {
+        return (0, UV.n)() && !window.PointerEvent ? "mouse" : "pointer"
       }
-      static SetCorsBehavior(MM, rM) {
-        (0, mM.x)(MM, rM)
+      static SetCorsBehavior(VV, eV) {
+        (0, vV.B)(VV, eV)
       }
-      static SetReferrerPolicyBehavior(MM, rM) {
-        rM.referrerPolicy = MM
+      static SetReferrerPolicyBehavior(VV, eV) {
+        eV.referrerPolicy = VV
       }
       static get PreprocessUrl() {
-        return mM.f.PreprocessUrl
+        return vV.g.PreprocessUrl
       }
-      static set PreprocessUrl(MM) {
-        mM.f.PreprocessUrl = MM
+      static set PreprocessUrl(VV) {
+        vV.g.PreprocessUrl = VV
       }
-      static LoadImage(MM, rM, iM, OM, SM, jM) {
-        return (0, mM.p)(MM, rM, iM, OM, SM, jM)
+      static LoadImage(VV, eV, xV, JV, YV, UV) {
+        return (0, vV.r)(VV, eV, xV, JV, YV, UV)
       }
-      static LoadFile(MM, rM, iM, OM, SM, jM) {
-        return (0, mM.n)(MM, rM, iM, OM, SM, jM)
+      static LoadFile(VV, eV, xV, JV, YV, UV) {
+        return (0, vV.o)(VV, eV, xV, JV, YV, UV)
       }
-      static async LoadFileAsync(MM) {
-        let rM = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        return await new Promise(((iM, OM) => {
-          (0, mM.n)(MM, (MM => {
-            iM(MM)
-          }), void 0, void 0, rM, ((MM, rM) => {
-            OM(rM)
+      static async LoadFileAsync(VV) {
+        let eV = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        return await new Promise(((xV, JV) => {
+          (0, vV.o)(VV, (VV => {
+            xV(VV)
+          }), void 0, void 0, eV, ((VV, eV) => {
+            JV(eV)
           }))
         }))
       }
-      static GetAssetUrl(MM) {
-        if (!MM) return "";
-        if (OM.AssetBaseUrl && MM.startsWith(OM._DefaultAssetsUrl)) {
-          const rM = OM.AssetBaseUrl.endsWith("/") ? OM.AssetBaseUrl.slice(0, -1) : OM.AssetBaseUrl;
-          return MM.replace(OM._DefaultAssetsUrl, rM)
+      static GetAssetUrl(VV) {
+        if (!VV) return "";
+        if (JV.AssetBaseUrl && VV.startsWith(JV._DefaultAssetsUrl)) {
+          const eV = JV.AssetBaseUrl.endsWith("/") ? JV.AssetBaseUrl.slice(0, -1) : JV.AssetBaseUrl;
+          return VV.replace(JV._DefaultAssetsUrl, eV)
         }
-        return MM
+        return VV
       }
-      static GetBabylonScriptURL(MM, rM) {
-        if (!MM) return "";
-        if (MM.startsWith(OM._DefaultCdnUrl))
-          if (OM.ScriptBaseUrl) {
-            const rM = OM.ScriptBaseUrl.endsWith("/") ? OM.ScriptBaseUrl.slice(0, -1) : OM.ScriptBaseUrl;
-            MM = MM.replace(OM._DefaultCdnUrl, rM)
-          } else if (OM._CdnVersion) {
-          const rM = `${OM._DefaultCdnUrl}/v${OM._CdnVersion}`;
-          MM.startsWith(rM) || (MM = MM.replace(OM._DefaultCdnUrl, rM))
+      static GetBabylonScriptURL(VV, eV) {
+        if (!VV) return "";
+        if (VV.startsWith(JV._DefaultCdnUrl))
+          if (JV.ScriptBaseUrl) {
+            const eV = JV.ScriptBaseUrl.endsWith("/") ? JV.ScriptBaseUrl.slice(0, -1) : JV.ScriptBaseUrl;
+            VV = VV.replace(JV._DefaultCdnUrl, eV)
+          } else if (JV._CdnVersion) {
+          const eV = `${JV._DefaultCdnUrl}/v${JV._CdnVersion}`;
+          VV.startsWith(eV) || (VV = VV.replace(JV._DefaultCdnUrl, eV))
         }
-        return MM = OM.ScriptPreprocessUrl(MM), rM && !OM.IsAbsoluteUrl(MM) && (MM = OM.GetAbsoluteUrl(MM)), MM
+        return VV = JV.ScriptPreprocessUrl(VV), eV && !JV.IsAbsoluteUrl(VV) && (VV = JV.GetAbsoluteUrl(VV)), VV
       }
-      static LoadBabylonScript(MM, rM, iM, SM) {
-        MM = OM.GetBabylonScriptURL(MM), OM.LoadScript(MM, rM, iM)
+      static LoadBabylonScript(VV, eV, xV, YV) {
+        VV = JV.GetBabylonScriptURL(VV), JV.LoadScript(VV, eV, xV)
       }
-      static async LoadBabylonScriptAsync(MM) {
-        return MM = OM.GetBabylonScriptURL(MM), await OM.LoadScriptAsync(MM)
+      static async LoadBabylonScriptAsync(VV) {
+        return VV = JV.GetBabylonScriptURL(VV), await JV.LoadScriptAsync(VV)
       }
-      static _LoadScriptNative(MM, rM, iM, SM) {
+      static _LoadScriptNative(VV, eV, xV, YV) {
         if (_native) {
           if (arguments.length > 4 && void 0 !== arguments[4] && arguments[4]) {
-            const MM = "Loading a script as an ES module is not supported in Babylon Native";
-            return void iM?.(MM, new Error(MM))
+            const VV = "Loading a script as an ES module is not supported in Babylon Native";
+            return void xV?.(VV, new Error(VV))
           }
-          OM.LoadFile(MM, (MM => {
+          JV.LoadFile(VV, (VV => {
             try {
-              Function(MM).apply(null), rM && rM()
-            } catch (OM) {
-              iM && iM("LoadScript Error", OM)
+              Function(VV).apply(null), eV && eV()
+            } catch (JV) {
+              xV && xV("LoadScript Error", JV)
             }
-          }), void 0, void 0, !1, ((MM, rM) => {
-            iM && iM("LoadScript Error", rM)
+          }), void 0, void 0, !1, ((VV, eV) => {
+            xV && xV("LoadScript Error", eV)
           }))
         }
       }
-      static _LoadScriptWeb(MM, rM, iM, OM) {
-        let SM = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+      static _LoadScriptWeb(VV, eV, xV, JV) {
+        let YV = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
         if ("function" === typeof importScripts) {
           try {
-            importScripts(MM), rM && rM()
-          } catch (nM) {
-            iM?.(`Unable to load script '${MM}' in worker`, nM)
+            importScripts(VV), eV && eV()
+          } catch (QV) {
+            xV?.(`Unable to load script '${VV}' in worker`, QV)
           }
           return
         }
-        if (!(0, jM.l)()) return void iM?.(`Cannot load script '${MM}' outside of a window or a worker`);
-        const aM = document.getElementsByTagName("head")[0],
-          PM = document.createElement("script");
-        SM ? (PM.setAttribute("type", "module"), PM.innerText = MM) : (PM.setAttribute("type", "text/javascript"), PM.setAttribute("src", MM)), OM && (PM.id = OM), PM.onload = () => {
-          rM && rM()
-        }, PM.onerror = rM => {
-          iM && iM(`Unable to load script '${MM}'`, rM)
-        }, aM.appendChild(PM)
+        if (!(0, UV.n)()) return void xV?.(`Cannot load script '${VV}' outside of a window or a worker`);
+        const yV = document.getElementsByTagName("head")[0],
+          pV = document.createElement("script");
+        YV ? (pV.setAttribute("type", "module"), pV.innerText = VV) : (pV.setAttribute("type", "text/javascript"), pV.setAttribute("src", VV)), JV && (pV.id = JV), pV.onload = () => {
+          eV && eV()
+        }, pV.onerror = eV => {
+          xV && xV(`Unable to load script '${VV}'`, eV)
+        }, yV.appendChild(pV)
       }
-      static async LoadScriptAsync(MM, rM) {
-        return await new Promise(((iM, OM) => {
-          this.LoadScript(MM, (() => {
-            iM()
-          }), ((MM, rM) => {
-            OM(rM || new Error(MM))
-          }), rM)
+      static async LoadScriptAsync(VV, eV) {
+        return await new Promise(((xV, JV) => {
+          this.LoadScript(VV, (() => {
+            xV()
+          }), ((VV, eV) => {
+            JV(eV || new Error(VV))
+          }), eV)
         }))
       }
-      static ReadFileAsDataURL(MM, rM, iM) {
-        const OM = new FileReader,
-          jM = {
-            onCompleteObservable: new SM.d,
-            abort: () => OM.abort()
+      static ReadFileAsDataURL(VV, eV, xV) {
+        const JV = new FileReader,
+          UV = {
+            onCompleteObservable: new YV.c,
+            abort: () => JV.abort()
           };
-        return OM.onloadend = () => {
-          jM.onCompleteObservable.notifyObservers(jM)
-        }, OM.onload = MM => {
-          rM(MM.target.result)
-        }, OM.onprogress = iM, OM.readAsDataURL(MM), jM
+        return JV.onloadend = () => {
+          UV.onCompleteObservable.notifyObservers(UV)
+        }, JV.onload = VV => {
+          eV(VV.target.result)
+        }, JV.onprogress = xV, JV.readAsDataURL(VV), UV
       }
-      static ReadFile(MM, rM, iM, OM, SM) {
-        return (0, mM.s)(MM, rM, iM, OM, SM)
+      static ReadFile(VV, eV, xV, JV, YV) {
+        return (0, vV.v)(VV, eV, xV, JV, YV)
       }
-      static FileAsURL(MM) {
-        const rM = new Blob([MM]);
-        return window.URL.createObjectURL(rM)
+      static FileAsURL(VV) {
+        const eV = new Blob([VV]);
+        return window.URL.createObjectURL(eV)
       }
-      static Format(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
-        return MM.toFixed(rM)
+      static Format(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
+        return VV.toFixed(eV)
       }
-      static DeepCopy(MM, rM, iM, OM) {
-        PM.b.DeepCopy(MM, rM, iM, OM)
+      static DeepCopy(VV, eV, xV, JV) {
+        pV.d.DeepCopy(VV, eV, xV, JV)
       }
-      static IsEmpty(MM) {
-        for (const rM in MM)
-          if (Object.prototype.hasOwnProperty.call(MM, rM)) return !1;
+      static IsEmpty(VV) {
+        for (const eV in VV)
+          if (Object.prototype.hasOwnProperty.call(VV, eV)) return !1;
         return !0
       }
-      static RegisterTopRootEvents(MM, rM) {
-        for (let OM = 0; OM < rM.length; OM++) {
-          const SM = rM[OM];
-          MM.addEventListener(SM.name, SM.handler, !1);
+      static RegisterTopRootEvents(VV, eV) {
+        for (let JV = 0; JV < eV.length; JV++) {
+          const YV = eV[JV];
+          VV.addEventListener(YV.name, YV.handler, !1);
           try {
-            window.parent && window.parent.addEventListener(SM.name, SM.handler, !1)
-          } catch (iM) {}
+            window.parent && window.parent.addEventListener(YV.name, YV.handler, !1)
+          } catch (xV) {}
         }
       }
-      static UnregisterTopRootEvents(MM, rM) {
-        for (let OM = 0; OM < rM.length; OM++) {
-          const SM = rM[OM];
-          MM.removeEventListener(SM.name, SM.handler);
+      static UnregisterTopRootEvents(VV, eV) {
+        for (let JV = 0; JV < eV.length; JV++) {
+          const YV = eV[JV];
+          VV.removeEventListener(YV.name, YV.handler);
           try {
-            MM.parent && MM.parent.removeEventListener(SM.name, SM.handler)
-          } catch (iM) {}
+            VV.parent && VV.parent.removeEventListener(YV.name, YV.handler)
+          } catch (xV) {}
         }
       }
-      static async DumpFramebuffer(MM, rM, iM, OM) {
-        throw (0, QM.n)("DumpTools")
+      static async DumpFramebuffer(VV, eV, xV, JV) {
+        throw (0, nV.n)("DumpTools")
       }
-      static DumpData(MM, rM, iM, OM) {
-        throw (0, QM.n)("DumpTools")
+      static DumpData(VV, eV, xV, JV) {
+        throw (0, nV.n)("DumpTools")
       }
-      static async DumpDataAsync(MM, rM, iM) {
-        throw (0, QM.n)("DumpTools")
+      static async DumpDataAsync(VV, eV, xV) {
+        throw (0, nV.n)("DumpTools")
       }
-      static _IsOffScreenCanvas(MM) {
-        return void 0 !== MM.convertToBlob
+      static _IsOffScreenCanvas(VV) {
+        return void 0 !== VV.convertToBlob
       }
-      static ToBlob(MM, rM) {
-        let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "image/png",
-          SM = arguments.length > 3 ? arguments[3] : void 0;
-        OM._IsOffScreenCanvas(MM) || MM.toBlob || (MM.toBlob = function(MM, rM, iM) {
+      static ToBlob(VV, eV) {
+        let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "image/png",
+          YV = arguments.length > 3 ? arguments[3] : void 0;
+        JV._IsOffScreenCanvas(VV) || VV.toBlob || (VV.toBlob = function(VV, eV, xV) {
           setTimeout((() => {
-            const OM = atob(this.toDataURL(rM, iM).split(",")[1]),
-              SM = OM.length,
-              jM = new Uint8Array(SM);
-            for (let MM = 0; MM < SM; MM++) jM[MM] = OM.charCodeAt(MM);
-            MM(new Blob([jM]))
+            const JV = atob(this.toDataURL(eV, xV).split(",")[1]),
+              YV = JV.length,
+              UV = new Uint8Array(YV);
+            for (let VV = 0; VV < YV; VV++) UV[VV] = JV.charCodeAt(VV);
+            VV(new Blob([UV]))
           }))
-        }), OM._IsOffScreenCanvas(MM) ? MM.convertToBlob({
-          type: iM,
-          quality: SM
-        }).then((MM => rM(MM))) : MM.toBlob((function(MM) {
-          rM(MM)
-        }), iM, SM)
+        }), JV._IsOffScreenCanvas(VV) ? VV.convertToBlob({
+          type: xV,
+          quality: YV
+        }).then((VV => eV(VV))) : VV.toBlob((function(VV) {
+          eV(VV)
+        }), xV, YV)
       }
-      static DownloadBlob(MM, rM) {
+      static DownloadBlob(VV, eV) {
         if ("download" in document.createElement("a")) {
-          if (!rM) {
-            const MM = new Date;
-            rM = "screenshot_" + ((MM.getFullYear() + "-" + (MM.getMonth() + 1)).slice(2) + "-" + MM.getDate() + "_" + MM.getHours() + "-" + ("0" + MM.getMinutes()).slice(-2)) + ".png"
+          if (!eV) {
+            const VV = new Date;
+            eV = "screenshot_" + ((VV.getFullYear() + "-" + (VV.getMonth() + 1)).slice(2) + "-" + VV.getDate() + "_" + VV.getHours() + "-" + ("0" + VV.getMinutes()).slice(-2)) + ".png"
           }
-          OM.Download(MM, rM)
-        } else if (MM && "undefined" !== typeof URL) {
-          const rM = URL.createObjectURL(MM),
-            iM = window.open("");
-          if (!iM) return;
-          const OM = iM.document.createElement("img");
-          OM.onload = function() {
-            URL.revokeObjectURL(rM)
-          }, OM.src = rM, iM.document.body.appendChild(OM)
+          JV.Download(VV, eV)
+        } else if (VV && "undefined" !== typeof URL) {
+          const eV = URL.createObjectURL(VV),
+            xV = window.open("");
+          if (!xV) return;
+          const JV = xV.document.createElement("img");
+          JV.onload = function() {
+            URL.revokeObjectURL(eV)
+          }, JV.src = eV, xV.document.body.appendChild(JV)
         }
       }
-      static EncodeScreenshotCanvasData(MM, rM) {
-        let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "image/png",
-          SM = arguments.length > 3 ? arguments[3] : void 0,
-          jM = arguments.length > 4 ? arguments[4] : void 0;
-        if ("string" !== typeof SM && rM) {
-          if (rM) {
-            if (OM._IsOffScreenCanvas(MM)) return void MM.convertToBlob({
-              type: iM,
-              quality: jM
-            }).then((MM => {
-              const iM = new FileReader;
-              iM.readAsDataURL(MM), iM.onloadend = () => {
-                const MM = iM.result;
-                rM(MM)
+      static EncodeScreenshotCanvasData(VV, eV) {
+        let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "image/png",
+          YV = arguments.length > 3 ? arguments[3] : void 0,
+          UV = arguments.length > 4 ? arguments[4] : void 0;
+        if ("string" !== typeof YV && eV) {
+          if (eV) {
+            if (JV._IsOffScreenCanvas(VV)) return void VV.convertToBlob({
+              type: xV,
+              quality: UV
+            }).then((VV => {
+              const xV = new FileReader;
+              xV.readAsDataURL(VV), xV.onloadend = () => {
+                const VV = xV.result;
+                eV(VV)
               }
             }));
-            const SM = MM.toDataURL(iM, jM);
-            rM(SM)
+            const YV = VV.toDataURL(xV, UV);
+            eV(YV)
           }
-        } else this.ToBlob(MM, (function(MM) {
-          MM && OM.DownloadBlob(MM, SM), rM && rM("")
-        }), iM, jM)
+        } else this.ToBlob(VV, (function(VV) {
+          VV && JV.DownloadBlob(VV, YV), eV && eV("")
+        }), xV, UV)
       }
-      static Download(MM, rM) {
+      static Download(VV, eV) {
         if ("undefined" === typeof URL) return;
-        const iM = window.URL.createObjectURL(MM),
-          OM = document.createElement("a");
-        document.body.appendChild(OM), OM.style.display = "none", OM.href = iM, OM.download = rM, OM.addEventListener("click", (() => {
-          OM.parentElement && OM.parentElement.removeChild(OM)
-        })), OM.click(), window.URL.revokeObjectURL(iM)
+        const xV = window.URL.createObjectURL(VV),
+          JV = document.createElement("a");
+        document.body.appendChild(JV), JV.style.display = "none", JV.href = xV, JV.download = eV, JV.addEventListener("click", (() => {
+          JV.parentElement && JV.parentElement.removeChild(JV)
+        })), JV.click(), window.URL.revokeObjectURL(xV)
       }
-      static BackCompatCameraNoPreventDefault(MM) {
-        return "boolean" === typeof MM[0] ? MM[0] : "boolean" === typeof MM[1] && MM[1]
+      static BackCompatCameraNoPreventDefault(VV) {
+        return "boolean" === typeof VV[0] ? VV[0] : "boolean" === typeof VV[1] && VV[1]
       }
-      static CreateScreenshot(MM, rM, iM, OM) {
-        throw (0, QM.n)("ScreenshotTools")
+      static CreateScreenshot(VV, eV, xV, JV) {
+        throw (0, nV.n)("ScreenshotTools")
       }
-      static async CreateScreenshotAsync(MM, rM, iM) {
-        throw (0, QM.n)("ScreenshotTools")
+      static async CreateScreenshotAsync(VV, eV, xV) {
+        throw (0, nV.n)("ScreenshotTools")
       }
-      static CreateScreenshotUsingRenderTarget(MM, rM, iM, OM) {
-        throw (0, QM.n)("ScreenshotTools")
+      static CreateScreenshotUsingRenderTarget(VV, eV, xV, JV) {
+        throw (0, nV.n)("ScreenshotTools")
       }
-      static async CreateScreenshotUsingRenderTargetAsync(MM, rM, iM) {
-        throw (0, QM.n)("ScreenshotTools")
+      static async CreateScreenshotUsingRenderTargetAsync(VV, eV, xV) {
+        throw (0, nV.n)("ScreenshotTools")
       }
       static RandomId() {
-        return (0, JM.d)()
+        return (0, bV.d)()
       }
-      static IsBase64(MM) {
-        return (0, mM.k)(MM)
+      static IsBase64(VV) {
+        return (0, vV.k)(VV)
       }
-      static DecodeBase64(MM) {
-        return (0, mM.d)(MM)
+      static DecodeBase64(VV) {
+        return (0, vV.d)(VV)
       }
       static get errorsCount() {
-        return aM.e.errorsCount
+        return yV.b.errorsCount
       }
-      static Log(MM) {
-        aM.e.Log(MM)
+      static Log(VV) {
+        yV.b.Log(VV)
       }
-      static Warn(MM) {
-        aM.e.Warn(MM)
+      static Warn(VV) {
+        yV.b.Warn(VV)
       }
-      static Error(MM) {
-        aM.e.Error(MM)
+      static Error(VV) {
+        yV.b.Error(VV)
       }
       static get LogCache() {
-        return aM.e.LogCache
+        return yV.b.LogCache
       }
       static ClearLogCache() {
-        aM.e.ClearLogCache()
+        yV.b.ClearLogCache()
       }
-      static set LogLevels(MM) {
-        aM.e.LogLevels = MM
+      static set LogLevels(VV) {
+        yV.b.LogLevels = VV
       }
-      static set PerformanceLogLevel(MM) {
-        (MM & OM.PerformanceUserMarkLogLevel) !== OM.PerformanceUserMarkLogLevel ? (MM & OM.PerformanceConsoleLogLevel) !== OM.PerformanceConsoleLogLevel ? (OM.StartPerformanceCounter = OM._StartPerformanceCounterDisabled, OM.EndPerformanceCounter = OM._EndPerformanceCounterDisabled, _native?.disablePerformanceLogging?.()) : _native?.enablePerformanceLogging ? (_native.enablePerformanceLogging(2), OM.StartPerformanceCounter = OM._StartMarkNative, OM.EndPerformanceCounter = OM._EndMarkNative) : (OM.StartPerformanceCounter = OM._StartPerformanceConsole, OM.EndPerformanceCounter = OM._EndPerformanceConsole) : _native?.enablePerformanceLogging ? (_native.enablePerformanceLogging(1), OM.StartPerformanceCounter = OM._StartMarkNative, OM.EndPerformanceCounter = OM._EndMarkNative) : (OM.StartPerformanceCounter = OM._StartUserMark, OM.EndPerformanceCounter = OM._EndUserMark)
+      static set PerformanceLogLevel(VV) {
+        (VV & JV.PerformanceUserMarkLogLevel) !== JV.PerformanceUserMarkLogLevel ? (VV & JV.PerformanceConsoleLogLevel) !== JV.PerformanceConsoleLogLevel ? (JV.StartPerformanceCounter = JV._StartPerformanceCounterDisabled, JV.EndPerformanceCounter = JV._EndPerformanceCounterDisabled, _native?.disablePerformanceLogging?.()) : _native?.enablePerformanceLogging ? (_native.enablePerformanceLogging(2), JV.StartPerformanceCounter = JV._StartMarkNative, JV.EndPerformanceCounter = JV._EndMarkNative) : (JV.StartPerformanceCounter = JV._StartPerformanceConsole, JV.EndPerformanceCounter = JV._EndPerformanceConsole) : _native?.enablePerformanceLogging ? (_native.enablePerformanceLogging(1), JV.StartPerformanceCounter = JV._StartMarkNative, JV.EndPerformanceCounter = JV._EndMarkNative) : (JV.StartPerformanceCounter = JV._StartUserMark, JV.EndPerformanceCounter = JV._EndUserMark)
       }
-      static _StartPerformanceCounterDisabled(MM, rM) {}
-      static _EndPerformanceCounterDisabled(MM, rM) {}
-      static _StartUserMark(MM) {
-        let rM = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        if (!OM._Performance) {
-          if (!(0, jM.l)()) return;
-          OM._Performance = window.performance
+      static _StartPerformanceCounterDisabled(VV, eV) {}
+      static _EndPerformanceCounterDisabled(VV, eV) {}
+      static _StartUserMark(VV) {
+        let eV = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        if (!JV._Performance) {
+          if (!(0, UV.n)()) return;
+          JV._Performance = window.performance
         }
-        rM && OM._Performance.mark && OM._Performance.mark(MM + "-Begin")
+        eV && JV._Performance.mark && JV._Performance.mark(VV + "-Begin")
       }
-      static _EndUserMark(MM) {
-        (!(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1]) && OM._Performance.mark && (OM._Performance.mark(MM + "-End"), OM._Performance.measure(MM, MM + "-Begin", MM + "-End"))
+      static _EndUserMark(VV) {
+        (!(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1]) && JV._Performance.mark && (JV._Performance.mark(VV + "-End"), JV._Performance.measure(VV, VV + "-Begin", VV + "-End"))
       }
-      static _StartPerformanceConsole(MM) {
-        let rM = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        rM && (OM._StartUserMark(MM, rM), console.time && console.time(MM))
+      static _StartPerformanceConsole(VV) {
+        let eV = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        eV && (JV._StartUserMark(VV, eV), console.time && console.time(VV))
       }
-      static _EndPerformanceConsole(MM) {
-        let rM = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        rM && (OM._EndUserMark(MM, rM), console.timeEnd(MM))
+      static _EndPerformanceConsole(VV) {
+        let eV = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        eV && (JV._EndUserMark(VV, eV), console.timeEnd(VV))
       }
-      static _StartMarkNative(MM) {
+      static _StartMarkNative(VV) {
         if ((!(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1]) && _native?.startPerformanceCounter)
-          if (OM._NativePerformanceCounterHandles.has(MM)) OM.Warn(`Performance counter with name ${MM} is already started.`);
+          if (JV._NativePerformanceCounterHandles.has(VV)) JV.Warn(`Performance counter with name ${VV} is already started.`);
           else {
-            const rM = _native.startPerformanceCounter(MM);
-            OM._NativePerformanceCounterHandles.set(MM, rM)
+            const eV = _native.startPerformanceCounter(VV);
+            JV._NativePerformanceCounterHandles.set(VV, eV)
           }
       }
-      static _EndMarkNative(MM) {
+      static _EndMarkNative(VV) {
         if ((!(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1]) && _native?.endPerformanceCounter) {
-          const rM = OM._NativePerformanceCounterHandles.get(MM);
-          rM ? (_native.endPerformanceCounter(rM), OM._NativePerformanceCounterHandles.delete(MM)) : OM.Warn(`Performance counter with name ${MM} was not started.`)
+          const eV = JV._NativePerformanceCounterHandles.get(VV);
+          eV ? (_native.endPerformanceCounter(eV), JV._NativePerformanceCounterHandles.delete(VV)) : JV.Warn(`Performance counter with name ${VV} was not started.`)
         }
       }
       static get Now() {
-        return nM.b.Now
+        return QV.b.Now
       }
-      static GetClassName(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          iM = null;
-        if (!rM && MM.getClassName) iM = MM.getClassName();
+      static GetClassName(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          xV = null;
+        if (!eV && VV.getClassName) xV = VV.getClassName();
         else {
-          if (MM instanceof Object) {
-            iM = (rM ? MM : Object.getPrototypeOf(MM)).constructor.__bjsclassName__
+          if (VV instanceof Object) {
+            xV = (eV ? VV : Object.getPrototypeOf(VV)).constructor.__bjsclassName__
           }
-          iM || (iM = typeof MM)
+          xV || (xV = typeof VV)
         }
-        return iM
+        return xV
       }
-      static First(MM, rM) {
-        for (const iM of MM)
-          if (rM(iM)) return iM;
+      static First(VV, eV) {
+        for (const xV of VV)
+          if (eV(xV)) return xV;
         return null
       }
-      static getFullClassName(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          iM = null,
-          OM = null;
-        if (!rM && MM.getClassName) iM = MM.getClassName();
+      static getFullClassName(VV) {
+        let eV = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          xV = null,
+          JV = null;
+        if (!eV && VV.getClassName) xV = VV.getClassName();
         else {
-          if (MM instanceof Object) {
-            const SM = rM ? MM : Object.getPrototypeOf(MM);
-            iM = SM.constructor.__bjsclassName__, OM = SM.constructor.__bjsmoduleName__
+          if (VV instanceof Object) {
+            const YV = eV ? VV : Object.getPrototypeOf(VV);
+            xV = YV.constructor.__bjsclassName__, JV = YV.constructor.__bjsmoduleName__
           }
-          iM || (iM = typeof MM)
+          xV || (xV = typeof VV)
         }
-        return iM ? (null != OM ? OM + "." : "") + iM : null
+        return xV ? (null != JV ? JV + "." : "") + xV : null
       }
-      static async DelayAsync(MM) {
-        await new Promise((rM => {
+      static async DelayAsync(VV) {
+        await new Promise((eV => {
           setTimeout((() => {
-            rM()
-          }), MM)
+            eV()
+          }), VV)
         }))
       }
       static IsSafari() {
-        return !!(0, jM.k)() && /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
+        return !!(0, UV.j)() && /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
       }
     }
 
-    function lM(MM, rM) {
-      return iM => {
-        iM.__bjsclassName__ = MM, iM.__bjsmoduleName__ = null != rM ? rM : null
+    function jV(VV, eV) {
+      return xV => {
+        xV.__bjsclassName__ = VV, xV.__bjsmoduleName__ = null != eV ? eV : null
       }
     }
-    OM = yM, yM.AssetBaseUrl = "", yM.UseCustomRequestHeaders = !1, yM.CustomRequestHeaders = zM.e.CustomRequestHeaders, yM.GetDOMTextContent = jM.c, yM._DefaultCdnUrl = "https://cdn.babylonjs.com", yM._CdnVersion = "9.28.0", yM._DefaultAssetsUrl = "https://assets.babylonjs.com/core", yM.LoadScript = "undefined" === typeof _native ? OM._LoadScriptWeb : OM._LoadScriptNative, yM.GetAbsoluteUrl = "object" === typeof document ? MM => {
-      const rM = document.createElement("a");
-      return rM.href = MM, rM.href
-    } : "function" === typeof URL && "object" === typeof location ? MM => new URL(MM, location.origin).href : () => {
+    JV = BV, BV.AssetBaseUrl = "", BV.UseCustomRequestHeaders = !1, BV.CustomRequestHeaders = wV.d.CustomRequestHeaders, BV.GetDOMTextContent = UV.b, BV._DefaultCdnUrl = "https://cdn.babylonjs.com", BV._CdnVersion = "9.28.0", BV._DefaultAssetsUrl = "https://assets.babylonjs.com/core", BV.LoadScript = "undefined" === typeof _native ? JV._LoadScriptWeb : JV._LoadScriptNative, BV.GetAbsoluteUrl = "object" === typeof document ? VV => {
+      const eV = document.createElement("a");
+      return eV.href = VV, eV.href
+    } : "function" === typeof URL && "object" === typeof location ? VV => new URL(VV, location.origin).href : () => {
       throw new Error("Unable to get absolute URL. Override BABYLON.Tools.GetAbsoluteUrl to a custom implementation for the current context.")
-    }, yM.NoneLogLevel = aM.e.NoneLogLevel, yM.MessageLogLevel = aM.e.MessageLogLevel, yM.WarningLogLevel = aM.e.WarningLogLevel, yM.ErrorLogLevel = aM.e.ErrorLogLevel, yM.AllLogLevel = aM.e.AllLogLevel, yM.IsWindowObjectExist = jM.l, yM.PerformanceNoneLogLevel = 0, yM.PerformanceUserMarkLogLevel = 1, yM.PerformanceConsoleLogLevel = 2, yM._NativePerformanceCounterHandles = new Map, yM.StartPerformanceCounter = OM._StartPerformanceCounterDisabled, yM.EndPerformanceCounter = OM._EndPerformanceCounterDisabled;
-    class EM {
-      constructor(MM, rM, iM) {
-        let OM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-        this.iterations = MM, this.index = OM - 1, this._done = !1, this._fn = rM, this._successCallback = iM
+    }, BV.NoneLogLevel = yV.b.NoneLogLevel, BV.MessageLogLevel = yV.b.MessageLogLevel, BV.WarningLogLevel = yV.b.WarningLogLevel, BV.ErrorLogLevel = yV.b.ErrorLogLevel, BV.AllLogLevel = yV.b.AllLogLevel, BV.IsWindowObjectExist = UV.n, BV.PerformanceNoneLogLevel = 0, BV.PerformanceUserMarkLogLevel = 1, BV.PerformanceConsoleLogLevel = 2, BV._NativePerformanceCounterHandles = new Map, BV.StartPerformanceCounter = JV._StartPerformanceCounterDisabled, BV.EndPerformanceCounter = JV._EndPerformanceCounterDisabled;
+    class qV {
+      constructor(VV, eV, xV) {
+        let JV = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+        this.iterations = VV, this.index = JV - 1, this._done = !1, this._fn = eV, this._successCallback = xV
       }
       executeNext() {
         this._done || (this.index + 1 < this.iterations ? (++this.index, this._fn(this)) : this.breakLoop())
@@ -585,33 +585,33 @@ export const modules = {
       breakLoop() {
         this._done = !0, this._successCallback()
       }
-      static Run(MM, rM, iM) {
-        const OM = new EM(MM, rM, iM, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0);
-        return OM.executeNext(), OM
+      static Run(VV, eV, xV) {
+        const JV = new qV(VV, eV, xV, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0);
+        return JV.executeNext(), JV
       }
-      static SyncAsyncForLoop(MM, rM, iM, OM, SM) {
-        let jM = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0;
-        return EM.Run(Math.ceil(MM / rM), (OM => {
-          SM && SM() ? OM.breakLoop() : setTimeout((() => {
-            for (let jM = 0; jM < rM; ++jM) {
-              const aM = OM.index * rM + jM;
-              if (aM >= MM) break;
-              if (iM(aM), SM && SM()) {
-                OM.breakLoop();
+      static SyncAsyncForLoop(VV, eV, xV, JV, YV) {
+        let UV = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0;
+        return qV.Run(Math.ceil(VV / eV), (JV => {
+          YV && YV() ? JV.breakLoop() : setTimeout((() => {
+            for (let UV = 0; UV < eV; ++UV) {
+              const yV = JV.index * eV + UV;
+              if (yV >= VV) break;
+              if (xV(yV), YV && YV()) {
+                JV.breakLoop();
                 break
               }
             }
-            OM.executeNext()
-          }), jM)
-        }), OM)
+            JV.executeNext()
+          }), UV)
+        }), JV)
       }
     }
-    let UM = !1;
+    let tV = !1;
 
-    function GM() {
-      UM || (UM = !0, yM.Mix = dM.i, yM.IsExponentOfTwo = dM.g, LM.c.FallbackTexture = "data:image/jpg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/4QBmRXhpZgAATU0AKgAAAAgABAEaAAUAAAABAAAAPgEbAAUAAAABAAAARgEoAAMAAAABAAIAAAExAAIAAAAQAAAATgAAAAAAAABgAAAAAQAAAGAAAAABcGFpbnQubmV0IDQuMC41AP/bAEMABAIDAwMCBAMDAwQEBAQFCQYFBQUFCwgIBgkNCw0NDQsMDA4QFBEODxMPDAwSGBITFRYXFxcOERkbGRYaFBYXFv/bAEMBBAQEBQUFCgYGChYPDA8WFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFv/AABEIAQABAAMBIgACEQEDEQH/xAAfAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgv/xAC1EAACAQMDAgQDBQUEBAAAAX0BAgMABBEFEiExQQYTUWEHInEUMoGRoQgjQrHBFVLR8CQzYnKCCQoWFxgZGiUmJygpKjQ1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4eLj5OXm5+jp6vHy8/T19vf4+fr/xAAfAQADAQEBAQEBAQEBAAAAAAAAAQIDBAUGBwgJCgv/xAC1EQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/APH6KKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FCiiigD6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++gooooA+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gUKKKKAPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76CiiigD5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BQooooA+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/voKKKKAPl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FCiiigD6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++gooooA+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gUKKKKAPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76CiiigD5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BQooooA+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/voKKKKAPl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FCiiigD6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++gooooA+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gUKKKKAPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76P//Z")
+    function FV() {
+      tV || (tV = !0, BV.Mix = EV.l, BV.IsExponentOfTwo = EV.k, ZV.d.FallbackTexture = "data:image/jpg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/4QBmRXhpZgAATU0AKgAAAAgABAEaAAUAAAABAAAAPgEbAAUAAAABAAAARgEoAAMAAAABAAIAAAExAAIAAAAQAAAATgAAAAAAAABgAAAAAQAAAGAAAAABcGFpbnQubmV0IDQuMC41AP/bAEMABAIDAwMCBAMDAwQEBAQFCQYFBQUFCwgIBgkNCw0NDQsMDA4QFBEODxMPDAwSGBITFRYXFxcOERkbGRYaFBYXFv/bAEMBBAQEBQUFCgYGChYPDA8WFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFv/AABEIAQABAAMBIgACEQEDEQH/xAAfAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgv/xAC1EAACAQMDAgQDBQUEBAAAAX0BAgMABBEFEiExQQYTUWEHInEUMoGRoQgjQrHBFVLR8CQzYnKCCQoWFxgZGiUmJygpKjQ1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4eLj5OXm5+jp6vHy8/T19vf4+fr/xAAfAQADAQEBAQEBAQEBAAAAAAAAAQIDBAUGBwgJCgv/xAC1EQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/APH6KKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FCiiigD6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++gooooA+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gUKKKKAPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76CiiigD5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BQooooA+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/voKKKKAPl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FCiiigD6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++gooooA+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gUKKKKAPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76CiiigD5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BQooooA+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/voKKKKAPl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FCiiigD6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++gooooA+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gUKKKKAPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76P//Z")
     }
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const VV in modules) Object.freeze(modules[VV]);

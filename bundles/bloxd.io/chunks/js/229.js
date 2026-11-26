@@ -1,161 +1,161 @@
 export const id = 229;
 export const ids = [229];
 export const modules = {
-  35106: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      packDisplayName: () => hM,
-      packModelMessage: () => JM,
-      packModelSummary: () => yM,
-      refusedPackModels: () => dM
+  35402: (VV, eV, xV) => {
+    xV.r(eV), xV.d(eV, {
+      packDisplayName: () => kV,
+      packModelMessage: () => bV,
+      packModelSummary: () => BV,
+      refusedPackModels: () => EV
     });
-    var OM = iM(35113),
-      SM = iM(35120);
-    const jM = "DRACO",
-      aM = 0,
-      PM = 1,
-      nM = 0,
-      QM = 1,
-      zM = 32768;
+    var JV = xV(35408),
+      YV = xV(35415);
+    const UV = "DRACO",
+      yV = 0,
+      pV = 1,
+      QV = 0,
+      nV = 1,
+      wV = 32768;
 
-    function LM(MM) {
-      const rM = new DataView(MM.buffer, MM.byteOffset, MM.byteLength);
-      let iM = 0;
-      const OM = () => {
-          if (iM >= MM.byteLength) throw new RangeError("past the stream");
-          return MM[iM++]
+    function ZV(VV) {
+      const eV = new DataView(VV.buffer, VV.byteOffset, VV.byteLength);
+      let xV = 0;
+      const JV = () => {
+          if (xV >= VV.byteLength) throw new RangeError("past the stream");
+          return VV[xV++]
         },
-        SM = () => {
-          if (iM + 4 > MM.byteLength) throw new RangeError("past the stream");
-          const OM = rM.getUint32(iM, !0);
-          return iM += 4, OM
+        YV = () => {
+          if (xV + 4 > VV.byteLength) throw new RangeError("past the stream");
+          const JV = eV.getUint32(xV, !0);
+          return xV += 4, JV
         },
-        LM = () => {
-          let MM = 0;
-          for (let rM = 0; rM < 35; rM += 7) {
-            const iM = OM();
-            if (MM += (127 & iM) * 2 ** rM, 0 === (128 & iM)) return MM
+        ZV = () => {
+          let VV = 0;
+          for (let eV = 0; eV < 35; eV += 7) {
+            const xV = JV();
+            if (VV += (127 & xV) * 2 ** eV, 0 === (128 & xV)) return VV
           }
           throw new RangeError("varint too long")
         };
       try {
-        for (let MM = 0; MM < jM.length; MM++)
-          if (OM() !== jM.charCodeAt(MM)) return null;
-        const rM = OM(),
-          mM = OM(),
-          HM = OM(),
-          hM = OM(),
-          JM = OM() | OM() << 8;
-        if (2 !== rM) return null;
-        0 !== (JM & zM) && function(MM, rM, iM) {
-          const OM = () => {
-              rM(iM())
+        for (let VV = 0; VV < UV.length; VV++)
+          if (JV() !== UV.charCodeAt(VV)) return null;
+        const eV = JV(),
+          vV = JV(),
+          rV = JV(),
+          kV = JV(),
+          bV = JV() | JV() << 8;
+        if (2 !== eV) return null;
+        0 !== (bV & wV) && function(VV, eV, xV) {
+          const JV = () => {
+              eV(xV())
             },
-            SM = () => {
-              let iM = 1,
-                SM = !0;
-              for (; iM > 0;) {
-                iM--, SM || OM(), SM = !1;
-                const jM = MM();
-                for (let iM = 0; iM < jM; iM++) OM(), rM(MM());
-                iM += MM()
+            YV = () => {
+              let xV = 1,
+                YV = !0;
+              for (; xV > 0;) {
+                xV--, YV || JV(), YV = !1;
+                const UV = VV();
+                for (let xV = 0; xV < UV; xV++) JV(), eV(VV());
+                xV += VV()
               }
             },
-            jM = MM();
-          for (let aM = 0; aM < jM; aM++) MM(), SM();
-          SM()
-        }(LM, (rM => {
-          if (iM + rM > MM.byteLength) throw new RangeError("past the stream");
-          iM += rM
-        }), OM);
-        const dM = mM < 2 ? SM : LM;
-        if (HM === aM) return {
+            UV = VV();
+          for (let yV = 0; yV < UV; yV++) VV(), YV();
+          YV()
+        }(ZV, (eV => {
+          if (xV + eV > VV.byteLength) throw new RangeError("past the stream");
+          xV += eV
+        }), JV);
+        const EV = vV < 2 ? YV : ZV;
+        if (rV === yV) return {
           faces: 0,
-          vertices: SM()
+          vertices: YV()
         };
-        if (HM !== PM) return null;
-        if (hM === nM) {
+        if (rV !== pV) return null;
+        if (kV === QV) {
           return {
-            faces: dM(),
-            vertices: dM()
+            faces: EV(),
+            vertices: EV()
           }
         }
-        if (hM !== QM) return null;
-        OM(), mM < 2 && LM();
-        const yM = LM();
+        if (kV !== nV) return null;
+        JV(), vV < 2 && ZV();
+        const BV = ZV();
         return {
-          faces: LM(),
-          vertices: yM
+          faces: ZV(),
+          vertices: BV
         }
       } catch {
         return null
       }
     }
 
-    function mM(MM, rM, iM) {
-      var OM, SM;
-      if (null === (OM = null === (SM = MM.extensionsUsed) || void 0 === SM ? void 0 : SM.includes("KHR_draco_mesh_compression")) || void 0 === OM || !OM) return null;
-      for (const hM of null !== (jM = MM.meshes) && void 0 !== jM ? jM : []) {
-        var jM;
-        for (const OM of hM.primitives) {
-          var aM, PM, nM, QM, zM, mM;
-          const SM = null === (aM = OM.extensions) || void 0 === aM ? void 0 : aM.KHR_draco_mesh_compression;
-          if ("object" !== typeof SM || null === SM) continue;
-          const jM = null === (PM = MM.bufferViews) || void 0 === PM ? void 0 : PM[SM.bufferView];
-          if (null === rM || void 0 === jM) return HM;
-          const hM = null !== (nM = jM.byteOffset) && void 0 !== nM ? nM : 0,
-            JM = LM(rM.subarray(hM, hM + jM.byteLength));
-          if (null === JM && !iM) continue;
-          const dM = null !== (QM = MM.accessors) && void 0 !== QM ? QM : [],
-            yM = null === (zM = dM[OM.attributes.POSITION]) || void 0 === zM ? void 0 : zM.count,
-            lM = void 0 === OM.indices ? 0 : null === (mM = dM[OM.indices]) || void 0 === mM ? void 0 : mM.count;
-          if (null === JM || void 0 === yM || void 0 === lM || 3 * JM.faces !== lM || JM.vertices > yM) return HM
+    function vV(VV, eV, xV) {
+      var JV, YV;
+      if (null === (JV = null === (YV = VV.extensionsUsed) || void 0 === YV ? void 0 : YV.includes("KHR_draco_mesh_compression")) || void 0 === JV || !JV) return null;
+      for (const kV of null !== (UV = VV.meshes) && void 0 !== UV ? UV : []) {
+        var UV;
+        for (const JV of kV.primitives) {
+          var yV, pV, QV, nV, wV, vV;
+          const YV = null === (yV = JV.extensions) || void 0 === yV ? void 0 : yV.KHR_draco_mesh_compression;
+          if ("object" !== typeof YV || null === YV) continue;
+          const UV = null === (pV = VV.bufferViews) || void 0 === pV ? void 0 : pV[YV.bufferView];
+          if (null === eV || void 0 === UV) return rV;
+          const kV = null !== (QV = UV.byteOffset) && void 0 !== QV ? QV : 0,
+            bV = ZV(eV.subarray(kV, kV + UV.byteLength));
+          if (null === bV && !xV) continue;
+          const EV = null !== (nV = VV.accessors) && void 0 !== nV ? nV : [],
+            BV = null === (wV = EV[JV.attributes.POSITION]) || void 0 === wV ? void 0 : wV.count,
+            jV = void 0 === JV.indices ? 0 : null === (vV = EV[JV.indices]) || void 0 === vV ? void 0 : vV.count;
+          if (null === bV || void 0 === BV || void 0 === jV || 3 * bV.faces !== jV || bV.vertices > BV) return rV
         }
       }
       return null
     }
-    const HM = "has a Draco stream whose counts don't match its accessors";
+    const rV = "has a Draco stream whose counts don't match its accessors";
 
-    function hM(MM) {
-      var rM;
-      return null !== (rM = MM.name) && void 0 !== rM ? rM : MM.fromFolderName || MM.id
+    function kV(VV) {
+      var eV;
+      return null !== (eV = VV.name) && void 0 !== eV ? eV : VV.fromFolderName || VV.id
     }
 
-    function JM(MM, rM, iM) {
-      return `Texture pack "${MM}": model "${rM}" was not loaded because it ${iM}. The default model is used instead.`
+    function bV(VV, eV, xV) {
+      return `Texture pack "${VV}": model "${eV}" was not loaded because it ${xV}. The default model is used instead.`
     }
 
-    function dM(MM, rM, iM) {
+    function EV(VV, eV, xV) {
       let {
-        strictDraco: jM = !1
+        strictDraco: UV = !1
       } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-      const aM = {};
-      for (const [PM, nM] of Object.entries(rM)) {
-        let rM;
-        if (nM.startsWith("data:")) try {
-          const MM = new Uint8Array((0, SM.v)(nM));
-          if (rM = (0, OM.c)(MM), null === rM) {
+      const yV = {};
+      for (const [pV, QV] of Object.entries(eV)) {
+        let eV;
+        if (QV.startsWith("data:")) try {
+          const VV = new Uint8Array((0, YV.o)(QV));
+          if (eV = (0, JV.d)(VV), null === eV) {
             const {
-              json: iM,
-              bin: OM
-            } = (0, SM.E)(MM);
-            rM = mM(iM, OM, jM)
+              json: xV,
+              bin: JV
+            } = (0, YV.v)(VV);
+            eV = vV(xV, JV, UV)
           }
         } catch {
-          rM = "is not a binary glTF 2.0 file"
-        } else rM = "loads data from outside the file";
-        rM && (aM[PM] = rM, iM && console.warn(JM(MM, PM, rM)))
+          eV = "is not a binary glTF 2.0 file"
+        } else eV = "loads data from outside the file";
+        eV && (yV[pV] = eV, xV && console.warn(bV(VV, pV, eV)))
       }
-      return aM
+      return yV
     }
 
-    function yM(MM, rM) {
-      const iM = Object.keys(rM);
-      if (0 === iM.length) return null;
-      if (1 === iM.length) return JM(MM, iM[0], rM[iM[0]]);
-      const OM = iM.map((MM => `"${MM}" ${rM[MM]}`)).join("; ");
-      return `Texture pack "${MM}": ${iM.length} models were not loaded (${OM}). The default models are used instead.`
+    function BV(VV, eV) {
+      const xV = Object.keys(eV);
+      if (0 === xV.length) return null;
+      if (1 === xV.length) return bV(VV, xV[0], eV[xV[0]]);
+      const JV = xV.map((VV => `"${VV}" ${eV[VV]}`)).join("; ");
+      return `Texture pack "${VV}": ${xV.length} models were not loaded (${JV}). The default models are used instead.`
     }
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const VV in modules) Object.freeze(modules[VV]);

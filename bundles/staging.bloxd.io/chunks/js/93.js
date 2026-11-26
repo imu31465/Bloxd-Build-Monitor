@@ -1,99 +1,99 @@
 export const id = 93;
 export const ids = [93];
 export const modules = {
-  5121: MM => {
-    function rM(MM) {
-      return MM instanceof Map ? MM.clear = MM.delete = MM.set = function() {
+  5230: VV => {
+    function eV(VV) {
+      return VV instanceof Map ? VV.clear = VV.delete = VV.set = function() {
         throw new Error("map is read-only")
-      } : MM instanceof Set && (MM.add = MM.clear = MM.delete = function() {
+      } : VV instanceof Set && (VV.add = VV.clear = VV.delete = function() {
         throw new Error("set is read-only")
-      }), Object.freeze(MM), Object.getOwnPropertyNames(MM).forEach((iM => {
-        const OM = MM[iM],
-          SM = typeof OM;
-        "object" !== SM && "function" !== SM || Object.isFrozen(OM) || rM(OM)
-      })), MM
+      }), Object.freeze(VV), Object.getOwnPropertyNames(VV).forEach((xV => {
+        const JV = VV[xV],
+          YV = typeof JV;
+        "object" !== YV && "function" !== YV || Object.isFrozen(JV) || eV(JV)
+      })), VV
     }
-    class iM {
-      constructor(MM) {
-        void 0 === MM.data && (MM.data = {}), this.data = MM.data, this.isMatchIgnored = !1
+    class xV {
+      constructor(VV) {
+        void 0 === VV.data && (VV.data = {}), this.data = VV.data, this.isMatchIgnored = !1
       }
       ignoreMatch() {
         this.isMatchIgnored = !0
       }
     }
 
-    function OM(MM) {
-      return MM.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#x27;")
+    function JV(VV) {
+      return VV.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#x27;")
     }
 
-    function SM(MM) {
-      const rM = Object.create(null);
-      for (const jM in MM) rM[jM] = MM[jM];
-      for (var iM = arguments.length, OM = new Array(iM > 1 ? iM - 1 : 0), SM = 1; SM < iM; SM++) OM[SM - 1] = arguments[SM];
-      return OM.forEach((function(MM) {
-        for (const iM in MM) rM[iM] = MM[iM]
-      })), rM
+    function YV(VV) {
+      const eV = Object.create(null);
+      for (const UV in VV) eV[UV] = VV[UV];
+      for (var xV = arguments.length, JV = new Array(xV > 1 ? xV - 1 : 0), YV = 1; YV < xV; YV++) JV[YV - 1] = arguments[YV];
+      return JV.forEach((function(VV) {
+        for (const xV in VV) eV[xV] = VV[xV]
+      })), eV
     }
-    const jM = MM => !!MM.scope;
-    class aM {
-      constructor(MM, rM) {
-        this.buffer = "", this.classPrefix = rM.classPrefix, MM.walk(this)
+    const UV = VV => !!VV.scope;
+    class yV {
+      constructor(VV, eV) {
+        this.buffer = "", this.classPrefix = eV.classPrefix, VV.walk(this)
       }
-      addText(MM) {
-        this.buffer += OM(MM)
+      addText(VV) {
+        this.buffer += JV(VV)
       }
-      openNode(MM) {
-        if (!jM(MM)) return;
-        const rM = ((MM, rM) => {
+      openNode(VV) {
+        if (!UV(VV)) return;
+        const eV = ((VV, eV) => {
           let {
-            prefix: iM
-          } = rM;
-          if (MM.startsWith("language:")) return MM.replace("language:", "language-");
-          if (MM.includes(".")) {
-            const rM = MM.split(".");
-            return [`${iM}${rM.shift()}`, ...rM.map(((MM, rM) => `${MM}${"_".repeat(rM+1)}`))].join(" ")
+            prefix: xV
+          } = eV;
+          if (VV.startsWith("language:")) return VV.replace("language:", "language-");
+          if (VV.includes(".")) {
+            const eV = VV.split(".");
+            return [`${xV}${eV.shift()}`, ...eV.map(((VV, eV) => `${VV}${"_".repeat(eV+1)}`))].join(" ")
           }
-          return `${iM}${MM}`
-        })(MM.scope, {
+          return `${xV}${VV}`
+        })(VV.scope, {
           prefix: this.classPrefix
         });
-        this.span(rM)
+        this.span(eV)
       }
-      closeNode(MM) {
-        jM(MM) && (this.buffer += "</span>")
+      closeNode(VV) {
+        UV(VV) && (this.buffer += "</span>")
       }
       value() {
         return this.buffer
       }
-      span(MM) {
-        this.buffer += `<span class="${MM}">`
+      span(VV) {
+        this.buffer += `<span class="${VV}">`
       }
     }
-    const PM = function() {
-      let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      const rM = {
+    const pV = function() {
+      let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+      const eV = {
         children: []
       };
-      return Object.assign(rM, MM), rM
+      return Object.assign(eV, VV), eV
     };
-    class nM {
+    class QV {
       constructor() {
-        this.ZE = PM(), this.stack = [this.ZE]
+        this.JF = pV(), this.stack = [this.JF]
       }
       get top() {
         return this.stack[this.stack.length - 1]
       }
       get root() {
-        return this.ZE
+        return this.JF
       }
-      add(MM) {
-        this.top.children.push(MM)
+      add(VV) {
+        this.top.children.push(VV)
       }
-      openNode(MM) {
-        const rM = PM({
-          scope: MM
+      openNode(VV) {
+        const eV = pV({
+          scope: VV
         });
-        this.add(rM), this.stack.push(rM)
+        this.add(eV), this.stack.push(eV)
       }
       closeNode() {
         if (this.stack.length > 1) return this.stack.pop()
@@ -102,391 +102,391 @@ export const modules = {
         for (; this.closeNode(););
       }
       toJSON() {
-        return JSON.stringify(this.ZE, null, 4)
+        return JSON.stringify(this.JF, null, 4)
       }
-      walk(MM) {
-        return this.constructor._walk(MM, this.ZE)
+      walk(VV) {
+        return this.constructor._walk(VV, this.JF)
       }
-      static _walk(MM, rM) {
-        return "string" === typeof rM ? MM.addText(rM) : rM.children && (MM.openNode(rM), rM.children.forEach((rM => this._walk(MM, rM))), MM.closeNode(rM)), MM
+      static _walk(VV, eV) {
+        return "string" === typeof eV ? VV.addText(eV) : eV.children && (VV.openNode(eV), eV.children.forEach((eV => this._walk(VV, eV))), VV.closeNode(eV)), VV
       }
-      static _collapse(MM) {
-        "string" !== typeof MM && MM.children && (MM.children.every((MM => "string" === typeof MM)) ? MM.children = [MM.children.join("")] : MM.children.forEach((MM => {
-          nM._collapse(MM)
+      static _collapse(VV) {
+        "string" !== typeof VV && VV.children && (VV.children.every((VV => "string" === typeof VV)) ? VV.children = [VV.children.join("")] : VV.children.forEach((VV => {
+          QV._collapse(VV)
         })))
       }
     }
-    class QM extends nM {
-      constructor(MM) {
-        super(), this.options = MM
+    class nV extends QV {
+      constructor(VV) {
+        super(), this.options = VV
       }
-      addText(MM) {
-        "" !== MM && this.add(MM)
+      addText(VV) {
+        "" !== VV && this.add(VV)
       }
-      startScope(MM) {
-        this.openNode(MM)
+      startScope(VV) {
+        this.openNode(VV)
       }
       endScope() {
         this.closeNode()
       }
-      __addSublanguage(MM, rM) {
-        const iM = MM.root;
-        rM && (iM.scope = `language:${rM}`), this.add(iM)
+      __addSublanguage(VV, eV) {
+        const xV = VV.root;
+        eV && (xV.scope = `language:${eV}`), this.add(xV)
       }
       toHTML() {
-        return new aM(this, this.options).value()
+        return new yV(this, this.options).value()
       }
       finalize() {
         return this.closeAllNodes(), !0
       }
     }
 
-    function zM(MM) {
-      return MM ? "string" === typeof MM ? MM : MM.source : null
+    function wV(VV) {
+      return VV ? "string" === typeof VV ? VV : VV.source : null
     }
 
-    function LM(MM) {
-      return hM("(?=", MM, ")")
+    function ZV(VV) {
+      return kV("(?=", VV, ")")
     }
 
-    function mM(MM) {
-      return hM("(?:", MM, ")*")
+    function vV(VV) {
+      return kV("(?:", VV, ")*")
     }
 
-    function HM(MM) {
-      return hM("(?:", MM, ")?")
+    function rV(VV) {
+      return kV("(?:", VV, ")?")
     }
 
-    function hM() {
-      for (var MM = arguments.length, rM = new Array(MM), iM = 0; iM < MM; iM++) rM[iM] = arguments[iM];
-      return rM.map((MM => zM(MM))).join("")
+    function kV() {
+      for (var VV = arguments.length, eV = new Array(VV), xV = 0; xV < VV; xV++) eV[xV] = arguments[xV];
+      return eV.map((VV => wV(VV))).join("")
     }
 
-    function JM() {
-      for (var MM = arguments.length, rM = new Array(MM), iM = 0; iM < MM; iM++) rM[iM] = arguments[iM];
-      const OM = function(MM) {
-        const rM = MM[MM.length - 1];
-        return "object" === typeof rM && rM.constructor === Object ? (MM.splice(MM.length - 1, 1), rM) : {}
-      }(rM);
-      return "(" + (OM.capture ? "" : "?:") + rM.map((MM => zM(MM))).join("|") + ")"
+    function bV() {
+      for (var VV = arguments.length, eV = new Array(VV), xV = 0; xV < VV; xV++) eV[xV] = arguments[xV];
+      const JV = function(VV) {
+        const eV = VV[VV.length - 1];
+        return "object" === typeof eV && eV.constructor === Object ? (VV.splice(VV.length - 1, 1), eV) : {}
+      }(eV);
+      return "(" + (JV.capture ? "" : "?:") + eV.map((VV => wV(VV))).join("|") + ")"
     }
 
-    function dM(MM) {
-      return new RegExp(MM.toString() + "|").exec("").length - 1
+    function EV(VV) {
+      return new RegExp(VV.toString() + "|").exec("").length - 1
     }
-    const yM = /\[(?:[^\\\]]|\\.)*\]|\(\??|\\([1-9][0-9]*)|\\./;
+    const BV = /\[(?:[^\\\]]|\\.)*\]|\(\??|\\([1-9][0-9]*)|\\./;
 
-    function lM(MM, rM) {
+    function jV(VV, eV) {
       let {
-        joinWith: iM
-      } = rM, OM = 0;
-      return MM.map((MM => {
-        OM += 1;
-        const rM = OM;
-        let iM = zM(MM),
-          SM = "";
-        for (; iM.length > 0;) {
-          const MM = yM.exec(iM);
-          if (!MM) {
-            SM += iM;
+        joinWith: xV
+      } = eV, JV = 0;
+      return VV.map((VV => {
+        JV += 1;
+        const eV = JV;
+        let xV = wV(VV),
+          YV = "";
+        for (; xV.length > 0;) {
+          const VV = BV.exec(xV);
+          if (!VV) {
+            YV += xV;
             break
           }
-          SM += iM.substring(0, MM.index), iM = iM.substring(MM.index + MM[0].length), "\\" === MM[0][0] && MM[1] ? SM += "\\" + String(Number(MM[1]) + rM) : (SM += MM[0], "(" === MM[0] && OM++)
+          YV += xV.substring(0, VV.index), xV = xV.substring(VV.index + VV[0].length), "\\" === VV[0][0] && VV[1] ? YV += "\\" + String(Number(VV[1]) + eV) : (YV += VV[0], "(" === VV[0] && JV++)
         }
-        return SM
-      })).map((MM => `(${MM})`)).join(iM)
+        return YV
+      })).map((VV => `(${VV})`)).join(xV)
     }
-    const EM = "[a-zA-Z]\\w*",
-      UM = "[a-zA-Z_]\\w*",
-      GM = "\\b\\d+(\\.\\d+)?",
-      CM = "(-?)(\\b0[xX][a-fA-F0-9]+|(\\b\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)",
-      eM = "\\b(0b[01]+)",
-      bM = {
-        JL: "\\\\[\\s\\S]",
+    const qV = "[a-zA-Z]\\w*",
+      tV = "[a-zA-Z_]\\w*",
+      FV = "\\b\\d+(\\.\\d+)?",
+      TV = "(-?)(\\b0[xX][a-fA-F0-9]+|(\\b\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)",
+      PV = "\\b(0b[01]+)",
+      AV = {
+        NZ: "\\\\[\\s\\S]",
         relevance: 0
       },
-      wM = {
+      NV = {
         scope: "string",
-        JL: "'",
+        NZ: "'",
         end: "'",
         illegal: "\\n",
-        contains: [bM]
+        contains: [AV]
       },
-      tM = {
+      XV = {
         scope: "string",
-        JL: '"',
+        NZ: '"',
         end: '"',
         illegal: "\\n",
-        contains: [bM]
+        contains: [AV]
       },
-      gM = function(MM, rM) {
-        const iM = SM({
+      MV = function(VV, eV) {
+        const xV = YV({
           scope: "comment",
-          JL: MM,
-          end: rM,
+          NZ: VV,
+          end: eV,
           contains: []
         }, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {});
-        iM.contains.push({
+        xV.contains.push({
           scope: "doctag",
-          JL: "[ ]*(?=(TODO|FIXME|NOTE|BUG|OPTIMIZE|HACK|XXX):)",
+          NZ: "[ ]*(?=(TODO|FIXME|NOTE|BUG|OPTIMIZE|HACK|XXX):)",
           end: /(TODO|FIXME|NOTE|BUG|OPTIMIZE|HACK|XXX):/,
           excludeBegin: !0,
           relevance: 0
         });
-        const OM = JM("I", "a", "is", "so", "us", "to", "at", "if", "in", "it", "on", /[A-Za-z]+['](d|ve|re|ll|t|s|n)/, /[A-Za-z]+[-][a-z]+/, /[A-Za-z][a-z]{2,}/);
-        return iM.contains.push({
-          JL: hM(/[ ]+/, "(", OM, /[.]?[:]?([.][ ]|[ ])/, "){3}")
-        }), iM
+        const JV = bV("I", "a", "is", "so", "us", "to", "at", "if", "in", "it", "on", /[A-Za-z]+['](d|ve|re|ll|t|s|n)/, /[A-Za-z]+[-][a-z]+/, /[A-Za-z][a-z]{2,}/);
+        return xV.contains.push({
+          NZ: kV(/[ ]+/, "(", JV, /[.]?[:]?([.][ ]|[ ])/, "){3}")
+        }), xV
       },
-      uM = gM("//", "$"),
-      RM = gM("/\\*", "\\*/"),
-      pM = gM("#", "$"),
-      WM = {
+      zV = MV("//", "$"),
+      GV = MV("/\\*", "\\*/"),
+      WV = MV("#", "$"),
+      RV = {
         scope: "number",
-        JL: GM,
+        NZ: FV,
         relevance: 0
       },
-      sM = {
+      gV = {
         scope: "number",
-        JL: CM,
+        NZ: TV,
         relevance: 0
       },
-      DM = {
+      DV = {
         scope: "number",
-        JL: eM,
+        NZ: PV,
         relevance: 0
       },
-      kM = {
+      iV = {
         scope: "regexp",
-        JL: /\/(?=[^/\n]*\/)/,
+        NZ: /\/(?=[^/\n]*\/)/,
         end: /\/[gimuy]*/,
-        contains: [bM, {
-          JL: /\[/,
+        contains: [AV, {
+          NZ: /\[/,
           end: /\]/,
           relevance: 0,
-          contains: [bM]
+          contains: [AV]
         }]
       },
-      ZM = {
+      CV = {
         scope: "title",
-        JL: EM,
+        NZ: qV,
         relevance: 0
       },
-      oM = {
+      aV = {
         scope: "title",
-        JL: UM,
+        NZ: tV,
         relevance: 0
       },
-      fM = {
-        JL: "\\.\\s*" + UM,
+      oV = {
+        NZ: "\\.\\s*" + tV,
         relevance: 0
       };
-    var YM = Object.freeze({
+    var cV = Object.freeze({
       __proto__: null,
-      APOS_STRING_MODE: wM,
-      BACKSLASH_ESCAPE: bM,
-      BINARY_NUMBER_MODE: DM,
-      BINARY_NUMBER_RE: eM,
-      COMMENT: gM,
-      C_BLOCK_COMMENT_MODE: RM,
-      C_LINE_COMMENT_MODE: uM,
-      C_NUMBER_MODE: sM,
-      C_NUMBER_RE: CM,
-      END_SAME_AS_BEGIN: function(MM) {
-        return Object.assign(MM, {
-          "on:begin": (MM, rM) => {
-            rM.data._beginMatch = MM[1]
+      APOS_STRING_MODE: NV,
+      BACKSLASH_ESCAPE: AV,
+      BINARY_NUMBER_MODE: DV,
+      BINARY_NUMBER_RE: PV,
+      COMMENT: MV,
+      C_BLOCK_COMMENT_MODE: GV,
+      C_LINE_COMMENT_MODE: zV,
+      C_NUMBER_MODE: gV,
+      C_NUMBER_RE: TV,
+      END_SAME_AS_BEGIN: function(VV) {
+        return Object.assign(VV, {
+          "on:begin": (VV, eV) => {
+            eV.data._beginMatch = VV[1]
           },
-          "on:end": (MM, rM) => {
-            rM.data._beginMatch !== MM[1] && rM.ignoreMatch()
+          "on:end": (VV, eV) => {
+            eV.data._beginMatch !== VV[1] && eV.ignoreMatch()
           }
         })
       },
-      HASH_COMMENT_MODE: pM,
-      IDENT_RE: EM,
+      HASH_COMMENT_MODE: WV,
+      IDENT_RE: qV,
       MATCH_NOTHING_RE: /\b\B/,
-      METHOD_GUARD: fM,
-      NUMBER_MODE: WM,
-      NUMBER_RE: GM,
+      METHOD_GUARD: oV,
+      NUMBER_MODE: RV,
+      NUMBER_RE: FV,
       PHRASAL_WORDS_MODE: {
-        JL: /\b(a|an|the|are|I'm|isn't|don't|doesn't|won't|but|just|should|pretty|simply|enough|gonna|going|wtf|so|such|will|you|your|they|like|more)\b/
+        NZ: /\b(a|an|the|are|I'm|isn't|don't|doesn't|won't|but|just|should|pretty|simply|enough|gonna|going|wtf|so|such|will|you|your|they|like|more)\b/
       },
-      QUOTE_STRING_MODE: tM,
-      REGEXP_MODE: kM,
+      QUOTE_STRING_MODE: XV,
+      REGEXP_MODE: iV,
       RE_STARTERS_RE: "!|!=|!==|%|%=|&|&&|&=|\\*|\\*=|\\+|\\+=|,|-|-=|/=|/|:|;|<<|<<=|<=|<|===|==|=|>>>=|>>=|>=|>>>|>>|>|\\?|\\[|\\{|\\(|\\^|\\^=|\\||\\|=|\\|\\||~",
       SHEBANG: function() {
-        let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        const rM = /^#![ ]*\//;
-        return MM.binary && (MM.JL = hM(rM, /.*\b/, MM.binary, /\b.*/)), SM({
+        let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+        const eV = /^#![ ]*\//;
+        return VV.binary && (VV.NZ = kV(eV, /.*\b/, VV.binary, /\b.*/)), YV({
           scope: "meta",
-          JL: rM,
+          NZ: eV,
           end: /$/,
           relevance: 0,
-          "on:begin": (MM, rM) => {
-            0 !== MM.index && rM.ignoreMatch()
+          "on:begin": (VV, eV) => {
+            0 !== VV.index && eV.ignoreMatch()
           }
-        }, MM)
+        }, VV)
       },
-      TITLE_MODE: ZM,
-      UNDERSCORE_IDENT_RE: UM,
-      UNDERSCORE_TITLE_MODE: oM
+      TITLE_MODE: CV,
+      UNDERSCORE_IDENT_RE: tV,
+      UNDERSCORE_TITLE_MODE: aV
     });
 
-    function NM(MM, rM) {
-      "." === MM.input[MM.index - 1] && rM.ignoreMatch()
+    function hV(VV, eV) {
+      "." === VV.input[VV.index - 1] && eV.ignoreMatch()
     }
 
-    function AM(MM, rM) {
-      void 0 !== MM.className && (MM.scope = MM.className, delete MM.className)
+    function lV(VV, eV) {
+      void 0 !== VV.className && (VV.scope = VV.className, delete VV.className)
     }
 
-    function xM(MM, rM) {
-      rM && MM.beginKeywords && (MM.JL = "\\b(" + MM.beginKeywords.split(" ").join("|") + ")(?!\\.)(?=\\b|\\s)", MM.__beforeBegin = NM, MM.keywords = MM.keywords || MM.beginKeywords, delete MM.beginKeywords, void 0 === MM.relevance && (MM.relevance = 0))
+    function LV(VV, eV) {
+      eV && VV.beginKeywords && (VV.NZ = "\\b(" + VV.beginKeywords.split(" ").join("|") + ")(?!\\.)(?=\\b|\\s)", VV.__beforeBegin = hV, VV.keywords = VV.keywords || VV.beginKeywords, delete VV.beginKeywords, void 0 === VV.relevance && (VV.relevance = 0))
     }
 
-    function vM(MM, rM) {
-      Array.isArray(MM.illegal) && (MM.illegal = JM(...MM.illegal))
+    function fV(VV, eV) {
+      Array.isArray(VV.illegal) && (VV.illegal = bV(...VV.illegal))
     }
 
-    function FM(MM, rM) {
-      if (MM.match) {
-        if (MM.JL || MM.end) throw new Error("begin & end are not supported with match");
-        MM.JL = MM.match, delete MM.match
+    function mV(VV, eV) {
+      if (VV.match) {
+        if (VV.NZ || VV.end) throw new Error("begin & end are not supported with match");
+        VV.NZ = VV.match, delete VV.match
       }
     }
 
-    function BM(MM, rM) {
-      void 0 === MM.relevance && (MM.relevance = 1)
+    function KV(VV, eV) {
+      void 0 === VV.relevance && (VV.relevance = 1)
     }
-    const XM = (MM, rM) => {
-        if (!MM.beforeMatch) return;
-        if (MM.starts) throw new Error("beforeMatch cannot be used with starts");
-        const iM = Object.assign({}, MM);
-        Object.keys(MM).forEach((rM => {
-          delete MM[rM]
-        })), MM.keywords = iM.keywords, MM.JL = hM(iM.beforeMatch, LM(iM.JL)), MM.starts = {
+    const HV = (VV, eV) => {
+        if (!VV.beforeMatch) return;
+        if (VV.starts) throw new Error("beforeMatch cannot be used with starts");
+        const xV = Object.assign({}, VV);
+        Object.keys(VV).forEach((eV => {
+          delete VV[eV]
+        })), VV.keywords = xV.keywords, VV.NZ = kV(xV.beforeMatch, ZV(xV.NZ)), VV.starts = {
           relevance: 0,
-          contains: [Object.assign(iM, {
+          contains: [Object.assign(xV, {
             endsParent: !0
           })]
-        }, MM.relevance = 0, delete iM.beforeMatch
+        }, VV.relevance = 0, delete xV.beforeMatch
       },
-      IM = ["of", "and", "for", "in", "not", "or", "if", "then", "parent", "list", "value"];
+      uV = ["of", "and", "for", "in", "not", "or", "if", "then", "parent", "list", "value"];
 
-    function KM(MM, rM) {
-      let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "keyword";
-      const OM = Object.create(null);
-      return "string" === typeof MM ? SM(iM, MM.split(" ")) : Array.isArray(MM) ? SM(iM, MM) : Object.keys(MM).forEach((function(iM) {
-        Object.assign(OM, KM(MM[iM], rM, iM))
-      })), OM;
+    function sV(VV, eV) {
+      let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "keyword";
+      const JV = Object.create(null);
+      return "string" === typeof VV ? YV(xV, VV.split(" ")) : Array.isArray(VV) ? YV(xV, VV) : Object.keys(VV).forEach((function(xV) {
+        Object.assign(JV, sV(VV[xV], eV, xV))
+      })), JV;
 
-      function SM(MM, iM) {
-        rM && (iM = iM.map((MM => MM.toLowerCase()))), iM.forEach((function(rM) {
-          const iM = rM.split("|");
-          OM[iM[0]] = [MM, qM(iM[0], iM[1])]
+      function YV(VV, xV) {
+        eV && (xV = xV.map((VV => VV.toLowerCase()))), xV.forEach((function(eV) {
+          const xV = eV.split("|");
+          JV[xV[0]] = [VV, SV(xV[0], xV[1])]
         }))
       }
     }
 
-    function qM(MM, rM) {
-      return rM ? Number(rM) : function(MM) {
-        return IM.includes(MM.toLowerCase())
-      }(MM) ? 0 : 1
+    function SV(VV, eV) {
+      return eV ? Number(eV) : function(VV) {
+        return uV.includes(VV.toLowerCase())
+      }(VV) ? 0 : 1
     }
-    const TM = {},
-      VM = MM => {
-        console.error(MM)
+    const IV = {},
+      dV = VV => {
+        console.error(VV)
       },
-      cM = function(MM) {
-        for (var rM = arguments.length, iM = new Array(rM > 1 ? rM - 1 : 0), OM = 1; OM < rM; OM++) iM[OM - 1] = arguments[OM];
-        console.log(`WARN: ${MM}`, ...iM)
+      OV = function(VV) {
+        for (var eV = arguments.length, xV = new Array(eV > 1 ? eV - 1 : 0), JV = 1; JV < eV; JV++) xV[JV - 1] = arguments[JV];
+        console.log(`WARN: ${VV}`, ...xV)
       },
-      Mr = (MM, rM) => {
-        TM[`${MM}/${rM}`] || (console.log(`Deprecated as of ${MM}. ${rM}`), TM[`${MM}/${rM}`] = !0)
+      Ve = (VV, eV) => {
+        IV[`${VV}/${eV}`] || (console.log(`Deprecated as of ${VV}. ${eV}`), IV[`${VV}/${eV}`] = !0)
       },
-      rr = new Error;
+      ee = new Error;
 
-    function ir(MM, rM, iM) {
+    function xe(VV, eV, xV) {
       let {
-        key: OM
-      } = iM, SM = 0;
-      const jM = MM[OM],
-        aM = {},
-        PM = {};
-      for (let nM = 1; nM <= rM.length; nM++) PM[nM + SM] = jM[nM], aM[nM + SM] = !0, SM += dM(rM[nM - 1]);
-      MM[OM] = PM, MM[OM]._emit = aM, MM[OM]._multi = !0
+        key: JV
+      } = xV, YV = 0;
+      const UV = VV[JV],
+        yV = {},
+        pV = {};
+      for (let QV = 1; QV <= eV.length; QV++) pV[QV + YV] = UV[QV], yV[QV + YV] = !0, YV += EV(eV[QV - 1]);
+      VV[JV] = pV, VV[JV]._emit = yV, VV[JV]._multi = !0
     }
 
-    function Or(MM) {
-      ! function(MM) {
-        MM.scope && "object" === typeof MM.scope && null !== MM.scope && (MM.beginScope = MM.scope, delete MM.scope)
-      }(MM), "string" === typeof MM.beginScope && (MM.beginScope = {
-          _wrap: MM.beginScope
-        }), "string" === typeof MM.endScope && (MM.endScope = {
-          _wrap: MM.endScope
+    function Je(VV) {
+      ! function(VV) {
+        VV.scope && "object" === typeof VV.scope && null !== VV.scope && (VV.beginScope = VV.scope, delete VV.scope)
+      }(VV), "string" === typeof VV.beginScope && (VV.beginScope = {
+          _wrap: VV.beginScope
+        }), "string" === typeof VV.endScope && (VV.endScope = {
+          _wrap: VV.endScope
         }),
-        function(MM) {
-          if (Array.isArray(MM.JL)) {
-            if (MM.skip || MM.excludeBegin || MM.returnBegin) throw VM("skip, excludeBegin, returnBegin not compatible with beginScope: {}"), rr;
-            if ("object" !== typeof MM.beginScope || null === MM.beginScope) throw VM("beginScope must be object"), rr;
-            ir(MM, MM.JL, {
+        function(VV) {
+          if (Array.isArray(VV.NZ)) {
+            if (VV.skip || VV.excludeBegin || VV.returnBegin) throw dV("skip, excludeBegin, returnBegin not compatible with beginScope: {}"), ee;
+            if ("object" !== typeof VV.beginScope || null === VV.beginScope) throw dV("beginScope must be object"), ee;
+            xe(VV, VV.NZ, {
               key: "beginScope"
-            }), MM.JL = lM(MM.JL, {
+            }), VV.NZ = jV(VV.NZ, {
               joinWith: ""
             })
           }
-        }(MM),
-        function(MM) {
-          if (Array.isArray(MM.end)) {
-            if (MM.skip || MM.excludeEnd || MM.returnEnd) throw VM("skip, excludeEnd, returnEnd not compatible with endScope: {}"), rr;
-            if ("object" !== typeof MM.endScope || null === MM.endScope) throw VM("endScope must be object"), rr;
-            ir(MM, MM.end, {
+        }(VV),
+        function(VV) {
+          if (Array.isArray(VV.end)) {
+            if (VV.skip || VV.excludeEnd || VV.returnEnd) throw dV("skip, excludeEnd, returnEnd not compatible with endScope: {}"), ee;
+            if ("object" !== typeof VV.endScope || null === VV.endScope) throw dV("endScope must be object"), ee;
+            xe(VV, VV.end, {
               key: "endScope"
-            }), MM.end = lM(MM.end, {
+            }), VV.end = jV(VV.end, {
               joinWith: ""
             })
           }
-        }(MM)
+        }(VV)
     }
 
-    function Sr(MM) {
-      function rM(rM, iM) {
-        return new RegExp(zM(rM), "m" + (MM.case_insensitive ? "i" : "") + (MM.unicodeRegex ? "u" : "") + (iM ? "g" : ""))
+    function Ye(VV) {
+      function eV(eV, xV) {
+        return new RegExp(wV(eV), "m" + (VV.case_insensitive ? "i" : "") + (VV.unicodeRegex ? "u" : "") + (xV ? "g" : ""))
       }
-      class iM {
+      class xV {
         constructor() {
           this.matchIndexes = {}, this.regexes = [], this.matchAt = 1, this.position = 0
         }
-        addRule(MM, rM) {
-          rM.position = this.position++, this.matchIndexes[this.matchAt] = rM, this.regexes.push([rM, MM]), this.matchAt += dM(MM) + 1
+        addRule(VV, eV) {
+          eV.position = this.position++, this.matchIndexes[this.matchAt] = eV, this.regexes.push([eV, VV]), this.matchAt += EV(VV) + 1
         }
         compile() {
           0 === this.regexes.length && (this.exec = () => null);
-          const MM = this.regexes.map((MM => MM[1]));
-          this.matcherRe = rM(lM(MM, {
+          const VV = this.regexes.map((VV => VV[1]));
+          this.matcherRe = eV(jV(VV, {
             joinWith: "|"
           }), !0), this.lastIndex = 0
         }
-        exec(MM) {
+        exec(VV) {
           this.matcherRe.lastIndex = this.lastIndex;
-          const rM = this.matcherRe.exec(MM);
-          if (!rM) return null;
-          const iM = rM.findIndex(((MM, rM) => rM > 0 && void 0 !== MM)),
-            OM = this.matchIndexes[iM];
-          return rM.splice(0, iM), Object.assign(rM, OM)
+          const eV = this.matcherRe.exec(VV);
+          if (!eV) return null;
+          const xV = eV.findIndex(((VV, eV) => eV > 0 && void 0 !== VV)),
+            JV = this.matchIndexes[xV];
+          return eV.splice(0, xV), Object.assign(eV, JV)
         }
       }
-      class OM {
+      class JV {
         constructor() {
           this.rules = [], this.multiRegexes = [], this.count = 0, this.lastIndex = 0, this.regexIndex = 0
         }
-        getMatcher(MM) {
-          if (this.multiRegexes[MM]) return this.multiRegexes[MM];
-          const rM = new iM;
-          return this.rules.slice(MM).forEach((MM => {
-            let [iM, OM] = MM;
-            return rM.addRule(iM, OM)
-          })), rM.compile(), this.multiRegexes[MM] = rM, rM
+        getMatcher(VV) {
+          if (this.multiRegexes[VV]) return this.multiRegexes[VV];
+          const eV = new xV;
+          return this.rules.slice(VV).forEach((VV => {
+            let [xV, JV] = VV;
+            return eV.addRule(xV, JV)
+          })), eV.compile(), this.multiRegexes[VV] = eV, eV
         }
         resumingScanAtSamePosition() {
           return 0 !== this.regexIndex
@@ -494,81 +494,81 @@ export const modules = {
         considerAll() {
           this.regexIndex = 0
         }
-        addRule(MM, rM) {
-          this.rules.push([MM, rM]), "JL" === rM.type && this.count++
+        addRule(VV, eV) {
+          this.rules.push([VV, eV]), "NZ" === eV.type && this.count++
         }
-        exec(MM) {
-          const rM = this.getMatcher(this.regexIndex);
-          rM.lastIndex = this.lastIndex;
-          let iM = rM.exec(MM);
+        exec(VV) {
+          const eV = this.getMatcher(this.regexIndex);
+          eV.lastIndex = this.lastIndex;
+          let xV = eV.exec(VV);
           if (this.resumingScanAtSamePosition())
-            if (iM && iM.index === this.lastIndex);
+            if (xV && xV.index === this.lastIndex);
             else {
-              const rM = this.getMatcher(0);
-              rM.lastIndex = this.lastIndex + 1, iM = rM.exec(MM)
-            } return iM && (this.regexIndex += iM.position + 1, this.regexIndex === this.count && this.considerAll()), iM
+              const eV = this.getMatcher(0);
+              eV.lastIndex = this.lastIndex + 1, xV = eV.exec(VV)
+            } return xV && (this.regexIndex += xV.position + 1, this.regexIndex === this.count && this.considerAll()), xV
         }
       }
-      if (MM.compilerExtensions || (MM.compilerExtensions = []), MM.contains && MM.contains.includes("self")) throw new Error("ERR: contains `self` is not supported at the top-level of a language.  See documentation.");
-      return MM.classNameAliases = SM(MM.classNameAliases || {}),
-        function iM(jM, aM) {
-          const PM = jM;
-          if (jM.isCompiled) return PM;
-          [AM, FM, Or, XM].forEach((MM => MM(jM, aM))), MM.compilerExtensions.forEach((MM => MM(jM, aM))), jM.__beforeBegin = null, [xM, vM, BM].forEach((MM => MM(jM, aM))), jM.isCompiled = !0;
-          let nM = null;
-          return "object" === typeof jM.keywords && jM.keywords.$pattern && (jM.keywords = Object.assign({}, jM.keywords), nM = jM.keywords.$pattern, delete jM.keywords.$pattern), nM = nM || /\w+/, jM.keywords && (jM.keywords = KM(jM.keywords, MM.case_insensitive)), PM.keywordPatternRe = rM(nM, !0), aM && (jM.JL || (jM.JL = /\B|\b/), PM.beginRe = rM(PM.JL), jM.end || jM.endsWithParent || (jM.end = /\B|\b/), jM.end && (PM.endRe = rM(PM.end)), PM.terminatorEnd = zM(PM.end) || "", jM.endsWithParent && aM.terminatorEnd && (PM.terminatorEnd += (jM.end ? "|" : "") + aM.terminatorEnd)), jM.illegal && (PM.illegalRe = rM(jM.illegal)), jM.contains || (jM.contains = []), jM.contains = [].concat(...jM.contains.map((function(MM) {
-            return function(MM) {
-              MM.variants && !MM.cachedVariants && (MM.cachedVariants = MM.variants.map((function(rM) {
-                return SM(MM, {
+      if (VV.compilerExtensions || (VV.compilerExtensions = []), VV.contains && VV.contains.includes("self")) throw new Error("ERR: contains `self` is not supported at the top-level of a language.  See documentation.");
+      return VV.classNameAliases = YV(VV.classNameAliases || {}),
+        function xV(UV, yV) {
+          const pV = UV;
+          if (UV.isCompiled) return pV;
+          [lV, mV, Je, HV].forEach((VV => VV(UV, yV))), VV.compilerExtensions.forEach((VV => VV(UV, yV))), UV.__beforeBegin = null, [LV, fV, KV].forEach((VV => VV(UV, yV))), UV.isCompiled = !0;
+          let QV = null;
+          return "object" === typeof UV.keywords && UV.keywords.$pattern && (UV.keywords = Object.assign({}, UV.keywords), QV = UV.keywords.$pattern, delete UV.keywords.$pattern), QV = QV || /\w+/, UV.keywords && (UV.keywords = sV(UV.keywords, VV.case_insensitive)), pV.keywordPatternRe = eV(QV, !0), yV && (UV.NZ || (UV.NZ = /\B|\b/), pV.beginRe = eV(pV.NZ), UV.end || UV.endsWithParent || (UV.end = /\B|\b/), UV.end && (pV.endRe = eV(pV.end)), pV.terminatorEnd = wV(pV.end) || "", UV.endsWithParent && yV.terminatorEnd && (pV.terminatorEnd += (UV.end ? "|" : "") + yV.terminatorEnd)), UV.illegal && (pV.illegalRe = eV(UV.illegal)), UV.contains || (UV.contains = []), UV.contains = [].concat(...UV.contains.map((function(VV) {
+            return function(VV) {
+              VV.variants && !VV.cachedVariants && (VV.cachedVariants = VV.variants.map((function(eV) {
+                return YV(VV, {
                   variants: null
-                }, rM)
+                }, eV)
               })));
-              if (MM.cachedVariants) return MM.cachedVariants;
-              if (jr(MM)) return SM(MM, {
-                starts: MM.starts ? SM(MM.starts) : null
+              if (VV.cachedVariants) return VV.cachedVariants;
+              if (Ue(VV)) return YV(VV, {
+                starts: VV.starts ? YV(VV.starts) : null
               });
-              if (Object.isFrozen(MM)) return SM(MM);
-              return MM
-            }("self" === MM ? jM : MM)
-          }))), jM.contains.forEach((function(MM) {
-            iM(MM, PM)
-          })), jM.starts && iM(jM.starts, aM), PM.matcher = function(MM) {
-            const rM = new OM;
-            return MM.contains.forEach((MM => rM.addRule(MM.JL, {
-              rule: MM,
-              type: "JL"
-            }))), MM.terminatorEnd && rM.addRule(MM.terminatorEnd, {
+              if (Object.isFrozen(VV)) return YV(VV);
+              return VV
+            }("self" === VV ? UV : VV)
+          }))), UV.contains.forEach((function(VV) {
+            xV(VV, pV)
+          })), UV.starts && xV(UV.starts, yV), pV.matcher = function(VV) {
+            const eV = new JV;
+            return VV.contains.forEach((VV => eV.addRule(VV.NZ, {
+              rule: VV,
+              type: "NZ"
+            }))), VV.terminatorEnd && eV.addRule(VV.terminatorEnd, {
               type: "end"
-            }), MM.illegal && rM.addRule(MM.illegal, {
+            }), VV.illegal && eV.addRule(VV.illegal, {
               type: "illegal"
-            }), rM
-          }(PM), PM
-        }(MM)
+            }), eV
+          }(pV), pV
+        }(VV)
     }
 
-    function jr(MM) {
-      return !!MM && (MM.endsWithParent || jr(MM.starts))
+    function Ue(VV) {
+      return !!VV && (VV.endsWithParent || Ue(VV.starts))
     }
-    class ar extends Error {
-      constructor(MM, rM) {
-        super(MM), this.name = "HTMLInjectionError", this.html = rM
+    class ye extends Error {
+      constructor(VV, eV) {
+        super(VV), this.name = "HTMLInjectionError", this.html = eV
       }
     }
-    const Pr = OM,
-      nr = SM,
-      Qr = Symbol("nomatch"),
-      zr = function(MM) {
-        const OM = Object.create(null),
-          SM = Object.create(null),
-          jM = [];
-        let aM = !0;
-        const PM = "Could not find the language '{}', did you forget to load/include a language module?",
-          nM = {
+    const pe = JV,
+      Qe = YV,
+      ne = Symbol("nomatch"),
+      we = function(VV) {
+        const JV = Object.create(null),
+          YV = Object.create(null),
+          UV = [];
+        let yV = !0;
+        const pV = "Could not find the language '{}', did you forget to load/include a language module?",
+          QV = {
             disableAutodetect: !0,
             name: "Plain text",
             contains: []
           };
-        let zM = {
+        let wV = {
           ignoreUnescapedHTML: !1,
           throwUnescapedHTML: !1,
           noHighlightRe: /^(no-?highlight)$/i,
@@ -576,575 +576,575 @@ export const modules = {
           classPrefix: "hljs-",
           cssSelector: "pre code",
           languages: null,
-          __emitter: QM
+          __emitter: nV
         };
 
-        function dM(MM) {
-          return zM.noHighlightRe.test(MM)
+        function EV(VV) {
+          return wV.noHighlightRe.test(VV)
         }
 
-        function yM(MM, rM, iM) {
-          let OM = "",
-            SM = "";
-          "object" === typeof rM ? (OM = MM, iM = rM.ignoreIllegals, SM = rM.language) : (Mr("10.7.0", "highlight(lang, code, ...args) has been deprecated."), Mr("10.7.0", "Please use highlight(code, options) instead.\nhttps://github.com/highlightjs/highlight.js/issues/2277"), SM = MM, OM = rM), void 0 === iM && (iM = !0);
-          const jM = {
-            code: OM,
-            language: SM
+        function BV(VV, eV, xV) {
+          let JV = "",
+            YV = "";
+          "object" === typeof eV ? (JV = VV, xV = eV.ignoreIllegals, YV = eV.language) : (Ve("10.7.0", "highlight(lang, code, ...args) has been deprecated."), Ve("10.7.0", "Please use highlight(code, options) instead.\nhttps://github.com/highlightjs/highlight.js/issues/2277"), YV = VV, JV = eV), void 0 === xV && (xV = !0);
+          const UV = {
+            code: JV,
+            language: YV
           };
-          tM("before:highlight", jM);
-          const aM = jM.result ? jM.result : lM(jM.language, jM.code, iM);
-          return aM.code = jM.code, tM("after:highlight", aM), aM
+          XV("before:highlight", UV);
+          const yV = UV.result ? UV.result : jV(UV.language, UV.code, xV);
+          return yV.code = UV.code, XV("after:highlight", yV), yV
         }
 
-        function lM(MM, rM, SM, jM) {
-          const nM = Object.create(null);
+        function jV(VV, eV, YV, UV) {
+          const QV = Object.create(null);
 
-          function QM() {
-            if (!tM.keywords) return void uM.addText(RM);
-            let MM = 0;
-            tM.keywordPatternRe.lastIndex = 0;
-            let rM = tM.keywordPatternRe.exec(RM),
-              iM = "";
-            for (; rM;) {
-              iM += RM.substring(MM, rM.index);
-              const SM = CM.case_insensitive ? rM[0].toLowerCase() : rM[0],
-                jM = (OM = SM, tM.keywords[OM]);
-              if (jM) {
-                const [MM, OM] = jM;
-                if (uM.addText(iM), iM = "", nM[SM] = (nM[SM] || 0) + 1, nM[SM] <= 7 && (pM += OM), MM.startsWith("_")) iM += rM[0];
+          function nV() {
+            if (!XV.keywords) return void zV.addText(GV);
+            let VV = 0;
+            XV.keywordPatternRe.lastIndex = 0;
+            let eV = XV.keywordPatternRe.exec(GV),
+              xV = "";
+            for (; eV;) {
+              xV += GV.substring(VV, eV.index);
+              const YV = TV.case_insensitive ? eV[0].toLowerCase() : eV[0],
+                UV = (JV = YV, XV.keywords[JV]);
+              if (UV) {
+                const [VV, JV] = UV;
+                if (zV.addText(xV), xV = "", QV[YV] = (QV[YV] || 0) + 1, QV[YV] <= 7 && (WV += JV), VV.startsWith("_")) xV += eV[0];
                 else {
-                  const iM = CM.classNameAliases[MM] || MM;
-                  mM(rM[0], iM)
+                  const xV = TV.classNameAliases[VV] || VV;
+                  vV(eV[0], xV)
                 }
-              } else iM += rM[0];
-              MM = tM.keywordPatternRe.lastIndex, rM = tM.keywordPatternRe.exec(RM)
+              } else xV += eV[0];
+              VV = XV.keywordPatternRe.lastIndex, eV = XV.keywordPatternRe.exec(GV)
             }
-            var OM;
-            iM += RM.substring(MM), uM.addText(iM)
+            var JV;
+            xV += GV.substring(VV), zV.addText(xV)
           }
 
-          function LM() {
-            null != tM.subLanguage ? function() {
-              if ("" === RM) return;
-              let MM = null;
-              if ("string" === typeof tM.subLanguage) {
-                if (!OM[tM.subLanguage]) return void uM.addText(RM);
-                MM = lM(tM.subLanguage, RM, !0, gM[tM.subLanguage]), gM[tM.subLanguage] = MM._top
-              } else MM = EM(RM, tM.subLanguage.length ? tM.subLanguage : null);
-              tM.relevance > 0 && (pM += MM.relevance), uM.__addSublanguage(MM._emitter, MM.language)
-            }() : QM(), RM = ""
+          function ZV() {
+            null != XV.subLanguage ? function() {
+              if ("" === GV) return;
+              let VV = null;
+              if ("string" === typeof XV.subLanguage) {
+                if (!JV[XV.subLanguage]) return void zV.addText(GV);
+                VV = jV(XV.subLanguage, GV, !0, MV[XV.subLanguage]), MV[XV.subLanguage] = VV._top
+              } else VV = qV(GV, XV.subLanguage.length ? XV.subLanguage : null);
+              XV.relevance > 0 && (WV += VV.relevance), zV.__addSublanguage(VV._emitter, VV.language)
+            }() : nV(), GV = ""
           }
 
-          function mM(MM, rM) {
-            "" !== MM && (uM.startScope(rM), uM.addText(MM), uM.endScope())
+          function vV(VV, eV) {
+            "" !== VV && (zV.startScope(eV), zV.addText(VV), zV.endScope())
           }
 
-          function HM(MM, rM) {
-            let iM = 1;
-            const OM = rM.length - 1;
-            for (; iM <= OM;) {
-              if (!MM._emit[iM]) {
-                iM++;
+          function rV(VV, eV) {
+            let xV = 1;
+            const JV = eV.length - 1;
+            for (; xV <= JV;) {
+              if (!VV._emit[xV]) {
+                xV++;
                 continue
               }
-              const OM = CM.classNameAliases[MM[iM]] || MM[iM],
-                SM = rM[iM];
-              OM ? mM(SM, OM) : (RM = SM, QM(), RM = ""), iM++
+              const JV = TV.classNameAliases[VV[xV]] || VV[xV],
+                YV = eV[xV];
+              JV ? vV(YV, JV) : (GV = YV, nV(), GV = ""), xV++
             }
           }
 
-          function hM(MM, rM) {
-            return MM.scope && "string" === typeof MM.scope && uM.openNode(CM.classNameAliases[MM.scope] || MM.scope), MM.beginScope && (MM.beginScope._wrap ? (mM(RM, CM.classNameAliases[MM.beginScope._wrap] || MM.beginScope._wrap), RM = "") : MM.beginScope._multi && (HM(MM.beginScope, rM), RM = "")), tM = Object.create(MM, {
+          function kV(VV, eV) {
+            return VV.scope && "string" === typeof VV.scope && zV.openNode(TV.classNameAliases[VV.scope] || VV.scope), VV.beginScope && (VV.beginScope._wrap ? (vV(GV, TV.classNameAliases[VV.beginScope._wrap] || VV.beginScope._wrap), GV = "") : VV.beginScope._multi && (rV(VV.beginScope, eV), GV = "")), XV = Object.create(VV, {
               parent: {
-                value: tM
+                value: XV
               }
-            }), tM
+            }), XV
           }
 
-          function JM(MM, rM, OM) {
-            let SM = function(MM, rM) {
-              const iM = MM && MM.exec(rM);
-              return iM && 0 === iM.index
-            }(MM.endRe, OM);
-            if (SM) {
-              if (MM["on:end"]) {
-                const OM = new iM(MM);
-                MM["on:end"](rM, OM), OM.isMatchIgnored && (SM = !1)
+          function bV(VV, eV, JV) {
+            let YV = function(VV, eV) {
+              const xV = VV && VV.exec(eV);
+              return xV && 0 === xV.index
+            }(VV.endRe, JV);
+            if (YV) {
+              if (VV["on:end"]) {
+                const JV = new xV(VV);
+                VV["on:end"](eV, JV), JV.isMatchIgnored && (YV = !1)
               }
-              if (SM) {
-                for (; MM.endsParent && MM.parent;) MM = MM.parent;
-                return MM
+              if (YV) {
+                for (; VV.endsParent && VV.parent;) VV = VV.parent;
+                return VV
               }
             }
-            if (MM.endsWithParent) return JM(MM.parent, rM, OM)
+            if (VV.endsWithParent) return bV(VV.parent, eV, JV)
           }
 
-          function dM(MM) {
-            return 0 === tM.matcher.regexIndex ? (RM += MM[0], 1) : (DM = !0, 0)
+          function EV(VV) {
+            return 0 === XV.matcher.regexIndex ? (GV += VV[0], 1) : (DV = !0, 0)
           }
 
-          function yM(MM) {
-            const iM = MM[0],
-              OM = rM.substring(MM.index),
-              SM = JM(tM, MM, OM);
-            if (!SM) return Qr;
-            const jM = tM;
-            tM.endScope && tM.endScope._wrap ? (LM(), mM(iM, tM.endScope._wrap)) : tM.endScope && tM.endScope._multi ? (LM(), HM(tM.endScope, MM)) : jM.skip ? RM += iM : (jM.returnEnd || jM.excludeEnd || (RM += iM), LM(), jM.excludeEnd && (RM = iM));
+          function BV(VV) {
+            const xV = VV[0],
+              JV = eV.substring(VV.index),
+              YV = bV(XV, VV, JV);
+            if (!YV) return ne;
+            const UV = XV;
+            XV.endScope && XV.endScope._wrap ? (ZV(), vV(xV, XV.endScope._wrap)) : XV.endScope && XV.endScope._multi ? (ZV(), rV(XV.endScope, VV)) : UV.skip ? GV += xV : (UV.returnEnd || UV.excludeEnd || (GV += xV), ZV(), UV.excludeEnd && (GV = xV));
             do {
-              tM.scope && uM.closeNode(), tM.skip || tM.subLanguage || (pM += tM.relevance), tM = tM.parent
-            } while (tM !== SM.parent);
-            return SM.starts && hM(SM.starts, MM), jM.returnEnd ? 0 : iM.length
+              XV.scope && zV.closeNode(), XV.skip || XV.subLanguage || (WV += XV.relevance), XV = XV.parent
+            } while (XV !== YV.parent);
+            return YV.starts && kV(YV.starts, VV), UV.returnEnd ? 0 : xV.length
           }
-          let UM = {};
+          let tV = {};
 
-          function GM(OM, jM) {
-            const PM = jM && jM[0];
-            if (RM += OM, null == PM) return LM(), 0;
-            if ("JL" === UM.type && "end" === jM.type && UM.index === jM.index && "" === PM) {
-              if (RM += rM.slice(jM.index, jM.index + 1), !aM) {
-                const rM = new Error(`0 width match regex (${MM})`);
-                throw rM.languageName = MM, rM.badRule = UM.rule, rM
+          function FV(JV, UV) {
+            const pV = UV && UV[0];
+            if (GV += JV, null == pV) return ZV(), 0;
+            if ("NZ" === tV.type && "end" === UV.type && tV.index === UV.index && "" === pV) {
+              if (GV += eV.slice(UV.index, UV.index + 1), !yV) {
+                const eV = new Error(`0 width match regex (${VV})`);
+                throw eV.languageName = VV, eV.badRule = tV.rule, eV
               }
               return 1
             }
-            if (UM = jM, "JL" === jM.type) return function(MM) {
-              const rM = MM[0],
-                OM = MM.rule,
-                SM = new iM(OM),
-                jM = [OM.__beforeBegin, OM["on:begin"]];
-              for (const iM of jM)
-                if (iM && (iM(MM, SM), SM.isMatchIgnored)) return dM(rM);
-              return OM.skip ? RM += rM : (OM.excludeBegin && (RM += rM), LM(), OM.returnBegin || OM.excludeBegin || (RM = rM)), hM(OM, MM), OM.returnBegin ? 0 : rM.length
-            }(jM);
-            if ("illegal" === jM.type && !SM) {
-              const MM = new Error('Illegal lexeme "' + PM + '" for mode "' + (tM.scope || "<unnamed>") + '"');
-              throw MM.mode = tM, MM
+            if (tV = UV, "NZ" === UV.type) return function(VV) {
+              const eV = VV[0],
+                JV = VV.rule,
+                YV = new xV(JV),
+                UV = [JV.__beforeBegin, JV["on:begin"]];
+              for (const xV of UV)
+                if (xV && (xV(VV, YV), YV.isMatchIgnored)) return EV(eV);
+              return JV.skip ? GV += eV : (JV.excludeBegin && (GV += eV), ZV(), JV.returnBegin || JV.excludeBegin || (GV = eV)), kV(JV, VV), JV.returnBegin ? 0 : eV.length
+            }(UV);
+            if ("illegal" === UV.type && !YV) {
+              const VV = new Error('Illegal lexeme "' + pV + '" for mode "' + (XV.scope || "<unnamed>") + '"');
+              throw VV.mode = XV, VV
             }
-            if ("end" === jM.type) {
-              const MM = yM(jM);
-              if (MM !== Qr) return MM
+            if ("end" === UV.type) {
+              const VV = BV(UV);
+              if (VV !== ne) return VV
             }
-            if ("illegal" === jM.type && "" === PM) return RM += "\n", 1;
-            if (sM > 1e5 && sM > 3 * jM.index) {
+            if ("illegal" === UV.type && "" === pV) return GV += "\n", 1;
+            if (gV > 1e5 && gV > 3 * UV.index) {
               throw new Error("potential infinite loop, way more iterations than matches")
             }
-            return RM += PM, PM.length
+            return GV += pV, pV.length
           }
-          const CM = eM(MM);
-          if (!CM) throw VM(PM.replace("{}", MM)), new Error('Unknown language: "' + MM + '"');
-          const bM = Sr(CM);
-          let wM = "",
-            tM = jM || bM;
-          const gM = {},
-            uM = new zM.__emitter(zM);
+          const TV = PV(VV);
+          if (!TV) throw dV(pV.replace("{}", VV)), new Error('Unknown language: "' + VV + '"');
+          const AV = Ye(TV);
+          let NV = "",
+            XV = UV || AV;
+          const MV = {},
+            zV = new wV.__emitter(wV);
           ! function() {
-            const MM = [];
-            for (let rM = tM; rM !== CM; rM = rM.parent) rM.scope && MM.unshift(rM.scope);
-            MM.forEach((MM => uM.openNode(MM)))
+            const VV = [];
+            for (let eV = XV; eV !== TV; eV = eV.parent) eV.scope && VV.unshift(eV.scope);
+            VV.forEach((VV => zV.openNode(VV)))
           }();
-          let RM = "",
-            pM = 0,
-            WM = 0,
-            sM = 0,
-            DM = !1;
+          let GV = "",
+            WV = 0,
+            RV = 0,
+            gV = 0,
+            DV = !1;
           try {
-            if (CM.__emitTokens) CM.__emitTokens(rM, uM);
+            if (TV.__emitTokens) TV.__emitTokens(eV, zV);
             else {
-              for (tM.matcher.considerAll();;) {
-                sM++, DM ? DM = !1 : tM.matcher.considerAll(), tM.matcher.lastIndex = WM;
-                const MM = tM.matcher.exec(rM);
-                if (!MM) break;
-                const iM = GM(rM.substring(WM, MM.index), MM);
-                WM = MM.index + iM
+              for (XV.matcher.considerAll();;) {
+                gV++, DV ? DV = !1 : XV.matcher.considerAll(), XV.matcher.lastIndex = RV;
+                const VV = XV.matcher.exec(eV);
+                if (!VV) break;
+                const xV = FV(eV.substring(RV, VV.index), VV);
+                RV = VV.index + xV
               }
-              GM(rM.substring(WM))
+              FV(eV.substring(RV))
             }
-            return uM.finalize(), wM = uM.toHTML(), {
-              language: MM,
-              value: wM,
-              relevance: pM,
+            return zV.finalize(), NV = zV.toHTML(), {
+              language: VV,
+              value: NV,
+              relevance: WV,
               illegal: !1,
-              _emitter: uM,
-              _top: tM
+              _emitter: zV,
+              _top: XV
             }
-          } catch (kM) {
-            if (kM.message && kM.message.includes("Illegal")) return {
-              language: MM,
-              value: Pr(rM),
+          } catch (iV) {
+            if (iV.message && iV.message.includes("Illegal")) return {
+              language: VV,
+              value: pe(eV),
               illegal: !0,
               relevance: 0,
               _illegalBy: {
-                message: kM.message,
-                index: WM,
-                context: rM.slice(WM - 100, WM + 100),
-                mode: kM.mode,
-                resultSoFar: wM
+                message: iV.message,
+                index: RV,
+                context: eV.slice(RV - 100, RV + 100),
+                mode: iV.mode,
+                resultSoFar: NV
               },
-              _emitter: uM
+              _emitter: zV
             };
-            if (aM) return {
-              language: MM,
-              value: Pr(rM),
+            if (yV) return {
+              language: VV,
+              value: pe(eV),
               illegal: !1,
               relevance: 0,
-              errorRaised: kM,
-              _emitter: uM,
-              _top: tM
+              errorRaised: iV,
+              _emitter: zV,
+              _top: XV
             };
-            throw kM
+            throw iV
           }
         }
 
-        function EM(MM, rM) {
-          rM = rM || zM.languages || Object.keys(OM);
-          const iM = function(MM) {
-              const rM = {
-                value: Pr(MM),
+        function qV(VV, eV) {
+          eV = eV || wV.languages || Object.keys(JV);
+          const xV = function(VV) {
+              const eV = {
+                value: pe(VV),
                 illegal: !1,
                 relevance: 0,
-                _top: nM,
-                _emitter: new zM.__emitter(zM)
+                _top: QV,
+                _emitter: new wV.__emitter(wV)
               };
-              return rM._emitter.addText(MM), rM
-            }(MM),
-            SM = rM.filter(eM).filter(wM).map((rM => lM(rM, MM, !1)));
-          SM.unshift(iM);
-          const jM = SM.sort(((MM, rM) => {
-              if (MM.relevance !== rM.relevance) return rM.relevance - MM.relevance;
-              if (MM.language && rM.language) {
-                if (eM(MM.language).supersetOf === rM.language) return 1;
-                if (eM(rM.language).supersetOf === MM.language) return -1
+              return eV._emitter.addText(VV), eV
+            }(VV),
+            YV = eV.filter(PV).filter(NV).map((eV => jV(eV, VV, !1)));
+          YV.unshift(xV);
+          const UV = YV.sort(((VV, eV) => {
+              if (VV.relevance !== eV.relevance) return eV.relevance - VV.relevance;
+              if (VV.language && eV.language) {
+                if (PV(VV.language).supersetOf === eV.language) return 1;
+                if (PV(eV.language).supersetOf === VV.language) return -1
               }
               return 0
             })),
-            [aM, PM] = jM,
-            QM = aM;
-          return QM.secondBest = PM, QM
+            [yV, pV] = UV,
+            nV = yV;
+          return nV.secondBest = pV, nV
         }
 
-        function UM(MM) {
-          let rM = null;
-          const iM = function(MM) {
-            let rM = MM.className + " ";
-            rM += MM.parentNode ? MM.parentNode.className : "";
-            const iM = zM.languageDetectRe.exec(rM);
-            if (iM) {
-              const rM = eM(iM[1]);
-              return rM || (cM(PM.replace("{}", iM[1])), cM("Falling back to no-highlight mode for this block.", MM)), rM ? iM[1] : "no-highlight"
+        function tV(VV) {
+          let eV = null;
+          const xV = function(VV) {
+            let eV = VV.className + " ";
+            eV += VV.parentNode ? VV.parentNode.className : "";
+            const xV = wV.languageDetectRe.exec(eV);
+            if (xV) {
+              const eV = PV(xV[1]);
+              return eV || (OV(pV.replace("{}", xV[1])), OV("Falling back to no-highlight mode for this block.", VV)), eV ? xV[1] : "no-highlight"
             }
-            return rM.split(/\s+/).find((MM => dM(MM) || eM(MM)))
-          }(MM);
-          if (dM(iM)) return;
-          if (tM("before:highlightElement", {
-              el: MM,
-              language: iM
-            }), MM.dataset.highlighted) return void console.log("Element previously highlighted. To highlight again, first unset `dataset.highlighted`.", MM);
-          if (MM.children.length > 0 && (zM.ignoreUnescapedHTML || (console.warn("One of your code blocks includes unescaped HTML. This is a potentially serious security risk."), console.warn("https://github.com/highlightjs/highlight.js/wiki/security"), console.warn("The element with unescaped HTML:"), console.warn(MM)), zM.throwUnescapedHTML)) {
-            throw new ar("One of your code blocks includes unescaped HTML.", MM.innerHTML)
+            return eV.split(/\s+/).find((VV => EV(VV) || PV(VV)))
+          }(VV);
+          if (EV(xV)) return;
+          if (XV("before:highlightElement", {
+              el: VV,
+              language: xV
+            }), VV.dataset.highlighted) return void console.log("Element previously highlighted. To highlight again, first unset `dataset.highlighted`.", VV);
+          if (VV.children.length > 0 && (wV.ignoreUnescapedHTML || (console.warn("One of your code blocks includes unescaped HTML. This is a potentially serious security risk."), console.warn("https://github.com/highlightjs/highlight.js/wiki/security"), console.warn("The element with unescaped HTML:"), console.warn(VV)), wV.throwUnescapedHTML)) {
+            throw new ye("One of your code blocks includes unescaped HTML.", VV.innerHTML)
           }
-          rM = MM;
-          const OM = rM.textContent,
-            jM = iM ? yM(OM, {
-              language: iM,
+          eV = VV;
+          const JV = eV.textContent,
+            UV = xV ? BV(JV, {
+              language: xV,
               ignoreIllegals: !0
-            }) : EM(OM);
-          MM.innerHTML = jM.value, MM.dataset.highlighted = "yes",
-            function(MM, rM, iM) {
-              const OM = rM && SM[rM] || iM;
-              MM.classList.add("hljs"), MM.classList.add(`language-${OM}`)
-            }(MM, iM, jM.language), MM.result = {
-              language: jM.language,
-              re: jM.relevance,
-              relevance: jM.relevance
-            }, jM.secondBest && (MM.secondBest = {
-              language: jM.secondBest.language,
-              relevance: jM.secondBest.relevance
-            }), tM("after:highlightElement", {
-              el: MM,
-              result: jM,
-              text: OM
+            }) : qV(JV);
+          VV.innerHTML = UV.value, VV.dataset.highlighted = "yes",
+            function(VV, eV, xV) {
+              const JV = eV && YV[eV] || xV;
+              VV.classList.add("hljs"), VV.classList.add(`language-${JV}`)
+            }(VV, xV, UV.language), VV.result = {
+              language: UV.language,
+              re: UV.relevance,
+              relevance: UV.relevance
+            }, UV.secondBest && (VV.secondBest = {
+              language: UV.secondBest.language,
+              relevance: UV.secondBest.relevance
+            }), XV("after:highlightElement", {
+              el: VV,
+              result: UV,
+              text: JV
             })
         }
-        let GM = !1;
+        let FV = !1;
 
-        function CM() {
-          if ("loading" === document.readyState) return GM || window.addEventListener("DOMContentLoaded", (function() {
-            CM()
-          }), !1), void(GM = !0);
-          document.querySelectorAll(zM.cssSelector).forEach(UM)
+        function TV() {
+          if ("loading" === document.readyState) return FV || window.addEventListener("DOMContentLoaded", (function() {
+            TV()
+          }), !1), void(FV = !0);
+          document.querySelectorAll(wV.cssSelector).forEach(tV)
         }
 
-        function eM(MM) {
-          return MM = (MM || "").toLowerCase(), OM[MM] || OM[SM[MM]]
+        function PV(VV) {
+          return VV = (VV || "").toLowerCase(), JV[VV] || JV[YV[VV]]
         }
 
-        function bM(MM, rM) {
+        function AV(VV, eV) {
           let {
-            languageName: iM
-          } = rM;
-          "string" === typeof MM && (MM = [MM]), MM.forEach((MM => {
-            SM[MM.toLowerCase()] = iM
+            languageName: xV
+          } = eV;
+          "string" === typeof VV && (VV = [VV]), VV.forEach((VV => {
+            YV[VV.toLowerCase()] = xV
           }))
         }
 
-        function wM(MM) {
-          const rM = eM(MM);
-          return rM && !rM.disableAutodetect
+        function NV(VV) {
+          const eV = PV(VV);
+          return eV && !eV.disableAutodetect
         }
 
-        function tM(MM, rM) {
-          const iM = MM;
-          jM.forEach((function(MM) {
-            MM[iM] && MM[iM](rM)
+        function XV(VV, eV) {
+          const xV = VV;
+          UV.forEach((function(VV) {
+            VV[xV] && VV[xV](eV)
           }))
         }
-        Object.assign(MM, {
-          highlight: yM,
-          highlightAuto: EM,
-          highlightAll: CM,
-          highlightElement: UM,
-          highlightBlock: function(MM) {
-            return Mr("10.7.0", "highlightBlock will be removed entirely in v12.0"), Mr("10.7.0", "Please use highlightElement now."), UM(MM)
+        Object.assign(VV, {
+          highlight: BV,
+          highlightAuto: qV,
+          highlightAll: TV,
+          highlightElement: tV,
+          highlightBlock: function(VV) {
+            return Ve("10.7.0", "highlightBlock will be removed entirely in v12.0"), Ve("10.7.0", "Please use highlightElement now."), tV(VV)
           },
-          configure: function(MM) {
-            zM = nr(zM, MM)
+          configure: function(VV) {
+            wV = Qe(wV, VV)
           },
           initHighlighting: () => {
-            CM(), Mr("10.6.0", "initHighlighting() deprecated.  Use highlightAll() now.")
+            TV(), Ve("10.6.0", "initHighlighting() deprecated.  Use highlightAll() now.")
           },
           initHighlightingOnLoad: function() {
-            CM(), Mr("10.6.0", "initHighlightingOnLoad() deprecated.  Use highlightAll() now.")
+            TV(), Ve("10.6.0", "initHighlightingOnLoad() deprecated.  Use highlightAll() now.")
           },
-          registerLanguage: function(rM, iM) {
-            let SM = null;
+          registerLanguage: function(eV, xV) {
+            let YV = null;
             try {
-              SM = iM(MM)
-            } catch (jM) {
-              if (VM("Language definition for '{}' could not be registered.".replace("{}", rM)), !aM) throw jM;
-              VM(jM), SM = nM
+              YV = xV(VV)
+            } catch (UV) {
+              if (dV("Language definition for '{}' could not be registered.".replace("{}", eV)), !yV) throw UV;
+              dV(UV), YV = QV
             }
-            SM.name || (SM.name = rM), OM[rM] = SM, SM.rawDefinition = iM.bind(null, MM), SM.aliases && bM(SM.aliases, {
-              languageName: rM
+            YV.name || (YV.name = eV), JV[eV] = YV, YV.rawDefinition = xV.bind(null, VV), YV.aliases && AV(YV.aliases, {
+              languageName: eV
             })
           },
-          unregisterLanguage: function(MM) {
-            delete OM[MM];
-            for (const rM of Object.keys(SM)) SM[rM] === MM && delete SM[rM]
+          unregisterLanguage: function(VV) {
+            delete JV[VV];
+            for (const eV of Object.keys(YV)) YV[eV] === VV && delete YV[eV]
           },
           listLanguages: function() {
-            return Object.keys(OM)
+            return Object.keys(JV)
           },
-          getLanguage: eM,
-          registerAliases: bM,
-          autoDetection: wM,
-          inherit: nr,
-          addPlugin: function(MM) {
-            ! function(MM) {
-              MM["before:highlightBlock"] && !MM["before:highlightElement"] && (MM["before:highlightElement"] = rM => {
-                MM["before:highlightBlock"](Object.assign({
-                  block: rM.el
-                }, rM))
-              }), MM["after:highlightBlock"] && !MM["after:highlightElement"] && (MM["after:highlightElement"] = rM => {
-                MM["after:highlightBlock"](Object.assign({
-                  block: rM.el
-                }, rM))
+          getLanguage: PV,
+          registerAliases: AV,
+          autoDetection: NV,
+          inherit: Qe,
+          addPlugin: function(VV) {
+            ! function(VV) {
+              VV["before:highlightBlock"] && !VV["before:highlightElement"] && (VV["before:highlightElement"] = eV => {
+                VV["before:highlightBlock"](Object.assign({
+                  block: eV.el
+                }, eV))
+              }), VV["after:highlightBlock"] && !VV["after:highlightElement"] && (VV["after:highlightElement"] = eV => {
+                VV["after:highlightBlock"](Object.assign({
+                  block: eV.el
+                }, eV))
               })
-            }(MM), jM.push(MM)
+            }(VV), UV.push(VV)
           },
-          removePlugin: function(MM) {
-            const rM = jM.indexOf(MM); - 1 !== rM && jM.splice(rM, 1)
+          removePlugin: function(VV) {
+            const eV = UV.indexOf(VV); - 1 !== eV && UV.splice(eV, 1)
           }
-        }), MM.debugMode = function() {
-          aM = !1
-        }, MM.safeMode = function() {
-          aM = !0
-        }, MM.versionString = "11.11.1", MM.regex = {
-          concat: hM,
-          lookahead: LM,
-          either: JM,
-          optional: HM,
-          anyNumberOfTimes: mM
+        }), VV.debugMode = function() {
+          yV = !1
+        }, VV.safeMode = function() {
+          yV = !0
+        }, VV.versionString = "11.11.1", VV.regex = {
+          concat: kV,
+          lookahead: ZV,
+          either: bV,
+          optional: rV,
+          anyNumberOfTimes: vV
         };
-        for (const iM in YM) "object" === typeof YM[iM] && rM(YM[iM]);
-        return Object.assign(MM, YM), MM
+        for (const xV in cV) "object" === typeof cV[xV] && eV(cV[xV]);
+        return Object.assign(VV, cV), VV
       },
-      Lr = zr({});
-    Lr.newInstance = () => zr({}), MM.exports = Lr, Lr.HighlightJS = Lr, Lr.default = Lr
+      Ze = we({});
+    Ze.newInstance = () => we({}), VV.exports = Ze, Ze.HighlightJS = Ze, Ze.default = Ze
   },
-  5115: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => OM
+  5226: (VV, eV, xV) => {
+    xV.d(eV, {
+      c: () => JV
     });
-    const OM = iM(5121)
+    const JV = xV(5230)
   },
-  5125: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => LM
+  5239: (VV, eV, xV) => {
+    xV.d(eV, {
+      e: () => ZV
     });
-    const OM = "[A-Za-z$_][0-9A-Za-z$_]*",
-      SM = ["as", "in", "of", "if", "for", "while", "finally", "var", "new", "function", "do", "return", "void", "else", "break", "catch", "instanceof", "with", "throw", "case", "default", "try", "switch", "continue", "typeof", "delete", "let", "yield", "const", "class", "debugger", "async", "await", "static", "import", "from", "export", "extends", "using"],
-      jM = ["true", "false", "null", "undefined", "NaN", "Infinity"],
-      aM = ["Object", "Function", "Boolean", "Symbol", "Math", "Date", "Number", "BigInt", "String", "RegExp", "Array", "Float32Array", "Float64Array", "Int8Array", "Uint8Array", "Uint8ClampedArray", "Int16Array", "Int32Array", "Uint16Array", "Uint32Array", "BigInt64Array", "BigUint64Array", "Set", "Map", "WeakSet", "WeakMap", "ArrayBuffer", "SharedArrayBuffer", "Atomics", "DataView", "JSON", "Promise", "Generator", "GeneratorFunction", "AsyncFunction", "Reflect", "Proxy", "Intl", "WebAssembly"],
-      PM = ["Error", "EvalError", "InternalError", "RangeError", "ReferenceError", "SyntaxError", "TypeError", "URIError"],
-      nM = ["setInterval", "setTimeout", "clearInterval", "clearTimeout", "require", "exports", "eval", "isFinite", "isNaN", "parseFloat", "parseInt", "decodeURI", "decodeURIComponent", "encodeURI", "encodeURIComponent", "escape", "unescape"],
-      QM = ["arguments", "this", "super", "console", "window", "document", "localStorage", "sessionStorage", "module", "global"],
-      zM = [].concat(nM, aM, PM);
+    const JV = "[A-Za-z$_][0-9A-Za-z$_]*",
+      YV = ["as", "in", "of", "if", "for", "while", "finally", "var", "new", "function", "do", "return", "void", "else", "break", "catch", "instanceof", "with", "throw", "case", "default", "try", "switch", "continue", "typeof", "delete", "let", "yield", "const", "class", "debugger", "async", "await", "static", "import", "from", "export", "extends", "using"],
+      UV = ["true", "false", "null", "undefined", "NaN", "Infinity"],
+      yV = ["Object", "Function", "Boolean", "Symbol", "Math", "Date", "Number", "BigInt", "String", "RegExp", "Array", "Float32Array", "Float64Array", "Int8Array", "Uint8Array", "Uint8ClampedArray", "Int16Array", "Int32Array", "Uint16Array", "Uint32Array", "BigInt64Array", "BigUint64Array", "Set", "Map", "WeakSet", "WeakMap", "ArrayBuffer", "SharedArrayBuffer", "Atomics", "DataView", "JSON", "Promise", "Generator", "GeneratorFunction", "AsyncFunction", "Reflect", "Proxy", "Intl", "WebAssembly"],
+      pV = ["Error", "EvalError", "InternalError", "RangeError", "ReferenceError", "SyntaxError", "TypeError", "URIError"],
+      QV = ["setInterval", "setTimeout", "clearInterval", "clearTimeout", "require", "exports", "eval", "isFinite", "isNaN", "parseFloat", "parseInt", "decodeURI", "decodeURIComponent", "encodeURI", "encodeURIComponent", "escape", "unescape"],
+      nV = ["arguments", "this", "super", "console", "window", "document", "localStorage", "sessionStorage", "module", "global"],
+      wV = [].concat(QV, yV, pV);
 
-    function LM(MM) {
-      const rM = MM.regex,
-        iM = OM,
-        LM = "<>",
-        mM = "</>",
-        HM = {
-          JL: /<[A-Za-z0-9\\._:-]+/,
+    function ZV(VV) {
+      const eV = VV.regex,
+        xV = JV,
+        ZV = "<>",
+        vV = "</>",
+        rV = {
+          NZ: /<[A-Za-z0-9\\._:-]+/,
           end: /\/[A-Za-z0-9\\._:-]+>|\/>/,
-          isTrulyOpeningTag: (MM, rM) => {
-            const iM = MM[0].length + MM.index,
-              OM = MM.input[iM];
-            if ("<" === OM || "," === OM) return void rM.ignoreMatch();
-            let SM;
-            ">" === OM && (((MM, rM) => {
+          isTrulyOpeningTag: (VV, eV) => {
+            const xV = VV[0].length + VV.index,
+              JV = VV.input[xV];
+            if ("<" === JV || "," === JV) return void eV.ignoreMatch();
+            let YV;
+            ">" === JV && (((VV, eV) => {
               let {
-                after: iM
-              } = rM;
-              const OM = "</" + MM[0].slice(1);
-              return -1 !== MM.input.indexOf(OM, iM)
-            })(MM, {
-              after: iM
-            }) || rM.ignoreMatch());
-            const jM = MM.input.substring(iM);
-            ((SM = jM.match(/^\s*=/)) || (SM = jM.match(/^\s+extends\s+/)) && 0 === SM.index) && rM.ignoreMatch()
+                after: xV
+              } = eV;
+              const JV = "</" + VV[0].slice(1);
+              return -1 !== VV.input.indexOf(JV, xV)
+            })(VV, {
+              after: xV
+            }) || eV.ignoreMatch());
+            const UV = VV.input.substring(xV);
+            ((YV = UV.match(/^\s*=/)) || (YV = UV.match(/^\s+extends\s+/)) && 0 === YV.index) && eV.ignoreMatch()
           }
         },
-        hM = {
-          $pattern: OM,
-          keyword: SM,
-          literal: jM,
-          built_in: zM,
-          "variable.language": QM
+        kV = {
+          $pattern: JV,
+          keyword: YV,
+          literal: UV,
+          built_in: wV,
+          "variable.language": nV
         },
-        JM = "[0-9](_?[0-9])*",
-        dM = `\\.(${JM})`,
-        yM = "0|[1-9](_?[0-9])*|0[0-7]*[89][0-9]*",
-        lM = {
+        bV = "[0-9](_?[0-9])*",
+        EV = `\\.(${bV})`,
+        BV = "0|[1-9](_?[0-9])*|0[0-7]*[89][0-9]*",
+        jV = {
           className: "number",
           variants: [{
-            JL: `(\\b(${yM})((${dM})|\\.)?|(${dM}))[eE][+-]?(${JM})\\b`
+            NZ: `(\\b(${BV})((${EV})|\\.)?|(${EV}))[eE][+-]?(${bV})\\b`
           }, {
-            JL: `\\b(${yM})\\b((${dM})\\b|\\.)?|(${dM})\\b`
+            NZ: `\\b(${BV})\\b((${EV})\\b|\\.)?|(${EV})\\b`
           }, {
-            JL: "\\b(0|[1-9](_?[0-9])*)n\\b"
+            NZ: "\\b(0|[1-9](_?[0-9])*)n\\b"
           }, {
-            JL: "\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*n?\\b"
+            NZ: "\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*n?\\b"
           }, {
-            JL: "\\b0[bB][0-1](_?[0-1])*n?\\b"
+            NZ: "\\b0[bB][0-1](_?[0-1])*n?\\b"
           }, {
-            JL: "\\b0[oO][0-7](_?[0-7])*n?\\b"
+            NZ: "\\b0[oO][0-7](_?[0-7])*n?\\b"
           }, {
-            JL: "\\b0[0-7]+n?\\b"
+            NZ: "\\b0[0-7]+n?\\b"
           }],
           relevance: 0
         },
-        EM = {
+        qV = {
           className: "subst",
-          JL: "\\$\\{",
+          NZ: "\\$\\{",
           end: "\\}",
-          keywords: hM,
+          keywords: kV,
           contains: []
         },
-        UM = {
-          JL: ".?html`",
+        tV = {
+          NZ: ".?html`",
           end: "",
           starts: {
             end: "`",
             returnEnd: !1,
-            contains: [MM.BACKSLASH_ESCAPE, EM],
+            contains: [VV.BACKSLASH_ESCAPE, qV],
             subLanguage: "xml"
           }
         },
-        GM = {
-          JL: ".?css`",
+        FV = {
+          NZ: ".?css`",
           end: "",
           starts: {
             end: "`",
             returnEnd: !1,
-            contains: [MM.BACKSLASH_ESCAPE, EM],
+            contains: [VV.BACKSLASH_ESCAPE, qV],
             subLanguage: "css"
           }
         },
-        CM = {
-          JL: ".?gql`",
+        TV = {
+          NZ: ".?gql`",
           end: "",
           starts: {
             end: "`",
             returnEnd: !1,
-            contains: [MM.BACKSLASH_ESCAPE, EM],
+            contains: [VV.BACKSLASH_ESCAPE, qV],
             subLanguage: "graphql"
           }
         },
-        eM = {
+        PV = {
           className: "string",
-          JL: "`",
+          NZ: "`",
           end: "`",
-          contains: [MM.BACKSLASH_ESCAPE, EM]
+          contains: [VV.BACKSLASH_ESCAPE, qV]
         },
-        bM = {
+        AV = {
           className: "comment",
-          variants: [MM.COMMENT(/\/\*\*(?!\/)/, "\\*/", {
+          variants: [VV.COMMENT(/\/\*\*(?!\/)/, "\\*/", {
             relevance: 0,
             contains: [{
-              JL: "(?=@[A-Za-z]+)",
+              NZ: "(?=@[A-Za-z]+)",
               relevance: 0,
               contains: [{
                 className: "doctag",
-                JL: "@[A-Za-z]+"
+                NZ: "@[A-Za-z]+"
               }, {
                 className: "type",
-                JL: "\\{",
+                NZ: "\\{",
                 end: "\\}",
                 excludeEnd: !0,
                 excludeBegin: !0,
                 relevance: 0
               }, {
                 className: "variable",
-                JL: iM + "(?=\\s*(-)|$)",
+                NZ: xV + "(?=\\s*(-)|$)",
                 endsParent: !0,
                 relevance: 0
               }, {
-                JL: /(?=[^\n])\s/,
+                NZ: /(?=[^\n])\s/,
                 relevance: 0
               }]
             }]
-          }), MM.C_BLOCK_COMMENT_MODE, MM.C_LINE_COMMENT_MODE]
+          }), VV.C_BLOCK_COMMENT_MODE, VV.C_LINE_COMMENT_MODE]
         },
-        wM = [MM.APOS_STRING_MODE, MM.QUOTE_STRING_MODE, UM, GM, CM, eM, {
+        NV = [VV.APOS_STRING_MODE, VV.QUOTE_STRING_MODE, tV, FV, TV, PV, {
           match: /\$\d+/
-        }, lM];
-      EM.contains = wM.concat({
-        JL: /\{/,
+        }, jV];
+      qV.contains = NV.concat({
+        NZ: /\{/,
         end: /\}/,
-        keywords: hM,
-        contains: ["self"].concat(wM)
+        keywords: kV,
+        contains: ["self"].concat(NV)
       });
-      const tM = [].concat(bM, EM.contains),
-        gM = tM.concat([{
-          JL: /(\s*)\(/,
+      const XV = [].concat(AV, qV.contains),
+        MV = XV.concat([{
+          NZ: /(\s*)\(/,
           end: /\)/,
-          keywords: hM,
-          contains: ["self"].concat(tM)
+          keywords: kV,
+          contains: ["self"].concat(XV)
         }]),
-        uM = {
+        zV = {
           className: "params",
-          JL: /(\s*)\(/,
+          NZ: /(\s*)\(/,
           end: /\)/,
           excludeBegin: !0,
           excludeEnd: !0,
-          keywords: hM,
-          contains: gM
+          keywords: kV,
+          contains: MV
         },
-        RM = {
+        GV = {
           variants: [{
-            match: [/class/, /\s+/, iM, /\s+/, /extends/, /\s+/, rM.concat(iM, "(", rM.concat(/\./, iM), ")*")],
+            match: [/class/, /\s+/, xV, /\s+/, /extends/, /\s+/, eV.concat(xV, "(", eV.concat(/\./, xV), ")*")],
             scope: {
               1: "keyword",
               3: "title.class",
@@ -1152,24 +1152,24 @@ export const modules = {
               7: "title.class.inherited"
             }
           }, {
-            match: [/class/, /\s+/, iM],
+            match: [/class/, /\s+/, xV],
             scope: {
               1: "keyword",
               3: "title.class"
             }
           }]
         },
-        pM = {
+        WV = {
           relevance: 0,
-          match: rM.either(/\bJSON/, /\b[A-Z][a-z]+([A-Z][a-z]*|\d)*/, /\b[A-Z]{2,}([A-Z][a-z]+|\d)+([A-Z][a-z]*)*/, /\b[A-Z]{2,}[a-z]+([A-Z][a-z]+|\d)*([A-Z][a-z]*)*/),
+          match: eV.either(/\bJSON/, /\b[A-Z][a-z]+([A-Z][a-z]*|\d)*/, /\b[A-Z]{2,}([A-Z][a-z]+|\d)+([A-Z][a-z]*)*/, /\b[A-Z]{2,}[a-z]+([A-Z][a-z]+|\d)*([A-Z][a-z]*)*/),
           className: "title.class",
           keywords: {
-            _: [...aM, ...PM]
+            _: [...yV, ...pV]
           }
         },
-        WM = {
+        RV = {
           variants: [{
-            match: [/function/, /\s+/, iM, /(?=\s*\()/]
+            match: [/function/, /\s+/, xV, /(?=\s*\()/]
           }, {
             match: [/function/, /\s*(?=\()/]
           }],
@@ -1178,53 +1178,53 @@ export const modules = {
             3: "title.function"
           },
           label: "func.def",
-          contains: [uM],
+          contains: [zV],
           illegal: /%/
         };
-      const sM = {
-        match: rM.concat(/\b/, (DM = [...nM, "super", "import"].map((MM => `${MM}\\s*\\(`)), rM.concat("(?!", DM.join("|"), ")")), iM, rM.lookahead(/\s*\(/)),
+      const gV = {
+        match: eV.concat(/\b/, (DV = [...QV, "super", "import"].map((VV => `${VV}\\s*\\(`)), eV.concat("(?!", DV.join("|"), ")")), xV, eV.lookahead(/\s*\(/)),
         className: "title.function",
         relevance: 0
       };
-      var DM;
-      const kM = {
-          JL: rM.concat(/\./, rM.lookahead(rM.concat(iM, /(?![0-9A-Za-z$_(])/))),
-          end: iM,
+      var DV;
+      const iV = {
+          NZ: eV.concat(/\./, eV.lookahead(eV.concat(xV, /(?![0-9A-Za-z$_(])/))),
+          end: xV,
           excludeBegin: !0,
           keywords: "prototype",
           className: "property",
           relevance: 0
         },
-        ZM = {
-          match: [/get|set/, /\s+/, iM, /(?=\()/],
+        CV = {
+          match: [/get|set/, /\s+/, xV, /(?=\()/],
           className: {
             1: "keyword",
             3: "title.function"
           },
           contains: [{
-            JL: /\(\)/
-          }, uM]
+            NZ: /\(\)/
+          }, zV]
         },
-        oM = "(\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)|" + MM.UNDERSCORE_IDENT_RE + ")\\s*=>",
-        fM = {
-          match: [/const|var|let/, /\s+/, iM, /\s*/, /=\s*/, /(async\s*)?/, rM.lookahead(oM)],
+        aV = "(\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)|" + VV.UNDERSCORE_IDENT_RE + ")\\s*=>",
+        oV = {
+          match: [/const|var|let/, /\s+/, xV, /\s*/, /=\s*/, /(async\s*)?/, eV.lookahead(aV)],
           keywords: "async",
           className: {
             1: "keyword",
             3: "title.function"
           },
-          contains: [uM]
+          contains: [zV]
         };
       return {
         name: "JavaScript",
         aliases: ["js", "jsx", "mjs", "cjs"],
-        keywords: hM,
+        keywords: kV,
         exports: {
-          PARAMS_CONTAINS: gM,
-          CLASS_REFERENCE: pM
+          PARAMS_CONTAINS: MV,
+          CLASS_REFERENCE: WV
         },
         illegal: /#(?![$_A-z])/,
-        contains: [MM.SHEBANG({
+        contains: [VV.SHEBANG({
           label: "shebang",
           binary: "node",
           relevance: 5
@@ -1232,265 +1232,265 @@ export const modules = {
           label: "use_strict",
           className: "meta",
           relevance: 10,
-          JL: /^\s*['"]use (strict|asm)['"]/
-        }, MM.APOS_STRING_MODE, MM.QUOTE_STRING_MODE, UM, GM, CM, eM, bM, {
+          NZ: /^\s*['"]use (strict|asm)['"]/
+        }, VV.APOS_STRING_MODE, VV.QUOTE_STRING_MODE, tV, FV, TV, PV, AV, {
           match: /\$\d+/
-        }, lM, pM, {
+        }, jV, WV, {
           scope: "attr",
-          match: iM + rM.lookahead(":"),
+          match: xV + eV.lookahead(":"),
           relevance: 0
-        }, fM, {
-          JL: "(" + MM.RE_STARTERS_RE + "|\\b(case|return|throw)\\b)\\s*",
+        }, oV, {
+          NZ: "(" + VV.RE_STARTERS_RE + "|\\b(case|return|throw)\\b)\\s*",
           keywords: "return throw case",
           relevance: 0,
-          contains: [bM, MM.REGEXP_MODE, {
+          contains: [AV, VV.REGEXP_MODE, {
             className: "function",
-            JL: oM,
+            NZ: aV,
             returnBegin: !0,
             end: "\\s*=>",
             contains: [{
               className: "params",
               variants: [{
-                JL: MM.UNDERSCORE_IDENT_RE,
+                NZ: VV.UNDERSCORE_IDENT_RE,
                 relevance: 0
               }, {
                 className: null,
-                JL: /\(\s*\)/,
+                NZ: /\(\s*\)/,
                 skip: !0
               }, {
-                JL: /(\s*)\(/,
+                NZ: /(\s*)\(/,
                 end: /\)/,
                 excludeBegin: !0,
                 excludeEnd: !0,
-                keywords: hM,
-                contains: gM
+                keywords: kV,
+                contains: MV
               }]
             }]
           }, {
-            JL: /,/,
+            NZ: /,/,
             relevance: 0
           }, {
             match: /\s+/,
             relevance: 0
           }, {
             variants: [{
-              JL: LM,
-              end: mM
+              NZ: ZV,
+              end: vV
             }, {
               match: /<[A-Za-z0-9\\._:-]+\s*\/>/
             }, {
-              JL: HM.JL,
-              "on:begin": HM.isTrulyOpeningTag,
-              end: HM.end
+              NZ: rV.NZ,
+              "on:begin": rV.isTrulyOpeningTag,
+              end: rV.end
             }],
             subLanguage: "xml",
             contains: [{
-              JL: HM.JL,
-              end: HM.end,
+              NZ: rV.NZ,
+              end: rV.end,
               skip: !0,
               contains: ["self"]
             }]
           }]
-        }, WM, {
+        }, RV, {
           beginKeywords: "while if switch catch for"
         }, {
-          JL: "\\b(?!function)" + MM.UNDERSCORE_IDENT_RE + "\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)\\s*\\{",
+          NZ: "\\b(?!function)" + VV.UNDERSCORE_IDENT_RE + "\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)\\s*\\{",
           returnBegin: !0,
           label: "func.def",
-          contains: [uM, MM.inherit(MM.TITLE_MODE, {
-            JL: iM,
+          contains: [zV, VV.inherit(VV.TITLE_MODE, {
+            NZ: xV,
             className: "title.function"
           })]
         }, {
           match: /\.\.\./,
           relevance: 0
-        }, kM, {
-          match: "\\$" + iM,
+        }, iV, {
+          match: "\\$" + xV,
           relevance: 0
         }, {
           match: [/\bconstructor(?=\s*\()/],
           className: {
             1: "title.function"
           },
-          contains: [uM]
-        }, sM, {
+          contains: [zV]
+        }, gV, {
           relevance: 0,
           match: /\b[A-Z][A-Z_0-9]+\b/,
           className: "variable.constant"
-        }, RM, ZM, {
+        }, GV, CV, {
           match: /\$[(.]/
         }]
       }
     }
   },
-  5134: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => mM
+  5241: (VV, eV, xV) => {
+    xV.d(eV, {
+      b: () => vV
     });
-    const OM = "[A-Za-z$_][0-9A-Za-z$_]*",
-      SM = ["as", "in", "of", "if", "for", "while", "finally", "var", "new", "function", "do", "return", "void", "else", "break", "catch", "instanceof", "with", "throw", "case", "default", "try", "switch", "continue", "typeof", "delete", "let", "yield", "const", "class", "debugger", "async", "await", "static", "import", "from", "export", "extends", "using"],
-      jM = ["true", "false", "null", "undefined", "NaN", "Infinity"],
-      aM = ["Object", "Function", "Boolean", "Symbol", "Math", "Date", "Number", "BigInt", "String", "RegExp", "Array", "Float32Array", "Float64Array", "Int8Array", "Uint8Array", "Uint8ClampedArray", "Int16Array", "Int32Array", "Uint16Array", "Uint32Array", "BigInt64Array", "BigUint64Array", "Set", "Map", "WeakSet", "WeakMap", "ArrayBuffer", "SharedArrayBuffer", "Atomics", "DataView", "JSON", "Promise", "Generator", "GeneratorFunction", "AsyncFunction", "Reflect", "Proxy", "Intl", "WebAssembly"],
-      PM = ["Error", "EvalError", "InternalError", "RangeError", "ReferenceError", "SyntaxError", "TypeError", "URIError"],
-      nM = ["setInterval", "setTimeout", "clearInterval", "clearTimeout", "require", "exports", "eval", "isFinite", "isNaN", "parseFloat", "parseInt", "decodeURI", "decodeURIComponent", "encodeURI", "encodeURIComponent", "escape", "unescape"],
-      QM = ["arguments", "this", "super", "console", "window", "document", "localStorage", "sessionStorage", "module", "global"],
-      zM = [].concat(nM, aM, PM);
+    const JV = "[A-Za-z$_][0-9A-Za-z$_]*",
+      YV = ["as", "in", "of", "if", "for", "while", "finally", "var", "new", "function", "do", "return", "void", "else", "break", "catch", "instanceof", "with", "throw", "case", "default", "try", "switch", "continue", "typeof", "delete", "let", "yield", "const", "class", "debugger", "async", "await", "static", "import", "from", "export", "extends", "using"],
+      UV = ["true", "false", "null", "undefined", "NaN", "Infinity"],
+      yV = ["Object", "Function", "Boolean", "Symbol", "Math", "Date", "Number", "BigInt", "String", "RegExp", "Array", "Float32Array", "Float64Array", "Int8Array", "Uint8Array", "Uint8ClampedArray", "Int16Array", "Int32Array", "Uint16Array", "Uint32Array", "BigInt64Array", "BigUint64Array", "Set", "Map", "WeakSet", "WeakMap", "ArrayBuffer", "SharedArrayBuffer", "Atomics", "DataView", "JSON", "Promise", "Generator", "GeneratorFunction", "AsyncFunction", "Reflect", "Proxy", "Intl", "WebAssembly"],
+      pV = ["Error", "EvalError", "InternalError", "RangeError", "ReferenceError", "SyntaxError", "TypeError", "URIError"],
+      QV = ["setInterval", "setTimeout", "clearInterval", "clearTimeout", "require", "exports", "eval", "isFinite", "isNaN", "parseFloat", "parseInt", "decodeURI", "decodeURIComponent", "encodeURI", "encodeURIComponent", "escape", "unescape"],
+      nV = ["arguments", "this", "super", "console", "window", "document", "localStorage", "sessionStorage", "module", "global"],
+      wV = [].concat(QV, yV, pV);
 
-    function LM(MM) {
-      const rM = MM.regex,
-        iM = OM,
-        LM = "<>",
-        mM = "</>",
-        HM = {
-          JL: /<[A-Za-z0-9\\._:-]+/,
+    function ZV(VV) {
+      const eV = VV.regex,
+        xV = JV,
+        ZV = "<>",
+        vV = "</>",
+        rV = {
+          NZ: /<[A-Za-z0-9\\._:-]+/,
           end: /\/[A-Za-z0-9\\._:-]+>|\/>/,
-          isTrulyOpeningTag: (MM, rM) => {
-            const iM = MM[0].length + MM.index,
-              OM = MM.input[iM];
-            if ("<" === OM || "," === OM) return void rM.ignoreMatch();
-            let SM;
-            ">" === OM && (((MM, rM) => {
+          isTrulyOpeningTag: (VV, eV) => {
+            const xV = VV[0].length + VV.index,
+              JV = VV.input[xV];
+            if ("<" === JV || "," === JV) return void eV.ignoreMatch();
+            let YV;
+            ">" === JV && (((VV, eV) => {
               let {
-                after: iM
-              } = rM;
-              const OM = "</" + MM[0].slice(1);
-              return -1 !== MM.input.indexOf(OM, iM)
-            })(MM, {
-              after: iM
-            }) || rM.ignoreMatch());
-            const jM = MM.input.substring(iM);
-            ((SM = jM.match(/^\s*=/)) || (SM = jM.match(/^\s+extends\s+/)) && 0 === SM.index) && rM.ignoreMatch()
+                after: xV
+              } = eV;
+              const JV = "</" + VV[0].slice(1);
+              return -1 !== VV.input.indexOf(JV, xV)
+            })(VV, {
+              after: xV
+            }) || eV.ignoreMatch());
+            const UV = VV.input.substring(xV);
+            ((YV = UV.match(/^\s*=/)) || (YV = UV.match(/^\s+extends\s+/)) && 0 === YV.index) && eV.ignoreMatch()
           }
         },
-        hM = {
-          $pattern: OM,
-          keyword: SM,
-          literal: jM,
-          built_in: zM,
-          "variable.language": QM
+        kV = {
+          $pattern: JV,
+          keyword: YV,
+          literal: UV,
+          built_in: wV,
+          "variable.language": nV
         },
-        JM = "[0-9](_?[0-9])*",
-        dM = `\\.(${JM})`,
-        yM = "0|[1-9](_?[0-9])*|0[0-7]*[89][0-9]*",
-        lM = {
+        bV = "[0-9](_?[0-9])*",
+        EV = `\\.(${bV})`,
+        BV = "0|[1-9](_?[0-9])*|0[0-7]*[89][0-9]*",
+        jV = {
           className: "number",
           variants: [{
-            JL: `(\\b(${yM})((${dM})|\\.)?|(${dM}))[eE][+-]?(${JM})\\b`
+            NZ: `(\\b(${BV})((${EV})|\\.)?|(${EV}))[eE][+-]?(${bV})\\b`
           }, {
-            JL: `\\b(${yM})\\b((${dM})\\b|\\.)?|(${dM})\\b`
+            NZ: `\\b(${BV})\\b((${EV})\\b|\\.)?|(${EV})\\b`
           }, {
-            JL: "\\b(0|[1-9](_?[0-9])*)n\\b"
+            NZ: "\\b(0|[1-9](_?[0-9])*)n\\b"
           }, {
-            JL: "\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*n?\\b"
+            NZ: "\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*n?\\b"
           }, {
-            JL: "\\b0[bB][0-1](_?[0-1])*n?\\b"
+            NZ: "\\b0[bB][0-1](_?[0-1])*n?\\b"
           }, {
-            JL: "\\b0[oO][0-7](_?[0-7])*n?\\b"
+            NZ: "\\b0[oO][0-7](_?[0-7])*n?\\b"
           }, {
-            JL: "\\b0[0-7]+n?\\b"
+            NZ: "\\b0[0-7]+n?\\b"
           }],
           relevance: 0
         },
-        EM = {
+        qV = {
           className: "subst",
-          JL: "\\$\\{",
+          NZ: "\\$\\{",
           end: "\\}",
-          keywords: hM,
+          keywords: kV,
           contains: []
         },
-        UM = {
-          JL: ".?html`",
+        tV = {
+          NZ: ".?html`",
           end: "",
           starts: {
             end: "`",
             returnEnd: !1,
-            contains: [MM.BACKSLASH_ESCAPE, EM],
+            contains: [VV.BACKSLASH_ESCAPE, qV],
             subLanguage: "xml"
           }
         },
-        GM = {
-          JL: ".?css`",
+        FV = {
+          NZ: ".?css`",
           end: "",
           starts: {
             end: "`",
             returnEnd: !1,
-            contains: [MM.BACKSLASH_ESCAPE, EM],
+            contains: [VV.BACKSLASH_ESCAPE, qV],
             subLanguage: "css"
           }
         },
-        CM = {
-          JL: ".?gql`",
+        TV = {
+          NZ: ".?gql`",
           end: "",
           starts: {
             end: "`",
             returnEnd: !1,
-            contains: [MM.BACKSLASH_ESCAPE, EM],
+            contains: [VV.BACKSLASH_ESCAPE, qV],
             subLanguage: "graphql"
           }
         },
-        eM = {
+        PV = {
           className: "string",
-          JL: "`",
+          NZ: "`",
           end: "`",
-          contains: [MM.BACKSLASH_ESCAPE, EM]
+          contains: [VV.BACKSLASH_ESCAPE, qV]
         },
-        bM = {
+        AV = {
           className: "comment",
-          variants: [MM.COMMENT(/\/\*\*(?!\/)/, "\\*/", {
+          variants: [VV.COMMENT(/\/\*\*(?!\/)/, "\\*/", {
             relevance: 0,
             contains: [{
-              JL: "(?=@[A-Za-z]+)",
+              NZ: "(?=@[A-Za-z]+)",
               relevance: 0,
               contains: [{
                 className: "doctag",
-                JL: "@[A-Za-z]+"
+                NZ: "@[A-Za-z]+"
               }, {
                 className: "type",
-                JL: "\\{",
+                NZ: "\\{",
                 end: "\\}",
                 excludeEnd: !0,
                 excludeBegin: !0,
                 relevance: 0
               }, {
                 className: "variable",
-                JL: iM + "(?=\\s*(-)|$)",
+                NZ: xV + "(?=\\s*(-)|$)",
                 endsParent: !0,
                 relevance: 0
               }, {
-                JL: /(?=[^\n])\s/,
+                NZ: /(?=[^\n])\s/,
                 relevance: 0
               }]
             }]
-          }), MM.C_BLOCK_COMMENT_MODE, MM.C_LINE_COMMENT_MODE]
+          }), VV.C_BLOCK_COMMENT_MODE, VV.C_LINE_COMMENT_MODE]
         },
-        wM = [MM.APOS_STRING_MODE, MM.QUOTE_STRING_MODE, UM, GM, CM, eM, {
+        NV = [VV.APOS_STRING_MODE, VV.QUOTE_STRING_MODE, tV, FV, TV, PV, {
           match: /\$\d+/
-        }, lM];
-      EM.contains = wM.concat({
-        JL: /\{/,
+        }, jV];
+      qV.contains = NV.concat({
+        NZ: /\{/,
         end: /\}/,
-        keywords: hM,
-        contains: ["self"].concat(wM)
+        keywords: kV,
+        contains: ["self"].concat(NV)
       });
-      const tM = [].concat(bM, EM.contains),
-        gM = tM.concat([{
-          JL: /(\s*)\(/,
+      const XV = [].concat(AV, qV.contains),
+        MV = XV.concat([{
+          NZ: /(\s*)\(/,
           end: /\)/,
-          keywords: hM,
-          contains: ["self"].concat(tM)
+          keywords: kV,
+          contains: ["self"].concat(XV)
         }]),
-        uM = {
+        zV = {
           className: "params",
-          JL: /(\s*)\(/,
+          NZ: /(\s*)\(/,
           end: /\)/,
           excludeBegin: !0,
           excludeEnd: !0,
-          keywords: hM,
-          contains: gM
+          keywords: kV,
+          contains: MV
         },
-        RM = {
+        GV = {
           variants: [{
-            match: [/class/, /\s+/, iM, /\s+/, /extends/, /\s+/, rM.concat(iM, "(", rM.concat(/\./, iM), ")*")],
+            match: [/class/, /\s+/, xV, /\s+/, /extends/, /\s+/, eV.concat(xV, "(", eV.concat(/\./, xV), ")*")],
             scope: {
               1: "keyword",
               3: "title.class",
@@ -1498,24 +1498,24 @@ export const modules = {
               7: "title.class.inherited"
             }
           }, {
-            match: [/class/, /\s+/, iM],
+            match: [/class/, /\s+/, xV],
             scope: {
               1: "keyword",
               3: "title.class"
             }
           }]
         },
-        pM = {
+        WV = {
           relevance: 0,
-          match: rM.either(/\bJSON/, /\b[A-Z][a-z]+([A-Z][a-z]*|\d)*/, /\b[A-Z]{2,}([A-Z][a-z]+|\d)+([A-Z][a-z]*)*/, /\b[A-Z]{2,}[a-z]+([A-Z][a-z]+|\d)*([A-Z][a-z]*)*/),
+          match: eV.either(/\bJSON/, /\b[A-Z][a-z]+([A-Z][a-z]*|\d)*/, /\b[A-Z]{2,}([A-Z][a-z]+|\d)+([A-Z][a-z]*)*/, /\b[A-Z]{2,}[a-z]+([A-Z][a-z]+|\d)*([A-Z][a-z]*)*/),
           className: "title.class",
           keywords: {
-            _: [...aM, ...PM]
+            _: [...yV, ...pV]
           }
         },
-        WM = {
+        RV = {
           variants: [{
-            match: [/function/, /\s+/, iM, /(?=\s*\()/]
+            match: [/function/, /\s+/, xV, /(?=\s*\()/]
           }, {
             match: [/function/, /\s*(?=\()/]
           }],
@@ -1524,53 +1524,53 @@ export const modules = {
             3: "title.function"
           },
           label: "func.def",
-          contains: [uM],
+          contains: [zV],
           illegal: /%/
         };
-      const sM = {
-        match: rM.concat(/\b/, (DM = [...nM, "super", "import"].map((MM => `${MM}\\s*\\(`)), rM.concat("(?!", DM.join("|"), ")")), iM, rM.lookahead(/\s*\(/)),
+      const gV = {
+        match: eV.concat(/\b/, (DV = [...QV, "super", "import"].map((VV => `${VV}\\s*\\(`)), eV.concat("(?!", DV.join("|"), ")")), xV, eV.lookahead(/\s*\(/)),
         className: "title.function",
         relevance: 0
       };
-      var DM;
-      const kM = {
-          JL: rM.concat(/\./, rM.lookahead(rM.concat(iM, /(?![0-9A-Za-z$_(])/))),
-          end: iM,
+      var DV;
+      const iV = {
+          NZ: eV.concat(/\./, eV.lookahead(eV.concat(xV, /(?![0-9A-Za-z$_(])/))),
+          end: xV,
           excludeBegin: !0,
           keywords: "prototype",
           className: "property",
           relevance: 0
         },
-        ZM = {
-          match: [/get|set/, /\s+/, iM, /(?=\()/],
+        CV = {
+          match: [/get|set/, /\s+/, xV, /(?=\()/],
           className: {
             1: "keyword",
             3: "title.function"
           },
           contains: [{
-            JL: /\(\)/
-          }, uM]
+            NZ: /\(\)/
+          }, zV]
         },
-        oM = "(\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)|" + MM.UNDERSCORE_IDENT_RE + ")\\s*=>",
-        fM = {
-          match: [/const|var|let/, /\s+/, iM, /\s*/, /=\s*/, /(async\s*)?/, rM.lookahead(oM)],
+        aV = "(\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)|" + VV.UNDERSCORE_IDENT_RE + ")\\s*=>",
+        oV = {
+          match: [/const|var|let/, /\s+/, xV, /\s*/, /=\s*/, /(async\s*)?/, eV.lookahead(aV)],
           keywords: "async",
           className: {
             1: "keyword",
             3: "title.function"
           },
-          contains: [uM]
+          contains: [zV]
         };
       return {
         name: "JavaScript",
         aliases: ["js", "jsx", "mjs", "cjs"],
-        keywords: hM,
+        keywords: kV,
         exports: {
-          PARAMS_CONTAINS: gM,
-          CLASS_REFERENCE: pM
+          PARAMS_CONTAINS: MV,
+          CLASS_REFERENCE: WV
         },
         illegal: /#(?![$_A-z])/,
-        contains: [MM.SHEBANG({
+        contains: [VV.SHEBANG({
           label: "shebang",
           binary: "node",
           relevance: 5
@@ -1578,151 +1578,151 @@ export const modules = {
           label: "use_strict",
           className: "meta",
           relevance: 10,
-          JL: /^\s*['"]use (strict|asm)['"]/
-        }, MM.APOS_STRING_MODE, MM.QUOTE_STRING_MODE, UM, GM, CM, eM, bM, {
+          NZ: /^\s*['"]use (strict|asm)['"]/
+        }, VV.APOS_STRING_MODE, VV.QUOTE_STRING_MODE, tV, FV, TV, PV, AV, {
           match: /\$\d+/
-        }, lM, pM, {
+        }, jV, WV, {
           scope: "attr",
-          match: iM + rM.lookahead(":"),
+          match: xV + eV.lookahead(":"),
           relevance: 0
-        }, fM, {
-          JL: "(" + MM.RE_STARTERS_RE + "|\\b(case|return|throw)\\b)\\s*",
+        }, oV, {
+          NZ: "(" + VV.RE_STARTERS_RE + "|\\b(case|return|throw)\\b)\\s*",
           keywords: "return throw case",
           relevance: 0,
-          contains: [bM, MM.REGEXP_MODE, {
+          contains: [AV, VV.REGEXP_MODE, {
             className: "function",
-            JL: oM,
+            NZ: aV,
             returnBegin: !0,
             end: "\\s*=>",
             contains: [{
               className: "params",
               variants: [{
-                JL: MM.UNDERSCORE_IDENT_RE,
+                NZ: VV.UNDERSCORE_IDENT_RE,
                 relevance: 0
               }, {
                 className: null,
-                JL: /\(\s*\)/,
+                NZ: /\(\s*\)/,
                 skip: !0
               }, {
-                JL: /(\s*)\(/,
+                NZ: /(\s*)\(/,
                 end: /\)/,
                 excludeBegin: !0,
                 excludeEnd: !0,
-                keywords: hM,
-                contains: gM
+                keywords: kV,
+                contains: MV
               }]
             }]
           }, {
-            JL: /,/,
+            NZ: /,/,
             relevance: 0
           }, {
             match: /\s+/,
             relevance: 0
           }, {
             variants: [{
-              JL: LM,
-              end: mM
+              NZ: ZV,
+              end: vV
             }, {
               match: /<[A-Za-z0-9\\._:-]+\s*\/>/
             }, {
-              JL: HM.JL,
-              "on:begin": HM.isTrulyOpeningTag,
-              end: HM.end
+              NZ: rV.NZ,
+              "on:begin": rV.isTrulyOpeningTag,
+              end: rV.end
             }],
             subLanguage: "xml",
             contains: [{
-              JL: HM.JL,
-              end: HM.end,
+              NZ: rV.NZ,
+              end: rV.end,
               skip: !0,
               contains: ["self"]
             }]
           }]
-        }, WM, {
+        }, RV, {
           beginKeywords: "while if switch catch for"
         }, {
-          JL: "\\b(?!function)" + MM.UNDERSCORE_IDENT_RE + "\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)\\s*\\{",
+          NZ: "\\b(?!function)" + VV.UNDERSCORE_IDENT_RE + "\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)\\s*\\{",
           returnBegin: !0,
           label: "func.def",
-          contains: [uM, MM.inherit(MM.TITLE_MODE, {
-            JL: iM,
+          contains: [zV, VV.inherit(VV.TITLE_MODE, {
+            NZ: xV,
             className: "title.function"
           })]
         }, {
           match: /\.\.\./,
           relevance: 0
-        }, kM, {
-          match: "\\$" + iM,
+        }, iV, {
+          match: "\\$" + xV,
           relevance: 0
         }, {
           match: [/\bconstructor(?=\s*\()/],
           className: {
             1: "title.function"
           },
-          contains: [uM]
-        }, sM, {
+          contains: [zV]
+        }, gV, {
           relevance: 0,
           match: /\b[A-Z][A-Z_0-9]+\b/,
           className: "variable.constant"
-        }, RM, ZM, {
+        }, GV, CV, {
           match: /\$[(.]/
         }]
       }
     }
 
-    function mM(MM) {
-      const rM = MM.regex,
-        iM = LM(MM),
-        aM = OM,
-        PM = ["any", "void", "number", "boolean", "string", "object", "never", "symbol", "bigint", "unknown"],
-        nM = {
-          JL: [/namespace/, /\s+/, MM.IDENT_RE],
+    function vV(VV) {
+      const eV = VV.regex,
+        xV = ZV(VV),
+        yV = JV,
+        pV = ["any", "void", "number", "boolean", "string", "object", "never", "symbol", "bigint", "unknown"],
+        QV = {
+          NZ: [/namespace/, /\s+/, VV.IDENT_RE],
           beginScope: {
             1: "keyword",
             3: "title.class"
           }
         },
-        mM = {
+        vV = {
           beginKeywords: "interface",
           end: /\{/,
           excludeEnd: !0,
           keywords: {
             keyword: "interface extends",
-            built_in: PM
+            built_in: pV
           },
-          contains: [iM.exports.CLASS_REFERENCE]
+          contains: [xV.exports.CLASS_REFERENCE]
         },
-        HM = {
-          $pattern: OM,
-          keyword: SM.concat(["type", "interface", "public", "private", "protected", "implements", "declare", "abstract", "readonly", "enum", "override", "satisfies"]),
-          literal: jM,
-          built_in: zM.concat(PM),
-          "variable.language": QM
+        rV = {
+          $pattern: JV,
+          keyword: YV.concat(["type", "interface", "public", "private", "protected", "implements", "declare", "abstract", "readonly", "enum", "override", "satisfies"]),
+          literal: UV,
+          built_in: wV.concat(pV),
+          "variable.language": nV
         },
-        hM = {
+        kV = {
           className: "meta",
-          JL: "@" + aM
+          NZ: "@" + yV
         },
-        JM = (MM, rM, iM) => {
-          const OM = MM.contains.findIndex((MM => MM.label === rM));
-          if (-1 === OM) throw new Error("can not find mode to replace");
-          MM.contains.splice(OM, 1, iM)
+        bV = (VV, eV, xV) => {
+          const JV = VV.contains.findIndex((VV => VV.label === eV));
+          if (-1 === JV) throw new Error("can not find mode to replace");
+          VV.contains.splice(JV, 1, xV)
         };
-      Object.assign(iM.keywords, HM), iM.exports.PARAMS_CONTAINS.push(hM);
-      const dM = iM.contains.find((MM => "attr" === MM.scope)),
-        yM = Object.assign({}, dM, {
-          match: rM.concat(aM, rM.lookahead(/\s*\?:/))
+      Object.assign(xV.keywords, rV), xV.exports.PARAMS_CONTAINS.push(kV);
+      const EV = xV.contains.find((VV => "attr" === VV.scope)),
+        BV = Object.assign({}, EV, {
+          match: eV.concat(yV, eV.lookahead(/\s*\?:/))
         });
-      iM.exports.PARAMS_CONTAINS.push([iM.exports.CLASS_REFERENCE, dM, yM]), iM.contains = iM.contains.concat([hM, nM, mM, yM]), JM(iM, "shebang", MM.SHEBANG()), JM(iM, "use_strict", {
+      xV.exports.PARAMS_CONTAINS.push([xV.exports.CLASS_REFERENCE, EV, BV]), xV.contains = xV.contains.concat([kV, QV, vV, BV]), bV(xV, "shebang", VV.SHEBANG()), bV(xV, "use_strict", {
         className: "meta",
         relevance: 10,
-        JL: /^\s*['"]use strict['"]/
+        NZ: /^\s*['"]use strict['"]/
       });
-      return iM.contains.find((MM => "func.def" === MM.label)).relevance = 0, Object.assign(iM, {
+      return xV.contains.find((VV => "func.def" === VV.label)).relevance = 0, Object.assign(xV, {
         name: "TypeScript",
         aliases: ["ts", "tsx", "mts", "cts"]
-      }), iM
+      }), xV
     }
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const VV in modules) Object.freeze(modules[VV]);

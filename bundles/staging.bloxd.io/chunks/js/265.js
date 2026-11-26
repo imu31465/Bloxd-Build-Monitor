@@ -1,78 +1,78 @@
 export const id = 265;
 export const ids = [265];
 export const modules = {
-  39040: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => QM,
-      g: () => OM,
-      i: () => PM,
-      k: () => SM,
-      l: () => aM,
-      m: () => jM
+  39211: (VV, eV, xV) => {
+    xV.d(eV, {
+      e: () => nV,
+      i: () => JV,
+      m: () => pV,
+      q: () => YV,
+      s: () => yV,
+      u: () => UV
     });
-    const OM = 1.001,
-      SM = .501,
-      jM = .025,
-      aM = .75,
-      PM = .08,
-      nM = 4;
+    const JV = 1.001,
+      YV = .501,
+      UV = .025,
+      yV = .75,
+      pV = .08,
+      QV = 4;
 
-    function QM() {
-      const MM = SM,
-        rM = jM,
-        iM = MM - rM / 2,
-        OM = (2 * MM - 2 * rM) / (2 * nM - 1),
-        aM = [];
-      for (const SM of [-iM, iM])
-        for (const jM of [-iM, iM])
-          for (let iM = 0; iM < nM; iM++) {
-            const PM = -MM + rM + OM * (2 * iM + .5);
-            aM.push([OM, rM, rM, PM, SM, jM]), aM.push([rM, OM, rM, SM, PM, jM]), aM.push([rM, rM, OM, SM, jM, PM])
+    function nV() {
+      const VV = YV,
+        eV = UV,
+        xV = VV - eV / 2,
+        JV = (2 * VV - 2 * eV) / (2 * QV - 1),
+        yV = [];
+      for (const YV of [-xV, xV])
+        for (const UV of [-xV, xV])
+          for (let xV = 0; xV < QV; xV++) {
+            const pV = -VV + eV + JV * (2 * xV + .5);
+            yV.push([JV, eV, eV, pV, YV, UV]), yV.push([eV, JV, eV, YV, pV, UV]), yV.push([eV, eV, JV, YV, UV, pV])
           }
-      for (const SM of [-iM, iM])
-        for (const MM of [-iM, iM])
-          for (const OM of [-iM, iM]) aM.push([rM, rM, rM, SM, MM, OM]);
-      return aM
+      for (const YV of [-xV, xV])
+        for (const VV of [-xV, xV])
+          for (const JV of [-xV, xV]) yV.push([eV, eV, eV, YV, VV, JV]);
+      return yV
     }
   },
-  39426: (MM, rM, iM) => {
-    iM.d(rM, {
-      C: () => eM,
-      D: () => HM,
-      F: () => CM,
-      J: () => bM,
-      L: () => GM,
-      P: () => UM,
-      Q: () => mM,
-      S: () => JM,
-      V: () => yM,
-      X: () => SM,
-      d: () => zM,
-      h: () => nM,
-      k: () => EM,
-      o: () => QM,
-      s: () => PM,
-      u: () => aM,
-      y: () => jM
+  39575: (VV, eV, xV) => {
+    xV.d(eV, {
+      A: () => AV,
+      D: () => FV,
+      H: () => tV,
+      K: () => vV,
+      O: () => bV,
+      P: () => BV,
+      T: () => YV,
+      d: () => wV,
+      f: () => QV,
+      i: () => qV,
+      j: () => nV,
+      l: () => pV,
+      n: () => yV,
+      o: () => UV,
+      s: () => PV,
+      v: () => rV,
+      x: () => TV
     });
-    var OM = iM(9904);
+    var JV = xV(9906);
 
-    function SM(MM) {
-      return Math.floor(MM).toLocaleString("en-US")
+    function YV(VV) {
+      return Math.floor(VV).toLocaleString("en-US")
     }
-    const jM = 2e3,
-      aM = .005,
-      PM = .001,
-      nM = 2,
-      QM = "Fluid Tank",
-      zM = "Coolant Mixer",
-      LM = 144;
+    const UV = 2e3,
+      yV = .005,
+      pV = .001,
+      QV = 2,
+      nV = "Fluid Tank",
+      wV = "Coolant Mixer",
+      ZV = 144;
 
-    function mM(MM) {
-      const rM = MM.split("|")[0];
-      return (0, OM.p)(rM) ? rM === OM.e ? "cryo" : "water" : null
+    function vV(VV) {
+      const eV = VV.split("|")[0];
+      return (0, JV.j)(eV) ? eV === JV.e ? "cryo" : "water" : null
     }
-    const HM = [
+    const rV = [
         [1, 0, 0],
         [-1, 0, 0],
         [0, 1, 0],
@@ -80,43 +80,43 @@ export const modules = {
         [0, 0, 1],
         [0, 0, -1]
       ],
-      hM = 63;
+      kV = 63;
 
-    function JM(MM) {
-      let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      const iM = rM ? function(MM, rM, iM) {
-        const OM = HM.findIndex((OM => {
-          let [SM, jM, aM] = OM;
-          return SM === MM && jM === rM && aM === iM
+    function bV(VV) {
+      let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+      const xV = eV ? function(VV, eV, xV) {
+        const JV = rV.findIndex((JV => {
+          let [YV, UV, yV] = JV;
+          return YV === VV && UV === eV && yV === xV
         }));
-        return OM < 0 ? 0 : 1 << OM
-      }(rM[0], rM[1], rM[2]) : 0;
-      return "maker" === MM ? {
-        kind: MM,
-        faces: iM
-      } : "user" === MM ? {
-        kind: MM,
-        faces: hM & ~iM
+        return JV < 0 ? 0 : 1 << JV
+      }(eV[0], eV[1], eV[2]) : 0;
+      return "maker" === VV ? {
+        kind: VV,
+        faces: xV
+      } : "user" === VV ? {
+        kind: VV,
+        faces: kV & ~xV
       } : {
-        kind: MM,
-        faces: hM
+        kind: VV,
+        faces: kV
       }
     }
 
-    function dM(MM) {
-      return "pipe" === MM || "tank" === MM || "maker" === MM
+    function EV(VV) {
+      return "pipe" === VV || "tank" === VV || "maker" === VV
     }
 
-    function yM(MM, rM, iM) {
-      return 0 !== (MM.faces & 1 << iM) && 0 !== (rM.faces & 1 << (1 ^ iM)) && (dM(MM.kind) || dM(rM.kind))
+    function BV(VV, eV, xV) {
+      return 0 !== (VV.faces & 1 << xV) && 0 !== (eV.faces & 1 << (1 ^ xV)) && (EV(VV.kind) || EV(eV.kind))
     }
-    const lM = (MM, rM, iM, OM) => ({
-        input: MM,
-        inputAmount: OM,
-        output: rM,
-        outputAmount: iM
+    const jV = (VV, eV, xV, JV) => ({
+        input: VV,
+        inputAmount: JV,
+        output: eV,
+        outputAmount: xV
       }),
-      EM = {
+      qV = {
         Condenser: {
           kind: "Condenser",
           opMs: 2e3,
@@ -135,7 +135,7 @@ export const modules = {
           inputSlot: 0,
           fuelSlot: null,
           outputSlots: [1, 2, 3],
-          recipes: [lM("Uranium Grit", "Uranium Pellet", 1, 12), lM("Spent Pellet", "Plutonium Pellet", 1, 4)],
+          recipes: [jV("Uranium Grit", "Uranium Pellet", 1, 12), jV("Spent Pellet", "Plutonium Pellet", 1, 4)],
           powerPerOp: 600,
           waterPerOp: 24
         },
@@ -156,36 +156,36 @@ export const modules = {
           inputSlot: 0,
           fuelSlot: null,
           outputSlots: [],
-          recipes: [lM("Biomass", "", 0, 1)],
+          recipes: [jV("Biomass", "", 0, 1)],
           powerPerOp: 720,
           waterPerOp: 144,
-          cryoMade: LM,
+          cryoMade: ZV,
           couplable: !0,
           couplerSlot: 1
         }
       };
 
-    function UM(MM, rM) {
-      return 1e3 * (null !== rM && void 0 !== rM ? rM : 0) / MM.opMs
+    function tV(VV, eV) {
+      return 1e3 * (null !== eV && void 0 !== eV ? eV : 0) / VV.opMs
     }
 
-    function GM(MM) {
-      let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-      const iM = UM(EM["Coolant Mixer"], LM) * rM;
-      return MM <= 0 ? 0 : Math.ceil(MM / iM - 1e-9)
+    function FV(VV) {
+      let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+      const xV = tV(qV["Coolant Mixer"], ZV) * eV;
+      return VV <= 0 ? 0 : Math.ceil(VV / xV - 1e-9)
     }
-    const CM = "baf2Water",
-      eM = "baf2waterclose",
-      bM = "baf2wateropen"
+    const TV = "baf2Water",
+      PV = "baf2waterclose",
+      AV = "baf2wateropen"
   },
-  39414: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => sM,
-      h: () => DM
+  39562: (VV, eV, xV) => {
+    xV.d(eV, {
+      d: () => gV,
+      f: () => DV
     });
-    var OM = iM(9816),
-      SM = iM(9852);
-    const jM = [
+    var JV = xV(9820),
+      YV = xV(9848);
+    const UV = [
       [1, 0, 0],
       [-1, 0, 0],
       [0, 0, 1],
@@ -193,45 +193,45 @@ export const modules = {
       [0, 1, 0],
       [0, -1, 0]
     ];
-    var aM = iM(9866),
-      PM = iM(39224),
-      nM = iM(9863);
-    const QM = {
+    var yV = xV(9865),
+      pV = xV(39360),
+      QV = xV(9861);
+    const nV = {
       1: [0, -1],
       2: [-1, 0],
       3: [0, 1],
       4: [1, 0]
     };
 
-    function zM(MM) {
-      let [rM, iM] = MM;
-      return [-iM, rM]
+    function wV(VV) {
+      let [eV, xV] = VV;
+      return [-xV, eV]
     }
 
-    function LM(MM, rM) {
-      return MM[0] === rM[0] && MM[1] === rM[1]
+    function ZV(VV, eV) {
+      return VV[0] === eV[0] && VV[1] === eV[1]
     }
 
-    function mM(MM, rM) {
-      return MM[0] * rM[0] + MM[1] * rM[1] === 0
+    function vV(VV, eV) {
+      return VV[0] * eV[0] + VV[1] * eV[1] === 0
     }
-    const HM = [
+    const rV = [
       [1, 0, 0],
       [-1, 0, 0],
       [0, 0, 1],
       [0, 0, -1]
     ];
-    var hM = iM(9895);
+    var kV = xV(9902);
 
-    function JM(MM, rM, iM, OM, SM) {
-      return rM < hM.q || rM >= hM.q + hM.t || Math.floor(MM / hM.y) === Math.floor(OM / hM.y) && Math.floor(iM / hM.y) === Math.floor(SM / hM.y)
+    function bV(VV, eV, xV, JV, YV) {
+      return eV < kV.p || eV >= kV.p + kV.t || Math.floor(VV / kV.w) === Math.floor(JV / kV.w) && Math.floor(xV / kV.w) === Math.floor(YV / kV.w)
     }
-    const dM = "Splitter",
-      yM = "Sorting Gate",
-      lM = new Set(hM.M),
-      EM = new Set([...hM.M, "Belt Loader", "Fast Loader", yM]),
-      UM = new Set(hM.x),
-      GM = [
+    const EV = "Splitter",
+      BV = "Sorting Gate",
+      jV = new Set(kV.I),
+      qV = new Set([...kV.I, "Belt Loader", "Fast Loader", BV]),
+      tV = new Set(kV.u),
+      FV = [
         [1, 0, 0],
         [-1, 0, 0],
         [0, 0, 1],
@@ -240,259 +240,259 @@ export const modules = {
         [0, -1, 0]
       ];
 
-    function CM(MM) {
-      var rM, iM;
-      return null !== (rM = null === (iM = OM.k[MM]) || void 0 === iM ? void 0 : iM.meta.rootName) && void 0 !== rM ? rM : ""
+    function TV(VV) {
+      var eV, xV;
+      return null !== (eV = null === (xV = JV.k[VV]) || void 0 === xV ? void 0 : xV.meta.rootName) && void 0 !== eV ? eV : ""
     }
 
-    function eM(MM) {
-      return CM(MM) === hM.j && (0, hM.V)(OM.k[MM].name)
+    function PV(VV) {
+      return TV(VV) === kV.i && (0, kV.R)(JV.k[VV].name)
     }
-    var bM = iM(9855),
-      wM = iM(9877);
-    const tM = [
+    var AV = xV(9853),
+      NV = xV(9881);
+    const XV = [
       [1, 0, 0],
       [-1, 0, 0],
       [0, 0, 1],
       [0, 0, -1]
     ];
 
-    function gM(MM) {
-      var rM, iM;
-      const SM = null === (rM = OM.k[MM]) || void 0 === rM ? void 0 : rM.meta;
-      return (null === SM || void 0 === SM ? void 0 : SM.rootName) !== wM.g ? null : {
-        rot: null !== (iM = SM.rot) && void 0 !== iM ? iM : 1,
-        half: (0, wM.c)(SM.rootName, SM.metaStr)
+    function MV(VV) {
+      var eV, xV;
+      const YV = null === (eV = JV.k[VV]) || void 0 === eV ? void 0 : eV.meta;
+      return (null === YV || void 0 === YV ? void 0 : YV.rootName) !== NV.p ? null : {
+        rot: null !== (xV = YV.rot) && void 0 !== xV ? xV : 1,
+        half: (0, NV.f)(YV.rootName, YV.metaStr)
       }
     }
 
-    function uM(MM, rM, iM, OM) {
-      return gM(MM(rM, iM, OM))
+    function zV(VV, eV, xV, JV) {
+      return MV(VV(eV, xV, JV))
     }
 
-    function RM(MM, rM, iM, OM, SM) {
+    function GV(VV, eV, xV, JV, YV) {
       let {
-        rot: jM,
-        half: aM
-      } = SM;
-      const [PM, nM] = (0, wM.e)(jM, aM), QM = uM(MM, rM + PM, iM, OM + nM);
-      return null !== QM && QM.rot === jM && QM.half === wM.i[aM]
+        rot: UV,
+        half: yV
+      } = YV;
+      const [pV, QV] = (0, NV.m)(UV, yV), nV = zV(VV, eV + pV, xV, JV + QV);
+      return null !== nV && nV.rot === UV && nV.half === NV.t[yV]
     }
-    var pM = iM(39420);
-    const WM = [new class {
+    var WV = xV(39568);
+    const RV = [new class {
       constructor() {
-        this.reshapeOffsets = HM
+        this.reshapeOffsets = rV
       }
-      handles(MM) {
-        var rM;
-        return "Stairs" === (null === (rM = OM.k[MM]) || void 0 === rM ? void 0 : rM.model)
+      handles(VV) {
+        var eV;
+        return "Stairs" === (null === (eV = JV.k[VV]) || void 0 === eV ? void 0 : eV.model)
       }
-      affects(MM) {
-        return this.handles(MM)
+      affects(VV) {
+        return this.handles(VV)
       }
-      shape(MM, rM, iM, SM, jM) {
-        const aM = this.stairsOf(jM),
-          PM = this.cornerAt(MM, rM, iM, SM, aM),
-          QM = aM.half === nM.b.top ? "top" : "bot";
-        return (0, OM.l)(`${OM.k[jM].meta.rootName}|meta|rot${aM.rot}|${QM}${null===PM?"":`|${PM}`}`)
+      shape(VV, eV, xV, YV, UV) {
+        const yV = this.stairsOf(UV),
+          pV = this.cornerAt(VV, eV, xV, YV, yV),
+          nV = yV.half === QV.e.top ? "top" : "bot";
+        return (0, JV.n)(`${JV.k[UV].meta.rootName}|meta|rot${yV.rot}|${nV}${null===pV?"":`|${pV}`}`)
       }
-      stairsOf(MM) {
+      stairsOf(VV) {
         const {
-          rot: rM,
-          halfblockPlacement: iM
-        } = OM.k[MM].meta;
+          rot: eV,
+          halfblockPlacement: xV
+        } = JV.k[VV].meta;
         return {
-          rot: rM,
-          half: iM
+          rot: eV,
+          half: xV
         }
       }
-      stairsAt(MM, rM, iM, OM) {
-        const SM = MM(rM, iM, OM);
-        return this.handles(SM) ? this.stairsOf(SM) : null
+      stairsAt(VV, eV, xV, JV) {
+        const YV = VV(eV, xV, JV);
+        return this.handles(YV) ? this.stairsOf(YV) : null
       }
-      cornerAt(MM, rM, iM, OM, SM) {
+      cornerAt(VV, eV, xV, JV, YV) {
         let {
-          rot: jM,
-          half: aM
-        } = SM;
-        const PM = QM[jM],
-          nM = SM => {
-            let [PM, nM] = SM;
-            const QM = this.stairsAt(MM, rM + PM, iM, OM + nM);
-            return null !== QM && QM.rot === jM && QM.half === aM
+          rot: UV,
+          half: yV
+        } = YV;
+        const pV = nV[UV],
+          QV = YV => {
+            let [pV, QV] = YV;
+            const nV = this.stairsAt(VV, eV + pV, xV, JV + QV);
+            return null !== nV && nV.rot === UV && nV.half === yV
           },
-          HM = this.stairsAt(MM, rM + PM[0], iM, OM + PM[1]);
-        if (null !== HM && HM.half === aM) {
-          const MM = QM[HM.rot];
-          if (mM(PM, MM) && !nM([-MM[0], -MM[1]])) return LM(MM, zM(PM)) ? "outerLeft" : "outerRight"
+          rV = this.stairsAt(VV, eV + pV[0], xV, JV + pV[1]);
+        if (null !== rV && rV.half === yV) {
+          const VV = nV[rV.rot];
+          if (vV(pV, VV) && !QV([-VV[0], -VV[1]])) return ZV(VV, wV(pV)) ? "outerLeft" : "outerRight"
         }
-        const hM = this.stairsAt(MM, rM - PM[0], iM, OM - PM[1]);
-        if (null !== hM && hM.half === aM) {
-          const MM = QM[hM.rot];
-          if (mM(PM, MM) && !nM(MM)) return LM(MM, zM(PM)) ? "innerLeft" : "innerRight"
+        const kV = this.stairsAt(VV, eV - pV[0], xV, JV - pV[1]);
+        if (null !== kV && kV.half === yV) {
+          const VV = nV[kV.rot];
+          if (vV(pV, VV) && !QV(VV)) return ZV(VV, wV(pV)) ? "innerLeft" : "innerRight"
         }
         return null
       }
     }, new class {
       constructor() {
-        this.reshapeOffsets = jM, this.rootIds = new Set(SM.h.map((MM => (0, OM.l)(MM))))
+        this.reshapeOffsets = UV, this.rootIds = new Set(YV.h.map((VV => (0, JV.n)(VV))))
       }
-      handles(MM) {
-        var rM;
-        const iM = null === (rM = OM.k[MM]) || void 0 === rM ? void 0 : rM.meta;
-        return void 0 !== iM && this.rootIds.has(iM.rootId)
+      handles(VV) {
+        var eV;
+        const xV = null === (eV = JV.k[VV]) || void 0 === eV ? void 0 : eV.meta;
+        return void 0 !== xV && this.rootIds.has(xV.rootId)
       }
-      affects(MM) {
-        return this.handles(MM)
+      affects(VV) {
+        return this.handles(VV)
       }
-      placedBy(MM) {
-        return OM.k[MM].meta.rootName === SM.t ? null : SM.t
+      placedBy(VV) {
+        return JV.k[VV].meta.rootName === YV.o ? null : YV.o
       }
-      shape(MM, rM, iM, jM, aM) {
+      shape(VV, eV, xV, UV, yV) {
         const {
-          rootId: PM,
-          rootName: nM,
-          rot: QM
-        } = OM.k[aM].meta;
-        let zM = 0;
-        return SM.C[QM].forEach(((SM, aM) => {
-          var nM;
-          let [LM, mM, HM] = SM;
-          const hM = null === (nM = OM.k[MM(rM + LM, iM + mM, jM + HM)]) || void 0 === nM ? void 0 : nM.meta;
-          (null === hM || void 0 === hM ? void 0 : hM.rootId) === PM && hM.rot === QM && (zM |= 1 << aM)
-        })), (0, OM.l)((0, SM.e)(nM, QM, zM))
+          rootId: pV,
+          rootName: QV,
+          rot: nV
+        } = JV.k[yV].meta;
+        let wV = 0;
+        return YV.t[nV].forEach(((YV, yV) => {
+          var QV;
+          let [ZV, vV, rV] = YV;
+          const kV = null === (QV = JV.k[VV(eV + ZV, xV + vV, UV + rV)]) || void 0 === QV ? void 0 : QV.meta;
+          (null === kV || void 0 === kV ? void 0 : kV.rootId) === pV && kV.rot === nV && (wV |= 1 << yV)
+        })), (0, JV.n)((0, YV.f)(QV, nV, wV))
       }
-    }, ...aM.b.map((MM => new PM.e(MM))), new class {
+    }, ...yV.d.map((VV => new pV.c(VV))), new class {
       constructor() {
-        this.reshapeOffsets = GM
+        this.reshapeOffsets = FV
       }
-      handles(MM) {
-        const rM = CM(MM);
-        return lM.has(rM) || rM === hM.j
+      handles(VV) {
+        const eV = TV(VV);
+        return jV.has(eV) || eV === kV.i
       }
-      affects(MM) {
-        const rM = CM(MM);
-        return EM.has(rM) || UM.has(rM) || rM === dM || rM === hM.j || void 0 !== hM.e[rM]
+      affects(VV) {
+        const eV = TV(VV);
+        return qV.has(eV) || tV.has(eV) || eV === EV || eV === kV.i || void 0 !== kV.d[eV]
       }
-      shape(MM, rM, iM, SM, jM, aM) {
+      shape(VV, eV, xV, YV, UV, yV) {
         const {
-          rootName: PM,
-          rot: nM
-        } = OM.k[jM].meta;
-        return PM === hM.j ? aM ? jM : function(MM, rM, iM, SM, jM) {
-          const [aM, PM] = hM.i[jM - 1];
-          for (let nM = 1; nM <= hM.J; nM++) {
-            const [QM, zM] = [rM - aM * nM, SM - PM * nM], LM = MM(QM, iM, zM);
-            if (CM(LM) === hM.j && OM.k[LM].meta.rot === jM && JM(rM, iM, SM, QM, zM)) return (0, OM.l)((0, hM.bb)(jM, !eM(LM)))
+          rootName: pV,
+          rot: QV
+        } = JV.k[UV].meta;
+        return pV === kV.i ? yV ? UV : function(VV, eV, xV, YV, UV) {
+          const [yV, pV] = kV.e[UV - 1];
+          for (let QV = 1; QV <= kV.H; QV++) {
+            const [nV, wV] = [eV - yV * QV, YV - pV * QV], ZV = VV(nV, xV, wV);
+            if (TV(ZV) === kV.i && JV.k[ZV].meta.rot === UV && bV(eV, xV, YV, nV, wV)) return (0, JV.n)((0, kV.Y)(UV, !PV(ZV)))
           }
-          return (0, OM.l)((0, hM.bb)(jM, !1))
-        }(MM, rM, iM, SM, nM) : (0, OM.l)((0, hM.O)(PM, nM, function(MM, rM, iM, SM, jM) {
-          const [aM, PM] = hM.i[jM - 1], nM = (jM, aM) => function(MM, rM, iM) {
-            var SM;
-            const jM = null === (SM = OM.k[MM]) || void 0 === SM ? void 0 : SM.meta;
-            if (!jM) return !1;
-            const aM = jM.rootName,
-              PM = EM.has(aM) || eM(MM);
-            if (!PM && !UM.has(aM) && aM !== dM) return !1;
-            const [nM, QM] = hM.i[jM.rot - 1];
-            if (PM && nM === -rM && QM === -iM) return !0;
-            if (UM.has(aM)) return nM === rM && QM === iM;
-            const zM = OM.k[MM].name;
-            return (aM === dM ? (0, hM.ab)(zM, nM, QM) : aM === yM ? [(0, hM.P)(zM, nM, QM)] : []).some((MM => {
-              let [OM, SM] = MM;
-              return OM === -rM && SM === -iM
+          return (0, JV.n)((0, kV.Y)(UV, !1))
+        }(VV, eV, xV, YV, QV) : (0, JV.n)((0, kV.K)(pV, QV, function(VV, eV, xV, YV, UV) {
+          const [yV, pV] = kV.e[UV - 1], QV = (UV, yV) => function(VV, eV, xV) {
+            var YV;
+            const UV = null === (YV = JV.k[VV]) || void 0 === YV ? void 0 : YV.meta;
+            if (!UV) return !1;
+            const yV = UV.rootName,
+              pV = qV.has(yV) || PV(VV);
+            if (!pV && !tV.has(yV) && yV !== EV) return !1;
+            const [QV, nV] = kV.e[UV.rot - 1];
+            if (pV && QV === -eV && nV === -xV) return !0;
+            if (tV.has(yV)) return QV === eV && nV === xV;
+            const wV = JV.k[VV].name;
+            return (yV === EV ? (0, kV.V)(wV, QV, nV) : yV === BV ? [(0, kV.L)(wV, QV, nV)] : []).some((VV => {
+              let [JV, YV] = VV;
+              return JV === -eV && YV === -xV
             }))
-          }(MM(rM + jM, iM, SM + aM), jM, aM), QM = MM(rM - aM, iM, SM - PM), zM = CM(QM) === dM && OM.k[QM].meta.rot === jM, LM = 1 === hM.e[CM(MM(rM, iM - 1, SM))] || -1 === hM.e[CM(MM(rM, iM + 1, SM))];
-          if (LM || zM || nM(-aM, -PM)) return null;
-          const mM = nM(-PM, aM),
-            HM = nM(PM, -aM);
-          if (mM === HM) return null;
-          return mM ? "turnLeft" : "turnRight"
-        }(MM, rM, iM, SM, nM)))
+          }(VV(eV + UV, xV, YV + yV), UV, yV), nV = VV(eV - yV, xV, YV - pV), wV = TV(nV) === EV && JV.k[nV].meta.rot === UV, ZV = 1 === kV.d[TV(VV(eV, xV - 1, YV))] || -1 === kV.d[TV(VV(eV, xV + 1, YV))];
+          if (ZV || wV || QV(-yV, -pV)) return null;
+          const vV = QV(-pV, yV),
+            rV = QV(pV, -yV);
+          if (vV === rV) return null;
+          return vV ? "turnLeft" : "turnRight"
+        }(VV, eV, xV, YV, QV)))
       }
     }, new class {
       constructor() {
-        this.reshapeOffsets = tM, this.rootId = (0, OM.l)(wM.g)
+        this.reshapeOffsets = XV, this.rootId = (0, JV.n)(NV.p)
       }
-      handles(MM) {
-        var rM;
-        return (null === (rM = OM.k[MM]) || void 0 === rM ? void 0 : rM.meta.rootId) === this.rootId
+      handles(VV) {
+        var eV;
+        return (null === (eV = JV.k[VV]) || void 0 === eV ? void 0 : eV.meta.rootId) === this.rootId
       }
-      affects(MM) {
-        return this.handles(MM)
+      affects(VV) {
+        return this.handles(VV)
       }
-      shape(MM, rM, iM, SM, jM, aM) {
-        const PM = gM(jM);
-        return (0, OM.l)((nM = PM.rot, null !== (QM = aM ? this.reshapedHalf(MM, rM, iM, SM, PM) : this.placedHalf(MM, rM, iM, SM, PM.rot)) ? (0, wM.b)(wM.g, nM, QM) : 1 === nM ? wM.g : `${wM.g}|meta|rot${nM}`));
-        var nM, QM
+      shape(VV, eV, xV, YV, UV, yV) {
+        const pV = MV(UV);
+        return (0, JV.n)((QV = pV.rot, null !== (nV = yV ? this.reshapedHalf(VV, eV, xV, YV, pV) : this.placedHalf(VV, eV, xV, YV, pV.rot)) ? (0, NV.c)(NV.p, QV, nV) : 1 === QV ? NV.p : `${NV.p}|meta|rot${QV}`));
+        var QV, nV
       }
-      placedHalf(MM, rM, iM, OM, SM) {
-        const [jM, aM] = bM.c[SM];
-        for (const [PM, nM] of [
+      placedHalf(VV, eV, xV, JV, YV) {
+        const [UV, yV] = AV.e[YV];
+        for (const [pV, QV] of [
             ["right", 1],
             ["left", -1]
           ]) {
-          const QM = rM + nM * jM,
-            zM = OM + nM * aM,
-            LM = uM(MM, QM, iM, zM);
-          if (null !== LM && LM.rot === SM && (null === LM.half || !RM(MM, QM, iM, zM, LM))) return PM
+          const nV = eV + QV * UV,
+            wV = JV + QV * yV,
+            ZV = zV(VV, nV, xV, wV);
+          if (null !== ZV && ZV.rot === YV && (null === ZV.half || !GV(VV, nV, xV, wV, ZV))) return pV
         }
         return null
       }
-      reshapedHalf(MM, rM, iM, OM, SM) {
-        if (null !== SM.half && RM(MM, rM, iM, OM, SM)) return SM.half;
-        for (const jM of ["right", "left"]) {
-          const [aM, PM] = (0, wM.e)(SM.rot, jM), nM = uM(MM, rM + aM, iM, OM + PM);
-          if (null !== nM && nM.rot === SM.rot && nM.half === wM.i[jM]) return jM
+      reshapedHalf(VV, eV, xV, JV, YV) {
+        if (null !== YV.half && GV(VV, eV, xV, JV, YV)) return YV.half;
+        for (const UV of ["right", "left"]) {
+          const [yV, pV] = (0, NV.m)(YV.rot, UV), QV = zV(VV, eV + yV, xV, JV + pV);
+          if (null !== QV && QV.rot === YV.rot && QV.half === NV.t[UV]) return UV
         }
         return null
       }
-    }, new pM.e];
+    }, new WV.c];
 
-    function sM(MM, rM, iM, OM, SM) {
-      let jM = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
-      for (const aM of WM)
-        if (aM.handles(SM)) return aM.shape(MM, rM, iM, OM, SM, jM);
-      return SM
+    function gV(VV, eV, xV, JV, YV) {
+      let UV = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
+      for (const yV of RV)
+        if (yV.handles(YV)) return yV.shape(VV, eV, xV, JV, YV, UV);
+      return YV
     }
 
-    function DM(MM) {
-      for (const OM of WM) {
-        var rM, iM;
-        if (OM.handles(MM)) return null !== (rM = null === (iM = OM.placedBy) || void 0 === iM ? void 0 : iM.call(OM, MM)) && void 0 !== rM ? rM : null
+    function DV(VV) {
+      for (const JV of RV) {
+        var eV, xV;
+        if (JV.handles(VV)) return null !== (eV = null === (xV = JV.placedBy) || void 0 === xV ? void 0 : xV.call(JV, VV)) && void 0 !== eV ? eV : null
       }
       return null
     }
   },
-  39420: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => wM,
-      i: () => UM,
-      m: () => EM
+  39568: (VV, eV, xV) => {
+    xV.d(eV, {
+      c: () => NV,
+      d: () => tV,
+      e: () => qV
     });
-    var OM = iM(9816),
-      SM = iM(9839),
-      jM = iM(9904),
-      aM = iM(39426),
-      PM = iM(9895);
-    const nM = (0, aM.S)("pipe"),
-      QM = (0, aM.S)("tank"),
-      zM = (0, aM.S)("port"),
-      LM = "Reactor Port";
+    var JV = xV(9820),
+      YV = xV(9843),
+      UV = xV(9906),
+      yV = xV(39575),
+      pV = xV(9902);
+    const QV = (0, yV.O)("pipe"),
+      nV = (0, yV.O)("tank"),
+      wV = (0, yV.O)("port"),
+      ZV = "Reactor Port";
 
-    function mM(MM, rM, iM) {
-      const OM = new Set([jM.h, jM.e, LM, ...rM, ...iM, ...MM ? [aM.o] : []]);
+    function vV(VV, eV, xV) {
+      const JV = new Set([UV.f, UV.e, ZV, ...eV, ...xV, ...VV ? [yV.j] : []]);
       return {
-        makers: new Set(rM),
-        roots: OM
+        makers: new Set(eV),
+        roots: JV
       }
     }
-    const HM = {
-        water: mM(!0, ["Condenser"], ["Centrifuge", "Synthesizer", aM.d]),
-        cryo: mM(!1, [aM.d], [])
+    const rV = {
+        water: vV(!0, ["Condenser"], ["Centrifuge", "Synthesizer", yV.d]),
+        cryo: vV(!1, [yV.d], [])
       },
-      hM = new Set([...HM.water.roots, ...HM.cryo.roots]),
-      JM = {
+      kV = new Set([...rV.water.roots, ...rV.cryo.roots]),
+      bV = {
         nx: [-1, 0, 0],
         ny: [0, -1, 0],
         nz: [0, 0, -1],
@@ -500,127 +500,127 @@ export const modules = {
         py: [0, 1, 0],
         pz: [0, 0, 1]
       },
-      dM = SM.h.map((MM => JM[MM])),
-      yM = dM.map((MM => {
-        let [rM, iM, OM] = MM;
-        return aM.D.findIndex((MM => {
-          let [SM, jM, aM] = MM;
-          return SM === rM && jM === iM && aM === OM
+      EV = YV.g.map((VV => bV[VV])),
+      BV = EV.map((VV => {
+        let [eV, xV, JV] = VV;
+        return yV.v.findIndex((VV => {
+          let [YV, UV, yV] = VV;
+          return YV === eV && UV === xV && yV === JV
         }))
       }));
 
-    function lM(MM) {
-      let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "water";
-      const iM = OM.k[MM],
-        SM = null === iM || void 0 === iM ? void 0 : iM.meta.rootName,
-        mM = HM[rM];
-      if (!SM || !mM.roots.has(SM)) return null;
-      if ((0, jM.p)(SM)) return (0, aM.Q)(iM.name) === rM ? nM : null;
-      if (SM === aM.o) return QM;
-      if (SM === LM) return iM.name.endsWith("|Water") ? zM : null;
-      const [hM, JM] = PM.i[(iM.meta.rot || 1) - 1];
-      return (0, aM.S)(mM.makers.has(SM) ? "maker" : "user", [-hM, 0, -JM])
+    function jV(VV) {
+      let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "water";
+      const xV = JV.k[VV],
+        YV = null === xV || void 0 === xV ? void 0 : xV.meta.rootName,
+        vV = rV[eV];
+      if (!YV || !vV.roots.has(YV)) return null;
+      if ((0, UV.j)(YV)) return (0, yV.K)(xV.name) === eV ? QV : null;
+      if (YV === yV.j) return nV;
+      if (YV === ZV) return xV.name.endsWith("|Water") ? wV : null;
+      const [kV, bV] = pV.e[(xV.meta.rot || 1) - 1];
+      return (0, yV.O)(vV.makers.has(YV) ? "maker" : "user", [-kV, 0, -bV])
     }
 
-    function EM(MM, rM, iM, SM) {
-      let jM = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "water";
+    function qV(VV, eV, xV, YV) {
+      let UV = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "water";
       const {
-        makers: PM
-      } = HM[jM];
-      return dM.some(((QM, zM) => {
-        var LM, mM;
-        let [HM, hM, JM] = QM;
-        const dM = MM(rM + HM, iM + hM, SM + JM),
-          EM = lM(dM, jM);
-        return null !== EM && PM.has(null !== (LM = null === (mM = OM.k[dM]) || void 0 === mM ? void 0 : mM.meta.rootName) && void 0 !== LM ? LM : "") && !(0, aM.V)(nM, EM, yM[zM])
+        makers: pV
+      } = rV[UV];
+      return EV.some(((nV, wV) => {
+        var ZV, vV;
+        let [rV, kV, bV] = nV;
+        const EV = VV(eV + rV, xV + kV, YV + bV),
+          qV = jV(EV, UV);
+        return null !== qV && pV.has(null !== (ZV = null === (vV = JV.k[EV]) || void 0 === vV ? void 0 : vV.meta.rootName) && void 0 !== ZV ? ZV : "") && !(0, yV.P)(QV, qV, BV[wV])
       }))
     }
 
-    function UM(MM) {
-      const rM = OM.k[MM];
-      return rM ? (0, aM.Q)(rM.name) : null
+    function tV(VV) {
+      const eV = JV.k[VV];
+      return eV ? (0, yV.K)(eV.name) : null
     }
-    let GM = null;
+    let FV = null;
 
-    function CM(MM) {
-      if (!GM) {
-        GM = new Map;
-        for (const MM of ["water", "cryo"])
-          for (let rM = 0; rM < 64; rM++)
-            for (const iM of [!1, !0]) GM.set((0, jM.t)(MM, rM, iM), {
-              CH: MM,
-              mask: rM,
-              full: iM
+    function TV(VV) {
+      if (!FV) {
+        FV = new Map;
+        for (const VV of ["water", "cryo"])
+          for (let eV = 0; eV < 64; eV++)
+            for (const xV of [!1, !0]) FV.set((0, UV.n)(VV, eV, xV), {
+              Cr: VV,
+              mask: eV,
+              full: xV
             })
       }
-      return GM.get(MM)
+      return FV.get(VV)
     }
-    const eM = new Map(Array.from({
-      length: jM.l + 1
-    }, ((MM, rM) => [(0, jM.u)(rM), rM])));
+    const PV = new Map(Array.from({
+      length: UV.g + 1
+    }, ((VV, eV) => [(0, UV.p)(eV), eV])));
 
-    function bM(MM, rM, iM, SM, jM, aM) {
-      return dM.some(((PM, nM) => {
-        var QM, zM, LM;
-        let [mM, HM, hM] = PM;
-        if (0 === (aM >> nM & 1)) return !1;
-        const JM = null !== (QM = null === (zM = OM.k[MM(rM + mM, iM + HM, SM + hM)]) || void 0 === zM ? void 0 : zM.name) && void 0 !== QM ? QM : "",
-          dM = CM(JM);
-        return dM ? dM.CH === jM && dM.full : (null !== (LM = function(MM) {
-          var rM;
-          return null !== (rM = eM.get(MM)) && void 0 !== rM ? rM : null
-        }(JM)) && void 0 !== LM ? LM : 0) > 0
+    function AV(VV, eV, xV, YV, UV, yV) {
+      return EV.some(((pV, QV) => {
+        var nV, wV, ZV;
+        let [vV, rV, kV] = pV;
+        if (0 === (yV >> QV & 1)) return !1;
+        const bV = null !== (nV = null === (wV = JV.k[VV(eV + vV, xV + rV, YV + kV)]) || void 0 === wV ? void 0 : wV.name) && void 0 !== nV ? nV : "",
+          EV = TV(bV);
+        return EV ? EV.Cr === UV && EV.full : (null !== (ZV = function(VV) {
+          var eV;
+          return null !== (eV = PV.get(VV)) && void 0 !== eV ? eV : null
+        }(bV)) && void 0 !== ZV ? ZV : 0) > 0
       }))
     }
-    class wM {
+    class NV {
       constructor() {
-        this.reshapeOffsets = dM
+        this.reshapeOffsets = EV
       }
-      handles(MM) {
-        return null !== UM(MM)
+      handles(VV) {
+        return null !== tV(VV)
       }
-      affects(MM) {
-        var rM, iM;
-        return hM.has(null !== (rM = null === (iM = OM.k[MM]) || void 0 === iM ? void 0 : iM.meta.rootName) && void 0 !== rM ? rM : "")
+      affects(VV) {
+        var eV, xV;
+        return kV.has(null !== (eV = null === (xV = JV.k[VV]) || void 0 === xV ? void 0 : xV.meta.rootName) && void 0 !== eV ? eV : "")
       }
-      placedBy(MM) {
-        var rM;
-        return (null === (rM = OM.k[MM]) || void 0 === rM ? void 0 : rM.meta.rootName) === jM.e ? jM.h : null
+      placedBy(VV) {
+        var eV;
+        return (null === (eV = JV.k[VV]) || void 0 === eV ? void 0 : eV.meta.rootName) === UV.e ? UV.f : null
       }
-      shape(MM, rM, iM, SM, PM, QM) {
-        var zM, LM, mM;
-        const HM = null !== (zM = null === (LM = OM.k[PM]) || void 0 === LM ? void 0 : LM.name) && void 0 !== zM ? zM : "",
-          hM = QM || HM !== jM.h ? null !== (mM = (0, aM.Q)(HM)) && void 0 !== mM ? mM : "water" : function(MM, rM, iM, OM) {
-            return dM.some(((SM, jM) => {
-              let [PM, QM, zM] = SM;
-              const LM = lM(MM(rM + PM, iM + QM, OM + zM), "cryo");
-              return null !== LM && "port" !== LM.kind && (0, aM.V)(nM, LM, yM[jM])
+      shape(VV, eV, xV, YV, pV, nV) {
+        var wV, ZV, vV;
+        const rV = null !== (wV = null === (ZV = JV.k[pV]) || void 0 === ZV ? void 0 : ZV.name) && void 0 !== wV ? wV : "",
+          kV = nV || rV !== UV.f ? null !== (vV = (0, yV.K)(rV)) && void 0 !== vV ? vV : "water" : function(VV, eV, xV, JV) {
+            return EV.some(((YV, UV) => {
+              let [pV, nV, wV] = YV;
+              const ZV = jV(VV(eV + pV, xV + nV, JV + wV), "cryo");
+              return null !== ZV && "port" !== ZV.kind && (0, yV.P)(QV, ZV, BV[UV])
             })) ? "cryo" : "water"
-          }(MM, rM, iM, SM),
-          JM = function(MM, rM, iM, OM) {
-            let SM = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "water",
-              jM = 0;
-            return dM.forEach(((PM, QM) => {
-              let [zM, LM, mM] = PM;
-              const HM = lM(MM(rM + zM, iM + LM, OM + mM), SM);
-              HM && (0, aM.V)(nM, HM, yM[QM]) && (jM |= 1 << QM)
-            })), jM
-          }(MM, rM, iM, SM, hM),
-          EM = QM ? function(MM) {
-            var rM;
-            return !0 === (null === (rM = CM(MM)) || void 0 === rM ? void 0 : rM.full)
-          }(HM) : bM(MM, rM, iM, SM, hM, JM);
-        return (0, OM.l)((0, jM.t)(hM, JM, EM))
+          }(VV, eV, xV, YV),
+          bV = function(VV, eV, xV, JV) {
+            let YV = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "water",
+              UV = 0;
+            return EV.forEach(((pV, nV) => {
+              let [wV, ZV, vV] = pV;
+              const rV = jV(VV(eV + wV, xV + ZV, JV + vV), YV);
+              rV && (0, yV.P)(QV, rV, BV[nV]) && (UV |= 1 << nV)
+            })), UV
+          }(VV, eV, xV, YV, kV),
+          qV = nV ? function(VV) {
+            var eV;
+            return !0 === (null === (eV = TV(VV)) || void 0 === eV ? void 0 : eV.full)
+          }(rV) : AV(VV, eV, xV, YV, kV, bV);
+        return (0, JV.n)((0, UV.n)(kV, bV, qV))
       }
     }
   },
-  39168: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => OM,
-      f: () => jM
+  39313: (VV, eV, xV) => {
+    xV.d(eV, {
+      c: () => JV,
+      d: () => UV
     });
-    const OM = ["Chest", "Loot Chest", "Moonstone Chest"],
-      SM = [{
+    const JV = ["Chest", "Loot Chest", "Moonstone Chest"],
+      YV = [{
         name: "Workbench",
         exactMatch: !0
       }, {
@@ -640,10 +640,10 @@ export const modules = {
         exactMatch: !1
       }];
 
-    function jM(MM) {
-      return SM.find((rM => rM.exactMatch ? MM === rM.name : MM.includes(rM.name)))
+    function UV(VV) {
+      return YV.find((eV => eV.exactMatch ? VV === eV.name : VV.includes(eV.name)))
     }
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const VV in modules) Object.freeze(modules[VV]);

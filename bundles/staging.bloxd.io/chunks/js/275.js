@@ -1,52 +1,52 @@
 export const id = 275;
 export const ids = [275];
 export const modules = {
-  40928: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      default: () => IM
+  41069: (VV, eV, xV) => {
+    xV.r(eV), xV.d(eV, {
+      default: () => uV
     });
-    iM(6922);
-    var OM = iM(44),
-      SM = iM(40931),
-      jM = iM(41190),
-      aM = iM(41313),
-      PM = iM(41358),
-      nM = iM(41374),
-      QM = iM(38167),
-      zM = iM(38034),
-      LM = iM(41495),
-      mM = iM(41543),
-      HM = (iM(41564), iM(1229)),
-      hM = iM(181),
-      JM = iM(1188),
-      dM = iM(19),
-      yM = iM(3047),
-      lM = iM(1520),
-      EM = iM(1398),
-      UM = iM(6913),
-      GM = iM(6930),
-      CM = iM(4830),
-      eM = iM(1303);
-    const bM = 1.2,
-      wM = .2,
-      tM = .0066 * Math.PI / 180,
-      gM = new Set(["Escape", "KeyG"]),
-      uM = {
+    xV(7011);
+    var JV = xV(62),
+      YV = xV(41071),
+      UV = xV(41331),
+      yV = xV(41466),
+      pV = xV(41510),
+      QV = xV(41524),
+      nV = xV(38387),
+      wV = xV(38263),
+      ZV = xV(41660),
+      vV = xV(41706),
+      rV = (xV(41744), xV(1252)),
+      kV = xV(206),
+      bV = xV(1220),
+      EV = xV(27),
+      BV = xV(3080),
+      jV = xV(1551),
+      qV = xV(1414),
+      tV = xV(7005),
+      FV = xV(7013),
+      TV = xV(4922),
+      PV = xV(1321);
+    const AV = 1.2,
+      NV = .2,
+      XV = .0066 * Math.PI / 180,
+      MV = new Set(["Escape", "KeyG"]),
+      zV = {
         ArrowLeft: -1,
         ArrowRight: 1
       },
-      RM = "ArrowUp",
-      pM = new Set([...Object.keys(uM), RM, "ArrowDown"]),
-      WM = 32,
-      sM = 1,
-      DM = 10,
-      kM = "F4",
-      ZM = "Period",
-      oM = Math.PI / 2 - .001,
-      fM = Math.PI / 6,
-      YM = Math.PI / 6,
-      NM = 1.08,
-      AM = [{
+      GV = "ArrowUp",
+      WV = new Set([...Object.keys(zV), GV, "ArrowDown"]),
+      RV = 32,
+      gV = 1,
+      DV = 10,
+      iV = "F4",
+      CV = "Period",
+      aV = Math.PI / 2 - .001,
+      oV = Math.PI / 6,
+      cV = Math.PI / 6,
+      hV = 1.08,
+      lV = [{
         name: "X",
         direction: [1, 0, 0],
         colour: "#e5534b"
@@ -59,387 +59,387 @@ export const modules = {
         direction: [0, 0, 1],
         colour: "#539bf5"
       }],
-      xM = 24,
-      vM = 7,
-      FM = 4,
-      BM = .01,
-      XM = 4;
+      LV = 24,
+      fV = 7,
+      mV = 4,
+      KV = .01,
+      HV = 4;
 
-    function IM(MM) {
+    function uV(VV) {
       let {
-        heatmap: rM,
-        scale: iM,
-        fullyOpaqueFrom: sM,
-        bounds: fM,
-        fitBounds: YM,
-        schematic: NM,
-        controls: AM,
-        onStepTime: xM,
-        onShowAllTime: vM,
-        onTogglePlaying: FM,
-        getReadout: XM = null
-      } = MM;
+        heatmap: eV,
+        scale: xV,
+        fullyOpaqueFrom: gV,
+        bounds: oV,
+        fitBounds: cV,
+        schematic: hV,
+        controls: lV,
+        onStepTime: LV,
+        onShowAllTime: fV,
+        onTogglePlaying: mV,
+        getReadout: HV = null
+      } = VV;
       const {
-        t: IM
-      } = (0, JM.A)(), {
-        clientEscMenuOptions: jr
-      } = (0, dM.m)(["clientEscMenuOptions"]), nr = (0, OM.useRef)(null), Qr = (0, OM.useRef)(null), zr = (0, OM.useRef)(null), Lr = (0, yM.d)(nr), [mr, Hr] = (0, OM.useState)(!1), [hr, Jr] = (0, OM.useState)(!1), [dr, yr] = (0, OM.useState)(!0), lr = (0, OM.useRef)(!1), [Er, Ur] = (0, OM.useState)(!1), Gr = hr || !dr && Er, [Cr, er] = (0, OM.useState)(!1), [br, wr] = (0, OM.useState)(!0), [tr, gr] = (0, OM.useState)(null), ur = fM.min, [Rr, pr] = (0, OM.useState)(ur);
-      Rr[0] === ur[0] && Rr[1] === ur[1] && Rr[2] === ur[2] || (pr(ur), null !== tr && gr({
-        ...tr,
-        position: ar(tr.position, ar(Rr, Pr(ur, -1)))
+        t: uV
+      } = (0, bV.A)(), {
+        clientEscMenuOptions: Ue
+      } = (0, EV.l)(["clientEscMenuOptions"]), Qe = (0, JV.useRef)(null), ne = (0, JV.useRef)(null), we = (0, JV.useRef)(null), Ze = (0, BV.d)(Qe), [ve, re] = (0, JV.useState)(!1), [ke, be] = (0, JV.useState)(!1), [Ee, Be] = (0, JV.useState)(!0), je = (0, JV.useRef)(!1), [qe, te] = (0, JV.useState)(!1), Fe = ke || !Ee && qe, [Te, Pe] = (0, JV.useState)(!1), [Ae, Ne] = (0, JV.useState)(!0), [Xe, Me] = (0, JV.useState)(null), ze = oV.min, [Ge, We] = (0, JV.useState)(ze);
+      Ge[0] === ze[0] && Ge[1] === ze[1] && Ge[2] === ze[2] || (We(ze), null !== Xe && Me({
+        ...Xe,
+        position: ye(Xe.position, ye(Ge, pe(ze, -1)))
       }));
-      const Wr = (0, OM.useMemo)((() => function(MM) {
-          return [MM.max[0] - MM.min[0] + 1, MM.max[1] - MM.min[1] + 1, MM.max[2] - MM.min[2] + 1]
-        }(fM)), [fM]),
-        sr = (0, OM.useMemo)((() => function(MM, rM) {
-          const iM = [],
-            OM = [];
-          for (const [SM, jM] of Object.entries(MM.frequencies)) {
-            const MM = Number(SM);
-            for (const [SM, aM] of Object.entries(jM)) {
-              const jM = Number(SM);
-              for (const [SM, PM] of Object.entries(aM)) PM <= 0 || (iM.push(MM - rM[0], jM - rM[1], Number(SM) - rM[2]), OM.push(PM))
+      const Re = (0, JV.useMemo)((() => function(VV) {
+          return [VV.max[0] - VV.min[0] + 1, VV.max[1] - VV.min[1] + 1, VV.max[2] - VV.min[2] + 1]
+        }(oV)), [oV]),
+        ge = (0, JV.useMemo)((() => function(VV, eV) {
+          const xV = [],
+            JV = [];
+          for (const [YV, UV] of Object.entries(VV.frequencies)) {
+            const VV = Number(YV);
+            for (const [YV, yV] of Object.entries(UV)) {
+              const UV = Number(YV);
+              for (const [YV, pV] of Object.entries(yV)) pV <= 0 || (xV.push(VV - eV[0], UV - eV[1], Number(YV) - eV[2]), JV.push(pV))
             }
           }
           return {
-            positions: Int32Array.from(iM),
-            values: Float64Array.from(OM),
-            count: OM.length
+            positions: Int32Array.from(xV),
+            values: Float64Array.from(JV),
+            count: JV.length
           }
-        }(rM, ur)), [rM, ur]),
-        Dr = bM * jr.cameraFOV / 100,
-        kr = Lr.height > 0 ? Lr.width / Lr.height : 1,
-        Zr = (0, OM.useMemo)((() => function(MM, rM) {
+        }(eV, ze)), [eV, ze]),
+        De = AV * Ue.cameraFOV / 100,
+        ie = Ze.height > 0 ? Ze.width / Ze.height : 1,
+        Ce = (0, JV.useMemo)((() => function(VV, eV) {
           return {
-            min: [MM.min[0] - rM[0], MM.min[1] - rM[1], MM.min[2] - rM[2]],
-            max: [MM.max[0] - rM[0] + 1, MM.max[1] - rM[1] + 1, MM.max[2] - rM[2] + 1]
+            min: [VV.min[0] - eV[0], VV.min[1] - eV[1], VV.min[2] - eV[2]],
+            max: [VV.max[0] - eV[0] + 1, VV.max[1] - eV[1] + 1, VV.max[2] - eV[2] + 1]
           }
-        }(YM, ur)), [YM, ur]),
-        or = ir(Zr, kr, Dr),
-        fr = null !== tr && void 0 !== tr ? tr : or,
-        Yr = (0, OM.useRef)({
-          fittedView: or,
-          fieldOfView: Dr,
-          mouseSensitivity: jr.mouseSensitivity,
-          canLock: dr
+        }(cV, ze)), [cV, ze]),
+        ae = xe(Ce, ie, De),
+        oe = null !== Xe && void 0 !== Xe ? Xe : ae,
+        ce = (0, JV.useRef)({
+          fittedView: ae,
+          fieldOfView: De,
+          mouseSensitivity: Ue.mouseSensitivity,
+          canLock: Ee
         });
-      Yr.current = {
-        fittedView: or,
-        fieldOfView: Dr,
-        mouseSensitivity: jr.mouseSensitivity,
-        canLock: dr
+      ce.current = {
+        fittedView: ae,
+        fieldOfView: De,
+        mouseSensitivity: Ue.mouseSensitivity,
+        canLock: Ee
       };
-      const Nr = (0, OM.useMemo)((() => {
-          if (!Gr) return null;
-          const MM = (MM, iM, OM) => {
-              var SM, jM, aM;
-              return null !== (SM = null === (jM = rM.frequencies[MM + ur[0]]) || void 0 === jM || null === (aM = jM[iM + ur[1]]) || void 0 === aM ? void 0 : aM[OM + ur[2]]) && void 0 !== SM ? SM : 0
+      const he = (0, JV.useMemo)((() => {
+          if (!Fe) return null;
+          const VV = (VV, xV, JV) => {
+              var YV, UV, yV;
+              return null !== (YV = null === (UV = eV.frequencies[VV + ze[0]]) || void 0 === UV || null === (yV = UV[xV + ze[1]]) || void 0 === yV ? void 0 : yV[JV + ze[2]]) && void 0 !== YV ? YV : 0
             },
-            OM = function(MM, rM, iM, OM) {
-              let SM = 0,
-                jM = 1 / 0;
-              for (const LM of [0, 1, 2]) {
-                if (0 === rM[LM]) {
-                  if (MM[LM] < 0 || MM[LM] > iM[LM]) return null;
+            JV = function(VV, eV, xV, JV) {
+              let YV = 0,
+                UV = 1 / 0;
+              for (const ZV of [0, 1, 2]) {
+                if (0 === eV[ZV]) {
+                  if (VV[ZV] < 0 || VV[ZV] > xV[ZV]) return null;
                   continue
                 }
-                const OM = (0 - MM[LM]) / rM[LM],
-                  aM = (iM[LM] - MM[LM]) / rM[LM];
-                SM = Math.max(SM, Math.min(OM, aM)), jM = Math.min(jM, Math.max(OM, aM))
+                const JV = (0 - VV[ZV]) / eV[ZV],
+                  yV = (xV[ZV] - VV[ZV]) / eV[ZV];
+                YV = Math.max(YV, Math.min(JV, yV)), UV = Math.min(UV, Math.max(JV, yV))
               }
-              if (SM > jM) return null;
-              const aM = [0, 1, 2].map((OM => Math.min(iM[OM] - 1, Math.max(0, Math.floor(MM[OM] + rM[OM] * SM))))),
-                PM = [0, 1, 2].map((MM => Math.sign(rM[MM]))),
-                nM = [0, 1, 2].map((iM => {
-                  if (0 === PM[iM]) return 1 / 0;
-                  return ((PM[iM] > 0 ? aM[iM] + 1 : aM[iM]) - MM[iM]) / rM[iM]
+              if (YV > UV) return null;
+              const yV = [0, 1, 2].map((JV => Math.min(xV[JV] - 1, Math.max(0, Math.floor(VV[JV] + eV[JV] * YV))))),
+                pV = [0, 1, 2].map((VV => Math.sign(eV[VV]))),
+                QV = [0, 1, 2].map((xV => {
+                  if (0 === pV[xV]) return 1 / 0;
+                  return ((pV[xV] > 0 ? yV[xV] + 1 : yV[xV]) - VV[xV]) / eV[xV]
                 })),
-                QM = [0, 1, 2].map((MM => 0 === PM[MM] ? 1 / 0 : Math.abs(1 / rM[MM])));
-              let zM = null;
+                nV = [0, 1, 2].map((VV => 0 === pV[VV] ? 1 / 0 : Math.abs(1 / eV[VV])));
+              let wV = null;
               for (;;) {
-                const MM = OM(aM[0], aM[1], aM[2]);
-                if (MM >= 1) return aM;
-                MM > 0 && (zM = [aM[0], aM[1], aM[2]]);
-                const rM = nM[0] < nM[1] ? nM[0] < nM[2] ? 0 : 2 : nM[1] < nM[2] ? 1 : 2;
-                if (nM[rM] > jM) return zM;
-                if (aM[rM] += PM[rM], nM[rM] += QM[rM], aM[rM] < 0 || aM[rM] >= iM[rM]) return zM
+                const VV = JV(yV[0], yV[1], yV[2]);
+                if (VV >= 1) return yV;
+                VV > 0 && (wV = [yV[0], yV[1], yV[2]]);
+                const eV = QV[0] < QV[1] ? QV[0] < QV[2] ? 0 : 2 : QV[1] < QV[2] ? 1 : 2;
+                if (QV[eV] > UV) return wV;
+                if (yV[eV] += pV[eV], QV[eV] += nV[eV], yV[eV] < 0 || yV[eV] >= xV[eV]) return wV
               }
-            }(fr.position, Mr(fr), Wr, ((rM, OM, SM) => (0, UM.x)(MM(rM, OM, SM), iM, sM)));
-          return null === OM ? null : {
-            x: OM[0] + ur[0],
-            y: OM[1] + ur[1],
-            z: OM[2] + ur[2],
-            value: MM(OM[0], OM[1], OM[2])
+            }(oe.position, Ve(oe), Re, ((eV, JV, YV) => (0, tV.v)(VV(eV, JV, YV), xV, gV)));
+          return null === JV ? null : {
+            x: JV[0] + ze[0],
+            y: JV[1] + ze[1],
+            z: JV[2] + ze[2],
+            value: VV(JV[0], JV[1], JV[2])
           }
-        }), [Gr, rM, ur, fr, Wr, iM, sM]),
+        }), [Fe, eV, ze, oe, Re, xV, gV]),
         {
-          keyHandlers: Ar
-        } = (0, GM.h)({
-          isEnabled: Gr,
-          claimedKeyCodes: pM,
-          Wm: MM => {
-            gr((rM => function(MM, rM) {
-              const iM = [Math.sin(MM.heading), 0, Math.cos(MM.heading)],
-                OM = ar(ar(Pr(iM, rM.forward), Pr(rr(MM.heading), rM.right)), [0, rM.up, 0]);
+          keyHandlers: le
+        } = (0, FV.d)({
+          isEnabled: Fe,
+          claimedKeyCodes: WV,
+          Lv: VV => {
+            Me((eV => function(VV, eV) {
+              const xV = [Math.sin(VV.heading), 0, Math.cos(VV.heading)],
+                JV = ye(ye(pe(xV, eV.forward), pe(ee(VV.heading), eV.right)), [0, eV.up, 0]);
               return {
-                ...MM,
-                position: ar(MM.position, OM)
+                ...VV,
+                position: ye(VV.position, JV)
               }
-            }(null !== rM && void 0 !== rM ? rM : Yr.current.fittedView, MM)))
+            }(null !== eV && void 0 !== eV ? eV : ce.current.fittedView, VV)))
           },
-          onZoomChange: er
+          onZoomChange: Pe
         });
-      (0, OM.useEffect)((() => {
-        const MM = Qr.current;
-        if (!MM) return;
-        let rM;
+      (0, JV.useEffect)((() => {
+        const VV = ne.current;
+        if (!VV) return;
+        let eV;
         try {
-          rM = function(MM, rM) {
-            const iM = new SM.e(MM, !0, {
+          eV = function(VV, eV) {
+            const xV = new YV.c(VV, !0, {
                 stencil: !1
               }, !0),
-              OM = new jM.b(iM),
-              [HM, hM, JM] = UM.Q;
-            OM.clearColor = new QM.d(HM / 255, hM / 255, JM / 255, 1);
-            const dM = new aM.d("Heatmap3DCamera", zM.sh.Zero(), OM);
-            dM.fov = rM, dM.minZ = .05;
-            const yM = new PM.e("Heatmap3DLight", new zM.sh(.4, 1, -.6), OM);
-            yM.diffuse = QM.Color3.White(), yM.groundColor = QM.Color3.Black(), yM.specular = QM.Color3.Black();
-            const lM = new nM.StandardMaterial("Heatmap3DCellMaterial", OM);
-            lM.diffuseColor = new QM.Color3(.4, .4, .4), lM.emissiveColor = new QM.Color3(.62, .62, .62), lM.specularColor = QM.Color3.Black();
-            const EM = (0, LM.e)("Heatmap3DCells", {
+              JV = new UV.c(xV),
+              [rV, kV, bV] = tV.M;
+            JV.clearColor = new nV.c(rV / 255, kV / 255, bV / 255, 1);
+            const EV = new yV.d("Heatmap3DCamera", wV.Ik.Zero(), JV);
+            EV.fov = eV, EV.minZ = .05;
+            const BV = new pV.d("Heatmap3DLight", new wV.Ik(.4, 1, -.6), JV);
+            BV.diffuse = nV.Color3.White(), BV.groundColor = nV.Color3.Black(), BV.specular = nV.Color3.Black();
+            const jV = new QV.StandardMaterial("Heatmap3DCellMaterial", JV);
+            jV.diffuseColor = new nV.Color3(.4, .4, .4), jV.emissiveColor = new nV.Color3(.62, .62, .62), jV.specularColor = nV.Color3.Black();
+            const qV = (0, ZV.b)("Heatmap3DCells", {
               size: 1
-            }, OM);
-            EM.material = lM, EM.AJ = !1, EM.Wh = !0, EM.isVisible = !1;
-            const GM = (0, LM.e)("Heatmap3DTranslucentCells", {
+            }, JV);
+            qV.material = jV, qV.QE = !1, qV.Sk = !0, qV.isVisible = !1;
+            const FV = (0, ZV.b)("Heatmap3DTranslucentCells", {
               size: 1
-            }, OM);
-            GM.material = lM, GM.hasVertexAlpha = !0, GM.AJ = !1, GM.Wh = !0, GM.isVisible = !1;
-            const CM = new nM.StandardMaterial("Heatmap3DSchematicMaterial", OM);
-            CM.diffuseColor = new QM.Color3(.6, .6, .6), CM.emissiveColor = new QM.Color3(.4, .4, .4), CM.specularColor = QM.Color3.Black();
-            const eM = (0, LM.e)("Heatmap3DSchematicBlocks", {
+            }, JV);
+            FV.material = jV, FV.hasVertexAlpha = !0, FV.QE = !1, FV.Sk = !0, FV.isVisible = !1;
+            const TV = new QV.StandardMaterial("Heatmap3DSchematicMaterial", JV);
+            TV.diffuseColor = new nV.Color3(.6, .6, .6), TV.emissiveColor = new nV.Color3(.4, .4, .4), TV.specularColor = nV.Color3.Black();
+            const PV = (0, ZV.b)("Heatmap3DSchematicBlocks", {
               size: 1
-            }, OM);
-            eM.material = CM, eM.AJ = !1, eM.Wh = !0, eM.isVisible = !1;
-            const bM = (0, mM.b)("Heatmap3DTarget", {
-              lines: cM([-.52, -.52, -.52], [.52, .52, .52])
-            }, OM);
-            return bM.color = new QM.Color3(.06, .14, .23), bM.renderingGroupId = 1, bM.AJ = !1, bM.isVisible = !1, {
-              engine: iM,
-              YJ: OM,
-              camera: dM,
-              cells: EM,
-              translucentCells: GM,
+            }, JV);
+            PV.material = TV, PV.QE = !1, PV.Sk = !0, PV.isVisible = !1;
+            const AV = (0, vV.e)("Heatmap3DTarget", {
+              lines: OV([-.52, -.52, -.52], [.52, .52, .52])
+            }, JV);
+            return AV.color = new nV.Color3(.06, .14, .23), AV.renderingGroupId = 1, AV.QE = !1, AV.isVisible = !1, {
+              engine: xV,
+              yE: JV,
+              camera: EV,
+              cells: qV,
+              translucentCells: FV,
               translucent: {
-                Sd: new Float32Array(0),
+                wb: new Float32Array(0),
                 colours: new Float32Array(0),
                 count: 0
               },
               translucentSortedFrom: null,
-              schematicBlocks: eM,
-              targetOutline: bM,
+              schematicBlocks: PV,
+              targetOutline: AV,
               chunkGrid: null,
               chunkGridCentre: null,
               chunkGridOrigin: null,
-              targetFieldOfView: rM,
+              targetFieldOfView: eV,
               needsRender: !0
             }
-          }(MM, Yr.current.fieldOfView)
-        } catch (iM) {
-          return console.error("Failed to start the 3D heatmap", iM), void Hr(!0)
+          }(VV, ce.current.fieldOfView)
+        } catch (xV) {
+          return console.error("Failed to start the 3D heatmap", xV), void re(!0)
         }
-        return zr.current = rM, rM.engine.runRenderLoop((() => {
-          const MM = rM.camera;
-          MM.fov !== rM.targetFieldOfView && (MM.fov += (rM.targetFieldOfView - MM.fov) * (MM.fov > rM.targetFieldOfView ? .3 : .2), Math.abs(rM.targetFieldOfView - MM.fov) < 5e-4 && (MM.fov = rM.targetFieldOfView), rM.needsRender = !0), rM.needsRender && (rM.YJ.render(), rM.needsRender = !rM.YJ.isReady() || !rM.engine.areAllEffectsReady())
+        return we.current = eV, eV.engine.runRenderLoop((() => {
+          const VV = eV.camera;
+          VV.fov !== eV.targetFieldOfView && (VV.fov += (eV.targetFieldOfView - VV.fov) * (VV.fov > eV.targetFieldOfView ? .3 : .2), Math.abs(eV.targetFieldOfView - VV.fov) < 5e-4 && (VV.fov = eV.targetFieldOfView), eV.needsRender = !0), eV.needsRender && (eV.yE.render(), eV.needsRender = !eV.yE.isReady() || !eV.engine.areAllEffectsReady())
         })), () => {
-          zr.current = null, rM.engine.dispose()
+          we.current = null, eV.engine.dispose()
         }
-      }), []), (0, OM.useEffect)((() => {
-        const MM = Qr.current;
-        if (!MM) return;
-        const rM = () => {
-            lr.current = !1, Jr(document.pointerLockElement === MM)
+      }), []), (0, JV.useEffect)((() => {
+        const VV = ne.current;
+        if (!VV) return;
+        const eV = () => {
+            je.current = !1, be(document.pointerLockElement === VV)
           },
-          iM = () => {
-            lr.current && (lr.current = !1, yr(!1))
+          xV = () => {
+            je.current && (je.current = !1, Be(!1))
           },
-          OM = rM => {
-            const iM = !Yr.current.canLock && document.activeElement === MM && 0 !== (1 & rM.buttons);
-            if (document.pointerLockElement !== MM && !iM) return;
-            const OM = Yr.current.mouseSensitivity * tM;
-            gr((MM => function(MM, rM, iM) {
-              const OM = 2 * Math.PI;
+          JV = eV => {
+            const xV = !ce.current.canLock && document.activeElement === VV && 0 !== (1 & eV.buttons);
+            if (document.pointerLockElement !== VV && !xV) return;
+            const JV = ce.current.mouseSensitivity * XV;
+            Me((VV => function(VV, eV, xV) {
+              const JV = 2 * Math.PI;
               return {
-                ...MM,
-                heading: ((MM.heading + rM) % OM + OM) % OM,
-                pitch: Math.max(-oM, Math.min(oM, MM.pitch + iM))
+                ...VV,
+                heading: ((VV.heading + eV) % JV + JV) % JV,
+                pitch: Math.max(-aV, Math.min(aV, VV.pitch + xV))
               }
-            }(null !== MM && void 0 !== MM ? MM : Yr.current.fittedView, rM.movementX * OM, rM.movementY * OM)))
+            }(null !== VV && void 0 !== VV ? VV : ce.current.fittedView, eV.movementX * JV, eV.movementY * JV)))
           };
-        return document.addEventListener("pointerlockchange", rM), document.addEventListener("pointerlockerror", iM), document.addEventListener("pointermove", OM), () => {
-          document.removeEventListener("pointerlockchange", rM), document.removeEventListener("pointerlockerror", iM), document.removeEventListener("pointermove", OM), document.pointerLockElement === MM && (0, CM.e)()
+        return document.addEventListener("pointerlockchange", eV), document.addEventListener("pointerlockerror", xV), document.addEventListener("pointermove", JV), () => {
+          document.removeEventListener("pointerlockchange", eV), document.removeEventListener("pointerlockerror", xV), document.removeEventListener("pointermove", JV), document.pointerLockElement === VV && (0, TV.b)()
         }
-      }), []), (0, OM.useEffect)((() => {
-        const MM = zr.current;
-        null !== MM && 0 !== Lr.width && 0 !== Lr.height && (MM.engine.resize(), MM.needsRender = !0)
-      }), [Lr.width, Lr.height]), (0, OM.useEffect)((() => {
-        const MM = zr.current;
-        null !== MM && (MM.targetFieldOfView = Dr * (Cr ? wM : 1))
-      }), [Dr, Cr]), (0, OM.useEffect)((() => {
-        const MM = zr.current;
-        null !== MM && function(MM, rM, iM, OM) {
-          const SM = [],
-            jM = [],
-            aM = [],
-            PM = [];
-          for (let nM = 0; nM < rM.count; nM++) {
-            const MM = rM.values[nM],
-              QM = (0, UM.x)(MM, iM, OM);
-            if (QM <= 0) continue;
-            const [zM, LM, mM] = (0, UM.o)((0, UM.H)(MM, iM)), HM = QM >= 1;
-            (HM ? SM : aM).push(rM.positions[3 * nM] + .5, rM.positions[3 * nM + 1] + .5, rM.positions[3 * nM + 2] + .5), (HM ? jM : PM).push(zM / 255, LM / 255, mM / 255, QM)
+      }), []), (0, JV.useEffect)((() => {
+        const VV = we.current;
+        null !== VV && 0 !== Ze.width && 0 !== Ze.height && (VV.engine.resize(), VV.needsRender = !0)
+      }), [Ze.width, Ze.height]), (0, JV.useEffect)((() => {
+        const VV = we.current;
+        null !== VV && (VV.targetFieldOfView = De * (Te ? NV : 1))
+      }), [De, Te]), (0, JV.useEffect)((() => {
+        const VV = we.current;
+        null !== VV && function(VV, eV, xV, JV) {
+          const YV = [],
+            UV = [],
+            yV = [],
+            pV = [];
+          for (let QV = 0; QV < eV.count; QV++) {
+            const VV = eV.values[QV],
+              nV = (0, tV.v)(VV, xV, JV);
+            if (nV <= 0) continue;
+            const [wV, ZV, vV] = (0, tV.o)((0, tV.E)(VV, xV)), rV = nV >= 1;
+            (rV ? YV : yV).push(eV.positions[3 * QV] + .5, eV.positions[3 * QV + 1] + .5, eV.positions[3 * QV + 2] + .5), (rV ? UV : pV).push(wV / 255, ZV / 255, vV / 255, nV)
           }
-          TM(MM.cells, Float32Array.from(SM), Float32Array.from(jM), jM.length / 4), MM.translucent = {
-            Sd: Float32Array.from(aM),
-            colours: Float32Array.from(PM),
-            count: PM.length / 4
-          }, MM.translucentSortedFrom = null, VM(MM), MM.needsRender = !0
-        }(MM, sr, iM, sM)
-      }), [sr, iM, sM]), (0, OM.useEffect)((() => {
-        const MM = zr.current;
-        null !== MM && function(MM, rM) {
-          MM.chunkGridOrigin = rM, MM.chunkGridCentre = null, qM(MM)
-        }(MM, fM.min)
-      }), [fM]), (0, OM.useEffect)((() => {
-        const MM = zr.current;
-        null !== MM && function(MM, rM, iM) {
-          const OM = [],
-            SM = [];
-          if (null !== rM) {
+          IV(VV.cells, Float32Array.from(YV), Float32Array.from(UV), UV.length / 4), VV.translucent = {
+            wb: Float32Array.from(yV),
+            colours: Float32Array.from(pV),
+            count: pV.length / 4
+          }, VV.translucentSortedFrom = null, dV(VV), VV.needsRender = !0
+        }(VV, ge, xV, gV)
+      }), [ge, xV, gV]), (0, JV.useEffect)((() => {
+        const VV = we.current;
+        null !== VV && function(VV, eV) {
+          VV.chunkGridOrigin = eV, VV.chunkGridCentre = null, SV(VV)
+        }(VV, oV.min)
+      }), [oV]), (0, JV.useEffect)((() => {
+        const VV = we.current;
+        null !== VV && function(VV, eV, xV) {
+          const JV = [],
+            YV = [];
+          if (null !== eV) {
             const {
-              positions: MM,
-              colours: jM,
-              count: aM
-            } = rM.surface;
-            for (let rM = 0; rM < aM; rM++) {
-              const aM = [MM[3 * rM], MM[3 * rM + 1], MM[3 * rM + 2]];
-              [0, 1, 2].every((MM => aM[MM] >= iM.min[MM] - WM && aM[MM] <= iM.max[MM] + WM)) && (OM.push(aM[0] - iM.min[0] + .5, aM[1] - iM.min[1] + .5, aM[2] - iM.min[2] + .5), SM.push(jM[3 * rM] / 255, jM[3 * rM + 1] / 255, jM[3 * rM + 2] / 255, 1))
+              positions: VV,
+              colours: UV,
+              count: yV
+            } = eV.surface;
+            for (let eV = 0; eV < yV; eV++) {
+              const yV = [VV[3 * eV], VV[3 * eV + 1], VV[3 * eV + 2]];
+              [0, 1, 2].every((VV => yV[VV] >= xV.min[VV] - RV && yV[VV] <= xV.max[VV] + RV)) && (JV.push(yV[0] - xV.min[0] + .5, yV[1] - xV.min[1] + .5, yV[2] - xV.min[2] + .5), YV.push(UV[3 * eV] / 255, UV[3 * eV + 1] / 255, UV[3 * eV + 2] / 255, 1))
             }
           }
-          TM(MM.schematicBlocks, Float32Array.from(OM), Float32Array.from(SM), SM.length / 4), MM.needsRender = !0
-        }(MM, NM, fM)
-      }), [NM, fM]), (0, OM.useEffect)((() => {
-        const MM = zr.current;
-        null !== MM && null !== MM.chunkGrid && (MM.chunkGrid.isVisible = br, MM.needsRender = !0)
-      }), [br, fM]), (0, OM.useEffect)((() => {
-        const MM = zr.current;
-        null !== MM && function(MM, rM, iM) {
+          IV(VV.schematicBlocks, Float32Array.from(JV), Float32Array.from(YV), YV.length / 4), VV.needsRender = !0
+        }(VV, hV, oV)
+      }), [hV, oV]), (0, JV.useEffect)((() => {
+        const VV = we.current;
+        null !== VV && null !== VV.chunkGrid && (VV.chunkGrid.isVisible = Ae, VV.needsRender = !0)
+      }), [Ae, oV]), (0, JV.useEffect)((() => {
+        const VV = we.current;
+        null !== VV && function(VV, eV, xV) {
           const {
-            camera: OM
-          } = MM;
-          OM.position.set(rM.position[0], rM.position[1], rM.position[2]), OM.rotation.set(rM.pitch, rM.heading, 0);
-          const SM = (DM + 1) * hM.f.HL * Math.sqrt(3);
-          OM.maxZ = Math.max(SM, Math.hypot(...ar(rM.position, Pr(Sr({
+            camera: JV
+          } = VV;
+          JV.position.set(eV.position[0], eV.position[1], eV.position[2]), JV.rotation.set(eV.pitch, eV.heading, 0);
+          const YV = (DV + 1) * kV.f.PZ * Math.sqrt(3);
+          JV.maxZ = Math.max(YV, Math.hypot(...ye(eV.position, pe(Ye({
             min: [0, 0, 0],
-            max: iM
-          }), -1))) + 2 * Math.hypot(...iM)), qM(MM), VM(MM), MM.needsRender = !0
-        }(MM, fr, Wr)
-      }), [fr, Wr]), (0, OM.useEffect)((() => {
-        const MM = zr.current;
-        null !== MM && (MM.targetOutline.isVisible = null !== Nr, null !== Nr && MM.targetOutline.position.set(Nr.x - ur[0] + .5, Nr.y - ur[1] + .5, Nr.z - ur[2] + .5), MM.needsRender = !0)
-      }), [Nr, ur]);
-      return (0, eM.jsxs)("div", {
+            max: xV
+          }), -1))) + 2 * Math.hypot(...xV)), SV(VV), dV(VV), VV.needsRender = !0
+        }(VV, oe, Re)
+      }), [oe, Re]), (0, JV.useEffect)((() => {
+        const VV = we.current;
+        null !== VV && (VV.targetOutline.isVisible = null !== he, null !== he && VV.targetOutline.position.set(he.x - ze[0] + .5, he.y - ze[1] + .5, he.z - ze[2] + .5), VV.needsRender = !0)
+      }), [he, ze]);
+      return (0, PV.jsxs)("div", {
         className: "StudioHeatmapMap StudioHeatmap3D",
-        ref: nr,
-        children: [(0, eM.jsx)("canvas", {
+        ref: Qe,
+        children: [(0, PV.jsx)("canvas", {
           className: "StudioHeatmapMapCanvas",
-          ref: Qr,
+          ref: ne,
           style: {
-            width: `${Lr.width}px`,
-            height: `${Lr.height}px`
+            width: `${Ze.width}px`,
+            height: `${Ze.height}px`
           },
           tabIndex: 0,
-          "aria-label": IM("3D heatmap"),
+          "aria-label": uV("3D heatmap"),
           onClick: () => {
-            const MM = Qr.current;
-            if (null === MM) return;
-            if (MM.focus({
+            const VV = ne.current;
+            if (null === VV) return;
+            if (VV.focus({
                 preventScroll: !0
-              }), hr || !dr) return;
-            const rM = MM.requestPointerLock();
-            rM instanceof Promise ? rM.catch((MM => {
-              MM instanceof DOMException && ("WrongDocumentError" === MM.name || "NotSupportedError" === MM.name) && yr(!1)
-            })) : lr.current = !0
+              }), ke || !Ee) return;
+            const eV = VV.requestPointerLock();
+            eV instanceof Promise ? eV.catch((VV => {
+              VV instanceof DOMException && ("WrongDocumentError" === VV.name || "NotSupportedError" === VV.name) && Be(!1)
+            })) : je.current = !0
           },
-          ...Ar,
-          onKeyDown: MM => {
-            if (Gr && gM.has(MM.code)) return MM.preventDefault(), void(() => {
-              const MM = Qr.current;
-              null !== MM && document.pointerLockElement === MM ? (0, CM.e)() : null === MM || void 0 === MM || MM.blur()
+          ...le,
+          onKeyDown: VV => {
+            if (Fe && MV.has(VV.code)) return VV.preventDefault(), void(() => {
+              const VV = ne.current;
+              null !== VV && document.pointerLockElement === VV ? (0, TV.b)() : null === VV || void 0 === VV || VV.blur()
             })();
-            const rM = uM[MM.code];
-            return Gr && void 0 !== rM ? (MM.preventDefault(), void xM(rM)) : Gr && (0, GM.e)("replayPlayPause", MM.code) && !(0, GM.e)("Zoom", MM.code) ? (MM.preventDefault(), void(MM.repeat || FM())) : Gr && MM.code === RM ? (MM.preventDefault(), void vM()) : Gr && MM.code === ZM ? (MM.preventDefault(), void gr(null)) : Gr && MM.code === kM ? (MM.preventDefault(), void wr((MM => !MM))) : void Ar.onKeyDown(MM)
+            const eV = zV[VV.code];
+            return Fe && void 0 !== eV ? (VV.preventDefault(), void LV(eV)) : Fe && (0, FV.c)("replayPlayPause", VV.code) && !(0, FV.c)("Zoom", VV.code) ? (VV.preventDefault(), void(VV.repeat || mV())) : Fe && VV.code === GV ? (VV.preventDefault(), void fV()) : Fe && VV.code === CV ? (VV.preventDefault(), void Me(null)) : Fe && VV.code === iV ? (VV.preventDefault(), void Ne((VV => !VV))) : void le.onKeyDown(VV)
           },
           onFocus: () => {
-            Ur(!0)
+            te(!0)
           },
           onBlur: () => {
-            Ur(!1), Ar.onBlur()
+            te(!1), le.onBlur()
           }
-        }), mr && (0, eM.jsx)("div", {
+        }), ve && (0, PV.jsx)("div", {
           className: "StudioHeatmap3DUnavailable SmallTextLight",
-          children: IM("3D view isn't available in this browser.")
-        }), Gr && (0, eM.jsx)("div", {
+          children: uV("3D view isn't available in this browser.")
+        }), Fe && (0, PV.jsx)("div", {
           className: "StudioHeatmap3DCrosshair"
-        }), (0, eM.jsx)("div", {
+        }), (0, PV.jsx)("div", {
           className: "StudioHeatmap3DCoordinates SmallTextLight",
-          children: fr.position.map(((MM, rM) => (MM + ur[rM]).toFixed(2))).join(" ")
-        }), br && (0, eM.jsx)(KM, {
-          heading: fr.heading,
-          pitch: fr.pitch,
-          onViewFrom: MM => {
-            const rM = Pr(MM, -1),
-              iM = 0 === rM[1] ? {
-                heading: Math.atan2(rM[0], rM[2]),
+          children: oe.position.map(((VV, eV) => (VV + ze[eV]).toFixed(2))).join(" ")
+        }), Ae && (0, PV.jsx)(sV, {
+          heading: oe.heading,
+          pitch: oe.pitch,
+          onViewFrom: VV => {
+            const eV = pe(VV, -1),
+              xV = 0 === eV[1] ? {
+                heading: Math.atan2(eV[0], eV[2]),
                 pitch: 0
               } : {
-                heading: fr.heading,
-                pitch: rM[1] < 0 ? oM : -oM
+                heading: oe.heading,
+                pitch: eV[1] < 0 ? aV : -aV
               };
-            gr(ir(Zr, kr, Dr, iM))
+            Me(xe(Ce, ie, De, xV))
           },
-          onTurn: (MM, rM) => {
-            gr((iM => function(MM, rM, iM, OM) {
-              return Or(MM, rM, {
-                heading: MM.heading + iM * BM,
-                pitch: Math.max(-oM, Math.min(oM, MM.pitch + OM * BM))
+          onTurn: (VV, eV) => {
+            Me((xV => function(VV, eV, xV, JV) {
+              return Je(VV, eV, {
+                heading: VV.heading + xV * KV,
+                pitch: Math.max(-aV, Math.min(aV, VV.pitch + JV * KV))
               })
-            }(null !== iM && void 0 !== iM ? iM : Yr.current.fittedView, Sr(Zr), MM, rM)))
+            }(null !== xV && void 0 !== xV ? xV : ce.current.fittedView, Ye(Ce), VV, eV)))
           },
           onFlip: () => {
-            gr((MM => function(MM, rM) {
-              return Or(MM, rM, {
-                heading: MM.heading + Math.PI,
-                pitch: -MM.pitch
+            Me((VV => function(VV, eV) {
+              return Je(VV, eV, {
+                heading: VV.heading + Math.PI,
+                pitch: -VV.pitch
               })
-            }(null !== MM && void 0 !== MM ? MM : Yr.current.fittedView, Sr(Zr))))
+            }(null !== VV && void 0 !== VV ? VV : ce.current.fittedView, Ye(Ce))))
           }
-        }), null !== Nr && (0, eM.jsx)("div", {
+        }), null !== he && (0, PV.jsx)("div", {
           className: "StudioHeatmapMapReadout SmallTextLight",
-          children: null === XM ? IM("studio:heatmapBlockReadout", {
-            x: Nr.x,
-            y: Nr.y,
-            z: Nr.z,
-            count: (0, HM.T)(Nr.value)
-          }) : XM(Nr.x, Nr.y, Nr.z, Nr.value)
-        }), (0, eM.jsxs)("div", {
+          children: null === HV ? uV("studio:heatmapBlockReadout", {
+            x: he.x,
+            y: he.y,
+            z: he.z,
+            count: (0, rV.N)(he.value)
+          }) : HV(he.x, he.y, he.z, he.value)
+        }), (0, PV.jsxs)("div", {
           className: "StudioHeatmapMapControls",
-          children: [AM, (0, eM.jsx)(lM.V, {
-            active: null === tr,
+          children: [lV, (0, PV.jsx)(jV.M, {
+            active: null === Xe,
             onClick: () => {
-              gr(null)
+              Me(null)
             },
-            children: (0, eM.jsx)(EM.b, {
+            children: (0, PV.jsx)(qV.b, {
               name: "eye"
             })
           })]
@@ -447,255 +447,255 @@ export const modules = {
       })
     }
 
-    function KM(MM) {
+    function sV(VV) {
       let {
-        heading: rM,
-        pitch: iM,
-        onViewFrom: SM,
-        onTurn: jM,
-        onFlip: aM
-      } = MM;
+        heading: eV,
+        pitch: xV,
+        onViewFrom: YV,
+        onTurn: UV,
+        onFlip: yV
+      } = VV;
       const {
-        t: PM
-      } = (0, JM.A)(), nM = (0, OM.useRef)(null), QM = Mr({
-        heading: rM,
-        pitch: iM
-      }), zM = rr(rM), LM = Qr(QM, zM), mM = xM + vM + 2, HM = AM.flatMap((MM => [1, -1].map((rM => {
-        const iM = Pr(MM.direction, rM);
+        t: pV
+      } = (0, bV.A)(), QV = (0, JV.useRef)(null), nV = Ve({
+        heading: eV,
+        pitch: xV
+      }), wV = ee(eV), ZV = ne(nV, wV), vV = LV + fV + 2, rV = lV.flatMap((VV => [1, -1].map((eV => {
+        const xV = pe(VV.direction, eV);
         return {
-          ...MM,
-          sign: rM,
-          direction: iM,
-          endX: mM + nr(iM, zM) * xM,
-          endY: mM - nr(iM, LM) * xM,
-          depth: nr(iM, QM)
+          ...VV,
+          sign: eV,
+          direction: xV,
+          endX: vV + Qe(xV, wV) * LV,
+          endY: vV - Qe(xV, ZV) * LV,
+          depth: Qe(xV, nV)
         }
-      })))).sort(((MM, rM) => rM.depth - MM.depth));
-      return (0, eM.jsxs)("svg", {
+      })))).sort(((VV, eV) => eV.depth - VV.depth));
+      return (0, PV.jsxs)("svg", {
         className: "StudioHeatmap3DGizmo",
-        width: 2 * mM,
-        height: 2 * mM,
+        width: 2 * vV,
+        height: 2 * vV,
         "aria-hidden": !0,
-        onPointerDown: MM => {
-          var rM, iM;
-          MM.currentTarget.setPointerCapture(MM.pointerId);
-          const OM = MM.target,
-            SM = OM.getAttribute("data-end");
-          nM.current = {
-            pointerId: MM.pointerId,
-            x: MM.clientX,
-            y: MM.clientY,
+        onPointerDown: VV => {
+          var eV, xV;
+          VV.currentTarget.setPointerCapture(VV.pointerId);
+          const JV = VV.target,
+            YV = JV.getAttribute("data-end");
+          QV.current = {
+            pointerId: VV.pointerId,
+            x: VV.clientX,
+            y: VV.clientY,
             travel: 0,
-            side: null === SM ? null : null !== (rM = null === (iM = HM[Number(SM)]) || void 0 === iM ? void 0 : iM.direction) && void 0 !== rM ? rM : null,
-            isOnMiddle: OM.hasAttribute("data-middle")
+            side: null === YV ? null : null !== (eV = null === (xV = rV[Number(YV)]) || void 0 === xV ? void 0 : xV.direction) && void 0 !== eV ? eV : null,
+            isOnMiddle: JV.hasAttribute("data-middle")
           }
         },
-        onPointerMove: MM => {
-          const rM = nM.current;
-          if (null === rM || rM.pointerId !== MM.pointerId) return;
-          const iM = MM.clientX - rM.x,
-            OM = MM.clientY - rM.y;
-          rM.x = MM.clientX, rM.y = MM.clientY, rM.travel += Math.abs(iM) + Math.abs(OM), rM.travel >= XM && jM(iM, OM)
+        onPointerMove: VV => {
+          const eV = QV.current;
+          if (null === eV || eV.pointerId !== VV.pointerId) return;
+          const xV = VV.clientX - eV.x,
+            JV = VV.clientY - eV.y;
+          eV.x = VV.clientX, eV.y = VV.clientY, eV.travel += Math.abs(xV) + Math.abs(JV), eV.travel >= HV && UV(xV, JV)
         },
-        onPointerUp: MM => {
-          const rM = nM.current;
-          nM.current = null, null === rM || rM.pointerId !== MM.pointerId || rM.travel >= XM || (null !== rM.side ? SM(rM.side) : rM.isOnMiddle && aM())
+        onPointerUp: VV => {
+          const eV = QV.current;
+          QV.current = null, null === eV || eV.pointerId !== VV.pointerId || eV.travel >= HV || (null !== eV.side ? YV(eV.side) : eV.isOnMiddle && yV())
         },
         onPointerCancel: () => {
-          nM.current = null
+          QV.current = null
         },
-        children: [HM.map(((MM, rM) => {
-          const iM = MM.sign > 0;
-          return (0, eM.jsxs)("g", {
-            children: [(0, eM.jsx)("line", {
-              x1: mM,
-              y1: mM,
-              x2: MM.endX,
-              y2: MM.endY,
-              stroke: MM.colour,
-              strokeOpacity: iM ? 1 : .5,
+        children: [rV.map(((VV, eV) => {
+          const xV = VV.sign > 0;
+          return (0, PV.jsxs)("g", {
+            children: [(0, PV.jsx)("line", {
+              x1: vV,
+              y1: vV,
+              x2: VV.endX,
+              y2: VV.endY,
+              stroke: VV.colour,
+              strokeOpacity: xV ? 1 : .5,
               strokeWidth: 2,
               strokeLinecap: "round"
-            }), (0, eM.jsx)("circle", {
+            }), (0, PV.jsx)("circle", {
               className: "StudioHeatmap3DGizmoEnd",
-              "data-end": rM,
-              cx: MM.endX,
-              cy: MM.endY,
-              r: iM ? vM : vM - 1,
-              fill: MM.colour,
-              fillOpacity: iM ? 1 : .3,
-              stroke: MM.colour,
-              strokeWidth: iM ? 0 : 1.5,
-              children: (0, eM.jsx)("title", {
-                children: `${PM("View from")} ${iM?"+":"\u2212"}${MM.name}`
+              "data-end": eV,
+              cx: VV.endX,
+              cy: VV.endY,
+              r: xV ? fV : fV - 1,
+              fill: VV.colour,
+              fillOpacity: xV ? 1 : .3,
+              stroke: VV.colour,
+              strokeWidth: xV ? 0 : 1.5,
+              children: (0, PV.jsx)("title", {
+                children: `${pV("View from")} ${xV?"+":"\u2212"}${VV.name}`
               })
-            }), iM && (0, eM.jsx)("text", {
+            }), xV && (0, PV.jsx)("text", {
               pointerEvents: "none",
-              x: MM.endX,
-              y: MM.endY,
+              x: VV.endX,
+              y: VV.endY,
               fill: "#151515",
               fontSize: 9,
               fontWeight: "bold",
               textAnchor: "middle",
               dominantBaseline: "central",
-              children: MM.name
+              children: VV.name
             })]
-          }, `${iM?"+":"-"}${MM.name}`)
-        })), (0, eM.jsx)("circle", {
+          }, `${xV?"+":"-"}${VV.name}`)
+        })), (0, PV.jsx)("circle", {
           className: "StudioHeatmap3DGizmoEnd",
           "data-middle": !0,
-          cx: mM,
-          cy: mM,
-          r: FM,
+          cx: vV,
+          cy: vV,
+          r: mV,
           fill: "#d0d0d0",
           fillOpacity: .85,
-          children: (0, eM.jsx)("title", {
-            children: PM("View from the opposite side")
+          children: (0, PV.jsx)("title", {
+            children: pV("View from the opposite side")
           })
         })]
       })
     }
 
-    function qM(MM) {
-      var rM, iM, OM;
+    function SV(VV) {
+      var eV, xV, JV;
       const {
-        chunkGridOrigin: SM,
-        camera: jM
-      } = MM;
-      if (null === SM) return;
-      const aM = [jM.position.x, jM.position.y, jM.position.z],
-        PM = [0, 2].map((MM => Math.floor((aM[MM] + SM[MM]) / hM.f.HL))),
-        nM = MM.chunkGridCentre;
-      if (null !== nM && nM.every(((MM, rM) => MM === PM[rM]))) return;
-      const LM = null === (rM = null === (iM = MM.chunkGrid) || void 0 === iM ? void 0 : iM.isVisible) || void 0 === rM || rM;
-      null === (OM = MM.chunkGrid) || void 0 === OM || OM.dispose();
-      const [HM, JM] = [0, 2].map(((MM, rM) => {
-        const iM = [];
-        for (let OM = PM[rM] - DM; OM <= PM[rM] + DM + 1; OM++) iM.push(OM * hM.f.HL - SM[MM]);
-        return iM
-      })), dM = -SM[1], yM = [];
-      for (const QM of JM) yM.push([new zM.sh(HM[0], dM, QM), new zM.sh(HM[HM.length - 1], dM, QM)]);
-      for (const QM of HM) yM.push([new zM.sh(QM, dM, JM[0]), new zM.sh(QM, dM, JM[JM.length - 1])]);
-      const lM = (0, mM.b)("Heatmap3DChunkGrid", {
-        lines: yM
-      }, MM.YJ);
-      lM.color = new QM.Color3(.45, .6, .78), lM.AJ = !1, lM.isVisible = LM, MM.chunkGrid = lM, MM.chunkGridCentre = PM, MM.needsRender = !0
+        chunkGridOrigin: YV,
+        camera: UV
+      } = VV;
+      if (null === YV) return;
+      const yV = [UV.position.x, UV.position.y, UV.position.z],
+        pV = [0, 2].map((VV => Math.floor((yV[VV] + YV[VV]) / kV.f.PZ))),
+        QV = VV.chunkGridCentre;
+      if (null !== QV && QV.every(((VV, eV) => VV === pV[eV]))) return;
+      const ZV = null === (eV = null === (xV = VV.chunkGrid) || void 0 === xV ? void 0 : xV.isVisible) || void 0 === eV || eV;
+      null === (JV = VV.chunkGrid) || void 0 === JV || JV.dispose();
+      const [rV, bV] = [0, 2].map(((VV, eV) => {
+        const xV = [];
+        for (let JV = pV[eV] - DV; JV <= pV[eV] + DV + 1; JV++) xV.push(JV * kV.f.PZ - YV[VV]);
+        return xV
+      })), EV = -YV[1], BV = [];
+      for (const nV of bV) BV.push([new wV.Ik(rV[0], EV, nV), new wV.Ik(rV[rV.length - 1], EV, nV)]);
+      for (const nV of rV) BV.push([new wV.Ik(nV, EV, bV[0]), new wV.Ik(nV, EV, bV[bV.length - 1])]);
+      const jV = (0, vV.e)("Heatmap3DChunkGrid", {
+        lines: BV
+      }, VV.yE);
+      jV.color = new nV.Color3(.45, .6, .78), jV.QE = !1, jV.isVisible = ZV, VV.chunkGrid = jV, VV.chunkGridCentre = pV, VV.needsRender = !0
     }
 
-    function TM(MM, rM, iM, OM) {
-      MM.v_("matrix", function(MM, rM) {
-        const iM = new Float32Array(16 * rM);
-        for (let OM = 0; OM < rM; OM++) {
-          const rM = 16 * OM;
-          iM[rM] = 1, iM[rM + 5] = 1, iM[rM + 10] = 1, iM[rM + 12] = MM[3 * OM], iM[rM + 13] = MM[3 * OM + 1], iM[rM + 14] = MM[3 * OM + 2], iM[rM + 15] = 1
+    function IV(VV, eV, xV, JV) {
+      VV.beV("matrix", function(VV, eV) {
+        const xV = new Float32Array(16 * eV);
+        for (let JV = 0; JV < eV; JV++) {
+          const eV = 16 * JV;
+          xV[eV] = 1, xV[eV + 5] = 1, xV[eV + 10] = 1, xV[eV + 12] = VV[3 * JV], xV[eV + 13] = VV[3 * JV + 1], xV[eV + 14] = VV[3 * JV + 2], xV[eV + 15] = 1
         }
-        return iM
-      }(rM, OM), 16, !0), MM.v_("color", iM, 4, !0), MM.isVisible = OM > 0
+        return xV
+      }(eV, JV), 16, !0), VV.beV("color", xV, 4, !0), VV.isVisible = JV > 0
     }
 
-    function VM(MM) {
+    function dV(VV) {
       const {
-        camera: rM,
-        translucent: iM
-      } = MM, OM = [rM.position.x, rM.position.y, rM.position.z], SM = MM.translucentSortedFrom;
-      if (null !== SM && Math.hypot(OM[0] - SM[0], OM[1] - SM[1], OM[2] - SM[2]) < sM) return;
-      MM.translucentSortedFrom = OM;
-      const jM = new Float64Array(iM.count),
-        aM = new Uint32Array(iM.count);
-      for (let QM = 0; QM < iM.count; QM++) {
-        const MM = iM.Sd[3 * QM] - OM[0],
-          rM = iM.Sd[3 * QM + 1] - OM[1],
-          SM = iM.Sd[3 * QM + 2] - OM[2];
-        jM[QM] = MM * MM + rM * rM + SM * SM, aM[QM] = QM
+        camera: eV,
+        translucent: xV
+      } = VV, JV = [eV.position.x, eV.position.y, eV.position.z], YV = VV.translucentSortedFrom;
+      if (null !== YV && Math.hypot(JV[0] - YV[0], JV[1] - YV[1], JV[2] - YV[2]) < gV) return;
+      VV.translucentSortedFrom = JV;
+      const UV = new Float64Array(xV.count),
+        yV = new Uint32Array(xV.count);
+      for (let nV = 0; nV < xV.count; nV++) {
+        const VV = xV.wb[3 * nV] - JV[0],
+          eV = xV.wb[3 * nV + 1] - JV[1],
+          YV = xV.wb[3 * nV + 2] - JV[2];
+        UV[nV] = VV * VV + eV * eV + YV * YV, yV[nV] = nV
       }
-      aM.sort(((MM, rM) => jM[rM] - jM[MM]));
-      const PM = new Float32Array(3 * iM.count),
-        nM = new Float32Array(4 * iM.count);
-      aM.forEach(((MM, rM) => {
-        PM.set(iM.Sd.subarray(3 * MM, 3 * MM + 3), 3 * rM), nM.set(iM.colours.subarray(4 * MM, 4 * MM + 4), 4 * rM)
-      })), TM(MM.translucentCells, PM, nM, iM.count), MM.needsRender = !0
+      yV.sort(((VV, eV) => UV[eV] - UV[VV]));
+      const pV = new Float32Array(3 * xV.count),
+        QV = new Float32Array(4 * xV.count);
+      yV.forEach(((VV, eV) => {
+        pV.set(xV.wb.subarray(3 * VV, 3 * VV + 3), 3 * eV), QV.set(xV.colours.subarray(4 * VV, 4 * VV + 4), 4 * eV)
+      })), IV(VV.translucentCells, pV, QV, xV.count), VV.needsRender = !0
     }
 
-    function cM(MM, rM) {
-      const iM = (iM, OM, SM) => new zM.sh(0 === iM ? MM[0] : rM[0], 0 === OM ? MM[1] : rM[1], 0 === SM ? MM[2] : rM[2]),
-        OM = [];
-      for (const SM of [0, 1])
-        for (const MM of [0, 1]) OM.push([iM(0, SM, MM), iM(1, SM, MM)], [iM(SM, 0, MM), iM(SM, 1, MM)], [iM(SM, MM, 0), iM(SM, MM, 1)]);
-      return OM
+    function OV(VV, eV) {
+      const xV = (xV, JV, YV) => new wV.Ik(0 === xV ? VV[0] : eV[0], 0 === JV ? VV[1] : eV[1], 0 === YV ? VV[2] : eV[2]),
+        JV = [];
+      for (const YV of [0, 1])
+        for (const VV of [0, 1]) JV.push([xV(0, YV, VV), xV(1, YV, VV)], [xV(YV, 0, VV), xV(YV, 1, VV)], [xV(YV, VV, 0), xV(YV, VV, 1)]);
+      return JV
     }
 
-    function Mr(MM) {
-      return [Math.sin(MM.heading) * Math.cos(MM.pitch), -Math.sin(MM.pitch), Math.cos(MM.heading) * Math.cos(MM.pitch)]
+    function Ve(VV) {
+      return [Math.sin(VV.heading) * Math.cos(VV.pitch), -Math.sin(VV.pitch), Math.cos(VV.heading) * Math.cos(VV.pitch)]
     }
 
-    function rr(MM) {
-      return [Math.cos(MM), 0, -Math.sin(MM)]
+    function ee(VV) {
+      return [Math.cos(VV), 0, -Math.sin(VV)]
     }
 
-    function ir(MM, rM, iM) {
-      let OM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {
-        heading: fM,
-        pitch: YM
+    function xe(VV, eV, xV) {
+      let JV = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {
+        heading: oV,
+        pitch: cV
       };
-      const SM = [MM.max[0] - MM.min[0], MM.max[1] - MM.min[1], MM.max[2] - MM.min[2]],
-        jM = Mr(OM),
-        aM = rr(OM.heading),
-        PM = Qr(jM, aM),
-        nM = Math.tan(iM / 2),
-        QM = nM * rM;
-      let zM = 1;
-      for (const LM of [-SM[0] / 2, SM[0] / 2])
-        for (const MM of [-SM[1] / 2, SM[1] / 2])
-          for (const rM of [-SM[2] / 2, SM[2] / 2]) {
-            const iM = [LM, MM, rM],
-              OM = nr(iM, jM);
-            zM = Math.max(zM, Math.abs(nr(iM, aM)) / QM - OM, Math.abs(nr(iM, PM)) / nM - OM)
+      const YV = [VV.max[0] - VV.min[0], VV.max[1] - VV.min[1], VV.max[2] - VV.min[2]],
+        UV = Ve(JV),
+        yV = ee(JV.heading),
+        pV = ne(UV, yV),
+        QV = Math.tan(xV / 2),
+        nV = QV * eV;
+      let wV = 1;
+      for (const ZV of [-YV[0] / 2, YV[0] / 2])
+        for (const VV of [-YV[1] / 2, YV[1] / 2])
+          for (const eV of [-YV[2] / 2, YV[2] / 2]) {
+            const xV = [ZV, VV, eV],
+              JV = Qe(xV, UV);
+            wV = Math.max(wV, Math.abs(Qe(xV, yV)) / nV - JV, Math.abs(Qe(xV, pV)) / QV - JV)
           }
       return {
-        position: ar([MM.min[0] + SM[0] / 2, MM.min[1] + SM[1] / 2, MM.min[2] + SM[2] / 2], Pr(jM, -zM * NM)),
-        heading: OM.heading,
-        pitch: OM.pitch
+        position: ye([VV.min[0] + YV[0] / 2, VV.min[1] + YV[1] / 2, VV.min[2] + YV[2] / 2], pe(UV, -wV * hV)),
+        heading: JV.heading,
+        pitch: JV.pitch
       }
     }
 
-    function Or(MM, rM, iM) {
-      const OM = jr(MM),
-        SM = jr(iM),
-        jM = ar(MM.position, Pr(rM, -1)),
-        aM = [0, 1, 2].reduce(((MM, rM) => ar(MM, Pr(SM[rM], nr(jM, OM[rM])))), [0, 0, 0]);
+    function Je(VV, eV, xV) {
+      const JV = Ue(VV),
+        YV = Ue(xV),
+        UV = ye(VV.position, pe(eV, -1)),
+        yV = [0, 1, 2].reduce(((VV, eV) => ye(VV, pe(YV[eV], Qe(UV, JV[eV])))), [0, 0, 0]);
       return {
-        position: ar(rM, aM),
-        heading: iM.heading,
-        pitch: iM.pitch
+        position: ye(eV, yV),
+        heading: xV.heading,
+        pitch: xV.pitch
       }
     }
 
-    function Sr(MM) {
-      return Pr(ar(MM.min, MM.max), .5)
+    function Ye(VV) {
+      return pe(ye(VV.min, VV.max), .5)
     }
 
-    function jr(MM) {
-      const rM = Mr(MM),
-        iM = rr(MM.heading);
-      return [rM, iM, Qr(rM, iM)]
+    function Ue(VV) {
+      const eV = Ve(VV),
+        xV = ee(VV.heading);
+      return [eV, xV, ne(eV, xV)]
     }
 
-    function ar(MM, rM) {
-      return [MM[0] + rM[0], MM[1] + rM[1], MM[2] + rM[2]]
+    function ye(VV, eV) {
+      return [VV[0] + eV[0], VV[1] + eV[1], VV[2] + eV[2]]
     }
 
-    function Pr(MM, rM) {
-      return [MM[0] * rM, MM[1] * rM, MM[2] * rM]
+    function pe(VV, eV) {
+      return [VV[0] * eV, VV[1] * eV, VV[2] * eV]
     }
 
-    function nr(MM, rM) {
-      return MM[0] * rM[0] + MM[1] * rM[1] + MM[2] * rM[2]
+    function Qe(VV, eV) {
+      return VV[0] * eV[0] + VV[1] * eV[1] + VV[2] * eV[2]
     }
 
-    function Qr(MM, rM) {
-      return [MM[1] * rM[2] - MM[2] * rM[1], MM[2] * rM[0] - MM[0] * rM[2], MM[0] * rM[1] - MM[1] * rM[0]]
+    function ne(VV, eV) {
+      return [VV[1] * eV[2] - VV[2] * eV[1], VV[2] * eV[0] - VV[0] * eV[2], VV[0] * eV[1] - VV[1] * eV[0]]
     }
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const VV in modules) Object.freeze(modules[VV]);

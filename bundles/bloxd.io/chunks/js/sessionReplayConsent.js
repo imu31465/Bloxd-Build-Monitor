@@ -1,77 +1,77 @@
 export const id = 60;
 export const ids = [60];
 export const modules = {
-  34806: (MM, rM, iM) => {
-    iM.d(rM, {
-      askReplayConsent: () => mM,
-      showReplayConsentFailed: () => HM
+  35069: (VV, eV, xV) => {
+    xV.d(eV, {
+      askReplayConsent: () => vV,
+      showReplayConsentFailed: () => rV
     });
-    var OM = iM(1188),
-      SM = iM(1258),
-      jM = iM(1429),
-      aM = iM(1591),
-      PM = iM(1303);
-    const nM = "session-recordings";
-    const QM = ["recordedScreen", "recordedInput", "recordedDevice", "recordedNetwork", "recordedKept"];
+    var JV = xV(1220),
+      YV = xV(1279),
+      UV = xV(1439),
+      yV = xV(1612),
+      pV = xV(1321);
+    const QV = "session-recordings";
+    const nV = ["recordedScreen", "recordedInput", "recordedDevice", "recordedNetwork", "recordedKept"];
 
-    function zM() {
+    function wV() {
       const {
-        t: MM
-      } = (0, OM.A)();
-      return (0, PM.jsxs)("div", {
+        t: VV
+      } = (0, JV.A)();
+      return (0, pV.jsxs)("div", {
         className: "ReplayConsentSubtitle",
-        children: [(0, PM.jsx)("p", {
-          children: MM("sessionReplayConsent:subtitle")
-        }), (0, PM.jsxs)("details", {
+        children: [(0, pV.jsx)("p", {
+          children: VV("sessionReplayConsent:subtitle")
+        }), (0, pV.jsxs)("details", {
           className: "ReplayConsentDetails",
-          children: [(0, PM.jsx)("summary", {
-            children: MM("sessionReplayConsent:whatsRecorded")
-          }), (0, PM.jsx)("ul", {
-            children: QM.map((rM => (0, PM.jsx)("li", {
-              children: MM(`sessionReplayConsent:${rM}`)
-            }, rM)))
-          }), (0, PM.jsx)(aM.LinkPreserveSearch, {
-            to: `/privacy-policy#${nM}`,
+          children: [(0, pV.jsx)("summary", {
+            children: VV("sessionReplayConsent:whatsRecorded")
+          }), (0, pV.jsx)("ul", {
+            children: nV.map((eV => (0, pV.jsx)("li", {
+              children: VV(`sessionReplayConsent:${eV}`)
+            }, eV)))
+          }), (0, pV.jsx)(yV.LinkPreserveSearch, {
+            to: `/privacy-policy#${QV}`,
             target: "_blank",
-            children: MM("sessionReplayConsent:privacyPolicy")
+            children: VV("sessionReplayConsent:privacyPolicy")
           })]
         })]
       })
     }
 
-    function LM(MM) {
-      const rM = Number(MM),
-        iM = (new Date).getFullYear();
-      return /^\d{4}$/.test(MM) && rM > iM - 120 && rM <= iM ? null : (0, OM.x)(SM.e.get().getCurrentLanguageCode(), "sessionReplayConsent:yearInvalid")
+    function ZV(VV) {
+      const eV = Number(VV),
+        xV = (new Date).getFullYear();
+      return /^\d{4}$/.test(VV) && eV > xV - 120 && eV <= xV ? null : (0, JV.u)(YV.c.get().getCurrentLanguageCode(), "sessionReplayConsent:yearInvalid")
     }
-    async function mM() {
-      const MM = "sessionReplayConsent",
-        rM = await jM.NotificationProvider.showPromptPopup({
+    async function vV() {
+      const VV = "sessionReplayConsent",
+        eV = await UV.NotificationProvider.showPromptPopup({
           title: "sessionReplayConsent:title",
-          subtitle: (0, PM.jsx)(zM, {}),
+          subtitle: (0, pV.jsx)(wV, {}),
           confirmText: "sessionReplayConsent:record",
           cancelText: "sessionReplayConsent:noThanks",
           neutral: !0,
-          unlockPointerKey: MM
+          unlockPointerKey: VV
         }).getResult();
-      if ("notificationTornDown" === rM) return null;
-      if (!rM) return "no";
-      const iM = await jM.NotificationProvider.showInputPopup({
+      if ("notificationTornDown" === eV) return null;
+      if (!eV) return "no";
+      const xV = await UV.NotificationProvider.showInputPopup({
         title: "sessionReplayConsent:birthYearTitle",
         subtitle: "sessionReplayConsent:birthYearWhy",
         placeholderText: "YYYY",
         maxLength: 4,
         inputMode: "numeric",
         submitText: "sessionReplayConsent:continue",
-        validate: LM,
-        unlockPointerKey: MM
+        validate: ZV,
+        unlockPointerKey: VV
       }).getResult();
-      return "notificationTornDown" === iM ? null : "submit" !== (null === iM || void 0 === iM ? void 0 : iM.type) ? "no" : (OM = Number(iM.value), (new Date).getFullYear() - OM > 18 ? "yes" : "notEligible");
-      var OM
+      return "notificationTornDown" === xV ? null : "submit" !== (null === xV || void 0 === xV ? void 0 : xV.type) ? "no" : (JV = Number(xV.value), (new Date).getFullYear() - JV > 18 ? "yes" : "notEligible");
+      var JV
     }
 
-    function HM() {
-      jM.NotificationProvider.showAlertPopup({
+    function rV() {
+      UV.NotificationProvider.showAlertPopup({
         title: "sessionReplayConsent:failed",
         confirmText: "general:ok"
       })
@@ -79,4 +79,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const VV in modules) Object.freeze(modules[VV]);

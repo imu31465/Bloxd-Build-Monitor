@@ -1,176 +1,176 @@
 export const id = 621;
 export const ids = [621];
 export const modules = {
-  44487: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      _HDRTextureLoader: () => zM
+  44731: (VV, eV, xV) => {
+    xV.r(eV), xV.d(eV, {
+      _HDRTextureLoader: () => wV
     });
-    var OM = iM(38040);
-    class SM {
-      static ConvertPanoramaToCubemap(MM, rM, iM, OM) {
-        let SM, jM = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
-          aM = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5];
-        if (!MM) throw "ConvertPanoramaToCubemap: input cannot be null";
-        if (MM.length != rM * iM * 3) {
-          if (MM.length != rM * iM * 4) throw "ConvertPanoramaToCubemap: input size is wrong";
-          SM = 4
-        } else SM = 3;
+    var JV = xV(38269);
+    class YV {
+      static ConvertPanoramaToCubemap(VV, eV, xV, JV) {
+        let YV, UV = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
+          yV = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5];
+        if (!VV) throw "ConvertPanoramaToCubemap: input cannot be null";
+        if (VV.length != eV * xV * 3) {
+          if (VV.length != eV * xV * 4) throw "ConvertPanoramaToCubemap: input size is wrong";
+          YV = 4
+        } else YV = 3;
         return {
-          front: this.CreateCubemapTexture(OM, this.FACE_FRONT, MM, rM, iM, jM, aM, SM),
-          back: this.CreateCubemapTexture(OM, this.FACE_BACK, MM, rM, iM, jM, aM, SM),
-          left: this.CreateCubemapTexture(OM, this.FACE_LEFT, MM, rM, iM, jM, aM, SM),
-          right: this.CreateCubemapTexture(OM, this.FACE_RIGHT, MM, rM, iM, jM, aM, SM),
-          up: this.CreateCubemapTexture(OM, this.FACE_UP, MM, rM, iM, jM, aM, SM),
-          down: this.CreateCubemapTexture(OM, this.FACE_DOWN, MM, rM, iM, jM, aM, SM),
-          size: OM,
+          front: this.CreateCubemapTexture(JV, this.FACE_FRONT, VV, eV, xV, UV, yV, YV),
+          back: this.CreateCubemapTexture(JV, this.FACE_BACK, VV, eV, xV, UV, yV, YV),
+          left: this.CreateCubemapTexture(JV, this.FACE_LEFT, VV, eV, xV, UV, yV, YV),
+          right: this.CreateCubemapTexture(JV, this.FACE_RIGHT, VV, eV, xV, UV, yV, YV),
+          up: this.CreateCubemapTexture(JV, this.FACE_UP, VV, eV, xV, UV, yV, YV),
+          down: this.CreateCubemapTexture(JV, this.FACE_DOWN, VV, eV, xV, UV, yV, YV),
+          size: JV,
           type: 1,
           format: 4,
           gammaSpace: !1
         }
       }
-      static CreateCubemapTexture(MM, rM, iM, OM, SM, jM, aM, PM) {
-        const nM = new ArrayBuffer(MM * MM * 4 * 3),
-          QM = new Float32Array(nM),
-          zM = jM ? Math.max(1, Math.round(OM / 4 / MM)) : 1,
-          LM = 1 / zM,
-          mM = LM * LM,
-          HM = rM[1].subtract(rM[0]).scale(LM / MM),
-          hM = rM[3].subtract(rM[2]).scale(LM / MM),
-          JM = 1 / MM;
-        let dM = 0;
-        for (let yM = 0; yM < MM; yM++)
-          for (let jM = 0; jM < zM; jM++) {
-            let jM = rM[0],
-              nM = rM[2];
-            for (let rM = 0; rM < MM; rM++)
-              for (let LM = 0; LM < zM; LM++) {
-                const zM = nM.subtract(jM).scale(dM).add(jM);
-                zM.normalize();
-                const LM = this.CalcProjectionSpherical(zM, iM, OM, SM, PM, aM);
-                QM[yM * MM * 3 + 3 * rM + 0] += LM.r * mM, QM[yM * MM * 3 + 3 * rM + 1] += LM.g * mM, QM[yM * MM * 3 + 3 * rM + 2] += LM.b * mM, jM = jM.add(HM), nM = nM.add(hM)
+      static CreateCubemapTexture(VV, eV, xV, JV, YV, UV, yV, pV) {
+        const QV = new ArrayBuffer(VV * VV * 4 * 3),
+          nV = new Float32Array(QV),
+          wV = UV ? Math.max(1, Math.round(JV / 4 / VV)) : 1,
+          ZV = 1 / wV,
+          vV = ZV * ZV,
+          rV = eV[1].subtract(eV[0]).scale(ZV / VV),
+          kV = eV[3].subtract(eV[2]).scale(ZV / VV),
+          bV = 1 / VV;
+        let EV = 0;
+        for (let BV = 0; BV < VV; BV++)
+          for (let UV = 0; UV < wV; UV++) {
+            let UV = eV[0],
+              QV = eV[2];
+            for (let eV = 0; eV < VV; eV++)
+              for (let ZV = 0; ZV < wV; ZV++) {
+                const wV = QV.subtract(UV).scale(EV).add(UV);
+                wV.normalize();
+                const ZV = this.CalcProjectionSpherical(wV, xV, JV, YV, pV, yV);
+                nV[BV * VV * 3 + 3 * eV + 0] += ZV.r * vV, nV[BV * VV * 3 + 3 * eV + 1] += ZV.g * vV, nV[BV * VV * 3 + 3 * eV + 2] += ZV.b * vV, UV = UV.add(rV), QV = QV.add(kV)
               }
-            dM += JM * LM
+            EV += bV * ZV
           }
-        return QM
+        return nV
       }
-      static CalcProjectionSpherical(MM, rM, iM, OM, SM, jM) {
-        let aM = Math.atan2(MM.z, MM.x);
-        const PM = Math.acos(MM.y);
-        for (; aM < -Math.PI;) aM += 2 * Math.PI;
-        for (; aM > Math.PI;) aM -= 2 * Math.PI;
-        let nM = aM / Math.PI;
-        const QM = PM / Math.PI;
-        nM = .5 * nM + .5;
-        let zM = Math.round(nM * iM);
-        zM < 0 ? zM = 0 : zM >= iM && (zM = iM - 1);
-        let LM = Math.round(QM * OM);
-        LM < 0 ? LM = 0 : LM >= OM && (LM = OM - 1);
-        const mM = jM ? OM - LM - 1 : LM;
+      static CalcProjectionSpherical(VV, eV, xV, JV, YV, UV) {
+        let yV = Math.atan2(VV.z, VV.x);
+        const pV = Math.acos(VV.y);
+        for (; yV < -Math.PI;) yV += 2 * Math.PI;
+        for (; yV > Math.PI;) yV -= 2 * Math.PI;
+        let QV = yV / Math.PI;
+        const nV = pV / Math.PI;
+        QV = .5 * QV + .5;
+        let wV = Math.round(QV * xV);
+        wV < 0 ? wV = 0 : wV >= xV && (wV = xV - 1);
+        let ZV = Math.round(nV * JV);
+        ZV < 0 ? ZV = 0 : ZV >= JV && (ZV = JV - 1);
+        const vV = UV ? JV - ZV - 1 : ZV;
         return {
-          r: rM[mM * iM * SM + zM * SM + 0],
-          g: rM[mM * iM * SM + zM * SM + 1],
-          b: rM[mM * iM * SM + zM * SM + 2]
+          r: eV[vV * xV * YV + wV * YV + 0],
+          g: eV[vV * xV * YV + wV * YV + 1],
+          b: eV[vV * xV * YV + wV * YV + 2]
         }
       }
     }
 
-    function jM(MM, rM, iM, OM, SM, jM) {
-      SM > 0 ? (SM = function(MM, rM) {
-        return rM > 1023 ? MM * Math.pow(2, 1023) * Math.pow(2, rM - 1023) : rM < -1074 ? MM * Math.pow(2, -1074) * Math.pow(2, rM + 1074) : MM * Math.pow(2, rM)
-      }(1, SM - 136), MM[jM + 0] = rM * SM, MM[jM + 1] = iM * SM, MM[jM + 2] = OM * SM) : (MM[jM + 0] = 0, MM[jM + 1] = 0, MM[jM + 2] = 0)
+    function UV(VV, eV, xV, JV, YV, UV) {
+      YV > 0 ? (YV = function(VV, eV) {
+        return eV > 1023 ? VV * Math.pow(2, 1023) * Math.pow(2, eV - 1023) : eV < -1074 ? VV * Math.pow(2, -1074) * Math.pow(2, eV + 1074) : VV * Math.pow(2, eV)
+      }(1, YV - 136), VV[UV + 0] = eV * YV, VV[UV + 1] = xV * YV, VV[UV + 2] = JV * YV) : (VV[UV + 0] = 0, VV[UV + 1] = 0, VV[UV + 2] = 0)
     }
 
-    function aM(MM, rM) {
-      let iM, OM = "";
-      for (let SM = rM; SM < MM.length - rM && (iM = String.fromCharCode(MM[SM]), "\n" != iM); SM++) OM += iM;
-      return OM
+    function yV(VV, eV) {
+      let xV, JV = "";
+      for (let YV = eV; YV < VV.length - eV && (xV = String.fromCharCode(VV[YV]), "\n" != xV); YV++) JV += xV;
+      return JV
     }
 
-    function PM(MM) {
-      let rM = aM(MM, 0);
-      if ("#" != rM[0] || "?" != rM[1]) throw "Bad HDR Format.";
-      let iM = !1,
-        OM = !1,
-        SM = 0;
+    function pV(VV) {
+      let eV = yV(VV, 0);
+      if ("#" != eV[0] || "?" != eV[1]) throw "Bad HDR Format.";
+      let xV = !1,
+        JV = !1,
+        YV = 0;
       do {
-        SM += rM.length + 1, rM = aM(MM, SM), "FORMAT=32-bit_rle_rgbe" == rM ? OM = !0 : 0 == rM.length && (iM = !0)
-      } while (!iM);
-      if (!OM) throw "HDR Bad header format, unsupported FORMAT";
-      SM += rM.length + 1, rM = aM(MM, SM);
-      const jM = /^-Y (.*) \+X (.*)$/g.exec(rM);
-      if (!jM || jM.length < 3) throw "HDR Bad header format, no size";
-      const PM = parseInt(jM[2]),
-        nM = parseInt(jM[1]);
-      if (PM < 8 || PM > 32767) throw "HDR Bad header format, unsupported size";
-      return SM += rM.length + 1, {
-        height: nM,
-        width: PM,
-        dataPosition: SM
+        YV += eV.length + 1, eV = yV(VV, YV), "FORMAT=32-bit_rle_rgbe" == eV ? JV = !0 : 0 == eV.length && (xV = !0)
+      } while (!xV);
+      if (!JV) throw "HDR Bad header format, unsupported FORMAT";
+      YV += eV.length + 1, eV = yV(VV, YV);
+      const UV = /^-Y (.*) \+X (.*)$/g.exec(eV);
+      if (!UV || UV.length < 3) throw "HDR Bad header format, no size";
+      const pV = parseInt(UV[2]),
+        QV = parseInt(UV[1]);
+      if (pV < 8 || pV > 32767) throw "HDR Bad header format, unsupported size";
+      return YV += eV.length + 1, {
+        height: QV,
+        width: pV,
+        dataPosition: YV
       }
     }
 
-    function nM(MM, rM) {
-      return function(MM, rM) {
-        let iM = rM.height;
-        const OM = rM.width;
-        let SM, aM, PM, nM, zM, LM, mM, HM, hM = rM.dataPosition;
-        const JM = new ArrayBuffer(4 * OM),
-          dM = new Uint8Array(JM),
-          yM = new ArrayBuffer(rM.width * rM.height * 4 * 3),
-          lM = new Float32Array(yM);
-        for (; iM > 0;) {
-          if (SM = MM[hM++], aM = MM[hM++], PM = MM[hM++], nM = MM[hM++], 2 != SM || 2 != aM || 128 & PM || rM.width < 8 || rM.width > 32767) return QM(MM, rM);
-          if ((PM << 8 | nM) != OM) throw "HDR Bad header format, wrong scan line width";
-          for (LM = 0, HM = 0; HM < 4; HM++)
-            for (mM = (HM + 1) * OM; LM < mM;)
-              if (SM = MM[hM++], aM = MM[hM++], SM > 128) {
-                if (zM = SM - 128, 0 == zM || zM > mM - LM) throw "HDR Bad Format, bad scanline data (run)";
-                for (; zM-- > 0;) dM[LM++] = aM
+    function QV(VV, eV) {
+      return function(VV, eV) {
+        let xV = eV.height;
+        const JV = eV.width;
+        let YV, yV, pV, QV, wV, ZV, vV, rV, kV = eV.dataPosition;
+        const bV = new ArrayBuffer(4 * JV),
+          EV = new Uint8Array(bV),
+          BV = new ArrayBuffer(eV.width * eV.height * 4 * 3),
+          jV = new Float32Array(BV);
+        for (; xV > 0;) {
+          if (YV = VV[kV++], yV = VV[kV++], pV = VV[kV++], QV = VV[kV++], 2 != YV || 2 != yV || 128 & pV || eV.width < 8 || eV.width > 32767) return nV(VV, eV);
+          if ((pV << 8 | QV) != JV) throw "HDR Bad header format, wrong scan line width";
+          for (ZV = 0, rV = 0; rV < 4; rV++)
+            for (vV = (rV + 1) * JV; ZV < vV;)
+              if (YV = VV[kV++], yV = VV[kV++], YV > 128) {
+                if (wV = YV - 128, 0 == wV || wV > vV - ZV) throw "HDR Bad Format, bad scanline data (run)";
+                for (; wV-- > 0;) EV[ZV++] = yV
               } else {
-                if (zM = SM, 0 == zM || zM > mM - LM) throw "HDR Bad Format, bad scanline data (non-run)";
-                if (dM[LM++] = aM, --zM > 0)
-                  for (let rM = 0; rM < zM; rM++) dM[LM++] = MM[hM++]
-              } for (HM = 0; HM < OM; HM++) SM = dM[HM], aM = dM[HM + OM], PM = dM[HM + 2 * OM], nM = dM[HM + 3 * OM], jM(lM, SM, aM, PM, nM, (rM.height - iM) * OM * 3 + 3 * HM);
-          iM--
+                if (wV = YV, 0 == wV || wV > vV - ZV) throw "HDR Bad Format, bad scanline data (non-run)";
+                if (EV[ZV++] = yV, --wV > 0)
+                  for (let eV = 0; eV < wV; eV++) EV[ZV++] = VV[kV++]
+              } for (rV = 0; rV < JV; rV++) YV = EV[rV], yV = EV[rV + JV], pV = EV[rV + 2 * JV], QV = EV[rV + 3 * JV], UV(jV, YV, yV, pV, QV, (eV.height - xV) * JV * 3 + 3 * rV);
+          xV--
         }
-        return lM
-      }(MM, rM)
+        return jV
+      }(VV, eV)
     }
 
-    function QM(MM, rM) {
-      let iM = rM.height;
-      const OM = rM.width;
-      let SM, aM, PM, nM, QM, zM = rM.dataPosition;
-      const LM = new ArrayBuffer(rM.width * rM.height * 4 * 3),
-        mM = new Float32Array(LM);
-      for (; iM > 0;) {
-        for (QM = 0; QM < rM.width; QM++) SM = MM[zM++], aM = MM[zM++], PM = MM[zM++], nM = MM[zM++], jM(mM, SM, aM, PM, nM, (rM.height - iM) * OM * 3 + 3 * QM);
-        iM--
+    function nV(VV, eV) {
+      let xV = eV.height;
+      const JV = eV.width;
+      let YV, yV, pV, QV, nV, wV = eV.dataPosition;
+      const ZV = new ArrayBuffer(eV.width * eV.height * 4 * 3),
+        vV = new Float32Array(ZV);
+      for (; xV > 0;) {
+        for (nV = 0; nV < eV.width; nV++) YV = VV[wV++], yV = VV[wV++], pV = VV[wV++], QV = VV[wV++], UV(vV, YV, yV, pV, QV, (eV.height - xV) * JV * 3 + 3 * nV);
+        xV--
       }
-      return mM
+      return vV
     }
-    SM.FACE_LEFT = [new OM.q(-1, -1, -1), new OM.q(1, -1, -1), new OM.q(-1, 1, -1), new OM.q(1, 1, -1)], SM.FACE_RIGHT = [new OM.q(1, -1, 1), new OM.q(-1, -1, 1), new OM.q(1, 1, 1), new OM.q(-1, 1, 1)], SM.FACE_FRONT = [new OM.q(1, -1, -1), new OM.q(1, -1, 1), new OM.q(1, 1, -1), new OM.q(1, 1, 1)], SM.FACE_BACK = [new OM.q(-1, -1, 1), new OM.q(-1, -1, -1), new OM.q(-1, 1, 1), new OM.q(-1, 1, -1)], SM.FACE_DOWN = [new OM.q(1, 1, -1), new OM.q(1, 1, 1), new OM.q(-1, 1, -1), new OM.q(-1, 1, 1)], SM.FACE_UP = [new OM.q(-1, -1, -1), new OM.q(-1, -1, 1), new OM.q(1, -1, -1), new OM.q(1, -1, 1)];
-    class zM {
+    YV.FACE_LEFT = [new JV.o(-1, -1, -1), new JV.o(1, -1, -1), new JV.o(-1, 1, -1), new JV.o(1, 1, -1)], YV.FACE_RIGHT = [new JV.o(1, -1, 1), new JV.o(-1, -1, 1), new JV.o(1, 1, 1), new JV.o(-1, 1, 1)], YV.FACE_FRONT = [new JV.o(1, -1, -1), new JV.o(1, -1, 1), new JV.o(1, 1, -1), new JV.o(1, 1, 1)], YV.FACE_BACK = [new JV.o(-1, -1, 1), new JV.o(-1, -1, -1), new JV.o(-1, 1, 1), new JV.o(-1, 1, -1)], YV.FACE_DOWN = [new JV.o(1, 1, -1), new JV.o(1, 1, 1), new JV.o(-1, 1, -1), new JV.o(-1, 1, 1)], YV.FACE_UP = [new JV.o(-1, -1, -1), new JV.o(-1, -1, 1), new JV.o(1, -1, -1), new JV.o(1, -1, 1)];
+    class wV {
       constructor() {
         this.supportCascades = !1
       }
       loadCubeData() {
         throw ".hdr not supported in Cube."
       }
-      loadData(MM, rM, iM) {
-        const OM = new Uint8Array(MM.buffer, MM.byteOffset, MM.byteLength),
-          SM = PM(OM),
-          jM = nM(OM, SM),
-          aM = SM.width * SM.height,
-          QM = new Float32Array(4 * aM);
-        for (let PM = 0; PM < aM; PM += 1) QM[4 * PM] = jM[3 * PM], QM[4 * PM + 1] = jM[3 * PM + 1], QM[4 * PM + 2] = jM[3 * PM + 2], QM[4 * PM + 3] = 1;
-        iM(SM.width, SM.height, rM.generateMipMaps, !1, (() => {
-          const MM = rM.ph();
-          rM.type = 1, rM.format = 5, rM._gammaSpace = !1, MM._uploadDataToTextureDirectly(rM, QM)
+      loadData(VV, eV, xV) {
+        const JV = new Uint8Array(VV.buffer, VV.byteOffset, VV.byteLength),
+          YV = pV(JV),
+          UV = QV(JV, YV),
+          yV = YV.width * YV.height,
+          nV = new Float32Array(4 * yV);
+        for (let pV = 0; pV < yV; pV += 1) nV[4 * pV] = UV[3 * pV], nV[4 * pV + 1] = UV[3 * pV + 1], nV[4 * pV + 2] = UV[3 * pV + 2], nV[4 * pV + 3] = 1;
+        xV(YV.width, YV.height, eV.generateMipMaps, !1, (() => {
+          const VV = eV.sk();
+          eV.type = 1, eV.format = 5, eV._gammaSpace = !1, VV._uploadDataToTextureDirectly(eV, nV)
         }))
       }
     }
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const VV in modules) Object.freeze(modules[VV]);

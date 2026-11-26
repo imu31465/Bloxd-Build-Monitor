@@ -1,30 +1,30 @@
-/*! For license information please see fo1voe.wasmMatchmaking.eb11e22c.chunk.js.LICENSE.txt */
+/*! For license information please see pxmq3aq.wasmMatchmaking.f543f291.chunk.js.LICENSE.txt */
 export const id = 74;
 export const ids = [74];
 export const modules = {
-  37484: (MM, rM) => {
-    function iM(MM) {
-      if (MM && "object" === typeof MM) {
-        var rM = MM.which || MM.keyCode || MM.charCode;
-        rM && (MM = rM)
+  37685: (VV, eV) => {
+    function xV(VV) {
+      if (VV && "object" === typeof VV) {
+        var eV = VV.which || VV.keyCode || VV.charCode;
+        eV && (VV = eV)
       }
-      if ("number" === typeof MM) return aM[MM];
-      var iM, jM = String(MM);
-      return (iM = OM[jM.toLowerCase()]) ? iM : (iM = SM[jM.toLowerCase()]) || (1 === jM.length ? jM.charCodeAt(0) : void 0)
+      if ("number" === typeof VV) return yV[VV];
+      var xV, UV = String(VV);
+      return (xV = JV[UV.toLowerCase()]) ? xV : (xV = YV[UV.toLowerCase()]) || (1 === UV.length ? UV.charCodeAt(0) : void 0)
     }
-    iM.isEventKey = function(MM, rM) {
-      if (MM && "object" === typeof MM) {
-        var iM = MM.which || MM.keyCode || MM.charCode;
-        if (null === iM || void 0 === iM) return !1;
-        if ("string" === typeof rM) {
-          var jM;
-          if (jM = OM[rM.toLowerCase()]) return jM === iM;
-          if (jM = SM[rM.toLowerCase()]) return jM === iM
-        } else if ("number" === typeof rM) return rM === iM;
+    xV.isEventKey = function(VV, eV) {
+      if (VV && "object" === typeof VV) {
+        var xV = VV.which || VV.keyCode || VV.charCode;
+        if (null === xV || void 0 === xV) return !1;
+        if ("string" === typeof eV) {
+          var UV;
+          if (UV = JV[eV.toLowerCase()]) return UV === xV;
+          if (UV = YV[eV.toLowerCase()]) return UV === xV
+        } else if ("number" === typeof eV) return eV === xV;
         return !1
       }
     };
-    var OM = (rM = MM.exports = iM).code = rM.codes = {
+    var JV = (eV = VV.exports = xV).code = eV.codes = {
         backspace: 8,
         tab: 9,
         enter: 13,
@@ -69,7 +69,7 @@ export const modules = {
         "]": 221,
         "'": 222
       },
-      SM = rM.aliases = {
+      YV = eV.aliases = {
         windows: 91,
         "\u21e7": 16,
         "\u2325": 18,
@@ -91,47 +91,47 @@ export const modules = {
         del: 46,
         cmd: 91
       };
-    for (jM = 97; jM < 123; jM++) OM[String.fromCharCode(jM)] = jM - 32;
-    for (var jM = 48; jM < 58; jM++) OM[jM - 48] = jM;
-    for (jM = 1; jM < 13; jM++) OM["f" + jM] = jM + 111;
-    for (jM = 0; jM < 10; jM++) OM["numpad " + jM] = jM + 96;
-    var aM = rM.names = rM.title = {};
-    for (jM in OM) aM[OM[jM]] = jM;
-    for (var PM in SM) OM[PM] = SM[PM]
+    for (UV = 97; UV < 123; UV++) JV[String.fromCharCode(UV)] = UV - 32;
+    for (var UV = 48; UV < 58; UV++) JV[UV - 48] = UV;
+    for (UV = 1; UV < 13; UV++) JV["f" + UV] = UV + 111;
+    for (UV = 0; UV < 10; UV++) JV["numpad " + UV] = UV + 96;
+    var yV = eV.names = eV.title = {};
+    for (UV in JV) yV[JV[UV]] = UV;
+    for (var pV in YV) JV[pV] = YV[pV]
   },
-  37640: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => aM
+  37860: (VV, eV, xV) => {
+    xV.d(eV, {
+      d: () => yV
     });
-    var OM = iM(44);
-    const SM = OM.useLayoutEffect;
-    const jM = function(MM) {
-      var rM = (0, OM.useRef)(MM);
-      return SM((function() {
-        rM.current = MM
-      })), rM
+    var JV = xV(62);
+    const YV = JV.useLayoutEffect;
+    const UV = function(VV) {
+      var eV = (0, JV.useRef)(VV);
+      return YV((function() {
+        eV.current = VV
+      })), eV
     };
-    var aM = function(MM) {
-      var rM = jM(MM);
-      (0, OM.useEffect)((function() {
-        var MM = function(MM) {
-          var iM;
-          if (null != rM.current && (iM = rM.current(MM)), MM.defaultPrevented && (MM.returnValue = ""), "string" === typeof iM) return MM.returnValue = iM, iM
+    var yV = function(VV) {
+      var eV = UV(VV);
+      (0, JV.useEffect)((function() {
+        var VV = function(VV) {
+          var xV;
+          if (null != eV.current && (xV = eV.current(VV)), VV.defaultPrevented && (VV.returnValue = ""), "string" === typeof xV) return VV.returnValue = xV, xV
         };
-        return window.addEventListener("beforeunload", MM),
+        return window.addEventListener("beforeunload", VV),
           function() {
-            window.removeEventListener("beforeunload", MM)
+            window.removeEventListener("beforeunload", VV)
           }
       }), [])
     }
   },
-  37517: MM => {
-    var rM, iM = "undefined" !== typeof window ? window.navigator.userAgent : "",
-      OM = /OS X/.test(iM),
-      SM = /Opera/.test(iM),
-      jM = !/like Gecko/.test(iM) && !SM,
-      aM = MM.exports = {
-        0: OM ? "<menu>" : "<UNK>",
+  37737: VV => {
+    var eV, xV = "undefined" !== typeof window ? window.navigator.userAgent : "",
+      JV = /OS X/.test(xV),
+      YV = /Opera/.test(xV),
+      UV = !/like Gecko/.test(xV) && !YV,
+      yV = VV.exports = {
+        0: JV ? "<menu>" : "<UNK>",
         1: "<mouse 1>",
         2: "<mouse 2>",
         3: "<break>",
@@ -174,7 +174,7 @@ export const modules = {
         47: "<help>",
         91: "<meta>",
         92: "<meta>",
-        93: OM ? "<meta>" : "<menu>",
+        93: JV ? "<meta>" : "<menu>",
         95: "<sleep>",
         106: "<num-*>",
         107: "<num-+>",
@@ -197,7 +197,7 @@ export const modules = {
         170: "<browser-search>",
         171: "<browser-favorites>",
         172: "<browser-home>",
-        173: OM && jM ? "-" : "<volume-mute>",
+        173: JV && UV ? "-" : "<volume-mute>",
         174: "<volume-down>",
         175: "<volume-up>",
         176: "<next-track>",
@@ -223,7 +223,7 @@ export const modules = {
         224: "<meta>",
         226: "<alt-gr>",
         229: "<ime-process>",
-        231: SM ? "`" : "<unicode>",
+        231: YV ? "`" : "<unicode>",
         246: "<attention>",
         247: "<crsel>",
         248: "<exsel>",
@@ -234,409 +234,409 @@ export const modules = {
         253: "<pa-1>",
         254: "<clear>"
       };
-    for (rM = 58; rM < 65; ++rM) aM[rM] = String.fromCharCode(rM);
-    for (rM = 48; rM < 58; ++rM) aM[rM] = rM - 48 + "";
-    for (rM = 65; rM < 91; ++rM) aM[rM] = String.fromCharCode(rM);
-    for (rM = 96; rM < 106; ++rM) aM[rM] = "<num-" + (rM - 96) + ">";
-    for (rM = 112; rM < 136; ++rM) aM[rM] = "F" + (rM - 111)
+    for (eV = 58; eV < 65; ++eV) yV[eV] = String.fromCharCode(eV);
+    for (eV = 48; eV < 58; ++eV) yV[eV] = eV - 48 + "";
+    for (eV = 65; eV < 91; ++eV) yV[eV] = String.fromCharCode(eV);
+    for (eV = 96; eV < 106; ++eV) yV[eV] = "<num-" + (eV - 96) + ">";
+    for (eV = 112; eV < 136; ++eV) yV[eV] = "F" + (eV - 111)
   },
-  37538: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => HM,
-      i: () => hM,
-      m: () => mM,
-      p: () => LM
+  37756: (VV, eV, xV) => {
+    xV.d(eV, {
+      b: () => rV,
+      e: () => kV,
+      f: () => vV,
+      h: () => ZV
     });
-    var OM = iM(35017),
-      SM = iM(37542),
-      jM = iM(37544),
-      aM = iM(9328),
-      PM = iM(1516),
-      nM = iM(44),
-      QM = iM(65),
-      zM = iM(1303);
+    var JV = xV(35300),
+      YV = xV(37762),
+      UV = xV(37771),
+      yV = xV(9335),
+      pV = xV(1542),
+      QV = xV(62),
+      nV = xV(78),
+      wV = xV(1321);
 
-    function LM() {
-      var MM;
-      return (0, PM.e)(SM.e, (0, SM.t)()), (0, zM.jsx)(zM.Fragment, {
-        children: null === (MM = (0, SM.t)()) || void 0 === MM ? void 0 : MM.content
+    function ZV() {
+      var VV;
+      return (0, pV.j)(YV.e, (0, YV.p)()), (0, wV.jsx)(wV.Fragment, {
+        children: null === (VV = (0, YV.p)()) || void 0 === VV ? void 0 : VV.content
       })
     }
 
-    function mM(MM) {
-      var rM;
+    function vV(VV) {
+      var eV;
       let {
-        show: iM
-      } = MM;
-      (0, PM.e)(SM.e, (0, SM.t)());
-      const QM = null === (rM = (0, SM.t)()) || void 0 === rM ? void 0 : rM.menu;
-      return (0, nM.useEffect)((() => {
-        var MM;
-        iM || (null === QM || void 0 === QM || null === (MM = QM.onClose) || void 0 === MM || MM.call(QM), (0, jM.q)())
-      }), [iM, QM]), (0, nM.useEffect)((() => iM ? (0, aM.e)(jM.y, jM.f) : void 0), [iM]), (0, zM.jsx)(OM.e, {
-        showing: iM,
+        show: xV
+      } = VV;
+      (0, pV.j)(YV.e, (0, YV.p)());
+      const nV = null === (eV = (0, YV.p)()) || void 0 === eV ? void 0 : eV.menu;
+      return (0, QV.useEffect)((() => {
+        var VV;
+        xV || (null === nV || void 0 === nV || null === (VV = nV.onClose) || void 0 === VV || VV.call(nV), (0, UV.q)())
+      }), [xV, nV]), (0, QV.useEffect)((() => xV ? (0, yV.g)(UV.t, UV.g) : void 0), [xV]), (0, wV.jsx)(JV.c, {
+        showing: xV,
         globallyUniqueKey: "clientGameMenu",
-        children: null === QM || void 0 === QM ? void 0 : QM.content
+        children: null === nV || void 0 === nV ? void 0 : nV.content
       })
     }
 
-    function HM(MM) {
+    function rV(VV) {
       let {
-        placement: rM = "bottom"
-      } = MM;
-      return (0, zM.jsx)("div", {
-        id: `clientGameHud-${rM}`,
+        placement: eV = "bottom"
+      } = VV;
+      return (0, wV.jsx)("div", {
+        id: `clientGameHud-${eV}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function hM(MM) {
+    function kV(VV) {
       let {
-        children: rM,
-        placement: iM = "bottom"
-      } = MM;
-      const [OM, SM] = (0, nM.useState)(null);
-      return (0, nM.useEffect)((() => {
-        SM(document.getElementById(`clientGameHud-${iM}`))
-      }), [iM]), OM ? (0, QM.createPortal)(rM, OM) : null
+        children: eV,
+        placement: xV = "bottom"
+      } = VV;
+      const [JV, YV] = (0, QV.useState)(null);
+      return (0, QV.useEffect)((() => {
+        YV(document.getElementById(`clientGameHud-${xV}`))
+      }), [xV]), JV ? (0, nV.createPortal)(eV, JV) : null
     }
   },
-  9328: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => jM,
-      e: () => SM
+  9335: (VV, eV, xV) => {
+    xV.d(eV, {
+      c: () => UV,
+      g: () => YV
     });
-    let OM = null;
-    const SM = function(MM) {
-        const rM = {
-          cycle: MM,
+    let JV = null;
+    const YV = function(VV) {
+        const eV = {
+          cycle: VV,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return OM = rM, () => {
-          OM === rM && (OM = null)
+        return JV = eV, () => {
+          JV === eV && (JV = null)
         }
       },
-      jM = () => {
-        var MM;
-        return null !== (MM = OM) && void 0 !== MM && MM.canCycle() ? OM.cycle : null
+      UV = () => {
+        var VV;
+        return null !== (VV = JV) && void 0 !== VV && VV.canCycle() ? JV.cycle : null
       }
   },
-  9517: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => jM,
-      e: () => SM
+  9532: (VV, eV, xV) => {
+    xV.d(eV, {
+      e: () => UV,
+      h: () => YV
     });
-    let OM = !1;
+    let JV = !1;
 
-    function SM() {
-      OM = !0
+    function YV() {
+      JV = !0
     }
 
-    function jM() {
-      return OM
+    function UV() {
+      return JV
     }
   },
-  37397: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      InGameUi: () => GM.e,
-      LobbyLeaderboard: () => CM.c,
-      loadCharacterCustomisationUI: () => eM,
-      loadCharacterPreview: () => bM,
-      matchmakeAndPlay: () => uM,
-      matchmakeForAhead: () => PM.h,
-      setUpGame: () => wM
+  37602: (VV, eV, xV) => {
+    xV.r(eV), xV.d(eV, {
+      InGameUi: () => FV.d,
+      LobbyLeaderboard: () => TV.c,
+      loadCharacterCustomisationUI: () => PV,
+      loadCharacterPreview: () => AV,
+      matchmakeAndPlay: () => zV,
+      matchmakeForAhead: () => pV.c,
+      setUpGame: () => NV
     });
-    var OM = iM(1251),
-      SM = iM(143),
-      jM = iM(19),
-      aM = iM(37402),
-      PM = iM(37407),
-      nM = iM(2067),
-      QM = iM(37440);
+    var JV = xV(1276),
+      YV = xV(165),
+      UV = xV(27),
+      yV = xV(37607),
+      pV = xV(37610),
+      QV = xV(2080),
+      nV = xV(37636);
 
-    function zM() {
-      return !1 !== nM.d.get("canCustomiseChar")
+    function wV() {
+      return !1 !== QV.c.get("canCustomiseChar")
     }
-    let LM = !1;
-    var mM = iM(1373),
-      HM = iM(1258),
-      hM = iM(222),
-      JM = iM(2562),
-      dM = iM(9517),
-      yM = iM(9514);
+    let ZV = !1;
+    var vV = xV(1391),
+      rV = xV(1279),
+      kV = xV(275),
+      bV = xV(2617),
+      EV = xV(9532),
+      BV = xV(9530);
 
-    function lM() {
-      (0, dM.b)() || (0, yM.e)().catch((MM => {
-        console.warn("[bloxd-wasm-client] the play chunk did not load ahead of a join: the join loads it itself", MM)
+    function jV() {
+      (0, EV.e)() || (0, BV.d)().catch((VV => {
+        console.warn("[bloxd-wasm-client] the play chunk did not load ahead of a join: the join loads it itself", VV)
       }))
     }
-    var EM = iM(3839),
-      UM = iM(1851);
-    var GM = iM(37442),
-      CM = iM(37944);
+    var qV = xV(3886),
+      tV = xV(1850);
+    var FV = xV(37644),
+      TV = xV(38183);
 
-    function eM() {
-      return iM.e(239).then((() => iM(43954)))
+    function PV() {
+      return xV.e(239).then((() => xV(44203)))
     }
 
-    function bM() {
-      return iM.e(601).then((() => iM(43956)))
+    function AV() {
+      return xV.e(601).then((() => xV(44209)))
     }
 
-    function wM() {
-      return (0, yM.h)()
+    function NV() {
+      return (0, BV.j)()
     }
-    LM || (LM = !0, document.addEventListener("keydown", (MM => {
-        (0, QM.e)(MM, zM)
+    ZV || (ZV = !0, document.addEventListener("keydown", (VV => {
+        (0, nV.b)(VV, wV)
       }))),
-      function(MM) {
-        var rM;
-        return !0 !== (null === MM || void 0 === MM ? void 0 : MM.saveData) && !/2g$/.test(null !== (rM = null === MM || void 0 === MM ? void 0 : MM.effectiveType) && void 0 !== rM ? rM : "")
-      }(navigator.connection) && (0, JM.f)((() => {
-        (0, dM.b)() || Promise.all([iM.e(89), iM.e(103), iM.e(233), iM.e(232), iM.e(150), iM.e(153), iM.e(70)]).then((() => iM(42162))).then((async MM => {
-          if ((0, dM.b)()) return;
-          const rM = MM.startLoadAheadOfJoin({
-            joinStarted: dM.b,
-            language: HM.e.get().getCurrentLanguageCode()
+      function(VV) {
+        var eV;
+        return !0 !== (null === VV || void 0 === VV ? void 0 : VV.saveData) && !/2g$/.test(null !== (eV = null === VV || void 0 === VV ? void 0 : VV.effectiveType) && void 0 !== eV ? eV : "")
+      }(navigator.connection) && (0, bV.d)((() => {
+        (0, EV.e)() || Promise.all([xV.e(89), xV.e(103), xV.e(233), xV.e(232), xV.e(150), xV.e(153), xV.e(70)]).then((() => xV(42363))).then((async VV => {
+          if ((0, EV.e)()) return;
+          const eV = VV.startLoadAheadOfJoin({
+            joinStarted: EV.e,
+            language: rV.c.get().getCurrentLanguageCode()
           });
-          (0, hM.d)((() => {
-            (0, dM.b)() || MM.probeWebgl2AheadOfJoin()
-          })), await rM, (0, hM.d)(lM)
-        }), (MM => {
-          console.warn("[bloxd-wasm-client] the loads ahead of a join did not start: the join loads the client itself", MM)
+          (0, kV.e)((() => {
+            (0, EV.e)() || VV.probeWebgl2AheadOfJoin()
+          })), await eV, (0, kV.e)(jV)
+        }), (VV => {
+          console.warn("[bloxd-wasm-client] the loads ahead of a join did not start: the join loads the client itself", VV)
         }))
       }));
-    const tM = jM.d.get("router");
-    null === tM ? console.warn("[bloxd-wasm-client] no router as the matchmaking chunk loads: the join's loads start with the join") : function MM(rM) {
-      if ((0, UM.e)(rM.state.location.pathname)) return void(0, yM.f)().catch((() => {}));
-      const iM = rM.subscribe((OM => {
-        (0, UM.e)(OM.location.pathname) && (iM(), (0, EM.e)().then((() => {
-          MM(rM)
+    const XV = UV.b.get("router");
+    null === XV ? console.warn("[bloxd-wasm-client] no router as the matchmaking chunk loads: the join's loads start with the join") : function VV(eV) {
+      if ((0, tV.d)(eV.state.location.pathname)) return void(0, BV.h)().catch((() => {}));
+      const xV = eV.subscribe((JV => {
+        (0, tV.d)(JV.location.pathname) && (xV(), (0, qV.f)().then((() => {
+          VV(eV)
         })))
       }))
-    }(tM), (0, aM.b)();
-    const gM = (0, PM.e)((async function(MM, rM) {
+    }(XV), (0, yV.b)();
+    const MV = (0, pV.b)((async function(VV, eV) {
       let {
-        place: iM,
-        userContext: jM,
-        direct: aM,
-        matchedAt: PM,
-        rematch: nM
-      } = MM;
-      const QM = aM ? 1 / 0 : PM;
-      let zM;
+        place: xV,
+        userContext: UV,
+        direct: yV,
+        matchedAt: pV,
+        rematch: QV
+      } = VV;
+      const nV = yV ? 1 / 0 : pV;
+      let wV;
       try {
-        zM = await (0, yM.f)()
-      } catch (LM) {
-        return console.error("The wasm client did not load:", LM), (0, mM.p)({
+        wV = await (0, BV.h)()
+      } catch (ZV) {
+        return console.error("The wasm client did not load:", ZV), (0, vV.q)({
           websocketUrl: null
-        }), OM.b.errorWithCode(String(LM), SM.n.CONNECT_TO_GAME_SERVER, {
-          error: LM,
-          severity: rM.aborted ? "low" : "medium",
-          Ti: rM.aborted
+        }), JV.e.errorWithCode(String(ZV), YV.i.CONNECT_TO_GAME_SERVER, {
+          error: ZV,
+          severity: eV.aborted ? "low" : "medium",
+          pJ: eV.aborted
         })
       }
-      return zM.playWasmGame({
-        userContext: jM,
-        place: iM,
-        matchedAt: QM,
-        rematch: nM
-      }, rM)
+      return wV.playWasmGame({
+        userContext: UV,
+        place: xV,
+        matchedAt: nV,
+        rematch: QV
+      }, eV)
     }));
 
-    function uM() {
-      return (0, yM.f)().catch((() => {})), gM(...arguments)
+    function zV() {
+      return (0, BV.h)().catch((() => {})), MV(...arguments)
     }
   },
-  9514: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => HM,
-      f: () => mM,
-      h: () => hM
+  9530: (VV, eV, xV) => {
+    xV.d(eV, {
+      d: () => rV,
+      h: () => vV,
+      j: () => kV
     });
-    var OM = iM(3563),
-      SM = iM(2414),
-      jM = iM(2257),
-      aM = iM(5022),
-      PM = iM(3902),
-      nM = iM(9517);
-    let QM = null;
+    var JV = xV(3584),
+      YV = xV(2441),
+      UV = xV(2261),
+      yV = xV(5135),
+      pV = xV(3942),
+      QV = xV(9532);
+    let nV = null;
 
-    function zM() {
-      return Promise.all([iM.e(86), iM.e(89), iM.e(103), iM.e(233), iM.e(232), iM.e(174), iM.e(222), iM.e(150), iM.e(153), iM.e(101), iM.e(298), iM.e(75)]).then((() => iM(41755)))
+    function wV() {
+      return Promise.all([xV.e(86), xV.e(89), xV.e(103), xV.e(233), xV.e(232), xV.e(174), xV.e(222), xV.e(150), xV.e(153), xV.e(101), xV.e(298), xV.e(75)]).then((() => xV(41952)))
     }
 
-    function LM() {
-      Promise.all([iM.e(84), iM.e(87), iM.e(85), iM.e(86), iM.e(103), iM.e(100), iM.e(296), iM.e(205), iM.e(246), iM.e(272), iM.e(298), iM.e(53)]).then((() => iM(42102))).catch((() => {}))
+    function ZV() {
+      Promise.all([xV.e(84), xV.e(87), xV.e(85), xV.e(86), xV.e(103), xV.e(100), xV.e(296), xV.e(205), xV.e(246), xV.e(272), xV.e(298), xV.e(53)]).then((() => xV(42308))).catch((() => {}))
     }
 
-    function mM() {
-      return aM.e.cancelDownloadForJoin(), (0, PM.b)(), (0, SM.c)(), (0, nM.e)(), (0, jM.j)(), LM(), Promise.all([iM.e(89), iM.e(103), iM.e(233), iM.e(232), iM.e(150), iM.e(153), iM.e(70)]).then((() => iM(42162))).then((MM => {
+    function vV() {
+      return yV.d.cancelDownloadForJoin(), (0, pV.c)(), (0, YV.g)(), (0, QV.h)(), (0, UV.h)(), ZV(), Promise.all([xV.e(89), xV.e(103), xV.e(233), xV.e(232), xV.e(150), xV.e(153), xV.e(70)]).then((() => xV(42363))).then((VV => {
         let {
-          startJoinLoad: rM
-        } = MM;
-        rM()
-      }), (() => {})), QM ??= zM().then((MM => (MM.startWasmPlay(), MM.followPageUiPack((MM => {
-        OM.e.showGamePack(MM)
-      })), MM)), (MM => {
-        throw QM = null, MM
-      })), QM
+          startJoinLoad: eV
+        } = VV;
+        eV()
+      }), (() => {})), nV ??= wV().then((VV => (VV.startWasmPlay(), VV.followPageUiPack((VV => {
+        JV.b.showGamePack(VV)
+      })), VV)), (VV => {
+        throw nV = null, VV
+      })), nV
     }
 
-    function HM() {
-      return LM(), iM.e(299).then((() => iM(42165))).catch((() => {})), zM().then((() => {}))
+    function rV() {
+      return ZV(), xV.e(299).then((() => xV(42371))).catch((() => {})), wV().then((() => {}))
     }
 
-    function hM() {
-      return zM().then((MM => {
-        MM.startWasmPreviews(), MM.prefetchWasmPreviews()
+    function kV() {
+      return wV().then((VV => {
+        VV.startWasmPreviews(), VV.prefetchWasmPreviews()
       }))
     }
   },
-  37416: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => mM,
-      e: () => zM,
-      g: () => HM,
-      k: () => LM
+  37620: (VV, eV, xV) => {
+    xV.d(eV, {
+      e: () => vV,
+      g: () => wV,
+      k: () => rV,
+      m: () => ZV
     });
-    var OM = iM(332),
-      SM = iM(670),
-      jM = iM(680),
-      aM = iM(30);
-    const PM = {
+    var JV = xV(375),
+      YV = xV(698),
+      UV = xV(705),
+      yV = xV(40);
+    const pV = {
         idStorageKey: "playSessionId",
         lastActivityStorageKey: "playSessionLastActivityMs",
         expiryMs: 3e5
       },
-      nM = "playSessionGameNameWithVariation",
-      QM = "wasMatchmakePlayer";
+      QV = "playSessionGameNameWithVariation",
+      nV = "wasMatchmakePlayer";
 
-    function zM() {
-      let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : aM.k;
-      (0, jM.k)(MM, PM)
+    function wV() {
+      let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : yV.q;
+      (0, UV.h)(VV, pV)
     }
 
-    function LM() {
-      (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : aM.k).setItem(QM, !0)
+    function ZV() {
+      (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : yV.q).setItem(nV, !0)
     }
 
-    function mM() {
-      let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : aM.k;
-      return (0, jM.e)(MM, PM)
+    function vV() {
+      let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : yV.q;
+      return (0, UV.e)(VV, pV)
     }
 
-    function HM(MM) {
-      let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : aM.k;
-      const iM = (0, jM.e)(rM, PM),
-        zM = function(MM) {
-          const rM = MM.getItem(nM);
-          return "string" !== typeof rM ? null : rM
-        }(rM),
-        LM = function() {
-          return !0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : aM.k).getItem(QM)
-        }(rM);
-      let mM;
-      return mM = null !== iM && null !== zM && (0, jM.g)(rM, PM) && function(MM, rM, iM) {
-          const SM = (0, OM.Mb)(MM),
-            jM = (0, OM.Mb)(rM),
-            aM = (0, OM.Jb)(MM),
-            PM = (0, OM.Jb)(rM);
-          return !(SM !== jM || !iM) || SM === jM && aM === PM
-        }(zM, MM, LM) ? iM : (0, SM.e)(), (0, jM.o)(rM, PM, mM), rM.setItem(nM, MM),
+    function rV(VV) {
+      let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : yV.q;
+      const xV = (0, UV.e)(eV, pV),
+        wV = function(VV) {
+          const eV = VV.getItem(QV);
+          return "string" !== typeof eV ? null : eV
+        }(eV),
+        ZV = function() {
+          return !0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : yV.q).getItem(nV)
+        }(eV);
+      let vV;
+      return vV = null !== xV && null !== wV && (0, UV.f)(eV, pV) && function(VV, eV, xV) {
+          const YV = (0, JV.Pb)(VV),
+            UV = (0, JV.Pb)(eV),
+            yV = (0, JV.Lb)(VV),
+            pV = (0, JV.Lb)(eV);
+          return !(YV !== UV || !xV) || YV === UV && yV === pV
+        }(wV, VV, ZV) ? xV : (0, YV.c)(), (0, UV.j)(eV, pV, vV), eV.setItem(QV, VV),
         function() {
-          (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : aM.k).removeItem(QM)
-        }(rM), mM
+          (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : yV.q).removeItem(nV)
+        }(eV), vV
     }
   },
-  37414: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => GM,
-      f: () => CM
+  37612: (VV, eV, xV) => {
+    xV.d(eV, {
+      b: () => FV,
+      c: () => TV
     });
-    var OM = iM(1073),
-      SM = iM(187),
-      jM = iM(327),
-      aM = iM(632),
-      PM = iM(332),
-      nM = iM(1081),
-      QM = iM(656),
-      zM = iM(694),
-      LM = iM(4906),
-      mM = iM(83),
-      HM = iM(119),
-      hM = iM(1830),
-      JM = iM(103),
-      dM = iM(37416),
-      yM = iM(30),
-      lM = iM(673),
-      EM = iM(637),
-      UM = iM(37422);
+    var JV = xV(1099),
+      YV = xV(220),
+      UV = xV(370),
+      yV = xV(660),
+      pV = xV(375),
+      QV = xV(1108),
+      nV = xV(686),
+      wV = xV(717),
+      ZV = xV(4995),
+      vV = xV(99),
+      rV = xV(138),
+      kV = xV(1838),
+      bV = xV(115),
+      EV = xV(37620),
+      BV = xV(40),
+      jV = xV(701),
+      qV = xV(668),
+      tV = xV(37622);
 
-    function GM() {
-      var MM, rM;
-      return [...null !== (MM = navigator.languages) && void 0 !== MM ? MM : [null !== (rM = navigator.language) && void 0 !== rM ? rM : "none"], "en-Gb"]
+    function FV() {
+      var VV, eV;
+      return [...null !== (VV = navigator.languages) && void 0 !== VV ? VV : [null !== (eV = navigator.language) && void 0 !== eV ? eV : "none"], "en-Gb"]
     }
 
-    function CM(MM, rM, iM, CM, eM) {
-      const bM = (0, OM.m)(rM) ? (0, OM.p)(rM) : null,
-        wM = MM.isLoggedIn() && void 0 !== (0, SM.d)(jM.g, HM.siteUsed) ? (0, EM.h)() : null,
-        tM = {
-          cookies: (0, hM.getAllCookiesForGameNameWithVariation)(rM),
-          isMobile: (0, mM.isMobile)(),
-          isUsingCustomGameTexturePack: null !== bM && eM(bM),
+    function TV(VV, eV, xV, TV, PV) {
+      const AV = (0, JV.l)(eV) ? (0, JV.p)(eV) : null,
+        NV = VV.isLoggedIn() && void 0 !== (0, YV.b)(UV.k, rV.siteUsed) ? (0, qV.g)() : null,
+        XV = {
+          cookies: (0, kV.getAllCookiesForGameNameWithVariation)(eV),
+          isMobile: (0, vV.isMobile)(),
+          isUsingCustomGameTexturePack: null !== AV && PV(AV),
           generalCookies: {
-            joinDiscord: !!yM.g.getItem("DiscordPressed"),
-            newGo: LM.c,
-            ...MM.getMetricsCookies(),
-            trafficCode: CM,
-            compliance: mM.compliance
+            joinDiscord: !!BV.m.getItem("DiscordPressed"),
+            newGo: ZV.d,
+            ...VV.getMetricsCookies(),
+            trafficCode: TV,
+            compliance: vV.compliance
           },
           browserInfo: {
             ua: window.navigator.userAgent,
-            name: (0, mM.getBrowserName)(),
-            version: (0, mM.getBrowserVersion)(),
+            name: (0, vV.getBrowserName)(),
+            version: (0, vV.getBrowserVersion)(),
             platform: navigator.platform,
-            platformType: (0, mM.getPlatformType)(),
-            deviceType: (0, JM.c)()
+            platformType: (0, vV.getPlatformType)(),
+            deviceType: (0, bV.c)()
           },
-          isLoggedIn: MM.isLoggedIn(),
-          lobbyName: iM,
-          languages: GM(),
-          version: aM.c,
-          siteUsed: HM.siteUsed,
-          subsiteUsed: HM.subsiteUsed,
-          playSessionId: (0, dM.g)(rM),
-          visitSessionId: (0, lM.e)(),
-          clientReason: QM.x.reason,
-          budgetBasis: (0, UM.f)(),
-          ...null !== zM.m && {
-            diagClaim: zM.m.claimId
+          isLoggedIn: VV.isLoggedIn(),
+          lobbyName: xV,
+          languages: FV(),
+          version: yV.e,
+          siteUsed: rV.siteUsed,
+          subsiteUsed: rV.subsiteUsed,
+          playSessionId: (0, EV.k)(eV),
+          visitSessionId: (0, jV.f)(),
+          clientReason: nV.s.reason,
+          budgetBasis: (0, tV.j)(),
+          ...null !== wV.o && {
+            diagClaim: wV.o.claimId
           },
-          ...null !== wM && {
-            webGpuLoss: wM
+          ...null !== NV && {
+            webGpuLoss: NV
           }
         };
-      return null !== bM && (0, PM.Dc)(bM) ? (tM.lobbyName = (0, OM.i)(bM, (0, OM.o)(rM), iM), {
-        roomName: `classic_${nM.g}`,
-        joinOptions: tM
+      return null !== AV && (0, pV.Hc)(AV) ? (XV.lobbyName = (0, JV.k)(AV, (0, JV.n)(eV), xV), {
+        roomName: `classic_${QV.g}`,
+        joinOptions: XV
       }) : {
-        roomName: rM,
-        joinOptions: tM
+        roomName: eV,
+        joinOptions: XV
       }
     }
   },
-  9918: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => SM,
-      e: () => jM
+  9922: (VV, eV, xV) => {
+    xV.d(eV, {
+      d: () => YV,
+      f: () => UV
     });
-    var OM = iM(9863);
-    const SM = "Air",
-      jM = Object.freeze(new OM.c(SM, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
+    var JV = xV(9861);
+    const YV = "Air",
+      UV = Object.freeze(new JV.g(YV, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const VV in modules) Object.freeze(modules[VV]);

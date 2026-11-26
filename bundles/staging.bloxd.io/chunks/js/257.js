@@ -1,394 +1,394 @@
 export const id = 257;
 export const ids = [257];
 export const modules = {
-  38116: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => PM,
-      g: () => aM,
-      i: () => SM
+  38349: (VV, eV, xV) => {
+    xV.d(eV, {
+      b: () => pV,
+      f: () => yV,
+      j: () => YV
     });
-    const OM = 1024,
-      SM = 16,
-      jM = 36e4;
-    class aM {
-      constructor(MM) {
-        this.boneCount = MM, this.rotation = void 0, this.position = void 0, this.scale = void 0, this.touched = void 0, this.rotation = new Float64Array(3 * MM), this.position = new Float64Array(3 * MM), this.scale = new Float64Array(3 * MM).fill(1), this.touched = new Uint8Array(MM)
+    const JV = 1024,
+      YV = 16,
+      UV = 36e4;
+    class yV {
+      constructor(VV) {
+        this.boneCount = VV, this.rotation = void 0, this.position = void 0, this.scale = void 0, this.touched = void 0, this.rotation = new Float64Array(3 * VV), this.position = new Float64Array(3 * VV), this.scale = new Float64Array(3 * VV).fill(1), this.touched = new Uint8Array(VV)
       }
       clampToLimits() {
-        for (let MM = 0; MM < this.boneCount; MM++)
-          if (0 !== this.touched[MM])
-            for (let rM = 3 * MM; rM < 3 * MM + 3; rM++) {
-              const MM = this.rotation[rM],
-                iM = this.position[rM],
-                aM = this.scale[rM];
-              MM >= -36e4 && MM <= jM || (this.rotation[rM] = nM(MM, jM)), iM >= -1024 && iM <= OM || (this.position[rM] = nM(iM, OM)), aM >= -SM && aM <= SM || (this.scale[rM] = nM(aM, SM, 1))
+        for (let VV = 0; VV < this.boneCount; VV++)
+          if (0 !== this.touched[VV])
+            for (let eV = 3 * VV; eV < 3 * VV + 3; eV++) {
+              const VV = this.rotation[eV],
+                xV = this.position[eV],
+                yV = this.scale[eV];
+              VV >= -36e4 && VV <= UV || (this.rotation[eV] = QV(VV, UV)), xV >= -1024 && xV <= JV || (this.position[eV] = QV(xV, JV)), yV >= -YV && yV <= YV || (this.scale[eV] = QV(yV, YV, 1))
             }
       }
       reset() {
-        for (let MM = 0; MM < this.boneCount; MM++)
-          if (0 !== this.touched[MM]) {
-            this.touched[MM] = 0;
-            for (let rM = 3 * MM; rM < 3 * MM + 3; rM++) this.rotation[rM] = 0, this.position[rM] = 0, this.scale[rM] = 1
+        for (let VV = 0; VV < this.boneCount; VV++)
+          if (0 !== this.touched[VV]) {
+            this.touched[VV] = 0;
+            for (let eV = 3 * VV; eV < 3 * VV + 3; eV++) this.rotation[eV] = 0, this.position[eV] = 0, this.scale[eV] = 1
           }
       }
     }
-    class PM {
-      constructor(MM) {
-        this.rotation = void 0, this.position = void 0, this.scaleDelta = void 0, this.boneWeight = void 0, this.touched = void 0, this.overrides = void 0, this.touchedBones = void 0, this.touchedCount = 0, this.rotation = new Float64Array(3 * MM), this.position = new Float64Array(3 * MM), this.scaleDelta = new Float64Array(3 * MM), this.boneWeight = new Float64Array(MM), this.touched = new Uint8Array(MM), this.overrides = new Uint8Array(MM), this.touchedBones = new Int32Array(MM)
+    class pV {
+      constructor(VV) {
+        this.rotation = void 0, this.position = void 0, this.scaleDelta = void 0, this.boneWeight = void 0, this.touched = void 0, this.overrides = void 0, this.touchedBones = void 0, this.touchedCount = 0, this.rotation = new Float64Array(3 * VV), this.position = new Float64Array(3 * VV), this.scaleDelta = new Float64Array(3 * VV), this.boneWeight = new Float64Array(VV), this.touched = new Uint8Array(VV), this.overrides = new Uint8Array(VV), this.touchedBones = new Int32Array(VV)
       }
-      touch(MM, rM, iM) {
-        0 === this.touched[MM] && (this.touched[MM] = 1, this.touchedBones[this.touchedCount++] = MM), this.boneWeight[MM] += rM, iM && (this.overrides[MM] = 1)
+      touch(VV, eV, xV) {
+        0 === this.touched[VV] && (this.touched[VV] = 1, this.touchedBones[this.touchedCount++] = VV), this.boneWeight[VV] += eV, xV && (this.overrides[VV] = 1)
       }
-      applyTo(MM, rM, iM) {
-        let OM = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-        for (let SM = 0; SM < this.touchedCount; SM++) {
-          const jM = this.touchedBones[SM],
-            aM = this.boneWeight[jM];
-          if (iM || 1 === this.overrides[jM]) {
-            const iM = rM * Math.min(1, aM);
-            for (let rM = 3 * jM; rM < 3 * jM + 3; rM++) MM.rotation[rM] += (this.rotation[rM] / aM - MM.rotation[rM]) * iM, MM.position[rM] += (this.position[rM] / aM - MM.position[rM]) * iM, MM.scale[rM] += (1 + this.scaleDelta[rM] / aM - MM.scale[rM]) * iM
+      applyTo(VV, eV, xV) {
+        let JV = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+        for (let YV = 0; YV < this.touchedCount; YV++) {
+          const UV = this.touchedBones[YV],
+            yV = this.boneWeight[UV];
+          if (xV || 1 === this.overrides[UV]) {
+            const xV = eV * Math.min(1, yV);
+            for (let eV = 3 * UV; eV < 3 * UV + 3; eV++) VV.rotation[eV] += (this.rotation[eV] / yV - VV.rotation[eV]) * xV, VV.position[eV] += (this.position[eV] / yV - VV.position[eV]) * xV, VV.scale[eV] += (1 + this.scaleDelta[eV] / yV - VV.scale[eV]) * xV
           } else {
-            const iM = OM && aM > 1 ? rM / aM : rM;
-            for (let rM = 3 * jM; rM < 3 * jM + 3; rM++) MM.rotation[rM] += this.rotation[rM] * iM, MM.position[rM] += this.position[rM] * iM, MM.scale[rM] *= 1 + this.scaleDelta[rM] * iM
+            const xV = JV && yV > 1 ? eV / yV : eV;
+            for (let eV = 3 * UV; eV < 3 * UV + 3; eV++) VV.rotation[eV] += this.rotation[eV] * xV, VV.position[eV] += this.position[eV] * xV, VV.scale[eV] *= 1 + this.scaleDelta[eV] * xV
           }
-          MM.touched[jM] = 1
+          VV.touched[UV] = 1
         }
       }
       clear() {
-        for (let MM = 0; MM < this.touchedCount; MM++) {
-          const rM = this.touchedBones[MM];
-          this.touched[rM] = 0, this.overrides[rM] = 0, this.boneWeight[rM] = 0;
-          for (let MM = 3 * rM; MM < 3 * rM + 3; MM++) this.rotation[MM] = 0, this.position[MM] = 0, this.scaleDelta[MM] = 0
+        for (let VV = 0; VV < this.touchedCount; VV++) {
+          const eV = this.touchedBones[VV];
+          this.touched[eV] = 0, this.overrides[eV] = 0, this.boneWeight[eV] = 0;
+          for (let VV = 3 * eV; VV < 3 * eV + 3; VV++) this.rotation[VV] = 0, this.position[VV] = 0, this.scaleDelta[VV] = 0
         }
         this.touchedCount = 0
       }
     }
 
-    function nM(MM, rM) {
-      let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-      return Number.isNaN(MM) ? iM : Math.min(rM, Math.max(-rM, MM))
+    function QV(VV, eV) {
+      let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+      return Number.isNaN(VV) ? xV : Math.min(eV, Math.max(-eV, VV))
     }
   },
-  38111: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => nM,
-      f: () => PM
+  38340: (VV, eV, xV) => {
+    xV.d(eV, {
+      d: () => QV,
+      e: () => pV
     });
-    var OM = iM(38097),
-      SM = iM(332),
-      jM = iM(2e3),
-      aM = iM(38116);
+    var JV = xV(38328),
+      YV = xV(375),
+      UV = xV(2014),
+      yV = xV(38349);
 
-    function PM(MM) {
-      if ("yS" in MM) return wM.createAnimationScript(MM);
-      return new zM(MM).createAnimationScript()
+    function pV(VV) {
+      if ("PY" in VV) return NV.createAnimationScript(VV);
+      return new wV(VV).createAnimationScript()
     }
 
-    function nM(MM, rM, iM, SM) {
-      const jM = MM.yS <= 0 ? 1 : rM + iM * Math.max(0, SM) / MM.yS;
-      return MM.lS === OM.h.LoopOnLastFrame ? jM % 1 : MM.lS === OM.h.NoLoop && jM >= 1 ? null : Math.min(1, jM)
+    function QV(VV, eV, xV, YV) {
+      const UV = VV.PY <= 0 ? 1 : eV + xV * Math.max(0, YV) / VV.PY;
+      return VV.AY === JV.n.LoopOnLastFrame ? UV % 1 : VV.AY === JV.n.NoLoop && UV >= 1 ? null : Math.min(1, UV)
     }
-    class QM {
-      createAnimationScript(MM) {
+    class nV {
+      createAnimationScript(VV) {
         const {
-          yS: rM,
-          loop: iM,
-          GS: OM
-        } = MM;
+          PY: eV,
+          loop: xV,
+          NY: JV
+        } = VV;
         return {
-          yS: Math.round(rM),
-          lS: this.createLoopMode(null !== iM && void 0 !== iM && iM),
-          GS: this.createNodeSkeletonAnimationScript(null !== OM && void 0 !== OM ? OM : null)
+          PY: Math.round(eV),
+          AY: this.createLoopMode(null !== xV && void 0 !== xV && xV),
+          NY: this.createNodeSkeletonAnimationScript(null !== JV && void 0 !== JV ? JV : null)
         }
       }
-      createLoopMode(MM) {
-        switch (MM) {
+      createLoopMode(VV) {
+        switch (VV) {
           case !1:
-            return OM.h.NoLoop;
+            return JV.n.NoLoop;
           case !0:
-            return OM.h.LoopOnLastFrame;
+            return JV.n.LoopOnLastFrame;
           case "hold-on-last-frame":
-            return OM.h.HoldOnLastFrame
+            return JV.n.HoldOnLastFrame
         }
-        throw new Error(`Invalid loop mode schema: ${MM}`)
+        throw new Error(`Invalid loop mode schema: ${VV}`)
       }
-      createNodeSkeletonAnimationScript(MM) {
-        if (null === MM) return null;
-        const rM = {};
-        for (const iM in MM) {
-          const OM = MM[iM];
-          rM[iM] = this.createNodeAnimationScript(OM)
+      createNodeSkeletonAnimationScript(VV) {
+        if (null === VV) return null;
+        const eV = {};
+        for (const xV in VV) {
+          const JV = VV[xV];
+          eV[xV] = this.createNodeAnimationScript(JV)
         }
-        return rM
+        return eV
       }
-      createNodeAnimationScript(MM) {
+      createNodeAnimationScript(VV) {
         const {
-          timeline: rM
-        } = MM, iM = rM.filter((MM => Number.isFinite(MM.timeFraction)));
-        return iM.sort(((MM, rM) => MM.timeFraction - rM.timeFraction)), {
-          rotation: this.createTimelineFromKeyframes(iM, "rotation", HM),
-          position: this.createTimelineFromKeyframes(iM, "position", JM),
-          scale: this.createTimelineFromKeyframes(iM, "scale", JM, yM)
+          timeline: eV
+        } = VV, xV = eV.filter((VV => Number.isFinite(VV.timeFraction)));
+        return xV.sort(((VV, eV) => VV.timeFraction - eV.timeFraction)), {
+          rotation: this.createTimelineFromKeyframes(xV, "rotation", rV),
+          position: this.createTimelineFromKeyframes(xV, "position", bV),
+          scale: this.createTimelineFromKeyframes(xV, "scale", bV, BV)
         }
       }
-      createTimelineFromKeyframes(MM, rM, iM) {
-        let OM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : MM => MM;
-        const SM = [];
-        for (const QM of MM) {
-          const MM = QM[rM];
-          if (MM) {
-            const rM = this.createAnimationFrameWithoutPrecomputes(QM.timeFraction, MM, OM);
-            LM(rM) && SM.push(rM)
+      createTimelineFromKeyframes(VV, eV, xV) {
+        let JV = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : VV => VV;
+        const YV = [];
+        for (const nV of VV) {
+          const VV = nV[eV];
+          if (VV) {
+            const eV = this.createAnimationFrameWithoutPrecomputes(nV.timeFraction, VV, JV);
+            ZV(eV) && YV.push(eV)
           }
         }
-        const jM = [];
-        for (let QM = 0; QM < SM.length; QM++) {
-          var aM, PM, nM;
-          const MM = SM[QM],
-            rM = null !== (aM = SM[QM - 1]) && void 0 !== aM ? aM : MM,
-            OM = null !== (PM = SM[QM + 1]) && void 0 !== PM ? PM : MM,
-            zM = null !== (nM = SM[QM + 2]) && void 0 !== nM ? nM : OM;
-          jM.push({
-            ...MM,
-            ...iM(rM.post, rM.timeFraction, MM.post, MM.timeFraction, OM.pre, OM.timeFraction, zM.pre, zM.timeFraction)
+        const UV = [];
+        for (let nV = 0; nV < YV.length; nV++) {
+          var yV, pV, QV;
+          const VV = YV[nV],
+            eV = null !== (yV = YV[nV - 1]) && void 0 !== yV ? yV : VV,
+            JV = null !== (pV = YV[nV + 1]) && void 0 !== pV ? pV : VV,
+            wV = null !== (QV = YV[nV + 2]) && void 0 !== QV ? QV : JV;
+          UV.push({
+            ...VV,
+            ...xV(eV.post, eV.timeFraction, VV.post, VV.timeFraction, JV.pre, JV.timeFraction, wV.pre, wV.timeFraction)
           })
         }
-        return jM
+        return UV
       }
-      createAnimationFrameWithoutPrecomputes(MM, rM, iM) {
-        let OM, SM, jM = null;
-        var aM;
-        if ("object" === typeof rM && "point" in rM) jM = null !== (aM = rM.bS) && void 0 !== aM ? aM : null, OM = rM.point, SM = rM.point;
-        else if ("object" === typeof rM && "pre" in rM) {
-          var PM;
-          jM = null !== (PM = rM.bS) && void 0 !== PM ? PM : null, OM = rM.pre, SM = rM.post
-        } else OM = rM, SM = rM;
+      createAnimationFrameWithoutPrecomputes(VV, eV, xV) {
+        let JV, YV, UV = null;
+        var yV;
+        if ("object" === typeof eV && "point" in eV) UV = null !== (yV = eV.zY) && void 0 !== yV ? yV : null, JV = eV.point, YV = eV.point;
+        else if ("object" === typeof eV && "pre" in eV) {
+          var pV;
+          UV = null !== (pV = eV.zY) && void 0 !== pV ? pV : null, JV = eV.pre, YV = eV.post
+        } else JV = eV, YV = eV;
         return {
-          timeFraction: MM,
-          bS: this.createLerpMode(jM),
-          pre: iM(OM),
-          post: iM(SM)
+          timeFraction: VV,
+          zY: this.createLerpMode(UV),
+          pre: xV(JV),
+          post: xV(YV)
         }
       }
-      createLerpMode(MM) {
-        return null === MM ? OM.f.Linear : QM.LERP_MODE_SCHEMA_MAPPING[MM]
+      createLerpMode(VV) {
+        return null === VV ? JV.k.Linear : nV.LERP_MODE_SCHEMA_MAPPING[VV]
       }
     }
-    QM.LERP_MODE_SCHEMA_MAPPING = {
-      linear: OM.f.Linear,
-      "catmull-rom-spline": OM.f.CatmullRomSpline
+    nV.LERP_MODE_SCHEMA_MAPPING = {
+      linear: JV.k.Linear,
+      "catmull-rom-spline": JV.k.CatmullRomSpline
     };
-    class zM {
-      constructor(MM) {
-        this.animationSchema = MM
+    class wV {
+      constructor(VV) {
+        this.animationSchema = VV
       }
       createAnimationScript() {
         const {
-          animation_length: MM,
-          loop: rM,
-          bones: iM
+          animation_length: VV,
+          loop: eV,
+          bones: xV
         } = this.animationSchema;
         return {
-          yS: Math.round(1e3 * MM),
-          lS: this.createLoopMode(null !== rM && void 0 !== rM && rM),
-          GS: this.createNodeSkeletonAnimationScript(null !== iM && void 0 !== iM ? iM : null)
+          PY: Math.round(1e3 * VV),
+          AY: this.createLoopMode(null !== eV && void 0 !== eV && eV),
+          NY: this.createNodeSkeletonAnimationScript(null !== xV && void 0 !== xV ? xV : null)
         }
       }
-      createLoopMode(MM) {
-        switch (MM) {
+      createLoopMode(VV) {
+        switch (VV) {
           case !1:
-            return OM.h.NoLoop;
+            return JV.n.NoLoop;
           case !0:
-            return OM.h.LoopOnLastFrame;
+            return JV.n.LoopOnLastFrame;
           case "hold_on_last_frame":
-            return OM.h.HoldOnLastFrame
+            return JV.n.HoldOnLastFrame
         }
-        throw new Error(`Invalid Blockbench loop mode schema: ${MM}`)
+        throw new Error(`Invalid Blockbench loop mode schema: ${VV}`)
       }
-      createNodeSkeletonAnimationScript(MM) {
-        if (null === MM) return null;
-        const rM = {};
-        for (const iM in MM) {
-          const OM = MM[iM];
-          rM[iM] = this.createNodeAnimationScript(OM)
+      createNodeSkeletonAnimationScript(VV) {
+        if (null === VV) return null;
+        const eV = {};
+        for (const xV in VV) {
+          const JV = VV[xV];
+          eV[xV] = this.createNodeAnimationScript(JV)
         }
-        return rM
+        return eV
       }
-      createNodeAnimationScript(MM) {
+      createNodeAnimationScript(VV) {
         const {
-          rotation: rM,
-          position: iM,
-          scale: OM
-        } = MM;
+          rotation: eV,
+          position: xV,
+          scale: JV
+        } = VV;
         return {
-          rotation: this.createAnimationTimeline(null !== rM && void 0 !== rM ? rM : null, EM, HM, !0),
-          position: this.createAnimationTimeline(null !== iM && void 0 !== iM ? iM : null, GM, JM, !1),
-          scale: this.createAnimationTimeline(null !== OM && void 0 !== OM ? OM : null, dM, JM, !1)
+          rotation: this.createAnimationTimeline(null !== eV && void 0 !== eV ? eV : null, qV, rV, !0),
+          position: this.createAnimationTimeline(null !== xV && void 0 !== xV ? xV : null, FV, bV, !1),
+          scale: this.createAnimationTimeline(null !== JV && void 0 !== JV ? JV : null, EV, bV, !1)
         }
       }
-      createAnimationTimeline(MM, rM, iM, OM) {
-        if (null === MM) return [];
-        (Array.isArray(MM) || "number" === typeof MM) && (MM = {
-          "0.0": MM
+      createAnimationTimeline(VV, eV, xV, JV) {
+        if (null === VV) return [];
+        (Array.isArray(VV) || "number" === typeof VV) && (VV = {
+          "0.0": VV
         });
-        const SM = Object.entries(MM).map((MM => {
-          let [iM, OM] = MM;
-          const SM = Number(iM) / this.animationSchema.animation_length;
-          return this.createAnimationFrameWithoutPrecomputes(SM, OM, rM)
-        })).filter(LM);
-        SM.sort(((MM, rM) => MM.timeFraction - rM.timeFraction)), OM && function(MM) {
-          for (let rM = 1; rM < MM.length; rM++) {
-            const iM = MM[rM - 1].post,
-              OM = MM[rM],
-              SM = CM(OM.pre),
-              jM = CM(OM.post),
-              aM = bM(iM, OM.pre);
-            bM(iM, SM) < aM && (MM[rM] = {
-              ...OM,
-              pre: SM,
-              post: jM
+        const YV = Object.entries(VV).map((VV => {
+          let [xV, JV] = VV;
+          const YV = Number(xV) / this.animationSchema.animation_length;
+          return this.createAnimationFrameWithoutPrecomputes(YV, JV, eV)
+        })).filter(ZV);
+        YV.sort(((VV, eV) => VV.timeFraction - eV.timeFraction)), JV && function(VV) {
+          for (let eV = 1; eV < VV.length; eV++) {
+            const xV = VV[eV - 1].post,
+              JV = VV[eV],
+              YV = TV(JV.pre),
+              UV = TV(JV.post),
+              yV = AV(xV, JV.pre);
+            AV(xV, YV) < yV && (VV[eV] = {
+              ...JV,
+              pre: YV,
+              post: UV
             })
           }
-        }(SM);
-        const jM = [];
-        for (let QM = 0; QM < SM.length; QM++) {
-          var aM, PM, nM;
-          const MM = SM[QM],
-            rM = null !== (aM = SM[QM - 1]) && void 0 !== aM ? aM : MM,
-            OM = null !== (PM = SM[QM + 1]) && void 0 !== PM ? PM : MM,
-            zM = null !== (nM = SM[QM + 2]) && void 0 !== nM ? nM : OM;
-          jM.push({
-            ...MM,
-            ...iM(rM.post, rM.timeFraction, MM.post, MM.timeFraction, OM.pre, OM.timeFraction, zM.pre, zM.timeFraction)
+        }(YV);
+        const UV = [];
+        for (let nV = 0; nV < YV.length; nV++) {
+          var yV, pV, QV;
+          const VV = YV[nV],
+            eV = null !== (yV = YV[nV - 1]) && void 0 !== yV ? yV : VV,
+            JV = null !== (pV = YV[nV + 1]) && void 0 !== pV ? pV : VV,
+            wV = null !== (QV = YV[nV + 2]) && void 0 !== QV ? QV : JV;
+          UV.push({
+            ...VV,
+            ...xV(eV.post, eV.timeFraction, VV.post, VV.timeFraction, JV.pre, JV.timeFraction, wV.pre, wV.timeFraction)
           })
         }
-        return jM
+        return UV
       }
-      createAnimationFrameWithoutPrecomputes(MM, rM, iM) {
-        let OM, SM, jM = null;
-        if ("object" === typeof rM && "post" in rM) {
-          var aM;
-          jM = null !== (aM = rM.lerp_mode) && void 0 !== aM ? aM : null, SM = iM(rM.post), OM = void 0 !== rM.pre ? iM(rM.pre) : SM
+      createAnimationFrameWithoutPrecomputes(VV, eV, xV) {
+        let JV, YV, UV = null;
+        if ("object" === typeof eV && "post" in eV) {
+          var yV;
+          UV = null !== (yV = eV.lerp_mode) && void 0 !== yV ? yV : null, YV = xV(eV.post), JV = void 0 !== eV.pre ? xV(eV.pre) : YV
         } else {
-          const MM = iM(rM);
-          SM = MM, OM = MM
+          const VV = xV(eV);
+          YV = VV, JV = VV
         }
         return {
-          timeFraction: MM,
-          bS: this.createLerpMode(jM),
-          pre: OM,
-          post: SM
+          timeFraction: VV,
+          zY: this.createLerpMode(UV),
+          pre: JV,
+          post: YV
         }
       }
-      createLerpMode(MM) {
-        return null === MM ? OM.f.Linear : zM.LERP_MODE_SCHEMA_MAPPING[MM]
+      createLerpMode(VV) {
+        return null === VV ? JV.k.Linear : wV.LERP_MODE_SCHEMA_MAPPING[VV]
       }
     }
 
-    function LM(MM) {
-      return Number.isFinite(MM.timeFraction) && mM(MM.pre) && mM(MM.post)
+    function ZV(VV) {
+      return Number.isFinite(VV.timeFraction) && vV(VV.pre) && vV(VV.post)
     }
 
-    function mM(MM) {
-      return Number.isFinite(MM[0]) && Number.isFinite(MM[1]) && Number.isFinite(MM[2])
+    function vV(VV) {
+      return Number.isFinite(VV[0]) && Number.isFinite(VV[1]) && Number.isFinite(VV[2])
     }
 
-    function HM(MM, rM, iM, OM, SM, jM, aM, PM) {
-      const nM = jM - rM,
-        QM = jM - OM,
-        zM = PM - OM,
-        LM = [null, null, null];
-      for (let mM = 0; mM < LM.length; mM++) LM[mM] = hM(MM[mM], iM[mM], SM[mM], aM[mM], nM, zM);
+    function rV(VV, eV, xV, JV, YV, UV, yV, pV) {
+      const QV = UV - eV,
+        nV = UV - JV,
+        wV = pV - JV,
+        ZV = [null, null, null];
+      for (let vV = 0; vV < ZV.length; vV++) ZV[vV] = kV(VV[vV], xV[vV], YV[vV], yV[vV], QV, wV);
       return {
-        wS: QM,
-        tS: LM
+        GY: nV,
+        WY: ZV
       }
     }
 
-    function hM(MM, rM, iM, OM, jM, aM) {
+    function kV(VV, eV, xV, JV, UV, yV) {
       return {
-        uS: SM.d.computeShortestRotation(MM, iM) / jM,
-        RS: SM.d.computeShortestRotation(rM, OM) / aM,
-        delta: SM.d.computeShortestRotation(rM, iM)
+        gY: YV.b.computeShortestRotation(VV, xV) / UV,
+        DY: YV.b.computeShortestRotation(eV, JV) / yV,
+        delta: YV.b.computeShortestRotation(eV, xV)
       }
     }
 
-    function JM(MM, rM, iM, OM, SM, jM, aM, PM) {
-      const nM = jM - rM,
-        QM = jM - OM,
-        zM = PM - OM,
-        LM = [null, null, null];
-      for (let mM = 0; mM < LM.length; mM++) LM[mM] = {
-        uS: (SM[mM] - MM[mM]) / nM,
-        RS: (aM[mM] - iM[mM]) / zM,
-        delta: SM[mM] - iM[mM]
+    function bV(VV, eV, xV, JV, YV, UV, yV, pV) {
+      const QV = UV - eV,
+        nV = UV - JV,
+        wV = pV - JV,
+        ZV = [null, null, null];
+      for (let vV = 0; vV < ZV.length; vV++) ZV[vV] = {
+        gY: (YV[vV] - VV[vV]) / QV,
+        DY: (yV[vV] - xV[vV]) / wV,
+        delta: YV[vV] - xV[vV]
       };
       return {
-        wS: QM,
-        tS: LM
+        GY: nV,
+        WY: ZV
       }
     }
 
-    function dM(MM) {
-      return yM("number" === typeof MM ? [MM, MM, MM] : MM)
+    function EV(VV) {
+      return BV("number" === typeof VV ? [VV, VV, VV] : VV)
     }
 
-    function yM(MM) {
-      return [lM(MM[0]), lM(MM[1]), lM(MM[2])]
+    function BV(VV) {
+      return [jV(VV[0]), jV(VV[1]), jV(VV[2])]
     }
 
-    function lM(MM) {
-      return Number.isFinite(MM) ? Math.min(aM.i, Math.max(-aM.i, MM)) : MM
+    function jV(VV) {
+      return Number.isFinite(VV) ? Math.min(yV.j, Math.max(-yV.j, VV)) : VV
     }
 
-    function EM(MM) {
-      const [rM, iM, OM] = MM, aM = -(0, jM.l)(rM), PM = -(0, jM.l)(iM), nM = (0, jM.l)(OM), QM = SM.d.quaternionFromEulerZYX(aM, PM, nM);
-      return SM.d.eulerYXZFromQuaternion(QM)
+    function qV(VV) {
+      const [eV, xV, JV] = VV, yV = -(0, UV.k)(eV), pV = -(0, UV.k)(xV), QV = (0, UV.k)(JV), nV = YV.b.quaternionFromEulerZYX(yV, pV, QV);
+      return YV.b.eulerYXZFromQuaternion(nV)
     }
-    zM.LERP_MODE_SCHEMA_MAPPING = {
-      linear: OM.f.Linear,
-      catmullrom: OM.f.CatmullRomSpline
+    wV.LERP_MODE_SCHEMA_MAPPING = {
+      linear: JV.k.Linear,
+      catmullrom: JV.k.CatmullRomSpline
     };
-    const UM = 1 / 16;
+    const tV = 1 / 16;
 
-    function GM(MM) {
-      return [-MM[0] * UM, MM[1] * UM, MM[2] * UM]
+    function FV(VV) {
+      return [-VV[0] * tV, VV[1] * tV, VV[2] * tV]
     }
 
-    function CM(MM) {
-      const [rM, iM, OM] = MM;
-      return [rM >= 0 ? Math.PI - rM : -Math.PI - rM, eM(iM + Math.PI), eM(OM + Math.PI)]
+    function TV(VV) {
+      const [eV, xV, JV] = VV;
+      return [eV >= 0 ? Math.PI - eV : -Math.PI - eV, PV(xV + Math.PI), PV(JV + Math.PI)]
     }
 
-    function eM(MM) {
-      return SM.d.mod(MM + Math.PI, 2 * Math.PI) - Math.PI
+    function PV(VV) {
+      return YV.b.mod(VV + Math.PI, 2 * Math.PI) - Math.PI
     }
 
-    function bM(MM, rM) {
-      return Math.abs(SM.d.computeShortestRotation(MM[0], rM[0])) + Math.abs(SM.d.computeShortestRotation(MM[1], rM[1])) + Math.abs(SM.d.computeShortestRotation(MM[2], rM[2]))
+    function AV(VV, eV) {
+      return Math.abs(YV.b.computeShortestRotation(VV[0], eV[0])) + Math.abs(YV.b.computeShortestRotation(VV[1], eV[1])) + Math.abs(YV.b.computeShortestRotation(VV[2], eV[2]))
     }
-    const wM = new QM
+    const NV = new nV
   },
-  38097: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => aM,
-      e: () => jM,
-      f: () => OM,
-      h: () => SM
+  38328: (VV, eV, xV) => {
+    xV.d(eV, {
+      e: () => yV,
+      h: () => UV,
+      k: () => JV,
+      n: () => YV
     });
-    let OM = function(MM) {
-        return MM[MM.Linear = 0] = "Linear", MM[MM.CatmullRomSpline = 1] = "CatmullRomSpline", MM
+    let JV = function(VV) {
+        return VV[VV.Linear = 0] = "Linear", VV[VV.CatmullRomSpline = 1] = "CatmullRomSpline", VV
       }({}),
-      SM = function(MM) {
-        return MM[MM.NoLoop = 0] = "NoLoop", MM[MM.LoopOnLastFrame = 1] = "LoopOnLastFrame", MM[MM.HoldOnLastFrame = 2] = "HoldOnLastFrame", MM
+      YV = function(VV) {
+        return VV[VV.NoLoop = 0] = "NoLoop", VV[VV.LoopOnLastFrame = 1] = "LoopOnLastFrame", VV[VV.HoldOnLastFrame = 2] = "HoldOnLastFrame", VV
       }({}),
-      jM = function(MM) {
-        return MM[MM.Movement = 0] = "Movement", MM[MM.Action = 1] = "Action", MM[MM.Emote = 2] = "Emote", MM[MM.Custom = 3] = "Custom", MM
+      UV = function(VV) {
+        return VV[VV.Movement = 0] = "Movement", VV[VV.Action = 1] = "Action", VV[VV.Emote = 2] = "Emote", VV[VV.Custom = 3] = "Custom", VV
       }({}),
-      aM = function(MM) {
-        return MM[MM.Start = 0] = "Start", MM[MM.Stop = 1] = "Stop", MM
+      yV = function(VV) {
+        return VV[VV.Start = 0] = "Start", VV[VV.Stop = 1] = "Stop", VV
       }({})
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const VV in modules) Object.freeze(modules[VV]);

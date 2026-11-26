@@ -1,19 +1,19 @@
 export const id = 233;
 export const ids = [233];
 export const modules = {
-  37437: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => aM,
-      i: () => SM,
-      k: () => jM
+  37633: (VV, eV, xV) => {
+    xV.d(eV, {
+      c: () => yV,
+      d: () => YV,
+      f: () => UV
     });
-    var OM = iM(1899);
-    class SM extends Error {
-      constructor(MM) {
-        super("The game server didn't answer in time"), this.leg = MM, this.name = "SeatRequestTimedOut"
+    var JV = xV(1900);
+    class YV extends Error {
+      constructor(VV) {
+        super("The game server didn't answer in time"), this.leg = VV, this.name = "SeatRequestTimedOut"
       }
     }
-    const jM = new class {
+    const UV = new class {
       constructor() {
         this.count = 0, this.answers = 0, this.waiting = new Set
       }
@@ -25,537 +25,537 @@ export const modules = {
       }
       add() {
         this.count++;
-        for (const MM of this.waiting) MM()
+        for (const VV of this.waiting) VV()
       }
       remove() {
         this.count--
       }
-      whenSlow(MM) {
-        return this.count > 0 || MM.aborted ? Promise.resolve(!MM.aborted) : new Promise((rM => {
-          const iM = () => {
-            this.waiting.delete(iM), rM(!MM.aborted)
+      whenSlow(VV) {
+        return this.count > 0 || VV.aborted ? Promise.resolve(!VV.aborted) : new Promise((eV => {
+          const xV = () => {
+            this.waiting.delete(xV), eV(!VV.aborted)
           };
-          this.waiting.add(iM), MM.addEventListener("abort", iM, {
+          this.waiting.add(xV), VV.addEventListener("abort", xV, {
             once: !0
           })
         }))
       }
     };
-    class aM {
-      constructor(MM) {
-        this.timeout = void 0, this.slow = void 0, this.countedSlow = !1, this.timeout = new OM.e(45e3, MM), this.slow = new OM.e(8e3, (() => {
-          this.countedSlow = !0, jM.add()
+    class yV {
+      constructor(VV) {
+        this.timeout = void 0, this.slow = void 0, this.countedSlow = !1, this.timeout = new JV.e(45e3, VV), this.slow = new JV.e(8e3, (() => {
+          this.countedSlow = !0, UV.add()
         }))
       }
       restart() {
-        jM.answer(), this.uncountSlow(), this.timeout.restart(), this.slow.restart()
+        UV.answer(), this.uncountSlow(), this.timeout.restart(), this.slow.restart()
       }
       stop() {
         this.timeout.stop(), this.slow.stop(), this.uncountSlow()
       }
       answered() {
-        this.stop(), jM.answer()
+        this.stop(), UV.answer()
       }
       socketOpened() {
-        this.slow.stop(), this.uncountSlow(), jM.answer()
+        this.slow.stop(), this.uncountSlow(), UV.answer()
       }
       uncountSlow() {
-        this.countedSlow && (this.countedSlow = !1, jM.remove())
+        this.countedSlow && (this.countedSlow = !1, UV.remove())
       }
     }
   },
-  37223: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => OM,
-      e: () => SM,
-      h: () => jM,
-      l: () => aM
+  37429: (VV, eV, xV) => {
+    xV.d(eV, {
+      e: () => JV,
+      h: () => YV,
+      i: () => UV,
+      l: () => yV
     });
-    const OM = 1024,
-      SM = 1024 * OM;
+    const JV = 1024,
+      YV = 1024 * JV;
 
-    function jM(MM) {
-      return 2 ** Math.floor(Math.log2(Math.max(1, MM / SM)))
+    function UV(VV) {
+      return 2 ** Math.floor(Math.log2(Math.max(1, VV / YV)))
     }
 
-    function aM(MM) {
-      return (MM / SM).toFixed(1)
+    function yV(VV) {
+      return (VV / YV).toFixed(1)
     }
   },
-  37426: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => jM,
-      d: () => nM,
-      f: () => PM,
-      i: () => aM,
-      m: () => QM,
-      q: () => zM,
-      t: () => mM
+  37629: (VV, eV, xV) => {
+    xV.d(eV, {
+      b: () => UV,
+      f: () => QV,
+      h: () => pV,
+      j: () => yV,
+      k: () => nV,
+      n: () => wV,
+      q: () => vV
     });
-    var OM = iM(181);
-    const SM = 32 * iM(37223).e,
-      jM = 6144,
-      aM = 4608,
-      PM = 512,
-      nM = function() {
-        const MM = mM(OM.f.maxChunkHorizAddDistance + 1, OM.f.maxChunkVertAddDistance + 1);
-        let rM = MM;
-        for (; LM(rM) < MM;) rM++;
-        return rM
+    var JV = xV(206);
+    const YV = 32 * xV(37429).h,
+      UV = 6144,
+      yV = 4608,
+      pV = 512,
+      QV = function() {
+        const VV = vV(JV.f.maxChunkHorizAddDistance + 1, JV.f.maxChunkVertAddDistance + 1);
+        let eV = VV;
+        for (; ZV(eV) < VV;) eV++;
+        return eV
       }();
 
-    function QM(MM) {
-      return Math.floor(SM * MM / jM)
+    function nV(VV) {
+      return Math.floor(YV * VV / UV)
     }
 
-    function zM(MM) {
-      const rM = LM(MM);
-      let iM = OM.f.maxChunkHorizAddDistance,
-        SM = OM.f.maxChunkVertAddDistance;
-      if (mM(iM + 1, SM + 1) <= rM) return null;
-      for (; mM(iM + 1, SM + 1) > rM && (iM > 0 || SM > 0);) iM > SM ? iM-- : SM--;
+    function wV(VV) {
+      const eV = ZV(VV);
+      let xV = JV.f.maxChunkHorizAddDistance,
+        YV = JV.f.maxChunkVertAddDistance;
+      if (vV(xV + 1, YV + 1) <= eV) return null;
+      for (; vV(xV + 1, YV + 1) > eV && (xV > 0 || YV > 0);) xV > YV ? xV-- : YV--;
       return {
-        horizontal: iM,
-        vertical: SM
+        horizontal: xV,
+        vertical: YV
       }
     }
 
-    function LM(MM) {
-      return MM - Math.floor(MM / 6)
+    function ZV(VV) {
+      return VV - Math.floor(VV / 6)
     }
 
-    function mM(MM, rM) {
-      const iM = Math.max(MM, rM);
-      let OM = 0;
-      for (let SM = -iM; SM <= iM; SM++)
-        for (let jM = -iM; jM <= iM; jM++)
-          for (let aM = -iM; aM <= iM; aM++) HM(MM, rM, SM, jM, aM) && OM++;
-      return OM
+    function vV(VV, eV) {
+      const xV = Math.max(VV, eV);
+      let JV = 0;
+      for (let YV = -xV; YV <= xV; YV++)
+        for (let UV = -xV; UV <= xV; UV++)
+          for (let yV = -xV; yV <= xV; yV++) rV(VV, eV, YV, UV, yV) && JV++;
+      return JV
     }
 
-    function HM(MM, rM, iM, OM, SM) {
-      const jM = iM * iM + SM * SM;
-      return MM === rM ? jM + OM * OM <= MM * MM : MM > rM ? Math.abs(OM) <= rM && jM + OM * OM <= MM * MM : jM <= MM * MM && jM + OM * OM <= rM * rM
+    function rV(VV, eV, xV, JV, YV) {
+      const UV = xV * xV + YV * YV;
+      return VV === eV ? UV + JV * JV <= VV * VV : VV > eV ? Math.abs(JV) <= eV && UV + JV * JV <= VV * VV : UV <= VV * VV && UV + JV * JV <= eV * eV
     }
   },
-  37422: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => CM,
-      d: () => sM,
-      f: () => WM,
-      g: () => pM,
-      j: () => RM
+  37622: (VV, eV, xV) => {
+    xV.d(eV, {
+      e: () => TV,
+      g: () => gV,
+      j: () => RV,
+      n: () => WV,
+      q: () => GV
     });
-    var OM = iM(181),
-      SM = iM(83),
-      jM = iM(119),
-      aM = iM(275),
-      PM = iM(4759),
-      nM = iM(665),
-      QM = iM(4765),
-      zM = iM(37426),
-      LM = iM(37428);
-    const mM = 1048576,
-      HM = 1024 * mM,
-      hM = 400 * mM,
-      JM = 147456,
-      dM = .5,
-      yM = 2048,
-      lM = 1.5 * HM,
-      EM = 768 * mM;
+    var JV = xV(206),
+      YV = xV(99),
+      UV = xV(138),
+      yV = xV(328),
+      pV = xV(4839),
+      QV = xV(691),
+      nV = xV(4846),
+      wV = xV(37629),
+      ZV = xV(37631);
+    const vV = 1048576,
+      rV = 1024 * vV,
+      kV = 400 * vV,
+      bV = 147456,
+      EV = .5,
+      BV = 2048,
+      jV = 1.5 * rV,
+      qV = 768 * vV;
 
-    function UM(MM) {
+    function tV(VV) {
       const {
-        os: rM,
-        deviceMemory: iM
-      } = MM;
-      if ("ios" === rM) switch ((0, aM.d)(MM)) {
+        os: eV,
+        deviceMemory: xV
+      } = VV;
+      if ("ios" === eV) switch ((0, yV.e)(VV)) {
         case "ipad_m":
           return {
-            footprintBytes: GM(zM.c), basis: "ipad-m", namesLimit: !1
+            footprintBytes: FV(wV.b), basis: "ipad-m", namesLimit: !1
           };
         case "ipad":
           return {
-            footprintBytes: EM, basis: "ipad", namesLimit: !0
+            footprintBytes: qV, basis: "ipad", namesLimit: !0
           };
         case "iphone_6gb":
           return {
-            footprintBytes: lM, basis: "iphone-6gb", namesLimit: !0
+            footprintBytes: jV, basis: "iphone-6gb", namesLimit: !0
           };
         case "iphone":
           return {
-            footprintBytes: EM, basis: "iphone", namesLimit: !0
+            footprintBytes: qV, basis: "iphone", namesLimit: !0
           }
       }
-      return "number" === typeof iM && Number.isFinite(iM) && iM > 0 ? {
-        footprintBytes: iM * HM * dM,
-        basis: `memory-${iM}`,
+      return "number" === typeof xV && Number.isFinite(xV) && xV > 0 ? {
+        footprintBytes: xV * rV * EV,
+        basis: `memory-${xV}`,
         namesLimit: !0
-      } : "android" === rM ? {
-        footprintBytes: EM,
+      } : "android" === eV ? {
+        footprintBytes: qV,
         basis: "android",
         namesLimit: !0
       } : {
-        footprintBytes: GM(zM.i),
+        footprintBytes: FV(wV.j),
         basis: "unreported",
         namesLimit: !1
       }
     }
 
-    function GM(MM) {
-      return hM + MM * JM
+    function FV(VV) {
+      return kV + VV * bV
     }
 
-    function CM() {
-      let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : gM(),
-        rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : jM.siteUsed;
-      if ("android" !== MM.os || "mobileAndroid" === rM) return !0;
+    function TV() {
+      let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : MV(),
+        eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : UV.siteUsed;
+      if ("android" !== VV.os || "mobileAndroid" === eV) return !0;
       const {
-        footprintBytes: iM,
-        basis: OM
-      } = UM(MM);
-      return "android" === OM || iM > 2 * HM
+        footprintBytes: xV,
+        basis: JV
+      } = tV(VV);
+      return "android" === JV || xV > 2 * rV
     }
 
-    function eM(MM, rM, iM) {
-      var SM, jM, aM;
+    function PV(VV, eV, xV) {
+      var YV, UV, yV;
       let {
-        footprintBytes: PM,
-        basis: nM,
-        namesLimit: LM
-      } = UM(MM);
-      if (iM) {
-        const MM = Math.min(PM, GM(zM.c));
-        PM = hM + Math.max(0, MM - hM) / 2, nM += "+killed", LM = !0
+        footprintBytes: pV,
+        basis: QV,
+        namesLimit: ZV
+      } = tV(VV);
+      if (xV) {
+        const VV = Math.min(pV, FV(wV.b));
+        pV = kV + Math.max(0, VV - kV) / 2, QV += "+killed", ZV = !0
       }
-      null !== rM && GM(rM) < PM && (PM = GM(rM), nM += "+learned", LM = !0), nM += (0, QM.j)(null !== (SM = MM.x32) && void 0 !== SM ? SM : null), "fix" === MM.x32 && GM(yM) < PM && (PM = GM(yM), LM = !0);
-      const mM = function(MM) {
-          const rM = Math.floor((MM - hM) / JM);
-          return Math.min(zM.c, Math.max(zM.f, rM))
-        }(PM),
-        HM = LM && mM < zM.c ? Math.min(mM, zM.d) : mM,
-        dM = (0, zM.q)(HM);
+      null !== eV && FV(eV) < pV && (pV = FV(eV), QV += "+learned", ZV = !0), QV += (0, nV.m)(null !== (YV = VV.x32) && void 0 !== YV ? YV : null), "fix" === VV.x32 && FV(BV) < pV && (pV = FV(BV), ZV = !0);
+      const vV = function(VV) {
+          const eV = Math.floor((VV - kV) / bV);
+          return Math.min(wV.b, Math.max(wV.h, eV))
+        }(pV),
+        rV = ZV && vV < wV.b ? Math.min(vV, wV.f) : vV,
+        EV = (0, wV.n)(rV);
       return {
-        footprintBytes: PM,
-        shedFootprintBytes: LM ? Math.max(PM, GM(HM)) : null,
-        chunkCap: HM,
-        maxHorizDistance: null !== (jM = null === dM || void 0 === dM ? void 0 : dM.horizontal) && void 0 !== jM ? jM : OM.f.maxChunkHorizAddDistance,
-        maxVertDistance: null !== (aM = null === dM || void 0 === dM ? void 0 : dM.vertical) && void 0 !== aM ? aM : OM.f.maxChunkVertAddDistance,
-        basis: nM
+        footprintBytes: pV,
+        shedFootprintBytes: ZV ? Math.max(pV, FV(rV)) : null,
+        chunkCap: rV,
+        maxHorizDistance: null !== (UV = null === EV || void 0 === EV ? void 0 : EV.horizontal) && void 0 !== UV ? UV : JV.f.maxChunkHorizAddDistance,
+        maxVertDistance: null !== (yV = null === EV || void 0 === EV ? void 0 : EV.vertical) && void 0 !== yV ? yV : JV.f.maxChunkVertAddDistance,
+        basis: QV
       }
     }
-    let bM = null,
-      wM = null,
-      tM = null;
+    let AV = null,
+      NV = null,
+      XV = null;
 
-    function gM() {
-      var MM;
-      return bM ??= {
-        os: (0, SM.getOperatingSystem)(),
+    function MV() {
+      var VV;
+      return AV ??= {
+        os: (0, YV.getOperatingSystem)(),
         deviceMemory: navigator.deviceMemory,
-        ...(0, aM.f)()
+        ...(0, yV.i)()
       }, {
-        ...bM,
-        x32: null !== (MM = (0, QM.h)()) && void 0 !== MM ? MM : void 0
+        ...AV,
+        x32: null !== (VV = (0, nV.j)()) && void 0 !== VV ? VV : void 0
       }
     }
 
-    function uM() {
-      return eM(gM(), (0, PM.e)(), (0, nM.C)("wasm").length > 0)
+    function zV() {
+      return PV(MV(), (0, pV.i)(), (0, QV.P)("wasm").length > 0)
     }
 
-    function RM() {
-      return tM ??= (0, LM.t)(eM(gM(), null, !1).chunkCap), tM
+    function GV() {
+      return XV ??= (0, ZV.p)(PV(MV(), null, !1).chunkCap), XV
     }
 
-    function pM() {
-      return wM ??= uM(), wM
+    function WV() {
+      return NV ??= zV(), NV
     }
 
-    function WM() {
-      var MM;
-      return (null !== (MM = wM) && void 0 !== MM ? MM : uM()).basis
+    function RV() {
+      var VV;
+      return (null !== (VV = NV) && void 0 !== VV ? VV : zV()).basis
     }
 
-    function sM(MM, rM) {
-      return MM.setChunkCap(rM.chunkCap)
+    function gV(VV, eV) {
+      return VV.setChunkCap(eV.chunkCap)
     }
   },
-  37428: (MM, rM, iM) => {
-    iM.d(rM, {
-      C: () => wM,
-      E: () => mM,
-      b: () => tM,
-      i: () => GM,
-      l: () => LM,
-      p: () => CM,
-      t: () => lM,
-      x: () => bM
+  37631: (VV, eV, xV) => {
+    xV.d(eV, {
+      d: () => XV,
+      h: () => FV,
+      l: () => ZV,
+      n: () => TV,
+      p: () => jV,
+      t: () => AV,
+      x: () => NV,
+      y: () => vV
     });
-    var OM = iM(37223),
-      SM = iM(37426);
-    const jM = 64 * OM.b,
-      aM = 40 * OM.e,
-      PM = 36 * OM.e,
-      nM = 20 * OM.e,
-      QM = 2 * OM.e,
-      zM = 5 * OM.e;
+    var JV = xV(37429),
+      YV = xV(37629);
+    const UV = 64 * JV.e,
+      yV = 40 * JV.h,
+      pV = 36 * JV.h,
+      QV = 20 * JV.h,
+      nV = 2 * JV.h,
+      wV = 5 * JV.h;
 
-    function LM(MM) {
-      return "footprint" !== MM && "gcPressure" !== MM
+    function ZV(VV) {
+      return "footprint" !== VV && "gcPressure" !== VV
     }
 
-    function mM(MM) {
-      return LM(MM) ? "wasm memory was refused" : "gcPressure" === MM ? "the page's full GCs ran high" : "the tab's footprint reached its budget"
+    function vV(VV) {
+      return ZV(VV) ? "wasm memory was refused" : "gcPressure" === VV ? "the page's full GCs ran high" : "the tab's footprint reached its budget"
     }
-    const HM = 2 * OM.e,
-      hM = 4 * OM.e,
-      JM = 35 * OM.e + HM + hM,
-      dM = 6.5 * OM.e,
-      yM = 132.5 * OM.b;
+    const rV = 2 * JV.h,
+      kV = 4 * JV.h,
+      bV = 35 * JV.h + rV + kV,
+      EV = 6.5 * JV.h,
+      BV = 132.5 * JV.e;
 
-    function lM(MM) {
-      const rM = dM + (0, SM.m)(MM) + MM * yM;
-      return Math.ceil((2 * JM + rM) / jM) * jM
+    function jV(VV) {
+      const eV = EV + (0, YV.k)(VV) + VV * BV;
+      return Math.ceil((2 * bV + eV) / UV) * UV
     }
-    lM(SM.c), OM.e, OM.e, OM.e;
-    const EM = {
-        targetBytes: aM,
-        leastBytes: nM
+    jV(YV.b), JV.h, JV.h, JV.h;
+    const qV = {
+        targetBytes: yV,
+        leastBytes: QV
       },
-      UM = {
-        targetBytes: PM,
-        leastBytes: nM
+      tV = {
+        targetBytes: pV,
+        leastBytes: QV
       };
 
-    function GM(MM) {
+    function FV(VV) {
       return {
-        targetBytes: MM,
+        targetBytes: VV,
         leastBytes: 0
       }
     }
 
-    function CM(MM) {
-      return MM >= SM.c ? EM : UM
+    function TV(VV) {
+      return VV >= YV.b ? qV : tV
     }
-    const eM = 2 * jM;
+    const PV = 2 * UV;
 
-    function bM(MM, rM, iM) {
-      return MM + rM + eM > iM
+    function AV(VV, eV, xV) {
+      return VV + eV + PV > xV
     }
-    const wM = {
+    const NV = {
       now: () => performance.now(),
-      requestIdle: "function" === typeof requestIdleCallback ? MM => {
-        requestIdleCallback(MM)
+      requestIdle: "function" === typeof requestIdleCallback ? VV => {
+        requestIdleCallback(VV)
       } : null
     };
-    class tM {
-      constructor(MM, rM, iM) {
-        let OM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : wM;
-        this.memory = MM, this.readPeakStoredChunks = rM, this.onError = iM, this.clock = OM, this.pendingSince = null, this.stepsRefused = !1, this.stepsHeldUntil = null, this.shedding = null, this.sheds = 0, this.gcSheds = 0, this.shedCap = null, this.stopped = !1, this.statsAt = -1 / 0, this.main = null, this.peakStoredChunks = 0, this.workers = new Map, this.replacedRefusals = {
+    class XV {
+      constructor(VV, eV, xV) {
+        let JV = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : NV;
+        this.memory = VV, this.readPeakStoredChunks = eV, this.onError = xV, this.clock = JV, this.pendingSince = null, this.stepsRefused = !1, this.stepsHeldUntil = null, this.shedding = null, this.sheds = 0, this.gcSheds = 0, this.shedCap = null, this.stopped = !1, this.statsAt = -1 / 0, this.main = null, this.peakStoredChunks = 0, this.workers = new Map, this.replacedRefusals = {
           reserves: 0,
           allocations: 0
         }, this.joinReserveTaken = null, this.ceilingBytes = null, this.ballastCheckAt = -1 / 0, this.ballastPeakBytes = 0, this.distanceInUse = null, this.footprint = null, this.gcPressure = null
       }
-      setShed(MM, rM, iM) {
+      setShed(VV, eV, xV) {
         this.shedding = {
-          shed: MM,
-          aL: rM,
-          readDistanceInUse: iM
+          shed: VV,
+          EZ: eV,
+          readDistanceInUse: xV
         }
       }
       shedDistanceInUse() {
         return this.distanceInUse
       }
-      setFootprint(MM) {
-        this.footprint = MM
+      setFootprint(VV) {
+        this.footprint = VV
       }
-      setGcPressure(MM) {
+      setGcPressure(VV) {
         this.gcPressure = {
-          highEpisode: MM,
+          highEpisode: VV,
           shedEpisode: null,
           nextAt: null
         }
       }
-      setCeiling(MM) {
-        this.ceilingBytes = MM, this.call((() => {
-          this.memory.setCeiling(MM)
+      setCeiling(VV) {
+        this.ceilingBytes = VV, this.call((() => {
+          this.memory.setCeiling(VV)
         }), void 0)
       }
-      ceilingMayRefuse(MM, rM) {
-        var iM;
-        return bM(this.memory.memoryBytes(), MM, null !== (iM = this.ceilingBytes) && void 0 !== iM ? iM : rM)
+      ceilingMayRefuse(VV, eV) {
+        var xV;
+        return AV(this.memory.memoryBytes(), VV, null !== (xV = this.ceilingBytes) && void 0 !== xV ? xV : eV)
       }
-      reserveAtJoin(MM) {
+      reserveAtJoin(VV) {
         let {
-          targetBytes: rM,
-          leastBytes: iM
-        } = MM;
-        const OM = this.memory.memoryBytes(),
-          SM = OM + iM,
-          jM = Math.max(rM + (this.ballastOn() ? zM : 0), SM),
-          aM = this.call((() => this.memory.reserveUpFront(jM) ? "target" : jM > SM && this.memory.reserveUpFront(SM) ? "least" : "none"), "none");
+          targetBytes: eV,
+          leastBytes: xV
+        } = VV;
+        const JV = this.memory.memoryBytes(),
+          YV = JV + xV,
+          UV = Math.max(eV + (this.ballastOn() ? wV : 0), YV),
+          yV = this.call((() => this.memory.reserveUpFront(UV) ? "target" : UV > YV && this.memory.reserveUpFront(YV) ? "least" : "none"), "none");
         if (this.stopped) return !1;
-        if ("target" !== aM) {
-          const MM = "least" === aM ? `took ${SM} bytes instead` : "frames grow it in steps";
-          console.warn(`[bloxd-wasm-client] wasm memory: the join's reserve to ${jM} bytes was refused at ${OM} bytes; ${MM}`)
+        if ("target" !== yV) {
+          const VV = "least" === yV ? `took ${YV} bytes instead` : "frames grow it in steps";
+          console.warn(`[bloxd-wasm-client] wasm memory: the join's reserve to ${UV} bytes was refused at ${JV} bytes; ${VV}`)
         }
-        return this.joinReserveTaken = aM, this.takePressure(), this.takeBallast(this.clock.now()), this.refreshStats(), "target" !== aM && this.shedFor("joinReserve"), "none" !== aM
+        return this.joinReserveTaken = yV, this.takePressure(), this.takeBallast(this.clock.now()), this.refreshStats(), "target" !== yV && this.shedFor("joinReserve"), "none" !== yV
       }
       afterFrame() {
         if (this.stopped) return;
-        const MM = this.clock.now(),
-          rM = null !== this.stepsHeldUntil && MM >= this.stepsHeldUntil;
-        if (rM && (this.stepsHeldUntil = null), this.takePressure() && null === this.stepsHeldUntil && !this.stepsRefused && this.shedFor("allocation"), this.stopped) return;
-        if (null === this.stepsHeldUntil && MM >= this.ballastCheckAt && (this.takeBallast(MM), this.stopped)) return;
-        const iM = this.stepsRefused || null !== this.stepsHeldUntil ? "none" : this.call((() => this.memory.lowWater()), "none"),
-          OM = rM && "now" === iM ? "none" : iM,
+        const VV = this.clock.now(),
+          eV = null !== this.stepsHeldUntil && VV >= this.stepsHeldUntil;
+        if (eV && (this.stepsHeldUntil = null), this.takePressure() && null === this.stepsHeldUntil && !this.stepsRefused && this.shedFor("allocation"), this.stopped) return;
+        if (null === this.stepsHeldUntil && VV >= this.ballastCheckAt && (this.takeBallast(VV), this.stopped)) return;
+        const xV = this.stepsRefused || null !== this.stepsHeldUntil ? "none" : this.call((() => this.memory.lowWater()), "none"),
+          JV = eV && "now" === xV ? "none" : xV,
           {
-            requestIdle: SM
+            requestIdle: YV
           } = this.clock;
-        "now" === OM || null !== this.pendingSince && MM - this.pendingSince >= 500 ? this.step() : "idle" === OM && null === this.pendingSince && (null === SM ? this.step() : (this.pendingSince = MM, SM((() => {
+        "now" === JV || null !== this.pendingSince && VV - this.pendingSince >= 500 ? this.step() : "idle" === JV && null === this.pendingSince && (null === YV ? this.step() : (this.pendingSince = VV, YV((() => {
           null !== this.pendingSince && this.step()
-        })))), MM - this.statsAt >= 1e3 && (this.statsAt = MM, this.refreshStats(), this.checkFootprint(), this.checkGcPressure(MM))
+        })))), VV - this.statsAt >= 1e3 && (this.statsAt = VV, this.refreshStats(), this.checkFootprint(), this.checkGcPressure(VV))
       }
       refreshStats() {
         this.call((() => {
-          var MM, rM;
-          (this.main = this.memory.stats(), this.peakStoredChunks = this.readPeakStoredChunks(), this.sheds > 0 && null !== this.shedding) && (this.distanceInUse = null !== (rM = this.shedding.readDistanceInUse()) && void 0 !== rM ? rM : this.distanceInUse);
-          null === (MM = this.footprint) || void 0 === MM || MM.read(this.memory.memoryBytes() + this.workersMemoryBytes())
+          var VV, eV;
+          (this.main = this.memory.stats(), this.peakStoredChunks = this.readPeakStoredChunks(), this.sheds > 0 && null !== this.shedding) && (this.distanceInUse = null !== (eV = this.shedding.readDistanceInUse()) && void 0 !== eV ? eV : this.distanceInUse);
+          null === (VV = this.footprint) || void 0 === VV || VV.read(this.memory.memoryBytes() + this.workersMemoryBytes())
         }), void 0)
       }
       stop() {
         this.stopped = !0, this.pendingSince = null
       }
-      noteMeshWorker(MM, rM) {
-        this.noteWorker(`Mesh${MM}`, rM)
+      noteMeshWorker(VV, eV) {
+        this.noteWorker(`Mesh${VV}`, eV)
       }
-      meshWorkerGone(MM) {
-        this.workerGone(`Mesh${MM}`)
+      meshWorkerGone(VV) {
+        this.workerGone(`Mesh${VV}`)
       }
-      noteWorldgen(MM) {
-        this.noteWorker("Worldgen", MM)
+      noteWorldgen(VV) {
+        this.noteWorker("Worldgen", VV)
       }
       worldgenGone() {
         this.workerGone("Worldgen")
       }
-      noteWorker(MM, rM) {
-        const iM = this.workers.get(MM);
-        null !== iM && void 0 !== iM && iM.gone && (this.replacedRefusals.reserves += iM.stats.reservesRefused, this.replacedRefusals.allocations += iM.stats.allocationsRefused), this.workers.set(MM, {
-          stats: rM,
+      noteWorker(VV, eV) {
+        const xV = this.workers.get(VV);
+        null !== xV && void 0 !== xV && xV.gone && (this.replacedRefusals.reserves += xV.stats.reservesRefused, this.replacedRefusals.allocations += xV.stats.allocationsRefused), this.workers.set(VV, {
+          stats: eV,
           gone: !1
         })
       }
-      workerGone(MM) {
-        const rM = this.workers.get(MM);
-        rM && (rM.gone = !0)
+      workerGone(VV) {
+        const eV = this.workers.get(VV);
+        eV && (eV.gone = !0)
       }
       details() {
-        var MM, rM;
-        const iM = this.memory.memoryBytes(),
-          SM = {
-            wasmMemoryNow: `${(0,OM.l)(iM)} MiB`,
-            wasmMemoryMiB: String(Math.floor(iM / OM.e))
+        var VV, eV;
+        const xV = this.memory.memoryBytes(),
+          YV = {
+            wasmMemoryNow: `${(0,JV.l)(xV)} MiB`,
+            wasmMemoryMiB: String(Math.floor(xV / JV.h))
           };
-        null !== this.joinReserveTaken && (SM.wasmMemoryJoinReserve = this.joinReserveTaken), this.sheds > 0 && (SM.wasmMemoryShed = `${this.sheds}, chunk cap ${this.shedCap}`);
-        const jM = this.main;
-        if (jM) {
-          SM.wasmMemoryMain = gM(jM);
-          const MM = Math.max(0, jM.peakLiveBytes - this.ballastPeakBytes),
-            rM = 0 === this.peakStoredChunks ? "-" : (MM / this.peakStoredChunks / OM.b).toFixed(1);
-          SM.wasmMemoryChunks = `peak stored ${this.peakStoredChunks}, peak live per stored chunk ${rM} KiB`
+        null !== this.joinReserveTaken && (YV.wasmMemoryJoinReserve = this.joinReserveTaken), this.sheds > 0 && (YV.wasmMemoryShed = `${this.sheds}, chunk cap ${this.shedCap}`);
+        const UV = this.main;
+        if (UV) {
+          YV.wasmMemoryMain = MV(UV);
+          const VV = Math.max(0, UV.peakLiveBytes - this.ballastPeakBytes),
+            eV = 0 === this.peakStoredChunks ? "-" : (VV / this.peakStoredChunks / JV.e).toFixed(1);
+          YV.wasmMemoryChunks = `peak stored ${this.peakStoredChunks}, peak live per stored chunk ${eV} KiB`
         }
-        for (const [OM, {
-            stats: PM,
-            gone: nM
-          }] of this.workers) SM[`wasmMemory${OM}`] = gM(PM) + (nM ? " (gone)" : "");
-        const aM = null !== (MM = null === (rM = this.footprint) || void 0 === rM ? void 0 : rM.describe()) && void 0 !== MM ? MM : null;
-        return null !== aM && (SM.wasmMemoryFootprint = aM), SM
+        for (const [JV, {
+            stats: pV,
+            gone: QV
+          }] of this.workers) YV[`wasmMemory${JV}`] = MV(pV) + (QV ? " (gone)" : "");
+        const yV = null !== (VV = null === (eV = this.footprint) || void 0 === eV ? void 0 : eV.describe()) && void 0 !== VV ? VV : null;
+        return null !== yV && (YV.wasmMemoryFootprint = yV), YV
       }
       pageKillSnapshot() {
-        var MM, rM, iM, SM, jM;
-        let aM = (null !== (MM = null === (rM = this.main) || void 0 === rM ? void 0 : rM.reservesRefused) && void 0 !== MM ? MM : 0) + this.replacedRefusals.reserves,
-          PM = (null !== (iM = null === (SM = this.main) || void 0 === SM ? void 0 : SM.allocationsRefused) && void 0 !== iM ? iM : 0) + this.replacedRefusals.allocations;
+        var VV, eV, xV, YV, UV;
+        let yV = (null !== (VV = null === (eV = this.main) || void 0 === eV ? void 0 : eV.reservesRefused) && void 0 !== VV ? VV : 0) + this.replacedRefusals.reserves,
+          pV = (null !== (xV = null === (YV = this.main) || void 0 === YV ? void 0 : YV.allocationsRefused) && void 0 !== xV ? xV : 0) + this.replacedRefusals.allocations;
         for (const {
-            stats: OM
+            stats: JV
           }
-          of this.workers.values()) aM += OM.reservesRefused, PM += OM.allocationsRefused;
+          of this.workers.values()) yV += JV.reservesRefused, pV += JV.allocationsRefused;
         return {
-          wasmMainMiB: Number((0, OM.l)(this.memory.memoryBytes())),
-          wasmWorkersMiB: Number((0, OM.l)(this.workersMemoryBytes())),
+          wasmMainMiB: Number((0, JV.l)(this.memory.memoryBytes())),
+          wasmWorkersMiB: Number((0, JV.l)(this.workersMemoryBytes())),
           peakStoredChunks: this.peakStoredChunks,
-          refusedReserves: aM,
-          refusedAllocations: PM,
+          refusedReserves: yV,
+          refusedAllocations: pV,
           sheds: this.sheds,
-          ...null === (jM = this.footprint) || void 0 === jM ? void 0 : jM.snapshot()
+          ...null === (UV = this.footprint) || void 0 === UV ? void 0 : UV.snapshot()
         }
       }
       workersMemoryBytes() {
-        let MM = 0;
+        let VV = 0;
         for (const {
-            stats: rM,
-            gone: iM
+            stats: eV,
+            gone: xV
           }
-          of this.workers.values()) MM += iM ? 0 : rM.memoryBytes;
-        return MM
+          of this.workers.values()) VV += xV ? 0 : eV.memoryBytes;
+        return VV
       }
       checkFootprint() {
         null === this.footprint || null === this.shedding || this.stepsRefused || null !== this.stepsHeldUntil || this.footprint.takeShed() && this.shedFor("footprint")
       }
-      checkGcPressure(MM) {
-        const rM = this.gcPressure;
-        if (null === rM) return;
-        if (null !== rM.nextAt || "undefined" !== typeof document && document.hidden || (rM.nextAt = MM + 6e4), null === rM.nextAt || MM < rM.nextAt) return;
+      checkGcPressure(VV) {
+        const eV = this.gcPressure;
+        if (null === eV) return;
+        if (null !== eV.nextAt || "undefined" !== typeof document && document.hidden || (eV.nextAt = VV + 6e4), null === eV.nextAt || VV < eV.nextAt) return;
         if (this.stopped || null === this.shedding || this.stepsRefused || null !== this.stepsHeldUntil) return;
-        const iM = rM.highEpisode();
-        null !== iM && iM !== rM.shedEpisode && (rM.shedEpisode = iM, rM.nextAt = MM + 3e4, this.shedFor("gcPressure"))
+        const xV = eV.highEpisode();
+        null !== xV && xV !== eV.shedEpisode && (eV.shedEpisode = xV, eV.nextAt = VV + 3e4, this.shedFor("gcPressure"))
       }
       step() {
-        this.pendingSince = null, this.call((() => this.memory.reserveAhead(QM)), !0) || (null === this.shedding ? this.stopSteps("a step ahead was refused (the ceiling, or the browser)") : this.shedFor("step"))
+        this.pendingSince = null, this.call((() => this.memory.reserveAhead(nV)), !0) || (null === this.shedding ? this.stopSteps("a step ahead was refused (the ceiling, or the browser)") : this.shedFor("step"))
       }
       ballastOn() {
         return null !== this.shedding
       }
-      takeBallast(MM) {
+      takeBallast(VV) {
         if (!this.ballastOn() || null === this.joinReserveTaken) return;
-        this.ballastCheckAt = MM + 1e3;
-        const rM = this.call((() => this.memory.takeBallast()), 0);
-        this.ballastPeakBytes = Math.max(this.ballastPeakBytes, rM)
+        this.ballastCheckAt = VV + 1e3;
+        const eV = this.call((() => this.memory.takeBallast()), 0);
+        this.ballastPeakBytes = Math.max(this.ballastPeakBytes, eV)
       }
       takePressure() {
         return this.ballastOn() && this.call((() => this.memory.takePressure()), !1)
       }
-      stopSteps(MM) {
-        this.stepsRefused = !0, console.warn(`[bloxd-wasm-client] wasm memory: ${MM}: frames grow on demand from here`)
+      stopSteps(VV) {
+        this.stepsRefused = !0, console.warn(`[bloxd-wasm-client] wasm memory: ${VV}: frames grow on demand from here`)
       }
-      shedFor(MM) {
+      shedFor(VV) {
         const {
-          shedding: rM
+          shedding: eV
         } = this;
-        if (null === rM) return;
+        if (null === eV) return;
         this.pendingSince = null;
-        const iM = this.call((() => rM.shed(MM)), null);
+        const xV = this.call((() => eV.shed(VV)), null);
         if (this.stopped) return;
-        if (null === iM) return void(LM(MM) && this.stopSteps("nothing is left to shed"));
-        this.sheds++, this.shedCap = iM, this.stepsHeldUntil = this.clock.now() + 5e3, this.refreshStats();
-        const OM = "gcPressure" === MM ? ++this.gcSheds : this.sheds - this.gcSheds;
-        rM.aL(MM, OM, this.details())
+        if (null === xV) return void(ZV(VV) && this.stopSteps("nothing is left to shed"));
+        this.sheds++, this.shedCap = xV, this.stepsHeldUntil = this.clock.now() + 5e3, this.refreshStats();
+        const JV = "gcPressure" === VV ? ++this.gcSheds : this.sheds - this.gcSheds;
+        eV.EZ(VV, JV, this.details())
       }
-      call(MM, rM) {
-        if (this.stopped) return rM;
+      call(VV, eV) {
+        if (this.stopped) return eV;
         try {
-          return MM()
-        } catch (iM) {
-          return this.stop(), this.onError(iM), rM
+          return VV()
+        } catch (xV) {
+          return this.stop(), this.onError(xV), eV
         }
       }
     }
 
-    function gM(MM) {
-      const rM = (MM, rM) => `${MM}/${(0,OM.l)(rM)}`;
-      return `memory ${(0,OM.l)(MM.memoryBytes)} live ${(0,OM.l)(MM.liveBytes)} peak ${(0,OM.l)(MM.peakLiveBytes)} unused ${(0,OM.l)(MM.unusedBytes)} ceiling ${(0,OM.l)(MM.ceilingBytes)} MiB; grows upFront ${rM(MM.grows.upFront,MM.grownBytes.upFront)} ahead ${rM(MM.grows.ahead,MM.grownBytes.ahead)} inFrame ${rM(MM.grows.onDemandInFrame,MM.grownBytes.onDemandInFrame)} other ${rM(MM.grows.onDemand,MM.grownBytes.onDemand)}; refused reserves ${MM.reservesRefused} allocations ${MM.allocationsRefused}`
+    function MV(VV) {
+      const eV = (VV, eV) => `${VV}/${(0,JV.l)(eV)}`;
+      return `memory ${(0,JV.l)(VV.memoryBytes)} live ${(0,JV.l)(VV.liveBytes)} peak ${(0,JV.l)(VV.peakLiveBytes)} unused ${(0,JV.l)(VV.unusedBytes)} ceiling ${(0,JV.l)(VV.ceilingBytes)} MiB; grows upFront ${eV(VV.grows.upFront,VV.grownBytes.upFront)} ahead ${eV(VV.grows.ahead,VV.grownBytes.ahead)} inFrame ${eV(VV.grows.onDemandInFrame,VV.grownBytes.onDemandInFrame)} other ${eV(VV.grows.onDemand,VV.grownBytes.onDemand)}; refused reserves ${VV.reservesRefused} allocations ${VV.allocationsRefused}`
     }
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const VV in modules) Object.freeze(modules[VV]);

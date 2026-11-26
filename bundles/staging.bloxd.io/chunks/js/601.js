@@ -1,164 +1,164 @@
 export const id = 601;
 export const ids = [601];
 export const modules = {
-  43956: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      CharacterPreview: () => LM
+  44209: (VV, eV, xV) => {
+    xV.r(eV), xV.d(eV, {
+      CharacterPreview: () => ZV
     });
-    var OM = iM(44),
-      SM = iM(3047),
-      jM = iM(1242),
-      aM = iM(2762),
-      PM = iM(35051),
-      nM = iM(3997),
-      QM = iM(1303);
-    const zM = .6 * Math.PI,
-      LM = (0, OM.memo)((0, OM.forwardRef)((function(MM, rM) {
+    var JV = xV(62),
+      YV = xV(3080),
+      UV = xV(1269),
+      yV = xV(2822),
+      pV = xV(35337),
+      QV = xV(4024),
+      nV = xV(1321);
+    const wV = .6 * Math.PI,
+      ZV = (0, JV.memo)((0, JV.forwardRef)((function(VV, eV) {
         let {
-          onReady: iM,
-          onDrawn: LM,
-          owner: mM = "other",
-          framing: HM = "player",
-          forcedCosmetics: hM,
-          Ua: JM,
-          emotePlaySeq: dM,
-          turntableFromYaw: yM = null
-        } = MM;
-        const lM = (0, OM.useRef)(null),
+          onReady: xV,
+          onDrawn: ZV,
+          owner: vV = "other",
+          framing: rV = "player",
+          forcedCosmetics: kV,
+          Py: bV,
+          emotePlaySeq: EV,
+          turntableFromYaw: BV = null
+        } = VV;
+        const jV = (0, JV.useRef)(null),
           {
-            width: EM,
-            height: UM
-          } = (0, SM.d)(lM),
-          GM = (0, OM.useRef)(null),
-          CM = (0, OM.useRef)({}),
-          eM = (0, OM.useRef)({}),
-          [bM, wM] = (0, OM.useState)(!1),
-          tM = (0, OM.useRef)(iM);
-        tM.current = iM;
-        const gM = (0, OM.useRef)(LM);
-        gM.current = LM;
-        const uM = (0, OM.useRef)(null),
-          RM = (0, OM.useRef)(!1),
-          pM = (0, OM.useRef)(!1),
-          WM = (0, OM.useCallback)((() => {
-            const MM = GM.current;
-            if (!MM || !gM.current || RM.current || !pM.current) return;
-            const rM = {};
-            uM.current = rM, queueMicrotask((() => {
-              if (uM.current !== rM) return;
-              const iM = Promise.all(jM.u.map((rM => MM.untilDrawn(rM)))).catch((MM => {
-                  console.error("Failed to draw the character preview", MM)
+            width: qV,
+            height: tV
+          } = (0, YV.d)(jV),
+          FV = (0, JV.useRef)(null),
+          TV = (0, JV.useRef)({}),
+          PV = (0, JV.useRef)({}),
+          [AV, NV] = (0, JV.useState)(!1),
+          XV = (0, JV.useRef)(xV);
+        XV.current = xV;
+        const MV = (0, JV.useRef)(ZV);
+        MV.current = ZV;
+        const zV = (0, JV.useRef)(null),
+          GV = (0, JV.useRef)(!1),
+          WV = (0, JV.useRef)(!1),
+          RV = (0, JV.useCallback)((() => {
+            const VV = FV.current;
+            if (!VV || !MV.current || GV.current || !WV.current) return;
+            const eV = {};
+            zV.current = eV, queueMicrotask((() => {
+              if (zV.current !== eV) return;
+              const xV = Promise.all(UV.w.map((eV => VV.untilDrawn(eV)))).catch((VV => {
+                  console.error("Failed to draw the character preview", VV)
                 })),
-                OM = new Promise((MM => {
-                  setTimeout(MM, 1e4)
+                JV = new Promise((VV => {
+                  setTimeout(VV, 1e4)
                 }));
-              Promise.race([iM, OM]).then((() => {
-                var iM;
-                GM.current !== MM || uM.current !== rM || RM.current || (RM.current = !0, null === (iM = gM.current) || void 0 === iM || iM.call(gM))
+              Promise.race([xV, JV]).then((() => {
+                var xV;
+                FV.current !== VV || zV.current !== eV || GV.current || (GV.current = !0, null === (xV = MV.current) || void 0 === xV || xV.call(MV))
               }))
             }))
           }), []);
-        return (0, OM.useImperativeHandle)(rM, (() => {
-          const MM = (MM, rM) => {
-            var iM;
-            (CM.current[MM] = rM, null !== hM && void 0 !== hM && hM[MM]) || (null === (iM = GM.current) || void 0 === iM || iM.setCosmetic(MM, rM), WM())
+        return (0, JV.useImperativeHandle)(eV, (() => {
+          const VV = (VV, eV) => {
+            var xV;
+            (TV.current[VV] = eV, null !== kV && void 0 !== kV && kV[VV]) || (null === (xV = FV.current) || void 0 === xV || xV.setCosmetic(VV, eV), RV())
           };
           return {
-            updateCosmetic: MM,
-            setAllCosmetics(rM) {
-              for (const OM of jM.u) {
-                var iM;
-                MM(OM, null !== (iM = rM[OM]) && void 0 !== iM ? iM : (0, aM.c)(OM))
+            updateCosmetic: VV,
+            setAllCosmetics(eV) {
+              for (const JV of UV.w) {
+                var xV;
+                VV(JV, null !== (xV = eV[JV]) && void 0 !== xV ? xV : (0, yV.b)(JV))
               }
             },
             isReady() {
-              var MM, rM;
-              return null !== (MM = null === (rM = GM.current) || void 0 === rM ? void 0 : rM.isReady()) && void 0 !== MM && MM
+              var VV, eV;
+              return null !== (VV = null === (eV = FV.current) || void 0 === eV ? void 0 : eV.isReady()) && void 0 !== VV && VV
             },
             resetCamera() {
-              var MM;
-              null === (MM = GM.current) || void 0 === MM || MM.resetCamera()
+              var VV;
+              null === (VV = FV.current) || void 0 === VV || VV.resetCamera()
             },
-            setOrbit(MM) {
-              var rM;
-              null === (rM = GM.current) || void 0 === rM || rM.setOrbit(MM)
+            setOrbit(VV) {
+              var eV;
+              null === (eV = FV.current) || void 0 === eV || eV.setOrbit(VV)
             },
-            turnCamera(MM) {
-              var rM;
-              const iM = PM.d[HM];
-              null === (rM = GM.current) || void 0 === rM || rM.setOrbit({
-                ...iM,
-                yaw: iM.yaw + MM
+            turnCamera(VV) {
+              var eV;
+              const xV = pV.c[rV];
+              null === (eV = FV.current) || void 0 === eV || eV.setOrbit({
+                ...xV,
+                yaw: xV.yaw + VV
               })
             },
-            async ensureReadyForCapture(MM) {
-              var rM;
-              await (null === (rM = GM.current) || void 0 === rM ? void 0 : rM.untilDrawn(MM))
+            async ensureReadyForCapture(VV) {
+              var eV;
+              await (null === (eV = FV.current) || void 0 === eV ? void 0 : eV.untilDrawn(VV))
             },
             getDevTools() {
-              var MM;
-              return null !== (MM = GM.current) && void 0 !== MM && MM.isReady() ? GM.current.dev : null
+              var VV;
+              return null !== (VV = FV.current) && void 0 !== VV && VV.isReady() ? FV.current.dev : null
             }
           }
-        }), [hM, HM, WM]), (0, OM.useEffect)((() => {
-          const MM = nM.d.register(mM),
-            rM = PM.l.openCharacter(lM.current, HM);
-          GM.current = rM;
-          let iM = !0;
-          return rM.ready.then((() => {
-            iM && (wM(!0), tM.current())
-          })).catch((MM => {
-            console.error("Failed to set up the character preview", MM)
+        }), [kV, rV, RV]), (0, JV.useEffect)((() => {
+          const VV = QV.c.register(vV),
+            eV = pV.h.openCharacter(jV.current, rV);
+          FV.current = eV;
+          let xV = !0;
+          return eV.ready.then((() => {
+            xV && (NV(!0), XV.current())
+          })).catch((VV => {
+            console.error("Failed to set up the character preview", VV)
           })), () => {
-            iM = !1, MM(), rM.resetCamera(), rM.close(), GM.current = null
+            xV = !1, VV(), eV.resetCamera(), eV.close(), FV.current = null
           }
-        }), []), (0, OM.useEffect)((() => {
-          EM <= 0 || UM <= 0 || GM.current.resize(EM, UM)
-        }), [EM, UM]), (0, OM.useEffect)((() => {
-          if (!bM) return;
-          const MM = eM.current;
-          for (const rM of jM.u) {
-            const iM = null === hM || void 0 === hM ? void 0 : hM[rM],
-              OM = MM[rM];
-            iM && iM !== OM ? GM.current.setCosmetic(rM, iM) : !iM && OM && CM.current[rM] && GM.current.setCosmetic(rM, CM.current[rM])
+        }), []), (0, JV.useEffect)((() => {
+          qV <= 0 || tV <= 0 || FV.current.resize(qV, tV)
+        }), [qV, tV]), (0, JV.useEffect)((() => {
+          if (!AV) return;
+          const VV = PV.current;
+          for (const eV of UV.w) {
+            const xV = null === kV || void 0 === kV ? void 0 : kV[eV],
+              JV = VV[eV];
+            xV && xV !== JV ? FV.current.setCosmetic(eV, xV) : !xV && JV && TV.current[eV] && FV.current.setCosmetic(eV, TV.current[eV])
           }
-          eM.current = {
-            ...hM
-          }, pM.current = !0, WM()
-        }), [hM, bM, WM]), (0, OM.useEffect)((() => {
-          bM && GM.current.playEmote(null !== JM && void 0 !== JM ? JM : null)
-        }), [JM, dM, bM]), (0, OM.useEffect)((() => {
-          if (!bM || null === yM) return;
-          const MM = GM.current,
+          PV.current = {
+            ...kV
+          }, WV.current = !0, RV()
+        }), [kV, AV, RV]), (0, JV.useEffect)((() => {
+          AV && FV.current.playEmote(null !== bV && void 0 !== bV ? bV : null)
+        }), [bV, EV, AV]), (0, JV.useEffect)((() => {
+          if (!AV || null === BV) return;
+          const VV = FV.current,
             {
-              pitch: rM,
-              radius: iM
-            } = PM.d[HM];
-          if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return MM.setOrbit({
-            yaw: yM + zM,
-            pitch: rM,
-            radius: iM
+              pitch: eV,
+              radius: xV
+            } = pV.c[rV];
+          if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return VV.setOrbit({
+            yaw: BV + wV,
+            pitch: eV,
+            radius: xV
           }), () => {
-            MM.resetCamera()
+            VV.resetCamera()
           };
-          const OM = performance.now();
-          let SM = 0;
-          const jM = aM => {
-            MM.setOrbit({
-              yaw: yM + (aM - OM) / 6e3 * 2 * Math.PI,
-              pitch: rM,
-              radius: iM
-            }), SM = requestAnimationFrame(jM)
+          const JV = performance.now();
+          let YV = 0;
+          const UV = yV => {
+            VV.setOrbit({
+              yaw: BV + (yV - JV) / 6e3 * 2 * Math.PI,
+              pitch: eV,
+              radius: xV
+            }), YV = requestAnimationFrame(UV)
           };
-          return SM = requestAnimationFrame(jM), () => {
-            cancelAnimationFrame(SM), MM.resetCamera()
+          return YV = requestAnimationFrame(UV), () => {
+            cancelAnimationFrame(YV), VV.resetCamera()
           }
-        }), [bM, yM]), (0, QM.jsx)("div", {
+        }), [AV, BV]), (0, nV.jsx)("div", {
           className: "CharCustomisationPreview",
-          ref: lM
+          ref: jV
         })
       })))
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const VV in modules) Object.freeze(modules[VV]);

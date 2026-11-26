@@ -1,28 +1,28 @@
 export const id = 668;
 export const ids = [668];
 export const modules = {
-  63999: (MM, rM, iM) => {
-    function OM(MM) {
-      return MM.features.has("timestamp-query")
+  64388: (VV, eV, xV) => {
+    function JV(VV) {
+      return VV.features.has("timestamp-query")
     }
 
-    function SM(MM) {
-      return OM(MM) ? {
-        device: MM,
-        markerPipeline: MM.createComputePipeline({
+    function YV(VV) {
+      return JV(VV) ? {
+        device: VV,
+        markerPipeline: VV.createComputePipeline({
           layout: "auto",
           compute: {
-            module: MM.createShaderModule({
+            module: VV.createShaderModule({
               code: "@compute @workgroup_size(1) fn main() {}"
             }),
             entryPoint: "main"
           }
         }),
-        querySet: MM.createQuerySet({
+        querySet: VV.createQuerySet({
           type: "timestamp",
           count: 2
         }),
-        resolveBuf: MM.createBuffer({
+        resolveBuf: VV.createBuffer({
           size: 16,
           usage: GPUBufferUsage.QUERY_RESOLVE | GPUBufferUsage.COPY_SRC
         }),
@@ -32,57 +32,57 @@ export const modules = {
       } : null
     }
 
-    function jM(MM, rM) {
-      const iM = rM.beginComputePass({
+    function UV(VV, eV) {
+      const xV = eV.beginComputePass({
         timestampWrites: {
-          querySet: MM.querySet,
+          querySet: VV.querySet,
           beginningOfPassWriteIndex: 0
         }
       });
-      iM.setPipeline(MM.markerPipeline), iM.dispatchWorkgroups(1), iM.end()
+      xV.setPipeline(VV.markerPipeline), xV.dispatchWorkgroups(1), xV.end()
     }
 
-    function aM(MM, rM) {
-      const iM = rM.beginComputePass({
+    function yV(VV, eV) {
+      const xV = eV.beginComputePass({
         timestampWrites: {
-          querySet: MM.querySet,
+          querySet: VV.querySet,
           endOfPassWriteIndex: 1
         }
       });
-      iM.setPipeline(MM.markerPipeline), iM.dispatchWorkgroups(1), iM.end()
+      xV.setPipeline(VV.markerPipeline), xV.dispatchWorkgroups(1), xV.end()
     }
 
-    function PM(MM) {
-      if (MM.inFlight > 3) return;
-      const rM = MM.device,
-        iM = MM.pool.pop() ?? rM.createBuffer({
+    function pV(VV) {
+      if (VV.inFlight > 3) return;
+      const eV = VV.device,
+        xV = VV.pool.pop() ?? eV.createBuffer({
           size: 16,
           usage: GPUBufferUsage.COPY_DST | GPUBufferUsage.MAP_READ
         }),
-        OM = rM.createCommandEncoder();
-      OM.resolveQuerySet(MM.querySet, 0, 2, MM.resolveBuf, 0), OM.copyBufferToBuffer(MM.resolveBuf, 0, iM, 0, 16), rM.queue.submit([OM.finish()]), MM.inFlight++, iM.mapAsync(GPUMapMode.READ).then((() => {
-        const rM = new BigInt64Array(iM.getMappedRange()),
-          OM = Number(rM[1] - rM[0]) / 1e6;
-        OM >= 0 && OM < 5e3 && (MM.lastMs = MM.lastMs > 0 ? .8 * MM.lastMs + .2 * OM : OM), iM.unmap(), MM.pool.push(iM), MM.inFlight--
+        JV = eV.createCommandEncoder();
+      JV.resolveQuerySet(VV.querySet, 0, 2, VV.resolveBuf, 0), JV.copyBufferToBuffer(VV.resolveBuf, 0, xV, 0, 16), eV.queue.submit([JV.finish()]), VV.inFlight++, xV.mapAsync(GPUMapMode.READ).then((() => {
+        const eV = new BigInt64Array(xV.getMappedRange()),
+          JV = Number(eV[1] - eV[0]) / 1e6;
+        JV >= 0 && JV < 5e3 && (VV.lastMs = VV.lastMs > 0 ? .8 * VV.lastMs + .2 * JV : JV), xV.unmap(), VV.pool.push(xV), VV.inFlight--
       }), (() => {
-        MM.inFlight--
+        VV.inFlight--
       }))
     }
 
-    function nM(MM) {
-      MM.querySet.destroy(), MM.resolveBuf.destroy();
-      for (const rM of MM.pool) rM.destroy();
-      MM.pool.length = 0
+    function QV(VV) {
+      VV.querySet.destroy(), VV.resolveBuf.destroy();
+      for (const eV of VV.pool) eV.destroy();
+      VV.pool.length = 0
     }
-    iM.r(rM), iM.d(rM, {
-      createGpuFrameTimer: () => SM,
-      destroyGpuFrameTimer: () => nM,
-      gpuFrameTimerBegin: () => jM,
-      gpuFrameTimerEnd: () => aM,
-      gpuFrameTimerResolve: () => PM,
-      gpuTimingSupportedFor: () => OM
+    xV.r(eV), xV.d(eV, {
+      createGpuFrameTimer: () => YV,
+      destroyGpuFrameTimer: () => QV,
+      gpuFrameTimerBegin: () => UV,
+      gpuFrameTimerEnd: () => yV,
+      gpuFrameTimerResolve: () => pV,
+      gpuTimingSupportedFor: () => JV
     })
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const VV in modules) Object.freeze(modules[VV]);

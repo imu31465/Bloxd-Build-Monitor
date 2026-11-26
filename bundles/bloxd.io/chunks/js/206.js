@@ -1,77 +1,77 @@
 export const id = 206;
 export const ids = [206];
 export const modules = {
-  40199: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => OM
+  40357: (VV, eV, xV) => {
+    xV.d(eV, {
+      c: () => JV
     });
-    class OM {
-      constructor(MM, rM) {
-        this.read = MM, this.apply = rM, this.release = null
+    class JV {
+      constructor(VV, eV) {
+        this.read = VV, this.apply = eV, this.release = null
       }
-      turn(MM, rM) {
-        const iM = null === this.release ? this.read() : this.release.transitionMs;
+      turn(VV, eV) {
+        const xV = null === this.release ? this.read() : this.release.transitionMs;
         this.stop(!1), this.apply({
-          forcedCameraDirectionTransitionMs: rM,
-          forcedCameraDirection: [MM[0], MM[1], MM[2]]
+          forcedCameraDirectionTransitionMs: eV,
+          forcedCameraDirection: [VV[0], VV[1], VV[2]]
         }), this.release = {
           timer: setTimeout((() => {
             this.stop(!0)
-          }), rM + 100),
-          transitionMs: iM
+          }), eV + 100),
+          transitionMs: xV
         }
       }
       dispose() {
         this.stop(!0)
       }
-      stop(MM) {
-        null !== this.release && (clearTimeout(this.release.timer), MM && this.apply({
+      stop(VV) {
+        null !== this.release && (clearTimeout(this.release.timer), VV && this.apply({
           forcedCameraDirection: null,
           forcedCameraDirectionTransitionMs: this.release.transitionMs
         }), this.release = null)
       }
     }
   },
-  39678: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => jM,
-      g: () => SM
+  39842: (VV, eV, xV) => {
+    xV.d(eV, {
+      b: () => UV,
+      d: () => YV
     });
-    const OM = new Map;
+    const JV = new Map;
 
-    function SM(MM, rM) {
-      OM.set(MM, rM)
+    function YV(VV, eV) {
+      JV.set(VV, eV)
     }
 
-    function jM(MM) {
-      return MM ? OM.get(MM) : void 0
+    function UV(VV) {
+      return VV ? JV.get(VV) : void 0
     }
   },
-  40731: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => SM
+  40889: (VV, eV, xV) => {
+    xV.d(eV, {
+      c: () => YV
     });
-    var OM = iM(39218);
+    var JV = xV(39352);
 
-    function SM(MM, rM, iM) {
-      var SM, jM, aM, PM, nM, QM, zM;
-      const LM = (0, OM.e)(MM, rM, iM[0], iM[1], iM[2]),
-        mM = LM ? null !== (SM = LM.textCell) && void 0 !== SM ? SM : LM.rect.anchor : iM,
-        HM = rM(mM[0], mM[1], mM[2]);
+    function YV(VV, eV, xV) {
+      var YV, UV, yV, pV, QV, nV, wV;
+      const ZV = (0, JV.b)(VV, eV, xV[0], xV[1], xV[2]),
+        vV = ZV ? null !== (YV = ZV.textCell) && void 0 !== YV ? YV : ZV.rect.anchor : xV,
+        rV = eV(vV[0], vV[1], vV[2]);
       return {
-        pos: [iM[0], iM[1], iM[2]],
-        noticeboardSpan: LM && {
-          width: LM.rect.width,
-          height: LM.rect.height
+        pos: [xV[0], xV[1], xV[2]],
+        noticeboardSpan: ZV && {
+          width: ZV.rect.width,
+          height: ZV.rect.height
         },
-        text: null !== (jM = null === HM || void 0 === HM || null === (aM = HM.persisted) || void 0 === aM || null === (PM = aM.shared) || void 0 === PM ? void 0 : PM.text) && void 0 !== jM ? jM : "",
-        textSize: null !== (nM = null === HM || void 0 === HM || null === (QM = HM.persisted) || void 0 === QM || null === (zM = QM.shared) || void 0 === zM ? void 0 : zM.textSize) && void 0 !== nM ? nM : null
+        text: null !== (UV = null === rV || void 0 === rV || null === (yV = rV.persisted) || void 0 === yV || null === (pV = yV.shared) || void 0 === pV ? void 0 : pV.text) && void 0 !== UV ? UV : "",
+        textSize: null !== (QV = null === rV || void 0 === rV || null === (nV = rV.persisted) || void 0 === nV || null === (wV = nV.shared) || void 0 === wV ? void 0 : wV.textSize) && void 0 !== QV ? QV : null
       }
     }
   },
-  39507: (MM, rM, iM) => {
-    function OM(MM) {
-      switch (MM.kind) {
+  39662: (VV, eV, xV) => {
+    function JV(VV) {
+      switch (VV.kind) {
         case void 0:
         case "flatEmissive":
           return !1;
@@ -80,463 +80,463 @@ export const modules = {
           return !0
       }
     }
-    iM.d(rM, {
-      d: () => SM,
-      h: () => jM,
-      l: () => OM
+    xV.d(eV, {
+      e: () => YV,
+      g: () => UV,
+      h: () => JV
     });
-    const SM = 4,
-      jM = 3
+    const YV = 4,
+      UV = 3
   },
-  40240: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => SM,
-      h: () => jM
+  40382: (VV, eV, xV) => {
+    xV.d(eV, {
+      e: () => YV,
+      h: () => UV
     });
-    var OM = iM(332);
-    const SM = new Set(["bedwars", "bridgeBattle", "buildAFactory2", "classic", "clutch", "containmentBreach", "cooking", "defusal", "frontline", "goalRush", "greenville", "hideseek", "luckyBedwars", "murderMystery", "ninetyNineNights", "oneBlock", "plots", "pvpCiv", "secretSanta", "skyIslands", "skyblock", "tsunami"]);
-    class jM {
-      constructor(MM) {
-        this.importGame = MM, this.loads = new Map, this.loaded = new Map
+    var JV = xV(375);
+    const YV = new Set(["bedwars", "bridgeBattle", "buildAFactory2", "classic", "clutch", "containmentBreach", "cooking", "defusal", "frontline", "goalRush", "greenville", "hideseek", "luckyBedwars", "murderMystery", "ninetyNineNights", "oneBlock", "plots", "pvpCiv", "secretSanta", "skyIslands", "skyblock", "tsunami"]);
+    class UV {
+      constructor(VV) {
+        this.importGame = VV, this.loads = new Map, this.loaded = new Map
       }
-      load(MM) {
-        const rM = (0, OM.Mb)(MM);
-        if (!SM.has(rM)) return Promise.resolve(void 0);
-        let iM = this.loads.get(rM);
-        return iM || (iM = this.importGame(rM).then((MM => {
-          const iM = MM.default;
-          if ("function" !== typeof iM) throw new Error(`${rM}'s client code has no default-exported factory`);
-          return this.loaded.set(rM, iM), iM
-        })).catch((MM => {
-          throw this.loads.delete(rM), MM
-        })), this.loads.set(rM, iM)), iM
+      load(VV) {
+        const eV = (0, JV.Pb)(VV);
+        if (!YV.has(eV)) return Promise.resolve(void 0);
+        let xV = this.loads.get(eV);
+        return xV || (xV = this.importGame(eV).then((VV => {
+          const xV = VV.default;
+          if ("function" !== typeof xV) throw new Error(`${eV}'s client code has no default-exported factory`);
+          return this.loaded.set(eV, xV), xV
+        })).catch((VV => {
+          throw this.loads.delete(eV), VV
+        })), this.loads.set(eV, xV)), xV
       }
-      loadedFactory(MM) {
-        const rM = (0, OM.Mb)(MM);
-        if (!SM.has(rM)) return;
-        const iM = this.loaded.get(rM);
-        if (!iM) throw new Error(`${rM}'s client code started before it loaded`);
-        return iM
+      loadedFactory(VV) {
+        const eV = (0, JV.Pb)(VV);
+        if (!YV.has(eV)) return;
+        const xV = this.loaded.get(eV);
+        if (!xV) throw new Error(`${eV}'s client code started before it loaded`);
+        return xV
       }
     }
   },
-  40231: (MM, rM, iM) => {
-    function OM(MM, rM) {
+  40379: (VV, eV, xV) => {
+    function JV(VV, eV) {
       return Object.values({
-        ...MM,
-        ...rM
-      }).filter((MM => null !== MM))
+        ...VV,
+        ...eV
+      }).filter((VV => null !== VV))
     }
-    iM.d(rM, {
-      c: () => OM
+    xV.d(eV, {
+      b: () => JV
     })
   },
-  40739: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => aM
+  40894: (VV, eV, xV) => {
+    xV.d(eV, {
+      c: () => yV
     });
-    var OM = iM(9918),
-      SM = iM(35037),
-      jM = iM(3693);
+    var JV = xV(9922),
+      YV = xV(35319),
+      UV = xV(3719);
 
-    function aM(MM) {
-      if (MM === OM.c) return 0;
-      const rM = (0, jM.d)(MM);
-      if (void 0 !== rM && rM <= SM.MAX_BLOCK_ID) return rM;
-      const iM = (0, jM.d)(MM.split("|")[0]);
-      if (void 0 !== iM && iM <= SM.MAX_BLOCK_ID && (0, SM.rootMetaDescOf)(iM) === MM) return iM;
-      throw new Error(`Invalid block name. You sent ${MM}. The only valid block names are 'Air' and those contained within the blockMetadata.ts file`)
+    function yV(VV) {
+      if (VV === JV.d) return 0;
+      const eV = (0, UV.d)(VV);
+      if (void 0 !== eV && eV <= YV.MAX_BLOCK_ID) return eV;
+      const xV = (0, UV.d)(VV.split("|")[0]);
+      if (void 0 !== xV && xV <= YV.MAX_BLOCK_ID && (0, YV.rootMetaDescOf)(xV) === VV) return xV;
+      throw new Error(`Invalid block name. You sent ${VV}. The only valid block names are 'Air' and those contained within the blockMetadata.ts file`)
     }
   },
-  40291: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => SM
+  40434: (VV, eV, xV) => {
+    xV.d(eV, {
+      c: () => YV
     });
-    var OM = iM(19);
-    class SM {
-      constructor(MM) {
-        this.screen = MM, this.hidesHud = !1
+    var JV = xV(27);
+    class YV {
+      constructor(VV) {
+        this.screen = VV, this.hidesHud = !1
       }
-      show(MM, rM) {
-        this.screen.setFade(MM.colour, MM.alpha), this.screen.setLetterbox(!0 === rM.letterbox, MM.alpha < 1), this.setHudHidden(!0 === rM.hideHud)
+      show(VV, eV) {
+        this.screen.setFade(VV.colour, VV.alpha), this.screen.setLetterbox(!0 === eV.letterbox, VV.alpha < 1), this.setHudHidden(!0 === eV.hideHud)
       }
       clear() {
         this.screen.clear(), this.setHudHidden(!1)
       }
-      setHudHidden(MM) {
-        this.hidesHud !== MM && (this.hidesHud = MM, OM.d.set({
-          isUiHiddenByCamera: MM
+      setHudHidden(VV) {
+        this.hidesHud !== VV && (this.hidesHud = VV, JV.b.set({
+          isUiHiddenByCamera: VV
         }))
       }
     }
   },
-  40261: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => OM,
-      f: () => mM,
-      h: () => LM,
-      j: () => aM,
-      m: () => hM,
-      o: () => nM,
-      p: () => JM,
-      s: () => QM,
-      v: () => PM,
-      w: () => zM
+  40405: (VV, eV, xV) => {
+    xV.d(eV, {
+      e: () => JV,
+      i: () => vV,
+      m: () => ZV,
+      o: () => yV,
+      q: () => kV,
+      r: () => QV,
+      v: () => bV,
+      w: () => nV,
+      y: () => pV,
+      z: () => wV
     });
-    const OM = Math.PI / 2 - .001,
-      SM = 2 * Math.PI,
-      jM = 1e-9;
+    const JV = Math.PI / 2 - .001,
+      YV = 2 * Math.PI,
+      UV = 1e-9;
 
-    function aM(MM, rM) {
-      rM.heading = MM.heading, rM.pitch = MM.pitch
+    function yV(VV, eV) {
+      eV.heading = VV.heading, eV.pitch = VV.pitch
     }
 
-    function PM(MM, rM) {
-      const iM = rM - MM;
-      return iM - SM * Math.floor((iM + Math.PI) / SM)
+    function pV(VV, eV) {
+      const xV = eV - VV;
+      return xV - YV * Math.floor((xV + Math.PI) / YV)
     }
 
-    function nM(MM, rM, iM) {
-      return MM + PM(MM, rM) * iM
+    function QV(VV, eV, xV) {
+      return VV + pV(VV, eV) * xV
     }
 
-    function QM(MM) {
-      if (!Number.isFinite(MM)) return MM;
-      const rM = MM - SM * Math.floor(MM / SM);
-      return rM < SM ? rM : 0
+    function nV(VV) {
+      if (!Number.isFinite(VV)) return VV;
+      const eV = VV - YV * Math.floor(VV / YV);
+      return eV < YV ? eV : 0
     }
 
-    function zM(MM, rM) {
-      return MM + PM(MM, rM)
+    function wV(VV, eV) {
+      return VV + pV(VV, eV)
     }
 
-    function LM(MM) {
-      return Math.max(-OM, Math.min(OM, MM))
+    function ZV(VV) {
+      return Math.max(-JV, Math.min(JV, VV))
     }
 
-    function mM(MM, rM, iM) {
-      const OM = Math.cos(rM);
-      return iM[0] = OM * Math.sin(MM), iM[1] = -Math.sin(rM), iM[2] = OM * Math.cos(MM), iM
+    function vV(VV, eV, xV) {
+      const JV = Math.cos(eV);
+      return xV[0] = JV * Math.sin(VV), xV[1] = -Math.sin(eV), xV[2] = JV * Math.cos(VV), xV
     }
 
-    function HM(MM, rM, iM, OM) {
-      const SM = Math.sqrt(MM * MM + iM * iM);
-      return SM < jM && Math.abs(rM) < jM || (SM >= jM && (OM.heading = Math.atan2(MM, iM)), OM.pitch = LM(Math.atan2(-rM, SM) + 0)), OM
+    function rV(VV, eV, xV, JV) {
+      const YV = Math.sqrt(VV * VV + xV * xV);
+      return YV < UV && Math.abs(eV) < UV || (YV >= UV && (JV.heading = Math.atan2(VV, xV)), JV.pitch = ZV(Math.atan2(-eV, YV) + 0)), JV
     }
 
-    function hM(MM, rM) {
-      return HM(MM[0], MM[1], MM[2], rM)
+    function kV(VV, eV) {
+      return rV(VV[0], VV[1], VV[2], eV)
     }
 
-    function JM(MM, rM, iM) {
-      return HM(rM[0] - MM[0], rM[1] - MM[1], rM[2] - MM[2], iM)
+    function bV(VV, eV, xV) {
+      return rV(eV[0] - VV[0], eV[1] - VV[1], eV[2] - VV[2], xV)
     }
   },
-  40287: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => jM,
-      f: () => SM
+  40432: (VV, eV, xV) => {
+    xV.d(eV, {
+      e: () => UV,
+      i: () => YV
     });
-    var OM = iM(40261);
+    var JV = xV(40405);
 
-    function SM(MM) {
-      var rM;
-      const iM = "default" === MM.mode ? "movement" : null !== (rM = MM.playerFacing) && void 0 !== rM ? rM : "movement";
-      return "cursor" === iM ? {
-        facing: iM,
+    function YV(VV) {
+      var eV;
+      const xV = "default" === VV.mode ? "movement" : null !== (eV = VV.playerFacing) && void 0 !== eV ? eV : "movement";
+      return "cursor" === xV ? {
+        facing: xV,
         mouseTurns: null
       } : {
-        facing: iM,
-        mouseTurns: "default" !== MM.mode && void 0 !== MM.playerLook ? "look" : "view"
+        facing: xV,
+        mouseTurns: "default" !== VV.mode && void 0 !== VV.playerLook ? "look" : "view"
       }
     }
 
-    function jM(MM, rM, iM, SM, jM, aM) {
-      return aM.PD = 0, aM.nD = 0, aM.pointedAt = void 0, void 0 !== SM ? jM ? (aM.pointedAt = SM, MM) : (0, OM.s)(SM.heading) : jM ? (aM.PD = rM, aM.nD = iM, MM) : (0, OM.s)(MM + rM)
+    function UV(VV, eV, xV, YV, UV, yV) {
+      return yV.uR = 0, yV.eD = 0, yV.pointedAt = void 0, void 0 !== YV ? UV ? (yV.pointedAt = YV, VV) : (0, JV.w)(YV.heading) : UV ? (yV.uR = eV, yV.eD = xV, VV) : (0, JV.w)(VV + eV)
     }
   },
-  40279: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => vM
+  40419: (VV, eV, xV) => {
+    xV.d(eV, {
+      c: () => fV
     });
-    var OM = iM(40283),
-      SM = iM(40261),
-      jM = iM(37922);
+    var JV = xV(40425),
+      YV = xV(40405),
+      UV = xV(38167);
 
-    function aM(MM, rM, iM, OM) {
-      if (!(OM > 0)) return rM;
-      const SM = rM > MM ? Math.min(rM, MM + iM / OM) : Math.max(rM, MM - iM / OM);
-      return Math.abs(rM - SM) < 1e-9 ? rM : SM
+    function yV(VV, eV, xV, JV) {
+      if (!(JV > 0)) return eV;
+      const YV = eV > VV ? Math.min(eV, VV + xV / JV) : Math.max(eV, VV - xV / JV);
+      return Math.abs(eV - YV) < 1e-9 ? eV : YV
     }
-    class PM {
+    class pV {
       constructor() {
         this.phase = null, this.outMs = 0, this.holdMs = 0, this.inMs = 0, this.heldMs = 0, this.sinceTurnMs = 1 / 0, this.clearMs = 1 / 0, this.waiting = null, this.screen = {
-          colour: OM.i,
+          colour: JV.f,
           alpha: 0
         }
       }
       getScreen() {
         return this.screen
       }
-      fadeOut(MM) {
-        !this.isGoingOut() && this.sinceTurnMs < OM.q.minFadeTurnMs ? this.waiting = {
+      fadeOut(VV) {
+        !this.isGoingOut() && this.sinceTurnMs < JV.k.minFadeTurnMs ? this.waiting = {
           turn: "out",
-          transition: MM
-        } : (this.waiting = null, this.startOut(MM))
+          transition: VV
+        } : (this.waiting = null, this.startOut(VV))
       }
-      fadeIn(MM) {
-        this.isGoingOut() ? this.sinceTurnMs < OM.q.minFadeTurnMs ? this.waiting = {
+      fadeIn(VV) {
+        this.isGoingOut() ? this.sinceTurnMs < JV.k.minFadeTurnMs ? this.waiting = {
           turn: "in",
-          minMs: MM
-        } : (this.waiting = null, this.startIn(MM)) : this.waiting = null
+          minMs: VV
+        } : (this.waiting = null, this.startIn(VV)) : this.waiting = null
       }
-      advance(MM) {
-        const rM = this.waiting;
-        if (null === rM) return this.step(MM);
-        const iM = OM.q.minFadeTurnMs - this.sinceTurnMs;
-        if (iM > MM) return this.step(MM);
-        const SM = this.step(iM);
-        return this.waiting = null, "out" === rM.turn ? this.startOut(rM.transition) : this.startIn(rM.minMs), this.step(MM - iM) || SM
+      advance(VV) {
+        const eV = this.waiting;
+        if (null === eV) return this.step(VV);
+        const xV = JV.k.minFadeTurnMs - this.sinceTurnMs;
+        if (xV > VV) return this.step(VV);
+        const YV = this.step(xV);
+        return this.waiting = null, "out" === eV.turn ? this.startOut(eV.transition) : this.startIn(eV.minMs), this.step(VV - xV) || YV
       }
       isGoingOut() {
         return "out" === this.phase || "hold" === this.phase
       }
-      startOut(MM) {
-        ("in" === this.phase || null === this.phase && this.clearMs < OM.q.minFadeTurnMs) && (this.sinceTurnMs = 0), this.phase = "out", 0 === this.screen.alpha && (this.screen.colour = MM.colour), this.outMs = MM.outMs, this.holdMs = MM.holdMs, this.inMs = MM.inMs
+      startOut(VV) {
+        ("in" === this.phase || null === this.phase && this.clearMs < JV.k.minFadeTurnMs) && (this.sinceTurnMs = 0), this.phase = "out", 0 === this.screen.alpha && (this.screen.colour = VV.colour), this.outMs = VV.outMs, this.holdMs = VV.holdMs, this.inMs = VV.inMs
       }
-      startIn(MM) {
-        this.isGoingOut() && (this.sinceTurnMs = 0), this.phase = "in", this.inMs = Math.max(MM, this.inMs)
+      startIn(VV) {
+        this.isGoingOut() && (this.sinceTurnMs = 0), this.phase = "in", this.inMs = Math.max(VV, this.inMs)
       }
-      step(MM) {
-        const rM = this.screen;
-        this.sinceTurnMs += MM, null === this.phase && (this.clearMs += MM);
-        let iM = !1,
-          SM = MM;
+      step(VV) {
+        const eV = this.screen;
+        this.sinceTurnMs += VV, null === this.phase && (this.clearMs += VV);
+        let xV = !1,
+          YV = VV;
         if ("out" === this.phase) {
-          const OM = (1 - rM.alpha) * this.outMs;
-          if (rM.alpha = aM(rM.alpha, 1, MM, this.outMs), rM.alpha < 1) return !1;
-          this.phase = "hold", this.heldMs = 0, SM = Math.max(0, MM - OM), iM = !0
+          const JV = (1 - eV.alpha) * this.outMs;
+          if (eV.alpha = yV(eV.alpha, 1, VV, this.outMs), eV.alpha < 1) return !1;
+          this.phase = "hold", this.heldMs = 0, YV = Math.max(0, VV - JV), xV = !0
         }
-        let jM = MM;
+        let UV = VV;
         if ("hold" === this.phase) {
-          this.heldMs += SM;
-          const MM = Math.min(this.heldMs - this.holdMs, this.sinceTurnMs - OM.q.minFadeTurnMs);
-          if (MM < 0 || iM) return iM;
-          this.phase = "in", this.sinceTurnMs = MM, jM = MM
+          this.heldMs += YV;
+          const VV = Math.min(this.heldMs - this.holdMs, this.sinceTurnMs - JV.k.minFadeTurnMs);
+          if (VV < 0 || xV) return xV;
+          this.phase = "in", this.sinceTurnMs = VV, UV = VV
         }
-        return "in" === this.phase && (rM.alpha = aM(rM.alpha, 0, jM, this.inMs), rM.alpha <= 0 && (this.phase = null, this.clearMs = 0)), iM
+        return "in" === this.phase && (eV.alpha = yV(eV.alpha, 0, UV, this.inMs), eV.alpha <= 0 && (this.phase = null, this.clearMs = 0)), xV
       }
     }
-    var nM = iM(40253),
-      QM = iM(40285),
-      zM = iM(2e3),
-      LM = iM(37510);
+    var QV = xV(40397),
+      nV = xV(40427),
+      wV = xV(2014),
+      ZV = xV(37722);
 
-    function mM(MM, rM) {
-      for (let iM = 0; iM < rM.length; iM++) rM[iM] = MM[iM]
+    function vV(VV, eV) {
+      for (let xV = 0; xV < eV.length; xV++) eV[xV] = VV[xV]
     }
 
-    function HM(MM, rM) {
-      var iM;
-      return null !== (iM = MM.fov) && void 0 !== iM ? iM : rM.getDefaultFov()
+    function rV(VV, eV) {
+      var xV;
+      return null !== (xV = VV.fov) && void 0 !== xV ? xV : eV.getDefaultFov()
     }
 
-    function hM(MM, rM, iM, OM, SM) {
-      const jM = 2 / OM,
-        aM = Math.exp(-jM * SM);
-      for (let PM = 0; PM < MM.length; PM++) {
-        const OM = MM[PM] - iM[PM],
-          nM = (rM[PM] + jM * OM) * SM;
-        MM[PM] = iM[PM] + (OM + nM) * aM, rM[PM] = (rM[PM] - jM * nM) * aM
+    function kV(VV, eV, xV, JV, YV) {
+      const UV = 2 / JV,
+        yV = Math.exp(-UV * YV);
+      for (let pV = 0; pV < VV.length; pV++) {
+        const JV = VV[pV] - xV[pV],
+          QV = (eV[pV] + UV * JV) * YV;
+        VV[pV] = xV[pV] + (JV + QV) * yV, eV[pV] = (eV[pV] - UV * QV) * yV
       }
     }
-    class JM {
-      constructor(MM, rM, iM, OM) {
-        var jM, aM, PM, nM, QM;
-        this.settings = MM, this.uL = rM, this.targets = iM, this.base = void 0, this.closestDistance = void 0, this.furthestDistance = void 0, this.goal = void 0, this.framedTargets = !1, this.smoothed = [0, 0, 0, 0, 0, 0], this.dd = [0, 0, 0, 0, 0, 0], this.started = !1, this.angles = {
+    class bV {
+      constructor(VV, eV, xV, JV) {
+        var UV, yV, pV, QV, nV;
+        this.settings = VV, this.cZ = eV, this.targets = xV, this.base = void 0, this.closestDistance = void 0, this.furthestDistance = void 0, this.goal = void 0, this.framedTargets = !1, this.smoothed = [0, 0, 0, 0, 0, 0], this.ME = [0, 0, 0, 0, 0, 0], this.started = !1, this.angles = {
           heading: 0,
           pitch: 0
         }, this.points = [], this.forward = [0, 0, 0], this.base = {
-          heading: (0, SM.s)((0, zM.l)(null !== (jM = MM.viewHeading) && void 0 !== jM ? jM : 0)),
-          pitch: (0, SM.h)((0, zM.l)(null !== (aM = MM.viewElevation) && void 0 !== aM ? aM : 45))
-        }, this.closestDistance = null !== (PM = MM.closestDistance) && void 0 !== PM ? PM : Math.min(6, null !== (nM = MM.furthestDistance) && void 0 !== nM ? nM : 1 / 0), this.furthestDistance = null !== (QM = MM.furthestDistance) && void 0 !== QM ? QM : Math.max(64, this.closestDistance);
-        const LM = (0, SM.f)(this.base.heading, this.base.pitch, this.forward),
-          mM = OM.position,
-          HM = this.closestDistance;
-        this.goal = [mM[0] + LM[0] * HM, mM[1] + LM[1] * HM, mM[2] + LM[2] * HM, HM, this.base.heading, this.base.pitch]
+          heading: (0, YV.w)((0, wV.k)(null !== (UV = VV.viewHeading) && void 0 !== UV ? UV : 0)),
+          pitch: (0, YV.m)((0, wV.k)(null !== (yV = VV.viewElevation) && void 0 !== yV ? yV : 45))
+        }, this.closestDistance = null !== (pV = VV.closestDistance) && void 0 !== pV ? pV : Math.min(6, null !== (QV = VV.furthestDistance) && void 0 !== QV ? QV : 1 / 0), this.furthestDistance = null !== (nV = VV.furthestDistance) && void 0 !== nV ? nV : Math.max(64, this.closestDistance);
+        const ZV = (0, YV.i)(this.base.heading, this.base.pitch, this.forward),
+          vV = JV.position,
+          rV = this.closestDistance;
+        this.goal = [vV[0] + ZV[0] * rV, vV[1] + ZV[1] * rV, vV[2] + ZV[2] * rV, rV, this.base.heading, this.base.pitch]
       }
-      update(MM, rM, iM) {
-        var OM, jM;
-        this.placeGoal(null !== (OM = this.settings.fov) && void 0 !== OM ? OM : this.uL.getBaseFov()), this.goal[4] = (0, SM.w)(this.smoothed[4], this.base.heading), this.goal[5] = this.base.pitch;
-        const aM = null !== (jM = this.settings.smoothMs) && void 0 !== jM ? jM : 400;
-        !this.started || aM < 1 ? (mM(this.goal, this.smoothed), this.dd.fill(0), this.started = !0) : hM(this.smoothed, this.dd, this.goal, aM, MM), this.angles.heading = this.smoothed[4], this.angles.pitch = (0, SM.h)(this.smoothed[5]), rM.apply(this.angles, iM);
-        const PM = (0, SM.f)(iM.heading, iM.pitch, this.forward);
-        for (let SM = 0; SM < 3; SM++) iM.position[SM] = this.smoothed[SM] - PM[SM] * this.smoothed[3];
-        iM.fov = HM(this.settings, this.uL)
+      update(VV, eV, xV) {
+        var JV, UV;
+        this.placeGoal(null !== (JV = this.settings.fov) && void 0 !== JV ? JV : this.cZ.getBaseFov()), this.goal[4] = (0, YV.z)(this.smoothed[4], this.base.heading), this.goal[5] = this.base.pitch;
+        const yV = null !== (UV = this.settings.smoothMs) && void 0 !== UV ? UV : 400;
+        !this.started || yV < 1 ? (vV(this.goal, this.smoothed), this.ME.fill(0), this.started = !0) : kV(this.smoothed, this.ME, this.goal, yV, VV), this.angles.heading = this.smoothed[4], this.angles.pitch = (0, YV.m)(this.smoothed[5]), eV.apply(this.angles, xV);
+        const pV = (0, YV.i)(xV.heading, xV.pitch, this.forward);
+        for (let YV = 0; YV < 3; YV++) xV.position[YV] = this.smoothed[YV] - pV[YV] * this.smoothed[3];
+        xV.fov = rV(this.settings, this.cZ)
       }
-      continueFrom(MM) {
-        MM instanceof JM && (mM(MM.goal, this.goal), mM(MM.smoothed, this.smoothed), mM(MM.dd, this.dd), this.framedTargets = MM.framedTargets, this.started = MM.started)
+      continueFrom(VV) {
+        VV instanceof bV && (vV(VV.goal, this.goal), vV(VV.smoothed, this.smoothed), vV(VV.ME, this.ME), this.framedTargets = VV.framedTargets, this.started = VV.started)
       }
       reset() {
-        this.dd.fill(0), this.started = !1
+        this.ME.fill(0), this.started = !1
       }
-      placeGoal(MM) {
-        var rM;
-        let iM = 0;
-        for (const zM of this.settings.targets) {
-          const MM = this.targets.currentAimPoint(zM);
-          MM && (0, nM.d)(MM, this.pointAt(iM++))
+      placeGoal(VV) {
+        var eV;
+        let xV = 0;
+        for (const wV of this.settings.targets) {
+          const VV = this.targets.currentAimPoint(wV);
+          VV && (0, QV.h)(VV, this.pointAt(xV++))
         }
-        if (iM > 0) this.framedTargets = !0;
+        if (xV > 0) this.framedTargets = !0;
         else if (!this.framedTargets) {
-          const MM = this.targets.aimPoint(this.uL.localPlayerId);
-          MM && (0, nM.d)(MM, this.pointAt(iM++))
+          const VV = this.targets.aimPoint(this.cZ.localPlayerId);
+          VV && (0, QV.h)(VV, this.pointAt(xV++))
         }
-        const OM = this.goal;
-        if (0 === iM) return void(OM[3] = this.withinDistances(OM[3]));
-        for (let nM = 0; nM < 3; nM++) {
-          let MM = 1 / 0,
-            rM = -1 / 0;
-          for (let OM = 0; OM < iM; OM++) MM = Math.min(MM, this.points[OM][nM]), rM = Math.max(rM, this.points[OM][nM]);
-          OM[nM] = (MM + rM) / 2
+        const JV = this.goal;
+        if (0 === xV) return void(JV[3] = this.withinDistances(JV[3]));
+        for (let QV = 0; QV < 3; QV++) {
+          let VV = 1 / 0,
+            eV = -1 / 0;
+          for (let JV = 0; JV < xV; JV++) VV = Math.min(VV, this.points[JV][QV]), eV = Math.max(eV, this.points[JV][QV]);
+          JV[QV] = (VV + eV) / 2
         }
-        let SM = 0;
-        for (let nM = 0; nM < iM; nM++) {
-          const MM = this.points[nM];
-          SM = Math.max(SM, Math.hypot(MM[0] - OM[0], MM[1] - OM[1], MM[2] - OM[2]))
+        let YV = 0;
+        for (let QV = 0; QV < xV; QV++) {
+          const VV = this.points[QV];
+          YV = Math.max(YV, Math.hypot(VV[0] - JV[0], VV[1] - JV[1], VV[2] - JV[2]))
         }
-        const jM = Math.tan((0, zM.l)(MM) / 2),
-          aM = Math.atan(jM * (!0 === this.settings.letterbox ? LM.g : 1)),
-          PM = Math.atan(jM * this.uL.getAspectRatio()),
-          QM = (SM + (null !== (rM = this.settings.padding) && void 0 !== rM ? rM : 2)) / Math.sin(Math.min(aM, PM));
-        OM[3] = this.withinDistances(QM)
+        const UV = Math.tan((0, wV.k)(VV) / 2),
+          yV = Math.atan(UV * (!0 === this.settings.letterbox ? ZV.f : 1)),
+          pV = Math.atan(UV * this.cZ.getAspectRatio()),
+          nV = (YV + (null !== (eV = this.settings.padding) && void 0 !== eV ? eV : 2)) / Math.sin(Math.min(yV, pV));
+        JV[3] = this.withinDistances(nV)
       }
-      withinDistances(MM) {
-        return Math.min(this.furthestDistance, Math.max(this.closestDistance, MM))
+      withinDistances(VV) {
+        return Math.min(this.furthestDistance, Math.max(this.closestDistance, VV))
       }
-      pointAt(MM) {
-        return MM === this.points.length && this.points.push([0, 0, 0]), this.points[MM]
+      pointAt(VV) {
+        return VV === this.points.length && this.points.push([0, 0, 0]), this.points[VV]
       }
     }
-    class dM {
-      constructor(MM) {
-        this.limits = MM, this.yawOffset = 0, this.pitchOffset = 0, this.idleMs = 0, this.pointedAt = null
+    class EV {
+      constructor(VV) {
+        this.limits = VV, this.yawOffset = 0, this.pitchOffset = 0, this.idleMs = 0, this.pointedAt = null
       }
-      continueFrom(MM) {
-        this.limits && (this.yawOffset = MM.yawOffset, this.pitchOffset = MM.pitchOffset, this.idleMs = MM.idleMs)
+      continueFrom(VV) {
+        this.limits && (this.yawOffset = VV.yawOffset, this.pitchOffset = VV.pitchOffset, this.idleMs = VV.idleMs)
       }
-      update(MM, rM) {
-        const iM = this.limits;
-        if (!iM) return;
-        const OM = Number.isFinite(rM.PD) ? rM.PD : 0,
-          SM = Number.isFinite(rM.nD) ? rM.nD : 0;
-        if (rM.pointedAt) this.idleMs = 0, this.pointedAt = {
-          heading: rM.pointedAt.heading,
-          pitch: rM.pointedAt.pitch
+      update(VV, eV) {
+        const xV = this.limits;
+        if (!xV) return;
+        const JV = Number.isFinite(eV.uR) ? eV.uR : 0,
+          YV = Number.isFinite(eV.eD) ? eV.eD : 0;
+        if (eV.pointedAt) this.idleMs = 0, this.pointedAt = {
+          heading: eV.pointedAt.heading,
+          pitch: eV.pointedAt.pitch
         };
-        else if (0 !== OM || 0 !== SM) this.idleMs = 0, this.yawOffset += OM, this.pitchOffset += SM;
+        else if (0 !== JV || 0 !== YV) this.idleMs = 0, this.yawOffset += JV, this.pitchOffset += YV;
         else {
-          const rM = Math.max(0, this.idleMs + MM - 200) - Math.max(0, this.idleMs - 200);
-          if (this.idleMs += MM, void 0 !== iM.returnMs && rM > 0) {
-            const MM = iM.returnMs > 0 ? Math.exp(-3 * rM / iM.returnMs) : 0;
-            this.yawOffset *= MM, this.pitchOffset *= MM
+          const eV = Math.max(0, this.idleMs + VV - 200) - Math.max(0, this.idleMs - 200);
+          if (this.idleMs += VV, void 0 !== xV.returnMs && eV > 0) {
+            const VV = xV.returnMs > 0 ? Math.exp(-3 * eV / xV.returnMs) : 0;
+            this.yawOffset *= VV, this.pitchOffset *= VV
           }
         }
-        this.clampOffsets(iM)
+        this.clampOffsets(xV)
       }
-      clampOffsets(MM) {
-        if (MM.maxYaw >= 180) this.yawOffset = (0, SM.v)(0, this.yawOffset);
+      clampOffsets(VV) {
+        if (VV.maxYaw >= 180) this.yawOffset = (0, YV.y)(0, this.yawOffset);
         else {
-          const rM = (0, zM.l)(MM.maxYaw);
-          this.yawOffset = Math.max(-rM, Math.min(rM, this.yawOffset))
+          const eV = (0, wV.k)(VV.maxYaw);
+          this.yawOffset = Math.max(-eV, Math.min(eV, this.yawOffset))
         }
-        const rM = (0, zM.l)(MM.maxPitch);
-        this.pitchOffset = Math.max(-rM, Math.min(rM, this.pitchOffset))
+        const eV = (0, wV.k)(VV.maxPitch);
+        this.pitchOffset = Math.max(-eV, Math.min(eV, this.pitchOffset))
       }
-      apply(MM, rM) {
-        this.pointedAt && this.limits && (this.yawOffset = (0, SM.v)(MM.heading, this.pointedAt.heading), this.pitchOffset = this.pointedAt.pitch - MM.pitch, this.pointedAt = null, this.clampOffsets(this.limits));
-        const iM = (0, SM.h)(MM.pitch + this.pitchOffset);
-        this.pitchOffset = iM - MM.pitch, rM.heading = (0, SM.s)(MM.heading + this.yawOffset), rM.pitch = iM
+      apply(VV, eV) {
+        this.pointedAt && this.limits && (this.yawOffset = (0, YV.y)(VV.heading, this.pointedAt.heading), this.pitchOffset = this.pointedAt.pitch - VV.pitch, this.pointedAt = null, this.clampOffsets(this.limits));
+        const xV = (0, YV.m)(VV.pitch + this.pitchOffset);
+        this.pitchOffset = xV - VV.pitch, eV.heading = (0, YV.w)(VV.heading + this.yawOffset), eV.pitch = xV
       }
-      unapply(MM, rM) {
-        rM.heading = (0, SM.s)(MM.heading - this.yawOffset), rM.pitch = (0, SM.h)(MM.pitch - this.pitchOffset)
+      unapply(VV, eV) {
+        eV.heading = (0, YV.w)(VV.heading - this.yawOffset), eV.pitch = (0, YV.m)(VV.pitch - this.pitchOffset)
       }
     }
-    const yM = 1e-6;
+    const BV = 1e-6;
 
-    function lM(MM) {
-      return Math.sqrt(MM[0] * MM[0] + MM[1] * MM[1] + MM[2] * MM[2])
+    function jV(VV) {
+      return Math.sqrt(VV[0] * VV[0] + VV[1] * VV[1] + VV[2] * VV[2])
     }
 
-    function EM(MM, rM, iM, OM, SM) {
-      const jM = SM * SM,
-        aM = jM * SM;
-      return (2 * aM - 3 * jM + 1) * MM + (aM - 2 * jM + SM) * rM + (-2 * aM + 3 * jM) * iM + (aM - jM) * OM
+    function qV(VV, eV, xV, JV, YV) {
+      const UV = YV * YV,
+        yV = UV * YV;
+      return (2 * yV - 3 * UV + 1) * VV + (yV - 2 * UV + YV) * eV + (-2 * yV + 3 * UV) * xV + (yV - UV) * JV
     }
 
-    function UM(MM, rM, iM, OM, SM) {
-      const jM = SM * SM;
-      return (6 * jM - 6 * SM) * MM + (3 * jM - 4 * SM + 1) * rM + (-6 * jM + 6 * SM) * iM + (3 * jM - 2 * SM) * OM
+    function tV(VV, eV, xV, JV, YV) {
+      const UV = YV * YV;
+      return (6 * UV - 6 * YV) * VV + (3 * UV - 4 * YV + 1) * eV + (-6 * UV + 6 * YV) * xV + (3 * UV - 2 * YV) * JV
     }
 
-    function GM(MM, rM) {
-      const iM = rM[0] - MM[0],
-        OM = rM[1] - MM[1],
-        SM = rM[2] - MM[2];
-      return Math.sqrt(iM * iM + OM * OM + SM * SM)
+    function FV(VV, eV) {
+      const xV = eV[0] - VV[0],
+        JV = eV[1] - VV[1],
+        YV = eV[2] - VV[2];
+      return Math.sqrt(xV * xV + JV * JV + YV * YV)
     }
 
-    function CM(MM, rM, iM, OM, SM, jM) {
-      for (let aM = 0; aM < 3; aM++) jM[aM] = SM ? MM[aM] * OM : iM[aM] - rM[aM];
-      return SM && function(MM, rM) {
-        const iM = lM(MM);
-        if (iM > rM) {
-          const OM = rM / iM;
-          MM[0] *= OM, MM[1] *= OM, MM[2] *= OM
+    function TV(VV, eV, xV, JV, YV, UV) {
+      for (let yV = 0; yV < 3; yV++) UV[yV] = YV ? VV[yV] * JV : xV[yV] - eV[yV];
+      return YV && function(VV, eV) {
+        const xV = jV(VV);
+        if (xV > eV) {
+          const JV = eV / xV;
+          VV[0] *= JV, VV[1] *= JV, VV[2] *= JV
         }
-      }(jM, 3 * GM(rM, iM)), jM
+      }(UV, 3 * FV(eV, xV)), UV
     }
 
-    function eM(MM, rM, iM, OM) {
-      for (let SM = 0; SM < 3; SM++) OM[SM] = 6 * (rM[SM] - MM[SM]) - 2 * iM[SM];
-      if (lM(OM) < yM)
-        for (let SM = 0; SM < 3; SM++) OM[SM] = rM[SM] - MM[SM];
-      return OM
+    function PV(VV, eV, xV, JV) {
+      for (let YV = 0; YV < 3; YV++) JV[YV] = 6 * (eV[YV] - VV[YV]) - 2 * xV[YV];
+      if (jV(JV) < BV)
+        for (let YV = 0; YV < 3; YV++) JV[YV] = eV[YV] - VV[YV];
+      return JV
     }
 
-    function bM(MM, rM) {
-      return [2 * rM[0] - MM[0], 2 * rM[1] - MM[1], 2 * rM[2] - MM[2]]
+    function AV(VV, eV) {
+      return [2 * eV[0] - VV[0], 2 * eV[1] - VV[1], 2 * eV[2] - VV[2]]
     }
 
-    function wM(MM, rM, iM, OM, SM, jM, aM) {
-      if (!jM && !aM) return 0;
-      const PM = jM ? MM : 2 * rM - iM,
-        nM = aM ? iM : 2 * rM - MM,
-        QM = jM ? OM : SM,
-        zM = aM ? SM : OM,
-        LM = (rM - PM) / QM,
-        mM = (nM - rM) / zM;
-      if (LM * mM <= 0) return 0;
-      const HM = (nM - PM) / (QM + zM),
-        hM = 3 * Math.min(Math.abs(LM), Math.abs(mM));
-      return Math.max(-hM, Math.min(hM, HM))
+    function NV(VV, eV, xV, JV, YV, UV, yV) {
+      if (!UV && !yV) return 0;
+      const pV = UV ? VV : 2 * eV - xV,
+        QV = yV ? xV : 2 * eV - VV,
+        nV = UV ? JV : YV,
+        wV = yV ? YV : JV,
+        ZV = (eV - pV) / nV,
+        vV = (QV - eV) / wV;
+      if (ZV * vV <= 0) return 0;
+      const rV = (QV - pV) / (nV + wV),
+        kV = 3 * Math.min(Math.abs(ZV), Math.abs(vV));
+      return Math.max(-kV, Math.min(kV, rV))
     }
 
-    function tM(MM, rM, iM, OM, SM, jM, aM) {
+    function XV(VV, eV, xV, JV, YV, UV, yV) {
       const {
-        u: PM,
-        segmentMs: nM
-      } = MM;
-      if (!MM.curved) return iM + (OM - iM) * PM;
-      return EM(iM, wM(rM, iM, OM, MM.beforeMs, nM, jM, !0) * nM, OM, wM(iM, OM, SM, nM, MM.afterMs, !0, aM) * nM, PM)
+        u: pV,
+        segmentMs: QV
+      } = VV;
+      if (!VV.curved) return xV + (JV - xV) * pV;
+      return qV(xV, NV(eV, xV, JV, VV.beforeMs, QV, UV, !0) * QV, JV, NV(xV, JV, YV, QV, VV.afterMs, !0, yV) * QV, pV)
     }
 
-    function gM(MM) {
-      return Math.abs(MM.pitch) >= SM.c
+    function MV(VV) {
+      return Math.abs(VV.pitch) >= YV.e
     }
-    class uM {
-      constructor(MM, rM, iM, OM, SM) {
-        this.nodes = MM, this.prevNodes = iM, this.nextNodes = OM, this.tangents = void 0, this.derivative = [0, 0, 0], this.beforeAngles = {
+    class zV {
+      constructor(VV, eV, xV, JV, YV) {
+        this.nodes = VV, this.prevNodes = xV, this.nextNodes = JV, this.tangents = void 0, this.derivative = [0, 0, 0], this.beforeAngles = {
           heading: 0,
           pitch: 0
         }, this.fromAngles = {
@@ -551,84 +551,84 @@ export const modules = {
         }, this.borrowedAngles = {
           heading: 0,
           pitch: 0
-        }, this.tangents = MM.map(((MM, iM) => this.nodeTangent(rM, SM, iM)))
+        }, this.tangents = VV.map(((VV, xV) => this.nodeTangent(eV, YV, xV)))
       }
-      sample(MM, rM, iM) {
+      sample(VV, eV, xV) {
         const {
-          index: OM,
-          toIndex: jM,
-          segmentMs: aM,
-          curved: PM
-        } = MM, nM = this.fromAngles, QM = this.toAngles, zM = this.nodeAngles(OM, iM.position, rM, nM), LM = this.nodeAngles(jM, iM.position, rM, QM);
-        if (aM > 0 && "aim" !== zM && "aim" !== LM && this.liveTangent(MM, nM)) return iM.heading = (0, SM.s)(nM.heading), void(iM.pitch = nM.pitch);
-        if ("none" === zM && "none" === LM) return;
-        !PM && aM > 0 && ("tangent" === zM && this.liveTangent(MM, nM), "tangent" === LM && this.liveTangent(MM, QM)), "none" === zM ? (0, SM.j)(QM, nM) : "none" === LM && (0, SM.j)(nM, QM);
-        const mM = PM && MM.beforeIndex >= 0 && "none" !== this.nodeAngles(MM.beforeIndex, iM.position, rM, this.beforeAngles),
-          HM = PM && MM.afterIndex >= 0 && "none" !== this.nodeAngles(MM.afterIndex, iM.position, rM, this.afterAngles),
-          hM = (0, SM.w)(nM.heading, QM.heading),
-          JM = tM(MM, mM ? (0, SM.w)(nM.heading, this.beforeAngles.heading) : 0, nM.heading, hM, HM ? (0, SM.w)(hM, this.afterAngles.heading) : 0, mM, HM);
-        iM.heading = (0, SM.s)(JM), iM.pitch = (0, SM.h)(tM(MM, this.beforeAngles.pitch, nM.pitch, QM.pitch, this.afterAngles.pitch, mM, HM))
+          index: JV,
+          toIndex: UV,
+          segmentMs: yV,
+          curved: pV
+        } = VV, QV = this.fromAngles, nV = this.toAngles, wV = this.nodeAngles(JV, xV.position, eV, QV), ZV = this.nodeAngles(UV, xV.position, eV, nV);
+        if (yV > 0 && "aim" !== wV && "aim" !== ZV && this.liveTangent(VV, QV)) return xV.heading = (0, YV.w)(QV.heading), void(xV.pitch = QV.pitch);
+        if ("none" === wV && "none" === ZV) return;
+        !pV && yV > 0 && ("tangent" === wV && this.liveTangent(VV, QV), "tangent" === ZV && this.liveTangent(VV, nV)), "none" === wV ? (0, YV.o)(nV, QV) : "none" === ZV && (0, YV.o)(QV, nV);
+        const vV = pV && VV.beforeIndex >= 0 && "none" !== this.nodeAngles(VV.beforeIndex, xV.position, eV, this.beforeAngles),
+          rV = pV && VV.afterIndex >= 0 && "none" !== this.nodeAngles(VV.afterIndex, xV.position, eV, this.afterAngles),
+          kV = (0, YV.z)(QV.heading, nV.heading),
+          bV = XV(VV, vV ? (0, YV.z)(QV.heading, this.beforeAngles.heading) : 0, QV.heading, kV, rV ? (0, YV.z)(kV, this.afterAngles.heading) : 0, vV, rV);
+        xV.heading = (0, YV.w)(bV), xV.pitch = (0, YV.m)(XV(VV, this.beforeAngles.pitch, QV.pitch, nV.pitch, this.afterAngles.pitch, vV, rV))
       }
-      nodeAngles(MM, rM, iM, OM) {
-        const SM = this.rawNodeAngles(MM, rM, iM, OM);
-        return "none" !== SM && gM(OM) && !this.borrowHeading(this.prevNodes[MM], rM, iM, OM) && this.borrowHeading(this.nextNodes[MM], rM, iM, OM), SM
+      nodeAngles(VV, eV, xV, JV) {
+        const YV = this.rawNodeAngles(VV, eV, xV, JV);
+        return "none" !== YV && MV(JV) && !this.borrowHeading(this.prevNodes[VV], eV, xV, JV) && this.borrowHeading(this.nextNodes[VV], eV, xV, JV), YV
       }
-      borrowHeading(MM, rM, iM, OM) {
-        const SM = this.borrowedAngles;
-        return !(MM < 0 || "none" === this.rawNodeAngles(MM, rM, iM, SM) || gM(SM)) && (OM.heading = SM.heading, !0)
+      borrowHeading(VV, eV, xV, JV) {
+        const YV = this.borrowedAngles;
+        return !(VV < 0 || "none" === this.rawNodeAngles(VV, eV, xV, YV) || MV(YV)) && (JV.heading = YV.heading, !0)
       }
-      rawNodeAngles(MM, rM, iM, OM) {
-        const jM = this.nodes[MM].keyframe;
-        if (jM.lookDirection) return (0, SM.m)(jM.lookDirection, OM), "aim";
-        if (void 0 !== jM.lookAt) {
-          const MM = iM(jM.lookAt);
-          if (MM) return (0, SM.p)(rM, MM, OM), "aim"
+      rawNodeAngles(VV, eV, xV, JV) {
+        const UV = this.nodes[VV].keyframe;
+        if (UV.lookDirection) return (0, YV.q)(UV.lookDirection, JV), "aim";
+        if (void 0 !== UV.lookAt) {
+          const VV = xV(UV.lookAt);
+          if (VV) return (0, YV.v)(eV, VV, JV), "aim"
         }
-        const aM = this.tangents[MM];
-        return aM ? ((0, SM.j)(aM, OM), "tangent") : "none"
+        const yV = this.tangents[VV];
+        return yV ? ((0, YV.o)(yV, JV), "tangent") : "none"
       }
-      liveTangent(MM, rM) {
-        const iM = this.nodes[MM.index].position,
-          OM = this.nodes[MM.toIndex].position,
-          jM = this.derivative;
-        for (let SM = 0; SM < 3; SM++) jM[SM] = UM(iM[SM], MM.fromTangent[SM], OM[SM], MM.toTangent[SM], MM.u);
-        return lM(jM) > 1e-9 ? ((0, SM.m)(jM, rM), !0) : !(GM(iM, OM) < yM) && ((0, SM.m)(eM(iM, OM, MM.u < .5 ? MM.toTangent : MM.fromTangent, jM), rM), !0)
+      liveTangent(VV, eV) {
+        const xV = this.nodes[VV.index].position,
+          JV = this.nodes[VV.toIndex].position,
+          UV = this.derivative;
+        for (let YV = 0; YV < 3; YV++) UV[YV] = tV(xV[YV], VV.fromTangent[YV], JV[YV], VV.toTangent[YV], VV.u);
+        return jV(UV) > 1e-9 ? ((0, YV.q)(UV, eV), !0) : !(FV(xV, JV) < BV) && ((0, YV.q)(PV(xV, JV, VV.u < .5 ? VV.toTangent : VV.fromTangent, UV), eV), !0)
       }
-      nodeTangent(MM, rM, iM) {
-        var OM;
-        const jM = MM[iM];
-        if (lM(jM) > 1e-9) return (0, SM.m)(jM, {
+      nodeTangent(VV, eV, xV) {
+        var JV;
+        const UV = VV[xV];
+        if (jV(UV) > 1e-9) return (0, YV.q)(UV, {
           heading: 0,
           pitch: 0
         });
-        const aM = null !== (OM = this.restDirectionTo(iM, iM + 1, MM, rM)) && void 0 !== OM ? OM : this.restDirectionTo(iM, iM - 1, MM, rM);
-        return aM ? (0, SM.m)(aM, {
+        const yV = null !== (JV = this.restDirectionTo(xV, xV + 1, VV, eV)) && void 0 !== JV ? JV : this.restDirectionTo(xV, xV - 1, VV, eV);
+        return yV ? (0, YV.q)(yV, {
           heading: 0,
           pitch: 0
         }) : null
       }
-      restDirectionTo(MM, rM, iM, OM) {
-        const SM = this.nodes[MM],
-          jM = this.nodes[rM];
-        if (!jM || GM(SM.position, jM.position) < yM) return null;
-        const [aM, PM] = rM > MM ? [SM, jM] : [jM, SM], nM = CM(iM[rM], aM.position, PM.position, PM.timeMs - aM.timeMs, OM, [0, 0, 0]);
-        return eM(aM.position, PM.position, nM, [0, 0, 0])
+      restDirectionTo(VV, eV, xV, JV) {
+        const YV = this.nodes[VV],
+          UV = this.nodes[eV];
+        if (!UV || FV(YV.position, UV.position) < BV) return null;
+        const [yV, pV] = eV > VV ? [YV, UV] : [UV, YV], QV = TV(xV[eV], yV.position, pV.position, pV.timeMs - yV.timeMs, JV, [0, 0, 0]);
+        return PV(yV.position, pV.position, QV, [0, 0, 0])
       }
     }
 
-    function RM(MM, rM) {
-      const iM = MM.lookDirection || rM.lookDirection ? function(MM, rM) {
-        if (!MM || !rM) return MM === rM;
-        const iM = lM(MM),
-          OM = lM(rM);
-        return Math.hypot(MM[0] / iM - rM[0] / OM, MM[1] / iM - rM[1] / OM, MM[2] / iM - rM[2] / OM) < yM
-      }(MM.lookDirection, rM.lookDirection) : (OM = MM.lookAt, SM = rM.lookAt, "object" !== typeof OM || "object" !== typeof SM ? OM === SM : GM(OM, SM) < yM);
-      var OM, SM;
-      return GM(MM.position, rM.position) < yM && MM.fov === rM.fov && iM
+    function GV(VV, eV) {
+      const xV = VV.lookDirection || eV.lookDirection ? function(VV, eV) {
+        if (!VV || !eV) return VV === eV;
+        const xV = jV(VV),
+          JV = jV(eV);
+        return Math.hypot(VV[0] / xV - eV[0] / JV, VV[1] / xV - eV[1] / JV, VV[2] / xV - eV[2] / JV) < BV
+      }(VV.lookDirection, eV.lookDirection) : (JV = VV.lookAt, YV = eV.lookAt, "object" !== typeof JV || "object" !== typeof YV ? JV === YV : FV(JV, YV) < BV);
+      var JV, YV;
+      return FV(VV.position, eV.position) < BV && VV.fov === eV.fov && xV
     }
-    class pM {
-      constructor(MM, rM, iM) {
-        if (this.smooth = rM, this.nodes = void 0, this.velocities = void 0, this.prevNodes = void 0, this.nextNodes = void 0, this.prevGaps = void 0, this.nextGaps = void 0, this.loopMs = void 0, this.aim = void 0, this.segment = {
+    class WV {
+      constructor(VV, eV, xV) {
+        if (this.smooth = eV, this.nodes = void 0, this.velocities = void 0, this.prevNodes = void 0, this.nextNodes = void 0, this.prevGaps = void 0, this.nextGaps = void 0, this.loopMs = void 0, this.aim = void 0, this.segment = {
             index: 0,
             toIndex: 0,
             u: 0,
@@ -640,330 +640,330 @@ export const modules = {
             afterMs: 0,
             fromTangent: [0, 0, 0],
             toTangent: [0, 0, 0]
-          }, 0 === MM.length) throw new Error("A camera path needs at least one keyframe");
-        for (let jM = 1; jM < MM.length; jM++)
-          if (!(MM[jM].timeMs > MM[jM - 1].timeMs)) throw new Error("Camera path keyframe times must strictly increase");
-        this.nodes = MM.map((MM => {
-          var rM;
+          }, 0 === VV.length) throw new Error("A camera path needs at least one keyframe");
+        for (let UV = 1; UV < VV.length; UV++)
+          if (!(VV[UV].timeMs > VV[UV - 1].timeMs)) throw new Error("Camera path keyframe times must strictly increase");
+        this.nodes = VV.map((VV => {
+          var eV;
           return {
-            timeMs: MM.timeMs,
-            position: [...MM.position],
-            keyframe: MM,
-            easing: (0, jM.o)(null !== (rM = MM.easing) && void 0 !== rM ? rM : "linear")
+            timeMs: VV.timeMs,
+            position: [...VV.position],
+            keyframe: VV,
+            easing: (0, UV.m)(null !== (eV = VV.easing) && void 0 !== eV ? eV : "linear")
           }
         }));
-        const OM = this.nodes[0],
-          SM = this.nodes[this.nodes.length - 1],
-          aM = iM && this.nodes.length > 1;
-        aM && !RM(OM.keyframe, SM.keyframe) && this.nodes.push({
-          ...OM,
-          timeMs: SM.timeMs + (SM.timeMs - OM.timeMs) / (this.nodes.length - 1)
-        }), this.loopMs = aM ? this.nodes[this.nodes.length - 1].timeMs - OM.timeMs : 0, this.prevNodes = this.nodes.map(((MM, rM) => this.neighbour(rM, -1))), this.nextNodes = this.nodes.map(((MM, rM) => this.neighbour(rM, 1))), this.prevGaps = this.prevNodes.map(((MM, rM) => MM >= 0 ? this.gapMs(rM, -1) : 0)), this.nextGaps = this.nextNodes.map(((MM, rM) => MM >= 0 ? this.gapMs(rM, 1) : 0)), this.velocities = this.nodes.map(((MM, rM) => {
-          const iM = this.prevNodes[rM],
-            OM = this.nextNodes[rM];
-          return function(MM, rM, iM, OM, SM, jM) {
-            if (jM[0] = 0, jM[1] = 0, jM[2] = 0, !MM && !iM) return jM;
-            const aM = null !== MM && void 0 !== MM ? MM : bM(null !== iM && void 0 !== iM ? iM : rM, rM),
-              PM = null !== iM && void 0 !== iM ? iM : bM(null !== MM && void 0 !== MM ? MM : rM, rM),
-              nM = MM ? OM : SM,
-              QM = iM ? SM : OM,
-              zM = GM(aM, rM),
-              LM = GM(rM, PM);
-            if (zM < yM || LM < yM) return jM;
-            const mM = Math.sqrt(zM),
-              HM = Math.sqrt(LM),
-              hM = (mM + HM) / (nM + QM);
-            for (let JM = 0; JM < 3; JM++) {
-              const MM = (rM[JM] - aM[JM]) / mM - (PM[JM] - aM[JM]) / (mM + HM) + (PM[JM] - rM[JM]) / HM;
-              jM[JM] = MM * hM
+        const JV = this.nodes[0],
+          YV = this.nodes[this.nodes.length - 1],
+          yV = xV && this.nodes.length > 1;
+        yV && !GV(JV.keyframe, YV.keyframe) && this.nodes.push({
+          ...JV,
+          timeMs: YV.timeMs + (YV.timeMs - JV.timeMs) / (this.nodes.length - 1)
+        }), this.loopMs = yV ? this.nodes[this.nodes.length - 1].timeMs - JV.timeMs : 0, this.prevNodes = this.nodes.map(((VV, eV) => this.neighbour(eV, -1))), this.nextNodes = this.nodes.map(((VV, eV) => this.neighbour(eV, 1))), this.prevGaps = this.prevNodes.map(((VV, eV) => VV >= 0 ? this.gapMs(eV, -1) : 0)), this.nextGaps = this.nextNodes.map(((VV, eV) => VV >= 0 ? this.gapMs(eV, 1) : 0)), this.velocities = this.nodes.map(((VV, eV) => {
+          const xV = this.prevNodes[eV],
+            JV = this.nextNodes[eV];
+          return function(VV, eV, xV, JV, YV, UV) {
+            if (UV[0] = 0, UV[1] = 0, UV[2] = 0, !VV && !xV) return UV;
+            const yV = null !== VV && void 0 !== VV ? VV : AV(null !== xV && void 0 !== xV ? xV : eV, eV),
+              pV = null !== xV && void 0 !== xV ? xV : AV(null !== VV && void 0 !== VV ? VV : eV, eV),
+              QV = VV ? JV : YV,
+              nV = xV ? YV : JV,
+              wV = FV(yV, eV),
+              ZV = FV(eV, pV);
+            if (wV < BV || ZV < BV) return UV;
+            const vV = Math.sqrt(wV),
+              rV = Math.sqrt(ZV),
+              kV = (vV + rV) / (QV + nV);
+            for (let bV = 0; bV < 3; bV++) {
+              const VV = (eV[bV] - yV[bV]) / vV - (pV[bV] - yV[bV]) / (vV + rV) + (pV[bV] - eV[bV]) / rV;
+              UV[bV] = VV * kV
             }
-            return jM
-          }(iM >= 0 ? this.nodes[iM].position : null, MM.position, OM >= 0 ? this.nodes[OM].position : null, this.prevGaps[rM], this.nextGaps[rM], [0, 0, 0])
-        })), this.aim = new uM(this.nodes, this.velocities, this.prevNodes, this.nextNodes, rM)
+            return UV
+          }(xV >= 0 ? this.nodes[xV].position : null, VV.position, JV >= 0 ? this.nodes[JV].position : null, this.prevGaps[eV], this.nextGaps[eV], [0, 0, 0])
+        })), this.aim = new zV(this.nodes, this.velocities, this.prevNodes, this.nextNodes, eV)
       }
-      sample(MM, rM, iM, OM) {
-        const SM = this.findSegment(this.pathTime(MM));
-        this.samplePosition(SM, OM.position), this.aim.sample(SM, rM, OM);
+      sample(VV, eV, xV, JV) {
+        const YV = this.findSegment(this.pathTime(VV));
+        this.samplePosition(YV, JV.position), this.aim.sample(YV, eV, JV);
         const {
-          beforeIndex: jM,
-          afterIndex: aM
-        } = SM;
-        OM.fov = tM(SM, jM >= 0 ? this.fovAt(jM, iM) : 0, this.fovAt(SM.index, iM), this.fovAt(SM.toIndex, iM), aM >= 0 ? this.fovAt(aM, iM) : 0, jM >= 0, aM >= 0)
+          beforeIndex: UV,
+          afterIndex: yV
+        } = YV;
+        JV.fov = XV(YV, UV >= 0 ? this.fovAt(UV, xV) : 0, this.fovAt(YV.index, xV), this.fovAt(YV.toIndex, xV), yV >= 0 ? this.fovAt(yV, xV) : 0, UV >= 0, yV >= 0)
       }
-      pathTime(MM) {
-        const rM = this.nodes[0].timeMs;
-        if (this.loopMs <= 0 || MM <= rM) return MM;
-        const iM = MM - rM;
-        return rM + iM - this.loopMs * Math.floor(iM / this.loopMs)
+      pathTime(VV) {
+        const eV = this.nodes[0].timeMs;
+        if (this.loopMs <= 0 || VV <= eV) return VV;
+        const xV = VV - eV;
+        return eV + xV - this.loopMs * Math.floor(xV / this.loopMs)
       }
-      findSegment(MM) {
-        const rM = this.nodes,
-          iM = this.segment;
-        let OM = iM.index;
-        for (MM < rM[OM].timeMs && (OM = 0); OM < rM.length - 2 && rM[OM + 1].timeMs <= MM;) OM++;
-        const SM = Math.min(OM + 1, rM.length - 1),
-          aM = rM[SM].timeMs - rM[OM].timeMs;
-        return iM.index = OM, iM.toIndex = SM, iM.segmentMs = aM, iM.u = aM > 0 ? (0, jM.k)((MM - rM[OM].timeMs) / aM, rM[OM].easing) : 1, iM.curved = this.smooth && aM > 0, iM.beforeIndex = this.prevNodes[OM], iM.afterIndex = this.nextNodes[SM], iM.beforeMs = this.prevGaps[OM], iM.afterMs = this.nextGaps[SM], iM
+      findSegment(VV) {
+        const eV = this.nodes,
+          xV = this.segment;
+        let JV = xV.index;
+        for (VV < eV[JV].timeMs && (JV = 0); JV < eV.length - 2 && eV[JV + 1].timeMs <= VV;) JV++;
+        const YV = Math.min(JV + 1, eV.length - 1),
+          yV = eV[YV].timeMs - eV[JV].timeMs;
+        return xV.index = JV, xV.toIndex = YV, xV.segmentMs = yV, xV.u = yV > 0 ? (0, UV.l)((VV - eV[JV].timeMs) / yV, eV[JV].easing) : 1, xV.curved = this.smooth && yV > 0, xV.beforeIndex = this.prevNodes[JV], xV.afterIndex = this.nextNodes[YV], xV.beforeMs = this.prevGaps[JV], xV.afterMs = this.nextGaps[YV], xV
       }
-      samplePosition(MM, rM) {
+      samplePosition(VV, eV) {
         const {
-          fromTangent: iM,
-          toTangent: OM,
-          curved: SM
-        } = MM, jM = this.nodes[MM.index].position, aM = this.nodes[MM.toIndex].position;
-        CM(this.velocities[MM.index], jM, aM, MM.segmentMs, SM, iM), CM(this.velocities[MM.toIndex], jM, aM, MM.segmentMs, SM, OM);
-        const PM = MM.u;
-        for (let nM = 0; nM < 3; nM++) rM[nM] = SM ? EM(jM[nM], iM[nM], aM[nM], OM[nM], PM) : jM[nM] + (aM[nM] - jM[nM]) * PM
+          fromTangent: xV,
+          toTangent: JV,
+          curved: YV
+        } = VV, UV = this.nodes[VV.index].position, yV = this.nodes[VV.toIndex].position;
+        TV(this.velocities[VV.index], UV, yV, VV.segmentMs, YV, xV), TV(this.velocities[VV.toIndex], UV, yV, VV.segmentMs, YV, JV);
+        const pV = VV.u;
+        for (let QV = 0; QV < 3; QV++) eV[QV] = YV ? qV(UV[QV], xV[QV], yV[QV], JV[QV], pV) : UV[QV] + (yV[QV] - UV[QV]) * pV
       }
-      fovAt(MM, rM) {
-        var iM;
-        return null !== (iM = this.nodes[MM].keyframe.fov) && void 0 !== iM ? iM : rM
+      fovAt(VV, eV) {
+        var xV;
+        return null !== (xV = this.nodes[VV].keyframe.fov) && void 0 !== xV ? xV : eV
       }
-      neighbour(MM, rM) {
-        const iM = this.nodes.length - 1,
-          OM = MM + rM;
-        return OM >= 0 && OM <= iM ? OM : this.loopMs <= 0 || iM < 2 ? -1 : OM < 0 ? iM - 1 : 1
+      neighbour(VV, eV) {
+        const xV = this.nodes.length - 1,
+          JV = VV + eV;
+        return JV >= 0 && JV <= xV ? JV : this.loopMs <= 0 || xV < 2 ? -1 : JV < 0 ? xV - 1 : 1
       }
-      gapMs(MM, rM) {
-        const iM = this.nodes.length - 1;
-        if (1 === rM) {
-          const rM = MM === iM ? 0 : MM;
-          return this.nodes[rM + 1].timeMs - this.nodes[rM].timeMs
+      gapMs(VV, eV) {
+        const xV = this.nodes.length - 1;
+        if (1 === eV) {
+          const eV = VV === xV ? 0 : VV;
+          return this.nodes[eV + 1].timeMs - this.nodes[eV].timeMs
         }
-        const OM = 0 === MM ? iM : MM;
-        return this.nodes[OM].timeMs - this.nodes[OM - 1].timeMs
+        const JV = 0 === VV ? xV : VV;
+        return this.nodes[JV].timeMs - this.nodes[JV - 1].timeMs
       }
     }
 
-    function WM(MM, rM, iM) {
-      return null !== iM && Number.isFinite(iM) ? (MM.set(rM, iM), iM) : MM.get(rM)
+    function RV(VV, eV, xV) {
+      return null !== xV && Number.isFinite(xV) ? (VV.set(eV, xV), xV) : VV.get(eV)
     }
-    class sM {
-      constructor(MM) {
-        this.uL = MM, this.lastFeet = new Map, this.lastAimPoints = new Map, this.lastHeadings = new Map, this.lastPitches = new Map, this.lastLookHeadings = new Map, this.readFeet = void 0, this.readAimPoint = void 0, this.readFeet = rM => MM.getEntityPosition(rM), this.readAimPoint = rM => MM.getEntityAimPoint(rM)
+    class gV {
+      constructor(VV) {
+        this.cZ = VV, this.lastFeet = new Map, this.lastAimPoints = new Map, this.lastHeadings = new Map, this.lastPitches = new Map, this.lastLookHeadings = new Map, this.readFeet = void 0, this.readAimPoint = void 0, this.readFeet = eV => VV.getEntityPosition(eV), this.readAimPoint = eV => VV.getEntityAimPoint(eV)
       }
-      aimPoint(MM) {
-        return "string" !== typeof MM ? (0, nM.k)(MM, 3) ? MM : null : this.resolve(MM, this.readAimPoint, this.lastAimPoints)
+      aimPoint(VV) {
+        return "string" !== typeof VV ? (0, QV.r)(VV, 3) ? VV : null : this.resolve(VV, this.readAimPoint, this.lastAimPoints)
       }
-      currentAimPoint(MM) {
-        const rM = "string" === typeof MM ? this.uL.getEntityAimPoint(MM) : MM;
-        return rM && (0, nM.k)(rM, 3) ? rM : null
+      currentAimPoint(VV) {
+        const eV = "string" === typeof VV ? this.cZ.getEntityAimPoint(VV) : VV;
+        return eV && (0, QV.r)(eV, 3) ? eV : null
       }
-      feetPosition(MM) {
-        return this.resolve(MM, this.readFeet, this.lastFeet)
+      feetPosition(VV) {
+        return this.resolve(VV, this.readFeet, this.lastFeet)
       }
-      heading(MM) {
-        const rM = WM(this.lastHeadings, MM, this.uL.getEntityHeading(MM));
-        return void 0 !== rM ? rM : MM === this.uL.localPlayerId ? 0 : this.heading(this.uL.localPlayerId)
+      heading(VV) {
+        const eV = RV(this.lastHeadings, VV, this.cZ.getEntityHeading(VV));
+        return void 0 !== eV ? eV : VV === this.cZ.localPlayerId ? 0 : this.heading(this.cZ.localPlayerId)
       }
-      pitch(MM) {
-        var rM;
-        return null !== (rM = WM(this.lastPitches, MM, this.uL.getEntityPitch(MM))) && void 0 !== rM ? rM : 0
+      pitch(VV) {
+        var eV;
+        return null !== (eV = RV(this.lastPitches, VV, this.cZ.getEntityPitch(VV))) && void 0 !== eV ? eV : 0
       }
-      lookHeading(MM) {
-        var rM;
-        return null !== (rM = WM(this.lastLookHeadings, MM, this.uL.getEntityLookHeading(MM))) && void 0 !== rM ? rM : this.heading(MM)
+      lookHeading(VV) {
+        var eV;
+        return null !== (eV = RV(this.lastLookHeadings, VV, this.cZ.getEntityLookHeading(VV))) && void 0 !== eV ? eV : this.heading(VV)
       }
-      resolve(MM, rM, iM) {
-        const OM = rM(MM);
-        let SM = iM.get(MM);
-        return OM && (0, nM.k)(OM, 3) ? (SM || (SM = [0, 0, 0], iM.set(MM, SM)), SM[0] = OM[0], SM[1] = OM[1], SM[2] = OM[2], SM) : SM || (MM === this.uL.localPlayerId ? null : this.resolve(this.uL.localPlayerId, rM, iM))
+      resolve(VV, eV, xV) {
+        const JV = eV(VV);
+        let YV = xV.get(VV);
+        return JV && (0, QV.r)(JV, 3) ? (YV || (YV = [0, 0, 0], xV.set(VV, YV)), YV[0] = JV[0], YV[1] = JV[1], YV[2] = JV[2], YV) : YV || (VV === this.cZ.localPlayerId ? null : this.resolve(this.cZ.localPlayerId, eV, xV))
       }
     }
 
-    function DM(MM) {
+    function DV(VV) {
       return {
-        heading: MM.heading,
-        pitch: MM.pitch
+        heading: VV.heading,
+        pitch: VV.pitch
       }
     }
 
-    function kM(MM, rM) {
-      Number.isFinite(MM.heading) && Number.isFinite(MM.pitch) || (0, SM.j)(rM, MM)
+    function iV(VV, eV) {
+      Number.isFinite(VV.heading) && Number.isFinite(VV.pitch) || (0, YV.o)(eV, VV)
     }
 
-    function ZM(MM, rM, iM, OM, jM) {
-      if (rM) return void(0, SM.m)(rM, jM);
-      const aM = OM.aimPoint(iM);
-      aM && (0, SM.p)(MM, aM, jM)
+    function CV(VV, eV, xV, JV, UV) {
+      if (eV) return void(0, YV.q)(eV, UV);
+      const yV = JV.aimPoint(xV);
+      yV && (0, YV.v)(VV, yV, UV)
     }
-    class oM {
-      constructor(MM, rM, iM, OM) {
-        this.settings = MM, this.uL = rM, this.targets = iM, this.base = void 0, this.base = DM(OM)
+    class aV {
+      constructor(VV, eV, xV, JV) {
+        this.settings = VV, this.cZ = eV, this.targets = xV, this.base = void 0, this.base = DV(JV)
       }
-      update(MM, rM, iM) {
-        var OM;
-        const SM = this.settings;
-        (0, nM.d)(SM.position, iM.position), ZM(SM.position, SM.lookDirection, null !== (OM = SM.lookAt) && void 0 !== OM ? OM : this.uL.localPlayerId, this.targets, this.base), rM.apply(this.base, iM), iM.fov = HM(SM, this.uL)
+      update(VV, eV, xV) {
+        var JV;
+        const YV = this.settings;
+        (0, QV.h)(YV.position, xV.position), CV(YV.position, YV.lookDirection, null !== (JV = YV.lookAt) && void 0 !== JV ? JV : this.cZ.localPlayerId, this.targets, this.base), eV.apply(this.base, xV), xV.fov = rV(YV, this.cZ)
       }
-      continueFrom(MM) {
-        MM instanceof oM && (0, SM.j)(MM.base, this.base)
+      continueFrom(VV) {
+        VV instanceof aV && (0, YV.o)(VV.base, this.base)
       }
-      reset(MM) {
-        kM(this.base, MM)
+      reset(VV) {
+        iV(this.base, VV)
       }
     }
-    class fM {
-      constructor(MM, rM, iM, OM) {
-        this.settings = MM, this.uL = rM, this.targets = iM, this.base = void 0, this.goal = void 0, this.lastFeet = [0, 0, 0], this.foundFeet = !1, this.smoothed = [0, 0, 0], this.dd = [0, 0, 0], this.started = !1, this.distance = -1, this.toCamera = [0, 0, 0], this.aimOrigin = [0, 0, 0], this.eyeHeading = NaN, this.eyePitch = NaN, this.base = DM(OM), this.goal = [...OM.position]
+    class oV {
+      constructor(VV, eV, xV, JV) {
+        this.settings = VV, this.cZ = eV, this.targets = xV, this.base = void 0, this.goal = void 0, this.lastFeet = [0, 0, 0], this.foundFeet = !1, this.smoothed = [0, 0, 0], this.ME = [0, 0, 0], this.started = !1, this.distance = -1, this.toCamera = [0, 0, 0], this.aimOrigin = [0, 0, 0], this.eyeHeading = NaN, this.eyePitch = NaN, this.base = DV(JV), this.goal = [...JV.position]
       }
-      update(MM, rM, iM) {
-        var OM, jM;
-        const aM = this.settings,
-          PM = null !== (OM = aM.target) && void 0 !== OM ? OM : this.uL.localPlayerId,
-          QM = this.targets.feetPosition(PM),
-          zM = "eye" === aM.anchor;
-        let LM = !1;
-        var mM;
-        QM && (LM = this.foundFeet && GM(this.lastFeet, QM) > 32 + .1 * MM, (0, nM.d)(QM, this.lastFeet), this.foundFeet = !0, this.placeGoal(null !== (mM = zM ? this.targets.aimPoint(PM) : null) && void 0 !== mM ? mM : QM, PM));
-        const JM = null !== (jM = aM.smoothMs) && void 0 !== jM ? jM : 0;
-        !this.started || JM < 1 || LM ? ((0, nM.d)(this.goal, this.smoothed), this.dd.fill(0), this.started = !0) : hM(this.smoothed, this.dd, this.goal, JM, MM), LM && (this.distance = -1), (0, nM.d)(this.smoothed, iM.position);
-        const dM = !0 === aM.avoidTerrain ? this.pullIn(PM, MM, iM) : 1;
-        let yM = this.goal;
-        if ("target" === aM.offsetSpace) yM = iM.position;
-        else if (dM < 1) {
-          yM = this.aimOrigin;
-          for (let MM = 0; MM < 3; MM++) yM[MM] = iM.position[MM] + (this.goal[MM] - this.smoothed[MM]) * dM
+      update(VV, eV, xV) {
+        var JV, UV;
+        const yV = this.settings,
+          pV = null !== (JV = yV.target) && void 0 !== JV ? JV : this.cZ.localPlayerId,
+          nV = this.targets.feetPosition(pV),
+          wV = "eye" === yV.anchor;
+        let ZV = !1;
+        var vV;
+        nV && (ZV = this.foundFeet && FV(this.lastFeet, nV) > 32 + .1 * VV, (0, QV.h)(nV, this.lastFeet), this.foundFeet = !0, this.placeGoal(null !== (vV = wV ? this.targets.aimPoint(pV) : null) && void 0 !== vV ? vV : nV, pV));
+        const bV = null !== (UV = yV.smoothMs) && void 0 !== UV ? UV : 0;
+        !this.started || bV < 1 || ZV ? ((0, QV.h)(this.goal, this.smoothed), this.ME.fill(0), this.started = !0) : kV(this.smoothed, this.ME, this.goal, bV, VV), ZV && (this.distance = -1), (0, QV.h)(this.smoothed, xV.position);
+        const EV = !0 === yV.avoidTerrain ? this.pullIn(pV, VV, xV) : 1;
+        let BV = this.goal;
+        if ("target" === yV.offsetSpace) BV = xV.position;
+        else if (EV < 1) {
+          BV = this.aimOrigin;
+          for (let VV = 0; VV < 3; VV++) BV[VV] = xV.position[VV] + (this.goal[VV] - this.smoothed[VV]) * EV
         }
-        if (zM && !aM.lookDirection && void 0 === aM.lookAt) {
-          const rM = this.targets.lookHeading(PM),
-            iM = this.targets.pitch(PM),
-            OM = 1 - Math.exp(-MM / 50),
-            jM = (0, SM.s)(this.eyeHeading + (0, SM.v)(this.eyeHeading, rM) * OM),
-            aM = this.eyePitch + (iM - this.eyePitch) * OM,
-            nM = PM !== this.uL.localPlayerId && Number.isFinite(jM) && Number.isFinite(aM) && !LM;
-          this.eyeHeading = nM ? jM : (0, SM.s)(rM), this.eyePitch = nM ? aM : iM, this.base.heading = this.eyeHeading, this.base.pitch = this.eyePitch
+        if (wV && !yV.lookDirection && void 0 === yV.lookAt) {
+          const eV = this.targets.lookHeading(pV),
+            xV = this.targets.pitch(pV),
+            JV = 1 - Math.exp(-VV / 50),
+            UV = (0, YV.w)(this.eyeHeading + (0, YV.y)(this.eyeHeading, eV) * JV),
+            yV = this.eyePitch + (xV - this.eyePitch) * JV,
+            QV = pV !== this.cZ.localPlayerId && Number.isFinite(UV) && Number.isFinite(yV) && !ZV;
+          this.eyeHeading = QV ? UV : (0, YV.w)(eV), this.eyePitch = QV ? yV : xV, this.base.heading = this.eyeHeading, this.base.pitch = this.eyePitch
         } else {
-          var lM;
-          this.eyeHeading = NaN, this.eyePitch = NaN, ZM(yM, aM.lookDirection, null !== (lM = aM.lookAt) && void 0 !== lM ? lM : PM, this.targets, this.base)
+          var jV;
+          this.eyeHeading = NaN, this.eyePitch = NaN, CV(BV, yV.lookDirection, null !== (jV = yV.lookAt) && void 0 !== jV ? jV : pV, this.targets, this.base)
         }
-        rM.apply(this.base, iM), iM.fov = HM(aM, this.uL)
+        eV.apply(this.base, xV), xV.fov = rV(yV, this.cZ)
       }
-      continueFrom(MM) {
-        MM instanceof fM && (0, OM.y)(MM.settings.target, this.settings.target) && ((0, SM.j)(MM.base, this.base), (0, nM.d)(MM.goal, this.goal), (0, nM.d)(MM.lastFeet, this.lastFeet), this.foundFeet = MM.foundFeet, (0, nM.d)(MM.smoothed, this.smoothed), (0, nM.d)(MM.dd, this.dd), this.started = MM.started, this.eyeHeading = MM.eyeHeading, this.eyePitch = MM.eyePitch, !0 === MM.settings.avoidTerrain && (this.distance = MM.distance))
+      continueFrom(VV) {
+        VV instanceof oV && (0, JV.q)(VV.settings.target, this.settings.target) && ((0, YV.o)(VV.base, this.base), (0, QV.h)(VV.goal, this.goal), (0, QV.h)(VV.lastFeet, this.lastFeet), this.foundFeet = VV.foundFeet, (0, QV.h)(VV.smoothed, this.smoothed), (0, QV.h)(VV.ME, this.ME), this.started = VV.started, this.eyeHeading = VV.eyeHeading, this.eyePitch = VV.eyePitch, !0 === VV.settings.avoidTerrain && (this.distance = VV.distance))
       }
-      reset(MM) {
-        kM(this.base, MM), this.dd.fill(0), this.started = !1, this.distance = -1, this.eyeHeading = NaN, this.eyePitch = NaN
+      reset(VV) {
+        iV(this.base, VV), this.ME.fill(0), this.started = !1, this.distance = -1, this.eyeHeading = NaN, this.eyePitch = NaN
       }
-      pullIn(MM, rM, iM) {
-        const OM = this.targets.aimPoint(MM);
-        if (!OM) return 1;
-        const SM = iM.position,
-          jM = GM(OM, SM);
-        if (!(jM > 0)) return 1;
-        const aM = this.toCamera;
-        for (let nM = 0; nM < 3; nM++) aM[nM] = (SM[nM] - OM[nM]) / jM;
-        const PM = function(MM, rM, iM) {
-          return MM < 0 || rM < MM ? rM : rM + (MM - rM) * Math.exp(-iM / 150)
-        }(this.distance, function(MM, rM, iM, OM) {
-          const SM = MM.raycastTerrain(rM, iM, OM);
-          return null !== SM && Number.isFinite(SM) ? Math.min(OM, Math.max(0, SM - .2)) : OM
-        }(this.uL, OM, aM, jM), rM);
-        if (jM - PM < .001) return this.distance = -1, 1;
-        this.distance = PM;
-        for (let nM = 0; nM < 3; nM++) SM[nM] = OM[nM] + aM[nM] * PM;
-        return PM / jM
+      pullIn(VV, eV, xV) {
+        const JV = this.targets.aimPoint(VV);
+        if (!JV) return 1;
+        const YV = xV.position,
+          UV = FV(JV, YV);
+        if (!(UV > 0)) return 1;
+        const yV = this.toCamera;
+        for (let QV = 0; QV < 3; QV++) yV[QV] = (YV[QV] - JV[QV]) / UV;
+        const pV = function(VV, eV, xV) {
+          return VV < 0 || eV < VV ? eV : eV + (VV - eV) * Math.exp(-xV / 150)
+        }(this.distance, function(VV, eV, xV, JV) {
+          const YV = VV.raycastTerrain(eV, xV, JV);
+          return null !== YV && Number.isFinite(YV) ? Math.min(JV, Math.max(0, YV - .2)) : JV
+        }(this.cZ, JV, yV, UV), eV);
+        if (UV - pV < .001) return this.distance = -1, 1;
+        this.distance = pV;
+        for (let QV = 0; QV < 3; QV++) YV[QV] = JV[QV] + yV[QV] * pV;
+        return pV / UV
       }
-      placeGoal(MM, rM) {
-        const iM = this.settings.offset;
-        let OM = iM[0],
-          SM = iM[2];
+      placeGoal(VV, eV) {
+        const xV = this.settings.offset;
+        let JV = xV[0],
+          YV = xV[2];
         if ("target" === this.settings.offsetSpace) {
-          const MM = this.targets.heading(rM),
-            jM = Math.cos(MM),
-            aM = Math.sin(MM);
-          OM = iM[0] * jM + iM[2] * aM, SM = -iM[0] * aM + iM[2] * jM
+          const VV = this.targets.heading(eV),
+            UV = Math.cos(VV),
+            yV = Math.sin(VV);
+          JV = xV[0] * UV + xV[2] * yV, YV = -xV[0] * yV + xV[2] * UV
         }
-        this.goal[0] = MM[0] + OM, this.goal[1] = MM[1] + iM[1], this.goal[2] = MM[2] + SM
+        this.goal[0] = VV[0] + JV, this.goal[1] = VV[1] + xV[1], this.goal[2] = VV[2] + YV
       }
     }
-    class YM {
-      constructor(MM, rM, iM, OM) {
-        var SM, jM;
-        this.settings = MM, this.uL = rM, this.sampler = void 0, this.base = void 0, this.resolveTarget = void 0, this.elapsedMs = 0, this.sampler = MM.keyframes.length > 0 ? new pM(MM.keyframes, null === (SM = MM.smooth) || void 0 === SM || SM, null !== (jM = MM.loop) && void 0 !== jM && jM) : null, this.base = (0, nM.c)(OM, (0, nM.h)()), this.resolveTarget = MM => iM.aimPoint(MM)
+    class cV {
+      constructor(VV, eV, xV, JV) {
+        var YV, UV;
+        this.settings = VV, this.cZ = eV, this.sampler = void 0, this.base = void 0, this.resolveTarget = void 0, this.elapsedMs = 0, this.sampler = VV.keyframes.length > 0 ? new WV(VV.keyframes, null === (YV = VV.smooth) || void 0 === YV || YV, null !== (UV = VV.loop) && void 0 !== UV && UV) : null, this.base = (0, QV.g)(JV, (0, QV.l)()), this.resolveTarget = VV => xV.aimPoint(VV)
       }
-      update(MM, rM, iM) {
-        this.elapsedMs += MM;
-        const OM = HM(this.settings, this.uL);
-        this.sampler ? this.sampler.sample(this.elapsedMs, this.resolveTarget, OM, this.base) : this.base.fov = OM, (0, nM.d)(this.base.position, iM.position), iM.fov = this.base.fov, rM.apply(this.base, iM)
+      update(VV, eV, xV) {
+        this.elapsedMs += VV;
+        const JV = rV(this.settings, this.cZ);
+        this.sampler ? this.sampler.sample(this.elapsedMs, this.resolveTarget, JV, this.base) : this.base.fov = JV, (0, QV.h)(this.base.position, xV.position), xV.fov = this.base.fov, eV.apply(this.base, xV)
       }
-      continueFrom(MM) {
-        MM instanceof YM && (0, OM.y)(MM.settings.keyframes, this.settings.keyframes) && (this.elapsedMs = MM.elapsedMs, (0, nM.c)(MM.base, this.base))
+      continueFrom(VV) {
+        VV instanceof cV && (0, JV.q)(VV.settings.keyframes, this.settings.keyframes) && (this.elapsedMs = VV.elapsedMs, (0, QV.g)(VV.base, this.base))
       }
-      reset(MM) {
-        kM(this.base, MM), Number.isFinite(this.elapsedMs) || (this.elapsedMs = 0)
+      reset(VV) {
+        iV(this.base, VV), Number.isFinite(this.elapsedMs) || (this.elapsedMs = 0)
       }
     }
 
-    function NM(MM, rM) {
-      return (0, OM.C)(MM, rM)
+    function hV(VV, eV) {
+      return (0, JV.s)(VV, eV)
     }
-    class AM {
-      constructor(MM, rM, iM) {
-        var OM;
-        this.settings = MM, this.uL = rM, this.pose = void 0, this.lastGoodPose = void 0, this.look = void 0, this.targets = void 0, this.mode = void 0, this.warnedNonFinite = !1;
-        const SM = null !== iM && iM.settings.mode === MM.mode,
-          jM = SM ? iM.pose : rM.getDefaultPose();
-        this.pose = (0, nM.c)(jM, (0, nM.h)()), this.lastGoodPose = (0, nM.c)(SM ? iM.lastGoodPose : jM, (0, nM.h)()), this.look = new dM(MM.playerLook), this.targets = null !== (OM = null === iM || void 0 === iM ? void 0 : iM.targets) && void 0 !== OM ? OM : new sM(rM);
-        const aM = (0, nM.c)(jM, (0, nM.h)());
-        SM && iM.look.unapply(aM, aM), this.mode = function(MM, rM, iM, OM) {
-          switch (MM.mode) {
+    class lV {
+      constructor(VV, eV, xV) {
+        var JV;
+        this.settings = VV, this.cZ = eV, this.pose = void 0, this.lastGoodPose = void 0, this.look = void 0, this.targets = void 0, this.mode = void 0, this.warnedNonFinite = !1;
+        const YV = null !== xV && xV.settings.mode === VV.mode,
+          UV = YV ? xV.pose : eV.getDefaultPose();
+        this.pose = (0, QV.g)(UV, (0, QV.l)()), this.lastGoodPose = (0, QV.g)(YV ? xV.lastGoodPose : UV, (0, QV.l)()), this.look = new EV(VV.playerLook), this.targets = null !== (JV = null === xV || void 0 === xV ? void 0 : xV.targets) && void 0 !== JV ? JV : new gV(eV);
+        const yV = (0, QV.g)(UV, (0, QV.l)());
+        YV && xV.look.unapply(yV, yV), this.mode = function(VV, eV, xV, JV) {
+          switch (VV.mode) {
             case "fixed":
-              return new oM(MM, rM, iM, OM);
+              return new aV(VV, eV, xV, JV);
             case "follow":
-              return new fM(MM, rM, iM, OM);
+              return new oV(VV, eV, xV, JV);
             case "path":
-              return new YM(MM, rM, iM, OM);
+              return new cV(VV, eV, xV, JV);
             case "frame":
-              return new JM(MM, rM, iM, OM)
+              return new bV(VV, eV, xV, JV)
           }
-        }(MM, rM, this.targets, aM), SM && (this.look.continueFrom(iM.look), this.mode.continueFrom(iM.mode))
+        }(VV, eV, this.targets, yV), YV && (this.look.continueFrom(xV.look), this.mode.continueFrom(xV.mode))
       }
-      update(MM, rM) {
-        return this.look.update(MM, rM), this.mode.update(MM, this.look, this.pose), (0, nM.j)(this.pose) ? (0, nM.c)(this.pose, this.lastGoodPose) : (this.warnedNonFinite || (console.warn("Scripted camera produced a non-finite pose; holding the last good one"), this.warnedNonFinite = !0), (0, nM.c)(this.lastGoodPose, this.pose), this.mode.reset((0, nM.j)(this.lastGoodPose) ? this.lastGoodPose : this.uL.getDefaultPose())), this.pose
+      update(VV, eV) {
+        return this.look.update(VV, eV), this.mode.update(VV, this.look, this.pose), (0, QV.n)(this.pose) ? (0, QV.g)(this.pose, this.lastGoodPose) : (this.warnedNonFinite || (console.warn("Scripted camera produced a non-finite pose; holding the last good one"), this.warnedNonFinite = !0), (0, QV.g)(this.lastGoodPose, this.pose), this.mode.reset((0, QV.n)(this.lastGoodPose) ? this.lastGoodPose : this.cZ.getDefaultPose())), this.pose
       }
     }
 
-    function xM(MM) {
-      return [0, 0, MM[2], MM[3]]
+    function LV(VV) {
+      return [0, 0, VV[2], VV[3]]
     }
-    class vM {
-      constructor(MM) {
-        this.uL = MM, this.settings = {
+    class fV {
+      constructor(VV) {
+        this.cZ = VV, this.settings = {
           mode: "default"
-        }, this.pending = null, this.fade = new PM, this.shot = null, this.blend = null, this.mixed = (0, nM.h)(), this.output = (0, nM.h)(), this.hasOutput = !1, this.loadingPositions = [], this.loadingSlots = Array.from({
+        }, this.pending = null, this.fade = new pV, this.shot = null, this.blend = null, this.mixed = (0, QV.l)(), this.output = (0, QV.l)(), this.hasOutput = !1, this.loadingPositions = [], this.loadingSlots = Array.from({
           length: 3
         }, (() => [0, 0, 0]))
       }
-      setSettings(MM) {
-        const rM = (0, QM.d)(MM);
-        if ((0, OM.y)(rM, this.pending ? this.pending.settings : this.settings)) return;
-        const iM = NM(this.settings, rM);
-        if (void 0 !== rM.transition && !iM) return this.pending = {
-          settings: rM,
-          shot: "default" === rM.mode ? null : new AM(rM, this.uL, null)
-        }, void this.fade.fadeOut(rM.transition);
-        const SM = null !== this.pending;
-        this.pending = null, !SM && iM || this.fade.fadeIn(OM.q.minTransitionFadeMs), this.show(rM, !1)
+      setSettings(VV) {
+        const eV = (0, nV.e)(VV);
+        if ((0, JV.q)(eV, this.pending ? this.pending.settings : this.settings)) return;
+        const xV = hV(this.settings, eV);
+        if (void 0 !== eV.transition && !xV) return this.pending = {
+          settings: eV,
+          shot: "default" === eV.mode ? null : new lV(eV, this.cZ, null)
+        }, void this.fade.fadeOut(eV.transition);
+        const YV = null !== this.pending;
+        this.pending = null, !YV && xV || this.fade.fadeIn(JV.k.minTransitionFadeMs), this.show(eV, !1)
       }
-      show(MM, rM) {
-        var iM, SM;
-        if ((0, OM.y)(MM, this.settings)) return;
-        const aM = !rM && NM(this.settings, MM);
-        this.settings = MM;
-        const PM = null !== this.blend && this.blend.elapsedMs > 0,
-          QM = (0, nM.c)(this.hasOutput ? this.output : this.uL.getDefaultPose(), (0, nM.h)());
-        if (this.shot = "default" === MM.mode ? null : new AM(MM, this.uL, rM ? null : this.shot), aM) return;
-        const zM = rM || !this.shot && !this.hasOutput ? 0 : null !== (iM = MM.blendInMs) && void 0 !== iM ? iM : 0;
-        if (zM <= 0) return void(this.blend = null);
-        const LM = (0, jM.o)(null !== (SM = MM.blendEasing) && void 0 !== SM ? SM : "easeInOut");
+      show(VV, eV) {
+        var xV, YV;
+        if ((0, JV.q)(VV, this.settings)) return;
+        const yV = !eV && hV(this.settings, VV);
+        this.settings = VV;
+        const pV = null !== this.blend && this.blend.elapsedMs > 0,
+          nV = (0, QV.g)(this.hasOutput ? this.output : this.cZ.getDefaultPose(), (0, QV.l)());
+        if (this.shot = "default" === VV.mode ? null : new lV(VV, this.cZ, eV ? null : this.shot), yV) return;
+        const wV = eV || !this.shot && !this.hasOutput ? 0 : null !== (xV = VV.blendInMs) && void 0 !== xV ? xV : 0;
+        if (wV <= 0) return void(this.blend = null);
+        const ZV = (0, UV.m)(null !== (YV = VV.blendEasing) && void 0 !== YV ? YV : "easeInOut");
         this.blend = {
-          from: QM,
+          from: nV,
           fromScripted: this.hasOutput,
           headingDelta: NaN,
           elapsedMs: 0,
-          durationMs: zM,
-          easing: PM ? xM(LM) : LM
+          durationMs: wV,
+          easing: pV ? LV(ZV) : ZV
         }
       }
       getSettings() {
@@ -978,66 +978,66 @@ export const modules = {
       isActive() {
         return null !== this.shot || null !== this.blend
       }
-      update(MM, rM) {
-        const iM = Number.isFinite(MM) && MM > 0 ? MM : 0;
-        if (this.fade.advance(iM) && null !== this.pending) {
+      update(VV, eV) {
+        const xV = Number.isFinite(VV) && VV > 0 ? VV : 0;
+        if (this.fade.advance(xV) && null !== this.pending) {
           const {
-            settings: MM
+            settings: VV
           } = this.pending;
-          this.pending = null, this.show(MM, !0)
+          this.pending = null, this.show(VV, !0)
         }
         this.loadingPositions.length = 0;
-        const OM = this.pending;
-        if (null !== OM && void 0 !== OM && OM.shot) {
-          const MM = "path" === OM.settings.mode ? 0 : iM;
-          this.noteLoadingPosition(OM.shot.update(MM, nM.b).position)
+        const JV = this.pending;
+        if (null !== JV && void 0 !== JV && JV.shot) {
+          const VV = "path" === JV.settings.mode ? 0 : xV;
+          this.noteLoadingPosition(JV.shot.update(VV, QV.e).position)
         }
         if (!this.isActive()) return this.hasOutput = !1, null;
-        const aM = this.shot ? this.shot.update(iM, rM) : this.uL.getDefaultPose();
-        this.shot && this.noteLoadingPosition(aM.position);
-        const PM = this.blend;
-        if (!PM) return this.writeOutput(aM);
-        PM.elapsedMs += iM;
-        const QM = Math.min(1, PM.elapsedMs / PM.durationMs);
-        if (PM.headingDelta = Number.isFinite(PM.headingDelta) ? (0, SM.w)(PM.headingDelta, aM.heading - PM.from.heading) : (0, SM.v)(PM.from.heading, aM.heading), (0, nM.n)(PM.from, aM, PM.headingDelta, (0, jM.k)(QM, PM.easing), this.mixed), QM >= 1) {
+        const yV = this.shot ? this.shot.update(xV, eV) : this.cZ.getDefaultPose();
+        this.shot && this.noteLoadingPosition(yV.position);
+        const pV = this.blend;
+        if (!pV) return this.writeOutput(yV);
+        pV.elapsedMs += xV;
+        const nV = Math.min(1, pV.elapsedMs / pV.durationMs);
+        if (pV.headingDelta = Number.isFinite(pV.headingDelta) ? (0, YV.z)(pV.headingDelta, yV.heading - pV.from.heading) : (0, YV.y)(pV.from.heading, yV.heading), (0, QV.s)(pV.from, yV, pV.headingDelta, (0, UV.l)(nV, pV.easing), this.mixed), nV >= 1) {
           if (this.blend = null, !this.shot) return this.hasOutput = !1, null
-        } else PM.fromScripted && this.noteLoadingPosition(PM.from.position);
+        } else pV.fromScripted && this.noteLoadingPosition(pV.from.position);
         return this.writeOutput(this.mixed)
       }
-      noteLoadingPosition(MM) {
-        if (MM.every(Number.isFinite)) {
-          const rM = this.loadingPositions;
-          rM.push((0, nM.d)(MM, this.loadingSlots[rM.length]))
+      noteLoadingPosition(VV) {
+        if (VV.every(Number.isFinite)) {
+          const eV = this.loadingPositions;
+          eV.push((0, QV.h)(VV, this.loadingSlots[eV.length]))
         }
       }
-      writeOutput(MM) {
-        const rM = this.output;
-        (0, nM.j)(MM) ? (0, nM.c)(MM, rM) : this.hasOutput || (0, nM.c)(this.uL.getDefaultPose(), rM), rM.pitch = (0, SM.h)(rM.pitch);
-        const iM = this.uL.getDefaultFov(),
-          jM = Number.isFinite(iM) && iM > 0 && iM < 180,
-          aM = jM ? Math.min(OM.q.minFov, iM) : OM.q.minFov,
-          PM = jM ? Math.max(OM.q.maxFov, iM) : OM.q.maxFov;
-        return rM.fov = Number.isFinite(rM.fov) ? Math.min(PM, Math.max(aM, rM.fov)) : PM, this.hasOutput = !0, rM
+      writeOutput(VV) {
+        const eV = this.output;
+        (0, QV.n)(VV) ? (0, QV.g)(VV, eV) : this.hasOutput || (0, QV.g)(this.cZ.getDefaultPose(), eV), eV.pitch = (0, YV.m)(eV.pitch);
+        const xV = this.cZ.getDefaultFov(),
+          UV = Number.isFinite(xV) && xV > 0 && xV < 180,
+          yV = UV ? Math.min(JV.k.minFov, xV) : JV.k.minFov,
+          pV = UV ? Math.max(JV.k.maxFov, xV) : JV.k.maxFov;
+        return eV.fov = Number.isFinite(eV.fov) ? Math.min(pV, Math.max(yV, eV.fov)) : pV, this.hasOutput = !0, eV
       }
     }
   },
-  40253: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => SM,
-      c: () => PM,
-      d: () => aM,
-      h: () => jM,
-      j: () => QM,
-      k: () => nM,
-      n: () => zM
+  40397: (VV, eV, xV) => {
+    xV.d(eV, {
+      e: () => YV,
+      g: () => pV,
+      h: () => yV,
+      l: () => UV,
+      n: () => nV,
+      r: () => QV,
+      s: () => wV
     });
-    var OM = iM(40261);
-    const SM = {
-      PD: 0,
-      nD: 0
+    var JV = xV(40405);
+    const YV = {
+      uR: 0,
+      eD: 0
     };
 
-    function jM() {
+    function UV() {
       return {
         position: [0, 0, 0],
         heading: 0,
@@ -1046,186 +1046,186 @@ export const modules = {
       }
     }
 
-    function aM(MM, rM) {
-      return rM[0] = MM[0], rM[1] = MM[1], rM[2] = MM[2], rM
+    function yV(VV, eV) {
+      return eV[0] = VV[0], eV[1] = VV[1], eV[2] = VV[2], eV
     }
 
-    function PM(MM, rM) {
-      return aM(MM.position, rM.position), rM.heading = MM.heading, rM.pitch = MM.pitch, rM.fov = MM.fov, rM
+    function pV(VV, eV) {
+      return yV(VV.position, eV.position), eV.heading = VV.heading, eV.pitch = VV.pitch, eV.fov = VV.fov, eV
     }
 
-    function nM(MM, rM) {
-      return Array.isArray(MM) && MM.length === rM && MM.every(Number.isFinite)
+    function QV(VV, eV) {
+      return Array.isArray(VV) && VV.length === eV && VV.every(Number.isFinite)
     }
 
-    function QM(MM) {
-      return nM(MM.position, 3) && Number.isFinite(MM.heading) && Number.isFinite(MM.pitch) && Number.isFinite(MM.fov)
+    function nV(VV) {
+      return QV(VV.position, 3) && Number.isFinite(VV.heading) && Number.isFinite(VV.pitch) && Number.isFinite(VV.fov)
     }
 
-    function zM(MM, rM, iM, SM, jM) {
-      for (let OM = 0; OM < 3; OM++) jM.position[OM] = MM.position[OM] + (rM.position[OM] - MM.position[OM]) * SM;
-      return jM.heading = (0, OM.s)(MM.heading + iM * SM), jM.pitch = MM.pitch + (rM.pitch - MM.pitch) * SM, jM.fov = MM.fov + (rM.fov - MM.fov) * SM, jM
+    function wV(VV, eV, xV, YV, UV) {
+      for (let JV = 0; JV < 3; JV++) UV.position[JV] = VV.position[JV] + (eV.position[JV] - VV.position[JV]) * YV;
+      return UV.heading = (0, JV.w)(VV.heading + xV * YV), UV.pitch = VV.pitch + (eV.pitch - VV.pitch) * YV, UV.fov = VV.fov + (eV.fov - VV.fov) * YV, UV
     }
   },
-  40285: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => bM,
-      g: () => HM
+  40427: (VV, eV, xV) => {
+    xV.d(eV, {
+      e: () => AV,
+      f: () => rV
     });
-    var OM = iM(40283),
-      SM = iM(40253);
-    const jM = OM.j,
-      aM = OM.s,
-      PM = OM.n;
+    var JV = xV(40425),
+      YV = xV(40397);
+    const UV = JV.g,
+      yV = JV.l,
+      pV = JV.i;
 
-    function nM(MM, rM, iM, OM) {
-      return Number.isFinite(MM) ? Math.min(iM, Math.max(rM, MM)) : OM
+    function QV(VV, eV, xV, JV) {
+      return Number.isFinite(VV) ? Math.min(xV, Math.max(eV, VV)) : JV
     }
 
-    function QM(MM, rM, iM) {
-      return void 0 !== MM && Number.isFinite(MM) ? Math.min(iM, Math.max(rM, MM)) : void 0
+    function nV(VV, eV, xV) {
+      return void 0 !== VV && Number.isFinite(VV) ? Math.min(xV, Math.max(eV, VV)) : void 0
     }
 
-    function zM(MM) {
-      const rM = OM.q.maxCoordinate;
-      return [Math.min(rM, Math.max(-rM, MM[0])), Math.min(rM, Math.max(-rM, MM[1])), Math.min(rM, Math.max(-rM, MM[2]))]
+    function wV(VV) {
+      const eV = JV.k.maxCoordinate;
+      return [Math.min(eV, Math.max(-eV, VV[0])), Math.min(eV, Math.max(-eV, VV[1])), Math.min(eV, Math.max(-eV, VV[2]))]
     }
 
-    function LM(MM) {
-      return "string" === typeof MM ? MM : (0, SM.k)(MM, 3) ? zM(MM) : void 0
+    function ZV(VV) {
+      return "string" === typeof VV ? VV : (0, YV.r)(VV, 3) ? wV(VV) : void 0
     }
-    const mM = new RegExp(OM.v);
+    const vV = new RegExp(JV.o);
 
-    function HM(MM) {
-      return "string" === typeof MM && mM.test(MM)
+    function rV(VV) {
+      return "string" === typeof VV && vV.test(VV)
     }
 
-    function hM(MM) {
-      const rM = [];
-      if (!Array.isArray(MM)) return rM;
-      for (const iM of MM.slice(0, OM.q.maxFrameTargets)) {
-        const MM = LM(iM);
-        void 0 === MM || "string" === typeof MM && !HM(MM) || rM.push(MM)
+    function kV(VV) {
+      const eV = [];
+      if (!Array.isArray(VV)) return eV;
+      for (const xV of VV.slice(0, JV.k.maxFrameTargets)) {
+        const VV = ZV(xV);
+        void 0 === VV || "string" === typeof VV && !rV(VV) || eV.push(VV)
       }
-      return rM
+      return eV
     }
 
-    function JM(MM) {
-      if (!(0, SM.k)(MM, 3)) return;
-      const rM = Math.max(Math.abs(MM[0]), Math.abs(MM[1]), Math.abs(MM[2])),
-        iM = Math.hypot(MM[0] / rM, MM[1] / rM, MM[2] / rM);
-      return 0 === rM || rM * iM < OM.q.minDirectionLength ? void 0 : [MM[0] / rM / iM, MM[1] / rM / iM, MM[2] / rM / iM]
+    function bV(VV) {
+      if (!(0, YV.r)(VV, 3)) return;
+      const eV = Math.max(Math.abs(VV[0]), Math.abs(VV[1]), Math.abs(VV[2])),
+        xV = Math.hypot(VV[0] / eV, VV[1] / eV, VV[2] / eV);
+      return 0 === eV || eV * xV < JV.k.minDirectionLength ? void 0 : [VV[0] / eV / xV, VV[1] / eV / xV, VV[2] / eV / xV]
     }
 
-    function dM(MM) {
-      if (void 0 !== MM) return "string" === typeof MM ? jM.includes(MM) ? MM : void 0 : (0, SM.k)(MM, 4) ? [nM(MM[0], 0, 1, 0), nM(MM[1], OM.q.minEasingY, OM.q.maxEasingY, 0), nM(MM[2], 0, 1, 1), nM(MM[3], OM.q.minEasingY, OM.q.maxEasingY, 1)] : "linear"
+    function EV(VV) {
+      if (void 0 !== VV) return "string" === typeof VV ? UV.includes(VV) ? VV : void 0 : (0, YV.r)(VV, 4) ? [QV(VV[0], 0, 1, 0), QV(VV[1], JV.k.minEasingY, JV.k.maxEasingY, 0), QV(VV[2], 0, 1, 1), QV(VV[3], JV.k.minEasingY, JV.k.maxEasingY, 1)] : "linear"
     }
 
-    function yM(MM) {
-      if (MM) return {
-        maxYaw: nM(MM.maxYaw, 0, OM.q.maxPlayerLook, 0),
-        maxPitch: nM(MM.maxPitch, 0, OM.q.maxPlayerLook, 0),
-        returnMs: QM(MM.returnMs, 0, OM.q.maxReturnMs)
+    function BV(VV) {
+      if (VV) return {
+        maxYaw: QV(VV.maxYaw, 0, JV.k.maxPlayerLook, 0),
+        maxPitch: QV(VV.maxPitch, 0, JV.k.maxPlayerLook, 0),
+        returnMs: nV(VV.returnMs, 0, JV.k.maxReturnMs)
       }
     }
-    const lM = new RegExp(OM.e);
+    const jV = new RegExp(JV.e);
 
-    function EM(MM) {
-      var rM;
-      if ("object" !== typeof MM || null === MM) return;
-      const iM = OM.q.maxTransitionMs,
-        SM = OM.q.minTransitionFadeMs;
+    function qV(VV) {
+      var eV;
+      if ("object" !== typeof VV || null === VV) return;
+      const xV = JV.k.maxTransitionMs,
+        YV = JV.k.minTransitionFadeMs;
       return {
-        colour: "string" === typeof MM.colour && lM.test(MM.colour) ? MM.colour : OM.i,
-        outMs: nM(MM.outMs, SM, iM, SM),
-        holdMs: nM(null !== (rM = MM.holdMs) && void 0 !== rM ? rM : 0, 0, iM, 0),
-        inMs: nM(MM.inMs, SM, iM, SM)
+        colour: "string" === typeof VV.colour && jV.test(VV.colour) ? VV.colour : JV.f,
+        outMs: QV(VV.outMs, YV, xV, YV),
+        holdMs: QV(null !== (eV = VV.holdMs) && void 0 !== eV ? eV : 0, 0, xV, 0),
+        inMs: QV(VV.inMs, YV, xV, YV)
       }
     }
 
-    function UM(MM) {
-      return !0 === MM || void 0
+    function tV(VV) {
+      return !0 === VV || void 0
     }
 
-    function GM(MM) {
-      if ("object" !== typeof MM || null === MM) return !1;
-      const rM = MM.lookAt;
-      return Number.isFinite(MM.timeMs) && (0, SM.k)(MM.position, 3) && (void 0 === rM || "string" === typeof rM || (0, SM.k)(rM, 3))
+    function FV(VV) {
+      if ("object" !== typeof VV || null === VV) return !1;
+      const eV = VV.lookAt;
+      return Number.isFinite(VV.timeMs) && (0, YV.r)(VV.position, 3) && (void 0 === eV || "string" === typeof eV || (0, YV.r)(eV, 3))
     }
 
-    function CM(MM) {
+    function TV(VV) {
       return {
-        ...MM,
-        timeMs: nM(MM.timeMs, 0, OM.q.maxPathMs, 0),
-        position: zM(MM.position),
-        lookAt: LM(MM.lookAt),
-        lookDirection: JM(MM.lookDirection),
-        fov: QM(MM.fov, OM.q.minFov, OM.q.maxFov),
-        easing: dM(MM.easing)
+        ...VV,
+        timeMs: QV(VV.timeMs, 0, JV.k.maxPathMs, 0),
+        position: wV(VV.position),
+        lookAt: ZV(VV.lookAt),
+        lookDirection: bV(VV.lookDirection),
+        fov: nV(VV.fov, JV.k.minFov, JV.k.maxFov),
+        easing: EV(VV.easing)
       }
     }
 
-    function eM(MM) {
-      const rM = [];
-      if (!Array.isArray(MM)) return rM;
-      for (const iM of MM.slice(0, OM.q.maxKeyframes)) {
-        if (!GM(iM)) continue;
-        const MM = CM(iM);
-        (0 === rM.length || MM.timeMs > rM[rM.length - 1].timeMs) && rM.push(MM)
+    function PV(VV) {
+      const eV = [];
+      if (!Array.isArray(VV)) return eV;
+      for (const xV of VV.slice(0, JV.k.maxKeyframes)) {
+        if (!FV(xV)) continue;
+        const VV = TV(xV);
+        (0 === eV.length || VV.timeMs > eV[eV.length - 1].timeMs) && eV.push(VV)
       }
-      return rM
+      return eV
     }
 
-    function bM(MM) {
-      if ("object" !== typeof MM || null === MM) return {
+    function AV(VV) {
+      if ("object" !== typeof VV || null === VV) return {
         mode: "default"
       };
-      const rM = {
-          blendInMs: QM(MM.blendInMs, 0, OM.q.maxBlendInMs),
-          blendEasing: dM(MM.blendEasing),
-          transition: EM(MM.transition),
-          letterbox: UM(MM.letterbox),
-          hideHud: UM(MM.hideHud)
+      const eV = {
+          blendInMs: nV(VV.blendInMs, 0, JV.k.maxBlendInMs),
+          blendEasing: EV(VV.blendEasing),
+          transition: qV(VV.transition),
+          letterbox: tV(VV.letterbox),
+          hideHud: tV(VV.hideHud)
         },
-        iM = {
+        xV = {
           mode: "default",
-          ...rM
+          ...eV
         };
-      if ("default" === MM.mode || "fixed" === MM.mode && !(0, SM.k)(MM.position, 3)) return iM;
-      const jM = {
-        ...rM,
-        fov: QM(MM.fov, OM.q.minFov, OM.q.maxFov),
-        playerFacing: (mM = MM.playerFacing, aM.includes(mM) ? mM : void 0),
-        playerLook: yM(MM.playerLook)
+      if ("default" === VV.mode || "fixed" === VV.mode && !(0, YV.r)(VV.position, 3)) return xV;
+      const UV = {
+        ...eV,
+        fov: nV(VV.fov, JV.k.minFov, JV.k.maxFov),
+        playerFacing: (vV = VV.playerFacing, yV.includes(vV) ? vV : void 0),
+        playerLook: BV(VV.playerLook)
       };
-      var mM, HM, lM;
-      switch (MM.mode) {
+      var vV, rV, jV;
+      switch (VV.mode) {
         case "fixed":
           return {
-            ...MM, ...jM, position: zM(MM.position), lookAt: LM(MM.lookAt), lookDirection: JM(MM.lookDirection)
+            ...VV, ...UV, position: wV(VV.position), lookAt: ZV(VV.lookAt), lookDirection: bV(VV.lookDirection)
           };
         case "follow":
           return {
-            ...MM, ...jM, target: "string" === typeof MM.target ? MM.target : void 0, anchor: (lM = MM.anchor, PM.includes(lM) ? lM : void 0), lookAt: LM(MM.lookAt), offset: (HM = MM.offset, Array.isArray(HM) ? [nM(HM[0], -OM.q.maxOffset, OM.q.maxOffset, 0), nM(HM[1], -OM.q.maxOffset, OM.q.maxOffset, 0), nM(HM[2], -OM.q.maxOffset, OM.q.maxOffset, 0)] : [0, 0, 0]), lookDirection: JM(MM.lookDirection), smoothMs: QM(MM.smoothMs, 0, OM.q.maxSmoothMs)
+            ...VV, ...UV, target: "string" === typeof VV.target ? VV.target : void 0, anchor: (jV = VV.anchor, pV.includes(jV) ? jV : void 0), lookAt: ZV(VV.lookAt), offset: (rV = VV.offset, Array.isArray(rV) ? [QV(rV[0], -JV.k.maxOffset, JV.k.maxOffset, 0), QV(rV[1], -JV.k.maxOffset, JV.k.maxOffset, 0), QV(rV[2], -JV.k.maxOffset, JV.k.maxOffset, 0)] : [0, 0, 0]), lookDirection: bV(VV.lookDirection), smoothMs: nV(VV.smoothMs, 0, JV.k.maxSmoothMs)
           };
         case "path":
           return {
-            ...MM, ...jM, keyframes: eM(MM.keyframes)
+            ...VV, ...UV, keyframes: PV(VV.keyframes)
           };
         case "frame":
           return {
-            ...MM, ...jM, targets: hM(MM.targets), viewHeading: QM(MM.viewHeading, -OM.q.maxFrameHeading, OM.q.maxFrameHeading), viewElevation: QM(MM.viewElevation, 0, OM.q.maxFrameElevation), padding: QM(MM.padding, 0, OM.q.maxFrameDistance), closestDistance: QM(MM.closestDistance, 0, OM.q.maxFrameDistance), furthestDistance: QM(MM.furthestDistance, 0, OM.q.maxFrameDistance), smoothMs: QM(MM.smoothMs, 0, OM.q.maxSmoothMs)
+            ...VV, ...UV, targets: kV(VV.targets), viewHeading: nV(VV.viewHeading, -JV.k.maxFrameHeading, JV.k.maxFrameHeading), viewElevation: nV(VV.viewElevation, 0, JV.k.maxFrameElevation), padding: nV(VV.padding, 0, JV.k.maxFrameDistance), closestDistance: nV(VV.closestDistance, 0, JV.k.maxFrameDistance), furthestDistance: nV(VV.furthestDistance, 0, JV.k.maxFrameDistance), smoothMs: nV(VV.smoothMs, 0, JV.k.maxSmoothMs)
           };
         default:
-          return iM
+          return xV
       }
     }
   },
-  40312: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => OM
+  40455: (VV, eV, xV) => {
+    xV.d(eV, {
+      b: () => JV
     });
-    const OM = {
+    const JV = {
       message: [{
         translationKey: "general:bunnyHoppingDisabled"
       }],
@@ -1233,22 +1233,22 @@ export const modules = {
       type: "Error"
     }
   },
-  39689: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => PM
+  39849: (VV, eV, xV) => {
+    xV.d(eV, {
+      c: () => pV
     });
-    var OM = iM(1229);
+    var JV = xV(1252);
 
-    function SM(MM) {
-      const rM = /(\d*\.?\d+)px/.exec(MM);
-      return rM ? Number(rM[1]) : null
+    function YV(VV) {
+      const eV = /(\d*\.?\d+)px/.exec(VV);
+      return eV ? Number(eV[1]) : null
     }
 
-    function jM(MM) {
-      return MM.split(/[\s,]+/).pop()
+    function UV(VV) {
+      return VV.split(/[\s,]+/).pop()
     }
-    let aM = !1;
-    const PM = {
+    let yV = !1;
+    const pV = {
       debug: !1,
       align: "center",
       vAlign: "middle",
@@ -1259,415 +1259,415 @@ export const modules = {
       font: "Arial",
       lineHeight: null,
       justify: !1,
-      drawText: function(MM, rM, OM, PM, nM, QM) {
-        if (nM <= 0 || QM <= 0 || this.fontSize <= 0) return {
+      drawText: function(VV, eV, JV, pV, QV, nV) {
+        if (QV <= 0 || nV <= 0 || this.fontSize <= 0) return {
           height: 0
         };
         const {
-          fontStyle: zM,
-          fontVariant: LM,
-          fontWeight: mM,
-          fontSize: HM,
-          font: hM
-        } = this, JM = [zM, LM, mM, `${HM}px`, hM].filter(Boolean).join(" "), dM = [
-          [mM, `${HM}px`, jM(hM)].filter(Boolean).join(" "), `${HM}px sans-serif`
-        ], yM = MM.font, lM = function(MM, rM, iM) {
-          for (const OM of rM) {
-            MM.font = OM;
-            const rM = SM(MM.font),
-              aM = jM(OM);
-            if (null !== rM && Math.abs(rM - iM) <= .5 && MM.font.toLowerCase().includes(aM.toLowerCase())) return OM
+          fontStyle: wV,
+          fontVariant: ZV,
+          fontWeight: vV,
+          fontSize: rV,
+          font: kV
+        } = this, bV = [wV, ZV, vV, `${rV}px`, kV].filter(Boolean).join(" "), EV = [
+          [vV, `${rV}px`, UV(kV)].filter(Boolean).join(" "), `${rV}px sans-serif`
+        ], BV = VV.font, jV = function(VV, eV, xV) {
+          for (const JV of eV) {
+            VV.font = JV;
+            const eV = YV(VV.font),
+              yV = UV(JV);
+            if (null !== eV && Math.abs(eV - xV) <= .5 && VV.font.toLowerCase().includes(yV.toLowerCase())) return JV
           }
           return null
-        }(MM, [JM, ...dM], HM);
-        lM !== JM && function(MM, rM, OM) {
-          aM || (aM = !0, Promise.resolve().then((() => iM(1329))).then((iM => {
+        }(VV, [bV, ...EV], rV);
+        jV !== bV && function(VV, eV, JV) {
+          yV || (yV = !0, Promise.resolve().then((() => xV(1353))).then((xV => {
             let {
-              CJ: SM
-            } = iM;
-            SM(new Error("A canvas didn't take canvasTxt's font"), {
-              font: MM,
-              ML: rM,
-              drawnWith: null !== OM && void 0 !== OM ? OM : "the kept font, scaled"
+              lb: YV
+            } = xV;
+            YV(new Error("A canvas didn't take canvasTxt's font"), {
+              font: VV,
+              ZZ: eV,
+              drawnWith: null !== JV && void 0 !== JV ? JV : "the kept font, scaled"
             })
           })).catch((() => {})))
-        }(JM, yM, lM);
-        const EM = SM(MM.font);
-        if (null === lM && null !== EM && EM > 0) {
-          const iM = HM / EM;
-          MM.save();
+        }(bV, BV, jV);
+        const qV = YV(VV.font);
+        if (null === jV && null !== qV && qV > 0) {
+          const xV = rV / qV;
+          VV.save();
           try {
-            return MM.scale(iM, iM), {
-              height: this.drawLines(MM, rM, OM / iM, PM / iM, nM / iM, QM / iM, EM).height * iM
+            return VV.scale(xV, xV), {
+              height: this.drawLines(VV, eV, JV / xV, pV / xV, QV / xV, nV / xV, qV).height * xV
             }
           } finally {
-            MM.restore()
+            VV.restore()
           }
         }
-        return this.drawLines(MM, rM, OM, PM, nM, QM, HM)
+        return this.drawLines(VV, eV, JV, pV, QV, nV, rV)
       },
-      drawLines: function(MM, rM, iM, SM, jM, aM, PM) {
-        const nM = iM + jM,
-          QM = SM + aM;
-        let zM, LM = SM + aM / 2 + PM / 2;
-        "right" === this.align ? (zM = nM, MM.textAlign = "right") : "left" === this.align ? (zM = iM, MM.textAlign = "left") : (zM = iM + jM / 2, MM.textAlign = "center");
-        for (const OM of rM) {
-          MM.measureText(OM).width >= jM && (rM = rM.replace(OM, ""))
+      drawLines: function(VV, eV, xV, YV, UV, yV, pV) {
+        const QV = xV + UV,
+          nV = YV + yV;
+        let wV, ZV = YV + yV / 2 + pV / 2;
+        "right" === this.align ? (wV = QV, VV.textAlign = "right") : "left" === this.align ? (wV = xV, VV.textAlign = "left") : (wV = xV + UV / 2, VV.textAlign = "center");
+        for (const JV of eV) {
+          VV.measureText(JV).width >= UV && (eV = eV.replace(JV, ""))
         }
-        rM = (0, OM.U)(rM);
-        const mM = [],
-          HM = rM.split("\n"),
-          hM = this.justify ? MM.measureText("\u200a").width : 0;
-        HM.forEach((rM => {
-          let iM = MM.measureText(rM).width;
-          if (iM <= jM) mM.push(rM);
+        eV = (0, JV.O)(eV);
+        const vV = [],
+          rV = eV.split("\n"),
+          kV = this.justify ? VV.measureText("\u200a").width : 0;
+        rV.forEach((eV => {
+          let xV = VV.measureText(eV).width;
+          if (xV <= UV) vV.push(eV);
           else {
-            let OM = rM;
-            const SM = jM;
-            let aM, PM, nM;
-            for (iM = MM.measureText(OM).width; iM > SM;) {
-              for (aM = 0, PM = 0, nM = ""; PM < SM;) aM++, nM = OM.substr(0, aM), PM = MM.measureText(nM).width;
-              aM--, nM = nM.substr(0, aM);
-              const rM = aM;
-              if (" " !== OM.substr(aM, 1)) {
+            let JV = eV;
+            const YV = UV;
+            let yV, pV, QV;
+            for (xV = VV.measureText(JV).width; xV > YV;) {
+              for (yV = 0, pV = 0, QV = ""; pV < YV;) yV++, QV = JV.substr(0, yV), pV = VV.measureText(QV).width;
+              yV--, QV = QV.substr(0, yV);
+              const eV = yV;
+              if (" " !== JV.substr(yV, 1)) {
                 for (;
-                  " " !== OM.substr(aM, 1) && 0 !== aM;) aM--;
-                0 === aM && (aM = rM), nM = OM.substr(0, aM)
+                  " " !== JV.substr(yV, 1) && 0 !== yV;) yV--;
+                0 === yV && (yV = eV), QV = JV.substr(0, yV)
               }
-              nM = this.justify ? this.justifyLine(MM, nM, hM, "\u200a", jM) : nM, OM = OM.substr(aM), iM = MM.measureText(OM).width, mM.push(nM)
+              QV = this.justify ? this.justifyLine(VV, QV, kV, "\u200a", UV) : QV, JV = JV.substr(yV), xV = VV.measureText(JV).width, vV.push(QV)
             }
-            iM > 0 && mM.push(OM)
+            xV > 0 && vV.push(JV)
           }
         }));
-        const JM = this.lineHeight ? this.lineHeight : this.getTextHeight(MM, rM),
-          dM = JM * (mM.length - 1),
-          yM = dM / 2;
-        let lM = SM;
-        "top" === this.vAlign ? LM = SM + PM : "bottom" === this.vAlign ? (LM = QM - dM, lM = QM) : (lM = SM + aM / 2, LM -= yM), mM.forEach((rM => {
-          rM = rM.trim(), MM.fillText(rM, zM, LM), LM += JM
-        })), this.debug && (MM.lineWidth = 3, MM.strokeStyle = "#00909e", MM.strokeRect(iM, SM, jM, aM), MM.lineWidth = 2, MM.strokeStyle = "#f6d743", MM.beginPath(), MM.moveTo(zM, SM), MM.lineTo(zM, QM), MM.stroke(), MM.strokeStyle = "#ff6363", MM.beginPath(), MM.moveTo(iM, lM), MM.lineTo(nM, lM), MM.stroke());
+        const bV = this.lineHeight ? this.lineHeight : this.getTextHeight(VV, eV),
+          EV = bV * (vV.length - 1),
+          BV = EV / 2;
+        let jV = YV;
+        "top" === this.vAlign ? ZV = YV + pV : "bottom" === this.vAlign ? (ZV = nV - EV, jV = nV) : (jV = YV + yV / 2, ZV -= BV), vV.forEach((eV => {
+          eV = eV.trim(), VV.fillText(eV, wV, ZV), ZV += bV
+        })), this.debug && (VV.lineWidth = 3, VV.strokeStyle = "#00909e", VV.strokeRect(xV, YV, UV, yV), VV.lineWidth = 2, VV.strokeStyle = "#f6d743", VV.beginPath(), VV.moveTo(wV, YV), VV.lineTo(wV, nV), VV.stroke(), VV.strokeStyle = "#ff6363", VV.beginPath(), VV.moveTo(xV, jV), VV.lineTo(QV, jV), VV.stroke());
         return {
-          height: dM + JM
+          height: EV + bV
         }
       },
-      getTextHeight: function(MM, rM) {
-        const iM = MM.textBaseline;
-        MM.textBaseline = "bottom";
+      getTextHeight: function(VV, eV) {
+        const xV = VV.textBaseline;
+        VV.textBaseline = "bottom";
         const {
-          actualBoundingBoxAscent: OM
-        } = MM.measureText(rM);
-        return MM.textBaseline = iM, OM
+          actualBoundingBoxAscent: JV
+        } = VV.measureText(eV);
+        return VV.textBaseline = xV, JV
       },
-      justifyLine: function(MM, rM, iM, OM, SM) {
-        const jM = rM.trim(),
-          aM = MM.measureText(jM).width,
-          PM = jM.split(/\s+/).length - 1,
-          nM = Math.floor((SM - aM) / iM);
-        if (PM <= 0 || nM <= 0) return jM;
-        const QM = Math.floor(nM / PM);
-        let zM = nM - PM * QM,
-          LM = [];
-        for (let mM = 0; mM < QM; mM++) LM.push(OM);
-        LM = LM.join("");
-        return jM.replace(/\s+/g, (MM => {
-          const rM = zM > 0 ? LM + OM : LM;
-          return zM--, MM + rM
+      justifyLine: function(VV, eV, xV, JV, YV) {
+        const UV = eV.trim(),
+          yV = VV.measureText(UV).width,
+          pV = UV.split(/\s+/).length - 1,
+          QV = Math.floor((YV - yV) / xV);
+        if (pV <= 0 || QV <= 0) return UV;
+        const nV = Math.floor(QV / pV);
+        let wV = QV - pV * nV,
+          ZV = [];
+        for (let vV = 0; vV < nV; vV++) ZV.push(JV);
+        ZV = ZV.join("");
+        return UV.replace(/\s+/g, (VV => {
+          const eV = wV > 0 ? ZV + JV : ZV;
+          return wV--, VV + eV
         }))
       }
     }
   },
-  40181: (MM, rM, iM) => {
-    function OM(MM, rM) {
-      return rM.set(MM), rM
+  40335: (VV, eV, xV) => {
+    function JV(VV, eV) {
+      return eV.set(VV), eV
     }
-    iM.d(rM, {
-      e: () => OM
+    xV.d(eV, {
+      c: () => JV
     })
   },
-  39691: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => JM,
-      d: () => hM,
-      f: () => mM,
-      j: () => zM,
-      k: () => LM
+  39857: (VV, eV, xV) => {
+    xV.d(eV, {
+      d: () => bV,
+      f: () => kV,
+      i: () => vV,
+      m: () => wV,
+      n: () => ZV
     });
-    var OM = iM(4577),
-      SM = iM(332);
-    const jM = 1024,
-      aM = 1536,
-      PM = 2 * OM.j + 1,
-      nM = new Intl.NumberFormat("en", {
+    var JV = xV(4642),
+      YV = xV(375);
+    const UV = 1024,
+      yV = 1536,
+      pV = 2 * JV.j + 1,
+      QV = new Intl.NumberFormat("en", {
         maximumSignificantDigits: 15
       }),
-      QM = 1.5;
+      nV = 1.5;
 
-    function zM(MM, rM, iM) {
-      if ("string" !== typeof MM) return rM;
+    function wV(VV, eV, xV) {
+      if ("string" !== typeof VV) return eV;
       try {
-        const iM = JSON.parse(MM);
-        return iM && "object" === typeof iM ? iM : rM
-      } catch (OM) {
-        return void 0 !== iM && console.error(`Couldn't parse ${iM}`, OM), rM
+        const xV = JSON.parse(VV);
+        return xV && "object" === typeof xV ? xV : eV
+      } catch (JV) {
+        return void 0 !== xV && console.error(`Couldn't parse ${xV}`, JV), eV
       }
     }
 
-    function LM(MM) {
-      return zM(MM, null, "a leaderboard's rows")
+    function ZV(VV) {
+      return wV(VV, null, "a leaderboard's rows")
     }
 
-    function mM(MM, rM) {
-      var iM, OM;
-      return null !== rM && void 0 !== rM ? rM : {
-        status: null !== (iM = MM.status) && void 0 !== iM ? iM : "loading",
-        entries: null !== (OM = MM.entries) && void 0 !== OM ? OM : []
+    function vV(VV, eV) {
+      var xV, JV;
+      return null !== eV && void 0 !== eV ? eV : {
+        status: null !== (xV = VV.status) && void 0 !== xV ? xV : "loading",
+        entries: null !== (JV = VV.entries) && void 0 !== JV ? JV : []
       }
     }
 
-    function HM(MM, rM) {
-      return "number" === typeof MM && Number.isFinite(MM) && MM > 0 ? MM : rM
+    function rV(VV, eV) {
+      return "number" === typeof VV && Number.isFinite(VV) && VV > 0 ? VV : eV
     }
 
-    function hM(MM, rM) {
-      const iM = HM(MM.size, 1);
-      let OM = HM(MM.width, HM(2.5 * iM, 2.5)),
-        SM = HM(MM.height, HM(3.75 * iM, 3.75));
-      Number.isFinite(jM * SM / OM) && Number.isFinite(aM * OM / SM) || (OM = 2.5, SM = 3.75);
-      const PM = SM / OM,
-        nM = Math.max(1, Math.min(jM, rM / PM));
+    function kV(VV, eV) {
+      const xV = rV(VV.size, 1);
+      let JV = rV(VV.width, rV(2.5 * xV, 2.5)),
+        YV = rV(VV.height, rV(3.75 * xV, 3.75));
+      Number.isFinite(UV * YV / JV) && Number.isFinite(yV * JV / YV) || (JV = 2.5, YV = 3.75);
+      const pV = YV / JV,
+        QV = Math.max(1, Math.min(UV, eV / pV));
       return {
-        width: OM,
-        height: SM,
-        layoutWidth: Math.max(jM, aM / PM),
-        layoutHeight: Math.max(aM, jM * PM),
-        pixelWidth: Math.round(nM),
-        pixelHeight: Math.round(Math.max(1, Math.min(rM, nM * PM)))
+        width: JV,
+        height: YV,
+        layoutWidth: Math.max(UV, yV / pV),
+        layoutHeight: Math.max(yV, UV * pV),
+        pixelWidth: Math.round(QV),
+        pixelHeight: Math.round(Math.max(1, Math.min(eV, QV * pV)))
       }
     }
 
-    function JM(MM, rM, iM, aM, zM, LM) {
-      MM.setTransform(1, 0, 0, 1, 0, 0), MM.fillStyle = SM.L.defaultNameTagBackground, MM.fillRect(0, 0, rM, iM), MM.scale(rM / aM.layoutWidth, iM / aM.layoutHeight), MM.translate((aM.layoutWidth - jM) / 2, 0),
-        function(MM, rM, iM, jM) {
-          var aM, zM, LM, mM;
+    function bV(VV, eV, xV, yV, wV, ZV) {
+      VV.setTransform(1, 0, 0, 1, 0, 0), VV.fillStyle = YV.E.defaultNameTagBackground, VV.fillRect(0, 0, eV, xV), VV.scale(eV / yV.layoutWidth, xV / yV.layoutHeight), VV.translate((yV.layoutWidth - UV) / 2, 0),
+        function(VV, eV, xV, UV) {
+          var yV, wV, ZV, vV;
           const {
-            top: HM,
-            around: hM,
-            showPlayerText: JM,
-            localPlayerDbId: lM
-          } = iM, {
-            whiteUiText: EM,
-            grayUiText: UM,
-            yellowUiText: GM
-          } = SM.L;
-          MM.textBaseline = "middle";
-          const CM = function(rM, iM, OM, SM, jM, aM) {
-              let PM = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : "left";
-              MM.font = `bold ${SM}px 'Jetbrains Mono', monospace`, MM.fillStyle = jM, MM.textAlign = PM;
-              let nM = rM.replace(/[\r\n\t]/g, " ");
-              if (MM.measureText(nM).width > aM) {
-                for (; nM.length > 0 && MM.measureText(`${nM}\u2026`).width > aM;) nM = nM.slice(0, -1);
-                nM += "\u2026"
+            top: rV,
+            around: kV,
+            showPlayerText: bV,
+            localPlayerDbId: jV
+          } = xV, {
+            whiteUiText: qV,
+            grayUiText: tV,
+            yellowUiText: FV
+          } = YV.E;
+          VV.textBaseline = "middle";
+          const TV = function(eV, xV, JV, YV, UV, yV) {
+              let pV = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : "left";
+              VV.font = `bold ${YV}px 'Jetbrains Mono', monospace`, VV.fillStyle = UV, VV.textAlign = pV;
+              let QV = eV.replace(/[\r\n\t]/g, " ");
+              if (VV.measureText(QV).width > yV) {
+                for (; QV.length > 0 && VV.measureText(`${QV}\u2026`).width > yV;) QV = QV.slice(0, -1);
+                QV += "\u2026"
               }
-              MM.fillText(nM, iM, OM)
+              VV.fillText(QV, xV, JV)
             },
-            eM = rM => {
-              MM.fillStyle = EM, MM.globalAlpha = .15, MM.fillRect(24, rM, 976, 2), MM.globalAlpha = 1
+            PV = eV => {
+              VV.fillStyle = qV, VV.globalAlpha = .15, VV.fillRect(24, eV, 976, 2), VV.globalAlpha = 1
             },
-            bM = null === lM ? null : (0, SM.qc)(lM),
-            wM = MM => null !== bM && MM.playerHash === bM,
-            tM = dM(HM.entries, OM.l),
-            gM = "ready" === HM.status && tM.length > 0,
-            uM = null === hM ? [] : dM(hM.entries, PM),
-            RM = tM.some(wM),
-            pM = null === hM ? null : function(MM) {
-              const rM = MM;
-              if (!rM || !Number.isFinite(rM.rank) || !Number.isFinite(rM.tied) || !Number.isFinite(rM.total)) return null;
-              return rM
-            }(hM.standing),
-            WM = uM.find(wM),
-            sM = tM.find(wM),
-            DM = null === pM || void 0 === WM ? null : {
-              value: WM.value,
-              rank: pM.rank
+            AV = null === jV ? null : (0, YV.nc)(jV),
+            NV = VV => null !== AV && VV.playerHash === AV,
+            XV = EV(rV.entries, JV.k),
+            MV = "ready" === rV.status && XV.length > 0,
+            zV = null === kV ? [] : EV(kV.entries, pV),
+            GV = XV.some(NV),
+            WV = null === kV ? null : function(VV) {
+              const eV = VV;
+              if (!eV || !Number.isFinite(eV.rank) || !Number.isFinite(eV.tied) || !Number.isFinite(eV.total)) return null;
+              return eV
+            }(kV.standing),
+            RV = zV.find(NV),
+            gV = XV.find(NV),
+            DV = null === WV || void 0 === RV ? null : {
+              value: RV.value,
+              rank: WV.rank
             },
-            kM = yM(tM, void 0 === sM || sM.value === (null === DM || void 0 === DM ? void 0 : DM.value) ? DM : null),
-            ZM = yM(uM, DM),
-            oM = (MM, rM) => {
-              const iM = MM.findIndex(wM);
-              return iM >= 0 ? rM[iM] : null
+            iV = BV(XV, void 0 === gV || gV.value === (null === DV || void 0 === DV ? void 0 : DV.value) ? DV : null),
+            CV = BV(zV, DV),
+            aV = (VV, eV) => {
+              const xV = VV.findIndex(NV);
+              return xV >= 0 ? eV[xV] : null
             },
-            fM = null !== (aM = null !== (zM = null === pM || void 0 === pM ? void 0 : pM.rank) && void 0 !== zM ? zM : oM(uM, ZM)) && void 0 !== aM ? aM : oM(tM, kM);
-          MM.font = "bold 34px 'Jetbrains Mono', monospace";
-          const YM = [...gM ? kM : [], ...RM ? [] : ZM],
-            NM = Math.min(280, Math.max(0, ...YM.map((rM => MM.measureText(nM.format(rM)).width)))),
-            AM = NM <= 80,
-            xM = AM ? 80 : 32 + NM,
-            vM = AM ? 148 : xM + 28,
-            FM = 660 - vM;
-          CM(`TOP ${OM.l}  /  ALL TIME`, 24, 52, 28, UM, 976), CM(JM ? String(null !== (LM = rM.title) && void 0 !== LM ? LM : "Leaderboard").slice(0, 64) : "Leaderboard", 24, 108, 52, EM, 976), CM("RANK", 32, 174, 28, UM, vM - 40), CM("PLAYER", vM, 174, 28, UM, FM), CM(JM ? String(null !== (mM = rM.scoreLabel) && void 0 !== mM ? mM : "Score").slice(0, 24) : "Score", 992, 174, 28, UM, 304, "right"), eM(202);
-          const BM = (jM - 232) / (OM.l + QM + PM),
-            XM = 208 + OM.l * BM,
-            IM = XM + QM * BM,
-            KM = (rM, iM, OM, SM) => {
-              const jM = wM(rM);
-              MM.fillStyle = jM ? GM : EM, MM.globalAlpha = jM ? .15 : SM ? .035 : 0, MM.fillRect(24, OM - BM / 2 + 1, 976, BM - 2), MM.globalAlpha = 1;
-              const aM = jM ? GM : EM;
-              CM(nM.format(iM), xM, OM, 34, aM, AM ? 80 : NM, AM ? "center" : "right"), CM(JM ? String(rM.name).slice(0, 64) : "Player", vM, OM, 34, aM, FM);
-              const PM = nM.format(rM.value);
-              CM(MM.measureText(PM).width > 304 ? rM.value.toExponential(6) : PM, 992, OM, 34, aM, 304, "right")
+            oV = null !== (yV = null !== (wV = null === WV || void 0 === WV ? void 0 : WV.rank) && void 0 !== wV ? wV : aV(zV, CV)) && void 0 !== yV ? yV : aV(XV, iV);
+          VV.font = "bold 34px 'Jetbrains Mono', monospace";
+          const cV = [...MV ? iV : [], ...GV ? [] : CV],
+            hV = Math.min(280, Math.max(0, ...cV.map((eV => VV.measureText(QV.format(eV)).width)))),
+            lV = hV <= 80,
+            LV = lV ? 80 : 32 + hV,
+            fV = lV ? 148 : LV + 28,
+            mV = 660 - fV;
+          TV(`TOP ${JV.k}  /  ALL TIME`, 24, 52, 28, tV, 976), TV(bV ? String(null !== (ZV = eV.title) && void 0 !== ZV ? ZV : "Leaderboard").slice(0, 64) : "Leaderboard", 24, 108, 52, qV, 976), TV("RANK", 32, 174, 28, tV, fV - 40), TV("PLAYER", fV, 174, 28, tV, mV), TV(bV ? String(null !== (vV = eV.scoreLabel) && void 0 !== vV ? vV : "Score").slice(0, 24) : "Score", 992, 174, 28, tV, 304, "right"), PV(202);
+          const KV = (UV - 232) / (JV.k + nV + pV),
+            HV = 208 + JV.k * KV,
+            uV = HV + nV * KV,
+            sV = (eV, xV, JV, YV) => {
+              const UV = NV(eV);
+              VV.fillStyle = UV ? FV : qV, VV.globalAlpha = UV ? .15 : YV ? .035 : 0, VV.fillRect(24, JV - KV / 2 + 1, 976, KV - 2), VV.globalAlpha = 1;
+              const yV = UV ? FV : qV;
+              TV(QV.format(xV), LV, JV, 34, yV, lV ? 80 : hV, lV ? "center" : "right"), TV(bV ? String(eV.name).slice(0, 64) : "Player", fV, JV, 34, yV, mV);
+              const pV = QV.format(eV.value);
+              TV(VV.measureText(pV).width > 304 ? eV.value.toExponential(6) : pV, 992, JV, 34, yV, 304, "right")
             };
-          if (gM)
-            for (const [OM, SM] of tM.entries()) KM(SM, kM[OM], 208 + (OM + .5) * BM, OM % 2 === 0);
+          if (MV)
+            for (const [JV, YV] of XV.entries()) sV(YV, iV[JV], 208 + (JV + .5) * KV, JV % 2 === 0);
           else {
-            const MM = "error" === HM.status,
-              rM = MM ? "Couldn't load leaderboard" : "ready" === HM.status ? "No scores yet" : "Loading leaderboard\u2026",
-              iM = MM ? "Trying again shortly" : "ready" === HM.status ? "Be the first on the board!" : "Fetching the top players",
-              OM = (208 + XM) / 2;
-            CM(rM, 512, OM - 28, 40, MM ? SM.L.redUiText : EM, 960, "center"), CM(iM, 512, OM + 27, 30, UM, 960, "center")
+            const VV = "error" === rV.status,
+              eV = VV ? "Couldn't load leaderboard" : "ready" === rV.status ? "No scores yet" : "Loading leaderboard\u2026",
+              xV = VV ? "Trying again shortly" : "ready" === rV.status ? "Be the first on the board!" : "Fetching the top players",
+              JV = (208 + HV) / 2;
+            TV(eV, 512, JV - 28, 40, VV ? YV.E.redUiText : qV, 960, "center"), TV(xV, 512, JV + 27, 30, tV, 960, "center")
           }
-          const qM = XM + QM * BM / 2;
-          if (null === fM) eM(qM);
+          const SV = HV + nV * KV / 2;
+          if (null === oV) PV(SV);
           else {
-            const rM = null === pM ? 0 : pM.tied - 1,
-              iM = `YOUR RANK #${nM.format(fM)}${null===pM?"":` of ${nM.format(pM.total)}`}`;
-            MM.font = "bold 36px 'Jetbrains Mono', monospace";
-            const OM = Math.max(20, Math.min(36, Math.floor(34560 / MM.measureText(iM).width)));
-            CM(iM, 512, qM - (rM > 0 ? 15 : 0), OM, GM, 960, "center"), rM > 0 && CM(`Tied with ${nM.format(rM)} other${1===rM?"":"s"}`, 512, qM + 24, 24, UM, 960, "center")
+            const eV = null === WV ? 0 : WV.tied - 1,
+              xV = `YOUR RANK #${QV.format(oV)}${null===WV?"":` of ${QV.format(WV.total)}`}`;
+            VV.font = "bold 36px 'Jetbrains Mono', monospace";
+            const JV = Math.max(20, Math.min(36, Math.floor(34560 / VV.measureText(xV).width)));
+            TV(xV, 512, SV - (eV > 0 ? 15 : 0), JV, FV, 960, "center"), eV > 0 && TV(`Tied with ${QV.format(eV)} other${1===eV?"":"s"}`, 512, SV + 24, 24, tV, 960, "center")
           }
-          if (null === hM) return;
-          const TM = IM + PM * BM / 2;
-          if (RM) CM(`You're in the top ${OM.l}!`, 512, TM, 40, GM, 960, "center");
-          else if (0 === uM.length) CM("You're not on this board yet", 512, TM, 34, UM, 960, "center");
+          if (null === kV) return;
+          const IV = uV + pV * KV / 2;
+          if (GV) TV(`You're in the top ${JV.k}!`, 512, IV, 40, FV, 960, "center");
+          else if (0 === zV.length) TV("You're not on this board yet", 512, IV, 34, tV, 960, "center");
           else
-            for (const [OM, SM] of uM.entries()) KM(SM, ZM[OM], IM + (OM + .5) * BM, OM % 2 === 0)
-        }(MM, zM, LM, aM.layoutHeight)
+            for (const [JV, YV] of zV.entries()) sV(YV, CV[JV], uV + (JV + .5) * KV, JV % 2 === 0)
+        }(VV, wV, ZV, yV.layoutHeight)
     }
 
-    function dM(MM, rM) {
-      return Array.isArray(MM) ? MM.slice(0, rM).filter((MM => MM && Number.isFinite(MM.rank) && Number.isFinite(MM.value))) : []
+    function EV(VV, eV) {
+      return Array.isArray(VV) ? VV.slice(0, eV).filter((VV => VV && Number.isFinite(VV.rank) && Number.isFinite(VV.value))) : []
     }
 
-    function yM(MM, rM) {
-      const iM = [];
-      let OM = !1;
-      return MM.forEach(((SM, jM) => {
-        if (null !== rM && SM.value === rM.value) return void iM.push(rM.rank);
-        const aM = jM > 0 && SM.value === MM[jM - 1].value;
-        aM || (OM = 0 === jM && 1 !== SM.rank), iM.push(aM && !OM ? iM[jM - 1] : SM.rank)
-      })), iM
+    function BV(VV, eV) {
+      const xV = [];
+      let JV = !1;
+      return VV.forEach(((YV, UV) => {
+        if (null !== eV && YV.value === eV.value) return void xV.push(eV.rank);
+        const yV = UV > 0 && YV.value === VV[UV - 1].value;
+        yV || (JV = 0 === UV && 1 !== YV.rank), xV.push(yV && !JV ? xV[UV - 1] : YV.rank)
+      })), xV
     }
   },
-  39922: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => SM,
-      g: () => jM
+  40053: (VV, eV, xV) => {
+    xV.d(eV, {
+      c: () => YV,
+      f: () => UV
     });
-    const OM = 32;
+    const JV = 32;
 
-    function SM(MM) {
-      return Array.from(MM).length
+    function YV(VV) {
+      return Array.from(VV).length
     }
 
-    function jM(MM) {
-      const rM = [""];
-      let iM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-        SM = "";
-      const jM = () => {
-        rM.push(""), iM = 0, SM = ""
+    function UV(VV) {
+      const eV = [""];
+      let xV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+        YV = "";
+      const UV = () => {
+        eV.push(""), xV = 0, YV = ""
       };
-      for (const aM of MM.replace(/\\n/g, "\n").split(/(\r?\n|[^\S\r\n]+)/))
-        if (/^\r?\n$/.test(aM)) jM();
-        else if (/^\s+$/.test(aM)) SM += aM;
-      else if (aM.length > 0) {
-        const MM = Array.from(aM);
-        iM > 0 && iM + SM.length + MM.length > OM && jM(), rM[rM.length - 1] += SM, iM += SM.length, SM = "";
-        for (const SM of MM) iM >= OM && jM(), rM[rM.length - 1] += SM, iM++
+      for (const yV of VV.replace(/\\n/g, "\n").split(/(\r?\n|[^\S\r\n]+)/))
+        if (/^\r?\n$/.test(yV)) UV();
+        else if (/^\s+$/.test(yV)) YV += yV;
+      else if (yV.length > 0) {
+        const VV = Array.from(yV);
+        xV > 0 && xV + YV.length + VV.length > JV && UV(), eV[eV.length - 1] += YV, xV += YV.length, YV = "";
+        for (const YV of VV) xV >= JV && UV(), eV[eV.length - 1] += YV, xV++
       }
-      return rM[rM.length - 1] += SM, rM
+      return eV[eV.length - 1] += YV, eV
     }
   },
-  40173: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => aM
+  40328: (VV, eV, xV) => {
+    xV.d(eV, {
+      e: () => yV
     });
-    var OM = iM(37563),
-      SM = iM.n(OM);
-    const jM = [1, 1, 1];
+    var JV = xV(37793),
+      YV = xV.n(JV);
+    const UV = [1, 1, 1];
 
-    function aM(MM) {
-      if (!MM) return [...jM];
+    function yV(VV) {
+      if (!VV) return [...UV];
       try {
-        const [rM, iM, OM] = SM()(MM).rgb().array();
-        return [rM / 255, iM / 255, OM / 255]
-      } catch (rM) {
-        return console.warn(`Invalid groundArrowPath colour "${MM}":`, rM), [...jM]
+        const [eV, xV, JV] = YV()(VV).rgb().array();
+        return [eV / 255, xV / 255, JV / 255]
+      } catch (eV) {
+        return console.warn(`Invalid groundArrowPath colour "${VV}":`, eV), [...UV]
       }
     }
   },
-  40305: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => PM,
-      g: () => QM,
-      h: () => nM
+  40446: (VV, eV, xV) => {
+    xV.d(eV, {
+      b: () => pV,
+      d: () => nV,
+      h: () => QV
     });
-    var OM = iM(281),
-      SM = iM(3230);
-    const jM = /\/textures\/skyBoxes\/(space_blue|space_lightblue|space_red_2|space_white)\/(_[np][xyz]\.jpg)$/,
-      aM = 512;
+    var JV = xV(330),
+      YV = xV(3239);
+    const UV = /\/textures\/skyBoxes\/(space_blue|space_lightblue|space_red_2|space_white)\/(_[np][xyz]\.jpg)$/,
+      yV = 512;
 
-    function PM(MM) {
-      var rM;
-      const iM = Math.min(screen.width, screen.height) * (null !== (rM = (0, OM.b)()) && void 0 !== rM ? rM : (0, SM.o)());
-      return Math.max(window.innerHeight * (0, SM.o)(), iM) / (0, SM.q)(MM)
+    function pV(VV) {
+      var eV;
+      const xV = Math.min(screen.width, screen.height) * (null !== (eV = (0, JV.b)()) && void 0 !== eV ? eV : (0, YV.n)());
+      return Math.max(window.innerHeight * (0, YV.n)(), xV) / (0, YV.p)(VV)
     }
 
-    function nM(MM, rM, iM) {
-      return rM / (2 * Math.tan(iM / 2)) > aM ? MM : QM(MM)
+    function QV(VV, eV, xV) {
+      return eV / (2 * Math.tan(xV / 2)) > yV ? VV : nV(VV)
     }
 
-    function QM(MM) {
-      return MM.map((MM => MM.replace(jM, "/textures/skyBoxes/$1/1024/$2")))
+    function nV(VV) {
+      return VV.map((VV => VV.replace(UV, "/textures/skyBoxes/$1/1024/$2")))
     }
   },
-  40165: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => SM
+  40324: (VV, eV, xV) => {
+    xV.d(eV, {
+      c: () => YV
     });
-    var OM = iM(181);
+    var JV = xV(206);
 
-    function SM(MM, rM, iM, SM, jM, aM, PM, nM, QM, zM, LM) {
-      const mM = OM.f.HL,
-        HM = jM - iM;
-      let hM = HM * (aM - SM);
-      zM.fill(0, 0, hM);
-      for (let OM = Math.floor((nM - 1) / mM);
-        (OM + 1) * mM > PM; OM--) {
-        const JM = OM * mM;
-        for (let dM = Math.floor(iM / mM); dM * mM < jM; dM++) {
-          const yM = dM * mM,
-            lM = Math.max(iM - yM, 0),
-            EM = Math.min(jM - yM, mM);
-          for (let jM = Math.floor(SM / mM); jM * mM < aM; jM++) {
-            const UM = MM(dM, OM, jM);
-            if (!UM) continue;
-            const GM = jM * mM,
-              CM = Math.max(SM - GM, 0),
-              eM = Math.min(aM - GM, mM),
-              bM = UM.NH,
-              wM = UM.Xm,
-              tM = wM.data;
-            for (let MM = Math.min(nM - 1 - JM, mM - 1); MM >= Math.max(PM - JM, 0); MM--) {
-              const OM = bM[MM],
-                jM = OM === rM;
-              if (jM || 0 !== QM[OM]) {
-                for (let rM = lM; rM < EM; rM++)
-                  for (let aM = CM; aM < eM; aM++) {
-                    const PM = (GM + aM - SM) * HM + yM + rM - iM;
-                    if (0 !== zM[PM]) continue;
-                    const nM = jM ? tM[wM.index(rM, MM, aM)] : OM;
-                    0 !== QM[nM] && (zM[PM] = nM, LM[PM] = JM + MM, hM--)
+    function YV(VV, eV, xV, YV, UV, yV, pV, QV, nV, wV, ZV) {
+      const vV = JV.f.PZ,
+        rV = UV - xV;
+      let kV = rV * (yV - YV);
+      wV.fill(0, 0, kV);
+      for (let JV = Math.floor((QV - 1) / vV);
+        (JV + 1) * vV > pV; JV--) {
+        const bV = JV * vV;
+        for (let EV = Math.floor(xV / vV); EV * vV < UV; EV++) {
+          const BV = EV * vV,
+            jV = Math.max(xV - BV, 0),
+            qV = Math.min(UV - BV, vV);
+          for (let UV = Math.floor(YV / vV); UV * vV < yV; UV++) {
+            const tV = VV(EV, JV, UV);
+            if (!tV) continue;
+            const FV = UV * vV,
+              TV = Math.max(YV - FV, 0),
+              PV = Math.min(yV - FV, vV),
+              AV = tV.Yk,
+              NV = tV.Ur,
+              XV = NV.data;
+            for (let VV = Math.min(QV - 1 - bV, vV - 1); VV >= Math.max(pV - bV, 0); VV--) {
+              const JV = AV[VV],
+                UV = JV === eV;
+              if (UV || 0 !== nV[JV]) {
+                for (let eV = jV; eV < qV; eV++)
+                  for (let yV = TV; yV < PV; yV++) {
+                    const pV = (FV + yV - YV) * rV + BV + eV - xV;
+                    if (0 !== wV[pV]) continue;
+                    const QV = UV ? XV[NV.index(eV, VV, yV)] : JV;
+                    0 !== nV[QV] && (wV[pV] = QV, ZV[pV] = bV + VV, kV--)
                   }
-                if (0 === hM) return
+                if (0 === kV) return
               }
             }
           }
@@ -1675,15 +1675,15 @@ export const modules = {
       }
     }
   },
-  34611: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => jM,
-      d: () => PM,
-      g: () => aM,
-      h: () => SM,
-      j: () => OM
+  34874: (VV, eV, xV) => {
+    xV.d(eV, {
+      d: () => UV,
+      g: () => pV,
+      i: () => yV,
+      k: () => YV,
+      m: () => JV
     });
-    const OM = {
+    const JV = {
         default: {
           type: "earth",
           vertexTint: [137, 207, 240]
@@ -1770,43 +1770,43 @@ export const modules = {
           pz: "/textures/skyBoxes/space_white/_pz.jpg"
         }
       },
-      SM = "/textures/dayNight/sun.png",
-      jM = "/textures/dayNight/moon.png",
-      aM = "/textures/dayNight/stars",
-      PM = ["_px.png", "_py.png", "_pz.png", "_nx.png", "_ny.png", "_nz.png"]
+      YV = "/textures/dayNight/sun.png",
+      UV = "/textures/dayNight/moon.png",
+      yV = "/textures/dayNight/stars",
+      pV = ["_px.png", "_py.png", "_pz.png", "_nx.png", "_ny.png", "_nz.png"]
   },
-  40283: (MM, rM, iM) => {
-    iM.d(rM, {
-      C: () => PM,
-      e: () => LM,
-      i: () => mM,
-      j: () => OM,
-      n: () => SM,
-      q: () => QM,
-      s: () => jM,
-      v: () => zM,
-      y: () => nM
+  40425: (VV, eV, xV) => {
+    xV.d(eV, {
+      e: () => ZV,
+      f: () => vV,
+      g: () => JV,
+      i: () => YV,
+      k: () => nV,
+      l: () => UV,
+      o: () => wV,
+      q: () => QV,
+      s: () => pV
     });
-    const OM = ["linear", "easeIn", "easeOut", "easeInOut"],
-      SM = ["feet", "eye"],
-      jM = ["movement", "camera", "cursor"],
-      aM = ["targets", "playerFacing", "blendInMs", "blendEasing", "transition", "letterbox", "hideHud"];
+    const JV = ["linear", "easeIn", "easeOut", "easeInOut"],
+      YV = ["feet", "eye"],
+      UV = ["movement", "camera", "cursor"],
+      yV = ["targets", "playerFacing", "blendInMs", "blendEasing", "transition", "letterbox", "hideHud"];
 
-    function PM(MM, rM) {
-      return nM(MM, rM, aM)
+    function pV(VV, eV) {
+      return QV(VV, eV, yV)
     }
 
-    function nM(MM, rM) {
-      let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-      if (MM === rM || Number.isNaN(MM) && Number.isNaN(rM)) return !0;
-      if ("object" !== typeof MM || "object" !== typeof rM || null === MM || null === rM || Array.isArray(MM) !== Array.isArray(rM)) return !1;
-      const OM = MM,
-        SM = rM;
-      for (const jM of new Set([...Object.keys(OM), ...Object.keys(SM)]))
-        if (!iM.includes(jM) && !nM(OM[jM], SM[jM])) return !1;
+    function QV(VV, eV) {
+      let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+      if (VV === eV || Number.isNaN(VV) && Number.isNaN(eV)) return !0;
+      if ("object" !== typeof VV || "object" !== typeof eV || null === VV || null === eV || Array.isArray(VV) !== Array.isArray(eV)) return !1;
+      const JV = VV,
+        YV = eV;
+      for (const UV of new Set([...Object.keys(JV), ...Object.keys(YV)]))
+        if (!xV.includes(UV) && !QV(JV[UV], YV[UV])) return !1;
       return !0
     }
-    const QM = {
+    const nV = {
         maxBlendInMs: 1e4,
         minFov: 10,
         maxFov: 120,
@@ -1828,10 +1828,10 @@ export const modules = {
         minEasingY: -1,
         maxEasingY: 2
       },
-      zM = "^-[1-9][0-9]*$",
-      LM = "^#[0-9a-fA-F]{6}$",
-      mM = "#000000"
+      wV = "^-[1-9][0-9]*$",
+      ZV = "^#[0-9a-fA-F]{6}$",
+      vV = "#000000"
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const VV in modules) Object.freeze(modules[VV]);

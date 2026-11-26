@@ -1,117 +1,117 @@
 export const id = 115;
 export const ids = [115];
 export const modules = {
-  5306: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => mM
+  5404: (VV, eV, xV) => {
+    xV.d(eV, {
+      d: () => vV
     });
-    var OM = iM(1116),
-      SM = iM.n(OM),
-      jM = iM(1398),
-      aM = iM(1396),
-      PM = iM(3902),
-      nM = iM(119),
-      QM = iM(3945),
-      zM = iM(3934),
-      LM = iM(1303);
+    var JV = xV(1146),
+      YV = xV.n(JV),
+      UV = xV(1414),
+      yV = xV(1408),
+      pV = xV(3942),
+      QV = xV(138),
+      nV = xV(3974),
+      wV = xV(3967),
+      ZV = xV(1321);
 
-    function mM(MM) {
+    function vV(VV) {
       let {
-        game: rM
-      } = MM;
-      const iM = (0, nM.is99NightsCrazyGamesBundle)() ? "large" : "small",
-        OM = (0, QM.g)(rM, iM),
-        mM = (0, PM.c)(OM),
-        HM = void 0 !== mM.blurhash;
-      return (0, LM.jsxs)("div", {
+        game: eV
+      } = VV;
+      const xV = (0, QV.is99NightsCrazyGamesBundle)() ? "large" : "small",
+        JV = (0, nV.g)(eV, xV),
+        vV = (0, pV.d)(JV),
+        rV = void 0 !== vV.blurhash;
+      return (0, ZV.jsxs)("div", {
         className: "SchematicImageContainer",
-        children: [mM.isLoading && !HM && (0, LM.jsx)(aM.d, {
+        children: [vV.isLoading && !rV && (0, ZV.jsx)(yV.d, {
           loaderType: "Secondary"
-        }), !mM.failed && (null !== mM.src || HM) && (0, LM.jsx)("div", {
-          className: SM()("SchematicImage", zM.k, {
-            SchematicImageFadeIn: mM.fadeIn && !HM
+        }), !vV.failed && (null !== vV.src || rV) && (0, ZV.jsx)("div", {
+          className: YV()("SchematicImage", wV.i, {
+            SchematicImageFadeIn: vV.fadeIn && !rV
           }),
-          style: (0, zM.h)(mM),
-          children: (0, LM.jsx)(zM.e, {
-            image: mM
+          style: (0, wV.h)(vV),
+          children: (0, ZV.jsx)(wV.e, {
+            image: vV
           })
-        }), mM.failed && (0, LM.jsx)("div", {
+        }), vV.failed && (0, ZV.jsx)("div", {
           className: "SchematicImageError",
-          children: (0, LM.jsx)(jM.b, {
+          children: (0, ZV.jsx)(UV.b, {
             name: "face-dizzy"
           })
         })]
       })
     }
   },
-  5295: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      default: () => wM
+  5396: (VV, eV, xV) => {
+    xV.r(eV), xV.d(eV, {
+      default: () => NV
     });
-    iM(5299);
-    var OM = iM(44),
-      SM = iM(1116),
-      jM = iM.n(SM),
-      aM = iM(313),
-      PM = iM(1088),
-      nM = iM(1229),
-      QM = iM(1188),
-      zM = iM(1142),
-      LM = iM(1573),
-      mM = iM(5306),
-      HM = iM(1520),
-      hM = iM(5309),
-      JM = iM(1396),
-      dM = iM(1591),
-      yM = iM(5007),
-      lM = iM(1398),
-      EM = iM(1067),
-      UM = iM(2721),
-      GM = iM(5318),
-      CM = iM(1627),
-      eM = iM(1303);
+    xV(5402);
+    var JV = xV(62),
+      YV = xV(1146),
+      UV = xV.n(YV),
+      yV = xV(364),
+      pV = xV(1117),
+      QV = xV(1252),
+      nV = xV(1220),
+      wV = xV(1168),
+      ZV = xV(1603),
+      vV = xV(5404),
+      rV = xV(1551),
+      kV = xV(5410),
+      bV = xV(1408),
+      EV = xV(1612),
+      BV = xV(5108),
+      jV = xV(1414),
+      qV = xV(1093),
+      tV = xV(2777),
+      FV = xV(5418),
+      TV = xV(1639),
+      PV = xV(1321);
 
-    function bM() {
+    function AV() {
       const {
-        t: MM
-      } = (0, QM.A)(), rM = (0, dM.useNavigatePreserveSearch)(), iM = (0, UM.q)(), SM = (0, OM.useMemo)((() => [...EM.b].sort(((rM, OM) => {
-        var SM, jM;
-        const aM = (null !== (SM = (0, UM.e)(OM, iM)) && void 0 !== SM ? SM : 0) - (null !== (jM = (0, UM.e)(rM, iM)) && void 0 !== jM ? jM : 0);
-        return 0 !== aM ? aM : (0, CM.n)(rM, MM).localeCompare((0, CM.n)(OM, MM))
-      }))), [iM, MM]);
-      return (0, eM.jsxs)(eM.Fragment, {
-        children: [(0, eM.jsx)("div", {
+        t: VV
+      } = (0, nV.A)(), eV = (0, EV.useNavigatePreserveSearch)(), xV = (0, tV.r)(), YV = (0, JV.useMemo)((() => [...qV.b].sort(((eV, JV) => {
+        var YV, UV;
+        const yV = (null !== (YV = (0, tV.e)(JV, xV)) && void 0 !== YV ? YV : 0) - (null !== (UV = (0, tV.e)(eV, xV)) && void 0 !== UV ? UV : 0);
+        return 0 !== yV ? yV : (0, TV.j)(eV, VV).localeCompare((0, TV.j)(JV, VV))
+      }))), [xV, VV]);
+      return (0, PV.jsxs)(PV.Fragment, {
+        children: [(0, PV.jsx)("div", {
           className: "StudioPageHeader",
-          children: (0, eM.jsx)("h1", {
+          children: (0, PV.jsx)("h1", {
             className: "StudioPageTitle",
-            children: MM("studio:firstPartyGames")
+            children: VV("studio:firstPartyGames")
           })
-        }), (0, eM.jsx)(hM.c, {
+        }), (0, PV.jsx)(kV.c, {
           className: "StudioTable AnimFadeIn",
           columns: [{
             key: "game",
-            header: MM("general:game")
+            header: VV("general:game")
           }, {
             key: "ccu",
-            header: MM("studio:metricCcu")
+            header: VV("studio:metricCcu")
           }],
-          rows: SM,
-          getRowKey: MM => MM,
-          renderRow: OM => {
-            var SM;
-            return (0, eM.jsxs)("tr", {
+          rows: YV,
+          getRowKey: VV => VV,
+          renderRow: JV => {
+            var YV;
+            return (0, PV.jsxs)("tr", {
               onClick: () => {
-                rM((0, CM.p)((0, PM.e)(OM, !0)))
+                eV((0, TV.m)((0, pV.i)(JV, !0)))
               },
-              children: [(0, eM.jsx)("td", {
-                children: (0, eM.jsx)(GM.f, {
-                  thumbnail: (0, eM.jsx)(GM.d, {
-                    game: OM
+              children: [(0, PV.jsx)("td", {
+                children: (0, PV.jsx)(FV.f, {
+                  thumbnail: (0, PV.jsx)(FV.c, {
+                    game: JV
                   }),
-                  name: (0, CM.n)(OM, MM)
+                  name: (0, TV.j)(JV, VV)
                 })
-              }), (0, eM.jsx)("td", {
-                children: (0, nM.T)(null !== (SM = (0, UM.e)(OM, iM)) && void 0 !== SM ? SM : 0)
+              }), (0, PV.jsx)("td", {
+                children: (0, QV.N)(null !== (YV = (0, tV.e)(JV, xV)) && void 0 !== YV ? YV : 0)
               })]
             })
           }
@@ -119,18 +119,18 @@ export const modules = {
       })
     }
 
-    function wM() {
+    function NV() {
       const {
-        t: MM
-      } = (0, QM.A)(), rM = (0, dM.useNavigatePreserveSearch)(), {
-        userContext: iM,
-        isUserContextUpdating: SM
-      } = (0, zM.b)(), {
-        isCreating: EM,
-        create: UM
-      } = (0, yM.h)(), [wM, tM] = (0, OM.useState)(null), [gM, uM] = (0, OM.useState)(null), [RM, pM] = (0, OM.useState)(!1);
-      (0, OM.useEffect)((() => {
-        SM || (pM(!1), LM.c.getPublishedGamePreviews(iM, {
+        t: VV
+      } = (0, nV.A)(), eV = (0, EV.useNavigatePreserveSearch)(), {
+        userContext: xV,
+        isUserContextUpdating: YV
+      } = (0, wV.d)(), {
+        isCreating: qV,
+        create: tV
+      } = (0, BV.f)(), [NV, XV] = (0, JV.useState)(null), [MV, zV] = (0, JV.useState)(null), [GV, WV] = (0, JV.useState)(!1);
+      (0, JV.useEffect)((() => {
+        YV || (WV(!1), ZV.b.getPublishedGamePreviews(xV, {
           searchQuery: null,
           pageNumber: 1,
           pageSize: 50,
@@ -140,162 +140,162 @@ export const modules = {
           schematicIdsToExclude: [],
           gameCategories: [],
           upAndComing: !1
-        }).then((MM => {
-          tM({
-            ...MM,
-            results: (0, aM.T)(MM.results)
+        }).then((VV => {
+          XV({
+            ...VV,
+            results: (0, yV.db)(VV.results)
           })
-        })).catch((MM => {
-          console.error("Failed to get owned published games", MM), pM(!0)
-        })), LM.c.getOwnedUnpublishedGames(iM).then((MM => {
-          uM(MM)
-        })).catch((MM => {
-          console.error("Failed to get owned unpublished games", MM), pM(!0)
+        })).catch((VV => {
+          console.error("Failed to get owned published games", VV), WV(!0)
+        })), ZV.b.getOwnedUnpublishedGames(xV).then((VV => {
+          zV(VV)
+        })).catch((VV => {
+          console.error("Failed to get owned unpublished games", VV), WV(!0)
         })))
-      }), [SM, iM]);
-      const WM = null !== wM && null !== gM ? [...wM.results, ...gM] : [],
-        sM = !RM && (null === wM || null === gM),
-        DM = !sM && !RM && 0 === WM.length,
-        kM = !SM && iM.playerHasRank("developer");
-      return (0, eM.jsxs)("div", {
+      }), [YV, xV]);
+      const RV = null !== NV && null !== MV ? [...NV.results, ...MV] : [],
+        gV = !GV && (null === NV || null === MV),
+        DV = !gV && !GV && 0 === RV.length,
+        iV = !YV && xV.playerHasRank("developer");
+      return (0, PV.jsxs)("div", {
         className: "StudioPage StudioGameList",
-        children: [(0, eM.jsxs)("div", {
+        children: [(0, PV.jsxs)("div", {
           className: "StudioPageHeader",
-          children: [(0, eM.jsx)("h1", {
+          children: [(0, PV.jsx)("h1", {
             className: "StudioPageTitle",
-            children: MM("studio:myGames")
-          }), (0, eM.jsxs)(HM.p, {
-            onClick: UM,
-            loading: EM,
-            children: [(0, eM.jsx)(lM.b, {
+            children: VV("studio:myGames")
+          }), (0, PV.jsxs)(rV.m, {
+            onClick: tV,
+            loading: qV,
+            children: [(0, PV.jsx)(jV.b, {
               name: "plus"
-            }), " ", MM("homePage:createCustomGame")]
+            }), " ", VV("homePage:createCustomGame")]
           })]
-        }), sM && (0, eM.jsx)("div", {
+        }), gV && (0, PV.jsx)("div", {
           className: "StudioPageLoader AnimFadeIn",
-          children: (0, eM.jsx)(JM.d, {})
-        }), RM && (0, eM.jsx)("div", {
+          children: (0, PV.jsx)(bV.d, {})
+        }), GV && (0, PV.jsx)("div", {
           className: "StudioPageMessage AnimFadeIn",
-          children: MM("studio:failedToLoadGames")
-        }), DM && (0, eM.jsx)("div", {
+          children: VV("studio:failedToLoadGames")
+        }), DV && (0, PV.jsx)("div", {
           className: "StudioPageMessage AnimFadeIn",
-          children: MM("studio:noGamesYet")
-        }), !sM && !RM && !DM && (0, eM.jsx)(hM.c, {
+          children: VV("studio:noGamesYet")
+        }), !gV && !GV && !DV && (0, PV.jsx)(kV.c, {
           className: "StudioTable AnimFadeIn",
           columns: [{
             key: "game",
-            header: MM("general:game")
+            header: VV("general:game")
           }, {
             key: "status",
-            header: MM("general:status")
+            header: VV("general:status")
           }, {
             key: "ccu",
-            header: MM("studio:metricCcu")
+            header: VV("studio:metricCcu")
           }, {
             key: "favourites",
-            header: MM("general:favourites")
+            header: VV("general:favourites")
           }],
-          rows: WM,
-          getRowKey: MM => MM.schematicId,
-          renderRow: iM => (0, eM.jsxs)("tr", {
+          rows: RV,
+          getRowKey: VV => VV.schematicId,
+          renderRow: xV => (0, PV.jsxs)("tr", {
             onClick: () => {
-              var MM;
-              MM = iM.schematicId, rM((0, CM.p)((0, PM.d)(MM)))
+              var VV;
+              VV = xV.schematicId, eV((0, TV.m)((0, pV.e)(VV)))
             },
-            children: [(0, eM.jsx)("td", {
-              children: (0, eM.jsx)(GM.f, {
-                thumbnail: (0, eM.jsx)(mM.b, {
-                  game: iM
+            children: [(0, PV.jsx)("td", {
+              children: (0, PV.jsx)(FV.f, {
+                thumbnail: (0, PV.jsx)(vV.d, {
+                  game: xV
                 }),
-                name: iM.name
+                name: xV.name
               })
-            }), (0, eM.jsx)("td", {
-              children: (0, eM.jsx)("span", {
-                className: jM()("StudioGameListStatusChip", {
-                  StudioGameListStatusChipPublished: iM.gamePublished
+            }), (0, PV.jsx)("td", {
+              children: (0, PV.jsx)("span", {
+                className: UV()("StudioGameListStatusChip", {
+                  StudioGameListStatusChipPublished: xV.gamePublished
                 }),
-                children: iM.gamePublished ? MM("general:published") : MM("general:draft")
+                children: xV.gamePublished ? VV("general:published") : VV("general:draft")
               })
-            }), (0, eM.jsx)("td", {
-              children: (0, nM.T)(iM.ccu)
-            }), (0, eM.jsx)("td", {
-              children: (0, nM.T)(iM.favourites)
+            }), (0, PV.jsx)("td", {
+              children: (0, QV.N)(xV.ccu)
+            }), (0, PV.jsx)("td", {
+              children: (0, QV.N)(xV.favourites)
             })]
           })
-        }), kM && (0, eM.jsx)(bM, {})]
+        }), iV && (0, PV.jsx)(AV, {})]
       })
     }
   },
-  5318: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => aM,
-      f: () => jM
+  5418: (VV, eV, xV) => {
+    xV.d(eV, {
+      c: () => yV,
+      f: () => UV
     });
-    var OM = iM(1627),
-      SM = iM(1303);
+    var JV = xV(1639),
+      YV = xV(1321);
 
-    function jM(MM) {
+    function UV(VV) {
       let {
-        thumbnail: rM,
-        name: iM
-      } = MM;
-      return (0, SM.jsxs)("div", {
+        thumbnail: eV,
+        name: xV
+      } = VV;
+      return (0, YV.jsxs)("div", {
         className: "StudioTableGameCell",
-        children: [(0, SM.jsx)("div", {
+        children: [(0, YV.jsx)("div", {
           className: "StudioTableThumbnail",
-          children: rM
-        }), (0, SM.jsx)("span", {
+          children: eV
+        }), (0, YV.jsx)("span", {
           className: "StudioTableGameName",
-          children: iM
+          children: xV
         })]
       })
     }
 
-    function aM(MM) {
+    function yV(VV) {
       let {
-        game: rM
-      } = MM;
-      return (0, SM.jsx)("img", {
+        game: eV
+      } = VV;
+      return (0, YV.jsx)("img", {
         className: "StudioTableThumbnailImage",
-        src: (0, OM.j)(rM),
+        src: (0, JV.h)(eV),
         alt: ""
       })
     }
   },
-  5309: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => PM
+  5410: (VV, eV, xV) => {
+    xV.d(eV, {
+      c: () => pV
     });
-    var OM = iM(44),
-      SM = iM(1116),
-      jM = iM.n(SM),
-      aM = iM(1303);
+    var JV = xV(62),
+      YV = xV(1146),
+      UV = xV.n(YV),
+      yV = xV(1321);
 
-    function PM(MM) {
+    function pV(VV) {
       let {
-        columns: rM,
-        rows: iM,
-        getRowKey: SM,
-        renderRow: PM,
-        className: nM
-      } = MM;
-      return (0, aM.jsxs)("table", {
-        className: jM()("Table", nM),
-        children: [(0, aM.jsx)("thead", {
-          children: (0, aM.jsx)("tr", {
-            children: rM.map((MM => (0, aM.jsx)("th", {
-              children: MM.header
-            }, MM.key)))
+        columns: eV,
+        rows: xV,
+        getRowKey: YV,
+        renderRow: pV,
+        className: QV
+      } = VV;
+      return (0, yV.jsxs)("table", {
+        className: UV()("Table", QV),
+        children: [(0, yV.jsx)("thead", {
+          children: (0, yV.jsx)("tr", {
+            children: eV.map((VV => (0, yV.jsx)("th", {
+              children: VV.header
+            }, VV.key)))
           })
-        }), (0, aM.jsx)("tbody", {
-          children: iM.map((MM => (0, aM.jsx)(OM.Fragment, {
-            children: PM(MM)
-          }, SM(MM))))
+        }), (0, yV.jsx)("tbody", {
+          children: xV.map((VV => (0, yV.jsx)(JV.Fragment, {
+            children: pV(VV)
+          }, YV(VV))))
         })]
       })
     }
   },
-  5299: () => {}
+  5402: () => {}
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const VV in modules) Object.freeze(modules[VV]);
