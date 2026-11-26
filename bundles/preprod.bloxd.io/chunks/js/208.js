@@ -1,104 +1,104 @@
 export const id = 208;
 export const ids = [208];
 export const modules = {
-  40084: (HH, BH, LH) => {
-    LH.d(BH, {
-      c: () => AH
+  39843: (BB, OB, GB) => {
+    GB.d(OB, {
+      e: () => YB
     });
-    class AH {
-      constructor(HH, BH) {
-        this.read = HH, this.apply = BH, this.release = null
+    class YB {
+      constructor(BB, OB) {
+        this.read = BB, this.apply = OB, this.release = null
       }
-      turn(HH, BH) {
-        const LH = null === this.release ? this.read() : this.release.transitionMs;
+      turn(BB, OB) {
+        const GB = null === this.release ? this.read() : this.release.transitionMs;
         this.stop(!1), this.apply({
-          forcedCameraDirectionTransitionMs: BH,
-          forcedCameraDirection: [HH[0], HH[1], HH[2]]
+          forcedCameraDirectionTransitionMs: OB,
+          forcedCameraDirection: [BB[0], BB[1], BB[2]]
         }), this.release = {
           timer: setTimeout((() => {
             this.stop(!0)
-          }), BH + 100),
-          transitionMs: LH
+          }), OB + 100),
+          transitionMs: GB
         }
       }
       dispose() {
         this.stop(!0)
       }
-      stop(HH) {
-        null !== this.release && (clearTimeout(this.release.timer), HH && this.apply({
+      stop(BB) {
+        null !== this.release && (clearTimeout(this.release.timer), BB && this.apply({
           forcedCameraDirection: null,
           forcedCameraDirectionTransitionMs: this.release.transitionMs
         }), this.release = null)
       }
     }
   },
-  39568: (HH, BH, LH) => {
-    LH.d(BH, {
-      b: () => SH,
-      c: () => rH
+  39342: (BB, OB, GB) => {
+    GB.d(OB, {
+      b: () => QB,
+      f: () => DB
     });
-    const AH = new Map;
+    const YB = new Map;
 
-    function rH(HH, BH) {
-      AH.set(HH, BH)
+    function DB(BB, OB) {
+      YB.set(BB, OB)
     }
 
-    function SH(HH) {
-      return HH ? AH.get(HH) : void 0
+    function QB(BB) {
+      return BB ? YB.get(BB) : void 0
     }
   },
-  37250: (HH, BH, LH) => {
-    LH.d(BH, {
-      b: () => EH,
-      c: () => tH,
-      d: () => CH,
-      e: () => zH,
-      f: () => vH
+  37058: (BB, OB, GB) => {
+    GB.d(OB, {
+      b: () => MB,
+      c: () => jB,
+      g: () => JB,
+      h: () => yB,
+      k: () => WB
     });
-    var AH = LH(625),
-      rH = LH(1807),
-      SH = LH(5268);
-    class hH {
-      constructor(HH, BH) {
-        this.width = HH, this.aX = BH, this.data = void 0, this.next = 0, this.size = 0, this.data = new Float64Array(HH * BH)
+    var YB = GB(645),
+      DB = GB(1834),
+      QB = GB(5287);
+    class oB {
+      constructor(BB, OB) {
+        this.width = BB, this.CP = OB, this.data = void 0, this.next = 0, this.size = 0, this.data = new Float64Array(BB * OB)
       }
-      push(HH) {
-        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        const LH = this.data,
-          AH = this.next * this.width;
-        for (let rH = 0; rH < this.width; rH++) LH[AH + rH] = HH[BH + rH];
-        this.next = (this.next + 1) % this.aX, this.size = Math.min(this.size + 1, this.aX)
+      push(BB) {
+        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        const GB = this.data,
+          YB = this.next * this.width;
+        for (let DB = 0; DB < this.width; DB++) GB[YB + DB] = BB[OB + DB];
+        this.next = (this.next + 1) % this.CP, this.size = Math.min(this.size + 1, this.CP)
       }
       rows() {
-        let HH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1 / 0;
-        const LH = [],
-          AH = (this.next - this.size + this.aX) % this.aX;
-        for (let rH = 0; rH < this.size; rH++) {
-          const SH = (AH + rH) % this.aX * this.width;
-          this.data[SH + HH] >= BH && LH.push(Array.from(this.data.subarray(SH, SH + this.width)))
+        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1 / 0;
+        const GB = [],
+          YB = (this.next - this.size + this.CP) % this.CP;
+        for (let DB = 0; DB < this.size; DB++) {
+          const QB = (YB + DB) % this.CP * this.width;
+          this.data[QB + BB] >= OB && GB.push(Array.from(this.data.subarray(QB, QB + this.width)))
         }
-        return LH
+        return GB
       }
       lines() {
-        return this.rows().map((HH => HH.join(",")))
+        return this.rows().map((BB => BB.join(",")))
       }
     }
-    const tH = 10,
-      zH = {
+    const jB = 10,
+      yB = {
         idle: 0,
-        hX: 1,
-        qN: 2,
-        ZN: 3,
-        XW: 4
+        GP: 1,
+        vI: 2,
+        YF: 3,
+        pZ: 4
       },
-      CH = {
+      JB = {
         none: 0,
         skipped: 1,
         paced: 2,
         drawn: 3
       },
-      EH = {
+      MB = {
         lockGained: 1,
         lockLost: 2,
         lockError: 3,
@@ -112,91 +112,91 @@ export const modules = {
         stepsLost: 11,
         cameraSetsLost: 12
       },
-      XH = 12e3,
-      GH = ["nowMs", "dtMs", "rawX", "rawY", "turnedX", "turnedY", "outcome", "velocityX", "velocityY", "limit"],
-      YH = ["timeStamp", "nowMs", "movementX", "movementY", "locked"],
-      uH = ["nowMs", "dtMs", "heading", "pitch", "kind"],
-      QH = ["nowMs", "source", "headingBefore", "pitchBefore", "headingAfter", "pitchAfter"],
-      WH = ["nowMs", "change", "count"];
+      PB = 12e3,
+      zB = ["nowMs", "dtMs", "rawX", "rawY", "turnedX", "turnedY", "outcome", "velocityX", "velocityY", "limit"],
+      lB = ["timeStamp", "nowMs", "movementX", "movementY", "locked"],
+      pB = ["nowMs", "dtMs", "heading", "pitch", "kind"],
+      qB = ["nowMs", "source", "headingBefore", "pitchBefore", "headingAfter", "pitchAfter"],
+      ZB = ["nowMs", "change", "count"];
 
-    function MH(HH) {
-      return "js" === HH ? EH.jsClient : EH.wasmClient
+    function NB(BB) {
+      return "js" === BB ? MB.jsClient : MB.wasmClient
     }
-    class xH {
+    class RB {
       constructor() {
-        this.steps = new hH(tH, XH), this.events = new hH(YH.length, XH), this.frames = new hH(uH.length, XH), this.cameraSets = new hH(SH.d, 256), this.changes = new hH(WH.length, 256)
+        this.steps = new oB(jB, PB), this.events = new oB(lB.length, PB), this.frames = new oB(pB.length, PB), this.cameraSets = new oB(QB.h, 256), this.changes = new oB(ZB.length, 256)
       }
     }
-    const vH = new class {
+    const WB = new class {
       constructor() {
-        this.rings = null, this.sample = new Float64Array(YH.length), this.startedClient = null, this.startedAtMs = 0
+        this.rings = null, this.sample = new Float64Array(lB.length), this.startedClient = null, this.startedAtMs = 0
       }
       get client() {
         return this.startedClient
       }
-      start(HH, BH) {
-        this.startedClient = HH, this.startedAtMs = performance.now(), null !== this.rings ? this.change(MH(HH)) : BH && this.allocate()
+      start(BB, OB) {
+        this.startedClient = BB, this.startedAtMs = performance.now(), null !== this.rings ? this.change(NB(BB)) : OB && this.allocate()
       }
       lockGained() {
-        this.allocate(), this.change(EH.lockGained)
+        this.allocate(), this.change(MB.lockGained)
       }
       allocate() {
-        null === this.rings && (this.rings = new xH, null !== this.startedClient && this.changeAt(this.startedAtMs, MH(this.startedClient), 1))
+        null === this.rings && (this.rings = new RB, null !== this.startedClient && this.changeAt(this.startedAtMs, NB(this.startedClient), 1))
       }
-      step(HH, BH) {
-        var LH;
-        HH[BH + 6] !== zH.XW && (null === (LH = this.rings) || void 0 === LH || LH.steps.push(HH, BH))
+      step(BB, OB) {
+        var GB;
+        BB[OB + 6] !== yB.pZ && (null === (GB = this.rings) || void 0 === GB || GB.steps.push(BB, OB))
       }
-      cameraSet(HH, BH) {
-        var LH;
-        null === (LH = this.rings) || void 0 === LH || LH.cameraSets.push(HH, BH)
+      cameraSet(BB, OB) {
+        var GB;
+        null === (GB = this.rings) || void 0 === GB || GB.cameraSets.push(BB, OB)
       }
-      mouseMove(HH, BH) {
-        const LH = this.rings;
-        if (null === LH) return;
-        const AH = this.sample;
-        AH[0] = HH.timeStamp, AH[1] = performance.now(), AH[2] = HH.movementX, AH[3] = HH.movementY, AH[4] = BH ? 1 : 0, LH.events.push(AH)
+      mouseMove(BB, OB) {
+        const GB = this.rings;
+        if (null === GB) return;
+        const YB = this.sample;
+        YB[0] = BB.timeStamp, YB[1] = performance.now(), YB[2] = BB.movementX, YB[3] = BB.movementY, YB[4] = OB ? 1 : 0, GB.events.push(YB)
       }
-      frame(HH, BH, LH, AH) {
-        const rH = this.rings;
-        if (null === rH || AH === CH.none) return;
-        const SH = this.sample;
-        SH[0] = performance.now(), SH[1] = HH, SH[2] = BH, SH[3] = LH, SH[4] = AH, rH.frames.push(SH)
+      frame(BB, OB, GB, YB) {
+        const DB = this.rings;
+        if (null === DB || YB === JB.none) return;
+        const QB = this.sample;
+        QB[0] = performance.now(), QB[1] = BB, QB[2] = OB, QB[3] = GB, QB[4] = YB, DB.frames.push(QB)
       }
-      change(HH) {
-        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        this.changeAt(performance.now(), HH, BH)
+      change(BB) {
+        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        this.changeAt(performance.now(), BB, OB)
       }
-      changeAt(HH, BH, LH) {
-        const AH = this.rings;
-        if (null === AH) return;
-        const rH = this.sample;
-        rH[0] = HH, rH[1] = BH, rH[2] = LH, AH.changes.push(rH)
+      changeAt(BB, OB, GB) {
+        const YB = this.rings;
+        if (null === YB) return;
+        const DB = this.sample;
+        DB[0] = BB, DB[1] = OB, DB[2] = GB, YB.changes.push(DB)
       }
       dumpText() {
-        var HH, BH;
-        const LH = this.rings;
-        return [`look records (${this.startedClient}): ${GH.join(",")}`, ...null !== (HH = null === LH || void 0 === LH ? void 0 : LH.steps.lines()) && void 0 !== HH ? HH : [], `mousemove events: ${YH.join(",")}`, ...null !== (BH = null === LH || void 0 === LH ? void 0 : LH.events.lines()) && void 0 !== BH ? BH : []].join("\n")
+        var BB, OB;
+        const GB = this.rings;
+        return [`look records (${this.startedClient}): ${zB.join(",")}`, ...null !== (BB = null === GB || void 0 === GB ? void 0 : GB.steps.lines()) && void 0 !== BB ? BB : [], `mousemove events: ${lB.join(",")}`, ...null !== (OB = null === GB || void 0 === GB ? void 0 : GB.events.lines()) && void 0 !== OB ? OB : []].join("\n")
       }
-      toJson(HH, BH) {
-        var LH;
-        const rH = HH - 6e4,
-          SH = this.rings,
-          hH = function(HH, BH) {
-            var LH;
-            let AH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-            const SH = null !== (LH = null === HH || void 0 === HH ? void 0 : HH.rows(AH, rH)) && void 0 !== LH ? LH : [];
+      toJson(BB, OB) {
+        var GB;
+        const DB = BB - 6e4,
+          QB = this.rings,
+          oB = function(BB, OB) {
+            var GB;
+            let YB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+            const QB = null !== (GB = null === BB || void 0 === BB ? void 0 : BB.rows(YB, DB)) && void 0 !== GB ? GB : [];
             return {
-              columns: BH,
-              fromMs: 0 === SH.length ? null : SH[0][AH],
-              rows: SH
+              columns: OB,
+              fromMs: 0 === QB.length ? null : QB[0][YB],
+              rows: QB
             }
           };
         return {
-          version: AH.d,
-          client: null !== (LH = this.startedClient) && void 0 !== LH ? LH : "not started",
+          version: YB.b,
+          client: null !== (GB = this.startedClient) && void 0 !== GB ? GB : "not started",
           savedAt: (new Date).toISOString(),
-          savedAtMs: HH,
+          savedAtMs: BB,
           keptMs: 6e4,
           page: window.location.href,
           userAgent: navigator.userAgent,
@@ -205,52 +205,52 @@ export const modules = {
             width: window.screen.width,
             height: window.screen.height
           },
-          ZW: null !== document.pointerLockElement,
+          bZ: null !== document.pointerLockElement,
           visibility: document.visibilityState,
-          ...BH,
-          outcomes: zH,
-          frameKinds: CH,
-          changes: EH,
-          lookSteps: hH(null === SH || void 0 === SH ? void 0 : SH.steps, GH),
-          mouseMoves: hH(null === SH || void 0 === SH ? void 0 : SH.events, YH, 1),
-          frames: hH(null === SH || void 0 === SH ? void 0 : SH.frames, uH),
-          cameraSets: hH(null === SH || void 0 === SH ? void 0 : SH.cameraSets, QH),
-          pageChanges: hH(null === SH || void 0 === SH ? void 0 : SH.changes, WH)
+          ...OB,
+          outcomes: yB,
+          frameKinds: JB,
+          changes: MB,
+          lookSteps: oB(null === QB || void 0 === QB ? void 0 : QB.steps, zB),
+          mouseMoves: oB(null === QB || void 0 === QB ? void 0 : QB.events, lB, 1),
+          frames: oB(null === QB || void 0 === QB ? void 0 : QB.frames, pB),
+          cameraSets: oB(null === QB || void 0 === QB ? void 0 : QB.cameraSets, qB),
+          pageChanges: oB(null === QB || void 0 === QB ? void 0 : QB.changes, ZB)
         }
       }
-      save(HH) {
-        const BH = JSON.stringify(this.toJson(performance.now(), HH));
-        (0, rH.e)(new Blob([BH], {
+      save(BB) {
+        const OB = JSON.stringify(this.toJson(performance.now(), BB));
+        (0, DB.c)(new Blob([OB], {
           type: "application/json"
         }), `bloxd-mouse-look-${(new Date).toISOString().replace(/[:.]/g,"-")}.json`)
       }
     }
   },
-  40657: (HH, BH, LH) => {
-    LH.d(BH, {
-      d: () => rH
+  40390: (BB, OB, GB) => {
+    GB.d(OB, {
+      b: () => DB
     });
-    var AH = LH(39105);
+    var YB = GB(38884);
 
-    function rH(HH, BH, LH) {
-      var rH, SH, hH, tH, zH, CH, EH;
-      const XH = (0, AH.b)(HH, BH, LH[0], LH[1], LH[2]),
-        GH = XH ? null !== (rH = XH.textCell) && void 0 !== rH ? rH : XH.rect.anchor : LH,
-        YH = BH(GH[0], GH[1], GH[2]);
+    function DB(BB, OB, GB) {
+      var DB, QB, oB, jB, yB, JB, MB;
+      const PB = (0, YB.d)(BB, OB, GB[0], GB[1], GB[2]),
+        zB = PB ? null !== (DB = PB.textCell) && void 0 !== DB ? DB : PB.rect.anchor : GB,
+        lB = OB(zB[0], zB[1], zB[2]);
       return {
-        pos: [LH[0], LH[1], LH[2]],
-        noticeboardSpan: XH && {
-          width: XH.rect.width,
-          height: XH.rect.height
+        pos: [GB[0], GB[1], GB[2]],
+        noticeboardSpan: PB && {
+          width: PB.rect.width,
+          height: PB.rect.height
         },
-        text: null !== (SH = null === YH || void 0 === YH || null === (hH = YH.persisted) || void 0 === hH || null === (tH = hH.shared) || void 0 === tH ? void 0 : tH.text) && void 0 !== SH ? SH : "",
-        textSize: null !== (zH = null === YH || void 0 === YH || null === (CH = YH.persisted) || void 0 === CH || null === (EH = CH.shared) || void 0 === EH ? void 0 : EH.textSize) && void 0 !== zH ? zH : null
+        text: null !== (QB = null === lB || void 0 === lB || null === (oB = lB.persisted) || void 0 === oB || null === (jB = oB.shared) || void 0 === jB ? void 0 : jB.text) && void 0 !== QB ? QB : "",
+        textSize: null !== (yB = null === lB || void 0 === lB || null === (JB = lB.persisted) || void 0 === JB || null === (MB = JB.shared) || void 0 === MB ? void 0 : MB.textSize) && void 0 !== yB ? yB : null
       }
     }
   },
-  39385: (HH, BH, LH) => {
-    function AH(HH) {
-      switch (HH.kind) {
+  39167: (BB, OB, GB) => {
+    function YB(BB) {
+      switch (BB.kind) {
         case void 0:
         case "flatEmissive":
           return !1;
@@ -259,463 +259,463 @@ export const modules = {
           return !0
       }
     }
-    LH.d(BH, {
-      d: () => rH,
-      g: () => SH,
-      k: () => AH
+    GB.d(OB, {
+      b: () => DB,
+      e: () => QB,
+      g: () => YB
     });
-    const rH = 4,
-      SH = 3
+    const DB = 4,
+      QB = 3
   },
-  40124: (HH, BH, LH) => {
-    LH.d(BH, {
-      d: () => rH,
-      e: () => SH
+  39879: (BB, OB, GB) => {
+    GB.d(OB, {
+      c: () => DB,
+      e: () => QB
     });
-    var AH = LH(317);
-    const rH = new Set(["bedwars", "bridgeBattle", "buildAFactory2", "classic", "clutch", "containmentBreach", "cooking", "defusal", "frontline", "goalRush", "greenville", "hideseek", "luckyBedwars", "murderMystery", "ninetyNineNights", "oneBlock", "plots", "pvpCiv", "secretSanta", "skyIslands", "skyblock", "tsunami"]);
-    class SH {
-      constructor(HH) {
-        this.importGame = HH, this.loads = new Map, this.loaded = new Map
+    var YB = GB(353);
+    const DB = new Set(["bedwars", "bridgeBattle", "buildAFactory2", "classic", "clutch", "containmentBreach", "cooking", "defusal", "frontline", "goalRush", "greenville", "hideseek", "luckyBedwars", "murderMystery", "ninetyNineNights", "oneBlock", "plots", "pvpCiv", "secretSanta", "skyIslands", "skyblock", "tsunami"]);
+    class QB {
+      constructor(BB) {
+        this.importGame = BB, this.loads = new Map, this.loaded = new Map
       }
-      load(HH) {
-        const BH = (0, AH.Wb)(HH);
-        if (!rH.has(BH)) return Promise.resolve(void 0);
-        let LH = this.loads.get(BH);
-        return LH || (LH = this.importGame(BH).then((HH => {
-          const LH = HH.default;
-          if ("function" !== typeof LH) throw new Error(`${BH}'s client code has no default-exported factory`);
-          return this.loaded.set(BH, LH), LH
-        })).catch((HH => {
-          throw this.loads.delete(BH), HH
-        })), this.loads.set(BH, LH)), LH
+      load(BB) {
+        const OB = (0, YB.ac)(BB);
+        if (!DB.has(OB)) return Promise.resolve(void 0);
+        let GB = this.loads.get(OB);
+        return GB || (GB = this.importGame(OB).then((BB => {
+          const GB = BB.default;
+          if ("function" !== typeof GB) throw new Error(`${OB}'s client code has no default-exported factory`);
+          return this.loaded.set(OB, GB), GB
+        })).catch((BB => {
+          throw this.loads.delete(OB), BB
+        })), this.loads.set(OB, GB)), GB
       }
-      loadedFactory(HH) {
-        const BH = (0, AH.Wb)(HH);
-        if (!rH.has(BH)) return;
-        const LH = this.loaded.get(BH);
-        if (!LH) throw new Error(`${BH}'s client code started before it loaded`);
-        return LH
+      loadedFactory(BB) {
+        const OB = (0, YB.ac)(BB);
+        if (!DB.has(OB)) return;
+        const GB = this.loaded.get(OB);
+        if (!GB) throw new Error(`${OB}'s client code started before it loaded`);
+        return GB
       }
     }
   },
-  40120: (HH, BH, LH) => {
-    function AH(HH, BH) {
+  39876: (BB, OB, GB) => {
+    function YB(BB, OB) {
       return Object.values({
-        ...HH,
-        ...BH
-      }).filter((HH => null !== HH))
+        ...BB,
+        ...OB
+      }).filter((BB => null !== BB))
     }
-    LH.d(BH, {
-      e: () => AH
+    GB.d(OB, {
+      d: () => YB
     })
   },
-  40661: (HH, BH, LH) => {
-    LH.d(BH, {
-      c: () => hH
+  40396: (BB, OB, GB) => {
+    GB.d(OB, {
+      d: () => oB
     });
-    var AH = LH(10030),
-      rH = LH(35006),
-      SH = LH(3639);
+    var YB = GB(10027),
+      DB = GB(34813),
+      QB = GB(3708);
 
-    function hH(HH) {
-      if (HH === AH.e) return 0;
-      const BH = (0, SH.e)(HH);
-      if (void 0 !== BH && BH <= rH.MAX_BLOCK_ID) return BH;
-      const LH = (0, SH.e)(HH.split("|")[0]);
-      if (void 0 !== LH && LH <= rH.MAX_BLOCK_ID && (0, rH.rootMetaDescOf)(LH) === HH) return LH;
-      throw new Error(`Invalid block name. You sent ${HH}. The only valid block names are 'Air' and those contained within the blockMetadata.ts file`)
+    function oB(BB) {
+      if (BB === YB.c) return 0;
+      const OB = (0, QB.c)(BB);
+      if (void 0 !== OB && OB <= DB.MAX_BLOCK_ID) return OB;
+      const GB = (0, QB.c)(BB.split("|")[0]);
+      if (void 0 !== GB && GB <= DB.MAX_BLOCK_ID && (0, DB.rootMetaDescOf)(GB) === BB) return GB;
+      throw new Error(`Invalid block name. You sent ${BB}. The only valid block names are 'Air' and those contained within the blockMetadata.ts file`)
     }
   },
-  40176: (HH, BH, LH) => {
-    LH.d(BH, {
-      e: () => rH
+  39922: (BB, OB, GB) => {
+    GB.d(OB, {
+      c: () => DB
     });
-    var AH = LH(15);
-    class rH {
-      constructor(HH) {
-        this.screen = HH, this.hidesHud = !1
+    var YB = GB(16);
+    class DB {
+      constructor(BB) {
+        this.screen = BB, this.hidesHud = !1
       }
-      show(HH, BH) {
-        this.screen.setFade(HH.colour, HH.alpha), this.screen.setLetterbox(!0 === BH.letterbox, HH.alpha < 1), this.setHudHidden(!0 === BH.hideHud)
+      show(BB, OB) {
+        this.screen.setFade(BB.colour, BB.alpha), this.screen.setLetterbox(!0 === OB.letterbox, BB.alpha < 1), this.setHudHidden(!0 === OB.hideHud)
       }
       clear() {
         this.screen.clear(), this.setHudHidden(!1)
       }
-      setHudHidden(HH) {
-        this.hidesHud !== HH && (this.hidesHud = HH, AH.c.set({
-          isUiHiddenByCamera: HH
+      setHudHidden(BB) {
+        this.hidesHud !== BB && (this.hidesHud = BB, YB.c.set({
+          isUiHiddenByCamera: BB
         }))
       }
     }
   },
-  40140: (HH, BH, LH) => {
-    LH.d(BH, {
-      c: () => AH,
-      f: () => GH,
-      i: () => XH,
-      k: () => hH,
-      l: () => uH,
-      n: () => zH,
-      o: () => QH,
-      p: () => CH,
-      r: () => tH,
-      s: () => EH
+  39892: (BB, OB, GB) => {
+    GB.d(OB, {
+      B: () => jB,
+      C: () => MB,
+      c: () => YB,
+      d: () => zB,
+      e: () => PB,
+      h: () => oB,
+      l: () => pB,
+      p: () => yB,
+      t: () => qB,
+      x: () => JB
     });
-    const AH = Math.PI / 2 - .001,
-      rH = 2 * Math.PI,
-      SH = 1e-9;
+    const YB = Math.PI / 2 - .001,
+      DB = 2 * Math.PI,
+      QB = 1e-9;
 
-    function hH(HH, BH) {
-      BH.heading = HH.heading, BH.pitch = HH.pitch
+    function oB(BB, OB) {
+      OB.heading = BB.heading, OB.pitch = BB.pitch
     }
 
-    function tH(HH, BH) {
-      const LH = BH - HH;
-      return LH - rH * Math.floor((LH + Math.PI) / rH)
+    function jB(BB, OB) {
+      const GB = OB - BB;
+      return GB - DB * Math.floor((GB + Math.PI) / DB)
     }
 
-    function zH(HH, BH, LH) {
-      return HH + tH(HH, BH) * LH
+    function yB(BB, OB, GB) {
+      return BB + jB(BB, OB) * GB
     }
 
-    function CH(HH) {
-      if (!Number.isFinite(HH)) return HH;
-      const BH = HH - rH * Math.floor(HH / rH);
-      return BH < rH ? BH : 0
+    function JB(BB) {
+      if (!Number.isFinite(BB)) return BB;
+      const OB = BB - DB * Math.floor(BB / DB);
+      return OB < DB ? OB : 0
     }
 
-    function EH(HH, BH) {
-      return HH + tH(HH, BH)
+    function MB(BB, OB) {
+      return BB + jB(BB, OB)
     }
 
-    function XH(HH) {
-      return Math.max(-AH, Math.min(AH, HH))
+    function PB(BB) {
+      return Math.max(-YB, Math.min(YB, BB))
     }
 
-    function GH(HH, BH, LH) {
-      const AH = Math.cos(BH);
-      return LH[0] = AH * Math.sin(HH), LH[1] = -Math.sin(BH), LH[2] = AH * Math.cos(HH), LH
+    function zB(BB, OB, GB) {
+      const YB = Math.cos(OB);
+      return GB[0] = YB * Math.sin(BB), GB[1] = -Math.sin(OB), GB[2] = YB * Math.cos(BB), GB
     }
 
-    function YH(HH, BH, LH, AH) {
-      const rH = Math.sqrt(HH * HH + LH * LH);
-      return rH < SH && Math.abs(BH) < SH || (rH >= SH && (AH.heading = Math.atan2(HH, LH)), AH.pitch = XH(Math.atan2(-BH, rH) + 0)), AH
+    function lB(BB, OB, GB, YB) {
+      const DB = Math.sqrt(BB * BB + GB * GB);
+      return DB < QB && Math.abs(OB) < QB || (DB >= QB && (YB.heading = Math.atan2(BB, GB)), YB.pitch = PB(Math.atan2(-OB, DB) + 0)), YB
     }
 
-    function uH(HH, BH) {
-      return YH(HH[0], HH[1], HH[2], BH)
+    function pB(BB, OB) {
+      return lB(BB[0], BB[1], BB[2], OB)
     }
 
-    function QH(HH, BH, LH) {
-      return YH(BH[0] - HH[0], BH[1] - HH[1], BH[2] - HH[2], LH)
+    function qB(BB, OB, GB) {
+      return lB(OB[0] - BB[0], OB[1] - BB[1], OB[2] - BB[2], GB)
     }
   },
-  40174: (HH, BH, LH) => {
-    LH.d(BH, {
-      c: () => SH,
-      f: () => rH
+  39913: (BB, OB, GB) => {
+    GB.d(OB, {
+      e: () => QB,
+      h: () => DB
     });
-    var AH = LH(40140);
+    var YB = GB(39892);
 
-    function rH(HH) {
-      var BH;
-      const LH = "default" === HH.mode ? "movement" : null !== (BH = HH.playerFacing) && void 0 !== BH ? BH : "movement";
-      return "cursor" === LH ? {
-        facing: LH,
+    function DB(BB) {
+      var OB;
+      const GB = "default" === BB.mode ? "movement" : null !== (OB = BB.playerFacing) && void 0 !== OB ? OB : "movement";
+      return "cursor" === GB ? {
+        facing: GB,
         mouseTurns: null
       } : {
-        facing: LH,
-        mouseTurns: "default" !== HH.mode && void 0 !== HH.playerLook ? "look" : "view"
+        facing: GB,
+        mouseTurns: "default" !== BB.mode && void 0 !== BB.playerLook ? "look" : "view"
       }
     }
 
-    function SH(HH, BH, LH, rH, SH, hH) {
-      return hH.lq = 0, hH.Fq = 0, hH.pointedAt = void 0, void 0 !== rH ? SH ? (hH.pointedAt = rH, HH) : (0, AH.p)(rH.heading) : SH ? (hH.lq = BH, hH.Fq = LH, HH) : (0, AH.p)(HH + BH)
+    function QB(BB, OB, GB, DB, QB, oB) {
+      return oB.Rm = 0, oB.Wm = 0, oB.pointedAt = void 0, void 0 !== DB ? QB ? (oB.pointedAt = DB, BB) : (0, YB.x)(DB.heading) : QB ? (oB.Rm = OB, oB.Wm = GB, BB) : (0, YB.x)(BB + OB)
     }
   },
-  40155: (HH, BH, LH) => {
-    LH.d(BH, {
-      d: () => DH
+  39898: (BB, OB, GB) => {
+    GB.d(OB, {
+      e: () => aB
     });
-    var AH = LH(40164),
-      rH = LH(40140),
-      SH = LH(37860);
+    var YB = GB(39903),
+      DB = GB(39892),
+      QB = GB(37687);
 
-    function hH(HH, BH, LH, AH) {
-      if (!(AH > 0)) return BH;
-      const rH = BH > HH ? Math.min(BH, HH + LH / AH) : Math.max(BH, HH - LH / AH);
-      return Math.abs(BH - rH) < 1e-9 ? BH : rH
+    function oB(BB, OB, GB, YB) {
+      if (!(YB > 0)) return OB;
+      const DB = OB > BB ? Math.min(OB, BB + GB / YB) : Math.max(OB, BB - GB / YB);
+      return Math.abs(OB - DB) < 1e-9 ? OB : DB
     }
-    class tH {
+    class jB {
       constructor() {
         this.phase = null, this.outMs = 0, this.holdMs = 0, this.inMs = 0, this.heldMs = 0, this.sinceTurnMs = 1 / 0, this.clearMs = 1 / 0, this.waiting = null, this.screen = {
-          colour: AH.d,
+          colour: YB.d,
           alpha: 0
         }
       }
       getScreen() {
         return this.screen
       }
-      fadeOut(HH) {
-        !this.isGoingOut() && this.sinceTurnMs < AH.g.minFadeTurnMs ? this.waiting = {
+      fadeOut(BB) {
+        !this.isGoingOut() && this.sinceTurnMs < YB.j.minFadeTurnMs ? this.waiting = {
           turn: "out",
-          transition: HH
-        } : (this.waiting = null, this.startOut(HH))
+          transition: BB
+        } : (this.waiting = null, this.startOut(BB))
       }
-      fadeIn(HH) {
-        this.isGoingOut() ? this.sinceTurnMs < AH.g.minFadeTurnMs ? this.waiting = {
+      fadeIn(BB) {
+        this.isGoingOut() ? this.sinceTurnMs < YB.j.minFadeTurnMs ? this.waiting = {
           turn: "in",
-          minMs: HH
-        } : (this.waiting = null, this.startIn(HH)) : this.waiting = null
+          minMs: BB
+        } : (this.waiting = null, this.startIn(BB)) : this.waiting = null
       }
-      advance(HH) {
-        const BH = this.waiting;
-        if (null === BH) return this.step(HH);
-        const LH = AH.g.minFadeTurnMs - this.sinceTurnMs;
-        if (LH > HH) return this.step(HH);
-        const rH = this.step(LH);
-        return this.waiting = null, "out" === BH.turn ? this.startOut(BH.transition) : this.startIn(BH.minMs), this.step(HH - LH) || rH
+      advance(BB) {
+        const OB = this.waiting;
+        if (null === OB) return this.step(BB);
+        const GB = YB.j.minFadeTurnMs - this.sinceTurnMs;
+        if (GB > BB) return this.step(BB);
+        const DB = this.step(GB);
+        return this.waiting = null, "out" === OB.turn ? this.startOut(OB.transition) : this.startIn(OB.minMs), this.step(BB - GB) || DB
       }
       isGoingOut() {
         return "out" === this.phase || "hold" === this.phase
       }
-      startOut(HH) {
-        ("in" === this.phase || null === this.phase && this.clearMs < AH.g.minFadeTurnMs) && (this.sinceTurnMs = 0), this.phase = "out", 0 === this.screen.alpha && (this.screen.colour = HH.colour), this.outMs = HH.outMs, this.holdMs = HH.holdMs, this.inMs = HH.inMs
+      startOut(BB) {
+        ("in" === this.phase || null === this.phase && this.clearMs < YB.j.minFadeTurnMs) && (this.sinceTurnMs = 0), this.phase = "out", 0 === this.screen.alpha && (this.screen.colour = BB.colour), this.outMs = BB.outMs, this.holdMs = BB.holdMs, this.inMs = BB.inMs
       }
-      startIn(HH) {
-        this.isGoingOut() && (this.sinceTurnMs = 0), this.phase = "in", this.inMs = Math.max(HH, this.inMs)
+      startIn(BB) {
+        this.isGoingOut() && (this.sinceTurnMs = 0), this.phase = "in", this.inMs = Math.max(BB, this.inMs)
       }
-      step(HH) {
-        const BH = this.screen;
-        this.sinceTurnMs += HH, null === this.phase && (this.clearMs += HH);
-        let LH = !1,
-          rH = HH;
+      step(BB) {
+        const OB = this.screen;
+        this.sinceTurnMs += BB, null === this.phase && (this.clearMs += BB);
+        let GB = !1,
+          DB = BB;
         if ("out" === this.phase) {
-          const AH = (1 - BH.alpha) * this.outMs;
-          if (BH.alpha = hH(BH.alpha, 1, HH, this.outMs), BH.alpha < 1) return !1;
-          this.phase = "hold", this.heldMs = 0, rH = Math.max(0, HH - AH), LH = !0
+          const YB = (1 - OB.alpha) * this.outMs;
+          if (OB.alpha = oB(OB.alpha, 1, BB, this.outMs), OB.alpha < 1) return !1;
+          this.phase = "hold", this.heldMs = 0, DB = Math.max(0, BB - YB), GB = !0
         }
-        let SH = HH;
+        let QB = BB;
         if ("hold" === this.phase) {
-          this.heldMs += rH;
-          const HH = Math.min(this.heldMs - this.holdMs, this.sinceTurnMs - AH.g.minFadeTurnMs);
-          if (HH < 0 || LH) return LH;
-          this.phase = "in", this.sinceTurnMs = HH, SH = HH
+          this.heldMs += DB;
+          const BB = Math.min(this.heldMs - this.holdMs, this.sinceTurnMs - YB.j.minFadeTurnMs);
+          if (BB < 0 || GB) return GB;
+          this.phase = "in", this.sinceTurnMs = BB, QB = BB
         }
-        return "in" === this.phase && (BH.alpha = hH(BH.alpha, 0, SH, this.inMs), BH.alpha <= 0 && (this.phase = null, this.clearMs = 0)), LH
+        return "in" === this.phase && (OB.alpha = oB(OB.alpha, 0, QB, this.inMs), OB.alpha <= 0 && (this.phase = null, this.clearMs = 0)), GB
       }
     }
-    var zH = LH(40135),
-      CH = LH(40169),
-      EH = LH(1962),
-      XH = LH(37450);
+    var yB = GB(39889),
+      JB = GB(39910),
+      MB = GB(1998),
+      PB = GB(37236);
 
-    function GH(HH, BH) {
-      for (let LH = 0; LH < BH.length; LH++) BH[LH] = HH[LH]
+    function zB(BB, OB) {
+      for (let GB = 0; GB < OB.length; GB++) OB[GB] = BB[GB]
     }
 
-    function YH(HH, BH) {
-      var LH;
-      return null !== (LH = HH.fov) && void 0 !== LH ? LH : BH.getDefaultFov()
+    function lB(BB, OB) {
+      var GB;
+      return null !== (GB = BB.fov) && void 0 !== GB ? GB : OB.getDefaultFov()
     }
 
-    function uH(HH, BH, LH, AH, rH) {
-      const SH = 2 / AH,
-        hH = Math.exp(-SH * rH);
-      for (let tH = 0; tH < HH.length; tH++) {
-        const AH = HH[tH] - LH[tH],
-          zH = (BH[tH] + SH * AH) * rH;
-        HH[tH] = LH[tH] + (AH + zH) * hH, BH[tH] = (BH[tH] - SH * zH) * hH
+    function pB(BB, OB, GB, YB, DB) {
+      const QB = 2 / YB,
+        oB = Math.exp(-QB * DB);
+      for (let jB = 0; jB < BB.length; jB++) {
+        const YB = BB[jB] - GB[jB],
+          yB = (OB[jB] + QB * YB) * DB;
+        BB[jB] = GB[jB] + (YB + yB) * oB, OB[jB] = (OB[jB] - QB * yB) * oB
       }
     }
-    class QH {
-      constructor(HH, BH, LH, AH) {
-        var SH, hH, tH, zH, CH;
-        this.settings = HH, this.cX = BH, this.targets = LH, this.base = void 0, this.closestDistance = void 0, this.furthestDistance = void 0, this.goal = void 0, this.framedTargets = !1, this.smoothed = [0, 0, 0, 0, 0, 0], this.EW = [0, 0, 0, 0, 0, 0], this.started = !1, this.angles = {
+    class qB {
+      constructor(BB, OB, GB, YB) {
+        var QB, oB, jB, yB, JB;
+        this.settings = BB, this.mP = OB, this.targets = GB, this.base = void 0, this.closestDistance = void 0, this.furthestDistance = void 0, this.goal = void 0, this.framedTargets = !1, this.smoothed = [0, 0, 0, 0, 0, 0], this.lZ = [0, 0, 0, 0, 0, 0], this.started = !1, this.angles = {
           heading: 0,
           pitch: 0
         }, this.points = [], this.forward = [0, 0, 0], this.base = {
-          heading: (0, rH.p)((0, EH.h)(null !== (SH = HH.viewHeading) && void 0 !== SH ? SH : 0)),
-          pitch: (0, rH.i)((0, EH.h)(null !== (hH = HH.viewElevation) && void 0 !== hH ? hH : 45))
-        }, this.closestDistance = null !== (tH = HH.closestDistance) && void 0 !== tH ? tH : Math.min(6, null !== (zH = HH.furthestDistance) && void 0 !== zH ? zH : 1 / 0), this.furthestDistance = null !== (CH = HH.furthestDistance) && void 0 !== CH ? CH : Math.max(64, this.closestDistance);
-        const XH = (0, rH.f)(this.base.heading, this.base.pitch, this.forward),
-          GH = AH.position,
-          YH = this.closestDistance;
-        this.goal = [GH[0] + XH[0] * YH, GH[1] + XH[1] * YH, GH[2] + XH[2] * YH, YH, this.base.heading, this.base.pitch]
+          heading: (0, DB.x)((0, MB.h)(null !== (QB = BB.viewHeading) && void 0 !== QB ? QB : 0)),
+          pitch: (0, DB.e)((0, MB.h)(null !== (oB = BB.viewElevation) && void 0 !== oB ? oB : 45))
+        }, this.closestDistance = null !== (jB = BB.closestDistance) && void 0 !== jB ? jB : Math.min(6, null !== (yB = BB.furthestDistance) && void 0 !== yB ? yB : 1 / 0), this.furthestDistance = null !== (JB = BB.furthestDistance) && void 0 !== JB ? JB : Math.max(64, this.closestDistance);
+        const PB = (0, DB.d)(this.base.heading, this.base.pitch, this.forward),
+          zB = YB.position,
+          lB = this.closestDistance;
+        this.goal = [zB[0] + PB[0] * lB, zB[1] + PB[1] * lB, zB[2] + PB[2] * lB, lB, this.base.heading, this.base.pitch]
       }
-      update(HH, BH, LH) {
-        var AH, SH;
-        this.placeGoal(null !== (AH = this.settings.fov) && void 0 !== AH ? AH : this.cX.getBaseFov()), this.goal[4] = (0, rH.s)(this.smoothed[4], this.base.heading), this.goal[5] = this.base.pitch;
-        const hH = null !== (SH = this.settings.smoothMs) && void 0 !== SH ? SH : 400;
-        !this.started || hH < 1 ? (GH(this.goal, this.smoothed), this.EW.fill(0), this.started = !0) : uH(this.smoothed, this.EW, this.goal, hH, HH), this.angles.heading = this.smoothed[4], this.angles.pitch = (0, rH.i)(this.smoothed[5]), BH.apply(this.angles, LH);
-        const tH = (0, rH.f)(LH.heading, LH.pitch, this.forward);
-        for (let rH = 0; rH < 3; rH++) LH.position[rH] = this.smoothed[rH] - tH[rH] * this.smoothed[3];
-        LH.fov = YH(this.settings, this.cX)
+      update(BB, OB, GB) {
+        var YB, QB;
+        this.placeGoal(null !== (YB = this.settings.fov) && void 0 !== YB ? YB : this.mP.getBaseFov()), this.goal[4] = (0, DB.C)(this.smoothed[4], this.base.heading), this.goal[5] = this.base.pitch;
+        const oB = null !== (QB = this.settings.smoothMs) && void 0 !== QB ? QB : 400;
+        !this.started || oB < 1 ? (zB(this.goal, this.smoothed), this.lZ.fill(0), this.started = !0) : pB(this.smoothed, this.lZ, this.goal, oB, BB), this.angles.heading = this.smoothed[4], this.angles.pitch = (0, DB.e)(this.smoothed[5]), OB.apply(this.angles, GB);
+        const jB = (0, DB.d)(GB.heading, GB.pitch, this.forward);
+        for (let DB = 0; DB < 3; DB++) GB.position[DB] = this.smoothed[DB] - jB[DB] * this.smoothed[3];
+        GB.fov = lB(this.settings, this.mP)
       }
-      continueFrom(HH) {
-        HH instanceof QH && (GH(HH.goal, this.goal), GH(HH.smoothed, this.smoothed), GH(HH.EW, this.EW), this.framedTargets = HH.framedTargets, this.started = HH.started)
+      continueFrom(BB) {
+        BB instanceof qB && (zB(BB.goal, this.goal), zB(BB.smoothed, this.smoothed), zB(BB.lZ, this.lZ), this.framedTargets = BB.framedTargets, this.started = BB.started)
       }
       reset() {
-        this.EW.fill(0), this.started = !1
+        this.lZ.fill(0), this.started = !1
       }
-      placeGoal(HH) {
-        var BH;
-        let LH = 0;
-        for (const EH of this.settings.targets) {
-          const HH = this.targets.currentAimPoint(EH);
-          HH && (0, zH.e)(HH, this.pointAt(LH++))
+      placeGoal(BB) {
+        var OB;
+        let GB = 0;
+        for (const MB of this.settings.targets) {
+          const BB = this.targets.currentAimPoint(MB);
+          BB && (0, yB.h)(BB, this.pointAt(GB++))
         }
-        if (LH > 0) this.framedTargets = !0;
+        if (GB > 0) this.framedTargets = !0;
         else if (!this.framedTargets) {
-          const HH = this.targets.aimPoint(this.cX.localPlayerId);
-          HH && (0, zH.e)(HH, this.pointAt(LH++))
+          const BB = this.targets.aimPoint(this.mP.localPlayerId);
+          BB && (0, yB.h)(BB, this.pointAt(GB++))
         }
-        const AH = this.goal;
-        if (0 === LH) return void(AH[3] = this.withinDistances(AH[3]));
-        for (let zH = 0; zH < 3; zH++) {
-          let HH = 1 / 0,
-            BH = -1 / 0;
-          for (let AH = 0; AH < LH; AH++) HH = Math.min(HH, this.points[AH][zH]), BH = Math.max(BH, this.points[AH][zH]);
-          AH[zH] = (HH + BH) / 2
+        const YB = this.goal;
+        if (0 === GB) return void(YB[3] = this.withinDistances(YB[3]));
+        for (let yB = 0; yB < 3; yB++) {
+          let BB = 1 / 0,
+            OB = -1 / 0;
+          for (let YB = 0; YB < GB; YB++) BB = Math.min(BB, this.points[YB][yB]), OB = Math.max(OB, this.points[YB][yB]);
+          YB[yB] = (BB + OB) / 2
         }
-        let rH = 0;
-        for (let zH = 0; zH < LH; zH++) {
-          const HH = this.points[zH];
-          rH = Math.max(rH, Math.hypot(HH[0] - AH[0], HH[1] - AH[1], HH[2] - AH[2]))
+        let DB = 0;
+        for (let yB = 0; yB < GB; yB++) {
+          const BB = this.points[yB];
+          DB = Math.max(DB, Math.hypot(BB[0] - YB[0], BB[1] - YB[1], BB[2] - YB[2]))
         }
-        const SH = Math.tan((0, EH.h)(HH) / 2),
-          hH = Math.atan(SH * (!0 === this.settings.letterbox ? XH.g : 1)),
-          tH = Math.atan(SH * this.cX.getAspectRatio()),
-          CH = (rH + (null !== (BH = this.settings.padding) && void 0 !== BH ? BH : 2)) / Math.sin(Math.min(hH, tH));
-        AH[3] = this.withinDistances(CH)
+        const QB = Math.tan((0, MB.h)(BB) / 2),
+          oB = Math.atan(QB * (!0 === this.settings.letterbox ? PB.g : 1)),
+          jB = Math.atan(QB * this.mP.getAspectRatio()),
+          JB = (DB + (null !== (OB = this.settings.padding) && void 0 !== OB ? OB : 2)) / Math.sin(Math.min(oB, jB));
+        YB[3] = this.withinDistances(JB)
       }
-      withinDistances(HH) {
-        return Math.min(this.furthestDistance, Math.max(this.closestDistance, HH))
+      withinDistances(BB) {
+        return Math.min(this.furthestDistance, Math.max(this.closestDistance, BB))
       }
-      pointAt(HH) {
-        return HH === this.points.length && this.points.push([0, 0, 0]), this.points[HH]
+      pointAt(BB) {
+        return BB === this.points.length && this.points.push([0, 0, 0]), this.points[BB]
       }
     }
-    class WH {
-      constructor(HH) {
-        this.limits = HH, this.yawOffset = 0, this.pitchOffset = 0, this.idleMs = 0, this.pointedAt = null
+    class ZB {
+      constructor(BB) {
+        this.limits = BB, this.yawOffset = 0, this.pitchOffset = 0, this.idleMs = 0, this.pointedAt = null
       }
-      continueFrom(HH) {
-        this.limits && (this.yawOffset = HH.yawOffset, this.pitchOffset = HH.pitchOffset, this.idleMs = HH.idleMs)
+      continueFrom(BB) {
+        this.limits && (this.yawOffset = BB.yawOffset, this.pitchOffset = BB.pitchOffset, this.idleMs = BB.idleMs)
       }
-      update(HH, BH) {
-        const LH = this.limits;
-        if (!LH) return;
-        const AH = Number.isFinite(BH.lq) ? BH.lq : 0,
-          rH = Number.isFinite(BH.Fq) ? BH.Fq : 0;
-        if (BH.pointedAt) this.idleMs = 0, this.pointedAt = {
-          heading: BH.pointedAt.heading,
-          pitch: BH.pointedAt.pitch
+      update(BB, OB) {
+        const GB = this.limits;
+        if (!GB) return;
+        const YB = Number.isFinite(OB.Rm) ? OB.Rm : 0,
+          DB = Number.isFinite(OB.Wm) ? OB.Wm : 0;
+        if (OB.pointedAt) this.idleMs = 0, this.pointedAt = {
+          heading: OB.pointedAt.heading,
+          pitch: OB.pointedAt.pitch
         };
-        else if (0 !== AH || 0 !== rH) this.idleMs = 0, this.yawOffset += AH, this.pitchOffset += rH;
+        else if (0 !== YB || 0 !== DB) this.idleMs = 0, this.yawOffset += YB, this.pitchOffset += DB;
         else {
-          const BH = Math.max(0, this.idleMs + HH - 200) - Math.max(0, this.idleMs - 200);
-          if (this.idleMs += HH, void 0 !== LH.returnMs && BH > 0) {
-            const HH = LH.returnMs > 0 ? Math.exp(-3 * BH / LH.returnMs) : 0;
-            this.yawOffset *= HH, this.pitchOffset *= HH
+          const OB = Math.max(0, this.idleMs + BB - 200) - Math.max(0, this.idleMs - 200);
+          if (this.idleMs += BB, void 0 !== GB.returnMs && OB > 0) {
+            const BB = GB.returnMs > 0 ? Math.exp(-3 * OB / GB.returnMs) : 0;
+            this.yawOffset *= BB, this.pitchOffset *= BB
           }
         }
-        this.clampOffsets(LH)
+        this.clampOffsets(GB)
       }
-      clampOffsets(HH) {
-        if (HH.maxYaw >= 180) this.yawOffset = (0, rH.r)(0, this.yawOffset);
+      clampOffsets(BB) {
+        if (BB.maxYaw >= 180) this.yawOffset = (0, DB.B)(0, this.yawOffset);
         else {
-          const BH = (0, EH.h)(HH.maxYaw);
-          this.yawOffset = Math.max(-BH, Math.min(BH, this.yawOffset))
+          const OB = (0, MB.h)(BB.maxYaw);
+          this.yawOffset = Math.max(-OB, Math.min(OB, this.yawOffset))
         }
-        const BH = (0, EH.h)(HH.maxPitch);
-        this.pitchOffset = Math.max(-BH, Math.min(BH, this.pitchOffset))
+        const OB = (0, MB.h)(BB.maxPitch);
+        this.pitchOffset = Math.max(-OB, Math.min(OB, this.pitchOffset))
       }
-      apply(HH, BH) {
-        this.pointedAt && this.limits && (this.yawOffset = (0, rH.r)(HH.heading, this.pointedAt.heading), this.pitchOffset = this.pointedAt.pitch - HH.pitch, this.pointedAt = null, this.clampOffsets(this.limits));
-        const LH = (0, rH.i)(HH.pitch + this.pitchOffset);
-        this.pitchOffset = LH - HH.pitch, BH.heading = (0, rH.p)(HH.heading + this.yawOffset), BH.pitch = LH
+      apply(BB, OB) {
+        this.pointedAt && this.limits && (this.yawOffset = (0, DB.B)(BB.heading, this.pointedAt.heading), this.pitchOffset = this.pointedAt.pitch - BB.pitch, this.pointedAt = null, this.clampOffsets(this.limits));
+        const GB = (0, DB.e)(BB.pitch + this.pitchOffset);
+        this.pitchOffset = GB - BB.pitch, OB.heading = (0, DB.x)(BB.heading + this.yawOffset), OB.pitch = GB
       }
-      unapply(HH, BH) {
-        BH.heading = (0, rH.p)(HH.heading - this.yawOffset), BH.pitch = (0, rH.i)(HH.pitch - this.pitchOffset)
+      unapply(BB, OB) {
+        OB.heading = (0, DB.x)(BB.heading - this.yawOffset), OB.pitch = (0, DB.e)(BB.pitch - this.pitchOffset)
       }
     }
-    const MH = 1e-6;
+    const NB = 1e-6;
 
-    function xH(HH) {
-      return Math.sqrt(HH[0] * HH[0] + HH[1] * HH[1] + HH[2] * HH[2])
+    function RB(BB) {
+      return Math.sqrt(BB[0] * BB[0] + BB[1] * BB[1] + BB[2] * BB[2])
     }
 
-    function vH(HH, BH, LH, AH, rH) {
-      const SH = rH * rH,
-        hH = SH * rH;
-      return (2 * hH - 3 * SH + 1) * HH + (hH - 2 * SH + rH) * BH + (-2 * hH + 3 * SH) * LH + (hH - SH) * AH
+    function WB(BB, OB, GB, YB, DB) {
+      const QB = DB * DB,
+        oB = QB * DB;
+      return (2 * oB - 3 * QB + 1) * BB + (oB - 2 * QB + DB) * OB + (-2 * oB + 3 * QB) * GB + (oB - QB) * YB
     }
 
-    function PH(HH, BH, LH, AH, rH) {
-      const SH = rH * rH;
-      return (6 * SH - 6 * rH) * HH + (3 * SH - 4 * rH + 1) * BH + (-6 * SH + 6 * rH) * LH + (3 * SH - 2 * rH) * AH
+    function AB(BB, OB, GB, YB, DB) {
+      const QB = DB * DB;
+      return (6 * QB - 6 * DB) * BB + (3 * QB - 4 * DB + 1) * OB + (-6 * QB + 6 * DB) * GB + (3 * QB - 2 * DB) * YB
     }
 
-    function TH(HH, BH) {
-      const LH = BH[0] - HH[0],
-        AH = BH[1] - HH[1],
-        rH = BH[2] - HH[2];
-      return Math.sqrt(LH * LH + AH * AH + rH * rH)
+    function VB(BB, OB) {
+      const GB = OB[0] - BB[0],
+        YB = OB[1] - BB[1],
+        DB = OB[2] - BB[2];
+      return Math.sqrt(GB * GB + YB * YB + DB * DB)
     }
 
-    function UH(HH, BH, LH, AH, rH, SH) {
-      for (let hH = 0; hH < 3; hH++) SH[hH] = rH ? HH[hH] * AH : LH[hH] - BH[hH];
-      return rH && function(HH, BH) {
-        const LH = xH(HH);
-        if (LH > BH) {
-          const AH = BH / LH;
-          HH[0] *= AH, HH[1] *= AH, HH[2] *= AH
+    function SB(BB, OB, GB, YB, DB, QB) {
+      for (let oB = 0; oB < 3; oB++) QB[oB] = DB ? BB[oB] * YB : GB[oB] - OB[oB];
+      return DB && function(BB, OB) {
+        const GB = RB(BB);
+        if (GB > OB) {
+          const YB = OB / GB;
+          BB[0] *= YB, BB[1] *= YB, BB[2] *= YB
         }
-      }(SH, 3 * TH(BH, LH)), SH
+      }(QB, 3 * VB(OB, GB)), QB
     }
 
-    function VH(HH, BH, LH, AH) {
-      for (let rH = 0; rH < 3; rH++) AH[rH] = 6 * (BH[rH] - HH[rH]) - 2 * LH[rH];
-      if (xH(AH) < MH)
-        for (let rH = 0; rH < 3; rH++) AH[rH] = BH[rH] - HH[rH];
-      return AH
+    function nB(BB, OB, GB, YB) {
+      for (let DB = 0; DB < 3; DB++) YB[DB] = 6 * (OB[DB] - BB[DB]) - 2 * GB[DB];
+      if (RB(YB) < NB)
+        for (let DB = 0; DB < 3; DB++) YB[DB] = OB[DB] - BB[DB];
+      return YB
     }
 
-    function OH(HH, BH) {
-      return [2 * BH[0] - HH[0], 2 * BH[1] - HH[1], 2 * BH[2] - HH[2]]
+    function UB(BB, OB) {
+      return [2 * OB[0] - BB[0], 2 * OB[1] - BB[1], 2 * OB[2] - BB[2]]
     }
 
-    function bH(HH, BH, LH, AH, rH, SH, hH) {
-      if (!SH && !hH) return 0;
-      const tH = SH ? HH : 2 * BH - LH,
-        zH = hH ? LH : 2 * BH - HH,
-        CH = SH ? AH : rH,
-        EH = hH ? rH : AH,
-        XH = (BH - tH) / CH,
-        GH = (zH - BH) / EH;
-      if (XH * GH <= 0) return 0;
-      const YH = (zH - tH) / (CH + EH),
-        uH = 3 * Math.min(Math.abs(XH), Math.abs(GH));
-      return Math.max(-uH, Math.min(uH, YH))
+    function fB(BB, OB, GB, YB, DB, QB, oB) {
+      if (!QB && !oB) return 0;
+      const jB = QB ? BB : 2 * OB - GB,
+        yB = oB ? GB : 2 * OB - BB,
+        JB = QB ? YB : DB,
+        MB = oB ? DB : YB,
+        PB = (OB - jB) / JB,
+        zB = (yB - OB) / MB;
+      if (PB * zB <= 0) return 0;
+      const lB = (yB - jB) / (JB + MB),
+        pB = 3 * Math.min(Math.abs(PB), Math.abs(zB));
+      return Math.max(-pB, Math.min(pB, lB))
     }
 
-    function kH(HH, BH, LH, AH, rH, SH, hH) {
+    function kB(BB, OB, GB, YB, DB, QB, oB) {
       const {
-        u: tH,
-        segmentMs: zH
-      } = HH;
-      if (!HH.curved) return LH + (AH - LH) * tH;
-      return vH(LH, bH(BH, LH, AH, HH.beforeMs, zH, SH, !0) * zH, AH, bH(LH, AH, rH, zH, HH.afterMs, !0, hH) * zH, tH)
+        u: jB,
+        segmentMs: yB
+      } = BB;
+      if (!BB.curved) return GB + (YB - GB) * jB;
+      return WB(GB, fB(OB, GB, YB, BB.beforeMs, yB, QB, !0) * yB, YB, fB(GB, YB, DB, yB, BB.afterMs, !0, oB) * yB, jB)
     }
 
-    function mH(HH) {
-      return Math.abs(HH.pitch) >= rH.c
+    function dB(BB) {
+      return Math.abs(BB.pitch) >= DB.c
     }
-    class oH {
-      constructor(HH, BH, LH, AH, rH) {
-        this.nodes = HH, this.prevNodes = LH, this.nextNodes = AH, this.tangents = void 0, this.derivative = [0, 0, 0], this.beforeAngles = {
+    class KB {
+      constructor(BB, OB, GB, YB, DB) {
+        this.nodes = BB, this.prevNodes = GB, this.nextNodes = YB, this.tangents = void 0, this.derivative = [0, 0, 0], this.beforeAngles = {
           heading: 0,
           pitch: 0
         }, this.fromAngles = {
@@ -730,84 +730,84 @@ export const modules = {
         }, this.borrowedAngles = {
           heading: 0,
           pitch: 0
-        }, this.tangents = HH.map(((HH, LH) => this.nodeTangent(BH, rH, LH)))
+        }, this.tangents = BB.map(((BB, GB) => this.nodeTangent(OB, DB, GB)))
       }
-      sample(HH, BH, LH) {
+      sample(BB, OB, GB) {
         const {
-          index: AH,
-          toIndex: SH,
-          segmentMs: hH,
-          curved: tH
-        } = HH, zH = this.fromAngles, CH = this.toAngles, EH = this.nodeAngles(AH, LH.position, BH, zH), XH = this.nodeAngles(SH, LH.position, BH, CH);
-        if (hH > 0 && "aim" !== EH && "aim" !== XH && this.liveTangent(HH, zH)) return LH.heading = (0, rH.p)(zH.heading), void(LH.pitch = zH.pitch);
-        if ("none" === EH && "none" === XH) return;
-        !tH && hH > 0 && ("tangent" === EH && this.liveTangent(HH, zH), "tangent" === XH && this.liveTangent(HH, CH)), "none" === EH ? (0, rH.k)(CH, zH) : "none" === XH && (0, rH.k)(zH, CH);
-        const GH = tH && HH.beforeIndex >= 0 && "none" !== this.nodeAngles(HH.beforeIndex, LH.position, BH, this.beforeAngles),
-          YH = tH && HH.afterIndex >= 0 && "none" !== this.nodeAngles(HH.afterIndex, LH.position, BH, this.afterAngles),
-          uH = (0, rH.s)(zH.heading, CH.heading),
-          QH = kH(HH, GH ? (0, rH.s)(zH.heading, this.beforeAngles.heading) : 0, zH.heading, uH, YH ? (0, rH.s)(uH, this.afterAngles.heading) : 0, GH, YH);
-        LH.heading = (0, rH.p)(QH), LH.pitch = (0, rH.i)(kH(HH, this.beforeAngles.pitch, zH.pitch, CH.pitch, this.afterAngles.pitch, GH, YH))
+          index: YB,
+          toIndex: QB,
+          segmentMs: oB,
+          curved: jB
+        } = BB, yB = this.fromAngles, JB = this.toAngles, MB = this.nodeAngles(YB, GB.position, OB, yB), PB = this.nodeAngles(QB, GB.position, OB, JB);
+        if (oB > 0 && "aim" !== MB && "aim" !== PB && this.liveTangent(BB, yB)) return GB.heading = (0, DB.x)(yB.heading), void(GB.pitch = yB.pitch);
+        if ("none" === MB && "none" === PB) return;
+        !jB && oB > 0 && ("tangent" === MB && this.liveTangent(BB, yB), "tangent" === PB && this.liveTangent(BB, JB)), "none" === MB ? (0, DB.h)(JB, yB) : "none" === PB && (0, DB.h)(yB, JB);
+        const zB = jB && BB.beforeIndex >= 0 && "none" !== this.nodeAngles(BB.beforeIndex, GB.position, OB, this.beforeAngles),
+          lB = jB && BB.afterIndex >= 0 && "none" !== this.nodeAngles(BB.afterIndex, GB.position, OB, this.afterAngles),
+          pB = (0, DB.C)(yB.heading, JB.heading),
+          qB = kB(BB, zB ? (0, DB.C)(yB.heading, this.beforeAngles.heading) : 0, yB.heading, pB, lB ? (0, DB.C)(pB, this.afterAngles.heading) : 0, zB, lB);
+        GB.heading = (0, DB.x)(qB), GB.pitch = (0, DB.e)(kB(BB, this.beforeAngles.pitch, yB.pitch, JB.pitch, this.afterAngles.pitch, zB, lB))
       }
-      nodeAngles(HH, BH, LH, AH) {
-        const rH = this.rawNodeAngles(HH, BH, LH, AH);
-        return "none" !== rH && mH(AH) && !this.borrowHeading(this.prevNodes[HH], BH, LH, AH) && this.borrowHeading(this.nextNodes[HH], BH, LH, AH), rH
+      nodeAngles(BB, OB, GB, YB) {
+        const DB = this.rawNodeAngles(BB, OB, GB, YB);
+        return "none" !== DB && dB(YB) && !this.borrowHeading(this.prevNodes[BB], OB, GB, YB) && this.borrowHeading(this.nextNodes[BB], OB, GB, YB), DB
       }
-      borrowHeading(HH, BH, LH, AH) {
-        const rH = this.borrowedAngles;
-        return !(HH < 0 || "none" === this.rawNodeAngles(HH, BH, LH, rH) || mH(rH)) && (AH.heading = rH.heading, !0)
+      borrowHeading(BB, OB, GB, YB) {
+        const DB = this.borrowedAngles;
+        return !(BB < 0 || "none" === this.rawNodeAngles(BB, OB, GB, DB) || dB(DB)) && (YB.heading = DB.heading, !0)
       }
-      rawNodeAngles(HH, BH, LH, AH) {
-        const SH = this.nodes[HH].keyframe;
-        if (SH.lookDirection) return (0, rH.l)(SH.lookDirection, AH), "aim";
-        if (void 0 !== SH.lookAt) {
-          const HH = LH(SH.lookAt);
-          if (HH) return (0, rH.o)(BH, HH, AH), "aim"
+      rawNodeAngles(BB, OB, GB, YB) {
+        const QB = this.nodes[BB].keyframe;
+        if (QB.lookDirection) return (0, DB.l)(QB.lookDirection, YB), "aim";
+        if (void 0 !== QB.lookAt) {
+          const BB = GB(QB.lookAt);
+          if (BB) return (0, DB.t)(OB, BB, YB), "aim"
         }
-        const hH = this.tangents[HH];
-        return hH ? ((0, rH.k)(hH, AH), "tangent") : "none"
+        const oB = this.tangents[BB];
+        return oB ? ((0, DB.h)(oB, YB), "tangent") : "none"
       }
-      liveTangent(HH, BH) {
-        const LH = this.nodes[HH.index].position,
-          AH = this.nodes[HH.toIndex].position,
-          SH = this.derivative;
-        for (let rH = 0; rH < 3; rH++) SH[rH] = PH(LH[rH], HH.fromTangent[rH], AH[rH], HH.toTangent[rH], HH.u);
-        return xH(SH) > 1e-9 ? ((0, rH.l)(SH, BH), !0) : !(TH(LH, AH) < MH) && ((0, rH.l)(VH(LH, AH, HH.u < .5 ? HH.toTangent : HH.fromTangent, SH), BH), !0)
+      liveTangent(BB, OB) {
+        const GB = this.nodes[BB.index].position,
+          YB = this.nodes[BB.toIndex].position,
+          QB = this.derivative;
+        for (let DB = 0; DB < 3; DB++) QB[DB] = AB(GB[DB], BB.fromTangent[DB], YB[DB], BB.toTangent[DB], BB.u);
+        return RB(QB) > 1e-9 ? ((0, DB.l)(QB, OB), !0) : !(VB(GB, YB) < NB) && ((0, DB.l)(nB(GB, YB, BB.u < .5 ? BB.toTangent : BB.fromTangent, QB), OB), !0)
       }
-      nodeTangent(HH, BH, LH) {
-        var AH;
-        const SH = HH[LH];
-        if (xH(SH) > 1e-9) return (0, rH.l)(SH, {
+      nodeTangent(BB, OB, GB) {
+        var YB;
+        const QB = BB[GB];
+        if (RB(QB) > 1e-9) return (0, DB.l)(QB, {
           heading: 0,
           pitch: 0
         });
-        const hH = null !== (AH = this.restDirectionTo(LH, LH + 1, HH, BH)) && void 0 !== AH ? AH : this.restDirectionTo(LH, LH - 1, HH, BH);
-        return hH ? (0, rH.l)(hH, {
+        const oB = null !== (YB = this.restDirectionTo(GB, GB + 1, BB, OB)) && void 0 !== YB ? YB : this.restDirectionTo(GB, GB - 1, BB, OB);
+        return oB ? (0, DB.l)(oB, {
           heading: 0,
           pitch: 0
         }) : null
       }
-      restDirectionTo(HH, BH, LH, AH) {
-        const rH = this.nodes[HH],
-          SH = this.nodes[BH];
-        if (!SH || TH(rH.position, SH.position) < MH) return null;
-        const [hH, tH] = BH > HH ? [rH, SH] : [SH, rH], zH = UH(LH[BH], hH.position, tH.position, tH.timeMs - hH.timeMs, AH, [0, 0, 0]);
-        return VH(hH.position, tH.position, zH, [0, 0, 0])
+      restDirectionTo(BB, OB, GB, YB) {
+        const DB = this.nodes[BB],
+          QB = this.nodes[OB];
+        if (!QB || VB(DB.position, QB.position) < NB) return null;
+        const [oB, jB] = OB > BB ? [DB, QB] : [QB, DB], yB = SB(GB[OB], oB.position, jB.position, jB.timeMs - oB.timeMs, YB, [0, 0, 0]);
+        return nB(oB.position, jB.position, yB, [0, 0, 0])
       }
     }
 
-    function IH(HH, BH) {
-      const LH = HH.lookDirection || BH.lookDirection ? function(HH, BH) {
-        if (!HH || !BH) return HH === BH;
-        const LH = xH(HH),
-          AH = xH(BH);
-        return Math.hypot(HH[0] / LH - BH[0] / AH, HH[1] / LH - BH[1] / AH, HH[2] / LH - BH[2] / AH) < MH
-      }(HH.lookDirection, BH.lookDirection) : (AH = HH.lookAt, rH = BH.lookAt, "object" !== typeof AH || "object" !== typeof rH ? AH === rH : TH(AH, rH) < MH);
-      var AH, rH;
-      return TH(HH.position, BH.position) < MH && HH.fov === BH.fov && LH
+    function uB(BB, OB) {
+      const GB = BB.lookDirection || OB.lookDirection ? function(BB, OB) {
+        if (!BB || !OB) return BB === OB;
+        const GB = RB(BB),
+          YB = RB(OB);
+        return Math.hypot(BB[0] / GB - OB[0] / YB, BB[1] / GB - OB[1] / YB, BB[2] / GB - OB[2] / YB) < NB
+      }(BB.lookDirection, OB.lookDirection) : (YB = BB.lookAt, DB = OB.lookAt, "object" !== typeof YB || "object" !== typeof DB ? YB === DB : VB(YB, DB) < NB);
+      var YB, DB;
+      return VB(BB.position, OB.position) < NB && BB.fov === OB.fov && GB
     }
-    class fH {
-      constructor(HH, BH, LH) {
-        if (this.smooth = BH, this.nodes = void 0, this.velocities = void 0, this.prevNodes = void 0, this.nextNodes = void 0, this.prevGaps = void 0, this.nextGaps = void 0, this.loopMs = void 0, this.aim = void 0, this.segment = {
+    class mB {
+      constructor(BB, OB, GB) {
+        if (this.smooth = OB, this.nodes = void 0, this.velocities = void 0, this.prevNodes = void 0, this.nextNodes = void 0, this.prevGaps = void 0, this.nextGaps = void 0, this.loopMs = void 0, this.aim = void 0, this.segment = {
             index: 0,
             toIndex: 0,
             u: 0,
@@ -819,330 +819,330 @@ export const modules = {
             afterMs: 0,
             fromTangent: [0, 0, 0],
             toTangent: [0, 0, 0]
-          }, 0 === HH.length) throw new Error("A camera path needs at least one keyframe");
-        for (let SH = 1; SH < HH.length; SH++)
-          if (!(HH[SH].timeMs > HH[SH - 1].timeMs)) throw new Error("Camera path keyframe times must strictly increase");
-        this.nodes = HH.map((HH => {
-          var BH;
+          }, 0 === BB.length) throw new Error("A camera path needs at least one keyframe");
+        for (let QB = 1; QB < BB.length; QB++)
+          if (!(BB[QB].timeMs > BB[QB - 1].timeMs)) throw new Error("Camera path keyframe times must strictly increase");
+        this.nodes = BB.map((BB => {
+          var OB;
           return {
-            timeMs: HH.timeMs,
-            position: [...HH.position],
-            keyframe: HH,
-            easing: (0, SH.r)(null !== (BH = HH.easing) && void 0 !== BH ? BH : "linear")
+            timeMs: BB.timeMs,
+            position: [...BB.position],
+            keyframe: BB,
+            easing: (0, QB.s)(null !== (OB = BB.easing) && void 0 !== OB ? OB : "linear")
           }
         }));
-        const AH = this.nodes[0],
-          rH = this.nodes[this.nodes.length - 1],
-          hH = LH && this.nodes.length > 1;
-        hH && !IH(AH.keyframe, rH.keyframe) && this.nodes.push({
-          ...AH,
-          timeMs: rH.timeMs + (rH.timeMs - AH.timeMs) / (this.nodes.length - 1)
-        }), this.loopMs = hH ? this.nodes[this.nodes.length - 1].timeMs - AH.timeMs : 0, this.prevNodes = this.nodes.map(((HH, BH) => this.neighbour(BH, -1))), this.nextNodes = this.nodes.map(((HH, BH) => this.neighbour(BH, 1))), this.prevGaps = this.prevNodes.map(((HH, BH) => HH >= 0 ? this.gapMs(BH, -1) : 0)), this.nextGaps = this.nextNodes.map(((HH, BH) => HH >= 0 ? this.gapMs(BH, 1) : 0)), this.velocities = this.nodes.map(((HH, BH) => {
-          const LH = this.prevNodes[BH],
-            AH = this.nextNodes[BH];
-          return function(HH, BH, LH, AH, rH, SH) {
-            if (SH[0] = 0, SH[1] = 0, SH[2] = 0, !HH && !LH) return SH;
-            const hH = null !== HH && void 0 !== HH ? HH : OH(null !== LH && void 0 !== LH ? LH : BH, BH),
-              tH = null !== LH && void 0 !== LH ? LH : OH(null !== HH && void 0 !== HH ? HH : BH, BH),
-              zH = HH ? AH : rH,
-              CH = LH ? rH : AH,
-              EH = TH(hH, BH),
-              XH = TH(BH, tH);
-            if (EH < MH || XH < MH) return SH;
-            const GH = Math.sqrt(EH),
-              YH = Math.sqrt(XH),
-              uH = (GH + YH) / (zH + CH);
-            for (let QH = 0; QH < 3; QH++) {
-              const HH = (BH[QH] - hH[QH]) / GH - (tH[QH] - hH[QH]) / (GH + YH) + (tH[QH] - BH[QH]) / YH;
-              SH[QH] = HH * uH
+        const YB = this.nodes[0],
+          DB = this.nodes[this.nodes.length - 1],
+          oB = GB && this.nodes.length > 1;
+        oB && !uB(YB.keyframe, DB.keyframe) && this.nodes.push({
+          ...YB,
+          timeMs: DB.timeMs + (DB.timeMs - YB.timeMs) / (this.nodes.length - 1)
+        }), this.loopMs = oB ? this.nodes[this.nodes.length - 1].timeMs - YB.timeMs : 0, this.prevNodes = this.nodes.map(((BB, OB) => this.neighbour(OB, -1))), this.nextNodes = this.nodes.map(((BB, OB) => this.neighbour(OB, 1))), this.prevGaps = this.prevNodes.map(((BB, OB) => BB >= 0 ? this.gapMs(OB, -1) : 0)), this.nextGaps = this.nextNodes.map(((BB, OB) => BB >= 0 ? this.gapMs(OB, 1) : 0)), this.velocities = this.nodes.map(((BB, OB) => {
+          const GB = this.prevNodes[OB],
+            YB = this.nextNodes[OB];
+          return function(BB, OB, GB, YB, DB, QB) {
+            if (QB[0] = 0, QB[1] = 0, QB[2] = 0, !BB && !GB) return QB;
+            const oB = null !== BB && void 0 !== BB ? BB : UB(null !== GB && void 0 !== GB ? GB : OB, OB),
+              jB = null !== GB && void 0 !== GB ? GB : UB(null !== BB && void 0 !== BB ? BB : OB, OB),
+              yB = BB ? YB : DB,
+              JB = GB ? DB : YB,
+              MB = VB(oB, OB),
+              PB = VB(OB, jB);
+            if (MB < NB || PB < NB) return QB;
+            const zB = Math.sqrt(MB),
+              lB = Math.sqrt(PB),
+              pB = (zB + lB) / (yB + JB);
+            for (let qB = 0; qB < 3; qB++) {
+              const BB = (OB[qB] - oB[qB]) / zB - (jB[qB] - oB[qB]) / (zB + lB) + (jB[qB] - OB[qB]) / lB;
+              QB[qB] = BB * pB
             }
-            return SH
-          }(LH >= 0 ? this.nodes[LH].position : null, HH.position, AH >= 0 ? this.nodes[AH].position : null, this.prevGaps[BH], this.nextGaps[BH], [0, 0, 0])
-        })), this.aim = new oH(this.nodes, this.velocities, this.prevNodes, this.nextNodes, BH)
+            return QB
+          }(GB >= 0 ? this.nodes[GB].position : null, BB.position, YB >= 0 ? this.nodes[YB].position : null, this.prevGaps[OB], this.nextGaps[OB], [0, 0, 0])
+        })), this.aim = new KB(this.nodes, this.velocities, this.prevNodes, this.nextNodes, OB)
       }
-      sample(HH, BH, LH, AH) {
-        const rH = this.findSegment(this.pathTime(HH));
-        this.samplePosition(rH, AH.position), this.aim.sample(rH, BH, AH);
+      sample(BB, OB, GB, YB) {
+        const DB = this.findSegment(this.pathTime(BB));
+        this.samplePosition(DB, YB.position), this.aim.sample(DB, OB, YB);
         const {
-          beforeIndex: SH,
-          afterIndex: hH
-        } = rH;
-        AH.fov = kH(rH, SH >= 0 ? this.fovAt(SH, LH) : 0, this.fovAt(rH.index, LH), this.fovAt(rH.toIndex, LH), hH >= 0 ? this.fovAt(hH, LH) : 0, SH >= 0, hH >= 0)
+          beforeIndex: QB,
+          afterIndex: oB
+        } = DB;
+        YB.fov = kB(DB, QB >= 0 ? this.fovAt(QB, GB) : 0, this.fovAt(DB.index, GB), this.fovAt(DB.toIndex, GB), oB >= 0 ? this.fovAt(oB, GB) : 0, QB >= 0, oB >= 0)
       }
-      pathTime(HH) {
-        const BH = this.nodes[0].timeMs;
-        if (this.loopMs <= 0 || HH <= BH) return HH;
-        const LH = HH - BH;
-        return BH + LH - this.loopMs * Math.floor(LH / this.loopMs)
+      pathTime(BB) {
+        const OB = this.nodes[0].timeMs;
+        if (this.loopMs <= 0 || BB <= OB) return BB;
+        const GB = BB - OB;
+        return OB + GB - this.loopMs * Math.floor(GB / this.loopMs)
       }
-      findSegment(HH) {
-        const BH = this.nodes,
-          LH = this.segment;
-        let AH = LH.index;
-        for (HH < BH[AH].timeMs && (AH = 0); AH < BH.length - 2 && BH[AH + 1].timeMs <= HH;) AH++;
-        const rH = Math.min(AH + 1, BH.length - 1),
-          hH = BH[rH].timeMs - BH[AH].timeMs;
-        return LH.index = AH, LH.toIndex = rH, LH.segmentMs = hH, LH.u = hH > 0 ? (0, SH.n)((HH - BH[AH].timeMs) / hH, BH[AH].easing) : 1, LH.curved = this.smooth && hH > 0, LH.beforeIndex = this.prevNodes[AH], LH.afterIndex = this.nextNodes[rH], LH.beforeMs = this.prevGaps[AH], LH.afterMs = this.nextGaps[rH], LH
+      findSegment(BB) {
+        const OB = this.nodes,
+          GB = this.segment;
+        let YB = GB.index;
+        for (BB < OB[YB].timeMs && (YB = 0); YB < OB.length - 2 && OB[YB + 1].timeMs <= BB;) YB++;
+        const DB = Math.min(YB + 1, OB.length - 1),
+          oB = OB[DB].timeMs - OB[YB].timeMs;
+        return GB.index = YB, GB.toIndex = DB, GB.segmentMs = oB, GB.u = oB > 0 ? (0, QB.q)((BB - OB[YB].timeMs) / oB, OB[YB].easing) : 1, GB.curved = this.smooth && oB > 0, GB.beforeIndex = this.prevNodes[YB], GB.afterIndex = this.nextNodes[DB], GB.beforeMs = this.prevGaps[YB], GB.afterMs = this.nextGaps[DB], GB
       }
-      samplePosition(HH, BH) {
+      samplePosition(BB, OB) {
         const {
-          fromTangent: LH,
-          toTangent: AH,
-          curved: rH
-        } = HH, SH = this.nodes[HH.index].position, hH = this.nodes[HH.toIndex].position;
-        UH(this.velocities[HH.index], SH, hH, HH.segmentMs, rH, LH), UH(this.velocities[HH.toIndex], SH, hH, HH.segmentMs, rH, AH);
-        const tH = HH.u;
-        for (let zH = 0; zH < 3; zH++) BH[zH] = rH ? vH(SH[zH], LH[zH], hH[zH], AH[zH], tH) : SH[zH] + (hH[zH] - SH[zH]) * tH
+          fromTangent: GB,
+          toTangent: YB,
+          curved: DB
+        } = BB, QB = this.nodes[BB.index].position, oB = this.nodes[BB.toIndex].position;
+        SB(this.velocities[BB.index], QB, oB, BB.segmentMs, DB, GB), SB(this.velocities[BB.toIndex], QB, oB, BB.segmentMs, DB, YB);
+        const jB = BB.u;
+        for (let yB = 0; yB < 3; yB++) OB[yB] = DB ? WB(QB[yB], GB[yB], oB[yB], YB[yB], jB) : QB[yB] + (oB[yB] - QB[yB]) * jB
       }
-      fovAt(HH, BH) {
-        var LH;
-        return null !== (LH = this.nodes[HH].keyframe.fov) && void 0 !== LH ? LH : BH
+      fovAt(BB, OB) {
+        var GB;
+        return null !== (GB = this.nodes[BB].keyframe.fov) && void 0 !== GB ? GB : OB
       }
-      neighbour(HH, BH) {
-        const LH = this.nodes.length - 1,
-          AH = HH + BH;
-        return AH >= 0 && AH <= LH ? AH : this.loopMs <= 0 || LH < 2 ? -1 : AH < 0 ? LH - 1 : 1
+      neighbour(BB, OB) {
+        const GB = this.nodes.length - 1,
+          YB = BB + OB;
+        return YB >= 0 && YB <= GB ? YB : this.loopMs <= 0 || GB < 2 ? -1 : YB < 0 ? GB - 1 : 1
       }
-      gapMs(HH, BH) {
-        const LH = this.nodes.length - 1;
-        if (1 === BH) {
-          const BH = HH === LH ? 0 : HH;
-          return this.nodes[BH + 1].timeMs - this.nodes[BH].timeMs
+      gapMs(BB, OB) {
+        const GB = this.nodes.length - 1;
+        if (1 === OB) {
+          const OB = BB === GB ? 0 : BB;
+          return this.nodes[OB + 1].timeMs - this.nodes[OB].timeMs
         }
-        const AH = 0 === HH ? LH : HH;
-        return this.nodes[AH].timeMs - this.nodes[AH - 1].timeMs
+        const YB = 0 === BB ? GB : BB;
+        return this.nodes[YB].timeMs - this.nodes[YB - 1].timeMs
       }
     }
 
-    function lH(HH, BH, LH) {
-      return null !== LH && Number.isFinite(LH) ? (HH.set(BH, LH), LH) : HH.get(BH)
+    function IB(BB, OB, GB) {
+      return null !== GB && Number.isFinite(GB) ? (BB.set(OB, GB), GB) : BB.get(OB)
     }
-    class KH {
-      constructor(HH) {
-        this.cX = HH, this.lastFeet = new Map, this.lastAimPoints = new Map, this.lastHeadings = new Map, this.lastPitches = new Map, this.lastLookHeadings = new Map, this.readFeet = void 0, this.readAimPoint = void 0, this.readFeet = BH => HH.getEntityPosition(BH), this.readAimPoint = BH => HH.getEntityAimPoint(BH)
+    class FB {
+      constructor(BB) {
+        this.mP = BB, this.lastFeet = new Map, this.lastAimPoints = new Map, this.lastHeadings = new Map, this.lastPitches = new Map, this.lastLookHeadings = new Map, this.readFeet = void 0, this.readAimPoint = void 0, this.readFeet = OB => BB.getEntityPosition(OB), this.readAimPoint = OB => BB.getEntityAimPoint(OB)
       }
-      aimPoint(HH) {
-        return "string" !== typeof HH ? (0, zH.j)(HH, 3) ? HH : null : this.resolve(HH, this.readAimPoint, this.lastAimPoints)
+      aimPoint(BB) {
+        return "string" !== typeof BB ? (0, yB.n)(BB, 3) ? BB : null : this.resolve(BB, this.readAimPoint, this.lastAimPoints)
       }
-      currentAimPoint(HH) {
-        const BH = "string" === typeof HH ? this.cX.getEntityAimPoint(HH) : HH;
-        return BH && (0, zH.j)(BH, 3) ? BH : null
+      currentAimPoint(BB) {
+        const OB = "string" === typeof BB ? this.mP.getEntityAimPoint(BB) : BB;
+        return OB && (0, yB.n)(OB, 3) ? OB : null
       }
-      feetPosition(HH) {
-        return this.resolve(HH, this.readFeet, this.lastFeet)
+      feetPosition(BB) {
+        return this.resolve(BB, this.readFeet, this.lastFeet)
       }
-      heading(HH) {
-        const BH = lH(this.lastHeadings, HH, this.cX.getEntityHeading(HH));
-        return void 0 !== BH ? BH : HH === this.cX.localPlayerId ? 0 : this.heading(this.cX.localPlayerId)
+      heading(BB) {
+        const OB = IB(this.lastHeadings, BB, this.mP.getEntityHeading(BB));
+        return void 0 !== OB ? OB : BB === this.mP.localPlayerId ? 0 : this.heading(this.mP.localPlayerId)
       }
-      pitch(HH) {
-        var BH;
-        return null !== (BH = lH(this.lastPitches, HH, this.cX.getEntityPitch(HH))) && void 0 !== BH ? BH : 0
+      pitch(BB) {
+        var OB;
+        return null !== (OB = IB(this.lastPitches, BB, this.mP.getEntityPitch(BB))) && void 0 !== OB ? OB : 0
       }
-      lookHeading(HH) {
-        var BH;
-        return null !== (BH = lH(this.lastLookHeadings, HH, this.cX.getEntityLookHeading(HH))) && void 0 !== BH ? BH : this.heading(HH)
+      lookHeading(BB) {
+        var OB;
+        return null !== (OB = IB(this.lastLookHeadings, BB, this.mP.getEntityLookHeading(BB))) && void 0 !== OB ? OB : this.heading(BB)
       }
-      resolve(HH, BH, LH) {
-        const AH = BH(HH);
-        let rH = LH.get(HH);
-        return AH && (0, zH.j)(AH, 3) ? (rH || (rH = [0, 0, 0], LH.set(HH, rH)), rH[0] = AH[0], rH[1] = AH[1], rH[2] = AH[2], rH) : rH || (HH === this.cX.localPlayerId ? null : this.resolve(this.cX.localPlayerId, BH, LH))
+      resolve(BB, OB, GB) {
+        const YB = OB(BB);
+        let DB = GB.get(BB);
+        return YB && (0, yB.n)(YB, 3) ? (DB || (DB = [0, 0, 0], GB.set(BB, DB)), DB[0] = YB[0], DB[1] = YB[1], DB[2] = YB[2], DB) : DB || (BB === this.mP.localPlayerId ? null : this.resolve(this.mP.localPlayerId, OB, GB))
       }
     }
 
-    function cH(HH) {
+    function iB(BB) {
       return {
-        heading: HH.heading,
-        pitch: HH.pitch
+        heading: BB.heading,
+        pitch: BB.pitch
       }
     }
 
-    function eH(HH, BH) {
-      Number.isFinite(HH.heading) && Number.isFinite(HH.pitch) || (0, rH.k)(BH, HH)
+    function LB(BB, OB) {
+      Number.isFinite(BB.heading) && Number.isFinite(BB.pitch) || (0, DB.h)(OB, BB)
     }
 
-    function qH(HH, BH, LH, AH, SH) {
-      if (BH) return void(0, rH.l)(BH, SH);
-      const hH = AH.aimPoint(LH);
-      hH && (0, rH.o)(HH, hH, SH)
+    function gB(BB, OB, GB, YB, QB) {
+      if (OB) return void(0, DB.l)(OB, QB);
+      const oB = YB.aimPoint(GB);
+      oB && (0, DB.t)(BB, oB, QB)
     }
-    class gH {
-      constructor(HH, BH, LH, AH) {
-        this.settings = HH, this.cX = BH, this.targets = LH, this.base = void 0, this.base = cH(AH)
+    class rB {
+      constructor(BB, OB, GB, YB) {
+        this.settings = BB, this.mP = OB, this.targets = GB, this.base = void 0, this.base = iB(YB)
       }
-      update(HH, BH, LH) {
-        var AH;
-        const rH = this.settings;
-        (0, zH.e)(rH.position, LH.position), qH(rH.position, rH.lookDirection, null !== (AH = rH.lookAt) && void 0 !== AH ? AH : this.cX.localPlayerId, this.targets, this.base), BH.apply(this.base, LH), LH.fov = YH(rH, this.cX)
+      update(BB, OB, GB) {
+        var YB;
+        const DB = this.settings;
+        (0, yB.h)(DB.position, GB.position), gB(DB.position, DB.lookDirection, null !== (YB = DB.lookAt) && void 0 !== YB ? YB : this.mP.localPlayerId, this.targets, this.base), OB.apply(this.base, GB), GB.fov = lB(DB, this.mP)
       }
-      continueFrom(HH) {
-        HH instanceof gH && (0, rH.k)(HH.base, this.base)
+      continueFrom(BB) {
+        BB instanceof rB && (0, DB.h)(BB.base, this.base)
       }
-      reset(HH) {
-        eH(this.base, HH)
+      reset(BB) {
+        LB(this.base, BB)
       }
     }
-    class NH {
-      constructor(HH, BH, LH, AH) {
-        this.settings = HH, this.cX = BH, this.targets = LH, this.base = void 0, this.goal = void 0, this.lastFeet = [0, 0, 0], this.foundFeet = !1, this.smoothed = [0, 0, 0], this.EW = [0, 0, 0], this.started = !1, this.distance = -1, this.toCamera = [0, 0, 0], this.aimOrigin = [0, 0, 0], this.eyeHeading = NaN, this.eyePitch = NaN, this.base = cH(AH), this.goal = [...AH.position]
+    class XB {
+      constructor(BB, OB, GB, YB) {
+        this.settings = BB, this.mP = OB, this.targets = GB, this.base = void 0, this.goal = void 0, this.lastFeet = [0, 0, 0], this.foundFeet = !1, this.smoothed = [0, 0, 0], this.lZ = [0, 0, 0], this.started = !1, this.distance = -1, this.toCamera = [0, 0, 0], this.aimOrigin = [0, 0, 0], this.eyeHeading = NaN, this.eyePitch = NaN, this.base = iB(YB), this.goal = [...YB.position]
       }
-      update(HH, BH, LH) {
-        var AH, SH;
-        const hH = this.settings,
-          tH = null !== (AH = hH.target) && void 0 !== AH ? AH : this.cX.localPlayerId,
-          CH = this.targets.feetPosition(tH),
-          EH = "eye" === hH.anchor;
-        let XH = !1;
-        var GH;
-        CH && (XH = this.foundFeet && TH(this.lastFeet, CH) > 32 + .1 * HH, (0, zH.e)(CH, this.lastFeet), this.foundFeet = !0, this.placeGoal(null !== (GH = EH ? this.targets.aimPoint(tH) : null) && void 0 !== GH ? GH : CH, tH));
-        const QH = null !== (SH = hH.smoothMs) && void 0 !== SH ? SH : 0;
-        !this.started || QH < 1 || XH ? ((0, zH.e)(this.goal, this.smoothed), this.EW.fill(0), this.started = !0) : uH(this.smoothed, this.EW, this.goal, QH, HH), XH && (this.distance = -1), (0, zH.e)(this.smoothed, LH.position);
-        const WH = !0 === hH.avoidTerrain ? this.pullIn(tH, HH, LH) : 1;
-        let MH = this.goal;
-        if ("target" === hH.offsetSpace) MH = LH.position;
-        else if (WH < 1) {
-          MH = this.aimOrigin;
-          for (let HH = 0; HH < 3; HH++) MH[HH] = LH.position[HH] + (this.goal[HH] - this.smoothed[HH]) * WH
+      update(BB, OB, GB) {
+        var YB, QB;
+        const oB = this.settings,
+          jB = null !== (YB = oB.target) && void 0 !== YB ? YB : this.mP.localPlayerId,
+          JB = this.targets.feetPosition(jB),
+          MB = "eye" === oB.anchor;
+        let PB = !1;
+        var zB;
+        JB && (PB = this.foundFeet && VB(this.lastFeet, JB) > 32 + .1 * BB, (0, yB.h)(JB, this.lastFeet), this.foundFeet = !0, this.placeGoal(null !== (zB = MB ? this.targets.aimPoint(jB) : null) && void 0 !== zB ? zB : JB, jB));
+        const qB = null !== (QB = oB.smoothMs) && void 0 !== QB ? QB : 0;
+        !this.started || qB < 1 || PB ? ((0, yB.h)(this.goal, this.smoothed), this.lZ.fill(0), this.started = !0) : pB(this.smoothed, this.lZ, this.goal, qB, BB), PB && (this.distance = -1), (0, yB.h)(this.smoothed, GB.position);
+        const ZB = !0 === oB.avoidTerrain ? this.pullIn(jB, BB, GB) : 1;
+        let NB = this.goal;
+        if ("target" === oB.offsetSpace) NB = GB.position;
+        else if (ZB < 1) {
+          NB = this.aimOrigin;
+          for (let BB = 0; BB < 3; BB++) NB[BB] = GB.position[BB] + (this.goal[BB] - this.smoothed[BB]) * ZB
         }
-        if (EH && !hH.lookDirection && void 0 === hH.lookAt) {
-          const BH = this.targets.lookHeading(tH),
-            LH = this.targets.pitch(tH),
-            AH = 1 - Math.exp(-HH / 50),
-            SH = (0, rH.p)(this.eyeHeading + (0, rH.r)(this.eyeHeading, BH) * AH),
-            hH = this.eyePitch + (LH - this.eyePitch) * AH,
-            zH = tH !== this.cX.localPlayerId && Number.isFinite(SH) && Number.isFinite(hH) && !XH;
-          this.eyeHeading = zH ? SH : (0, rH.p)(BH), this.eyePitch = zH ? hH : LH, this.base.heading = this.eyeHeading, this.base.pitch = this.eyePitch
+        if (MB && !oB.lookDirection && void 0 === oB.lookAt) {
+          const OB = this.targets.lookHeading(jB),
+            GB = this.targets.pitch(jB),
+            YB = 1 - Math.exp(-BB / 50),
+            QB = (0, DB.x)(this.eyeHeading + (0, DB.B)(this.eyeHeading, OB) * YB),
+            oB = this.eyePitch + (GB - this.eyePitch) * YB,
+            yB = jB !== this.mP.localPlayerId && Number.isFinite(QB) && Number.isFinite(oB) && !PB;
+          this.eyeHeading = yB ? QB : (0, DB.x)(OB), this.eyePitch = yB ? oB : GB, this.base.heading = this.eyeHeading, this.base.pitch = this.eyePitch
         } else {
-          var xH;
-          this.eyeHeading = NaN, this.eyePitch = NaN, qH(MH, hH.lookDirection, null !== (xH = hH.lookAt) && void 0 !== xH ? xH : tH, this.targets, this.base)
+          var RB;
+          this.eyeHeading = NaN, this.eyePitch = NaN, gB(NB, oB.lookDirection, null !== (RB = oB.lookAt) && void 0 !== RB ? RB : jB, this.targets, this.base)
         }
-        BH.apply(this.base, LH), LH.fov = YH(hH, this.cX)
+        OB.apply(this.base, GB), GB.fov = lB(oB, this.mP)
       }
-      continueFrom(HH) {
-        HH instanceof NH && (0, AH.q)(HH.settings.target, this.settings.target) && ((0, rH.k)(HH.base, this.base), (0, zH.e)(HH.goal, this.goal), (0, zH.e)(HH.lastFeet, this.lastFeet), this.foundFeet = HH.foundFeet, (0, zH.e)(HH.smoothed, this.smoothed), (0, zH.e)(HH.EW, this.EW), this.started = HH.started, this.eyeHeading = HH.eyeHeading, this.eyePitch = HH.eyePitch, !0 === HH.settings.avoidTerrain && (this.distance = HH.distance))
+      continueFrom(BB) {
+        BB instanceof XB && (0, YB.p)(BB.settings.target, this.settings.target) && ((0, DB.h)(BB.base, this.base), (0, yB.h)(BB.goal, this.goal), (0, yB.h)(BB.lastFeet, this.lastFeet), this.foundFeet = BB.foundFeet, (0, yB.h)(BB.smoothed, this.smoothed), (0, yB.h)(BB.lZ, this.lZ), this.started = BB.started, this.eyeHeading = BB.eyeHeading, this.eyePitch = BB.eyePitch, !0 === BB.settings.avoidTerrain && (this.distance = BB.distance))
       }
-      reset(HH) {
-        eH(this.base, HH), this.EW.fill(0), this.started = !1, this.distance = -1, this.eyeHeading = NaN, this.eyePitch = NaN
+      reset(BB) {
+        LB(this.base, BB), this.lZ.fill(0), this.started = !1, this.distance = -1, this.eyeHeading = NaN, this.eyePitch = NaN
       }
-      pullIn(HH, BH, LH) {
-        const AH = this.targets.aimPoint(HH);
-        if (!AH) return 1;
-        const rH = LH.position,
-          SH = TH(AH, rH);
-        if (!(SH > 0)) return 1;
-        const hH = this.toCamera;
-        for (let zH = 0; zH < 3; zH++) hH[zH] = (rH[zH] - AH[zH]) / SH;
-        const tH = function(HH, BH, LH) {
-          return HH < 0 || BH < HH ? BH : BH + (HH - BH) * Math.exp(-LH / 150)
-        }(this.distance, function(HH, BH, LH, AH) {
-          const rH = HH.raycastTerrain(BH, LH, AH);
-          return null !== rH && Number.isFinite(rH) ? Math.min(AH, Math.max(0, rH - .2)) : AH
-        }(this.cX, AH, hH, SH), BH);
-        if (SH - tH < .001) return this.distance = -1, 1;
-        this.distance = tH;
-        for (let zH = 0; zH < 3; zH++) rH[zH] = AH[zH] + hH[zH] * tH;
-        return tH / SH
+      pullIn(BB, OB, GB) {
+        const YB = this.targets.aimPoint(BB);
+        if (!YB) return 1;
+        const DB = GB.position,
+          QB = VB(YB, DB);
+        if (!(QB > 0)) return 1;
+        const oB = this.toCamera;
+        for (let yB = 0; yB < 3; yB++) oB[yB] = (DB[yB] - YB[yB]) / QB;
+        const jB = function(BB, OB, GB) {
+          return BB < 0 || OB < BB ? OB : OB + (BB - OB) * Math.exp(-GB / 150)
+        }(this.distance, function(BB, OB, GB, YB) {
+          const DB = BB.raycastTerrain(OB, GB, YB);
+          return null !== DB && Number.isFinite(DB) ? Math.min(YB, Math.max(0, DB - .2)) : YB
+        }(this.mP, YB, oB, QB), OB);
+        if (QB - jB < .001) return this.distance = -1, 1;
+        this.distance = jB;
+        for (let yB = 0; yB < 3; yB++) DB[yB] = YB[yB] + oB[yB] * jB;
+        return jB / QB
       }
-      placeGoal(HH, BH) {
-        const LH = this.settings.offset;
-        let AH = LH[0],
-          rH = LH[2];
+      placeGoal(BB, OB) {
+        const GB = this.settings.offset;
+        let YB = GB[0],
+          DB = GB[2];
         if ("target" === this.settings.offsetSpace) {
-          const HH = this.targets.heading(BH),
-            SH = Math.cos(HH),
-            hH = Math.sin(HH);
-          AH = LH[0] * SH + LH[2] * hH, rH = -LH[0] * hH + LH[2] * SH
+          const BB = this.targets.heading(OB),
+            QB = Math.cos(BB),
+            oB = Math.sin(BB);
+          YB = GB[0] * QB + GB[2] * oB, DB = -GB[0] * oB + GB[2] * QB
         }
-        this.goal[0] = HH[0] + AH, this.goal[1] = HH[1] + LH[1], this.goal[2] = HH[2] + rH
+        this.goal[0] = BB[0] + YB, this.goal[1] = BB[1] + GB[1], this.goal[2] = BB[2] + DB
       }
     }
-    class RH {
-      constructor(HH, BH, LH, AH) {
-        var rH, SH;
-        this.settings = HH, this.cX = BH, this.sampler = void 0, this.base = void 0, this.resolveTarget = void 0, this.elapsedMs = 0, this.sampler = HH.keyframes.length > 0 ? new fH(HH.keyframes, null === (rH = HH.smooth) || void 0 === rH || rH, null !== (SH = HH.loop) && void 0 !== SH && SH) : null, this.base = (0, zH.c)(AH, (0, zH.g)()), this.resolveTarget = HH => LH.aimPoint(HH)
+    class wB {
+      constructor(BB, OB, GB, YB) {
+        var DB, QB;
+        this.settings = BB, this.mP = OB, this.sampler = void 0, this.base = void 0, this.resolveTarget = void 0, this.elapsedMs = 0, this.sampler = BB.keyframes.length > 0 ? new mB(BB.keyframes, null === (DB = BB.smooth) || void 0 === DB || DB, null !== (QB = BB.loop) && void 0 !== QB && QB) : null, this.base = (0, yB.f)(YB, (0, yB.k)()), this.resolveTarget = BB => GB.aimPoint(BB)
       }
-      update(HH, BH, LH) {
-        this.elapsedMs += HH;
-        const AH = YH(this.settings, this.cX);
-        this.sampler ? this.sampler.sample(this.elapsedMs, this.resolveTarget, AH, this.base) : this.base.fov = AH, (0, zH.e)(this.base.position, LH.position), LH.fov = this.base.fov, BH.apply(this.base, LH)
+      update(BB, OB, GB) {
+        this.elapsedMs += BB;
+        const YB = lB(this.settings, this.mP);
+        this.sampler ? this.sampler.sample(this.elapsedMs, this.resolveTarget, YB, this.base) : this.base.fov = YB, (0, yB.h)(this.base.position, GB.position), GB.fov = this.base.fov, OB.apply(this.base, GB)
       }
-      continueFrom(HH) {
-        HH instanceof RH && (0, AH.q)(HH.settings.keyframes, this.settings.keyframes) && (this.elapsedMs = HH.elapsedMs, (0, zH.c)(HH.base, this.base))
+      continueFrom(BB) {
+        BB instanceof wB && (0, YB.p)(BB.settings.keyframes, this.settings.keyframes) && (this.elapsedMs = BB.elapsedMs, (0, yB.f)(BB.base, this.base))
       }
-      reset(HH) {
-        eH(this.base, HH), Number.isFinite(this.elapsedMs) || (this.elapsedMs = 0)
+      reset(BB) {
+        LB(this.base, BB), Number.isFinite(this.elapsedMs) || (this.elapsedMs = 0)
       }
     }
 
-    function jH(HH, BH) {
-      return (0, AH.u)(HH, BH)
+    function EB(BB, OB) {
+      return (0, YB.t)(BB, OB)
     }
-    class nH {
-      constructor(HH, BH, LH) {
-        var AH;
-        this.settings = HH, this.cX = BH, this.pose = void 0, this.lastGoodPose = void 0, this.look = void 0, this.targets = void 0, this.mode = void 0, this.warnedNonFinite = !1;
-        const rH = null !== LH && LH.settings.mode === HH.mode,
-          SH = rH ? LH.pose : BH.getDefaultPose();
-        this.pose = (0, zH.c)(SH, (0, zH.g)()), this.lastGoodPose = (0, zH.c)(rH ? LH.lastGoodPose : SH, (0, zH.g)()), this.look = new WH(HH.playerLook), this.targets = null !== (AH = null === LH || void 0 === LH ? void 0 : LH.targets) && void 0 !== AH ? AH : new KH(BH);
-        const hH = (0, zH.c)(SH, (0, zH.g)());
-        rH && LH.look.unapply(hH, hH), this.mode = function(HH, BH, LH, AH) {
-          switch (HH.mode) {
+    class cB {
+      constructor(BB, OB, GB) {
+        var YB;
+        this.settings = BB, this.mP = OB, this.pose = void 0, this.lastGoodPose = void 0, this.look = void 0, this.targets = void 0, this.mode = void 0, this.warnedNonFinite = !1;
+        const DB = null !== GB && GB.settings.mode === BB.mode,
+          QB = DB ? GB.pose : OB.getDefaultPose();
+        this.pose = (0, yB.f)(QB, (0, yB.k)()), this.lastGoodPose = (0, yB.f)(DB ? GB.lastGoodPose : QB, (0, yB.k)()), this.look = new ZB(BB.playerLook), this.targets = null !== (YB = null === GB || void 0 === GB ? void 0 : GB.targets) && void 0 !== YB ? YB : new FB(OB);
+        const oB = (0, yB.f)(QB, (0, yB.k)());
+        DB && GB.look.unapply(oB, oB), this.mode = function(BB, OB, GB, YB) {
+          switch (BB.mode) {
             case "fixed":
-              return new gH(HH, BH, LH, AH);
+              return new rB(BB, OB, GB, YB);
             case "follow":
-              return new NH(HH, BH, LH, AH);
+              return new XB(BB, OB, GB, YB);
             case "path":
-              return new RH(HH, BH, LH, AH);
+              return new wB(BB, OB, GB, YB);
             case "frame":
-              return new QH(HH, BH, LH, AH)
+              return new qB(BB, OB, GB, YB)
           }
-        }(HH, BH, this.targets, hH), rH && (this.look.continueFrom(LH.look), this.mode.continueFrom(LH.mode))
+        }(BB, OB, this.targets, oB), DB && (this.look.continueFrom(GB.look), this.mode.continueFrom(GB.mode))
       }
-      update(HH, BH) {
-        return this.look.update(HH, BH), this.mode.update(HH, this.look, this.pose), (0, zH.i)(this.pose) ? (0, zH.c)(this.pose, this.lastGoodPose) : (this.warnedNonFinite || (console.warn("Scripted camera produced a non-finite pose; holding the last good one"), this.warnedNonFinite = !0), (0, zH.c)(this.lastGoodPose, this.pose), this.mode.reset((0, zH.i)(this.lastGoodPose) ? this.lastGoodPose : this.cX.getDefaultPose())), this.pose
+      update(BB, OB) {
+        return this.look.update(BB, OB), this.mode.update(BB, this.look, this.pose), (0, yB.m)(this.pose) ? (0, yB.f)(this.pose, this.lastGoodPose) : (this.warnedNonFinite || (console.warn("Scripted camera produced a non-finite pose; holding the last good one"), this.warnedNonFinite = !0), (0, yB.f)(this.lastGoodPose, this.pose), this.mode.reset((0, yB.m)(this.lastGoodPose) ? this.lastGoodPose : this.mP.getDefaultPose())), this.pose
       }
     }
 
-    function FH(HH) {
-      return [0, 0, HH[2], HH[3]]
+    function hB(BB) {
+      return [0, 0, BB[2], BB[3]]
     }
-    class DH {
-      constructor(HH) {
-        this.cX = HH, this.settings = {
+    class aB {
+      constructor(BB) {
+        this.mP = BB, this.settings = {
           mode: "default"
-        }, this.pending = null, this.fade = new tH, this.shot = null, this.blend = null, this.mixed = (0, zH.g)(), this.output = (0, zH.g)(), this.hasOutput = !1, this.loadingPositions = [], this.loadingSlots = Array.from({
+        }, this.pending = null, this.fade = new jB, this.shot = null, this.blend = null, this.mixed = (0, yB.k)(), this.output = (0, yB.k)(), this.hasOutput = !1, this.loadingPositions = [], this.loadingSlots = Array.from({
           length: 3
         }, (() => [0, 0, 0]))
       }
-      setSettings(HH) {
-        const BH = (0, CH.b)(HH);
-        if ((0, AH.q)(BH, this.pending ? this.pending.settings : this.settings)) return;
-        const LH = jH(this.settings, BH);
-        if (void 0 !== BH.transition && !LH) return this.pending = {
-          settings: BH,
-          shot: "default" === BH.mode ? null : new nH(BH, this.cX, null)
-        }, void this.fade.fadeOut(BH.transition);
-        const rH = null !== this.pending;
-        this.pending = null, !rH && LH || this.fade.fadeIn(AH.g.minTransitionFadeMs), this.show(BH, !1)
+      setSettings(BB) {
+        const OB = (0, JB.d)(BB);
+        if ((0, YB.p)(OB, this.pending ? this.pending.settings : this.settings)) return;
+        const GB = EB(this.settings, OB);
+        if (void 0 !== OB.transition && !GB) return this.pending = {
+          settings: OB,
+          shot: "default" === OB.mode ? null : new cB(OB, this.mP, null)
+        }, void this.fade.fadeOut(OB.transition);
+        const DB = null !== this.pending;
+        this.pending = null, !DB && GB || this.fade.fadeIn(YB.j.minTransitionFadeMs), this.show(OB, !1)
       }
-      show(HH, BH) {
-        var LH, rH;
-        if ((0, AH.q)(HH, this.settings)) return;
-        const hH = !BH && jH(this.settings, HH);
-        this.settings = HH;
-        const tH = null !== this.blend && this.blend.elapsedMs > 0,
-          CH = (0, zH.c)(this.hasOutput ? this.output : this.cX.getDefaultPose(), (0, zH.g)());
-        if (this.shot = "default" === HH.mode ? null : new nH(HH, this.cX, BH ? null : this.shot), hH) return;
-        const EH = BH || !this.shot && !this.hasOutput ? 0 : null !== (LH = HH.blendInMs) && void 0 !== LH ? LH : 0;
-        if (EH <= 0) return void(this.blend = null);
-        const XH = (0, SH.r)(null !== (rH = HH.blendEasing) && void 0 !== rH ? rH : "easeInOut");
+      show(BB, OB) {
+        var GB, DB;
+        if ((0, YB.p)(BB, this.settings)) return;
+        const oB = !OB && EB(this.settings, BB);
+        this.settings = BB;
+        const jB = null !== this.blend && this.blend.elapsedMs > 0,
+          JB = (0, yB.f)(this.hasOutput ? this.output : this.mP.getDefaultPose(), (0, yB.k)());
+        if (this.shot = "default" === BB.mode ? null : new cB(BB, this.mP, OB ? null : this.shot), oB) return;
+        const MB = OB || !this.shot && !this.hasOutput ? 0 : null !== (GB = BB.blendInMs) && void 0 !== GB ? GB : 0;
+        if (MB <= 0) return void(this.blend = null);
+        const PB = (0, QB.s)(null !== (DB = BB.blendEasing) && void 0 !== DB ? DB : "easeInOut");
         this.blend = {
-          from: CH,
+          from: JB,
           fromScripted: this.hasOutput,
           headingDelta: NaN,
           elapsedMs: 0,
-          durationMs: EH,
-          easing: tH ? FH(XH) : XH
+          durationMs: MB,
+          easing: jB ? hB(PB) : PB
         }
       }
       getSettings() {
@@ -1157,66 +1157,66 @@ export const modules = {
       isActive() {
         return null !== this.shot || null !== this.blend
       }
-      update(HH, BH) {
-        const LH = Number.isFinite(HH) && HH > 0 ? HH : 0;
-        if (this.fade.advance(LH) && null !== this.pending) {
+      update(BB, OB) {
+        const GB = Number.isFinite(BB) && BB > 0 ? BB : 0;
+        if (this.fade.advance(GB) && null !== this.pending) {
           const {
-            settings: HH
+            settings: BB
           } = this.pending;
-          this.pending = null, this.show(HH, !0)
+          this.pending = null, this.show(BB, !0)
         }
         this.loadingPositions.length = 0;
-        const AH = this.pending;
-        if (null !== AH && void 0 !== AH && AH.shot) {
-          const HH = "path" === AH.settings.mode ? 0 : LH;
-          this.noteLoadingPosition(AH.shot.update(HH, zH.b).position)
+        const YB = this.pending;
+        if (null !== YB && void 0 !== YB && YB.shot) {
+          const BB = "path" === YB.settings.mode ? 0 : GB;
+          this.noteLoadingPosition(YB.shot.update(BB, yB.e).position)
         }
         if (!this.isActive()) return this.hasOutput = !1, null;
-        const hH = this.shot ? this.shot.update(LH, BH) : this.cX.getDefaultPose();
-        this.shot && this.noteLoadingPosition(hH.position);
-        const tH = this.blend;
-        if (!tH) return this.writeOutput(hH);
-        tH.elapsedMs += LH;
-        const CH = Math.min(1, tH.elapsedMs / tH.durationMs);
-        if (tH.headingDelta = Number.isFinite(tH.headingDelta) ? (0, rH.s)(tH.headingDelta, hH.heading - tH.from.heading) : (0, rH.r)(tH.from.heading, hH.heading), (0, zH.m)(tH.from, hH, tH.headingDelta, (0, SH.n)(CH, tH.easing), this.mixed), CH >= 1) {
+        const oB = this.shot ? this.shot.update(GB, OB) : this.mP.getDefaultPose();
+        this.shot && this.noteLoadingPosition(oB.position);
+        const jB = this.blend;
+        if (!jB) return this.writeOutput(oB);
+        jB.elapsedMs += GB;
+        const JB = Math.min(1, jB.elapsedMs / jB.durationMs);
+        if (jB.headingDelta = Number.isFinite(jB.headingDelta) ? (0, DB.C)(jB.headingDelta, oB.heading - jB.from.heading) : (0, DB.B)(jB.from.heading, oB.heading), (0, yB.o)(jB.from, oB, jB.headingDelta, (0, QB.q)(JB, jB.easing), this.mixed), JB >= 1) {
           if (this.blend = null, !this.shot) return this.hasOutput = !1, null
-        } else tH.fromScripted && this.noteLoadingPosition(tH.from.position);
+        } else jB.fromScripted && this.noteLoadingPosition(jB.from.position);
         return this.writeOutput(this.mixed)
       }
-      noteLoadingPosition(HH) {
-        if (HH.every(Number.isFinite)) {
-          const BH = this.loadingPositions;
-          BH.push((0, zH.e)(HH, this.loadingSlots[BH.length]))
+      noteLoadingPosition(BB) {
+        if (BB.every(Number.isFinite)) {
+          const OB = this.loadingPositions;
+          OB.push((0, yB.h)(BB, this.loadingSlots[OB.length]))
         }
       }
-      writeOutput(HH) {
-        const BH = this.output;
-        (0, zH.i)(HH) ? (0, zH.c)(HH, BH) : this.hasOutput || (0, zH.c)(this.cX.getDefaultPose(), BH), BH.pitch = (0, rH.i)(BH.pitch);
-        const LH = this.cX.getDefaultFov(),
-          SH = Number.isFinite(LH) && LH > 0 && LH < 180,
-          hH = SH ? Math.min(AH.g.minFov, LH) : AH.g.minFov,
-          tH = SH ? Math.max(AH.g.maxFov, LH) : AH.g.maxFov;
-        return BH.fov = Number.isFinite(BH.fov) ? Math.min(tH, Math.max(hH, BH.fov)) : tH, this.hasOutput = !0, BH
+      writeOutput(BB) {
+        const OB = this.output;
+        (0, yB.m)(BB) ? (0, yB.f)(BB, OB) : this.hasOutput || (0, yB.f)(this.mP.getDefaultPose(), OB), OB.pitch = (0, DB.e)(OB.pitch);
+        const GB = this.mP.getDefaultFov(),
+          QB = Number.isFinite(GB) && GB > 0 && GB < 180,
+          oB = QB ? Math.min(YB.j.minFov, GB) : YB.j.minFov,
+          jB = QB ? Math.max(YB.j.maxFov, GB) : YB.j.maxFov;
+        return OB.fov = Number.isFinite(OB.fov) ? Math.min(jB, Math.max(oB, OB.fov)) : jB, this.hasOutput = !0, OB
       }
     }
   },
-  40135: (HH, BH, LH) => {
-    LH.d(BH, {
-      b: () => rH,
-      c: () => tH,
-      e: () => hH,
-      g: () => SH,
-      i: () => CH,
-      j: () => zH,
-      m: () => EH
+  39889: (BB, OB, GB) => {
+    GB.d(OB, {
+      e: () => DB,
+      f: () => jB,
+      h: () => oB,
+      k: () => QB,
+      m: () => JB,
+      n: () => yB,
+      o: () => MB
     });
-    var AH = LH(40140);
-    const rH = {
-      lq: 0,
-      Fq: 0
+    var YB = GB(39892);
+    const DB = {
+      Rm: 0,
+      Wm: 0
     };
 
-    function SH() {
+    function QB() {
       return {
         position: [0, 0, 0],
         heading: 0,
@@ -1225,186 +1225,186 @@ export const modules = {
       }
     }
 
-    function hH(HH, BH) {
-      return BH[0] = HH[0], BH[1] = HH[1], BH[2] = HH[2], BH
+    function oB(BB, OB) {
+      return OB[0] = BB[0], OB[1] = BB[1], OB[2] = BB[2], OB
     }
 
-    function tH(HH, BH) {
-      return hH(HH.position, BH.position), BH.heading = HH.heading, BH.pitch = HH.pitch, BH.fov = HH.fov, BH
+    function jB(BB, OB) {
+      return oB(BB.position, OB.position), OB.heading = BB.heading, OB.pitch = BB.pitch, OB.fov = BB.fov, OB
     }
 
-    function zH(HH, BH) {
-      return Array.isArray(HH) && HH.length === BH && HH.every(Number.isFinite)
+    function yB(BB, OB) {
+      return Array.isArray(BB) && BB.length === OB && BB.every(Number.isFinite)
     }
 
-    function CH(HH) {
-      return zH(HH.position, 3) && Number.isFinite(HH.heading) && Number.isFinite(HH.pitch) && Number.isFinite(HH.fov)
+    function JB(BB) {
+      return yB(BB.position, 3) && Number.isFinite(BB.heading) && Number.isFinite(BB.pitch) && Number.isFinite(BB.fov)
     }
 
-    function EH(HH, BH, LH, rH, SH) {
-      for (let AH = 0; AH < 3; AH++) SH.position[AH] = HH.position[AH] + (BH.position[AH] - HH.position[AH]) * rH;
-      return SH.heading = (0, AH.p)(HH.heading + LH * rH), SH.pitch = HH.pitch + (BH.pitch - HH.pitch) * rH, SH.fov = HH.fov + (BH.fov - HH.fov) * rH, SH
+    function MB(BB, OB, GB, DB, QB) {
+      for (let YB = 0; YB < 3; YB++) QB.position[YB] = BB.position[YB] + (OB.position[YB] - BB.position[YB]) * DB;
+      return QB.heading = (0, YB.x)(BB.heading + GB * DB), QB.pitch = BB.pitch + (OB.pitch - BB.pitch) * DB, QB.fov = BB.fov + (OB.fov - BB.fov) * DB, QB
     }
   },
-  40169: (HH, BH, LH) => {
-    LH.d(BH, {
-      b: () => OH,
-      f: () => YH
+  39910: (BB, OB, GB) => {
+    GB.d(OB, {
+      d: () => UB,
+      f: () => lB
     });
-    var AH = LH(40164),
-      rH = LH(40135);
-    const SH = AH.e,
-      hH = AH.k,
-      tH = AH.f;
+    var YB = GB(39903),
+      DB = GB(39889);
+    const QB = YB.e,
+      oB = YB.l,
+      jB = YB.f;
 
-    function zH(HH, BH, LH, AH) {
-      return Number.isFinite(HH) ? Math.min(LH, Math.max(BH, HH)) : AH
+    function yB(BB, OB, GB, YB) {
+      return Number.isFinite(BB) ? Math.min(GB, Math.max(OB, BB)) : YB
     }
 
-    function CH(HH, BH, LH) {
-      return void 0 !== HH && Number.isFinite(HH) ? Math.min(LH, Math.max(BH, HH)) : void 0
+    function JB(BB, OB, GB) {
+      return void 0 !== BB && Number.isFinite(BB) ? Math.min(GB, Math.max(OB, BB)) : void 0
     }
 
-    function EH(HH) {
-      const BH = AH.g.maxCoordinate;
-      return [Math.min(BH, Math.max(-BH, HH[0])), Math.min(BH, Math.max(-BH, HH[1])), Math.min(BH, Math.max(-BH, HH[2]))]
+    function MB(BB) {
+      const OB = YB.j.maxCoordinate;
+      return [Math.min(OB, Math.max(-OB, BB[0])), Math.min(OB, Math.max(-OB, BB[1])), Math.min(OB, Math.max(-OB, BB[2]))]
     }
 
-    function XH(HH) {
-      return "string" === typeof HH ? HH : (0, rH.j)(HH, 3) ? EH(HH) : void 0
+    function PB(BB) {
+      return "string" === typeof BB ? BB : (0, DB.n)(BB, 3) ? MB(BB) : void 0
     }
-    const GH = new RegExp(AH.n);
+    const zB = new RegExp(YB.o);
 
-    function YH(HH) {
-      return "string" === typeof HH && GH.test(HH)
+    function lB(BB) {
+      return "string" === typeof BB && zB.test(BB)
     }
 
-    function uH(HH) {
-      const BH = [];
-      if (!Array.isArray(HH)) return BH;
-      for (const LH of HH.slice(0, AH.g.maxFrameTargets)) {
-        const HH = XH(LH);
-        void 0 === HH || "string" === typeof HH && !YH(HH) || BH.push(HH)
+    function pB(BB) {
+      const OB = [];
+      if (!Array.isArray(BB)) return OB;
+      for (const GB of BB.slice(0, YB.j.maxFrameTargets)) {
+        const BB = PB(GB);
+        void 0 === BB || "string" === typeof BB && !lB(BB) || OB.push(BB)
       }
-      return BH
+      return OB
     }
 
-    function QH(HH) {
-      if (!(0, rH.j)(HH, 3)) return;
-      const BH = Math.max(Math.abs(HH[0]), Math.abs(HH[1]), Math.abs(HH[2])),
-        LH = Math.hypot(HH[0] / BH, HH[1] / BH, HH[2] / BH);
-      return 0 === BH || BH * LH < AH.g.minDirectionLength ? void 0 : [HH[0] / BH / LH, HH[1] / BH / LH, HH[2] / BH / LH]
+    function qB(BB) {
+      if (!(0, DB.n)(BB, 3)) return;
+      const OB = Math.max(Math.abs(BB[0]), Math.abs(BB[1]), Math.abs(BB[2])),
+        GB = Math.hypot(BB[0] / OB, BB[1] / OB, BB[2] / OB);
+      return 0 === OB || OB * GB < YB.j.minDirectionLength ? void 0 : [BB[0] / OB / GB, BB[1] / OB / GB, BB[2] / OB / GB]
     }
 
-    function WH(HH) {
-      if (void 0 !== HH) return "string" === typeof HH ? SH.includes(HH) ? HH : void 0 : (0, rH.j)(HH, 4) ? [zH(HH[0], 0, 1, 0), zH(HH[1], AH.g.minEasingY, AH.g.maxEasingY, 0), zH(HH[2], 0, 1, 1), zH(HH[3], AH.g.minEasingY, AH.g.maxEasingY, 1)] : "linear"
+    function ZB(BB) {
+      if (void 0 !== BB) return "string" === typeof BB ? QB.includes(BB) ? BB : void 0 : (0, DB.n)(BB, 4) ? [yB(BB[0], 0, 1, 0), yB(BB[1], YB.j.minEasingY, YB.j.maxEasingY, 0), yB(BB[2], 0, 1, 1), yB(BB[3], YB.j.minEasingY, YB.j.maxEasingY, 1)] : "linear"
     }
 
-    function MH(HH) {
-      if (HH) return {
-        maxYaw: zH(HH.maxYaw, 0, AH.g.maxPlayerLook, 0),
-        maxPitch: zH(HH.maxPitch, 0, AH.g.maxPlayerLook, 0),
-        returnMs: CH(HH.returnMs, 0, AH.g.maxReturnMs)
+    function NB(BB) {
+      if (BB) return {
+        maxYaw: yB(BB.maxYaw, 0, YB.j.maxPlayerLook, 0),
+        maxPitch: yB(BB.maxPitch, 0, YB.j.maxPlayerLook, 0),
+        returnMs: JB(BB.returnMs, 0, YB.j.maxReturnMs)
       }
     }
-    const xH = new RegExp(AH.c);
+    const RB = new RegExp(YB.b);
 
-    function vH(HH) {
-      var BH;
-      if ("object" !== typeof HH || null === HH) return;
-      const LH = AH.g.maxTransitionMs,
-        rH = AH.g.minTransitionFadeMs;
+    function WB(BB) {
+      var OB;
+      if ("object" !== typeof BB || null === BB) return;
+      const GB = YB.j.maxTransitionMs,
+        DB = YB.j.minTransitionFadeMs;
       return {
-        colour: "string" === typeof HH.colour && xH.test(HH.colour) ? HH.colour : AH.d,
-        outMs: zH(HH.outMs, rH, LH, rH),
-        holdMs: zH(null !== (BH = HH.holdMs) && void 0 !== BH ? BH : 0, 0, LH, 0),
-        inMs: zH(HH.inMs, rH, LH, rH)
+        colour: "string" === typeof BB.colour && RB.test(BB.colour) ? BB.colour : YB.d,
+        outMs: yB(BB.outMs, DB, GB, DB),
+        holdMs: yB(null !== (OB = BB.holdMs) && void 0 !== OB ? OB : 0, 0, GB, 0),
+        inMs: yB(BB.inMs, DB, GB, DB)
       }
     }
 
-    function PH(HH) {
-      return !0 === HH || void 0
+    function AB(BB) {
+      return !0 === BB || void 0
     }
 
-    function TH(HH) {
-      if ("object" !== typeof HH || null === HH) return !1;
-      const BH = HH.lookAt;
-      return Number.isFinite(HH.timeMs) && (0, rH.j)(HH.position, 3) && (void 0 === BH || "string" === typeof BH || (0, rH.j)(BH, 3))
+    function VB(BB) {
+      if ("object" !== typeof BB || null === BB) return !1;
+      const OB = BB.lookAt;
+      return Number.isFinite(BB.timeMs) && (0, DB.n)(BB.position, 3) && (void 0 === OB || "string" === typeof OB || (0, DB.n)(OB, 3))
     }
 
-    function UH(HH) {
+    function SB(BB) {
       return {
-        ...HH,
-        timeMs: zH(HH.timeMs, 0, AH.g.maxPathMs, 0),
-        position: EH(HH.position),
-        lookAt: XH(HH.lookAt),
-        lookDirection: QH(HH.lookDirection),
-        fov: CH(HH.fov, AH.g.minFov, AH.g.maxFov),
-        easing: WH(HH.easing)
+        ...BB,
+        timeMs: yB(BB.timeMs, 0, YB.j.maxPathMs, 0),
+        position: MB(BB.position),
+        lookAt: PB(BB.lookAt),
+        lookDirection: qB(BB.lookDirection),
+        fov: JB(BB.fov, YB.j.minFov, YB.j.maxFov),
+        easing: ZB(BB.easing)
       }
     }
 
-    function VH(HH) {
-      const BH = [];
-      if (!Array.isArray(HH)) return BH;
-      for (const LH of HH.slice(0, AH.g.maxKeyframes)) {
-        if (!TH(LH)) continue;
-        const HH = UH(LH);
-        (0 === BH.length || HH.timeMs > BH[BH.length - 1].timeMs) && BH.push(HH)
+    function nB(BB) {
+      const OB = [];
+      if (!Array.isArray(BB)) return OB;
+      for (const GB of BB.slice(0, YB.j.maxKeyframes)) {
+        if (!VB(GB)) continue;
+        const BB = SB(GB);
+        (0 === OB.length || BB.timeMs > OB[OB.length - 1].timeMs) && OB.push(BB)
       }
-      return BH
+      return OB
     }
 
-    function OH(HH) {
-      if ("object" !== typeof HH || null === HH) return {
+    function UB(BB) {
+      if ("object" !== typeof BB || null === BB) return {
         mode: "default"
       };
-      const BH = {
-          blendInMs: CH(HH.blendInMs, 0, AH.g.maxBlendInMs),
-          blendEasing: WH(HH.blendEasing),
-          transition: vH(HH.transition),
-          letterbox: PH(HH.letterbox),
-          hideHud: PH(HH.hideHud)
+      const OB = {
+          blendInMs: JB(BB.blendInMs, 0, YB.j.maxBlendInMs),
+          blendEasing: ZB(BB.blendEasing),
+          transition: WB(BB.transition),
+          letterbox: AB(BB.letterbox),
+          hideHud: AB(BB.hideHud)
         },
-        LH = {
+        GB = {
           mode: "default",
-          ...BH
+          ...OB
         };
-      if ("default" === HH.mode || "fixed" === HH.mode && !(0, rH.j)(HH.position, 3)) return LH;
-      const SH = {
-        ...BH,
-        fov: CH(HH.fov, AH.g.minFov, AH.g.maxFov),
-        playerFacing: (GH = HH.playerFacing, hH.includes(GH) ? GH : void 0),
-        playerLook: MH(HH.playerLook)
+      if ("default" === BB.mode || "fixed" === BB.mode && !(0, DB.n)(BB.position, 3)) return GB;
+      const QB = {
+        ...OB,
+        fov: JB(BB.fov, YB.j.minFov, YB.j.maxFov),
+        playerFacing: (zB = BB.playerFacing, oB.includes(zB) ? zB : void 0),
+        playerLook: NB(BB.playerLook)
       };
-      var GH, YH, xH;
-      switch (HH.mode) {
+      var zB, lB, RB;
+      switch (BB.mode) {
         case "fixed":
           return {
-            ...HH, ...SH, position: EH(HH.position), lookAt: XH(HH.lookAt), lookDirection: QH(HH.lookDirection)
+            ...BB, ...QB, position: MB(BB.position), lookAt: PB(BB.lookAt), lookDirection: qB(BB.lookDirection)
           };
         case "follow":
           return {
-            ...HH, ...SH, target: "string" === typeof HH.target ? HH.target : void 0, anchor: (xH = HH.anchor, tH.includes(xH) ? xH : void 0), lookAt: XH(HH.lookAt), offset: (YH = HH.offset, Array.isArray(YH) ? [zH(YH[0], -AH.g.maxOffset, AH.g.maxOffset, 0), zH(YH[1], -AH.g.maxOffset, AH.g.maxOffset, 0), zH(YH[2], -AH.g.maxOffset, AH.g.maxOffset, 0)] : [0, 0, 0]), lookDirection: QH(HH.lookDirection), smoothMs: CH(HH.smoothMs, 0, AH.g.maxSmoothMs)
+            ...BB, ...QB, target: "string" === typeof BB.target ? BB.target : void 0, anchor: (RB = BB.anchor, jB.includes(RB) ? RB : void 0), lookAt: PB(BB.lookAt), offset: (lB = BB.offset, Array.isArray(lB) ? [yB(lB[0], -YB.j.maxOffset, YB.j.maxOffset, 0), yB(lB[1], -YB.j.maxOffset, YB.j.maxOffset, 0), yB(lB[2], -YB.j.maxOffset, YB.j.maxOffset, 0)] : [0, 0, 0]), lookDirection: qB(BB.lookDirection), smoothMs: JB(BB.smoothMs, 0, YB.j.maxSmoothMs)
           };
         case "path":
           return {
-            ...HH, ...SH, keyframes: VH(HH.keyframes)
+            ...BB, ...QB, keyframes: nB(BB.keyframes)
           };
         case "frame":
           return {
-            ...HH, ...SH, targets: uH(HH.targets), viewHeading: CH(HH.viewHeading, -AH.g.maxFrameHeading, AH.g.maxFrameHeading), viewElevation: CH(HH.viewElevation, 0, AH.g.maxFrameElevation), padding: CH(HH.padding, 0, AH.g.maxFrameDistance), closestDistance: CH(HH.closestDistance, 0, AH.g.maxFrameDistance), furthestDistance: CH(HH.furthestDistance, 0, AH.g.maxFrameDistance), smoothMs: CH(HH.smoothMs, 0, AH.g.maxSmoothMs)
+            ...BB, ...QB, targets: pB(BB.targets), viewHeading: JB(BB.viewHeading, -YB.j.maxFrameHeading, YB.j.maxFrameHeading), viewElevation: JB(BB.viewElevation, 0, YB.j.maxFrameElevation), padding: JB(BB.padding, 0, YB.j.maxFrameDistance), closestDistance: JB(BB.closestDistance, 0, YB.j.maxFrameDistance), furthestDistance: JB(BB.furthestDistance, 0, YB.j.maxFrameDistance), smoothMs: JB(BB.smoothMs, 0, YB.j.maxSmoothMs)
           };
         default:
-          return LH
+          return GB
       }
     }
   },
-  40193: (HH, BH, LH) => {
-    LH.d(BH, {
-      d: () => AH
+  39933: (BB, OB, GB) => {
+    GB.d(OB, {
+      d: () => YB
     });
-    const AH = {
+    const YB = {
       message: [{
         translationKey: "general:bunnyHoppingDisabled"
       }],
@@ -1412,96 +1412,96 @@ export const modules = {
       type: "Error"
     }
   },
-  40060: (HH, BH, LH) => {
-    function AH(HH, BH) {
-      return BH.set(HH), BH
+  39830: (BB, OB, GB) => {
+    function YB(BB, OB) {
+      return OB.set(BB), OB
     }
-    LH.d(BH, {
-      c: () => AH
+    GB.d(OB, {
+      d: () => YB
     })
   },
-  40056: (HH, BH, LH) => {
-    LH.d(BH, {
-      e: () => hH
+  39827: (BB, OB, GB) => {
+    GB.d(OB, {
+      c: () => oB
     });
-    var AH = LH(37509),
-      rH = LH.n(AH);
-    const SH = [1, 1, 1];
+    var YB = GB(37300),
+      DB = GB.n(YB);
+    const QB = [1, 1, 1];
 
-    function hH(HH) {
-      if (!HH) return [...SH];
+    function oB(BB) {
+      if (!BB) return [...QB];
       try {
-        const [BH, LH, AH] = rH()(HH).rgb().array();
-        return [BH / 255, LH / 255, AH / 255]
-      } catch (BH) {
-        return console.warn(`Invalid groundArrowPath colour "${HH}":`, BH), [...SH]
+        const [OB, GB, YB] = DB()(BB).rgb().array();
+        return [OB / 255, GB / 255, YB / 255]
+      } catch (OB) {
+        return console.warn(`Invalid groundArrowPath colour "${BB}":`, OB), [...QB]
       }
     }
   },
-  40184: (HH, BH, LH) => {
-    LH.d(BH, {
-      d: () => tH,
-      f: () => CH,
-      h: () => zH
+  39930: (BB, OB, GB) => {
+    GB.d(OB, {
+      c: () => jB,
+      e: () => JB,
+      h: () => yB
     });
-    var AH = LH(280),
-      rH = LH(3195);
-    const SH = /\/textures\/skyBoxes\/(space_blue|space_lightblue|space_red_2|space_white)\/(_[np][xyz]\.jpg)$/,
-      hH = 512;
+    var YB = GB(294),
+      DB = GB(3249);
+    const QB = /\/textures\/skyBoxes\/(space_blue|space_lightblue|space_red_2|space_white)\/(_[np][xyz]\.jpg)$/,
+      oB = 512;
 
-    function tH(HH) {
-      var BH;
-      const LH = Math.min(screen.width, screen.height) * (null !== (BH = (0, AH.d)()) && void 0 !== BH ? BH : (0, rH.q)());
-      return Math.max(window.innerHeight * (0, rH.q)(), LH) / (0, rH.r)(HH)
+    function jB(BB) {
+      var OB;
+      const GB = Math.min(screen.width, screen.height) * (null !== (OB = (0, YB.c)()) && void 0 !== OB ? OB : (0, DB.n)());
+      return Math.max(window.innerHeight * (0, DB.n)(), GB) / (0, DB.p)(BB)
     }
 
-    function zH(HH, BH, LH) {
-      return BH / (2 * Math.tan(LH / 2)) > hH ? HH : CH(HH)
+    function yB(BB, OB, GB) {
+      return OB / (2 * Math.tan(GB / 2)) > oB ? BB : JB(BB)
     }
 
-    function CH(HH) {
-      return HH.map((HH => HH.replace(SH, "/textures/skyBoxes/$1/1024/$2")))
+    function JB(BB) {
+      return BB.map((BB => BB.replace(QB, "/textures/skyBoxes/$1/1024/$2")))
     }
   },
-  40048: (HH, BH, LH) => {
-    LH.d(BH, {
-      b: () => rH
+  39824: (BB, OB, GB) => {
+    GB.d(OB, {
+      b: () => DB
     });
-    var AH = LH(176);
+    var YB = GB(192);
 
-    function rH(HH, BH, LH, rH, SH, hH, tH, zH, CH, EH, XH) {
-      const GH = AH.g.xX,
-        YH = SH - LH;
-      let uH = YH * (hH - rH);
-      EH.fill(0, 0, uH);
-      for (let AH = Math.floor((zH - 1) / GH);
-        (AH + 1) * GH > tH; AH--) {
-        const QH = AH * GH;
-        for (let WH = Math.floor(LH / GH); WH * GH < SH; WH++) {
-          const MH = WH * GH,
-            xH = Math.max(LH - MH, 0),
-            vH = Math.min(SH - MH, GH);
-          for (let SH = Math.floor(rH / GH); SH * GH < hH; SH++) {
-            const PH = HH(WH, AH, SH);
-            if (!PH) continue;
-            const TH = SH * GH,
-              UH = Math.max(rH - TH, 0),
-              VH = Math.min(hH - TH, GH),
-              OH = PH.jY,
-              bH = PH.aG,
-              kH = bH.data;
-            for (let HH = Math.min(zH - 1 - QH, GH - 1); HH >= Math.max(tH - QH, 0); HH--) {
-              const AH = OH[HH],
-                SH = AH === BH;
-              if (SH || 0 !== CH[AH]) {
-                for (let BH = xH; BH < vH; BH++)
-                  for (let hH = UH; hH < VH; hH++) {
-                    const tH = (TH + hH - rH) * YH + MH + BH - LH;
-                    if (0 !== EH[tH]) continue;
-                    const zH = SH ? kH[bH.index(BH, HH, hH)] : AH;
-                    0 !== CH[zH] && (EH[tH] = zH, XH[tH] = QH + HH, uH--)
+    function DB(BB, OB, GB, DB, QB, oB, jB, yB, JB, MB, PB) {
+      const zB = YB.f.pP,
+        lB = QB - GB;
+      let pB = lB * (oB - DB);
+      MB.fill(0, 0, pB);
+      for (let YB = Math.floor((yB - 1) / zB);
+        (YB + 1) * zB > jB; YB--) {
+        const qB = YB * zB;
+        for (let ZB = Math.floor(GB / zB); ZB * zB < QB; ZB++) {
+          const NB = ZB * zB,
+            RB = Math.max(GB - NB, 0),
+            WB = Math.min(QB - NB, zB);
+          for (let QB = Math.floor(DB / zB); QB * zB < oB; QB++) {
+            const AB = BB(ZB, YB, QB);
+            if (!AB) continue;
+            const VB = QB * zB,
+              SB = Math.max(DB - VB, 0),
+              nB = Math.min(oB - VB, zB),
+              UB = AB.al,
+              fB = AB.sz,
+              kB = fB.data;
+            for (let BB = Math.min(yB - 1 - qB, zB - 1); BB >= Math.max(jB - qB, 0); BB--) {
+              const YB = UB[BB],
+                QB = YB === OB;
+              if (QB || 0 !== JB[YB]) {
+                for (let OB = RB; OB < WB; OB++)
+                  for (let oB = SB; oB < nB; oB++) {
+                    const jB = (VB + oB - DB) * lB + NB + OB - GB;
+                    if (0 !== MB[jB]) continue;
+                    const yB = QB ? kB[fB.index(OB, BB, oB)] : YB;
+                    0 !== JB[yB] && (MB[jB] = yB, PB[jB] = qB + BB, pB--)
                   }
-                if (0 === uH) return
+                if (0 === pB) return
               }
             }
           }
@@ -1509,15 +1509,15 @@ export const modules = {
       }
     }
   },
-  34806: (HH, BH, LH) => {
-    LH.d(BH, {
-      e: () => SH,
-      h: () => tH,
-      l: () => hH,
-      m: () => rH,
-      n: () => AH
+  34612: (BB, OB, GB) => {
+    GB.d(OB, {
+      e: () => QB,
+      g: () => jB,
+      i: () => oB,
+      l: () => DB,
+      p: () => YB
     });
-    const AH = {
+    const YB = {
         default: {
           type: "earth",
           vertexTint: [137, 207, 240]
@@ -1604,43 +1604,43 @@ export const modules = {
           pz: "/textures/skyBoxes/space_white/_pz.jpg"
         }
       },
-      rH = "/textures/dayNight/sun.png",
-      SH = "/textures/dayNight/moon.png",
-      hH = "/textures/dayNight/stars",
-      tH = ["_px.png", "_py.png", "_pz.png", "_nx.png", "_ny.png", "_nz.png"]
+      DB = "/textures/dayNight/sun.png",
+      QB = "/textures/dayNight/moon.png",
+      oB = "/textures/dayNight/stars",
+      jB = ["_px.png", "_py.png", "_pz.png", "_nx.png", "_ny.png", "_nz.png"]
   },
-  40164: (HH, BH, LH) => {
-    LH.d(BH, {
-      c: () => XH,
-      d: () => GH,
-      e: () => AH,
-      f: () => rH,
-      g: () => CH,
-      k: () => SH,
-      n: () => EH,
-      q: () => zH,
-      u: () => tH
+  39903: (BB, OB, GB) => {
+    GB.d(OB, {
+      b: () => PB,
+      d: () => zB,
+      e: () => YB,
+      f: () => DB,
+      j: () => JB,
+      l: () => QB,
+      o: () => MB,
+      p: () => yB,
+      t: () => jB
     });
-    const AH = ["linear", "easeIn", "easeOut", "easeInOut"],
-      rH = ["feet", "eye"],
-      SH = ["movement", "camera", "cursor"],
-      hH = ["targets", "playerFacing", "blendInMs", "blendEasing", "transition", "letterbox", "hideHud"];
+    const YB = ["linear", "easeIn", "easeOut", "easeInOut"],
+      DB = ["feet", "eye"],
+      QB = ["movement", "camera", "cursor"],
+      oB = ["targets", "playerFacing", "blendInMs", "blendEasing", "transition", "letterbox", "hideHud"];
 
-    function tH(HH, BH) {
-      return zH(HH, BH, hH)
+    function jB(BB, OB) {
+      return yB(BB, OB, oB)
     }
 
-    function zH(HH, BH) {
-      let LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-      if (HH === BH || Number.isNaN(HH) && Number.isNaN(BH)) return !0;
-      if ("object" !== typeof HH || "object" !== typeof BH || null === HH || null === BH || Array.isArray(HH) !== Array.isArray(BH)) return !1;
-      const AH = HH,
-        rH = BH;
-      for (const SH of new Set([...Object.keys(AH), ...Object.keys(rH)]))
-        if (!LH.includes(SH) && !zH(AH[SH], rH[SH])) return !1;
+    function yB(BB, OB) {
+      let GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+      if (BB === OB || Number.isNaN(BB) && Number.isNaN(OB)) return !0;
+      if ("object" !== typeof BB || "object" !== typeof OB || null === BB || null === OB || Array.isArray(BB) !== Array.isArray(OB)) return !1;
+      const YB = BB,
+        DB = OB;
+      for (const QB of new Set([...Object.keys(YB), ...Object.keys(DB)]))
+        if (!GB.includes(QB) && !yB(YB[QB], DB[QB])) return !1;
       return !0
     }
-    const CH = {
+    const JB = {
         maxBlendInMs: 1e4,
         minFov: 10,
         maxFov: 120,
@@ -1662,10 +1662,10 @@ export const modules = {
         minEasingY: -1,
         maxEasingY: 2
       },
-      EH = "^-[1-9][0-9]*$",
-      XH = "^#[0-9a-fA-F]{6}$",
-      GH = "#000000"
+      MB = "^-[1-9][0-9]*$",
+      PB = "^#[0-9a-fA-F]{6}$",
+      zB = "#000000"
   }
 };
 Object.freeze(modules);
-for (const HH in modules) Object.freeze(modules[HH]);
+for (const BB in modules) Object.freeze(modules[BB]);

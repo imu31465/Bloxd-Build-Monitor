@@ -1,28 +1,28 @@
 export const id = 265;
 export const ids = [265, 266];
 export const modules = {
-  41533: (HH, BH, LH) => {
-    LH.d(BH, {
-      b: () => EH,
-      c: () => GH
+  41248: (BB, OB, GB) => {
+    GB.d(OB, {
+      c: () => MB,
+      d: () => zB
     });
-    var AH = LH(41290),
-      rH = LH(41297),
-      SH = LH(37963),
-      hH = LH(38074),
-      tH = LH(41535),
-      zH = LH(41498),
-      CH = LH(38012);
-    let EH = (() => {
-        var HH;
-        let BH, LH, zH = tH.b,
-          CH = [],
-          EH = [],
-          XH = [],
-          GH = [];
-        return HH = class extends zH {
-          constructor(HH, BH, LH, rH) {
-            super(HH, LH, rH), this.groundColor = (0, AH.k)(this, CH, new hH.c(0, 0, 0)), this.direction = ((0, AH.k)(this, EH), (0, AH.k)(this, XH, void 0)), (0, AH.k)(this, GH), this.direction = BH || SH.o.Up()
+    var YB = GB(40998),
+      DB = GB(41004),
+      QB = GB(37778),
+      oB = GB(37894),
+      jB = GB(41250),
+      yB = GB(41220),
+      JB = GB(37823);
+    let MB = (() => {
+        var BB;
+        let OB, GB, yB = jB.d,
+          JB = [],
+          MB = [],
+          PB = [],
+          zB = [];
+        return BB = class extends yB {
+          constructor(BB, OB, GB, DB) {
+            super(BB, GB, DB), this.groundColor = (0, YB.j)(this, JB, new oB.c(0, 0, 0)), this.direction = ((0, YB.j)(this, MB), (0, YB.j)(this, PB, void 0)), (0, YB.j)(this, zB), this.direction = OB || QB.r.Up()
           }
           _buildUniformLayout() {
             this._uniformBuffer.addUniform("vLightData", 4), this._uniformBuffer.addUniform("vLightDiffuse", 4), this._uniformBuffer.addUniform("vLightSpecular", 4), this._uniformBuffer.addUniform("vLightGround", 3), this._uniformBuffer.addUniform("shadowsInfo", 3), this._uniformBuffer.addUniform("depthValues", 2), this._uniformBuffer.create()
@@ -30,332 +30,332 @@ export const modules = {
           getClassName() {
             return "HemisphericLight"
           }
-          setDirectionToTarget(HH) {
-            return this.direction = SH.o.Normalize(HH.subtract(SH.o.Zero())), this.direction
+          setDirectionToTarget(BB) {
+            return this.direction = QB.r.Normalize(BB.subtract(QB.r.Zero())), this.direction
           }
           getShadowGenerator() {
             return null
           }
-          transferToEffect(HH, BH) {
-            const LH = SH.o.Normalize(this.direction);
-            return this._uniformBuffer.updateFloat4("vLightData", LH.x, LH.y, LH.z, 0, BH), this._uniformBuffer.updateColor3("vLightGround", this.groundColor.scale(this.intensity), BH), this
+          transferToEffect(BB, OB) {
+            const GB = QB.r.Normalize(this.direction);
+            return this._uniformBuffer.updateFloat4("vLightData", GB.x, GB.y, GB.z, 0, OB), this._uniformBuffer.updateColor3("vLightGround", this.groundColor.scale(this.intensity), OB), this
           }
-          transferToNodeMaterialEffect(HH, BH) {
-            const LH = SH.o.Normalize(this.direction);
-            return HH.setFloat3(BH, LH.x, LH.y, LH.z), this
+          transferToNodeMaterialEffect(BB, OB) {
+            const GB = QB.r.Normalize(this.direction);
+            return BB.setFloat3(OB, GB.x, GB.y, GB.z), this
           }
           computeWorldMatrix() {
-            return this._worldMatrix || (this._worldMatrix = SH.e.Identity()), this._worldMatrix
+            return this._worldMatrix || (this._worldMatrix = QB.d.Identity()), this._worldMatrix
           }
           getTypeID() {
-            return tH.b.LIGHTTYPEID_HEMISPHERICLIGHT
+            return jB.d.LIGHTTYPEID_HEMISPHERICLIGHT
           }
-          prepareLightSpecificDefines(HH, BH) {
-            HH["HEMILIGHT" + BH] = !0
+          prepareLightSpecificDefines(BB, OB) {
+            BB["HEMILIGHT" + OB] = !0
           }
         }, (() => {
-          const SH = "function" === typeof Symbol && Symbol.metadata ? Object.create(zH[Symbol.metadata] ?? null) : void 0;
-          BH = [(0, rH.l)()], LH = [(0, rH.F)()], (0, AH.g)(null, null, BH, {
+          const QB = "function" === typeof Symbol && Symbol.metadata ? Object.create(yB[Symbol.metadata] ?? null) : void 0;
+          OB = [(0, DB.n)()], GB = [(0, DB.H)()], (0, YB.h)(null, null, OB, {
             kind: "field",
             name: "groundColor",
             static: !1,
             private: !1,
             access: {
-              has: HH => "groundColor" in HH,
-              get: HH => HH.groundColor,
-              set: (HH, BH) => {
-                HH.groundColor = BH
+              has: BB => "groundColor" in BB,
+              get: BB => BB.groundColor,
+              set: (BB, OB) => {
+                BB.groundColor = OB
               }
             },
-            metadata: SH
-          }, CH, EH), (0, AH.g)(null, null, LH, {
+            metadata: QB
+          }, JB, MB), (0, YB.h)(null, null, GB, {
             kind: "field",
             name: "direction",
             static: !1,
             private: !1,
             access: {
-              has: HH => "direction" in HH,
-              get: HH => HH.direction,
-              set: (HH, BH) => {
-                HH.direction = BH
+              has: BB => "direction" in BB,
+              get: BB => BB.direction,
+              set: (BB, OB) => {
+                BB.direction = OB
               }
             },
-            metadata: SH
-          }, XH, GH), SH && Object.defineProperty(HH, Symbol.metadata, {
+            metadata: QB
+          }, PB, zB), QB && Object.defineProperty(BB, Symbol.metadata, {
             enumerable: !0,
             configurable: !0,
             writable: !0,
-            value: SH
+            value: QB
           })
-        })(), HH
+        })(), BB
       })(),
-      XH = !1;
+      PB = !1;
 
-    function GH() {
-      XH || (XH = !0, zH.b.AddNodeConstructor("Light_Type_3", ((HH, BH) => () => new EH(HH, SH.o.Zero(), BH))), (0, CH.f)("BABYLON.HemisphericLight", EH))
+    function zB() {
+      PB || (PB = !0, yB.b.AddNodeConstructor("Light_Type_3", ((BB, OB) => () => new MB(BB, QB.r.Zero(), OB))), (0, JB.f)("BABYLON.HemisphericLight", MB))
     }
   },
-  38610: (HH, BH, LH) => {
-    LH.d(BH, {
-      e: () => rH
+  38424: (BB, OB, GB) => {
+    GB.d(OB, {
+      b: () => DB
     });
-    var AH = LH(38619);
-    class rH {
-      static GetPlanes(HH) {
-        const BH = [];
-        for (let LH = 0; LH < 6; LH++) BH.push(new AH.d(0, 0, 0, 0));
-        return rH.GetPlanesToRef(HH, BH), BH
+    var YB = GB(38432);
+    class DB {
+      static GetPlanes(BB) {
+        const OB = [];
+        for (let GB = 0; GB < 6; GB++) OB.push(new YB.c(0, 0, 0, 0));
+        return DB.GetPlanesToRef(BB, OB), OB
       }
-      static GetNearPlaneToRef(HH, BH) {
-        const LH = HH.m;
-        BH.normal.x = LH[3] + LH[2], BH.normal.y = LH[7] + LH[6], BH.normal.z = LH[11] + LH[10], BH.d = LH[15] + LH[14], BH.normalize()
+      static GetNearPlaneToRef(BB, OB) {
+        const GB = BB.m;
+        OB.normal.x = GB[3] + GB[2], OB.normal.y = GB[7] + GB[6], OB.normal.z = GB[11] + GB[10], OB.d = GB[15] + GB[14], OB.normalize()
       }
-      static GetFarPlaneToRef(HH, BH) {
-        const LH = HH.m;
-        BH.normal.x = LH[3] - LH[2], BH.normal.y = LH[7] - LH[6], BH.normal.z = LH[11] - LH[10], BH.d = LH[15] - LH[14], BH.normalize()
+      static GetFarPlaneToRef(BB, OB) {
+        const GB = BB.m;
+        OB.normal.x = GB[3] - GB[2], OB.normal.y = GB[7] - GB[6], OB.normal.z = GB[11] - GB[10], OB.d = GB[15] - GB[14], OB.normalize()
       }
-      static GetLeftPlaneToRef(HH, BH) {
-        const LH = HH.m;
-        BH.normal.x = LH[3] + LH[0], BH.normal.y = LH[7] + LH[4], BH.normal.z = LH[11] + LH[8], BH.d = LH[15] + LH[12], BH.normalize()
+      static GetLeftPlaneToRef(BB, OB) {
+        const GB = BB.m;
+        OB.normal.x = GB[3] + GB[0], OB.normal.y = GB[7] + GB[4], OB.normal.z = GB[11] + GB[8], OB.d = GB[15] + GB[12], OB.normalize()
       }
-      static GetRightPlaneToRef(HH, BH) {
-        const LH = HH.m;
-        BH.normal.x = LH[3] - LH[0], BH.normal.y = LH[7] - LH[4], BH.normal.z = LH[11] - LH[8], BH.d = LH[15] - LH[12], BH.normalize()
+      static GetRightPlaneToRef(BB, OB) {
+        const GB = BB.m;
+        OB.normal.x = GB[3] - GB[0], OB.normal.y = GB[7] - GB[4], OB.normal.z = GB[11] - GB[8], OB.d = GB[15] - GB[12], OB.normalize()
       }
-      static GetTopPlaneToRef(HH, BH) {
-        const LH = HH.m;
-        BH.normal.x = LH[3] - LH[1], BH.normal.y = LH[7] - LH[5], BH.normal.z = LH[11] - LH[9], BH.d = LH[15] - LH[13], BH.normalize()
+      static GetTopPlaneToRef(BB, OB) {
+        const GB = BB.m;
+        OB.normal.x = GB[3] - GB[1], OB.normal.y = GB[7] - GB[5], OB.normal.z = GB[11] - GB[9], OB.d = GB[15] - GB[13], OB.normalize()
       }
-      static GetBottomPlaneToRef(HH, BH) {
-        const LH = HH.m;
-        BH.normal.x = LH[3] + LH[1], BH.normal.y = LH[7] + LH[5], BH.normal.z = LH[11] + LH[9], BH.d = LH[15] + LH[13], BH.normalize()
+      static GetBottomPlaneToRef(BB, OB) {
+        const GB = BB.m;
+        OB.normal.x = GB[3] + GB[1], OB.normal.y = GB[7] + GB[5], OB.normal.z = GB[11] + GB[9], OB.d = GB[15] + GB[13], OB.normalize()
       }
-      static GetPlanesToRef(HH, BH) {
-        rH.GetNearPlaneToRef(HH, BH[0]), rH.GetFarPlaneToRef(HH, BH[1]), rH.GetLeftPlaneToRef(HH, BH[2]), rH.GetRightPlaneToRef(HH, BH[3]), rH.GetTopPlaneToRef(HH, BH[4]), rH.GetBottomPlaneToRef(HH, BH[5])
+      static GetPlanesToRef(BB, OB) {
+        DB.GetNearPlaneToRef(BB, OB[0]), DB.GetFarPlaneToRef(BB, OB[1]), DB.GetLeftPlaneToRef(BB, OB[2]), DB.GetRightPlaneToRef(BB, OB[3]), DB.GetTopPlaneToRef(BB, OB[4]), DB.GetBottomPlaneToRef(BB, OB[5])
       }
-      static IsPointInFrustum(HH, BH) {
-        for (let LH = 0; LH < 6; LH++)
-          if (BH[LH].dotCoordinate(HH) < 0) return !1;
+      static IsPointInFrustum(BB, OB) {
+        for (let GB = 0; GB < 6; GB++)
+          if (OB[GB].dotCoordinate(BB) < 0) return !1;
         return !0
       }
     }
   },
-  38619: (HH, BH, LH) => {
-    LH.d(BH, {
-      d: () => rH
+  38432: (BB, OB, GB) => {
+    GB.d(OB, {
+      c: () => DB
     });
-    var AH = LH(37963);
-    class rH {
-      constructor(HH, BH, LH, rH) {
-        this.normal = new AH.o(HH, BH, LH), this.d = rH
+    var YB = GB(37778);
+    class DB {
+      constructor(BB, OB, GB, DB) {
+        this.normal = new YB.r(BB, OB, GB), this.d = DB
       }
-      xrH() {
+      dDB() {
         return [this.normal.x, this.normal.y, this.normal.z, this.d]
       }
       clone() {
-        return new rH(this.normal.x, this.normal.y, this.normal.z, this.d)
+        return new DB(this.normal.x, this.normal.y, this.normal.z, this.d)
       }
       getClassName() {
         return "Plane"
       }
       getHashCode() {
-        let HH = this.normal.getHashCode();
-        return HH = 397 * HH ^ this.d, HH
+        let BB = this.normal.getHashCode();
+        return BB = 397 * BB ^ this.d, BB
       }
       normalize() {
-        const HH = Math.sqrt(this.normal.x * this.normal.x + this.normal.y * this.normal.y + this.normal.z * this.normal.z);
-        let BH = 0;
-        return 0 !== HH && (BH = 1 / HH), this.normal.x *= BH, this.normal.y *= BH, this.normal.z *= BH, this.d *= BH, this
+        const BB = Math.sqrt(this.normal.x * this.normal.x + this.normal.y * this.normal.y + this.normal.z * this.normal.z);
+        let OB = 0;
+        return 0 !== BB && (OB = 1 / BB), this.normal.x *= OB, this.normal.y *= OB, this.normal.z *= OB, this.d *= OB, this
       }
-      transform(HH) {
-        const BH = rH._TmpMatrix;
-        HH.invertToRef(BH);
-        const LH = BH.m,
-          AH = this.normal.x,
-          SH = this.normal.y,
-          hH = this.normal.z,
-          tH = this.d,
-          zH = AH * LH[0] + SH * LH[1] + hH * LH[2] + tH * LH[3],
-          CH = AH * LH[4] + SH * LH[5] + hH * LH[6] + tH * LH[7],
-          EH = AH * LH[8] + SH * LH[9] + hH * LH[10] + tH * LH[11],
-          XH = AH * LH[12] + SH * LH[13] + hH * LH[14] + tH * LH[15];
-        return new rH(zH, CH, EH, XH)
+      transform(BB) {
+        const OB = DB._TmpMatrix;
+        BB.invertToRef(OB);
+        const GB = OB.m,
+          YB = this.normal.x,
+          QB = this.normal.y,
+          oB = this.normal.z,
+          jB = this.d,
+          yB = YB * GB[0] + QB * GB[1] + oB * GB[2] + jB * GB[3],
+          JB = YB * GB[4] + QB * GB[5] + oB * GB[6] + jB * GB[7],
+          MB = YB * GB[8] + QB * GB[9] + oB * GB[10] + jB * GB[11],
+          PB = YB * GB[12] + QB * GB[13] + oB * GB[14] + jB * GB[15];
+        return new DB(yB, JB, MB, PB)
       }
-      dotCoordinate(HH) {
-        return this.normal.x * HH.x + this.normal.y * HH.y + this.normal.z * HH.z + this.d
+      dotCoordinate(BB) {
+        return this.normal.x * BB.x + this.normal.y * BB.y + this.normal.z * BB.z + this.d
       }
-      copyFromPoints(HH, BH, LH) {
-        const AH = BH.x - HH.x,
-          rH = BH.y - HH.y,
-          SH = BH.z - HH.z,
-          hH = LH.x - HH.x,
-          tH = LH.y - HH.y,
-          zH = LH.z - HH.z,
-          CH = rH * zH - SH * tH,
-          EH = SH * hH - AH * zH,
-          XH = AH * tH - rH * hH,
-          GH = Math.sqrt(CH * CH + EH * EH + XH * XH);
-        let YH;
-        return YH = 0 !== GH ? 1 / GH : 0, this.normal.x = CH * YH, this.normal.y = EH * YH, this.normal.z = XH * YH, this.d = -(this.normal.x * HH.x + this.normal.y * HH.y + this.normal.z * HH.z), this
+      copyFromPoints(BB, OB, GB) {
+        const YB = OB.x - BB.x,
+          DB = OB.y - BB.y,
+          QB = OB.z - BB.z,
+          oB = GB.x - BB.x,
+          jB = GB.y - BB.y,
+          yB = GB.z - BB.z,
+          JB = DB * yB - QB * jB,
+          MB = QB * oB - YB * yB,
+          PB = YB * jB - DB * oB,
+          zB = Math.sqrt(JB * JB + MB * MB + PB * PB);
+        let lB;
+        return lB = 0 !== zB ? 1 / zB : 0, this.normal.x = JB * lB, this.normal.y = MB * lB, this.normal.z = PB * lB, this.d = -(this.normal.x * BB.x + this.normal.y * BB.y + this.normal.z * BB.z), this
       }
-      isFrontFacingTo(HH, BH) {
-        return AH.o.Dot(this.normal, HH) <= BH
+      isFrontFacingTo(BB, OB) {
+        return YB.r.Dot(this.normal, BB) <= OB
       }
-      signedDistanceTo(HH) {
-        return AH.o.Dot(HH, this.normal) + this.d
+      signedDistanceTo(BB) {
+        return YB.r.Dot(BB, this.normal) + this.d
       }
-      static FromArray(HH) {
-        return new rH(HH[0], HH[1], HH[2], HH[3])
+      static FromArray(BB) {
+        return new DB(BB[0], BB[1], BB[2], BB[3])
       }
-      static FromPoints(HH, BH, LH) {
-        const AH = new rH(0, 0, 0, 0);
-        return AH.copyFromPoints(HH, BH, LH), AH
+      static FromPoints(BB, OB, GB) {
+        const YB = new DB(0, 0, 0, 0);
+        return YB.copyFromPoints(BB, OB, GB), YB
       }
-      static FromPositionAndNormal(HH, BH) {
-        const LH = new rH(0, 0, 0, 0);
-        return this.FromPositionAndNormalToRef(HH, BH, LH)
+      static FromPositionAndNormal(BB, OB) {
+        const GB = new DB(0, 0, 0, 0);
+        return this.FromPositionAndNormalToRef(BB, OB, GB)
       }
-      static FromPositionAndNormalToRef(HH, BH, LH) {
-        return LH.normal.Tm(BH), LH.normal.normalize(), LH.d = -HH.dot(LH.normal), LH
+      static FromPositionAndNormalToRef(BB, OB, GB) {
+        return GB.normal.IU(OB), GB.normal.normalize(), GB.d = -BB.dot(GB.normal), GB
       }
-      static SignedDistanceToPlaneFromPositionAndNormal(HH, BH, LH) {
-        const rH = -(BH.x * HH.x + BH.y * HH.y + BH.z * HH.z);
-        return AH.o.Dot(LH, BH) + rH
+      static SignedDistanceToPlaneFromPositionAndNormal(BB, OB, GB) {
+        const DB = -(OB.x * BB.x + OB.y * BB.y + OB.z * BB.z);
+        return YB.r.Dot(GB, OB) + DB
       }
     }
-    rH._TmpMatrix = AH.e.Identity()
+    DB._TmpMatrix = YB.d.Identity()
   },
-  38966: (HH, BH, LH) => {
-    LH.d(BH, {
-      c: () => AH
+  38769: (BB, OB, GB) => {
+    GB.d(OB, {
+      c: () => YB
     });
-    class AH {
-      constructor(HH, BH, LH, AH) {
-        this.x = HH, this.y = BH, this.width = LH, this.height = AH
+    class YB {
+      constructor(BB, OB, GB, YB) {
+        this.x = BB, this.y = OB, this.width = GB, this.height = YB
       }
-      toGlobal(HH, BH) {
-        return new AH(this.x * HH, this.y * BH, this.width * HH, this.height * BH)
+      toGlobal(BB, OB) {
+        return new YB(this.x * BB, this.y * OB, this.width * BB, this.height * OB)
       }
-      toGlobalToRef(HH, BH, LH) {
-        return LH.x = this.x * HH, LH.y = this.y * BH, LH.width = this.width * HH, LH.height = this.height * BH, this
+      toGlobalToRef(BB, OB, GB) {
+        return GB.x = this.x * BB, GB.y = this.y * OB, GB.width = this.width * BB, GB.height = this.height * OB, this
       }
       clone() {
-        return new AH(this.x, this.y, this.width, this.height)
+        return new YB(this.x, this.y, this.width, this.height)
       }
     }
   },
-  39588: (HH, BH, LH) => {
-    LH.d(BH, {
-      d: () => SH
+  39358: (BB, OB, GB) => {
+    GB.d(OB, {
+      b: () => QB
     });
-    var AH = LH(39595);
-    const rH = (HH, BH, LH) => HH ? HH.getClassName && "Mesh" === HH.getClassName() ? null : !HH.getClassName || "SubMesh" !== HH.getClassName() && "PhysicsBody" !== HH.getClassName() ? HH.clone ? HH.clone() : Array.isArray(HH) ? HH.slice() : LH && "object" === typeof HH ? {
-      ...HH
-    } : null : HH.clone(BH) : null;
-    class SH {
-      static DeepCopy(HH, BH, LH, SH) {
-        let hH = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        const tH = function(HH) {
-          const BH = [];
+    var YB = GB(39366);
+    const DB = (BB, OB, GB) => BB ? BB.getClassName && "Mesh" === BB.getClassName() ? null : !BB.getClassName || "SubMesh" !== BB.getClassName() && "PhysicsBody" !== BB.getClassName() ? BB.clone ? BB.clone() : Array.isArray(BB) ? BB.slice() : GB && "object" === typeof BB ? {
+      ...BB
+    } : null : BB.clone(OB) : null;
+    class QB {
+      static DeepCopy(BB, OB, GB, QB) {
+        let oB = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const jB = function(BB) {
+          const OB = [];
           do {
-            const LH = Object.getOwnPropertyNames(HH);
-            for (const HH of LH) - 1 === BH.indexOf(HH) && BH.push(HH)
-          } while (HH = Object.getPrototypeOf(HH));
-          return BH
-        }(HH);
-        for (const CH of tH) {
-          if ("_" === CH[0] && (!SH || -1 === SH.indexOf(CH))) continue;
-          if (CH.endsWith("Observable")) continue;
-          if (LH && -1 !== LH.indexOf(CH)) continue;
-          const tH = HH[CH],
-            EH = typeof tH;
-          if ("function" !== EH) try {
-            if ("object" === EH)
-              if (tH instanceof Uint8Array) BH[CH] = Uint8Array.from(tH);
-              else if (tH instanceof Array) {
-              if (BH[CH] = [], tH.length > 0)
-                if ("object" == typeof tH[0])
-                  for (let HH = 0; HH < tH.length; HH++) {
-                    const LH = rH(tH[HH], BH, hH); - 1 === BH[CH].indexOf(LH) && BH[CH].push(LH)
-                  } else BH[CH] = tH.slice(0)
-            } else BH[CH] = rH(tH, BH, hH);
-            else BH[CH] = tH
-          } catch (zH) {
-            AH.e.Warn(zH.message)
+            const GB = Object.getOwnPropertyNames(BB);
+            for (const BB of GB) - 1 === OB.indexOf(BB) && OB.push(BB)
+          } while (BB = Object.getPrototypeOf(BB));
+          return OB
+        }(BB);
+        for (const JB of jB) {
+          if ("_" === JB[0] && (!QB || -1 === QB.indexOf(JB))) continue;
+          if (JB.endsWith("Observable")) continue;
+          if (GB && -1 !== GB.indexOf(JB)) continue;
+          const jB = BB[JB],
+            MB = typeof jB;
+          if ("function" !== MB) try {
+            if ("object" === MB)
+              if (jB instanceof Uint8Array) OB[JB] = Uint8Array.from(jB);
+              else if (jB instanceof Array) {
+              if (OB[JB] = [], jB.length > 0)
+                if ("object" == typeof jB[0])
+                  for (let BB = 0; BB < jB.length; BB++) {
+                    const GB = DB(jB[BB], OB, oB); - 1 === OB[JB].indexOf(GB) && OB[JB].push(GB)
+                  } else OB[JB] = jB.slice(0)
+            } else OB[JB] = DB(jB, OB, oB);
+            else OB[JB] = jB
+          } catch (yB) {
+            YB.b.Warn(yB.message)
           }
         }
       }
     }
   },
-  38790: (HH, BH, LH) => {
-    function AH() {
-      return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (HH => {
-        const BH = 16 * Math.random() | 0;
-        return ("x" === HH ? BH : 3 & BH | 8).toString(16)
+  38589: (BB, OB, GB) => {
+    function YB() {
+      return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (BB => {
+        const OB = 16 * Math.random() | 0;
+        return ("x" === BB ? OB : 3 & OB | 8).toString(16)
       }))
     }
-    LH.d(BH, {
-      e: () => AH
+    GB.d(OB, {
+      e: () => YB
     })
   },
-  39595: (HH, BH, LH) => {
-    LH.d(BH, {
-      e: () => AH
+  39366: (BB, OB, GB) => {
+    GB.d(OB, {
+      b: () => YB
     });
-    class AH {
-      static _CheckLimit(HH, BH) {
-        let LH = AH._LogLimitOutputs[HH];
-        return LH ? LH.current++ : (LH = {
-          limit: BH,
+    class YB {
+      static _CheckLimit(BB, OB) {
+        let GB = YB._LogLimitOutputs[BB];
+        return GB ? GB.current++ : (GB = {
+          limit: OB,
           current: 1
-        }, AH._LogLimitOutputs[HH] = LH), LH.current <= LH.limit
+        }, YB._LogLimitOutputs[BB] = GB), GB.current <= GB.limit
       }
-      static _GenerateLimitMessage(HH) {
-        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        const LH = AH._LogLimitOutputs[HH];
-        if (!LH || !AH.MessageLimitReached) return;
-        const rH = this._Levels[BH];
-        LH.current === LH.limit && AH[rH.name](AH.MessageLimitReached.replace(/%LIMIT%/g, "" + LH.limit).replace(/%TYPE%/g, rH.name ?? ""))
+      static _GenerateLimitMessage(BB) {
+        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        const GB = YB._LogLimitOutputs[BB];
+        if (!GB || !YB.MessageLimitReached) return;
+        const DB = this._Levels[OB];
+        GB.current === GB.limit && YB[DB.name](YB.MessageLimitReached.replace(/%LIMIT%/g, "" + GB.limit).replace(/%TYPE%/g, DB.name ?? ""))
       }
-      static _AddLogEntry(HH) {
-        AH._LogCache = HH + AH._LogCache, AH.OnNewCacheEntry && AH.OnNewCacheEntry(HH)
+      static _AddLogEntry(BB) {
+        YB._LogCache = BB + YB._LogCache, YB.OnNewCacheEntry && YB.OnNewCacheEntry(BB)
       }
-      static _FormatMessage(HH) {
-        const BH = HH => HH < 10 ? "0" + HH : "" + HH,
-          LH = new Date;
-        return "[" + BH(LH.getHours()) + ":" + BH(LH.getMinutes()) + ":" + BH(LH.getSeconds()) + "]: " + HH
+      static _FormatMessage(BB) {
+        const OB = BB => BB < 10 ? "0" + BB : "" + BB,
+          GB = new Date;
+        return "[" + OB(GB.getHours()) + ":" + OB(GB.getMinutes()) + ":" + OB(GB.getSeconds()) + "]: " + BB
       }
-      static _LogDisabled(HH, BH) {}
+      static _LogDisabled(BB, OB) {}
       static _LogEnabled() {
-        let HH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          BH = arguments.length > 1 ? arguments[1] : void 0,
-          LH = arguments.length > 2 ? arguments[2] : void 0;
-        const rH = Array.isArray(BH) ? BH[0] : BH;
-        if (void 0 !== LH && !AH._CheckLimit(rH, LH)) return;
-        const SH = AH._FormatMessage(rH),
-          hH = this._Levels[HH],
-          tH = Array.isArray(BH) ? BH.slice(1) : [];
-        hH.logFunc && hH.logFunc("BJS - " + SH, ...tH);
-        const zH = `<div style='color:${hH.color}'>${SH}</div><br>`;
-        AH._AddLogEntry(zH), AH._GenerateLimitMessage(rH, HH)
+        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          OB = arguments.length > 1 ? arguments[1] : void 0,
+          GB = arguments.length > 2 ? arguments[2] : void 0;
+        const DB = Array.isArray(OB) ? OB[0] : OB;
+        if (void 0 !== GB && !YB._CheckLimit(DB, GB)) return;
+        const QB = YB._FormatMessage(DB),
+          oB = this._Levels[BB],
+          jB = Array.isArray(OB) ? OB.slice(1) : [];
+        oB.logFunc && oB.logFunc("BJS - " + QB, ...jB);
+        const yB = `<div style='color:${oB.color}'>${QB}</div><br>`;
+        YB._AddLogEntry(yB), YB._GenerateLimitMessage(DB, BB)
       }
       static get LogCache() {
-        return AH._LogCache
+        return YB._LogCache
       }
       static ClearLogCache() {
-        AH._LogCache = "", AH._LogLimitOutputs = {}, AH.errorsCount = 0
+        YB._LogCache = "", YB._LogLimitOutputs = {}, YB.errorsCount = 0
       }
-      static set LogLevels(HH) {
-        AH.Log = AH._LogDisabled, AH.Warn = AH._LogDisabled, AH.Error = AH._LogDisabled;
-        const BH = [AH.MessageLogLevel, AH.WarningLogLevel, AH.ErrorLogLevel];
-        for (const LH of BH)
-          if ((HH & LH) === LH) {
-            const HH = this._Levels[LH];
-            AH[HH.name] = AH._LogEnabled.bind(AH, LH)
+      static set LogLevels(BB) {
+        YB.Log = YB._LogDisabled, YB.Warn = YB._LogDisabled, YB.Error = YB._LogDisabled;
+        const OB = [YB.MessageLogLevel, YB.WarningLogLevel, YB.ErrorLogLevel];
+        for (const GB of OB)
+          if ((BB & GB) === GB) {
+            const BB = this._Levels[GB];
+            YB[BB.name] = YB._LogEnabled.bind(YB, GB)
           }
       }
     }
-    AH.NoneLogLevel = 0, AH.MessageLogLevel = 1, AH.WarningLogLevel = 2, AH.ErrorLogLevel = 4, AH.AllLogLevel = 7, AH.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", AH._LogCache = "", AH._LogLimitOutputs = {}, AH._Levels = [{}, {
+    YB.NoneLogLevel = 0, YB.MessageLogLevel = 1, YB.WarningLogLevel = 2, YB.ErrorLogLevel = 4, YB.AllLogLevel = 7, YB.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", YB._LogCache = "", YB._LogLimitOutputs = {}, YB._Levels = [{}, {
       color: "white",
       logFunc: console.log,
       name: "Log"
@@ -367,102 +367,102 @@ export const modules = {
       color: "red",
       logFunc: console.error,
       name: "Error"
-    }], AH.errorsCount = 0, AH.Log = AH._LogEnabled.bind(AH, AH.MessageLogLevel), AH.Warn = AH._LogEnabled.bind(AH, AH.WarningLogLevel), AH.Error = AH._LogEnabled.bind(AH, AH.ErrorLogLevel)
+    }], YB.errorsCount = 0, YB.Log = YB._LogEnabled.bind(YB, YB.MessageLogLevel), YB.Warn = YB._LogEnabled.bind(YB, YB.WarningLogLevel), YB.Error = YB._LogEnabled.bind(YB, YB.ErrorLogLevel)
   },
-  64095: (HH, BH, LH) => {
-    LH.r(BH), LH.d(BH, {
-      CreateScreenshot: () => qH,
-      CreateScreenshotAsync: () => gH,
-      CreateScreenshotForFrameGraphAsync: () => nH,
-      CreateScreenshotUsingRenderTarget: () => RH,
-      CreateScreenshotUsingRenderTargetAsync: () => jH,
-      CreateScreenshotWithResizeAsync: () => NH,
-      RegisterScreenshotTools: () => ZH,
-      ScreenshotTools: () => DH
+  63871: (BB, OB, GB) => {
+    GB.r(OB), GB.d(OB, {
+      CreateScreenshot: () => gB,
+      CreateScreenshotAsync: () => rB,
+      CreateScreenshotForFrameGraphAsync: () => cB,
+      CreateScreenshotUsingRenderTarget: () => wB,
+      CreateScreenshotUsingRenderTargetAsync: () => EB,
+      CreateScreenshotWithResizeAsync: () => XB,
+      RegisterScreenshotTools: () => TB,
+      ScreenshotTools: () => aB
     });
-    var AH = LH(41777),
-      rH = LH(45290),
-      SH = LH(45266),
-      hH = LH(41319),
-      tH = LH(45271),
-      zH = LH(37989),
-      CH = LH(37963);
-    class EH extends tH.f {
-      static _GetDefines(HH) {
-        if (!HH) return null;
-        return HH.extractDriverInfo().toLowerCase().indexOf("mali") > -1 ? "#define MALI 1\n" : null
+    var YB = GB(41470),
+      DB = GB(44953),
+      QB = GB(44931),
+      oB = GB(41022),
+      jB = GB(44939),
+      yB = GB(37796),
+      JB = GB(37778);
+    class MB extends jB.h {
+      static _GetDefines(BB) {
+        if (!BB) return null;
+        return BB.extractDriverInfo().toLowerCase().indexOf("mali") > -1 ? "#define MALI 1\n" : null
       }
-      _gatherImports(HH, BH) {
-        HH ? (this._webGPUReady = !0, BH.push(Promise.all([LH.e(683).then((() => LH(64347))), LH.e(684).then((() => LH(64352)))]))) : BH.push(Promise.all([LH.e(685).then((() => LH(64355))), LH.e(686).then((() => LH(64364)))]))
+      _gatherImports(BB, OB) {
+        BB ? (this._webGPUReady = !0, OB.push(Promise.all([GB.e(683).then((() => GB(64093))), GB.e(684).then((() => GB(64095)))]))) : OB.push(Promise.all([GB.e(685).then((() => GB(64104))), GB.e(686).then((() => GB(64106)))]))
       }
-      constructor(HH) {
-        const BH = {
+      constructor(BB) {
+        const OB = {
           ...arguments.length > 2 ? arguments[2] : void 0,
-          name: HH,
-          engine: (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null) || zH.d.LastCreatedEngine,
+          name: BB,
+          engine: (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null) || yB.b.LastCreatedEngine,
           useShaderStore: !0,
           useAsPostProcess: !0,
-          vertexShader: EH.VertexUrl,
-          fragmentShader: EH.FragmentUrl,
-          uniforms: EH.Uniforms
+          vertexShader: MB.VertexUrl,
+          fragmentShader: MB.FragmentUrl,
+          uniforms: MB.Uniforms
         };
         super({
-          ...BH,
-          defines: EH._GetDefines(BH.engine)
-        }), this.texelSize = new CH.n(0, 0)
+          ...OB,
+          defines: MB._GetDefines(OB.engine)
+        }), this.texelSize = new JB.o(0, 0)
       }
       bind() {
-        let HH = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        super.bind(HH), this._drawWrapper.effect.setFloat2("texelSize", this.texelSize.x, this.texelSize.y)
+        let BB = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        super.bind(BB), this._drawWrapper.effect.setFloat2("texelSize", this.texelSize.x, this.texelSize.y)
       }
     }
-    EH.VertexUrl = "fxaa", EH.FragmentUrl = "fxaa", EH.Uniforms = ["texelSize"];
-    class XH extends SH.d {
+    MB.VertexUrl = "fxaa", MB.FragmentUrl = "fxaa", MB.Uniforms = ["texelSize"];
+    class PB extends QB.b {
       getClassName() {
         return "FxaaPostProcess"
       }
-      constructor(HH, BH) {
-        let LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-          rH = arguments.length > 3 ? arguments[3] : void 0,
-          SH = arguments.length > 4 ? arguments[4] : void 0,
-          hH = arguments.length > 5 ? arguments[5] : void 0,
-          tH = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 0;
-        const zH = {
-          uniforms: EH.Uniforms,
-          size: "number" === typeof BH ? BH : void 0,
-          camera: LH,
-          samplingMode: rH || AH.g.BILINEAR_SAMPLINGMODE,
-          engine: SH,
-          reusable: hH,
-          textureType: tH,
-          ...BH
+      constructor(BB, OB) {
+        let GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+          DB = arguments.length > 3 ? arguments[3] : void 0,
+          QB = arguments.length > 4 ? arguments[4] : void 0,
+          oB = arguments.length > 5 ? arguments[5] : void 0,
+          jB = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 0;
+        const yB = {
+          uniforms: MB.Uniforms,
+          size: "number" === typeof OB ? OB : void 0,
+          camera: GB,
+          samplingMode: DB || YB.e.BILINEAR_SAMPLINGMODE,
+          engine: QB,
+          reusable: oB,
+          textureType: jB,
+          ...OB
         };
-        super(HH, EH.FragmentUrl, {
-          effectWrapper: "number" !== typeof BH && BH.effectWrapper ? void 0 : new EH(HH, SH, zH),
-          ...zH
-        }), this.onApplyObservable.add((HH => {
+        super(BB, MB.FragmentUrl, {
+          effectWrapper: "number" !== typeof OB && OB.effectWrapper ? void 0 : new MB(BB, QB, yB),
+          ...yB
+        }), this.onApplyObservable.add((BB => {
           this._effectWrapper.texelSize = this.texelSize
         }))
       }
-      static _Parse(HH, BH, LH, AH) {
-        return hH.c.Parse((() => new XH(HH.name, HH.options, BH, HH.renderTargetSamplingMode, LH.Iu(), HH.reusable)), HH, LH, AH)
+      static _Parse(BB, OB, GB, YB) {
+        return oB.d.Parse((() => new PB(BB.name, BB.options, OB, BB.renderTargetSamplingMode, GB.Lp(), BB.reusable)), BB, GB, YB)
       }
     }
-    var GH = LH(39595),
-      YH = LH(41387),
-      uH = LH(45299),
-      QH = LH(45285),
-      WH = LH(41179);
-    const MH = 0;
-    class xH {
-      constructor(HH, BH, LH) {
-        this.name = HH, this._parentTask = BH, this._context = LH, this.disabled = !1
+    var zB = GB(39366),
+      lB = GB(41097),
+      pB = GB(44969),
+      qB = GB(44947),
+      ZB = GB(40899);
+    const NB = 0;
+    class RB {
+      constructor(BB, OB, GB) {
+        this.name = BB, this._parentTask = OB, this._context = GB, this.disabled = !1
       }
-      setInitializeFunc(HH) {
-        this._initFunc = HH
+      setInitializeFunc(BB) {
+        this._initFunc = BB
       }
-      setExecuteFunc(HH) {
-        this._executeFunc = HH
+      setExecuteFunc(BB) {
+        this._executeFunc = BB
       }
       _execute() {
         this.disabled || this._executeFunc(this._context)
@@ -475,27 +475,27 @@ export const modules = {
       }
       _dispose() {}
     }
-    class vH extends xH {
-      static IsObjectListPass(HH) {
-        return void 0 !== HH.setObjectList
+    class WB extends RB {
+      static IsObjectListPass(BB) {
+        return void 0 !== BB.setObjectList
       }
       get objectList() {
         return this._objectList
       }
-      setObjectList(HH) {
-        this._objectList = HH
+      setObjectList(BB) {
+        this._objectList = BB
       }
-      constructor(HH, BH, LH, AH) {
-        super(HH, BH, LH), this._engine = AH
+      constructor(BB, OB, GB, YB) {
+        super(BB, OB, GB), this._engine = YB
       }
       _isValid() {
-        const HH = super._isValid();
-        return HH || (void 0 !== this._objectList ? null : "Object list is not set (call setObjectList to set it)")
+        const BB = super._isValid();
+        return BB || (void 0 !== this._objectList ? null : "Object list is not set (call setObjectList to set it)")
       }
     }
-    class PH extends xH {
-      static IsRenderPass(HH) {
-        return void 0 !== HH.setRenderTarget
+    class AB extends RB {
+      static IsRenderPass(BB) {
+        return void 0 !== BB.setRenderTarget
       }
       get renderTarget() {
         return this._renderTarget
@@ -506,34 +506,34 @@ export const modules = {
       get frameGraphRenderTarget() {
         return this._frameGraphRenderTarget
       }
-      constructor(HH, BH, LH, AH) {
-        super(HH, BH, LH), this._dependencies = new Set, this.depthReadOnly = !1, this.stencilReadOnly = !1, this._engine = AH
+      constructor(BB, OB, GB, YB) {
+        super(BB, OB, GB), this._dependencies = new Set, this.depthReadOnly = !1, this.stencilReadOnly = !1, this._engine = YB
       }
-      setRenderTarget(HH) {
-        this._renderTarget = HH
+      setRenderTarget(BB) {
+        this._renderTarget = BB
       }
-      setRenderTargetDepth(HH) {
-        this._renderTargetDepth = HH
+      setRenderTargetDepth(BB) {
+        this._renderTargetDepth = BB
       }
-      addDependencies(HH) {
-        if (void 0 !== HH)
-          if (Array.isArray(HH))
-            for (const BH of HH) this._dependencies.add(BH);
-          else this._dependencies.add(HH)
+      addDependencies(BB) {
+        if (void 0 !== BB)
+          if (Array.isArray(BB))
+            for (const OB of BB) this._dependencies.add(OB);
+          else this._dependencies.add(BB)
       }
-      collectDependencies(HH) {
-        const BH = this._dependencies.keys();
-        for (let LH = BH.next(); !0 !== LH.done; LH = BH.next()) HH.add(LH.value);
+      collectDependencies(BB) {
+        const OB = this._dependencies.keys();
+        for (let GB = OB.next(); !0 !== GB.done; GB = OB.next()) BB.add(GB.value);
         if (void 0 !== this._renderTarget)
           if (Array.isArray(this._renderTarget))
-            for (const LH of this._renderTarget) void 0 !== LH && HH.add(LH);
-          else HH.add(this._renderTarget);
-        void 0 !== this._renderTargetDepth && HH.add(this._renderTargetDepth)
+            for (const GB of this._renderTarget) void 0 !== GB && BB.add(GB);
+          else BB.add(this._renderTarget);
+        void 0 !== this._renderTargetDepth && BB.add(this._renderTargetDepth)
       }
-      setOutputLayerAndFaceIndices(HH) {
-        const BH = this.frameGraphRenderTarget.renderTargetWrapper;
-        if (BH)
-          for (const LH of HH) BH.setLayerAndFaceIndex(LH.targetIndex, LH.layerIndex, LH.faceIndex)
+      setOutputLayerAndFaceIndices(BB) {
+        const OB = this.frameGraphRenderTarget.renderTargetWrapper;
+        if (OB)
+          for (const GB of BB) OB.setLayerAndFaceIndex(GB.targetIndex, GB.layerIndex, GB.faceIndex)
       }
       _initialize() {
         this._frameGraphRenderTarget = this._context.createRenderTarget(this.name, this._renderTarget, this._renderTargetDepth, this.depthReadOnly, this.stencilReadOnly), super._initialize()
@@ -542,26 +542,26 @@ export const modules = {
         this._context.bindRenderTarget(this._frameGraphRenderTarget), super._execute(), this._context.restoreDefaultFramebuffer()
       }
       _isValid() {
-        const HH = super._isValid();
-        return HH || (void 0 !== this._renderTarget || void 0 !== this.renderTargetDepth ? null : "Render target and render target depth cannot both be undefined.")
+        const BB = super._isValid();
+        return BB || (void 0 !== this._renderTarget || void 0 !== this.renderTargetDepth ? null : "Render target and render target depth cannot both be undefined.")
       }
       _dispose() {
         this._frameGraphRenderTarget?.dispose()
       }
     }
-    var TH = LH(37997);
-    class UH {
+    var VB = GB(37802);
+    class SB {
       get name() {
         return this._name
       }
-      set name(HH) {
-        this._name = HH
+      set name(BB) {
+        this._name = BB
       }
       get disabled() {
         return this._disabled
       }
-      set disabled(HH) {
-        this._disabled = HH
+      set disabled(BB) {
+        this._disabled = BB
       }
       get passes() {
         return this._passes
@@ -581,61 +581,61 @@ export const modules = {
       dispose() {
         this._reset(), this.onTexturesAllocatedObservable.clear(), this.onBeforeTaskExecute.clear(), this.onAfterTaskExecute.clear()
       }
-      constructor(HH, BH) {
-        this._passes = [], this._passesDisabled = [], this._disabled = !1, this.onTexturesAllocatedObservable = new TH.d, this.onBeforeTaskExecute = new TH.d, this.onAfterTaskExecute = new TH.d, this.name = HH, this._frameGraph = BH, this._reset()
+      constructor(BB, OB) {
+        this._passes = [], this._passesDisabled = [], this._disabled = !1, this.onTexturesAllocatedObservable = new VB.b, this.onBeforeTaskExecute = new VB.b, this.onAfterTaskExecute = new VB.b, this.name = BB, this._frameGraph = OB, this._reset()
       }
       _reset() {
-        for (const HH of this._passes) HH._dispose();
-        for (const HH of this._passesDisabled) HH._dispose();
+        for (const BB of this._passes) BB._dispose();
+        for (const BB of this._passesDisabled) BB._dispose();
         this._passes.length = 0, this._passesDisabled.length = 0
       }
-      _addPass(HH, BH) {
-        BH ? this._passesDisabled.push(HH) : this._passes.push(HH)
+      _addPass(BB, OB) {
+        OB ? this._passesDisabled.push(BB) : this._passes.push(BB)
       }
       _checkTask() {
-        let HH, BH = null,
-          LH = null;
-        for (const tH of this._passes) {
-          const AH = tH._isValid();
-          if (AH) throw new Error(`Pass "${tH.name}" is not valid. ${AH}`);
-          if (PH.IsRenderPass(tH)) {
-            const HH = Array.isArray(tH.renderTarget) ? tH.renderTarget : [tH.renderTarget];
-            BH = [];
-            for (const LH of HH) void 0 !== LH && BH.push(this._frameGraph.textureManager.getTextureFromHandle(LH));
-            LH = void 0 !== tH.renderTargetDepth ? this._frameGraph.textureManager.getTextureFromHandle(tH.renderTargetDepth) : null
-          } else vH.IsObjectListPass(tH) && (HH = tH.objectList)
+        let BB, OB = null,
+          GB = null;
+        for (const jB of this._passes) {
+          const YB = jB._isValid();
+          if (YB) throw new Error(`Pass "${jB.name}" is not valid. ${YB}`);
+          if (AB.IsRenderPass(jB)) {
+            const BB = Array.isArray(jB.renderTarget) ? jB.renderTarget : [jB.renderTarget];
+            OB = [];
+            for (const GB of BB) void 0 !== GB && OB.push(this._frameGraph.textureManager.getTextureFromHandle(GB));
+            GB = void 0 !== jB.renderTargetDepth ? this._frameGraph.textureManager.getTextureFromHandle(jB.renderTargetDepth) : null
+          } else WB.IsObjectListPass(jB) && (BB = jB.objectList)
         }
-        let AH, rH = null,
-          SH = [],
-          hH = null;
-        for (const tH of this._passesDisabled) {
-          const HH = tH._isValid();
-          if (HH) throw new Error(`Pass "${tH.name}" is not valid. ${HH}`);
-          if (PH.IsRenderPass(tH)) {
-            const HH = Array.isArray(tH.renderTarget) ? tH.renderTarget : [tH.renderTarget];
-            rH = [];
-            for (const BH of HH) void 0 !== BH && rH.push(this._frameGraph.textureManager.getTextureFromHandle(BH));
-            SH = HH, hH = void 0 !== tH.renderTargetDepth ? this._frameGraph.textureManager.getTextureFromHandle(tH.renderTargetDepth) : null
-          } else vH.IsObjectListPass(tH) && (AH = tH.objectList)
+        let YB, DB = null,
+          QB = [],
+          oB = null;
+        for (const jB of this._passesDisabled) {
+          const BB = jB._isValid();
+          if (BB) throw new Error(`Pass "${jB.name}" is not valid. ${BB}`);
+          if (AB.IsRenderPass(jB)) {
+            const BB = Array.isArray(jB.renderTarget) ? jB.renderTarget : [jB.renderTarget];
+            DB = [];
+            for (const OB of BB) void 0 !== OB && DB.push(this._frameGraph.textureManager.getTextureFromHandle(OB));
+            QB = BB, oB = void 0 !== jB.renderTargetDepth ? this._frameGraph.textureManager.getTextureFromHandle(jB.renderTargetDepth) : null
+          } else WB.IsObjectListPass(jB) && (YB = jB.objectList)
         }
         if (this._passesDisabled.length > 0) {
-          if (!this._checkSameRenderTarget(BH, rH)) {
-            let HH = !0;
-            for (const BH of SH)
-              if (void 0 !== BH && !this._frameGraph.textureManager.isHistoryTexture(BH)) {
-                HH = !1;
+          if (!this._checkSameRenderTarget(OB, DB)) {
+            let BB = !0;
+            for (const OB of QB)
+              if (void 0 !== OB && !this._frameGraph.textureManager.isHistoryTexture(OB)) {
+                BB = !1;
                 break
-              } if (!HH) throw new Error(`The output texture of the task "${this.name}" is different when it is enabled or disabled.`)
+              } if (!BB) throw new Error(`The output texture of the task "${this.name}" is different when it is enabled or disabled.`)
           }
-          if (LH !== hH && null !== hH) throw new Error(`The output depth texture of the task "${this.name}" is different when it is enabled or disabled.`);
-          if (HH !== AH && null !== AH) throw new Error(`The output object list of the task "${this.name}" is different when it is enabled or disabled.`)
+          if (GB !== oB && null !== oB) throw new Error(`The output depth texture of the task "${this.name}" is different when it is enabled or disabled.`);
+          if (BB !== YB && null !== YB) throw new Error(`The output object list of the task "${this.name}" is different when it is enabled or disabled.`)
         }
       }
       _execute() {
-        const HH = this._disabled && this._passesDisabled.length > 0 ? this._passesDisabled : this._passes;
+        const BB = this._disabled && this._passesDisabled.length > 0 ? this._passesDisabled : this._passes;
         this.onBeforeTaskExecute.notifyObservers(this), this._frameGraph.engine._debugPushGroup?.(`${this.getClassName()} (${this.name})`);
         try {
-          for (const BH of HH) BH._execute()
+          for (const OB of BB) OB._execute()
         } finally {
           this._frameGraph.engine._debugPopGroup?.()
         }
@@ -644,32 +644,32 @@ export const modules = {
       _initializePasses() {
         this._frameGraph.engine._debugPushGroup?.(`${this.getClassName()} (${this.name})`);
         try {
-          for (const HH of this._passes) HH._initialize();
-          for (const HH of this._passesDisabled) HH._initialize()
+          for (const BB of this._passes) BB._initialize();
+          for (const BB of this._passesDisabled) BB._initialize()
         } finally {
           this._frameGraph.engine._debugPopGroup?.()
         }
       }
-      _checkSameRenderTarget(HH, BH) {
-        if (null === HH || null === BH) return HH === BH;
-        if (HH.length !== BH.length) return !1;
-        for (let LH = 0; LH < HH.length; LH++)
-          if (HH[LH] !== BH[LH]) return !1;
+      _checkSameRenderTarget(BB, OB) {
+        if (null === BB || null === OB) return BB === OB;
+        if (BB.length !== OB.length) return !1;
+        for (let GB = 0; GB < BB.length; GB++)
+          if (BB[GB] !== OB[GB]) return !1;
         return !0
       }
     }
-    class VH extends UH {
+    class nB extends SB {
       get alphaMode() {
         return this.postProcess.alphaMode
       }
-      set alphaMode(HH) {
-        this.postProcess.alphaMode = HH
+      set alphaMode(BB) {
+        this.postProcess.alphaMode = BB
       }
       get drawWrapper() {
         return this._postProcessDrawWrapper
       }
-      constructor(HH, BH, LH) {
-        super(HH, BH), this.sourceSamplingMode = 2, this.depthReadOnly = !1, this.stencilReadOnly = !1, this.disableColorWrite = !1, this.drawBackFace = !1, this.depthTest = !0, this.postProcess = LH, this._postProcessDrawWrapper = this.postProcess.drawWrapper, this.outputTexture = this._frameGraph.textureManager.createDanglingHandle(), this.outputDepthAttachmentTexture = this._frameGraph.textureManager.createDanglingHandle()
+      constructor(BB, OB, GB) {
+        super(BB, OB), this.sourceSamplingMode = 2, this.depthReadOnly = !1, this.stencilReadOnly = !1, this.disableColorWrite = !1, this.drawBackFace = !1, this.depthTest = !0, this.postProcess = GB, this._postProcessDrawWrapper = this.postProcess.drawWrapper, this.outputTexture = this._frameGraph.textureManager.createDanglingHandle(), this.outputDepthAttachmentTexture = this._frameGraph.textureManager.createDanglingHandle()
       }
       isReady() {
         return this.postProcess.isReady()
@@ -678,361 +678,361 @@ export const modules = {
         return "FrameGraphPostProcessTask"
       }
       record() {
-        let HH = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-          BH = arguments.length > 1 ? arguments[1] : void 0,
-          LH = arguments.length > 2 ? arguments[2] : void 0;
+        let BB = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
+          OB = arguments.length > 1 ? arguments[1] : void 0,
+          GB = arguments.length > 2 ? arguments[2] : void 0;
         if (void 0 === this.sourceTexture && void 0 === this.targetTexture) throw new Error(`FrameGraphPostProcessTask "${this.name}": sourceTexture or targetTexture is required`);
-        const AH = void 0 !== this.sourceTexture ? this._frameGraph.textureManager.getTextureCreationOptions(this.sourceTexture) : void 0;
-        if (AH && (AH.options.samples = 1), this._frameGraph.textureManager.resolveDanglingHandle(this.outputTexture, this.targetTexture, this.name, AH), void 0 !== this.depthAttachmentTexture && this._frameGraph.textureManager.resolveDanglingHandle(this.outputDepthAttachmentTexture, this.depthAttachmentTexture), AH) {
-          const HH = this._frameGraph.textureManager.getTextureAbsoluteDimensions(AH);
-          this._sourceWidth = HH.width, this._sourceHeight = HH.height
+        const YB = void 0 !== this.sourceTexture ? this._frameGraph.textureManager.getTextureCreationOptions(this.sourceTexture) : void 0;
+        if (YB && (YB.options.samples = 1), this._frameGraph.textureManager.resolveDanglingHandle(this.outputTexture, this.targetTexture, this.name, YB), void 0 !== this.depthAttachmentTexture && this._frameGraph.textureManager.resolveDanglingHandle(this.outputDepthAttachmentTexture, this.depthAttachmentTexture), YB) {
+          const BB = this._frameGraph.textureManager.getTextureAbsoluteDimensions(YB);
+          this._sourceWidth = BB.width, this._sourceHeight = BB.height
         }
-        const rH = this._frameGraph.textureManager.getTextureDescription(this.outputTexture);
-        this._outputWidth = rH.size.width, this._outputHeight = rH.size.height;
-        const SH = this._frameGraph.addRenderPass(this.name);
-        if (SH.depthReadOnly = this.depthReadOnly, SH.stencilReadOnly = this.stencilReadOnly, SH.addDependencies(this.sourceTexture), SH.setRenderTarget(this.outputTexture), SH.setRenderTargetDepth(this.depthAttachmentTexture), SH.setExecuteFunc((HH => {
-            HH.pushDebugGroup(`Apply post-process (${this.name})`), void 0 !== this.sourceTexture && HH.setTextureSamplingMode(this.sourceTexture, this.sourceSamplingMode), BH?.(HH), this.viewport && HH.setViewport(this.viewport), HH.applyFullScreenEffect(this._postProcessDrawWrapper, (() => {
-              void 0 !== this.sourceTexture && HH.bindTextureHandle(this._postProcessDrawWrapper.effect, "textureSampler", this.sourceTexture), LH?.(HH), this.postProcess.bind()
-            }), this.stencilState, this.disableColorWrite, this.drawBackFace, this.depthTest, void 0 !== this.viewport), HH.restoreDefaultFramebuffer(), HH.popDebugGroup()
-          })), !HH) {
-          const HH = this._frameGraph.addRenderPass(this.name + "_disabled", !0);
-          HH.depthReadOnly = this.depthReadOnly, HH.stencilReadOnly = this.stencilReadOnly, HH.addDependencies(this.sourceTexture), HH.setRenderTarget(this.outputTexture), HH.setRenderTargetDepth(this.depthAttachmentTexture), HH.setExecuteFunc((HH => {
-            void 0 !== this.sourceTexture && 0 === this.alphaMode && (this.viewport && HH.setViewport(this.viewport), HH.copyTexture(this.sourceTexture, void 0, void 0 !== this.viewport))
+        const DB = this._frameGraph.textureManager.getTextureDescription(this.outputTexture);
+        this._outputWidth = DB.size.width, this._outputHeight = DB.size.height;
+        const QB = this._frameGraph.addRenderPass(this.name);
+        if (QB.depthReadOnly = this.depthReadOnly, QB.stencilReadOnly = this.stencilReadOnly, QB.addDependencies(this.sourceTexture), QB.setRenderTarget(this.outputTexture), QB.setRenderTargetDepth(this.depthAttachmentTexture), QB.setExecuteFunc((BB => {
+            BB.pushDebugGroup(`Apply post-process (${this.name})`), void 0 !== this.sourceTexture && BB.setTextureSamplingMode(this.sourceTexture, this.sourceSamplingMode), OB?.(BB), this.viewport && BB.setViewport(this.viewport), BB.applyFullScreenEffect(this._postProcessDrawWrapper, (() => {
+              void 0 !== this.sourceTexture && BB.bindTextureHandle(this._postProcessDrawWrapper.effect, "textureSampler", this.sourceTexture), GB?.(BB), this.postProcess.bind()
+            }), this.stencilState, this.disableColorWrite, this.drawBackFace, this.depthTest, void 0 !== this.viewport), BB.restoreDefaultFramebuffer(), BB.popDebugGroup()
+          })), !BB) {
+          const BB = this._frameGraph.addRenderPass(this.name + "_disabled", !0);
+          BB.depthReadOnly = this.depthReadOnly, BB.stencilReadOnly = this.stencilReadOnly, BB.addDependencies(this.sourceTexture), BB.setRenderTarget(this.outputTexture), BB.setRenderTargetDepth(this.depthAttachmentTexture), BB.setExecuteFunc((BB => {
+            void 0 !== this.sourceTexture && 0 === this.alphaMode && (this.viewport && BB.setViewport(this.viewport), BB.copyTexture(this.sourceTexture, void 0, void 0 !== this.viewport))
           }))
         }
-        return SH
+        return QB
       }
       dispose() {
         this.postProcess.dispose(), super.dispose()
       }
     }
-    class OH extends VH {
-      constructor(HH, BH, LH) {
-        super(HH, BH, LH || new EH(HH, BH.engine))
+    class UB extends nB {
+      constructor(BB, OB, GB) {
+        super(BB, OB, GB || new MB(BB, OB.engine))
       }
       getClassName() {
         return "FrameGraphFXAATask"
       }
       record() {
-        let HH = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-          BH = arguments.length > 1 ? arguments[1] : void 0,
-          LH = arguments.length > 2 ? arguments[2] : void 0;
-        const AH = super.record(HH, BH, LH);
-        return this.postProcess.texelSize.x = 1 / this._sourceWidth, this.postProcess.texelSize.y = 1 / this._sourceHeight, AH
+        let BB = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
+          OB = arguments.length > 1 ? arguments[1] : void 0,
+          GB = arguments.length > 2 ? arguments[2] : void 0;
+        const YB = super.record(BB, OB, GB);
+        return this.postProcess.texelSize.x = 1 / this._sourceWidth, this.postProcess.texelSize.y = 1 / this._sourceHeight, YB
       }
     }
-    var bH = LH(45296);
-    class kH extends VH {
-      constructor(HH, BH, LH) {
-        super(HH, BH, LH || new bH.f(HH, BH.engine))
+    var fB = GB(44960);
+    class kB extends nB {
+      constructor(BB, OB, GB) {
+        super(BB, OB, GB || new fB.d(BB, OB.engine))
       }
       getClassName() {
         return "FrameGraphPassTask"
       }
     }
-    var mH = LH(41383),
-      oH = LH(41458),
-      IH = LH(41420),
-      fH = LH(41533),
-      lH = LH(38074);
-    class KH {
-      getRenderCamera(HH) {
+    var dB = GB(41091),
+      KB = GB(41190),
+      uB = GB(41145),
+      mB = GB(41248),
+      IB = GB(37894);
+    class FB {
+      getRenderCamera(BB) {
         if (this._renderCamera) return this._renderCamera;
         {
-          let BH;
-          return BH = this.originalScene.activeCameras && this.originalScene.activeCameras.length > 1 ? this.originalScene.activeCameras[this.originalScene.activeCameras.length - 1] : this.originalScene.activeCamera, HH && BH && BH.isRigCamera ? BH.rigParent : BH
+          let OB;
+          return OB = this.originalScene.activeCameras && this.originalScene.activeCameras.length > 1 ? this.originalScene.activeCameras[this.originalScene.activeCameras.length - 1] : this.originalScene.activeCamera, BB && OB && OB.isRigCamera ? OB.rigParent : OB
         }
       }
-      setRenderCamera(HH) {
-        this._renderCamera = HH
+      setRenderCamera(BB) {
+        this._renderCamera = BB
       }
       _getSharedGizmoLight() {
-        return this._sharedGizmoLight || (this._sharedGizmoLight = new fH.b("shared gizmo light", new CH.o(0, 1, 0), this.utilityLayerScene), this._sharedGizmoLight.intensity = 2, this._sharedGizmoLight.groundColor = lH.c.Gray()), this._sharedGizmoLight
+        return this._sharedGizmoLight || (this._sharedGizmoLight = new mB.c("shared gizmo light", new JB.r(0, 1, 0), this.utilityLayerScene), this._sharedGizmoLight.intensity = 2, this._sharedGizmoLight.groundColor = IB.c.Gray()), this._sharedGizmoLight
       }
       static get DefaultUtilityLayer() {
-        return null == KH._DefaultUtilityLayer ? KH._CreateDefaultUtilityLayerFromScene(zH.d.LastCreatedScene) : KH._DefaultUtilityLayer
+        return null == FB._DefaultUtilityLayer ? FB._CreateDefaultUtilityLayerFromScene(yB.b.LastCreatedScene) : FB._DefaultUtilityLayer
       }
-      static _CreateDefaultUtilityLayerFromScene(HH) {
-        return KH._DefaultUtilityLayer = new KH(HH), KH._DefaultUtilityLayer.originalScene.uR.addOnce((() => {
-          KH._DefaultUtilityLayer = null
-        })), KH._DefaultUtilityLayer
+      static _CreateDefaultUtilityLayerFromScene(BB) {
+        return FB._DefaultUtilityLayer = new FB(BB), FB._DefaultUtilityLayer.originalScene.lF.addOnce((() => {
+          FB._DefaultUtilityLayer = null
+        })), FB._DefaultUtilityLayer
       }
       static get DefaultKeepDepthUtilityLayer() {
-        return null == KH._DefaultKeepDepthUtilityLayer ? KH._CreateDefaultKeepUtilityLayerFromScene(zH.d.LastCreatedScene) : KH._DefaultKeepDepthUtilityLayer
+        return null == FB._DefaultKeepDepthUtilityLayer ? FB._CreateDefaultKeepUtilityLayerFromScene(yB.b.LastCreatedScene) : FB._DefaultKeepDepthUtilityLayer
       }
-      static _CreateDefaultKeepUtilityLayerFromScene(HH) {
-        return KH._DefaultKeepDepthUtilityLayer = new KH(HH), KH._DefaultKeepDepthUtilityLayer.utilityLayerScene.autoClearDepthAndStencil = !1, KH._DefaultKeepDepthUtilityLayer.originalScene.uR.addOnce((() => {
-          KH._DefaultKeepDepthUtilityLayer = null
-        })), KH._DefaultKeepDepthUtilityLayer
+      static _CreateDefaultKeepUtilityLayerFromScene(BB) {
+        return FB._DefaultKeepDepthUtilityLayer = new FB(BB), FB._DefaultKeepDepthUtilityLayer.utilityLayerScene.autoClearDepthAndStencil = !1, FB._DefaultKeepDepthUtilityLayer.originalScene.lF.addOnce((() => {
+          FB._DefaultKeepDepthUtilityLayer = null
+        })), FB._DefaultKeepDepthUtilityLayer
       }
-      constructor(HH) {
-        let BH = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
-          LH = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        this.originalScene = HH, this.handleEvents = BH, this._pointerCaptures = {}, this._lastPointerEvents = {}, this._sharedGizmoLight = null, this._renderCamera = null, this.pickUtilitySceneFirst = !0, this.shouldRender = !0, this.onlyCheckPointerDownEvents = !0, this.processAllEvents = !1, this.pickingEnabled = !0, this.onPointerOutObservable = new TH.d, this.utilityLayerScene = new mH.d(HH.Iu(), {
+      constructor(BB) {
+        let OB = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
+          GB = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        this.originalScene = BB, this.handleEvents = OB, this._pointerCaptures = {}, this._lastPointerEvents = {}, this._sharedGizmoLight = null, this._renderCamera = null, this.pickUtilitySceneFirst = !0, this.shouldRender = !0, this.onlyCheckPointerDownEvents = !0, this.processAllEvents = !1, this.pickingEnabled = !0, this.onPointerOutObservable = new VB.b, this.utilityLayerScene = new dB.e(BB.Lp(), {
           virtual: !0,
-          useFloatingOrigin: HH.floatingOriginMode
-        }), this.utilityLayerScene.useRightHandedSystem = HH.useRightHandedSystem, this.utilityLayerScene._allowPostProcessClearColor = !1, this.utilityLayerScene.postProcessesEnabled = !1, this.utilityLayerScene.detachControl(), BH && (this._originalPointerObserver = HH.onPrePointerObservable.add((BH => {
+          useFloatingOrigin: BB.floatingOriginMode
+        }), this.utilityLayerScene.useRightHandedSystem = BB.useRightHandedSystem, this.utilityLayerScene._allowPostProcessClearColor = !1, this.utilityLayerScene.postProcessesEnabled = !1, this.utilityLayerScene.detachControl(), OB && (this._originalPointerObserver = BB.onPrePointerObservable.add((OB => {
           if (!this.utilityLayerScene.activeCamera) return;
           if (!this.pickingEnabled) return;
-          if (!this.processAllEvents && BH.type !== oH.d.POINTERMOVE && BH.type !== oH.d.POINTERUP && BH.type !== oH.d.POINTERDOWN && BH.type !== oH.d.POINTERDOUBLETAP) return;
-          this.utilityLayerScene.pointerX = HH.pointerX, this.utilityLayerScene.pointerY = HH.pointerY;
-          const LH = BH.event;
-          if (HH.isPointerCaptured(LH.pointerId)) return void(this._pointerCaptures[LH.pointerId] = !1);
-          const AH = LH => {
-              let AH;
-              if (BH.nearInteractionPickingInfo) AH = BH.nearInteractionPickingInfo.pickedMesh.yN() == LH ? BH.nearInteractionPickingInfo : new IH.b;
-              else if (LH !== this.utilityLayerScene && BH.originalPickingInfo) AH = BH.originalPickingInfo;
+          if (!this.processAllEvents && OB.type !== KB.c.POINTERMOVE && OB.type !== KB.c.POINTERUP && OB.type !== KB.c.POINTERDOWN && OB.type !== KB.c.POINTERDOUBLETAP) return;
+          this.utilityLayerScene.pointerX = BB.pointerX, this.utilityLayerScene.pointerY = BB.pointerY;
+          const GB = OB.event;
+          if (BB.isPointerCaptured(GB.pointerId)) return void(this._pointerCaptures[GB.pointerId] = !1);
+          const YB = GB => {
+              let YB;
+              if (OB.nearInteractionPickingInfo) YB = OB.nearInteractionPickingInfo.pickedMesh.JF() == GB ? OB.nearInteractionPickingInfo : new uB.e;
+              else if (GB !== this.utilityLayerScene && OB.originalPickingInfo) YB = OB.originalPickingInfo;
               else {
-                let rH = null;
-                this._renderCamera && (rH = LH._activeCamera, LH._activeCamera = this._renderCamera, BH.ray = null), AH = BH.ray ? LH.pickWithRay(BH.ray) : LH.XY(HH.pointerX, HH.pointerY), rH && (LH._activeCamera = rH)
+                let DB = null;
+                this._renderCamera && (DB = GB._activeCamera, GB._activeCamera = this._renderCamera, OB.ray = null), YB = OB.ray ? GB.pickWithRay(OB.ray) : GB.pl(BB.pointerX, BB.pointerY), DB && (GB._activeCamera = DB)
               }
-              return AH
+              return YB
             },
-            rH = AH(this.utilityLayerScene);
-          if (!BH.ray && rH && (BH.ray = rH.ray), BH.originalPickingInfo?.aimTransform && rH && (rH.aimTransform = BH.originalPickingInfo.aimTransform, rH.gripTransform = BH.originalPickingInfo.gripTransform), this.utilityLayerScene.onPrePointerObservable.notifyObservers(BH), this.onlyCheckPointerDownEvents && BH.type != oH.d.POINTERDOWN) return BH.skipOnPointerObservable || this.utilityLayerScene.onPointerObservable.notifyObservers(new oH.g(BH.type, BH.event, rH), BH.type), void(BH.type === oH.d.POINTERUP && this._pointerCaptures[LH.pointerId] && (this._pointerCaptures[LH.pointerId] = !1));
-          if (this.utilityLayerScene.autoClearDepthAndStencil || this.pickUtilitySceneFirst) rH && rH.hit && (BH.skipOnPointerObservable || this.utilityLayerScene.onPointerObservable.notifyObservers(new oH.g(BH.type, BH.event, rH), BH.type), BH.skipOnPointerObservable = !0);
+            DB = YB(this.utilityLayerScene);
+          if (!OB.ray && DB && (OB.ray = DB.ray), OB.originalPickingInfo?.aimTransform && DB && (DB.aimTransform = OB.originalPickingInfo.aimTransform, DB.gripTransform = OB.originalPickingInfo.gripTransform), this.utilityLayerScene.onPrePointerObservable.notifyObservers(OB), this.onlyCheckPointerDownEvents && OB.type != KB.c.POINTERDOWN) return OB.skipOnPointerObservable || this.utilityLayerScene.onPointerObservable.notifyObservers(new KB.f(OB.type, OB.event, DB), OB.type), void(OB.type === KB.c.POINTERUP && this._pointerCaptures[GB.pointerId] && (this._pointerCaptures[GB.pointerId] = !1));
+          if (this.utilityLayerScene.autoClearDepthAndStencil || this.pickUtilitySceneFirst) DB && DB.hit && (OB.skipOnPointerObservable || this.utilityLayerScene.onPointerObservable.notifyObservers(new KB.f(OB.type, OB.event, DB), OB.type), OB.skipOnPointerObservable = !0);
           else {
-            const LH = AH(HH),
-              SH = BH.event;
-            LH && rH && (0 === rH.distance && LH.pickedMesh ? this.mainSceneTrackerPredicate && this.mainSceneTrackerPredicate(LH.pickedMesh) ? (this._notifyObservers(BH, LH, SH), BH.skipOnPointerObservable = !0) : BH.type === oH.d.POINTERDOWN ? (this._pointerCaptures[SH.pointerId] = !0, this._notifyObservers(BH, LH, SH)) : BH.type !== oH.d.POINTERMOVE && BH.type !== oH.d.POINTERUP || (this._lastPointerEvents[SH.pointerId] && (this.onPointerOutObservable.notifyObservers(SH.pointerId), delete this._lastPointerEvents[SH.pointerId]), this._notifyObservers(BH, LH, SH)) : !this._pointerCaptures[SH.pointerId] && (rH.distance < LH.distance || 0 === LH.distance) ? (this._notifyObservers(BH, rH, SH), BH.skipOnPointerObservable || (BH.skipOnPointerObservable = rH.distance > 0)) : !this._pointerCaptures[SH.pointerId] && rH.distance >= LH.distance && (this.mainSceneTrackerPredicate && this.mainSceneTrackerPredicate(LH.pickedMesh) ? (this._notifyObservers(BH, LH, SH), BH.skipOnPointerObservable = !0) : (BH.type !== oH.d.POINTERMOVE && BH.type !== oH.d.POINTERUP || this._lastPointerEvents[SH.pointerId] && (this.onPointerOutObservable.notifyObservers(SH.pointerId), delete this._lastPointerEvents[SH.pointerId]), this._notifyObservers(BH, rH, SH))), BH.type === oH.d.POINTERUP && this._pointerCaptures[SH.pointerId] && (this._pointerCaptures[SH.pointerId] = !1))
+            const GB = YB(BB),
+              QB = OB.event;
+            GB && DB && (0 === DB.distance && GB.pickedMesh ? this.mainSceneTrackerPredicate && this.mainSceneTrackerPredicate(GB.pickedMesh) ? (this._notifyObservers(OB, GB, QB), OB.skipOnPointerObservable = !0) : OB.type === KB.c.POINTERDOWN ? (this._pointerCaptures[QB.pointerId] = !0, this._notifyObservers(OB, GB, QB)) : OB.type !== KB.c.POINTERMOVE && OB.type !== KB.c.POINTERUP || (this._lastPointerEvents[QB.pointerId] && (this.onPointerOutObservable.notifyObservers(QB.pointerId), delete this._lastPointerEvents[QB.pointerId]), this._notifyObservers(OB, GB, QB)) : !this._pointerCaptures[QB.pointerId] && (DB.distance < GB.distance || 0 === GB.distance) ? (this._notifyObservers(OB, DB, QB), OB.skipOnPointerObservable || (OB.skipOnPointerObservable = DB.distance > 0)) : !this._pointerCaptures[QB.pointerId] && DB.distance >= GB.distance && (this.mainSceneTrackerPredicate && this.mainSceneTrackerPredicate(GB.pickedMesh) ? (this._notifyObservers(OB, GB, QB), OB.skipOnPointerObservable = !0) : (OB.type !== KB.c.POINTERMOVE && OB.type !== KB.c.POINTERUP || this._lastPointerEvents[QB.pointerId] && (this.onPointerOutObservable.notifyObservers(QB.pointerId), delete this._lastPointerEvents[QB.pointerId]), this._notifyObservers(OB, DB, QB))), OB.type === KB.c.POINTERUP && this._pointerCaptures[QB.pointerId] && (this._pointerCaptures[QB.pointerId] = !1))
           }
-        })), this._originalPointerObserver && HH.onPrePointerObservable.makeObserverTopPriority(this._originalPointerObserver)), this.utilityLayerScene.autoClear = !1, LH || (this._afterRenderObserver = this.originalScene.onAfterRenderCameraObservable.add((HH => {
-          this.shouldRender && HH == this.getRenderCamera() && this.render()
-        }))), this._sceneDisposeObserver = this.originalScene.uR.add((() => {
+        })), this._originalPointerObserver && BB.onPrePointerObservable.makeObserverTopPriority(this._originalPointerObserver)), this.utilityLayerScene.autoClear = !1, GB || (this._afterRenderObserver = this.originalScene.onAfterRenderCameraObservable.add((BB => {
+          this.shouldRender && BB == this.getRenderCamera() && this.render()
+        }))), this._sceneDisposeObserver = this.originalScene.lF.add((() => {
           this.dispose()
         })), this._updateCamera()
       }
-      _notifyObservers(HH, BH, LH) {
-        HH.skipOnPointerObservable || (this.utilityLayerScene.onPointerObservable.notifyObservers(new oH.g(HH.type, HH.event, BH), HH.type), this._lastPointerEvents[LH.pointerId] = !0)
+      _notifyObservers(BB, OB, GB) {
+        BB.skipOnPointerObservable || (this.utilityLayerScene.onPointerObservable.notifyObservers(new KB.f(BB.type, BB.event, OB), BB.type), this._lastPointerEvents[GB.pointerId] = !0)
       }
       render() {
         if (this._updateCamera(), this.utilityLayerScene.activeCamera) {
-          const HH = this.utilityLayerScene.activeCamera.yN(),
-            BH = this.utilityLayerScene.activeCamera;
-          BH._scene = this.utilityLayerScene, BH.leftCamera && (BH.leftCamera._scene = this.utilityLayerScene), BH.rightCamera && (BH.rightCamera._scene = this.utilityLayerScene), this.utilityLayerScene.render(!1), BH._scene = HH, BH.leftCamera && (BH.leftCamera._scene = HH), BH.rightCamera && (BH.rightCamera._scene = HH)
+          const BB = this.utilityLayerScene.activeCamera.JF(),
+            OB = this.utilityLayerScene.activeCamera;
+          OB._scene = this.utilityLayerScene, OB.leftCamera && (OB.leftCamera._scene = this.utilityLayerScene), OB.rightCamera && (OB.rightCamera._scene = this.utilityLayerScene), this.utilityLayerScene.render(!1), OB._scene = BB, OB.leftCamera && (OB.leftCamera._scene = BB), OB.rightCamera && (OB.rightCamera._scene = BB)
         }
       }
       dispose() {
-        this.onPointerOutObservable.clear(), this._afterRenderObserver && this.originalScene.onAfterRenderCameraObservable.remove(this._afterRenderObserver), this._sceneDisposeObserver && this.originalScene.uR.remove(this._sceneDisposeObserver), this._originalPointerObserver && this.originalScene.onPrePointerObservable.remove(this._originalPointerObserver), this.utilityLayerScene.dispose()
+        this.onPointerOutObservable.clear(), this._afterRenderObserver && this.originalScene.onAfterRenderCameraObservable.remove(this._afterRenderObserver), this._sceneDisposeObserver && this.originalScene.lF.remove(this._sceneDisposeObserver), this._originalPointerObserver && this.originalScene.onPrePointerObservable.remove(this._originalPointerObserver), this.utilityLayerScene.dispose()
       }
       _updateCamera() {
         this.utilityLayerScene.cameraToUseForPointers = this.getRenderCamera(), this.utilityLayerScene.activeCamera = this.getRenderCamera()
       }
     }
-    KH._DefaultUtilityLayer = null, KH._DefaultKeepDepthUtilityLayer = null;
-    const cH = {
-      FindMainCamera: function(HH) {
-        return HH.findMainCamera()
+    FB._DefaultUtilityLayer = null, FB._DefaultKeepDepthUtilityLayer = null;
+    const iB = {
+      FindMainCamera: function(BB) {
+        return BB.findMainCamera()
       },
-      FindMainObjectRenderer: function(HH) {
-        return HH.findMainObjectRenderer()
+      FindMainObjectRenderer: function(BB) {
+        return BB.findMainObjectRenderer()
       },
-      CreateUtilityLayerRenderer: function(HH) {
-        let BH = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        const LH = HH.NQ,
-          AH = new KH(LH, BH, !0);
-        AH.utilityLayerScene.activeCamera = LH.activeCamera;
-        let rH = cH.FindMainCamera(LH.frameGraph);
-        !rH && LH.cameras.length > 0 && (rH = LH.cameras[0]), rH && (AH.setRenderCamera(rH), AH.utilityLayerScene.activeCamera = rH);
-        const SH = LH.onAfterRenderObservable.add((() => {
-          AH.render()
+      CreateUtilityLayerRenderer: function(BB) {
+        let OB = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        const GB = BB.eq,
+          YB = new FB(GB, OB, !0);
+        YB.utilityLayerScene.activeCamera = GB.activeCamera;
+        let DB = iB.FindMainCamera(GB.frameGraph);
+        !DB && GB.cameras.length > 0 && (DB = GB.cameras[0]), DB && (YB.setRenderCamera(DB), YB.utilityLayerScene.activeCamera = DB);
+        const QB = GB.onAfterRenderObservable.add((() => {
+          YB.render()
         }));
-        return AH.utilityLayerScene.uR.addOnce((() => {
-          LH.onAfterRenderObservable.remove(SH)
-        })), AH
+        return YB.utilityLayerScene.lF.addOnce((() => {
+          GB.onAfterRenderObservable.remove(QB)
+        })), YB
       }
     };
-    let eH = null;
+    let LB = null;
 
-    function qH(HH, BH, LH, AH) {
-      let rH = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "image/png",
-        SH = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
-        hH = arguments.length > 6 ? arguments[6] : void 0,
-        tH = arguments.length > 7 && void 0 !== arguments[7] && arguments[7],
-        zH = arguments.length > 8 && void 0 !== arguments[8] && arguments[8];
+    function gB(BB, OB, GB, YB) {
+      let DB = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "image/png",
+        QB = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
+        oB = arguments.length > 6 ? arguments[6] : void 0,
+        jB = arguments.length > 7 && void 0 !== arguments[7] && arguments[7],
+        yB = arguments.length > 8 && void 0 !== arguments[8] && arguments[8];
       const {
-        height: CH,
-        width: EH
-      } = FH(HH, BH, LH);
-      if (!CH || !EH) return void GH.e.Error("Invalid 'size' parameter !");
-      const XH = BH.yN();
-      let uH = XH.activeCamera !== BH;
-      if (XH.frameGraph) {
-        const HH = cH.FindMainObjectRenderer(XH.frameGraph);
-        HH && (uH = HH.camera !== BH)
+        height: JB,
+        width: MB
+      } = hB(BB, OB, GB);
+      if (!JB || !MB) return void zB.b.Error("Invalid 'size' parameter !");
+      const PB = OB.JF();
+      let pB = PB.activeCamera !== OB;
+      if (PB.frameGraph) {
+        const BB = iB.FindMainObjectRenderer(PB.frameGraph);
+        BB && (pB = BB.camera !== OB)
       }
-      uH ? RH(HH, BH, LH, (HH => {
-        if (SH) {
-          const BH = new Blob([HH]);
-          YH.i.DownloadBlob(BH), AH && AH("")
-        } else AH && AH(HH)
-      }), rH, 1, HH.getCreationOptions().antialias, void 0, void 0, void 0, void 0, hH) : HH.onEndFrameObservable.addOnce((() => {
-        eH || (eH = document.createElement("canvas")), eH.width = EH, eH.height = CH;
-        const BH = eH.getContext("2d"),
-          LH = HH.getRenderingCanvas();
-        if (!BH || !LH) return void GH.e.Error("Failed to create screenshot. Rendering context or rendering canvas is not available.");
-        const uH = LH.width,
-          QH = LH.height,
-          WH = eH.width,
-          MH = eH.height,
-          xH = WH / uH,
-          vH = MH / QH,
-          PH = tH ? Math.max(xH, vH) : Math.min(xH, vH),
-          TH = uH * PH,
-          UH = QH * PH,
-          VH = (WH - TH) / 2,
-          OH = (MH - UH) / 2;
-        BH.save(), BH.fillStyle = zH ? XH.clearColor.toHexString() : "rgba(0, 0, 0, 0)", BH.fillRect(0, 0, EH, CH), BH.restore(), BH.drawImage(LH, 0, 0, uH, QH, VH, OH, TH, UH), SH ? (YH.i.EncodeScreenshotCanvasData(eH, void 0, rH, void 0, hH), AH && AH("")) : YH.i.EncodeScreenshotCanvasData(eH, AH, rH, void 0, hH)
+      pB ? wB(BB, OB, GB, (BB => {
+        if (QB) {
+          const OB = new Blob([BB]);
+          lB.j.DownloadBlob(OB), YB && YB("")
+        } else YB && YB(BB)
+      }), DB, 1, BB.getCreationOptions().antialias, void 0, void 0, void 0, void 0, oB) : BB.onEndFrameObservable.addOnce((() => {
+        LB || (LB = document.createElement("canvas")), LB.width = MB, LB.height = JB;
+        const OB = LB.getContext("2d"),
+          GB = BB.getRenderingCanvas();
+        if (!OB || !GB) return void zB.b.Error("Failed to create screenshot. Rendering context or rendering canvas is not available.");
+        const pB = GB.width,
+          qB = GB.height,
+          ZB = LB.width,
+          NB = LB.height,
+          RB = ZB / pB,
+          WB = NB / qB,
+          AB = jB ? Math.max(RB, WB) : Math.min(RB, WB),
+          VB = pB * AB,
+          SB = qB * AB,
+          nB = (ZB - VB) / 2,
+          UB = (NB - SB) / 2;
+        OB.save(), OB.fillStyle = yB ? PB.clearColor.toHexString() : "rgba(0, 0, 0, 0)", OB.fillRect(0, 0, MB, JB), OB.restore(), OB.drawImage(GB, 0, 0, pB, qB, nB, UB, VB, SB), QB ? (lB.j.EncodeScreenshotCanvasData(LB, void 0, DB, void 0, oB), YB && YB("")) : lB.j.EncodeScreenshotCanvasData(LB, YB, DB, void 0, oB)
       }))
     }
-    async function gH(HH, BH, LH) {
-      let AH = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "image/png",
-        rH = arguments.length > 4 ? arguments[4] : void 0,
-        SH = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
-        hH = arguments.length > 6 && void 0 !== arguments[6] && arguments[6],
-        tH = arguments.length > 7 && void 0 !== arguments[7] && arguments[7];
-      return await new Promise(((zH, CH) => {
-        qH(HH, BH, LH, (HH => {
-          "undefined" !== typeof HH ? zH(HH) : CH(new Error("Data is undefined"))
-        }), AH, tH, rH, SH, hH)
+    async function rB(BB, OB, GB) {
+      let YB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "image/png",
+        DB = arguments.length > 4 ? arguments[4] : void 0,
+        QB = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
+        oB = arguments.length > 6 && void 0 !== arguments[6] && arguments[6],
+        jB = arguments.length > 7 && void 0 !== arguments[7] && arguments[7];
+      return await new Promise(((yB, JB) => {
+        gB(BB, OB, GB, (BB => {
+          "undefined" !== typeof BB ? yB(BB) : JB(new Error("Data is undefined"))
+        }), YB, jB, DB, QB, oB)
       }))
     }
-    async function NH(HH, BH, LH, AH) {
-      let rH = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "image/png",
-        SH = arguments.length > 5 ? arguments[5] : void 0,
-        hH = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
-      return await new Promise((tH => {
-        qH(HH, BH, {
-          width: LH,
-          height: AH
+    async function XB(BB, OB, GB, YB) {
+      let DB = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "image/png",
+        QB = arguments.length > 5 ? arguments[5] : void 0,
+        oB = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
+      return await new Promise((jB => {
+        gB(BB, OB, {
+          width: GB,
+          height: YB
         }, (() => {
-          tH()
-        }), rH, !0, SH, hH)
+          jB()
+        }), DB, !0, QB, oB)
       }))
     }
 
-    function RH(HH, BH, SH, hH) {
-      let tH = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "image/png",
-        zH = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 1,
-        CH = arguments.length > 6 && void 0 !== arguments[6] && arguments[6],
-        EH = arguments.length > 7 ? arguments[7] : void 0,
-        YH = arguments.length > 8 && void 0 !== arguments[8] && arguments[8],
-        MH = arguments.length > 9 && void 0 !== arguments[9] && arguments[9],
-        xH = !(arguments.length > 10 && void 0 !== arguments[10]) || arguments[10],
-        vH = arguments.length > 11 ? arguments[11] : void 0,
-        PH = arguments.length > 12 ? arguments[12] : void 0,
-        TH = arguments.length > 13 ? arguments[13] : void 0,
-        UH = arguments.length > 14 && void 0 !== arguments[14] ? arguments[14] : 3e4,
-        VH = arguments.length > 15 ? arguments[15] : void 0;
-      const OH = BH.yN();
-      if (OH.frameGraph) return void nH(OH.frameGraph, BH, SH, tH, zH, CH, EH, vH, TH, !hH).then((HH => {
-        hH && hH(HH)
+    function wB(BB, OB, QB, oB) {
+      let jB = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "image/png",
+        yB = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 1,
+        JB = arguments.length > 6 && void 0 !== arguments[6] && arguments[6],
+        MB = arguments.length > 7 ? arguments[7] : void 0,
+        lB = arguments.length > 8 && void 0 !== arguments[8] && arguments[8],
+        NB = arguments.length > 9 && void 0 !== arguments[9] && arguments[9],
+        RB = !(arguments.length > 10 && void 0 !== arguments[10]) || arguments[10],
+        WB = arguments.length > 11 ? arguments[11] : void 0,
+        AB = arguments.length > 12 ? arguments[12] : void 0,
+        VB = arguments.length > 13 ? arguments[13] : void 0,
+        SB = arguments.length > 14 && void 0 !== arguments[14] ? arguments[14] : 3e4,
+        nB = arguments.length > 15 ? arguments[15] : void 0;
+      const UB = OB.JF();
+      if (UB.frameGraph) return void cB(UB.frameGraph, OB, QB, jB, yB, JB, MB, WB, VB, !oB).then((BB => {
+        oB && oB(BB)
       }));
       const {
-        height: bH,
-        width: kH,
-        finalWidth: mH,
-        finalHeight: oH
-      } = FH(HH, BH, SH), IH = {
-        width: kH,
-        height: bH
+        height: fB,
+        width: kB,
+        finalWidth: dB,
+        finalHeight: KB
+      } = hB(BB, OB, QB), uB = {
+        width: kB,
+        height: fB
       };
-      if (!bH || !kH) return void GH.e.Error("Invalid 'size' parameter !");
-      HH.skipFrameRender = !0;
-      const fH = HH.getRenderWidth,
-        lH = HH.getRenderHeight;
-      HH.getRenderWidth = function() {
-        return !(arguments.length > 0 && void 0 !== arguments[0] && arguments[0]) && HH._currentRenderTarget ? HH._currentRenderTarget.width : kH
-      }, HH.getRenderHeight = function() {
-        return !(arguments.length > 0 && void 0 !== arguments[0] && arguments[0]) && HH._currentRenderTarget ? HH._currentRenderTarget.height : bH
-      }, HH.onResizeObservable.hasObservers() && HH.onResizeObservable.notifyObservers(HH);
-      const KH = new rH.c("screenShot", IH, OH, !1, !1, 0, !1, AH.g.BILINEAR_SAMPLINGMODE, void 0, MH, void 0, void 0, void 0, zH);
-      KH.renderList = OH.meshes.slice(), KH.samples = zH, KH.renderSprites = YH, KH.activeCamera = BH, KH.forceLayerMaskCheck = xH, PH?.(KH);
-      const cH = TH || uH.DumpData,
-        eH = () => {
-          OH.incrementRenderId(), OH.resetCachedMaterial(), (0, WH.f)((() => KH.isReadyForRendering() && BH.isReady(!0)), (() => {
-            HH.onEndFrameObservable.addOnce((() => {
-              mH === kH && oH === bH ? KH.readPixels(void 0, void 0, void 0, !1).then((HH => {
-                cH(kH, bH, HH, hH, tH, EH, !0, void 0, vH), KH.dispose()
-              })) : (HH.isWebGPU ? LH.e(679).then((() => LH(64293))) : LH.e(680).then((() => LH(64302)))).then((async () => await (0, QH.d)("pass", KH.getInternalTexture(), OH, void 0, void 0, void 0, mH, oH).then((BH => {
-                HH._readTexturePixels(BH, mH, oH, -1, 0, null, !0, !1, 0, 0).then((HH => {
-                  cH(mH, oH, HH, hH, tH, EH, !0, void 0, vH), BH.dispose()
+      if (!fB || !kB) return void zB.b.Error("Invalid 'size' parameter !");
+      BB.skipFrameRender = !0;
+      const mB = BB.getRenderWidth,
+        IB = BB.getRenderHeight;
+      BB.getRenderWidth = function() {
+        return !(arguments.length > 0 && void 0 !== arguments[0] && arguments[0]) && BB._currentRenderTarget ? BB._currentRenderTarget.width : kB
+      }, BB.getRenderHeight = function() {
+        return !(arguments.length > 0 && void 0 !== arguments[0] && arguments[0]) && BB._currentRenderTarget ? BB._currentRenderTarget.height : fB
+      }, BB.onResizeObservable.hasObservers() && BB.onResizeObservable.notifyObservers(BB);
+      const FB = new DB.d("screenShot", uB, UB, !1, !1, 0, !1, YB.e.BILINEAR_SAMPLINGMODE, void 0, NB, void 0, void 0, void 0, yB);
+      FB.renderList = UB.meshes.slice(), FB.samples = yB, FB.renderSprites = lB, FB.activeCamera = OB, FB.forceLayerMaskCheck = RB, AB?.(FB);
+      const iB = VB || pB.DumpData,
+        LB = () => {
+          UB.incrementRenderId(), UB.resetCachedMaterial(), (0, ZB.d)((() => FB.isReadyForRendering() && OB.isReady(!0)), (() => {
+            BB.onEndFrameObservable.addOnce((() => {
+              dB === kB && KB === fB ? FB.readPixels(void 0, void 0, void 0, !1).then((BB => {
+                iB(kB, fB, BB, oB, jB, MB, !0, void 0, WB), FB.dispose()
+              })) : (BB.isWebGPU ? GB.e(679).then((() => GB(64046))) : GB.e(680).then((() => GB(64051)))).then((async () => await (0, qB.d)("pass", FB.getInternalTexture(), UB, void 0, void 0, void 0, dB, KB).then((OB => {
+                BB._readTexturePixels(OB, dB, KB, -1, 0, null, !0, !1, 0, 0).then((BB => {
+                  iB(dB, KB, BB, oB, jB, MB, !0, void 0, WB), OB.dispose()
                 }))
               }))))
-            })), OH.incrementRenderId(), OH.resetCachedMaterial();
-            const AH = OH.activeCamera,
-              rH = OH.activeCameras,
-              SH = BH.outputRenderTarget,
-              zH = OH.spritesEnabled;
-            OH.activeCamera = BH, OH.activeCameras = null, BH.outputRenderTarget = KH, OH.spritesEnabled = YH;
-            const CH = OH.meshes;
-            OH.meshes = KH.renderList || OH.meshes;
+            })), UB.incrementRenderId(), UB.resetCachedMaterial();
+            const YB = UB.activeCamera,
+              DB = UB.activeCameras,
+              QB = OB.outputRenderTarget,
+              yB = UB.spritesEnabled;
+            UB.activeCamera = OB, UB.activeCameras = null, OB.outputRenderTarget = FB, UB.spritesEnabled = lB;
+            const JB = UB.meshes;
+            UB.meshes = FB.renderList || UB.meshes;
             try {
-              OH.render()
+              UB.render()
             } finally {
-              OH.activeCamera = AH, OH.activeCameras = rH, BH.outputRenderTarget = SH, OH.spritesEnabled = zH, OH.meshes = CH, HH.getRenderWidth = fH, HH.getRenderHeight = lH, HH.onResizeObservable.hasObservers() && HH.onResizeObservable.notifyObservers(HH), BH.getProjectionMatrix(!0), HH.skipFrameRender = !1
+              UB.activeCamera = YB, UB.activeCameras = DB, OB.outputRenderTarget = QB, UB.spritesEnabled = yB, UB.meshes = JB, BB.getRenderWidth = mB, BB.getRenderHeight = IB, BB.onResizeObservable.hasObservers() && BB.onResizeObservable.notifyObservers(BB), OB.getProjectionMatrix(!0), BB.skipFrameRender = !1
             }
           }), (() => {
-            HH.skipFrameRender = !1, HH.getRenderWidth = fH, HH.getRenderHeight = lH, VH?.()
-          }), void 0, UH)
+            BB.skipFrameRender = !1, BB.getRenderWidth = mB, BB.getRenderHeight = IB, nB?.()
+          }), void 0, SB)
         };
-      if (CH) {
-        const HH = new XH("antialiasing", 1, OH.activeCamera);
-        KH.addPostProcess(HH), HH.autoClear = !0, HH.onEffectCreatedObservable.addOnce((HH => {
-          HH.isReady() ? eH() : HH.onCompiled = () => {
-            eH()
+      if (JB) {
+        const BB = new PB("antialiasing", 1, UB.activeCamera);
+        FB.addPostProcess(BB), BB.autoClear = !0, BB.onEffectCreatedObservable.addOnce((BB => {
+          BB.isReady() ? LB() : BB.onCompiled = () => {
+            LB()
           }
         }))
-      } else eH()
+      } else LB()
     }
-    async function jH(HH, BH, LH) {
-      let AH = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "image/png",
-        rH = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 1,
-        SH = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
-        hH = arguments.length > 6 ? arguments[6] : void 0,
-        tH = arguments.length > 7 && void 0 !== arguments[7] && arguments[7],
-        zH = arguments.length > 8 && void 0 !== arguments[8] && arguments[8],
-        CH = !(arguments.length > 9 && void 0 !== arguments[9]) || arguments[9],
-        EH = arguments.length > 10 ? arguments[10] : void 0,
-        XH = arguments.length > 11 ? arguments[11] : void 0,
-        GH = arguments.length > 12 ? arguments[12] : void 0;
-      return await new Promise(((YH, uH) => {
-        RH(HH, BH, LH, (HH => {
-          "undefined" !== typeof HH ? YH(HH) : uH(new Error("Data is undefined"))
-        }), AH, rH, SH, hH, tH, zH, CH, EH, XH, GH)
+    async function EB(BB, OB, GB) {
+      let YB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "image/png",
+        DB = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 1,
+        QB = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
+        oB = arguments.length > 6 ? arguments[6] : void 0,
+        jB = arguments.length > 7 && void 0 !== arguments[7] && arguments[7],
+        yB = arguments.length > 8 && void 0 !== arguments[8] && arguments[8],
+        JB = !(arguments.length > 9 && void 0 !== arguments[9]) || arguments[9],
+        MB = arguments.length > 10 ? arguments[10] : void 0,
+        PB = arguments.length > 11 ? arguments[11] : void 0,
+        zB = arguments.length > 12 ? arguments[12] : void 0;
+      return await new Promise(((lB, pB) => {
+        wB(BB, OB, GB, (BB => {
+          "undefined" !== typeof BB ? lB(BB) : pB(new Error("Data is undefined"))
+        }), YB, DB, QB, oB, jB, yB, JB, MB, PB, zB)
       }))
     }
-    async function nH(HH, BH, LH) {
-      let AH = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "image/png",
-        rH = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 1,
-        SH = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
-        hH = arguments.length > 6 ? arguments[6] : void 0,
-        tH = arguments.length > 7 ? arguments[7] : void 0,
-        zH = arguments.length > 8 ? arguments[8] : void 0,
-        CH = arguments.length > 9 && void 0 !== arguments[9] && arguments[9],
-        EH = arguments.length > 10 ? arguments[10] : void 0;
-      const XH = HH.engine,
-        GH = HH.textureManager,
+    async function cB(BB, OB, GB) {
+      let YB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "image/png",
+        DB = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 1,
+        QB = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
+        oB = arguments.length > 6 ? arguments[6] : void 0,
+        jB = arguments.length > 7 ? arguments[7] : void 0,
+        yB = arguments.length > 8 ? arguments[8] : void 0,
+        JB = arguments.length > 9 && void 0 !== arguments[9] && arguments[9],
+        MB = arguments.length > 10 ? arguments[10] : void 0;
+      const PB = BB.engine,
+        zB = BB.textureManager,
         {
-          height: YH,
-          width: QH,
-          finalWidth: WH,
-          finalHeight: xH
-        } = FH(XH, BH, LH),
-        vH = {
-          width: QH,
-          height: YH
+          height: lB,
+          width: qB,
+          finalWidth: ZB,
+          finalHeight: RB
+        } = hB(PB, OB, GB),
+        WB = {
+          width: qB,
+          height: lB
         },
-        PH = zH || uH.DumpData,
-        TH = HH.tasks,
-        UH = TH.length,
-        VH = HH.pausedExecution,
-        bH = XH.getCaps().parallelShaderCompile;
-      GH.setBackBufferTextures(0, 0, {
-        size: vH,
+        AB = yB || pB.DumpData,
+        VB = BB.tasks,
+        SB = VB.length,
+        nB = BB.pausedExecution,
+        fB = PB.getCaps().parallelShaderCompile;
+      zB.setBackBufferTextures(0, 0, {
+        size: WB,
         options: {
           createMipMaps: !1,
-          samples: rH,
+          samples: DB,
           types: [0],
           formats: [5],
           useSRGBBuffers: [!1],
@@ -1041,29 +1041,29 @@ export const modules = {
         },
         sizeIsPercentage: !1
       }, {
-        size: vH,
+        size: WB,
         options: {
           createMipMaps: !1,
-          samples: rH,
+          samples: DB,
           types: [0],
-          formats: [XH.isStencilEnable ? 13 : 14],
+          formats: [PB.isStencilEnable ? 13 : 14],
           useSRGBBuffers: [!1],
           creationFlags: [0],
           labels: ["screenshot depth"]
         },
         sizeIsPercentage: !1
       });
-      let mH = MH;
-      if (SH) {
-        const BH = new OH("fxaa", HH);
-        BH.sourceTexture = mH, mH = BH.outputTexture, HH.addTask(BH)
+      let dB = NB;
+      if (QB) {
+        const OB = new UB("fxaa", BB);
+        OB.sourceTexture = dB, dB = OB.outputTexture, BB.addTask(OB)
       }
-      if (WH !== QH || xH !== YH) {
-        const BH = new kH("pass", HH);
-        BH.sourceTexture = mH, BH.targetTexture = HH.textureManager.createRenderTargetTexture("pass_output", {
+      if (ZB !== qB || RB !== lB) {
+        const OB = new kB("pass", BB);
+        OB.sourceTexture = dB, OB.targetTexture = BB.textureManager.createRenderTargetTexture("pass_output", {
           size: {
-            width: WH,
-            height: xH
+            width: ZB,
+            height: RB
           },
           options: {
             createMipMaps: !1,
@@ -1074,57 +1074,57 @@ export const modules = {
             useSRGBBuffers: [!1]
           },
           sizeIsPercentage: !1
-        }), mH = BH.outputTexture, HH.addTask(BH)
+        }), dB = OB.outputTexture, BB.addTask(OB)
       }
-      const oH = cH.FindMainObjectRenderer(HH);
-      let IH = null;
-      oH && (IH = oH.camera, oH.camera = BH), XH.getCaps().parallelShaderCompile = void 0, await HH.buildAsync();
-      const fH = EH ?? (GH.hasHistoryTextures ? 32 : 1);
-      for (let uH = 0; uH < fH; ++uH) HH.execute();
-      HH.pausedExecution = !0, XH.getCaps().parallelShaderCompile = bH;
-      for (let uH = UH; uH < TH.length; ++uH) HH.tasks[uH].dispose();
-      HH.tasks.length = UH, oH && IH && (oH.camera = IH);
-      const lH = HH.textureManager.getTextureFromHandle(mH);
-      return lH.incrementReferences(), GH.resetBackBufferTextures(), await HH.buildAsync(), HH.pausedExecution = VH, new Promise((HH => {
-        XH._readTexturePixels(lH, WH, xH, -1, 0, null, !0, !1, 0, 0).then((async BH => {
-          lH.dispose(), PH(WH, xH, BH, CH ? void 0 : BH => HH(BH), AH, hH, !0, void 0, tH), CH && HH(null)
+      const KB = iB.FindMainObjectRenderer(BB);
+      let uB = null;
+      KB && (uB = KB.camera, KB.camera = OB), PB.getCaps().parallelShaderCompile = void 0, await BB.buildAsync();
+      const mB = MB ?? (zB.hasHistoryTextures ? 32 : 1);
+      for (let pB = 0; pB < mB; ++pB) BB.execute();
+      BB.pausedExecution = !0, PB.getCaps().parallelShaderCompile = fB;
+      for (let pB = SB; pB < VB.length; ++pB) BB.tasks[pB].dispose();
+      BB.tasks.length = SB, KB && uB && (KB.camera = uB);
+      const IB = BB.textureManager.getTextureFromHandle(dB);
+      return IB.incrementReferences(), zB.resetBackBufferTextures(), await BB.buildAsync(), BB.pausedExecution = nB, new Promise((BB => {
+        PB._readTexturePixels(IB, ZB, RB, -1, 0, null, !0, !1, 0, 0).then((async OB => {
+          IB.dispose(), AB(ZB, RB, OB, JB ? void 0 : OB => BB(OB), YB, oB, !0, void 0, jB), JB && BB(null)
         }))
       }))
     }
 
-    function FH(HH, BH, LH) {
-      let AH = 0,
-        rH = 0,
-        SH = 0,
-        hH = 0;
-      if ("object" === typeof LH) {
-        const tH = LH.precision ? Math.abs(LH.precision) : 1;
-        LH.width && LH.height ? (AH = LH.height * tH, rH = LH.width * tH) : LH.width && !LH.height ? (rH = LH.width * tH, AH = Math.round(rH / HH.getAspectRatio(BH))) : LH.height && !LH.width ? (AH = LH.height * tH, rH = Math.round(AH * HH.getAspectRatio(BH))) : (rH = Math.round(HH.getRenderWidth() * tH), AH = Math.round(rH / HH.getAspectRatio(BH))), LH.finalWidth && LH.finalHeight ? (hH = LH.finalHeight, SH = LH.finalWidth) : LH.finalWidth && !LH.finalHeight ? (SH = LH.finalWidth, hH = Math.round(SH / HH.getAspectRatio(BH))) : LH.finalHeight && !LH.finalWidth ? (hH = LH.finalHeight, SH = Math.round(hH * HH.getAspectRatio(BH))) : (SH = rH, hH = AH)
-      } else isNaN(LH) || (AH = LH, rH = LH, SH = LH, hH = LH);
-      return rH && (rH = Math.floor(rH)), AH && (AH = Math.floor(AH)), SH && (SH = Math.floor(SH)), hH && (hH = Math.floor(hH)), {
-        height: 0 | AH,
-        width: 0 | rH,
-        finalWidth: 0 | SH,
-        finalHeight: 0 | hH
+    function hB(BB, OB, GB) {
+      let YB = 0,
+        DB = 0,
+        QB = 0,
+        oB = 0;
+      if ("object" === typeof GB) {
+        const jB = GB.precision ? Math.abs(GB.precision) : 1;
+        GB.width && GB.height ? (YB = GB.height * jB, DB = GB.width * jB) : GB.width && !GB.height ? (DB = GB.width * jB, YB = Math.round(DB / BB.getAspectRatio(OB))) : GB.height && !GB.width ? (YB = GB.height * jB, DB = Math.round(YB * BB.getAspectRatio(OB))) : (DB = Math.round(BB.getRenderWidth() * jB), YB = Math.round(DB / BB.getAspectRatio(OB))), GB.finalWidth && GB.finalHeight ? (oB = GB.finalHeight, QB = GB.finalWidth) : GB.finalWidth && !GB.finalHeight ? (QB = GB.finalWidth, oB = Math.round(QB / BB.getAspectRatio(OB))) : GB.finalHeight && !GB.finalWidth ? (oB = GB.finalHeight, QB = Math.round(oB * BB.getAspectRatio(OB))) : (QB = DB, oB = YB)
+      } else isNaN(GB) || (YB = GB, DB = GB, QB = GB, oB = GB);
+      return DB && (DB = Math.floor(DB)), YB && (YB = Math.floor(YB)), QB && (QB = Math.floor(QB)), oB && (oB = Math.floor(oB)), {
+        height: 0 | YB,
+        width: 0 | DB,
+        finalWidth: 0 | QB,
+        finalHeight: 0 | oB
       }
     }
-    const DH = {
-      CreateScreenshot: qH,
-      CreateScreenshotAsync: gH,
-      CreateScreenshotWithResizeAsync: NH,
-      CreateScreenshotUsingRenderTarget: RH,
-      CreateScreenshotUsingRenderTargetAsync: jH,
-      CreateScreenshotForFrameGraphAsync: nH
+    const aB = {
+      CreateScreenshot: gB,
+      CreateScreenshotAsync: rB,
+      CreateScreenshotWithResizeAsync: XB,
+      CreateScreenshotUsingRenderTarget: wB,
+      CreateScreenshotUsingRenderTargetAsync: EB,
+      CreateScreenshotForFrameGraphAsync: cB
     };
-    let wH = !1;
+    let eB = !1;
 
-    function ZH() {
-      if (wH) return;
-      wH = !0;
-      YH.i.CreateScreenshot = qH, YH.i.CreateScreenshotAsync = gH, YH.i.CreateScreenshotUsingRenderTarget = RH, YH.i.CreateScreenshotUsingRenderTargetAsync = jH
+    function TB() {
+      if (eB) return;
+      eB = !0;
+      lB.j.CreateScreenshot = gB, lB.j.CreateScreenshotAsync = rB, lB.j.CreateScreenshotUsingRenderTarget = wB, lB.j.CreateScreenshotUsingRenderTargetAsync = EB
     }
-    ZH()
+    TB()
   }
 };
 Object.freeze(modules);
-for (const HH in modules) Object.freeze(modules[HH]);
+for (const BB in modules) Object.freeze(modules[BB]);

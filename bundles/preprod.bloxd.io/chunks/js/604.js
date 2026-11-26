@@ -1,181 +1,181 @@
 export const id = 604;
 export const ids = [604];
 export const modules = {
-  44818: (HH, BH, LH) => {
-    LH.d(BH, {
-      c: () => xB,
-      d: () => lH,
-      ChangeSet: () => KH,
-      h: () => IB,
-      i: () => nH,
-      k: () => cB,
-      l: () => wH,
-      n: () => fH,
-      p: () => rB,
-      x: () => nB,
-      t: () => FB,
-      A: () => qB,
-      B: () => TB,
-      E: () => pH,
-      F: () => QH,
-      J: () => UB,
-      N: () => kH,
-      Q: () => oH,
-      U: () => eB,
-      Y: () => HL,
-      $: () => bH,
-      db: () => BL,
-      hb: () => mH
+  44470: (BB, OB, GB) => {
+    GB.d(OB, {
+      b: () => RO,
+      f: () => IB,
+      ChangeSet: () => FB,
+      g: () => uO,
+      j: () => cB,
+      l: () => iO,
+      o: () => eB,
+      p: () => mB,
+      r: () => DO,
+      z: () => cO,
+      v: () => hO,
+      C: () => gO,
+      D: () => VO,
+      G: () => xB,
+      K: () => qB,
+      L: () => SO,
+      O: () => kB,
+      R: () => KB,
+      V: () => LO,
+      W: () => BG,
+      X: () => fB,
+      _: () => OG,
+      bb: () => dB
     });
-    let AH = [],
-      rH = [];
+    let YB = [],
+      DB = [];
 
-    function SH(HH) {
-      if (HH < 768) return !1;
-      for (let BH = 0, LH = AH.length;;) {
-        let SH = BH + LH >> 1;
-        if (HH < AH[SH]) LH = SH;
+    function QB(BB) {
+      if (BB < 768) return !1;
+      for (let OB = 0, GB = YB.length;;) {
+        let QB = OB + GB >> 1;
+        if (BB < YB[QB]) GB = QB;
         else {
-          if (!(HH >= rH[SH])) return !0;
-          BH = SH + 1
+          if (!(BB >= DB[QB])) return !0;
+          OB = QB + 1
         }
-        if (BH == LH) return !1
+        if (OB == GB) return !1
       }
     }
 
-    function hH(HH) {
-      return HH >= 127462 && HH <= 127487
+    function oB(BB) {
+      return BB >= 127462 && BB <= 127487
     }(() => {
-      let HH = "lc,34,7n,7,7b,19,,,,2,,2,,,20,b,1c,l,g,,2t,7,2,6,2,2,,4,z,,u,r,2j,b,1m,9,9,,o,4,,9,,3,,5,17,3,3b,f,,w,1j,,,,4,8,4,,3,7,a,2,t,,1m,,,,2,4,8,,9,,a,2,q,,2,2,1l,,4,2,4,2,2,3,3,,u,2,3,,b,2,1l,,4,5,,2,4,,k,2,m,6,,,1m,,,2,,4,8,,7,3,a,2,u,,1n,,,,c,,9,,14,,3,,1l,3,5,3,,4,7,2,b,2,t,,1m,,2,,2,,3,,5,2,7,2,b,2,s,2,1l,2,,,2,4,8,,9,,a,2,t,,20,,4,,2,3,,,8,,29,,2,7,c,8,2q,,2,9,b,6,22,2,r,,,,,,1j,e,,5,,2,5,b,,10,9,,2u,4,,6,,2,2,2,p,2,4,3,g,4,d,,2,2,6,,f,,jj,3,qa,3,t,3,t,2,u,2,1s,2,,7,8,,2,b,9,,19,3,3b,2,y,,3a,3,4,2,9,,6,3,63,2,2,,1m,,,7,,,,,2,8,6,a,2,,1c,h,1r,4,1c,7,,,5,,14,9,c,2,w,4,2,2,,3,1k,,,2,3,,,3,1m,8,2,2,48,3,,d,,7,4,,6,,3,2,5i,1m,,5,ek,,5f,x,2da,3,3x,,2o,w,fe,6,2x,2,n9w,4,,a,w,2,28,2,7k,,3,,4,,p,2,5,,47,2,q,i,d,,12,8,p,b,1a,3,1c,,2,4,2,2,13,,1v,6,2,2,2,2,c,,8,,1b,,1f,,,3,2,2,5,2,,,16,2,8,,6m,,2,,4,,fn4,,kh,g,g,g,a6,2,gt,,6a,,45,5,1ae,3,,2,5,4,14,3,4,,4l,2,fx,4,ar,2,49,b,4w,,1i,f,1k,3,1d,4,2,2,1x,3,10,5,,8,1q,,c,2,1g,9,a,4,2,,2n,3,2,,,2,6,,4g,,3,8,l,2,1l,2,,,,,m,,e,7,3,5,5f,8,2,3,,,n,,29,,2,6,,,2,,,2,,2,6j,,2,4,6,2,,2,r,2,2d,8,2,,,2,2y,,,,2,6,,,2t,3,2,4,,5,77,9,,2,6t,,a,2,,,4,,40,4,2,2,4,,w,a,14,6,2,4,8,,9,6,2,3,1a,d,,2,ba,7,,6,,,2a,m,2,7,,2,,2,3e,6,3,,,2,,7,,,20,2,3,,,,9n,2,f0b,5,1n,7,t4,,1r,4,29,,f5k,2,43q,,,3,4,5,8,8,2,7,u,4,44,3,1iz,1j,4,1e,8,,e,,m,5,,f,11s,7,,h,2,7,,2,,5,79,7,c5,4,15s,7,31,7,240,5,gx7k,2o,3k,6o".split(",").map((HH => HH ? parseInt(HH, 36) : 1));
-      for (let BH = 0, LH = 0; BH < HH.length; BH++)(BH % 2 ? rH : AH).push(LH += HH[BH])
+      let BB = "lc,34,7n,7,7b,19,,,,2,,2,,,20,b,1c,l,g,,2t,7,2,6,2,2,,4,z,,u,r,2j,b,1m,9,9,,o,4,,9,,3,,5,17,3,3b,f,,w,1j,,,,4,8,4,,3,7,a,2,t,,1m,,,,2,4,8,,9,,a,2,q,,2,2,1l,,4,2,4,2,2,3,3,,u,2,3,,b,2,1l,,4,5,,2,4,,k,2,m,6,,,1m,,,2,,4,8,,7,3,a,2,u,,1n,,,,c,,9,,14,,3,,1l,3,5,3,,4,7,2,b,2,t,,1m,,2,,2,,3,,5,2,7,2,b,2,s,2,1l,2,,,2,4,8,,9,,a,2,t,,20,,4,,2,3,,,8,,29,,2,7,c,8,2q,,2,9,b,6,22,2,r,,,,,,1j,e,,5,,2,5,b,,10,9,,2u,4,,6,,2,2,2,p,2,4,3,g,4,d,,2,2,6,,f,,jj,3,qa,3,t,3,t,2,u,2,1s,2,,7,8,,2,b,9,,19,3,3b,2,y,,3a,3,4,2,9,,6,3,63,2,2,,1m,,,7,,,,,2,8,6,a,2,,1c,h,1r,4,1c,7,,,5,,14,9,c,2,w,4,2,2,,3,1k,,,2,3,,,3,1m,8,2,2,48,3,,d,,7,4,,6,,3,2,5i,1m,,5,ek,,5f,x,2da,3,3x,,2o,w,fe,6,2x,2,n9w,4,,a,w,2,28,2,7k,,3,,4,,p,2,5,,47,2,q,i,d,,12,8,p,b,1a,3,1c,,2,4,2,2,13,,1v,6,2,2,2,2,c,,8,,1b,,1f,,,3,2,2,5,2,,,16,2,8,,6m,,2,,4,,fn4,,kh,g,g,g,a6,2,gt,,6a,,45,5,1ae,3,,2,5,4,14,3,4,,4l,2,fx,4,ar,2,49,b,4w,,1i,f,1k,3,1d,4,2,2,1x,3,10,5,,8,1q,,c,2,1g,9,a,4,2,,2n,3,2,,,2,6,,4g,,3,8,l,2,1l,2,,,,,m,,e,7,3,5,5f,8,2,3,,,n,,29,,2,6,,,2,,,2,,2,6j,,2,4,6,2,,2,r,2,2d,8,2,,,2,2y,,,,2,6,,,2t,3,2,4,,5,77,9,,2,6t,,a,2,,,4,,40,4,2,2,4,,w,a,14,6,2,4,8,,9,6,2,3,1a,d,,2,ba,7,,6,,,2a,m,2,7,,2,,2,3e,6,3,,,2,,7,,,20,2,3,,,,9n,2,f0b,5,1n,7,t4,,1r,4,29,,f5k,2,43q,,,3,4,5,8,8,2,7,u,4,44,3,1iz,1j,4,1e,8,,e,,m,5,,f,11s,7,,h,2,7,,2,,5,79,7,c5,4,15s,7,31,7,240,5,gx7k,2o,3k,6o".split(",").map((BB => BB ? parseInt(BB, 36) : 1));
+      for (let OB = 0, GB = 0; OB < BB.length; OB++)(OB % 2 ? DB : YB).push(GB += BB[OB])
     })();
-    const tH = 8205;
+    const jB = 8205;
 
-    function zH(HH, BH) {
-      return (!(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2] ? CH : EH)(HH, BH, !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3])
+    function yB(BB, OB) {
+      return (!(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2] ? JB : MB)(BB, OB, !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3])
     }
 
-    function CH(HH, BH, LH) {
-      if (BH == HH.length) return BH;
-      BH && GH(HH.charCodeAt(BH)) && YH(HH.charCodeAt(BH - 1)) && BH--;
-      let AH = XH(HH, BH);
-      for (BH += uH(AH); BH < HH.length;) {
-        let rH = XH(HH, BH);
-        if (AH == tH || rH == tH || LH && SH(rH)) BH += uH(rH), AH = rH;
+    function JB(BB, OB, GB) {
+      if (OB == BB.length) return OB;
+      OB && zB(BB.charCodeAt(OB)) && lB(BB.charCodeAt(OB - 1)) && OB--;
+      let YB = PB(BB, OB);
+      for (OB += pB(YB); OB < BB.length;) {
+        let DB = PB(BB, OB);
+        if (YB == jB || DB == jB || GB && QB(DB)) OB += pB(DB), YB = DB;
         else {
-          if (!hH(rH)) break;
+          if (!oB(DB)) break;
           {
-            let LH = 0,
-              AH = BH - 2;
-            for (; AH >= 0 && hH(XH(HH, AH));) LH++, AH -= 2;
-            if (LH % 2 == 0) break;
-            BH += 2
+            let GB = 0,
+              YB = OB - 2;
+            for (; YB >= 0 && oB(PB(BB, YB));) GB++, YB -= 2;
+            if (GB % 2 == 0) break;
+            OB += 2
           }
         }
       }
-      return BH
+      return OB
     }
 
-    function EH(HH, BH, LH) {
-      for (; BH > 0;) {
-        let AH = CH(HH, BH - 2, LH);
-        if (AH < BH) return AH;
-        BH--
+    function MB(BB, OB, GB) {
+      for (; OB > 0;) {
+        let YB = JB(BB, OB - 2, GB);
+        if (YB < OB) return YB;
+        OB--
       }
       return 0
     }
 
-    function XH(HH, BH) {
-      let LH = HH.charCodeAt(BH);
-      if (!YH(LH) || BH + 1 == HH.length) return LH;
-      let AH = HH.charCodeAt(BH + 1);
-      return GH(AH) ? AH - 56320 + (LH - 55296 << 10) + 65536 : LH
+    function PB(BB, OB) {
+      let GB = BB.charCodeAt(OB);
+      if (!lB(GB) || OB + 1 == BB.length) return GB;
+      let YB = BB.charCodeAt(OB + 1);
+      return zB(YB) ? YB - 56320 + (GB - 55296 << 10) + 65536 : GB
     }
 
-    function GH(HH) {
-      return HH >= 56320 && HH < 57344
+    function zB(BB) {
+      return BB >= 56320 && BB < 57344
     }
 
-    function YH(HH) {
-      return HH >= 55296 && HH < 56320
+    function lB(BB) {
+      return BB >= 55296 && BB < 56320
     }
 
-    function uH(HH) {
-      return HH < 65536 ? 1 : 2
+    function pB(BB) {
+      return BB < 65536 ? 1 : 2
     }
-    class QH {
-      lineAt(HH) {
-        if (HH < 0 || HH > this.length) throw new RangeError(`Invalid position ${HH} in document of length ${this.length}`);
-        return this.lineInner(HH, !1, 1, 0)
+    class qB {
+      lineAt(BB) {
+        if (BB < 0 || BB > this.length) throw new RangeError(`Invalid position ${BB} in document of length ${this.length}`);
+        return this.lineInner(BB, !1, 1, 0)
       }
-      line(HH) {
-        if (HH < 1 || HH > this.lines) throw new RangeError(`Invalid line number ${HH} in ${this.lines}-line document`);
-        return this.lineInner(HH, !0, 1, 0)
+      line(BB) {
+        if (BB < 1 || BB > this.lines) throw new RangeError(`Invalid line number ${BB} in ${this.lines}-line document`);
+        return this.lineInner(BB, !0, 1, 0)
       }
-      replace(HH, BH, LH) {
-        [HH, BH] = OH(this, HH, BH);
-        let AH = [];
-        return this.decompose(0, HH, AH, 2), LH.length && LH.decompose(0, LH.length, AH, 3), this.decompose(BH, this.length, AH, 1), MH.from(AH, this.length - (BH - HH) + LH.length)
+      replace(BB, OB, GB) {
+        [BB, OB] = UB(this, BB, OB);
+        let YB = [];
+        return this.decompose(0, BB, YB, 2), GB.length && GB.decompose(0, GB.length, YB, 3), this.decompose(OB, this.length, YB, 1), NB.from(YB, this.length - (OB - BB) + GB.length)
       }
-      append(HH) {
-        return this.replace(this.length, this.length, HH)
+      append(BB) {
+        return this.replace(this.length, this.length, BB)
       }
-      slice(HH) {
-        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length;
-        [HH, BH] = OH(this, HH, BH);
-        let LH = [];
-        return this.decompose(HH, BH, LH, 0), MH.from(LH, BH - HH)
+      slice(BB) {
+        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length;
+        [BB, OB] = UB(this, BB, OB);
+        let GB = [];
+        return this.decompose(BB, OB, GB, 0), NB.from(GB, OB - BB)
       }
-      eq(HH) {
-        if (HH == this) return !0;
-        if (HH.length != this.length || HH.lines != this.lines) return !1;
-        let BH = this.scanIdentical(HH, 1),
-          LH = this.length - this.scanIdentical(HH, -1),
-          AH = new PH(this),
-          rH = new PH(HH);
-        for (let SH = BH, hH = BH;;) {
-          if (AH.next(SH), rH.next(SH), SH = 0, AH.lineBreak != rH.lineBreak || AH.done != rH.done || AH.value != rH.value) return !1;
-          if (hH += AH.value.length, AH.done || hH >= LH) return !0
+      eq(BB) {
+        if (BB == this) return !0;
+        if (BB.length != this.length || BB.lines != this.lines) return !1;
+        let OB = this.scanIdentical(BB, 1),
+          GB = this.length - this.scanIdentical(BB, -1),
+          YB = new AB(this),
+          DB = new AB(BB);
+        for (let QB = OB, oB = OB;;) {
+          if (YB.next(QB), DB.next(QB), QB = 0, YB.lineBreak != DB.lineBreak || YB.done != DB.done || YB.value != DB.value) return !1;
+          if (oB += YB.value.length, YB.done || oB >= GB) return !0
         }
       }
       iter() {
-        return new PH(this, arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1)
+        return new AB(this, arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1)
       }
-      iterRange(HH) {
-        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length;
-        return new TH(this, HH, BH)
+      iterRange(BB) {
+        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length;
+        return new VB(this, BB, OB)
       }
-      iterLines(HH, BH) {
-        let LH;
-        if (null == HH) LH = this.iter();
+      iterLines(BB, OB) {
+        let GB;
+        if (null == BB) GB = this.iter();
         else {
-          null == BH && (BH = this.lines + 1);
-          let AH = this.line(HH).from;
-          LH = this.iterRange(AH, Math.max(AH, BH == this.lines + 1 ? this.length : BH <= 1 ? 0 : this.line(BH - 1).to))
+          null == OB && (OB = this.lines + 1);
+          let YB = this.line(BB).from;
+          GB = this.iterRange(YB, Math.max(YB, OB == this.lines + 1 ? this.length : OB <= 1 ? 0 : this.line(OB - 1).to))
         }
-        return new UH(LH)
+        return new SB(GB)
       }
       toString() {
         return this.sliceString(0)
       }
       toJSON() {
-        let HH = [];
-        return this.flatten(HH), HH
+        let BB = [];
+        return this.flatten(BB), BB
       }
       constructor() {}
-      static of (HH) {
-        if (0 == HH.length) throw new RangeError("A document must have at least one line");
-        return 1 != HH.length || HH[0] ? HH.length <= 32 ? new WH(HH) : MH.from(WH.split(HH, [])) : QH.empty
+      static of (BB) {
+        if (0 == BB.length) throw new RangeError("A document must have at least one line");
+        return 1 != BB.length || BB[0] ? BB.length <= 32 ? new ZB(BB) : NB.from(ZB.split(BB, [])) : qB.empty
       }
     }
-    class WH extends QH {
-      constructor(HH) {
-        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : function(HH) {
-          let BH = -1;
-          for (let LH of HH) BH += LH.length + 1;
-          return BH
-        }(HH);
-        super(), this.text = HH, this.length = BH
+    class ZB extends qB {
+      constructor(BB) {
+        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : function(BB) {
+          let OB = -1;
+          for (let GB of BB) OB += GB.length + 1;
+          return OB
+        }(BB);
+        super(), this.text = BB, this.length = OB
       }
       get lines() {
         return this.text.length
@@ -183,629 +183,629 @@ export const modules = {
       get children() {
         return null
       }
-      lineInner(HH, BH, LH, AH) {
-        for (let rH = 0;; rH++) {
-          let SH = this.text[rH],
-            hH = AH + SH.length;
-          if ((BH ? LH : hH) >= HH) return new VH(AH, hH, LH, SH);
-          AH = hH + 1, LH++
+      lineInner(BB, OB, GB, YB) {
+        for (let DB = 0;; DB++) {
+          let QB = this.text[DB],
+            oB = YB + QB.length;
+          if ((OB ? GB : oB) >= BB) return new nB(YB, oB, GB, QB);
+          YB = oB + 1, GB++
         }
       }
-      decompose(HH, BH, LH, AH) {
-        let rH = HH <= 0 && BH >= this.length ? this : new WH(vH(this.text, HH, BH), Math.min(BH, this.length) - Math.max(0, HH));
-        if (1 & AH) {
-          let HH = LH.pop(),
-            BH = xH(rH.text, HH.text.slice(), 0, rH.length);
-          if (BH.length <= 32) LH.push(new WH(BH, HH.length + rH.length));
+      decompose(BB, OB, GB, YB) {
+        let DB = BB <= 0 && OB >= this.length ? this : new ZB(WB(this.text, BB, OB), Math.min(OB, this.length) - Math.max(0, BB));
+        if (1 & YB) {
+          let BB = GB.pop(),
+            OB = RB(DB.text, BB.text.slice(), 0, DB.length);
+          if (OB.length <= 32) GB.push(new ZB(OB, BB.length + DB.length));
           else {
-            let HH = BH.length >> 1;
-            LH.push(new WH(BH.slice(0, HH)), new WH(BH.slice(HH)))
+            let BB = OB.length >> 1;
+            GB.push(new ZB(OB.slice(0, BB)), new ZB(OB.slice(BB)))
           }
-        } else LH.push(rH)
+        } else GB.push(DB)
       }
-      replace(HH, BH, LH) {
-        if (!(LH instanceof WH)) return super.replace(HH, BH, LH);
-        [HH, BH] = OH(this, HH, BH);
-        let AH = xH(this.text, xH(LH.text, vH(this.text, 0, HH)), BH),
-          rH = this.length + LH.length - (BH - HH);
-        return AH.length <= 32 ? new WH(AH, rH) : MH.from(WH.split(AH, []), rH)
+      replace(BB, OB, GB) {
+        if (!(GB instanceof ZB)) return super.replace(BB, OB, GB);
+        [BB, OB] = UB(this, BB, OB);
+        let YB = RB(this.text, RB(GB.text, WB(this.text, 0, BB)), OB),
+          DB = this.length + GB.length - (OB - BB);
+        return YB.length <= 32 ? new ZB(YB, DB) : NB.from(ZB.split(YB, []), DB)
       }
-      sliceString(HH) {
-        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length,
-          LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "\n";
-        [HH, BH] = OH(this, HH, BH);
-        let AH = "";
-        for (let rH = 0, SH = 0; rH <= BH && SH < this.text.length; SH++) {
-          let hH = this.text[SH],
-            tH = rH + hH.length;
-          rH > HH && SH && (AH += LH), HH < tH && BH > rH && (AH += hH.slice(Math.max(0, HH - rH), BH - rH)), rH = tH + 1
+      sliceString(BB) {
+        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length,
+          GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "\n";
+        [BB, OB] = UB(this, BB, OB);
+        let YB = "";
+        for (let DB = 0, QB = 0; DB <= OB && QB < this.text.length; QB++) {
+          let oB = this.text[QB],
+            jB = DB + oB.length;
+          DB > BB && QB && (YB += GB), BB < jB && OB > DB && (YB += oB.slice(Math.max(0, BB - DB), OB - DB)), DB = jB + 1
         }
-        return AH
+        return YB
       }
-      flatten(HH) {
-        for (let BH of this.text) HH.push(BH)
+      flatten(BB) {
+        for (let OB of this.text) BB.push(OB)
       }
       scanIdentical() {
         return 0
       }
-      static split(HH, BH) {
-        let LH = [],
-          AH = -1;
-        for (let rH of HH) LH.push(rH), AH += rH.length + 1, 32 == LH.length && (BH.push(new WH(LH, AH)), LH = [], AH = -1);
-        return AH > -1 && BH.push(new WH(LH, AH)), BH
+      static split(BB, OB) {
+        let GB = [],
+          YB = -1;
+        for (let DB of BB) GB.push(DB), YB += DB.length + 1, 32 == GB.length && (OB.push(new ZB(GB, YB)), GB = [], YB = -1);
+        return YB > -1 && OB.push(new ZB(GB, YB)), OB
       }
     }
-    class MH extends QH {
-      constructor(HH, BH) {
-        super(), this.children = HH, this.length = BH, this.lines = 0;
-        for (let LH of HH) this.lines += LH.lines
+    class NB extends qB {
+      constructor(BB, OB) {
+        super(), this.children = BB, this.length = OB, this.lines = 0;
+        for (let GB of BB) this.lines += GB.lines
       }
-      lineInner(HH, BH, LH, AH) {
-        for (let rH = 0;; rH++) {
-          let SH = this.children[rH],
-            hH = AH + SH.length,
-            tH = LH + SH.lines - 1;
-          if ((BH ? tH : hH) >= HH) return SH.lineInner(HH, BH, LH, AH);
-          AH = hH + 1, LH = tH + 1
+      lineInner(BB, OB, GB, YB) {
+        for (let DB = 0;; DB++) {
+          let QB = this.children[DB],
+            oB = YB + QB.length,
+            jB = GB + QB.lines - 1;
+          if ((OB ? jB : oB) >= BB) return QB.lineInner(BB, OB, GB, YB);
+          YB = oB + 1, GB = jB + 1
         }
       }
-      decompose(HH, BH, LH, AH) {
-        for (let rH = 0, SH = 0; SH <= BH && rH < this.children.length; rH++) {
-          let hH = this.children[rH],
-            tH = SH + hH.length;
-          if (HH <= tH && BH >= SH) {
-            let rH = AH & ((SH <= HH ? 1 : 0) | (tH >= BH ? 2 : 0));
-            SH >= HH && tH <= BH && !rH ? LH.push(hH) : hH.decompose(HH - SH, BH - SH, LH, rH)
+      decompose(BB, OB, GB, YB) {
+        for (let DB = 0, QB = 0; QB <= OB && DB < this.children.length; DB++) {
+          let oB = this.children[DB],
+            jB = QB + oB.length;
+          if (BB <= jB && OB >= QB) {
+            let DB = YB & ((QB <= BB ? 1 : 0) | (jB >= OB ? 2 : 0));
+            QB >= BB && jB <= OB && !DB ? GB.push(oB) : oB.decompose(BB - QB, OB - QB, GB, DB)
           }
-          SH = tH + 1
+          QB = jB + 1
         }
       }
-      replace(HH, BH, LH) {
-        if ([HH, BH] = OH(this, HH, BH), LH.lines < this.lines)
-          for (let AH = 0, rH = 0; AH < this.children.length; AH++) {
-            let SH = this.children[AH],
-              hH = rH + SH.length;
-            if (HH >= rH && BH <= hH) {
-              let tH = SH.replace(HH - rH, BH - rH, LH),
-                zH = this.lines - SH.lines + tH.lines;
-              if (tH.lines < zH >> 4 && tH.lines > zH >> 6) {
-                let rH = this.children.slice();
-                return rH[AH] = tH, new MH(rH, this.length - (BH - HH) + LH.length)
+      replace(BB, OB, GB) {
+        if ([BB, OB] = UB(this, BB, OB), GB.lines < this.lines)
+          for (let YB = 0, DB = 0; YB < this.children.length; YB++) {
+            let QB = this.children[YB],
+              oB = DB + QB.length;
+            if (BB >= DB && OB <= oB) {
+              let jB = QB.replace(BB - DB, OB - DB, GB),
+                yB = this.lines - QB.lines + jB.lines;
+              if (jB.lines < yB >> 4 && jB.lines > yB >> 6) {
+                let DB = this.children.slice();
+                return DB[YB] = jB, new NB(DB, this.length - (OB - BB) + GB.length)
               }
-              return super.replace(rH, hH, tH)
+              return super.replace(DB, oB, jB)
             }
-            rH = hH + 1
+            DB = oB + 1
           }
-        return super.replace(HH, BH, LH)
+        return super.replace(BB, OB, GB)
       }
-      sliceString(HH) {
-        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length,
-          LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "\n";
-        [HH, BH] = OH(this, HH, BH);
-        let AH = "";
-        for (let rH = 0, SH = 0; rH < this.children.length && SH <= BH; rH++) {
-          let hH = this.children[rH],
-            tH = SH + hH.length;
-          SH > HH && rH && (AH += LH), HH < tH && BH > SH && (AH += hH.sliceString(HH - SH, BH - SH, LH)), SH = tH + 1
+      sliceString(BB) {
+        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length,
+          GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "\n";
+        [BB, OB] = UB(this, BB, OB);
+        let YB = "";
+        for (let DB = 0, QB = 0; DB < this.children.length && QB <= OB; DB++) {
+          let oB = this.children[DB],
+            jB = QB + oB.length;
+          QB > BB && DB && (YB += GB), BB < jB && OB > QB && (YB += oB.sliceString(BB - QB, OB - QB, GB)), QB = jB + 1
         }
-        return AH
+        return YB
       }
-      flatten(HH) {
-        for (let BH of this.children) BH.flatten(HH)
+      flatten(BB) {
+        for (let OB of this.children) OB.flatten(BB)
       }
-      scanIdentical(HH, BH) {
-        if (!(HH instanceof MH)) return 0;
-        let LH = 0,
-          [AH, rH, SH, hH] = BH > 0 ? [0, 0, this.children.length, HH.children.length] : [this.children.length - 1, HH.children.length - 1, -1, -1];
-        for (;; AH += BH, rH += BH) {
-          if (AH == SH || rH == hH) return LH;
-          let tH = this.children[AH],
-            zH = HH.children[rH];
-          if (tH != zH) return LH + tH.scanIdentical(zH, BH);
-          LH += tH.length + 1
+      scanIdentical(BB, OB) {
+        if (!(BB instanceof NB)) return 0;
+        let GB = 0,
+          [YB, DB, QB, oB] = OB > 0 ? [0, 0, this.children.length, BB.children.length] : [this.children.length - 1, BB.children.length - 1, -1, -1];
+        for (;; YB += OB, DB += OB) {
+          if (YB == QB || DB == oB) return GB;
+          let jB = this.children[YB],
+            yB = BB.children[DB];
+          if (jB != yB) return GB + jB.scanIdentical(yB, OB);
+          GB += jB.length + 1
         }
       }
-      static from(HH) {
-        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : HH.reduce(((HH, BH) => HH + BH.length + 1), -1),
-          LH = 0;
-        for (let GH of HH) LH += GH.lines;
-        if (LH < 32) {
-          let LH = [];
-          for (let BH of HH) BH.flatten(LH);
-          return new WH(LH, BH)
+      static from(BB) {
+        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : BB.reduce(((BB, OB) => BB + OB.length + 1), -1),
+          GB = 0;
+        for (let zB of BB) GB += zB.lines;
+        if (GB < 32) {
+          let GB = [];
+          for (let OB of BB) OB.flatten(GB);
+          return new ZB(GB, OB)
         }
-        let AH = Math.max(32, LH >> 5),
-          rH = AH << 1,
-          SH = AH >> 1,
-          hH = [],
-          tH = 0,
-          zH = -1,
-          CH = [];
+        let YB = Math.max(32, GB >> 5),
+          DB = YB << 1,
+          QB = YB >> 1,
+          oB = [],
+          jB = 0,
+          yB = -1,
+          JB = [];
 
-        function EH(HH) {
-          let BH;
-          if (HH.lines > rH && HH instanceof MH)
-            for (let LH of HH.children) EH(LH);
-          else HH.lines > SH && (tH > SH || !tH) ? (XH(), hH.push(HH)) : HH instanceof WH && tH && (BH = CH[CH.length - 1]) instanceof WH && HH.lines + BH.lines <= 32 ? (tH += HH.lines, zH += HH.length + 1, CH[CH.length - 1] = new WH(BH.text.concat(HH.text), BH.length + 1 + HH.length)) : (tH + HH.lines > AH && XH(), tH += HH.lines, zH += HH.length + 1, CH.push(HH))
+        function MB(BB) {
+          let OB;
+          if (BB.lines > DB && BB instanceof NB)
+            for (let GB of BB.children) MB(GB);
+          else BB.lines > QB && (jB > QB || !jB) ? (PB(), oB.push(BB)) : BB instanceof ZB && jB && (OB = JB[JB.length - 1]) instanceof ZB && BB.lines + OB.lines <= 32 ? (jB += BB.lines, yB += BB.length + 1, JB[JB.length - 1] = new ZB(OB.text.concat(BB.text), OB.length + 1 + BB.length)) : (jB + BB.lines > YB && PB(), jB += BB.lines, yB += BB.length + 1, JB.push(BB))
         }
 
-        function XH() {
-          0 != tH && (hH.push(1 == CH.length ? CH[0] : MH.from(CH, zH)), zH = -1, tH = CH.length = 0)
+        function PB() {
+          0 != jB && (oB.push(1 == JB.length ? JB[0] : NB.from(JB, yB)), yB = -1, jB = JB.length = 0)
         }
-        for (let GH of HH) EH(GH);
-        return XH(), 1 == hH.length ? hH[0] : new MH(hH, BH)
+        for (let zB of BB) MB(zB);
+        return PB(), 1 == oB.length ? oB[0] : new NB(oB, OB)
       }
     }
 
-    function xH(HH, BH) {
-      let LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-        AH = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1e9;
-      for (let rH = 0, SH = 0, hH = !0; SH < HH.length && rH <= AH; SH++) {
-        let tH = HH[SH],
-          zH = rH + tH.length;
-        zH >= LH && (zH > AH && (tH = tH.slice(0, AH - rH)), rH < LH && (tH = tH.slice(LH - rH)), hH ? (BH[BH.length - 1] += tH, hH = !1) : BH.push(tH)), rH = zH + 1
+    function RB(BB, OB) {
+      let GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+        YB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1e9;
+      for (let DB = 0, QB = 0, oB = !0; QB < BB.length && DB <= YB; QB++) {
+        let jB = BB[QB],
+          yB = DB + jB.length;
+        yB >= GB && (yB > YB && (jB = jB.slice(0, YB - DB)), DB < GB && (jB = jB.slice(GB - DB)), oB ? (OB[OB.length - 1] += jB, oB = !1) : OB.push(jB)), DB = yB + 1
       }
-      return BH
+      return OB
     }
 
-    function vH(HH, BH, LH) {
-      return xH(HH, [""], BH, LH)
+    function WB(BB, OB, GB) {
+      return RB(BB, [""], OB, GB)
     }
-    QH.empty = new WH([""], 0);
-    class PH {
-      constructor(HH) {
-        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        this.dir = BH, this.done = !1, this.lineBreak = !1, this.value = "", this.nodes = [HH], this.offsets = [BH > 0 ? 1 : (HH instanceof WH ? HH.text.length : HH.children.length) << 1]
+    qB.empty = new ZB([""], 0);
+    class AB {
+      constructor(BB) {
+        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        this.dir = OB, this.done = !1, this.lineBreak = !1, this.value = "", this.nodes = [BB], this.offsets = [OB > 0 ? 1 : (BB instanceof ZB ? BB.text.length : BB.children.length) << 1]
       }
-      nextInner(HH, BH) {
+      nextInner(BB, OB) {
         for (this.done = this.lineBreak = !1;;) {
-          let LH = this.nodes.length - 1,
-            AH = this.nodes[LH],
-            rH = this.offsets[LH],
-            SH = rH >> 1,
-            hH = AH instanceof WH ? AH.text.length : AH.children.length;
-          if (SH == (BH > 0 ? hH : 0)) {
-            if (0 == LH) return this.done = !0, this.value = "", this;
-            BH > 0 && this.offsets[LH - 1]++, this.nodes.pop(), this.offsets.pop()
-          } else if ((1 & rH) == (BH > 0 ? 0 : 1)) {
-            if (this.offsets[LH] += BH, 0 == HH) return this.lineBreak = !0, this.value = "\n", this;
-            HH--
-          } else if (AH instanceof WH) {
-            let rH = AH.text[SH + (BH < 0 ? -1 : 0)];
-            if (this.offsets[LH] += BH, rH.length > Math.max(0, HH)) return this.value = 0 == HH ? rH : BH > 0 ? rH.slice(HH) : rH.slice(0, rH.length - HH), this;
-            HH -= rH.length
+          let GB = this.nodes.length - 1,
+            YB = this.nodes[GB],
+            DB = this.offsets[GB],
+            QB = DB >> 1,
+            oB = YB instanceof ZB ? YB.text.length : YB.children.length;
+          if (QB == (OB > 0 ? oB : 0)) {
+            if (0 == GB) return this.done = !0, this.value = "", this;
+            OB > 0 && this.offsets[GB - 1]++, this.nodes.pop(), this.offsets.pop()
+          } else if ((1 & DB) == (OB > 0 ? 0 : 1)) {
+            if (this.offsets[GB] += OB, 0 == BB) return this.lineBreak = !0, this.value = "\n", this;
+            BB--
+          } else if (YB instanceof ZB) {
+            let DB = YB.text[QB + (OB < 0 ? -1 : 0)];
+            if (this.offsets[GB] += OB, DB.length > Math.max(0, BB)) return this.value = 0 == BB ? DB : OB > 0 ? DB.slice(BB) : DB.slice(0, DB.length - BB), this;
+            BB -= DB.length
           } else {
-            let rH = AH.children[SH + (BH < 0 ? -1 : 0)];
-            HH > rH.length ? (HH -= rH.length, this.offsets[LH] += BH) : (BH < 0 && this.offsets[LH]--, this.nodes.push(rH), this.offsets.push(BH > 0 ? 1 : (rH instanceof WH ? rH.text.length : rH.children.length) << 1))
+            let DB = YB.children[QB + (OB < 0 ? -1 : 0)];
+            BB > DB.length ? (BB -= DB.length, this.offsets[GB] += OB) : (OB < 0 && this.offsets[GB]--, this.nodes.push(DB), this.offsets.push(OB > 0 ? 1 : (DB instanceof ZB ? DB.text.length : DB.children.length) << 1))
           }
         }
       }
       next() {
-        let HH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-        return HH < 0 && (this.nextInner(-HH, -this.dir), HH = this.value.length), this.nextInner(HH, this.dir)
+        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
+        return BB < 0 && (this.nextInner(-BB, -this.dir), BB = this.value.length), this.nextInner(BB, this.dir)
       }
     }
-    class TH {
-      constructor(HH, BH, LH) {
-        this.value = "", this.done = !1, this.cursor = new PH(HH, BH > LH ? -1 : 1), this.pos = BH > LH ? HH.length : 0, this.from = Math.min(BH, LH), this.to = Math.max(BH, LH)
+    class VB {
+      constructor(BB, OB, GB) {
+        this.value = "", this.done = !1, this.cursor = new AB(BB, OB > GB ? -1 : 1), this.pos = OB > GB ? BB.length : 0, this.from = Math.min(OB, GB), this.to = Math.max(OB, GB)
       }
-      nextInner(HH, BH) {
-        if (BH < 0 ? this.pos <= this.from : this.pos >= this.to) return this.value = "", this.done = !0, this;
-        HH += Math.max(0, BH < 0 ? this.pos - this.to : this.from - this.pos);
-        let LH = BH < 0 ? this.pos - this.from : this.to - this.pos;
-        HH > LH && (HH = LH), LH -= HH;
+      nextInner(BB, OB) {
+        if (OB < 0 ? this.pos <= this.from : this.pos >= this.to) return this.value = "", this.done = !0, this;
+        BB += Math.max(0, OB < 0 ? this.pos - this.to : this.from - this.pos);
+        let GB = OB < 0 ? this.pos - this.from : this.to - this.pos;
+        BB > GB && (BB = GB), GB -= BB;
         let {
-          value: AH
-        } = this.cursor.next(HH);
-        return this.pos += (AH.length + HH) * BH, this.value = AH.length <= LH ? AH : BH < 0 ? AH.slice(AH.length - LH) : AH.slice(0, LH), this.done = !this.value, this
+          value: YB
+        } = this.cursor.next(BB);
+        return this.pos += (YB.length + BB) * OB, this.value = YB.length <= GB ? YB : OB < 0 ? YB.slice(YB.length - GB) : YB.slice(0, GB), this.done = !this.value, this
       }
       next() {
-        let HH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-        return HH < 0 ? HH = Math.max(HH, this.from - this.pos) : HH > 0 && (HH = Math.min(HH, this.to - this.pos)), this.nextInner(HH, this.cursor.dir)
+        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
+        return BB < 0 ? BB = Math.max(BB, this.from - this.pos) : BB > 0 && (BB = Math.min(BB, this.to - this.pos)), this.nextInner(BB, this.cursor.dir)
       }
       get lineBreak() {
         return this.cursor.lineBreak && "" != this.value
       }
     }
-    class UH {
-      constructor(HH) {
-        this.inner = HH, this.afterBreak = !0, this.value = "", this.done = !1
+    class SB {
+      constructor(BB) {
+        this.inner = BB, this.afterBreak = !0, this.value = "", this.done = !1
       }
       next() {
-        let HH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
           {
-            done: BH,
-            lineBreak: LH,
-            value: AH
-          } = this.inner.next(HH);
-        return BH && this.afterBreak ? (this.value = "", this.afterBreak = !1) : BH ? (this.done = !0, this.value = "") : LH ? this.afterBreak ? this.value = "" : (this.afterBreak = !0, this.next()) : (this.value = AH, this.afterBreak = !1), this
+            done: OB,
+            lineBreak: GB,
+            value: YB
+          } = this.inner.next(BB);
+        return OB && this.afterBreak ? (this.value = "", this.afterBreak = !1) : OB ? (this.done = !0, this.value = "") : GB ? this.afterBreak ? this.value = "" : (this.afterBreak = !0, this.next()) : (this.value = YB, this.afterBreak = !1), this
       }
       get lineBreak() {
         return !1
       }
     }
-    "undefined" != typeof Symbol && (QH.prototype[Symbol.iterator] = function() {
+    "undefined" != typeof Symbol && (qB.prototype[Symbol.iterator] = function() {
       return this.iter()
-    }, PH.prototype[Symbol.iterator] = TH.prototype[Symbol.iterator] = UH.prototype[Symbol.iterator] = function() {
+    }, AB.prototype[Symbol.iterator] = VB.prototype[Symbol.iterator] = SB.prototype[Symbol.iterator] = function() {
       return this
     });
-    class VH {
-      constructor(HH, BH, LH, AH) {
-        this.from = HH, this.to = BH, this.number = LH, this.text = AH
+    class nB {
+      constructor(BB, OB, GB, YB) {
+        this.from = BB, this.to = OB, this.number = GB, this.text = YB
       }
       get length() {
         return this.to - this.from
       }
     }
 
-    function OH(HH, BH, LH) {
-      return [BH = Math.max(0, Math.min(HH.length, BH)), Math.max(BH, Math.min(HH.length, LH))]
+    function UB(BB, OB, GB) {
+      return [OB = Math.max(0, Math.min(BB.length, OB)), Math.max(OB, Math.min(BB.length, GB))]
     }
 
-    function bH(HH, BH) {
-      return zH(HH, BH, !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2], !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3])
+    function fB(BB, OB) {
+      return yB(BB, OB, !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2], !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3])
     }
 
-    function kH(HH, BH) {
-      let LH = HH.charCodeAt(BH);
-      if (!((AH = LH) >= 55296 && AH < 56320) || BH + 1 == HH.length) return LH;
-      var AH;
-      let rH = HH.charCodeAt(BH + 1);
-      return function(HH) {
-        return HH >= 56320 && HH < 57344
-      }(rH) ? rH - 56320 + (LH - 55296 << 10) + 65536 : LH
+    function kB(BB, OB) {
+      let GB = BB.charCodeAt(OB);
+      if (!((YB = GB) >= 55296 && YB < 56320) || OB + 1 == BB.length) return GB;
+      var YB;
+      let DB = BB.charCodeAt(OB + 1);
+      return function(BB) {
+        return BB >= 56320 && BB < 57344
+      }(DB) ? DB - 56320 + (GB - 55296 << 10) + 65536 : GB
     }
 
-    function mH(HH) {
-      return HH <= 65535 ? String.fromCharCode(HH) : (HH -= 65536, String.fromCharCode(55296 + (HH >> 10), 56320 + (1023 & HH)))
+    function dB(BB) {
+      return BB <= 65535 ? String.fromCharCode(BB) : (BB -= 65536, String.fromCharCode(55296 + (BB >> 10), 56320 + (1023 & BB)))
     }
 
-    function oH(HH) {
-      return HH < 65536 ? 1 : 2
+    function KB(BB) {
+      return BB < 65536 ? 1 : 2
     }
-    const IH = /\r\n?|\n/;
-    var fH = function(HH) {
-      return HH[HH.Simple = 0] = "Simple", HH[HH.TrackDel = 1] = "TrackDel", HH[HH.TrackBefore = 2] = "TrackBefore", HH[HH.TrackAfter = 3] = "TrackAfter", HH
-    }(fH || (fH = {}));
-    class lH {
-      constructor(HH) {
-        this.sections = HH
+    const uB = /\r\n?|\n/;
+    var mB = function(BB) {
+      return BB[BB.Simple = 0] = "Simple", BB[BB.TrackDel = 1] = "TrackDel", BB[BB.TrackBefore = 2] = "TrackBefore", BB[BB.TrackAfter = 3] = "TrackAfter", BB
+    }(mB || (mB = {}));
+    class IB {
+      constructor(BB) {
+        this.sections = BB
       }
       get length() {
-        let HH = 0;
-        for (let BH = 0; BH < this.sections.length; BH += 2) HH += this.sections[BH];
-        return HH
+        let BB = 0;
+        for (let OB = 0; OB < this.sections.length; OB += 2) BB += this.sections[OB];
+        return BB
       }
       get newLength() {
-        let HH = 0;
-        for (let BH = 0; BH < this.sections.length; BH += 2) {
-          let LH = this.sections[BH + 1];
-          HH += LH < 0 ? this.sections[BH] : LH
+        let BB = 0;
+        for (let OB = 0; OB < this.sections.length; OB += 2) {
+          let GB = this.sections[OB + 1];
+          BB += GB < 0 ? this.sections[OB] : GB
         }
-        return HH
+        return BB
       }
       get empty() {
         return 0 == this.sections.length || 2 == this.sections.length && this.sections[1] < 0
       }
-      iterGaps(HH) {
-        for (let BH = 0, LH = 0, AH = 0; BH < this.sections.length;) {
-          let rH = this.sections[BH++],
-            SH = this.sections[BH++];
-          SH < 0 ? (HH(LH, AH, rH), AH += rH) : AH += SH, LH += rH
+      iterGaps(BB) {
+        for (let OB = 0, GB = 0, YB = 0; OB < this.sections.length;) {
+          let DB = this.sections[OB++],
+            QB = this.sections[OB++];
+          QB < 0 ? (BB(GB, YB, DB), YB += DB) : YB += QB, GB += DB
         }
       }
-      iterChangedRanges(HH) {
-        qH(this, HH, arguments.length > 1 && void 0 !== arguments[1] && arguments[1])
+      iterChangedRanges(BB) {
+        gB(this, BB, arguments.length > 1 && void 0 !== arguments[1] && arguments[1])
       }
       get invertedDesc() {
-        let HH = [];
-        for (let BH = 0; BH < this.sections.length;) {
-          let LH = this.sections[BH++],
-            AH = this.sections[BH++];
-          AH < 0 ? HH.push(LH, AH) : HH.push(AH, LH)
+        let BB = [];
+        for (let OB = 0; OB < this.sections.length;) {
+          let GB = this.sections[OB++],
+            YB = this.sections[OB++];
+          YB < 0 ? BB.push(GB, YB) : BB.push(YB, GB)
         }
-        return new lH(HH)
+        return new IB(BB)
       }
-      composeDesc(HH) {
-        return this.empty ? HH : HH.empty ? this : NH(this, HH)
+      composeDesc(BB) {
+        return this.empty ? BB : BB.empty ? this : XB(this, BB)
       }
-      mapDesc(HH) {
-        let BH = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return HH.empty ? this : gH(this, HH, BH)
+      mapDesc(BB) {
+        let OB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return BB.empty ? this : rB(this, BB, OB)
       }
-      mapPos(HH) {
-        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
-          LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : fH.Simple,
-          AH = 0,
-          rH = 0;
-        for (let SH = 0; SH < this.sections.length;) {
-          let hH = this.sections[SH++],
-            tH = this.sections[SH++],
-            zH = AH + hH;
-          if (tH < 0) {
-            if (zH > HH) return rH + (HH - AH);
-            rH += hH
+      mapPos(BB) {
+        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
+          GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : mB.Simple,
+          YB = 0,
+          DB = 0;
+        for (let QB = 0; QB < this.sections.length;) {
+          let oB = this.sections[QB++],
+            jB = this.sections[QB++],
+            yB = YB + oB;
+          if (jB < 0) {
+            if (yB > BB) return DB + (BB - YB);
+            DB += oB
           } else {
-            if (LH != fH.Simple && zH >= HH && (LH == fH.TrackDel && AH < HH && zH > HH || LH == fH.TrackBefore && AH < HH || LH == fH.TrackAfter && zH > HH)) return null;
-            if (zH > HH || zH == HH && BH < 0 && !hH) return HH == AH || BH < 0 ? rH : rH + tH;
-            rH += tH
+            if (GB != mB.Simple && yB >= BB && (GB == mB.TrackDel && YB < BB && yB > BB || GB == mB.TrackBefore && YB < BB || GB == mB.TrackAfter && yB > BB)) return null;
+            if (yB > BB || yB == BB && OB < 0 && !oB) return BB == YB || OB < 0 ? DB : DB + jB;
+            DB += jB
           }
-          AH = zH
+          YB = yB
         }
-        if (HH > AH) throw new RangeError(`Position ${HH} is out of range for changeset of length ${AH}`);
-        return rH
+        if (BB > YB) throw new RangeError(`Position ${BB} is out of range for changeset of length ${YB}`);
+        return DB
       }
-      touchesRange(HH) {
-        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : HH;
-        for (let LH = 0, AH = 0; LH < this.sections.length && AH <= BH;) {
-          let rH = AH + this.sections[LH++];
-          if (this.sections[LH++] >= 0 && AH <= BH && rH >= HH) return !(AH < HH && rH > BH) || "cover";
-          AH = rH
+      touchesRange(BB) {
+        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : BB;
+        for (let GB = 0, YB = 0; GB < this.sections.length && YB <= OB;) {
+          let DB = YB + this.sections[GB++];
+          if (this.sections[GB++] >= 0 && YB <= OB && DB >= BB) return !(YB < BB && DB > OB) || "cover";
+          YB = DB
         }
         return !1
       }
       toString() {
-        let HH = "";
-        for (let BH = 0; BH < this.sections.length;) {
-          let LH = this.sections[BH++],
-            AH = this.sections[BH++];
-          HH += (HH ? " " : "") + LH + (AH >= 0 ? ":" + AH : "")
+        let BB = "";
+        for (let OB = 0; OB < this.sections.length;) {
+          let GB = this.sections[OB++],
+            YB = this.sections[OB++];
+          BB += (BB ? " " : "") + GB + (YB >= 0 ? ":" + YB : "")
         }
-        return HH
+        return BB
       }
       toJSON() {
         return this.sections
       }
-      static fromJSON(HH) {
-        if (!Array.isArray(HH) || HH.length % 2 || HH.some((HH => "number" != typeof HH))) throw new RangeError("Invalid JSON representation of ChangeDesc");
-        return new lH(HH)
+      static fromJSON(BB) {
+        if (!Array.isArray(BB) || BB.length % 2 || BB.some((BB => "number" != typeof BB))) throw new RangeError("Invalid JSON representation of ChangeDesc");
+        return new IB(BB)
       }
-      static create(HH) {
-        return new lH(HH)
+      static create(BB) {
+        return new IB(BB)
       }
     }
-    class KH extends lH {
-      constructor(HH, BH) {
-        super(HH), this.inserted = BH
+    class FB extends IB {
+      constructor(BB, OB) {
+        super(BB), this.inserted = OB
       }
-      apply(HH) {
-        if (this.length != HH.length) throw new RangeError("Applying change set to a document with the wrong length");
-        return qH(this, ((BH, LH, AH, rH, SH) => HH = HH.replace(AH, AH + (LH - BH), SH)), !1), HH
+      apply(BB) {
+        if (this.length != BB.length) throw new RangeError("Applying change set to a document with the wrong length");
+        return gB(this, ((OB, GB, YB, DB, QB) => BB = BB.replace(YB, YB + (GB - OB), QB)), !1), BB
       }
-      mapDesc(HH) {
-        return gH(this, HH, arguments.length > 1 && void 0 !== arguments[1] && arguments[1], !0)
+      mapDesc(BB) {
+        return rB(this, BB, arguments.length > 1 && void 0 !== arguments[1] && arguments[1], !0)
       }
-      invert(HH) {
-        let BH = this.sections.slice(),
-          LH = [];
-        for (let AH = 0, rH = 0; AH < BH.length; AH += 2) {
-          let SH = BH[AH],
-            hH = BH[AH + 1];
-          if (hH >= 0) {
-            BH[AH] = hH, BH[AH + 1] = SH;
-            let tH = AH >> 1;
-            for (; LH.length < tH;) LH.push(QH.empty);
-            LH.push(SH ? HH.slice(rH, rH + SH) : QH.empty)
+      invert(BB) {
+        let OB = this.sections.slice(),
+          GB = [];
+        for (let YB = 0, DB = 0; YB < OB.length; YB += 2) {
+          let QB = OB[YB],
+            oB = OB[YB + 1];
+          if (oB >= 0) {
+            OB[YB] = oB, OB[YB + 1] = QB;
+            let jB = YB >> 1;
+            for (; GB.length < jB;) GB.push(qB.empty);
+            GB.push(QB ? BB.slice(DB, DB + QB) : qB.empty)
           }
-          rH += SH
+          DB += QB
         }
-        return new KH(BH, LH)
+        return new FB(OB, GB)
       }
-      compose(HH) {
-        return this.empty ? HH : HH.empty ? this : NH(this, HH, !0)
+      compose(BB) {
+        return this.empty ? BB : BB.empty ? this : XB(this, BB, !0)
       }
-      map(HH) {
-        let BH = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return HH.empty ? this : gH(this, HH, BH, !0)
+      map(BB) {
+        let OB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return BB.empty ? this : rB(this, BB, OB, !0)
       }
-      iterChanges(HH) {
-        qH(this, HH, arguments.length > 1 && void 0 !== arguments[1] && arguments[1])
+      iterChanges(BB) {
+        gB(this, BB, arguments.length > 1 && void 0 !== arguments[1] && arguments[1])
       }
       get desc() {
-        return lH.create(this.sections)
+        return IB.create(this.sections)
       }
-      filter(HH) {
-        let BH = [],
-          LH = [],
-          AH = [],
-          rH = new RH(this);
-        HH: for (let SH = 0, hH = 0;;) {
-          let tH = SH == HH.length ? 1e9 : HH[SH++];
-          for (; hH < tH || hH == tH && 0 == rH.len;) {
-            if (rH.done) break HH;
-            let HH = Math.min(rH.len, tH - hH);
-            cH(AH, HH, -1);
-            let SH = -1 == rH.ins ? -1 : 0 == rH.off ? rH.ins : 0;
-            cH(BH, HH, SH), SH > 0 && eH(LH, BH, rH.text), rH.forward(HH), hH += HH
+      filter(BB) {
+        let OB = [],
+          GB = [],
+          YB = [],
+          DB = new wB(this);
+        BB: for (let QB = 0, oB = 0;;) {
+          let jB = QB == BB.length ? 1e9 : BB[QB++];
+          for (; oB < jB || oB == jB && 0 == DB.len;) {
+            if (DB.done) break BB;
+            let BB = Math.min(DB.len, jB - oB);
+            iB(YB, BB, -1);
+            let QB = -1 == DB.ins ? -1 : 0 == DB.off ? DB.ins : 0;
+            iB(OB, BB, QB), QB > 0 && LB(GB, OB, DB.text), DB.forward(BB), oB += BB
           }
-          let zH = HH[SH++];
-          for (; hH < zH;) {
-            if (rH.done) break HH;
-            let HH = Math.min(rH.len, zH - hH);
-            cH(BH, HH, -1), cH(AH, HH, -1 == rH.ins ? -1 : 0 == rH.off ? rH.ins : 0), rH.forward(HH), hH += HH
+          let yB = BB[QB++];
+          for (; oB < yB;) {
+            if (DB.done) break BB;
+            let BB = Math.min(DB.len, yB - oB);
+            iB(OB, BB, -1), iB(YB, BB, -1 == DB.ins ? -1 : 0 == DB.off ? DB.ins : 0), DB.forward(BB), oB += BB
           }
         }
         return {
-          changes: new KH(BH, LH),
-          filtered: lH.create(AH)
+          changes: new FB(OB, GB),
+          filtered: IB.create(YB)
         }
       }
       toJSON() {
-        let HH = [];
-        for (let BH = 0; BH < this.sections.length; BH += 2) {
-          let LH = this.sections[BH],
-            AH = this.sections[BH + 1];
-          AH < 0 ? HH.push(LH) : 0 == AH ? HH.push([LH]) : HH.push([LH].concat(this.inserted[BH >> 1].toJSON()))
+        let BB = [];
+        for (let OB = 0; OB < this.sections.length; OB += 2) {
+          let GB = this.sections[OB],
+            YB = this.sections[OB + 1];
+          YB < 0 ? BB.push(GB) : 0 == YB ? BB.push([GB]) : BB.push([GB].concat(this.inserted[OB >> 1].toJSON()))
         }
-        return HH
+        return BB
       }
-      static of (HH, BH, LH) {
-        let AH = [],
-          rH = [],
-          SH = 0,
-          hH = null;
+      static of (BB, OB, GB) {
+        let YB = [],
+          DB = [],
+          QB = 0,
+          oB = null;
 
-        function tH() {
-          if (!(arguments.length > 0 && void 0 !== arguments[0] && arguments[0]) && !AH.length) return;
-          SH < BH && cH(AH, BH - SH, -1);
-          let HH = new KH(AH, rH);
-          hH = hH ? hH.compose(HH.map(hH)) : HH, AH = [], rH = [], SH = 0
+        function jB() {
+          if (!(arguments.length > 0 && void 0 !== arguments[0] && arguments[0]) && !YB.length) return;
+          QB < OB && iB(YB, OB - QB, -1);
+          let BB = new FB(YB, DB);
+          oB = oB ? oB.compose(BB.map(oB)) : BB, YB = [], DB = [], QB = 0
         }
-        return function HH(zH) {
-          if (Array.isArray(zH))
-            for (let BH of zH) HH(BH);
-          else if (zH instanceof KH) {
-            if (zH.length != BH) throw new RangeError(`Mismatched change set length (got ${zH.length}, expected ${BH})`);
-            tH(), hH = hH ? hH.compose(zH.map(hH)) : zH
+        return function BB(yB) {
+          if (Array.isArray(yB))
+            for (let OB of yB) BB(OB);
+          else if (yB instanceof FB) {
+            if (yB.length != OB) throw new RangeError(`Mismatched change set length (got ${yB.length}, expected ${OB})`);
+            jB(), oB = oB ? oB.compose(yB.map(oB)) : yB
           } else {
             let {
-              from: HH,
-              to: hH = HH,
-              insert: CH
-            } = zH;
-            if (HH > hH || HH < 0 || hH > BH) throw new RangeError(`Invalid change range ${HH} to ${hH} (in doc of length ${BH})`);
-            let EH = CH ? "string" == typeof CH ? QH.of(CH.split(LH || IH)) : CH : QH.empty,
-              XH = EH.length;
-            if (HH == hH && 0 == XH) return;
-            HH < SH && tH(), HH > SH && cH(AH, HH - SH, -1), cH(AH, hH - HH, XH), eH(rH, AH, EH), SH = hH
+              from: BB,
+              to: oB = BB,
+              insert: JB
+            } = yB;
+            if (BB > oB || BB < 0 || oB > OB) throw new RangeError(`Invalid change range ${BB} to ${oB} (in doc of length ${OB})`);
+            let MB = JB ? "string" == typeof JB ? qB.of(JB.split(GB || uB)) : JB : qB.empty,
+              PB = MB.length;
+            if (BB == oB && 0 == PB) return;
+            BB < QB && jB(), BB > QB && iB(YB, BB - QB, -1), iB(YB, oB - BB, PB), LB(DB, YB, MB), QB = oB
           }
-        }(HH), tH(!hH), hH
+        }(BB), jB(!oB), oB
       }
-      static empty(HH) {
-        return new KH(HH ? [HH, -1] : [], [])
+      static empty(BB) {
+        return new FB(BB ? [BB, -1] : [], [])
       }
-      static fromJSON(HH) {
-        if (!Array.isArray(HH)) throw new RangeError("Invalid JSON representation of ChangeSet");
-        let BH = [],
-          LH = [];
-        for (let AH = 0; AH < HH.length; AH++) {
-          let rH = HH[AH];
-          if ("number" == typeof rH) BH.push(rH, -1);
+      static fromJSON(BB) {
+        if (!Array.isArray(BB)) throw new RangeError("Invalid JSON representation of ChangeSet");
+        let OB = [],
+          GB = [];
+        for (let YB = 0; YB < BB.length; YB++) {
+          let DB = BB[YB];
+          if ("number" == typeof DB) OB.push(DB, -1);
           else {
-            if (!Array.isArray(rH) || "number" != typeof rH[0] || rH.some(((HH, BH) => BH && "string" != typeof HH))) throw new RangeError("Invalid JSON representation of ChangeSet");
-            if (1 == rH.length) BH.push(rH[0], 0);
+            if (!Array.isArray(DB) || "number" != typeof DB[0] || DB.some(((BB, OB) => OB && "string" != typeof BB))) throw new RangeError("Invalid JSON representation of ChangeSet");
+            if (1 == DB.length) OB.push(DB[0], 0);
             else {
-              for (; LH.length < AH;) LH.push(QH.empty);
-              LH[AH] = QH.of(rH.slice(1)), BH.push(rH[0], LH[AH].length)
+              for (; GB.length < YB;) GB.push(qB.empty);
+              GB[YB] = qB.of(DB.slice(1)), OB.push(DB[0], GB[YB].length)
             }
           }
         }
-        return new KH(BH, LH)
+        return new FB(OB, GB)
       }
-      static createSet(HH, BH) {
-        return new KH(HH, BH)
+      static createSet(BB, OB) {
+        return new FB(BB, OB)
       }
     }
 
-    function cH(HH, BH, LH) {
-      let AH = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-      if (0 == BH && LH <= 0) return;
-      let rH = HH.length - 2;
-      rH >= 0 && LH <= 0 && LH == HH[rH + 1] ? HH[rH] += BH : rH >= 0 && 0 == BH && 0 == HH[rH] ? HH[rH + 1] += LH : AH ? (HH[rH] += BH, HH[rH + 1] += LH) : HH.push(BH, LH)
+    function iB(BB, OB, GB) {
+      let YB = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+      if (0 == OB && GB <= 0) return;
+      let DB = BB.length - 2;
+      DB >= 0 && GB <= 0 && GB == BB[DB + 1] ? BB[DB] += OB : DB >= 0 && 0 == OB && 0 == BB[DB] ? BB[DB + 1] += GB : YB ? (BB[DB] += OB, BB[DB + 1] += GB) : BB.push(OB, GB)
     }
 
-    function eH(HH, BH, LH) {
-      if (0 == LH.length) return;
-      let AH = BH.length - 2 >> 1;
-      if (AH < HH.length) HH[HH.length - 1] = HH[HH.length - 1].append(LH);
+    function LB(BB, OB, GB) {
+      if (0 == GB.length) return;
+      let YB = OB.length - 2 >> 1;
+      if (YB < BB.length) BB[BB.length - 1] = BB[BB.length - 1].append(GB);
       else {
-        for (; HH.length < AH;) HH.push(QH.empty);
-        HH.push(LH)
+        for (; BB.length < YB;) BB.push(qB.empty);
+        BB.push(GB)
       }
     }
 
-    function qH(HH, BH, LH) {
-      let AH = HH.inserted;
-      for (let rH = 0, SH = 0, hH = 0; hH < HH.sections.length;) {
-        let tH = HH.sections[hH++],
-          zH = HH.sections[hH++];
-        if (zH < 0) rH += tH, SH += tH;
+    function gB(BB, OB, GB) {
+      let YB = BB.inserted;
+      for (let DB = 0, QB = 0, oB = 0; oB < BB.sections.length;) {
+        let jB = BB.sections[oB++],
+          yB = BB.sections[oB++];
+        if (yB < 0) DB += jB, QB += jB;
         else {
-          let CH = rH,
-            EH = SH,
-            XH = QH.empty;
-          for (; CH += tH, EH += zH, zH && AH && (XH = XH.append(AH[hH - 2 >> 1])), !(LH || hH == HH.sections.length || HH.sections[hH + 1] < 0);) tH = HH.sections[hH++], zH = HH.sections[hH++];
-          BH(rH, CH, SH, EH, XH), rH = CH, SH = EH
+          let JB = DB,
+            MB = QB,
+            PB = qB.empty;
+          for (; JB += jB, MB += yB, yB && YB && (PB = PB.append(YB[oB - 2 >> 1])), !(GB || oB == BB.sections.length || BB.sections[oB + 1] < 0);) jB = BB.sections[oB++], yB = BB.sections[oB++];
+          OB(DB, JB, QB, MB, PB), DB = JB, QB = MB
         }
       }
     }
 
-    function gH(HH, BH, LH) {
-      let AH = [],
-        rH = arguments.length > 3 && void 0 !== arguments[3] && arguments[3] ? [] : null,
-        SH = new RH(HH),
-        hH = new RH(BH),
-        tH = 0;
-      for (let zH = -1;;) {
-        if (++tH > 2e6) throw new Error("BLOXD CODEMIRROR: mapSet exceeded max iterations - likely malformed ChangeSet");
-        if (SH.done && hH.len || hH.done && SH.len) throw new Error("Mismatched change set lengths");
-        if (-1 == SH.ins && -1 == hH.ins) {
-          let HH = Math.min(SH.len, hH.len);
-          cH(AH, HH, -1), SH.forward(HH), hH.forward(HH)
-        } else if (hH.ins >= 0 && (SH.ins < 0 || zH == SH.i || 0 == SH.off && (hH.len < SH.len || hH.len == SH.len && !LH))) {
-          let HH = hH.len;
-          for (cH(AH, hH.ins, -1); HH;) {
-            if (++tH > 2e6) throw new Error("BLOXD CODEMIRROR: mapSet exceeded max iterations - inner while-b");
-            let BH = Math.min(SH.len, HH);
-            SH.ins >= 0 && zH < SH.i && SH.len <= BH && (cH(AH, 0, SH.ins), rH && eH(rH, AH, SH.text), zH = SH.i), SH.forward(BH), HH -= BH
+    function rB(BB, OB, GB) {
+      let YB = [],
+        DB = arguments.length > 3 && void 0 !== arguments[3] && arguments[3] ? [] : null,
+        QB = new wB(BB),
+        oB = new wB(OB),
+        jB = 0;
+      for (let yB = -1;;) {
+        if (++jB > 2e6) throw new Error("BLOXD CODEMIRROR: mapSet exceeded max iterations - likely malformed ChangeSet");
+        if (QB.done && oB.len || oB.done && QB.len) throw new Error("Mismatched change set lengths");
+        if (-1 == QB.ins && -1 == oB.ins) {
+          let BB = Math.min(QB.len, oB.len);
+          iB(YB, BB, -1), QB.forward(BB), oB.forward(BB)
+        } else if (oB.ins >= 0 && (QB.ins < 0 || yB == QB.i || 0 == QB.off && (oB.len < QB.len || oB.len == QB.len && !GB))) {
+          let BB = oB.len;
+          for (iB(YB, oB.ins, -1); BB;) {
+            if (++jB > 2e6) throw new Error("BLOXD CODEMIRROR: mapSet exceeded max iterations - inner while-b");
+            let OB = Math.min(QB.len, BB);
+            QB.ins >= 0 && yB < QB.i && QB.len <= OB && (iB(YB, 0, QB.ins), DB && LB(DB, YB, QB.text), yB = QB.i), QB.forward(OB), BB -= OB
           }
-          hH.next()
+          oB.next()
         } else {
-          if (!(SH.ins >= 0)) {
-            if (SH.done && hH.done) return rH ? KH.createSet(AH, rH) : lH.create(AH);
+          if (!(QB.ins >= 0)) {
+            if (QB.done && oB.done) return DB ? FB.createSet(YB, DB) : IB.create(YB);
             throw new Error("Mismatched change set lengths")
           } {
-            let HH = 0,
-              BH = SH.len;
-            for (; BH;) {
-              if (++tH > 2e6) throw new Error("BLOXD CODEMIRROR: mapSet exceeded max iterations - inner while-a");
-              if (-1 == hH.ins) {
-                let LH = Math.min(BH, hH.len);
-                HH += LH, BH -= LH, hH.forward(LH)
+            let BB = 0,
+              OB = QB.len;
+            for (; OB;) {
+              if (++jB > 2e6) throw new Error("BLOXD CODEMIRROR: mapSet exceeded max iterations - inner while-a");
+              if (-1 == oB.ins) {
+                let GB = Math.min(OB, oB.len);
+                BB += GB, OB -= GB, oB.forward(GB)
               } else {
-                if (!(0 == hH.ins && hH.len < BH)) break;
-                BH -= hH.len, hH.next()
+                if (!(0 == oB.ins && oB.len < OB)) break;
+                OB -= oB.len, oB.next()
               }
             }
-            cH(AH, HH, zH < SH.i ? SH.ins : 0), rH && zH < SH.i && eH(rH, AH, SH.text), zH = SH.i, SH.forward(SH.len - BH)
+            iB(YB, BB, yB < QB.i ? QB.ins : 0), DB && yB < QB.i && LB(DB, YB, QB.text), yB = QB.i, QB.forward(QB.len - OB)
           }
         }
       }
     }
 
-    function NH(HH, BH) {
-      let LH = [],
-        AH = arguments.length > 2 && void 0 !== arguments[2] && arguments[2] ? [] : null,
-        rH = new RH(HH),
-        SH = new RH(BH),
-        hH = 0;
-      for (let tH = !1;;) {
-        if (++hH > 2e6) throw new Error("BLOXD CODEMIRROR: composeSets exceeded max iterations - likely malformed ChangeSet");
-        if (rH.done && SH.done) return AH ? KH.createSet(LH, AH) : lH.create(LH);
-        if (0 == rH.ins) cH(LH, rH.len, 0, tH), rH.next();
-        else if (0 != SH.len || SH.done) {
-          if (rH.done || SH.done) throw new Error("Mismatched change set lengths");
+    function XB(BB, OB) {
+      let GB = [],
+        YB = arguments.length > 2 && void 0 !== arguments[2] && arguments[2] ? [] : null,
+        DB = new wB(BB),
+        QB = new wB(OB),
+        oB = 0;
+      for (let jB = !1;;) {
+        if (++oB > 2e6) throw new Error("BLOXD CODEMIRROR: composeSets exceeded max iterations - likely malformed ChangeSet");
+        if (DB.done && QB.done) return YB ? FB.createSet(GB, YB) : IB.create(GB);
+        if (0 == DB.ins) iB(GB, DB.len, 0, jB), DB.next();
+        else if (0 != QB.len || QB.done) {
+          if (DB.done || QB.done) throw new Error("Mismatched change set lengths");
           {
-            let HH = Math.min(rH.len2, SH.len),
-              BH = LH.length;
-            if (-1 == rH.ins) {
-              let BH = -1 == SH.ins ? -1 : SH.off ? 0 : SH.ins;
-              cH(LH, HH, BH, tH), AH && BH && eH(AH, LH, SH.text)
-            } else - 1 == SH.ins ? (cH(LH, rH.off ? 0 : rH.len, HH, tH), AH && eH(AH, LH, rH.textBit(HH))) : (cH(LH, rH.off ? 0 : rH.len, SH.off ? 0 : SH.ins, tH), AH && !SH.off && eH(AH, LH, SH.text));
-            tH = (rH.ins > HH || SH.ins >= 0 && SH.len > HH) && (tH || LH.length > BH), rH.forward2(HH), SH.forward(HH)
+            let BB = Math.min(DB.len2, QB.len),
+              OB = GB.length;
+            if (-1 == DB.ins) {
+              let OB = -1 == QB.ins ? -1 : QB.off ? 0 : QB.ins;
+              iB(GB, BB, OB, jB), YB && OB && LB(YB, GB, QB.text)
+            } else - 1 == QB.ins ? (iB(GB, DB.off ? 0 : DB.len, BB, jB), YB && LB(YB, GB, DB.textBit(BB))) : (iB(GB, DB.off ? 0 : DB.len, QB.off ? 0 : QB.ins, jB), YB && !QB.off && LB(YB, GB, QB.text));
+            jB = (DB.ins > BB || QB.ins >= 0 && QB.len > BB) && (jB || GB.length > OB), DB.forward2(BB), QB.forward(BB)
           }
-        } else cH(LH, 0, SH.ins, tH), AH && eH(AH, LH, SH.text), SH.next()
+        } else iB(GB, 0, QB.ins, jB), YB && LB(YB, GB, QB.text), QB.next()
       }
     }
-    class RH {
-      constructor(HH) {
-        this.set = HH, this.i = 0, this.next()
+    class wB {
+      constructor(BB) {
+        this.set = BB, this.i = 0, this.next()
       }
       next() {
         let {
-          sections: HH
+          sections: BB
         } = this.set;
-        this.i < HH.length ? (this.len = HH[this.i++], this.ins = HH[this.i++]) : (this.len = 0, this.ins = -2), this.off = 0
+        this.i < BB.length ? (this.len = BB[this.i++], this.ins = BB[this.i++]) : (this.len = 0, this.ins = -2), this.off = 0
       }
       get done() {
         return -2 == this.ins
@@ -815,26 +815,26 @@ export const modules = {
       }
       get text() {
         let {
-          inserted: HH
-        } = this.set, BH = this.i - 2 >> 1;
-        return BH >= HH.length ? QH.empty : HH[BH]
+          inserted: BB
+        } = this.set, OB = this.i - 2 >> 1;
+        return OB >= BB.length ? qB.empty : BB[OB]
       }
-      textBit(HH) {
+      textBit(BB) {
         let {
-          inserted: BH
-        } = this.set, LH = this.i - 2 >> 1;
-        return LH >= BH.length && !HH ? QH.empty : BH[LH].slice(this.off, null == HH ? void 0 : this.off + HH)
+          inserted: OB
+        } = this.set, GB = this.i - 2 >> 1;
+        return GB >= OB.length && !BB ? qB.empty : OB[GB].slice(this.off, null == BB ? void 0 : this.off + BB)
       }
-      forward(HH) {
-        HH == this.len ? this.next() : (this.len -= HH, this.off += HH)
+      forward(BB) {
+        BB == this.len ? this.next() : (this.len -= BB, this.off += BB)
       }
-      forward2(HH) {
-        -1 == this.ins ? this.forward(HH) : HH == this.ins ? this.next() : (this.ins -= HH, this.off += HH)
+      forward2(BB) {
+        -1 == this.ins ? this.forward(BB) : BB == this.ins ? this.next() : (this.ins -= BB, this.off += BB)
       }
     }
-    class jH {
-      constructor(HH, BH, LH) {
-        this.from = HH, this.to = BH, this.flags = LH
+    class EB {
+      constructor(BB, OB, GB) {
+        this.from = BB, this.to = OB, this.flags = GB
       }
       get anchor() {
         return 32 & this.flags ? this.to : this.from
@@ -849,27 +849,27 @@ export const modules = {
         return 8 & this.flags ? -1 : 16 & this.flags ? 1 : 0
       }
       get bidiLevel() {
-        let HH = 7 & this.flags;
-        return 7 == HH ? null : HH
+        let BB = 7 & this.flags;
+        return 7 == BB ? null : BB
       }
       get goalColumn() {
-        let HH = this.flags >> 6;
-        return 16777215 == HH ? void 0 : HH
+        let BB = this.flags >> 6;
+        return 16777215 == BB ? void 0 : BB
       }
-      map(HH) {
-        let BH, LH, AH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1;
-        return this.empty ? BH = LH = HH.mapPos(this.from, AH) : (BH = HH.mapPos(this.from, 1), LH = HH.mapPos(this.to, -1)), BH == this.from && LH == this.to ? this : new jH(BH, LH, this.flags)
+      map(BB) {
+        let OB, GB, YB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1;
+        return this.empty ? OB = GB = BB.mapPos(this.from, YB) : (OB = BB.mapPos(this.from, 1), GB = BB.mapPos(this.to, -1)), OB == this.from && GB == this.to ? this : new EB(OB, GB, this.flags)
       }
-      extend(HH) {
-        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : HH,
-          LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        if (HH <= this.anchor && BH >= this.anchor) return nH.range(HH, BH, void 0, void 0, LH);
-        let AH = Math.abs(HH - this.anchor) > Math.abs(BH - this.anchor) ? HH : BH;
-        return nH.range(this.anchor, AH, void 0, void 0, LH)
+      extend(BB) {
+        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : BB,
+          GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        if (BB <= this.anchor && OB >= this.anchor) return cB.range(BB, OB, void 0, void 0, GB);
+        let YB = Math.abs(BB - this.anchor) > Math.abs(OB - this.anchor) ? BB : OB;
+        return cB.range(this.anchor, YB, void 0, void 0, GB)
       }
-      eq(HH) {
-        let BH = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return this.anchor == HH.anchor && this.head == HH.head && this.goalColumn == HH.goalColumn && (!BH || !this.empty || this.assoc == HH.assoc)
+      eq(BB) {
+        let OB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return this.anchor == BB.anchor && this.head == BB.head && this.goalColumn == BB.goalColumn && (!OB || !this.empty || this.assoc == BB.assoc)
       }
       toJSON() {
         return {
@@ -877,447 +877,447 @@ export const modules = {
           head: this.head
         }
       }
-      static fromJSON(HH) {
-        if (!HH || "number" != typeof HH.anchor || "number" != typeof HH.head) throw new RangeError("Invalid JSON representation for SelectionRange");
-        return nH.range(HH.anchor, HH.head)
+      static fromJSON(BB) {
+        if (!BB || "number" != typeof BB.anchor || "number" != typeof BB.head) throw new RangeError("Invalid JSON representation for SelectionRange");
+        return cB.range(BB.anchor, BB.head)
       }
-      static create(HH, BH, LH) {
-        return new jH(HH, BH, LH)
+      static create(BB, OB, GB) {
+        return new EB(BB, OB, GB)
       }
     }
-    class nH {
-      constructor(HH, BH) {
-        this.rW = HH, this.mainIndex = BH
+    class cB {
+      constructor(BB, OB) {
+        this.JZ = BB, this.mainIndex = OB
       }
-      map(HH) {
-        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1;
-        return HH.empty ? this : nH.create(this.rW.map((LH => LH.map(HH, BH))), this.mainIndex)
+      map(BB) {
+        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1;
+        return BB.empty ? this : cB.create(this.JZ.map((GB => GB.map(BB, OB))), this.mainIndex)
       }
-      eq(HH) {
-        let BH = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        if (this.rW.length != HH.rW.length || this.mainIndex != HH.mainIndex) return !1;
-        for (let LH = 0; LH < this.rW.length; LH++)
-          if (!this.rW[LH].eq(HH.rW[LH], BH)) return !1;
+      eq(BB) {
+        let OB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        if (this.JZ.length != BB.JZ.length || this.mainIndex != BB.mainIndex) return !1;
+        for (let GB = 0; GB < this.JZ.length; GB++)
+          if (!this.JZ[GB].eq(BB.JZ[GB], OB)) return !1;
         return !0
       }
       get main() {
-        return this.rW[this.mainIndex]
+        return this.JZ[this.mainIndex]
       }
       asSingle() {
-        return 1 == this.rW.length ? this : new nH([this.main], 0)
+        return 1 == this.JZ.length ? this : new cB([this.main], 0)
       }
-      addRange(HH) {
-        let BH = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        return nH.create([HH].concat(this.rW), BH ? 0 : this.mainIndex + 1)
+      addRange(BB) {
+        let OB = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        return cB.create([BB].concat(this.JZ), OB ? 0 : this.mainIndex + 1)
       }
-      replaceRange(HH) {
-        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.mainIndex,
-          LH = this.rW.slice();
-        return LH[BH] = HH, nH.create(LH, this.mainIndex)
+      replaceRange(BB) {
+        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.mainIndex,
+          GB = this.JZ.slice();
+        return GB[OB] = BB, cB.create(GB, this.mainIndex)
       }
       toJSON() {
         return {
-          rW: this.rW.map((HH => HH.toJSON())),
+          JZ: this.JZ.map((BB => BB.toJSON())),
           main: this.mainIndex
         }
       }
-      static fromJSON(HH) {
-        if (!HH || !Array.isArray(HH.rW) || "number" != typeof HH.main || HH.main >= HH.rW.length) throw new RangeError("Invalid JSON representation for EditorSelection");
-        return new nH(HH.rW.map((HH => jH.fromJSON(HH))), HH.main)
+      static fromJSON(BB) {
+        if (!BB || !Array.isArray(BB.JZ) || "number" != typeof BB.main || BB.main >= BB.JZ.length) throw new RangeError("Invalid JSON representation for EditorSelection");
+        return new cB(BB.JZ.map((BB => EB.fromJSON(BB))), BB.main)
       }
-      static single(HH) {
-        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : HH;
-        return new nH([nH.range(HH, BH)], 0)
+      static single(BB) {
+        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : BB;
+        return new cB([cB.range(BB, OB)], 0)
       }
-      static create(HH) {
-        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        if (0 == HH.length) throw new RangeError("A selection needs at least one range");
-        for (let LH = 0, AH = 0; AH < HH.length; AH++) {
-          let rH = HH[AH];
-          if (rH.empty ? rH.from <= LH : rH.from < LH) return nH.normalized(HH.slice(), BH);
-          LH = rH.to
+      static create(BB) {
+        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        if (0 == BB.length) throw new RangeError("A selection needs at least one range");
+        for (let GB = 0, YB = 0; YB < BB.length; YB++) {
+          let DB = BB[YB];
+          if (DB.empty ? DB.from <= GB : DB.from < GB) return cB.normalized(BB.slice(), OB);
+          GB = DB.to
         }
-        return new nH(HH, BH)
+        return new cB(BB, OB)
       }
-      static cursor(HH) {
-        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          LH = arguments.length > 2 ? arguments[2] : void 0,
-          AH = arguments.length > 3 ? arguments[3] : void 0;
-        return jH.create(HH, HH, (0 == BH ? 0 : BH < 0 ? 8 : 16) | (null == LH ? 7 : Math.min(6, LH)) | (null !== AH && void 0 !== AH ? AH : 16777215) << 6)
+      static cursor(BB) {
+        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          GB = arguments.length > 2 ? arguments[2] : void 0,
+          YB = arguments.length > 3 ? arguments[3] : void 0;
+        return EB.create(BB, BB, (0 == OB ? 0 : OB < 0 ? 8 : 16) | (null == GB ? 7 : Math.min(6, GB)) | (null !== YB && void 0 !== YB ? YB : 16777215) << 6)
       }
-      static range(HH, BH, LH, AH, rH) {
-        let SH = (null !== LH && void 0 !== LH ? LH : 16777215) << 6 | (null == AH ? 7 : Math.min(6, AH));
-        return rH || HH == BH || (rH = BH < HH ? 1 : -1), BH < HH ? jH.create(BH, HH, 48 | SH) : jH.create(HH, BH, (rH ? rH < 0 ? 8 : 16 : 0) | SH)
+      static range(BB, OB, GB, YB, DB) {
+        let QB = (null !== GB && void 0 !== GB ? GB : 16777215) << 6 | (null == YB ? 7 : Math.min(6, YB));
+        return DB || BB == OB || (DB = OB < BB ? 1 : -1), OB < BB ? EB.create(OB, BB, 48 | QB) : EB.create(BB, OB, (DB ? DB < 0 ? 8 : 16 : 0) | QB)
       }
-      static normalized(HH) {
-        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          LH = HH[BH];
-        HH.sort(((HH, BH) => HH.from - BH.from)), BH = HH.indexOf(LH);
-        for (let AH = 1; AH < HH.length; AH++) {
-          let LH = HH[AH],
-            rH = HH[AH - 1];
-          if (LH.empty ? LH.from <= rH.to : LH.from < rH.to) {
-            let SH = rH.from,
-              hH = Math.max(LH.to, rH.to);
-            AH <= BH && BH--, HH.splice(--AH, 2, LH.anchor > LH.head ? nH.range(hH, SH) : nH.range(SH, hH))
+      static normalized(BB) {
+        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          GB = BB[OB];
+        BB.sort(((BB, OB) => BB.from - OB.from)), OB = BB.indexOf(GB);
+        for (let YB = 1; YB < BB.length; YB++) {
+          let GB = BB[YB],
+            DB = BB[YB - 1];
+          if (GB.empty ? GB.from <= DB.to : GB.from < DB.to) {
+            let QB = DB.from,
+              oB = Math.max(GB.to, DB.to);
+            YB <= OB && OB--, BB.splice(--YB, 2, GB.anchor > GB.head ? cB.range(oB, QB) : cB.range(QB, oB))
           }
         }
-        return new nH(HH, BH)
+        return new cB(BB, OB)
       }
     }
 
-    function FH(HH, BH) {
-      for (let LH of HH.rW)
-        if (LH.to > BH) throw new RangeError("Selection points outside of document")
+    function hB(BB, OB) {
+      for (let GB of BB.JZ)
+        if (GB.to > OB) throw new RangeError("Selection points outside of document")
     }
-    let DH = 0;
-    class wH {
-      constructor(HH, BH, LH, AH, rH) {
-        this.combine = HH, this.compareInput = BH, this.compare = LH, this.isStatic = AH, this.id = DH++, this.default = HH([]), this.extensions = "function" == typeof rH ? rH(this) : rH
+    let aB = 0;
+    class eB {
+      constructor(BB, OB, GB, YB, DB) {
+        this.combine = BB, this.compareInput = OB, this.compare = GB, this.isStatic = YB, this.id = aB++, this.default = BB([]), this.extensions = "function" == typeof DB ? DB(this) : DB
       }
       get reader() {
         return this
       }
       static define() {
-        let HH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        return new wH(HH.combine || (HH => HH), HH.compareInput || ((HH, BH) => HH === BH), HH.compare || (HH.combine ? (HH, BH) => HH === BH : ZH), !!HH.static, HH.enables)
+        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+        return new eB(BB.combine || (BB => BB), BB.compareInput || ((BB, OB) => BB === OB), BB.compare || (BB.combine ? (BB, OB) => BB === OB : TB), !!BB.static, BB.enables)
       }
-      of(HH) {
-        return new dH([], this, 0, HH)
+      of(BB) {
+        return new bB([], this, 0, BB)
       }
-      compute(HH, BH) {
+      compute(BB, OB) {
         if (this.isStatic) throw new Error("Can't compute a static facet");
-        return new dH(HH, this, 1, BH)
+        return new bB(BB, this, 1, OB)
       }
-      computeN(HH, BH) {
+      computeN(BB, OB) {
         if (this.isStatic) throw new Error("Can't compute a static facet");
-        return new dH(HH, this, 2, BH)
+        return new bB(BB, this, 2, OB)
       }
-      from(HH, BH) {
-        return BH || (BH = HH => HH), this.compute([HH], (LH => BH(LH.field(HH))))
+      from(BB, OB) {
+        return OB || (OB = BB => BB), this.compute([BB], (GB => OB(GB.field(BB))))
       }
     }
 
-    function ZH(HH, BH) {
-      return HH == BH || HH.length == BH.length && HH.every(((HH, LH) => HH === BH[LH]))
+    function TB(BB, OB) {
+      return BB == OB || BB.length == OB.length && BB.every(((BB, GB) => BB === OB[GB]))
     }
-    class dH {
-      constructor(HH, BH, LH, AH) {
-        this.dependencies = HH, this.facet = BH, this.type = LH, this.value = AH, this.id = DH++
+    class bB {
+      constructor(BB, OB, GB, YB) {
+        this.dependencies = BB, this.facet = OB, this.type = GB, this.value = YB, this.id = aB++
       }
-      dynamicSlot(HH) {
-        var BH;
-        let LH = this.value,
-          AH = this.facet.compareInput,
-          rH = this.id,
-          SH = HH[rH] >> 1,
-          hH = 2 == this.type,
-          tH = !1,
-          zH = !1,
-          CH = [];
-        for (let EH of this.dependencies) "doc" == EH ? tH = !0 : "selection" == EH ? zH = !0 : 0 == (1 & (null !== (BH = HH[EH.id]) && void 0 !== BH ? BH : 1)) && CH.push(HH[EH.id]);
+      dynamicSlot(BB) {
+        var OB;
+        let GB = this.value,
+          YB = this.facet.compareInput,
+          DB = this.id,
+          QB = BB[DB] >> 1,
+          oB = 2 == this.type,
+          jB = !1,
+          yB = !1,
+          JB = [];
+        for (let MB of this.dependencies) "doc" == MB ? jB = !0 : "selection" == MB ? yB = !0 : 0 == (1 & (null !== (OB = BB[MB.id]) && void 0 !== OB ? OB : 1)) && JB.push(BB[MB.id]);
         return {
-          create: HH => (HH.values[SH] = LH(HH), 1),
-          update(HH, BH) {
-            if (tH && BH.docChanged || zH && (BH.docChanged || BH.selection) || sH(HH, CH)) {
-              let BH = LH(HH);
-              if (hH ? !aH(BH, HH.values[SH], AH) : !AH(BH, HH.values[SH])) return HH.values[SH] = BH, 1
+          create: BB => (BB.values[QB] = GB(BB), 1),
+          update(BB, OB) {
+            if (jB && OB.docChanged || yB && (OB.docChanged || OB.selection) || HB(BB, JB)) {
+              let OB = GB(BB);
+              if (oB ? !CB(OB, BB.values[QB], YB) : !YB(OB, BB.values[QB])) return BB.values[QB] = OB, 1
             }
             return 0
           },
-          reconfigure: (HH, BH) => {
-            let tH, zH = BH.config.address[rH];
-            if (null != zH) {
-              let rH = EB(BH, zH);
-              if (this.dependencies.every((LH => LH instanceof wH ? BH.facet(LH) === HH.facet(LH) : !(LH instanceof pH) || BH.field(LH, !1) == HH.field(LH, !1))) || (hH ? aH(tH = LH(HH), rH, AH) : AH(tH = LH(HH), rH))) return HH.values[SH] = rH, 0
-            } else tH = LH(HH);
-            return HH.values[SH] = tH, 1
+          reconfigure: (BB, OB) => {
+            let jB, yB = OB.config.address[DB];
+            if (null != yB) {
+              let DB = MO(OB, yB);
+              if (this.dependencies.every((GB => GB instanceof eB ? OB.facet(GB) === BB.facet(GB) : !(GB instanceof xB) || OB.field(GB, !1) == BB.field(GB, !1))) || (oB ? CB(jB = GB(BB), DB, YB) : YB(jB = GB(BB), DB))) return BB.values[QB] = DB, 0
+            } else jB = GB(BB);
+            return BB.values[QB] = jB, 1
           }
         }
       }
     }
 
-    function aH(HH, BH, LH) {
-      if (HH.length != BH.length) return !1;
-      for (let AH = 0; AH < HH.length; AH++)
-        if (!LH(HH[AH], BH[AH])) return !1;
+    function CB(BB, OB, GB) {
+      if (BB.length != OB.length) return !1;
+      for (let YB = 0; YB < BB.length; YB++)
+        if (!GB(BB[YB], OB[YB])) return !1;
       return !0
     }
 
-    function sH(HH, BH) {
-      let LH = !1;
-      for (let AH of BH) 1 & CB(HH, AH) && (LH = !0);
-      return LH
+    function HB(BB, OB) {
+      let GB = !1;
+      for (let YB of OB) 1 & JO(BB, YB) && (GB = !0);
+      return GB
     }
 
-    function JH(HH, BH, LH) {
-      let AH = LH.map((BH => HH[BH.id])),
-        rH = LH.map((HH => HH.type)),
-        SH = AH.filter((HH => !(1 & HH))),
-        hH = HH[BH.id] >> 1;
+    function vB(BB, OB, GB) {
+      let YB = GB.map((OB => BB[OB.id])),
+        DB = GB.map((BB => BB.type)),
+        QB = YB.filter((BB => !(1 & BB))),
+        oB = BB[OB.id] >> 1;
 
-      function tH(HH) {
-        let LH = [];
-        for (let BH = 0; BH < AH.length; BH++) {
-          let SH = EB(HH, AH[BH]);
-          if (2 == rH[BH])
-            for (let HH of SH) LH.push(HH);
-          else LH.push(SH)
+      function jB(BB) {
+        let GB = [];
+        for (let OB = 0; OB < YB.length; OB++) {
+          let QB = MO(BB, YB[OB]);
+          if (2 == DB[OB])
+            for (let BB of QB) GB.push(BB);
+          else GB.push(QB)
         }
-        return BH.combine(LH)
+        return OB.combine(GB)
       }
       return {
-        create(HH) {
-          for (let BH of AH) CB(HH, BH);
-          return HH.values[hH] = tH(HH), 1
+        create(BB) {
+          for (let OB of YB) JO(BB, OB);
+          return BB.values[oB] = jB(BB), 1
         },
-        update(HH, LH) {
-          if (!sH(HH, SH)) return 0;
-          let AH = tH(HH);
-          return BH.compare(AH, HH.values[hH]) ? 0 : (HH.values[hH] = AH, 1)
+        update(BB, GB) {
+          if (!HB(BB, QB)) return 0;
+          let YB = jB(BB);
+          return OB.compare(YB, BB.values[oB]) ? 0 : (BB.values[oB] = YB, 1)
         },
-        reconfigure(HH, rH) {
-          let SH = sH(HH, AH),
-            zH = rH.config.facets[BH.id],
-            CH = rH.facet(BH);
-          if (zH && !SH && ZH(LH, zH)) return HH.values[hH] = CH, 0;
-          let EH = tH(HH);
-          return BH.compare(EH, CH) ? (HH.values[hH] = CH, 0) : (HH.values[hH] = EH, 1)
+        reconfigure(BB, DB) {
+          let QB = HB(BB, YB),
+            yB = DB.config.facets[OB.id],
+            JB = DB.facet(OB);
+          if (yB && !QB && TB(GB, yB)) return BB.values[oB] = JB, 0;
+          let MB = jB(BB);
+          return OB.compare(MB, JB) ? (BB.values[oB] = JB, 0) : (BB.values[oB] = MB, 1)
         }
       }
     }
-    const iH = wH.define({
+    const sB = eB.define({
       static: !0
     });
-    class pH {
-      constructor(HH, BH, LH, AH, rH) {
-        this.id = HH, this.createF = BH, this.updateF = LH, this.compareF = AH, this.spec = rH, this.provides = void 0
+    class xB {
+      constructor(BB, OB, GB, YB, DB) {
+        this.id = BB, this.createF = OB, this.updateF = GB, this.compareF = YB, this.spec = DB, this.provides = void 0
       }
-      static define(HH) {
-        let BH = new pH(DH++, HH.create, HH.update, HH.compare || ((HH, BH) => HH === BH), HH);
-        return HH.provide && (BH.provides = HH.provide(BH)), BH
+      static define(BB) {
+        let OB = new xB(aB++, BB.create, BB.update, BB.compare || ((BB, OB) => BB === OB), BB);
+        return BB.provide && (OB.provides = BB.provide(OB)), OB
       }
-      create(HH) {
-        let BH = HH.facet(iH).find((HH => HH.field == this));
-        return ((null === BH || void 0 === BH ? void 0 : BH.create) || this.createF)(HH)
+      create(BB) {
+        let OB = BB.facet(sB).find((BB => BB.field == this));
+        return ((null === OB || void 0 === OB ? void 0 : OB.create) || this.createF)(BB)
       }
-      slot(HH) {
-        let BH = HH[this.id] >> 1;
+      slot(BB) {
+        let OB = BB[this.id] >> 1;
         return {
-          create: HH => (HH.values[BH] = this.create(HH), 1),
-          update: (HH, LH) => {
-            let AH = HH.values[BH],
-              rH = this.updateF(AH, LH);
-            return this.compareF(AH, rH) ? 0 : (HH.values[BH] = rH, 1)
+          create: BB => (BB.values[OB] = this.create(BB), 1),
+          update: (BB, GB) => {
+            let YB = BB.values[OB],
+              DB = this.updateF(YB, GB);
+            return this.compareF(YB, DB) ? 0 : (BB.values[OB] = DB, 1)
           },
-          reconfigure: (HH, LH) => {
-            let AH, rH = HH.facet(iH),
-              SH = LH.facet(iH);
-            return (AH = rH.find((HH => HH.field == this))) && AH != SH.find((HH => HH.field == this)) ? (HH.values[BH] = AH.create(HH), 1) : null != LH.config.address[this.id] ? (HH.values[BH] = LH.field(this), 0) : (HH.values[BH] = this.create(HH), 1)
+          reconfigure: (BB, GB) => {
+            let YB, DB = BB.facet(sB),
+              QB = GB.facet(sB);
+            return (YB = DB.find((BB => BB.field == this))) && YB != QB.find((BB => BB.field == this)) ? (BB.values[OB] = YB.create(BB), 1) : null != GB.config.address[this.id] ? (BB.values[OB] = GB.field(this), 0) : (BB.values[OB] = this.create(BB), 1)
           }
         }
       }
-      init(HH) {
-        return [this, iH.of({
+      init(BB) {
+        return [this, sB.of({
           field: this,
-          create: HH
+          create: BB
         })]
       }
       get extension() {
         return this
       }
     }
-    const yH = 4,
-      HB = 3,
-      BB = 2,
-      LB = 1;
+    const tB = 4,
+      BO = 3,
+      OO = 2,
+      GO = 1;
 
-    function AB(HH) {
-      return BH => new SB(BH, HH)
+    function YO(BB) {
+      return OB => new QO(OB, BB)
     }
-    const rB = {
-      highest: AB(0),
-      high: AB(LB),
-      default: AB(BB),
-      low: AB(HB),
-      lowest: AB(yH)
+    const DO = {
+      highest: YO(0),
+      high: YO(GO),
+      default: YO(OO),
+      low: YO(BO),
+      lowest: YO(tB)
     };
-    class SB {
-      constructor(HH, BH) {
-        this.inner = HH, this.prec = BH
+    class QO {
+      constructor(BB, OB) {
+        this.inner = BB, this.prec = OB
       }
     }
-    class hB {
-      of(HH) {
-        return new tB(this, HH)
+    class oO {
+      of(BB) {
+        return new jO(this, BB)
       }
-      reconfigure(HH) {
-        return hB.reconfigure.of({
+      reconfigure(BB) {
+        return oO.reconfigure.of({
           compartment: this,
-          extension: HH
+          extension: BB
         })
       }
-      get(HH) {
-        return HH.config.compartments.get(this)
+      get(BB) {
+        return BB.config.compartments.get(this)
       }
     }
-    class tB {
-      constructor(HH, BH) {
-        this.compartment = HH, this.inner = BH
+    class jO {
+      constructor(BB, OB) {
+        this.compartment = BB, this.inner = OB
       }
     }
-    class zB {
-      constructor(HH, BH, LH, AH, rH, SH) {
-        for (this.base = HH, this.compartments = BH, this.dynamicSlots = LH, this.address = AH, this.staticValues = rH, this.facets = SH, this.statusTemplate = []; this.statusTemplate.length < LH.length;) this.statusTemplate.push(0)
+    class yO {
+      constructor(BB, OB, GB, YB, DB, QB) {
+        for (this.base = BB, this.compartments = OB, this.dynamicSlots = GB, this.address = YB, this.staticValues = DB, this.facets = QB, this.statusTemplate = []; this.statusTemplate.length < GB.length;) this.statusTemplate.push(0)
       }
-      staticFacet(HH) {
-        let BH = this.address[HH.id];
-        return null == BH ? HH.default : this.staticValues[BH >> 1]
+      staticFacet(BB) {
+        let OB = this.address[BB.id];
+        return null == OB ? BB.default : this.staticValues[OB >> 1]
       }
-      static resolve(HH, BH, LH) {
-        let AH = [],
-          rH = Object.create(null),
-          SH = new Map;
-        for (let XH of function(HH, BH, LH) {
-            let AH = [
+      static resolve(BB, OB, GB) {
+        let YB = [],
+          DB = Object.create(null),
+          QB = new Map;
+        for (let PB of function(BB, OB, GB) {
+            let YB = [
                 [],
                 [],
                 [],
                 [],
                 []
               ],
-              rH = new Map;
+              DB = new Map;
 
-            function SH(HH, hH) {
-              let tH = rH.get(HH);
-              if (null != tH) {
-                if (tH <= hH) return;
-                let BH = AH[tH].indexOf(HH);
-                BH > -1 && AH[tH].splice(BH, 1), HH instanceof tB && LH.delete(HH.compartment)
+            function QB(BB, oB) {
+              let jB = DB.get(BB);
+              if (null != jB) {
+                if (jB <= oB) return;
+                let OB = YB[jB].indexOf(BB);
+                OB > -1 && YB[jB].splice(OB, 1), BB instanceof jO && GB.delete(BB.compartment)
               }
-              if (rH.set(HH, hH), Array.isArray(HH))
-                for (let BH of HH) SH(BH, hH);
-              else if (HH instanceof tB) {
-                if (LH.has(HH.compartment)) throw new RangeError("Duplicate use of compartment in extensions");
-                let AH = BH.get(HH.compartment) || HH.inner;
-                LH.set(HH.compartment, AH), SH(AH, hH)
-              } else if (HH instanceof SB) SH(HH.inner, HH.prec);
-              else if (HH instanceof pH) AH[hH].push(HH), HH.provides && SH(HH.provides, hH);
-              else if (HH instanceof dH) AH[hH].push(HH), HH.facet.extensions && SH(HH.facet.extensions, BB);
+              if (DB.set(BB, oB), Array.isArray(BB))
+                for (let OB of BB) QB(OB, oB);
+              else if (BB instanceof jO) {
+                if (GB.has(BB.compartment)) throw new RangeError("Duplicate use of compartment in extensions");
+                let YB = OB.get(BB.compartment) || BB.inner;
+                GB.set(BB.compartment, YB), QB(YB, oB)
+              } else if (BB instanceof QO) QB(BB.inner, BB.prec);
+              else if (BB instanceof xB) YB[oB].push(BB), BB.provides && QB(BB.provides, oB);
+              else if (BB instanceof bB) YB[oB].push(BB), BB.facet.extensions && QB(BB.facet.extensions, OO);
               else {
-                let BH = HH.extension;
-                if (!BH) throw new Error(`Unrecognized extension value in extension set (${HH}). This sometimes happens because multiple instances of @codemirror/state are loaded, breaking instanceof checks.`);
-                SH(BH, hH)
+                let OB = BB.extension;
+                if (!OB) throw new Error(`Unrecognized extension value in extension set (${BB}). This sometimes happens because multiple instances of @codemirror/state are loaded, breaking instanceof checks.`);
+                QB(OB, oB)
               }
             }
-            return SH(HH, BB), AH.reduce(((HH, BH) => HH.concat(BH)))
-          }(HH, BH, SH)) XH instanceof pH ? AH.push(XH) : (rH[XH.facet.id] || (rH[XH.facet.id] = [])).push(XH);
-        let hH = Object.create(null),
-          tH = [],
-          zH = [];
-        for (let XH of AH) hH[XH.id] = zH.length << 1, zH.push((HH => XH.slot(HH)));
-        let CH = null === LH || void 0 === LH ? void 0 : LH.config.facets;
-        for (let XH in rH) {
-          let HH = rH[XH],
-            BH = HH[0].facet,
-            AH = CH && CH[XH] || [];
-          if (HH.every((HH => 0 == HH.type)))
-            if (hH[BH.id] = tH.length << 1 | 1, ZH(AH, HH)) tH.push(LH.facet(BH));
+            return QB(BB, OO), YB.reduce(((BB, OB) => BB.concat(OB)))
+          }(BB, OB, QB)) PB instanceof xB ? YB.push(PB) : (DB[PB.facet.id] || (DB[PB.facet.id] = [])).push(PB);
+        let oB = Object.create(null),
+          jB = [],
+          yB = [];
+        for (let PB of YB) oB[PB.id] = yB.length << 1, yB.push((BB => PB.slot(BB)));
+        let JB = null === GB || void 0 === GB ? void 0 : GB.config.facets;
+        for (let PB in DB) {
+          let BB = DB[PB],
+            OB = BB[0].facet,
+            YB = JB && JB[PB] || [];
+          if (BB.every((BB => 0 == BB.type)))
+            if (oB[OB.id] = jB.length << 1 | 1, TB(YB, BB)) jB.push(GB.facet(OB));
             else {
-              let AH = BH.combine(HH.map((HH => HH.value)));
-              tH.push(LH && BH.compare(AH, LH.facet(BH)) ? LH.facet(BH) : AH)
+              let YB = OB.combine(BB.map((BB => BB.value)));
+              jB.push(GB && OB.compare(YB, GB.facet(OB)) ? GB.facet(OB) : YB)
             }
           else {
-            for (let BH of HH) 0 == BH.type ? (hH[BH.id] = tH.length << 1 | 1, tH.push(BH.value)) : (hH[BH.id] = zH.length << 1, zH.push((HH => BH.dynamicSlot(HH))));
-            hH[BH.id] = zH.length << 1, zH.push((LH => JH(LH, BH, HH)))
+            for (let OB of BB) 0 == OB.type ? (oB[OB.id] = jB.length << 1 | 1, jB.push(OB.value)) : (oB[OB.id] = yB.length << 1, yB.push((BB => OB.dynamicSlot(BB))));
+            oB[OB.id] = yB.length << 1, yB.push((GB => vB(GB, OB, BB)))
           }
         }
-        let EH = zH.map((HH => HH(hH)));
-        return new zB(HH, SH, EH, hH, tH, rH)
+        let MB = yB.map((BB => BB(oB)));
+        return new yO(BB, QB, MB, oB, jB, DB)
       }
     }
 
-    function CB(HH, BH) {
-      if (1 & BH) return 2;
-      let LH = BH >> 1,
-        AH = HH.status[LH];
-      if (4 == AH) throw new Error("Cyclic dependency between fields and/or facets");
-      if (2 & AH) return AH;
-      HH.status[LH] = 4;
-      let rH = HH.computeSlot(HH, HH.config.dynamicSlots[LH]);
-      return HH.status[LH] = 2 | rH
+    function JO(BB, OB) {
+      if (1 & OB) return 2;
+      let GB = OB >> 1,
+        YB = BB.status[GB];
+      if (4 == YB) throw new Error("Cyclic dependency between fields and/or facets");
+      if (2 & YB) return YB;
+      BB.status[GB] = 4;
+      let DB = BB.computeSlot(BB, BB.config.dynamicSlots[GB]);
+      return BB.status[GB] = 2 | DB
     }
 
-    function EB(HH, BH) {
-      return 1 & BH ? HH.config.staticValues[BH >> 1] : HH.values[BH >> 1]
+    function MO(BB, OB) {
+      return 1 & OB ? BB.config.staticValues[OB >> 1] : BB.values[OB >> 1]
     }
-    const XB = wH.define(),
-      GB = wH.define({
-        combine: HH => HH.some((HH => HH)),
+    const PO = eB.define(),
+      zO = eB.define({
+        combine: BB => BB.some((BB => BB)),
         static: !0
       }),
-      YB = wH.define({
-        combine: HH => HH.length ? HH[0] : void 0,
+      lO = eB.define({
+        combine: BB => BB.length ? BB[0] : void 0,
         static: !0
       }),
-      uB = wH.define(),
-      QB = wH.define(),
-      WB = wH.define(),
-      MB = wH.define({
-        combine: HH => !!HH.length && HH[0]
+      pO = eB.define(),
+      qO = eB.define(),
+      ZO = eB.define(),
+      NO = eB.define({
+        combine: BB => !!BB.length && BB[0]
       });
-    class xB {
-      constructor(HH, BH) {
-        this.type = HH, this.value = BH
+    class RO {
+      constructor(BB, OB) {
+        this.type = BB, this.value = OB
       }
       static define() {
-        return new vB
+        return new WO
       }
     }
-    class vB {
-      of(HH) {
-        return new xB(this, HH)
+    class WO {
+      of(BB) {
+        return new RO(this, BB)
       }
     }
-    class PB {
-      constructor(HH) {
-        this.map = HH
+    class AO {
+      constructor(BB) {
+        this.map = BB
       }
-      of(HH) {
-        return new TB(this, HH)
+      of(BB) {
+        return new VO(this, BB)
       }
     }
-    class TB {
-      constructor(HH, BH) {
-        this.type = HH, this.value = BH
+    class VO {
+      constructor(BB, OB) {
+        this.type = BB, this.value = OB
       }
-      map(HH) {
-        let BH = this.type.map(this.value, HH);
-        return void 0 === BH ? void 0 : BH == this.value ? this : new TB(this.type, BH)
+      map(BB) {
+        let OB = this.type.map(this.value, BB);
+        return void 0 === OB ? void 0 : OB == this.value ? this : new VO(this.type, OB)
       }
-      is(HH) {
-        return this.type == HH
+      is(BB) {
+        return this.type == BB
       }
       static define() {
-        return new PB((arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}).map || (HH => HH))
+        return new AO((arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}).map || (BB => BB))
       }
-      static mapEffects(HH, BH) {
-        if (!HH.length) return HH;
-        let LH = [];
-        for (let AH of HH) {
-          let HH = AH.map(BH);
-          HH && LH.push(HH)
+      static mapEffects(BB, OB) {
+        if (!BB.length) return BB;
+        let GB = [];
+        for (let YB of BB) {
+          let BB = YB.map(OB);
+          BB && GB.push(BB)
         }
-        return LH
+        return GB
       }
     }
-    TB.reconfigure = TB.define(), TB.appendConfig = TB.define();
-    class UB {
-      constructor(HH, BH, LH, AH, rH, SH) {
-        this.startState = HH, this.changes = BH, this.selection = LH, this.effects = AH, this.annotations = rH, this.scrollIntoView = SH, this._doc = null, this._state = null, LH && FH(LH, BH.newLength), rH.some((HH => HH.type == UB.time)) || (this.annotations = rH.concat(UB.time.of(Date.now())))
+    VO.reconfigure = VO.define(), VO.appendConfig = VO.define();
+    class SO {
+      constructor(BB, OB, GB, YB, DB, QB) {
+        this.startState = BB, this.changes = OB, this.selection = GB, this.effects = YB, this.annotations = DB, this.scrollIntoView = QB, this._doc = null, this._state = null, GB && hB(GB, OB.newLength), DB.some((BB => BB.type == SO.time)) || (this.annotations = DB.concat(SO.time.of(Date.now())))
       }
-      static create(HH, BH, LH, AH, rH, SH) {
-        return new UB(HH, BH, LH, AH, rH, SH)
+      static create(BB, OB, GB, YB, DB, QB) {
+        return new SO(BB, OB, GB, YB, DB, QB)
       }
       get newDoc() {
         return this._doc || (this._doc = this.changes.apply(this.startState.doc))
@@ -1328,9 +1328,9 @@ export const modules = {
       get state() {
         return this._state || this.startState.applyTransaction(this), this._state
       }
-      annotation(HH) {
-        for (let BH of this.annotations)
-          if (BH.type == HH) return BH.value
+      annotation(BB) {
+        for (let OB of this.annotations)
+          if (OB.type == BB) return OB.value
       }
       get docChanged() {
         return !this.changes.empty
@@ -1338,584 +1338,584 @@ export const modules = {
       get reconfigured() {
         return this.startState.config != this.state.config
       }
-      isUserEvent(HH) {
-        let BH = this.annotation(UB.userEvent);
-        return !(!BH || !(BH == HH || BH.length > HH.length && BH.slice(0, HH.length) == HH && "." == BH[HH.length]))
+      isUserEvent(BB) {
+        let OB = this.annotation(SO.userEvent);
+        return !(!OB || !(OB == BB || OB.length > BB.length && OB.slice(0, BB.length) == BB && "." == OB[BB.length]))
       }
     }
 
-    function VB(HH, BH) {
-      let LH = [];
-      for (let AH = 0, rH = 0;;) {
-        let SH, hH;
-        if (AH < HH.length && (rH == BH.length || BH[rH] >= HH[AH])) SH = HH[AH++], hH = HH[AH++];
+    function nO(BB, OB) {
+      let GB = [];
+      for (let YB = 0, DB = 0;;) {
+        let QB, oB;
+        if (YB < BB.length && (DB == OB.length || OB[DB] >= BB[YB])) QB = BB[YB++], oB = BB[YB++];
         else {
-          if (!(rH < BH.length)) return LH;
-          SH = BH[rH++], hH = BH[rH++]
-        }!LH.length || LH[LH.length - 1] < SH ? LH.push(SH, hH) : LH[LH.length - 1] < hH && (LH[LH.length - 1] = hH)
+          if (!(DB < OB.length)) return GB;
+          QB = OB[DB++], oB = OB[DB++]
+        }!GB.length || GB[GB.length - 1] < QB ? GB.push(QB, oB) : GB[GB.length - 1] < oB && (GB[GB.length - 1] = oB)
       }
     }
 
-    function OB(HH, BH, LH) {
-      var AH;
-      let rH, SH, hH;
-      return LH ? (rH = BH.changes, SH = KH.empty(BH.changes.length), hH = HH.changes.compose(BH.changes)) : (rH = BH.changes.map(HH.changes), SH = HH.changes.mapDesc(BH.changes, !0), hH = HH.changes.compose(rH)), {
-        changes: hH,
-        selection: BH.selection ? BH.selection.map(SH) : null === (AH = HH.selection) || void 0 === AH ? void 0 : AH.map(rH),
-        effects: TB.mapEffects(HH.effects, rH).concat(TB.mapEffects(BH.effects, SH)),
-        annotations: HH.annotations.length ? HH.annotations.concat(BH.annotations) : BH.annotations,
-        scrollIntoView: HH.scrollIntoView || BH.scrollIntoView
+    function UO(BB, OB, GB) {
+      var YB;
+      let DB, QB, oB;
+      return GB ? (DB = OB.changes, QB = FB.empty(OB.changes.length), oB = BB.changes.compose(OB.changes)) : (DB = OB.changes.map(BB.changes), QB = BB.changes.mapDesc(OB.changes, !0), oB = BB.changes.compose(DB)), {
+        changes: oB,
+        selection: OB.selection ? OB.selection.map(QB) : null === (YB = BB.selection) || void 0 === YB ? void 0 : YB.map(DB),
+        effects: VO.mapEffects(BB.effects, DB).concat(VO.mapEffects(OB.effects, QB)),
+        annotations: BB.annotations.length ? BB.annotations.concat(OB.annotations) : OB.annotations,
+        scrollIntoView: BB.scrollIntoView || OB.scrollIntoView
       }
     }
 
-    function bB(HH, BH, LH) {
-      let AH = BH.selection,
-        rH = oB(BH.annotations);
-      return BH.userEvent && (rH = rH.concat(UB.userEvent.of(BH.userEvent))), {
-        changes: BH.changes instanceof KH ? BH.changes : KH.of(BH.changes || [], LH, HH.facet(YB)),
-        selection: AH && (AH instanceof nH ? AH : nH.single(AH.anchor, AH.head)),
-        effects: oB(BH.effects),
-        annotations: rH,
-        scrollIntoView: !!BH.scrollIntoView
+    function fO(BB, OB, GB) {
+      let YB = OB.selection,
+        DB = KO(OB.annotations);
+      return OB.userEvent && (DB = DB.concat(SO.userEvent.of(OB.userEvent))), {
+        changes: OB.changes instanceof FB ? OB.changes : FB.of(OB.changes || [], GB, BB.facet(lO)),
+        selection: YB && (YB instanceof cB ? YB : cB.single(YB.anchor, YB.head)),
+        effects: KO(OB.effects),
+        annotations: DB,
+        scrollIntoView: !!OB.scrollIntoView
       }
     }
 
-    function kB(HH, BH, LH) {
-      let AH = bB(HH, BH.length ? BH[0] : {}, HH.doc.length);
-      BH.length && !1 === BH[0].filter && (LH = !1);
-      for (let SH = 1; SH < BH.length; SH++) {
-        !1 === BH[SH].filter && (LH = !1);
-        let rH = !!BH[SH].sequential;
-        AH = OB(AH, bB(HH, BH[SH], rH ? AH.changes.newLength : HH.doc.length), rH)
+    function kO(BB, OB, GB) {
+      let YB = fO(BB, OB.length ? OB[0] : {}, BB.doc.length);
+      OB.length && !1 === OB[0].filter && (GB = !1);
+      for (let QB = 1; QB < OB.length; QB++) {
+        !1 === OB[QB].filter && (GB = !1);
+        let DB = !!OB[QB].sequential;
+        YB = UO(YB, fO(BB, OB[QB], DB ? YB.changes.newLength : BB.doc.length), DB)
       }
-      let rH = UB.create(HH, AH.changes, AH.selection, AH.effects, AH.annotations, AH.scrollIntoView);
-      return function(HH) {
-        let BH = HH.startState,
-          LH = BH.facet(WB),
-          AH = HH;
-        for (let rH = LH.length - 1; rH >= 0; rH--) {
-          let SH = LH[rH](HH);
-          SH && Object.keys(SH).length && (AH = OB(AH, bB(BH, SH, HH.changes.newLength), !0))
+      let DB = SO.create(BB, YB.changes, YB.selection, YB.effects, YB.annotations, YB.scrollIntoView);
+      return function(BB) {
+        let OB = BB.startState,
+          GB = OB.facet(ZO),
+          YB = BB;
+        for (let DB = GB.length - 1; DB >= 0; DB--) {
+          let QB = GB[DB](BB);
+          QB && Object.keys(QB).length && (YB = UO(YB, fO(OB, QB, BB.changes.newLength), !0))
         }
-        return AH == HH ? HH : UB.create(BH, HH.changes, HH.selection, AH.effects, AH.annotations, AH.scrollIntoView)
-      }(LH ? function(HH) {
-        let BH = HH.startState,
-          LH = !0;
-        for (let rH of BH.facet(uB)) {
-          let BH = rH(HH);
-          if (!1 === BH) {
-            LH = !1;
+        return YB == BB ? BB : SO.create(OB, BB.changes, BB.selection, YB.effects, YB.annotations, YB.scrollIntoView)
+      }(GB ? function(BB) {
+        let OB = BB.startState,
+          GB = !0;
+        for (let DB of OB.facet(pO)) {
+          let OB = DB(BB);
+          if (!1 === OB) {
+            GB = !1;
             break
           }
-          Array.isArray(BH) && (LH = !0 === LH ? BH : VB(LH, BH))
+          Array.isArray(OB) && (GB = !0 === GB ? OB : nO(GB, OB))
         }
-        if (!0 !== LH) {
-          let AH, rH;
-          if (!1 === LH) rH = HH.changes.invertedDesc, AH = KH.empty(BH.doc.length);
+        if (!0 !== GB) {
+          let YB, DB;
+          if (!1 === GB) DB = BB.changes.invertedDesc, YB = FB.empty(OB.doc.length);
           else {
-            let BH = HH.changes.filter(LH);
-            AH = BH.changes, rH = BH.filtered.mapDesc(BH.changes).invertedDesc
+            let OB = BB.changes.filter(GB);
+            YB = OB.changes, DB = OB.filtered.mapDesc(OB.changes).invertedDesc
           }
-          HH = UB.create(BH, AH, HH.selection && HH.selection.map(rH), TB.mapEffects(HH.effects, rH), HH.annotations, HH.scrollIntoView)
+          BB = SO.create(OB, YB, BB.selection && BB.selection.map(DB), VO.mapEffects(BB.effects, DB), BB.annotations, BB.scrollIntoView)
         }
-        let AH = BH.facet(QB);
-        for (let rH = AH.length - 1; rH >= 0; rH--) {
-          let LH = AH[rH](HH);
-          HH = LH instanceof UB ? LH : Array.isArray(LH) && 1 == LH.length && LH[0] instanceof UB ? LH[0] : kB(BH, oB(LH), !1)
+        let YB = OB.facet(qO);
+        for (let DB = YB.length - 1; DB >= 0; DB--) {
+          let GB = YB[DB](BB);
+          BB = GB instanceof SO ? GB : Array.isArray(GB) && 1 == GB.length && GB[0] instanceof SO ? GB[0] : kO(OB, KO(GB), !1)
         }
-        return HH
-      }(rH) : rH)
+        return BB
+      }(DB) : DB)
     }
-    UB.time = xB.define(), UB.userEvent = xB.define(), UB.addToHistory = xB.define(), UB.remote = xB.define();
-    const mB = [];
+    SO.time = RO.define(), SO.userEvent = RO.define(), SO.addToHistory = RO.define(), SO.remote = RO.define();
+    const dO = [];
 
-    function oB(HH) {
-      return null == HH ? mB : Array.isArray(HH) ? HH : [HH]
+    function KO(BB) {
+      return null == BB ? dO : Array.isArray(BB) ? BB : [BB]
     }
-    var IB = function(HH) {
-      return HH[HH.Word = 0] = "Word", HH[HH.Space = 1] = "Space", HH[HH.Other = 2] = "Other", HH
-    }(IB || (IB = {}));
-    const fB = /[\u00df\u0587\u0590-\u05f4\u0600-\u06ff\u3040-\u309f\u30a0-\u30ff\u3400-\u4db5\u4e00-\u9fcc\uac00-\ud7af]/;
-    let lB;
+    var uO = function(BB) {
+      return BB[BB.Word = 0] = "Word", BB[BB.Space = 1] = "Space", BB[BB.Other = 2] = "Other", BB
+    }(uO || (uO = {}));
+    const mO = /[\u00df\u0587\u0590-\u05f4\u0600-\u06ff\u3040-\u309f\u30a0-\u30ff\u3400-\u4db5\u4e00-\u9fcc\uac00-\ud7af]/;
+    let IO;
     try {
-      lB = new RegExp("[\\p{Alphabetic}\\p{Number}_]", "u")
-    } catch (LL) {}
+      IO = new RegExp("[\\p{Alphabetic}\\p{Number}_]", "u")
+    } catch (GG) {}
 
-    function KB(HH) {
-      return BH => {
-        if (!/\S/.test(BH)) return IB.Space;
-        if (function(HH) {
-            if (lB) return lB.test(HH);
-            for (let BH = 0; BH < HH.length; BH++) {
-              let LH = HH[BH];
-              if (/\w/.test(LH) || LH > "\x80" && (LH.toUpperCase() != LH.toLowerCase() || fB.test(LH))) return !0
+    function FO(BB) {
+      return OB => {
+        if (!/\S/.test(OB)) return uO.Space;
+        if (function(BB) {
+            if (IO) return IO.test(BB);
+            for (let OB = 0; OB < BB.length; OB++) {
+              let GB = BB[OB];
+              if (/\w/.test(GB) || GB > "\x80" && (GB.toUpperCase() != GB.toLowerCase() || mO.test(GB))) return !0
             }
             return !1
-          }(BH)) return IB.Word;
-        for (let LH = 0; LH < HH.length; LH++)
-          if (BH.indexOf(HH[LH]) > -1) return IB.Word;
-        return IB.Other
+          }(OB)) return uO.Word;
+        for (let GB = 0; GB < BB.length; GB++)
+          if (OB.indexOf(BB[GB]) > -1) return uO.Word;
+        return uO.Other
       }
     }
-    class cB {
-      constructor(HH, BH, LH, AH, rH, SH) {
-        this.config = HH, this.doc = BH, this.selection = LH, this.values = AH, this.status = HH.statusTemplate.slice(), this.computeSlot = rH, SH && (SH._state = this);
-        for (let hH = 0; hH < this.config.dynamicSlots.length; hH++) CB(this, hH << 1);
+    class iO {
+      constructor(BB, OB, GB, YB, DB, QB) {
+        this.config = BB, this.doc = OB, this.selection = GB, this.values = YB, this.status = BB.statusTemplate.slice(), this.computeSlot = DB, QB && (QB._state = this);
+        for (let oB = 0; oB < this.config.dynamicSlots.length; oB++) JO(this, oB << 1);
         this.computeSlot = null
       }
-      field(HH) {
-        let BH = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
-          LH = this.config.address[HH.id];
-        if (null != LH) return CB(this, LH), EB(this, LH);
-        if (BH) throw new RangeError("Field is not present in this state")
+      field(BB) {
+        let OB = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
+          GB = this.config.address[BB.id];
+        if (null != GB) return JO(this, GB), MO(this, GB);
+        if (OB) throw new RangeError("Field is not present in this state")
       }
       update() {
-        for (var HH = arguments.length, BH = new Array(HH), LH = 0; LH < HH; LH++) BH[LH] = arguments[LH];
-        return kB(this, BH, !0)
+        for (var BB = arguments.length, OB = new Array(BB), GB = 0; GB < BB; GB++) OB[GB] = arguments[GB];
+        return kO(this, OB, !0)
       }
-      applyTransaction(HH) {
-        let BH, LH = this.config,
+      applyTransaction(BB) {
+        let OB, GB = this.config,
           {
-            base: AH,
-            compartments: rH
-          } = LH;
-        for (let hH of HH.effects) hH.is(hB.reconfigure) ? (LH && (rH = new Map, LH.compartments.forEach(((HH, BH) => rH.set(BH, HH))), LH = null), rH.set(hH.value.compartment, hH.value.extension)) : hH.is(TB.reconfigure) ? (LH = null, AH = hH.value) : hH.is(TB.appendConfig) && (LH = null, AH = oB(AH).concat(hH.value));
-        if (LH) BH = HH.startState.values.slice();
+            base: YB,
+            compartments: DB
+          } = GB;
+        for (let oB of BB.effects) oB.is(oO.reconfigure) ? (GB && (DB = new Map, GB.compartments.forEach(((BB, OB) => DB.set(OB, BB))), GB = null), DB.set(oB.value.compartment, oB.value.extension)) : oB.is(VO.reconfigure) ? (GB = null, YB = oB.value) : oB.is(VO.appendConfig) && (GB = null, YB = KO(YB).concat(oB.value));
+        if (GB) OB = BB.startState.values.slice();
         else {
-          LH = zB.resolve(AH, rH, this), BH = new cB(LH, this.doc, this.selection, LH.dynamicSlots.map((() => null)), ((HH, BH) => BH.reconfigure(HH, this)), null).values
+          GB = yO.resolve(YB, DB, this), OB = new iO(GB, this.doc, this.selection, GB.dynamicSlots.map((() => null)), ((BB, OB) => OB.reconfigure(BB, this)), null).values
         }
-        let SH = HH.startState.facet(GB) ? HH.newSelection : HH.newSelection.asSingle();
-        new cB(LH, HH.newDoc, SH, BH, ((BH, LH) => LH.update(BH, HH)), HH)
+        let QB = BB.startState.facet(zO) ? BB.newSelection : BB.newSelection.asSingle();
+        new iO(GB, BB.newDoc, QB, OB, ((OB, GB) => GB.update(OB, BB)), BB)
       }
-      replaceSelection(HH) {
-        return "string" == typeof HH && (HH = this.toText(HH)), this.changeByRange((BH => ({
+      replaceSelection(BB) {
+        return "string" == typeof BB && (BB = this.toText(BB)), this.changeByRange((OB => ({
           changes: {
-            from: BH.from,
-            to: BH.to,
-            insert: HH
+            from: OB.from,
+            to: OB.to,
+            insert: BB
           },
-          range: nH.cursor(BH.from + HH.length)
+          range: cB.cursor(OB.from + BB.length)
         })))
       }
-      changeByRange(HH) {
-        let BH = this.selection,
-          LH = HH(BH.rW[0]),
-          AH = this.changes(LH.changes),
-          rH = [LH.range],
-          SH = oB(LH.effects);
-        for (let hH = 1; hH < BH.rW.length; hH++) {
-          let LH = HH(BH.rW[hH]),
-            tH = this.changes(LH.changes),
-            zH = tH.map(AH);
-          for (let HH = 0; HH < hH; HH++) rH[HH] = rH[HH].map(zH);
-          let CH = AH.mapDesc(tH, !0);
-          rH.push(LH.range.map(CH)), AH = AH.compose(zH), SH = TB.mapEffects(SH, zH).concat(TB.mapEffects(oB(LH.effects), CH))
+      changeByRange(BB) {
+        let OB = this.selection,
+          GB = BB(OB.JZ[0]),
+          YB = this.changes(GB.changes),
+          DB = [GB.range],
+          QB = KO(GB.effects);
+        for (let oB = 1; oB < OB.JZ.length; oB++) {
+          let GB = BB(OB.JZ[oB]),
+            jB = this.changes(GB.changes),
+            yB = jB.map(YB);
+          for (let BB = 0; BB < oB; BB++) DB[BB] = DB[BB].map(yB);
+          let JB = YB.mapDesc(jB, !0);
+          DB.push(GB.range.map(JB)), YB = YB.compose(yB), QB = VO.mapEffects(QB, yB).concat(VO.mapEffects(KO(GB.effects), JB))
         }
         return {
-          changes: AH,
-          selection: nH.create(rH, BH.mainIndex),
-          effects: SH
+          changes: YB,
+          selection: cB.create(DB, OB.mainIndex),
+          effects: QB
         }
       }
       changes() {
-        let HH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
-        return HH instanceof KH ? HH : KH.of(HH, this.doc.length, this.facet(cB.lineSeparator))
+        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
+        return BB instanceof FB ? BB : FB.of(BB, this.doc.length, this.facet(iO.lineSeparator))
       }
-      toText(HH) {
-        return QH.of(HH.split(this.facet(cB.lineSeparator) || IH))
+      toText(BB) {
+        return qB.of(BB.split(this.facet(iO.lineSeparator) || uB))
       }
       sliceDoc() {
-        let HH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.doc.length;
-        return this.doc.sliceString(HH, BH, this.lineBreak)
+        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.doc.length;
+        return this.doc.sliceString(BB, OB, this.lineBreak)
       }
-      facet(HH) {
-        let BH = this.config.address[HH.id];
-        return null == BH ? HH.default : (CB(this, BH), EB(this, BH))
+      facet(BB) {
+        let OB = this.config.address[BB.id];
+        return null == OB ? BB.default : (JO(this, OB), MO(this, OB))
       }
-      toJSON(HH) {
-        let BH = {
+      toJSON(BB) {
+        let OB = {
           doc: this.sliceDoc(),
           selection: this.selection.toJSON()
         };
-        if (HH)
-          for (let LH in HH) {
-            let AH = HH[LH];
-            AH instanceof pH && null != this.config.address[AH.id] && (BH[LH] = AH.spec.toJSON(this.field(HH[LH]), this))
+        if (BB)
+          for (let GB in BB) {
+            let YB = BB[GB];
+            YB instanceof xB && null != this.config.address[YB.id] && (OB[GB] = YB.spec.toJSON(this.field(BB[GB]), this))
           }
-        return BH
+        return OB
       }
-      static fromJSON(HH) {
-        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-          LH = arguments.length > 2 ? arguments[2] : void 0;
-        if (!HH || "string" != typeof HH.doc) throw new RangeError("Invalid JSON representation for EditorState");
-        let AH = [];
-        if (LH)
-          for (let rH in LH)
-            if (Object.prototype.hasOwnProperty.call(HH, rH)) {
-              let BH = LH[rH],
-                SH = HH[rH];
-              AH.push(BH.init((HH => BH.spec.fromJSON(SH, HH))))
-            } return cB.create({
-          doc: HH.doc,
-          selection: nH.fromJSON(HH.selection),
-          extensions: BH.extensions ? AH.concat([BH.extensions]) : AH
+      static fromJSON(BB) {
+        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+          GB = arguments.length > 2 ? arguments[2] : void 0;
+        if (!BB || "string" != typeof BB.doc) throw new RangeError("Invalid JSON representation for EditorState");
+        let YB = [];
+        if (GB)
+          for (let DB in GB)
+            if (Object.prototype.hasOwnProperty.call(BB, DB)) {
+              let OB = GB[DB],
+                QB = BB[DB];
+              YB.push(OB.init((BB => OB.spec.fromJSON(QB, BB))))
+            } return iO.create({
+          doc: BB.doc,
+          selection: cB.fromJSON(BB.selection),
+          extensions: OB.extensions ? YB.concat([OB.extensions]) : YB
         })
       }
       static create() {
-        let HH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-          BH = zB.resolve(HH.extensions || [], new Map),
-          LH = HH.doc instanceof QH ? HH.doc : QH.of((HH.doc || "").split(BH.staticFacet(cB.lineSeparator) || IH)),
-          AH = HH.selection ? HH.selection instanceof nH ? HH.selection : nH.single(HH.selection.anchor, HH.selection.head) : nH.single(0);
-        return FH(AH, LH.length), BH.staticFacet(GB) || (AH = AH.asSingle()), new cB(BH, LH, AH, BH.dynamicSlots.map((() => null)), ((HH, BH) => BH.create(HH)), null)
+        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
+          OB = yO.resolve(BB.extensions || [], new Map),
+          GB = BB.doc instanceof qB ? BB.doc : qB.of((BB.doc || "").split(OB.staticFacet(iO.lineSeparator) || uB)),
+          YB = BB.selection ? BB.selection instanceof cB ? BB.selection : cB.single(BB.selection.anchor, BB.selection.head) : cB.single(0);
+        return hB(YB, GB.length), OB.staticFacet(zO) || (YB = YB.asSingle()), new iO(OB, GB, YB, OB.dynamicSlots.map((() => null)), ((BB, OB) => OB.create(BB)), null)
       }
       get tabSize() {
-        return this.facet(cB.tabSize)
+        return this.facet(iO.tabSize)
       }
       get lineBreak() {
-        return this.facet(cB.lineSeparator) || "\n"
+        return this.facet(iO.lineSeparator) || "\n"
       }
       get readOnly() {
-        return this.facet(MB)
+        return this.facet(NO)
       }
-      phrase(HH) {
-        for (var BH = arguments.length, LH = new Array(BH > 1 ? BH - 1 : 0), AH = 1; AH < BH; AH++) LH[AH - 1] = arguments[AH];
-        for (let rH of this.facet(cB.phrases))
-          if (Object.prototype.hasOwnProperty.call(rH, HH)) {
-            HH = rH[HH];
+      phrase(BB) {
+        for (var OB = arguments.length, GB = new Array(OB > 1 ? OB - 1 : 0), YB = 1; YB < OB; YB++) GB[YB - 1] = arguments[YB];
+        for (let DB of this.facet(iO.phrases))
+          if (Object.prototype.hasOwnProperty.call(DB, BB)) {
+            BB = DB[BB];
             break
-          } return LH.length && (HH = HH.replace(/\$(\$|\d*)/g, ((HH, BH) => {
-          if ("$" == BH) return "$";
-          let AH = +(BH || 1);
-          return !AH || AH > LH.length ? HH : LH[AH - 1]
-        }))), HH
+          } return GB.length && (BB = BB.replace(/\$(\$|\d*)/g, ((BB, OB) => {
+          if ("$" == OB) return "$";
+          let YB = +(OB || 1);
+          return !YB || YB > GB.length ? BB : GB[YB - 1]
+        }))), BB
       }
-      languageDataAt(HH, BH) {
-        let LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1,
-          AH = [];
-        for (let rH of this.facet(XB))
-          for (let SH of rH(this, BH, LH)) Object.prototype.hasOwnProperty.call(SH, HH) && AH.push(SH[HH]);
-        return AH
+      languageDataAt(BB, OB) {
+        let GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1,
+          YB = [];
+        for (let DB of this.facet(PO))
+          for (let QB of DB(this, OB, GB)) Object.prototype.hasOwnProperty.call(QB, BB) && YB.push(QB[BB]);
+        return YB
       }
-      charCategorizer(HH) {
-        let BH = this.languageDataAt("wordChars", HH);
-        return KB(BH.length ? BH[0] : "")
+      charCategorizer(BB) {
+        let OB = this.languageDataAt("wordChars", BB);
+        return FO(OB.length ? OB[0] : "")
       }
-      wordAt(HH) {
+      wordAt(BB) {
         let {
-          text: BH,
-          from: LH,
-          length: AH
-        } = this.doc.lineAt(HH), rH = this.charCategorizer(HH), SH = HH - LH, hH = HH - LH;
-        for (; SH > 0;) {
-          let HH = bH(BH, SH, !1);
-          if (rH(BH.slice(HH, SH)) != IB.Word) break;
-          SH = HH
+          text: OB,
+          from: GB,
+          length: YB
+        } = this.doc.lineAt(BB), DB = this.charCategorizer(BB), QB = BB - GB, oB = BB - GB;
+        for (; QB > 0;) {
+          let BB = fB(OB, QB, !1);
+          if (DB(OB.slice(BB, QB)) != uO.Word) break;
+          QB = BB
         }
-        for (; hH < AH;) {
-          let HH = bH(BH, hH);
-          if (rH(BH.slice(hH, HH)) != IB.Word) break;
-          hH = HH
+        for (; oB < YB;) {
+          let BB = fB(OB, oB);
+          if (DB(OB.slice(oB, BB)) != uO.Word) break;
+          oB = BB
         }
-        return SH == hH ? null : nH.range(SH + LH, hH + LH)
+        return QB == oB ? null : cB.range(QB + GB, oB + GB)
       }
     }
 
-    function eB(HH, BH) {
-      let LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        AH = {};
-      for (let rH of HH)
-        for (let HH of Object.keys(rH)) {
-          let BH = rH[HH],
-            SH = AH[HH];
-          if (void 0 === SH) AH[HH] = BH;
-          else if (SH === BH || void 0 === BH);
+    function LO(BB, OB) {
+      let GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+        YB = {};
+      for (let DB of BB)
+        for (let BB of Object.keys(DB)) {
+          let OB = DB[BB],
+            QB = YB[BB];
+          if (void 0 === QB) YB[BB] = OB;
+          else if (QB === OB || void 0 === OB);
           else {
-            if (!Object.hasOwnProperty.call(LH, HH)) throw new Error("Config merge conflict for field " + HH);
-            AH[HH] = LH[HH](SH, BH)
+            if (!Object.hasOwnProperty.call(GB, BB)) throw new Error("Config merge conflict for field " + BB);
+            YB[BB] = GB[BB](QB, OB)
           }
         }
-      for (let rH in BH) void 0 === AH[rH] && (AH[rH] = BH[rH]);
-      return AH
+      for (let DB in OB) void 0 === YB[DB] && (YB[DB] = OB[DB]);
+      return YB
     }
-    cB.allowMultipleSelections = GB, cB.tabSize = wH.define({
-      combine: HH => HH.length ? HH[0] : 4
-    }), cB.lineSeparator = YB, cB.readOnly = MB, cB.phrases = wH.define({
-      compare(HH, BH) {
-        let LH = Object.keys(HH),
-          AH = Object.keys(BH);
-        return LH.length == AH.length && LH.every((LH => HH[LH] == BH[LH]))
+    iO.allowMultipleSelections = zO, iO.tabSize = eB.define({
+      combine: BB => BB.length ? BB[0] : 4
+    }), iO.lineSeparator = lO, iO.readOnly = NO, iO.phrases = eB.define({
+      compare(BB, OB) {
+        let GB = Object.keys(BB),
+          YB = Object.keys(OB);
+        return GB.length == YB.length && GB.every((GB => BB[GB] == OB[GB]))
       }
-    }), cB.languageData = XB, cB.changeFilter = uB, cB.transactionFilter = QB, cB.transactionExtender = WB, hB.reconfigure = TB.define();
-    class qB {
-      eq(HH) {
-        return this == HH
+    }), iO.languageData = PO, iO.changeFilter = pO, iO.transactionFilter = qO, iO.transactionExtender = ZO, oO.reconfigure = VO.define();
+    class gO {
+      eq(BB) {
+        return this == BB
       }
-      range(HH) {
-        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : HH;
-        return NB.create(HH, BH, this)
-      }
-    }
-
-    function gB(HH, BH) {
-      return HH == BH || HH.constructor == BH.constructor && HH.eq(BH)
-    }
-    qB.prototype.startSide = qB.prototype.endSide = 0, qB.prototype.point = !1, qB.prototype.mapMode = fH.TrackDel;
-    class NB {
-      constructor(HH, BH, LH) {
-        this.from = HH, this.to = BH, this.value = LH
-      }
-      static create(HH, BH, LH) {
-        return new NB(HH, BH, LH)
+      range(BB) {
+        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : BB;
+        return XO.create(BB, OB, this)
       }
     }
 
-    function RB(HH, BH) {
-      return HH.from - BH.from || HH.value.startSide - BH.value.startSide
+    function rO(BB, OB) {
+      return BB == OB || BB.constructor == OB.constructor && BB.eq(OB)
     }
-    class jB {
-      constructor(HH, BH, LH, AH) {
-        this.from = HH, this.to = BH, this.value = LH, this.VrH = AH
+    gO.prototype.startSide = gO.prototype.endSide = 0, gO.prototype.point = !1, gO.prototype.mapMode = mB.TrackDel;
+    class XO {
+      constructor(BB, OB, GB) {
+        this.from = BB, this.to = OB, this.value = GB
+      }
+      static create(BB, OB, GB) {
+        return new XO(BB, OB, GB)
+      }
+    }
+
+    function wO(BB, OB) {
+      return BB.from - OB.from || BB.value.startSide - OB.value.startSide
+    }
+    class EO {
+      constructor(BB, OB, GB, YB) {
+        this.from = BB, this.to = OB, this.value = GB, this.iDB = YB
       }
       get length() {
         return this.to[this.to.length - 1]
       }
-      findIndex(HH, BH, LH) {
-        let AH = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-          rH = LH ? this.to : this.from;
-        for (let SH = AH, hH = rH.length;;) {
-          if (SH == hH) return SH;
-          let AH = SH + hH >> 1,
-            tH = rH[AH] - HH || (LH ? this.value[AH].endSide : this.value[AH].startSide) - BH;
-          if (AH == SH) return tH >= 0 ? SH : hH;
-          tH >= 0 ? hH = AH : SH = AH + 1
+      findIndex(BB, OB, GB) {
+        let YB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
+          DB = GB ? this.to : this.from;
+        for (let QB = YB, oB = DB.length;;) {
+          if (QB == oB) return QB;
+          let YB = QB + oB >> 1,
+            jB = DB[YB] - BB || (GB ? this.value[YB].endSide : this.value[YB].startSide) - OB;
+          if (YB == QB) return jB >= 0 ? QB : oB;
+          jB >= 0 ? oB = YB : QB = YB + 1
         }
       }
-      between(HH, BH, LH, AH) {
-        for (let rH = this.findIndex(BH, -1e9, !0), SH = this.findIndex(LH, 1e9, !1, rH); rH < SH; rH++)
-          if (!1 === AH(this.from[rH] + HH, this.to[rH] + HH, this.value[rH])) return !1
+      between(BB, OB, GB, YB) {
+        for (let DB = this.findIndex(OB, -1e9, !0), QB = this.findIndex(GB, 1e9, !1, DB); DB < QB; DB++)
+          if (!1 === YB(this.from[DB] + BB, this.to[DB] + BB, this.value[DB])) return !1
       }
-      map(HH, BH) {
-        let LH = [],
-          AH = [],
-          rH = [],
-          SH = -1,
-          hH = -1;
-        for (let tH = 0; tH < this.value.length; tH++) {
-          let zH, CH, EH = this.value[tH],
-            XH = this.from[tH] + HH,
-            GH = this.to[tH] + HH;
-          if (XH == GH) {
-            let HH = BH.mapPos(XH, EH.startSide, EH.mapMode);
-            if (null == HH) continue;
-            if (zH = CH = HH, EH.startSide != EH.endSide && (CH = BH.mapPos(XH, EH.endSide), CH < zH)) continue
-          } else if (zH = BH.mapPos(XH, EH.startSide), CH = BH.mapPos(GH, EH.endSide), zH > CH || zH == CH && EH.startSide > 0 && EH.endSide <= 0) continue;
-          (CH - zH || EH.endSide - EH.startSide) < 0 || (SH < 0 && (SH = zH), EH.point && (hH = Math.max(hH, CH - zH)), LH.push(EH), AH.push(zH - SH), rH.push(CH - SH))
+      map(BB, OB) {
+        let GB = [],
+          YB = [],
+          DB = [],
+          QB = -1,
+          oB = -1;
+        for (let jB = 0; jB < this.value.length; jB++) {
+          let yB, JB, MB = this.value[jB],
+            PB = this.from[jB] + BB,
+            zB = this.to[jB] + BB;
+          if (PB == zB) {
+            let BB = OB.mapPos(PB, MB.startSide, MB.mapMode);
+            if (null == BB) continue;
+            if (yB = JB = BB, MB.startSide != MB.endSide && (JB = OB.mapPos(PB, MB.endSide), JB < yB)) continue
+          } else if (yB = OB.mapPos(PB, MB.startSide), JB = OB.mapPos(zB, MB.endSide), yB > JB || yB == JB && MB.startSide > 0 && MB.endSide <= 0) continue;
+          (JB - yB || MB.endSide - MB.startSide) < 0 || (QB < 0 && (QB = yB), MB.point && (oB = Math.max(oB, JB - yB)), GB.push(MB), YB.push(yB - QB), DB.push(JB - QB))
         }
         return {
-          mapped: LH.length ? new jB(AH, rH, LH, hH) : null,
-          pos: SH
+          mapped: GB.length ? new EO(YB, DB, GB, oB) : null,
+          pos: QB
         }
       }
     }
-    class nB {
-      constructor(HH, BH, LH, AH) {
-        this.chunkPos = HH, this.chunk = BH, this.nextLayer = LH, this.VrH = AH
+    class cO {
+      constructor(BB, OB, GB, YB) {
+        this.chunkPos = BB, this.chunk = OB, this.nextLayer = GB, this.iDB = YB
       }
-      static create(HH, BH, LH, AH) {
-        return new nB(HH, BH, LH, AH)
+      static create(BB, OB, GB, YB) {
+        return new cO(BB, OB, GB, YB)
       }
       get length() {
-        let HH = this.chunk.length - 1;
-        return HH < 0 ? 0 : Math.max(this.chunkEnd(HH), this.nextLayer.length)
+        let BB = this.chunk.length - 1;
+        return BB < 0 ? 0 : Math.max(this.chunkEnd(BB), this.nextLayer.length)
       }
       get size() {
-        if (this.TX) return 0;
-        let HH = this.nextLayer.size;
-        for (let BH of this.chunk) HH += BH.value.length;
-        return HH
+        if (this.NP) return 0;
+        let BB = this.nextLayer.size;
+        for (let OB of this.chunk) BB += OB.value.length;
+        return BB
       }
-      chunkEnd(HH) {
-        return this.chunkPos[HH] + this.chunk[HH].length
+      chunkEnd(BB) {
+        return this.chunkPos[BB] + this.chunk[BB].length
       }
-      update(HH) {
+      update(BB) {
         let {
-          add: BH = [],
-          sort: LH = !1,
-          filterFrom: AH = 0,
-          filterTo: rH = this.length
-        } = HH, SH = HH.filter;
-        if (0 == BH.length && !SH) return this;
-        if (LH && (BH = BH.slice().sort(RB)), this.TX) return BH.length ? nB.of(BH) : this;
-        let hH = new wB(this, null, -1).goto(0),
-          tH = 0,
-          zH = [],
-          CH = new FB;
-        for (; hH.value || tH < BH.length;)
-          if (tH < BH.length && (hH.from - BH[tH].from || hH.startSide - BH[tH].value.startSide) >= 0) {
-            let HH = BH[tH++];
-            CH.addInner(HH.from, HH.to, HH.value) || zH.push(HH)
-          } else 1 == hH.rangeIndex && hH.chunkIndex < this.chunk.length && (tH == BH.length || this.chunkEnd(hH.chunkIndex) < BH[tH].from) && (!SH || AH > this.chunkEnd(hH.chunkIndex) || rH < this.chunkPos[hH.chunkIndex]) && CH.addChunk(this.chunkPos[hH.chunkIndex], this.chunk[hH.chunkIndex]) ? hH.nextChunk() : ((!SH || AH > hH.to || rH < hH.from || SH(hH.from, hH.to, hH.value)) && (CH.addInner(hH.from, hH.to, hH.value) || zH.push(NB.create(hH.from, hH.to, hH.value))), hH.next());
-        return CH.finishInner(this.nextLayer.TX && !zH.length ? nB.empty : this.nextLayer.update({
-          add: zH,
-          filter: SH,
-          filterFrom: AH,
-          filterTo: rH
+          add: OB = [],
+          sort: GB = !1,
+          filterFrom: YB = 0,
+          filterTo: DB = this.length
+        } = BB, QB = BB.filter;
+        if (0 == OB.length && !QB) return this;
+        if (GB && (OB = OB.slice().sort(wO)), this.NP) return OB.length ? cO.of(OB) : this;
+        let oB = new eO(this, null, -1).goto(0),
+          jB = 0,
+          yB = [],
+          JB = new hO;
+        for (; oB.value || jB < OB.length;)
+          if (jB < OB.length && (oB.from - OB[jB].from || oB.startSide - OB[jB].value.startSide) >= 0) {
+            let BB = OB[jB++];
+            JB.addInner(BB.from, BB.to, BB.value) || yB.push(BB)
+          } else 1 == oB.rangeIndex && oB.chunkIndex < this.chunk.length && (jB == OB.length || this.chunkEnd(oB.chunkIndex) < OB[jB].from) && (!QB || YB > this.chunkEnd(oB.chunkIndex) || DB < this.chunkPos[oB.chunkIndex]) && JB.addChunk(this.chunkPos[oB.chunkIndex], this.chunk[oB.chunkIndex]) ? oB.nextChunk() : ((!QB || YB > oB.to || DB < oB.from || QB(oB.from, oB.to, oB.value)) && (JB.addInner(oB.from, oB.to, oB.value) || yB.push(XO.create(oB.from, oB.to, oB.value))), oB.next());
+        return JB.finishInner(this.nextLayer.NP && !yB.length ? cO.empty : this.nextLayer.update({
+          add: yB,
+          filter: QB,
+          filterFrom: YB,
+          filterTo: DB
         }))
       }
-      map(HH) {
-        if (HH.empty || this.TX) return this;
-        let BH = [],
-          LH = [],
-          AH = -1;
-        for (let SH = 0; SH < this.chunk.length; SH++) {
-          let rH = this.chunkPos[SH],
-            hH = this.chunk[SH],
-            tH = HH.touchesRange(rH, rH + hH.length);
-          if (!1 === tH) AH = Math.max(AH, hH.VrH), BH.push(hH), LH.push(HH.mapPos(rH));
-          else if (!0 === tH) {
+      map(BB) {
+        if (BB.empty || this.NP) return this;
+        let OB = [],
+          GB = [],
+          YB = -1;
+        for (let QB = 0; QB < this.chunk.length; QB++) {
+          let DB = this.chunkPos[QB],
+            oB = this.chunk[QB],
+            jB = BB.touchesRange(DB, DB + oB.length);
+          if (!1 === jB) YB = Math.max(YB, oB.iDB), OB.push(oB), GB.push(BB.mapPos(DB));
+          else if (!0 === jB) {
             let {
-              mapped: SH,
-              pos: tH
-            } = hH.map(rH, HH);
-            SH && (AH = Math.max(AH, SH.VrH), BH.push(SH), LH.push(tH))
+              mapped: QB,
+              pos: jB
+            } = oB.map(DB, BB);
+            QB && (YB = Math.max(YB, QB.iDB), OB.push(QB), GB.push(jB))
           }
         }
-        let rH = this.nextLayer.map(HH);
-        return 0 == BH.length ? rH : new nB(LH, BH, rH || nB.empty, AH)
+        let DB = this.nextLayer.map(BB);
+        return 0 == OB.length ? DB : new cO(GB, OB, DB || cO.empty, YB)
       }
-      between(HH, BH, LH) {
-        if (!this.TX) {
-          for (let AH = 0; AH < this.chunk.length; AH++) {
-            let rH = this.chunkPos[AH],
-              SH = this.chunk[AH];
-            if (BH >= rH && HH <= rH + SH.length && !1 === SH.between(rH, HH - rH, BH - rH, LH)) return
+      between(BB, OB, GB) {
+        if (!this.NP) {
+          for (let YB = 0; YB < this.chunk.length; YB++) {
+            let DB = this.chunkPos[YB],
+              QB = this.chunk[YB];
+            if (OB >= DB && BB <= DB + QB.length && !1 === QB.between(DB, BB - DB, OB - DB, GB)) return
           }
-          this.nextLayer.between(HH, BH, LH)
+          this.nextLayer.between(BB, OB, GB)
         }
       }
       iter() {
-        let HH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-        return ZB.from([this]).goto(HH)
+        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
+        return TO.from([this]).goto(BB)
       }
-      get TX() {
+      get NP() {
         return this.nextLayer == this
       }
-      static iter(HH) {
-        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return ZB.from(HH).goto(BH)
+      static iter(BB) {
+        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return TO.from(BB).goto(OB)
       }
-      static compare(HH, BH, LH, AH) {
-        let rH = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : -1,
-          SH = HH.filter((HH => HH.VrH > 0 || !HH.TX && HH.VrH >= rH)),
-          hH = BH.filter((HH => HH.VrH > 0 || !HH.TX && HH.VrH >= rH)),
-          tH = DB(SH, hH, LH),
-          zH = new aB(SH, tH, rH),
-          CH = new aB(hH, tH, rH);
-        LH.iterGaps(((HH, BH, LH) => sB(zH, HH, CH, BH, LH, AH))), LH.empty && 0 == LH.length && sB(zH, 0, CH, 0, 0, AH)
+      static compare(BB, OB, GB, YB) {
+        let DB = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : -1,
+          QB = BB.filter((BB => BB.iDB > 0 || !BB.NP && BB.iDB >= DB)),
+          oB = OB.filter((BB => BB.iDB > 0 || !BB.NP && BB.iDB >= DB)),
+          jB = aO(QB, oB, GB),
+          yB = new CO(QB, jB, DB),
+          JB = new CO(oB, jB, DB);
+        GB.iterGaps(((BB, OB, GB) => HO(yB, BB, JB, OB, GB, YB))), GB.empty && 0 == GB.length && HO(yB, 0, JB, 0, 0, YB)
       }
-      static eq(HH, BH) {
-        let LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          AH = arguments.length > 3 ? arguments[3] : void 0;
-        null == AH && (AH = 999999999);
-        let rH = HH.filter((HH => !HH.TX && BH.indexOf(HH) < 0)),
-          SH = BH.filter((BH => !BH.TX && HH.indexOf(BH) < 0));
-        if (rH.length != SH.length) return !1;
-        if (!rH.length) return !0;
-        let hH = DB(rH, SH),
-          tH = new aB(rH, hH, 0).goto(LH),
-          zH = new aB(SH, hH, 0).goto(LH);
+      static eq(BB, OB) {
+        let GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          YB = arguments.length > 3 ? arguments[3] : void 0;
+        null == YB && (YB = 999999999);
+        let DB = BB.filter((BB => !BB.NP && OB.indexOf(BB) < 0)),
+          QB = OB.filter((OB => !OB.NP && BB.indexOf(OB) < 0));
+        if (DB.length != QB.length) return !1;
+        if (!DB.length) return !0;
+        let oB = aO(DB, QB),
+          jB = new CO(DB, oB, 0).goto(GB),
+          yB = new CO(QB, oB, 0).goto(GB);
         for (;;) {
-          if (tH.to != zH.to || !JB(tH.active, zH.active) || tH.point && (!zH.point || !gB(tH.point, zH.point))) return !1;
-          if (tH.to > AH) return !0;
-          tH.next(), zH.next()
+          if (jB.to != yB.to || !vO(jB.active, yB.active) || jB.point && (!yB.point || !rO(jB.point, yB.point))) return !1;
+          if (jB.to > YB) return !0;
+          jB.next(), yB.next()
         }
       }
-      static spans(HH, BH, LH, AH) {
-        let rH = new aB(HH, null, arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : -1).goto(BH),
-          SH = BH,
-          hH = rH.openStart;
+      static spans(BB, OB, GB, YB) {
+        let DB = new CO(BB, null, arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : -1).goto(OB),
+          QB = OB,
+          oB = DB.openStart;
         for (;;) {
-          let HH = Math.min(rH.to, LH);
-          if (rH.point) {
-            let LH = rH.activeForPoint(rH.to),
-              tH = rH.pointFrom < BH ? LH.length + 1 : rH.point.startSide < 0 ? LH.length : Math.min(LH.length, hH);
-            AH.point(SH, HH, rH.point, LH, tH, rH.pointRank), hH = Math.min(rH.openEnd(HH), LH.length)
-          } else HH > SH && (AH.span(SH, HH, rH.active, hH), hH = rH.openEnd(HH));
-          if (rH.to > LH) return hH + (rH.point && rH.to > LH ? 1 : 0);
-          SH = rH.to, rH.next()
+          let BB = Math.min(DB.to, GB);
+          if (DB.point) {
+            let GB = DB.activeForPoint(DB.to),
+              jB = DB.pointFrom < OB ? GB.length + 1 : DB.point.startSide < 0 ? GB.length : Math.min(GB.length, oB);
+            YB.point(QB, BB, DB.point, GB, jB, DB.pointRank), oB = Math.min(DB.openEnd(BB), GB.length)
+          } else BB > QB && (YB.span(QB, BB, DB.active, oB), oB = DB.openEnd(BB));
+          if (DB.to > GB) return oB + (DB.point && DB.to > GB ? 1 : 0);
+          QB = DB.to, DB.next()
         }
       }
-      static of (HH) {
-        let BH = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          LH = new FB;
-        for (let AH of HH instanceof NB ? [HH] : BH ? function(HH) {
-            if (HH.length > 1)
-              for (let BH = HH[0], LH = 1; LH < HH.length; LH++) {
-                let AH = HH[LH];
-                if (RB(BH, AH) > 0) return HH.slice().sort(RB);
-                BH = AH
+      static of (BB) {
+        let OB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          GB = new hO;
+        for (let YB of BB instanceof XO ? [BB] : OB ? function(BB) {
+            if (BB.length > 1)
+              for (let OB = BB[0], GB = 1; GB < BB.length; GB++) {
+                let YB = BB[GB];
+                if (wO(OB, YB) > 0) return BB.slice().sort(wO);
+                OB = YB
               }
-            return HH
-          }(HH) : HH) LH.add(AH.from, AH.to, AH.value);
-        return LH.finish()
+            return BB
+          }(BB) : BB) GB.add(YB.from, YB.to, YB.value);
+        return GB.finish()
       }
-      static join(HH) {
-        if (!HH.length) return nB.empty;
-        let BH = HH[HH.length - 1];
-        for (let LH = HH.length - 2; LH >= 0; LH--)
-          for (let AH = HH[LH]; AH != nB.empty; AH = AH.nextLayer) BH = new nB(AH.chunkPos, AH.chunk, BH, Math.max(AH.VrH, BH.VrH));
-        return BH
+      static join(BB) {
+        if (!BB.length) return cO.empty;
+        let OB = BB[BB.length - 1];
+        for (let GB = BB.length - 2; GB >= 0; GB--)
+          for (let YB = BB[GB]; YB != cO.empty; YB = YB.nextLayer) OB = new cO(YB.chunkPos, YB.chunk, OB, Math.max(YB.iDB, OB.iDB));
+        return OB
       }
     }
-    nB.empty = new nB([], [], null, -1), nB.empty.nextLayer = nB.empty;
-    class FB {
-      finishChunk(HH) {
-        this.chunks.push(new jB(this.from, this.to, this.value, this.VrH)), this.chunkPos.push(this.chunkStart), this.chunkStart = -1, this.setMaxPoint = Math.max(this.setMaxPoint, this.VrH), this.VrH = -1, HH && (this.from = [], this.to = [], this.value = [])
+    cO.empty = new cO([], [], null, -1), cO.empty.nextLayer = cO.empty;
+    class hO {
+      finishChunk(BB) {
+        this.chunks.push(new EO(this.from, this.to, this.value, this.iDB)), this.chunkPos.push(this.chunkStart), this.chunkStart = -1, this.setMaxPoint = Math.max(this.setMaxPoint, this.iDB), this.iDB = -1, BB && (this.from = [], this.to = [], this.value = [])
       }
       constructor() {
-        this.chunks = [], this.chunkPos = [], this.chunkStart = -1, this.last = null, this.lastFrom = -1e9, this.lastTo = -1e9, this.from = [], this.to = [], this.value = [], this.VrH = -1, this.setMaxPoint = -1, this.nextLayer = null
+        this.chunks = [], this.chunkPos = [], this.chunkStart = -1, this.last = null, this.lastFrom = -1e9, this.lastTo = -1e9, this.from = [], this.to = [], this.value = [], this.iDB = -1, this.setMaxPoint = -1, this.nextLayer = null
       }
-      add(HH, BH, LH) {
-        this.addInner(HH, BH, LH) || (this.nextLayer || (this.nextLayer = new FB)).add(HH, BH, LH)
+      add(BB, OB, GB) {
+        this.addInner(BB, OB, GB) || (this.nextLayer || (this.nextLayer = new hO)).add(BB, OB, GB)
       }
-      addInner(HH, BH, LH) {
-        let AH = HH - this.lastTo || LH.startSide - this.last.endSide;
-        if (AH <= 0 && (HH - this.lastFrom || LH.startSide - this.last.startSide) < 0) throw new Error("Ranges must be added sorted by `from` position and `startSide`");
-        return !(AH < 0) && (250 == this.from.length && this.finishChunk(!0), this.chunkStart < 0 && (this.chunkStart = HH), this.from.push(HH - this.chunkStart), this.to.push(BH - this.chunkStart), this.last = LH, this.lastFrom = HH, this.lastTo = BH, this.value.push(LH), LH.point && (this.VrH = Math.max(this.VrH, BH - HH)), !0)
+      addInner(BB, OB, GB) {
+        let YB = BB - this.lastTo || GB.startSide - this.last.endSide;
+        if (YB <= 0 && (BB - this.lastFrom || GB.startSide - this.last.startSide) < 0) throw new Error("Ranges must be added sorted by `from` position and `startSide`");
+        return !(YB < 0) && (250 == this.from.length && this.finishChunk(!0), this.chunkStart < 0 && (this.chunkStart = BB), this.from.push(BB - this.chunkStart), this.to.push(OB - this.chunkStart), this.last = GB, this.lastFrom = BB, this.lastTo = OB, this.value.push(GB), GB.point && (this.iDB = Math.max(this.iDB, OB - BB)), !0)
       }
-      addChunk(HH, BH) {
-        if ((HH - this.lastTo || BH.value[0].startSide - this.last.endSide) < 0) return !1;
-        this.from.length && this.finishChunk(!0), this.setMaxPoint = Math.max(this.setMaxPoint, BH.VrH), this.chunks.push(BH), this.chunkPos.push(HH);
-        let LH = BH.value.length - 1;
-        return this.last = BH.value[LH], this.lastFrom = BH.from[LH] + HH, this.lastTo = BH.to[LH] + HH, !0
+      addChunk(BB, OB) {
+        if ((BB - this.lastTo || OB.value[0].startSide - this.last.endSide) < 0) return !1;
+        this.from.length && this.finishChunk(!0), this.setMaxPoint = Math.max(this.setMaxPoint, OB.iDB), this.chunks.push(OB), this.chunkPos.push(BB);
+        let GB = OB.value.length - 1;
+        return this.last = OB.value[GB], this.lastFrom = OB.from[GB] + BB, this.lastTo = OB.to[GB] + BB, !0
       }
       finish() {
-        return this.finishInner(nB.empty)
+        return this.finishInner(cO.empty)
       }
-      finishInner(HH) {
-        if (this.from.length && this.finishChunk(!1), 0 == this.chunks.length) return HH;
-        let BH = nB.create(this.chunkPos, this.chunks, this.nextLayer ? this.nextLayer.finishInner(HH) : HH, this.setMaxPoint);
-        return this.from = null, BH
+      finishInner(BB) {
+        if (this.from.length && this.finishChunk(!1), 0 == this.chunks.length) return BB;
+        let OB = cO.create(this.chunkPos, this.chunks, this.nextLayer ? this.nextLayer.finishInner(BB) : BB, this.setMaxPoint);
+        return this.from = null, OB
       }
     }
 
-    function DB(HH, BH, LH) {
-      let AH = new Map;
-      for (let SH of HH)
-        for (let HH = 0; HH < SH.chunk.length; HH++) SH.chunk[HH].VrH <= 0 && AH.set(SH.chunk[HH], SH.chunkPos[HH]);
-      let rH = new Set;
-      for (let SH of BH)
-        for (let HH = 0; HH < SH.chunk.length; HH++) {
-          let BH = AH.get(SH.chunk[HH]);
-          null == BH || (LH ? LH.mapPos(BH) : BH) != SH.chunkPos[HH] || (null === LH || void 0 === LH ? void 0 : LH.touchesRange(BH, BH + SH.chunk[HH].length)) || rH.add(SH.chunk[HH])
+    function aO(BB, OB, GB) {
+      let YB = new Map;
+      for (let QB of BB)
+        for (let BB = 0; BB < QB.chunk.length; BB++) QB.chunk[BB].iDB <= 0 && YB.set(QB.chunk[BB], QB.chunkPos[BB]);
+      let DB = new Set;
+      for (let QB of OB)
+        for (let BB = 0; BB < QB.chunk.length; BB++) {
+          let OB = YB.get(QB.chunk[BB]);
+          null == OB || (GB ? GB.mapPos(OB) : OB) != QB.chunkPos[BB] || (null === GB || void 0 === GB ? void 0 : GB.touchesRange(OB, OB + QB.chunk[BB].length)) || DB.add(QB.chunk[BB])
         }
-      return rH
+      return DB
     }
-    class wB {
-      constructor(HH, BH, LH) {
-        let AH = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-        this.layer = HH, this.skip = BH, this.OrH = LH, this.rank = AH
+    class eO {
+      constructor(BB, OB, GB) {
+        let YB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+        this.layer = BB, this.skip = OB, this.LDB = GB, this.rank = YB
       }
       get startSide() {
         return this.value ? this.value.startSide : 0
@@ -1923,24 +1923,24 @@ export const modules = {
       get endSide() {
         return this.value ? this.value.endSide : 0
       }
-      goto(HH) {
-        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1e9;
-        return this.chunkIndex = this.rangeIndex = 0, this.gotoInner(HH, BH, !1), this
+      goto(BB) {
+        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1e9;
+        return this.chunkIndex = this.rangeIndex = 0, this.gotoInner(BB, OB, !1), this
       }
-      gotoInner(HH, BH, LH) {
+      gotoInner(BB, OB, GB) {
         for (; this.chunkIndex < this.layer.chunk.length;) {
-          let BH = this.layer.chunk[this.chunkIndex];
-          if (!(this.skip && this.skip.has(BH) || this.layer.chunkEnd(this.chunkIndex) < HH || BH.VrH < this.OrH)) break;
-          this.chunkIndex++, LH = !1
+          let OB = this.layer.chunk[this.chunkIndex];
+          if (!(this.skip && this.skip.has(OB) || this.layer.chunkEnd(this.chunkIndex) < BB || OB.iDB < this.LDB)) break;
+          this.chunkIndex++, GB = !1
         }
         if (this.chunkIndex < this.layer.chunk.length) {
-          let AH = this.layer.chunk[this.chunkIndex].findIndex(HH - this.layer.chunkPos[this.chunkIndex], BH, !0);
-          (!LH || this.rangeIndex < AH) && this.setRangeIndex(AH)
+          let YB = this.layer.chunk[this.chunkIndex].findIndex(BB - this.layer.chunkPos[this.chunkIndex], OB, !0);
+          (!GB || this.rangeIndex < YB) && this.setRangeIndex(YB)
         }
         this.next()
       }
-      forward(HH, BH) {
-        (this.to - HH || this.endSide - BH) < 0 && this.gotoInner(HH, BH, !0)
+      forward(BB, OB) {
+        (this.to - BB || this.endSide - OB) < 0 && this.gotoInner(BB, OB, !0)
       }
       next() {
         for (;;) {
@@ -1948,203 +1948,203 @@ export const modules = {
             this.from = this.to = 1e9, this.value = null;
             break
           } {
-            let HH = this.layer.chunkPos[this.chunkIndex],
-              BH = this.layer.chunk[this.chunkIndex],
-              LH = HH + BH.from[this.rangeIndex];
-            if (this.from = LH, this.to = HH + BH.to[this.rangeIndex], this.value = BH.value[this.rangeIndex], this.setRangeIndex(this.rangeIndex + 1), this.OrH < 0 || this.value.point && this.to - this.from >= this.OrH) break
+            let BB = this.layer.chunkPos[this.chunkIndex],
+              OB = this.layer.chunk[this.chunkIndex],
+              GB = BB + OB.from[this.rangeIndex];
+            if (this.from = GB, this.to = BB + OB.to[this.rangeIndex], this.value = OB.value[this.rangeIndex], this.setRangeIndex(this.rangeIndex + 1), this.LDB < 0 || this.value.point && this.to - this.from >= this.LDB) break
           }
         }
       }
-      setRangeIndex(HH) {
-        if (HH == this.layer.chunk[this.chunkIndex].value.length) {
+      setRangeIndex(BB) {
+        if (BB == this.layer.chunk[this.chunkIndex].value.length) {
           if (this.chunkIndex++, this.skip)
             for (; this.chunkIndex < this.layer.chunk.length && this.skip.has(this.layer.chunk[this.chunkIndex]);) this.chunkIndex++;
           this.rangeIndex = 0
-        } else this.rangeIndex = HH
+        } else this.rangeIndex = BB
       }
       nextChunk() {
         this.chunkIndex++, this.rangeIndex = 0, this.next()
       }
-      compare(HH) {
-        return this.from - HH.from || this.startSide - HH.startSide || this.rank - HH.rank || this.to - HH.to || this.endSide - HH.endSide
+      compare(BB) {
+        return this.from - BB.from || this.startSide - BB.startSide || this.rank - BB.rank || this.to - BB.to || this.endSide - BB.endSide
       }
     }
-    class ZB {
-      constructor(HH) {
-        this.heap = HH
+    class TO {
+      constructor(BB) {
+        this.heap = BB
       }
-      static from(HH) {
-        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1,
-          AH = [];
-        for (let rH = 0; rH < HH.length; rH++)
-          for (let SH = HH[rH]; !SH.TX; SH = SH.nextLayer) SH.VrH >= LH && AH.push(new wB(SH, BH, LH, rH));
-        return 1 == AH.length ? AH[0] : new ZB(AH)
+      static from(BB) {
+        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1,
+          YB = [];
+        for (let DB = 0; DB < BB.length; DB++)
+          for (let QB = BB[DB]; !QB.NP; QB = QB.nextLayer) QB.iDB >= GB && YB.push(new eO(QB, OB, GB, DB));
+        return 1 == YB.length ? YB[0] : new TO(YB)
       }
       get startSide() {
         return this.value ? this.value.startSide : 0
       }
-      goto(HH) {
-        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1e9;
-        for (let LH of this.heap) LH.goto(HH, BH);
-        for (let LH = this.heap.length >> 1; LH >= 0; LH--) dB(this.heap, LH);
+      goto(BB) {
+        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1e9;
+        for (let GB of this.heap) GB.goto(BB, OB);
+        for (let GB = this.heap.length >> 1; GB >= 0; GB--) bO(this.heap, GB);
         return this.next(), this
       }
-      forward(HH, BH) {
-        for (let LH of this.heap) LH.forward(HH, BH);
-        for (let LH = this.heap.length >> 1; LH >= 0; LH--) dB(this.heap, LH);
-        (this.to - HH || this.value.endSide - BH) < 0 && this.next()
+      forward(BB, OB) {
+        for (let GB of this.heap) GB.forward(BB, OB);
+        for (let GB = this.heap.length >> 1; GB >= 0; GB--) bO(this.heap, GB);
+        (this.to - BB || this.value.endSide - OB) < 0 && this.next()
       }
       next() {
         if (0 == this.heap.length) this.from = this.to = 1e9, this.value = null, this.rank = -1;
         else {
-          let HH = this.heap[0];
-          this.from = HH.from, this.to = HH.to, this.value = HH.value, this.rank = HH.rank, HH.value && HH.next(), dB(this.heap, 0)
+          let BB = this.heap[0];
+          this.from = BB.from, this.to = BB.to, this.value = BB.value, this.rank = BB.rank, BB.value && BB.next(), bO(this.heap, 0)
         }
       }
     }
 
-    function dB(HH, BH) {
-      for (let LH = HH[BH];;) {
-        let AH = 1 + (BH << 1);
-        if (AH >= HH.length) break;
-        let rH = HH[AH];
-        if (AH + 1 < HH.length && rH.compare(HH[AH + 1]) >= 0 && (rH = HH[AH + 1], AH++), LH.compare(rH) < 0) break;
-        HH[AH] = LH, HH[BH] = rH, BH = AH
+    function bO(BB, OB) {
+      for (let GB = BB[OB];;) {
+        let YB = 1 + (OB << 1);
+        if (YB >= BB.length) break;
+        let DB = BB[YB];
+        if (YB + 1 < BB.length && DB.compare(BB[YB + 1]) >= 0 && (DB = BB[YB + 1], YB++), GB.compare(DB) < 0) break;
+        BB[YB] = GB, BB[OB] = DB, OB = YB
       }
     }
-    class aB {
-      constructor(HH, BH, LH) {
-        this.OrH = LH, this.active = [], this.activeTo = [], this.activeRank = [], this.minActive = -1, this.point = null, this.pointFrom = 0, this.pointRank = 0, this.to = -1e9, this.endSide = 0, this.openStart = -1, this.cursor = ZB.from(HH, BH, LH)
+    class CO {
+      constructor(BB, OB, GB) {
+        this.LDB = GB, this.active = [], this.activeTo = [], this.activeRank = [], this.minActive = -1, this.point = null, this.pointFrom = 0, this.pointRank = 0, this.to = -1e9, this.endSide = 0, this.openStart = -1, this.cursor = TO.from(BB, OB, GB)
       }
-      goto(HH) {
-        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1e9;
-        return this.cursor.goto(HH, BH), this.active.length = this.activeTo.length = this.activeRank.length = 0, this.minActive = -1, this.to = HH, this.endSide = BH, this.openStart = -1, this.next(), this
+      goto(BB) {
+        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1e9;
+        return this.cursor.goto(BB, OB), this.active.length = this.activeTo.length = this.activeRank.length = 0, this.minActive = -1, this.to = BB, this.endSide = OB, this.openStart = -1, this.next(), this
       }
-      forward(HH, BH) {
-        for (; this.minActive > -1 && (this.activeTo[this.minActive] - HH || this.active[this.minActive].endSide - BH) < 0;) this.removeActive(this.minActive);
-        this.cursor.forward(HH, BH)
+      forward(BB, OB) {
+        for (; this.minActive > -1 && (this.activeTo[this.minActive] - BB || this.active[this.minActive].endSide - OB) < 0;) this.removeActive(this.minActive);
+        this.cursor.forward(BB, OB)
       }
-      removeActive(HH) {
-        iB(this.active, HH), iB(this.activeTo, HH), iB(this.activeRank, HH), this.minActive = yB(this.active, this.activeTo)
+      removeActive(BB) {
+        sO(this.active, BB), sO(this.activeTo, BB), sO(this.activeRank, BB), this.minActive = tO(this.active, this.activeTo)
       }
-      addActive(HH) {
-        let BH = 0,
+      addActive(BB) {
+        let OB = 0,
           {
-            value: LH,
-            to: AH,
-            rank: rH
+            value: GB,
+            to: YB,
+            rank: DB
           } = this.cursor;
-        for (; BH < this.activeRank.length && (rH - this.activeRank[BH] || AH - this.activeTo[BH]) > 0;) BH++;
-        pB(this.active, BH, LH), pB(this.activeTo, BH, AH), pB(this.activeRank, BH, rH), HH && pB(HH, BH, this.cursor.from), this.minActive = yB(this.active, this.activeTo)
+        for (; OB < this.activeRank.length && (DB - this.activeRank[OB] || YB - this.activeTo[OB]) > 0;) OB++;
+        xO(this.active, OB, GB), xO(this.activeTo, OB, YB), xO(this.activeRank, OB, DB), BB && xO(BB, OB, this.cursor.from), this.minActive = tO(this.active, this.activeTo)
       }
       next() {
-        let HH = this.to,
-          BH = this.point;
+        let BB = this.to,
+          OB = this.point;
         this.point = null;
-        let LH = this.openStart < 0 ? [] : null;
+        let GB = this.openStart < 0 ? [] : null;
         for (;;) {
-          let AH = this.minActive;
-          if (AH > -1 && (this.activeTo[AH] - this.cursor.from || this.active[AH].endSide - this.cursor.startSide) < 0) {
-            if (this.activeTo[AH] > HH) {
-              this.to = this.activeTo[AH], this.endSide = this.active[AH].endSide;
+          let YB = this.minActive;
+          if (YB > -1 && (this.activeTo[YB] - this.cursor.from || this.active[YB].endSide - this.cursor.startSide) < 0) {
+            if (this.activeTo[YB] > BB) {
+              this.to = this.activeTo[YB], this.endSide = this.active[YB].endSide;
               break
             }
-            this.removeActive(AH), LH && iB(LH, AH)
+            this.removeActive(YB), GB && sO(GB, YB)
           } else {
             if (!this.cursor.value) {
               this.to = this.endSide = 1e9;
               break
             }
-            if (this.cursor.from > HH) {
+            if (this.cursor.from > BB) {
               this.to = this.cursor.from, this.endSide = this.cursor.startSide;
               break
             } {
-              let HH = this.cursor.value;
-              if (HH.point) {
-                if (!(BH && this.cursor.to == this.to && this.cursor.from < this.cursor.to)) {
-                  this.point = HH, this.pointFrom = this.cursor.from, this.pointRank = this.cursor.rank, this.to = this.cursor.to, this.endSide = HH.endSide, this.cursor.next(), this.forward(this.to, this.endSide);
+              let BB = this.cursor.value;
+              if (BB.point) {
+                if (!(OB && this.cursor.to == this.to && this.cursor.from < this.cursor.to)) {
+                  this.point = BB, this.pointFrom = this.cursor.from, this.pointRank = this.cursor.rank, this.to = this.cursor.to, this.endSide = BB.endSide, this.cursor.next(), this.forward(this.to, this.endSide);
                   break
                 }
                 this.cursor.next()
-              } else this.addActive(LH), this.cursor.next()
+              } else this.addActive(GB), this.cursor.next()
             }
           }
         }
-        if (LH) {
+        if (GB) {
           this.openStart = 0;
-          for (let BH = LH.length - 1; BH >= 0 && LH[BH] < HH; BH--) this.openStart++
+          for (let OB = GB.length - 1; OB >= 0 && GB[OB] < BB; OB--) this.openStart++
         }
       }
-      activeForPoint(HH) {
+      activeForPoint(BB) {
         if (!this.active.length) return this.active;
-        let BH = [];
-        for (let LH = this.active.length - 1; LH >= 0 && !(this.activeRank[LH] < this.pointRank); LH--)(this.activeTo[LH] > HH || this.activeTo[LH] == HH && this.active[LH].endSide >= this.point.endSide) && BH.push(this.active[LH]);
-        return BH.reverse()
+        let OB = [];
+        for (let GB = this.active.length - 1; GB >= 0 && !(this.activeRank[GB] < this.pointRank); GB--)(this.activeTo[GB] > BB || this.activeTo[GB] == BB && this.active[GB].endSide >= this.point.endSide) && OB.push(this.active[GB]);
+        return OB.reverse()
       }
-      openEnd(HH) {
-        let BH = 0;
-        for (let LH = this.activeTo.length - 1; LH >= 0 && this.activeTo[LH] > HH; LH--) BH++;
-        return BH
-      }
-    }
-
-    function sB(HH, BH, LH, AH, rH, SH) {
-      HH.goto(BH), LH.goto(AH);
-      let hH = AH + rH,
-        tH = AH,
-        zH = AH - BH,
-        CH = !!SH.boundChange;
-      for (let EH = !1;;) {
-        let BH = HH.to + zH - LH.to,
-          AH = BH || HH.endSide - LH.endSide,
-          rH = AH < 0 ? HH.to + zH : LH.to,
-          XH = Math.min(rH, hH);
-        if (HH.point || LH.point ? (HH.point && LH.point && gB(HH.point, LH.point) && JB(HH.activeForPoint(HH.to), LH.activeForPoint(LH.to)) || SH.comparePoint(tH, XH, HH.point, LH.point), EH = !1) : (EH && SH.boundChange(tH), XH > tH && !JB(HH.active, LH.active) && SH.compareRange(tH, XH, HH.active, LH.active), CH && XH < hH && (BH || HH.openEnd(rH) != LH.openEnd(rH)) && (EH = !0)), rH > hH) break;
-        tH = rH, AH <= 0 && HH.next(), AH >= 0 && LH.next()
+      openEnd(BB) {
+        let OB = 0;
+        for (let GB = this.activeTo.length - 1; GB >= 0 && this.activeTo[GB] > BB; GB--) OB++;
+        return OB
       }
     }
 
-    function JB(HH, BH) {
-      if (HH.length != BH.length) return !1;
-      for (let LH = 0; LH < HH.length; LH++)
-        if (HH[LH] != BH[LH] && !gB(HH[LH], BH[LH])) return !1;
+    function HO(BB, OB, GB, YB, DB, QB) {
+      BB.goto(OB), GB.goto(YB);
+      let oB = YB + DB,
+        jB = YB,
+        yB = YB - OB,
+        JB = !!QB.boundChange;
+      for (let MB = !1;;) {
+        let OB = BB.to + yB - GB.to,
+          YB = OB || BB.endSide - GB.endSide,
+          DB = YB < 0 ? BB.to + yB : GB.to,
+          PB = Math.min(DB, oB);
+        if (BB.point || GB.point ? (BB.point && GB.point && rO(BB.point, GB.point) && vO(BB.activeForPoint(BB.to), GB.activeForPoint(GB.to)) || QB.comparePoint(jB, PB, BB.point, GB.point), MB = !1) : (MB && QB.boundChange(jB), PB > jB && !vO(BB.active, GB.active) && QB.compareRange(jB, PB, BB.active, GB.active), JB && PB < oB && (OB || BB.openEnd(DB) != GB.openEnd(DB)) && (MB = !0)), DB > oB) break;
+        jB = DB, YB <= 0 && BB.next(), YB >= 0 && GB.next()
+      }
+    }
+
+    function vO(BB, OB) {
+      if (BB.length != OB.length) return !1;
+      for (let GB = 0; GB < BB.length; GB++)
+        if (BB[GB] != OB[GB] && !rO(BB[GB], OB[GB])) return !1;
       return !0
     }
 
-    function iB(HH, BH) {
-      for (let LH = BH, AH = HH.length - 1; LH < AH; LH++) HH[LH] = HH[LH + 1];
-      HH.pop()
+    function sO(BB, OB) {
+      for (let GB = OB, YB = BB.length - 1; GB < YB; GB++) BB[GB] = BB[GB + 1];
+      BB.pop()
     }
 
-    function pB(HH, BH, LH) {
-      for (let AH = HH.length - 1; AH >= BH; AH--) HH[AH + 1] = HH[AH];
-      HH[BH] = LH
+    function xO(BB, OB, GB) {
+      for (let YB = BB.length - 1; YB >= OB; YB--) BB[YB + 1] = BB[YB];
+      BB[OB] = GB
     }
 
-    function yB(HH, BH) {
-      let LH = -1,
-        AH = 1e9;
-      for (let rH = 0; rH < BH.length; rH++)(BH[rH] - AH || HH[rH].endSide - HH[LH].endSide) < 0 && (LH = rH, AH = BH[rH]);
-      return LH
+    function tO(BB, OB) {
+      let GB = -1,
+        YB = 1e9;
+      for (let DB = 0; DB < OB.length; DB++)(OB[DB] - YB || BB[DB].endSide - BB[GB].endSide) < 0 && (GB = DB, YB = OB[DB]);
+      return GB
     }
 
-    function HL(HH, BH) {
-      let LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : HH.length,
-        AH = 0;
-      for (let rH = 0; rH < LH && rH < HH.length;) 9 == HH.charCodeAt(rH) ? (AH += BH - AH % BH, rH++) : (AH++, rH = bH(HH, rH));
-      return AH
+    function BG(BB, OB) {
+      let GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : BB.length,
+        YB = 0;
+      for (let DB = 0; DB < GB && DB < BB.length;) 9 == BB.charCodeAt(DB) ? (YB += OB - YB % OB, DB++) : (YB++, DB = fB(BB, DB));
+      return YB
     }
 
-    function BL(HH, BH, LH, AH) {
-      for (let rH = 0, SH = 0;;) {
-        if (SH >= BH) return rH;
-        if (rH == HH.length) break;
-        SH += 9 == HH.charCodeAt(rH) ? LH - SH % LH : 1, rH = bH(HH, rH)
+    function OG(BB, OB, GB, YB) {
+      for (let DB = 0, QB = 0;;) {
+        if (QB >= OB) return DB;
+        if (DB == BB.length) break;
+        QB += 9 == BB.charCodeAt(DB) ? GB - QB % GB : 1, DB = fB(BB, DB)
       }
-      return !0 === AH ? -1 : HH.length
+      return !0 === YB ? -1 : BB.length
     }
   }
 };
 Object.freeze(modules);
-for (const HH in modules) Object.freeze(modules[HH]);
+for (const BB in modules) Object.freeze(modules[BB]);

@@ -1,68 +1,68 @@
 export const id = 660;
 export const ids = [660];
 export const modules = {
-  45992: (HH, BH, LH) => {
-    function AH(HH) {
-      return Math.floor(HH / 8)
+  45700: (BB, OB, GB) => {
+    function YB(BB) {
+      return Math.floor(BB / 8)
     }
 
-    function rH(HH) {
-      return 1 << HH % 8
+    function DB(BB) {
+      return 1 << BB % 8
     }
-    LH.d(BH, {
-      OptimizeIndices: () => hH
+    GB.d(OB, {
+      OptimizeIndices: () => oB
     });
-    class SH {
-      constructor(HH) {
-        this.size = HH, this._byteArray = new Uint8Array(Math.ceil(this.size / 8))
+    class QB {
+      constructor(BB) {
+        this.size = BB, this._byteArray = new Uint8Array(Math.ceil(this.size / 8))
       }
-      get(HH) {
-        if (HH >= this.size) throw new RangeError("Bit index out of range");
-        const BH = AH(HH),
-          LH = rH(HH);
-        return 0 !== (this._byteArray[BH] & LH)
+      get(BB) {
+        if (BB >= this.size) throw new RangeError("Bit index out of range");
+        const OB = YB(BB),
+          GB = DB(BB);
+        return 0 !== (this._byteArray[OB] & GB)
       }
-      set(HH, BH) {
-        if (HH >= this.size) throw new RangeError("Bit index out of range");
-        const LH = AH(HH),
-          SH = rH(HH);
-        BH ? this._byteArray[LH] |= SH : this._byteArray[LH] &= ~SH
+      set(BB, OB) {
+        if (BB >= this.size) throw new RangeError("Bit index out of range");
+        const GB = YB(BB),
+          QB = DB(BB);
+        OB ? this._byteArray[GB] |= QB : this._byteArray[GB] &= ~QB
       }
     }
 
-    function hH(HH) {
-      const BH = [],
-        LH = HH.length / 3;
-      for (let SH = 0; SH < LH; SH++) BH.push([HH[3 * SH], HH[3 * SH + 1], HH[3 * SH + 2]]);
-      const AH = new Map;
-      for (let SH = 0; SH < BH.length; SH++) {
-        const HH = BH[SH];
-        for (const BH of HH) {
-          let HH = AH.get(BH);
-          HH || AH.set(BH, HH = []), HH.push(SH)
+    function oB(BB) {
+      const OB = [],
+        GB = BB.length / 3;
+      for (let QB = 0; QB < GB; QB++) OB.push([BB[3 * QB], BB[3 * QB + 1], BB[3 * QB + 2]]);
+      const YB = new Map;
+      for (let QB = 0; QB < OB.length; QB++) {
+        const BB = OB[QB];
+        for (const OB of BB) {
+          let BB = YB.get(OB);
+          BB || YB.set(OB, BB = []), BB.push(QB)
         }
       }
-      const rH = new SH(LH),
-        hH = [],
-        tH = HH => {
-          const LH = [HH];
-          for (; LH.length > 0;) {
-            const HH = LH.pop();
-            if (!rH.get(HH)) {
-              rH.set(HH, !0), hH.push(BH[HH]);
-              for (const SH of BH[HH]) {
-                const HH = AH.get(SH);
-                if (!HH) return;
-                for (const BH of HH) rH.get(BH) || LH.push(BH)
+      const DB = new QB(GB),
+        oB = [],
+        jB = BB => {
+          const GB = [BB];
+          for (; GB.length > 0;) {
+            const BB = GB.pop();
+            if (!DB.get(BB)) {
+              DB.set(BB, !0), oB.push(OB[BB]);
+              for (const QB of OB[BB]) {
+                const BB = YB.get(QB);
+                if (!BB) return;
+                for (const OB of BB) DB.get(OB) || GB.push(OB)
               }
             }
           }
         };
-      for (let SH = 0; SH < LH; SH++) rH.get(SH) || tH(SH);
-      let zH = 0;
-      for (const SH of hH) HH[zH++] = SH[0], HH[zH++] = SH[1], HH[zH++] = SH[2]
+      for (let QB = 0; QB < GB; QB++) DB.get(QB) || jB(QB);
+      let yB = 0;
+      for (const QB of oB) BB[yB++] = QB[0], BB[yB++] = QB[1], BB[yB++] = QB[2]
     }
   }
 };
 Object.freeze(modules);
-for (const HH in modules) Object.freeze(modules[HH]);
+for (const BB in modules) Object.freeze(modules[BB]);

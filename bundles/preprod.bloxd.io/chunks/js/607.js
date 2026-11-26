@@ -1,26 +1,26 @@
 export const id = 607;
 export const ids = [607];
 export const modules = {
-  44881: (HH, BH, LH) => {
-    function AH() {
-      return AH = Object.assign ? Object.assign.bind() : function(HH) {
-        for (var BH = 1; BH < arguments.length; BH++) {
-          var LH = arguments[BH];
-          for (var AH in LH)({}).hasOwnProperty.call(LH, AH) && (HH[AH] = LH[AH])
+  44538: (BB, OB, GB) => {
+    function YB() {
+      return YB = Object.assign ? Object.assign.bind() : function(BB) {
+        for (var OB = 1; OB < arguments.length; OB++) {
+          var GB = arguments[OB];
+          for (var YB in GB)({}).hasOwnProperty.call(GB, YB) && (BB[YB] = GB[YB])
         }
-        return HH
-      }, AH.apply(null, arguments)
+        return BB
+      }, YB.apply(null, arguments)
     }
-    LH.d(BH, {
-      c: () => GH,
-      d: () => tH
+    GB.d(OB, {
+      e: () => zB,
+      h: () => jB
     });
-    var rH = !1;
+    var DB = !1;
     try {
-      rH = "undefined" !== typeof localStorage
-    } catch (uH) {}
-    var SH = "undefined" !== typeof process,
-      hH = rH && "function" === typeof localStorage.getItem && localStorage.getItem("DEBUG") || SH && {
+      DB = "undefined" !== typeof localStorage
+    } catch (pB) {}
+    var QB = "undefined" !== typeof process,
+      oB = DB && "function" === typeof localStorage.getItem && localStorage.getItem("DEBUG") || QB && {
         NODE_ENV: "production",
         PUBLIC_URL: "",
         WDS_SOCKET_HOST: void 0,
@@ -28,141 +28,141 @@ export const modules = {
         WDS_SOCKET_PORT: void 0,
         FAST_REFRESH: !0,
         REACT_APP_DEV_URLS: "false"
-      }.DEBUG ? console.log : function(HH) {
+      }.DEBUG ? console.log : function(BB) {
         return ""
       };
 
-    function tH(HH, BH, LH, rH, SH) {
-      void 0 === rH && (rH = {});
-      var hH = AH({}, EH(LH), rH),
-        tH = function(HH, BH, LH, rH, SH) {
-          var hH = [].concat(BH),
-            tH = YH(HH, LH, rH),
-            zH = tH.compilerHost,
-            CH = tH.updateFile,
-            EH = tH.deleteFile,
-            XH = new Map,
-            GH = 0,
-            uH = AH({}, zH, {
+    function jB(BB, OB, GB, DB, QB) {
+      void 0 === DB && (DB = {});
+      var oB = YB({}, MB(GB), DB),
+        jB = function(BB, OB, GB, DB, QB) {
+          var oB = [].concat(OB),
+            jB = lB(BB, GB, DB),
+            yB = jB.compilerHost,
+            JB = jB.updateFile,
+            MB = jB.deleteFile,
+            PB = new Map,
+            zB = 0,
+            pB = YB({}, yB, {
               getProjectVersion: function() {
-                return GH.toString()
+                return zB.toString()
               },
               getCompilationSettings: function() {
-                return LH
+                return GB
               },
               getCustomTransformers: function() {
-                return SH
+                return QB
               },
               getScriptFileNames: function() {
-                return hH.slice()
+                return oB.slice()
               },
-              getScriptSnapshot: function(BH) {
-                var LH = HH.readFile(BH);
-                if (LH && "string" === typeof LH) return rH.ScriptSnapshot.fromString(LH)
+              getScriptSnapshot: function(OB) {
+                var GB = BB.readFile(OB);
+                if (GB && "string" === typeof GB) return DB.ScriptSnapshot.fromString(GB)
               },
-              getScriptVersion: function(HH) {
-                return XH.get(HH) || "0"
+              getScriptVersion: function(BB) {
+                return PB.get(BB) || "0"
               },
-              writeFile: HH.writeFile
+              writeFile: BB.writeFile
             }),
-            QH = {
-              languageServiceHost: uH,
-              updateFile: function(HH) {
-                GH++, XH.set(HH.fileName, GH.toString()), hH.includes(HH.fileName) || hH.push(HH.fileName), CH(HH)
+            qB = {
+              languageServiceHost: pB,
+              updateFile: function(BB) {
+                zB++, PB.set(BB.fileName, zB.toString()), oB.includes(BB.fileName) || oB.push(BB.fileName), JB(BB)
               },
-              deleteFile: function(HH) {
-                GH++, XH.set(HH.fileName, GH.toString());
-                var BH = hH.indexOf(HH.fileName); - 1 !== BH && hH.splice(BH, 1), EH(HH)
+              deleteFile: function(BB) {
+                zB++, PB.set(BB.fileName, zB.toString());
+                var OB = oB.indexOf(BB.fileName); - 1 !== OB && oB.splice(OB, 1), MB(BB)
               }
             };
-          return QH
-        }(HH, BH, hH, LH, SH),
-        zH = tH.languageServiceHost,
-        CH = tH.updateFile,
-        XH = tH.deleteFile,
-        GH = LH.createLanguageService(zH),
-        uH = GH.getCompilerOptionsDiagnostics();
-      if (uH.length) {
-        var QH = YH(HH, rH, LH);
-        throw new Error(LH.formatDiagnostics(uH, QH.compilerHost))
+          return qB
+        }(BB, OB, oB, GB, QB),
+        yB = jB.languageServiceHost,
+        JB = jB.updateFile,
+        PB = jB.deleteFile,
+        zB = GB.createLanguageService(yB),
+        pB = zB.getCompilerOptionsDiagnostics();
+      if (pB.length) {
+        var qB = lB(BB, DB, GB);
+        throw new Error(GB.formatDiagnostics(pB, qB.compilerHost))
       }
       return {
         name: "vfs",
-        sys: HH,
-        languageService: GH,
-        getSourceFile: function(HH) {
-          var BH;
-          return null == (BH = GH.getProgram()) ? void 0 : BH.getSourceFile(HH)
+        sys: BB,
+        languageService: zB,
+        getSourceFile: function(BB) {
+          var OB;
+          return null == (OB = zB.getProgram()) ? void 0 : OB.getSourceFile(BB)
         },
-        createFile: function(HH, BH) {
-          CH(LH.createSourceFile(HH, BH, hH.target, !1))
+        createFile: function(BB, OB) {
+          JB(GB.createSourceFile(BB, OB, oB.target, !1))
         },
-        updateFile: function(HH, BH, AH) {
-          var rH = GH.getProgram().getSourceFile(HH);
-          if (!rH) throw new Error("Did not find a source file for " + HH);
-          var SH = rH.text,
-            hH = null != AH ? AH : LH.createTextSpan(0, SH.length),
-            tH = SH.slice(0, hH.start) + BH + SH.slice(hH.start + hH.length),
-            zH = LH.updateSourceFile(rH, tH, {
-              span: hH,
-              newLength: BH.length
+        updateFile: function(BB, OB, YB) {
+          var DB = zB.getProgram().getSourceFile(BB);
+          if (!DB) throw new Error("Did not find a source file for " + BB);
+          var QB = DB.text,
+            oB = null != YB ? YB : GB.createTextSpan(0, QB.length),
+            jB = QB.slice(0, oB.start) + OB + QB.slice(oB.start + oB.length),
+            yB = GB.updateSourceFile(DB, jB, {
+              span: oB,
+              newLength: OB.length
             });
-          CH(zH)
+          JB(yB)
         },
-        deleteFile: function(HH) {
-          var BH = GH.getProgram().getSourceFile(HH);
-          BH && XH(BH)
+        deleteFile: function(BB) {
+          var OB = zB.getProgram().getSourceFile(BB);
+          OB && PB(OB)
         }
       }
     }
 
-    function zH(HH) {
-      throw new Error("Method '" + HH + "' is not implemented.")
+    function yB(BB) {
+      throw new Error("Method '" + BB + "' is not implemented.")
     }
 
-    function CH(HH, BH) {
+    function JB(BB, OB) {
       return function() {
-        for (var LH = arguments.length, AH = new Array(LH), rH = 0; rH < LH; rH++) AH[rH] = arguments[rH];
-        var SH = BH.apply(void 0, AH),
-          tH = "string" === typeof SH ? SH.slice(0, 80) + "..." : SH;
-        return hH.apply(void 0, ["> " + HH].concat(AH)), hH("< " + tH), SH
+        for (var GB = arguments.length, YB = new Array(GB), DB = 0; DB < GB; DB++) YB[DB] = arguments[DB];
+        var QB = OB.apply(void 0, YB),
+          jB = "string" === typeof QB ? QB.slice(0, 80) + "..." : QB;
+        return oB.apply(void 0, ["> " + BB].concat(YB)), oB("< " + jB), QB
       }
     }
-    var EH = function(HH) {
-        return AH({}, HH.getDefaultCompilerOptions(), {
-          jsx: HH.JsxEmit.React,
+    var MB = function(BB) {
+        return YB({}, BB.getDefaultCompilerOptions(), {
+          jsx: BB.JsxEmit.React,
           strict: !0,
           esModuleInterop: !0,
-          module: HH.ModuleKind.ESNext,
+          module: BB.ModuleKind.ESNext,
           suppressOutputPathCheck: !0,
           skipLibCheck: !0,
           skipDefaultLibCheck: !0
-        }, HH.versionMajorMinor && Number(HH.versionMajorMinor.split(".")[0]) >= 6 ? {
+        }, BB.versionMajorMinor && Number(BB.versionMajorMinor.split(".")[0]) >= 6 ? {
           ignoreDeprecations: "6.0"
         } : {
-          moduleResolution: HH.ModuleResolutionKind.NodeJs
+          moduleResolution: BB.ModuleResolutionKind.NodeJs
         })
       },
-      XH = function(HH) {
-        return HH.replace("/", "/lib.").toLowerCase()
+      PB = function(BB) {
+        return BB.replace("/", "/lib.").toLowerCase()
       };
 
-    function GH(HH) {
+    function zB(BB) {
       return {
         args: [],
         createDirectory: function() {
-          return zH("createDirectory")
+          return yB("createDirectory")
         },
-        directoryExists: CH("directoryExists", (function(BH) {
-          return Array.from(HH.keys()).some((function(HH) {
-            return HH.startsWith(BH)
+        directoryExists: JB("directoryExists", (function(OB) {
+          return Array.from(BB.keys()).some((function(BB) {
+            return BB.startsWith(OB)
           }))
         })),
         exit: function() {
-          return zH("exit")
+          return yB("exit")
         },
-        fileExists: CH("fileExists", (function(BH) {
-          return HH.has(BH) || HH.has(XH(BH))
+        fileExists: JB("fileExists", (function(OB) {
+          return BB.has(OB) || BB.has(PB(OB))
         })),
         getCurrentDirectory: function() {
           return "/"
@@ -171,64 +171,64 @@ export const modules = {
           return []
         },
         getExecutingFilePath: function() {
-          return zH("getExecutingFilePath")
+          return yB("getExecutingFilePath")
         },
-        readDirectory: CH("readDirectory", (function(BH) {
-          return "/" === BH ? Array.from(HH.keys()) : []
+        readDirectory: JB("readDirectory", (function(OB) {
+          return "/" === OB ? Array.from(BB.keys()) : []
         })),
-        readFile: CH("readFile", (function(BH) {
-          var LH;
-          return null != (LH = HH.get(BH)) ? LH : HH.get(XH(BH))
+        readFile: JB("readFile", (function(OB) {
+          var GB;
+          return null != (GB = BB.get(OB)) ? GB : BB.get(PB(OB))
         })),
-        resolvePath: function(HH) {
-          return HH
+        resolvePath: function(BB) {
+          return BB
         },
         newLine: "\n",
         useCaseSensitiveFileNames: !0,
         write: function() {
-          return zH("write")
+          return yB("write")
         },
-        writeFile: function(BH, LH) {
-          HH.set(BH, LH)
+        writeFile: function(OB, GB) {
+          BB.set(OB, GB)
         },
-        deleteFile: function(BH) {
-          HH.delete(BH)
+        deleteFile: function(OB) {
+          BB.delete(OB)
         }
       }
     }
 
-    function YH(HH, BH, LH) {
-      var rH = new Map;
+    function lB(BB, OB, GB) {
+      var DB = new Map;
       return {
-        compilerHost: AH({}, HH, {
-          getCanonicalFileName: function(HH) {
-            return HH
+        compilerHost: YB({}, BB, {
+          getCanonicalFileName: function(BB) {
+            return BB
           },
           getDefaultLibFileName: function() {
-            return "/" + LH.getDefaultLibFileName(BH)
+            return "/" + GB.getDefaultLibFileName(OB)
           },
           getNewLine: function() {
-            return HH.newLine
+            return BB.newLine
           },
-          getSourceFile: function(AH, SH) {
-            var hH, tH;
-            return rH.get(AH) || (tH = LH.createSourceFile(AH, HH.readFile(AH), null != (hH = null != SH ? SH : BH.target) ? hH : EH(LH).target, !1), rH.set(tH.fileName, tH), tH)
+          getSourceFile: function(YB, QB) {
+            var oB, jB;
+            return DB.get(YB) || (jB = GB.createSourceFile(YB, BB.readFile(YB), null != (oB = null != QB ? QB : OB.target) ? oB : MB(GB).target, !1), DB.set(jB.fileName, jB), jB)
           },
           useCaseSensitiveFileNames: function() {
-            return HH.useCaseSensitiveFileNames
+            return BB.useCaseSensitiveFileNames
           }
         }),
-        updateFile: function(BH) {
-          var LH = rH.has(BH.fileName);
-          return HH.writeFile(BH.fileName, BH.text), rH.set(BH.fileName, BH), LH
+        updateFile: function(OB) {
+          var GB = DB.has(OB.fileName);
+          return BB.writeFile(OB.fileName, OB.text), DB.set(OB.fileName, OB), GB
         },
-        deleteFile: function(BH) {
-          var LH = rH.has(BH.fileName);
-          return rH.delete(BH.fileName), HH.deleteFile(BH.fileName), LH
+        deleteFile: function(OB) {
+          var GB = DB.has(OB.fileName);
+          return DB.delete(OB.fileName), BB.deleteFile(OB.fileName), GB
         }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const HH in modules) Object.freeze(modules[HH]);
+for (const BB in modules) Object.freeze(modules[BB]);

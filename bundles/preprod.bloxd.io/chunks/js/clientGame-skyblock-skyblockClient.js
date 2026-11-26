@@ -1,370 +1,370 @@
 export const id = 30;
 export const ids = [30];
 export const modules = {
-  5308: (HH, BH, LH) => {
-    LH.d(BH, {
-      e: () => WH,
-      h: () => MH
+  5326: (BB, OB, GB) => {
+    GB.d(OB, {
+      e: () => ZB,
+      i: () => NB
     });
-    var AH = LH(1038),
-      rH = LH.n(AH),
-      SH = LH(45),
-      hH = LH(1123),
-      tH = LH(5314),
-      zH = LH(1967),
-      CH = LH(2628),
-      EH = LH(5319),
-      XH = LH(1225);
-    const GH = new WeakMap;
-    let YH = 0;
+    var YB = GB(1090),
+      DB = GB.n(YB),
+      QB = GB(56),
+      oB = GB(1175),
+      jB = GB(5335),
+      yB = GB(2e3),
+      JB = GB(2653),
+      MB = GB(5337),
+      PB = GB(1282);
+    const zB = new WeakMap;
+    let lB = 0;
 
-    function uH(HH) {
-      let BH = GH.get(HH);
-      return void 0 === BH && (BH = YH++, GH.set(HH, BH)), BH
+    function pB(BB) {
+      let OB = zB.get(BB);
+      return void 0 === OB && (OB = lB++, zB.set(BB, OB)), OB
     }
 
-    function QH(HH) {
+    function qB(BB) {
       let {
-        piece: BH
-      } = HH;
-      return "space" === BH.kind ? (0, XH.jsx)(XH.Fragment, {
-        children: BH.text
-      }) : (0, XH.jsx)("span", {
+        piece: OB
+      } = BB;
+      return "space" === OB.kind ? (0, PB.jsx)(PB.Fragment, {
+        children: OB.text
+      }) : (0, PB.jsx)("span", {
         className: "DialogueWord",
         style: {
-          "--word-delay": `${BH.delayMs}ms`
+          "--word-delay": `${OB.delayMs}ms`
         },
-        children: (0, XH.jsx)(tH.b, {
-          text: "icon" === BH.kind ? `[[${BH.icon}]]` : BH.text
+        children: (0, PB.jsx)(jB.c, {
+          text: "icon" === OB.kind ? `[[${OB.icon}]]` : OB.text
         })
       })
     }
 
-    function WH(HH) {
+    function ZB(BB) {
       let {
-        display: BH
-      } = HH;
+        display: OB
+      } = BB;
       const {
-        selectedLanguage: LH
-      } = (0, hH.B)(), AH = (0, SH.useMemo)((() => (0, EH.b)((0, EH.d)(BH).plan.pieces)), [BH, LH.code]);
-      return (0, XH.jsxs)("div", {
-        className: rH()("Dialogue", {
-          DialogueAnimateIn: !1 !== BH.animateIn
+        selectedLanguage: GB
+      } = (0, oB.H)(), YB = (0, QB.useMemo)((() => (0, MB.b)((0, MB.c)(OB).plan.pieces)), [OB, GB.code]);
+      return (0, PB.jsxs)("div", {
+        className: DB()("Dialogue", {
+          DialogueAnimateIn: !1 !== OB.animateIn
         }),
-        children: [BH.speakerName && (0, XH.jsx)(zH.b, {
-          text: BH.speakerName,
+        children: [OB.speakerName && (0, PB.jsx)(yB.b, {
+          text: OB.speakerName,
           className: "DialogueSpeaker"
-        }), (0, XH.jsx)("p", {
+        }), (0, PB.jsx)("p", {
           className: "DialogueLine",
-          children: AH.map(((HH, BH) => 1 === HH.length && "space" === HH[0].kind ? HH[0].text : (0, XH.jsx)("span", {
+          children: YB.map(((BB, OB) => 1 === BB.length && "space" === BB[0].kind ? BB[0].text : (0, PB.jsx)("span", {
             className: "DialogueGlue",
-            children: HH.map(((HH, BH) => (0, XH.jsx)(QH, {
-              piece: HH
-            }, BH)))
-          }, BH)))
+            children: BB.map(((BB, OB) => (0, PB.jsx)(qB, {
+              piece: BB
+            }, OB)))
+          }, OB)))
         })]
       })
     }
-    const MH = (0, SH.memo)((function() {
-      const HH = (0, CH.j)("dialogue");
-      return (0, XH.jsx)("div", {
+    const NB = (0, QB.memo)((function() {
+      const BB = (0, JB.g)("dialogue");
+      return (0, PB.jsx)("div", {
         className: "DialogueAnchor",
         "data-camera-keeper": "",
         role: "status",
         "aria-live": "polite",
         "aria-atomic": "true",
-        children: HH && (0, XH.jsx)(WH, {
-          display: HH
-        }, uH(HH))
+        children: BB && (0, PB.jsx)(ZB, {
+          display: BB
+        }, pB(BB))
       })
     }))
   },
-  5314: (HH, BH, LH) => {
-    LH.d(BH, {
-      b: () => tH
+  5335: (BB, OB, GB) => {
+    GB.d(OB, {
+      c: () => jB
     });
-    var AH = LH(45),
-      rH = LH(304),
-      SH = LH(1986),
-      hH = LH(1225);
+    var YB = GB(56),
+      DB = GB(331),
+      QB = GB(2012),
+      oB = GB(1282);
 
-    function tH(HH) {
+    function jB(BB) {
       let {
-        text: BH
-      } = HH;
-      const LH = [];
-      let tH = "";
-      return (0, rH.tc)(BH).forEach(((HH, BH) => {
-        if ("string" === typeof HH || !(0, SH.f)(HH.icon)) return void(tH += "string" === typeof HH ? HH : HH.icon);
-        const rH = Math.max(0, tH.trimEnd().search(/\S{1,12}$/));
-        LH.push((0, hH.jsxs)(AH.Fragment, {
-          children: [tH.slice(0, rH), (0, hH.jsxs)("span", {
+        text: OB
+      } = BB;
+      const GB = [];
+      let jB = "";
+      return (0, DB.hc)(OB).forEach(((BB, OB) => {
+        if ("string" === typeof BB || !(0, QB.d)(BB.icon)) return void(jB += "string" === typeof BB ? BB : BB.icon);
+        const DB = Math.max(0, jB.trimEnd().search(/\S{1,12}$/));
+        GB.push((0, oB.jsxs)(YB.Fragment, {
+          children: [jB.slice(0, DB), (0, oB.jsxs)("span", {
             className: "InlineIconTextGlue",
-            children: [tH.slice(rH), (0, hH.jsx)("span", {
+            children: [jB.slice(DB), (0, oB.jsx)("span", {
               className: "InlineIconTextIcon",
               role: "img",
-              "aria-label": HH.icon,
-              children: (0, hH.jsx)(SH.e, {
-                itemName: HH.icon,
+              "aria-label": BB.icon,
+              children: (0, oB.jsx)(QB.c, {
+                itemName: BB.icon,
                 amount: 0
               })
             })]
           })]
-        }, BH)), tH = ""
-      })), LH.push(tH), (0, hH.jsx)(hH.Fragment, {
-        children: LH
+        }, OB)), jB = ""
+      })), GB.push(jB), (0, oB.jsx)(oB.Fragment, {
+        children: GB
       })
     }
   },
-  34986: (HH, BH, LH) => {
-    LH.d(BH, {
-      e: () => SH
+  34790: (BB, OB, GB) => {
+    GB.d(OB, {
+      d: () => QB
     });
-    var AH = LH(4947),
-      rH = LH(4951);
+    var YB = GB(4949),
+      DB = GB(4956);
 
-    function SH(HH) {
+    function QB(BB) {
       let {
-        children: BH,
-        showing: LH,
-        globallyUniqueKey: SH,
-        alwaysMountChildren: hH = !1,
-        doGameplayStartStopOnShow: tH = !0,
-        keepsMovement: zH = !1
-      } = HH;
-      return (0, rH.c)(!0, LH, SH, zH), (0, AH.e)(tH, LH), LH || hH ? BH : null
+        children: OB,
+        showing: GB,
+        globallyUniqueKey: QB,
+        alwaysMountChildren: oB = !1,
+        doGameplayStartStopOnShow: jB = !0,
+        keepsMovement: yB = !1
+      } = BB;
+      return (0, DB.e)(!0, GB, QB, yB), (0, YB.c)(jB, GB), GB || oB ? OB : null
     }
   },
-  5319: (HH, BH, LH) => {
-    LH.d(BH, {
-      b: () => cH,
-      d: () => KH
+  5337: (BB, OB, GB) => {
+    GB.d(OB, {
+      b: () => iB,
+      c: () => FB
     });
-    var AH = LH(5325),
-      rH = LH(304);
-    const SH = 120,
-      hH = 260,
-      tH = 1.15,
-      zH = 1.2,
-      CH = 2,
-      EH = 1.08,
-      XH = .8,
-      GH = .95,
-      YH = 8,
-      uH = "[\"')\\]\u300d\u300f\uff09]*",
-      QH = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${uH}$`),
-      WH = new RegExp(`[?\uff1f]${uH}$`),
-      MH = new RegExp(`[!\uff01]${uH}$`),
-      xH = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
-      vH = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
-      PH = new RegExp(`[${vH}]`),
-      TH = new RegExp(`[${vH}]|[^${vH}]+`, "g"),
-      UH = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
+    var YB = GB(5345),
+      DB = GB(331);
+    const QB = 120,
+      oB = 260,
+      jB = 1.15,
+      yB = 1.2,
+      JB = 2,
+      MB = 1.08,
+      PB = .8,
+      zB = .95,
+      lB = 8,
+      pB = "[\"')\\]\u300d\u300f\uff09]*",
+      qB = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${pB}$`),
+      ZB = new RegExp(`[?\uff1f]${pB}$`),
+      NB = new RegExp(`[!\uff01]${pB}$`),
+      RB = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
+      WB = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
+      AB = new RegExp(`[${WB}]`),
+      VB = new RegExp(`[${WB}]|[^${WB}]+`, "g"),
+      SB = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
 
-    function VH(HH) {
-      let BH = 2166136261;
-      for (let LH = 0; LH < HH.length; LH++) BH ^= HH.charCodeAt(LH), BH = Math.imul(BH, 16777619);
-      return (BH >>> 0) / 4294967295 * 2 - 1
+    function nB(BB) {
+      let OB = 2166136261;
+      for (let GB = 0; GB < BB.length; GB++) OB ^= BB.charCodeAt(GB), OB = Math.imul(OB, 16777619);
+      return (OB >>> 0) / 4294967295 * 2 - 1
     }
 
-    function OH(HH) {
-      var BH;
-      if (PH.test(HH)) return 1;
-      const LH = HH.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
-        AH = LH.replace(/[^0-9]/g, "");
-      if (AH.length > 0 && !/\p{L}/u.test(LH)) return Math.min(AH.length, 4);
-      const rH = null !== (BH = LH.match(UH)) && void 0 !== BH ? BH : [];
-      if (0 === rH.length) {
-        var SH, hH;
-        const HH = null !== (SH = null === (hH = LH.match(/\p{L}/gu)) || void 0 === hH ? void 0 : hH.length) && void 0 !== SH ? SH : 0;
-        return 0 === HH ? 0 : Math.min(Math.max(1, Math.round(HH / 2.5)), YH)
+    function UB(BB) {
+      var OB;
+      if (AB.test(BB)) return 1;
+      const GB = BB.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
+        YB = GB.replace(/[^0-9]/g, "");
+      if (YB.length > 0 && !/\p{L}/u.test(GB)) return Math.min(YB.length, 4);
+      const DB = null !== (OB = GB.match(SB)) && void 0 !== OB ? OB : [];
+      if (0 === DB.length) {
+        var QB, oB;
+        const BB = null !== (QB = null === (oB = GB.match(/\p{L}/gu)) || void 0 === oB ? void 0 : oB.length) && void 0 !== QB ? QB : 0;
+        return 0 === BB ? 0 : Math.min(Math.max(1, Math.round(BB / 2.5)), lB)
       }
-      const tH = LH.replace(/[^\p{L}]/gu, ""),
-        zH = rH.length > 1 && "e" === rH.at(-1) && tH.endsWith("e") && !tH.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(HH.replace(/[^\p{L}]/gu, ""));
-      return Math.min(rH.length - (zH ? 1 : 0), YH)
+      const jB = GB.replace(/[^\p{L}]/gu, ""),
+        yB = DB.length > 1 && "e" === DB.at(-1) && jB.endsWith("e") && !jB.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(BB.replace(/[^\p{L}]/gu, ""));
+      return Math.min(DB.length - (yB ? 1 : 0), lB)
     }
 
-    function bH(HH) {
-      return HH.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
+    function fB(BB) {
+      return BB.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
     }
 
-    function kH(HH) {
-      const BH = HH.replace(/[^\p{L}]/gu, "");
-      return BH.length >= 2 && BH === BH.toUpperCase() && BH !== BH.toLowerCase()
+    function kB(BB) {
+      const OB = BB.replace(/[^\p{L}]/gu, "");
+      return OB.length >= 2 && OB === OB.toUpperCase() && OB !== OB.toLowerCase()
     }
 
-    function mH(HH, BH) {
-      var LH;
-      const YH = BH && (0, AH.k)(BH),
-        uH = null !== (LH = null === YH || void 0 === YH ? void 0 : YH.syllableMs) && void 0 !== LH ? LH : AH.e,
-        vH = function(HH) {
-          const BH = [];
-          for (const AH of (0, rH.tc)(HH))
-            if ("string" === typeof AH)
-              for (const HH of AH.split(/(\s+)/)) {
-                if ("" === HH) continue;
-                if (/^\s+$/.test(HH)) {
-                  BH.push({
+    function dB(BB, OB) {
+      var GB;
+      const lB = OB && (0, YB.j)(OB),
+        pB = null !== (GB = null === lB || void 0 === lB ? void 0 : lB.syllableMs) && void 0 !== GB ? GB : YB.d,
+        WB = function(BB) {
+          const OB = [];
+          for (const YB of (0, DB.hc)(BB))
+            if ("string" === typeof YB)
+              for (const BB of YB.split(/(\s+)/)) {
+                if ("" === BB) continue;
+                if (/^\s+$/.test(BB)) {
+                  OB.push({
                     kind: "space",
-                    text: HH
+                    text: BB
                   });
                   continue
                 }
-                if (!PH.test(HH)) {
-                  BH.push({
+                if (!AB.test(BB)) {
+                  OB.push({
                     kind: "word",
-                    text: HH,
+                    text: BB,
                     delayMs: 0
                   });
                   continue
                 }
-                let AH = !0;
-                for (const rH of null !== (LH = HH.match(TH)) && void 0 !== LH ? LH : []) {
-                  var LH;
-                  const HH = BH.at(-1);
-                  AH || "word" !== (null === HH || void 0 === HH ? void 0 : HH.kind) || PH.test(rH) || /[\p{L}\p{N}]/u.test(rH) ? (AH || BH.push({
+                let YB = !0;
+                for (const DB of null !== (GB = BB.match(VB)) && void 0 !== GB ? GB : []) {
+                  var GB;
+                  const BB = OB.at(-1);
+                  YB || "word" !== (null === BB || void 0 === BB ? void 0 : BB.kind) || AB.test(DB) || /[\p{L}\p{N}]/u.test(DB) ? (YB || OB.push({
                     kind: "space",
                     text: "\u200b"
-                  }), BH.push({
+                  }), OB.push({
                     kind: "word",
-                    text: rH,
+                    text: DB,
                     delayMs: 0
-                  }), AH = !1) : HH.text += rH
+                  }), YB = !1) : BB.text += DB
                 }
-              } else BH.push({
+              } else OB.push({
                 kind: "icon",
-                text: AH.icon,
+                text: YB.icon,
                 delayMs: 0
               });
-          return BH
-        }(HH),
-        UH = [];
-      let mH = [];
-      for (const AH of vH) "space" !== AH.kind && (mH.push(AH), QH.test(AH.text) && (UH.push(mH), mH = []));
-      UH.push(mH);
-      const oH = [];
-      let IH = 0;
-      for (const AH of UH) {
-        var fH, lH;
-        const HH = null !== (fH = null === (lH = AH.at(-1)) || void 0 === lH ? void 0 : lH.text) && void 0 !== fH ? fH : "",
-          BH = WH.test(HH),
-          LH = MH.test(HH),
-          rH = AH.map((HH => "word" === HH.kind ? OH(HH.text) : 1)),
-          vH = rH.findLastIndex((HH => HH > 0));
-        for (const [WH, MH] of AH.entries()) {
-          const HH = "word" === MH.kind,
-            AH = rH[WH];
-          MH.delayMs = IH;
-          for (let rH = 0; YH && rH < AH; rH++) {
+          return OB
+        }(BB),
+        SB = [];
+      let dB = [];
+      for (const YB of WB) "space" !== YB.kind && (dB.push(YB), qB.test(YB.text) && (SB.push(dB), dB = []));
+      SB.push(dB);
+      const KB = [];
+      let uB = 0;
+      for (const YB of SB) {
+        var mB, IB;
+        const BB = null !== (mB = null === (IB = YB.at(-1)) || void 0 === IB ? void 0 : IB.text) && void 0 !== mB ? mB : "",
+          OB = ZB.test(BB),
+          GB = NB.test(BB),
+          DB = YB.map((BB => "word" === BB.kind ? UB(BB.text) : 1)),
+          WB = DB.findLastIndex((BB => BB > 0));
+        for (const [ZB, NB] of YB.entries()) {
+          const BB = "word" === NB.kind,
+            YB = DB[ZB];
+          NB.delayMs = uB;
+          for (let DB = 0; lB && DB < YB; DB++) {
             const {
-              intonation: SH
-            } = YH;
-            let hH = vH > 0 ? -SH.declineSemitones * (WH / vH) : 0;
-            hH += VH(`${bH(MH.text)}|${rH}`) * SH.variationSemitones;
-            const QH = Math.min(1, SH.variationSemitones);
-            let xH = YH.glideSemitones,
-              PH = 1;
-            LH && (hH += SH.exclaimLiftSemitones, PH *= tH), BH && WH === vH && (hH += SH.questionRiseSemitones * (AH > 1 ? .5 + .5 * rH / (AH - 1) : 1), rH === AH - 1 && (xH = Math.abs(xH) + SH.questionRiseSemitones / 2)), HH && kH(MH.text) && (hH += CH * QH, PH *= zH), AH > 1 && 0 === rH && (hH += XH * QH, PH *= EH), oH.push({
-              atMs: IH + rH * uH,
-              semitones: hH,
-              glideSemitones: xH,
-              durationMs: rH < AH - 1 ? Math.min(YH.durationMs, uH * GH) : YH.durationMs,
-              level: PH
+              intonation: QB
+            } = lB;
+            let oB = WB > 0 ? -QB.declineSemitones * (ZB / WB) : 0;
+            oB += nB(`${fB(NB.text)}|${DB}`) * QB.variationSemitones;
+            const qB = Math.min(1, QB.variationSemitones);
+            let RB = lB.glideSemitones,
+              AB = 1;
+            GB && (oB += QB.exclaimLiftSemitones, AB *= jB), OB && ZB === WB && (oB += QB.questionRiseSemitones * (YB > 1 ? .5 + .5 * DB / (YB - 1) : 1), DB === YB - 1 && (RB = Math.abs(RB) + QB.questionRiseSemitones / 2)), BB && kB(NB.text) && (oB += JB * qB, AB *= yB), YB > 1 && 0 === DB && (oB += PB * qB, AB *= MB), KB.push({
+              atMs: uB + DB * pB,
+              semitones: oB,
+              glideSemitones: RB,
+              durationMs: DB < YB - 1 ? Math.min(lB.durationMs, pB * zB) : lB.durationMs,
+              level: AB
             })
           }
-          IH += AH * uH + (QH.test(MH.text) ? hH : xH.test(MH.text) ? SH : 0)
+          uB += YB * pB + (qB.test(NB.text) ? oB : RB.test(NB.text) ? QB : 0)
         }
       }
       return {
-        pieces: vH.map((HH => "space" === HH.kind ? HH : "icon" === HH.kind ? {
+        pieces: WB.map((BB => "space" === BB.kind ? BB : "icon" === BB.kind ? {
           kind: "icon",
-          icon: HH.text,
-          delayMs: HH.delayMs
+          icon: BB.text,
+          delayMs: BB.delayMs
         } : {
           kind: "word",
-          text: HH.text,
-          delayMs: HH.delayMs
+          text: BB.text,
+          delayMs: BB.delayMs
         })),
-        blips: oH
+        blips: KB
       }
     }
-    var oH = LH(1123),
-      IH = LH(1194),
-      fH = LH(2003);
+    var KB = GB(1175),
+      uB = GB(1253),
+      mB = GB(2027);
 
-    function lH(HH) {
-      if ("string" === typeof HH) return HH;
-      const BH = IH.g.get().getCurrentLanguageCode();
-      return (0, oH.r)(BH, HH.translationKey, (0, oH.q)(HH.params, fH.c.shown))
+    function IB(BB) {
+      if ("string" === typeof BB) return BB;
+      const OB = uB.e.get().getCurrentLanguageCode();
+      return (0, KB.x)(OB, BB.translationKey, (0, KB.v)(BB.params, mB.d.shown))
     }
 
-    function KH(HH) {
-      const BH = void 0 === HH.voice ? null : (0, AH.l)(HH.voice),
-        LH = BH && (0, AH.k)(BH);
+    function FB(BB) {
+      const OB = void 0 === BB.voice ? null : (0, YB.k)(BB.voice),
+        GB = OB && (0, YB.j)(OB);
       return {
-        plan: mH(lH(HH.line), LH),
-        synth: LH
+        plan: dB(IB(BB.line), GB),
+        synth: GB
       }
     }
 
-    function cH(HH) {
-      const BH = [];
-      let LH = [];
-      for (const [rH, SH] of HH.entries()) {
-        var AH;
-        "space" === SH.kind && (" " !== SH.text || "icon" !== (null === (AH = HH[rH + 1]) || void 0 === AH ? void 0 : AH.kind)) ? (LH.length > 0 && BH.push(LH), BH.push([SH]), LH = []) : LH.push(SH)
+    function iB(BB) {
+      const OB = [];
+      let GB = [];
+      for (const [DB, QB] of BB.entries()) {
+        var YB;
+        "space" === QB.kind && (" " !== QB.text || "icon" !== (null === (YB = BB[DB + 1]) || void 0 === YB ? void 0 : YB.kind)) ? (GB.length > 0 && OB.push(GB), OB.push([QB]), GB = []) : GB.push(QB)
       }
-      return LH.length > 0 && BH.push(LH), BH
+      return GB.length > 0 && OB.push(GB), OB
     }
   },
-  39388: (HH, BH, LH) => {
-    function AH(HH, BH, LH) {
-      const AH = new Set,
-        rH = new ResizeObserver(LH),
-        SH = () => {
-          const BH = new Set(document.querySelectorAll(HH));
-          let SH = !1;
-          for (const HH of AH) BH.has(HH) || (rH.unobserve(HH), AH.delete(HH), SH = !0);
-          for (const HH of BH) AH.has(HH) || (rH.observe(HH), hH.observe(HH, {
+  39173: (BB, OB, GB) => {
+    function YB(BB, OB, GB) {
+      const YB = new Set,
+        DB = new ResizeObserver(GB),
+        QB = () => {
+          const OB = new Set(document.querySelectorAll(BB));
+          let QB = !1;
+          for (const BB of YB) OB.has(BB) || (DB.unobserve(BB), YB.delete(BB), QB = !0);
+          for (const BB of OB) YB.has(BB) || (DB.observe(BB), oB.observe(BB, {
             attributes: !0,
             attributeFilter: ["class", "style"]
-          }), AH.add(HH));
-          SH && LH()
+          }), YB.add(BB));
+          QB && GB()
         },
-        hH = new MutationObserver((BH => {
-          BH.some((HH => "attributes" === HH.type)) && LH(), BH.some((BH => function(HH, BH, LH) {
-            if ("childList" !== HH.type) return !1;
-            for (const AH of HH.addedNodes)
-              if (AH instanceof Element && (AH.matches(BH) || AH.querySelector(BH))) return !0;
-            for (const AH of HH.removedNodes)
-              if (AH instanceof Element)
-                for (const HH of LH)
-                  if (AH.contains(HH)) return !0;
+        oB = new MutationObserver((OB => {
+          OB.some((BB => "attributes" === BB.type)) && GB(), OB.some((OB => function(BB, OB, GB) {
+            if ("childList" !== BB.type) return !1;
+            for (const YB of BB.addedNodes)
+              if (YB instanceof Element && (YB.matches(OB) || YB.querySelector(OB))) return !0;
+            for (const YB of BB.removedNodes)
+              if (YB instanceof Element)
+                for (const BB of GB)
+                  if (YB.contains(BB)) return !0;
             return !1
-          }(BH, HH, AH))) && SH()
+          }(OB, BB, YB))) && QB()
         }));
-      hH.observe(document.body, {
+      oB.observe(document.body, {
         childList: !0,
         subtree: !0
       });
-      for (const tH of BH) rH.observe(tH);
-      return window.addEventListener("resize", LH), SH(), LH(), () => {
-        rH.disconnect(), hH.disconnect(), window.removeEventListener("resize", LH)
+      for (const jB of OB) DB.observe(jB);
+      return window.addEventListener("resize", GB), QB(), GB(), () => {
+        DB.disconnect(), oB.disconnect(), window.removeEventListener("resize", GB)
       }
     }
-    LH.d(BH, {
-      c: () => AH
+    GB.d(OB, {
+      d: () => YB
     })
   },
-  9577: (HH, BH, LH) => {
-    LH.d(BH, {
-      c: () => tH,
-      g: () => zH
+  9545: (BB, OB, GB) => {
+    GB.d(OB, {
+      d: () => jB,
+      h: () => yB
     });
-    var AH = LH(15),
-      rH = LH(1297),
-      SH = LH(81);
-    const hH = {
+    var YB = GB(16),
+      DB = GB(1350),
+      QB = GB(92);
+    const oB = {
       blockMined: {
         pattern: [18],
         priority: 1,
@@ -407,41 +407,41 @@ export const modules = {
       }
     };
 
-    function tH() {
-      return (0, SH.isMobile)() && "function" === typeof navigator.vibrate
+    function jB() {
+      return (0, QB.isMobile)() && "function" === typeof navigator.vibrate
     }
-    const zH = new class {
-      constructor(HH) {
-        this.deps = HH, this.lastAt = new Map, this.lastAnyAt = -1 / 0, this.playingUntil = -1 / 0, this.playingPriority = 0
+    const yB = new class {
+      constructor(BB) {
+        this.deps = BB, this.lastAt = new Map, this.lastAnyAt = -1 / 0, this.playingUntil = -1 / 0, this.playingPriority = 0
       }
-      play(HH, BH) {
-        var LH;
+      play(BB, OB) {
+        var GB;
         if (!this.deps.enabled()) return;
-        const AH = hH[HH],
-          rH = null !== BH && void 0 !== BH ? BH : AH.pattern;
-        if (null === rH) return void console.warn("No vibration pattern for", HH);
-        const SH = this.deps.now();
-        SH - this.lastAnyAt < 40 && AH.priority < this.playingPriority || SH - (null !== (LH = this.lastAt.get(HH)) && void 0 !== LH ? LH : -1 / 0) < AH.minGapMs || SH < this.playingUntil && AH.priority < this.playingPriority || (this.lastAt.set(HH, SH), this.lastAnyAt = SH, this.playingUntil = SH + rH.reduce(((HH, BH) => HH + BH), 0), this.playingPriority = AH.priority, this.deps.vibrate(rH))
+        const YB = oB[BB],
+          DB = null !== OB && void 0 !== OB ? OB : YB.pattern;
+        if (null === DB) return void console.warn("No vibration pattern for", BB);
+        const QB = this.deps.now();
+        QB - this.lastAnyAt < 40 && YB.priority < this.playingPriority || QB - (null !== (GB = this.lastAt.get(BB)) && void 0 !== GB ? GB : -1 / 0) < YB.minGapMs || QB < this.playingUntil && YB.priority < this.playingPriority || (this.lastAt.set(BB, QB), this.lastAnyAt = QB, this.playingUntil = QB + DB.reduce(((BB, OB) => BB + OB), 0), this.playingPriority = YB.priority, this.deps.vibrate(DB))
       }
     }({
-      vibrate: HH => {
-        navigator.vibrate([...HH])
+      vibrate: BB => {
+        navigator.vibrate([...BB])
       },
       now: () => performance.now(),
-      enabled: () => tH() && AH.c.get("isTouchScreen") && AH.c.get("clientEscMenuOptions").vibration && !(0, rH.d)()
+      enabled: () => jB() && YB.c.get("isTouchScreen") && YB.c.get("clientEscMenuOptions").vibration && !(0, DB.f)()
     })
   },
-  5325: (HH, BH, LH) => {
-    LH.d(BH, {
-      e: () => rH,
-      g: () => AH,
-      i: () => SH,
-      k: () => zH,
-      l: () => hH
+  5345: (BB, OB, GB) => {
+    GB.d(OB, {
+      d: () => DB,
+      e: () => YB,
+      g: () => QB,
+      j: () => yB,
+      k: () => oB
     });
-    const AH = ["sine", "triangle", "square", "sawtooth"],
-      rH = 55,
-      SH = {
+    const YB = ["sine", "triangle", "square", "sawtooth"],
+      DB = 55,
+      QB = {
         soft: {
           waveform: "sine",
           pitchHz: 300,
@@ -580,39 +580,39 @@ export const modules = {
         }
       };
 
-    function hH(HH) {
-      return "string" !== typeof HH ? HH : Object.hasOwn(SH, HH) ? SH[HH] : null
+    function oB(BB) {
+      return "string" !== typeof BB ? BB : Object.hasOwn(QB, BB) ? QB[BB] : null
     }
 
-    function tH(HH, BH, LH) {
-      return Math.min(LH, Math.max(BH, HH))
+    function jB(BB, OB, GB) {
+      return Math.min(GB, Math.max(OB, BB))
     }
 
-    function zH(HH) {
-      const BH = tH(HH.durationMs, 10, 500),
-        LH = tH(HH.attackMs, 0, BH),
+    function yB(BB) {
+      const OB = jB(BB.durationMs, 10, 500),
+        GB = jB(BB.attackMs, 0, OB),
         {
-          intonation: rH
-        } = HH;
+          intonation: DB
+        } = BB;
       return {
-        waveform: AH.includes(HH.waveform) ? HH.waveform : "sine",
-        pitchHz: tH(HH.pitchHz, 20, 4e3),
-        glideSemitones: tH(HH.glideSemitones, -24, 24),
-        durationMs: BH,
-        attackMs: LH,
-        releaseMs: tH(HH.releaseMs, 0, BH - LH),
-        lowpassHz: null === HH.lowpassHz ? null : tH(HH.lowpassHz, 20, 2e4),
-        volume: tH(HH.volume, 0, 2),
+        waveform: YB.includes(BB.waveform) ? BB.waveform : "sine",
+        pitchHz: jB(BB.pitchHz, 20, 4e3),
+        glideSemitones: jB(BB.glideSemitones, -24, 24),
+        durationMs: OB,
+        attackMs: GB,
+        releaseMs: jB(BB.releaseMs, 0, OB - GB),
+        lowpassHz: null === BB.lowpassHz ? null : jB(BB.lowpassHz, 20, 2e4),
+        volume: jB(BB.volume, 0, 2),
         intonation: {
-          variationSemitones: tH(rH.variationSemitones, 0, 6),
-          declineSemitones: tH(rH.declineSemitones, 0, 12),
-          questionRiseSemitones: tH(rH.questionRiseSemitones, 0, 12),
-          exclaimLiftSemitones: tH(rH.exclaimLiftSemitones, 0, 12)
+          variationSemitones: jB(DB.variationSemitones, 0, 6),
+          declineSemitones: jB(DB.declineSemitones, 0, 12),
+          questionRiseSemitones: jB(DB.questionRiseSemitones, 0, 12),
+          exclaimLiftSemitones: jB(DB.exclaimLiftSemitones, 0, 12)
         },
-        syllableMs: tH(HH.syllableMs, 25, 200)
+        syllableMs: jB(BB.syllableMs, 25, 200)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const HH in modules) Object.freeze(modules[HH]);
+for (const BB in modules) Object.freeze(modules[BB]);

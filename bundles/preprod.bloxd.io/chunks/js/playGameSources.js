@@ -1,184 +1,184 @@
 export const id = 54;
 export const ids = [54];
 export const modules = {
-  40679: (HH, BH, LH) => {
-    LH.d(BH, {
-      b: () => zH,
-      c: () => SH,
-      d: () => rH
+  40414: (BB, OB, GB) => {
+    GB.d(OB, {
+      b: () => yB,
+      c: () => QB,
+      d: () => DB
     });
-    const AH = 6e3;
+    const YB = 6e3;
 
-    function rH(HH, BH) {
-      return [Math.floor(HH[0] / BH) * BH, Math.floor(HH[1] / BH) * BH, Math.floor(HH[2] / BH) * BH]
+    function DB(BB, OB) {
+      return [Math.floor(BB[0] / OB) * OB, Math.floor(BB[1] / OB) * OB, Math.floor(BB[2] / OB) * OB]
     }
 
-    function SH(HH) {
-      const BH = (null !== HH && void 0 !== HH ? HH : "").match(/-?\d+(?:\.\d+)?/g);
-      return BH && BH.length >= 3 ? [Number(BH[0]), Number(BH[1]), Number(BH[2])] : null
+    function QB(BB) {
+      const OB = (null !== BB && void 0 !== BB ? BB : "").match(/-?\d+(?:\.\d+)?/g);
+      return OB && OB.length >= 3 ? [Number(OB[0]), Number(OB[1]), Number(OB[2])] : null
     }
 
-    function hH(HH, BH) {
-      return HH === BH ? String(HH) : `${HH}-${BH}`
+    function oB(BB, OB) {
+      return BB === OB ? String(BB) : `${BB}-${OB}`
     }
 
-    function tH(HH, BH, LH, AH) {
-      const rH = [];
-      let SH = new Map;
-      for (let hH = HH[2]; hH < HH[2] + BH; hH++) {
-        const tH = new Map;
-        let zH = HH[0];
-        for (; zH < HH[0] + BH;) {
-          const rH = AH(zH, LH, hH);
-          let CH = zH;
-          for (; CH + 1 < HH[0] + BH && AH(CH + 1, LH, hH) === rH;) CH++;
-          if (null !== rH) {
-            const HH = `${zH} ${CH} ${rH}`,
-              BH = SH.get(HH);
-            BH ? (BH.z1 = hH, SH.delete(HH), tH.set(HH, BH)) : tH.set(HH, {
-              x0: zH,
-              x1: CH,
-              z0: hH,
-              z1: hH,
-              name: rH
+    function jB(BB, OB, GB, YB) {
+      const DB = [];
+      let QB = new Map;
+      for (let oB = BB[2]; oB < BB[2] + OB; oB++) {
+        const jB = new Map;
+        let yB = BB[0];
+        for (; yB < BB[0] + OB;) {
+          const DB = YB(yB, GB, oB);
+          let JB = yB;
+          for (; JB + 1 < BB[0] + OB && YB(JB + 1, GB, oB) === DB;) JB++;
+          if (null !== DB) {
+            const BB = `${yB} ${JB} ${DB}`,
+              OB = QB.get(BB);
+            OB ? (OB.z1 = oB, QB.delete(BB), jB.set(BB, OB)) : jB.set(BB, {
+              x0: yB,
+              x1: JB,
+              z0: oB,
+              z1: oB,
+              name: DB
             })
           }
-          zH = CH + 1
+          yB = JB + 1
         }
-        rH.push(...SH.values()), SH = tH
+        DB.push(...QB.values()), QB = jB
       }
-      return rH.push(...SH.values()), rH.sort(((HH, BH) => HH.z0 - BH.z0 || HH.x0 - BH.x0)).map((HH => `x${hH(HH.x0,HH.x1)} z${hH(HH.z0,HH.z1)} ${HH.name}`))
+      return DB.push(...QB.values()), DB.sort(((BB, OB) => BB.z0 - OB.z0 || BB.x0 - OB.x0)).map((BB => `x${oB(BB.x0,BB.x1)} z${oB(BB.z0,BB.z1)} ${BB.name}`))
     }
 
-    function zH(HH, BH, LH, rH) {
-      let SH = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : AH;
-      const zH = [HH[0] + BH - 1, HH[1] + BH - 1, HH[2] + BH - 1],
-        CH = null !== rH && rH.every(((BH, LH) => Math.floor(BH) >= HH[LH] && Math.floor(BH) <= zH[LH])),
-        EH = [`The chunk from ${HH.join(" ")} to ${zH.join(" ")}. Each line is one layer (y), with boxes of one block: x from-to, z from-to, then the block. Air is left out.`];
-      null !== rH && EH.push(`The player's feet are at ${rH.map(Math.floor).join(" ")}, ${CH?"in this chunk":"outside this chunk"}.`);
-      const XH = [];
-      for (let AH = HH[1]; AH <= zH[1]; AH++) {
-        const rH = tH(HH, BH, AH, LH).join("; "),
-          SH = XH[XH.length - 1];
-        (null === SH || void 0 === SH ? void 0 : SH.boxes) === rH ? SH.to = AH : XH.push({
-          from: AH,
-          to: AH,
-          boxes: rH
+    function yB(BB, OB, GB, DB) {
+      let QB = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : YB;
+      const yB = [BB[0] + OB - 1, BB[1] + OB - 1, BB[2] + OB - 1],
+        JB = null !== DB && DB.every(((OB, GB) => Math.floor(OB) >= BB[GB] && Math.floor(OB) <= yB[GB])),
+        MB = [`The chunk from ${BB.join(" ")} to ${yB.join(" ")}. Each line is one layer (y), with boxes of one block: x from-to, z from-to, then the block. Air is left out.`];
+      null !== DB && MB.push(`The player's feet are at ${DB.map(Math.floor).join(" ")}, ${JB?"in this chunk":"outside this chunk"}.`);
+      const PB = [];
+      for (let YB = BB[1]; YB <= yB[1]; YB++) {
+        const DB = jB(BB, OB, YB, GB).join("; "),
+          QB = PB[PB.length - 1];
+        (null === QB || void 0 === QB ? void 0 : QB.boxes) === DB ? QB.to = YB : PB.push({
+          from: YB,
+          to: YB,
+          boxes: DB
         })
       }
-      const GH = XH.filter((HH => "" !== HH.boxes));
-      0 === GH.length && EH.push("It is all air.");
-      let YH = EH.join("\n").length;
-      for (const AH of GH) {
-        const HH = `y${hH(AH.from,AH.to)}: ${AH.boxes}`;
-        if (YH += HH.length + 1, YH > SH) {
-          EH.push(`Cut short: the layers from y${AH.from} up aren't shown, as there are too many blocks.`);
+      const zB = PB.filter((BB => "" !== BB.boxes));
+      0 === zB.length && MB.push("It is all air.");
+      let lB = MB.join("\n").length;
+      for (const YB of zB) {
+        const BB = `y${oB(YB.from,YB.to)}: ${YB.boxes}`;
+        if (lB += BB.length + 1, lB > QB) {
+          MB.push(`Cut short: the layers from y${YB.from} up aren't shown, as there are too many blocks.`);
           break
         }
-        EH.push(HH)
+        MB.push(BB)
       }
-      return EH.join("\n")
+      return MB.join("\n")
     }
   },
-  9491: (HH, BH, LH) => {
-    LH.d(BH, {
-      d: () => rH
+  9460: (BB, OB, GB) => {
+    GB.d(OB, {
+      b: () => DB
     });
-    var AH = LH(15);
+    var YB = GB(16);
 
-    function rH() {
-      return !AH.c.get("isTouchScreen") && null !== document.pointerLockElement
+    function DB() {
+      return !YB.c.get("isTouchScreen") && null !== document.pointerLockElement
     }
   },
-  37812: (HH, BH, LH) => {
-    LH.d(BH, {
-      c: () => hH,
-      d: () => SH,
-      g: () => rH
+  37650: (BB, OB, GB) => {
+    GB.d(OB, {
+      b: () => oB,
+      c: () => QB,
+      d: () => DB
     });
-    const AH = [.25, .5, 1, 2, 4, 8, 16];
+    const YB = [.25, .5, 1, 2, 4, 8, 16];
 
-    function rH(HH, BH) {
-      const LH = AH;
-      let rH = LH.indexOf(HH);
-      return -1 === rH && (rH = LH.findIndex((BH => BH >= HH)), -1 === rH && (rH = LH.length - 1)), "up" === BH ? LH[Math.min(rH + 1, LH.length - 1)] : LH[Math.max(rH - 1, 0)]
+    function DB(BB, OB) {
+      const GB = YB;
+      let DB = GB.indexOf(BB);
+      return -1 === DB && (DB = GB.findIndex((OB => OB >= BB)), -1 === DB && (DB = GB.length - 1)), "up" === OB ? GB[Math.min(DB + 1, GB.length - 1)] : GB[Math.max(DB - 1, 0)]
     }
 
-    function SH(HH) {
-      return HH <= AH[0]
+    function QB(BB) {
+      return BB <= YB[0]
     }
 
-    function hH(HH) {
-      return HH >= AH[AH.length - 1]
+    function oB(BB) {
+      return BB >= YB[YB.length - 1]
     }
   },
-  37373: (HH, BH, LH) => {
-    LH.d(BH, {
-      c: () => rH,
-      e: () => SH
+  37166: (BB, OB, GB) => {
+    GB.d(OB, {
+      b: () => DB,
+      f: () => QB
     });
-    let AH = !1;
+    let YB = !1;
 
-    function rH() {
-      return AH
+    function DB() {
+      return YB
     }
 
-    function SH(HH) {
-      return AH !== HH && (AH = HH, !0)
+    function QB(BB) {
+      return YB !== BB && (YB = BB, !0)
     }
   },
-  39936: (HH, BH, LH) => {
-    LH.d(BH, {
-      b: () => SH
+  39730: (BB, OB, GB) => {
+    GB.d(OB, {
+      e: () => QB
     });
-    var AH = LH(18),
-      rH = LH(2036);
+    var YB = GB(25),
+      DB = GB(2050);
 
-    function SH(HH) {
+    function QB(BB) {
       let {
-        taskId: BH,
-        progress: LH
-      } = HH;
-      const AH = rH.e.get("_tasks");
-      null !== AH && void 0 !== AH && AH[BH] && rH.e.apply({
+        taskId: OB,
+        progress: GB
+      } = BB;
+      const YB = DB.e.get("_tasks");
+      null !== YB && void 0 !== YB && YB[OB] && DB.e.apply({
         _tasks: {
-          ...AH,
-          [BH]: {
-            ...AH[BH],
-            progress: LH
+          ...YB,
+          [OB]: {
+            ...YB[OB],
+            progress: GB
           }
         }
       })
     }
-    AH.k.subscribe("clientTaskProgress", (HH => {
-      SH(HH)
+    YB.o.subscribe("clientTaskProgress", (BB => {
+      QB(BB)
     }))
   },
-  40649: (HH, BH, LH) => {
-    LH.d(BH, {
-      e: () => YH,
-      i: () => QH,
-      j: () => CH,
-      l: () => XH,
-      m: () => GH,
-      o: () => zH,
-      q: () => hH,
-      u: () => EH,
-      v: () => WH
+  40381: (BB, OB, GB) => {
+    GB.d(OB, {
+      d: () => lB,
+      e: () => qB,
+      f: () => JB,
+      h: () => PB,
+      l: () => zB,
+      o: () => yB,
+      s: () => oB,
+      u: () => MB,
+      w: () => ZB
     });
-    var AH = LH(2036),
-      rH = LH(18),
-      SH = LH(2045);
-    const hH = (0, SH.n)((function() {
-        var HH, BH, LH, rH;
+    var YB = GB(2050),
+      DB = GB(25),
+      QB = GB(2059);
+    const oB = (0, QB.i)((function() {
+        var BB, OB, GB, DB;
         return {
-          health: null !== (HH = AH.e.get("_health")) && void 0 !== HH ? HH : null,
-          maxHealth: null !== (BH = AH.e.get("_totalMaxHealth")) && void 0 !== BH ? BH : null,
-          shield: null !== (LH = AH.e.get("_shield")) && void 0 !== LH ? LH : null,
-          maxShield: null !== (rH = AH.e.get("maxShield")) && void 0 !== rH ? rH : null
+          health: null !== (BB = YB.e.get("_health")) && void 0 !== BB ? BB : null,
+          maxHealth: null !== (OB = YB.e.get("_totalMaxHealth")) && void 0 !== OB ? OB : null,
+          shield: null !== (GB = YB.e.get("_shield")) && void 0 !== GB ? GB : null,
+          maxShield: null !== (DB = YB.e.get("maxShield")) && void 0 !== DB ? DB : null
         }
-      }), [], (0, SH.l)("_health", "_totalMaxHealth", "_shield", "maxShield")),
-      tH = [{
+      }), [], (0, QB.h)("_health", "_totalMaxHealth", "_shield", "maxShield")),
+      jB = [{
         canFly: !1,
         flying: !1
       }, {
@@ -192,966 +192,966 @@ export const modules = {
         flying: !0
       }];
 
-    function zH(HH, BH) {
-      return tH[(HH ? 2 : 0) + (BH ? 1 : 0)]
+    function yB(BB, OB) {
+      return jB[(BB ? 2 : 0) + (OB ? 1 : 0)]
     }
-    const CH = (0, SH.n)((function() {
-      var HH;
-      return null !== (HH = AH.e.get("_aura")) && void 0 !== HH ? HH : null
-    }), [], (0, SH.l)("_aura"));
+    const JB = (0, QB.i)((function() {
+      var BB;
+      return null !== (BB = YB.e.get("_aura")) && void 0 !== BB ? BB : null
+    }), [], (0, QB.h)("_aura"));
 
-    function EH(HH) {
+    function MB(BB) {
       return {
-        watch: BH => (0, rH.m)("shotPlayer", (LH => {
+        watch: OB => (0, DB.p)("shotPlayer", (GB => {
           let {
-            playerId: AH,
-            damage: rH,
-            wasCrit: SH,
-            distance: hH
-          } = LH;
-          HH(AH) && BH({
-            damage: rH,
-            wasCrit: SH,
-            distance: hH
+            playerId: YB,
+            damage: DB,
+            wasCrit: QB,
+            distance: oB
+          } = GB;
+          BB(YB) && OB({
+            damage: DB,
+            wasCrit: QB,
+            distance: oB
           })
         }))
       }
     }
 
-    function XH(HH) {
-      return (0, SH.b)("chat", (BH => {
+    function PB(BB) {
+      return (0, QB.b)("chat", (OB => {
         let {
-          serverChatMsgId: LH,
-          worldCodeLineId: AH,
-          content: rH,
-          chatterEId: SH,
-          chatterObjectsToReplay: hH
-        } = BH;
+          serverChatMsgId: GB,
+          worldCodeLineId: YB,
+          content: DB,
+          chatterEId: QB,
+          chatterObjectsToReplay: oB
+        } = OB;
         return {
-          serverChatMsgId: null !== LH && void 0 !== LH ? LH : null,
-          worldCodeLineId: null !== AH && void 0 !== AH ? AH : null,
-          content: rH,
-          author: SH ? HH(SH) : null,
-          hiddenFromReplay: !0 === hH
+          serverChatMsgId: null !== GB && void 0 !== GB ? GB : null,
+          worldCodeLineId: null !== YB && void 0 !== YB ? YB : null,
+          content: DB,
+          author: QB ? BB(QB) : null,
+          hiddenFromReplay: !0 === oB
         }
       }))
     }
-    const GH = (0, SH.b)("chatRemoved");
-    class YH {
+    const zB = (0, QB.b)("chatRemoved");
+    class lB {
       constructor() {
         this.shown = null, this.needed = null, this.neededSince = 0
       }
-      update(HH) {
-        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
-        const LH = this.shown;
-        return HH !== this.needed && (this.needed = HH, this.neededSince = BH, null === HH && (this.shown = null)), this.shown !== this.needed && BH - this.neededSince > 200 && (this.shown = this.needed), this.shown !== LH
+      update(BB) {
+        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
+        const GB = this.shown;
+        return BB !== this.needed && (this.needed = BB, this.neededSince = OB, null === BB && (this.shown = null)), this.shown !== this.needed && OB - this.neededSince > 200 && (this.shown = this.needed), this.shown !== GB
       }
     }
 
-    function uH(HH) {
+    function pB(BB) {
       return [{
-        translationKey: `touchKeys:${HH}`
+        translationKey: `touchKeys:${BB}`
       }]
     }
-    const QH = {
-      open: uH("open"),
-      close: uH("close"),
-      milk: uH("milk"),
-      shear: uH("shear"),
-      tame: uH("tame"),
-      feed: uH("feed"),
-      ride: uH("ride")
+    const qB = {
+      open: pB("open"),
+      close: pB("close"),
+      milk: pB("milk"),
+      shear: pB("shear"),
+      tame: pB("tame"),
+      feed: pB("feed"),
+      ride: pB("ride")
     };
 
-    function WH(HH) {
+    function ZB(BB) {
       return [{
         translationKey: "touchKeys:tameWith"
       }, " ", {
-        icon: HH
+        icon: BB
       }]
     }
   },
-  37174: (HH, BH, LH) => {
-    LH.d(BH, {
-      d: () => tH,
-      f: () => hH
+  37004: (BB, OB, GB) => {
+    GB.d(OB, {
+      c: () => jB,
+      e: () => oB
     });
-    var AH = LH(3648);
-    let rH = null,
-      SH = null;
+    var YB = GB(3711);
+    let DB = null,
+      QB = null;
 
-    function hH() {
-      return SH ??= LH.e(235).then((() => LH(37091))).then((HH => {
+    function oB() {
+      return QB ??= GB.e(235).then((() => GB(36925))).then((BB => {
         let {
-          ITEM_SPRITES: BH,
-          ITEM_SPRITES_WITHOUT_FILE: LH,
-          ITEM_FILES_WITHOUT_SPRITE: SH
-        } = HH;
-        rH = function(HH, BH, LH) {
-          const rH = new Set,
-            SH = (0, AH.v)(BH);
-          let hH = 0;
-          for (const [AH, tH] of HH.entries()) AH === SH[hH] ? hH++ : rH.add(tH);
-          if ("" !== LH)
-            for (const tH of LH.split(AH.q)) rH.add(tH);
-          return rH
-        }(BH.split(AH.q), LH, SH)
-      }), (HH => {
-        throw SH = null, HH
-      })), SH
+          ITEM_SPRITES: OB,
+          ITEM_SPRITES_WITHOUT_FILE: GB,
+          ITEM_FILES_WITHOUT_SPRITE: QB
+        } = BB;
+        DB = function(BB, OB, GB) {
+          const DB = new Set,
+            QB = (0, YB.w)(OB);
+          let oB = 0;
+          for (const [YB, jB] of BB.entries()) YB === QB[oB] ? oB++ : DB.add(jB);
+          if ("" !== GB)
+            for (const jB of GB.split(YB.r)) DB.add(jB);
+          return DB
+        }(OB.split(YB.r), GB, QB)
+      }), (BB => {
+        throw QB = null, BB
+      })), QB
     }
 
-    function tH(HH) {
-      var BH, LH;
-      return null !== (BH = null === (LH = rH) || void 0 === LH ? void 0 : LH.has(HH)) && void 0 !== BH && BH
+    function jB(BB) {
+      var OB, GB;
+      return null !== (OB = null === (GB = DB) || void 0 === GB ? void 0 : GB.has(BB)) && void 0 !== OB && OB
     }
   },
-  40669: (HH, BH, LH) => {
-    LH.d(BH, {
-      b: () => AH,
-      d: () => SH,
-      e: () => rH
+  40400: (BB, OB, GB) => {
+    GB.d(OB, {
+      b: () => YB,
+      e: () => QB,
+      h: () => DB
     });
-    const AH = 128;
+    const YB = 128;
 
-    function rH(HH, BH, LH, AH) {
-      const rH = 2 * BH - 1,
-        SH = 1 - 2 * LH,
-        hH = HH(0) - rH * HH(3),
-        tH = HH(4) - rH * HH(7),
-        zH = HH(8) - rH * HH(11),
-        CH = HH(1) - SH * HH(3),
-        EH = HH(5) - SH * HH(7),
-        XH = HH(9) - SH * HH(11);
-      AH[0] = tH * XH - zH * EH, AH[1] = zH * CH - hH * XH, AH[2] = hH * EH - tH * CH;
-      const GH = AH[0] * HH(3) + AH[1] * HH(7) + AH[2] * HH(11) < 0 ? -1 : 1,
-        YH = Math.hypot(AH[0], AH[1], AH[2]) * GH;
-      return AH[0] /= YH, AH[1] /= YH, AH[2] /= YH, AH
+    function DB(BB, OB, GB, YB) {
+      const DB = 2 * OB - 1,
+        QB = 1 - 2 * GB,
+        oB = BB(0) - DB * BB(3),
+        jB = BB(4) - DB * BB(7),
+        yB = BB(8) - DB * BB(11),
+        JB = BB(1) - QB * BB(3),
+        MB = BB(5) - QB * BB(7),
+        PB = BB(9) - QB * BB(11);
+      YB[0] = jB * PB - yB * MB, YB[1] = yB * JB - oB * PB, YB[2] = oB * MB - jB * JB;
+      const zB = YB[0] * BB(3) + YB[1] * BB(7) + YB[2] * BB(11) < 0 ? -1 : 1,
+        lB = Math.hypot(YB[0], YB[1], YB[2]) * zB;
+      return YB[0] /= lB, YB[1] /= lB, YB[2] /= lB, YB
     }
 
-    function SH(HH, BH, LH, AH, rH, SH) {
-      const hH = [Math.floor(BH[0]), Math.floor(BH[1]), Math.floor(BH[2])],
-        tH = [0, 0, 0],
-        zH = [1 / 0, 1 / 0, 1 / 0],
-        CH = [1 / 0, 1 / 0, 1 / 0];
-      for (let GH = 0; GH < 3; GH++) tH[GH] = Math.sign(LH[GH]), 0 !== tH[GH] && (CH[GH] = Math.abs(1 / LH[GH]), zH[GH] = (hH[GH] + (tH[GH] > 0 ? 1 : 0) - BH[GH]) / LH[GH]);
-      let EH = 0,
-        XH = Math.abs(LH[0]) > Math.abs(LH[1]) ? 0 : 1;
-      for (Math.abs(LH[2]) > Math.abs(LH[XH]) && (XH = 2); EH <= AH;) {
-        if (HH(hH[0], hH[1], hH[2])) return rH[0] = hH[0], rH[1] = hH[1], rH[2] = hH[2], SH[0] = 0, SH[1] = 0, SH[2] = 0, SH[XH] = -tH[XH], !0;
-        XH = zH[0] < zH[1] ? 0 : 1, zH[2] < zH[XH] && (XH = 2), EH = zH[XH], hH[XH] += tH[XH], zH[XH] += CH[XH]
+    function QB(BB, OB, GB, YB, DB, QB) {
+      const oB = [Math.floor(OB[0]), Math.floor(OB[1]), Math.floor(OB[2])],
+        jB = [0, 0, 0],
+        yB = [1 / 0, 1 / 0, 1 / 0],
+        JB = [1 / 0, 1 / 0, 1 / 0];
+      for (let zB = 0; zB < 3; zB++) jB[zB] = Math.sign(GB[zB]), 0 !== jB[zB] && (JB[zB] = Math.abs(1 / GB[zB]), yB[zB] = (oB[zB] + (jB[zB] > 0 ? 1 : 0) - OB[zB]) / GB[zB]);
+      let MB = 0,
+        PB = Math.abs(GB[0]) > Math.abs(GB[1]) ? 0 : 1;
+      for (Math.abs(GB[2]) > Math.abs(GB[PB]) && (PB = 2); MB <= YB;) {
+        if (BB(oB[0], oB[1], oB[2])) return DB[0] = oB[0], DB[1] = oB[1], DB[2] = oB[2], QB[0] = 0, QB[1] = 0, QB[2] = 0, QB[PB] = -jB[PB], !0;
+        PB = yB[0] < yB[1] ? 0 : 1, yB[2] < yB[PB] && (PB = 2), MB = yB[PB], oB[PB] += jB[PB], yB[PB] += JB[PB]
       }
       return !1
     }
   },
-  37294: (HH, BH, LH) => {
-    LH.d(BH, {
-      c: () => mH,
-      f: () => oH,
-      g: () => TH,
-      j: () => vH,
-      m: () => UH
+  37083: (BB, OB, GB) => {
+    GB.d(OB, {
+      e: () => dB,
+      i: () => KB,
+      k: () => VB,
+      n: () => WB,
+      q: () => SB
     });
-    var AH = LH(257),
-      rH = LH(81);
-    const SH = new(LH(37297).b)(new URL(LH.p + LH.u(3), LH.b), {
+    var YB = GB(271),
+      DB = GB(92);
+    const QB = new(GB(37085).d)(new URL(GB.p + GB.u(3), GB.b), {
       name: "blockIconWorker",
       type: "module"
     });
-    var hH = LH(1863),
-      tH = LH(2219);
-    const zH = 1e4,
-      CH = 3e4;
-    let EH = null,
-      XH = null,
-      GH = null,
-      YH = !1,
-      uH = 0;
-    const QH = new Map;
-    let WH = null;
-    const MH = new Map,
-      xH = new Map;
+    var oB = GB(1896),
+      jB = GB(2259);
+    const yB = 1e4,
+      JB = 3e4;
+    let MB = null,
+      PB = null,
+      zB = null,
+      lB = !1,
+      pB = 0;
+    const qB = new Map;
+    let ZB = null;
+    const NB = new Map,
+      RB = new Map;
 
-    function vH(HH) {
-      const BH = new Promise(((BH, LH) => {
-        const AH = new Image;
-        AH.crossOrigin = "anonymous", AH.fetchPriority = "high", AH.onload = () => {
-          BH(AH)
-        }, AH.onerror = () => {
-          LH(new Error(`A block icon's texture did not load: ${HH.slice(0,100)}`))
-        }, AH.src = HH
+    function WB(BB) {
+      const OB = new Promise(((OB, GB) => {
+        const YB = new Image;
+        YB.crossOrigin = "anonymous", YB.fetchPriority = "high", YB.onload = () => {
+          OB(YB)
+        }, YB.onerror = () => {
+          GB(new Error(`A block icon's texture did not load: ${BB.slice(0,100)}`))
+        }, YB.src = BB
       }));
-      return (0, tH.f)(BH)
+      return (0, jB.e)(OB)
     }
 
-    function PH(HH) {
-      var BH, LH;
-      YH || console.warn(`[blockIconWorker] block icons draw on the page, as the worker ${HH}`), YH = !0, null === (BH = EH) || void 0 === BH || BH.terminate(), EH = null, XH = null, MH.clear(), xH.clear();
-      for (const AH of QH.values()) AH(null);
-      QH.clear(), null === (LH = WH) || void 0 === LH || LH()
+    function AB(BB) {
+      var OB, GB;
+      lB || console.warn(`[blockIconWorker] block icons draw on the page, as the worker ${BB}`), lB = !0, null === (OB = MB) || void 0 === OB || OB.terminate(), MB = null, PB = null, NB.clear(), RB.clear();
+      for (const YB of qB.values()) YB(null);
+      qB.clear(), null === (GB = ZB) || void 0 === GB || GB()
     }
 
-    function TH() {
-      return null !== XH
+    function VB() {
+      return null !== PB
     }
 
-    function UH() {
-      return GH ??= async function() {
+    function SB() {
+      return zB ??= async function() {
         if ("undefined" === typeof Worker || "undefined" === typeof OffscreenCanvas || "undefined" === typeof createImageBitmap) return;
-        if ("page" === AH.e.ios_icon_worker_v1 && (0, rH.isWebKit)()) return;
+        if ("page" === YB.b.ios_icon_worker_v1 && (0, DB.isWebKit)()) return;
         try {
-          EH = await async function() {
-            return await SH.ready(), SH.start()
+          MB = await async function() {
+            return await QB.ready(), QB.start()
           }()
-        } catch (tH) {
-          return void PH(`did not start (${String(tH)})`)
+        } catch (jB) {
+          return void AB(`did not start (${String(jB)})`)
         }
-        let HH = () => {};
-        const BH = new Promise((BH => {
-          HH = BH
+        let BB = () => {};
+        const OB = new Promise((OB => {
+          BB = OB
         }));
-        EH.onmessage = BH => {
+        MB.onmessage = OB => {
           let {
-            data: LH
-          } = BH;
-          if ("started" === LH.type) XH = EH, HH();
-          else if ("failed" === LH.type) PH(`failed a draw (${LH.message})`);
+            data: GB
+          } = OB;
+          if ("started" === GB.type) PB = MB, BB();
+          else if ("failed" === GB.type) AB(`failed a draw (${GB.message})`);
           else {
-            var AH, rH;
-            null === (AH = QH.get(LH.id)) || void 0 === AH || AH(LH.url), QH.delete(LH.id), null === (rH = WH) || void 0 === rH || rH()
+            var YB, DB;
+            null === (YB = qB.get(GB.id)) || void 0 === YB || YB(GB.url), qB.delete(GB.id), null === (DB = ZB) || void 0 === DB || DB()
           }
-        }, EH.onerror = BH => {
-          BH.preventDefault(), PH(`stopped (${BH.message||"its script did not load or run"})`), HH()
+        }, MB.onerror = OB => {
+          OB.preventDefault(), AB(`stopped (${OB.message||"its script did not load or run"})`), BB()
         };
-        const LH = `did not start in ${CH/1e3} s`;
-        await (0, hH.j)(BH, CH, LH).catch((() => {
-          PH(LH)
+        const GB = `did not start in ${JB/1e3} s`;
+        await (0, oB.h)(OB, JB, GB).catch((() => {
+          AB(GB)
         }))
-      }(), GH
+      }(), zB
     }
 
-    function VH() {
-      if (null !== WH || 0 === QH.size) return;
-      const HH = new Promise((HH => {
-          WH = HH
+    function nB() {
+      if (null !== ZB || 0 === qB.size) return;
+      const BB = new Promise((BB => {
+          ZB = BB
         })),
-        BH = `did not answer in ${zH/1e3} s`;
-      (0, hH.j)(HH, zH, BH).then((() => {
-        WH = null, VH()
+        OB = `did not answer in ${yB/1e3} s`;
+      (0, oB.h)(BB, yB, OB).then((() => {
+        ZB = null, nB()
       }), (() => {
-        WH = null, PH(BH)
+        ZB = null, AB(OB)
       }))
     }
 
-    function OH(HH, BH) {
-      let LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-      HH.postMessage(BH, LH)
+    function UB(BB, OB) {
+      let GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+      BB.postMessage(OB, GB)
     }
 
-    function bH(HH, BH, LH, AH) {
-      let rH = BH.get(LH);
-      return void 0 === rH && (rH = AH().then((async BH => {
+    function fB(BB, OB, GB, YB) {
+      let DB = OB.get(GB);
+      return void 0 === DB && (DB = YB().then((async OB => {
         let {
-          image: LH,
-          request: AH
-        } = BH;
+          image: GB,
+          request: YB
+        } = OB;
         try {
-          const BH = await createImageBitmap(LH);
-          OH(HH, AH(BH), [BH])
-        } catch (rH) {
-          PH(`could not take an image (${String(rH)})`)
+          const OB = await createImageBitmap(GB);
+          UB(BB, YB(OB), [OB])
+        } catch (DB) {
+          AB(`could not take an image (${String(DB)})`)
         }
-      })), rH.catch((() => {
-        BH.get(LH) === rH && BH.delete(LH)
-      })), BH.set(LH, rH)), rH
+      })), DB.catch((() => {
+        OB.get(GB) === DB && OB.delete(GB)
+      })), OB.set(GB, DB)), DB
     }
-    async function kH(HH, BH) {
-      UH();
-      const LH = XH;
-      if (null === LH) return null;
-      if (await HH(LH), XH !== LH) return null;
-      const AH = ++uH;
-      return new Promise((HH => {
-        QH.set(AH, HH), OH(LH, BH(AH)), VH()
+    async function kB(BB, OB) {
+      SB();
+      const GB = PB;
+      if (null === GB) return null;
+      if (await BB(GB), PB !== GB) return null;
+      const YB = ++pB;
+      return new Promise((BB => {
+        qB.set(YB, BB), UB(GB, OB(YB)), nB()
       }))
     }
 
-    function mH(HH, BH, LH) {
-      return kH((BH => Promise.all([HH.top, HH.left, HH.right].map((HH => function(HH, BH) {
-        return bH(HH, MH, BH, (async () => ({
-          image: await vH(BH),
-          request: HH => ({
+    function dB(BB, OB, GB) {
+      return kB((OB => Promise.all([BB.top, BB.left, BB.right].map((BB => function(BB, OB) {
+        return fB(BB, NB, OB, (async () => ({
+          image: await WB(OB),
+          request: BB => ({
             type: "texture",
-            url: BH,
-            bitmap: HH
+            url: OB,
+            bitmap: BB
           })
         })))
-      }(BH, HH))))), (AH => ({
+      }(OB, BB))))), (YB => ({
         type: "draw",
-        id: AH,
-        ...HH,
-        size: BH,
-        outlineWidth: LH
+        id: YB,
+        ...BB,
+        size: OB,
+        outlineWidth: GB
       })))
     }
 
-    function oH(HH, BH, LH, AH) {
-      return kH((LH => function(HH, BH, LH) {
-        return bH(HH, xH, BH, (async () => {
+    function KB(BB, OB, GB, YB) {
+      return kB((GB => function(BB, OB, GB) {
+        return fB(BB, RB, OB, (async () => {
           const {
-            texture: HH,
-            ...AH
-          } = await LH();
+            texture: BB,
+            ...YB
+          } = await GB();
           return {
-            image: await vH(HH),
-            request: HH => ({
+            image: await WB(BB),
+            request: BB => ({
               type: "model",
-              name: BH,
-              bitmap: HH,
-              geometry: AH
+              name: OB,
+              bitmap: BB,
+              geometry: YB
             })
           }
         }))
-      }(LH, HH, BH)), (BH => ({
+      }(GB, BB, OB)), (OB => ({
         type: "drawModel",
-        id: BH,
-        name: HH,
-        size: LH,
-        outlineWidth: AH
+        id: OB,
+        name: BB,
+        size: GB,
+        outlineWidth: YB
       })))
     }
   },
-  40641: (HH, BH, LH) => {
-    LH.d(BH, {
-      c: () => rH
+  40372: (BB, OB, GB) => {
+    GB.d(OB, {
+      e: () => DB
     });
-    var AH = LH(1962);
+    var YB = GB(1998);
 
-    function rH(HH, BH, LH) {
-      return (0, AH.j)(HH, BH) < LH
+    function DB(BB, OB, GB) {
+      return (0, YB.j)(BB, OB) < GB
     }
   },
-  9419: (HH, BH, LH) => {
-    LH.d(BH, {
-      c: () => rH
+  9394: (BB, OB, GB) => {
+    GB.d(OB, {
+      b: () => DB
     });
-    var AH = LH(1196);
+    var YB = GB(1255);
 
-    function rH(HH, BH) {
-      var LH, rH;
+    function DB(BB, OB) {
+      var GB, DB;
       try {
-        const LH = (0, AH.d)();
-        if ("function" === typeof LH) {
-          const AH = new LH(HH, BH);
-          if (AH.type === HH) return AH
+        const GB = (0, YB.c)();
+        if ("function" === typeof GB) {
+          const YB = new GB(BB, OB);
+          if (YB.type === BB) return YB
         }
       } catch {}
-      const SH = document.createEvent("Event");
-      return SH.initEvent(HH, null !== (LH = null === BH || void 0 === BH ? void 0 : BH.bubbles) && void 0 !== LH && LH, null !== (rH = null === BH || void 0 === BH ? void 0 : BH.cancelable) && void 0 !== rH && rH), SH
+      const QB = document.createEvent("Event");
+      return QB.initEvent(BB, null !== (GB = null === OB || void 0 === OB ? void 0 : OB.bubbles) && void 0 !== GB && GB, null !== (DB = null === OB || void 0 === OB ? void 0 : OB.cancelable) && void 0 !== DB && DB), QB
     }
   },
-  39928: (HH, BH, LH) => {
-    LH.d(BH, {
-      b: () => EH
+  39720: (BB, OB, GB) => {
+    GB.d(OB, {
+      d: () => MB
     });
-    var AH = LH(1168),
-      rH = LH(1306),
-      SH = LH(15),
-      hH = LH(1287),
-      tH = LH(1297),
-      zH = LH(1509),
-      CH = LH(37345);
+    var YB = GB(1217),
+      DB = GB(1360),
+      QB = GB(16),
+      oB = GB(1338),
+      jB = GB(1350),
+      yB = GB(1560),
+      JB = GB(37139);
 
-    function EH(HH) {
+    function MB(BB) {
       let {
-        KL: BH,
-        cL: LH
-      } = HH;
-      const EH = null !== BH && void 0 !== BH ? BH : (0, tH.c)().gameNameWithVariation;
-      (0, AH.J)(EH) && ((0, CH.j)(), (0, hH.ab)((() => {
-        console.log("Received matchmaking order from game server to game", BH), (0, SH.l)("inGameReplay"), (0, zH.navigatePreserveSearch)((0, rH.b)(EH, null !== LH && void 0 !== LH ? LH : void 0))
+        BB: OB,
+        OB: GB
+      } = BB;
+      const MB = null !== OB && void 0 !== OB ? OB : (0, jB.c)().gameNameWithVariation;
+      (0, YB.O)(MB) && ((0, JB.h)(), (0, oB.X)((() => {
+        console.log("Received matchmaking order from game server to game", OB), (0, QB.m)("inGameReplay"), (0, yB.navigatePreserveSearch)((0, DB.c)(MB, null !== GB && void 0 !== GB ? GB : void 0))
       }), "video_start"))
     }
   },
-  40147: (HH, BH, LH) => {
-    LH.d(BH, {
-      b: () => SH
+  39896: (BB, OB, GB) => {
+    GB.d(OB, {
+      d: () => QB
     });
-    var AH = LH(18),
-      rH = LH(2064);
+    var YB = GB(25),
+      DB = GB(2085);
 
-    function SH(HH) {
-      var BH, LH;
-      const SH = (0, rH.p)(null !== (BH = null === (LH = rH.w.toggleFreeCam) || void 0 === LH ? void 0 : LH[0]) && void 0 !== BH ? BH : null);
-      AH.k.AX("showBottomMessage", {
-        message: `Free Camera ${HH?"Enabled":"Disabled"}${SH?` - Press ${SH} to toggle`:""}`,
+    function QB(BB) {
+      var OB, GB;
+      const QB = (0, DB.l)(null !== (OB = null === (GB = DB.t.toggleFreeCam) || void 0 === GB ? void 0 : GB[0]) && void 0 !== OB ? OB : null);
+      YB.o.tM("showBottomMessage", {
+        message: `Free Camera ${BB?"Enabled":"Disabled"}${QB?` - Press ${QB} to toggle`:""}`,
         timeoutLength: 2e3,
         type: "Warning"
       })
     }
   },
-  39921: (HH, BH, LH) => {
-    LH.d(BH, {
-      b: () => EH,
-      f: () => zH,
-      i: () => CH,
-      m: () => XH
+  39713: (BB, OB, GB) => {
+    GB.d(OB, {
+      c: () => MB,
+      d: () => yB,
+      f: () => JB,
+      j: () => PB
     });
-    var AH = LH(1998),
-      rH = LH(18),
-      SH = LH(1352),
-      hH = LH(1204);
-    const tH = new Map;
+    var YB = GB(2023),
+      DB = GB(25),
+      QB = GB(1400),
+      oB = GB(1260);
+    const jB = new Map;
 
-    function zH(HH, BH) {
-      rH.k.AX("newUiRequest", {
-        id: HH,
-        clientParameters: BH
+    function yB(BB, OB) {
+      DB.o.tM("newUiRequest", {
+        id: BB,
+        clientParameters: OB
       }, !0)
     }
 
-    function CH(HH) {
-      rH.k.AX("removeUiRequest", HH, !0);
-      const BH = tH.get(HH);
-      BH && (BH.tearDownNotification(), tH.delete(HH))
+    function JB(BB) {
+      DB.o.tM("removeUiRequest", BB, !0);
+      const OB = jB.get(BB);
+      OB && (OB.tearDownNotification(), jB.delete(BB))
     }
 
-    function EH() {
-      rH.k.AX("clearUiRequests");
-      for (const HH of tH.values()) HH.tearDownNotification();
-      tH.clear()
+    function MB() {
+      DB.o.tM("clearUiRequests");
+      for (const BB of jB.values()) BB.tearDownNotification();
+      jB.clear()
     }
 
-    function XH(HH, BH, LH, rH) {
-      const zH = "string" === typeof BH ? {
-          translationKey: BH
-        } : BH,
-        CH = SH.NotificationProvider.showPromptPopup({
-          title: zH.translationKey,
+    function PB(BB, OB, GB, DB) {
+      const yB = "string" === typeof OB ? {
+          translationKey: OB
+        } : OB,
+        JB = QB.NotificationProvider.showPromptPopup({
+          title: yB.translationKey,
           textOpts: {
-            title: (0, hH.g)(zH.params, AH.gameBridge.latest("hiddenPlayerNames"))
+            title: (0, oB.j)(yB.params, YB.gameBridge.latest("hiddenPlayerNames"))
           },
           confirmText: "general:yes",
           cancelText: "general:no",
-          destructive: LH,
+          destructive: GB,
           unlockPointerKey: "uiRequestPopup"
         });
-      tH.set(HH, CH), CH.getResult().then((BH => {
-        tH.delete(HH), "notificationTornDown" !== BH && rH(BH)
+      jB.set(BB, JB), JB.getResult().then((OB => {
+        jB.delete(BB), "notificationTornDown" !== OB && DB(OB)
       }))
     }
   },
-  40677: (HH, BH, LH) => {
-    LH.d(BH, {
-      e: () => XH,
-      g: () => GH
+  40406: (BB, OB, GB) => {
+    GB.d(OB, {
+      d: () => PB,
+      h: () => zB
     });
-    var AH = LH(176),
-      rH = LH(40679);
-    const SH = 20;
+    var YB = GB(192),
+      DB = GB(40414);
+    const QB = 20;
 
-    function hH(HH) {
-      return HH.map(Math.floor).join(" ")
+    function oB(BB) {
+      return BB.map(Math.floor).join(" ")
     }
 
-    function tH(HH) {
-      return null === HH.amount || 1 === HH.amount ? HH.name : `${HH.amount} ${HH.name}`
+    function jB(BB) {
+      return null === BB.amount || 1 === BB.amount ? BB.name : `${BB.amount} ${BB.name}`
     }
-    var zH = LH(40687),
-      CH = LH(2036),
-      EH = LH(1297);
+    var yB = GB(40416),
+      JB = GB(2050),
+      MB = GB(1350);
 
-    function XH(HH, BH) {
-      if (!HH) return zH.d;
-      const LH = HH.playerFeet();
-      if (!LH) return "The player isn't in the world yet, so no blocks can be seen.";
-      const SH = AH.g.xX,
-        hH = (0, rH.d)(null !== BH && void 0 !== BH ? BH : LH, SH),
-        tH = HH.chunkBlocks(hH);
-      return tH ? (0, rH.b)(hH, SH, ((BH, LH, AH) => {
-        const rH = tH(BH, LH, AH);
-        return 0 === rH ? null : HH.blockName(rH).split("|")[0]
-      }), LH) : `The chunk from ${hH.join(" ")} isn't loaded: only chunks near the player are. The player's feet are at ${LH.map(Math.floor).join(" ")}.`
+    function PB(BB, OB) {
+      if (!BB) return yB.d;
+      const GB = BB.playerFeet();
+      if (!GB) return "The player isn't in the world yet, so no blocks can be seen.";
+      const QB = YB.f.pP,
+        oB = (0, DB.d)(null !== OB && void 0 !== OB ? OB : GB, QB),
+        jB = BB.chunkBlocks(oB);
+      return jB ? (0, DB.b)(oB, QB, ((OB, GB, YB) => {
+        const DB = jB(OB, GB, YB);
+        return 0 === DB ? null : BB.blockName(DB).split("|")[0]
+      }), GB) : `The chunk from ${oB.join(" ")} isn't loaded: only chunks near the player are. The player's feet are at ${GB.map(Math.floor).join(" ")}.`
     }
 
-    function GH(HH) {
-      var BH, LH, AH;
-      if (!HH) return zH.f;
-      const rH = HH.playerFeet();
-      if (!rH) return "The player isn't in the world yet, so nothing in it can be seen.";
+    function zB(BB) {
+      var OB, GB, YB;
+      if (!BB) return yB.e;
+      const DB = BB.playerFeet();
+      if (!DB) return "The player isn't in the world yet, so nothing in it can be seen.";
       const {
-        slots: XH,
-        heldSlot: GH
-      } = HH.inventory();
-      return function(HH) {
-        const BH = [];
-        null !== HH.game && BH.push(`Game: ${HH.game}.`);
-        const LH = null === HH.health ? "" : `, health ${Math.round(HH.health)}${null===HH.maxHealth?"":` of ${Math.round(HH.maxHealth)}`}`;
-        BH.push(`The player (the creator) stands at ${hH(HH.position)}${LH}, ${HH.creative?"in":"not in"} creative mode.`);
-        const AH = HH.slots[HH.heldSlot];
-        BH.push(AH ? `Holding (slot ${HH.heldSlot}): ${tH(AH)}.` : `Holding nothing (slot ${HH.heldSlot} is empty).`);
-        const rH = HH.slots.flatMap(((HH, BH) => HH ? [`slot ${BH}: ${tH(HH)}`] : []));
-        BH.push(rH.length > 0 ? `Inventory: ${rH.join(", ")}.` : "Inventory: empty.");
-        const zH = BH => Math.hypot(BH.position[0] - HH.position[0], BH.position[1] - HH.position[1], BH.position[2] - HH.position[2]),
-          CH = [...HH.nearby].sort(((HH, BH) => zH(HH) - zH(BH)));
-        if (0 === CH.length) BH.push("No other players or mobs are near enough to see.");
+        slots: PB,
+        heldSlot: zB
+      } = BB.inventory();
+      return function(BB) {
+        const OB = [];
+        null !== BB.game && OB.push(`Game: ${BB.game}.`);
+        const GB = null === BB.health ? "" : `, health ${Math.round(BB.health)}${null===BB.maxHealth?"":` of ${Math.round(BB.maxHealth)}`}`;
+        OB.push(`The player (the creator) stands at ${oB(BB.position)}${GB}, ${BB.creative?"in":"not in"} creative mode.`);
+        const YB = BB.slots[BB.heldSlot];
+        OB.push(YB ? `Holding (slot ${BB.heldSlot}): ${jB(YB)}.` : `Holding nothing (slot ${BB.heldSlot} is empty).`);
+        const DB = BB.slots.flatMap(((BB, OB) => BB ? [`slot ${OB}: ${jB(BB)}`] : []));
+        OB.push(DB.length > 0 ? `Inventory: ${DB.join(", ")}.` : "Inventory: empty.");
+        const yB = OB => Math.hypot(OB.position[0] - BB.position[0], OB.position[1] - BB.position[1], OB.position[2] - BB.position[2]),
+          JB = [...BB.nearby].sort(((BB, OB) => yB(BB) - yB(OB)));
+        if (0 === JB.length) OB.push("No other players or mobs are near enough to see.");
         else {
-          BH.push("Near them, nearest first:");
-          for (const HH of CH.slice(0, SH)) {
-            const LH = "player" === HH.kind ? `player "${HH.name||"?"}"` : HH.name && HH.name !== HH.kind ? `${HH.kind} "${HH.name}"` : HH.kind,
-              AH = Math.round(zH(HH));
-            BH.push(`- ${LH} at ${hH(HH.position)}, ${AH} block${1===AH?"":"s"} away`)
+          OB.push("Near them, nearest first:");
+          for (const BB of JB.slice(0, QB)) {
+            const GB = "player" === BB.kind ? `player "${BB.name||"?"}"` : BB.name && BB.name !== BB.kind ? `${BB.kind} "${BB.name}"` : BB.kind,
+              YB = Math.round(yB(BB));
+            OB.push(`- ${GB} at ${oB(BB.position)}, ${YB} block${1===YB?"":"s"} away`)
           }
-          CH.length > SH && BH.push(`- and ${CH.length-SH} more further away`)
+          JB.length > QB && OB.push(`- and ${JB.length-QB} more further away`)
         }
-        return HH.droppedItems > 0 && BH.push(`${HH.droppedItems} dropped item${1===HH.droppedItems?" is":"s are"} on the ground nearby.`), BH.join("\n")
+        return BB.droppedItems > 0 && OB.push(`${BB.droppedItems} dropped item${1===BB.droppedItems?" is":"s are"} on the ground nearby.`), OB.join("\n")
       }({
-        game: null !== (BH = (0, EH.c)().gameNameWithVariation) && void 0 !== BH ? BH : null,
-        position: rH,
-        health: null !== (LH = CH.e.get("_health")) && void 0 !== LH ? LH : null,
-        maxHealth: null !== (AH = CH.e.get("_totalMaxHealth")) && void 0 !== AH ? AH : null,
-        creative: !0 === CH.e.get("creative"),
-        heldSlot: GH,
-        slots: XH,
-        nearby: HH.nearby(),
-        droppedItems: HH.droppedItems()
+        game: null !== (OB = (0, MB.c)().gameNameWithVariation) && void 0 !== OB ? OB : null,
+        position: DB,
+        health: null !== (GB = JB.e.get("_health")) && void 0 !== GB ? GB : null,
+        maxHealth: null !== (YB = JB.e.get("_totalMaxHealth")) && void 0 !== YB ? YB : null,
+        creative: !0 === JB.e.get("creative"),
+        heldSlot: zB,
+        slots: PB,
+        nearby: BB.nearby(),
+        droppedItems: BB.droppedItems()
       })
     }
   },
-  42192: (HH, BH, LH) => {
-    LH.d(BH, {
-      B: () => JH,
-      E: () => qH,
-      F: () => IH,
-      G: () => eH,
-      J: () => oH,
-      N: () => wH,
-      P: () => DH,
-      S: () => lH,
-      d: () => ZH,
-      f: () => NH,
-      g: () => kH,
-      i: () => dH,
-      k: () => mH,
-      o: () => bH,
-      q: () => gH,
-      r: () => fH,
-      u: () => cH,
-      x: () => KH
+  41897: (BB, OB, GB) => {
+    GB.d(OB, {
+      A: () => gB,
+      B: () => uB,
+      E: () => LB,
+      G: () => KB,
+      I: () => eB,
+      J: () => aB,
+      L: () => IB,
+      b: () => TB,
+      e: () => XB,
+      f: () => kB,
+      j: () => bB,
+      k: () => dB,
+      n: () => fB,
+      p: () => rB,
+      s: () => mB,
+      t: () => iB,
+      v: () => FB,
+      z: () => vB
     });
-    var AH = LH(1390),
-      rH = LH(18),
-      SH = LH(1241),
-      hH = LH(2600),
-      tH = LH(5288),
-      zH = LH(5255);
-    let CH, EH = !1,
-      XH = !1,
-      GH = !1,
-      YH = !1;
-    const uH = 1300,
-      QH = 3e3;
-    let WH = 0,
-      MH = !1,
-      xH = !1,
-      vH = 0;
-    const PH = 2;
-    let TH = !1,
-      UH = !1;
-    const VH = new Set,
-      OH = new Set;
+    var YB = GB(1434),
+      DB = GB(25),
+      QB = GB(1293),
+      oB = GB(2617),
+      jB = GB(5313),
+      yB = GB(5274);
+    let JB, MB = !1,
+      PB = !1,
+      zB = !1,
+      lB = !1;
+    const pB = 1300,
+      qB = 3e3;
+    let ZB = 0,
+      NB = !1,
+      RB = !1,
+      WB = 0;
+    const AB = 2;
+    let VB = !1,
+      SB = !1;
+    const nB = new Set,
+      UB = new Set;
 
-    function bH() {
-      return EH
+    function fB() {
+      return MB
     }
 
-    function kH() {
-      return xH
+    function kB() {
+      return RB
     }
 
-    function mH() {
-      return UH
+    function dB() {
+      return SB
     }
 
-    function oH() {
-      return (0, SH.A)() && !UH
+    function KB() {
+      return (0, QB.q)() && !SB
     }
 
-    function IH(HH) {
-      let BH = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-      if (HH !== UH) {
-        UH = HH;
-        for (const HH of [...OH]) HH(UH);
-        BH && DH()
+    function uB(BB) {
+      let OB = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+      if (BB !== SB) {
+        SB = BB;
+        for (const BB of [...UB]) BB(SB);
+        OB && aB()
       }
     }
 
-    function fH(HH) {
-      return OH.add(HH), () => {
-        OH.delete(HH)
+    function mB(BB) {
+      return UB.add(BB), () => {
+        UB.delete(BB)
       }
     }
 
-    function lH() {
-      (0, tH.k)(hH.w.Menu, (0, SH.A)() ? 0 : hH.w.Menu)
+    function IB() {
+      (0, jB.m)(oB.y.Menu, (0, QB.q)() ? 0 : oB.y.Menu)
     }
 
-    function KH() {
-      xH = !1, vH = 0, lH(), DH()
+    function FB() {
+      RB = !1, WB = 0, IB(), aB()
     }
 
-    function cH(HH) {
-      return VH.add(HH), () => {
-        VH.delete(HH)
+    function iB(BB) {
+      return nB.add(BB), () => {
+        nB.delete(BB)
       }
     }
 
-    function eH(HH) {
-      XH = !1, HH !== EH && (EH = HH, YH = !1, clearTimeout(CH), GH = !EH && TH, EH ? (MH = !1, xH = !1, vH = 0) : oH() && !TH && (xH = !0), TH = !1, EH && !oH() && sH(), iH(), GH && DH())
+    function LB(BB) {
+      PB = !1, BB !== MB && (MB = BB, lB = !1, clearTimeout(JB), zB = !MB && VB, MB ? (NB = !1, RB = !1, WB = 0) : KB() && !VB && (RB = !0), VB = !1, MB && !KB() && HB(), sB(), zB && aB())
     }
 
-    function qH(HH) {
-      HH !== MH && (MH = HH, HH || DH())
+    function gB(BB) {
+      BB !== NB && (NB = BB, BB || aB())
     }
 
-    function gH() {
-      XH = !1, YH || !0 !== nH() || (YH = !0, clearTimeout(CH), CH = setTimeout(RH, uH))
+    function rB() {
+      PB = !1, lB || !0 !== cB() || (lB = !0, clearTimeout(JB), JB = setTimeout(wB, pB))
     }
 
-    function NH() {
-      return (!XH || performance.now() - WH > QH) && (XH = (0, zH.L)().lockPointer(), WH = performance.now()), XH
+    function XB() {
+      return (!PB || performance.now() - ZB > qB) && (PB = (0, yB.O)().lockPointer(), ZB = performance.now()), PB
     }
 
-    function RH() {
-      jH() && FH() && NH()
+    function wB() {
+      EB() && hB() && XB()
     }
 
-    function jH() {
-      return oH() && !EH && !MH && !(0, AH.m)()
+    function EB() {
+      return KB() && !MB && !NB && !(0, YB.j)()
     }
 
-    function nH() {
-      var HH;
-      return "undefined" === typeof navigator || null === (HH = navigator.userActivation) || void 0 === HH ? void 0 : HH.isActive
+    function cB() {
+      var BB;
+      return "undefined" === typeof navigator || null === (BB = navigator.userActivation) || void 0 === BB ? void 0 : BB.isActive
     }
 
-    function FH() {
-      return GH && (!navigator.userAgent.includes("Firefox/") || Boolean(document.fullscreenElement)) || !1 !== nH()
+    function hB() {
+      return zB && (!navigator.userAgent.includes("Firefox/") || Boolean(document.fullscreenElement)) || !1 !== cB()
     }
 
-    function DH() {
-      oH() ? jH() && !xH && FH() && NH() : EH && !TH && sH()
+    function aB() {
+      KB() ? EB() && !RB && hB() && XB() : MB && !VB && HB()
     }
 
-    function wH() {
-      xH ? navigator.vendor.startsWith("Apple") ? aH() : vH = PH : DH()
+    function eB() {
+      RB ? navigator.vendor.startsWith("Apple") ? CB() : WB = AB : aB()
     }
 
-    function ZH() {
-      vH > 0 && 0 === --vH && aH()
+    function TB() {
+      WB > 0 && 0 === --WB && CB()
     }
 
-    function dH() {
-      vH = 0
+    function bB() {
+      WB = 0
     }
 
-    function aH() {
-      jH() && !0 === nH() && NH()
+    function CB() {
+      EB() && !0 === cB() && XB()
     }
 
-    function sH() {
-      TH = !0, (0, zH.L)().unlockPointer()
+    function HB() {
+      VB = !0, (0, yB.O)().unlockPointer()
     }
 
-    function JH() {
-      XH = !1, GH = !1, YH = !1, clearTimeout(CH), MH = !1, xH = !1, vH = 0, TH = !1;
-      const HH = EH;
-      EH = !1, HH && iH()
+    function vB() {
+      PB = !1, zB = !1, lB = !1, clearTimeout(JB), NB = !1, RB = !1, WB = 0, VB = !1;
+      const BB = MB;
+      MB = !1, BB && sB()
     }
 
-    function iH() {
-      for (const HH of [...VH]) HH(EH);
-      rH.k.AX("pointerLockUpdate", EH)
+    function sB() {
+      for (const BB of [...nB]) BB(MB);
+      DB.o.tM("pointerLockUpdate", MB)
     }
   },
-  42002: (HH, BH, LH) => {
-    LH.d(BH, {
-      c: () => GH,
-      g: () => tH,
-      j: () => XH,
-      n: () => CH,
-      p: () => hH,
-      r: () => EH,
-      t: () => zH
+  41688: (BB, OB, GB) => {
+    GB.d(OB, {
+      e: () => zB,
+      g: () => jB,
+      i: () => PB,
+      l: () => JB,
+      m: () => oB,
+      p: () => MB,
+      s: () => yB
     });
-    let AH = null,
-      rH = null,
-      SH = null;
+    let YB = null,
+      DB = null,
+      QB = null;
 
-    function hH(HH) {
-      AH = HH
+    function oB(BB) {
+      YB = BB
     }
 
-    function tH() {
-      return AH
+    function jB() {
+      return YB
     }
 
-    function zH(HH) {
-      rH = HH
+    function yB(BB) {
+      DB = BB
     }
 
-    function CH() {
-      return rH
+    function JB() {
+      return DB
     }
 
-    function EH(HH) {
-      SH = HH
+    function MB(BB) {
+      QB = BB
     }
 
-    function XH() {
-      return SH
+    function PB() {
+      return QB
     }
 
-    function GH() {
-      var HH, BH;
-      return !0 === (null === (HH = rH) || void 0 === HH || null === (BH = HH.currentViewer) || void 0 === BH ? void 0 : BH.inPlayback)
+    function zB() {
+      var BB, OB;
+      return !0 === (null === (BB = DB) || void 0 === BB || null === (OB = BB.currentViewer) || void 0 === OB ? void 0 : OB.inPlayback)
     }
   },
-  42318: (HH, BH, LH) => {
-    LH.r(BH), LH.d(BH, {
-      attachPlayGameSources: () => ZA,
-      playGameSources: () => wA
+  42017: (BB, OB, GB) => {
+    GB.r(OB), GB.d(OB, {
+      attachPlayGameSources: () => TY,
+      playGameSources: () => eY
     });
-    var AH = LH(1998),
-      rH = LH(42002),
-      SH = LH(5255),
-      hH = LH(41911),
-      tH = LH(42304),
-      zH = LH(40649),
-      CH = LH(18),
-      EH = LH(5268),
-      XH = LH(5265),
-      GH = LH(41946),
-      YH = LH(41972),
-      uH = LH(42327),
-      QH = LH(41954);
-    (0, QH.k)(EH.nc.Chat, (HH => {
-      if (HH.payloadKind !== XH.jc.Msgpack) return;
-      const BH = function(HH) {
-        if (null === HH || "object" !== typeof HH || !("content" in HH)) return null;
+    var YB = GB(2023),
+      DB = GB(41688),
+      QB = GB(5274),
+      oB = GB(41593),
+      jB = GB(42004),
+      yB = GB(40381),
+      JB = GB(25),
+      MB = GB(5287),
+      PB = GB(5281),
+      zB = GB(41630),
+      lB = GB(41661),
+      pB = GB(42023),
+      qB = GB(41637);
+    (0, qB.g)(MB.oc.Chat, (BB => {
+      if (BB.payloadKind !== PB.sc.Msgpack) return;
+      const OB = function(BB) {
+        if (null === BB || "object" !== typeof BB || !("content" in BB)) return null;
         const {
-          chatMsgId: BH,
-          worldCodeLineId: LH,
-          content: AH,
-          chatterEId: rH,
-          chatterObjectsToReplay: SH
-        } = HH;
+          chatMsgId: OB,
+          worldCodeLineId: GB,
+          content: YB,
+          chatterEId: DB,
+          chatterObjectsToReplay: QB
+        } = BB;
         return {
-          serverChatMsgId: null !== BH && void 0 !== BH ? BH : void 0,
-          worldCodeLineId: null !== LH && void 0 !== LH ? LH : void 0,
-          content: AH,
-          chatterEId: void 0 === rH || null === rH ? void 0 : String(rH),
-          chatterObjectsToReplay: SH
+          serverChatMsgId: null !== OB && void 0 !== OB ? OB : void 0,
+          worldCodeLineId: null !== GB && void 0 !== GB ? GB : void 0,
+          content: YB,
+          chatterEId: void 0 === DB || null === DB ? void 0 : String(DB),
+          chatterObjectsToReplay: QB
         }
-      }((0, GH.e)(HH.payload));
-      null !== BH && CH.k.AX("chat", BH, !0)
-    })), (0, QH.k)(EH.nc.ChatRemoved, (HH => {
-      if (HH.payloadKind === XH.jc.Msgpack) {
+      }((0, zB.b)(BB.payload));
+      null !== OB && JB.o.tM("chat", OB, !0)
+    })), (0, qB.g)(MB.oc.ChatRemoved, (BB => {
+      if (BB.payloadKind === PB.sc.Msgpack) {
         const {
-          chatMsgId: BH
-        } = (0, GH.e)(HH.payload);
-        CH.k.AX("chatRemoved", BH, !0)
+          chatMsgId: OB
+        } = (0, zB.b)(BB.payload);
+        JB.o.tM("chatRemoved", OB, !0)
       }
     }));
-    const WH = {
-        chatReceived: (0, zH.l)((function(HH) {
-          var BH, LH, AH;
+    const ZB = {
+        chatReceived: (0, yB.h)((function(BB) {
+          var OB, GB, YB;
           return {
-            id: HH,
-            name: null !== (BH = uH.f.getName(HH)) && void 0 !== BH ? BH : null,
-            local: (0, YH.f)() === HH,
-            profileEffect: null !== (LH = null === (AH = (0, uH.j)(HH)) || void 0 === AH ? void 0 : AH.profileEffect) && void 0 !== LH ? LH : null
+            id: BB,
+            name: null !== (OB = pB.d.getName(BB)) && void 0 !== OB ? OB : null,
+            local: (0, lB.h)() === BB,
+            profileEffect: null !== (GB = null === (YB = (0, pB.f)(BB)) || void 0 === YB ? void 0 : YB.profileEffect) && void 0 !== GB ? GB : null
           }
         })),
-        chatRemoved: zH.m
+        chatRemoved: yB.l
       },
-      MH = {
-        sendChatMessage(HH) {
-          var BH, LH;
+      NB = {
+        sendChatMessage(BB) {
+          var OB, GB;
           let {
-            kt: AH,
-            channelName: rH
-          } = HH;
-          return null !== (BH = null === (LH = (0, hH.i)()) || void 0 === LH ? void 0 : LH.clientApi.sendChat(AH, rH)) && void 0 !== BH && BH
+            ty: YB,
+            channelName: DB
+          } = BB;
+          return null !== (OB = null === (GB = (0, oB.j)()) || void 0 === GB ? void 0 : GB.clientApi.sendChat(YB, DB)) && void 0 !== OB && OB
         }
       };
-    var xH = LH(176),
-      vH = LH(2036),
-      PH = LH(41898),
-      TH = LH(40641);
-    const UH = [0, 0, 0],
-      VH = {
-        codeBlockClickable(HH) {
-          var BH;
-          const LH = (0, hH.i)();
-          if (null === LH || void 0 === LH || !LH.isSessionLive) return !1;
-          const AH = LH.api;
-          if (0 !== (PH.y.playerFlags(AH.apiView, 0) & PH.Md.Crouching)) return !1;
-          const rH = AH.queries.directorEntity(AH.localId) >= PH.vb.BYTES ? AH.memoryData(AH.scratch(), PH.vb.BYTES, 8, "the local player's DirectorEntity") : null;
-          if (null === rH) return !1;
-          for (let SH = 0; SH < 3; SH++) UH[SH] = PH.vb.feet(rH, 0, SH);
-          return UH[1] += PH.vb.eyeHeight(rH, 0), (0, TH.c)(UH, HH, null !== (BH = vH.e.get("blockReach")) && void 0 !== BH ? BH : xH.g.yW)
+    var RB = GB(192),
+      WB = GB(2050),
+      AB = GB(41579),
+      VB = GB(40372);
+    const SB = [0, 0, 0],
+      nB = {
+        codeBlockClickable(BB) {
+          var OB;
+          const GB = (0, oB.j)();
+          if (null === GB || void 0 === GB || !GB.isSessionLive) return !1;
+          const YB = GB.api;
+          if (0 !== (AB.u.playerFlags(YB.apiView, 0) & AB.Id.Crouching)) return !1;
+          const DB = YB.queries.directorEntity(YB.localId) >= AB.xb.BYTES ? YB.memoryData(YB.scratch(), AB.xb.BYTES, 8, "the local player's DirectorEntity") : null;
+          if (null === DB) return !1;
+          for (let QB = 0; QB < 3; QB++) SB[QB] = AB.xb.feet(DB, 0, QB);
+          return SB[1] += AB.xb.eyeHeight(DB, 0), (0, VB.e)(SB, BB, null !== (OB = WB.e.get("blockReach")) && void 0 !== OB ? OB : RB.f.BN)
         }
       },
-      OH = {
-        clickCodeBlock(HH) {
-          var BH;
-          null === (BH = (0, hH.i)()) || void 0 === BH || BH.clickCodeBlock(HH)
+      UB = {
+        clickCodeBlock(BB) {
+          var OB;
+          null === (OB = (0, oB.j)()) || void 0 === OB || OB.clickCodeBlock(BB)
         }
       };
-    var bH = LH(41922),
-      kH = LH(42330),
-      mH = LH(1005),
-      oH = LH(39948),
-      IH = LH(5253),
-      fH = LH(41933),
-      lH = LH(41920),
-      KH = LH(41940);
+    var fB = GB(41602),
+      kB = GB(42031),
+      dB = GB(1049),
+      KB = GB(39741),
+      uB = GB(5269),
+      mB = GB(41616),
+      IB = GB(41600),
+      FB = GB(41624);
 
-    function cH(HH) {
-      if (null === HH) return null;
-      const BH = [];
-      for (const LH of HH) {
-        const HH = Object.keys(LH)[0];
-        if ("wH" === HH) {
+    function iB(BB) {
+      if (null === BB) return null;
+      const OB = [];
+      for (const GB of BB) {
+        const BB = Object.keys(GB)[0];
+        if ("WB" === BB) {
           const {
-            str: HH,
-            style: AH,
-            clickableUrl: rH
-          } = LH.wH, SH = Object.keys(HH)[0], hH = HH[SH];
-          "string" !== SH && "styledEntityName" !== SH && "styledTranslatedText" !== SH || BH.push({
-            str: hH,
-            style: AH,
-            clickableUrl: rH
+            str: BB,
+            style: YB,
+            clickableUrl: DB
+          } = GB.WB, QB = Object.keys(BB)[0], oB = BB[QB];
+          "string" !== QB && "styledEntityName" !== QB && "styledTranslatedText" !== QB || OB.push({
+            str: oB,
+            style: YB,
+            clickableUrl: DB
           })
-        } else BH.push(LH[HH])
+        } else OB.push(GB[BB])
       }
-      return BH
+      return OB
     }
-    const eH = {
-      screenPos(HH) {
-        var BH, LH;
-        return null !== (BH = null === (LH = (0, hH.i)()) || void 0 === LH ? void 0 : LH.renderFrame.projectWorldPosToScreenPos(HH)) && void 0 !== BH ? BH : {
+    const LB = {
+      screenPos(BB) {
+        var OB, GB;
+        return null !== (OB = null === (GB = (0, oB.j)()) || void 0 === GB ? void 0 : GB.renderFrame.projectWorldPosToScreenPos(BB)) && void 0 !== OB ? OB : {
           x: 0,
           y: 0
         }
       }
     };
-    let qH = !1;
+    let gB = !1;
 
-    function gH() {
-      qH || (qH = !0, (0, QH.k)(EH.nc.ProgressBarUpdate, (HH => {
-        const BH = (0, KH.i)(HH);
-        (0, KH.c)(BH) && CH.k.AX("progressBarUpdate", BH, !0)
-      })), (0, QH.k)(fH.u, (HH => {
-        const BH = (0, KH.f)(fH.u, HH);
-        BH && CH.k.AX("middleScreenBarInitiate", {
-          duration: BH.gS,
-          NS: BH.NS,
-          horizBarRemOffset: BH.RS
+    function rB() {
+      gB || (gB = !0, (0, qB.g)(MB.oc.ProgressBarUpdate, (BB => {
+        const OB = (0, FB.l)(BB);
+        (0, FB.e)(OB) && JB.o.tM("progressBarUpdate", OB, !0)
+      })), (0, qB.g)(mB.x, (BB => {
+        const OB = (0, FB.h)(mB.x, BB);
+        OB && JB.o.tM("middleScreenBarInitiate", {
+          duration: OB.tG,
+          BY: OB.BY,
+          horizBarRemOffset: OB.OY
         }, !0)
-      })), (0, QH.k)(EH.nc.RemoveMiddleScreenBar, (() => {
-        CH.k.AX("middleScreenBarRemove")
-      })), (0, QH.k)(fH.$, (HH => {
-        const BH = (0, KH.f)(fH.$, HH);
-        if (BH) {
-          var LH;
-          const HH = BH.QA ? null === (LH = (0, hH.i)()) || void 0 === LH ? void 0 : LH.renderFrame.projectDirectionToScreenPos(BH.QA) : void 0;
-          CH.k.AX("sendHitmarker", {
-            aA: BH.aA,
-            screenPos: HH
+      })), (0, qB.g)(MB.oc.RemoveMiddleScreenBar, (() => {
+        JB.o.tM("middleScreenBarRemove")
+      })), (0, qB.g)(mB.$, (BB => {
+        const OB = (0, FB.h)(mB.$, BB);
+        if (OB) {
+          var GB;
+          const BB = OB.bG ? null === (GB = (0, oB.j)()) || void 0 === GB ? void 0 : GB.renderFrame.projectDirectionToScreenPos(OB.bG) : void 0;
+          JB.o.tM("sendHitmarker", {
+            GD: OB.GD,
+            screenPos: BB
           }, !0)
         }
-      })), (0, QH.k)(fH.db, (HH => {
-        const BH = (0, KH.f)(fH.db, HH);
-        if (BH) {
+      })), (0, qB.g)(mB.fb, (BB => {
+        const OB = (0, FB.h)(mB.fb, BB);
+        if (OB) {
           const {
-            id: HH,
-            position: LH,
-            style: AH,
-            KA: rH,
-            eA: SH
-          } = BH;
-          CH.k.AX("setDirectionArrow", {
-            id: HH,
-            position: LH,
-            style: AH,
-            text: cH(rH),
-            eA: SH
+            id: BB,
+            position: GB,
+            style: YB,
+            DO: DB,
+            oO: QB
+          } = OB;
+          JB.o.tM("setDirectionArrow", {
+            id: BB,
+            position: GB,
+            style: YB,
+            text: iB(DB),
+            oO: QB
           }, !0)
         }
-      })), (0, QH.k)(fH.e, (HH => {
-        const BH = (0, KH.f)(fH.e, HH);
-        BH && CH.k.AX("clearDirectionArrow", {
-          id: BH.id
+      })), (0, qB.g)(mB.g, (BB => {
+        const OB = (0, FB.h)(mB.g, BB);
+        OB && JB.o.tM("clearDirectionArrow", {
+          id: OB.id
         }, !0)
-      })), (0, QH.k)(fH.l, (HH => {
-        const BH = (0, KH.f)(fH.l, HH);
-        BH && CH.k.AX("flyingMiddleMessage", {
-          content: cH(BH.Zr),
-          dr: BH.dr,
-          ar: BH.ar
+      })), (0, qB.g)(mB.r, (BB => {
+        const OB = (0, FB.h)(mB.r, BB);
+        OB && JB.o.tM("flyingMiddleMessage", {
+          content: iB(OB.RB),
+          VB: OB.VB,
+          SB: OB.SB
         }, !0)
-      })), (0, QH.k)(EH.nc.WorldVariation, (HH => {
-        const BH = (0, KH.i)(HH);
-        if ("string" === typeof BH) {
-          const HH = BH === mH.g ? null : {
-            message: `Currently loaded as variation: ${BH}`,
+      })), (0, qB.g)(MB.oc.WorldVariation, (BB => {
+        const OB = (0, FB.l)(BB);
+        if ("string" === typeof OB) {
+          const BB = OB === dB.d ? null : {
+            message: `Currently loaded as variation: ${OB}`,
             type: "Warning"
           };
-          CH.k.AX("showPermanentBottomMessage", HH, !0)
+          JB.o.tM("showPermanentBottomMessage", BB, !0)
         }
-      })), (0, QH.k)(fH.F, (HH => {
-        const BH = (0, KH.f)(fH.F, HH);
-        BH && function(HH, BH) {
+      })), (0, qB.g)(mB.F, (BB => {
+        const OB = (0, FB.h)(mB.F, BB);
+        OB && function(BB, OB) {
           const {
-            type: LH,
-            params: AH
-          } = (0, oH.d)(BH), rH = {
-            ...AH
+            type: GB,
+            params: YB
+          } = (0, KB.f)(OB), DB = {
+            ...YB
           };
-          for (const SH of oH.c) rH[SH] && (rH[SH] = cH(rH[SH]));
-          IH.d.queueQTE(HH, LH, rH).getResult().then((BH => {
-            var LH;
-            "boolean" === typeof BH && (null === (LH = (0, hH.i)()) || void 0 === LH || LH.send(lH.d.QteResponse, {
-              qteId: HH,
-              qteResponse: BH
+          for (const QB of KB.d) DB[QB] && (DB[QB] = iB(DB[QB]));
+          uB.d.queueQTE(BB, GB, DB).getResult().then((OB => {
+            var GB;
+            "boolean" === typeof OB && (null === (GB = (0, oB.j)()) || void 0 === GB || GB.send(IB.c.QteResponse, {
+              qteId: BB,
+              qteResponse: OB
             }))
           }))
-        }(BH.id, BH.qH)
-      })), (0, QH.k)(fH.U, (HH => {
-        const BH = (0, KH.f)(fH.U, HH);
-        "number" === typeof BH && IH.d.cancelQTE(BH)
-      })), (0, QH.g)((() => {
-        IH.d.reset()
-      })), (0, QH.j)((() => {
-        IH.d.reset()
-      })), (0, QH.k)(EH.nc.EditItemCraftingRecipes, (HH => {
-        const BH = (0, KH.i)(HH);
-        (0, KH.c)(BH) && CH.k.AX("craftingRecipesEdited", {
-          itemName: BH.craftingRecipeItemName,
-          recipesForItem: BH.recipesForItem
+        }(OB.id, OB.IO)
+      })), (0, qB.g)(mB.T, (BB => {
+        const OB = (0, FB.h)(mB.T, BB);
+        "number" === typeof OB && uB.d.cancelQTE(OB)
+      })), (0, qB.d)((() => {
+        uB.d.reset()
+      })), (0, qB.e)((() => {
+        uB.d.reset()
+      })), (0, qB.g)(MB.oc.EditItemCraftingRecipes, (BB => {
+        const OB = (0, FB.l)(BB);
+        (0, FB.e)(OB) && JB.o.tM("craftingRecipesEdited", {
+          itemName: OB.craftingRecipeItemName,
+          recipesForItem: OB.recipesForItem
         })
-      })), (0, QH.k)(fH.R, (HH => {
-        const BH = (0, KH.f)(fH.R, HH);
-        BH && CH.k.AX("craftingRecipesEdited", {
-          itemName: BH.kA,
+      })), (0, qB.g)(mB.Q, (BB => {
+        const OB = (0, FB.h)(mB.Q, BB);
+        OB && JB.o.tM("craftingRecipesEdited", {
+          itemName: OB.IQ,
           recipesForItem: []
         })
       })))
     }
-    var NH = LH(15);
-    const RH = [{
+    var XB = GB(16);
+    const wB = [{
       allowed: !1,
       movesFly: !1
     }, {
@@ -1165,1646 +1165,1646 @@ export const modules = {
       movesFly: !0
     }];
 
-    function jH(HH) {
-      return PH.y.playerFlags(HH.api.apiView, 0)
+    function EB(BB) {
+      return AB.u.playerFlags(BB.api.apiView, 0)
     }
-    const nH = {
-        freeCamera: (0, YH.c)((HH => () => {
-          const BH = HH.isSessionLive && 0 !== (jH(HH) & PH.Md.FreeCamMoves),
-            LH = HH.freeCameraAllowed() && null === NH.c.get("scriptedCameraFacing");
-          return RH[(LH ? 2 : 0) + (BH ? 1 : 0)]
-        }), RH[0], (HH => (0, SH.r)(HH)))
+    const cB = {
+        freeCamera: (0, lB.e)((BB => () => {
+          const OB = BB.isSessionLive && 0 !== (EB(BB) & AB.Id.FreeCamMoves),
+            GB = BB.freeCameraAllowed() && null === XB.c.get("scriptedCameraFacing");
+          return wB[(GB ? 2 : 0) + (OB ? 1 : 0)]
+        }), wB[0], (BB => (0, QB.w)(BB)))
       },
-      FH = {
-        setFreeCameraMovesFly: HH => {
-          var BH;
-          null === (BH = (0, hH.i)()) || void 0 === BH || BH.setFreeCameraMovesFly(HH)
+      hB = {
+        setFreeCameraMovesFly: BB => {
+          var OB;
+          null === (OB = (0, oB.j)()) || void 0 === OB || OB.setFreeCameraMovesFly(BB)
         }
       },
-      DH = {
+      aB = {
         freeCameraPos: () => {
-          const HH = (0, hH.i)();
-          return null !== HH && void 0 !== HH && HH.isSessionLive && HH.renderFrame.hasView && 0 !== (jH(HH) & PH.Md.FreeCam) ? HH.renderFrame.cameraPosition : null
+          const BB = (0, oB.j)();
+          return null !== BB && void 0 !== BB && BB.isSessionLive && BB.renderFrame.hasView && 0 !== (EB(BB) & AB.Id.FreeCam) ? BB.renderFrame.cameraPosition : null
         }
       };
-    var wH = LH(40147);
-    let ZH = !1,
-      dH = !1;
+    var eB = GB(39896);
+    let TB = !1,
+      bB = !1;
 
-    function aH() {
-      const HH = (0, hH.i)();
-      if (null === HH || void 0 === HH || !HH.isSessionLive) return void(ZH = !1);
-      const BH = 0 !== (PH.y.playerFlags(HH.api.apiView, 0) & PH.Md.FreeCam);
-      BH !== ZH && (ZH = BH, (0, wH.b)(BH))
+    function CB() {
+      const BB = (0, oB.j)();
+      if (null === BB || void 0 === BB || !BB.isSessionLive) return void(TB = !1);
+      const OB = 0 !== (AB.u.playerFlags(BB.api.apiView, 0) & AB.Id.FreeCam);
+      OB !== TB && (TB = OB, (0, eB.d)(OB))
     }
-    var sH = LH(317),
-      JH = LH(37912),
-      iH = LH(2045);
-    var pH = LH(42337),
-      yH = LH(41968);
-    const HB = {
+    var HB = GB(353),
+      vB = GB(37723),
+      sB = GB(2059);
+    var xB = GB(42039),
+      tB = GB(41652);
+    const BO = {
       interactPrompt: null,
       blockText: null,
       neededTool: null
     };
-    let BB = "off";
+    let OO = "off";
 
-    function LB(HH) {
-      var BH;
-      return null === HH ? null : {
-        label: null !== (BH = (0, pH.d)(HH, "interactionPrompt")) && void 0 !== BH ? BH : null
+    function GO(BB) {
+      var OB;
+      return null === BB ? null : {
+        label: null !== (OB = (0, xB.c)(BB, "interactionPrompt")) && void 0 !== OB ? OB : null
       }
     }
-    const AB = new Map([
-      [PH.Ac.Open, {
-        label: zH.i.open
+    const YO = new Map([
+      [AB.vc.Open, {
+        label: yB.e.open
       }],
-      [PH.Ac.Close, {
-        label: zH.i.close
+      [AB.vc.Close, {
+        label: yB.e.close
       }],
-      [PH.Ac.Milk, {
-        label: zH.i.milk
+      [AB.vc.Milk, {
+        label: yB.e.milk
       }],
-      [PH.Ac.Shear, {
-        label: zH.i.shear
+      [AB.vc.Shear, {
+        label: yB.e.shear
       }],
-      [PH.Ac.Tame, {
-        label: zH.i.tame
+      [AB.vc.Tame, {
+        label: yB.e.tame
       }],
-      [PH.Ac.Feed, {
-        label: zH.i.feed
+      [AB.vc.Feed, {
+        label: yB.e.feed
       }],
-      [PH.Ac.Ride, {
-        label: zH.i.ride
+      [AB.vc.Ride, {
+        label: yB.e.ride
       }]
     ]);
-    class rB {
+    class DO {
       constructor() {
-        this.target = HB, this.ph = PH.cd, this.optionName = null, this.pickaxe = new zH.e
+        this.target = BO, this.SM = AB.fd, this.optionName = null, this.pickaxe = new yB.d
       }
-      read(HH) {
-        var BH;
-        const LH = PH.y.targetBlockId(HH.api.apiView, 0);
-        LH !== this.ph && (this.ph = LH, this.optionName = LH === PH.cd ? null : `${HH.tables.getMetaInfo(LH).rootName}CrosshairText`);
-        const AH = null === this.optionName ? null : null !== (BH = HH.tables.getClientOption(this.optionName)) && void 0 !== BH ? BH : null;
-        this.pickaxe.update(function(HH, BH) {
-          var LH, AH, rH;
-          if (0 === (PH.y.playerFlags(HH.api.apiView, 0) & PH.Md.Breaking) || BH === PH.cd || 0 === BH) return null;
+      read(BB) {
+        var OB;
+        const GB = AB.u.targetBlockId(BB.api.apiView, 0);
+        GB !== this.SM && (this.SM = GB, this.optionName = GB === AB.fd ? null : `${BB.tables.getMetaInfo(GB).rootName}CrosshairText`);
+        const YB = null === this.optionName ? null : null !== (OB = BB.tables.getClientOption(this.optionName)) && void 0 !== OB ? OB : null;
+        this.pickaxe.update(function(BB, OB) {
+          var GB, YB, DB;
+          if (0 === (AB.u.playerFlags(BB.api.apiView, 0) & AB.Id.Breaking) || OB === AB.fd || 0 === OB) return null;
           const {
-            tables: SH
-          } = HH;
-          if (!0 === SH.getClientOption("creative")) return null;
-          const hH = SH.nameOfId(BH),
-            tH = null === (LH = HH.items.LX()) || void 0 === LH ? void 0 : LH.name,
-            zH = null !== (AH = SH.getItemStat(hH, "harvestLevel")) && void 0 !== AH ? AH : 0;
-          return (0, sH.Gc)({
-            blockHarvestType: SH.getDefaultItemStat(hH, "harvestType"),
-            blockHarvestLevel: SH.getDefaultItemStat(hH, "harvestLevel"),
-            harvestLevel: zH,
-            heldToolType: void 0 === tH ? void 0 : SH.getDefaultItemStat(tH, "harvests"),
-            heldToolLevel: void 0 === tH ? void 0 : SH.getDefaultItemStat(tH, "level")
-          }) && null !== (rH = JH.p[zH]) && void 0 !== rH ? rH : null
-        }(HH, LH)), HH.watchPromptPick(BB);
-        const rH = "touch" === BB ? function(HH) {
-          var BH;
-          const LH = HH.interactLabel;
-          return LH === PH.Ac.Entity ? LB(HH.promptEntity) : LH === PH.Ac.TameWith ? {
-            label: (0, zH.v)(HH.tables.nameOfId(HH.interactIcon))
-          } : null !== (BH = AB.get(LH)) && void 0 !== BH ? BH : null
-        }(HH) : LB(HH.promptEntity);
-        return this.target = (0, iH.r)(this.target, {
-          interactPrompt: rH,
-          blockText: AH,
+            tables: QB
+          } = BB;
+          if (!0 === QB.getClientOption("creative")) return null;
+          const oB = QB.nameOfId(OB),
+            jB = null === (GB = BB.items.sJ()) || void 0 === GB ? void 0 : GB.name,
+            yB = null !== (YB = QB.getItemStat(oB, "harvestLevel")) && void 0 !== YB ? YB : 0;
+          return (0, HB.Pc)({
+            blockHarvestType: QB.getDefaultItemStat(oB, "harvestType"),
+            blockHarvestLevel: QB.getDefaultItemStat(oB, "harvestLevel"),
+            harvestLevel: yB,
+            heldToolType: void 0 === jB ? void 0 : QB.getDefaultItemStat(jB, "harvests"),
+            heldToolLevel: void 0 === jB ? void 0 : QB.getDefaultItemStat(jB, "level")
+          }) && null !== (DB = vB.s[yB]) && void 0 !== DB ? DB : null
+        }(BB, GB)), BB.watchPromptPick(OO);
+        const DB = "touch" === OO ? function(BB) {
+          var OB;
+          const GB = BB.interactLabel;
+          return GB === AB.vc.Entity ? GO(BB.promptEntity) : GB === AB.vc.TameWith ? {
+            label: (0, yB.w)(BB.tables.nameOfId(BB.interactIcon))
+          } : null !== (OB = YO.get(GB)) && void 0 !== OB ? OB : null
+        }(BB) : GO(BB.promptEntity);
+        return this.target = (0, sB.k)(this.target, {
+          interactPrompt: DB,
+          blockText: YB,
           neededTool: this.pickaxe.shown
         }), this.target
       }
     }
-    let SB = null;
-    const hB = {
+    let QO = null;
+    const oO = {
       current: () => {
-        var HH, BH;
-        return null !== (HH = null === (BH = SB) || void 0 === BH ? void 0 : BH.target) && void 0 !== HH ? HH : HB
+        var BB, OB;
+        return null !== (BB = null === (OB = QO) || void 0 === OB ? void 0 : OB.target) && void 0 !== BB ? BB : BO
       },
-      watch: HH => {
-        const BH = new rB;
-        SB = BH;
-        const LH = (0, YH.i)((LH => {
-          let AH = BH.read(LH);
-          HH(AH);
-          const rH = (0, SH.v)((() => {
-            const rH = BH.read(LH);
-            rH !== AH && (AH = rH, HH(rH))
+      watch: BB => {
+        const OB = new DO;
+        QO = OB;
+        const GB = (0, lB.l)((GB => {
+          let YB = OB.read(GB);
+          BB(YB);
+          const DB = (0, QB.z)((() => {
+            const DB = OB.read(GB);
+            DB !== YB && (YB = DB, BB(DB))
           }));
           return () => {
-            rH(), LH.watchPromptPick("off")
+            DB(), GB.watchPromptPick("off")
           }
         }));
         return () => {
-          LH(), SB === BH && (SB = null)
+          GB(), QO === OB && (QO = null)
         }
       }
     };
-    let tB = 0,
-      zB = 0;
-    const CB = {
-        health: zH.q,
-        aura: zH.j,
-        hotbar: yH.e.states.hotbar,
-        heldItemAim: yH.e.states.heldItemAim,
-        crouching: (0, YH.c)((HH => function(HH) {
-          const BH = () => 0 !== (PH.y.playerFlags(HH.apiView, 0) & PH.Md.Crouching);
+    let jO = 0,
+      yO = 0;
+    const JO = {
+        health: yB.s,
+        aura: yB.f,
+        hotbar: tB.c.states.hotbar,
+        heldItemAim: tB.c.states.heldItemAim,
+        crouching: (0, lB.e)((BB => function(BB) {
+          const OB = () => 0 !== (AB.u.playerFlags(BB.apiView, 0) & AB.Id.Crouching);
           return {
-            current: BH,
-            watch(HH) {
-              let LH = BH();
-              return (0, SH.r)((() => {
-                const AH = BH();
-                AH !== LH && (LH = AH, HH(AH))
+            current: OB,
+            watch(BB) {
+              let GB = OB();
+              return (0, QB.w)((() => {
+                const YB = OB();
+                YB !== GB && (GB = YB, BB(YB))
               }))
             }
           }
-        }(HH.api).current), !1, (HH => (0, SH.r)(HH))),
-        flight: (0, YH.c)((HH => () => function(HH) {
-          const BH = PH.y.playerFlags(HH.apiView, 0);
-          return (0, zH.o)(0 !== (BH & PH.Md.CanFly), 0 !== (BH & PH.Md.Flying))
-        }(HH.api)), (0, zH.o)(!1, !1), (HH => (0, SH.r)(HH))),
-        gliderBoostFuel: (0, YH.c)((HH => () => PH.y.gliderBoostFuel(HH.api.apiView, 0)), 0, (HH => (0, SH.r)(HH))),
-        crosshairTarget: hB
+        }(BB.api).current), !1, (BB => (0, QB.w)(BB))),
+        flight: (0, lB.e)((BB => () => function(BB) {
+          const OB = AB.u.playerFlags(BB.apiView, 0);
+          return (0, yB.o)(0 !== (OB & AB.Id.CanFly), 0 !== (OB & AB.Id.Flying))
+        }(BB.api)), (0, yB.o)(!1, !1), (BB => (0, QB.w)(BB))),
+        gliderBoostFuel: (0, lB.e)((BB => () => AB.u.gliderBoostFuel(BB.api.apiView, 0)), 0, (BB => (0, QB.w)(BB))),
+        crosshairTarget: oO
       },
-      EB = {
-        hotbarSlotRequested: yH.e.events.hotbarSlotRequested,
-        hotbarScrolled: yH.e.events.hotbarScrolled,
-        numberKeyPressed: yH.e.events.numberKeyPressed,
-        shotDamageToShow: (0, zH.u)((HH => !0 === (0, pH.d)(HH, "showDamageAmounts")))
+      MO = {
+        hotbarSlotRequested: tB.c.events.hotbarSlotRequested,
+        hotbarScrolled: tB.c.events.hotbarScrolled,
+        numberKeyPressed: tB.c.events.numberKeyPressed,
+        shotDamageToShow: (0, yB.u)((BB => !0 === (0, xB.c)(BB, "showDamageAmounts")))
       },
-      XB = {
-        selectHotbarSlot: yH.e.commands.selectHotbarSlot,
-        setCrosshairInteractPrompt: HH => {
-          BB = HH
+      PO = {
+        selectHotbarSlot: tB.c.commands.selectHotbarSlot,
+        setCrosshairInteractPrompt: BB => {
+          OO = BB
         }
       },
-      GB = {
+      zO = {
         momentumFrac: function() {
-          var HH, BH, LH;
-          const AH = (0, hH.i)(),
-            rH = performance.now(),
-            SH = null === AH || void 0 === AH || null === (HH = AH.items.LX()) || void 0 === HH || null === (BH = HH.attributes) || void 0 === BH || null === (LH = BH.customAttributes) || void 0 === LH ? void 0 : LH.enchantments;
-          return tB = null !== AH && null !== SH && void 0 !== SH && SH.Momentum ? 0 !== (PH.y.playerFlags(AH.api.apiView, 0) & PH.Md.Breaking) ? Math.max(0, PH.y.momentumFrac(AH.api.apiView, 0)) : Math.max(0, tB - (rH - zB) / 1500) : 0, zB = rH, tB
+          var BB, OB, GB;
+          const YB = (0, oB.j)(),
+            DB = performance.now(),
+            QB = null === YB || void 0 === YB || null === (BB = YB.items.sJ()) || void 0 === BB || null === (OB = BB.attributes) || void 0 === OB || null === (GB = OB.customAttributes) || void 0 === GB ? void 0 : GB.enchantments;
+          return jO = null !== YB && null !== QB && void 0 !== QB && QB.Momentum ? 0 !== (AB.u.playerFlags(YB.api.apiView, 0) & AB.Id.Breaking) ? Math.max(0, AB.u.momentumFrac(YB.api.apiView, 0)) : Math.max(0, jO - (DB - yO) / 1500) : 0, yO = DB, jO
         }
       };
-    var YB = LH(41905);
-    const uB = {
-      lobbyManage(HH) {
-        var BH;
-        null === (BH = (0, hH.i)()) || void 0 === BH || BH.send(lH.d.LobbyManage, HH)
+    var lO = GB(41587);
+    const pO = {
+      lobbyManage(BB) {
+        var OB;
+        null === (OB = (0, oB.j)()) || void 0 === OB || OB.send(IB.c.LobbyManage, BB)
       }
     };
-    var QB = LH(1182),
-      WB = LH(37373),
-      MB = LH(9491),
-      xB = LH(1659),
-      vB = LH(2600),
-      PB = LH(5275);
-    let TB = !1;
+    var qO = GB(1238),
+      ZO = GB(37166),
+      NO = GB(9460),
+      RO = GB(1699),
+      WO = GB(2617),
+      AO = GB(5296);
+    let VO = !1;
 
-    function UB(HH) {
-      TB = HH
+    function SO(BB) {
+      VO = BB
     }
 
-    function VB() {
-      "inGame" !== NH.c.get("gameState") || (0, xB.x)() || CH.k.AX("ctrlCrouchWithoutFullscreen")
+    function nO() {
+      "inGame" !== XB.c.get("gameState") || (0, RO.u)() || JB.o.tM("ctrlCrouchWithoutFullscreen")
     }
-    let OB = !1;
-    const bB = {
+    let UO = !1;
+    const fO = {
         OpenEmoteWheel: () => {
-          UB(!0), OB = !0, queueMicrotask((() => {
-            OB && (OB = !1, CH.k.AX("requestEmoteWheelHoldOpen"))
+          SO(!0), UO = !0, queueMicrotask((() => {
+            UO && (UO = !1, JB.o.tM("requestEmoteWheelHoldOpen"))
           }))
         },
         ToggleFullCoordinateOverlay: () => {
-          CH.k.AX("toggleFullCoordinateOverlay")
+          JB.o.tM("toggleFullCoordinateOverlay")
         },
         KeyYPressed: () => {
-          (0, WB.c)() || CH.k.AX("YKeyPressed")
+          (0, ZO.b)() || JB.o.tM("YKeyPressed")
         },
         KeyXPressed: () => {
-          (0, WB.c)() || CH.k.AX("XKeyPressed")
+          (0, ZO.b)() || JB.o.tM("XKeyPressed")
         },
-        CtrlCrouch: VB,
+        CtrlCrouch: nO,
         "primary-fire": () => {
-          CH.k.AX("mouseState", {
-            eE: QB.e.DownFirePrimary,
+          JB.o.tM("mouseState", {
+            OM: qO.b.DownFirePrimary,
             isDown: !0
           })
         },
         "alt-fire": () => {
-          CH.k.AX("mouseState", {
-            eE: QB.e.DownFireSecondary,
+          JB.o.tM("mouseState", {
+            OM: qO.b.DownFireSecondary,
             isDown: !0
           })
         },
         TouchHold: () => {
-          CH.k.AX("mouseState", {
-            eE: QB.e.TouchDownLong,
+          JB.o.tM("mouseState", {
+            OM: qO.b.TouchDownLong,
             isDown: !0
           })
         }
       },
-      kB = {
+      kO = {
         OpenEmoteWheel: () => {
-          UB(!1), OB ? (OB = !1, (0, MB.d)() || CH.k.AX("requestEmoteWheelHoldOpen")) : CH.k.AX("requestEmoteWheelHoldRelease")
+          SO(!1), UO ? (UO = !1, (0, NO.b)() || JB.o.tM("requestEmoteWheelHoldOpen")) : JB.o.tM("requestEmoteWheelHoldRelease")
         },
-        CtrlCrouch: VB,
+        CtrlCrouch: nO,
         "primary-fire": () => {
-          CH.k.AX("mouseState", {
-            eE: QB.e.UpFirePrimary,
+          JB.o.tM("mouseState", {
+            OM: qO.b.UpFirePrimary,
             isDown: !1
           })
         },
         "alt-fire": () => {
-          CH.k.AX("mouseState", {
-            eE: QB.e.UpFireSecondary,
+          JB.o.tM("mouseState", {
+            OM: qO.b.UpFireSecondary,
             isDown: !1
           })
         },
         TouchDig: () => {
-          CH.k.AX("mouseState", {
-            eE: QB.e.UpFirePrimary,
+          JB.o.tM("mouseState", {
+            OM: qO.b.UpFirePrimary,
             isDown: !1
           })
         }
       };
-    let mB = !1;
+    let dO = !1;
 
-    function oB() {
-      mB || (mB = !0, (0, PB.k)((HH => {
-        if ((0, rH.c)()) return;
-        const BH = (0, PB.i)(HH) ? "primary-fire" : HH.action;
-        var LH;
-        if (HH.down) {
-          if (0 === (HH.flags & vB.c.Synthetic)) {
-            var AH;
-            null === (AH = bB[BH]) || void 0 === AH || AH.call(bB)
+    function KO() {
+      dO || (dO = !0, (0, AO.g)((BB => {
+        if ((0, DB.e)()) return;
+        const OB = (0, AO.f)(BB) ? "primary-fire" : BB.action;
+        var GB;
+        if (BB.down) {
+          if (0 === (BB.flags & WO.c.Synthetic)) {
+            var YB;
+            null === (YB = fO[OB]) || void 0 === YB || YB.call(fO)
           }
-        } else null === (LH = kB[BH]) || void 0 === LH || LH.call(kB)
+        } else null === (GB = kO[OB]) || void 0 === GB || GB.call(kO)
       })))
     }
-    var IB = LH(304),
-      fB = LH(81),
-      lB = LH(30),
-      KB = LH(42192),
-      cB = LH(1297),
-      eB = LH(2619);
-    let qB = !1;
-    const gB = {
-      sendCodeCollab(HH) {
-        var BH;
-        null === (BH = (0, hH.i)()) || void 0 === BH || BH.send(lH.d.CodeCollab, (0, lH.l)(HH), (0, eB.i)(HH))
+    var uO = GB(331),
+      mO = GB(92),
+      IO = GB(31),
+      FO = GB(41897),
+      iO = GB(1350),
+      LO = GB(2643);
+    let gO = !1;
+    const rO = {
+      sendCodeCollab(BB) {
+        var OB;
+        null === (OB = (0, oB.j)()) || void 0 === OB || OB.send(IB.c.CodeCollab, (0, IB.j)(BB), (0, LO.e)(BB))
       }
     };
-    var NB = LH(40035),
-      RB = LH(9419);
-    let jB = null,
-      nB = !1,
-      FB = null;
+    var XO = GB(39804),
+      wO = GB(9394);
+    let EO = null,
+      cO = !1,
+      hO = null;
 
-    function DB() {
-      return "inGame" === NH.c.get("gameState") && !(0, WB.c)()
+    function aO() {
+      return "inGame" === XB.c.get("gameState") && !(0, ZO.b)()
     }
-    const wB = {
-        OpenInventory: HH => {
-          (0, xB.F)(HH, "inventory", (0, YB.m)())
+    const eO = {
+        OpenInventory: BB => {
+          (0, RO.D)(BB, "inventory", (0, lO.k)())
         },
-        OpenShop: HH => {
-          jB && DB() && (0, xB.B)(HH, IB.o.SHOP, !jB.shopIsEmpty(vH.e.get("shopInfo")))
+        OpenShop: BB => {
+          EO && aO() && (0, RO.A)(BB, uO.p.SHOP, !EO.shopIsEmpty(WB.e.get("shopInfo")))
         },
-        OpenLobbyLeaderboard: HH => {
-          DB() && (0, xB.B)(HH, IB.o.LOBBY_LEADERBOARD, (0, NB.e)({
-            lobbyLeaderboardInfo: vH.e.get("lobbyLeaderboardInfo"),
-            lobbyManage: vH.e.get("lobbyManage")
+        OpenLobbyLeaderboard: BB => {
+          aO() && (0, RO.A)(BB, uO.p.LOBBY_LEADERBOARD, (0, XO.b)({
+            lobbyLeaderboardInfo: WB.e.get("lobbyLeaderboardInfo"),
+            lobbyManage: WB.e.get("lobbyManage")
           }))
         },
-        OpenTasksAndLeaderboard: HH => {
-          var BH;
-          const LH = null === (BH = jB) || void 0 === BH ? void 0 : BH.getClientGameMapKey();
-          LH ? (0, xB.H)(HH, !0, LH) : (0, xB.F)(HH, "retentionFeatures", !(!vH.e.get("_tasks") && !vH.e.get("_availableLeaderboards")))
+        OpenTasksAndLeaderboard: BB => {
+          var OB;
+          const GB = null === (OB = EO) || void 0 === OB ? void 0 : OB.getClientGameMapKey();
+          GB ? (0, RO.E)(BB, !0, GB) : (0, RO.D)(BB, "retentionFeatures", !(!WB.e.get("_tasks") && !WB.e.get("_availableLeaderboards")))
         },
-        OpenInviteLink: HH => {
-          (0, xB.F)(HH, "inviteLink", fB.featureFlags.canUseInviteLinks)
+        OpenInviteLink: BB => {
+          (0, RO.D)(BB, "inviteLink", mO.featureFlags.canUseInviteLinks)
         },
-        OpenCodeEditor: HH => {
-          DB() && function(HH) {
-            const BH = (0, hH.i)(),
-              LH = null !== BH && void 0 !== BH && BH.isSessionLive ? BH.api : null,
-              AH = LH ? LH.hT(LH.localId) : null;
-            (0, xB.H)(HH, null !== AH && (0, eB.e)((0, cB.c)()), (() => {
-              (0, eB.m)(AH)
+        OpenCodeEditor: BB => {
+          aO() && function(BB) {
+            const OB = (0, oB.j)(),
+              GB = null !== OB && void 0 !== OB && OB.isSessionLive ? OB.api : null,
+              YB = GB ? GB.pR(GB.localId) : null;
+            (0, RO.E)(BB, null !== YB && (0, LO.c)((0, iO.c)()), (() => {
+              (0, LO.h)(YB)
             }))
-          }(HH)
+          }(BB)
         },
         HideUi: () => {
-          CH.k.AX("showUi", !1)
+          JB.o.tM("showUi", !1)
         }
       },
-      ZB = {
+      TO = {
         HideUi: () => {
-          CH.k.AX("showUi", !0)
+          JB.o.tM("showUi", !0)
         }
       };
 
-    function dB() {
-      nB || (nB = !0, LH.e(173).then((() => LH(64066))).then((HH => {
-        jB = HH
-      }), (HH => {
-        console.error("[bloxd-wasm-client] the menu keys' checks did not load", HH)
-      })), (0, KB.u)((HH => {
-        HH || !(0, KB.g)() || (0, fB.isMobile)() || !lB.e.getItem("disableFullscreen") || (0, xB.t)() || NH.c.set({
-          openEverythingMenuName: IB.o.SETTINGS
+    function bO() {
+      cO || (cO = !0, GB.e(173).then((() => GB(63844))).then((BB => {
+        EO = BB
+      }), (BB => {
+        console.error("[bloxd-wasm-client] the menu keys' checks did not load", BB)
+      })), (0, FO.t)((BB => {
+        BB || !(0, FO.f)() || (0, mO.isMobile)() || !IO.g.getItem("disableFullscreen") || (0, RO.r)() || XB.c.set({
+          openEverythingMenuName: uO.p.SETTINGS
         })
-      })), (0, PB.k)((HH => {
+      })), (0, AO.g)((BB => {
         let {
-          action: BH,
-          down: LH,
-          press: AH
-        } = HH;
-        var SH, hH;
-        (0, rH.c)() || (LH ? null === (SH = wB[BH]) || void 0 === SH || SH.call(wB, function(HH) {
-          var BH;
-          if (0 === HH || (null === (BH = FB) || void 0 === BH ? void 0 : BH.press) !== HH) {
-            const BH = {
-              press: HH,
-              event: (0, RB.c)("inputAction")
+          action: OB,
+          down: GB,
+          press: YB
+        } = BB;
+        var QB, oB;
+        (0, DB.e)() || (GB ? null === (QB = eO[OB]) || void 0 === QB || QB.call(eO, function(BB) {
+          var OB;
+          if (0 === BB || (null === (OB = hO) || void 0 === OB ? void 0 : OB.press) !== BB) {
+            const OB = {
+              press: BB,
+              event: (0, wO.b)("inputAction")
             };
-            FB = BH, queueMicrotask((() => {
-              FB === BH && (FB = null)
+            hO = OB, queueMicrotask((() => {
+              hO === OB && (hO = null)
             }))
           }
-          return FB.event
-        }(AH)) : null === (hH = ZB[BH]) || void 0 === hH || hH.call(ZB))
+          return hO.event
+        }(YB)) : null === (oB = TO[OB]) || void 0 === oB || oB.call(TO))
       })))
     }
-    var aB = LH(39936),
-      sB = LH(39928),
-      JB = LH(39921);
-    const iB = {
-      completeTask(HH) {
-        var BH;
-        null === (BH = (0, hH.i)()) || void 0 === BH || BH.send(lH.d.CompleteTask, (0, lH.o)(HH))
+    var CO = GB(39730),
+      HO = GB(39720),
+      vO = GB(39713);
+    const sO = {
+      completeTask(BB) {
+        var OB;
+        null === (OB = (0, oB.j)()) || void 0 === OB || OB.send(IB.c.CompleteTask, (0, IB.m)(BB))
       },
-      setServerCookie(HH) {
-        var BH;
+      setServerCookie(BB) {
+        var OB;
         let {
-          key: LH,
-          value: AH
-        } = HH;
-        null === (BH = (0, hH.i)()) || void 0 === BH || BH.send(lH.d.GeneralCookieSet, (0, lH.t)({
-          Ft: LH,
-          Dt: AH
+          key: GB,
+          value: YB
+        } = BB;
+        null === (OB = (0, oB.j)()) || void 0 === OB || OB.send(IB.c.GeneralCookieSet, (0, IB.p)({
+          zJ: GB,
+          lJ: YB
         }))
       },
-      answerUiRequest(HH) {
-        var BH;
+      answerUiRequest(BB) {
+        var OB;
         let {
-          id: LH,
-          XE: AH
-        } = HH;
-        null === (BH = (0, hH.i)()) || void 0 === BH || BH.send(lH.d.UiRequestResp, (0, lH._)({
-          Ih: LH,
-          fh: AH,
-          Kh: 5
+          id: GB,
+          UJ: YB
+        } = BB;
+        null === (OB = (0, oB.j)()) || void 0 === OB || OB.send(IB.c.UiRequestResp, (0, IB.O)({
+          RM: GB,
+          WM: YB,
+          AM: 5
         }))
       },
-      chooseRewardedAd(HH) {
-        var BH;
+      chooseRewardedAd(BB) {
+        var OB;
         let {
-          id: LH,
-          XE: AH
-        } = HH;
-        null === (BH = (0, hH.i)()) || void 0 === BH || BH.send(lH.d.UiRequestResponded, (0, lH.Z)({
-          id: LH,
-          XE: AH
+          id: GB,
+          UJ: YB
+        } = BB;
+        null === (OB = (0, oB.j)()) || void 0 === OB || OB.send(IB.c.UiRequestResponded, (0, IB.M)({
+          id: GB,
+          UJ: YB
         }))
       },
-      requestLeaderboard(HH) {
-        var BH;
+      requestLeaderboard(BB) {
+        var OB;
         let {
-          category: LH,
-          timeframe: AH,
-          seeTop: rH
-        } = HH;
-        null === (BH = (0, hH.i)()) || void 0 === BH || BH.send(lH.d.LeaderboardRequest, {
-          category: LH,
-          timeframe: AH,
-          seeTop: rH
+          category: GB,
+          timeframe: YB,
+          seeTop: DB
+        } = BB;
+        null === (OB = (0, oB.j)()) || void 0 === OB || OB.send(IB.c.LeaderboardRequest, {
+          category: GB,
+          timeframe: YB,
+          seeTop: DB
         })
       }
     };
-    let pB = !1;
-    const yB = xH.g.JW / 2,
-      HL = [yB, -yB, -yB, -yB, yB, yB, -yB, yB],
-      BL = [0, 0, 0];
+    let xO = !1;
+    const tO = RB.f.sZ / 2,
+      BG = [tO, -tO, -tO, -tO, tO, tO, -tO, tO],
+      OG = [0, 0, 0];
 
-    function LL(HH, BH, LH) {
-      for (let AH = 0; AH < HH.length; AH += 2)
-        if (HH[AH] === BH && HH[AH + 1] === LH) return !0;
+    function GG(BB, OB, GB) {
+      for (let YB = 0; YB < BB.length; YB += 2)
+        if (BB[YB] === OB && BB[YB + 1] === GB) return !0;
       return !1
     }
-    const AL = {
+    const YG = {
       blocksStandingOn: function() {
-        const HH = (0, hH.i)();
-        if (null === HH) return [];
+        const BB = (0, oB.j)();
+        if (null === BB) return [];
         const {
-          api: BH,
-          chunks: LH,
-          tables: AH
-        } = HH;
-        if (!BH.readPosition(BH.localId, BL)) return [];
-        const [rH, SH, tH] = BL, zH = Math.ceil(SH) - 1, CH = [], EH = [];
-        for (let hH = 0; hH < HL.length; hH += 2) {
-          const HH = rH + HL[hH],
-            BH = tH + HL[hH + 1];
-          if (Number.isInteger(HH) || Number.isInteger(BH)) continue;
-          const SH = Math.floor(HH),
-            XH = Math.floor(BH);
-          if (LL(EH, SH, XH)) continue;
-          const GH = LH.ph(SH, zH, XH);
-          AH.isSolidBlockId(GH) && (EH.push(SH, XH), CH.push(AH.nameOfId(GH)))
+          api: OB,
+          chunks: GB,
+          tables: YB
+        } = BB;
+        if (!OB.readPosition(OB.localId, OG)) return [];
+        const [DB, QB, jB] = OG, yB = Math.ceil(QB) - 1, JB = [], MB = [];
+        for (let oB = 0; oB < BG.length; oB += 2) {
+          const BB = DB + BG[oB],
+            OB = jB + BG[oB + 1];
+          if (Number.isInteger(BB) || Number.isInteger(OB)) continue;
+          const QB = Math.floor(BB),
+            PB = Math.floor(OB);
+          if (GG(MB, QB, PB)) continue;
+          const zB = GB.SM(QB, yB, PB);
+          YB.isSolidBlockId(zB) && (MB.push(QB, PB), JB.push(YB.nameOfId(zB)))
         }
-        return CH
+        return JB
       },
       dropAhead: function() {
-        const HH = (0, hH.i)();
-        return null !== HH && 0 !== (PH.y.playerFlags(HH.api.apiView, 0) & PH.Md.DropAhead)
+        const BB = (0, oB.j)();
+        return null !== BB && 0 !== (AB.u.playerFlags(BB.api.apiView, 0) & AB.Id.DropAhead)
       }
     };
-    var rL = LH(37812),
-      SL = LH(40018),
-      hL = LH(1352),
-      tL = LH(41981);
-    const zL = new Set(["replayLoad", "replaySave", "replaySaveAs", "replayTimelineZoomIn", "replayTimelineZoomOut"]),
-      CL = new Set(["replaySkipBack", "replaySkipForward", "replaySpeedUp", "replaySpeedDown", "replayRecordKeyframe"]);
+    var DG = GB(37650),
+      QG = GB(39782),
+      oG = GB(1400),
+      jG = GB(41667);
+    const yG = new Set(["replayLoad", "replaySave", "replaySaveAs", "replayTimelineZoomIn", "replayTimelineZoomOut"]),
+      JG = new Set(["replaySkipBack", "replaySkipForward", "replaySpeedUp", "replaySpeedDown", "replayRecordKeyframe"]);
 
-    function EL() {
-      const HH = new Set;
+    function MG() {
+      const BB = new Set;
       return {
-        add: BH => (HH.add(BH), () => {
-          HH.delete(BH)
+        add: OB => (BB.add(OB), () => {
+          BB.delete(OB)
         }),
         fire() {
-          for (const BH of HH) BH()
+          for (const OB of BB) OB()
         }
       }
     }
-    const XL = Object.freeze([]);
+    const PG = Object.freeze([]);
 
-    function GL(HH, BH) {
-      let LH, {
-        rereads: AH,
-        followLocalId: rH
-      } = BH;
-      const hH = () => (LH = (0, iH.r)(LH, HH()), LH);
+    function zG(BB, OB) {
+      let GB, {
+        rereads: YB,
+        followLocalId: DB
+      } = OB;
+      const oB = () => (GB = (0, sB.k)(GB, BB()), GB);
       return {
-        current: hH,
-        watch(HH) {
-          const BH = (0, uH.d)((BH => {
-            AH(BH) && HH(hH())
+        current: oB,
+        watch(BB) {
+          const OB = (0, pB.b)((OB => {
+            YB(OB) && BB(oB())
           }));
-          if (!rH) return BH;
-          let LH = (0, YH.f)();
-          const tH = (0, SH.v)((() => {
-            const BH = (0, YH.f)();
-            BH !== LH && (LH = BH, HH(hH()))
+          if (!DB) return OB;
+          let GB = (0, lB.h)();
+          const jB = (0, QB.z)((() => {
+            const OB = (0, lB.h)();
+            OB !== GB && (GB = OB, BB(oB()))
           }));
           return () => {
-            BH(), tH()
+            OB(), jB()
           }
         }
       }
     }
-    const YL = {
-        players: GL((function() {
-          const HH = uH.f.ids(),
-            BH = {};
-          for (const SH of HH) {
-            var LH, AH, rH;
-            BH[SH] = {
-              name: null !== (LH = uH.f.getName(SH)) && void 0 !== LH ? LH : null,
-              ranks: null !== (AH = uH.f.getSetting(SH, "ranks")) && void 0 !== AH ? AH : XL,
-              cosmetics: null !== (rH = (0, uH.j)(SH)) && void 0 !== rH ? rH : null
+    const lG = {
+        players: zG((function() {
+          const BB = pB.d.ids(),
+            OB = {};
+          for (const QB of BB) {
+            var GB, YB, DB;
+            OB[QB] = {
+              name: null !== (GB = pB.d.getName(QB)) && void 0 !== GB ? GB : null,
+              ranks: null !== (YB = pB.d.getSetting(QB, "ranks")) && void 0 !== YB ? YB : PG,
+              cosmetics: null !== (DB = (0, pB.f)(QB)) && void 0 !== DB ? DB : null
             }
           }
           return {
-            ids: HH,
-            byId: BH,
-            localId: (0, YH.f)()
+            ids: BB,
+            byId: OB,
+            localId: (0, lB.h)()
           }
         }), {
-          rereads: HH => "roster" !== HH.kind || HH.members || HH.settings.has("ranks"),
+          rereads: BB => "roster" !== BB.kind || BB.members || BB.settings.has("ranks"),
           followLocalId: !0
         }),
-        lobbyLeaderboardRows: GL((function() {
-          const HH = {};
-          for (const rH of uH.f.ids()) {
-            var BH, LH, AH;
-            HH[rH] = {
-              colour: null !== (BH = uH.f.getSetting(rH, "colorInLobbyLeaderboard")) && void 0 !== BH ? BH : null,
-              values: null !== (LH = uH.f.getSetting(rH, "lobbyLeaderboardValues")) && void 0 !== LH ? LH : null,
-              tags: null !== (AH = uH.f.getSetting(rH, "lobbyLeaderboardTags")) && void 0 !== AH ? AH : null
+        lobbyLeaderboardRows: zG((function() {
+          const BB = {};
+          for (const DB of pB.d.ids()) {
+            var OB, GB, YB;
+            BB[DB] = {
+              colour: null !== (OB = pB.d.getSetting(DB, "colorInLobbyLeaderboard")) && void 0 !== OB ? OB : null,
+              values: null !== (GB = pB.d.getSetting(DB, "lobbyLeaderboardValues")) && void 0 !== GB ? GB : null,
+              tags: null !== (YB = pB.d.getSetting(DB, "lobbyLeaderboardTags")) && void 0 !== YB ? YB : null
             }
           }
-          return HH
+          return BB
         }), {
-          rereads: function(HH) {
-            if ("roster" !== HH.kind) return "reset" === HH.kind;
+          rereads: function(BB) {
+            if ("roster" !== BB.kind) return "reset" === BB.kind;
             const {
-              members: BH,
-              settings: LH
-            } = HH;
-            return BH || LH.has("colorInLobbyLeaderboard") || LH.has("lobbyLeaderboardValues") || LH.has("lobbyLeaderboardTags")
+              members: OB,
+              settings: GB
+            } = BB;
+            return OB || GB.has("colorInLobbyLeaderboard") || GB.has("lobbyLeaderboardValues") || GB.has("lobbyLeaderboardTags")
           },
           followLocalId: !1
         })
       },
-      uL = {
+      pG = {
         cosmeticsUpdated: {
-          watch: HH => (0, uH.d)((BH => {
-            if ("cosmetics" !== BH.kind) return;
-            const LH = (0, YH.f)();
-            HH(BH.updates.map((HH => {
+          watch: BB => (0, pB.b)((OB => {
+            if ("cosmetics" !== OB.kind) return;
+            const GB = (0, lB.h)();
+            BB(OB.updates.map((BB => {
               let {
-                Ah: BH,
-                rh: AH,
-                Sh: rH
-              } = HH;
+                nB: OB,
+                UB: YB,
+                fB: DB
+              } = BB;
               return {
-                local: BH === LH,
-                rh: AH,
-                Sh: rH
+                local: OB === GB,
+                UB: YB,
+                fB: DB
               }
             })))
           }))
         }
       };
-    var QL = LH(3209),
-      WL = LH(1789),
-      ML = LH(656),
-      xL = LH(42248);
-    let vL = !1,
-      PL = null;
-    const TL = {
-      setShopOpen(HH) {
-        var BH;
-        null === (BH = (0, hH.i)()) || void 0 === BH || BH.send(lH.d.ShopMenuChanged, (0, lH.S)(HH))
+    var qG = GB(3262),
+      ZG = GB(1822),
+      NG = GB(677),
+      RG = GB(41935);
+    let WG = !1,
+      AG = null;
+    const VG = {
+      setShopOpen(BB) {
+        var OB;
+        null === (OB = (0, oB.j)()) || void 0 === OB || OB.send(IB.c.ShopMenuChanged, (0, IB.I)(BB))
       },
-      buyShopItem(HH) {
-        var BH;
+      buyShopItem(BB) {
+        var OB;
         let {
-          categoryKey: LH,
-          itemKey: AH,
-          userInput: rH
-        } = HH;
-        null === (BH = (0, hH.i)()) || void 0 === BH || BH.send(lH.d.ItemBought, {
-          categoryKey: LH,
-          itemKey: AH,
-          shopVersion: vH.e.get("_shopVersion"),
-          userInput: rH
+          categoryKey: GB,
+          itemKey: YB,
+          userInput: DB
+        } = BB;
+        null === (OB = (0, oB.j)()) || void 0 === OB || OB.send(IB.c.ItemBought, {
+          categoryKey: GB,
+          itemKey: YB,
+          shopVersion: WB.e.get("_shopVersion"),
+          userInput: DB
         })
       }
     };
-    let UL = !1;
-    var VL = LH(5288);
-    const OL = vB.w.LookFrozen | vB.w.ClicksSuppressed;
+    let SG = !1;
+    var nG = GB(5313);
+    const UG = WO.y.LookFrozen | WO.y.ClicksSuppressed;
 
-    function bL(HH, BH) {
-      var LH;
-      null !== (LH = (0, hH.i)()) && void 0 !== LH && LH.send(HH, BH) || console.warn(`[bloxd-wasm-client] message ${HH} not sent: no live game or the core's command ring is full`)
-    }(0, QH.k)(fH.eb, (HH => {
-      const BH = (0, KH.f)(fH.eb, HH);
-      void 0 !== BH && CH.k.AX("setDiscordReportKey", BH)
+    function fG(BB, OB) {
+      var GB;
+      null !== (GB = (0, oB.j)()) && void 0 !== GB && GB.send(BB, OB) || console.warn(`[bloxd-wasm-client] message ${BB} not sent: no live game or the core's command ring is full`)
+    }(0, qB.g)(mB.hb, (BB => {
+      const OB = (0, FB.h)(mB.hb, BB);
+      void 0 !== OB && JB.o.tM("setDiscordReportKey", OB)
     }));
-    const kL = {
-      ignorePlayer(HH) {
-        bL(lH.d.IgnoreUser, (0, lH.x)({
-          Jt: HH
+    const kG = {
+      ignorePlayer(BB) {
+        fG(IB.c.IgnoreUser, (0, IB.s)({
+          nM: BB
         }))
       },
-      reportPlayer(HH) {
+      reportPlayer(BB) {
         let {
-          playerId: BH,
-          chatMsgId: LH,
-          policy: AH,
-          details: rH
-        } = HH;
-        bL(lH.d.UserReport, (0, lH.kb)({
-          ah: BH,
-          sh: LH,
-          policy: AH,
-          Jh: rH
+          playerId: OB,
+          chatMsgId: GB,
+          policy: YB,
+          details: DB
+        } = BB;
+        fG(IB.c.UserReport, (0, IB.$)({
+          Hy: OB,
+          vy: GB,
+          policy: YB,
+          Jy: DB
         }))
       },
-      reportWorldCodeChat(HH) {
+      reportWorldCodeChat(BB) {
         let {
-          chatMsgId: BH,
-          policy: LH,
-          details: AH
-        } = HH;
-        bL(lH.d.UserReport, (0, lH.kb)({
-          ah: "",
-          sh: BH,
-          policy: LH,
-          Jh: AH
+          chatMsgId: OB,
+          policy: GB,
+          details: YB
+        } = BB;
+        fG(IB.c.UserReport, (0, IB.$)({
+          Hy: "",
+          vy: OB,
+          policy: GB,
+          Jy: YB
         }))
       },
-      requestDiscordReportKey(HH) {
-        bL(lH.d.ReqDiscordReportKey, (0, lH.L)(HH))
+      requestDiscordReportKey(BB) {
+        fG(IB.c.ReqDiscordReportKey, (0, IB.B)(BB))
       },
-      reportLobbyOrGame(HH) {
+      reportLobbyOrGame(BB) {
         let {
-          target: BH,
-          policy: LH,
-          details: AH
-        } = HH;
-        "customGame" === BH ? bL(lH.d.CustomGameReport, (0, lH.p)({
-          policy: LH,
-          Jh: AH
-        })) : bL(lH.d.LobbyReport, (0, lH.A)({
-          policy: LH,
-          Jh: AH
+          target: OB,
+          policy: GB,
+          details: YB
+        } = BB;
+        "customGame" === OB ? fG(IB.c.CustomGameReport, (0, IB.o)({
+          policy: GB,
+          Jy: YB
+        })) : fG(IB.c.LobbyReport, (0, IB.u)({
+          policy: GB,
+          Jy: YB
         }))
       },
-      updateMyCosmetic(HH) {
-        bL(lH.d.UpdateMyCosmetic, (0, lH.jb)(HH))
+      updateMyCosmetic(BB) {
+        fG(IB.c.UpdateMyCosmetic, (0, IB.Z)(BB))
       },
-      holdEmoteWheel(HH) {
-        !HH || TB ? (0, VL.k)(OL, HH ? OL : 0) : CH.k.AX("requestEmoteWheelHoldRelease")
+      holdEmoteWheel(BB) {
+        !BB || VO ? (0, nG.m)(UG, BB ? UG : 0) : JB.o.tM("requestEmoteWheelHoldRelease")
       }
     };
-    var mL = LH(42339),
-      oL = LH(9940),
-      IL = LH(40669);
-    const fL = [0, 0, 0],
-      lL = [0, 0, 0],
-      KL = [0, 0, 0],
-      cL = {
-        blockAtViewPoint(HH) {
+    var dG = GB(42042),
+      KG = GB(9927),
+      uG = GB(40400);
+    const mG = [0, 0, 0],
+      IG = [0, 0, 0],
+      FG = [0, 0, 0],
+      iG = {
+        blockAtViewPoint(BB) {
           let {
-            x: BH,
-            y: LH
-          } = HH;
-          const AH = (0, hH.i)();
-          if (null === AH || void 0 === AH || !AH.renderFrame.hasView) return null;
+            x: OB,
+            y: GB
+          } = BB;
+          const YB = (0, oB.j)();
+          if (null === YB || void 0 === YB || !YB.renderFrame.hasView) return null;
           const {
-            renderFrame: rH,
-            clientApi: SH,
-            api: tH
-          } = AH;
-          let zH = 0;
-          return (0, IL.d)(((HH, BH, LH) => (zH = SH.getBlockId(HH, BH, LH), 0 !== zH)), rH.cameraPosition, (0, IL.e)((HH => PH.y.viewProj(tH.apiView, 0, HH)), BH, LH, fL), IL.b, lL, KL) ? {
-            pos: [lL[0], lL[1], lL[2]],
-            normal: [KL[0], KL[1], KL[2]],
-            name: (0, oL.d)(zH)
+            renderFrame: DB,
+            clientApi: QB,
+            api: jB
+          } = YB;
+          let yB = 0;
+          return (0, uG.e)(((BB, OB, GB) => (yB = QB.getBlockId(BB, OB, GB), 0 !== yB)), DB.cameraPosition, (0, uG.h)((BB => AB.u.viewProj(jB.apiView, 0, BB)), OB, GB, mG), uG.b, IG, FG) ? {
+            pos: [IG[0], IG[1], IG[2]],
+            normal: [FG[0], FG[1], FG[2]],
+            name: (0, KG.d)(yB)
           } : null
         }
       },
-      eL = {
-        setBlockHighlight(HH) {
-          var BH;
-          null === (BH = (0, hH.i)()) || void 0 === BH || BH.setBlockHighlight(HH)
+      LG = {
+        setBlockHighlight(BB) {
+          var OB;
+          null === (OB = (0, oB.j)()) || void 0 === OB || OB.setBlockHighlight(BB)
         }
       };
-    var qL = LH(2010),
-      gL = LH(42234),
-      NL = LH(42343),
-      RL = LH(2054),
-      jL = LH(37294),
-      nL = LH(225);
-    const FL = {
+    var gG = GB(2034),
+      rG = GB(41924),
+      XG = GB(42045),
+      wG = GB(2072),
+      EG = GB(37083),
+      cG = GB(244);
+    const hG = {
         icon: ".EntireInventoryWrapper .InvenBodyRight .InvenItem .DrawnBlockIcon",
         fallbackRem: 3.4,
         asked: new Set
       },
-      DL = {
+      aG = {
         icon: ".EntireInventoryWrapper .LazyLoadedItemWrapper .InvenItem .DrawnBlockIcon",
-        fallbackRem: .9 * FL.fallbackRem,
+        fallbackRem: .9 * hG.fallbackRem,
         asked: new Set
       },
-      wL = 2e3,
-      ZL = 4;
-    let dL = [],
-      aL = !1,
-      sL = !1,
-      JL = !1;
-    const iL = new Set,
-      pL = [];
-    let yL = 0,
-      HA = null;
+      eG = 2e3,
+      TG = 4;
+    let bG = [],
+      CG = !1,
+      HG = !1,
+      vG = !1;
+    const sG = new Set,
+      xG = [];
+    let tG = 0,
+      BY = null;
 
-    function BA() {
-      return aL && (0, jL.g)()
+    function OY() {
+      return CG && (0, EG.k)()
     }
 
-    function LA() {
-      let HH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : AH.gameBridge.latest("inventory");
-      if (JL && !sL) {
-        for (const LH of HH.player) {
-          var BH;
-          if (null !== LH) AA(null !== (BH = LH.icon) && void 0 !== BH ? BH : LH.name, FL)
+    function GY() {
+      let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : YB.gameBridge.latest("inventory");
+      if (vG && !HG) {
+        for (const GB of BB.player) {
+          var OB;
+          if (null !== GB) YY(null !== (OB = GB.icon) && void 0 !== OB ? OB : GB.name, hG)
         }
-        for (const HH of [...PH.K, ...dL]) AA(HH, DL);
-        SA()
+        for (const BB of [...AB.H, ...bG]) YY(BB, aG);
+        QY()
       }
     }
 
-    function AA(HH, BH) {
-      BH.asked.has(HH) || iL.has(HH) || ("model" === AH.gameBridge.lookup("itemIcon", HH).kind ? (BH.asked.add(HH), pL.push({
-        name: HH,
-        slot: BH
-      })) : iL.add(HH))
+    function YY(BB, OB) {
+      OB.asked.has(BB) || sG.has(BB) || ("model" === YB.gameBridge.lookup("itemIcon", BB).kind ? (OB.asked.add(BB), xG.push({
+        name: BB,
+        slot: OB
+      })) : sG.add(BB))
     }
 
-    function rA(HH) {
-      dL = HH, LA()
+    function DY(BB) {
+      bG = BB, GY()
     }
 
-    function SA() {
-      !JL || sL || null !== HA || 0 === pL.length || yL >= ZL || (HA = (0, nL.d)((() => {
-        HA = null;
-        const HH = pL.shift();
-        void 0 !== HH && JL && (yL++, async function(HH, BH) {
-          var LH, rH;
-          if (await (0, jL.m)(), !JL) return void BH.asked.delete(HH);
-          if (!(0, jL.g)()) return void(sL = !0);
-          const SH = window.devicePixelRatio,
-            hH = null !== (LH = null === (rH = document.querySelector(BH.icon)) || void 0 === rH ? void 0 : rH.getBoundingClientRect().width) && void 0 !== LH ? LH : 0,
-            tH = parseFloat(getComputedStyle(document.documentElement).fontSize) || 16,
-            zH = Math.round((hH > 0 ? hH : BH.fallbackRem * tH) * SH);
+    function QY() {
+      !vG || HG || null !== BY || 0 === xG.length || tG >= TG || (BY = (0, cG.b)((() => {
+        BY = null;
+        const BB = xG.shift();
+        void 0 !== BB && vG && (tG++, async function(BB, OB) {
+          var GB, DB;
+          if (await (0, EG.q)(), !vG) return void OB.asked.delete(BB);
+          if (!(0, EG.k)()) return void(HG = !0);
+          const QB = window.devicePixelRatio,
+            oB = null !== (GB = null === (DB = document.querySelector(OB.icon)) || void 0 === DB ? void 0 : DB.getBoundingClientRect().width) && void 0 !== GB ? GB : 0,
+            jB = parseFloat(getComputedStyle(document.documentElement).fontSize) || 16,
+            yB = Math.round((oB > 0 ? oB : OB.fallbackRem * jB) * QB);
           try {
-            await AH.gameBridge.query("blockIcon", {
-              name: HH,
-              size: zH,
-              lineWidth: (0, RL.e)(SH)
-            }) || BH.asked.delete(HH)
+            await YB.gameBridge.query("blockIcon", {
+              name: BB,
+              size: yB,
+              lineWidth: (0, wG.b)(QB)
+            }) || OB.asked.delete(BB)
           } catch {
-            BH.asked.delete(HH)
+            OB.asked.delete(BB)
           }
-        }(HH.name, HH.slot).finally((() => {
-          yL--, SA()
-        })), SA())
+        }(BB.name, BB.slot).finally((() => {
+          tG--, QY()
+        })), QY())
       }), {
-        timeoutMs: wL
+        timeoutMs: eG
       }))
     }
-    var hA = LH(4895),
-      tA = LH(4875),
-      zA = LH(42352),
-      CA = LH(3639),
-      EA = LH(3648);
-    let XA = null,
-      GA = null;
+    var oY = GB(4908),
+      jY = GB(4891),
+      yY = GB(42048),
+      JY = GB(3708),
+      MY = GB(3711);
+    let PY = null,
+      zY = null;
 
-    function YA(HH) {
-      const BH = HH.startsWith(EA.f),
-        [LH, AH = LH, rH = LH] = (BH ? HH.slice(EA.f.length) : HH).split(EA.e);
+    function lY(BB) {
+      const OB = BB.startsWith(MY.k),
+        [GB, YB = GB, DB = GB] = (OB ? BB.slice(MY.k.length) : BB).split(MY.i);
       return {
-        top: LH,
-        left: AH,
-        right: rH,
-        half: BH
+        top: GB,
+        left: YB,
+        right: DB,
+        half: OB
       }
     }
 
-    function uA(HH) {
-      const BH = null === XA ? void 0 : (0, CA.e)(HH),
-        LH = void 0 === BH ? 0 : XA.codes[BH];
-      return 0 === LH ? void 0 : XA.pool[LH - 1]
+    function pY(BB) {
+      const OB = null === PY ? void 0 : (0, JY.c)(BB),
+        GB = void 0 === OB ? 0 : PY.codes[OB];
+      return 0 === GB ? void 0 : PY.pool[GB - 1]
     }
-    var QA = LH(3637),
-      WA = LH(4863),
-      MA = LH(4888),
-      xA = LH(37162),
-      vA = LH(37169);
-    const PA = "item:";
-    let TA = null,
-      UA = null,
-      VA = null,
-      OA = null,
-      bA = !1,
-      kA = !1;
+    var qY = GB(3705),
+      ZY = GB(4882),
+      NY = GB(4901),
+      RY = GB(36997),
+      WY = GB(37e3);
+    const AY = "item:";
+    let VY = null,
+      SY = null,
+      nY = null,
+      UY = null,
+      fY = !1,
+      kY = !1;
 
-    function mA() {
-      return kA || (kA = !0, (0, MA.p)().then((HH => {
-        HH && (0, qL.e)()
-      }))), VA ??= Promise.all([(0, QA.h)(), (GA ??= LH.e(1).then((() => LH(64087))).then((HH => {
+    function dY() {
+      return kY || (kY = !0, (0, NY.o)().then((BB => {
+        BB && (0, gG.b)()
+      }))), nY ??= Promise.all([(0, qY.d)(), (zY ??= GB.e(1).then((() => GB(63859))).then((BB => {
         let {
-          BLOCK_FACE_RUNS: BH,
-          BLOCK_FACES: LH,
-          MAX_FACE_ITEM_ID: AH
-        } = HH;
-        XA = {
-          codes: (0, EA.x)(BH, AH + 1),
-          pool: LH.split(EA.q).map(YA)
+          BLOCK_FACE_RUNS: OB,
+          BLOCK_FACES: GB,
+          MAX_FACE_ITEM_ID: YB
+        } = BB;
+        PY = {
+          codes: (0, MY.z)(OB, YB + 1),
+          pool: GB.split(MY.r).map(lY)
         }
-      }), (HH => {
-        throw GA = null, HH
-      })), GA), (0, vA.g)(), LH.e(220).then((() => LH(35006)))]).then((HH => {
-        let [, , BH, LH] = HH;
-        BH.followBundledTextures(), TA = BH, UA = LH, (0, qL.e)()
-      }), (HH => {
-        VA = null, console.warn("[bloxd-wasm-client] the item icon tables did not load, so item icons stay blank", HH)
-      })), VA
+      }), (BB => {
+        throw zY = null, BB
+      })), zY), (0, WY.f)(), GB.e(220).then((() => GB(34813)))]).then((BB => {
+        let [, , OB, GB] = BB;
+        OB.followBundledTextures(), VY = OB, SY = GB, (0, gG.b)()
+      }), (BB => {
+        nY = null, console.warn("[bloxd-wasm-client] the item icon tables did not load, so item icons stay blank", BB)
+      })), nY
     }
 
-    function oA(HH) {
-      var BH, LH;
-      return null !== (BH = null === (LH = (0, xA.k)()) || void 0 === LH ? void 0 : LH.textureUrl(HH)) && void 0 !== BH ? BH : TA.itemSpriteUrl(HH)
+    function KY(BB) {
+      var OB, GB;
+      return null !== (OB = null === (GB = (0, RY.k)()) || void 0 === GB ? void 0 : GB.textureUrl(BB)) && void 0 !== OB ? OB : VY.itemSpriteUrl(BB)
     }
 
-    function IA(HH) {
-      var BH, LH;
-      return null !== (BH = null === (LH = (0, xA.k)()) || void 0 === LH ? void 0 : LH.textureUrl(HH)) && void 0 !== BH ? BH : TA.blockTextureUrl(HH)
+    function uY(BB) {
+      var OB, GB;
+      return null !== (OB = null === (GB = (0, RY.k)()) || void 0 === GB ? void 0 : GB.textureUrl(BB)) && void 0 !== OB ? OB : VY.blockTextureUrl(BB)
     }
 
-    function fA(HH) {
-      var BH;
-      return null !== (BH = (0, QA.d)(HH)) && void 0 !== BH ? BH : HH
+    function mY(BB) {
+      var OB;
+      return null !== (OB = (0, qY.b)(BB)) && void 0 !== OB ? OB : BB
     }
 
-    function lA(HH, BH) {
-      var LH, AH, rH;
-      return null !== (LH = null !== (AH = null !== (rH = IA(HH)) && void 0 !== rH ? rH : null === BH || void 0 === BH ? void 0 : BH.rotated[HH]) && void 0 !== AH ? AH : null === BH || void 0 === BH ? void 0 : BH.animated[HH]) && void 0 !== LH ? LH : TA.notFoundUrl()
+    function IY(BB, OB) {
+      var GB, YB, DB;
+      return null !== (GB = null !== (YB = null !== (DB = uY(BB)) && void 0 !== DB ? DB : null === OB || void 0 === OB ? void 0 : OB.rotated[BB]) && void 0 !== YB ? YB : null === OB || void 0 === OB ? void 0 : OB.animated[BB]) && void 0 !== GB ? GB : VY.notFoundUrl()
     }
 
-    function KA(HH) {
-      return void 0 !== (0, CA.e)(HH) ? HH : /^[1-9][0-9]*$/.test(HH) ? (0, CA.h)(Number(HH)) : void 0
+    function FY(BB) {
+      return void 0 !== (0, JY.c)(BB) ? BB : /^[1-9][0-9]*$/.test(BB) ? (0, JY.g)(Number(BB)) : void 0
     }
 
-    function cA(HH) {
-      var BH;
-      if (HH.startsWith(PA)) {
-        var LH;
-        const BH = (0, QA.d)(HH.slice(5));
-        return null !== (LH = void 0 === BH ? null : oA(BH)) && void 0 !== LH ? LH : TA.notFoundUrl()
+    function iY(BB) {
+      var OB;
+      if (BB.startsWith(AY)) {
+        var GB;
+        const OB = (0, qY.b)(BB.slice(5));
+        return null !== (GB = void 0 === OB ? null : KY(OB)) && void 0 !== GB ? GB : VY.notFoundUrl()
       }
-      return null !== (BH = TA.particleUrl(HH)) && void 0 !== BH ? BH : TA.notFoundUrl()
+      return null !== (OB = VY.particleUrl(BB)) && void 0 !== OB ? OB : VY.notFoundUrl()
     }
 
-    function eA(HH, BH) {
-      return "StairsBlock" === HH ? HH : BH ? "SlabBlock" : "CubeBlock"
+    function LY(BB, OB) {
+      return "StairsBlock" === BB ? BB : OB ? "SlabBlock" : "CubeBlock"
     }
-    const qA = {
-        async blockIcon(HH) {
-          var BH;
+    const gY = {
+        async blockIcon(BB) {
+          var OB;
           let {
-            name: AH,
-            size: rH,
-            lineWidth: SH
-          } = HH;
-          await mA();
-          const hH = null !== (BH = KA(AH)) && void 0 !== BH ? BH : AH,
-            tH = (0, MA.h)(hH, rH, SH);
-          if (null !== tH) return tH;
-          const zH = uA(hH),
-            CH = (0, CA.e)(hH),
-            EH = void 0 === CH || null === UA ? void 0 : UA.itemTypeNameOf(CH);
-          if (null === TA || void 0 === zH) return "";
-          const XH = [zH.top, zH.left, zH.right].some((HH => null === IA(HH))),
-            GH = XH ? await (OA ??= LH.e(228).then((() => LH(35079))).then((HH => (bA && (bA = !1, (0, qL.e)()), {
-              rotated: HH.rotatedBlockTextures,
-              animated: HH.animatedBlockTextures
-            })), (HH => (OA = null, bA = !0, console.warn("[bloxd-wasm-client] the built block atlas did not load, so some block icons stay blank", HH), null))), OA) : null;
-          if (XH && null === GH) return "";
-          const YH = {
-              top: lA(zH.top, GH),
-              left: lA(zH.left, GH),
-              right: lA(zH.right, GH),
-              itemType: eA(EH, zH.half)
+            name: YB,
+            size: DB,
+            lineWidth: QB
+          } = BB;
+          await dY();
+          const oB = null !== (OB = FY(YB)) && void 0 !== OB ? OB : YB,
+            jB = (0, NY.f)(oB, DB, QB);
+          if (null !== jB) return jB;
+          const yB = pY(oB),
+            JB = (0, JY.c)(oB),
+            MB = void 0 === JB || null === SY ? void 0 : SY.itemTypeNameOf(JB);
+          if (null === VY || void 0 === yB) return "";
+          const PB = [yB.top, yB.left, yB.right].some((BB => null === uY(BB))),
+            zB = PB ? await (UY ??= GB.e(228).then((() => GB(34878))).then((BB => (fY && (fY = !1, (0, gG.b)()), {
+              rotated: BB.rotatedBlockTextures,
+              animated: BB.animatedBlockTextures
+            })), (BB => (UY = null, fY = !0, console.warn("[bloxd-wasm-client] the built block atlas did not load, so some block icons stay blank", BB), null))), UY) : null;
+          if (PB && null === zB) return "";
+          const lB = {
+              top: IY(yB.top, zB),
+              left: IY(yB.left, zB),
+              right: IY(yB.right, zB),
+              itemType: LY(MB, yB.half)
             },
-            uH = (0, xA.h)(),
-            QH = 0 === uH ? hH : `${hH}#${uH}`;
-          return (await (0, WA.e)()).drawBlockIconUrl(QH, rH, SH, (() => YH))
+            pB = (0, RY.g)(),
+            qB = 0 === pB ? oB : `${oB}#${pB}`;
+          return (await (0, ZY.c)()).drawBlockIconUrl(qB, DB, QB, (() => lB))
         }
       },
-      gA = {
-        itemIcon: function(HH) {
-          var BH, LH, rH, SH;
-          if (null === TA) return mA(), AH.DEFAULT_CLIENT_PAGE_SOURCES.lookups.itemIcon(HH);
-          if ((0, tA.k)(HH)) return {
+      rY = {
+        itemIcon: function(BB) {
+          var OB, GB, DB, QB;
+          if (null === VY) return dY(), YB.DEFAULT_CLIENT_PAGE_SOURCES.lookups.itemIcon(BB);
+          if ((0, jY.j)(BB)) return {
             kind: "icon",
-            url: null !== (LH = null !== (rH = null === (SH = (0, xA.k)()) || void 0 === SH ? void 0 : SH.textureUrl(HH)) && void 0 !== rH ? rH : TA.ingameIconUrl(HH)) && void 0 !== LH ? LH : TA.notFoundUrl()
+            url: null !== (GB = null !== (DB = null === (QB = (0, RY.k)()) || void 0 === QB ? void 0 : QB.textureUrl(BB)) && void 0 !== DB ? DB : VY.ingameIconUrl(BB)) && void 0 !== GB ? GB : VY.notFoundUrl()
           };
-          if (HH.startsWith(tA.d)) return {
+          if (BB.startsWith(jY.c)) return {
             kind: "icon",
-            url: cA(HH.slice(tA.d.length))
+            url: iY(BB.slice(jY.c.length))
           };
-          if (0 === (0, CA.j)()) return (0, zA.e)(), AH.DEFAULT_CLIENT_PAGE_SOURCES.lookups.itemIcon(HH);
-          const hH = null !== (BH = KA(HH)) && void 0 !== BH ? BH : HH,
-            tH = (0, CA.e)(hH),
-            zH = void 0 === tH ? void 0 : UA.itemTypeNameOf(tH);
-          if (void 0 !== uA(hH)) return {
+          if (0 === (0, JY.k)()) return (0, yY.b)(), YB.DEFAULT_CLIENT_PAGE_SOURCES.lookups.itemIcon(BB);
+          const oB = null !== (OB = FY(BB)) && void 0 !== OB ? OB : BB,
+            jB = (0, JY.c)(oB),
+            yB = void 0 === jB ? void 0 : SY.itemTypeNameOf(jB);
+          if (void 0 !== pY(oB)) return {
             kind: "drawnBlock"
           };
-          const CH = function(HH) {
-            var BH;
-            return null !== (BH = oA(fA(HH))) && void 0 !== BH ? BH : TA.notFoundUrl()
-          }(hH);
-          if ((0, MA.n)(hH) && ! function(HH) {
-              const BH = (0, xA.k)();
-              return null !== BH && (null !== BH.textureUrl(fA(HH)) || (0, MA.d)(HH).some((HH => null !== BH.modelUrl(HH))))
-            }(hH)) return {
+          const JB = function(BB) {
+            var OB;
+            return null !== (OB = KY(mY(BB))) && void 0 !== OB ? OB : VY.notFoundUrl()
+          }(oB);
+          if ((0, NY.n)(oB) && ! function(BB) {
+              const OB = (0, RY.k)();
+              return null !== OB && (null !== OB.textureUrl(mY(BB)) || (0, NY.e)(BB).some((BB => null !== OB.modelUrl(BB))))
+            }(oB)) return {
             kind: "model",
-            url: CH,
-            drawn: (0, MA.k)(hH)
+            url: JB,
+            drawn: (0, NY.j)(oB)
           };
-          if ("Gun" === zH) return {
+          if ("Gun" === yB) return {
             kind: "gun",
-            url: CH
+            url: JB
           };
-          if (void 0 !== tH && "GrayscaleArmour" === UA.itemTypeOf(tH) || Object.hasOwn(hA.c, hH)) {
-            var EH;
-            const BH = null !== (EH = (0, hA.g)(HH)) && void 0 !== EH ? EH : (0, hA.g)(hH);
-            if (BH) return {
+          if (void 0 !== jB && "GrayscaleArmour" === SY.itemTypeOf(jB) || Object.hasOwn(oY.e, oB)) {
+            var MB;
+            const OB = null !== (MB = (0, oY.g)(BB)) && void 0 !== MB ? MB : (0, oY.g)(oB);
+            if (OB) return {
               kind: "item",
-              url: CH,
-              tint: BH
+              url: JB,
+              tint: OB
             }
           }
           return {
             kind: "item",
-            url: CH
+            url: JB
           }
         },
-        hasIcon: function(HH) {
-          return void 0 !== KA(HH) || (0, tA.k)(HH) || HH.startsWith(tA.d)
+        hasIcon: function(BB) {
+          return void 0 !== FY(BB) || (0, jY.j)(BB) || BB.startsWith(jY.c)
         },
-        isItemName: function(HH) {
-          return void 0 !== KA(HH)
+        isItemName: function(BB) {
+          return void 0 !== FY(BB)
         }
       };
 
-    function NA() {
-      (0, AH.installPageSources)({
+    function XY() {
+      (0, YB.installPageSources)({
         commands: {
-          ...AH.DEFAULT_CLIENT_PAGE_SOURCES.commands,
-          setChunkAddDistance: gL.r,
-          prewarmCreativeIcons: rA
+          ...YB.DEFAULT_CLIENT_PAGE_SOURCES.commands,
+          setChunkAddDistance: rG.o,
+          prewarmCreativeIcons: DY
         },
-        queries: qA,
+        queries: gY,
         lookups: {
-          ...AH.DEFAULT_CLIENT_PAGE_SOURCES.lookups,
-          ...gA,
-          jT: gL.g,
-          drawCallStats: NL.j,
-          iconsDrawAhead: BA
+          ...YB.DEFAULT_CLIENT_PAGE_SOURCES.lookups,
+          ...rY,
+          bR: rG.h,
+          drawCallStats: XG.i,
+          iconsDrawAhead: OY
         }
-      }), (0, qL.e)(), mA(), aL || (aL = !0, CH.k.subscribe("gameJoined", (() => {
-        var HH;
-        JL = !1, null === (HH = HA) || void 0 === HH || HH(), HA = null;
+      }), (0, gG.b)(), dY(), CG || (CG = !0, JB.o.subscribe("gameJoined", (() => {
+        var BB;
+        vG = !1, null === (BB = BY) || void 0 === BB || BB(), BY = null;
         for (const {
-            name: BH,
-            slot: LH
+            name: OB,
+            slot: GB
           }
-          of pL.splice(0)) LH.asked.delete(BH)
-      })), CH.k.subscribe("gamePlayable", (() => {
-        JL = !0, LA()
-      })), AH.gameBridge.subscribe("inventory", LA), AH.gameBridge.subscribe("itemIconsVersion", (() => {
-        iL.clear(), LA()
+          of xG.splice(0)) GB.asked.delete(OB)
+      })), JB.o.subscribe("gamePlayable", (() => {
+        vG = !0, GY()
+      })), YB.gameBridge.subscribe("inventory", GY), YB.gameBridge.subscribe("itemIconsVersion", (() => {
+        sG.clear(), GY()
       })))
     }
-    var RA = LH(609),
-      jA = LH(40677);
+    var wY = GB(633),
+      EY = GB(40406);
 
-    function nA(HH) {
-      if (null === HH || void 0 === HH || !HH.isCoreRunning) return null;
+    function cY(BB) {
+      if (null === BB || void 0 === BB || !BB.isCoreRunning) return null;
       const {
-        api: BH,
-        chunks: LH,
-        items: AH,
-        tables: rH
-      } = HH;
+        api: OB,
+        chunks: GB,
+        items: YB,
+        tables: DB
+      } = BB;
       return {
         playerFeet() {
-          const HH = BH.hT(BH.localId);
-          return null !== HH && void 0 !== HH && HH.every(Number.isFinite) ? HH : null
+          const BB = OB.pR(OB.localId);
+          return null !== BB && void 0 !== BB && BB.every(Number.isFinite) ? BB : null
         },
-        chunkBlocks: HH => LH.isLoaded(HH[0], HH[1], HH[2]) ? (HH, BH, AH) => LH.ph(HH, BH, AH) : null,
-        blockName: HH => rH.nameOfId(HH),
+        chunkBlocks: BB => GB.isLoaded(BB[0], BB[1], BB[2]) ? (BB, OB, YB) => GB.SM(BB, OB, YB) : null,
+        blockName: BB => DB.nameOfId(BB),
         inventory: () => ({
-          slots: AH.playerItems().map((HH => HH ? {
-            name: HH.name,
-            amount: HH.amount
+          slots: YB.playerItems().map((BB => BB ? {
+            name: BB.name,
+            amount: BB.amount
           } : null)),
-          heldSlot: AH.selectedSlot
+          heldSlot: YB.selectedSlot
         }),
         nearby() {
-          const LH = [];
-          for (let rH = 0; rH < BH.idStr.length; rH++) {
-            var AH;
-            const SH = BH.idStr[rH],
-              hH = BH.serverIds[rH],
-              tH = BH.kinds[rH];
-            if (null === SH || BH.isLocal(hH) || tH >>> PH.d !== PH.v.Lifeform) continue;
-            const zH = BH.hT(hH),
-              CH = RA.j[tH & PH.g];
-            zH && void 0 !== CH && LH.push({
-              kind: "Player" === CH ? "player" : CH,
-              name: null !== (AH = HH.clientApi.getEntityName(SH)) && void 0 !== AH ? AH : null,
-              position: zH
+          const GB = [];
+          for (let DB = 0; DB < OB.idStr.length; DB++) {
+            var YB;
+            const QB = OB.idStr[DB],
+              oB = OB.serverIds[DB],
+              jB = OB.kinds[DB];
+            if (null === QB || OB.isLocal(oB) || jB >>> AB.c !== AB.t.Lifeform) continue;
+            const yB = OB.pR(oB),
+              JB = wY.j[jB & AB.g];
+            yB && void 0 !== JB && GB.push({
+              kind: "Player" === JB ? "player" : JB,
+              name: null !== (YB = BB.clientApi.getEntityName(QB)) && void 0 !== YB ? YB : null,
+              position: yB
             })
           }
-          return LH
+          return GB
         },
         droppedItems() {
-          let HH = 0;
-          for (let LH = 0; LH < BH.idStr.length; LH++) null !== BH.idStr[LH] && BH.kinds[LH] >>> PH.d === PH.v.Item && HH++;
-          return HH
+          let BB = 0;
+          for (let GB = 0; GB < OB.idStr.length; GB++) null !== OB.idStr[GB] && OB.kinds[GB] >>> AB.c === AB.t.Item && BB++;
+          return BB
         }
       }
     }
-    const FA = {
-        worldCodeAiChunk: HH => Promise.resolve((0, jA.e)(nA((0, hH.i)()), HH)),
-        worldCodeAiGameState: () => Promise.resolve((0, jA.g)(nA((0, hH.i)())))
+    const hY = {
+        worldCodeAiChunk: BB => Promise.resolve((0, EY.d)(cY((0, oB.j)()), BB)),
+        worldCodeAiGameState: () => Promise.resolve((0, EY.h)(cY((0, oB.j)())))
       },
-      DA = function(HH) {
-        const BH = EL(),
-          AH = EL(),
-          rH = new Set,
-          SH = new Set,
-          hH = () => {
-            var BH, LH;
-            return null !== (BH = null === (LH = HH.runtime()) || void 0 === LH ? void 0 : LH.currentViewer) && void 0 !== BH ? BH : null
+      aY = function(BB) {
+        const OB = MG(),
+          YB = MG(),
+          DB = new Set,
+          QB = new Set,
+          oB = () => {
+            var OB, GB;
+            return null !== (OB = null === (GB = BB.runtime()) || void 0 === GB ? void 0 : GB.currentViewer) && void 0 !== OB ? OB : null
           };
-        let tH = null,
-          zH = null;
-        const EH = (HH, BH) => ({
-            current: HH,
-            watch(LH) {
-              let AH = HH();
-              return BH.add((() => {
-                const BH = HH();
-                BH !== AH && (AH = BH, LH(BH))
+        let jB = null,
+          yB = null;
+        const MB = (BB, OB) => ({
+            current: BB,
+            watch(GB) {
+              let YB = BB();
+              return OB.add((() => {
+                const OB = BB();
+                OB !== YB && (YB = OB, GB(OB))
               }))
             }
           }),
-          GH = HH => ({
-            watch: BH => (HH.add(BH), () => {
-              HH.delete(BH)
+          zB = BB => ({
+            watch: OB => (BB.add(OB), () => {
+              BB.delete(OB)
             })
           }),
-          YH = HH => {
-            const BH = hH(),
-              LH = null === BH || void 0 === BH ? void 0 : BH.view;
-            BH && LH && BH.seek(Math.max(0, Math.min(LH.totalTicks - 1, LH.IX + HH * XH.wd)))
+          lB = BB => {
+            const OB = oB(),
+              GB = null === OB || void 0 === OB ? void 0 : OB.view;
+            OB && GB && OB.seek(Math.max(0, Math.min(GB.totalTicks - 1, GB.kP + BB * PB.Cd)))
           },
-          uH = {
-            replay: EH((() => {
-              var HH;
-              const BH = hH(),
-                LH = null !== (HH = null === BH || void 0 === BH ? void 0 : BH.view) && void 0 !== HH ? HH : null;
-              return null === BH || null === LH || LH.state === XH.hd.None ? (tH = null, null) : (tH = (0, iH.r)(tH, {
-                id: BH.id,
-                IX: LH.IX,
-                totalTicks: LH.totalTicks,
-                oN: XH.wd,
-                playing: LH.state === XH.hd.Playing,
-                speed: LH.speed,
-                cameraMode: LH.cameraMode,
-                freecam: "freecam" === LH.cameraMode
-              }), tH)
-            }), BH),
-            replayEdits: EH((() => {
-              var HH;
-              const BH = hH(),
-                LH = null !== (HH = null === BH || void 0 === BH ? void 0 : BH.view) && void 0 !== HH ? HH : null;
-              return null === BH || null === LH || LH.state === XH.hd.None ? (zH = null, null) : (zH = (0, iH.r)(zH, {
-                cameraKeyframes: [...BH.keyframes],
-                playbackMark: LH.mark,
-                fileName: BH.fileName,
-                unsavedChanges: BH.unsavedChanges,
-                suggestSaveAs: BH.suggestSaveAs
-              }), zH)
-            }), BH),
-            replayRecorder: EH((() => {
-              var BH, LH;
-              return null !== (BH = null === (LH = HH.runtime()) || void 0 === LH ? void 0 : LH.recorder.current) && void 0 !== BH ? BH : tL.c.states.replayRecorder.current()
-            }), AH),
+          pB = {
+            replay: MB((() => {
+              var BB;
+              const OB = oB(),
+                GB = null !== (BB = null === OB || void 0 === OB ? void 0 : OB.view) && void 0 !== BB ? BB : null;
+              return null === OB || null === GB || GB.state === PB.sd.None ? (jB = null, null) : (jB = (0, sB.k)(jB, {
+                id: OB.id,
+                kP: GB.kP,
+                totalTicks: GB.totalTicks,
+                pI: PB.Cd,
+                playing: GB.state === PB.sd.Playing,
+                speed: GB.speed,
+                cameraMode: GB.cameraMode,
+                freecam: "freecam" === GB.cameraMode
+              }), jB)
+            }), OB),
+            replayEdits: MB((() => {
+              var BB;
+              const OB = oB(),
+                GB = null !== (BB = null === OB || void 0 === OB ? void 0 : OB.view) && void 0 !== BB ? BB : null;
+              return null === OB || null === GB || GB.state === PB.sd.None ? (yB = null, null) : (yB = (0, sB.k)(yB, {
+                cameraKeyframes: [...OB.keyframes],
+                playbackMark: GB.mark,
+                fileName: OB.fileName,
+                unsavedChanges: OB.unsavedChanges,
+                suggestSaveAs: OB.suggestSaveAs
+              }), yB)
+            }), OB),
+            replayRecorder: MB((() => {
+              var OB, GB;
+              return null !== (OB = null === (GB = BB.runtime()) || void 0 === GB ? void 0 : GB.recorder.current) && void 0 !== OB ? OB : jG.c.states.replayRecorder.current()
+            }), YB),
             replayVideoExporting: {
-              current: SL.e,
-              watch: HH => (0, CH.m)("replayViewer|videoExportChanged", (() => {
-                HH((0, SL.e)())
+              current: QG.b,
+              watch: BB => (0, JB.p)("replayViewer|videoExportChanged", (() => {
+                BB((0, QG.b)())
               }))
             }
           },
-          QH = {
-            replayUiActionRequested: GH(SH),
-            replayViewerRequested: GH(rH)
+          qB = {
+            replayUiActionRequested: zB(QB),
+            replayViewerRequested: zB(DB)
           },
-          WH = HH => {
-            for (const BH of rH) BH(HH)
+          ZB = BB => {
+            for (const OB of DB) OB(BB)
           },
-          MH = () => {
-            var AH;
-            !0 === (null === (AH = hH()) || void 0 === AH ? void 0 : AH.isOpen) && Promise.all([LH.e(111), LH.e(78)]).then((() => LH(64074))).then((LH => {
+          NB = () => {
+            var YB;
+            !0 === (null === (YB = oB()) || void 0 === YB ? void 0 : YB.isOpen) && Promise.all([GB.e(111), GB.e(78)]).then((() => GB(63849))).then((GB => {
               let {
-                startWasmReplayVideoExport: AH
-              } = LH;
-              return AH({
-                viewer: hH,
+                startWasmReplayVideoExport: YB
+              } = GB;
+              return YB({
+                viewer: oB,
                 canvas: () => {
-                  var BH, LH;
-                  return null !== (BH = null === (LH = HH.canvas) || void 0 === LH ? void 0 : LH.call(HH)) && void 0 !== BH ? BH : null
+                  var OB, GB;
+                  return null !== (OB = null === (GB = BB.canvas) || void 0 === GB ? void 0 : GB.call(BB)) && void 0 !== OB ? OB : null
                 },
-                watchViewer: BH.add,
-                requestViewer: WH
+                watchViewer: OB.add,
+                requestViewer: ZB
               })
-            }), (HH => {
-              console.error("Couldn't load the video export", HH), hL.NotificationProvider.showAlertPopup({
+            }), (BB => {
+              console.error("Couldn't load the video export", BB), oG.NotificationProvider.showAlertPopup({
                 title: "Video export failed",
                 subtitle: "Check your connection, then try again."
               })
-            })).catch((HH => {
-              console.error("The video export failed", HH)
+            })).catch((BB => {
+              console.error("The video export failed", BB)
             }))
           },
-          xH = {
-            replayAction(HH) {
-              if ((0, SL.e)()) return;
-              const BH = hH();
-              switch (HH) {
+          RB = {
+            replayAction(BB) {
+              if ((0, QG.b)()) return;
+              const OB = oB();
+              switch (BB) {
                 case "replaySkipBack":
-                  YH(-1);
+                  lB(-1);
                   break;
                 case "replaySkipForward":
-                  YH(1);
+                  lB(1);
                   break;
                 case "replaySpeedUp":
                 case "replaySpeedDown":
-                  null !== BH && void 0 !== BH && BH.view && BH.setSpeed((0, rL.g)(BH.view.speed, "replaySpeedUp" === HH ? "up" : "down"));
+                  null !== OB && void 0 !== OB && OB.view && OB.setSpeed((0, DG.d)(OB.view.speed, "replaySpeedUp" === BB ? "up" : "down"));
                   break;
                 case "replayRecordKeyframe":
-                  null === BH || void 0 === BH || BH.addKeyframe()
+                  null === OB || void 0 === OB || OB.addKeyframe()
               }
             },
-            setReplayPlaying(HH) {
-              var BH, LH;
-              (0, SL.e)() || (HH ? null === (BH = hH()) || void 0 === BH || BH.play() : null === (LH = hH()) || void 0 === LH || LH.pause())
+            setReplayPlaying(BB) {
+              var OB, GB;
+              (0, QG.b)() || (BB ? null === (OB = oB()) || void 0 === OB || OB.play() : null === (GB = oB()) || void 0 === GB || GB.pause())
             },
-            seekReplay(HH) {
-              var BH;
+            seekReplay(BB) {
+              var OB;
               let {
-                IX: LH,
-                ignorePlaybackMark: AH
-              } = HH;
-              null === (BH = hH()) || void 0 === BH || BH.seek(LH, null !== AH && void 0 !== AH && AH)
+                kP: GB,
+                ignorePlaybackMark: YB
+              } = BB;
+              null === (OB = oB()) || void 0 === OB || OB.seek(GB, null !== YB && void 0 !== YB && YB)
             },
-            setReplayCameraMode(HH) {
-              var BH;
-              null === (BH = hH()) || void 0 === BH || BH.setCameraMode(HH)
+            setReplayCameraMode(BB) {
+              var OB;
+              null === (OB = oB()) || void 0 === OB || OB.setCameraMode(BB)
             },
             syncReplayCameraMode() {},
-            setReplayCameraKeyframe(HH) {
-              var BH;
-              null === (BH = hH()) || void 0 === BH || BH.setKeyframe(HH)
+            setReplayCameraKeyframe(BB) {
+              var OB;
+              null === (OB = oB()) || void 0 === OB || OB.setKeyframe(BB)
             },
-            moveReplayCameraKeyframe(HH) {
-              var BH;
+            moveReplayCameraKeyframe(BB) {
+              var OB;
               let {
-                from: LH,
-                to: AH
-              } = HH;
-              null === (BH = hH()) || void 0 === BH || BH.moveKeyframe(LH, AH)
+                from: GB,
+                to: YB
+              } = BB;
+              null === (OB = oB()) || void 0 === OB || OB.moveKeyframe(GB, YB)
             },
-            deleteReplayCameraKeyframes(HH) {
-              var BH;
+            deleteReplayCameraKeyframes(BB) {
+              var OB;
               let {
-                start: LH,
-                end: AH
-              } = HH;
-              null === (BH = hH()) || void 0 === BH || BH.deleteKeyframes(LH, AH)
+                start: GB,
+                end: YB
+              } = BB;
+              null === (OB = oB()) || void 0 === OB || OB.deleteKeyframes(GB, YB)
             },
-            setReplayPlaybackMark(HH) {
-              var BH;
-              null === (BH = hH()) || void 0 === BH || BH.setMark(HH)
+            setReplayPlaybackMark(BB) {
+              var OB;
+              null === (OB = oB()) || void 0 === OB || OB.setMark(BB)
             },
-            cropReplay(HH) {
-              var BH, LH;
+            cropReplay(BB) {
+              var OB, GB;
               let {
-                start: AH,
-                end: rH
-              } = HH;
-              return !(0, SL.e)() && (null !== (BH = null === (LH = hH()) || void 0 === LH ? void 0 : LH.crop(AH, rH)) && void 0 !== BH && BH)
+                start: YB,
+                end: DB
+              } = BB;
+              return !(0, QG.b)() && (null !== (OB = null === (GB = oB()) || void 0 === GB ? void 0 : GB.crop(YB, DB)) && void 0 !== OB && OB)
             },
-            holdReplayForShaderPackFailure(HH) {
-              const BH = hH();
-              BH && (BH.holdForShaderPackFailure(), function(HH) {
-                LH.e(130).then((() => LH(40182))).then((BH => {
+            holdReplayForShaderPackFailure(BB) {
+              const OB = oB();
+              OB && (OB.holdForShaderPackFailure(), function(BB) {
+                GB.e(130).then((() => GB(39925))).then((OB => {
                   let {
-                    shaderPackPage: LH
-                  } = BH;
-                  LH.block(HH)
-                })).catch((HH => {
-                  console.warn("[bloxd-wasm-client] the shader pack could not be blocked", HH)
+                    shaderPackPage: GB
+                  } = OB;
+                  GB.block(BB)
+                })).catch((BB => {
+                  console.warn("[bloxd-wasm-client] the shader pack could not be blocked", BB)
                 }))
-              }(HH))
+              }(BB))
             },
             exportReplayVideo() {
-              MH()
+              NB()
             },
             toggleRecording() {
-              var BH;
-              null === (BH = HH.runtime()) || void 0 === BH || BH.recorder.toggleRecording()
+              var OB;
+              null === (OB = BB.runtime()) || void 0 === OB || OB.recorder.toggleRecording()
             },
             saveClip() {
-              var BH;
-              null === (BH = HH.runtime()) || void 0 === BH || BH.recorder.saveClip()
+              var OB;
+              null === (OB = BB.runtime()) || void 0 === OB || OB.recorder.saveClip()
             },
-            setRecorderPrefs(BH) {
-              var LH;
+            setRecorderPrefs(OB) {
+              var GB;
               let {
-                clipping: AH,
-                clipSeconds: rH
-              } = BH;
-              null === (LH = HH.runtime()) || void 0 === LH || LH.recorder.setPrefs(AH, rH)
+                clipping: YB,
+                clipSeconds: DB
+              } = OB;
+              null === (GB = BB.runtime()) || void 0 === GB || GB.recorder.setPrefs(YB, DB)
             },
-            setReplayViewerOpen(BH) {
-              var LH;
-              (0, WB.e)(BH) && (null === (LH = HH.runtime()) || void 0 === LH || LH.recorder.viewerShown(BH))
+            setReplayViewerOpen(OB) {
+              var GB;
+              (0, ZO.f)(OB) && (null === (GB = BB.runtime()) || void 0 === GB || GB.recorder.viewerShown(OB))
             },
-            recordFlyingMiddleText(BH) {
-              var LH;
+            recordFlyingMiddleText(OB) {
+              var GB;
               let {
-                content: AH,
-                dr: rH,
-                angle: SH,
-                ar: hH
-              } = BH;
-              null === (LH = HH.runtime()) || void 0 === LH || LH.recorder.recordFlyingText(JSON.stringify(AH), rH, SH, hH)
+                content: YB,
+                VB: DB,
+                angle: QB,
+                SB: oB
+              } = OB;
+              null === (GB = BB.runtime()) || void 0 === GB || GB.recorder.recordFlyingText(JSON.stringify(YB), DB, QB, oB)
             },
-            dragReplayCamera(BH) {
-              var LH;
+            dragReplayCamera(OB) {
+              var GB;
               let {
-                dx: AH,
-                dy: rH
-              } = BH;
-              null === (LH = HH.freecam()) || void 0 === LH || LH.drag(AH, rH)
+                dx: YB,
+                dy: DB
+              } = OB;
+              null === (GB = BB.freecam()) || void 0 === GB || GB.drag(YB, DB)
             },
-            moveReplayFreecam(BH) {
-              var LH;
-              null === (LH = HH.freecam()) || void 0 === LH || LH.move(BH)
+            moveReplayFreecam(OB) {
+              var GB;
+              null === (GB = BB.freecam()) || void 0 === GB || GB.move(OB)
             },
-            holdReplayFreecamVertical(BH) {
-              var LH;
+            holdReplayFreecamVertical(OB) {
+              var GB;
               let {
-                action: AH,
-                LX: rH
-              } = BH;
-              null === (LH = HH.freecam()) || void 0 === LH || LH.holdVertical(AH, rH)
+                action: YB,
+                sJ: DB
+              } = OB;
+              null === (GB = BB.freecam()) || void 0 === GB || GB.holdVertical(YB, DB)
             }
           },
-          vH = HH => {
-            var BH;
-            const LH = hH(),
-              AH = null !== (BH = null === LH || void 0 === LH ? void 0 : LH.view) && void 0 !== BH ? BH : null;
-            zL.has(HH) ? (HH => {
-              for (const BH of SH) BH(HH)
-            })(HH) : CL.has(HH) ? xH.replayAction(HH) : "replayPlayPause" === HH ? LH && AH && AH.state !== XH.hd.None && xH.setReplayPlaying(AH.state !== XH.hd.Playing) : "replayChangeCameraMode" === HH ? null === LH || void 0 === LH || LH.cycleCameraMode() : "replayExit" === HH ? !0 === (null === LH || void 0 === LH ? void 0 : LH.inPlayback) && (0, cB.j)("/") : "replayExportVideo" === HH && MH()
+          WB = BB => {
+            var OB;
+            const GB = oB(),
+              YB = null !== (OB = null === GB || void 0 === GB ? void 0 : GB.view) && void 0 !== OB ? OB : null;
+            yG.has(BB) ? (BB => {
+              for (const OB of QB) OB(BB)
+            })(BB) : JG.has(BB) ? RB.replayAction(BB) : "replayPlayPause" === BB ? GB && YB && YB.state !== PB.sd.None && RB.setReplayPlaying(YB.state !== PB.sd.Playing) : "replayChangeCameraMode" === BB ? null === GB || void 0 === GB || GB.cycleCameraMode() : "replayExit" === BB ? !0 === (null === GB || void 0 === GB ? void 0 : GB.inPlayback) && (0, iO.l)("/") : "replayExportVideo" === BB && NB()
           };
-        let PH = !1;
+        let AB = !1;
         return {
-          states: uH,
-          events: QH,
-          commands: xH,
+          states: pB,
+          events: qB,
+          commands: RB,
           lookups: {
             replayCamera() {
-              var BH, LH, AH;
-              return !0 !== (null === (BH = hH()) || void 0 === BH ? void 0 : BH.isOpen) ? null : null !== (LH = null === (AH = HH.cameraView) || void 0 === AH ? void 0 : AH.call(HH)) && void 0 !== LH ? LH : null
+              var OB, GB, YB;
+              return !0 !== (null === (OB = oB()) || void 0 === OB ? void 0 : OB.isOpen) ? null : null !== (GB = null === (YB = BB.cameraView) || void 0 === YB ? void 0 : YB.call(BB)) && void 0 !== GB ? GB : null
             },
             leaveGameReloadsPage() {
-              var HH;
-              return !0 === (null === (HH = hH()) || void 0 === HH ? void 0 : HH.inPlayback)
+              var BB;
+              return !0 === (null === (BB = oB()) || void 0 === BB ? void 0 : BB.inPlayback)
             }
           },
           feed: {
             viewerChanged: () => {
-              var HH;
-              const LH = !0 === (null === (HH = hH()) || void 0 === HH ? void 0 : HH.inPlayback);
-              LH !== PH && (PH = LH, CH.k.AX("connectedGameChanged")), BH.fire()
+              var BB;
+              const GB = !0 === (null === (BB = oB()) || void 0 === BB ? void 0 : BB.inPlayback);
+              GB !== AB && (AB = GB, JB.o.tM("connectedGameChanged")), OB.fire()
             },
-            recorderChanged: AH.fire,
-            keyDown: HH => {
-              var BH;
-              switch (HH) {
+            recorderChanged: YB.fire,
+            keyDown: BB => {
+              var OB;
+              switch (BB) {
                 case "recordGame":
-                  return void xH.toggleRecording();
+                  return void RB.toggleRecording();
                 case "recordClip":
-                  return void((0, WB.c)() || xH.saveClip())
-              }(0, SL.e)() || ("replayViewerOpen" !== HH ? HH.startsWith("replay") && ((0, WB.c)() || !0 === (null === (BH = hH()) || void 0 === BH ? void 0 : BH.inPlayback)) && vH(HH) : WH("toggle"))
+                  return void((0, ZO.b)() || RB.saveClip())
+              }(0, QG.b)() || ("replayViewerOpen" !== BB ? BB.startsWith("replay") && ((0, ZO.b)() || !0 === (null === (OB = oB()) || void 0 === OB ? void 0 : OB.inPlayback)) && WB(BB) : ZB("toggle"))
             }
           }
         }
       }({
-        runtime: rH.n,
+        runtime: DB.l,
         cameraView: () => {
-          var HH;
-          const BH = null === (HH = (0, hH.i)()) || void 0 === HH ? void 0 : HH.renderFrame;
-          if (!BH) return null;
-          const [LH, AH, rH] = BH.cameraPosition, [SH, tH, zH] = BH.cameraDirection;
+          var BB;
+          const OB = null === (BB = (0, oB.j)()) || void 0 === BB ? void 0 : BB.renderFrame;
+          if (!OB) return null;
+          const [GB, YB, DB] = OB.cameraPosition, [QB, jB, yB] = OB.cameraDirection;
           return {
-            position: [LH, AH, rH],
-            direction: [SH, tH, zH]
+            position: [GB, YB, DB],
+            direction: [QB, jB, yB]
           }
         },
         canvas: () => {
-          var HH, BH, LH;
-          return null !== (HH = null === (BH = (LH = (0, SH.L)()).canvas) || void 0 === BH ? void 0 : BH.call(LH)) && void 0 !== HH ? HH : null
+          var BB, OB, GB;
+          return null !== (BB = null === (OB = (GB = (0, QB.O)()).canvas) || void 0 === OB ? void 0 : OB.call(GB)) && void 0 !== BB ? BB : null
         },
-        freecam: rH.j
+        freecam: DB.i
       }),
-      wA = {
+      eY = {
         states: {
-          ...CB,
-          ...YB.k,
-          ...DA.states,
-          ...YL,
-          ...nH
+          ...JO,
+          ...lO.j,
+          ...aY.states,
+          ...lG,
+          ...cB
         },
         events: {
-          ...EB,
-          ...WH,
-          ...YB.g,
-          ...kH.c,
-          ...mL.g,
-          ...DA.events,
-          ...uL,
-          ...bH.j
+          ...MO,
+          ...ZB,
+          ...lO.g,
+          ...kB.d,
+          ...dG.j,
+          ...aY.events,
+          ...pG,
+          ...fB.h
         },
         commands: {
-          ...OH,
-          ...XB,
-          ...MH,
-          ...YB.e,
-          ...iB,
-          ...kL,
-          ...bH.f,
-          ...gB,
-          ...DA.commands,
-          ...TL,
-          ...FH,
-          ...eL,
-          ...uB
+          ...UB,
+          ...PO,
+          ...NB,
+          ...lO.c,
+          ...sO,
+          ...kG,
+          ...fB.d,
+          ...rO,
+          ...aY.commands,
+          ...VG,
+          ...hB,
+          ...LG,
+          ...pO
         },
         queries: {
-          ...YB.h,
-          ...FA
+          ...lO.h,
+          ...hY
         },
         lookups: {
-          ...GB,
-          ...eH,
-          ...mL.k,
-          ...DA.lookups,
-          ...VH,
-          ...AL,
-          ...cL,
-          ...DH
+          ...zO,
+          ...LB,
+          ...dG.n,
+          ...aY.lookups,
+          ...nB,
+          ...YG,
+          ...iG,
+          ...aB
         }
       };
 
-    function ZA() {
-      (0, tH.e)(QH.l), (0, rH.p)(DA.feed), (0, kH.d)(), pB || (pB = !0, (0, QH.k)(fH.j, (HH => {
-        const BH = (0, KH.f)(fH.j, HH);
-        "string" === typeof BH && Promise.resolve().then((() => LH(4019))).then((HH => {
+    function TY() {
+      (0, jB.f)(qB.i), (0, DB.m)(aY.feed), (0, kB.h)(), xO || (xO = !0, (0, qB.g)(mB.k, (BB => {
+        const OB = (0, FB.h)(mB.k, BB);
+        "string" === typeof OB && Promise.resolve().then((() => GB(4073))).then((BB => {
           let {
-            onCosmeticPackGranted: LH
-          } = HH;
-          LH(BH)
+            onCosmeticPackGranted: GB
+          } = BB;
+          GB(OB)
         }))
-      })), (0, QH.k)(fH.ab, (HH => {
-        const BH = (0, KH.f)(fH.ab, HH);
-        "number" === typeof BH && CH.k.AX("serverUpdating", Date.now() + BH, !0)
-      })), (0, QH.k)(fH.D, (HH => {
-        const BH = (0, KH.f)(fH.D, HH);
-        if ((0, KH.c)(BH)) {
+      })), (0, qB.g)(mB.bb, (BB => {
+        const OB = (0, FB.h)(mB.bb, BB);
+        "number" === typeof OB && JB.o.tM("serverUpdating", Date.now() + OB, !0)
+      })), (0, qB.g)(mB.D, (BB => {
+        const OB = (0, FB.h)(mB.D, BB);
+        if ((0, FB.e)(OB)) {
           const {
-            KL: HH,
-            cL: LH
-          } = BH;
-          (0, sB.b)({
-            KL: "string" === typeof HH ? HH : null,
-            cL: "string" === typeof LH ? LH : null
+            BB: BB,
+            OB: GB
+          } = OB;
+          (0, HO.d)({
+            BB: "string" === typeof BB ? BB : null,
+            OB: "string" === typeof GB ? GB : null
           })
         }
-      })), (0, QH.k)(EH.nc.NewUiRequest, (HH => {
-        const BH = (0, KH.i)(HH);
-        (0, KH.c)(BH) && "number" === typeof BH.id && (0, KH.c)(BH.clientParameters) && (0, JB.f)(BH.id, BH.clientParameters)
-      })), (0, QH.k)(fH.V, (HH => {
-        const BH = (0, KH.f)(fH.V, HH);
-        "number" === typeof BH && (0, JB.i)(BH)
-      })), (0, QH.j)(JB.b), (0, QH.k)(EH.nc.UiRequestPopup, (HH => {
-        const BH = (0, KH.i)(HH);
-        if ((0, KH.c)(BH) && "number" === typeof BH.id && ("string" === typeof BH.text || (0, KH.c)(BH.text) && "string" === typeof BH.text.translationKey)) {
-          const HH = BH.id;
-          (0, JB.m)(HH, BH.text, !0 === BH.destructive, (BH => {
-            iB.answerUiRequest({
-              id: HH,
-              XE: BH
+      })), (0, qB.g)(MB.oc.NewUiRequest, (BB => {
+        const OB = (0, FB.l)(BB);
+        (0, FB.e)(OB) && "number" === typeof OB.id && (0, FB.e)(OB.clientParameters) && (0, vO.d)(OB.id, OB.clientParameters)
+      })), (0, qB.g)(mB.V, (BB => {
+        const OB = (0, FB.h)(mB.V, BB);
+        "number" === typeof OB && (0, vO.f)(OB)
+      })), (0, qB.e)(vO.c), (0, qB.g)(MB.oc.UiRequestPopup, (BB => {
+        const OB = (0, FB.l)(BB);
+        if ((0, FB.e)(OB) && "number" === typeof OB.id && ("string" === typeof OB.text || (0, FB.e)(OB.text) && "string" === typeof OB.text.translationKey)) {
+          const BB = OB.id;
+          (0, vO.j)(BB, OB.text, !0 === OB.destructive, (OB => {
+            sO.answerUiRequest({
+              id: BB,
+              UJ: OB
             })
           }))
         }
-      })), (0, QH.k)(EH.nc.TopRightHelper, (HH => {
-        const BH = (0, KH.i)(HH);
-        void 0 !== BH && CH.k.AX("TopRightHelper", BH, !0)
-      })), (0, QH.k)(EH.nc.TaskProgress, (HH => {
-        const BH = (0, KH.i)(HH);
-        (0, KH.c)(BH) && "string" === typeof BH.taskId && "number" === typeof BH.progress && (0, aB.b)({
-          taskId: BH.taskId,
-          progress: BH.progress
+      })), (0, qB.g)(MB.oc.TopRightHelper, (BB => {
+        const OB = (0, FB.l)(BB);
+        void 0 !== OB && JB.o.tM("TopRightHelper", OB, !0)
+      })), (0, qB.g)(MB.oc.TaskProgress, (BB => {
+        const OB = (0, FB.l)(BB);
+        (0, FB.e)(OB) && "string" === typeof OB.taskId && "number" === typeof OB.progress && (0, CO.e)({
+          taskId: OB.taskId,
+          progress: OB.progress
         })
-      }))), UL || (UL = !0, (0, QH.k)(fH.n, (HH => {
-        const BH = (0, KH.f)(fH.n, HH);
-        (0, KH.c)(BH) && CH.k.AX("showShopFromServer", {
-          toggle: BH.eS,
-          qS: BH.qS
+      }))), SG || (SG = !0, (0, qB.g)(mB.t, (BB => {
+        const OB = (0, FB.h)(mB.t, BB);
+        (0, FB.e)(OB) && JB.o.tM("showShopFromServer", {
+          toggle: OB.fO,
+          kO: OB.kO
         }, !0)
-      })), (0, QH.k)(EH.nc.OverShopInfo, (HH => {
-        const BH = (0, KH.i)(HH);
-        (0, KH.c)(BH) && CH.k.AX("overShopInfo", BH.info, !0)
-      })), (0, QH.k)(EH.nc.ShowShopTutorial, (() => {
-        CH.k.AX("showShopTutorial", null, !0)
-      }))), vL || (vL = !0, (0, QH.g)((() => {
-        var HH;
-        (0, QL.resetLeaveEvents)(), null === (HH = PL) || void 0 === HH || HH(), PL = (0, QH.d)() ? (0, ML.g)(QH.d) : null, (0, QH.d)() || CH.k.Hx()
-      })), (0, QH.k)(EH.nc.SetCookie, (HH => {
-        const BH = (0, KH.i)(HH),
-          LH = (0, cB.c)().gameNameWithVariation;
-        (0, KH.c)(BH) && "string" === typeof BH.key && null !== LH && (0, WL.setCookie)(LH, BH.key, BH.value)
-      })), (0, QH.k)(EH.nc.LeaveValues, (HH => {
-        const BH = (0, KH.i)(HH);
-        if ((0, KH.c)(BH) && "string" === typeof BH.leaveEventType) {
+      })), (0, qB.g)(MB.oc.OverShopInfo, (BB => {
+        const OB = (0, FB.l)(BB);
+        (0, FB.e)(OB) && JB.o.tM("overShopInfo", OB.info, !0)
+      })), (0, qB.g)(MB.oc.ShowShopTutorial, (() => {
+        JB.o.tM("showShopTutorial", null, !0)
+      }))), WG || (WG = !0, (0, qB.d)((() => {
+        var BB;
+        (0, qG.resetLeaveEvents)(), null === (BB = AG) || void 0 === BB || BB(), AG = (0, qB.b)() ? (0, NG.onVisitSessionGameServerConnected)(qB.b) : null, (0, qB.b)() || JB.o.kN()
+      })), (0, qB.g)(MB.oc.SetCookie, (BB => {
+        const OB = (0, FB.l)(BB),
+          GB = (0, iO.c)().gameNameWithVariation;
+        (0, FB.e)(OB) && "string" === typeof OB.key && null !== GB && (0, ZG.setCookie)(GB, OB.key, OB.value)
+      })), (0, qB.g)(MB.oc.LeaveValues, (BB => {
+        const OB = (0, FB.l)(BB);
+        if ((0, FB.e)(OB) && "string" === typeof OB.leaveEventType) {
           const {
-            leaveEventType: HH,
-            category: LH,
-            subCategory: AH,
-            value: rH
-          } = BH;
-          (0, QL.updateLeaveValue)({
-            leaveEventType: HH,
-            category: LH,
-            subCategory: AH,
-            value: rH
+            leaveEventType: BB,
+            category: GB,
+            subCategory: YB,
+            value: DB
+          } = OB;
+          (0, qG.updateLeaveValue)({
+            leaveEventType: BB,
+            category: GB,
+            subCategory: YB,
+            value: DB
           })
         }
-      })), (0, QH.k)(EH.nc.CustomAnalyticsEvent, (HH => {
-        const BH = (0, KH.i)(HH);
-        if ((0, KH.c)(BH) && "string" === typeof BH.cat1) {
+      })), (0, qB.g)(MB.oc.CustomAnalyticsEvent, (BB => {
+        const OB = (0, FB.l)(BB);
+        if ((0, FB.e)(OB) && "string" === typeof OB.cat1) {
           const {
-            cat1: HH,
-            cat2: LH,
-            cat3: AH,
-            value: rH
-          } = BH;
-          (0, QL.logCustomAnalyticsEvent)({
-            cat1: HH,
-            cat2: LH,
-            cat3: AH,
-            value: rH
+            cat1: BB,
+            cat2: GB,
+            cat3: YB,
+            value: DB
+          } = OB;
+          (0, qG.logCustomAnalyticsEvent)({
+            cat1: BB,
+            cat2: GB,
+            cat3: YB,
+            value: DB
           })
         }
-      })), (0, QH.k)(EH.nc.ProgressionEvent, (HH => {
-        const BH = (0, KH.i)(HH);
-        if ((0, KH.c)(BH)) {
+      })), (0, qB.g)(MB.oc.ProgressionEvent, (BB => {
+        const OB = (0, FB.l)(BB);
+        if ((0, FB.e)(OB)) {
           const {
-            type: HH,
-            location1: LH,
-            location2: AH,
-            location3: rH,
-            score: SH
-          } = BH;
-          (0, QL.logProgressionEvent)({
-            type: HH,
-            location1: LH,
-            location2: AH,
-            location3: rH,
-            score: SH
+            type: BB,
+            location1: GB,
+            location2: YB,
+            location3: DB,
+            score: QB
+          } = OB;
+          (0, qG.logProgressionEvent)({
+            type: BB,
+            location1: GB,
+            location2: YB,
+            location3: DB,
+            score: QB
           })
         }
-      })), (0, QH.k)(EH.nc.ResourceEvent, (HH => {
-        const BH = (0, KH.i)(HH);
-        if ((0, KH.c)(BH)) {
+      })), (0, qB.g)(MB.oc.ResourceEvent, (BB => {
+        const OB = (0, FB.l)(BB);
+        if ((0, FB.e)(OB)) {
           const {
-            type: HH,
-            resourceType: LH,
-            amount: AH,
-            category: rH,
-            itemName: SH
-          } = BH;
-          (0, QL.logResourceEvent)({
-            type: HH,
-            resourceType: LH,
-            amount: AH,
-            category: rH,
-            itemName: SH
+            type: BB,
+            resourceType: GB,
+            amount: YB,
+            category: DB,
+            itemName: QB
+          } = OB;
+          (0, qG.logResourceEvent)({
+            type: BB,
+            resourceType: GB,
+            amount: YB,
+            category: DB,
+            itemName: QB
           })
         }
-      })), (0, QH.k)(EH.nc.LeaderboardResponse, (HH => {
-        const BH = (0, KH.i)(HH);
-        if ((0, KH.c)(BH)) {
+      })), (0, qB.g)(MB.oc.LeaderboardResponse, (BB => {
+        const OB = (0, FB.l)(BB);
+        if ((0, FB.e)(OB)) {
           const {
-            category: HH,
-            timeframe: LH,
-            data: AH
-          } = BH;
-          CH.k.AX("leaderboardResponse", {
-            category: HH,
-            timeframe: LH,
-            data: AH
+            category: BB,
+            timeframe: GB,
+            data: YB
+          } = OB;
+          JB.o.tM("leaderboardResponse", {
+            category: BB,
+            timeframe: GB,
+            data: YB
           })
         }
-      })), (0, QH.k)(fH.y, (HH => {
-        const BH = (0, KH.f)(fH.y, HH);
-        "string" === typeof BH && (0, xL.d)(HH.conn, BH)
-      })), (0, QH.k)(fH.z, (HH => {
-        const BH = (0, KH.f)(fH.z, HH);
-        "string" === typeof BH && console.error(`[logErrorToConsole]: ${BH}`)
-      }))), gH(), (0, mL.d)(), qB || (qB = !0, (0, QH.k)(fH.i, (HH => {
-        const BH = (0, KH.f)(fH.i, HH);
-        void 0 !== BH && (0, eB.n)(BH)
-      }))), dB(), oB(), dH || (dH = !0, (0, SH.r)(aH)), AH.gameBridge.attach(wA), NA()
+      })), (0, qB.g)(mB.z, (BB => {
+        const OB = (0, FB.h)(mB.z, BB);
+        "string" === typeof OB && (0, RG.d)(BB.conn, OB)
+      })), (0, qB.g)(mB.B, (BB => {
+        const OB = (0, FB.h)(mB.B, BB);
+        "string" === typeof OB && console.error(`[logErrorToConsole]: ${OB}`)
+      }))), rB(), (0, dG.c)(), gO || (gO = !0, (0, qB.g)(mB.j, (BB => {
+        const OB = (0, FB.h)(mB.j, BB);
+        void 0 !== OB && (0, LO.i)(OB)
+      }))), bO(), KO(), bB || (bB = !0, (0, QB.w)(CB)), YB.gameBridge.attach(eY), XY()
     }
   },
-  37162: (HH, BH, LH) => {
-    LH.d(BH, {
-      e: () => EH,
-      h: () => zH,
-      k: () => tH,
-      l: () => CH
+  36997: (BB, OB, GB) => {
+    GB.d(OB, {
+      d: () => MB,
+      g: () => yB,
+      k: () => jB,
+      o: () => JB
     });
-    var AH = LH(2010);
-    let rH = null,
-      SH = 0;
-    const hH = new Set;
+    var YB = GB(2034);
+    let DB = null,
+      QB = 0;
+    const oB = new Set;
 
-    function tH() {
-      return rH
+    function jB() {
+      return DB
     }
 
-    function zH() {
-      return SH
+    function yB() {
+      return QB
     }
 
-    function CH(HH) {
-      rH = HH, SH++, (0, AH.e)();
-      for (const BH of hH) BH()
+    function JB(BB) {
+      DB = BB, QB++, (0, YB.b)();
+      for (const OB of oB) OB()
     }
 
-    function EH(HH) {
-      hH.add(HH)
+    function MB(BB) {
+      oB.add(BB)
     }
   },
-  37169: (HH, BH, LH) => {
-    LH.d(BH, {
-      c: () => hH,
-      g: () => tH
+  37e3: (BB, OB, GB) => {
+    GB.d(OB, {
+      d: () => oB,
+      f: () => jB
     });
-    var AH = LH(37174);
-    let rH = null,
-      SH = null;
+    var YB = GB(37004);
+    let DB = null,
+      QB = null;
 
-    function hH() {
-      return rH ??= LH.e(73).then((() => LH(42483))).catch((HH => {
-        throw rH = null, HH
-      })), rH
+    function oB() {
+      return DB ??= GB.e(73).then((() => GB(42193))).catch((BB => {
+        throw DB = null, BB
+      })), DB
     }
 
-    function tH() {
-      return SH ??= Promise.all([hH(), (0, AH.f)()]).then((HH => {
-        let [BH] = HH;
-        return BH
-      }), (HH => {
-        throw SH = null, HH
-      })), SH
+    function jB() {
+      return QB ??= Promise.all([oB(), (0, YB.e)()]).then((BB => {
+        let [OB] = BB;
+        return OB
+      }), (BB => {
+        throw QB = null, BB
+      })), QB
     }
   },
-  37297: (HH, BH, LH) => {
-    LH.d(BH, {
-      b: () => rH
+  37085: (BB, OB, GB) => {
+    GB.d(OB, {
+      d: () => DB
     });
-    const AH = {
-      wait: function(HH) {
-        return new Promise((BH => {
-          setTimeout(BH, HH)
+    const YB = {
+      wait: function(BB) {
+        return new Promise((OB => {
+          setTimeout(OB, BB)
         }))
       },
       stallMs: 2e4
     };
-    class rH {
-      constructor(HH) {
-        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-          LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : AH;
-        this.url = HH, this.options = BH, this.timing = LH, this.fetched = null, this.fetchAbort = null, this.scriptUrl = void 0, this.scriptUrl = HH
+    class DB {
+      constructor(BB) {
+        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+          GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : YB;
+        this.url = BB, this.options = OB, this.timing = GB, this.fetched = null, this.fetchAbort = null, this.scriptUrl = void 0, this.scriptUrl = BB
       }
       ready() {
         if (null === this.fetched) {
-          const HH = new AbortController;
-          this.fetchAbort = HH, this.fetched = this.fetchWithRetries(HH.signal).then((BH => (this.fetchAbort === HH && (this.fetchAbort = null), BH)))
+          const BB = new AbortController;
+          this.fetchAbort = BB, this.fetched = this.fetchWithRetries(BB.signal).then((OB => (this.fetchAbort === BB && (this.fetchAbort = null), OB)))
         }
         return this.fetched
       }
@@ -2820,56 +2820,56 @@ export const modules = {
       start() {
         return new Worker(this.scriptUrl, this.options)
       }
-      async fetchWithRetries(HH) {
-        for (let BH = 0;; BH++) {
-          const LH = new URL(this.url);
-          if (BH > 0 && LH.searchParams.set("cache-bust", `${Date.now()}-${BH}`), await this.fetchWhole(LH, HH)) return this.scriptUrl = LH, !0;
-          if (BH >= 3 || HH.aborted) return !1;
-          if (await this.timing.wait(500 * 2 ** BH), HH.aborted) return !1
+      async fetchWithRetries(BB) {
+        for (let OB = 0;; OB++) {
+          const GB = new URL(this.url);
+          if (OB > 0 && GB.searchParams.set("cache-bust", `${Date.now()}-${OB}`), await this.fetchWhole(GB, BB)) return this.scriptUrl = GB, !0;
+          if (OB >= 3 || BB.aborted) return !1;
+          if (await this.timing.wait(500 * 2 ** OB), BB.aborted) return !1
         }
       }
-      async fetchWhole(HH, BH) {
-        const LH = new AbortController;
-        let AH;
-        const rH = () => {
-            clearTimeout(AH), AH = setTimeout((() => {
-              LH.abort()
+      async fetchWhole(BB, OB) {
+        const GB = new AbortController;
+        let YB;
+        const DB = () => {
+            clearTimeout(YB), YB = setTimeout((() => {
+              GB.abort()
             }), this.timing.stallMs)
           },
-          SH = () => {
-            LH.abort()
+          QB = () => {
+            GB.abort()
           };
-        BH.addEventListener("abort", SH, {
+        OB.addEventListener("abort", QB, {
           once: !0
-        }), rH();
+        }), DB();
         try {
-          var hH;
-          const BH = await fetch(HH, {
-            signal: LH.signal
+          var oB;
+          const OB = await fetch(BB, {
+            signal: GB.signal
           });
-          if (!BH.ok) return !1;
-          const AH = null === (hH = BH.body) || void 0 === hH ? void 0 : hH.getReader();
-          if (!AH) return !1;
+          if (!OB.ok) return !1;
+          const YB = null === (oB = OB.body) || void 0 === oB ? void 0 : oB.getReader();
+          if (!YB) return !1;
           for (;;) {
             const {
-              done: HH
-            } = await AH.read();
-            if (HH) return !0;
-            rH()
+              done: BB
+            } = await YB.read();
+            if (BB) return !0;
+            DB()
           }
         } catch {
           return !1
         } finally {
-          clearTimeout(AH), BH.removeEventListener("abort", SH)
+          clearTimeout(YB), OB.removeEventListener("abort", QB)
         }
       }
     }
   },
-  37941: (HH, BH, LH) => {
-    LH.d(BH, {
-      d: () => AH
+  37753: (BB, OB, GB) => {
+    GB.d(OB, {
+      c: () => YB
     });
-    const AH = {
+    const YB = {
       "skyblock:forged:astral-astral-astral": {
         name: "Heart of the Cosmos",
         lore: "Three shards of the night sky, forged as one. The stars answer whoever holds it.",
@@ -3029,21 +3029,21 @@ export const modules = {
       }
     }
   },
-  39948: (HH, BH, LH) => {
-    LH.d(BH, {
-      c: () => AH,
-      d: () => rH
+  39741: (BB, OB, GB) => {
+    GB.d(OB, {
+      d: () => YB,
+      f: () => DB
     });
-    const AH = ["description", "label"];
+    const YB = ["description", "label"];
 
-    function rH(HH) {
-      const BH = HH.type;
+    function DB(BB) {
+      const OB = BB.type;
       return {
-        type: BH,
-        params: HH[BH]
+        type: OB,
+        params: BB[OB]
       }
     }
   }
 };
 Object.freeze(modules);
-for (const HH in modules) Object.freeze(modules[HH]);
+for (const BB in modules) Object.freeze(modules[BB]);

@@ -1,270 +1,270 @@
 export const id = 145;
 export const ids = [145, 152, 153];
 export const modules = {
-  41811: (HH, BH, LH) => {
-    LH.d(BH, {
-      c: () => XH,
-      installListedShaderPack: () => EH
+  41498: (BB, OB, GB) => {
+    GB.d(OB, {
+      b: () => PB,
+      installListedShaderPack: () => MB
     });
-    var AH = LH(7114),
-      rH = LH(5531),
-      SH = LH(1131),
-      hH = LH(7165),
-      tH = LH(5523),
-      zH = LH(7201),
-      CH = LH(7196);
-    async function EH(HH) {
-      const BH = await (0, hH.loadPageShaderPackCompiler)();
-      if (null === BH) return {
+    var YB = GB(7107),
+      DB = GB(5546),
+      QB = GB(1186),
+      oB = GB(7159),
+      jB = GB(5538),
+      yB = GB(7193),
+      JB = GB(7186);
+    async function MB(BB) {
+      const OB = await (0, oB.loadPageShaderPackCompiler)();
+      if (null === OB) return {
         kind: "failed",
         reason: "compiler"
       };
-      const LH = await XH(HH, BH);
-      return "failed" === LH.kind ? LH : await (0, zH.saveShaderPack)(LH.stored, BH) ? ((0, zH.markShaderPackChangePending)(), LH) : {
+      const GB = await PB(BB, OB);
+      return "failed" === GB.kind ? GB : await (0, yB.saveShaderPack)(GB.stored, OB) ? ((0, yB.markShaderPackChangePending)(), GB) : {
         kind: "failed",
         reason: "save"
       }
     }
-    async function XH(HH, BH) {
-      const LH = await async function(HH) {
+    async function PB(BB, OB) {
+      const GB = await async function(BB) {
         let {
-          packId: BH,
-          sourceHash: LH
-        } = HH;
+          packId: OB,
+          sourceHash: GB
+        } = BB;
         try {
-          const HH = await fetch(`${SH.clientSideServerUrls.s3Url}/${(0,AH.Q)(BH,LH)}`, {
+          const BB = await fetch(`${QB.clientSideServerUrls.s3Url}/${(0,YB.Q)(OB,GB)}`, {
             headers: {
               Accept: "application/json"
             }
           });
-          if (!HH.ok) return console.error(`Failed to download shader pack ${BH} (${HH.status})`), null;
-          const rH = await HH.json();
-          return "object" !== typeof rH || null === rH ? (console.error(`Shader pack ${BH}'s source isn't an object`), null) : rH
-        } catch (rH) {
-          return console.error(`Failed to download shader pack ${BH}`, rH), null
+          if (!BB.ok) return console.error(`Failed to download shader pack ${OB} (${BB.status})`), null;
+          const DB = await BB.json();
+          return "object" !== typeof DB || null === DB ? (console.error(`Shader pack ${OB}'s source isn't an object`), null) : DB
+        } catch (DB) {
+          return console.error(`Failed to download shader pack ${OB}`, DB), null
         }
-      }(HH);
-      if (null === LH) return {
+      }(BB);
+      if (null === GB) return {
         kind: "failed",
         reason: "download"
       };
-      if (!(0, tH.g)(LH.apiVersion)) return {
+      if (!(0, jB.g)(GB.apiVersion)) return {
         kind: "failed",
         reason: "apiVersion"
       };
-      const hH = (0, rH.q)(LH.files);
-      if ("string" === typeof hH) return console.error(`A listed shader pack breaks the pack rules: ${hH}`), {
+      const oB = (0, DB.v)(GB.files);
+      if ("string" === typeof oB) return console.error(`A listed shader pack breaks the pack rules: ${oB}`), {
         kind: "failed",
         reason: "invalid"
       };
-      const EH = await (0, CH.d)(BH, hH);
-      if (!1 === (null === EH || void 0 === EH ? void 0 : EH.ok)) return {
+      const MB = await (0, JB.f)(OB, oB);
+      if (!1 === (null === MB || void 0 === MB ? void 0 : MB.ok)) return {
         kind: "failed",
         reason: "errors"
       };
-      const XH = {
+      const PB = {
         manifest: {
-          apiVersion: LH.apiVersion,
-          name: HH.name,
-          author: HH.ownerName,
-          description: HH.description || null,
-          keepCircleShadows: !0 === LH.keepCircleShadows
+          apiVersion: GB.apiVersion,
+          name: BB.name,
+          author: BB.ownerName,
+          description: BB.description || null,
+          keepCircleShadows: !0 === GB.keepCircleShadows
         },
-        files: hH
+        files: oB
       };
       return {
         kind: "loaded",
-        stored: (0, zH.toStoredShaderPack)(XH, EH, {
-          packId: HH.packId,
-          sourceHash: HH.sourceHash
+        stored: (0, yB.toStoredShaderPack)(PB, MB, {
+          packId: BB.packId,
+          sourceHash: BB.sourceHash
         })
       }
     }
   },
-  44803: (HH, BH, LH) => {
-    LH.d(BH, {
-      followListingUpdates: () => GH
+  44453: (BB, OB, GB) => {
+    GB.d(OB, {
+      followListingUpdates: () => zB
     });
-    var AH = LH(186),
-      rH = LH(15),
-      SH = LH(1502),
-      hH = LH(1070),
-      tH = LH(7165),
-      zH = LH(5523),
-      CH = LH(41811),
-      EH = LH(7201);
-    const XH = ["apiVersion", "invalid", "errors"];
-    async function GH(HH, BH) {
-      const LH = await hH.userContextManager.getCurrentUserContext(),
-        GH = await SH.d.getShaderPackVersions(LH, [BH.packId]),
-        YH = function(HH, BH, LH) {
-          var AH;
-          if (void 0 === LH || "unlisted" === LH.status) return {
+    var YB = GB(204),
+      DB = GB(16),
+      QB = GB(1540),
+      oB = GB(1121),
+      jB = GB(7159),
+      yB = GB(5538),
+      JB = GB(41498),
+      MB = GB(7193);
+    const PB = ["apiVersion", "invalid", "errors"];
+    async function zB(BB, OB) {
+      const GB = await oB.userContextManager.getCurrentUserContext(),
+        zB = await QB.b.getShaderPackVersions(GB, [OB.packId]),
+        lB = function(BB, OB, GB) {
+          var YB;
+          if (void 0 === GB || "unlisted" === GB.status) return {
             kind: "none"
           };
-          if ("banned" === LH.status) return {
+          if ("banned" === GB.status) return {
             kind: "remove"
           };
-          if (!(0, zH.g)(LH.apiVersion)) return {
+          if (!(0, yB.g)(GB.apiVersion)) return {
             kind: "none"
           };
           const {
-            sourceHash: rH,
-            name: SH,
-            ownerName: hH,
-            description: tH
-          } = LH;
-          return rH !== BH.sourceHash && rH !== BH.rejectedSourceHash ? {
+            sourceHash: DB,
+            name: QB,
+            ownerName: oB,
+            description: jB
+          } = GB;
+          return DB !== OB.sourceHash && DB !== OB.rejectedSourceHash ? {
             kind: "update",
-            sourceHash: rH,
-            name: SH,
-            ownerName: hH,
-            description: tH
-          } : SH !== HH.manifest.name || hH !== HH.manifest.author || (tH || null) !== (null !== (AH = HH.manifest.description) && void 0 !== AH ? AH : null) ? {
+            sourceHash: DB,
+            name: QB,
+            ownerName: oB,
+            description: jB
+          } : QB !== BB.manifest.name || oB !== BB.manifest.author || (jB || null) !== (null !== (YB = BB.manifest.description) && void 0 !== YB ? YB : null) ? {
             kind: "rename",
-            name: SH,
-            ownerName: hH,
-            description: tH
+            name: QB,
+            ownerName: oB,
+            description: jB
           } : {
             kind: "none"
           }
-        }(HH, BH, (0, AH.d)(GH, BH.packId));
-      if ("update" === YH.kind && "landingPage" !== rH.c.get("gameState")) return !1;
-      const uH = "update" === YH.kind || "rename" === YH.kind,
-        QH = uH ? await (0, tH.loadPageShaderPackCompiler)() : null;
-      if (uH && null === QH) return console.warn(`Didn't follow shader pack ${BH.packId}'s listing: the shader pack compiler couldn't load`), !0;
-      const WH = await async function(HH, BH, LH, AH) {
-        switch (LH.kind) {
+        }(BB, OB, (0, YB.c)(zB, OB.packId));
+      if ("update" === lB.kind && "landingPage" !== DB.c.get("gameState")) return !1;
+      const pB = "update" === lB.kind || "rename" === lB.kind,
+        qB = pB ? await (0, jB.loadPageShaderPackCompiler)() : null;
+      if (pB && null === qB) return console.warn(`Didn't follow shader pack ${OB.packId}'s listing: the shader pack compiler couldn't load`), !0;
+      const ZB = await async function(BB, OB, GB, YB) {
+        switch (GB.kind) {
           case "none":
             return;
           case "remove":
             return null;
           case "rename":
             return {
-              ...HH, manifest: {
-                ...HH.manifest,
-                name: LH.name,
-                author: LH.ownerName,
-                description: LH.description || null
+              ...BB, manifest: {
+                ...BB.manifest,
+                name: GB.name,
+                author: GB.ownerName,
+                description: GB.description || null
               }
             };
           case "update": {
-            if (null === AH) return;
+            if (null === YB) return;
             const {
-              sourceHash: rH,
-              name: SH,
-              ownerName: hH,
-              description: tH
-            } = LH, zH = await (0, CH.c)({
-              packId: BH.packId,
-              sourceHash: rH,
-              name: SH,
-              ownerName: hH,
-              description: tH
-            }, AH);
-            if ("loaded" === zH.kind && null !== zH.stored.validation) return zH.stored;
-            const EH = "failed" === zH.kind ? zH.reason : "no WebGPU device could check it";
-            return console.warn(`Didn't update shader pack ${BH.packId}: ${EH}`), "failed" === zH.kind && XH.includes(zH.reason) ? {
-              ...HH,
+              sourceHash: DB,
+              name: QB,
+              ownerName: oB,
+              description: jB
+            } = GB, yB = await (0, JB.b)({
+              packId: OB.packId,
+              sourceHash: DB,
+              name: QB,
+              ownerName: oB,
+              description: jB
+            }, YB);
+            if ("loaded" === yB.kind && null !== yB.stored.validation) return yB.stored;
+            const MB = "failed" === yB.kind ? yB.reason : "no WebGPU device could check it";
+            return console.warn(`Didn't update shader pack ${OB.packId}: ${MB}`), "failed" === yB.kind && PB.includes(yB.reason) ? {
+              ...BB,
               listing: {
-                ...BH,
-                rejectedSourceHash: rH
+                ...OB,
+                rejectedSourceHash: DB
               }
             } : void 0
           }
         }
-      }(HH, BH, YH, QH);
-      return void 0 === WH || (await (0, EH.replaceShaderPack)(HH, WH, QH) ? (null !== WH && WH.files === HH.files || (0, EH.markShaderPackChangePending)(), !0) : (console.warn("Didn't apply the shader pack listing's update: the stored pack changed or couldn't be written"), !0))
+      }(BB, OB, lB, qB);
+      return void 0 === ZB || (await (0, MB.replaceShaderPack)(BB, ZB, qB) ? (null !== ZB && ZB.files === BB.files || (0, MB.markShaderPackChangePending)(), !0) : (console.warn("Didn't apply the shader pack listing's update: the stored pack changed or couldn't be written"), !0))
     }
   },
-  7201: (HH, BH, LH) => {
-    LH.r(BH), LH.d(BH, {
-      forgetShaderPackActiveHint: () => oH,
-      isOtherApiVersion: () => OH,
-      isShaderPackActive: () => PH,
-      isShaderPackChangePending: () => VH,
-      markShaderPackChangePending: () => UH,
-      pageShaderPackValidationVersion: () => bH,
-      reconcileStoredShaderPackHint: () => mH,
-      removeShaderPack: () => vH,
-      replaceShaderPack: () => WH,
-      saveShaderPack: () => QH,
-      shaderPackNeedsCheck: () => kH,
-      storedPackOutcome: () => TH,
-      storedShaderPackFiles: () => GH,
-      toStoredShaderPack: () => XH
+  7193: (BB, OB, GB) => {
+    GB.r(OB), GB.d(OB, {
+      forgetShaderPackActiveHint: () => KB,
+      isOtherApiVersion: () => UB,
+      isShaderPackActive: () => AB,
+      isShaderPackChangePending: () => nB,
+      markShaderPackChangePending: () => SB,
+      pageShaderPackValidationVersion: () => fB,
+      reconcileStoredShaderPackHint: () => dB,
+      removeShaderPack: () => WB,
+      replaceShaderPack: () => ZB,
+      saveShaderPack: () => qB,
+      shaderPackNeedsCheck: () => kB,
+      storedPackOutcome: () => VB,
+      storedShaderPackFiles: () => zB,
+      toStoredShaderPack: () => PB
     });
-    var AH = LH(5531),
-      rH = LH(5523),
-      SH = LH(30),
-      hH = LH(3831),
-      tH = LH(7209),
-      zH = LH(7179);
-    const CH = "shaderPackChangePending";
-    let EH = null;
+    var YB = GB(5546),
+      DB = GB(5538),
+      QB = GB(31),
+      oB = GB(3885),
+      jB = GB(7198),
+      yB = GB(7174);
+    const JB = "shaderPackChangePending";
+    let MB = null;
 
-    function XH(HH, BH, LH) {
+    function PB(BB, OB, GB) {
       return {
-        manifest: HH.manifest,
-        files: (0, AH.t)(HH.files),
-        validation: BH,
-        ...LH && {
-          listing: LH
+        manifest: BB.manifest,
+        files: (0, YB.y)(BB.files),
+        validation: OB,
+        ...GB && {
+          listing: GB
         }
       }
     }
 
-    function GH(HH) {
-      return Object.keys(HH.files).map((BH => ({
-        path: BH,
-        source: HH.files[BH]
+    function zB(BB) {
+      return Object.keys(BB.files).map((OB => ({
+        path: OB,
+        source: BB.files[OB]
       })))
     }
-    let YH = Promise.resolve();
+    let lB = Promise.resolve();
 
-    function uH(HH) {
-      const BH = YH.then(HH);
-      return YH = BH.catch((() => {})), BH
-    }
-
-    function QH(HH, BH) {
-      return uH((() => MH(HH, BH)))
+    function pB(BB) {
+      const OB = lB.then(BB);
+      return lB = OB.catch((() => {})), OB
     }
 
-    function WH(HH, BH, LH) {
-      return uH((async () => JSON.stringify(await (0, tH.e)()) === JSON.stringify(HH) && (null === BH ? (await xH(), !0) : MH(BH, LH))))
-    }
-    async function MH(HH, BH) {
-      const LH = await SH.c.setItem(tH.c, HH);
-      return LH && IH(HH, BH), LH
-    }
-    async function xH() {
-      await SH.c.removeItem(tH.c), SH.e.removeItem(hH.d)
+    function qB(BB, OB) {
+      return pB((() => NB(BB, OB)))
     }
 
-    function vH() {
-      return uH(xH)
+    function ZB(BB, OB, GB) {
+      return pB((async () => JSON.stringify(await (0, jB.e)()) === JSON.stringify(BB) && (null === OB ? (await RB(), !0) : NB(OB, GB))))
+    }
+    async function NB(BB, OB) {
+      const GB = await QB.d.setItem(jB.c, BB);
+      return GB && uB(BB, OB), GB
+    }
+    async function RB() {
+      await QB.d.removeItem(jB.c), QB.g.removeItem(oB.d)
     }
 
-    function PH(HH, BH) {
-      return "active" === TH(HH, BH).kind
+    function WB() {
+      return pB(RB)
     }
 
-    function TH(HH, BH) {
-      var LH;
-      return null === HH ? {
+    function AB(BB, OB) {
+      return "active" === VB(BB, OB).kind
+    }
+
+    function VB(BB, OB) {
+      var GB;
+      return null === BB ? {
         kind: "none",
         reason: "nothingStored"
-      } : OH(HH) ? {
+      } : UB(BB) ? {
         kind: "none",
         reason: "otherApiVersion"
-      } : !1 !== (null === (LH = HH.validation) || void 0 === LH ? void 0 : LH.ok) || HH.validation.fromRecheck ? null === BH ? {
+      } : !1 !== (null === (GB = BB.validation) || void 0 === GB ? void 0 : GB.ok) || BB.validation.fromRecheck ? null === OB ? {
         kind: "none",
         reason: "noCompiler"
-      } : kH(HH, BH) ? {
+      } : kB(BB, OB) ? {
         kind: "blocked",
         messageKey: "shaderPack:failedUnchecked"
-      } : HH.validation.ok ? {
+      } : BB.validation.ok ? {
         kind: "active"
       } : {
         kind: "blocked",
@@ -275,172 +275,172 @@ export const modules = {
       }
     }
 
-    function UH() {
-      SH.f.setItem(CH, performance.timeOrigin)
+    function SB() {
+      QB.i.setItem(JB, performance.timeOrigin)
     }
 
-    function VH() {
-      return SH.f.getItem(CH) === performance.timeOrigin
+    function nB() {
+      return QB.i.getItem(JB) === performance.timeOrigin
     }
 
-    function OH(HH) {
-      return !(0, rH.g)(HH.manifest.apiVersion)
+    function UB(BB) {
+      return !(0, DB.g)(BB.manifest.apiVersion)
     }
 
-    function bH(HH) {
-      return EH ??= HH.kN((0, zH.shaderPackTextures)()), EH
+    function fB(BB) {
+      return MB ??= BB.yI((0, yB.shaderPackTextures)()), MB
     }
 
-    function kH(HH, BH) {
-      var LH;
-      return (null === (LH = HH.validation) || void 0 === LH ? void 0 : LH.headerVersion) !== bH(BH)
+    function kB(BB, OB) {
+      var GB;
+      return (null === (GB = BB.validation) || void 0 === GB ? void 0 : GB.headerVersion) !== fB(OB)
     }
 
-    function mH(HH) {
-      return uH((async () => {
-        IH(await (0, tH.e)(!0), HH)
+    function dB(BB) {
+      return pB((async () => {
+        uB(await (0, jB.e)(!0), BB)
       }))
     }
 
-    function oH() {
-      return uH((async () => {
-        SH.e.removeItem(hH.d)
+    function KB() {
+      return pB((async () => {
+        QB.g.removeItem(oB.d)
       }))
     }
 
-    function IH(HH, BH) {
-      PH(HH, BH) ? SH.e.setItem(hH.d, !0) : SH.e.removeItem(hH.d)
+    function uB(BB, OB) {
+      AB(BB, OB) ? QB.g.setItem(oB.d, !0) : QB.g.removeItem(oB.d)
     }
   },
-  7179: (HH, BH, LH) => {
-    LH.r(BH), LH.d(BH, {
-      loadShaderPackTextures: () => hH,
-      shaderPackTextures: () => tH
+  7174: (BB, OB, GB) => {
+    GB.r(OB), GB.d(OB, {
+      loadShaderPackTextures: () => oB,
+      shaderPackTextures: () => jB
     });
-    var AH = LH(5531);
-    let rH = null,
-      SH = null;
+    var YB = GB(5546);
+    let DB = null,
+      QB = null;
 
-    function hH() {
-      return SH ??= Promise.all([LH.e(84), LH.e(206)]).then((() => LH(41802))).then((HH => {
+    function oB() {
+      return QB ??= Promise.all([GB.e(84), GB.e(206)]).then((() => GB(41493))).then((BB => {
         let {
-          FORMER_BLOCK_IMAGE_NAMES: BH,
-          textureNameToIndex: LH,
-          textureAnimationData: SH
-        } = HH;
-        return rH ??= (0, AH.f)(LH, SH, BH), rH
-      })), SH
+          FORMER_BLOCK_IMAGE_NAMES: OB,
+          textureNameToIndex: GB,
+          textureAnimationData: QB
+        } = BB;
+        return DB ??= (0, YB.o)(GB, QB, OB), DB
+      })), QB
     }
 
-    function tH() {
-      if (null === rH) throw new Error("Shader pack textures read before loadShaderPackTextures");
-      return rH
+    function jB() {
+      if (null === DB) throw new Error("Shader pack textures read before loadShaderPackTextures");
+      return DB
     }
   },
-  7196: (HH, BH, LH) => {
-    LH.d(BH, {
-      b: () => zH,
-      d: () => tH
+  7186: (BB, OB, GB) => {
+    GB.d(OB, {
+      d: () => yB,
+      f: () => jB
     });
-    var AH = LH(7201),
-      rH = LH(7179),
-      SH = LH(105);
-    const hH = 100;
-    async function tH(HH, BH) {
-      var LH;
-      let AH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null !== (LH = navigator.gpu) && void 0 !== LH ? LH : null;
-      const hH = HH.YBH(BH, (0, rH.shaderPackTextures)());
-      if (hH.errors.length > 0) return CH(HH, hH.errors, hH.offInStrict);
-      const tH = await async function(HH) {
-        if (!HH) return null;
+    var YB = GB(7193),
+      DB = GB(7174),
+      QB = GB(113);
+    const oB = 100;
+    async function jB(BB, OB) {
+      var GB;
+      let YB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null !== (GB = navigator.gpu) && void 0 !== GB ? GB : null;
+      const oB = BB.VOB(OB, (0, DB.shaderPackTextures)());
+      if (oB.errors.length > 0) return JB(BB, oB.errors, oB.offInStrict);
+      const jB = await async function(BB) {
+        if (!BB) return null;
         try {
-          const BH = await (0, SH.y)(HH);
-          return BH ? await BH.requestDevice() : null
-        } catch (BH) {
-          return console.error("Couldn't get a WebGPU device to validate the shader pack.", BH), null
+          const OB = await (0, QB.w)(BB);
+          return OB ? await OB.requestDevice() : null
+        } catch (OB) {
+          return console.error("Couldn't get a WebGPU device to validate the shader pack.", OB), null
         }
-      }(AH);
-      if (!tH) return null;
-      let zH = !1;
-      tH.lost.then((() => {
-        zH = !0
+      }(YB);
+      if (!jB) return null;
+      let yB = !1;
+      jB.lost.then((() => {
+        yB = !0
       }));
       try {
-        const BH = await Promise.all(hH.validationModules.map((BH => async function(HH, BH, LH) {
-          BH.pushErrorScope("validation");
-          const AH = BH.createShaderModule({
-              code: LH.code
+        const OB = await Promise.all(oB.validationModules.map((OB => async function(BB, OB, GB) {
+          OB.pushErrorScope("validation");
+          const YB = OB.createShaderModule({
+              code: GB.code
             }),
-            rH = BH.popErrorScope(),
+            DB = OB.popErrorScope(),
             {
-              messages: SH
-            } = await AH.getCompilationInfo(),
-            hH = SH.filter((HH => "error" === HH.type)).map((BH => HH.mapValidationMessage(LH, BH))),
-            tH = await rH;
-          tH && 0 === hH.length && hH.push({
+              messages: QB
+            } = await YB.getCompilationInfo(),
+            oB = QB.filter((BB => "error" === BB.type)).map((OB => BB.mapValidationMessage(GB, OB))),
+            jB = await DB;
+          jB && 0 === oB.length && oB.push({
             file: null,
             line: 0,
-            message: tH.message,
-            variants: [LH.key]
+            message: jB.message,
+            variants: [GB.key]
           });
-          return hH
-        }(HH, tH, BH))));
-        return zH ? null : CH(HH, HH.rrH(BH.flat()), hH.offInStrict)
-      } catch (EH) {
-        return console.error("Couldn't validate the shader pack on WebGPU.", EH), null
+          return oB
+        }(BB, jB, OB))));
+        return yB ? null : JB(BB, BB.lDB(OB.flat()), oB.offInStrict)
+      } catch (MB) {
+        return console.error("Couldn't validate the shader pack on WebGPU.", MB), null
       } finally {
-        tH.destroy()
+        jB.destroy()
       }
     }
-    async function zH(HH, BH) {
-      var LH;
-      if (!(0, AH.shaderPackNeedsCheck)(HH, BH) || (0, AH.isOtherApiVersion)(HH)) return HH;
-      const rH = await tH(BH, (0, AH.storedShaderPackFiles)(HH));
-      if (!rH) return HH;
-      const SH = !1 === (null === (LH = HH.validation) || void 0 === LH ? void 0 : LH.ok) && !HH.validation.fromRecheck,
-        hH = {
-          ...HH,
-          validation: SH ? rH : {
-            ...rH,
+    async function yB(BB, OB) {
+      var GB;
+      if (!(0, YB.shaderPackNeedsCheck)(BB, OB) || (0, YB.isOtherApiVersion)(BB)) return BB;
+      const DB = await jB(OB, (0, YB.storedShaderPackFiles)(BB));
+      if (!DB) return BB;
+      const QB = !1 === (null === (GB = BB.validation) || void 0 === GB ? void 0 : GB.ok) && !BB.validation.fromRecheck,
+        oB = {
+          ...BB,
+          validation: QB ? DB : {
+            ...DB,
             fromRecheck: !0
           }
         };
-      return await (0, AH.replaceShaderPack)(HH, hH, BH) || console.warn("Didn't save the shader pack's validation result: the stored pack changed or couldn't be written"), hH
+      return await (0, YB.replaceShaderPack)(BB, oB, OB) || console.warn("Didn't save the shader pack's validation result: the stored pack changed or couldn't be written"), oB
     }
 
-    function CH(HH, BH, LH) {
+    function JB(BB, OB, GB) {
       return {
-        headerVersion: (0, AH.pageShaderPackValidationVersion)(HH),
-        ok: 0 === BH.length,
-        errors: BH.slice(0, hH),
-        moreErrors: Math.max(0, BH.length - hH),
-        offInStrict: LH
+        headerVersion: (0, YB.pageShaderPackValidationVersion)(BB),
+        ok: 0 === OB.length,
+        errors: OB.slice(0, oB),
+        moreErrors: Math.max(0, OB.length - oB),
+        offInStrict: GB
       }
     }
   },
-  7114: (HH, BH, LH) => {
-    LH.d(BH, {
-      B: () => SH,
-      F: () => tH,
-      H: () => hH,
-      L: () => AH,
-      M: () => GH,
-      P: () => EH,
-      Q: () => PH,
-      R: () => XH,
-      V: () => CH,
-      d: () => uH,
-      g: () => WH,
-      i: () => QH,
-      m: () => YH,
-      o: () => vH,
-      s: () => UH,
-      v: () => zH,
-      w: () => rH,
-      x: () => TH
+  7107: (BB, OB, GB) => {
+    GB.d(OB, {
+      B: () => jB,
+      E: () => oB,
+      F: () => YB,
+      I: () => zB,
+      M: () => MB,
+      Q: () => AB,
+      U: () => PB,
+      X: () => JB,
+      e: () => pB,
+      h: () => ZB,
+      i: () => qB,
+      l: () => lB,
+      n: () => WB,
+      q: () => SB,
+      r: () => yB,
+      t: () => DB,
+      x: () => VB,
+      z: () => QB
     });
-    const AH = ["forest", "desert", "water", "night", "cave"];
-    const rH = {
+    const YB = ["forest", "desert", "water", "night", "cave"];
+    const DB = {
         full: {
           width: 3840,
           height: 2160
@@ -454,49 +454,49 @@ export const modules = {
           height: 360
         }
       },
-      SH = ["popular", "updated", "newest"],
-      hH = 3,
-      tH = 32,
-      zH = 300;
+      QB = ["popular", "updated", "newest"],
+      oB = 3,
+      jB = 32,
+      yB = 300;
 
-    function CH(HH, BH) {
-      return HH.slice(0, BH).replace(/[\uD800-\uDBFF]$/, "")
+    function JB(BB, OB) {
+      return BB.slice(0, OB).replace(/[\uD800-\uDBFF]$/, "")
     }
-    const EH = 64,
-      XH = 512,
-      GH = 18e5;
+    const MB = 64,
+      PB = 512,
+      zB = 18e5;
 
-    function YH(HH) {
-      const BH = HH,
-        LH = null === BH || void 0 === BH ? void 0 : BH.files;
-      return "number" === typeof(null === BH || void 0 === BH ? void 0 : BH.apiVersion) && "string" === typeof BH.name && (null === BH.author || "string" === typeof BH.author) && (void 0 === BH.keepCircleShadows || "boolean" === typeof BH.keepCircleShadows) && "object" === typeof LH && null !== LH && Object.values(LH).every((HH => "string" === typeof HH))
+    function lB(BB) {
+      const OB = BB,
+        GB = null === OB || void 0 === OB ? void 0 : OB.files;
+      return "number" === typeof(null === OB || void 0 === OB ? void 0 : OB.apiVersion) && "string" === typeof OB.name && (null === OB.author || "string" === typeof OB.author) && (void 0 === OB.keepCircleShadows || "boolean" === typeof OB.keepCircleShadows) && "object" === typeof GB && null !== GB && Object.values(GB).every((BB => "string" === typeof BB))
     }
-    const uH = "Bloxdhub",
-      QH = "https://bloxdhub.com/shaders";
+    const pB = "Bloxdhub",
+      qB = "https://bloxdhub.com/shaders";
 
-    function WH(HH) {
-      return `https://bloxdhub.com/workshop/${encodeURIComponent(HH)}`
+    function ZB(BB) {
+      return `https://bloxdhub.com/workshop/${encodeURIComponent(BB)}`
     }
-    const MH = "Screenshot generation failed.",
-      xH = "Its screenshots couldn't be generated:";
+    const NB = "Screenshot generation failed.",
+      RB = "Its screenshots couldn't be generated:";
 
-    function vH(HH) {
-      var BH;
-      return HH === MH || null !== (BH = null === HH || void 0 === HH ? void 0 : HH.startsWith(xH)) && void 0 !== BH && BH
-    }
-
-    function PH(HH, BH) {
-      return `shaderPacks/${HH}/${BH}.json`
+    function WB(BB) {
+      var OB;
+      return BB === NB || null !== (OB = null === BB || void 0 === BB ? void 0 : BB.startsWith(RB)) && void 0 !== OB && OB
     }
 
-    function TH(HH, BH, LH, AH) {
-      return null === BH.renderId ? UH(HH, BH.baselineVersion, LH, AH) : `${HH}/${function(HH,BH,LH,AH){return`shaderPacks/${HH}/${BH}/${LH}-${AH}.webp`}(BH.packId,BH.renderId,LH,AH)}`
+    function AB(BB, OB) {
+      return `shaderPacks/${BB}/${OB}.json`
     }
 
-    function UH(HH, BH, LH, AH) {
-      return `${HH}/${function(HH,BH,LH){return`shaderPacks/baseline/${HH}/${BH}-${LH}.webp`}(BH,LH,AH)}`
+    function VB(BB, OB, GB, YB) {
+      return null === OB.renderId ? SB(BB, OB.baselineVersion, GB, YB) : `${BB}/${function(BB,OB,GB,YB){return`shaderPacks/${BB}/${OB}/${GB}-${YB}.webp`}(OB.packId,OB.renderId,GB,YB)}`
+    }
+
+    function SB(BB, OB, GB, YB) {
+      return `${BB}/${function(BB,OB,GB){return`shaderPacks/baseline/${BB}/${OB}-${GB}.webp`}(OB,GB,YB)}`
     }
   }
 };
 Object.freeze(modules);
-for (const HH in modules) Object.freeze(modules[HH]);
+for (const BB in modules) Object.freeze(modules[BB]);

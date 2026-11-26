@@ -1,83 +1,83 @@
 export const id = 283;
 export const ids = [283];
 export const modules = {
-  41356: (HH, BH, LH) => {
-    LH.d(BH, {
-      e: () => GH,
-      f: () => XH,
-      j: () => zH,
-      m: () => YH,
-      p: () => CH,
-      q: () => tH,
-      r: () => EH
+  41067: (BB, OB, GB) => {
+    GB.d(OB, {
+      e: () => zB,
+      h: () => PB,
+      k: () => yB,
+      o: () => lB,
+      r: () => JB,
+      s: () => jB,
+      v: () => MB
     });
-    var AH = LH(39595),
-      rH = LH(41364);
+    var YB = GB(39366),
+      DB = GB(41071);
 
-    function SH(HH, BH, LH, AH) {
-      switch (BH) {
+    function QB(BB, OB, GB, YB) {
+      switch (OB) {
         case 5120: {
-          let BH = HH.getInt8(LH);
-          return AH && (BH = Math.max(BH / 127, -1)), BH
+          let OB = BB.getInt8(GB);
+          return YB && (OB = Math.max(OB / 127, -1)), OB
         }
         case 5121: {
-          let BH = HH.getUint8(LH);
-          return AH && (BH /= 255), BH
+          let OB = BB.getUint8(GB);
+          return YB && (OB /= 255), OB
         }
         case 5122: {
-          let BH = HH.getInt16(LH, !0);
-          return AH && (BH = Math.max(BH / 32767, -1)), BH
+          let OB = BB.getInt16(GB, !0);
+          return YB && (OB = Math.max(OB / 32767, -1)), OB
         }
         case 5123: {
-          let BH = HH.getUint16(LH, !0);
-          return AH && (BH /= 65535), BH
+          let OB = BB.getUint16(GB, !0);
+          return YB && (OB /= 65535), OB
         }
         case 5131:
-          return (0, rH.d)(HH.getUint16(LH, !0));
+          return (0, DB.e)(BB.getUint16(GB, !0));
         case 5124:
-          return HH.getInt32(LH, !0);
+          return BB.getInt32(GB, !0);
         case 5125:
-          return HH.getUint32(LH, !0);
+          return BB.getUint32(GB, !0);
         case 5126:
-          return HH.getFloat32(LH, !0);
+          return BB.getFloat32(GB, !0);
         default:
-          throw new Error(`Invalid component type ${BH}`)
+          throw new Error(`Invalid component type ${OB}`)
       }
     }
 
-    function hH(HH, BH, LH, AH, SH) {
-      switch (BH) {
+    function oB(BB, OB, GB, YB, QB) {
+      switch (OB) {
         case 5120:
-          AH && (SH = Math.round(127 * SH)), HH.setInt8(LH, SH);
+          YB && (QB = Math.round(127 * QB)), BB.setInt8(GB, QB);
           break;
         case 5121:
-          AH && (SH = Math.round(255 * SH)), HH.setUint8(LH, SH);
+          YB && (QB = Math.round(255 * QB)), BB.setUint8(GB, QB);
           break;
         case 5122:
-          AH && (SH = Math.round(32767 * SH)), HH.setInt16(LH, SH, !0);
+          YB && (QB = Math.round(32767 * QB)), BB.setInt16(GB, QB, !0);
           break;
         case 5123:
-          AH && (SH = Math.round(65535 * SH)), HH.setUint16(LH, SH, !0);
+          YB && (QB = Math.round(65535 * QB)), BB.setUint16(GB, QB, !0);
           break;
         case 5131:
-          HH.setUint16(LH, (0, rH.f)(SH), !0);
+          BB.setUint16(GB, (0, DB.l)(QB), !0);
           break;
         case 5124:
-          HH.setInt32(LH, SH, !0);
+          BB.setInt32(GB, QB, !0);
           break;
         case 5125:
-          HH.setUint32(LH, SH, !0);
+          BB.setUint32(GB, QB, !0);
           break;
         case 5126:
-          HH.setFloat32(LH, SH, !0);
+          BB.setFloat32(GB, QB, !0);
           break;
         default:
-          throw new Error(`Invalid component type ${BH}`)
+          throw new Error(`Invalid component type ${OB}`)
       }
     }
 
-    function tH(HH) {
-      switch (HH) {
+    function jB(BB) {
+      switch (BB) {
         case 5120:
         case 5121:
           return 1;
@@ -90,61 +90,61 @@ export const modules = {
         case 5126:
           return 4;
         default:
-          throw new Error(`Invalid type '${HH}'`)
+          throw new Error(`Invalid type '${BB}'`)
       }
     }
 
-    function zH(HH, BH, LH, AH, rH, zH, CH, EH) {
-      const XH = new Array(AH),
-        GH = new Array(AH);
-      if (HH instanceof Array) {
-        let rH = BH / 4;
-        const SH = LH / 4;
-        for (let BH = 0; BH < zH; BH += AH) {
-          for (let BH = 0; BH < AH; BH++) XH[BH] = GH[BH] = HH[rH + BH];
-          EH(GH, BH);
-          for (let BH = 0; BH < AH; BH++) XH[BH] !== GH[BH] && (HH[rH + BH] = GH[BH]);
-          rH += SH
+    function yB(BB, OB, GB, YB, DB, yB, JB, MB) {
+      const PB = new Array(YB),
+        zB = new Array(YB);
+      if (BB instanceof Array) {
+        let DB = OB / 4;
+        const QB = GB / 4;
+        for (let OB = 0; OB < yB; OB += YB) {
+          for (let OB = 0; OB < YB; OB++) PB[OB] = zB[OB] = BB[DB + OB];
+          MB(zB, OB);
+          for (let OB = 0; OB < YB; OB++) PB[OB] !== zB[OB] && (BB[DB + OB] = zB[OB]);
+          DB += QB
         }
       } else {
-        const YH = ArrayBuffer.isView(HH) ? new DataView(HH.buffer, HH.byteOffset, HH.byteLength) : new DataView(HH),
-          uH = tH(rH);
-        for (let HH = 0; HH < zH; HH += AH) {
-          for (let HH = 0, LH = BH; HH < AH; HH++, LH += uH) XH[HH] = GH[HH] = SH(YH, rH, LH, CH);
-          EH(GH, HH);
-          for (let HH = 0, LH = BH; HH < AH; HH++, LH += uH) XH[HH] !== GH[HH] && hH(YH, rH, LH, CH, GH[HH]);
-          BH += LH
+        const lB = ArrayBuffer.isView(BB) ? new DataView(BB.buffer, BB.byteOffset, BB.byteLength) : new DataView(BB),
+          pB = jB(DB);
+        for (let BB = 0; BB < yB; BB += YB) {
+          for (let BB = 0, GB = OB; BB < YB; BB++, GB += pB) PB[BB] = zB[BB] = QB(lB, DB, GB, JB);
+          MB(zB, BB);
+          for (let BB = 0, GB = OB; BB < YB; BB++, GB += pB) PB[BB] !== zB[BB] && oB(lB, DB, GB, JB, zB[BB]);
+          OB += GB
         }
       }
     }
 
-    function CH(HH, BH, LH, rH, SH, hH, CH, EH) {
-      const XH = BH * tH(LH),
-        GH = CH * BH;
-      if (5126 !== LH || SH !== XH) {
-        const AH = new Float32Array(GH);
-        return zH(HH, rH, SH, BH, LH, GH, hH, ((HH, LH) => {
-          for (let rH = 0; rH < BH; rH++) AH[LH + rH] = HH[rH]
-        })), AH
+    function JB(BB, OB, GB, DB, QB, oB, JB, MB) {
+      const PB = OB * jB(GB),
+        zB = JB * OB;
+      if (5126 !== GB || QB !== PB) {
+        const YB = new Float32Array(zB);
+        return yB(BB, DB, QB, OB, GB, zB, oB, ((BB, GB) => {
+          for (let DB = 0; DB < OB; DB++) YB[GB + DB] = BB[DB]
+        })), YB
       }
-      if (!(HH instanceof Array || HH instanceof Float32Array) || 0 !== rH || HH.length !== GH) {
-        if (HH instanceof Array) {
-          const BH = rH / 4;
-          return HH.slice(BH, BH + GH)
+      if (!(BB instanceof Array || BB instanceof Float32Array) || 0 !== DB || BB.length !== zB) {
+        if (BB instanceof Array) {
+          const OB = DB / 4;
+          return BB.slice(OB, OB + zB)
         }
-        if (ArrayBuffer.isView(HH)) {
-          const BH = HH.byteOffset + rH;
-          return 0 !== (3 & BH) && (AH.e.Warn("Float array must be aligned to 4-bytes border"), EH = !0), EH ? new Float32Array(HH.buffer.slice(BH, BH + GH * Float32Array.BYTES_PER_ELEMENT)) : new Float32Array(HH.buffer, BH, GH)
+        if (ArrayBuffer.isView(BB)) {
+          const OB = BB.byteOffset + DB;
+          return 0 !== (3 & OB) && (YB.b.Warn("Float array must be aligned to 4-bytes border"), MB = !0), MB ? new Float32Array(BB.buffer.slice(OB, OB + zB * Float32Array.BYTES_PER_ELEMENT)) : new Float32Array(BB.buffer, OB, zB)
         }
-        return new Float32Array(HH, rH, GH)
+        return new Float32Array(BB, DB, zB)
       }
-      return EH ? HH.slice() : HH
+      return MB ? BB.slice() : BB
     }
 
-    function EH(HH, BH, LH, rH, SH, hH, CH) {
-      const EH = tH(LH),
-        XH = function(HH) {
-          switch (HH) {
+    function MB(BB, OB, GB, DB, QB, oB, JB) {
+      const MB = jB(GB),
+        PB = function(BB) {
+          switch (BB) {
             case 5120:
               return Int8Array;
             case 5121:
@@ -161,120 +161,120 @@ export const modules = {
             case 5126:
               return Float32Array;
             default:
-              throw new Error(`Invalid component type '${HH}'`)
+              throw new Error(`Invalid component type '${BB}'`)
           }
-        }(LH),
-        GH = hH * BH;
-      if (Array.isArray(HH)) {
-        if (0 !== (3 & rH) || 0 !== (3 & SH)) throw new Error("byteOffset and byteStride must be a multiple of 4 for number[] data.");
-        const AH = rH / 4,
-          tH = SH / 4;
-        if (AH + (hH - 1) * tH + BH > HH.length) throw new Error("Last accessed index is out of bounds.");
-        if (tH < BH) throw new Error("Data stride cannot be smaller than the component size.");
-        if (tH !== BH) {
-          const AH = new XH(GH);
-          return zH(HH, rH, SH, BH, LH, GH, !1, ((HH, LH) => {
-            for (let rH = 0; rH < BH; rH++) AH[LH + rH] = HH[rH]
-          })), AH
+        }(GB),
+        zB = oB * OB;
+      if (Array.isArray(BB)) {
+        if (0 !== (3 & DB) || 0 !== (3 & QB)) throw new Error("byteOffset and byteStride must be a multiple of 4 for number[] data.");
+        const YB = DB / 4,
+          jB = QB / 4;
+        if (YB + (oB - 1) * jB + OB > BB.length) throw new Error("Last accessed index is out of bounds.");
+        if (jB < OB) throw new Error("Data stride cannot be smaller than the component size.");
+        if (jB !== OB) {
+          const YB = new PB(zB);
+          return yB(BB, DB, QB, OB, GB, zB, !1, ((BB, GB) => {
+            for (let DB = 0; DB < OB; DB++) YB[GB + DB] = BB[DB]
+          })), YB
         }
-        return new XH(HH.slice(AH, AH + GH))
+        return new PB(BB.slice(YB, YB + zB))
       }
-      let YH, uH = rH;
-      ArrayBuffer.isView(HH) ? (YH = HH.buffer, uH += HH.byteOffset) : YH = HH;
-      if (uH + (hH - 1) * SH + BH * EH > YH.byteLength) throw new Error("Last accessed byte is out of bounds.");
-      const QH = BH * EH;
-      if (SH < QH) throw new Error("Byte stride cannot be smaller than the component's byte size.");
-      if (SH !== QH) {
-        const HH = new XH(GH),
-          LH = new Uint8Array(YH, uH),
-          AH = new Uint8Array(HH.buffer),
-          rH = BH * EH;
-        for (let BH = 0, tH = 0, zH = 0; BH < hH; BH++, tH += SH, zH += rH) AH.set(LH.subarray(tH, tH + rH), zH);
-        return HH
+      let lB, pB = DB;
+      ArrayBuffer.isView(BB) ? (lB = BB.buffer, pB += BB.byteOffset) : lB = BB;
+      if (pB + (oB - 1) * QB + OB * MB > lB.byteLength) throw new Error("Last accessed byte is out of bounds.");
+      const qB = OB * MB;
+      if (QB < qB) throw new Error("Byte stride cannot be smaller than the component's byte size.");
+      if (QB !== qB) {
+        const BB = new PB(zB),
+          GB = new Uint8Array(lB, pB),
+          YB = new Uint8Array(BB.buffer),
+          DB = OB * MB;
+        for (let OB = 0, jB = 0, yB = 0; OB < oB; OB++, jB += QB, yB += DB) YB.set(GB.subarray(jB, jB + DB), yB);
+        return BB
       }
-      return 1 !== EH && 0 !== (uH & EH - 1) && (AH.e.Warn("Array must be aligned to border of element size. Data will be copied."), CH = !0), CH ? new XH(YH.slice(uH, uH + GH * EH)) : new XH(YH, uH, GH)
+      return 1 !== MB && 0 !== (pB & MB - 1) && (YB.b.Warn("Array must be aligned to border of element size. Data will be copied."), JB = !0), JB ? new PB(lB.slice(pB, pB + zB * MB)) : new PB(lB, pB, zB)
     }
 
-    function XH(HH, BH, LH, rH, SH, hH, CH, EH) {
-      const XH = BH * tH(LH),
-        GH = CH * BH;
-      if (EH.length !== GH) throw new Error("Output length is not valid");
-      if (5126 === LH && SH === XH)
-        if (HH instanceof Array) {
-          const BH = rH / 4;
-          EH.set(HH, BH)
-        } else if (ArrayBuffer.isView(HH)) {
-        const BH = HH.byteOffset + rH;
-        if (0 !== (3 & BH)) return AH.e.Warn("Float array must be aligned to 4-bytes border"), void EH.set(new Float32Array(HH.buffer.slice(BH, BH + GH * Float32Array.BYTES_PER_ELEMENT)));
-        const LH = new Float32Array(HH.buffer, BH, GH);
-        EH.set(LH)
+    function PB(BB, OB, GB, DB, QB, oB, JB, MB) {
+      const PB = OB * jB(GB),
+        zB = JB * OB;
+      if (MB.length !== zB) throw new Error("Output length is not valid");
+      if (5126 === GB && QB === PB)
+        if (BB instanceof Array) {
+          const OB = DB / 4;
+          MB.set(BB, OB)
+        } else if (ArrayBuffer.isView(BB)) {
+        const OB = BB.byteOffset + DB;
+        if (0 !== (3 & OB)) return YB.b.Warn("Float array must be aligned to 4-bytes border"), void MB.set(new Float32Array(BB.buffer.slice(OB, OB + zB * Float32Array.BYTES_PER_ELEMENT)));
+        const GB = new Float32Array(BB.buffer, OB, zB);
+        MB.set(GB)
       } else {
-        const BH = new Float32Array(HH, rH, GH);
-        EH.set(BH)
-      } else zH(HH, rH, SH, BH, LH, GH, hH, ((HH, LH) => {
-        for (let AH = 0; AH < BH; AH++) EH[LH + AH] = HH[AH]
+        const OB = new Float32Array(BB, DB, zB);
+        MB.set(OB)
+      } else yB(BB, DB, QB, OB, GB, zB, oB, ((BB, GB) => {
+        for (let YB = 0; YB < OB; YB++) MB[GB + YB] = BB[YB]
       }))
     }
 
-    function GH(HH, BH) {
-      let LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-        AH = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-      if (Array.isArray(HH)) {
-        for (let rH = 0; rH < BH; rH++)
-          if (HH[LH + rH] - AH > 65535) return !0;
+    function zB(BB, OB) {
+      let GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+        YB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+      if (Array.isArray(BB)) {
+        for (let DB = 0; DB < OB; DB++)
+          if (BB[GB + DB] - YB > 65535) return !0;
         return !1
       }
-      return 4 === HH.BYTES_PER_ELEMENT
+      return 4 === BB.BYTES_PER_ELEMENT
     }
 
-    function YH(HH) {
-      const BH = HH.buffer;
-      if (BH instanceof ArrayBuffer) return HH;
-      const LH = new ArrayBuffer(HH.byteLength);
-      return new Uint8Array(LH).set(new Uint8Array(BH, HH.byteOffset, HH.byteLength)), LH
+    function lB(BB) {
+      const OB = BB.buffer;
+      if (OB instanceof ArrayBuffer) return BB;
+      const GB = new ArrayBuffer(BB.byteLength);
+      return new Uint8Array(GB).set(new Uint8Array(OB, BB.byteOffset, BB.byteLength)), GB
     }
   },
-  41173: (HH, BH, LH) => {
-    LH.d(BH, {
-      b: () => OH,
-      d: () => UH,
-      j: () => VH,
-      g: () => lH,
-      n: () => KH
+  40896: (BB, OB, GB) => {
+    GB.d(OB, {
+      b: () => UB,
+      f: () => SB,
+      i: () => nB,
+      g: () => IB,
+      m: () => FB
     });
-    class AH {
+    class YB {
       constructor() {
         this.children = []
       }
-      isValid(HH) {
+      isValid(BB) {
         return !0
       }
-      process(HH, BH, LH) {
-        let AH = "";
+      process(BB, OB, GB) {
+        let YB = "";
         if (this.line) {
-          let LH = this.line;
-          const rH = BH.processor;
-          if (rH) {
-            rH.lineProcessor && (LH = rH.lineProcessor(LH, BH.isFragment, BH.processingContext));
-            const AH = BH.processor?.attributeKeywordName ?? "attribute",
-              SH = BH.isFragment && BH.processor?.varyingFragmentKeywordName ? BH.processor?.varyingFragmentKeywordName : !BH.isFragment && BH.processor?.varyingVertexKeywordName ? BH.processor?.varyingVertexKeywordName : "varying";
-            if (!BH.isFragment && rH.attributeProcessor && this.line.startsWith(AH)) LH = rH.attributeProcessor(this.line, HH, BH.processingContext);
-            else if (rH.varyingProcessor && (rH.varyingCheck?.(this.line, BH.isFragment) || !rH.varyingCheck && this.line.startsWith(SH))) LH = rH.varyingProcessor(this.line, BH.isFragment, HH, BH.processingContext);
-            else if (rH.uniformProcessor && rH.uniformRegexp && rH.uniformRegexp.test(this.line)) BH.lookForClosingBracketForUniformBuffer || (LH = rH.uniformProcessor(this.line, BH.isFragment, HH, BH.processingContext));
-            else if (rH.uniformBufferProcessor && rH.uniformBufferRegexp && rH.uniformBufferRegexp.test(this.line)) BH.lookForClosingBracketForUniformBuffer || (LH = rH.uniformBufferProcessor(this.line, BH.isFragment, BH.processingContext), BH.lookForClosingBracketForUniformBuffer = !0);
-            else if (rH.textureProcessor && rH.textureRegexp && rH.textureRegexp.test(this.line)) LH = rH.textureProcessor(this.line, BH.isFragment, HH, BH.processingContext);
-            else if ((rH.uniformProcessor || rH.uniformBufferProcessor) && this.line.startsWith("uniform") && !BH.lookForClosingBracketForUniformBuffer) {
-              /uniform\s+(?:(?:highp)?|(?:lowp)?)\s*(\S+)\s+(\S+)\s*;/.test(this.line) ? rH.uniformProcessor && (LH = rH.uniformProcessor(this.line, BH.isFragment, HH, BH.processingContext)) : rH.uniformBufferProcessor && (LH = rH.uniformBufferProcessor(this.line, BH.isFragment, BH.processingContext), BH.lookForClosingBracketForUniformBuffer = !0)
+          let GB = this.line;
+          const DB = OB.processor;
+          if (DB) {
+            DB.lineProcessor && (GB = DB.lineProcessor(GB, OB.isFragment, OB.processingContext));
+            const YB = OB.processor?.attributeKeywordName ?? "attribute",
+              QB = OB.isFragment && OB.processor?.varyingFragmentKeywordName ? OB.processor?.varyingFragmentKeywordName : !OB.isFragment && OB.processor?.varyingVertexKeywordName ? OB.processor?.varyingVertexKeywordName : "varying";
+            if (!OB.isFragment && DB.attributeProcessor && this.line.startsWith(YB)) GB = DB.attributeProcessor(this.line, BB, OB.processingContext);
+            else if (DB.varyingProcessor && (DB.varyingCheck?.(this.line, OB.isFragment) || !DB.varyingCheck && this.line.startsWith(QB))) GB = DB.varyingProcessor(this.line, OB.isFragment, BB, OB.processingContext);
+            else if (DB.uniformProcessor && DB.uniformRegexp && DB.uniformRegexp.test(this.line)) OB.lookForClosingBracketForUniformBuffer || (GB = DB.uniformProcessor(this.line, OB.isFragment, BB, OB.processingContext));
+            else if (DB.uniformBufferProcessor && DB.uniformBufferRegexp && DB.uniformBufferRegexp.test(this.line)) OB.lookForClosingBracketForUniformBuffer || (GB = DB.uniformBufferProcessor(this.line, OB.isFragment, OB.processingContext), OB.lookForClosingBracketForUniformBuffer = !0);
+            else if (DB.textureProcessor && DB.textureRegexp && DB.textureRegexp.test(this.line)) GB = DB.textureProcessor(this.line, OB.isFragment, BB, OB.processingContext);
+            else if ((DB.uniformProcessor || DB.uniformBufferProcessor) && this.line.startsWith("uniform") && !OB.lookForClosingBracketForUniformBuffer) {
+              /uniform\s+(?:(?:highp)?|(?:lowp)?)\s*(\S+)\s+(\S+)\s*;/.test(this.line) ? DB.uniformProcessor && (GB = DB.uniformProcessor(this.line, OB.isFragment, BB, OB.processingContext)) : DB.uniformBufferProcessor && (GB = DB.uniformBufferProcessor(this.line, OB.isFragment, OB.processingContext), OB.lookForClosingBracketForUniformBuffer = !0)
             }
-            BH.lookForClosingBracketForUniformBuffer && -1 !== this.line.indexOf("}") && (BH.lookForClosingBracketForUniformBuffer = !1, rH.endOfUniformBufferProcessor && (LH = rH.endOfUniformBufferProcessor(this.line, BH.isFragment, BH.processingContext)))
+            OB.lookForClosingBracketForUniformBuffer && -1 !== this.line.indexOf("}") && (OB.lookForClosingBracketForUniformBuffer = !1, DB.endOfUniformBufferProcessor && (GB = DB.endOfUniformBufferProcessor(this.line, OB.isFragment, OB.processingContext)))
           }
-          AH += LH + "\n"
+          YB += GB + "\n"
         }
-        for (const rH of this.children) AH += rH.process(HH, BH, LH);
-        return this.additionalDefineKey && (HH[this.additionalDefineKey] = this.additionalDefineValue || "true", LH[this.additionalDefineKey] = HH[this.additionalDefineKey]), AH
+        for (const DB of this.children) YB += DB.process(BB, OB, GB);
+        return this.additionalDefineKey && (BB[this.additionalDefineKey] = this.additionalDefineValue || "true", GB[this.additionalDefineKey] = BB[this.additionalDefineKey]), YB
       }
     }
-    class rH {
+    class DB {
       constructor() {
         this._lines = []
       }
@@ -284,273 +284,273 @@ export const modules = {
       get canRead() {
         return this.lineIndex < this._lines.length - 1
       }
-      set lines(HH) {
+      set lines(BB) {
         this._lines.length = 0;
-        for (const BH of HH) {
-          if (!BH || "\r" === BH) continue;
-          if ("#" === BH[0]) {
-            this._lines.push(BH);
+        for (const OB of BB) {
+          if (!OB || "\r" === OB) continue;
+          if ("#" === OB[0]) {
+            this._lines.push(OB);
             continue
           }
-          const HH = BH.trim();
-          if (!HH) continue;
-          if (HH.startsWith("//")) {
-            this._lines.push(BH);
+          const BB = OB.trim();
+          if (!BB) continue;
+          if (BB.startsWith("//")) {
+            this._lines.push(OB);
             continue
           }
-          const LH = HH.indexOf(";");
-          if (-1 === LH) this._lines.push(HH);
-          else if (LH === HH.length - 1) HH.length > 1 && this._lines.push(HH);
+          const GB = BB.indexOf(";");
+          if (-1 === GB) this._lines.push(BB);
+          else if (GB === BB.length - 1) BB.length > 1 && this._lines.push(BB);
           else {
-            const HH = BH.split(";");
-            for (let BH = 0; BH < HH.length; BH++) {
-              let LH = HH[BH];
-              LH && (LH = LH.trim(), LH && this._lines.push(LH + (BH !== HH.length - 1 ? ";" : "")))
+            const BB = OB.split(";");
+            for (let OB = 0; OB < BB.length; OB++) {
+              let GB = BB[OB];
+              GB && (GB = GB.trim(), GB && this._lines.push(GB + (OB !== BB.length - 1 ? ";" : "")))
             }
           }
         }
       }
     }
-    class SH extends AH {
-      process(HH, BH, LH) {
-        for (let AH = 0; AH < this.children.length; AH++) {
-          const rH = this.children[AH];
-          if (rH.isValid(HH)) return rH.process(HH, BH, LH)
+    class QB extends YB {
+      process(BB, OB, GB) {
+        for (let YB = 0; YB < this.children.length; YB++) {
+          const DB = this.children[YB];
+          if (DB.isValid(BB)) return DB.process(BB, OB, GB)
         }
         return ""
       }
     }
-    class hH extends AH {
-      isValid(HH) {
-        return this.testExpression.isTrue(HH)
+    class oB extends YB {
+      isValid(BB) {
+        return this.testExpression.isTrue(BB)
       }
     }
-    class tH {
-      isTrue(HH) {
+    class jB {
+      isTrue(BB) {
         return !0
       }
-      static postfixToInfix(HH) {
-        const BH = [];
-        for (const LH of HH)
-          if (void 0 === tH._OperatorPriority[LH]) BH.push(LH);
+      static postfixToInfix(BB) {
+        const OB = [];
+        for (const GB of BB)
+          if (void 0 === jB._OperatorPriority[GB]) OB.push(GB);
           else {
-            const HH = BH[BH.length - 1],
-              AH = BH[BH.length - 2];
-            BH.length -= 2, BH.push(`(${AH}${LH}${HH})`)
-          } return BH[BH.length - 1]
+            const BB = OB[OB.length - 1],
+              YB = OB[OB.length - 2];
+            OB.length -= 2, OB.push(`(${YB}${GB}${BB})`)
+          } return OB[OB.length - 1]
       }
-      static infixToPostfix(HH) {
-        const BH = tH._InfixToPostfixCache.get(HH);
-        if (BH) return BH.accessTime = Date.now(), BH.result;
-        if (!HH.includes("&&") && !HH.includes("||") && !HH.includes(")") && !HH.includes("(")) return [HH];
-        const LH = [];
-        let AH = -1;
-        const rH = () => {
-            EH = EH.trim(), "" !== EH && (LH.push(EH), EH = "")
+      static infixToPostfix(BB) {
+        const OB = jB._InfixToPostfixCache.get(BB);
+        if (OB) return OB.accessTime = Date.now(), OB.result;
+        if (!BB.includes("&&") && !BB.includes("||") && !BB.includes(")") && !BB.includes("(")) return [BB];
+        const GB = [];
+        let YB = -1;
+        const DB = () => {
+            MB = MB.trim(), "" !== MB && (GB.push(MB), MB = "")
           },
-          SH = HH => {
-            AH < tH._Stack.length - 1 && (tH._Stack[++AH] = HH)
+          QB = BB => {
+            YB < jB._Stack.length - 1 && (jB._Stack[++YB] = BB)
           },
-          hH = () => tH._Stack[AH],
-          zH = () => -1 === AH ? "!!INVALID EXPRESSION!!" : tH._Stack[AH--];
-        let CH = 0,
-          EH = "";
-        for (; CH < HH.length;) {
-          const BH = HH.charAt(CH),
-            XH = CH < HH.length - 1 ? HH.substring(CH, 2 + CH) : "";
-          if ("(" === BH) EH = "", SH(BH);
-          else if (")" === BH) {
-            for (rH(); - 1 !== AH && "(" !== hH();) LH.push(zH());
-            zH()
-          } else if (tH._OperatorPriority[XH] > 1) {
-            for (rH(); - 1 !== AH && tH._OperatorPriority[hH()] >= tH._OperatorPriority[XH];) LH.push(zH());
-            SH(XH), CH++
-          } else EH += BH;
-          CH++
+          oB = () => jB._Stack[YB],
+          yB = () => -1 === YB ? "!!INVALID EXPRESSION!!" : jB._Stack[YB--];
+        let JB = 0,
+          MB = "";
+        for (; JB < BB.length;) {
+          const OB = BB.charAt(JB),
+            PB = JB < BB.length - 1 ? BB.substring(JB, 2 + JB) : "";
+          if ("(" === OB) MB = "", QB(OB);
+          else if (")" === OB) {
+            for (DB(); - 1 !== YB && "(" !== oB();) GB.push(yB());
+            yB()
+          } else if (jB._OperatorPriority[PB] > 1) {
+            for (DB(); - 1 !== YB && jB._OperatorPriority[oB()] >= jB._OperatorPriority[PB];) GB.push(yB());
+            QB(PB), JB++
+          } else MB += OB;
+          JB++
         }
-        for (rH(); - 1 !== AH;) "(" === hH() ? zH() : LH.push(zH());
-        return tH._InfixToPostfixCache.size >= tH.InfixToPostfixCacheLimitSize && tH.ClearCache(), tH._InfixToPostfixCache.set(HH, {
-          result: LH,
+        for (DB(); - 1 !== YB;) "(" === oB() ? yB() : GB.push(yB());
+        return jB._InfixToPostfixCache.size >= jB.InfixToPostfixCacheLimitSize && jB.ClearCache(), jB._InfixToPostfixCache.set(BB, {
+          result: GB,
           accessTime: Date.now()
-        }), LH
+        }), GB
       }
       static ClearCache() {
-        const HH = Array.from(tH._InfixToPostfixCache.entries()).sort(((HH, BH) => HH[1].accessTime - BH[1].accessTime));
-        for (let BH = 0; BH < tH.InfixToPostfixCacheCleanupSize; BH++) tH._InfixToPostfixCache.delete(HH[BH][0])
+        const BB = Array.from(jB._InfixToPostfixCache.entries()).sort(((BB, OB) => BB[1].accessTime - OB[1].accessTime));
+        for (let OB = 0; OB < jB.InfixToPostfixCacheCleanupSize; OB++) jB._InfixToPostfixCache.delete(BB[OB][0])
       }
     }
-    tH.InfixToPostfixCacheLimitSize = 5e4, tH.InfixToPostfixCacheCleanupSize = 25e3, tH._InfixToPostfixCache = new Map, tH._OperatorPriority = {
+    jB.InfixToPostfixCacheLimitSize = 5e4, jB.InfixToPostfixCacheCleanupSize = 25e3, jB._InfixToPostfixCache = new Map, jB._OperatorPriority = {
       ")": 0,
       "(": 1,
       "||": 2,
       "&&": 3
-    }, tH._Stack = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""];
-    class zH extends tH {
-      constructor(HH) {
-        let BH = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        super(), this.define = HH, this.not = BH
+    }, jB._Stack = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""];
+    class yB extends jB {
+      constructor(BB) {
+        let OB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        super(), this.define = BB, this.not = OB
       }
-      isTrue(HH) {
-        let BH = void 0 !== HH[this.define];
-        return this.not && (BH = !BH), BH
-      }
-    }
-    class CH extends tH {
-      isTrue(HH) {
-        return this.leftOperand.isTrue(HH) || this.rightOperand.isTrue(HH)
+      isTrue(BB) {
+        let OB = void 0 !== BB[this.define];
+        return this.not && (OB = !OB), OB
       }
     }
-    class EH extends tH {
-      isTrue(HH) {
-        return this.leftOperand.isTrue(HH) && this.rightOperand.isTrue(HH)
+    class JB extends jB {
+      isTrue(BB) {
+        return this.leftOperand.isTrue(BB) || this.rightOperand.isTrue(BB)
       }
     }
-    class XH extends tH {
-      constructor(HH, BH, LH) {
-        super(), this.define = HH, this.operand = BH, this.testValue = LH
+    class MB extends jB {
+      isTrue(BB) {
+        return this.leftOperand.isTrue(BB) && this.rightOperand.isTrue(BB)
+      }
+    }
+    class PB extends jB {
+      constructor(BB, OB, GB) {
+        super(), this.define = BB, this.operand = OB, this.testValue = GB
       }
       toString() {
         return `${this.define} ${this.operand} ${this.testValue}`
       }
-      isTrue(HH) {
-        let BH = !1;
-        const LH = parseInt(void 0 != HH[this.define] ? HH[this.define] : this.define),
-          AH = parseInt(void 0 != HH[this.testValue] ? HH[this.testValue] : this.testValue);
-        if (isNaN(LH) || isNaN(AH)) return !1;
+      isTrue(BB) {
+        let OB = !1;
+        const GB = parseInt(void 0 != BB[this.define] ? BB[this.define] : this.define),
+          YB = parseInt(void 0 != BB[this.testValue] ? BB[this.testValue] : this.testValue);
+        if (isNaN(GB) || isNaN(YB)) return !1;
         switch (this.operand) {
           case ">":
-            BH = LH > AH;
+            OB = GB > YB;
             break;
           case "<":
-            BH = LH < AH;
+            OB = GB < YB;
             break;
           case "<=":
-            BH = LH <= AH;
+            OB = GB <= YB;
             break;
           case ">=":
-            BH = LH >= AH;
+            OB = GB >= YB;
             break;
           case "==":
-            BH = LH === AH;
+            OB = GB === YB;
             break;
           case "!=":
-            BH = LH !== AH
+            OB = GB !== YB
         }
-        return BH
+        return OB
       }
     }
-    var GH = LH(41169),
-      YH = LH(41164);
-    const uH = /defined\s*?\((.+?)\)/g,
-      QH = /defined\s*?\[(.+?)\]/g,
-      WH = /#include\s?<(.+)>(\((.*)\))*(\[(.*)\])*/g,
-      MH = /__decl__/,
-      xH = /light\{X\}.(\w*)/g,
-      vH = /\{X\}/g,
-      PH = [],
-      TH = /(#ifdef)|(#else)|(#elif)|(#endif)|(#ifndef)|(#if)/;
+    var zB = GB(40890),
+      lB = GB(40883);
+    const pB = /defined\s*?\((.+?)\)/g,
+      qB = /defined\s*?\[(.+?)\]/g,
+      ZB = /#include\s?<(.+)>(\((.*)\))*(\[(.*)\])*/g,
+      NB = /__decl__/,
+      RB = /light\{X\}.(\w*)/g,
+      WB = /\{X\}/g,
+      AB = [],
+      VB = /(#ifdef)|(#else)|(#elif)|(#endif)|(#ifndef)|(#if)/;
 
-    function UH(HH) {
-      HH.processor && HH.processor.initializeShaders && HH.processor.initializeShaders(HH.processingContext)
+    function SB(BB) {
+      BB.processor && BB.processor.initializeShaders && BB.processor.initializeShaders(BB.processingContext)
     }
 
-    function VH(HH, BH, LH, AH) {
-      BH.processor?.preProcessShaderCode && (HH = BH.processor.preProcessShaderCode(HH, BH.isFragment)), lH(HH, BH, (HH => {
-        BH.processCodeAfterIncludes && (HH = BH.processCodeAfterIncludes(BH.isFragment ? "fragment" : "vertex", HH, BH.defines));
-        const rH = function(HH, BH, LH) {
-          let AH = function(HH, BH) {
-            if (BH.processor?.noPrecision) return HH;
-            const LH = BH.shouldUseHighPrecisionShader; - 1 === HH.indexOf("precision highp float") ? HH = LH ? "precision highp float;\n" + HH : "precision mediump float;\n" + HH : LH || (HH = HH.replace("precision highp float", "precision mediump float"));
-            return HH
-          }(HH, BH);
-          if (!BH.processor) return AH;
-          if (0 === BH.processor.shaderLanguage && -1 !== AH.indexOf("#version 3") && (AH = AH.replace("#version 300 es", ""), !BH.processor.parseGLES3)) return AH;
-          const rH = BH.defines,
-            SH = fH(BH, LH);
-          BH.processor.preProcessor && (AH = BH.processor.preProcessor(AH, rH, SH, BH.isFragment, BH.processingContext));
-          const hH = {};
-          AH = IH(AH, SH, BH, hH), BH.processor.postProcessor && (AH = BH.processor.postProcessor(AH, rH, BH.isFragment, BH.processingContext, LH ? {
-            drawBuffersExtensionDisabled: !LH.getCaps().drawBuffersExtension
-          } : {}, SH, hH));
-          LH?._features.needShaderCodeInlining && (AH = LH.inlineShaderCode(AH));
-          return AH
-        }(HH, BH, AH);
-        LH(rH, HH)
+    function nB(BB, OB, GB, YB) {
+      OB.processor?.preProcessShaderCode && (BB = OB.processor.preProcessShaderCode(BB, OB.isFragment)), IB(BB, OB, (BB => {
+        OB.processCodeAfterIncludes && (BB = OB.processCodeAfterIncludes(OB.isFragment ? "fragment" : "vertex", BB, OB.defines));
+        const DB = function(BB, OB, GB) {
+          let YB = function(BB, OB) {
+            if (OB.processor?.noPrecision) return BB;
+            const GB = OB.shouldUseHighPrecisionShader; - 1 === BB.indexOf("precision highp float") ? BB = GB ? "precision highp float;\n" + BB : "precision mediump float;\n" + BB : GB || (BB = BB.replace("precision highp float", "precision mediump float"));
+            return BB
+          }(BB, OB);
+          if (!OB.processor) return YB;
+          if (0 === OB.processor.shaderLanguage && -1 !== YB.indexOf("#version 3") && (YB = YB.replace("#version 300 es", ""), !OB.processor.parseGLES3)) return YB;
+          const DB = OB.defines,
+            QB = mB(OB, GB);
+          OB.processor.preProcessor && (YB = OB.processor.preProcessor(YB, DB, QB, OB.isFragment, OB.processingContext));
+          const oB = {};
+          YB = uB(YB, QB, OB, oB), OB.processor.postProcessor && (YB = OB.processor.postProcessor(YB, DB, OB.isFragment, OB.processingContext, GB ? {
+            drawBuffersExtensionDisabled: !GB.getCaps().drawBuffersExtension
+          } : {}, QB, oB));
+          GB?._features.needShaderCodeInlining && (YB = GB.inlineShaderCode(YB));
+          return YB
+        }(BB, OB, YB);
+        GB(DB, BB)
       }))
     }
 
-    function OH(HH, BH, LH) {
-      return LH.processor && LH.processor.finalizeShaders ? LH.processor.finalizeShaders(HH, BH, LH.processingContext) : {
-        vertexCode: HH,
-        fragmentCode: BH
+    function UB(BB, OB, GB) {
+      return GB.processor && GB.processor.finalizeShaders ? GB.processor.finalizeShaders(BB, OB, GB.processingContext) : {
+        vertexCode: BB,
+        fragmentCode: OB
       }
     }
 
-    function bH(HH) {
-      const BH = /defined\((.+)\)/.exec(HH);
-      if (BH && BH.length) return new zH(BH[1].trim(), "!" === HH[0]);
-      const LH = ["==", "!=", ">=", "<=", "<", ">"];
-      let AH = "",
-        rH = 0;
-      for (AH of LH)
-        if (rH = HH.indexOf(AH), rH > -1) break;
-      if (-1 === rH) return new zH(HH);
-      const SH = HH.substring(0, rH).trim(),
-        hH = HH.substring(rH + AH.length).trim();
-      return new XH(SH, AH, hH)
+    function fB(BB) {
+      const OB = /defined\((.+)\)/.exec(BB);
+      if (OB && OB.length) return new yB(OB[1].trim(), "!" === BB[0]);
+      const GB = ["==", "!=", ">=", "<=", "<", ">"];
+      let YB = "",
+        DB = 0;
+      for (YB of GB)
+        if (DB = BB.indexOf(YB), DB > -1) break;
+      if (-1 === DB) return new yB(BB);
+      const QB = BB.substring(0, DB).trim(),
+        oB = BB.substring(DB + YB.length).trim();
+      return new PB(QB, YB, oB)
     }
 
-    function kH(HH, BH) {
-      const LH = new hH,
-        AH = HH.substring(0, BH);
-      let rH = HH.substring(BH);
-      return rH = rH.substring(0, (rH.indexOf("//") + 1 || rH.length + 1) - 1).trim(), LH.testExpression = "#ifdef" === AH ? new zH(rH) : "#ifndef" === AH ? new zH(rH, !0) : function(HH) {
-        HH = HH.replace(uH, "defined[$1]");
-        const BH = tH.infixToPostfix(HH),
-          LH = [];
-        for (const rH of BH)
-          if ("||" !== rH && "&&" !== rH) LH.push(rH);
-          else if (LH.length >= 2) {
-          let HH = LH[LH.length - 1],
-            BH = LH[LH.length - 2];
-          LH.length -= 2;
-          const AH = "&&" == rH ? new EH : new CH;
-          "string" === typeof HH && (HH = HH.replace(QH, "defined($1)")), "string" === typeof BH && (BH = BH.replace(QH, "defined($1)")), AH.leftOperand = "string" === typeof BH ? bH(BH) : BH, AH.rightOperand = "string" === typeof HH ? bH(HH) : HH, LH.push(AH)
+    function kB(BB, OB) {
+      const GB = new oB,
+        YB = BB.substring(0, OB);
+      let DB = BB.substring(OB);
+      return DB = DB.substring(0, (DB.indexOf("//") + 1 || DB.length + 1) - 1).trim(), GB.testExpression = "#ifdef" === YB ? new yB(DB) : "#ifndef" === YB ? new yB(DB, !0) : function(BB) {
+        BB = BB.replace(pB, "defined[$1]");
+        const OB = jB.infixToPostfix(BB),
+          GB = [];
+        for (const DB of OB)
+          if ("||" !== DB && "&&" !== DB) GB.push(DB);
+          else if (GB.length >= 2) {
+          let BB = GB[GB.length - 1],
+            OB = GB[GB.length - 2];
+          GB.length -= 2;
+          const YB = "&&" == DB ? new MB : new JB;
+          "string" === typeof BB && (BB = BB.replace(qB, "defined($1)")), "string" === typeof OB && (OB = OB.replace(qB, "defined($1)")), YB.leftOperand = "string" === typeof OB ? fB(OB) : OB, YB.rightOperand = "string" === typeof BB ? fB(BB) : BB, GB.push(YB)
         }
-        let AH = LH[LH.length - 1];
-        return "string" === typeof AH && (AH = AH.replace(QH, "defined($1)")), "string" === typeof AH ? bH(AH) : AH
-      }(rH), LH
+        let YB = GB[GB.length - 1];
+        return "string" === typeof YB && (YB = YB.replace(qB, "defined($1)")), "string" === typeof YB ? fB(YB) : YB
+      }(DB), GB
     }
 
-    function mH(HH, BH, LH, rH) {
-      let SH;
-      for (; oH(HH, LH, rH);) {
-        SH = HH.currentLine;
-        const hH = SH.substring(0, 5).toLowerCase();
-        if ("#else" === hH) {
-          const LH = new AH;
-          return BH.children.push(LH), void oH(HH, LH, rH)
+    function dB(BB, OB, GB, DB) {
+      let QB;
+      for (; KB(BB, GB, DB);) {
+        QB = BB.currentLine;
+        const oB = QB.substring(0, 5).toLowerCase();
+        if ("#else" === oB) {
+          const GB = new YB;
+          return OB.children.push(GB), void KB(BB, GB, DB)
         }
-        if ("#elif" === hH) {
-          const HH = kH(SH, 5);
-          BH.children.push(HH), LH = HH
+        if ("#elif" === oB) {
+          const BB = kB(QB, 5);
+          OB.children.push(BB), GB = BB
         }
       }
     }
 
-    function oH(HH, BH, LH) {
-      for (; HH.canRead;) {
-        HH.lineIndex++;
-        const rH = HH.currentLine;
-        if (rH.indexOf("#") >= 0) {
-          const AH = TH.exec(rH);
-          if (AH && AH.length) {
-            switch (AH[0]) {
+    function KB(BB, OB, GB) {
+      for (; BB.canRead;) {
+        BB.lineIndex++;
+        const DB = BB.currentLine;
+        if (DB.indexOf("#") >= 0) {
+          const YB = VB.exec(DB);
+          if (YB && YB.length) {
+            switch (YB[0]) {
               case "#ifdef": {
-                const AH = new SH;
-                BH.children.push(AH);
-                const hH = kH(rH, 6);
-                AH.children.push(hH), mH(HH, AH, hH, LH);
+                const YB = new QB;
+                OB.children.push(YB);
+                const oB = kB(DB, 6);
+                YB.children.push(oB), dB(BB, YB, oB, GB);
                 break
               }
               case "#else":
@@ -559,155 +559,155 @@ export const modules = {
               case "#endif":
                 return !1;
               case "#ifndef": {
-                const AH = new SH;
-                BH.children.push(AH);
-                const hH = kH(rH, 7);
-                AH.children.push(hH), mH(HH, AH, hH, LH);
+                const YB = new QB;
+                OB.children.push(YB);
+                const oB = kB(DB, 7);
+                YB.children.push(oB), dB(BB, YB, oB, GB);
                 break
               }
               case "#if": {
-                const AH = new SH,
-                  hH = kH(rH, 3);
-                BH.children.push(AH), AH.children.push(hH), mH(HH, AH, hH, LH);
+                const YB = new QB,
+                  oB = kB(DB, 3);
+                OB.children.push(YB), YB.children.push(oB), dB(BB, YB, oB, GB);
                 break
               }
             }
             continue
           }
         }
-        const hH = new AH;
-        if (hH.line = rH, BH.children.push(hH), "#" === rH[0] && "d" === rH[1]) {
-          const HH = rH.replace(";", "").split(" ");
-          hH.additionalDefineKey = HH[1], 3 === HH.length && (hH.additionalDefineValue = HH[2])
+        const oB = new YB;
+        if (oB.line = DB, OB.children.push(oB), "#" === DB[0] && "d" === DB[1]) {
+          const BB = DB.replace(";", "").split(" ");
+          oB.additionalDefineKey = BB[1], 3 === BB.length && (oB.additionalDefineValue = BB[2])
         }
       }
       return !1
     }
 
-    function IH(HH, BH, LH, SH) {
-      const hH = new AH,
-        tH = new rH;
-      return tH.lineIndex = -1, tH.lines = HH.split("\n"), oH(tH, hH, SH), hH.process(BH, LH, SH)
+    function uB(BB, OB, GB, QB) {
+      const oB = new YB,
+        jB = new DB;
+      return jB.lineIndex = -1, jB.lines = BB.split("\n"), KB(jB, oB, QB), oB.process(OB, GB, QB)
     }
 
-    function fH(HH, BH) {
-      const LH = HH.defines,
-        AH = {};
-      for (const rH of LH) {
-        const HH = rH.replace("#define", "").replace(";", "").trim().split(" ");
-        AH[HH[0]] = HH.length > 1 ? HH[1] : ""
+    function mB(BB, OB) {
+      const GB = BB.defines,
+        YB = {};
+      for (const DB of GB) {
+        const BB = DB.replace("#define", "").replace(";", "").trim().split(" ");
+        YB[BB[0]] = BB.length > 1 ? BB[1] : ""
       }
-      return 0 === HH.processor?.shaderLanguage && (AH.GL_ES = "true"), AH.__VERSION__ = HH.version, AH[HH.platformName] = "true", (0, YH.f)(AH, BH?.isNDCHalfZRange, BH?.WrH, BH?.useExactSrgbConversions), AH
+      return 0 === BB.processor?.shaderLanguage && (YB.GL_ES = "true"), YB.__VERSION__ = BB.version, YB[BB.platformName] = "true", (0, lB.h)(YB, OB?.isNDCHalfZRange, OB?.fDB, OB?.useExactSrgbConversions), YB
     }
 
-    function lH(HH, BH, LH) {
-      let AH;
-      for (PH.length = 0; null !== (AH = WH.exec(HH));) PH.push(AH);
-      let rH = [HH],
-        SH = !1;
-      for (const tH of PH) {
-        let HH = tH[1];
-        if (-1 !== HH.indexOf("__decl__") && (HH = HH.replace(MH, ""), BH.supportsUniformBuffers && (HH = HH.replace("Vertex", "Ubo").replace("Fragment", "Ubo")), HH += "Declaration"), !BH.includesShadersStore[HH]) {
-          const AH = BH.shadersRepository + "ShadersInclude/" + HH + ".fx";
-          return void KH.loadFile(AH, (AH => {
-            BH.includesShadersStore[HH] = AH, lH(rH.join(""), BH, LH)
+    function IB(BB, OB, GB) {
+      let YB;
+      for (AB.length = 0; null !== (YB = ZB.exec(BB));) AB.push(YB);
+      let DB = [BB],
+        QB = !1;
+      for (const jB of AB) {
+        let BB = jB[1];
+        if (-1 !== BB.indexOf("__decl__") && (BB = BB.replace(NB, ""), OB.supportsUniformBuffers && (BB = BB.replace("Vertex", "Ubo").replace("Fragment", "Ubo")), BB += "Declaration"), !OB.includesShadersStore[BB]) {
+          const YB = OB.shadersRepository + "ShadersInclude/" + BB + ".fx";
+          return void FB.loadFile(YB, (YB => {
+            OB.includesShadersStore[BB] = YB, IB(DB.join(""), OB, GB)
           }))
         } {
-          let LH = BH.includesShadersStore[HH];
-          if (tH[2]) {
-            const HH = tH[3].split(",");
-            for (let BH = 0; BH < HH.length; BH += 2) {
-              const AH = new RegExp(HH[BH], "g"),
-                rH = HH[BH + 1];
-              LH = LH.replace(AH, rH)
+          let GB = OB.includesShadersStore[BB];
+          if (jB[2]) {
+            const BB = jB[3].split(",");
+            for (let OB = 0; OB < BB.length; OB += 2) {
+              const YB = new RegExp(BB[OB], "g"),
+                DB = BB[OB + 1];
+              GB = GB.replace(YB, DB)
             }
           }
-          if (tH[4]) {
-            const HH = tH[5];
-            if (-1 !== HH.indexOf("..")) {
-              const AH = HH.split(".."),
-                rH = parseInt(AH[0]);
-              let SH = parseInt(AH[1]),
-                hH = LH.slice(0);
-              LH = "", isNaN(SH) && (SH = BH.indexParameters[AH[1]]);
-              for (let HH = rH; HH < SH; HH++) BH.supportsUniformBuffers || (hH = hH.replace(xH, ((HH, BH) => BH + "{X}"))), LH += hH.replace(vH, HH.toString()) + "\n"
-            } else BH.supportsUniformBuffers || (LH = LH.replace(xH, ((HH, BH) => BH + "{X}"))), LH = LH.replace(vH, HH)
+          if (jB[4]) {
+            const BB = jB[5];
+            if (-1 !== BB.indexOf("..")) {
+              const YB = BB.split(".."),
+                DB = parseInt(YB[0]);
+              let QB = parseInt(YB[1]),
+                oB = GB.slice(0);
+              GB = "", isNaN(QB) && (QB = OB.indexParameters[YB[1]]);
+              for (let BB = DB; BB < QB; BB++) OB.supportsUniformBuffers || (oB = oB.replace(RB, ((BB, OB) => OB + "{X}"))), GB += oB.replace(WB, BB.toString()) + "\n"
+            } else OB.supportsUniformBuffers || (GB = GB.replace(RB, ((BB, OB) => OB + "{X}"))), GB = GB.replace(WB, BB)
           }
-          const AH = [];
-          for (const HH of rH) {
-            const BH = HH.split(tH[0]);
-            for (let HH = 0; HH < BH.length - 1; HH++) AH.push(BH[HH]), AH.push(LH);
-            AH.push(BH[BH.length - 1])
+          const YB = [];
+          for (const BB of DB) {
+            const OB = BB.split(jB[0]);
+            for (let BB = 0; BB < OB.length - 1; BB++) YB.push(OB[BB]), YB.push(GB);
+            YB.push(OB[OB.length - 1])
           }
-          rH = AH, SH = SH || LH.indexOf("#include<") >= 0 || LH.indexOf("#include <") >= 0
+          DB = YB, QB = QB || GB.indexOf("#include<") >= 0 || GB.indexOf("#include <") >= 0
         }
       }
-      PH.length = 0;
-      const hH = rH.join("");
-      SH ? lH(hH.toString(), BH, LH) : LH(hH)
+      AB.length = 0;
+      const oB = DB.join("");
+      QB ? IB(oB.toString(), OB, GB) : GB(oB)
     }
-    const KH = {
-      loadFile: (HH, BH, LH, AH, rH, SH) => {
-        throw (0, GH.i)("FileTools")
+    const FB = {
+      loadFile: (BB, OB, GB, YB, DB, QB) => {
+        throw (0, zB.j)("FileTools")
       }
     }
   },
-  41164: (HH, BH, LH) => {
-    LH.d(BH, {
-      b: () => rH,
-      c: () => SH,
-      f: () => tH,
-      g: () => hH,
-      h: () => zH
+  40883: (BB, OB, GB) => {
+    GB.d(OB, {
+      b: () => DB,
+      d: () => QB,
+      h: () => jB,
+      i: () => oB,
+      j: () => yB
     });
-    var AH = LH(41169);
-    const rH = {};
+    var YB = GB(40890);
+    const DB = {};
 
-    function SH(HH, BH) {
-      return (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "") + (BH ? BH + "\n" : "") + HH
+    function QB(BB, OB) {
+      return (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "") + (OB ? OB + "\n" : "") + BB
     }
 
-    function hH(HH, BH, LH, SH, hH, tH, zH) {
-      const CH = zH || rH.loadFile;
-      if (!CH) throw (0, AH.i)("FileTools");
-      return CH(HH, BH, LH, SH, hH, tH)
+    function oB(BB, OB, GB, QB, oB, jB, yB) {
+      const JB = yB || DB.loadFile;
+      if (!JB) throw (0, YB.j)("FileTools");
+      return JB(BB, OB, GB, QB, oB, jB)
     }
 
-    function tH(HH, BH, LH, AH) {
-      if (HH) return BH ? HH.IS_NDC_HALF_ZRANGE = "" : delete HH.IS_NDC_HALF_ZRANGE, LH ? HH.USE_REVERSE_DEPTHBUFFER = "" : delete HH.USE_REVERSE_DEPTHBUFFER, void(AH ? HH.USE_EXACT_SRGB_CONVERSIONS = "" : delete HH.USE_EXACT_SRGB_CONVERSIONS);
+    function jB(BB, OB, GB, YB) {
+      if (BB) return OB ? BB.IS_NDC_HALF_ZRANGE = "" : delete BB.IS_NDC_HALF_ZRANGE, GB ? BB.USE_REVERSE_DEPTHBUFFER = "" : delete BB.USE_REVERSE_DEPTHBUFFER, void(YB ? BB.USE_EXACT_SRGB_CONVERSIONS = "" : delete BB.USE_EXACT_SRGB_CONVERSIONS);
       {
-        let HH = "";
-        return BH && (HH += "#define IS_NDC_HALF_ZRANGE"), LH && (HH && (HH += "\n"), HH += "#define USE_REVERSE_DEPTHBUFFER"), AH && (HH && (HH += "\n"), HH += "#define USE_EXACT_SRGB_CONVERSIONS"), HH
+        let BB = "";
+        return OB && (BB += "#define IS_NDC_HALF_ZRANGE"), GB && (BB && (BB += "\n"), BB += "#define USE_REVERSE_DEPTHBUFFER"), YB && (BB && (BB += "\n"), BB += "#define USE_EXACT_SRGB_CONVERSIONS"), BB
       }
     }
 
-    function zH(HH, BH) {
-      let LH = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        AH = arguments.length > 3 ? arguments[3] : void 0;
-      switch (HH) {
+    function yB(BB, OB) {
+      let GB = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        YB = arguments.length > 3 ? arguments[3] : void 0;
+      switch (BB) {
         case 3: {
-          const HH = new Int8Array(BH);
-          return AH && HH.set(new Int8Array(AH)), HH
+          const BB = new Int8Array(OB);
+          return YB && BB.set(new Int8Array(YB)), BB
         }
         case 0: {
-          const HH = new Uint8Array(BH);
-          return AH && HH.set(new Uint8Array(AH)), HH
+          const BB = new Uint8Array(OB);
+          return YB && BB.set(new Uint8Array(YB)), BB
         }
         case 4: {
-          const HH = "number" !== typeof BH ? new Int16Array(BH) : new Int16Array(LH ? BH / 2 : BH);
-          return AH && HH.set(new Int16Array(AH)), HH
+          const BB = "number" !== typeof OB ? new Int16Array(OB) : new Int16Array(GB ? OB / 2 : OB);
+          return YB && BB.set(new Int16Array(YB)), BB
         }
         case 5:
         case 8:
         case 9:
         case 10:
         case 2: {
-          const HH = "number" !== typeof BH ? new Uint16Array(BH) : new Uint16Array(LH ? BH / 2 : BH);
-          return AH && HH.set(new Uint16Array(AH)), HH
+          const BB = "number" !== typeof OB ? new Uint16Array(OB) : new Uint16Array(GB ? OB / 2 : OB);
+          return YB && BB.set(new Uint16Array(YB)), BB
         }
         case 6: {
-          const HH = "number" !== typeof BH ? new Int32Array(BH) : new Int32Array(LH ? BH / 4 : BH);
-          return AH && HH.set(new Int32Array(AH)), HH
+          const BB = "number" !== typeof OB ? new Int32Array(OB) : new Int32Array(GB ? OB / 4 : OB);
+          return YB && BB.set(new Int32Array(YB)), BB
         }
         case 7:
         case 11:
@@ -715,55 +715,55 @@ export const modules = {
         case 13:
         case 14:
         case 15: {
-          const HH = "number" !== typeof BH ? new Uint32Array(BH) : new Uint32Array(LH ? BH / 4 : BH);
-          return AH && HH.set(new Uint32Array(AH)), HH
+          const BB = "number" !== typeof OB ? new Uint32Array(OB) : new Uint32Array(GB ? OB / 4 : OB);
+          return YB && BB.set(new Uint32Array(YB)), BB
         }
         case 1: {
-          const HH = "number" !== typeof BH ? new Float32Array(BH) : new Float32Array(LH ? BH / 4 : BH);
-          return AH && HH.set(new Float32Array(AH)), HH
+          const BB = "number" !== typeof OB ? new Float32Array(OB) : new Float32Array(GB ? OB / 4 : OB);
+          return YB && BB.set(new Float32Array(YB)), BB
         }
       }
-      const rH = new Uint8Array(BH);
-      return AH && rH.set(new Uint8Array(AH)), rH
+      const DB = new Uint8Array(OB);
+      return YB && DB.set(new Uint8Array(YB)), DB
     }
   },
-  41169: (HH, BH, LH) => {
-    LH.d(BH, {
-      c: () => CH,
-      e: () => EH,
-      f: () => zH,
-      i: () => rH
+  40890: (BB, OB, GB) => {
+    GB.d(OB, {
+      b: () => JB,
+      e: () => MB,
+      g: () => yB,
+      j: () => DB
     });
-    const AH = {};
+    const YB = {};
 
-    function rH(HH) {
-      if (!(arguments.length > 1 && void 0 !== arguments[1] && arguments[1]) || !AH[HH]) return AH[HH] = !0, `${HH} needs to be imported before as it contains a side-effect required by your code.`
+    function DB(BB) {
+      if (!(arguments.length > 1 && void 0 !== arguments[1] && arguments[1]) || !YB[BB]) return YB[BB] = !0, `${BB} needs to be imported before as it contains a side-effect required by your code.`
     }
-    const SH = {};
-    let hH = !1,
-      tH = 0;
+    const QB = {};
+    let oB = !1,
+      jB = 0;
 
-    function zH(HH, BH) {
-      let LH = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-      const AH = function() {
-        if ((LH || hH) && 0 === tH) {
-          const LH = `${HH}.${BH}`;
-          SH[LH] || (SH[LH] = !0, console.warn(`[Babylon.js] ${LH}() requires a side-effect import. See: https://doc.babylonjs.com/setup/treeshaking`))
+    function yB(BB, OB) {
+      let GB = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      const YB = function() {
+        if ((GB || oB) && 0 === jB) {
+          const GB = `${BB}.${OB}`;
+          QB[GB] || (QB[GB] = !0, console.warn(`[Babylon.js] ${GB}() requires a side-effect import. See: https://doc.babylonjs.com/setup/treeshaking`))
         }
       };
-      return AH.__isSideEffectStub = !0, AH
+      return YB.__isSideEffectStub = !0, YB
     }
 
-    function CH(HH) {
-      return !!HH && !HH.__isSideEffectStub
+    function JB(BB) {
+      return !!BB && !BB.__isSideEffectStub
     }
 
-    function EH(HH, BH) {
+    function MB(BB, OB) {
       return {
         get() {},
-        set(HH) {
-          Object.defineProperty(this, BH, {
-            value: HH,
+        set(BB) {
+          Object.defineProperty(this, OB, {
+            value: BB,
             writable: !0,
             configurable: !0,
             enumerable: !0
@@ -774,41 +774,41 @@ export const modules = {
       }
     }
   },
-  41154: (HH, BH, LH) => {
-    function AH() {
+  40870: (BB, OB, GB) => {
+    function YB() {
       return "undefined" !== typeof window
     }
 
-    function rH() {
+    function DB() {
       return "undefined" !== typeof navigator
     }
 
-    function SH() {
+    function QB() {
       return "undefined" !== typeof document
     }
 
-    function hH(HH) {
-      let BH = "",
-        LH = HH.firstChild;
-      for (; LH;) 3 === LH.nodeType && (BH += LH.textContent), LH = LH.nextSibling;
-      return BH
+    function oB(BB) {
+      let OB = "",
+        GB = BB.firstChild;
+      for (; GB;) 3 === GB.nodeType && (OB += GB.textContent), GB = GB.nextSibling;
+      return OB
     }
-    LH.d(BH, {
-      c: () => hH,
-      d: () => SH,
-      h: () => rH,
-      k: () => AH
+    GB.d(OB, {
+      b: () => oB,
+      c: () => QB,
+      g: () => DB,
+      j: () => YB
     })
   },
-  41346: (HH, BH, LH) => {
-    LH.d(BH, {
-      d: () => AH,
-      g: () => rH,
-      j: () => SH
+  41049: (BB, OB, GB) => {
+    GB.d(OB, {
+      d: () => YB,
+      g: () => DB,
+      i: () => QB
     });
-    class AH extends Error {}
-    AH._setPrototypeOf = Object.setPrototypeOf || ((HH, BH) => (HH.__proto__ = BH, HH));
-    const rH = {
+    class YB extends Error {}
+    YB._setPrototypeOf = Object.setPrototypeOf || ((BB, OB) => (BB.__proto__ = OB, BB));
+    const DB = {
       MeshInvalidPositionsError: 0,
       UnsupportedTextureError: 1e3,
       GLTFLoaderUnexpectedMagicError: 2e3,
@@ -817,339 +817,339 @@ export const modules = {
       RequestFileError: 4001,
       ReadFileError: 4002
     };
-    class SH extends AH {
-      constructor(HH, BH, LH) {
-        super(HH), this.errorCode = BH, this.innerError = LH, this.name = "RuntimeError", AH._setPrototypeOf(this, SH.prototype)
+    class QB extends YB {
+      constructor(BB, OB, GB) {
+        super(BB), this.errorCode = OB, this.innerError = GB, this.name = "RuntimeError", YB._setPrototypeOf(this, QB.prototype)
       }
     }
   },
-  41336: (HH, BH, LH) => {
-    LH.d(BH, {
-      d: () => fH,
-      h: () => vH,
-      i: () => kH,
-      k: () => oH,
-      l: () => OH,
-      m: () => UH,
-      n: () => VH,
-      q: () => qH,
-      r: () => bH,
-      s: () => PH
+  41035: (BB, OB, GB) => {
+    GB.d(OB, {
+      c: () => mB,
+      e: () => WB,
+      g: () => kB,
+      j: () => KB,
+      m: () => UB,
+      n: () => SB,
+      o: () => nB,
+      p: () => gB,
+      r: () => fB,
+      s: () => AB
     });
-    var AH = LH(41339),
-      rH = LH(41154),
-      SH = LH(37997);
-    class hH {}
-    hH.FilesToLoad = {};
-    var tH = LH(41346),
-      zH = LH(41353),
-      CH = LH(37989),
-      EH = LH(41164),
-      XH = LH(41173),
-      GH = LH(39595),
-      YH = LH(41179),
-      uH = LH(41356);
-    const QH = new RegExp(/^data:([^,]+\/[^,]+)?;base64,/i);
-    class WH extends tH.j {
-      constructor(HH, BH) {
-        super(HH, tH.g.LoadFileError), this.name = "LoadFileError", tH.d._setPrototypeOf(this, WH.prototype), BH instanceof AH.d ? this.request = BH : this.file = BH
+    var YB = GB(41041),
+      DB = GB(40870),
+      QB = GB(37802);
+    class oB {}
+    oB.FilesToLoad = {};
+    var jB = GB(41049),
+      yB = GB(41058),
+      JB = GB(37796),
+      MB = GB(40883),
+      PB = GB(40896),
+      zB = GB(39366),
+      lB = GB(40899),
+      pB = GB(41067);
+    const qB = new RegExp(/^data:([^,]+\/[^,]+)?;base64,/i);
+    class ZB extends jB.i {
+      constructor(BB, OB) {
+        super(BB, jB.g.LoadFileError), this.name = "LoadFileError", jB.d._setPrototypeOf(this, ZB.prototype), OB instanceof YB.e ? this.request = OB : this.file = OB
       }
     }
-    class MH extends tH.j {
-      constructor(HH, BH) {
-        super(HH, tH.g.RequestFileError), this.request = BH, this.name = "RequestFileError", tH.d._setPrototypeOf(this, MH.prototype)
+    class NB extends jB.i {
+      constructor(BB, OB) {
+        super(BB, jB.g.RequestFileError), this.request = OB, this.name = "RequestFileError", jB.d._setPrototypeOf(this, NB.prototype)
       }
     }
-    class xH extends tH.j {
-      constructor(HH, BH) {
-        super(HH, tH.g.ReadFileError), this.file = BH, this.name = "ReadFileError", tH.d._setPrototypeOf(this, xH.prototype)
+    class RB extends jB.i {
+      constructor(BB, OB) {
+        super(BB, jB.g.ReadFileError), this.file = OB, this.name = "ReadFileError", jB.d._setPrototypeOf(this, RB.prototype)
       }
     }
-    const vH = {
+    const WB = {
         DefaultRetryStrategy: class {
           static ExponentialBackoff() {
-            let HH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 3,
-              BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 500;
-            return (LH, AH, rH) => 0 !== AH.status || rH >= HH || -1 !== LH.indexOf("file:") ? -1 : Math.pow(2, rH) * BH
+            let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 3,
+              OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 500;
+            return (GB, YB, DB) => 0 !== YB.status || DB >= BB || -1 !== GB.indexOf("file:") ? -1 : Math.pow(2, DB) * OB
           }
         }.ExponentialBackoff(),
         BaseUrl: "",
         CorsBehavior: "anonymous",
-        PreprocessUrl: HH => HH,
+        PreprocessUrl: BB => BB,
         ScriptBaseUrl: "",
-        ScriptPreprocessUrl: HH => HH,
-        CleanUrl: HH => HH = HH.replace(/#/gm, "%23")
+        ScriptPreprocessUrl: BB => BB,
+        CleanUrl: BB => BB = BB.replace(/#/gm, "%23")
       },
-      PH = (HH, BH) => {
-        if ((!HH || 0 !== HH.indexOf("data:")) && vH.CorsBehavior)
-          if ("string" === typeof vH.CorsBehavior || vH.CorsBehavior instanceof String) BH.crossOrigin = vH.CorsBehavior;
+      AB = (BB, OB) => {
+        if ((!BB || 0 !== BB.indexOf("data:")) && WB.CorsBehavior)
+          if ("string" === typeof WB.CorsBehavior || WB.CorsBehavior instanceof String) OB.crossOrigin = WB.CorsBehavior;
           else {
-            const LH = vH.CorsBehavior(HH);
-            LH && (BH.crossOrigin = LH)
+            const GB = WB.CorsBehavior(BB);
+            GB && (OB.crossOrigin = GB)
           }
       },
-      TH = {
+      VB = {
         getRequiredSize: null
       },
-      UH = function(HH, BH, LH, rH) {
-        let SH, tH = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "",
-          EH = arguments.length > 5 ? arguments[5] : void 0,
-          XH = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : CH.d.LastCreatedEngine;
-        if ("undefined" === typeof HTMLImageElement && !XH?._features.forceBitmapOverHTMLImageElement) return LH("LoadImage is only supported in web or BabylonNative environments."), null;
-        if (XH?._features.forceBitmapOverHTMLImageElement && "string" !== typeof HH && "undefined" !== typeof Blob) {
-          let AH;
-          if (HH instanceof Blob) AH = HH;
+      SB = function(BB, OB, GB, DB) {
+        let QB, jB = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "",
+          MB = arguments.length > 5 ? arguments[5] : void 0,
+          PB = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : JB.b.LastCreatedEngine;
+        if ("undefined" === typeof HTMLImageElement && !PB?._features.forceBitmapOverHTMLImageElement) return GB("LoadImage is only supported in web or BabylonNative environments."), null;
+        if (PB?._features.forceBitmapOverHTMLImageElement && "string" !== typeof BB && "undefined" !== typeof Blob) {
+          let YB;
+          if (BB instanceof Blob) YB = BB;
           else {
-            const BH = HH instanceof ArrayBuffer ? HH : (0, uH.m)(HH);
-            AH = new Blob([BH], {
-              type: tH
+            const OB = BB instanceof ArrayBuffer ? BB : (0, pB.o)(BB);
+            YB = new Blob([OB], {
+              type: jB
             })
           }
-          return XH.createImageBitmap(AH, {
+          return PB.createImageBitmap(YB, {
             premultiplyAlpha: "none",
             colorSpaceConversion: "none",
-            ...EH
-          }).then(BH).catch((BH => {
-            LH && LH("Error while trying to load image: " + HH, BH)
+            ...MB
+          }).then(OB).catch((OB => {
+            GB && GB("Error while trying to load image: " + BB, OB)
           })), null
         }
-        let GH = !1;
-        if (HH instanceof ArrayBuffer || ArrayBuffer.isView(HH))
+        let zB = !1;
+        if (BB instanceof ArrayBuffer || ArrayBuffer.isView(BB))
           if ("undefined" !== typeof Blob && "undefined" !== typeof URL) {
-            let BH;
-            BH = HH instanceof ArrayBuffer ? HH : (0, uH.m)(HH), SH = URL.createObjectURL(new Blob([BH], {
-              type: tH
-            })), GH = !0
-          } else SH = `data:${tH};base64,` + (0, zH.f)(HH);
-        else HH instanceof Blob ? (SH = URL.createObjectURL(HH), GH = !0) : (SH = vH.CleanUrl(HH), SH = vH.PreprocessUrl(SH));
-        const YH = BH => {
-          if (LH) {
-            const AH = SH || HH.toString();
-            LH(`Error while trying to load image: ${0===AH.indexOf("http")||AH.length<=128?AH:AH.slice(0,128)+"..."}`, BH)
+            let OB;
+            OB = BB instanceof ArrayBuffer ? BB : (0, pB.o)(BB), QB = URL.createObjectURL(new Blob([OB], {
+              type: jB
+            })), zB = !0
+          } else QB = `data:${jB};base64,` + (0, yB.k)(BB);
+        else BB instanceof Blob ? (QB = URL.createObjectURL(BB), zB = !0) : (QB = WB.CleanUrl(BB), QB = WB.PreprocessUrl(QB));
+        const lB = OB => {
+          if (GB) {
+            const YB = QB || BB.toString();
+            GB(`Error while trying to load image: ${0===YB.indexOf("http")||YB.length<=128?YB:YB.slice(0,128)+"..."}`, OB)
           }
         };
-        if (XH?._features.forceBitmapOverHTMLImageElement) return OH(SH, (AH => {
-          XH.createImageBitmap(new Blob([AH], {
-            type: tH
+        if (PB?._features.forceBitmapOverHTMLImageElement) return UB(QB, (YB => {
+          PB.createImageBitmap(new Blob([YB], {
+            type: jB
           }), {
             premultiplyAlpha: "none",
             colorSpaceConversion: "none",
-            ...EH
-          }).then((HH => {
-            BH(HH), GH && URL.revokeObjectURL(SH)
-          })).catch((BH => {
-            LH && LH("Error while trying to load image: " + HH, BH)
+            ...MB
+          }).then((BB => {
+            OB(BB), zB && URL.revokeObjectURL(QB)
+          })).catch((OB => {
+            GB && GB("Error while trying to load image: " + BB, OB)
           }))
-        }), void 0, rH || void 0, !0, ((HH, BH) => {
-          YH(BH)
+        }), void 0, DB || void 0, !0, ((BB, OB) => {
+          lB(OB)
         })), null;
-        const QH = new Image;
-        if (TH.getRequiredSize) {
-          const BH = TH.getRequiredSize(HH);
-          BH.width && (QH.width = BH.width), BH.height && (QH.height = BH.height)
+        const qB = new Image;
+        if (VB.getRequiredSize) {
+          const OB = VB.getRequiredSize(BB);
+          OB.width && (qB.width = OB.width), OB.height && (qB.height = OB.height)
         }
-        PH(SH, QH);
-        const WH = [],
-          MH = () => {
-            for (const HH of WH) HH.target.removeEventListener(HH.name, HH.handler);
-            WH.length = 0
+        AB(QB, qB);
+        const ZB = [],
+          NB = () => {
+            for (const BB of ZB) BB.target.removeEventListener(BB.name, BB.handler);
+            ZB.length = 0
           };
-        WH.push({
-          target: QH,
+        ZB.push({
+          target: qB,
           name: "load",
           handler: () => {
-            MH(), BH(QH), GH && QH.src && URL.revokeObjectURL(QH.src)
+            NB(), OB(qB), zB && qB.src && URL.revokeObjectURL(qB.src)
           }
-        }), WH.push({
-          target: QH,
+        }), ZB.push({
+          target: qB,
           name: "error",
-          handler: HH => {
-            MH(), YH(HH), GH && QH.src && URL.revokeObjectURL(QH.src)
+          handler: BB => {
+            NB(), lB(BB), zB && qB.src && URL.revokeObjectURL(qB.src)
           }
-        }), WH.push({
+        }), ZB.push({
           target: document,
           name: "securitypolicyviolation",
-          handler: HH => {
-            if (HH.blockedURI !== QH.src || "XX" === HH.disposition) return;
-            MH();
-            const BH = new Error(`CSP violation of policy ${HH.effectiveDirective} ${HH.blockedURI}. Current policy is ${HH.originalPolicy}`);
-            CH.d.UseFallbackTexture = !1, YH(BH), GH && QH.src && URL.revokeObjectURL(QH.src), QH.src = ""
+          handler: BB => {
+            if (BB.blockedURI !== qB.src || "jP" === BB.disposition) return;
+            NB();
+            const OB = new Error(`CSP violation of policy ${BB.effectiveDirective} ${BB.blockedURI}. Current policy is ${BB.originalPolicy}`);
+            JB.b.UseFallbackTexture = !1, lB(OB), zB && qB.src && URL.revokeObjectURL(qB.src), qB.src = ""
           }
         }), (() => {
-          for (const HH of WH) HH.target.addEventListener(HH.name, HH.handler)
+          for (const BB of ZB) BB.target.addEventListener(BB.name, BB.handler)
         })();
-        const xH = "blob:" === SH.substring(0, 5),
-          UH = "data:" === SH.substring(0, 5),
-          VH = () => {
-            xH || UH || !AH.d.IsCustomRequestAvailable ? QH.src = SH : OH(SH, ((HH, BH, LH) => {
-              const AH = new Blob([HH], {
-                  type: !tH && LH ? LH : tH
+        const RB = "blob:" === QB.substring(0, 5),
+          SB = "data:" === QB.substring(0, 5),
+          nB = () => {
+            RB || SB || !YB.e.IsCustomRequestAvailable ? qB.src = QB : UB(QB, ((BB, OB, GB) => {
+              const YB = new Blob([BB], {
+                  type: !jB && GB ? GB : jB
                 }),
-                rH = URL.createObjectURL(AH);
-              GH = !0, QH.src = rH
-            }), void 0, rH || void 0, !0, ((HH, BH) => {
-              YH(BH)
+                DB = URL.createObjectURL(YB);
+              zB = !0, qB.src = DB
+            }), void 0, DB || void 0, !0, ((BB, OB) => {
+              lB(OB)
             }))
           },
-          bH = () => {
-            rH && rH.loadImage(SH, QH)
+          fB = () => {
+            DB && DB.loadImage(QB, qB)
           };
-        if (!xH && !UH && rH && rH.enableTexturesOffline) rH.open(bH, VH);
+        if (!RB && !SB && DB && DB.enableTexturesOffline) DB.open(fB, nB);
         else {
-          if (-1 !== SH.indexOf("file:")) {
-            const HH = decodeURIComponent(SH.substring(5).toLowerCase());
-            if (hH.FilesToLoad[HH] && "undefined" !== typeof URL) {
+          if (-1 !== QB.indexOf("file:")) {
+            const BB = decodeURIComponent(QB.substring(5).toLowerCase());
+            if (oB.FilesToLoad[BB] && "undefined" !== typeof URL) {
               try {
-                let BH;
+                let OB;
                 try {
-                  BH = URL.createObjectURL(hH.FilesToLoad[HH])
-                } catch (kH) {
-                  BH = URL.createObjectURL(hH.FilesToLoad[HH])
+                  OB = URL.createObjectURL(oB.FilesToLoad[BB])
+                } catch (kB) {
+                  OB = URL.createObjectURL(oB.FilesToLoad[BB])
                 }
-                QH.src = BH, GH = !0
-              } catch (mH) {
-                QH.src = ""
+                qB.src = OB, zB = !0
+              } catch (dB) {
+                qB.src = ""
               }
-              return QH
+              return qB
             }
           }
-          VH()
+          nB()
         }
-        return QH
+        return qB
       },
-      VH = (HH, BH, LH, AH, rH) => {
-        const hH = new FileReader,
-          tH = {
-            onCompleteObservable: new SH.d,
-            abort: () => hH.abort()
+      nB = (BB, OB, GB, YB, DB) => {
+        const oB = new FileReader,
+          jB = {
+            onCompleteObservable: new QB.b,
+            abort: () => oB.abort()
           };
-        return hH.onloadend = () => tH.onCompleteObservable.notifyObservers(tH), rH && (hH.onerror = () => {
-          rH(new xH(`Unable to read ${HH.name}`, HH))
-        }), hH.onload = HH => {
-          BH(HH.target.result)
-        }, LH && (hH.onprogress = LH), AH ? hH.readAsArrayBuffer(HH) : hH.readAsText(HH), tH
+        return oB.onloadend = () => jB.onCompleteObservable.notifyObservers(jB), DB && (oB.onerror = () => {
+          DB(new RB(`Unable to read ${BB.name}`, BB))
+        }), oB.onload = BB => {
+          OB(BB.target.result)
+        }, GB && (oB.onprogress = GB), YB ? oB.readAsArrayBuffer(BB) : oB.readAsText(BB), jB
       },
-      OH = (HH, BH, LH, AH, rH, zH, CH) => {
-        if (HH.name) return VH(HH, BH, LH, rH, zH ? HH => {
-          zH(void 0, HH)
+      UB = (BB, OB, GB, YB, DB, yB, JB) => {
+        if (BB.name) return nB(BB, OB, GB, DB, yB ? BB => {
+          yB(void 0, BB)
         } : void 0);
-        const EH = HH;
-        if (-1 !== EH.indexOf("file:")) {
-          let HH = decodeURIComponent(EH.substring(5).toLowerCase());
-          0 === HH.indexOf("./") && (HH = HH.substring(2));
-          const AH = hH.FilesToLoad[HH];
-          if (AH) return VH(AH, BH, LH, rH, zH ? HH => zH(void 0, new WH(HH.message, HH.file)) : void 0)
+        const MB = BB;
+        if (-1 !== MB.indexOf("file:")) {
+          let BB = decodeURIComponent(MB.substring(5).toLowerCase());
+          0 === BB.indexOf("./") && (BB = BB.substring(2));
+          const YB = oB.FilesToLoad[BB];
+          if (YB) return nB(YB, OB, GB, DB, yB ? BB => yB(void 0, new ZB(BB.message, BB.file)) : void 0)
         }
         const {
-          match: XH,
-          type: uH
-        } = IH(EH);
-        if (XH) {
-          const HH = {
-            onCompleteObservable: new SH.d,
+          match: PB,
+          type: pB
+        } = uB(MB);
+        if (PB) {
+          const BB = {
+            onCompleteObservable: new QB.b,
             abort: () => () => {}
           };
           try {
-            const HH = rH ? fH(EH) : lH(EH);
-            BH(HH, void 0, uH)
-          } catch (tH) {
-            zH ? zH(void 0, tH) : GH.e.Error(tH.message || "Failed to parse the Data URL")
+            const BB = DB ? mB(MB) : IB(MB);
+            OB(BB, void 0, pB)
+          } catch (jB) {
+            yB ? yB(void 0, jB) : zB.b.Error(jB.message || "Failed to parse the Data URL")
           }
-          return YH.d.SetImmediate((() => {
-            HH.onCompleteObservable.notifyObservers(HH)
-          })), HH
+          return lB.c.SetImmediate((() => {
+            BB.onCompleteObservable.notifyObservers(BB)
+          })), BB
         }
-        return bH(EH, ((HH, LH) => {
-          BH(HH, LH?.responseURL, LH?.getResponseHeader("content-type"))
-        }), LH, AH, rH, zH ? HH => {
-          zH(HH.request, new WH(HH.message, HH.request))
-        } : void 0, CH)
+        return fB(MB, ((BB, GB) => {
+          OB(BB, GB?.responseURL, GB?.getResponseHeader("content-type"))
+        }), GB, YB, DB, yB ? BB => {
+          yB(BB.request, new ZB(BB.message, BB.request))
+        } : void 0, JB)
       },
-      bH = (HH, BH, LH, hH, tH, zH, EH) => {
-        null !== hH && (hH ?? (hH = CH.d.LastCreatedScene?.offlineProvider)), HH = vH.CleanUrl(HH), HH = vH.PreprocessUrl(HH);
-        const XH = vH.BaseUrl + HH;
-        let YH = !1;
-        const uH = {
-            onCompleteObservable: new SH.d,
-            abort: () => YH = !0
+      fB = (BB, OB, GB, oB, jB, yB, MB) => {
+        null !== oB && (oB ?? (oB = JB.b.LastCreatedScene?.offlineProvider)), BB = WB.CleanUrl(BB), BB = WB.PreprocessUrl(BB);
+        const PB = WB.BaseUrl + BB;
+        let lB = !1;
+        const pB = {
+            onCompleteObservable: new QB.b,
+            abort: () => lB = !0
           },
-          QH = () => {
-            let HH, SH = new AH.d,
-              hH = null;
-            const CH = () => {
-              SH && (LH && SH.removeEventListener("progress", LH), HH && SH.removeEventListener("readystatechange", HH), SH.removeEventListener("loadend", QH))
+          qB = () => {
+            let BB, QB = new YB.e,
+              oB = null;
+            const JB = () => {
+              QB && (GB && QB.removeEventListener("progress", GB), BB && QB.removeEventListener("readystatechange", BB), QB.removeEventListener("loadend", qB))
             };
-            let QH = () => {
-              CH(), uH.onCompleteObservable.notifyObservers(uH), uH.onCompleteObservable.clear(), LH = void 0, HH = null, QH = null, zH = void 0, EH = void 0, BH = void 0
+            let qB = () => {
+              JB(), pB.onCompleteObservable.notifyObservers(pB), pB.onCompleteObservable.clear(), GB = void 0, BB = null, qB = null, yB = void 0, MB = void 0, OB = void 0
             };
-            uH.abort = () => {
-              YH = !0, QH && QH(), SH && SH.readyState !== (XMLHttpRequest.DONE || 4) && SH.abort(), null !== hH && (clearTimeout(hH), hH = null), SH = null
+            pB.abort = () => {
+              lB = !0, qB && qB(), QB && QB.readyState !== (XMLHttpRequest.DONE || 4) && QB.abort(), null !== oB && (clearTimeout(oB), oB = null), QB = null
             };
-            const WH = HH => {
-                const BH = HH.message || "Unknown error";
-                zH && SH ? zH(new MH(BH, SH)) : GH.e.Error(BH)
+            const ZB = BB => {
+                const OB = BB.message || "Unknown error";
+                yB && QB ? yB(new NB(OB, QB)) : zB.b.Error(OB)
               },
-              xH = GH => {
-                if (SH) {
-                  if (SH.open("GET", XH), EH) try {
-                    EH(SH)
-                  } catch (uH) {
-                    return void WH(uH)
+              RB = zB => {
+                if (QB) {
+                  if (QB.open("GET", PB), MB) try {
+                    MB(QB)
+                  } catch (pB) {
+                    return void ZB(pB)
                   }
-                  tH && (SH.responseType = "arraybuffer"), LH && SH.addEventListener("progress", LH), QH && SH.addEventListener("loadend", QH), HH = () => {
-                    if (!YH && SH && SH.readyState === (XMLHttpRequest.DONE || 4)) {
-                      if (HH && SH.removeEventListener("readystatechange", HH), SH.status >= 200 && SH.status < 300 || 0 === SH.status && (!(0, rH.k)() || mH())) {
-                        const HH = tH ? SH.response : SH.responseText;
-                        if (null !== HH) {
+                  jB && (QB.responseType = "arraybuffer"), GB && QB.addEventListener("progress", GB), qB && QB.addEventListener("loadend", qB), BB = () => {
+                    if (!lB && QB && QB.readyState === (XMLHttpRequest.DONE || 4)) {
+                      if (BB && QB.removeEventListener("readystatechange", BB), QB.status >= 200 && QB.status < 300 || 0 === QB.status && (!(0, DB.j)() || dB())) {
+                        const BB = jB ? QB.response : QB.responseText;
+                        if (null !== BB) {
                           try {
-                            BH && BH(HH, SH)
-                          } catch (uH) {
-                            WH(uH)
+                            OB && OB(BB, QB)
+                          } catch (pB) {
+                            ZB(pB)
                           }
                           return
                         }
                       }
-                      const LH = vH.DefaultRetryStrategy;
-                      if (LH) {
-                        const HH = LH(XH, SH, GH);
-                        if (-1 !== HH) return CH(), SH = new AH.d, void(hH = setTimeout((() => xH(GH + 1)), HH))
+                      const GB = WB.DefaultRetryStrategy;
+                      if (GB) {
+                        const BB = GB(PB, QB, zB);
+                        if (-1 !== BB) return JB(), QB = new YB.e, void(oB = setTimeout((() => RB(zB + 1)), BB))
                       }
-                      const EH = new MH("Error status: " + SH.status + " " + SH.statusText + " - Unable to load " + XH, SH);
-                      zH && zH(EH)
+                      const MB = new NB("Error status: " + QB.status + " " + QB.statusText + " - Unable to load " + PB, QB);
+                      yB && yB(MB)
                     }
-                  }, SH.addEventListener("readystatechange", HH), SH.send()
+                  }, QB.addEventListener("readystatechange", BB), QB.send()
                 }
               };
-            xH(0)
+            RB(0)
           };
-        if (hH && hH.enableSceneOffline && !HH.startsWith("blob:")) {
-          const AH = HH => {
-              HH && HH.status > 400 ? zH && zH(HH) : QH()
+        if (oB && oB.enableSceneOffline && !BB.startsWith("blob:")) {
+          const YB = BB => {
+              BB && BB.status > 400 ? yB && yB(BB) : qB()
             },
-            rH = () => {
-              hH && hH.loadFile(vH.BaseUrl + HH, (HH => {
-                !YH && BH && BH(HH), uH.onCompleteObservable.notifyObservers(uH)
-              }), LH ? HH => {
-                !YH && LH && LH(HH)
-              } : void 0, AH, tH)
+            DB = () => {
+              oB && oB.loadFile(WB.BaseUrl + BB, (BB => {
+                !lB && OB && OB(BB), pB.onCompleteObservable.notifyObservers(pB)
+              }), GB ? BB => {
+                !lB && GB && GB(BB)
+              } : void 0, YB, jB)
             };
-          hH.open(rH, AH)
-        } else QH();
-        return uH
+          oB.open(DB, YB)
+        } else qB();
+        return pB
       },
-      kH = HH => {
+      kB = BB => {
         const {
-          match: BH,
-          type: LH
-        } = IH(HH);
-        if (BH) return LH || void 0;
-        const AH = HH.lastIndexOf(".");
-        switch (HH.substring(AH + 1).toLowerCase()) {
+          match: OB,
+          type: GB
+        } = uB(BB);
+        if (OB) return GB || void 0;
+        const YB = BB.lastIndexOf(".");
+        switch (BB.substring(YB + 1).toLowerCase()) {
           case "glb":
             return "model/gltf-binary";
           case "bin":
             return "application/octet-stream";
-          case "XN":
+          case "Im":
             return "model/gltf+json";
           case "jpg":
           case "jpeg":
@@ -1168,275 +1168,275 @@ export const modules = {
             return
         }
       },
-      mH = () => "undefined" !== typeof location && "file:" === location.protocol,
-      oH = HH => QH.test(HH),
-      IH = HH => {
-        const BH = QH.exec(HH);
-        if (null === BH || 0 === BH.length) return {
+      dB = () => "undefined" !== typeof location && "file:" === location.protocol,
+      KB = BB => qB.test(BB),
+      uB = BB => {
+        const OB = qB.exec(BB);
+        if (null === OB || 0 === OB.length) return {
           match: !1,
           type: ""
         };
         return {
           match: !0,
-          type: BH[0].replace("data:", "").replace(";base64,", "")
+          type: OB[0].replace("data:", "").replace(";base64,", "")
         }
       };
 
-    function fH(HH) {
-      return (0, zH.b)(HH.split(",")[1])
+    function mB(BB) {
+      return (0, yB.e)(BB.split(",")[1])
     }
-    const lH = HH => (0, zH.d)(HH.split(",")[1]);
-    let KH;
-    const cH = (HH, BH, LH, AH, rH, SH, hH, tH, zH, CH) => {
-      KH = {
-        DecodeBase64UrlToBinary: HH,
-        DecodeBase64UrlToString: BH,
-        DefaultRetryStrategy: LH.DefaultRetryStrategy,
-        BaseUrl: LH.BaseUrl,
-        CorsBehavior: LH.CorsBehavior,
-        PreprocessUrl: LH.PreprocessUrl,
-        IsBase64DataUrl: AH,
-        IsFileURL: rH,
-        LoadFile: SH,
-        LoadImage: hH,
-        ReadFile: tH,
-        RequestFile: zH,
-        SetCorsBehavior: CH
-      }, Object.defineProperty(KH, "DefaultRetryStrategy", {
+    const IB = BB => (0, yB.g)(BB.split(",")[1]);
+    let FB;
+    const iB = (BB, OB, GB, YB, DB, QB, oB, jB, yB, JB) => {
+      FB = {
+        DecodeBase64UrlToBinary: BB,
+        DecodeBase64UrlToString: OB,
+        DefaultRetryStrategy: GB.DefaultRetryStrategy,
+        BaseUrl: GB.BaseUrl,
+        CorsBehavior: GB.CorsBehavior,
+        PreprocessUrl: GB.PreprocessUrl,
+        IsBase64DataUrl: YB,
+        IsFileURL: DB,
+        LoadFile: QB,
+        LoadImage: oB,
+        ReadFile: jB,
+        RequestFile: yB,
+        SetCorsBehavior: JB
+      }, Object.defineProperty(FB, "DefaultRetryStrategy", {
         get: function() {
-          return LH.DefaultRetryStrategy
+          return GB.DefaultRetryStrategy
         },
-        set: function(HH) {
-          LH.DefaultRetryStrategy = HH
+        set: function(BB) {
+          GB.DefaultRetryStrategy = BB
         }
-      }), Object.defineProperty(KH, "BaseUrl", {
+      }), Object.defineProperty(FB, "BaseUrl", {
         get: function() {
-          return LH.BaseUrl
+          return GB.BaseUrl
         },
-        set: function(HH) {
-          LH.BaseUrl = HH
+        set: function(BB) {
+          GB.BaseUrl = BB
         }
-      }), Object.defineProperty(KH, "PreprocessUrl", {
+      }), Object.defineProperty(FB, "PreprocessUrl", {
         get: function() {
-          return LH.PreprocessUrl
+          return GB.PreprocessUrl
         },
-        set: function(HH) {
-          LH.PreprocessUrl = HH
+        set: function(BB) {
+          GB.PreprocessUrl = BB
         }
-      }), Object.defineProperty(KH, "CorsBehavior", {
+      }), Object.defineProperty(FB, "CorsBehavior", {
         get: function() {
-          return LH.CorsBehavior
+          return GB.CorsBehavior
         },
-        set: function(HH) {
-          LH.CorsBehavior = HH
+        set: function(BB) {
+          GB.CorsBehavior = BB
         }
       })
     };
-    let eH = !1;
+    let LB = !1;
 
-    function qH() {
-      eH || (eH = !0, cH(fH, lH, vH, oH, mH, OH, UH, VH, bH, PH), EH.b.loadFile = OH, EH.b.loadImage = UH, XH.n.loadFile = OH)
+    function gB() {
+      LB || (LB = !0, iB(mB, IB, WB, KB, dB, UB, SB, nB, fB, AB), MB.b.loadFile = UB, MB.b.loadImage = SB, PB.m.loadFile = UB)
     }
   },
-  41364: (HH, BH, LH) => {
-    LH.d(BH, {
-      d: () => tH,
-      e: () => SH,
-      f: () => hH
+  41071: (BB, OB, GB) => {
+    GB.d(OB, {
+      e: () => jB,
+      h: () => QB,
+      l: () => oB
     });
-    let AH = null;
+    let YB = null;
 
-    function rH() {
-      if (AH) return AH;
-      const HH = new ArrayBuffer(4),
-        BH = new Float32Array(HH),
-        LH = new Uint32Array(HH),
-        rH = new Uint32Array(512),
-        SH = new Uint32Array(512);
-      for (let AH = 0; AH < 256; ++AH) {
-        const HH = AH - 127;
-        HH < -24 ? (rH[AH] = 0, rH[256 | AH] = 32768, SH[AH] = 24, SH[256 | AH] = 24) : HH < -14 ? (rH[AH] = 1024 >> -HH - 14, rH[256 | AH] = 1024 >> -HH - 14 | 32768, SH[AH] = -HH - 1, SH[256 | AH] = -HH - 1) : HH <= 15 ? (rH[AH] = HH + 15 << 10, rH[256 | AH] = HH + 15 << 10 | 32768, SH[AH] = 13, SH[256 | AH] = 13) : HH < 128 ? (rH[AH] = 31744, rH[256 | AH] = 64512, SH[AH] = 24, SH[256 | AH] = 24) : (rH[AH] = 31744, rH[256 | AH] = 64512, SH[AH] = 13, SH[256 | AH] = 13)
+    function DB() {
+      if (YB) return YB;
+      const BB = new ArrayBuffer(4),
+        OB = new Float32Array(BB),
+        GB = new Uint32Array(BB),
+        DB = new Uint32Array(512),
+        QB = new Uint32Array(512);
+      for (let YB = 0; YB < 256; ++YB) {
+        const BB = YB - 127;
+        BB < -24 ? (DB[YB] = 0, DB[256 | YB] = 32768, QB[YB] = 24, QB[256 | YB] = 24) : BB < -14 ? (DB[YB] = 1024 >> -BB - 14, DB[256 | YB] = 1024 >> -BB - 14 | 32768, QB[YB] = -BB - 1, QB[256 | YB] = -BB - 1) : BB <= 15 ? (DB[YB] = BB + 15 << 10, DB[256 | YB] = BB + 15 << 10 | 32768, QB[YB] = 13, QB[256 | YB] = 13) : BB < 128 ? (DB[YB] = 31744, DB[256 | YB] = 64512, QB[YB] = 24, QB[256 | YB] = 24) : (DB[YB] = 31744, DB[256 | YB] = 64512, QB[YB] = 13, QB[256 | YB] = 13)
       }
-      const hH = new Uint32Array(2048),
-        tH = new Uint32Array(64),
-        zH = new Uint32Array(64);
-      for (let AH = 1; AH < 1024; ++AH) {
-        let HH = AH << 13,
-          BH = 0;
-        for (; 0 === (8388608 & HH);) HH <<= 1, BH -= 8388608;
-        HH &= -8388609, BH += 947912704, hH[AH] = HH | BH
+      const oB = new Uint32Array(2048),
+        jB = new Uint32Array(64),
+        yB = new Uint32Array(64);
+      for (let YB = 1; YB < 1024; ++YB) {
+        let BB = YB << 13,
+          OB = 0;
+        for (; 0 === (8388608 & BB);) BB <<= 1, OB -= 8388608;
+        BB &= -8388609, OB += 947912704, oB[YB] = BB | OB
       }
-      for (let AH = 1024; AH < 2048; ++AH) hH[AH] = 939524096 + (AH - 1024 << 13);
-      for (let AH = 1; AH < 31; ++AH) tH[AH] = AH << 23;
-      tH[31] = 1199570944, tH[32] = 2147483648;
-      for (let AH = 33; AH < 63; ++AH) tH[AH] = 2147483648 + (AH - 32 << 23);
-      tH[63] = 3347054592;
-      for (let AH = 1; AH < 64; ++AH) 32 !== AH && (zH[AH] = 1024);
-      return AH = {
-        floatView: BH,
-        uint32View: LH,
-        baseTable: rH,
-        shiftTable: SH,
-        mantissaTable: hH,
-        exponentTable: tH,
-        offsetTable: zH
-      }, AH
+      for (let YB = 1024; YB < 2048; ++YB) oB[YB] = 939524096 + (YB - 1024 << 13);
+      for (let YB = 1; YB < 31; ++YB) jB[YB] = YB << 23;
+      jB[31] = 1199570944, jB[32] = 2147483648;
+      for (let YB = 33; YB < 63; ++YB) jB[YB] = 2147483648 + (YB - 32 << 23);
+      jB[63] = 3347054592;
+      for (let YB = 1; YB < 64; ++YB) 32 !== YB && (yB[YB] = 1024);
+      return YB = {
+        floatView: OB,
+        uint32View: GB,
+        baseTable: DB,
+        shiftTable: QB,
+        mantissaTable: oB,
+        exponentTable: jB,
+        offsetTable: yB
+      }, YB
     }
-    const SH = 65504;
+    const QB = 65504;
 
-    function hH(HH) {
-      const BH = rH();
-      BH.floatView[0] = HH;
-      const LH = BH.uint32View[0],
-        AH = LH >> 23 & 511;
-      return BH.baseTable[AH] + ((8388607 & LH) >> BH.shiftTable[AH])
+    function oB(BB) {
+      const OB = DB();
+      OB.floatView[0] = BB;
+      const GB = OB.uint32View[0],
+        YB = GB >> 23 & 511;
+      return OB.baseTable[YB] + ((8388607 & GB) >> OB.shiftTable[YB])
     }
 
-    function tH(HH) {
-      const BH = rH();
-      return BH.uint32View[0] = BH.mantissaTable[BH.offsetTable[HH >> 10] + (1023 & HH)] + BH.exponentTable[HH >> 10], BH.floatView[0]
+    function jB(BB) {
+      const OB = DB();
+      return OB.uint32View[0] = OB.mantissaTable[OB.offsetTable[BB >> 10] + (1023 & BB)] + OB.exponentTable[BB >> 10], OB.floatView[0]
     }
   },
-  41353: (HH, BH, LH) => {
-    LH.d(BH, {
-      b: () => SH,
-      d: () => rH,
-      f: () => AH
+  41058: (BB, OB, GB) => {
+    GB.d(OB, {
+      e: () => QB,
+      g: () => DB,
+      k: () => YB
     });
-    const AH = HH => {
-        const BH = ArrayBuffer.isView(HH) ? new Uint8Array(HH.buffer, HH.byteOffset, HH.byteLength) : new Uint8Array(HH);
-        return "function" === typeof BH.toBase64 ? BH.toBase64() : function(HH) {
-          const BH = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
-          let LH, AH, rH, SH, hH, tH, zH, CH = "",
-            EH = 0;
-          for (; EH < HH.length;) LH = HH[EH++], AH = EH < HH.length ? HH[EH++] : Number.NaN, rH = EH < HH.length ? HH[EH++] : Number.NaN, SH = LH >> 2, hH = (3 & LH) << 4 | AH >> 4, tH = (15 & AH) << 2 | rH >> 6, zH = 63 & rH, isNaN(AH) ? tH = zH = 64 : isNaN(rH) && (zH = 64), CH += BH.charAt(SH) + BH.charAt(hH) + BH.charAt(tH) + BH.charAt(zH);
-          return CH
-        }(BH)
+    const YB = BB => {
+        const OB = ArrayBuffer.isView(BB) ? new Uint8Array(BB.buffer, BB.byteOffset, BB.byteLength) : new Uint8Array(BB);
+        return "function" === typeof OB.toBase64 ? OB.toBase64() : function(BB) {
+          const OB = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
+          let GB, YB, DB, QB, oB, jB, yB, JB = "",
+            MB = 0;
+          for (; MB < BB.length;) GB = BB[MB++], YB = MB < BB.length ? BB[MB++] : Number.NaN, DB = MB < BB.length ? BB[MB++] : Number.NaN, QB = GB >> 2, oB = (3 & GB) << 4 | YB >> 4, jB = (15 & YB) << 2 | DB >> 6, yB = 63 & DB, isNaN(YB) ? jB = yB = 64 : isNaN(DB) && (yB = 64), JB += OB.charAt(QB) + OB.charAt(oB) + OB.charAt(jB) + OB.charAt(yB);
+          return JB
+        }(OB)
       },
-      rH = HH => atob(HH),
-      SH = HH => "function" === typeof Uint8Array.fromBase64 ? Uint8Array.fromBase64(HH).buffer : function(HH) {
-        const BH = rH(HH),
-          LH = BH.length,
-          AH = new Uint8Array(new ArrayBuffer(LH));
-        for (let rH = 0; rH < LH; rH++) AH[rH] = BH.charCodeAt(rH);
-        return AH.buffer
-      }(HH)
+      DB = BB => atob(BB),
+      QB = BB => "function" === typeof Uint8Array.fromBase64 ? Uint8Array.fromBase64(BB).buffer : function(BB) {
+        const OB = DB(BB),
+          GB = OB.length,
+          YB = new Uint8Array(new ArrayBuffer(GB));
+        for (let DB = 0; DB < GB; DB++) YB[DB] = OB.charCodeAt(DB);
+        return YB.buffer
+      }(BB)
   },
-  41179: (HH, BH, LH) => {
-    LH.d(BH, {
-      d: () => rH,
-      f: () => hH
+  40899: (BB, OB, GB) => {
+    GB.d(OB, {
+      c: () => DB,
+      d: () => oB
     });
-    let AH = [];
-    class rH {
-      static SetImmediate(HH) {
-        0 === AH.length && setTimeout((() => {
-          const HH = AH;
-          AH = [];
-          for (const BH of HH) BH()
-        }), 1), AH.push(HH)
+    let YB = [];
+    class DB {
+      static SetImmediate(BB) {
+        0 === YB.length && setTimeout((() => {
+          const BB = YB;
+          YB = [];
+          for (const OB of BB) OB()
+        }), 1), YB.push(BB)
       }
     }
 
-    function SH(HH, BH, LH) {
+    function QB(BB, OB, GB) {
       try {
-        if (HH()) return BH(), !0
-      } catch (AH) {
-        return LH?.(AH), !0
+        if (BB()) return OB(), !0
+      } catch (YB) {
+        return GB?.(YB), !0
       }
       return !1
     }
-    const hH = function(HH, BH, LH) {
-      let AH = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 16,
-        rH = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 3e4,
-        hH = arguments.length > 6 ? arguments[6] : void 0;
-      if ((!(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5]) && SH(HH, BH, LH)) return null;
-      const tH = setInterval((() => {
-        SH(HH, BH, LH) ? clearInterval(tH) : (rH -= AH, rH < 0 && (clearInterval(tH), LH?.(new Error("Operation timed out after maximum retries. " + (hH || "")), !0)))
-      }), AH);
-      return () => clearInterval(tH)
+    const oB = function(BB, OB, GB) {
+      let YB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 16,
+        DB = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 3e4,
+        oB = arguments.length > 6 ? arguments[6] : void 0;
+      if ((!(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5]) && QB(BB, OB, GB)) return null;
+      const jB = setInterval((() => {
+        QB(BB, OB, GB) ? clearInterval(jB) : (DB -= YB, DB < 0 && (clearInterval(jB), GB?.(new Error("Operation timed out after maximum retries. " + (oB || "")), !0)))
+      }), YB);
+      return () => clearInterval(jB)
     }
   },
-  41339: (HH, BH, LH) => {
-    LH.d(BH, {
-      d: () => AH
+  41041: (BB, OB, GB) => {
+    GB.d(OB, {
+      e: () => YB
     });
-    class AH {
+    class YB {
       constructor() {
         this._xhr = "undefined" !== typeof _native && _native.XMLHttpRequest ? new _native.XMLHttpRequest : new XMLHttpRequest, this._requestURL = ""
       }
       static get IsCustomRequestAvailable() {
-        return Object.keys(AH.CustomRequestHeaders).length > 0 || AH.CustomRequestModifiers.length > 0
+        return Object.keys(YB.CustomRequestHeaders).length > 0 || YB.CustomRequestModifiers.length > 0
       }
-      static _CleanUrl(HH) {
-        return HH = (HH = HH.replace("file:http:", "http:")).replace("file:https:", "https:")
+      static _CleanUrl(BB) {
+        return BB = (BB = BB.replace("file:http:", "http:")).replace("file:https:", "https:")
       }
-      static _ShouldSkipRequestModifications(HH) {
-        return AH.SkipRequestModificationForBabylonCDN && (HH.includes("preview.babylonjs.com") || HH.includes("cdn.babylonjs.com"))
+      static _ShouldSkipRequestModifications(BB) {
+        return YB.SkipRequestModificationForBabylonCDN && (BB.includes("preview.babylonjs.com") || BB.includes("cdn.babylonjs.com"))
       }
-      static _CollectCustomizations(HH) {
-        const BH = {
+      static _CollectCustomizations(BB) {
+        const OB = {
           ...arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}
         };
-        if (AH._ShouldSkipRequestModifications(HH)) return {
-          url: HH,
-          headers: BH
+        if (YB._ShouldSkipRequestModifications(BB)) return {
+          url: BB,
+          headers: OB
         };
-        for (const rH in AH.CustomRequestHeaders) {
-          const HH = AH.CustomRequestHeaders[rH];
-          HH && (BH[rH] = HH)
+        for (const DB in YB.CustomRequestHeaders) {
+          const BB = YB.CustomRequestHeaders[DB];
+          BB && (OB[DB] = BB)
         }
-        const LH = {
-          setRequestHeader: (HH, LH) => {
-            BH[HH] = LH
+        const GB = {
+          setRequestHeader: (BB, GB) => {
+            OB[BB] = GB
           }
         };
-        for (const rH of AH.CustomRequestModifiers) {
-          if (AH._ShouldSkipRequestModifications(HH)) break;
-          const BH = rH(LH, HH);
-          "string" === typeof BH && (HH = BH)
+        for (const DB of YB.CustomRequestModifiers) {
+          if (YB._ShouldSkipRequestModifications(BB)) break;
+          const OB = DB(GB, BB);
+          "string" === typeof OB && (BB = OB)
         }
         return {
-          url: HH,
-          headers: BH
+          url: BB,
+          headers: OB
         }
       }
-      static async FetchAsync(HH) {
-        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        const LH = BH.method ?? "GET";
+      static async FetchAsync(BB) {
+        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        const GB = OB.method ?? "GET";
         if ("undefined" !== typeof fetch) {
           const {
-            url: rH,
-            headers: SH
-          } = AH._CollectCustomizations(AH._CleanUrl(HH), BH.headers ?? {});
-          return await fetch(rH, {
-            method: LH,
-            headers: SH,
-            body: BH.body ?? void 0
+            url: DB,
+            headers: QB
+          } = YB._CollectCustomizations(YB._CleanUrl(BB), OB.headers ?? {});
+          return await fetch(DB, {
+            method: GB,
+            headers: QB,
+            body: OB.body ?? void 0
           })
         }
-        return await new Promise(((rH, SH) => {
-          const hH = new AH;
-          hH.responseType = "arraybuffer", hH.addEventListener("readystatechange", (() => {
-            if (4 === hH.readyState)
-              if (hH.status >= 200 && hH.status < 300) {
-                const HH = "undefined" !== typeof Headers ? new Headers : void 0,
-                  BH = hH.getResponseHeader("Content-Type");
-                BH && HH && HH.set("Content-Type", BH), "undefined" !== typeof Response ? rH(new Response(hH.response, {
-                  status: hH.status,
-                  statusText: hH.statusText,
-                  headers: HH
-                })) : rH({
+        return await new Promise(((DB, QB) => {
+          const oB = new YB;
+          oB.responseType = "arraybuffer", oB.addEventListener("readystatechange", (() => {
+            if (4 === oB.readyState)
+              if (oB.status >= 200 && oB.status < 300) {
+                const BB = "undefined" !== typeof Headers ? new Headers : void 0,
+                  OB = oB.getResponseHeader("Content-Type");
+                OB && BB && BB.set("Content-Type", OB), "undefined" !== typeof Response ? DB(new Response(oB.response, {
+                  status: oB.status,
+                  statusText: oB.statusText,
+                  headers: BB
+                })) : DB({
                   ok: !0,
-                  status: hH.status,
-                  statusText: hH.statusText,
+                  status: oB.status,
+                  statusText: oB.statusText,
                   headers: {
-                    get: HH => hH.getResponseHeader(HH)
+                    get: BB => oB.getResponseHeader(BB)
                   },
-                  arrayBuffer: async () => await Promise.resolve(hH.response)
+                  arrayBuffer: async () => await Promise.resolve(oB.response)
                 })
-              } else SH(new Error(`HTTP ${hH.status} loading '${hH.requestURL}': ${hH.statusText}`))
-          })), hH.open(LH, HH, BH.headers), hH.send(BH.body ?? null)
+              } else QB(new Error(`HTTP ${oB.status} loading '${oB.requestURL}': ${oB.statusText}`))
+          })), oB.open(GB, BB, OB.headers), oB.send(OB.body ?? null)
         }))
       }
       get requestURL() {
@@ -1445,8 +1445,8 @@ export const modules = {
       get onprogress() {
         return this._xhr.onprogress
       }
-      set onprogress(HH) {
-        this._xhr.onprogress = HH
+      set onprogress(BB) {
+        this._xhr.onprogress = BB
       }
       get readyState() {
         return this._xhr.readyState
@@ -1469,44 +1469,44 @@ export const modules = {
       get responseType() {
         return this._xhr.responseType
       }
-      set responseType(HH) {
-        this._xhr.responseType = HH
+      set responseType(BB) {
+        this._xhr.responseType = BB
       }
       get timeout() {
         return this._xhr.timeout
       }
-      set timeout(HH) {
-        this._xhr.timeout = HH
+      set timeout(BB) {
+        this._xhr.timeout = BB
       }
-      addEventListener(HH, BH, LH) {
-        this._xhr.addEventListener(HH, BH, LH)
+      addEventListener(BB, OB, GB) {
+        this._xhr.addEventListener(BB, OB, GB)
       }
-      removeEventListener(HH, BH, LH) {
-        this._xhr.removeEventListener(HH, BH, LH)
+      removeEventListener(BB, OB, GB) {
+        this._xhr.removeEventListener(BB, OB, GB)
       }
       abort() {
         this._xhr.abort()
       }
-      send(HH) {
-        this._xhr.send(HH)
+      send(BB) {
+        this._xhr.send(BB)
       }
-      open(HH, BH, LH) {
+      open(BB, OB, GB) {
         const {
-          url: rH,
-          headers: SH
-        } = AH._CollectCustomizations(BH, LH);
-        this._requestURL = AH._CleanUrl(rH), this._xhr.open(HH, this._requestURL, !0);
-        for (const AH in SH) this._xhr.setRequestHeader(AH, SH[AH])
+          url: DB,
+          headers: QB
+        } = YB._CollectCustomizations(OB, GB);
+        this._requestURL = YB._CleanUrl(DB), this._xhr.open(BB, this._requestURL, !0);
+        for (const YB in QB) this._xhr.setRequestHeader(YB, QB[YB])
       }
-      setRequestHeader(HH, BH) {
-        this._xhr.setRequestHeader(HH, BH)
+      setRequestHeader(BB, OB) {
+        this._xhr.setRequestHeader(BB, OB)
       }
-      getResponseHeader(HH) {
-        return this._xhr.getResponseHeader(HH)
+      getResponseHeader(BB) {
+        return this._xhr.getResponseHeader(BB)
       }
     }
-    AH.CustomRequestHeaders = {}, AH.CustomRequestModifiers = new Array, AH.SkipRequestModificationForBabylonCDN = !0
+    YB.CustomRequestHeaders = {}, YB.CustomRequestModifiers = new Array, YB.SkipRequestModificationForBabylonCDN = !0
   }
 };
 Object.freeze(modules);
-for (const HH in modules) Object.freeze(modules[HH]);
+for (const BB in modules) Object.freeze(modules[BB]);

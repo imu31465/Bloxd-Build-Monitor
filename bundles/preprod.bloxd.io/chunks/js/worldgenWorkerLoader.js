@@ -1,28 +1,28 @@
 export const id = 83;
 export const ids = [83];
 export const modules = {
-  37297: (HH, BH, LH) => {
-    LH.d(BH, {
-      b: () => rH
+  37085: (BB, OB, GB) => {
+    GB.d(OB, {
+      d: () => DB
     });
-    const AH = {
-      wait: function(HH) {
-        return new Promise((BH => {
-          setTimeout(BH, HH)
+    const YB = {
+      wait: function(BB) {
+        return new Promise((OB => {
+          setTimeout(OB, BB)
         }))
       },
       stallMs: 2e4
     };
-    class rH {
-      constructor(HH) {
-        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-          LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : AH;
-        this.url = HH, this.options = BH, this.timing = LH, this.fetched = null, this.fetchAbort = null, this.scriptUrl = void 0, this.scriptUrl = HH
+    class DB {
+      constructor(BB) {
+        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+          GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : YB;
+        this.url = BB, this.options = OB, this.timing = GB, this.fetched = null, this.fetchAbort = null, this.scriptUrl = void 0, this.scriptUrl = BB
       }
       ready() {
         if (null === this.fetched) {
-          const HH = new AbortController;
-          this.fetchAbort = HH, this.fetched = this.fetchWithRetries(HH.signal).then((BH => (this.fetchAbort === HH && (this.fetchAbort = null), BH)))
+          const BB = new AbortController;
+          this.fetchAbort = BB, this.fetched = this.fetchWithRetries(BB.signal).then((OB => (this.fetchAbort === BB && (this.fetchAbort = null), OB)))
         }
         return this.fetched
       }
@@ -38,86 +38,86 @@ export const modules = {
       start() {
         return new Worker(this.scriptUrl, this.options)
       }
-      async fetchWithRetries(HH) {
-        for (let BH = 0;; BH++) {
-          const LH = new URL(this.url);
-          if (BH > 0 && LH.searchParams.set("cache-bust", `${Date.now()}-${BH}`), await this.fetchWhole(LH, HH)) return this.scriptUrl = LH, !0;
-          if (BH >= 3 || HH.aborted) return !1;
-          if (await this.timing.wait(500 * 2 ** BH), HH.aborted) return !1
+      async fetchWithRetries(BB) {
+        for (let OB = 0;; OB++) {
+          const GB = new URL(this.url);
+          if (OB > 0 && GB.searchParams.set("cache-bust", `${Date.now()}-${OB}`), await this.fetchWhole(GB, BB)) return this.scriptUrl = GB, !0;
+          if (OB >= 3 || BB.aborted) return !1;
+          if (await this.timing.wait(500 * 2 ** OB), BB.aborted) return !1
         }
       }
-      async fetchWhole(HH, BH) {
-        const LH = new AbortController;
-        let AH;
-        const rH = () => {
-            clearTimeout(AH), AH = setTimeout((() => {
-              LH.abort()
+      async fetchWhole(BB, OB) {
+        const GB = new AbortController;
+        let YB;
+        const DB = () => {
+            clearTimeout(YB), YB = setTimeout((() => {
+              GB.abort()
             }), this.timing.stallMs)
           },
-          SH = () => {
-            LH.abort()
+          QB = () => {
+            GB.abort()
           };
-        BH.addEventListener("abort", SH, {
+        OB.addEventListener("abort", QB, {
           once: !0
-        }), rH();
+        }), DB();
         try {
-          var hH;
-          const BH = await fetch(HH, {
-            signal: LH.signal
+          var oB;
+          const OB = await fetch(BB, {
+            signal: GB.signal
           });
-          if (!BH.ok) return !1;
-          const AH = null === (hH = BH.body) || void 0 === hH ? void 0 : hH.getReader();
-          if (!AH) return !1;
+          if (!OB.ok) return !1;
+          const YB = null === (oB = OB.body) || void 0 === oB ? void 0 : oB.getReader();
+          if (!YB) return !1;
           for (;;) {
             const {
-              done: HH
-            } = await AH.read();
-            if (HH) return !0;
-            rH()
+              done: BB
+            } = await YB.read();
+            if (BB) return !0;
+            DB()
           }
         } catch {
           return !1
         } finally {
-          clearTimeout(AH), BH.removeEventListener("abort", SH)
+          clearTimeout(YB), OB.removeEventListener("abort", QB)
         }
       }
     }
   },
-  54598: (HH, BH, LH) => {
-    LH.r(BH), LH.d(BH, {
-      createWorldgenWorker: () => EH,
-      prefetchWorldgenWorker: () => tH,
-      stopWorldgenWorkerPrefetch: () => zH,
-      worldgenWorkerReady: () => hH,
-      worldgenWorkerScriptUrl: () => CH
+  54103: (BB, OB, GB) => {
+    GB.r(OB), GB.d(OB, {
+      createWorldgenWorker: () => MB,
+      prefetchWorldgenWorker: () => jB,
+      stopWorldgenWorkerPrefetch: () => yB,
+      worldgenWorkerReady: () => oB,
+      worldgenWorkerScriptUrl: () => JB
     });
-    const AH = new(LH(37297).b)(new URL(LH.p + LH.u(82), LH.b), {
+    const YB = new(GB(37085).d)(new URL(GB.p + GB.u(82), GB.b), {
       name: "worldgenWorker",
       type: "module"
     });
-    let rH = !1,
-      SH = !1;
+    let DB = !1,
+      QB = !1;
 
-    function hH() {
-      return rH = !0, AH.ready()
+    function oB() {
+      return DB = !0, YB.ready()
     }
 
-    function tH() {
-      AH.ready()
+    function jB() {
+      YB.ready()
     }
 
-    function zH() {
-      rH || SH || (SH = !0, AH.cancel())
+    function yB() {
+      DB || QB || (QB = !0, YB.cancel())
     }
 
-    function CH() {
-      return AH.href
+    function JB() {
+      return YB.href
     }
 
-    function EH() {
-      return AH.start()
+    function MB() {
+      return YB.start()
     }
   }
 };
 Object.freeze(modules);
-for (const HH in modules) Object.freeze(modules[HH]);
+for (const BB in modules) Object.freeze(modules[BB]);

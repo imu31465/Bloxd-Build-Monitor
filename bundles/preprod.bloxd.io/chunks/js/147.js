@@ -1,135 +1,135 @@
 export const id = 147;
 export const ids = [147, 214];
 export const modules = {
-  34993: (HH, BH, LH) => {
-    LH.d(BH, {
-      d: () => SH
+  34794: (BB, OB, GB) => {
+    GB.d(OB, {
+      d: () => QB
     });
-    var AH = LH(317),
-      rH = LH(34996);
+    var YB = GB(353),
+      DB = GB(34799);
 
-    function SH(HH, BH, LH) {
-      const SH = Object.entries(BH).sort(((HH, BH) => BH[1] - HH[1])),
-        hH = (0, AH.pb)(HH);
-      hH.push(HH ? "\n\n" : "\n");
-      for (const [rH, uH] of SH) {
-        var tH, zH, CH;
-        const HH = null !== (tH = null === LH || void 0 === LH || null === (zH = LH[rH]) || void 0 === zH ? void 0 : zH.icon) && void 0 !== tH ? tH : `${rH} Enchantment`;
-        hH.push({
-          icon: HH,
+    function QB(BB, OB, GB) {
+      const QB = Object.entries(OB).sort(((BB, OB) => OB[1] - BB[1])),
+        oB = (0, YB.zb)(BB);
+      oB.push(BB ? "\n\n" : "\n");
+      for (const [DB, pB] of QB) {
+        var jB, yB, JB;
+        const BB = null !== (jB = null === GB || void 0 === GB || null === (yB = GB[DB]) || void 0 === yB ? void 0 : yB.icon) && void 0 !== jB ? jB : `${DB} Enchantment`;
+        oB.push({
+          icon: BB,
           style: {
             fontSize: "1.5rem"
           }
-        }), hH.push({
-          str: `${rH} ${null!==(CH=(0,AH.T)(uH))&&void 0!==CH?CH:uH}\n`
+        }), oB.push({
+          str: `${DB} ${null!==(JB=(0,YB.S)(pB))&&void 0!==JB?JB:pB}\n`
         })
       }
-      hH.push({
+      oB.push({
         str: "\n"
       });
-      for (const [AH, uH] of SH) {
-        var EH, XH, GH, YH;
-        const HH = null !== (EH = null === LH || void 0 === LH || null === (XH = LH[AH]) || void 0 === XH ? void 0 : XH.icon) && void 0 !== EH ? EH : `${AH} Enchantment`,
-          BH = null !== (GH = null === LH || void 0 === LH || null === (YH = LH[AH]) || void 0 === YH ? void 0 : YH.description) && void 0 !== GH ? GH : (0, rH.k)(AH);
-        hH.push({
-          icon: HH,
+      for (const [YB, pB] of QB) {
+        var MB, PB, zB, lB;
+        const BB = null !== (MB = null === GB || void 0 === GB || null === (PB = GB[YB]) || void 0 === PB ? void 0 : PB.icon) && void 0 !== MB ? MB : `${YB} Enchantment`,
+          OB = null !== (zB = null === GB || void 0 === GB || null === (lB = GB[YB]) || void 0 === lB ? void 0 : lB.description) && void 0 !== zB ? zB : (0, DB.h)(YB);
+        oB.push({
+          icon: BB,
           style: {
             fontSize: "1.25rem",
             opacity: .75
           }
-        }), hH.push({
-          str: BH,
+        }), oB.push({
+          str: OB,
           style: {
             fontSize: "0.8em",
             fontWeight: "normal",
             opacity: .75
           }
-        }), hH.push({
+        }), oB.push({
           str: "\n"
         })
       }
-      return hH
+      return oB
     }
   },
-  34999: (HH, BH, LH) => {
-    LH.d(BH, {
-      b: () => CH,
-      c: () => xH,
-      f: () => WH,
-      j: () => zH,
-      l: () => MH,
-      n: () => EH,
-      p: () => GH,
-      s: () => QH,
-      t: () => XH
+  34807: (BB, OB, GB) => {
+    GB.d(OB, {
+      A: () => PB,
+      d: () => JB,
+      f: () => RB,
+      j: () => ZB,
+      m: () => yB,
+      n: () => NB,
+      p: () => MB,
+      t: () => zB,
+      x: () => qB
     });
-    var AH = LH(304),
-      rH = LH(619),
-      SH = LH(317),
-      hH = LH(4608),
-      tH = LH(34993);
+    var YB = GB(331),
+      DB = GB(641),
+      QB = GB(353),
+      oB = GB(4634),
+      jB = GB(34794);
 
-    function zH(HH, BH) {
-      var LH;
+    function yB(BB, OB) {
+      var GB;
       let {
-        player: AH,
-        chestOrCreative: rH
-      } = HH;
-      var SH;
-      return BH < AH.length ? null !== (SH = AH[BH]) && void 0 !== SH ? SH : null : null !== (LH = rH[BH - AH.length]) && void 0 !== LH ? LH : null
+        player: YB,
+        chestOrCreative: DB
+      } = BB;
+      var QB;
+      return OB < YB.length ? null !== (QB = YB[OB]) && void 0 !== QB ? QB : null : null !== (GB = DB[OB - YB.length]) && void 0 !== GB ? GB : null
     }
 
-    function CH(HH) {
-      var BH;
-      return null !== (BH = HH.amount) && void 0 !== BH ? BH : 0
+    function JB(BB) {
+      var OB;
+      return null !== (OB = BB.amount) && void 0 !== OB ? OB : 0
     }
 
-    function EH(HH) {
-      return 0 === HH.button || void 0 === HH.button
+    function MB(BB) {
+      return 0 === BB.button || void 0 === BB.button
     }
 
-    function XH(HH) {
-      return !!HH.shiftKey
+    function PB(BB) {
+      return !!BB.shiftKey
     }
 
-    function GH(HH) {
-      return "touches" in HH || "touch" === HH.pointerType || "pen" === HH.pointerType
+    function zB(BB) {
+      return "touches" in BB || "touch" === BB.pointerType || "pen" === BB.pointerType
     }
-    const YH = new Set,
-      uH = 50;
+    const lB = new Set,
+      pB = 50;
 
-    function QH(HH, BH) {
-      var LH;
-      const AH = null === (LH = HH[BH]) || void 0 === LH ? void 0 : LH.displayName;
-      return (0, rH.M)(AH) ? "string" !== typeof BH ? "" : (!YH.has(BH) && YH.size < uH && (YH.add(BH), console.warn(`No item called "${BH}", so its hover shows the name as given`)), BH) : AH
+    function qB(BB, OB) {
+      var GB;
+      const YB = null === (GB = BB[OB]) || void 0 === GB ? void 0 : GB.displayName;
+      return (0, DB.Q)(YB) ? "string" !== typeof OB ? "" : (!lB.has(OB) && lB.size < pB && (lB.add(OB), console.warn(`No item called "${OB}", so its hover shows the name as given`)), OB) : YB
     }
 
-    function WH(HH, BH, LH) {
-      var zH, CH, EH, XH, GH, YH, uH, WH, MH, xH, vH, PH, TH, UH;
-      const VH = HH.attributes,
-        OH = null !== (zH = null === (CH = BH[HH.name]) || void 0 === CH ? void 0 : CH.rootName) && void 0 !== zH ? zH : HH.name,
-        bH = null !== (EH = null !== (XH = VH.customDisplayName) && void 0 !== XH ? XH : null === (GH = BH[HH.name]) || void 0 === GH ? void 0 : GH.displayName) && void 0 !== EH ? EH : QH(BH, OH);
-      let kH = bH;
-      const mH = null === (YH = VH.customAttributes) || void 0 === YH ? void 0 : YH.enchantmentTier;
-      mH && (kH = (0, SH.pb)(bH, {
-        colour: SH.lb[mH]
+    function ZB(BB, OB, GB) {
+      var yB, JB, MB, PB, zB, lB, pB, ZB, NB, RB, WB, AB, VB, SB;
+      const nB = BB.attributes,
+        UB = null !== (yB = null === (JB = OB[BB.name]) || void 0 === JB ? void 0 : JB.rootName) && void 0 !== yB ? yB : BB.name,
+        fB = null !== (MB = null !== (PB = nB.customDisplayName) && void 0 !== PB ? PB : null === (zB = OB[BB.name]) || void 0 === zB ? void 0 : zB.displayName) && void 0 !== MB ? MB : qB(OB, UB);
+      let kB = fB;
+      const dB = null === (lB = nB.customAttributes) || void 0 === lB ? void 0 : lB.enchantmentTier;
+      dB && (kB = (0, QB.zb)(fB, {
+        colour: QB.ub[dB]
       }));
-      const oH = null !== (uH = null !== (WH = null !== (MH = function(HH, BH) {
-        var LH;
-        if (void 0 === HH || null !== (LH = BH.customAttributes) && void 0 !== LH && LH.author) return HH;
-        const rH = (0, AH.tc)(HH);
-        return rH.every((HH => "string" === typeof HH)) ? HH : rH.map((HH => "string" === typeof HH ? HH : {
-          icon: HH.icon,
+      const KB = null !== (pB = null !== (ZB = null !== (NB = function(BB, OB) {
+        var GB;
+        if (void 0 === BB || null !== (GB = OB.customAttributes) && void 0 !== GB && GB.author) return BB;
+        const DB = (0, YB.hc)(BB);
+        return DB.every((BB => "string" === typeof BB)) ? BB : DB.map((BB => "string" === typeof BB ? BB : {
+          icon: BB.icon,
           style: {
             fontSize: "1.5em"
           }
         }))
-      }(VH.customDescription, VH)) && void 0 !== MH ? MH : null === (xH = BH[HH.name]) || void 0 === xH ? void 0 : xH.description) && void 0 !== WH ? WH : null === (vH = BH[OH]) || void 0 === vH ? void 0 : vH.description) && void 0 !== uH ? uH : "";
-      let IH = oH;
-      if (null !== (PH = VH.customAttributes) && void 0 !== PH && PH.enchantments) IH = (0, tH.d)(oH, VH.customAttributes.enchantments, VH.customAttributes.enchantmentData);
-      else if (LH[OH]) IH = (0, SH.pb)(oH), IH.push({
+      }(nB.customDescription, nB)) && void 0 !== NB ? NB : null === (RB = OB[BB.name]) || void 0 === RB ? void 0 : RB.description) && void 0 !== ZB ? ZB : null === (WB = OB[UB]) || void 0 === WB ? void 0 : WB.description) && void 0 !== pB ? pB : "";
+      let uB = KB;
+      if (null !== (AB = nB.customAttributes) && void 0 !== AB && AB.enchantments) uB = (0, jB.d)(KB, nB.customAttributes.enchantments, nB.customAttributes.enchantmentData);
+      else if (GB[UB]) uB = (0, QB.zb)(KB), uB.push({
         str: "\n"
-      }), IH.push({
+      }), uB.push({
         str: "Enchantable",
         style: {
           fontSize: "0.8em",
@@ -137,874 +137,874 @@ export const modules = {
           opacity: .4
         }
       });
-      else if (null !== (TH = VH.customAttributes) && void 0 !== TH && TH.mobSettings) {
-        var fH, lH;
-        const HH = VH.customAttributes.mobSettings;
-        var KH, cH;
-        if (IH = [], (0, rH.M)(VH.customAttributes.health) || (IH.push({
+      else if (null !== (VB = nB.customAttributes) && void 0 !== VB && VB.mobSettings) {
+        var mB, IB;
+        const BB = nB.customAttributes.mobSettings;
+        var FB, iB;
+        if (uB = [], (0, DB.Q)(nB.customAttributes.health) || (uB.push({
             str: "\n"
-          }), IH.push({
+          }), uB.push({
             icon: "Health",
             style: {
               fontSize: "1.5em"
             }
-          }), IH.push({
+          }), uB.push({
             str: " "
-          }), IH.push({
-            str: VH.customAttributes.health.toString()
-          }), (0, rH.M)(HH.maxHealth) || (IH.push({
+          }), uB.push({
+            str: nB.customAttributes.health.toString()
+          }), (0, DB.Q)(BB.maxHealth) || (uB.push({
             str: "/"
-          }), IH.push({
-            str: HH.maxHealth.toString()
-          }))), !(0, rH.M)(HH.attackDamage) && HH.attackDamage > 0 && (IH.push({
+          }), uB.push({
+            str: BB.maxHealth.toString()
+          }))), !(0, DB.Q)(BB.attackDamage) && BB.attackDamage > 0 && (uB.push({
             str: "\n"
-          }), IH.push({
+          }), uB.push({
             icon: "Iron Sword",
             style: {
               fontSize: "1.5em"
             }
-          }), IH.push({
+          }), uB.push({
             str: " "
-          }), IH.push({
-            str: HH.attackDamage.toString()
-          })), !(0, rH.M)(HH.secondaryAttackDamage) && HH.secondaryAttackDamage > 0 && (IH.push({
+          }), uB.push({
+            str: BB.attackDamage.toString()
+          })), !(0, DB.Q)(BB.secondaryAttackDamage) && BB.secondaryAttackDamage > 0 && (uB.push({
             str: "\n"
-          }), IH.push({
+          }), uB.push({
             icon: "Stone Crossbow",
             style: {
               fontSize: "1.5em"
             }
-          }), IH.push({
+          }), uB.push({
             str: " "
-          }), IH.push({
-            str: HH.secondaryAttackDamage.toString()
-          })), (0, rH.M)(HH.baseRunningSpeed) || (IH.push({
+          }), uB.push({
+            str: BB.secondaryAttackDamage.toString()
+          })), (0, DB.Q)(BB.baseRunningSpeed) || (uB.push({
             str: "\n"
-          }), IH.push({
+          }), uB.push({
             icon: "Speed",
             style: {
               fontSize: "1.5em"
             }
-          }), IH.push({
+          }), uB.push({
             str: " "
-          }), IH.push({
-            str: HH.baseRunningSpeed.toFixed(2)
-          })), "Saddled" === HH.metaInfo) IH.push({
+          }), uB.push({
+            str: BB.baseRunningSpeed.toFixed(2)
+          })), "Saddled" === BB.metaInfo) uB.push({
           str: "\n"
-        }), IH.push({
+        }), uB.push({
           str: {
             translationKey: "general:has"
           }
-        }), IH.push({
+        }), uB.push({
           str: " "
-        }), IH.push({
-          icon: null !== (KH = null === (cH = HH.tameInfo) || void 0 === cH ? void 0 : cH.saddleItemName) && void 0 !== KH ? KH : "Saddle",
+        }), uB.push({
+          icon: null !== (FB = null === (iB = BB.tameInfo) || void 0 === iB ? void 0 : iB.saddleItemName) && void 0 !== FB ? FB : "Saddle",
           style: {
             fontSize: "1.5em"
           }
         });
-        if (IH.push({
+        if (uB.push({
             str: "\n"
-          }), IH.push({
+          }), uB.push({
             str: "\n"
-          }), HH.petInfo && null !== (fH = HH.tameInfo) && void 0 !== fH && fH.supportsFriendship) {
-          const BH = hH.e.getIconsFromFriendshipPoints(HH.petInfo.friendshipPoints);
-          for (const HH of BH) IH.push({
-            icon: HH,
+          }), BB.petInfo && null !== (mB = BB.tameInfo) && void 0 !== mB && mB.supportsFriendship) {
+          const OB = oB.d.getIconsFromFriendshipPoints(BB.petInfo.friendshipPoints);
+          for (const BB of OB) uB.push({
+            icon: BB,
             style: {
               fontSize: "1.5em"
             }
           });
-          IH.push({
+          uB.push({
             str: "\n"
           });
-          const LH = hH.e.getMobHungerLevel(HH.petInfo.lastFedAt);
-          for (const HH of hH.e.hungerLevelIcons[LH]) IH.push({
-            icon: HH,
+          const GB = oB.d.getMobHungerLevel(BB.petInfo.lastFedAt);
+          for (const BB of oB.d.hungerLevelIcons[GB]) uB.push({
+            icon: BB,
             style: {
               fontSize: "1.5em"
             }
           });
-          IH.push({
+          uB.push({
             str: " "
-          }), IH.push({
-            str: hH.e.hungerLevelTranslations[LH],
+          }), uB.push({
+            str: oB.d.hungerLevelTranslations[GB],
             style: {
               fontWeight: "bolder"
             }
           })
         }
-        if (HH.tameInfo && null !== (lH = HH.tameInfo) && void 0 !== lH && lH.supportsFriendship) {
-          var eH, qH;
-          let BH = null !== (eH = HH.tameInfo.likedFoods) && void 0 !== eH ? eH : [];
-          IH.push({
+        if (BB.tameInfo && null !== (IB = BB.tameInfo) && void 0 !== IB && IB.supportsFriendship) {
+          var LB, gB;
+          let OB = null !== (LB = BB.tameInfo.likedFoods) && void 0 !== LB ? LB : [];
+          uB.push({
             str: "\n"
-          }), IH.push({
+          }), uB.push({
             icon: "Pixelated Heart",
             style: {
               fontSize: "1.5em",
-              color: hH.e.feedTextColours[hH.e.MobFoodType.Superliked]
+              color: oB.d.feedTextColours[oB.d.MobFoodType.Superliked]
             }
-          }), IH.push({
+          }), uB.push({
             str: " "
-          }), null !== (qH = HH.petInfo) && void 0 !== qH && qH.superlikedFoodKnown ? (IH.push({
-            icon: HH.petInfo.superlikedFood,
+          }), null !== (gB = BB.petInfo) && void 0 !== gB && gB.superlikedFoodKnown ? (uB.push({
+            icon: BB.petInfo.superlikedFood,
             style: {
               fontSize: "1.5em"
             }
-          }), BH = BH.filter((BH => BH !== HH.petInfo.superlikedFood))) : IH.push({
+          }), OB = OB.filter((OB => OB !== BB.petInfo.superlikedFood))) : uB.push({
             icon: "Question Mark",
             style: {
               fontSize: "1.5em"
             }
-          }), IH.push({
+          }), uB.push({
             str: "\n"
-          }), IH.push({
+          }), uB.push({
             icon: "Pixelated Heart",
             style: {
               fontSize: "1.5em",
-              color: hH.e.feedTextColours[hH.e.MobFoodType.Liked]
+              color: oB.d.feedTextColours[oB.d.MobFoodType.Liked]
             }
-          }), IH.push({
+          }), uB.push({
             str: " "
           });
-          for (const HH of BH) IH.push({
-            icon: HH,
+          for (const BB of OB) uB.push({
+            icon: BB,
             style: {
               fontSize: "1.5em"
             }
           });
-          IH.push({
+          uB.push({
             str: "\n"
-          }), IH.push({
+          }), uB.push({
             icon: "Pixelated Heart",
             style: {
               fontSize: "1.5em",
-              color: hH.e.feedTextColours[hH.e.MobFoodType.Neutral]
+              color: oB.d.feedTextColours[oB.d.MobFoodType.Neutral]
             }
-          }), IH.push({
+          }), uB.push({
             str: " "
           });
-          for (const LH of null !== (gH = HH.tameInfo.neutralFoods) && void 0 !== gH ? gH : []) {
-            var gH;
-            IH.push({
-              icon: LH,
+          for (const GB of null !== (rB = BB.tameInfo.neutralFoods) && void 0 !== rB ? rB : []) {
+            var rB;
+            uB.push({
+              icon: GB,
               style: {
                 fontSize: "1.5em"
               }
             })
           }
-          IH.push({
+          uB.push({
             str: "\n"
-          }), IH.push({
+          }), uB.push({
             icon: "Pixelated Heart",
             style: {
               fontSize: "1.5em",
-              color: hH.e.feedTextColours[hH.e.MobFoodType.Disliked]
+              color: oB.d.feedTextColours[oB.d.MobFoodType.Disliked]
             }
-          }), IH.push({
+          }), uB.push({
             str: " "
           });
-          for (const LH of null !== (NH = HH.tameInfo.dislikedFoods) && void 0 !== NH ? NH : []) {
-            var NH;
-            IH.push({
-              icon: LH,
+          for (const GB of null !== (XB = BB.tameInfo.dislikedFoods) && void 0 !== XB ? XB : []) {
+            var XB;
+            uB.push({
+              icon: GB,
               style: {
                 fontSize: "1.5em"
               }
             })
           }
         }
-        IH.length > 0 ? (IH.shift(), IH.unshift(...(0, SH.pb)(oH))) : IH = (0, SH.pb)(oH)
+        uB.length > 0 ? (uB.shift(), uB.unshift(...(0, QB.zb)(KB))) : uB = (0, QB.zb)(KB)
       }
       return {
-        name: kH,
-        desc: IH,
-        fontStyle: null !== (UH = VH.customAttributes) && void 0 !== UH && UH.author ? "italic" : "normal"
+        name: kB,
+        desc: uB,
+        fontStyle: null !== (SB = nB.customAttributes) && void 0 !== SB && SB.author ? "italic" : "normal"
       }
     }
 
-    function MH(HH, BH, LH, AH) {
-      const rH = zH(HH, LH),
-        SH = zH(HH, AH);
-      if (!rH) return !1;
-      const hH = BH[rH.name].armourReduction,
-        tH = BH[SH.name].armourReduction;
-      if (tH === hH) {
-        var CH, EH, XH, GH;
-        const HH = null !== (CH = null === (EH = rH.attributes.customAttributes) || void 0 === EH ? void 0 : EH.enchantmentTier) && void 0 !== CH ? CH : "Tier 0",
-          BH = null !== (XH = null === (GH = SH.attributes.customAttributes) || void 0 === GH ? void 0 : GH.enchantmentTier) && void 0 !== XH ? XH : "Tier 0";
-        return parseInt(HH.replace("Tier ", "")) >= parseInt(BH.replace("Tier ", ""))
+    function NB(BB, OB, GB, YB) {
+      const DB = yB(BB, GB),
+        QB = yB(BB, YB);
+      if (!DB) return !1;
+      const oB = OB[DB.name].armourReduction,
+        jB = OB[QB.name].armourReduction;
+      if (jB === oB) {
+        var JB, MB, PB, zB;
+        const BB = null !== (JB = null === (MB = DB.attributes.customAttributes) || void 0 === MB ? void 0 : MB.enchantmentTier) && void 0 !== JB ? JB : "Tier 0",
+          OB = null !== (PB = null === (zB = QB.attributes.customAttributes) || void 0 === zB ? void 0 : zB.enchantmentTier) && void 0 !== PB ? PB : "Tier 0";
+        return parseInt(BB.replace("Tier ", "")) >= parseInt(OB.replace("Tier ", ""))
       }
-      return hH > tH
+      return oB > jB
     }
 
-    function xH(HH) {
-      let BH;
-      if ("number" === typeof HH) {
-        const LH = document.querySelector(`[data-inven-idx="${HH}"]`);
-        if (!LH) return null;
-        BH = LH.getBoundingClientRect()
-      } else BH = HH.getBoundingClientRect();
+    function RB(BB) {
+      let OB;
+      if ("number" === typeof BB) {
+        const GB = document.querySelector(`[data-inven-idx="${BB}"]`);
+        if (!GB) return null;
+        OB = GB.getBoundingClientRect()
+      } else OB = BB.getBoundingClientRect();
       return {
-        x: BH.left + BH.width / 2,
-        y: BH.top + BH.height / 2
+        x: OB.left + OB.width / 2,
+        y: OB.top + OB.height / 2
       }
     }
   },
-  9603: (HH, BH, LH) => {
-    LH.d(BH, {
-      e: () => kH,
-      h: () => IH
+  9570: (BB, OB, GB) => {
+    GB.d(OB, {
+      d: () => kB,
+      h: () => uB
     });
-    var AH = LH(45),
-      rH = LH(18),
-      SH = LH(2680),
-      hH = LH(3770);
-    const tH = 6,
-      zH = 4,
-      CH = ["HudMove-inventory", "HudLocked-inventory"];
+    var YB = GB(56),
+      DB = GB(25),
+      QB = GB(2697),
+      oB = GB(3831);
+    const jB = 6,
+      yB = 4,
+      JB = ["HudMove-inventory", "HudLocked-inventory"];
 
-    function EH(HH) {
+    function MB(BB) {
       let {
-        left: BH,
-        right: LH,
-        height: AH,
-        rowTop: rH,
-        besideBottom: SH,
-        obstacles: hH
-      } = HH;
-      const CH = hH.filter((HH => HH.left < LH + tH && HH.right > BH - tH));
-      let EH = SH;
-      for (let tH = 0; tH <= CH.length; tH++) {
-        const HH = CH.filter((HH => HH.top < EH + zH && HH.bottom > EH - AH - zH));
-        if (0 === HH.length) break;
-        EH = Math.min(...HH.map((HH => HH.top))) - zH
+        left: OB,
+        right: GB,
+        height: YB,
+        rowTop: DB,
+        besideBottom: QB,
+        obstacles: oB
+      } = BB;
+      const JB = oB.filter((BB => BB.left < GB + jB && BB.right > OB - jB));
+      let MB = QB;
+      for (let jB = 0; jB <= JB.length; jB++) {
+        const BB = JB.filter((BB => BB.top < MB + yB && BB.bottom > MB - YB - yB));
+        if (0 === BB.length) break;
+        MB = Math.min(...BB.map((BB => BB.top))) - yB
       }
-      return EH === SH ? null : Math.ceil(rH - EH)
+      return MB === QB ? null : Math.ceil(DB - MB)
     }
 
-    function XH(HH) {
-      return Array.from(HH.children).filter((HH => !HH.classList.contains("HotBarRow")))
+    function PB(BB) {
+      return Array.from(BB.children).filter((BB => !BB.classList.contains("HotBarRow")))
     }
 
-    function GH(HH) {
-      return function(HH) {
-        const BH = [],
-          LH = (HH, AH) => {
-            const rH = HH.getBoundingClientRect();
-            if (rH.width > 0 && rH.height > 0) BH.push(HH);
-            else if (AH < 2)
-              for (const BH of Array.from(HH.children)) LH(BH, AH + 1)
+    function zB(BB) {
+      return function(BB) {
+        const OB = [],
+          GB = (BB, YB) => {
+            const DB = BB.getBoundingClientRect();
+            if (DB.width > 0 && DB.height > 0) OB.push(BB);
+            else if (YB < 2)
+              for (const OB of Array.from(BB.children)) GB(OB, YB + 1)
           };
-        for (const AH of HH) LH(AH, 0);
-        return BH
-      }(XH(HH).flatMap((HH => HH.classList.contains("AuraBarWrapper") ? [] : HH.classList.contains("BottomScreenStatBarList") ? Array.from(HH.children) : [HH])))
+        for (const YB of BB) GB(YB, 0);
+        return OB
+      }(PB(BB).flatMap((BB => BB.classList.contains("AuraBarWrapper") ? [] : BB.classList.contains("BottomScreenStatBarList") ? Array.from(BB.children) : [BB])))
     }
 
-    function YH(HH, BH) {
-      var LH;
-      const AH = null === (LH = HH.querySelector(":scope > .AuraBarWrapper")) || void 0 === LH ? void 0 : LH.getBoundingClientRect();
-      return (AH && AH.height > 0 ? AH.top : BH) - zH
+    function lB(BB, OB) {
+      var GB;
+      const YB = null === (GB = BB.querySelector(":scope > .AuraBarWrapper")) || void 0 === GB ? void 0 : GB.getBoundingClientRect();
+      return (YB && YB.height > 0 ? YB.top : OB) - yB
     }
-    const uH = ".BottomScreenMessage, [role='status']";
+    const pB = ".BottomScreenMessage, [role='status']";
 
-    function QH(HH, BH, LH, AH, rH) {
-      const SH = HH => HH.map((HH => HH.getBoundingClientRect())),
-        hH = EH({
-          ...LH,
-          obstacles: SH(LH.obstacles.filter((HH => !HH.matches(uH))))
+    function qB(BB, OB, GB, YB, DB) {
+      const QB = BB => BB.map((BB => BB.getBoundingClientRect())),
+        oB = MB({
+          ...GB,
+          obstacles: QB(GB.obstacles.filter((BB => !BB.matches(pB))))
         }),
-        tH = BH.ownerDocument.defaultView,
-        zH = `${null===tH||void 0===tH?void 0:tH.innerWidth}x${null===tH||void 0===tH?void 0:tH.innerHeight}:${AH}:${Math.round(LH.rowTop)}`,
-        CH = HH.get(BH),
-        XH = (null === CH || void 0 === CH ? void 0 : CH.at) === zH ? (GH = CH.rise, YH = hH, null === GH ? YH : null === YH ? GH : Math.max(GH, YH)) : hH;
-      var GH, YH;
-      const QH = EH({
-        ...LH,
-        besideBottom: null === XH ? LH.besideBottom : LH.rowTop - XH,
-        obstacles: SH(LH.obstacles)
+        jB = OB.ownerDocument.defaultView,
+        yB = `${null===jB||void 0===jB?void 0:jB.innerWidth}x${null===jB||void 0===jB?void 0:jB.innerHeight}:${YB}:${Math.round(GB.rowTop)}`,
+        JB = BB.get(OB),
+        PB = (null === JB || void 0 === JB ? void 0 : JB.at) === yB ? (zB = JB.rise, lB = oB, null === zB ? lB : null === lB ? zB : Math.max(zB, lB)) : oB;
+      var zB, lB;
+      const qB = MB({
+        ...GB,
+        besideBottom: null === PB ? GB.besideBottom : GB.rowTop - PB,
+        obstacles: QB(GB.obstacles)
       });
-      return rH && HH.set(BH, {
-        at: zH,
-        rise: XH
-      }), null !== QH && void 0 !== QH ? QH : XH
+      return DB && BB.set(OB, {
+        at: yB,
+        rise: PB
+      }), null !== qB && void 0 !== qB ? qB : PB
     }
 
-    function WH(HH, BH, LH, AH) {
-      HH.classList.toggle(BH, null !== AH), null === AH ? HH.style.removeProperty(LH) : HH.style.setProperty(LH, `${AH}px`)
+    function ZB(BB, OB, GB, YB) {
+      BB.classList.toggle(OB, null !== YB), null === YB ? BB.style.removeProperty(GB) : BB.style.setProperty(GB, `${YB}px`)
     }
-    const MH = new WeakMap,
-      xH = new WeakMap,
-      vH = "(orientation: portrait) and (max-width: 600px)";
+    const NB = new WeakMap,
+      RB = new WeakMap,
+      WB = "(orientation: portrait) and (max-width: 600px)";
 
-    function PH(HH, BH) {
-      const LH = HH.getBoundingClientRect();
-      if (0 === LH.width) return null;
-      const AH = [LH, ...Array.from(HH.children).filter((HH => !(HH => BH.contains(HH.classList.contains("ShopKey") ? "HudMove-shop" : "HudMove-bag"))(HH))).map((HH => HH.getBoundingClientRect())).filter((HH => HH.width > 0))];
+    function AB(BB, OB) {
+      const GB = BB.getBoundingClientRect();
+      if (0 === GB.width) return null;
+      const YB = [GB, ...Array.from(BB.children).filter((BB => !(BB => OB.contains(BB.classList.contains("ShopKey") ? "HudMove-shop" : "HudMove-bag"))(BB))).map((BB => BB.getBoundingClientRect())).filter((BB => BB.width > 0))];
       return {
-        left: Math.min(...AH.map((HH => HH.left))),
-        top: Math.min(...AH.map((HH => HH.top))),
-        right: Math.max(...AH.map((HH => HH.right))),
-        bottom: Math.max(...AH.map((HH => HH.bottom)))
+        left: Math.min(...YB.map((BB => BB.left))),
+        top: Math.min(...YB.map((BB => BB.top))),
+        right: Math.max(...YB.map((BB => BB.right))),
+        bottom: Math.max(...YB.map((BB => BB.bottom)))
       }
     }
 
-    function TH(HH) {
+    function VB(BB) {
       let {
-        slotsLeft: BH,
-        slotsRight: LH,
-        width: AH,
-        zoneRight: rH
-      } = HH;
-      const SH = Math.max(0, Math.floor(LH - BH - AH));
-      return null === rH ? 0 : Math.min(SH, Math.max(0, Math.ceil(rH + tH - BH)))
+        slotsLeft: OB,
+        slotsRight: GB,
+        width: YB,
+        zoneRight: DB
+      } = BB;
+      const QB = Math.max(0, Math.floor(GB - OB - YB));
+      return null === DB ? 0 : Math.min(QB, Math.max(0, Math.ceil(DB + jB - OB)))
     }
 
-    function UH(HH) {
-      var BH;
-      const LH = HH.getBoundingClientRect();
-      if (0 === LH.width) return null;
-      const AH = null === (BH = HH.parentElement) || void 0 === BH ? void 0 : BH.getBoundingClientRect();
-      return AH && AH.width > 0 ? Math.min(LH.right, AH.left + AH.width * VH) : LH.right
+    function SB(BB) {
+      var OB;
+      const GB = BB.getBoundingClientRect();
+      if (0 === GB.width) return null;
+      const YB = null === (OB = BB.parentElement) || void 0 === OB ? void 0 : OB.getBoundingClientRect();
+      return YB && YB.width > 0 ? Math.min(GB.right, YB.left + YB.width * nB) : GB.right
     }
-    const VH = .35,
-      OH = new WeakMap,
-      bH = new WeakMap;
+    const nB = .35,
+      UB = new WeakMap,
+      fB = new WeakMap;
 
-    function kH(HH) {
-      mH(HH) && mH(HH),
-        function(HH) {
-          var BH, LH;
-          const AH = HH.documentElement.classList;
-          if (!AH.contains("TouchHotbar") || !AH.contains("TouchHotbarKeysAbove") || CH.some((HH => AH.contains(HH))) || !1 !== (null === (BH = HH.defaultView) || void 0 === BH || null === (LH = BH.matchMedia) || void 0 === LH ? void 0 : LH.call(BH, vH).matches)) return;
-          const rH = HH.querySelector(".HotBarContainer.Touch.KeysAbove .TouchInventoryKeys"),
-            SH = null === rH || void 0 === rH ? void 0 : rH.closest(".BottomMiddleElements"),
-            hH = null === rH || void 0 === rH ? void 0 : rH.parentElement;
-          if (!rH || !SH || !hH || SH.classList.contains("TouchInventoryOpen") || rH.querySelector("[data-pressing]")) return;
-          const tH = PH(rH, AH),
-            zH = hH.getBoundingClientRect().top,
-            EH = tH && QH(MH, SH, {
-              left: tH.left,
-              right: tH.right,
-              height: tH.bottom - tH.top,
-              rowTop: zH,
-              besideBottom: YH(SH, zH),
-              obstacles: GH(SH).filter((HH => !HH.classList.contains("BottomScreenMessage")))
-            }, `${Math.round(tH.left)}:${Math.round(tH.right-tH.left)}x${Math.round(tH.bottom-tH.top)}`, !0);
-          xH.has(SH) && xH.get(SH) === EH || (WH(SH, "KeysAboveUp", "--touch-keys-above-rise", EH), xH.set(SH, EH))
-        }(HH)
+    function kB(BB) {
+      dB(BB) && dB(BB),
+        function(BB) {
+          var OB, GB;
+          const YB = BB.documentElement.classList;
+          if (!YB.contains("TouchHotbar") || !YB.contains("TouchHotbarKeysAbove") || JB.some((BB => YB.contains(BB))) || !1 !== (null === (OB = BB.defaultView) || void 0 === OB || null === (GB = OB.matchMedia) || void 0 === GB ? void 0 : GB.call(OB, WB).matches)) return;
+          const DB = BB.querySelector(".HotBarContainer.Touch.KeysAbove .TouchInventoryKeys"),
+            QB = null === DB || void 0 === DB ? void 0 : DB.closest(".BottomMiddleElements"),
+            oB = null === DB || void 0 === DB ? void 0 : DB.parentElement;
+          if (!DB || !QB || !oB || QB.classList.contains("TouchInventoryOpen") || DB.querySelector("[data-pressing]")) return;
+          const jB = AB(DB, YB),
+            yB = oB.getBoundingClientRect().top,
+            MB = jB && qB(NB, QB, {
+              left: jB.left,
+              right: jB.right,
+              height: jB.bottom - jB.top,
+              rowTop: yB,
+              besideBottom: lB(QB, yB),
+              obstacles: zB(QB).filter((BB => !BB.classList.contains("BottomScreenMessage")))
+            }, `${Math.round(jB.left)}:${Math.round(jB.right-jB.left)}x${Math.round(jB.bottom-jB.top)}`, !0);
+          RB.has(QB) && RB.get(QB) === MB || (ZB(QB, "KeysAboveUp", "--touch-keys-above-rise", MB), RB.set(QB, MB))
+        }(BB)
     }
 
-    function mH(HH) {
-      var BH, LH, AH, rH;
-      const SH = HH.documentElement.classList;
-      if (!SH.contains("TouchHotbar") || SH.contains("TouchHotbarKeysAbove") || CH.some((HH => SH.contains(HH))) || null === (BH = HH.defaultView) || void 0 === BH || null === (LH = BH.matchMedia) || void 0 === LH || !LH.call(BH, oH).matches) return !1;
-      const hH = HH.querySelector(".HotBarContainer.Touch .TouchInventoryKey.ShopKey"),
-        tH = null === hH || void 0 === hH ? void 0 : hH.parentElement,
-        zH = null === hH || void 0 === hH ? void 0 : hH.closest(".BottomMiddleElements"),
-        EH = null === zH || void 0 === zH ? void 0 : zH.querySelector(".HotBarContainer.Touch .HotBarGameItemsContainer");
-      if (!hH || !tH || !zH || !EH || zH.classList.contains("TouchInventoryOpen")) return !1;
-      const XH = hH.getBoundingClientRect();
-      if (0 === XH.width) return !1;
-      const uH = HH.querySelector(".JoystickZone"),
-        MH = EH.getBoundingClientRect(),
-        xH = tH.getBoundingClientRect().top,
-        vH = TH({
-          slotsLeft: MH.left,
-          slotsRight: MH.right,
-          width: XH.width,
-          zoneRight: uH ? UH(uH) : null
+    function dB(BB) {
+      var OB, GB, YB, DB;
+      const QB = BB.documentElement.classList;
+      if (!QB.contains("TouchHotbar") || QB.contains("TouchHotbarKeysAbove") || JB.some((BB => QB.contains(BB))) || null === (OB = BB.defaultView) || void 0 === OB || null === (GB = OB.matchMedia) || void 0 === GB || !GB.call(OB, KB).matches) return !1;
+      const oB = BB.querySelector(".HotBarContainer.Touch .TouchInventoryKey.ShopKey"),
+        jB = null === oB || void 0 === oB ? void 0 : oB.parentElement,
+        yB = null === oB || void 0 === oB ? void 0 : oB.closest(".BottomMiddleElements"),
+        MB = null === yB || void 0 === yB ? void 0 : yB.querySelector(".HotBarContainer.Touch .HotBarGameItemsContainer");
+      if (!oB || !jB || !yB || !MB || yB.classList.contains("TouchInventoryOpen")) return !1;
+      const PB = oB.getBoundingClientRect();
+      if (0 === PB.width) return !1;
+      const pB = BB.querySelector(".JoystickZone"),
+        NB = MB.getBoundingClientRect(),
+        RB = jB.getBoundingClientRect().top,
+        WB = VB({
+          slotsLeft: NB.left,
+          slotsRight: NB.right,
+          width: PB.width,
+          zoneRight: pB ? SB(pB) : null
         }),
-        PH = OH.get(zH),
-        VH = MH.left + vH,
-        kH = {
-          shift: vH,
-          rise: QH(bH, zH, {
-            left: VH,
-            right: VH + XH.width,
-            height: XH.height,
-            rowTop: xH,
-            besideBottom: YH(zH, xH),
-            obstacles: GH(zH)
-          }, `${vH}:${Math.round(XH.width)}`, (null !== (AH = null === PH || void 0 === PH ? void 0 : PH.shift) && void 0 !== AH ? AH : 0) === vH)
+        AB = UB.get(yB),
+        nB = NB.left + WB,
+        kB = {
+          shift: WB,
+          rise: qB(fB, yB, {
+            left: nB,
+            right: nB + PB.width,
+            height: PB.height,
+            rowTop: RB,
+            besideBottom: lB(yB, RB),
+            obstacles: zB(yB)
+          }, `${WB}:${Math.round(PB.width)}`, (null !== (YB = null === AB || void 0 === AB ? void 0 : AB.shift) && void 0 !== YB ? YB : 0) === WB)
         };
-      return (null === PH || void 0 === PH ? void 0 : PH.shift) !== kH.shift && zH.style.setProperty("--touch-shop-above-shift", `${kH.shift}px`), (null === PH || void 0 === PH ? void 0 : PH.rise) !== kH.rise && WH(zH, "ShopAboveUp", "--touch-shop-above-rise", kH.rise), OH.set(zH, kH), (null !== (rH = null === PH || void 0 === PH ? void 0 : PH.shift) && void 0 !== rH ? rH : 0) !== kH.shift
+      return (null === AB || void 0 === AB ? void 0 : AB.shift) !== kB.shift && yB.style.setProperty("--touch-shop-above-shift", `${kB.shift}px`), (null === AB || void 0 === AB ? void 0 : AB.rise) !== kB.rise && ZB(yB, "ShopAboveUp", "--touch-shop-above-rise", kB.rise), UB.set(yB, kB), (null !== (DB = null === AB || void 0 === AB ? void 0 : AB.shift) && void 0 !== DB ? DB : 0) !== kB.shift
     }
-    const oH = "(orientation: landscape) and (max-height: 500px)";
+    const KB = "(orientation: landscape) and (max-height: 500px)";
 
-    function IH(HH, BH, LH) {
-      (0, AH.useLayoutEffect)((() => {
-        var BH;
-        const AH = null === (BH = HH.current) || void 0 === BH ? void 0 : BH.closest(".BottomMiddleElements");
-        if (!AH || LH) return;
-        const tH = new ResizeObserver((() => {
-            YH(!1)
+    function uB(BB, OB, GB) {
+      (0, YB.useLayoutEffect)((() => {
+        var OB;
+        const YB = null === (OB = BB.current) || void 0 === OB ? void 0 : OB.closest(".BottomMiddleElements");
+        if (!YB || GB) return;
+        const jB = new ResizeObserver((() => {
+            lB(!1)
           })),
-          zH = () => {
-            tH.disconnect();
-            const HH = document.querySelector(".JoystickZone");
-            for (const BH of [HH, AH, AH.querySelector(".HotBarGameItemsContainer"), ...GH(AH)]) BH && tH.observe(BH)
+          yB = () => {
+            jB.disconnect();
+            const BB = document.querySelector(".JoystickZone");
+            for (const OB of [BB, YB, YB.querySelector(".HotBarGameItemsContainer"), ...zB(YB)]) OB && jB.observe(OB)
           };
-        let CH = null,
-          EH = !1;
-        const YH = HH => {
-            EH ||= HH, CH ??= requestAnimationFrame((() => {
-              CH = null, EH && (EH = !1, zH()), kH(document)
+        let JB = null,
+          MB = !1;
+        const lB = BB => {
+            MB ||= BB, JB ??= requestAnimationFrame((() => {
+              JB = null, MB && (MB = !1, yB()), kB(document)
             }))
           },
-          uH = new MutationObserver((() => {
-            YH(!0)
+          pB = new MutationObserver((() => {
+            lB(!0)
           }));
-        uH.observe(AH, {
+        pB.observe(YB, {
           childList: !0
         });
-        for (const HH of XH(AH)) uH.observe(HH, {
+        for (const BB of PB(YB)) pB.observe(BB, {
           childList: !0,
           subtree: !0
         });
-        kH(document), zH();
-        const QH = () => {
-            YH(!0)
+        kB(document), yB();
+        const qB = () => {
+            lB(!0)
           },
-          WH = [(0, rH.m)(SH.e, QH), (0, rH.m)(hH.b, QH)],
-          MH = new MutationObserver((() => {
-            YH(!1)
+          ZB = [(0, DB.p)(QB.e, qB), (0, DB.p)(oB.c, qB)],
+          NB = new MutationObserver((() => {
+            lB(!1)
           }));
-        return HH.current && MH.observe(HH.current, {
+        return BB.current && NB.observe(BB.current, {
           attributes: !0,
           attributeFilter: ["data-pressing"],
           subtree: !0
         }), () => {
-          MH.disconnect(), null !== CH && cancelAnimationFrame(CH), tH.disconnect(), uH.disconnect();
-          for (const HH of WH) HH()
+          NB.disconnect(), null !== JB && cancelAnimationFrame(JB), jB.disconnect(), pB.disconnect();
+          for (const BB of ZB) BB()
         }
-      }), [HH, BH, LH])
+      }), [BB, OB, GB])
     }
   },
-  34877: (HH, BH, LH) => {
-    LH.d(BH, {
-      c: () => GH,
-      g: () => YH,
-      i: () => uH
+  34693: (BB, OB, GB) => {
+    GB.d(OB, {
+      b: () => zB,
+      e: () => lB,
+      i: () => pB
     });
-    var AH = LH(45),
-      rH = LH(34870),
-      SH = LH(1287),
-      hH = LH(4941),
-      tH = LH(2515),
-      zH = LH(81),
-      CH = LH(2051),
-      EH = LH(1313),
-      XH = LH(1225);
+    var YB = GB(56),
+      DB = GB(34688),
+      QB = GB(1338),
+      oB = GB(4946),
+      jB = GB(2544),
+      yB = GB(92),
+      JB = GB(2063),
+      MB = GB(1375),
+      PB = GB(1282);
 
-    function GH(HH) {
+    function zB(BB) {
       let {
-        show: BH,
-        onClose: LH
-      } = HH;
+        show: OB,
+        onClose: GB
+      } = BB;
       const {
-        requestedGameNameWithVariation: AH,
-        lobbyName: rH,
-        shownLobbyName: SH
-      } = (0, CH.e)("connectedGame"), GH = (0, tH.b)(AH, rH, !1);
-      return zH.featureFlags.canUseInviteLinks && (0, XH.jsx)(hH.b, {
-        show: BH,
-        close: LH,
+        requestedGameNameWithVariation: YB,
+        lobbyName: DB,
+        shownLobbyName: QB
+      } = (0, JB.g)("connectedGame"), zB = (0, jB.b)(YB, DB, !1);
+      return yB.featureFlags.canUseInviteLinks && (0, PB.jsx)(oB.d, {
+        show: OB,
+        close: GB,
         padShowsHud: !0,
         togglePointerLock: !1,
         globallyUniqueKey: "InviteLinkBox",
         doGameplayStartStopOnShow: !0,
-        children: (0, XH.jsxs)("div", {
+        children: (0, PB.jsxs)("div", {
           className: "InviteLinkBox AnimFadeInScaleUp",
-          children: [(0, XH.jsx)("div", {
+          children: [(0, PB.jsx)("div", {
             className: "InviteLinkBoxHeader SmallTextBold",
             children: "Invite Friends"
-          }), (0, XH.jsxs)("div", {
+          }), (0, PB.jsxs)("div", {
             className: "InviteLinkBoxDescription SmallTextLight",
-            children: [(0, XH.jsx)("div", {
+            children: [(0, PB.jsx)("div", {
               className: "InviteLinkBoxSubheader SmallTextBold",
               children: '"Join Lobby Name" Button Info'
-            }), "Game: ", null === GH ? (0, XH.jsx)(EH.d, {}) : GH, (0, XH.jsx)("br", {}), "Lobby Name: ", SH, (0, XH.jsx)("br", {}), (0, XH.jsx)("br", {}), (0, XH.jsx)("br", {}), (0, XH.jsx)("div", {
+            }), "Game: ", null === zB ? (0, PB.jsx)(MB.b, {}) : zB, (0, PB.jsx)("br", {}), "Lobby Name: ", QB, (0, PB.jsx)("br", {}), (0, PB.jsx)("br", {}), (0, PB.jsx)("br", {}), (0, PB.jsx)("div", {
               className: "InviteLinkBoxSubheader SmallTextBold",
               children: "Link"
             })]
-          }), (0, XH.jsx)(YH, {})]
+          }), (0, PB.jsx)(lB, {})]
         })
       })
     }
 
-    function YH() {
-      var HH;
-      const BH = null !== (HH = uH(zH.featureFlags.canUseInviteLinks)) && void 0 !== HH ? HH : "Loading Link...";
-      return zH.featureFlags.canUseInviteLinks && (0, XH.jsx)(rH.e, {
-        text: BH
+    function lB() {
+      var BB;
+      const OB = null !== (BB = pB(yB.featureFlags.canUseInviteLinks)) && void 0 !== BB ? BB : "Loading Link...";
+      return yB.featureFlags.canUseInviteLinks && (0, PB.jsx)(DB.c, {
+        text: OB
       })
     }
 
-    function uH(HH) {
-      const [BH, LH] = (0, AH.useState)(null);
-      return (0, AH.useEffect)((() => {
-        if (!HH) return;
-        let BH = !0;
-        return (0, SH.x)().then((HH => {
-          BH && LH(HH)
-        })).catch((HH => {
-          console.error("Failed to get invite link:", HH)
+    function pB(BB) {
+      const [OB, GB] = (0, YB.useState)(null);
+      return (0, YB.useEffect)((() => {
+        if (!BB) return;
+        let OB = !0;
+        return (0, QB.u)().then((BB => {
+          OB && GB(BB)
+        })).catch((BB => {
+          console.error("Failed to get invite link:", BB)
         })), () => {
-          BH = !1
+          OB = !1
         }
-      }), [HH]), BH
+      }), [BB]), OB
     }
   },
-  34977: (HH, BH, LH) => {
-    LH.d(BH, {
-      e: () => CH
+  34785: (BB, OB, GB) => {
+    GB.d(OB, {
+      d: () => JB
     });
-    var AH = LH(45),
-      rH = LH(1038),
-      SH = LH.n(rH),
-      hH = LH(2051),
-      tH = LH(1225);
+    var YB = GB(56),
+      DB = GB(1090),
+      QB = GB.n(DB),
+      oB = GB(2063),
+      jB = GB(1282);
 
-    function zH(HH) {
-      const BH = Math.floor(HH / 3600),
-        LH = Math.floor(HH % 3600 / 60),
-        AH = Math.floor(HH % 60),
-        rH = `${LH.toString().padStart(2,"0")}:${AH.toString().padStart(2,"0")}`;
-      return BH > 0 ? `${BH}:${rH}` : rH
+    function yB(BB) {
+      const OB = Math.floor(BB / 3600),
+        GB = Math.floor(BB % 3600 / 60),
+        YB = Math.floor(BB % 60),
+        DB = `${GB.toString().padStart(2,"0")}:${YB.toString().padStart(2,"0")}`;
+      return OB > 0 ? `${OB}:${DB}` : DB
     }
-    const CH = (0, AH.memo)((function(HH) {
+    const JB = (0, YB.memo)((function(BB) {
       let {
-        className: BH
-      } = HH;
+        className: OB
+      } = BB;
       const {
-        recording: LH,
-        clipping: AH,
-        seconds: rH
-      } = (0, hH.e)("replayRecorder");
-      return LH || AH ? (0, tH.jsxs)("div", {
-        className: SH()("RecordingIndicator", {
-          RecordingIndicatorClipping: !LH
-        }, BH),
+        recording: GB,
+        clipping: YB,
+        seconds: DB
+      } = (0, oB.g)("replayRecorder");
+      return GB || YB ? (0, jB.jsxs)("div", {
+        className: QB()("RecordingIndicator", {
+          RecordingIndicatorClipping: !GB
+        }, OB),
         "data-camera-keeper": "",
-        children: [(0, tH.jsx)("span", {
+        children: [(0, jB.jsx)("span", {
           className: "RecordingIndicatorDot"
-        }), (0, tH.jsx)("span", {
+        }), (0, jB.jsx)("span", {
           className: "RecordingIndicatorLabel",
-          children: LH ? "REC" : "CLIP"
-        }), LH && (0, tH.jsx)("span", {
+          children: GB ? "REC" : "CLIP"
+        }), GB && (0, jB.jsx)("span", {
           className: "RecordingIndicatorTime",
-          children: zH(rH)
+          children: yB(DB)
         })]
       }) : null
     }))
   },
-  35040: (HH, BH, LH) => {
-    LH.d(BH, {
-      c: () => zH
+  34848: (BB, OB, GB) => {
+    GB.d(OB, {
+      c: () => yB
     });
-    var AH = LH(1038),
-      rH = LH.n(AH),
-      SH = LH(1225);
-    const hH = 21,
-      tH = 2 * Math.PI * hH;
+    var YB = GB(1090),
+      DB = GB.n(YB),
+      QB = GB(1282);
+    const oB = 21,
+      jB = 2 * Math.PI * oB;
 
-    function zH(HH) {
+    function yB(BB) {
       let {
-        tier: BH,
-        state: LH,
-        progress: AH,
-        size: zH = "large"
-      } = HH;
-      const CH = rH()("SeasonPassTierNode", {
-        SeasonPassTierNodeSmall: "small" === zH,
-        SeasonPassTierNodeLarge: "large" === zH,
-        SeasonPassTierNodeReached: "reached" === LH,
-        SeasonPassTierNodeEarning: "earning" === LH
+        tier: OB,
+        state: GB,
+        progress: YB,
+        size: yB = "large"
+      } = BB;
+      const JB = DB()("SeasonPassTierNode", {
+        SeasonPassTierNodeSmall: "small" === yB,
+        SeasonPassTierNodeLarge: "large" === yB,
+        SeasonPassTierNodeReached: "reached" === GB,
+        SeasonPassTierNodeEarning: "earning" === GB
       });
-      if ("earning" !== LH || "large" === zH) return (0, SH.jsx)("span", {
-        className: CH,
-        children: (0, SH.jsx)("span", {
+      if ("earning" !== GB || "large" === yB) return (0, QB.jsx)("span", {
+        className: JB,
+        children: (0, QB.jsx)("span", {
           className: "SeasonPassTierNodeNumber",
-          children: BH
+          children: OB
         })
       });
-      const EH = Math.max(0, Math.min(1, AH));
-      return (0, SH.jsxs)("span", {
-        className: CH,
+      const MB = Math.max(0, Math.min(1, YB));
+      return (0, QB.jsxs)("span", {
+        className: JB,
         role: "progressbar",
         "aria-valuemin": 0,
         "aria-valuemax": 100,
-        "aria-valuenow": Math.round(100 * EH),
-        children: [(0, SH.jsxs)("svg", {
+        "aria-valuenow": Math.round(100 * MB),
+        children: [(0, QB.jsxs)("svg", {
           className: "SeasonPassTierNodeRing",
           viewBox: "0 0 56 56",
           "aria-hidden": "true",
-          children: [(0, SH.jsx)("circle", {
+          children: [(0, QB.jsx)("circle", {
             className: "SeasonPassTierNodeRingEdge",
             cx: "28",
             cy: "28",
             r: "26"
-          }), (0, SH.jsx)("circle", {
+          }), (0, QB.jsx)("circle", {
             className: "SeasonPassTierNodeRingTrack",
             cx: "28",
             cy: "28",
-            r: hH
-          }), (0, SH.jsx)("circle", {
+            r: oB
+          }), (0, QB.jsx)("circle", {
             className: "SeasonPassTierNodeRingFill",
             cx: "28",
             cy: "28",
-            r: hH,
-            strokeDasharray: `${EH*tH} ${tH}`,
+            r: oB,
+            strokeDasharray: `${MB*jB} ${jB}`,
             transform: "rotate(-90 28 28)"
-          }), (0, SH.jsx)("circle", {
+          }), (0, QB.jsx)("circle", {
             className: "SeasonPassTierNodeRingCore",
             cx: "28",
             cy: "28",
             r: "16"
           })]
-        }), (0, SH.jsx)("span", {
+        }), (0, QB.jsx)("span", {
           className: "SeasonPassTierNodeNumber",
-          children: BH
+          children: OB
         })]
       })
     }
   },
-  34870: (HH, BH, LH) => {
-    LH.d(BH, {
-      e: () => zH
+  34688: (BB, OB, GB) => {
+    GB.d(OB, {
+      c: () => yB
     });
-    var AH = LH(4740),
-      rH = LH(1123),
-      SH = LH(2924),
-      hH = LH(1455),
-      tH = LH(1225);
+    var YB = GB(4773),
+      DB = GB(1175),
+      QB = GB(2953),
+      oB = GB(1485),
+      jB = GB(1282);
 
-    function zH(HH) {
+    function yB(BB) {
       let {
-        text: BH
-      } = HH;
+        text: OB
+      } = BB;
       const {
-        t: LH
-      } = (0, rH.B)(), [zH, CH] = (0, SH.j)();
-      return (0, tH.jsxs)("div", {
+        t: GB
+      } = (0, DB.H)(), [yB, JB] = (0, QB.j)();
+      return (0, jB.jsxs)("div", {
         className: "CopyTextRow",
-        children: [(0, tH.jsx)("div", {
+        children: [(0, jB.jsx)("div", {
           className: "CopyTextRowText",
-          children: BH
-        }), (0, tH.jsx)(hH.i, {
+          children: OB
+        }), (0, jB.jsx)(oB.f, {
           className: "CopyTextRowButton",
           onClick: () => {
-            (0, AH.c)(BH).catch((HH => {
-              console.error("Failed to copy text:", HH)
-            })), CH()
+            (0, YB.b)(OB).catch((BB => {
+              console.error("Failed to copy text:", BB)
+            })), JB()
           },
-          disabled: zH,
-          children: LH(zH ? "general:copied" : "general:copy")
+          disabled: yB,
+          children: GB(yB ? "general:copied" : "general:copy")
         })]
       })
     }
   },
-  34986: (HH, BH, LH) => {
-    LH.d(BH, {
-      e: () => SH
+  34790: (BB, OB, GB) => {
+    GB.d(OB, {
+      d: () => QB
     });
-    var AH = LH(4947),
-      rH = LH(4951);
+    var YB = GB(4949),
+      DB = GB(4956);
 
-    function SH(HH) {
+    function QB(BB) {
       let {
-        children: BH,
-        showing: LH,
-        globallyUniqueKey: SH,
-        alwaysMountChildren: hH = !1,
-        doGameplayStartStopOnShow: tH = !0,
-        keepsMovement: zH = !1
-      } = HH;
-      return (0, rH.c)(!0, LH, SH, zH), (0, AH.e)(tH, LH), LH || hH ? BH : null
+        children: OB,
+        showing: GB,
+        globallyUniqueKey: QB,
+        alwaysMountChildren: oB = !1,
+        doGameplayStartStopOnShow: jB = !0,
+        keepsMovement: yB = !1
+      } = BB;
+      return (0, DB.e)(!0, GB, QB, yB), (0, YB.c)(jB, GB), GB || oB ? OB : null
     }
   },
-  7138: (HH, BH, LH) => {
-    LH.d(BH, {
-      b: () => SH
+  7122: (BB, OB, GB) => {
+    GB.d(OB, {
+      e: () => QB
     });
-    var AH = LH(45),
-      rH = LH(30);
+    var YB = GB(56),
+      DB = GB(31);
 
-    function SH(HH, BH) {
-      var LH;
-      const [SH, hH] = (0, AH.useState)(null !== (LH = rH.e.getItem(HH)) && void 0 !== LH ? LH : BH);
-      return [SH, BH => {
-        rH.e.setItem(HH, BH), hH(BH)
+    function QB(BB, OB) {
+      var GB;
+      const [QB, oB] = (0, YB.useState)(null !== (GB = DB.g.getItem(BB)) && void 0 !== GB ? GB : OB);
+      return [QB, OB => {
+        DB.g.setItem(BB, OB), oB(OB)
       }]
     }
   },
-  9590: (HH, BH, LH) => {
-    LH.d(BH, {
-      C: () => GH,
-      E: () => CH,
-      G: () => uH,
-      K: () => SH,
-      d: () => rH,
-      g: () => tH,
-      h: () => AH,
-      j: () => QH,
-      n: () => YH,
-      p: () => EH,
-      r: () => hH,
-      u: () => WH,
-      w: () => XH,
-      z: () => zH
+  9553: (BB, OB, GB) => {
+    GB.d(OB, {
+      A: () => PB,
+      D: () => yB,
+      H: () => zB,
+      K: () => JB,
+      N: () => pB,
+      Q: () => QB,
+      d: () => DB,
+      f: () => jB,
+      h: () => YB,
+      k: () => qB,
+      o: () => lB,
+      r: () => MB,
+      v: () => oB,
+      x: () => ZB
     });
-    const AH = HH => ({
-      left: HH.left,
-      top: HH.top,
-      right: HH.right,
-      bottom: HH.bottom
+    const YB = BB => ({
+      left: BB.left,
+      top: BB.top,
+      right: BB.right,
+      bottom: BB.bottom
     });
 
-    function rH(HH) {
+    function DB(BB) {
       return {
-        x: (HH.left + HH.right) / 2,
-        y: (HH.top + HH.bottom) / 2
+        x: (BB.left + BB.right) / 2,
+        y: (BB.top + BB.bottom) / 2
       }
     }
 
-    function SH(HH) {
-      return 0 === HH.length ? null : HH.reduce(((HH, BH) => ({
-        left: Math.min(HH.left, BH.left),
-        top: Math.min(HH.top, BH.top),
-        right: Math.max(HH.right, BH.right),
-        bottom: Math.max(HH.bottom, BH.bottom)
+    function QB(BB) {
+      return 0 === BB.length ? null : BB.reduce(((BB, OB) => ({
+        left: Math.min(BB.left, OB.left),
+        top: Math.min(BB.top, OB.top),
+        right: Math.max(BB.right, OB.right),
+        bottom: Math.max(BB.bottom, OB.bottom)
       })))
     }
 
-    function hH(HH, BH) {
-      const LH = Math.max(0, (BH - (HH.right - HH.left)) / 2),
-        AH = Math.max(0, (BH - (HH.bottom - HH.top)) / 2);
+    function oB(BB, OB) {
+      const GB = Math.max(0, (OB - (BB.right - BB.left)) / 2),
+        YB = Math.max(0, (OB - (BB.bottom - BB.top)) / 2);
       return {
-        left: HH.left - LH,
-        top: HH.top - AH,
-        right: HH.right + LH,
-        bottom: HH.bottom + AH
+        left: BB.left - GB,
+        top: BB.top - YB,
+        right: BB.right + GB,
+        bottom: BB.bottom + YB
       }
     }
 
-    function tH(HH, BH) {
-      return BH.x >= HH.left && BH.x <= HH.right && BH.y >= HH.top && BH.y <= HH.bottom
+    function jB(BB, OB) {
+      return OB.x >= BB.left && OB.x <= BB.right && OB.y >= BB.top && OB.y <= BB.bottom
     }
 
-    function zH(HH, BH, LH) {
-      let AH = null,
-        SH = 1 / 0;
+    function yB(BB, OB, GB) {
+      let YB = null,
+        QB = 1 / 0;
       for (const {
-          id: rH,
-          box: hH
+          id: DB,
+          box: oB
         }
-        of BH) {
-        const BH = (hH.right - hH.left) * (hH.bottom - hH.top);
-        tH(hH, HH) && BH < SH && (SH = BH, AH = rH)
+        of OB) {
+        const OB = (oB.right - oB.left) * (oB.bottom - oB.top);
+        jB(oB, BB) && OB < QB && (QB = OB, YB = DB)
       }
-      if (null !== AH) return AH;
-      let zH = 1 / 0;
+      if (null !== YB) return YB;
+      let yB = 1 / 0;
       for (const {
-          id: CH,
-          box: EH
+          id: JB,
+          box: MB
         }
-        of BH) {
-        if (!tH(hH(EH, LH), HH)) continue;
-        const BH = rH(EH),
-          SH = Math.hypot(HH.x - BH.x, HH.y - BH.y);
-        SH < zH && (zH = SH, AH = CH)
+        of OB) {
+        if (!jB(oB(MB, GB), BB)) continue;
+        const OB = DB(MB),
+          QB = Math.hypot(BB.x - OB.x, BB.y - OB.y);
+        QB < yB && (yB = QB, YB = JB)
       }
-      return AH
+      return YB
     }
 
-    function CH(HH, BH, LH) {
+    function JB(BB, OB, GB) {
       return {
-        left: LH.left,
-        top: LH.top,
-        right: HH - LH.right,
-        bottom: BH - LH.bottom
+        left: GB.left,
+        top: GB.top,
+        right: BB - GB.right,
+        bottom: OB - GB.bottom
       }
     }
 
-    function EH(HH, BH, LH, AH) {
-      const rH = (HH, BH, LH) => Math.max(Math.min(BH, 0), Math.min(Math.max(LH, 0), HH));
+    function MB(BB, OB, GB, YB) {
+      const DB = (BB, OB, GB) => Math.max(Math.min(OB, 0), Math.min(Math.max(GB, 0), BB));
       return {
-        x: rH(BH, AH.left - HH.left, AH.right - HH.right),
-        y: rH(LH, AH.top - HH.top, AH.bottom - HH.bottom)
+        x: DB(OB, YB.left - BB.left, YB.right - BB.right),
+        y: DB(GB, YB.top - BB.top, YB.bottom - BB.bottom)
       }
     }
 
-    function XH(HH, BH, LH, AH, rH) {
-      const SH = HH.dx * AH + BH,
-        hH = HH.dy * rH + LH,
-        tH = HH => Math.max(-1, Math.min(1, HH));
+    function PB(BB, OB, GB, YB, DB) {
+      const QB = BB.dx * YB + OB,
+        oB = BB.dy * DB + GB,
+        jB = BB => Math.max(-1, Math.min(1, BB));
       return {
-        dx: tH(SH / AH),
-        dy: tH(hH / rH)
+        dx: jB(QB / YB),
+        dy: jB(oB / DB)
       }
     }
 
-    function GH(HH, BH, LH, AH) {
-      return BH <= 0 || LH <= 0 ? 1 : Math.max(.05, Math.min(1, HH / BH, AH / LH))
+    function zB(BB, OB, GB, YB) {
+      return OB <= 0 || GB <= 0 ? 1 : Math.max(.05, Math.min(1, BB / OB, YB / GB))
     }
 
-    function YH(HH, BH, LH) {
-      return Math.min(HH.right, BH.right) - Math.max(HH.left, BH.left) > LH && Math.min(HH.bottom, BH.bottom) - Math.max(HH.top, BH.top) > LH
+    function lB(BB, OB, GB) {
+      return Math.min(BB.right, OB.right) - Math.max(BB.left, OB.left) > GB && Math.min(BB.bottom, OB.bottom) - Math.max(BB.top, OB.top) > GB
     }
 
-    function uH(HH, BH) {
-      const LH = (HH, BH, LH, AH) => BH - HH > AH - LH ? LH - HH > BH - AH ? AH - BH : LH - HH : HH < LH ? LH - HH : BH > AH ? AH - BH : 0;
+    function pB(BB, OB) {
+      const GB = (BB, OB, GB, YB) => OB - BB > YB - GB ? GB - BB > OB - YB ? YB - OB : GB - BB : BB < GB ? GB - BB : OB > YB ? YB - OB : 0;
       return {
-        x: LH(HH.left, HH.right, BH.left, BH.right),
-        y: LH(HH.top, HH.bottom, BH.top, BH.bottom)
+        x: GB(BB.left, BB.right, OB.left, OB.right),
+        y: GB(BB.top, BB.bottom, OB.top, OB.bottom)
       }
     }
 
-    function QH(HH, BH, LH) {
-      return YH(HH, {
+    function qB(BB, OB, GB) {
+      return lB(BB, {
         left: 0,
         top: 0,
-        right: BH,
-        bottom: LH
+        right: OB,
+        bottom: GB
       }, 0)
     }
 
-    function WH(HH, BH) {
+    function ZB(BB, OB) {
       let {
-        avoid: LH = null,
-        bounds: AH = null
-      } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {}, rH = 0, SH = 1 / 0;
-      return HH.forEach(((HH, hH) => {
-        const tH = BH.filter((BH => YH(HH, BH, 0))).length,
-          zH = null !== AH && (HH.left < AH.left || HH.top < AH.top || HH.right > AH.right || HH.bottom > AH.bottom),
-          CH = tH + (LH && YH(HH, LH, 0) ? 1e3 : 0) + (zH ? 1e6 : 0);
-        CH < SH && (rH = hH, SH = CH)
-      })), rH
+        avoid: GB = null,
+        bounds: YB = null
+      } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {}, DB = 0, QB = 1 / 0;
+      return BB.forEach(((BB, oB) => {
+        const jB = OB.filter((OB => lB(BB, OB, 0))).length,
+          yB = null !== YB && (BB.left < YB.left || BB.top < YB.top || BB.right > YB.right || BB.bottom > YB.bottom),
+          JB = jB + (GB && lB(BB, GB, 0) ? 1e3 : 0) + (yB ? 1e6 : 0);
+        JB < QB && (DB = oB, QB = JB)
+      })), DB
     }
   },
-  9588: (HH, BH, LH) => {
-    LH.d(BH, {
-      B: () => TH,
-      D: () => CH,
-      G: () => YH,
-      K: () => GH,
-      L: () => XH,
-      e: () => tH,
-      h: () => PH,
-      k: () => vH,
-      o: () => xH,
-      q: () => zH,
-      t: () => uH,
-      x: () => EH,
-      y: () => UH
+  9549: (BB, OB, GB) => {
+    GB.d(OB, {
+      C: () => lB,
+      D: () => zB,
+      H: () => PB,
+      b: () => jB,
+      d: () => AB,
+      g: () => WB,
+      h: () => RB,
+      j: () => yB,
+      m: () => pB,
+      q: () => MB,
+      u: () => SB,
+      v: () => VB,
+      y: () => JB
     });
-    var AH = LH(9590),
-      rH = LH(2659);
-    const SH = {
+    var YB = GB(9553),
+      DB = GB(2679);
+    const QB = {
         sprint: "joystick",
         jump: "cluster",
         crouch: "cluster",
@@ -1016,87 +1016,87 @@ export const modules = {
         inventory: "hotbar",
         shop: "inventory",
         bag: "inventory",
-        ...Object.fromEntries(rH.A.map((HH => [HH, "menu"])))
+        ...Object.fromEntries(DB.F.map((BB => [BB, "menu"])))
       },
-      hH = HH => rH.y.filter((BH => SH[BH] === HH)),
-      tH = new Set(hH("cluster")),
-      zH = new Set(hH("inventory")),
-      CH = HH => "inventory" === HH || zH.has(HH),
-      EH = HH => {
-        const BH = SH[HH];
-        return void 0 === BH ? [] : [BH, ...EH(BH)]
+      oB = BB => DB.A.filter((OB => QB[OB] === BB)),
+      jB = new Set(oB("cluster")),
+      yB = new Set(oB("inventory")),
+      JB = BB => "inventory" === BB || yB.has(BB),
+      MB = BB => {
+        const OB = QB[BB];
+        return void 0 === OB ? [] : [OB, ...MB(OB)]
       },
-      XH = HH => [HH, ...EH(HH)],
-      GH = (HH, BH, LH) => "shop" === HH && BH ? LH("inventory") ? ["inventory"] : LH("bag") ? [HH, "bag"] : [HH] : [HH],
-      YH = (HH, BH, LH, rH) => {
-        const SH = HH => {
-          const SH = BH[HH],
+      PB = BB => [BB, ...MB(BB)],
+      zB = (BB, OB, GB) => "shop" === BB && OB ? GB("inventory") ? ["inventory"] : GB("bag") ? [BB, "bag"] : [BB] : [BB],
+      lB = (BB, OB, GB, DB) => {
+        const QB = BB => {
+          const QB = OB[BB],
             {
-              x: hH,
-              y: tH
-            } = SH && rH(HH) ? (0, AH.G)(SH, LH) : {
+              x: oB,
+              y: jB
+            } = QB && DB(BB) ? (0, YB.N)(QB, GB) : {
               x: 0,
               y: 0
             };
-          return SH && {
-            left: SH.left + hH,
-            top: SH.top + tH,
-            right: SH.right + hH,
-            bottom: SH.bottom + tH
+          return QB && {
+            left: QB.left + oB,
+            top: QB.top + jB,
+            right: QB.right + oB,
+            bottom: QB.bottom + jB
           }
         };
-        return HH.flatMap((HH => {
-          const hH = BH[HH];
-          if ("inventory" !== HH || !hH || hH.right - hH.left <= LH.right - LH.left && hH.bottom - hH.top <= LH.bottom - LH.top) return [HH];
-          const [tH, zH] = [SH("shop"), SH("bag")];
-          return tH && zH && !(0, AH.n)(tH, zH, 0) ? ["shop", "bag"].filter(rH) : [HH]
+        return BB.flatMap((BB => {
+          const oB = OB[BB];
+          if ("inventory" !== BB || !oB || oB.right - oB.left <= GB.right - GB.left && oB.bottom - oB.top <= GB.bottom - GB.top) return [BB];
+          const [jB, yB] = [QB("shop"), QB("bag")];
+          return jB && yB && !(0, YB.o)(jB, yB, 0) ? ["shop", "bag"].filter(DB) : [BB]
         }))
       },
-      uH = new Map([
-        ["cluster", tH],
-        ["inventory", zH]
+      pB = new Map([
+        ["cluster", jB],
+        ["inventory", yB]
       ]),
-      QH = ["cluster"],
-      WH = [...QH, ...rH.y.filter((HH => !QH.includes(HH) && !SH[HH]))],
-      MH = HH => [HH, ...hH(HH).flatMap(MH)],
-      xH = WH.flatMap(MH).map((HH => ({
-        id: HH,
-        label: `hudLayout:${HH}`,
-        ...rH.v[HH],
-        parent: SH[HH]
+      qB = ["cluster"],
+      ZB = [...qB, ...DB.A.filter((BB => !qB.includes(BB) && !QB[BB]))],
+      NB = BB => [BB, ...oB(BB).flatMap(NB)],
+      RB = ZB.flatMap(NB).map((BB => ({
+        id: BB,
+        label: `hudLayout:${BB}`,
+        ...DB.x[BB],
+        parent: QB[BB]
       }))),
-      vH = Object.fromEntries(xH.map((HH => [HH.id, HH]))),
-      PH = "data-hud-el";
+      WB = Object.fromEntries(RB.map((BB => [BB.id, BB]))),
+      AB = "data-hud-el";
 
-    function TH(HH, BH, LH, AH) {
-      const rH = LH(function(HH, BH) {
-          return "attack" !== HH || BH ? vH[HH].label : "hudLayout:attackContext"
-        }(HH, BH)),
-        SH = AH[HH];
-      return SH ? LH("hudLayout:slotWithKey", {
-        slot: rH,
-        key: SH
-      }) : rH
+    function VB(BB, OB, GB, YB) {
+      const DB = GB(function(BB, OB) {
+          return "attack" !== BB || OB ? WB[BB].label : "hudLayout:attackContext"
+        }(BB, OB)),
+        QB = YB[BB];
+      return QB ? GB("hudLayout:slotWithKey", {
+        slot: DB,
+        key: QB
+      }) : DB
     }
 
-    function UH(HH, BH, LH, AH) {
-      return HH.map((HH => TH(HH, BH, LH, AH))).join(", ")
+    function SB(BB, OB, GB, YB) {
+      return BB.map((BB => VB(BB, OB, GB, YB))).join(", ")
     }
   },
-  9598: (HH, BH, LH) => {
-    LH.d(BH, {
-      b: () => tH,
-      c: () => SH,
-      f: () => rH,
-      i: () => hH,
-      m: () => XH,
-      q: () => EH,
-      r: () => CH,
-      u: () => zH
+  9566: (BB, OB, GB) => {
+    GB.d(OB, {
+      b: () => jB,
+      f: () => QB,
+      g: () => DB,
+      j: () => oB,
+      n: () => PB,
+      r: () => MB,
+      t: () => JB,
+      v: () => yB
     });
-    var AH = LH(2659);
-    const rH = ["J", "C", "A", "P", "U", "X", "G"],
-      SH = {
+    var YB = GB(2679);
+    const DB = ["J", "C", "A", "P", "U", "X", "G"],
+      QB = {
         J: "jump",
         C: "crouch",
         A: "attack",
@@ -1106,280 +1106,280 @@ export const modules = {
         G: "game"
       };
 
-    function hH(HH) {
-      return HH ? ["X"] : ["P", "X"]
+    function oB(BB) {
+      return BB ? ["X"] : ["P", "X"]
     }
-    const tH = Object.freeze({
+    const jB = Object.freeze({
       faces: null,
       names: Object.freeze({}),
       shop: !0,
       bag: !0,
       sprint: !0,
       items: null,
-      rowIcons: AH.A,
+      rowIcons: YB.F,
       pinnedIcons: Object.freeze({
         rightOfCamera: null,
         leftEnd: null
       })
     });
 
-    function zH(HH, BH, LH) {
-      const AH = HH.querySelector(".InGameUi .TouchComponentsButtons");
-      if (!AH) return tH;
-      const SH = {},
-        hH = {};
-      for (const tH of rH) {
-        const HH = AH.querySelector(`.TouchSlot${tH} > .TouchKey`);
-        if (HH) {
-          var zH, CH;
-          SH[tH] = HH.cloneNode(!0);
-          const BH = (null !== (zH = null === (CH = HH.querySelector(".TouchKeyLabel")) || void 0 === CH ? void 0 : CH.textContent) && void 0 !== zH ? zH : "").split(/\s+/).filter((HH => !/[\d\xd7]/.test(HH))).join(" ");
-          BH && (hH[tH] = BH)
+    function yB(BB, OB, GB) {
+      const YB = BB.querySelector(".InGameUi .TouchComponentsButtons");
+      if (!YB) return jB;
+      const QB = {},
+        oB = {};
+      for (const jB of DB) {
+        const BB = YB.querySelector(`.TouchSlot${jB} > .TouchKey`);
+        if (BB) {
+          var yB, JB;
+          QB[jB] = BB.cloneNode(!0);
+          const OB = (null !== (yB = null === (JB = BB.querySelector(".TouchKeyLabel")) || void 0 === JB ? void 0 : JB.textContent) && void 0 !== yB ? yB : "").split(/\s+/).filter((BB => !/[\d\xd7]/.test(BB))).join(" ");
+          OB && (oB[jB] = OB)
         }
       }
-      const EH = BH => {
-          const LH = HH.querySelector(`.InGameUi ${BH}`);
-          return null !== LH && !LH.classList.contains("Hidden")
+      const MB = OB => {
+          const GB = BB.querySelector(`.InGameUi ${OB}`);
+          return null !== GB && !GB.classList.contains("Hidden")
         },
-        XH = [...HH.querySelectorAll(".InGameUi .HotBarContainer.Touch .HotBarGameItemsContainer .InvenItem")].map((HH => HH.cloneNode(!0)));
+        PB = [...BB.querySelectorAll(".InGameUi .HotBarContainer.Touch .HotBarGameItemsContainer .InvenItem")].map((BB => BB.cloneNode(!0)));
       return {
-        faces: Object.keys(SH).length > 0 ? SH : null,
-        names: hH,
-        shop: EH(".TouchInventoryKey.ShopKey"),
-        bag: EH(".TouchInventoryKey.BagKey"),
-        sprint: EH(".TouchSprintHit"),
-        items: XH.length > 0 ? XH : null,
-        rowIcons: BH,
-        pinnedIcons: LH
+        faces: Object.keys(QB).length > 0 ? QB : null,
+        names: oB,
+        shop: MB(".TouchInventoryKey.ShopKey"),
+        bag: MB(".TouchInventoryKey.BagKey"),
+        sprint: MB(".TouchSprintHit"),
+        items: PB.length > 0 ? PB : null,
+        rowIcons: OB,
+        pinnedIcons: GB
       }
     }
 
-    function CH(HH, BH) {
-      const LH = {};
-      for (const AH of [...hH(BH), "G"]) {
-        const BH = HH.names[AH];
-        BH && (LH[SH[AH]] = BH)
+    function JB(BB, OB) {
+      const GB = {};
+      for (const YB of [...oB(OB), "G"]) {
+        const OB = BB.names[YB];
+        OB && (GB[QB[YB]] = OB)
       }
-      return LH
+      return GB
     }
 
-    function EH(HH, BH) {
+    function MB(BB, OB) {
       const {
-        faces: LH
-      } = HH;
-      if (null === LH) return [];
-      const AH = new Set(Object.keys(LH).map((HH => SH[HH])));
-      return hH(BH).filter((HH => !AH.has(SH[HH])))
+        faces: GB
+      } = BB;
+      if (null === GB) return [];
+      const YB = new Set(Object.keys(GB).map((BB => QB[BB])));
+      return oB(OB).filter((BB => !YB.has(QB[BB])))
     }
 
-    function XH(HH, BH) {
-      HH.replaceChildren(...[...BH.childNodes].map((HH => HH.cloneNode(!0))))
+    function PB(BB, OB) {
+      BB.replaceChildren(...[...OB.childNodes].map((BB => BB.cloneNode(!0))))
     }
   },
-  9592: (HH, BH, LH) => {
-    LH.d(BH, {
-      c: () => tH,
-      g: () => CH
+  9562: (BB, OB, GB) => {
+    GB.d(OB, {
+      c: () => jB,
+      f: () => JB
     });
-    var AH = LH(9590),
-      rH = LH(9588),
-      SH = LH(2659),
-      hH = LH(2661);
-    const tH = 2,
-      zH = (HH, BH, LH) => {
-        const AH = (0, rH.x)(BH).includes(HH) ? HH : (0, rH.x)(HH).includes(BH) ? BH : null;
-        if (null === AH || "joystick" === AH) return !1;
-        const tH = AH === HH ? BH : HH;
-        if ("menu" === AH) return (0, hH.t)(tH, LH.hudElements[tH]);
-        if ("hotbar" !== AH || !(0, rH.D)(tH)) return !0;
-        if ((0, SH.G)(LH.hudElements[tH]) || (0, SH.G)(LH.hudElements.inventory)) return !1;
-        return !(LH.hudLocked.includes(tH) || LH.hudLocked.includes("inventory")) || (0, SH.F)(LH.hudElements.hotbar)
+    var YB = GB(9553),
+      DB = GB(9549),
+      QB = GB(2679),
+      oB = GB(2682);
+    const jB = 2,
+      yB = (BB, OB, GB) => {
+        const YB = (0, DB.q)(OB).includes(BB) ? BB : (0, DB.q)(BB).includes(OB) ? OB : null;
+        if (null === YB || "joystick" === YB) return !1;
+        const jB = YB === BB ? OB : BB;
+        if ("menu" === YB) return (0, oB.y)(jB, GB.hudElements[jB]);
+        if ("hotbar" !== YB || !(0, DB.y)(jB)) return !0;
+        if ((0, QB.P)(GB.hudElements[jB]) || (0, QB.P)(GB.hudElements.inventory)) return !1;
+        return !(GB.hudLocked.includes(jB) || GB.hudLocked.includes("inventory")) || (0, QB.N)(GB.hudElements.hotbar)
       };
 
-    function CH(HH, BH, LH, CH) {
-      const EH = HH => (0, rH.L)(HH).some((HH => (0, SH.s)(LH.hudElements, HH) || (0, hH.s)(HH, LH, CH)));
-      if (EH(HH)) return [];
-      const XH = HH => {
-          var BH, AH;
-          return "bag" === HH && 1 !== (null !== (BH = null === (AH = LH.hudElements.shop) || void 0 === AH ? void 0 : AH[2]) && void 0 !== BH ? BH : 1) || (0, rH.L)(HH).some((HH => void 0 !== LH.hudElements[HH]))
+    function JB(BB, OB, GB, JB) {
+      const MB = BB => (0, DB.H)(BB).some((BB => (0, QB.t)(GB.hudElements, BB) || (0, oB.w)(BB, GB, JB)));
+      if (MB(BB)) return [];
+      const PB = BB => {
+          var OB, YB;
+          return "bag" === BB && 1 !== (null !== (OB = null === (YB = GB.hudElements.shop) || void 0 === YB ? void 0 : YB[2]) && void 0 !== OB ? OB : 1) || (0, DB.H)(BB).some((BB => void 0 !== GB.hudElements[BB]))
         },
-        GH = rH.t.get(HH),
-        YH = BH.filter((BH => {
+        zB = DB.m.get(BB),
+        lB = OB.filter((OB => {
           let {
-            id: LH
-          } = BH;
-          return GH ? GH.has(LH) && !EH(LH) : LH === HH
+            id: GB
+          } = OB;
+          return zB ? zB.has(GB) && !MB(GB) : GB === BB
         })),
-        uH = new Set;
-      for (const rH of BH) rH.id === HH || null !== GH && void 0 !== GH && GH.has(rH.id) || uH.has(rH.id) || EH(rH.id) || YH.some((HH => {
+        pB = new Set;
+      for (const DB of OB) DB.id === BB || null !== zB && void 0 !== zB && zB.has(DB.id) || pB.has(DB.id) || MB(DB.id) || lB.some((BB => {
         let {
-          id: BH,
-          box: SH
-        } = HH;
-        return !zH(BH, rH.id, LH) && (XH(BH) || XH(rH.id)) && (0, AH.n)(SH, rH.box, tH)
-      })) && uH.add(rH.id);
-      return [...uH]
+          id: OB,
+          box: QB
+        } = BB;
+        return !yB(OB, DB.id, GB) && (PB(OB) || PB(DB.id)) && (0, YB.o)(QB, DB.box, jB)
+      })) && pB.add(DB.id);
+      return [...pB]
     }
   },
-  34890: (HH, BH, LH) => {
-    LH.d(BH, {
-      d: () => rH,
-      f: () => AH
+  34706: (BB, OB, GB) => {
+    GB.d(OB, {
+      c: () => DB,
+      d: () => YB
     });
-    const AH = "image/jpeg",
-      rH = "jpg"
+    const YB = "image/jpeg",
+      DB = "jpg"
   },
-  34898: (HH, BH, LH) => {
-    LH.d(BH, {
-      c: () => zH,
-      f: () => CH,
-      h: () => EH
+  34713: (BB, OB, GB) => {
+    GB.d(OB, {
+      d: () => yB,
+      e: () => JB,
+      i: () => MB
     });
-    var AH = LH(1714),
-      rH = LH(3562),
-      SH = LH(81),
-      hH = LH(1807),
-      tH = LH(34890);
+    var YB = GB(1748),
+      DB = GB(3629),
+      QB = GB(92),
+      oB = GB(1834),
+      jB = GB(34706);
 
-    function zH() {
-      return !(0, SH.isMobileApp)() || AH.b.supports("photos")
+    function yB() {
+      return !(0, QB.isMobileApp)() || YB.e.supports("photos")
     }
-    async function CH(HH) {
-      var BH, LH;
-      if ((0, SH.isMobileApp)()) {
+    async function JB(BB) {
+      var OB, GB;
+      if ((0, QB.isMobileApp)()) {
         const {
-          saved: BH
-        } = await AH.b.request("photos.save", {
-          data: await (0, rH.h)(HH),
-          mimeType: tH.f
+          saved: OB
+        } = await YB.e.request("photos.save", {
+          data: await (0, DB.h)(BB),
+          mimeType: jB.d
         });
-        return BH ? "saved" : "denied"
+        return OB ? "saved" : "denied"
       }
-      return (0, SH.isIOS)() && null !== (BH = (LH = navigator).canShare) && void 0 !== BH && BH.call(LH, {
-        files: [HH]
-      }) ? EH(HH) : ((0, hH.e)(HH, HH.name), "saved")
+      return (0, QB.isIOS)() && null !== (OB = (GB = navigator).canShare) && void 0 !== OB && OB.call(GB, {
+        files: [BB]
+      }) ? MB(BB) : ((0, oB.c)(BB, BB.name), "saved")
     }
-    async function EH(HH) {
+    async function MB(BB) {
       try {
         return await navigator.share({
-          files: [HH]
+          files: [BB]
         }), "shared"
-      } catch (BH) {
-        if (BH instanceof DOMException && "AbortError" === BH.name) return "xB";
-        if (BH instanceof DOMException && "NotAllowedError" === BH.name) return "needsTap";
-        throw BH
+      } catch (OB) {
+        if (OB instanceof DOMException && "AbortError" === OB.name) return "rB";
+        if (OB instanceof DOMException && "NotAllowedError" === OB.name) return "needsTap";
+        throw OB
       }
     }
   },
-  34883: (HH, BH, LH) => {
-    LH.d(BH, {
-      e: () => CH,
-      g: () => EH,
-      k: () => XH
+  34702: (BB, OB, GB) => {
+    GB.d(OB, {
+      d: () => JB,
+      h: () => MB,
+      k: () => PB
     });
-    var AH = LH(15),
-      rH = LH(34856),
-      SH = LH(1659),
-      hH = LH(34890);
-    const tH = 8294400,
-      zH = .92;
+    var YB = GB(16),
+      DB = GB(34668),
+      QB = GB(1699),
+      oB = GB(34706);
+    const jB = 8294400,
+      yB = .92;
 
-    function CH() {
-      (0, SH.g)(), AH.c.set({
+    function JB() {
+      (0, QB.f)(), YB.c.set({
         screenshotMode: !0
       })
     }
 
-    function EH() {
-      AH.c.set({
+    function MB() {
+      YB.c.set({
         screenshotMode: !1
       })
     }
-    async function XH() {
+    async function PB() {
       const {
-        width: HH,
-        height: BH,
-        scale: LH
-      } = function(HH, BH, LH) {
-        const AH = Math.max(1, HH),
-          rH = Math.max(1, BH),
-          SH = Math.min(Math.max(1, LH), Math.sqrt(tH / (AH * rH)));
+        width: BB,
+        height: OB,
+        scale: GB
+      } = function(BB, OB, GB) {
+        const YB = Math.max(1, BB),
+          DB = Math.max(1, OB),
+          QB = Math.min(Math.max(1, GB), Math.sqrt(jB / (YB * DB)));
         return {
-          width: Math.round(AH * SH),
-          height: Math.round(rH * SH),
-          scale: SH
+          width: Math.round(YB * QB),
+          height: Math.round(DB * QB),
+          scale: QB
         }
       }(window.innerWidth, window.innerHeight, window.devicePixelRatio), {
-        blob: AH
-      } = await rH.devTools.capturePhoto(HH, BH, {
-        scale: LH,
-        type: hH.f,
-        quality: zH
+        blob: YB
+      } = await DB.devTools.capturePhoto(BB, OB, {
+        scale: GB,
+        type: oB.d,
+        quality: yB
       });
-      return new File([AH], function(HH) {
-        const BH = HH => String(HH).padStart(2, "0"),
-          LH = `${HH.getFullYear()}${BH(HH.getMonth()+1)}${BH(HH.getDate())}`,
-          AH = `${BH(HH.getHours())}${BH(HH.getMinutes())}${BH(HH.getSeconds())}`;
-        return `bloxd-${LH}-${AH}.${hH.d}`
+      return new File([YB], function(BB) {
+        const OB = BB => String(BB).padStart(2, "0"),
+          GB = `${BB.getFullYear()}${OB(BB.getMonth()+1)}${OB(BB.getDate())}`,
+          YB = `${OB(BB.getHours())}${OB(BB.getMinutes())}${OB(BB.getSeconds())}`;
+        return `bloxd-${GB}-${YB}.${oB.c}`
       }(new Date), {
-        type: hH.f
+        type: oB.d
       })
     }
   },
-  9361: (HH, BH, LH) => {
-    LH.d(BH, {
-      c: () => rH,
-      e: () => AH
+  9346: (BB, OB, GB) => {
+    GB.d(OB, {
+      d: () => DB,
+      f: () => YB
     });
-    const AH = "controllerOpenKeyboard",
-      rH = "controllerKeyboardVisible"
+    const YB = "controllerOpenKeyboard",
+      DB = "controllerKeyboardVisible"
   },
-  34861: (HH, BH, LH) => {
-    LH.d(BH, {
-      c: () => AH
+  34675: (BB, OB, GB) => {
+    GB.d(OB, {
+      c: () => YB
     });
-    const AH = new Set(["chunkBorders"])
+    const YB = new Set(["chunkBorders"])
   },
-  34856: (HH, BH, LH) => {
-    LH.r(BH), LH.d(BH, {
-      ALL_DEV_TOOLS: () => hH,
-      coreDevTools: () => CH,
-      devTools: () => zH
+  34668: (BB, OB, GB) => {
+    GB.r(OB), GB.d(OB, {
+      ALL_DEV_TOOLS: () => oB,
+      coreDevTools: () => JB,
+      devTools: () => yB
     });
-    var AH = LH(642),
-      rH = LH(1253),
-      SH = LH(34861);
-    const hH = new Set(["sceneDownload", "ambientLight", "weaponRaycasts", "chunkBorders"]);
-    async function tH() {
+    var YB = GB(662),
+      DB = GB(1299),
+      QB = GB(34675);
+    const oB = new Set(["sceneDownload", "ambientLight", "weaponRaycasts", "chunkBorders"]);
+    async function jB() {
       const {
-        noaDevTools: HH
-      } = await LH.e(264).then((() => LH(42369)));
-      return HH
+        noaDevTools: BB
+      } = await GB.e(264).then((() => GB(42066)));
+      return BB
     }
-    const zH = new class {
+    const yB = new class {
         constructor() {
-          this.loadHost = tH, this.tools = hH
+          this.loadHost = jB, this.tools = oB
         }
-        setHost(HH) {
-          this.tools = null === HH ? hH : HH.tools, this.loadHost = null === HH ? tH : async () => HH
+        setHost(BB) {
+          this.tools = null === BB ? oB : BB.tools, this.loadHost = null === BB ? jB : async () => BB
         }
-        supports(HH) {
-          return this.tools.has(HH)
+        supports(BB) {
+          return this.tools.has(BB)
         }
-        async downloadScene(HH, BH) {
-          const LH = await this.loadHost();
-          await LH.downloadScene(HH, BH)
+        async downloadScene(BB, OB) {
+          const GB = await this.loadHost();
+          await GB.downloadScene(BB, OB)
         }
-        async setAmbientLightIntensity(HH) {
-          const BH = await this.loadHost();
-          await BH.setAmbientLightIntensity(HH)
+        async setAmbientLightIntensity(BB) {
+          const OB = await this.loadHost();
+          await OB.setAmbientLightIntensity(BB)
         }
-        async capturePhoto(HH, BH, LH) {
-          return (await this.loadHost()).capturePhoto(HH, BH, LH)
+        async capturePhoto(BB, OB, GB) {
+          return (await this.loadHost()).capturePhoto(BB, OB, GB)
         }
       },
-      CH = {
-        tools: SH.c,
+      JB = {
+        tools: QB.c,
         downloadScene: async () => {
           throw new Error("This client can't download the scene")
         },
@@ -1390,121 +1390,121 @@ export const modules = {
           throw new Error("No game is drawing yet")
         }
       };
-    AH.K && zH.setHost(CH), (0, rH.C)((() => {
-      zH.setHost(CH)
+    YB.D && yB.setHost(JB), (0, DB.y)((() => {
+      yB.setHost(JB)
     }))
   },
-  35018: (HH, BH, LH) => {
-    LH.d(BH, {
-      d: () => hH,
-      h: () => rH,
-      j: () => EH
+  34832: (BB, OB, GB) => {
+    GB.d(OB, {
+      d: () => oB,
+      h: () => DB,
+      i: () => MB
     });
-    var AH = LH(1565);
+    var YB = GB(1611);
 
-    function rH(HH) {
-      var BH;
+    function DB(BB) {
+      var OB;
       return {
-        ...hH.store,
-        yaw: hH.store.yaw + (null !== (BH = AH.c[HH].previewYaw) && void 0 !== BH ? BH : 0)
+        ...oB.store,
+        yaw: oB.store.yaw + (null !== (OB = YB.d[BB].previewYaw) && void 0 !== OB ? OB : 0)
       }
     }
-    const SH = {
+    const QB = {
         yaw: .61 * Math.PI,
         pitch: Math.PI / 2.05,
         radius: 30,
         target: [0, 0, 0]
       },
-      hH = {
-        player: SH,
+      oB = {
+        player: QB,
         store: {
-          ...SH,
+          ...QB,
           radius: 33,
           target: [0, 3.9, 0]
         }
       };
 
-    function tH(HH, BH) {
-      HH instanceof Promise ? HH.then(BH).catch((HH => {
-        console.error("Couldn't open the preview", HH)
-      })) : BH(HH)
+    function jB(BB, OB) {
+      BB instanceof Promise ? BB.then(OB).catch((BB => {
+        console.error("Couldn't open the preview", BB)
+      })) : OB(BB)
     }
-    class zH {
-      constructor(HH) {
-        this.opened = null, this.view = null, this.size = null, this.closed = !1, tH(HH, (HH => {
-          this.closed ? HH.close() : (this.opened = HH, null !== this.size && HH.resize(this.size.width, this.size.height), null !== this.view && HH.show(this.view))
+    class yB {
+      constructor(BB) {
+        this.opened = null, this.view = null, this.size = null, this.closed = !1, jB(BB, (BB => {
+          this.closed ? BB.close() : (this.opened = BB, null !== this.size && BB.resize(this.size.width, this.size.height), null !== this.view && BB.show(this.view))
         }))
       }
-      show(HH) {
-        var BH;
-        this.view = HH, null === (BH = this.opened) || void 0 === BH || BH.show(HH)
+      show(BB) {
+        var OB;
+        this.view = BB, null === (OB = this.opened) || void 0 === OB || OB.show(BB)
       }
-      resize(HH, BH) {
-        var LH;
+      resize(BB, OB) {
+        var GB;
         this.size = {
-          width: HH,
-          height: BH
-        }, null === (LH = this.opened) || void 0 === LH || LH.resize(HH, BH)
+          width: BB,
+          height: OB
+        }, null === (GB = this.opened) || void 0 === GB || GB.resize(BB, OB)
       }
       close() {
-        var HH;
-        this.closed = !0, null === (HH = this.opened) || void 0 === HH || HH.close(), this.opened = null
+        var BB;
+        this.closed = !0, null === (BB = this.opened) || void 0 === BB || BB.close(), this.opened = null
       }
     }
-    class CH {
-      constructor(HH) {
-        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(HH).then((HH => HH.ready)), tH(HH, (HH => {
-          this.closed ? HH.close() : (this.opened = HH, null !== this.size && HH.resize(this.size.width, this.size.height))
+    class JB {
+      constructor(BB) {
+        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(BB).then((BB => BB.ready)), jB(BB, (BB => {
+          this.closed ? BB.close() : (this.opened = BB, null !== this.size && BB.resize(this.size.width, this.size.height))
         }))
       }
       get dev() {
         return this.opened.dev
       }
       isReady() {
-        var HH, BH;
-        return null !== (HH = null === (BH = this.opened) || void 0 === BH ? void 0 : BH.isReady()) && void 0 !== HH && HH
+        var BB, OB;
+        return null !== (BB = null === (OB = this.opened) || void 0 === OB ? void 0 : OB.isReady()) && void 0 !== BB && BB
       }
-      setCosmetic(HH, BH) {
-        var LH;
-        null === (LH = this.opened) || void 0 === LH || LH.setCosmetic(HH, BH)
+      setCosmetic(BB, OB) {
+        var GB;
+        null === (GB = this.opened) || void 0 === GB || GB.setCosmetic(BB, OB)
       }
-      playEmote(HH) {
-        var BH;
-        null === (BH = this.opened) || void 0 === BH || BH.playEmote(HH)
+      playEmote(BB) {
+        var OB;
+        null === (OB = this.opened) || void 0 === OB || OB.playEmote(BB)
       }
-      setOrbit(HH) {
-        var BH;
-        null === (BH = this.opened) || void 0 === BH || BH.setOrbit(HH)
+      setOrbit(BB) {
+        var OB;
+        null === (OB = this.opened) || void 0 === OB || OB.setOrbit(BB)
       }
       resetCamera() {
-        var HH;
-        null === (HH = this.opened) || void 0 === HH || HH.resetCamera()
+        var BB;
+        null === (BB = this.opened) || void 0 === BB || BB.resetCamera()
       }
-      async untilDrawn(HH) {
-        var BH;
-        await this.ready, await (null === (BH = this.opened) || void 0 === BH ? void 0 : BH.untilDrawn(HH))
+      async untilDrawn(BB) {
+        var OB;
+        await this.ready, await (null === (OB = this.opened) || void 0 === OB ? void 0 : OB.untilDrawn(BB))
       }
-      resize(HH, BH) {
-        var LH;
+      resize(BB, OB) {
+        var GB;
         this.size = {
-          width: HH,
-          height: BH
-        }, null === (LH = this.opened) || void 0 === LH || LH.resize(HH, BH)
+          width: BB,
+          height: OB
+        }, null === (GB = this.opened) || void 0 === GB || GB.resize(BB, OB)
       }
       close() {
-        var HH;
-        this.closed = !0, null === (HH = this.opened) || void 0 === HH || HH.close(), this.opened = null
+        var BB;
+        this.closed = !0, null === (BB = this.opened) || void 0 === BB || BB.close(), this.opened = null
       }
     }
-    const EH = new class {
+    const MB = new class {
       constructor() {
         this.host = null, this.makeDefault = null
       }
-      setHost(HH) {
-        this.host = HH
+      setHost(BB) {
+        this.host = BB
       }
-      setDefaultHost(HH) {
-        this.makeDefault = HH
+      setDefaultHost(BB) {
+        this.makeDefault = BB
       }
       current() {
         if (null === this.host) {
@@ -1513,78 +1513,78 @@ export const modules = {
         }
         return this.host
       }
-      openMob(HH) {
-        return new zH(this.current().openMob(HH))
+      openMob(BB) {
+        return new yB(this.current().openMob(BB))
       }
-      openPet(HH) {
-        return new zH(this.current().openPet(HH))
+      openPet(BB) {
+        return new yB(this.current().openPet(BB))
       }
-      openMobLineup(HH) {
-        return new zH(this.current().openMobLineup(HH))
+      openMobLineup(BB) {
+        return new yB(this.current().openMobLineup(BB))
       }
-      openCharacter(HH, BH) {
-        return new CH(this.current().openCharacter(HH, BH))
+      openCharacter(BB, OB) {
+        return new JB(this.current().openCharacter(BB, OB))
       }
     }
   },
-  35016: (HH, BH, LH) => {
-    LH.d(BH, {
-      e: () => AH.d,
-      g: () => AH.h,
-      h: () => AH.j
+  34828: (BB, OB, GB) => {
+    GB.d(OB, {
+      b: () => YB.d,
+      e: () => YB.h,
+      g: () => YB.i
     });
-    var AH = LH(35018);
-    class rH {
-      constructor(HH) {
-        this.load = HH, this.loaded = null, this.loading = null
+    var YB = GB(34832);
+    class DB {
+      constructor(BB) {
+        this.load = BB, this.loaded = null, this.loading = null
       }
-      run(HH) {
-        return null !== this.loaded ? HH(this.loaded) : (this.loading ??= this.load().then((HH => (this.loaded = HH, HH)), (HH => {
-          throw this.loading = null, HH
-        })), this.loading.then(HH))
+      run(BB) {
+        return null !== this.loaded ? BB(this.loaded) : (this.loading ??= this.load().then((BB => (this.loaded = BB, BB)), (BB => {
+          throw this.loading = null, BB
+        })), this.loading.then(BB))
       }
     }
-    class SH {
+    class QB {
       constructor() {
-        this.mobScene = new rH((() => Promise.all([LH.e(84), LH.e(259), LH.e(258), LH.e(283), LH.e(111), LH.e(284), LH.e(87), LH.e(281), LH.e(85), LH.e(86), LH.e(291), LH.e(285), LH.e(290), LH.e(288), LH.e(280), LH.e(303), LH.e(255), LH.e(272), LH.e(286), LH.e(289), LH.e(89), LH.e(249), LH.e(204), LH.e(109), LH.e(261), LH.e(252), LH.e(268), LH.e(219), LH.e(269), LH.e(88), LH.e(273)]).then((() => LH(42386))))), this.characterScene = new rH((() => Promise.all([LH.e(84), LH.e(259), LH.e(258), LH.e(283), LH.e(111), LH.e(284), LH.e(87), LH.e(281), LH.e(85), LH.e(86), LH.e(291), LH.e(285), LH.e(290), LH.e(288), LH.e(280), LH.e(303), LH.e(255), LH.e(272), LH.e(286), LH.e(289), LH.e(89), LH.e(249), LH.e(204), LH.e(109), LH.e(261), LH.e(252), LH.e(268), LH.e(219), LH.e(269), LH.e(88), LH.e(218)]).then((() => LH(42476)))))
+        this.mobScene = new DB((() => Promise.all([GB.e(84), GB.e(259), GB.e(258), GB.e(283), GB.e(111), GB.e(284), GB.e(87), GB.e(281), GB.e(85), GB.e(86), GB.e(291), GB.e(285), GB.e(290), GB.e(288), GB.e(280), GB.e(303), GB.e(255), GB.e(272), GB.e(286), GB.e(289), GB.e(89), GB.e(249), GB.e(204), GB.e(109), GB.e(261), GB.e(252), GB.e(268), GB.e(219), GB.e(269), GB.e(88), GB.e(273)]).then((() => GB(42079))))), this.characterScene = new DB((() => Promise.all([GB.e(84), GB.e(259), GB.e(258), GB.e(283), GB.e(111), GB.e(284), GB.e(87), GB.e(281), GB.e(85), GB.e(86), GB.e(291), GB.e(285), GB.e(290), GB.e(288), GB.e(280), GB.e(303), GB.e(255), GB.e(272), GB.e(286), GB.e(289), GB.e(89), GB.e(249), GB.e(204), GB.e(109), GB.e(261), GB.e(252), GB.e(268), GB.e(219), GB.e(269), GB.e(88), GB.e(218)]).then((() => GB(42186)))))
       }
-      openMob(HH) {
-        return this.mobScene.run((BH => BH.openMobPreview(HH)))
+      openMob(BB) {
+        return this.mobScene.run((OB => OB.openMobPreview(BB)))
       }
-      openPet(HH) {
-        return this.mobScene.run((BH => BH.openPetPreview(HH)))
+      openPet(BB) {
+        return this.mobScene.run((OB => OB.openPetPreview(BB)))
       }
-      openMobLineup(HH) {
-        return this.mobScene.run((BH => BH.openMobLineupPreview(HH)))
+      openMobLineup(BB) {
+        return this.mobScene.run((OB => OB.openMobLineupPreview(BB)))
       }
-      openCharacter(HH, BH) {
-        return this.characterScene.run((LH => LH.openCharacterPreview(HH, BH)))
+      openCharacter(BB, OB) {
+        return this.characterScene.run((GB => GB.openCharacterPreview(BB, OB)))
       }
     }
-    AH.j.setDefaultHost((() => new SH))
+    YB.i.setDefaultHost((() => new QB))
   },
-  7209: (HH, BH, LH) => {
-    LH.d(BH, {
-      c: () => rH,
-      e: () => SH
+  7198: (BB, OB, GB) => {
+    GB.d(OB, {
+      c: () => DB,
+      e: () => QB
     });
-    var AH = LH(30);
-    const rH = "shaderPack";
-    async function SH() {
-      var HH;
-      let BH = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      return null !== (HH = await AH.c.getItem(rH, BH)) && void 0 !== HH ? HH : null
+    var YB = GB(31);
+    const DB = "shaderPack";
+    async function QB() {
+      var BB;
+      let OB = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+      return null !== (BB = await YB.d.getItem(DB, OB)) && void 0 !== BB ? BB : null
     }
   },
-  9577: (HH, BH, LH) => {
-    LH.d(BH, {
-      c: () => tH,
-      g: () => zH
+  9545: (BB, OB, GB) => {
+    GB.d(OB, {
+      d: () => jB,
+      h: () => yB
     });
-    var AH = LH(15),
-      rH = LH(1297),
-      SH = LH(81);
-    const hH = {
+    var YB = GB(16),
+      DB = GB(1350),
+      QB = GB(92);
+    const oB = {
       blockMined: {
         pattern: [18],
         priority: 1,
@@ -1627,61 +1627,61 @@ export const modules = {
       }
     };
 
-    function tH() {
-      return (0, SH.isMobile)() && "function" === typeof navigator.vibrate
+    function jB() {
+      return (0, QB.isMobile)() && "function" === typeof navigator.vibrate
     }
-    const zH = new class {
-      constructor(HH) {
-        this.deps = HH, this.lastAt = new Map, this.lastAnyAt = -1 / 0, this.playingUntil = -1 / 0, this.playingPriority = 0
+    const yB = new class {
+      constructor(BB) {
+        this.deps = BB, this.lastAt = new Map, this.lastAnyAt = -1 / 0, this.playingUntil = -1 / 0, this.playingPriority = 0
       }
-      play(HH, BH) {
-        var LH;
+      play(BB, OB) {
+        var GB;
         if (!this.deps.enabled()) return;
-        const AH = hH[HH],
-          rH = null !== BH && void 0 !== BH ? BH : AH.pattern;
-        if (null === rH) return void console.warn("No vibration pattern for", HH);
-        const SH = this.deps.now();
-        SH - this.lastAnyAt < 40 && AH.priority < this.playingPriority || SH - (null !== (LH = this.lastAt.get(HH)) && void 0 !== LH ? LH : -1 / 0) < AH.minGapMs || SH < this.playingUntil && AH.priority < this.playingPriority || (this.lastAt.set(HH, SH), this.lastAnyAt = SH, this.playingUntil = SH + rH.reduce(((HH, BH) => HH + BH), 0), this.playingPriority = AH.priority, this.deps.vibrate(rH))
+        const YB = oB[BB],
+          DB = null !== OB && void 0 !== OB ? OB : YB.pattern;
+        if (null === DB) return void console.warn("No vibration pattern for", BB);
+        const QB = this.deps.now();
+        QB - this.lastAnyAt < 40 && YB.priority < this.playingPriority || QB - (null !== (GB = this.lastAt.get(BB)) && void 0 !== GB ? GB : -1 / 0) < YB.minGapMs || QB < this.playingUntil && YB.priority < this.playingPriority || (this.lastAt.set(BB, QB), this.lastAnyAt = QB, this.playingUntil = QB + DB.reduce(((BB, OB) => BB + OB), 0), this.playingPriority = YB.priority, this.deps.vibrate(DB))
       }
     }({
-      vibrate: HH => {
-        navigator.vibrate([...HH])
+      vibrate: BB => {
+        navigator.vibrate([...BB])
       },
       now: () => performance.now(),
-      enabled: () => tH() && AH.c.get("isTouchScreen") && AH.c.get("clientEscMenuOptions").vibration && !(0, rH.d)()
+      enabled: () => jB() && YB.c.get("isTouchScreen") && YB.c.get("clientEscMenuOptions").vibration && !(0, DB.f)()
     })
   },
-  9475: (HH, BH, LH) => {
-    function AH(HH, BH) {
-      return !HH.hidden && (BH || !HH.isRewardedAd)
+  9448: (BB, OB, GB) => {
+    function YB(BB, OB) {
+      return !BB.hidden && (OB || !BB.isRewardedAd)
     }
 
-    function rH(HH) {
-      return "object" === typeof HH ? HH.option : HH
+    function DB(BB) {
+      return "object" === typeof BB ? BB.option : BB
     }
 
-    function SH(HH, BH) {
-      var LH;
-      if ("dropdown" === (null === (LH = HH.userInput) || void 0 === LH ? void 0 : LH.type) && "object" === typeof HH.userInput.dropdownOptions[0]) {
-        for (const LH of HH.userInput.dropdownOptions)
-          if (rH(LH) === BH) return "object" === typeof LH ? LH.cost : HH.cost;
-        console.error("Didn't find matching option for dropdown item. Item:", HH, "input:", BH)
+    function QB(BB, OB) {
+      var GB;
+      if ("dropdown" === (null === (GB = BB.userInput) || void 0 === GB ? void 0 : GB.type) && "object" === typeof BB.userInput.dropdownOptions[0]) {
+        for (const GB of BB.userInput.dropdownOptions)
+          if (DB(GB) === OB) return "object" === typeof GB ? GB.cost : BB.cost;
+        console.error("Didn't find matching option for dropdown item. Item:", BB, "input:", OB)
       }
-      return HH.cost
+      return BB.cost
     }
 
-    function hH(HH, BH, LH) {
-      var AH;
-      const rH = null !== (AH = LH.excludedPlayers) && void 0 !== AH ? AH : [BH];
-      return HH.filter((HH => !rH.includes(HH)))
+    function oB(BB, OB, GB) {
+      var YB;
+      const DB = null !== (YB = GB.excludedPlayers) && void 0 !== YB ? YB : [OB];
+      return BB.filter((BB => !DB.includes(BB)))
     }
-    LH.d(BH, {
-      c: () => SH,
-      f: () => rH,
-      g: () => hH,
-      i: () => AH
+    GB.d(OB, {
+      b: () => QB,
+      f: () => DB,
+      g: () => oB,
+      h: () => YB
     })
   }
 };
 Object.freeze(modules);
-for (const HH in modules) Object.freeze(modules[HH]);
+for (const BB in modules) Object.freeze(modules[BB]);

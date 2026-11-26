@@ -1,66 +1,66 @@
 export const id = 219;
 export const ids = [219];
 export const modules = {
-  37487: (HH, BH, LH) => {
-    LH.d(BH, {
-      c: () => QH,
-      d: () => UH
+  37279: (BB, OB, GB) => {
+    GB.d(OB, {
+      e: () => qB,
+      g: () => SB
     });
-    LH(34960);
-    var AH = LH(45),
-      rH = LH(1450),
-      SH = LH(1998),
-      hH = LH(2051),
-      tH = LH(15),
-      zH = LH(2628),
-      CH = LH(37496),
-      EH = LH(37504),
-      XH = LH(34942),
-      GH = LH(34951),
-      YH = LH(34969),
-      uH = LH(1225);
-    const QH = (0, AH.memo)((function() {
-      var HH;
+    GB(34769);
+    var YB = GB(56),
+      DB = GB(1480),
+      QB = GB(2023),
+      oB = GB(2063),
+      jB = GB(16),
+      yB = GB(2653),
+      JB = GB(37288),
+      MB = GB(37292),
+      PB = GB(34755),
+      zB = GB(34765),
+      lB = GB(34777),
+      pB = GB(1282);
+    const qB = (0, YB.memo)((function() {
+      var BB;
       const {
-        isTouchScreen: BH,
-        clientEscMenuOptions: LH,
-        scriptedCameraFacing: SH,
-        crosshairShownOverride: QH,
-        crosshairGameView: MH
-      } = (0, tH.m)(["isTouchScreen", "clientEscMenuOptions", "scriptedCameraFacing", "crosshairShownOverride", "crosshairGameView"]), xH = (0, zH.j)("gunshotOrigin"), vH = (0, AH.useRef)(null), PH = (0, AH.useRef)(!1), [TH, VH] = (0, AH.useState)(WH);
-      (0, rH.d)("cameraZoomSet", VH), (0, AH.useEffect)((() => {
-        VH(WH())
+        isTouchScreen: OB,
+        clientEscMenuOptions: GB,
+        scriptedCameraFacing: QB,
+        crosshairShownOverride: qB,
+        crosshairGameView: NB
+      } = (0, jB.o)(["isTouchScreen", "clientEscMenuOptions", "scriptedCameraFacing", "crosshairShownOverride", "crosshairGameView"]), RB = (0, yB.g)("gunshotOrigin"), WB = (0, YB.useRef)(null), AB = (0, YB.useRef)(!1), [VB, nB] = (0, YB.useState)(ZB);
+      (0, DB.f)("cameraZoomSet", nB), (0, YB.useEffect)((() => {
+        nB(ZB())
       }), []);
-      const OH = (0, hH.e)("heldItemAim"),
-        kH = OH.gun,
-        mH = (0, YH.g)(),
-        oH = (0, AH.useRef)(mH);
-      oH.current = mH;
-      const [IH, fH] = (0, AH.useState)(!1);
-      (0, AH.useEffect)((() => (0, EH.i)("crosshairAccuracy", UH)), []), (0, rH.d)("mouseState", (HH => {
+      const UB = (0, oB.g)("heldItemAim"),
+        kB = UB.gun,
+        dB = (0, lB.f)(),
+        KB = (0, YB.useRef)(dB);
+      KB.current = dB;
+      const [uB, mB] = (0, YB.useState)(!1);
+      (0, YB.useEffect)((() => (0, MB.g)("crosshairAccuracy", SB)), []), (0, DB.f)("mouseState", (BB => {
         let {
-          isDown: BH
-        } = HH;
-        PH.current = BH, vH.current && (vH.current.style.transform = (0, GH.c)(BH, oH.current.growOnClick)), "shapes" === oH.current.style && fH(BH)
+          isDown: OB
+        } = BB;
+        AB.current = OB, WB.current && (WB.current.style.transform = (0, zB.g)(OB, KB.current.growOnClick)), "shapes" === KB.current.style && mB(OB)
       }));
-      const lH = (0, XH.g)(BH, LH.touchActionButtons);
-      return (null !== (HH = (0, CH.b)(MH, QH)) && void 0 !== HH ? HH : (0, CH.f)(OH, TH > 1, lH, xH)) ? "movement" === SH || "cursor" === SH ? null : (0, uH.jsxs)(uH.Fragment, {
-        children: [kH && (0, uH.jsx)(bH, {
-          custom: mH.forGuns && "shapes" === mH.style ? mH : null,
-          touch: BH
-        }), !kH && (0, uH.jsx)(GH.b, {
-          settings: mH,
-          touch: BH,
-          pressRef: vH,
-          pressed: "shapes" === mH.style ? IH : PH.current
+      const IB = (0, PB.h)(OB, GB.touchActionButtons);
+      return (null !== (BB = (0, JB.e)(NB, qB)) && void 0 !== BB ? BB : (0, JB.h)(UB, VB > 1, IB, RB)) ? "movement" === QB || "cursor" === QB ? null : (0, pB.jsxs)(pB.Fragment, {
+        children: [kB && (0, pB.jsx)(fB, {
+          custom: dB.forGuns && "shapes" === dB.style ? dB : null,
+          touch: OB
+        }), !kB && (0, pB.jsx)(zB.c, {
+          settings: dB,
+          touch: OB,
+          pressRef: WB,
+          pressed: "shapes" === dB.style ? uB : AB.current
         })]
       }) : null
     }));
 
-    function WH() {
-      return SH.gameBridge.lookup("cameraZoom", null)
+    function ZB() {
+      return QB.gameBridge.lookup("cameraZoom", null)
     }
-    const MH = [{
+    const NB = [{
         current: null
       }, {
         current: null
@@ -69,340 +69,340 @@ export const modules = {
       }, {
         current: null
       }],
-      xH = {
+      RB = {
         current: null
       },
-      vH = {
+      WB = {
         current: null
       };
-    let PH = 0,
-      TH = 0;
+    let AB = 0,
+      VB = 0;
 
-    function UH(HH) {
-      TH = HH, MH[0].current || xH.current || vH.current ? OH(HH) : PH = HH
+    function SB(BB) {
+      VB = BB, NB[0].current || RB.current || WB.current ? UB(BB) : AB = BB
     }
 
-    function VH(HH) {
-      return ((0, CH.d)(HH) - (0, CH.d)(0)) * window.innerHeight / 100
+    function nB(BB) {
+      return ((0, JB.f)(BB) - (0, JB.f)(0)) * window.innerHeight / 100
     }
 
-    function OH(HH) {
-      var BH;
-      if (null === (BH = vH.current) || void 0 === BH || BH.call(vH, VH(HH)), MH[0].current) {
-        const BH = `${(0,CH.d)(HH)}vh`;
-        MH[0].current.style.transform = `translateX(calc(0px - ${BH}))`, MH[1].current.style.transform = `translateX(calc(0px + ${BH}))`, MH[2].current.style.transform = `translateY(calc(0px - ${BH}))`, MH[3].current.style.transform = `translateY(calc(0px + ${BH}))`
+    function UB(BB) {
+      var OB;
+      if (null === (OB = WB.current) || void 0 === OB || OB.call(WB, nB(BB)), NB[0].current) {
+        const OB = `${(0,JB.f)(BB)}vh`;
+        NB[0].current.style.transform = `translateX(calc(0px - ${OB}))`, NB[1].current.style.transform = `translateX(calc(0px + ${OB}))`, NB[2].current.style.transform = `translateY(calc(0px - ${OB}))`, NB[3].current.style.transform = `translateY(calc(0px + ${OB}))`
       }
-      xH.current && (xH.current.style.filter = `blur(${Math.round(HH/10)}px)`)
+      RB.current && (RB.current.style.filter = `blur(${Math.round(BB/10)}px)`)
     }
 
-    function bH(HH) {
+    function fB(BB) {
       let {
-        custom: BH,
-        touch: LH
-      } = HH;
-      const SH = (0, rH.e)("aimingOverlay", "none"),
-        hH = "1.2vh",
-        tH = "0.3vh";
-      (0, AH.useEffect)((() => {
-        PH && OH(PH)
+        custom: OB,
+        touch: GB
+      } = BB;
+      const QB = (0, DB.i)("aimingOverlay", "none"),
+        oB = "1.2vh",
+        jB = "0.3vh";
+      (0, YB.useEffect)((() => {
+        AB && UB(AB)
       }), []);
-      const zH = (0, AH.useRef)(null !== BH);
-      return (0, AH.useLayoutEffect)((() => {
-        var HH;
-        BH ? null === (HH = vH.current) || void 0 === HH || HH.call(vH, VH(TH)) : zH.current && OH(TH);
-        zH.current = null !== BH
-      }), [BH]), (0, uH.jsxs)(uH.Fragment, {
-        children: ["sniper" === SH && (0, uH.jsxs)("div", {
-          ref: xH,
+      const yB = (0, YB.useRef)(null !== OB);
+      return (0, YB.useLayoutEffect)((() => {
+        var BB;
+        OB ? null === (BB = WB.current) || void 0 === BB || BB.call(WB, nB(VB)) : yB.current && UB(VB);
+        yB.current = null !== OB
+      }), [OB]), (0, pB.jsxs)(pB.Fragment, {
+        children: ["sniper" === QB && (0, pB.jsxs)("div", {
+          ref: RB,
           className: "GunCrosshairOverlayWrapper",
-          children: [(0, uH.jsx)("div", {
+          children: [(0, pB.jsx)("div", {
             className: "GunCrosshairOverlay"
-          }), (0, uH.jsx)("div", {
+          }), (0, pB.jsx)("div", {
             className: "GunCrosshairOverlayLine1"
-          }), (0, uH.jsx)("div", {
+          }), (0, pB.jsx)("div", {
             className: "GunCrosshairOverlayLine2"
-          }), (0, uH.jsx)("div", {
+          }), (0, pB.jsx)("div", {
             className: "GunCrosshairOverlayDot"
           })]
-        }), (0, uH.jsxs)("div", {
+        }), (0, pB.jsxs)("div", {
           className: "GunCrosshairWrapper",
           style: {
-            opacity: "sniper" === SH ? 0 : 1
+            opacity: "sniper" === QB ? 0 : 1
           },
-          children: [BH && (0, uH.jsx)(GH.b, {
-            settings: BH,
-            touch: LH,
-            spreadRef: vH
-          }), !BH && (0, uH.jsxs)(uH.Fragment, {
-            children: [(0, uH.jsx)("div", {
+          children: [OB && (0, pB.jsx)(zB.c, {
+            settings: OB,
+            touch: GB,
+            spreadRef: WB
+          }), !OB && (0, pB.jsxs)(pB.Fragment, {
+            children: [(0, pB.jsx)("div", {
               className: "GunCrosshair",
               style: {
-                width: hH,
-                height: tH,
+                width: oB,
+                height: jB,
                 top: "49.85vh",
                 left: "calc(50vw - 0.6vh)"
               },
-              ref: MH[0]
-            }), (0, uH.jsx)("div", {
+              ref: NB[0]
+            }), (0, pB.jsx)("div", {
               className: "GunCrosshair",
               style: {
-                width: hH,
-                height: tH,
+                width: oB,
+                height: jB,
                 top: "49.85vh",
                 left: "calc(50vw - 0.6vh)"
               },
-              ref: MH[1]
-            }), (0, uH.jsx)("div", {
+              ref: NB[1]
+            }), (0, pB.jsx)("div", {
               className: "GunCrosshair",
               style: {
-                width: tH,
-                height: hH,
+                width: jB,
+                height: oB,
                 top: "49.4vh",
                 left: "calc(50vw - 0.15vh)"
               },
-              ref: MH[2]
-            }), (0, uH.jsx)("div", {
+              ref: NB[2]
+            }), (0, pB.jsx)("div", {
               className: "GunCrosshair",
               style: {
-                width: tH,
-                height: hH,
+                width: jB,
+                height: oB,
                 top: "49.4vh",
                 left: "calc(50vw - 0.15vh)"
               },
-              ref: MH[3]
+              ref: NB[3]
             })]
           })]
         })]
       })
     }
   },
-  34951: (HH, BH, LH) => {
-    LH.d(BH, {
-      b: () => QH,
-      c: () => uH
+  34765: (BB, OB, GB) => {
+    GB.d(OB, {
+      c: () => qB,
+      g: () => pB
     });
-    LH(34960);
-    var AH = LH(1038),
-      rH = LH.n(AH),
-      SH = LH(45),
-      hH = LH(34946);
+    GB(34769);
+    var YB = GB(1090),
+      DB = GB.n(YB),
+      QB = GB(56),
+      oB = GB(34757);
 
-    function tH(HH, BH) {
-      return Math.max(1, Math.round(HH * BH))
+    function jB(BB, OB) {
+      return Math.max(1, Math.round(BB * OB))
     }
 
-    function zH(HH, BH) {
-      const LH = BH * (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1),
-        AH = function(HH, BH) {
-          if (HH.lines) return tH(HH.lineThickness, BH) % 2;
-          if (HH.dot) return tH(HH.dotSize, BH) % 2;
-          return CH(HH, BH) % 2
-        }(HH, BH),
-        rH = EH(HH.lineThickness * LH, AH),
-        SH = tH(HH.lineLength, LH),
-        hH = Math.round(HH.gap * LH),
-        zH = HH.outline > 0 ? tH(HH.outline, LH) : 0,
-        GH = [];
-      if (HH.lines && (GH.push({
-          x: rH + hH,
+    function yB(BB, OB) {
+      const GB = OB * (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1),
+        YB = function(BB, OB) {
+          if (BB.lines) return jB(BB.lineThickness, OB) % 2;
+          if (BB.dot) return jB(BB.dotSize, OB) % 2;
+          return JB(BB, OB) % 2
+        }(BB, OB),
+        DB = MB(BB.lineThickness * GB, YB),
+        QB = jB(BB.lineLength, GB),
+        oB = Math.round(BB.gap * GB),
+        yB = BB.outline > 0 ? jB(BB.outline, GB) : 0,
+        zB = [];
+      if (BB.lines && (zB.push({
+          x: DB + oB,
           y: 0,
-          w: SH,
-          h: rH,
+          w: QB,
+          h: DB,
           arm: "right"
-        }), GH.push({
-          x: -hH - SH,
+        }), zB.push({
+          x: -oB - QB,
           y: 0,
-          w: SH,
-          h: rH,
+          w: QB,
+          h: DB,
           arm: "left"
-        }), GH.push({
+        }), zB.push({
           x: 0,
-          y: rH + hH,
-          w: rH,
-          h: SH,
+          y: DB + oB,
+          w: DB,
+          h: QB,
           arm: "down"
-        }), HH.tStyle || GH.push({
+        }), BB.tStyle || zB.push({
           x: 0,
-          y: -hH - SH,
-          w: rH,
-          h: SH,
+          y: -oB - QB,
+          w: DB,
+          h: QB,
           arm: "up"
-        }), 0 === hH && GH.push({
+        }), 0 === oB && zB.push({
           x: 0,
           y: 0,
-          w: rH,
-          h: rH
-        })), HH.dot) {
-        const BH = EH(HH.dotSize * LH, AH),
-          SH = HH.lines && 0 === hH && HH.dotSize > HH.lineThickness ? Math.max(BH, rH + 2) : BH,
-          tH = (rH - SH) / 2;
-        GH.push({
-          x: tH,
-          y: tH,
-          w: SH,
-          h: SH
+          w: DB,
+          h: DB
+        })), BB.dot) {
+        const OB = MB(BB.dotSize * GB, YB),
+          QB = BB.lines && 0 === oB && BB.dotSize > BB.lineThickness ? Math.max(OB, DB + 2) : OB,
+          jB = (DB - QB) / 2;
+        zB.push({
+          x: jB,
+          y: jB,
+          w: QB,
+          h: QB
         })
       }
-      const YH = GH.map((HH => ({
-        ...HH,
-        x: HH.x - zH,
-        y: HH.y - zH,
-        w: HH.w + 2 * zH,
-        h: HH.h + 2 * zH
+      const lB = zB.map((BB => ({
+        ...BB,
+        x: BB.x - yB,
+        y: BB.y - yB,
+        w: BB.w + 2 * yB,
+        h: BB.h + 2 * yB
       })));
-      let uH = null,
-        QH = null;
-      if (HH.circle) {
-        const BH = tH(HH.circleThickness, LH),
-          SH = function(HH, BH) {
-            return HH + (HH % 2 === BH ? 0 : 1)
-          }(CH(HH, LH), AH),
-          hH = (rH - SH) / 2;
-        uH = XH(hH, SH, BH), zH > 0 && (QH = XH(hH - zH, SH + 2 * zH, BH + 2 * zH))
+      let pB = null,
+        qB = null;
+      if (BB.circle) {
+        const OB = jB(BB.circleThickness, GB),
+          QB = function(BB, OB) {
+            return BB + (BB % 2 === OB ? 0 : 1)
+          }(JB(BB, GB), YB),
+          oB = (DB - QB) / 2;
+        pB = PB(oB, QB, OB), yB > 0 && (qB = PB(oB - yB, QB + 2 * yB, OB + 2 * yB))
       }
       return {
-        cell: rH,
-        fills: GH,
-        outlines: zH > 0 ? YH : [],
-        ring: uH,
-        ringOutline: QH
+        cell: DB,
+        fills: zB,
+        outlines: yB > 0 ? lB : [],
+        ring: pB,
+        ringOutline: qB
       }
     }
 
-    function CH(HH, BH) {
-      return Math.round(HH.circleRadius * BH * 2 + tH(HH.circleThickness, BH))
+    function JB(BB, OB) {
+      return Math.round(BB.circleRadius * OB * 2 + jB(BB.circleThickness, OB))
     }
 
-    function EH(HH, BH) {
-      return Math.max(2 - BH, 2 * Math.round((HH - BH) / 2) + BH)
+    function MB(BB, OB) {
+      return Math.max(2 - OB, 2 * Math.round((BB - OB) / 2) + OB)
     }
 
-    function XH(HH, BH, LH) {
-      const AH = 2 * LH >= BH - 1;
+    function PB(BB, OB, GB) {
+      const YB = 2 * GB >= OB - 1;
       return {
-        x: HH,
-        y: HH,
-        size: BH,
-        border: Math.min(LH, Math.floor(BH / 2)),
-        filled: AH
+        x: BB,
+        y: BB,
+        size: OB,
+        border: Math.min(GB, Math.floor(OB / 2)),
+        filled: YB
       }
     }
-    var GH = LH(1225);
-    const YH = 1.4;
+    var zB = GB(1282);
+    const lB = 1.4;
 
-    function uH(HH, BH) {
-      return HH && BH ? `scale(${YH})` : "scale(1)"
+    function pB(BB, OB) {
+      return BB && OB ? `scale(${lB})` : "scale(1)"
     }
 
-    function QH(HH) {
-      return "classic" === HH.settings.style ? (0, GH.jsx)(xH, {
-        ...HH
-      }) : (0, GH.jsx)(bH, {
-        ...HH
+    function qB(BB) {
+      return "classic" === BB.settings.style ? (0, zB.jsx)(RB, {
+        ...BB
+      }) : (0, zB.jsx)(fB, {
+        ...BB
       })
     }
-    const WH = .125;
+    const ZB = .125;
 
-    function MH(HH, BH) {
-      const LH = {};
-      if (HH.color !== hH.c.color && (LH.color = (0, hH.e)(HH.color)), HH.opacity !== hH.c.opacity && (LH.opacity = HH.opacity / 100), HH.outline !== hH.c.outline || HH.outlineColor !== hH.c.outlineColor) {
-        const BH = HH.outline,
-          AH = (0, hH.e)(HH.outlineColor);
-        LH.textShadow = BH > 0 ? `-${BH}px 0 ${AH}, 0 ${BH}px ${AH}, ${BH}px 0 ${AH}, 0 -${BH}px ${AH}` : "none"
+    function NB(BB, OB) {
+      const GB = {};
+      if (BB.color !== oB.d.color && (GB.color = (0, oB.l)(BB.color)), BB.opacity !== oB.d.opacity && (GB.opacity = BB.opacity / 100), BB.outline !== oB.d.outline || BB.outlineColor !== oB.d.outlineColor) {
+        const OB = BB.outline,
+          YB = (0, oB.l)(BB.outlineColor);
+        GB.textShadow = OB > 0 ? `-${OB}px 0 ${YB}, 0 ${OB}px ${YB}, ${OB}px 0 ${YB}, 0 -${OB}px ${YB}` : "none"
       }
-      if (HH.size !== hH.c.size) {
-        const AH = HH.size / 100;
-        LH.fontSize = BH ? `calc(max(1.3rem, 18px) * ${AH})` : `calc(1.3rem * ${AH})`, LH.marginTop = `-${WH}em`, LH.transformOrigin = `50% calc(50% + ${WH}em)`
+      if (BB.size !== oB.d.size) {
+        const YB = BB.size / 100;
+        GB.fontSize = OB ? `calc(max(1.3rem, 18px) * ${YB})` : `calc(1.3rem * ${YB})`, GB.marginTop = `-${ZB}em`, GB.transformOrigin = `50% calc(50% + ${ZB}em)`
       }
-      return LH
+      return GB
     }
 
-    function xH(HH) {
+    function RB(BB) {
       let {
-        settings: BH,
-        touch: LH,
-        inPreview: AH,
-        inEditor: SH,
-        pressed: hH = !1,
-        pressRef: tH
-      } = HH;
-      return (0, GH.jsx)("div", {
-        className: rH()("Crosshair", {
-          Touch: LH,
-          CrosshairInPreview: AH,
-          CrosshairInEditor: SH || AH
+        settings: OB,
+        touch: GB,
+        inPreview: YB,
+        inEditor: QB,
+        pressed: oB = !1,
+        pressRef: jB
+      } = BB;
+      return (0, zB.jsx)("div", {
+        className: DB()("Crosshair", {
+          Touch: GB,
+          CrosshairInPreview: YB,
+          CrosshairInEditor: QB || YB
         }),
-        ref: tH,
+        ref: jB,
         style: {
-          transform: uH(hH, BH.growOnClick),
-          ...MH(BH, LH)
+          transform: pB(oB, OB.growOnClick),
+          ...NB(OB, GB)
         },
         children: "+"
       })
     }
 
-    function vH(HH, BH) {
-      return HH / BH + "px"
+    function WB(BB, OB) {
+      return BB / OB + "px"
     }
 
-    function PH(HH, BH, LH, AH) {
+    function AB(BB, OB, GB, YB) {
       return {
-        ...VH(HH, BH, LH),
-        width: vH(HH.w, LH),
-        height: vH(HH.h, LH),
-        background: AH
+        ...nB(BB, OB, GB),
+        width: WB(BB.w, GB),
+        height: WB(BB.h, GB),
+        background: YB
       }
     }
 
-    function TH(HH, BH, LH) {
+    function VB(BB, OB, GB) {
       return {
-        left: vH(HH.x, BH),
-        top: vH(HH.y, BH),
-        width: vH(HH.size, BH),
-        height: vH(HH.size, BH),
-        borderWidth: vH(HH.border, BH),
-        borderColor: LH,
-        background: HH.filled ? LH : void 0
+        left: WB(BB.x, OB),
+        top: WB(BB.y, OB),
+        width: WB(BB.size, OB),
+        height: WB(BB.size, OB),
+        borderWidth: WB(BB.border, OB),
+        borderColor: GB,
+        background: BB.filled ? GB : void 0
       }
     }
-    const UH = {
+    const SB = {
       left: [-1, 0],
       right: [1, 0],
       up: [0, -1],
       down: [0, 1]
     };
 
-    function VH(HH, BH, LH) {
-      const [AH, rH] = HH.arm ? UH[HH.arm] : [0, 0], SH = Math.round(BH * LH);
+    function nB(BB, OB, GB) {
+      const [YB, DB] = BB.arm ? SB[BB.arm] : [0, 0], QB = Math.round(OB * GB);
       return {
-        left: vH(HH.x + AH * SH, LH),
-        top: vH(HH.y + rH * SH, LH)
+        left: WB(BB.x + YB * QB, GB),
+        top: WB(BB.y + DB * QB, GB)
       }
     }
 
-    function OH(HH) {
-      return HH.arm ? {
-        "data-arm": HH.arm,
-        "data-x": HH.x,
-        "data-y": HH.y
+    function UB(BB) {
+      return BB.arm ? {
+        "data-arm": BB.arm,
+        "data-x": BB.x,
+        "data-y": BB.y
       } : {}
     }
 
-    function bH(HH) {
+    function fB(BB) {
       let {
-        settings: BH,
-        inPreview: LH,
-        inEditor: AH,
-        pressed: tH = !1,
-        spread: CH,
-        spreadRef: EH
-      } = HH;
-      const XH = (0, SH.useRef)(null),
+        settings: OB,
+        inPreview: GB,
+        inEditor: YB,
+        pressed: jB = !1,
+        spread: JB,
+        spreadRef: MB
+      } = BB;
+      const PB = (0, QB.useRef)(null),
         {
-          box: uH,
-          dpr: QH
-        } = function(HH) {
-          const [BH, LH] = (0, SH.useState)({
+          box: pB,
+          dpr: qB
+        } = function(BB) {
+          const [OB, GB] = (0, QB.useState)({
             box: {
               left: 0,
               top: 0,
@@ -411,200 +411,200 @@ export const modules = {
             },
             dpr: 1
           });
-          return (0, SH.useLayoutEffect)((() => {
-            const BH = HH.current;
-            if (!BH) return;
-            const AH = () => {
-              const HH = BH.getBoundingClientRect(),
-                AH = window.devicePixelRatio || 1;
-              LH((BH => BH.dpr === AH && BH.box.left === HH.left && BH.box.top === HH.top && BH.box.width === HH.width && BH.box.height === HH.height ? BH : {
+          return (0, QB.useLayoutEffect)((() => {
+            const OB = BB.current;
+            if (!OB) return;
+            const YB = () => {
+              const BB = OB.getBoundingClientRect(),
+                YB = window.devicePixelRatio || 1;
+              GB((OB => OB.dpr === YB && OB.box.left === BB.left && OB.box.top === BB.top && OB.box.width === BB.width && OB.box.height === BB.height ? OB : {
                 box: {
-                  left: HH.left,
-                  top: HH.top,
-                  width: HH.width,
-                  height: HH.height
+                  left: BB.left,
+                  top: BB.top,
+                  width: BB.width,
+                  height: BB.height
                 },
-                dpr: AH
+                dpr: YB
               }))
             };
-            AH();
-            const rH = new ResizeObserver(AH);
-            return rH.observe(BH), window.addEventListener("resize", AH), window.addEventListener("scroll", AH, !0), () => {
-              rH.disconnect(), window.removeEventListener("resize", AH), window.removeEventListener("scroll", AH, !0)
+            YB();
+            const DB = new ResizeObserver(YB);
+            return DB.observe(OB), window.addEventListener("resize", YB), window.addEventListener("scroll", YB, !0), () => {
+              DB.disconnect(), window.removeEventListener("resize", YB), window.removeEventListener("scroll", YB, !0)
             }
-          }), [HH]), BH
-        }(XH),
-        WH = (0, SH.useRef)(QH);
-      WH.current = QH;
-      const MH = zH(BH, QH, tH && BH.growOnClick ? YH : 1),
-        xH = function(HH, BH, LH) {
-          const AH = Math.round((HH.left + HH.width / 2) * LH - BH / 2),
-            rH = Math.round((HH.top + HH.height / 2) * LH - BH / 2);
+          }), [BB]), OB
+        }(PB),
+        ZB = (0, QB.useRef)(qB);
+      ZB.current = qB;
+      const NB = yB(OB, qB, jB && OB.growOnClick ? lB : 1),
+        RB = function(BB, OB, GB) {
+          const YB = Math.round((BB.left + BB.width / 2) * GB - OB / 2),
+            DB = Math.round((BB.top + BB.height / 2) * GB - OB / 2);
           return {
-            x: AH / LH - HH.left,
-            y: rH / LH - HH.top
+            x: YB / GB - BB.left,
+            y: DB / GB - BB.top
           }
-        }(uH, MH.cell, QH),
-        vH = (0, hH.e)(BH.color),
-        UH = (0, hH.e)(BH.outlineColor),
-        bH = (0, SH.useRef)(0);
-      (0, SH.useLayoutEffect)((() => {
-        if (EH) return EH.current = HH => {
-          var BH;
-          bH.current = HH, null === (BH = XH.current) || void 0 === BH || BH.querySelectorAll("[data-arm]").forEach((BH => {
-            Object.assign(BH.style, VH(function(HH) {
+        }(pB, NB.cell, qB),
+        WB = (0, oB.l)(OB.color),
+        SB = (0, oB.l)(OB.outlineColor),
+        fB = (0, QB.useRef)(0);
+      (0, QB.useLayoutEffect)((() => {
+        if (MB) return MB.current = BB => {
+          var OB;
+          fB.current = BB, null === (OB = PB.current) || void 0 === OB || OB.querySelectorAll("[data-arm]").forEach((OB => {
+            Object.assign(OB.style, nB(function(BB) {
               return {
-                x: Number(HH.dataset.x),
-                y: Number(HH.dataset.y),
-                arm: HH.dataset.arm
+                x: Number(BB.dataset.x),
+                y: Number(BB.dataset.y),
+                arm: BB.dataset.arm
               }
-            }(BH), HH, WH.current))
+            }(OB), BB, ZB.current))
           }))
         }, () => {
-          EH.current = null
+          MB.current = null
         }
-      }), [EH]);
-      const kH = null !== CH && void 0 !== CH ? CH : bH.current;
-      return (0, GH.jsx)("div", {
-        ref: XH,
-        className: rH()("CrosshairShapes", {
-          CrosshairInPreview: LH,
-          CrosshairInEditor: AH || LH,
-          CrosshairSpreads: void 0 !== EH
+      }), [MB]);
+      const kB = null !== JB && void 0 !== JB ? JB : fB.current;
+      return (0, zB.jsx)("div", {
+        ref: PB,
+        className: DB()("CrosshairShapes", {
+          CrosshairInPreview: GB,
+          CrosshairInEditor: YB || GB,
+          CrosshairSpreads: void 0 !== MB
         }),
-        children: (0, GH.jsx)("div", {
+        children: (0, zB.jsx)("div", {
           className: "CrosshairShapesOrigin",
           style: {
-            left: xH.x,
-            top: xH.y,
-            opacity: BH.opacity / 100
+            left: RB.x,
+            top: RB.y,
+            opacity: OB.opacity / 100
           },
-          children: (0, GH.jsxs)("div", {
+          children: (0, zB.jsxs)("div", {
             className: "CrosshairShapesPress",
-            children: [MH.ringOutline && (0, GH.jsx)("div", {
+            children: [NB.ringOutline && (0, zB.jsx)("div", {
               className: "CrosshairRing",
-              style: TH(MH.ringOutline, QH, UH)
-            }), MH.outlines.map(((HH, BH) => (0, GH.jsx)("div", {
+              style: VB(NB.ringOutline, qB, SB)
+            }), NB.outlines.map(((BB, OB) => (0, zB.jsx)("div", {
               className: "CrosshairPart",
-              ...OH(HH),
-              style: PH(HH, kH, QH, UH)
-            }, `o${BH}`))), MH.ring && (0, GH.jsx)("div", {
+              ...UB(BB),
+              style: AB(BB, kB, qB, SB)
+            }, `o${OB}`))), NB.ring && (0, zB.jsx)("div", {
               className: "CrosshairRing",
-              style: TH(MH.ring, QH, vH)
-            }), MH.fills.map(((HH, BH) => (0, GH.jsx)("div", {
+              style: VB(NB.ring, qB, WB)
+            }), NB.fills.map(((BB, OB) => (0, zB.jsx)("div", {
               className: "CrosshairPart",
-              ...OH(HH),
-              style: PH(HH, kH, QH, vH)
-            }, `f${BH}`)))]
+              ...UB(BB),
+              style: AB(BB, kB, qB, WB)
+            }, `f${OB}`)))]
           })
         })
       })
     }
   },
-  34962: (HH, BH, LH) => {
-    LH.d(BH, {
-      b: () => EH,
-      f: () => WH,
-      g: () => QH
+  34773: (BB, OB, GB) => {
+    GB.d(OB, {
+      b: () => MB,
+      d: () => ZB,
+      g: () => qB
     });
-    var AH = LH(34946);
-    const rH = "XH1-",
-      SH = ["lines", "dot", "circle", "tStyle", "growOnClick", "forGuns"],
-      hH = ["opacity", "outline", "size", "lineLength", "lineThickness", "gap", "dotSize", "circleRadius", "circleThickness"],
-      tH = ["color", "outlineColor"],
-      zH = 1 + 3 * tH.length + hH.length + 1,
-      CH = Math.ceil(8 * zH / Math.log2(62)),
-      EH = rH.length + CH;
+    var YB = GB(34757);
+    const DB = "XH1-",
+      QB = ["lines", "dot", "circle", "tStyle", "growOnClick", "forGuns"],
+      oB = ["opacity", "outline", "size", "lineLength", "lineThickness", "gap", "dotSize", "circleRadius", "circleThickness"],
+      jB = ["color", "outlineColor"],
+      yB = 1 + 3 * jB.length + oB.length + 1,
+      JB = Math.ceil(8 * yB / Math.log2(62)),
+      MB = DB.length + JB;
 
-    function XH(HH) {
-      let BH = 90;
-      for (const LH of HH) BH = 31 * BH + LH & 255;
-      return BH
+    function PB(BB) {
+      let OB = 90;
+      for (const GB of BB) OB = 31 * OB + GB & 255;
+      return OB
     }
-    const GH = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
-      YH = BigInt(GH.length);
+    const zB = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
+      lB = BigInt(zB.length);
 
-    function uH(HH, BH) {
-      let LH = 0n;
-      for (const rH of HH) {
-        const HH = GH.indexOf(rH);
-        if (HH < 0) return null;
-        LH = LH * YH + BigInt(HH)
+    function pB(BB, OB) {
+      let GB = 0n;
+      for (const DB of BB) {
+        const BB = zB.indexOf(DB);
+        if (BB < 0) return null;
+        GB = GB * lB + BigInt(BB)
       }
-      if (LH >> BigInt(8 * BH) !== 0n) return null;
-      const AH = [];
-      for (let rH = 0; rH < BH; rH++) AH.unshift(Number(0xffn & LH)), LH >>= 8n;
-      return AH
+      if (GB >> BigInt(8 * OB) !== 0n) return null;
+      const YB = [];
+      for (let DB = 0; DB < OB; DB++) YB.unshift(Number(0xffn & GB)), GB >>= 8n;
+      return YB
     }
 
-    function QH(HH) {
-      let BH = "shapes" === HH.style ? 1 : 0;
-      SH.forEach(((LH, AH) => {
-        HH[LH] && (BH |= 1 << AH + 1)
+    function qB(BB) {
+      let OB = "shapes" === BB.style ? 1 : 0;
+      QB.forEach(((GB, YB) => {
+        BB[GB] && (OB |= 1 << YB + 1)
       }));
-      const LH = [BH];
-      for (const rH of tH) {
-        const BH = (0, AH.d)(rH, HH[rH]);
-        LH.push(BH >> 16 & 255, BH >> 8 & 255, 255 & BH)
+      const GB = [OB];
+      for (const DB of jB) {
+        const OB = (0, YB.h)(DB, BB[DB]);
+        GB.push(OB >> 16 & 255, OB >> 8 & 255, 255 & OB)
       }
-      for (const rH of hH) {
+      for (const DB of oB) {
         const {
-          min: BH,
-          step: SH
-        } = AH.b[rH];
-        LH.push(Math.round(((0, AH.d)(rH, HH[rH]) - BH) / SH))
+          min: OB,
+          step: QB
+        } = YB.c[DB];
+        GB.push(Math.round(((0, YB.h)(DB, BB[DB]) - OB) / QB))
       }
-      return LH.push(XH(LH)), rH + function(HH, BH) {
-        let LH = 0n;
-        for (const rH of HH) LH = LH << 8n | BigInt(rH);
-        let AH = "";
-        for (let rH = 0; rH < BH; rH++) AH = GH[Number(LH % YH)] + AH, LH /= YH;
-        return AH
-      }(LH, CH)
+      return GB.push(PB(GB)), DB + function(BB, OB) {
+        let GB = 0n;
+        for (const DB of BB) GB = GB << 8n | BigInt(DB);
+        let YB = "";
+        for (let DB = 0; DB < OB; DB++) YB = zB[Number(GB % lB)] + YB, GB /= lB;
+        return YB
+      }(GB, JB)
     }
 
-    function WH(HH) {
-      for (const BH of HH.matchAll(new RegExp(`XH1-([0-9A-Za-z]{${CH}})`, "gi"))) {
-        const HH = MH(uH(BH[1], zH));
-        if (HH) return HH
+    function ZB(BB) {
+      for (const OB of BB.matchAll(new RegExp(`XH1-([0-9A-Za-z]{${JB}})`, "gi"))) {
+        const BB = NB(pB(OB[1], yB));
+        if (BB) return BB
       }
       return null
     }
 
-    function MH(HH) {
-      if (!HH || HH.length !== zH || XH(HH.slice(0, -1)) !== HH[HH.length - 1]) return null;
-      const BH = HH[0],
-        LH = {
-          ...AH.c,
-          style: 1 & BH ? "shapes" : "classic"
+    function NB(BB) {
+      if (!BB || BB.length !== yB || PB(BB.slice(0, -1)) !== BB[BB.length - 1]) return null;
+      const OB = BB[0],
+        GB = {
+          ...YB.d,
+          style: 1 & OB ? "shapes" : "classic"
         };
-      SH.forEach(((HH, AH) => {
-        LH[HH] = 0 !== (BH & 1 << AH + 1)
+      QB.forEach(((BB, YB) => {
+        GB[BB] = 0 !== (OB & 1 << YB + 1)
       }));
-      let rH = 1;
-      for (const AH of tH) LH[AH] = HH[rH] << 16 | HH[rH + 1] << 8 | HH[rH + 2], rH += 3;
-      for (const SH of hH) {
+      let DB = 1;
+      for (const YB of jB) GB[YB] = BB[DB] << 16 | BB[DB + 1] << 8 | BB[DB + 2], DB += 3;
+      for (const QB of oB) {
         const {
-          min: BH,
-          step: hH
-        } = AH.b[SH];
-        LH[SH] = (0, AH.d)(SH, BH + HH[rH] * hH), rH++
+          min: OB,
+          step: oB
+        } = YB.c[QB];
+        GB[QB] = (0, YB.h)(QB, OB + BB[DB] * oB), DB++
       }
-      return LH
+      return GB
     }
   },
-  34946: (HH, BH, LH) => {
-    LH.d(BH, {
-      b: () => AH,
-      c: () => rH,
-      d: () => SH,
-      e: () => CH,
-      f: () => zH,
-      i: () => EH,
-      j: () => tH,
-      k: () => hH
+  34757: (BB, OB, GB) => {
+    GB.d(OB, {
+      c: () => YB,
+      d: () => DB,
+      h: () => QB,
+      l: () => JB,
+      p: () => yB,
+      t: () => MB,
+      v: () => jB,
+      w: () => oB
     });
-    const AH = {
+    const YB = {
         opacity: {
           min: 5,
           max: 100,
@@ -661,7 +661,7 @@ export const modules = {
           step: 1
         }
       },
-      rH = Object.freeze({
+      DB = Object.freeze({
         style: "classic",
         color: 16777215,
         opacity: 100,
@@ -682,212 +682,212 @@ export const modules = {
         forGuns: !1
       });
 
-    function SH(HH, BH) {
-      var LH;
+    function QB(BB, OB) {
+      var GB;
       const {
-        min: SH,
-        max: hH,
-        step: tH
-      } = AH[HH];
-      if (!Number.isFinite(BH)) return rH[HH];
-      const zH = (null !== (LH = String(tH).split(".")[1]) && void 0 !== LH ? LH : "").length,
-        CH = Number((Math.round(BH / tH) * tH).toFixed(zH));
-      return Math.min(hH, Math.max(SH, CH))
+        min: QB,
+        max: oB,
+        step: jB
+      } = YB[BB];
+      if (!Number.isFinite(OB)) return DB[BB];
+      const yB = (null !== (GB = String(jB).split(".")[1]) && void 0 !== GB ? GB : "").length,
+        JB = Number((Math.round(OB / jB) * jB).toFixed(yB));
+      return Math.min(oB, Math.max(QB, JB))
     }
 
-    function hH(HH, BH, LH) {
-      const AH = "number" === typeof LH ? SH(BH, LH) : LH;
+    function oB(BB, OB, GB) {
+      const YB = "number" === typeof GB ? QB(OB, GB) : GB;
       return {
-        ...HH,
-        [BH]: AH
+        ...BB,
+        [OB]: YB
       }
     }
 
-    function tH(HH, BH) {
-      let LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-      return Object.keys(rH).every((AH => LH.includes(AH) || HH[AH] === BH[AH]))
+    function jB(BB, OB) {
+      let GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+      return Object.keys(DB).every((YB => GB.includes(YB) || BB[YB] === OB[YB]))
     }
 
-    function zH(HH) {
-      return tH(HH, rH)
+    function yB(BB) {
+      return jB(BB, DB)
     }
 
-    function CH(HH) {
-      return `#${HH.toString(16).padStart(6,"0")}`
+    function JB(BB) {
+      return `#${BB.toString(16).padStart(6,"0")}`
     }
 
-    function EH(HH) {
-      const BH = /^#?([0-9a-f]{6})$/i.exec(HH.trim());
-      return BH ? parseInt(BH[1], 16) : null
+    function MB(BB) {
+      const OB = /^#?([0-9a-f]{6})$/i.exec(BB.trim());
+      return OB ? parseInt(OB[1], 16) : null
     }
   },
-  34969: (HH, BH, LH) => {
-    LH.d(BH, {
-      c: () => XH,
-      g: () => GH
+  34777: (BB, OB, GB) => {
+    GB.d(OB, {
+      b: () => PB,
+      f: () => zB
     });
-    var AH = LH(45),
-      rH = LH(30),
-      SH = LH(34962),
-      hH = LH(34946);
-    const tH = "crosshairCode";
-    let zH = null;
-    const CH = new Set;
+    var YB = GB(56),
+      DB = GB(31),
+      QB = GB(34773),
+      oB = GB(34757);
+    const jB = "crosshairCode";
+    let yB = null;
+    const JB = new Set;
 
-    function EH() {
-      if (null === zH) {
-        var HH;
-        const BH = rH.e.getItem(tH);
-        zH = null !== (HH = "string" === typeof BH ? (0, SH.f)(BH) : null) && void 0 !== HH ? HH : hH.c
+    function MB() {
+      if (null === yB) {
+        var BB;
+        const OB = DB.g.getItem(jB);
+        yB = null !== (BB = "string" === typeof OB ? (0, QB.d)(OB) : null) && void 0 !== BB ? BB : oB.d
       }
-      return zH
+      return yB
     }
 
-    function XH(HH) {
-      zH = HH, (0, hH.f)(HH) ? rH.e.removeItem(tH) : rH.e.setItem(tH, (0, SH.g)(HH));
-      for (const BH of CH) BH()
+    function PB(BB) {
+      yB = BB, (0, oB.p)(BB) ? DB.g.removeItem(jB) : DB.g.setItem(jB, (0, QB.g)(BB));
+      for (const OB of JB) OB()
     }
 
-    function GH() {
-      const [HH, BH] = (0, AH.useState)(EH);
-      return (0, AH.useEffect)((() => {
-        const HH = () => {
-          BH(EH())
+    function zB() {
+      const [BB, OB] = (0, YB.useState)(MB);
+      return (0, YB.useEffect)((() => {
+        const BB = () => {
+          OB(MB())
         };
-        return HH(), LH = HH, CH.add(LH), () => {
-          CH.delete(LH)
+        return BB(), GB = BB, JB.add(GB), () => {
+          JB.delete(GB)
         };
-        var LH
-      }), []), HH
+        var GB
+      }), []), BB
     }
   },
-  37633: (HH, BH, LH) => {
-    LH.d(BH, {
-      b: () => SH,
-      f: () => zH,
-      g: () => hH
+  37452: (BB, OB, GB) => {
+    GB.d(OB, {
+      b: () => QB,
+      d: () => yB,
+      g: () => oB
     });
-    var AH = LH(619),
-      rH = LH(3038);
+    var YB = GB(641),
+      DB = GB(3088);
 
-    function SH(HH) {
-      return HH === (0, rH.c)().JBH ? (0, rH.c)().lF : HH
+    function QB(BB) {
+      return BB === (0, DB.g)().QGB ? (0, DB.g)().EX : BB
     }
 
-    function hH(HH) {
-      return !(0, AH.M)(HH) && SH(HH) === (0, rH.c)().lF
+    function oB(BB) {
+      return !(0, YB.Q)(BB) && QB(BB) === (0, DB.g)().EX
     }
-    const tH = "gravity";
+    const jB = "gravity";
 
-    function zH() {
-      return (0, rH.c)().physics[tH][1]
+    function yB() {
+      return (0, DB.g)().physics[jB][1]
     }
   },
-  37608: (HH, BH, LH) => {
-    LH.d(BH, {
-      c: () => VH
+  37434: (BB, OB, GB) => {
+    GB.d(OB, {
+      b: () => nB
     });
-    var AH = LH(37617),
-      rH = LH(176),
-      SH = LH(5335),
-      hH = LH(37626),
-      tH = LH(37326),
-      zH = LH(37656),
-      CH = LH(37633),
-      EH = LH(330),
-      XH = LH.n(EH),
-      GH = LH(3038),
-      YH = LH(37654),
-      uH = LH(18),
-      QH = LH(15),
-      WH = LH(37640),
-      MH = LH(37642),
-      xH = LH(37648),
-      vH = LH(37650);
-    const PH = new Set(["note"]);
-    const TH = {
-      stop: () => TH,
-      fade: () => TH,
-      rate: () => TH,
+    var YB = GB(37436),
+      DB = GB(192),
+      QB = GB(5353),
+      oB = GB(37443),
+      jB = GB(37113),
+      yB = GB(37490),
+      JB = GB(37452),
+      MB = GB(363),
+      PB = GB.n(MB),
+      zB = GB(3088),
+      lB = GB(37486),
+      pB = GB(25),
+      qB = GB(16),
+      ZB = GB(37461),
+      NB = GB(37466),
+      RB = GB(37475),
+      WB = GB(37477);
+    const AB = new Set(["note"]);
+    const VB = {
+      stop: () => VB,
+      fade: () => VB,
+      rate: () => VB,
       stopsAtOnce: () => !1,
       isAlive: () => !1,
       getDurationMs: () => 0,
       getVolume: () => 0,
       getRelativeVolume: () => 0,
-      setRelativeVolume: () => TH,
-      setPannerAttr: () => TH,
-      setPosition: () => TH
+      setRelativeVolume: () => VB,
+      setPannerAttr: () => VB,
+      setPosition: () => VB
     };
-    class UH {
-      constructor(HH) {
-        this._howl = void 0, this._volumeMultiplier = void 0, this._loadFailed = !1, this._unloaded = !1, this._volumeMultiplier = new zH.f, this._howl = (0, tH.countDecodesAs)(new SH.Howl({
-          src: [...(0, AH.v)(HH).src],
+    class SB {
+      constructor(BB) {
+        this._howl = void 0, this._volumeMultiplier = void 0, this._loadFailed = !1, this._unloaded = !1, this._volumeMultiplier = new yB.i, this._howl = (0, jB.countDecodesAs)(new QB.Howl({
+          src: [...(0, YB.t)(BB).src],
           pool: 15
         }), "sound"), this._howl.once("loaderror", (() => {
           this._loadFailed = !0
         }))
       }
       play() {
-        let HH = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const BH = this._howl.play(hH.b);
-        HH && this._howl.loop(!0, BH);
-        let LH = 1;
-        this._howl.volume(this._volumeMultiplier.getTotalMultipliedVal(), BH);
-        const AH = {
+        let BB = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const OB = this._howl.play(oB.d);
+        BB && this._howl.loop(!0, OB);
+        let GB = 1;
+        this._howl.volume(this._volumeMultiplier.getTotalMultipliedVal(), OB);
+        const YB = {
           stop: () => {
-            var HH;
-            return null === (HH = this.liveHowl()) || void 0 === HH || HH.stop(BH), AH
+            var BB;
+            return null === (BB = this.liveHowl()) || void 0 === BB || BB.stop(OB), YB
           },
-          fade: (HH, LH, rH) => {
-            var SH;
-            return null === (SH = this.liveHowl()) || void 0 === SH || SH.fade(HH, LH, rH, BH), AH
+          fade: (BB, GB, DB) => {
+            var QB;
+            return null === (QB = this.liveHowl()) || void 0 === QB || QB.fade(BB, GB, DB, OB), YB
           },
-          rate: HH => {
-            var LH;
-            return null === (LH = this.liveHowl()) || void 0 === LH || LH.rate(HH, BH), AH
+          rate: BB => {
+            var GB;
+            return null === (GB = this.liveHowl()) || void 0 === GB || GB.rate(BB, OB), YB
           },
-          stopsAtOnce: () => this._howl.playing(BH) && !this._howl._playLock,
+          stopsAtOnce: () => this._howl.playing(OB) && !this._howl._playLock,
           isAlive: () => {
-            const HH = this._howl._soundById(BH);
-            return !this._loadFailed && !!HH && !HH._ended
+            const BB = this._howl._soundById(OB);
+            return !this._loadFailed && !!BB && !BB._ended
           },
-          getDurationMs: () => this._howl._soundById(BH) ? 1e3 * this._howl.duration(BH) / this._howl.rate(BH) : 0,
-          getVolume: () => LH * this._volumeMultiplier.getTotalMultipliedVal(),
-          getRelativeVolume: () => LH,
-          setRelativeVolume: HH => {
-            var rH;
-            if (HH > 1) throw new Error("Volume should be <= 1");
-            return LH = QH.c.get("soundOnFromAd") ? HH : 0, null === (rH = this.liveHowl()) || void 0 === rH || rH.volume(Math.min(1, LH * this._volumeMultiplier.getTotalMultipliedVal()), BH), AH
+          getDurationMs: () => this._howl._soundById(OB) ? 1e3 * this._howl.duration(OB) / this._howl.rate(OB) : 0,
+          getVolume: () => GB * this._volumeMultiplier.getTotalMultipliedVal(),
+          getRelativeVolume: () => GB,
+          setRelativeVolume: BB => {
+            var DB;
+            if (BB > 1) throw new Error("Volume should be <= 1");
+            return GB = qB.c.get("soundOnFromAd") ? BB : 0, null === (DB = this.liveHowl()) || void 0 === DB || DB.volume(Math.min(1, GB * this._volumeMultiplier.getTotalMultipliedVal()), OB), YB
           },
-          setPannerAttr: HH => {
+          setPannerAttr: BB => {
             let {
-              coneInnerAngle: LH,
-              coneOuterAngle: rH = 360,
-              coneOuterGain: SH,
-              distanceModel: hH,
-              maxDistance: tH,
-              panningModel: zH,
-              refDistance: CH,
-              rolloffFactor: EH
-            } = HH;
+              coneInnerAngle: GB,
+              coneOuterAngle: DB = 360,
+              coneOuterGain: QB,
+              distanceModel: oB,
+              maxDistance: jB,
+              panningModel: yB,
+              refDistance: JB,
+              rolloffFactor: MB
+            } = BB;
             return this._setPannerAttr({
-              id: BH,
-              coneInnerAngle: LH,
-              coneOuterAngle: rH,
-              coneOuterGain: SH,
-              distanceModel: hH,
-              maxDistance: tH,
-              panningModel: zH,
-              refDistance: CH,
-              rolloffFactor: EH
-            }), AH
+              id: OB,
+              coneInnerAngle: GB,
+              coneOuterAngle: DB,
+              coneOuterGain: QB,
+              distanceModel: oB,
+              maxDistance: jB,
+              panningModel: yB,
+              refDistance: JB,
+              rolloffFactor: MB
+            }), YB
           },
-          setPosition: HH => {
-            var LH;
-            return null === (LH = this.liveHowl()) || void 0 === LH || LH.pos(HH[2], HH[1], HH[0], BH), AH
+          setPosition: BB => {
+            var GB;
+            return null === (GB = this.liveHowl()) || void 0 === GB || GB.pos(BB[2], BB[1], BB[0], OB), YB
           }
         };
-        return AH
+        return YB
       }
       liveHowl() {
         return this._unloaded ? null : this._howl
@@ -896,196 +896,196 @@ export const modules = {
         return "loaded" === this._howl.state()
       }
       unloadOnceIdle() {
-        (0, hH.d)(this._howl, (() => {
+        (0, oB.e)(this._howl, (() => {
           this._unloaded = !0
         }))
       }
-      setGlobalVolume(HH) {
-        this._volumeMultiplier.setMultiplierType("globalVolume", HH), this._howl.volume(HH)
+      setGlobalVolume(BB) {
+        this._volumeMultiplier.setMultiplierType("globalVolume", BB), this._howl.volume(BB)
       }
-      _setPannerAttr(HH) {
+      _setPannerAttr(BB) {
         let {
-          id: BH,
-          coneInnerAngle: LH = 360,
-          coneOuterAngle: AH = 360,
-          coneOuterGain: rH = 0,
-          distanceModel: SH = "inverse",
-          maxDistance: hH = 1e3,
-          panningModel: tH = "HRTF",
-          refDistance: zH = YH.i,
-          rolloffFactor: CH = 1
-        } = HH;
-        const EH = this.liveHowl();
-        if (null === EH) return;
-        EH.pannerAttr({
-          coneOuterAngle: AH
-        }, BH);
-        const XH = {
-          coneInnerAngle: LH,
-          coneOuterAngle: AH,
-          coneOuterGain: rH,
-          distanceModel: SH,
-          maxDistance: hH,
-          panningModel: tH,
-          refDistance: zH,
-          rolloffFactor: CH
+          id: OB,
+          coneInnerAngle: GB = 360,
+          coneOuterAngle: YB = 360,
+          coneOuterGain: DB = 0,
+          distanceModel: QB = "inverse",
+          maxDistance: oB = 1e3,
+          panningModel: jB = "HRTF",
+          refDistance: yB = lB.g,
+          rolloffFactor: JB = 1
+        } = BB;
+        const MB = this.liveHowl();
+        if (null === MB) return;
+        MB.pannerAttr({
+          coneOuterAngle: YB
+        }, OB);
+        const PB = {
+          coneInnerAngle: GB,
+          coneOuterAngle: YB,
+          coneOuterGain: DB,
+          distanceModel: QB,
+          maxDistance: oB,
+          panningModel: jB,
+          refDistance: yB,
+          rolloffFactor: JB
         };
-        EH.pannerAttr(XH, BH)
+        MB.pannerAttr(PB, OB)
       }
     }
-    const VH = new class {
+    const nB = new class {
       constructor() {
-        this.stereoSounds = {}, this.spatialSounds = {}, this.spatialVoices = new WH.b, this.idlePreloads = new Set, this.idlePreloadGeneration = 0, uH.k.subscribe("appManagerUpdated|soundVolume", (HH => {
-          const BH = Object.values(this.stereoSounds).concat(Object.values(this.spatialSounds));
-          for (const LH of BH) LH.setGlobalVolume(HH)
+        this.stereoSounds = {}, this.spatialSounds = {}, this.spatialVoices = new ZB.e, this.idlePreloads = new Set, this.idlePreloadGeneration = 0, pB.o.subscribe("appManagerUpdated|soundVolume", (BB => {
+          const OB = Object.values(this.stereoSounds).concat(Object.values(this.spatialSounds));
+          for (const GB of OB) GB.setGlobalVolume(BB)
         }))
       }
-      play(HH, BH) {
-        var LH;
-        let SH, hH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null === (LH = (0, GH.c)()) || void 0 === LH ? void 0 : LH.lF,
-          tH = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : YH.f,
-          zH = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : YH.i,
-          EH = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
-        var uH;
-        (0, GH.c)() ? SH = !!Array.isArray(hH) || (0, CH.b)(hH) !== (null === (uH = (0, GH.c)()) || void 0 === uH ? void 0 : uH.lF): SH = !1;
-        const QH = (0, AH.o)(HH),
-          MH = this.loadSound(SH ? this.spatialSounds : this.stereoSounds, HH);
-        if (!SH) {
-          const HH = MH.play(EH);
-          return HH.setRelativeVolume(BH), HH
+      play(BB, OB) {
+        var GB;
+        let QB, oB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null === (GB = (0, zB.g)()) || void 0 === GB ? void 0 : GB.EX,
+          jB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : lB.f,
+          yB = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : lB.g,
+          MB = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
+        var pB;
+        (0, zB.g)() ? QB = !!Array.isArray(oB) || (0, JB.b)(oB) !== (null === (pB = (0, zB.g)()) || void 0 === pB ? void 0 : pB.EX): QB = !1;
+        const qB = (0, YB.n)(BB),
+          NB = this.loadSound(QB ? this.spatialSounds : this.stereoSounds, BB);
+        if (!QB) {
+          const BB = NB.play(MB);
+          return BB.setRelativeVolume(OB), BB
         }
-        const xH = (0, GH.c)(),
-          vH = Array.isArray(hH) ? hH : xH.pT.hT(hH),
-          UH = xH.pT.hT(xH.lF);
-        if (!vH || XH().sqrDist(vH, UH) > tH * tH) return TH;
-        let VH;
-        if (!EH) {
+        const RB = (0, zB.g)(),
+          WB = Array.isArray(oB) ? oB : RB.DW.pR(oB),
+          SB = RB.DW.pR(RB.EX);
+        if (!WB || PB().sqrDist(WB, SB) > jB * jB) return VB;
+        let nB;
+        if (!MB) {
           if (!this.spatialVoices.admit({
-              group: PH.has(QH) ? null : (0, WH.e)(HH),
-              loudness: (0, WH.d)(BH, XH().Ot(vH, UH), zH),
+              group: AB.has(qB) ? null : (0, ZB.j)(BB),
+              loudness: (0, ZB.f)(OB, PB().IM(WB, SB), yB),
               startMs: performance.now(),
               getDurationMs: () => {
-                var HH, BH;
-                return null !== (HH = null === (BH = VH) || void 0 === BH ? void 0 : BH.getDurationMs()) && void 0 !== HH ? HH : 0
+                var BB, OB;
+                return null !== (BB = null === (OB = nB) || void 0 === OB ? void 0 : OB.getDurationMs()) && void 0 !== BB ? BB : 0
               },
               isAlive: () => {
-                var HH, BH;
-                return null !== (HH = null === (BH = VH) || void 0 === BH ? void 0 : BH.isAlive()) && void 0 !== HH && HH
+                var BB, OB;
+                return null !== (BB = null === (OB = nB) || void 0 === OB ? void 0 : OB.isAlive()) && void 0 !== BB && BB
               },
               canStop: () => {
-                var HH, BH;
-                return null !== (HH = null === (BH = VH) || void 0 === BH ? void 0 : BH.stopsAtOnce()) && void 0 !== HH && HH
+                var BB, OB;
+                return null !== (BB = null === (OB = nB) || void 0 === OB ? void 0 : OB.stopsAtOnce()) && void 0 !== BB && BB
               },
               stop: () => {
-                var HH;
-                null === (HH = VH) || void 0 === HH || HH.stop()
+                var BB;
+                null === (BB = nB) || void 0 === BB || BB.stop()
               }
-            })) return TH
+            })) return VB
         }
-        return VH = MH.play(EH), VH.setRelativeVolume(BH), VH.setPannerAttr({
-          refDistance: zH
-        }), VH.setPosition([vH[0], vH[1] + rH.g.iW * rH.g.playerEyeToHeightRatio, vH[2]]), VH
+        return nB = NB.play(MB), nB.setRelativeVolume(OB), nB.setPannerAttr({
+          refDistance: yB
+        }), nB.setPosition([WB[0], WB[1] + DB.f.xZ * DB.f.playerEyeToHeightRatio, WB[2]]), nB
       }
-      preload(HH) {
-        const BH = (0, AH.s)(HH) ? [HH] : (0, AH.x)(HH);
-        if (0 === BH.length) throw new Error(`Invalid sound name ${HH} (no sound has it or starts with it)`);
-        for (const LH of BH) this.loadSound(this.stereoSounds, LH)
+      preload(BB) {
+        const OB = (0, YB.q)(BB) ? [BB] : (0, YB.w)(BB);
+        if (0 === OB.length) throw new Error(`Invalid sound name ${BB} (no sound has it or starts with it)`);
+        for (const GB of OB) this.loadSound(this.stereoSounds, GB)
       }
-      preloadAtIdle(HH) {
-        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : vH.e;
-        const LH = HH.filter((HH => !this.idlePreloads.has(HH)));
-        for (const rH of LH) this.idlePreloads.add(rH);
-        const AH = this.idlePreloadGeneration;
-        (0, xH.b)(LH, {
-          ...BH,
-          xB: () => AH !== this.idlePreloadGeneration,
-          fetchFile: HH => {
-            this.idlePreloads.delete(HH);
+      preloadAtIdle(BB) {
+        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : WB.c;
+        const GB = BB.filter((BB => !this.idlePreloads.has(BB)));
+        for (const DB of GB) this.idlePreloads.add(DB);
+        const YB = this.idlePreloadGeneration;
+        (0, RB.b)(GB, {
+          ...OB,
+          rB: () => YB !== this.idlePreloadGeneration,
+          fetchFile: BB => {
+            this.idlePreloads.delete(BB);
             try {
-              return this.preload(HH), Promise.resolve()
-            } catch (BH) {
-              return Promise.reject(BH)
+              return this.preload(BB), Promise.resolve()
+            } catch (OB) {
+              return Promise.reject(OB)
             }
           }
         })
       }
-      loadSound(HH, BH) {
-        const LH = HH[BH];
-        if (LH) return LH;
-        const rH = this.makeSound(HH, BH);
-        for (const hH of null !== (SH = (0, AH.t)(BH)) && void 0 !== SH ? SH : []) {
-          var SH;
-          HH[hH] || this.makeSound(HH, hH)
+      loadSound(BB, OB) {
+        const GB = BB[OB];
+        if (GB) return GB;
+        const DB = this.makeSound(BB, OB);
+        for (const oB of null !== (QB = (0, YB.r)(OB)) && void 0 !== QB ? QB : []) {
+          var QB;
+          BB[oB] || this.makeSound(BB, oB)
         }
-        return rH
+        return DB
       }
-      makeSound(HH, BH) {
-        (0, vH.i)(BH);
-        const LH = new UH(BH);
-        return LH.setGlobalVolume(QH.c.get("soundVolume")), HH[BH] = LH, LH
+      makeSound(BB, OB) {
+        (0, WB.e)(OB);
+        const GB = new SB(OB);
+        return GB.setGlobalVolume(qB.c.get("soundVolume")), BB[OB] = GB, GB
       }
       freeSoundsAfterGame() {
         this.idlePreloadGeneration++, this.idlePreloads.clear(), this.freeSounds()
       }
       freeSounds() {
-        for (const HH of [this.stereoSounds, this.spatialSounds])
-          for (const [BH, LH] of Object.entries(HH)) !MH.d.has((0, AH.o)(BH)) && LH.loaded() && (LH.unloadOnceIdle(), delete HH[BH])
+        for (const BB of [this.stereoSounds, this.spatialSounds])
+          for (const [OB, GB] of Object.entries(BB)) !NB.b.has((0, YB.n)(OB)) && GB.loaded() && (GB.unloadOnceIdle(), delete BB[OB])
       }
     }
   },
-  37694: (HH, BH, LH) => {
-    function AH(HH, BH) {
-      var LH, AH, rH, SH, hH, tH, zH, CH;
-      return HH.name === BH.name && ((null === (LH = HH.attributes) || void 0 === LH || null === (AH = LH.customAttributes) || void 0 === AH ? void 0 : AH.stackKey) === (null === (rH = BH.attributes) || void 0 === rH || null === (SH = rH.customAttributes) || void 0 === SH ? void 0 : SH.stackKey) && (!0 !== (null === (hH = HH.attributes) || void 0 === hH || null === (tH = hH.customAttributes) || void 0 === tH ? void 0 : tH.unstackable) && !0 !== (null === (zH = BH.attributes) || void 0 === zH || null === (CH = zH.customAttributes) || void 0 === CH ? void 0 : CH.unstackable)))
+  37533: (BB, OB, GB) => {
+    function YB(BB, OB) {
+      var GB, YB, DB, QB, oB, jB, yB, JB;
+      return BB.name === OB.name && ((null === (GB = BB.attributes) || void 0 === GB || null === (YB = GB.customAttributes) || void 0 === YB ? void 0 : YB.stackKey) === (null === (DB = OB.attributes) || void 0 === DB || null === (QB = DB.customAttributes) || void 0 === QB ? void 0 : QB.stackKey) && (!0 !== (null === (oB = BB.attributes) || void 0 === oB || null === (jB = oB.customAttributes) || void 0 === jB ? void 0 : jB.unstackable) && !0 !== (null === (yB = OB.attributes) || void 0 === yB || null === (JB = yB.customAttributes) || void 0 === JB ? void 0 : JB.unstackable)))
     }
-    LH.d(BH, {
-      d: () => AH
+    GB.d(OB, {
+      e: () => YB
     })
   },
-  37798: (HH, BH, LH) => {
-    function AH(HH) {
-      return HH.includes("Leaf Bed")
+  37633: (BB, OB, GB) => {
+    function YB(BB) {
+      return BB.includes("Leaf Bed")
     }
 
-    function rH(HH) {
-      return / Bed(?: Head)?(?:\||$)/.test(HH) && !AH(HH)
+    function DB(BB) {
+      return / Bed(?: Head)?(?:\||$)/.test(BB) && !YB(BB)
     }
 
-    function SH(HH) {
-      return HH.includes(" Strongbed")
+    function QB(BB) {
+      return BB.includes(" Strongbed")
     }
 
-    function hH(HH) {
-      return AH(HH) || rH(HH) || SH(HH)
+    function oB(BB) {
+      return YB(BB) || DB(BB) || QB(BB)
     }
-    LH.d(BH, {
-      d: () => hH,
-      h: () => AH,
-      l: () => SH,
-      m: () => rH
+    GB.d(OB, {
+      b: () => oB,
+      d: () => YB,
+      f: () => QB,
+      i: () => DB
     })
   },
-  37793: (HH, BH, LH) => {
-    LH.d(BH, {
-      d: () => CH
+  37627: (BB, OB, GB) => {
+    GB.d(OB, {
+      d: () => JB
     });
-    var AH = LH(37798),
-      rH = LH(9940);
-    const SH = [],
-      hH = [],
-      tH = [],
-      zH = [];
-    for (const EH of Object.keys(rH.l))(0, AH.h)(EH) ? SH.push(EH) : (0, AH.m)(EH) && hH.push(EH), (0, AH.l)(EH) && tH.push(EH), (EH.includes(" Bed Head") || EH.includes(" Strongbed Head")) && zH.push(EH);
-    const CH = {
-      leafBeds: SH,
-      woolBeds: hH,
-      strongBeds: tH,
-      beds: [...SH, ...hH, ...tH],
-      bedHeads: zH,
+    var YB = GB(37633),
+      DB = GB(9927);
+    const QB = [],
+      oB = [],
+      jB = [],
+      yB = [];
+    for (const MB of Object.keys(DB.n))(0, YB.d)(MB) ? QB.push(MB) : (0, YB.i)(MB) && oB.push(MB), (0, YB.f)(MB) && jB.push(MB), (MB.includes(" Bed Head") || MB.includes(" Strongbed Head")) && yB.push(MB);
+    const JB = {
+      leafBeds: QB,
+      woolBeds: oB,
+      strongBeds: jB,
+      beds: [...QB, ...oB, ...jB],
+      bedHeads: yB,
       blockRemoveActionRoots: ["Chest", "Loot Chest", "Iron Chest", "Mailbox", "Bookshelf", "Empty Bookshelf"]
     }
   },
-  34960: () => {}
+  34769: () => {}
 };
 Object.freeze(modules);
-for (const HH in modules) Object.freeze(modules[HH]);
+for (const BB in modules) Object.freeze(modules[BB]);

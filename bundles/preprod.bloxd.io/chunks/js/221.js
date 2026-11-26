@@ -1,282 +1,282 @@
 export const id = 221;
 export const ids = [221];
 export const modules = {
-  37093: (HH, BH, LH) => {
-    LH.r(BH), LH.d(BH, {
-      capturePreviewPicture: () => MH,
-      holdPreviewsLow: () => hH.f,
-      openLiveFigure: () => WH,
-      rasterNametag: () => TH
+  36929: (BB, OB, GB) => {
+    GB.r(OB), GB.d(OB, {
+      capturePreviewPicture: () => NB,
+      holdPreviewsLow: () => oB.f,
+      openLiveFigure: () => ZB,
+      rasterNametag: () => VB
     });
-    var AH = LH(1182),
-      rH = LH(2760),
-      SH = LH(35016),
-      hH = LH(37100),
-      tH = LH(37105),
-      zH = LH(37110),
-      CH = LH(37157),
-      EH = LH(3840);
-    const XH = 480,
-      GH = 16,
-      YH = {
+    var YB = GB(1238),
+      DB = GB(2787),
+      QB = GB(34828),
+      oB = GB(36937),
+      jB = GB(36939),
+      yB = GB(36945),
+      JB = GB(36991),
+      MB = GB(3898);
+    const PB = 480,
+      zB = 16,
+      lB = {
         minGapMs: 250,
         now: () => performance.now(),
-        skip: hH.p
+        skip: oB.s
       },
-      uH = 30,
-      QH = 1e4;
+      pB = 30,
+      qB = 1e4;
 
-    function WH(HH, BH, LH, zH) {
-      const CH = SH.h.openCharacter(HH, "player");
-      let EH = !1,
-        XH = !1,
-        uH = null;
-      const WH = async () => {
-        const HH = CH.dev.canvas(),
-          BH = await (AH = () => HH.isConnected && function(HH) {
+    function ZB(BB, OB, GB, yB) {
+      const JB = QB.g.openCharacter(BB, "player");
+      let MB = !1,
+        PB = !1,
+        pB = null;
+      const ZB = async () => {
+        const BB = JB.dev.canvas(),
+          OB = await (YB = () => BB.isConnected && function(BB) {
             const {
-              x: BH,
-              width: LH
-            } = xH(HH);
-            if (0 === LH || 0 === HH.height) return !1;
-            if (vH ??= document.createElement("canvas").getContext("2d", {
+              x: OB,
+              width: GB
+            } = RB(BB);
+            if (0 === GB || 0 === BB.height) return !1;
+            if (WB ??= document.createElement("canvas").getContext("2d", {
                 willReadFrequently: !0
-              }), null === vH) return !1;
-            const AH = vH.canvas;
-            AH.height = Math.min(HH.height, GH), AH.width = Math.max(1, Math.round(LH * AH.height / HH.height));
-            const rH = vH;
-            return rH.imageSmoothingQuality = "high", rH.drawImage(HH, BH, 0, LH, HH.height, 0, 0, AH.width, AH.height), PH(rH.getImageData(0, 0, AH.width, AH.height).data)
-          }(HH), rH = hH.d, SH = () => !EH && CH.isReady(), tH = YH, new Promise((HH => {
-            let BH = Number.NEGATIVE_INFINITY;
-            const LH = () => {
-              rH((() => {
+              }), null === WB) return !1;
+            const YB = WB.canvas;
+            YB.height = Math.min(BB.height, zB), YB.width = Math.max(1, Math.round(GB * YB.height / BB.height));
+            const DB = WB;
+            return DB.imageSmoothingQuality = "high", DB.drawImage(BB, OB, 0, GB, BB.height, 0, 0, YB.width, YB.height), AB(DB.getImageData(0, 0, YB.width, YB.height).data)
+          }(BB), DB = oB.b, QB = () => !MB && JB.isReady(), jB = lB, new Promise((BB => {
+            let OB = Number.NEGATIVE_INFINITY;
+            const GB = () => {
+              DB((() => {
                 try {
-                  if (!SH()) return void HH(!1);
-                  if (tH.skip()) return void HH(!0);
-                  const rH = tH.now();
-                  if (rH - BH >= tH.minGapMs && (BH = rH, AH())) return void HH(!0);
-                  LH()
-                } catch (rH) {
-                  console.warn("[loading-character] couldn't read a figure's frame", rH), HH(!1)
+                  if (!QB()) return void BB(!1);
+                  if (jB.skip()) return void BB(!0);
+                  const DB = jB.now();
+                  if (DB - OB >= jB.minGapMs && (OB = DB, YB())) return void BB(!0);
+                  GB()
+                } catch (DB) {
+                  console.warn("[loading-character] couldn't read a figure's frame", DB), BB(!1)
                 }
               }))
             };
-            LH()
+            GB()
           })));
-        var AH, rH, SH, tH;
-        return !BH || EH || XH || (XH = !0, LH(!0)), BH
+        var YB, DB, QB, jB;
+        return !OB || MB || PB || (PB = !0, GB(!0)), OB
       };
-      return CH.ready.then((() => {
-        if (EH) return !1;
-        for (const hH of AH.r) {
-          var HH;
-          CH.setCosmetic(hH, null !== (HH = BH.cosmetics[hH]) && void 0 !== HH ? HH : (0, rH.d)(hH))
+      return JB.ready.then((() => {
+        if (MB) return !1;
+        for (const oB of YB.t) {
+          var BB;
+          JB.setCosmetic(oB, null !== (BB = OB.cosmetics[oB]) && void 0 !== BB ? BB : (0, DB.d)(oB))
         }
-        const LH = Promise.all(AH.r.map((HH => CH.untilDrawn(HH)))).then((() => !0)),
-          SH = new Promise((HH => {
+        const GB = Promise.all(YB.t.map((BB => JB.untilDrawn(BB)))).then((() => !0)),
+          QB = new Promise((BB => {
             setTimeout((() => {
-              (0, hH.d)((() => {
-                HH(!1)
+              (0, oB.b)((() => {
+                BB(!1)
               }))
-            }), QH)
+            }), qB)
           }));
-        return Promise.race([LH, SH])
-      })).then((async HH => {
-        if (!EH && CH.isReady() && await WH() && HH) return MH(CH.dev.canvas(), (() => !EH && CH.isReady())).then((HH => {
-          null === HH || EH || zH(HH)
+        return Promise.race([GB, QB])
+      })).then((async BB => {
+        if (!MB && JB.isReady() && await ZB() && BB) return NB(JB.dev.canvas(), (() => !MB && JB.isReady())).then((BB => {
+          null === BB || MB || yB(BB)
         }))
-      })).catch((HH => {
-        console.warn("[loading-character] a figure couldn't draw", HH)
+      })).catch((BB => {
+        console.warn("[loading-character] a figure couldn't draw", BB)
       })), {
-        resize: (HH, BH) => {
-          const AH = (0, tH.e)(HH, BH, window.devicePixelRatio),
-            rH = null !== uH && (uH[0] !== AH[0] || uH[1] !== AH[1]);
-          uH = AH, CH.resize(HH, BH), rH && XH && (XH = !1, LH(!1), WH())
+        resize: (BB, OB) => {
+          const YB = (0, jB.c)(BB, OB, window.devicePixelRatio),
+            DB = null !== pB && (pB[0] !== YB[0] || pB[1] !== YB[1]);
+          pB = YB, JB.resize(BB, OB), DB && PB && (PB = !1, GB(!1), ZB())
         },
         close: () => {
-          EH = !0, CH.close()
+          MB = !0, JB.close()
         }
       }
     }
 
-    function MH(HH, BH) {
-      return new Promise((LH => {
-        const AH = rH => {
-          (0, hH.d)((() => {
-            if (!BH()) return void LH(null);
-            const SH = HH.isConnected ? function(HH) {
+    function NB(BB, OB) {
+      return new Promise((GB => {
+        const YB = DB => {
+          (0, oB.b)((() => {
+            if (!OB()) return void GB(null);
+            const QB = BB.isConnected ? function(BB) {
               let {
-                canvas: BH,
-                x: LH,
-                width: AH
-              } = HH;
-              if (0 === AH || 0 === BH.height) return null;
-              const rH = Math.min(1, XH / BH.height),
-                SH = document.createElement("canvas");
-              SH.width = Math.max(1, Math.round(AH * rH)), SH.height = Math.max(1, Math.round(BH.height * rH));
-              const hH = SH.getContext("2d", {
+                canvas: OB,
+                x: GB,
+                width: YB
+              } = BB;
+              if (0 === YB || 0 === OB.height) return null;
+              const DB = Math.min(1, PB / OB.height),
+                QB = document.createElement("canvas");
+              QB.width = Math.max(1, Math.round(YB * DB)), QB.height = Math.max(1, Math.round(OB.height * DB));
+              const oB = QB.getContext("2d", {
                 willReadFrequently: !0
               });
-              if (!hH) return null;
-              if (hH.drawImage(BH, LH, 0, AH, BH.height, 0, 0, SH.width, SH.height), !PH(hH.getImageData(0, 0, SH.width, SH.height).data)) return null;
-              return SH.toDataURL("image/webp", .85)
-            }(xH(HH)) : null;
-            null !== SH || rH <= 1 || !HH.isConnected ? LH(SH) : AH(rH - 1)
+              if (!oB) return null;
+              if (oB.drawImage(OB, GB, 0, YB, OB.height, 0, 0, QB.width, QB.height), !AB(oB.getImageData(0, 0, QB.width, QB.height).data)) return null;
+              return QB.toDataURL("image/webp", .85)
+            }(RB(BB)) : null;
+            null !== QB || DB <= 1 || !BB.isConnected ? GB(QB) : YB(DB - 1)
           }))
         };
-        AH(uH)
+        YB(pB)
       }))
     }
 
-    function xH(HH) {
-      const BH = Math.min(HH.width, Math.round(HH.height * EH.c));
+    function RB(BB) {
+      const OB = Math.min(BB.width, Math.round(BB.height * MB.e));
       return {
-        canvas: HH,
-        x: Math.round((HH.width - BH) / 2),
-        width: BH
+        canvas: BB,
+        x: Math.round((BB.width - OB) / 2),
+        width: OB
       }
     }
-    let vH = null;
+    let WB = null;
 
-    function PH(HH) {
-      for (let BH = 3; BH < HH.length; BH += 4)
-        if (0 !== HH[BH]) return !0;
+    function AB(BB) {
+      for (let OB = 3; OB < BB.length; OB += 4)
+        if (0 !== BB[OB]) return !0;
       return !1
     }
-    async function TH(HH) {
-      var BH;
-      await CH.h.load();
-      const LH = {
-          name: HH.name,
+    async function VB(BB) {
+      var OB;
+      await JB.k.load();
+      const GB = {
+          name: BB.name,
           info: null,
-          colour: null !== (BH = HH.nameColour) && void 0 !== BH ? BH : "default",
-          ranks: HH.ranks,
+          colour: null !== (OB = BB.nameColour) && void 0 !== OB ? OB : "default",
+          ranks: BB.ranks,
           effects: [],
           health: null,
-          Ot: null,
+          IM: null,
           hideNameSeed: null,
-          player: !HH.isYou
+          player: !BB.isYou
         },
-        AH = document.createElement("canvas"),
-        [rH, SH] = (0, zH.i)((0, zH.k)(zH.e.Nametag, LH), AH, !0);
-      return 0 === rH || 0 === SH ? null : {
-        src: AH.toDataURL("image/png"),
-        width: rH,
-        height: SH
+        YB = document.createElement("canvas"),
+        [DB, QB] = (0, yB.f)((0, yB.h)(yB.b.Nametag, GB), YB, !0);
+      return 0 === DB || 0 === QB ? null : {
+        src: YB.toDataURL("image/png"),
+        width: DB,
+        height: QB
       }
     }
   },
-  35018: (HH, BH, LH) => {
-    LH.d(BH, {
-      d: () => hH,
-      h: () => rH,
-      j: () => EH
+  34832: (BB, OB, GB) => {
+    GB.d(OB, {
+      d: () => oB,
+      h: () => DB,
+      i: () => MB
     });
-    var AH = LH(1565);
+    var YB = GB(1611);
 
-    function rH(HH) {
-      var BH;
+    function DB(BB) {
+      var OB;
       return {
-        ...hH.store,
-        yaw: hH.store.yaw + (null !== (BH = AH.c[HH].previewYaw) && void 0 !== BH ? BH : 0)
+        ...oB.store,
+        yaw: oB.store.yaw + (null !== (OB = YB.d[BB].previewYaw) && void 0 !== OB ? OB : 0)
       }
     }
-    const SH = {
+    const QB = {
         yaw: .61 * Math.PI,
         pitch: Math.PI / 2.05,
         radius: 30,
         target: [0, 0, 0]
       },
-      hH = {
-        player: SH,
+      oB = {
+        player: QB,
         store: {
-          ...SH,
+          ...QB,
           radius: 33,
           target: [0, 3.9, 0]
         }
       };
 
-    function tH(HH, BH) {
-      HH instanceof Promise ? HH.then(BH).catch((HH => {
-        console.error("Couldn't open the preview", HH)
-      })) : BH(HH)
+    function jB(BB, OB) {
+      BB instanceof Promise ? BB.then(OB).catch((BB => {
+        console.error("Couldn't open the preview", BB)
+      })) : OB(BB)
     }
-    class zH {
-      constructor(HH) {
-        this.opened = null, this.view = null, this.size = null, this.closed = !1, tH(HH, (HH => {
-          this.closed ? HH.close() : (this.opened = HH, null !== this.size && HH.resize(this.size.width, this.size.height), null !== this.view && HH.show(this.view))
+    class yB {
+      constructor(BB) {
+        this.opened = null, this.view = null, this.size = null, this.closed = !1, jB(BB, (BB => {
+          this.closed ? BB.close() : (this.opened = BB, null !== this.size && BB.resize(this.size.width, this.size.height), null !== this.view && BB.show(this.view))
         }))
       }
-      show(HH) {
-        var BH;
-        this.view = HH, null === (BH = this.opened) || void 0 === BH || BH.show(HH)
+      show(BB) {
+        var OB;
+        this.view = BB, null === (OB = this.opened) || void 0 === OB || OB.show(BB)
       }
-      resize(HH, BH) {
-        var LH;
+      resize(BB, OB) {
+        var GB;
         this.size = {
-          width: HH,
-          height: BH
-        }, null === (LH = this.opened) || void 0 === LH || LH.resize(HH, BH)
+          width: BB,
+          height: OB
+        }, null === (GB = this.opened) || void 0 === GB || GB.resize(BB, OB)
       }
       close() {
-        var HH;
-        this.closed = !0, null === (HH = this.opened) || void 0 === HH || HH.close(), this.opened = null
+        var BB;
+        this.closed = !0, null === (BB = this.opened) || void 0 === BB || BB.close(), this.opened = null
       }
     }
-    class CH {
-      constructor(HH) {
-        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(HH).then((HH => HH.ready)), tH(HH, (HH => {
-          this.closed ? HH.close() : (this.opened = HH, null !== this.size && HH.resize(this.size.width, this.size.height))
+    class JB {
+      constructor(BB) {
+        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(BB).then((BB => BB.ready)), jB(BB, (BB => {
+          this.closed ? BB.close() : (this.opened = BB, null !== this.size && BB.resize(this.size.width, this.size.height))
         }))
       }
       get dev() {
         return this.opened.dev
       }
       isReady() {
-        var HH, BH;
-        return null !== (HH = null === (BH = this.opened) || void 0 === BH ? void 0 : BH.isReady()) && void 0 !== HH && HH
+        var BB, OB;
+        return null !== (BB = null === (OB = this.opened) || void 0 === OB ? void 0 : OB.isReady()) && void 0 !== BB && BB
       }
-      setCosmetic(HH, BH) {
-        var LH;
-        null === (LH = this.opened) || void 0 === LH || LH.setCosmetic(HH, BH)
+      setCosmetic(BB, OB) {
+        var GB;
+        null === (GB = this.opened) || void 0 === GB || GB.setCosmetic(BB, OB)
       }
-      playEmote(HH) {
-        var BH;
-        null === (BH = this.opened) || void 0 === BH || BH.playEmote(HH)
+      playEmote(BB) {
+        var OB;
+        null === (OB = this.opened) || void 0 === OB || OB.playEmote(BB)
       }
-      setOrbit(HH) {
-        var BH;
-        null === (BH = this.opened) || void 0 === BH || BH.setOrbit(HH)
+      setOrbit(BB) {
+        var OB;
+        null === (OB = this.opened) || void 0 === OB || OB.setOrbit(BB)
       }
       resetCamera() {
-        var HH;
-        null === (HH = this.opened) || void 0 === HH || HH.resetCamera()
+        var BB;
+        null === (BB = this.opened) || void 0 === BB || BB.resetCamera()
       }
-      async untilDrawn(HH) {
-        var BH;
-        await this.ready, await (null === (BH = this.opened) || void 0 === BH ? void 0 : BH.untilDrawn(HH))
+      async untilDrawn(BB) {
+        var OB;
+        await this.ready, await (null === (OB = this.opened) || void 0 === OB ? void 0 : OB.untilDrawn(BB))
       }
-      resize(HH, BH) {
-        var LH;
+      resize(BB, OB) {
+        var GB;
         this.size = {
-          width: HH,
-          height: BH
-        }, null === (LH = this.opened) || void 0 === LH || LH.resize(HH, BH)
+          width: BB,
+          height: OB
+        }, null === (GB = this.opened) || void 0 === GB || GB.resize(BB, OB)
       }
       close() {
-        var HH;
-        this.closed = !0, null === (HH = this.opened) || void 0 === HH || HH.close(), this.opened = null
+        var BB;
+        this.closed = !0, null === (BB = this.opened) || void 0 === BB || BB.close(), this.opened = null
       }
     }
-    const EH = new class {
+    const MB = new class {
       constructor() {
         this.host = null, this.makeDefault = null
       }
-      setHost(HH) {
-        this.host = HH
+      setHost(BB) {
+        this.host = BB
       }
-      setDefaultHost(HH) {
-        this.makeDefault = HH
+      setDefaultHost(BB) {
+        this.makeDefault = BB
       }
       current() {
         if (null === this.host) {
@@ -285,214 +285,214 @@ export const modules = {
         }
         return this.host
       }
-      openMob(HH) {
-        return new zH(this.current().openMob(HH))
+      openMob(BB) {
+        return new yB(this.current().openMob(BB))
       }
-      openPet(HH) {
-        return new zH(this.current().openPet(HH))
+      openPet(BB) {
+        return new yB(this.current().openPet(BB))
       }
-      openMobLineup(HH) {
-        return new zH(this.current().openMobLineup(HH))
+      openMobLineup(BB) {
+        return new yB(this.current().openMobLineup(BB))
       }
-      openCharacter(HH, BH) {
-        return new CH(this.current().openCharacter(HH, BH))
+      openCharacter(BB, OB) {
+        return new JB(this.current().openCharacter(BB, OB))
       }
     }
   },
-  35016: (HH, BH, LH) => {
-    LH.d(BH, {
-      e: () => AH.d,
-      g: () => AH.h,
-      h: () => AH.j
+  34828: (BB, OB, GB) => {
+    GB.d(OB, {
+      b: () => YB.d,
+      e: () => YB.h,
+      g: () => YB.i
     });
-    var AH = LH(35018);
-    class rH {
-      constructor(HH) {
-        this.load = HH, this.loaded = null, this.loading = null
+    var YB = GB(34832);
+    class DB {
+      constructor(BB) {
+        this.load = BB, this.loaded = null, this.loading = null
       }
-      run(HH) {
-        return null !== this.loaded ? HH(this.loaded) : (this.loading ??= this.load().then((HH => (this.loaded = HH, HH)), (HH => {
-          throw this.loading = null, HH
-        })), this.loading.then(HH))
+      run(BB) {
+        return null !== this.loaded ? BB(this.loaded) : (this.loading ??= this.load().then((BB => (this.loaded = BB, BB)), (BB => {
+          throw this.loading = null, BB
+        })), this.loading.then(BB))
       }
     }
-    class SH {
+    class QB {
       constructor() {
-        this.mobScene = new rH((() => Promise.all([LH.e(84), LH.e(259), LH.e(258), LH.e(283), LH.e(111), LH.e(284), LH.e(87), LH.e(281), LH.e(85), LH.e(86), LH.e(291), LH.e(285), LH.e(290), LH.e(288), LH.e(280), LH.e(303), LH.e(255), LH.e(272), LH.e(286), LH.e(289), LH.e(89), LH.e(249), LH.e(204), LH.e(109), LH.e(261), LH.e(252), LH.e(268), LH.e(219), LH.e(269), LH.e(88), LH.e(273)]).then((() => LH(42386))))), this.characterScene = new rH((() => Promise.all([LH.e(84), LH.e(259), LH.e(258), LH.e(283), LH.e(111), LH.e(284), LH.e(87), LH.e(281), LH.e(85), LH.e(86), LH.e(291), LH.e(285), LH.e(290), LH.e(288), LH.e(280), LH.e(303), LH.e(255), LH.e(272), LH.e(286), LH.e(289), LH.e(89), LH.e(249), LH.e(204), LH.e(109), LH.e(261), LH.e(252), LH.e(268), LH.e(219), LH.e(269), LH.e(88), LH.e(218)]).then((() => LH(42476)))))
+        this.mobScene = new DB((() => Promise.all([GB.e(84), GB.e(259), GB.e(258), GB.e(283), GB.e(111), GB.e(284), GB.e(87), GB.e(281), GB.e(85), GB.e(86), GB.e(291), GB.e(285), GB.e(290), GB.e(288), GB.e(280), GB.e(303), GB.e(255), GB.e(272), GB.e(286), GB.e(289), GB.e(89), GB.e(249), GB.e(204), GB.e(109), GB.e(261), GB.e(252), GB.e(268), GB.e(219), GB.e(269), GB.e(88), GB.e(273)]).then((() => GB(42079))))), this.characterScene = new DB((() => Promise.all([GB.e(84), GB.e(259), GB.e(258), GB.e(283), GB.e(111), GB.e(284), GB.e(87), GB.e(281), GB.e(85), GB.e(86), GB.e(291), GB.e(285), GB.e(290), GB.e(288), GB.e(280), GB.e(303), GB.e(255), GB.e(272), GB.e(286), GB.e(289), GB.e(89), GB.e(249), GB.e(204), GB.e(109), GB.e(261), GB.e(252), GB.e(268), GB.e(219), GB.e(269), GB.e(88), GB.e(218)]).then((() => GB(42186)))))
       }
-      openMob(HH) {
-        return this.mobScene.run((BH => BH.openMobPreview(HH)))
+      openMob(BB) {
+        return this.mobScene.run((OB => OB.openMobPreview(BB)))
       }
-      openPet(HH) {
-        return this.mobScene.run((BH => BH.openPetPreview(HH)))
+      openPet(BB) {
+        return this.mobScene.run((OB => OB.openPetPreview(BB)))
       }
-      openMobLineup(HH) {
-        return this.mobScene.run((BH => BH.openMobLineupPreview(HH)))
+      openMobLineup(BB) {
+        return this.mobScene.run((OB => OB.openMobLineupPreview(BB)))
       }
-      openCharacter(HH, BH) {
-        return this.characterScene.run((LH => LH.openCharacterPreview(HH, BH)))
+      openCharacter(BB, OB) {
+        return this.characterScene.run((GB => GB.openCharacterPreview(BB, OB)))
       }
     }
-    AH.j.setDefaultHost((() => new SH))
+    YB.i.setDefaultHost((() => new QB))
   },
-  37112: (HH, BH, LH) => {
-    function AH(HH, BH, LH) {
-      if ("undefined" !== typeof OffscreenCanvas) return new OffscreenCanvas(HH, BH).getContext("2d", LH);
-      const AH = document.createElement("canvas");
-      return AH.width = HH, AH.height = BH, AH.getContext("2d", LH)
+  36948: (BB, OB, GB) => {
+    function YB(BB, OB, GB) {
+      if ("undefined" !== typeof OffscreenCanvas) return new OffscreenCanvas(BB, OB).getContext("2d", GB);
+      const YB = document.createElement("canvas");
+      return YB.width = BB, YB.height = OB, YB.getContext("2d", GB)
     }
 
-    function rH(HH, BH) {
-      return HH.getContext("2d", BH)
+    function DB(BB, OB) {
+      return BB.getContext("2d", OB)
     }
-    LH.d(BH, {
-      d: () => rH,
-      h: () => AH
+    GB.d(OB, {
+      e: () => DB,
+      f: () => YB
     })
   },
-  37105: (HH, BH, LH) => {
-    LH.d(BH, {
-      e: () => SH
+  36939: (BB, OB, GB) => {
+    GB.d(OB, {
+      c: () => QB
     });
-    const AH = 4e5,
-      rH = 2;
+    const YB = 4e5,
+      DB = 2;
 
-    function SH(HH, BH, LH) {
-      let [SH, hH] = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : [HH, BH], tH = Math.min(Number.isFinite(LH) && LH > 0 ? LH : 1, rH);
-      const zH = Math.max(0, SH, HH) * Math.max(0, hH, BH) * tH * tH;
-      return zH > AH && (tH *= Math.sqrt(AH / zH)), [Math.max(1, Math.floor(Math.max(0, HH) * tH)), Math.max(1, Math.floor(Math.max(0, BH) * tH))]
+    function QB(BB, OB, GB) {
+      let [QB, oB] = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : [BB, OB], jB = Math.min(Number.isFinite(GB) && GB > 0 ? GB : 1, DB);
+      const yB = Math.max(0, QB, BB) * Math.max(0, oB, OB) * jB * jB;
+      return yB > YB && (jB *= Math.sqrt(YB / yB)), [Math.max(1, Math.floor(Math.max(0, BB) * jB)), Math.max(1, Math.floor(Math.max(0, OB) * jB))]
     }
   },
-  37162: (HH, BH, LH) => {
-    LH.d(BH, {
-      e: () => EH,
-      h: () => zH,
-      k: () => tH,
-      l: () => CH
+  36997: (BB, OB, GB) => {
+    GB.d(OB, {
+      d: () => MB,
+      g: () => yB,
+      k: () => jB,
+      o: () => JB
     });
-    var AH = LH(2010);
-    let rH = null,
-      SH = 0;
-    const hH = new Set;
+    var YB = GB(2034);
+    let DB = null,
+      QB = 0;
+    const oB = new Set;
 
-    function tH() {
-      return rH
+    function jB() {
+      return DB
     }
 
-    function zH() {
-      return SH
+    function yB() {
+      return QB
     }
 
-    function CH(HH) {
-      rH = HH, SH++, (0, AH.e)();
-      for (const BH of hH) BH()
+    function JB(BB) {
+      DB = BB, QB++, (0, YB.b)();
+      for (const OB of oB) OB()
     }
 
-    function EH(HH) {
-      hH.add(HH)
+    function MB(BB) {
+      oB.add(BB)
     }
   },
-  37100: (HH, BH, LH) => {
-    LH.d(BH, {
-      d: () => QH,
-      f: () => EH,
-      i: () => YH,
-      j: () => XH,
-      k: () => WH,
-      l: () => uH,
-      p: () => GH
+  36937: (BB, OB, GB) => {
+    GB.d(OB, {
+      b: () => qB,
+      f: () => MB,
+      h: () => lB,
+      j: () => PB,
+      m: () => ZB,
+      p: () => pB,
+      s: () => zB
     });
-    const AH = 30,
-      rH = 4;
-    let SH = 0,
-      hH = !1,
-      tH = !1,
-      zH = Number.NEGATIVE_INFINITY,
-      CH = [];
+    const YB = 30,
+      DB = 4;
+    let QB = 0,
+      oB = !1,
+      jB = !1,
+      yB = Number.NEGATIVE_INFINITY,
+      JB = [];
 
-    function EH() {
-      0 === SH && (hH = !1, tH = !1), SH++;
-      let HH = !1;
+    function MB() {
+      0 === QB && (oB = !1, jB = !1), QB++;
+      let BB = !1;
       return () => {
-        HH || (HH = !0, SH--)
+        BB || (BB = !0, QB--)
       }
     }
 
-    function XH(HH) {
-      HH && (tH = !0)
+    function PB(BB) {
+      BB && (jB = !0)
     }
 
-    function GH() {
-      return tH
+    function zB() {
+      return jB
     }
 
-    function YH(HH) {
-      hH = HH
+    function lB(BB) {
+      oB = BB
     }
 
-    function uH(HH) {
-      return !(SH > 0 && (hH || HH - zH < 1e3 / AH - rH)) && (zH = HH, !0)
+    function pB(BB) {
+      return !(QB > 0 && (oB || BB - yB < 1e3 / YB - DB)) && (yB = BB, !0)
     }
 
-    function QH(HH) {
-      CH.push(HH)
+    function qB(BB) {
+      JB.push(BB)
     }
 
-    function WH() {
-      if (0 === CH.length) return;
-      const HH = CH;
-      CH = [];
-      for (const LH of HH) try {
-        LH()
-      } catch (BH) {
-        console.warn("[bloxd-previews] an after-draw callback threw", BH)
+    function ZB() {
+      if (0 === JB.length) return;
+      const BB = JB;
+      JB = [];
+      for (const GB of BB) try {
+        GB()
+      } catch (OB) {
+        console.warn("[bloxd-previews] an after-draw callback threw", OB)
       }
     }
   },
-  37177: (HH, BH, LH) => {
-    function AH() {
-      return LH(37184)
+  37009: (BB, OB, GB) => {
+    function YB() {
+      return GB(37013)
     }
 
-    function rH() {
-      return LH(37187)
+    function DB() {
+      return GB(37018)
     }
 
-    function SH(HH) {
-      return ["pl", "ru", "tr", "uk", "vi"].includes(HH)
+    function QB(BB) {
+      return ["pl", "ru", "tr", "uk", "vi"].includes(BB)
     }
-    LH.d(BH, {
-      e: () => SH,
-      h: () => AH,
-      k: () => rH
+    GB.d(OB, {
+      b: () => QB,
+      c: () => YB,
+      e: () => DB
     })
   },
-  37110: (HH, BH, LH) => {
-    LH.d(BH, {
-      e: () => WH,
-      i: () => jH,
-      k: () => IH,
-      o: () => KH
+  36945: (BB, OB, GB) => {
+    GB.d(OB, {
+      b: () => ZB,
+      f: () => EB,
+      h: () => uB,
+      i: () => FB
     });
-    var AH = LH(37146),
-      rH = LH(37112),
-      SH = LH(37120),
-      hH = LH(37127);
+    var YB = GB(36977),
+      DB = GB(36948),
+      QB = GB(36954),
+      oB = GB(36961);
 
-    function tH(HH, BH, LH) {
-      const AH = "object" === typeof HH && null !== HH ? HH : {},
-        rH = function(HH, BH, LH) {
-          if (!Array.isArray(HH) || 0 === HH.length) return [];
-          const AH = [{
+    function jB(BB, OB, GB) {
+      const YB = "object" === typeof BB && null !== BB ? BB : {},
+        DB = function(BB, OB, GB) {
+          if (!Array.isArray(BB) || 0 === BB.length) return [];
+          const YB = [{
             width: 0,
             height: 0,
             y: 0,
             items: []
           }];
-          for (const tH of (0, hH.i)(HH, hH.e.DEFAULT_FONT_SIZE, LH)) {
-            if ("text" !== tH.kind) {
-              AH[AH.length - 1].items.push({
-                content: tH,
+          for (const jB of (0, oB.h)(BB, oB.d.DEFAULT_FONT_SIZE, GB)) {
+            if ("text" !== jB.kind) {
+              YB[YB.length - 1].items.push({
+                content: jB,
                 chars: 1,
                 size: {
                   x: 0,
@@ -501,20 +501,20 @@ export const modules = {
               });
               continue
             }
-            if (0 === tH.text.length) continue;
-            const HH = AH[AH.length - 1].items.reduce(((HH, BH) => HH + ("text" === BH.content.kind ? (0, SH.b)(BH.content.text) : BH.chars)), 0);
-            (0, SH.e)(tH.text, HH).forEach(((HH, BH) => {
-              BH > 0 && AH.push({
+            if (0 === jB.text.length) continue;
+            const BB = YB[YB.length - 1].items.reduce(((BB, OB) => BB + ("text" === OB.content.kind ? (0, QB.c)(OB.content.text) : OB.chars)), 0);
+            (0, QB.d)(jB.text, BB).forEach(((BB, OB) => {
+              OB > 0 && YB.push({
                 width: 0,
                 height: 0,
                 y: 0,
                 items: []
-              }), HH.length > 0 && AH[AH.length - 1].items.push({
+              }), BB.length > 0 && YB[YB.length - 1].items.push({
                 content: {
-                  ...tH,
-                  text: HH
+                  ...jB,
+                  text: BB
                 },
-                chars: HH.length,
+                chars: BB.length,
                 size: {
                   x: 0,
                   width: 0
@@ -522,281 +522,281 @@ export const modules = {
               })
             }))
           }
-          let rH = hH.e.VERTICAL_PADDING / 2;
-          for (const SH of AH) {
-            if (0 === SH.items.length) continue;
+          let DB = oB.d.VERTICAL_PADDING / 2;
+          for (const QB of YB) {
+            if (0 === QB.items.length) continue;
             const {
-              width: HH,
-              height: AH,
-              sizes: tH
-            } = (0, hH.h)(SH.items.map((HH => HH.content)), BH, LH);
-            SH.items.forEach(((HH, BH) => {
-              HH.size = tH[BH]
-            })), SH.width = HH, SH.height = AH, SH.y = rH, rH += AH + hH.e.LINE_SPACING
+              width: BB,
+              height: YB,
+              sizes: jB
+            } = (0, oB.f)(QB.items.map((BB => BB.content)), OB, GB);
+            QB.items.forEach(((BB, OB) => {
+              BB.size = jB[OB]
+            })), QB.width = BB, QB.height = YB, QB.y = DB, DB += YB + oB.d.LINE_SPACING
           }
-          return AH
-        }(AH.content, BH, LH);
-      let tH = 0,
-        zH = hH.e.VERTICAL_PADDING,
-        CH = 0;
-      for (const SH of rH) {
-        tH = Math.max(tH, SH.width + 2 * hH.e.HORIZONTAL_PADDING), zH += SH.height + hH.e.LINE_SPACING;
-        for (const HH of SH.items) CH += HH.chars
+          return YB
+        }(YB.content, OB, GB);
+      let jB = 0,
+        yB = oB.d.VERTICAL_PADDING,
+        JB = 0;
+      for (const QB of DB) {
+        jB = Math.max(jB, QB.width + 2 * oB.d.HORIZONTAL_PADDING), yB += QB.height + oB.d.LINE_SPACING;
+        for (const BB of QB.items) JB += BB.chars
       }
-      const EH = "string" === typeof AH.backgroundColor ? AH.backgroundColor : "#22283b";
+      const MB = "string" === typeof YB.backgroundColor ? YB.backgroundColor : "#22283b";
       return {
-        width: tH,
-        height: zH,
-        chars: CH,
-        draw: (HH, BH) => {
-          const AH = [];
-          if (HH.fillStyle = EH, HH.fillRect(0, 0, tH, zH), null === BH)
-            for (const SH of rH) SH.items.length > 0 && (0, hH.t)(SH.items.map((HH => HH.content)), 0, SH.y, SH.height, HH, LH, AH);
+        width: jB,
+        height: yB,
+        chars: JB,
+        draw: (BB, OB) => {
+          const YB = [];
+          if (BB.fillStyle = MB, BB.fillRect(0, 0, jB, yB), null === OB)
+            for (const QB of DB) QB.items.length > 0 && (0, oB.p)(QB.items.map((BB => BB.content)), 0, QB.y, QB.height, BB, GB, YB);
           else {
-            let SH = 0;
-            for (const tH of rH)
-              for (const rH of tH.items) {
-                if (SH >= BH) break;
-                const zH = "text" === rH.content.kind ? {
-                  ...rH.content,
-                  text: rH.content.text.substring(0, BH - SH)
-                } : rH.content;
-                (0, hH.p)(zH, rH.size.x, tH.y, tH.height, HH, LH, AH, rH.size.width), SH += rH.chars
+            let QB = 0;
+            for (const jB of DB)
+              for (const DB of jB.items) {
+                if (QB >= OB) break;
+                const yB = "text" === DB.content.kind ? {
+                  ...DB.content,
+                  text: DB.content.text.substring(0, OB - QB)
+                } : DB.content;
+                (0, oB.m)(yB, DB.size.x, jB.y, jB.height, BB, GB, YB, DB.size.width), QB += DB.chars
               }
-          }(0, hH.m)(AH, HH)
+          }(0, oB.l)(YB, BB)
         }
       }
     }
-    var zH = LH(37135),
-      CH = LH(37139);
-    const EH = 256,
-      XH = 1024,
-      GH = {
+    var yB = GB(36963),
+      JB = GB(36972);
+    const MB = 256,
+      PB = 1024,
+      zB = {
         width: 1,
         height: 7 / 8
       };
-    var YH = LH(37149);
-    const uH = {
+    var lB = GB(36985);
+    const pB = {
       leaderboard: ""
     };
-    var QH = LH(37157);
-    const WH = {
+    var qB = GB(36991);
+    const ZB = {
         Nametag: 1,
         MultilineText: 2,
         Board: 3,
         Leaderboard: 4
       },
-      MH = 2048,
-      xH = 256,
-      vH = 10,
-      PH = 4,
-      TH = 65536,
-      UH = new TextDecoder;
-    let VH = QH.o,
-      OH = -1;
-    const bH = new Map,
-      kH = new Map;
-    let mH = 0;
-    const oH = new TextEncoder;
+      NB = 2048,
+      RB = 256,
+      WB = 10,
+      AB = 4,
+      VB = 65536,
+      SB = new TextDecoder;
+    let nB = qB.s,
+      UB = -1;
+    const fB = new Map,
+      kB = new Map;
+    let dB = 0;
+    const KB = new TextEncoder;
 
-    function IH(HH, BH) {
-      const LH = oH.encode(JSON.stringify(BH)),
-        AH = new Uint8Array(LH.length + 1);
-      return AH[0] = HH, AH.set(LH, 1), AH
+    function uB(BB, OB) {
+      const GB = KB.encode(JSON.stringify(OB)),
+        YB = new Uint8Array(GB.length + 1);
+      return YB[0] = BB, YB.set(GB, 1), YB
     }
-    const fH = {
+    const mB = {
         name: "Ag",
         info: null,
         colour: "default",
         ranks: [],
         effects: [],
         health: .5,
-        Ot: null,
+        IM: null,
         hideNameSeed: null
       },
-      lH = [IH(WH.Nametag, fH), IH(WH.Nametag, {
-        ...fH,
+      IB = [uB(ZB.Nametag, mB), uB(ZB.Nametag, {
+        ...mB,
         info: {
           content: [{
             str: "Ag"
           }],
           subtitle: ["Ag"]
         }
-      }), IH(WH.MultilineText, {
+      }), uB(ZB.MultilineText, {
         box: {
           content: ["Ag"]
         },
         shown: null
-      }), ...AH.c.map(((HH, BH) => IH(WH.Board, {
+      }), ...YB.b.map(((BB, OB) => uB(ZB.Board, {
         shared: {
           text: "Ag",
-          textSize: BH
+          textSize: OB
         },
         w: 0,
         h: 0
       })))];
 
-    function KH(HH) {
-      QH.h.load().then((() => {
-        if (HH()) return;
-        const BH = (0, rH.h)(1, 1, {
+    function FB(BB) {
+      qB.k.load().then((() => {
+        if (BB()) return;
+        const OB = (0, DB.f)(1, 1, {
           willReadFrequently: !0
         });
-        var LH;
-        BH && (LH = BH.canvas, lH.map((HH => jH(HH, LH))))
+        var GB;
+        OB && (GB = OB.canvas, IB.map((BB => EB(BB, GB))))
       }))
     }
-    let cH = QH.q;
+    let iB = qB.y;
 
-    function eH() {
-      bH.clear(), kH.clear()
+    function LB() {
+      fB.clear(), kB.clear()
     }
 
-    function qH(HH, BH) {
-      const LH = HH.get(BH);
-      return void 0 !== LH && (HH.delete(BH), HH.set(BH, LH)), LH
+    function gB(BB, OB) {
+      const GB = BB.get(OB);
+      return void 0 !== GB && (BB.delete(OB), BB.set(OB, GB)), GB
     }
 
-    function gH(HH, BH, LH) {
-      HH.set(BH, LH), HH.size > xH && HH.delete(HH.keys().next().value)
+    function rB(BB, OB, GB) {
+      BB.set(OB, GB), BB.size > RB && BB.delete(BB.keys().next().value)
     }
 
-    function NH(HH, BH, LH) {
-      if (HH === WH.Nametag) {
-        let HH = qH(bH, BH);
-        return void 0 === HH && (HH = (0, zH.e)(JSON.parse(BH), LH, VH), gH(bH, BH, HH)), HH
+    function XB(BB, OB, GB) {
+      if (BB === ZB.Nametag) {
+        let BB = gB(fB, OB);
+        return void 0 === BB && (BB = (0, yB.d)(JSON.parse(OB), GB, nB), rB(fB, OB, BB)), BB
       }
-      if (HH === WH.MultilineText) {
-        var rH;
-        const HH = JSON.parse(BH),
-          AH = JSON.stringify(null !== (rH = HH.box) && void 0 !== rH ? rH : null),
-          SH = "number" === typeof HH.shown ? HH.shown : null;
-        let hH = qH(kH, AH);
-        void 0 === hH && (hH = tH(HH.box, LH, VH), gH(kH, AH, hH));
-        const zH = null === SH ? null : Math.min(Math.max(0, Math.floor(SH)), hH.chars),
-          CH = hH;
+      if (BB === ZB.MultilineText) {
+        var DB;
+        const BB = JSON.parse(OB),
+          YB = JSON.stringify(null !== (DB = BB.box) && void 0 !== DB ? DB : null),
+          QB = "number" === typeof BB.shown ? BB.shown : null;
+        let oB = gB(kB, YB);
+        void 0 === oB && (oB = jB(BB.box, GB, nB), rB(kB, YB, oB));
+        const yB = null === QB ? null : Math.min(Math.max(0, Math.floor(QB)), oB.chars),
+          JB = oB;
         return {
-          width: CH.width,
-          height: CH.height,
-          draw: HH => {
-            CH.draw(HH, zH)
+          width: JB.width,
+          height: JB.height,
+          draw: BB => {
+            JB.draw(BB, yB)
           }
         }
       }
-      if (HH === WH.Board) return function(HH, BH) {
-        var LH;
-        if (!BH.canSeePlayerWrittenText) return null;
+      if (BB === ZB.Board) return function(BB, OB) {
+        var GB;
+        if (!OB.canSeePlayerWrittenText) return null;
         const {
-          shared: rH,
-          w: SH = 0,
-          h: hH = 0
-        } = HH, tH = !SH;
-        let zH;
-        if (tH) {
-          var YH, uH;
-          zH = null !== (YH = null === rH || void 0 === rH || null === (uH = rH.text) || void 0 === uH ? void 0 : uH.toString()) && void 0 !== YH ? YH : ""
+          shared: DB,
+          w: QB = 0,
+          h: oB = 0
+        } = BB, jB = !QB;
+        let yB;
+        if (jB) {
+          var lB, pB;
+          yB = null !== (lB = null === DB || void 0 === DB || null === (pB = DB.text) || void 0 === pB ? void 0 : pB.toString()) && void 0 !== lB ? lB : ""
         } else {
-          if ("string" !== typeof(null === rH || void 0 === rH ? void 0 : rH.text)) return null;
-          zH = rH.text
+          if ("string" !== typeof(null === DB || void 0 === DB ? void 0 : DB.text)) return null;
+          yB = DB.text
         }
-        if ("" === zH.trim()) return null;
-        const QH = null !== (LH = null === rH || void 0 === rH ? void 0 : rH.textSize) && void 0 !== LH ? LH : 0,
-          WH = AH.c[QH].ingameFontSize;
-        let MH = GH,
-          xH = EH;
-        tH || (zH = (0, AH.n)(zH, QH, SH, hH), MH = (0, AH.u)(SH, hH), xH = Math.min(EH, XH / Math.max(MH.width, MH.height)));
-        const vH = Math.round(xH * MH.width),
-          PH = Math.round(xH * MH.height),
-          TH = xH / EH;
+        if ("" === yB.trim()) return null;
+        const qB = null !== (GB = null === DB || void 0 === DB ? void 0 : DB.textSize) && void 0 !== GB ? GB : 0,
+          ZB = YB.b[qB].ingameFontSize;
+        let NB = zB,
+          RB = MB;
+        jB || (yB = (0, YB.m)(yB, qB, QB, oB), NB = (0, YB.t)(QB, oB), RB = Math.min(MB, PB / Math.max(NB.width, NB.height)));
+        const WB = Math.round(RB * NB.width),
+          AB = Math.round(RB * NB.height),
+          VB = RB / MB;
         return {
-          width: vH,
-          height: PH,
-          draw: HH => {
-            CH.d.fontSize = WH * TH, CH.d.fontWeight = "bold", CH.d.font = "'Jetbrains Mono', monospace", CH.d.drawText(HH, zH, 0, (-10 - 7 * QH) * TH, vH, PH)
+          width: WB,
+          height: AB,
+          draw: BB => {
+            JB.c.fontSize = ZB * VB, JB.c.fontWeight = "bold", JB.c.font = "'Jetbrains Mono', monospace", JB.c.drawText(BB, yB, 0, (-10 - 7 * qB) * VB, WB, AB)
           }
         }
-      }(JSON.parse(BH), VH);
-      if (HH === WH.Leaderboard) return function(HH, BH, LH) {
-        var AH;
-        const rH = (0, YH.f)(HH.opts, uH),
-          SH = (0, YH.d)(rH, LH),
-          hH = {
-            top: (0, YH.e)(rH, (0, YH.g)(HH.top)),
-            around: null !== (AH = HH.around) && void 0 !== AH ? AH : null,
-            showPlayerText: BH.canSeePlayerWrittenText,
-            localPlayerDbId: BH.localPlayerDbId
+      }(JSON.parse(OB), nB);
+      if (BB === ZB.Leaderboard) return function(BB, OB, GB) {
+        var YB;
+        const DB = (0, lB.i)(BB.opts, pB),
+          QB = (0, lB.f)(DB, GB),
+          oB = {
+            top: (0, lB.h)(DB, (0, lB.l)(BB.top)),
+            around: null !== (YB = BB.around) && void 0 !== YB ? YB : null,
+            showPlayerText: OB.canSeePlayerWrittenText,
+            localPlayerDbId: OB.localPlayerDbId
           };
         return {
-          width: SH.pixelWidth,
-          height: SH.pixelHeight,
-          draw: HH => {
+          width: QB.pixelWidth,
+          height: QB.pixelHeight,
+          draw: BB => {
             const {
-              a: BH,
-              d: LH
-            } = HH.getTransform();
-            (0, YH.b)(HH, Math.round(SH.pixelWidth * BH), Math.round(SH.pixelHeight * LH), SH, rH, hH)
+              a: OB,
+              d: GB
+            } = BB.getTransform();
+            (0, lB.d)(BB, Math.round(QB.pixelWidth * OB), Math.round(QB.pixelHeight * GB), QB, DB, oB)
           }
         }
-      }(JSON.parse(BH), VH, MH);
-      throw new Error(`unknown text plane kind ${HH}`)
+      }(JSON.parse(OB), nB, NB);
+      throw new Error(`unknown text plane kind ${BB}`)
     }
-    const RH = 2 ** Math.floor(Math.log2(MH));
+    const wB = 2 ** Math.floor(Math.log2(NB));
 
-    function jH(HH, BH) {
-      let LH = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        AH = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+    function EB(BB, OB) {
+      let GB = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        YB = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
       try {
-        if (HH.length < 2) return [0, 0];
-        const SH = (0, rH.d)(BH);
-        if (!SH) return [0, 0];
-        const hH = cH();
-        hH !== OH && (OH = hH, eH());
-        const [tH] = HH, zH = UH.decode(HH.subarray(1));
-        let CH;
-        tH !== WH.Board && tH !== WH.Leaderboard || !VH.canSeePlayerWrittenText || VH.glyphsShown(zH), SH.save();
+        if (BB.length < 2) return [0, 0];
+        const QB = (0, DB.e)(OB);
+        if (!QB) return [0, 0];
+        const oB = iB();
+        oB !== UB && (UB = oB, LB());
+        const [jB] = BB, yB = SB.decode(BB.subarray(1));
+        let JB;
+        jB !== ZB.Board && jB !== ZB.Leaderboard || !nB.canSeePlayerWrittenText || nB.glyphsShown(yB), QB.save();
         try {
-          CH = NH(tH, zH, SH)
+          JB = XB(jB, yB, QB)
         } finally {
-          SH.restore()
+          QB.restore()
         }
-        if (null === CH || !(CH.width > 0 && CH.height > 0)) return [0, 0];
-        const EH = Math.min(1, MH / CH.width, MH / CH.height),
-          XH = HH => AH ? function(HH) {
-            const BH = 2 ** Math.ceil(Math.log2(HH));
-            return Math.min(RH, BH - HH > HH - BH / 2 ? BH / 2 : BH)
-          }(HH) : Math.min(MH, Math.ceil(HH * EH)),
-          [GH, YH] = [XH(CH.width), XH(CH.height)];
-        ! function(HH, BH, LH, AH, rH) {
-          const SH = Math.max(HH.width, LH),
-            hH = Math.max(HH.height, AH),
-            tH = rH || SH * hH > Math.max(PH * LH * AH, TH),
-            [zH, CH] = tH ? [LH, AH] : [SH, hH];
-          zH === HH.width && CH === HH.height ? BH.clearRect(0, 0, zH, CH) : (HH.width = zH, HH.height = CH)
-        }(BH, SH, GH, YH, LH), SH.save();
+        if (null === JB || !(JB.width > 0 && JB.height > 0)) return [0, 0];
+        const MB = Math.min(1, NB / JB.width, NB / JB.height),
+          PB = BB => YB ? function(BB) {
+            const OB = 2 ** Math.ceil(Math.log2(BB));
+            return Math.min(wB, OB - BB > BB - OB / 2 ? OB / 2 : OB)
+          }(BB) : Math.min(NB, Math.ceil(BB * MB)),
+          [zB, lB] = [PB(JB.width), PB(JB.height)];
+        ! function(BB, OB, GB, YB, DB) {
+          const QB = Math.max(BB.width, GB),
+            oB = Math.max(BB.height, YB),
+            jB = DB || QB * oB > Math.max(AB * GB * YB, VB),
+            [yB, JB] = jB ? [GB, YB] : [QB, oB];
+          yB === BB.width && JB === BB.height ? OB.clearRect(0, 0, yB, JB) : (BB.width = yB, BB.height = JB)
+        }(OB, QB, zB, lB, GB), QB.save();
         try {
-          const [HH, BH] = AH ? [GH / CH.width, YH / CH.height] : [EH, EH];
-          1 === HH && 1 === BH || SH.scale(HH, BH), CH.draw(SH)
+          const [BB, OB] = YB ? [zB / JB.width, lB / JB.height] : [MB, MB];
+          1 === BB && 1 === OB || QB.scale(BB, OB), JB.draw(QB)
         } finally {
-          SH.restore()
+          QB.restore()
         }
-        return [GH, YH]
-      } catch (SH) {
-        ! function(HH, BH) {
-          mH < vH && (mH++, console.warn(`[bloxd-wasm-client] ${HH}`, BH))
-        }("could not raster a text plane", SH);
+        return [zB, lB]
+      } catch (QB) {
+        ! function(BB, OB) {
+          dB < WB && (dB++, console.warn(`[bloxd-wasm-client] ${BB}`, OB))
+        }("could not raster a text plane", QB);
         try {
-          BH.width = 1
+          OB.width = 1
         } catch {}
         return [0, 0]
       }
     }
   },
-  37184: (HH, BH, LH) => {
-    HH.exports = LH.p + "static/media/JetBrainsMonoNL-ExtraBold-latin.68689f5c710b4650e4b8.woff2"
+  37013: (BB, OB, GB) => {
+    BB.exports = GB.p + "static/media/JetBrainsMonoNL-ExtraBold-latin.68689f5c710b4650e4b8.woff2"
   },
-  37187: (HH, BH, LH) => {
-    HH.exports = LH.p + "static/media/JetBrainsMonoNL-ExtraBold-rest.d152b95e9e75f7dca56d.woff2"
+  37018: (BB, OB, GB) => {
+    BB.exports = GB.p + "static/media/JetBrainsMonoNL-ExtraBold-rest.d152b95e9e75f7dca56d.woff2"
   }
 };
 Object.freeze(modules);
-for (const HH in modules) Object.freeze(modules[HH]);
+for (const BB in modules) Object.freeze(modules[BB]);

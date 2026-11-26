@@ -1,560 +1,560 @@
 export const id = 109;
 export const ids = [108, 109, 110];
 export const modules = {
-  37496: (HH, BH, LH) => {
-    function AH(HH, BH, LH, AH) {
-      return !(LH && !HH.aimable) && (!BH || HH.gun && "head" !== AH)
+  37288: (BB, OB, GB) => {
+    function YB(BB, OB, GB, YB) {
+      return !(GB && !BB.aimable) && (!OB || BB.gun && "head" !== YB)
     }
 
-    function rH(HH) {
-      return Math.max(.1 * HH, 1)
+    function DB(BB) {
+      return Math.max(.1 * BB, 1)
     }
 
-    function SH(HH, BH) {
-      return !HH && BH
+    function QB(BB, OB) {
+      return !BB && OB
     }
-    LH.d(BH, {
-      b: () => SH,
-      d: () => rH,
-      f: () => AH
+    GB.d(OB, {
+      e: () => QB,
+      f: () => DB,
+      h: () => YB
     })
   },
-  37504: (HH, BH, LH) => {
-    LH.d(BH, {
-      e: () => tH,
-      i: () => hH
+  37292: (BB, OB, GB) => {
+    GB.d(OB, {
+      c: () => jB,
+      g: () => oB
     });
-    let AH = null;
-    const rH = {
+    let YB = null;
+    const DB = {
         crosshairAccuracy: [],
         turnDamageIndicators: []
       },
-      SH = {
-        crosshairAccuracy: HH => {
-          const BH = rH.crosshairAccuracy.at(-1);
-          BH ? BH.hook(HH) : AH = HH
+      QB = {
+        crosshairAccuracy: BB => {
+          const OB = DB.crosshairAccuracy.at(-1);
+          OB ? OB.hook(BB) : YB = BB
         },
-        turnDamageIndicators: HH => {
-          var BH;
-          null === (BH = rH.turnDamageIndicators.at(-1)) || void 0 === BH || BH.hook(HH)
+        turnDamageIndicators: BB => {
+          var OB;
+          null === (OB = DB.turnDamageIndicators.at(-1)) || void 0 === OB || OB.hook(BB)
         }
       };
 
-    function hH(HH, BH) {
-      const LH = {
-          hook: BH
+    function oB(BB, OB) {
+      const GB = {
+          hook: OB
         },
-        hH = rH[HH];
-      if (hH.push(LH), "crosshairAccuracy" === HH && null !== AH) {
-        const HH = AH;
-        AH = null, SH.crosshairAccuracy(HH)
+        oB = DB[BB];
+      if (oB.push(GB), "crosshairAccuracy" === BB && null !== YB) {
+        const BB = YB;
+        YB = null, QB.crosshairAccuracy(BB)
       }
       return () => {
-        const HH = hH.indexOf(LH); - 1 !== HH && hH.splice(HH, 1)
+        const BB = oB.indexOf(GB); - 1 !== BB && oB.splice(BB, 1)
       }
     }
 
-    function tH() {
-      return SH
+    function jB() {
+      return QB
     }
   },
-  34942: (HH, BH, LH) => {
-    LH.d(BH, {
-      d: () => SH,
-      g: () => rH
+  34755: (BB, OB, GB) => {
+    GB.d(OB, {
+      d: () => QB,
+      h: () => DB
     });
-    var AH = LH(15);
+    var YB = GB(16);
 
-    function rH(HH, BH) {
-      return HH && !BH
+    function DB(BB, OB) {
+      return BB && !OB
     }
 
-    function SH() {
-      return rH(AH.c.get("isTouchScreen"), AH.c.get("clientEscMenuOptions").touchActionButtons)
+    function QB() {
+      return DB(YB.c.get("isTouchScreen"), YB.c.get("clientEscMenuOptions").touchActionButtons)
     }
   },
-  37326: (HH, BH, LH) => {
-    LH.r(BH), LH.d(BH, {
-      countDecodesAs: () => XH,
-      decodedAudio: () => GH
+  37113: (BB, OB, GB) => {
+    GB.r(OB), GB.d(OB, {
+      countDecodesAs: () => PB,
+      decodedAudio: () => zB
     });
-    var AH = LH(3263),
-      rH = LH(5335);
-    const SH = rH.Howler,
-      hH = new Map;
-    let tH = 0;
-    const zH = {
+    var YB = GB(3311),
+      DB = GB(5353);
+    const QB = DB.Howler,
+      oB = new Map;
+    let jB = 0;
+    const yB = {
         song: 0,
         sound: 0
       },
-      CH = new WeakMap,
-      EH = new WeakSet;
+      JB = new WeakMap,
+      MB = new WeakSet;
 
-    function XH(HH, BH) {
-      return CH.set(HH, BH), HH
+    function PB(BB, OB) {
+      return JB.set(BB, OB), BB
     }
 
-    function GH() {
+    function zB() {
       return {
-        bytes: tH,
-        songsDecoded: zH.song,
-        soundsDecoded: zH.sound
+        bytes: jB,
+        songsDecoded: yB.song,
+        soundsDecoded: yB.sound
       }
     }
 
-    function YH(HH) {
-      if (EH.has(HH)) return;
-      EH.add(HH);
-      const BH = 1 === HH.decodeAudioData.length,
-        LH = HH.decodeAudioData.bind(HH);
-      HH.decodeAudioData = (HH, AH, rH) => {
-        const EH = HH => {
-          const BH = SH._howls.filter((HH => "loaded" !== HH._state));
+    function lB(BB) {
+      if (MB.has(BB)) return;
+      MB.add(BB);
+      const OB = 1 === BB.decodeAudioData.length,
+        GB = BB.decodeAudioData.bind(BB);
+      BB.decodeAudioData = (BB, YB, DB) => {
+        const MB = BB => {
+          const OB = QB._howls.filter((BB => "loaded" !== BB._state));
           try {
-            null === AH || void 0 === AH || AH(HH)
+            null === YB || void 0 === YB || YB(BB)
           } finally {
-            const LH = BH.find((HH => "loaded" === HH._state));
-            void 0 !== LH && "string" === typeof LH._src && function(HH, BH, LH) {
-              var AH;
-              tH += LH - (null !== (AH = hH.get(BH)) && void 0 !== AH ? AH : 0), hH.set(BH, LH);
-              const rH = CH.get(HH);
-              void 0 !== rH && zH[rH]++
-            }(LH, LH._src, HH.length * HH.numberOfChannels * Float32Array.BYTES_PER_ELEMENT)
+            const GB = OB.find((BB => "loaded" === BB._state));
+            void 0 !== GB && "string" === typeof GB._src && function(BB, OB, GB) {
+              var YB;
+              jB += GB - (null !== (YB = oB.get(OB)) && void 0 !== YB ? YB : 0), oB.set(OB, GB);
+              const DB = JB.get(BB);
+              void 0 !== DB && yB[DB]++
+            }(GB, GB._src, BB.length * BB.numberOfChannels * Float32Array.BYTES_PER_ELEMENT)
           }
-          return HH
+          return BB
         };
-        if (!BH) return LH(HH, EH, rH);
-        const XH = LH(HH).then(EH);
-        return XH.catch((HH => {
-          null === rH || void 0 === rH || rH(HH)
-        })), XH
+        if (!OB) return GB(BB, MB, DB);
+        const PB = GB(BB).then(MB);
+        return PB.catch((BB => {
+          null === DB || void 0 === DB || DB(BB)
+        })), PB
       }
-    }(0, AH.h)(GH);
-    const uH = rH.Howl.prototype,
-      QH = uH.init;
-    uH.init = function(HH) {
-      return rH.Howler.volume(), SH.ctx && YH(SH.ctx), QH.call(this, HH)
+    }(0, YB.g)(zB);
+    const pB = DB.Howl.prototype,
+      qB = pB.init;
+    pB.init = function(BB) {
+      return DB.Howler.volume(), QB.ctx && lB(QB.ctx), qB.call(this, BB)
     };
-    const WH = uH.unload;
-    uH.unload = function() {
-      const HH = this._src,
-        BH = WH.call(this);
-      if ("string" !== typeof HH) return BH;
-      const LH = hH.get(HH);
-      return void 0 !== LH && function(HH) {
-        return !SH._howls.some((BH => BH._src === HH || "string" === typeof BH._src && HH.indexOf(BH._src) >= 0))
-      }(HH) && (hH.delete(HH), tH -= LH), BH
+    const ZB = pB.unload;
+    pB.unload = function() {
+      const BB = this._src,
+        OB = ZB.call(this);
+      if ("string" !== typeof BB) return OB;
+      const GB = oB.get(BB);
+      return void 0 !== GB && function(BB) {
+        return !QB._howls.some((OB => OB._src === BB || "string" === typeof OB._src && BB.indexOf(OB._src) >= 0))
+      }(BB) && (oB.delete(BB), jB -= GB), OB
     }
   },
-  37652: (HH, BH, LH) => {
-    async function AH(HH) {
-      const BH = await fetch(HH, {
+  37484: (BB, OB, GB) => {
+    async function YB(BB) {
+      const OB = await fetch(BB, {
         priority: "low"
       });
-      if (!BH.ok) throw new Error(`Fetching ${HH} failed: HTTP ${BH.status}`);
-      const LH = BH.body.getReader();
-      for (; !(await LH.read()).done;);
+      if (!OB.ok) throw new Error(`Fetching ${BB} failed: HTTP ${OB.status}`);
+      const GB = OB.body.getReader();
+      for (; !(await GB.read()).done;);
     }
-    LH.d(BH, {
-      c: () => AH
+    GB.d(OB, {
+      b: () => YB
     })
   },
-  5335: (HH, BH, LH) => {
-    LH.r(BH), LH.d(BH, {
-      Howl: () => rH.Howl,
-      Howler: () => rH.Howler,
-      musicOutput: () => WH,
-      readyAudioContext: () => MH
+  5353: (BB, OB, GB) => {
+    GB.r(OB), GB.d(OB, {
+      Howl: () => DB.Howl,
+      Howler: () => DB.Howler,
+      musicOutput: () => ZB,
+      readyAudioContext: () => NB
     });
-    var AH, rH = LH(5343),
-      SH = LH(3811),
-      hH = LH(5067);
-    const tH = rH.Howler;
+    var YB, DB = GB(5362),
+      QB = GB(3873),
+      oB = GB(5073);
+    const jB = DB.Howler;
 
-    function zH() {
-      var HH, BH;
-      if (tH.ctx || !tH.usingWebAudio || "undefined" === typeof AudioContext || !(0, hH.i)()) return;
-      const LH = navigator.audioSession;
-      let AH;
-      "auto" === (null === LH || void 0 === LH ? void 0 : LH.type) && (LH.type = "ambient");
+    function yB() {
+      var BB, OB;
+      if (jB.ctx || !jB.usingWebAudio || "undefined" === typeof AudioContext || !(0, oB.h)()) return;
+      const GB = navigator.audioSession;
+      let YB;
+      "auto" === (null === GB || void 0 === GB ? void 0 : GB.type) && (GB.type = "ambient");
       try {
-        AH = new AudioContext({
+        YB = new AudioContext({
           sampleRate: 44100
         })
       } catch {
         return
       }
-      const rH = AH.createGain();
-      rH.gain.setValueAtTime(tH._muted ? 0 : null !== (HH = tH._volume) && void 0 !== HH ? HH : 1, AH.currentTime), rH.connect(AH.destination), tH.ctx = AH, tH.masterGain = rH, null === (BH = tH._setup) || void 0 === BH || BH.call(tH)
+      const DB = YB.createGain();
+      DB.gain.setValueAtTime(jB._muted ? 0 : null !== (BB = jB._volume) && void 0 !== BB ? BB : 1, YB.currentTime), DB.connect(YB.destination), jB.ctx = YB, jB.masterGain = DB, null === (OB = jB._setup) || void 0 === OB || OB.call(jB)
     }
-    tH._mobileUnloaded = !0;
-    const CH = tH.volume.bind(rH.Howler);
-    tH.volume = function() {
-      return zH(), CH(...arguments)
+    jB._mobileUnloaded = !0;
+    const JB = jB.volume.bind(DB.Howler);
+    jB.volume = function() {
+      return yB(), JB(...arguments)
     };
-    const EH = tH.mute.bind(rH.Howler);
-    tH.mute = HH => (zH(), EH(HH));
-    const XH = rH.Howl.prototype,
-      GH = XH.init;
+    const MB = jB.mute.bind(DB.Howler);
+    jB.mute = BB => (yB(), MB(BB));
+    const PB = DB.Howl.prototype,
+      zB = PB.init;
 
-    function YH() {
-      for (; tH._html5AudioPool.length < tH.html5PoolSize;) {
-        const HH = new Audio;
-        HH._unlocked = !0, tH._releaseHtml5Audio(HH)
+    function lB() {
+      for (; jB._html5AudioPool.length < jB.html5PoolSize;) {
+        const BB = new Audio;
+        BB._unlocked = !0, jB._releaseHtml5Audio(BB)
       }
-      for (const BH of tH._howls)
-        if (!BH._webAudio)
-          for (const LH of BH._getSoundIds()) {
-            var HH;
-            const AH = null === (HH = BH._soundById(LH)) || void 0 === HH ? void 0 : HH._node;
-            AH && !AH._unlocked && (AH._unlocked = !0, AH.load())
+      for (const OB of jB._howls)
+        if (!OB._webAudio)
+          for (const GB of OB._getSoundIds()) {
+            var BB;
+            const YB = null === (BB = OB._soundById(GB)) || void 0 === BB ? void 0 : BB._node;
+            YB && !YB._unlocked && (YB._unlocked = !0, YB.load())
           }
     }
-    XH.init = function(HH) {
-      return zH(), GH.call(this, HH)
-    }, (0, hH.i)() && (tH._unlockAudio = () => {
-      const HH = tH.ctx;
-      if (tH._audioUnlocked || !HH) return;
-      tH.autoUnlock = !1;
-      const BH = HH.createBuffer(1, 1, 22050);
-      tH._scratchBuffer = BH;
-      const LH = new AbortController;
-      let AH = "afterPaint";
-      const rH = () => {
-          var AH;
-          if (tH._audioUnlocked) return;
-          null === (AH = tH._autoResume) || void 0 === AH || AH.call(tH);
-          const rH = HH.createBufferSource();
-          rH.buffer = BH, rH.connect(HH.destination), rH.start(0), HH.resume().catch((() => {})), rH.onended = () => {
-            rH.disconnect(0), tH._audioUnlocked = !0, LH.abort();
-            for (const HH of tH._howls) HH._emit("unlock")
+    PB.init = function(BB) {
+      return yB(), zB.call(this, BB)
+    }, (0, oB.h)() && (jB._unlockAudio = () => {
+      const BB = jB.ctx;
+      if (jB._audioUnlocked || !BB) return;
+      jB.autoUnlock = !1;
+      const OB = BB.createBuffer(1, 1, 22050);
+      jB._scratchBuffer = OB;
+      const GB = new AbortController;
+      let YB = "afterPaint";
+      const DB = () => {
+          var YB;
+          if (jB._audioUnlocked) return;
+          null === (YB = jB._autoResume) || void 0 === YB || YB.call(jB);
+          const DB = BB.createBufferSource();
+          DB.buffer = OB, DB.connect(BB.destination), DB.start(0), BB.resume().catch((() => {})), DB.onended = () => {
+            DB.disconnect(0), jB._audioUnlocked = !0, GB.abort();
+            for (const BB of jB._howls) BB._emit("unlock")
           }
         },
-        zH = () => {
-          YH(), rH()
+        yB = () => {
+          lB(), DB()
         },
-        CH = BH => {
-          if (YH(), "inTap" === AH) {
-            if ("running" === HH.state) return;
-            console.warn("A click's resume after its frame left Howler's context suspended, so this click resumes it"), rH()
-          } else "afterPaint" === AH && (AH = "queued", (0, SH.c)(BH.timeStamp, (() => {
-            AH = "inTap", rH()
+        JB = OB => {
+          if (lB(), "inTap" === YB) {
+            if ("running" === BB.state) return;
+            console.warn("A click's resume after its frame left Howler's context suspended, so this click resumes it"), DB()
+          } else "afterPaint" === YB && (YB = "queued", (0, QB.c)(OB.timeStamp, (() => {
+            YB = "inTap", DB()
           })))
         };
-      for (const SH of ["touchstart", "touchend"]) document.addEventListener(SH, zH, {
+      for (const QB of ["touchstart", "touchend"]) document.addEventListener(QB, yB, {
         capture: !0,
-        signal: LH.signal
+        signal: GB.signal
       });
-      for (const SH of hH.d) document.addEventListener(SH, CH, {
+      for (const QB of oB.c) document.addEventListener(QB, JB, {
         capture: !0,
-        signal: LH.signal
+        signal: GB.signal
       })
     });
-    let uH = 0;
-    const QH = null === (AH = tH._autoSuspend) || void 0 === AH ? void 0 : AH.bind(rH.Howler);
+    let pB = 0;
+    const qB = null === (YB = jB._autoSuspend) || void 0 === YB ? void 0 : YB.bind(DB.Howler);
 
-    function WH() {
-      MH();
+    function ZB() {
+      NB();
       const {
-        ctx: HH,
-        masterGain: BH
-      } = tH;
-      return HH && BH ? {
-        ctx: HH,
-        destination: BH,
-        holdAwake: HH => {
-          var BH, LH;
-          (uH += HH ? 1 : -1, HH) ? null === (BH = tH._autoResume) || void 0 === BH || BH.call(tH): null === (LH = tH._autoSuspend) || void 0 === LH || LH.call(tH)
+        ctx: BB,
+        masterGain: OB
+      } = jB;
+      return BB && OB ? {
+        ctx: BB,
+        destination: OB,
+        holdAwake: BB => {
+          var OB, GB;
+          (pB += BB ? 1 : -1, BB) ? null === (OB = jB._autoResume) || void 0 === OB || OB.call(jB): null === (GB = jB._autoSuspend) || void 0 === GB || GB.call(jB)
         },
         wake: () => {
-          var BH;
-          "running" !== HH.state && (null === (BH = tH._autoResume) || void 0 === BH || BH.call(tH), HH.resume().catch((() => {})))
+          var OB;
+          "running" !== BB.state && (null === (OB = jB._autoResume) || void 0 === OB || OB.call(jB), BB.resume().catch((() => {})))
         }
       } : null
     }
 
-    function MH() {
-      var HH;
-      (tH.volume(), tH.ctx && tH.autoUnlock) && (null === (HH = tH._unlockAudio) || void 0 === HH || HH.call(tH))
+    function NB() {
+      var BB;
+      (jB.volume(), jB.ctx && jB.autoUnlock) && (null === (BB = jB._unlockAudio) || void 0 === BB || BB.call(jB))
     }
-    QH && (tH._autoSuspend = () => uH > 0 ? rH.Howler : QH())
+    qB && (jB._autoSuspend = () => pB > 0 ? DB.Howler : qB())
   },
-  37648: (HH, BH, LH) => {
-    function AH(HH, BH) {
+  37475: (BB, OB, GB) => {
+    function YB(BB, OB) {
       let {
-        afterJoin: LH,
-        joining: AH,
-        idle: rH,
-        fetchFile: SH,
-        xB: hH = () => !1
-      } = BH;
-      const tH = BH => {
-        BH >= HH.length || hH() || LH((() => {
-          rH((() => {
-            hH() || (AH() ? tH(BH) : SH(HH[BH]).catch((() => {})).finally((() => {
-              tH(BH + 1)
+        afterJoin: GB,
+        joining: YB,
+        idle: DB,
+        fetchFile: QB,
+        rB: oB = () => !1
+      } = OB;
+      const jB = OB => {
+        OB >= BB.length || oB() || GB((() => {
+          DB((() => {
+            oB() || (YB() ? jB(OB) : QB(BB[OB]).catch((() => {})).finally((() => {
+              jB(OB + 1)
             })))
           }))
         }))
       };
-      tH(0)
+      jB(0)
     }
-    LH.d(BH, {
-      b: () => AH
+    GB.d(OB, {
+      b: () => YB
     })
   },
-  37642: (HH, BH, LH) => {
-    LH.d(BH, {
-      d: () => AH
+  37466: (BB, OB, GB) => {
+    GB.d(OB, {
+      b: () => YB
     });
-    const AH = new Set(["gunSemiAutomatic", "gunSubmachineGun", "gunShotgun", "gunRifle", "gunPistol", "gunMisc", "step", "dig", "randomItems", "randomExp", "randomCash", "randomFallsmall", "note", "rpg", "phoneAndMoney"])
+    const YB = new Set(["gunSemiAutomatic", "gunSubmachineGun", "gunShotgun", "gunRifle", "gunPistol", "gunMisc", "step", "dig", "randomItems", "randomExp", "randomCash", "randomFallsmall", "note", "rpg", "phoneAndMoney"])
   },
-  37650: (HH, BH, LH) => {
-    LH.d(BH, {
-      e: () => EH,
-      i: () => XH
+  37477: (BB, OB, GB) => {
+    GB.d(OB, {
+      c: () => MB,
+      e: () => PB
     });
-    var AH = LH(15),
-      rH = LH(37617),
-      SH = LH(4727),
-      hH = LH(37652),
-      tH = LH(5335),
-      zH = LH(225),
-      CH = LH(37648);
-    const EH = {
-        afterJoin: HH => {
-          (0, SH.e)(AH.c.get("gameState"), HH)
+    var YB = GB(16),
+      DB = GB(37436),
+      QB = GB(4744),
+      oB = GB(37484),
+      jB = GB(5353),
+      yB = GB(244),
+      JB = GB(37475);
+    const MB = {
+        afterJoin: BB => {
+          (0, QB.c)(YB.c.get("gameState"), BB)
         },
-        joining: () => (0, SH.i)(AH.c.get("gameState")),
-        idle: zH.d
+        joining: () => (0, QB.g)(YB.c.get("gameState")),
+        idle: yB.b
       },
-      XH = function(HH) {
-        const BH = new Set,
-          LH = new Set,
-          AH = BH => BH.flatMap((BH => {
-            const LH = (AH = (0, rH.v)(BH).src, SH = HH.canPlay, AH.find((HH => {
-              var BH;
-              const LH = null === (BH = /\.([^.]+)$/.exec(HH.split("?", 1)[0])) || void 0 === BH ? void 0 : BH[1];
-              return void 0 !== LH && SH(LH.toLowerCase())
+      PB = function(BB) {
+        const OB = new Set,
+          GB = new Set,
+          YB = OB => OB.flatMap((OB => {
+            const GB = (YB = (0, DB.t)(OB).src, QB = BB.canPlay, YB.find((BB => {
+              var OB;
+              const GB = null === (OB = /\.([^.]+)$/.exec(BB.split("?", 1)[0])) || void 0 === OB ? void 0 : OB[1];
+              return void 0 !== GB && QB(GB.toLowerCase())
             })));
-            var AH, SH;
-            return void 0 === LH ? [] : [LH]
+            var YB, QB;
+            return void 0 === GB ? [] : [GB]
           }));
-        return SH => {
-          var hH;
-          const tH = (0, rH.o)(SH),
-            zH = [];
-          BH.has(tH) || (BH.add(tH), zH.push(...AH((0, rH.p)(tH).filter((HH => HH !== SH)))));
-          const [EH, XH] = null !== (hH = [...rH.d].find((HH => {
-            let [, BH] = HH;
-            return BH.includes(tH)
-          }))) && void 0 !== hH ? hH : [void 0, []];
-          if (void 0 !== EH && !LH.has(EH)) {
-            LH.add(EH);
-            for (const HH of XH) BH.has(HH) || (BH.add(HH), zH.push(...AH((0, rH.p)(HH))))
+        return QB => {
+          var oB;
+          const jB = (0, DB.n)(QB),
+            yB = [];
+          OB.has(jB) || (OB.add(jB), yB.push(...YB((0, DB.o)(jB).filter((BB => BB !== QB)))));
+          const [MB, PB] = null !== (oB = [...DB.c].find((BB => {
+            let [, OB] = BB;
+            return OB.includes(jB)
+          }))) && void 0 !== oB ? oB : [void 0, []];
+          if (void 0 !== MB && !GB.has(MB)) {
+            GB.add(MB);
+            for (const BB of PB) OB.has(BB) || (OB.add(BB), yB.push(...YB((0, DB.o)(BB))))
           }
-          zH.length > 0 && (0, CH.b)(zH, HH)
+          yB.length > 0 && (0, JB.b)(yB, BB)
         }
       }({
-        ...EH,
-        fetchFile: hH.c,
-        canPlay: HH => !!tH.Howler.codecs(HH)
+        ...MB,
+        fetchFile: oB.b,
+        canPlay: BB => !!jB.Howler.codecs(BB)
       })
   },
-  37640: (HH, BH, LH) => {
-    LH.d(BH, {
-      b: () => hH,
-      d: () => rH,
-      e: () => AH
+  37461: (BB, OB, GB) => {
+    GB.d(OB, {
+      e: () => oB,
+      f: () => DB,
+      j: () => YB
     });
 
-    function AH(HH) {
-      return HH.replace(/[_\-\s]*\d+$/, "") || HH
+    function YB(BB) {
+      return BB.replace(/[_\-\s]*\d+$/, "") || BB
     }
 
-    function rH(HH, BH, LH) {
-      return LH <= 0 ? 0 : HH * LH / Math.max(BH, LH)
+    function DB(BB, OB, GB) {
+      return GB <= 0 ? 0 : BB * GB / Math.max(OB, GB)
     }
 
-    function SH(HH, BH) {
-      const LH = HH.getDurationMs();
-      return LH > 0 ? HH.loudness * Math.max(0, 1 - (BH - HH.startMs) / LH) : 0
+    function QB(BB, OB) {
+      const GB = BB.getDurationMs();
+      return GB > 0 ? BB.loudness * Math.max(0, 1 - (OB - BB.startMs) / GB) : 0
     }
-    class hH {
+    class oB {
       constructor() {
-        let HH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 24,
-          BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 6;
-        this.maxVoices = HH, this.maxPerGroup = BH, this.voices = []
+        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 24,
+          OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 6;
+        this.maxVoices = BB, this.maxPerGroup = OB, this.voices = []
       }
-      admit(HH) {
-        if (this.voices = this.voices.filter((HH => HH.isAlive())), null !== HH.group) {
-          const BH = this.voices.filter((BH => BH.group === HH.group));
-          if (BH.length >= this.maxPerGroup && !this.dropLeastWorth(BH, HH)) return !1
+      admit(BB) {
+        if (this.voices = this.voices.filter((BB => BB.isAlive())), null !== BB.group) {
+          const OB = this.voices.filter((OB => OB.group === BB.group));
+          if (OB.length >= this.maxPerGroup && !this.dropLeastWorth(OB, BB)) return !1
         }
-        return !(this.voices.length >= this.maxVoices && !this.dropLeastWorth(this.voices, HH)) && (this.voices.push(HH), !0)
+        return !(this.voices.length >= this.maxVoices && !this.dropLeastWorth(this.voices, BB)) && (this.voices.push(BB), !0)
       }
-      dropLeastWorth(HH, BH) {
-        let LH = null,
-          AH = 1 / 0;
-        for (const rH of HH) {
-          if (!rH.canStop()) continue;
-          const HH = SH(rH, BH.startMs);
-          HH < AH && (LH = rH, AH = HH)
+      dropLeastWorth(BB, OB) {
+        let GB = null,
+          YB = 1 / 0;
+        for (const DB of BB) {
+          if (!DB.canStop()) continue;
+          const BB = QB(DB, OB.startMs);
+          BB < YB && (GB = DB, YB = BB)
         }
-        return !(!LH || BH.loudness < AH) && (this.voices.splice(this.voices.indexOf(LH), 1), LH.stop(), !0)
+        return !(!GB || OB.loudness < YB) && (this.voices.splice(this.voices.indexOf(GB), 1), GB.stop(), !0)
       }
     }
   },
-  37467: (HH, BH, LH) => {
-    LH.d(BH, {
-      d: () => rH,
-      g: () => hH,
-      i: () => tH
+  37254: (BB, OB, GB) => {
+    GB.d(OB, {
+      e: () => DB,
+      i: () => oB,
+      k: () => jB
     });
-    var AH = LH(18);
-    const rH = "touchSprintChanged";
-    let SH = !0;
+    var YB = GB(25);
+    const DB = "touchSprintChanged";
+    let QB = !0;
 
-    function hH() {
-      return SH
+    function oB() {
+      return QB
     }
 
-    function tH(HH) {
-      HH !== SH && (SH = HH, AH.k.AX(rH, HH))
+    function jB(BB) {
+      BB !== QB && (QB = BB, YB.o.tM(DB, BB))
     }
   },
-  37656: (HH, BH, LH) => {
-    LH.d(BH, {
-      c: () => SH,
-      d: () => hH,
-      f: () => AH
+  37490: (BB, OB, GB) => {
+    GB.d(OB, {
+      c: () => QB,
+      e: () => oB,
+      i: () => YB
     });
-    class AH {
-      constructor(HH) {
-        this.multipliers = {}, this._onUpdate = void 0, this._onUpdate = HH
+    class YB {
+      constructor(BB) {
+        this.multipliers = {}, this._onUpdate = void 0, this._onUpdate = BB
       }
-      setMultiplierType(HH, BH) {
-        var LH;
-        this.multipliers[HH] = BH, null === (LH = this._onUpdate) || void 0 === LH || LH.call(this)
+      setMultiplierType(BB, OB) {
+        var GB;
+        this.multipliers[BB] = OB, null === (GB = this._onUpdate) || void 0 === GB || GB.call(this)
       }
-      removeMultiplier(HH) {
-        var BH;
-        delete this.multipliers[HH], null === (BH = this._onUpdate) || void 0 === BH || BH.call(this)
+      removeMultiplier(BB) {
+        var OB;
+        delete this.multipliers[BB], null === (OB = this._onUpdate) || void 0 === OB || OB.call(this)
       }
-      getMultiplierType(HH) {
-        return this.multipliers[HH]
+      getMultiplierType(BB) {
+        return this.multipliers[BB]
       }
       getTotalMultipliedVal() {
-        let HH = 1;
-        for (const BH in this.multipliers) HH *= this.multipliers[BH];
-        return HH
+        let BB = 1;
+        for (const OB in this.multipliers) BB *= this.multipliers[OB];
+        return BB
       }
     }
-    class rH {
+    class DB {
       constructor() {
-        let HH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
-        this.booleans = {}, this._onUpdate = void 0, this._onUpdate = HH
+        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+        this.booleans = {}, this._onUpdate = void 0, this._onUpdate = BB
       }
-      setBooleanType(HH, BH) {
-        const LH = this._getTotalBooleanVal();
-        this.booleans[HH] = !!BH;
-        const AH = this.getTotalBooleanVal();
-        var rH;
-        AH !== LH && (null === (rH = this._onUpdate) || void 0 === rH || rH.call(this, AH, this.booleans));
-        return AH
+      setBooleanType(BB, OB) {
+        const GB = this._getTotalBooleanVal();
+        this.booleans[BB] = !!OB;
+        const YB = this.getTotalBooleanVal();
+        var DB;
+        YB !== GB && (null === (DB = this._onUpdate) || void 0 === DB || DB.call(this, YB, this.booleans));
+        return YB
       }
-      removeBoolean(HH) {
-        const BH = this._getTotalBooleanVal();
-        delete this.booleans[HH];
-        const LH = this._getTotalBooleanVal();
-        var AH;
-        null !== LH && LH !== BH && (null === (AH = this._onUpdate) || void 0 === AH || AH.call(this, LH, this.booleans));
-        return null !== LH && void 0 !== LH && LH
+      removeBoolean(BB) {
+        const OB = this._getTotalBooleanVal();
+        delete this.booleans[BB];
+        const GB = this._getTotalBooleanVal();
+        var YB;
+        null !== GB && GB !== OB && (null === (YB = this._onUpdate) || void 0 === YB || YB.call(this, GB, this.booleans));
+        return null !== GB && void 0 !== GB && GB
       }
-      getBooleanType(HH) {
-        return this.booleans[HH]
+      getBooleanType(BB) {
+        return this.booleans[BB]
       }
       getTotalBooleanVal() {
         throw new Error("This is an abstract class, use BooleanAndCombinator")
       }
       forceUpdate() {
-        var HH;
-        null === (HH = this._onUpdate) || void 0 === HH || HH.call(this, this.getTotalBooleanVal(), this.booleans)
+        var BB;
+        null === (BB = this._onUpdate) || void 0 === BB || BB.call(this, this.getTotalBooleanVal(), this.booleans)
       }
       _getTotalBooleanVal() {
         throw new Error("This is an abstract class, use BooleanAndCombinator")
       }
     }
-    class SH extends rH {
+    class QB extends DB {
       getTotalBooleanVal() {
-        const HH = this._getTotalBooleanVal();
-        if (null === HH) throw new Error("Should not be gotten before at least 1 type has been initialised");
-        return HH
+        const BB = this._getTotalBooleanVal();
+        if (null === BB) throw new Error("Should not be gotten before at least 1 type has been initialised");
+        return BB
       }
       _getTotalBooleanVal() {
-        let HH = !1,
-          BH = !0;
-        for (const LH in this.booleans) HH = !0, BH &&= this.booleans[LH];
-        return HH ? BH : null
+        let BB = !1,
+          OB = !0;
+        for (const GB in this.booleans) BB = !0, OB &&= this.booleans[GB];
+        return BB ? OB : null
       }
     }
-    class hH extends rH {
+    class oB extends DB {
       getTotalBooleanVal() {
-        const HH = this._getTotalBooleanVal();
-        if (null === HH) throw new Error("Should not be gotten before at least 1 type has been initialised");
-        return HH
+        const BB = this._getTotalBooleanVal();
+        if (null === BB) throw new Error("Should not be gotten before at least 1 type has been initialised");
+        return BB
       }
       _getTotalBooleanVal() {
-        let HH = !1,
-          BH = !1;
-        for (const LH in this.booleans) HH = !0, BH ||= this.booleans[LH];
-        return HH ? BH : null
+        let BB = !1,
+          OB = !1;
+        for (const GB in this.booleans) BB = !0, OB ||= this.booleans[GB];
+        return BB ? OB : null
       }
     }
   },
-  37654: (HH, BH, LH) => {
-    LH.d(BH, {
-      e: () => SH,
-      f: () => AH,
-      i: () => rH
+  37486: (BB, OB, GB) => {
+    GB.d(OB, {
+      c: () => QB,
+      f: () => YB,
+      g: () => DB
     });
-    const AH = 15,
-      rH = 3,
-      SH = 30
+    const YB = 15,
+      DB = 3,
+      QB = 30
   },
-  7007: (HH, BH, LH) => {
-    LH.d(BH, {
-      d: () => hH,
-      e: () => rH,
-      h: () => zH,
-      i: () => SH,
-      m: () => CH,
-      o: () => AH,
-      p: () => tH
+  6991: (BB, OB, GB) => {
+    GB.d(OB, {
+      e: () => oB,
+      h: () => DB,
+      j: () => yB,
+      k: () => QB,
+      n: () => JB,
+      o: () => YB,
+      p: () => jB
     });
-    let AH = function(HH) {
-        return HH[HH.DEFAULT = 0] = "DEFAULT", HH[HH.BOAT = 1] = "BOAT", HH[HH.GLIDER = 2] = "GLIDER", HH[HH.BALLOON = 3] = "BALLOON", HH[HH.SLEEPING = 4] = "SLEEPING", HH[HH.RIDING_MOB = 5] = "RIDING_MOB", HH[HH.CAR = 6] = "CAR", HH[HH.HOVERCRAFT = 7] = "HOVERCRAFT", HH
+    let YB = function(BB) {
+        return BB[BB.DEFAULT = 0] = "DEFAULT", BB[BB.BOAT = 1] = "BOAT", BB[BB.GLIDER = 2] = "GLIDER", BB[BB.BALLOON = 3] = "BALLOON", BB[BB.SLEEPING = 4] = "SLEEPING", BB[BB.RIDING_MOB = 5] = "RIDING_MOB", BB[BB.CAR = 6] = "CAR", BB[BB.HOVERCRAFT = 7] = "HOVERCRAFT", BB
       }({}),
-      rH = function(HH) {
-        return HH[HH.WOOD = 0] = "WOOD", HH[HH.OBSIDIAN = 1] = "OBSIDIAN", HH[HH.SPEED = 2] = "SPEED", HH
+      DB = function(BB) {
+        return BB[BB.WOOD = 0] = "WOOD", BB[BB.OBSIDIAN = 1] = "OBSIDIAN", BB[BB.SPEED = 2] = "SPEED", BB
       }({}),
-      SH = function(HH) {
-        return HH[HH.WOOD = 0] = "WOOD", HH[HH.IRON = 1] = "IRON", HH[HH.GOLD = 2] = "GOLD", HH[HH.DIAMOND = 3] = "DIAMOND", HH
+      QB = function(BB) {
+        return BB[BB.WOOD = 0] = "WOOD", BB[BB.IRON = 1] = "IRON", BB[BB.GOLD = 2] = "GOLD", BB[BB.DIAMOND = 3] = "DIAMOND", BB
       }({}),
-      hH = function(HH) {
-        return HH[HH.YELLOW = 0] = "YELLOW", HH[HH.WHITE = 1] = "WHITE", HH[HH.RED = 2] = "RED", HH[HH.PURPLE = 3] = "PURPLE", HH[HH.PINK = 4] = "PINK", HH[HH.ORANGE = 5] = "ORANGE", HH[HH.MAGENTA = 6] = "MAGENTA", HH[HH.LIME = 7] = "LIME", HH[HH.LIGHT_GRAY = 8] = "LIGHT_GRAY", HH[HH.LIGHT_BLUE = 9] = "LIGHT_BLUE", HH[HH.GREEN = 10] = "GREEN", HH[HH.GRAY = 11] = "GRAY", HH[HH.CYAN = 12] = "CYAN", HH[HH.BROWN = 13] = "BROWN", HH[HH.BLUE = 14] = "BLUE", HH[HH.BLACK = 15] = "BLACK", HH
+      oB = function(BB) {
+        return BB[BB.YELLOW = 0] = "YELLOW", BB[BB.WHITE = 1] = "WHITE", BB[BB.RED = 2] = "RED", BB[BB.PURPLE = 3] = "PURPLE", BB[BB.PINK = 4] = "PINK", BB[BB.ORANGE = 5] = "ORANGE", BB[BB.MAGENTA = 6] = "MAGENTA", BB[BB.LIME = 7] = "LIME", BB[BB.LIGHT_GRAY = 8] = "LIGHT_GRAY", BB[BB.LIGHT_BLUE = 9] = "LIGHT_BLUE", BB[BB.GREEN = 10] = "GREEN", BB[BB.GRAY = 11] = "GRAY", BB[BB.CYAN = 12] = "CYAN", BB[BB.BROWN = 13] = "BROWN", BB[BB.BLUE = 14] = "BLUE", BB[BB.BLACK = 15] = "BLACK", BB
       }({}),
-      tH = function(HH) {
-        return HH[HH.ROTATION_1 = 0] = "ROTATION_1", HH[HH.ROTATION_2 = 1] = "ROTATION_2", HH[HH.ROTATION_3 = 2] = "ROTATION_3", HH[HH.ROTATION_4 = 3] = "ROTATION_4", HH
+      jB = function(BB) {
+        return BB[BB.ROTATION_1 = 0] = "ROTATION_1", BB[BB.ROTATION_2 = 1] = "ROTATION_2", BB[BB.ROTATION_3 = 2] = "ROTATION_3", BB[BB.ROTATION_4 = 3] = "ROTATION_4", BB
       }({}),
-      zH = function(HH) {
-        return HH[HH.KART = 0] = "KART", HH[HH.OFF_ROADER = 1] = "OFF_ROADER", HH[HH.CAR = 2] = "CAR", HH[HH.GOLD_MINING_DRILL = 3] = "GOLD_MINING_DRILL", HH[HH.ARMORED_CAR = 4] = "ARMORED_CAR", HH[HH.IRON_MINING_DRILL = 5] = "IRON_MINING_DRILL", HH[HH.DIAMOND_MINING_DRILL = 6] = "DIAMOND_MINING_DRILL", HH[HH.MOONSTONE_MINING_DRILL = 7] = "MOONSTONE_MINING_DRILL", HH
+      yB = function(BB) {
+        return BB[BB.KART = 0] = "KART", BB[BB.OFF_ROADER = 1] = "OFF_ROADER", BB[BB.CAR = 2] = "CAR", BB[BB.GOLD_MINING_DRILL = 3] = "GOLD_MINING_DRILL", BB[BB.ARMORED_CAR = 4] = "ARMORED_CAR", BB[BB.IRON_MINING_DRILL = 5] = "IRON_MINING_DRILL", BB[BB.DIAMOND_MINING_DRILL = 6] = "DIAMOND_MINING_DRILL", BB[BB.MOONSTONE_MINING_DRILL = 7] = "MOONSTONE_MINING_DRILL", BB
       }({});
-    AH.DEFAULT, AH.BOAT, rH.SPEED, AH.GLIDER, SH.DIAMOND, AH.BALLOON, hH.BLACK, AH.SLEEPING, tH.ROTATION_4, AH.RIDING_MOB, AH.CAR, zH.MOONSTONE_MINING_DRILL, AH.HOVERCRAFT;
-    let CH = function(HH) {
-      return HH[HH.NORMAL = 0] = "NORMAL", HH[HH.GLIDING = 1] = "GLIDING", HH[HH.FLOATING = 2] = "FLOATING", HH
+    YB.DEFAULT, YB.BOAT, DB.SPEED, YB.GLIDER, QB.DIAMOND, YB.BALLOON, oB.BLACK, YB.SLEEPING, jB.ROTATION_4, YB.RIDING_MOB, YB.CAR, yB.MOONSTONE_MINING_DRILL, YB.HOVERCRAFT;
+    let JB = function(BB) {
+      return BB[BB.NORMAL = 0] = "NORMAL", BB[BB.GLIDING = 1] = "GLIDING", BB[BB.FLOATING = 2] = "FLOATING", BB
     }({})
   }
 };
 Object.freeze(modules);
-for (const HH in modules) Object.freeze(modules[HH]);
+for (const BB in modules) Object.freeze(modules[BB]);

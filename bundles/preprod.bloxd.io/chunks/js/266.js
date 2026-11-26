@@ -1,248 +1,248 @@
 export const id = 266;
 export const ids = [266];
 export const modules = {
-  38610: (HH, BH, LH) => {
-    LH.d(BH, {
-      e: () => rH
+  38424: (BB, OB, GB) => {
+    GB.d(OB, {
+      b: () => DB
     });
-    var AH = LH(38619);
-    class rH {
-      static GetPlanes(HH) {
-        const BH = [];
-        for (let LH = 0; LH < 6; LH++) BH.push(new AH.d(0, 0, 0, 0));
-        return rH.GetPlanesToRef(HH, BH), BH
+    var YB = GB(38432);
+    class DB {
+      static GetPlanes(BB) {
+        const OB = [];
+        for (let GB = 0; GB < 6; GB++) OB.push(new YB.c(0, 0, 0, 0));
+        return DB.GetPlanesToRef(BB, OB), OB
       }
-      static GetNearPlaneToRef(HH, BH) {
-        const LH = HH.m;
-        BH.normal.x = LH[3] + LH[2], BH.normal.y = LH[7] + LH[6], BH.normal.z = LH[11] + LH[10], BH.d = LH[15] + LH[14], BH.normalize()
+      static GetNearPlaneToRef(BB, OB) {
+        const GB = BB.m;
+        OB.normal.x = GB[3] + GB[2], OB.normal.y = GB[7] + GB[6], OB.normal.z = GB[11] + GB[10], OB.d = GB[15] + GB[14], OB.normalize()
       }
-      static GetFarPlaneToRef(HH, BH) {
-        const LH = HH.m;
-        BH.normal.x = LH[3] - LH[2], BH.normal.y = LH[7] - LH[6], BH.normal.z = LH[11] - LH[10], BH.d = LH[15] - LH[14], BH.normalize()
+      static GetFarPlaneToRef(BB, OB) {
+        const GB = BB.m;
+        OB.normal.x = GB[3] - GB[2], OB.normal.y = GB[7] - GB[6], OB.normal.z = GB[11] - GB[10], OB.d = GB[15] - GB[14], OB.normalize()
       }
-      static GetLeftPlaneToRef(HH, BH) {
-        const LH = HH.m;
-        BH.normal.x = LH[3] + LH[0], BH.normal.y = LH[7] + LH[4], BH.normal.z = LH[11] + LH[8], BH.d = LH[15] + LH[12], BH.normalize()
+      static GetLeftPlaneToRef(BB, OB) {
+        const GB = BB.m;
+        OB.normal.x = GB[3] + GB[0], OB.normal.y = GB[7] + GB[4], OB.normal.z = GB[11] + GB[8], OB.d = GB[15] + GB[12], OB.normalize()
       }
-      static GetRightPlaneToRef(HH, BH) {
-        const LH = HH.m;
-        BH.normal.x = LH[3] - LH[0], BH.normal.y = LH[7] - LH[4], BH.normal.z = LH[11] - LH[8], BH.d = LH[15] - LH[12], BH.normalize()
+      static GetRightPlaneToRef(BB, OB) {
+        const GB = BB.m;
+        OB.normal.x = GB[3] - GB[0], OB.normal.y = GB[7] - GB[4], OB.normal.z = GB[11] - GB[8], OB.d = GB[15] - GB[12], OB.normalize()
       }
-      static GetTopPlaneToRef(HH, BH) {
-        const LH = HH.m;
-        BH.normal.x = LH[3] - LH[1], BH.normal.y = LH[7] - LH[5], BH.normal.z = LH[11] - LH[9], BH.d = LH[15] - LH[13], BH.normalize()
+      static GetTopPlaneToRef(BB, OB) {
+        const GB = BB.m;
+        OB.normal.x = GB[3] - GB[1], OB.normal.y = GB[7] - GB[5], OB.normal.z = GB[11] - GB[9], OB.d = GB[15] - GB[13], OB.normalize()
       }
-      static GetBottomPlaneToRef(HH, BH) {
-        const LH = HH.m;
-        BH.normal.x = LH[3] + LH[1], BH.normal.y = LH[7] + LH[5], BH.normal.z = LH[11] + LH[9], BH.d = LH[15] + LH[13], BH.normalize()
+      static GetBottomPlaneToRef(BB, OB) {
+        const GB = BB.m;
+        OB.normal.x = GB[3] + GB[1], OB.normal.y = GB[7] + GB[5], OB.normal.z = GB[11] + GB[9], OB.d = GB[15] + GB[13], OB.normalize()
       }
-      static GetPlanesToRef(HH, BH) {
-        rH.GetNearPlaneToRef(HH, BH[0]), rH.GetFarPlaneToRef(HH, BH[1]), rH.GetLeftPlaneToRef(HH, BH[2]), rH.GetRightPlaneToRef(HH, BH[3]), rH.GetTopPlaneToRef(HH, BH[4]), rH.GetBottomPlaneToRef(HH, BH[5])
+      static GetPlanesToRef(BB, OB) {
+        DB.GetNearPlaneToRef(BB, OB[0]), DB.GetFarPlaneToRef(BB, OB[1]), DB.GetLeftPlaneToRef(BB, OB[2]), DB.GetRightPlaneToRef(BB, OB[3]), DB.GetTopPlaneToRef(BB, OB[4]), DB.GetBottomPlaneToRef(BB, OB[5])
       }
-      static IsPointInFrustum(HH, BH) {
-        for (let LH = 0; LH < 6; LH++)
-          if (BH[LH].dotCoordinate(HH) < 0) return !1;
+      static IsPointInFrustum(BB, OB) {
+        for (let GB = 0; GB < 6; GB++)
+          if (OB[GB].dotCoordinate(BB) < 0) return !1;
         return !0
       }
     }
   },
-  38619: (HH, BH, LH) => {
-    LH.d(BH, {
-      d: () => rH
+  38432: (BB, OB, GB) => {
+    GB.d(OB, {
+      c: () => DB
     });
-    var AH = LH(37963);
-    class rH {
-      constructor(HH, BH, LH, rH) {
-        this.normal = new AH.o(HH, BH, LH), this.d = rH
+    var YB = GB(37778);
+    class DB {
+      constructor(BB, OB, GB, DB) {
+        this.normal = new YB.r(BB, OB, GB), this.d = DB
       }
-      xrH() {
+      dDB() {
         return [this.normal.x, this.normal.y, this.normal.z, this.d]
       }
       clone() {
-        return new rH(this.normal.x, this.normal.y, this.normal.z, this.d)
+        return new DB(this.normal.x, this.normal.y, this.normal.z, this.d)
       }
       getClassName() {
         return "Plane"
       }
       getHashCode() {
-        let HH = this.normal.getHashCode();
-        return HH = 397 * HH ^ this.d, HH
+        let BB = this.normal.getHashCode();
+        return BB = 397 * BB ^ this.d, BB
       }
       normalize() {
-        const HH = Math.sqrt(this.normal.x * this.normal.x + this.normal.y * this.normal.y + this.normal.z * this.normal.z);
-        let BH = 0;
-        return 0 !== HH && (BH = 1 / HH), this.normal.x *= BH, this.normal.y *= BH, this.normal.z *= BH, this.d *= BH, this
+        const BB = Math.sqrt(this.normal.x * this.normal.x + this.normal.y * this.normal.y + this.normal.z * this.normal.z);
+        let OB = 0;
+        return 0 !== BB && (OB = 1 / BB), this.normal.x *= OB, this.normal.y *= OB, this.normal.z *= OB, this.d *= OB, this
       }
-      transform(HH) {
-        const BH = rH._TmpMatrix;
-        HH.invertToRef(BH);
-        const LH = BH.m,
-          AH = this.normal.x,
-          SH = this.normal.y,
-          hH = this.normal.z,
-          tH = this.d,
-          zH = AH * LH[0] + SH * LH[1] + hH * LH[2] + tH * LH[3],
-          CH = AH * LH[4] + SH * LH[5] + hH * LH[6] + tH * LH[7],
-          EH = AH * LH[8] + SH * LH[9] + hH * LH[10] + tH * LH[11],
-          XH = AH * LH[12] + SH * LH[13] + hH * LH[14] + tH * LH[15];
-        return new rH(zH, CH, EH, XH)
+      transform(BB) {
+        const OB = DB._TmpMatrix;
+        BB.invertToRef(OB);
+        const GB = OB.m,
+          YB = this.normal.x,
+          QB = this.normal.y,
+          oB = this.normal.z,
+          jB = this.d,
+          yB = YB * GB[0] + QB * GB[1] + oB * GB[2] + jB * GB[3],
+          JB = YB * GB[4] + QB * GB[5] + oB * GB[6] + jB * GB[7],
+          MB = YB * GB[8] + QB * GB[9] + oB * GB[10] + jB * GB[11],
+          PB = YB * GB[12] + QB * GB[13] + oB * GB[14] + jB * GB[15];
+        return new DB(yB, JB, MB, PB)
       }
-      dotCoordinate(HH) {
-        return this.normal.x * HH.x + this.normal.y * HH.y + this.normal.z * HH.z + this.d
+      dotCoordinate(BB) {
+        return this.normal.x * BB.x + this.normal.y * BB.y + this.normal.z * BB.z + this.d
       }
-      copyFromPoints(HH, BH, LH) {
-        const AH = BH.x - HH.x,
-          rH = BH.y - HH.y,
-          SH = BH.z - HH.z,
-          hH = LH.x - HH.x,
-          tH = LH.y - HH.y,
-          zH = LH.z - HH.z,
-          CH = rH * zH - SH * tH,
-          EH = SH * hH - AH * zH,
-          XH = AH * tH - rH * hH,
-          GH = Math.sqrt(CH * CH + EH * EH + XH * XH);
-        let YH;
-        return YH = 0 !== GH ? 1 / GH : 0, this.normal.x = CH * YH, this.normal.y = EH * YH, this.normal.z = XH * YH, this.d = -(this.normal.x * HH.x + this.normal.y * HH.y + this.normal.z * HH.z), this
+      copyFromPoints(BB, OB, GB) {
+        const YB = OB.x - BB.x,
+          DB = OB.y - BB.y,
+          QB = OB.z - BB.z,
+          oB = GB.x - BB.x,
+          jB = GB.y - BB.y,
+          yB = GB.z - BB.z,
+          JB = DB * yB - QB * jB,
+          MB = QB * oB - YB * yB,
+          PB = YB * jB - DB * oB,
+          zB = Math.sqrt(JB * JB + MB * MB + PB * PB);
+        let lB;
+        return lB = 0 !== zB ? 1 / zB : 0, this.normal.x = JB * lB, this.normal.y = MB * lB, this.normal.z = PB * lB, this.d = -(this.normal.x * BB.x + this.normal.y * BB.y + this.normal.z * BB.z), this
       }
-      isFrontFacingTo(HH, BH) {
-        return AH.o.Dot(this.normal, HH) <= BH
+      isFrontFacingTo(BB, OB) {
+        return YB.r.Dot(this.normal, BB) <= OB
       }
-      signedDistanceTo(HH) {
-        return AH.o.Dot(HH, this.normal) + this.d
+      signedDistanceTo(BB) {
+        return YB.r.Dot(BB, this.normal) + this.d
       }
-      static FromArray(HH) {
-        return new rH(HH[0], HH[1], HH[2], HH[3])
+      static FromArray(BB) {
+        return new DB(BB[0], BB[1], BB[2], BB[3])
       }
-      static FromPoints(HH, BH, LH) {
-        const AH = new rH(0, 0, 0, 0);
-        return AH.copyFromPoints(HH, BH, LH), AH
+      static FromPoints(BB, OB, GB) {
+        const YB = new DB(0, 0, 0, 0);
+        return YB.copyFromPoints(BB, OB, GB), YB
       }
-      static FromPositionAndNormal(HH, BH) {
-        const LH = new rH(0, 0, 0, 0);
-        return this.FromPositionAndNormalToRef(HH, BH, LH)
+      static FromPositionAndNormal(BB, OB) {
+        const GB = new DB(0, 0, 0, 0);
+        return this.FromPositionAndNormalToRef(BB, OB, GB)
       }
-      static FromPositionAndNormalToRef(HH, BH, LH) {
-        return LH.normal.Tm(BH), LH.normal.normalize(), LH.d = -HH.dot(LH.normal), LH
+      static FromPositionAndNormalToRef(BB, OB, GB) {
+        return GB.normal.IU(OB), GB.normal.normalize(), GB.d = -BB.dot(GB.normal), GB
       }
-      static SignedDistanceToPlaneFromPositionAndNormal(HH, BH, LH) {
-        const rH = -(BH.x * HH.x + BH.y * HH.y + BH.z * HH.z);
-        return AH.o.Dot(LH, BH) + rH
+      static SignedDistanceToPlaneFromPositionAndNormal(BB, OB, GB) {
+        const DB = -(OB.x * BB.x + OB.y * BB.y + OB.z * BB.z);
+        return YB.r.Dot(GB, OB) + DB
       }
     }
-    rH._TmpMatrix = AH.e.Identity()
+    DB._TmpMatrix = YB.d.Identity()
   },
-  39588: (HH, BH, LH) => {
-    LH.d(BH, {
-      d: () => SH
+  39358: (BB, OB, GB) => {
+    GB.d(OB, {
+      b: () => QB
     });
-    var AH = LH(39595);
-    const rH = (HH, BH, LH) => HH ? HH.getClassName && "Mesh" === HH.getClassName() ? null : !HH.getClassName || "SubMesh" !== HH.getClassName() && "PhysicsBody" !== HH.getClassName() ? HH.clone ? HH.clone() : Array.isArray(HH) ? HH.slice() : LH && "object" === typeof HH ? {
-      ...HH
-    } : null : HH.clone(BH) : null;
-    class SH {
-      static DeepCopy(HH, BH, LH, SH) {
-        let hH = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        const tH = function(HH) {
-          const BH = [];
+    var YB = GB(39366);
+    const DB = (BB, OB, GB) => BB ? BB.getClassName && "Mesh" === BB.getClassName() ? null : !BB.getClassName || "SubMesh" !== BB.getClassName() && "PhysicsBody" !== BB.getClassName() ? BB.clone ? BB.clone() : Array.isArray(BB) ? BB.slice() : GB && "object" === typeof BB ? {
+      ...BB
+    } : null : BB.clone(OB) : null;
+    class QB {
+      static DeepCopy(BB, OB, GB, QB) {
+        let oB = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const jB = function(BB) {
+          const OB = [];
           do {
-            const LH = Object.getOwnPropertyNames(HH);
-            for (const HH of LH) - 1 === BH.indexOf(HH) && BH.push(HH)
-          } while (HH = Object.getPrototypeOf(HH));
-          return BH
-        }(HH);
-        for (const CH of tH) {
-          if ("_" === CH[0] && (!SH || -1 === SH.indexOf(CH))) continue;
-          if (CH.endsWith("Observable")) continue;
-          if (LH && -1 !== LH.indexOf(CH)) continue;
-          const tH = HH[CH],
-            EH = typeof tH;
-          if ("function" !== EH) try {
-            if ("object" === EH)
-              if (tH instanceof Uint8Array) BH[CH] = Uint8Array.from(tH);
-              else if (tH instanceof Array) {
-              if (BH[CH] = [], tH.length > 0)
-                if ("object" == typeof tH[0])
-                  for (let HH = 0; HH < tH.length; HH++) {
-                    const LH = rH(tH[HH], BH, hH); - 1 === BH[CH].indexOf(LH) && BH[CH].push(LH)
-                  } else BH[CH] = tH.slice(0)
-            } else BH[CH] = rH(tH, BH, hH);
-            else BH[CH] = tH
-          } catch (zH) {
-            AH.e.Warn(zH.message)
+            const GB = Object.getOwnPropertyNames(BB);
+            for (const BB of GB) - 1 === OB.indexOf(BB) && OB.push(BB)
+          } while (BB = Object.getPrototypeOf(BB));
+          return OB
+        }(BB);
+        for (const JB of jB) {
+          if ("_" === JB[0] && (!QB || -1 === QB.indexOf(JB))) continue;
+          if (JB.endsWith("Observable")) continue;
+          if (GB && -1 !== GB.indexOf(JB)) continue;
+          const jB = BB[JB],
+            MB = typeof jB;
+          if ("function" !== MB) try {
+            if ("object" === MB)
+              if (jB instanceof Uint8Array) OB[JB] = Uint8Array.from(jB);
+              else if (jB instanceof Array) {
+              if (OB[JB] = [], jB.length > 0)
+                if ("object" == typeof jB[0])
+                  for (let BB = 0; BB < jB.length; BB++) {
+                    const GB = DB(jB[BB], OB, oB); - 1 === OB[JB].indexOf(GB) && OB[JB].push(GB)
+                  } else OB[JB] = jB.slice(0)
+            } else OB[JB] = DB(jB, OB, oB);
+            else OB[JB] = jB
+          } catch (yB) {
+            YB.b.Warn(yB.message)
           }
         }
       }
     }
   },
-  38790: (HH, BH, LH) => {
-    function AH() {
-      return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (HH => {
-        const BH = 16 * Math.random() | 0;
-        return ("x" === HH ? BH : 3 & BH | 8).toString(16)
+  38589: (BB, OB, GB) => {
+    function YB() {
+      return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (BB => {
+        const OB = 16 * Math.random() | 0;
+        return ("x" === BB ? OB : 3 & OB | 8).toString(16)
       }))
     }
-    LH.d(BH, {
-      e: () => AH
+    GB.d(OB, {
+      e: () => YB
     })
   },
-  39595: (HH, BH, LH) => {
-    LH.d(BH, {
-      e: () => AH
+  39366: (BB, OB, GB) => {
+    GB.d(OB, {
+      b: () => YB
     });
-    class AH {
-      static _CheckLimit(HH, BH) {
-        let LH = AH._LogLimitOutputs[HH];
-        return LH ? LH.current++ : (LH = {
-          limit: BH,
+    class YB {
+      static _CheckLimit(BB, OB) {
+        let GB = YB._LogLimitOutputs[BB];
+        return GB ? GB.current++ : (GB = {
+          limit: OB,
           current: 1
-        }, AH._LogLimitOutputs[HH] = LH), LH.current <= LH.limit
+        }, YB._LogLimitOutputs[BB] = GB), GB.current <= GB.limit
       }
-      static _GenerateLimitMessage(HH) {
-        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        const LH = AH._LogLimitOutputs[HH];
-        if (!LH || !AH.MessageLimitReached) return;
-        const rH = this._Levels[BH];
-        LH.current === LH.limit && AH[rH.name](AH.MessageLimitReached.replace(/%LIMIT%/g, "" + LH.limit).replace(/%TYPE%/g, rH.name ?? ""))
+      static _GenerateLimitMessage(BB) {
+        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        const GB = YB._LogLimitOutputs[BB];
+        if (!GB || !YB.MessageLimitReached) return;
+        const DB = this._Levels[OB];
+        GB.current === GB.limit && YB[DB.name](YB.MessageLimitReached.replace(/%LIMIT%/g, "" + GB.limit).replace(/%TYPE%/g, DB.name ?? ""))
       }
-      static _AddLogEntry(HH) {
-        AH._LogCache = HH + AH._LogCache, AH.OnNewCacheEntry && AH.OnNewCacheEntry(HH)
+      static _AddLogEntry(BB) {
+        YB._LogCache = BB + YB._LogCache, YB.OnNewCacheEntry && YB.OnNewCacheEntry(BB)
       }
-      static _FormatMessage(HH) {
-        const BH = HH => HH < 10 ? "0" + HH : "" + HH,
-          LH = new Date;
-        return "[" + BH(LH.getHours()) + ":" + BH(LH.getMinutes()) + ":" + BH(LH.getSeconds()) + "]: " + HH
+      static _FormatMessage(BB) {
+        const OB = BB => BB < 10 ? "0" + BB : "" + BB,
+          GB = new Date;
+        return "[" + OB(GB.getHours()) + ":" + OB(GB.getMinutes()) + ":" + OB(GB.getSeconds()) + "]: " + BB
       }
-      static _LogDisabled(HH, BH) {}
+      static _LogDisabled(BB, OB) {}
       static _LogEnabled() {
-        let HH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          BH = arguments.length > 1 ? arguments[1] : void 0,
-          LH = arguments.length > 2 ? arguments[2] : void 0;
-        const rH = Array.isArray(BH) ? BH[0] : BH;
-        if (void 0 !== LH && !AH._CheckLimit(rH, LH)) return;
-        const SH = AH._FormatMessage(rH),
-          hH = this._Levels[HH],
-          tH = Array.isArray(BH) ? BH.slice(1) : [];
-        hH.logFunc && hH.logFunc("BJS - " + SH, ...tH);
-        const zH = `<div style='color:${hH.color}'>${SH}</div><br>`;
-        AH._AddLogEntry(zH), AH._GenerateLimitMessage(rH, HH)
+        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          OB = arguments.length > 1 ? arguments[1] : void 0,
+          GB = arguments.length > 2 ? arguments[2] : void 0;
+        const DB = Array.isArray(OB) ? OB[0] : OB;
+        if (void 0 !== GB && !YB._CheckLimit(DB, GB)) return;
+        const QB = YB._FormatMessage(DB),
+          oB = this._Levels[BB],
+          jB = Array.isArray(OB) ? OB.slice(1) : [];
+        oB.logFunc && oB.logFunc("BJS - " + QB, ...jB);
+        const yB = `<div style='color:${oB.color}'>${QB}</div><br>`;
+        YB._AddLogEntry(yB), YB._GenerateLimitMessage(DB, BB)
       }
       static get LogCache() {
-        return AH._LogCache
+        return YB._LogCache
       }
       static ClearLogCache() {
-        AH._LogCache = "", AH._LogLimitOutputs = {}, AH.errorsCount = 0
+        YB._LogCache = "", YB._LogLimitOutputs = {}, YB.errorsCount = 0
       }
-      static set LogLevels(HH) {
-        AH.Log = AH._LogDisabled, AH.Warn = AH._LogDisabled, AH.Error = AH._LogDisabled;
-        const BH = [AH.MessageLogLevel, AH.WarningLogLevel, AH.ErrorLogLevel];
-        for (const LH of BH)
-          if ((HH & LH) === LH) {
-            const HH = this._Levels[LH];
-            AH[HH.name] = AH._LogEnabled.bind(AH, LH)
+      static set LogLevels(BB) {
+        YB.Log = YB._LogDisabled, YB.Warn = YB._LogDisabled, YB.Error = YB._LogDisabled;
+        const OB = [YB.MessageLogLevel, YB.WarningLogLevel, YB.ErrorLogLevel];
+        for (const GB of OB)
+          if ((BB & GB) === GB) {
+            const BB = this._Levels[GB];
+            YB[BB.name] = YB._LogEnabled.bind(YB, GB)
           }
       }
     }
-    AH.NoneLogLevel = 0, AH.MessageLogLevel = 1, AH.WarningLogLevel = 2, AH.ErrorLogLevel = 4, AH.AllLogLevel = 7, AH.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", AH._LogCache = "", AH._LogLimitOutputs = {}, AH._Levels = [{}, {
+    YB.NoneLogLevel = 0, YB.MessageLogLevel = 1, YB.WarningLogLevel = 2, YB.ErrorLogLevel = 4, YB.AllLogLevel = 7, YB.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", YB._LogCache = "", YB._LogLimitOutputs = {}, YB._Levels = [{}, {
       color: "white",
       logFunc: console.log,
       name: "Log"
@@ -254,8 +254,8 @@ export const modules = {
       color: "red",
       logFunc: console.error,
       name: "Error"
-    }], AH.errorsCount = 0, AH.Log = AH._LogEnabled.bind(AH, AH.MessageLogLevel), AH.Warn = AH._LogEnabled.bind(AH, AH.WarningLogLevel), AH.Error = AH._LogEnabled.bind(AH, AH.ErrorLogLevel)
+    }], YB.errorsCount = 0, YB.Log = YB._LogEnabled.bind(YB, YB.MessageLogLevel), YB.Warn = YB._LogEnabled.bind(YB, YB.WarningLogLevel), YB.Error = YB._LogEnabled.bind(YB, YB.ErrorLogLevel)
   }
 };
 Object.freeze(modules);
-for (const HH in modules) Object.freeze(modules[HH]);
+for (const BB in modules) Object.freeze(modules[BB]);

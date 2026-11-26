@@ -1,186 +1,186 @@
 export const id = 128;
 export const ids = [128, 131, 152, 153];
 export const modules = {
-  5523: (HH, BH, LH) => {
-    LH.d(BH, {
-      b: () => AH.e,
-      e: () => rH,
-      g: () => AH.l
+  5538: (BB, OB, GB) => {
+    GB.d(OB, {
+      b: () => YB.k,
+      c: () => DB,
+      g: () => YB.r
     });
-    var AH = LH(5531);
-    const rH = [!1, !0].flatMap((HH => ["terrain", "liquid", "model"].map((BH => ({
-      strict: HH,
-      program: BH
+    var YB = GB(5546);
+    const DB = [!1, !0].flatMap((BB => ["terrain", "liquid", "model"].map((OB => ({
+      strict: BB,
+      program: OB
     })))))
   },
-  41811: (HH, BH, LH) => {
-    LH.d(BH, {
-      c: () => XH,
-      installListedShaderPack: () => EH
+  41498: (BB, OB, GB) => {
+    GB.d(OB, {
+      b: () => PB,
+      installListedShaderPack: () => MB
     });
-    var AH = LH(7114),
-      rH = LH(5531),
-      SH = LH(1131),
-      hH = LH(7165),
-      tH = LH(5523),
-      zH = LH(7201),
-      CH = LH(7196);
-    async function EH(HH) {
-      const BH = await (0, hH.loadPageShaderPackCompiler)();
-      if (null === BH) return {
+    var YB = GB(7107),
+      DB = GB(5546),
+      QB = GB(1186),
+      oB = GB(7159),
+      jB = GB(5538),
+      yB = GB(7193),
+      JB = GB(7186);
+    async function MB(BB) {
+      const OB = await (0, oB.loadPageShaderPackCompiler)();
+      if (null === OB) return {
         kind: "failed",
         reason: "compiler"
       };
-      const LH = await XH(HH, BH);
-      return "failed" === LH.kind ? LH : await (0, zH.saveShaderPack)(LH.stored, BH) ? ((0, zH.markShaderPackChangePending)(), LH) : {
+      const GB = await PB(BB, OB);
+      return "failed" === GB.kind ? GB : await (0, yB.saveShaderPack)(GB.stored, OB) ? ((0, yB.markShaderPackChangePending)(), GB) : {
         kind: "failed",
         reason: "save"
       }
     }
-    async function XH(HH, BH) {
-      const LH = await async function(HH) {
+    async function PB(BB, OB) {
+      const GB = await async function(BB) {
         let {
-          packId: BH,
-          sourceHash: LH
-        } = HH;
+          packId: OB,
+          sourceHash: GB
+        } = BB;
         try {
-          const HH = await fetch(`${SH.clientSideServerUrls.s3Url}/${(0,AH.Q)(BH,LH)}`, {
+          const BB = await fetch(`${QB.clientSideServerUrls.s3Url}/${(0,YB.Q)(OB,GB)}`, {
             headers: {
               Accept: "application/json"
             }
           });
-          if (!HH.ok) return console.error(`Failed to download shader pack ${BH} (${HH.status})`), null;
-          const rH = await HH.json();
-          return "object" !== typeof rH || null === rH ? (console.error(`Shader pack ${BH}'s source isn't an object`), null) : rH
-        } catch (rH) {
-          return console.error(`Failed to download shader pack ${BH}`, rH), null
+          if (!BB.ok) return console.error(`Failed to download shader pack ${OB} (${BB.status})`), null;
+          const DB = await BB.json();
+          return "object" !== typeof DB || null === DB ? (console.error(`Shader pack ${OB}'s source isn't an object`), null) : DB
+        } catch (DB) {
+          return console.error(`Failed to download shader pack ${OB}`, DB), null
         }
-      }(HH);
-      if (null === LH) return {
+      }(BB);
+      if (null === GB) return {
         kind: "failed",
         reason: "download"
       };
-      if (!(0, tH.g)(LH.apiVersion)) return {
+      if (!(0, jB.g)(GB.apiVersion)) return {
         kind: "failed",
         reason: "apiVersion"
       };
-      const hH = (0, rH.q)(LH.files);
-      if ("string" === typeof hH) return console.error(`A listed shader pack breaks the pack rules: ${hH}`), {
+      const oB = (0, DB.v)(GB.files);
+      if ("string" === typeof oB) return console.error(`A listed shader pack breaks the pack rules: ${oB}`), {
         kind: "failed",
         reason: "invalid"
       };
-      const EH = await (0, CH.d)(BH, hH);
-      if (!1 === (null === EH || void 0 === EH ? void 0 : EH.ok)) return {
+      const MB = await (0, JB.f)(OB, oB);
+      if (!1 === (null === MB || void 0 === MB ? void 0 : MB.ok)) return {
         kind: "failed",
         reason: "errors"
       };
-      const XH = {
+      const PB = {
         manifest: {
-          apiVersion: LH.apiVersion,
-          name: HH.name,
-          author: HH.ownerName,
-          description: HH.description || null,
-          keepCircleShadows: !0 === LH.keepCircleShadows
+          apiVersion: GB.apiVersion,
+          name: BB.name,
+          author: BB.ownerName,
+          description: BB.description || null,
+          keepCircleShadows: !0 === GB.keepCircleShadows
         },
-        files: hH
+        files: oB
       };
       return {
         kind: "loaded",
-        stored: (0, zH.toStoredShaderPack)(XH, EH, {
-          packId: HH.packId,
-          sourceHash: HH.sourceHash
+        stored: (0, yB.toStoredShaderPack)(PB, MB, {
+          packId: BB.packId,
+          sourceHash: BB.sourceHash
         })
       }
     }
   },
-  7201: (HH, BH, LH) => {
-    LH.r(BH), LH.d(BH, {
-      forgetShaderPackActiveHint: () => oH,
-      isOtherApiVersion: () => OH,
-      isShaderPackActive: () => PH,
-      isShaderPackChangePending: () => VH,
-      markShaderPackChangePending: () => UH,
-      pageShaderPackValidationVersion: () => bH,
-      reconcileStoredShaderPackHint: () => mH,
-      removeShaderPack: () => vH,
-      replaceShaderPack: () => WH,
-      saveShaderPack: () => QH,
-      shaderPackNeedsCheck: () => kH,
-      storedPackOutcome: () => TH,
-      storedShaderPackFiles: () => GH,
-      toStoredShaderPack: () => XH
+  7193: (BB, OB, GB) => {
+    GB.r(OB), GB.d(OB, {
+      forgetShaderPackActiveHint: () => KB,
+      isOtherApiVersion: () => UB,
+      isShaderPackActive: () => AB,
+      isShaderPackChangePending: () => nB,
+      markShaderPackChangePending: () => SB,
+      pageShaderPackValidationVersion: () => fB,
+      reconcileStoredShaderPackHint: () => dB,
+      removeShaderPack: () => WB,
+      replaceShaderPack: () => ZB,
+      saveShaderPack: () => qB,
+      shaderPackNeedsCheck: () => kB,
+      storedPackOutcome: () => VB,
+      storedShaderPackFiles: () => zB,
+      toStoredShaderPack: () => PB
     });
-    var AH = LH(5531),
-      rH = LH(5523),
-      SH = LH(30),
-      hH = LH(3831),
-      tH = LH(7209),
-      zH = LH(7179);
-    const CH = "shaderPackChangePending";
-    let EH = null;
+    var YB = GB(5546),
+      DB = GB(5538),
+      QB = GB(31),
+      oB = GB(3885),
+      jB = GB(7198),
+      yB = GB(7174);
+    const JB = "shaderPackChangePending";
+    let MB = null;
 
-    function XH(HH, BH, LH) {
+    function PB(BB, OB, GB) {
       return {
-        manifest: HH.manifest,
-        files: (0, AH.t)(HH.files),
-        validation: BH,
-        ...LH && {
-          listing: LH
+        manifest: BB.manifest,
+        files: (0, YB.y)(BB.files),
+        validation: OB,
+        ...GB && {
+          listing: GB
         }
       }
     }
 
-    function GH(HH) {
-      return Object.keys(HH.files).map((BH => ({
-        path: BH,
-        source: HH.files[BH]
+    function zB(BB) {
+      return Object.keys(BB.files).map((OB => ({
+        path: OB,
+        source: BB.files[OB]
       })))
     }
-    let YH = Promise.resolve();
+    let lB = Promise.resolve();
 
-    function uH(HH) {
-      const BH = YH.then(HH);
-      return YH = BH.catch((() => {})), BH
-    }
-
-    function QH(HH, BH) {
-      return uH((() => MH(HH, BH)))
+    function pB(BB) {
+      const OB = lB.then(BB);
+      return lB = OB.catch((() => {})), OB
     }
 
-    function WH(HH, BH, LH) {
-      return uH((async () => JSON.stringify(await (0, tH.e)()) === JSON.stringify(HH) && (null === BH ? (await xH(), !0) : MH(BH, LH))))
-    }
-    async function MH(HH, BH) {
-      const LH = await SH.c.setItem(tH.c, HH);
-      return LH && IH(HH, BH), LH
-    }
-    async function xH() {
-      await SH.c.removeItem(tH.c), SH.e.removeItem(hH.d)
+    function qB(BB, OB) {
+      return pB((() => NB(BB, OB)))
     }
 
-    function vH() {
-      return uH(xH)
+    function ZB(BB, OB, GB) {
+      return pB((async () => JSON.stringify(await (0, jB.e)()) === JSON.stringify(BB) && (null === OB ? (await RB(), !0) : NB(OB, GB))))
+    }
+    async function NB(BB, OB) {
+      const GB = await QB.d.setItem(jB.c, BB);
+      return GB && uB(BB, OB), GB
+    }
+    async function RB() {
+      await QB.d.removeItem(jB.c), QB.g.removeItem(oB.d)
     }
 
-    function PH(HH, BH) {
-      return "active" === TH(HH, BH).kind
+    function WB() {
+      return pB(RB)
     }
 
-    function TH(HH, BH) {
-      var LH;
-      return null === HH ? {
+    function AB(BB, OB) {
+      return "active" === VB(BB, OB).kind
+    }
+
+    function VB(BB, OB) {
+      var GB;
+      return null === BB ? {
         kind: "none",
         reason: "nothingStored"
-      } : OH(HH) ? {
+      } : UB(BB) ? {
         kind: "none",
         reason: "otherApiVersion"
-      } : !1 !== (null === (LH = HH.validation) || void 0 === LH ? void 0 : LH.ok) || HH.validation.fromRecheck ? null === BH ? {
+      } : !1 !== (null === (GB = BB.validation) || void 0 === GB ? void 0 : GB.ok) || BB.validation.fromRecheck ? null === OB ? {
         kind: "none",
         reason: "noCompiler"
-      } : kH(HH, BH) ? {
+      } : kB(BB, OB) ? {
         kind: "blocked",
         messageKey: "shaderPack:failedUnchecked"
-      } : HH.validation.ok ? {
+      } : BB.validation.ok ? {
         kind: "active"
       } : {
         kind: "blocked",
@@ -191,331 +191,331 @@ export const modules = {
       }
     }
 
-    function UH() {
-      SH.f.setItem(CH, performance.timeOrigin)
+    function SB() {
+      QB.i.setItem(JB, performance.timeOrigin)
     }
 
-    function VH() {
-      return SH.f.getItem(CH) === performance.timeOrigin
+    function nB() {
+      return QB.i.getItem(JB) === performance.timeOrigin
     }
 
-    function OH(HH) {
-      return !(0, rH.g)(HH.manifest.apiVersion)
+    function UB(BB) {
+      return !(0, DB.g)(BB.manifest.apiVersion)
     }
 
-    function bH(HH) {
-      return EH ??= HH.kN((0, zH.shaderPackTextures)()), EH
+    function fB(BB) {
+      return MB ??= BB.yI((0, yB.shaderPackTextures)()), MB
     }
 
-    function kH(HH, BH) {
-      var LH;
-      return (null === (LH = HH.validation) || void 0 === LH ? void 0 : LH.headerVersion) !== bH(BH)
+    function kB(BB, OB) {
+      var GB;
+      return (null === (GB = BB.validation) || void 0 === GB ? void 0 : GB.headerVersion) !== fB(OB)
     }
 
-    function mH(HH) {
-      return uH((async () => {
-        IH(await (0, tH.e)(!0), HH)
+    function dB(BB) {
+      return pB((async () => {
+        uB(await (0, jB.e)(!0), BB)
       }))
     }
 
-    function oH() {
-      return uH((async () => {
-        SH.e.removeItem(hH.d)
+    function KB() {
+      return pB((async () => {
+        QB.g.removeItem(oB.d)
       }))
     }
 
-    function IH(HH, BH) {
-      PH(HH, BH) ? SH.e.setItem(hH.d, !0) : SH.e.removeItem(hH.d)
+    function uB(BB, OB) {
+      AB(BB, OB) ? QB.g.setItem(oB.d, !0) : QB.g.removeItem(oB.d)
     }
   },
-  7179: (HH, BH, LH) => {
-    LH.r(BH), LH.d(BH, {
-      loadShaderPackTextures: () => hH,
-      shaderPackTextures: () => tH
+  7174: (BB, OB, GB) => {
+    GB.r(OB), GB.d(OB, {
+      loadShaderPackTextures: () => oB,
+      shaderPackTextures: () => jB
     });
-    var AH = LH(5531);
-    let rH = null,
-      SH = null;
+    var YB = GB(5546);
+    let DB = null,
+      QB = null;
 
-    function hH() {
-      return SH ??= Promise.all([LH.e(84), LH.e(206)]).then((() => LH(41802))).then((HH => {
+    function oB() {
+      return QB ??= Promise.all([GB.e(84), GB.e(206)]).then((() => GB(41493))).then((BB => {
         let {
-          FORMER_BLOCK_IMAGE_NAMES: BH,
-          textureNameToIndex: LH,
-          textureAnimationData: SH
-        } = HH;
-        return rH ??= (0, AH.f)(LH, SH, BH), rH
-      })), SH
+          FORMER_BLOCK_IMAGE_NAMES: OB,
+          textureNameToIndex: GB,
+          textureAnimationData: QB
+        } = BB;
+        return DB ??= (0, YB.o)(GB, QB, OB), DB
+      })), QB
     }
 
-    function tH() {
-      if (null === rH) throw new Error("Shader pack textures read before loadShaderPackTextures");
-      return rH
+    function jB() {
+      if (null === DB) throw new Error("Shader pack textures read before loadShaderPackTextures");
+      return DB
     }
   },
-  7196: (HH, BH, LH) => {
-    LH.d(BH, {
-      b: () => zH,
-      d: () => tH
+  7186: (BB, OB, GB) => {
+    GB.d(OB, {
+      d: () => yB,
+      f: () => jB
     });
-    var AH = LH(7201),
-      rH = LH(7179),
-      SH = LH(105);
-    const hH = 100;
-    async function tH(HH, BH) {
-      var LH;
-      let AH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null !== (LH = navigator.gpu) && void 0 !== LH ? LH : null;
-      const hH = HH.YBH(BH, (0, rH.shaderPackTextures)());
-      if (hH.errors.length > 0) return CH(HH, hH.errors, hH.offInStrict);
-      const tH = await async function(HH) {
-        if (!HH) return null;
+    var YB = GB(7193),
+      DB = GB(7174),
+      QB = GB(113);
+    const oB = 100;
+    async function jB(BB, OB) {
+      var GB;
+      let YB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null !== (GB = navigator.gpu) && void 0 !== GB ? GB : null;
+      const oB = BB.VOB(OB, (0, DB.shaderPackTextures)());
+      if (oB.errors.length > 0) return JB(BB, oB.errors, oB.offInStrict);
+      const jB = await async function(BB) {
+        if (!BB) return null;
         try {
-          const BH = await (0, SH.y)(HH);
-          return BH ? await BH.requestDevice() : null
-        } catch (BH) {
-          return console.error("Couldn't get a WebGPU device to validate the shader pack.", BH), null
+          const OB = await (0, QB.w)(BB);
+          return OB ? await OB.requestDevice() : null
+        } catch (OB) {
+          return console.error("Couldn't get a WebGPU device to validate the shader pack.", OB), null
         }
-      }(AH);
-      if (!tH) return null;
-      let zH = !1;
-      tH.lost.then((() => {
-        zH = !0
+      }(YB);
+      if (!jB) return null;
+      let yB = !1;
+      jB.lost.then((() => {
+        yB = !0
       }));
       try {
-        const BH = await Promise.all(hH.validationModules.map((BH => async function(HH, BH, LH) {
-          BH.pushErrorScope("validation");
-          const AH = BH.createShaderModule({
-              code: LH.code
+        const OB = await Promise.all(oB.validationModules.map((OB => async function(BB, OB, GB) {
+          OB.pushErrorScope("validation");
+          const YB = OB.createShaderModule({
+              code: GB.code
             }),
-            rH = BH.popErrorScope(),
+            DB = OB.popErrorScope(),
             {
-              messages: SH
-            } = await AH.getCompilationInfo(),
-            hH = SH.filter((HH => "error" === HH.type)).map((BH => HH.mapValidationMessage(LH, BH))),
-            tH = await rH;
-          tH && 0 === hH.length && hH.push({
+              messages: QB
+            } = await YB.getCompilationInfo(),
+            oB = QB.filter((BB => "error" === BB.type)).map((OB => BB.mapValidationMessage(GB, OB))),
+            jB = await DB;
+          jB && 0 === oB.length && oB.push({
             file: null,
             line: 0,
-            message: tH.message,
-            variants: [LH.key]
+            message: jB.message,
+            variants: [GB.key]
           });
-          return hH
-        }(HH, tH, BH))));
-        return zH ? null : CH(HH, HH.rrH(BH.flat()), hH.offInStrict)
-      } catch (EH) {
-        return console.error("Couldn't validate the shader pack on WebGPU.", EH), null
+          return oB
+        }(BB, jB, OB))));
+        return yB ? null : JB(BB, BB.lDB(OB.flat()), oB.offInStrict)
+      } catch (MB) {
+        return console.error("Couldn't validate the shader pack on WebGPU.", MB), null
       } finally {
-        tH.destroy()
+        jB.destroy()
       }
     }
-    async function zH(HH, BH) {
-      var LH;
-      if (!(0, AH.shaderPackNeedsCheck)(HH, BH) || (0, AH.isOtherApiVersion)(HH)) return HH;
-      const rH = await tH(BH, (0, AH.storedShaderPackFiles)(HH));
-      if (!rH) return HH;
-      const SH = !1 === (null === (LH = HH.validation) || void 0 === LH ? void 0 : LH.ok) && !HH.validation.fromRecheck,
-        hH = {
-          ...HH,
-          validation: SH ? rH : {
-            ...rH,
+    async function yB(BB, OB) {
+      var GB;
+      if (!(0, YB.shaderPackNeedsCheck)(BB, OB) || (0, YB.isOtherApiVersion)(BB)) return BB;
+      const DB = await jB(OB, (0, YB.storedShaderPackFiles)(BB));
+      if (!DB) return BB;
+      const QB = !1 === (null === (GB = BB.validation) || void 0 === GB ? void 0 : GB.ok) && !BB.validation.fromRecheck,
+        oB = {
+          ...BB,
+          validation: QB ? DB : {
+            ...DB,
             fromRecheck: !0
           }
         };
-      return await (0, AH.replaceShaderPack)(HH, hH, BH) || console.warn("Didn't save the shader pack's validation result: the stored pack changed or couldn't be written"), hH
+      return await (0, YB.replaceShaderPack)(BB, oB, OB) || console.warn("Didn't save the shader pack's validation result: the stored pack changed or couldn't be written"), oB
     }
 
-    function CH(HH, BH, LH) {
+    function JB(BB, OB, GB) {
       return {
-        headerVersion: (0, AH.pageShaderPackValidationVersion)(HH),
-        ok: 0 === BH.length,
-        errors: BH.slice(0, hH),
-        moreErrors: Math.max(0, BH.length - hH),
-        offInStrict: LH
+        headerVersion: (0, YB.pageShaderPackValidationVersion)(BB),
+        ok: 0 === OB.length,
+        errors: OB.slice(0, oB),
+        moreErrors: Math.max(0, OB.length - oB),
+        offInStrict: GB
       }
     }
   },
-  5531: (HH, BH, LH) => {
-    LH.d(BH, {
-      c: () => tH,
-      d: () => hH,
-      e: () => AH,
-      f: () => QH,
-      j: () => XH,
-      l: () => rH,
-      n: () => SH,
-      q: () => CH,
-      t: () => EH,
-      u: () => GH
+  5546: (BB, OB, GB) => {
+    GB.d(OB, {
+      B: () => zB,
+      e: () => jB,
+      h: () => oB,
+      k: () => YB,
+      o: () => qB,
+      p: () => PB,
+      r: () => DB,
+      u: () => QB,
+      v: () => JB,
+      y: () => MB
     });
-    const AH = 5;
+    const YB = 5;
 
-    function rH(HH) {
-      return HH === AH
+    function DB(BB) {
+      return BB === YB
     }
 
-    function SH(HH) {
-      return [...HH.features]
+    function QB(BB) {
+      return [...BB.features]
     }
-    const hH = 262144,
-      tH = 256,
-      zH = 256;
+    const oB = 262144,
+      jB = 256,
+      yB = 256;
 
-    function CH(HH) {
-      if ("object" !== typeof HH || null === HH || Array.isArray(HH)) return "The pack has no files.";
-      const BH = [];
-      for (const [LH, AH] of Object.entries(HH)) {
-        if ("string" !== typeof AH) return `${LH} isn't text.`;
-        BH.push({
-          path: LH,
-          source: AH
+    function JB(BB) {
+      if ("object" !== typeof BB || null === BB || Array.isArray(BB)) return "The pack has no files.";
+      const OB = [];
+      for (const [GB, YB] of Object.entries(BB)) {
+        if ("string" !== typeof YB) return `${GB} isn't text.`;
+        OB.push({
+          path: GB,
+          source: YB
         })
       }
-      return BH.sort(((HH, BH) => XH(HH.path, BH.path))),
-        function(HH) {
-          if (0 === HH.length) return "The pack has no .wgsl files.";
-          if (HH.length > tH) return `The pack has more than ${tH} .wgsl files.`;
-          const BH = new Set;
+      return OB.sort(((BB, OB) => PB(BB.path, OB.path))),
+        function(BB) {
+          if (0 === BB.length) return "The pack has no .wgsl files.";
+          if (BB.length > jB) return `The pack has more than ${jB} .wgsl files.`;
+          const OB = new Set;
           for (const {
-              path: LH
+              path: GB
             }
-            of HH) {
-            const HH = YH(LH);
-            if (null !== HH) return HH;
-            if (BH.has(LH)) return `The pack has two files at ${LH}.`;
-            BH.add(LH)
+            of BB) {
+            const BB = lB(GB);
+            if (null !== BB) return BB;
+            if (OB.has(GB)) return `The pack has two files at ${GB}.`;
+            OB.add(GB)
           }
-          return GH(HH) > hH ? `The pack's .wgsl files are over ${hH/1024} KB in total.` : null
-        }(BH) ?? BH
+          return zB(BB) > oB ? `The pack's .wgsl files are over ${oB/1024} KB in total.` : null
+        }(OB) ?? OB
     }
 
-    function EH(HH) {
-      const BH = {};
-      for (const LH of HH) BH[LH.path] = LH.source;
-      return BH
+    function MB(BB) {
+      const OB = {};
+      for (const GB of BB) OB[GB.path] = GB.source;
+      return OB
     }
 
-    function XH(HH, BH) {
-      return HH < BH ? -1 : HH > BH ? 1 : 0
+    function PB(BB, OB) {
+      return BB < OB ? -1 : BB > OB ? 1 : 0
     }
 
-    function GH(HH) {
-      const BH = new TextEncoder;
-      let LH = 0;
+    function zB(BB) {
+      const OB = new TextEncoder;
+      let GB = 0;
       for (const {
-          source: AH
+          source: YB
         }
-        of HH) LH += BH.encode(AH).byteLength;
-      return LH
+        of BB) GB += OB.encode(YB).byteLength;
+      return GB
     }
 
-    function YH(HH) {
-      if (!HH.toLowerCase().endsWith(".wgsl")) return `${HH} isn't a .wgsl file.`;
-      if (HH.length > zH) return `A file path is over ${zH} characters.`;
-      if (HH.includes("\\") || /[\u0000-\u001f]/.test(HH)) return `${HH} isn't a valid file path.`;
-      return HH.split("/").some((HH => "" === HH || "." === HH || ".." === HH)) ? `${HH} isn't a valid file path.` : null
+    function lB(BB) {
+      if (!BB.toLowerCase().endsWith(".wgsl")) return `${BB} isn't a .wgsl file.`;
+      if (BB.length > yB) return `A file path is over ${yB} characters.`;
+      if (BB.includes("\\") || /[\u0000-\u001f]/.test(BB)) return `${BB} isn't a valid file path.`;
+      return BB.split("/").some((BB => "" === BB || "." === BB || ".." === BB)) ? `${BB} isn't a valid file path.` : null
     }
-    const uH = /^(.*)\[rot\[([1-4])$/;
+    const pB = /^(.*)\[rot\[([1-4])$/;
 
-    function QH(HH, BH) {
-      let LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
-      const AH = new Map;
-      BH.forEach(((HH, BH) => {
+    function qB(BB, OB) {
+      let GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
+      const YB = new Map;
+      OB.forEach(((BB, OB) => {
         let {
-          numAnimStates: LH,
-          animStartIdx: rH
-        } = HH;
-        for (let SH = 1; SH < LH; SH++) AH.set(rH + SH - 1, BH)
+          numAnimStates: GB,
+          animStartIdx: DB
+        } = BB;
+        for (let QB = 1; QB < GB; QB++) YB.set(DB + QB - 1, OB)
       }));
-      const rH = Object.entries(HH),
-        SH = new Map;
-      for (const [QH, WH] of rH) {
-        const HH = uH.exec(QH);
-        "1" === HH?.[2] && SH.set(HH[1], WH + 1)
+      const DB = Object.entries(BB),
+        QB = new Map;
+      for (const [qB, ZB] of DB) {
+        const BB = pB.exec(qB);
+        "1" === BB?.[2] && QB.set(BB[1], ZB + 1)
       }
-      const hH = HH => {
-          const BH = uH.exec(HH);
-          return BH && SH.has(BH[1]) ? {
-            root: BH[1],
-            rotation: Number(BH[2]) - 1
+      const oB = BB => {
+          const OB = pB.exec(BB);
+          return OB && QB.has(OB[1]) ? {
+            root: OB[1],
+            rotation: Number(OB[2]) - 1
           } : null
         },
-        tH = new Set(rH.map((HH => {
-          let [BH] = HH;
-          return hH(BH)?.root ?? BH
+        jB = new Set(DB.map((BB => {
+          let [OB] = BB;
+          return oB(OB)?.root ?? OB
         }))),
-        zH = (HH, LH) => {
-          const AH = HH.replace(/_?0$/, "");
-          return (BH[LH]?.numAnimStates ?? 0) > 1 && !tH.has(AH) ? AH : HH
+        yB = (BB, GB) => {
+          const YB = BB.replace(/_?0$/, "");
+          return (OB[GB]?.numAnimStates ?? 0) > 1 && !jB.has(YB) ? YB : BB
         },
-        CH = new Map;
-      for (const [uH, QH] of rH) CH.set(QH, zH(hH(uH)?.root ?? uH, QH));
-      const EH = rH.reduce(((HH, BH) => {
-          let [, LH] = BH;
-          return Math.max(HH, LH + 1)
+        JB = new Map;
+      for (const [pB, qB] of DB) JB.set(qB, yB(oB(pB)?.root ?? pB, qB));
+      const MB = DB.reduce(((BB, OB) => {
+          let [, GB] = OB;
+          return Math.max(BB, GB + 1)
         }), 0),
-        XH = Array.from({
-          length: EH
-        }, ((HH, BH) => ({
-          id: BH + 1,
+        PB = Array.from({
+          length: MB
+        }, ((BB, OB) => ({
+          id: OB + 1,
           rotation: 0
         }))),
-        GH = new Map,
-        YH = new Map;
-      for (const [uH, QH] of rH) {
-        const HH = hH(uH),
-          BH = AH.get(QH);
-        if (void 0 !== BH) {
-          const LH = CH.get(BH);
-          YH.set(uH, {
-            name: uH,
-            texture: LH,
+        zB = new Map,
+        lB = new Map;
+      for (const [pB, qB] of DB) {
+        const BB = oB(pB),
+          OB = YB.get(qB);
+        if (void 0 !== OB) {
+          const GB = JB.get(OB);
+          lB.set(pB, {
+            name: pB,
+            texture: GB,
             kind: "frame"
-          }), HH && !YH.has(HH.root) && YH.set(HH.root, {
-            name: HH.root,
-            texture: LH,
+          }), BB && !lB.has(BB.root) && lB.set(BB.root, {
+            name: BB.root,
+            texture: GB,
             kind: "frame"
           });
           continue
         }
-        const LH = CH.get(QH),
-          rH = HH?.root ?? uH;
-        if (LH !== rH && YH.set(rH, {
-            name: rH,
-            texture: LH,
+        const GB = JB.get(qB),
+          DB = BB?.root ?? pB;
+        if (GB !== DB && lB.set(DB, {
+            name: DB,
+            texture: GB,
             kind: "frame"
-          }), HH) {
-          const BH = SH.get(HH.root);
-          XH[QH] = {
-            id: BH,
-            rotation: HH.rotation
-          }, GH.set(LH, BH), YH.set(uH, {
-            name: uH,
-            texture: LH,
+          }), BB) {
+          const OB = QB.get(BB.root);
+          PB[qB] = {
+            id: OB,
+            rotation: BB.rotation
+          }, zB.set(GB, OB), lB.set(pB, {
+            name: pB,
+            texture: GB,
             kind: "rotation"
           })
-        } else GH.set(LH, QH + 1)
+        } else zB.set(GB, qB + 1)
       }
-      for (const uH of GH.keys()) YH.delete(uH);
-      for (const [uH, QH] of LH) {
-        const HH = GH.get(QH);
-        void 0 === HH || GH.has(uH) || (GH.set(uH, HH), YH.delete(uH))
+      for (const pB of zB.keys()) lB.delete(pB);
+      for (const [pB, qB] of GB) {
+        const BB = zB.get(qB);
+        void 0 === BB || zB.has(pB) || (zB.set(pB, BB), lB.delete(pB))
       }
       return {
-        named: [...GH].sort(((HH, BH) => {
-          let [LH] = HH, [AH] = BH;
-          return LH < AH ? -1 : LH > AH ? 1 : 0
-        })).map((HH => {
-          let [BH, LH] = HH;
+        named: [...zB].sort(((BB, OB) => {
+          let [GB] = BB, [YB] = OB;
+          return GB < YB ? -1 : GB > YB ? 1 : 0
+        })).map((BB => {
+          let [OB, GB] = BB;
           return {
-            name: BH,
-            id: LH
+            name: OB,
+            id: GB
           }
         })),
-        aliases: [...YH.values()],
-        layers: XH
+        aliases: [...lB.values()],
+        layers: PB
       }
     }
   }
 };
 Object.freeze(modules);
-for (const HH in modules) Object.freeze(modules[HH]);
+for (const BB in modules) Object.freeze(modules[BB]);

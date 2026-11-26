@@ -1,72 +1,72 @@
 export const id = 67;
 export const ids = [67];
 export const modules = {
-  35045: (HH, BH, LH) => {
-    LH.r(BH), LH.d(BH, {
-      announceStoredTexturePack: () => rH.c,
-      takeOneShotTexturePack: () => AH.g
+  34852: (BB, OB, GB) => {
+    GB.r(OB), GB.d(OB, {
+      announceStoredTexturePack: () => DB.c,
+      takeOneShotTexturePack: () => YB.l
     });
-    var AH = LH(35048),
-      rH = LH(35054)
+    var YB = GB(34854),
+      DB = GB(34856)
   },
-  35054: (HH, BH, LH) => {
-    LH.d(BH, {
-      c: () => rH,
-      f: () => SH
+  34856: (BB, OB, GB) => {
+    GB.d(OB, {
+      c: () => DB,
+      e: () => QB
     });
-    var AH = LH(3610);
+    var YB = GB(3670);
 
-    function rH() {
+    function DB() {
       if ("undefined" === typeof BroadcastChannel) return null;
-      const HH = `${Date.now().toString(36)}-${Math.random().toString(36).slice(2)}`;
+      const BB = `${Date.now().toString(36)}-${Math.random().toString(36).slice(2)}`;
       try {
-        const BH = new BroadcastChannel(AH.f);
-        BH.postMessage({
-          stored: HH
-        }), BH.close()
+        const OB = new BroadcastChannel(YB.o);
+        OB.postMessage({
+          stored: BB
+        }), OB.close()
       } catch {
         return null
       }
-      return HH
+      return BB
     }
 
-    function SH(HH) {
-      const BH = "object" === typeof HH && null !== HH ? HH.stored : null;
-      return "string" === typeof BH ? BH : null
+    function QB(BB) {
+      const OB = "object" === typeof BB && null !== BB ? BB.stored : null;
+      return "string" === typeof OB ? OB : null
     }
   },
-  35048: (HH, BH, LH) => {
-    LH.d(BH, {
-      b: () => hH,
-      f: () => rH,
-      g: () => SH
+  34854: (BB, OB, GB) => {
+    GB.d(OB, {
+      e: () => oB,
+      h: () => DB,
+      l: () => QB
     });
-    var AH = LH(3610);
-    async function rH(HH, BH, LH) {
-      let rH = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => !1;
-      const SH = hH(await HH.getItem(AH.c, BH));
-      if (null === SH || rH()) return null;
-      const tH = await HH.getItem(AH.e, BH);
-      return rH() ? null : (await async function(HH) {
-        await Promise.all([HH.removeItem(AH.c), HH.removeItem(AH.e)])
-      }(HH).catch(LH), {
-        pack: SH,
-        source: "string" === typeof tH ? tH : null
+    var YB = GB(3670);
+    async function DB(BB, OB, GB) {
+      let DB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => !1;
+      const QB = oB(await BB.getItem(YB.i, OB));
+      if (null === QB || DB()) return null;
+      const jB = await BB.getItem(YB.m, OB);
+      return DB() ? null : (await async function(BB) {
+        await Promise.all([BB.removeItem(YB.i), BB.removeItem(YB.m)])
+      }(BB).catch(GB), {
+        pack: QB,
+        source: "string" === typeof jB ? jB : null
       })
     }
 
-    function SH(HH) {
-      return (0, AH.o)() ? Promise.resolve(null) : rH(HH, !1, (HH => {
-        console.error("Error removing temporary texture pack: ", HH)
-      }), AH.o)
+    function QB(BB) {
+      return (0, YB.u)() ? Promise.resolve(null) : DB(BB, !1, (BB => {
+        console.error("Error removing temporary texture pack: ", BB)
+      }), YB.u)
     }
 
-    function hH(HH) {
-      if ("object" !== typeof HH || null === HH) return null;
-      const BH = HH.metaData;
-      return "object" !== typeof BH || null === BH || "string" !== typeof BH.id ? null : HH
+    function oB(BB) {
+      if ("object" !== typeof BB || null === BB) return null;
+      const OB = BB.metaData;
+      return "object" !== typeof OB || null === OB || "string" !== typeof OB.id ? null : BB
     }
   }
 };
 Object.freeze(modules);
-for (const HH in modules) Object.freeze(modules[HH]);
+for (const BB in modules) Object.freeze(modules[BB]);

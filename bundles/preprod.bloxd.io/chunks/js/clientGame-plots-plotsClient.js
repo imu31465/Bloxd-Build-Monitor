@@ -1,248 +1,248 @@
 export const id = 26;
 export const ids = [26];
 export const modules = {
-  37472: (HH, BH, LH) => {
-    LH.d(BH, {
-      d: () => WH,
-      e: () => MH,
-      i: () => GH,
-      k: () => XH
+  37263: (BB, OB, GB) => {
+    GB.d(OB, {
+      c: () => ZB,
+      e: () => NB,
+      h: () => zB,
+      l: () => PB
     });
-    var AH = LH(34986),
-      rH = LH(37474),
-      SH = LH(37479),
-      hH = LH(9412),
-      tH = LH(1450),
-      zH = LH(45),
-      CH = LH(69),
-      EH = LH(1225);
+    var YB = GB(34790),
+      DB = GB(37267),
+      QB = GB(37270),
+      oB = GB(9391),
+      jB = GB(1480),
+      yB = GB(56),
+      JB = GB(70),
+      MB = GB(1282);
 
-    function XH() {
-      var HH;
-      return (0, tH.e)(rH.b, (0, rH.p)()), (0, EH.jsx)(EH.Fragment, {
-        children: null === (HH = (0, rH.p)()) || void 0 === HH ? void 0 : HH.content
+    function PB() {
+      var BB;
+      return (0, jB.i)(DB.d, (0, DB.n)()), (0, MB.jsx)(MB.Fragment, {
+        children: null === (BB = (0, DB.n)()) || void 0 === BB ? void 0 : BB.content
       })
     }
 
-    function GH(HH) {
-      var BH;
+    function zB(BB) {
+      var OB;
       let {
-        show: LH
-      } = HH;
-      (0, tH.e)(rH.b, (0, rH.p)());
-      const CH = null === (BH = (0, rH.p)()) || void 0 === BH ? void 0 : BH.menu;
-      return (0, zH.useEffect)((() => {
-        var HH;
-        LH || (null === CH || void 0 === CH || null === (HH = CH.onClose) || void 0 === HH || HH.call(CH), (0, SH.r)())
-      }), [LH, CH]), (0, zH.useEffect)((() => LH ? (0, hH.e)(SH.A, SH.g) : void 0), [LH]), (0, EH.jsx)(AH.e, {
-        showing: LH,
+        show: GB
+      } = BB;
+      (0, jB.i)(DB.d, (0, DB.n)());
+      const JB = null === (OB = (0, DB.n)()) || void 0 === OB ? void 0 : OB.menu;
+      return (0, yB.useEffect)((() => {
+        var BB;
+        GB || (null === JB || void 0 === JB || null === (BB = JB.onClose) || void 0 === BB || BB.call(JB), (0, QB.u)())
+      }), [GB, JB]), (0, yB.useEffect)((() => GB ? (0, oB.d)(QB.D, QB.i) : void 0), [GB]), (0, MB.jsx)(YB.d, {
+        showing: GB,
         globallyUniqueKey: "clientGameMenu",
-        children: null === CH || void 0 === CH ? void 0 : CH.content
+        children: null === JB || void 0 === JB ? void 0 : JB.content
       })
     }
-    const YH = new Map,
-      uH = new Set;
+    const lB = new Map,
+      pB = new Set;
 
-    function QH(HH, BH) {
-      BH ? YH.set(HH, BH) : YH.delete(HH);
-      for (const LH of uH) LH()
+    function qB(BB, OB) {
+      OB ? lB.set(BB, OB) : lB.delete(BB);
+      for (const GB of pB) GB()
     }
 
-    function WH(HH) {
+    function ZB(BB) {
       let {
-        placement: BH = "bottom"
-      } = HH;
-      const LH = (0, zH.useRef)(null);
-      return (0, zH.useLayoutEffect)((() => {
-        const HH = LH.current;
-        return QH(BH, HH), () => {
-          YH.get(BH) === HH && QH(BH, null)
+        placement: OB = "bottom"
+      } = BB;
+      const GB = (0, yB.useRef)(null);
+      return (0, yB.useLayoutEffect)((() => {
+        const BB = GB.current;
+        return qB(OB, BB), () => {
+          lB.get(OB) === BB && qB(OB, null)
         }
-      }), [BH]), (0, EH.jsx)("div", {
-        ref: LH,
-        id: `clientGameHud-${BH}`,
+      }), [OB]), (0, MB.jsx)("div", {
+        ref: GB,
+        id: `clientGameHud-${OB}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function MH(HH) {
+    function NB(BB) {
       let {
-        children: BH,
-        placement: LH = "bottom"
-      } = HH;
-      const [AH, rH] = (0, zH.useState)((() => {
-        var HH;
-        return null !== (HH = YH.get(LH)) && void 0 !== HH ? HH : null
+        children: OB,
+        placement: GB = "bottom"
+      } = BB;
+      const [YB, DB] = (0, yB.useState)((() => {
+        var BB;
+        return null !== (BB = lB.get(GB)) && void 0 !== BB ? BB : null
       }));
-      return (0, zH.useEffect)((() => {
-        const HH = () => {
-          var HH;
-          rH(null !== (HH = YH.get(LH)) && void 0 !== HH ? HH : null)
+      return (0, yB.useEffect)((() => {
+        const BB = () => {
+          var BB;
+          DB(null !== (BB = lB.get(GB)) && void 0 !== BB ? BB : null)
         };
-        return uH.add(HH), HH(), () => {
-          uH.delete(HH)
+        return pB.add(BB), BB(), () => {
+          pB.delete(BB)
         }
-      }), [LH]), AH ? (0, CH.createPortal)(BH, AH) : null
+      }), [GB]), YB ? (0, JB.createPortal)(OB, YB) : null
     }
   },
-  34986: (HH, BH, LH) => {
-    LH.d(BH, {
-      e: () => SH
+  34790: (BB, OB, GB) => {
+    GB.d(OB, {
+      d: () => QB
     });
-    var AH = LH(4947),
-      rH = LH(4951);
+    var YB = GB(4949),
+      DB = GB(4956);
 
-    function SH(HH) {
+    function QB(BB) {
       let {
-        children: BH,
-        showing: LH,
-        globallyUniqueKey: SH,
-        alwaysMountChildren: hH = !1,
-        doGameplayStartStopOnShow: tH = !0,
-        keepsMovement: zH = !1
-      } = HH;
-      return (0, rH.c)(!0, LH, SH, zH), (0, AH.e)(tH, LH), LH || hH ? BH : null
+        children: OB,
+        showing: GB,
+        globallyUniqueKey: QB,
+        alwaysMountChildren: oB = !1,
+        doGameplayStartStopOnShow: jB = !0,
+        keepsMovement: yB = !1
+      } = BB;
+      return (0, DB.e)(!0, GB, QB, yB), (0, YB.c)(jB, GB), GB || oB ? OB : null
     }
   },
-  37569: (HH, BH, LH) => {
-    LH.d(BH, {
-      e: () => SH,
-      f: () => hH,
-      i: () => tH,
-      k: () => zH
+  37367: (BB, OB, GB) => {
+    GB.d(OB, {
+      e: () => QB,
+      i: () => oB,
+      k: () => jB,
+      n: () => yB
     });
-    var AH = LH(45),
-      rH = LH(3465);
-    const SH = 8,
-      hH = "InGameHeaderContainer",
-      tH = "TopRightElements";
+    var YB = GB(56),
+      DB = GB(3528);
+    const QB = 8,
+      oB = "InGameHeaderContainer",
+      jB = "TopRightElements";
 
-    function zH(HH) {
-      const [BH] = (0, rH.b)(), [LH, zH] = (0, AH.useState)(!1);
-      return (0, AH.useLayoutEffect)((() => {
-        if (!HH) return;
-        const BH = document.querySelector(`.${hH}`),
-          LH = document.querySelector(`.${tH}`),
-          AH = () => {
-            const AH = HH.getBoundingClientRect(),
-              rH = BH ? BH.getBoundingClientRect().right : 0,
-              hH = LH ? LH.getBoundingClientRect().left : window.innerWidth,
-              tH = AH.left < rH + SH,
-              CH = AH.right > hH - SH;
-            zH(tH || CH)
+    function yB(BB) {
+      const [OB] = (0, DB.e)(), [GB, yB] = (0, YB.useState)(!1);
+      return (0, YB.useLayoutEffect)((() => {
+        if (!BB) return;
+        const OB = document.querySelector(`.${oB}`),
+          GB = document.querySelector(`.${jB}`),
+          YB = () => {
+            const YB = BB.getBoundingClientRect(),
+              DB = OB ? OB.getBoundingClientRect().right : 0,
+              oB = GB ? GB.getBoundingClientRect().left : window.innerWidth,
+              jB = YB.left < DB + QB,
+              JB = YB.right > oB - QB;
+            yB(jB || JB)
           };
-        AH();
-        const rH = new ResizeObserver(AH);
-        return rH.observe(HH), BH && rH.observe(BH), LH && rH.observe(LH), () => {
-          rH.disconnect()
+        YB();
+        const DB = new ResizeObserver(YB);
+        return DB.observe(BB), OB && DB.observe(OB), GB && DB.observe(GB), () => {
+          DB.disconnect()
         }
-      }), [HH, BH]), LH
+      }), [BB, OB]), GB
     }
   },
-  9412: (HH, BH, LH) => {
-    LH.d(BH, {
-      c: () => SH,
-      e: () => rH
+  9391: (BB, OB, GB) => {
+    GB.d(OB, {
+      c: () => QB,
+      d: () => DB
     });
-    let AH = null;
-    const rH = function(HH) {
-        const BH = {
-          cycle: HH,
+    let YB = null;
+    const DB = function(BB) {
+        const OB = {
+          cycle: BB,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return AH = BH, () => {
-          AH === BH && (AH = null)
+        return YB = OB, () => {
+          YB === OB && (YB = null)
         }
       },
-      SH = () => {
-        var HH;
-        return null !== (HH = AH) && void 0 !== HH && HH.canCycle() ? AH.cycle : null
+      QB = () => {
+        var BB;
+        return null !== (BB = YB) && void 0 !== BB && BB.canCycle() ? YB.cycle : null
       }
   },
-  39396: (HH, BH, LH) => {
-    LH.d(BH, {
-      d: () => hH,
-      g: () => tH,
-      h: () => zH
+  39176: (BB, OB, GB) => {
+    GB.d(OB, {
+      b: () => oB,
+      c: () => jB,
+      f: () => yB
     });
-    const AH = [1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, 1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, -1, -1, -1, -1, -1, 1],
-      rH = [0, 1, 2, 0, 2, 3],
-      SH = [4, 5];
+    const YB = [1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, 1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, -1, -1, -1, -1, -1, 1],
+      DB = [0, 1, 2, 0, 2, 3],
+      QB = [4, 5];
 
-    function hH(HH, BH, LH, AH, rH) {
-      for (let hH = 0; hH < 6; hH++) SH.includes(hH) === rH && CH(HH, BH, LH, AH, hH)
+    function oB(BB, OB, GB, YB, DB) {
+      for (let oB = 0; oB < 6; oB++) QB.includes(oB) === DB && JB(BB, OB, GB, YB, oB)
     }
 
-    function tH(HH, BH, LH, AH) {
-      for (let rH = 0; rH < 6; rH++) CH(HH, BH, LH, AH, rH)
+    function jB(BB, OB, GB, YB) {
+      for (let DB = 0; DB < 6; DB++) JB(BB, OB, GB, YB, DB)
     }
 
-    function zH(HH, BH, LH, SH, hH) {
-      for (let tH = 0; tH < 6; tH++)
-        for (const zH of [0, 1]) {
-          const [CH, EH, XH] = [zH + 2, zH + 1, (zH + 3) % 4], GH = HH.length / 3;
-          for (const [BH, rH] of [
-              [zH, EH],
-              [CH, EH],
-              [CH, XH],
-              [zH, XH]
+    function yB(BB, OB, GB, QB, oB) {
+      for (let jB = 0; jB < 6; jB++)
+        for (const yB of [0, 1]) {
+          const [JB, MB, PB] = [yB + 2, yB + 1, (yB + 3) % 4], zB = BB.length / 3;
+          for (const [OB, DB] of [
+              [yB, MB],
+              [JB, MB],
+              [JB, PB],
+              [yB, PB]
             ])
-            for (let zH = 0; zH < 3; zH++) {
-              const CH = AH[3 * (4 * tH + BH) + zH],
-                EH = AH[3 * (4 * tH + rH) + zH];
-              HH.push((CH + (EH - CH) * hH) * SH / 2 + LH[zH])
+            for (let yB = 0; yB < 3; yB++) {
+              const JB = YB[3 * (4 * jB + OB) + yB],
+                MB = YB[3 * (4 * jB + DB) + yB];
+              BB.push((JB + (MB - JB) * oB) * QB / 2 + GB[yB])
             }
-          for (const HH of rH) BH.push(GH + HH)
+          for (const BB of DB) OB.push(zB + BB)
         }
     }
 
-    function CH(HH, BH, LH, SH, hH) {
-      let [tH, zH, CH] = LH, [EH, XH, GH] = SH;
-      const YH = HH.length / 3;
-      for (let rH = 4 * hH; rH < 4 * hH + 4; rH++) HH.push(AH[3 * rH] * EH / 2 + tH, AH[3 * rH + 1] * XH / 2 + zH, AH[3 * rH + 2] * GH / 2 + CH);
-      for (const AH of rH) BH.push(YH + AH)
+    function JB(BB, OB, GB, QB, oB) {
+      let [jB, yB, JB] = GB, [MB, PB, zB] = QB;
+      const lB = BB.length / 3;
+      for (let DB = 4 * oB; DB < 4 * oB + 4; DB++) BB.push(YB[3 * DB] * MB / 2 + jB, YB[3 * DB + 1] * PB / 2 + yB, YB[3 * DB + 2] * zB / 2 + JB);
+      for (const YB of DB) OB.push(lB + YB)
     }
   },
-  40486: (HH, BH, LH) => {
-    LH.r(BH), LH.d(BH, {
-      default: () => kA
+  40237: (BB, OB, GB) => {
+    GB.r(OB), GB.d(OB, {
+      default: () => kY
     });
-    const AH = [0, 90, 180, 270],
-      rH = "plotsblueprint";
-    var SH = LH(45),
-      hH = LH(37474),
-      tH = LH(15),
-      zH = LH(1450),
-      CH = LH(2064),
-      EH = LH(1123),
-      XH = LH(1038),
-      GH = LH.n(XH),
-      YH = LH(1659),
-      uH = LH(40495),
-      QH = LH(37472),
-      WH = LH(1315),
-      MH = LH(1986),
-      xH = LH(2059),
-      vH = LH(3779),
-      PH = LH(1789);
+    const YB = [0, 90, 180, 270],
+      DB = "plotsblueprint";
+    var QB = GB(56),
+      oB = GB(37267),
+      jB = GB(16),
+      yB = GB(1480),
+      JB = GB(2085),
+      MB = GB(1175),
+      PB = GB(1090),
+      zB = GB.n(PB),
+      lB = GB(1699),
+      pB = GB(40244),
+      qB = GB(37263),
+      ZB = GB(1383),
+      NB = GB(2012),
+      RB = GB(2076),
+      WB = GB(3839),
+      AB = GB(1822);
 
-    function TH() {}
-    const UH = (0, SH.createContext)({
+    function VB() {}
+    const SB = (0, QB.createContext)({
       hint: null,
-      journalRef: TH,
-      placementCardRef: TH,
-      buildRef: TH
+      journalRef: VB,
+      placementCardRef: VB,
+      buildRef: VB
     });
-    var VH = LH(18);
-    const OH = [
+    var nB = GB(25);
+    const UB = [
         ["farm_hut", "farm_house", "farm_barn"],
         ["rusticHome_tent", "rusticHome_cabin", "rusticHome_house"],
         ["market_stand", "market_stall", "market_shop"],
         ["castle_wall", "castle_gate", "castle_tower"]
       ],
-      bH = {
+      fB = {
         farm_hut: {
           displayName: {
             translationKey: "plotsGame:blueprintFarmHut"
@@ -316,18 +316,18 @@ export const modules = {
           tier: "large"
         }
       },
-      kH = ["small", "medium", "large"].flatMap((HH => OH.flat().filter((BH => bH[BH].tier === HH))));
+      kB = ["small", "medium", "large"].flatMap((BB => UB.flat().filter((OB => fB[OB].tier === BB))));
 
-    function mH(HH) {
-      return bH[HH]
+    function dB(BB) {
+      return fB[BB]
     }
-    const oH = new Map(OH.flatMap((HH => HH.slice(1).map(((BH, LH) => [BH, HH[LH]])))));
+    const KB = new Map(UB.flatMap((BB => BB.slice(1).map(((OB, GB) => [OB, BB[GB]])))));
 
-    function IH(HH) {
-      var BH;
-      return null !== (BH = oH.get(HH)) && void 0 !== BH ? BH : null
+    function uB(BB) {
+      var OB;
+      return null !== (OB = KB.get(BB)) && void 0 !== OB ? OB : null
     }
-    const fH = {
+    const mB = {
       farm_hut: {
         key: "plotsGame:journalNoteFarmHut",
         firstBuild: !0
@@ -350,110 +350,110 @@ export const modules = {
       }
     };
 
-    function lH(HH, BH) {
-      const LH = new Set(HH),
-        AH = function(HH) {
-          const BH = new Set(HH);
-          return new Set(kH.filter((HH => {
-            const LH = IH(HH);
-            return null === LH || BH.has(LH)
+    function IB(BB, OB) {
+      const GB = new Set(BB),
+        YB = function(BB) {
+          const OB = new Set(BB);
+          return new Set(kB.filter((BB => {
+            const GB = uB(BB);
+            return null === GB || OB.has(GB)
           })))
-        }(LH);
-      return kH.map((HH => {
-        const rH = HH === BH;
-        if (LH.has(HH)) return {
-          id: HH,
-          active: rH,
+        }(GB);
+      return kB.map((BB => {
+        const DB = BB === OB;
+        if (GB.has(BB)) return {
+          id: BB,
+          active: DB,
           note: null,
           state: "completed",
           unlockedBy: null
         };
-        const SH = fH[HH],
-          hH = void 0 === SH || SH.firstBuild && LH.size > 0 ? null : SH.key;
-        return AH.has(HH) ? {
-          id: HH,
-          active: rH,
-          note: hH,
+        const QB = mB[BB],
+          oB = void 0 === QB || QB.firstBuild && GB.size > 0 ? null : QB.key;
+        return YB.has(BB) ? {
+          id: BB,
+          active: DB,
+          note: oB,
           state: "open",
           unlockedBy: null
         } : {
-          id: HH,
-          active: rH,
-          note: hH,
+          id: BB,
+          active: DB,
+          note: oB,
           state: "locked",
-          unlockedBy: IH(HH)
+          unlockedBy: uB(BB)
         }
       }))
     }
-    const KH = "plotsJournalChanged";
-    class cH {
-      constructor(HH, BH) {
-        this.api = HH, this.placement = BH, this.pages = null, this.openRequested = null, this.openedOffered = !1, this.reported = new Set, this.onOpened = () => {
-          this.placement.stop(), this.XX(this.openedOffered ? "journal_offered" : "journal_opened"), this.openedOffered = !1
-        }, this.build = HH => {
-          this.placement.start(HH), (0, hH.g)()
+    const FB = "plotsJournalChanged";
+    class iB {
+      constructor(BB, OB) {
+        this.api = BB, this.placement = OB, this.pages = null, this.openRequested = null, this.openedOffered = !1, this.reported = new Set, this.onOpened = () => {
+          this.placement.stop(), this.jP(this.openedOffered ? "journal_offered" : "journal_opened"), this.openedOffered = !1
+        }, this.build = BB => {
+          this.placement.start(BB), (0, oB.g)()
         }, this.putAway = () => {
-          this.api.sendCommand(`${rH} cancel`)
+          this.api.sendCommand(`${DB} cancel`)
         }
       }
       getPages() {
         return this.pages
       }
-      kX(HH) {
-        let [, BH, LH] = HH;
-        this.pages = lH(BH, LH), VH.k.AX(KH, this.pages, !0)
+      nP(BB) {
+        let [, OB, GB] = BB;
+        this.pages = IB(OB, GB), nB.o.tM(FB, this.pages, !0)
       }
-      openFromServer(HH) {
-        let [, BH] = HH;
-        this.openRequested = BH, this.IX()
+      openFromServer(BB) {
+        let [, OB] = BB;
+        this.openRequested = OB, this.kP()
       }
-      IX() {
-        const HH = this.openRequested;
-        null === HH || tH.c.get("loadingOverlayVisible") || (this.openRequested = null, null === this.pages || (0, YH.t)() || (0, PH.isTypingInInput)() || null !== this.placement.getView() || (this.openedOffered = HH, (0, hH.t)()))
+      kP() {
+        const BB = this.openRequested;
+        null === BB || jB.c.get("loadingOverlayVisible") || (this.openRequested = null, null === this.pages || (0, lB.r)() || (0, AB.isTypingInInput)() || null !== this.placement.getView() || (this.openedOffered = BB, (0, oB.o)()))
       }
-      XX(HH) {
-        this.reported.has(HH) || (this.reported.add(HH), this.api.sendCommand(`${rH} report ${HH}`))
+      jP(BB) {
+        this.reported.has(BB) || (this.reported.add(BB), this.api.sendCommand(`${DB} report ${BB}`))
       }
     }
-    var eH = LH(1225);
-    const qH = "KeyJ";
+    var LB = GB(1282);
+    const gB = "KeyJ";
 
-    function gH(HH) {
+    function rB(BB) {
       let {
-        journal: BH
-      } = HH;
-      const LH = (0, zH.e)(KH, BH.getPages()),
+        journal: OB
+      } = BB;
+      const GB = (0, yB.i)(FB, OB.getPages()),
         {
-          isTouchScreen: AH
-        } = (0, tH.m)(["isTouchScreen"]),
+          isTouchScreen: YB
+        } = (0, jB.o)(["isTouchScreen"]),
         {
-          t: rH
-        } = (0, EH.B)(),
-        CH = (0, SH.useContext)(UH),
-        XH = null !== LH;
-      return (0, SH.useEffect)((() => XH ? (0, uH.b)(qH) : void 0), [XH]), (0, vH.c)((HH => XH && HH.code === qH && !HH.repeat && !(0, PH.isTypingInInput)()), (HH => {
-        (0, YH.H)(HH, !0, hH.t)
-      })), null === LH ? null : (0, eH.jsx)(QH.e, {
+          t: DB
+        } = (0, MB.H)(),
+        JB = (0, QB.useContext)(SB),
+        PB = null !== GB;
+      return (0, QB.useEffect)((() => PB ? (0, pB.d)(gB) : void 0), [PB]), (0, WB.b)((BB => PB && BB.code === gB && !BB.repeat && !(0, AB.isTypingInInput)()), (BB => {
+        (0, lB.E)(BB, !0, oB.o)
+      })), null === GB ? null : (0, LB.jsx)(qB.e, {
         placement: "topRight",
-        children: (0, eH.jsx)("div", {
+        children: (0, LB.jsx)("div", {
           className: "PlotsJournalButtonContainer",
-          children: (0, eH.jsxs)("button", {
-            ref: CH.journalRef,
+          children: (0, LB.jsxs)("button", {
+            ref: JB.journalRef,
             type: "button",
-            className: GH()("PlotsJournalButton SmallTextBold", {
-              Touch: AH
+            className: zB()("PlotsJournalButton SmallTextBold", {
+              Touch: YB
             }),
-            onClick: hH.t,
-            children: [(0, eH.jsx)("span", {
+            onClick: oB.o,
+            children: [(0, LB.jsx)("span", {
               className: "PlotsJournalButtonIcon",
-              children: (0, eH.jsx)(MH.e, {
+              children: (0, LB.jsx)(NB.c, {
                 itemName: "Book",
                 amount: 0
               })
-            }), rH("plotsGame:journalButton"), !AH && (0, eH.jsx)(xH.b, {
+            }), DB("plotsGame:journalButton"), !YB && (0, LB.jsx)(RB.c, {
               className: "PlotsJournalButtonKey",
-              keyCode: qH
-            }), "openJournal" === CH.hint && (0, eH.jsx)(WH.c, {
+              keyCode: gB
+            }), "openJournal" === JB.hint && (0, LB.jsx)(ZB.b, {
               name: "hand-point-left",
               className: "SmallTextBold TouchTutorialIcon HandLeftAnim PlotsJournalButtonHand"
             })]
@@ -461,114 +461,114 @@ export const modules = {
         })
       })
     }
-    var NH = LH(9940);
-    const RH = [0, 90, 180, 270],
-      jH = /^(meta\|rot\d)\|([lrud]+)$/,
-      nH = "nesw",
-      FH = /^meta\|([nesw]*)\|?(Stacked)?$/,
-      DH = function(HH) {
-        const BH = new WeakMap;
-        return (LH, AH) => {
-          let rH = BH.get(LH);
-          return void 0 === rH && (rH = HH(LH, AH), BH.set(LH, rH)), rH
+    var XB = GB(9927);
+    const wB = [0, 90, 180, 270],
+      EB = /^(meta\|rot\d)\|([lrud]+)$/,
+      cB = "nesw",
+      hB = /^meta\|([nesw]*)\|?(Stacked)?$/,
+      aB = function(BB) {
+        const OB = new WeakMap;
+        return (GB, YB) => {
+          let DB = OB.get(GB);
+          return void 0 === DB && (DB = BB(GB, YB), OB.set(GB, DB)), DB
         }
-      }((HH => new wH(HH)));
-    class wH {
-      constructor(HH) {
-        this.blockMetadata = HH, this.blockIdMappings = new Map, this.maxBlockId = void 0;
-        const BH = new Set(Object.keys(HH).map((BH => HH[BH].id)));
-        BH.add(0), this.maxBlockId = Math.max(...BH)
+      }((BB => new eB(BB)));
+    class eB {
+      constructor(BB) {
+        this.blockMetadata = BB, this.blockIdMappings = new Map, this.maxBlockId = void 0;
+        const OB = new Set(Object.keys(BB).map((OB => BB[OB].id)));
+        OB.add(0), this.maxBlockId = Math.max(...OB)
       }
       static
-      for (HH) {
-        return DH(HH)
+      for (BB) {
+        return aB(BB)
       }
-      getBlockIdMapping(HH, BH) {
-        const LH = this.getBlockIdMappingKey(HH, BH);
-        let AH = this.blockIdMappings.get(LH);
-        return void 0 === AH && RH.includes(HH) && (AH = this.createBlockIdMapping(this.blockMetadata, this.maxBlockId, HH, BH), this.blockIdMappings.set(LH, AH)), AH
+      getBlockIdMapping(BB, OB) {
+        const GB = this.getBlockIdMappingKey(BB, OB);
+        let YB = this.blockIdMappings.get(GB);
+        return void 0 === YB && wB.includes(BB) && (YB = this.createBlockIdMapping(this.blockMetadata, this.maxBlockId, BB, OB), this.blockIdMappings.set(GB, YB)), YB
       }
-      turnBlockId(HH, BH, LH) {
-        return this.mapBlockId(this.blockMetadata[HH], BH, this.getRotationMapping(BH, LH), LH)
+      turnBlockId(BB, OB, GB) {
+        return this.mapBlockId(this.blockMetadata[BB], OB, this.getRotationMapping(OB, GB), GB)
       }
-      getBlockIdMappingKey(HH, BH) {
-        return `r${HH}|m${Number(BH)}`
+      getBlockIdMappingKey(BB, OB) {
+        return `r${BB}|m${Number(OB)}`
       }
-      createBlockIdMapping(HH, BH, LH, AH) {
-        const rH = new Uint16Array(BH + 1),
-          SH = this.getRotationMapping(LH, AH);
-        for (const hH in HH) {
-          const BH = HH[hH];
-          rH[BH.id] = this.mapBlockId(BH, LH, SH, AH)
+      createBlockIdMapping(BB, OB, GB, YB) {
+        const DB = new Uint16Array(OB + 1),
+          QB = this.getRotationMapping(GB, YB);
+        for (const oB in BB) {
+          const OB = BB[oB];
+          DB[OB.id] = this.mapBlockId(OB, GB, QB, YB)
         }
-        return rH
+        return DB
       }
-      getRotationMapping(HH, BH) {
-        const LH = Math.round(HH / 90),
-          AH = new Uint8Array(4);
-        for (let rH = 0; rH < 4; rH++) AH[rH] = (4 + rH - LH) % 4;
-        if (BH) {
-          let HH = AH[0];
-          AH[0] = AH[1], AH[1] = HH, HH = AH[2], AH[2] = AH[3], AH[3] = HH
+      getRotationMapping(BB, OB) {
+        const GB = Math.round(BB / 90),
+          YB = new Uint8Array(4);
+        for (let DB = 0; DB < 4; DB++) YB[DB] = (4 + DB - GB) % 4;
+        if (OB) {
+          let BB = YB[0];
+          YB[0] = YB[1], YB[1] = BB, BB = YB[2], YB[2] = YB[3], YB[3] = BB
         }
-        return AH
+        return YB
       }
-      mapBlockId(HH, BH, LH, AH) {
-        var rH;
+      mapBlockId(BB, OB, GB, YB) {
+        var DB;
         const {
-          blockMetadata: SH
-        } = this, hH = Math.round(BH / 90), {
-          id: tH,
-          meta: zH
-        } = HH, {
-          rot: CH,
-          rootName: EH,
-          metaStr: XH
-        } = zH;
-        let GH;
-        const [, YH, uH] = null !== (rH = FH.exec(XH)) && void 0 !== rH ? rH : [];
-        if (void 0 !== YH) {
-          var QH, WH;
-          GH = null !== (QH = null === (WH = SH[`${EH}|meta|${[nH.split("").filter(((HH,BH)=>YH.split("").some((HH=>{const LH=nH.indexOf(HH);return((AH?3-LH:LH)+hH)%4===BH})))).join(""),uH].filter(Boolean).join("|")}`]) || void 0 === WH ? void 0 : WH.id) && void 0 !== QH ? QH : tH
-        } else if (null === CH) GH = tH;
+          blockMetadata: QB
+        } = this, oB = Math.round(OB / 90), {
+          id: jB,
+          meta: yB
+        } = BB, {
+          rot: JB,
+          rootName: MB,
+          metaStr: PB
+        } = yB;
+        let zB;
+        const [, lB, pB] = null !== (DB = hB.exec(PB)) && void 0 !== DB ? DB : [];
+        if (void 0 !== lB) {
+          var qB, ZB;
+          zB = null !== (qB = null === (ZB = QB[`${MB}|meta|${[cB.split("").filter(((BB,OB)=>lB.split("").some((BB=>{const GB=cB.indexOf(BB);return((YB?3-GB:GB)+oB)%4===OB})))).join(""),pB].filter(Boolean).join("|")}`]) || void 0 === ZB ? void 0 : ZB.id) && void 0 !== qB ? qB : jB
+        } else if (null === JB) zB = jB;
         else {
-          var MH, xH;
-          const HH = LH[CH - 1] + 1;
-          let BH = XH.replace(`rot${CH}`, `rot${HH}`);
-          AH && zH.stairsCorner && (BH = BH.replace(/(Left|Right)$/, (HH => "Left" === HH ? "Right" : "Left"))), AH && "Chest" === EH && (BH = BH.replace(/\|(left|right)$/, ((HH, BH) => "left" === BH ? "|right" : "|left")));
-          const rH = jH.exec(BH);
-          if (AH && null !== rH) {
-            const HH = "lrud".split("").filter((HH => rH[2].includes("l" === HH ? "r" : "r" === HH ? "l" : HH)));
-            BH = `${rH[1]}|${HH.join("")}`
+          var NB, RB;
+          const BB = GB[JB - 1] + 1;
+          let OB = PB.replace(`rot${JB}`, `rot${BB}`);
+          YB && yB.stairsCorner && (OB = OB.replace(/(Left|Right)$/, (BB => "Left" === BB ? "Right" : "Left"))), YB && "Chest" === MB && (OB = OB.replace(/\|(left|right)$/, ((BB, OB) => "left" === OB ? "|right" : "|left")));
+          const DB = EB.exec(OB);
+          if (YB && null !== DB) {
+            const BB = "lrud".split("").filter((BB => DB[2].includes("l" === BB ? "r" : "r" === BB ? "l" : BB)));
+            OB = `${DB[1]}|${BB.join("")}`
           }
-          const hH = `${EH}|${BH}`;
-          if (GH = null !== (MH = null === (xH = SH[hH]) || void 0 === xH ? void 0 : xH.id) && void 0 !== MH ? MH : null, null === GH) {
-            const HH = SH[EH];
-            GH = HH.rootMetaDesc === hH ? HH.id : tH
+          const oB = `${MB}|${OB}`;
+          if (zB = null !== (NB = null === (RB = QB[oB]) || void 0 === RB ? void 0 : RB.id) && void 0 !== NB ? NB : null, null === zB) {
+            const BB = QB[MB];
+            zB = BB.rootMetaDesc === oB ? BB.id : jB
           }
         }
-        return GH
+        return zB
       }
     }
 
-    function ZH(HH, BH, LH) {
+    function TB(BB, OB, GB) {
       let {
-        xRotationMappedOrigin: AH,
-        shouldSwapXZ: rH
-      } = LH;
-      const SH = rH ? BH : HH;
-      return null === AH ? SH : AH - SH
+        xRotationMappedOrigin: YB,
+        shouldSwapXZ: DB
+      } = GB;
+      const QB = DB ? OB : BB;
+      return null === YB ? QB : YB - QB
     }
 
-    function dH(HH, BH, LH) {
+    function bB(BB, OB, GB) {
       let {
-        zRotationMappedOrigin: AH,
-        shouldSwapXZ: rH
-      } = LH;
-      const SH = rH ? HH : BH;
-      return null === AH ? SH : AH - SH
+        zRotationMappedOrigin: YB,
+        shouldSwapXZ: DB
+      } = GB;
+      const QB = DB ? BB : OB;
+      return null === YB ? QB : YB - QB
     }
-    const aH = {
+    const CB = {
         farm_hut: {
           size: [7, 7, 7],
           palette: ["Aspen Wood Planks", "Messy Stone", "Barkless Aspen Log", "Red Planks", "Glass", "Barkless Pine Log", "Maple Wood Planks", "Smooth Stone"],
@@ -630,304 +630,304 @@ export const modules = {
           layers: ["aaaaaaaaa accccccca accccccca accccccca accccccca accccccca accccccca accccccca aaaaaaaaa", "bbbb.bbbb b.......b b.......b b.......b b.......b b.......b b.......b b.....f.b bbbbbbbbb", "abbb.bbba b.......b b.......b b.......b b.......b b.......b b.......b b.....f.b abbbbbbba", "bbbbabbbb b.......b b.......b b.......b b.......b b.......b b.......b b.....f.b bbbbbbbbb", "abbbbbbba bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccfcb abbbbbbba", "bbbbabbbb b.......b b.......b b.......b a.......a b.......b b.......b b.....f.b bbbbabbbb", "abbb.bbba b.......b b.......b b.......b ......... b.......b b.......b b.....f.b abbb.bbba", "bbbbabbbb b.......b b.......b b.......b a.......a b.......b b.......b b.....f.b bbbbabbbb", "abbbbbbba bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccfcb abbbbbbba", "bbbbabbbb b.......b b.......b b.......b a.......a b.......b b.......b b.....f.b bbbbabbbb", "abbb.bbba b.......b b.......b b.......b ......... b.......b b.......b b.....f.b abbb.bbba", "bbbbabbbb b.......b b.......b b.......b a.......a b.......b b.......b b.....f.b bbbbabbbb", "abbbbbbba bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccfcb abbbbbbba", "bbbbbbbbb b.......b b.......b b.......b b...d...b b.......b b.......b b.......b bbbbbbbbb", "ab.bbb.ba b.......b ......... b.......b b...d...b b.......b ......... b.......b ab.bbb.ba", "......... ......... ......... ......... ....d.... ......... ......... ......... .........", "......... ......... ......... ......... ....d.... ......... ......... ......... .........", "......... ......... ......... ......... ....deee. ......... ......... ......... .........", "......... ......... ......... ......... ....deee. ......... ......... ......... .........", "......... ......... ......... ......... ....a.... ......... ......... ......... ........."]
         }
       },
-      sH = new Map;
+      HB = new Map;
 
-    function JH(HH, BH) {
-      const LH = `${HH}|${BH}`;
-      let AH = sH.get(LH);
-      if (void 0 === AH) {
+    function vB(BB, OB) {
+      const GB = `${BB}|${OB}`;
+      let YB = HB.get(GB);
+      if (void 0 === YB) {
         const {
-          size: rH,
-          palette: SH,
-          layers: hH
-        } = aH[HH], tH = 90 === BH || 270 === BH, [zH, CH] = tH ? [rH[2], rH[0]] : [rH[0], rH[2]], EH = function(HH, BH, LH) {
-          let AH = null,
-            rH = null,
-            SH = !1;
-          switch (HH) {
+          size: DB,
+          palette: QB,
+          layers: oB
+        } = CB[BB], jB = 90 === OB || 270 === OB, [yB, JB] = jB ? [DB[2], DB[0]] : [DB[0], DB[2]], MB = function(BB, OB, GB) {
+          let YB = null,
+            DB = null,
+            QB = !1;
+          switch (BB) {
             case 0:
               break;
             case 90:
-              AH = BH - 1, SH = !0;
+              YB = OB - 1, QB = !0;
               break;
             case 180:
-              AH = BH - 1, rH = LH - 1;
+              YB = OB - 1, DB = GB - 1;
               break;
             case 270:
-              rH = LH - 1, SH = !0;
+              DB = GB - 1, QB = !0;
               break;
             default:
-              throw new Error(`Invalid rotation: ${HH}`)
+              throw new Error(`Invalid rotation: ${BB}`)
           }
           return {
-            xRotationMappedOrigin: AH,
-            zRotationMappedOrigin: rH,
-            shouldSwapXZ: SH
+            xRotationMappedOrigin: YB,
+            zRotationMappedOrigin: DB,
+            shouldSwapXZ: QB
           }
-        }(BH, zH, CH), XH = wH.for(NH.g), GH = SH.map((HH => (0, NH.d)(XH.turnBlockId((0, NH.h)(HH), BH, !1)))), YH = [];
-        hH.forEach(((HH, BH) => {
-          HH.split(" ").forEach(((HH, LH) => {
-            for (let AH = 0; AH < HH.length; AH++)
-              if ("." !== HH[AH]) {
-                const rH = [ZH(AH, LH, EH), BH, dH(AH, LH, EH)];
-                YH.push({
-                  offset: rH,
-                  block: GH[HH.charCodeAt(AH) - "a".charCodeAt(0)]
+        }(OB, yB, JB), PB = eB.for(XB.h), zB = QB.map((BB => (0, XB.d)(PB.turnBlockId((0, XB.j)(BB), OB, !1)))), lB = [];
+        oB.forEach(((BB, OB) => {
+          BB.split(" ").forEach(((BB, GB) => {
+            for (let YB = 0; YB < BB.length; YB++)
+              if ("." !== BB[YB]) {
+                const DB = [TB(YB, GB, MB), OB, bB(YB, GB, MB)];
+                lB.push({
+                  offset: DB,
+                  block: zB[BB.charCodeAt(YB) - "a".charCodeAt(0)]
                 })
               }
           }))
-        })), AH = {
-          size: [zH, rH[1], CH],
-          cells: YH
-        }, sH.set(LH, AH)
+        })), YB = {
+          size: [yB, DB[1], JB],
+          cells: lB
+        }, HB.set(GB, YB)
       }
-      return AH
+      return YB
     }
-    const iH = "plotsBuildProgressChanged",
-      pH = new Map;
+    const sB = "plotsBuildProgressChanged",
+      xB = new Map;
 
-    function yH(HH, BH, LH) {
-      let AH = 0,
-        rH = 0;
-      return function(HH) {
-        let BH = pH.get(HH);
-        if (void 0 === BH) {
-          const AH = [];
+    function tB(BB, OB, GB) {
+      let YB = 0,
+        DB = 0;
+      return function(BB) {
+        let OB = xB.get(BB);
+        if (void 0 === OB) {
+          const YB = [];
           for (const {
-              offset: BH
+              offset: OB
             }
-            of JH(HH, 0).cells) {
-            var LH;
-            AH[BH[1]] = (null !== (LH = AH[BH[1]]) && void 0 !== LH ? LH : 0) + 1
+            of vB(BB, 0).cells) {
+            var GB;
+            YB[OB[1]] = (null !== (GB = YB[OB[1]]) && void 0 !== GB ? GB : 0) + 1
           }
-          BH = AH, pH.set(HH, BH)
+          OB = YB, xB.set(BB, OB)
         }
-        return BH
-      }(HH).forEach(((HH, LH) => {
-        AH += HH, LH > BH && (rH += HH)
+        return OB
+      }(BB).forEach(((BB, GB) => {
+        YB += BB, GB > OB && (DB += BB)
       })), {
-        id: HH,
-        filled: AH - rH - LH,
-        total: AH
+        id: BB,
+        filled: YB - DB - GB,
+        total: YB
       }
     }
-    class HB {
+    class BO {
       constructor() {
         this.shown = null, this.topOpen = 0, this.progress = null
       }
       get() {
         return this.progress
       }
-      show(HH) {
-        this.shown = HH, this.topOpen = 0, null === HH && this.AX(null)
+      show(BB) {
+        this.shown = BB, this.topOpen = 0, null === BB && this.tM(null)
       }
-      update(HH, BH, LH) {
-        const AH = this.shown;
-        null !== AH && (HH >= BH && (this.topOpen = LH), this.AX(yH(AH.id, BH - AH.y, HH >= BH ? LH : this.topOpen + LH)))
+      update(BB, OB, GB) {
+        const YB = this.shown;
+        null !== YB && (BB >= OB && (this.topOpen = GB), this.tM(tB(YB.id, OB - YB.y, BB >= OB ? GB : this.topOpen + GB)))
       }
-      AX(HH) {
-        const BH = this.progress;
-        (null === HH || void 0 === HH ? void 0 : HH.id) === (null === BH || void 0 === BH ? void 0 : BH.id) && (null === HH || void 0 === HH ? void 0 : HH.filled) === (null === BH || void 0 === BH ? void 0 : BH.filled) && (null === HH || void 0 === HH ? void 0 : HH.total) === (null === BH || void 0 === BH ? void 0 : BH.total) || (this.progress = HH, VH.k.AX(iH, HH, !0))
+      tM(BB) {
+        const OB = this.progress;
+        (null === BB || void 0 === BB ? void 0 : BB.id) === (null === OB || void 0 === OB ? void 0 : OB.id) && (null === BB || void 0 === BB ? void 0 : BB.filled) === (null === OB || void 0 === OB ? void 0 : OB.filled) && (null === BB || void 0 === BB ? void 0 : BB.total) === (null === OB || void 0 === OB ? void 0 : OB.total) || (this.progress = BB, nB.o.tM(sB, BB, !0))
       }
     }
-    const BB = "plotsPlotChanged",
-      LB = "plotsGuideChanged",
-      AB = "plotsGuideDone";
-    class rB {
+    const OO = "plotsPlotChanged",
+      GO = "plotsGuideChanged",
+      YO = "plotsGuideDone";
+    class DO {
       constructor() {
         this.plot = ["none"], this.guide = ["none"]
       }
       getPlot() {
         return this.plot
       }
-      receivePlot(HH) {
-        this.plot = HH, VH.k.AX(BB, HH, !0)
+      receivePlot(BB) {
+        this.plot = BB, nB.o.tM(OO, BB, !0)
       }
       getGuide() {
         return this.guide
       }
-      receiveGuide(HH) {
-        this.guide = HH, VH.k.AX(LB, HH, !0)
+      receiveGuide(BB) {
+        this.guide = BB, nB.o.tM(GO, BB, !0)
       }
       receiveGuideDone() {
-        VH.k.AX(AB, void 0, !0)
+        nB.o.tM(YO, void 0, !0)
       }
     }
-    var SB = LH(1214),
-      hB = LH(39448),
-      tB = LH(37747),
-      zB = LH(1471);
+    var QO = GB(1268),
+      oO = GB(39215),
+      jO = GB(37572),
+      yO = GB(1510);
 
-    function CB(HH) {
+    function JO(BB) {
       let {
-        onSkip: BH,
-        className: LH
-      } = HH;
+        onSkip: OB,
+        className: GB
+      } = BB;
       const {
-        t: AH
-      } = (0, EH.B)();
-      return (0, eH.jsx)("button", {
+        t: YB
+      } = (0, MB.H)();
+      return (0, LB.jsx)("button", {
         type: "button",
-        className: GH()("PlotsGuideSkipButton", LH),
-        ...(0, zB.c)(BH, "pointerup"),
-        children: AH("tutorial:skip")
+        className: zB()("PlotsGuideSkipButton", GB),
+        ...(0, yO.g)(OB, "pointerup"),
+        children: YB("tutorial:skip")
       })
     }
 
-    function EB(HH) {
+    function MO(BB) {
       let {
-        target: BH,
-        placement: LH,
-        spotlight: AH = null,
-        children: rH
-      } = HH;
+        target: OB,
+        placement: GB,
+        spotlight: YB = null,
+        children: DB
+      } = BB;
       const {
-        t: hH
-      } = (0, EH.B)(), tH = (0, SH.useRef)(BH);
-      return tH.current = BH, (0, SB.r)("popup", tH, null === AH ? null : AH.onSkip, null !== AH, null, "controller:menusSkipTutorial"), (0, eH.jsxs)(tB.g, {
-        target: BH,
-        placement: LH,
-        className: GH()("PlotsGuideBubble", {
-          Passive: null === AH
+        t: oB
+      } = (0, MB.H)(), jB = (0, QB.useRef)(OB);
+      return jB.current = OB, (0, QO.v)("popup", jB, null === YB ? null : YB.onSkip, null !== YB, null, "controller:menusSkipTutorial"), (0, LB.jsxs)(jO.f, {
+        target: OB,
+        placement: GB,
+        className: zB()("PlotsGuideBubble", {
+          Passive: null === YB
         }),
-        spotlight: null !== AH,
+        spotlight: null !== YB,
         spotlightMargin: 30,
-        children: [(0, eH.jsxs)("div", {
+        children: [(0, LB.jsxs)("div", {
           className: "PlotsGuideBubbleHeader",
-          children: [(0, eH.jsx)("img", {
+          children: [(0, LB.jsx)("img", {
             className: "PlotsGuideBubblePortrait",
-            src: hB,
+            src: oO,
             alt: "",
             draggable: !1
-          }), (0, eH.jsx)("span", {
+          }), (0, LB.jsx)("span", {
             className: "PlotsGuideBubbleSpeaker",
-            children: hH("plotsGame:maverickName")
-          }), null !== AH && (0, eH.jsx)(CB, {
-            onSkip: AH.onSkip
+            children: oB("plotsGame:maverickName")
+          }), null !== YB && (0, LB.jsx)(JO, {
+            onSkip: YB.onSkip
           })]
-        }), (0, eH.jsx)("p", {
+        }), (0, LB.jsx)("p", {
           className: "PlotsGuideBubbleText",
-          children: rH
+          children: DB
         })]
       })
     }
 
-    function XB(HH) {
+    function PO(BB) {
       let {
-        className: BH,
-        icon: LH,
-        title: AH,
-        children: rH
-      } = HH;
-      return (0, eH.jsxs)("div", {
-        className: GH()("PlotsCard", BH),
+        className: OB,
+        icon: GB,
+        title: YB,
+        children: DB
+      } = BB;
+      return (0, LB.jsxs)("div", {
+        className: zB()("PlotsCard", OB),
         role: "status",
-        children: [(0, eH.jsx)("span", {
+        children: [(0, LB.jsx)("span", {
           className: "PlotsCardIcon",
-          children: (0, eH.jsx)(WH.c, {
-            name: LH
+          children: (0, LB.jsx)(ZB.b, {
+            name: GB
           })
-        }), (0, eH.jsxs)("div", {
+        }), (0, LB.jsxs)("div", {
           className: "PlotsCardBody",
-          children: [(0, eH.jsx)("div", {
+          children: [(0, LB.jsx)("div", {
             className: "PlotsCardTitle SmallTextBold",
-            children: AH
-          }), rH]
+            children: YB
+          }), DB]
         })]
       })
     }
 
-    function GB(HH) {
+    function zO(BB) {
       let {
-        progress: BH,
-        goal: LH
-      } = HH;
-      const AH = Math.min(BH, LH);
-      return (0, eH.jsxs)("div", {
+        progress: OB,
+        goal: GB
+      } = BB;
+      const YB = Math.min(OB, GB);
+      return (0, LB.jsxs)("div", {
         className: "PlotsProgress",
-        children: [(0, eH.jsx)("div", {
+        children: [(0, LB.jsx)("div", {
           className: "PlotsProgressBar",
           role: "progressbar",
           "aria-valuemin": 0,
-          "aria-valuemax": LH,
-          "aria-valuenow": AH,
-          children: (0, eH.jsx)("div", {
+          "aria-valuemax": GB,
+          "aria-valuenow": YB,
+          children: (0, LB.jsx)("div", {
             className: "PlotsProgressBarFill",
             style: {
-              transform: `scaleX(${AH/LH})`
+              transform: `scaleX(${YB/GB})`
             }
           })
-        }), (0, eH.jsxs)("span", {
+        }), (0, LB.jsxs)("span", {
           className: "PlotsProgressCount",
-          children: [AH, "/", LH]
+          children: [YB, "/", GB]
         })]
       })
     }
 
-    function YB(HH) {
+    function lO(BB) {
       let {
-        progress: BH,
-        guide: LH
-      } = HH;
+        progress: OB,
+        guide: GB
+      } = BB;
       const {
-        t: AH
-      } = (0, EH.B)(), {
-        isTouchScreen: rH
-      } = (0, tH.m)(["isTouchScreen"]), SH = BH.filled < 5;
-      return (0, eH.jsxs)(eH.Fragment, {
-        children: [(SH || BH.total - BH.filled <= 5) && (0, eH.jsx)("div", {
+        t: YB
+      } = (0, MB.H)(), {
+        isTouchScreen: DB
+      } = (0, jB.o)(["isTouchScreen"]), QB = OB.filled < 5;
+      return (0, LB.jsxs)(LB.Fragment, {
+        children: [(QB || OB.total - OB.filled <= 5) && (0, LB.jsx)("div", {
           className: "PlotsGuideHandLayer",
-          children: (0, eH.jsx)("div", {
-            ref: LH.bindHand,
+          children: (0, LB.jsx)("div", {
+            ref: GB.bindHand,
             className: "PlotsGuideHand",
-            children: (0, eH.jsx)(WH.c, {
+            children: (0, LB.jsx)(ZB.b, {
               name: "hand-point-left",
               className: "SmallTextBold TouchTutorialIcon"
             })
           })
-        }), (0, eH.jsx)(QH.e, {
+        }), (0, LB.jsx)(qB.e, {
           placement: "bottom",
-          children: (0, eH.jsxs)(XB, {
+          children: (0, LB.jsxs)(PO, {
             icon: "hammer",
-            title: AH(mH(BH.id).displayName.translationKey),
-            children: [SH && (0, eH.jsx)("div", {
+            title: YB(dB(OB.id).displayName.translationKey),
+            children: [QB && (0, LB.jsx)("div", {
               className: "PlotsCardHint SmallTextLight",
-              children: rH ? AH("plotsGame:guideBuildTouch") : uB(AH)
-            }), (0, eH.jsx)(GB, {
-              progress: BH.filled,
-              goal: BH.total
+              children: DB ? YB("plotsGame:guideBuildTouch") : pO(YB)
+            }), (0, LB.jsx)(zO, {
+              progress: OB.filled,
+              goal: OB.total
             })]
           })
         })]
       })
     }
 
-    function uB(HH) {
-      const BH = CH.w["alt-fire"][0];
-      return "Mouse3" === BH ? HH("plotsGame:guideBuildRightClick") : HH("plotsGame:guideBuildKeys", {
-        key: (0, CH.p)(BH)
+    function pO(BB) {
+      const OB = JB.t["alt-fire"][0];
+      return "Mouse3" === OB ? BB("plotsGame:guideBuildRightClick") : BB("plotsGame:guideBuildKeys", {
+        key: (0, JB.l)(OB)
       })
     }
 
-    function QB() {
-      return (0, eH.jsx)("div", {
+    function qO() {
+      return (0, LB.jsx)("div", {
         className: "PlotsGuideDragHand",
-        children: (0, eH.jsx)(WH.c, {
+        children: (0, LB.jsx)(ZB.b, {
           name: "hand-back-point-up",
           className: "SmallTextBold TouchTutorialIcon"
         })
       })
     }
-    var WB = LH(1241),
-      MB = LH(2817),
-      xB = LH(39279),
-      vB = LH(39058),
-      PB = LH(37793),
-      TB = LH(9965),
-      UB = LH(9982),
-      VB = LH(317),
-      OB = LH(38667);
-    const bB = new Map([
+    var ZO = GB(1293),
+      NO = GB(2854),
+      RO = GB(39074),
+      WO = GB(38836),
+      AO = GB(37627),
+      VO = GB(9965),
+      SO = GB(9983),
+      nO = GB(353),
+      UO = GB(38488);
+    const fO = new Map([
         ["Aspen Wood Planks", [.78, .706, .502]],
         ["Barkless Aspen Log", [.792, .718, .518]],
         ["Barkless Pine Log", [.49, .353, .275]],
@@ -947,450 +947,450 @@ export const modules = {
         ["Stone Bricks", [.522, .545, .573]],
         ["White Wool", [.98, .98, .98]]
       ]),
-      kB = [...PB.d.blockRemoveActionRoots, ...vB.d, ...TB.j, "Board", "Code Block", "Custom Lobby Block"],
-      mB = /^(open|closed|(inner|outer)(Left|Right)|Stacked|books\d+|Roots|\w*GrassRoots|Growing|FreshlyGrown|empty|full)$/;
-    let oB = null;
+      kO = [...AO.d.blockRemoveActionRoots, ...WO.d, ...VO.i, "Board", "Code Block", "Custom Lobby Block"],
+      dO = /^(open|closed|(inner|outer)(Left|Right)|Stacked|books\d+|Roots|\w*GrassRoots|Growing|FreshlyGrown|empty|full)$/;
+    let KO = null;
 
-    function IB() {
-      return oB ??= function() {
-        const HH = fB(),
-          BH = Math.max(...HH.map((HH => NH.g[HH].id))) + 1,
-          LH = new Int32Array(BH),
-          AH = new Int32Array(BH),
-          rH = new Uint8Array(BH).fill(1),
-          SH = new Uint8Array(BH),
-          hH = new Uint8Array(BH),
-          tH = new Array(BH).fill("Air"),
-          zH = new Map,
-          CH = HH => {
-            let BH = zH.get(HH);
-            return void 0 === BH && (BH = zH.size + 1, zH.set(HH, BH)), BH
+    function uO() {
+      return KO ??= function() {
+        const BB = mO(),
+          OB = Math.max(...BB.map((BB => XB.h[BB].id))) + 1,
+          GB = new Int32Array(OB),
+          YB = new Int32Array(OB),
+          DB = new Uint8Array(OB).fill(1),
+          QB = new Uint8Array(OB),
+          oB = new Uint8Array(OB),
+          jB = new Array(OB).fill("Air"),
+          yB = new Map,
+          JB = BB => {
+            let OB = yB.get(BB);
+            return void 0 === OB && (OB = yB.size + 1, yB.set(BB, OB)), OB
           },
-          EH = new Set(kB);
-        for (const GH of HH) {
-          var XH;
+          MB = new Set(kO);
+        for (const zB of BB) {
+          var PB;
           const {
-            id: HH,
-            meta: BH,
-            altActionable: zH,
-            canBePlacedOver: YH
-          } = NH.g[GH];
-          LH[HH] = CH(lB(GH));
-          const uH = BH.stairsCorner;
-          if (null === uH) AH[HH] = LH[HH];
+            id: BB,
+            meta: OB,
+            altActionable: yB,
+            canBePlacedOver: lB
+          } = XB.h[zB];
+          GB[BB] = JB(IO(zB));
+          const pB = OB.stairsCorner;
+          if (null === pB) YB[BB] = GB[BB];
           else {
-            const LH = uH.endsWith("Right");
-            AH[HH] = CH(`${BH.rootName}|rot${LH?BH.rot%4+1:BH.rot}|${BH.halfblockPlacement}|${uH.replace("Right","Left")}`)
+            const GB = pB.endsWith("Right");
+            YB[BB] = JB(`${OB.rootName}|rot${GB?OB.rot%4+1:OB.rot}|${OB.halfblockPlacement}|${pB.replace("Right","Left")}`)
           }
-          rH[HH] = YH ? 1 : 0, SH[HH] = zH || null !== BH.open || GH in OB.c || EH.has(BH.rootName) || void 0 !== (0, vB.h)(BH.rootName) ? 1 : 0;
+          DB[BB] = lB ? 1 : 0, QB[BB] = yB || null !== OB.open || zB in UO.c || MB.has(OB.rootName) || void 0 !== (0, WO.h)(OB.rootName) ? 1 : 0;
           const {
-            rootName: QH
-          } = BH;
-          hH[HH] = null !== BH.open || vB.d.includes(QH) || QH.includes("Bookshelf") || QH.includes("Mailbox") ? 1 : 0, tH[HH] = null !== (XH = (0, xB.e)(HH)) && void 0 !== XH ? XH : QH
+            rootName: qB
+          } = OB;
+          oB[BB] = null !== OB.open || WO.d.includes(qB) || qB.includes("Bookshelf") || qB.includes("Mailbox") ? 1 : 0, jB[BB] = null !== (PB = (0, RO.d)(BB)) && void 0 !== PB ? PB : qB
         }
         return {
-          kinds: LH,
-          shapes: AH,
-          empty: rH,
-          inUse: SH,
-          ownAltActionMessage: hH,
-          placingItems: tH
+          kinds: GB,
+          shapes: YB,
+          empty: DB,
+          inUse: QB,
+          ownAltActionMessage: oB,
+          placingItems: jB
         }
-      }(), oB
+      }(), KO
     }
 
-    function fB() {
-      return Object.keys(NH.g).filter((HH => NH.g[HH].name === HH))
+    function mO() {
+      return Object.keys(XB.h).filter((BB => XB.h[BB].name === BB))
     }
 
-    function lB(HH) {
-      var BH;
-      const LH = NH.g[HH],
+    function IO(BB) {
+      var OB;
+      const GB = XB.h[BB],
         {
-          rootName: AH,
-          rot: rH
-        } = LH.meta,
-        [, ...SH] = (null !== (BH = LH.rootMetaDesc) && void 0 !== BH ? BH : HH).split("|"),
-        hH = SH.filter((HH => !("meta" === HH || mB.test(HH) || (0, UB.H)(LH) && /^[nesw]+$/.test(HH) || TB.j.includes(AH) && /^[lrud]+$/.test(HH) || VB.J.includes(AH) && /^(left|right)$/.test(HH))));
-      return [AH, ...hH].map((HH => "fenceGate" === LH.model && HH === `rot${rH}` ? "rot" + ((rH - 1) % 2 + 1) : HH)).join("|")
+          rootName: YB,
+          rot: DB
+        } = GB.meta,
+        [, ...QB] = (null !== (OB = GB.rootMetaDesc) && void 0 !== OB ? OB : BB).split("|"),
+        oB = QB.filter((BB => !("meta" === BB || dO.test(BB) || (0, SO.A)(GB) && /^[nesw]+$/.test(BB) || VO.i.includes(YB) && /^[lrud]+$/.test(BB) || nO.H.includes(YB) && /^(left|right)$/.test(BB))));
+      return [YB, ...oB].map((BB => "fenceGate" === GB.model && BB === `rot${DB}` ? "rot" + ((DB - 1) % 2 + 1) : BB)).join("|")
     }
 
-    function KB(HH, BH) {
+    function FO(BB, OB) {
       const {
-        kinds: LH,
-        shapes: AH
-      } = IB();
-      return LH[HH] === LH[BH] || AH[HH] === AH[BH]
+        kinds: GB,
+        shapes: YB
+      } = uO();
+      return GB[BB] === GB[OB] || YB[BB] === YB[OB]
     }
 
-    function cB(HH) {
-      return 1 === IB().empty[HH]
+    function iO(BB) {
+      return 1 === uO().empty[BB]
     }
 
-    function eB(HH) {
-      return IB().placingItems[HH]
+    function LO(BB) {
+      return uO().placingItems[BB]
     }
 
-    function qB(HH) {
-      return bB.get(NH.g[HH].meta.rootName)
+    function gO(BB) {
+      return fO.get(XB.h[BB].meta.rootName)
     }
-    var gB = LH(9957),
-      NB = LH(9979);
-    const RB = [0, 0, 0, 1, 1, 1],
-      jB = (0, gB.b)([
+    var rO = GB(9962),
+      XO = GB(9974);
+    const wO = [0, 0, 0, 1, 1, 1],
+      EO = (0, rO.d)([
         [2, 0, 2, 6, 6, 6]
       ]),
-      nB = (0, gB.b)([
+      cO = (0, rO.d)([
         [3, 0, 3, 5, 5, 5]
       ]),
-      FB = (0, gB.b)([
+      hO = (0, rO.d)([
         [3, 3, 3, 5, 8, 5]
       ]),
-      DB = [0, 1, 2, 3].map((HH => (0, gB.b)((0, gB.l)([
+      aO = [0, 1, 2, 3].map((BB => (0, rO.d)((0, rO.m)([
         [3, 2, 0, 5, 7, 3]
-      ], HH))));
+      ], BB))));
 
-    function wB(HH) {
+    function eO(BB) {
       const {
-        hW: BH,
-        model: LH,
-        blockModel: AH,
-        meta: rH
-      } = NH.g[HH];
-      return void 0 !== BH ? BH : "CentreCross" === LH ? jB : null !== AH && void 0 !== AH && AH.startsWith("torch") ? rH.halfblockPlacement === NB.c.side ? DB[rH.rot - 1] : rH.halfblockPlacement === NB.c.top ? FB : nB : RB
+        MZ: OB,
+        model: GB,
+        blockModel: YB,
+        meta: DB
+      } = XB.h[BB];
+      return void 0 !== OB ? OB : "CentreCross" === GB ? EO : null !== YB && void 0 !== YB && YB.startsWith("torch") ? DB.halfblockPlacement === XO.d.side ? aO[DB.rot - 1] : DB.halfblockPlacement === XO.d.top ? hO : cO : wO
     }
-    var ZB = LH(176);
-    class dB {
-      constructor(HH) {
-        this.api = HH, this.chunks = [], this.versions = [], this.lastCheckMs = -1 / 0
+    var TO = GB(192);
+    class bO {
+      constructor(BB) {
+        this.api = BB, this.chunks = [], this.versions = [], this.lastCheckMs = -1 / 0
       }
-      watch(HH) {
-        const BH = ZB.g.xX;
+      watch(BB) {
+        const OB = TO.f.pP;
         this.chunks = [];
-        for (let LH = 0; LH < HH.length; LH += 3) {
-          const AH = Math.floor(HH[LH] / BH),
-            rH = Math.floor(HH[LH + 1] / BH),
-            SH = Math.floor(HH[LH + 2] / BH);
-          this.watches(AH, rH, SH) || this.chunks.push(AH, rH, SH)
+        for (let GB = 0; GB < BB.length; GB += 3) {
+          const YB = Math.floor(BB[GB] / OB),
+            DB = Math.floor(BB[GB + 1] / OB),
+            QB = Math.floor(BB[GB + 2] / OB);
+          this.watches(YB, DB, QB) || this.chunks.push(YB, DB, QB)
         }
         this.versions = [], this.lastCheckMs = -1 / 0, this.changed()
       }
       changed() {
-        const HH = performance.now();
-        if (HH - this.lastCheckMs < 100) return !1;
-        this.lastCheckMs = HH;
-        let BH = !1;
-        for (let LH = 0; LH < this.chunks.length; LH += 3) {
-          const HH = this.api.getChunkVersion(this.chunks[LH], this.chunks[LH + 1], this.chunks[LH + 2]);
-          this.versions[LH / 3] !== HH && (this.versions[LH / 3] = HH, BH = !0)
+        const BB = performance.now();
+        if (BB - this.lastCheckMs < 100) return !1;
+        this.lastCheckMs = BB;
+        let OB = !1;
+        for (let GB = 0; GB < this.chunks.length; GB += 3) {
+          const BB = this.api.getChunkVersion(this.chunks[GB], this.chunks[GB + 1], this.chunks[GB + 2]);
+          this.versions[GB / 3] !== BB && (this.versions[GB / 3] = BB, OB = !0)
         }
-        return BH
+        return OB
       }
-      watches(HH, BH, LH) {
-        for (let AH = 0; AH < this.chunks.length; AH += 3)
-          if (this.chunks[AH] === HH && this.chunks[AH + 1] === BH && this.chunks[AH + 2] === LH) return !0;
+      watches(BB, OB, GB) {
+        for (let YB = 0; YB < this.chunks.length; YB += 3)
+          if (this.chunks[YB] === BB && this.chunks[YB + 1] === OB && this.chunks[YB + 2] === GB) return !0;
         return !1
       }
     }
-    var aB = LH(39396);
-    const sB = .35,
-      JB = {
+    var CO = GB(39176);
+    const HO = .35,
+      vO = {
         size: .9,
         alpha: .35,
         crossed: !1
       },
-      iB = {
+      sO = {
         size: 1.04,
         alpha: .45,
         crossed: !0
       },
-      pB = [.95, .2, .15];
-    class yB {
+      xO = [.95, .2, .15];
+    class tO {
       constructor() {
         this.groups = []
       }
-      add(HH, BH, LH, AH, rH) {
-        let SH = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : RB;
-        for (const hH of this.groups)
-          if (LL(hH, AH, rH)) return hH.cells.push(HH, BH, LH), void hH.boxes.push(SH);
+      add(BB, OB, GB, YB, DB) {
+        let QB = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : wO;
+        for (const oB of this.groups)
+          if (GG(oB, YB, DB)) return oB.cells.push(BB, OB, GB), void oB.boxes.push(QB);
         this.groups.push({
-          rgb: AH,
-          look: rH,
-          cells: [HH, BH, LH],
-          boxes: [SH]
+          rgb: YB,
+          look: DB,
+          cells: [BB, OB, GB],
+          boxes: [QB]
         })
       }
       toArray() {
         return this.groups
       }
     }
-    class HL {
-      constructor(HH) {
-        this.api = HH, this.shown = []
+    class BG {
+      constructor(BB) {
+        this.api = BB, this.shown = []
       }
-      show(HH) {
-        const BH = [];
-        for (const LH of HH) {
-          const HH = this.shown.findIndex((HH => {
+      show(BB) {
+        const OB = [];
+        for (const GB of BB) {
+          const BB = this.shown.findIndex((BB => {
             let {
-              group: BH
-            } = HH;
-            return LL(BH, LH.rgb, LH.look) && AL(BH, LH)
-          })); - 1 === HH ? BH.push(this.build(LH)) : (BH.push(this.shown[HH]), this.shown.splice(HH, 1))
+              group: OB
+            } = BB;
+            return GG(OB, GB.rgb, GB.look) && YG(OB, GB)
+          })); - 1 === BB ? OB.push(this.build(GB)) : (OB.push(this.shown[BB]), this.shown.splice(BB, 1))
         }
-        this.dispose(), this.shown = BH
+        this.dispose(), this.shown = OB
       }
       dispose() {
         for (const {
-            meshes: HH
+            meshes: BB
           }
           of this.shown)
-          for (const BH of HH) this.api.disposeGameMesh(BH);
+          for (const OB of BB) this.api.disposeGameMesh(OB);
         this.shown = []
       }
-      build(HH) {
+      build(BB) {
         const {
-          rgb: BH,
-          look: LH,
-          boxes: AH
-        } = HH, rH = [BH[0] + (1 - BH[0]) * sB, BH[1] + (1 - BH[1]) * sB, BH[2] + (1 - BH[2]) * sB], SH = [this.buildMesh(HH.cells, BH, LH.alpha, ((HH, BH, rH, SH) => {
-          BL(HH, BH, rH, AH[SH], LH.size, !1)
-        })), this.buildMesh(HH.cells, rH, LH.alpha, ((HH, BH, rH, SH) => {
-          BL(HH, BH, rH, AH[SH], LH.size, !0)
+          rgb: OB,
+          look: GB,
+          boxes: YB
+        } = BB, DB = [OB[0] + (1 - OB[0]) * HO, OB[1] + (1 - OB[1]) * HO, OB[2] + (1 - OB[2]) * HO], QB = [this.buildMesh(BB.cells, OB, GB.alpha, ((BB, OB, DB, QB) => {
+          OG(BB, OB, DB, YB[QB], GB.size, !1)
+        })), this.buildMesh(BB.cells, DB, GB.alpha, ((BB, OB, DB, QB) => {
+          OG(BB, OB, DB, YB[QB], GB.size, !0)
         }))];
-        return LH.crossed && SH.push(this.buildMesh(HH.cells, BH, .9, ((HH, BH, AH) => {
-          (0, aB.h)(HH, BH, AH, LH.size + .01, .12)
+        return GB.crossed && QB.push(this.buildMesh(BB.cells, OB, .9, ((BB, OB, YB) => {
+          (0, CO.f)(BB, OB, YB, GB.size + .01, .12)
         }))), {
-          group: HH,
-          meshes: SH
+          group: BB,
+          meshes: QB
         }
       }
-      buildMesh(HH, BH, LH, AH) {
-        const rH = [HH[0], HH[1], HH[2]],
-          SH = [],
-          hH = [];
-        for (let tH = 0; tH < HH.length; tH += 3) AH(SH, hH, [HH[tH] - rH[0] + .5, HH[tH + 1] - rH[1] + .5, HH[tH + 2] - rH[2] + .5], tH / 3);
+      buildMesh(BB, OB, GB, YB) {
+        const DB = [BB[0], BB[1], BB[2]],
+          QB = [],
+          oB = [];
+        for (let jB = 0; jB < BB.length; jB += 3) YB(QB, oB, [BB[jB] - DB[0] + .5, BB[jB + 1] - DB[1] + .5, BB[jB + 2] - DB[2] + .5], jB / 3);
         return this.api.createGameMesh({
-          positions: SH,
-          indices: hH
+          positions: QB,
+          indices: oB
         }, {
-          rgb: [BH[0], BH[1], BH[2]],
-          alpha: LH
-        }, rH)
+          rgb: [OB[0], OB[1], OB[2]],
+          alpha: GB
+        }, DB)
       }
     }
 
-    function BL(HH, BH, LH, AH, rH, SH) {
-      for (let hH = 0; hH < AH.length; hH += 6) {
-        const tH = [0, 0, 0],
-          zH = [0, 0, 0];
-        for (let HH = 0; HH < 3; HH++) tH[HH] = LH[HH] + ((AH[hH + HH] + AH[hH + HH + 3]) / 2 - .5) * rH, zH[HH] = (AH[hH + HH + 3] - AH[hH + HH]) * rH;
-        (0, aB.d)(HH, BH, tH, zH, SH)
+    function OG(BB, OB, GB, YB, DB, QB) {
+      for (let oB = 0; oB < YB.length; oB += 6) {
+        const jB = [0, 0, 0],
+          yB = [0, 0, 0];
+        for (let BB = 0; BB < 3; BB++) jB[BB] = GB[BB] + ((YB[oB + BB] + YB[oB + BB + 3]) / 2 - .5) * DB, yB[BB] = (YB[oB + BB + 3] - YB[oB + BB]) * DB;
+        (0, CO.b)(BB, OB, jB, yB, QB)
       }
     }
 
-    function LL(HH, BH, LH) {
-      return HH.rgb[0] === BH[0] && HH.rgb[1] === BH[1] && HH.rgb[2] === BH[2] && HH.look === LH
+    function GG(BB, OB, GB) {
+      return BB.rgb[0] === OB[0] && BB.rgb[1] === OB[1] && BB.rgb[2] === OB[2] && BB.look === GB
     }
 
-    function AL(HH, BH) {
-      if (HH.cells.length !== BH.cells.length) return !1;
-      for (let LH = 0; LH < HH.cells.length; LH++)
-        if (HH.cells[LH] !== BH.cells[LH]) return !1;
-      return HH.boxes.every(((HH, LH) => HH === BH.boxes[LH]))
+    function YG(BB, OB) {
+      if (BB.cells.length !== OB.cells.length) return !1;
+      for (let GB = 0; GB < BB.cells.length; GB++)
+        if (BB.cells[GB] !== OB.cells[GB]) return !1;
+      return BB.boxes.every(((BB, GB) => BB === OB.boxes[GB]))
     }
 
-    function rL(HH, BH, LH, AH, rH) {
-      if (!HH.isBlockInLoadedChunk(BH, AH - 6, LH) || !HH.isBlockInLoadedChunk(BH, AH + 6 + rH, LH) || !HH.canModifyBlockAt(BH, AH, LH)) return NaN;
-      let SH = AH - 1;
-      if (0 !== HH.getBlockId(BH, SH, LH)) {
-        for (; SH < AH + 6 && 0 !== HH.getBlockId(BH, SH + 1, LH);) SH++;
-        return SH
+    function DG(BB, OB, GB, YB, DB) {
+      if (!BB.isBlockInLoadedChunk(OB, YB - 6, GB) || !BB.isBlockInLoadedChunk(OB, YB + 6 + DB, GB) || !BB.canModifyBlockAt(OB, YB, GB)) return NaN;
+      let QB = YB - 1;
+      if (0 !== BB.getBlockId(OB, QB, GB)) {
+        for (; QB < YB + 6 && 0 !== BB.getBlockId(OB, QB + 1, GB);) QB++;
+        return QB
       }
-      for (; SH > AH - 6;)
-        if (SH--, 0 !== HH.getBlockId(BH, SH, LH)) return SH;
+      for (; QB > YB - 6;)
+        if (QB--, 0 !== BB.getBlockId(OB, QB, GB)) return QB;
       return NaN
     }
 
-    function SL(HH, BH, LH, AH, rH) {
-      let SH = 0;
-      for (let hH = AH + 1; hH <= AH + rH; hH++) 0 !== HH.getBlockId(BH, hH, LH) && SH++;
-      return SH
+    function QG(BB, OB, GB, YB, DB) {
+      let QB = 0;
+      for (let oB = YB + 1; oB <= YB + DB; oB++) 0 !== BB.getBlockId(OB, oB, GB) && QB++;
+      return QB
     }
 
-    function hL(HH) {
-      const BH = new Map;
-      for (const hH of HH) {
-        var LH;
-        if (Number.isNaN(hH)) return null;
-        BH.set(hH, (null !== (LH = BH.get(hH)) && void 0 !== LH ? LH : 0) + 1)
+    function oG(BB) {
+      const OB = new Map;
+      for (const oB of BB) {
+        var GB;
+        if (Number.isNaN(oB)) return null;
+        OB.set(oB, (null !== (GB = OB.get(oB)) && void 0 !== GB ? GB : 0) + 1)
       }
-      let AH = NaN,
-        rH = 0;
-      for (const [hH, tH] of BH)(tH > rH || tH === rH && hH < AH) && (AH = hH, rH = tH);
-      let SH = 0;
-      for (const hH of HH) SH += Math.abs(hH - AH);
-      return SH
+      let YB = NaN,
+        DB = 0;
+      for (const [oB, jB] of OB)(jB > DB || jB === DB && oB < YB) && (YB = oB, DB = jB);
+      let QB = 0;
+      for (const oB of BB) QB += Math.abs(oB - YB);
+      return QB
     }
 
-    function tL(HH, BH, LH, AH) {
+    function jG(BB, OB, GB, YB) {
       const {
-        eye: rH,
-        forward: SH,
-        tanHalfFovX: hH,
-        tanHalfFovY: tH
-      } = HH, [zH, CH] = function(HH) {
-        let [BH, LH, AH] = HH;
-        const rH = Math.hypot(BH, AH),
-          [SH, hH] = [AH / rH, -BH / rH];
+        eye: DB,
+        forward: QB,
+        tanHalfFovX: oB,
+        tanHalfFovY: jB
+      } = BB, [yB, JB] = function(BB) {
+        let [OB, GB, YB] = BB;
+        const DB = Math.hypot(OB, YB),
+          [QB, oB] = [YB / DB, -OB / DB];
         return [
-          [SH, 0, hH],
-          [LH * hH, AH * SH - BH * hH, -LH * SH]
+          [QB, 0, oB],
+          [GB * oB, YB * QB - OB * oB, -GB * QB]
         ]
-      }(SH), [EH, XH] = [BH * hH, LH * tH], GH = SH[0] + EH * zH[0] + XH * CH[0], YH = SH[1] + XH * CH[1], uH = SH[2] + EH * zH[2] + XH * CH[2], QH = (AH - rH[1]) / YH;
-      return QH > 0 && QH < 1 / 0 ? [rH[0] + QH * GH, rH[2] + QH * uH] : null
+      }(QB), [MB, PB] = [OB * oB, GB * jB], zB = QB[0] + MB * yB[0] + PB * JB[0], lB = QB[1] + PB * JB[1], pB = QB[2] + MB * yB[2] + PB * JB[2], qB = (YB - DB[1]) / lB;
+      return qB > 0 && qB < 1 / 0 ? [DB[0] + qB * zB, DB[2] + qB * pB] : null
     }
-    const zL = "plotsBlueprintPlacementChanged",
-      CL = {
+    const yG = "plotsBlueprintPlacementChanged",
+      JG = {
         size: .9,
         alpha: .2,
         crossed: !1
       };
-    class EL {
-      constructor(HH, BH) {
-        this.api = HH, this.localPlayerId = BH, this.placing = null, this.view = null, this.camera = {
+    class MG {
+      constructor(BB, OB) {
+        this.api = BB, this.localPlayerId = OB, this.placing = null, this.view = null, this.camera = {
           eye: [0, 0, 0],
           forward: [0, 0, 1],
           tanHalfFovX: 1,
           tanHalfFovY: 1
-        }, this.chunkWatch = void 0, this.meshes = void 0, this.start = HH => {
-          var BH, LH, AH, SH;
-          const hH = null !== (BH = null === (LH = this.placing) || void 0 === LH ? void 0 : LH.rotation) && void 0 !== BH ? BH : 0,
+        }, this.chunkWatch = void 0, this.meshes = void 0, this.start = BB => {
+          var OB, GB, YB, QB;
+          const oB = null !== (OB = null === (GB = this.placing) || void 0 === GB ? void 0 : GB.rotation) && void 0 !== OB ? OB : 0,
             {
-              size: tH
-            } = JH(HH, hH),
-            zH = this.api.hT(this.localPlayerId),
-            [CH, EH] = null !== (AH = null !== (SH = function(HH, BH, LH, AH) {
-              const [rH, SH, hH] = BH, [tH, zH, CH] = [Math.floor(LH[0]), Math.floor(LH[1]), Math.floor(LH[2])], EH = 6 + Math.max(rH, hH) / 2, [XH, GH] = [Math.ceil(EH + rH / 2), Math.ceil(EH + hH / 2)], [YH, uH] = [tH - XH, CH - GH], [QH, WH] = [2 * XH + 1, 2 * GH + 1], MH = new Float64Array(QH * WH), xH = new Uint16Array(QH * WH);
-              for (let VH = 0; VH < QH; VH++)
-                for (let BH = 0; BH < WH; BH++) {
-                  const LH = rL(HH, YH + VH, uH + BH, zH, SH);
-                  MH[VH * WH + BH] = LH, Number.isNaN(LH) || (xH[VH * WH + BH] = SL(HH, YH + VH, uH + BH, LH, SH))
+              size: jB
+            } = vB(BB, oB),
+            yB = this.api.pR(this.localPlayerId),
+            [JB, MB] = null !== (YB = null !== (QB = function(BB, OB, GB, YB) {
+              const [DB, QB, oB] = OB, [jB, yB, JB] = [Math.floor(GB[0]), Math.floor(GB[1]), Math.floor(GB[2])], MB = 6 + Math.max(DB, oB) / 2, [PB, zB] = [Math.ceil(MB + DB / 2), Math.ceil(MB + oB / 2)], [lB, pB] = [jB - PB, JB - zB], [qB, ZB] = [2 * PB + 1, 2 * zB + 1], NB = new Float64Array(qB * ZB), RB = new Uint16Array(qB * ZB);
+              for (let nB = 0; nB < qB; nB++)
+                for (let OB = 0; OB < ZB; OB++) {
+                  const GB = DG(BB, lB + nB, pB + OB, yB, QB);
+                  NB[nB * ZB + OB] = GB, Number.isNaN(GB) || (RB[nB * ZB + OB] = QG(BB, lB + nB, pB + OB, GB, QB))
                 }
-              const vH = Math.hypot(AH[0], AH[2]),
-                PH = [];
-              let TH = null,
-                UH = 1 / 0;
-              for (let VH = 0; VH + rH <= QH; VH++)
-                for (let HH = 0; HH + hH <= WH; HH++) {
-                  const [BH, SH] = [YH + VH, uH + HH], [zH, XH] = [BH + rH / 2 - LH[0], SH + hH / 2 - LH[2]], GH = Math.hypot(zH, XH);
-                  if (GH > EH || tH >= BH - 2 && tH < BH + rH + 2 && CH >= SH - 2 && CH < SH + hH + 2) continue;
-                  PH.length = 0;
-                  let QH = 0;
-                  for (let LH = 0; LH < rH; LH++)
-                    for (let BH = 0; BH < hH; BH++) PH.push(MH[(VH + LH) * WH + HH + BH]), QH += xH[(VH + LH) * WH + HH + BH];
-                  const OH = hL(PH);
-                  if (null === OH) continue;
-                  const bH = GH + 3 * (OH + QH) + (1 - (0 === vH ? 1 : (zH * AH[0] + XH * AH[2]) / (GH * vH))) / 2 * 6;
-                  bH < UH && (UH = bH, TH = [BH, SH])
+              const WB = Math.hypot(YB[0], YB[2]),
+                AB = [];
+              let VB = null,
+                SB = 1 / 0;
+              for (let nB = 0; nB + DB <= qB; nB++)
+                for (let BB = 0; BB + oB <= ZB; BB++) {
+                  const [OB, QB] = [lB + nB, pB + BB], [yB, PB] = [OB + DB / 2 - GB[0], QB + oB / 2 - GB[2]], zB = Math.hypot(yB, PB);
+                  if (zB > MB || jB >= OB - 2 && jB < OB + DB + 2 && JB >= QB - 2 && JB < QB + oB + 2) continue;
+                  AB.length = 0;
+                  let qB = 0;
+                  for (let GB = 0; GB < DB; GB++)
+                    for (let OB = 0; OB < oB; OB++) AB.push(NB[(nB + GB) * ZB + BB + OB]), qB += RB[(nB + GB) * ZB + BB + OB];
+                  const UB = oG(AB);
+                  if (null === UB) continue;
+                  const fB = zB + 3 * (UB + qB) + (1 - (0 === WB ? 1 : (yB * YB[0] + PB * YB[2]) / (zB * WB))) / 2 * 6;
+                  fB < SB && (SB = fB, VB = [OB, QB])
                 }
-              return TH
-            }(this.api, tH, zH, this.camera.forward)) && void 0 !== SH ? SH : this.cornerOnTarget(tH)) && void 0 !== AH ? AH : [Math.floor(zH[0]) + 2, Math.floor(zH[2])];
+              return VB
+            }(this.api, jB, yB, this.camera.forward)) && void 0 !== QB ? QB : this.cornerOnTarget(jB)) && void 0 !== YB ? YB : [Math.floor(yB[0]) + 2, Math.floor(yB[2])];
           this.placing = {
-            id: HH,
-            rotation: hH,
-            corner: [CH, this.playerLevel(), EH],
+            id: BB,
+            rotation: oB,
+            corner: [JB, this.playerLevel(), MB],
             sent: null,
             refusals: 0,
             hover: null,
             drag: null,
             moved: !1,
             stillSinceMs: performance.now()
-          }, this.update(), this.api.sendCommand(`${rH} preview`)
+          }, this.update(), this.api.sendCommand(`${DB} preview`)
         }, this.rotate = () => {
           const {
-            id: HH,
-            rotation: BH,
-            corner: LH
-          } = this.placing, rH = AH[(AH.indexOf(BH) + 1) % AH.length], [SH, , hH] = JH(HH, BH).size, [tH, , zH] = JH(HH, rH).size;
-          this.moveTo(LH[0] + Math.floor(SH / 2) - Math.floor(tH / 2), LH[2] + Math.floor(hH / 2) - Math.floor(zH / 2), rH)
-        }, this.hoverAt = (HH, BH) => {
-          this.placing.hover = [HH, BH], this.moveCentreTo(this.camera, HH, BH)
+            id: BB,
+            rotation: OB,
+            corner: GB
+          } = this.placing, DB = YB[(YB.indexOf(OB) + 1) % YB.length], [QB, , oB] = vB(BB, OB).size, [jB, , yB] = vB(BB, DB).size;
+          this.moveTo(GB[0] + Math.floor(QB / 2) - Math.floor(jB / 2), GB[2] + Math.floor(oB / 2) - Math.floor(yB / 2), DB)
+        }, this.hoverAt = (BB, OB) => {
+          this.placing.hover = [BB, OB], this.moveCentreTo(this.camera, BB, OB)
         }, this.endHover = () => {
           this.placing.hover = null
-        }, this.beginDrag = (HH, BH) => {
-          const LH = this.placing,
+        }, this.beginDrag = (BB, OB) => {
+          const GB = this.placing,
             {
-              eye: AH,
-              forward: rH,
-              tanHalfFovX: SH,
-              tanHalfFovY: hH
+              eye: YB,
+              forward: DB,
+              tanHalfFovX: QB,
+              tanHalfFovY: oB
             } = this.camera,
-            tH = {
-              eye: [AH[0], AH[1], AH[2]],
-              forward: [rH[0], rH[1], rH[2]],
-              tanHalfFovX: SH,
-              tanHalfFovY: hH
+            jB = {
+              eye: [YB[0], YB[1], YB[2]],
+              forward: [DB[0], DB[1], DB[2]],
+              tanHalfFovX: QB,
+              tanHalfFovY: oB
             },
-            zH = LH.corner[1],
-            CH = tL(tH, HH, BH, zH);
-          LH.hover = null, LH.drag = CH && {
-            view: tH,
-            ground: CH,
-            corner: [LH.corner[0], LH.corner[2]],
-            level: zH
+            yB = GB.corner[1],
+            JB = jG(jB, BB, OB, yB);
+          GB.hover = null, GB.drag = JB && {
+            view: jB,
+            ground: JB,
+            corner: [GB.corner[0], GB.corner[2]],
+            level: yB
           }
-        }, this.dragTo = (HH, BH) => {
-          const LH = this.placing.drag,
-            AH = LH && tL(LH.view, HH, BH, LH.level);
-          null !== LH && null !== AH && this.moveTo(LH.corner[0] + Math.round(AH[0] - LH.ground[0]), LH.corner[1] + Math.round(AH[1] - LH.ground[1]))
+        }, this.dragTo = (BB, OB) => {
+          const GB = this.placing.drag,
+            YB = GB && jG(GB.view, BB, OB, GB.level);
+          null !== GB && null !== YB && this.moveTo(GB.corner[0] + Math.round(YB[0] - GB.ground[0]), GB.corner[1] + Math.round(YB[1] - GB.ground[1]))
         }, this.endDrag = () => {
           this.placing.drag = null
         }, this.tap = () => {
-          const HH = this.view;
-          HH.waiting || (HH.blocked ? this.AX({
-            ...HH,
+          const BB = this.view;
+          BB.waiting || (BB.blocked ? this.tM({
+            ...BB,
             refusals: ++this.placing.refusals
           }) : this.build())
         }, this.build = () => {
-          const HH = this.placing,
+          const BB = this.placing,
             {
-              id: BH,
-              rotation: LH,
-              corner: AH
-            } = HH;
-          this.api.sendCommand(`${rH} place ${BH} ${AH.join(" ")} ${LH}`), HH.sent = {
+              id: OB,
+              rotation: GB,
+              corner: YB
+            } = BB;
+          this.api.sendCommand(`${DB} place ${OB} ${YB.join(" ")} ${GB}`), BB.sent = {
             atMs: performance.now(),
-            corner: [...AH],
-            rotation: LH,
+            corner: [...YB],
+            rotation: GB,
             timedOut: !1
           }, this.update()
         }, this.stop = () => {
-          null !== this.placing && (this.close(), this.api.sendCommand(`${rH} preview off`))
-        }, this.chunkWatch = new dB(HH), this.meshes = new HL(HH)
+          null !== this.placing && (this.close(), this.api.sendCommand(`${DB} preview off`))
+        }, this.chunkWatch = new bO(BB), this.meshes = new BG(BB)
       }
       getView() {
         return this.view
       }
-      IX() {
-        const HH = this.placing;
-        null !== HH && (null !== HH.sent && !HH.sent.timedOut && performance.now() - HH.sent.atMs > 3e3 ? (HH.sent.timedOut = !0, this.update()) : (this.followPlayerLevel(HH) || this.chunkWatch.changed() || this.view.settled !== XL(HH, this.view.blocked)) && this.update())
+      kP() {
+        const BB = this.placing;
+        null !== BB && (null !== BB.sent && !BB.sent.timedOut && performance.now() - BB.sent.atMs > 3e3 ? (BB.sent.timedOut = !0, this.update()) : (this.followPlayerLevel(BB) || this.chunkWatch.changed() || this.view.settled !== PG(BB, this.view.blocked)) && this.update())
       }
-      afterRender(HH) {
-        ! function(HH, BH) {
-          for (let LH = 0; LH < 3; LH++) BH.eye[LH] = HH.cameraPosition[LH], BH.forward[LH] = HH.cameraDirection[LH];
-          BH.tanHalfFovX = HH.tanHalfFovX, BH.tanHalfFovY = HH.tanHalfFovY
-        }(HH, this.camera);
-        const BH = this.placing;
-        null !== BH && null !== BH.hover && this.moveCentreTo(this.camera, BH.hover[0], BH.hover[1])
+      afterRender(BB) {
+        ! function(BB, OB) {
+          for (let GB = 0; GB < 3; GB++) OB.eye[GB] = BB.cameraPosition[GB], OB.forward[GB] = BB.cameraDirection[GB];
+          OB.tanHalfFovX = BB.tanHalfFovX, OB.tanHalfFovY = BB.tanHalfFovY
+        }(BB, this.camera);
+        const OB = this.placing;
+        null !== OB && null !== OB.hover && this.moveCentreTo(this.camera, OB.hover[0], OB.hover[1])
       }
-      kX(HH) {
-        const BH = this.placing;
-        if (null === BH || null === BH.sent || "active" !== HH[0]) return;
+      nP(BB) {
+        const OB = this.placing;
+        if (null === OB || null === OB.sent || "active" !== BB[0]) return;
         const {
-          sent: LH
-        } = BH, [, AH, rH, SH, hH, tH, zH] = HH;
-        rH && AH === BH.id && zH === LH.rotation && SH === LH.corner[0] && hH === LH.corner[1] && tH === LH.corner[2] && this.close()
+          sent: GB
+        } = OB, [, YB, DB, QB, oB, jB, yB] = BB;
+        DB && YB === OB.id && yB === GB.rotation && QB === GB.corner[0] && oB === GB.corner[1] && jB === GB.corner[2] && this.close()
       }
       endFromServer() {
         null !== this.placing && this.close()
@@ -1398,1237 +1398,1237 @@ export const modules = {
       dispose() {
         this.meshes.dispose()
       }
-      cornerOnTarget(HH) {
-        let [BH, , LH] = HH;
-        const AH = this.api.getTargetedBlock();
-        if (null === AH) return null;
-        const [rH, , SH] = AH.position;
-        return [rH - Math.floor(BH / 2), SH - Math.floor(LH / 2)]
+      cornerOnTarget(BB) {
+        let [OB, , GB] = BB;
+        const YB = this.api.getTargetedBlock();
+        if (null === YB) return null;
+        const [DB, , QB] = YB.position;
+        return [DB - Math.floor(OB / 2), QB - Math.floor(GB / 2)]
       }
       playerLevel() {
-        var HH;
-        const [BH, LH, AH] = this.api.hT(this.localPlayerId);
-        if (null !== (HH = this.api.getLocalPlayerMovement()) && void 0 !== HH && HH.onGround) return Math.ceil(LH - .01);
-        const [rH, SH, hH] = [Math.floor(BH), Math.floor(LH), Math.floor(AH)];
-        for (let tH = SH; tH >= SH - 2; tH--)
-          if (this.api.isSolidToPlayerBlockId(this.api.getBlockId(rH, tH, hH))) return tH + 1;
-        return SH
+        var BB;
+        const [OB, GB, YB] = this.api.pR(this.localPlayerId);
+        if (null !== (BB = this.api.getLocalPlayerMovement()) && void 0 !== BB && BB.onGround) return Math.ceil(GB - .01);
+        const [DB, QB, oB] = [Math.floor(OB), Math.floor(GB), Math.floor(YB)];
+        for (let jB = QB; jB >= QB - 2; jB--)
+          if (this.api.isSolidToPlayerBlockId(this.api.getBlockId(DB, jB, oB))) return jB + 1;
+        return QB
       }
-      followPlayerLevel(HH) {
-        if (GL(HH)) return !1;
-        const BH = this.playerLevel();
-        return BH !== HH.corner[1] && (HH.corner[1] = BH, !0)
+      followPlayerLevel(BB) {
+        if (zG(BB)) return !1;
+        const OB = this.playerLevel();
+        return OB !== BB.corner[1] && (BB.corner[1] = OB, !0)
       }
-      moveCentreTo(HH, BH, LH) {
-        const AH = this.placing,
-          rH = tL(HH, BH, LH, AH.corner[1]);
-        if (null !== rH) {
-          const [HH, , BH] = JH(AH.id, AH.rotation).size;
-          this.moveTo(Math.round(rH[0] - HH / 2), Math.round(rH[1] - BH / 2))
+      moveCentreTo(BB, OB, GB) {
+        const YB = this.placing,
+          DB = jG(BB, OB, GB, YB.corner[1]);
+        if (null !== DB) {
+          const [BB, , OB] = vB(YB.id, YB.rotation).size;
+          this.moveTo(Math.round(DB[0] - BB / 2), Math.round(DB[1] - OB / 2))
         }
       }
-      moveTo(HH, BH) {
-        let LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.placing.rotation;
-        const AH = this.placing;
-        if (GL(AH)) return;
-        const [rH, SH, hH] = AH.corner;
-        if (this.centreOnPlot(rH, hH) && !this.centreOnPlot(HH, BH, LH))
-          if (this.centreOnPlot(HH, hH, LH)) BH = hH;
+      moveTo(BB, OB) {
+        let GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.placing.rotation;
+        const YB = this.placing;
+        if (zG(YB)) return;
+        const [DB, QB, oB] = YB.corner;
+        if (this.centreOnPlot(DB, oB) && !this.centreOnPlot(BB, OB, GB))
+          if (this.centreOnPlot(BB, oB, GB)) OB = oB;
           else {
-            if (!this.centreOnPlot(rH, BH, LH)) return;
-            HH = rH
-          } HH === rH && BH === hH && LH === AH.rotation || (AH.rotation = LH, AH.corner = [HH, SH, BH], AH.moved = !0, AH.stillSinceMs = performance.now(), this.update())
+            if (!this.centreOnPlot(DB, OB, GB)) return;
+            BB = DB
+          } BB === DB && OB === oB && GB === YB.rotation || (YB.rotation = GB, YB.corner = [BB, QB, OB], YB.moved = !0, YB.stillSinceMs = performance.now(), this.update())
       }
-      centreOnPlot(HH, BH) {
-        let LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.placing.rotation;
+      centreOnPlot(BB, OB) {
+        let GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.placing.rotation;
         const {
-          id: AH,
-          corner: rH
-        } = this.placing, [SH, , hH] = JH(AH, LH).size;
-        return this.api.canModifyBlockAt(HH + Math.floor(SH / 2), rH[1], BH + Math.floor(hH / 2))
+          id: YB,
+          corner: DB
+        } = this.placing, [QB, , oB] = vB(YB, GB).size;
+        return this.api.canModifyBlockAt(BB + Math.floor(QB / 2), DB[1], OB + Math.floor(oB / 2))
       }
       close() {
-        this.placing = null, this.meshes.dispose(), this.AX(null)
+        this.placing = null, this.meshes.dispose(), this.tM(null)
       }
       update() {
         const {
-          id: HH,
-          rotation: BH,
-          corner: LH,
-          refusals: AH
-        } = this.placing, rH = new yB, SH = [];
-        let hH = !1,
-          tH = 0;
+          id: BB,
+          rotation: OB,
+          corner: GB,
+          refusals: YB
+        } = this.placing, DB = new tO, QB = [];
+        let oB = !1,
+          jB = 0;
         for (const {
-            offset: XH,
-            block: GH
+            offset: PB,
+            block: zB
           }
-          of JH(HH, BH).cells) {
-          const [HH, BH, AH] = [LH[0] + XH[0], LH[1] + XH[1], LH[2] + XH[2]];
-          SH.push(HH, BH, AH);
-          const zH = !this.api.canModifyBlockAt(HH, BH, AH),
-            CH = this.api.getBlockId(HH, BH, AH),
-            EH = !cB(CH) && !KB(this.api.blockNameToBlockId(GH), CH);
-          hH ||= zH, tH += EH ? 1 : 0, zH || EH ? rH.add(HH, BH, AH, pB, iB) : rH.add(HH, BH, AH, qB(GH), CL, wB(GH))
+          of vB(BB, OB).cells) {
+          const [BB, OB, YB] = [GB[0] + PB[0], GB[1] + PB[1], GB[2] + PB[2]];
+          QB.push(BB, OB, YB);
+          const yB = !this.api.canModifyBlockAt(BB, OB, YB),
+            JB = this.api.getBlockId(BB, OB, YB),
+            MB = !iO(JB) && !FO(this.api.blockNameToBlockId(zB), JB);
+          oB ||= yB, jB += MB ? 1 : 0, yB || MB ? DB.add(BB, OB, YB, xO, sO) : DB.add(BB, OB, YB, gO(zB), JG, eO(zB))
         }
-        this.chunkWatch.watch(SH), this.meshes.show(rH.toArray());
-        const zH = this.view,
-          CH = GL(this.placing),
-          EH = XL(this.placing, hH);
-        (null === zH || void 0 === zH ? void 0 : zH.id) === HH && zH.blocked === hH && zH.toClear === tH && zH.waiting === CH && zH.refusals === AH && zH.settled === EH || this.AX({
-          id: HH,
-          blocked: hH,
-          toClear: tH,
-          waiting: CH,
-          refusals: AH,
-          settled: EH
+        this.chunkWatch.watch(QB), this.meshes.show(DB.toArray());
+        const yB = this.view,
+          JB = zG(this.placing),
+          MB = PG(this.placing, oB);
+        (null === yB || void 0 === yB ? void 0 : yB.id) === BB && yB.blocked === oB && yB.toClear === jB && yB.waiting === JB && yB.refusals === YB && yB.settled === MB || this.tM({
+          id: BB,
+          blocked: oB,
+          toClear: jB,
+          waiting: JB,
+          refusals: YB,
+          settled: MB
         })
       }
-      AX(HH) {
-        this.view = HH, VH.k.AX(zL, HH, !0)
+      tM(BB) {
+        this.view = BB, nB.o.tM(yG, BB, !0)
       }
     }
 
-    function XL(HH, BH) {
+    function PG(BB, OB) {
       let {
-        moved: LH,
-        stillSinceMs: AH
-      } = HH;
-      return !BH && performance.now() - AH >= (LH ? 1500 : 6e3)
+        moved: GB,
+        stillSinceMs: YB
+      } = BB;
+      return !OB && performance.now() - YB >= (GB ? 1500 : 6e3)
     }
 
-    function GL(HH) {
+    function zG(BB) {
       let {
-        sent: BH
-      } = HH;
-      return null !== BH && !BH.timedOut
+        sent: OB
+      } = BB;
+      return null !== OB && !OB.timedOut
     }
-    var YL = LH(4951);
-    class uL {
-      constructor(HH) {
-        this.placement = HH, this.press = null
+    var lG = GB(4956);
+    class pG {
+      constructor(BB) {
+        this.placement = BB, this.press = null
       }
-      down(HH) {
+      down(BB) {
         if (null !== this.press) return !1;
         const {
-          id: BH,
-          mouse: LH,
-          x: AH,
-          y: rH,
-          atMs: SH
-        } = HH;
+          id: OB,
+          mouse: GB,
+          x: YB,
+          y: DB,
+          atMs: QB
+        } = BB;
         return this.press = {
-          id: BH,
-          mouse: LH,
-          x: AH,
-          y: rH,
-          atMs: SH,
+          id: OB,
+          mouse: GB,
+          x: YB,
+          y: DB,
+          atMs: QB,
           moved: !1
-        }, LH || this.placement.beginDrag(HH.ndcX, HH.ndcY), !0
+        }, GB || this.placement.beginDrag(BB.ndcX, BB.ndcY), !0
       }
-      move(HH) {
-        const BH = this.press;
-        null !== BH && BH.id === HH.id && (BH.moved ||= Math.hypot(HH.x - BH.x, HH.y - BH.y) > 8), HH.mouse ? this.placement.hoverAt(HH.ndcX, HH.ndcY) : (null === BH || void 0 === BH ? void 0 : BH.id) === HH.id && this.placement.dragTo(HH.ndcX, HH.ndcY)
+      move(BB) {
+        const OB = this.press;
+        null !== OB && OB.id === BB.id && (OB.moved ||= Math.hypot(BB.x - OB.x, BB.y - OB.y) > 8), BB.mouse ? this.placement.hoverAt(BB.ndcX, BB.ndcY) : (null === OB || void 0 === OB ? void 0 : OB.id) === BB.id && this.placement.dragTo(BB.ndcX, BB.ndcY)
       }
-      up(HH) {
-        const BH = this.press;
-        (null === BH || void 0 === BH ? void 0 : BH.id) === HH.id && (this.move(HH), this.end(), !BH.moved && (BH.mouse || HH.atMs - BH.atMs <= 250) && this.placement.tap())
+      up(BB) {
+        const OB = this.press;
+        (null === OB || void 0 === OB ? void 0 : OB.id) === BB.id && (this.move(BB), this.end(), !OB.moved && (OB.mouse || BB.atMs - OB.atMs <= 250) && this.placement.tap())
       }
-      cancel(HH) {
-        var BH;
-        (null === (BH = this.press) || void 0 === BH ? void 0 : BH.id) === HH && this.end()
+      cancel(BB) {
+        var OB;
+        (null === (OB = this.press) || void 0 === OB ? void 0 : OB.id) === BB && this.end()
       }
-      leave(HH) {
+      leave(BB) {
         let {
-          id: BH,
-          mouse: LH
-        } = HH;
-        LH && this.placement.endHover(), this.cancel(BH)
+          id: OB,
+          mouse: GB
+        } = BB;
+        GB && this.placement.endHover(), this.cancel(OB)
       }
       end() {
         this.press.mouse || this.placement.endDrag(), this.press = null
       }
     }
-    const QL = "PlotsPlacementLayer";
+    const qG = "PlotsPlacementLayer";
 
-    function WL(HH) {
+    function ZG(BB) {
       let {
-        placement: BH
-      } = HH;
-      return null === (0, zH.e)(zL, BH.getView()) ? null : (0, eH.jsx)(ML, {
-        placement: BH
+        placement: OB
+      } = BB;
+      return null === (0, yB.i)(yG, OB.getView()) ? null : (0, LB.jsx)(NG, {
+        placement: OB
       })
     }
 
-    function ML(HH) {
+    function NG(BB) {
       let {
-        placement: BH
-      } = HH;
-      (0, YL.c)(!0, !0, QL);
-      const LH = (0, SH.useMemo)((() => new uL(BH)), [BH]);
-      return (0, eH.jsx)("div", {
+        placement: OB
+      } = BB;
+      (0, lG.e)(!0, !0, qG);
+      const GB = (0, QB.useMemo)((() => new pG(OB)), [OB]);
+      return (0, LB.jsx)("div", {
         className: "PlotsPlacementLayer",
-        onPointerDown: HH => {
-          "mouse" === HH.pointerType && 0 !== HH.button || !LH.down(xL(HH)) || HH.currentTarget.setPointerCapture(HH.pointerId)
+        onPointerDown: BB => {
+          "mouse" === BB.pointerType && 0 !== BB.button || !GB.down(RG(BB)) || BB.currentTarget.setPointerCapture(BB.pointerId)
         },
-        onPointerMove: HH => {
-          LH.move(xL(HH))
+        onPointerMove: BB => {
+          GB.move(RG(BB))
         },
-        onPointerUp: HH => {
-          LH.up(xL(HH))
+        onPointerUp: BB => {
+          GB.up(RG(BB))
         },
-        onPointerCancel: HH => {
-          LH.cancel(HH.pointerId)
+        onPointerCancel: BB => {
+          GB.cancel(BB.pointerId)
         },
-        onLostPointerCapture: HH => {
-          LH.cancel(HH.pointerId)
+        onLostPointerCapture: BB => {
+          GB.cancel(BB.pointerId)
         },
-        onPointerLeave: HH => {
-          LH.leave(xL(HH))
+        onPointerLeave: BB => {
+          GB.leave(RG(BB))
         },
         "aria-hidden": !0
       })
     }
 
-    function xL(HH) {
+    function RG(BB) {
       const {
-        left: BH,
-        top: LH,
-        width: AH,
-        height: rH
-      } = HH.currentTarget.getBoundingClientRect();
+        left: OB,
+        top: GB,
+        width: YB,
+        height: DB
+      } = BB.currentTarget.getBoundingClientRect();
       return {
-        id: HH.pointerId,
-        mouse: "mouse" === HH.pointerType,
-        x: HH.clientX,
-        y: HH.clientY,
-        ndcX: (HH.clientX - BH) / AH * 2 - 1,
-        ndcY: 1 - (HH.clientY - LH) / rH * 2,
-        atMs: HH.timeStamp
+        id: BB.pointerId,
+        mouse: "mouse" === BB.pointerType,
+        x: BB.clientX,
+        y: BB.clientY,
+        ndcX: (BB.clientX - OB) / YB * 2 - 1,
+        ndcY: 1 - (BB.clientY - GB) / DB * 2,
+        atMs: BB.timeStamp
       }
     }
 
-    function vL() {
-      return (0, WB.p)().some((HH => HH !== WB.d && HH !== QL))
+    function WG() {
+      return (0, ZO.n)().some((BB => BB !== ZO.b && BB !== qG))
     }
-    const PL = 2500;
+    const AG = 2500;
 
-    function TL(HH) {
+    function VG(BB) {
       let {
-        hud: BH,
-        guide: LH,
-        tracker: AH,
-        placement: rH,
-        children: hH
-      } = HH;
+        hud: OB,
+        guide: GB,
+        tracker: YB,
+        placement: DB,
+        children: oB
+      } = BB;
       const {
-        t: XH
-      } = (0, EH.B)(), {
-        isTouchScreen: GH
-      } = (0, tH.m)(["isTouchScreen"]), YH = (0, zH.e)(LB, BH.getGuide()), uH = (0, zH.e)(BB, BH.getPlot()), QH = (0, zH.e)(iH, AH.get()), WH = function(HH) {
+        t: PB
+      } = (0, MB.H)(), {
+        isTouchScreen: zB
+      } = (0, jB.o)(["isTouchScreen"]), lB = (0, yB.i)(GO, OB.getGuide()), pB = (0, yB.i)(OO, OB.getPlot()), qB = (0, yB.i)(sB, YB.get()), ZB = function(BB) {
         const {
-          openInGameMenuName: BH,
-          openEverythingMenuName: LH,
-          loadingOverlayVisible: AH
-        } = (0, tH.m)(["openInGameMenuName", "openEverythingMenuName", "loadingOverlayVisible"]), rH = (0, MB.b)(), [hH, CH] = (0, SH.useState)(vL);
-        (0, SH.useEffect)((() => {
-          const HH = () => {
-            CH(vL())
+          openInGameMenuName: OB,
+          openEverythingMenuName: GB,
+          loadingOverlayVisible: YB
+        } = (0, jB.o)(["openInGameMenuName", "openEverythingMenuName", "loadingOverlayVisible"]), DB = (0, NO.d)(), [oB, JB] = (0, QB.useState)(WG);
+        (0, QB.useEffect)((() => {
+          const BB = () => {
+            JB(WG())
           };
-          HH();
-          const BH = (0, WB.l)(HH),
-            LH = (0, WB.j)(HH);
+          BB();
+          const OB = (0, ZO.k)(BB),
+            GB = (0, ZO.j)(BB);
           return () => {
-            BH(), LH()
+            OB(), GB()
           }
         }), []);
-        const EH = (0, zH.e)(zL, HH.getView()),
-          XH = "clientGame" === BH;
+        const MB = (0, yB.i)(yG, BB.getView()),
+          PB = "clientGame" === OB;
         return {
-          hudHidden: rH || AH,
-          journalOpen: XH,
-          covered: hH || null !== LH || null !== BH && !XH,
-          placing: null === EH ? null : EH.settled ? "placeBuild" : "placeSpot"
+          hudHidden: DB || YB,
+          journalOpen: PB,
+          covered: oB || null !== GB || null !== OB && !PB,
+          placing: null === MB ? null : MB.settled ? "placeBuild" : "placeSpot"
         }
-      }(rH), MH = function(HH, BH, LH) {
-        return "none" === HH[0] || LH.hudHidden || LH.journalOpen || LH.covered ? null : null !== LH.placing ? LH.placing : null !== BH ? "build" : "choose" === HH[1] ? "openJournal" : null
-      }(YH, null === QH ? null : QH.id, WH), xH = function() {
-        const [HH, BH] = (0, SH.useState)(null), [LH, AH] = (0, SH.useState)(!1);
-        return (0, zH.d)(AB, (() => {
-          BH(performance.now())
-        })), (0, SH.useEffect)((() => {
-          if (null === HH) return;
-          const BH = window.setTimeout((() => {
-              AH(!0)
-            }), PL),
-            LH = window.setTimeout((() => {
-              AH(!1)
+      }(DB), NB = function(BB, OB, GB) {
+        return "none" === BB[0] || GB.hudHidden || GB.journalOpen || GB.covered ? null : null !== GB.placing ? GB.placing : null !== OB ? "build" : "choose" === BB[1] ? "openJournal" : null
+      }(lB, null === qB ? null : qB.id, ZB), RB = function() {
+        const [BB, OB] = (0, QB.useState)(null), [GB, YB] = (0, QB.useState)(!1);
+        return (0, yB.f)(YO, (() => {
+          OB(performance.now())
+        })), (0, QB.useEffect)((() => {
+          if (null === BB) return;
+          const OB = window.setTimeout((() => {
+              YB(!0)
+            }), AG),
+            GB = window.setTimeout((() => {
+              YB(!1)
             }), 7500);
           return () => {
-            window.clearTimeout(BH), window.clearTimeout(LH)
+            window.clearTimeout(OB), window.clearTimeout(GB)
           }
-        }), [HH]), LH
-      }() && !WH.hudHidden && !WH.covered && !WH.journalOpen && null === WH.placing, [vH, PH] = (0, SH.useState)(!1);
-      (0, SH.useEffect)((() => {
-        WH.journalOpen && PH(!0)
-      }), [WH.journalOpen]);
-      const [TH, VH] = (0, SH.useState)(null), [OH, bH] = (0, SH.useState)(null), [kH, mH] = (0, SH.useState)(null), oH = (0, SH.useMemo)((() => ({
-        hint: MH,
-        journalRef: VH,
-        placementCardRef: bH,
-        buildRef: mH
-      })), [MH]), IH = "plot" === uH[0] && "own" === uH[5], fH = GH && !vH && IH ? {
-        onSkip: LH.skip
+        }), [BB]), GB
+      }() && !ZB.hudHidden && !ZB.covered && !ZB.journalOpen && null === ZB.placing, [WB, AB] = (0, QB.useState)(!1);
+      (0, QB.useEffect)((() => {
+        ZB.journalOpen && AB(!0)
+      }), [ZB.journalOpen]);
+      const [VB, nB] = (0, QB.useState)(null), [UB, fB] = (0, QB.useState)(null), [kB, dB] = (0, QB.useState)(null), KB = (0, QB.useMemo)((() => ({
+        hint: NB,
+        journalRef: nB,
+        placementCardRef: fB,
+        buildRef: dB
+      })), [NB]), uB = "plot" === pB[0] && "own" === pB[5], mB = zB && !WB && uB ? {
+        onSkip: GB.skip
       } : null;
-      return (0, eH.jsxs)(UH.Provider, {
-        value: oH,
-        children: [hH, "openJournal" === MH && null !== TH && (0, eH.jsx)(EB, {
-          target: TH,
+      return (0, LB.jsxs)(SB.Provider, {
+        value: KB,
+        children: [oB, "openJournal" === NB && null !== VB && (0, LB.jsx)(MO, {
+          target: VB,
           placement: "left",
-          spotlight: fH,
-          children: GH ? XH("plotsGame:guideOpenJournal") : XH("plotsGame:guideOpenJournalKeys", {
-            key: (0, CH.p)(qH)
+          spotlight: mB,
+          children: zB ? PB("plotsGame:guideOpenJournal") : PB("plotsGame:guideOpenJournalKeys", {
+            key: (0, JB.l)(gB)
           })
-        }), "placeSpot" === MH && null !== OH && (0, eH.jsxs)(eH.Fragment, {
-          children: [GH && (0, eH.jsx)(QB, {}), (0, eH.jsx)(EB, {
-            target: OH,
+        }), "placeSpot" === NB && null !== UB && (0, LB.jsxs)(LB.Fragment, {
+          children: [zB && (0, LB.jsx)(qO, {}), (0, LB.jsx)(MO, {
+            target: UB,
             placement: "top",
-            children: XH(GH ? "plotsGame:guidePlaceSpotTouch" : "plotsGame:guidePlaceSpotMouse")
+            children: PB(zB ? "plotsGame:guidePlaceSpotTouch" : "plotsGame:guidePlaceSpotMouse")
           })]
-        }), "placeBuild" === MH && null !== kH && null !== OH && (0, eH.jsx)(EB, {
-          target: GH ? kH : OH,
+        }), "placeBuild" === NB && null !== kB && null !== UB && (0, LB.jsx)(MO, {
+          target: zB ? kB : UB,
           placement: "top",
-          children: XH(GH ? "plotsGame:guidePlaceBuildTouch" : "plotsGame:guidePlaceBuildMouse")
-        }), "build" === MH && null !== QH && (0, eH.jsx)(YB, {
-          progress: QH,
-          guide: LH
-        }), xH && null !== TH && (0, eH.jsx)(EB, {
-          target: TH,
+          children: PB(zB ? "plotsGame:guidePlaceBuildTouch" : "plotsGame:guidePlaceBuildMouse")
+        }), "build" === NB && null !== qB && (0, LB.jsx)(lO, {
+          progress: qB,
+          guide: GB
+        }), RB && null !== VB && (0, LB.jsx)(MO, {
+          target: VB,
           placement: "left",
-          children: XH("plotsGame:guideMoreBuilds")
+          children: PB("plotsGame:guideMoreBuilds")
         })]
       })
     }
-    var UL = LH(39370),
-      VL = LH(39374);
-    class OL {
-      constructor(HH, BH, LH) {
-        this.api = HH, this.localPlayerId = BH, this.nextCell = LH, this.hand = null, this.skip = () => {
+    var SG = GB(39154),
+      nG = GB(39157);
+    class UG {
+      constructor(BB, OB, GB) {
+        this.api = BB, this.localPlayerId = OB, this.nextCell = GB, this.hand = null, this.skip = () => {
           this.api.sendCommand("plotsguide skip")
-        }, this.bindHand = HH => {
-          this.hand = HH
+        }, this.bindHand = BB => {
+          this.hand = BB
         }
       }
-      afterRender(HH) {
-        const BH = this.hand;
-        if (null === BH) return;
-        const LH = this.nextCell.get();
-        if (null === LH) return void(0, UL.e)(BH, !0);
-        const AH = (0, VL.e)(BH, HH, this.api.getPositionView(this.localPlayerId), LH, 1, 40);
-        null !== AH && (0, UL.d)(BH, Math.round(100 * AH.x) / 100, Math.round(100 * AH.y) / 100)
+      afterRender(BB) {
+        const OB = this.hand;
+        if (null === OB) return;
+        const GB = this.nextCell.get();
+        if (null === GB) return void(0, SG.f)(OB, !0);
+        const YB = (0, nG.b)(OB, BB, this.api.getPositionView(this.localPlayerId), GB, 1, 40);
+        null !== YB && (0, SG.d)(OB, Math.round(100 * YB.x) / 100, Math.round(100 * YB.y) / 100)
       }
     }
-    var bL = LH(1455),
-      kL = LH(4941),
-      mL = LH(1056);
-    const oL = {
-        farm_hut: LH.p + "static/media/farm_hut.6896d8a2c96c4aa7f2fd.webp",
-        farm_house: LH.p + "static/media/farm_house.cec7df65d0fe7e2bda7f.webp",
-        farm_barn: LH.p + "static/media/farm_barn.be0d2b53d8dee46c2a20.webp",
-        rusticHome_tent: LH.p + "static/media/rusticHome_tent.e0c857b94eb15660ffce.webp",
-        rusticHome_cabin: LH.p + "static/media/rusticHome_cabin.d6d2030fc12c0f2f3bdd.webp",
-        rusticHome_house: LH.p + "static/media/rusticHome_house.4e3af79cf97326dfd0f6.webp",
-        market_stand: LH.p + "static/media/market_stand.945ed55a5fced389f3f2.webp",
-        market_stall: LH.p + "static/media/market_stall.9a562807f9dff591618a.webp",
-        market_shop: LH.p + "static/media/market_shop.190d8a0a0ea37a0db19e.webp",
-        castle_wall: LH.p + "static/media/castle_wall.a836dd2c0361ad566caa.webp",
-        castle_gate: LH.p + "static/media/castle_gate.84f01ebbd69b2fa991ce.webp",
-        castle_tower: LH.p + "static/media/castle_tower.f93382e3a0eeb3089817.webp"
+    var fG = GB(1485),
+      kG = GB(4946),
+      dG = GB(1108);
+    const KG = {
+        farm_hut: GB.p + "static/media/farm_hut.6896d8a2c96c4aa7f2fd.webp",
+        farm_house: GB.p + "static/media/farm_house.cec7df65d0fe7e2bda7f.webp",
+        farm_barn: GB.p + "static/media/farm_barn.be0d2b53d8dee46c2a20.webp",
+        rusticHome_tent: GB.p + "static/media/rusticHome_tent.e0c857b94eb15660ffce.webp",
+        rusticHome_cabin: GB.p + "static/media/rusticHome_cabin.d6d2030fc12c0f2f3bdd.webp",
+        rusticHome_house: GB.p + "static/media/rusticHome_house.4e3af79cf97326dfd0f6.webp",
+        market_stand: GB.p + "static/media/market_stand.945ed55a5fced389f3f2.webp",
+        market_stall: GB.p + "static/media/market_stall.9a562807f9dff591618a.webp",
+        market_shop: GB.p + "static/media/market_shop.190d8a0a0ea37a0db19e.webp",
+        castle_wall: GB.p + "static/media/castle_wall.a836dd2c0361ad566caa.webp",
+        castle_gate: GB.p + "static/media/castle_gate.84f01ebbd69b2fa991ce.webp",
+        castle_tower: GB.p + "static/media/castle_tower.f93382e3a0eeb3089817.webp"
       },
-      IL = ["plotsGame:guideEffortQuick", "plotsGame:guideEffortMedium", "plotsGame:guideEffortBigger"],
-      fL = ["market_stand", "rusticHome_tent", "farm_hut"].map((HH => ({
-        id: HH,
-        blocks: JH(HH, 0).cells.length
-      }))).sort(((HH, BH) => HH.blocks - BH.blocks)).map(((HH, BH) => ({
-        ...HH,
-        effortKey: IL[BH]
+      uG = ["plotsGame:guideEffortQuick", "plotsGame:guideEffortMedium", "plotsGame:guideEffortBigger"],
+      mG = ["market_stand", "rusticHome_tent", "farm_hut"].map((BB => ({
+        id: BB,
+        blocks: vB(BB, 0).cells.length
+      }))).sort(((BB, OB) => BB.blocks - OB.blocks)).map(((BB, OB) => ({
+        ...BB,
+        effortKey: uG[OB]
       })));
 
-    function lL(HH) {
+    function IG(BB) {
       let {
-        onBuild: BH
-      } = HH;
+        onBuild: OB
+      } = BB;
       const {
-        t: LH
-      } = (0, EH.B)();
-      return (0, eH.jsx)("div", {
+        t: GB
+      } = (0, MB.H)();
+      return (0, LB.jsx)("div", {
         className: "PlotsJournalBookPages PlotsGuideChooserCover",
-        children: (0, eH.jsxs)("div", {
+        children: (0, LB.jsxs)("div", {
           className: "PlotsGuideChooser",
-          children: [(0, eH.jsx)("h3", {
+          children: [(0, LB.jsx)("h3", {
             className: "PlotsGuideChooserTitle",
-            children: LH("plotsGame:guidePickTitle")
-          }), (0, eH.jsxs)("p", {
+            children: GB("plotsGame:guidePickTitle")
+          }), (0, LB.jsxs)("p", {
             className: "PlotsGuideChooserNote",
-            children: [(0, eH.jsx)("img", {
-              src: hB,
+            children: [(0, LB.jsx)("img", {
+              src: oO,
               alt: "",
               draggable: !1
-            }), LH("plotsGame:guidePickNote")]
-          }), (0, eH.jsx)("div", {
+            }), GB("plotsGame:guidePickNote")]
+          }), (0, LB.jsx)("div", {
             className: "PlotsGuideChooserStarters",
-            children: fL.map((HH => {
+            children: mG.map((BB => {
               let {
-                id: AH,
-                blocks: rH,
-                effortKey: SH
-              } = HH;
-              return (0, eH.jsxs)("article", {
+                id: YB,
+                blocks: DB,
+                effortKey: QB
+              } = BB;
+              return (0, LB.jsxs)("article", {
                 className: "PlotsGuideStarter",
-                children: [(0, eH.jsx)("button", {
+                children: [(0, LB.jsx)("button", {
                   type: "button",
                   className: "PlotsGuideStarterSketch",
                   tabIndex: -1,
                   "aria-hidden": !0,
                   "data-pad-ignore": !0,
                   onClick: () => {
-                    BH(AH)
+                    OB(YB)
                   },
-                  children: (0, eH.jsx)("img", {
-                    src: oL[AH],
+                  children: (0, LB.jsx)("img", {
+                    src: KG[YB],
                     alt: "",
                     draggable: !1
                   })
-                }), (0, eH.jsxs)("div", {
+                }), (0, LB.jsxs)("div", {
                   className: "PlotsGuideStarterInfo",
-                  children: [(0, eH.jsxs)("span", {
+                  children: [(0, LB.jsxs)("span", {
                     className: "PlotsGuideStarterText",
-                    children: [(0, eH.jsx)("span", {
+                    children: [(0, LB.jsx)("span", {
                       className: "PlotsGuideStarterName",
-                      children: LH(mH(AH).displayName.translationKey)
-                    }), (0, eH.jsx)("span", {
+                      children: GB(dB(YB).displayName.translationKey)
+                    }), (0, LB.jsx)("span", {
                       className: "PlotsGuideStarterEffort",
-                      children: LH(SH)
-                    }), (0, eH.jsx)("span", {
+                      children: GB(QB)
+                    }), (0, LB.jsx)("span", {
                       className: "PlotsGuideStarterBlocks",
-                      children: LH("plotsGame:journalBlocks", {
-                        blocks: String(rH)
+                      children: GB("plotsGame:journalBlocks", {
+                        blocks: String(DB)
                       })
                     })]
-                  }), (0, eH.jsx)(bL.u, {
+                  }), (0, LB.jsx)(fG.q, {
                     onClick: () => {
-                      BH(AH)
+                      OB(YB)
                     },
-                    children: LH("plotsGame:placementBuild")
+                    children: GB("plotsGame:placementBuild")
                   })]
                 })]
-              }, AH)
+              }, YB)
             }))
           })]
         })
       })
     }
 
-    function KL(HH) {
+    function FG(BB) {
       let {
-        direction: BH,
-        disabled: LH,
-        onTurn: AH
-      } = HH;
+        direction: OB,
+        disabled: GB,
+        onTurn: YB
+      } = BB;
       const {
-        t: rH
-      } = (0, EH.B)();
-      return (0, eH.jsx)("div", {
-        className: GH()("PlotsJournalArrow", BH),
-        children: (0, eH.jsx)(bL.i, {
-          disabled: LH,
-          ariaLabel: rH("Forward" === BH ? "plotsGame:journalNextPage" : "plotsGame:journalPreviousPage"),
+        t: DB
+      } = (0, MB.H)();
+      return (0, LB.jsx)("div", {
+        className: zB()("PlotsJournalArrow", OB),
+        children: (0, LB.jsx)(fG.f, {
+          disabled: GB,
+          ariaLabel: DB("Forward" === OB ? "plotsGame:journalNextPage" : "plotsGame:journalPreviousPage"),
           onClick: () => {
-            AH(BH)
+            YB(OB)
           },
-          children: (0, eH.jsx)(WH.c, {
+          children: (0, LB.jsx)(ZB.b, {
             name: "angle-up"
           })
         })
       })
     }
-    const cL = {
+    const iG = {
       small: "plotsGame:journalTierSmall",
       medium: "plotsGame:journalTierMedium",
       large: "plotsGame:journalTierLarge"
     };
 
-    function eL(HH) {
+    function LG(BB) {
       let {
-        page: BH,
-        building: LH,
-        onBuild: AH,
-        onPutAway: rH
-      } = HH;
+        page: OB,
+        building: GB,
+        onBuild: YB,
+        onPutAway: DB
+      } = BB;
       const {
-        t: SH
-      } = (0, EH.B)(), {
-        displayName: hH,
-        tier: tH
-      } = mH(BH.id), zH = JH(BH.id, 0).cells.length, CH = "locked" === BH.state, XH = LH ? bL.i : bL.u;
-      return (0, eH.jsxs)("article", {
-        className: GH()("PlotsJournalPage", {
-          Locked: CH
+        t: QB
+      } = (0, MB.H)(), {
+        displayName: oB,
+        tier: jB
+      } = dB(OB.id), yB = vB(OB.id, 0).cells.length, JB = "locked" === OB.state, PB = GB ? fG.f : fG.q;
+      return (0, LB.jsxs)("article", {
+        className: zB()("PlotsJournalPage", {
+          Locked: JB
         }),
-        children: [(0, eH.jsx)("h3", {
+        children: [(0, LB.jsx)("h3", {
           className: "PlotsJournalPageName",
-          children: SH(hH.translationKey)
-        }), (0, eH.jsxs)("div", {
+          children: QB(oB.translationKey)
+        }), (0, LB.jsxs)("div", {
           className: "PlotsJournalPageMeta",
-          children: [SH(cL[tH]), " \xb7 ", SH("plotsGame:journalBlocks", {
-            blocks: String(zH)
+          children: [QB(iG[jB]), " \xb7 ", QB("plotsGame:journalBlocks", {
+            blocks: String(yB)
           })]
-        }), (0, eH.jsxs)("div", {
+        }), (0, LB.jsxs)("div", {
           className: "PlotsJournalSketch",
-          children: [kH.map((HH => (0, eH.jsx)("img", {
-            className: GH()({
-              Shown: HH === BH.id
+          children: [kB.map((BB => (0, LB.jsx)("img", {
+            className: zB()({
+              Shown: BB === OB.id
             }),
-            src: oL[HH],
+            src: KG[BB],
             alt: "",
             draggable: !1
-          }, HH))), "completed" === BH.state && (0, eH.jsx)("span", {
+          }, BB))), "completed" === OB.state && (0, LB.jsx)("span", {
             className: "PlotsJournalStamp",
-            children: SH("plotsGame:journalBuilt")
-          }), CH && (0, eH.jsx)("span", {
+            children: QB("plotsGame:journalBuilt")
+          }), JB && (0, LB.jsx)("span", {
             className: "PlotsJournalLock",
-            children: (0, eH.jsx)(WH.c, {
+            children: (0, LB.jsx)(ZB.b, {
               name: "lock"
             })
           })]
-        }), null !== BH.note && (0, eH.jsx)("p", {
+        }), null !== OB.note && (0, LB.jsx)("p", {
           className: "PlotsJournalNote",
-          children: SH(BH.note)
-        }), (0, eH.jsxs)("div", {
+          children: QB(OB.note)
+        }), (0, LB.jsxs)("div", {
           className: "PlotsJournalPageAction",
-          children: ["locked" === BH.state && (0, eH.jsx)("p", {
+          children: ["locked" === OB.state && (0, LB.jsx)("p", {
             className: "PlotsJournalHint",
-            children: SH("plotsGame:journalLocked", {
-              name: SH(mH(BH.unlockedBy).displayName.translationKey)
+            children: QB("plotsGame:journalLocked", {
+              name: QB(dB(OB.unlockedBy).displayName.translationKey)
             })
-          }), BH.active && (0, eH.jsxs)(eH.Fragment, {
-            children: [(0, eH.jsx)("p", {
+          }), OB.active && (0, LB.jsxs)(LB.Fragment, {
+            children: [(0, LB.jsx)("p", {
               className: "PlotsJournalHint Building",
-              children: SH("plotsGame:journalBuilding")
-            }), (0, eH.jsx)(bL.m, {
-              onClick: rH,
-              children: SH("plotsGame:journalPutAway")
+              children: QB("plotsGame:journalBuilding")
+            }), (0, LB.jsx)(fG.j, {
+              onClick: DB,
+              children: QB("plotsGame:journalPutAway")
             })]
-          }), !CH && !BH.active && (0, eH.jsx)(XH, {
+          }), !JB && !OB.active && (0, LB.jsx)(PB, {
             onClick: () => {
-              AH(BH.id)
+              YB(OB.id)
             },
-            children: SH("plotsGame:placementBuild")
+            children: QB("plotsGame:placementBuild")
           })]
         })]
       })
     }
 
-    function qL(HH) {
+    function gG(BB) {
       let {
-        className: BH,
-        page: LH,
-        hidden: AH,
-        building: rH,
-        journal: SH
-      } = HH;
-      return (0, eH.jsxs)("div", {
-        ref: HH => {
-          null !== HH && (HH.inert = AH)
+        className: OB,
+        page: GB,
+        hidden: YB,
+        building: DB,
+        journal: QB
+      } = BB;
+      return (0, LB.jsxs)("div", {
+        ref: BB => {
+          null !== BB && (BB.inert = YB)
         },
-        className: GH()("PlotsJournalSide", BH),
-        children: [void 0 !== LH && (0, eH.jsx)(eL, {
-          page: LH,
-          building: rH,
-          onBuild: SH.build,
-          onPutAway: SH.putAway
-        }), void 0 === LH && (0, eH.jsx)("div", {
+        className: zB()("PlotsJournalSide", OB),
+        children: [void 0 !== GB && (0, LB.jsx)(LG, {
+          page: GB,
+          building: DB,
+          onBuild: QB.build,
+          onPutAway: QB.putAway
+        }), void 0 === GB && (0, LB.jsx)("div", {
           className: "PlotsJournalPage"
         })]
       })
     }
-    var gL = LH(1962);
+    var rG = GB(1998);
 
-    function NL(HH) {
-      return Math.cos((0, gL.h)(HH))
+    function XG(BB) {
+      return Math.cos((0, rG.h)(BB))
     }
 
-    function RL(HH) {
-      return (0, gL.t)(Math.acos(VB.d.clamp(HH, -1, 1)))
+    function wG(BB) {
+      return (0, rG.B)(Math.acos(nO.b.clamp(BB, -1, 1)))
     }
 
-    function jL(HH, BH, LH, AH, rH) {
-      const SH = Math.abs(BH - HH),
-        hH = (0, gL.t)(rH / (LH * Math.abs(Math.sin((0, gL.h)(HH))))),
-        tH = 450 * Math.min(1, SH / AH),
-        zH = hH > 0 ? 3 * SH / hH : 1 / 0;
-      return Math.round(Math.max(120, Math.min(tH, zH)))
+    function EG(BB, OB, GB, YB, DB) {
+      const QB = Math.abs(OB - BB),
+        oB = (0, rG.B)(DB / (GB * Math.abs(Math.sin((0, rG.h)(BB))))),
+        jB = 450 * Math.min(1, QB / YB),
+        yB = oB > 0 ? 3 * QB / oB : 1 / 0;
+      return Math.round(Math.max(120, Math.min(jB, yB)))
     }
-    class nL {
+    class cG {
       constructor() {
         this.samples = []
       }
-      add(HH, BH) {
+      add(BB, OB) {
         for (this.samples.push({
-            x: HH,
-            at: BH
-          }); BH - this.samples[0].at > 100;) this.samples.shift()
+            x: BB,
+            at: OB
+          }); OB - this.samples[0].at > 100;) this.samples.shift()
       }
       get() {
-        const HH = this.samples[0],
-          BH = this.samples[this.samples.length - 1];
-        return BH.at > HH.at ? (BH.x - HH.x) / (BH.at - HH.at) : 0
+        const BB = this.samples[0],
+          OB = this.samples[this.samples.length - 1];
+        return OB.at > BB.at ? (OB.x - BB.x) / (OB.at - BB.at) : 0
       }
     }
 
-    function FL(HH) {
-      return RL(new DOMMatrixReadOnly(getComputedStyle(HH).transform).m11)
+    function hG(BB) {
+      return wG(new DOMMatrixReadOnly(getComputedStyle(BB).transform).m11)
     }
 
-    function DL(HH, BH) {
-      HH.style.transform = `rotateY(${-BH}deg)`, HH.classList.add("Turning")
+    function aG(BB, OB) {
+      BB.style.transform = `rotateY(${-OB}deg)`, BB.classList.add("Turning")
     }
 
-    function wL(HH, BH, LH) {
-      const [AH, rH] = (0, SH.useState)(LH), hH = (0, SH.useRef)(null), tH = (0, SH.useRef)(null), zH = (0, SH.useRef)({
+    function eG(BB, OB, GB) {
+      const [YB, DB] = (0, QB.useState)(GB), oB = (0, QB.useRef)(null), jB = (0, QB.useRef)(null), yB = (0, QB.useRef)({
         Forward: null,
         Back: null
-      }), CH = BH ? 2 : 1, EH = BH ? 180 : 90, XH = AH - AH % CH, GH = XH > 0, YH = XH + CH < HH, uH = (0, SH.useCallback)((() => {
-        const HH = tH.current;
-        return null === HH ? XH : (tH.current = null, HH.animation.cancel(), (BH = zH.current[HH.direction]).style.transform = "", BH.classList.remove("Turning"), null === HH.next ? XH : (rH(HH.next), HH.next));
-        var BH
-      }), [XH]), QH = (0, SH.useCallback)(((HH, BH, LH, AH) => {
-        const rH = zH.current[HH],
-          SH = FL(rH),
-          hH = BH === ("Forward" === HH) ? EH : 0;
-        DL(rH, hH);
-        const XH = rH.animate([{
-          transform: `rotateY(${-SH}deg)`
+      }), JB = OB ? 2 : 1, MB = OB ? 180 : 90, PB = YB - YB % JB, zB = PB > 0, lB = PB + JB < BB, pB = (0, QB.useCallback)((() => {
+        const BB = jB.current;
+        return null === BB ? PB : (jB.current = null, BB.animation.cancel(), (OB = yB.current[BB.direction]).style.transform = "", OB.classList.remove("Turning"), null === BB.next ? PB : (DB(BB.next), BB.next));
+        var OB
+      }), [PB]), qB = (0, QB.useCallback)(((BB, OB, GB, YB) => {
+        const DB = yB.current[BB],
+          QB = hG(DB),
+          oB = OB === ("Forward" === BB) ? MB : 0;
+        aG(DB, oB);
+        const PB = DB.animate([{
+          transform: `rotateY(${-QB}deg)`
         }, {
-          transform: `rotateY(${-hH}deg)`
+          transform: `rotateY(${-oB}deg)`
         }], {
-          duration: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : jL(SH, hH, rH.offsetWidth, EH, hH > SH ? -LH : LH),
+          duration: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : EG(QB, oB, DB.offsetWidth, MB, oB > QB ? -GB : GB),
           easing: "cubic-bezier(0.25, 0.75, 0.5, 1)"
         });
-        tH.current = {
-          direction: HH,
-          animation: XH,
-          next: BH ? AH + ("Forward" === HH ? CH : -CH) : null
-        }, XH.onfinish = () => {
-          var HH;
-          (null === (HH = tH.current) || void 0 === HH ? void 0 : HH.animation) === XH && uH()
+        jB.current = {
+          direction: BB,
+          animation: PB,
+          next: OB ? YB + ("Forward" === BB ? JB : -JB) : null
+        }, PB.onfinish = () => {
+          var BB;
+          (null === (BB = jB.current) || void 0 === BB ? void 0 : BB.animation) === PB && pB()
         }
-      }), [CH, EH, uH]), WH = (0, SH.useCallback)((BH => {
-        if (null !== hH.current) return;
-        const LH = uH();
-        ("Forward" === BH ? LH + CH < HH : LH > 0) && QH(BH, !0, 0, LH)
-      }), [uH, QH, CH, HH]);
-      (0, SH.useEffect)((() => () => {
-        var HH;
-        null === (HH = tH.current) || void 0 === HH || HH.animation.cancel()
-      }), []), (0, SH.useEffect)((() => {
-        const HH = HH => {
-          var BH;
-          HH.pointerId !== (null === (BH = hH.current) || void 0 === BH ? void 0 : BH.pointerId) || hH.current.following || (hH.current = null)
+      }), [JB, MB, pB]), ZB = (0, QB.useCallback)((OB => {
+        if (null !== oB.current) return;
+        const GB = pB();
+        ("Forward" === OB ? GB + JB < BB : GB > 0) && qB(OB, !0, 0, GB)
+      }), [pB, qB, JB, BB]);
+      (0, QB.useEffect)((() => () => {
+        var BB;
+        null === (BB = jB.current) || void 0 === BB || BB.animation.cancel()
+      }), []), (0, QB.useEffect)((() => {
+        const BB = BB => {
+          var OB;
+          BB.pointerId !== (null === (OB = oB.current) || void 0 === OB ? void 0 : OB.pointerId) || oB.current.following || (oB.current = null)
         };
-        return window.addEventListener("pointerup", HH), () => {
-          window.removeEventListener("pointerup", HH)
+        return window.addEventListener("pointerup", BB), () => {
+          window.removeEventListener("pointerup", BB)
         }
       }), []);
-      const MH = (HH, BH, LH) => {
-          const AH = function(HH, BH, LH, AH) {
-            return (HH < 0 ? LH : AH) ? VB.d.clampAbs(HH, BH) : Math.sign(HH) * BH * (1 - 1 / (.55 * Math.abs(HH) / BH + 1))
-          }(HH.base + LH, CH * HH.width, YH, GH);
-          return "Forward" === BH ? Math.min(AH, 0) : Math.max(AH, 0)
+      const NB = (BB, OB, GB) => {
+          const YB = function(BB, OB, GB, YB) {
+            return (BB < 0 ? GB : YB) ? nO.b.clampAbs(BB, OB) : Math.sign(BB) * OB * (1 - 1 / (.55 * Math.abs(BB) / OB + 1))
+          }(BB.base + GB, JB * BB.width, lB, zB);
+          return "Forward" === OB ? Math.min(YB, 0) : Math.max(YB, 0)
         },
-        xH = (HH, BH) => {
-          const LH = hH.current;
-          if (hH.current = null, null === LH.direction) return;
-          LH.speed.add(HH, BH);
-          const AH = LH.speed.get(),
-            rH = MH(LH, LH.direction, HH - LH.x);
-          QH(LH.direction, null !== function(HH, BH, LH, AH, rH) {
-            if (Math.abs(BH) >= .3 ? Math.sign(BH) !== Math.sign(HH) : Math.abs(HH) < .5 * LH) return null;
-            const SH = HH < 0 ? "Forward" : "Back";
-            return ("Forward" === SH ? AH : rH) ? SH : null
-          }(rH, AH, CH * LH.width, YH, GH), AH, XH)
+        RB = (BB, OB) => {
+          const GB = oB.current;
+          if (oB.current = null, null === GB.direction) return;
+          GB.speed.add(BB, OB);
+          const YB = GB.speed.get(),
+            DB = NB(GB, GB.direction, BB - GB.x);
+          qB(GB.direction, null !== function(BB, OB, GB, YB, DB) {
+            if (Math.abs(OB) >= .3 ? Math.sign(OB) !== Math.sign(BB) : Math.abs(BB) < .5 * GB) return null;
+            const QB = BB < 0 ? "Forward" : "Back";
+            return ("Forward" === QB ? YB : DB) ? QB : null
+          }(DB, YB, JB * GB.width, lB, zB), YB, PB)
         },
-        vH = {
-          onPointerDown: HH => {
-            var BH;
-            if (!HH.isPrimary || 0 !== HH.button || null !== tH.current && null !== HH.target.closest("button")) return;
-            const LH = new nL;
-            LH.add(HH.clientX, HH.timeStamp);
-            const AH = zH.current.Forward.offsetWidth,
-              rH = tH.current;
-            tH.current = null;
-            let SH = 0;
-            if (null !== rH) {
-              const BH = zH.current[rH.direction],
-                LH = FL(BH);
-              rH.animation.cancel(), DL(BH, LH), SH = function(HH, BH, LH, AH) {
-                return (HH < 0 ? LH : AH) ? HH : Math.sign(HH) * BH * (1 / (1 - Math.min(Math.abs(HH) / BH, .99)) - 1) / .55
-              }(function(HH, BH, LH, AH) {
-                return LH * (NL(BH) - NL("Forward" === HH ? 0 : AH))
-              }(rH.direction, LH, AH, EH), CH * AH, YH, GH), HH.currentTarget.setPointerCapture(HH.pointerId)
+        WB = {
+          onPointerDown: BB => {
+            var OB;
+            if (!BB.isPrimary || 0 !== BB.button || null !== jB.current && null !== BB.target.closest("button")) return;
+            const GB = new cG;
+            GB.add(BB.clientX, BB.timeStamp);
+            const YB = yB.current.Forward.offsetWidth,
+              DB = jB.current;
+            jB.current = null;
+            let QB = 0;
+            if (null !== DB) {
+              const OB = yB.current[DB.direction],
+                GB = hG(OB);
+              DB.animation.cancel(), aG(OB, GB), QB = function(BB, OB, GB, YB) {
+                return (BB < 0 ? GB : YB) ? BB : Math.sign(BB) * OB * (1 / (1 - Math.min(Math.abs(BB) / OB, .99)) - 1) / .55
+              }(function(BB, OB, GB, YB) {
+                return GB * (XG(OB) - XG("Forward" === BB ? 0 : YB))
+              }(DB.direction, GB, YB, MB), JB * YB, lB, zB), BB.currentTarget.setPointerCapture(BB.pointerId)
             }
-            hH.current = {
-              pointerId: HH.pointerId,
-              x: HH.clientX,
-              y: HH.clientY,
-              base: SH,
-              width: AH,
-              following: null !== rH,
-              direction: null !== (BH = null === rH || void 0 === rH ? void 0 : rH.direction) && void 0 !== BH ? BH : null,
-              speed: LH
+            oB.current = {
+              pointerId: BB.pointerId,
+              x: BB.clientX,
+              y: BB.clientY,
+              base: QB,
+              width: YB,
+              following: null !== DB,
+              direction: null !== (OB = null === DB || void 0 === DB ? void 0 : DB.direction) && void 0 !== OB ? OB : null,
+              speed: GB
             }
           },
-          onPointerMove: HH => {
-            const BH = hH.current;
-            if (null === BH || HH.pointerId !== BH.pointerId) return;
-            if (0 === HH.buttons) return void xH(HH.clientX, HH.timeStamp);
-            const LH = HH.clientX - BH.x;
-            !BH.following && function(HH, BH) {
-              return Math.abs(HH) > 8 && Math.abs(HH) > Math.abs(BH)
-            }(LH, HH.clientY - BH.y) && (BH.following = !0, BH.direction = LH < 0 ? "Forward" : "Back", HH.currentTarget.setPointerCapture(HH.pointerId)), null !== BH.direction && (BH.speed.add(HH.clientX, HH.timeStamp), DL(zH.current[BH.direction], function(HH, BH, LH, AH) {
-              const rH = LH * NL("Forward" === HH ? 0 : AH) + BH;
-              return VB.d.clamp(RL(rH / LH), 0, AH)
-            }(BH.direction, MH(BH, BH.direction, LH), BH.width, EH)))
+          onPointerMove: BB => {
+            const OB = oB.current;
+            if (null === OB || BB.pointerId !== OB.pointerId) return;
+            if (0 === BB.buttons) return void RB(BB.clientX, BB.timeStamp);
+            const GB = BB.clientX - OB.x;
+            !OB.following && function(BB, OB) {
+              return Math.abs(BB) > 8 && Math.abs(BB) > Math.abs(OB)
+            }(GB, BB.clientY - OB.y) && (OB.following = !0, OB.direction = GB < 0 ? "Forward" : "Back", BB.currentTarget.setPointerCapture(BB.pointerId)), null !== OB.direction && (OB.speed.add(BB.clientX, BB.timeStamp), aG(yB.current[OB.direction], function(BB, OB, GB, YB) {
+              const DB = GB * XG("Forward" === BB ? 0 : YB) + OB;
+              return nO.b.clamp(wG(DB / GB), 0, YB)
+            }(OB.direction, NB(OB, OB.direction, GB), OB.width, MB)))
           },
-          onPointerUp: HH => {
-            var BH;
-            HH.pointerId === (null === (BH = hH.current) || void 0 === BH ? void 0 : BH.pointerId) && xH(HH.clientX, HH.timeStamp)
+          onPointerUp: BB => {
+            var OB;
+            BB.pointerId === (null === (OB = oB.current) || void 0 === OB ? void 0 : OB.pointerId) && RB(BB.clientX, BB.timeStamp)
           },
-          onPointerCancel: HH => {
-            const BH = hH.current;
-            HH.pointerId === (null === BH || void 0 === BH ? void 0 : BH.pointerId) && (hH.current = null, null !== BH.direction && QH(BH.direction, !1, 0, XH))
+          onPointerCancel: BB => {
+            const OB = oB.current;
+            BB.pointerId === (null === OB || void 0 === OB ? void 0 : OB.pointerId) && (oB.current = null, null !== OB.direction && qB(OB.direction, !1, 0, PB))
           }
         };
       return {
-        first: XH,
-        step: CH,
-        canGoBack: GH,
-        canGoForward: YH,
-        turnPage: WH,
-        leaves: zH,
-        pagesHandlers: vH
+        first: PB,
+        step: JB,
+        canGoBack: zB,
+        canGoForward: lB,
+        turnPage: ZB,
+        leaves: yB,
+        pagesHandlers: WB
       }
     }
 
-    function ZL(HH, BH) {
-      return HH > BH && HH >= 600
+    function TG(BB, OB) {
+      return BB > OB && BB >= 600
     }
 
-    function dL(HH) {
+    function bG(BB) {
       let {
-        journal: BH,
-        hud: LH,
-        guide: AH
-      } = HH;
+        journal: OB,
+        hud: GB,
+        guide: YB
+      } = BB;
       const {
-        t: rH
-      } = (0, EH.B)(), tH = (0, zH.e)(KH, BH.getPages()), CH = (0, zH.e)(LB, LH.getGuide()), XH = tH.find((HH => HH.active)), YH = (uH = CH, QH = void 0 === XH ? null : XH.id, "active" === uH[0] && null === QH);
-      var uH, QH;
-      const WH = (0, mL.n)(ZL),
+        t: DB
+      } = (0, MB.H)(), jB = (0, yB.i)(FB, OB.getPages()), JB = (0, yB.i)(GO, GB.getGuide()), PB = jB.find((BB => BB.active)), lB = (pB = JB, qB = void 0 === PB ? null : PB.id, "active" === pB[0] && null === qB);
+      var pB, qB;
+      const ZB = (0, dG.h)(TG),
         {
-          first: MH,
-          step: xH,
-          canGoBack: TH,
-          canGoForward: UH,
-          turnPage: VH,
-          leaves: OH,
-          pagesHandlers: bH
-        } = wL(tH.length, WH, (() => function(HH) {
-          const BH = HH.findIndex((HH => HH.active));
-          return -1 !== BH ? BH : Math.max(0, HH.findIndex((HH => "open" === HH.state)))
-        }(tH)));
-      (0, SH.useEffect)((() => {
-        BH.onOpened()
-      }), [BH]), (0, vH.c)((HH => !YH && ("ArrowLeft" === HH.code || "ArrowRight" === HH.code) && !(0, PH.isTypingInInput)()), (HH => {
-        HH.stopPropagation(), VH("ArrowLeft" === HH.code ? "Back" : "Forward")
+          first: NB,
+          step: RB,
+          canGoBack: VB,
+          canGoForward: SB,
+          turnPage: nB,
+          leaves: UB,
+          pagesHandlers: fB
+        } = eG(jB.length, ZB, (() => function(BB) {
+          const OB = BB.findIndex((BB => BB.active));
+          return -1 !== OB ? OB : Math.max(0, BB.findIndex((BB => "open" === BB.state)))
+        }(jB)));
+      (0, QB.useEffect)((() => {
+        OB.onOpened()
+      }), [OB]), (0, WB.b)((BB => !lB && ("ArrowLeft" === BB.code || "ArrowRight" === BB.code) && !(0, AB.isTypingInInput)()), (BB => {
+        BB.stopPropagation(), nB("ArrowLeft" === BB.code ? "Back" : "Forward")
       }));
-      const kH = void 0 !== XH,
-        mH = (HH, LH, AH) => (0, eH.jsx)(qL, {
-          className: HH,
-          page: LH >= 0 && LH < tH.length ? tH[LH] : void 0,
-          hidden: AH,
-          building: kH,
-          journal: BH
+      const kB = void 0 !== PB,
+        dB = (BB, GB, YB) => (0, LB.jsx)(gG, {
+          className: BB,
+          page: GB >= 0 && GB < jB.length ? jB[GB] : void 0,
+          hidden: YB,
+          building: kB,
+          journal: OB
         });
-      return (0, eH.jsx)(kL.b, {
-        close: hH.j,
+      return (0, LB.jsx)(kG.d, {
+        close: oB.i,
         togglePointerLock: !1,
         className: "PlotsJournalOverlay",
-        children: (0, eH.jsxs)("section", {
-          className: GH()("PlotsJournal", {
-            Spread: WH
+        children: (0, LB.jsxs)("section", {
+          className: zB()("PlotsJournal", {
+            Spread: ZB
           }),
           role: "dialog",
           "aria-modal": "true",
-          "aria-label": rH("plotsGame:journalTitle"),
-          children: [(0, eH.jsx)(bL.q, {
+          "aria-label": DB("plotsGame:journalTitle"),
+          children: [(0, LB.jsx)(fG.m, {
             className: "PlotsJournalClose",
-            onClick: hH.j
-          }), "active" === CH[0] && (0, eH.jsx)(CB, {
+            onClick: oB.i
+          }), "active" === JB[0] && (0, LB.jsx)(JO, {
             className: "PlotsJournalGuideSkip",
-            onSkip: AH.skip
-          }), YH && (0, eH.jsx)(lL, {
-            onBuild: BH.build
-          }), !YH && (0, eH.jsx)(KL, {
+            onSkip: YB.skip
+          }), lB && (0, LB.jsx)(IG, {
+            onBuild: OB.build
+          }), !lB && (0, LB.jsx)(FG, {
             direction: "Back",
-            disabled: !TH,
-            onTurn: VH
-          }), (0, eH.jsx)("div", {
-            hidden: YH,
+            disabled: !VB,
+            onTurn: nB
+          }), (0, LB.jsx)("div", {
+            hidden: lB,
             className: "PlotsJournalBookPages",
-            ...bH,
-            children: (0, eH.jsxs)("div", {
+            ...fB,
+            children: (0, LB.jsxs)("div", {
               className: "PlotsJournalSheet",
-              children: [WH && mH("Left", MH - 2, !0), mH("Right", MH + 2 * xH - 1, !0), (0, eH.jsxs)("div", {
-                ref: HH => {
-                  OH.current.Back = HH
+              children: [ZB && dB("Left", NB - 2, !0), dB("Right", NB + 2 * RB - 1, !0), (0, LB.jsxs)("div", {
+                ref: BB => {
+                  UB.current.Back = BB
                 },
                 className: "PlotsJournalLeaf Back",
-                children: [mH("Recto", MH - 1, !0), WH && mH("Verso", MH, !1)]
-              }), (0, eH.jsxs)("div", {
-                ref: HH => {
-                  OH.current.Forward = HH
+                children: [dB("Recto", NB - 1, !0), ZB && dB("Verso", NB, !1)]
+              }), (0, LB.jsxs)("div", {
+                ref: BB => {
+                  UB.current.Forward = BB
                 },
                 className: "PlotsJournalLeaf Forward",
-                children: [mH("Recto", MH + xH - 1, !1), WH && mH("Verso", MH + xH, !0)]
+                children: [dB("Recto", NB + RB - 1, !1), ZB && dB("Verso", NB + RB, !0)]
               })]
             })
-          }), !YH && (0, eH.jsx)(KL, {
+          }), !lB && (0, LB.jsx)(FG, {
             direction: "Forward",
-            disabled: !UH,
-            onTurn: VH
+            disabled: !SB,
+            onTurn: nB
           })]
         })
       })
     }
 
-    function aL(HH, BH, LH, AH, rH) {
-      const SH = Math.hypot(...BH.dir);
-      if (!Number.isFinite(SH) || 0 === SH) return -1;
+    function CG(BB, OB, GB, YB, DB) {
+      const QB = Math.hypot(...OB.dir);
+      if (!Number.isFinite(QB) || 0 === QB) return -1;
       const {
-        from: hH,
-        reach: tH,
-        solid: zH
-      } = BH, CH = [BH.dir[0] / SH, BH.dir[1] / SH, BH.dir[2] / SH], EH = null === zH ? tH : Math.min(tH, function(HH, BH, LH) {
-        const AH = sL(HH, BH, LH);
-        if (AH !== 1 / 0) return AH;
-        return (LH[0] + .5 - HH[0]) * BH[0] + (LH[1] + .5 - HH[1]) * BH[1] + (LH[2] + .5 - HH[2]) * BH[2]
-      }(hH, CH, zH) + .75);
-      let XH = -1,
-        GH = 1 / 0,
-        YH = 1 / 0;
-      for (let uH = 0; uH < HH.length; uH += 4) {
-        const BH = [HH[uH], HH[uH + 1], HH[uH + 2]],
-          SH = rH(uH) ? tH : EH;
-        let zH = -1,
-          QH = sL(hH, CH, BH);
-        if (QH > SH) {
-          const HH = [BH[0] + .5 - hH[0], BH[1] + .5 - hH[1], BH[2] + .5 - hH[2]];
-          if (QH = HH[0] * CH[0] + HH[1] * CH[1] + HH[2] * CH[2], QH <= 0 || QH > SH) continue;
-          if (zH = Math.hypot(HH[0] - QH * CH[0], HH[1] - QH * CH[1], HH[2] - QH * CH[2]), zH > .7 || !AH(uH)) continue
-        }(zH < GH || zH === GH && QH < YH) && LH(uH) && (XH = uH, GH = zH, YH = QH)
+        from: oB,
+        reach: jB,
+        solid: yB
+      } = OB, JB = [OB.dir[0] / QB, OB.dir[1] / QB, OB.dir[2] / QB], MB = null === yB ? jB : Math.min(jB, function(BB, OB, GB) {
+        const YB = HG(BB, OB, GB);
+        if (YB !== 1 / 0) return YB;
+        return (GB[0] + .5 - BB[0]) * OB[0] + (GB[1] + .5 - BB[1]) * OB[1] + (GB[2] + .5 - BB[2]) * OB[2]
+      }(oB, JB, yB) + .75);
+      let PB = -1,
+        zB = 1 / 0,
+        lB = 1 / 0;
+      for (let pB = 0; pB < BB.length; pB += 4) {
+        const OB = [BB[pB], BB[pB + 1], BB[pB + 2]],
+          QB = DB(pB) ? jB : MB;
+        let yB = -1,
+          qB = HG(oB, JB, OB);
+        if (qB > QB) {
+          const BB = [OB[0] + .5 - oB[0], OB[1] + .5 - oB[1], OB[2] + .5 - oB[2]];
+          if (qB = BB[0] * JB[0] + BB[1] * JB[1] + BB[2] * JB[2], qB <= 0 || qB > QB) continue;
+          if (yB = Math.hypot(BB[0] - qB * JB[0], BB[1] - qB * JB[1], BB[2] - qB * JB[2]), yB > .7 || !YB(pB)) continue
+        }(yB < zB || yB === zB && qB < lB) && GB(pB) && (PB = pB, zB = yB, lB = qB)
       }
-      return XH
+      return PB
     }
 
-    function sL(HH, BH, LH) {
-      let AH = 0,
-        rH = 1 / 0;
-      for (let SH = 0; SH < 3; SH++) {
-        const hH = LH[SH] - HH[SH];
-        if (0 === BH[SH]) {
-          if (hH > 0 || hH + 1 < 0) return 1 / 0;
+    function HG(BB, OB, GB) {
+      let YB = 0,
+        DB = 1 / 0;
+      for (let QB = 0; QB < 3; QB++) {
+        const oB = GB[QB] - BB[QB];
+        if (0 === OB[QB]) {
+          if (oB > 0 || oB + 1 < 0) return 1 / 0;
           continue
         }
-        const tH = hH / BH[SH],
-          zH = (hH + 1) / BH[SH];
-        AH = Math.max(AH, Math.min(tH, zH)), rH = Math.min(rH, Math.max(tH, zH))
+        const jB = oB / OB[QB],
+          yB = (oB + 1) / OB[QB];
+        YB = Math.max(YB, Math.min(jB, yB)), DB = Math.min(DB, Math.max(jB, yB))
       }
-      return AH <= rH ? AH : 1 / 0
+      return YB <= DB ? YB : 1 / 0
     }
-    var JL = LH(37761),
-      iL = LH(38935);
-    const pL = [1, 1, 1];
-    class yL {
-      constructor(HH) {
-        this.api = HH, this.meshes = null, this.shown = null
+    var vG = GB(37584),
+      sG = GB(38739);
+    const xG = [1, 1, 1];
+    class tG {
+      constructor(BB) {
+        this.api = BB, this.meshes = null, this.shown = null
       }
-      show(HH) {
-        if (!(0, JL.g)(HH, this.shown))
-          if (this.shown = null === HH ? null : [HH[0], HH[1], HH[2]], null !== this.meshes)
-            for (const BH of this.meshes) this.api.setGameMesh(BH, null === HH ? {
+      show(BB) {
+        if (!(0, vG.d)(BB, this.shown))
+          if (this.shown = null === BB ? null : [BB[0], BB[1], BB[2]], null !== this.meshes)
+            for (const OB of this.meshes) this.api.setGameMesh(OB, null === BB ? {
               visible: !1
             } : {
-              anchor: HH,
+              anchor: BB,
               visible: !0
             });
-          else if (null !== HH) {
-          const BH = [iL.d, iL.d, iL.d, 0, 0, 0];
-          this.meshes = [this.build([BH], iL.g, HH), this.build((0, iL.c)(), iL.l, HH)]
+          else if (null !== BB) {
+          const OB = [sG.f, sG.f, sG.f, 0, 0, 0];
+          this.meshes = [this.build([OB], sG.j, BB), this.build((0, sG.d)(), sG.o, BB)]
         }
       }
       dispose() {
-        for (const BH of null !== (HH = this.meshes) && void 0 !== HH ? HH : []) {
-          var HH;
-          this.api.disposeGameMesh(BH)
+        for (const OB of null !== (BB = this.meshes) && void 0 !== BB ? BB : []) {
+          var BB;
+          this.api.disposeGameMesh(OB)
         }
         this.meshes = null, this.shown = null
       }
-      build(HH, BH, LH) {
-        const AH = [],
-          rH = [];
-        for (const [SH, hH, tH, zH, CH, EH] of HH)(0, aB.g)(AH, rH, [zH + .5, CH + .5, EH + .5], [SH, hH, tH]);
+      build(BB, OB, GB) {
+        const YB = [],
+          DB = [];
+        for (const [QB, oB, jB, yB, JB, MB] of BB)(0, CO.c)(YB, DB, [yB + .5, JB + .5, MB + .5], [QB, oB, jB]);
         return this.api.createGameMesh({
-          positions: AH,
-          indices: rH
+          positions: YB,
+          indices: DB
         }, {
-          rgb: pL,
-          alpha: BH,
+          rgb: xG,
+          alpha: OB,
           onTop: !0
-        }, LH)
+        }, GB)
       }
     }
 
-    function HA(HH, BH) {
-      const LH = ZB.g.JW / 2;
-      return HH[0] < BH[0] + LH && HH[0] + 1 > BH[0] - LH && HH[1] < BH[1] + ZB.g.iW && HH[1] + 1 > BH[1] && HH[2] < BH[2] + LH && HH[2] + 1 > BH[2] - LH
+    function BY(BB, OB) {
+      const GB = TO.f.sZ / 2;
+      return BB[0] < OB[0] + GB && BB[0] + 1 > OB[0] - GB && BB[1] < OB[1] + TO.f.xZ && BB[1] + 1 > OB[1] && BB[2] < OB[2] + GB && BB[2] + 1 > OB[2] - GB
     }
 
-    function BA(HH, BH) {
-      return HH.getClientOption(BH, "blockReach") + 1
+    function OY(BB, OB) {
+      return BB.getClientOption(OB, "blockReach") + 1
     }
-    class LA {
-      constructor(HH, BH, LH) {
-        this.api = HH, this.localPlayerId = BH, this.foreseen = LH, this.cells = [], this.playerCells = [], this.next = null
+    class GY {
+      constructor(BB, OB, GB) {
+        this.api = BB, this.localPlayerId = OB, this.foreseen = GB, this.cells = [], this.playerCells = [], this.next = null
       }
       get() {
         return this.next
       }
-      setCells(HH) {
-        this.cells = HH
+      setCells(BB) {
+        this.cells = BB
       }
       playerMoved() {
-        return AA(this.api.getPositionView(this.localPlayerId)).some(((HH, BH) => HH !== this.playerCells[BH]))
+        return YY(this.api.getPositionView(this.localPlayerId)).some(((BB, OB) => BB !== this.playerCells[OB]))
       }
-      XY(HH) {
-        const BH = this.api.getPositionView(this.localPlayerId);
-        return this.playerCells.splice(0, 1 / 0, ...AA(BH)), this.next = this.pickFrom(null === HH ? [BH[0], BH[1] + 1, BH[2]] : (0, JL.e)(HH), (() => !1)), this.next
+      pl(BB) {
+        const OB = this.api.getPositionView(this.localPlayerId);
+        return this.playerCells.splice(0, 1 / 0, ...YY(OB)), this.next = this.pickFrom(null === BB ? [OB[0], OB[1] + 1, OB[2]] : (0, vG.c)(BB), (() => !1)), this.next
       }
-      pickFrom(HH, BH) {
-        const LH = this.api.getPositionView(this.localPlayerId),
-          AH = [LH[0], LH[1] + ZB.g.iW * ZB.g.playerEyeToHeightRatio, LH[2]],
-          rH = BA(this.api, this.localPlayerId),
+      pickFrom(BB, OB) {
+        const GB = this.api.getPositionView(this.localPlayerId),
+          YB = [GB[0], GB[1] + TO.f.xZ * TO.f.playerEyeToHeightRatio, GB[2]],
+          DB = OY(this.api, this.localPlayerId),
           {
-            cells: SH
+            cells: QB
           } = this,
-          hH = HH => [SH[HH], SH[HH + 1], SH[HH + 2]],
-          tH = function(HH, BH, LH, AH, rH, SH) {
-            let hH = -1,
-              tH = -1,
-              zH = 1 / 0;
-            for (let CH = 0; CH < HH.length; CH += BH) {
-              const BH = (SH(CH) ? 2 : 0) + (AH(CH) ? 1 : 0);
-              if (BH < tH || rH(CH)) continue;
-              const EH = (HH[CH] + .5 - LH[0]) ** 2 + (HH[CH + 1] + .5 - LH[1]) ** 2 + (HH[CH + 2] + .5 - LH[2]) ** 2;
-              (BH > tH || EH < zH) && (hH = CH, tH = BH, zH = EH)
+          oB = BB => [QB[BB], QB[BB + 1], QB[BB + 2]],
+          jB = function(BB, OB, GB, YB, DB, QB) {
+            let oB = -1,
+              jB = -1,
+              yB = 1 / 0;
+            for (let JB = 0; JB < BB.length; JB += OB) {
+              const OB = (QB(JB) ? 2 : 0) + (YB(JB) ? 1 : 0);
+              if (OB < jB || DB(JB)) continue;
+              const MB = (BB[JB] + .5 - GB[0]) ** 2 + (BB[JB + 1] + .5 - GB[1]) ** 2 + (BB[JB + 2] + .5 - GB[2]) ** 2;
+              (OB > jB || MB < yB) && (oB = JB, jB = OB, yB = MB)
             }
-            return hH
-          }(SH, 4, HH, (HH => 1 === SH[HH + 3]), (HH => {
-            const AH = hH(HH);
-            return HA(AH, LH) || this.foreseen.has(AH.join()) || BH(AH)
-          }), (HH => function(HH, BH, LH) {
-            return (BH[0] + .5 - HH[0]) ** 2 + (BH[1] + .5 - HH[1]) ** 2 + (BH[2] + .5 - HH[2]) ** 2 <= LH ** 2
-          }(AH, hH(HH), rH)));
-        return -1 === tH ? null : hH(tH)
+            return oB
+          }(QB, 4, BB, (BB => 1 === QB[BB + 3]), (BB => {
+            const YB = oB(BB);
+            return BY(YB, GB) || this.foreseen.has(YB.join()) || OB(YB)
+          }), (BB => function(BB, OB, GB) {
+            return (OB[0] + .5 - BB[0]) ** 2 + (OB[1] + .5 - BB[1]) ** 2 + (OB[2] + .5 - BB[2]) ** 2 <= GB ** 2
+          }(YB, oB(BB), DB)));
+        return -1 === jB ? null : oB(jB)
       }
     }
 
-    function AA(HH) {
-      let [BH, LH, AH] = HH;
-      const rH = ZB.g.JW / 2;
-      return [Math.floor(BH), Math.floor(LH), Math.floor(AH), Math.floor(BH - rH), Math.floor(BH + rH), Math.floor(LH + ZB.g.iW), Math.floor(AH - rH), Math.floor(AH + rH)]
+    function YY(BB) {
+      let [OB, GB, YB] = BB;
+      const DB = TO.f.sZ / 2;
+      return [Math.floor(OB), Math.floor(GB), Math.floor(YB), Math.floor(OB - DB), Math.floor(OB + DB), Math.floor(GB + TO.f.xZ), Math.floor(YB - DB), Math.floor(YB + DB)]
     }
-    class rA {
-      constructor(HH, BH, LH) {
-        this.api = HH, this.localPlayerId = BH, this.pickNext = LH, this.turning = null, this.pending = null, this.lastFillMs = -1 / 0, this.tap = null, this.heading = [0, 1]
+    class DY {
+      constructor(BB, OB, GB) {
+        this.api = BB, this.localPlayerId = OB, this.pickNext = GB, this.turning = null, this.pending = null, this.lastFillMs = -1 / 0, this.tap = null, this.heading = [0, 1]
       }
-      look(HH) {
-        const [BH, , LH] = HH.cameraDirection, AH = Math.hypot(BH, LH);
-        AH > .001 && (this.heading = [BH / AH, LH / AH])
+      look(BB) {
+        const [OB, , GB] = BB.cameraDirection, YB = Math.hypot(OB, GB);
+        YB > .001 && (this.heading = [OB / YB, GB / YB])
       }
-      tapped(HH, BH, LH) {
-        const AH = BA(this.api, this.localPlayerId),
+      tapped(BB, OB, GB) {
+        const YB = OY(this.api, this.localPlayerId),
           {
-            origin: rH,
-            direction: SH
+            origin: DB,
+            direction: QB
           } = this.api.getActionRay(),
-          hH = [...rH],
-          tH = [
-            [hH, [hH[0] + SH[0] * AH, hH[1] + SH[1] * AH, hH[2] + SH[2] * AH]]
+          oB = [...DB],
+          jB = [
+            [oB, [oB[0] + QB[0] * YB, oB[1] + QB[1] * YB, oB[2] + QB[2] * YB]]
           ];
-        null !== HH && tH.push([hH, (0, JL.e)(HH)]), this.tap = {
-          lines: tH,
-          next: BH,
-          ms: LH
+        null !== BB && jB.push([oB, (0, vG.c)(BB)]), this.tap = {
+          lines: jB,
+          next: OB,
+          ms: GB
         }
       }
-      filled(HH, BH) {
-        this.tap = null, this.turnFrom(HH, BH), this.retry(BH)
+      filled(BB, OB) {
+        this.tap = null, this.turnFrom(BB, OB), this.retry(OB)
       }
-      arrived(HH, BH) {
+      arrived(BB, OB) {
         const {
-          tap: LH
+          tap: GB
         } = this;
-        if (null === LH || BH - LH.ms > 1500) return null;
-        const AH = (0, JL.e)(HH);
-        return (0, JL.g)(LH.next, HH) || LH.lines.some((HH => {
-          let [BH, LH] = HH;
-          return function(HH, BH, LH) {
-            const AH = [LH[0] - BH[0], LH[1] - BH[1], LH[2] - BH[2]],
-              rH = [HH[0] - BH[0], HH[1] - BH[1], HH[2] - BH[2]],
-              SH = AH[0] ** 2 + AH[1] ** 2 + AH[2] ** 2,
-              hH = 0 === SH ? 0 : Math.min(1, Math.max(0, (rH[0] * AH[0] + rH[1] * AH[1] + rH[2] * AH[2]) / SH));
-            return Math.hypot(rH[0] - AH[0] * hH, rH[1] - AH[1] * hH, rH[2] - AH[2] * hH)
-          }(AH, BH, LH) <= .9
-        })) ? (this.tap = null, this.turnFrom(HH, BH), LH.ms) : null
+        if (null === GB || OB - GB.ms > 1500) return null;
+        const YB = (0, vG.c)(BB);
+        return (0, vG.d)(GB.next, BB) || GB.lines.some((BB => {
+          let [OB, GB] = BB;
+          return function(BB, OB, GB) {
+            const YB = [GB[0] - OB[0], GB[1] - OB[1], GB[2] - OB[2]],
+              DB = [BB[0] - OB[0], BB[1] - OB[1], BB[2] - OB[2]],
+              QB = YB[0] ** 2 + YB[1] ** 2 + YB[2] ** 2,
+              oB = 0 === QB ? 0 : Math.min(1, Math.max(0, (DB[0] * YB[0] + DB[1] * YB[1] + DB[2] * YB[2]) / QB));
+            return Math.hypot(DB[0] - YB[0] * oB, DB[1] - YB[1] * oB, DB[2] - YB[2] * oB)
+          }(YB, OB, GB) <= .9
+        })) ? (this.tap = null, this.turnFrom(BB, OB), GB.ms) : null
       }
-      turnFrom(HH, BH) {
+      turnFrom(BB, OB) {
         this.pending = {
-          from: HH,
-          ms: BH,
-          turnMs: Math.max(50, Math.min(250, BH - this.lastFillMs))
-        }, this.lastFillMs = BH
+          from: BB,
+          ms: OB,
+          turnMs: Math.max(50, Math.min(250, OB - this.lastFillMs))
+        }, this.lastFillMs = OB
       }
-      retry(HH) {
+      retry(BB) {
         const {
-          pending: BH
+          pending: OB
         } = this;
-        if (null === BH) return;
-        if (HH - BH.ms > 1500) return void(this.pending = null);
-        const LH = this.pickNext((0, JL.e)(BH.from), (HH => (0, JL.g)(HH, BH.from)));
-        if (null === LH) return;
+        if (null === OB) return;
+        if (BB - OB.ms > 1500) return void(this.pending = null);
+        const GB = this.pickNext((0, vG.c)(OB.from), (BB => (0, vG.d)(BB, OB.from)));
+        if (null === GB) return;
         this.pending = null;
         const {
-          turning: AH
+          turning: YB
         } = this;
-        if (null !== AH && HH < AH.endMs && (0, JL.g)(AH.to, LH)) return;
-        const rH = this.api.getActionRay().origin,
-          SH = [LH[0] + .5 - rH[0], LH[1] + .5 - rH[1], LH[2] + .5 - rH[2]],
-          hH = Math.hypot(SH[0], SH[2]);
-        if (hH < .3) {
-          const HH = Math.max(hH, .001);
-          SH[0] = this.heading[0] * HH, SH[2] = this.heading[1] * HH
+        if (null !== YB && BB < YB.endMs && (0, vG.d)(YB.to, GB)) return;
+        const DB = this.api.getActionRay().origin,
+          QB = [GB[0] + .5 - DB[0], GB[1] + .5 - DB[1], GB[2] + .5 - DB[2]],
+          oB = Math.hypot(QB[0], QB[2]);
+        if (oB < .3) {
+          const BB = Math.max(oB, .001);
+          QB[0] = this.heading[0] * BB, QB[2] = this.heading[1] * BB
         }
-        this.api.turnCamera(SH, BH.turnMs), this.turning = {
-          to: LH,
-          endMs: HH + BH.turnMs
+        this.api.turnCamera(QB, OB.turnMs), this.turning = {
+          to: GB,
+          endMs: BB + OB.turnMs
         }
       }
     }
-    class SA {
-      constructor(HH, BH, LH, AH) {
-        this.api = HH, this.localPlayerId = BH, this.juice = LH, this.tracker = AH, this.ghostCells = [], this.palette = [], this.blockIds = [], this.occupiedCells = [], this.blueprint = "", this.layerY = 0, this.topLayerY = 0, this.layerCells = new Map, this.open = new Set, this.lastFilled = null, this.lastSeenFilled = null, this.aimed = null, this.altMs = null, this.pressFilled = !1, this.foreseen = new Map, this.turn = void 0, this.nextCell = void 0, this.chunkWatch = void 0, this.meshes = void 0, this.outline = void 0, this.chunkWatch = new dB(HH), this.meshes = new HL(HH), this.outline = new yL(HH), this.nextCell = new LA(HH, BH, this.foreseen), this.turn = new rA(HH, BH, ((HH, BH) => this.nextCell.pickFrom(HH, BH)))
+    class QY {
+      constructor(BB, OB, GB, YB) {
+        this.api = BB, this.localPlayerId = OB, this.juice = GB, this.tracker = YB, this.ghostCells = [], this.palette = [], this.blockIds = [], this.occupiedCells = [], this.blueprint = "", this.layerY = 0, this.topLayerY = 0, this.layerCells = new Map, this.open = new Set, this.lastFilled = null, this.lastSeenFilled = null, this.aimed = null, this.altMs = null, this.pressFilled = !1, this.foreseen = new Map, this.turn = void 0, this.nextCell = void 0, this.chunkWatch = void 0, this.meshes = void 0, this.outline = void 0, this.chunkWatch = new bO(BB), this.meshes = new BG(BB), this.outline = new tG(BB), this.nextCell = new GY(BB, OB, this.foreseen), this.turn = new DY(BB, OB, ((BB, OB) => this.nextCell.pickFrom(BB, OB)))
       }
-      kX(HH) {
-        const BH = "active" === HH[0] ? `${HH[1]}|${HH[3]}|${HH[4]}|${HH[5]}|${HH[6]}` : "";
-        if ("active" !== HH[0]) "built" === HH[0] && "" !== this.blueprint && this.finishLayer(1 / 0), this.ghostCells = [], this.palette = [], this.occupiedCells = [];
+      nP(BB) {
+        const OB = "active" === BB[0] ? `${BB[1]}|${BB[3]}|${BB[4]}|${BB[5]}|${BB[6]}` : "";
+        if ("active" !== BB[0]) "built" === BB[0] && "" !== this.blueprint && this.finishLayer(1 / 0), this.ghostCells = [], this.palette = [], this.occupiedCells = [];
         else {
-          const [, , , , , , , LH, AH, rH, SH] = HH;
-          BH !== this.blueprint ? (this.layerCells.clear(), this.topLayerY = LH) : LH === this.layerY ? this.burstUnlisted(AH) : LH > this.layerY && this.finishLayer(LH), this.layerY = LH, this.layerCells.has(LH) || this.layerCells.set(LH, AH.filter(hA)), this.ghostCells = AH, this.palette = rH, this.occupiedCells = SH
+          const [, , , , , , , GB, YB, DB, QB] = BB;
+          OB !== this.blueprint ? (this.layerCells.clear(), this.topLayerY = GB) : GB === this.layerY ? this.burstUnlisted(YB) : GB > this.layerY && this.finishLayer(GB), this.layerY = GB, this.layerCells.has(GB) || this.layerCells.set(GB, YB.filter(oY)), this.ghostCells = YB, this.palette = DB, this.occupiedCells = QB
         }
-        BH !== this.blueprint && (this.tracker.show("active" === HH[0] && HH[2] ? {
-          id: HH[1],
-          y: HH[4]
-        } : null), this.blueprint = BH, this.open.clear(), this.foreseen.clear(), this.lastFilled = null, this.lastSeenFilled = null), this.blockIds = this.palette.map((HH => this.api.blockNameToBlockId(HH))), this.chunkWatch.watch([...this.ghostCells.filter(hA), ...this.occupiedCells]), this.refresh()
+        OB !== this.blueprint && (this.tracker.show("active" === BB[0] && BB[2] ? {
+          id: BB[1],
+          y: BB[4]
+        } : null), this.blueprint = OB, this.open.clear(), this.foreseen.clear(), this.lastFilled = null, this.lastSeenFilled = null), this.blockIds = this.palette.map((BB => this.api.blockNameToBlockId(BB))), this.chunkWatch.watch([...this.ghostCells.filter(oY), ...this.occupiedCells]), this.refresh()
       }
-      finishLayer(HH) {
-        this.burstUnlisted([]), HH > this.topLayerY && (this.juice.layerDone(this.layerCells.get(this.topLayerY)), this.topLayerY = HH)
+      finishLayer(BB) {
+        this.burstUnlisted([]), BB > this.topLayerY && (this.juice.layerDone(this.layerCells.get(this.topLayerY)), this.topLayerY = BB)
       }
-      IX() {
+      kP() {
         if (this.chunkWatch.changed()) return void this.refresh();
-        const HH = performance.now();
-        let BH = !1;
-        for (const [AH, rH] of this.foreseen) {
-          var LH;
-          if (HH - rH > 1e3) this.foreseen.delete(AH), BH = !0, (null === (LH = this.lastFilled) || void 0 === LH ? void 0 : LH.join()) === AH && (this.lastFilled = this.lastSeenFilled)
-        }(BH || this.nextCell.playerMoved()) && this.showNext()
+        const BB = performance.now();
+        let OB = !1;
+        for (const [YB, DB] of this.foreseen) {
+          var GB;
+          if (BB - DB > 1e3) this.foreseen.delete(YB), OB = !0, (null === (GB = this.lastFilled) || void 0 === GB ? void 0 : GB.join()) === YB && (this.lastFilled = this.lastSeenFilled)
+        }(OB || this.nextCell.playerMoved()) && this.showNext()
       }
       dispose() {
         this.meshes.dispose(), this.outline.dispose()
       }
-      burstUnlisted(HH) {
-        const BH = new Set;
-        for (let rH = 0; rH < HH.length; rH += 4) BH.add(`${HH[rH]},${HH[rH+1]},${HH[rH+2]}`);
-        const LH = [],
+      burstUnlisted(BB) {
+        const OB = new Set;
+        for (let DB = 0; DB < BB.length; DB += 4) OB.add(`${BB[DB]},${BB[DB+1]},${BB[DB+2]}`);
+        const GB = [],
           {
-            ghostCells: AH
+            ghostCells: YB
           } = this;
-        for (let rH = 0; rH < AH.length; rH += 4) {
-          const HH = `${AH[rH]},${AH[rH+1]},${AH[rH+2]}`;
-          !BH.has(HH) && this.open.delete(HH) && LH.push(this.filledCell(rH))
+        for (let DB = 0; DB < YB.length; DB += 4) {
+          const BB = `${YB[DB]},${YB[DB+1]},${YB[DB+2]}`;
+          !OB.has(BB) && this.open.delete(BB) && GB.push(this.filledCell(DB))
         }
-        this.burst(LH)
+        this.burst(GB)
       }
       refresh() {
         const {
-          ghostCells: HH,
-          palette: BH,
-          occupiedCells: LH
-        } = this, AH = new yB, rH = new Set, SH = [], hH = [];
-        let tH = 0;
-        for (let zH = 0; zH < HH.length; zH += 4) {
-          const [LH, CH, EH, XH] = [HH[zH], HH[zH + 1], HH[zH + 2], HH[zH + 3]], GH = this.api.getBlockId(LH, CH, EH), YH = `${LH},${CH},${EH}`, uH = KB(this.blockIds[XH], GH);
-          !uH && cB(GH) ? AH.add(LH, CH, EH, qB(BH[XH]), JB, wB(BH[XH])) : uH ? this.open.has(YH) && SH.push(this.filledCell(zH)) : AH.add(LH, CH, EH, pB, iB), uH || tH++, !uH && this.api.isBlockInLoadedChunk(LH, CH, EH) && (rH.add(YH), hH.push(LH, CH, EH, cB(GH) ? 0 : 1))
+          ghostCells: BB,
+          palette: OB,
+          occupiedCells: GB
+        } = this, YB = new tO, DB = new Set, QB = [], oB = [];
+        let jB = 0;
+        for (let yB = 0; yB < BB.length; yB += 4) {
+          const [GB, JB, MB, PB] = [BB[yB], BB[yB + 1], BB[yB + 2], BB[yB + 3]], zB = this.api.getBlockId(GB, JB, MB), lB = `${GB},${JB},${MB}`, pB = FO(this.blockIds[PB], zB);
+          !pB && iO(zB) ? YB.add(GB, JB, MB, gO(OB[PB]), vO, eO(OB[PB])) : pB ? this.open.has(lB) && QB.push(this.filledCell(yB)) : YB.add(GB, JB, MB, xO, sO), pB || jB++, !pB && this.api.isBlockInLoadedChunk(GB, JB, MB) && (DB.add(lB), oB.push(GB, JB, MB, iO(zB) ? 0 : 1))
         }
-        this.open = rH, this.nextCell.setCells(hH), this.tracker.update(this.layerY, this.topLayerY, tH);
-        for (let zH = 0; zH < LH.length; zH += 3) {
-          const [HH, BH, rH] = [LH[zH], LH[zH + 1], LH[zH + 2]];
-          cB(this.api.getBlockId(HH, BH, rH)) || AH.add(HH, BH, rH, pB, iB)
+        this.open = DB, this.nextCell.setCells(oB), this.tracker.update(this.layerY, this.topLayerY, jB);
+        for (let yB = 0; yB < GB.length; yB += 3) {
+          const [BB, OB, DB] = [GB[yB], GB[yB + 1], GB[yB + 2]];
+          iO(this.api.getBlockId(BB, OB, DB)) || YB.add(BB, OB, DB, xO, sO)
         }
-        this.meshes.show(AH.toArray()), this.burst(SH), this.showNext(), this.turn.retry(performance.now())
+        this.meshes.show(YB.toArray()), this.burst(QB), this.showNext(), this.turn.retry(performance.now())
       }
-      burst(HH) {
-        const BH = performance.now(),
-          LH = [];
-        for (const [rH, SH, hH] of HH) {
-          const HH = [rH, SH, hH];
-          this.lastSeenFilled = HH, this.foreseen.delete(HH.join()) || LH.push(HH)
+      burst(BB) {
+        const OB = performance.now(),
+          GB = [];
+        for (const [DB, QB, oB] of BB) {
+          const BB = [DB, QB, oB];
+          this.lastSeenFilled = BB, this.foreseen.delete(BB.join()) || GB.push(BB)
         }
-        const AH = this.isHolding(BH);
-        for (const rH of LH) {
-          if (this.lastFilled = rH, AH && this.pressFilled) {
-            this.turn.filled(rH, BH);
+        const YB = this.isHolding(OB);
+        for (const DB of GB) {
+          if (this.lastFilled = DB, YB && this.pressFilled) {
+            this.turn.filled(DB, OB);
             continue
           }
-          const HH = this.turn.arrived(rH, BH);
-          if (null !== HH) {
-            this.pressFilled = AH;
-            for (const [BH, LH] of this.foreseen) LH <= HH && this.foreseen.delete(BH)
+          const BB = this.turn.arrived(DB, OB);
+          if (null !== BB) {
+            this.pressFilled = YB;
+            for (const [OB, GB] of this.foreseen) GB <= BB && this.foreseen.delete(OB)
           }
         }
-        this.juice.filled(HH)
+        this.juice.filled(BB)
       }
       showNext() {
-        var HH;
-        this.outline.show(null !== (HH = this.aimed) && void 0 !== HH ? HH : this.nextCell.XY(this.lastFilled))
+        var BB;
+        this.outline.show(null !== (BB = this.aimed) && void 0 !== BB ? BB : this.nextCell.pl(this.lastFilled))
       }
-      afterRender(HH) {
-        var BH;
-        this.turn.look(HH);
-        const LH = this.api.getTargetedBlock();
-        this.aimed = this.pressFilled && this.isHolding(performance.now()) ? null : this.findAimed(null === LH ? null : LH.position), this.outline.show(null !== (BH = this.aimed) && void 0 !== BH ? BH : this.nextCell.get())
+      afterRender(BB) {
+        var OB;
+        this.turn.look(BB);
+        const GB = this.api.getTargetedBlock();
+        this.aimed = this.pressFilled && this.isHolding(performance.now()) ? null : this.findAimed(null === GB ? null : GB.position), this.outline.show(null !== (OB = this.aimed) && void 0 !== OB ? OB : this.nextCell.get())
       }
-      isHolding(HH) {
-        return null !== this.altMs && HH - this.altMs <= 500
+      isHolding(BB) {
+        return null !== this.altMs && BB - this.altMs <= 500
       }
-      attemptAltAction(HH) {
-        const BH = performance.now();
-        if (this.isHolding(BH) || (this.pressFilled = !1), this.altMs = BH, this.pressFilled) return "preventPlacement";
-        const LH = this.findAimed(HH);
-        if (null !== LH) return this.foreseen.set(LH.join(), BH), this.lastFilled = LH, this.aimed = null, this.showNext(), this.turn.filled(LH, BH), this.pressFilled = !0, "preventPlacement";
+      attemptAltAction(BB) {
+        const OB = performance.now();
+        if (this.isHolding(OB) || (this.pressFilled = !1), this.altMs = OB, this.pressFilled) return "preventPlacement";
+        const GB = this.findAimed(BB);
+        if (null !== GB) return this.foreseen.set(GB.join(), OB), this.lastFilled = GB, this.aimed = null, this.showNext(), this.turn.filled(GB, OB), this.pressFilled = !0, "preventPlacement";
         {
-          const LH = this.nextCell.get();
-          null !== LH && this.turn.tapped(HH, LH, BH)
+          const GB = this.nextCell.get();
+          null !== GB && this.turn.tapped(BB, GB, OB)
         }
       }
       holdPressOnEntity() {
-        const HH = performance.now();
-        this.pressFilled && this.isHolding(HH) && (this.altMs = HH)
+        const BB = performance.now();
+        this.pressFilled && this.isHolding(BB) && (this.altMs = BB)
       }
-      findAimed(HH) {
-        return function(HH, BH, LH, AH, rH, SH, hH) {
-          const tH = HH.yLH(BH),
-            zH = null === tH || null === HH.blockNameToBlockId(tH.name, !0) ? null : tH.name,
-            CH = HH.getPositionView(BH),
+      findAimed(BB) {
+        return function(BB, OB, GB, YB, DB, QB, oB) {
+          const jB = BB.MYB(OB),
+            yB = null === jB || null === BB.blockNameToBlockId(jB.name, !0) ? null : jB.name,
+            JB = BB.getPositionView(OB),
             {
-              origin: EH,
-              direction: XH
-            } = HH.getActionRay(),
-            GH = aL(AH, {
-              from: EH,
-              dir: XH,
-              reach: BA(HH, BH),
-              solid: LH
-            }, (BH => {
-              const LH = [AH[BH], AH[BH + 1], AH[BH + 2]];
-              return !KB(rH[AH[BH + 3]], HH.getBlockId(...LH)) && !hH.has(LH.join()) && HH.isBlockInLoadedChunk(...LH) && !HA(LH, CH)
-            }), (HH => null === zH || zH === eB(rH[AH[HH + 3]])), (HH => null !== SH && AH[HH] === SH[0] && AH[HH + 1] === SH[1] && AH[HH + 2] === SH[2]));
-          return -1 === GH ? null : [AH[GH], AH[GH + 1], AH[GH + 2]]
-        }(this.api, this.localPlayerId, HH, this.ghostCells, this.blockIds, this.nextCell.get(), this.foreseen)
+              origin: MB,
+              direction: PB
+            } = BB.getActionRay(),
+            zB = CG(YB, {
+              from: MB,
+              dir: PB,
+              reach: OY(BB, OB),
+              solid: GB
+            }, (OB => {
+              const GB = [YB[OB], YB[OB + 1], YB[OB + 2]];
+              return !FO(DB[YB[OB + 3]], BB.getBlockId(...GB)) && !oB.has(GB.join()) && BB.isBlockInLoadedChunk(...GB) && !BY(GB, JB)
+            }), (BB => null === yB || yB === LO(DB[YB[BB + 3]])), (BB => null !== QB && YB[BB] === QB[0] && YB[BB + 1] === QB[1] && YB[BB + 2] === QB[2]));
+          return -1 === zB ? null : [YB[zB], YB[zB + 1], YB[zB + 2]]
+        }(this.api, this.localPlayerId, BB, this.ghostCells, this.blockIds, this.nextCell.get(), this.foreseen)
       }
       endPress() {
         this.altMs = null, this.pressFilled = !1
       }
-      filledCell(HH) {
+      filledCell(BB) {
         const {
-          ghostCells: BH
-        } = this, [LH, AH, rH] = qB(this.palette[BH[HH + 3]]);
-        return [BH[HH], BH[HH + 1], BH[HH + 2], LH, AH, rH]
+          ghostCells: OB
+        } = this, [GB, YB, DB] = gO(this.palette[OB[BB + 3]]);
+        return [OB[BB], OB[BB + 1], OB[BB + 2], GB, YB, DB]
       }
     }
 
-    function hA(HH, BH) {
-      return BH % 4 !== 3
+    function oY(BB, OB) {
+      return OB % 4 !== 3
     }
-    class tA {
-      constructor(HH) {
-        this.api = HH, this.sent = !1
+    class jY {
+      constructor(BB) {
+        this.api = BB, this.sent = !1
       }
-      IX() {
-        this.sent || tH.c.get("loadingOverlayVisible") || (this.sent = !0, this.api.sendCommand("plotsentered"))
+      kP() {
+        this.sent || jB.c.get("loadingOverlayVisible") || (this.sent = !0, this.api.sendCommand("plotsentered"))
       }
     }
-    var zA = LH(4617),
-      CA = LH(40100);
+    var yY = GB(4642),
+      JY = GB(39858);
 
-    function EA(HH, BH, LH) {
-      const AH = [255 * HH, 255 * BH, 255 * LH],
-        [rH, SH, hH] = AH.map((HH => HH + .4 * (255 - HH)));
+    function MY(BB, OB, GB) {
+      const YB = [255 * BB, 255 * OB, 255 * GB],
+        [DB, QB, oB] = YB.map((BB => BB + .4 * (255 - BB)));
       return {
         texture: "square_particle",
-        aX: 48,
-        minLifeTime: .3 / CA.b,
-        maxLifeTime: .55 / CA.b,
+        CP: 48,
+        minLifeTime: .3 / JY.c,
+        maxLifeTime: .55 / JY.c,
         minSize: .07,
         maxSize: .14,
         minEmitPower: 1,
         maxEmitPower: 1,
         emitRate: 0,
-        gravity: [0, -14 * CA.b * CA.b, 0],
+        gravity: [0, -14 * JY.c * JY.c, 0],
         colorGradients: [{
           timeFraction: 0,
-          minColor: [...AH, 1],
-          maxColor: [rH, SH, hH, 1]
+          minColor: [...YB, 1],
+          maxColor: [DB, QB, oB, 1]
         }, {
           timeFraction: 1,
-          minColor: [...AH, 0],
-          maxColor: [rH, SH, hH, 0]
+          minColor: [...YB, 0],
+          maxColor: [DB, QB, oB, 0]
         }],
-        blendMode: zA.f.Standard
+        blendMode: yY.f.Standard
       }
     }
-    const XA = {
+    const PY = {
       texture: "glint",
       mipmaps: !1,
-      aX: 96,
-      minLifeTime: .5 / CA.b,
-      maxLifeTime: .9 / CA.b,
+      CP: 96,
+      minLifeTime: .5 / JY.c,
+      maxLifeTime: .9 / JY.c,
       minSize: .15,
       maxSize: .3,
       minEmitPower: 1,
       maxEmitPower: 1,
       emitRate: 0,
-      gravity: [0, 2 * CA.b * CA.b, 0],
+      gravity: [0, 2 * JY.c * JY.c, 0],
       colorGradients: [{
         timeFraction: 0,
         minColor: [255, 224, 97, 1],
@@ -2637,112 +2637,112 @@ export const modules = {
         timeFraction: 1,
         minColor: [0, 0, 0, 1]
       }],
-      blendMode: zA.f.OneOne
+      blendMode: yY.f.OneOne
     };
-    class GA {
-      constructor(HH, BH) {
-        this.api = HH, this.localPlayerId = BH, this.chips = new Map, this.sparkles = null, this.points = new Float32Array(384)
+    class zY {
+      constructor(BB, OB) {
+        this.api = BB, this.localPlayerId = OB, this.chips = new Map, this.sparkles = null, this.points = new Float32Array(384)
       }
-      filled(HH) {
+      filled(BB) {
         if (this.api.particlesEnabled())
-          for (const [BH, LH, AH, rH, SH, hH] of HH.slice(0, 3)) {
-            const HH = `${rH},${SH},${hH}`;
-            let tH = this.chips.get(HH);
-            void 0 === tH && (tH = this.api.createParticles(EA(rH, SH, hH), {
-              pos: [BH + .5, LH + .5, AH + .5]
-            }), this.chips.set(HH, tH));
-            for (let BH = 0; BH < 8; BH++) this.setPoint(BH, .9 * (Math.random() - .5), .9 * (Math.random() - .5), .9 * (Math.random() - .5), 1.5 + 1.5 * Math.random());
-            tH.emitPoints([BH + .5, LH + .5, AH + .5], this.points, 8)
+          for (const [OB, GB, YB, DB, QB, oB] of BB.slice(0, 3)) {
+            const BB = `${DB},${QB},${oB}`;
+            let jB = this.chips.get(BB);
+            void 0 === jB && (jB = this.api.createParticles(MY(DB, QB, oB), {
+              pos: [OB + .5, GB + .5, YB + .5]
+            }), this.chips.set(BB, jB));
+            for (let OB = 0; OB < 8; OB++) this.setPoint(OB, .9 * (Math.random() - .5), .9 * (Math.random() - .5), .9 * (Math.random() - .5), 1.5 + 1.5 * Math.random());
+            jB.emitPoints([OB + .5, GB + .5, YB + .5], this.points, 8)
           }
       }
-      layerDone(HH) {
+      layerDone(BB) {
         this.api.playSound(this.localPlayerId, "magicAccent2", .7, 1.1);
-        const BH = HH.length / 3;
-        if (0 === BH || !this.api.particlesEnabled()) return;
-        const LH = Math.min(BH, 48),
-          [AH, rH, SH] = [HH[0] + .5, HH[1] + 1, HH[2] + .5];
-        let hH = 0;
-        for (let tH = 0; tH < LH; tH++) {
-          const zH = 3 * Math.floor(tH * BH / LH);
-          for (let BH = 0; BH < 2; BH++) this.setPoint(hH++, HH[zH] + Math.random() - AH, HH[zH + 1] + 1 - rH, HH[zH + 2] + Math.random() - SH, .6 + .8 * Math.random())
+        const OB = BB.length / 3;
+        if (0 === OB || !this.api.particlesEnabled()) return;
+        const GB = Math.min(OB, 48),
+          [YB, DB, QB] = [BB[0] + .5, BB[1] + 1, BB[2] + .5];
+        let oB = 0;
+        for (let jB = 0; jB < GB; jB++) {
+          const yB = 3 * Math.floor(jB * OB / GB);
+          for (let OB = 0; OB < 2; OB++) this.setPoint(oB++, BB[yB] + Math.random() - YB, BB[yB + 1] + 1 - DB, BB[yB + 2] + Math.random() - QB, .6 + .8 * Math.random())
         }
-        this.sparkles ??= this.api.createParticles(XA, {
-          pos: [AH, rH, SH]
-        }), this.sparkles.emitPoints([AH, rH, SH], this.points, hH)
+        this.sparkles ??= this.api.createParticles(PY, {
+          pos: [YB, DB, QB]
+        }), this.sparkles.emitPoints([YB, DB, QB], this.points, oB)
       }
       dispose() {
-        var HH;
-        for (const BH of this.chips.values()) BH.stop();
-        this.chips.clear(), null === (HH = this.sparkles) || void 0 === HH || HH.stop(), this.sparkles = null
+        var BB;
+        for (const OB of this.chips.values()) OB.stop();
+        this.chips.clear(), null === (BB = this.sparkles) || void 0 === BB || BB.stop(), this.sparkles = null
       }
-      setPoint(HH, BH, LH, AH, rH) {
-        const SH = 4 * HH;
-        this.points[SH] = BH, this.points[SH + 1] = LH, this.points[SH + 2] = AH, this.points[SH + 3] = rH
+      setPoint(BB, OB, GB, YB, DB) {
+        const QB = 4 * BB;
+        this.points[QB] = OB, this.points[QB + 1] = GB, this.points[QB + 2] = YB, this.points[QB + 3] = DB
       }
     }
-    const YA = "SpecialAction1",
-      uA = "KeyY",
-      QA = "KeyX";
+    const lY = "SpecialAction1",
+      pY = "KeyY",
+      qY = "KeyX";
 
-    function WA(HH) {
+    function ZY(BB) {
       let {
-        placement: BH
-      } = HH;
-      const LH = (0, zH.e)(zL, BH.getView()),
+        placement: OB
+      } = BB;
+      const GB = (0, yB.i)(yG, OB.getView()),
         {
-          t: AH
-        } = (0, EH.B)(),
+          t: YB
+        } = (0, MB.H)(),
         {
-          isTouchScreen: rH
-        } = (0, tH.m)(["isTouchScreen"]),
-        hH = (0, SH.useContext)(UH),
-        XH = null !== LH,
-        uH = XH && !LH.blocked && !LH.waiting;
-      if ((0, vH.c)((HH => XH && !HH.repeat && !(0, PH.isTypingInInput)() && !(0, YH.t)() && !rH), (HH => {
-          const LH = function(HH, BH, LH) {
-            if (HH === QA) return BH.stop;
-            if (HH === uA) return LH ? BH.build : xA;
-            return CH.w[YA].includes(HH) ? BH.rotate : null
-          }(HH.code, BH, uH);
-          null !== LH && (HH.stopPropagation(), LH())
-        })), !XH) return null;
-      let WH = rH ? "plotsGame:placementHintTouch" : "plotsGame:placementHint";
-      return LH.blocked ? WH = "plotsGame:placementOffPlot" : LH.toClear > 0 ? WH = "plotsGame:placementClear" : "placeSpot" !== hH.hint && "placeBuild" !== hH.hint || (WH = null), (0, eH.jsx)(QH.e, {
+          isTouchScreen: DB
+        } = (0, jB.o)(["isTouchScreen"]),
+        oB = (0, QB.useContext)(SB),
+        PB = null !== GB,
+        pB = PB && !GB.blocked && !GB.waiting;
+      if ((0, WB.b)((BB => PB && !BB.repeat && !(0, AB.isTypingInInput)() && !(0, lB.r)() && !DB), (BB => {
+          const GB = function(BB, OB, GB) {
+            if (BB === qY) return OB.stop;
+            if (BB === pY) return GB ? OB.build : RY;
+            return JB.t[lY].includes(BB) ? OB.rotate : null
+          }(BB.code, OB, pB);
+          null !== GB && (BB.stopPropagation(), GB())
+        })), !PB) return null;
+      let ZB = DB ? "plotsGame:placementHintTouch" : "plotsGame:placementHint";
+      return GB.blocked ? ZB = "plotsGame:placementOffPlot" : GB.toClear > 0 ? ZB = "plotsGame:placementClear" : "placeSpot" !== oB.hint && "placeBuild" !== oB.hint || (ZB = null), (0, LB.jsx)(qB.e, {
         placement: "bottom",
-        children: (0, eH.jsxs)("div", {
-          ref: hH.placementCardRef,
+        children: (0, LB.jsxs)("div", {
+          ref: oB.placementCardRef,
           className: "PlotsPlacementCard",
-          children: [(0, eH.jsx)("div", {
+          children: [(0, LB.jsx)("div", {
             className: "PlotsPlacementCardTitle SmallTextBold",
-            children: AH(mH(LH.id).displayName.translationKey)
-          }), null !== WH && (0, eH.jsx)("div", {
-            className: GH()("PlotsPlacementCardHint SmallTextLight", {
-              Nudge: LH.refusals > 0
+            children: YB(dB(GB.id).displayName.translationKey)
+          }), null !== ZB && (0, LB.jsx)("div", {
+            className: zB()("PlotsPlacementCardHint SmallTextLight", {
+              Nudge: GB.refusals > 0
             }),
-            children: AH(WH)
-          }, LH.refusals), (0, eH.jsxs)("div", {
+            children: YB(ZB)
+          }, GB.refusals), (0, LB.jsxs)("div", {
             className: "PlotsPlacementCardButtons",
-            children: [(0, eH.jsxs)(bL.i, {
-              onClick: BH.rotate,
-              children: [(0, eH.jsx)(MA, {
-                noaAction: YA
-              }), AH("plotsGame:placementRotate")]
-            }), (0, eH.jsxs)(bL.O, {
-              onClick: BH.stop,
-              children: [(0, eH.jsx)(MA, {
-                keyCode: QA
-              }), AH("general:cancel")]
-            }), (0, eH.jsx)("span", {
-              ref: hH.buildRef,
-              className: GH()("PlotsPlacementBuild", {
-                Pulse: "placeBuild" === hH.hint && uH && rH
+            children: [(0, LB.jsxs)(fG.f, {
+              onClick: OB.rotate,
+              children: [(0, LB.jsx)(NY, {
+                noaAction: lY
+              }), YB("plotsGame:placementRotate")]
+            }), (0, LB.jsxs)(fG.Q, {
+              onClick: OB.stop,
+              children: [(0, LB.jsx)(NY, {
+                keyCode: qY
+              }), YB("general:cancel")]
+            }), (0, LB.jsx)("span", {
+              ref: oB.buildRef,
+              className: zB()("PlotsPlacementBuild", {
+                Pulse: "placeBuild" === oB.hint && pB && DB
               }),
-              children: (0, eH.jsxs)(bL.u, {
-                disabled: !uH,
-                onClick: BH.build,
-                children: [(0, eH.jsx)(MA, {
-                  keyCode: uA
-                }), AH("plotsGame:placementBuild")]
+              children: (0, LB.jsxs)(fG.q, {
+                disabled: !pB,
+                onClick: OB.build,
+                children: [(0, LB.jsx)(NY, {
+                  keyCode: pY
+                }), YB("plotsGame:placementBuild")]
               })
             })]
           })]
@@ -2750,353 +2750,353 @@ export const modules = {
       })
     }
 
-    function MA(HH) {
-      return (0, eH.jsx)(xH.b, {
+    function NY(BB) {
+      return (0, LB.jsx)(RB.c, {
         className: "PlotsPlacementKey",
-        ...HH
+        ...BB
       })
     }
 
-    function xA() {}
-    var vA = LH(2530),
-      PA = LH(37569),
-      TA = LH(2051),
-      UA = LH(1204);
-    const VA = {
+    function RY() {}
+    var WY = GB(2554),
+      AY = GB(37367),
+      VY = GB(2063),
+      SY = GB(1260);
+    const nY = {
       own: "crown",
       shared: "user-group",
       other: "house"
     };
 
-    function OA(HH) {
+    function UY(BB) {
       let {
-        hud: BH
-      } = HH;
-      const LH = (0, zH.e)(BB, BH.getPlot()),
-        [AH, rH] = (0, SH.useState)(null),
-        hH = (0, PA.k)(AH);
-      if ("none" === LH[0]) return null;
-      const [, tH, CH, EH, XH, YH] = LH;
-      return (0, eH.jsx)("div", {
-        className: GH()("PlotsPlotBannerContainer", {
-          Below: hH
+        hud: OB
+      } = BB;
+      const GB = (0, yB.i)(OO, OB.getPlot()),
+        [YB, DB] = (0, QB.useState)(null),
+        oB = (0, AY.n)(YB);
+      if ("none" === GB[0]) return null;
+      const [, jB, JB, MB, PB, lB] = GB;
+      return (0, LB.jsx)("div", {
+        className: zB()("PlotsPlotBannerContainer", {
+          Below: oB
         }),
-        children: (0, eH.jsx)(bA, {
-          plotX: tH,
-          plotZ: CH,
-          ownerName: EH,
-          ownerId: XH,
-          relation: YH,
-          plaqueRef: rH
-        }, `${tH},${CH}`)
+        children: (0, LB.jsx)(fY, {
+          plotX: jB,
+          plotZ: JB,
+          ownerName: MB,
+          ownerId: PB,
+          relation: lB,
+          plaqueRef: DB
+        }, `${jB},${JB}`)
       })
     }
 
-    function bA(HH) {
-      var BH, LH;
+    function fY(BB) {
+      var OB, GB;
       let {
-        plotX: AH,
-        plotZ: rH,
-        ownerName: SH,
-        ownerId: hH,
-        relation: tH,
-        plaqueRef: zH
-      } = HH;
+        plotX: YB,
+        plotZ: DB,
+        ownerName: QB,
+        ownerId: oB,
+        relation: jB,
+        plaqueRef: yB
+      } = BB;
       const {
-        t: CH
-      } = (0, EH.B)(), XH = (0, TA.e)("hiddenPlayerNames"), YH = (0, TA.e)("players"), uH = null === hH ? null : null !== (BH = null === (LH = YH.byId[hH]) || void 0 === LH ? void 0 : LH.cosmetics) && void 0 !== BH ? BH : null, QH = CH("plotsGame:plotBannerCoords", {
-        x: AH,
-        z: rH
-      }), MH = "own" === tH || null !== SH;
-      return (0, eH.jsxs)("div", {
-        ref: zH,
-        className: GH()("PlotsPlotBanner", {
-          Own: "own" === tH,
-          Shared: "shared" === tH
+        t: JB
+      } = (0, MB.H)(), PB = (0, VY.g)("hiddenPlayerNames"), lB = (0, VY.g)("players"), pB = null === oB ? null : null !== (OB = null === (GB = lB.byId[oB]) || void 0 === GB ? void 0 : GB.cosmetics) && void 0 !== OB ? OB : null, qB = JB("plotsGame:plotBannerCoords", {
+        x: YB,
+        z: DB
+      }), NB = "own" === jB || null !== QB;
+      return (0, LB.jsxs)("div", {
+        ref: yB,
+        className: zB()("PlotsPlotBanner", {
+          Own: "own" === jB,
+          Shared: "shared" === jB
         }),
         role: "status",
-        children: [(0, eH.jsxs)("span", {
-          className: GH()("PlotsPlotBannerSeal", {
-            Face: null !== uH
+        children: [(0, LB.jsxs)("span", {
+          className: zB()("PlotsPlotBannerSeal", {
+            Face: null !== pB
           }),
-          children: [null !== uH && (0, eH.jsx)(vA.c, {
-            cosmetics: uH
-          }), null === uH && (0, eH.jsx)(WH.c, {
-            name: VA[tH]
+          children: [null !== pB && (0, LB.jsx)(WY.b, {
+            cosmetics: pB
+          }), null === pB && (0, LB.jsx)(ZB.b, {
+            name: nY[jB]
           })]
-        }), (0, eH.jsxs)("div", {
+        }), (0, LB.jsxs)("div", {
           className: "PlotsPlotBannerText",
-          children: [(0, eH.jsxs)("div", {
+          children: [(0, LB.jsxs)("div", {
             className: "PlotsPlotBannerTitle SmallTextBold",
-            children: ["own" === tH && CH("plotsGame:plotBannerYours"), "own" !== tH && null !== SH && CH("plotsGame:plotBannerOwner", {
-              name: (0, UA.f)(SH, XH)
-            }), !MH && QH]
-          }), MH && (0, eH.jsxs)("div", {
+            children: ["own" === jB && JB("plotsGame:plotBannerYours"), "own" !== jB && null !== QB && JB("plotsGame:plotBannerOwner", {
+              name: (0, SY.g)(QB, PB)
+            }), !NB && qB]
+          }), NB && (0, LB.jsxs)("div", {
             className: "PlotsPlotBannerCoords SmallTextLight",
-            children: [QH, "shared" === tH && (0, eH.jsx)("span", {
+            children: [qB, "shared" === jB && (0, LB.jsx)("span", {
               className: "PlotsPlotBannerBadge",
-              children: CH("plotsGame:plotBannerShared")
+              children: JB("plotsGame:plotBannerShared")
             })]
           })]
         })]
       })
     }
-    const kA = function(HH, BH, LH, AH) {
+    const kY = function(BB, OB, GB, YB) {
       let {
-        localPlayerId: rH
-      } = AH;
-      const tH = new rB;
-      let zH = null,
-        CH = null,
-        EH = null,
-        XH = null,
-        GH = null,
-        YH = null;
-      const uH = [];
+        localPlayerId: DB
+      } = YB;
+      const jB = new DO;
+      let yB = null,
+        JB = null,
+        MB = null,
+        PB = null,
+        zB = null,
+        lB = null;
+      const pB = [];
       return {
-        onCreate: HH => {
-          zH = new GA(HH, rH);
-          const BH = new HB;
-          CH = new SA(HH, rH, zH, BH), EH = new EL(HH, rH), XH = new cH(HH, EH), GH = new OL(HH, rH, CH.nextCell), YH = new tA(HH), uH.push((0, hH.v)((0, SH.createElement)(TL, {
-            hud: tH,
-            guide: GH,
-            tracker: BH,
-            placement: EH
-          }, (0, SH.createElement)(OA, {
-            hud: tH
-          }), (0, SH.createElement)(gH, {
-            journal: XH
-          }), (0, SH.createElement)(WL, {
-            placement: EH
-          }), (0, SH.createElement)(WA, {
-            placement: EH
+        onCreate: BB => {
+          yB = new zY(BB, DB);
+          const OB = new BO;
+          JB = new QY(BB, DB, yB, OB), MB = new MG(BB, DB), PB = new iB(BB, MB), zB = new UG(BB, DB, JB.nextCell), lB = new jY(BB), pB.push((0, oB.s)((0, QB.createElement)(VG, {
+            hud: jB,
+            guide: zB,
+            tracker: OB,
+            placement: MB
+          }, (0, QB.createElement)(UY, {
+            hud: jB
+          }), (0, QB.createElement)(rB, {
+            journal: PB
+          }), (0, QB.createElement)(ZG, {
+            placement: MB
+          }), (0, QB.createElement)(ZY, {
+            placement: MB
           })), {
-            content: (0, SH.createElement)(dL, {
-              journal: XH,
-              hud: tH,
-              guide: GH
+            content: (0, QB.createElement)(bG, {
+              journal: PB,
+              hud: jB,
+              guide: zB
             })
           }))
         },
-        IX: () => {
-          YH.IX(), CH.IX(), EH.IX(), XH.IX()
+        kP: () => {
+          lB.kP(), JB.kP(), MB.kP(), PB.kP()
         },
-        onPlayerAttemptAltAction: (HH, BH, LH, AH, rH, SH) => {
-          if (null !== SH) return void CH.holdPressOnEntity();
-          const hH = void 0 === BH ? null : [BH, LH, AH];
-          return CH.attemptAltAction(hH)
+        onPlayerAttemptAltAction: (BB, OB, GB, YB, DB, QB) => {
+          if (null !== QB) return void JB.holdPressOnEntity();
+          const oB = void 0 === OB ? null : [OB, GB, YB];
+          return JB.attemptAltAction(oB)
         },
         onPlayerClickUp: () => {
-          CH.endPress()
+          JB.endPress()
         },
-        onAfterRender: (HH, BH) => {
-          EH.afterRender(BH), CH.afterRender(BH), GH.afterRender(BH)
+        onAfterRender: (BB, OB) => {
+          MB.afterRender(OB), JB.afterRender(OB), zB.afterRender(OB)
         },
         onClose: () => {
-          for (const HH of uH) HH();
-          zH.dispose(), CH.dispose(), EH.dispose(), zH = null, CH = null, EH = null, XH = null, GH = null, YH = null
+          for (const BB of pB) BB();
+          yB.dispose(), JB.dispose(), MB.dispose(), yB = null, JB = null, MB = null, PB = null, zB = null, lB = null
         },
-        onReceivedMessageFromServer: (HH, BH) => {
-          if ("plotsPlot" === HH) tH.receivePlot(BH);
-          else if ("plotsBlueprint" === HH) {
-            const HH = BH;
-            CH.kX(HH), EH.kX(HH)
-          } else "plotsJournal" === HH ? XH.kX(BH) : "plotsJournalOpen" === HH ? XH.openFromServer(BH) : "plotsPreviewEnd" === HH ? EH.endFromServer() : "plotsGuide" === HH ? tH.receiveGuide(BH) : "plotsGuideDone" === HH && tH.receiveGuideDone()
+        onReceivedMessageFromServer: (BB, OB) => {
+          if ("plotsPlot" === BB) jB.receivePlot(OB);
+          else if ("plotsBlueprint" === BB) {
+            const BB = OB;
+            JB.nP(BB), MB.nP(BB)
+          } else "plotsJournal" === BB ? PB.nP(OB) : "plotsJournalOpen" === BB ? PB.openFromServer(OB) : "plotsPreviewEnd" === BB ? MB.endFromServer() : "plotsGuide" === BB ? jB.receiveGuide(OB) : "plotsGuideDone" === BB && jB.receiveGuideDone()
         }
       }
     }
   },
-  39374: (HH, BH, LH) => {
-    LH.d(BH, {
-      e: () => tH
+  39157: (BB, OB, GB) => {
+    GB.d(OB, {
+      b: () => jB
     });
-    var AH = LH(39370);
-    const rH = 5,
-      SH = [0, 0, 0],
-      hH = {
+    var YB = GB(39154);
+    const DB = 5,
+      QB = [0, 0, 0],
+      oB = {
         x: 0,
         y: 0,
         distSq: 0
       };
 
-    function tH(HH, BH, LH, tH, zH, CH) {
-      let [EH, XH, GH] = tH;
-      const YH = (EH + .5 - LH[0]) ** 2 + (XH - LH[1]) ** 2 + (GH + .5 - LH[2]) ** 2;
-      let uH = null;
-      YH <= CH ** 2 && (SH[0] = EH + .5, SH[1] = XH + zH, SH[2] = GH + .5, uH = BH.projectWorldPosToViewport(SH));
-      const QH = null !== uH && uH.x > -rH && uH.x < 100 + rH && uH.y > -rH && uH.y < 100 + rH;
-      return (0, AH.e)(HH, !QH), QH ? (hH.x = uH.x, hH.y = uH.y, hH.distSq = YH, hH) : null
+    function jB(BB, OB, GB, jB, yB, JB) {
+      let [MB, PB, zB] = jB;
+      const lB = (MB + .5 - GB[0]) ** 2 + (PB - GB[1]) ** 2 + (zB + .5 - GB[2]) ** 2;
+      let pB = null;
+      lB <= JB ** 2 && (QB[0] = MB + .5, QB[1] = PB + yB, QB[2] = zB + .5, pB = OB.projectWorldPosToViewport(QB));
+      const qB = null !== pB && pB.x > -DB && pB.x < 100 + DB && pB.y > -DB && pB.y < 100 + DB;
+      return (0, YB.f)(BB, !qB), qB ? (oB.x = pB.x, oB.y = pB.y, oB.distSq = lB, oB) : null
     }
   },
-  40100: (HH, BH, LH) => {
-    LH.d(BH, {
-      b: () => AH,
-      d: () => SH
+  39858: (BB, OB, GB) => {
+    GB.d(OB, {
+      c: () => YB,
+      g: () => QB
     });
-    const AH = 1 / .6,
-      rH = {
+    const YB = 1 / .6,
+      DB = {
         kind: "smokePuff"
       };
-    class SH {
-      constructor(HH, BH, LH) {
-        this.style = HH, this.aX = BH, this.half = LH, this.particles = null, this.lastFrame = -1
+    class QB {
+      constructor(BB, OB, GB) {
+        this.style = BB, this.CP = OB, this.half = GB, this.particles = null, this.lastFrame = -1
       }
-      emit(HH, BH, LH) {
-        let SH = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.style.count;
-        return LH !== this.lastFrame && (this.lastFrame = LH, this.particles || (this.particles = HH.createParticles(function(HH, BH) {
+      emit(BB, OB, GB) {
+        let QB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.style.count;
+        return GB !== this.lastFrame && (this.lastFrame = GB, this.particles || (this.particles = BB.createParticles(function(BB, OB) {
           const [
-            [LH, SH, hH],
-            [tH, zH, CH]
-          ] = HH.colours;
+            [GB, QB, oB],
+            [jB, yB, JB]
+          ] = BB.colours;
           return {
-            texture: HH.soft ? rH : "square_particle",
-            aX: BH,
-            minLifeTime: HH.life[0] / AH,
-            maxLifeTime: HH.life[1] / AH,
-            minEmitPower: HH.power[0] * AH,
-            maxEmitPower: HH.power[1] * AH,
-            minSize: HH.size[0],
-            maxSize: HH.size[1],
+            texture: BB.soft ? DB : "square_particle",
+            CP: OB,
+            minLifeTime: BB.life[0] / YB,
+            maxLifeTime: BB.life[1] / YB,
+            minEmitPower: BB.power[0] * YB,
+            maxEmitPower: BB.power[1] * YB,
+            minSize: BB.size[0],
+            maxSize: BB.size[1],
             emitRate: 0,
-            gravity: [0, HH.lift * AH * AH, 0],
-            dir1: [-HH.spread, 1, -HH.spread],
-            dir2: [HH.spread, 1, HH.spread],
+            gravity: [0, BB.lift * YB * YB, 0],
+            dir1: [-BB.spread, 1, -BB.spread],
+            dir2: [BB.spread, 1, BB.spread],
             colorGradients: [{
               timeFraction: 0,
-              minColor: [LH, SH, hH, HH.alpha],
-              maxColor: [tH, zH, CH, HH.alpha]
+              minColor: [GB, QB, oB, BB.alpha],
+              maxColor: [jB, yB, JB, BB.alpha]
             }, {
               timeFraction: 1,
-              minColor: [LH, SH, hH, 0],
-              maxColor: [tH, zH, CH, 0]
+              minColor: [GB, QB, oB, 0],
+              maxColor: [jB, yB, JB, 0]
             }],
-            blendMode: HH.blendMode
+            blendMode: BB.blendMode
           }
-        }(this.style, this.aX), {
-          pos: BH,
+        }(this.style, this.CP), {
+          pos: OB,
           half: this.half
-        })), this.particles.moveTo(BH, this.half), this.particles.emit(SH), !0)
+        })), this.particles.moveTo(OB, this.half), this.particles.emit(QB), !0)
       }
       dispose() {
-        var HH;
-        null === (HH = this.particles) || void 0 === HH || HH.stop(), this.particles = null
+        var BB;
+        null === (BB = this.particles) || void 0 === BB || BB.stop(), this.particles = null
       }
     }
   },
-  40495: (HH, BH, LH) => {
-    LH.d(BH, {
-      b: () => hH,
-      e: () => tH,
-      f: () => zH
+  40244: (BB, OB, GB) => {
+    GB.d(OB, {
+      d: () => oB,
+      e: () => jB,
+      i: () => yB
     });
-    const AH = new Map,
-      rH = [];
+    const YB = new Map,
+      DB = [];
 
-    function SH() {
-      for (const HH of rH) HH()
+    function QB() {
+      for (const BB of DB) BB()
     }
 
-    function hH(HH) {
-      var BH;
-      return AH.set(HH, (null !== (BH = AH.get(HH)) && void 0 !== BH ? BH : 0) + 1), SH(), () => {
-        const BH = AH.get(HH) - 1;
-        0 === BH ? AH.delete(HH) : AH.set(HH, BH), SH()
+    function oB(BB) {
+      var OB;
+      return YB.set(BB, (null !== (OB = YB.get(BB)) && void 0 !== OB ? OB : 0) + 1), QB(), () => {
+        const OB = YB.get(BB) - 1;
+        0 === OB ? YB.delete(BB) : YB.set(BB, OB), QB()
       }
     }
 
-    function tH() {
-      return [...AH.keys()]
+    function jB() {
+      return [...YB.keys()]
     }
 
-    function zH(HH) {
-      rH.push(HH)
+    function yB(BB) {
+      DB.push(BB)
     }
   },
-  39370: (HH, BH, LH) => {
-    LH.d(BH, {
-      d: () => hH,
-      e: () => SH
+  39154: (BB, OB, GB) => {
+    GB.d(OB, {
+      d: () => oB,
+      f: () => QB
     });
-    const AH = new WeakMap;
+    const YB = new WeakMap;
 
-    function rH(HH) {
-      let BH = AH.get(HH);
-      return BH || (BH = {
-        hidden: HH.hidden,
+    function DB(BB) {
+      let OB = YB.get(BB);
+      return OB || (OB = {
+        hidden: BB.hidden,
         x: NaN,
         y: NaN
-      }, AH.set(HH, BH)), BH
+      }, YB.set(BB, OB)), OB
     }
 
-    function SH(HH, BH) {
-      const LH = rH(HH);
-      LH.hidden !== BH && (LH.hidden = BH, HH.hidden = BH)
+    function QB(BB, OB) {
+      const GB = DB(BB);
+      GB.hidden !== OB && (GB.hidden = OB, BB.hidden = OB)
     }
 
-    function hH(HH, BH, LH) {
-      const AH = rH(HH);
-      AH.x === BH && AH.y === LH || (AH.x = BH, AH.y = LH, HH.style.translate = `${BH}vw ${LH}vh`)
+    function oB(BB, OB, GB) {
+      const YB = DB(BB);
+      YB.x === OB && YB.y === GB || (YB.x = OB, YB.y = GB, BB.style.translate = `${OB}vw ${GB}vh`)
     }
   },
-  37761: (HH, BH, LH) => {
-    function AH(HH, BH) {
-      return null === HH || null === BH ? HH === BH : HH[0] === BH[0] && HH[1] === BH[1] && HH[2] === BH[2]
+  37584: (BB, OB, GB) => {
+    function YB(BB, OB) {
+      return null === BB || null === OB ? BB === OB : BB[0] === OB[0] && BB[1] === OB[1] && BB[2] === OB[2]
     }
 
-    function rH(HH) {
-      return [HH[0] + .5, HH[1] + .5, HH[2] + .5]
+    function DB(BB) {
+      return [BB[0] + .5, BB[1] + .5, BB[2] + .5]
     }
-    LH.d(BH, {
-      e: () => rH,
-      g: () => AH
+    GB.d(OB, {
+      c: () => DB,
+      d: () => YB
     })
   },
-  37798: (HH, BH, LH) => {
-    function AH(HH) {
-      return HH.includes("Leaf Bed")
+  37633: (BB, OB, GB) => {
+    function YB(BB) {
+      return BB.includes("Leaf Bed")
     }
 
-    function rH(HH) {
-      return / Bed(?: Head)?(?:\||$)/.test(HH) && !AH(HH)
+    function DB(BB) {
+      return / Bed(?: Head)?(?:\||$)/.test(BB) && !YB(BB)
     }
 
-    function SH(HH) {
-      return HH.includes(" Strongbed")
+    function QB(BB) {
+      return BB.includes(" Strongbed")
     }
 
-    function hH(HH) {
-      return AH(HH) || rH(HH) || SH(HH)
+    function oB(BB) {
+      return YB(BB) || DB(BB) || QB(BB)
     }
-    LH.d(BH, {
-      d: () => hH,
-      h: () => AH,
-      l: () => SH,
-      m: () => rH
+    GB.d(OB, {
+      b: () => oB,
+      d: () => YB,
+      f: () => QB,
+      i: () => DB
     })
   },
-  37793: (HH, BH, LH) => {
-    LH.d(BH, {
-      d: () => CH
+  37627: (BB, OB, GB) => {
+    GB.d(OB, {
+      d: () => JB
     });
-    var AH = LH(37798),
-      rH = LH(9940);
-    const SH = [],
-      hH = [],
-      tH = [],
-      zH = [];
-    for (const EH of Object.keys(rH.l))(0, AH.h)(EH) ? SH.push(EH) : (0, AH.m)(EH) && hH.push(EH), (0, AH.l)(EH) && tH.push(EH), (EH.includes(" Bed Head") || EH.includes(" Strongbed Head")) && zH.push(EH);
-    const CH = {
-      leafBeds: SH,
-      woolBeds: hH,
-      strongBeds: tH,
-      beds: [...SH, ...hH, ...tH],
-      bedHeads: zH,
+    var YB = GB(37633),
+      DB = GB(9927);
+    const QB = [],
+      oB = [],
+      jB = [],
+      yB = [];
+    for (const MB of Object.keys(DB.n))(0, YB.d)(MB) ? QB.push(MB) : (0, YB.i)(MB) && oB.push(MB), (0, YB.f)(MB) && jB.push(MB), (MB.includes(" Bed Head") || MB.includes(" Strongbed Head")) && yB.push(MB);
+    const JB = {
+      leafBeds: QB,
+      woolBeds: oB,
+      strongBeds: jB,
+      beds: [...QB, ...oB, ...jB],
+      bedHeads: yB,
       blockRemoveActionRoots: ["Chest", "Loot Chest", "Iron Chest", "Mailbox", "Bookshelf", "Empty Bookshelf"]
     }
   },
-  39448: HH => {
-    HH.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAYUlEQVR4nGNgIBP8R8NYwX+GDVNRMQOm4v8MC9qxYwZUxf//b+T4//8A+///51khGMTeyIGp8Nz0gv8MDoFgGsbeUB2BXeHESHcUjFNhR4Dj/zp3OzAGsbEphHgIOyYNAACzzGY5JF2GbAAAAABJRU5ErkJggg=="
+  39215: BB => {
+    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAYUlEQVR4nGNgIBP8R8NYwX+GDVNRMQOm4v8MC9qxYwZUxf//b+T4//8A+///51khGMTeyIGp8Nz0gv8MDoFgGsbeUB2BXeHESHcUjFNhR4Dj/zp3OzAGsbEphHgIOyYNAACzzGY5JF2GbAAAAABJRU5ErkJggg=="
   }
 };
 Object.freeze(modules);
-for (const HH in modules) Object.freeze(modules[HH]);
+for (const BB in modules) Object.freeze(modules[BB]);
